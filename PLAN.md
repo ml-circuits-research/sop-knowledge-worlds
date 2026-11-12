@@ -74,19 +74,17 @@ bulk import, so that the schema is shaped by use, not by the dump.
    and checks that every word in `vocab.json` resolves.
 5. Numbers in `worker-log.md`: rows read, wires written, shards, bytes, load time per shard, warnings.
 
-## 5. Licenses
+## 5. Licenses (owner's decision, 2026-11-12 09:58)
 
-The owner's position: import whatever is free, keep the most permissive license compatible with the sources, and use
-rather than redistribute. One fact matters for that position: **files under `docs/` are served publicly by GitHub
-Pages, which is redistribution.** So:
-- **Published (`docs/`):** public domain/CC0 (Wikidata), permissive (MIT, BSD, Apache, CC BY, ODbL with attribution,
-  WordNet's license, MPL), and share-alike (CC BY-SA: ConceptNet). Share-alike shards carry the same license, and the
-  repository license file lists them: shards derived from a CC BY-SA source stay CC BY-SA.
-- **Not published (`restricted/`):** sources with non-commercial (NC), no-derivatives (ND), "research only" or
-  "no redistribution" terms. They are imported for local experiments only. The owner decides case by case whether
-  any of them may be published.
-- Every shard header and catalog entry names its license, and `docs/worlds/LICENSES.md` is generated with the
-  attribution texts.
+This project is non-commercial, open-source research. **We import only what we can publish openly on GitHub Pages.**
+Anything that cannot be published is not imported at all; there is no restricted or private area.
+- **Allowed:** public domain and CC0 (Wikidata); permissive licenses (MIT, BSD, Apache, MPL, the WordNet license, CC BY,
+  ODbL with attribution); share-alike (CC BY-SA, e.g. ConceptNet); and non-commercial licenses (CC BY-NC, CC BY-NC-SA),
+  because this is non-commercial research. A shard keeps its source's terms: share-alike stays share-alike, NC stays NC.
+- **Not imported:** no-derivatives (ND), since we transform everything; "no redistribution"; "research use only, do not share";
+  and any source with unclear terms.
+- Every shard header and catalog entry names its license. `docs/worlds/LICENSES.md` is generated with the attribution
+  texts. The catalog marks NC shards (`"nc": true`) so that a future commercial user could filter them out.
 
 ## 6. Quality
 

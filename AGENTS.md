@@ -29,9 +29,9 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 8. **Reproducible.** Raw downloads go to `sources/<id>/raw/` (git-ignored); import scripts in `tools/import/<id>.mjs`
    turn them into shards deterministically (same input, byte-identical output). Commit the scripts and the shards,
    never the raw dumps.
-9. **Licenses tracked, not ignored.** See "Licenses" in PLAN.md. Record every source's license in `sources/<id>/SOURCE.md`
-   and in the catalog. Sources whose terms forbid redistribution or commercial use are imported into
-   `restricted/` (not under `docs/`, not published) until the owner decides.
+9. **Only what can be published.** See "Licenses" in PLAN.md: import only sources we may publish openly (CC0, permissive,
+   CC BY, BY-SA, BY-NC, BY-NC-SA). Do not import no-derivatives, no-redistribution or unclear sources at all. Record every
+   source's license in `sources/<id>/SOURCE.md` and in the catalog.
 10. **One commit per task**, with the numbers (wires, shards, bytes, load time, warnings) in the commit message and in
     `worker-log.md`. Never edit `questions.md` answers; the reviewer answers in `worker-tasks.md`.
 
@@ -57,6 +57,5 @@ sources/<id>/SOURCE.md    where it comes from, license, version, how to fetch, w
 tools/import/<id>.mjs     raw -> shards
 tools/build-catalog.mjs   scans docs/worlds, validates, writes index.json and vocab.json
 tools/sopworld/           the pinned single-file sopworld build and VERSION
-restricted/               imports whose license does not allow publishing (not served)
 tests/                    validation and size gates
 ```

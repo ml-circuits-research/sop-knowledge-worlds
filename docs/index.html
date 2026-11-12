@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sop-knowledge-worlds</title>
+<style>
+  body { font: 16px/1.55 system-ui, -apple-system, Segoe UI, sans-serif; max-width: 46rem; margin: 2rem auto; padding: 0 1rem; color: #1d1d1f; }
+  h1 { font-size: 1.6rem; margin-bottom: .2rem; }
+  .lead { color: #555; margin-top: 0; }
+  code, pre { font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; }
+  pre { background: #f5f5f7; padding: .8rem 1rem; border-radius: 8px; overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { text-align: left; padding: .35rem .5rem; border-bottom: 1px solid #e5e5e5; }
+  .muted { color: #777; }
+</style>
+</head>
+<body>
+<h1>sop-knowledge-worlds</h1>
+<p class="lead">Reusable knowledge worlds for <a href="https://github.com/ml-circuits-research/soplang-words-lib">sopworld</a>:
+schemas and instances in SOP Lang, loaded by applications on demand.</p>
+
+<h2>Files</h2>
+<ul>
+  <li><a href="worlds/index.json"><code>worlds/index.json</code></a>: the catalog, listing worlds, schemas, shards, sources and licenses.</li>
+  <li><a href="worlds/vocab.json"><code>worlds/vocab.json</code></a>: an English word mapped to the shards where it matters.</li>
+  <li><code>worlds/k.&lt;world&gt;/schema.sop</code> and <code>worlds/k.&lt;world&gt;/shards/*.sop</code>: SOP Lang files.</li>
+</ul>
+
+<h2>Worlds</h2>
+<div id="worlds" class="muted">No worlds published yet.</div>
+
+<h2>Use from an application</h2>
+<pre>1. fetch worlds/index.json and pin its version
+2. for the English words of a message, look up worlds/vocab.json and get the shard paths
+3. load the world's schema.sop as a sopworld module (library + core.use)
+4. load only those shards (told, or as a fact provider)</pre>
+<p class="muted">The contract is in PLAN.md §2 of the repository. Shards are small; load only those that
+<code>vocab.json</code> points to for the words of the current message.</p>
+
+<script>
+fetch('worlds/index.json').then((r) => r.ok ? r.json() : null).then((c) => {
+  if (!c || !Array.isArray(c.worlds) || !c.worlds.length) return;
+  const rows = c.worlds.map((w) => `<tr><td><code>${w.id}</code></td><td>${(w.shards || []).length}</td><td>${(w.licenses || []).join(', ')}</td></tr>`).join('');
+  document.getElementById('worlds').outerHTML = `<table><tr><th>World</th><th>Shards</th><th>Licenses</th></tr>${rows}</table>`;
+}).catch(() => {});
+</script>
+</body>
+</html>
