@@ -22,6 +22,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: ODbL-1.0
 - Used by: `k.geo` (6 shards)
 
+## css-colors-2.1.1
+
+- What: the 148 colour keywords of CSS (CSS Color Module Level 4, "named colors") with their RGB values, as listed by the package `color-name`.
+- Origin: https://github.com/colorjs/color-name , commit `9ec3195524951f58bc1d33797fccc0f8ecfe070c`, file `index.js` (sha256 `8567ef2590b5e8a2fa23262a5d3a963e538d91faf0f87365aa74e6eb86f02e97`).
+- License: MIT (the package). The names and values themselves are those of the CSS specification.
+- Attribution: color-name, Copyright (c) 2015 Dmitry Ivanov, MIT License, https://github.com/colorjs/color-name .
+- Shard terms: MIT
+- Used by: `k.values` (1 shards)
+
 ## dicebear-big-smile-67f54a0
 
 - What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
@@ -91,8 +100,8 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Origin: this repository.
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
-- Shard terms: CC0-1.0, WordNet-3.0
-- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.body` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (3 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards)
+- Shard terms: CC0-1.0, MIT, WordNet-3.0
+- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.body` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (3 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards), `k.values` (7 shards)
 
 ## mulberry-fa94a93
 

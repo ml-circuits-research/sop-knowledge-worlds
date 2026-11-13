@@ -1,0 +1,12 @@
+{"id":"va-01","ask":"what is the RGB value of crimson","query":{"type":"k.values.colour","where":{"name":"crimson"},"seek":"rgb"},"expect":{"status":"supported","value":"\"#DC143C\""}}
+{"id":"va-02","ask":"what basic colour is navy","query":{"type":"k.values.colour","where":{"name":"navy"},"seek":"basic"},"expect":{"status":"supported","value":"blue"}}
+{"id":"va-03","ask":"what is a usual RGB value of mustard","query":{"type":"k.values.colour","where":{"name":"mustard"},"seek":"rgb_about"},"expect":{"status":"supported","value":"\"#FFDB58\""}}
+{"id":"va-04","ask":"where does large stand on the size scale","query":{"type":"k.values.step","where":{"scale":"size","name":"large"},"seek":"rank"},"expect":{"status":"supported","value":"4"}}
+{"id":"va-05","ask":"which way does smaller move on the size scale","query":{"type":"k.values.comparative","where":{"text":"smaller"},"seek":"way"},"expect":{"status":"supported","value":"down"}}
+{"id":"va-06","ask":"which scales can shorter belong to","query":{"type":"k.values.comparative","where":{"text":"shorter"},"seek":"scale","mode":"list"},"expect":{"status":"supported","values":["length","height"]}}
+{"id":"va-07","ask":"what is the opposite of clockwise","query":{"type":"k.values.direction","where":{"name":"clockwise"},"seek":"opposite"},"expect":{"status":"supported","value":"anticlockwise"}}
+{"id":"va-08","ask":"which column is top left","query":{"type":"k.values.position","where":{"name":"\"top left\""},"seek":"column"},"expect":{"status":"supported","value":"left"}}
+{"id":"va-09","ask":"how many does each pick","query":{"type":"k.values.set_word","where":{"name":"each"},"seek":"picks"},"expect":{"status":"supported","value":"all"}}
+{"id":"va-10","ask":"what number is twenty-three","query":{"type":"k.values.number","where":{"text":"twenty-three","kind":"cardinal"},"seek":"value"},"expect":{"status":"supported","value":"23"}}
+{"id":"va-11","ask":"which number is fifth","query":{"type":"k.values.number","where":{"text":"fifth","kind":"ordinal"},"seek":"value"},"expect":{"status":"supported","value":"5"}}
+{"id":"va-12","ask":"is a cube a solid shape","query":{"type":"k.values.shape","where":{"name":"cube"},"seek":"solid"},"expect":{"status":"supported","value":"true"}}

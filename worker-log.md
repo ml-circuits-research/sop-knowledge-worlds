@@ -1743,3 +1743,40 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - **What SOP Lang could not say:** that the opposite of an opposite is the action itself (a rule over two facts
   with the values crossed): a test.
 - Numbers: k.actions 20 shards (5 of them `actions-*`: 816 wires, 124,219 bytes). Catalog 16 worlds, 802 shards, vocab 20,228 words; 0 errors, 0 warnings. npm test 2,482 pass, 0 fail.
+
+## Round 8, item 3 (2026-11-13, second worker): `k.values`, the words for values
+
+- **New world `k.values`** (version 1, exports `colour`, `scale`, `step`, `comparative`, `shape`, `direction`,
+  `position`, `set_word`, `number`), 7 shards, 838 wires, 107,370 bytes, written by `tools/values-core.mjs`.
+- **Colours:** 141 CSS colours with `rgb` ("#RRGGBB", the form `k.objects` and `k.faces` use) and the keyword as
+  `css`. New source `css-colors 2.1.1` (`sources/css-colors/SOURCE.md`): the list of the package `color-name`
+  (MIT), pinned by commit; the 7 keywords with "gray" are word facts of the "grey" colours. The name is the keyword
+  written as words (a small word list splits it; all 141 read). 29 common names CSS lacks, hand-written, with
+  `rgb_about` (a usual value, from memory of the usual tables; a schema rule refuses a colour with both).
+  `basic` (one of the 11 colour names of `k.objects.part.colour`): 62 by the last word of the name, 25
+  model-labelled (`named=model`), 20 of the common names; 54 CSS colours have none on purpose. I tried the
+  nearest-name rule of `tools/import/svg-parts.mjs` (CIE Lab) first and read its 148 answers: it calls blue and
+  navy purple and cyan white, so it is not used.
+- **For the first worker (R7.3 `k.colours`):** no `k.colours` world existed when this was pushed. `k.values.colour`
+  holds only name, RGB, CSS keyword, basic colour and other words; families, light and dark, mixing and typical
+  things can join it by `name` instead of listing RGB values again. `k.values.shape` holds only the names, plurals
+  and adjectives of 30 shapes and `solid`; sides, corners and things of a shape are left to `k.shapes`.
+- **Scales:** 13 scales, 44 steps with ranks; `size` has the five sizes of `k.scenes.thing` (a test compares
+  them); `amount` is none, a bit, some, a lot, all; `degree` is slightly … extremely. 82 comparatives and
+  superlatives with the scale and the way. Other words for a step are `core.word` facts.
+- **Also:** 30 shapes, 18 directions (opposite; a step x, y for the 12 in the plane of a picture), 13 positions
+  (column, row, depth), 19 set words (`picks`, `manner`), 222 number words (cardinals and ordinals to 99 and the
+  round ones above; times, multiples, groups, fractions; `third` as a fraction has `value_about=0.333`).
+- **Read:** every CSS colour fact (name, RGB as printed, basic); the tables of scales, comparatives, shapes,
+  directions, positions and set words as written in the tool; of the numbers the first, the fractions and four
+  others in the shard. **Not looked at:** no colour was drawn, so the usual RGB values of the 29 common names were
+  not seen as colours; the generated number words 21 to 99 were not read one by one (a test checks four).
+- **Judgement that is mine:** which common colour names and their values; which steps a scale has and which words
+  go to which step ("a few" as a word for "a bit"; fairly, rather and pretty as "quite"); what each set word picks.
+- **What SOP Lang could not say:** that the ranks of a scale run from 1 to `steps` without a gap, and that a
+  direction's opposite points back: tests.
+- Tests: `tests/k.values.test.mjs` (5), 12 questions (`va-01` to `va-12`).
+- Numbers: k.values 7 shards, 838 wires, 107,370 bytes. Catalog 17 worlds, 804 shards, vocab 20,496 words (19,769);
+  0 errors, 0 warnings.
+  npm test 2,477 pass, 5 skipped, 0 fail.
+- After the rebase on the first worker's R7.2 (187 everyday actions in k.actions): catalog 17 worlds, 809 shards, vocab 20,954 words; npm test 2,495 pass, 5 skipped, 0 fail.

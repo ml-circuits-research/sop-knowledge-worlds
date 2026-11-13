@@ -18,6 +18,7 @@ Status (Round 7): sixteen worlds are published: `k.commonsense`, `k.objects` (2,
 `docs/worlds/k.faces/preview/index.html`), `k.scenes` (the usual place and relative size of drawable things, and 61 typical scenes; previews in
 `docs/worlds/k.scenes/preview/index.html`) `k.people` (kinds of person, 60 roles and jobs), `k.feelings` (30 feelings and how a face shows them) and `k.layouts` (17 named arrangements, anchors on drawable things, what joins what). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
 the build network; the import scripts for the first two exist with fixture tests).
-Round 8 worlds: `k.actions` (the words of the acts: 14 acts, their roles and markers, 291 verbs and phrasal verbs; and, from Round 7, 187 everyday actions: who does it, to what, with what, the opposite, what undoes it).
+Round 8 worlds: `k.actions` (the words of the acts: 14 acts, their roles and markers, 291 verbs and phrasal verbs; and, from Round 7, 187 everyday actions: who does it, to what, with what, the opposite, what undoes it), `k.values` (the words for values: 170 colour names with RGB, 13 ordered scales and their
+comparatives, shapes, directions, positions, set words, number words).
 
 Agents working here start with [AGENTS.md](AGENTS.md).

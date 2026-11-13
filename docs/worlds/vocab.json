@@ -28,7 +28,66 @@
   "k.objects/shards/noto-game-01"
  ],
  "a": [
+  "k.values/shards/numbers",
   "k.words/shards/a"
+ ],
+ "a bit": [
+  "k.values/shards/scales"
+ ],
+ "a couple": [
+  "k.values/shards/numbers"
+ ],
+ "a couple of": [
+  "k.values/shards/numbers",
+  "k.values/shards/scales"
+ ],
+ "a dozen": [
+  "k.values/shards/numbers"
+ ],
+ "a few": [
+  "k.values/shards/scales"
+ ],
+ "a few of them": [
+  "k.values/shards/sets"
+ ],
+ "a half": [
+  "k.values/shards/numbers"
+ ],
+ "a hundred": [
+  "k.values/shards/numbers"
+ ],
+ "a little": [
+  "k.values/shards/scales"
+ ],
+ "a little bit": [
+  "k.values/shards/scales"
+ ],
+ "a lot": [
+  "k.values/shards/scales"
+ ],
+ "a lot of": [
+  "k.values/shards/scales"
+ ],
+ "a number of": [
+  "k.values/shards/scales"
+ ],
+ "a pair": [
+  "k.values/shards/numbers"
+ ],
+ "a pair of": [
+  "k.values/shards/numbers"
+ ],
+ "a quarter": [
+  "k.values/shards/numbers"
+ ],
+ "a tad": [
+  "k.values/shards/scales"
+ ],
+ "a third": [
+  "k.values/shards/numbers"
+ ],
+ "a thousand": [
+  "k.values/shards/numbers"
  ],
  "aa": [
   "k.words/shards/aa"
@@ -734,6 +793,9 @@
  "ahag": [
   "k.geo/shards/africa"
  ],
+ "ahead": [
+  "k.values/shards/directions"
+ ],
  "ahem": [
   "k.words/shards/ah"
  ],
@@ -1014,6 +1076,12 @@
  "alibi": [
   "k.words/shards/al"
  ],
+ "alice blue": [
+  "k.values/shards/colours-css"
+ ],
+ "aliceblue": [
+  "k.values/shards/colours-css"
+ ],
  "alien": [
   "k.faces/shards/presets",
   "k.objects/shards/openmoji-travel-places-01",
@@ -1036,7 +1104,8 @@
   "k.words/shards/al"
  ],
  "alike": [
-  "k.feelings/schema.sop"
+  "k.feelings/schema.sop",
+  "k.values/shards/sets"
  ],
  "alima": [
   "k.geo/shards/africa"
@@ -1044,11 +1113,21 @@
  "alimony": [
   "k.words/shards/al"
  ],
+ "all": [
+  "k.values/shards/scales",
+  "k.values/shards/sets"
+ ],
  "all around": [
   "k.layouts/shards/layouts"
  ],
+ "all of them": [
+  "k.values/shards/sets"
+ ],
  "all over": [
   "k.layouts/shards/layouts"
+ ],
+ "all the": [
+  "k.values/shards/sets"
  ],
  "allah": [
   "k.words/shards/al"
@@ -1169,7 +1248,11 @@
   "k.words/shards/al"
  ],
  "alternate": [
+  "k.values/shards/sets",
   "k.words/shards/al"
+ ],
+ "alternating": [
+  "k.values/shards/sets"
  ],
  "alternative": [
   "k.words/shards/al"
@@ -1222,6 +1305,7 @@
  ],
  "amber": [
   "k.faces/shards/colours",
+  "k.values/shards/colours-common",
   "k.words/shards/am"
  ],
  "amber_light": [
@@ -1319,6 +1403,7 @@
  ],
  "amount": [
   "k.actions/shards/acts",
+  "k.values/shards/scales",
   "k.words/shards/am"
  ],
  "amp": [
@@ -1360,7 +1445,14 @@
   "k.scenes/shards/scenes-town"
  ],
  "an": [
+  "k.values/shards/numbers",
   "k.words/shards/an"
+ ],
+ "an additional": [
+  "k.values/shards/sets"
+ ],
+ "an extra": [
+  "k.values/shards/sets"
  ],
  "ana": [
   "k.words/shards/an"
@@ -1625,6 +1717,9 @@
  "anomaly": [
   "k.words/shards/an"
  ],
+ "another": [
+  "k.values/shards/sets"
+ ],
  "answer": [
   "k.actions/shards/actions-mind-talk",
   "k.feelings/schema.sop",
@@ -1716,11 +1811,17 @@
  "anti-atlas": [
   "k.geo/shards/africa"
  ],
+ "anti-clockwise": [
+  "k.values/shards/directions"
+ ],
  "anticipate": [
   "k.words/shards/an"
  ],
  "anticipation": [
   "k.words/shards/an"
+ ],
+ "anticlockwise": [
+  "k.values/shards/directions"
  ],
  "antidote": [
   "k.words/shards/an"
@@ -1734,6 +1835,12 @@
  ],
  "antique": [
   "k.words/shards/an"
+ ],
+ "antique white": [
+  "k.values/shards/colours-css"
+ ],
+ "antiquewhite": [
+  "k.values/shards/colours-css"
  ],
  "antler": [
   "k.objects/shards/openmoji-animals-nature-01"
@@ -1770,6 +1877,18 @@
  ],
  "anxious": [
   "k.feelings/shards/feelings"
+ ],
+ "any": [
+  "k.values/shards/sets"
+ ],
+ "any of them": [
+  "k.values/shards/sets"
+ ],
+ "any old": [
+  "k.values/shards/sets"
+ ],
+ "any one": [
+  "k.values/shards/sets"
  ],
  "aoraki / mount cook": [
   "k.geo/shards/oceania"
@@ -1944,7 +2063,8 @@
   "k.time/shards/calendar"
  ],
  "apricot": [
-  "k.food/shards/fruit"
+  "k.food/shards/fruit",
+  "k.values/shards/colours-common"
  ],
  "apricots": [
   "k.food/shards/fruit"
@@ -1963,10 +2083,17 @@
   "k.geo/shards/south-america"
  ],
  "aqua": [
+  "k.values/shards/colours-css",
   "k.words/shards/aq"
+ ],
+ "aqua blue": [
+  "k.values/shards/colours-css"
  ],
  "aquae": [
   "k.words/shards/aq"
+ ],
+ "aquamarine": [
+  "k.values/shards/colours-css"
  ],
  "aquaria": [
   "k.words/shards/aq"
@@ -2012,6 +2139,7 @@
   "k.geo/shards/oceania"
  ],
  "arc": [
+  "k.values/shards/shapes",
   "k.words/shards/ar"
  ],
  "arcade": [
@@ -2090,6 +2218,9 @@
  ],
  "arcking": [
   "k.words/shards/ar"
+ ],
+ "arcs": [
+  "k.values/shards/shapes"
  ],
  "arctic": [
   "k.objects/shards/noto-animal-mammal-07",
@@ -2317,10 +2448,14 @@
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-phone-01",
   "k.objects/shards/noto-tool-02",
+  "k.values/shards/shapes",
   "k.words/shards/ar"
  ],
  "arrowhead": [
   "k.layouts/shards/joins"
+ ],
+ "arrows": [
+  "k.values/shards/shapes"
  ],
  "arse": [
   "k.words/shards/ar"
@@ -2602,6 +2737,9 @@
  "association": [
   "k.words/shards/as"
  ],
+ "assorted": [
+  "k.values/shards/sets"
+ ],
  "assume": [
   "k.words/shards/as"
  ],
@@ -2664,6 +2802,18 @@
  ],
  "at night": [
   "k.scenes/shards/scenes-other"
+ ],
+ "at random": [
+  "k.values/shards/sets"
+ ],
+ "at the back": [
+  "k.values/shards/directions"
+ ],
+ "at the bottom": [
+  "k.values/shards/directions"
+ ],
+ "at the top": [
+  "k.values/shards/directions"
  ],
  "atakora mountains": [
   "k.geo/shards/africa"
@@ -3037,6 +3187,7 @@
   "k.words/shards/av"
  ],
  "average": [
+  "k.values/shards/scales",
   "k.words/shards/av"
  ],
  "aviation": [
@@ -3082,6 +3233,9 @@
  ],
  "awatere": [
   "k.geo/shards/oceania"
+ ],
+ "away from the middle": [
+  "k.values/shards/directions"
  ],
  "awe": [
   "k.words/shards/aw"
@@ -3137,6 +3291,9 @@
  "azerbaijan": [
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders"
+ ],
+ "azure": [
+  "k.values/shards/colours-css"
  ],
  "aïna": [
   "k.geo/shards/africa"
@@ -3201,6 +3358,9 @@
   "k.people/shards/kinds",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/ba"
+ ],
+ "baby blue": [
+  "k.values/shards/colours-common"
  ],
  "baby bottle": [
   "k.objects/shards/noto-drink-01",
@@ -3267,6 +3427,7 @@
   "k.objects/shards/mulberry-holiday-and-travel-02",
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-office-01",
+  "k.values/shards/directions",
   "k.words/shards/ba"
  ],
  "back garden": [
@@ -3324,6 +3485,7 @@
   "k.objects/shards/places"
  ],
  "background": [
+  "k.values/shards/directions",
   "k.words/shards/ba"
  ],
  "backing": [
@@ -3356,6 +3518,12 @@
  ],
  "backup": [
   "k.words/shards/ba"
+ ],
+ "backward": [
+  "k.values/shards/directions"
+ ],
+ "backwards": [
+  "k.values/shards/directions"
  ],
  "backyard": [
   "k.scenes/shards/scenes-nature",
@@ -3662,6 +3830,9 @@
  "ball pool": [
   "k.objects/shards/mulberry-leisure-toys-01",
   "k.scenes/shards/things-b"
+ ],
+ "ball shape": [
+  "k.values/shards/shapes"
  ],
  "ball1": [
   "k.objects/shards/noto-event-01",
@@ -5005,6 +5176,7 @@
   "k.geo/shards/asia"
  ],
  "beige": [
+  "k.values/shards/colours-css",
   "k.words/shards/be"
  ],
  "beijing": [
@@ -5487,7 +5659,8 @@
   "k.commonsense/schema.sop",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
-  "k.scenes/schema.sop"
+  "k.scenes/schema.sop",
+  "k.values/shards/scales"
  ],
  "big ben": [
   "k.geo/shards/africa"
@@ -5625,6 +5798,12 @@
  "bigfoot": [
   "k.words/shards/bi"
  ],
+ "bigger": [
+  "k.values/shards/scales"
+ ],
+ "biggest": [
+  "k.values/shards/scales"
+ ],
  "bighorn": [
   "k.geo/shards/north-america"
  ],
@@ -5685,6 +5864,7 @@
  ],
  "billion": [
   "k.objects/shards/noto-money-01",
+  "k.values/shards/numbers",
   "k.words/shards/bi"
  ],
  "billionaire": [
@@ -5864,7 +6044,8 @@
   "k.words/shards/bi"
  ],
  "bisque": [
-  "k.objects/shards/noto-animal-marine-02"
+  "k.objects/shards/noto-animal-marine-02",
+  "k.values/shards/colours-css"
  ],
  "bissau": [
   "k.geo/shards/africa"
@@ -5920,6 +6101,7 @@
   "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-writing-01",
+  "k.values/shards/colours-css",
   "k.words/shards/bl"
  ],
  "black bird": [
@@ -6041,6 +6223,12 @@
  ],
  "blame": [
   "k.words/shards/bl"
+ ],
+ "blanched almond": [
+  "k.values/shards/colours-css"
+ ],
+ "blanchedalmond": [
+  "k.values/shards/colours-css"
  ],
  "blank": [
   "k.words/shards/bl"
@@ -6174,6 +6362,7 @@
   "k.words/shards/bl"
  ],
  "block": [
+  "k.values/shards/shapes",
   "k.words/shards/bl"
  ],
  "blockade": [
@@ -6293,6 +6482,7 @@
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-food-fruit-02",
   "k.objects/shards/noto-other-object-01",
+  "k.values/shards/colours-css",
   "k.words/shards/bl"
  ],
  "blue book": [
@@ -6316,6 +6506,9 @@
  ],
  "blue ridge mountains": [
   "k.geo/shards/north-america"
+ ],
+ "blue violet": [
+  "k.values/shards/colours-css"
  ],
  "blue whale": [
   "k.animals/shards/mammals"
@@ -6356,6 +6549,9 @@
  ],
  "blues": [
   "k.words/shards/bl"
+ ],
+ "blueviolet": [
+  "k.values/shards/colours-css"
  ],
  "bluff": [
   "k.words/shards/bl"
@@ -6602,6 +6798,7 @@
   "k.faces/shards/plain-shoulders"
  ],
  "boiling": [
+  "k.values/shards/scales",
   "k.words/shards/bo"
  ],
  "bois": [
@@ -6617,7 +6814,14 @@
   "k.geo/shards/africa"
  ],
  "bold": [
+  "k.values/shards/scales",
   "k.words/shards/bo"
+ ],
+ "bolder": [
+  "k.values/shards/scales"
+ ],
+ "boldest": [
+  "k.values/shards/scales"
  ],
  "bolivarian republic of venezuela": [
   "k.geo/shards/south-america"
@@ -6973,6 +7177,12 @@
  "botev peak": [
   "k.geo/shards/europe"
  ],
+ "both": [
+  "k.values/shards/sets"
+ ],
+ "both of them": [
+  "k.values/shards/sets"
+ ],
  "bother": [
   "k.words/shards/bo"
  ],
@@ -7008,6 +7218,9 @@
   "k.scenes/shards/things-b",
   "k.words/shards/bo"
  ],
+ "bottle green": [
+  "k.values/shards/colours-common"
+ ],
  "bottle with popping cork": [
   "k.objects/shards/noto-drink-01",
   "k.scenes/shards/things-b"
@@ -7021,7 +7234,35 @@
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-time-01",
+  "k.values/shards/directions",
   "k.words/shards/bo"
+ ],
+ "bottom center": [
+  "k.values/shards/directions"
+ ],
+ "bottom centre": [
+  "k.values/shards/directions"
+ ],
+ "bottom left": [
+  "k.values/shards/directions"
+ ],
+ "bottom left corner": [
+  "k.values/shards/directions"
+ ],
+ "bottom middle": [
+  "k.values/shards/directions"
+ ],
+ "bottom right": [
+  "k.values/shards/directions"
+ ],
+ "bottom right corner": [
+  "k.values/shards/directions"
+ ],
+ "bottom-left": [
+  "k.values/shards/directions"
+ ],
+ "bottom-right": [
+  "k.values/shards/directions"
  ],
  "bottom_ball": [
   "k.objects/shards/figures"
@@ -7293,6 +7534,9 @@
   "k.objects/shards/things-2",
   "k.scenes/shards/things-b",
   "k.words/shards/bo"
+ ],
+ "box shape": [
+  "k.values/shards/shapes"
  ],
  "boxer": [
   "k.words/shards/bo"
@@ -7784,6 +8028,9 @@
  "brighten": [
   "k.words/shards/br"
  ],
+ "brightness": [
+  "k.values/shards/scales"
+ ],
  "brighton": [
   "k.words/shards/br"
  ],
@@ -7864,6 +8111,7 @@
  ],
  "broad": [
   "k.geo/shards/north-america",
+  "k.values/shards/scales",
   "k.words/shards/br"
  ],
  "broad beans": [
@@ -7875,6 +8123,12 @@
  ],
  "broadcasting": [
   "k.words/shards/br"
+ ],
+ "broader": [
+  "k.values/shards/scales"
+ ],
+ "broadest": [
+  "k.values/shards/scales"
  ],
  "broadway": [
   "k.words/shards/br"
@@ -7924,6 +8178,7 @@
  ],
  "bronze": [
   "k.objects/shards/noto-award-medal-01",
+  "k.values/shards/colours-common",
   "k.words/shards/br"
  ],
  "brooch": [
@@ -7997,6 +8252,7 @@
  "brown": [
   "k.faces/shards/colours",
   "k.objects/shards/noto-clothing-04",
+  "k.values/shards/colours-css",
   "k.words/shards/br"
  ],
  "brown mushroom": [
@@ -8537,6 +8793,7 @@
   "k.words/shards/bu"
  ],
  "burgundy": [
+  "k.values/shards/colours-common",
   "k.words/shards/bu"
  ],
  "burial": [
@@ -8551,6 +8808,9 @@
  "burkina faso": [
   "k.geo/shards/africa",
   "k.geo/shards/africa-borders"
+ ],
+ "burlywood": [
+  "k.values/shards/colours-css"
  ],
  "burma": [
   "k.words/shards/bu"
@@ -9021,6 +9281,12 @@
  ],
  "cadet": [
   "k.words/shards/ca"
+ ],
+ "cadet blue": [
+  "k.values/shards/colours-css"
+ ],
+ "cadetblue": [
+  "k.values/shards/colours-css"
  ],
  "caesar": [
   "k.words/shards/ca"
@@ -9773,6 +10039,7 @@
   "k.objects/shards/stand-ins-wordnet"
  ],
  "cardinal": [
+  "k.values/shards/numbers",
   "k.words/shards/ca"
  ],
  "cards": [
@@ -10455,6 +10722,7 @@
  ],
  "center": [
   "k.actions/shards/verbs-place",
+  "k.values/shards/directions",
   "k.words/shards/ce"
  ],
  "centigrade": [
@@ -10521,6 +10789,7 @@
   "k.objects/shards/openmoji-animals-nature-01",
   "k.objects/shards/openmoji-food-drink-01",
   "k.objects/shards/places-2",
+  "k.values/shards/directions",
   "k.words/shards/ce"
  ],
  "centre parting": [
@@ -10906,7 +11175,14 @@
   "k.words/shards/ch"
  ],
  "charcoal": [
+  "k.values/shards/colours-common",
   "k.words/shards/ch"
+ ],
+ "charcoal gray": [
+  "k.values/shards/colours-common"
+ ],
+ "charcoal grey": [
+  "k.values/shards/colours-common"
  ],
  "chardonnay": [
   "k.objects/shards/stand-ins-hand"
@@ -10980,6 +11256,9 @@
  ],
  "charter": [
   "k.words/shards/ch"
+ ],
+ "chartreuse": [
+  "k.values/shards/colours-css"
  ],
  "chase": [
   "k.actions/shards/actions-move",
@@ -11235,11 +11514,15 @@
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/openmoji-food-drink-01",
   "k.scenes/shards/things-c",
+  "k.values/shards/colours-common",
   "k.words/shards/ch"
  ],
  "cherry blossom": [
   "k.objects/shards/noto-plant-flower-01",
   "k.scenes/shards/things-c"
+ ],
+ "cherry red": [
+  "k.values/shards/colours-common"
  ],
  "chersky range": [
   "k.geo/shards/asia"
@@ -11271,6 +11554,7 @@
   "k.objects/shards/noto-food-vegetable-02",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-c",
+  "k.values/shards/colours-common",
   "k.words/shards/ch"
  ],
  "chestnuts": [
@@ -11441,6 +11725,7 @@
   "k.words/shards/ch"
  ],
  "chilly": [
+  "k.values/shards/scales",
   "k.words/shards/ch"
  ],
  "chimborazo volcano": [
@@ -11611,6 +11896,7 @@
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-food-sweet-02",
   "k.scenes/shards/things-c",
+  "k.values/shards/colours-css",
   "k.words/shards/ch"
  ],
  "chocolate bar": [
@@ -11935,12 +12221,17 @@
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-game-01",
   "k.objects/shards/noto-transport-ground-06",
+  "k.values/shards/shapes",
   "k.words/shards/ci"
+ ],
+ "circles": [
+  "k.values/shards/shapes"
  ],
  "circuit": [
   "k.words/shards/ci"
  ],
  "circular": [
+  "k.values/shards/shapes",
   "k.words/shards/ci"
  ],
  "circulation": [
@@ -12400,6 +12691,9 @@
  "clocks": [
   "k.words/shards/cl"
  ],
+ "clockwise": [
+  "k.values/shards/directions"
+ ],
  "clockwork": [
   "k.words/shards/cl"
  ],
@@ -12419,6 +12713,7 @@
  "close": [
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-change",
+  "k.values/shards/scales",
   "k.words/shards/cl"
  ],
  "closed": [
@@ -12451,10 +12746,14 @@
   "k.scenes/shards/things-c"
  ],
  "closer": [
+  "k.values/shards/scales",
   "k.words/shards/cl"
  ],
  "closes": [
   "k.actions/shards/actions-hands"
+ ],
+ "closest": [
+  "k.values/shards/scales"
  ],
  "closet": [
   "k.objects/shards/noto-household-01",
@@ -12708,6 +13007,12 @@
  "cob": [
   "k.objects/shards/food"
  ],
+ "cobalt": [
+  "k.values/shards/colours-common"
+ ],
+ "cobalt blue": [
+  "k.values/shards/colours-common"
+ ],
  "cobbler": [
   "k.words/shards/co"
  ],
@@ -12899,10 +13204,17 @@
   "k.objects/shards/noto-sky-weather-04",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-sky-weather-06",
+  "k.values/shards/scales",
   "k.words/shards/co"
  ],
  "cold mountain": [
   "k.geo/shards/north-america"
+ ],
+ "colder": [
+  "k.values/shards/scales"
+ ],
+ "coldest": [
+  "k.values/shards/scales"
  ],
  "cole": [
   "k.words/shards/co"
@@ -13023,6 +13335,7 @@
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
+  "k.values/schema.sop",
   "k.words/shards/co"
  ],
  "color in": [
@@ -13042,6 +13355,7 @@
  ],
  "colors": [
   "k.faces/schema.sop",
+  "k.values/schema.sop",
   "k.words/shards/co"
  ],
  "colour": [
@@ -13050,6 +13364,7 @@
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
+  "k.values/schema.sop",
   "k.words/shards/co"
  ],
  "colour in": [
@@ -13066,6 +13381,7 @@
  ],
  "colours": [
   "k.faces/schema.sop",
+  "k.values/schema.sop",
   "k.words/shards/co"
  ],
  "colt": [
@@ -13704,6 +14020,7 @@
   "k.objects/shards/mulberry-food-sweets-and-desserts-01",
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-sound-01",
+  "k.values/shards/shapes",
   "k.words/shards/co"
  ],
  "cone peak": [
@@ -13717,6 +14034,9 @@
  ],
  "cone_3": [
   "k.objects/shards/nature-2"
+ ],
+ "cones": [
+  "k.values/shards/shapes"
  ],
  "coney": [
   "k.words/shards/co"
@@ -13814,6 +14134,9 @@
  ],
  "congressman": [
   "k.words/shards/co"
+ ],
+ "conical": [
+  "k.values/shards/shapes"
  ],
  "conical flask": [
   "k.objects/shards/mulberry-food-kitchen-items-02",
@@ -14228,10 +14551,15 @@
  ],
  "cool": [
   "k.objects/shards/noto-clothing-03",
+  "k.values/shards/scales",
   "k.words/shards/co"
  ],
  "cooler": [
+  "k.values/shards/scales",
   "k.words/shards/co"
+ ],
+ "coolest": [
+  "k.values/shards/scales"
  ],
  "cooling": [
   "k.objects/shards/noto-clothing-03",
@@ -14292,6 +14620,7 @@
  ],
  "copper": [
   "k.geo/shards/north-america",
+  "k.values/shards/colours-common",
   "k.words/shards/co"
  ],
  "coppermine": [
@@ -14327,6 +14656,7 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-c",
+  "k.values/shards/colours-css",
   "k.words/shards/co"
  ],
  "coral reef": [
@@ -14417,11 +14747,20 @@
   "k.objects/shards/mulberry-food-breads-and-baking-04",
   "k.scenes/shards/things-c"
  ],
+ "cornflower blue": [
+  "k.values/shards/colours-css"
+ ],
+ "cornflowerblue": [
+  "k.values/shards/colours-css"
+ ],
  "corno grande": [
   "k.geo/shards/europe"
  ],
  "corns": [
   "k.objects/shards/food"
+ ],
+ "cornsilk": [
+  "k.values/shards/colours-css"
  ],
  "cornwall": [
   "k.words/shards/co"
@@ -14645,6 +14984,12 @@
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/co"
  ],
+ "counter-clockwise": [
+  "k.values/shards/directions"
+ ],
+ "counterclockwise": [
+  "k.values/shards/directions"
+ ],
  "counterfeit": [
   "k.words/shards/co"
  ],
@@ -14681,6 +15026,7 @@
  ],
  "couple": [
   "k.actions/shards/verbs-connect",
+  "k.values/shards/numbers",
   "k.words/shards/co"
  ],
  "coupon": [
@@ -15025,6 +15371,7 @@
  "cream": [
   "k.food/shards/animal-foods",
   "k.objects/shards/noto-food-sweet-01",
+  "k.values/shards/colours-common",
   "k.words/shards/cr"
  ],
  "cream ointment": [
@@ -15109,11 +15456,16 @@
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.objects/shards/sky",
+  "k.values/shards/shapes",
   "k.words/shards/cr"
  ],
  "crescent moon": [
   "k.objects/shards/noto-sky-weather-02",
-  "k.scenes/shards/things-c"
+  "k.scenes/shards/things-c",
+  "k.values/shards/shapes"
+ ],
+ "crescents": [
+  "k.values/shards/shapes"
  ],
  "crest": [
   "k.faces/shards/plain-hat",
@@ -15174,6 +15526,7 @@
   "k.words/shards/cr"
  ],
  "crimson": [
+  "k.values/shards/colours-css",
   "k.words/shards/cr"
  ],
  "cripple": [
@@ -15291,6 +15644,7 @@
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/openmoji-healthcare-01",
+  "k.values/shards/shapes",
   "k.words/shards/cr"
  ],
  "cross out": [
@@ -15317,6 +15671,9 @@
  ],
  "crossed swords": [
   "k.objects/shards/noto-tool-01"
+ ],
+ "crosses": [
+  "k.values/shards/shapes"
  ],
  "crosshair": [
   "k.objects/shards/openmoji-technology-01"
@@ -15506,10 +15863,12 @@
  "cube": [
   "k.objects/shards/food",
   "k.objects/shards/noto-drink-03",
+  "k.values/shards/shapes",
   "k.words/shards/cu"
  ],
  "cubes": [
-  "k.objects/shards/food"
+  "k.objects/shards/food",
+  "k.values/shards/shapes"
  ],
  "cubic meter": [
   "k.units/shards/core"
@@ -15528,6 +15887,12 @@
  ],
  "cubicle": [
   "k.words/shards/cu"
+ ],
+ "cuboid": [
+  "k.values/shards/shapes"
+ ],
+ "cuboids": [
+  "k.values/shards/shapes"
  ],
  "cuchilla grande": [
   "k.geo/shards/south-america"
@@ -15797,7 +16162,14 @@
  "curve": [
   "k.actions/shards/actions-make-change",
   "k.objects/shards/noto-tool-03",
+  "k.values/shards/shapes",
   "k.words/shards/cu"
+ ],
+ "curved line": [
+  "k.values/shards/shapes"
+ ],
+ "curves": [
+  "k.values/shards/shapes"
  ],
  "cushion": [
   "k.layouts/shards/joins",
@@ -15984,6 +16356,9 @@
  "cuyuni": [
   "k.geo/shards/south-america"
  ],
+ "cyan": [
+  "k.values/shards/colours-css"
+ ],
  "cyanide": [
   "k.words/shards/cy"
  ],
@@ -16014,7 +16389,14 @@
   "k.objects/shards/noto-animal-bird-02"
  ],
  "cylinder": [
+  "k.values/shards/shapes",
   "k.words/shards/cy"
+ ],
+ "cylinders": [
+  "k.values/shards/shapes"
+ ],
+ "cylindrical": [
+  "k.values/shards/shapes"
  ],
  "cymbals hand": [
   "k.objects/shards/mulberry-music-instrument-01",
@@ -16317,22 +16699,143 @@
  "dark": [
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-sky-weather-01",
+  "k.values/shards/scales",
   "k.words/shards/da"
+ ],
+ "dark blue": [
+  "k.values/shards/colours-css"
  ],
  "dark brown": [
   "k.faces/shards/colours"
  ],
+ "dark cyan": [
+  "k.values/shards/colours-css"
+ ],
+ "dark goldenrod": [
+  "k.values/shards/colours-css"
+ ],
+ "dark gray": [
+  "k.values/shards/colours-css"
+ ],
+ "dark green": [
+  "k.values/shards/colours-css"
+ ],
+ "dark grey": [
+  "k.values/shards/colours-css"
+ ],
+ "dark khaki": [
+  "k.values/shards/colours-css"
+ ],
+ "dark magenta": [
+  "k.values/shards/colours-css"
+ ],
+ "dark olive green": [
+  "k.values/shards/colours-css"
+ ],
+ "dark orange": [
+  "k.values/shards/colours-css"
+ ],
+ "dark orchid": [
+  "k.values/shards/colours-css"
+ ],
+ "dark red": [
+  "k.values/shards/colours-css"
+ ],
+ "dark salmon": [
+  "k.values/shards/colours-css"
+ ],
+ "dark sea green": [
+  "k.values/shards/colours-css"
+ ],
+ "dark slate blue": [
+  "k.values/shards/colours-css"
+ ],
+ "dark slate gray": [
+  "k.values/shards/colours-css"
+ ],
+ "dark slate grey": [
+  "k.values/shards/colours-css"
+ ],
+ "dark turquoise": [
+  "k.values/shards/colours-css"
+ ],
+ "dark violet": [
+  "k.values/shards/colours-css"
+ ],
  "dark_half": [
   "k.objects/shards/noto-sky-weather-01"
+ ],
+ "darkblue": [
+  "k.values/shards/colours-css"
+ ],
+ "darkcyan": [
+  "k.values/shards/colours-css"
  ],
  "darken": [
   "k.actions/shards/verbs-change"
  ],
+ "darker": [
+  "k.values/shards/scales"
+ ],
+ "darkest": [
+  "k.values/shards/scales"
+ ],
+ "darkgoldenrod": [
+  "k.values/shards/colours-css"
+ ],
+ "darkgray": [
+  "k.values/shards/colours-css"
+ ],
+ "darkgreen": [
+  "k.values/shards/colours-css"
+ ],
+ "darkgrey": [
+  "k.values/shards/colours-css"
+ ],
  "darkhan": [
   "k.geo/shards/asia"
  ],
+ "darkkhaki": [
+  "k.values/shards/colours-css"
+ ],
+ "darkmagenta": [
+  "k.values/shards/colours-css"
+ ],
  "darkness": [
   "k.words/shards/da"
+ ],
+ "darkolivegreen": [
+  "k.values/shards/colours-css"
+ ],
+ "darkorange": [
+  "k.values/shards/colours-css"
+ ],
+ "darkorchid": [
+  "k.values/shards/colours-css"
+ ],
+ "darkred": [
+  "k.values/shards/colours-css"
+ ],
+ "darksalmon": [
+  "k.values/shards/colours-css"
+ ],
+ "darkseagreen": [
+  "k.values/shards/colours-css"
+ ],
+ "darkslateblue": [
+  "k.values/shards/colours-css"
+ ],
+ "darkslategray": [
+  "k.values/shards/colours-css"
+ ],
+ "darkslategrey": [
+  "k.values/shards/colours-css"
+ ],
+ "darkturquoise": [
+  "k.values/shards/colours-css"
+ ],
+ "darkviolet": [
+  "k.values/shards/colours-css"
  ],
  "darling": [
   "k.geo/shards/oceania",
@@ -16704,14 +17207,33 @@
   "k.words/shards/de"
  ],
  "deep": [
+  "k.values/shards/scales",
   "k.words/shards/de"
  ],
  "deep fat fryer": [
   "k.objects/shards/mulberry-food-kitchen-items-02",
   "k.scenes/shards/things-d"
  ],
+ "deep pink": [
+  "k.values/shards/colours-css"
+ ],
  "deep sea": [
   "k.scenes/shards/scenes-other"
+ ],
+ "deep sky blue": [
+  "k.values/shards/colours-css"
+ ],
+ "deeper": [
+  "k.values/shards/scales"
+ ],
+ "deepest": [
+  "k.values/shards/scales"
+ ],
+ "deeppink": [
+  "k.values/shards/colours-css"
+ ],
+ "deepskyblue": [
+  "k.values/shards/colours-css"
  ],
  "deer": [
   "k.animals/shards/mammals",
@@ -16778,6 +17300,7 @@
  ],
  "degree": [
   "k.units/shards/core",
+  "k.values/shards/scales",
   "k.words/shards/de"
  ],
  "degree celsius": [
@@ -17403,7 +17926,11 @@
   "k.objects/shards/mulberry-leisure-games-01",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/places-2",
+  "k.values/shards/shapes",
   "k.words/shards/di"
+ ],
+ "diamonds": [
+  "k.values/shards/shapes"
  ],
  "diana": [
   "k.words/shards/di"
@@ -17505,6 +18032,12 @@
  "difference": [
   "k.words/shards/di"
  ],
+ "different": [
+  "k.values/shards/sets"
+ ],
+ "differing": [
+  "k.values/shards/sets"
+ ],
  "difficulty": [
   "k.words/shards/di"
  ],
@@ -17574,11 +18107,23 @@
  "dim": [
   "k.words/shards/di"
  ],
+ "dim gray": [
+  "k.values/shards/colours-css"
+ ],
+ "dim grey": [
+  "k.values/shards/colours-css"
+ ],
  "dime": [
   "k.words/shards/di"
  ],
  "dimension": [
   "k.words/shards/di"
+ ],
+ "dimgray": [
+  "k.values/shards/colours-css"
+ ],
+ "dimgrey": [
+  "k.values/shards/colours-css"
  ],
  "dimmed": [
   "k.words/shards/di"
@@ -17692,7 +18237,11 @@
  "direction": [
   "k.actions/shards/acts",
   "k.objects/shards/noto-place-map-01",
+  "k.values/schema.sop",
   "k.words/shards/di"
+ ],
+ "directions": [
+  "k.values/schema.sop"
  ],
  "directive": [
   "k.words/shards/di"
@@ -17791,6 +18340,7 @@
   "k.objects/shards/sky",
   "k.objects/shards/things-2",
   "k.scenes/shards/things-d",
+  "k.values/shards/shapes",
   "k.words/shards/di"
  ],
  "discard": [
@@ -17905,6 +18455,7 @@
  ],
  "disk": [
   "k.objects/shards/noto-computer-02",
+  "k.values/shards/shapes",
   "k.words/shards/di"
  ],
  "dislike": [
@@ -17984,7 +18535,14 @@
   "k.words/shards/di"
  ],
  "distance": [
+  "k.values/shards/scales",
   "k.words/shards/di"
+ ],
+ "distant": [
+  "k.values/shards/scales"
+ ],
+ "distinct": [
+  "k.values/shards/sets"
  ],
  "distinction": [
   "k.words/shards/di"
@@ -18232,6 +18790,12 @@
  ],
  "dodger": [
   "k.words/shards/do"
+ ],
+ "dodger blue": [
+  "k.values/shards/colours-css"
+ ],
+ "dodgerblue": [
+  "k.values/shards/colours-css"
  ],
  "dodging": [
   "k.words/shards/do"
@@ -18613,6 +19177,7 @@
  ],
  "dot": [
   "k.faces/shards/plain-eyes",
+  "k.values/shards/shapes",
   "k.words/shards/do"
  ],
  "dot1": [
@@ -18642,6 +19207,9 @@
  "dot_3": [
   "k.faces/shards/plain-hat"
  ],
+ "dots": [
+  "k.values/shards/shapes"
+ ],
  "dotted": [
   "k.words/shards/do"
  ],
@@ -18652,6 +19220,7 @@
   "k.geo/shards/africa"
  ],
  "double": [
+  "k.values/shards/numbers",
   "k.words/shards/do"
  ],
  "double bed": [
@@ -18717,6 +19286,7 @@
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.values/shards/directions",
   "k.words/shards/do"
  ],
  "down_arrow": [
@@ -18746,7 +19316,11 @@
   "k.words/shards/do"
  ],
  "downward": [
-  "k.objects/shards/noto-office-02"
+  "k.objects/shards/noto-office-02",
+  "k.values/shards/directions"
+ ],
+ "downwards": [
+  "k.values/shards/directions"
  ],
  "dowry": [
   "k.words/shards/do"
@@ -18758,6 +19332,7 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "dozen": [
+  "k.values/shards/numbers",
   "k.words/shards/do"
  ],
  "dozens": [
@@ -19461,6 +20036,15 @@
   "k.objects/shards/noto-mail-01",
   "k.words/shards/e"
  ],
+ "each": [
+  "k.values/shards/sets"
+ ],
+ "each of them": [
+  "k.values/shards/sets"
+ ],
+ "each one": [
+  "k.values/shards/sets"
+ ],
  "eager": [
   "k.feelings/shards/feelings",
   "k.words/shards/ea"
@@ -19580,6 +20164,7 @@
   "k.words/shards/ea"
  ],
  "east": [
+  "k.values/shards/directions",
   "k.words/shards/ea"
  ],
  "east timor": [
@@ -19602,6 +20187,12 @@
  ],
  "eastmain": [
   "k.geo/shards/north-america"
+ ],
+ "eastward": [
+  "k.values/shards/directions"
+ ],
+ "eastwards": [
+  "k.values/shards/directions"
  ],
  "easy": [
   "k.objects/shards/noto-food-prepared-04"
@@ -19842,16 +20433,80 @@
  ],
  "eight": [
   "k.objects/shards/noto-game-01",
+  "k.values/shards/numbers",
   "k.words/shards/ei"
  ],
  "eighteen": [
+  "k.values/shards/numbers",
   "k.words/shards/ei"
+ ],
+ "eighteenth": [
+  "k.values/shards/numbers"
  ],
  "eighth": [
+  "k.values/shards/numbers",
   "k.words/shards/ei"
  ],
+ "eightieth": [
+  "k.values/shards/numbers"
+ ],
  "eighty": [
+  "k.values/shards/numbers",
   "k.words/shards/ei"
+ ],
+ "eighty-eight": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-first": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-five": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-four": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-nine": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-one": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-second": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-seven": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-six": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-third": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-three": [
+  "k.values/shards/numbers"
+ ],
+ "eighty-two": [
+  "k.values/shards/numbers"
  ],
  "eindhoven": [
   "k.geo/shards/europe"
@@ -19861,6 +20516,9 @@
  ],
  "eisenhower": [
   "k.words/shards/ei"
+ ],
+ "either": [
+  "k.values/shards/sets"
  ],
  "ekg": [
   "k.words/shards/ek"
@@ -20025,7 +20683,11 @@
   "k.words/shards/el"
  ],
  "eleven": [
+  "k.values/shards/numbers",
   "k.words/shards/el"
+ ],
+ "eleventh": [
+  "k.values/shards/numbers"
  ],
  "elf": [
   "k.objects/shards/mulberry-celebration-item-02",
@@ -20064,6 +20726,15 @@
  ],
  "ell": [
   "k.words/shards/el"
+ ],
+ "ellipse": [
+  "k.values/shards/shapes"
+ ],
+ "ellipses": [
+  "k.values/shards/shapes"
+ ],
+ "elliptical": [
+  "k.values/shards/shapes"
  ],
  "ellison": [
   "k.words/shards/el"
@@ -20135,7 +20806,11 @@
   "k.words/shards/em"
  ],
  "emerald": [
+  "k.values/shards/colours-common",
   "k.words/shards/em"
+ ],
+ "emerald green": [
+  "k.values/shards/colours-common"
  ],
  "emerge": [
   "k.objects/shards/noto-animal-bird-03",
@@ -20401,6 +21076,12 @@
  "enmity": [
   "k.words/shards/en"
  ],
+ "enormous": [
+  "k.values/shards/scales"
+ ],
+ "enormously": [
+  "k.values/shards/scales"
+ ],
  "enough": [
   "k.words/shards/en"
  ],
@@ -20530,6 +21211,7 @@
   "k.geo/shards/africa"
  ],
  "equal": [
+  "k.values/shards/sets",
   "k.words/shards/eq"
  ],
  "equality": [
@@ -20863,6 +21545,25 @@
  ],
  "everlasting": [
   "k.words/shards/ev"
+ ],
+ "every": [
+  "k.values/shards/sets"
+ ],
+ "every one": [
+  "k.values/shards/sets"
+ ],
+ "every other": [
+  "k.values/shards/sets"
+ ],
+ "every second": [
+  "k.values/shards/sets"
+ ],
+ "everything": [
+  "k.values/shards/scales",
+  "k.values/shards/sets"
+ ],
+ "everything else": [
+  "k.values/shards/sets"
  ],
  "eviction": [
   "k.words/shards/ev"
@@ -21209,6 +21910,9 @@
  "extreme": [
   "k.words/shards/ex"
  ],
+ "extremely": [
+  "k.values/shards/scales"
+ ],
  "eye": [
   "k.body/shards/core",
   "k.layouts/shards/joins",
@@ -21459,6 +22163,9 @@
  "fairies": [
   "k.people/shards/roles-story"
  ],
+ "fairly": [
+  "k.values/shards/scales"
+ ],
  "fairness": [
   "k.words/shards/fa"
  ],
@@ -21625,7 +22332,11 @@
  ],
  "far": [
   "k.layouts/shards/layouts",
+  "k.values/shards/scales",
   "k.words/shards/fa"
+ ],
+ "far away": [
+  "k.values/shards/scales"
  ],
  "far_end": [
   "k.objects/shards/places"
@@ -21696,6 +22407,12 @@
  "fart": [
   "k.words/shards/fa"
  ],
+ "farther": [
+  "k.values/shards/scales"
+ ],
+ "farthest": [
+  "k.values/shards/scales"
+ ],
  "farting": [
   "k.words/shards/fa"
  ],
@@ -21715,6 +22432,7 @@
  "fast": [
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-food-prepared-02",
+  "k.values/shards/scales",
   "k.words/shards/fa"
  ],
  "fasten": [
@@ -21723,11 +22441,18 @@
   "k.actions/shards/verbs-connect",
   "k.words/shards/fa"
  ],
+ "faster": [
+  "k.values/shards/scales"
+ ],
+ "fastest": [
+  "k.values/shards/scales"
+ ],
  "fasting": [
   "k.words/shards/fa"
  ],
  "fat": [
   "k.objects/shards/food",
+  "k.values/shards/scales",
   "k.words/shards/fa"
  ],
  "fate": [
@@ -21778,6 +22503,12 @@
  ],
  "fatted": [
   "k.words/shards/fa"
+ ],
+ "fatter": [
+  "k.values/shards/scales"
+ ],
+ "fattest": [
+  "k.values/shards/scales"
  ],
  "fatting": [
   "k.words/shards/fa"
@@ -22100,6 +22831,12 @@
  "few": [
   "k.words/shards/fe"
  ],
+ "fewer": [
+  "k.values/shards/scales"
+ ],
+ "fewest": [
+  "k.values/shards/scales"
+ ],
  "fez": [
   "k.geo/shards/africa",
   "k.words/shards/fe"
@@ -22173,9 +22910,14 @@
   "k.objects/shards/stand-ins-wordnet"
  ],
  "fifteen": [
+  "k.values/shards/numbers",
   "k.words/shards/fi"
  ],
+ "fifteenth": [
+  "k.values/shards/numbers"
+ ],
  "fifth": [
+  "k.values/shards/numbers",
   "k.words/shards/fi"
  ],
  "fifth_post": [
@@ -22187,8 +22929,66 @@
  "fifth_window": [
   "k.objects/shards/vehicles"
  ],
+ "fiftieth": [
+  "k.values/shards/numbers"
+ ],
  "fifty": [
+  "k.values/shards/numbers",
   "k.words/shards/fi"
+ ],
+ "fifty-eight": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-first": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-five": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-four": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-nine": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-one": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-second": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-seven": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-six": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-third": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-three": [
+  "k.values/shards/numbers"
+ ],
+ "fifty-two": [
+  "k.values/shards/numbers"
  ],
  "fig": [
   "k.food/shards/fruit",
@@ -22326,6 +23126,7 @@
   "k.words/shards/fi"
  ],
  "final": [
+  "k.values/shards/sets",
   "k.words/shards/fi"
  ],
  "finale": [
@@ -22372,10 +23173,17 @@
   "k.actions/shards/actions-mind-talk"
  ],
  "fine": [
+  "k.values/shards/scales",
   "k.words/shards/fi"
+ ],
+ "finer": [
+  "k.values/shards/scales"
  ],
  "finesse": [
   "k.words/shards/fi"
+ ],
+ "finest": [
+  "k.values/shards/scales"
  ],
  "finger": [
   "k.body/shards/core",
@@ -22482,6 +23290,9 @@
  "firebird": [
   "k.objects/shards/noto-animal-bird-03"
  ],
+ "firebrick": [
+  "k.values/shards/colours-css"
+ ],
  "firecracker": [
   "k.objects/shards/noto-event-01",
   "k.scenes/shards/things-f"
@@ -22541,6 +23352,8 @@
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.values/shards/numbers",
+  "k.values/shards/sets",
   "k.words/shards/fi"
  ],
  "first aid bag": [
@@ -22708,6 +23521,7 @@
   "k.geo/shards/oceania"
  ],
  "five": [
+  "k.values/shards/numbers",
   "k.words/shards/fi"
  ],
  "fiver": [
@@ -23052,6 +23866,12 @@
  "florae": [
   "k.words/shards/fl"
  ],
+ "floral white": [
+  "k.values/shards/colours-css"
+ ],
+ "floralwhite": [
+  "k.values/shards/colours-css"
+ ],
  "florence": [
   "k.geo/shards/europe",
   "k.words/shards/fl"
@@ -23355,6 +24175,7 @@
  ],
  "following": [
   "k.actions/shards/actions-move",
+  "k.values/shards/sets",
   "k.words/shards/fo"
  ],
  "follows": [
@@ -23549,7 +24370,8 @@
   "k.words/shards/fo"
  ],
  "foreground": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "k.values/shards/directions"
  ],
  "forehead": [
   "k.body/shards/core",
@@ -23587,6 +24409,12 @@
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/fo"
+ ],
+ "forest green": [
+  "k.values/shards/colours-css"
+ ],
+ "forestgreen": [
+  "k.values/shards/colours-css"
  ],
  "forests": [
   "k.scenes/shards/scenes-nature"
@@ -23710,6 +24538,9 @@
  "forth": [
   "k.words/shards/fo"
  ],
+ "fortieth": [
+  "k.values/shards/numbers"
+ ],
  "fortnight": [
   "k.time/shards/calendar",
   "k.words/shards/fo"
@@ -23741,17 +24572,74 @@
   "k.scenes/shards/things-f"
  ],
  "forty": [
+  "k.values/shards/numbers",
   "k.words/shards/fo"
  ],
+ "forty-eight": [
+  "k.values/shards/numbers"
+ ],
+ "forty-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "forty-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "forty-first": [
+  "k.values/shards/numbers"
+ ],
  "forty-five": [
+  "k.values/shards/numbers",
   "k.words/shards/fo"
+ ],
+ "forty-four": [
+  "k.values/shards/numbers"
+ ],
+ "forty-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "forty-nine": [
+  "k.values/shards/numbers"
+ ],
+ "forty-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "forty-one": [
+  "k.values/shards/numbers"
+ ],
+ "forty-second": [
+  "k.values/shards/numbers"
+ ],
+ "forty-seven": [
+  "k.values/shards/numbers"
+ ],
+ "forty-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "forty-six": [
+  "k.values/shards/numbers"
+ ],
+ "forty-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "forty-third": [
+  "k.values/shards/numbers"
+ ],
+ "forty-three": [
+  "k.values/shards/numbers"
+ ],
+ "forty-two": [
+  "k.values/shards/numbers"
  ],
  "forum": [
   "k.words/shards/fo"
  ],
  "forward": [
   "k.actions/shards/verbs-send",
+  "k.values/shards/directions",
   "k.words/shards/fo"
+ ],
+ "forwards": [
+  "k.values/shards/directions"
  ],
  "fossil": [
   "k.words/shards/fo"
@@ -23796,6 +24684,7 @@
  ],
  "four": [
   "k.objects/shards/noto-plant-other-02",
+  "k.values/shards/numbers",
   "k.words/shards/fo"
  ],
  "four corners": [
@@ -23809,9 +24698,14 @@
   "k.objects/shards/noto-plant-other-02"
  ],
  "fourteen": [
+  "k.values/shards/numbers",
   "k.words/shards/fo"
  ],
+ "fourteenth": [
+  "k.values/shards/numbers"
+ ],
  "fourth": [
+  "k.values/shards/numbers",
   "k.words/shards/fo"
  ],
  "fourth_knob": [
@@ -23872,6 +24766,7 @@
   "k.geo/shards/africa"
  ],
  "fraction": [
+  "k.values/shards/numbers",
   "k.words/shards/fr"
  ],
  "fracture": [
@@ -24043,6 +24938,7 @@
  ],
  "freezing": [
   "k.actions/shards/actions-make-change",
+  "k.values/shards/scales",
   "k.words/shards/fr"
  ],
  "freight": [
@@ -24230,6 +25126,7 @@
   "k.objects/shards/noto-office-01",
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
+  "k.values/shards/directions",
   "k.words/shards/fr"
  ],
  "front door": [
@@ -24404,6 +25301,9 @@
  ],
  "ft": [
   "k.units/shards/core"
+ ],
+ "fuchsia": [
+  "k.values/shards/colours-css"
  ],
  "fuchun": [
   "k.geo/shards/asia"
@@ -24590,7 +25490,11 @@
   "k.words/shards/fu"
  ],
  "further": [
+  "k.values/shards/scales",
   "k.words/shards/fu"
+ ],
+ "furthest": [
+  "k.values/shards/scales"
  ],
  "fury": [
   "k.words/shards/fu"
@@ -24676,6 +25580,9 @@
  ],
  "gain": [
   "k.words/shards/ga"
+ ],
+ "gainsboro": [
+  "k.values/shards/colours-css"
  ],
  "gaius": [
   "k.words/shards/ga"
@@ -25332,6 +26239,12 @@
   "k.scenes/shards/things-g",
   "k.words/shards/gh"
  ],
+ "ghost white": [
+  "k.values/shards/colours-css"
+ ],
+ "ghostwhite": [
+  "k.values/shards/colours-css"
+ ],
  "ghäghara": [
   "k.geo/shards/asia"
  ],
@@ -25342,6 +26255,7 @@
   "k.words/shards/gi"
  ],
  "giant": [
+  "k.values/shards/scales",
   "k.words/shards/gi"
  ],
  "giant panda": [
@@ -25366,6 +26280,9 @@
  ],
  "gig": [
   "k.words/shards/gi"
+ ],
+ "gigantic": [
+  "k.values/shards/scales"
  ],
  "giggle": [
   "k.actions/shards/actions-mind-talk",
@@ -25617,6 +26534,9 @@
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/gl"
  ],
+ "globe shape": [
+  "k.values/shards/shapes"
+ ],
  "globe showing americas": [
   "k.objects/shards/noto-place-map-01",
   "k.scenes/shards/things-g"
@@ -25836,6 +26756,7 @@
  "gold": [
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-money-01",
+  "k.values/shards/colours-css",
   "k.words/shards/go"
  ],
  "gold bar": [
@@ -25845,8 +26766,14 @@
  "goldberg": [
   "k.words/shards/go"
  ],
+ "golden": [
+  "k.values/shards/colours-css"
+ ],
  "golden hinde": [
   "k.geo/shards/north-america"
+ ],
+ "goldenrod": [
+  "k.values/shards/colours-css"
  ],
  "goldfish": [
   "k.animals/shards/fish",
@@ -26395,6 +27322,7 @@
   "k.scenes/shards/things-g"
  ],
  "gray": [
+  "k.values/shards/colours-css",
   "k.words/shards/gr"
  ],
  "graz": [
@@ -26453,6 +27381,7 @@
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-food-vegetable-02",
   "k.objects/shards/noto-plant-other-01",
+  "k.values/shards/colours-css",
   "k.words/shards/gr"
  ],
  "green apple": [
@@ -26474,6 +27403,9 @@
  "green salad": [
   "k.objects/shards/noto-food-prepared-04",
   "k.scenes/shards/things-g"
+ ],
+ "green yellow": [
+  "k.values/shards/colours-css"
  ],
  "green_button": [
   "k.objects/shards/mulberry-electrical-media-02"
@@ -26502,6 +27434,9 @@
  ],
  "greenwich": [
   "k.words/shards/gr"
+ ],
+ "greenyellow": [
+  "k.values/shards/colours-css"
  ],
  "greet": [
   "k.words/shards/gr"
@@ -26533,6 +27468,7 @@
  "grey": [
   "k.faces/shards/colours",
   "k.geo/shards/oceania",
+  "k.values/shards/colours-css",
   "k.words/shards/gr"
  ],
  "grey matter": [
@@ -26735,6 +27671,7 @@
  "group": [
   "k.actions/shards/acts",
   "k.actions/shards/verbs-group",
+  "k.values/shards/numbers",
   "k.words/shards/gr"
  ],
  "group photo": [
@@ -27284,14 +28221,31 @@
  ],
  "half": [
   "k.objects/shards/openmoji-food-drink-01",
+  "k.values/shards/numbers",
+  "k.values/shards/sets",
   "k.words/shards/ha"
+ ],
+ "half a dozen": [
+  "k.values/shards/numbers"
+ ],
+ "half circle": [
+  "k.values/shards/shapes"
+ ],
+ "half of them": [
+  "k.values/shards/sets"
  ],
  "half orange fruit": [
   "k.objects/shards/openmoji-food-drink-01",
   "k.scenes/shards/things-h"
  ],
+ "half the": [
+  "k.values/shards/sets"
+ ],
  "half way tree": [
   "k.geo/shards/north-america"
+ ],
+ "half-circle": [
+  "k.values/shards/shapes"
  ],
  "half-hour": [
   "k.words/shards/ha"
@@ -28245,7 +29199,11 @@
   "k.objects/shards/noto-medical-01",
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/noto-place-building-03",
+  "k.values/shards/shapes",
   "k.words/shards/he"
+ ],
+ "heart-shaped": [
+  "k.values/shards/shapes"
  ],
  "heart1": [
   "k.objects/shards/mulberry-food-sweets-and-desserts-01"
@@ -28286,6 +29244,7 @@
  "hearts": [
   "k.body/shards/core",
   "k.objects/shards/more",
+  "k.values/shards/shapes",
   "k.words/shards/he"
  ],
  "heat": [
@@ -28320,9 +29279,16 @@
  "heavens": [
   "k.words/shards/he"
  ],
+ "heavier": [
+  "k.values/shards/scales"
+ ],
+ "heaviest": [
+  "k.values/shards/scales"
+ ],
  "heavy": [
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/openmoji-healthcare-04",
+  "k.values/shards/scales",
   "k.words/shards/he"
  ],
  "heavyweight": [
@@ -28384,6 +29350,7 @@
  "height": [
   "k.geo/schema.sop",
   "k.people/schema.sop",
+  "k.values/shards/scales",
   "k.words/shards/he"
  ],
  "heights": [
@@ -28683,7 +29650,14 @@
   "k.words/shards/he"
  ],
  "hexagon": [
-  "k.objects/shards/mulberry-leisure-toys-03"
+  "k.objects/shards/mulberry-leisure-toys-03",
+  "k.values/shards/shapes"
+ ],
+ "hexagonal": [
+  "k.values/shards/shapes"
+ ],
+ "hexagons": [
+  "k.values/shards/shapes"
  ],
  "hi": [
   "k.words/shards/hi"
@@ -28743,6 +29717,7 @@
   "k.geo/schema.sop",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-sound-01",
+  "k.values/shards/scales",
   "k.words/shards/hi"
  ],
  "high atlas": [
@@ -28769,6 +29744,12 @@
  "high-speed train": [
   "k.objects/shards/noto-transport-ground-01",
   "k.scenes/shards/things-h"
+ ],
+ "higher": [
+  "k.values/shards/scales"
+ ],
+ "highest": [
+  "k.values/shards/scales"
  ],
  "highland": [
   "k.words/shards/hi"
@@ -29265,6 +30246,9 @@
   "k.objects/shards/noto-animal-bug-01",
   "k.scenes/shards/things-h"
  ],
+ "honeydew": [
+  "k.values/shards/colours-css"
+ ],
  "honeymoon": [
   "k.words/shards/ho"
  ],
@@ -29383,6 +30367,7 @@
  "hoop": [
   "k.faces/shards/plain-earrings",
   "k.objects/shards/noto-sport-01",
+  "k.values/shards/shapes",
   "k.words/shards/ho"
  ],
  "hoop_1": [
@@ -29570,7 +30555,8 @@
   "k.objects/shards/noto-food-vegetable-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-sky-weather-05",
-  "k.objects/shards/noto-tool-01"
+  "k.objects/shards/noto-tool-01",
+  "k.values/shards/scales"
  ],
  "hot air balloon": [
   "k.objects/shards/mulberry-transport-air-01",
@@ -29601,6 +30587,9 @@
   "k.objects/shards/noto-food-vegetable-01",
   "k.scenes/shards/things-h"
  ],
+ "hot pink": [
+  "k.values/shards/colours-css"
+ ],
  "hot springs": [
   "k.objects/shards/noto-place-other-02"
  ],
@@ -29623,11 +30612,20 @@
   "k.scenes/shards/things-h",
   "k.words/shards/ho"
  ],
+ "hotpink": [
+  "k.values/shards/colours-css"
+ ],
  "hotshot": [
   "k.words/shards/ho"
  ],
  "hotsprings": [
   "k.objects/shards/noto-place-other-02"
+ ],
+ "hotter": [
+  "k.values/shards/scales"
+ ],
+ "hottest": [
+  "k.values/shards/scales"
  ],
  "houdini": [
   "k.words/shards/ho"
@@ -29833,6 +30831,12 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/hu"
  ],
+ "huge": [
+  "k.values/shards/scales"
+ ],
+ "hugely": [
+  "k.values/shards/scales"
+ ],
  "hugged": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/hu"
@@ -29939,7 +30943,11 @@
   "k.words/shards/hu"
  ],
  "hundred": [
+  "k.values/shards/numbers",
   "k.words/shards/hu"
+ ],
+ "hundredth": [
+  "k.values/shards/numbers"
  ],
  "hung": [
   "k.actions/shards/actions-hands",
@@ -30209,6 +31217,9 @@
  "icu": [
   "k.words/shards/ic"
  ],
+ "icy": [
+  "k.values/shards/scales"
+ ],
  "id": [
   "k.objects/shards/noto-other-object-02",
   "k.words/shards/id"
@@ -30225,6 +31236,9 @@
  ],
  "ideal": [
   "k.words/shards/id"
+ ],
+ "identical": [
+  "k.values/shards/sets"
  ],
  "identification": [
   "k.objects/shards/noto-other-object-02",
@@ -30373,6 +31387,9 @@
  "imitation": [
   "k.words/shards/im"
  ],
+ "immense": [
+  "k.values/shards/scales"
+ ],
  "immigrant": [
   "k.words/shards/im"
  ],
@@ -30473,14 +31490,35 @@
  "in a row": [
   "k.layouts/shards/layouts"
  ],
+ "in front": [
+  "k.values/shards/directions"
+ ],
+ "in the background": [
+  "k.values/shards/directions"
+ ],
+ "in the center": [
+  "k.values/shards/directions"
+ ],
+ "in the centre": [
+  "k.values/shards/directions"
+ ],
  "in the corners": [
   "k.layouts/shards/layouts"
+ ],
+ "in the foreground": [
+  "k.values/shards/directions"
+ ],
+ "in the middle": [
+  "k.values/shards/directions"
  ],
  "in the rain": [
   "k.scenes/shards/scenes-other"
  ],
  "in the snow": [
   "k.scenes/shards/scenes-other"
+ ],
+ "in turn": [
+  "k.values/shards/sets"
  ],
  "inability": [
   "k.words/shards/in"
@@ -30562,6 +31600,9 @@
   "k.objects/shards/noto-money-02",
   "k.objects/shards/noto-office-02"
  ],
+ "incredibly": [
+  "k.values/shards/scales"
+ ],
  "incurable": [
   "k.words/shards/in"
  ],
@@ -30609,8 +31650,14 @@
  "indian ocean territories": [
   "k.geo/shards/asia"
  ],
+ "indian red": [
+  "k.values/shards/colours-css"
+ ],
  "indiana": [
   "k.words/shards/in"
+ ],
+ "indianred": [
+  "k.values/shards/colours-css"
  ],
  "indicate": [
   "k.words/shards/in"
@@ -30634,7 +31681,8 @@
   "k.geo/shards/europe"
  ],
  "indigo": [
-  "k.objects/shards/noto-plant-flower-02"
+  "k.objects/shards/noto-plant-flower-02",
+  "k.values/shards/colours-css"
  ],
  "individual": [
   "k.words/shards/in"
@@ -31257,6 +32305,12 @@
  "involvement": [
   "k.words/shards/in"
  ],
+ "inward": [
+  "k.values/shards/directions"
+ ],
+ "inwards": [
+  "k.values/shards/directions"
+ ],
  "io": [
   "k.space/shards/solar-system",
   "k.words/shards/io"
@@ -31544,6 +32598,7 @@
   "k.geo/shards/south-america"
  ],
  "ivory": [
+  "k.values/shards/colours-css",
   "k.words/shards/iv"
  ],
  "ivory coast": [
@@ -31653,7 +32708,11 @@
   "k.words/shards/ja"
  ],
  "jade": [
+  "k.values/shards/colours-common",
   "k.words/shards/ja"
+ ],
+ "jade green": [
+  "k.values/shards/colours-common"
  ],
  "jaffa": [
   "k.words/shards/ja"
@@ -33036,6 +34095,9 @@
  "kgb": [
   "k.words/shards/kg"
  ],
+ "khaki": [
+  "k.values/shards/colours-css"
+ ],
  "khan": [
   "k.words/shards/kh"
  ],
@@ -34384,6 +35446,7 @@
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-mammal-06",
   "k.scenes/schema.sop",
+  "k.values/shards/scales",
   "k.words/shards/la"
  ],
  "large hoop": [
@@ -34395,8 +35458,12 @@
  "large_lobe": [
   "k.objects/shards/openmoji-healthcare-02"
  ],
+ "larger": [
+  "k.values/shards/scales"
+ ],
  "largest": [
-  "k.space/schema.sop"
+  "k.space/schema.sop",
+  "k.values/shards/scales"
  ],
  "lark": [
   "k.objects/shards/stand-ins-hand",
@@ -34440,6 +35507,7 @@
  "last": [
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.values/shards/sets",
   "k.words/shards/la"
  ],
  "last quarter moon": [
@@ -34570,7 +35638,14 @@
  ],
  "lavender": [
   "k.objects/shards/noto-plant-flower-02",
+  "k.values/shards/colours-css",
   "k.words/shards/la"
+ ],
+ "lavender blush": [
+  "k.values/shards/colours-css"
+ ],
+ "lavenderblush": [
+  "k.values/shards/colours-css"
  ],
  "law": [
   "k.words/shards/la"
@@ -34579,10 +35654,16 @@
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.words/shards/la"
  ],
+ "lawn green": [
+  "k.values/shards/colours-css"
+ ],
  "lawn mower": [
   "k.objects/shards/openmoji-gardening-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-l"
+ ],
+ "lawngreen": [
+  "k.values/shards/colours-css"
  ],
  "lawnmower": [
   "k.objects/shards/mulberry-tools-garden-01",
@@ -34802,6 +35883,7 @@
   "k.objects/shards/things-2"
  ],
  "least": [
+  "k.values/shards/scales",
   "k.words/shards/le"
  ],
  "leather": [
@@ -34883,7 +35965,14 @@
   "k.actions/shards/actions-move",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/openmoji-technology-01",
+  "k.values/shards/directions",
   "k.words/shards/le"
+ ],
+ "left side": [
+  "k.values/shards/directions"
+ ],
+ "left-hand side": [
+  "k.values/shards/directions"
  ],
  "left-pointing": [
   "k.objects/shards/noto-light-video-02"
@@ -35605,6 +36694,12 @@
  "leftovers": [
   "k.words/shards/le"
  ],
+ "leftward": [
+  "k.values/shards/directions"
+ ],
+ "leftwards": [
+  "k.values/shards/directions"
+ ],
  "lefty": [
   "k.words/shards/le"
  ],
@@ -35710,11 +36805,18 @@
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-food-fruit-01",
   "k.scenes/shards/things-l",
+  "k.values/shards/colours-common",
   "k.words/shards/le"
+ ],
+ "lemon chiffon": [
+  "k.values/shards/colours-css"
  ],
  "lemon squash": [
   "k.objects/shards/mulberry-drink-type-02",
   "k.scenes/shards/things-l"
+ ],
+ "lemon yellow": [
+  "k.values/shards/colours-common"
  ],
  "lemonade": [
   "k.food/shards/other",
@@ -35723,6 +36825,9 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-l",
   "k.words/shards/le"
+ ],
+ "lemonchiffon": [
+  "k.values/shards/colours-css"
  ],
  "lemons": [
   "k.food/shards/fruit"
@@ -35749,10 +36854,14 @@
  "length": [
   "k.faces/schema.sop",
   "k.units/shards/core",
+  "k.values/shards/scales",
   "k.words/shards/le"
  ],
  "lengthen": [
   "k.actions/shards/verbs-change"
+ ],
+ "lengthy": [
+  "k.values/shards/scales"
  ],
  "lenin": [
   "k.words/shards/le"
@@ -35831,6 +36940,9 @@
  "lesotho": [
   "k.geo/shards/africa",
   "k.geo/shards/africa-borders"
+ ],
+ "less": [
+  "k.values/shards/scales"
  ],
  "lesser caucasus": [
   "k.geo/shards/asia"
@@ -36141,15 +37253,64 @@
   "k.objects/shards/noto-transport-ground-02",
   "k.objects/shards/noto-transport-ground-03",
   "k.objects/shards/noto-transport-ground-06",
+  "k.values/shards/scales",
   "k.words/shards/li"
+ ],
+ "light blue": [
+  "k.values/shards/colours-css"
+ ],
+ "light brown": [
+  "k.values/shards/colours-css"
  ],
  "light bulb": [
   "k.objects/shards/noto-light-video-02",
   "k.scenes/shards/things-l"
  ],
+ "light coral": [
+  "k.values/shards/colours-css"
+ ],
+ "light cyan": [
+  "k.values/shards/colours-css"
+ ],
+ "light goldenrod yellow": [
+  "k.values/shards/colours-css"
+ ],
+ "light gray": [
+  "k.values/shards/colours-css"
+ ],
+ "light green": [
+  "k.values/shards/colours-css"
+ ],
+ "light grey": [
+  "k.values/shards/colours-css"
+ ],
+ "light pink": [
+  "k.values/shards/colours-css"
+ ],
  "light rail": [
   "k.objects/shards/noto-transport-ground-01",
   "k.scenes/shards/things-l"
+ ],
+ "light salmon": [
+  "k.values/shards/colours-css"
+ ],
+ "light sea green": [
+  "k.values/shards/colours-css"
+ ],
+ "light sky blue": [
+  "k.values/shards/colours-css"
+ ],
+ "light slate gray": [
+  "k.values/shards/colours-css"
+ ],
+ "light slate grey": [
+  "k.values/shards/colours-css"
+ ],
+ "light steel blue": [
+  "k.values/shards/colours-css"
+ ],
+ "light yellow": [
+  "k.values/shards/colours-css"
  ],
  "light1": [
   "k.objects/shards/noto-transport-air-02"
@@ -36181,9 +37342,18 @@
  "light_half": [
   "k.objects/shards/noto-sky-weather-01"
  ],
+ "lightblue": [
+  "k.values/shards/colours-css"
+ ],
  "lightbulb": [
   "k.objects/shards/mulberry-electrical-general-01",
   "k.scenes/shards/things-l"
+ ],
+ "lightcoral": [
+  "k.values/shards/colours-css"
+ ],
+ "lightcyan": [
+  "k.values/shards/colours-css"
  ],
  "lighten": [
   "k.words/shards/li"
@@ -36191,7 +37361,23 @@
  "lighter": [
   "k.objects/shards/openmoji-objects-01",
   "k.scenes/shards/things-l",
+  "k.values/shards/scales",
   "k.words/shards/li"
+ ],
+ "lightest": [
+  "k.values/shards/scales"
+ ],
+ "lightgoldenrodyellow": [
+  "k.values/shards/colours-css"
+ ],
+ "lightgray": [
+  "k.values/shards/colours-css"
+ ],
+ "lightgreen": [
+  "k.values/shards/colours-css"
+ ],
+ "lightgrey": [
+  "k.values/shards/colours-css"
  ],
  "lighthouse": [
   "k.layouts/shards/anchors",
@@ -36213,11 +37399,35 @@
   "k.objects/shards/noto-sky-weather-05",
   "k.words/shards/li"
  ],
+ "lightpink": [
+  "k.values/shards/colours-css"
+ ],
  "lights": [
   "k.actions/shards/actions-make-change"
  ],
+ "lightsalmon": [
+  "k.values/shards/colours-css"
+ ],
+ "lightseagreen": [
+  "k.values/shards/colours-css"
+ ],
+ "lightskyblue": [
+  "k.values/shards/colours-css"
+ ],
+ "lightslategray": [
+  "k.values/shards/colours-css"
+ ],
+ "lightslategrey": [
+  "k.values/shards/colours-css"
+ ],
+ "lightsteelblue": [
+  "k.values/shards/colours-css"
+ ],
  "lightweight": [
   "k.words/shards/li"
+ ],
+ "lightyellow": [
+  "k.values/shards/colours-css"
  ],
  "ligonha": [
   "k.geo/shards/africa"
@@ -36237,7 +37447,8 @@
  ],
  "lilac": [
   "k.objects/shards/noto-plant-flower-02",
-  "k.objects/shards/stand-ins-wordnet"
+  "k.objects/shards/stand-ins-wordnet",
+  "k.values/shards/colours-common"
  ],
  "lilith": [
   "k.words/shards/li"
@@ -36271,7 +37482,14 @@
   "k.objects/shards/food-2",
   "k.objects/shards/noto-food-fruit-01",
   "k.scenes/shards/things-l",
+  "k.values/shards/colours-css",
   "k.words/shards/li"
+ ],
+ "lime green": [
+  "k.values/shards/colours-css"
+ ],
+ "limegreen": [
+  "k.values/shards/colours-css"
  ],
  "limerick": [
   "k.geo/shards/europe"
@@ -36326,6 +37544,7 @@
   "k.objects/shards/home",
   "k.objects/shards/noto-money-02",
   "k.objects/shards/noto-office-02",
+  "k.values/shards/shapes",
   "k.words/shards/li"
  ],
  "line up": [
@@ -36353,13 +37572,15 @@
   "k.layouts/shards/layouts"
  ],
  "linen": [
+  "k.values/shards/colours-css",
   "k.words/shards/li"
  ],
  "liner": [
   "k.words/shards/li"
  ],
  "lines": [
-  "k.objects/shards/home"
+  "k.objects/shards/home",
+  "k.values/shards/shapes"
  ],
  "lineup": [
   "k.words/shards/li"
@@ -36554,7 +37775,14 @@
   "k.words/shards/li"
  ],
  "little": [
+  "k.values/shards/scales",
   "k.words/shards/li"
+ ],
+ "littler": [
+  "k.values/shards/scales"
+ ],
+ "littlest": [
+  "k.values/shards/scales"
  ],
  "litz-wire": [
   "k.objects/shards/openmoji-technology-02"
@@ -36876,6 +38104,7 @@
   "k.faces/shards/plain-nose",
   "k.objects/shards/noto-musical-instrument-02",
   "k.time/schema.sop",
+  "k.values/shards/scales",
   "k.words/shards/lo"
  ],
  "long curly": [
@@ -36899,7 +38128,11 @@
   "k.faces/shards/plain-hair-back"
  ],
  "longer": [
+  "k.values/shards/scales",
   "k.words/shards/lo"
+ ],
+ "longest": [
+  "k.values/shards/scales"
  ],
  "longing": [
   "k.words/shards/lo"
@@ -37043,7 +38276,11 @@
   "k.scenes/shards/things-l"
  ],
  "lots": [
+  "k.values/shards/scales",
   "k.words/shards/lo"
+ ],
+ "lots of": [
+  "k.values/shards/scales"
  ],
  "lotta": [
   "k.geo/shards/europe"
@@ -37075,7 +38312,17 @@
   "k.geo/shards/africa"
  ],
  "loud": [
-  "k.objects/shards/noto-sound-01"
+  "k.objects/shards/noto-sound-01",
+  "k.values/shards/scales"
+ ],
+ "louder": [
+  "k.values/shards/scales"
+ ],
+ "loudest": [
+  "k.values/shards/scales"
+ ],
+ "loudness": [
+  "k.values/shards/scales"
  ],
  "loudspeaker": [
   "k.objects/shards/noto-sound-01",
@@ -37121,6 +38368,7 @@
  "low": [
   "k.objects/shards/noto-computer-01",
   "k.objects/shards/noto-sound-01",
+  "k.values/shards/scales",
   "k.words/shards/lo"
  ],
  "low battery": [
@@ -37133,7 +38381,17 @@
  "lower": [
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-place",
+  "k.values/shards/scales",
   "k.words/shards/lo"
+ ],
+ "lower left": [
+  "k.values/shards/directions"
+ ],
+ "lower part": [
+  "k.values/shards/directions"
+ ],
+ "lower right": [
+  "k.values/shards/directions"
  ],
  "lower_band": [
   "k.objects/shards/things-2"
@@ -37215,11 +38473,17 @@
  "lowers": [
   "k.actions/shards/actions-hands"
  ],
+ "lowest": [
+  "k.values/shards/scales"
+ ],
  "lowlife": [
   "k.words/shards/lo"
  ],
  "loyalty": [
   "k.words/shards/lo"
+ ],
+ "lozenge": [
+  "k.values/shards/shapes"
  ],
  "lsd": [
   "k.words/shards/ls"
@@ -37633,6 +38897,9 @@
  "magdalena": [
   "k.geo/shards/south-america"
  ],
+ "magenta": [
+  "k.values/shards/colours-css"
+ ],
  "maggot": [
   "k.objects/shards/noto-animal-bug-02",
   "k.words/shards/ma"
@@ -37726,6 +38993,9 @@
  ],
  "mahjong": [
   "k.words/shards/ma"
+ ],
+ "mahogany": [
+  "k.values/shards/colours-common"
  ],
  "mahäna nadï": [
   "k.geo/shards/asia"
@@ -38234,7 +39504,8 @@
   "k.words/shards/ma"
  ],
  "many": [
-  "k.body/schema.sop"
+  "k.body/schema.sop",
+  "k.values/shards/scales"
  ],
  "manzini": [
   "k.geo/shards/africa"
@@ -38478,6 +39749,9 @@
  "maroni": [
   "k.geo/shards/south-america"
  ],
+ "maroon": [
+  "k.values/shards/colours-css"
+ ],
  "maroua": [
   "k.geo/shards/africa"
  ],
@@ -38694,6 +39968,9 @@
  "masses": [
   "k.words/shards/ma"
  ],
+ "massive": [
+  "k.values/shards/scales"
+ ],
  "mast": [
   "k.layouts/shards/joins",
   "k.objects/shards/noto-transport-water-01",
@@ -38736,6 +40013,9 @@
  ],
  "match": [
   "k.words/shards/ma"
+ ],
+ "matching": [
+  "k.values/shards/sets"
  ],
  "mate": [
   "k.objects/shards/noto-drink-03",
@@ -38847,6 +40127,9 @@
  "mauritius": [
   "k.geo/shards/africa",
   "k.geo/shards/africa-borders"
+ ],
+ "mauve": [
+  "k.values/shards/colours-common"
  ],
  "maverick": [
   "k.words/shards/ma"
@@ -39197,7 +40480,65 @@
   "k.faces/shards/plain-neck",
   "k.faces/shards/plain-nose",
   "k.objects/shards/noto-sound-01",
+  "k.values/shards/scales",
   "k.words/shards/me"
+ ],
+ "medium aquamarine": [
+  "k.values/shards/colours-css"
+ ],
+ "medium blue": [
+  "k.values/shards/colours-css"
+ ],
+ "medium orchid": [
+  "k.values/shards/colours-css"
+ ],
+ "medium purple": [
+  "k.values/shards/colours-css"
+ ],
+ "medium sea green": [
+  "k.values/shards/colours-css"
+ ],
+ "medium slate blue": [
+  "k.values/shards/colours-css"
+ ],
+ "medium spring green": [
+  "k.values/shards/colours-css"
+ ],
+ "medium turquoise": [
+  "k.values/shards/colours-css"
+ ],
+ "medium violet red": [
+  "k.values/shards/colours-css"
+ ],
+ "medium-sized": [
+  "k.values/shards/scales"
+ ],
+ "mediumaquamarine": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumblue": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumorchid": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumpurple": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumseagreen": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumslateblue": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumspringgreen": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumturquoise": [
+  "k.values/shards/colours-css"
+ ],
+ "mediumvioletred": [
+  "k.values/shards/colours-css"
  ],
  "medusa": [
   "k.words/shards/me"
@@ -39771,7 +41112,11 @@
  ],
  "middle": [
   "k.objects/shards/mulberry-celebration-item-02",
+  "k.values/shards/directions",
   "k.words/shards/mi"
+ ],
+ "middle-sized": [
+  "k.values/shards/scales"
  ],
  "middle_ball": [
   "k.objects/shards/figures"
@@ -39885,6 +41230,12 @@
  "midnight": [
   "k.scenes/shards/scenes-other",
   "k.words/shards/mi"
+ ],
+ "midnight blue": [
+  "k.values/shards/colours-css"
+ ],
+ "midnightblue": [
+  "k.values/shards/colours-css"
  ],
  "midst": [
   "k.words/shards/mi"
@@ -40072,11 +41423,15 @@
  ],
  "million": [
   "k.objects/shards/noto-money-01",
+  "k.values/shards/numbers",
   "k.words/shards/mi"
  ],
  "millionaire": [
   "k.objects/shards/noto-transport-water-01",
   "k.words/shards/mi"
+ ],
+ "millionth": [
+  "k.values/shards/numbers"
  ],
  "mills": [
   "k.words/shards/mi"
@@ -40160,6 +41515,7 @@
   "k.geo/shards/europe"
  ],
  "mini": [
+  "k.values/shards/scales",
   "k.words/shards/mi"
  ],
  "mini bus": [
@@ -40168,6 +41524,7 @@
  ],
  "miniature": [
   "k.objects/shards/stand-ins-wordnet",
+  "k.values/shards/scales",
   "k.words/shards/mi"
  ],
  "miniavs": [
@@ -40293,7 +41650,17 @@
  ],
  "mint": [
   "k.food/shards/other",
+  "k.values/shards/colours-common",
   "k.words/shards/mi"
+ ],
+ "mint cream": [
+  "k.values/shards/colours-css"
+ ],
+ "mint green": [
+  "k.values/shards/colours-common"
+ ],
+ "mintcream": [
+  "k.values/shards/colours-css"
  ],
  "mints": [
   "k.objects/shards/mulberry-food-sweets-and-desserts-03",
@@ -40306,6 +41673,7 @@
  "minute": [
   "k.time/shards/calendar",
   "k.units/shards/core",
+  "k.values/shards/scales",
   "k.words/shards/mi"
  ],
  "minute_hand": [
@@ -40439,6 +41807,12 @@
  "mistress": [
   "k.words/shards/mi"
  ],
+ "misty rose": [
+  "k.values/shards/colours-css"
+ ],
+ "mistyrose": [
+  "k.values/shards/colours-css"
+ ],
  "misunderstand": [
   "k.words/shards/mi"
  ],
@@ -40477,7 +41851,8 @@
   "k.words/shards/mi"
  ],
  "mixed": [
-  "k.actions/shards/actions-make-change"
+  "k.actions/shards/actions-make-change",
+  "k.values/shards/sets"
  ],
  "mixed up": [
   "k.feelings/shards/feelings"
@@ -40564,6 +41939,9 @@
   "k.objects/shards/noto-medical-01",
   "k.objects/shards/openmoji-healthcare-03"
  ],
+ "moccasin": [
+  "k.values/shards/colours-css"
+ ],
  "mock": [
   "k.words/shards/mo"
  ],
@@ -40593,6 +41971,9 @@
  ],
  "moderate": [
   "k.words/shards/mo"
+ ],
+ "moderately": [
+  "k.values/shards/scales"
  ],
  "modern": [
   "k.words/shards/mo"
@@ -41097,6 +42478,7 @@
   "k.geo/shards/europe"
  ],
  "more": [
+  "k.values/shards/scales",
   "k.words/shards/mo"
  ],
  "morgan": [
@@ -41218,6 +42600,13 @@
  ],
  "mossad": [
   "k.words/shards/mo"
+ ],
+ "most": [
+  "k.values/shards/scales",
+  "k.values/shards/sets"
+ ],
+ "most of them": [
+  "k.values/shards/sets"
  ],
  "mostar": [
   "k.geo/shards/europe"
@@ -42084,6 +43473,7 @@
   "k.words/shards/mu"
  ],
  "much": [
+  "k.values/shards/scales",
   "k.words/shards/mu"
  ],
  "muchinga mountains": [
@@ -42166,6 +43556,7 @@
   "k.words/shards/mu"
  ],
  "multiple": [
+  "k.values/shards/numbers",
   "k.words/shards/mu"
  ],
  "multiplied": [
@@ -42354,7 +43745,11 @@
  "mustard": [
   "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-03",
+  "k.values/shards/colours-common",
   "k.words/shards/mu"
+ ],
+ "mustard yellow": [
+  "k.values/shards/colours-common"
  ],
  "muster": [
   "k.words/shards/mu"
@@ -42676,7 +44071,14 @@
  "narrow": [
   "k.actions/shards/verbs-change",
   "k.faces/shards/plain-eyes",
+  "k.values/shards/scales",
   "k.words/shards/na"
+ ],
+ "narrower": [
+  "k.values/shards/scales"
+ ],
+ "narrowest": [
+  "k.values/shards/scales"
  ],
  "narva": [
   "k.geo/shards/europe"
@@ -42753,6 +44155,12 @@
  "nausea": [
   "k.words/shards/na"
  ],
+ "navajo white": [
+  "k.values/shards/colours-css"
+ ],
+ "navajowhite": [
+  "k.values/shards/colours-css"
+ ],
  "navel": [
   "k.objects/shards/food"
  ],
@@ -42768,7 +44176,11 @@
   "k.words/shards/na"
  ],
  "navy": [
+  "k.values/shards/colours-css",
   "k.words/shards/na"
+ ],
+ "navy blue": [
+  "k.values/shards/colours-css"
  ],
  "naxcivan": [
   "k.geo/shards/asia"
@@ -42808,6 +44220,7 @@
   "k.words/shards/ne"
  ],
  "near": [
+  "k.values/shards/scales",
   "k.words/shards/ne"
  ],
  "near_mountain": [
@@ -42815,6 +44228,15 @@
  ],
  "near_wing": [
   "k.objects/shards/vehicles"
+ ],
+ "nearby": [
+  "k.values/shards/scales"
+ ],
+ "nearer": [
+  "k.values/shards/scales"
+ ],
+ "nearest": [
+  "k.values/shards/scales"
  ],
  "nebraska": [
   "k.words/shards/ne"
@@ -42953,6 +44375,9 @@
  ],
  "neighbours": [
   "k.geo/schema.sop"
+ ],
+ "neither": [
+  "k.values/shards/sets"
  ],
  "nelson": [
   "k.geo/shards/north-america",
@@ -43187,6 +44612,9 @@
  "newts": [
   "k.animals/shards/reptiles-and-amphibians"
  ],
+ "next": [
+  "k.values/shards/sets"
+ ],
  "next to each other": [
   "k.layouts/shards/layouts"
  ],
@@ -43343,6 +44771,7 @@
   "k.words/shards/ni"
  ],
  "nil": [
+  "k.values/shards/numbers",
   "k.words/shards/ni"
  ],
  "nile": [
@@ -43353,18 +44782,82 @@
   "k.words/shards/ni"
  ],
  "nine": [
+  "k.values/shards/numbers",
   "k.words/shards/ni"
  ],
  "nineteen": [
+  "k.values/shards/numbers",
   "k.words/shards/ni"
  ],
+ "nineteenth": [
+  "k.values/shards/numbers"
+ ],
+ "ninetieth": [
+  "k.values/shards/numbers"
+ ],
  "ninety": [
+  "k.values/shards/numbers",
   "k.words/shards/ni"
+ ],
+ "ninety-eight": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-first": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-five": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-four": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-nine": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-one": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-second": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-seven": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-six": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-third": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-three": [
+  "k.values/shards/numbers"
+ ],
+ "ninety-two": [
+  "k.values/shards/numbers"
  ],
  "ninja": [
   "k.words/shards/ni"
  ],
  "ninth": [
+  "k.values/shards/numbers",
   "k.words/shards/ni"
  ],
  "nip": [
@@ -43410,6 +44903,7 @@
  ],
  "no": [
   "k.objects/shards/noto-sound-02",
+  "k.values/shards/scales",
   "k.words/shards/no"
  ],
  "noah": [
@@ -43449,6 +44943,9 @@
   "k.animals/schema.sop",
   "k.words/shards/no"
  ],
+ "noisy": [
+  "k.values/shards/scales"
+ ],
  "nominate": [
   "k.words/shards/no"
  ],
@@ -43459,7 +44956,12 @@
   "k.words/shards/no"
  ],
  "none": [
+  "k.values/shards/scales",
+  "k.values/shards/sets",
   "k.words/shards/no"
+ ],
+ "none of them": [
+  "k.values/shards/sets"
  ],
  "nonsense": [
   "k.words/shards/no"
@@ -43497,6 +44999,7 @@
   "k.words/shards/no"
  ],
  "normal": [
+  "k.values/shards/scales",
   "k.words/shards/no"
  ],
  "norman": [
@@ -43509,6 +45012,7 @@
   "k.words/shards/no"
  ],
  "north": [
+  "k.values/shards/directions",
   "k.words/shards/no"
  ],
  "north america": [
@@ -43534,7 +45038,14 @@
  "north star": [
   "k.space/shards/stars-and-galaxies"
  ],
+ "north-east": [
+  "k.values/shards/directions"
+ ],
+ "north-west": [
+  "k.values/shards/directions"
+ ],
  "northeast": [
+  "k.values/shards/directions",
   "k.words/shards/no"
  ],
  "northern": [
@@ -43547,7 +45058,14 @@
   "k.geo/shards/oceania",
   "k.geo/shards/oceania-borders"
  ],
+ "northward": [
+  "k.values/shards/directions"
+ ],
+ "northwards": [
+  "k.values/shards/directions"
+ ],
  "northwest": [
+  "k.values/shards/directions",
   "k.words/shards/no"
  ],
  "norway": [
@@ -43604,6 +45122,15 @@
   "k.objects/shards/noto-sound-02",
   "k.objects/shards/noto-time-01"
  ],
+ "not any": [
+  "k.values/shards/sets"
+ ],
+ "not many": [
+  "k.values/shards/scales"
+ ],
+ "not much": [
+  "k.values/shards/scales"
+ ],
  "notary": [
   "k.words/shards/no"
  ],
@@ -43658,6 +45185,7 @@
  ],
  "nothing": [
   "k.objects/shards/noto-dishware-01",
+  "k.values/shards/scales",
   "k.words/shards/no"
  ],
  "notice": [
@@ -43685,6 +45213,9 @@
  ],
  "nouakchott": [
   "k.geo/shards/africa"
+ ],
+ "nought": [
+  "k.values/shards/numbers"
  ],
  "nouméa": [
   "k.geo/shards/oceania"
@@ -44102,9 +45633,11 @@
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/acts",
   "k.objects/shards/noto-game-01",
+  "k.values/schema.sop",
   "k.words/shards/nu"
  ],
  "numbers": [
+  "k.values/schema.sop",
   "k.words/shards/nu"
  ],
  "nun": [
@@ -44280,6 +45813,9 @@
  "oblivion": [
   "k.words/shards/ob"
  ],
+ "oblong": [
+  "k.values/shards/shapes"
+ ],
  "obock": [
   "k.geo/shards/africa"
  ],
@@ -44364,6 +45900,12 @@
  "oceans": [
   "k.objects/shards/scenery"
  ],
+ "ocher": [
+  "k.values/shards/colours-common"
+ ],
+ "ochre": [
+  "k.values/shards/colours-common"
+ ],
  "oconee": [
   "k.geo/shards/north-america"
  ],
@@ -44373,8 +45915,15 @@
  "oct": [
   "k.time/shards/calendar"
  ],
+ "octagon": [
+  "k.values/shards/shapes"
+ ],
  "octagonal": [
-  "k.objects/shards/noto-transport-ground-06"
+  "k.objects/shards/noto-transport-ground-06",
+  "k.values/shards/shapes"
+ ],
+ "octagons": [
+  "k.values/shards/shapes"
  ],
  "october": [
   "k.time/shards/calendar",
@@ -44582,6 +46131,9 @@
   "k.objects/shards/noto-lock-01",
   "k.scenes/shards/things-o"
  ],
+ "old lace": [
+  "k.values/shards/colours-css"
+ ],
  "old man": [
   "k.faces/shards/presets",
   "k.people/shards/kinds"
@@ -44592,6 +46144,9 @@
  "old woman": [
   "k.faces/shards/presets",
   "k.people/shards/kinds"
+ ],
+ "oldlace": [
+  "k.values/shards/colours-css"
  ],
  "olenekskaya protoka": [
   "k.geo/shards/europe"
@@ -44611,7 +46166,11 @@
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-fruit-03",
   "k.scenes/shards/things-o",
+  "k.values/shards/colours-css",
   "k.words/shards/ol"
+ ],
+ "olive drab": [
+  "k.values/shards/colours-css"
  ],
  "olive oil": [
   "k.food/shards/other",
@@ -44623,6 +46182,9 @@
  ],
  "olive2": [
   "k.objects/shards/noto-food-fruit-03"
+ ],
+ "olivedrab": [
+  "k.values/shards/colours-css"
  ],
  "oliver": [
   "k.words/shards/ol"
@@ -44695,8 +46257,17 @@
  "on": [
   "k.layouts/shards/layouts"
  ],
+ "on the left": [
+  "k.values/shards/directions"
+ ],
+ "on the right": [
+  "k.values/shards/directions"
+ ],
  "on top of each other": [
   "k.layouts/shards/layouts"
+ ],
+ "once": [
+  "k.values/shards/numbers"
  ],
  "oncoming": [
   "k.objects/shards/noto-transport-ground-02",
@@ -44724,6 +46295,7 @@
  ],
  "one": [
   "k.objects/shards/noto-animal-mammal-05",
+  "k.values/shards/numbers",
   "k.words/shards/on"
  ],
  "one above the other": [
@@ -44732,8 +46304,26 @@
  "one after the other": [
   "k.layouts/shards/layouts"
  ],
+ "one half": [
+  "k.values/shards/numbers"
+ ],
+ "one hundred": [
+  "k.values/shards/numbers"
+ ],
  "one inside the other": [
   "k.layouts/shards/layouts"
+ ],
+ "one more": [
+  "k.values/shards/sets"
+ ],
+ "one quarter": [
+  "k.values/shards/numbers"
+ ],
+ "one third": [
+  "k.values/shards/numbers"
+ ],
+ "one thousand": [
+  "k.values/shards/numbers"
  ],
  "one-piece": [
   "k.objects/shards/noto-clothing-02",
@@ -44934,6 +46524,7 @@
   "k.objects/shards/noto-food-fruit-01",
   "k.objects/shards/places-2",
   "k.scenes/shards/things-o",
+  "k.values/shards/colours-css",
   "k.words/shards/or"
  ],
  "orange book": [
@@ -44943,8 +46534,14 @@
  "orange juice": [
   "k.food/shards/other"
  ],
+ "orange red": [
+  "k.values/shards/colours-css"
+ ],
  "orange walk": [
   "k.geo/shards/north-america"
+ ],
+ "orangered": [
+  "k.values/shards/colours-css"
  ],
  "oranges": [
   "k.food/shards/fruit",
@@ -44995,6 +46592,7 @@
  ],
  "orchid": [
   "k.objects/shards/stand-ins-wordnet",
+  "k.values/shards/colours-css",
   "k.words/shards/or"
  ],
  "ord": [
@@ -45013,6 +46611,9 @@
  ],
  "orderly": [
   "k.words/shards/or"
+ ],
+ "ordinal": [
+  "k.values/shards/numbers"
  ],
  "ordinance": [
   "k.words/shards/or"
@@ -45174,7 +46775,11 @@
   "k.geo/shards/asia"
  ],
  "other": [
-  "k.actions/shards/acts"
+  "k.actions/shards/acts",
+  "k.values/shards/sets"
+ ],
+ "others": [
+  "k.values/shards/sets"
  ],
  "oti": [
   "k.geo/shards/africa"
@@ -45352,13 +46957,23 @@
  "outskirts": [
   "k.words/shards/ou"
  ],
+ "outward": [
+  "k.values/shards/directions"
+ ],
+ "outwards": [
+  "k.values/shards/directions"
+ ],
  "ouémé": [
   "k.geo/shards/africa"
  ],
  "oval": [
   "k.faces/shards/plain-eyes",
   "k.faces/shards/plain-head",
+  "k.values/shards/shapes",
   "k.words/shards/ov"
+ ],
+ "ovals": [
+  "k.values/shards/shapes"
  ],
  "oven": [
   "k.layouts/shards/anchors",
@@ -45772,6 +47387,7 @@
  ],
  "pair": [
   "k.actions/shards/verbs-group",
+  "k.values/shards/numbers",
   "k.words/shards/pa"
  ],
  "paisley": [
@@ -45817,10 +47433,35 @@
  ],
  "pale": [
   "k.faces/shards/colours",
+  "k.values/shards/scales",
   "k.words/shards/pa"
+ ],
+ "pale goldenrod": [
+  "k.values/shards/colours-css"
+ ],
+ "pale green": [
+  "k.values/shards/colours-css"
+ ],
+ "pale turquoise": [
+  "k.values/shards/colours-css"
+ ],
+ "pale violet red": [
+  "k.values/shards/colours-css"
+ ],
+ "palegoldenrod": [
+  "k.values/shards/colours-css"
+ ],
+ "palegreen": [
+  "k.values/shards/colours-css"
+ ],
+ "paler": [
+  "k.values/shards/scales"
  ],
  "palermo": [
   "k.words/shards/pa"
+ ],
+ "palest": [
+  "k.values/shards/scales"
  ],
  "palestine": [
   "k.words/shards/pa"
@@ -45831,6 +47472,12 @@
  "palette": [
   "k.objects/shards/noto-arts-crafts-01",
   "k.objects/shards/words-hand"
+ ],
+ "paleturquoise": [
+  "k.values/shards/colours-css"
+ ],
+ "palevioletred": [
+  "k.values/shards/colours-css"
  ],
  "palikir": [
   "k.geo/shards/oceania"
@@ -46006,8 +47653,14 @@
  "papaya": [
   "k.food/shards/fruit"
  ],
+ "papaya whip": [
+  "k.values/shards/colours-css"
+ ],
  "papayas": [
   "k.food/shards/fruit"
+ ],
+ "papayawhip": [
+  "k.values/shards/colours-css"
  ],
  "papeete": [
   "k.geo/shards/oceania"
@@ -46112,6 +47765,12 @@
  ],
  "parallelling": [
   "k.words/shards/pa"
+ ],
+ "parallelogram": [
+  "k.values/shards/shapes"
+ ],
+ "parallelograms": [
+  "k.values/shards/shapes"
  ],
  "paralyses": [
   "k.words/shards/pa"
@@ -46695,10 +48354,17 @@
   "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-02",
   "k.scenes/shards/things-p",
+  "k.values/shards/colours-common",
   "k.words/shards/pe"
+ ],
+ "peach puff": [
+  "k.values/shards/colours-css"
  ],
  "peaches": [
   "k.food/shards/fruit"
+ ],
+ "peachpuff": [
+  "k.values/shards/colours-css"
  ],
  "peacock": [
   "k.animals/shards/birds",
@@ -47062,7 +48728,11 @@
   "k.words/shards/pe"
  ],
  "pentagon": [
+  "k.values/shards/shapes",
   "k.words/shards/pe"
+ ],
+ "pentagons": [
+  "k.values/shards/shapes"
  ],
  "penthouse": [
   "k.words/shards/pe"
@@ -47420,6 +49090,7 @@
  "peru": [
   "k.geo/shards/south-america",
   "k.geo/shards/south-america-borders",
+  "k.values/shards/colours-css",
   "k.words/shards/pe"
  ],
  "pervert": [
@@ -48165,6 +49836,7 @@
  ],
  "pink": [
   "k.faces/shards/colours",
+  "k.values/shards/colours-css",
   "k.words/shards/pi"
  ],
  "pink_paint": [
@@ -49034,7 +50706,11 @@
   "k.words/shards/pl"
  ],
  "plenty": [
+  "k.values/shards/scales",
   "k.words/shards/pl"
+ ],
+ "plenty of": [
+  "k.values/shards/scales"
  ],
  "pliers": [
   "k.objects/shards/mulberry-tools-workshop-02",
@@ -49092,6 +50768,7 @@
   "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/mulberry-food-fruit-03",
   "k.scenes/shards/things-p",
+  "k.values/shards/colours-css",
   "k.words/shards/pl"
  ],
  "plum tomato": [
@@ -49141,6 +50818,9 @@
  "plus": [
   "k.objects/shards/noto-computer-01",
   "k.words/shards/pl"
+ ],
+ "plus sign": [
+  "k.values/shards/shapes"
  ],
  "plush": [
   "k.objects/shards/noto-game-02"
@@ -49231,6 +50911,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/more",
   "k.objects/shards/noto-tool-03",
+  "k.values/shards/shapes",
   "k.words/shards/po"
  ],
  "point out": [
@@ -49245,6 +50926,9 @@
  ],
  "pointer": [
   "k.objects/shards/things-2"
+ ],
+ "points": [
+  "k.values/shards/shapes"
  ],
  "poison": [
   "k.words/shards/po"
@@ -49693,7 +51377,11 @@
  ],
  "position": [
   "k.actions/shards/verbs-place",
+  "k.values/schema.sop",
   "k.words/shards/po"
+ ],
+ "positions": [
+  "k.values/schema.sop"
  ],
  "positive": [
   "k.objects/shards/noto-tool-04",
@@ -49942,9 +51630,15 @@
  "powder": [
   "k.words/shards/po"
  ],
+ "powder blue": [
+  "k.values/shards/colours-css"
+ ],
  "powder puff": [
   "k.objects/shards/mulberry-healthcare-grooming-items-05",
   "k.scenes/shards/things-p"
+ ],
+ "powderblue": [
+  "k.values/shards/colours-css"
  ],
  "powell": [
   "k.words/shards/po"
@@ -50020,6 +51714,9 @@
  ],
  "precedent": [
   "k.words/shards/pr"
+ ],
+ "preceding": [
+  "k.values/shards/sets"
  ],
  "precinct": [
   "k.words/shards/pr"
@@ -50196,7 +51893,8 @@
   "k.geo/shards/africa"
  ],
  "pretty": [
-  "k.objects/shards/noto-animal-bird-02"
+  "k.objects/shards/noto-animal-bird-02",
+  "k.values/shards/scales"
  ],
  "pretzel": [
   "k.objects/shards/noto-food-prepared-01",
@@ -50214,6 +51912,9 @@
  ],
  "preview": [
   "k.words/shards/pr"
+ ],
+ "previous": [
+  "k.values/shards/sets"
  ],
  "prey": [
   "k.words/shards/pr"
@@ -51031,6 +52732,7 @@
  "purple": [
   "k.faces/shards/colours",
   "k.objects/shards/noto-plant-flower-02",
+  "k.values/shards/colours-css",
   "k.words/shards/pu"
  ],
  "purpose": [
@@ -51182,11 +52884,13 @@
   "k.objects/shards/structures",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-p",
+  "k.values/shards/shapes",
   "k.words/shards/py"
  ],
  "pyramids": [
   "k.layouts/shards/layouts",
-  "k.objects/shards/structures"
+  "k.objects/shards/structures",
+  "k.values/shards/shapes"
  ],
  "pyrenees": [
   "k.geo/shards/europe"
@@ -51257,6 +52961,9 @@
  "quadrant": [
   "k.words/shards/qu"
  ],
+ "quadruple": [
+  "k.values/shards/numbers"
+ ],
  "quagmire": [
   "k.words/shards/qu"
  ],
@@ -51316,6 +53023,7 @@
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.time/shards/calendar",
+  "k.values/shards/numbers",
   "k.words/shards/qu"
  ],
  "quarterback": [
@@ -51385,7 +53093,14 @@
   "k.scenes/shards/things-q"
  ],
  "quick": [
+  "k.values/shards/scales",
   "k.words/shards/qu"
+ ],
+ "quicker": [
+  "k.values/shards/scales"
+ ],
+ "quickest": [
+  "k.values/shards/scales"
  ],
  "quickie": [
   "k.words/shards/qu"
@@ -51396,7 +53111,14 @@
  "quiet": [
   "k.objects/shards/noto-sound-01",
   "k.objects/shards/noto-sound-02",
+  "k.values/shards/scales",
   "k.words/shards/qu"
+ ],
+ "quieter": [
+  "k.values/shards/scales"
+ ],
+ "quietest": [
+  "k.values/shards/scales"
  ],
  "quill": [
   "k.objects/shards/noto-animal-bird-02",
@@ -51418,6 +53140,9 @@
  ],
  "quit": [
   "k.words/shards/qu"
+ ],
+ "quite": [
+  "k.values/shards/scales"
  ],
  "quito": [
   "k.geo/shards/south-america"
@@ -51822,7 +53547,11 @@
   "k.words/shards/ra"
  ],
  "random": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "k.values/shards/sets"
+ ],
+ "randomly": [
+  "k.values/shards/sets"
  ],
  "rang": [
   "k.actions/shards/actions-body-social-nature",
@@ -51870,6 +53599,7 @@
   "k.words/shards/ra"
  ],
  "rapid": [
+  "k.values/shards/scales",
   "k.words/shards/ra"
  ],
  "rapist": [
@@ -51920,6 +53650,9 @@
  ],
  "rates": [
   "k.words/shards/ra"
+ ],
+ "rather": [
+  "k.values/shards/scales"
  ],
  "rating": [
   "k.words/shards/ra"
@@ -52114,6 +53847,9 @@
  "realize": [
   "k.words/shards/re"
  ],
+ "really": [
+  "k.values/shards/scales"
+ ],
  "realm": [
   "k.words/shards/re"
  ],
@@ -52161,6 +53897,12 @@
  ],
  "rebecca": [
   "k.words/shards/re"
+ ],
+ "rebecca purple": [
+  "k.values/shards/colours-css"
+ ],
+ "rebeccapurple": [
+  "k.values/shards/colours-css"
  ],
  "rebekah": [
   "k.words/shards/re"
@@ -52353,6 +54095,15 @@
  "recruit": [
   "k.words/shards/re"
  ],
+ "rectangle": [
+  "k.values/shards/shapes"
+ ],
+ "rectangles": [
+  "k.values/shards/shapes"
+ ],
+ "rectangular": [
+  "k.values/shards/shapes"
+ ],
  "recycle": [
   "k.words/shards/re"
  ],
@@ -52373,6 +54124,7 @@
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-tool-03",
+  "k.values/shards/colours-css",
   "k.words/shards/re"
  ],
  "red apple": [
@@ -53587,6 +55339,9 @@
  "rhodes": [
   "k.words/shards/rh"
  ],
+ "rhombus": [
+  "k.values/shards/shapes"
+ ],
  "rhubarb": [
   "k.objects/shards/mulberry-food-vegetables-and-salads-04",
   "k.scenes/shards/things-r"
@@ -53790,6 +55545,7 @@
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/openmoji-technology-01",
+  "k.values/shards/directions",
   "k.words/shards/ri"
  ],
  "right angle": [
@@ -53797,6 +55553,12 @@
  ],
  "right angles": [
   "k.units/shards/core"
+ ],
+ "right side": [
+  "k.values/shards/directions"
+ ],
+ "right-hand side": [
+  "k.values/shards/directions"
  ],
  "right-pointing": [
   "k.objects/shards/noto-light-video-02"
@@ -54514,6 +56276,12 @@
  "righteousness": [
   "k.words/shards/ri"
  ],
+ "rightward": [
+  "k.values/shards/directions"
+ ],
+ "rightwards": [
+  "k.values/shards/directions"
+ ],
  "rigor": [
   "k.words/shards/ri"
  ],
@@ -54552,6 +56320,7 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-r",
   "k.space/schema.sop",
+  "k.values/shards/shapes",
   "k.words/shards/ri"
  ],
  "ring binder": [
@@ -54611,6 +56380,7 @@
   "k.actions/shards/actions-body-social-nature",
   "k.layouts/shards/layouts",
   "k.space/schema.sop",
+  "k.values/shards/shapes",
   "k.words/shards/ri"
  ],
  "rinjani": [
@@ -55266,8 +57036,12 @@
   "k.objects/shards/noto-plant-flower-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-r",
+  "k.values/shards/colours-common",
   "k.words/shards/ri",
   "k.words/shards/ro"
+ ],
+ "rose pink": [
+  "k.values/shards/colours-common"
  ],
  "roseau": [
   "k.geo/shards/north-america"
@@ -55290,6 +57064,12 @@
  ],
  "roster": [
   "k.words/shards/ro"
+ ],
+ "rosy brown": [
+  "k.values/shards/colours-css"
+ ],
+ "rosybrown": [
+  "k.values/shards/colours-css"
  ],
  "rot": [
   "k.words/shards/ro"
@@ -55340,6 +57120,7 @@
   "k.faces/shards/plain-nose",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-office-02",
+  "k.values/shards/shapes",
   "k.words/shards/ro"
  ],
  "round blush": [
@@ -55422,6 +57203,12 @@
   "k.objects/shards/noto-clothing-05",
   "k.words/shards/ro"
  ],
+ "royal blue": [
+  "k.values/shards/colours-css"
+ ],
+ "royalblue": [
+  "k.values/shards/colours-css"
+ ],
  "royalty": [
   "k.objects/shards/noto-clothing-05",
   "k.words/shards/ro"
@@ -55463,7 +57250,11 @@
   "k.words/shards/ru"
  ],
  "ruby": [
+  "k.values/shards/colours-common",
   "k.words/shards/ru"
+ ],
+ "ruby red": [
+  "k.values/shards/colours-common"
  ],
  "rucksack": [
   "k.objects/shards/noto-clothing-04"
@@ -55657,6 +57448,7 @@
   "k.geo/shards/europe"
  ],
  "rust": [
+  "k.values/shards/colours-common",
   "k.words/shards/ru"
  ],
  "rustavi": [
@@ -55667,6 +57459,9 @@
  ],
  "rustling": [
   "k.words/shards/ru"
+ ],
+ "rusty": [
+  "k.values/shards/colours-common"
  ],
  "rut": [
   "k.words/shards/ru"
@@ -55774,6 +57569,12 @@
   "k.objects/shards/things-2",
   "k.scenes/shards/things-s",
   "k.words/shards/sa"
+ ],
+ "saddle brown": [
+  "k.values/shards/colours-css"
+ ],
+ "saddlebrown": [
+  "k.values/shards/colours-css"
  ],
  "saddles": [
   "k.objects/shards/things-2"
@@ -56056,6 +57857,7 @@
   "k.geo/shards/north-america",
   "k.objects/shards/nature-2",
   "k.scenes/shards/things-s",
+  "k.values/shards/colours-css",
   "k.words/shards/sa"
  ],
  "salmon river mountains": [
@@ -56126,6 +57928,7 @@
   "k.words/shards/sa"
  ],
  "same": [
+  "k.values/shards/sets",
   "k.words/shards/sa"
  ],
  "same face": [
@@ -56229,6 +58032,7 @@
   "k.objects/shards/noto-time-01",
   "k.objects/shards/scenery",
   "k.objects/shards/structures",
+  "k.values/shards/colours-common",
   "k.words/shards/sa"
  ],
  "sand castle": [
@@ -56294,6 +58098,15 @@
  ],
  "sandwiches": [
   "k.food/shards/other"
+ ],
+ "sandy": [
+  "k.values/shards/colours-common"
+ ],
+ "sandy brown": [
+  "k.values/shards/colours-css"
+ ],
+ "sandybrown": [
+  "k.values/shards/colours-css"
  ],
  "sane": [
   "k.geo/shards/europe"
@@ -56386,7 +58199,11 @@
   "k.words/shards/sa"
  ],
  "sapphire": [
+  "k.values/shards/colours-common",
   "k.words/shards/sa"
+ ],
+ "sapphire blue": [
+  "k.values/shards/colours-common"
  ],
  "sapping": [
   "k.words/shards/sa"
@@ -56685,6 +58502,7 @@
   "k.actions/shards/actions-move",
   "k.actions/shards/verbs-change",
   "k.objects/shards/noto-tool-03",
+  "k.values/schema.sop",
   "k.words/shards/sc"
  ],
  "scale down": [
@@ -56704,7 +58522,8 @@
   "k.objects/shards/openmoji-healthcare-04",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-town",
-  "k.scenes/shards/things-s"
+  "k.scenes/shards/things-s",
+  "k.values/schema.sop"
  ],
  "scalp": [
   "k.words/shards/sc"
@@ -56763,6 +58582,7 @@
   "k.words/shards/sc"
  ],
  "scarlet": [
+  "k.values/shards/colours-common",
   "k.words/shards/sc"
  ],
  "scarred": [
@@ -57196,6 +59016,9 @@
  "sea bed": [
   "k.scenes/shards/scenes-other"
  ],
+ "sea green": [
+  "k.values/shards/colours-css"
+ ],
  "seabed": [
   "k.scenes/shards/scenes-other"
  ],
@@ -57203,6 +59026,9 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-food-asian-02",
   "k.words/shards/se"
+ ],
+ "seagreen": [
+  "k.values/shards/colours-css"
  ],
  "seagull": [
   "k.animals/shards/birds",
@@ -57262,7 +59088,8 @@
   "k.objects/shards/scenery"
  ],
  "seashell": [
-  "k.objects/shards/things"
+  "k.objects/shards/things",
+  "k.values/shards/colours-css"
  ],
  "seashells": [
   "k.objects/shards/things"
@@ -57334,6 +59161,7 @@
   "k.objects/shards/noto-award-medal-01",
   "k.time/shards/calendar",
   "k.units/shards/core",
+  "k.values/shards/numbers",
   "k.words/shards/se"
  ],
  "second_book": [
@@ -57608,6 +59436,12 @@
  ],
  "semi": [
   "k.objects/shards/noto-transport-ground-04"
+ ],
+ "semicircle": [
+  "k.values/shards/shapes"
+ ],
+ "semicircles": [
+  "k.values/shards/shapes"
  ],
  "seminar": [
   "k.words/shards/se"
@@ -57922,6 +59756,7 @@
   "k.geo/shards/europe"
  ],
  "seven": [
+  "k.values/shards/numbers",
   "k.words/shards/se"
  ],
  "seven wonders of the ancient world": [
@@ -57937,17 +59772,86 @@
   "k.objects/shards/noto-game-02"
  ],
  "seventeen": [
+  "k.values/shards/numbers",
   "k.words/shards/se"
+ ],
+ "seventeenth": [
+  "k.values/shards/numbers"
  ],
  "seventh": [
+  "k.values/shards/numbers",
   "k.words/shards/se"
  ],
+ "seventieth": [
+  "k.values/shards/numbers"
+ ],
  "seventy": [
+  "k.values/shards/numbers",
   "k.words/shards/se"
+ ],
+ "seventy-eight": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-first": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-five": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-four": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-nine": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-one": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-second": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-seven": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-six": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-third": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-three": [
+  "k.values/shards/numbers"
+ ],
+ "seventy-two": [
+  "k.values/shards/numbers"
  ],
  "sever": [
   "k.actions/shards/verbs-take_apart",
   "k.words/shards/se"
+ ],
+ "several": [
+  "k.values/shards/scales"
+ ],
+ "several of them": [
+  "k.values/shards/sets"
  ],
  "severance": [
   "k.words/shards/se"
@@ -58166,11 +60070,15 @@
   "k.faces/schema.sop",
   "k.objects/schema.sop",
   "k.objects/shards/noto-tool-04",
+  "k.values/schema.sop",
   "k.words/shards/sh"
  ],
  "shape puzzle": [
   "k.objects/shards/mulberry-leisure-toys-03",
   "k.scenes/shards/things-s"
+ ],
+ "shapes": [
+  "k.values/schema.sop"
  ],
  "shapesorter": [
   "k.objects/shards/mulberry-leisure-toys-03",
@@ -58693,6 +60601,7 @@
   "k.faces/shards/plain-beard",
   "k.faces/shards/plain-eyebrows",
   "k.faces/shards/plain-hair-front",
+  "k.values/shards/scales",
   "k.words/shards/sh"
  ],
  "shortage": [
@@ -58708,6 +60617,12 @@
  "shorten": [
   "k.actions/shards/verbs-change",
   "k.words/shards/sh"
+ ],
+ "shorter": [
+  "k.values/shards/scales"
+ ],
+ "shortest": [
+  "k.values/shards/scales"
  ],
  "shorts": [
   "k.objects/shards/mulberry-clothes-sport-01",
@@ -59052,6 +60967,9 @@
  "siem reap": [
   "k.geo/shards/asia"
  ],
+ "sienna": [
+  "k.values/shards/colours-css"
+ ],
  "sierra": [
   "k.words/shards/si"
  ],
@@ -59227,10 +61145,14 @@
  "silver": [
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-money-01",
+  "k.values/shards/colours-css",
   "k.words/shards/si"
  ],
  "silverware": [
   "k.words/shards/si"
+ ],
+ "silvery": [
+  "k.values/shards/colours-css"
  ],
  "silvia": [
   "k.words/shards/si"
@@ -59297,6 +61219,7 @@
   "k.words/shards/si"
  ],
  "single": [
+  "k.values/shards/numbers",
   "k.words/shards/si"
  ],
  "single bed": [
@@ -59445,28 +61368,93 @@
   "k.geo/shards/asia"
  ],
  "six": [
+  "k.values/shards/numbers",
   "k.words/shards/si"
  ],
  "six-pack": [
   "k.words/shards/si"
  ],
  "sixteen": [
+  "k.values/shards/numbers",
   "k.words/shards/si"
  ],
+ "sixteenth": [
+  "k.values/shards/numbers"
+ ],
  "sixth": [
+  "k.values/shards/numbers",
   "k.words/shards/si"
  ],
  "sixth_window": [
   "k.objects/shards/vehicles"
  ],
+ "sixtieth": [
+  "k.values/shards/numbers"
+ ],
  "sixty": [
+  "k.values/shards/numbers",
   "k.words/shards/si"
+ ],
+ "sixty-eight": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-first": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-five": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-four": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-nine": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-one": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-second": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-seven": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-six": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-third": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-three": [
+  "k.values/shards/numbers"
+ ],
+ "sixty-two": [
+  "k.values/shards/numbers"
  ],
  "size": [
   "k.commonsense/schema.sop",
   "k.faces/schema.sop",
   "k.scenes/schema.sop",
   "k.space/schema.sop",
+  "k.values/shards/scales",
   "k.words/shards/si"
  ],
  "size up": [
@@ -59629,6 +61617,12 @@
   "k.objects/shards/things",
   "k.words/shards/sk"
  ],
+ "sky blue": [
+  "k.values/shards/colours-css"
+ ],
+ "skyblue": [
+  "k.values/shards/colours-css"
+ ],
  "skydive": [
   "k.objects/shards/noto-transport-air-01"
  ],
@@ -59710,6 +61704,24 @@
  ],
  "slate": [
   "k.words/shards/sl"
+ ],
+ "slate blue": [
+  "k.values/shards/colours-css"
+ ],
+ "slate gray": [
+  "k.values/shards/colours-css"
+ ],
+ "slate grey": [
+  "k.values/shards/colours-css"
+ ],
+ "slateblue": [
+  "k.values/shards/colours-css"
+ ],
+ "slategray": [
+  "k.values/shards/colours-css"
+ ],
+ "slategrey": [
+  "k.values/shards/colours-css"
  ],
  "slater": [
   "k.words/shards/sl"
@@ -59831,6 +61843,9 @@
   "k.scenes/shards/things-s",
   "k.words/shards/sl"
  ],
+ "slender": [
+  "k.values/shards/scales"
+ ],
  "slept": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/sl"
@@ -59893,7 +61908,11 @@
  "slight": [
   "k.words/shards/sl"
  ],
+ "slightly": [
+  "k.values/shards/scales"
+ ],
  "slim": [
+  "k.values/shards/scales",
   "k.words/shards/sl"
  ],
  "slime": [
@@ -60013,7 +62032,14 @@
  ],
  "slow": [
   "k.objects/shards/noto-animal-mammal-08",
+  "k.values/shards/scales",
   "k.words/shards/sl"
+ ],
+ "slower": [
+  "k.values/shards/scales"
+ ],
+ "slowest": [
+  "k.values/shards/scales"
  ],
  "slowing": [
   "k.words/shards/sl"
@@ -60073,6 +62099,7 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-food-vegetable-02",
   "k.objects/shards/noto-transport-air-01",
+  "k.values/shards/scales",
   "k.words/shards/sm"
  ],
  "small airplane": [
@@ -60092,11 +62119,15 @@
   "k.objects/shards/openmoji-gardening-01",
   "k.objects/shards/openmoji-healthcare-03"
  ],
+ "smaller": [
+  "k.values/shards/scales"
+ ],
  "smaller_than": [
   "k.layouts/shards/layouts"
  ],
  "smallest": [
-  "k.space/schema.sop"
+  "k.space/schema.sop",
+  "k.values/shards/scales"
  ],
  "smallpox": [
   "k.words/shards/sm"
@@ -60357,6 +62388,7 @@
   "k.objects/shards/noto-sport-04",
   "k.objects/shards/noto-tool-04",
   "k.scenes/shards/scenes-other",
+  "k.values/shards/colours-css",
   "k.words/shards/sn"
  ],
  "snow down": [
@@ -60440,6 +62472,7 @@
   "k.geo/shards/europe"
  ],
  "so": [
+  "k.values/shards/scales",
   "k.words/shards/so"
  ],
  "soak": [
@@ -60578,7 +62611,8 @@
  "soft": [
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-sweet-01",
-  "k.objects/shards/noto-sound-01"
+  "k.objects/shards/noto-sound-01",
+  "k.values/shards/scales"
  ],
  "soft ice cream": [
   "k.objects/shards/noto-food-sweet-01",
@@ -60591,6 +62625,12 @@
  ],
  "soften": [
   "k.words/shards/so"
+ ],
+ "softer": [
+  "k.values/shards/scales"
+ ],
+ "softest": [
+  "k.values/shards/scales"
  ],
  "software": [
   "k.words/shards/so"
@@ -60701,11 +62741,21 @@
  "somaliland": [
   "k.geo/shards/africa"
  ],
+ "some": [
+  "k.values/shards/scales",
+  "k.values/shards/sets"
+ ],
+ "some of them": [
+  "k.values/shards/sets"
+ ],
  "somebody": [
   "k.words/shards/so"
  ],
  "someone": [
   "k.words/shards/so"
+ ],
+ "somewhat": [
+  "k.values/shards/scales"
  ],
  "somewhere": [
   "k.words/shards/so"
@@ -60858,6 +62908,7 @@
   "k.geo/shards/africa"
  ],
  "south": [
+  "k.values/shards/directions",
   "k.words/shards/so"
  ],
  "south africa": [
@@ -60894,7 +62945,14 @@
   "k.geo/shards/africa",
   "k.geo/shards/africa-borders"
  ],
+ "south-east": [
+  "k.values/shards/directions"
+ ],
+ "south-west": [
+  "k.values/shards/directions"
+ ],
  "southeast": [
+  "k.values/shards/directions",
   "k.words/shards/so"
  ],
  "southern alps/kā tiritiri o te moana": [
@@ -60906,7 +62964,14 @@
  "southern carpathians": [
   "k.geo/shards/europe"
  ],
+ "southward": [
+  "k.values/shards/directions"
+ ],
+ "southwards": [
+  "k.values/shards/directions"
+ ],
  "southwest": [
+  "k.values/shards/directions",
   "k.words/shards/so"
  ],
  "souvenir": [
@@ -61193,6 +63258,7 @@
  "speed": [
   "k.objects/shards/noto-transport-ground-01",
   "k.units/shards/core",
+  "k.values/shards/scales",
   "k.words/shards/sp"
  ],
  "speedboat": [
@@ -61201,6 +63267,9 @@
  ],
  "speeding": [
   "k.words/shards/sp"
+ ],
+ "speedy": [
+  "k.values/shards/scales"
  ],
  "spell": [
   "k.words/shards/sp"
@@ -61227,7 +63296,14 @@
   "k.words/shards/sp"
  ],
  "sphere": [
+  "k.values/shards/shapes",
   "k.words/shards/sp"
+ ],
+ "spheres": [
+  "k.values/shards/shapes"
+ ],
+ "spherical": [
+  "k.values/shards/shapes"
  ],
  "sphinges": [
   "k.words/shards/sp"
@@ -61334,6 +63410,7 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-office-01",
   "k.objects/shards/noto-sky-weather-04",
+  "k.values/shards/shapes",
   "k.words/shards/sp"
  ],
  "spiral calendar": [
@@ -61353,6 +63430,9 @@
  ],
  "spiralling": [
   "k.words/shards/sp"
+ ],
+ "spirals": [
+  "k.values/shards/shapes"
  ],
  "spire": [
   "k.objects/shards/places-2"
@@ -61512,6 +63592,7 @@
  "spot": [
   "k.actions/shards/actions-mind-talk",
   "k.objects/shards/more",
+  "k.values/shards/shapes",
   "k.words/shards/sp"
  ],
  "spot light": [
@@ -61644,6 +63725,9 @@
  "spring day": [
   "k.scenes/shards/scenes-other"
  ],
+ "spring green": [
+  "k.values/shards/colours-css"
+ ],
  "spring onions": [
   "k.objects/shards/mulberry-food-vegetables-and-salads-05",
   "k.scenes/shards/things-s"
@@ -61653,6 +63737,9 @@
  ],
  "springfield": [
   "k.words/shards/sp"
+ ],
+ "springgreen": [
+  "k.values/shards/colours-css"
  ],
  "springs": [
   "k.objects/shards/noto-place-other-02"
@@ -61720,6 +63807,7 @@
   "k.faces/shards/plain-eyes",
   "k.faces/shards/plain-glasses",
   "k.faces/shards/plain-head",
+  "k.values/shards/shapes",
   "k.words/shards/sq"
  ],
  "square centimeter": [
@@ -61761,6 +63849,9 @@
  "square setsquare": [
   "k.objects/shards/mulberry-tools-workshop-03",
   "k.scenes/shards/things-s"
+ ],
+ "squares": [
+  "k.values/shards/shapes"
  ],
  "squash": [
   "k.actions/shards/actions-hands",
@@ -62126,6 +64217,7 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-s",
   "k.space/shards/kinds",
+  "k.values/shards/shapes",
   "k.words/shards/st"
  ],
  "star shape": [
@@ -62134,6 +64226,9 @@
  "star stacker": [
   "k.objects/shards/mulberry-leisure-toys-03",
   "k.scenes/shards/things-s"
+ ],
+ "star-shaped": [
+  "k.values/shards/shapes"
  ],
  "star1": [
   "k.objects/shards/noto-game-01",
@@ -62199,7 +64294,8 @@
   "k.commonsense/shards/core",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/sky",
-  "k.space/shards/kinds"
+  "k.space/shards/kinds",
+  "k.values/shards/shapes"
  ],
  "starship": [
   "k.objects/shards/words-wordnet",
@@ -62377,6 +64473,12 @@
  ],
  "steel": [
   "k.words/shards/st"
+ ],
+ "steel blue": [
+  "k.values/shards/colours-css"
+ ],
+ "steelblue": [
+  "k.values/shards/colours-css"
  ],
  "steele": [
   "k.words/shards/st"
@@ -62789,6 +64891,9 @@
   "k.faces/shards/plain-eyebrows",
   "k.objects/shards/noto-office-03",
   "k.words/shards/st"
+ ],
+ "straight line": [
+  "k.values/shards/shapes"
  ],
  "straight ruler": [
   "k.objects/shards/noto-office-03",
@@ -63650,6 +65755,7 @@
  ],
  "super": [
   "k.objects/shards/noto-sport-01",
+  "k.values/shards/scales",
   "k.words/shards/su"
  ],
  "superhero": [
@@ -63797,6 +65903,9 @@
   "k.feelings/shards/feelings",
   "k.objects/shards/noto-event-03",
   "k.words/shards/su"
+ ],
+ "surprise me": [
+  "k.values/shards/sets"
  ],
  "surprised": [
   "k.faces/shards/plain-eyes",
@@ -64727,7 +66836,14 @@
  ],
  "tall": [
   "k.people/schema.sop",
+  "k.values/shards/scales",
   "k.words/shards/ta"
+ ],
+ "taller": [
+  "k.values/shards/scales"
+ ],
+ "tallest": [
+  "k.values/shards/scales"
  ],
  "tallied": [
   "k.words/shards/ta"
@@ -64785,6 +66901,7 @@
  ],
  "tan": [
   "k.faces/shards/colours",
+  "k.values/shards/colours-css",
   "k.words/shards/ta"
  ],
  "tana": [
@@ -65147,6 +67264,7 @@
   "k.scenes/shards/things-t"
  ],
  "teal": [
+  "k.values/shards/colours-css",
   "k.words/shards/te"
  ],
  "team": [
@@ -65256,6 +67374,9 @@
  ],
  "teens": [
   "k.words/shards/te"
+ ],
+ "teeny": [
+  "k.values/shards/scales"
  ],
  "teeth": [
   "k.body/shards/core",
@@ -65369,6 +67490,7 @@
  "temperature": [
   "k.objects/shards/openmoji-healthcare-03",
   "k.units/shards/core",
+  "k.values/shards/scales",
   "k.words/shards/te"
  ],
  "tempi": [
@@ -65405,6 +67527,7 @@
   "k.objects/shards/noto-food-asian-02"
  ],
  "ten": [
+  "k.values/shards/numbers",
   "k.words/shards/te"
  ],
  "tenant": [
@@ -65459,6 +67582,7 @@
   "k.objects/shards/noto-animal-marine-02"
  ],
  "tenth": [
+  "k.values/shards/numbers",
   "k.words/shards/te"
  ],
  "tenure": [
@@ -65509,6 +67633,9 @@
  ],
  "terrace": [
   "k.words/shards/te"
+ ],
+ "terracotta": [
+  "k.values/shards/colours-common"
  ],
  "terrain": [
   "k.words/shards/te"
@@ -65668,14 +67795,56 @@
  "the bluff": [
   "k.geo/shards/north-america"
  ],
+ "the first one": [
+  "k.values/shards/sets"
+ ],
  "the gambia": [
   "k.geo/shards/africa"
  ],
  "the hague": [
   "k.geo/shards/europe"
  ],
+ "the last one": [
+  "k.values/shards/sets"
+ ],
+ "the majority": [
+  "k.values/shards/sets"
+ ],
  "the mountains": [
   "k.scenes/shards/scenes-nature"
+ ],
+ "the next one": [
+  "k.values/shards/sets"
+ ],
+ "the one before": [
+  "k.values/shards/sets"
+ ],
+ "the other ones": [
+  "k.values/shards/sets"
+ ],
+ "the others": [
+  "k.values/shards/sets"
+ ],
+ "the previous one": [
+  "k.values/shards/sets"
+ ],
+ "the remaining": [
+  "k.values/shards/sets"
+ ],
+ "the rest": [
+  "k.values/shards/sets"
+ ],
+ "the same": [
+  "k.values/shards/sets"
+ ],
+ "the two": [
+  "k.values/shards/sets"
+ ],
+ "the whole": [
+  "k.values/shards/scales"
+ ],
+ "the whole lot": [
+  "k.values/shards/sets"
  ],
  "thea": [
   "k.words/shards/th"
@@ -65767,6 +67936,7 @@
   "k.faces/shards/plain-eyebrows",
   "k.faces/shards/plain-moustache",
   "k.faces/shards/plain-neck",
+  "k.values/shards/scales",
   "k.words/shards/th"
  ],
  "thick arched": [
@@ -65774,6 +67944,15 @@
  ],
  "thicken": [
   "k.actions/shards/verbs-change"
+ ],
+ "thicker": [
+  "k.values/shards/scales"
+ ],
+ "thickest": [
+  "k.values/shards/scales"
+ ],
+ "thickness": [
+  "k.values/shards/scales"
  ],
  "thief": [
   "k.words/shards/th"
@@ -65793,6 +67972,7 @@
  "thin": [
   "k.faces/shards/plain-moustache",
   "k.faces/shards/plain-neck",
+  "k.values/shards/scales",
   "k.words/shards/th"
  ],
  "thing": [
@@ -65822,13 +68002,18 @@
   "k.words/shards/th"
  ],
  "thinner": [
+  "k.values/shards/scales",
   "k.words/shards/th"
+ ],
+ "thinnest": [
+  "k.values/shards/scales"
  ],
  "thinning": [
   "k.words/shards/th"
  ],
  "third": [
   "k.objects/shards/noto-award-medal-01",
+  "k.values/shards/numbers",
   "k.words/shards/th"
  ],
  "third_book": [
@@ -65859,10 +68044,75 @@
   "k.words/shards/th"
  ],
  "thirteen": [
+  "k.values/shards/numbers",
   "k.words/shards/th"
  ],
+ "thirteenth": [
+  "k.values/shards/numbers"
+ ],
+ "thirtieth": [
+  "k.values/shards/numbers"
+ ],
  "thirty": [
+  "k.values/shards/numbers",
   "k.words/shards/th"
+ ],
+ "thirty-eight": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-first": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-five": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-four": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-nine": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-ninth": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-one": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-second": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-seven": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-six": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-third": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-three": [
+  "k.values/shards/numbers"
+ ],
+ "thirty-two": [
+  "k.values/shards/numbers"
+ ],
+ "thistle": [
+  "k.values/shards/colours-css"
  ],
  "thiès": [
   "k.geo/shards/africa"
@@ -65914,7 +68164,11 @@
   "k.words/shards/th"
  ],
  "thousand": [
+  "k.values/shards/numbers",
   "k.words/shards/th"
+ ],
+ "thousandth": [
+  "k.values/shards/numbers"
  ],
  "thrash": [
   "k.words/shards/th"
@@ -65937,7 +68191,11 @@
   "k.words/shards/th"
  ],
  "three": [
+  "k.values/shards/numbers",
   "k.words/shards/th"
+ ],
+ "three quarters": [
+  "k.values/shards/numbers"
  ],
  "threesome": [
   "k.words/shards/th"
@@ -65948,6 +68206,9 @@
  "threw": [
   "k.actions/shards/actions-hands",
   "k.words/shards/th"
+ ],
+ "thrice": [
+  "k.values/shards/numbers"
  ],
  "thrill": [
   "k.words/shards/th"
@@ -66264,6 +68525,7 @@
   "k.objects/shards/things-2"
  ],
  "times": [
+  "k.values/shards/numbers",
   "k.words/shards/ti"
  ],
  "timetable": [
@@ -66367,6 +68629,9 @@
  ],
  "tint": [
   "k.actions/shards/verbs-change"
+ ],
+ "tiny": [
+  "k.values/shards/scales"
  ],
  "tip": [
   "k.objects/shards/food-2",
@@ -66474,6 +68739,18 @@
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-pick",
   "k.actions/shards/verbs-undo"
+ ],
+ "to the back": [
+  "k.values/shards/directions"
+ ],
+ "to the front": [
+  "k.values/shards/directions"
+ ],
+ "to the left": [
+  "k.values/shards/directions"
+ ],
+ "to the right": [
+  "k.values/shards/directions"
  ],
  "toad": [
   "k.animals/shards/reptiles-and-amphibians",
@@ -66656,6 +68933,7 @@
   "k.objects/shards/noto-food-fruit-03",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-t",
+  "k.values/shards/colours-css",
   "k.words/shards/to"
  ],
  "tomato juice": [
@@ -66950,7 +69228,14 @@
   "k.objects/shards/noto-time-01",
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
+  "k.values/shards/directions",
   "k.words/shards/to"
+ ],
+ "top center": [
+  "k.values/shards/directions"
+ ],
+ "top centre": [
+  "k.values/shards/directions"
  ],
  "top hat": [
   "k.faces/shards/plain-hat",
@@ -66958,11 +69243,32 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-t"
  ],
+ "top left": [
+  "k.values/shards/directions"
+ ],
+ "top left corner": [
+  "k.values/shards/directions"
+ ],
+ "top middle": [
+  "k.values/shards/directions"
+ ],
+ "top right": [
+  "k.values/shards/directions"
+ ],
+ "top right corner": [
+  "k.values/shards/directions"
+ ],
  "top to bottom": [
   "k.layouts/shards/layouts"
  ],
  "top up": [
   "k.actions/shards/actions-hands"
+ ],
+ "top-left": [
+  "k.values/shards/directions"
+ ],
+ "top-right": [
+  "k.values/shards/directions"
  ],
  "top_bar": [
   "k.objects/shards/structures",
@@ -67250,6 +69556,9 @@
  "tow": [
   "k.actions/shards/actions-hands",
   "k.words/shards/to"
+ ],
+ "towards the middle": [
+  "k.values/shards/directions"
  ],
  "towel": [
   "k.objects/shards/mulberry-healthcare-grooming-items-07",
@@ -67629,6 +69938,15 @@
   "k.objects/shards/stand-ins-wordnet",
   "k.scenes/shards/scenes-town"
  ],
+ "trapezium": [
+  "k.values/shards/shapes"
+ ],
+ "trapezoid": [
+  "k.values/shards/shapes"
+ ],
+ "trapezoids": [
+  "k.values/shards/shapes"
+ ],
  "trapped": [
   "k.words/shards/tr"
  ],
@@ -67812,13 +70130,18 @@
  "triangle": [
   "k.objects/shards/mulberry-leisure-toys-03",
   "k.objects/shards/noto-office-03",
+  "k.values/shards/shapes",
   "k.words/shards/tr"
  ],
  "triangle of things": [
   "k.layouts/shards/layouts"
  ],
+ "triangles": [
+  "k.values/shards/shapes"
+ ],
  "triangular": [
-  "k.objects/shards/noto-office-03"
+  "k.objects/shards/noto-office-03",
+  "k.values/shards/shapes"
  ],
  "triangular ruler": [
   "k.objects/shards/noto-office-03",
@@ -67883,6 +70206,7 @@
   "k.words/shards/tr"
  ],
  "trio": [
+  "k.values/shards/numbers",
   "k.words/shards/tr"
  ],
  "trip": [
@@ -67891,6 +70215,7 @@
   "k.words/shards/tr"
  ],
  "triple": [
+  "k.values/shards/numbers",
   "k.words/shards/tr"
  ],
  "tripod": [
@@ -68159,6 +70484,9 @@
   "k.objects/shards/things",
   "k.scenes/shards/things-t",
   "k.words/shards/tu"
+ ],
+ "tube shape": [
+  "k.values/shards/shapes"
  ],
  "tuberculosis": [
   "k.words/shards/tu"
@@ -68436,6 +70764,9 @@
   "k.actions/shards/actions-move",
   "k.units/shards/core"
  ],
+ "turquoise": [
+  "k.values/shards/colours-css"
+ ],
  "turret": [
   "k.objects/shards/things"
  ],
@@ -68504,26 +70835,83 @@
  "tweezers": [
   "k.objects/shards/openmoji-healthcare-02"
  ],
+ "twelfth": [
+  "k.values/shards/numbers"
+ ],
  "twelve": [
+  "k.values/shards/numbers",
   "k.words/shards/tw"
  ],
  "twenties": [
   "k.words/shards/tw"
  ],
+ "twentieth": [
+  "k.values/shards/numbers"
+ ],
  "twenty": [
+  "k.values/shards/numbers",
   "k.words/shards/tw"
  ],
+ "twenty-eight": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-eighth": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-fifth": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-first": [
+  "k.values/shards/numbers"
+ ],
  "twenty-five": [
+  "k.values/shards/numbers",
   "k.words/shards/tw"
  ],
  "twenty-four": [
+  "k.values/shards/numbers",
   "k.words/shards/tw"
+ ],
+ "twenty-fourth": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-nine": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-ninth": [
+  "k.values/shards/numbers"
  ],
  "twenty-one": [
+  "k.values/shards/numbers",
   "k.words/shards/tw"
  ],
+ "twenty-second": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-seven": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-seventh": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-six": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-sixth": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-third": [
+  "k.values/shards/numbers"
+ ],
+ "twenty-three": [
+  "k.values/shards/numbers"
+ ],
  "twenty-two": [
+  "k.values/shards/numbers",
   "k.words/shards/tw"
+ ],
+ "twice": [
+  "k.values/shards/numbers"
  ],
  "twig": [
   "k.faces/shards/plain-hat",
@@ -68596,6 +70984,7 @@
  ],
  "two": [
   "k.objects/shards/noto-animal-mammal-05",
+  "k.values/shards/numbers",
   "k.words/shards/tw"
  ],
  "two-hump": [
@@ -69157,6 +71546,7 @@
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.values/shards/directions",
   "k.words/shards/up"
  ],
  "up_arrow": [
@@ -69195,6 +71585,15 @@
   "k.objects/shards/openmoji-objects-02",
   "k.objects/shards/things",
   "k.words/shards/up"
+ ],
+ "upper left": [
+  "k.values/shards/directions"
+ ],
+ "upper part": [
+  "k.values/shards/directions"
+ ],
+ "upper right": [
+  "k.values/shards/directions"
  ],
  "upper_band": [
   "k.objects/shards/things-2"
@@ -69295,7 +71694,11 @@
  ],
  "upward": [
   "k.objects/shards/noto-money-02",
-  "k.objects/shards/noto-office-02"
+  "k.objects/shards/noto-office-02",
+  "k.values/shards/directions"
+ ],
+ "upwards": [
+  "k.values/shards/directions"
  ],
  "ural": [
   "k.geo/shards/asia"
@@ -69579,10 +71982,14 @@
   "k.words/shards/va"
  ],
  "varied": [
+  "k.values/shards/sets",
   "k.words/shards/va"
  ],
  "variety": [
   "k.words/shards/va"
+ ],
+ "various": [
+  "k.values/shards/sets"
  ],
  "varna": [
   "k.geo/shards/europe"
@@ -70024,6 +72431,18 @@
  "vertigoes": [
   "k.words/shards/ve"
  ],
+ "very": [
+  "k.values/shards/scales"
+ ],
+ "very big": [
+  "k.values/shards/scales"
+ ],
+ "very large": [
+  "k.values/shards/scales"
+ ],
+ "very small": [
+  "k.values/shards/scales"
+ ],
  "vessel": [
   "k.words/shards/ve"
  ],
@@ -70294,6 +72713,7 @@
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-plant-flower-02",
   "k.scenes/shards/things-v",
+  "k.values/shards/colours-css",
   "k.words/shards/vi"
  ],
  "violets": [
@@ -70975,10 +73395,15 @@
  ],
  "warm": [
   "k.objects/shards/openmoji-healthcare-02",
+  "k.values/shards/scales",
   "k.words/shards/wa"
  ],
  "warmer": [
+  "k.values/shards/scales",
   "k.words/shards/wa"
+ ],
+ "warmest": [
+  "k.values/shards/scales"
  ],
  "warming": [
   "k.words/shards/wa"
@@ -71414,6 +73839,7 @@
   "k.time/shards/calendar"
  ],
  "wee": [
+  "k.values/shards/scales",
   "k.words/shards/we"
  ],
  "weed": [
@@ -71478,7 +73904,11 @@
  "weight": [
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/openmoji-healthcare-04",
+  "k.values/shards/scales",
   "k.words/shards/we"
+ ],
+ "weighty": [
+  "k.values/shards/scales"
  ],
  "weir": [
   "k.geo/shards/oceania",
@@ -71560,6 +73990,7 @@
   "k.words/shards/we"
  ],
  "west": [
+  "k.values/shards/directions",
   "k.words/shards/we"
  ],
  "western": [
@@ -71576,6 +74007,12 @@
  ],
  "weston": [
   "k.words/shards/we"
+ ],
+ "westward": [
+  "k.values/shards/directions"
+ ],
+ "westwards": [
+  "k.values/shards/directions"
  ],
  "wet": [
   "k.actions/shards/actions-make-change",
@@ -71644,6 +74081,7 @@
   "k.objects/shards/noto-food-prepared-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-w",
+  "k.values/shards/colours-css",
   "k.words/shards/wh"
  ],
  "wheat field": [
@@ -71747,6 +74185,9 @@
  ],
  "whet": [
   "k.actions/shards/actions-make-change"
+ ],
+ "whichever": [
+  "k.values/shards/sets"
  ],
  "whiff": [
   "k.words/shards/wh"
@@ -71866,6 +74307,7 @@
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-tool-03",
+  "k.values/shards/colours-css",
   "k.words/shards/wh"
  ],
  "white cane": [
@@ -71884,6 +74326,9 @@
  ],
  "white nile": [
   "k.geo/shards/africa"
+ ],
+ "white smoke": [
+  "k.values/shards/colours-css"
  ],
  "white volta": [
   "k.geo/shards/africa"
@@ -71904,6 +74349,9 @@
   "k.objects/shards/mulberry-building-equipment-and-devices-01",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-w"
+ ],
+ "whitesmoke": [
+  "k.values/shards/colours-css"
  ],
  "whitman": [
   "k.words/shards/wh"
@@ -71958,10 +74406,17 @@
  "wide": [
   "k.faces/shards/plain-head",
   "k.faces/shards/plain-mouth",
-  "k.faces/shards/plain-nose"
+  "k.faces/shards/plain-nose",
+  "k.values/shards/scales"
  ],
  "widen": [
   "k.actions/shards/verbs-change"
+ ],
+ "wider": [
+  "k.values/shards/scales"
+ ],
+ "widest": [
+  "k.values/shards/scales"
  ],
  "widow": [
   "k.words/shards/wi"
@@ -71970,6 +74425,7 @@
   "k.words/shards/wi"
  ],
  "width": [
+  "k.values/shards/scales",
   "k.words/shards/wi"
  ],
  "wield": [
@@ -72308,6 +74764,9 @@
   "k.objects/shards/noto-drink-01",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-w"
+ ],
+ "wine red": [
+  "k.values/shards/colours-common"
  ],
  "winery": [
   "k.objects/shards/stand-ins-wordnet"
@@ -73189,7 +75648,11 @@
   "k.faces/shards/colours",
   "k.geo/shards/asia",
   "k.objects/shards/noto-transport-ground-03",
+  "k.values/shards/colours-css",
   "k.words/shards/ye"
+ ],
+ "yellow green": [
+  "k.values/shards/colours-css"
  ],
  "yellow_button": [
   "k.objects/shards/mulberry-electrical-media-02"
@@ -73200,6 +75663,9 @@
  ],
  "yellow_paint": [
   "k.objects/shards/mulberry-art-making-01"
+ ],
+ "yellowgreen": [
+  "k.values/shards/colours-css"
  ],
  "yellowstone": [
   "k.geo/shards/north-america",
@@ -73453,6 +75919,8 @@
  ],
  "zero": [
   "k.objects/shards/noto-mail-01",
+  "k.values/shards/numbers",
+  "k.values/shards/scales",
   "k.words/shards/ze"
  ],
  "zeroes": [
@@ -73479,8 +75947,17 @@
  "zi": [
   "k.geo/shards/asia"
  ],
+ "zig-zag": [
+  "k.values/shards/shapes"
+ ],
  "ziguinchor": [
   "k.geo/shards/africa"
+ ],
+ "zigzag": [
+  "k.values/shards/shapes"
+ ],
+ "zigzags": [
+  "k.values/shards/shapes"
  ],
  "zimbabwe": [
   "k.geo/shards/africa",
