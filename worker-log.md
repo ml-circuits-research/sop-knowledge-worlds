@@ -2023,3 +2023,37 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Numbers: k.animals 5 shards, 597 wires, 108,984 bytes (was 294 wires, 46,944 bytes). Catalog 21 worlds, 821
   shards, vocab 21,510 words (21,260); 0 errors, 0 warnings.
 - npm test: 2,580 pass, 1 fail on the first run (`can=glide` is not an action of `k.actions`); flying fish `glide` and gibbon `swing` were taken out and the failing file and the animal, catalog, validation and question tests run again: pass. After the rebase on R8.5 (`k.parts`): the same files again, pass.
+
+## Round 8, item 6 (2026-11-13, second worker): coverage report of the common things
+
+- **New generated page `docs/worlds/COVERAGE.md`**, written by `tools/coverage-report.mjs` (needs the raw WordNet
+  and frequency files; run `tools/build-catalog.mjs` before it, for the vocabulary index, and after it). Counted
+  from the shards, for the 1,500 common things, each "by its name" and "through its drawing" (the drawing of the
+  word, or the one it reaches through a synonym or a stand-in).
+- **Numbers (of 1,500):** a drawing of its own name 680, a synonym or stand-in with a drawing 343, neither 477.
+  Place 637 by name + 350 through the drawing (none 513); size 650 + 365 (485); usual colour 203 + 46 (1,251);
+  colours of the parts of a drawing 654 + 369 (477); parts from WordNet 541 + 57 (902); named parts of a drawing
+  545 + 312 (643); joins between kinds 64 + 78; an anchor 133 + 102; material 303 + 104; what it can do 232 + 77;
+  what it is used for 336 + 142; wheels 33 + 12; legs 100 + 32; a kind and a definition in `k.words` 1,072 + 116
+  (none 312); where it is worn 37 + 21.
+- **Per world** (a common thing is a word of the vocabulary index that leads to a shard of the world): k.objects
+  1,094, k.words 1,075, k.scenes 677, k.parts 544, k.attributes 542, k.layouts 210, k.animals 113, k.food 111,
+  k.wearables 62, k.faces 45; the others under 25.
+- **What the gaps say for the next round:** (1) 312 common things have no sense in `k.words` (sunflower, raisin,
+  teapot, locomotive, chimpanzee): `k.words` keeps the words of the first 20,000 lines of the frequency list and
+  these come later; they have no definition and no kind. (2) The usual colour is the thinnest attribute (17%);
+  dog, horse, fish, bird have none because they have no single colour, but many things with a plain colour are
+  still missing. (3) 902 things have no part from WordNet; 643 have no named part in a drawing either.
+  (4) 513 have no place and 485 no size: nearly all are the 477 without any drawing, since place and size were
+  labelled for drawings. (5) What a thing can do and is used for: about 70% missing.
+  A missing value is not always a gap (a car has no usual colour; wheels, legs and where a thing is worn belong
+  to some kinds only): the page says so and prints no gap list for those three.
+- **Looked at:** the page as generated (the tables and the gap lists). The counts were not checked by hand
+  against the shards; a test checks that the three parts of every row add up to 1,500 and that every type and
+  key named exists.
+- **The counts go stale** when a world grows: rerun `node tools/coverage-report.mjs` and
+  `node tools/aspects-report.mjs`, then `node tools/build-catalog.mjs` (both pages are under `docs/worlds`, so the
+  catalog version changes with them). The tests check structure only, so a stale page does not fail them.
+- Tests: `tests/coverage-report.test.mjs` (3).
+- Numbers: catalog 22 worlds, 845 shards, vocab 21,343 words; 0 errors, 0 warnings. npm test 2,579 pass, 5 skipped, 0 fail.
+- After the rebase on R9.2 (314 animals): both pages regenerated (animals 314 in ASPECTS.md; legs and what it can do change in COVERAGE.md); catalog 22 worlds, 845 shards, vocab 21,593 words; npm test 2,590 pass, 5 skipped, 0 fail.
