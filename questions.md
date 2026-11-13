@@ -24,6 +24,18 @@ looked at and shows a physical thing the word names counts, whoever drew it (the
 rename OpenMoji's (two drawings of one thing).
 Blocking: no. Meanwhile: (a).
 
+## Q28 (task R7.3 next to Round 8 item 3, 2026-11-13)
+Question: should `k.colours` and `k.shapes` (R7.3, published now) stay worlds of their own next to the `k.values`
+of Round 8 (colour names with RGB and synonyms, shape names), or be folded into it?
+Context: R7.3 asks what is known about colours and shapes (family, light or dark, mixes, typical things; sides,
+corners, round); Round 8 item 3 asks for the value words of a request. I gave `k.colours` no RGB so that two worlds
+do not state two values for one name; the colour and shape names here are then the names that `k.values` can join
+by name. Options: (a) keep both: `k.values` holds names, RGB and synonyms, `k.colours` and `k.shapes` what is known
+about them; (b) `k.values` takes the types `colour`, `mix` and `shape` in, and these two worlds go; (c) add `rgb`
+to `k.colours.colour` and let `k.values` refer to it.
+Blocking: no. Meanwhile: (a). The second worker published `k.values` on the same reading while this was written:
+every colour of `k.colours` joins a `k.values.colour` by name or word (a test), 28 of the 36 shapes a `k.values.shape`.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

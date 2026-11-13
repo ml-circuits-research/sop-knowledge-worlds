@@ -1,5 +1,5 @@
 {
- "version": "7378624c0160",
+ "version": "3eb8f5c648e3",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -1575,6 +1575,71 @@
       "touch",
       "vein",
       "wrist"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.colours",
+   "version": "1",
+   "schema": "k.colours/schema.sop",
+   "exports": [
+    "k.colours.colour",
+    "k.colours.mix"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.colours/shards/colours",
+     "path": "k.colours/shards/colours.sop",
+     "wires": 91,
+     "bytes": 13999,
+     "keys": [
+      "amber",
+      "beige",
+      "black",
+      "blue",
+      "brown",
+      "chestnut",
+      "cream",
+      "crimson",
+      "dark green",
+      "dark grey",
+      "gold",
+      "green",
+      "grey",
+      "light blue",
+      "light green",
+      "light grey",
+      "lilac",
+      "lime",
+      "magenta",
+      "maroon",
+      "mustard",
+      "navy",
+      "olive",
+      "orange",
+      "peach",
+      "pink",
+      "purple",
+      "red",
+      "scarlet",
+      "silver",
+      "turquoise",
+      "white",
+      "yellow"
      ],
      "sources": [
       "hand-core-1"
@@ -21756,6 +21821,73 @@
      "keys": [
       "zebra",
       "zip"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.shapes",
+   "version": "1",
+   "schema": "k.shapes/schema.sop",
+   "exports": [
+    "k.shapes.shape"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.shapes/shards/shapes",
+     "path": "k.shapes/shards/shapes.sop",
+     "wires": 72,
+     "bytes": 12813,
+     "keys": [
+      "arc",
+      "arrow",
+      "circle",
+      "cloud shape",
+      "cone",
+      "crescent",
+      "cross",
+      "cube",
+      "cuboid",
+      "cylinder",
+      "diamond",
+      "drop",
+      "egg shape",
+      "heart",
+      "hemisphere",
+      "hexagon",
+      "line",
+      "octagon",
+      "oval",
+      "parallelogram",
+      "pentagon",
+      "polygon",
+      "prism",
+      "pyramid",
+      "rectangle",
+      "ring",
+      "semicircle",
+      "sphere",
+      "spiral",
+      "square",
+      "star",
+      "torus",
+      "trapezium",
+      "triangle",
+      "wavy line",
+      "zigzag"
      ],
      "sources": [
       "hand-core-1"

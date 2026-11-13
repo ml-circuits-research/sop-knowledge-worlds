@@ -1,0 +1,10 @@
+{"id":"co-01","ask":"what do red and yellow make","query":{"type":"k.colours.mix","where":{"a":"red","b":"yellow"},"seek":"gives"},"expect":{"status":"supported","value":"orange"}}
+{"id":"co-02","ask":"what is a darker blue","query":{"type":"k.colours.colour","where":{"name":"blue"},"seek":"darker"},"expect":{"status":"supported","value":"navy"}}
+{"id":"co-03","ask":"what kind of colour is maroon","query":{"type":"k.colours.colour","where":{"name":"maroon"},"seek":"family"},"expect":{"status":"supported","value":"red"}}
+{"id":"co-04","ask":"which colours are greens","query":{"type":"k.colours.colour","where":{"family":"green"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["green","\"light green\"","lime","\"dark green\"","olive"]}}
+{"id":"co-05","ask":"what is the opposite colour of red","query":{"type":"k.colours.colour","where":{"name":"red"},"seek":"complement"},"expect":{"status":"supported","value":"green"}}
+{"id":"co-06","ask":"which colour does a banana have","query":{"type":"k.colours.colour","where":{"thing":"banana"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["yellow"]}}
+{"id":"co-07","ask":"is yellow a warm colour","query":{"type":"k.colours.colour","where":{"name":"yellow"},"seek":"temperature"},"expect":{"status":"supported","value":"warm"}}
+{"id":"co-08","ask":"which colours give brown","query":{"type":"k.colours.mix","where":{"gives":"brown"},"seek":"a","mode":"list"},"expect":{"status":"supported","values":["green","blue","purple"]}}
+{"id":"co-09","ask":"which colours are metallic","query":{"type":"k.colours.colour","where":{"kind":"metallic"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["gold","silver"]}}
+{"id":"co-10","ask":"is navy light or dark","query":{"type":"k.colours.colour","where":{"name":"navy"},"seek":"tone"},"expect":{"status":"supported","value":"dark"}}

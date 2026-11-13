@@ -1780,3 +1780,35 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   0 errors, 0 warnings.
   npm test 2,477 pass, 5 skipped, 0 fail.
 - After the rebase on the first worker's R7.2 (187 everyday actions in k.actions): catalog 17 worlds, 809 shards, vocab 20,954 words; npm test 2,495 pass, 5 skipped, 0 fail.
+
+## R7.3 (2026-11-13): `k.colours` (33 colours, 25 mixes) and `k.shapes` (36 shapes)
+
+- **New world `k.colours`** (version 1, exports `colour`, `mix`): `k.colours.colour` with `family` (the eleven basic
+  colours), `tone` (light, medium, dark), `temperature` (warm, cool, neutral), `lighter`, `darker`, `complement`,
+  `kind=metallic`, `thing` (typical things; many); `k.colours.mix` (`a`, `b` in the order of the alphabet, `gives`):
+  25 pairs. Shard `colours`: 91 wires, 13,999 bytes. No RGB here (see Q28).
+- **New world `k.shapes`** (version 1, exports `shape`): 21 flat shapes, 5 lines, 10 solids; `sides` and `corners`,
+  or `faces`, `edges`, `corners` and the shape of the faces; `round`, `equal_sides`, `symmetric`, `flat` (the solid
+  seen from the front), `is_a`, `thing`. Two rules refuse `sides` on a solid and `faces` on a flat shape. Shard
+  `shapes`: 72 wires, 12,813 bytes. Both written by `tools/colours-shapes-core.mjs`.
+- **Checked by test:** lighter and darker agree with the tone; a complement is said from both sides; every mix
+  names three colours of the world; sides equal corners for straight-sided flat shapes; corners − edges + faces = 2
+  for cube, cuboid, pyramid and prism; the eight part shapes of `k.objects` are shapes here.
+- **Joins measured:** 123 of 126 typical things of colours and 124 of 128 of shapes are drawings or stand-ins. As
+  a second check of the colours, the colour names on the parts of those drawings: 105 of 123 drawings carry the
+  family of the colour said. I read the 21 that did not at the first count: four claims were taken out as doubtful
+  of the real thing (a blue whale and dolphin, a silver key and coin); the others are true of the thing and the
+  drawing is in another colour or lost colours in conversion (a brown plum, a green pond, a black-and-white nail).
+- **Not looked at:** no drawing was opened for this; the typical things rest on their names and on the part
+  colours. The numbers of the less common shapes (star 10 and 10, cross 12 and 12, arrow 7 and 7, cone 2 faces, 1
+  edge, 1 corner) are mine and were checked only by counting once more.
+- **Judgement that is mine:** which colours and shapes; tone and temperature (turquoise is filed under blue; lime
+  is cool); the mixes are those of school paint boxes (purple and yellow give brown), not of light.
+- **What SOP Lang could not say:** "a darker colour is not lighter in tone", "the complement of the complement is
+  the colour", "a pair of a mix is in the order of the alphabet": comparisons across facts or of two values; tests.
+- **Asked:** Q28 (these two worlds next to `k.values` of Round 8). Meanwhile both stay.
+- **`k.values` arrived on the rebase** (second worker, R8.3: colour names with RGB, shape names). It is built as
+  option (a) of Q28, so nothing was folded: a test now requires that every colour of `k.colours` is a
+  `k.values.colour` by name or word (all 33 are); 28 of the 36 shapes are named by `k.values.shape` (not: polygon,
+  drop, cloud shape, wavy line, hemisphere, egg shape, prism, torus). The generated files were rebuilt, not merged.
+- Numbers: catalog 19 worlds, 811 shards, vocab 21,044 words; 0 errors, 0 warnings. npm test 2,529 pass, 0 fail.
