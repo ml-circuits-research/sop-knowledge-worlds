@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>jail</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="8" y="8" width="84" height="84" fill="grey" stroke="#333" stroke-width="0.8"><title>wall</title></rect>
+  <rect x="20" y="18" width="60" height="70" fill="black" stroke="#333" stroke-width="0.8"><title>opening</title></rect>
+  <polyline points="28,18 28,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bar_1</title></polyline>
+  <polyline points="37,18 37,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bar_2</title></polyline>
+  <polyline points="46,18 46,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bar_3</title></polyline>
+  <polyline points="55,18 55,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bar_4</title></polyline>
+  <polyline points="64,18 64,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bar_5</title></polyline>
+  <polyline points="73,18 73,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bar_6</title></polyline>
+  <rect x="20" y="50" width="60" height="4" fill="grey" stroke="#333" stroke-width="0.8"><title>crossbar</title></rect>
+  <rect x="60" y="47" width="10" height="10" fill="yellow" stroke="#333" stroke-width="0.8"><title>lock</title></rect>
+</svg>

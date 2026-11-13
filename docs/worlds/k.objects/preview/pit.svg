@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>pit</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="30" width="92" height="62" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <ellipse cx="50" cy="60" rx="34" ry="20" fill="brown" stroke="#333" stroke-width="0.8"><title>rim</title></ellipse>
+  <ellipse cx="50" cy="64.5" rx="29" ry="14.5" fill="black" stroke="#333" stroke-width="0.8"><title>depth</title></ellipse>
+  <ellipse cx="83" cy="34" rx="11" ry="6" fill="brown" stroke="#333" stroke-width="0.8"><title>mound</title></ellipse>
+  <polyline points="42,24 44,66" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_rail</title></polyline>
+  <polyline points="54,24 56,66" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_rail</title></polyline>
+  <polyline points="42.5,32 54.5,32" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rung_1</title></polyline>
+  <polyline points="43,42 55,42" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rung_2</title></polyline>
+  <polyline points="43.5,52 55.5,52" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rung_3</title></polyline>
+  <polyline points="44,62 56,62" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rung_4</title></polyline>
+</svg>

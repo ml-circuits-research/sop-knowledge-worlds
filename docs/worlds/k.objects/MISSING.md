@@ -16,12 +16,12 @@ bank).
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name | 522 | 34.8% |
-| without, but a WordNet synonym has a drawing | 59 | 3.9% |
-| without, but the direct hypernym has a drawing | 156 | 10.4% |
-| with no drawing at all | 763 | 50.9% |
+| with a drawing of that name | 556 | 37.1% |
+| without, but a WordNet synonym has a drawing | 64 | 4.3% |
+| without, but the direct hypernym has a drawing | 181 | 12.1% |
+| with no drawing at all | 699 | 46.6% |
 
-## The 978 words without a drawing of their name, most frequent first
+## The 944 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing. The gloss is WordNet's, for the sense kept.
@@ -29,77 +29,43 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
 | 8 | gun |  | a weapon that discharges a missile at high velocity (especially from a metal tube or barrel) |
-| 13 | street |  | a thoroughfare (usually including sidewalks) that is lined with buildings |
-| 17 | building |  | a structure that has a roof and walls and stands more or less permanently in one place |
-| 31 | prison |  | a correctional institution where persons are confined while on trial or for punishment |
-| 37 | wall |  | an architectural partition with a height and length greater than its thickness |
 | 38 | store | synonym shop | a mercantile establishment for the retail sale of goods or services |
-| 39 | jail |  | a correctional institution used to detain persons who are in the lawful custody of the government (either accused persons awaiting trial or convicted persons serving a sentence) |
-| 43 | island |  | a land mass (smaller than a continent) that is surrounded by water |
 | 52 | suit |  | a set of garments (usually including a jacket and trousers or skirt) for outerwear all of the same fabric and color |
-| 55 | hole |  | an opening into or through something |
 | 56 | engine | hypernym motor | motor that converts thermal energy to mechanical work |
-| 66 | restaurant |  | a building where people go to eat |
 | 68 | tape |  | a long thin piece of cloth or paper as used for binding or fastening |
-| 71 | meat |  | the flesh of animals (including fishes and birds and snails) used as food |
 | 72 | photo | synonym photograph (drawing "photographs") | a representation of a person or scene in the form of a print or transparent slide or in digital format |
 | 77 | bullet |  | a projectile that is fired from a gun |
 | 78 | sword |  | a cutting or thrusting weapon that has a long metal blade and a hilt with a hand guard |
-| 81 | pool |  | an excavation that is (usually) filled with water |
 | 82 | fan |  | a device for creating a current of air by movement of a surface or surfaces |
-| 84 | path |  | a way especially designed for a particular use |
-| 85 | roof |  | a protective covering that covers or forms the top of a building |
-| 86 | sugar |  | a white crystalline carbohydrate used as a sweetener and preservative |
-| 91 | hill |  | a local and well-defined elevation of the land |
 | 93 | painting |  | graphic art consisting of an artistic composition made by applying paints to a surface |
 | 95 | bike | synonym motorcycle | a motor vehicle with two wheels and a strong frame |
-| 100 | airport |  | an airfield equipped with control tower and hangars as well as accommodations for passengers and cargo |
 | 102 | map |  | a diagrammatic representation of the earth's surface (or part of it) |
 | 103 | horn |  | a noisemaker (as at parties or games) that makes a loud noise when you blow through it |
-| 104 | temple |  | place of worship consisting of an edifice for the worship of a deity |
-| 106 | grave |  | a place for the burial of a corpse (especially beneath the ground and marked by a tombstone) |
 | 110 | trap |  | a device in which something (usually an animal) can be caught and penned |
 | 113 | palace | synonym castle | a large and stately mansion |
-| 126 | juice |  | the liquid part that can be extracted from plant or animal tissue by squeezing or cooking |
 | 138 | screen |  | a white or silvered surface where pictures can be projected for viewing |
-| 141 | valley |  | a long depression in the surface of the land that usually contains a river |
-| 143 | library |  | a room where books are kept |
 | 144 | tank |  | an enclosed armored military vehicle |
 | 146 | rope |  | a strong line |
-| 147 | theater |  | a building where theatrical performances or motion-picture shows can be presented |
 | 152 | mask |  | a covering to disguise or conceal the face |
 | 154 | couch | synonym sofa | an upholstered seat for more than one person |
 | 155 | shoe |  | footwear shaped to fit the foot (below the ankle) with a flexible upper of leather or plastic and a sole and heel of heavier material |
 | 156 | closet | synonym cupboard | a small room (or recess) or cabinet used for storage space |
-| 158 | museum |  | a depository for collecting and displaying objects having scientific or historical or artistic value |
-| 164 | lane |  | a narrow way or road |
-| 165 | orange |  | round yellow to orange fruit of any of several citrus trees |
 | 167 | teddy | synonym teddy bear | plaything consisting of a child's toy bear (usually plush and stuffed with soft materials) |
-| 168 | cave |  | a geological formation consisting of an underground enclosure with access from the surface of the ground or from the sea |
-| 172 | sauce |  | flavorful relish or dressing or topping served as an accompaniment to food |
 | 184 | doorbell |  | a push button at an outer door that gives a ringing or buzzing signal when pushed |
 | 185 | cage |  | an enclosure made or wire or metal bars in which birds or animals can be kept |
-| 186 | cliff |  | a steep high face of rock |
 | 187 | trunk | synonym tree trunk | the main stem of a tree |
 | 188 | pipe |  | a tube with a small bowl at one end |
-| 191 | pit |  | a sizeable hole (usually in the ground) |
 | 192 | frame |  | the framework for a pair of eyeglasses |
 | 194 | underwear |  | undergarment worn next to the skin and under the outer garments |
-| 198 | theatre |  | a building where theatrical performances or motion-picture shows can be presented |
+| 198 | theatre | synonym theater | a building where theatrical performances or motion-picture shows can be presented |
 | 202 | shell |  | ammunition consisting of a cylindrical metal casing containing an explosive charge and a projectile |
-| 204 | fort |  | a fortified military post where troops are stationed |
-| 205 | alley |  | a narrow street with walls on both sides |
 | 206 | pole |  | a long (usually round) rod of wood or metal or plastic |
 | 207 | highway | hypernym road | a major road for any form of motor transport |
 | 208 | jet | synonym jet plane | an airplane powered by one or more jet engines |
-| 211 | whiskey |  | a liquor made from fermented mash of grain |
 | 213 | string |  | a lightweight cord |
-| 214 | corn |  | tall annual cereal grass bearing kernels on large ears: widely cultivated in America in many varieties |
-| 216 | warehouse |  | a storehouse for goods and merchandise |
 | 220 | tube |  | conduit consisting of a long hollow object (usually cylindrical) used to hold and conduct objects or liquids or gases |
 | 221 | pan |  | cooking utensil consisting of a wide metal vessel |
 | 222 | throne |  | the chair of state for a monarch, bishop, etc. |
-| 225 | pork |  | meat from a domestic hog or pig |
 | 226 | motel |  | a motor hotel |
 | 227 | rifle |  | a shoulder firearm with a long barrel and a rifled bore |
 | 228 | statue |  | a sculpture representing a human or animal |
@@ -134,11 +100,11 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 298 | ginger | hypernym herb | perennial plants having thick branching aromatic rhizomes and leafy reedlike stems |
 | 300 | tub | synonym bathtub | a relatively large open container that you fill with water and use to wash the body |
 | 301 | rod |  | a long thin implement made of metal or wood |
-| 303 | cafe |  | a small restaurant where drinks and snacks are sold |
+| 303 | cafe | hypernym restaurant | a small restaurant where drinks and snacks are sold |
 | 304 | brandy |  | distilled from wine or fermented fruit juice |
 | 305 | sweater |  | a crocheted or knitted garment covering the upper part of the body |
 | 307 | pistol |  | a firearm that is held and fired with one hand |
-| 308 | tomb |  | a place for the burial of a corpse (especially beneath the ground and marked by a tombstone) |
+| 308 | tomb | synonym grave | a place for the burial of a corpse (especially beneath the ground and marked by a tombstone) |
 | 311 | plug |  | blockage consisting of an object designed to fill a hole tightly |
 | 312 | reed |  | tall woody perennial grasses with hollow slender stems especially of the genera Arundo and Phragmites |
 | 314 | laser |  | an acronym for light amplification by stimulated emission of radiation |
@@ -158,7 +124,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 341 | armor |  | protective covering made of metal and used in combat |
 | 344 | portrait |  | any likeness of a person, in any medium |
 | 348 | swamp |  | low land that is seasonally flooded |
-| 350 | morgue |  | a building (or room) where dead bodies are kept before burial or cremation |
+| 350 | morgue | hypernym building | a building (or room) where dead bodies are kept before burial or cremation |
 | 351 | dice |  | a small cube with 1 to 6 spots on the six faces |
 | 353 | balcony |  | an upper floor projecting from the rear over the main floor in an auditorium |
 | 356 | cottage | hypernym house | a small house with a single story |
@@ -179,7 +145,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 378 | peg |  | a wooden pin pushed or driven into a surface |
 | 381 | rum |  | liquor distilled from fermented molasses |
 | 383 | shutter |  | a mechanical device on a camera that opens and closes to control the time of a photographic exposure |
-| 386 | whisky |  | a liquor made from fermented mash of grain |
+| 386 | whisky | synonym whiskey | a liquor made from fermented mash of grain |
 | 388 | globe | synonym earth (drawing "Earth") | the 3rd planet from the sun |
 | 390 | delta |  | a low triangular area of alluvial deposits where a river divides before entering a larger body of water |
 | 391 | stove |  | a kitchen appliance used for cooking food |
@@ -202,7 +168,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 426 | continent |  | one of the large landmasses of the earth |
 | 427 | robe |  | any loose flowing garment |
 | 429 | mattress |  | a large thick pad filled with resilient material and often incorporating coiled springs, used as a bed or part of a bed |
-| 430 | grill |  | a restaurant where food is cooked on a grill |
+| 430 | grill | hypernym restaurant | a restaurant where food is cooked on a grill |
 | 432 | grocery |  | a marketplace where groceries are sold |
 | 433 | supermarket |  | a large self-service grocery store selling groceries and dairy products and household goods |
 | 434 | pier |  | a platform built out from the shore into the water and supported by piles |
@@ -272,7 +238,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 548 | calf |  | young of domestic cattle |
 | 549 | rosemary | hypernym herb | widely cultivated for its fragrant grey-green leaves used in cooking and in perfumery |
 | 551 | falcon |  | diurnal birds of prey having long pointed powerful wings adapted for swift flight |
-| 552 | gravy |  | a sauce made by adding stock, flour, or other ingredients to the juice and fat that drips from cooking meats |
+| 552 | gravy | hypernym sauce | a sauce made by adding stock, flour, or other ingredients to the juice and fat that drips from cooking meats |
 | 553 | courthouse |  | a government building that houses the offices of a county government |
 | 555 | crib |  | baby bed with high sides made of slats |
 | 557 | muffin |  | a sweet quick bread baked in a cup-shaped pan |
@@ -286,7 +252,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 568 | ale | hypernym beer | a general name for beer made with a top fermenting yeast |
 | 571 | capsule |  | a small container |
 | 572 | bundle | hypernym package | a package of several things tied together for carrying or storing |
-| 574 | garrison |  | a fortified military post where troops are stationed |
+| 574 | garrison | synonym fort | a fortified military post where troops are stationed |
 | 575 | reef |  | a submerged ridge of rock or coral near the surface of the water |
 | 576 | abbey | hypernym church | a church associated with a monastery or convent |
 | 579 | skate |  | sports equipment that is worn on the feet to enable the wearer to glide along and to be propelled by the alternate actions of the legs |
@@ -311,7 +277,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 610 | saloon |  | a room or establishment where alcoholic drinks are served over a counter |
 | 611 | serpent | synonym snake | limbless scaly elongate reptile |
 | 612 | curb |  | an edge between a sidewalk and a roadway consisting of a line of curbstones (usually forming part of a gutter) |
-| 613 | tavern |  | a building with a bar that is licensed to sell alcoholic drinks |
+| 613 | tavern | hypernym building | a building with a bar that is licensed to sell alcoholic drinks |
 | 614 | caviar |  | salted roe of sturgeon or other large fish |
 | 615 | trench |  | a ditch dug as a fortification having a parapet of the excavated earth |
 | 617 | tonic |  | lime- or lemon-flavored carbonated water containing quinine |
@@ -332,7 +298,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 638 | bandage |  | a piece of soft material that covers and protects an injured part of the body |
 | 639 | bumper |  | a glass filled to the brim (especially as a toast) |
 | 640 | mare | hypernym horse | female equine animal |
-| 643 | boulevard |  | a wide street or thoroughfare |
+| 643 | boulevard | hypernym street | a wide street or thoroughfare |
 | 644 | rook |  | (chess) the piece that can move any number of unoccupied squares in a direction parallel to the sides of the chessboard |
 | 645 | cod |  | the vessel that contains the seeds of a plant (not the seeds themselves) |
 | 646 | infirmary | synonym hospital | a health facility where patients receive treatment |
@@ -397,8 +363,8 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 737 | mustang |  | small hardy range horse of the western plains descended from horses brought by the Spanish |
 | 738 | tofu |  | cheeselike food made of curdled soybean milk |
 | 739 | chateau |  | an impressive country house (or castle) in France |
-| 740 | veal |  | meat from a calf |
-| 741 | isle |  | a small island |
+| 740 | veal | hypernym meat | meat from a calf |
+| 741 | isle | hypernym island | a small island |
 | 742 | amulet |  | a trinket or piece of jewelry usually hung about the neck and thought to be a magical protection against evil or disease |
 | 743 | convertible | hypernym car | a car that has top that can be folded or removed |
 | 744 | pavement |  | the paved surface of a thoroughfare |
@@ -409,7 +375,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 751 | ledge |  | a projecting ridge on a mountain or submerged under water |
 | 752 | throttle |  | a valve that regulates the supply of fuel to the engine |
 | 753 | espresso | hypernym coffee | strong black coffee brewed by forcing hot water under pressure through finely ground coffee beans |
-| 755 | greenhouse |  | a building with glass walls and roof |
+| 755 | greenhouse | hypernym building | a building with glass walls and roof |
 | 757 | baton |  | a thin tapered rod used by a conductor to lead an orchestra or choir |
 | 759 | arcade |  | a covered passageway with shops and stalls on either side |
 | 760 | rye |  | the seed of the cereal grass |
@@ -479,7 +445,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 849 | fern |  | any of numerous flowerless and seedless vascular plants having true roots from a rhizome and fronds that uncurl upward |
 | 850 | myrtle |  | widely cultivated as a groundcover for its dark green shiny leaves and usually blue-violet flowers |
 | 851 | plateau |  | a relatively flat highland |
-| 852 | rink |  | building that contains a surface for ice skating or roller skating |
+| 852 | rink | hypernym building | building that contains a surface for ice skating or roller skating |
 | 853 | trolley |  | a wheeled vehicle that runs on rails and is propelled by electricity |
 | 854 | billboard |  | large outdoor signboard |
 | 855 | clockwork |  | any mechanism of geared wheels that is driven by a coiled spring |
@@ -492,19 +458,19 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 866 | barricade |  | a barrier set up by police to stop traffic on a street or road in order to catch a fugitive or inspect traffic etc. |
 | 868 | farmhouse | hypernym house | house for a farmer and family |
 | 869 | freighter |  | a cargo ship |
-| 870 | jerky |  | meat (especially beef) cut in strips and dried in the sun |
+| 870 | jerky | hypernym meat | meat (especially beef) cut in strips and dried in the sun |
 | 871 | partridge |  | flesh of either quail or grouse |
-| 872 | mutton |  | meat from a mature domestic sheep |
+| 872 | mutton | hypernym meat | meat from a mature domestic sheep |
 | 873 | blender |  | an electrically powered mixer with whirling blades that mix or chop or liquefy foods |
 | 874 | labyrinth |  | complex system of paths or tunnels in which it is easy to get lost |
-| 875 | observatory |  | a building designed and equipped to observe astronomical phenomena |
+| 875 | observatory | hypernym building | a building designed and equipped to observe astronomical phenomena |
 | 877 | chainsaw |  | portable power saw |
 | 878 | rudder |  | a hinged vertical airfoil mounted at the tail of an aircraft and used to make horizontal course changes |
 | 880 | flask | hypernym bottle | bottle that has a narrow neck |
 | 881 | salami | hypernym sausage (drawing "sausages") | highly seasoned fatty sausage of pork and beef usually dried |
 | 883 | hoop |  | a light curved skeleton to spread out a skirt |
 | 884 | slab |  | block consisting of a thick piece of something |
-| 885 | mortuary |  | a building (or room) where dead bodies are kept before burial or cremation |
+| 885 | mortuary | hypernym building | a building (or room) where dead bodies are kept before burial or cremation |
 | 887 | tanker |  | a cargo ship designed to carry crude oil in bulk |
 | 889 | tombstone |  | a stone that is used to mark a grave |
 | 890 | pendant |  | an adornment that hangs from a piece of jewelry (necklace or earring) |
@@ -543,7 +509,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 936 | fender |  | a barrier that surrounds the wheels of a vehicle to block splashing water or mud |
 | 937 | elk | synonym moose | large northern deer with enormous flattened antlers in the male |
 | 938 | mast |  | a vertical spar for supporting sails |
-| 939 | clubhouse |  | a building that is occupied by a social club |
+| 939 | clubhouse | hypernym building | a building that is occupied by a social club |
 | 940 | cowl |  | protective covering consisting of a metal part that covers the engine |
 | 941 | shawl |  | cloak consisting of an oblong piece of cloth used to cover the head and shoulders |
 | 942 | caddy |  | a can for storing tea |
@@ -568,7 +534,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 969 | meatloaf |  | a baked loaf of ground meat |
 | 971 | filet |  | a boneless steak cut from the tenderloin of beef |
 | 972 | bumblebee | hypernym bee | robust hairy social bee of temperate regions |
-| 973 | ravine |  | a deep narrow steep-sided valley (especially one formed by running water) |
+| 973 | ravine | hypernym valley | a deep narrow steep-sided valley (especially one formed by running water) |
 | 977 | starling |  | gregarious birds native to the Old World |
 | 978 | hearse |  | a vehicle for carrying a coffin to a church or a cemetery |
 | 979 | mantis |  | predacious long-bodied large-eyed insect of warm regions |
@@ -576,7 +542,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 981 | pew | hypernym bench | long bench with backs |
 | 982 | wharf |  | a platform built out from the shore into the water and supported by piles |
 | 983 | polygraph |  | a medical instrument that records several physiological processes simultaneously (e.g., pulse rate and blood pressure and respiration and perspiration) |
-| 986 | slaughterhouse |  | a building where animals are butchered |
+| 986 | slaughterhouse | hypernym building | a building where animals are butchered |
 | 987 | aspen |  | any of several trees of the genus Populus having leaves on flattened stalks so that they flutter in the lightest wind |
 | 988 | podium |  | a platform raised above the surrounding level to give prominence to the person on it |
 | 989 | stronghold |  | a strongly fortified defensive structure |
@@ -658,7 +624,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1091 | clementine |  | a variety of mandarin orange that is grown around the Mediterranean and in South Africa |
 | 1092 | halibut |  | lean flesh of very large flatfish of Atlantic or Pacific |
 | 1093 | mural |  | a painting that is applied to a wall surface |
-| 1094 | hammock |  | a small natural hill |
+| 1094 | hammock | hypernym hill | a small natural hill |
 | 1095 | buttercup | hypernym herb | any of various plants of the genus Ranunculus |
 | 1096 | refinery |  | an industrial plant for purifying a crude substance |
 | 1097 | mane |  | long coarse hair growing from the crest of the animal's neck |
@@ -671,8 +637,8 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1110 | corvette |  | a highly maneuverable escort warship |
 | 1112 | silo | hypernym tower | a cylindrical tower used for storing silage |
 | 1113 | licorice | hypernym herb | deep-rooted coarse-textured plant native to the Mediterranean region having blue flowers and pinnately compound leaves |
-| 1115 | bistro |  | a small informal restaurant |
-| 1117 | gable |  | the vertical triangular wall between the sloping ends of gable roof |
+| 1115 | bistro | hypernym restaurant | a small informal restaurant |
+| 1117 | gable | hypernym wall | the vertical triangular wall between the sloping ends of gable roof |
 | 1118 | filly |  | a young female horse under the age of four |
 | 1119 | beeper | synonym pager | an electronic device that generates a series of beeps when the person carrying it is being paged |
 | 1120 | treadmill |  | an exercise device consisting of an endless belt on which a person can walk or jog without changing place |
@@ -861,7 +827,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1338 | bagging |  | coarse fabric used for bags or sacks |
 | 1339 | mallet |  | a sports implement with a long handle and a head like a hammer |
 | 1340 | gar |  | primitive predaceous North American fish covered with hard scales and having long jaws with needlelike teeth |
-| 1341 | skyscraper |  | a very tall building with many stories |
+| 1341 | skyscraper | hypernym building | a very tall building with many stories |
 | 1342 | sprinkler |  | mechanical device that attaches to a garden hose for watering lawn or garden |
 | 1343 | dinghy |  | a small boat of shallow draft with cross thwarts for seats and rowlocks for oars with which it is propelled |
 | 1344 | manhole |  | a hole (usually with a flush cover) through which a person can gain access to an underground structure |
@@ -877,7 +843,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1354 | tripe |  | lining of the stomach of a ruminant (especially a bovine) used as food |
 | 1355 | enclosure |  | a structure consisting of an area that has been enclosed for some purpose |
 | 1356 | koto |  | Japanese stringed instrument that resembles a zither |
-| 1357 | gully |  | deep ditch cut by running water (especially after a prolonged downpour) |
+| 1357 | gully | hypernym valley | deep ditch cut by running water (especially after a prolonged downpour) |
 | 1358 | takeaway |  | prepared food that is intended to be eaten off of the premises |
 | 1359 | sandbox |  | mold consisting of a box with sand shaped to mold metal |
 | 1360 | feeder |  | an animal being fattened or suitable for fattening |
@@ -909,7 +875,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1390 | paella |  | saffron-flavored dish made of rice with shellfish and chicken |
 | 1391 | upholstery |  | covering (padding and springs and webbing and fabric) on a piece of furniture |
 | 1392 | lioness | hypernym lion | a female lion |
-| 1394 | grotto |  | a small cave (usually with attractive features) |
+| 1394 | grotto | hypernym cave | a small cave (usually with attractive features) |
 | 1395 | goulash |  | a rich meat stew highly seasoned with paprika |
 | 1396 | hourglass |  | a sandglass that runs for sixty minutes |
 | 1397 | bung |  | a plug used to close a hole in a barrel or flask |
@@ -926,7 +892,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1412 | yolk | synonym egg yolk | the yellow spherical part of an egg that is surrounded by the albumen |
 | 1413 | hummingbird |  | tiny American bird having brilliant iridescent plumage and long slender bills |
 | 1414 | beehive |  | any workplace where people are very busy |
-| 1415 | gazebo |  | a small roofed building affording shade and rest |
+| 1415 | gazebo | hypernym building | a small roofed building affording shade and rest |
 | 1416 | nautilus |  | a submarine that is propelled by nuclear power |
 | 1417 | platypus |  | small densely furred aquatic monotreme of Australia and Tasmania having a broad bill and tail and webbed feet |
 | 1419 | loin | hypernym cut of meat | a cut of meat taken from the side and back of an animal between the ribs and the rump |
@@ -943,7 +909,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1431 | coating |  | a thin layer covering something |
 | 1432 | salamander |  | any of various typically terrestrial amphibians that resemble lizards and that return to water only to breed |
 | 1433 | barracuda |  | any voracious marine fish of the genus Sphyraena having an elongated cylindrical body and large mouth with projecting lower jaw and long strong teeth |
-| 1434 | jailhouse |  | a correctional institution used to detain persons who are in the lawful custody of the government (either accused persons awaiting trial or convicted persons serving a sentence) |
+| 1434 | jailhouse | synonym jail | a correctional institution used to detain persons who are in the lawful custody of the government (either accused persons awaiting trial or convicted persons serving a sentence) |
 | 1435 | pulpit |  | a platform raised above the surrounding level to give prominence to the person on it |
 | 1436 | ladybug | synonym lady beetle | small round bright-colored and spotted beetle that usually feeds on aphids and other insect pests |
 | 1437 | kohl |  | a cosmetic preparation used by women in Egypt and Arabia to darken the edges of their eyelids |
@@ -956,7 +922,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1444 | sawmill |  | a large sawing machine |
 | 1445 | nutmeg |  | East Indian tree widely cultivated in the tropics for its aromatic seed |
 | 1446 | mongoose |  | agile grizzled Old World viverrine |
-| 1447 | bathhouse |  | a building containing dressing rooms for bathers |
+| 1447 | bathhouse | hypernym building | a building containing dressing rooms for bathers |
 | 1448 | circuitry |  | electronic equipment consisting of a system of circuits |
 | 1449 | catwalk |  | narrow platform extending out into an auditorium |
 | 1450 | tater | synonym potato | an edible tuber native to South America |

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>prison</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="14" y="40" width="72" height="48" fill="grey" stroke="#333" stroke-width="0.8"><title>wall</title></rect>
+  <rect x="4" y="24" width="14" height="64" fill="grey" stroke="#333" stroke-width="0.8"><title>left_tower</title></rect>
+  <rect x="82" y="24" width="14" height="64" fill="grey" stroke="#333" stroke-width="0.8"><title>right_tower</title></rect>
+  <polygon points="11,10 20,24 2,24" fill="grey" stroke="#333" stroke-width="0.8"><title>left_roof</title></polygon>
+  <polygon points="89,10 98,24 80,24" fill="grey" stroke="#333" stroke-width="0.8"><title>right_roof</title></polygon>
+  <rect x="24" y="48" width="14" height="14" fill="black" stroke="#333" stroke-width="0.8"><title>left_window</title></rect>
+  <rect x="62" y="48" width="14" height="14" fill="black" stroke="#333" stroke-width="0.8"><title>right_window</title></rect>
+  <rect x="43" y="64" width="14" height="24" fill="black" stroke="#333" stroke-width="0.8"><title>gate</title></rect>
+  <polyline points="29,48 29,62" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_bar_1</title></polyline>
+  <polyline points="34,48 34,62" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_bar_2</title></polyline>
+  <polyline points="67,48 67,62" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_bar_1</title></polyline>
+  <polyline points="72,48 72,62" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_bar_2</title></polyline>
+</svg>

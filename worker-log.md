@@ -814,3 +814,27 @@ as the join from a fact to its drawing), Q18 (how to say an approximate number),
   and WordNet's gloss. The page is under CC BY-SA 4.0 (the order is from FrequencyWords, the glosses from WordNet;
   both named on the page). Top of the list: gun, street, building, prison, wall, jail, island, suit, hole, restaurant.
 - Numbers: catalog 10 worlds, 649 shards, vocab 17,764 words; no shard changed. npm test 2,148 pass, 0 fail (138 s).
+
+## R4.3 batch 1 (2026-11-13): 34 of the 60 most frequent missing things, hand-written
+
+- **Which 60.** The first 60 words of `MISSING.md` (as of R4.2) that have no drawing and no WordNet link, in list
+  order: gun, street, building, prison, wall, jail, island, suit, hole, restaurant, tape, meat, bullet, sword, pool,
+  fan, path, roof, sugar, hill, painting, airport, map, horn, temple, grave, trap, juice, screen, valley, library,
+  tank, rope, theater, mask, shoe, museum, lane, orange, cave, sauce, doorbell, cage, cliff, pipe, pit, frame,
+  underwear, shell, fort, alley, pole, whiskey, string, corn, warehouse, tube, pan, throne, pork. One word of that
+  stretch is passed over: theatre (the same WordNet sense as theater; it gets a word in R4.4).
+- **This batch** (grouped by kind, not by rank): shards `places` (street, building, prison, jail, restaurant,
+  airport, temple, library, theater, museum, fort, warehouse, wall, roof, lane, alley, path, pool), `land` (island,
+  hole, hill, valley, cave, cliff, pit, grave), `food` (meat, sugar, juice, orange, sauce, whiskey, corn, pork).
+  Named parts with primitive shapes, kinds for repeated parts (window, bar, pillar, merlon, book, rung …), relative
+  positions, boxes, z, typical colours; hand-chosen coordinates through a throwaway formatter that runs the checks
+  of the render test before writing (not committed; the `.sop` files are the source), as in Rounds 1 and 2.
+- **Looked at:** all 34 previews on three contact sheets (260 px each). Redrawn after the first look: prison (red
+  tower roofs made it a castle: grey now), library (books in the windows and an open book on the sign), pit (it
+  looked like a bucket: now a rim, a dark depth and a ladder coming out); these three looked at again. Verdict:
+  all 34 recognisable with their name next to them; weakest without the name: lane (a brown strip between two green
+  blocks), alley, valley, pork (a chop with a bone), street (the road is narrow).
+- A theater is drawn as a stage with curtains (the sense kept is the building).
+- Numbers: `places` 378 wires / 53,901 bytes, `land` 154 / 19,580, `food` 127 / 16,104. k.objects: **1,977 objects**
+  (94 hand-written + 811 + 114 + 958), 304 shards, 297,602 wires, 35,943,502 bytes. Catalog: 10 worlds, 652 shards, vocab 17,930 words;
+  0 errors, 0 warnings. Coverage now: 556 of 1,500 with a drawing of their name. npm test 2,182 pass, 0 fail (140 s).

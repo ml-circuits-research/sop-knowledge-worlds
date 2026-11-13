@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>street</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="3" y="34" width="22" height="46" fill="brown" stroke="#333" stroke-width="0.8"><title>left_house</title></rect>
+  <polygon points="14,18 27,34 1,34" fill="red" stroke="#333" stroke-width="0.8"><title>left_roof</title></polygon>
+  <rect x="75" y="24" width="22" height="56" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_house</title></rect>
+  <rect x="10" y="62" width="8" height="18" fill="blue" stroke="#333" stroke-width="0.8"><title>left_door</title></rect>
+  <rect x="82" y="32" width="8" height="8" fill="blue" stroke="#333" stroke-width="0.8"><title>upper_window</title></rect>
+  <rect x="82" y="50" width="8" height="8" fill="blue" stroke="#333" stroke-width="0.8"><title>lower_window</title></rect>
+  <polygon points="22,96 78,96 57,40 43,40" fill="grey" stroke="#333" stroke-width="0.8"><title>road</title></polygon>
+  <polyline points="50,92 50,46" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>centre_line</title></polyline>
+</svg>
