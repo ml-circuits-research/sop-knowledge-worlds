@@ -18,7 +18,7 @@ const OFFENSIVE = /ethnic slur|\((?:[a-z]+ )?(?:offensive|vulgar|obscene|taboo|d
 const LEMMA = /^[a-z][a-z0-9-]*$/; // what can be an atom and a segment of an id
 
 // A data.<pos> file: synset offset -> { words (as spelt), pointers [symbol, offset, pos], gloss }.
-function readData(text) {
+export function readData(text) {
   const synsets = new Map();
   for (const line of text.split('\n')) {
     if (!/^\d{8} /.test(line)) continue;
@@ -37,7 +37,7 @@ function readData(text) {
 }
 
 // An index.<pos> file: lemma (lower case) -> synset offsets, the most frequent sense first.
-function readIndex(text) {
+export function readIndex(text) {
   const index = new Map();
   for (const line of text.split('\n')) {
     if (line.startsWith(' ') || line.trim() === '') continue;

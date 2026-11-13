@@ -783,3 +783,34 @@ as the join from a fact to its drawing), Q18 (how to say an approximate number),
 - Numbers: Noto 1,999 named parts (was 2,027), 666 objects with a named part; Mulberry 1,166; OpenMoji 153; wires
   unchanged (296,943), k.objects 35,853,917 bytes. Catalog 10 worlds, 649 shards, vocab 17,764 words; 0 errors,
   0 warnings. npm test 2,144 pass, 0 fail (150 s).
+
+## R4.2 (2026-11-13): coverage of common things; `MISSING.md`
+
+- **Tool:** `tools/coverage.mjs` (deterministic; `tests/coverage.test.mjs` with a made-up fixture, and "MISSING.md
+  on disk is what the tool gives" when the raw files are present). It reads the frequency list (the word itself, in
+  list order, no inflection), WordNet 3.1 (`index.noun`, `data.noun`, `noun.exc`, `index.sense`) and the object names.
+- **The rule** (top of the tool): a noun lemma of at least three letters; noun is its main use (WordNet's tagged
+  counts of its noun senses are at least those of its other parts of speech); it names a physical thing (its first
+  noun sense, or the senses with at least half of its noun counts, are hyponyms of physical object, living thing,
+  food or artifact); the sense kept is the physical sense with the most counts; that sense is filed by WordNet under
+  animals, artifacts, food, natural objects, plants or the top concepts, and is not a proper name; the word is not
+  the regular plural of a more frequent noun; no sense of it is marked offensive.
+- **What the rule alone did not do, and what I did about it (Q20).** "Living thing" holds every person (man,
+  father, guy: 2,298 words before the 1,500th thing) and "physical object" every place: both dropped by the
+  lexicographer-file condition. WordNet also has a noun for most given names and many verb forms (john, sam, felt,
+  spoke), and many nouns under "artifact" or "object" have no shape of their own (system, piece, equipment) or are
+  rooms and scenes (kitchen, garden). I read the list (about 2,200 candidate words, with the start of each gloss) and
+  wrote **`sources/coverage/not-things.tsv`: 695 words with a reason** (123 names, 103 verb forms and adjectives,
+  283 general words and parts, 70 rooms and scenes, 69 rare WordNet words that are frequent as something else, 14
+  kinds, 9 plurals, 24 left out of a general library); 633 of them fall before the 1,500th thing. This is a
+  reading by a language model, not a rule; body parts (hand, head, eye) are outside the four roots and not in the list.
+- **Coverage before Round 4's drawings** (1,943 objects): of the **1,500 common things, 522 have a drawing of their
+  name (34.8%)**; 978 do not. Of those 978, a WordNet synonym has a drawing for 59 and the direct hypernym for 156
+  (after the checks of R4.4, see there); 763 have no drawing at all.
+- "Has a drawing" compares names only (the word, or its plural, with an object name, lower case). It does not check
+  that the drawing shows the sense kept (the drawing `bank` is a building; the sense kept is the river bank). **Not
+  looked at: the 522 drawings against the senses.**
+- `docs/worlds/k.objects/MISSING.md`: the rule, the numbers, and the 978 words most frequent first with rank, link
+  and WordNet's gloss. The page is under CC BY-SA 4.0 (the order is from FrequencyWords, the glosses from WordNet;
+  both named on the page). Top of the list: gun, street, building, prison, wall, jail, island, suit, hole, restaurant.
+- Numbers: catalog 10 worlds, 649 shards, vocab 17,764 words; no shard changed. npm test 2,148 pass, 0 fail (138 s).

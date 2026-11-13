@@ -176,3 +176,20 @@ closed, but the fact is only incomplete), so "can a penguin fly" has no supporte
 that is simply not listed. Options: (a) leave as is; (b) a second repeated key `cannot` for the well-known cases
 (penguin, ostrich, emu, kiwi: fly); (c) booleans `flies`, `swims` on every animal.
 Blocking: no. Meanwhile: (a).
+
+## Q20 (task R4.2, 2026-11-13)
+Question: is the list of "common things" right as built: without persons, places, body parts, rooms and scenes, and
+with about 630 words taken out by a reading of the list?
+Context: the rule asked (frequency list x WordNet hyponyms of physical object, living thing, food, artifact) keeps
+much that is not a thing one draws: under "living thing" all persons (man, father, guy, friend: 2,298 words before
+the 1,500th thing); under "physical object" all places (city, side, America); and WordNet has a noun for most given
+names and verb forms (john = a toilet, sam = a missile, felt, spoke, stole). What `tools/coverage.mjs` does: (a) only
+senses filed by WordNet under animals, artifacts, food, natural objects, plants or the top concepts, which drops
+persons and places; (b) noun must be the main use (WordNet's tagged counts); (c) no proper names; (d)
+`sources/coverage/not-things.tsv`: 695 words with a reason, chosen by reading the list: names (123), verb forms and
+adjectives (103), general words and parts without a shape (about 285), rooms and scenes (70), rare WordNet words that
+are frequent as something else (69), a few others. Body parts (hand, head, eye) are outside the four roots and so
+not in the list, although `k.objects` has drawings of some. Options: (1) keep; (2) add persons that look different
+(man, woman, baby, king, doctor) and body parts as two more lists; (3) a stricter mechanical rule and no reading
+(the list then has names and verb forms in its first hundred).
+Blocking: no. Meanwhile: (1).
