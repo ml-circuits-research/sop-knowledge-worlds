@@ -1521,3 +1521,13 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   9 do not. Counted from the shard it is **20 and 10**. The log entry above and `k.feelings/WORLD.md` are corrected;
   the commit message of 85e1bd6 keeps the wrong figure. A test now counts it.
 - Numbers: catalog 14 worlds, 779 shards, vocab 19,484 words; 0 errors, 0 warnings. npm test 2,413 pass, 0 fail.
+
+## Questions Q24 to Q26 (2026-11-13)
+
+- Q24: puddle by the pond (published) or by the lake (as the task says)? Q25: `tablet` stays missing because
+  WordNet has no tablet computer: count it? Q26: `k.feelings` came before addendum 2; addendum 2 is next. None
+  blocks; each names what is done meanwhile.
+- **Round 7 so far.** Done: sopworld 0.16.0; Q22 (c) and Q23; addendum 1 (place and size, person kinds, hand
+  stand-ins); R7.1 `k.scenes` (61 scenes); R7.5 `k.people` (60 roles); R7.4 `k.feelings` (30). **Not started:**
+  addendum 2 (`k.layouts`, anchors, what joins what), R7.2 `k.actions`, R7.3 `k.colours` and `k.shapes`.
+- Numbers: catalog 14 worlds, 779 shards, vocab 19,484 words; 0 errors, 0 warnings. npm test 2,413 pass, 0 fail.

@@ -13,7 +13,33 @@ Blocking: yes/no. If no: the choice taken meanwhile.
 
 # Open
 
-None.
+## Q24 (Round 7 addendum, item 4, 2026-11-13)
+Question: should `puddle` stand in by the pond (as published) or by the new lake drawing, as the task says ("puddle →
+small lake")?
+Context: there was no lake drawing; I drew one (`lake`, shard `scenery`): a lake with two mountains behind it and a
+tree on the shore. Next to the word "puddle" it misleads; the Mulberry `pond` (an oval of water with two tufts of
+reed) reads as a puddle much better. Both were looked at side by side. `k.scenes.thing name=puddle` says ground,
+small, so a host draws it small either way. Options: (a) keep `puddle` → `pond`; (b) `puddle` → `lake` as written;
+(c) a hand-written `puddle` object (an oval of water, nothing else).
+Blocking: no. Meanwhile: (a).
+
+## Q25 (Q22 applied, 2026-11-13)
+Question: `tablet` is the one common thing that still counts as missing although it has a drawing of its name: the
+drawing is a tablet computer, and WordNet 3.1 has no such sense (slab for an inscription, pad of paper, cake of a
+substance, pill). Should it count as drawn?
+Context: the answer to Q22 is "any physical sense of the word that WordNet has", so by the rule it does not count,
+and `MISSING.md` asks for a slab of stone. Options: (a) keep, as the rule says; (b) count a drawing as right when
+it shows a physical meaning of the word that WordNet lacks only because it is newer than WordNet (one row in
+`sense-check.tsv`, marked so); (c) draw a pill under the name `"tablet pill"` and leave the entry missing.
+Blocking: no. Meanwhile: (a).
+
+## Q26 (Round 7, order, 2026-11-13)
+Question: the block "2026-11-13 17:40" asks for addendum 2 (`k.layouts`, anchors, what joins what) before
+`k.feelings`; `k.feelings` is already published (the session that did it was given the order scenes, people,
+feelings). Is anything in `k.feelings` to wait for addendum 2, or does addendum 2 simply come next?
+Context: `k.feelings` joins only `k.faces` (expressions and variants); it uses no layout and no anchor. Not started:
+addendum 2, R7.2 `k.actions`, R7.3 `k.colours` and `k.shapes`.
+Blocking: no. Meanwhile: addendum 2 next, then R7.2 and R7.3.
 
 # Closed
 
