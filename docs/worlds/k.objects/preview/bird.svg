@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>bird</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="27,50 10,43 10,57" fill="blue" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
+  <polyline points="45,69 43,85" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_leg</title></polyline>
+  <polyline points="55,69 57,85" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_leg</title></polyline>
+  <ellipse cx="50" cy="55" rx="25" ry="15" fill="blue" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <ellipse cx="72.5" cy="37.5" rx="12.5" ry="12.5" fill="blue" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <polygon points="96,37 84,33 84,41" fill="orange" stroke="#333" stroke-width="0.8"><title>beak</title></polygon>
+  <polygon points="47.5,25 60,52 35,52" fill="blue" stroke="#333" stroke-width="0.8"><title>wing</title></polygon>
+  <ellipse cx="74" cy="34" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+</svg>

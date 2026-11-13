@@ -66,3 +66,22 @@ export function moduleInfo(schemaText) {
 }
 
 export const fmtViolation = (v) => `${v.kind}${v.id ? ` ${v.id}` : ''}${v.key ? `.${v.key}` : ''}: ${v.why ?? ''}`.trim();
+
+// A world with the schema of `id` and every shard of it and of the worlds it depends on. Throws on a refusal.
+export function fullWorld(id, worlds = scanWorlds()) {
+  const { world, result } = schemaWorld(worlds, id);
+  if (!result.ok) throw new Error(`${id}: ${JSON.stringify(result.violations)}`);
+  const seen = new Set();
+  const add = (wid) => {
+    if (seen.has(wid)) return;
+    seen.add(wid);
+    const entry = worlds.find((w) => w.id === wid);
+    for (const dep of moduleInfo(entry.schemaText)?.imports ?? []) add(dep);
+    for (const s of entry.shards) {
+      const r = world.tell(s.text);
+      if (!r.ok) throw new Error(`${s.id}: ${JSON.stringify(r.violations)}`);
+    }
+  };
+  add(id);
+  return world;
+}

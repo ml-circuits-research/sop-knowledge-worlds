@@ -1,5 +1,5 @@
 {
- "version": "4da773ee0672",
+ "version": "946c61f19535",
  "sopworld": "c7247e2",
  "worlds": [
   {
@@ -33,6 +33,283 @@
       "star",
       "sun",
       "tree"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.objects",
+   "version": "1",
+   "schema": "k.objects/schema.sop",
+   "exports": [
+    "k.objects.object",
+    "k.objects.part",
+    "k.objects.point"
+   ],
+   "depends": [
+    "k.commonsense"
+   ],
+   "shards": [
+    {
+     "id": "k.objects/shards/animals",
+     "path": "k.objects/shards/animals.sop",
+     "wires": 64,
+     "bytes": 9558,
+     "keys": [
+      "back_leg",
+      "beak",
+      "bird",
+      "body",
+      "butterfly",
+      "cat",
+      "dog",
+      "ear",
+      "eye",
+      "fin",
+      "fish",
+      "front_leg",
+      "head",
+      "left_antenna",
+      "left_ear",
+      "left_eye",
+      "left_leg",
+      "left_lower_wing",
+      "left_upper_wing",
+      "nose",
+      "right_antenna",
+      "right_ear",
+      "right_eye",
+      "right_leg",
+      "right_lower_wing",
+      "right_upper_wing",
+      "tail",
+      "wing"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/buildings",
+     "path": "k.objects/shards/buildings.sop",
+     "wires": 39,
+     "bytes": 5842,
+     "keys": [
+      "base",
+      "body",
+      "cap",
+      "castle",
+      "chimney",
+      "door",
+      "gate",
+      "house",
+      "lamp",
+      "left_merlon",
+      "left_roof",
+      "left_tower",
+      "left_window",
+      "lighthouse",
+      "middle_merlon",
+      "right_merlon",
+      "right_roof",
+      "right_tower",
+      "right_window",
+      "roof",
+      "stripe",
+      "tower",
+      "wall"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/figures",
+     "path": "k.objects/shards/figures.sop",
+     "wires": 51,
+     "bytes": 7497,
+     "keys": [
+      "antenna",
+      "body",
+      "bottom_ball",
+      "bottom_button",
+      "hat",
+      "head",
+      "left_arm",
+      "left_eye",
+      "left_leg",
+      "middle_ball",
+      "mouth",
+      "nose",
+      "person",
+      "right_arm",
+      "right_eye",
+      "right_leg",
+      "robot",
+      "snowman",
+      "top_button"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/household",
+     "path": "k.objects/shards/household.sop",
+     "wires": 43,
+     "bytes": 6095,
+     "keys": [
+      "back",
+      "back_leg",
+      "body",
+      "canopy",
+      "chair",
+      "cup",
+      "first_rung",
+      "fourth_rung",
+      "front_leg",
+      "handle",
+      "hook",
+      "ladder",
+      "left_leg",
+      "left_rail",
+      "right_leg",
+      "right_rail",
+      "saucer",
+      "seat",
+      "second_rung",
+      "table",
+      "third_rung",
+      "top",
+      "umbrella"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/nature",
+     "path": "k.objects/shards/nature.sop",
+     "wires": 33,
+     "bytes": 4726,
+     "keys": [
+      "apple",
+      "body",
+      "bottom_petal",
+      "centre",
+      "crown",
+      "flower",
+      "leaf",
+      "left_petal",
+      "mountain",
+      "right_petal",
+      "snow_cap",
+      "stem",
+      "top_petal",
+      "tree",
+      "trunk"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/sky",
+     "path": "k.objects/shards/sky.sop",
+     "wires": 52,
+     "bytes": 6493,
+     "keys": [
+      "base",
+      "body",
+      "bottom_ray",
+      "cloud",
+      "crescent",
+      "disc",
+      "left_puff",
+      "left_ray",
+      "middle_puff",
+      "moon",
+      "right_puff",
+      "right_ray",
+      "star",
+      "sun",
+      "top_ray"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/vehicles",
+     "path": "k.objects/shards/vehicles.sop",
+     "wires": 110,
+     "bytes": 14774,
+     "keys": [
+      "back_wheel",
+      "bicycle",
+      "boat",
+      "body",
+      "cabin",
+      "car",
+      "carriage",
+      "chimney",
+      "engine",
+      "far_wing",
+      "first_wheel",
+      "first_window",
+      "flame",
+      "fork",
+      "fourth_wheel",
+      "frame",
+      "front_sail",
+      "front_wheel",
+      "handlebar",
+      "hull",
+      "left_fin",
+      "left_wheel",
+      "left_window",
+      "main_sail",
+      "mast",
+      "near_wing",
+      "nose",
+      "plane",
+      "right_fin",
+      "right_wheel",
+      "right_window",
+      "rocket",
+      "seat",
+      "seat_tube",
+      "second_wheel",
+      "second_window",
+      "tail",
+      "third_wheel",
+      "third_window",
+      "train",
+      "window"
      ],
      "sources": [
       "hand-core-1"

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>robot</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="50,8 50,1" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>antenna</title></polyline>
+  <rect x="13" y="36" width="10" height="30" fill="grey" stroke="#333" stroke-width="0.8"><title>left_arm</title></rect>
+  <rect x="77" y="36" width="10" height="30" fill="grey" stroke="#333" stroke-width="0.8"><title>right_arm</title></rect>
+  <rect x="32" y="72" width="12" height="24" fill="grey" stroke="#333" stroke-width="0.8"><title>left_leg</title></rect>
+  <rect x="56" y="72" width="12" height="24" fill="grey" stroke="#333" stroke-width="0.8"><title>right_leg</title></rect>
+  <rect x="30" y="8" width="40" height="24" fill="grey" stroke="#333" stroke-width="0.8"><title>head</title></rect>
+  <rect x="25" y="34" width="50" height="38" fill="grey" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <rect x="37" y="14" width="8" height="8" fill="blue" stroke="#333" stroke-width="0.8"><title>left_eye</title></rect>
+  <rect x="55" y="14" width="8" height="8" fill="blue" stroke="#333" stroke-width="0.8"><title>right_eye</title></rect>
+  <rect x="40" y="25" width="20" height="3" fill="black" stroke="#333" stroke-width="0.8"><title>mouth</title></rect>
+</svg>

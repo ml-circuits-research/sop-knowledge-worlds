@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>plane</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="38,50 58,50 48,15 40,15" fill="grey" stroke="#333" stroke-width="0.8"><title>far_wing</title></polygon>
+  <polygon points="82,45 95,45 95,20 88,20" fill="grey" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
+  <ellipse cx="50" cy="50" rx="45" ry="10" fill="grey" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <polygon points="38,50 58,50 48,85 40,85" fill="grey" stroke="#333" stroke-width="0.8"><title>near_wing</title></polygon>
+  <ellipse cx="18.5" cy="47.5" rx="2.5" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>first_window</title></ellipse>
+  <ellipse cx="26.5" cy="47.5" rx="2.5" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>second_window</title></ellipse>
+  <ellipse cx="68.5" cy="47.5" rx="2.5" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>third_window</title></ellipse>
+</svg>

@@ -56,3 +56,29 @@ One entry per task: what was done, numbers (wires, shards, bytes, load time, war
   sky makes "where does a fish live" conflicting (noted in WORLD.md). Order-dependent merge: a fact of a subtype told
   after a fact of its parent type with the same identity is not merged (two wires), told before it is (one wire); so
   `k.objects.object` does not extend `k.commonsense.thing` (joined by name instead).
+
+## T5 (2026-11-13): k.objects core, with the T5 amendment (drawable parts)
+
+- `docs/worlds/k.objects/schema.sop` (module `k.objects`, imports `k.commonsense`, exports object, part, point;
+  version 1): `k.objects.object`; `k.objects.part` (identity `of` + `name`; `kind` for repeated parts; required `shape`
+  from the closed enum rectangle/square/circle/oval/triangle/line/arc/polygon, required box `x y w h` 0..100, required
+  integer `z`, required many `colour`; `pointing`/`opens` for triangles and arcs (Q5); `above below inside left_of
+  right_of on` many, `centered` boolean); `k.objects.point` (`of` ref to the part, `n`, `x`, `y`). No `count`: one wire
+  per instance (amendment). 4 schema words.
+- 7 shards by category, 30 objects (the 19 asked + apple, butterfly, cup, chair, table, umbrella, ladder, lighthouse,
+  moon, star, plane: all Quick, Draw! categories), 168 parts, 139 points, 30 object words + 20 part-kind words.
+  Hand-chosen coordinates; boxes of lines and polygons computed from their points by a throwaway formatter (not
+  committed; the .sop files are the source).
+- `tools/render-svg.mjs` (about 110 lines): facts -> plain SVG (viewBox 0 0 100 100), shapes drawn in their boxes by z;
+  writes 30 SVGs + `index.html` to `docs/worlds/k.objects/preview/` (30,128 bytes). Looked at by eye (contact sheet);
+  the cup was white on white, now red first.
+- Tests: `tests/k.objects.questions.jsonl` (14: parts of a house; roof above body; crown green; 2 windows by kind; wheels;
+  common sense through the import; a soft issue), `tests/k.objects.render.test.mjs` (every object renders; boxes inside
+  the frame; known shapes; circle/square w = h; points only and always for lines/polygons, numbered 1..n, box = their
+  bounds; every relative position names a part of the same object and agrees with the boxes; `centered` is centred;
+  previews on disk are up to date).
+- Numbers: schema 32 wires, 4,502 bytes, 4 ms; shards (wires / bytes / load ms): animals 64 / 9,558 / 6, buildings
+  39 / 5,842 / 4, figures 51 / 7,497 / 5, household 43 / 6,095 / 3, nature 33 / 4,726 / 2, sky 52 / 6,493 / 7,
+  vehicles 110 / 14,774 / 7; total 392 wires, 54,985 bytes; 0 warnings, 0 errors. Catalog: 2 worlds, 8 shards, 238
+  vocab words. npm test 80 pass.
+- Questions Q5-Q8.

@@ -12,5 +12,5 @@ module and load only the instance shards that a conversation needs, when the wor
   knowledge lazily.
 - **Documentation:** `docs/index.html` (how to use the catalog from an application) and `docs/worlds/README.md`.
 
-Status: plan written, nothing imported yet. See [PLAN.md](PLAN.md) and [worker-tasks.md](worker-tasks.md).
+Status: Round 1: `k.commonsense` and `k.objects` hand-written cores published; bulk imports next.
 Agents working here start with [AGENTS.md](AGENTS.md).

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>cat</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="80,70 90,55 92,35" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tail</title></polyline>
+  <rect x="35" y="80" width="7" height="15" fill="grey" stroke="#333" stroke-width="0.8"><title>front_leg</title></rect>
+  <rect x="68" y="80" width="7" height="15" fill="grey" stroke="#333" stroke-width="0.8"><title>back_leg</title></rect>
+  <ellipse cx="55" cy="67.5" rx="25" ry="17.5" fill="grey" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <polygon points="16,15 22,29 10,29" fill="grey" stroke="#333" stroke-width="0.8"><title>left_ear</title></polygon>
+  <polygon points="34,15 40,29 28,29" fill="grey" stroke="#333" stroke-width="0.8"><title>right_ear</title></polygon>
+  <ellipse cx="25" cy="42" rx="17" ry="17" fill="grey" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <ellipse cx="19" cy="39" rx="3" ry="3" fill="green" stroke="#333" stroke-width="0.8"><title>left_eye</title></ellipse>
+  <ellipse cx="31" cy="39" rx="3" ry="3" fill="green" stroke="#333" stroke-width="0.8"><title>right_eye</title></ellipse>
+</svg>

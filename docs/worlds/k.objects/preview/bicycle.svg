@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>bicycle</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="21" cy="68" rx="18" ry="18" fill="black" stroke="#333" stroke-width="0.8"><title>back_wheel</title></ellipse>
+  <ellipse cx="79" cy="68" rx="18" ry="18" fill="black" stroke="#333" stroke-width="0.8"><title>front_wheel</title></ellipse>
+  <polyline points="21,68 50,68 66,45 38,45 21,68" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>frame</title></polyline>
+  <polyline points="38,45 50,68" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>seat_tube</title></polyline>
+  <polyline points="66,45 79,68" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fork</title></polyline>
+  <rect x="33" y="38" width="12" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
+  <polyline points="66,45 64,36 72,36" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handlebar</title></polyline>
+</svg>

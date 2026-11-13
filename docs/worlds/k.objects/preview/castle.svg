@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>castle</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="15" y="40" width="70" height="55" fill="grey" stroke="#333" stroke-width="0.8"><title>wall</title></rect>
+  <rect x="30" y="34" width="6" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>left_merlon</title></rect>
+  <rect x="47" y="34" width="6" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>middle_merlon</title></rect>
+  <rect x="64" y="34" width="6" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>right_merlon</title></rect>
+  <rect x="5" y="20" width="20" height="75" fill="grey" stroke="#333" stroke-width="0.8"><title>left_tower</title></rect>
+  <rect x="75" y="20" width="20" height="75" fill="grey" stroke="#333" stroke-width="0.8"><title>right_tower</title></rect>
+  <polygon points="15,2 27,20 3,20" fill="red" stroke="#333" stroke-width="0.8"><title>left_roof</title></polygon>
+  <polygon points="85,2 97,20 73,20" fill="red" stroke="#333" stroke-width="0.8"><title>right_roof</title></polygon>
+  <rect x="40" y="65" width="20" height="30" fill="brown" stroke="#333" stroke-width="0.8"><title>gate</title></rect>
+</svg>
