@@ -1,0 +1,10 @@
+{"id":"sc-01","ask":"where is the sun usually","query":{"type":"k.scenes.thing","where":{"name":"sun"},"seek":"place"},"expect":{"status":"supported","value":"sky"}}
+{"id":"sc-02","ask":"where is a duck usually","query":{"type":"k.scenes.thing","where":{"name":"duck"},"seek":"place"},"expect":{"status":"supported","value":"water"}}
+{"id":"sc-03","ask":"where is a goat usually","query":{"type":"k.scenes.thing","where":{"name":"goat"},"seek":"place"},"expect":{"status":"supported","value":"ground"}}
+{"id":"sc-04","ask":"where is a swing usually","query":{"type":"k.scenes.thing","where":{"name":"swing"},"seek":"place"},"expect":{"status":"supported","value":"ground"}}
+{"id":"sc-05","ask":"how big is a house","query":{"type":"k.scenes.thing","where":{"name":"house"},"seek":"size"},"expect":{"status":"supported","value":"huge"}}
+{"id":"sc-06","ask":"how big is a bee","query":{"type":"k.scenes.thing","where":{"name":"bee"},"seek":"size"},"expect":{"status":"supported","value":"tiny"}}
+{"id":"sc-07","ask":"what is a hat usually on","query":{"type":"k.scenes.thing","where":{"name":"hat"},"seek":"on"},"expect":{"status":"supported","value":"head"}}
+{"id":"sc-08","ask":"where is a cup usually","query":{"type":"k.scenes.thing","where":{"name":"cup"},"seek":"place"},"expect":{"status":"supported","value":"indoors"}}
+{"id":"sc-09","ask":"what is usually on a horse","query":{"type":"k.scenes.thing","where":{"on":"horse"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["saddle","stirrups"]}}
+{"id":"sc-10","ask":"how big is a cow","query":{"type":"k.scenes.thing","where":{"name":"cow"},"seek":"size"},"expect":{"status":"supported","value":"large"}}

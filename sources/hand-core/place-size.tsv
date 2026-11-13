@@ -1,0 +1,2042 @@
+# name	place	on	size
+# The usual place and the relative size of the drawable things of k.objects (Round 7 addendum, 2026-11-13), as
+# k.scenes.thing says them: place is sky, ground, water, indoors or on_thing; "on" names what the thing is usually
+# on; size is tiny, small, medium, large or huge (the classes are defined in docs/worlds/k.scenes/schema.sop).
+# Labelled by a language model from the names of the objects (by the category of the source first, then name by
+# name), and only where sure: a cell is empty where a thing has no usual place or no plain size, and an object
+# without a row is a symbol, a scene, a face or a part (heart, sunset, "dog face", liver). A seeded sample of 200
+# rows was checked against the drawings: sources/hand-core/place-size-audit.tsv. tools/scenes-core.mjs turns the
+# rows into the shards things-<letter> of k.scenes (named=model).
+1st place medal	indoors		tiny
+2nd place medal	indoors		tiny
+3d printer	indoors		small
+3rd place medal	indoors		tiny
+CD player personal	indoors		small
+Christmas bauble	on_thing	tree	tiny
+Christmas bell	indoors		small
+Christmas cake	indoors	table	small
+Christmas decorations	indoors		small
+Christmas lights	on_thing	tree	small
+Christmas pudding	indoors	table	small
+Christmas sock	indoors		small
+Christmas tree	indoors		large
+DVD player	indoors		small
+DVD player portable	indoors		small
+Earth	sky		huge
+Easter egg	indoors		small
+Father Christmas	ground		medium
+Father Christmas sack	ground		medium
+Japanese castle	ground		huge
+Japanese dolls	indoors		small
+Japanese post office	ground		huge
+Jupiter	sky		huge
+Mars	sky		huge
+Mercury	sky		huge
+Neptune	sky		huge
+Pluto	sky		huge
+Rudolph	ground		medium
+Saturn	sky		huge
+Statue of Liberty	ground		huge
+T-Rex	ground		huge
+Tokyo tower	ground		huge
+Uranus	sky		huge
+Venus	sky		huge
+Wii	indoors		small
+Wii Fit	indoors		small
+abacus	indoors	table	small
+accordion	indoors		small
+acorn	ground		tiny
+adhesive bandage	indoors		tiny
+admission tickets	indoors		tiny
+aerial indoor	indoors		small
+aerial tramway	sky		large
+aeroplane	sky		huge
+aftershave	indoors		small
+airplane	sky		huge
+airplane arrival	sky		huge
+airplane departure	sky		huge
+airport	ground		huge
+alarm clock	indoors		small
+alembic	indoors	table	small
+alley	ground		huge
+almond	indoors	table	tiny
+ambulance	ground		large
+american football	ground		small
+amphora	ground		medium
+anchor			medium
+ant	ground		tiny
+ant eater	ground		medium
+antelope	ground		medium
+apple	indoors	table	small
+apple juice	indoors	table	small
+apron	on_thing	person	small
+arch lever file	indoors	table	small
+archery target	ground		medium
+arm chair	indoors		medium
+armchair	indoors		medium
+armor	on_thing	person	medium
+artichoke	indoors	table	small
+articulated lorry	ground		huge
+artillery shell			small
+artist palette	indoors		small
+asparagus	indoors	table	small
+asteroid	sky		huge
+aubergine	indoors	table	small
+auroscope	indoors		small
+auto rickshaw	ground		large
+automobile	ground		large
+autonomous car	ground		large
+avocado	indoors	table	small
+axe	indoors		small
+baby bottle	indoors	table	small
+baby chick	ground		tiny
+baby oil	indoors		small
+baby powder	indoors		small
+back garden	ground		huge
+backpack	on_thing	person	small
+bacon	indoors	table	small
+badger	ground		small
+badminton	ground		small
+badminton racket	on_thing	hand	small
+bag	indoors		small
+bagel	indoors	table	small
+baguette bread	indoors	table	small
+baked beans	indoors	table	small
+baking powder	indoors	table	small
+baking tray	indoors		small
+balance scale	indoors	table	small
+ball	ground		small
+ball beach	ground		small
+ball pool	indoors		large
+ballet shoes	on_thing	foot	small
+balloon	sky		small
+ballot box with ballot	indoors		small
+banana	indoors	table	small
+banana bunch	indoors	table	small
+bandage scissors	indoors		small
+banjo	indoors		small
+bank	ground		huge
+bank card	indoors		tiny
+bap	indoors	table	small
+barbeque	ground		medium
+barber pole	ground		medium
+barn	ground		huge
+baseball	ground		small
+baseball base	ground		small
+baseball bat			small
+baseball glove	on_thing	hand	small
+basket	indoors		small
+basketball	ground		small
+basketball ball	ground		small
+bat	sky		small
+bath	indoors		large
+bath mat	indoors		small
+bathtub	indoors		large
+battery	indoors		tiny
+beach	ground		huge
+beach bag	on_thing	hand	small
+beach towel	ground		medium
+beach with umbrella	ground		huge
+beads	indoors		tiny
+beanbag	indoors		medium
+beans	indoors	table	tiny
+beans on toast	indoors	table	small
+beansprouts	indoors	table	small
+bear	ground		large
+beaver	water		small
+bed	indoors		large
+bed four poster	indoors		large
+bed linen	indoors		small
+bee	sky		tiny
+bee bumble	sky		tiny
+bee honey	sky		tiny
+beef	indoors	table	small
+beer	indoors	table	small
+beer bottle	indoors	table	small
+beer mug	indoors	table	small
+beetle	ground		tiny
+beetroot	indoors	table	small
+bell	indoors		small
+bell pepper	indoors	table	small
+bellhop bell	indoors		small
+belt	on_thing	person	small
+beluga	water		large
+bench	ground		medium
+bento box	indoors	table	small
+berry	indoors	table	tiny
+beverage box	indoors	table	small
+bib	on_thing	person	small
+bicycle	ground		medium
+bicycle helmet	on_thing	head	small
+big wheel	ground		huge
+bikini	on_thing	person	small
+billed cap	on_thing	head	small
+bin	indoors		small
+bin bag	indoors		small
+bin bags	indoors		small
+bingo marker	indoors	table	small
+bird	sky		small
+birthday cake	indoors	table	small
+birthday card	indoors	table	small
+biscuit chocolate chip	indoors	table	small
+biscuits	indoors	table	small
+bison	ground		large
+black bird	sky		small
+black cat	ground		small
+black nib	indoors	table	tiny
+blackberry	indoors	table	tiny
+blackboard	on_thing	wall	large
+blackcurrant juice	indoors	table	small
+blackcurrants	indoors	table	tiny
+blanket	on_thing	bed	medium
+blanket chest	indoors		medium
+blender drinks	indoors		small
+blinds	on_thing	window	medium
+blood transfusion	indoors		medium
+blossom	on_thing	tree	tiny
+blouse	on_thing	person	small
+blowfish	water		small
+blue book	indoors	table	small
+blueberries	indoors	table	tiny
+blusher	indoors		small
+boar	ground		medium
+boat	water		large
+bobble hat	on_thing	head	small
+bolt	indoors		tiny
+bomb	ground		small
+bonfire	ground		medium
+book	indoors	table	small
+book end	on_thing	shelf	small
+book ends	on_thing	shelf	small
+book shelf	indoors		medium
+bookcase	indoors		large
+bookmark	indoors	table	tiny
+bookmark tabs	indoors	table	tiny
+books	indoors	table	small
+boomerang	sky		small
+boot	on_thing	foot	small
+bootees	on_thing	foot	small
+boots	on_thing	foot	small
+bottle	indoors	table	small
+bottle with popping cork	indoors	table	small
+boule bread	indoors	table	small
+bouquet	indoors		small
+bow	on_thing	person	tiny
+bow and arrow			medium
+bow tie	on_thing	person	tiny
+bowl	indoors	table	small
+bowl with spoon	indoors	table	small
+bowling	indoors		small
+bowling ball	indoors		small
+bowling pins	indoors		small
+box	indoors		small
+boxer shorts	on_thing	person	small
+boxing glove	on_thing	hand	small
+bra	on_thing	person	small
+bracelet	on_thing	hand	tiny
+branch	on_thing	tree	medium
+brandy	indoors	table	small
+brazil nut	indoors	table	tiny
+bread	indoors	table	small
+bread crumbs	indoors	table	small
+bread roll	indoors	table	small
+bread roll filled	indoors	table	small
+bread roll granary	indoors	table	small
+bread slice	indoors	table	small
+bread sliced	indoors	table	small
+breafkfast fried	indoors	table	small
+brick	ground		small
+bricks	indoors		small
+bridge	ground		huge
+bridge at night	ground		huge
+briefcase	indoors		small
+briefs	on_thing	person	small
+broad beans	indoors	table	small
+broccoli	indoors	table	small
+broken chain	indoors		small
+brooch	on_thing	person	tiny
+broom	indoors		medium
+broomstick			medium
+brown mushroom	indoors	table	small
+brussel sprouts	indoors	table	small
+bubble bath	indoors		small
+bubble mixture	indoors		small
+bubble tea	indoors	table	small
+bubble wand	indoors		small
+bubbles	sky		tiny
+bucket	indoors		small
+buckle	on_thing	person	tiny
+bud	on_thing	branch	tiny
+budgie	indoors		small
+buffalo	ground		large
+bug	ground		tiny
+building	ground		huge
+building construction	ground		huge
+bulb holder	indoors		tiny
+bullet			tiny
+bullet train	ground		huge
+bullseye	on_thing	wall	medium
+bun - hot cross	indoors	table	small
+bun currant	indoors	table	small
+bunk beds	indoors		large
+burrito	indoors	table	small
+bus	ground		large
+bus double decker	ground		large
+bus single decker	ground		large
+bus stop	ground		medium
+bush	ground		medium
+butter	indoors	table	small
+butterfly	sky		tiny
+butternut squash	indoors	table	small
+button	on_thing	person	tiny
+cabbage	indoors	table	small
+cabinet	indoors		medium
+cable	indoors		small
+cable tv	indoors		small
+cactus	ground		medium
+cafeteria	ground		huge
+cage	indoors		medium
+cake	indoors	table	small
+cake bar	indoors	table	small
+cake case	indoors		small
+cake cup cake	indoors	table	small
+cake mix	indoors	table	small
+cake slice	indoors	table	small
+cake sponge	indoors	table	small
+cake tin	indoors		small
+calculator	indoors		small
+calendar	on_thing	wall	small
+calf	ground		medium
+camel	ground		large
+camera	indoors		small
+camera SLR	indoors		small
+camera compact	indoors		small
+camera with flash	indoors		small
+camping	ground		large
+can opener	indoors		small
+can opener electric	indoors		small
+candle	indoors	table	small
+candy	indoors	table	tiny
+candy cane	indoors	table	small
+candy floss	indoors	table	small
+candy hearts	indoors	table	tiny
+canned food	indoors	table	small
+cannon	ground		large
+canoe	water		large
+canyon	ground		huge
+cap	on_thing	head	small
+car	ground		large
+car toy	indoors		small
+car transporter	ground		huge
+caravan	ground		large
+card	indoors	table	small
+card file box	indoors	table	small
+card index	indoors	table	small
+card index dividers	indoors	table	small
+cardboard	indoors	table	small
+cargo bike	ground		medium
+carousel horse	ground		large
+carp streamer	on_thing	pole	medium
+carpentry saw	indoors		small
+carrot	indoors	table	small
+cart	ground		medium
+cash point	on_thing	wall	medium
+cashew	indoors	table	tiny
+casino	ground		huge
+casserole	indoors		small
+cassette tape	indoors		small
+castle	ground		huge
+castor sugar	indoors	table	small
+cat	ground		small
+caterpillar	ground		tiny
+cauliflower	indoors	table	small
+cave	ground		huge
+cctv	on_thing	wall	small
+ceiling light	on_thing	ceiling	small
+celeriac	indoors	table	small
+celery	indoors	table	small
+cement mixer	ground		medium
+centipede	ground		tiny
+cereal	indoors	table	small
+cereal bowl	indoors	table	small
+cereal box bran	indoors	table	small
+cereal box museli	indoors	table	small
+cereal bran	indoors	table	small
+cereal museli	indoors	table	small
+chains	indoors		small
+chair	indoors		medium
+chair computer	indoors		medium
+chair dining	indoors		medium
+chair wing back	indoors		medium
+chaise lounge	indoors		large
+chalk	indoors	table	tiny
+chameleon	ground		small
+champagne	indoors	table	small
+champignon brown	indoors	table	small
+champignon white	indoors	table	small
+chandelier	on_thing	ceiling	medium
+chapatti	indoors	table	small
+chapel	ground		huge
+charger electric	indoors		small
+charging station	ground		large
+cheese	indoors	table	small
+cheese brie	indoors	table	small
+cheese grated	indoors	table	small
+cheese slices	indoors	table	small
+cheese stilton	indoors	table	small
+cheese wedge	indoors	table	small
+cheetah	ground		medium
+cheque book	indoors		small
+cherries	indoors	table	tiny
+cherry	indoors	table	tiny
+cherry blossom	on_thing	tree	tiny
+chess pawn	indoors		tiny
+chest of drawers	indoors		medium
+chestnut	indoors	table	tiny
+chestnuts	indoors	table	tiny
+chewing gum	indoors	table	tiny
+chick	ground		tiny
+chicken	ground		small
+chicken breast	indoors	table	small
+chicken deep fried	indoors	table	small
+chicken leg	indoors	table	small
+chicken live	ground		small
+chicken nuggets	indoors	table	small
+chicken pieces	indoors	table	small
+chilli pepper	indoors	table	small
+chimney	on_thing	roof	medium
+chimpanzee	ground		medium
+chinese cabbage	indoors	table	small
+chinese food	indoors	table	small
+chip and pin device	indoors		small
+chipmunk	ground		small
+chips	indoors	table	small
+chips packet	indoors	table	small
+chisel	indoors		small
+chocolate	indoors	table	small
+chocolate bar	indoors	table	small
+chocolate box	indoors	table	small
+chocolate chips	indoors	table	tiny
+chocolate egg	indoors	table	small
+chocolate log	indoors	table	small
+chopping board	indoors		small
+chopsticks	indoors	table	small
+church	ground		huge
+cigarette	indoors		tiny
+circus tent	ground		huge
+cityscape	ground		huge
+cityscape at dusk	ground		huge
+clamp	indoors		small
+clapper board	indoors		small
+classical building	ground		huge
+clay	indoors	table	small
+cleaner spray	indoors		small
+cleaning box	indoors		small
+cliff	ground		huge
+climbing wall	indoors		huge
+clingfilm	indoors		small
+clinical thermometer	indoors		small
+clinking beer mugs	indoors	table	small
+clinking glasses	indoors	table	small
+clipboard	indoors	table	small
+clock	on_thing	wall	small
+clock radio	indoors		small
+closed book	indoors	table	small
+closed mailbox with lowered flag	ground		medium
+closed mailbox with raised flag	ground		medium
+closed shop	ground		huge
+closed umbrella	indoors		small
+clothes hanger	indoors		small
+clothes peg	indoors		tiny
+cloud	sky		huge
+cloud with lightning	sky		huge
+cloud with lightning and rain	sky		huge
+cloud with rain	sky		huge
+cloud with snow	sky		huge
+clover	ground		tiny
+clutch bag	on_thing	hand	small
+coach	ground		large
+coat	on_thing	person	medium
+cockatiel	indoors		small
+cockerel	ground		small
+cockroach	ground		tiny
+cocktail	indoors	table	small
+cocktail glass	indoors	table	small
+coconut	indoors	table	small
+coffee	indoors	table	small
+coffee grinder	indoors		small
+coffee instant	indoors	table	small
+coffee maker	indoors		small
+coffee table	indoors		medium
+coffin			large
+coin	indoors		tiny
+colander	indoors		small
+collar	on_thing	person	small
+coloured paper	indoors	table	small
+colouring book	indoors		small
+comb	indoors		small
+comet	sky		huge
+compass	indoors		tiny
+computer	indoors	table	small
+computer cable	indoors	table	small
+computer disk	indoors	table	small
+computer game	indoors	table	small
+computer keyboard	indoors	table	small
+computer monitor	indoors	table	small
+computer mouse	indoors	table	small
+computer speaker	indoors	table	small
+confetti ball	indoors		small
+conical flask	indoors		small
+construction	ground		medium
+convenience store	ground		huge
+convent	ground		huge
+cooked rice	indoors	table	small
+cooker	indoors		medium
+cookie	indoors	table	small
+cooking	indoors	table	small
+cooking oil	indoors	table	small
+coop	ground		large
+coral	water		small
+corn	indoors	table	small
+corned beef	indoors	table	small
+corner cabinet	indoors		medium
+cornet	indoors	table	small
+cornflakes	indoors	table	small
+cot	indoors		medium
+cottage cheese	indoors	table	small
+cotton bud	indoors		tiny
+couch and lamp	indoors		large
+courgette	indoors	table	small
+courthouse	ground		huge
+cow	ground		large
+crab	water		small
+cracker	indoors	table	small
+cradle	indoors		medium
+craft table	indoors		medium
+cranberries	indoors	table	tiny
+cranberry juice	indoors	table	small
+crane	ground		huge
+crane fly	sky		tiny
+crayon	indoors	table	small
+cream ointment	indoors		small
+credit card	indoors		tiny
+creme fraiche	indoors	table	small
+crescent moon	sky		huge
+crib	indoors		medium
+cricket	ground		tiny
+cricket ball	ground		small
+cricket game	ground		small
+crisp bread	indoors	table	small
+crisps	indoors	table	small
+crisps cheese puffs	indoors	table	small
+crocodile	water		large
+croissant	indoors	table	small
+crown	on_thing	head	small
+cruiser	water		large
+crutch	indoors		medium
+crutches	indoors		medium
+crystal ball	indoors		small
+cucumber	indoors	table	small
+cup	indoors	table	small
+cup with straw	indoors	table	small
+cupboard	indoors		medium
+cupcake	indoors	table	small
+curling stone	ground		small
+currants	indoors	table	tiny
+curry	indoors	table	small
+curry rice	indoors	table	small
+curtains	on_thing	window	large
+custard	indoors	table	small
+cut of meat	indoors	table	small
+cycle helmet	on_thing	head	small
+cymbals hand	indoors		small
+daffodil	ground		small
+dagger	indoors		small
+daisy	ground		tiny
+dam	ground		huge
+dango	indoors	table	small
+danish pastry	indoors	table	small
+dates	indoors	table	tiny
+deciduous tree	ground		huge
+deep fat fryer	indoors		small
+deer	ground		medium
+delivery trolley	ground		medium
+delivery truck	ground		large
+dental floss	indoors		small
+deodorant	indoors		small
+deodorant spray	indoors		small
+department store	ground		huge
+derelict house	ground		huge
+desert	ground		huge
+desert island	ground		huge
+desk	indoors		medium
+desk lamp	indoors	table	small
+desktop computer	indoors	table	small
+dessert menu	indoors	table	small
+dice	indoors	table	tiny
+dictionary	indoors	table	small
+diesel locomotive	ground		huge
+dining table	indoors		medium
+dinner cold	indoors	table	small
+dinosaur	ground		huge
+dirty dishes	indoors		small
+disc	indoors		small
+dish	indoors	table	small
+dish cloth	indoors		small
+dishes	indoors	table	small
+dishwasher	indoors		medium
+dishwasher powder	indoors		small
+ditch	ground		large
+diving mask	on_thing	head	small
+diya lamp	indoors		small
+dodo	ground		medium
+doe	ground		medium
+dog	ground		medium
+doll	indoors		small
+dollar banknote	indoors		small
+dolphin	water		large
+donkey	ground		large
+door	on_thing	wall	large
+doorbell	on_thing	wall	tiny
+double bed	indoors		large
+dough	indoors	table	small
+doughnut	indoors	table	small
+dove	sky		small
+dragon	sky		huge
+dragonfly	sky		tiny
+draining board	indoors		small
+drawer	indoors		small
+drawing pin	indoors	table	tiny
+dress	on_thing	person	medium
+dresser	indoors		large
+dressing gown	on_thing	person	medium
+dressing table	indoors		medium
+drill bit	indoors		tiny
+drill electric	indoors		small
+drip coffee maker	indoors		small
+drone	sky		small
+droplet			tiny
+dropper pipette	indoors		small
+drum	indoors		medium
+drumsticks	indoors		small
+duck	water		small
+dumper truck	ground		large
+dumpling	indoors	table	small
+dvd	indoors	table	small
+eagle	sky		medium
+ear muffs	on_thing	head	small
+ear of corn	indoors	table	small
+earrings	on_thing	head	tiny
+earthworm	ground		tiny
+earwig	ground		tiny
+egg	indoors	table	small
+egg boiled	indoors	table	small
+egg cup	indoors	table	small
+egg fried	indoors	table	small
+egg on toast	indoors	table	small
+egg white	indoors	table	small
+egg yolk	indoors	table	small
+eggplant	indoors	table	small
+eggs	indoors	table	small
+eggs scrambled	indoors	table	small
+eiffel tower	ground		huge
+electric coffee percolator	indoors		small
+electric plug	indoors		tiny
+elephant	ground		huge
+elevator	indoors		large
+elf	ground		medium
+embassy	ground		huge
+emery board	indoors		small
+empty nest	on_thing	tree	small
+energy monitor	indoors		small
+envelope	indoors		small
+eraser	indoors		tiny
+escalator	indoors		large
+espresso machine	indoors		small
+euro banknote	indoors		small
+european name badge	on_thing	person	tiny
+evergreen tree	ground		huge
+ewe	ground		medium
+extension lead	indoors		small
+eye drops	indoors		small
+eye shadow	indoors		small
+eyebrow pencil	indoors		small
+eyelash curler	indoors		small
+fabric	indoors		small
+factory	ground		huge
+fairy	sky		small
+falafel	indoors	table	small
+fallen leaf	ground		tiny
+fan	indoors		small
+fax machine	indoors	table	small
+feather			tiny
+felt tips	indoors	table	small
+fence	ground		medium
+fennel	indoors	table	small
+ferret	ground		small
+ferris wheel	ground		huge
+ferry	water		huge
+fibre optic lamp	indoors		small
+field	ground		huge
+field hockey	ground		small
+fig	indoors	table	small
+file	indoors		small
+file cabinet	indoors		medium
+file folder	indoors	table	small
+filing cabinet	indoors		medium
+film frames	indoors		small
+film projector	indoors		small
+filter paper	indoors		small
+finch	sky		small
+finger puppet	on_thing	hand	tiny
+fir tree	ground		huge
+fire	ground		medium
+fire engine	ground		large
+fire extinguisher	indoors		small
+fire helmet	on_thing	head	small
+fire hose	indoors		medium
+firecracker	ground		tiny
+fireplace	indoors		medium
+fireworks	sky		huge
+first aid bag	indoors		small
+first aid box	indoors		small
+first aid kit	indoors		small
+first quarter moon	sky		huge
+first quarter moon face	sky		huge
+fish	water		small
+fish and chips	indoors	table	small
+fish burger	indoors	table	small
+fish cake with swirl	indoors	table	small
+fish deep fried	indoors	table	small
+fish koi carp	water		small
+fish tropical	water		small
+fishing pole	on_thing	hand	medium
+flag	on_thing	pole	small
+flag in hole	ground		medium
+flamingo	water		medium
+flannel	indoors		small
+flashlight	indoors		small
+flat shoe	on_thing	foot	small
+flatbread	indoors	table	small
+flatscreen tv	indoors		medium
+floppy disk	indoors	table	small
+flour	indoors	table	small
+flour plain	indoors	table	small
+flour self raising	indoors	table	small
+flower	ground		small
+flute	indoors		small
+fly	sky		tiny
+flying disc	sky		small
+flying saucer	sky		large
+fog	ground		huge
+foggy mountain	ground		huge
+folding hand fan	on_thing	hand	small
+fondue	indoors	table	small
+food blender	indoors		small
+football	ground		small
+football kit	on_thing	person	small
+forceps	indoors		small
+fork	indoors	table	small
+fork and knife	indoors	table	small
+fork and knife with plate	indoors	table	small
+fork lift truck	ground		large
+fort	ground		huge
+fortress	ground		huge
+fortune cookie	indoors	table	small
+fountain	ground		large
+fountain pen	indoors	table	small
+four leaf clover	ground		tiny
+fox	ground		medium
+frame	on_thing	wall	small
+framed picture	on_thing	wall	small
+freezer	indoors		medium
+french fries	indoors	table	small
+french press	indoors		small
+french stick	indoors	table	small
+fridge	indoors		medium
+fried shrimp	indoors	table	small
+frog	ground		small
+fromage frais	indoors	table	small
+front door	on_thing	wall	large
+front-facing baby chick	ground		tiny
+frozen chips	indoors	table	small
+frozen fish fingers	indoors	table	small
+frozen food box	indoors	table	small
+frozen pizza	indoors	table	small
+fruit tree	ground		huge
+frying pan	indoors		small
+fuel pump	ground		medium
+full moon	sky		huge
+full moon face	sky		huge
+funeral urn	indoors		small
+funnel	indoors		small
+game die	indoors		tiny
+garage	ground		huge
+garden chair folding	ground		medium
+garden clippers	ground		small
+gardening gloves	on_thing	hand	small
+garlic	indoors	table	small
+garlic bread	indoors	table	small
+garlic crusher	indoors		small
+gate	ground		large
+gear	indoors		small
+gem stone			tiny
+ghost			medium
+gin	indoors	table	small
+ginger	indoors	table	small
+ginger root	indoors	table	small
+giraffe	ground		huge
+glass bottle	indoors	table	small
+glass of milk	indoors	table	small
+glasses	on_thing	head	small
+glitter	indoors	table	small
+globe showing Americas	indoors		small
+globe showing Asia-Australia	indoors		small
+globe showing Europe-Africa	indoors		small
+globe with meridians	indoors		small
+gloves	on_thing	hand	small
+glowing star	sky		huge
+glue	indoors	table	small
+glue stick	indoors	table	small
+gnat	sky		tiny
+goal	ground		large
+goal net	ground		large
+goat	ground		medium
+goggles	on_thing	head	small
+gold bar	indoors		small
+goldfish	water		tiny
+golf club	on_thing	hand	medium
+gong	indoors		medium
+goose	ground		medium
+goose roast	indoors	table	small
+gooseberry	indoors	table	tiny
+gorilla	ground		large
+gps	indoors		small
+graduation cap	on_thing	head	small
+grape juice	indoors	table	small
+grapefruit	indoors	table	small
+grapefruit juice	indoors	table	small
+grapes	indoors	table	small
+grass	ground		
+grater	indoors		small
+grave	ground		medium
+gravy boat	indoors		small
+great pyramid of giza	ground		huge
+green apple	indoors	table	small
+green beans	indoors	table	small
+green book	indoors	table	small
+green salad	indoors	table	small
+grill pan	indoors		small
+guide dog	ground		medium
+guinea pig	indoors		small
+guitar	indoors		medium
+gun			small
+hair conditioner	indoors		small
+hair curler	indoors		small
+hair curlers electric	indoors		small
+hair curling tongs	indoors		small
+hair dye	indoors		small
+hair pick	indoors		tiny
+hairbrush	indoors		small
+hairdryer	indoors		small
+hairspray	indoors		small
+half orange fruit	indoors	table	small
+ham	indoors	table	small
+ham packet	indoors	table	small
+hamburger	indoors	table	small
+hamburger carton	indoors	table	small
+hammer	indoors		small
+hammer and pick	indoors		small
+hammer and wrench	indoors		small
+hamsa	indoors		tiny
+hamster	indoors		tiny
+hand bag	on_thing	hand	small
+hand cream	indoors		small
+hand mixer	indoors		small
+hand punch	indoors	table	small
+handbag	on_thing	hand	small
+handcuffs	on_thing	hand	small
+handkerchief	indoors		small
+handle bars	on_thing	bicycle	small
+hangar	ground		huge
+hankerchief	indoors		small
+hard hat	on_thing	head	small
+hare	ground		small
+harp	indoors		large
+hat	on_thing	head	small
+hat - ladies	on_thing	head	small
+hat - mans	on_thing	head	small
+hat Christmas	on_thing	head	small
+hatching chick	ground		tiny
+haunted house	ground		huge
+hawk	sky		small
+hay	ground		medium
+hazelnut	indoors	table	tiny
+headband	on_thing	head	small
+headphone	on_thing	head	small
+headphones	on_thing	head	small
+headstone	ground		medium
+hedge	ground		large
+hedge cutters	ground		medium
+hedgehog	ground		small
+helicopter	sky		large
+helmet	on_thing	head	small
+helmet pilot	on_thing	head	small
+hen	ground		small
+herb	ground		small
+heron	water		medium
+hibiscus	ground		small
+high chair	indoors		medium
+high-heeled shoe	on_thing	foot	small
+high-speed train	ground		huge
+hiking boot	on_thing	foot	small
+hill	ground		huge
+hindu temple	ground		huge
+hippopotamus	water		large
+hoe	ground		medium
+hoist	indoors		large
+holdall			medium
+hole	ground		medium
+hole punch	indoors	table	small
+holly	ground		small
+honey	indoors	table	small
+honey pot	indoors	table	small
+honeybee	sky		tiny
+hood hoodie	on_thing	person	small
+hooded top	on_thing	person	small
+hook	indoors		tiny
+horizontal traffic light	ground		large
+horn	indoors		small
+horse	ground		large
+hose	ground		medium
+hospital	ground		huge
+hot air balloon	sky		huge
+hot beverage	indoors	table	small
+hot brush	indoors		small
+hot chocolate	indoors	table	small
+hot dog	indoors	table	small
+hot pepper	indoors	table	small
+hot-water bottle	indoors		small
+hotel	ground		huge
+hourglass done	indoors		small
+hourglass not done	indoors		small
+house	ground		huge
+house with garden	ground		huge
+houses	ground		huge
+hut	ground		large
+hyacinth	ground		small
+iPhone	indoors		small
+iPod	indoors		small
+ice	indoors	table	tiny
+ice cream	indoors	table	small
+ice cream tub	indoors	table	small
+ice hockey	ground		small
+ice lolly	indoors	table	small
+ice skate	on_thing	foot	small
+identification card	indoors		tiny
+igloo	ground		large
+inbox tray	indoors		small
+index cards	indoors	table	small
+inhaler	indoors		small
+iris	ground		small
+iron	indoors		small
+ironing board	indoors		medium
+island	ground		huge
+ivy	on_thing	wall	medium
+jack in box	indoors		small
+jack-o-lantern	ground		small
+jacket	on_thing	person	small
+jacket - mans	on_thing	person	small
+jail	ground		huge
+jam	indoors	table	small
+jam tart	indoors	table	small
+jar	indoors	table	small
+jeans	on_thing	person	small
+jeep	ground		large
+jelly	indoors	table	small
+jelly beans	indoors	table	tiny
+jellyfish	water		small
+jet plane	sky		huge
+jewel			tiny
+jigsaw puzzle	indoors	table	small
+jigsaw puzzle piece	indoors	table	small
+joystick	indoors		small
+judo belt	on_thing	person	small
+juice	indoors	table	small
+jumper	on_thing	person	small
+jungle gym	ground		large
+kaaba	ground		huge
+kangaroo	ground		medium
+kebab	indoors	table	small
+kennel	ground		medium
+ketchup	indoors	table	small
+kettle	indoors		small
+key	indoors		tiny
+keyboard	indoors	table	small
+keyboard electric	indoors		medium
+kick scooter	ground		medium
+killer whale	water		huge
+kimono	on_thing	person	medium
+kitchen knife	indoors	table	small
+kite	sky		medium
+kitten	ground		small
+kiwi	indoors	table	small
+kiwi fruit	indoors	table	small
+knickers	on_thing	person	small
+knife	indoors	table	small
+koala	on_thing	tree	small
+koosh ball	indoors		small
+lab coat	on_thing	person	medium
+label	indoors	table	tiny
+labels	indoors	table	small
+lacrosse	ground		small
+ladder	ground		large
+ladle	indoors		small
+lady beetle	ground		tiny
+lamb	indoors	table	small
+lamp	indoors	table	small
+lampshade	indoors		small
+lance			large
+lane	ground		huge
+lantern	indoors		small
+laptop	indoors	table	small
+lasagne	indoors	table	small
+last quarter moon	sky		huge
+last quarter moon face	sky		huge
+latte macchiato	indoors	table	small
+laundry basket	indoors		small
+lava lamp	indoors		small
+lawn mower	ground		medium
+lawnmower	ground		medium
+leaf	on_thing	branch	tiny
+leaf fluttering in wind	sky		tiny
+leafless tree	ground		huge
+leafy green	indoors	table	small
+leash	on_thing	dog	small
+leaves	ground		tiny
+led	indoors		tiny
+ledger	indoors	table	small
+leek	indoors	table	small
+leg warmers	on_thing	person	small
+lego	indoors		tiny
+lemon	indoors	table	small
+lemon squash	indoors	table	small
+lemonade	indoors	table	small
+lens	indoors		small
+lentils	indoors	table	tiny
+leopard	ground		medium
+letter	indoors	table	small
+lettuce	indoors	table	small
+library	ground		huge
+lift	indoors		large
+light bulb	indoors		small
+light rail	ground		huge
+lightbulb	indoors		small
+lighter	indoors		tiny
+lighthouse	ground		huge
+lily	ground		small
+lime	indoors	table	small
+linked paperclips	indoors	table	tiny
+lion	ground		large
+lip balm	indoors		tiny
+lipstick	indoors		tiny
+liquid soap	indoors		small
+live-shrimp	water		tiny
+lizard	ground		small
+llama	ground		medium
+lobster	water		small
+locked	on_thing	door	tiny
+locked with key	on_thing	door	tiny
+locker	indoors		medium
+locomotive	ground		huge
+log	ground		medium
+lollipop	indoors	table	small
+long drum	indoors		medium
+long johns	on_thing	person	small
+lorry	ground		large
+lotion	indoors		small
+lotion bottle	indoors		small
+lotus	water		small
+loudspeaker	indoors		small
+love hotel	ground		huge
+low battery	indoors		tiny
+luggage	indoors		medium
+macadamias	indoors	table	tiny
+macaroni	indoors	table	small
+macaroni cheese	indoors	table	small
+macaw	sky		small
+magic wand	indoors		small
+magnet	indoors		small
+magnifying glass tilted left	indoors		small
+magnifying glass tilted right	indoors		small
+mailbox	ground		medium
+mains socket	on_thing	wall	tiny
+mammoth	ground		huge
+mange tout	indoors	table	small
+mango	indoors	table	small
+manor	ground		huge
+mantelpiece clock	indoors		small
+manual wheelchair	ground		medium
+man’s shoe	on_thing	foot	small
+map	indoors		small
+maple leaf	ground		tiny
+maracas	indoors		small
+margarine	indoors	table	small
+marmite	indoors	table	small
+marrow	indoors	table	small
+marshmallows	indoors	table	small
+martial arts uniform	on_thing	person	medium
+mascara	indoors		small
+masher	indoors		small
+mask	on_thing	head	small
+mask dustmask	on_thing	head	small
+masking tape	indoors	table	small
+mat	indoors		medium
+mate	indoors	table	small
+mattress	on_thing	bed	large
+mayonnaise	indoors	table	small
+maze	ground		huge
+measuring cups	indoors		small
+measuring jug	indoors		small
+measuring spoons	indoors		small
+meat	indoors	table	small
+meat on bone	indoors	table	small
+meatballs and spaghetti	indoors	table	small
+medal	on_thing	person	tiny
+medication	indoors		small
+medicine	indoors		small
+medicine cabinet	on_thing	wall	small
+megaphone	indoors		small
+melon	indoors	table	small
+memo	indoors	table	small
+memory card	indoors		tiny
+menu	indoors	table	small
+meringues	indoors	table	small
+merry go round	ground		large
+meteor	sky		
+metro	ground		huge
+microbe			tiny
+microphone	indoors		small
+microscope	indoors	table	small
+microwave	indoors		small
+military helmet	on_thing	head	small
+military medal	indoors		tiny
+milk	indoors	table	small
+milk 2 litre	indoors	table	small
+milk bottle	indoors	table	small
+milk carton	indoors	table	small
+milk jug	indoors		small
+milkshake	indoors	table	small
+milkshake banana	indoors	table	small
+milkshake chocolate	indoors	table	small
+milkshake strawberry	indoors	table	small
+milky way	sky		huge
+mince pie	indoors	table	small
+minced meat	indoors	table	small
+mini bus	ground		large
+minibus	ground		large
+mints	indoors	table	tiny
+mirror	on_thing	wall	medium
+mirror ball	on_thing	ceiling	small
+mistletoe			small
+mittens	on_thing	hand	small
+mixer	indoors		small
+moai	ground		huge
+mobile phone	indoors	table	small
+mobile phone camera	indoors		small
+mobile phone case	indoors		small
+mobile phone cover	indoors		small
+moka pot	indoors		small
+monarch butterfly	sky		tiny
+monastery	ground		huge
+money	indoors		small
+money bag	indoors		small
+monkey	ground		medium
+monorail	ground		huge
+monster	ground		large
+monument	ground		huge
+moon	sky		huge
+moon cake	indoors	table	small
+moose	ground		large
+mop	indoors		medium
+moped	ground		medium
+mosque	ground		huge
+mosquito	sky		tiny
+motel	ground		huge
+moth	sky		tiny
+motor			medium
+motor boat	water		large
+motor home	ground		large
+motor scooter	ground		medium
+motorbike helmet	on_thing	head	small
+motorcycle	ground		medium
+motorized wheelchair	ground		medium
+motorway	ground		huge
+mount fuji	ground		huge
+mountain	ground		huge
+mountain cableway	sky		large
+mountain railway	ground		huge
+mountains	ground		huge
+mouse	ground		tiny
+mouse mat	indoors	table	small
+mouse trap	indoors		small
+movie camera	indoors		small
+muesli	indoors	table	small
+muffin	indoors	table	small
+mule	ground		large
+museum	ground		huge
+mushroom	ground		small
+musical keyboard	indoors		medium
+musical score	indoors		small
+mussel	water		tiny
+muted speaker	indoors		small
+nail	indoors		tiny
+nail clippers	indoors		tiny
+nail file	indoors		small
+nail polish	indoors		small
+nail polish remover	indoors		small
+nappy	indoors		small
+narwhal	water		large
+national park	ground		huge
+nazar amulet	indoors		tiny
+necklace	on_thing	person	tiny
+necktie	on_thing	person	small
+nest	on_thing	tree	small
+nest of tables	indoors		medium
+nest with eggs	on_thing	tree	small
+nesting dolls	indoors		small
+net with handle			medium
+new moon	sky		huge
+new moon face	sky		huge
+newspaper	indoors	table	small
+nightclub	ground		huge
+nightgown	on_thing	person	medium
+noodles	indoors	table	small
+notebook	indoors	table	small
+notebook with decorative cover	indoors	table	small
+notepad	indoors	table	small
+nut	indoors	table	tiny
+nut and bolt	indoors		tiny
+oak leaf	ground		tiny
+octopus	water		medium
+oden	indoors	table	small
+office building	ground		huge
+oil drum	ground		medium
+old key	indoors		tiny
+olive	indoors	table	tiny
+olive oil	indoors	table	small
+olives	indoors	table	tiny
+olympic torch	on_thing	hand	small
+omelette	indoors	table	small
+oncoming automobile	ground		large
+oncoming bus	ground		large
+oncoming fire engine	ground		large
+oncoming police car	ground		large
+oncoming taxi	ground		large
+one-piece swimsuit	on_thing	person	small
+onion	indoors	table	small
+onion rings	indoors	table	small
+open book	indoors	table	small
+open file folder	indoors	table	small
+open mailbox with lowered flag	ground		medium
+open mailbox with raised flag	ground		medium
+open shop	ground		huge
+optical disk	indoors	table	small
+orange	indoors	table	small
+orange book	indoors	table	small
+orangutan	ground		medium
+orca	water		huge
+ostrich	ground		large
+otter	water		small
+outbox tray	indoors		small
+outlet	on_thing	wall	tiny
+oven	indoors		medium
+owl	sky		small
+ox	ground		large
+oxygen mask	on_thing	head	small
+oyster	water		small
+package	indoors		small
+packed lunch	indoors	table	small
+paddles			medium
+page facing up	indoors	table	small
+page with curl	indoors	table	small
+pager	indoors	table	small
+pagoda	ground		huge
+paint	indoors		small
+paint box	indoors	table	small
+paint brush	indoors	table	small
+paint childs	indoors	table	small
+paintbrush	indoors	table	small
+painting	on_thing	wall	medium
+palm	ground		huge
+palm tree	ground		huge
+pan	indoors		small
+pancakes	indoors	table	small
+panda	ground		large
+pants	on_thing	person	small
+paper	indoors	table	small
+paper towel	indoors		small
+paper towels	indoors		small
+paperclip	indoors	table	tiny
+parachute	sky		large
+parking garage	ground		huge
+parrot	sky		small
+parsnip	indoors	table	small
+party popper	indoors		small
+passenger ship	water		huge
+passion fruit	indoors	table	small
+passport	indoors		small
+pasta	indoors	table	small
+pasta sauce	indoors	table	small
+pastie	indoors	table	small
+pastry	indoors	table	small
+patch on clothes	on_thing	person	tiny
+pate	indoors	table	small
+path	ground		huge
+patient clipboard	indoors		small
+patient file	indoors		small
+pea	indoors	table	tiny
+pea pod	indoors	table	tiny
+peach	indoors	table	small
+peacock	ground		medium
+peanut	indoors	table	tiny
+peanut butter	indoors	table	small
+peanuts	indoors	table	tiny
+pear	indoors	table	small
+peas	indoors	table	tiny
+pecan	indoors	table	tiny
+peeler	indoors		small
+peg	ground		tiny
+pelican	water		medium
+pen	indoors	table	small
+pen and paper	indoors	table	small
+pencil	indoors	table	small
+pencil and paper	indoors	table	small
+pencil box	indoors	table	small
+pencil case	indoors	table	small
+pencil sharpener	indoors	table	tiny
+penguin	ground		medium
+pepper	indoors	table	small
+pepper mill	indoors	table	small
+perfume	indoors		small
+person	ground		medium
+pestle and mortar	indoors		small
+petri dish	indoors	table	small
+petrol tanker	ground		huge
+petticoat	on_thing	person	small
+phoenix	sky		large
+phone	indoors	table	small
+photocopier	indoors		medium
+photographs	indoors		small
+piano	indoors		large
+pick	ground		medium
+pick and mix	indoors	table	small
+pickle	indoors	table	small
+pickup truck	ground		large
+picnic	ground		medium
+picture	on_thing	wall	small
+picture frame	on_thing	wall	small
+pie	indoors	table	small
+pie apple	indoors	table	small
+pie cherry	indoors	table	small
+pie meat	indoors	table	small
+pier	ground		huge
+pig	ground		medium
+pigeon	sky		small
+piglet	ground		small
+pill	indoors		tiny
+pillow	on_thing	bed	small
+pills	indoors		small
+pine	ground		huge
+pine decoration	ground		medium
+pine nut	indoors	table	tiny
+pineapple	indoors	table	small
+pineapple juice	indoors	table	small
+ping pong	indoors		small
+pipe			small
+pistachios	indoors	table	tiny
+pit	ground		large
+pizza	indoors	table	small
+pizza cutter	indoors		small
+piñata	indoors		medium
+placard			medium
+place setting	indoors	table	small
+plane	sky		huge
+planet	sky		huge
+plant	ground		small
+plaster	indoors		small
+plastic bag	indoors		small
+plastic bottle	indoors	table	small
+plastic pocket	indoors	table	small
+plate	indoors	table	small
+playdough	indoors	table	small
+playground slide	ground		large
+playing card picture	indoors	table	small
+playing cards	indoors	table	small
+playing cards clubs	indoors	table	small
+playing cards diamonds	indoors	table	small
+playing cards hearts	indoors	table	small
+playing cards patience	indoors	table	small
+playing cards spades	indoors	table	small
+playstation	indoors		small
+pliers	indoors		small
+plug	indoors		tiny
+plum	indoors	table	small
+plum tomato	indoors	table	small
+plunger	indoors		small
+pocket	on_thing	person	tiny
+pod	indoors	table	tiny
+polar bear	ground		large
+pole	ground		large
+police car	ground		large
+police car light	on_thing	car	small
+police helmet	on_thing	head	small
+police radio	indoors		small
+pomegranate	indoors	table	small
+pond	ground		huge
+poodle	ground		medium
+pool	ground		huge
+pool 8 ball	indoors		small
+pool snooker	indoors		large
+pop socks	on_thing	foot	small
+popcorn	indoors	table	small
+poppadoms	indoors	table	small
+poppy	ground		small
+porch	ground		large
+porcupine	ground		small
+pork	indoors	table	small
+pork chop	indoors	table	small
+porpoise	water		medium
+porridge	indoors	table	small
+portrait	on_thing	wall	small
+post office	ground		huge
+post van	ground		large
+post-it	indoors	table	small
+postal horn	indoors		small
+postbox	ground		medium
+pot	ground		small
+pot noodle	indoors	table	small
+pot of food	indoors	table	small
+potato	indoors	table	small
+potentiometer	indoors		tiny
+potted plant	indoors		small
+potty chair	indoors		small
+poultry	indoors	table	small
+poultry leg	indoors	table	small
+pound banknote	indoors		small
+powder puff	indoors		small
+prawn	water		tiny
+prayer beads	indoors		small
+present	indoors		small
+pretzel	indoors	table	small
+printer	indoors	table	small
+prison	ground		huge
+pub	ground		huge
+pudding	indoors	table	small
+puffin	sky		small
+pumice stone	indoors		small
+pumpkin	ground		small
+pumpkin lantern	ground		small
+pumpkin pie	indoors	table	small
+puppet	indoors		small
+pureed food	indoors	table	small
+purse	on_thing	hand	small
+pushpin	indoors	table	tiny
+puzzle piece	indoors		tiny
+pyjamas	on_thing	person	medium
+pyramid	ground		huge
+quail	ground		small
+quiche flan	indoors	table	small
+rabbit	ground		small
+raccoon	ground		small
+racing car	ground		large
+radar	ground		large
+radio	indoors		small
+radish	indoors	table	small
+raft	water		large
+rag	indoors		small
+railway	ground		huge
+railway car	ground		huge
+railway track	ground		huge
+rainbow	sky		huge
+raincoat	on_thing	person	medium
+raisin	indoors	table	tiny
+raisin currants	indoors	table	tiny
+rake	ground		medium
+ram	ground		medium
+ramp	ground		large
+rat	ground		small
+rattle snake	ground		small
+raven	sky		small
+ravioli	indoors	table	small
+razor	indoors		small
+razor electric	indoors		small
+ready meal	indoors	table	small
+ready meal lamb	indoors	table	small
+receipt	indoors		tiny
+recipe	indoors	table	small
+recycling bins	ground		medium
+red apple	indoors	table	small
+red envelope	indoors		small
+red paper lantern	indoors		small
+refrigerator	indoors		medium
+refuse lorry	ground		large
+reindeer	ground		medium
+reminder ribbon	indoors		tiny
+remote control	indoors		small
+rescue worker’s helmet	on_thing	head	small
+restaurant	ground		huge
+rhinoceros	ground		large
+rhubarb	indoors	table	small
+ribbon	indoors		tiny
+rice	indoors	table	small
+rice ball	indoors	table	small
+rice cake	indoors	table	small
+rice cracker	indoors	table	small
+rice packet	indoors	table	small
+riding hat	on_thing	head	small
+rifle	on_thing	hand	medium
+ring	on_thing	hand	tiny
+ring binder	indoors	table	small
+ring buoy	water		small
+ringed planet	sky		huge
+river bank	ground		huge
+road	ground		huge
+roast dinner	indoors	table	small
+roasted coffee bean	indoors	table	tiny
+roasted sweet potato	indoors	table	small
+robe	on_thing	person	medium
+robin	sky		small
+robot	ground		medium
+rock	ground		medium
+rocket	sky		huge
+rocking chair	indoors		medium
+rod			medium
+roll of paper	indoors		small
+roll on deodorant	indoors		small
+rolled-up newspaper	indoors	table	small
+roller blind	on_thing	window	medium
+roller coaster	ground		huge
+roller skate	on_thing	foot	small
+rolling pin	indoors		small
+roman blind	on_thing	window	medium
+roof	on_thing	house	large
+rooster	ground		small
+root vegetable	indoors	table	small
+rope			small
+rose	ground		small
+rotary washing line	ground		large
+round pushpin	indoors	table	tiny
+rowing boat	water		large
+rubber duck	water		small
+rug	indoors		medium
+rugby ball	ground		small
+rugby football	ground		small
+rum	indoors	table	small
+running shirt	on_thing	person	small
+running shoe	on_thing	foot	small
+sack	indoors		medium
+saddle	on_thing	horse	medium
+safety goggles	on_thing	head	small
+safety pin	indoors		tiny
+safety vest	on_thing	person	small
+sailboat	water		large
+sake	indoors	table	small
+salad	indoors	table	small
+salad packet	indoors	table	small
+salad plate	indoors	table	small
+salami sausage	indoors	table	small
+saline drip	indoors		medium
+salmon	water		small
+salt	indoors	table	small
+salt mill	indoors	table	small
+sandals	on_thing	foot	small
+sandpaper	indoors		small
+sandwich	indoors	table	small
+sandwich cheese	indoors	table	small
+sandwich chicken	indoors	table	small
+sandwich ham	indoors	table	small
+sandwich sausage	indoors	table	small
+sandwich toasted	indoors	table	small
+sanitary towel	indoors		small
+sari	on_thing	person	medium
+satellite	sky		large
+satellite antenna	ground		large
+satsuma	indoors	table	small
+sauce	indoors	table	small
+sauce apple	indoors	table	small
+sauce brown	indoors	table	small
+sauce cranberry	indoors	table	small
+sauce tomato	indoors	table	small
+saucepan	indoors		small
+saucer	indoors	table	small
+sauropod	ground		huge
+sausage and mash	indoors	table	small
+sausage cumberland	indoors	table	small
+sausage roll	indoors	table	small
+sausage roll small	indoors	table	small
+sausages	indoors	table	small
+saw	indoors		small
+saxophone	indoors		small
+scales	indoors		small
+scarecrow	ground		large
+scarf	on_thing	person	small
+school	ground		huge
+school bag	on_thing	person	small
+scissors	indoors	table	small
+scoop	indoors		small
+scorpion	ground		tiny
+screen	indoors		medium
+screw	indoors		tiny
+screwdriver	indoors		small
+scroll	indoors	table	small
+scrubbing brush	indoors		small
+sculpture	indoors		medium
+seagull	sky		small
+seahorse	water		tiny
+seal	water		medium
+seat	indoors		medium
+see saw	ground		large
+seedling	ground		tiny
+seeds	ground		tiny
+service dog	ground		medium
+sewing needle	indoors		tiny
+shack	ground		large
+shallow pan of food	indoors	table	small
+shampoo	indoors		small
+shamrock	ground		tiny
+shape puzzle	indoors		small
+shapesorter	indoors		small
+shark	water		large
+shaved ice	indoors	table	small
+shaving cream	indoors		small
+sheaf of rice	ground		small
+sheep	ground		medium
+shelf	on_thing	wall	medium
+shell	ground		tiny
+sherry	indoors	table	small
+shield			medium
+shinto shrine	ground		huge
+ship	water		huge
+shirt	on_thing	person	small
+shoe	on_thing	foot	small
+shoe - ladies	on_thing	foot	small
+shoe - mans	on_thing	foot	small
+shooting star	sky		huge
+shop	ground		huge
+shopping bags	on_thing	hand	small
+shopping cart	indoors		medium
+shortcake	indoors	table	small
+shorts	on_thing	person	small
+shotgun			medium
+shovel	ground		medium
+shower	indoors		medium
+shower cap	on_thing	head	small
+shower gel	indoors		small
+shrew	ground		tiny
+shrimp	water		tiny
+shrine	ground		large
+shuttlecock	sky		tiny
+sidewalk	ground		huge
+sieve	indoors		small
+signpost	ground		large
+single bed	indoors		large
+sink	indoors		medium
+skate	on_thing	foot	small
+skateboard	ground		small
+skirt	on_thing	person	small
+skis	on_thing	foot	medium
+skunk	ground		small
+sled	ground		medium
+sledge	ground		medium
+sleep suit baby	on_thing	person	small
+sleigh	ground		large
+slide	ground		large
+sling	on_thing	person	small
+slippers	on_thing	foot	small
+slot machine	indoors		medium
+sloth	on_thing	tree	medium
+slug	ground		tiny
+small airplane	sky		large
+smartwatch	on_thing	hand	tiny
+snail	ground		tiny
+snake	ground		small
+sneaker	on_thing	foot	small
+snorkling	on_thing	head	small
+snow-capped mountain	ground		huge
+snowflake	sky		tiny
+snowman	ground		medium
+snowman without snow	ground		medium
+soap	indoors		small
+soccer ball	ground		small
+sock	on_thing	foot	small
+socks	on_thing	foot	small
+sofa	indoors		large
+soft ice cream	indoors	table	small
+softball	ground		small
+solar cell	on_thing	roof	medium
+soup	indoors	table	small
+soup carrot	indoors	table	small
+soup chicken	indoors	table	small
+soup mushroom	indoors	table	small
+soup onion	indoors	table	small
+soup pea	indoors	table	small
+soup tomato	indoors	table	small
+soup vegetable	indoors	table	small
+space shuttle	sky		huge
+spaceship	sky		huge
+spade	ground		medium
+spaghetti	indoors	table	small
+spaghetti bolognaise	indoors	table	small
+sparkler	on_thing	hand	small
+spatula	indoors		small
+speaker high volume	indoors		small
+speaker low volume	indoors		small
+speaker medium volume	indoors		small
+speedboat	water		large
+spider	ground		tiny
+spider web			small
+spinach	indoors	table	small
+spiral calendar	indoors	table	small
+spiral notepad	indoors	table	small
+spiral shell	ground		tiny
+sponge	indoors		small
+spoon	indoors	table	small
+sport utility vehicle	ground		large
+sports medal	indoors		tiny
+spot light	on_thing	ceiling	small
+spouting whale	water		huge
+spouting-orca	water		huge
+spring onions	indoors	table	small
+square setsquare	indoors		small
+squid	water		small
+squirrel	ground		small
+stadium	ground		huge
+stag	ground		large
+stairs	indoors		large
+stairway	indoors		large
+standard lamp	indoors		medium
+stapler	indoors	table	small
+star	sky		huge
+star stacker	indoors		small
+starfish	water		small
+station	ground		huge
+statue	ground		large
+steak	indoors	table	small
+steam train	ground		huge
+steamer	indoors		small
+steaming bowl	indoors	table	small
+stereo	indoors		small
+stethoscope	indoors		small
+stick	ground		small
+stirrups	on_thing	horse	small
+stoat	ground		small
+stock	indoors	table	small
+stock cubes	indoors	table	small
+stone	ground		small
+stool	indoors		medium
+stop sign	ground		large
+stopwatch	indoors		small
+stove	indoors		medium
+straight ruler	indoors	table	small
+straw	indoors		small
+strawberry	indoors	table	tiny
+strawberry jam	indoors	table	small
+street	ground		huge
+stretcher	indoors		medium
+string	indoors		small
+studio microphone	indoors		small
+stuffed flatbread	indoors	table	small
+stupa	ground		huge
+submarine	water		huge
+sugar	indoors	table	small
+sugar bowl	indoors	table	small
+sugar brown	indoors	table	small
+sugar white	indoors	table	small
+suit	on_thing	person	medium
+suit - ladys	on_thing	person	medium
+suit - mans	on_thing	person	medium
+suitcase	indoors		medium
+sun	sky		huge
+sun behind cloud	sky		huge
+sun behind large cloud	sky		huge
+sun behind rain cloud	sky		huge
+sun behind small cloud	sky		huge
+sun lounger	ground		large
+sun with face	sky		huge
+sunflower	ground		medium
+sunglasses	on_thing	head	small
+supermarket	ground		huge
+surgery health centre	ground		huge
+sushi	indoors	table	small
+suspension railway	ground		huge
+swab pliers	indoors		small
+swamp	ground		huge
+swan	water		medium
+sweater	on_thing	person	small
+sweatshirt	on_thing	person	small
+swede	indoors	table	small
+sweet	indoors	table	tiny
+sweet potato	indoors	table	small
+sweetcorn	indoors	table	small
+swimming cap	on_thing	head	small
+swimming costume	on_thing	person	small
+swimming trunks	on_thing	person	small
+swing	ground		large
+swiss roll	indoors	table	small
+switch	on_thing	wall	tiny
+sword			medium
+synagogue	ground		huge
+syringe	indoors		small
+syrup	indoors	table	small
+t-shirt	on_thing	person	small
+table	indoors		medium
+table cloth	on_thing	table	medium
+tablet	indoors	table	small
+tablet blister pack	indoors		small
+tablets	indoors		small
+taco	indoors	table	small
+takeaway burger	indoors	table	small
+takeaway burger and chips	indoors	table	small
+takeaway chinese	indoors	table	small
+takeaway container	indoors	table	small
+takeaway indian	indoors	table	small
+takeaway pizza	indoors	table	small
+takeout box	indoors	table	small
+tamale	indoors	table	small
+tampon	indoors		small
+tanabata tree	ground		large
+tangerine	indoors	table	small
+tank	ground		large
+tap	on_thing	sink	small
+tape	indoors		small
+tape measure	indoors		small
+tape recorder	indoors		small
+tart	indoors	table	small
+taxi	ground		large
+tea	indoors	table	small
+tea bag	indoors	table	tiny
+tea instant	indoors	table	small
+tea spoon	indoors	table	small
+teacup without handle	indoors	table	small
+teapot	indoors	table	small
+tear-off calendar	indoors	table	small
+teddy bear	indoors		small
+telephone	indoors	table	small
+telephone handset	indoors		small
+telephone receiver	indoors	table	small
+telephone toy	indoors		small
+telescope	ground		medium
+television	indoors		medium
+temple	ground		huge
+tennis	ground		small
+tent	ground		large
+tequila	indoors	table	small
+test tube	indoors	table	small
+text phone	indoors		small
+theater	ground		huge
+thermometer	indoors		small
+thong sandal	on_thing	foot	small
+thread	indoors		tiny
+throne	indoors		large
+ticket	indoors		tiny
+tie	on_thing	person	small
+tiger	ground		large
+tights	on_thing	person	small
+timer	indoors		small
+timer clock	indoors		small
+tin	indoors		small
+tin can	indoors	table	small
+tin foil	indoors		small
+tinned apricots	indoors	table	small
+tinned cherries	indoors	table	small
+tinned mushroom soup	indoors	table	small
+tinned peaches	indoors	table	small
+tinned pears	indoors	table	small
+tinned peas	indoors	table	small
+tinned pineapple	indoors	table	small
+tinned plums	indoors	table	small
+tinned sweetcorn	indoors	table	small
+tinned tomato	indoors	table	small
+tippex	indoors	table	small
+tire	on_thing	car	medium
+tissues	indoors		small
+titanic	water		huge
+toad	ground		small
+toast	indoors	table	small
+toaster	indoors		small
+toilet	indoors		medium
+toilet roll	indoors		small
+tomato	indoors	table	small
+tomato juice	indoors	table	small
+tomato slice	indoors	table	small
+tongs	indoors		small
+toolbox	indoors		small
+toothbrush	indoors		small
+toothbrush electric	indoors		small
+toothpaste	indoors		small
+top hat	on_thing	head	small
+torch	indoors		small
+tornado	sky		huge
+tortoise	ground		small
+touch screen	indoors	table	small
+toupee	on_thing	head	small
+towel	indoors		small
+tower	ground		huge
+toy box	indoors		medium
+toy car	indoors		small
+toy soldier	indoors		small
+trackball	indoors	table	small
+tracksuit	on_thing	person	medium
+tractor	ground		large
+traffic lights	ground		large
+train	ground		huge
+trainers	on_thing	foot	small
+tram	ground		huge
+tram car	ground		huge
+trampoline	ground		large
+trap	ground		small
+trash bin	ground		medium
+tray	indoors		small
+treasure chest	ground		medium
+tree	ground		huge
+tree ornament chocolate	on_thing	tree	tiny
+tree trunk	ground		large
+triangular ruler	indoors	table	small
+trolleybus	ground		large
+trombone	indoors		small
+trophy	indoors		small
+tropical drink	indoors	table	small
+tropical fish	water		small
+trousers	on_thing	person	small
+trowel	ground		small
+truck	ground		large
+trumpet	indoors		small
+tube			small
+tulip	ground		small
+tumbler glass	indoors	table	small
+tuna	indoors	table	small
+turkey	ground		medium
+turnip	indoors	table	small
+turtle	water		small
+two-hump camel	ground		large
+umbrella	on_thing	hand	medium
+umbrella on ground	ground		medium
+umbrella with rain drops	on_thing	hand	medium
+underground train	ground		huge
+underwear	on_thing	person	small
+unicorn	ground		large
+unlocked	on_thing	door	tiny
+usb stick	indoors	table	tiny
+vacuum cleaner hand held	indoors		small
+valley	ground		huge
+van	ground		large
+varnish	indoors		small
+vase	indoors	table	small
+ventilator	indoors		medium
+vertical blinds	on_thing	window	medium
+vertical traffic light	ground		large
+vest	on_thing	person	small
+vice	indoors	table	small
+video camera	indoors		small
+video game	indoors		small
+video player	indoors		small
+video tape	indoors		small
+videocassette	indoors		small
+viennese coffee house	ground		huge
+vine	ground		medium
+vinegar	indoors	table	small
+violet	ground		tiny
+violin	indoors		small
+visor	on_thing	head	small
+vodka	indoors	table	small
+volcano	ground		huge
+volleyball	ground		small
+vr headset	on_thing	head	small
+vulture	sky		medium
+wafer	indoors	table	small
+waffle	indoors	table	small
+wagon	ground		large
+waistcoat	on_thing	person	small
+walking frame	indoors		medium
+walking stick	on_thing	hand	medium
+walkman	indoors		small
+wall	ground		large
+wallet	indoors		small
+walnut	indoors	table	tiny
+walrus	water		large
+waning crescent moon	sky		huge
+waning gibbous moon	sky		huge
+wardrobe	indoors		large
+warehouse	ground		huge
+warning light	indoors		small
+washing machine	indoors		medium
+washing powder	indoors		small
+washing up bowl	indoors		small
+washing up liquid	indoors		small
+wasp	sky		tiny
+waste paper bin	indoors		small
+wastebasket	indoors		small
+watch	on_thing	hand	tiny
+water	indoors	table	small
+water buffalo	ground		large
+water pistol	indoors		small
+water wave	water		large
+watering can	ground		small
+watermelon	indoors	table	small
+waxing crescent moon	sky		huge
+waxing gibbous moon	sky		huge
+webcam	indoors	table	small
+weeds	ground		small
+well	ground		large
+wellington boots	on_thing	foot	small
+whale	water		huge
+wheat	ground		medium
+wheel	on_thing	car	small
+wheel chair	indoors		medium
+wheelbarrow	ground		medium
+wheelchair	ground		medium
+wheelie bin	ground		medium
+whisk	indoors		small
+whiskey	indoors	table	small
+white cane	on_thing	hand	medium
+white flower	ground		tiny
+whiteboard	on_thing	wall	large
+wig	on_thing	head	small
+wilted flower	ground		small
+wind chime	indoors		small
+windmill	ground		huge
+window	on_thing	wall	medium
+wine	indoors	table	small
+wine glass	indoors	table	small
+wire	indoors		small
+wishbone	indoors	table	tiny
+witch			medium
+witches hat	on_thing	head	small
+wolf	ground		medium
+woman’s boot	on_thing	foot	small
+woman’s clothes	on_thing	person	small
+woman’s hat	on_thing	head	small
+woman’s sandal	on_thing	foot	small
+wood	ground		medium
+wood lathe	indoors		medium
+wooden spoon	indoors		small
+woodstain	indoors		small
+world	sky		huge
+world map	on_thing	wall	medium
+worm	ground		tiny
+wrapped gift	indoors		small
+wrapping paper	indoors		small
+wrench	indoors		small
+x-ray	indoors		small
+xray	indoors		small
+xylophone	indoors		small
+yacht	water		large
+yarn	indoors		small
+yen banknote	indoors		small
+yo-yo	indoors		small
+yogurt	indoors	table	small
+yorkshire pudding	indoors	table	small
+yule log	indoors	table	small
+zebra	ground		large
+zip	on_thing	person	tiny

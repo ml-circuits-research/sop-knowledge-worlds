@@ -1307,3 +1307,41 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - `questions.md` has sections Open (none) and Closed (Q1 to Q23).
 - Numbers: catalog 11 worlds, 740 shards, vocab 19,118 words; 0 errors, 0 warnings.
 - npm test 2,347 pass, 0 fail.
+
+## Round 7 addendum, items 1 and 2 (2026-11-13): `k.scenes`, usual place and relative size of drawable things
+
+- **New world `k.scenes`** (version 1, exports `thing`, `scene`, `has`; the scenes themselves come with R7.1).
+  `k.scenes.thing` (identity `name` = the name of a `k.objects` object or stand-in): `place` (sky, ground, water,
+  indoors, on_thing), `on` (many: what it is usually on), `size` (tiny, small, medium, large, huge; the five
+  classes are defined by what one can do with the thing: fits in a closed hand, held in the hands, carried up to
+  the size of a person, up to a truck, bigger), `named=model`. A deny refuses `place=on_thing` without `on` (written
+  with `core.absent=on` on the pattern wire).
+- **2,033 of the 2,103 objects have a fact** (27 shards `things-a` … `things-z`, `things-0`; 2,033 wires, 263,118
+  bytes). Place: indoors 1,121, ground 477, on another thing 240, sky 105, water 60, none 30. Size: small 1,189,
+  medium 251, huge 219, tiny 209, large 163, none 2. 624 facts say what the thing is on (table 604 of them for
+  things indoors, then person, head, hand, foot, wall, tree …).
+- **70 objects have no fact** (not sure, or no usual place and no size): symbols and charts (heart, barcode,
+  "chart increasing", "olympic rings", "high voltage"), whole scenes (sunset, sunrise, "night with stars", wedding),
+  faces ("dog face" and the eleven others), organs (liver, brain), a few things I could not place from the name
+  (guy, backstop, "boccia chute", tripod).
+- **How the labels were made:** by me (a language model) from the names: a default per category of the source
+  (the 150 shard groups: "noto-food-fruit" indoors, on a table, small), then name by name where the default is
+  wrong (about 900 names). The table is `sources/hand-core/place-size.tsv`; `tools/scenes-core.mjs` writes the
+  shards from it.
+- **Audit, as for the part names:** 200 rows drawn with seed 7, each looked at as the drawing at 150 px with its
+  labels underneath (5 contact sheets of 40, all read): **195 right, 1 wrong, 4 unclear (0.5% wrong)**. Wrong:
+  `collar` (I had it on a dog; the drawing is a shirt collar; corrected). Unclear: orangutan (ground or trees),
+  "fruit tree" (large or huge), elevator (the drawing is a sign), "suspension railway" (hangs). Record:
+  `sources/hand-core/place-size-audit.tsv`.
+- **A second look, at names with several meanings** (85 drawings on 2 sheets: tank, fan, horn, pipe, bow, file,
+  crane, bat, saw, letter, scales, dinosaur, lens, pool, pond, coach …): 3 more corrected: `dinosaur` (a
+  dinosaur, not a toy: ground, huge), `pick` (a pickaxe: ground, medium), `motor` (an engine: medium, no place).
+- **Not looked at:** the other about 1,750 labels next to their drawings. They rest on the name alone; where a
+  name and its drawing differ (as with `collar`) the label can be wrong. The sample says this is rare.
+- **Judgement that is mine:** the five size classes and where their borders are (an egg is small, a medal tiny, a
+  bed large, a pond huge); birds and flying insects are `sky`, ducks and swans `water`, hens and penguins
+  `ground`; food is `indoors` on a `table`; clothes are `on_thing` on a `person` (hats on a `head`, shoes on a
+  `foot`).
+- New tool `tools/contact-sheet.mjs` (the previews of a list of objects with captions, as PNG pages; needs
+  rsvg-convert and ImageMagick).
+- Numbers: catalog 12 worlds, 767 shards, vocab 19,122 words; 0 errors, 0 warnings. npm test 2,362 pass, 0 fail.

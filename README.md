@@ -12,9 +12,9 @@ module and load only the instance shards that a conversation needs, when the wor
   knowledge lazily.
 - **Documentation:** `docs/index.html` (how to use the catalog from an application) and `docs/worlds/README.md`.
 
-Status (Round 6): eleven worlds are published: `k.commonsense`, `k.objects` (2,103 drawable objects; browse them in
+Status (Round 7): twelve worlds are published: `k.commonsense`, `k.objects` (2,103 drawable objects; browse them in
 `docs/gallery.html`), `k.words`, `k.geo`, `k.units`, `k.time`, and the hand-written cores `k.space`, `k.animals`,
 `k.body`, `k.food`, and `k.faces` (faces built from replaceable parts; previews in
-`docs/worlds/k.faces/preview/index.html`). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
+`docs/worlds/k.faces/preview/index.html`), and `k.scenes` (the usual place and relative size of drawable things). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
 the build network; the import scripts for the first two exist with fixture tests).
 Agents working here start with [AGENTS.md](AGENTS.md).
