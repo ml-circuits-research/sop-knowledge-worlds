@@ -2783,3 +2783,49 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   bytes. Coverage of the 1,500 common things: a drawing of its name 680 to 727 (48%), neither 477 to 426. Joins:
   68 to 70 clashes. Catalog 22 worlds, 914 shards, vocab 23,605 words; 0 errors, 0 warnings. npm test 2,754:
   2,753 pass, 1 skipped, 0 fail.
+## PSys2 hand-overs to this repository (2026-11-14, second worker): `k.actions-missing.md` and `knowledge-out/catalog-lacks.md`, by cause
+
+The reviewer's block "01:00" lists these two hand-overs under Round 12 ("also in this round"); the task given to
+me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not started here).
+- **k.actions (cause: acts and verbs the act readers of the demo still keep in temporary tables):** two new acts,
+  **redo** (opposite undo; verbs redo, do again, put back, bring back, get back) and **deselect** (opposite pick;
+  "nothing picked" is deselect with no thing; verbs deselect, unselect, unmark, unhighlight, untick, uncheck);
+  undo and pick now name them as opposites. New verbs: make doodle (WordNet 1), scribble, whip up; place shove
+  (WordNet 3), nudge (WordNet 1), scoot; remove wipe; pick click, tap (both marked `on`), touch; undo step back;
+  save export (WordNet 2). **download moves from load to save** (the hand-over: for a drawing and for a file it is
+  the other direction), and save gets the role **format** (marked by as, in: "export as png"). The role place
+  of ask takes `by`, and every place role takes `close to`. `k.values.fill` (new type, shard `fills`): solid,
+  outline, striped, dotted, checked with their other words (filled in, hollow, stripy ...), the fill values of
+  change the demo listed by hand. The senses were read in the raw WordNet files; where the only sense is another
+  meaning (scribble: write; redo: remodel; download: from a central computer) the verb is hand-written.
+  **Left for Round 12 (`w.lang.en`)**, by cause: frames ("undo that change", "clear the selection", "nothing
+  selected", "give me" as a wish form) and discourse fillers are grammar, not verbs.
+- **Cities (cause: the rule of R10.0 that dropped every PSys2 city within a quarter of a degree of ours):** the
+  rule now decides by distance and spelling. Within 5 km and spelt alike (a quarter of the letters, an article or
+  "Saint" aside, or the shorter name the first words of the longer, never across a direction word): another name
+  of our city, a `core.word` in the new shard `psys2-city-words` (15: Saint Petersburg, Sevilla, Ulan Bator,
+  Frankfurt am Main, New York City, Andorra la Vella ...). Within 5 km and spelt otherwise: left and listed on
+  FROM-PSYS2.md (29: districts such as Kowloon, Manhattan, Çankaya, and names in another language such as
+  Copenhagen, Mecca, Chittagong, Astana: no rule tells an exonym from a district). Farther than 5 km: a city of
+  its own, **79 more** (597 in all): Mississauga, Guarulhos, Foshan, Puente Alto, Santa Cruz de la Sierra, the
+  boroughs of New York and Mexico City (GeoNames files them as cities; they stay). The import ran from the cited
+  commit `6b63b2ba`, extracted with `git archive` into /tmp (nothing in /tmp/wt2 was changed); `--commit` no
+  longer needs a git checkout. The first reading of the rule (letters within three) made Çankaya a name of
+  Ankara and Santo Domingo Este a name of Santo Domingo; both were caught by reading the 23 words and the rule was
+  tightened (they are now left).
+- **Countries:** the 16 name variants of the hand-over were already words since R10.0 (Türkiye, DR Congo, Ivory
+  Coast ...). **Kids facts:** `class` on every animal and `cannot=fly` for the flightless birds are there (first
+  worker, R9.2 and R11.1). **Face parts:** answered by a join, not a new flag: a slot of the layout face holds a
+  part of the face when its `holds` names a `k.body.part` with `part_of=face` (eyes, nose, mouth; not neck, not
+  hat); a test shows the lookup. **Not done:** the bounding boxes of the 38 map regions (the hand-over says the
+  map keeps its own generated data; a union of the country boxes would be a rule, but crosses the antimeridian
+  for Oceania and Russia; left), "February has 28 days, 29 in a leap year" (k.time has `days` and `leap_days`).
+- **Looked at:** the 15 city words and the 29 left (all); the 79 new cities as a list of names and countries;
+  the WordNet glosses of the 14 verbs with senses. **Not looked at:** the population of the new cities.
+- **What SOP Lang could not say:** that `deselect` with no thing means "nothing picked" (the role is optional;
+  the reading is in `about`).
+- Tests: `tests/k.actions.acts.test.mjs` (1 more), `tests/import.psys2.test.mjs` (2 more), questions ac-25,
+  ac-26, va-f1. Numbers: k.actions 16 acts, 56 roles, 314 verbs, 89 markings; k.geo +80 wires; k.values fills 10
+  wires. Catalog 22 worlds, 911 shards, vocab 23,476 words; 0 errors, 0 warnings. npm test 2,710: 2,704 pass,
+  6 skipped, 0 fail. The demo's real questions: unchanged (117 of 132 Talk failures found). After the rebase on R11.3 part 1:
+  catalog 22 worlds, 918 shards, vocab 23,723 words; npm test 2,760: 2,754 pass, 6 skipped, 0 fail.

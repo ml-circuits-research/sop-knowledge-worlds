@@ -11,3 +11,4 @@
 {"id":"va-11","ask":"which number is fifth","query":{"type":"k.values.number","where":{"text":"fifth","kind":"ordinal"},"seek":"value"},"expect":{"status":"supported","value":"5"}}
 {"id":"va-12","ask":"is a cube a solid shape","query":{"type":"k.values.shape","where":{"name":"cube"},"seek":"solid"},"expect":{"status":"supported","value":"true"}}
 {"id":"va-p1","ask":"how much lighter is a pale colour","query":{"type":"k.values.shade","where":{"name":"pale"},"seek":"lightness"},"expect":{"status":"supported","value":"0.3"}}
+{"id":"va-f1","ask":"what does outline mean as a fill","query":{"type":"k.values.fill","where":{"name":"outline"},"seek":"about"},"expect":{"status":"supported","value":"\"only the line around it is drawn; the inside is empty\""}}

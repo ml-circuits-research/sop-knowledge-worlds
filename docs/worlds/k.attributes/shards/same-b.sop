@@ -1,4 +1,4 @@
-# k.attributes/shards/same-b: one name, one thing: for 323 names that start with "b" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-b: one name, one thing: for 325 names that start with "b" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -130,6 +130,7 @@
 @k.attributes.same.belt.clothing k.attributes.same name=belt sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.beluga.animal k.attributes.same name=beluga sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.bench.thing k.attributes.same name=bench sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.bender.place k.attributes.same name=bender sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bento_box.food k.attributes.same name="bento box" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.beret.clothing k.attributes.same name=beret sense=clothing only=true in=k.attributes.number in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.berlin.place k.attributes.same name=berlin sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
@@ -270,6 +271,7 @@
 @k.attributes.same.bronco.thing k.attributes.same name=bronco sense=thing only=true in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bronze.colour k.attributes.same name=bronze sense=colour only=true in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.brooch.clothing k.attributes.same name=brooch sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.brooklyn.place k.attributes.same name=brooklyn sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.broom.thing k.attributes.same name=broom sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.broomstick.thing k.attributes.same name=broomstick sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.brother.person k.attributes.same name=brother sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"

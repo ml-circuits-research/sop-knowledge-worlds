@@ -136,6 +136,15 @@ export const POSITIONS = [
 ];
 
 // ---- Set words: [name, picks, manner, about, other words] ---------------------------------------------------------
+// Fills: how a shape is filled in a picture (PSys2 hand-over k.actions-missing.md: the values of `change` that the
+// demo listed by hand). [name, about, other words].
+export const FILLS = [
+  ['solid', 'filled all over with its colour', 'filled, filled in, coloured in, colored in, full'],
+  ['outline', 'only the line around it is drawn; the inside is empty', 'outlined, hollow, empty, not filled, line only, lines only'],
+  ['striped', 'filled with stripes', 'stripy, stripes, with stripes'],
+  ['dotted', 'filled with dots', 'spotted, spotty, polka dot, polka dots, with dots'],
+  ['checked', 'filled with squares of two colours', 'checkered, chequered, checks, squares'],
+];
 export const SET_WORDS = [
   ['all', 'all', undefined, 'every one of the things meant, taken together', 'all of them, all the, everything, every one, the whole lot'],
   ['each', 'all', 'one by one', 'every one of the things meant, taken one at a time', 'every, each one, each of them'],
@@ -235,6 +244,12 @@ export function valueShards() {
     const lines = SET_WORDS.map(([name, picks, manner, about]) => wire(`k.values.set_word.${seg(name)}`, 'k.values.set_word', [['name', name], ['picks', picks], ['manner', manner], ['about', text(about)]], HAND));
     const words = SET_WORDS.filter((s) => s[4]).map((s) => word(`k.values.word.set_word.${seg(s[0])}`, list(s[4]), s[0], 'k.values.set_word.name'));
     files['sets.sop'] = shard('sets', `${SET_WORDS.length} set words (${SET_WORDS.map((s) => s[0]).join(', ')}): how many of the things meant each picks, and in what manner.`, `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`);
+  }
+  // Fills.
+  {
+    const lines = FILLS.map(([name, about]) => wire(`k.values.fill.${seg(name)}`, 'k.values.fill', [['name', name], ['about', text(about)]], HAND));
+    const words = FILLS.map((f) => word(`k.values.word.fill.${seg(f[0])}`, list(f[2]), f[0], 'k.values.fill.name'));
+    files['fills.sop'] = shard('fills', `${FILLS.length} ways a shape is filled in a picture (${FILLS.map((f) => f[0]).join(', ')}) and their other words.`, `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`);
   }
   // Numbers.
   {

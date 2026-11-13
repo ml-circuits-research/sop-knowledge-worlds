@@ -33,6 +33,15 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   (thing -> role) would say the same fact twice; the tool drops from `used_by` every pair the role already lists,
   and the aspect table reads `uses` backwards. Which direction is the home is a choice to write down.
 
+- **A dropped fact needs a reason that can be checked** (hand-overs). R10.0 dropped every city within a quarter
+  of a degree of ours as "a suburb or another spelling"; the demo reported 137 missing cities. Split by cause, the
+  quarter degree held three different things: other spellings (a word for our city), districts and exonyms
+  (left, listed), and separate cities 5 to 30 km away (taken). A rule that lumps cases hides a gap.
+- **Some asked-for flags are joins that already exist** (hand-overs): "which slots of the face are face parts"
+  is `k.layouts.slot.holds` = `k.body.part.name` with `part_of=face`. Answering with a test of the lookup, not a
+  new key, keeps one fact in one place.
+- **Verbs and frames are different layers** (hand-overs): "redo", "deselect", "export" are words of acts;
+  "undo that change", "clear the selection", "give me" are frames and belong to the grammar world.
 ## Round 11 (first worker)
 
 - **Item 2: a reusable world is a schema with words and nothing else** (`w.list`, `w.seating`, `w.timeline`).

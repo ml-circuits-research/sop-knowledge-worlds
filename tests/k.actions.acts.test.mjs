@@ -76,3 +76,16 @@ test('verbs reach their shard through the vocabulary index', () => {
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
   for (const [word, shard] of [['erase', 'verbs-remove'], ['get rid of', 'verbs-remove'], ['put on', 'verbs-place'], ['enlarge', 'verbs-change'], ['ungroup', 'verbs-take_apart']]) assert.ok(vocab[word]?.includes(`k.actions/shards/${shard}`), word);
 });
+
+test('the PSys2 hand-over k.actions-missing.md: redo and deselect are acts with their opposites; download and export save with a format; the verbs it named are there', () => {
+  const act = (n) => acts.find((a) => one(a, 'name') === n);
+  assert.equal(one(act('redo'), 'opposite'), 'undo');
+  assert.equal(one(act('undo'), 'opposite'), 'redo');
+  assert.equal(one(act('deselect'), 'opposite'), 'pick');
+  assert.equal(one(act('pick'), 'opposite'), 'deselect');
+  const actsOf = (text) => verbs.filter((v) => one(v, 'text') === text).map((v) => one(v, 'act')).sort();
+  assert.deepEqual(actsOf('download'), ['save']);
+  assert.ok(markings.some((m) => one(m, 'verb') === 'export' && one(m, 'marker') === 'as' && one(m, 'role') === 'format'));
+  for (const [a, vs] of [['make', ['doodle', 'scribble', 'whip up']], ['place', ['shove', 'nudge', 'scoot']], ['undo', ['step back']], ['redo', ['redo', 'do again', 'get back']],
+    ['pick', ['click', 'tap', 'touch']], ['deselect', ['deselect', 'unselect', 'untick']], ['remove', ['wipe']], ['save', ['export']]]) for (const v of vs) assert.ok(actsOf(v).includes(a), `${a}: ${v}`);
+});

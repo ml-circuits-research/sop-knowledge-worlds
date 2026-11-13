@@ -21,7 +21,7 @@ test('every fact taken names psys2-worlds and its commit as a source; third-part
       const src = w.attrs['core.source'].map(tok);
       assert.ok(src.includes(`psys2-worlds ${commit}`), w.id);
       if (s.id.includes('psys2-countries')) { assert.ok(src.includes('countries 5.1.0'), w.id); assert.equal(license, 'ODbL-1.0'); }
-      else if (s.id.includes('psys2-cities')) { assert.ok(src.includes('geonames all-the-cities-3.1.0'), w.id); assert.equal(license, 'CC-BY-4.0'); }
+      else if (s.id.includes('psys2-cities') || s.id.includes('psys2-city-words')) { assert.ok(src.includes('geonames all-the-cities-3.1.0'), w.id); assert.equal(license, 'CC-BY-4.0'); }
       else { assert.deepEqual(src, [`psys2-worlds ${commit}`], w.id); assert.equal(license, 'CC0-1.0'); }
     }
   }
@@ -75,4 +75,25 @@ test('the shards and the page are what the import gives from the PSys2 checkout 
   const names = Object.entries(files).flatMap(([world, shards]) => Object.keys(shards).map((f) => `${world}/shards/${f.slice(0, -4)}`)).sort();
   assert.deepEqual(mine.map((s) => s.id).sort(), names);
   for (const [world, shards] of Object.entries(files)) for (const [name, text] of Object.entries(shards)) assert.equal(readFileSync(join(WORLDS_DIR, world, 'shards', name), 'utf8'), text, name);
+});
+
+test('cities near ours (catalog-lacks hand-over): a name spelt alike is a word for our city; a city farther than 5 km is a city of its own', () => {
+  const geo = fullWorld('k.geo', worlds);
+  const city = (n) => geo.ofType('k.geo.city').find((c) => tok(c.attrs.name[0]) === n);
+  for (const n of ['Mississauga', 'Guarulhos', 'Foshan', 'Puente Alto', 'Santa Cruz de la Sierra']) assert.ok(city(n), n);
+  const words = mine.filter((s) => s.id.includes('psys2-city-words')).flatMap((s) => parse(s.text));
+  const means = (t) => words.find((w) => tok(w.attrs.text[0]) === t)?.attrs.means.map(tok)[0];
+  assert.equal(means('Saint Petersburg'), 'St. Petersburg');
+  assert.equal(means('Sevilla'), 'Seville');
+  assert.equal(means('Andorra la Vella'), 'Andorra');
+  for (const t of ['Kowloon', 'Manhattan', 'Santo Domingo Este', 'Çankaya']) assert.equal(means(t), undefined, `${t} is not another name of a city we have`);
+  for (const w of words) assert.ok(city(tok(w.attrs.means[0])), `${w.id}: no city ${w.attrs.means[0]}`);
+});
+
+test('catalog-lacks: which slots of the layout face hold a part of the face proper is a join, not a new flag: a slot whose `holds` names a k.body.part with part_of=face', () => {
+  const body = fullWorld('k.body', worlds), layouts = fullWorld('k.layouts', worlds);
+  const faceParts = new Set(body.ofType('k.body.part').filter((p) => (p.attrs.part_of ?? []).map(tok).includes('face')).map((p) => tok(p.attrs.name[0])));
+  const slots = layouts.ofType('k.layouts.slot').filter((s) => tok(s.attrs.layout[0]) === 'face' && (s.attrs.holds ?? []).map(tok).some((h) => faceParts.has(h))).map((s) => tok(s.attrs.name[0])).sort();
+  assert.ok(['eyes', 'mouth', 'nose'].every((n) => slots.includes(n)), slots.join(' '));
+  assert.ok(!slots.includes('neck') && !slots.includes('hat'), slots.join(' '));
 });

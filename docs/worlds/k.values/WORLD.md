@@ -31,7 +31,8 @@ a place in the picture, which of several things, or a number.
 
 ## Shards
 
-`colours-css` (233 wires), `colours-common` (44), `scales` (186), `shapes` (60), `directions` (61), `sets` (37),
+`fills` (5 fills: solid, outline, striped, dotted, checked, with their other words; `k.values.fill`, a value of
+the role `value` of change, from the PSys2 hand-over), `colours-css` (233 wires), `colours-common` (44), `scales` (186), `shapes` (60), `directions` (61), `sets` (37),
 `numbers` (232): 838 wires. Written by `tools/values-core.mjs`.
 
 ## What it does not know

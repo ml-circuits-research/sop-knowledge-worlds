@@ -7,7 +7,8 @@ the object and the prepositions.
 ## What it knows
 
 - `k.actions.act` (identity `name`): make, remove, change, place, connect, group, take apart, pick, ask, copy, send,
-  undo, save, load. `about`, `opposite` (make and remove, save and load, connect and take apart), `role` (many).
+  undo, save, load, and from the PSys2 hand-over (`k.actions-missing.md`) redo and deselect. `about`, `opposite`
+  (make and remove, save and load, connect and take apart, undo and redo, pick and deselect), `role` (many).
 - `k.actions.role` (identity `act`, `name`): what an act can be told. `holds` (thing, kind, place, direction, value,
   attribute, amount, number, name, person, group, topic, means), `needed=true` where the act cannot be done
   without it, `marker` (many): the prepositions that usually mark the role after any verb of the act (the place of
@@ -28,10 +29,14 @@ the object and the prepositions.
 
 ## Shards
 
-`acts` (14 acts, 52 roles) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
+`acts` (16 acts, 56 roles) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
 `verbs-place`, `verbs-connect`, `verbs-group`, `verbs-take_apart`, `verbs-pick`, `verbs-ask`, `verbs-copy`,
-`verbs-send`, `verbs-undo`, `verbs-save`, `verbs-load`: 291 verbs (269 from WordNet senses, 22 hand-written) and
-83 markings. Written by `tools/acts-core.mjs` from `sources/hand-core/act-verbs.tsv` (the table that was read and
+`verbs-send`, `verbs-undo`, `verbs-save`, `verbs-load`, `verbs-redo`, `verbs-deselect`: 314 verbs (272 from WordNet
+senses, 42 hand-written) and 89 markings. The hand-over added doodle, scribble, whip up, shove, nudge, scoot, wipe,
+click, tap, touch, step back, export; moved download from load to save (with the new role `format` of save, marked
+by as and in); and the verbs of redo (redo, do again, put back, bring back, get back) and deselect (deselect,
+unselect, unmark, unhighlight, untick, uncheck). Left for `w.lang.en` (Round 12): the frames ("undo that change",
+"clear the selection", "give me") and the fillers. Written by `tools/acts-core.mjs` from `sources/hand-core/act-verbs.tsv` (the table that was read and
 filled in) and `sources/wordnet/act-verb-glosses.tsv`.
 
 ## What it does not know

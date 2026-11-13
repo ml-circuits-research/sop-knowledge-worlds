@@ -14,7 +14,7 @@ const of = (t) => world.ofType(`k.values.${t}`);
 
 test('the shards are what tools/values-core.mjs gives (the CSS colours when the raw file is there)', () => {
   const files = valueShards();
-  assert.equal(Object.keys(files).length, existsSync(CSS_RAW) ? 7 : 6);
+  assert.equal(Object.keys(files).length, existsSync(CSS_RAW) ? 8 : 7);
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(WORLDS_DIR, 'k.values', 'shards', name), 'utf8'), text, name);
 });
 

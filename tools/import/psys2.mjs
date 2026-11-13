@@ -113,15 +113,39 @@ export function importPsys2(from, commit) {
     put('k.geo', 'psys2-countries', `for ${ours.size} countries and territories the two-letter code, the currency and the languages; ${fresh.length} territories that were missing (${fresh.map((c) => one(c, 'name')).join(', ')}); and ${words} more names by which a country is known. The facts of one country merge with those of the continent shards.`, lines,
       { sources: ['countries 5.1.0 (mledoze/countries, ODbL-1.0), as carried by the PSys2 world geo.map', `${SRC} (the selection and the short names)`], license: 'ODbL-1.0' });
     // Cities: those of PSys2 that we do not have by name in the country, nor within a quarter of a degree.
-    const oc = (facts.get('k.geo.city') ?? []).map((w) => ({ n: norm(one(w, 'name')), c: one(w, 'country'), lat: Number(one(w, 'lat')), lon: Number(one(w, 'lon')) }));
+    const oc = (facts.get('k.geo.city') ?? []).map((w) => ({ name: one(w, 'name'), n: norm(one(w, 'name')), c: one(w, 'country'), lat: Number(one(w, 'lat')), lon: Number(one(w, 'lon')) }));
     const cityLines = new Map(); let same = 0, near = 0, added = 0, nowhere = 0;
+    // A city of PSys2 near one of ours with another name (catalog-lacks hand-over, by cause): within 5 km and with a
+    // name spelt alike (see `alike`; "Saint" read as "St", an article left out), it is the same
+    // city and its name becomes a word for ours (Saint Petersburg, Sevilla, Ulan Bator); within 5 km and spelt
+    // otherwise, it is a district or a name in another language (Kowloon, Manhattan, Copenhagen) and is left, listed
+    // on the page; farther than 5 km, it is a city of its own (Mississauga, Guarulhos, Foshan) and is added.
+    const nameWords = (t) => norm(t).replace(/^city of /, '').replace(/\bsaint\b/g, 'st').replace(/[^a-z ]/g, '').split(' ').filter(Boolean).filter((w, i) => i > 0 || !/^(al|az|el|ar|as|ad|an|ash)$/.test(w));
+    const lev = (a, b) => { const d = Array.from({ length: b.length + 1 }, (_, j) => j); for (let i = 1; i <= a.length; i++) { let prev = d[0]; d[0] = i; for (let j = 1; j <= b.length; j++) { const t = d[j]; d[j] = Math.min(d[j] + 1, d[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1)); prev = t; } } return d[b.length]; };
+    // Spelt alike: the same letters but for a quarter of them (Sevilla, Ulan Bator), or the shorter name is the first
+    // words of the longer and the rest is no direction (Frankfurt am Main, New York City; not Santo Domingo Este).
+    const alike = (a, b) => {
+      const x = nameWords(a), y = nameWords(b), fx = x.join(''), fy = y.join('');
+      const dir = (w) => /^(north|south|east|west|este|oeste|norte|sur|nord|sud)$/.test(w);
+      if (x.some((w) => dir(w) && !y.includes(w)) || y.some((w) => dir(w) && !x.includes(w))) return false;
+      if (lev(fx, fy) <= Math.max(1, Math.floor(Math.max(fx.length, fy.length) / 4))) return true;
+      const [short, long] = x.length <= y.length ? [x, y] : [y, x];
+      return short.length > 0 && short.every((w, i) => long[i] === w);
+    };
+    const km = (o, lat, lon) => Math.hypot(o.lat - lat, (o.lon - lon) * Math.cos((lat * Math.PI) / 180)) * 111.2;
+    const cityWords = [], left = [];
     const seen = new Set();
     for (const c of [...pcity].sort((a, b) => byText(one(a, 'cc'), one(b, 'cc')) || byText(one(a, 'name'), one(b, 'name')))) {
       const country = nameOf.get(one(c, 'cc'));
       if (!country) { nowhere++; continue; }
       const n = norm(one(c, 'name')), lat = Number(one(c, 'lat')), lon = Number(one(c, 'lon'));
       if (oc.some((o) => o.c === country && o.n === n)) { same++; continue; }
-      if (oc.some((o) => o.c === country && Math.abs(o.lat - lat) < 0.25 && Math.abs(o.lon - lon) < 0.25)) { near++; continue; }
+      const close = oc.filter((o) => o.c === country && Math.abs(o.lat - lat) < 0.25 && Math.abs(o.lon - lon) < 0.25).sort((a, b) => km(a, lat, lon) - km(b, lat, lon));
+      if (close.length && km(close[0], lat, lon) < 5) {
+        if (alike(one(c, 'name'), close[0].name)) cityWords.push({ text: one(c, 'name'), means: close[0].name, cc: one(c, 'cc') });
+        else left.push(`${one(c, 'name')} (${close[0].name}, ${km(close[0], lat, lon).toFixed(1)} km)`);
+        near++; continue;
+      }
       const id = `k.geo.psys2.city.${one(c, 'cc')}.${seg(one(c, 'name'))}`;
       if (seen.has(id)) continue;
       seen.add(id);
@@ -130,6 +154,9 @@ export function importPsys2(from, commit) {
       cityLines.get(cont).push(`${wire(id, 'k.geo.city', [['name', one(c, 'name')], ['country', country], ['capital_of', one(c, 'capital') === 'true' && !ours.has(one(c, 'cc')) ? country : undefined], ['population', one(c, 'pop')], ['lat', Math.round(lat * 100) / 100], ['lon', Math.round(lon * 100) / 100]], 'geonames all-the-cities-3.1.0')} core.source=${JSON.stringify(SRC)}`);
       added++;
     }
+    const wordLines = cityWords.sort((a, b) => byText(a.means, b.means) || byText(a.text, b.text)).map((w) => `${wire(`k.geo.psys2.cityword.${w.cc}.${seg(w.text)}`, 'core.word', [['text', w.text], ['means', w.means], ['of', 'k.geo.city.name']], 'geonames all-the-cities-3.1.0')} core.source=${JSON.stringify(SRC)}`);
+    if (wordLines.length) put('k.geo', 'psys2-city-words', `${wordLines.length} other spellings of cities we have, from the names PSys2 used (Saint Petersburg for St. Petersburg, Sevilla for Seville): a city of PSys2 within 5 km of ours whose name is spelt alike.`, wordLines,
+      { sources: ['geonames all-the-cities-3.1.0 (GeoNames, CC-BY-4.0, https://www.geonames.org), as carried by the PSys2 world geo.map', `${SRC} (the selection)`], license: 'CC-BY-4.0' });
     for (const [cont, ls] of [...cityLines.entries()].sort((a, b) => byText(a[0], b[0]))) put('k.geo', `psys2-cities-${cont.toLowerCase().replace(/ /g, '-')}`, `${cont}: ${ls.length} more cities with country, population and place, that the continent shard does not have.`, ls,
       { sources: ['geonames all-the-cities-3.1.0 (GeoNames, CC-BY-4.0, https://www.geonames.org), as carried by the PSys2 world geo.map', `${SRC} (the selection: the largest cities and the capitals)`], license: 'CC-BY-4.0' });
     // Groups of countries.
@@ -145,9 +172,9 @@ export function importPsys2(from, commit) {
       `| countries and territories | ${pc.length} | ${countries.size} | ${fresh.length} missing territories | \`k.geo/shards/psys2-countries\` (ODbL-1.0) |`,
       `| two-letter code, currency, languages | ${pc.length} | 0 | ${ours.size + fresh.length} countries: new keys \`code2\`, \`currency\`, \`language\` | the same shard |`,
       `| other names of a country (uk, britain, uae, holland, burma, Türkiye, DR Congo) | – | – | ${words} words | the same shard (\`core.word\`) |`,
-      `| cities | ${pcity.length} | ${oc.length} | ${added} (${same} we had by name, ${near} lie within a quarter of a degree of a city we have: a suburb or another spelling; ${nowhere} are in Antarctica or nowhere) | \`k.geo/shards/psys2-cities-<continent>\` (CC-BY-4.0) |`,
+      `| cities | ${pcity.length} | ${oc.length} | ${added} (${same} we had by name; ${near} lie within 5 km of a city we have: ${cityWords.length} spelt alike, taken as other names of ours (\`core.word\`, shard \`psys2-city-words\`), ${left.length} spelt otherwise, left as districts or names in another language; ${nowhere} are in Antarctica or nowhere; the cities farther than 5 km from ours are taken even when they lie in the area of a larger city) | \`k.geo/shards/psys2-cities-<continent>\` (CC-BY-4.0) |`,
       `| groups of countries | ${preg.filter((r) => one(r, 'kind') === 'group').length} | 0 | ${groups.length}: new type \`k.geo.group\` | \`k.geo/shards/psys2-groups\` (CC0) |`, '',
-      '**Left:** capital, continent, subregion, population, area, neighbours, landlocked, independent, position and box of the countries we have (ours come from Natural Earth and the same country list); the continents and the 21 subregions as lists of members (ours: `k.geo.country.continent` and `.region`); the bounding boxes of regions; the search keys of cities; the search keys of countries that are a name with its ending cut ("barbado", "emirate") or a word of the name of another country ("korea", "guiana").', '',
+      '**Left:** capital, continent, subregion, population, area, neighbours, landlocked, independent, position and box of the countries we have (ours come from Natural Earth and the same country list); the continents and the 21 subregions as lists of members (ours: `k.geo.country.continent` and `.region`); the bounding boxes of regions; the search keys of cities; the search keys of countries that are a name with its ending cut ("barbado", "emirate") or a word of the name of another country ("korea", "guiana"); cities within 5 km of ours and spelt otherwise: ' + left.join(', ') + '.', '',
       `**Disagree** (ours kept): capital, ${dis.capital.length}: ${cut(dis.capital)}. Population more than a fifth apart, ${dis.population.length}: ${cut(dis.population)}. Continent, ${dis.continent.length}: ${cut(dis.continent)}. Independent, ${dis.independent.length}: ${cut(dis.independent)}. City populations are not compared: GeoNames counts the city proper, Natural Earth the urban area.`]);
   }
 
@@ -385,7 +412,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   // it would take the facts away again. So the tool writes only from the commit the page on disk cites (or with
   // --force, for a deliberate new reading).
   const cited = existsSync(PAGE) ? /at PSys2 commit `([0-9a-f]+)`/.exec(readFileSync(PAGE, 'utf8'))?.[1] : null;
-  const commit = arg('commit', psys2Commit(from));
+  const commit = arg('commit') ?? psys2Commit(from);
   if (cited && cited !== commit && !process.argv.includes('--force')) { console.error(`the page cites PSys2 commit ${cited}; this checkout is at ${commit} for the files read: nothing written (use --force for a new reading)`); process.exit(1); }
   const { files, page, stats } = importPsys2(from, commit);
   for (const [world, shards] of Object.entries(files)) writeShards(join(WORLDS_DIR, world, 'shards'), shards, 'psys2');

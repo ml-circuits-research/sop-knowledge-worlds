@@ -1,4 +1,4 @@
-# k.geo/shards/psys2-cities-europe: Europe: 117 more cities with country, population and place, that the continent shard does not have.
+# k.geo/shards/psys2-cities-europe: Europe: 122 more cities with country, population and place, that the continent shard does not have.
 # sources: geonames all-the-cities-3.1.0 (GeoNames, CC-BY-4.0, https://www.geonames.org), as carried by the PSys2 world geo.map
 # sources: psys2-worlds 6b63b2ba (the selection: the largest cities and the capitals)
 # license: CC-BY-4.0
@@ -25,6 +25,7 @@
 @k.geo.psys2.city.IT.Genoa k.geo.city name=Genoa country=Italy population=580223 lat=44.4 lon=8.94 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.IT.Palermo k.geo.city name=Palermo country=Italy population=648260 lat=38.13 lon=13.34 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.JE.Saint_Helier k.geo.city name="Saint Helier" country=Jersey population=28000 lat=49.19 lon=-2.1 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
+@k.geo.psys2.city.MD.Bender k.geo.city name=Bender country=Moldova population=110175 lat=46.83 lon=29.48 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.MD.Ribnita k.geo.city name=Rîbniţa country=Moldova population=55455 lat=47.77 lon=29.01 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.MD.Ungheni k.geo.city name=Ungheni country=Moldova population=34422 lat=47.21 lon=27.8 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.PL.Poznan k.geo.city name=Poznań country=Poland population=570352 lat=52.41 lon=16.93 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
@@ -37,6 +38,7 @@
 @k.geo.psys2.city.RO.Bistrita k.geo.city name=Bistriţa country=Romania population=81318 lat=47.13 lon=24.5 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Botosani k.geo.city name=Botoşani country=Romania population=114783 lat=47.75 lon=26.67 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Brasov k.geo.city name=Braşov country=Romania population=276088 lat=45.65 lon=25.61 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
+@k.geo.psys2.city.RO.Braila k.geo.city name=Brăila country=Romania population=213569 lat=45.27 lon=27.97 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Buzau k.geo.city name=Buzău country=Romania population=130954 lat=45.15 lon=26.83 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Barlad k.geo.city name=Bârlad country=Romania population=67818 lat=46.23 lon=27.67 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Caracal k.geo.city name=Caracal country=Romania population=33761 lat=44.12 lon=24.35 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
@@ -82,16 +84,19 @@
 @k.geo.psys2.city.RO.Suceava k.geo.city name=Suceava country=Romania population=105796 lat=47.63 lon=26.25 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Tecuci k.geo.city name=Tecuci country=Romania population=41154 lat=45.85 lon=27.43 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Tulcea k.geo.city name=Tulcea country=Romania population=92475 lat=45.18 lon=28.81 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
+@k.geo.psys2.city.RO.Turda k.geo.city name=Turda country=Romania population=54586 lat=46.57 lon=23.78 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Targoviste k.geo.city name=Târgovişte country=Romania population=88435 lat=44.93 lon=25.46 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Targu_Jiu k.geo.city name="Târgu Jiu" country=Romania population=97179 lat=45.05 lon=23.28 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Targu-Mures k.geo.city name=Târgu-Mureş country=Romania population=146863 lat=46.54 lon=24.56 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Vaslui k.geo.city name=Vaslui country=Romania population=69225 lat=46.63 lon=27.73 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
+@k.geo.psys2.city.RO.Voluntari k.geo.city name=Voluntari country=Romania population=30323 lat=44.49 lon=26.17 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RO.Zalau k.geo.city name=Zalău country=Romania population=63232 lat=47.2 lon=23.05 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Astrakhan k.geo.city name=Astrakhan country=Russia population=502533 lat=46.35 lon=48.04 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Barnaul k.geo.city name=Barnaul country=Russia population=599579 lat=53.36 lon=83.76 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Chelyabinsk k.geo.city name=Chelyabinsk country=Russia population=1062919 lat=55.15 lon=61.43 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Irkutsk k.geo.city name=Irkutsk country=Russia population=586695 lat=52.3 lon=104.3 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Izhevsk k.geo.city name=Izhevsk country=Russia population=631038 lat=56.85 lon=53.2 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
+@k.geo.psys2.city.RU.Kalininskiy k.geo.city name=Kalininskiy country=Russia population=504641 lat=60 lon=30.39 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Kazan k.geo.city name=Kazan country=Russia population=1104738 lat=55.79 lon=49.12 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Khabarovsk k.geo.city name=Khabarovsk country=Russia population=579000 lat=48.48 lon=135.08 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"
 @k.geo.psys2.city.RU.Khabarovsk_Vtoroy k.geo.city name="Khabarovsk Vtoroy" country=Russia population=578303 lat=48.44 lon=135.13 core.source="geonames all-the-cities-3.1.0" core.source="psys2-worlds 6b63b2ba"

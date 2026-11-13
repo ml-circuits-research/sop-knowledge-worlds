@@ -18,7 +18,7 @@ const RAW = join(REPO, 'sources', 'wordnet', 'raw', 'wordnet31');
 
 // Prepositions that say where: they mark the place of an act.
 export const WHERE = ['on', 'in', 'at', 'onto', 'into', 'to', 'under', 'above', 'below', 'over', 'behind', 'beside', 'near', 'between',
-  'inside', 'outside', 'around', 'next to', 'in front of', 'on top of', 'to the left of', 'to the right of', 'in the middle of'];
+  'inside', 'outside', 'around', 'next to', 'close to', 'in front of', 'on top of', 'to the left of', 'to the right of', 'in the middle of'];
 
 // An act: [name, about, opposite, roles]. A role: [name, holds, needed, about, markers].
 export const ACTS = [
@@ -66,7 +66,7 @@ export const ACTS = [
     ['source', 'thing', false, 'what it is separated from', ['from', 'off']],
     ['tool', 'thing', false, 'what it is separated with', ['with', 'using']],
   ]],
-  ['pick', 'choose one or some things out of several, to act on them next', undefined, [
+  ['pick', 'choose one or some things out of several, to act on them next', 'deselect', [
     ['thing', 'thing', true, 'what is picked', []],
     ['source', 'group', false, 'what it is picked from', ['from', 'out of', 'among']],
     ['other', 'thing', false, 'what is not picked', ['over', 'instead of', 'rather than']],
@@ -74,7 +74,7 @@ export const ACTS = [
   ['ask', 'want to know something about the things that are there', undefined, [
     ['topic', 'topic', false, 'what the question is about', ['about']],
     ['thing', 'thing', false, 'the thing asked for', ['for']],
-    ['place', 'place', false, 'where to look', WHERE],
+    ['place', 'place', false, 'where to look', [...WHERE, 'by']],
     ['other', 'thing', false, 'a second thing, for a comparison', ['with', 'to', 'and']],
   ]],
   ['copy', 'make another thing that is the same as one that is there', undefined, [
@@ -88,7 +88,7 @@ export const ACTS = [
     ['means', 'means', false, 'how it is sent', ['by', 'via', 'through']],
     ['format', 'value', false, 'as what it is sent', ['as']],
   ]],
-  ['undo', 'take back what was done last, so that things are as before', undefined, [
+  ['undo', 'take back what was done last, so that things are as before', 'redo', [
     ['thing', 'thing', false, 'what was done and is taken back', []],
     ['number', 'number', false, 'how many steps', []],
     ['state', 'value', false, 'the earlier state to return to', ['to']],
@@ -97,10 +97,19 @@ export const ACTS = [
     ['thing', 'thing', false, 'what to keep', []],
     ['name', 'name', false, 'the name it is kept under', ['as', 'under']],
     ['place', 'place', false, 'where it is kept', ['to', 'in', 'on']],
+    ['format', 'value', false, 'in what form it is kept, such as a kind of file', ['as', 'in']],
   ]],
   ['load', 'bring back work that was kept', 'save', [
     ['thing', 'thing', true, 'what to bring back', []],
     ['source', 'place', false, 'where it was kept', ['from']],
+  ]],
+  // From the PSys2 hand-over k.actions-missing.md: the opposite of undo, and the opposite of pick (nothing picked).
+  ['redo', 'do again what was taken back by undo', 'undo', [
+    ['thing', 'thing', false, 'what was taken back and is done again', []],
+    ['number', 'number', false, 'how many steps', []],
+  ]],
+  ['deselect', 'leave off picking a thing, so that it is no longer picked; with no thing, nothing is picked', 'pick', [
+    ['thing', 'thing', false, 'what is no longer picked; none: all of them', []],
   ]],
 ];
 

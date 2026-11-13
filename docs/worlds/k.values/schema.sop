@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/values-core.mjs
 
-@k.values core.module name=k.values version=1 exports=colour exports=scale exports=step exports=comparative exports=shape exports=direction exports=position exports=set_word exports=number exports=shade exports=reply core.source="hand-core 1"
+@k.values core.module name=k.values version=1 exports=colour exports=scale exports=step exports=comparative exports=shape exports=direction exports=position exports=set_word exports=number exports=shade exports=reply exports=fill core.source="hand-core 1"
 
 # A colour name. `rgb` is its value as a string of the form "#RRGGBB" (the form k.objects and k.faces use), exact
 # for a CSS colour, whose keyword is `css`; a common name that has no fixed value has `rgb_about` instead, a usual
@@ -92,6 +92,13 @@
 @k.values.word.number core.word text=number text=numbers means=k.values.number core.source="hand-core 1"
 @k.values.word.scale core.word text=scale text=scales means=k.values.scale core.source="hand-core 1"
 
+# A fill: how a shape is filled in a picture (solid, outline, striped). A value of the role `value` of the act
+# change in k.actions ("make it outline", "fill it in").
+@k.values.fill core.type of=k.values.fill shared=true closed=true core.source="hand-core 1"
+@k.values.fill.name core.slot of=k.values.fill key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.values.fill.about core.slot of=k.values.fill key=about required=true kind=string core.source="hand-core 1"
+@k.values.word.fill core.word text=fill text=filled text=pattern means=k.values.fill core.source="hand-core 1"
+
 # A shade word: a word said before a colour name that changes the colour ("light blue", "deep red"). `lightness`
 # says how much lighter (above 0) or darker (below 0) the colour becomes, `saturation` how much more (above 0) or
 # less (below 0) colour it has, each as a part of the full range (0.2 is a fifth).
@@ -133,6 +140,7 @@
 @k.values.word.key.number.kind core.word text=kind means=k.values.number.kind core.source="hand-core 1"
 @k.values.word.key.number.value core.word text=value means=k.values.number.value core.source="hand-core 1"
 @k.values.word.key.number.value_about core.word text=value means=k.values.number.value_about core.source="hand-core 1"
+@k.values.word.key.fill.about core.word text=about means=k.values.fill.about core.source="hand-core 1"
 @k.values.word.key.shade.lightness core.word text=lightness means=k.values.shade.lightness core.source="hand-core 1"
 @k.values.word.key.shade.saturation core.word text=saturation means=k.values.shade.saturation core.source="hand-core 1"
 @k.values.word.key.reply.opposite core.word text=opposite means=k.values.reply.opposite core.source="hand-core 1"

@@ -14,6 +14,9 @@ make	assemble	1	kind						from>material; out of>material
 make	put together	1	kind				yes		from>material; out of>material
 make	set up	2	kind				yes		from>material; out of>material
 make	put on	2	kind						
+make	doodle	1	kind						
+make	scribble		kind						
+make	whip up		kind				yes		
 remove	remove	1 3	thing						
 remove	delete	1 2	thing						
 remove	erase	1 2	thing						
@@ -35,6 +38,7 @@ remove	cancel	4	thing
 remove	cut out	1	thing				yes		
 remove	cross out	1	thing				yes		from>source
 remove	take off	2	thing				yes	source	from>source
+remove	wipe		thing						
 change	change	1	thing	value					
 change	modify	3	thing	value					
 change	alter	1	thing	value					
@@ -137,6 +141,9 @@ place	put in	1	thing				yes	place
 place	insert	2	thing						
 place	scatter	3	thing						
 place	spread out	3	thing				yes		
+place	shove	3	thing						
+place	nudge	1	thing						
+place	scoot		thing						
 connect	connect	1	thing						
 connect	link	2	thing						
 connect	link up	2	thing				yes		
@@ -209,6 +216,9 @@ pick	tick	4	thing
 pick	point	1							at>thing; to>thing
 pick	prefer	2	thing						over>other
 pick	opt	1							for>thing
+pick	click								on>thing
+pick	tap		thing						on>thing
+pick	touch		thing						
 ask	ask	2 4	topic						
 ask	inquire	1	topic						
 ask	enquire	1	topic						
@@ -264,6 +274,7 @@ undo	take back		thing				yes
 undo	roll back		thing				yes		
 undo	revert	1							to>state
 undo	go back								to>state
+undo	step back								
 save	save	11	thing						
 save	write	6	thing						
 save	store	1 2	thing						
@@ -276,12 +287,13 @@ save	back up	4	thing				yes
 save	archive	1	thing						
 save	memorize	1	thing						
 save	hold on to		thing						
+save	download		thing						as>format; in>format
+save	export	2	thing						as>format; in>format
 load	load	3	thing						
 load	open	11	thing						
 load	retrieve	1	thing						
 load	recover	1	thing						
 load	import	2	thing						
-load	download	1	thing						
 load	read	4	thing						
 load	bring back	1	thing				yes		
 load	get back	1	thing				yes		
@@ -290,3 +302,14 @@ load	restore	3	thing
 load	reload	1	thing						
 load	pull up		thing				yes		
 load	bring up		thing				yes		
+redo	redo		thing						
+redo	do again		thing				yes		
+redo	put back		thing				yes		
+redo	bring back		thing				yes		
+redo	get back		thing				yes		
+deselect	deselect		thing						
+deselect	unselect		thing						
+deselect	unmark		thing						
+deselect	unhighlight		thing						
+deselect	untick		thing						
+deselect	uncheck		thing						

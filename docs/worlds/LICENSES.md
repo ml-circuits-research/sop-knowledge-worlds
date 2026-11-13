@@ -101,7 +101,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC-BY-4.0.
 - Attribution: Contains data from GeoNames (https://www.geonames.org), licensed under CC BY 4.0.
 - Shard terms: CC-BY-4.0
-- Used by: `k.geo` (7 shards)
+- Used by: `k.geo` (8 shards)
 
 ## hand-core-1
 
@@ -110,7 +110,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (18 shards), `k.animals` (6 shards), `k.attributes` (39 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.geo` (1 shards), `k.layouts` (4 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (2 shards), `k.values` (7 shards), `k.wearables` (2 shards)
+- Used by: `k.actions` (21 shards), `k.animals` (6 shards), `k.attributes` (39 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.geo` (1 shards), `k.layouts` (4 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (2 shards), `k.values` (8 shards), `k.wearables` (2 shards)
 
 ## mulberry-fa94a93
 
@@ -155,7 +155,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 for the hand-written knowledge (the project's own data; the reviewer's ruling in `worker-tasks.md`, block "2026-11-13 22:30"). The file `geo.map/kb.sop` is not hand-written: it was generated from mledoze/countries (ODbL-1.0) and GeoNames (CC-BY-4.0); the facts taken from it keep those sources (`countries 5.1.0`, `geonames all-the-cities-3.1.0`) and licences, with `psys2-worlds` as a second source.
 - Attribution: none needed for the hand-written part.
 - Shard terms: CC-BY-4.0, CC0-1.0, ODbL-1.0
-- Used by: `k.animals` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.geo` (9 shards), `k.layouts` (1 shards), `k.parts` (1 shards), `k.scenes` (1 shards), `k.shapes` (1 shards), `k.time` (1 shards), `k.values` (1 shards)
+- Used by: `k.animals` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.geo` (10 shards), `k.layouts` (1 shards), `k.parts` (1 shards), `k.scenes` (1 shards), `k.shapes` (1 shards), `k.time` (1 shards), `k.values` (1 shards)
 
 ## wordnet-3.1
 

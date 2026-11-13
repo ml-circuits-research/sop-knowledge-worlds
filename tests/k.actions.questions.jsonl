@@ -22,3 +22,5 @@
 {"id":"ac-22","ask":"what undoes putting on","query":{"type":"k.actions.action","where":{"name":"\"put on\""},"seek":"undone_by"},"expect":{"status":"supported","value":"\"take off\""}}
 {"id":"ac-23","ask":"what does the wind do","query":{"type":"k.actions.action","where":{"who":"wind"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["blow","shake","\"knock down\"","break","bend","dry","uncover"]}}
 {"id":"ac-24","ask":"give an example of digging","query":{"type":"k.actions.action","where":{"name":"dig"},"seek":"example"},"expect":{"status":"supported","value":"\"A dog digs a hole in the garden.\""}}
+{"id":"ac-25","ask":"what is the opposite of undo","query":{"type":"k.actions.act","where":{"name":"undo"},"seek":"opposite"},"expect":{"status":"supported","value":"redo"}}
+{"id":"ac-26","ask":"which act does download mean","query":{"type":"k.actions.verb","where":{"text":"download"},"seek":"act"},"expect":{"status":"supported","value":"save"}}

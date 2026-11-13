@@ -1,4 +1,4 @@
-# k.actions/shards/acts: the 14 acts (make, remove, change, place, connect, group, take apart, pick, ask, copy, send, undo, save, load), and the roles each act takes with the prepositions that usually mark them.
+# k.actions/shards/acts: the 16 acts (make, remove, change, place, connect, group, take apart, pick, ask, copy, send, undo, save, load, redo, deselect), and the roles each act takes with the prepositions that usually mark them.
 # sources: hand-core 1 (hand-written in this repository: tools/acts-core.mjs)
 # license: CC0-1.0
 # script: tools/acts-core.mjs
@@ -10,18 +10,20 @@
 @k.actions.act.connect k.actions.act name=connect about="join two things so that they stay together or a line runs between them" opposite="take apart" role=thing role=target role=tool core.source="hand-core 1"
 @k.actions.act.group k.actions.act name=group about="put several things together as one group, or in an order" opposite="take apart" role=thing role=target role=group role=criterion core.source="hand-core 1"
 @k.actions.act.take_apart k.actions.act name="take apart" about="separate a thing into its parts, or one thing from another" opposite=connect role=thing role=parts role=source role=tool core.source="hand-core 1"
-@k.actions.act.pick k.actions.act name=pick about="choose one or some things out of several, to act on them next" role=thing role=source role=other core.source="hand-core 1"
+@k.actions.act.pick k.actions.act name=pick about="choose one or some things out of several, to act on them next" opposite=deselect role=thing role=source role=other core.source="hand-core 1"
 @k.actions.act.ask k.actions.act name=ask about="want to know something about the things that are there" role=topic role=thing role=place role=other core.source="hand-core 1"
 @k.actions.act.copy k.actions.act name=copy about="make another thing that is the same as one that is there" role=thing role=number role=place core.source="hand-core 1"
 @k.actions.act.send k.actions.act name=send about="let someone else have the thing, or put it out of the application" role=thing role=recipient role=means role=format core.source="hand-core 1"
-@k.actions.act.undo k.actions.act name=undo about="take back what was done last, so that things are as before" role=thing role=number role=state core.source="hand-core 1"
-@k.actions.act.save k.actions.act name=save about="keep the work so that it can be brought back later" opposite=load role=thing role=name role=place core.source="hand-core 1"
+@k.actions.act.undo k.actions.act name=undo about="take back what was done last, so that things are as before" opposite=redo role=thing role=number role=state core.source="hand-core 1"
+@k.actions.act.save k.actions.act name=save about="keep the work so that it can be brought back later" opposite=load role=thing role=name role=place role=format core.source="hand-core 1"
 @k.actions.act.load k.actions.act name=load about="bring back work that was kept" opposite=save role=thing role=source core.source="hand-core 1"
+@k.actions.act.redo k.actions.act name=redo about="do again what was taken back by undo" opposite=undo role=thing role=number core.source="hand-core 1"
+@k.actions.act.deselect k.actions.act name=deselect about="leave off picking a thing, so that it is no longer picked; with no thing, nothing is picked" opposite=pick role=thing core.source="hand-core 1"
 
 # Roles: what an act can be told, what kind of filler each takes, and the words that mark it.
 @k.actions.role.make.kind k.actions.role act=make name=kind holds=kind needed=true about="what kind of thing to make" core.source="hand-core 1"
 @k.actions.role.make.number k.actions.role act=make name=number holds=number about="how many to make" core.source="hand-core 1"
-@k.actions.role.make.place k.actions.role act=make name=place holds=place about="where the new thing goes" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
+@k.actions.role.make.place k.actions.role act=make name=place holds=place about="where the new thing goes" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="close to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
 @k.actions.role.make.value k.actions.role act=make name=value holds=value about="a value the new thing has, such as its colour" marker=in core.source="hand-core 1"
 @k.actions.role.make.part k.actions.role act=make name=part holds=thing about="a part the new thing has" marker=with core.source="hand-core 1"
 @k.actions.role.make.material k.actions.role act=make name=material holds=thing about="what it is made from" marker=from marker="out of" marker=of core.source="hand-core 1"
@@ -34,7 +36,7 @@
 @k.actions.role.change.amount k.actions.role act=change name=amount holds=amount about="by how much" marker=by core.source="hand-core 1"
 @k.actions.role.change.replacement k.actions.role act=change name=replacement holds=thing about="the thing that takes its place" marker=with marker=by marker=for core.source="hand-core 1"
 @k.actions.role.place.thing k.actions.role act=place name=thing holds=thing needed=true about="what to place" core.source="hand-core 1"
-@k.actions.role.place.place k.actions.role act=place name=place holds=place about="where it goes" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
+@k.actions.role.place.place k.actions.role act=place name=place holds=place about="where it goes" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="close to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
 @k.actions.role.place.direction k.actions.role act=place name=direction holds=direction about="which way it moves" marker=towards core.source="hand-core 1"
 @k.actions.role.place.source k.actions.role act=place name=source holds=place about="where it was" marker=from marker=off marker="out of" core.source="hand-core 1"
 @k.actions.role.place.amount k.actions.role act=place name=amount holds=amount about="how far" marker=by core.source="hand-core 1"
@@ -54,11 +56,11 @@
 @k.actions.role.pick.other k.actions.role act=pick name=other holds=thing about="what is not picked" marker=over marker="instead of" marker="rather than" core.source="hand-core 1"
 @k.actions.role.ask.topic k.actions.role act=ask name=topic holds=topic about="what the question is about" marker=about core.source="hand-core 1"
 @k.actions.role.ask.thing k.actions.role act=ask name=thing holds=thing about="the thing asked for" marker=for core.source="hand-core 1"
-@k.actions.role.ask.place k.actions.role act=ask name=place holds=place about="where to look" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
+@k.actions.role.ask.place k.actions.role act=ask name=place holds=place about="where to look" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="close to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" marker=by core.source="hand-core 1"
 @k.actions.role.ask.other k.actions.role act=ask name=other holds=thing about="a second thing, for a comparison" marker=with marker=to marker=and core.source="hand-core 1"
 @k.actions.role.copy.thing k.actions.role act=copy name=thing holds=thing needed=true about="what to copy" core.source="hand-core 1"
 @k.actions.role.copy.number k.actions.role act=copy name=number holds=number about="how many copies" core.source="hand-core 1"
-@k.actions.role.copy.place k.actions.role act=copy name=place holds=place about="where the copy goes" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
+@k.actions.role.copy.place k.actions.role act=copy name=place holds=place about="where the copy goes" marker=on marker=in marker=at marker=onto marker=into marker=to marker=under marker=above marker=below marker=over marker=behind marker=beside marker=near marker=between marker=inside marker=outside marker=around marker="next to" marker="close to" marker="in front of" marker="on top of" marker="to the left of" marker="to the right of" marker="in the middle of" core.source="hand-core 1"
 @k.actions.role.send.thing k.actions.role act=send name=thing holds=thing needed=true about="what to send" core.source="hand-core 1"
 @k.actions.role.send.recipient k.actions.role act=send name=recipient holds=person about="who gets it" marker=to core.source="hand-core 1"
 @k.actions.role.send.means k.actions.role act=send name=means holds=means about="how it is sent" marker=by marker=via marker=through core.source="hand-core 1"
@@ -69,5 +71,9 @@
 @k.actions.role.save.thing k.actions.role act=save name=thing holds=thing about="what to keep" core.source="hand-core 1"
 @k.actions.role.save.name k.actions.role act=save name=name holds=name about="the name it is kept under" marker=as marker=under core.source="hand-core 1"
 @k.actions.role.save.place k.actions.role act=save name=place holds=place about="where it is kept" marker=to marker=in marker=on core.source="hand-core 1"
+@k.actions.role.save.format k.actions.role act=save name=format holds=value about="in what form it is kept, such as a kind of file" marker=as marker=in core.source="hand-core 1"
 @k.actions.role.load.thing k.actions.role act=load name=thing holds=thing needed=true about="what to bring back" core.source="hand-core 1"
 @k.actions.role.load.source k.actions.role act=load name=source holds=place about="where it was kept" marker=from core.source="hand-core 1"
+@k.actions.role.redo.thing k.actions.role act=redo name=thing holds=thing about="what was taken back and is done again" core.source="hand-core 1"
+@k.actions.role.redo.number k.actions.role act=redo name=number holds=number about="how many steps" core.source="hand-core 1"
+@k.actions.role.deselect.thing k.actions.role act=deselect name=thing holds=thing about="what is no longer picked; none: all of them" core.source="hand-core 1"
