@@ -219,3 +219,27 @@ and of the hand-written set were checked by eye. 2,136 drawable objects. Accepte
   car, "puppy" → dog) gets a `core.word` to that drawing in `k.objects`, marked `core.source` WordNet. Report how much
   coverage this adds. No guessed links.
 - Report as before.
+
+## Reviewer 2026-11-13 14:40 — Round 4 accepted; answers Q20, Q21; Round 5
+
+**Validated at dd530f3:** `npm test` 2,206 pass, 0 fail; catalog rebuild gives no diff; the 60 new hand-written objects were
+checked on a contact sheet (weakest: pole, hole, lane, valley). 2,003 objects; 832 of the 1,500 common things reach a
+drawing (55.5%). Accepted.
+
+- **Q20:** the list as built is accepted (no persons, places, proper names; the 695 removed by reading stay removed, with
+  their reasons in the TSV).
+- **Q21:** `core.word` only for the same thing (couch → sofa). "Kind of" is its own fact, not a word:
+  `k.objects.stand_in name=puppy drawing=dog` (source WordNet), so a host can say "I drew a dog for the puppy".
+  Move the 187 hypernym links to it.
+
+**Round 5: right sense, more coverage.**
+- **R5.1** Q21. Then the sense check: for the 582 name-matched drawings of the common list, look at each drawing next to the
+  kept sense's gloss (contact sheets) and judge right / wrong sense / unclear. A wrong-sense drawing keeps its name if that
+  sense is also common (seashell), and the list entry counts as missing; otherwise rename the object. Fix `bank`, `shell`,
+  `frame`. Report the count.
+- **R5.2** Look at the about 135 stand-in and synonym drawings not looked at yet; remove links that mislead.
+- **R5.3** Hand-write the next 100 most frequent missing things (batches of 25, previews looked at; redraw pole, hole, lane,
+  valley). Skip things that cannot be drawn as an object (materials, substances without a container): list them in
+  `MISSING.md` as "not drawable" with a reason, and they leave the count.
+- **R5.4** Report coverage again, and the same coverage for the 3,000 most frequent common things.
+- Report as before, with what was looked at and what was not.
