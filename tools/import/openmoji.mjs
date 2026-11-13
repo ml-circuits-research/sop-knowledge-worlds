@@ -39,7 +39,7 @@ export function importOpenmoji({ data, svg, partNames = '', taken = new Set() })
     sources: ['openmoji 3e01de5 (OpenMoji, the colour SVG drawings and their names, CC-BY-SA-4.0)'],
     license: 'CC-BY-SA-4.0', script: 'tools/import/openmoji.mjs',
     about: 'Parts converted from the OpenMoji drawings: a primitive shape, a box in the 0 to 100 frame, a draw order z, a colour name and the exact colour; points for polygons and lines.',
-  }, { partNames, convert: { hollow: 0.3 } });
+  }, { partNames, convert: { hollow: 0.3 }, details: true });
   return { files, stats: { ...stats, skipped } };
 }
 

@@ -33,13 +33,21 @@ export function readPartNames(tsv) {
   return names;
 }
 
+// Details by rule (the outline styles of OpenMoji and Mulberry): a part that is only a stroke (a line or an arc), and a
+// black filled part with the same box as a filled part of another colour (the outline under a fill). A row of
+// part-names.tsv for the part replaces the rule.
+const STROKES = new Set(['line', 'arc']);
+const sameBox = (a, b, t = 2) => Math.abs(a.x - b.x) <= t && Math.abs(a.y - b.y) <= t && Math.abs(a.w - b.w) <= t && Math.abs(a.h - b.h) <= t;
+export const detailByRule = (parts) => parts.map((p, i) => STROKES.has(p.shape)
+  || (p.colour === 'black' && parts.some((q, j) => j !== i && !STROKES.has(q.shape) && q.colour !== 'black' && sameBox(p, q))));
+
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 // entries: [{ uid (id segment), name, keywords, group (shard key), svg (text) }] in the order wanted.
 // source: { prefix, drawings: 'id version', names: 'id version' (may equal drawings), sources: [header lines], license, script, about }
-export function objectShards(entries, source, { partNames = '', convert = {}, perShard = 8, maxWires = 1900, maxBytes = 280000 } = {}) {
+export function objectShards(entries, source, { partNames = '', convert = {}, details = false, perShard = 8, maxWires = 1900, maxBytes = 280000 } = {}) {
   const named = readPartNames(partNames);
-  const stats = { objects: 0, parts: 0, points: 0, words: 0, named: 0, shards: 0, noParts: 0 };
+  const stats = { objects: 0, parts: 0, points: 0, words: 0, named: 0, detail: 0, shards: 0, noParts: 0 };
   const objects = [];
   for (const e of entries) {
     const parts = svgToParts(e.svg, convert);
@@ -47,8 +55,10 @@ export function objectShards(entries, source, { partNames = '', convert = {}, pe
     const uid = `k.objects.${e.uid}`;
     const names = named.get(e.name) ?? new Map();
     const lines = [wire(uid, 'k.objects.object', [['name', e.name]], source.drawings) + (source.names !== source.drawings ? ` core.source=${JSON.stringify(source.names)}` : '')];
+    const byRule = details ? detailByRule(parts) : [];
     parts.forEach((p, i) => {
-      const given = names.get(i + 1) ?? {};
+      const given = names.get(i + 1) ?? (byRule[i] ? { kind: 'detail' } : {});
+      if (given.kind === 'detail') stats.detail++;
       lines.push(wire(`${uid}.p${i + 1}`, 'k.objects.part', [
         ['of', e.name], ['name', given.name ?? `part${i + 1}`], ['kind', given.kind], ['named', given.name ? 'model' : undefined],
         ['shape', p.shape], ['x', p.x], ['y', p.y], ['w', p.w], ['h', p.h], ['z', i + 1], ['colour', p.colour], ['rgb', text(p.rgb)],

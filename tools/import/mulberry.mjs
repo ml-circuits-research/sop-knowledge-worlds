@@ -1,6 +1,6 @@
 // Mulberry Symbols (pictograms for communication aids) -> k.objects shards, for the things that no earlier source
 // has (hand-written, Noto Emoji, OpenMoji). Same conversion and part names file format. Deterministic.
-//   node tools/import/mulberry.mjs [--raw sources/mulberry/raw/repo] [--names sources/mulberry/part-names.tsv]
+//   node tools/import/mulberry.mjs [--raw sources/mulberry/raw/repo] [--names sources/mulberry/part-names.tsv] [--excluded sources/mulberry/excluded.tsv]
 //                                  [--out docs/worlds/k.objects/shards]
 // How to fetch: sources/mulberry/SOURCE.md.
 import { readFileSync, existsSync } from 'node:fs';
@@ -17,8 +17,10 @@ const CATEGORIES = /^(Animal (Birds|Crustacean and Molluscs|Fish and Marine mamm
 const csvLine = (line) => { const out = []; let cur = '', q = false; for (const c of line) { if (c === '"') q = !q; else if (c === ',' && !q) { out.push(cur); cur = ''; } else cur += c; } out.push(cur); return out; };
 
 // info: the text of scripts/data/symbol-info.csv; svg: (file name without .svg) => text or null.
-export function importMulberry({ info, svg, partNames = '', taken = new Set() }) {
-  const skipped = { notThing: 0, variant: 0, taken: 0, noSvg: 0 };
+// excluded: the text of sources/mulberry/excluded.tsv (name <tab> reason): names that are not a recognisable thing.
+export function importMulberry({ info, svg, partNames = '', taken = new Set(), excluded = '' }) {
+  const skipped = { notThing: 0, variant: 0, taken: 0, noSvg: 0, excluded: 0 };
+  const out = new Set(excluded.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t')[0].trim().toLowerCase()));
   const rows = info.replace(/^﻿/, '').split('\n').filter((l) => l.trim()).map(csvLine);
   const col = Object.fromEntries(rows[0].map((h, i) => [h.trim(), i]));
   const seen = new Set();
@@ -31,6 +33,7 @@ export function importMulberry({ info, svg, partNames = '', taken = new Set() })
     if (/_\d+[a-z]?$/.test(file)) { skipped.variant++; continue; }
     const name = file.replace(/_/g, ' ').replace(/\s+/g, ' ').trim();
     if (taken.has(name.toLowerCase()) || seen.has(name.toLowerCase())) { skipped.taken++; continue; }
+    if (out.has(name.toLowerCase())) { skipped.excluded++; continue; }
     const source = svg(file);
     if (!source) { skipped.noSvg++; continue; }
     seen.add(name.toLowerCase());
@@ -42,7 +45,7 @@ export function importMulberry({ info, svg, partNames = '', taken = new Set() })
     sources: ['mulberry fa94a93 (Mulberry Symbols, the drawings, their names and tags, CC-BY-SA-4.0)'],
     license: 'CC-BY-SA-4.0', script: 'tools/import/mulberry.mjs',
     about: 'Parts converted from the Mulberry Symbols drawings: a primitive shape, a box in the 0 to 100 frame, a draw order z, a colour name and the exact colour; points for polygons and lines.',
-  }, { partNames, convert: { hollow: 0.3 } });
+  }, { partNames, convert: { hollow: 0.3 }, details: true });
   return { files, stats: { ...stats, skipped } };
 }
 
@@ -51,12 +54,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const arg = (name, dflt) => { const i = process.argv.indexOf(`--${name}`); return i < 0 ? dflt : process.argv[i + 1]; };
   const raw = arg('raw', join(repo, 'sources/mulberry/raw/repo'));
   const namesFile = arg('names', join(repo, 'sources/mulberry/part-names.tsv'));
+  const excludedFile = arg('excluded', join(repo, 'sources/mulberry/excluded.tsv'));
   const out = arg('out', join(repo, 'docs/worlds/k.objects/shards'));
   const { files, stats } = importMulberry({
     info: readFileSync(join(raw, 'scripts/data/symbol-info.csv'), 'utf8'),
     svg: (file) => { const p = join(raw, 'EN', `${file}.svg`); return existsSync(p) ? readFileSync(p, 'utf8') : null; },
     partNames: existsSync(namesFile) ? readFileSync(namesFile, 'utf8') : '',
     taken: takenNames(out, PREFIX),
+    excluded: existsSync(excludedFile) ? readFileSync(excludedFile, 'utf8') : '',
   });
   writeObjectShards(out, PREFIX, files);
   console.log(JSON.stringify(stats));

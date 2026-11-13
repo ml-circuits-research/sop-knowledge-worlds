@@ -93,7 +93,9 @@ export function renderObject(world, object) {
 }
 
 // A labelling picture: the object at 320 px, every part outlined and numbered in draw order (1 is drawn first), with
-// the part names underneath when they are more than partN.
+// the part names underneath when they are more than partN. A detail without a name (an outline, a stroke) gets no
+// pink outline; its number is small and blue, and left out when it has the box of a filled part (it is that
+// part's outline).
 const outlineOf = (p) => {
   const st = 'fill="none" stroke="#e0007a" stroke-width="0.5"';
   switch (p.shape) {
@@ -120,11 +122,16 @@ export function renderLabelled(world, object) {
   const parts = partsOf(world, object);
   if (!parts.length) throw new Error(`${object}: no parts`);
   const body = parts.map((p) => `  ${renderPart(p)}`).join('\n');
-  const outlines = parts.map((p) => `  ${outlineOf(p)}`).join('\n');
+  const plain = (p) => one({ attrs: p.attrs }, 'kind') === 'detail' && /^part\d+$/.test(p.name);
+  const stroke = (p) => p.shape === 'line' || p.shape === 'arc';
+  const near = (a, b) => Math.abs(a.x - b.x) <= 3 && Math.abs(a.y - b.y) <= 3 && Math.abs(a.w - b.w) <= 3 && Math.abs(a.h - b.h) <= 3;
+  const outlines = parts.filter((p) => !plain(p)).map((p) => `  ${outlineOf(p)}`).join('\n');
   const numbers = parts.map((p, i) => {
-    const [x, y] = labelSpot(p, parts.slice(i + 1));
+    if (plain(p) && parts.some((q) => q !== p && !stroke(q) && near(p, q))) return null;
+    const [x, y] = plain(p) && p.points.length ? [p.points[0].x, p.points[0].y] : labelSpot(p, parts.slice(i + 1));
+    if (plain(p)) return `  <text x="${f(Math.max(2, Math.min(96, x)))}" y="${f(Math.max(4, Math.min(99, y + 1)))}" font-size="3" font-family="sans-serif" text-anchor="middle" stroke="#fff" stroke-width="0.8" paint-order="stroke" fill="#06c">${i + 1}</text>`;
     return `  <text x="${f(Math.max(2, Math.min(96, x)))}" y="${f(Math.max(4, Math.min(99, y + 1.5)))}" font-size="4.5" font-family="sans-serif" font-weight="bold" text-anchor="middle" stroke="#fff" stroke-width="1.2" paint-order="stroke" fill="#000">${i + 1}</text>`;
-  }).join('\n');
+  }).filter(Boolean).join('\n');
   const names = parts.map((p, i) => (/^part\d+$/.test(p.name) ? null : `${i + 1} ${p.name}`)).filter(Boolean);
   const rows = [];
   for (let i = 0; i < names.length; i += 4) rows.push(names.slice(i, i + 4).join('   '));

@@ -8,7 +8,7 @@ import { tmpdir } from 'node:os';
 import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { importOpenmoji, PREFIX as OM } from '../tools/import/openmoji.mjs';
 import { importMulberry, PREFIX as MB } from '../tools/import/mulberry.mjs';
-import { takenNames } from '../tools/import/objects.mjs';
+import { takenNames, detailByRule } from '../tools/import/objects.mjs';
 
 const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="10" y="20" width="60" height="30" fill="#DC1E1E"/><path fill="#000" d="M0 0H100V100H0Z M5 5H95V95H5Z"/></svg>';
 const dir = join(WORLDS_DIR, 'k.objects', 'shards');
@@ -28,7 +28,7 @@ test('openmoji: things with a new name become objects; outlines are closed lines
   assert.deepEqual(files['openmoji-animals-nature-01.sop'].split('\n').filter((l) => l.startsWith('@')), [
     '@k.objects.ome000 k.objects.object name=goldfish core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p1 k.objects.part of=goldfish name=body named=model shape=rectangle x=10 y=20 w=60 h=30 z=1 colour=red rgb="#DC1E1E" core.source="openmoji 3e01de5"',
-    '@k.objects.ome000.p2 k.objects.part of=goldfish name=part2 shape=line x=0 y=0 w=100 h=100 z=2 colour=black rgb="#000000" core.source="openmoji 3e01de5"',
+    '@k.objects.ome000.p2 k.objects.part of=goldfish name=part2 kind=detail shape=line x=0 y=0 w=100 h=100 z=2 colour=black rgb="#000000" core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.1 k.objects.point part=$k.objects.ome000.p2 n=1 x=0 y=0 core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.2 k.objects.point part=$k.objects.ome000.p2 n=2 x=100 y=0 core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.3 k.objects.point part=$k.objects.ome000.p2 n=3 x=100 y=100 core.source="openmoji 3e01de5"',
@@ -46,10 +46,23 @@ test('mulberry: nouns of thing categories, first drawing only, new names only', 
     + '12,3,Verb,0,act,"blow_,_to",Verb,x,y\n13,4,Noun,0,pet,dog,Animal Mammal,x,y\n14,5,Noun,0,job,baker_1a,People Profession,x,y\n';
   const { files, stats } = importMulberry({ info, svg: () => svg, taken: new Set(['dog']) });
   assert.deepEqual(Object.keys(files), ['mulberry-building-furniture-01.sop']);
-  assert.deepEqual(stats.skipped, { notThing: 2, variant: 1, taken: 1, noSvg: 0 });
+  assert.deepEqual(stats.skipped, { notThing: 2, variant: 1, taken: 1, noSvg: 0, excluded: 0 });
   const lines = files['mulberry-building-furniture-01.sop'].split('\n').filter((l) => l.startsWith('@'));
   assert.equal(lines[0], '@k.objects.mb10 k.objects.object name="arm chair" core.source="mulberry fa94a93"');
   assert.equal(lines.at(-1), '@k.objects.mb10.word core.word text=seat text=chair means="arm chair" of=k.objects.object.name core.source="mulberry fa94a93"');
+  // sources/mulberry/excluded.tsv: a name with a reason is skipped.
+  const without = importMulberry({ info, svg: () => svg, taken: new Set(['dog']), excluded: '# name\treason\narm chair\tnot a thing\n' });
+  assert.deepEqual(Object.keys(without.files), []);
+  assert.equal(without.stats.skipped.excluded, 1);
+});
+
+test('details by rule: strokes, and a black shape with the box of a filled shape; a row of the names file wins', () => {
+  const parts = [{ shape: 'polygon', colour: 'black', x: 10, y: 10, w: 50, h: 40 }, { shape: 'polygon', colour: 'red', x: 11, y: 11, w: 48, h: 38 },
+    { shape: 'line', colour: 'red', x: 0, y: 0, w: 5, h: 5 }, { shape: 'circle', colour: 'black', x: 70, y: 70, w: 5, h: 5 }];
+  assert.deepEqual(detailByRule(parts), [true, false, true, false]);
+  const data = [{ hexcode: 'E000', group: 'extras-openmoji', subgroups: 'animals-nature', annotation: 'goldfish', tags: '', openmoji_tags: '', skintone: '' }];
+  const lines = importOpenmoji({ data, svg: () => svg, partNames: 'goldfish\t2\tframe\t\n' }).files['openmoji-animals-nature-01.sop'].split('\n');
+  assert.ok(lines.some((l) => l.includes('name=frame named=model shape=line')));
 });
 
 test('a name belongs to the first source that has it: hand-written, noto, openmoji, mulberry', () => {
@@ -83,5 +96,6 @@ test('the mulberry shards on disk are what the importer gives', { skip: !existsS
     info: readFileSync(join(mb, 'scripts/data/symbol-info.csv'), 'utf8'),
     svg: (file) => { const p = join(mb, 'EN', `${file}.svg`); return existsSync(p) ? readFileSync(p, 'utf8') : null; },
     partNames: readFileSync(join(REPO, 'sources/mulberry/part-names.tsv'), 'utf8'), taken: takenNames(dir, MB),
+    excluded: readFileSync(join(REPO, 'sources/mulberry/excluded.tsv'), 'utf8'),
   }).files);
 });

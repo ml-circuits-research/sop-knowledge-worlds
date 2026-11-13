@@ -452,3 +452,22 @@ of k.objects), Q14 (naming pass for the new sources), Q15 (country names).
   name) stay `core.word` facts. `country`, `capital_of` and `neighbour` values follow. `k.geo` version 2, CHANGELOG.
 - Numbers: 13 shards, 3,473 wires (unchanged), 630,063 bytes (was 634,408), 206 word wires; 0 errors, 0 warnings.
   Two questions added (capital of the United States, formal name of Serbia): 16. npm test 2,264 pass, 0 fail (175 s).
+
+## R3.1 naming, batch 1 (2026-11-13): details by rule; the 114 OpenMoji objects looked at
+
+- **Rule (Q14)**, in `tools/import/objects.mjs` (`detailByRule`, used by the OpenMoji and Mulberry importers, not by
+  Noto): a part that is only a stroke (`line`, `arc`), and a black filled part with the same box (within 2 units) as
+  a filled part of another colour, is `kind=detail`. A row of `part-names.tsv` for a part replaces the rule (a
+  stroke can still be named). By rule: **8,060 of 17,683 parts** are details (OpenMoji 639 of 1,322, Mulberry 7,421
+  of 16,361).
+- `tools/render-svg.mjs --label`: a detail without a name gets no pink outline; its number is small and blue, and is
+  left out when the detail has the box of a filled part.
+- `sources/mulberry/excluded.tsv` (name, reason; empty so far) is read by `tools/import/mulberry.mjs` (R3.2).
+- **Looked at: all 114 OpenMoji objects** on 6 contact sheets of 20 (300 px each). 78 objects got at least one row:
+  **153 parts named, 13 more marked detail by eye** (shades of a named part). Not named: anything where two numbers
+  sit on one place, layered drawings, small blue stroke numbers (not readable at this size).
+- Not recognisable as the named thing after conversion (OpenMoji, reported only): none found; weak ones are
+  intestine, barcode and gps (symbols more than things).
+- Numbers: OpenMoji 114 objects, 12,530 wires, 18 shards, 1,525,908 bytes; Mulberry 1,151 objects, 180,604 wires,
+  174 shards, 21,608,895 bytes (the `kind=detail` keys add bytes, no wires). Catalog: 6 worlds, 660 shards, vocab
+  17,441 words. 0 errors, 0 warnings. npm test 2,265 pass, 0 fail.
