@@ -559,3 +559,11 @@ of k.objects), Q14 (naming pass for the new sources), Q15 (country names).
 - Mulberry now: 1013 objects, 14378 parts, **1158 named, 6574 details** (rule and eye); 638 objects
   with rows; 155 shards, 159422 wires, 19091671 bytes. Excluded so far: 138. k.objects: 1998 objects.
 - catalog: worlds 6 shards 641 vocab 17494; 0 errors, 0 warnings. npm test 2127 pass, 0 fail.
+
+## R3.1 naming, batch 13 (2026-11-13): Mulberry objects 1081 to 1151 of 1,151 looked at
+
+- Looked at: the Mulberry objects 1081 to 1151 (in shard order) on contact sheets of 20 at 300 px. Workshop tools, air, rail, road, space and water transport, stationery (objects 1081 to 1151): the last Mulberry objects. Vehicles name by wheels, windows, body; several-layer vans and trucks stay partN where numbers overlap.
+- This batch: rows for 49 objects; 11 objects moved to `sources/mulberry/excluded.tsv` (R3.2).
+- Mulberry now: 1002 objects, 14202 parts, **1237 named, 6520 details** (rule and eye); 687 objects
+  with rows; 154 shards, 157504 wires, 18863450 bytes. Excluded so far: 149. k.objects: 1987 objects.
+- catalog: worlds 6 shards 640 vocab 17496; 0 errors, 0 warnings. npm test 2116 pass, 0 fail.
