@@ -12,3 +12,9 @@
 {"id":"fd-12","ask":"how many kinds of nut are there","query":{"type":"k.food.food","where":{"kind":"nut"},"mode":"count"},"expect":{"status":"supported","value":"8"}}
 {"id":"fd-13","ask":"which drawing shows a grape","query":{"type":"k.food.food","where":{"name":"grape"},"seek":"drawing"},"expect":{"status":"supported","value":"grapes"}}
 {"id":"fd-14","ask":"an application's own food is accepted","tell":"@f1 k.food.food name=\"moon cheese\" kind=dairy colour=green","ns":"app","expect":{"issues":[]}}
+{"id":"fd-15","ask":"what is bread made of","query":{"type":"k.food.food","where":{"name":"bread"},"seek":"made_of","mode":"list"},"expect":{"status":"supported","values":["flour","water","yeast","salt"]}}
+{"id":"fd-16","ask":"what is in a pancake","query":{"type":"k.food.food","where":{"name":"pancake"},"seek":"made_of","mode":"list"},"expect":{"status":"supported","values":["flour","egg","milk"]}}
+{"id":"fd-17","ask":"which sauces are made with garlic","query":{"type":"k.food.food","where":{"kind":"sauce","made_of":"garlic"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["\"tomato sauce\"","pesto"]}}
+{"id":"fd-18","ask":"what colour is custard","query":{"type":"k.food.food","where":{"name":"custard"},"seek":"colour"},"expect":{"status":"supported","value":"yellow"}}
+{"id":"fd-19","ask":"what kind of food is a croissant","query":{"type":"k.food.food","where":{"name":"croissant"},"seek":"kind"},"expect":{"status":"supported","value":"bread"}}
+{"id":"fd-20","ask":"what is sushi made of","query":{"type":"k.food.food","where":{"name":"sushi"},"seek":"made_of","mode":"list"},"expect":{"status":"supported","values":["rice","fish","seaweed"]}}

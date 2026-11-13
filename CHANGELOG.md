@@ -65,3 +65,7 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 
 - `k.body.part`: `about`, `count_per_part`, `count_about`, `temperature_about`, `amount_about`, `length_about`,
   `weight_about`, `named`. A part with both `count` and `count_about` is refused.
+
+### k.food 1, additions (2026-11-13, Round 9, not breaking)
+
+- `k.food.food`: `made_of` (many), `named`. New shard `dishes`.

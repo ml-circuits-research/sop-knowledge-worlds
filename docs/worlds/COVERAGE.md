@@ -19,8 +19,8 @@ the place of the dog).
 |---|---:|---:|---:|---|
 | place | 637 (42%) | 350 (23%) | 513 (34%) | `k.scenes.thing` (place) |
 | size | 650 (43%) | 365 (24%) | 485 (32%) | `k.scenes.thing` (size) |
-| colour (usual colour of the thing) | 203 (14%) | 46 (3%) | 1251 (83%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour (the usual one, or said to be any colour) | 290 (19%) | 89 (6%) | 1121 (75%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (usual colour of the thing) | 225 (15%) | 48 (3%) | 1227 (82%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (the usual one, or said to be any colour) | 312 (21%) | 90 (6%) | 1098 (73%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour the thing is drawn in | 653 (44%) | 369 (25%) | 478 (32%) | `k.attributes.drawn` (drawn_colour) |
 | colour of the parts of a drawing | 654 (44%) | 369 (25%) | 477 (32%) | `k.objects.part` (colour) |
 | parts (WordNet, own or inherited) | 541 (36%) | 57 (4%) | 902 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
@@ -49,7 +49,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.colours` | 8 (1%) |
 | `k.commonsense` | 17 (1%) |
 | `k.faces` | 45 (3%) |
-| `k.food` | 111 (7%) |
+| `k.food` | 147 (10%) |
 | `k.geo` | 20 (1%) |
 | `k.layouts` | 210 (14%) |
 | `k.objects` | 1094 (73%) |

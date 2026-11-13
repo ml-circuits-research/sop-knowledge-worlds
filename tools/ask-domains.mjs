@@ -68,4 +68,13 @@ export const DOMAINS = {
       return { part: [count, where, does], organ: [count, where, does, ['say in a sentence what the {x} does', one('k.body.part', 'about')]], whole: [count, parts, does] };
     })(),
   },
+  // sources/hand-core/questions/food.tsv: common foods and dishes, written without looking at k.food.
+  food: {
+    things: () => rows('sources/hand-core/questions/food.tsv'),
+    templates: {
+      food: [['what kind of food is {x}', one('k.food.food', 'kind')], ['what colour is {x}', one('k.food.food', 'colour')],
+        ['where does {x} come from', () => [{ type: 'k.food.food', where: { name: '{x}' }, seek: 'comes_from' }, { type: 'k.food.food', where: { name: '{x}' }, seek: 'grows_on' }, { type: 'k.food.food', where: { name: '{x}' }, seek: 'made_of' }]]],
+      dish: [['what is {x} made of', one('k.food.food', 'made_of')], ['what kind of food is {x}', one('k.food.food', 'kind')], ['is {x} eaten raw or cooked', one('k.food.food', 'eaten')]],
+    },
+  },
 };

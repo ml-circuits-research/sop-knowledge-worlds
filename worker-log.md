@@ -2214,3 +2214,32 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Numbers: k.body 1 shard, 175 wires, 23,725 bytes (was 112 wires, 12,168 bytes). Catalog 22 worlds, 848 shards, vocab 21,963 words; 0 errors, 0 warnings.
 - `COVERAGE.md` and `ASPECTS.md` run again: one number changes in the first, nothing in the second.
 - npm test 2,634 pass, 0 fail.
+
+## Round 9, item 6 (2026-11-13, first worker): `k.food`: what dishes and foods are made of, usual colours
+
+- **`made_of` (new key, many):** what a dish or a made food is made of, by the names of other foods where they are
+  foods, else one of 20 general words (water, yeast, spices, vegetables …; a test holds the list). 118 foods have
+  it, among them every food of kind `dish`: bread (flour, water, yeast, salt), pizza (flour, tomato, cheese),
+  pancake (flour, egg, milk), pesto (basil, olive oil, garlic, cheese, nuts).
+- **75 new dishes and made foods** in a new shard `dishes`: soups, pasta and rice dishes, egg dishes, breads
+  (croissant, bagel, pretzel, tortilla), sauces (mayonnaise, tomato sauce, pesto, guacamole, soy sauce), sweets
+  (apple pie, cheesecake, brownie, custard, gingerbread). 43 older foods got `made_of`. 229 foods in all (154).
+- **Kind:** every food had one (fruit, vegetable, grain, dairy, meat …); the new ones too.
+- **Usual colour, joined to `k.colours`:** 169 foods have a colour (was 114); a test requires every colour value
+  to be the name of a `k.colours.colour`. A food that comes in any colour (jam, cake, soup, ice cream) has none.
+- **Drawings looked at:** one sheet of the 30 objects that carry the name of a new dish: all 30 show the food
+  and are joined by `drawing` (the `pickle` is a gherkin, the `custard` a caramel custard).
+- **All model-labelled:** `named=model` is now on every food. I read the table of 75 dishes once while writing
+  it and the 43 patches once; **not read again after generation** beyond the questions and what the tests
+  check. The ingredients are the usual household ones, not a recipe (a curry is "vegetables, spices, onion").
+- **Natural questions (item 8), food:** 100 foods and dishes written down without looking at `k.food` (50 foods:
+  kind, colour, where from; 50 dishes: made of, kind, raw or cooked), 300 questions. The seeded sample of 100:
+  **before 59, now 92**. All 300: before 194, now 282. Without a fact: whether drinks, jam, ketchup and cereal
+  are "eaten raw or cooked" (they are neither); the colour of tuna, chicken, bean; "fish" as a food.
+- `COVERAGE.md` and `ASPECTS.md` run again: usual colour of the common things 225 by name (was 203); `k.food` has
+  a word for 147 common things (111); the row "food" of the aspects table has 229 foods.
+- **Judgement that is mine:** every ingredient list; the kind of the new foods (peanut butter is filed as a
+  sauce; pickle and sauerkraut as vegetables).
+- Tests: `tests/k.food.test.mjs` (3), questions fd-15 to fd-20.
+- Numbers: k.food 6 shards, 347 wires, 51,883 bytes (was 5 shards, 254 wires, 33,319 bytes). Catalog 22 worlds,
+  853 shards, vocab 22,017 words; 0 errors, 0 warnings. npm test 2,647 pass, 0 fail.
