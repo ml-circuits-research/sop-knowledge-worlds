@@ -1841,3 +1841,18 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.attributes.test.mjs` (4), 10 questions (`at-01` to `at-10`).
 - Numbers: k.attributes 6 shards, 828 wires, 119,537 bytes. Catalog 18 worlds, 815 shards, vocab 20,982 words (20,954); 0 errors, 0 warnings. npm test 2,510 pass, 5 skipped, 0 fail.
 - After the rebase on R7.3 (k.colours, k.shapes): catalog 20 worlds, 817 shards, vocab 21,070 words; npm test 2,539 pass, 5 skipped, 0 fail.
+
+## Q27 and Q28 applied (2026-11-13, first worker)
+
+- **Q27 (yes):** a thing counts as drawn when any drawing in the catalog carries its name, whatever the source. It is
+  now the one rule of `tools/coverage.mjs` and takes in the rule of Q25 (hand-written objects): the sense check takes
+  no drawing away from its name. `sense-check.tsv` stays as the record of what each drawing shows; the links still
+  use only the sense kept. The statistic `wrongSense` is gone; `unlistedSense` counts the drawings of a meaning that
+  WordNet lacks (1: `tablet`).
+- **Recount, 1,500 common things:** with a drawing of that name 680 (before 679); WordNet synonym 68; direct
+  hypernym 179; another word of a hand-written object 25; hand stand-in 71; with no drawing at all 477 (before 478).
+- **Q28 (keep both):** nothing to change; `k.values` holds the words and scales, `k.colours` and `k.shapes` the facts.
+- Both questions moved to Closed in `questions.md`; no question is open.
+- Not looked at: nothing was drawn or labelled here.
+- Numbers: catalog 19 worlds, 811 shards, vocab 21,044 words; 0 errors, 0 warnings. npm test 2,529 pass, 0 fail.
+- After the rebase on R8.2 (`k.attributes`, second worker): catalog 20 worlds, 817 shards, vocab 21,070 words; npm test 2,544 pass, 0 fail.

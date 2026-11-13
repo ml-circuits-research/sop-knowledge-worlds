@@ -10,24 +10,23 @@ man, sir, father, guy, girl, dad) and the words of `sources/coverage/not-things.
 the top of `tools/coverage.mjs`.
 
 "Has a drawing" compares the word with the name of a `k.objects` object (or its plural). Every such drawing was
-looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`). A word counts as drawn when the
-drawing shows any physical sense of the word that WordNet has: 28 drawings show another sense than the one kept
-(the drawing `bank` is a building, the sense kept is the river bank) and count. 1 drawing shows a meaning that
-WordNet does not have for the word (the drawing `tablet` is a tablet computer, an imported drawing); such a word counts as missing
-("other sense" in the list), unless an object of another name draws the sense kept (0). An object
-written by hand in this repository counts for its own name whatever WordNet lists.
+looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`). A word counts as drawn when any
+drawing in the catalog carries its name, whatever the source: 28 drawings show another physical sense of the word
+than the one kept (the drawing `bank` is a building, the sense kept is the river bank) and 1 shows a meaning that
+WordNet does not have for the word (the drawing `tablet` is a tablet computer). The table says which, so that a link
+is made only in the sense kept.
 
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name | 679 | 45.3% |
+| with a drawing of that name | 680 | 45.3% |
 | without, but a WordNet synonym has a drawing | 68 | 4.5% |
 | without, but the direct hypernym has a drawing | 179 | 11.9% |
 | without, but it is another word of an object (hand-written) | 25 | 1.7% |
 | without, but a stand-in written by hand has a drawing | 71 | 4.7% |
-| with no drawing at all | 478 | 31.9% |
+| with no drawing at all | 477 | 31.8% |
 
-## The 821 words without a drawing of their name, most frequent first
+## The 820 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a `core.word` fact of the shard `words-wordnet` (the word finds that drawing as
@@ -155,7 +154,6 @@ gloss is WordNet's, for the sense kept.
 | 595 | bulb |  | a modified bud consisting of a thickened globular underground stem serving as a reproductive structure |
 | 600 | cobra | hand stand-in snake | venomous Asiatic and African elapid snakes that can expand the skin of the neck into a hood |
 | 602 | dungeon |  | the main tower within the walls of a medieval castle or fortress |
-| 604 | tablet | other sense: the drawing shows a tablet computer | a slab of stone or wood suitable for bearing an inscription |
 | 605 | saloon | hand stand-in pub | a room or establishment where alcoholic drinks are served over a counter |
 | 606 | serpent | synonym snake | limbless scaly elongate reptile |
 | 607 | curb |  | an edge between a sidewalk and a roadway consisting of a line of curbstones (usually forming part of a gutter) |

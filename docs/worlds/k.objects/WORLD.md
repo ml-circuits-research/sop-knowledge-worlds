@@ -109,9 +109,9 @@ are in `sources/coverage/not-links.tsv`.
 most frequent English nouns that name a physical thing (frequency list × WordNet), most frequent first, with the
 WordNet synonym or direct hypernym that has a drawing where there is one. Every drawing that matches a common thing
 by name was looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`: right, wrong sense,
-unclear). A word counts as drawn when its drawing shows any physical sense of the word that WordNet has (the drawing
-`bank` is a building, the sense kept is the river bank); only a drawing of a meaning that WordNet does not have
-(`tablet`, a tablet computer) leaves the word missing. Words that cannot be drawn as an object
+unclear). A word counts as drawn when any drawing in the catalog carries its name, whatever the source and whatever
+sense it shows (the drawing `bank` is a building, the sense kept is the river bank; the drawing `tablet` is a tablet
+computer, a meaning WordNet does not list). Words that cannot be drawn as an object
 (`sources/coverage/not-drawable.tsv`) leave the list and are named at the end of `MISSING.md`. The numbers are at the
 top of `MISSING.md`.
 

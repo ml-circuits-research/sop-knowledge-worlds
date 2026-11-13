@@ -13,28 +13,7 @@ Blocking: yes/no. If no: the choice taken meanwhile.
 
 # Open
 
-## Q27 (Q25 applied, 2026-11-13)
-Question: the rule of the answer to Q25 (a hand-written object counts for its own name whatever WordNet lists) does
-not reach `tablet`: that drawing is OpenMoji's, not hand-written. Should `tablet` count as drawn all the same?
-Context: the rule is in `tools/coverage.mjs` (the sense check cannot take a hand-written object away from its name);
-no hand-written object was affected by the sense check, so no number changed. `tablet` is still the one word with a
-drawing of its name that counts as missing. Options: (a) keep it missing; (b) widen the rule: a drawing that was
-looked at and shows a physical thing the word names counts, whoever drew it (then the `shown` column of
-`sense-check.tsv` is needed only for the record); (c) draw a tablet computer by hand under the name `tablet` and
-rename OpenMoji's (two drawings of one thing).
-Blocking: no. Meanwhile: (a).
-
-## Q28 (task R7.3 next to Round 8 item 3, 2026-11-13)
-Question: should `k.colours` and `k.shapes` (R7.3, published now) stay worlds of their own next to the `k.values`
-of Round 8 (colour names with RGB and synonyms, shape names), or be folded into it?
-Context: R7.3 asks what is known about colours and shapes (family, light or dark, mixes, typical things; sides,
-corners, round); Round 8 item 3 asks for the value words of a request. I gave `k.colours` no RGB so that two worlds
-do not state two values for one name; the colour and shape names here are then the names that `k.values` can join
-by name. Options: (a) keep both: `k.values` holds names, RGB and synonyms, `k.colours` and `k.shapes` what is known
-about them; (b) `k.values` takes the types `colour`, `mix` and `shape` in, and these two worlds go; (c) add `rgb`
-to `k.colours.colour` and let `k.values` refer to it.
-Blocking: no. Meanwhile: (a). The second worker published `k.values` on the same reading while this was written:
-every colour of `k.colours` joins a `k.values.colour` by name or word (a test), 28 of the 36 shapes a `k.values.shape`.
+(none)
 
 # Closed
 
@@ -296,3 +275,28 @@ Context: `k.feelings` joins only `k.faces` (expressions and variants); it uses n
 addendum 2, R7.2 `k.actions`, R7.3 `k.colours` and `k.shapes`.
 Blocking: no. Meanwhile: addendum 2 next, then R7.2 and R7.3.
 Closed: answered "nothing waits" in worker-tasks.md, block "2026-11-13 18:35"; addendum 2 comes next.
+
+## Q27 (Q25 applied, 2026-11-13)
+Question: the rule of the answer to Q25 (a hand-written object counts for its own name whatever WordNet lists) does
+not reach `tablet`: that drawing is OpenMoji's, not hand-written. Should `tablet` count as drawn all the same?
+Context: the rule is in `tools/coverage.mjs` (the sense check cannot take a hand-written object away from its name);
+no hand-written object was affected by the sense check, so no number changed. `tablet` is still the one word with a
+drawing of its name that counts as missing. Options: (a) keep it missing; (b) widen the rule: a drawing that was
+looked at and shows a physical thing the word names counts, whoever drew it (then the `shown` column of
+`sense-check.tsv` is needed only for the record); (c) draw a tablet computer by hand under the name `tablet` and
+rename OpenMoji's (two drawings of one thing).
+Blocking: no. Meanwhile: (a).
+Closed: answered "yes" in worker-tasks.md, block "2026-11-13 20:35": a thing counts as drawn when any drawing in the catalog carries its name, whatever the source. Applied in `tools/coverage.mjs` as the one rule (it takes in the rule of Q25); `tablet` counts: 680 of 1,500 drawn by name.
+
+## Q28 (task R7.3 next to Round 8 item 3, 2026-11-13)
+Question: should `k.colours` and `k.shapes` (R7.3, published now) stay worlds of their own next to the `k.values`
+of Round 8 (colour names with RGB and synonyms, shape names), or be folded into it?
+Context: R7.3 asks what is known about colours and shapes (family, light or dark, mixes, typical things; sides,
+corners, round); Round 8 item 3 asks for the value words of a request. I gave `k.colours` no RGB so that two worlds
+do not state two values for one name; the colour and shape names here are then the names that `k.values` can join
+by name. Options: (a) keep both: `k.values` holds names, RGB and synonyms, `k.colours` and `k.shapes` what is known
+about them; (b) `k.values` takes the types `colour`, `mix` and `shape` in, and these two worlds go; (c) add `rgb`
+to `k.colours.colour` and let `k.values` refer to it.
+Blocking: no. Meanwhile: (a). The second worker published `k.values` on the same reading while this was written:
+every colour of `k.colours` joins a `k.values.colour` by name or word (a test), 28 of the 36 shapes a `k.values.shape`.
+Closed: answered "keep both" in worker-tasks.md, block "2026-11-13 20:35": `k.values` holds the words and scales, `k.colours` and `k.shapes` the facts about them, joined by name; no fact in two places. Nothing to change.

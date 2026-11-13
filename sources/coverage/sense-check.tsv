@@ -1,9 +1,9 @@
 # word	drawing	verdict	note	instead	shown
 # The sense check (R5.1): every common thing of tools/coverage.mjs that has a drawing of its name, with the verdict of a
 # language model that looked at the drawing next to WordNet's gloss of the sense kept: right, wrong (the drawing shows
-# another sense of the word; the note says which) or unclear. Reviewer's answer to Q22: a wrong entry still counts as
-# drawn when the drawing shows a physical sense of the word that WordNet has; "shown" is that sense (the offset of the
-# noun synset in WordNet 3.1; the tool checks it). A wrong entry without it counts as missing. "instead" names an
+# another sense of the word; the note says which) or unclear. Reviewer's answer to Q27: a thing counts as
+# drawn when any drawing carries its name, so a wrong entry counts too; "shown" is the physical WordNet sense that the
+# drawing shows (the offset of the noun synset in WordNet 3.1; the tool checks it), empty when WordNet has none. "instead" names an
 # object that draws the sense kept, where one exists; links to the word in the sense kept use that object. Rows of
 # hand-written objects made for the sense kept say so in the note.
 house	house	right		
