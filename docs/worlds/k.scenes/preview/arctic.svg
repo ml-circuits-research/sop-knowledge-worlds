@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 262" width="480" height="262">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 305" width="480" height="305">
   <title>arctic</title>
-  <rect width="480" height="262" fill="#cfe8fa"/><rect y="64" width="480" height="198" fill="#f4f8fb"/>
+  <rect width="480" height="305" fill="#cfe8fa"/><rect y="64" width="480" height="241" fill="#f4f8fb"/>
   <defs>
     <symbol id="o-sea" viewBox="0 0 100 100">
   <ellipse cx="77" cy="17" rx="9" ry="9" fill="yellow" stroke="#333" stroke-width="0.8"><title>sun</title></ellipse>
@@ -57,6 +57,12 @@
   <polygon points="42.5,20 50,32 35,32" fill="orange" stroke="#333" stroke-width="0.8"><title>fin</title></polygon>
   <ellipse cx="40" cy="50" rx="30" ry="20" fill="orange" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
   <ellipse cx="23.5" cy="45.5" rx="3.5" ry="3.5" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+    </symbol>
+    <symbol id="o-iceberg" viewBox="0 0 100 100">
+  <polygon points="26,50 74,50 86,72 64,94 34,92 16,70" fill="white" stroke="#333" stroke-width="0.8"><title>under_ice</title></polygon>
+  <polygon points="30,50 36,30 46,34 54,14 62,30 70,26 74,50" fill="white" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <polygon points="54,14 62,30 70,26 74,50 60,50" fill="grey" stroke="#333" stroke-width="0.8"><title>shade</title></polygon>
+  <polyline points="4,50 96,50" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>waterline</title></polyline>
     </symbol>
     <symbol id="o-igloo" viewBox="0 0 100 100">
   <rect x="5" y="88" width="90" height="5" fill="white" stroke="#333" stroke-width="0.8"><title>floor</title></rect>
@@ -191,18 +197,20 @@
   <use href="#o-fish" x="193.6" y="102" width="30" height="30"><title>fish</title></use>
   <use href="#o-fish" x="286.4" y="102" width="30" height="30"><title>fish</title></use>
   <use href="#o-fish" x="379.2" y="102" width="30" height="30"><title>fish</title></use>
-  <use href="#o-igloo" x="15.8" y="138" width="66" height="66"><title>igloo</title></use>
-  <use href="#o-polar_bear" x="89.5" y="138" width="66" height="66"><title>polar bear</title></use>
-  <use href="#o-polar_bear" x="163.3" y="138" width="66" height="66"><title>polar bear</title></use>
-  <use href="#o-walrus" x="237" y="138" width="66" height="66"><title>walrus</title></use>
-  <use href="#o-penguin" x="310.8" y="158" width="46" height="46"><title>penguin</title></use>
-  <use href="#o-penguin" x="364.5" y="158" width="46" height="46"><title>penguin</title></use>
-  <use href="#o-penguin" x="418.3" y="158" width="46" height="46"><title>penguin</title></use>
-  <use href="#o-seal" x="25.8" y="210" width="46" height="46"><title>seal</title></use>
-  <use href="#o-seal" x="89.5" y="210" width="46" height="46"><title>seal</title></use>
-  <use href="#o-reindeer" x="153.3" y="210" width="46" height="46"><title>reindeer</title></use>
-  <use href="#o-reindeer" x="217" y="210" width="46" height="46"><title>reindeer</title></use>
-  <use href="#o-sled" x="280.8" y="210" width="46" height="46"><title>sled</title></use>
-  <use href="#o-person" x="344.5" y="210" width="46" height="46"><title>person</title></use>
-  <use href="#o-snowman" x="408.3" y="210" width="46" height="46"><title>snowman</title></use>
+  <use href="#o-iceberg" x="138.1" y="138" width="36.8" height="36.8"><title>iceberg</title></use>
+  <use href="#o-iceberg" x="305.1" y="138" width="36.8" height="36.8"><title>iceberg</title></use>
+  <use href="#o-igloo" x="15.8" y="180.8" width="66" height="66"><title>igloo</title></use>
+  <use href="#o-polar_bear" x="89.5" y="180.8" width="66" height="66"><title>polar bear</title></use>
+  <use href="#o-polar_bear" x="163.3" y="180.8" width="66" height="66"><title>polar bear</title></use>
+  <use href="#o-walrus" x="237" y="180.8" width="66" height="66"><title>walrus</title></use>
+  <use href="#o-penguin" x="310.8" y="200.8" width="46" height="46"><title>penguin</title></use>
+  <use href="#o-penguin" x="364.5" y="200.8" width="46" height="46"><title>penguin</title></use>
+  <use href="#o-penguin" x="418.3" y="200.8" width="46" height="46"><title>penguin</title></use>
+  <use href="#o-seal" x="25.8" y="252.8" width="46" height="46"><title>seal</title></use>
+  <use href="#o-seal" x="89.5" y="252.8" width="46" height="46"><title>seal</title></use>
+  <use href="#o-reindeer" x="153.3" y="252.8" width="46" height="46"><title>reindeer</title></use>
+  <use href="#o-reindeer" x="217" y="252.8" width="46" height="46"><title>reindeer</title></use>
+  <use href="#o-sled" x="280.8" y="252.8" width="46" height="46"><title>sled</title></use>
+  <use href="#o-person" x="344.5" y="252.8" width="46" height="46"><title>person</title></use>
+  <use href="#o-snowman" x="408.3" y="252.8" width="46" height="46"><title>snowman</title></use>
 </svg>

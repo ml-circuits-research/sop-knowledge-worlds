@@ -15,24 +15,24 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3330
-- one thing everywhere: 3262
-- clashes of sense: 68
+- names carried by facts of more than one world: 3345
+- one thing everywhere: 3275
+- clashes of sense: 70
 
 | sense of the one thing | names |
 |---|---:|
-| animal | 351 |
-| food | 479 |
-| plant | 69 |
+| animal | 356 |
+| food | 482 |
+| plant | 70 |
 | person | 61 |
 | body part | 60 |
 | clothing | 160 |
 | colour | 35 |
-| shape | 30 |
+| shape | 28 |
 | place | 297 |
 | time | 35 |
 | body in space | 21 |
-| thing | 1664 |
+| thing | 1670 |
 
 ## Clashes of sense
 
@@ -50,12 +50,13 @@ and the meat).
 | chicken | **animal**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number` |
 | chocolate | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
 | cod | **animal**: `k.animals.animal`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number`, `k.objects.stand_in` |
+| cone | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.objects.object`; unsure: `k.attributes.number` |
 | copper | **colour**: `k.values.colour`; **place**: `k.geo.river` |
 | coral | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
 | crab | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number` |
 | crane | **animal**: `k.animals.animal`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | cream | **food**: `k.food.food`; **colour**: `k.colours.colour`, `k.values.colour` |
-| eel | **animal**: `k.animals.animal`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| eel | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
 | feather | **animal**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number`, `k.attributes.thing` |
 | fly | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | fox | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
@@ -95,6 +96,7 @@ and the meat).
 | shrimp | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | skin | **body part**: `k.body.part`; **colour**: `k.values.colour` |
 | snake | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| sphere | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.objects.object` |
 | star | **shape**: `k.shapes.shape`, `k.values.shape`; **body in space**: `k.space.kind`; unsure: `k.attributes.drawn`, `k.attributes.thing`, `k.attributes.usage`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing` |
 | swan | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
 | tamale | **food**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.city` |
@@ -113,22 +115,22 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2211 |
-| `k.attributes` and `k.scenes` | 2047 |
-| `k.objects` and `k.scenes` | 2023 |
+| `k.attributes` and `k.objects` | 2259 |
+| `k.attributes` and `k.scenes` | 2050 |
+| `k.objects` and `k.scenes` | 2036 |
 | `k.animals` and `k.scenes` | 290 |
 | `k.animals` and `k.attributes` | 175 |
 | `k.attributes` and `k.layouts` | 167 |
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
-| `k.animals` and `k.objects` | 148 |
-| `k.attributes` and `k.food` | 139 |
-| `k.food` and `k.objects` | 130 |
+| `k.animals` and `k.objects` | 158 |
+| `k.attributes` and `k.food` | 140 |
+| `k.food` and `k.objects` | 132 |
 | `k.food` and `k.scenes` | 125 |
 | `k.attributes` and `k.wearables` | 87 |
 | `k.objects` and `k.wearables` | 83 |
 | `k.scenes` and `k.wearables` | 82 |
-| `k.shapes` and `k.values` | 26 |
+| `k.shapes` and `k.values` | 24 |
 | `k.colours` and `k.values` | 19 |
 | `k.attributes` and `k.space` | 16 |
 | `k.objects` and `k.space` | 16 |
@@ -138,8 +140,8 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.commonsense` and `k.scenes` | 14 |
 | `k.attributes` and `k.body` | 13 |
 | `k.body` and `k.objects` | 9 |
-| `k.attributes` and `k.values` | 6 |
 | `k.commonsense` and `k.layouts` | 6 |
+| `k.attributes` and `k.values` | 5 |
 | `k.geo` and `k.objects` | 5 |
 | `k.animals` and `k.layouts` | 4 |
 | `k.attributes` and `k.geo` | 3 |
@@ -151,5 +153,5 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.attributes` and `k.colours` | 2 |
 | `k.commonsense` and `k.space` | 2 |
 | `k.geo` and `k.scenes` | 2 |
-| `k.attributes` and `k.shapes` | 1 |
 | `k.layouts` and `k.wearables` | 1 |
+| `k.objects` and `k.values` | 1 |

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>intercom</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="30" y="14" width="40" height="72" fill="grey" stroke="#333" stroke-width="0.8"><title>panel</title></rect>
+  <ellipse cx="50" cy="32" rx="12" ry="12" fill="black" stroke="#333" stroke-width="0.8"><title>speaker</title></ellipse>
+  <rect x="38" y="52" width="24" height="8" fill="white" stroke="#333" stroke-width="0.8"><title>button_1</title></rect>
+  <rect x="38" y="64" width="24" height="8" fill="white" stroke="#333" stroke-width="0.8"><title>button_2</title></rect>
+  <ellipse cx="50" cy="78" rx="2" ry="2" fill="green" stroke="#333" stroke-width="0.8"><title>light</title></ellipse>
+  <polyline points="42,28 58,28" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_1</title></polyline>
+  <polyline points="41,32 59,32" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_2</title></polyline>
+  <polyline points="42,36 58,36" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_3</title></polyline>
+</svg>

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-r: one name, one thing: for 128 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-r: one name, one thing: for 130 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -25,7 +25,7 @@
 @k.attributes.same.rake.thing k.attributes.same name=rake sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ram.animal k.attributes.same name=ram sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ramp.thing k.attributes.same name=ramp sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.raspberry.food k.attributes.same name=raspberry sense=food only=true in=k.attributes.number in=k.food.food by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.raspberry.food k.attributes.same name=raspberry sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rat.animal k.attributes.same name=rat sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rattle_snake.animal k.attributes.same name="rattle snake" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.rattlesnake.animal k.attributes.same name=rattlesnake sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -47,6 +47,7 @@
 @k.attributes.same.red_panda.animal k.attributes.same name="red panda" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.red_paper_lantern.thing k.attributes.same name="red paper lantern" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.reed.thing k.attributes.same name=reed sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.reel.thing k.attributes.same name=reel sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.refrigerator.thing k.attributes.same name=refrigerator sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.refuse_lorry.thing k.attributes.same name="refuse lorry" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.rein.thing k.attributes.same name=rein sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
@@ -105,6 +106,7 @@
 @k.attributes.same.romania.place k.attributes.same name=romania sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rome.place k.attributes.same name=rome sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.roof.thing k.attributes.same name=roof sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.rook.thing k.attributes.same name=rook sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rooster.animal k.attributes.same name=rooster sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.root_vegetable.food k.attributes.same name="root vegetable" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.roots.plant k.attributes.same name=roots sense=plant only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"

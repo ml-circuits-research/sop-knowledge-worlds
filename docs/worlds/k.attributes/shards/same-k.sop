@@ -1,4 +1,4 @@
-# k.attributes/shards/same-k: one name, one thing: for 44 names that start with "k" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-k: one name, one thing: for 45 names that start with "k" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -32,12 +32,13 @@
 @k.attributes.same.kitten.thing k.attributes.same name=kitten sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.kiwi.animal k.attributes.same name=kiwi sense=animal only=false in=k.animals.animal unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.kiwi.food k.attributes.same name=kiwi sense=food only=false in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.kiwi_bird.animal k.attributes.same name="kiwi bird" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.kiwi_fruit.food k.attributes.same name="kiwi fruit" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.knee.body_part k.attributes.same name=knee sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knickers.clothing k.attributes.same name=knickers sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knife.thing k.attributes.same name=knife sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knight.person k.attributes.same name=knight sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.knob.thing k.attributes.same name=knob sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.knob.thing k.attributes.same name=knob sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knot.thing k.attributes.same name=knot sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knuckle.body_part k.attributes.same name=knuckle sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.koala.animal k.attributes.same name=koala sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>plateau</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="0" y="80" width="100" height="20" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <polygon points="10,40 90,40 98,80 2,80" fill="brown" stroke="#333" stroke-width="0.8"><title>plateau</title></polygon>
+  <rect x="10" y="36" width="80" height="6" fill="green" stroke="#333" stroke-width="0.8"><title>top</title></rect>
+  <polyline points="20,46 16,76" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>crack_1</title></polyline>
+  <polyline points="34,46 32,78" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>crack_2</title></polyline>
+  <polyline points="66,46 68,78" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>crack_3</title></polyline>
+  <polyline points="80,46 84,76" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>crack_4</title></polyline>
+</svg>

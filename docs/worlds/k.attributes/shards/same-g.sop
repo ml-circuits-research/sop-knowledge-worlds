@@ -1,4 +1,4 @@
-# k.attributes/shards/same-g: one name, one thing: for 124 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-g: one name, one thing: for 125 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -42,6 +42,7 @@
 @k.attributes.same.ginseng.thing k.attributes.same name=ginseng sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.giraffe.animal k.attributes.same name=giraffe sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.girl.person k.attributes.same name=girl sense=person only=true in=k.people.kind by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.glacier.thing k.attributes.same name=glacier sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glasgow.place k.attributes.same name=glasgow sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glass_bottle.food k.attributes.same name="glass bottle" sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.glass_of_milk.food k.attributes.same name="glass of milk" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -88,7 +89,7 @@
 @k.attributes.same.grapefruit_juice.food k.attributes.same name="grapefruit juice" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.grapes.food k.attributes.same name=grapes sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.grass.plant k.attributes.same name=grass sense=plant only=true in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.grasshopper.animal k.attributes.same name=grasshopper sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.attributes.thing in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.grasshopper.animal k.attributes.same name=grasshopper sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grater.thing k.attributes.same name=grater sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.grave.thing k.attributes.same name=grave sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gravy.food k.attributes.same name=gravy sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"

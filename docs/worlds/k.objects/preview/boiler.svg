@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>boiler</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="46" y="0" width="8" height="10" fill="grey" stroke="#333" stroke-width="0.8"><title>pipe</title></rect>
+  <rect x="28" y="84" width="8" height="8" fill="black" stroke="#333" stroke-width="0.8"><title>foot_1</title></rect>
+  <rect x="64" y="84" width="8" height="8" fill="black" stroke="#333" stroke-width="0.8"><title>foot_2</title></rect>
+  <rect x="26" y="14" width="48" height="72" fill="grey" stroke="#333" stroke-width="0.8"><title>tank</title></rect>
+  <ellipse cx="50" cy="14" rx="24" ry="6" fill="grey" stroke="#333" stroke-width="0.8"><title>top</title></ellipse>
+  <ellipse cx="50" cy="32" rx="10" ry="10" fill="white" stroke="#333" stroke-width="0.8"><title>gauge</title></ellipse>
+  <rect x="38" y="60" width="24" height="18" fill="black" stroke="#333" stroke-width="0.8"><title>door</title></rect>
+  <polyline points="50,32 56,26" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>needle</title></polyline>
+  <polygon points="42,78 46,68 50,74 54,64 58,78" fill="orange" stroke="#333" stroke-width="0.8"><title>flame</title></polygon>
+</svg>

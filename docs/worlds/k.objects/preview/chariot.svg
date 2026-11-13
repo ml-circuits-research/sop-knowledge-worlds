@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>chariot</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="70,60 98,52" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>pole</title></polyline>
+  <rect x="22" y="22" width="8" height="16" fill="red" stroke="#333" stroke-width="0.8"><title>seat_back</title></rect>
+  <polygon points="20,36 78,36 70,64 26,64" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></polygon>
+  <polyline points="30,36 72,30" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rail</title></polyline>
+  <ellipse cx="28" cy="68" rx="16" ry="16" fill="brown" stroke="#333" stroke-width="0.8"><title>back_wheel</title></ellipse>
+  <ellipse cx="71" cy="71" rx="13" ry="13" fill="brown" stroke="#333" stroke-width="0.8"><title>front_wheel</title></ellipse>
+  <polyline points="14,68 42,68" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>back_spoke_1</title></polyline>
+  <polyline points="28,54 28,82" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>back_spoke_2</title></polyline>
+  <polyline points="60,71 82,71" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_1</title></polyline>
+  <polyline points="71,60 71,82" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_2</title></polyline>
+  <ellipse cx="28" cy="68" rx="3" ry="3" fill="yellow" stroke="#333" stroke-width="0.8"><title>back_hub</title></ellipse>
+  <ellipse cx="71" cy="71" rx="3" ry="3" fill="yellow" stroke="#333" stroke-width="0.8"><title>front_hub</title></ellipse>
+</svg>

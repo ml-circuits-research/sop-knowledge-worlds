@@ -5,11 +5,11 @@
 
 @k.attributes.same.jack_in_box.thing k.attributes.same name="jack in box" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jack-o-lantern.thing k.attributes.same name=jack-o-lantern sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.jackal.animal k.attributes.same name=jackal sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.jackal.animal k.attributes.same name=jackal sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jacket.clothing k.attributes.same name=jacket sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jacket_-_mans.clothing k.attributes.same name="jacket - mans" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jade.colour k.attributes.same name=jade sense=colour only=true in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.jaguar.animal k.attributes.same name=jaguar sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.jaguar.animal k.attributes.same name=jaguar sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jail.thing k.attributes.same name=jail sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jam.food k.attributes.same name=jam sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jam_tart.food k.attributes.same name="jam tart" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

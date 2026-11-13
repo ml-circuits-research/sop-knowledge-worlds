@@ -234,7 +234,7 @@
 @k.scenes.scene.arctic k.scenes.scene name=arctic kind=outdoors ground=snow weather=snowy weather=windy season=winter happens="fish through the ice" happens="ride a sled" core.source="hand-core 1"
 @k.scenes.has.arctic.cloud k.scenes.has scene=arctic thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.arctic.snowflake k.scenes.has scene=arctic thing=snowflake count=10 where=sky drawing=snowflake core.source="hand-core 1"
-@k.scenes.has.arctic.iceberg k.scenes.has scene=arctic thing=iceberg count=2 where=background core.source="hand-core 1"
+@k.scenes.has.arctic.iceberg k.scenes.has scene=arctic thing=iceberg count=2 where=background drawing=iceberg core.source="hand-core 1"
 @k.scenes.has.arctic.igloo k.scenes.has scene=arctic thing=igloo count=1 where=ground drawing=igloo core.source="hand-core 1"
 @k.scenes.has.arctic.polar_bear k.scenes.has scene=arctic thing="polar bear" count=2 where=ground drawing="polar bear" core.source="hand-core 1"
 @k.scenes.has.arctic.penguin k.scenes.has scene=arctic thing=penguin count=5 where=ground drawing=penguin core.source="hand-core 1"

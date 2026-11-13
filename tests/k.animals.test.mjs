@@ -43,13 +43,13 @@ test('Q32, one home: every animal has its size class in exactly one k.scenes.thi
   let other = 0;
   for (const a of animals) {
     const name = one(a, 'name'), at = one(a, 'thing') ?? name;
-    if (at !== name) { other++; assert.ok(things.has(name), `${name}: thing= is only for a name that another thing has`); assert.notEqual(one(things.get(name), 'size'), table.get(name).size, name); }
+    if (at !== name) { other++; assert.ok(things.has(name), `${name}: thing= is only for a name that another thing has`); if (one(a, 'drawing') !== at) assert.notEqual(one(things.get(name), 'size'), table.get(name).size, name); }
     assert.ok(things.has(at), `${name}: no k.scenes.thing ${at}`);
     assert.equal(one(things.get(at), 'size'), table.get(name).size, name);
     assert.ok(SIZES.includes(one(things.get(at), 'size')), name);
   }
-  assert.deepEqual([...animalThings().thingOf].sort(), [['crane', 'crane bird'], ['tuna', 'tuna fish']]);
-  assert.equal(other, 2);
+  assert.deepEqual([...animalThings().thingOf].sort(), [['crane', 'crane bird'], ['kiwi', 'kiwi bird'], ['tuna', 'tuna fish']]);
+  assert.equal(other, 3);
   // The place of a row made for an animal, by the rule.
   assert.equal(one(things.get('cod'), 'place'), 'water');
   assert.equal(one(things.get('sparrow'), 'place'), 'sky');

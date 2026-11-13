@@ -15,7 +15,7 @@
 @k.attributes.same.earwig.animal k.attributes.same name=earwig sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.easter_egg.thing k.attributes.same name="easter egg" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.echidna.animal k.attributes.same name=echidna sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.eel.animal k.attributes.same name=eel sense=animal only=false in=k.animals.animal in=k.scenes.thing unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.eel.animal k.attributes.same name=eel sense=animal only=false in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.eel.place k.attributes.same name=eel sense=place only=false in=k.geo.river unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.egg.food k.attributes.same name=egg sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.egg_boiled.food k.attributes.same name="egg boiled" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

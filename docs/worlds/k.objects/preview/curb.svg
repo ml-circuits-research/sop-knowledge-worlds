@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>curb</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="0" y="62" width="100" height="38" fill="black" stroke="#333" stroke-width="0.8"><title>road</title></rect>
+  <rect x="8" y="80" width="18" height="3" fill="white" stroke="#333" stroke-width="0.8"><title>mark_1</title></rect>
+  <rect x="41" y="80" width="18" height="3" fill="white" stroke="#333" stroke-width="0.8"><title>mark_2</title></rect>
+  <rect x="74" y="80" width="18" height="3" fill="white" stroke="#333" stroke-width="0.8"><title>mark_3</title></rect>
+  <rect x="0" y="30" width="100" height="24" fill="grey" stroke="#333" stroke-width="0.8"><title>sidewalk</title></rect>
+  <rect x="0" y="54" width="100" height="8" fill="white" stroke="#333" stroke-width="0.8"><title>curb</title></rect>
+  <polyline points="20,54 20,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_1</title></polyline>
+  <polyline points="40,54 40,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_2</title></polyline>
+  <polyline points="60,54 60,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_3</title></polyline>
+  <polyline points="80,54 80,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_4</title></polyline>
+</svg>

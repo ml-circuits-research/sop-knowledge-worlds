@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>crane bird</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="44" y="62" width="2" height="32" fill="black" stroke="#333" stroke-width="0.8"><title>left_leg</title></rect>
+  <rect x="52" y="62" width="2" height="32" fill="black" stroke="#333" stroke-width="0.8"><title>right_leg</title></rect>
+  <polygon points="18,34 34,32 36,50 20,52" fill="black" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
+  <polyline points="40,94 50,94" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_foot</title></polyline>
+  <polyline points="48,94 58,94" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_foot</title></polyline>
+  <ellipse cx="46" cy="43" rx="20" ry="13" fill="grey" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <polygon points="58,36 63,12 68,12 66,38" fill="grey" stroke="#333" stroke-width="0.8"><title>neck</title></polygon>
+  <ellipse cx="66" cy="9" rx="5" ry="5" fill="black" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <polygon points="86,9 70,7 70,11" fill="yellow" stroke="#333" stroke-width="0.8"><title>beak</title></polygon>
+  <ellipse cx="66" cy="6" rx="2" ry="2" fill="red" stroke="#333" stroke-width="0.8"><title>crown</title></ellipse>
+  <ellipse cx="65" cy="11" rx="3" ry="2" fill="white" stroke="#333" stroke-width="0.8"><title>cheek</title></ellipse>
+  <ellipse cx="67" cy="8" rx="1" ry="1" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+</svg>

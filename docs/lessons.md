@@ -51,3 +51,13 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   `remove`): a reusable world is also a test case for the library (Q35).
 - Not done and worth doing: `k.layouts` has layouts named `list` and `timeline`; a join from those layouts to
   the `w.*` schema of the same name would let a host draw what a user made.
+- **Item 3: one name, two things, is fixed with a second name and a join, not by renaming.** The drawing `crane`
+  stays the machine; the animal gets `"crane bird"` and says so with `drawing=` and `thing=`. The joins table
+  keeps reporting the clash, which is right: a host that compares names in lower case must still be told. The
+  rule that gives an animal its own place row had to learn a second trigger (drawn under the other name), so a
+  rule over names needs to know about the drawings, not only about the sizes.
+- **A drawing that carries its own background does not compose.** The iceberg with its sea and the seaweed with
+  its water looked right alone and became blue tiles in the scenes that place them. A reusable drawing is the
+  thing alone; the scene gives the ground and the water.
+- **Hand drawing scales with a table and a checker, not with free SOP Lang:** one line per part, checked
+  for the frame, the shape rules and the names of relations, made 50 drawings with no load error.

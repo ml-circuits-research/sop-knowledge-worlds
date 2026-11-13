@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>stump</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="0" y="86" width="100" height="14" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <polygon points="32,74 16,88 34,86" fill="brown" stroke="#333" stroke-width="0.8"><title>root_left</title></polygon>
+  <polygon points="68,74 84,88 66,86" fill="brown" stroke="#333" stroke-width="0.8"><title>root_right</title></polygon>
+  <rect x="30" y="50" width="40" height="36" fill="brown" stroke="#333" stroke-width="0.8"><title>trunk</title></rect>
+  <polyline points="40,60 40,80" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bark_1</title></polyline>
+  <polyline points="52,58 52,82" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bark_2</title></polyline>
+  <polyline points="62,60 62,80" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bark_3</title></polyline>
+  <ellipse cx="50" cy="50" rx="20" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>top</title></ellipse>
+  <ellipse cx="50" cy="50" rx="12" ry="3.5" fill="brown" stroke="#333" stroke-width="0.8"><title>ring_1</title></ellipse>
+  <ellipse cx="50" cy="50" rx="5" ry="1.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>ring_2</title></ellipse>
+</svg>

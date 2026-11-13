@@ -167,6 +167,7 @@
  ],
  "abdomen": [
   "k.body/shards/core",
+  "k.objects/shards/animals-2",
   "k.words/shards/ab"
  ],
  "abdominal": [
@@ -1703,15 +1704,18 @@
  ],
  "alligator": [
   "k.animals/shards/reptiles-and-amphibians",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-a",
   "k.attributes/shards/things-living",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-a",
   "k.words/shards/al"
  ],
  "alligators": [
-  "k.animals/shards/reptiles-and-amphibians"
+  "k.animals/shards/reptiles-and-amphibians",
+  "k.objects/shards/animals-2"
  ],
  "allow": [
   "k.words/shards/al"
@@ -2527,6 +2531,7 @@
   "k.attributes/shards/same-a",
   "k.faces/shards/plain-hat",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/noto-music-02",
   "k.objects/shards/noto-science-01",
@@ -2537,6 +2542,12 @@
  ],
  "antenna2": [
   "k.objects/shards/noto-animal-marine-02"
+ ],
+ "antenna_1": [
+  "k.objects/shards/animals-2"
+ ],
+ "antenna_2": [
+  "k.objects/shards/animals-2"
  ],
  "antennae": [
   "k.objects/shards/animals",
@@ -4556,19 +4567,38 @@
  "back_glove": [
   "k.objects/shards/openmoji-gardening-01"
  ],
+ "back_hub": [
+  "k.objects/shards/vehicles-2"
+ ],
  "back_leg": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/household",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05"
  ],
+ "back_leg_1": [
+  "k.objects/shards/animals-2"
+ ],
+ "back_leg_2": [
+  "k.objects/shards/animals-2"
+ ],
  "back_row": [
   "k.layouts/shards/layouts"
  ],
  "back_slice": [
   "k.objects/shards/mulberry-food-dairy-01"
+ ],
+ "back_spoke_1": [
+  "k.objects/shards/vehicles-2"
+ ],
+ "back_spoke_2": [
+  "k.objects/shards/vehicles-2"
+ ],
+ "back_sucker": [
+  "k.objects/shards/animals-2"
  ],
  "back_wall": [
   "k.layouts/shards/layouts"
@@ -4580,7 +4610,8 @@
   "k.objects/shards/mulberry-transport-road-02",
   "k.objects/shards/openmoji-technology-01",
   "k.objects/shards/openmoji-travel-places-02",
-  "k.objects/shards/vehicles"
+  "k.objects/shards/vehicles",
+  "k.objects/shards/vehicles-2"
  ],
  "back_window": [
   "k.objects/shards/mulberry-leisure-toys-02",
@@ -5032,6 +5063,7 @@
   "k.scenes/shards/things-b"
  ],
  "ball shape": [
+  "k.objects/shards/things-3",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes"
  ],
@@ -5246,14 +5278,36 @@
  "band6": [
   "k.objects/shards/noto-sky-weather-04"
  ],
+ "band_1": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/things-3"
+ ],
+ "band_2": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/things-3"
+ ],
+ "band_3": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/things-3"
+ ],
+ "band_4": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/things-3"
+ ],
+ "band_5": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/things-3"
+ ],
  "banda sea": [
   "k.geo/shards/seas"
  ],
  "bandage": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
   "k.objects/shards/noto-medical-01",
   "k.objects/shards/openmoji-healthcare-01",
+  "k.objects/shards/things-3",
   "k.parts/shards/b",
   "k.words/shards/ba"
  ],
@@ -5262,6 +5316,9 @@
   "k.attributes/shards/same-b",
   "k.objects/shards/openmoji-healthcare-03",
   "k.scenes/shards/things-b"
+ ],
+ "bandages": [
+  "k.objects/shards/things-3"
  ],
  "bandama": [
   "k.geo/shards/africa"
@@ -5582,6 +5639,15 @@
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/ba"
  ],
+ "bark_1": [
+  "k.objects/shards/plants"
+ ],
+ "bark_2": [
+  "k.objects/shards/plants"
+ ],
+ "bark_3": [
+  "k.objects/shards/plants"
+ ],
  "barked": [
   "k.actions/shards/actions-mind-talk"
  ],
@@ -5665,6 +5731,12 @@
   "k.objects/shards/things-2",
   "k.parts/shards/usual",
   "k.words/shards/ba"
+ ],
+ "barrel_1": [
+  "k.objects/shards/vehicles-2"
+ ],
+ "barrel_2": [
+  "k.objects/shards/vehicles-2"
  ],
  "barrelled": [
   "k.words/shards/ba"
@@ -5759,9 +5831,11 @@
   "k.objects/shards/openmoji-objects-04",
   "k.objects/shards/openmoji-technology-01",
   "k.objects/shards/places",
+  "k.objects/shards/places-3",
   "k.objects/shards/sky",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.units/schema.sop",
   "k.words/shards/ba"
  ],
@@ -6299,6 +6373,7 @@
  "beak": [
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.objects/shards/mulberry-animal-birds-02",
@@ -6584,6 +6659,12 @@
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
   "k.scenes/shards/things-b"
  ],
+ "bee_1": [
+  "k.objects/shards/things-3"
+ ],
+ "bee_2": [
+  "k.objects/shards/things-3"
+ ],
  "beef": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-b",
@@ -6593,8 +6674,12 @@
   "k.words/shards/be"
  ],
  "beehive": [
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/be"
+ ],
+ "beehives": [
+  "k.objects/shards/things-3"
  ],
  "been": [
   "k.words/shards/be"
@@ -6895,6 +6980,7 @@
  "belly": [
   "k.attributes/shards/same-b",
   "k.body/shards/core",
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/nature-2",
@@ -6904,6 +6990,7 @@
   "k.words/shards/be"
  ],
  "belly_fin": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2"
  ],
  "belmopan": [
@@ -7166,6 +7253,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.objects/shards/food-3",
   "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/noto-food-fruit-02",
@@ -7875,6 +7963,18 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/bi"
  ],
+ "bit_1": [
+  "k.objects/shards/food-3"
+ ],
+ "bit_2": [
+  "k.objects/shards/food-3"
+ ],
+ "bit_3": [
+  "k.objects/shards/food-3"
+ ],
+ "bit_4": [
+  "k.objects/shards/food-3"
+ ],
  "bitch": [
   "k.words/shards/bi"
  ],
@@ -8080,6 +8180,7 @@
   "k.objects/shards/openmoji-gardening-01",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.words/shards/bl"
  ],
  "blades": [
@@ -8703,6 +8804,7 @@
   "k.faces/shards/plain-shoulders",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/buildings",
   "k.objects/shards/figures",
   "k.objects/shards/food",
@@ -8789,7 +8891,9 @@
   "k.objects/shards/structures",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.objects/shards/vehicles",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/psys2",
   "k.units/shards/measures",
   "k.wearables/shards/places",
@@ -8859,14 +8963,19 @@
   "k.food/shards/dishes"
  ],
  "boiler": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.objects/shards/things-3",
   "k.parts/shards/b",
   "k.words/shards/bo"
  ],
  "boiler suit": [
   "k.faces/shards/plain-shoulders",
   "k.wearables/shards/wearables"
+ ],
+ "boilers": [
+  "k.objects/shards/things-3"
  ],
  "boiling": [
   "k.values/shards/scales",
@@ -9676,6 +9785,7 @@
   "k.layouts/shards/anchors-points",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
+  "k.objects/shards/food-3",
   "k.objects/shards/mulberry-building-contents-04",
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.objects/shards/mulberry-food-breads-and-baking-03",
@@ -10299,6 +10409,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/structures",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/b",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
@@ -10786,6 +10897,20 @@
  "bubble4": [
   "k.objects/shards/noto-science-01"
  ],
+ "bubble_1": [
+  "k.objects/shards/food-3",
+  "k.objects/shards/plants"
+ ],
+ "bubble_2": [
+  "k.objects/shards/food-3",
+  "k.objects/shards/plants"
+ ],
+ "bubble_3": [
+  "k.objects/shards/food-3"
+ ],
+ "bubble_4": [
+  "k.objects/shards/food-3"
+ ],
  "bubbles": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-b",
@@ -10842,6 +10967,7 @@
   "k.objects/shards/mulberry-clothes-accessories-01",
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.scenes/shards/things-b",
   "k.words/shards/bu"
  ],
@@ -11694,10 +11820,12 @@
   "k.objects/shards/openmoji-technology-02"
  ],
  "button_1": [
-  "k.faces/shards/plain-shoulders"
+  "k.faces/shards/plain-shoulders",
+  "k.objects/shards/things-3"
  ],
  "button_2": [
-  "k.faces/shards/plain-shoulders"
+  "k.faces/shards/plain-shoulders",
+  "k.objects/shards/things-3"
  ],
  "button_3": [
   "k.faces/shards/plain-shoulders"
@@ -12224,6 +12352,9 @@
  "calvin": [
   "k.words/shards/ca"
  ],
+ "calyx": [
+  "k.objects/shards/food-3"
+ ],
  "cam": [
   "k.words/shards/ca"
  ],
@@ -12640,10 +12771,15 @@
   "k.objects/shards/noto-food-fruit-01"
  ],
  "canteen": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/ca"
+ ],
+ "canteens": [
+  "k.objects/shards/things-3"
  ],
  "cantonese": [
   "k.words/shards/ca"
@@ -12709,6 +12845,7 @@
   "k.objects/shards/openmoji-food-drink-02",
   "k.objects/shards/places",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.parts/shards/c",
   "k.scenes/shards/things-c",
   "k.wearables/shards/wearables",
@@ -12776,11 +12913,17 @@
   "k.geo/schema.sop"
  ],
  "capitol": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-c",
+  "k.objects/shards/places-3",
   "k.parts/shards/c",
   "k.words/shards/ca"
  ],
  "capitol hill": [
   "k.geo/shards/oceania"
+ ],
+ "capitols": [
+  "k.objects/shards/places-3"
  ],
  "capone": [
   "k.words/shards/ca"
@@ -13153,6 +13296,7 @@
   "k.attributes/shards/things-big",
   "k.objects/shards/stand-ins-wordnet",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.objects/shards/vehicles",
   "k.parts/shards/b",
   "k.parts/shards/c",
@@ -13410,6 +13554,9 @@
   "k.scenes/shards/things-c",
   "k.words/shards/ca"
  ],
+ "castle piece": [
+  "k.objects/shards/things-3"
+ ],
  "castles": [
   "k.objects/shards/buildings",
   "k.scenes/shards/scenes-town"
@@ -13665,9 +13812,14 @@
   "k.objects/shards/land"
  ],
  "caviar": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.objects/shards/food-3",
   "k.words/shards/ca"
+ ],
+ "caviare": [
+  "k.objects/shards/food-3"
  ],
  "cavities": [
   "k.objects/shards/noto-food-sweet-02"
@@ -14487,10 +14639,15 @@
   "k.geo/shards/africa"
  ],
  "chariot": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/c",
   "k.words/shards/ch"
+ ],
+ "chariots": [
+  "k.objects/shards/vehicles-2"
  ],
  "charisma": [
   "k.words/shards/ch"
@@ -14675,6 +14832,7 @@
  "cheek": [
   "k.attributes/shards/same-c",
   "k.body/shards/core",
+  "k.objects/shards/animals-2",
   "k.objects/shards/noto-sky-weather-02",
   "k.words/shards/ch"
  ],
@@ -14914,6 +15072,7 @@
  "chest": [
   "k.attributes/shards/same-c",
   "k.body/shards/core",
+  "k.objects/shards/animals-2",
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/things-2",
   "k.parts/shards/t",
@@ -15316,6 +15475,12 @@
  ],
  "chip3": [
   "k.objects/shards/noto-food-sweet-01"
+ ],
+ "chip_1": [
+  "k.objects/shards/food-3"
+ ],
+ "chip_2": [
+  "k.objects/shards/food-3"
  ],
  "chip_box": [
   "k.objects/shards/mulberry-food-meals-and-snacks-07"
@@ -15811,9 +15976,17 @@
   "k.words/shards/ci"
  ],
  "cinnamon": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-c",
   "k.food/shards/other",
+  "k.objects/shards/food-3",
   "k.words/shards/ci"
+ ],
+ "cinnamon stick": [
+  "k.objects/shards/food-3"
+ ],
+ "cinnamon sticks": [
+  "k.objects/shards/food-3"
  ],
  "cipher": [
   "k.words/shards/ci"
@@ -15962,8 +16135,10 @@
  ],
  "clam": [
   "k.animals/shards/invertebrates",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
   "k.words/shards/cl"
@@ -15989,6 +16164,7 @@
  ],
  "clams": [
   "k.animals/shards/invertebrates",
+  "k.objects/shards/animals-2",
   "k.words/shards/cl"
  ],
  "clan": [
@@ -16275,6 +16451,9 @@
   "k.actions/shards/actions-move",
   "k.words/shards/cl"
  ],
+ "climbing harness": [
+  "k.objects/shards/things-3"
+ ],
  "climbing wall": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-c",
@@ -16530,9 +16709,13 @@
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-clothing-05",
+  "k.objects/shards/things-3",
   "k.people/schema.sop",
   "k.wearables/schema.sop",
   "k.words/shards/cl"
+ ],
+ "clothes dryer": [
+  "k.objects/shards/things-3"
  ],
  "clothes hanger": [
   "k.attributes/shards/drawn-mulberry",
@@ -17065,6 +17248,18 @@
   "k.shapes/shards/shapes",
   "k.words/shards/co-1"
  ],
+ "coil_1": [
+  "k.objects/shards/things-3"
+ ],
+ "coil_2": [
+  "k.objects/shards/things-3"
+ ],
+ "coil_3": [
+  "k.objects/shards/things-3"
+ ],
+ "coil_4": [
+  "k.objects/shards/things-3"
+ ],
  "coils": [
   "k.objects/shards/things"
  ],
@@ -17165,6 +17360,7 @@
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.parts/shards/c",
   "k.parts/shards/psys2",
   "k.scenes/shards/things-c",
@@ -17386,19 +17582,29 @@
  ],
  "column_1": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "column_2": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "column_3": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "column_4": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
+ ],
+ "column_5": [
+  "k.objects/shards/places-3"
+ ],
+ "column_6": [
+  "k.objects/shards/places-3"
  ],
  "columns": [
   "k.layouts/shards/layouts"
@@ -18067,6 +18273,7 @@
   "k.words/shards/co-1"
  ],
  "cone": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.faces/shards/plain-hat",
@@ -18075,6 +18282,7 @@
   "k.objects/shards/mulberry-food-sweets-and-desserts-01",
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-sound-01",
+  "k.objects/shards/things-3",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
   "k.words/shards/co-1"
@@ -18095,6 +18303,7 @@
   "k.objects/shards/nature-2"
  ],
  "cones": [
+  "k.objects/shards/things-3",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes"
  ],
@@ -18412,6 +18621,7 @@
  "contact": [
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-science-01",
+  "k.objects/shards/things-3",
   "k.words/shards/co-2"
  ],
  "contain": [
@@ -18867,6 +19077,7 @@
  "core": [
   "k.objects/shards/noto-food-fruit-03",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.words/shards/co-2"
  ],
  "cork": [
@@ -19177,14 +19388,17 @@
  ],
  "cougar": [
   "k.animals/shards/mammals",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
   "k.words/shards/co-2"
  ],
  "cougars": [
-  "k.animals/shards/mammals"
+  "k.animals/shards/mammals",
+  "k.objects/shards/animals-2"
  ],
  "cough": [
   "k.words/shards/co-2"
@@ -19538,6 +19752,18 @@
   "k.objects/shards/land",
   "k.words/shards/cr"
  ],
+ "crack_1": [
+  "k.objects/shards/land-3"
+ ],
+ "crack_2": [
+  "k.objects/shards/land-3"
+ ],
+ "crack_3": [
+  "k.objects/shards/land-3"
+ ],
+ "crack_4": [
+  "k.objects/shards/land-3"
+ ],
  "cracked": [
   "k.objects/shards/noto-lock-01"
  ],
@@ -19630,6 +19856,9 @@
   "k.words/shards/cr"
  ],
  "crane bird": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-c",
+  "k.objects/shards/animals-2",
   "k.scenes/shards/things-c"
  ],
  "crane fly": [
@@ -19673,6 +19902,9 @@
   "k.words/shards/cr"
  ],
  "crater": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-c",
+  "k.objects/shards/land-3",
   "k.words/shards/cr"
  ],
  "crater_1": [
@@ -19686,6 +19918,9 @@
  ],
  "crater_4": [
   "k.objects/shards/things-2"
+ ],
+ "craters": [
+  "k.objects/shards/land-3"
  ],
  "crates": [
   "k.objects/shards/places"
@@ -19889,6 +20124,15 @@
   "k.objects/shards/mulberry-animal-birds-01",
   "k.objects/shards/places-2",
   "k.words/shards/cr"
+ ],
+ "crevasse_1": [
+  "k.objects/shards/land-3"
+ ],
+ "crevasse_2": [
+  "k.objects/shards/land-3"
+ ],
+ "crevasse_3": [
+  "k.objects/shards/land-3"
  ],
  "crew": [
   "k.words/shards/cr"
@@ -20180,6 +20424,7 @@
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
+  "k.objects/shards/animals-2",
   "k.objects/shards/land",
   "k.objects/shards/land-2",
   "k.objects/shards/more",
@@ -20601,8 +20846,17 @@
   "k.geo/shards/psys2-countries"
  ],
  "curb": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-c",
+  "k.objects/shards/places-3",
   "k.parts/shards/c",
   "k.words/shards/cu"
+ ],
+ "curbs": [
+  "k.objects/shards/places-3"
+ ],
+ "curbstone": [
+  "k.objects/shards/places-3"
  ],
  "curd": [
   "k.words/shards/cu"
@@ -20633,13 +20887,16 @@
   "k.words/shards/cu"
  ],
  "curl_1": [
-  "k.faces/shards/plain-hair-front"
+  "k.faces/shards/plain-hair-front",
+  "k.objects/shards/food-3"
  ],
  "curl_2": [
-  "k.faces/shards/plain-hair-front"
+  "k.faces/shards/plain-hair-front",
+  "k.objects/shards/food-3"
  ],
  "curl_3": [
-  "k.faces/shards/plain-hair-front"
+  "k.faces/shards/plain-hair-front",
+  "k.objects/shards/food-3"
  ],
  "curl_4": [
   "k.faces/shards/plain-hair-front"
@@ -22608,10 +22865,15 @@
   "k.words/shards/de"
  ],
  "destroyer": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/d",
   "k.words/shards/de"
+ ],
+ "destroyers": [
+  "k.objects/shards/vehicles-2"
  ],
  "destroying": [
   "k.actions/shards/actions-make-change"
@@ -22784,6 +23046,7 @@
   "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.objects/shards/noto-place-map-01",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.words/shards/di"
  ],
  "dialect": [
@@ -23087,15 +23350,21 @@
  ],
  "dingo": [
   "k.animals/shards/mammals",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-d",
   "k.words/shards/di"
  ],
  "dingoes": [
   "k.animals/shards/mammals",
+  "k.objects/shards/animals-2",
   "k.words/shards/di"
+ ],
+ "dingos": [
+  "k.objects/shards/animals-2"
  ],
  "dining": [
   "k.words/shards/di"
@@ -23999,6 +24268,7 @@
  ],
  "dome": [
   "k.objects/shards/places",
+  "k.objects/shards/places-3",
   "k.objects/shards/structures",
   "k.objects/shards/things",
   "k.shapes/shards/shapes",
@@ -24094,6 +24364,9 @@
  "donjek": [
   "k.geo/shards/north-america"
  ],
+ "donjon": [
+  "k.objects/shards/places-3"
+ ],
  "donkey": [
   "k.animals/shards/mammals",
   "k.animals/shards/psys2",
@@ -24175,12 +24448,17 @@
   "k.objects/shards/openmoji-transport-and-map-symbols-01",
   "k.objects/shards/places",
   "k.objects/shards/places-2",
+  "k.objects/shards/places-3",
   "k.objects/shards/scenery",
   "k.objects/shards/structures",
+  "k.objects/shards/things-3",
   "k.parts/shards/d",
   "k.parts/shards/psys2",
   "k.scenes/shards/things-d",
   "k.words/shards/do"
+ ],
+ "door phone": [
+  "k.objects/shards/things-3"
  ],
  "door1": [
   "k.objects/shards/noto-place-religious-01"
@@ -24277,6 +24555,7 @@
   "k.geo/shards/psys2-cities-europe"
  ],
  "dorsal_fin": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2"
  ],
  "dortmund": [
@@ -24582,9 +24861,13 @@
   "k.objects/shards/mulberry-building-furniture-02",
   "k.objects/shards/mulberry-building-furniture-03",
   "k.objects/shards/openmoji-technology-02",
+  "k.objects/shards/things-3",
   "k.parts/shards/d",
   "k.scenes/shards/things-d",
   "k.words/shards/dr"
+ ],
+ "drawer knob": [
+  "k.objects/shards/things-3"
  ],
  "drawers": [
   "k.words/shards/dr"
@@ -24726,6 +25009,7 @@
   "k.words/shards/dr"
  ],
  "drier": [
+  "k.objects/shards/things-3",
   "k.words/shards/dr"
  ],
  "dries": [
@@ -24965,6 +25249,7 @@
   "k.objects/shards/mulberry-leisure-toys-02",
   "k.objects/shards/noto-musical-instrument-02",
   "k.objects/shards/noto-transport-ground-06",
+  "k.objects/shards/places-3",
   "k.parts/shards/b",
   "k.parts/shards/d",
   "k.parts/shards/t",
@@ -24999,6 +25284,30 @@
  "drunkard": [
   "k.words/shards/dr"
  ],
+ "drupelet_1": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_2": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_3": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_4": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_5": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_6": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_7": [
+  "k.objects/shards/food-3"
+ ],
+ "drupelet_8": [
+  "k.objects/shards/food-3"
+ ],
  "dry": [
   "k.actions/shards/actions-make-change",
   "k.words/shards/dr"
@@ -25007,10 +25316,15 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "dryer": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/dr"
+ ],
+ "dryers": [
+  "k.objects/shards/things-3"
  ],
  "dryest": [
   "k.words/shards/dr"
@@ -25202,10 +25516,15 @@
   "k.wearables/shards/wearables"
  ],
  "dungeon": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
+  "k.objects/shards/places-3",
   "k.parts/shards/usual",
   "k.words/shards/du"
+ ],
+ "dungeons": [
+  "k.objects/shards/places-3"
  ],
  "dunk": [
   "k.words/shards/du"
@@ -25423,6 +25742,7 @@
   "k.faces/shards/plain-ears",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-01",
@@ -25734,6 +26054,7 @@
  ],
  "edge": [
   "k.layouts/shards/layouts",
+  "k.objects/shards/animals-2",
   "k.objects/shards/noto-office-03",
   "k.shapes/schema.sop",
   "k.words/shards/ed"
@@ -25814,15 +26135,18 @@
  ],
  "eel": [
   "k.animals/shards/fish",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-e",
   "k.geo/shards/north-america",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-e",
   "k.words/shards/ee"
  ],
  "eels": [
-  "k.animals/shards/fish"
+  "k.animals/shards/fish",
+  "k.objects/shards/animals-2"
  ],
  "effect": [
   "k.words/shards/ef"
@@ -25898,6 +26222,24 @@
  ],
  "egg-shaped solid": [
   "k.shapes/shards/shapes"
+ ],
+ "egg_1": [
+  "k.objects/shards/food-3"
+ ],
+ "egg_2": [
+  "k.objects/shards/food-3"
+ ],
+ "egg_3": [
+  "k.objects/shards/food-3"
+ ],
+ "egg_4": [
+  "k.objects/shards/food-3"
+ ],
+ "egg_5": [
+  "k.objects/shards/food-3"
+ ],
+ "egg_6": [
+  "k.objects/shards/food-3"
  ],
  "egg_cup": [
   "k.objects/shards/mulberry-food-eggs-01"
@@ -26582,6 +26924,15 @@
   "k.words/shards/en",
   "w.timeline/schema.sop"
  ],
+ "end_1": [
+  "k.objects/shards/food-3"
+ ],
+ "end_2": [
+  "k.objects/shards/food-3"
+ ],
+ "end_3": [
+  "k.objects/shards/food-3"
+ ],
  "endanger": [
   "k.words/shards/en"
  ],
@@ -26804,6 +27155,9 @@
  "entry": [
   "k.words/shards/en",
   "w.list/schema.sop"
+ ],
+ "entryphone": [
+  "k.objects/shards/things-3"
  ],
  "enugu": [
   "k.geo/shards/psys2-cities-africa"
@@ -27681,6 +28035,7 @@
   "k.body/shards/core",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/food",
   "k.objects/shards/more",
@@ -27844,6 +28199,7 @@
   "k.feelings/schema.sop",
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-celebration-item-02",
@@ -28132,6 +28488,9 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-f",
   "k.words/shards/fa"
+ ],
+ "fan heater": [
+  "k.objects/shards/things-3"
  ],
  "fanatic": [
   "k.words/shards/fa"
@@ -28691,11 +29050,16 @@
   "k.geo/shards/europe"
  ],
  "fern": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-nature",
+  "k.objects/shards/plants",
   "k.parts/shards/f",
   "k.words/shards/fe"
+ ],
+ "ferns": [
+  "k.objects/shards/plants"
  ],
  "ferret": [
   "k.animals/shards/mammals",
@@ -29066,6 +29430,7 @@
  "film": [
   "k.objects/shards/mulberry-healthcare-medical-items-02",
   "k.objects/shards/noto-light-video-01",
+  "k.objects/shards/things-3",
   "k.words/shards/fi"
  ],
  "film frames": [
@@ -29079,6 +29444,12 @@
   "k.attributes/shards/same-f",
   "k.objects/shards/noto-light-video-01",
   "k.scenes/shards/things-f"
+ ],
+ "film reel": [
+  "k.objects/shards/things-3"
+ ],
+ "film reels": [
+  "k.objects/shards/things-3"
  ],
  "filming": [
   "k.words/shards/fi"
@@ -29104,6 +29475,7 @@
  "fin": [
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
@@ -29235,6 +29607,24 @@
  ],
  "finlay": [
   "k.geo/shards/north-america"
+ ],
+ "finlet_1": [
+  "k.objects/shards/animals-2"
+ ],
+ "finlet_2": [
+  "k.objects/shards/animals-2"
+ ],
+ "finlet_3": [
+  "k.objects/shards/animals-2"
+ ],
+ "finlet_4": [
+  "k.objects/shards/animals-2"
+ ],
+ "finlet_5": [
+  "k.objects/shards/animals-2"
+ ],
+ "finlet_6": [
+  "k.objects/shards/animals-2"
  ],
  "finn": [
   "k.words/shards/fi"
@@ -29672,6 +30062,7 @@
   "k.objects/shards/noto-sport-03",
   "k.objects/shards/places",
   "k.objects/shards/places-2",
+  "k.objects/shards/places-3",
   "k.objects/shards/scenery",
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
@@ -29733,6 +30124,7 @@
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/openmoji-objects-01",
+  "k.objects/shards/things-3",
   "k.objects/shards/vehicles",
   "k.parts/shards/psys2",
   "k.words/shards/fl"
@@ -29886,14 +30278,17 @@
  ],
  "flea": [
   "k.animals/shards/invertebrates",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-f",
   "k.words/shards/fl"
  ],
  "fleas": [
-  "k.animals/shards/invertebrates"
+  "k.animals/shards/invertebrates",
+  "k.objects/shards/animals-2"
  ],
  "fled": [
   "k.words/shards/fl"
@@ -30355,6 +30750,7 @@
   "k.actions/shards/actions-make-change",
   "k.faces/shards/plain-ears",
   "k.objects/shards/food-2",
+  "k.objects/shards/things-3",
   "k.words/shards/fo"
  ],
  "fold_1": [
@@ -30544,9 +30940,16 @@
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-clothing-04",
+  "k.objects/shards/things-3",
   "k.units/shards/core",
   "k.wearables/shards/places",
   "k.words/shards/fo"
+ ],
+ "foot_1": [
+  "k.objects/shards/things-3"
+ ],
+ "foot_2": [
+  "k.objects/shards/things-3"
  ],
  "footage": [
   "k.words/shards/fo"
@@ -30815,6 +31218,12 @@
   "k.attributes/shards/same-f",
   "k.objects/shards/mulberry-transport-road-01",
   "k.scenes/shards/things-f"
+ ],
+ "fork_handle": [
+  "k.objects/shards/things-3"
+ ],
+ "fork_neck": [
+  "k.objects/shards/things-3"
  ],
  "form": [
   "k.actions/shards/actions-make-change",
@@ -31583,6 +31992,15 @@
   "k.objects/shards/mulberry-food-dairy-01",
   "k.scenes/shards/things-f"
  ],
+ "frond_1": [
+  "k.objects/shards/plants"
+ ],
+ "frond_2": [
+  "k.objects/shards/plants"
+ ],
+ "frond_3": [
+  "k.objects/shards/plants"
+ ],
  "front": [
   "k.objects/shards/food-2",
   "k.objects/shards/home",
@@ -31626,10 +32044,12 @@
   "k.objects/shards/openmoji-gardening-01"
  ],
  "front_hub": [
-  "k.objects/shards/things-2"
+  "k.objects/shards/things-2",
+  "k.objects/shards/vehicles-2"
  ],
  "front_leg": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/household",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-02",
@@ -31637,6 +32057,12 @@
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-animal-mammal-07"
+ ],
+ "front_leg_1": [
+  "k.objects/shards/animals-2"
+ ],
+ "front_leg_2": [
+  "k.objects/shards/animals-2"
  ],
  "front_mount": [
   "k.objects/shards/things-2"
@@ -31655,13 +32081,18 @@
   "k.objects/shards/mulberry-food-dairy-01"
  ],
  "front_spoke_1": [
-  "k.objects/shards/things-2"
+  "k.objects/shards/things-2",
+  "k.objects/shards/vehicles-2"
  ],
  "front_spoke_2": [
-  "k.objects/shards/things-2"
+  "k.objects/shards/things-2",
+  "k.objects/shards/vehicles-2"
  ],
  "front_stay": [
   "k.objects/shards/things-2"
+ ],
+ "front_sucker": [
+  "k.objects/shards/animals-2"
  ],
  "front_trim": [
   "k.faces/shards/plain-shoulders"
@@ -31674,7 +32105,8 @@
   "k.objects/shards/openmoji-technology-01",
   "k.objects/shards/openmoji-travel-places-02",
   "k.objects/shards/things-2",
-  "k.objects/shards/vehicles"
+  "k.objects/shards/vehicles",
+  "k.objects/shards/vehicles-2"
  ],
  "front_window": [
   "k.objects/shards/mulberry-leisure-toys-02",
@@ -31970,6 +32402,7 @@
   "k.objects/shards/mulberry-science-01",
   "k.objects/shards/noto-sky-weather-04",
   "k.objects/shards/noto-transport-water-01",
+  "k.objects/shards/vehicles-2",
   "k.scenes/shards/things-f",
   "k.words/shards/fu"
  ],
@@ -32548,10 +32981,15 @@
   "k.geo/shards/north-america"
  ],
  "gator": [
+  "k.objects/shards/animals-2",
   "k.words/shards/ga"
+ ],
+ "gators": [
+  "k.objects/shards/animals-2"
  ],
  "gauge": [
   "k.actions/shards/actions-mind-talk",
+  "k.objects/shards/things-3",
   "k.words/shards/ga"
  ],
  "gauntlet": [
@@ -33141,8 +33579,14 @@
   "k.geo/shards/oceania"
  ],
  "glacier": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-g",
+  "k.objects/shards/land-3",
   "k.parts/shards/g",
   "k.words/shards/gl"
+ ],
+ "glaciers": [
+  "k.objects/shards/land-3"
  ],
  "glad": [
   "k.feelings/shards/feelings",
@@ -33179,6 +33623,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
+  "k.objects/shards/food-3",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-sweet-01",
@@ -33295,6 +33740,7 @@
   "k.words/shards/gl"
  ],
  "globe shape": [
+  "k.objects/shards/things-3",
   "k.values/shards/shapes"
  ],
  "globe showing americas": [
@@ -34207,9 +34653,11 @@
  ],
  "grasshopper": [
   "k.animals/shards/invertebrates",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-living",
+  "k.objects/shards/animals-2",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -34217,7 +34665,8 @@
   "k.words/shards/gr"
  ],
  "grasshoppers": [
-  "k.animals/shards/invertebrates"
+  "k.animals/shards/invertebrates",
+  "k.objects/shards/animals-2"
  ],
  "grate": [
   "k.words/shards/gr"
@@ -34566,7 +35015,8 @@
  ],
  "grille": [
   "k.faces/shards/plain-mouth",
-  "k.objects/shards/noto-transport-ground-03"
+  "k.objects/shards/noto-transport-ground-03",
+  "k.objects/shards/things-3"
  ],
  "grimm": [
   "k.words/shards/gr"
@@ -34602,6 +35052,15 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.words/shards/gr"
+ ],
+ "grip_1": [
+  "k.objects/shards/things-3"
+ ],
+ "grip_2": [
+  "k.objects/shards/things-3"
+ ],
+ "grip_3": [
+  "k.objects/shards/things-3"
  ],
  "gripped": [
   "k.words/shards/gr"
@@ -34743,15 +35202,24 @@
   "k.objects/shards/food-2",
   "k.objects/shards/land",
   "k.objects/shards/land-2",
+  "k.objects/shards/land-3",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/places",
   "k.objects/shards/places-2",
+  "k.objects/shards/places-3",
+  "k.objects/shards/plants",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.scenes/schema.sop",
   "k.words/shards/gr"
+ ],
+ "ground_left": [
+  "k.objects/shards/land-3"
+ ],
+ "ground_right": [
+  "k.objects/shards/land-3"
  ],
  "groundhog": [
   "k.animals/shards/mammals",
@@ -35984,6 +36452,7 @@
   "k.objects/shards/openmoji-objects-01",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.words/shards/ha"
  ],
  "handle bars": [
@@ -36263,10 +36732,15 @@
   "k.words/shards/ha"
  ],
  "harness": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/ha"
+ ],
+ "harnesses": [
+  "k.objects/shards/things-3"
  ],
  "harp": [
   "k.attributes/shards/drawn-noto",
@@ -36613,6 +37087,7 @@
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-animal-birds-01",
@@ -36902,10 +37377,24 @@
   "k.objects/shards/openmoji-healthcare-03",
   "k.words/shards/he"
  ],
+ "heat_1": [
+  "k.objects/shards/things-3"
+ ],
+ "heat_2": [
+  "k.objects/shards/things-3"
+ ],
+ "heat_3": [
+  "k.objects/shards/things-3"
+ ],
  "heater": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.objects/shards/things-3",
   "k.words/shards/he"
+ ],
+ "heaters": [
+  "k.objects/shards/things-3"
  ],
  "heath": [
   "k.words/shards/he"
@@ -37166,6 +37655,12 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.words/shards/he"
+ ],
+ "hem_1": [
+  "k.objects/shards/things-3"
+ ],
+ "hem_2": [
+  "k.objects/shards/things-3"
  ],
  "hemingway": [
   "k.words/shards/he"
@@ -37529,6 +38024,7 @@
  ],
  "highlight": [
   "k.actions/shards/verbs-pick",
+  "k.objects/shards/things-3",
   "k.words/shards/hi"
  ],
  "highly": [
@@ -37617,6 +38113,12 @@
  ],
  "hind_leg_2": [
   "k.objects/shards/nature-2"
+ ],
+ "hind_shin": [
+  "k.objects/shards/animals-2"
+ ],
+ "hind_thigh": [
+  "k.objects/shards/animals-2"
  ],
  "hinder": [
   "k.words/shards/hi"
@@ -37764,12 +38266,15 @@
   "k.words/shards/hi"
  ],
  "hive": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/hi"
  ],
  "hives": [
+  "k.objects/shards/things-3",
   "k.words/shards/hi"
  ],
  "hkakabo razi": [
@@ -37939,6 +38444,21 @@
  ],
  "hole7": [
   "k.objects/shards/noto-food-prepared-02"
+ ],
+ "hole_1": [
+  "k.objects/shards/things-3"
+ ],
+ "hole_2": [
+  "k.objects/shards/things-3"
+ ],
+ "hole_3": [
+  "k.objects/shards/things-3"
+ ],
+ "hole_4": [
+  "k.objects/shards/things-3"
+ ],
+ "hole_5": [
+  "k.objects/shards/things-3"
  ],
  "holes": [
   "k.objects/shards/land"
@@ -38876,6 +39396,7 @@
   "k.objects/shards/structures",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.words/shards/hu"
  ],
  "hub and spokes": [
@@ -38955,6 +39476,7 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.objects/shards/vehicles",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/psys2",
   "k.words/shards/hu"
  ],
@@ -39321,6 +39843,7 @@
   "k.attributes/shards/things-nature",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
+  "k.objects/shards/land-3",
   "k.objects/shards/noto-drink-03",
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-sport-02",
@@ -39382,17 +39905,28 @@
  "ice skates": [
   "k.wearables/shards/wearables"
  ],
+ "ice_1": [
+  "k.objects/shards/food-3"
+ ],
+ "ice_2": [
+  "k.objects/shards/food-3"
+ ],
  "ice_cap": [
   "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/mulberry-science-astronomy-02"
  ],
  "iceberg": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-i",
   "k.attributes/shards/things-nature",
+  "k.objects/shards/land-3",
   "k.objects/shards/noto-drink-03",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/ic"
+ ],
+ "icebergs": [
+  "k.objects/shards/land-3"
  ],
  "icebox": [
   "k.objects/shards/words-wordnet",
@@ -40455,8 +40989,14 @@
   "k.words/shards/in"
  ],
  "intercom": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-i",
+  "k.objects/shards/things-3",
   "k.parts/shards/i",
   "k.words/shards/in"
+ ],
+ "intercoms": [
+  "k.objects/shards/things-3"
  ],
  "intercourse": [
   "k.words/shards/in"
@@ -41134,14 +41674,17 @@
  ],
  "jackal": [
   "k.animals/shards/mammals",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-j",
+  "k.objects/shards/animals-2",
   "k.parts/shards/j",
   "k.scenes/shards/things-j",
   "k.words/shards/ja"
  ],
  "jackals": [
-  "k.animals/shards/mammals"
+  "k.animals/shards/mammals",
+  "k.objects/shards/animals-2"
  ],
  "jackass": [
   "k.words/shards/ja"
@@ -41220,14 +41763,17 @@
  ],
  "jaguar": [
   "k.animals/shards/mammals",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-j",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-j",
   "k.words/shards/ja"
  ],
  "jaguars": [
-  "k.animals/shards/mammals"
+  "k.animals/shards/mammals",
+  "k.objects/shards/animals-2"
  ],
  "jail": [
   "k.attributes/shards/drawn-hand",
@@ -41929,7 +42475,8 @@
  ],
  "joint_1": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "joint_10": [
   "k.objects/shards/places"
@@ -41951,15 +42498,18 @@
  ],
  "joint_2": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "joint_3": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "joint_4": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "joint_5": [
   "k.objects/shards/places"
@@ -42884,6 +43434,7 @@
   "k.words/shards/ke"
  ],
  "kelp": [
+  "k.objects/shards/plants",
   "k.words/shards/ke"
  ],
  "kelvin": [
@@ -42956,7 +43507,11 @@
   "k.words/shards/ke"
  ],
  "kerb": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
+ ],
+ "kerbs": [
+  "k.objects/shards/places-3"
  ],
  "kerchief": [
   "k.wearables/shards/wearables"
@@ -43047,6 +43602,51 @@
  ],
  "key9": [
   "k.objects/shards/noto-computer-01"
+ ],
+ "key_1": [
+  "k.objects/shards/things-3"
+ ],
+ "key_10": [
+  "k.objects/shards/things-3"
+ ],
+ "key_11": [
+  "k.objects/shards/things-3"
+ ],
+ "key_12": [
+  "k.objects/shards/things-3"
+ ],
+ "key_13": [
+  "k.objects/shards/things-3"
+ ],
+ "key_14": [
+  "k.objects/shards/things-3"
+ ],
+ "key_15": [
+  "k.objects/shards/things-3"
+ ],
+ "key_2": [
+  "k.objects/shards/things-3"
+ ],
+ "key_3": [
+  "k.objects/shards/things-3"
+ ],
+ "key_4": [
+  "k.objects/shards/things-3"
+ ],
+ "key_5": [
+  "k.objects/shards/things-3"
+ ],
+ "key_6": [
+  "k.objects/shards/things-3"
+ ],
+ "key_7": [
+  "k.objects/shards/things-3"
+ ],
+ "key_8": [
+  "k.objects/shards/things-3"
+ ],
+ "key_9": [
+  "k.objects/shards/things-3"
  ],
  "keyboard": [
   "k.attributes/shards/drawn-noto",
@@ -43591,6 +44191,12 @@
   "k.scenes/shards/things-k",
   "k.words/shards/ki"
  ],
+ "kiwi bird": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-k",
+  "k.objects/shards/animals-2",
+  "k.scenes/shards/things-k"
+ ],
  "kiwi fruit": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-k",
@@ -43731,6 +44337,7 @@
   "k.words/shards/kn"
  ],
  "knob": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-k",
   "k.objects/shards/home",
@@ -43743,6 +44350,7 @@
   "k.objects/shards/openmoji-food-drink-02",
   "k.objects/shards/openmoji-objects-02",
   "k.objects/shards/openmoji-objects-03",
+  "k.objects/shards/things-3",
   "k.parts/shards/psys2",
   "k.words/shards/kn"
  ],
@@ -43757,6 +44365,12 @@
  ],
  "knob_4": [
   "k.objects/shards/things-2"
+ ],
+ "knob_left": [
+  "k.objects/shards/things-3"
+ ],
+ "knob_right": [
+  "k.objects/shards/things-3"
  ],
  "knobs": [
   "k.objects/shards/home",
@@ -44862,6 +45476,9 @@
  "lances": [
   "k.objects/shards/things-2"
  ],
+ "lancet": [
+  "k.objects/shards/things-3"
+ ],
  "land": [
   "k.objects/shards/mulberry-science-astronomy-02",
   "k.objects/shards/scenery",
@@ -44957,6 +45574,7 @@
   "k.objects/shards/mulberry-electrical-general-01",
   "k.objects/shards/noto-event-01",
   "k.objects/shards/noto-light-video-02",
+  "k.objects/shards/places-3",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-l",
@@ -45265,6 +45883,7 @@
   "k.geo/shards/oceania"
  ],
  "lava": [
+  "k.objects/shards/land-3",
   "k.words/shards/la"
  ],
  "lava lamp": [
@@ -45342,6 +45961,7 @@
   "k.words/shards/li"
  ],
  "layer": [
+  "k.objects/shards/things-3",
   "k.wearables/schema.sop",
   "k.words/shards/la"
  ],
@@ -45400,6 +46020,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
+  "k.objects/shards/food-3",
   "k.objects/shards/land",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-drink-type-02",
@@ -45470,6 +46091,42 @@
   "k.objects/shards/noto-plant-other-03",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-l"
+ ],
+ "leaflet_1": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_10": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_11": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_12": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_2": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_3": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_4": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_5": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_6": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_7": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_8": [
+  "k.objects/shards/plants"
+ ],
+ "leaflet_9": [
+  "k.objects/shards/plants"
  ],
  "leafy": [
   "k.objects/shards/noto-food-vegetable-02"
@@ -45639,14 +46296,17 @@
  ],
  "leech": [
   "k.animals/shards/invertebrates",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-l",
   "k.words/shards/le"
  ],
  "leeches": [
-  "k.animals/shards/invertebrates"
+  "k.animals/shards/invertebrates",
+  "k.objects/shards/animals-2"
  ],
  "leeds": [
   "k.attributes/shards/same-l",
@@ -45893,6 +46553,7 @@
  ],
  "left_eye": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/mulberry-celebration-item-03",
   "k.objects/shards/mulberry-clothes-sport-01",
@@ -45938,6 +46599,7 @@
   "k.objects/shards/places-2"
  ],
  "left_foot": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-building-furniture-05",
   "k.objects/shards/mulberry-clothes-general-05",
   "k.objects/shards/mulberry-food-kitchen-items-05",
@@ -46003,7 +46665,8 @@
   "k.objects/shards/places-2"
  ],
  "left_hole": [
-  "k.objects/shards/openmoji-objects-01"
+  "k.objects/shards/openmoji-objects-01",
+  "k.objects/shards/things-3"
  ],
  "left_horn": [
   "k.objects/shards/noto-animal-mammal-04",
@@ -46054,6 +46717,7 @@
  ],
  "left_leg": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/home",
   "k.objects/shards/household",
@@ -46085,7 +46749,8 @@
  "left_loop": [
   "k.faces/shards/plain-hat",
   "k.objects/shards/mulberry-clothes-accessories-01",
-  "k.objects/shards/noto-event-02"
+  "k.objects/shards/noto-event-02",
+  "k.objects/shards/things-3"
  ],
  "left_lower_wing": [
   "k.objects/shards/animals"
@@ -46293,7 +46958,8 @@
  "left_strap": [
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/home",
-  "k.objects/shards/mulberry-clothes-general-01"
+  "k.objects/shards/mulberry-clothes-general-01",
+  "k.objects/shards/things-3"
  ],
  "left_string": [
   "k.faces/shards/plain-shoulders",
@@ -46806,6 +47472,7 @@
   "k.objects/shards/mulberry-work-and-school-stationery-02",
   "k.objects/shards/noto-game-02",
   "k.objects/shards/openmoji-technology-01",
+  "k.objects/shards/things-3",
   "k.parts/shards/l",
   "k.words/shards/le"
  ],
@@ -46952,6 +47619,7 @@
  "lid": [
   "k.faces/shards/plain-eyes",
   "k.layouts/shards/joins",
+  "k.objects/shards/food-3",
   "k.objects/shards/mulberry-art-making-01",
   "k.objects/shards/mulberry-building-contents-05",
   "k.objects/shards/mulberry-building-furniture-01",
@@ -47076,6 +47744,7 @@
   "k.objects/shards/noto-transport-ground-02",
   "k.objects/shards/noto-transport-ground-03",
   "k.objects/shards/noto-transport-ground-06",
+  "k.objects/shards/things-3",
   "k.values/shards/psys2",
   "k.values/shards/scales",
   "k.words/shards/li"
@@ -47384,6 +48053,7 @@
   "k.colours/shards/colours",
   "k.food/shards/fruit",
   "k.objects/shards/food-2",
+  "k.objects/shards/food-3",
   "k.objects/shards/noto-food-fruit-01",
   "k.scenes/shards/things-l",
   "k.values/shards/colours-css",
@@ -47392,6 +48062,9 @@
  "lime green": [
   "k.colours/shards/colours",
   "k.values/shards/colours-css"
+ ],
+ "lime_flesh": [
+  "k.objects/shards/food-3"
  ],
  "limegreen": [
   "k.values/shards/colours-css"
@@ -48568,6 +49241,9 @@
  "lower_shelf": [
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points"
+ ],
+ "lower_shell": [
+  "k.objects/shards/animals-2"
  ],
  "lower_step": [
   "k.objects/shards/places-2"
@@ -49860,13 +50536,16 @@
  ],
  "mantis": [
   "k.animals/shards/invertebrates",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.words/shards/ma"
  ],
  "mantises": [
-  "k.animals/shards/invertebrates"
+  "k.animals/shards/invertebrates",
+  "k.objects/shards/animals-2"
  ],
  "mantle": [
   "k.words/shards/ma"
@@ -50137,6 +50816,15 @@
   "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-book-paper-02",
   "k.words/shards/ma"
+ ],
+ "mark_1": [
+  "k.objects/shards/places-3"
+ ],
+ "mark_2": [
+  "k.objects/shards/places-3"
+ ],
+ "mark_3": [
+  "k.objects/shards/places-3"
  ],
  "marker": [
   "k.actions/schema.sop",
@@ -50491,6 +51179,7 @@
   "k.objects/shards/noto-transport-water-01",
   "k.objects/shards/things-2",
   "k.objects/shards/vehicles",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/m",
   "k.parts/shards/psys2",
   "k.words/shards/ma"
@@ -51423,16 +52112,20 @@
   "k.objects/shards/buildings"
  ],
  "merlon_1": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "merlon_2": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "merlon_3": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "merlon_4": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "merlons": [
   "k.objects/shards/buildings"
@@ -51466,6 +52159,8 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "mesa": [
+  "k.attributes/shards/same-m",
+  "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/me"
  ],
  "mesdames": [
@@ -51885,6 +52580,7 @@
   "k.objects/shards/places"
  ],
  "middle_leg": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/noto-science-01"
  ],
  "middle_lid": [
@@ -53591,6 +54287,9 @@
  "morse": [
   "k.words/shards/mo"
  ],
+ "morse key": [
+  "k.objects/shards/things-3"
+ ],
  "morses": [
   "k.words/shards/mo"
  ],
@@ -54381,6 +55080,7 @@
   "k.attributes/shards/things-nature",
   "k.geo/schema.sop",
   "k.layouts/shards/anchors",
+  "k.objects/shards/land-3",
   "k.objects/shards/nature",
   "k.objects/shards/noto-place-geographic-01",
   "k.objects/shards/noto-transport-air-02",
@@ -54410,7 +55110,11 @@
   "k.objects/shards/scenery"
  ],
  "mountain lion": [
-  "k.animals/shards/mammals"
+  "k.animals/shards/mammals",
+  "k.objects/shards/animals-2"
+ ],
+ "mountain lions": [
+  "k.objects/shards/animals-2"
  ],
  "mountain nile": [
   "k.geo/shards/africa"
@@ -54432,6 +55136,12 @@
  ],
  "mountain2": [
   "k.objects/shards/noto-transport-ground-05"
+ ],
+ "mountain_left": [
+  "k.objects/shards/land-3"
+ ],
+ "mountain_right": [
+  "k.objects/shards/land-3"
  ],
  "mountains": [
   "k.attributes/shards/drawn-mulberry",
@@ -54535,6 +55245,7 @@
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/land",
   "k.objects/shards/mulberry-celebration-item-03",
@@ -54558,6 +55269,9 @@
  ],
  "mouthful": [
   "k.words/shards/mo"
+ ],
+ "mouthparts": [
+  "k.objects/shards/animals-2"
  ],
  "mouthpiece": [
   "k.objects/shards/mulberry-healthcare-medical-items-01",
@@ -55098,6 +55812,7 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "muzzle": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
@@ -55454,10 +56169,15 @@
   "k.geo/shards/antarctica"
  ],
  "napkin": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-n",
   "k.attributes/shards/things-objects",
+  "k.objects/shards/things-3",
   "k.words/shards/na"
+ ],
+ "napkins": [
+  "k.objects/shards/things-3"
  ],
  "naples": [
   "k.attributes/shards/same-n",
@@ -55764,6 +56484,7 @@
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
+  "k.objects/shards/animals-2",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
   "k.objects/shards/home",
@@ -55773,6 +56494,7 @@
   "k.objects/shards/noto-musical-instrument-01",
   "k.objects/shards/openmoji-healthcare-02",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.wearables/shards/places",
   "k.words/shards/ne"
  ],
@@ -55845,6 +56567,7 @@
   "k.attributes/shards/things-objects",
   "k.objects/shards/noto-arts-crafts-01",
   "k.objects/shards/noto-medical-01",
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/ne"
  ],
@@ -56200,8 +56923,10 @@
  ],
  "newt": [
   "k.animals/shards/reptiles-and-amphibians",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-n",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-n",
   "k.words/shards/ne"
@@ -56213,7 +56938,8 @@
   "k.geo/shards/europe"
  ],
  "newts": [
-  "k.animals/shards/reptiles-and-amphibians"
+  "k.animals/shards/reptiles-and-amphibians",
+  "k.objects/shards/animals-2"
  ],
  "next": [
   "k.values/shards/sets",
@@ -56785,6 +57511,7 @@
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-animal-mammal-02",
@@ -56804,6 +57531,9 @@
   "k.objects/shards/vehicles",
   "k.parts/shards/psys2",
   "k.words/shards/no"
+ ],
+ "nose_tip": [
+  "k.objects/shards/animals-2"
  ],
  "noses": [
   "k.body/shards/core"
@@ -56843,6 +57573,12 @@
  "notch": [
   "k.objects/shards/things-2",
   "k.words/shards/no"
+ ],
+ "notch_1": [
+  "k.objects/shards/things-3"
+ ],
+ "notch_2": [
+  "k.objects/shards/things-3"
  ],
  "note": [
   "k.actions/shards/actions-make-change",
@@ -58444,10 +59180,12 @@
  "opossum": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-o",
+  "k.objects/shards/animals-2",
   "k.scenes/shards/things-o"
  ],
  "opossums": [
-  "k.animals/shards/mammals"
+  "k.animals/shards/mammals",
+  "k.objects/shards/animals-2"
  ],
  "opponent": [
   "k.words/shards/op"
@@ -59865,6 +60603,7 @@
   "k.objects/shards/noto-music-01",
   "k.objects/shards/openmoji-technology-02",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.words/shards/pa"
  ],
  "panelled": [
@@ -59928,6 +60667,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.objects/shards/words-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
   "k.words/shards/pa"
@@ -60010,6 +60750,7 @@
   "k.objects/shards/noto-money-02",
   "k.objects/shards/noto-office-03",
   "k.objects/shards/noto-writing-01",
+  "k.objects/shards/things-3",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-p",
   "k.words/shards/pa"
@@ -60986,6 +61727,9 @@
  "pecos": [
   "k.geo/shards/north-america"
  ],
+ "pectoral_fin": [
+  "k.objects/shards/animals-2"
+ ],
  "pedal": [
   "k.layouts/shards/joins",
   "k.words/shards/pe"
@@ -61010,7 +61754,8 @@
  ],
  "pediment": [
   "k.objects/shards/places",
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "pedophile": [
   "k.words/shards/pe"
@@ -62762,6 +63507,7 @@
   "k.objects/shards/noto-musical-instrument-02",
   "k.objects/shards/places-2",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.parts/shards/p",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-p",
@@ -63566,9 +64312,16 @@
   "k.words/shards/pl"
  ],
  "plateau": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-p",
+  "k.objects/shards/land-3",
   "k.words/shards/pl"
  ],
+ "plateaus": [
+  "k.objects/shards/land-3"
+ ],
  "plateaux": [
+  "k.objects/shards/land-3",
   "k.words/shards/pl"
  ],
  "platform": [
@@ -64096,8 +64849,10 @@
   "k.objects/shards/noto-sport-03",
   "k.objects/shards/noto-transport-ground-01",
   "k.objects/shards/noto-transport-ground-05",
+  "k.objects/shards/places-3",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/vehicles-2",
   "k.scenes/shards/things-p",
   "k.words/shards/po"
  ],
@@ -64662,13 +65417,16 @@
  ],
  "possum": [
   "k.animals/shards/mammals",
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.words/shards/po"
  ],
  "possums": [
-  "k.animals/shards/mammals"
+  "k.animals/shards/mammals",
+  "k.objects/shards/animals-2"
  ],
  "post": [
   "k.actions/shards/actions-body-social-nature",
@@ -64682,6 +65440,7 @@
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/structures",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.words/shards/po"
  ],
  "post office": [
@@ -65061,7 +65820,11 @@
  "praying mantis": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-p",
+  "k.objects/shards/animals-2",
   "k.scenes/shards/things-p"
+ ],
+ "praying mantises": [
+  "k.objects/shards/animals-2"
  ],
  "preach": [
   "k.words/shards/pr"
@@ -66082,6 +66845,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.objects/shards/words-wordnet",
   "k.parts/shards/usual",
   "k.words/shards/pu"
  ],
@@ -66201,6 +66965,7 @@
   "k.attributes/shards/same-p",
   "k.body/shards/core",
   "k.faces/shards/plain-eyes",
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-other-object-01",
   "k.scenes/shards/scenes-indoors",
@@ -67058,6 +67823,7 @@
   "k.objects/shards/mulberry-building-contents-04",
   "k.objects/shards/noto-transport-ground-01",
   "k.objects/shards/places-2",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/r",
   "k.words/shards/ra"
  ],
@@ -67393,12 +68159,15 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "raspberries": [
-  "k.food/shards/fruit"
+  "k.food/shards/fruit",
+  "k.objects/shards/food-3"
  ],
  "raspberry": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.food/shards/fruit",
+  "k.objects/shards/food-3",
   "k.words/shards/ra"
  ],
  "rat": [
@@ -68090,7 +68859,13 @@
   "k.words/shards/re"
  ],
  "reel": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-r",
+  "k.objects/shards/things-3",
   "k.words/shards/re"
+ ],
+ "reels": [
+  "k.objects/shards/things-3"
  ],
  "ref": [
   "k.words/shards/re"
@@ -69526,6 +70301,20 @@
   "k.parts/shards/r",
   "k.words/shards/ri"
  ],
+ "ridge_1": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/land-3"
+ ],
+ "ridge_2": [
+  "k.objects/shards/animals-2",
+  "k.objects/shards/land-3"
+ ],
+ "ridge_3": [
+  "k.objects/shards/animals-2"
+ ],
+ "ridge_4": [
+  "k.objects/shards/animals-2"
+ ],
  "ridicule": [
   "k.words/shards/ri"
  ],
@@ -69814,6 +70603,7 @@
  ],
  "right_eye": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/mulberry-celebration-item-03",
   "k.objects/shards/mulberry-clothes-sport-01",
@@ -69859,6 +70649,7 @@
   "k.objects/shards/places-2"
  ],
  "right_foot": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-building-furniture-05",
   "k.objects/shards/mulberry-clothes-general-05",
   "k.objects/shards/mulberry-food-kitchen-items-05",
@@ -69921,7 +70712,8 @@
   "k.objects/shards/things"
  ],
  "right_hole": [
-  "k.objects/shards/openmoji-objects-01"
+  "k.objects/shards/openmoji-objects-01",
+  "k.objects/shards/things-3"
  ],
  "right_horn": [
   "k.objects/shards/noto-animal-mammal-04",
@@ -69972,6 +70764,7 @@
  ],
  "right_leg": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/figures",
   "k.objects/shards/home",
   "k.objects/shards/household",
@@ -70003,7 +70796,8 @@
  "right_loop": [
   "k.faces/shards/plain-hat",
   "k.objects/shards/mulberry-clothes-accessories-01",
-  "k.objects/shards/noto-event-02"
+  "k.objects/shards/noto-event-02",
+  "k.objects/shards/things-3"
  ],
  "right_lower_wing": [
   "k.objects/shards/animals"
@@ -70215,7 +71009,8 @@
  "right_strap": [
   "k.faces/shards/plain-shoulders",
   "k.objects/shards/home",
-  "k.objects/shards/mulberry-clothes-general-01"
+  "k.objects/shards/mulberry-clothes-general-01",
+  "k.objects/shards/things-3"
  ],
  "right_string": [
   "k.faces/shards/plain-shoulders",
@@ -70336,6 +71131,7 @@
  "rim": [
   "k.faces/shards/plain-glasses",
   "k.faces/shards/plain-hat",
+  "k.objects/shards/food-3",
   "k.objects/shards/land",
   "k.objects/shards/mulberry-building-contents-03",
   "k.objects/shards/things",
@@ -70412,10 +71208,12 @@
  ],
  "ring_1": [
   "k.objects/shards/food-2",
+  "k.objects/shards/plants",
   "k.objects/shards/things-2"
  ],
  "ring_2": [
   "k.objects/shards/food-2",
+  "k.objects/shards/plants",
   "k.objects/shards/things-2"
  ],
  "ring_3": [
@@ -70643,6 +71441,7 @@
   "k.objects/shards/noto-transport-ground-05",
   "k.objects/shards/places",
   "k.objects/shards/places-2",
+  "k.objects/shards/places-3",
   "k.parts/shards/h",
   "k.parts/shards/psys2",
   "k.parts/shards/r",
@@ -70811,6 +71610,7 @@
   "k.objects/shards/noto-household-02",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/noto-sport-04",
+  "k.objects/shards/plants",
   "k.objects/shards/things-2",
   "k.parts/shards/psys2",
   "k.scenes/shards/scenes-nature",
@@ -70897,6 +71697,7 @@
   "k.objects/shards/things-2"
  ],
  "roe": [
+  "k.objects/shards/food-3",
   "k.words/shards/ro"
  ],
  "roflcopter": [
@@ -70936,6 +71737,7 @@
   "k.objects/shards/noto-food-prepared-01",
   "k.objects/shards/noto-household-03",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.words/shards/ro"
  ],
  "roll back": [
@@ -70974,7 +71776,11 @@
   "k.objects/shards/noto-hotel-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-transport-ground-05",
+  "k.objects/shards/things-3",
   "k.words/shards/ro"
+ ],
+ "roller bandage": [
+  "k.objects/shards/things-3"
  ],
  "roller blind": [
   "k.attributes/shards/drawn-mulberry",
@@ -71132,11 +71938,17 @@
   "k.words/shards/ro"
  ],
  "rook": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-r",
   "k.objects/shards/noto-animal-bird-03",
+  "k.objects/shards/things-3",
   "k.words/shards/ro"
  ],
  "rookie": [
   "k.words/shards/ro"
+ ],
+ "rooks": [
+  "k.objects/shards/things-3"
  ],
  "room": [
   "k.layouts/shards/joins",
@@ -71195,6 +72007,12 @@
   "k.attributes/shards/same-r",
   "k.objects/shards/noto-food-vegetable-03",
   "k.scenes/shards/things-r"
+ ],
+ "root_left": [
+  "k.objects/shards/plants"
+ ],
+ "root_right": [
+  "k.objects/shards/plants"
  ],
  "rooting": [
   "k.words/shards/ro"
@@ -71926,6 +72744,7 @@
   "k.attributes/shards/usage",
   "k.layouts/shards/anchors",
   "k.layouts/shards/joins",
+  "k.objects/shards/animals-2",
   "k.objects/shards/things-2",
   "k.parts/shards/s",
   "k.scenes/shards/things-s",
@@ -72331,8 +73150,14 @@
   "k.words/shards/sa"
  ],
  "salsa": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-s",
+  "k.objects/shards/food-3",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/sa"
+ ],
+ "salsas": [
+  "k.objects/shards/food-3"
  ],
  "salt": [
   "k.attributes/shards/drawn-noto",
@@ -73215,10 +74040,15 @@
   "k.words/shards/sc"
  ],
  "scalpel": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.objects/shards/things-3",
   "k.parts/shards/usual",
   "k.words/shards/sc"
+ ],
+ "scalpels": [
+  "k.objects/shards/things-3"
  ],
  "scam": [
   "k.words/shards/sc"
@@ -73688,6 +74518,12 @@
   "k.scenes/shards/things-s",
   "k.words/shards/sc"
  ],
+ "screw_1": [
+  "k.objects/shards/things-3"
+ ],
+ "screw_2": [
+  "k.objects/shards/things-3"
+ ],
  "screwdriver": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
@@ -73797,6 +74633,7 @@
   "k.objects/shards/openmoji-travel-places-02",
   "k.objects/shards/places-2",
   "k.objects/shards/scenery",
+  "k.objects/shards/vehicles-2",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
@@ -73912,7 +74749,8 @@
   "k.animals/shards/mammals"
  ],
  "seam": [
-  "k.objects/shards/things"
+  "k.objects/shards/things",
+  "k.objects/shards/things-3"
  ],
  "seaman": [
   "k.people/shards/roles-jobs",
@@ -74013,6 +74851,9 @@
   "k.words/shards/se",
   "w.seating/schema.sop"
  ],
+ "seat_back": [
+  "k.objects/shards/vehicles-2"
+ ],
  "seat_tube": [
   "k.objects/shards/vehicles"
  ],
@@ -74045,10 +74886,15 @@
   "k.words/shards/se"
  ],
  "seaweed": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-nature",
+  "k.objects/shards/plants",
   "k.scenes/shards/scenes-other",
   "k.words/shards/se"
+ ],
+ "seaweeds": [
+  "k.objects/shards/plants"
  ],
  "sec": [
   "k.words/shards/se"
@@ -74640,6 +75486,12 @@
  "services": [
   "k.words/shards/se"
  ],
+ "serviette": [
+  "k.objects/shards/things-3"
+ ],
+ "serviettes": [
+  "k.objects/shards/things-3"
+ ],
  "serving": [
   "k.words/shards/se"
  ],
@@ -74919,6 +75771,7 @@
  ],
  "shade": [
   "k.faces/schema.sop",
+  "k.objects/shards/land-3",
   "k.objects/shards/mulberry-building-furniture-04",
   "k.objects/shards/mulberry-electrical-general-01",
   "k.objects/shards/noto-household-01",
@@ -74932,6 +75785,7 @@
  "shadow": [
   "k.faces/shards/plain-beard",
   "k.objects/shards/mulberry-plants-and-trees-04",
+  "k.objects/shards/things-3",
   "k.words/shards/sh"
  ],
  "shaft": [
@@ -75455,6 +76309,7 @@
   "k.objects/shards/noto-sky-weather-02",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.parts/shards/psys2",
   "k.words/shards/sh"
  ],
@@ -76201,6 +77056,7 @@
   "k.attributes/shards/things-nature",
   "k.layouts/shards/anchors",
   "k.objects/shards/places-2",
+  "k.objects/shards/places-3",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-s",
@@ -77480,13 +78336,16 @@
   "k.scenes/shards/things-s"
  ],
  "slot_1": [
-  "k.faces/shards/plain-mouth"
+  "k.faces/shards/plain-mouth",
+  "k.objects/shards/things-3"
  ],
  "slot_2": [
-  "k.faces/shards/plain-mouth"
+  "k.faces/shards/plain-mouth",
+  "k.objects/shards/things-3"
  ],
  "slot_3": [
-  "k.faces/shards/plain-mouth"
+  "k.faces/shards/plain-mouth",
+  "k.objects/shards/things-3"
  ],
  "slot_4": [
   "k.faces/shards/plain-mouth"
@@ -77916,6 +78775,7 @@
  ],
  "snout": [
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/psys2",
   "k.words/shards/sn"
@@ -77961,6 +78821,12 @@
  ],
  "snow_cap": [
   "k.objects/shards/nature"
+ ],
+ "snow_left": [
+  "k.objects/shards/land-3"
+ ],
+ "snow_right": [
+  "k.objects/shards/land-3"
  ],
  "snowball": [
   "k.scenes/shards/scenes-other",
@@ -78735,6 +79601,9 @@
   "k.space/schema.sop",
   "k.words/shards/sp"
  ],
+ "space heater": [
+  "k.objects/shards/things-3"
+ ],
  "space helmet": [
   "k.faces/shards/plain-hat"
  ],
@@ -78753,7 +79622,8 @@
   "k.words/shards/sp"
  ],
  "space_bar": [
-  "k.objects/shards/noto-computer-01"
+  "k.objects/shards/noto-computer-01",
+  "k.objects/shards/things-3"
  ],
  "spacecraft": [
   "k.attributes/shards/numbers-p-z",
@@ -78937,6 +79807,7 @@
  "speaker": [
   "k.objects/shards/home",
   "k.objects/shards/noto-sound-01",
+  "k.objects/shards/things-3",
   "k.words/shards/sp"
  ],
  "speaker high volume": [
@@ -79091,12 +79962,15 @@
   "k.animals/shards/mammals"
  ],
  "sphere": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-s",
+  "k.objects/shards/things-3",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
   "k.words/shards/sp"
  ],
  "spheres": [
+  "k.objects/shards/things-3",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes"
  ],
@@ -79467,16 +80341,29 @@
   "k.objects/shards/noto-plant-other-02"
  ],
  "spot_1": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2"
  ],
  "spot_2": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2"
  ],
  "spot_3": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2"
  ],
  "spot_4": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/nature-2"
+ ],
+ "spot_5": [
+  "k.objects/shards/animals-2"
+ ],
+ "spot_6": [
+  "k.objects/shards/animals-2"
+ ],
+ "spot_7": [
+  "k.objects/shards/animals-2"
  ],
  "spotlight": [
   "k.objects/shards/places",
@@ -79562,6 +80449,7 @@
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-plant-flower-02",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.scenes/shards/scenes-other",
   "k.time/shards/calendar",
   "k.words/shards/sp"
@@ -80081,6 +80969,7 @@
   "k.objects/shards/noto-computer-01",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.words/shards/st"
  ],
  "stand still": [
@@ -80347,6 +81236,9 @@
  "state of the vatican city": [
   "k.geo/shards/europe"
  ],
+ "statehouse": [
+  "k.objects/shards/places-3"
+ ],
  "statement": [
   "k.words/shards/st"
  ],
@@ -80455,6 +81347,9 @@
   "k.objects/shards/noto-transport-ground-01",
   "k.words/shards/st"
  ],
+ "steam boiler": [
+  "k.objects/shards/things-3"
+ ],
  "steam train": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
@@ -80539,6 +81434,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
+  "k.objects/shards/food-3",
   "k.objects/shards/land",
   "k.objects/shards/mulberry-celebration-item-03",
   "k.objects/shards/mulberry-drink-type-03",
@@ -80557,6 +81453,7 @@
   "k.objects/shards/noto-plant-other-01",
   "k.objects/shards/noto-plant-other-02",
   "k.objects/shards/openmoji-food-drink-01",
+  "k.objects/shards/plants",
   "k.objects/shards/things",
   "k.parts/shards/psys2",
   "k.words/shards/st"
@@ -80618,6 +81515,7 @@
   "k.layouts/shards/layouts",
   "k.objects/shards/openmoji-travel-places-01",
   "k.objects/shards/places",
+  "k.objects/shards/places-3",
   "k.parts/schema.sop",
   "k.units/shards/measures",
   "k.values/schema.sop",
@@ -80715,6 +81613,15 @@
  ],
  "stick2": [
   "k.objects/shards/noto-dishware-01"
+ ],
+ "stick_1": [
+  "k.objects/shards/food-3"
+ ],
+ "stick_2": [
+  "k.objects/shards/food-3"
+ ],
+ "stick_3": [
+  "k.objects/shards/food-3"
  ],
  "sticker": [
   "k.words/shards/st"
@@ -81093,6 +82000,7 @@
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.words/shards/st"
  ],
  "strapped": [
@@ -81120,6 +82028,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
+  "k.objects/shards/food-3",
   "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-drink-03",
@@ -81181,6 +82090,15 @@
  ],
  "streak": [
   "k.words/shards/st"
+ ],
+ "streak_1": [
+  "k.objects/shards/animals-2"
+ ],
+ "streak_2": [
+  "k.objects/shards/animals-2"
+ ],
+ "streak_3": [
+  "k.objects/shards/animals-2"
  ],
  "stream": [
   "k.actions/shards/actions-body-social-nature",
@@ -81316,10 +82234,12 @@
   "k.words/shards/st"
  ],
  "strip": [
+  "k.objects/shards/things-3",
   "k.words/shards/st"
  ],
  "stripe": [
   "k.faces/shards/plain-hat",
+  "k.objects/shards/animals-2",
   "k.objects/shards/buildings",
   "k.objects/shards/more",
   "k.objects/shards/noto-animal-mammal-03",
@@ -81507,9 +82427,14 @@
   "k.words/shards/st"
  ],
  "stump": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.objects/shards/plants",
   "k.words/shards/st"
+ ],
+ "stumps": [
+  "k.objects/shards/plants"
  ],
  "stun": [
   "k.words/shards/st"
@@ -82757,6 +83682,7 @@
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-s",
   "k.objects/shards/openmoji-technology-01",
+  "k.objects/shards/things-3",
   "k.scenes/shards/things-s",
   "k.words/shards/sw"
  ],
@@ -83063,6 +83989,9 @@
   "k.objects/shards/words-hand",
   "k.words/shards/ta"
  ],
+ "tableland": [
+  "k.objects/shards/land-3"
+ ],
  "tables": [
   "k.objects/shards/household",
   "w.seating/schema.sop"
@@ -83199,6 +84128,7 @@
   "k.faces/shards/plain-hair-back",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
@@ -83237,6 +84167,9 @@
   "k.objects/shards/noto-transport-ground-02",
   "k.objects/shards/noto-transport-ground-03",
   "k.objects/shards/noto-transport-ground-05"
+ ],
+ "tail_tip": [
+  "k.objects/shards/animals-2"
  ],
  "tailing": [
   "k.words/shards/ta"
@@ -83582,6 +84515,7 @@
   "k.objects/shards/noto-household-03",
   "k.objects/shards/openmoji-travel-places-01",
   "k.objects/shards/things",
+  "k.objects/shards/things-3",
   "k.parts/shards/p",
   "k.parts/shards/t",
   "k.scenes/shards/things-t",
@@ -84176,7 +85110,16 @@
   "k.words/shards/te"
  ],
  "telegraph": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-t",
+  "k.objects/shards/things-3",
   "k.words/shards/te"
+ ],
+ "telegraph key": [
+  "k.objects/shards/things-3"
+ ],
+ "telegraphs": [
+  "k.objects/shards/things-3"
  ],
  "telepathy": [
   "k.words/shards/te"
@@ -84579,6 +85522,15 @@
   "k.attributes/shards/same-t",
   "k.objects/shards/mulberry-electrical-phone-01",
   "k.scenes/shards/things-t"
+ ],
+ "text_1": [
+  "k.objects/shards/things-3"
+ ],
+ "text_2": [
+  "k.objects/shards/things-3"
+ ],
+ "text_3": [
+  "k.objects/shards/things-3"
  ],
  "textbook": [
   "k.words/shards/te"
@@ -85087,6 +86039,7 @@
   "k.words/shards/th"
  ],
  "thorax": [
+  "k.objects/shards/animals-2",
   "k.objects/shards/mulberry-animal-spiders-and-insects-02"
  ],
  "thorn": [
@@ -85661,6 +86614,27 @@
   "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.scenes/shards/things-t"
  ],
+ "tin_bottom": [
+  "k.objects/shards/food-3"
+ ],
+ "tin_side": [
+  "k.objects/shards/food-3"
+ ],
+ "tin_top": [
+  "k.objects/shards/food-3"
+ ],
+ "tine_1": [
+  "k.objects/shards/things-3"
+ ],
+ "tine_2": [
+  "k.objects/shards/things-3"
+ ],
+ "tine_3": [
+  "k.objects/shards/things-3"
+ ],
+ "tine_4": [
+  "k.objects/shards/things-3"
+ ],
  "ting": [
   "k.words/shards/ti"
  ],
@@ -85762,6 +86736,7 @@
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/noto-writing-01",
   "k.objects/shards/places-2",
+  "k.objects/shards/plants",
   "k.objects/shards/structures",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
@@ -86234,7 +87209,16 @@
   "k.body/shards/core"
  ],
  "tonic": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-t",
+  "k.objects/shards/food-3",
   "k.words/shards/to"
+ ],
+ "tonic water": [
+  "k.objects/shards/food-3"
+ ],
+ "tonics": [
+  "k.objects/shards/food-3"
  ],
  "tonight": [
   "k.words/shards/to"
@@ -86409,6 +87393,15 @@
   "k.objects/shards/noto-food-sweet-02",
   "k.words/shards/to"
  ],
+ "tooth_1": [
+  "k.objects/shards/animals-2"
+ ],
+ "tooth_2": [
+  "k.objects/shards/animals-2"
+ ],
+ "tooth_3": [
+  "k.objects/shards/animals-2"
+ ],
  "toothache": [
   "k.words/shards/to"
  ],
@@ -86456,6 +87449,7 @@
   "k.objects/shards/home",
   "k.objects/shards/household",
   "k.objects/shards/land-2",
+  "k.objects/shards/land-3",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-building-furniture-02",
   "k.objects/shards/mulberry-building-furniture-03",
@@ -86483,8 +87477,10 @@
   "k.objects/shards/noto-place-other-03",
   "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/noto-time-01",
+  "k.objects/shards/plants",
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.values/shards/directions",
   "k.words/shards/to"
  ],
@@ -86867,6 +87863,7 @@
  "tourniquet": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
+  "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/to"
  ],
  "tours": [
@@ -86916,6 +87913,7 @@
   "k.objects/shards/openmoji-travel-places-01",
   "k.objects/shards/places",
   "k.objects/shards/places-2",
+  "k.objects/shards/places-3",
   "k.objects/shards/structures",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-town",
@@ -87077,6 +88075,12 @@
  "traffic": [
   "k.objects/shards/noto-transport-ground-06",
   "k.words/shards/tr"
+ ],
+ "traffic cone": [
+  "k.objects/shards/things-3"
+ ],
+ "traffic cones": [
+  "k.objects/shards/things-3"
  ],
  "traffic light": [
   "k.scenes/shards/scenes-town"
@@ -87520,6 +88524,12 @@
   "k.attributes/shards/same-t",
   "k.objects/shards/mulberry-celebration-item-04",
   "k.scenes/shards/things-t"
+ ],
+ "tree stump": [
+  "k.objects/shards/plants"
+ ],
+ "tree stumps": [
+  "k.objects/shards/plants"
  ],
  "tree trunk": [
   "k.attributes/shards/drawn-mulberry",
@@ -87973,6 +88983,7 @@
   "k.objects/shards/noto-event-01",
   "k.objects/shards/noto-plant-other-01",
   "k.objects/shards/noto-plant-other-03",
+  "k.objects/shards/plants",
   "k.objects/shards/scenery",
   "k.objects/shards/words-wordnet",
   "k.parts/shards/psys2",
@@ -88180,6 +89191,9 @@
   "k.actions/shards/actions-move",
   "k.words/shards/tu"
  ],
+ "tumble dryer": [
+  "k.objects/shards/things-3"
+ ],
  "tumbler": [
   "k.objects/shards/noto-drink-02"
  ],
@@ -88223,6 +89237,9 @@
   "k.words/shards/tu"
  ],
  "tuna fish": [
+  "k.attributes/shards/drawn-hand",
+  "k.attributes/shards/same-t",
+  "k.objects/shards/animals-2",
   "k.scenes/shards/things-t"
  ],
  "tundra": [
@@ -88397,6 +89414,12 @@
  ],
  "turret": [
   "k.objects/shards/things"
+ ],
+ "turret_1": [
+  "k.objects/shards/vehicles-2"
+ ],
+ "turret_2": [
+  "k.objects/shards/vehicles-2"
  ],
  "turtle": [
   "k.animals/shards/psys2",
@@ -88590,6 +89613,7 @@
   "k.words/shards/tw"
  ],
  "twine": [
+  "k.objects/shards/food-3",
   "k.objects/shards/noto-arts-crafts-01",
   "k.objects/shards/things"
  ],
@@ -88662,10 +89686,15 @@
   "k.words/schema.sop"
  ],
  "typewriter": [
+  "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
+  "k.objects/shards/things-3",
   "k.parts/shards/t",
   "k.words/shards/ty"
+ ],
+ "typewriters": [
+  "k.objects/shards/things-3"
  ],
  "typhoon": [
   "k.objects/shards/noto-sky-weather-04",
@@ -88960,6 +89989,9 @@
  ],
  "under the sea": [
   "k.scenes/shards/scenes-other"
+ ],
+ "under_ice": [
+  "k.objects/shards/land-3"
  ],
  "underarm": [
   "k.objects/shards/noto-sport-01"
@@ -89458,6 +90490,9 @@
  "upper_shelf": [
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points"
+ ],
+ "upper_shell": [
+  "k.objects/shards/animals-2"
  ],
  "upper_step": [
   "k.objects/shards/places-2"
@@ -91220,6 +92255,12 @@
   "k.wearables/shards/places",
   "k.words/shards/wa"
  ],
+ "waist_belt": [
+  "k.objects/shards/things-3"
+ ],
+ "waist_hole": [
+  "k.objects/shards/things-3"
+ ],
  "waistband": [
   "k.objects/shards/mulberry-clothes-general-01",
   "k.objects/shards/mulberry-clothes-general-03",
@@ -91664,6 +92705,7 @@
  "warship": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-w",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/b",
   "k.parts/shards/c",
   "k.parts/shards/d",
@@ -91889,6 +92931,10 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-w"
  ],
+ "waterline": [
+  "k.objects/shards/land-3",
+  "k.objects/shards/vehicles-2"
+ ],
  "waterloo": [
   "k.words/shards/wa"
  ],
@@ -92090,6 +93136,15 @@
  ],
  "weave": [
   "k.words/shards/we"
+ ],
+ "weave_1": [
+  "k.objects/shards/things-3"
+ ],
+ "weave_2": [
+  "k.objects/shards/things-3"
+ ],
+ "weave_3": [
+  "k.objects/shards/things-3"
  ],
  "weaver": [
   "k.words/shards/we"
@@ -93199,6 +94254,7 @@
   "k.objects/shards/places-2",
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
+  "k.objects/shards/things-3",
   "k.objects/shards/vehicles",
   "k.parts/shards/psys2",
   "k.parts/shards/s",
@@ -93254,7 +94310,8 @@
   "k.objects/shards/noto-place-building-02"
  ],
  "window_1": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "window_10": [
   "k.objects/shards/places-2"
@@ -93278,13 +94335,15 @@
   "k.objects/shards/places-2"
  ],
  "window_2": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "window_2_top": [
   "k.objects/shards/places-2"
  ],
  "window_3": [
-  "k.objects/shards/places-2"
+  "k.objects/shards/places-2",
+  "k.objects/shards/places-3"
  ],
  "window_3_top": [
   "k.objects/shards/places-2"
@@ -93317,6 +94376,7 @@
   "k.objects/shards/buildings",
   "k.objects/shards/places",
   "k.objects/shards/vehicles",
+  "k.objects/shards/vehicles-2",
   "k.parts/shards/psys2",
   "k.words/shards/wi"
  ],
@@ -93378,6 +94438,7 @@
   "k.attributes/shards/things-objects",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
+  "k.objects/shards/animals-2",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.objects/shards/mulberry-animal-birds-02",
@@ -93485,6 +94546,12 @@
   "k.objects/shards/things",
   "k.scenes/shards/things-w",
   "k.words/shards/wi"
+ ],
+ "wire_1": [
+  "k.objects/shards/things-3"
+ ],
+ "wire_2": [
+  "k.objects/shards/things-3"
  ],
  "wireless": [
   "k.objects/shards/openmoji-technology-01",
@@ -94429,6 +95496,7 @@
   "k.geo/shards/north-america"
  ],
  "yard": [
+  "k.objects/shards/vehicles-2",
   "k.scenes/shards/scenes-nature",
   "k.units/shards/core",
   "k.words/shards/ya"

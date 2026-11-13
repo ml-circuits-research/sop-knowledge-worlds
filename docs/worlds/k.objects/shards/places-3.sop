@@ -1,0 +1,61 @@
+# k.objects/shards/places-3: dungeon, curb, capitol. Parts with a primitive shape, a box in the 0 to 100 frame of the object (x right, y down), a draw order z and typical colours; points for lines and polygons.
+# sources: hand-core 1 (hand-written in this repository: tools/objects-hand-data.mjs)
+# license: CC0-1.0
+# script: tools/objects-hand.mjs
+
+# dungeon
+@k.objects.dungeon k.objects.object name=dungeon core.source="hand-core 1"
+@k.objects.dungeon.ground k.objects.part of=dungeon name=ground shape=rectangle x=0 y=88 w=100 h=12 z=0 colour=green core.source="hand-core 1"
+@k.objects.dungeon.pole k.objects.part of=dungeon name=pole shape=line x=50 y=2 w=0 h=14 z=1 colour=black core.source="hand-core 1"
+@k.objects.dungeon.flag k.objects.part of=dungeon name=flag shape=triangle x=51 y=2 w=12 h=7 z=2 colour=red pointing=right core.source="hand-core 1"
+@k.objects.dungeon.merlon_1 k.objects.part of=dungeon name=merlon_1 kind=merlon shape=rectangle x=30 y=16 w=8 h=8 z=1 colour=grey core.source="hand-core 1"
+@k.objects.dungeon.merlon_2 k.objects.part of=dungeon name=merlon_2 kind=merlon shape=rectangle x=41 y=16 w=8 h=8 z=1 colour=grey core.source="hand-core 1"
+@k.objects.dungeon.merlon_3 k.objects.part of=dungeon name=merlon_3 kind=merlon shape=rectangle x=52 y=16 w=8 h=8 z=1 colour=grey core.source="hand-core 1"
+@k.objects.dungeon.merlon_4 k.objects.part of=dungeon name=merlon_4 kind=merlon shape=rectangle x=62 y=16 w=8 h=8 z=1 colour=grey core.source="hand-core 1"
+@k.objects.dungeon.tower k.objects.part of=dungeon name=tower shape=rectangle x=30 y=24 w=40 h=64 z=2 colour=grey core.source="hand-core 1"
+@k.objects.dungeon.window_1 k.objects.part of=dungeon name=window_1 kind=window shape=rectangle x=38 y=36 w=5 h=10 z=3 colour=black core.source="hand-core 1"
+@k.objects.dungeon.window_2 k.objects.part of=dungeon name=window_2 kind=window shape=rectangle x=57 y=36 w=5 h=10 z=3 colour=black core.source="hand-core 1"
+@k.objects.dungeon.window_3 k.objects.part of=dungeon name=window_3 kind=window shape=rectangle x=47 y=52 w=6 h=10 z=3 colour=black core.source="hand-core 1"
+@k.objects.dungeon.door k.objects.part of=dungeon name=door shape=rectangle x=44 y=72 w=12 h=16 z=3 colour=brown core.source="hand-core 1"
+@k.objects.dungeon.pole.p1 k.objects.point part=$k.objects.dungeon.pole n=1 x=50 y=2 core.source="hand-core 1"
+@k.objects.dungeon.pole.p2 k.objects.point part=$k.objects.dungeon.pole n=2 x=50 y=16 core.source="hand-core 1"
+
+# curb
+@k.objects.curb k.objects.object name=curb core.source="hand-core 1"
+@k.objects.curb.road k.objects.part of=curb name=road shape=rectangle x=0 y=62 w=100 h=38 z=0 colour=black core.source="hand-core 1"
+@k.objects.curb.mark_1 k.objects.part of=curb name=mark_1 kind=mark shape=rectangle x=8 y=80 w=18 h=3 z=1 colour=white core.source="hand-core 1"
+@k.objects.curb.mark_2 k.objects.part of=curb name=mark_2 kind=mark shape=rectangle x=41 y=80 w=18 h=3 z=1 colour=white core.source="hand-core 1"
+@k.objects.curb.mark_3 k.objects.part of=curb name=mark_3 kind=mark shape=rectangle x=74 y=80 w=18 h=3 z=1 colour=white core.source="hand-core 1"
+@k.objects.curb.sidewalk k.objects.part of=curb name=sidewalk shape=rectangle x=0 y=30 w=100 h=24 z=1 colour=grey core.source="hand-core 1"
+@k.objects.curb.curb k.objects.part of=curb name=curb shape=rectangle x=0 y=54 w=100 h=8 z=2 colour=white core.source="hand-core 1"
+@k.objects.curb.joint_1 k.objects.part of=curb name=joint_1 kind=joint shape=line x=20 y=54 w=0 h=8 z=3 colour=black core.source="hand-core 1"
+@k.objects.curb.joint_2 k.objects.part of=curb name=joint_2 kind=joint shape=line x=40 y=54 w=0 h=8 z=3 colour=black core.source="hand-core 1"
+@k.objects.curb.joint_3 k.objects.part of=curb name=joint_3 kind=joint shape=line x=60 y=54 w=0 h=8 z=3 colour=black core.source="hand-core 1"
+@k.objects.curb.joint_4 k.objects.part of=curb name=joint_4 kind=joint shape=line x=80 y=54 w=0 h=8 z=3 colour=black core.source="hand-core 1"
+@k.objects.curb.joint_1.p1 k.objects.point part=$k.objects.curb.joint_1 n=1 x=20 y=54 core.source="hand-core 1"
+@k.objects.curb.joint_1.p2 k.objects.point part=$k.objects.curb.joint_1 n=2 x=20 y=62 core.source="hand-core 1"
+@k.objects.curb.joint_2.p1 k.objects.point part=$k.objects.curb.joint_2 n=1 x=40 y=54 core.source="hand-core 1"
+@k.objects.curb.joint_2.p2 k.objects.point part=$k.objects.curb.joint_2 n=2 x=40 y=62 core.source="hand-core 1"
+@k.objects.curb.joint_3.p1 k.objects.point part=$k.objects.curb.joint_3 n=1 x=60 y=54 core.source="hand-core 1"
+@k.objects.curb.joint_3.p2 k.objects.point part=$k.objects.curb.joint_3 n=2 x=60 y=62 core.source="hand-core 1"
+@k.objects.curb.joint_4.p1 k.objects.point part=$k.objects.curb.joint_4 n=1 x=80 y=54 core.source="hand-core 1"
+@k.objects.curb.joint_4.p2 k.objects.point part=$k.objects.curb.joint_4 n=2 x=80 y=62 core.source="hand-core 1"
+
+# capitol
+@k.objects.capitol k.objects.object name=capitol core.source="hand-core 1"
+@k.objects.capitol.dome k.objects.part of=capitol name=dome shape=oval x=36 y=14 w=28 h=28 z=1 colour=white core.source="hand-core 1"
+@k.objects.capitol.lantern k.objects.part of=capitol name=lantern shape=rectangle x=47 y=7 w=6 h=8 z=1 colour=white core.source="hand-core 1"
+@k.objects.capitol.drum k.objects.part of=capitol name=drum shape=rectangle x=38 y=30 w=24 h=14 z=2 colour=white core.source="hand-core 1"
+@k.objects.capitol.pediment k.objects.part of=capitol name=pediment shape=triangle x=30 y=44 w=40 h=12 z=3 colour=white pointing=up core.source="hand-core 1"
+@k.objects.capitol.base k.objects.part of=capitol name=base shape=rectangle x=14 y=56 w=72 h=28 z=2 colour=white core.source="hand-core 1"
+@k.objects.capitol.column_1 k.objects.part of=capitol name=column_1 kind=column shape=rectangle x=18 y=58 w=4 h=24 z=3 colour=grey core.source="hand-core 1"
+@k.objects.capitol.column_2 k.objects.part of=capitol name=column_2 kind=column shape=rectangle x=30 y=58 w=4 h=24 z=3 colour=grey core.source="hand-core 1"
+@k.objects.capitol.column_3 k.objects.part of=capitol name=column_3 kind=column shape=rectangle x=42 y=58 w=4 h=24 z=3 colour=grey core.source="hand-core 1"
+@k.objects.capitol.column_4 k.objects.part of=capitol name=column_4 kind=column shape=rectangle x=54 y=58 w=4 h=24 z=3 colour=grey core.source="hand-core 1"
+@k.objects.capitol.column_5 k.objects.part of=capitol name=column_5 kind=column shape=rectangle x=66 y=58 w=4 h=24 z=3 colour=grey core.source="hand-core 1"
+@k.objects.capitol.column_6 k.objects.part of=capitol name=column_6 kind=column shape=rectangle x=78 y=58 w=4 h=24 z=3 colour=grey core.source="hand-core 1"
+@k.objects.capitol.steps k.objects.part of=capitol name=steps shape=rectangle x=10 y=84 w=80 h=8 z=1 colour=white core.source="hand-core 1"
+# Words: plural forms and other names.
+@k.objects.word.dungeon core.word text=dungeons text=donjon means=dungeon of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.curb core.word text=curbs text=kerb text=kerbs text=curbstone means=curb of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.capitol core.word text=capitols text=statehouse means=capitol of=k.objects.object.name core.source="hand-core 1"

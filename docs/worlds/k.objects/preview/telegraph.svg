@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>telegraph</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="14,70 4,92" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wire_1</title></polyline>
+  <polyline points="18,72 10,96" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wire_2</title></polyline>
+  <rect x="10" y="66" width="80" height="14" fill="brown" stroke="#333" stroke-width="0.8"><title>base</title></rect>
+  <rect x="24" y="52" width="8" height="14" fill="grey" stroke="#333" stroke-width="0.8"><title>post</title></rect>
+  <rect x="70" y="58" width="6" height="8" fill="grey" stroke="#333" stroke-width="0.8"><title>contact</title></rect>
+  <polyline points="54,50 54,64" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spring</title></polyline>
+  <ellipse cx="16" cy="73" rx="2" ry="2" fill="grey" stroke="#333" stroke-width="0.8"><title>screw_1</title></ellipse>
+  <ellipse cx="84" cy="73" rx="2" ry="2" fill="grey" stroke="#333" stroke-width="0.8"><title>screw_2</title></ellipse>
+  <polygon points="20,50 80,44 80,48 20,54" fill="grey" stroke="#333" stroke-width="0.8"><title>lever</title></polygon>
+  <ellipse cx="80" cy="41" rx="8" ry="5" fill="black" stroke="#333" stroke-width="0.8"><title>knob</title></ellipse>
+</svg>

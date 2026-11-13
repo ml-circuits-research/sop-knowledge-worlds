@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>heater</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="24" y="80" width="12" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>foot_1</title></rect>
+  <rect x="64" y="80" width="12" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>foot_2</title></rect>
+  <rect x="20" y="20" width="60" height="60" fill="white" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <rect x="26" y="26" width="48" height="38" fill="black" stroke="#333" stroke-width="0.8"><title>grille</title></rect>
+  <ellipse cx="34" cy="72" rx="4" ry="4" fill="black" stroke="#333" stroke-width="0.8"><title>dial</title></ellipse>
+  <rect x="60" y="70" width="10" height="6" fill="red" stroke="#333" stroke-width="0.8"><title>switch</title></rect>
+  <polyline points="40,16 44,11 40,6" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>heat_1</title></polyline>
+  <polyline points="50,16 54,11 50,6" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>heat_2</title></polyline>
+  <polyline points="60,16 64,11 60,6" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>heat_3</title></polyline>
+  <polyline points="30,32 70,32" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>coil_1</title></polyline>
+  <polyline points="30,40 70,40" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>coil_2</title></polyline>
+  <polyline points="30,48 70,48" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>coil_3</title></polyline>
+  <polyline points="30,56 70,56" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>coil_4</title></polyline>
+</svg>

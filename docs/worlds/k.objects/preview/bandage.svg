@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>bandage</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="36,60 94,70 92,84 30,70" fill="white" stroke="#333" stroke-width="0.8"><title>strip</title></polygon>
+  <polyline points="50,64 48,73" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>weave_1</title></polyline>
+  <polyline points="64,66 62,76" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>weave_2</title></polyline>
+  <polyline points="78,69 76,79" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>weave_3</title></polyline>
+  <ellipse cx="36" cy="46" rx="22" ry="22" fill="white" stroke="#333" stroke-width="0.8"><title>roll</title></ellipse>
+  <ellipse cx="36" cy="46" rx="15" ry="15" fill="white" stroke="#333" stroke-width="0.8"><title>layer</title></ellipse>
+  <ellipse cx="36" cy="46" rx="8" ry="8" fill="grey" stroke="#333" stroke-width="0.8"><title>core</title></ellipse>
+</svg>

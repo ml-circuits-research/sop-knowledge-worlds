@@ -46,7 +46,8 @@ export function readAnimals(tsv = readFileSync(join(REPO, 'sources/hand-core/ani
 // animals keeps its column `size` as the source; this gives the k.scenes.thing rows for the animals that the table
 // of places and sizes (sources/hand-core/place-size.tsv) does not have, and says under which name the row of each
 // animal stands. An animal whose name is there the name of another thing of another size (a crane is also a
-// machine, tuna also a tin) gets a row under its name followed by `bird`, `fish` or `animal`. The place, by rule and
+// machine, tuna also a tin), or drawn under such a name, gets a row under its name followed by `bird`, `fish` or
+// `animal`. The place, by rule and
 // only where the rule is sure: `water` for a fish and for an animal that is not a bird and whose first habitat is
 // water; `indoors` where the first habitat is the house; `sky` for a bird that flies and does not live on water
 // only; `ground` for what cannot fly; none for the other flying birds and the flying insects.
@@ -65,8 +66,11 @@ export function readPlaceSizeNames(tsv = readFileSync(join(REPO, 'sources/hand-c
 export function animalThings(animals = readAnimals(), taken = readPlaceSizeNames()) {
   const rows = [], thingOf = new Map();
   for (const a of animals) {
-    if (taken.has(a.name) && taken.get(a.name) === a.size) continue;
-    const name = taken.has(a.name) ? `${a.name} ${['bird', 'fish'].includes(a.class) ? a.class : 'animal'}` : a.name;
+    const other = `${a.name} ${['bird', 'fish'].includes(a.class) ? a.class : 'animal'}`;
+    // Also when the animal is drawn under that other name (the kiwi: the fruit and the bird are both small, but the
+    // drawing of the name is the fruit).
+    if (taken.has(a.name) && taken.get(a.name) === a.size && a.drawing !== other) continue;
+    const name = taken.has(a.name) ? other : a.name;
     if (taken.has(name)) { if (taken.get(name) !== a.size) throw new Error(`animals.tsv: ${a.name}: ${name} is ${taken.get(name)} in place-size.tsv, ${a.size} here`); } else rows.push({ name, place: usualPlace(a), on: '', size: a.size });
     if (name !== a.name) thingOf.set(a.name, name);
   }

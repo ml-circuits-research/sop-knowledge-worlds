@@ -2740,3 +2740,46 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.attributes.test.mjs` (1 more), questions at-24 to at-26.
 - Numbers: k.attributes 45 shards; catalog 22 worlds, 907 shards, 3 schemas, vocab 23,358 words; 0 errors, 0 warnings.
   npm test 2,704: 2,698 pass, 6 skipped, 0 fail.
+
+## Round 11, item 3, part 1 (2026-11-14, first worker): animals drawn as another thing; 47 common things drawn
+
+- **Animals whose name shows another thing** (the joins table, JOINS.md): `crane` (the drawing is the machine),
+  `kiwi` (the fruit), `tuna` (the tin). New drawings `"crane bird"`, `"kiwi bird"`, `"tuna fish"`; the animals
+  name them with `drawing=` (`sources/hand-core/animals.tsv`). `bat`, `seal` and `mouse` were looked at and show
+  the animals already (Noto Emoji); nothing done for them. The rule of Q32 in `tools/animals-core.mjs` now also
+  gives an animal its own `k.scenes.thing` row when it is drawn under the name `<name> bird|fish|animal`: the kiwi
+  gets `"kiwi bird"` (ground, small) although the fruit is small too (the case named as weak in the Q32 entry).
+- **47 common things with no drawing**, by frequency (MISSING.md, from rank 602): eel, jaguar, cougar, dingo,
+  jackal, possum, alligator, newt, flea, grasshopper, mantis, leech, clam, fern, seaweed, raspberry, stump,
+  iceberg, glacier, crater, plateau, hive, dungeon, curb, capitol, caviar, tonic, salsa, cinnamon, destroyer,
+  chariot, intercom, dryer, harness, reel, typewriter, bandage, rook, canteen, napkin, boiler, cone, knob,
+  sphere, scalpel, telegraph, heater. The 13 animals among them also get `drawing=` in k.animals (opossum and
+  praying mantis name `possum` and `mantis`).
+- **Passed over** in that stretch, with the reason: cloak (a general word), dairy, sauna (a farm, a room), slope,
+  consulate (as the embassy), rouge (the drawing `blusher` exists: a hand link is the right thing, next part),
+  bumper (a full glass), panther (WordNet makes it the jaguar: now a synonym by rule).
+- **How:** `tools/objects-hand.mjs` with the table `tools/objects-hand-data.mjs`: one line per part (shape, box or
+  points, z, colours, relations), checked (frame, w = h for circles and squares, relations name parts, keys of
+  the schema) and written as the same SOP Lang as the hand-written shards before. New shards `animals-2` (the
+  name gives the joins the sense animal), `plants`, `land-3`, `places-3`, `food-3`, `vehicles-2`, `things-3`.
+- **Sense check:** 47 rows in `sense-check.tsv`: right, except eel (the drawing is the living fish; the sense kept
+  is its flesh) and raspberry (the berries on a stem; the sense kept is the bramble), both `wrong` with the
+  WordNet offset shown. New links by rule: `panther` = jaguar, `puma` = cougar (synonyms), `mesa` -> plateau,
+  `tourniquet` -> bandage (stand-ins). A word was dropped where an object or a link has it (plaster, flask,
+  water bottle, puma as a hand word, keep, knobs).
+- **Joins:** three new clashes, all true: `cone` and `sphere` (a shape of k.shapes and a drawn thing), `eel` now
+  drawn. Two scenes of k.scenes now have a drawing where they had none (`arctic`: iceberg, `underwater`:
+  seaweed).
+- **Looked at:** every new drawing on contact sheets (150 px, name underneath), 25 then 26, and the redrawn ones
+  again (salsa: the chips stood behind the bowl like ears; harness: read as scissors; iceberg and seaweed: a
+  water background that tiled as blue squares in the two scenes, which were looked at before and after);
+  `crane`, `kiwi`, `tuna`, `bat`, `seal`, `mouse` as they were. Verdict with the name: all recognisable;
+  **weakest without it: cougar (a bear's head), clam (white on white), eel (a green ribbon), knob, chariot
+  (four wheels in the sense kept, two drawn), sphere (a blue ball).** Not looked at: the new drawn colours of
+  `k.attributes.drawn` one by one (computed from the parts).
+- **Judgement that is mine:** what each thing looks like; which senses are drawable; the extended rule for the
+  kiwi.
+- Numbers: k.objects 2,158 objects (275 hand-written; were 2,108 and 225); 7 new shards, 1,126 wires, 148,250
+  bytes. Coverage of the 1,500 common things: a drawing of its name 680 to 727 (48%), neither 477 to 426. Joins:
+  68 to 70 clashes. Catalog 22 worlds, 914 shards, vocab 23,605 words; 0 errors, 0 warnings. npm test 2,754:
+  2,753 pass, 1 skipped, 0 fail.

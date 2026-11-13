@@ -33,7 +33,7 @@
 @k.attributes.same.alexandria.place k.attributes.same name=alexandria sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.algeria.place k.attributes.same name=algeria sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.alley.thing k.attributes.same name=alley sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.alligator.animal k.attributes.same name=alligator sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.attributes.thing in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.alligator.animal k.attributes.same name=alligator sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.almond.food k.attributes.same name=almond sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.alpaca.animal k.attributes.same name=alpaca sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.alps.place k.attributes.same name=alps sense=place only=true in=k.geo.range by_word=k.words.sense core.source="hand-core 1"

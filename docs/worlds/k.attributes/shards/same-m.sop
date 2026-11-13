@@ -1,4 +1,4 @@
-# k.attributes/shards/same-m: one name, one thing: for 246 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-m: one name, one thing: for 247 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -42,7 +42,7 @@
 @k.attributes.same.manor.thing k.attributes.same name=manor sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.manta_ray.animal k.attributes.same name="manta ray" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mantelpiece_clock.thing k.attributes.same name="mantelpiece clock" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.mantis.thing k.attributes.same name=mantis sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mantis.animal k.attributes.same name=mantis sense=animal only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.manual_wheelchair.thing k.attributes.same name="manual wheelchair" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.man_s_shoe.clothing k.attributes.same name="man’s shoe" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.map.thing k.attributes.same name=map sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -111,6 +111,7 @@
 @k.attributes.same.meringue.food k.attributes.same name=meringue sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.meringues.food k.attributes.same name=meringues sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.merry_go_round.thing k.attributes.same name="merry go round" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.mesa.thing k.attributes.same name=mesa sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.meteor.body_in_space k.attributes.same name=meteor sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.space.kind by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.meteorite.thing k.attributes.same name=meteorite sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.metro.thing k.attributes.same name=metro sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

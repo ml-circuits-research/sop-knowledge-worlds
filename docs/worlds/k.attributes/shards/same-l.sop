@@ -46,7 +46,7 @@
 @k.attributes.same.lebanon.place k.attributes.same name=lebanon sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.led.thing k.attributes.same name=led sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ledger.thing k.attributes.same name=ledger sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.leech.animal k.attributes.same name=leech sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.leech.animal k.attributes.same name=leech sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.leeds.place k.attributes.same name=leeds sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.leek.food k.attributes.same name=leek sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.leg.body_part k.attributes.same name=leg sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
