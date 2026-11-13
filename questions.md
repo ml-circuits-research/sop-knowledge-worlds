@@ -113,3 +113,29 @@ part (then every question must say which variant); (c) leave the 18 imported dra
 exists; (d) sopworld: a query condition for an absent key.
 Blocking: no. Meanwhile: (c). Left out: dog, cat, bird, fish, butterfly, mountain, house, castle, train, bicycle,
 rocket, sun, star, cloud, umbrella, snowman, ladder, chair.
+
+## Q13 (after "more objects", 2026-11-13)
+Question: is the size of `k.objects` acceptable: 39 MB of shards (326 shards), 9 MB of previews, `docs/worlds` 56 MB,
+and `npm test` 4 minutes?
+Context: an imported object costs about 160 wires and 19 kB, mostly its points as wires (one wire per point, about
+115 bytes each). Options: (a) keep; (b) a smaller point budget per object (100 instead of 200 would roughly halve
+it, with rougher outlines); (c) keep the previews out of the repository (generate them in CI); (d) sopworld: a
+compact way to say a list of points, which rule 3 forbids today.
+Blocking: no. Meanwhile: (a).
+
+## Q14 (after "more objects", 2026-11-13)
+Question: should the naming pass (R2.7) be done for all 1,265 OpenMoji and Mulberry objects, or only for a part?
+Context: it took 6 batches (about 70 contact sheets) to look at the 811 Noto objects; 20% of their parts got a name.
+The Mulberry drawings are outlines plus fills, so about half of their parts are outlines (`kind=detail`). The
+tools are ready (`sources/openmoji/part-names.tsv`, `sources/mulberry/part-names.tsv`, `render-svg --label`); no
+row is written yet. Options: (a) all, in batches of 100; (b) only the categories an application asks for first
+(animals, vehicles, furniture); (c) mark outlines as detail by rule (black lines) and name only the fills.
+Blocking: no. Meanwhile: nothing named for these two sources.
+
+## Q15 (task R2.3, 2026-11-13)
+Question: are Natural Earth's `ADMIN` names right as the identity of a country ("United States of America",
+"Republic of Serbia", "United Republic of Tanzania"), with the short names as `core.word` facts?
+Context: the short names of Natural Earth (`NAME`) are abbreviated ("Dem. Rep. Congo", "Bosnia and Herz.") and its
+`NAME_EN` has "People's Republic of China". The short common names of mledoze/countries are better but ODbL; using
+them as the identity would put ODbL names into the public-domain shards.
+Blocking: no. Meanwhile: `ADMIN`.

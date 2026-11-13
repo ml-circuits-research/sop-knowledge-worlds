@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>planet</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="50" cy="50" rx="25" ry="25" fill="orange" stroke="#333" stroke-width="0.8"><title>ball</title></ellipse>
+  <ellipse cx="50" cy="50" rx="45" ry="8" fill="brown" stroke="#333" stroke-width="0.8"><title>ring</title></ellipse>
+  <path d="M25 50 A25 25 0 0 1 75 50" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front</title></path>
+  <ellipse cx="44" cy="62" rx="4" ry="4" fill="red" stroke="#333" stroke-width="0.8"><title>spot</title></ellipse>
+</svg>

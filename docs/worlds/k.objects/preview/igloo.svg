@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>igloo</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="5" y="88" width="90" height="5" fill="white" stroke="#333" stroke-width="0.8"><title>floor</title></rect>
+  <polygon points="10,88 12,68 20,50 33,37 50,32 67,37 80,50 88,68 90,88" fill="blue" stroke="#333" stroke-width="0.8"><title>dome</title></polygon>
+  <polygon points="40,88 40,70 45,63 55,63 60,70 60,88" fill="black" stroke="#333" stroke-width="0.8"><title>entrance</title></polygon>
+  <polyline points="14,62 86,62" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>first_row</title></polyline>
+  <polyline points="26,44 74,44" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>second_row</title></polyline>
+</svg>

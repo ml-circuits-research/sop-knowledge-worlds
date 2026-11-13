@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>box</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="15" y="40" width="55" height="50" fill="brown" stroke="#333" stroke-width="0.8"><title>front</title></rect>
+  <polygon points="70,40 90,22 90,72 70,90" fill="brown" stroke="#333" stroke-width="0.8"><title>side</title></polygon>
+  <polygon points="15,40 35,22 90,22 70,40" fill="brown" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <rect x="38" y="40" width="8" height="50" fill="yellow" stroke="#333" stroke-width="0.8"><title>tape</title></rect>
+</svg>

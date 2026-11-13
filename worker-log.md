@@ -391,3 +391,52 @@ measured number is 99.)
   prints which categories are usable, which is the report the plan asks for. CC-BY-4.0.
 - Tests: `tests/import.conceptnet.test.mjs`, `tests/import.quickdraw.test.mjs` (filtering, mapping, determinism,
   and that the output loads in sopworld with the schemas and answers a query).
+
+## R2.5 (2026-11-13): 30 more hand-written objects; plane and dog redrawn
+
+- New shards `structures` (bridge, windmill, well, fence, gate, igloo, barn, tower, pyramid, kennel, mailbox),
+  `home` (sofa, shelf, oven, bottle, box, suitcase, bag, phone, computer, book), `more` (truck, hen, bee, planet,
+  heart, flag, hat, boot, sock): 30 objects with named parts, kinds for repeated parts, relative positions, boxes,
+  z, typical colours; names chosen among common things no imported source has, so no imported drawing is displaced.
+  Hand-chosen coordinates through a throwaway formatter, as in Round 1.
+- Plane redrawn (side view to the right: body, swept wings, tail fin, engine, cockpit, six windows); dog's head
+  redrawn (head, snout, nose, mouth, hanging ear, eye).
+- Previews looked at on one contact sheet (32 pictures): all recognisable; the igloo (white on white) and the
+  kennel door (an arc drawn as a line) were redrawn after the first look.
+- Numbers: `structures` 153 wires / 20,942 bytes, `home` 101 / 14,446, `more` 99 / 13,743; load 3 to 7 ms each;
+  `animals` now 68 wires, `vehicles` 115. k.objects: **2,136 objects** (60 hand-written + 811 + 114 + 1,151),
+  326 shards. Catalog: 6 worlds, 660 shards, vocab 17,417 words. 0 errors, 0 warnings.
+- npm test: 2,261 tests; the full run had 2 failures (bag button and sock toe a unit outside their `inside` part),
+  fixed; the render, catalog, validation and names tests then pass (2,152 tests, which include every object).
+
+## Round 2 report (2026-11-13)
+
+**Done, in the order the reviewer's messages set:** R2.1; R2.2 (pushed before the reorder arrived); R2.6 pilot;
+R2.7 pilot; R2.6 full; R2.7 batches 1 to 6 (all 811 Noto objects); R2.3; answers Q10 and Q12; sopworld 0.15.0;
+OpenMoji and Mulberry; R2.4; the ConceptNet and Quick, Draw! scripts; R2.5.
+
+**Worlds now** (0 errors, 0 warnings, sopworld 0.15.0 at 782cd0c):
+
+| World | Shards | What | Sources and terms |
+| --- | --- | --- | --- |
+| k.commonsense | 1 | 15 things, 4 soft rules | hand-core, CC0-1.0 |
+| k.objects | 326 | 2,136 drawable objects | hand-core CC0-1.0; Noto Apache-2.0 + CLDR Unicode-3.0; OpenMoji and Mulberry CC-BY-SA-4.0 |
+| k.words | 318 | 10,471 words, 26,116 senses | WordNet 3.1, WordNet licence |
+| k.geo | 13 | 238 countries, 872 cities, 1,074 rivers, 627 mountains, 216 ranges | Natural Earth public domain; borders shards ODbL-1.0 |
+| k.units | 1 | 8 quantities, 44 units | hand-core, CC0-1.0 |
+| k.time | 1 | months, weekdays, seasons, durations | hand-core, CC0-1.0 |
+
+**Not fetched (network: GitHub, npm, pip only):** ConceptNet (S3) and Quick, Draw! (Google Storage): scripts with
+fixture tests only, no data. Wikidata was not attempted.
+
+**Not done:** the naming pass for the 1,265 OpenMoji and Mulberry objects (Q14). 131 Noto objects have no named
+part. Ten Noto conversions are not recognisable (listed under R2.7 batch 6).
+
+**What SOP Lang could not say, or only with a workaround:** a value of several words (strings, Q11, accepted); a
+list of points (one wire per point: 80% of the wires of k.objects, Q13); "no value for this key" in a query (Q12:
+second drawings left out); a reference to a fact in another shard (k.words values are words, not senses); a
+country's facts under two licences (two shards whose wires merge by identity: works); "one of several values" in a
+`value` query answers `conflicting` (use `list`).
+
+**Open questions:** Q9 (terms of the k.words shards, given the CC BY-SA frequency list used as a filter), Q13 (size
+of k.objects), Q14 (naming pass for the new sources), Q15 (country names).

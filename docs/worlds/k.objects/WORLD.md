@@ -35,8 +35,11 @@ a draw order and typical colours, so that a renderer that has never seen an obje
 | `vehicles` | car, boat, plane, rocket, train, bicycle |
 | `figures` | person (stick figure), robot, snowman |
 | `household` | table, chair, cup, umbrella, ladder |
+| `structures` | bridge, windmill, well, fence, gate, igloo, barn, tower, pyramid, kennel, mailbox |
+| `home` | sofa, shelf, oven, bottle, box, suitcase, bag, phone, computer, book |
+| `more` | truck, hen, bee, planet, heart, flag, hat, boot, sock |
 
-30 hand-written objects, 168 parts, 139 points, words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+60 hand-written objects (30 of Round 1, 30 of Round 2), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 
@@ -45,12 +48,12 @@ first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mul
 
 | Source | Objects | Shards | Licence | Names from |
 | --- | --- | --- | --- | --- |
-| hand-written | 30 | 7 | CC0-1.0 | this repository |
+| hand-written | 60 | 10 | CC0-1.0 | this repository |
 | Noto Emoji (`noto-<emoji subgroup>-<nn>`) | 811 | 124 | Apache-2.0 AND Unicode-3.0 | Unicode CLDR short names (`"dog face"`, `teapot`) |
 | OpenMoji (`openmoji-<group>-<nn>`) | 114 | 18 | CC-BY-SA-4.0 | OpenMoji annotations (`goldfish`, `"lawn mower"`) |
 | Mulberry Symbols (`mulberry-<category>-<nn>`) | 1,151 | 174 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |
 
-2,106 objects in all. A name of several words is a string. The keywords or tags of a source are `core.word` facts.
+2,136 objects in all. A name of several words is a string. The keywords or tags of a source are `core.word` facts.
 Differences from the hand-written objects:
 
 - every visible element of the drawing is one part, in draw order (`z` = 1, 2, …); at most 16 parts an object (the

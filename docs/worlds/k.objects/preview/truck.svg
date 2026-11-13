@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>truck</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="5" y="25" width="58" height="50" fill="red" stroke="#333" stroke-width="0.8"><title>cargo</title></rect>
+  <rect x="63" y="40" width="30" height="35" fill="red" stroke="#333" stroke-width="0.8"><title>cab</title></rect>
+  <rect x="70" y="45" width="16" height="13" fill="blue" stroke="#333" stroke-width="0.8"><title>window</title></rect>
+  <ellipse cx="23" cy="77" rx="9" ry="9" fill="black" stroke="#333" stroke-width="0.8"><title>back_wheel</title></ellipse>
+  <ellipse cx="77" cy="77" rx="9" ry="9" fill="black" stroke="#333" stroke-width="0.8"><title>front_wheel</title></ellipse>
+  <ellipse cx="91" cy="66" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>headlight</title></ellipse>
+</svg>

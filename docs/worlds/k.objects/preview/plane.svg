@@ -1,11 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>plane</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="38,50 58,50 48,15 40,15" fill="grey" stroke="#333" stroke-width="0.8"><title>far_wing</title></polygon>
-  <polygon points="82,45 95,45 95,20 88,20" fill="grey" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
-  <ellipse cx="50" cy="50" rx="45" ry="10" fill="grey" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
-  <polygon points="38,50 58,50 48,85 40,85" fill="grey" stroke="#333" stroke-width="0.8"><title>near_wing</title></polygon>
-  <ellipse cx="18.5" cy="47.5" rx="2.5" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>first_window</title></ellipse>
-  <ellipse cx="26.5" cy="47.5" rx="2.5" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>second_window</title></ellipse>
-  <ellipse cx="68.5" cy="47.5" rx="2.5" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>third_window</title></ellipse>
+  <polygon points="12,46 4,24 14,24 28,44" fill="red" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
+  <polygon points="48,46 62,46 52,22 44,22" fill="grey" stroke="#333" stroke-width="0.8"><title>far_wing</title></polygon>
+  <ellipse cx="50" cy="50" rx="42" ry="8" fill="white" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <polygon points="44,52 60,52 38,86 28,86" fill="grey" stroke="#333" stroke-width="0.8"><title>near_wing</title></polygon>
+  <ellipse cx="84" cy="47.5" rx="4" ry="2.5" fill="blue" stroke="#333" stroke-width="0.8"><title>cockpit</title></ellipse>
+  <ellipse cx="32" cy="47.5" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>first_window</title></ellipse>
+  <ellipse cx="40" cy="47.5" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>second_window</title></ellipse>
+  <ellipse cx="48" cy="47.5" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>third_window</title></ellipse>
+  <ellipse cx="56" cy="47.5" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>fourth_window</title></ellipse>
+  <ellipse cx="64" cy="47.5" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>fifth_window</title></ellipse>
+  <ellipse cx="72" cy="47.5" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>sixth_window</title></ellipse>
+  <ellipse cx="48" cy="63" rx="6" ry="3" fill="grey" stroke="#333" stroke-width="0.8"><title>engine</title></ellipse>
 </svg>
