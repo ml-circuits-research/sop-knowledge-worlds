@@ -164,3 +164,34 @@ checked by eye: the shapes are good. 811 objects, 2,027 parts named by the model
 - **sopworld 0.15.0 (commit 782cd0c)** is validated: soft issues no longer make knowledge conflicting, the merge is
   order-independent, `core.module version=` is accepted. Upgrade the pin (tools/sopworld + VERSION), move the schema
   versions from the header to `version=`, and remove the fork workaround from the page example and tests. One commit.
+
+## Reviewer 2026-11-13 10:45 — Round 2 accepted; answers Q9, Q13–Q15; Round 3
+
+**Validated at 68d15cc:** `npm test` 2,256 pass, 0 fail; catalog rebuild gives no diff; contact sheets of Mulberry (77 objects)
+and of the hand-written set were checked by eye. 2,136 drawable objects. Accepted. The choice of Mulberry is accepted.
+
+- **Q9:** keep the WordNet licence on `k.words` and the attribution of the frequency list in SOURCE.md and LICENSES.md.
+- **Q13:** the size is accepted (hosts load one shard per lookup). Keep the 200-point budget. Keep `npm test` under 5 minutes:
+  if it grows, validate shards in parallel.
+- **Q14:** name all 1,265, the owner asked for it. First by rule: a part that is only a stroke, or a black outline with the
+  same box as a filled part, is `kind=detail`. Then the looking pass, as for Noto.
+- **Q15:** identity is the common short name (Natural Earth `NAME`: "United States", "Serbia"); the formal name is a second
+  key `formal=`; other short forms stay `core.word` facts.
+
+**Round 3.**
+- **R3.1** Q15, then the naming pass for the OpenMoji and Mulberry objects (rule first, then looking; batches of about 100,
+  one commit each; `named=model`; only when sure).
+- **R3.2 Clean Mulberry.** It is a symbol set, so some entries are not things (bendy, drink, counters) or do not survive the
+  conversion (wire, wool, switch). While looking, list the objects that are not a recognisable thing in
+  `sources/mulberry/excluded.tsv` with a reason; the import script skips them. Report the final count.
+- **R3.3 Four hand-written cores** (source `hand-core`, CC0, with tests, facts a child's encyclopedia would state; no
+  disputed or fast-changing numbers):
+  - `k.space`: sun, 8 planets (order, size class, moons count as "about", rings, rocky or gas), the Moon, a few named moons,
+    comets, stars, galaxy; with `k.objects` names where a drawing exists.
+  - `k.animals`: 150 common animals: class, legs, covering, sound, habitat, diet, baby name, can fly / swim.
+  - `k.body`: body parts, where they are, how many, what they do, the five senses.
+  - `k.food`: 150 common foods: kind (fruit, vegetable, dairy, …), colour, grows on / comes from, eaten raw or cooked.
+  Join to `k.objects` and `k.commonsense` by name, as before.
+- **R3.4 `docs/index.html`:** add a small gallery page `docs/gallery.html` that lists every `k.objects` object with its
+  preview (lazy images, a search box, the source and licence per object), so the owner can browse all the shapes.
+- Report as before. Say exactly what was looked at and what was not.
