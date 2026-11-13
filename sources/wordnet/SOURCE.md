@@ -23,3 +23,5 @@
   or vulgar terms are left out. Not kept: adjectives, adverbs, member and substance holonyms, verb frames, examples.
 - **Counts (2026-11-13):** 19,697 list words usable, 10,471 words kept, 26,116 senses (61 left out as offensive),
   1,264 irregular forms, 2,021 capitalised spellings; 28,951 wires in 318 shards, 5,610,059 bytes.
+- **Also kept, for `k.actions`:** the gloss of the verb senses named in `sources/hand-core/act-verbs.tsv` (269 verbs,
+  283 senses; `sources/wordnet/act-verb-glosses.tsv`, rewritten by `node tools/acts-core.mjs --glosses`).

@@ -1665,3 +1665,47 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   across facts and through another world's expression: a test.
 - Numbers: k.faces plain-hat 386 wires 56,411 bytes, plain-shoulders 455 wires 71,667 bytes; face previews 669
   files. Catalog 15 worlds, 782 shards, vocab 19,661 words; 0 errors, 0 warnings. npm test 2,447 pass, 0 fail.
+
+## Round 8, item 1 (2026-11-13, second worker): `k.actions`, the words of the acts
+
+- **Two workers.** This entry is by a second worker, who does the block "2026-11-13 19:35 — Round 8"; the first
+  worker has the open items of Round 7. **For the first worker (R7.2, the 150 common verbs):** the world
+  `k.actions` now exists; please add your types to `docs/worlds/k.actions/schema.sop` (and `exports=`) rather than
+  making a second world. Taken here: the types `act`, `role`, `verb`, `marking`, the shards `acts` and `verbs-*`,
+  `tools/acts-core.mjs`, `tests/k.actions.acts.test.mjs`, questions `ac-01` to `ac-10` in
+  `tests/k.actions.questions.jsonl` (append yours). `k.actions.verb` is a verb as a word for an act; a fact about
+  what people do with a verb (who cuts what with what) is another type.
+- **New world `k.actions`** (version 1, exports `act`, `role`, `verb`, `marking`), 15 shards, 440 wires, 84,753
+  bytes: `acts` (14 acts, 52 roles with their markers) and one shard of verbs per act: 291 verbs and phrasal verbs
+  (make 15, remove 21, change 69, place 33, connect 18, group 19, take apart 23, pick 12, ask 19, copy 9, send 21,
+  undo 6, save 12, load 14) and 83 markings.
+- **From WordNet:** 269 verbs name 283 WordNet 3.1 verb senses (`sense`, many) and carry the gloss of the first;
+  `core.source="wordnet 3.1"` and `named=model` (which act a sense means, and the roles, are my reading).
+  **Hand-written:** 22 verbs that WordNet does not list in the meaning (`hand-core 1`): turn into, change into,
+  make into, recolour, recolor, fill, scale, scale up, scale down, put together (as group), pull apart, ungroup,
+  unlink, make a copy of, share, send over, take back, roll back, go back, hold on to, pull up, bring up. The
+  phrasal verbs asked for: put on (place, and make: "add to something existing"), take off, get rid of (WordNet),
+  turn into (hand-written; WordNet has no entry).
+- **What a verb says:** the role of its object, of a complement after it (paint the door red), the attribute and
+  the value the verb itself fixes (enlarge: size, larger; 47 verbs have an attribute), `separable=true` for 56
+  phrasal verbs, `after_particle` for 7 (put the hat on the man). No notation: the markings are their own facts.
+- **Read:** for about 390 candidate verbs I printed the first 4 or 5 WordNet verb senses (the other words of the
+  synset and the gloss, cut at 85 characters) and read them all, about 1,500 senses, and chose each sense by its
+  number. For make, set, turn, draw, flip, lighten, order, save, open, print, post, share, take, check, give,
+  keep, cut, move, add, fill I read up to 40 senses, the later ones through a filter of words (computer, cause,
+  select …). The 12 senses found through another verb of the same synset (colour by color 1, take by choose 1)
+  were read again in the table of glosses. **Not read:** the later senses (after the 5th) of the other verbs; the
+  example sentences; WordNet's verb frames (they are not imported; the roles are mine, not WordNet's).
+- **Left out because I was not sure:** show and display as asking; lighten and brighten for a lighter colour;
+  cancel and reset as undo; order as putting in an order; print; redo; start over; dress; wear (a state, not an
+  act).
+- **Judgement that is mine:** the roles of each act and their markers; the 23 place prepositions; which acts are
+  opposites; which verbs are separable.
+- **What SOP Lang could not say:** that a role named by a verb or a marking is a role of its act (a join across
+  facts): a test. That `separable` is only for a text of two words: a test.
+- Tests: the shards are what the tool gives; roles; the phrasal verbs asked for; 100 or more verbs join
+  `k.words.sense` with the same gloss; the table of glosses against the raw files when they are there; 10
+  questions; the vocabulary index.
+- Numbers: k.actions 15 shards, 440 wires, 84,753 bytes. Catalog 16 worlds, 797 shards, vocab 19,769 words (before:
+  15 worlds, 782 shards, 19,600 words at b705b3c; the first worker's hats are in between); 0 errors, 0 warnings.
+  npm test 2,459 pass, 5 skipped, 0 fail.

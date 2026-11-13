@@ -336,6 +336,7 @@
   "k.scenes/shards/scenes-town"
  ],
  "act": [
+  "k.actions/schema.sop",
   "k.words/shards/ac"
  ],
  "acting": [
@@ -367,6 +368,7 @@
   "k.words/shards/ac"
  ],
  "acts": [
+  "k.actions/schema.sop",
   "k.words/shards/ac"
  ],
  "acute": [
@@ -397,6 +399,7 @@
   "k.words/shards/ad"
  ],
  "add": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/ad"
  ],
  "addict": [
@@ -451,6 +454,7 @@
   "k.words/shards/ad"
  ],
  "adjust": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/ad"
  ],
  "adjustment": [
@@ -1008,6 +1012,9 @@
   "k.objects/shards/noto-science-01",
   "k.objects/shards/noto-transport-air-02"
  ],
+ "align": [
+  "k.actions/shards/verbs-place"
+ ],
  "aligned_column": [
   "k.layouts/shards/layouts"
  ],
@@ -1144,6 +1151,7 @@
   "k.words/shards/al"
  ],
  "alter": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/al"
  ],
  "altercation": [
@@ -1299,6 +1307,7 @@
   "k.words/shards/am"
  ],
  "amount": [
+  "k.actions/shards/acts",
   "k.words/shards/am"
  ],
  "amp": [
@@ -2045,6 +2054,7 @@
   "k.words/shards/ar"
  ],
  "archive": [
+  "k.actions/shards/verbs-save",
   "k.words/shards/ar"
  ],
  "archives": [
@@ -2233,6 +2243,7 @@
   "k.words/shards/ar"
  ],
  "arrange": [
+  "k.actions/shards/verbs-group",
   "k.layouts/schema.sop",
   "k.words/shards/ar"
  ],
@@ -2396,6 +2407,7 @@
   "k.words/shards/ar"
  ],
  "as": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/as"
  ],
  "as salt": [
@@ -2461,6 +2473,8 @@
   "k.geo/shards/asia"
  ],
  "ask": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-ask",
   "k.words/shards/as"
  ],
  "asking": [
@@ -2509,6 +2523,7 @@
   "k.words/shards/as"
  ],
  "assemble": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/as"
  ],
  "assembly": [
@@ -2603,6 +2618,7 @@
   "k.words/shards/as"
  ],
  "at": [
+  "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
   "k.words/shards/at"
@@ -2695,6 +2711,7 @@
   "k.geo/shards/asia"
  ],
  "attach": [
+  "k.actions/shards/verbs-connect",
   "k.layouts/schema.sop",
   "k.words/shards/at"
  ],
@@ -2755,6 +2772,9 @@
  "attraction": [
   "k.objects/shards/noto-tool-04",
   "k.words/shards/at"
+ ],
+ "attribute": [
+  "k.actions/shards/acts"
  ],
  "au": [
   "k.words/shards/au"
@@ -3215,6 +3235,9 @@
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-b"
+ ],
+ "back up": [
+  "k.actions/shards/verbs-save"
  ],
  "back_cushion": [
   "k.objects/shards/things"
@@ -5083,6 +5106,7 @@
   "k.words/shards/be"
  ],
  "bend": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/be"
  ],
  "bender": [
@@ -5600,6 +5624,7 @@
   "k.objects/shards/places"
  ],
  "bind": [
+  "k.actions/shards/verbs-connect",
   "k.words/shards/bi"
  ],
  "binder": [
@@ -6117,6 +6142,9 @@
   "k.objects/shards/noto-plant-other-02",
   "k.objects/shards/noto-sky-weather-04",
   "k.words/shards/bl"
+ ],
+ "blow up": [
+  "k.actions/shards/verbs-change"
  ],
  "blowfish": [
   "k.objects/shards/noto-animal-marine-01",
@@ -7419,6 +7447,12 @@
   "k.objects/shards/noto-tool-03",
   "k.words/shards/br"
  ],
+ "break apart": [
+  "k.actions/shards/verbs-take_apart"
+ ],
+ "break up": [
+  "k.actions/shards/verbs-take_apart"
+ ],
  "break-in": [
   "k.words/shards/br"
  ],
@@ -7545,6 +7579,7 @@
   "k.words/shards/br"
  ],
  "bridge": [
+  "k.actions/shards/verbs-connect",
   "k.faces/shards/plain-glasses",
   "k.layouts/shards/anchors",
   "k.layouts/shards/joins",
@@ -7621,7 +7656,14 @@
   "k.objects/shards/mulberry-clothes-general-04"
  ],
  "bring": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/br"
+ ],
+ "bring back": [
+  "k.actions/shards/verbs-load"
+ ],
+ "bring up": [
+  "k.actions/shards/verbs-load"
  ],
  "bringing": [
   "k.words/shards/br"
@@ -8037,6 +8079,7 @@
   "k.geo/shards/asia"
  ],
  "build": [
+  "k.actions/shards/verbs-make",
   "k.objects/shards/noto-phone-01",
   "k.words/shards/bu"
  ],
@@ -8224,9 +8267,11 @@
   "k.geo/shards/europe"
  ],
  "bunch": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/bu"
  ],
  "bundle": [
+  "k.actions/shards/verbs-group",
   "k.objects/shards/noto-clothing-02",
   "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/bu"
@@ -8623,6 +8668,9 @@
   "k.objects/shards/words-wordnet",
   "k.words/shards/bu"
  ],
+ "by": [
+  "k.actions/shards/verbs-change"
+ ],
  "bye": [
   "k.words/shards/by"
  ],
@@ -8950,6 +8998,7 @@
   "k.words/shards/ca"
  ],
  "call": [
+  "k.actions/shards/verbs-change",
   "k.objects/shards/noto-phone-01",
   "k.words/shards/ca"
  ],
@@ -9143,6 +9192,7 @@
   "k.geo/shards/oceania"
  ],
  "cancel": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/ca"
  ],
  "cancelled": [
@@ -9678,6 +9728,7 @@
   "k.food/shards/vegetables"
  ],
  "carry": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/ca"
  ],
  "cars": [
@@ -9905,6 +9956,9 @@
  ],
  "catching": [
   "k.words/shards/ca"
+ ],
+ "categorize": [
+  "k.actions/shards/verbs-group"
  ],
  "category": [
   "k.words/shards/ca"
@@ -10181,6 +10235,7 @@
   "k.words/shards/ce"
  ],
  "center": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/ce"
  ],
  "centigrade": [
@@ -10234,6 +10289,7 @@
   "k.geo/shards/asia"
  ],
  "centre": [
+  "k.actions/shards/verbs-place",
   "k.layouts/shards/layouts",
   "k.objects/shards/mulberry-celebration-item-02",
   "k.objects/shards/mulberry-electrical-general-01",
@@ -10531,8 +10587,13 @@
   "k.words/shards/ch"
  ],
  "change": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-change",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/ch"
+ ],
+ "change into": [
+  "k.actions/shards/verbs-change"
  ],
  "changeover switch": [
   "k.objects/shards/openmoji-technology-01"
@@ -11358,6 +11419,7 @@
   "k.geo/shards/asia"
  ],
  "choose": [
+  "k.actions/shards/verbs-pick",
   "k.words/shards/ch"
  ],
  "chop": [
@@ -11834,6 +11896,9 @@
  "classified": [
   "k.words/shards/cl"
  ],
+ "classify": [
+  "k.actions/shards/verbs-group"
+ ],
  "classmate": [
   "k.words/shards/cl"
  ],
@@ -11901,6 +11966,7 @@
   "k.words/shards/cl"
  ],
  "clear": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/cl"
  ],
  "clearance": [
@@ -12011,6 +12077,7 @@
   "k.words/shards/cl"
  ],
  "clip": [
+  "k.actions/shards/verbs-connect",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/noto-writing-01",
   "k.objects/shards/openmoji-healthcare-01",
@@ -12063,12 +12130,14 @@
   "k.objects/shards/land"
  ],
  "clone": [
+  "k.actions/shards/verbs-copy",
   "k.words/shards/cl"
  ],
  "cloning": [
   "k.words/shards/cl"
  ],
  "close": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/cl"
  ],
  "closed": [
@@ -12260,6 +12329,7 @@
   "k.words/shards/cl"
  ],
  "cluster": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/cl"
  ],
  "clutch": [
@@ -12594,6 +12664,7 @@
   "k.words/shards/co"
  ],
  "collect": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/co"
  ],
  "collecting": [
@@ -12660,10 +12731,14 @@
   "k.words/shards/co"
  ],
  "color": [
+  "k.actions/shards/verbs-change",
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
   "k.words/shards/co"
+ ],
+ "color in": [
+  "k.actions/shards/verbs-change"
  ],
  "colorado": [
   "k.geo/shards/north-america",
@@ -12682,10 +12757,14 @@
   "k.words/shards/co"
  ],
  "colour": [
+  "k.actions/shards/verbs-change",
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
   "k.words/shards/co"
+ ],
+ "colour in": [
+  "k.actions/shards/verbs-change"
  ],
  "coloured paper": [
   "k.objects/shards/mulberry-art-making-01",
@@ -12779,6 +12858,7 @@
   "k.words/shards/co"
  ],
  "combine": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/co"
  ],
  "combing": [
@@ -12844,6 +12924,7 @@
   "k.words/shards/co"
  ],
  "command": [
+  "k.actions/schema.sop",
   "k.words/shards/co"
  ],
  "commandant": [
@@ -12860,6 +12941,9 @@
  ],
  "commandoes": [
   "k.words/shards/co"
+ ],
+ "commands": [
+  "k.actions/schema.sop"
  ],
  "commence": [
   "k.words/shards/co"
@@ -13004,6 +13088,7 @@
   "k.words/shards/co"
  ],
  "compare": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/co"
  ],
  "comparing": [
@@ -13419,6 +13504,8 @@
   "k.people/shards/roles-story"
  ],
  "connect": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-connect",
   "k.words/shards/co"
  ],
  "connecticut": [
@@ -13529,6 +13616,7 @@
   "k.words/shards/co"
  ],
  "construct": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/co"
  ],
  "construction": [
@@ -13719,6 +13807,7 @@
   "k.words/shards/co"
  ],
  "convert": [
+  "k.actions/shards/verbs-change",
   "k.units/schema.sop",
   "k.words/shards/co"
  ],
@@ -13888,6 +13977,8 @@
   "k.objects/shards/noto-transport-air-01"
  ],
  "copy": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-copy",
   "k.words/shards/co"
  ],
  "copycat": [
@@ -14045,6 +14136,7 @@
   "k.words/shards/co"
  ],
  "correct": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/co"
  ],
  "correction": [
@@ -14207,6 +14299,7 @@
   "k.words/shards/co"
  ],
  "count": [
+  "k.actions/shards/verbs-ask",
   "k.scenes/schema.sop",
   "k.words/shards/co"
  ],
@@ -14249,6 +14342,7 @@
   "k.objects/shards/stand-ins-wordnet"
  ],
  "couple": [
+  "k.actions/shards/verbs-connect",
   "k.words/shards/co"
  ],
  "coupon": [
@@ -14588,6 +14682,7 @@
   "k.objects/shards/food-2"
  ],
  "create": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/cr"
  ],
  "creation": [
@@ -14754,6 +14849,9 @@
   "k.objects/shards/mulberry-food-meals-and-snacks-01",
   "k.scenes/shards/things-c"
  ],
+ "criterion": [
+  "k.actions/shards/acts"
+ ],
  "critic": [
   "k.words/shards/cr"
  ],
@@ -14833,6 +14931,9 @@
   "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/openmoji-healthcare-01",
   "k.words/shards/cr"
+ ],
+ "cross out": [
+  "k.actions/shards/verbs-remove"
  ],
  "cross_bar": [
   "k.faces/shards/plain-hat",
@@ -15355,6 +15456,7 @@
   "k.words/shards/cu"
  ],
  "cut": [
+  "k.actions/shards/verbs-take_apart",
   "k.faces/shards/plain-cheeks",
   "k.objects/shards/food-2",
   "k.objects/shards/noto-food-prepared-02",
@@ -15366,6 +15468,15 @@
  "cut of meat": [
   "k.objects/shards/noto-food-prepared-02",
   "k.scenes/shards/things-c"
+ ],
+ "cut off": [
+  "k.actions/shards/verbs-take_apart"
+ ],
+ "cut out": [
+  "k.actions/shards/verbs-remove"
+ ],
+ "cut up": [
+  "k.actions/shards/verbs-take_apart"
  ],
  "cutler": [
   "k.words/shards/cu"
@@ -15830,6 +15941,9 @@
  "dark_half": [
   "k.objects/shards/noto-sky-weather-01"
  ],
+ "darken": [
+  "k.actions/shards/verbs-change"
+ ],
  "darkhan": [
   "k.geo/shards/asia"
  ],
@@ -16178,6 +16292,7 @@
   "k.words/shards/de"
  ],
  "decrease": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/de"
  ],
  "decreasing": [
@@ -16313,6 +16428,7 @@
   "k.words/shards/de"
  ],
  "delete": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/de"
  ],
  "delhi": [
@@ -16342,6 +16458,7 @@
   "k.words/shards/de"
  ],
  "deliver": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/de"
  ],
  "delivering": [
@@ -16591,6 +16708,7 @@
   "k.words/shards/de"
  ],
  "describe": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/de"
  ],
  "description": [
@@ -16695,6 +16813,7 @@
   "k.words/shards/de"
  ],
  "destroy": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/de"
  ],
  "destroyer": [
@@ -16702,6 +16821,9 @@
  ],
  "destruction": [
   "k.words/shards/de"
+ ],
+ "detach": [
+  "k.actions/shards/verbs-take_apart"
  ],
  "detachment": [
   "k.words/shards/de"
@@ -17162,6 +17284,7 @@
   "k.words/shards/di"
  ],
  "direction": [
+  "k.actions/shards/acts",
   "k.objects/shards/noto-place-map-01",
   "k.words/shards/di"
  ],
@@ -17241,6 +17364,9 @@
  "disarm": [
   "k.words/shards/di"
  ],
+ "disassemble": [
+  "k.actions/shards/verbs-take_apart"
+ ],
  "disaster": [
   "k.objects/shards/noto-place-geographic-01",
   "k.words/shards/di"
@@ -17254,6 +17380,7 @@
   "k.words/shards/di"
  ],
  "discard": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/di"
  ],
  "discharge": [
@@ -17279,6 +17406,7 @@
   "k.words/shards/di"
  ],
  "disconnect": [
+  "k.actions/shards/verbs-take_apart",
   "k.words/shards/di"
  ],
  "discount": [
@@ -17368,6 +17496,7 @@
   "k.words/shards/di"
  ],
  "dismantle": [
+  "k.actions/shards/verbs-take_apart",
   "k.words/shards/di"
  ],
  "dismiss": [
@@ -17389,6 +17518,7 @@
   "k.words/shards/di"
  ],
  "dispatch": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/di"
  ],
  "dispatcher": [
@@ -17510,6 +17640,7 @@
   "k.words/shards/di"
  ],
  "divide": [
+  "k.actions/shards/verbs-take_apart",
   "k.words/shards/di"
  ],
  "dividers": [
@@ -17610,6 +17741,9 @@
   "k.objects/shards/noto-office-02",
   "k.scenes/schema.sop",
   "k.words/shards/do"
+ ],
+ "do away with": [
+  "k.actions/shards/verbs-remove"
  ],
  "doc": [
   "k.words/shards/do"
@@ -18160,6 +18294,7 @@
   "k.words/shards/do"
  ],
  "download": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/do"
  ],
  "downside": [
@@ -18195,6 +18330,7 @@
   "k.words/shards/dr"
  ],
  "drag": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/dr"
  ],
  "dragged": [
@@ -18250,6 +18386,7 @@
   "k.geo/shards/europe"
  ],
  "draw": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/dr"
  ],
  "drawer": [
@@ -18445,6 +18582,7 @@
   "k.words/shards/dr"
  ],
  "drop": [
+  "k.actions/shards/verbs-place",
   "k.faces/shards/plain-earrings",
   "k.objects/shards/noto-household-02",
   "k.objects/shards/noto-medical-01",
@@ -18704,6 +18842,7 @@
   "k.objects/shards/noto-game-03"
  ],
  "duplicate": [
+  "k.actions/shards/verbs-copy",
   "k.words/shards/du"
  ],
  "durance": [
@@ -18783,6 +18922,7 @@
   "k.words/shards/dw"
  ],
  "dye": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/dy"
  ],
  "dying": [
@@ -18822,6 +18962,7 @@
   "k.words/shards/e"
  ],
  "e-mail": [
+  "k.actions/shards/verbs-send",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/e"
  ],
@@ -19060,6 +19201,7 @@
   "k.words/shards/ed"
  ],
  "edit": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/ed"
  ],
  "editing": [
@@ -19396,6 +19538,7 @@
   "k.words/shards/el"
  ],
  "eliminate": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/el"
  ],
  "elimination": [
@@ -19447,6 +19590,7 @@
   "k.words/shards/em"
  ],
  "email": [
+  "k.actions/shards/verbs-send",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/em"
  ],
@@ -19732,6 +19876,9 @@
  "enjoyment": [
   "k.words/shards/en"
  ],
+ "enlarge": [
+  "k.actions/shards/verbs-change"
+ ],
  "enlighten": [
   "k.words/shards/en"
  ],
@@ -19749,6 +19896,9 @@
  ],
  "enough": [
   "k.words/shards/en"
+ ],
+ "enquire": [
+  "k.actions/shards/verbs-ask"
  ],
  "enquiry": [
   "k.words/shards/en"
@@ -19916,6 +20066,7 @@
   "k.words/shards/er"
  ],
  "erase": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/er"
  ],
  "eraser": [
@@ -20272,6 +20423,7 @@
   "k.words/shards/ex"
  ],
  "exchange": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/ex"
  ],
  "exchange counter": [
@@ -20366,6 +20518,7 @@
   "k.objects/shards/openmoji-animals-nature-02"
  ],
  "expand": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/ex"
  ],
  "expansion": [
@@ -20410,6 +20563,7 @@
   "k.words/shards/ex"
  ],
  "explain": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/ex"
  ],
  "explanation": [
@@ -20449,6 +20603,7 @@
   "k.words/shards/ex"
  ],
  "export": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/ex"
  ],
  "expose": [
@@ -21032,6 +21187,7 @@
   "k.words/shards/fa"
  ],
  "fasten": [
+  "k.actions/shards/verbs-connect",
   "k.words/shards/fa"
  ],
  "fasting": [
@@ -21380,6 +21536,7 @@
   "k.objects/shards/noto-game-02"
  ],
  "fetch": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/fe"
  ],
  "fetish": [
@@ -21553,6 +21710,7 @@
   "k.words/shards/fi"
  ],
  "fill": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/fi"
  ],
  "filling": [
@@ -21632,7 +21790,11 @@
   "k.objects/shards/nature-2"
  ],
  "find": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/fi"
+ ],
+ "find out": [
+  "k.actions/shards/verbs-ask"
  ],
  "finder": [
   "k.words/shards/fi"
@@ -22234,8 +22396,12 @@
   "k.words/shards/fl"
  ],
  "flip": [
+  "k.actions/shards/verbs-change",
   "k.objects/shards/noto-clothing-04",
   "k.words/shards/fl"
+ ],
+ "flip over": [
+  "k.actions/shards/verbs-change"
  ],
  "flipped": [
   "k.words/shards/fl"
@@ -22726,6 +22892,10 @@
   "k.objects/shards/mulberry-clothes-general-06",
   "k.objects/shards/mulberry-clothes-general-07"
  ],
+ "for": [
+  "k.actions/shards/verbs-change",
+  "k.actions/shards/verbs-pick"
+ ],
  "fora": [
   "k.words/shards/fo"
  ],
@@ -22887,6 +23057,7 @@
   "k.words/shards/fo"
  ],
  "format": [
+  "k.actions/shards/acts",
   "k.words/shards/fo"
  ],
  "formation": [
@@ -22965,6 +23136,7 @@
   "k.words/shards/fo"
  ],
  "forward": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/fo"
  ],
  "fossil": [
@@ -23416,6 +23588,10 @@
  ],
  "frogs": [
   "k.animals/shards/reptiles-and-amphibians"
+ ],
+ "from": [
+  "k.actions/shards/verbs-make",
+  "k.actions/shards/verbs-remove"
  ],
  "fromage frais": [
   "k.objects/shards/mulberry-food-dairy-01",
@@ -24205,6 +24381,7 @@
   "k.words/shards/ga"
  ],
  "gather": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/ga"
  ],
  "gathering": [
@@ -24349,6 +24526,7 @@
   "k.geo/shards/asia"
  ],
  "generate": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/ge"
  ],
  "generation": [
@@ -24465,6 +24643,12 @@
  ],
  "get": [
   "k.words/shards/ge"
+ ],
+ "get back": [
+  "k.actions/shards/verbs-load"
+ ],
+ "get rid of": [
+  "k.actions/shards/verbs-remove"
  ],
  "getaway": [
   "k.words/shards/ge"
@@ -24620,6 +24804,7 @@
   "k.geo/shards/africa"
  ],
  "give": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/gi"
  ],
  "given": [
@@ -24802,6 +24987,7 @@
   "k.scenes/shards/things-g"
  ],
  "glue": [
+  "k.actions/shards/verbs-connect",
   "k.objects/shards/mulberry-work-and-school-stationery-01",
   "k.scenes/shards/things-g",
   "k.words/shards/gl"
@@ -24822,6 +25008,9 @@
  ],
  "go": [
   "k.words/shards/go"
+ ],
+ "go back": [
+  "k.actions/shards/verbs-undo"
  ],
  "goa": [
   "k.words/shards/go"
@@ -25800,6 +25989,8 @@
   "k.words/shards/gr"
  ],
  "group": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-group",
   "k.words/shards/gr"
  ],
  "group photo": [
@@ -26505,6 +26696,7 @@
   "k.words/shards/ha"
  ],
  "hand": [
+  "k.actions/shards/verbs-send",
   "k.body/shards/core",
   "k.layouts/shards/joins",
   "k.objects/shards/noto-clothing-02",
@@ -26524,6 +26716,9 @@
  "hand mixer": [
   "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.scenes/shards/things-h"
+ ],
+ "hand over": [
+  "k.actions/shards/verbs-send"
  ],
  "hand punch": [
   "k.objects/shards/mulberry-work-and-school-stationery-02",
@@ -26660,6 +26855,7 @@
   "k.words/shards/ha"
  ],
  "hang": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/ha"
  ],
  "hang-glide": [
@@ -27714,6 +27910,7 @@
   "k.words/shards/hi"
  ],
  "hide": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/hi"
  ],
  "hide-and-seek": [
@@ -27767,6 +27964,7 @@
   "k.words/shards/hi"
  ],
  "highlight": [
+  "k.actions/shards/verbs-pick",
   "k.words/shards/hi"
  ],
  "highness": [
@@ -28022,6 +28220,9 @@
   "k.layouts/schema.sop",
   "k.people/schema.sop",
   "k.words/shards/ho"
+ ],
+ "hold on to": [
+  "k.actions/shards/verbs-save"
  ],
  "holdall": [
   "k.objects/shards/mulberry-holiday-and-travel-01",
@@ -28335,11 +28536,15 @@
   "k.objects/shards/nature-2"
  ],
  "hook": [
+  "k.actions/shards/verbs-connect",
   "k.layouts/shards/joins",
   "k.objects/shards/household",
   "k.objects/shards/noto-tool-03",
   "k.scenes/shards/things-h",
   "k.words/shards/ho"
+ ],
+ "hook up": [
+  "k.actions/shards/verbs-connect"
  ],
  "hooker": [
   "k.words/shards/ho"
@@ -29186,6 +29391,7 @@
   "k.words/shards/id"
  ],
  "identify": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/id"
  ],
  "identity": [
@@ -29314,6 +29520,7 @@
   "k.words/shards/im"
  ],
  "imitate": [
+  "k.actions/shards/verbs-copy",
   "k.words/shards/im"
  ],
  "imitation": [
@@ -29366,6 +29573,7 @@
   "k.words/shards/im"
  ],
  "import": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/im"
  ],
  "importance": [
@@ -29500,6 +29708,7 @@
   "k.words/shards/in"
  ],
  "increase": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/in"
  ],
  "increasing": [
@@ -29797,6 +30006,7 @@
   "k.words/shards/in"
  ],
  "inquire": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/in"
  ],
  "inquiry": [
@@ -29824,6 +30034,7 @@
   "k.words/shards/in"
  ],
  "insert": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/in"
  ],
  "inside": [
@@ -30096,6 +30307,9 @@
  "intimidation": [
   "k.words/shards/in"
  ],
+ "into": [
+  "k.actions/shards/verbs-change"
+ ],
  "intoxication": [
   "k.words/shards/in"
  ],
@@ -30143,6 +30357,9 @@
  ],
  "inventory": [
   "k.words/shards/in"
+ ],
+ "invert": [
+  "k.actions/shards/verbs-change"
  ],
  "invertebrate": [
   "k.objects/shards/noto-animal-marine-02"
@@ -31126,6 +31343,7 @@
   "k.geo/shards/asia"
  ],
  "join": [
+  "k.actions/shards/verbs-connect",
   "k.layouts/schema.sop",
   "k.words/shards/jo"
  ],
@@ -31741,6 +31959,7 @@
   "k.words/shards/ke"
  ],
  "keep": [
+  "k.actions/shards/verbs-save",
   "k.objects/shards/places-2",
   "k.objects/shards/scenery",
   "k.words/shards/ke"
@@ -32112,6 +32331,7 @@
   "k.words/shards/ki"
  ],
  "kind": [
+  "k.actions/shards/acts",
   "k.animals/schema.sop",
   "k.food/schema.sop",
   "k.words/schema.sop",
@@ -32814,6 +33034,7 @@
   "k.geo/shards/oceania"
  ],
  "label": [
+  "k.actions/shards/verbs-change",
   "k.layouts/shards/joins",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
@@ -33446,6 +33667,7 @@
   "k.words/shards/la"
  ],
  "lay": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/la",
   "k.words/shards/li"
  ],
@@ -34570,6 +34792,9 @@
   "k.units/shards/core",
   "k.words/shards/le"
  ],
+ "lengthen": [
+  "k.actions/shards/verbs-change"
+ ],
  "lenin": [
   "k.words/shards/le"
  ],
@@ -34907,6 +35132,7 @@
   "k.words/shards/li"
  ],
  "lift": [
+  "k.actions/shards/verbs-place",
   "k.objects/shards/mulberry-building-structure-01",
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-transport-air-02",
@@ -35110,6 +35336,9 @@
   "k.objects/shards/noto-office-02",
   "k.words/shards/li"
  ],
+ "line up": [
+  "k.actions/shards/verbs-place"
+ ],
  "line1": [
   "k.objects/shards/noto-music-01"
  ],
@@ -35159,9 +35388,13 @@
   "k.words/shards/li"
  ],
  "link": [
+  "k.actions/shards/verbs-connect",
   "k.objects/shards/noto-office-03",
   "k.objects/shards/noto-tool-03",
   "k.words/shards/li"
+ ],
+ "link up": [
+  "k.actions/shards/verbs-connect"
  ],
  "link1": [
   "k.objects/shards/noto-tool-03"
@@ -35256,6 +35489,7 @@
   "k.words/shards/li"
  ],
  "list": [
+  "k.actions/shards/verbs-ask",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-office-02",
   "k.words/shards/li"
@@ -35406,6 +35640,8 @@
   "k.words/shards/lm"
  ],
  "load": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-load",
   "k.words/shards/lo"
  ],
  "loading": [
@@ -35674,6 +35910,12 @@
  "look": [
   "k.words/shards/lo"
  ],
+ "look for": [
+  "k.actions/shards/verbs-ask"
+ ],
+ "look up": [
+  "k.actions/shards/verbs-ask"
+ ],
  "looking": [
   "k.words/shards/lo"
  ],
@@ -35861,6 +36103,7 @@
   "k.words/shards/lo"
  ],
  "lower": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/lo"
  ],
  "lower_band": [
@@ -36051,6 +36294,7 @@
   "k.words/shards/lu"
  ],
  "lump": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/lu"
  ],
  "luna": [
@@ -36396,6 +36640,9 @@
   "k.objects/shards/noto-place-map-01",
   "k.objects/shards/noto-tool-04"
  ],
+ "magnify": [
+  "k.actions/shards/verbs-change"
+ ],
  "magnifying": [
   "k.objects/shards/noto-light-video-02"
  ],
@@ -36463,6 +36710,7 @@
   "k.words/shards/ma"
  ],
  "mail": [
+  "k.actions/shards/verbs-send",
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-mail-02",
   "k.words/shards/ma"
@@ -36544,7 +36792,16 @@
   "k.words/shards/ma"
  ],
  "make": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-change",
+  "k.actions/shards/verbs-make",
   "k.words/shards/ma"
+ ],
+ "make a copy of": [
+  "k.actions/shards/verbs-copy"
+ ],
+ "make into": [
+  "k.actions/shards/verbs-change"
  ],
  "make-believe": [
   "k.words/shards/ma"
@@ -37105,12 +37362,17 @@
   "k.geo/shards/europe"
  ],
  "mark": [
+  "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-book-paper-02",
   "k.words/shards/ma"
  ],
  "marker": [
+  "k.actions/schema.sop",
   "k.objects/shards/noto-book-paper-02",
   "k.words/shards/ma"
+ ],
+ "markers": [
+  "k.actions/schema.sop"
  ],
  "market": [
   "k.objects/shards/noto-money-02",
@@ -37430,6 +37692,7 @@
   "k.words/shards/ma"
  ],
  "material": [
+  "k.actions/shards/acts",
   "k.commonsense/schema.sop",
   "k.words/shards/ma"
  ],
@@ -37686,6 +37949,7 @@
   "k.words/schema.sop"
  ],
  "means": [
+  "k.actions/shards/acts",
   "k.words/schema.sop",
   "k.words/shards/me"
  ],
@@ -37972,6 +38236,7 @@
   "k.objects/shards/places-2"
  ],
  "memorize": [
+  "k.actions/shards/verbs-save",
   "k.words/shards/me"
  ],
  "memory": [
@@ -38059,6 +38324,7 @@
   "k.words/shards/me"
  ],
  "merge": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/me"
  ],
  "merger": [
@@ -38125,6 +38391,7 @@
   "k.words/shards/me"
  ],
  "message": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/me"
  ],
  "messenger": [
@@ -39243,6 +39510,7 @@
   "k.words/shards/mo"
  ],
  "modify": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/mo"
  ],
  "module": [
@@ -40627,6 +40895,7 @@
   "k.body/shards/core"
  ],
  "move": [
+  "k.actions/shards/verbs-place",
   "k.objects/shards/noto-transport-ground-04",
   "k.words/shards/mo"
  ],
@@ -41139,6 +41408,7 @@
   "k.geo/shards/asia"
  ],
  "nail": [
+  "k.actions/shards/verbs-connect",
   "k.body/shards/core",
   "k.layouts/shards/joins",
   "k.objects/shards/mulberry-tools-workshop-02",
@@ -41184,6 +41454,9 @@
   "k.geo/shards/asia"
  ],
  "name": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-ask",
+  "k.actions/shards/verbs-change",
   "k.words/shards/na"
  ],
  "name_board": [
@@ -41297,6 +41570,7 @@
   "k.words/shards/na"
  ],
  "narrow": [
+  "k.actions/shards/verbs-change",
   "k.faces/shards/plain-eyes",
   "k.words/shards/na"
  ],
@@ -42714,6 +42988,7 @@
   "k.words/shards/nu"
  ],
  "number": [
+  "k.actions/shards/acts",
   "k.objects/shards/noto-game-01",
   "k.words/shards/nu"
  ],
@@ -43040,6 +43315,9 @@
  "odyssey": [
   "k.words/shards/od"
  ],
+ "of": [
+  "k.actions/shards/verbs-change"
+ ],
  "ofanto": [
   "k.geo/shards/europe"
  ],
@@ -43190,6 +43468,9 @@
  "old man": [
   "k.faces/shards/presets",
   "k.people/shards/kinds"
+ ],
+ "old value": [
+  "k.actions/shards/acts"
  ],
  "old woman": [
   "k.faces/shards/presets",
@@ -43380,6 +43661,8 @@
   "k.objects/shards/noto-drink-02"
  ],
  "open": [
+  "k.actions/shards/verbs-change",
+  "k.actions/shards/verbs-load",
   "k.faces/shards/plain-mouth",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-lock-01",
@@ -43472,6 +43755,9 @@
  ],
  "ops": [
   "k.words/shards/op"
+ ],
+ "opt": [
+  "k.actions/shards/verbs-pick"
  ],
  "optical": [
   "k.objects/shards/noto-computer-02"
@@ -43637,6 +43923,7 @@
   "k.words/shards/or"
  ],
  "organize": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/or"
  ],
  "organs": [
@@ -43754,6 +44041,9 @@
  "otgontenger": [
   "k.geo/shards/asia"
  ],
+ "other": [
+  "k.actions/shards/acts"
+ ],
  "oti": [
   "k.geo/shards/africa"
  ],
@@ -43815,6 +44105,9 @@
  ],
  "out": [
   "k.words/shards/ou"
+ ],
+ "out of": [
+  "k.actions/shards/verbs-make"
  ],
  "outbox": [
   "k.objects/shards/noto-mail-01"
@@ -43947,6 +44240,7 @@
   "k.objects/shards/home"
  ],
  "over": [
+  "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-place-other-01",
   "k.words/shards/ov"
@@ -44285,6 +44579,8 @@
   "k.words/shards/pa"
  ],
  "paint": [
+  "k.actions/shards/verbs-change",
+  "k.actions/shards/verbs-make",
   "k.objects/shards/mulberry-tools-workshop-02",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-p",
@@ -44328,6 +44624,7 @@
   "k.objects/shards/things"
  ],
  "pair": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/pa"
  ],
  "paisley": [
@@ -44818,6 +45115,7 @@
   "k.words/shards/pa"
  ],
  "part": [
+  "k.actions/shards/acts",
   "k.body/schema.sop",
   "k.objects/schema.sop",
   "k.words/schema.sop",
@@ -44860,6 +45158,7 @@
   "k.words/shards/pa"
  ],
  "parts": [
+  "k.actions/shards/acts",
   "k.body/schema.sop",
   "k.objects/schema.sop",
   "k.words/schema.sop",
@@ -44899,6 +45198,9 @@
  ],
  "pass": [
   "k.words/shards/pa"
+ ],
+ "pass on": [
+  "k.actions/shards/verbs-send"
  ],
  "passage": [
   "k.words/shards/pa"
@@ -46166,6 +46468,9 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-p"
  ],
+ "photocopy": [
+  "k.actions/shards/verbs-copy"
+ ],
  "photograph": [
   "k.words/shards/ph"
  ],
@@ -46188,6 +46493,12 @@
  ],
  "phou bia": [
   "k.geo/shards/asia"
+ ],
+ "phrasal verb": [
+  "k.actions/schema.sop"
+ ],
+ "phrasal verbs": [
+  "k.actions/schema.sop"
  ],
  "phrase": [
   "k.words/shards/ph"
@@ -46255,6 +46566,8 @@
   "k.objects/shards/stand-ins-wordnet"
  ],
  "pick": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/noto-tool-01",
   "k.scenes/shards/things-p",
@@ -46263,6 +46576,9 @@
  "pick and mix": [
   "k.objects/shards/mulberry-food-sweets-and-desserts-03",
   "k.scenes/shards/things-p"
+ ],
+ "pick out": [
+  "k.actions/shards/verbs-pick"
  ],
  "pick-up": [
   "k.objects/shards/noto-transport-ground-04"
@@ -46491,6 +46807,7 @@
   "k.geo/shards/south-america"
  ],
  "pile": [
+  "k.actions/shards/verbs-group",
   "k.layouts/shards/layouts",
   "k.words/shards/pi"
  ],
@@ -46573,6 +46890,7 @@
   "k.words/shards/pi"
  ],
  "pin": [
+  "k.actions/shards/verbs-connect",
   "k.objects/shards/mulberry-work-and-school-stationery-01",
   "k.objects/shards/noto-household-02",
   "k.objects/shards/noto-office-02",
@@ -47205,6 +47523,8 @@
   "k.scenes/shards/things-p"
  ],
  "place": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-place",
   "k.layouts/schema.sop",
   "k.objects/shards/noto-award-medal-01",
   "k.scenes/schema.sop",
@@ -47699,6 +48019,7 @@
   "k.words/shards/po"
  ],
  "point": [
+  "k.actions/shards/verbs-pick",
   "k.layouts/shards/joins",
   "k.objects/shards/more",
   "k.objects/shards/noto-tool-03",
@@ -48157,6 +48478,7 @@
   "k.words/shards/po"
  ],
  "position": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/po"
  ],
  "positive": [
@@ -48185,6 +48507,7 @@
   "k.words/shards/po"
  ],
  "post": [
+  "k.actions/shards/verbs-send",
   "k.objects/shards/mulberry-building-furniture-01",
   "k.objects/shards/mulberry-transport-road-03",
   "k.objects/shards/noto-mail-01",
@@ -48504,6 +48827,7 @@
   "k.words/shards/pr"
  ],
  "prefer": [
+  "k.actions/shards/verbs-pick",
   "k.words/shards/pr"
  ],
  "preference": [
@@ -48551,6 +48875,12 @@
  "prepare": [
   "k.words/shards/pr"
  ],
+ "preposition": [
+  "k.actions/schema.sop"
+ ],
+ "prepositions": [
+  "k.actions/schema.sop"
+ ],
  "preschool": [
   "k.words/shards/pr"
  ],
@@ -48581,6 +48911,7 @@
   "k.words/shards/pr"
  ],
  "preserve": [
+  "k.actions/shards/verbs-save",
   "k.words/shards/pr"
  ],
  "preserver": [
@@ -48848,6 +49179,7 @@
   "k.words/shards/pr"
  ],
  "produce": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/pr"
  ],
  "producer": [
@@ -49186,6 +49518,7 @@
   "k.words/shards/pu"
  ],
  "publish": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/pu"
  ],
  "publisher": [
@@ -49256,7 +49589,14 @@
   "k.words/shards/pu"
  ],
  "pull": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/pu"
+ ],
+ "pull apart": [
+  "k.actions/shards/verbs-take_apart"
+ ],
+ "pull up": [
+  "k.actions/shards/verbs-load"
  ],
  "pulling": [
   "k.words/shards/pu"
@@ -49452,6 +49792,7 @@
   "k.geo/shards/south-america"
  ],
  "push": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/pu"
  ],
  "pushing": [
@@ -49471,7 +49812,28 @@
   "k.words/shards/pu"
  ],
  "put": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/pu"
+ ],
+ "put back": [
+  "k.actions/shards/verbs-place"
+ ],
+ "put down": [
+  "k.actions/shards/verbs-place"
+ ],
+ "put in": [
+  "k.actions/shards/verbs-place"
+ ],
+ "put on": [
+  "k.actions/shards/verbs-make",
+  "k.actions/shards/verbs-place"
+ ],
+ "put together": [
+  "k.actions/shards/verbs-group",
+  "k.actions/shards/verbs-make"
+ ],
+ "put up": [
+  "k.actions/shards/verbs-make"
  ],
  "putin": [
   "k.words/shards/pu"
@@ -49687,10 +50049,14 @@
  "quench": [
   "k.objects/shards/noto-household-03"
  ],
+ "query": [
+  "k.actions/shards/verbs-ask"
+ ],
  "quest": [
   "k.words/shards/qu"
  ],
  "question": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/qu"
  ],
  "questioning": [
@@ -50036,6 +50402,7 @@
   "k.scenes/shards/scenes-other"
  ],
  "raise": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/ra"
  ],
  "raised": [
@@ -50162,6 +50529,7 @@
   "k.words/shards/ra"
  ],
  "rank": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/ra"
  ],
  "ranking": [
@@ -50372,6 +50740,7 @@
   "k.words/shards/re"
  ],
  "read": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/re"
  ],
  "reader": [
@@ -50543,6 +50912,7 @@
   "k.words/shards/re"
  ],
  "recipient": [
+  "k.actions/shards/acts",
   "k.words/shards/re"
  ],
  "recital": [
@@ -50572,6 +50942,12 @@
  "recollection": [
   "k.words/shards/re"
  ],
+ "recolor": [
+  "k.actions/shards/verbs-change"
+ ],
+ "recolour": [
+  "k.actions/shards/verbs-change"
+ ],
  "recommend": [
   "k.words/shards/re"
  ],
@@ -50597,6 +50973,7 @@
   "k.words/shards/re"
  ],
  "record": [
+  "k.actions/shards/verbs-save",
   "k.objects/shards/noto-light-video-01",
   "k.objects/shards/openmoji-healthcare-01",
   "k.objects/shards/things-2",
@@ -50613,6 +50990,7 @@
   "k.objects/shards/things-2"
  ],
  "recover": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/re"
  ],
  "recovery": [
@@ -50915,6 +51293,7 @@
   "k.words/shards/re"
  ],
  "relate": [
+  "k.actions/shards/verbs-connect",
   "k.words/shards/re"
  ],
  "relation": [
@@ -50983,7 +51362,11 @@
   "k.words/shards/re"
  ],
  "reload": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/re"
+ ],
+ "relocate": [
+  "k.actions/shards/verbs-place"
  ],
  "rely": [
   "k.words/shards/re"
@@ -51016,6 +51399,7 @@
   "k.words/shards/re"
  ],
  "remember": [
+  "k.actions/shards/verbs-save",
   "k.words/shards/re"
  ],
  "remembering": [
@@ -51051,10 +51435,15 @@
   "k.words/shards/re"
  ],
  "remove": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-remove",
   "k.words/shards/re"
  ],
  "renaissance": [
   "k.words/shards/re"
+ ],
+ "rename": [
+  "k.actions/shards/verbs-change"
  ],
  "render": [
   "k.words/shards/re"
@@ -51109,6 +51498,7 @@
   "k.words/shards/re"
  ],
  "repeat": [
+  "k.actions/shards/verbs-copy",
   "k.words/shards/re"
  ],
  "repeating": [
@@ -51124,9 +51514,11 @@
   "k.words/shards/re"
  ],
  "replace": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/re"
  ],
  "replacement": [
+  "k.actions/shards/acts",
   "k.words/shards/re"
  ],
  "replacing": [
@@ -51139,6 +51531,7 @@
   "k.words/shards/re"
  ],
  "replicate": [
+  "k.actions/shards/verbs-copy",
   "k.words/shards/re"
  ],
  "replied": [
@@ -51173,6 +51566,7 @@
   "k.words/shards/re"
  ],
  "reproduce": [
+  "k.actions/shards/verbs-copy",
   "k.words/shards/re"
  ],
  "reproduction": [
@@ -51555,6 +51949,9 @@
  "resistance": [
   "k.words/shards/re"
  ],
+ "resize": [
+  "k.actions/shards/verbs-change"
+ ],
  "resolution": [
   "k.words/shards/re"
  ],
@@ -51613,6 +52010,8 @@
   "k.words/shards/re"
  ],
  "restore": [
+  "k.actions/shards/verbs-load",
+  "k.actions/shards/verbs-undo",
   "k.words/shards/re"
  ],
  "restrain": [
@@ -51679,6 +52078,7 @@
   "k.words/shards/re"
  ],
  "retrieve": [
+  "k.actions/shards/verbs-load",
   "k.words/shards/re"
  ],
  "retro": [
@@ -51721,7 +52121,11 @@
   "k.words/shards/re"
  ],
  "reverse": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/re"
+ ],
+ "revert": [
+  "k.actions/shards/verbs-undo"
  ],
  "review": [
   "k.words/shards/re"
@@ -53207,10 +53611,12 @@
   "k.geo/shards/africa"
  ],
  "role": [
+  "k.actions/schema.sop",
   "k.people/schema.sop",
   "k.words/shards/ro"
  ],
  "roles": [
+  "k.actions/schema.sop",
   "k.people/schema.sop"
  ],
  "rolf": [
@@ -53226,6 +53632,9 @@
   "k.objects/shards/noto-household-03",
   "k.objects/shards/things",
   "k.words/shards/ro"
+ ],
+ "roll back": [
+  "k.actions/shards/verbs-undo"
  ],
  "roll of paper": [
   "k.objects/shards/noto-household-03",
@@ -53497,6 +53906,7 @@
   "k.scenes/shards/things-r"
  ],
  "rotate": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/ro"
  ],
  "rotation": [
@@ -53528,6 +53938,7 @@
   "k.words/shards/ro"
  ],
  "round": [
+  "k.actions/shards/verbs-change",
   "k.faces/shards/plain-ears",
   "k.faces/shards/plain-eyes",
   "k.faces/shards/plain-glasses",
@@ -53623,6 +54034,9 @@
  ],
  "rub": [
   "k.words/shards/ru"
+ ],
+ "rub out": [
+  "k.actions/shards/verbs-remove"
  ],
  "rubbed": [
   "k.words/shards/ru"
@@ -54773,6 +55187,8 @@
   "k.geo/shards/asia"
  ],
  "save": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-save",
   "k.geo/shards/africa",
   "k.objects/shards/noto-transport-water-01",
   "k.words/shards/sa"
@@ -54834,8 +55250,15 @@
   "k.animals/schema.sop"
  ],
  "scale": [
+  "k.actions/shards/verbs-change",
   "k.objects/shards/noto-tool-03",
   "k.words/shards/sc"
+ ],
+ "scale down": [
+  "k.actions/shards/verbs-change"
+ ],
+ "scale up": [
+  "k.actions/shards/verbs-change"
  ],
  "scale_beam": [
   "k.objects/shards/places-2"
@@ -54919,6 +55342,7 @@
   "k.words/shards/sc"
  ],
  "scatter": [
+  "k.actions/shards/verbs-place",
   "k.layouts/shards/layouts",
   "k.words/shards/sc"
  ],
@@ -55158,6 +55582,7 @@
   "k.words/shards/sc"
  ],
  "scrap": [
+  "k.actions/shards/verbs-remove",
   "k.words/shards/sc"
  ],
  "scrape": [
@@ -55374,6 +55799,7 @@
   "k.words/shards/se"
  ],
  "search": [
+  "k.actions/shards/verbs-ask",
   "k.objects/shards/noto-light-video-02",
   "k.words/shards/se"
  ],
@@ -55637,6 +56063,7 @@
   "k.geo/shards/africa"
  ],
  "select": [
+  "k.actions/shards/verbs-pick",
   "k.words/shards/se"
  ],
  "selection": [
@@ -55733,8 +56160,19 @@
   "k.words/shards/se"
  ],
  "send": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-send",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/se"
+ ],
+ "send off": [
+  "k.actions/shards/verbs-send"
+ ],
+ "send out": [
+  "k.actions/shards/verbs-send"
+ ],
+ "send over": [
+  "k.actions/shards/verbs-send"
  ],
  "sending": [
   "k.words/shards/se"
@@ -55811,6 +56249,7 @@
   "k.time/shards/calendar"
  ],
  "separate": [
+  "k.actions/shards/verbs-take_apart",
   "k.words/shards/se"
  ],
  "separation": [
@@ -55950,8 +56389,16 @@
   "k.words/shards/se"
  ],
  "set": [
+  "k.actions/shards/verbs-change",
+  "k.actions/shards/verbs-place",
   "k.objects/shards/noto-office-03",
   "k.words/shards/se"
+ ],
+ "set down": [
+  "k.actions/shards/verbs-place"
+ ],
+ "set up": [
+  "k.actions/shards/verbs-make"
  ],
  "setback": [
   "k.words/shards/se"
@@ -56007,6 +56454,7 @@
   "k.words/shards/se"
  ],
  "sever": [
+  "k.actions/shards/verbs-take_apart",
   "k.words/shards/se"
  ],
  "severance": [
@@ -56227,6 +56675,7 @@
   "k.words/shards/sh"
  ],
  "share": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/sh"
  ],
  "sharing": [
@@ -56251,6 +56700,7 @@
   "k.words/shards/sh"
  ],
  "sharpen": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sh"
  ],
  "sharper": [
@@ -56446,6 +56896,7 @@
   "k.words/shards/sh"
  ],
  "shift": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/sh"
  ],
  "shifting": [
@@ -56712,6 +57163,7 @@
   "k.words/shards/sh"
  ],
  "shorten": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sh"
  ],
  "shorts": [
@@ -56792,6 +57244,7 @@
   "k.words/shards/sh"
  ],
  "show": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sh"
  ],
  "showcase": [
@@ -56871,6 +57324,7 @@
   "k.objects/shards/places-2"
  ],
  "shrink": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sh"
  ],
  "shrinking": [
@@ -57272,6 +57726,9 @@
   "k.objects/shards/mulberry-building-furniture-04",
   "k.scenes/shards/things-s"
  ],
+ "single out": [
+  "k.actions/shards/verbs-pick"
+ ],
  "singles": [
   "k.words/shards/si"
  ],
@@ -57465,6 +57922,7 @@
   "k.geo/shards/europe"
  ],
  "sketch": [
+  "k.actions/shards/verbs-make",
   "k.words/shards/sk"
  ],
  "skewer": [
@@ -57780,6 +58238,7 @@
   "k.words/shards/sl"
  ],
  "slice": [
+  "k.actions/shards/verbs-take_apart",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
   "k.objects/shards/mulberry-food-breads-and-baking-02",
@@ -57802,6 +58261,7 @@
   "k.words/shards/sl"
  ],
  "slide": [
+  "k.actions/shards/verbs-place",
   "k.objects/shards/mulberry-leisure-playground-01",
   "k.objects/shards/noto-musical-instrument-01",
   "k.objects/shards/noto-office-03",
@@ -58091,6 +58551,7 @@
   "k.words/shards/sm"
  ],
  "smooth": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sm"
  ],
  "smoothie": [
@@ -58642,6 +59103,7 @@
   "k.words/shards/so"
  ],
  "sort": [
+  "k.actions/shards/verbs-group",
   "k.words/shards/so"
  ],
  "sorting": [
@@ -58721,6 +59183,7 @@
   "k.words/shards/so"
  ],
  "source": [
+  "k.actions/shards/acts",
   "k.words/shards/so"
  ],
  "sous": [
@@ -59166,6 +59629,7 @@
   "k.words/shards/sp"
  ],
  "spin": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sp"
  ],
  "spinach": [
@@ -59256,9 +59720,13 @@
   "k.words/shards/sp"
  ],
  "split": [
+  "k.actions/shards/verbs-take_apart",
   "k.geo/shards/europe",
   "k.objects/shards/noto-tool-01",
   "k.words/shards/sp"
+ ],
+ "split up": [
+  "k.actions/shards/verbs-take_apart"
  ],
  "splitting": [
   "k.words/shards/sp"
@@ -59478,6 +59946,7 @@
   "k.words/shards/sp"
  ],
  "spread out": [
+  "k.actions/shards/verbs-place",
   "k.layouts/shards/layouts"
  ],
  "spreading": [
@@ -59748,6 +60217,7 @@
   "k.words/shards/st"
  ],
  "stack": [
+  "k.actions/shards/verbs-group",
   "k.layouts/shards/layouts",
   "k.words/shards/st"
  ],
@@ -60067,6 +60537,7 @@
   "k.words/shards/st"
  ],
  "state": [
+  "k.actions/shards/acts",
   "k.words/shards/st"
  ],
  "state of eritrea": [
@@ -60354,6 +60825,7 @@
   "k.words/shards/st"
  ],
  "stick": [
+  "k.actions/shards/verbs-place",
   "k.objects/shards/mulberry-food-sweets-and-desserts-01",
   "k.objects/shards/mulberry-food-sweets-and-desserts-02",
   "k.objects/shards/mulberry-healthcare-grooming-items-01",
@@ -60565,6 +61037,7 @@
   "k.words/shards/st"
  ],
  "store": [
+  "k.actions/shards/verbs-save",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-place-building-03",
   "k.objects/shards/words-wordnet",
@@ -60617,6 +61090,7 @@
   "k.objects/shards/noto-office-03"
  ],
  "straighten": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/st"
  ],
  "strain": [
@@ -60787,6 +61261,7 @@
   "k.words/shards/st"
  ],
  "stretch": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/st"
  ],
  "stretcher": [
@@ -61094,6 +61569,7 @@
   "k.words/shards/su"
  ],
  "substitute": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/su"
  ],
  "subtitle": [
@@ -61750,6 +62226,7 @@
   "k.words/shards/sw"
  ],
  "swap": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/sw"
  ],
  "swapped": [
@@ -61957,6 +62434,7 @@
   "k.scenes/shards/things-s"
  ],
  "switch": [
+  "k.actions/shards/verbs-change",
   "k.objects/shards/openmoji-technology-01",
   "k.scenes/shards/things-s",
   "k.words/shards/sw"
@@ -62366,7 +62844,24 @@
   "k.geo/shards/europe"
  ],
  "take": [
+  "k.actions/shards/verbs-pick",
   "k.words/shards/ta"
+ ],
+ "take apart": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-take_apart"
+ ],
+ "take away": [
+  "k.actions/shards/verbs-remove"
+ ],
+ "take back": [
+  "k.actions/shards/verbs-undo"
+ ],
+ "take off": [
+  "k.actions/shards/verbs-remove"
+ ],
+ "take out": [
+  "k.actions/shards/verbs-remove"
  ],
  "takeaway burger": [
   "k.objects/shards/mulberry-food-meals-and-snacks-07",
@@ -62600,6 +63095,7 @@
   "k.geo/shards/south-america"
  ],
  "tape": [
+  "k.actions/shards/verbs-connect",
   "k.objects/shards/home",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/things",
@@ -62657,6 +63153,7 @@
   "k.geo/shards/asia"
  ],
  "target": [
+  "k.actions/shards/acts",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-game-01",
   "k.words/shards/ta"
@@ -63040,6 +63537,7 @@
   "k.words/shards/te"
  ],
  "tell": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/te"
  ],
  "tell atlas": [
@@ -63463,6 +63961,9 @@
  "thick arched": [
   "k.faces/shards/plain-eyebrows"
  ],
+ "thicken": [
+  "k.actions/shards/verbs-change"
+ ],
  "thief": [
   "k.words/shards/th"
  ],
@@ -63484,6 +63985,7 @@
   "k.words/shards/th"
  ],
  "thing": [
+  "k.actions/shards/acts",
   "k.commonsense/schema.sop",
   "k.words/shards/th"
  ],
@@ -63670,6 +64172,12 @@
  "throw": [
   "k.words/shards/th"
  ],
+ "throw away": [
+  "k.actions/shards/verbs-remove"
+ ],
+ "throw out": [
+  "k.actions/shards/verbs-remove"
+ ],
  "thrown": [
   "k.words/shards/th"
  ],
@@ -63774,6 +64282,7 @@
   "k.geo/shards/europe"
  ],
  "tick": [
+  "k.actions/shards/verbs-pick",
   "k.words/shards/ti"
  ],
  "tick_12": [
@@ -63820,6 +64329,7 @@
   "k.words/shards/ti"
  ],
  "tie": [
+  "k.actions/shards/verbs-connect",
   "k.faces/shards/plain-shoulders",
   "k.layouts/shards/joins",
   "k.objects/shards/food-2",
@@ -63884,6 +64394,7 @@
   "k.words/shards/ti"
  ],
  "tilt": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/ti"
  ],
  "tilted": [
@@ -64021,6 +64532,9 @@
  "tinning": [
   "k.words/shards/ti"
  ],
+ "tint": [
+  "k.actions/shards/verbs-change"
+ ],
  "tip": [
   "k.objects/shards/food-2",
   "k.objects/shards/mulberry-sport-accessories-03",
@@ -64117,6 +64631,13 @@
  ],
  "titus": [
   "k.words/shards/ti"
+ ],
+ "to": [
+  "k.actions/shards/verbs-ask",
+  "k.actions/shards/verbs-change",
+  "k.actions/shards/verbs-make",
+  "k.actions/shards/verbs-pick",
+  "k.actions/shards/verbs-undo"
  ],
  "toad": [
   "k.animals/shards/reptiles-and-amphibians",
@@ -64393,6 +64914,7 @@
   "k.words/shards/ta"
  ],
  "tool": [
+  "k.actions/shards/acts",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-game-01",
   "k.objects/shards/noto-light-video-02",
@@ -64713,6 +65235,7 @@
   "k.objects/shards/noto-clothing-05"
  ],
  "topic": [
+  "k.actions/shards/acts",
   "k.words/shards/to"
  ],
  "topped": [
@@ -65152,6 +65675,7 @@
   "k.words/shards/tr"
  ],
  "transfer": [
+  "k.actions/shards/verbs-place",
   "k.words/shards/tr"
  ],
  "transferred": [
@@ -65161,6 +65685,7 @@
   "k.words/shards/tr"
  ],
  "transform": [
+  "k.actions/shards/verbs-change",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/tr"
  ],
@@ -65192,6 +65717,7 @@
   "k.words/shards/tr"
  ],
  "transmit": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/tr"
  ],
  "transmitted": [
@@ -65996,9 +66522,16 @@
   "k.words/shards/tu"
  ],
  "turn": [
+  "k.actions/shards/verbs-change",
   "k.objects/shards/noto-transport-ground-06",
   "k.units/shards/core",
   "k.words/shards/tu"
+ ],
+ "turn into": [
+  "k.actions/shards/verbs-change"
+ ],
+ "turn over": [
+  "k.actions/shards/verbs-change"
  ],
  "turner": [
   "k.words/shards/tu"
@@ -66391,6 +66924,9 @@
  "unconscious": [
   "k.words/shards/un"
  ],
+ "uncouple": [
+  "k.actions/shards/verbs-take_apart"
+ ],
  "uncover": [
   "k.words/shards/un"
  ],
@@ -66485,6 +67021,8 @@
   "k.words/shards/un"
  ],
  "undo": [
+  "k.actions/shards/acts",
+  "k.actions/shards/verbs-undo",
   "k.words/shards/un"
  ],
  "undone": [
@@ -66502,6 +67040,9 @@
  "unemployment": [
   "k.words/shards/un"
  ],
+ "unfasten": [
+  "k.actions/shards/verbs-take_apart"
+ ],
  "unfit": [
   "k.words/shards/un"
  ],
@@ -66517,11 +67058,17 @@
  "unfortunate": [
   "k.words/shards/un"
  ],
+ "ungroup": [
+  "k.actions/shards/verbs-take_apart"
+ ],
  "unhappiness": [
   "k.words/shards/un"
  ],
  "unhappy": [
   "k.feelings/shards/feelings"
+ ],
+ "unhook": [
+  "k.actions/shards/verbs-take_apart"
  ],
  "unicorn": [
   "k.objects/shards/noto-animal-mammal-03",
@@ -66604,6 +67151,9 @@
  "unleash": [
   "k.words/shards/un"
  ],
+ "unlink": [
+  "k.actions/shards/verbs-take_apart"
+ ],
  "unload": [
   "k.words/shards/un"
  ],
@@ -66640,6 +67190,7 @@
   "k.words/shards/un"
  ],
  "untie": [
+  "k.actions/shards/verbs-take_apart",
   "k.words/shards/un"
  ],
  "untouchable": [
@@ -66675,6 +67226,7 @@
   "k.words/shards/up"
  ],
  "update": [
+  "k.actions/shards/verbs-change",
   "k.words/shards/up"
  ],
  "upgrade": [
@@ -66690,6 +67242,7 @@
   "k.words/shards/up"
  ],
  "upload": [
+  "k.actions/shards/verbs-send",
   "k.words/shards/up"
  ],
  "upped": [
@@ -67017,6 +67570,7 @@
   "k.objects/shards/noto-money-01"
  ],
  "value": [
+  "k.actions/shards/acts",
   "k.words/shards/va"
  ],
  "values": [
@@ -67259,6 +67813,7 @@
   "k.objects/shards/stand-ins-wordnet"
  ],
  "verb": [
+  "k.actions/schema.sop",
   "k.words/shards/aa",
   "k.words/shards/ab",
   "k.words/shards/ac",
@@ -67449,6 +68004,9 @@
   "k.words/shards/ze",
   "k.words/shards/zi",
   "k.words/shards/zo"
+ ],
+ "verbs": [
+  "k.actions/schema.sop"
  ],
  "verde": [
   "k.geo/shards/north-america",
@@ -69357,6 +69915,9 @@
   "k.faces/shards/plain-mouth",
   "k.faces/shards/plain-nose"
  ],
+ "widen": [
+  "k.actions/shards/verbs-change"
+ ],
  "widow": [
   "k.words/shards/wi"
  ],
@@ -69760,6 +70321,12 @@
  "wipe": [
   "k.words/shards/wi"
  ],
+ "wipe off": [
+  "k.actions/shards/verbs-remove"
+ ],
+ "wipe out": [
+  "k.actions/shards/verbs-remove"
+ ],
  "wire": [
   "k.faces/shards/plain-earrings",
   "k.layouts/shards/anchors",
@@ -69826,6 +70393,10 @@
   "k.objects/shards/mulberry-celebration-item-04",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-w"
+ ],
+ "with": [
+  "k.actions/shards/verbs-ask",
+  "k.actions/shards/verbs-change"
  ],
  "withdraw": [
   "k.words/shards/wi"
@@ -69943,6 +70514,7 @@
   "k.words/shards/wo"
  ],
  "wonder": [
+  "k.actions/shards/verbs-ask",
   "k.words/shards/wo"
  ],
  "wonderland": [
@@ -70237,7 +70809,11 @@
   "k.words/shards/wr"
  ],
  "write": [
+  "k.actions/shards/verbs-save",
   "k.words/shards/wr"
+ ],
+ "write down": [
+  "k.actions/shards/verbs-save"
  ],
  "writer": [
   "k.words/shards/wr"

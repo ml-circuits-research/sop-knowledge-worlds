@@ -91,8 +91,8 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Origin: this repository.
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
-- Shard terms: CC0-1.0
-- Used by: `k.animals` (5 shards), `k.body` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (3 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards)
+- Shard terms: CC0-1.0, WordNet-3.0
+- Used by: `k.actions` (13 shards), `k.animals` (5 shards), `k.body` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (3 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards)
 
 ## mulberry-fa94a93
 
@@ -137,4 +137,4 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: the WordNet licence (permissive: use, copy, modify and distribute for any purpose, with the copyright notice kept); written `WordNet-3.0` in shard headers and the catalog, the name of the licence text.
 - Attribution: WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved. THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. The full licence text is `LICENSE` in the archive and at https://wordnet.princeton.edu/license-and-commercial-use . Which words are kept was chosen with the FrequencyWords list (see `sources/frequency-words/SOURCE.md`).
 - Shard terms: WordNet-3.0
-- Used by: `k.objects` (2 shards), `k.words` (318 shards)
+- Used by: `k.actions` (14 shards), `k.objects` (2 shards), `k.words` (318 shards)

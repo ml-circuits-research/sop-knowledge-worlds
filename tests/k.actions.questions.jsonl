@@ -1,0 +1,10 @@
+{"id":"ac-01","ask":"which act does erase mean","query":{"type":"k.actions.verb","where":{"text":"erase"},"seek":"act"},"expect":{"status":"supported","value":"remove"}}
+{"id":"ac-02","ask":"which acts can put on mean","query":{"type":"k.actions.verb","where":{"text":"\"put on\""},"seek":"act","mode":"list"},"expect":{"status":"supported","values":["make","place"]}}
+{"id":"ac-03","ask":"what does enlarge change","query":{"type":"k.actions.verb","where":{"text":"enlarge"},"seek":"attribute"},"expect":{"status":"supported","value":"size"}}
+{"id":"ac-04","ask":"which way does shrink change the size","query":{"type":"k.actions.verb","where":{"text":"shrink"},"seek":"value"},"expect":{"status":"supported","value":"smaller"}}
+{"id":"ac-05","ask":"after replace, what does with mark","query":{"type":"k.actions.marking","where":{"verb":"replace","marker":"with"},"seek":"role"},"expect":{"status":"supported","value":"replacement"}}
+{"id":"ac-06","ask":"what is the opposite of make","query":{"type":"k.actions.act","where":{"name":"make"},"seek":"opposite"},"expect":{"status":"supported","value":"remove"}}
+{"id":"ac-07","ask":"which roles does the act remove take","query":{"type":"k.actions.act","where":{"name":"remove"},"seek":"role","mode":"list"},"expect":{"status":"supported","values":["thing","source"]}}
+{"id":"ac-08","ask":"which words mark what a thing is removed from","query":{"type":"k.actions.role","where":{"act":"remove","name":"source"},"seek":"marker","mode":"list"},"expect":{"status":"supported","values":["from","\"out of\"","off"]}}
+{"id":"ac-09","ask":"in put the hat on the man, what is the man","query":{"type":"k.actions.verb","where":{"text":"\"put on\"","act":"place"},"seek":"after_particle"},"expect":{"status":"supported","value":"place"}}
+{"id":"ac-10","ask":"what does WordNet say rotate means here","query":{"type":"k.actions.verb","where":{"text":"rotate"},"seek":"gloss"},"expect":{"status":"supported","value":"\"cause to turn on an axis or center\""}}

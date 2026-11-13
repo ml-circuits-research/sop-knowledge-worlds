@@ -1,0 +1,292 @@
+act	verb	wordnet_senses	object	complement	attribute	value	separable	after_particle	marks
+make	make	3	kind						
+make	create	1 2	kind						
+make	draw	6	kind						
+make	sketch	1	kind						
+make	paint	3	kind						
+make	build	1	kind						
+make	construct	1	kind						
+make	produce	2	kind						
+make	generate	1	kind						
+make	put up	3	kind				yes		
+make	add	1	kind						to>place
+make	assemble	1	kind						from>material; out of>material
+make	put together	1	kind				yes		from>material; out of>material
+make	set up	2	kind				yes		from>material; out of>material
+make	put on	2	kind						
+remove	remove	1 3	thing						
+remove	delete	1 2	thing						
+remove	erase	1 2	thing						
+remove	take away	2	thing				yes		
+remove	take out	3	thing				yes		
+remove	get rid of	1	thing						
+remove	rub out	1	thing				yes		
+remove	wipe out	4	thing				yes		
+remove	wipe off	2	thing				yes		
+remove	clear	5	thing						
+remove	discard	1	thing						
+remove	eliminate	1	thing						
+remove	throw away	1	thing				yes		
+remove	throw out	2	thing				yes		
+remove	destroy	1	thing						
+remove	do away with	1	thing						
+remove	scrap	1	thing						
+remove	cancel	4	thing						
+remove	cut out	1	thing				yes		
+remove	cross out	1	thing				yes		from>source
+remove	take off	2	thing				yes	source	from>source
+change	change	1	thing	value					
+change	modify	3	thing	value					
+change	alter	1	thing	value					
+change	adjust	1	thing	value					
+change	correct	1	thing	value					
+change	edit	1	thing	value					
+change	update	2	thing	value					
+change	make	2	thing	value					
+change	set	5	thing	value					
+change	turn	16 4	thing	value					
+change	convert	2	thing						into>value; to>value
+change	transform	2 3	thing						into>value; to>value
+change	turn into		thing				yes	value	
+change	change into		thing				yes	value	
+change	make into		thing				yes	value	
+change	replace	1 4	thing						with>replacement; by>replacement
+change	substitute	1	replacement						for>thing
+change	swap	1	thing						for>replacement; with>replacement
+change	switch	2	thing						for>replacement; with>replacement
+change	exchange	2	thing						for>replacement; with>replacement
+change	color	1	thing	value	colour				with>value
+change	colour	5	thing	value	colour				with>value
+change	paint	2	thing	value	colour				with>value
+change	dye	1	thing	value	colour				with>value
+change	tint	1	thing	value	colour				with>value
+change	recolour		thing	value	colour				with>value
+change	recolor		thing	value	colour				with>value
+change	colour in	1	thing	value	colour		yes		with>value
+change	color in	1	thing	value	colour		yes		with>value
+change	fill		thing	value	colour				with>value
+change	resize	1	thing		size				to>value; by>amount
+change	scale		thing		size				to>value; by>amount
+change	enlarge	1	thing		size	larger			to>value; by>amount
+change	magnify	3	thing		size	larger			to>value; by>amount
+change	blow up	2	thing		size	larger	yes		to>value; by>amount
+change	expand	3	thing		size	larger			to>value; by>amount
+change	scale up		thing		size	larger	yes		to>value; by>amount
+change	shrink	3	thing		size	smaller			to>value; by>amount
+change	scale down		thing		size	smaller	yes		to>value; by>amount
+change	widen	3	thing		width	wider			by>amount
+change	narrow	1	thing		width	narrower			by>amount
+change	lengthen	1	thing		length	longer			by>amount
+change	stretch	3	thing		length	longer			by>amount
+change	shorten	3	thing		length	shorter			by>amount
+change	thicken	1	thing		thickness	thicker			
+change	darken	3	thing		colour	darker			
+change	rotate	4	thing		orientation				by>amount; to>value
+change	spin	3	thing		orientation				by>amount; to>value
+change	tilt	1	thing		orientation				by>amount; to>value
+change	flip	8	thing		orientation				
+change	flip over	1	thing		orientation		yes		
+change	turn over	8	thing		orientation		yes		
+change	invert	3	thing		orientation				
+change	reverse	2	thing		orientation				
+change	rename	1	thing	value	name				to>value; as>value
+change	name	1	thing	value	name				to>value; as>value
+change	call	1	thing	value	name				to>value; as>value
+change	label	1	thing	value	name				to>value; as>value
+change	hide	1	thing		visible	no			
+change	show	4	thing		visible	yes			
+change	open	1	thing		state	open			
+change	close	1	thing		state	closed			
+change	straighten	2	thing		shape	straight			
+change	bend	3	thing		shape	bent			
+change	round	2	thing		shape	round			
+change	sharpen	1	thing		shape	sharp			
+change	smooth	1	thing		shape	smooth			
+change	increase	2	attribute			more			of>thing; by>amount; to>value
+change	decrease	2	attribute			less			of>thing; by>amount; to>value
+place	place	1	thing						
+place	put	1	thing						
+place	set	1	thing						
+place	lay	1 2	thing						
+place	position	1	thing						
+place	move	2	thing						
+place	shift	2	thing						
+place	relocate	2	thing						
+place	transfer	2	thing						
+place	bring	1	thing						
+place	carry	1	thing						
+place	drag	1	thing						
+place	slide	3	thing						
+place	push	1	thing						
+place	pull	1	thing						
+place	stick	1	thing						
+place	drop	1	thing						
+place	put down	1	thing				yes		
+place	set down	3	thing				yes		
+place	lift	1	thing						
+place	raise	2	thing						
+place	lower	1	thing						
+place	hang	2	thing						
+place	center	3	thing						
+place	centre	1	thing						
+place	align	1	thing						
+place	line up	4	thing				yes		
+place	put back	1	thing				yes		
+place	put on	1	thing				yes	place	
+place	put in	1	thing				yes	place	
+place	insert	2	thing						
+place	scatter	3	thing						
+place	spread out	3	thing				yes		
+connect	connect	1	thing						
+connect	link	2	thing						
+connect	link up	2	thing				yes		
+connect	join	2	thing						
+connect	attach	1	thing						
+connect	fasten	1	thing						
+connect	couple	2	thing						
+connect	hook up	1	thing				yes		
+connect	bridge	1	thing						
+connect	relate	1	thing						
+connect	tie	1 4	thing						
+connect	bind	3	thing						
+connect	glue	1	thing						
+connect	hook	1	thing						
+connect	pin	2	thing						
+connect	clip	3	thing						
+connect	nail	1	thing						
+connect	tape	1	thing						
+group	group	1	thing						
+group	gather	1	thing						
+group	collect	1	thing						
+group	combine	2	thing						
+group	merge	3	thing						
+group	cluster	2	thing						
+group	bundle	1	thing						
+group	bunch	1	thing						
+group	lump	1	thing						
+group	pair	4	thing						
+group	stack	2	thing						
+group	pile	1	thing						
+group	put together		thing				yes		
+group	sort	2	thing						
+group	classify	1	thing						
+group	categorize	1	thing						
+group	organize	4	thing						
+group	arrange	1	thing						
+group	rank	2	thing						
+take apart	take apart	1	thing				yes		
+take apart	break up	8	thing				yes		
+take apart	break apart	1	thing				yes		
+take apart	dismantle	2	thing						
+take apart	disassemble	1	thing						
+take apart	separate	2 4	thing						
+take apart	split	1	thing						
+take apart	split up	2	thing				yes		
+take apart	divide	1	thing						
+take apart	cut up	1	thing				yes		
+take apart	slice	3	thing						
+take apart	cut	1	thing						
+take apart	pull apart		thing				yes		
+take apart	ungroup		thing						
+take apart	detach	1	thing						
+take apart	disconnect	2	thing						
+take apart	uncouple	1	thing						
+take apart	untie	1	thing						
+take apart	unfasten	1	thing						
+take apart	unhook	1	thing						
+take apart	sever	2	thing						
+take apart	unlink		thing						
+take apart	cut off	3	thing				yes	source	
+pick	pick	1	thing						
+pick	select	1	thing						
+pick	choose	1	thing						
+pick	take	10	thing						
+pick	pick out	1	thing				yes		
+pick	single out	1	thing				yes		
+pick	mark	2	thing						
+pick	highlight	1	thing						
+pick	tick	4	thing						
+pick	point	1							at>thing; to>thing
+pick	prefer	2	thing						over>other
+pick	opt	1							for>thing
+ask	ask	2 4	topic						
+ask	inquire	1	topic						
+ask	enquire	1	topic						
+ask	wonder	1	topic						
+ask	query	1	topic						
+ask	question	3	topic						
+ask	tell	2	topic						
+ask	explain	1	topic						
+ask	describe	1	topic						
+ask	find out	1	topic						
+ask	look up	1	topic				yes		
+ask	list	1	thing						
+ask	count	1	thing						
+ask	name	2	thing						
+ask	identify	2	thing						
+ask	find	3	thing						
+ask	look for	1	thing						
+ask	search	1	thing						
+ask	compare	1	thing						with>other; to>other
+copy	copy	3 4	thing						
+copy	duplicate	3	thing						
+copy	clone	1	thing						
+copy	replicate	2	thing						
+copy	reproduce	1	thing						
+copy	repeat	2	thing						
+copy	photocopy	1	thing						
+copy	imitate	3	thing						
+copy	make a copy of		thing						
+send	send	2 3	thing						
+send	send out	1	thing				yes		
+send	send off	1	thing				yes		
+send	mail	2	thing						
+send	post	11	thing						
+send	e-mail	1	thing						
+send	email	1	thing						
+send	forward	1	thing						
+send	deliver	2	thing						
+send	transmit	4	thing						
+send	dispatch	1	thing						
+send	pass on	1	thing				yes		
+send	hand	1	thing						
+send	hand over	1	thing				yes		
+send	give	3	thing						
+send	message	2	thing						
+send	publish	2	thing						
+send	upload	1	thing						
+send	export	2	thing						
+send	share		thing						
+send	send over		thing				yes		
+undo	undo	1	thing						
+undo	restore	1	thing						
+undo	take back		thing				yes		
+undo	roll back		thing				yes		
+undo	revert	1							to>state
+undo	go back								to>state
+save	save	11	thing						
+save	write	6	thing						
+save	store	1 2	thing						
+save	keep	3	thing						
+save	record	1	thing						
+save	write down	1	thing				yes		
+save	preserve	2	thing						
+save	remember	2	thing						
+save	back up	4	thing				yes		
+save	archive	1	thing						
+save	memorize	1	thing						
+save	hold on to		thing						
+load	load	3	thing						
+load	open	11	thing						
+load	retrieve	1	thing						
+load	recover	1	thing						
+load	import	2	thing						
+load	download	1	thing						
+load	read	4	thing						
+load	bring back	1	thing				yes		
+load	get back	1	thing				yes		
+load	fetch	1	thing						
+load	restore	3	thing						
+load	reload	1	thing						
+load	pull up		thing				yes		
+load	bring up		thing				yes		
