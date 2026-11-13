@@ -374,3 +374,39 @@ the newer capitals (Gitega, Astana) over Natural Earth, keep the rest; (c) make 
 let a duration be told in several units (identity `name` + `unit`): both change published schemas.
 Blocking: no. Meanwhile: (a); the demo keeps nothing of these (ours answers).
 
+
+## Q34 (Round 10 item 4, second worker, 2026-11-13)
+Question: which of these shared modules should be made, and where do they live (here, or in the library)?
+Context: the library's reuse detector exists (`tools/reuse.mjs` of soplang-words-lib at `01d29cd`) and was run on
+the 22 schemas of `docs/worlds`: 16 candidates (12 type shapes, 1 rule shape, 3 word overlaps); every world has
+reuse 0 (no world uses a type of another: the joins are by name only). Its findings that hold up on reading, and
+what reading the schemas adds (the detector compares types, not single slots or enums):
+1. **Drawing primitives** (detector 1 and 6): `k.faces.point` is `k.objects.point` key for key;
+   `k.faces.part` repeats ten keys of `k.objects.part` (shape, x, y, w, h, z, colour, rgb, pointing, opens).
+   Proposal: one module `k.drawing` (part, point, the shape enum), imported by both.
+2. **A box in a frame** (detector 8, 9, 10): x, y, w, h from 0 to 100 are declared nine times (`k.objects.part`,
+   `.skeleton`, `k.faces.slot`, `.part`, `k.layouts.slot`, `.anchor`, `k.wearables.place`). Needs a way to
+   share four slots between types: SOP Lang has no slot group that a type can take in; a library question.
+3. **"Never the exact number and the approximate one"** (detector 2): the same `core.deny` rule in `k.body`,
+   `k.space`, `k.values` (and stated in words in AGENTS.md rule 10 for every world). Proposal: one rule
+   written once over a pair of keys; needs a rule over key names, a library question.
+4. **The eleven basic colours**: the same enum of eleven values is written out in eight slots of seven worlds
+   (`k.objects.part.colour`, `k.faces.part.colour`, `k.attributes.thing.colour`, `.drawn.drawn_colour`,
+   `k.food.food.colour`, `k.space.body.colour`, `k.values.colour.basic`, `k.colours.colour.family`).
+   Proposal: declared once in `k.values` and referred to (`kind=ref to=k.values.colour` or a shared enum).
+5. **Provenance and joins as keys**: `named` (enum model) is declared 20 times in 14 worlds; `drawing` (the
+   join to `k.objects`) 11 times in 8 worlds, each as a plain atom that only tests check. Proposal: `drawing`
+   becomes `kind=ref to=k.objects.object` where the host loads `k.objects`; `named` a core key like
+   `core.source` (a library question).
+6. **Kind-of chains**: `is_a` in `k.words.sense`, `k.commonsense.thing`, `k.people.kind`, `k.shapes.shape`
+   and `from` in `k.parts.inherited`: five chains, each followed by its own host code or test. Proposal: one
+   `is_a` relation with one "follows upwards" rule in a shared module.
+7. **What a thing can do**: `can` and `cannot` in `k.animals`, `k.attributes.thing`, `k.commonsense.thing`
+   with the same "never both" rule in one of them. **Typical things of a value**: `thing` (many) in
+   `k.colours.colour` and `k.shapes.shape`. **Name, about**: nine types.
+Detector candidates that are chance (same number of keys, nothing shared): 3, 4, 5 (`k.actions.similar`,
+`k.objects.stand_in`, `k.units.quantity`: a name and one other key), 7, 11, 12, 13.
+Options: (a) do 1, 4 and 6 here now (they need nothing new from the library; 1 and 4 change published schemas of
+both workers), ask the library for 2, 3 and 5; (b) wait for the library's `std.schema` format and do all in one
+pass; (c) leave as is: the joins by name work and `k.attributes.same` says which names are one thing.
+Blocking: no. Meanwhile: (c); nothing is refactored.

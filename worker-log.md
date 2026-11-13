@@ -2600,3 +2600,20 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   as pushed at 4e02e97, and the tool now writes only from the commit the page cites (`6b63b2ba`) unless `--force`
   is given. Nothing wrong was pushed. The equality test is skipped while the copy is at another commit.
 - After that: catalog 22 worlds, 902 shards, vocab 23,217 words; npm test 2,680 pass, 6 skipped, 0 fail.
+
+## Round 10, item 4 (2026-11-13, second worker): reuse inside this repository (proposal only)
+
+- The library's detector exists: `tools/reuse.mjs` of soplang-words-lib at `01d29cd`, run as
+  `node tools/reuse.mjs --top 25 docs/worlds` on the 22 schemas (not on the shards). **16 candidates**: 12 type
+  shapes, 1 rule shape, 3 word overlaps; reuse per world is 0 everywhere (no world uses a type of another).
+- Held up on reading: drawing primitives (`k.faces.point` = `k.objects.point`, score 1.00; `k.faces.part` ~
+  `k.objects.part`, 0.66); the box x, y, w, h (three candidates; nine declarations); the rule "never the exact
+  number and the approximate one" in three worlds (0.89). Chance: seven candidates that share only the number
+  of keys. Added by reading, which the detector does not look for (it compares whole types): the enum of eleven
+  colours written out in eight slots; `named` 20 times and `drawing` 11 times; five kind-of chains;
+  `can` / `cannot` in three worlds; `thing` lists in two.
+- **Proposal: Q34**, seven shared shapes with what each needs (three need something from the library: a group
+  of slots a type can take in, a rule over key names, `named` as a core key). Nothing refactored.
+- **Looked at:** the detector's table in full; the 22 schemas by grep of the slot declarations, not line by
+  line. **Not looked at:** reuse between shards (same facts in two worlds): `k.attributes.same` and the first
+  worker's test "no key for the same thing in two worlds" cover that side.
