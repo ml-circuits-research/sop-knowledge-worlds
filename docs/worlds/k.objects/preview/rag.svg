@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>rag</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="12,42 32,28 54,36 78,26 90,48 80,72 60,66 44,80 22,70 8,58" fill="grey" stroke="#333" stroke-width="0.8"><title>cloth</title></polygon>
+  <polyline points="32,28 40,52 22,70" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold_1</title></polyline>
+  <polyline points="54,36 58,54 80,72" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold_2</title></polyline>
+  <rect x="62" y="40" width="12" height="12" fill="red" stroke="#333" stroke-width="0.8"><title>patch</title></rect>
+  <ellipse cx="29" cy="49.5" rx="5" ry="3.5" fill="brown" stroke="#333" stroke-width="0.8"><title>stain_1</title></ellipse>
+  <ellipse cx="50" cy="65" rx="4" ry="3" fill="brown" stroke="#333" stroke-width="0.8"><title>stain_2</title></ellipse>
+  <polyline points="8,58 3,62" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fray_1</title></polyline>
+  <polyline points="44,80 42,88" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fray_2</title></polyline>
+  <polyline points="90,48 96,46" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fray_3</title></polyline>
+</svg>

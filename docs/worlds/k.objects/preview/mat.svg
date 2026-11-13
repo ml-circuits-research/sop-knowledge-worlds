@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>mat</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="20" y="28" width="76" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>door_sill</title></rect>
+  <polygon points="8,66 28,38 92,38 72,66" fill="brown" stroke="#333" stroke-width="0.8"><title>mat</title></polygon>
+  <polyline points="16,62 32,42 84,42 68,62 16,62" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>border</title></polyline>
+  <polyline points="34,60 46,44" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stripe_1</title></polyline>
+  <polyline points="50,60 62,44" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stripe_2</title></polyline>
+  <ellipse cx="39" cy="74.5" rx="9" ry="4.5" fill="red" stroke="#333" stroke-width="0.8"><title>left_shoe</title></ellipse>
+  <ellipse cx="61" cy="74.5" rx="9" ry="4.5" fill="red" stroke="#333" stroke-width="0.8"><title>right_shoe</title></ellipse>
+</svg>

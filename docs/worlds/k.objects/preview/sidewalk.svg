@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>sidewalk</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="6" width="92" height="34" fill="red" stroke="#333" stroke-width="0.8"><title>wall</title></rect>
+  <rect x="12" y="14" width="30" height="22" fill="blue" stroke="#333" stroke-width="0.8"><title>shop_window</title></rect>
+  <rect x="60" y="12" width="16" height="28" fill="green" stroke="#333" stroke-width="0.8"><title>door</title></rect>
+  <rect x="4" y="40" width="92" height="26" fill="white" stroke="#333" stroke-width="0.8"><title>sidewalk</title></rect>
+  <rect x="4" y="72" width="92" height="22" fill="black" stroke="#333" stroke-width="0.8"><title>road</title></rect>
+  <polyline points="27,40 22,66" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_1</title></polyline>
+  <polyline points="50,40 50,66" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_2</title></polyline>
+  <polyline points="73,40 78,66" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_3</title></polyline>
+  <polyline points="4,52 96,52" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>joint_4</title></polyline>
+  <rect x="4" y="66" width="92" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>kerb</title></rect>
+  <polyline points="14,84 40,84" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>road_mark</title></polyline>
+  <rect x="86" y="22" width="2" height="40" fill="black" stroke="#333" stroke-width="0.8"><title>lamp_post</title></rect>
+  <ellipse cx="87" cy="18.5" rx="4.5" ry="4.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>lamp</title></ellipse>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>handkerchief</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="50,8 92,50 50,92 8,50" fill="white" stroke="#333" stroke-width="0.8"><title>cloth</title></polygon>
+  <polyline points="50,16 84,50 50,84 16,50 50,16" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>border</title></polyline>
+  <polyline points="50,8 50,92" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold_1</title></polyline>
+  <polyline points="8,50 92,50" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold_2</title></polyline>
+  <ellipse cx="50" cy="70" rx="4" ry="4" fill="pink" stroke="#333" stroke-width="0.8"><title>flower</title></ellipse>
+  <ellipse cx="58" cy="74" rx="4" ry="2" fill="green" stroke="#333" stroke-width="0.8"><title>leaf</title></ellipse>
+  <ellipse cx="50" cy="70" rx="1.5" ry="1.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>flower_centre</title></ellipse>
+</svg>

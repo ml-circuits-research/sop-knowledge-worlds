@@ -1199,3 +1199,33 @@ them; said here.
   29,403. **k.objects: 2,078 objects** (195 hand-written), 312 shards, 300,114 wires, 36,271,493 bytes. Catalog: 11
   worlds, 740 shards, 343,622 wires, 44,311,108 bytes, vocab 18,955 words; 0 errors, 0 warnings. npm test 2,322
   pass, 0 fail.
+
+## R5.3 batch 4 (2026-11-13): the last 25 of the 100; `not-drawable.tsv`; 2,103 objects
+
+- **Which** (next in list order, drawable in the sense kept): convent, rag, monastery, kitten, nightclub, mat,
+  handkerchief, syrup, asteroid, coop, calf, courthouse, crib, muffin, ketchup, skate, maze, sculpture, manor,
+  disc, cradle, sidewalk, leash, raft, monument. Shards: `places-2` (+8), `things-2` (+12), `food-2` (+3),
+  `nature-2` (+2).
+- **Passed over** (ranks 494 to 602): scooter (the sense kept is a motorboat), sewer, hull (of a seed), stitch, rib,
+  insect (a general word), vanilla (the plant), cuff, doorstep, pike (a highway), gravy, marker, gem (the sense kept
+  is "art highly prized"; `gem` is a word of the drawing `jewel`), colt, airline (a hose), gutter, jewellery,
+  capsule, reef, shredder, bulb.
+- **Not drawable** (`sources/coverage/not-drawable.tsv`, read by `tools/coverage.mjs`; they leave the list and are
+  named at the end of `MISSING.md` with the reason): laser, bark, moss, soy, vent. Five words, only those reached
+  while drawing; the list of common things is filled up to 1,500 again from the frequency list (five words entered
+  at its end: they were not part of the reading of R4.2 beyond what `not-things.tsv` already holds).
+- **Looked at:** all 25 previews on one contact sheet (160 px, name underneath). One fix before it (skate: a
+  relation that the boxes did not bear out), none after. Verdict with the name: all recognisable; **weakest without
+  it: rag (a grey patch), leash (a red line with two loops), handkerchief (a white diamond with a border), mat,
+  sidewalk (a street scene), syrup.**
+- One word dropped because an object has that name: "ice skate". New links by rule: molasses → syrup, precipice →
+  cliff, sweatpants → trousers (stand-ins), cabaret = nightclub, hanky = handkerchief, labyrinth = maze
+  (synonyms); refused: tombstone → monument (the drawing is an obelisk). `not-links.tsv` has 73 rows.
+- **The 100 of R5.3:** 100 new objects in four batches (25 each), plus pole, hole, lane and valley redrawn. Two of the
+  100 draw the sense kept under another name (`"river bank"`, `"artillery shell"`); 98 are name matches, each with
+  a row in `sense-check.tsv` (right: hand-written for the sense kept). Previews looked at: 104 (4 sheets), 6
+  redrawn after the look (river bank, pillow twice, dough, canyon, peg).
+- Numbers: `things-2` 1,136 wires / 146,864 bytes, `places-2` 498 / 70,890, `land-2` 148 / 19,363, `food-2` 398 /
+  52,350, `nature-2` 277 / 36,762. **k.objects: 2,103 objects** (220 hand-written), 312 shards, 300,793 wires,
+  36,361,883 bytes. Catalog: 11 worlds, 740 shards, 344,301 wires, 44,401,498 bytes, vocab 19,118 words; 0 errors,
+  0 warnings. npm test 2,347 pass, 0 fail.

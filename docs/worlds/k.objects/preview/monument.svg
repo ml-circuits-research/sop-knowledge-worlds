@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>monument</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="90" width="92" height="5" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <rect x="22" y="84" width="56" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>lower_step</title></rect>
+  <rect x="30" y="78" width="40" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>upper_step</title></rect>
+  <polygon points="45,14 55,14 60,78 40,78" fill="grey" stroke="#333" stroke-width="0.8"><title>obelisk</title></polygon>
+  <polygon points="50,4 55,14 45,14" fill="grey" stroke="#333" stroke-width="0.8"><title>tip</title></polygon>
+  <rect x="44" y="56" width="12" height="14" fill="yellow" stroke="#333" stroke-width="0.8"><title>plaque</title></rect>
+  <polyline points="50,70 56,72 58,78 56,84 50,86 44,84 42,78 44,72 50,70" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wreath</title></polyline>
+  <ellipse cx="50" cy="85" rx="2" ry="2" fill="red" stroke="#333" stroke-width="0.8"><title>ribbon</title></ellipse>
+</svg>

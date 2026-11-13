@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>asteroid</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="4,20 22,34" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>trail_1</title></polyline>
+  <polyline points="2,34 18,44" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>trail_2</title></polyline>
+  <polyline points="12,10 28,24" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>trail_3</title></polyline>
+  <ellipse cx="88" cy="14" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>star_1</title></ellipse>
+  <ellipse cx="12" cy="82" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>star_2</title></ellipse>
+  <ellipse cx="89.5" cy="87.5" rx="1.5" ry="1.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>star_3</title></ellipse>
+  <polygon points="20,42 32,22 56,16 78,28 86,52 74,76 48,84 26,72" fill="grey" stroke="#333" stroke-width="0.8"><title>rock</title></polygon>
+  <ellipse cx="44" cy="38" rx="8" ry="6" fill="black" stroke="#333" stroke-width="0.8"><title>crater_1</title></ellipse>
+  <ellipse cx="65" cy="53" rx="7" ry="5" fill="black" stroke="#333" stroke-width="0.8"><title>crater_2</title></ellipse>
+  <ellipse cx="43" cy="64" rx="5" ry="4" fill="black" stroke="#333" stroke-width="0.8"><title>crater_3</title></ellipse>
+  <ellipse cx="67.5" cy="33" rx="3.5" ry="3" fill="black" stroke="#333" stroke-width="0.8"><title>crater_4</title></ellipse>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>courthouse</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="6" y="88" width="88" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>lower_step</title></rect>
+  <rect x="12" y="82" width="76" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>upper_step</title></rect>
+  <rect x="16" y="42" width="68" height="40" fill="white" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <rect x="13" y="36" width="74" height="7" fill="white" stroke="#333" stroke-width="0.8"><title>beam</title></rect>
+  <polygon points="50,14 87,36 13,36" fill="white" stroke="#333" stroke-width="0.8"><title>pediment</title></polygon>
+  <rect x="20" y="43" width="5" height="39" fill="grey" stroke="#333" stroke-width="0.8"><title>column_1</title></rect>
+  <rect x="31" y="43" width="5" height="39" fill="grey" stroke="#333" stroke-width="0.8"><title>column_2</title></rect>
+  <rect x="64" y="43" width="5" height="39" fill="grey" stroke="#333" stroke-width="0.8"><title>column_3</title></rect>
+  <rect x="75" y="43" width="5" height="39" fill="grey" stroke="#333" stroke-width="0.8"><title>column_4</title></rect>
+  <rect x="42" y="56" width="16" height="26" fill="brown" stroke="#333" stroke-width="0.8"><title>door</title></rect>
+  <polyline points="50,14 50,2" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>flagpole</title></polyline>
+  <polyline points="50,20 50,33" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>scale_post</title></polyline>
+  <polyline points="40,24 60,24" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>scale_beam</title></polyline>
+  <path d="M36 27 A4 4 0 0 0 44 27" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_pan</title></path>
+  <path d="M56 27 A4 4 0 0 0 64 27" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_pan</title></path>
+  <rect x="50" y="2" width="12" height="7" fill="red" stroke="#333" stroke-width="0.8"><title>flag</title></rect>
+</svg>
