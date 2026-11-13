@@ -101,3 +101,29 @@ The 30 previews were checked by eye: all are recognisable (weakest: plane, dog's
   `tools/import/conceptnet.mjs` and `tools/import/quickdraw.mjs` with a small fixture test each, so that a machine with an
   open network only has to download and run them. Do not fake the data.
 - Report as in Round 1.
+
+## Reviewer 2026-11-13 08:35 — licence (owner) and R2.6: thousands of drawable objects
+
+**Licence (owner: the most permissive one the sources allow).** `LICENSE` is added: MIT for code, CC0-1.0 for schemas and
+hand-written facts, and each imported shard keeps its source's licence. When a fact is available from two sources, import
+it from the more permissive one. Q2 is closed.
+
+**R2.6 `k.objects` in bulk from Noto Emoji (pilot of 200, then all).** The owner wants thousands of common objects with a
+decent shape. Hand-writing gives 30 a round, so shapes must be imported.
+- **Source:** `googlefonts/noto-emoji` on GitHub, the SVG files (check the licence of the SVG folder; record it. If Twemoji,
+  CC BY 4.0, converts better, compare both on 20 objects and choose). Names from Unicode CLDR English short names
+  (`unicode-org/cldr-json` on GitHub, Unicode licence).
+- **Keep only things:** animals, plants, food, vehicles, buildings, tools, clothes, furniture, household and nature
+  objects. Drop faces, hands, people, flags, symbols, letters. Expect 1,200 to 1,800 objects.
+- **Conversion** (`tools/import/noto-emoji.mjs`, deterministic): each SVG element becomes one part. Circles, ellipses and
+  rectangles stay primitives. A path is flattened to a polygon and simplified (Douglas–Peucker) to at most 40 points;
+  holes and gradients are dropped; the fill colour maps to the nearest name of a colour list declared in the schema, and the
+  exact value is kept in a second key `rgb` (a plain string). At most 16 parts per object: drop the smallest ones beyond that.
+  Coordinates scale to the 0–100 frame. Parts are named `part1…partN` in draw order; no invented part names.
+- **Do not overwrite** a hand-written object of the same name: the hand-written one (named parts) wins; the imported one is
+  stored as `k.objects.object name=<name> variant=noto`.
+- **Shards:** one shard per 5 to 8 objects, grouped by CLDR category, inside the size gate. `vocab.json` maps each name and
+  each CLDR keyword to its shard.
+- **Pilot first:** 200 objects, previews as contact sheets (`docs/worlds/k.objects/preview/noto-*.png` are not needed; write
+  the SVG previews and look at a montage yourself). Report: how many are recognisable at 160 px, wires and bytes per
+  object, load time of one shard. Commit the pilot; then, if at least 85% are recognisable, run all and commit.
