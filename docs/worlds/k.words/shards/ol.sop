@@ -1,0 +1,17 @@
+# k.words/shards/ol: noun and verb senses of the words from "old" to "olympus" (first letters "ol").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.old.noun.1 k.words.sense word=old pos=noun n=1 gloss="past times (especially in the phrase `in days of old')" is_a=past core.source="wordnet 3.1"
+@k.words.olive.noun.1 k.words.sense word=olive pos=noun n=1 gloss="small ovoid fruit of the European olive tree; important food and source of oil" is_a=fruit part_of=olive core.source="wordnet 3.1"
+@k.words.olive.noun.2 k.words.sense word=olive pos=noun n=2 gloss="evergreen tree cultivated in the Mediterranean region since antiquity and now elsewhere; has edible shiny black fruits" synonym="European olive tree" synonym="Olea europaea" is_a="olive tree" core.source="wordnet 3.1"
+@k.words.olive.noun.3 k.words.sense word=olive pos=noun n=3 gloss="hard yellow often variegated wood of an olive tree; used in cabinetwork" is_a=wood core.source="wordnet 3.1"
+@k.words.oliver.noun.1 k.words.sense word=Oliver pos=noun n=1 gloss="United States jazz musician who influenced the style of Louis Armstrong (1885-1938)" synonym="Joseph Oliver" synonym="King Oliver" instance_of="jazz musician" core.source="wordnet 3.1"
+@k.words.oliver.spelling.Oliver core.word text=oliver means=Oliver of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.olivier.noun.1 k.words.sense word=Olivier pos=noun n=1 gloss="English actor best know for his Shakespearean roles (1907-1989)" synonym="Laurence Olivier" synonym="Sir Laurence Kerr Olivier" synonym="Baron Olivier of Birghton" instance_of=actor core.source="wordnet 3.1"
+@k.words.olivier.spelling.Olivier core.word text=olivier means=Olivier of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.olympics.noun.1 k.words.sense word=Olympics pos=noun n=1 gloss="the modern revival of the ancient games held once every 4 years in a selected country" synonym="Olympic Games" synonym=Olympiad is_a="athletic contest" core.source="wordnet 3.1"
+@k.words.olympics.spelling.Olympics core.word text=olympics means=Olympics of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.olympus.noun.1 k.words.sense word=Olympus pos=noun n=1 gloss="a mountain peak in northeast Greece near the Aegean coast; believed by ancient Greeks to be the dwelling place of the gods (9,570 feet high)" synonym="Mount Olympus" synonym="Mt. Olympus" synonym=Olimbos instance_of="mountain peak" part_of=Greece core.source="wordnet 3.1"
+@k.words.olympus.spelling.Olympus core.word text=olympus means=Olympus of=k.words.sense.word core.source="wordnet 3.1"

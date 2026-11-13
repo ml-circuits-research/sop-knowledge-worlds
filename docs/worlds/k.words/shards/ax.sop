@@ -1,0 +1,17 @@
+# k.words/shards/ax: noun and verb senses of the words from "ax" to "axis" (first letters "ax").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.ax.noun.1 k.words.sense word=ax pos=noun n=1 gloss="an edge tool with a heavy bladed head mounted across a handle" synonym=axe is_a="edge tool" core.source="wordnet 3.1"
+@k.words.ax.verb.1 k.words.sense word=ax pos=verb n=1 gloss="chop or split with an ax" synonym=axe is_a=chop core.source="wordnet 3.1"
+@k.words.ax.verb.2 k.words.sense word=ax pos=verb n=2 gloss="terminate" synonym=axe is_a=end core.source="wordnet 3.1"
+@k.words.ax.forms core.word text=axes means=ax of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.axe.noun.1 k.words.sense word=axe pos=noun n=1 gloss="an edge tool with a heavy bladed head mounted across a handle" synonym=ax is_a="edge tool" core.source="wordnet 3.1"
+@k.words.axe.verb.1 k.words.sense word=axe pos=verb n=1 gloss="chop or split with an ax" synonym=ax is_a=chop core.source="wordnet 3.1"
+@k.words.axe.verb.2 k.words.sense word=axe pos=verb n=2 gloss="terminate" synonym=ax is_a=end core.source="wordnet 3.1"
+@k.words.axis.noun.1 k.words.sense word=axis pos=noun n=1 gloss="a straight line through a body or figure that satisfies certain conditions" is_a=line core.source="wordnet 3.1"
+@k.words.axis.noun.2 k.words.sense word=axis pos=noun n=2 gloss="the main stem or central part about which plant organs or plant parts such as branches are arranged" is_a=stalk core.source="wordnet 3.1"
+@k.words.axis.noun.3 k.words.sense word=Axis pos=noun n=3 gloss="in World War II the alliance of Germany and Italy in 1936 which later included Japan and other nations" is_a=alliance core.source="wordnet 3.1"
+@k.words.axis.spelling.Axis core.word text=axis means=Axis of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.axis.forms core.word text=axes means=axis of=k.words.sense.word core.source="wordnet 3.1"

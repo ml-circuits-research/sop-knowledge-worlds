@@ -1,0 +1,17 @@
+# k.words/shards/ur: noun and verb senses of the words from "uranium" to "urn" (first letters "ur").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.uranium.noun.1 k.words.sense word=uranium pos=noun n=1 gloss="a heavy toxic silvery-white radioactive metallic element; occurs in many isotopes; used for nuclear fuels and nuclear weapons" synonym=U synonym="atomic number 92" is_a="metallic element" core.source="wordnet 3.1"
+@k.words.urge.noun.1 k.words.sense word=urge pos=noun n=1 gloss="an instinctive motive" synonym=impulse is_a=motivation core.source="wordnet 3.1"
+@k.words.urge.noun.2 k.words.sense word=urge pos=noun n=2 gloss="a strong restless desire" synonym=itch is_a=desire core.source="wordnet 3.1"
+@k.words.urge.verb.1 k.words.sense word=urge pos=verb n=1 gloss="force or impel in an indicated direction" synonym="urge on" synonym=press synonym=exhort is_a=rede core.source="wordnet 3.1"
+@k.words.urge.verb.2 k.words.sense word=urge pos=verb n=2 gloss="push for something" synonym=recommend synonym=advocate is_a=propose core.source="wordnet 3.1"
+@k.words.urge.verb.3 k.words.sense word=urge pos=verb n=3 gloss="spur on or encourage especially by cheers and shouts" synonym=cheer synonym="root on" synonym=inspire synonym=barrack synonym="urge on" synonym=exhort synonym="pep up" is_a=encourage core.source="wordnet 3.1"
+@k.words.urgency.noun.1 k.words.sense word=urgency pos=noun n=1 gloss="the state of being urgent; an earnest and insistent necessity" is_a=necessity core.source="wordnet 3.1"
+@k.words.urgency.noun.2 k.words.sense word=urgency pos=noun n=2 gloss="pressing importance requiring speedy action" is_a=importance core.source="wordnet 3.1"
+@k.words.urgency.noun.3 k.words.sense word=urgency pos=noun n=3 gloss="an urgent situation calling for prompt action" is_a=situation core.source="wordnet 3.1"
+@k.words.urine.noun.1 k.words.sense word=urine pos=noun n=1 gloss="liquid excretory product" synonym=piss synonym=pee synonym=piddle synonym=weewee synonym=water is_a="body waste" core.source="wordnet 3.1"
+@k.words.urn.noun.1 k.words.sense word=urn pos=noun n=1 gloss="a large vase that usually has a pedestal or feet" is_a=vase core.source="wordnet 3.1"
+@k.words.urn.noun.2 k.words.sense word=urn pos=noun n=2 gloss="a large pot for making coffee or tea" is_a=pot core.source="wordnet 3.1"

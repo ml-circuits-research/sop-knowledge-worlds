@@ -1,0 +1,14 @@
+# k.words/shards/zi: noun and verb senses of the words from "zip" to "zipper" (first letters "zi").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.zip.noun.1 k.words.sense word=zip pos=noun n=1 gloss="a quantity of no importance" synonym=nothing synonym=nil synonym=nix synonym=nada synonym=null synonym=aught synonym=cipher synonym=cypher synonym="goose egg" synonym=naught synonym=zero synonym=zilch synonym=zippo is_a="relative quantity" core.source="wordnet 3.1"
+@k.words.zip.noun.2 k.words.sense word=ZIP pos=noun n=2 gloss="a code of letters and digits added to a postal address to aid in the sorting of mail" synonym="ZIP code" synonym=postcode synonym="postal code" is_a=code part_of=address core.source="wordnet 3.1"
+@k.words.zip.noun.3 k.words.sense word=zip pos=noun n=3 gloss="forceful exertion" synonym=energy synonym=vigor synonym=vigour is_a=force core.source="wordnet 3.1"
+@k.words.zip.verb.1 k.words.sense word=zip pos=verb n=1 gloss="close with a zipper" synonym="zip up" synonym=zipper is_a=fasten core.source="wordnet 3.1"
+@k.words.zip.verb.2 k.words.sense word=zip pos=verb n=2 gloss="move very fast" synonym="travel rapidly" synonym=speed synonym=hurry is_a=travel core.source="wordnet 3.1"
+@k.words.zip.spelling.ZIP core.word text=zip means=ZIP of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.zip.forms core.word text=zipped text=zipping means=zip of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.zipper.noun.1 k.words.sense word=zipper pos=noun n=1 gloss="a fastener for locking together two toothed edges by means of a sliding tab" synonym="slide fastener" synonym=zip synonym="zip fastener" is_a=fastener part_of=cardigan part_of=dress part_of=trousers part_of=skirt core.source="wordnet 3.1"
+@k.words.zipper.verb.1 k.words.sense word=zipper pos=verb n=1 gloss="close with a zipper" synonym="zip up" synonym=zip is_a=fasten core.source="wordnet 3.1"

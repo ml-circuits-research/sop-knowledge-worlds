@@ -1,0 +1,16 @@
+# k.words/shards/rh: noun and verb senses of the words from "rhino" to "rhythm" (first letters "rh").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.rhino.noun.1 k.words.sense word=rhino pos=noun n=1 gloss="massive powerful herbivorous odd-toed ungulate of southeast Asia and Africa having very thick skin and one or two horns on the snout" synonym=rhinoceros is_a="odd-toed ungulate" core.source="wordnet 3.1"
+@k.words.rhodes.noun.1 k.words.sense word=Rhodes pos=noun n=1 gloss="British colonial financier and statesman in South Africa; made a fortune in gold and diamond mining; helped colonize the territory now known as Zimbabwe; he endowed annual fellowships for British Commonwealth and United States students to study at Oxford University (1853-1902)" synonym="Cecil Rhodes" synonym="Cecil J. Rhodes" synonym="Cecil John Rhodes" instance_of=financier instance_of=colonizer core.source="wordnet 3.1"
+@k.words.rhodes.noun.2 k.words.sense word=Rhodes pos=noun n=2 gloss="a Greek island in the southeast Aegean Sea 10 miles off the Turkish coast; the largest of the Dodecanese; it was colonized before 1000 BC by Dorians from Argos; site of the Colossus of Rhodes" synonym=Rodhos instance_of="Aegean island" part_of=Dodecanese part_of=Greece core.source="wordnet 3.1"
+@k.words.rhodes.spelling.Rhodes core.word text=rhodes means=Rhodes of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.rhyme.noun.1 k.words.sense word=rhyme pos=noun n=1 gloss="correspondence in the sounds of two or more lines (especially final sounds)" synonym=rime is_a=versification part_of=poem core.source="wordnet 3.1"
+@k.words.rhyme.noun.2 k.words.sense word=rhyme pos=noun n=2 gloss="a piece of poetry" synonym=verse is_a=poem core.source="wordnet 3.1"
+@k.words.rhyme.verb.1 k.words.sense word=rhyme pos=verb n=1 gloss="compose rhymes" synonym=rime is_a="create verbally" core.source="wordnet 3.1"
+@k.words.rhyme.verb.2 k.words.sense word=rhyme pos=verb n=2 gloss="be similar in sound, especially with respect to the last syllable" synonym=rime is_a=match core.source="wordnet 3.1"
+@k.words.rhythm.noun.1 k.words.sense word=rhythm pos=noun n=1 gloss="the basic rhythmic unit in a piece of music" synonym=beat synonym="musical rhythm" is_a="musical time" core.source="wordnet 3.1"
+@k.words.rhythm.noun.2 k.words.sense word=rhythm pos=noun n=2 gloss="recurring at regular intervals" synonym="regular recurrence" is_a=cyclicity core.source="wordnet 3.1"
+@k.words.rhythm.noun.3 k.words.sense word=rhythm pos=noun n=3 gloss="an interval during which a recurring sequence of events occurs" synonym=cycle synonym=round is_a="time interval" core.source="wordnet 3.1"

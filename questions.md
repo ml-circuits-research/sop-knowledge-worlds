@@ -73,3 +73,30 @@ Context: tried; merging is order-dependent in sopworld 0.14.0: a `k.objects.obje
 `k.commonsense.thing name=house`. So the two types are joined by the name value instead, and `k.objects` imports
 `k.commonsense` so that the common sense comes with it. (Perhaps worth a note to the sopworld reviewer.)
 Blocking: no. Meanwhile: no `extends`.
+
+## Q9 (task R2.2, 2026-11-13)
+Question: which terms do the `k.words` shards carry: the WordNet licence alone, or CC BY-SA 4.0 because the words were
+chosen with a CC BY-SA list?
+Context: the only clearly licensed 20,000-word frequency lists on GitHub are CC BY-SA (FrequencyWords from
+OpenSubtitles; wordfreq's data; Wiktionary lists). The Google-derived lists (`first20hours/google-10000-english`) have
+unclear terms and were not used. The list is used as a filter only: no line and no count of it is in a shard; every
+fact is WordNet's. Option a: WordNet licence, with the list named in SOURCE.md and LICENSES.md. Option b: label the
+shards CC-BY-SA-4.0 (WordNet's terms allow that).
+Blocking: no. Meanwhile: (a), `# license: WordNet-3.0`, the list attributed in `sources/frequency-words/SOURCE.md`
+and in the wordnet entry of LICENSES.md.
+
+## Q10 (task R2.2, 2026-11-13)
+Question: where should the words for a world's types and keys ("synonym", "meaning", "capital") point in `vocab.json`?
+Context: build-catalog sends a schema `core.word` for a type or key to every shard of the world. That was right for 1
+to 7 shards; for `k.words` (318 shards) the word "synonym" would tell a host to fetch all of them. Options: (a) such
+words map to the world's schema path instead of shards (the host then knows the world is relevant and picks shards by
+the other words of the message); (b) a separate `"worlds"` section in vocab.json; (c) no schema words in large worlds.
+Blocking: no. Meanwhile: (c) for `k.words` only: its schema has no `core.word` wires.
+
+## Q11 (task R2.2, 2026-11-13)
+Question: is a string the right way to write a value of several words (`is_a="domestic animal"`), next to atoms for
+single words (`is_a=canine`)?
+Context: the slots say `kind=atom kind=string`. A query must then quote: `where: { is_a: '"domestic animal"' }`, and
+answers come back as the quoted token. The other option, WordNet's own `domestic_animal`, would be an underscore
+notation inside a value.
+Blocking: no. Meanwhile: strings for several words.

@@ -1,0 +1,9 @@
+# k.words/shards/aq: noun and verb senses of the words from "aqua" to "aquarium" (first letters "aq").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.aqua.noun.1 k.words.sense word=aqua pos=noun n=1 gloss="a shade of blue tinged with green" synonym="greenish blue" synonym=aquamarine synonym=turquoise synonym="cobalt blue" synonym="peacock blue" is_a=blue core.source="wordnet 3.1"
+@k.words.aqua.forms core.word text=aquae means=aqua of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.aquarium.noun.1 k.words.sense word=aquarium pos=noun n=1 gloss="a tank or pool or bowl filled with water for keeping live fish and underwater animals" synonym="fish tank" synonym="marine museum" is_a=vivarium is_a=tank core.source="wordnet 3.1"
+@k.words.aquarium.forms core.word text=aquaria means=aquarium of=k.words.sense.word core.source="wordnet 3.1"

@@ -1,0 +1,8 @@
+# k.words/shards/ry: noun and verb senses of the words from "rye" to "rye" (first letters "ry").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.rye.noun.1 k.words.sense word=rye pos=noun n=1 gloss="the seed of the cereal grass" is_a=grain part_of=rye core.source="wordnet 3.1"
+@k.words.rye.noun.2 k.words.sense word=rye pos=noun n=2 gloss="hardy annual cereal grass widely cultivated in northern Europe where its grain is the chief ingredient of black bread and in North America for forage and soil improvement" synonym="Secale cereale" is_a=cereal core.source="wordnet 3.1"
+@k.words.rye.noun.3 k.words.sense word=rye pos=noun n=3 gloss="whiskey distilled from rye or rye and malt" synonym="rye whiskey" synonym="rye whisky" is_a=whiskey core.source="wordnet 3.1"

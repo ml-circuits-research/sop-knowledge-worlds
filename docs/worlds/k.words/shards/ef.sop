@@ -1,0 +1,16 @@
+# k.words/shards/ef: noun and verb senses of the words from "effect" to "effort" (first letters "ef").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.effect.noun.1 k.words.sense word=effect pos=noun n=1 gloss="a phenomenon that follows and is caused by some previous phenomenon" synonym=consequence synonym=outcome synonym=result synonym=event synonym=issue synonym=upshot is_a=phenomenon core.source="wordnet 3.1"
+@k.words.effect.noun.2 k.words.sense word=effect pos=noun n=2 gloss="an outward appearance" synonym=impression is_a=appearance core.source="wordnet 3.1"
+@k.words.effect.noun.3 k.words.sense word=effect pos=noun n=3 gloss="an impression (especially one that is artificial or contrived)" is_a=impression core.source="wordnet 3.1"
+@k.words.effect.verb.1 k.words.sense word=effect pos=verb n=1 gloss="produce" synonym=effectuate synonym="set up" is_a=cause core.source="wordnet 3.1"
+@k.words.effect.verb.2 k.words.sense word=effect pos=verb n=2 gloss="act so as to bring into existence" is_a=act core.source="wordnet 3.1"
+@k.words.effects.noun.1 k.words.sense word=effects pos=noun n=1 gloss="property of a personal character that is portable but not used in business" synonym="personal effects" is_a="personal property" core.source="wordnet 3.1"
+@k.words.efficiency.noun.1 k.words.sense word=efficiency pos=noun n=1 gloss="the ratio of the output to the input of any system" is_a=ratio core.source="wordnet 3.1"
+@k.words.efficiency.noun.2 k.words.sense word=efficiency pos=noun n=2 gloss="skillfulness in avoiding wasted time and effort" is_a=skillfulness core.source="wordnet 3.1"
+@k.words.effort.noun.1 k.words.sense word=effort pos=noun n=1 gloss="earnest and conscientious activity intended to do or accomplish something" synonym=attempt synonym=endeavor synonym=endeavour synonym=try is_a=activity core.source="wordnet 3.1"
+@k.words.effort.noun.2 k.words.sense word=effort pos=noun n=2 gloss="use of physical or mental energy; hard work" synonym="elbow grease" synonym=exertion synonym=travail synonym=sweat is_a=labor core.source="wordnet 3.1"
+@k.words.effort.noun.3 k.words.sense word=effort pos=noun n=3 gloss="a notable achievement" synonym=feat synonym=exploit is_a=accomplishment core.source="wordnet 3.1"

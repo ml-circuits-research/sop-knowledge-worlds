@@ -1,0 +1,24 @@
+# k.words/shards/aw: noun and verb senses of the words from "await" to "awol" (first letters "aw").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.await.verb.1 k.words.sense word=await pos=verb n=1 gloss="look forward to the probable occurrence of" synonym=expect synonym=look synonym=wait core.source="wordnet 3.1"
+@k.words.awake.verb.1 k.words.sense word=awake pos=verb n=1 gloss="stop sleeping" synonym="wake up" synonym=arouse synonym=awaken synonym=wake synonym="come alive" synonym=waken is_a="change state" core.source="wordnet 3.1"
+@k.words.awake.forms core.word text=awoke text=awoken means=awake of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.awaken.verb.1 k.words.sense word=awaken pos=verb n=1 gloss="cause to become awake or conscious" synonym=wake synonym=waken synonym=rouse synonym="wake up" synonym=arouse is_a=change core.source="wordnet 3.1"
+@k.words.awaken.verb.2 k.words.sense word=awaken pos=verb n=2 gloss="stop sleeping" synonym="wake up" synonym=awake synonym=arouse synonym=wake synonym="come alive" synonym=waken is_a="change state" core.source="wordnet 3.1"
+@k.words.awaken.verb.3 k.words.sense word=awaken pos=verb n=3 gloss="make aware" is_a=affect core.source="wordnet 3.1"
+@k.words.awakening.noun.1 k.words.sense word=awakening pos=noun n=1 gloss="the act of waking" synonym=wakening synonym="waking up" is_a=arousal core.source="wordnet 3.1"
+@k.words.award.noun.1 k.words.sense word=award pos=noun n=1 gloss="a grant made by a law court" synonym=awarding is_a=grant core.source="wordnet 3.1"
+@k.words.award.noun.2 k.words.sense word=award pos=noun n=2 gloss="a tangible symbol signifying approval or distinction" synonym=accolade synonym=honor synonym=honour synonym=laurels is_a=symbol core.source="wordnet 3.1"
+@k.words.award.noun.3 k.words.sense word=award pos=noun n=3 gloss="something given for victory or superiority in a contest or competition or for winning a lottery" synonym=prize is_a=gift core.source="wordnet 3.1"
+@k.words.award.verb.1 k.words.sense word=award pos=verb n=1 gloss="give, especially as an honor or reward" synonym=present is_a=allocate core.source="wordnet 3.1"
+@k.words.award.verb.2 k.words.sense word=award pos=verb n=2 gloss="give as judged due or on the basis of merit" synonym=grant is_a=give core.source="wordnet 3.1"
+@k.words.awareness.noun.1 k.words.sense word=awareness pos=noun n=1 gloss="having knowledge of" synonym=consciousness synonym=cognizance synonym=cognisance synonym=knowingness is_a=knowing core.source="wordnet 3.1"
+@k.words.awareness.noun.2 k.words.sense word=awareness pos=noun n=2 gloss="state of elementary or undifferentiated consciousness" synonym=sentience is_a=consciousness core.source="wordnet 3.1"
+@k.words.awe.noun.1 k.words.sense word=awe pos=noun n=1 gloss="an overwhelming feeling of wonder or admiration" is_a=wonder core.source="wordnet 3.1"
+@k.words.awe.noun.2 k.words.sense word=awe pos=noun n=2 gloss="a feeling of profound respect for someone or something" synonym=fear synonym=reverence synonym=veneration is_a=emotion core.source="wordnet 3.1"
+@k.words.awe.verb.1 k.words.sense word=awe pos=verb n=1 gloss="inspire awe in" is_a=frighten core.source="wordnet 3.1"
+@k.words.awol.noun.1 k.words.sense word=AWOL pos=noun n=1 gloss="one who is away or absent without leave" is_a=absentee core.source="wordnet 3.1"
+@k.words.awol.spelling.AWOL core.word text=awol means=AWOL of=k.words.sense.word core.source="wordnet 3.1"

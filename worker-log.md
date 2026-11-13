@@ -128,3 +128,30 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
   It is a generated file (not part of the content hash); the catalog test compares it byte for byte.
 - `.github/workflows/test.yml`: `npm test` and `build-catalog --check` on push and pull request (node 22).
 - Numbers: unchanged facts (2 worlds, 8 shards, 422 fact wires, 58,948 shard bytes, 0 warnings); npm test 81 pass.
+
+## R2.2 (2026-11-13): k.words from WordNet 3.1
+
+- Sources: WordNet 3.1 from `nltk/nltk_data` on GitHub (`wordnet31.zip`, commit 550b662, sha256 in SOURCE.md; it has
+  the `.exc` lists that npm `wordnet-db` lacks, the data files are the same); frequency list: FrequencyWords English
+  2018 (`hermitdave/FrequencyWords` 525f9b5, `en_50k.txt`, CC BY-SA 4.0), its first 20,000 lines, used as a filter
+  only (Q9). The Google-derived lists were not used (unclear terms).
+- `docs/worlds/k.words/schema.sop` (version 1, exports `sense`): `k.words.sense` (shared, closed; identity `word` +
+  `pos` + `n`; `gloss` string; `synonym`, `is_a`, `instance_of`, `part_of` many, atom or string). 10 matrix wires, no
+  rules, no schema words (Q10).
+- `tools/import/wordnet.mjs` (+ `tools/import/lib.mjs`: value, id, wire, header, split helpers): the 3 most frequent
+  senses per word and part of speech; gloss without examples; first word of each hypernym / instance hypernym / part
+  holonym synset; irregular forms and lower-case text for capitalised words as `core.word` facts; senses WordNet
+  marks as slurs, offensive or vulgar left out (61). Shards by the first two letters, sorted by word; a bucket over
+  1,800 wires / 270 kB would split into `xx-1`, `xx-2` (none does).
+- Tests: `tests/import.wordnet.test.mjs` (a made-up fixture in WordNet's format; same input same bytes; splitting;
+  and, when the raw files are there, the shards on disk are byte for byte what the importer gives; skipped in CI where
+  raw is absent), `tests/k.words.questions.jsonl` (11).
+- Numbers: 19,697 usable list words → 10,471 words with a noun or verb sense, 26,116 senses, 2,835 `core.word`
+  wires (1,264 irregular forms); **28,951 wires, 318 shards, 5,610,059 bytes**; largest shard `co` 1,185 wires,
+  229,974 bytes, load 21 ms; median shard under 2 ms; all 318 shards one after another 0.4 s of load (0.8 s for the
+  whole world in one instance); schema 8 ms; 0 warnings, 0 errors. Catalog: 3 worlds, 326 shards, vocab 11,726 words
+  (index.json 262 kB, vocab.json 484 kB). npm test 97 pass in about 10 s.
+- Limits found: values are words, not senses (a reference to a sense in another shard would dangle), so chains
+  (`dog` → `canine` → …) are followed by looking the value up as a word again; values of several words are strings
+  (Q11); a capitalised word is its own value (`word=China` sense 1, `word=china` sense 2), found from lower case
+  through a `core.word` fact.

@@ -1,0 +1,25 @@
+# k.words/shards/yo: noun and verb senses of the words from "yo-yo" to "youth" (first letters "yo").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.yo-yo.noun.1 k.words.sense word=yo-yo pos=noun n=1 gloss="a toy consisting of a spool that is reeled up and down on a string by motions of the hand" is_a=plaything core.source="wordnet 3.1"
+@k.words.yoga.noun.1 k.words.sense word=yoga pos=noun n=1 gloss="discipline aimed at training the consciousness for a state of perfect spiritual insight and tranquility that is achieved through the three paths of actions and knowledge and devotion" is_a=discipline core.source="wordnet 3.1"
+@k.words.yoga.noun.2 k.words.sense word=yoga pos=noun n=2 gloss="a system of physical, breathing and meditation exercises practiced to promote control of the body and mind" is_a=exercise core.source="wordnet 3.1"
+@k.words.yogi.noun.1 k.words.sense word=Yogi pos=noun n=1 gloss="United States baseball player (born 1925)" synonym=Berra synonym="Lawrence Peter Berra" synonym="Yogi Berra" instance_of=ballplayer core.source="wordnet 3.1"
+@k.words.yogi.noun.2 k.words.sense word=yogi pos=noun n=2 gloss="one who practices yoga and has achieved a high level of spiritual insight" is_a=philosopher core.source="wordnet 3.1"
+@k.words.yogi.spelling.Yogi core.word text=yogi means=Yogi of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.yogi.forms core.word text=yogin means=yogi of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.yogurt.noun.1 k.words.sense word=yogurt pos=noun n=1 gloss="a custard-like food made from curdled milk" synonym=yoghurt synonym=yoghourt is_a="dairy product" is_a=food core.source="wordnet 3.1"
+@k.words.york.noun.1 k.words.sense word=York pos=noun n=1 gloss="the English royal house (a branch of the Plantagenet line) that reigned from 1461 to 1485; its emblem was a white rose" synonym="House of York" is_a=dynasty is_a=royalty core.source="wordnet 3.1"
+@k.words.york.spelling.York core.word text=york means=York of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.yorkshire.noun.1 k.words.sense word=Yorkshire pos=noun n=1 gloss="a former large county in northern England; in 1974 it was divided into three smaller counties" instance_of="geographical area" part_of=England core.source="wordnet 3.1"
+@k.words.yorkshire.spelling.Yorkshire core.word text=yorkshire means=Yorkshire of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.young.noun.1 k.words.sense word=young pos=noun n=1 gloss="any immature animal" synonym=offspring is_a=animal core.source="wordnet 3.1"
+@k.words.young.noun.2 k.words.sense word=Young pos=noun n=2 gloss="United States film and television actress (1913-2000)" synonym="Loretta Young" instance_of=actress core.source="wordnet 3.1"
+@k.words.young.noun.3 k.words.sense word=Young pos=noun n=3 gloss="United States civil rights leader (1921-1971)" synonym="Whitney Young" synonym="Whitney Moore Young Jr." instance_of="civil rights leader" core.source="wordnet 3.1"
+@k.words.young.spelling.Young core.word text=young means=Young of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.youngster.noun.1 k.words.sense word=youngster pos=noun n=1 gloss="a young person of either sex" synonym=child synonym=kid synonym=minor synonym=shaver synonym=nipper synonym="small fry" synonym=tiddler synonym=tike synonym=tyke synonym=fry synonym=nestling is_a=juvenile core.source="wordnet 3.1"
+@k.words.youth.noun.1 k.words.sense word=youth pos=noun n=1 gloss="a young person (especially a young man or boy)" synonym="young person" synonym=younker synonym="spring chicken" is_a=juvenile core.source="wordnet 3.1"
+@k.words.youth.noun.2 k.words.sense word=youth pos=noun n=2 gloss="young people collectively" synonym=young is_a="age group" core.source="wordnet 3.1"
+@k.words.youth.noun.3 k.words.sense word=youth pos=noun n=3 gloss="the time of life between childhood and maturity" is_a="time of life" core.source="wordnet 3.1"

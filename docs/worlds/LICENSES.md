@@ -12,3 +12,12 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Attribution: none required.
 - Shard terms: CC0-1.0
 - Used by: `k.commonsense` (1 shards), `k.objects` (7 shards)
+
+## wordnet-3.1
+
+- What: the English lexical database of Princeton University: words grouped into sets of synonyms, each with a gloss, linked by is-a, instance-of and part-of.
+- Origin: https://wordnet.princeton.edu/ ; fetched from the nltk_data repository on GitHub (`nltk/nltk_data`, branch `gh-pages`, commit `550b6625bcef1f2abff2ff770a5a0d272c9c6b2a`, `packages/corpora/wordnet31.zip`, sha256 `2a9e7da7d0c17ad875e4171a4d28ae17ab6969c7d67f1cf0f59d65c66d0fdd37`).
+- License: the WordNet licence (permissive: use, copy, modify and distribute for any purpose, with the copyright notice kept); written `WordNet-3.0` in shard headers and the catalog, the name of the licence text.
+- Attribution: WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved. THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. The full licence text is `LICENSE` in the archive and at https://wordnet.princeton.edu/license-and-commercial-use . Which words are kept was chosen with the FrequencyWords list (see `sources/frequency-words/SOURCE.md`).
+- Shard terms: WordNet-3.0
+- Used by: `k.words` (318 shards)

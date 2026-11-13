@@ -1,0 +1,9 @@
+# k.words/shards/a: noun and verb senses of the words from "a" to "a" (first letters "a").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.a.noun.1 k.words.sense word=A pos=noun n=1 gloss="a metric unit of length equal to one ten billionth of a meter (or 0.0001 micron); used to specify wavelengths of electromagnetic radiation" synonym=angstrom synonym="angstrom unit" is_a="metric linear unit" part_of=nanometer core.source="wordnet 3.1"
+@k.words.a.noun.2 k.words.sense word=A pos=noun n=2 gloss="any of several fat-soluble vitamins essential for normal vision; prevents night blindness or inflammation or dryness of the eyes" synonym="vitamin A" synonym="antiophthalmic factor" synonym=axerophthol is_a="fat-soluble vitamin" core.source="wordnet 3.1"
+@k.words.a.noun.3 k.words.sense word=A pos=noun n=3 gloss="one of the four nucleotides used in building DNA; all four nucleotides have a common phosphate group and a sugar (ribose)" synonym="deoxyadenosine monophosphate" is_a=nucleotide core.source="wordnet 3.1"
+@k.words.a.spelling.A core.word text=a means=A of=k.words.sense.word core.source="wordnet 3.1"

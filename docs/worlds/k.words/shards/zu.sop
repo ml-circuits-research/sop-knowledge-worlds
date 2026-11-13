@@ -1,0 +1,11 @@
+# k.words/shards/zu: noun and verb senses of the words from "zulu" to "zurich" (first letters "zu").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# license: WordNet-3.0
+# script: tools/import/wordnet.mjs
+
+@k.words.zulu.noun.1 k.words.sense word=Zulu pos=noun n=1 gloss="a member of the tall Negroid people of eastern South Africa; some live in KwaZulu-Natal under the traditional clan system but many now work in the cities" is_a=African core.source="wordnet 3.1"
+@k.words.zulu.noun.2 k.words.sense word=Zulu pos=noun n=2 gloss="a community of Negroid people in eastern South Africa" instance_of=community core.source="wordnet 3.1"
+@k.words.zulu.noun.3 k.words.sense word=Zulu pos=noun n=3 gloss="a Bantu language of considerable literary importance in southeastern Africa" is_a=Nguni core.source="wordnet 3.1"
+@k.words.zulu.spelling.Zulu core.word text=zulu means=Zulu of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.zurich.noun.1 k.words.sense word=Zurich pos=noun n=1 gloss="the largest city in Switzerland; located in the northern part of the country" instance_of=city part_of=Switzerland core.source="wordnet 3.1"
+@k.words.zurich.spelling.Zurich core.word text=zurich means=Zurich of=k.words.sense.word core.source="wordnet 3.1"
