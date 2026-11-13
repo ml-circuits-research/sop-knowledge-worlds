@@ -1,5 +1,5 @@
 {
- "version": "c82b9a481861",
+ "version": "2b26ef5027c1",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -4569,11 +4569,14 @@
      "id": "k.objects/shards/mulberry-celebration-item-04",
      "path": "k.objects/shards/mulberry-celebration-item-04.sop",
      "wires": 905,
-     "bytes": 108532,
+     "bytes": 108622,
      "keys": [
       "brim",
       "cone",
       "hat",
+      "left_candle",
+      "middle_candle",
+      "right_candle",
       "sack",
       "star",
       "tree",
@@ -4594,16 +4597,23 @@
      "id": "k.objects/shards/mulberry-clothes-accessories-01",
      "path": "k.objects/shards/mulberry-clothes-accessories-01.sop",
      "wires": 1274,
-     "bytes": 150528,
+     "bytes": 150712,
      "keys": [
+      "bag",
       "beach bag",
       "bow",
       "bow tie",
       "buckle",
       "button",
+      "cloth",
       "hand bag",
       "handcuffs",
-      "hankerchief"
+      "hankerchief",
+      "knot",
+      "left_loop",
+      "left_ribbon",
+      "right_loop",
+      "right_ribbon"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4615,8 +4625,11 @@
      "id": "k.objects/shards/mulberry-clothes-accessories-02",
      "path": "k.objects/shards/mulberry-clothes-accessories-02.sop",
      "wires": 422,
-     "bytes": 50991,
+     "bytes": 51027,
      "keys": [
+      "cover",
+      "flap",
+      "pocket",
       "school bag",
       "wallet",
       "zip"
@@ -4631,16 +4644,26 @@
      "id": "k.objects/shards/mulberry-clothes-general-01",
      "path": "k.objects/shards/mulberry-clothes-general-01.sop",
      "wires": 1190,
-     "bytes": 139594,
+     "bytes": 139815,
      "keys": [
       "belt",
       "bib",
       "blouse",
+      "bobble",
       "bobble hat",
       "bootees",
       "boots",
       "boxer shorts",
-      "bra"
+      "bra",
+      "hat",
+      "left_boot",
+      "left_cup",
+      "left_strap",
+      "pocket",
+      "right_boot",
+      "right_cup",
+      "right_strap",
+      "waistband"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4651,17 +4674,24 @@
     {
      "id": "k.objects/shards/mulberry-clothes-general-02",
      "path": "k.objects/shards/mulberry-clothes-general-02.sop",
-     "wires": 1108,
-     "bytes": 131379,
+     "wires": 1241,
+     "bytes": 147247,
      "keys": [
+      "brim",
       "cap",
-      "clothes female",
-      "clothes generic",
-      "clothes male",
+      "crown",
       "dressing gown",
       "ear muffs",
       "fire helmet",
-      "hard hat"
+      "hard hat",
+      "hat",
+      "hat - ladies",
+      "hat - mans",
+      "helmet",
+      "helmet pilot",
+      "left_muff",
+      "peak",
+      "right_muff"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4672,17 +4702,26 @@
     {
      "id": "k.objects/shards/mulberry-clothes-general-03",
      "path": "k.objects/shards/mulberry-clothes-general-03.sop",
-     "wires": 1267,
-     "bytes": 152156,
+     "wires": 1175,
+     "bytes": 142350,
      "keys": [
-      "hat - ladies",
-      "hat - mans",
-      "heel of shoe",
-      "helmet pilot",
+      "body",
+      "collar",
       "hood hoodie",
       "hooded top",
       "jacket",
-      "jacket - mans"
+      "jacket - mans",
+      "jumper",
+      "knickers",
+      "left_cuff",
+      "left_sleeve",
+      "left_warmer",
+      "leg warmers",
+      "long johns",
+      "right_cuff",
+      "right_sleeve",
+      "right_warmer",
+      "waistband"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4693,17 +4732,26 @@
     {
      "id": "k.objects/shards/mulberry-clothes-general-04",
      "path": "k.objects/shards/mulberry-clothes-general-04.sop",
-     "wires": 932,
-     "bytes": 113322,
+     "wires": 828,
+     "bytes": 101043,
      "keys": [
-      "jumper",
-      "knickers",
-      "leg warmers",
-      "long johns",
+      "body",
+      "brim",
+      "gown",
+      "left_leg",
+      "left_mitten",
       "mittens",
       "nightgown",
       "pants",
-      "patch on clothes"
+      "patch",
+      "patch on clothes",
+      "petticoat",
+      "pocket",
+      "police helmet",
+      "pop socks",
+      "right_leg",
+      "right_mitten",
+      "waistband"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4714,17 +4762,27 @@
     {
      "id": "k.objects/shards/mulberry-clothes-general-05",
      "path": "k.objects/shards/mulberry-clothes-general-05.sop",
-     "wires": 1079,
-     "bytes": 130293,
+     "wires": 1118,
+     "bytes": 135098,
      "keys": [
-      "petticoat",
-      "pocket",
-      "police helmet",
-      "pop socks",
+      "body",
+      "left_cuff",
+      "left_foot",
+      "left_pocket",
       "pyjamas",
       "raincoat",
+      "right_cuff",
+      "right_foot",
+      "right_pocket",
       "sandals",
-      "shirt"
+      "shirt",
+      "shoe - ladies",
+      "shoe - mans",
+      "skirt",
+      "sleep suit baby",
+      "suit",
+      "trousers",
+      "waistband"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4735,17 +4793,27 @@
     {
      "id": "k.objects/shards/mulberry-clothes-general-06",
      "path": "k.objects/shards/mulberry-clothes-general-06.sop",
-     "wires": 1118,
-     "bytes": 135096,
+     "wires": 1070,
+     "bytes": 129110,
      "keys": [
-      "shoe - ladies",
-      "shoe - mans",
+      "body",
+      "collar",
+      "hem",
+      "knot",
+      "left_cuff",
+      "left_slipper",
+      "pocket",
+      "right_cuff",
+      "right_slipper",
       "skirt",
-      "sleep suit baby",
       "slippers",
       "suit - ladys",
       "suit - mans",
-      "sweatshirt"
+      "sweatshirt",
+      "tie",
+      "tights",
+      "trainers",
+      "trousers"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4756,31 +4824,19 @@
     {
      "id": "k.objects/shards/mulberry-clothes-general-07",
      "path": "k.objects/shards/mulberry-clothes-general-07.sop",
-     "wires": 977,
-     "bytes": 117274,
+     "wires": 569,
+     "bytes": 68755,
      "keys": [
-      "tartan",
-      "tie",
-      "tights",
-      "trainers",
-      "trousers",
+      "bottom_button",
+      "left_front",
+      "left_pocket",
+      "middle_button",
+      "right_front",
+      "right_pocket",
+      "top_button",
       "vest",
       "visor",
-      "waistcoat"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-clothes-general-08",
-     "path": "k.objects/shards/mulberry-clothes-general-08.sop",
-     "wires": 403,
-     "bytes": 48709,
-     "keys": [
-      "warm clothes",
+      "waistcoat",
       "wellington boots"
      ],
      "sources": [
@@ -4792,13 +4848,15 @@
     {
      "id": "k.objects/shards/mulberry-clothes-jewellery-01",
      "path": "k.objects/shards/mulberry-clothes-jewellery-01.sop",
-     "wires": 681,
-     "bytes": 80993,
+     "wires": 527,
+     "bytes": 62620,
      "keys": [
       "brooch",
       "earrings",
-      "jewellery",
-      "necklace"
+      "left_drop",
+      "necklace",
+      "right_drop",
+      "stone"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4810,7 +4868,7 @@
      "id": "k.objects/shards/mulberry-clothes-sport-01",
      "path": "k.objects/shards/mulberry-clothes-sport-01.sop",
      "wires": 1192,
-     "bytes": 145390,
+     "bytes": 145541,
      "keys": [
       "cycle helmet",
       "football kit arsenal",
@@ -4819,7 +4877,9 @@
       "football kit birmingham",
       "football kit blackburn rovers",
       "football kit blackpool",
-      "football kit bolton wanderers"
+      "football kit bolton wanderers",
+      "shirt",
+      "shorts"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4831,7 +4891,7 @@
      "id": "k.objects/shards/mulberry-clothes-sport-02",
      "path": "k.objects/shards/mulberry-clothes-sport-02.sop",
      "wires": 1199,
-     "bytes": 146783,
+     "bytes": 146959,
      "keys": [
       "football kit bristol city",
       "football kit burnley",
@@ -4840,7 +4900,9 @@
       "football kit coventry",
       "football kit crystal palace",
       "football kit derby",
-      "football kit doncaster"
+      "football kit doncaster",
+      "shirt",
+      "shorts"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4852,7 +4914,7 @@
      "id": "k.objects/shards/mulberry-clothes-sport-03",
      "path": "k.objects/shards/mulberry-clothes-sport-03.sop",
      "wires": 1220,
-     "bytes": 149356,
+     "bytes": 149531,
      "keys": [
       "football kit everton",
       "football kit fulham",
@@ -4861,7 +4923,9 @@
       "football kit leicester",
       "football kit liverpool",
       "football kit manchester city",
-      "football kit manchester united"
+      "football kit manchester united",
+      "shirt",
+      "shorts"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4873,7 +4937,7 @@
      "id": "k.objects/shards/mulberry-clothes-sport-04",
      "path": "k.objects/shards/mulberry-clothes-sport-04.sop",
      "wires": 1241,
-     "bytes": 152290,
+     "bytes": 152316,
      "keys": [
       "football kit middlesbrough",
       "football kit newcastle united",
@@ -4882,7 +4946,8 @@
       "football kit plymouth argyle",
       "football kit portsmouth",
       "football kit preston",
-      "football kit qpr"
+      "football kit qpr",
+      "shorts"
      ],
      "sources": [
       "mulberry-fa94a93"

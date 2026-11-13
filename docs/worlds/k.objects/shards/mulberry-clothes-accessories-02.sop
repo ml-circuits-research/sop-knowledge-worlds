@@ -5,7 +5,7 @@
 
 # school bag
 @k.objects.mb2485 k.objects.object name="school bag" core.source="mulberry fa94a93"
-@k.objects.mb2485.p1 k.objects.part of="school bag" name=part1 shape=polygon x=36.4 y=35.1 w=50.2 h=57.6 z=1 colour=purple rgb="#0B00EA" core.source="mulberry fa94a93"
+@k.objects.mb2485.p1 k.objects.part of="school bag" name=pocket named=model shape=polygon x=36.4 y=35.1 w=50.2 h=57.6 z=1 colour=purple rgb="#0B00EA" core.source="mulberry fa94a93"
 @k.objects.mb2485.p1.1 k.objects.point part=$k.objects.mb2485.p1 n=1 x=44.6 y=92.4 core.source="mulberry fa94a93"
 @k.objects.mb2485.p1.2 k.objects.point part=$k.objects.mb2485.p1 n=2 x=41.7 y=90.9 core.source="mulberry fa94a93"
 @k.objects.mb2485.p1.3 k.objects.point part=$k.objects.mb2485.p1 n=3 x=39 y=88.1 core.source="mulberry fa94a93"
@@ -33,7 +33,7 @@
 @k.objects.mb2485.p2.6 k.objects.point part=$k.objects.mb2485.p2 n=6 x=41.8 y=46.9 core.source="mulberry fa94a93"
 @k.objects.mb2485.p2.7 k.objects.point part=$k.objects.mb2485.p2 n=7 x=46.4 y=45.7 core.source="mulberry fa94a93"
 @k.objects.mb2485.p2.8 k.objects.point part=$k.objects.mb2485.p2 n=8 x=81 y=41.3 core.source="mulberry fa94a93"
-@k.objects.mb2485.p3 k.objects.part of="school bag" name=part3 shape=polygon x=28.3 y=13.4 w=50.5 h=25.8 z=3 colour=grey rgb="#787878" core.source="mulberry fa94a93"
+@k.objects.mb2485.p3 k.objects.part of="school bag" name=flap named=model shape=polygon x=28.3 y=13.4 w=50.5 h=25.8 z=3 colour=grey rgb="#787878" core.source="mulberry fa94a93"
 @k.objects.mb2485.p3.1 k.objects.point part=$k.objects.mb2485.p3 n=1 x=74.2 y=33.3 core.source="mulberry fa94a93"
 @k.objects.mb2485.p3.2 k.objects.point part=$k.objects.mb2485.p3 n=2 x=58.1 y=34.5 core.source="mulberry fa94a93"
 @k.objects.mb2485.p3.3 k.objects.point part=$k.objects.mb2485.p3 n=3 x=34.3 y=39.2 core.source="mulberry fa94a93"
@@ -233,7 +233,7 @@
 @k.objects.mb3003.p1.28 k.objects.point part=$k.objects.mb3003.p1 n=28 x=71.1 y=22.6 core.source="mulberry fa94a93"
 @k.objects.mb3003.p1.29 k.objects.point part=$k.objects.mb3003.p1 n=29 x=70 y=21.4 core.source="mulberry fa94a93"
 @k.objects.mb3003.p1.30 k.objects.point part=$k.objects.mb3003.p1 n=30 x=68.4 y=20.7 core.source="mulberry fa94a93"
-@k.objects.mb3003.p2 k.objects.part of=wallet name=part2 shape=polygon x=9.2 y=13.7 w=63.1 h=73.3 z=2 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
+@k.objects.mb3003.p2 k.objects.part of=wallet name=cover named=model shape=polygon x=9.2 y=13.7 w=63.1 h=73.3 z=2 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
 @k.objects.mb3003.p2.1 k.objects.point part=$k.objects.mb3003.p2 n=1 x=9.3 y=67.8 core.source="mulberry fa94a93"
 @k.objects.mb3003.p2.2 k.objects.point part=$k.objects.mb3003.p2 n=2 x=9.2 y=19.6 core.source="mulberry fa94a93"
 @k.objects.mb3003.p2.3 k.objects.point part=$k.objects.mb3003.p2 n=3 x=9.7 y=16.5 core.source="mulberry fa94a93"
