@@ -7,6 +7,7 @@ import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { svgToParts, flattenPath, simplify, colourName } from '../tools/import/svg-parts.mjs';
 import { importNoto, readEmojiList, readPartNames, PREFIX } from '../tools/import/noto-emoji.mjs';
+import { takenNames } from '../tools/import/objects.mjs';
 
 const svg = `<?xml version="1.0"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
   <defs><linearGradient id="g"><stop offset="0" stop-color="#ff0000"/><stop offset="1" style="stop-color:#00ff00"/></linearGradient>
@@ -75,8 +76,7 @@ const svgDir = join(REPO, 'sources/noto-emoji/raw/repo/2D/svg');
 const cldr = join(REPO, 'sources/cldr/raw');
 test('the noto shards on disk are what the importer gives from the raw files', { skip: !(existsSync(svgDir) && existsSync(join(cldr, 'emoji-test.txt'))) && 'raw files not downloaded' }, () => {
   const dir = join(WORLDS_DIR, 'k.objects', 'shards');
-  const taken = new Set();
-  for (const f of readdirSync(dir)) if (!f.startsWith(PREFIX)) for (const m of readFileSync(join(dir, f), 'utf8').matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)) taken.add(m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]);
+  const taken = takenNames(dir, PREFIX);
   const limit = Number(readFileSync(join(REPO, 'sources/noto-emoji/limit.txt'), 'utf8').trim());
   const { files } = importNoto({
     list: readFileSync(join(cldr, 'emoji-test.txt'), 'utf8'),

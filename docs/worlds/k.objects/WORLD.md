@@ -38,24 +38,32 @@ a draw order and typical colours, so that a renderer that has never seen an obje
 
 30 hand-written objects, 168 parts, 139 points, words for every object and part kind. Source `hand-core 1`, CC0-1.0.
 
-## Imported objects (shards `noto-<subgroup>-<nn>`)
+## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 
-Everyday things converted from the Noto Emoji drawings by `tools/import/noto-emoji.mjs`, named by the Unicode CLDR
-English short names (`"dog face"`, `teapot`, `"sport utility vehicle"`; a name of several words is a string), with
-the CLDR keywords as `core.word` facts. Same format as the hand-written objects, with these differences:
+Everyday things converted from open drawings, in the same format as the hand-written objects. A name belongs to the
+first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mulberry Symbols.
+
+| Source | Objects | Shards | Licence | Names from |
+| --- | --- | --- | --- | --- |
+| hand-written | 30 | 7 | CC0-1.0 | this repository |
+| Noto Emoji (`noto-<emoji subgroup>-<nn>`) | 811 | 124 | Apache-2.0 AND Unicode-3.0 | Unicode CLDR short names (`"dog face"`, `teapot`) |
+| OpenMoji (`openmoji-<group>-<nn>`) | 114 | 18 | CC-BY-SA-4.0 | OpenMoji annotations (`goldfish`, `"lawn mower"`) |
+| Mulberry Symbols (`mulberry-<category>-<nn>`) | 1,151 | 174 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |
+
+2,106 objects in all. A name of several words is a string. The keywords or tags of a source are `core.word` facts.
+Differences from the hand-written objects:
 
 - every visible element of the drawing is one part, in draw order (`z` = 1, 2, …); at most 16 parts an object (the
   largest), at most 40 points a part and about 200 points an object;
-- shapes: `polygon` (most), `line`, and `circle`, `oval`, `rectangle`, `square` where the drawing has them;
+- shapes: `polygon` (most), `line` (strokes, and outlines: a shape that is mostly hole becomes a closed line), and
+  `circle`, `oval`, `rectangle`, `square` where the drawing has them;
 - `colour` is the nearest name of the schema's list (black, white, grey, red, orange, yellow, green, blue, purple,
   pink, brown); `rgb` keeps the exact colour as a string (`"#D27856"`). A renderer may use either;
-- parts are named `part1…partN` unless `sources/noto-emoji/part-names.tsv` names them; such a part carries
+- parts are named `part1…partN` unless `sources/<source>/part-names.tsv` names them; such a part carries
   `named=model` (a language model named it by looking at a numbered picture). Shadows, highlights and outlines have
-  `kind=detail`. No relative positions (`above`, `inside`, …) are given;
-- a hand-written object of the same name wins: the imported drawing is left out (reviewer's answer to Q12);
-- shards hold up to 8 objects of one emoji subgroup (`noto-animal-mammal-01`, `noto-food-fruit-02`). Sources
-  `noto-emoji 99701e0` (Apache-2.0) and `cldr 48` (Unicode-3.0); the notices are `LICENSE.noto-emoji` and
-  `LICENSE.cldr` in this folder.
+  `kind=detail`. No relative positions (`above`, `inside`, …) are given. So far the Noto objects have been named;
+- shards hold up to 8 objects of one group. The licence notices are `LICENSE.noto-emoji`, `LICENSE.cldr`,
+  `LICENSE.openmoji` and `LICENSE.mulberry` in this folder; see `../LICENSES.md`.
 
 ## Questions it helps with
 

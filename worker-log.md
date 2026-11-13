@@ -319,3 +319,34 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - Everything loads unchanged: 4 worlds, 463 shards, 0 errors, 0 warnings; shard bytes unchanged. Load times under
   0.15.0: noto shards 4.6 s for 124 (was 4.0), k.words 0.95 s for 318, k.geo 0.36 s for 13; validation 15 s;
   npm test 931 pass in 84 s (60 s before k.geo).
+
+## More objects (2026-11-13): OpenMoji and Mulberry Symbols; k.objects has 2,106 objects
+
+- **OpenMoji** (`hfg-gmuend/openmoji` 3e01de5, CC BY-SA 4.0): 1,059 candidates in the groups of things; 816 names
+  already exist (hand-written or Noto), 129 are not things (signs, people, actions, complaints, local in-jokes);
+  **114 new objects** (extras: goldfish, narwhal, lawn mower, trowel, moka pot, washing machine, drone, crutches,
+  stretcher, eiffel tower, submarine, …), 1,322 parts, 11,022 points; 12,530 wires, 18 shards, 1,515,483 bytes.
+- **Second set: comparison and choice.** Candidates found on GitHub with filled shapes and object names:
+  Mulberry Symbols (`mulberrysymbols/mulberry-symbols`, CC BY-SA 4.0, 3,444 coloured pictograms for communication
+  aids, with a category and grammar table) and game-icons (`game-icons/icons`, CC BY 3.0, 4,239 one-colour icons).
+  20 everyday names converted from each and looked at side by side: Mulberry had 17 of the 20, in colour, all 17
+  recognisable; game-icons had 11, white on black with no typical colour, and a fantasy-game vocabulary. Not
+  candidates: Twemoji and Fluent Emoji (the same emoji names as Noto, nothing new), Material and Phosphor (one
+  colour), Papirus (GPL, not in the allowed list), ARASAAC (not on GitHub as SVG). **Chosen: Mulberry Symbols.**
+- **Mulberry** fa94a93: 3,435 symbols; nouns of the thing categories only (1,930 others dropped), first drawing of
+  a thing (118 variants dropped), 237 names already taken; **1,151 new objects**, 16,361 parts, 162,338 points;
+  180,604 wires, 174 shards, 21,519,843 bytes (157 wires and 18.7 kB an object). A sample of 100 looked at on a
+  contact sheet at 120 px: about 95 recognisable (weak: thin things such as a string of lights; dark drinks are
+  near black).
+- Converter: outlines (a shape that is at least 30% hole, for these two outline styles; 50% for Noto) are closed
+  lines; a closed line now keeps its closing point (it was dropped; Noto: +11 points, no part moved).
+- `tools/import/objects.mjs` (shared: name precedence, shard building), `openmoji.mjs`, `mulberry.mjs`;
+  `tests/import.objects.test.mjs` (fixtures, precedence, disk = importer when raw is present).
+- **k.objects: 2,106 objects** (30 hand-written + 811 + 114 + 1,151), 323 shards, about 326,000 wires, 39 MB of
+  shards; largest shard 1,696 wires / 205 kB. Load: 12 s for all 316 imported shards one after another (about 38 ms
+  a shard). Catalog: 4 worlds, 655 shards, vocab 17,182 words (index.json 492 kB, vocab.json 980 kB).
+  0 errors, 0 warnings. npm test 2,201 pass in 170 s (one render test per object).
+- **Naming pass for the 1,265 new objects: not done yet** in this commit; they are `part1…partN`. The files
+  `sources/openmoji/part-names.tsv` and `sources/mulberry/part-names.tsv` exist and are read by the importers.
+- Size note for the reviewer: `docs/worlds` is now 56 MB (previews 9 MB). If that is too much for Pages or for the
+  tests, the point budget per object (200) is the knob.

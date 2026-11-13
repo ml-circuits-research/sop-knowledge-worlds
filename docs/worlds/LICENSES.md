@@ -31,6 +31,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: CC0-1.0
 - Used by: `k.commonsense` (1 shards), `k.objects` (7 shards)
 
+## mulberry-fa94a93
+
+- What: about 3,400 coloured pictograms made for communication aids (AAC), each named in English and put in a category. Chosen as the second filled icon set for `k.objects` after comparing 20 objects with game-icons (`game-icons/icons`, CC BY 3.0: one colour, white on black, fantasy-game subjects, 11 of the 20 everyday names present) — Mulberry had 17 of the 20, in colour, drawn for exactly these everyday things (worker-log.md).
+- Origin: https://github.com/mulberrysymbols/mulberry-symbols , commit `fa94a93ca1b5357c0b6e0d9f8a81c426a1dfefdf`, folder `EN` (the SVGs) and `scripts/data/symbol-info.csv` (names, categories, grammar, tags).
+- License: CC-BY-SA-4.0 (`LICENSE.txt`: "licensed under the Creative Commons Attribution-Share Alike License", https://creativecommons.org/licenses/by-sa/4.0/).
+- Attribution: Mulberry Symbols, Copyright 2018-2026 Steve Lee, https://mulberrysymbols.org , CC BY-SA 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
+- Shard terms: CC-BY-SA-4.0
+- Used by: `k.objects` (174 shards)
+
 ## natural-earth-5.1.2
 
 - What: public domain map data: countries, populated places, rivers, elevation points and physical regions, with names and attributes. Used for `k.geo`.
@@ -48,6 +57,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Attribution: Noto Emoji, Copyright 2013 Google, Inc., licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0 ; the notice is `docs/worlds/k.objects/LICENSE.noto-emoji`). The drawings were changed: converted to simplified polygons and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: Apache-2.0 AND Unicode-3.0
 - Used by: `k.objects` (124 shards)
+
+## openmoji-3e01de5
+
+- What: the open-source emoji and icon project of HfG Schwäbisch Gmünd: one SVG per emoji, and extra icons that are not Unicode emoji. Used for `k.objects`: things that neither the hand-written objects nor Noto Emoji have.
+- Origin: https://github.com/hfg-gmuend/openmoji , commit `3e01de523ddefe9c5e46a7765b15efef04bf9002`, folders `color/svg` and `data` (`openmoji.json`: names, groups, tags).
+- License: CC-BY-SA-4.0 (`LICENSE.txt` of the repository).
+- Attribution: All emojis designed by OpenMoji – the open-source emoji and icon project (https://openmoji.org). License: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ . The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
+- Shard terms: CC-BY-SA-4.0
+- Used by: `k.objects` (18 shards)
 
 ## wordnet-3.1
 

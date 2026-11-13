@@ -10,6 +10,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { seg, wire, text, header } from './lib.mjs';
 import { svgToParts } from './svg-parts.mjs';
+import { takenNames } from './objects.mjs';
 
 export const NOTO = 'noto-emoji 99701e0';
 export const CLDR = 'cldr 48';
@@ -63,7 +64,7 @@ export function importNoto({ list, annotations, svg, partNames, taken = new Set(
     const name = a?.tts?.[0];
     if (!name) { stats.skipped.noName++; continue; }
     if (NOT_THINGS.test(name)) { stats.skipped.notThing++; continue; }
-    if (taken.has(name)) { stats.skipped.handWritten.push(name); continue; }
+    if (taken.has(name.toLowerCase())) { stats.skipped.handWritten.push(name); continue; }
     if (seen.has(name)) continue;
     seen.add(name);
     entries.push({ ...e, name, keywords: (a.default ?? []).filter((k) => k !== name) });
@@ -131,13 +132,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const namesFile = arg('names', join(repo, 'sources/noto-emoji/part-names.tsv'));
   const out = arg('out', join(repo, 'docs/worlds/k.objects/shards'));
   const limitFile = join(repo, 'sources/noto-emoji/limit.txt'); // how many objects the published build takes (0: all)
-  // Names of the hand-written objects: every shard that this script does not write.
-  const taken = new Set();
+  // Names that hand-written objects already have (they win).
   mkdirSync(out, { recursive: true });
-  for (const f of readdirSync(out)) {
-    if (!f.endsWith('.sop') || f.startsWith(PREFIX)) continue;
-    for (const m of readFileSync(join(out, f), 'utf8').matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)) taken.add(m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]);
-  }
+  const taken = new Set([...takenNames(out, PREFIX)]);
   const { files, stats } = importNoto({
     list: readFileSync(join(cldr, 'emoji-test.txt'), 'utf8'),
     annotations: JSON.parse(readFileSync(join(cldr, 'annotations.json'), 'utf8')),

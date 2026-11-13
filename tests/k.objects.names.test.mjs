@@ -1,4 +1,4 @@
-// sources/noto-emoji/part-names.tsv (R2.7): every named part exists, names are unique inside an object, named parts
+// sources/<noto-emoji|openmoji|mulberry>/part-names.tsv (R2.7): every named part exists, names are unique inside an object, named parts
 // carry named=model, and "what are the parts of <object>" answers with the names.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
@@ -9,7 +9,7 @@ import { partsOf, objectsOf } from '../tools/render-svg.mjs';
 import { readPartNames } from '../tools/import/noto-emoji.mjs';
 
 const world = fullWorld('k.objects');
-const names = readPartNames(readFileSync(join(REPO, 'sources/noto-emoji/part-names.tsv'), 'utf8'));
+const names = readPartNames(['noto-emoji', 'openmoji', 'mulberry'].map((s) => readFileSync(join(REPO, 'sources', s, 'part-names.tsv'), 'utf8')).join('\n'));
 const objects = new Set(objectsOf(world));
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 

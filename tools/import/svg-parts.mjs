@@ -279,7 +279,7 @@ export function readSvg(svg) {
 const r1 = (v) => Math.round(Math.max(0, Math.min(100, v)) * 10) / 10;
 
 // SVG text -> parts in draw order: { shape, x, y, w, h, rgb, colour, points? } in the 0-100 frame.
-export function svgToParts(svg, { maxParts = 16, maxPoints = 40, budget = 200, tolerance = 0.35 } = {}) {
+export function svgToParts(svg, { maxParts = 16, maxPoints = 40, budget = 200, tolerance = 0.35, hollow = 0.5 } = {}) {
   const { viewBox, elements } = readSvg(svg);
   const scale = 100 / Math.max(viewBox[2], viewBox[3]);
   const frame = [scale, 0, 0, scale, (100 - viewBox[2] * scale) / 2 - viewBox[0] * scale, (100 - viewBox[3] * scale) / 2 - viewBox[1] * scale];
@@ -303,14 +303,14 @@ export function svgToParts(svg, { maxParts = 16, maxPoints = 40, budget = 200, t
           : [{ closed: true, points: [[el.x, el.y], [el.x + el.w, el.y], [el.x + el.w, el.y + el.h], [el.x, el.y + el.h]].map((p) => apply(m, p)) }];
       if (el.fill) {
         // Filled: every subpath is a polygon; one that lies inside a larger one of the same path is a hole and is
-        // dropped. A shape that is mostly hole (a frame, a ring) would hide what is drawn before it, so it becomes
+        // dropped. A shape that is mostly hole (a frame, a ring; `hollow` is the share of hole that makes it one) would hide what is drawn before it, so it becomes
         // a closed line along its outer edge.
         const rings = subpaths.filter((s) => s.points.length >= 3).map((s) => ({ points: s.points, area: area(s.points) }));
         const holeOf = rings.map((r) => rings.find((k) => k !== r && k.area > r.area && inside(r.points[0][0], r.points[0][1], k.points)));
         rings.forEach((r, i) => {
           if (holeOf[i]) return;
           const holes = rings.reduce((n, h, j) => n + (holeOf[j] === r ? h.area : 0), 0);
-          if (holes >= 0.5 * r.area) parts.push({ ...base, shape: 'line', points: [...r.points, r.points[0]], closed: false, area: r.area - holes });
+          if (holes >= hollow * r.area) parts.push({ ...base, shape: 'line', points: [...r.points, r.points[0]], closed: false, area: r.area - holes });
           else parts.push({ ...base, shape: 'polygon', points: r.points, closed: true, area: r.area });
         });
       } else {
@@ -324,18 +324,19 @@ export function svgToParts(svg, { maxParts = 16, maxPoints = 40, budget = 200, t
     parts = parts.filter((_, i) => keep.has(i));
   }
   // Simplify: each polygon to at most maxPoints, all together to at most `budget` points.
-  const round = (pts) => {
+  // A polygon closes by itself, so its last point is not its first again; a line keeps it (an outline is a closed line).
+  const round = (pts, closed) => {
     const out = [];
     for (const p of pts) { const q = [r1(p[0]), r1(p[1])]; const last = out[out.length - 1]; if (!last || last[0] !== q[0] || last[1] !== q[1]) out.push(q); }
-    if (out.length > 1 && out[0][0] === out[out.length - 1][0] && out[0][1] === out[out.length - 1][1]) out.pop();
+    if (closed && out.length > 1 && out[0][0] === out[out.length - 1][0] && out[0][1] === out[out.length - 1][1]) out.pop();
     return out;
   };
   let tol = tolerance, done = [];
   for (let pass = 0; pass < 40; pass++) {
     done = parts.map((p) => {
       if (!p.points) return p;
-      let t = tol, pts = round(simplify(p.points, t, p.closed));
-      while (pts.length > maxPoints) { t *= 1.3; pts = round(simplify(p.points, t, p.closed)); }
+      let t = tol, pts = round(simplify(p.points, t, p.closed), p.closed);
+      while (pts.length > maxPoints) { t *= 1.3; pts = round(simplify(p.points, t, p.closed), p.closed); }
       return { ...p, simple: pts };
     });
     if (done.reduce((n, p) => n + (p.simple?.length ?? 0), 0) <= budget) break;
