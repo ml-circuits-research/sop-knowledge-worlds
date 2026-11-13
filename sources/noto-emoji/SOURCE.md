@@ -23,3 +23,6 @@
   pictures; `named=model`), else `part1…partN`.
 - **Twemoji was not compared:** the Noto drawings convert well (see worker-log.md R2.6) and Apache-2.0 is more
   permissive than CC BY 4.0 (the owner's rule: the more permissive source).
+- **Counts (2026-11-13, all):** 861 emoji in the kept groups, 32 not things, 18 with a hand-written object of the same
+  name (left out, questions.md Q12): 811 objects, 10,188 parts, 121,764 points, 802 word wires; 133,565 wires in 124
+  shards, 16,236,240 bytes. `sources/noto-emoji/limit.txt` holds how many objects the build takes (0: all).

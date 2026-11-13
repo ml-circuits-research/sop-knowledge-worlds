@@ -11,7 +11,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: Unicode-3.0 (Unicode License V3, permissive, with the copyright notice kept).
 - Attribution: Copyright © 1991-2025 Unicode, Inc. Unicode CLDR data, used under the Unicode License V3 (text: `docs/worlds/k.objects/LICENSE.cldr`).
 - Shard terms: Apache-2.0 AND Unicode-3.0
-- Used by: `k.objects` (53 shards)
+- Used by: `k.objects` (124 shards)
 
 ## hand-core-1
 
@@ -29,7 +29,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: Apache-2.0 (`2D/svg/LICENSE` in the repository: "Copyright 2013 Google, Inc. All Rights Reserved. Licensed under the Apache License, Version 2.0"; the fonts are OFL-1.1 and the flag images public domain; neither is used).
 - Attribution: Noto Emoji, Copyright 2013 Google, Inc., licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0 ; the notice is `docs/worlds/k.objects/LICENSE.noto-emoji`). The drawings were changed: converted to simplified polygons and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: Apache-2.0 AND Unicode-3.0
-- Used by: `k.objects` (53 shards)
+- Used by: `k.objects` (124 shards)
 
 ## wordnet-3.1
 

@@ -201,3 +201,16 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
   `named=model`; names unique inside an object; "parts of a dog face" answers head, eyes, ears, nose, mouth, tongue,
   patch; "which objects have a wheel" now also finds taxi, minibus, skateboard). Vocabulary: part names are words
   (`wheel` → the shards with wheels); 12,210 words. npm test 302 pass.
+
+## R2.6 full run (2026-11-13): all things of Noto Emoji
+
+- The pilot passed the 85% bar (197 of 200), so `sources/noto-emoji/limit.txt` is 0 (all).
+- **811 objects** (861 listed − 32 not things − 18 with a hand-written object of the same name), 10,188 parts
+  (12.6 an object), 121,764 points (150 an object), 802 word wires; **133,565 wires, 124 shards, 16,236,240 bytes**:
+  165 wires and 20.0 kB an object, 6.5 objects a shard; largest shard 1,696 wires / 205,273 bytes (inside the gate).
+  A shard loads in 32 ms on average; all 124 in 4.0 s; 0 warnings, 0 errors.
+- `k.objects` now has 841 objects (30 hand-written + 811). Previews: 841 SVGs + 12 labelled, 3.6 MB.
+- Catalog: 3 worlds, 450 shards, vocab 12,994 words (index.json 327 kB, vocab.json 716 kB).
+- npm test: 913 pass in 60 s (one render test per object; validation loads every shard twice).
+- The 611 objects outside the pilot are looked at one by one during R2.7 (labelling pictures); what is found
+  unrecognisable there is reported with those batches.

@@ -1,5 +1,5 @@
 {
- "version": "a5b96c624d98",
+ "version": "a305d07784f6",
  "sopworld": "c7247e2",
  "worlds": [
   {
@@ -259,22 +259,23 @@
     {
      "id": "k.objects/shards/noto-animal-bird-01",
      "path": "k.objects/shards/noto-animal-bird-01.sop",
-     "wires": 860,
-     "bytes": 104031,
+     "wires": 1290,
+     "bytes": 155445,
      "keys": [
       "baby chick",
       "beak",
       "body",
-      "eagle",
+      "chicken",
+      "dove",
       "eye",
-      "feather",
+      "front-facing baby chick",
+      "hatching chick",
       "head",
-      "left_foot",
       "left_leg",
       "legs",
-      "quill",
-      "right_foot",
+      "penguin",
       "right_leg",
+      "rooster",
       "tail",
       "turkey",
       "wattle",
@@ -288,30 +289,106 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-animal-bird-02",
+     "path": "k.objects/shards/noto-animal-bird-02.sop",
+     "wires": 1441,
+     "bytes": 172957,
+     "keys": [
+      "beak",
+      "body",
+      "dodo",
+      "duck",
+      "eagle",
+      "eye",
+      "feather",
+      "flamingo",
+      "head",
+      "left_foot",
+      "owl",
+      "peacock",
+      "quill",
+      "right_foot",
+      "swan",
+      "tail",
+      "wing"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-bird-03",
+     "path": "k.objects/shards/noto-animal-bird-03.sop",
+     "wires": 898,
+     "bytes": 115286,
+     "keys": [
+      "black bird",
+      "goose",
+      "parrot",
+      "phoenix",
+      "wing"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-animal-bug-01",
      "path": "k.objects/shards/noto-animal-bug-01.sop",
-     "wires": 825,
-     "bytes": 100428,
+     "wires": 1638,
+     "bytes": 198137,
      "keys": [
       "ant",
       "back_leg",
+      "beetle",
       "body",
+      "bug",
+      "cockroach",
       "cricket",
       "eye",
       "front_leg",
       "head",
+      "honeybee",
+      "lady beetle",
       "left_antenna",
+      "legs",
+      "right_antenna",
+      "snail"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-bug-02",
+     "path": "k.objects/shards/noto-animal-bug-02.sop",
+     "wires": 1190,
+     "bytes": 143794,
+     "keys": [
+      "body",
+      "fly",
       "left_claw",
       "left_eye",
-      "legs",
       "microbe",
+      "mosquito",
       "mouth",
       "nucleus",
-      "right_antenna",
       "right_claw",
       "right_eye",
       "scorpion",
-      "tail"
+      "spider",
+      "spider web",
+      "tail",
+      "worm"
      ],
      "sources": [
       "cldr-48",
@@ -323,56 +400,26 @@
     {
      "id": "k.objects/shards/noto-animal-mammal-01",
      "path": "k.objects/shards/noto-animal-mammal-01.sop",
-     "wires": 1525,
-     "bytes": 188378,
+     "wires": 1630,
+     "bytes": 200870,
      "keys": [
-      "back_leg",
-      "bison",
-      "black cat",
-      "body",
-      "cow",
       "dog face",
-      "ear",
-      "front_leg",
+      "gorilla",
+      "guide dog",
       "head",
-      "hoof1",
-      "hoof2",
-      "hoof3",
-      "hoof4",
-      "horse",
       "left_ear",
       "left_eye",
-      "left_horn",
-      "left_nostril",
-      "leg1",
-      "leg2",
-      "leg3",
-      "leopard",
-      "mane",
+      "monkey",
+      "monkey face",
       "mouth",
-      "muzzle",
       "nose",
+      "orangutan",
       "patch",
-      "patch1",
-      "patch2",
-      "patch3",
-      "patch4",
-      "patch5",
-      "patch6",
-      "pig nose",
+      "poodle",
       "right_ear",
       "right_eye",
-      "right_horn",
-      "right_nostril",
-      "spot1",
-      "spot2",
-      "spot3",
-      "spot4",
-      "spot5",
-      "tail",
-      "tongue",
-      "udder",
-      "wolf"
+      "service dog",
+      "tongue"
      ],
      "sources": [
       "cldr-48",
@@ -384,31 +431,167 @@
     {
      "id": "k.objects/shards/noto-animal-mammal-02",
      "path": "k.objects/shards/noto-animal-mammal-02.sop",
-     "wires": 1343,
-     "bytes": 162633,
+     "wires": 1549,
+     "bytes": 190665,
+     "keys": [
+      "black cat",
+      "body",
+      "cat face",
+      "fox",
+      "front_leg",
+      "head",
+      "left_ear",
+      "left_eye",
+      "lion",
+      "mouth",
+      "muzzle",
+      "nose",
+      "raccoon",
+      "right_ear",
+      "right_eye",
+      "tiger",
+      "tiger face",
+      "wolf"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-03",
+     "path": "k.objects/shards/noto-animal-mammal-03.sop",
+     "wires": 1577,
+     "bytes": 190738,
+     "keys": [
+      "back_leg",
+      "body",
+      "deer",
+      "donkey",
+      "ear",
+      "front_leg",
+      "head",
+      "hoof1",
+      "hoof2",
+      "hoof3",
+      "hoof4",
+      "horse",
+      "horse face",
+      "leg1",
+      "leg2",
+      "leg3",
+      "leopard",
+      "mane",
+      "moose",
+      "spot1",
+      "spot2",
+      "spot3",
+      "spot4",
+      "spot5",
+      "tail",
+      "unicorn",
+      "zebra"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-04",
+     "path": "k.objects/shards/noto-animal-mammal-04.sop",
+     "wires": 1589,
+     "bytes": 191799,
+     "keys": [
+      "bison",
+      "boar",
+      "body",
+      "cow",
+      "cow face",
+      "ear",
+      "head",
+      "hoof1",
+      "hoof2",
+      "hoof3",
+      "hoof4",
+      "left_horn",
+      "nose",
+      "ox",
+      "patch1",
+      "patch2",
+      "patch3",
+      "patch4",
+      "patch5",
+      "patch6",
+      "pig",
+      "pig face",
+      "right_horn",
+      "tail",
+      "udder",
+      "water buffalo"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-05",
+     "path": "k.objects/shards/noto-animal-mammal-05.sop",
+     "wires": 1557,
+     "bytes": 187282,
      "keys": [
       "back_leg",
       "body",
       "camel",
-      "elephant",
+      "ewe",
       "eye",
       "front_leg",
+      "giraffe",
+      "goat",
+      "left_nostril",
+      "llama",
+      "nose",
+      "pig nose",
+      "ram",
+      "right_nostril",
+      "two-hump camel"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-06",
+     "path": "k.objects/shards/noto-animal-mammal-06.sop",
+     "wires": 1556,
+     "bytes": 188100,
+     "keys": [
+      "body",
+      "elephant",
+      "eye",
+      "hamster",
       "head",
-      "hedgehog",
-      "koala",
+      "hippopotamus",
       "left_ear",
       "left_eye",
+      "mammoth",
+      "mouse",
       "mouse face",
-      "mouth",
-      "muzzle",
       "nose",
-      "rabbit face",
+      "rat",
+      "rhinoceros",
       "right_ear",
       "right_eye",
-      "skunk",
-      "spines",
-      "stripe1",
-      "stripe2",
       "teeth",
       "tusk",
       "whisker1",
@@ -426,27 +609,137 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-animal-mammal-07",
+     "path": "k.objects/shards/noto-animal-mammal-07.sop",
+     "wires": 1500,
+     "bytes": 183835,
+     "keys": [
+      "bat",
+      "bear",
+      "beaver",
+      "chipmunk",
+      "eye",
+      "front_leg",
+      "head",
+      "hedgehog",
+      "left_eye",
+      "muzzle",
+      "nose",
+      "polar bear",
+      "rabbit",
+      "rabbit face",
+      "right_eye",
+      "spines",
+      "whisker1",
+      "whisker2",
+      "whisker3",
+      "whisker4",
+      "whisker5",
+      "whisker6"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-08",
+     "path": "k.objects/shards/noto-animal-mammal-08.sop",
+     "wires": 1464,
+     "bytes": 176178,
+     "keys": [
+      "badger",
+      "body",
+      "head",
+      "kangaroo",
+      "koala",
+      "left_ear",
+      "left_eye",
+      "mouth",
+      "nose",
+      "otter",
+      "panda",
+      "paw prints",
+      "right_ear",
+      "right_eye",
+      "skunk",
+      "sloth",
+      "stripe1",
+      "stripe2"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-animal-marine-01",
      "path": "k.objects/shards/noto-animal-marine-01.sop",
-     "wires": 783,
-     "bytes": 94957,
+     "wires": 1495,
+     "bytes": 180969,
      "keys": [
-      "arms",
       "belly",
+      "blowfish",
       "body",
+      "dolphin",
       "eye",
-      "fin",
       "flipper",
       "gill1",
       "gill2",
       "gill3",
-      "jellyfish",
-      "left_eye",
       "orca",
       "patch",
-      "right_eye",
+      "seal",
       "shark",
+      "spouting whale",
+      "tropical fish",
+      "whale"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-marine-02",
+     "path": "k.objects/shards/noto-animal-marine-02.sop",
+     "wires": 1566,
+     "bytes": 189161,
+     "keys": [
+      "arms",
+      "body",
+      "coral",
+      "crab",
+      "fin",
+      "jellyfish",
+      "left_eye",
+      "lobster",
+      "octopus",
+      "right_eye",
+      "shrimp",
+      "spiral shell",
       "squid"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-marine-03",
+     "path": "k.objects/shards/noto-animal-marine-03.sop",
+     "wires": 200,
+     "bytes": 24494,
+     "keys": [
+      "oyster"
      ],
      "sources": [
       "cldr-48",
@@ -458,18 +751,24 @@
     {
      "id": "k.objects/shards/noto-animal-reptile-01",
      "path": "k.objects/shards/noto-animal-reptile-01.sop",
-     "wires": 423,
-     "bytes": 51479,
+     "wires": 1572,
+     "bytes": 190118,
      "keys": [
       "arm",
       "belly",
       "body",
+      "crocodile",
+      "dragon",
+      "dragon face",
       "left_eye",
+      "lizard",
       "right_eye",
+      "sauropod",
       "snake",
       "t-rex",
       "tail",
-      "tongue"
+      "tongue",
+      "turtle"
      ],
      "sources": [
       "cldr-48",
@@ -481,12 +780,18 @@
     {
      "id": "k.objects/shards/noto-arts-crafts-01",
      "path": "k.objects/shards/noto-arts-crafts-01.sop",
-     "wires": 184,
-     "bytes": 22837,
+     "wires": 1247,
+     "bytes": 152056,
      "keys": [
+      "artist palette",
       "bottom",
+      "framed picture",
+      "knot",
+      "performing arts",
+      "sewing needle",
       "thread",
-      "top"
+      "top",
+      "yarn"
      ],
      "sources": [
       "cldr-48",
@@ -498,16 +803,20 @@
     {
      "id": "k.objects/shards/noto-award-medal-01",
      "path": "k.objects/shards/noto-award-medal-01.sop",
-     "wires": 302,
-     "bytes": 37227,
+     "wires": 949,
+     "bytes": 114979,
      "keys": [
+      "1st place medal",
       "2nd place medal",
+      "3rd place medal",
       "left_ribbon",
       "medal",
       "military medal",
       "ribbon",
       "right_ribbon",
-      "star"
+      "sports medal",
+      "star",
+      "trophy"
      ],
      "sources": [
       "cldr-48",
@@ -519,18 +828,61 @@
     {
      "id": "k.objects/shards/noto-book-paper-01",
      "path": "k.objects/shards/noto-book-paper-01.sop",
-     "wires": 505,
-     "bytes": 61767,
+     "wires": 1081,
+     "bytes": 131603,
      "keys": [
       "blue book",
+      "books",
+      "closed book",
       "cover",
-      "hole",
-      "label",
+      "green book",
+      "notebook",
+      "notebook with decorative cover",
+      "open book",
+      "orange book",
+      "pages",
+      "spine"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-book-paper-02",
+     "path": "k.objects/shards/noto-book-paper-02.sop",
+     "wires": 1037,
+     "bytes": 127130,
+     "keys": [
+      "bookmark",
+      "bookmark tabs",
+      "cover",
       "ledger",
       "newspaper",
+      "page facing up",
+      "page with curl",
       "pages",
       "picture",
-      "spine",
+      "rolled-up newspaper",
+      "scroll"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-book-paper-03",
+     "path": "k.objects/shards/noto-book-paper-03.sop",
+     "wires": 116,
+     "bytes": 14274,
+     "keys": [
+      "hole",
+      "label",
       "string"
      ],
      "sources": [
@@ -543,33 +895,24 @@
     {
      "id": "k.objects/shards/noto-clothing-01",
      "path": "k.objects/shards/noto-clothing-01.sop",
-     "wires": 1068,
-     "bytes": 129877,
+     "wires": 1198,
+     "bytes": 144976,
      "keys": [
-      "bag1",
-      "bag2",
-      "belt",
-      "briefs",
-      "dress",
-      "folding hand fan",
       "frame",
-      "fringe1",
-      "fringe2",
       "glasses",
-      "handle",
+      "goggles",
+      "jeans",
+      "lab coat",
       "left_lens",
+      "necktie",
       "right_lens",
-      "running shoe",
       "safety vest",
-      "scarf",
-      "shopping bags",
-      "skirt",
-      "sole",
       "stripe1",
       "stripe2",
       "stripe3",
       "stripe4",
-      "top"
+      "sunglasses",
+      "t-shirt"
      ],
      "sources": [
       "cldr-48",
@@ -581,23 +924,124 @@
     {
      "id": "k.objects/shards/noto-clothing-02",
      "path": "k.objects/shards/noto-clothing-02.sop",
-     "wires": 666,
-     "bytes": 81069,
+     "wires": 1253,
+     "bytes": 151042,
      "keys": [
-      "band",
-      "bill",
-      "billed cap",
-      "button",
+      "belt",
+      "coat",
+      "dress",
+      "fringe1",
+      "fringe2",
+      "gloves",
+      "kimono",
+      "one-piece swimsuit",
+      "sari",
+      "scarf",
+      "skirt",
+      "socks",
+      "top"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-clothing-03",
+     "path": "k.objects/shards/noto-clothing-03.sop",
+     "wires": 1191,
+     "bytes": 144452,
+     "keys": [
+      "bikini",
+      "briefs",
+      "clutch bag",
+      "folding hand fan",
+      "handbag",
+      "handle",
+      "purse",
+      "shorts",
+      "woman’s clothes"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-clothing-04",
+     "path": "k.objects/shards/noto-clothing-04.sop",
+     "wires": 1304,
+     "bytes": 158463,
+     "keys": [
+      "backpack",
+      "bag1",
+      "bag2",
+      "flat shoe",
+      "handle",
+      "high-heeled shoe",
+      "hiking boot",
+      "man’s shoe",
+      "running shoe",
+      "shopping bags",
+      "sole",
+      "thong sandal"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-clothing-05",
+     "path": "k.objects/shards/noto-clothing-05.sop",
+     "wires": 1378,
+     "bytes": 167006,
+     "keys": [
+      "ballet shoes",
       "crown",
+      "graduation cap",
+      "hair pick",
       "jewel1",
       "jewel2",
       "jewel3",
       "jewel4",
       "jewel5",
-      "ring",
       "sole",
       "strap",
+      "top hat",
+      "woman’s boot",
+      "woman’s hat",
       "woman’s sandal"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-clothing-06",
+     "path": "k.objects/shards/noto-clothing-06.sop",
+     "wires": 921,
+     "bytes": 112969,
+     "keys": [
+      "band",
+      "bill",
+      "billed cap",
+      "button",
+      "gem stone",
+      "lipstick",
+      "military helmet",
+      "prayer beads",
+      "rescue worker’s helmet",
+      "ring"
      ],
      "sources": [
       "cldr-48",
@@ -609,11 +1053,36 @@
     {
      "id": "k.objects/shards/noto-computer-01",
      "path": "k.objects/shards/noto-computer-01.sop",
-     "wires": 580,
-     "bytes": 71458,
+     "wires": 1090,
+     "bytes": 132130,
+     "keys": [
+      "battery",
+      "body",
+      "charge",
+      "computer mouse",
+      "desktop computer",
+      "electric plug",
+      "keyboard",
+      "laptop",
+      "low battery",
+      "paper",
+      "plus",
+      "printer"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-computer-02",
+     "path": "k.objects/shards/noto-computer-02.sop",
+     "wires": 972,
+     "bytes": 118693,
      "keys": [
       "abacus",
-      "battery",
       "bead1",
       "bead2",
       "bead3",
@@ -622,17 +1091,15 @@
       "bead6",
       "bead7",
       "bead8",
-      "body",
-      "charge",
       "computer disk",
-      "low battery",
-      "paper",
-      "plus",
-      "printer",
+      "dvd",
+      "floppy disk",
+      "optical disk",
       "rod1",
       "rod2",
       "rod3",
-      "rod4"
+      "rod4",
+      "trackball"
      ],
      "sources": [
       "cldr-48",
@@ -644,13 +1111,18 @@
     {
      "id": "k.objects/shards/noto-dishware-01",
      "path": "k.objects/shards/noto-dishware-01.sop",
-     "wires": 114,
-     "bytes": 14422,
+     "wires": 859,
+     "bytes": 104423,
      "keys": [
+      "amphora",
       "blade",
       "chopsticks",
+      "fork and knife",
+      "fork and knife with plate",
       "handle",
+      "jar",
       "kitchen knife",
+      "spoon",
       "stick1",
       "stick2"
      ],
@@ -664,34 +1136,77 @@
     {
      "id": "k.objects/shards/noto-drink-01",
      "path": "k.objects/shards/noto-drink-01.sop",
-     "wires": 937,
-     "bytes": 114673,
+     "wires": 1464,
+     "bytes": 176905,
      "keys": [
       "baby bottle",
       "base",
+      "bottle",
+      "bottle with popping cork",
+      "cup",
+      "glass of milk",
+      "hot beverage",
+      "milk",
+      "sake",
+      "tea",
+      "teacup without handle",
+      "teapot",
+      "teat",
+      "wine glass"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-drink-02",
+     "path": "k.objects/shards/noto-drink-02.sop",
+     "wires": 1470,
+     "bytes": 179632,
+     "keys": [
       "base1",
       "base2",
-      "bottle",
-      "bubble tea",
+      "beer mug",
+      "clinking beer mugs",
       "clinking glasses",
       "cocktail glass",
-      "cup",
+      "cup with straw",
       "drink1",
       "drink2",
       "glass",
-      "lid",
-      "milk",
       "olive",
+      "pouring liquid",
+      "tropical drink",
+      "tumbler glass"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-drink-03",
+     "path": "k.objects/shards/noto-drink-03.sop",
+     "wires": 730,
+     "bytes": 88806,
+     "keys": [
+      "beverage box",
+      "bubble tea",
+      "ice",
+      "lid",
+      "mate",
       "pearl1",
       "pearl2",
       "pearl3",
       "pearl4",
       "pearl5",
       "pearl6",
-      "straw",
-      "tea",
-      "teacup without handle",
-      "teat"
+      "straw"
      ],
      "sources": [
       "cldr-48",
@@ -703,28 +1218,71 @@
     {
      "id": "k.objects/shards/noto-event-01",
      "path": "k.objects/shards/noto-event-01.sop",
-     "wires": 939,
-     "bytes": 114491,
+     "wires": 1452,
+     "bytes": 175980,
      "keys": [
-      "box",
+      "balloon",
+      "christmas tree",
+      "confetti ball",
       "firecracker",
-      "flower1",
-      "flower2",
+      "fireworks",
       "fuse",
       "jack-o-lantern",
       "left_eye",
+      "party popper",
+      "right_eye",
+      "spark",
+      "sparkler",
+      "stem"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-event-02",
+     "path": "k.objects/shards/noto-event-02.sop",
+     "wires": 1526,
+     "bytes": 186117,
+     "keys": [
+      "carp streamer",
+      "flower1",
+      "flower2",
+      "japanese dolls",
+      "moon viewing ceremony",
       "paper1",
       "paper2",
       "paper3",
       "paper4",
-      "ribbon1",
-      "ribbon2",
-      "right_eye",
-      "spark",
-      "stem",
+      "pine decoration",
+      "red envelope",
+      "ribbon",
       "string",
       "tanabata tree",
-      "wind chime",
+      "wind chime"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-event-03",
+     "path": "k.objects/shards/noto-event-03.sop",
+     "wires": 425,
+     "bytes": 51866,
+     "keys": [
+      "admission tickets",
+      "box",
+      "reminder ribbon",
+      "ribbon1",
+      "ribbon2",
+      "ticket",
       "wrapped gift"
      ],
      "sources": [
@@ -737,19 +1295,60 @@
     {
      "id": "k.objects/shards/noto-food-asian-01",
      "path": "k.objects/shards/noto-food-asian-01.sop",
-     "wires": 661,
-     "bytes": 79783,
+     "wires": 1552,
+     "bytes": 187903,
      "keys": [
       "base",
+      "bento box",
       "bowl",
       "cooked rice",
+      "curry rice",
+      "inside",
+      "potato",
+      "rice ball",
+      "rice cracker",
+      "roasted sweet potato",
+      "spaghetti",
+      "steaming bowl"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-asian-02",
+     "path": "k.objects/shards/noto-food-asian-02.sop",
+     "wires": 1398,
+     "bytes": 168235,
+     "keys": [
       "cookie",
+      "dango",
+      "dumpling",
       "fish cake with swirl",
       "fortune cookie",
-      "inside",
+      "fried shrimp",
+      "moon cake",
+      "oden",
       "paper",
-      "potato",
-      "roasted sweet potato"
+      "sushi"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-asian-03",
+     "path": "k.objects/shards/noto-food-asian-03.sop",
+     "wires": 159,
+     "bytes": 19498,
+     "keys": [
+      "takeout box"
      ],
      "sources": [
       "cldr-48",
@@ -761,19 +1360,64 @@
     {
      "id": "k.objects/shards/noto-food-fruit-01",
      "path": "k.objects/shards/noto-food-fruit-01.sop",
-     "wires": 898,
-     "bytes": 108864,
+     "wires": 1428,
+     "bytes": 176011,
      "keys": [
-      "blueberries",
-      "coconut",
+      "banana",
       "fruit",
+      "grapes",
       "leaf",
       "leaves",
-      "pear",
+      "lemon",
+      "lime",
+      "melon",
       "pineapple",
-      "shell",
       "stem",
-      "tangerine"
+      "tangerine",
+      "watermelon"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-fruit-02",
+     "path": "k.objects/shards/noto-food-fruit-02.sop",
+     "wires": 1322,
+     "bytes": 158842,
+     "keys": [
+      "blueberries",
+      "cherries",
+      "fruit",
+      "green apple",
+      "mango",
+      "peach",
+      "pear",
+      "red apple",
+      "stem",
+      "strawberry"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-fruit-03",
+     "path": "k.objects/shards/noto-food-fruit-03.sop",
+     "wires": 755,
+     "bytes": 90985,
+     "keys": [
+      "coconut",
+      "kiwi fruit",
+      "olive",
+      "shell",
+      "tomato"
      ],
      "sources": [
       "cldr-48",
@@ -785,33 +1429,19 @@
     {
      "id": "k.objects/shards/noto-food-prepared-01",
      "path": "k.objects/shards/noto-food-prepared-01.sop",
-     "wires": 1487,
-     "bytes": 179569,
+     "wires": 1440,
+     "bytes": 173906,
      "keys": [
-      "bacon",
-      "bowl",
+      "bagel",
+      "baguette bread",
       "bread",
-      "bun",
-      "cheese wedge",
-      "cooking",
+      "croissant",
       "crust",
-      "egg_white",
-      "green salad",
-      "hole1",
-      "hole2",
-      "hole3",
-      "hole4",
-      "hole5",
-      "hole6",
-      "hole7",
-      "hot dog",
-      "mustard",
+      "flatbread",
+      "pancakes",
       "pretzel",
-      "sausage",
-      "side",
       "slice",
-      "tamale",
-      "top"
+      "waffle"
      ],
      "sources": [
       "cldr-48",
@@ -823,11 +1453,92 @@
     {
      "id": "k.objects/shards/noto-food-prepared-02",
      "path": "k.objects/shards/noto-food-prepared-02.sop",
-     "wires": 157,
-     "bytes": 19313,
+     "wires": 1555,
+     "bytes": 187991,
+     "keys": [
+      "bacon",
+      "cheese wedge",
+      "cut of meat",
+      "french fries",
+      "hamburger",
+      "hole1",
+      "hole2",
+      "hole3",
+      "hole4",
+      "hole5",
+      "hole6",
+      "hole7",
+      "meat on bone",
+      "pizza",
+      "poultry leg",
+      "side",
+      "top"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-prepared-03",
+     "path": "k.objects/shards/noto-food-prepared-03.sop",
+     "wires": 1542,
+     "bytes": 186195,
+     "keys": [
+      "bun",
+      "burrito",
+      "egg",
+      "falafel",
+      "hot dog",
+      "mustard",
+      "sandwich",
+      "sausage",
+      "stuffed flatbread",
+      "taco",
+      "tamale"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-prepared-04",
+     "path": "k.objects/shards/noto-food-prepared-04.sop",
+     "wires": 1459,
+     "bytes": 176773,
+     "keys": [
+      "bowl",
+      "bowl with spoon",
+      "butter",
+      "cooking",
+      "egg_white",
+      "fondue",
+      "green salad",
+      "popcorn",
+      "pot of food",
+      "shallow pan of food"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-prepared-05",
+     "path": "k.objects/shards/noto-food-prepared-05.sop",
+     "wires": 363,
+     "bytes": 44180,
      "keys": [
       "canned food",
-      "label"
+      "label",
+      "salt"
      ],
      "sources": [
       "cldr-48",
@@ -839,17 +1550,42 @@
     {
      "id": "k.objects/shards/noto-food-sweet-01",
      "path": "k.objects/shards/noto-food-sweet-01.sop",
-     "wires": 618,
-     "bytes": 75089,
+     "wires": 1597,
+     "bytes": 193948,
      "keys": [
       "base",
+      "birthday cake",
       "bowl",
-      "candy",
       "cherry",
+      "cookie",
       "cream",
+      "cupcake",
+      "doughnut",
       "ice cream",
+      "shaved ice",
       "shortcake",
+      "soft ice cream",
       "stem"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-sweet-02",
+     "path": "k.objects/shards/noto-food-sweet-02.sop",
+     "wires": 1117,
+     "bytes": 135077,
+     "keys": [
+      "candy",
+      "chocolate bar",
+      "custard",
+      "honey pot",
+      "lollipop",
+      "pie"
      ],
      "sources": [
       "cldr-48",
@@ -861,15 +1597,58 @@
     {
      "id": "k.objects/shards/noto-food-vegetable-01",
      "path": "k.objects/shards/noto-food-vegetable-01.sop",
-     "wires": 627,
-     "bytes": 75624,
+     "wires": 1255,
+     "bytes": 150874,
      "keys": [
+      "avocado",
+      "bell pepper",
       "carrot",
       "cucumber",
-      "ginger root",
+      "ear of corn",
+      "eggplant",
+      "hot pepper",
       "leaves",
-      "onion",
+      "potato",
       "root"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-vegetable-02",
+     "path": "k.objects/shards/noto-food-vegetable-02.sop",
+     "wires": 1378,
+     "bytes": 165130,
+     "keys": [
+      "beans",
+      "broccoli",
+      "chestnut",
+      "garlic",
+      "ginger root",
+      "leafy green",
+      "onion",
+      "peanuts"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-vegetable-03",
+     "path": "k.objects/shards/noto-food-vegetable-03.sop",
+     "wires": 465,
+     "bytes": 58259,
+     "keys": [
+      "brown mushroom",
+      "pea pod",
+      "root vegetable"
      ],
      "sources": [
       "cldr-48",
@@ -881,24 +1660,49 @@
     {
      "id": "k.objects/shards/noto-game-01",
      "path": "k.objects/shards/noto-game-01.sop",
-     "wires": 862,
-     "bytes": 103602,
+     "wires": 1312,
+     "bytes": 158754,
      "keys": [
       "ball",
+      "bullseye",
+      "circle",
+      "crystal ball",
+      "kite",
+      "magic wand",
+      "number",
+      "pool 8 ball",
+      "video game",
+      "water pistol",
+      "yo-yo"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-game-02",
+     "path": "k.objects/shards/noto-game-02.sop",
+     "wires": 1347,
+     "bytes": 163198,
+     "keys": [
       "base",
       "body",
       "bow",
-      "bullseye",
       "button",
-      "chess pawn",
-      "circle",
+      "game die",
       "head",
       "joystick",
       "knob",
       "left_ear",
-      "number",
-      "pool 8 ball",
+      "mirror ball",
+      "nesting dolls",
+      "piñata",
+      "puzzle piece",
       "right_ear",
+      "slot machine",
       "stick",
       "teddy bear"
      ],
@@ -910,36 +1714,114 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-game-03",
+     "path": "k.objects/shards/noto-game-03.sop",
+     "wires": 195,
+     "bytes": 23570,
+     "keys": [
+      "chess pawn",
+      "head"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-hotel-01",
+     "path": "k.objects/shards/noto-hotel-01.sop",
+     "wires": 324,
+     "bytes": 39761,
+     "keys": [
+      "bellhop bell",
+      "luggage"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-household-01",
      "path": "k.objects/shards/noto-household-01.sop",
-     "wires": 782,
-     "bytes": 95570,
+     "wires": 1035,
+     "bytes": 126158,
      "keys": [
       "bed",
       "blanket",
-      "bottle",
       "bottom_panel",
-      "cap",
+      "couch and lamp",
       "door",
-      "drop",
-      "handle",
-      "head",
+      "elevator",
       "headboard",
-      "hole",
+      "left_leg",
+      "mirror",
+      "plunger",
+      "right_leg",
+      "toilet",
+      "top_panel",
+      "window"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-household-02",
+     "path": "k.objects/shards/noto-household-02.sop",
+     "wires": 1329,
+     "bytes": 161440,
+     "keys": [
+      "basket",
+      "bathtub",
+      "bottle",
+      "broom",
+      "cap",
+      "drop",
+      "head",
       "jet1",
       "jet2",
       "jet3",
       "jet4",
       "jet5",
-      "left_leg",
       "lotion bottle",
+      "mouse trap",
       "pipe",
       "pump",
-      "right_leg",
+      "razor",
+      "safety pin",
+      "shower"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-household-03",
+     "path": "k.objects/shards/noto-household-03.sop",
+     "wires": 1289,
+     "bytes": 156507,
+     "keys": [
+      "bubbles",
+      "bucket",
+      "fire extinguisher",
+      "handle",
+      "hole",
       "roll of paper",
-      "shower",
-      "toothbrush",
-      "top_panel"
+      "shopping cart",
+      "soap",
+      "sponge",
+      "toothbrush"
      ],
      "sources": [
       "cldr-48",
@@ -951,19 +1833,45 @@
     {
      "id": "k.objects/shards/noto-light-video-01",
      "path": "k.objects/shards/noto-light-video-01.sop",
-     "wires": 582,
-     "bytes": 71364,
+     "wires": 937,
+     "bytes": 115992,
      "keys": [
       "board",
       "body",
+      "camera",
+      "camera with flash",
+      "clapper board",
+      "film frames",
+      "film projector",
+      "lens",
+      "movie camera",
+      "television",
+      "video camera"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-light-video-02",
+     "path": "k.objects/shards/noto-light-video-02.sop",
+     "wires": 1332,
+     "bytes": 162086,
+     "keys": [
       "bowl",
       "candle",
-      "clapper board",
       "diya lamp",
       "flame",
+      "flashlight",
       "glow",
-      "lens",
-      "video camera"
+      "light bulb",
+      "magnifying glass tilted left",
+      "magnifying glass tilted right",
+      "red paper lantern",
+      "videocassette"
      ],
      "sources": [
       "cldr-48",
@@ -975,11 +1883,16 @@
     {
      "id": "k.objects/shards/noto-lock-01",
      "path": "k.objects/shards/noto-lock-01.sop",
-     "wires": 145,
-     "bytes": 17834,
+     "wires": 957,
+     "bytes": 115594,
      "keys": [
       "body",
+      "key",
       "keyhole",
+      "locked",
+      "locked with key",
+      "locked with pen",
+      "old key",
       "shackle",
       "unlocked"
      ],
@@ -993,20 +1906,43 @@
     {
      "id": "k.objects/shards/noto-mail-01",
      "path": "k.objects/shards/noto-mail-01.sop",
-     "wires": 348,
-     "bytes": 43360,
+     "wires": 738,
+     "bytes": 89983,
      "keys": [
       "arrow",
+      "closed mailbox with raised flag",
+      "e-mail",
+      "envelope",
+      "envelope with arrow",
+      "inbox tray",
+      "incoming envelope",
+      "outbox tray",
+      "package",
+      "tray"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-mail-02",
+     "path": "k.objects/shards/noto-mail-02.sop",
+     "wires": 655,
+     "bytes": 81865,
+     "keys": [
       "ballot",
       "ballot box with ballot",
       "box",
       "closed mailbox with lowered flag",
-      "envelope",
       "flag",
-      "outbox tray",
+      "open mailbox with lowered flag",
+      "open mailbox with raised flag",
       "post",
-      "slot",
-      "tray"
+      "postbox",
+      "slot"
      ],
      "sources": [
       "cldr-48",
@@ -1018,11 +1954,17 @@
     {
      "id": "k.objects/shards/noto-medical-01",
      "path": "k.objects/shards/noto-medical-01.sop",
-     "wires": 83,
-     "bytes": 10397,
+     "wires": 817,
+     "bytes": 99277,
      "keys": [
       "adhesive bandage",
-      "bandage"
+      "bandage",
+      "crutch",
+      "drop of blood",
+      "pill",
+      "stethoscope",
+      "syringe",
+      "x-ray"
      ],
      "sources": [
       "cldr-48",
@@ -1034,15 +1976,38 @@
     {
      "id": "k.objects/shards/noto-money-01",
      "path": "k.objects/shards/noto-money-01.sop",
-     "wires": 318,
-     "bytes": 39200,
+     "wires": 1202,
+     "bytes": 146359,
      "keys": [
       "band",
+      "coin",
+      "dollar banknote",
+      "euro banknote",
       "left_wing",
+      "money bag",
       "money with wings",
+      "pound banknote",
       "right_wing",
       "symbol",
+      "treasure chest",
       "yen banknote"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-money-02",
+     "path": "k.objects/shards/noto-money-02.sop",
+     "wires": 236,
+     "bytes": 29317,
+     "keys": [
+      "chart increasing with yen",
+      "credit card",
+      "receipt"
      ],
      "sources": [
       "cldr-48",
@@ -1054,13 +2019,34 @@
     {
      "id": "k.objects/shards/noto-music-01",
      "path": "k.objects/shards/noto-music-01.sop",
-     "wires": 144,
-     "bytes": 18107,
+     "wires": 991,
+     "bytes": 120599,
      "keys": [
       "control knobs",
+      "headphone",
+      "level slider",
+      "microphone",
       "musical note",
+      "musical notes",
+      "musical score",
       "note",
-      "panel"
+      "panel",
+      "studio microphone"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-music-02",
+     "path": "k.objects/shards/noto-music-02.sop",
+     "wires": 120,
+     "bytes": 15198,
+     "keys": [
+      "radio"
      ],
      "sources": [
       "cldr-48",
@@ -1072,24 +2058,48 @@
     {
      "id": "k.objects/shards/noto-musical-instrument-01",
      "path": "k.objects/shards/noto-musical-instrument-01.sop",
-     "wires": 644,
-     "bytes": 78390,
+     "wires": 1337,
+     "bytes": 162083,
      "keys": [
+      "accordion",
+      "banjo",
       "bell",
       "body",
-      "drum",
       "guitar",
-      "harp",
       "head",
       "key1",
       "key2",
       "key3",
       "key4",
-      "left_stick",
       "mouthpiece",
+      "musical keyboard",
       "neck",
-      "right_stick",
-      "saxophone"
+      "saxophone",
+      "trombone",
+      "trumpet",
+      "violin"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-musical-instrument-02",
+     "path": "k.objects/shards/noto-musical-instrument-02.sop",
+     "wires": 887,
+     "bytes": 108021,
+     "keys": [
+      "body",
+      "drum",
+      "flute",
+      "harp",
+      "left_stick",
+      "long drum",
+      "maracas",
+      "right_stick"
      ],
      "sources": [
       "cldr-48",
@@ -1101,24 +2111,69 @@
     {
      "id": "k.objects/shards/noto-office-01",
      "path": "k.objects/shards/noto-office-01.sop",
-     "wires": 1005,
-     "bytes": 122621,
+     "wires": 998,
+     "bytes": 121688,
      "keys": [
-      "box",
       "briefcase",
       "calendar",
-      "card",
-      "card file box",
-      "card index",
+      "card index dividers",
       "case",
-      "clip",
-      "clipboard",
       "digit1",
       "digit2",
+      "file folder",
       "handle",
       "header",
+      "open file folder",
+      "page",
+      "spiral calendar",
+      "spiral notepad",
+      "tear-off calendar"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-office-02",
+     "path": "k.objects/shards/noto-office-02.sop",
+     "wires": 867,
+     "bytes": 106556,
+     "keys": [
+      "bar chart",
+      "card",
+      "card index",
+      "chart decreasing",
+      "chart increasing",
+      "clip",
+      "clipboard",
+      "paperclip",
+      "pushpin",
+      "round pushpin"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-office-03",
+     "path": "k.objects/shards/noto-office-03.sop",
+     "wires": 958,
+     "bytes": 117721,
+     "keys": [
+      "box",
+      "card file box",
+      "file cabinet",
       "linked paperclips",
-      "page"
+      "scissors",
+      "straight ruler",
+      "triangular ruler",
+      "wastebasket"
      ],
      "sources": [
       "cldr-48",
@@ -1130,17 +2185,37 @@
     {
      "id": "k.objects/shards/noto-other-object-01",
      "path": "k.objects/shards/noto-other-object-01.sop",
-     "wires": 421,
-     "bytes": 51544,
+     "wires": 1184,
+     "bytes": 142804,
      "keys": [
       "amulet",
-      "card",
       "cigarette",
+      "coffin",
       "filter",
-      "identification card",
+      "funeral urn",
+      "hamsa",
+      "headstone",
       "iris",
+      "moai",
       "nazar amulet",
-      "pupil",
+      "placard",
+      "pupil"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-other-object-02",
+     "path": "k.objects/shards/noto-other-object-02.sop",
+     "wires": 119,
+     "bytes": 14992,
+     "keys": [
+      "card",
+      "identification card",
       "stripe"
      ],
      "sources": [
@@ -1153,10 +2228,15 @@
     {
      "id": "k.objects/shards/noto-phone-01",
      "path": "k.objects/shards/noto-phone-01.sop",
-     "wires": 194,
-     "bytes": 24165,
+     "wires": 1085,
+     "bytes": 132031,
      "keys": [
+      "fax machine",
       "handset",
+      "mobile phone",
+      "mobile phone with arrow",
+      "pager",
+      "telephone",
       "telephone receiver"
      ],
      "sources": [
@@ -1169,34 +2249,53 @@
     {
      "id": "k.objects/shards/noto-place-building-01",
      "path": "k.objects/shards/noto-place-building-01.sop",
-     "wires": 933,
-     "bytes": 114726,
+     "wires": 1266,
+     "bytes": 153479,
      "keys": [
-      "bank",
       "base",
-      "building",
+      "brick",
       "building construction",
-      "clock",
+      "classical building",
       "crane",
-      "dollar_sign",
       "door",
+      "houses",
       "hut",
-      "left_bush",
-      "left_column",
-      "left_door",
-      "office building",
-      "right_bush",
-      "right_column",
-      "right_door",
-      "roof",
+      "rock",
       "roof1",
       "roof2",
       "roof3",
-      "school",
-      "tower_roof",
+      "stadium",
       "wall",
-      "wedding",
-      "window",
+      "wood"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-building-02",
+     "path": "k.objects/shards/noto-place-building-02.sop",
+     "wires": 1097,
+     "bytes": 136227,
+     "keys": [
+      "bank",
+      "building",
+      "derelict house",
+      "dollar_sign",
+      "door",
+      "hospital",
+      "hotel",
+      "house with garden",
+      "japanese post office",
+      "left_column",
+      "left_door",
+      "office building",
+      "post office",
+      "right_column",
+      "right_door",
       "window1",
       "window2",
       "window3",
@@ -1215,15 +2314,86 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-place-building-03",
+     "path": "k.objects/shards/noto-place-building-03.sop",
+     "wires": 1048,
+     "bytes": 130001,
+     "keys": [
+      "building",
+      "clock",
+      "convenience store",
+      "department store",
+      "door",
+      "factory",
+      "japanese castle",
+      "left_bush",
+      "love hotel",
+      "right_bush",
+      "roof",
+      "school",
+      "tokyo tower",
+      "tower_roof",
+      "wall",
+      "wedding",
+      "window",
+      "window1",
+      "window2",
+      "window3",
+      "window4"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-building-04",
+     "path": "k.objects/shards/noto-place-building-04.sop",
+     "wires": 209,
+     "bytes": 26017,
+     "keys": [
+      "statue of liberty"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-place-geographic-01",
      "path": "k.objects/shards/noto-place-geographic-01.sop",
-     "wires": 429,
-     "bytes": 52337,
+     "wires": 1696,
+     "bytes": 205273,
      "keys": [
+      "beach with umbrella",
+      "camping",
+      "desert",
       "desert island",
+      "landslide",
       "mount fuji",
       "mountain",
+      "snow-capped mountain",
+      "volcano",
       "water"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-geographic-02",
+     "path": "k.objects/shards/noto-place-geographic-02.sop",
+     "wires": 207,
+     "bytes": 25532,
+     "keys": [
+      "national park"
      ],
      "sources": [
       "cldr-48",
@@ -1235,15 +2405,20 @@
     {
      "id": "k.objects/shards/noto-place-map-01",
      "path": "k.objects/shards/noto-place-map-01.sop",
-     "wires": 406,
-     "bytes": 49147,
+     "wires": 1339,
+     "bytes": 163274,
      "keys": [
+      "compass",
       "globe showing americas",
+      "globe showing asia-australia",
+      "globe showing europe-africa",
+      "globe with meridians",
       "land1",
       "land2",
       "map of japan",
       "ocean",
-      "sea"
+      "sea",
+      "world map"
      ],
      "sources": [
       "cldr-48",
@@ -1255,21 +2430,62 @@
     {
      "id": "k.objects/shards/noto-place-other-01",
      "path": "k.objects/shards/noto-place-other-01.sop",
-     "wires": 501,
-     "bytes": 62914,
+     "wires": 1004,
+     "bytes": 123526,
      "keys": [
-      "barber pole",
-      "carousel horse",
+      "cityscape",
       "cityscape at dusk",
+      "foggy",
+      "fountain",
       "moon",
       "night with stars",
-      "pole",
       "sky",
       "star",
+      "sunrise",
+      "sunrise over mountains",
+      "tent"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-other-02",
+     "path": "k.objects/shards/noto-place-other-02.sop",
+     "wires": 1363,
+     "bytes": 166573,
+     "keys": [
+      "barber pole",
+      "bridge at night",
+      "carousel horse",
+      "ferris wheel",
+      "hot springs",
+      "playground slide",
+      "pole",
+      "roller coaster",
       "stripe1",
       "stripe2",
       "stripe3",
+      "sunset",
       "top"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-other-03",
+     "path": "k.objects/shards/noto-place-other-03.sop",
+     "wires": 201,
+     "bytes": 24918,
+     "keys": [
+      "circus tent"
      ],
      "sources": [
       "cldr-48",
@@ -1281,18 +2497,22 @@
     {
      "id": "k.objects/shards/noto-place-religious-01",
      "path": "k.objects/shards/noto-place-religious-01.sop",
-     "wires": 306,
-     "bytes": 38024,
+     "wires": 851,
+     "bytes": 104380,
      "keys": [
       "band",
+      "church",
       "crescent",
       "door",
+      "hindu temple",
       "kaaba",
       "left_minaret",
       "left_side",
       "mosque",
       "right_minaret",
-      "right_side"
+      "right_side",
+      "shinto shrine",
+      "synagogue"
      ],
      "sources": [
       "cldr-48",
@@ -1304,15 +2524,38 @@
     {
      "id": "k.objects/shards/noto-plant-flower-01",
      "path": "k.objects/shards/noto-plant-flower-01.sop",
-     "wires": 625,
-     "bytes": 75716,
+     "wires": 1605,
+     "bytes": 193396,
      "keys": [
+      "bouquet",
+      "cherry blossom",
       "flower",
       "hibiscus",
+      "lotus",
+      "rose",
+      "rosette",
+      "white flower",
+      "wilted flower"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-plant-flower-02",
+     "path": "k.objects/shards/noto-plant-flower-02.sop",
+     "wires": 754,
+     "bytes": 90986,
+     "keys": [
+      "blossom",
       "hyacinth",
       "left_leaf",
-      "lotus",
-      "stem"
+      "stem",
+      "sunflower",
+      "tulip"
      ],
      "sources": [
       "cldr-48",
@@ -1324,20 +2567,64 @@
     {
      "id": "k.objects/shards/noto-plant-other-01",
      "path": "k.objects/shards/noto-plant-other-01.sop",
-     "wires": 587,
-     "bytes": 71253,
+     "wires": 1408,
+     "bytes": 170376,
      "keys": [
+      "cactus",
       "crown",
       "deciduous tree",
+      "evergreen tree",
       "herb",
-      "leaf fluttering in wind",
       "leaf1",
       "leaf2",
       "leaf3",
       "leaf4",
       "leaf5",
-      "leafless tree",
+      "palm tree",
+      "potted plant",
+      "seedling",
+      "sheaf of rice",
       "stem",
+      "trunk"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-plant-other-02",
+     "path": "k.objects/shards/noto-plant-other-02.sop",
+     "wires": 1445,
+     "bytes": 174052,
+     "keys": [
+      "empty nest",
+      "fallen leaf",
+      "four leaf clover",
+      "leaf fluttering in wind",
+      "leaf1",
+      "leaf2",
+      "maple leaf",
+      "mushroom",
+      "nest with eggs",
+      "shamrock"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-plant-other-03",
+     "path": "k.objects/shards/noto-plant-other-03.sop",
+     "wires": 95,
+     "bytes": 11917,
+     "keys": [
+      "leafless tree",
       "trunk"
      ],
      "sources": [
@@ -1350,13 +2637,18 @@
     {
      "id": "k.objects/shards/noto-science-01",
      "path": "k.objects/shards/noto-science-01.sop",
-     "wires": 317,
-     "bytes": 39123,
+     "wires": 1143,
+     "bytes": 138757,
      "keys": [
+      "alembic",
       "base",
       "dish",
+      "dna",
+      "microscope",
       "petri dish",
-      "satellite antenna"
+      "satellite antenna",
+      "telescope",
+      "test tube"
      ],
      "sources": [
       "cldr-48",
@@ -1368,39 +2660,18 @@
     {
      "id": "k.objects/shards/noto-sky-weather-01",
      "path": "k.objects/shards/noto-sky-weather-01.sop",
-     "wires": 1135,
-     "bytes": 138188,
+     "wires": 1445,
+     "bytes": 175298,
      "keys": [
-      "cloud",
-      "cloud with lightning",
-      "cyclone",
-      "face",
-      "full moon face",
-      "ground",
-      "left_cheek",
-      "left_eye",
-      "milky way",
+      "first quarter moon",
+      "full moon",
+      "last quarter moon",
       "moon",
-      "mouth",
-      "new moon face",
-      "nose",
-      "ray1",
-      "ray2",
-      "ray3",
-      "ray4",
-      "ray5",
-      "right_cheek",
-      "right_eye",
-      "spiral",
-      "star1",
-      "star2",
-      "star3",
-      "star4",
-      "star5",
-      "sun",
-      "sun behind large cloud",
+      "new moon",
+      "waning crescent moon",
       "waning gibbous moon",
-      "waxing crescent moon"
+      "waxing crescent moon",
+      "waxing gibbous moon"
      ],
      "sources": [
       "cldr-48",
@@ -1412,16 +2683,126 @@
     {
      "id": "k.objects/shards/noto-sky-weather-02",
      "path": "k.objects/shards/noto-sky-weather-02.sop",
-     "wires": 189,
-     "bytes": 23245,
+     "wires": 1178,
+     "bytes": 142483,
      "keys": [
+      "crescent moon",
+      "face",
+      "first quarter moon face",
+      "full moon face",
+      "last quarter moon face",
+      "left_cheek",
+      "left_eye",
+      "mouth",
+      "new moon face",
+      "nose",
+      "right_cheek",
+      "right_eye",
+      "ringed planet",
+      "sun with face",
+      "thermometer"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sky-weather-03",
+     "path": "k.objects/shards/noto-sky-weather-03.sop",
+     "wires": 1307,
+     "bytes": 158927,
+     "keys": [
+      "cloud",
+      "cloud with lightning and rain",
+      "glowing star",
+      "ground",
+      "milky way",
+      "ray1",
+      "ray2",
+      "ray3",
+      "ray4",
+      "ray5",
+      "shooting star",
+      "star1",
+      "star2",
+      "star3",
+      "star4",
+      "star5",
+      "sun",
+      "sun behind cloud",
+      "sun behind large cloud",
+      "sun behind rain cloud",
+      "sun behind small cloud"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sky-weather-04",
+     "path": "k.objects/shards/noto-sky-weather-04.sop",
+     "wires": 1183,
+     "bytes": 142048,
+     "keys": [
+      "cloud",
+      "cloud with lightning",
+      "cloud with rain",
+      "cloud with snow",
+      "cyclone",
+      "fog",
+      "rainbow",
+      "spiral",
+      "tornado",
+      "wind face"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sky-weather-05",
+     "path": "k.objects/shards/noto-sky-weather-05.sop",
+     "wires": 997,
+     "bytes": 120498,
+     "keys": [
+      "closed umbrella",
       "comet",
+      "fire",
+      "high voltage",
       "pole",
       "sand",
+      "snowflake",
+      "snowman without snow",
       "tail",
       "tip",
       "umbrella",
-      "umbrella on ground"
+      "umbrella on ground",
+      "umbrella with rain drops"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sky-weather-06",
+     "path": "k.objects/shards/noto-sky-weather-06.sop",
+     "wires": 154,
+     "bytes": 18868,
+     "keys": [
+      "droplet",
+      "water wave"
      ],
      "sources": [
       "cldr-48",
@@ -1433,11 +2814,32 @@
     {
      "id": "k.objects/shards/noto-sound-01",
      "path": "k.objects/shards/noto-sound-01.sop",
-     "wires": 418,
-     "bytes": 51228,
+     "wires": 1532,
+     "bytes": 185920,
      "keys": [
+      "bell",
+      "loudspeaker",
+      "megaphone",
+      "muted speaker",
       "postal horn",
+      "speaker high volume",
+      "speaker low volume",
       "speaker medium volume"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sound-02",
+     "path": "k.objects/shards/noto-sound-02.sop",
+     "wires": 211,
+     "bytes": 26135,
+     "keys": [
+      "bell with slash"
      ],
      "sources": [
       "cldr-48",
@@ -1449,21 +2851,85 @@
     {
      "id": "k.objects/shards/noto-sport-01",
      "path": "k.objects/shards/noto-sport-01.sop",
-     "wires": 1075,
-     "bytes": 130362,
+     "wires": 1556,
+     "bytes": 187396,
      "keys": [
+      "american football",
+      "ball",
+      "baseball",
+      "basketball",
+      "rugby football",
+      "soccer ball",
+      "softball",
+      "tennis",
+      "volleyball"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sport-02",
+     "path": "k.objects/shards/noto-sport-02.sop",
+     "wires": 1317,
+     "bytes": 159605,
+     "keys": [
+      "badminton",
       "ball",
       "bat",
+      "bowling",
       "cricket game",
-      "goal net",
+      "field hockey",
+      "flying disc",
       "handle",
+      "ice hockey",
+      "lacrosse",
       "paddle",
-      "ping pong",
-      "rugby football",
+      "ping pong"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sport-03",
+     "path": "k.objects/shards/noto-sport-03.sop",
+     "wires": 1422,
+     "bytes": 171449,
+     "keys": [
+      "boxing glove",
+      "diving mask",
+      "fishing pole",
+      "flag in hole",
+      "goal net",
+      "ice skate",
+      "martial arts uniform",
       "running shirt",
       "shirt",
-      "softball",
       "stripe"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sport-04",
+     "path": "k.objects/shards/noto-sport-04.sop",
+     "wires": 578,
+     "bytes": 70294,
+     "keys": [
+      "curling stone",
+      "skis",
+      "sled"
      ],
      "sources": [
       "cldr-48",
@@ -1475,17 +2941,22 @@
     {
      "id": "k.objects/shards/noto-time-01",
      "path": "k.objects/shards/noto-time-01.sop",
-     "wires": 193,
-     "bytes": 23974,
+     "wires": 926,
+     "bytes": 112537,
      "keys": [
+      "alarm clock",
       "bottom",
       "button",
       "glass",
       "hand",
       "hourglass done",
+      "hourglass not done",
+      "mantelpiece clock",
       "sand",
       "stopwatch",
-      "top"
+      "timer clock",
+      "top",
+      "watch"
      ],
      "sources": [
       "cldr-48",
@@ -1497,23 +2968,85 @@
     {
      "id": "k.objects/shards/noto-tool-01",
      "path": "k.objects/shards/noto-tool-01.sop",
-     "wires": 1026,
-     "bytes": 128271,
+     "wires": 1154,
+     "bytes": 139060,
      "keys": [
-      "boomerang",
-      "broken chain",
-      "clamp",
-      "frame",
+      "axe",
+      "bomb",
+      "crossed swords",
+      "dagger",
       "hammer",
+      "hammer and pick",
       "hammer and wrench",
       "handle",
       "head",
+      "pick",
+      "wrench"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-tool-02",
+     "path": "k.objects/shards/noto-tool-02.sop",
+     "wires": 1018,
+     "bytes": 122693,
+     "keys": [
+      "boomerang",
+      "bow and arrow",
+      "carpentry saw",
+      "gear",
+      "nut and bolt",
+      "screwdriver",
+      "shield",
+      "wrench"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-tool-03",
+     "path": "k.objects/shards/noto-tool-03.sop",
+     "wires": 1331,
+     "bytes": 164447,
+     "keys": [
+      "balance scale",
+      "broken chain",
+      "chains",
+      "clamp",
+      "frame",
+      "hook",
+      "link",
       "link1",
       "link2",
+      "toolbox",
+      "white cane"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-tool-04",
+     "path": "k.objects/shards/noto-tool-04.sop",
+     "wires": 246,
+     "bytes": 30001,
+     "keys": [
       "magnet",
+      "shovel",
       "tip1",
-      "tip2",
-      "wrench"
+      "tip2"
      ],
      "sources": [
       "cldr-48",
@@ -1525,18 +3058,21 @@
     {
      "id": "k.objects/shards/noto-transport-air-01",
      "path": "k.objects/shards/noto-transport-air-01.sop",
-     "wires": 542,
-     "bytes": 66840,
+     "wires": 1428,
+     "bytes": 174460,
      "keys": [
+      "airplane",
+      "airplane arrival",
       "airplane departure",
       "body",
       "helicopter",
-      "left_panel",
-      "right_panel",
+      "parachute",
       "rotor",
       "runway",
-      "satellite",
+      "seat",
       "skid",
+      "small airplane",
+      "suspension railway",
       "tail",
       "window"
      ],
@@ -1548,36 +3084,43 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-transport-air-02",
+     "path": "k.objects/shards/noto-transport-air-02.sop",
+     "wires": 722,
+     "bytes": 88701,
+     "keys": [
+      "aerial tramway",
+      "flying saucer",
+      "left_panel",
+      "mountain cableway",
+      "right_panel",
+      "satellite"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-transport-ground-01",
      "path": "k.objects/shards/noto-transport-ground-01.sop",
-     "wires": 1381,
-     "bytes": 169545,
+     "wires": 1234,
+     "bytes": 151540,
      "keys": [
-      "back_window",
-      "body",
-      "exhaust",
-      "front_wheel",
-      "front_window",
-      "headlight",
+      "bullet train",
       "high-speed train",
-      "left_wheel",
-      "manual wheelchair",
-      "minibus",
+      "light rail",
+      "locomotive",
+      "metro",
       "platform",
       "pole",
-      "right_wheel",
-      "roof",
+      "railway car",
       "sign",
-      "spare_wheel",
-      "sport utility vehicle",
       "station",
-      "tail_light",
-      "taxi",
-      "tractor",
-      "tram car",
-      "window",
-      "window1",
-      "window2"
+      "tram",
+      "window"
      ],
      "sources": [
       "cldr-48",
@@ -1589,20 +3132,107 @@
     {
      "id": "k.objects/shards/noto-transport-ground-02",
      "path": "k.objects/shards/noto-transport-ground-02.sop",
-     "wires": 653,
-     "bytes": 80094,
+     "wires": 1329,
+     "bytes": 162416,
      "keys": [
-      "base",
-      "construction",
+      "ambulance",
+      "body",
+      "bus",
+      "headlight",
+      "left_wheel",
+      "minibus",
+      "monorail",
+      "mountain railway",
+      "oncoming bus",
+      "right_wheel",
+      "roof",
+      "tail_light",
+      "tram car",
+      "trolleybus",
+      "window1",
+      "window2"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-ground-03",
+     "path": "k.objects/shards/noto-transport-ground-03.sop",
+     "wires": 1584,
+     "bytes": 193519,
+     "keys": [
+      "automobile",
+      "back_window",
+      "body",
+      "fire engine",
+      "front_window",
+      "headlight",
+      "left_wheel",
+      "oncoming automobile",
+      "oncoming police car",
+      "oncoming taxi",
+      "police car",
+      "right_wheel",
+      "sign",
+      "spare_wheel",
+      "sport utility vehicle",
+      "tail_light",
+      "taxi"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-ground-04",
+     "path": "k.objects/shards/noto-transport-ground-04.sop",
+     "wires": 1588,
+     "bytes": 193690,
+     "keys": [
+      "articulated lorry",
+      "delivery truck",
+      "exhaust",
+      "front_wheel",
+      "manual wheelchair",
+      "motor scooter",
+      "motorcycle",
+      "pickup truck",
+      "racing car",
+      "roof",
+      "tractor",
+      "window"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-ground-05",
+     "path": "k.objects/shards/noto-transport-ground-05.sop",
+     "wires": 1479,
+     "bytes": 180578,
+     "keys": [
+      "auto rickshaw",
+      "bus stop",
       "deck",
-      "left_leg",
+      "kick scooter",
+      "motorized wheelchair",
+      "motorway",
       "mountain1",
       "mountain2",
-      "police car light",
       "railway track",
-      "right_leg",
+      "roller skate",
       "skateboard",
-      "top_board",
       "wheel1",
       "wheel2",
       "wheel3"
@@ -1615,15 +3245,47 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-transport-ground-06",
+     "path": "k.objects/shards/noto-transport-ground-06.sop",
+     "wires": 1114,
+     "bytes": 135840,
+     "keys": [
+      "base",
+      "construction",
+      "fuel pump",
+      "horizontal traffic light",
+      "left_leg",
+      "oil drum",
+      "police car light",
+      "right_leg",
+      "stop sign",
+      "top_board",
+      "vertical traffic light",
+      "wheel"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-transport-water-01",
      "path": "k.objects/shards/noto-transport-water-01.sop",
-     "wires": 274,
-     "bytes": 33873,
+     "wires": 1084,
+     "bytes": 131935,
      "keys": [
+      "anchor",
       "boat",
       "canoe",
+      "ferry",
       "motor",
       "motor boat",
+      "passenger ship",
+      "ring buoy",
+      "sailboat",
+      "speedboat",
       "window1",
       "window2"
      ],
@@ -1635,12 +3297,33 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-transport-water-02",
+     "path": "k.objects/shards/noto-transport-water-02.sop",
+     "wires": 213,
+     "bytes": 26241,
+     "keys": [
+      "ship"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/noto-writing-01",
      "path": "k.objects/shards/noto-writing-01.sop",
-     "wires": 178,
-     "bytes": 21854,
+     "wires": 963,
+     "bytes": 116168,
      "keys": [
+      "black nib",
+      "crayon",
+      "fountain pen",
+      "memo",
+      "paintbrush",
       "pen",
+      "pencil",
       "ring",
       "tip"
      ],
