@@ -18,12 +18,12 @@ name, since the sense it shows is a common one too.
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name, in the sense kept | 585 | 39.0% |
+| with a drawing of that name, in the sense kept | 610 | 40.7% |
 | without, but a WordNet synonym has a drawing | 63 | 4.2% |
-| without, but the direct hypernym has a drawing | 167 | 11.1% |
-| with no drawing at all | 685 | 45.7% |
+| without, but the direct hypernym has a drawing | 173 | 11.5% |
+| with no drawing at all | 654 | 43.6% |
 
-## The 915 words without a drawing of their name, most frequent first
+## The 890 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a `core.word` fact of the shard `words-wordnet` (the word finds that drawing as
@@ -51,7 +51,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 208 | jet | synonym jet plane | an airplane powered by one or more jet engines |
 | 232 | mall |  | a public area set aside as a pedestrian walk |
 | 242 | counter | hypernym table | table consisting of a horizontal surface over which business is transacted |
-| 248 | nut |  | usually large hard-shelled seed |
 | 249 | needle |  | the leaf of a conifer |
 | 253 | cellphone | synonym mobile phone | a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver |
 | 261 | turtle | other sense: the drawing shows the animal | a sweater or jersey with a high close-fitting collar |
@@ -72,50 +71,26 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 315 | missile | hypernym rocket | a rocket carrying a warhead of conventional or nuclear explosives |
 | 316 | carriage | hypernym railway car | a railcar where passengers ride |
 | 320 | mill | synonym factory | a plant consisting of one or more buildings with facilities for manufacturing |
-| 321 | shotgun |  | firearm that is a double-barreled smoothbore shoulder weapon for firing shot at short ranges |
-| 322 | cocktail |  | a short mixed drink |
-| 324 | ditch |  | a long narrow excavation in the earth |
-| 325 | gin |  | strong liquor flavored with juniper berries |
 | 328 | dock |  | an enclosure in a court of law where the defendant sits during the trial |
 | 330 | runway |  | a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll |
-| 333 | bracelet |  | a band of cloth or leather or metal links attached to a wristwatch and wrapped around the wrist |
 | 337 | pony | hypernym horse | a range horse of the western United States |
-| 338 | violet |  | any of numerous low-growing violas with small flowers |
 | 339 | cape |  | a strip of land projecting into a body of water |
-| 341 | armor |  | protective covering made of metal and used in combat |
-| 344 | portrait |  | any likeness of a person, in any medium |
-| 348 | swamp |  | low land that is seasonally flooded |
 | 350 | morgue | hypernym building | a building (or room) where dead bodies are kept before burial or cremation |
-| 351 | dice |  | a small cube with 1 to 6 spots on the six faces |
 | 353 | balcony |  | an upper floor projecting from the rear over the main floor in an auditorium |
 | 356 | cottage | hypernym house | a small house with a single story |
-| 357 | hawk |  | diurnal bird of prey typically having short rounded wings and a long tail |
-| 358 | pudding |  | any of various soft thick unsweetened baked dishes |
 | 359 | marina |  | a fancy dock for small yachts and cabin cruisers |
-| 361 | dam |  | a barrier constructed to contain the flow of water or to keep out the sea |
 | 362 | sketch |  | preliminary drawing for later elaboration |
-| 363 | salmon |  | any of various large food and game fishes of northern waters |
-| 364 | wig |  | hairpiece covering the head and made of real or synthetic hair |
 | 367 | buzzer | synonym doorbell | a push button at an outer door that gives a ringing or buzzing signal when pushed |
 | 369 | clip |  | a metal frame or container holding cartridges |
-| 370 | iris |  | plants with sword-shaped leaves and erect stalks bearing bright-colored flowers composed of three petals and three drooping sepals |
 | 373 | brake |  | a restraint used to slow or stop a vehicle |
 | 375 | marsh |  | low-lying wet land with grassy vegetation |
-| 376 | chapel |  | a place of worship that has its own altar |
-| 377 | railway |  | a line of track providing a runway for wheels |
-| 378 | peg |  | a wooden pin pushed or driven into a surface |
-| 381 | rum |  | liquor distilled from fermented molasses |
 | 383 | shutter |  | a mechanical device on a camera that opens and closes to control the time of a photographic exposure |
 | 386 | whisky | synonym whiskey | a liquor made from fermented mash of grain |
 | 388 | globe | synonym earth (drawing "Earth") | the 3rd planet from the sun |
 | 390 | delta |  | a low triangular area of alluvial deposits where a river divides before entering a larger body of water |
-| 391 | stove |  | a kitchen appliance used for cooking food |
-| 393 | pumpkin |  | a coarse vine widely cultivated for its large pulpy round orange fruit with firm orange skin and numerous seeds |
 | 395 | ridge |  | a long narrow natural elevation or striation |
 | 398 | bark |  | tough protective covering of the woody stems and roots of trees and other woody plants |
-| 399 | canyon |  | a ravine formed by a river in an area with little rainfall |
 | 400 | rack |  | framework for holding objects |
-| 401 | pine |  | a coniferous tree |
 | 404 | tuna | other sense: the drawing shows a tin of tuna fish | tropical American prickly pear of Jamaica |
 | 405 | altar | hypernym table | the table in Christian churches where communion is given |
 | 409 | saddle |  | a seat for the rider of a horse or other animal |
@@ -190,7 +165,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 529 | syrup |  | a thick sweet sticky liquid |
 | 531 | bakery | hypernym shop | a workplace where baked goods (breads and cakes and pastries) are produced or sold |
 | 532 | pharmacy | hypernym shop | a retail shop where medicine and other articles are sold |
-| 533 | martini |  | a cocktail made of gin (or vodka) with dry vermouth |
+| 533 | martini | hypernym cocktail | a cocktail made of gin (or vodka) with dry vermouth |
 | 534 | vent |  | a hole for the escape of gas or air |
 | 538 | asteroid |  | any of numerous small celestial bodies composed of rock and metal that move around the sun (mainly between the orbits of Mars and Jupiter) |
 | 539 | bun | hypernym bread | small rounded bread either plain or sweet |
@@ -202,7 +177,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 547 | coop |  | a farm building for housing poultry |
 | 548 | calf |  | young of domestic cattle |
 | 549 | rosemary | hypernym herb | widely cultivated for its fragrant grey-green leaves used in cooking and in perfumery |
-| 551 | falcon |  | diurnal birds of prey having long pointed powerful wings adapted for swift flight |
+| 551 | falcon | hypernym hawk | diurnal birds of prey having long pointed powerful wings adapted for swift flight |
 | 552 | gravy |  | a sauce made by adding stock, flour, or other ingredients to the juice and fat that drips from cooking meats |
 | 553 | courthouse |  | a government building that houses the offices of a county government |
 | 555 | crib |  | baby bed with high sides made of slats |
@@ -246,9 +221,9 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 612 | curb |  | an edge between a sidewalk and a roadway consisting of a line of curbstones (usually forming part of a gutter) |
 | 613 | tavern |  | a building with a bar that is licensed to sell alcoholic drinks |
 | 614 | caviar |  | salted roe of sturgeon or other large fish |
-| 615 | trench |  | a ditch dug as a fortification having a parapet of the excavated earth |
+| 615 | trench | hypernym ditch | a ditch dug as a fortification having a parapet of the excavated earth |
 | 617 | tonic |  | lime- or lemon-flavored carbonated water containing quinine |
-| 619 | margarita |  | a cocktail made of tequila and triple sec with lime and lemon juice |
+| 619 | margarita | hypernym cocktail | a cocktail made of tequila and triple sec with lime and lemon juice |
 | 620 | hound |  | any of several breeds of dog used for hunting typically having large drooping ears |
 | 621 | cloak |  | anything that covers or conceals |
 | 624 | intercom |  | a communication system linking different rooms within a building or ship etc |
@@ -554,7 +529,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1034 | conduit |  | a passage (a pipe or tunnel) through which water or electric wires can pass |
 | 1035 | dipper | hypernym ladle | a ladle that has a cup with a long handle |
 | 1036 | pedestal |  | a support or foundation |
-| 1037 | weir |  | a low dam built across a stream to raise its level or divert its flow |
+| 1037 | weir | hypernym dam | a low dam built across a stream to raise its level or divert its flow |
 | 1039 | citadel |  | a stronghold into which people could go for shelter during a battle |
 | 1040 | canister |  | a metallic cylinder packed with shot and used as ammunition in a firearm |
 | 1041 | truffle |  | any of various highly prized edible subterranean fungi of the genus Tuber |
@@ -888,7 +863,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1435 | pulpit |  | a platform raised above the surrounding level to give prominence to the person on it |
 | 1436 | ladybug | synonym lady beetle | small round bright-colored and spotted beetle that usually feeds on aphids and other insect pests |
 | 1437 | kohl |  | a cosmetic preparation used by women in Egypt and Arabia to darken the edges of their eyelids |
-| 1438 | grog |  | rum cut with water |
+| 1438 | grog | hypernym rum | rum cut with water |
 | 1439 | windscreen |  | transparent screen (as of glass) to protect occupants of a vehicle |
 | 1440 | thrift |  | any of numerous sun-loving low-growing evergreens of the genus Armeria having round heads of pink or white flowers |
 | 1441 | creeper |  | any plant (as ivy or periwinkle) that grows by creeping |

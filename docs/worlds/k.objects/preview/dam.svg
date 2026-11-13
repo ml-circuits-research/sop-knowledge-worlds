@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>dam</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="36" width="42" height="58" fill="blue" stroke="#333" stroke-width="0.8"><title>reservoir</title></rect>
+  <polygon points="21,14 38,38 4,38" fill="green" stroke="#333" stroke-width="0.8"><title>left_hill</title></polygon>
+  <rect x="62" y="84" width="34" height="10" fill="blue" stroke="#333" stroke-width="0.8"><title>outflow</title></rect>
+  <rect x="62" y="90" width="34" height="5" fill="green" stroke="#333" stroke-width="0.8"><title>valley_floor</title></rect>
+  <polygon points="42,28 56,28 70,94 42,94" fill="grey" stroke="#333" stroke-width="0.8"><title>wall</title></polygon>
+  <rect x="40" y="24" width="18" height="5" fill="grey" stroke="#333" stroke-width="0.8"><title>crest</title></rect>
+  <polyline points="58,52 70,84" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>jet_1</title></polyline>
+  <polyline points="60,64 74,86" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>jet_2</title></polyline>
+  <rect x="46" y="40" width="6" height="6" fill="black" stroke="#333" stroke-width="0.8"><title>gate_1</title></rect>
+  <rect x="46" y="56" width="6" height="6" fill="black" stroke="#333" stroke-width="0.8"><title>gate_2</title></rect>
+</svg>

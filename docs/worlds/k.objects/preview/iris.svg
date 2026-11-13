@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>iris</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="48" y="48" width="4" height="46" fill="green" stroke="#333" stroke-width="0.8"><title>stem</title></rect>
+  <polygon points="30,94 34,50 38,34 42,94" fill="green" stroke="#333" stroke-width="0.8"><title>left_blade</title></polygon>
+  <polygon points="58,94 64,40 68,56 70,94" fill="green" stroke="#333" stroke-width="0.8"><title>right_blade</title></polygon>
+  <polygon points="46,36 26,34 14,48 22,60 36,52" fill="purple" stroke="#333" stroke-width="0.8"><title>left_fall</title></polygon>
+  <polygon points="54,36 74,34 86,48 78,60 64,52" fill="purple" stroke="#333" stroke-width="0.8"><title>right_fall</title></polygon>
+  <ellipse cx="40" cy="23" rx="8" ry="15" fill="purple" stroke="#333" stroke-width="0.8"><title>left_standard</title></ellipse>
+  <ellipse cx="60" cy="23" rx="8" ry="15" fill="purple" stroke="#333" stroke-width="0.8"><title>right_standard</title></ellipse>
+  <ellipse cx="50" cy="49" rx="9" ry="13" fill="purple" stroke="#333" stroke-width="0.8"><title>middle_fall</title></ellipse>
+  <ellipse cx="50" cy="21" rx="8" ry="17" fill="purple" stroke="#333" stroke-width="0.8"><title>middle_standard</title></ellipse>
+  <polyline points="50,40 50,56" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>beard</title></polyline>
+  <polyline points="40,40 26,46" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_beard</title></polyline>
+  <polyline points="60,40 74,46" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_beard</title></polyline>
+</svg>

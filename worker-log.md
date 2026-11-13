@@ -1147,3 +1147,32 @@ them; said here.
 - **Coverage of the 1,500 common things:** 585 drawn in the sense kept, 63 synonyms, 167 stand-ins: **815 reach a
   drawing (54.3%; 840 before this look)**; 685 nothing.
 - Numbers: `stand-ins-wordnet` 167 wires. Catalog: 11 worlds, 739 shards, vocab 18,691 words; 0 errors, 0 warnings. npm test 2,272 pass, 0 fail.
+
+## R5.3 batch 2 (2026-11-13): 25 more hand-written things; 2,053 objects
+
+- **Which** (the next words of `MISSING.md` with no drawing and no link, in list order, that can be drawn in the
+  sense kept): shotgun, cocktail, ditch, gin, bracelet, violet, armor, portrait, swamp, dice, hawk, pudding, dam,
+  salmon, wig, iris, chapel, railway, peg, rum, stove, pumpkin, canyon, pine; and nut (its stand-in was removed in
+  R5.2). Shards: `things-2` (+8), `places-2` (+3), `land-2` (+3), `food-2` (+6), `nature-2` (new: hawk, salmon,
+  violet, iris, pine).
+- **Passed over** in that stretch (ranks 95 to 401), with the reason: the sense kept is not the common one, or is a
+  part, a room or a scene: bike, mall, needle (of a conifer), vault, barrel (of a gun), dock (of a court), runway
+  (rails), cape (land), balcony (of an auditorium), marina, clip (of cartridges), brake, shutter (of a camera),
+  delta, ridge, rack; general words: jewelry, aircraft, sketch; pistol (a word of `gun`); reed, marsh (drawn with
+  the swamp: `marsh` is a word of `swamp`); laser and bark: for `not-drawable.tsv` in the last batch.
+- **Looked at:** all 25 previews on one contact sheet (160 px, name underneath). Redrawn after the look: canyon (a
+  white gap between the cliffs: the sky now reaches the river), peg (its hole sat above the ground). Not looked at
+  again after these two fixes. Verdict with the name: all recognisable; **weakest without it: nut (reads as an
+  acorn), ditch (a brown stripe with water in a field), hawk (a brown bird on a branch, not clearly a hawk), dam,
+  peg (a tent peg).**
+- Words: plurals, and armour, breastplate, railroad, "pine tree", die, marsh. Two words dropped because an object
+  has that name: cooker, hazelnut.
+- New stand-ins by rule from these drawings: falcon → hawk, grog → rum, margarita → cocktail, martini → cocktail,
+  trench → ditch, weir → dam (kept; not looked at as links, the drawings are the ones above); refused: stinger →
+  cocktail, nog = peg (the words mostly mean something else).
+- **Coverage of the 1,500 common things:** 610 drawn in the sense kept (40.7%), 63 synonyms, 173 stand-ins: **846
+  reach a drawing (56.4%)**; 654 nothing.
+- Numbers: `things-2` 559 wires / 73,115 bytes, `places-2` 135 / 19,851, `land-2` 148 / 19,363, `food-2` 154 /
+  21,550, `nature-2` 121 / 15,991. **k.objects: 2,053 objects** (170 hand-written), 312 shards, 299,442 wires,
+  36,184,285 bytes. Catalog: 11 worlds, 740 shards, 342,950 wires, 44,223,900 bytes, vocab 18,831 words; 0 errors,
+  0 warnings. npm test 2,297 pass, 0 fail.

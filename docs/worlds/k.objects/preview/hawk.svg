@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>hawk</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="8" y="82" width="84" height="5" fill="brown" stroke="#333" stroke-width="0.8"><title>branch</title></rect>
+  <polygon points="44,74 58,74 62,96 40,96" fill="brown" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
+  <polygon points="40,24 60,24 67,50 59,80 43,80 35,50" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></polygon>
+  <ellipse cx="49" cy="51" rx="8" ry="17" fill="white" stroke="#333" stroke-width="0.8"><title>breast</title></ellipse>
+  <ellipse cx="50" cy="19" rx="11" ry="11" fill="brown" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <polygon points="55,30 70,56 62,84 54,60" fill="brown" stroke="#333" stroke-width="0.8"><title>wing</title></polygon>
+  <polygon points="40,18 30,22 34,28 40,24" fill="yellow" stroke="#333" stroke-width="0.8"><title>beak</title></polygon>
+  <ellipse cx="46.5" cy="16.5" rx="2.5" ry="2.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+  <polyline points="45,46 49,46" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spot_1</title></polyline>
+  <polyline points="49,54 53,54" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spot_2</title></polyline>
+  <polyline points="45,60 49,60" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spot_3</title></polyline>
+  <ellipse cx="46.5" cy="16.5" rx="1" ry="1" fill="black" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
+  <polyline points="46,80 44,86" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_foot</title></polyline>
+  <polyline points="55,80 57,86" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_foot</title></polyline>
+</svg>

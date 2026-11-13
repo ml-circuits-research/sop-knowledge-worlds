@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>shotgun</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="4,48 26,42 40,42 40,52 26,54 9,64 4,62" fill="brown" stroke="#333" stroke-width="0.8"><title>stock</title></polygon>
+  <rect x="56" y="40" width="40" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>upper_barrel</title></rect>
+  <rect x="56" y="44.5" width="40" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>lower_barrel</title></rect>
+  <rect x="38" y="40" width="20" height="11" fill="grey" stroke="#333" stroke-width="0.8"><title>receiver</title></rect>
+  <rect x="58" y="48.5" width="22" height="5" fill="brown" stroke="#333" stroke-width="0.8"><title>forend</title></rect>
+  <path d="M42 51 A5 7 0 0 0 52 51" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>trigger_guard</title></path>
+  <ellipse cx="94.5" cy="38.5" rx="1.5" ry="1.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>bead</title></ellipse>
+  <polyline points="48,51 46,56" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>trigger</title></polyline>
+</svg>

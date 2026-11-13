@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>portrait</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="18" y="6" width="64" height="88" fill="yellow" stroke="#333" stroke-width="0.8"><title>frame</title></rect>
+  <rect x="25" y="13" width="50" height="74" fill="blue" stroke="#333" stroke-width="0.8"><title>canvas</title></rect>
+  <polygon points="29,87 33,68 44,62 56,62 67,68 71,87" fill="red" stroke="#333" stroke-width="0.8"><title>shoulders</title></polygon>
+  <rect x="46" y="54" width="8" height="10" fill="pink" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
+  <ellipse cx="50" cy="41" rx="12" ry="15" fill="pink" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <polygon points="37,40 37,30 43,23 50,21 57,23 63,30 63,40 58,31 42,31" fill="brown" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>
+  <ellipse cx="44.5" cy="39.5" rx="1.5" ry="1.5" fill="black" stroke="#333" stroke-width="0.8"><title>left_eye</title></ellipse>
+  <ellipse cx="55.5" cy="39.5" rx="1.5" ry="1.5" fill="black" stroke="#333" stroke-width="0.8"><title>right_eye</title></ellipse>
+  <path d="M45 46 A5 4 0 0 0 55 46" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></path>
+</svg>

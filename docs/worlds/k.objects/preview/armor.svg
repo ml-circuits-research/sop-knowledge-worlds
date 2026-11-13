@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>armor</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="24" cy="23" rx="14" ry="9" fill="grey" stroke="#333" stroke-width="0.8"><title>left_shoulder</title></ellipse>
+  <ellipse cx="76" cy="23" rx="14" ry="9" fill="grey" stroke="#333" stroke-width="0.8"><title>right_shoulder</title></ellipse>
+  <polygon points="30,20 42,27 58,27 70,20 77,42 70,84 50,93 30,84 23,42" fill="grey" stroke="#333" stroke-width="0.8"><title>breastplate</title></polygon>
+  <polyline points="50,28 50,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ridge</title></polyline>
+  <polyline points="28,62 50,68 72,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>upper_band</title></polyline>
+  <polyline points="30,76 50,82 70,76" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lower_band</title></polyline>
+  <path d="M40 20 A10 8 0 0 0 60 20" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>collar</title></path>
+  <ellipse cx="35" cy="32" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_rivet</title></ellipse>
+  <ellipse cx="65" cy="32" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_rivet</title></ellipse>
+</svg>
