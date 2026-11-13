@@ -1,5 +1,5 @@
 {
- "version": "85c9d09486c4",
+ "version": "ed4574a4e914",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -15,7 +15,7 @@
      "id": "k.animals/shards/birds",
      "path": "k.animals/shards/birds.sop",
      "wires": 70,
-     "bytes": 11092,
+     "bytes": 11125,
      "keys": [
       "canary",
       "crow",
@@ -5433,19 +5433,30 @@
     {
      "id": "k.objects/shards/mulberry-clothes-sport-01",
      "path": "k.objects/shards/mulberry-clothes-sport-01.sop",
-     "wires": 1192,
-     "bytes": 145541,
+     "wires": 1050,
+     "bytes": 126056,
      "keys": [
+      "button",
+      "cap",
+      "costume",
       "cycle helmet",
-      "football kit arsenal",
-      "football kit aston villa",
-      "football kit barnsley",
-      "football kit birmingham",
-      "football kit blackburn rovers",
-      "football kit blackpool",
-      "football kit bolton wanderers",
+      "face",
+      "football kit",
+      "hat",
+      "helmet",
+      "judo belt",
+      "left_ear",
+      "left_eye",
+      "peak",
+      "riding hat",
+      "right_ear",
+      "right_eye",
       "shirt",
-      "shorts"
+      "shorts",
+      "swimming cap",
+      "swimming costume",
+      "swimming trunks",
+      "trunks"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -5456,141 +5467,11 @@
     {
      "id": "k.objects/shards/mulberry-clothes-sport-02",
      "path": "k.objects/shards/mulberry-clothes-sport-02.sop",
-     "wires": 1199,
-     "bytes": 146959,
+     "wires": 120,
+     "bytes": 14968,
      "keys": [
-      "football kit bristol city",
-      "football kit burnley",
-      "football kit cardiff",
-      "football kit chelsea",
-      "football kit coventry",
-      "football kit crystal palace",
-      "football kit derby",
-      "football kit doncaster",
-      "shirt",
-      "shorts"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-clothes-sport-03",
-     "path": "k.objects/shards/mulberry-clothes-sport-03.sop",
-     "wires": 1220,
-     "bytes": 149531,
-     "keys": [
-      "football kit everton",
-      "football kit fulham",
-      "football kit hull city",
-      "football kit ipswich",
-      "football kit leicester",
-      "football kit liverpool",
-      "football kit manchester city",
-      "football kit manchester united",
-      "shirt",
-      "shorts"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-clothes-sport-04",
-     "path": "k.objects/shards/mulberry-clothes-sport-04.sop",
-     "wires": 1241,
-     "bytes": 152430,
-     "keys": [
-      "football kit middlesbrough",
-      "football kit newcastle united",
-      "football kit nottingham forest",
-      "football kit peterborough",
-      "football kit plymouth argyle",
-      "football kit portsmouth",
-      "football kit preston",
-      "football kit qpr",
-      "shirt",
-      "shorts"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-clothes-sport-05",
-     "path": "k.objects/shards/mulberry-clothes-sport-05.sop",
-     "wires": 1126,
-     "bytes": 138745,
-     "keys": [
-      "football kit reading",
-      "football kit scunthorpe",
-      "football kit sheffield united",
-      "football kit sheffield weds",
-      "football kit spurs",
-      "football kit stoke city",
-      "football kit sunderland",
-      "football kit swansea",
-      "shirt",
-      "shorts"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-clothes-sport-06",
-     "path": "k.objects/shards/mulberry-clothes-sport-06.sop",
-     "wires": 1136,
-     "bytes": 138738,
-     "keys": [
-      "football kit blank",
-      "football kit watford",
-      "football kit west bromwich",
-      "football kit west ham united",
-      "football kit wigan athletic",
-      "football kit wolves",
-      "helmet",
-      "judo belt",
-      "shirt",
-      "shorts"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-clothes-sport-07",
-     "path": "k.objects/shards/mulberry-clothes-sport-07.sop",
-     "wires": 618,
-     "bytes": 75074,
-     "keys": [
-      "button",
-      "cap",
-      "costume",
-      "face",
-      "hat",
-      "left_ear",
-      "left_eye",
-      "peak",
-      "riding hat",
-      "right_ear",
-      "right_eye",
-      "swimming cap",
-      "swimming costume",
-      "swimming trunks",
       "top",
-      "tracksuit",
-      "trunks"
+      "tracksuit"
      ],
      "sources": [
       "mulberry-fa94a93"

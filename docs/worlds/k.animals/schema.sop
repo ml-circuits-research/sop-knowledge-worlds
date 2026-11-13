@@ -10,6 +10,7 @@
 # everyday facts). `legs` counts walking legs (a bird has 2, a fish 0); `covering` is what covers its body; `sound`
 # is the verb for the sound it makes; `habitat` is where it lives; `diet` says whether it eats plants, animals or both
 # and `eats` names typical food; `baby` is the name of its young; `can` names ways it moves and other abilities;
+# `cannot` names a well-known thing it cannot do (a penguin cannot fly); a missing `can` says nothing;
 # `drawing` names the k.objects object that draws it.
 @k.animals.animal core.type of=k.animals.animal shared=true closed=true core.source="hand-core 1"
 @k.animals.animal.name core.slot of=k.animals.animal key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -22,7 +23,13 @@
 @k.animals.animal.eats core.slot of=k.animals.animal key=eats many=true kind=atom kind=string core.source="hand-core 1"
 @k.animals.animal.baby core.slot of=k.animals.animal key=baby kind=atom core.source="hand-core 1"
 @k.animals.animal.can core.slot of=k.animals.animal key=can many=true kind=atom core.source="hand-core 1"
+@k.animals.animal.cannot core.slot of=k.animals.animal key=cannot many=true kind=atom core.source="hand-core 1"
 @k.animals.animal.drawing core.slot of=k.animals.animal key=drawing kind=atom kind=string core.source="hand-core 1"
+
+# One fact never has the same verb in `can` and in `cannot`.
+@k.animals.both.can k.animals.animal name=?animal can=?verb
+@k.animals.both.cannot k.animals.animal name=?animal cannot=?verb
+@k.animals.both core.deny when=$k.animals.both.can when=$k.animals.both.cannot why="A ?animal is said both to ?verb and not to ?verb." core.source="hand-core 1"
 
 # Words for the type and keys of this world.
 @k.animals.word.animal core.word text=animal text=animals means=k.animals.animal core.source="hand-core 1"
@@ -34,3 +41,4 @@
 @k.animals.word.diet core.word text=diet means=k.animals.animal.diet core.source="hand-core 1"
 @k.animals.word.eats core.word text=eats text=eat text=food means=k.animals.animal.eats core.source="hand-core 1"
 @k.animals.word.baby core.word text=baby text=young means=k.animals.animal.baby core.source="hand-core 1"
+@k.animals.word.cannot core.word text=cannot text="can not" means=k.animals.animal.cannot core.source="hand-core 1"

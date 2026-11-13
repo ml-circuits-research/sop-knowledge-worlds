@@ -46,3 +46,20 @@ test('k.food: what a food comes from is a food, an animal of k.animals, or one o
     'sea', 'river', 'fruit', 'meat', 'cocoa beans', 'sugar cane', 'sugar beet', 'maple tree', 'tea leaves', 'coffee beans', 'peppercorns', 'tree bark', 'mustard seeds', 'sunflower seeds']);
   for (const w of foods) for (const v of w.attrs.comes_from ?? []) assert.ok(known.has(tok(v)), `${w.id} comes_from=${v}`);
 });
+
+test('an approximate count (_about) is never next to the exact one; a verb is never in can and in cannot (Q18, Q19)', () => {
+  let about = 0;
+  for (const [world, type] of CORES) for (const w of all(world, type)) {
+    for (const key of Object.keys(w.attrs)) if (key.endsWith('_about')) { about++; assert.equal(w.attrs[key.slice(0, -6)], undefined, `${w.id}: ${key} and ${key.slice(0, -6)}`); }
+    for (const v of w.attrs.cannot ?? []) assert.ok(!(w.attrs.can ?? []).includes(v), `${w.id}: can and cannot ${v}`);
+  }
+  assert.ok(about >= 4);
+  const flightless = fullWorld('k.animals', worlds).query({ type: 'k.animals.animal', where: { cannot: 'fly' }, seek: 'name', mode: 'list' });
+  assert.deepEqual([...flightless.values].sort(), ['emu', 'ostrich', 'penguin']);
+  const animals = fullWorld('k.animals', worlds).fork();
+  assert.equal(animals.tell('@a1 k.animals.animal name=dragon class=reptile can=fly cannot=fly', { ns: 'app' }).ok, false);
+  assert.equal(animals.tell('@a2 k.animals.animal name=drake class=reptile can=fly cannot=swim', { ns: 'app' }).ok, true);
+  const space = fullWorld('k.space', worlds).fork();
+  assert.equal(space.tell('@a1 k.space.body name=Zog kind=planet moons=3 moons_about=4', { ns: 'app' }).ok, false);
+  assert.equal(space.tell('@a2 k.space.body name=Zag kind=planet moons_about=4', { ns: 'app' }).ok, true);
+});

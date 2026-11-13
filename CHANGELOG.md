@@ -26,3 +26,11 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 - `k.commonsense.thing`: `is_a`, `part_of`, `has` (many); `name`, `at`, `can`, `used_for`, `made_of` also take
   strings (names of several words). For the ConceptNet import.
 - `k.objects.skeleton` (of, n, x, y, w, h, part, drawings, spread): sketch skeletons, for the Quick, Draw! import.
+
+### k.animals 1 and k.space 1, additions (2026-11-13, not breaking)
+
+- `k.animals.animal.cannot` (many): what an animal is well known not to do (`cannot=fly`). A fact with the same verb
+  in `can` and in `cannot` is refused.
+- `k.space.body`: a fact with both `moons` and `moons_about` is refused (an approximate number is a second key with
+  the suffix `_about`, never next to the exact one).
+- `k.objects`: the 44 club football kits of Mulberry are left out; one kit stays, named `"football kit"`.

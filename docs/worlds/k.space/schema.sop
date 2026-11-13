@@ -27,6 +27,11 @@
 @k.space.body.in core.slot of=k.space.body key=in kind=atom kind=string core.source="hand-core 1"
 @k.space.body.drawing core.slot of=k.space.body key=drawing kind=atom kind=string core.source="hand-core 1"
 
+# An exact count and an approximate count are never both on one body.
+@k.space.both.exact k.space.body name=?body moons=?exact
+@k.space.both.about k.space.body name=?body moons_about=?about
+@k.space.both core.deny when=$k.space.both.exact when=$k.space.both.about why="?body has both an exact and an approximate count of moons." core.source="hand-core 1"
+
 # A kind of thing in space: what it is made of, what it goes around, what it has, what it does.
 @k.space.kind core.type of=k.space.kind shared=true closed=true core.source="hand-core 1"
 @k.space.kind.name core.slot of=k.space.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"

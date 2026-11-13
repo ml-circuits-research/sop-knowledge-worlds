@@ -13,3 +13,4 @@
 {"id":"an-13","ask":"how many arachnids are there","query":{"type":"k.animals.animal","where":{"class":"arachnid"},"mode":"count"},"expect":{"status":"supported","value":"2"}}
 {"id":"an-14","ask":"which drawing shows a ladybird","query":{"type":"k.animals.animal","where":{"name":"ladybird"},"seek":"drawing"},"expect":{"status":"supported","value":"\"lady beetle\""}}
 {"id":"an-15","ask":"an application's own animal is accepted","tell":"@a1 k.animals.animal name=dragon class=reptile legs=4 can=fly","ns":"app","expect":{"issues":[]}}
+{"id":"an-16","ask":"can a penguin fly: what a penguin cannot do","query":{"type":"k.animals.animal","where":{"name":"penguin"},"seek":"cannot","mode":"list"},"expect":{"status":"supported","values":["fly"]}}

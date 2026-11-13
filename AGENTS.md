@@ -34,7 +34,12 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 9. **Only what can be published.** See "Licenses" in PLAN.md: import only sources we may publish openly (CC0, permissive,
    CC BY, BY-SA, BY-NC, BY-NC-SA). Do not import no-derivatives, no-redistribution or unclear sources at all. Record every
    source's license in `sources/<id>/SOURCE.md` and in the catalog.
-10. **One commit per task**, with the numbers (wires, shards, bytes, load time, warnings) in the commit message and in
+10. **Approximate numbers, "cannot", drawings** (reviewer's answers Q17 to Q19). A number that is only approximate goes
+    in a second key with the suffix `_about` (`moons_about=95` next to the exact key `moons`); never both keys on one
+    fact. What a thing is known not to be able to do is `cannot=<verb>` next to `can=<verb>`; one fact never has the
+    same verb in both, and a missing `can` says nothing. `drawing=<object name>` is the join from a fact to its
+    drawing in `k.objects`.
+11. **One commit per task**, with the numbers (wires, shards, bytes, load time, warnings) in the commit message and in
     `worker-log.md`. Never edit `questions.md` answers; the reviewer answers in `worker-tasks.md`.
 
 ## sopworld version

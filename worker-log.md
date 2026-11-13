@@ -720,3 +720,19 @@ as the join from a fact to its drawing), Q18 (how to say an approximate number),
 **Not fetched, as before:** ConceptNet, Quick, Draw!, Wikidata (network: GitHub, npm and pip only).
 
 **Tests:** npm test 2,185 pass, 0 fail (127 s) at 7da94f4.
+
+## Round 4, answers Q16 to Q19 applied (2026-11-13)
+
+- **Q16:** one football kit stays, named `"football kit"` (Mulberry's "football kit blank": a white shirt and blue
+  shorts, looked at next to a club kit before choosing). `sources/mulberry/renamed.tsv` (Mulberry name, object name) is
+  read by `tools/import/mulberry.mjs`; the club kits are rows of `excluded.tsv`. Mulberry has 45 football kits, not
+  50 as I wrote in Q16: **44 excluded**, 1 kept. Their 68 rows left `part-names.tsv`.
+- **Q17:** nothing to change (`drawing=<object name>` stays); the rule is now in AGENTS.md.
+- **Q18:** AGENTS.md rule 10 (`_about` suffix, never both keys). `k.space`: a hard rule refuses a body with both
+  `moons` and `moons_about`; a test checks every `_about` key of the four cores.
+- **Q19:** `k.animals.animal.cannot` (many); `cannot=fly` on penguin, ostrich, emu (the three flightless birds the
+  world has; there is no kiwi bird in it). A hard rule refuses the same verb in `can` and `cannot`. Question an-16.
+- Numbers: Mulberry 958 objects, 13,498 parts (1,167 named, 6,334 details), 149 shards. **k.objects: 1,943 objects**,
+  301 shards, 296,943 wires, 35,854,358 bytes. Catalog: 10 worlds, 649 shards, vocab 17,769 words; 0 errors,
+  0 warnings. npm test 2,143 pass, 0 fail (141 s).
+- Looked at: the previews of "football kit blank" and of one club kit. Nothing else.

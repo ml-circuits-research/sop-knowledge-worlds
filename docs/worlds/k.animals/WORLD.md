@@ -9,9 +9,11 @@ Common animals, as a child's encyclopedia describes them. Hand-written (`hand-co
   `covering` (many: fur, hair, wool, feathers, scales, skin, shell, spines), `sound` (many: the verb, `bark`, `moo`),
   `habitat` (many: `farm`, `forest`, `sea`, `savanna`, `"coral reef"` …), `diet` (herbivore, carnivore, omnivore),
   `eats` (many: typical food), `baby` (the name of the young: `puppy`, `joey`, `tadpole`), `can` (many: `fly`, `swim`,
-  `run`, `climb`, `jump`, `dig` …), `drawing` (the name of the `k.objects` object that draws it).
+  `run`, `climb`, `jump`, `dig` …), `cannot` (many: what it is well known not to do: penguin, ostrich and emu `fly`),
+  `drawing` (the name of the `k.objects` object that draws it).
 - A key is left out where animals of one name differ or the fact is not plain: the legs of a kangaroo or a monkey,
-  the diet of a dog or a squirrel, the covering of an insect. A missing `can=fly` does not say "cannot fly".
+  the diet of a dog or a squirrel, the covering of an insect. A missing `can=fly` does not say "cannot fly";
+  `cannot=fly` does. One fact never has the same verb in `can` and in `cannot` (a rule of the schema refuses it).
 - `core.word` facts: plural forms (`mice`, `geese`, `wolves`) and other names (`chicken` for hen, `ladybug`, `hippo`).
 
 ## Shards

@@ -22,6 +22,7 @@
   `core.word`: the tags. Not kept: verbs, people, feelings, flags, maps, letters, numbers, descriptive symbols.
   Also not kept: the 149 names in `excluded.tsv` (name, reason), found by looking at every converted drawing: ideas,
   adjectives, actions, places, groups of things, parts pointed at with an arrow (118), and drawings that do not
-  survive the conversion (31: drawn black, or only loose lines are left).
-- **Counts (2026-11-13):** 3,435 symbols; 1,930 not things, 118 variants, 237 names already taken, 149 excluded;
-  **1,002 objects**, 14,202 parts (1,237 named, 6,520 details), 141,622 points, 154 shards.
+  survive the conversion (31: drawn black, or only loose lines are left); and 44 club football kits (reviewer's
+  answer to Q16). One kit stays: `renamed.tsv` (Mulberry name, object name) keeps "football kit blank" as "football kit".
+- **Counts (2026-11-13):** 3,435 symbols; 1,930 not things, 118 variants, 237 names already taken, 193 excluded;
+  **958 objects**, 13,498 parts (1,167 named, 6,334 details), 135,852 points, 149 shards.

@@ -54,6 +54,11 @@ test('mulberry: nouns of thing categories, first drawing only, new names only', 
   const without = importMulberry({ info, svg: () => svg, taken: new Set(['dog']), excluded: '# name\treason\narm chair\tnot a thing\n' });
   assert.deepEqual(Object.keys(without.files), []);
   assert.equal(without.stats.skipped.excluded, 1);
+  // sources/mulberry/renamed.tsv: a thing kept under a plainer name; part names and exclusions use that and the Mulberry name.
+  const renamed = importMulberry({ info, svg: () => svg, taken: new Set(['dog']), renamed: '# from\tto\narm chair\tarmchair\n', partNames: 'armchair\t1\tseat\t\n' });
+  const rl = renamed.files['mulberry-building-furniture-01.sop'].split('\n').filter((l) => l.startsWith('@'));
+  assert.equal(rl[0], '@k.objects.mb10 k.objects.object name=armchair core.source="mulberry fa94a93"');
+  assert.ok(rl[1].includes('of=armchair name=seat named=model'));
 });
 
 test('details by rule: strokes, and a black shape with the box of a filled shape; a row of the names file wins', () => {
@@ -97,5 +102,6 @@ test('the mulberry shards on disk are what the importer gives', { skip: !existsS
     svg: (file) => { const p = join(mb, 'EN', `${file}.svg`); return existsSync(p) ? readFileSync(p, 'utf8') : null; },
     partNames: readFileSync(join(REPO, 'sources/mulberry/part-names.tsv'), 'utf8'), taken: takenNames(dir, MB),
     excluded: readFileSync(join(REPO, 'sources/mulberry/excluded.tsv'), 'utf8'),
+    renamed: readFileSync(join(REPO, 'sources/mulberry/renamed.tsv'), 'utf8'),
   }).files);
 });
