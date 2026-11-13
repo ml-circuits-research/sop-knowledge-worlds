@@ -19,7 +19,7 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 ## index.json
 
 ```json
-{ "version": "<content hash>", "sopworld": "c7247e2",
+{ "version": "<content hash>", "sopworld": "782cd0c",
   "worlds": [ { "id": "k.objects", "version": "1", "schema": "k.objects/schema.sop",
                 "exports": ["k.objects.object", "k.objects.part"], "depends": ["k.commonsense"],
                 "shards": [ { "id": "k.objects/shards/buildings", "path": "k.objects/shards/buildings.sop",
@@ -30,7 +30,7 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 
 - `version`: a hash of every file in this folder except the generated ones (`index.json`, `vocab.json`, `LICENSES.md`). Pin it; cache shards by it.
 - `sopworld`: the sopworld commit every file was validated with.
-- World `version`: the schema's version (its `# version:` header line); a breaking schema change raises it.
+- World `version`: the schema's version (`version=` on its `core.module` wire); a breaking schema change raises it.
 - `exports`: the types other modules may read. `depends`: worlds whose schemas must be in the same library.
 - Shard `keys`: the identity values of its wires (lowercased). `sources`: the `core.source` values, as `<id>-<version>`.
   `license`: the shard's terms (a shard keeps its source's terms); `nc: true` marks non-commercial terms.

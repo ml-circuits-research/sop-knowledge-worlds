@@ -1,12 +1,11 @@
 # k.geo: geography: continents, countries and territories (capital, continent, region, neighbours, population, area,
 # centre, bounding box), their largest cities, rivers, mountains and mountain ranges with names. Places are points
 # and boxes only: lat and lon are degrees north and east (negative: south, west); west, south, east, north bound a box.
-# version: 1
 # sources: natural-earth 5.1.2, countries 5.1.0; the schema itself is hand-core 1
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/geo.mjs
 
-@k.geo core.module name=k.geo exports=continent exports=country exports=city exports=river exports=mountain exports=range core.source="hand-core 1"
+@k.geo core.module name=k.geo version=1 exports=continent exports=country exports=city exports=river exports=mountain exports=range core.source="hand-core 1"
 
 @k.geo.continent core.type of=k.geo.continent shared=true closed=true core.source="hand-core 1"
 @k.geo.continent.name core.slot of=k.geo.continent key=name id=true required=true kind=atom kind=string core.source="hand-core 1"

@@ -1,11 +1,10 @@
 # k.words: English words: the noun and verb senses of frequent words, each with a short gloss, its synonyms, what it
 # is a kind of, what it is an instance of and what it is a part of. Irregular forms are core.word facts in the shards.
-# version: 1
 # sources: wordnet 3.1 (Princeton WordNet 3.1); the schema itself is hand-core 1
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/wordnet.mjs
 
-@k.words core.module name=k.words exports=sense core.source="hand-core 1"
+@k.words core.module name=k.words version=1 exports=sense core.source="hand-core 1"
 
 # One sense of a word. `n` is the sense number in WordNet (1 is the most frequent sense of the word for that part of
 # speech). The values of synonym, is_a, instance_of and part_of are words (several words are a string).

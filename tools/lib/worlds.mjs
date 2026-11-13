@@ -56,13 +56,13 @@ export function schemaWorld(worlds, id) {
   return { world: w, result: r };
 }
 
-// The module wire of a schema: name, imports, exports.
+// The module wire of a schema: name, version, imports, exports.
 export function moduleInfo(schemaText) {
   const m = parse(schemaText).find((x) => x.type === 'core.module');
   if (!m) return null;
   const name = m.attrs.name?.[0] ?? m.id;
   const full = (t) => (t.startsWith(`${name}.`) ? t : `${name}.${t}`);
-  return { name, imports: m.attrs.imports ?? [], exports: (m.attrs.exports ?? []).map(full) };
+  return { name, version: m.attrs.version?.[0] ?? null, imports: m.attrs.imports ?? [], exports: (m.attrs.exports ?? []).map(full) };
 }
 
 export const fmtViolation = (v) => `${v.kind}${v.id ? ` ${v.id}` : ''}${v.key ? `.${v.key}` : ''}: ${v.why ?? ''}`.trim();

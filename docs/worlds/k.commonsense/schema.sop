@@ -1,11 +1,10 @@
 # k.commonsense: everyday common sense: where things usually are, what they can do, what they are used for and made
 # of, how big they are, and how many of them a scene usually has. Soft rules give advice, never refusals.
-# version: 1
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.commonsense core.module name=k.commonsense exports=thing exports=placed core.source="hand-core 1"
+@k.commonsense core.module name=k.commonsense version=1 exports=thing exports=placed core.source="hand-core 1"
 
 # A thing of everyday life, named by an English lemma. Shared: it belongs to every namespace, so an application's
 # facts in its own namespace join with it.

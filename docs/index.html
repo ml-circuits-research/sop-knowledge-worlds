@@ -43,7 +43,7 @@ the words of the current message point to.</p>
 <p>Fetch the catalog, fetch a schema and the shard that a word points to, load them into a sopworld
 <code>World</code>, and ask. The library of the world must hold the schema of every world listed in
 <code>depends</code> too.</p>
-<pre id="example">import { World } from './sopworld.mjs';   // sopworld 0.14.0: the commit in catalog.sopworld
+<pre id="example">import { World } from './sopworld.mjs';   // sopworld 0.15.0: the commit in catalog.sopworld
 
 const base = 'https://ml-circuits-research.github.io/sop-knowledge-worlds/worlds/';
 const get = async (path) => {
@@ -81,7 +81,9 @@ console.log(answer.status, answer.value);   // supported water
 
 // Soft knowledge: advice after acting, never a refusal.
 const r = w.tell('@p1 k.commonsense.placed thing=fish at=sky scene=s1', { ns: 'scene' });
-console.log(r.ok, r.issues.map((i) => i.why));   // true, [ 'A fish is usually in water, not in the sky.', ... ]</pre>
+console.log(r.ok, r.issues.map((i) => i.why));   // true, [ 'A fish is usually in water, not in the sky.', ... ]
+// The advice does not change what the world knows.
+console.log(w.query({ type: 'k.commonsense.thing', where: { name: 'fish' }, seek: 'at' }).status);   // supported</pre>
 <p class="muted">The contract is in PLAN.md §2 of the repository. Facts can also be given to a world as a fact provider
 (<code>new World({ facts })</code>) instead of being told. Knowledge types are <code>shared=true</code>, so facts the
 application tells in its own namespace are joined with them.</p>

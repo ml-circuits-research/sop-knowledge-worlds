@@ -41,4 +41,5 @@ test('the example of the page runs and gives the answers it shows', { skip: !exi
   assert.deepEqual(logs[0], ['supported', 'water']);
   assert.equal(logs[1][0], true);
   assert.ok(logs[1][1].includes('A fish is usually in water, not in the sky.'), JSON.stringify(logs[1]));
+  assert.deepEqual(logs[2], ['supported']);
 });

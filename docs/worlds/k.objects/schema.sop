@@ -1,12 +1,11 @@
 # k.objects: drawable objects: their parts, how the parts sit relative to each other, and a box, a primitive shape, a
 # draw order and a typical colour per part, so that a renderer that has never seen an object can draw it from the
 # facts alone. The frame of every object is 0 to 100 on both axes, x to the right and y downwards.
-# version: 2
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.objects core.module name=k.objects imports=k.commonsense exports=object exports=part exports=point core.source="hand-core 1"
+@k.objects core.module name=k.objects version=2 imports=k.commonsense exports=object exports=part exports=point core.source="hand-core 1"
 
 # An object that can be drawn. Its name is an English lemma; the same name in k.commonsense.thing is the same thing.
 @k.objects.object core.type of=k.objects.object shared=true closed=true core.source="hand-core 1"

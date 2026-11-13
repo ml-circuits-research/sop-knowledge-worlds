@@ -1,7 +1,7 @@
 # Changelog
 
-Breaking schema changes, per world. The world's version is the `# version:` header line of its `schema.sop` and the
-`version` of its catalog entry.
+Breaking schema changes, per world. The world's version is `version=` on the `core.module` wire of its `schema.sop`
+(sopworld 0.15.0; a `# version:` header line before) and the `version` of its catalog entry.
 
 ## k.objects 2 (2026-11-13)
 

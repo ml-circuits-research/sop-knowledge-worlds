@@ -33,6 +33,5 @@ boat on the grass, a car in the sky, two suns in one scene; nothing is refused.
 
 ## Notes
 
-- An answer that rests on a knowledge wire with a standing issue is `conflicting` (sopworld S50): after a fish was put in
-  the sky, "where does a fish live" answers `conflicting` with the reason. Ask knowledge questions on a world (or a
-  fork) without the scene, or read `alternatives`.
+- A soft issue is advice: after a fish was put in the sky, "where does a fish live" still answers `water`
+  (sopworld 0.15.0).

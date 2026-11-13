@@ -12,7 +12,7 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 ## Hard rules
 
 1. **SOP Lang only for worlds.** Schemas and instances are `.sop` files. No JSON facts, no JS inside wires. Host functions
-   are declared with `core.function` (sopworld 0.14.0) and are never needed to *read* a world.
+   are declared with `core.function` (sopworld 0.15.0) and are never needed to *read* a world.
 2. **English only inside worlds.** Type names, keys, values, `core.word` texts: English. Proper names keep their own
    spelling (`Chișinău`). Translation is always a separate layer of the application, never here.
 3. **One language, no notation inside values.** Use wires and repeated keys, never mini-grammars in strings
@@ -39,7 +39,7 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 
 ## sopworld version
 
-Validate with sopworld **0.14.0 at commit c7247e2** of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
+Validate with sopworld **0.15.0 at commit 782cd0c** of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
 is the single-file build). Pin by commit in `tools/sopworld/VERSION`; no tags. Upgrade only when the reviewer says so.
 
 ## Layout

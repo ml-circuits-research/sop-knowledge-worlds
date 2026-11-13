@@ -55,7 +55,7 @@ test('every vocab entry points to listed shards or to a schema', () => {
 test('a fixture world gives keys, sources, license and vocabulary from words and identity values', () => {
   const root = mkdtempSync(join(tmpdir(), 'skw-'));
   const put = (p, t) => { mkdirSync(join(root, p, '..'), { recursive: true }); writeFileSync(join(root, p), t); };
-  put('k.toy/schema.sop', '# version: 1\n@k.toy core.module name=k.toy exports=item\n'
+  put('k.toy/schema.sop', '@k.toy core.module name=k.toy version=1 exports=item\n'
     + '@k.toy.item.name core.slot of=k.toy.item key=name id=true kind=atom\n'
     + '@k.toy.word.item core.word text=item text=items means=k.toy.item\n');
   put('k.toy/shards/a.sop', '# sources: test 1\n# license: CC-BY-NC-4.0\n# script: none\n'

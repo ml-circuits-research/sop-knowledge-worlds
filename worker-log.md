@@ -306,3 +306,16 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - Q12: `variant` removed from the `k.objects` schema (never used in a shard); imported drawings of the 18 names
   with a hand-written object stay left out.
 - Numbers: 4 worlds, 463 shards, vocab 16,218 words; facts unchanged; npm test 931 pass.
+
+## sopworld 0.15.0 (2026-11-13): pin upgraded to 782cd0c
+
+- `tools/sopworld/sopworld.mjs` = `docs/sopworld.mjs` at 782cd0c (0.15.0, build 694081ad7e6f, sha256 in VERSION).
+  AGENTS.md, README, page and the VERSION test name the new pin; the catalog says `"sopworld": "782cd0c"`.
+- Schema versions moved from the `# version:` header line to `core.module … version=` (no warning any more); the
+  catalog reads it from the module wire.
+- Fork workaround: the page example had none in its code (it asked before it placed the fish); it now asks again
+  after the soft issue and the test expects `supported`. The note in k.commonsense/WORLD.md is replaced. The
+  per-question `fork()` in `tests/questions.test.mjs` stays: it keeps the questions independent of each other.
+- Everything loads unchanged: 4 worlds, 463 shards, 0 errors, 0 warnings; shard bytes unchanged. Load times under
+  0.15.0: noto shards 4.6 s for 124 (was 4.0), k.words 0.95 s for 318, k.geo 0.36 s for 13; validation 15 s;
+  npm test 931 pass in 84 s (60 s before k.geo).

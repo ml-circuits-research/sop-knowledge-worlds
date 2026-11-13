@@ -94,7 +94,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   };
   const entries = [];
   for (const world of worlds) {
-    const info = moduleInfo(world.schemaText) ?? { name: world.id, imports: [], exports: [] };
+    const info = moduleInfo(world.schemaText) ?? { name: world.id, version: null, imports: [], exports: [] };
     const { world: sw } = schemaWorld(worlds, world.id);
     const idKeys = new Map();
     const identityKeys = (type) => {
@@ -143,10 +143,9 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
         : [world.schemaPath];
       for (const t of w.attrs.text ?? []) for (const id of targets) addWord(text(t), id);
     }
-    const schemaHeader = readHeader(world.schemaText);
     entries.push({
       id: world.id,
-      version: schemaHeader.version?.[0] ?? null,
+      version: info.version ?? null,
       schema: world.schemaPath,
       exports: uniqSorted(info.exports),
       depends: uniqSorted(info.imports),
