@@ -1633,6 +1633,7 @@
  ],
  "apple": [
   "k.objects/shards/mulberry-drink-type-01",
+  "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/nature",
   "k.objects/shards/noto-food-fruit-02",
   "k.objects/shards/noto-food-sweet-02",
@@ -1694,9 +1695,6 @@
  ],
  "apr": [
   "k.time/shards/calendar"
- ],
- "apricot": [
-  "k.objects/shards/mulberry-food-fruit-01"
  ],
  "april": [
   "k.time/shards/calendar",
@@ -3562,6 +3560,8 @@
   "k.objects/shards/mulberry-electrical-computer-02",
   "k.objects/shards/mulberry-electrical-general-01",
   "k.objects/shards/mulberry-electrical-tv-01",
+  "k.objects/shards/mulberry-food-kitchen-items-01",
+  "k.objects/shards/mulberry-food-kitchen-items-02",
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-drink-01",
@@ -4392,6 +4392,7 @@
  ],
  "berry": [
   "k.objects/shards/mulberry-food-fruit-01",
+  "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/be"
  ],
@@ -4841,6 +4842,9 @@
  ],
  "blade": [
   "k.objects/shards/mulberry-food-dairy-02",
+  "k.objects/shards/mulberry-food-kitchen-items-02",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-sport-03",
   "k.objects/shards/noto-tool-01",
@@ -5176,6 +5180,7 @@
  ],
  "boat": [
   "k.commonsense/shards/core",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/noto-transport-water-01",
   "k.objects/shards/noto-transport-water-02",
   "k.objects/shards/vehicles",
@@ -5241,6 +5246,7 @@
   "k.objects/shards/mulberry-clothes-general-06",
   "k.objects/shards/mulberry-electrical-computer-01",
   "k.objects/shards/mulberry-electrical-phone-01",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/nature",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
@@ -5636,6 +5642,9 @@
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-food-dairy-02",
+  "k.objects/shards/mulberry-food-ingredients-02",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
+  "k.objects/shards/mulberry-food-kitchen-items-07",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-household-02",
   "k.objects/shards/openmoji-food-drink-02",
@@ -5791,7 +5800,11 @@
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.objects/shards/mulberry-food-breads-and-baking-03",
   "k.objects/shards/mulberry-food-breads-and-baking-05",
+  "k.objects/shards/mulberry-food-ingredients-01",
+  "k.objects/shards/mulberry-food-ingredients-02",
   "k.objects/shards/mulberry-food-kitchen-items-01",
+  "k.objects/shards/mulberry-food-kitchen-items-02",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/noto-food-asian-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-food-sweet-01",
@@ -7473,6 +7486,7 @@
   "k.words/shards/ca"
  ],
  "can": [
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/noto-food-prepared-05",
   "k.objects/shards/noto-office-03",
   "k.words/shards/ca"
@@ -7646,6 +7660,9 @@
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-electrical-computer-01",
+  "k.objects/shards/mulberry-food-ingredients-01",
+  "k.objects/shards/mulberry-food-ingredients-02",
+  "k.objects/shards/mulberry-food-kitchen-items-07",
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-food-prepared-05",
@@ -8973,6 +8990,7 @@
  ],
  "cherry": [
   "k.objects/shards/mulberry-food-fruit-01",
+  "k.objects/shards/mulberry-food-fruit-03",
   "k.objects/shards/noto-food-fruit-02",
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-plant-flower-01",
@@ -9950,6 +9968,7 @@
  "cloth": [
   "k.objects/shards/more",
   "k.objects/shards/mulberry-clothes-accessories-01",
+  "k.objects/shards/mulberry-food-kitchen-items-03",
   "k.words/shards/cl"
  ],
  "clothes": [
@@ -10973,6 +10992,7 @@
  ],
  "cone": [
   "k.objects/shards/mulberry-celebration-item-04",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-sound-01",
   "k.words/shards/co"
@@ -12555,6 +12575,8 @@
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-drink-type-03",
+  "k.objects/shards/mulberry-food-kitchen-items-03",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-drink-02",
@@ -13077,7 +13099,7 @@
   "k.words/shards/da"
  ],
  "dates": [
-  "k.objects/shards/mulberry-food-fruit-02"
+  "k.objects/shards/mulberry-food-fruit-01"
  ],
  "dating": [
   "k.words/shards/da"
@@ -13996,6 +14018,7 @@
   "k.words/shards/di"
  ],
  "dial": [
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.words/shards/di"
  ],
  "dialect": [
@@ -14495,6 +14518,7 @@
  ],
  "display": [
   "k.objects/shards/mulberry-electrical-phone-01",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/openmoji-objects-03",
   "k.objects/shards/openmoji-technology-02",
   "k.words/shards/di"
@@ -14942,6 +14966,8 @@
   "k.objects/shards/mulberry-building-shop-01",
   "k.objects/shards/mulberry-building-structure-01",
   "k.objects/shards/mulberry-celebration-item-03",
+  "k.objects/shards/mulberry-food-kitchen-items-03",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/noto-place-building-02",
@@ -18934,7 +18960,6 @@
   "k.objects/shards/mulberry-food-fish-and-seafood-01",
   "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/mulberry-food-fruit-02",
-  "k.objects/shards/mulberry-food-fruit-03",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/mulberry-food-meals-and-snacks-01",
   "k.objects/shards/mulberry-food-meals-and-snacks-02",
@@ -19254,6 +19279,7 @@
  ],
  "fork": [
   "k.objects/shards/mulberry-food-kitchen-items-03",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-asian-01",
   "k.objects/shards/noto-food-prepared-04",
@@ -19818,7 +19844,6 @@
  "fruit": [
   "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/mulberry-food-fruit-02",
-  "k.objects/shards/mulberry-food-fruit-03",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04",
   "k.objects/shards/noto-food-fruit-01",
   "k.objects/shards/noto-food-fruit-02",
@@ -22298,6 +22323,11 @@
   "k.objects/shards/mulberry-building-contents-03",
   "k.objects/shards/mulberry-celebration-item-02",
   "k.objects/shards/mulberry-food-dairy-02",
+  "k.objects/shards/mulberry-food-kitchen-items-02",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
+  "k.objects/shards/mulberry-food-kitchen-items-07",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
@@ -24895,9 +24925,6 @@
   "k.objects/shards/mulberry-food-ingredients-02",
   "k.words/shards/in"
  ],
- "ingredients": [
-  "k.objects/shards/mulberry-food-ingredients-01"
- ],
  "inhabitants": [
   "k.geo/schema.sop"
  ],
@@ -25014,6 +25041,11 @@
   "k.words/shards/in"
  ],
  "inside": [
+  "k.objects/shards/mulberry-food-kitchen-items-01",
+  "k.objects/shards/mulberry-food-kitchen-items-02",
+  "k.objects/shards/mulberry-food-kitchen-items-03",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/noto-food-asian-01",
   "k.words/shards/in"
  ],
@@ -27269,6 +27301,7 @@
  "knob": [
   "k.objects/shards/home",
   "k.objects/shards/more",
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-game-02",
   "k.objects/shards/noto-music-01",
@@ -27642,6 +27675,7 @@
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-electrical-media-03",
   "k.objects/shards/mulberry-food-dairy-02",
+  "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-book-paper-03",
   "k.objects/shards/noto-computer-02",
@@ -28448,6 +28482,7 @@
  "left_foot": [
   "k.objects/shards/mulberry-building-furniture-05",
   "k.objects/shards/mulberry-clothes-general-05",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-bird-03",
@@ -28465,6 +28500,7 @@
   "k.objects/shards/noto-clothing-02"
  ],
  "left_handle": [
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-household-02",
@@ -28485,6 +28521,7 @@
   "k.objects/shards/noto-animal-reptile-01"
  ],
  "left_leaf": [
+  "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/noto-food-fruit-02",
   "k.objects/shards/noto-plant-flower-02",
   "k.objects/shards/noto-plant-other-01"
@@ -28592,6 +28629,9 @@
  ],
  "left_roof": [
   "k.objects/shards/buildings"
+ ],
+ "left_segment": [
+  "k.objects/shards/mulberry-food-fruit-03"
  ],
  "left_shoe": [
   "k.objects/shards/mulberry-celebration-item-02"
@@ -29023,7 +29063,8 @@
   "k.objects/shards/mulberry-food-dairy-01",
   "k.objects/shards/mulberry-food-dairy-02",
   "k.objects/shards/mulberry-food-eggs-01",
-  "k.objects/shards/mulberry-food-kitchen-items-05",
+  "k.objects/shards/mulberry-food-ingredients-01",
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-drink-03",
   "k.objects/shards/noto-tool-03",
@@ -31184,6 +31225,7 @@
  ],
  "mat": [
   "k.objects/shards/mulberry-building-contents-01",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.words/shards/ma"
  ],
  "matagalpa": [
@@ -31959,7 +32001,7 @@
   "k.words/shards/mi"
  ],
  "microwave": [
-  "k.objects/shards/mulberry-food-kitchen-items-06",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.words/shards/mi"
  ],
  "midday": [
@@ -33101,6 +33143,7 @@
   "k.words/shards/mo"
  ],
  "mortar": [
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/noto-place-building-01",
   "k.words/shards/mo"
  ],
@@ -36069,6 +36112,7 @@
   "k.geo/shards/europe"
  ],
  "oil": [
+  "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-transport-ground-06",
   "k.words/shards/oi"
@@ -36375,7 +36419,6 @@
  ],
  "orange": [
   "k.geo/shards/africa",
-  "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/or"
@@ -37152,6 +37195,8 @@
   "k.words/shards/pa"
  ],
  "pan": [
+  "k.objects/shards/mulberry-food-kitchen-items-04",
+  "k.objects/shards/mulberry-food-kitchen-items-07",
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/pa"
  ],
@@ -37797,6 +37842,9 @@
  "pea pod": [
   "k.objects/shards/noto-food-vegetable-03"
  ],
+ "pea_pod": [
+  "k.objects/shards/mulberry-food-fruit-03"
+ ],
  "peabody": [
   "k.words/shards/pe"
  ],
@@ -37840,6 +37888,7 @@
   "k.words/shards/pe"
  ],
  "pear": [
+  "k.objects/shards/mulberry-food-fruit-03",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/pe"
  ],
@@ -37906,6 +37955,7 @@
  ],
  "pedestal": [
   "k.objects/shards/mulberry-building-public-01",
+  "k.objects/shards/mulberry-food-kitchen-items-07",
   "k.words/shards/pe"
  ],
  "pedestrian": [
@@ -38318,6 +38368,9 @@
  ],
  "pester": [
   "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "pestle": [
+  "k.objects/shards/mulberry-food-kitchen-items-06"
  ],
  "pestle and mortar": [
   "k.objects/shards/mulberry-food-kitchen-items-06"
@@ -39293,6 +39346,7 @@
   "k.words/shards/pl"
  ],
  "plum": [
+  "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/mulberry-food-fruit-03",
   "k.words/shards/pl"
  ],
@@ -39823,6 +39877,7 @@
  "pot": [
   "k.objects/shards/mulberry-food-dairy-01",
   "k.objects/shards/mulberry-food-dairy-02",
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-tools-garden-01",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-food-prepared-04",
@@ -41390,10 +41445,10 @@
   "k.objects/shards/noto-mail-02"
  ],
  "raisin": [
-  "k.objects/shards/mulberry-food-fruit-03"
+  "k.objects/shards/mulberry-food-fruit-02"
  ],
  "raisin currants": [
-  "k.objects/shards/mulberry-food-fruit-03"
+  "k.objects/shards/mulberry-food-fruit-02"
  ],
  "raising": [
   "k.words/shards/ra"
@@ -43323,6 +43378,7 @@
  "right_foot": [
   "k.objects/shards/mulberry-building-furniture-05",
   "k.objects/shards/mulberry-clothes-general-05",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-bird-03",
@@ -43340,6 +43396,7 @@
   "k.objects/shards/noto-clothing-02"
  ],
  "right_handle": [
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-household-02",
@@ -43360,6 +43417,7 @@
   "k.objects/shards/noto-animal-reptile-01"
  ],
  "right_leaf": [
+  "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/noto-food-fruit-02",
   "k.objects/shards/noto-plant-other-01"
  ],
@@ -43465,6 +43523,9 @@
  ],
  "right_roof": [
   "k.objects/shards/buildings"
+ ],
+ "right_segment": [
+  "k.objects/shards/mulberry-food-fruit-03"
  ],
  "right_shoe": [
   "k.objects/shards/mulberry-celebration-item-02"
@@ -43906,6 +43967,7 @@
  ],
  "roll": [
   "k.objects/shards/mulberry-building-contents-01",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/noto-food-prepared-01",
   "k.objects/shards/noto-household-03",
   "k.words/shards/ro"
@@ -43927,6 +43989,7 @@
  ],
  "roller": [
   "k.objects/shards/mulberry-building-contents-03",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/noto-hotel-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-transport-ground-05",
@@ -43945,7 +44008,7 @@
   "k.words/shards/ro"
  ],
  "rolling pin": [
-  "k.objects/shards/mulberry-food-kitchen-items-07"
+  "k.objects/shards/mulberry-food-kitchen-items-06"
  ],
  "rolling_pin": [
   "k.objects/shards/mulberry-food-breads-and-baking-05"
@@ -45083,11 +45146,13 @@
  ],
  "sauce": [
   "k.objects/shards/mulberry-food-breads-and-baking-01",
+  "k.objects/shards/mulberry-food-ingredients-01",
+  "k.objects/shards/mulberry-food-ingredients-02",
   "k.objects/shards/noto-dishware-01",
   "k.words/shards/sa"
  ],
  "sauce apple": [
-  "k.objects/shards/mulberry-food-ingredients-02"
+  "k.objects/shards/mulberry-food-ingredients-01"
  ],
  "sauce brown": [
   "k.objects/shards/mulberry-food-ingredients-02"
@@ -46491,6 +46556,7 @@
   "k.words/shards/sh"
  ],
  "sheet": [
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.words/shards/sh"
  ],
  "sheets": [
@@ -46999,6 +47065,7 @@
   "k.objects/shards/mulberry-building-furniture-04",
   "k.objects/shards/mulberry-food-breads-and-baking-01",
   "k.objects/shards/mulberry-food-dairy-01",
+  "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/noto-food-prepared-02",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-mail-01",
@@ -48912,6 +48979,9 @@
  "spoon": [
   "k.objects/shards/mulberry-food-breads-and-baking-03",
   "k.objects/shards/mulberry-food-breads-and-baking-05",
+  "k.objects/shards/mulberry-food-ingredients-01",
+  "k.objects/shards/mulberry-food-ingredients-02",
+  "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/sp"
@@ -49008,6 +49078,7 @@
   "k.words/shards/sp"
  ],
  "spout": [
+  "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-drink-01"
  ],
@@ -49337,6 +49408,7 @@
   "k.words/shards/st"
  ],
  "stalk": [
+  "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/st"
  ],
@@ -49617,7 +49689,7 @@
   "k.objects/shards/noto-place-other-02"
  ],
  "steamer": [
-  "k.objects/shards/mulberry-food-kitchen-items-08"
+  "k.objects/shards/mulberry-food-kitchen-items-07"
  ],
  "steaming": [
   "k.objects/shards/noto-drink-01",
@@ -50425,6 +50497,7 @@
   "k.words/shards/su"
  ],
  "sugar": [
+  "k.objects/shards/mulberry-food-ingredients-02",
   "k.objects/shards/noto-food-sweet-01",
   "k.words/shards/su"
  ],
@@ -52795,6 +52868,8 @@
  ],
  "tin": [
   "k.objects/shards/mulberry-food-breads-and-baking-01",
+  "k.objects/shards/mulberry-food-fruit-03",
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.words/shards/ti"
  ],
@@ -52835,13 +52910,13 @@
   "k.objects/shards/mulberry-food-fruit-03"
  ],
  "tinned peas": [
-  "k.objects/shards/mulberry-food-fruit-04"
+  "k.objects/shards/mulberry-food-fruit-03"
  ],
  "tinned pineapple": [
-  "k.objects/shards/mulberry-food-fruit-04"
+  "k.objects/shards/mulberry-food-fruit-03"
  ],
  "tinned plums": [
-  "k.objects/shards/mulberry-food-fruit-04"
+  "k.objects/shards/mulberry-food-fruit-03"
  ],
  "tinned sweetcorn": [
   "k.objects/shards/mulberry-food-vegetables-and-salads-05"
@@ -52941,7 +53016,7 @@
  ],
  "toast": [
   "k.objects/shards/mulberry-food-eggs-01",
-  "k.objects/shards/mulberry-food-kitchen-items-09",
+  "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.objects/shards/noto-food-prepared-01",
   "k.words/shards/to"
  ],
@@ -53068,6 +53143,7 @@
  ],
  "tomato": [
   "k.objects/shards/mulberry-drink-type-03",
+  "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-food-fruit-03",
   "k.words/shards/to"
  ],
@@ -53781,6 +53857,7 @@
  ],
  "tray": [
   "k.objects/shards/mulberry-building-furniture-03",
+  "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-09",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/tr"
@@ -57401,6 +57478,7 @@
   "k.objects/shards/home",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-electrical-general-02",
+  "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/noto-transport-air-01",

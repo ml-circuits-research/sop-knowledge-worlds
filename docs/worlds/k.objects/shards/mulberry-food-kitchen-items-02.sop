@@ -5,7 +5,7 @@
 
 # cereal bowl
 @k.objects.mb419 k.objects.object name="cereal bowl" core.source="mulberry fa94a93"
-@k.objects.mb419.p1 k.objects.part of="cereal bowl" name=part1 shape=polygon x=15.8 y=58.9 w=67 h=18.6 z=1 colour=green rgb="#ABDA4D" core.source="mulberry fa94a93"
+@k.objects.mb419.p1 k.objects.part of="cereal bowl" name=bowl named=model shape=polygon x=15.8 y=58.9 w=67 h=18.6 z=1 colour=green rgb="#ABDA4D" core.source="mulberry fa94a93"
 @k.objects.mb419.p1.1 k.objects.point part=$k.objects.mb419.p1 n=1 x=48.8 y=69.5 core.source="mulberry fa94a93"
 @k.objects.mb419.p1.2 k.objects.point part=$k.objects.mb419.p1 n=2 x=57.1 y=69 core.source="mulberry fa94a93"
 @k.objects.mb419.p1.3 k.objects.point part=$k.objects.mb419.p1 n=3 x=68.4 y=66.6 core.source="mulberry fa94a93"
@@ -74,7 +74,7 @@
 @k.objects.mb419.p3.12 k.objects.point part=$k.objects.mb419.p3 n=12 x=54.2 y=54.8 core.source="mulberry fa94a93"
 @k.objects.mb419.p3.13 k.objects.point part=$k.objects.mb419.p3 n=13 x=60.9 y=56.9 core.source="mulberry fa94a93"
 @k.objects.mb419.p3.14 k.objects.point part=$k.objects.mb419.p3 n=14 x=65.1 y=60.1 core.source="mulberry fa94a93"
-@k.objects.mb419.p4 k.objects.part of="cereal bowl" name=part4 shape=polygon x=12.1 y=25.5 w=73.7 h=38.1 z=4 colour=white rgb="#FFFFFF" core.source="mulberry fa94a93"
+@k.objects.mb419.p4 k.objects.part of="cereal bowl" name=inside named=model shape=polygon x=12.1 y=25.5 w=73.7 h=38.1 z=4 colour=white rgb="#FFFFFF" core.source="mulberry fa94a93"
 @k.objects.mb419.p4.1 k.objects.point part=$k.objects.mb419.p4 n=1 x=48.8 y=25.5 core.source="mulberry fa94a93"
 @k.objects.mb419.p4.2 k.objects.point part=$k.objects.mb419.p4 n=2 x=54.8 y=25.7 core.source="mulberry fa94a93"
 @k.objects.mb419.p4.3 k.objects.point part=$k.objects.mb419.p4 n=3 x=65.8 y=27.7 core.source="mulberry fa94a93"
@@ -214,7 +214,7 @@
 @k.objects.mb488.p1.13 k.objects.point part=$k.objects.mb488.p1 n=13 x=63.5 y=15.1 core.source="mulberry fa94a93"
 @k.objects.mb488.p1.14 k.objects.point part=$k.objects.mb488.p1 n=14 x=65.9 y=15.6 core.source="mulberry fa94a93"
 @k.objects.mb488.p1.15 k.objects.point part=$k.objects.mb488.p1 n=15 x=67.8 y=17.4 core.source="mulberry fa94a93"
-@k.objects.mb488.p2 k.objects.part of="chopping board" name=part2 shape=polygon x=59.2 y=50.7 w=26.4 h=15.9 z=2 colour=grey rgb="#787878" core.source="mulberry fa94a93"
+@k.objects.mb488.p2 k.objects.part of="chopping board" name=handle named=model shape=polygon x=59.2 y=50.7 w=26.4 h=15.9 z=2 colour=grey rgb="#787878" core.source="mulberry fa94a93"
 @k.objects.mb488.p2.1 k.objects.point part=$k.objects.mb488.p2 n=1 x=85.5 y=62.2 core.source="mulberry fa94a93"
 @k.objects.mb488.p2.2 k.objects.point part=$k.objects.mb488.p2 n=2 x=85.6 y=64 core.source="mulberry fa94a93"
 @k.objects.mb488.p2.3 k.objects.point part=$k.objects.mb488.p2 n=3 x=84.8 y=65.8 core.source="mulberry fa94a93"
@@ -227,7 +227,7 @@
 @k.objects.mb488.p2.10 k.objects.point part=$k.objects.mb488.p2 n=10 x=59.2 y=55 core.source="mulberry fa94a93"
 @k.objects.mb488.p2.11 k.objects.point part=$k.objects.mb488.p2 n=11 x=61 y=50.7 core.source="mulberry fa94a93"
 @k.objects.mb488.p2.12 k.objects.point part=$k.objects.mb488.p2 n=12 x=84 y=60.5 core.source="mulberry fa94a93"
-@k.objects.mb488.p3 k.objects.part of="chopping board" name=part3 shape=polygon x=16.1 y=34.9 w=44.9 h=24.6 z=3 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
+@k.objects.mb488.p3 k.objects.part of="chopping board" name=blade named=model shape=polygon x=16.1 y=34.9 w=44.9 h=24.6 z=3 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
 @k.objects.mb488.p3.1 k.objects.point part=$k.objects.mb488.p3 n=1 x=61 y=50.7 core.source="mulberry fa94a93"
 @k.objects.mb488.p3.2 k.objects.point part=$k.objects.mb488.p3 n=2 x=59.2 y=55 core.source="mulberry fa94a93"
 @k.objects.mb488.p3.3 k.objects.point part=$k.objects.mb488.p3 n=3 x=56.9 y=55.5 core.source="mulberry fa94a93"
@@ -622,7 +622,7 @@
 
 # colander
 @k.objects.mb554 k.objects.object name=colander core.source="mulberry fa94a93"
-@k.objects.mb554.p1 k.objects.part of=colander name=part1 shape=polygon x=30.2 y=67.6 w=44.7 h=16.5 z=1 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
+@k.objects.mb554.p1 k.objects.part of=colander name=base named=model shape=polygon x=30.2 y=67.6 w=44.7 h=16.5 z=1 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
 @k.objects.mb554.p1.1 k.objects.point part=$k.objects.mb554.p1 n=1 x=72.8 y=67.6 core.source="mulberry fa94a93"
 @k.objects.mb554.p1.2 k.objects.point part=$k.objects.mb554.p1 n=2 x=74.3 y=69.9 core.source="mulberry fa94a93"
 @k.objects.mb554.p1.3 k.objects.point part=$k.objects.mb554.p1 n=3 x=74.9 y=72.5 core.source="mulberry fa94a93"
