@@ -16,3 +16,5 @@
 {"id":"at-16","ask":"what colour is a car","query":{"type":"k.attributes.thing","where":{"name":"car"},"seek":"colour"},"expect":{"status":"supported","value":"any"}}
 {"id":"at-17","ask":"in which colour is the elephant drawn","query":{"type":"k.attributes.drawn","where":{"name":"elephant"},"seek":"drawn_colour"},"expect":{"status":"supported","value":"grey"}}
 {"id":"at-18","ask":"which shades is the budgie drawn in","query":{"type":"k.attributes.drawn","where":{"name":"budgie"},"seek":"drawn_shade","mode":"list"},"expect":{"status":"supported","values":["lemon","lime"]}}
+{"id":"at-19","ask":"is a duck the same thing in every world","query":{"type":"k.attributes.same","where":{"name":"duck"},"seek":"only"},"expect":{"status":"supported","value":"true"}}
+{"id":"at-20","ask":"which senses has the name orange","query":{"type":"k.attributes.same","where":{"name":"orange"},"seek":"sense","mode":"list"},"expect":{"status":"supported","values":["food","colour","place"]}}

@@ -30,3 +30,14 @@ test('the counts of a fresh run add up (when the raw files are there)', { skip: 
   assert.equal(r.drawn + r.linked + r.neither, r.total);
   for (const x of r.rows) assert.equal(x.own + x.through + x.none, r.total, x.label);
 });
+
+// Round 10, item 7: the two generated pages go stale when a world grows. With the raw files there, a fresh run
+// must give the pages on disk.
+test('COVERAGE.md and ASPECTS.md are not stale: a fresh run gives the pages on disk (run `npm run reports`)', { skip: !existsSync(join(REPO, 'sources/wordnet/raw/wordnet31/data.noun')) || !existsSync(join(REPO, 'sources/frequency-words/raw/en_50k.txt')) }, async () => {
+  const { coverageReport, coveragePage, COVERAGE_PAGE } = await import('../tools/coverage-report.mjs');
+  const { aspectTable, aspectsPage, ASPECTS_PAGE } = await import('../tools/aspects-report.mjs');
+  const { run } = await import('../tools/coverage.mjs');
+  const list = run().list;
+  assert.equal(readFileSync(COVERAGE_PAGE, 'utf8'), coveragePage(coverageReport(list, JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8')))), 'COVERAGE.md is stale');
+  assert.equal(readFileSync(ASPECTS_PAGE, 'utf8'), aspectsPage(aspectTable(list)), 'ASPECTS.md is stale');
+});

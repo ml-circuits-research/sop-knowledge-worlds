@@ -4,7 +4,7 @@
 //   node tools/import/psys2.mjs [--from /tmp/wt2] [--commit <sha>]
 // --from is a checkout of the PSys2 repository (read only); --commit is the commit cited as the source (by default
 // the last commit of the checkout that changed one of the files read). Run it after the other imports and core tools: it compares with the shards on disk, and
-// leaves its own shards out of that comparison.
+// leaves its own shards out of that comparison. Run it once: see the note at the end of this file.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -381,7 +381,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const arg = (name, dflt) => { const i = process.argv.indexOf(`--${name}`); return i < 0 ? dflt : process.argv[i + 1]; };
   const from = arg('from', '/tmp/wt2');
   if (!existsSync(join(from, 'worlds'))) { console.error(`no PSys2 checkout at ${from}`); process.exit(1); }
-  const { files, page, stats } = importPsys2(from, arg('commit', psys2Commit(from)));
+  // The demo deletes its copies once they are here: a later checkout no longer holds what was taken, and a run on
+  // it would take the facts away again. So the tool writes only from the commit the page on disk cites (or with
+  // --force, for a deliberate new reading).
+  const cited = existsSync(PAGE) ? /at PSys2 commit `([0-9a-f]+)`/.exec(readFileSync(PAGE, 'utf8'))?.[1] : null;
+  const commit = arg('commit', psys2Commit(from));
+  if (cited && cited !== commit && !process.argv.includes('--force')) { console.error(`the page cites PSys2 commit ${cited}; this checkout is at ${commit} for the files read: nothing written (use --force for a new reading)`); process.exit(1); }
+  const { files, page, stats } = importPsys2(from, commit);
   for (const [world, shards] of Object.entries(files)) writeShards(join(WORLDS_DIR, world, 'shards'), shards, 'psys2');
   writeFileSync(PAGE, page);
   console.log(JSON.stringify(stats));

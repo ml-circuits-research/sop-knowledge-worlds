@@ -2553,3 +2553,50 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   on main where the raw files are present (it compared the directory with the importer's files; the `psys2-`
   shards are not the importer's): the comparison now leaves them out. Catalog 22 worlds, 876 shards, vocab 23,291
   words; 0 errors, 0 warnings. npm test 2,684: 2,683 pass, 1 skipped, 0 fail.
+
+## Round 10, items 3 and 7 (2026-11-13, second worker): one name, one thing across worlds; a test for stale pages
+
+- **New tool `tools/joins.mjs`**, new type **`k.attributes.same`** (27 shards `same-<letter>`, 3,201 wires,
+  621,471 bytes) and the generated page **`docs/worlds/JOINS.md`**. For every name that facts of more than one
+  world carry (3,130 names, compared in lower case): its `sense` and the types (`in`) whose facts with that name
+  are about that one thing; `only=true` when the name has one sense in the whole catalog (3,063 names),
+  `only=false` and one fact per sense when it has several (**67 clashes**, all listed on the page).
+- **How a sense is found (a rule, not a reading of each name):** each type that names things gives a sense (an
+  animal of `k.animals`, a colour of `k.colours` and `k.values`, a place of `k.geo`, a body part, a wearable …);
+  a drawing has the sense of the group its source filed it in (animals, food and drink, plants, clothes;
+  any other group: a thing; a mixed hand-written shard: unknown); facts about a drawing (place, size, drawn
+  colour, anchor) follow the drawing; a `k.attributes.thing` follows its kind. A plain "thing" is the same thing
+  as a body in space, a body part, a plant, a person or a wearable of that name (the drawing sun is the Sun of
+  `k.space`), and another thing than an animal, a food, a colour, a shape, a time or a place. `k.words.sense`
+  and `k.parts` are keyed by the word whatever it means: listed apart as `by_word`.
+- **The reviewer's examples:** duck is one thing in `k.objects`, `k.animals`, `k.scenes`, `k.attributes`
+  (`k.words`, `k.parts` by word). orange: food, colour and a river. crane: the animal of `k.animals`, and the
+  drawing (with its place, size and drawn colour) is the machine. kiwi and tuna: the drawing is the food.
+  **bat and mouse are not clashes in this catalog**: their drawings show the animals and no world has the bat of
+  a game or the mouse of a computer as a thing; `k.words` has those senses (`by_word`).
+- **Looked at:** the whole clash list three times while the rule was made (133, then 96, then 67 names): the
+  first versions reported a scene and its drawing (beach), a container filed under drinks (teapot), a wearable
+  drawn in a general group (apron), the Sun and its drawing; each was removed by a rule above, not by a table.
+  Of the 67 left: 29 are a common word that is also a river, a city or a country of `k.geo` (bear, fox, red,
+  turkey, peru): true for a host that compares in lower case; 22 a food or a plant and a colour; 13 an animal
+  and its meat; then heart, ring, pyramid, star, palm, skin, crane. Wrong or doubtful, left in and named here:
+  **mount fuji** (the drawing is the mountain of `k.geo`: one thing), **feather** and **bug** (animal only
+  because of the group of the drawing), **toast**, **hay**, **mushroom** (food in one world, thing or plant in
+  the other: the same thing). A seeded sample of 70 of the 3,063 "one thing" names read: all plausible.
+  **Not looked at:** the other 2,990; a clash is missed where a drawing's group says nothing.
+- **Item 7:** `tests/coverage-report.test.mjs` now fails when COVERAGE.md or ASPECTS.md is stale (a fresh run
+  must give the page on disk; needs the raw WordNet and frequency files, skipped without them); the joins test
+  fails when the `same` shards or JOINS.md are stale, with no raw files needed. `npm run build` now runs
+  `tools/joins.mjs`; the new `npm run reports` regenerates the two pages. **For the first worker:** after a
+  change to any world run `npm run build && npm run reports` before `npm test`.
+- **Judgement that is mine:** the sense of each type and which senses a plain thing may share.
+- **What SOP Lang could not say:** the rule itself (a sense from the shard a drawing lies in): the tool computes
+  the facts; nothing in a world can refer to the shard of a fact.
+- Tests: `tests/joins.test.mjs` (3), questions at-19, at-20, the stale test.
+- Numbers: k.attributes 38 shards, 6,293 wires. Catalog 22 worlds, 902 shards, vocab 23,205 words; 0 errors, 0 warnings.
+- **A defect of item 0 found and closed here:** the PSys2 copy at `/tmp/wt2` moved on (commit `c311c86c` changed
+  the files read: the demo has begun to delete its knowledge), and a rerun of `tools/import/psys2.mjs` took facts
+  away again (the colour words; every shard changed its commit). The psys2 shards and FROM-PSYS2.md were put back
+  as pushed at 4e02e97, and the tool now writes only from the commit the page cites (`6b63b2ba`) unless `--force`
+  is given. Nothing wrong was pushed. The equality test is skipped while the copy is at another commit.
+- After that: catalog 22 worlds, 902 shards, vocab 23,217 words; npm test 2,680 pass, 6 skipped, 0 fail.
