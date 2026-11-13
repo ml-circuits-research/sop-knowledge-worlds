@@ -290,3 +290,11 @@ Hand-written cores (CC0, tests, facts a child's encyclopedia would state), joine
 - **R7.5 `k.people`**: 60 roles and jobs (doctor, farmer, pirate, astronaut, grandmother…): what they wear, hold and use,
   where they work; features that map to `k.faces` and to things with drawings.
 Order: R7.1 first (the drawing demo needs it), then R7.4 and R7.5 (avatars), then R7.2, R7.3.
+
+## Reviewer 2026-11-13 16:45 — Round 7 addendum: what the demo asks knowledge for (from the owner's log)
+
+The demo will fill gaps from knowledge (PSys2 WORLDS-AS-MODULES, M3). Make sure these can be answered by lookup, with sources:
+1. **Usual place** for every drawable thing in k.objects, in k.scenes: sky, ground, water, indoors, on another thing (sun and clouds in the sky; duck on water; goat, cow, house, swing on the ground). Model-labelled where sure (`named=model`), same audit as part names.
+2. **Usual relative size** class (tiny … huge) for the same things.
+3. **Person kinds** in k.people: child, baby, boy, girl, man, woman, grandfather, grandmother as variants of one person drawing (age, hair, height) and all reachable by any of their names.
+4. **Stand-ins found missing today:** villa → house, puddle → small lake, donkey, grandfather. Add them and report how many of the 1,500 common things still have neither a drawing nor a stand-in.
