@@ -18,11 +18,12 @@
   (things; no faces, hands, people, flags, symbols, letters; inside the kept groups no clock faces for each half hour
   and no card suits). Per drawing: every visible element as one part; circles, ellipses and rectangles as primitives;
   paths flattened and simplified (Douglas-Peucker) to at most 40 points a part and about 200 points an object; holes,
-  gradients (one flat colour, the middle stop), clips and translucent overlays dropped; at most 16 parts (the
+  gradients (one flat colour, the middle stop), clips and translucent overlays dropped; a shape that is mostly hole
+  (a frame, a ring) becomes a closed line along its outer edge; at most 16 parts (the
   largest). Part names: `sources/noto-emoji/part-names.tsv` (written by a language model looking at numbered
   pictures; `named=model`), else `part1…partN`.
 - **Twemoji was not compared:** the Noto drawings convert well (see worker-log.md R2.6) and Apache-2.0 is more
   permissive than CC BY 4.0 (the owner's rule: the more permissive source).
 - **Counts (2026-11-13, all):** 861 emoji in the kept groups, 32 not things, 18 with a hand-written object of the same
-  name (left out, questions.md Q12): 811 objects, 10,188 parts, 121,764 points, 802 word wires; 133,565 wires in 124
-  shards, 16,236,240 bytes. `sources/noto-emoji/limit.txt` holds how many objects the build takes (0: all).
+  name (left out, questions.md Q12): 811 objects, 10,152 parts, 120,941 points, 802 word wires; 132,706 wires in 124
+  shards, 16,153,844 bytes. `sources/noto-emoji/limit.txt` holds how many objects the build takes (0: all).

@@ -237,7 +237,23 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 ## R2.7 batch 3 (2026-11-13): 108 more objects looked at (524 of 811)
 
 - Fruit, bread, meat, prepared food, sweets, vegetables, games, household, cameras and lights, locks.
-- part-names.tsv: rows for 458 objects; **1,444 parts named, 558 marked detail** (this batch: +239 names, +171
-  details, 97 of 108 objects with a row).
+- part-names.tsv: rows for 451 objects; **1,416 parts named, 541 marked detail** (this batch: +211 names, +154
+  details, 90 of 108 objects with a row). (The commit message of this batch, 98d38ce, gives 458 / 1,444 / 558 /
+  +239 / 97: those were written before the build finished and are wrong; these are the measured numbers.)
 - Not recognisable: piñata, mirror ball, nesting dolls. 3 of 108.
 - npm test 913 pass; shards unchanged in number and wires.
+
+## R2.7 batch 4 (2026-11-13): converter fix for frames and rings; 113 objects looked at (601 of 811)
+
+- **Converter fix found while labelling** (the three charts were grey boxes): a path that is mostly hole (a frame, a
+  ring, a disc with a hole) was filled solid once its hole was dropped, and hid everything drawn before it. Such a
+  shape (holes at least half of its area) is now a closed `line` along its outer edge; holes are found whatever
+  the order of the subpaths. 129 objects changed; charts, ring, discs, panda, mirror ball, package, abacus are
+  recognisable now. Noto shards after the fix: 811 objects, 10,152 parts, 120,941 points, **132,706 wires, 124
+  shards, 16,153,844 bytes**.
+- 70 of the changed objects were renumbered (part numbers moved); the 36 of them that had names lost their rows
+  and were looked at again in this batch, so no name points at a wrong part (the names test checks row by row).
+- Looked at: the 70 renumbered ones again, then mail, medical, money, music, office, phones, first buildings.
+  part-names.tsv: rows for 509 objects; **1,537 parts named, 641 marked detail**.
+- Not recognisable so far (of 601 looked at): spider web, gorilla, lizard, piñata, nesting dolls, brick. 6.
+- npm test 913 pass; vocab 13,186 words.

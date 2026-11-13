@@ -252,8 +252,6 @@ newspaper	7		detail
 newspaper	8		detail
 newspaper	9		detail
 newspaper	10	picture	
-label	5	hole	
-label	6	string	
 glasses	1	left_lens	lens
 glasses	2	right_lens	lens
 glasses	3	frame	
@@ -271,14 +269,6 @@ briefs	2		detail
 briefs	3		detail
 briefs	4	briefs	
 folding hand fan	3	handle	
-shopping bags	1	handle	
-shopping bags	2	bag1	bag
-shopping bags	10	bag2	bag
-running shoe	8		detail
-running shoe	16	sole	
-woman’s sandal	1	sole	
-woman’s sandal	7	strap	
-woman’s sandal	9		detail
 crown	3	crown	
 crown	4	jewel1	jewel
 crown	6	jewel2	jewel
@@ -467,11 +457,6 @@ teddy bear	8	left_ear	ear
 teddy bear	9	right_ear	ear
 chess pawn	3	head	
 chess pawn	4		detail
-door	1	door	
-door	3	top_panel	panel
-door	4		detail
-door	6	bottom_panel	panel
-door	7		detail
 bed	1	headboard	
 bed	6	right_leg	leg
 bed	7	left_leg	leg
@@ -514,12 +499,6 @@ closed mailbox with lowered flag	8	flag
 ballot box with ballot	4	slot	
 ballot box with ballot	7	ballot	
 adhesive bandage	2	bandage	
-yen banknote	1		detail
-yen banknote	2	band	
-yen banknote	6	symbol	
-money with wings	2	left_wing	wing
-money with wings	11	band	
-money with wings	13	right_wing	wing
 musical note	1	note	
 control knobs	1	panel	
 saxophone	1	mouthpiece	
@@ -530,9 +509,6 @@ saxophone	5	key2	key
 saxophone	6	key3	key
 saxophone	7	key4	key
 saxophone	8		detail
-guitar	1	neck	
-guitar	4	body	
-guitar	8	head	
 drum	2	body	
 drum	14	left_stick	stick
 drum	15	right_stick	stick
@@ -550,7 +526,6 @@ clipboard	7		detail
 clipboard	8		detail
 clipboard	9		detail
 clipboard	13	clip	
-card file box	3	box	
 cigarette	1	filter	
 cigarette	2	cigarette	
 nazar amulet	1	amulet	
@@ -596,11 +571,6 @@ school	9	window4	window
 school	14	clock	
 school	15	left_bush	bush
 school	16	right_bush	bush
-wedding	1	tower_roof	
-wedding	4	roof	
-wedding	8	wall	
-wedding	9	window	
-wedding	11	door	
 mount fuji	1	mountain	
 desert island	1	water	
 globe showing Americas	1	ocean	
@@ -723,9 +693,6 @@ cricket game	9	ball
 ping pong	3	handle	
 ping pong	4	paddle	
 ping pong	5	ball	
-running shirt	4	shirt	
-running shirt	5	stripe	
-running shirt	8		detail
 hourglass done	1	bottom	
 hourglass done	4	glass	
 hourglass done	6	top	
@@ -764,18 +731,7 @@ helicopter	2	rotor
 helicopter	5	tail	
 helicopter	7	body	
 helicopter	8	window	
-satellite	1	left_panel	panel
-satellite	9	right_panel	panel
 high-speed train	9	window	
-station	2	platform	
-station	5	sign	
-station	6	pole	
-station	16	window	
-tram car	1	left_wheel	wheel
-tram car	2	right_wheel	wheel
-tram car	6	roof	
-tram car	10	window1	window
-tram car	11	window2	window
 minibus	1	body	
 minibus	5	right_wheel	wheel
 minibus	6		detail
@@ -806,7 +762,6 @@ sport utility vehicle	13	front_window	window
 tractor	1	exhaust	
 tractor	6	window	
 tractor	8	roof	
-manual wheelchair	3	front_wheel	wheel
 skateboard	6	wheel2	wheel
 skateboard	8	wheel3	wheel
 skateboard	12	wheel1	wheel
@@ -1242,7 +1197,6 @@ dragon face	8	right_horn	horn
 dragon face	13	right_eye	eye
 dragon face	14	left_eye	eye
 sauropod	3	body	
-framed picture	13	cloud	
 sewing needle	2	needle	
 sewing needle	5	thread	
 yarn	1	ball	
@@ -1292,12 +1246,6 @@ page facing up	3		detail
 page facing up	4		detail
 page facing up	5		detail
 page facing up	6		detail
-bookmark tabs	11		detail
-bookmark tabs	12		detail
-bookmark tabs	13		detail
-bookmark tabs	14		detail
-bookmark tabs	15	tab1	tab
-bookmark tabs	16	tab2	tab
 bookmark	7	bookmark	
 bookmark	12	star	
 sunglasses	1	left_lens	lens
@@ -1305,11 +1253,6 @@ sunglasses	2	right_lens	lens
 sunglasses	3	frame	
 sunglasses	4		detail
 sunglasses	5		detail
-goggles	2	strap	
-goggles	5	lens	
-lab coat	12	right_pocket	pocket
-lab coat	14	left_pocket	pocket
-lab coat	16	top_pocket	pocket
 necktie	1	shirt	
 necktie	6	tie	
 necktie	7	knot	
@@ -1359,8 +1302,6 @@ backpack	7	bag
 backpack	12	strap	
 man’s shoe	2	heel	
 hiking boot	5	sole	
-flat shoe	6	sole	
-flat shoe	7		detail
 high-heeled shoe	4		detail
 high-heeled shoe	6	heel	
 high-heeled shoe	7		detail
@@ -1379,10 +1320,6 @@ graduation cap	3	top
 graduation cap	9	tassel	
 military helmet	13	helmet	
 military helmet	15		detail
-rescue worker’s helmet	7	helmet	
-rescue worker’s helmet	10		detail
-rescue worker’s helmet	11		detail
-rescue worker’s helmet	12	cross	
 prayer beads	1	bead11	bead
 prayer beads	2	bead12	bead
 prayer beads	3	bead14	bead
@@ -1409,8 +1346,6 @@ electric plug	1	prong1	prong
 electric plug	2	prong2	prong
 electric plug	6	plug	
 laptop	4	touchpad	
-desktop computer	4	stand	
-desktop computer	12	screen	
 keyboard	2	keyboard	
 keyboard	5	key1	key
 keyboard	6	key2	key
@@ -1844,12 +1779,6 @@ game die	13	dot6	dot
 bellhop bell	1	base	
 bellhop bell	5	bell	
 bellhop bell	11		detail
-luggage	1	wheel1	wheel
-luggage	3	wheel2	wheel
-luggage	6	handle	
-luggage	11	sticker3	sticker
-luggage	12	sticker2	sticker
-luggage	13	sticker1	sticker
 elevator	3	up_arrow	arrow
 elevator	4	down_arrow	arrow
 elevator	6	head1	head
@@ -1876,7 +1805,6 @@ bathtub	13	left_foot	foot
 bathtub	16	right_foot	foot
 razor	1	handle	
 safety pin	2	pin	
-broom	4	bristles	
 basket	1	right_handle	handle
 basket	3	left_handle	handle
 bucket	1	bucket	
@@ -1910,9 +1838,6 @@ fire extinguisher	9	hose
 fire extinguisher	15	band	
 shopping cart	14	right_wheel	wheel
 shopping cart	16	left_wheel	wheel
-movie camera	1	lens	
-movie camera	12	right_reel	reel
-movie camera	15	left_reel	reel
 film frames	4	frame	
 film projector	4	left_reel	reel
 film projector	6	light	
@@ -1921,25 +1846,14 @@ television	1	left_antenna	antenna
 television	2	right_antenna	antenna
 television	6		detail
 television	9		detail
-camera	1	button	
-camera	2	body	
-camera	11	viewfinder	
-camera	16	lens	
 camera with flash	1	button	
 camera with flash	2	body	
 camera with flash	14	lens	
 camera with flash	16	flash	
-magnifying glass tilted left	4	handle	
-magnifying glass tilted left	8		detail
-magnifying glass tilted left	9		detail
-magnifying glass tilted right	4	handle	
-magnifying glass tilted right	8		detail
-magnifying glass tilted right	9		detail
 light bulb	2	bulb	
 light bulb	8	filament	
 light bulb	14		detail
 light bulb	16		detail
-flashlight	1	body	
 red paper lantern	1	bottom	
 red paper lantern	4		detail
 red paper lantern	5		detail
@@ -1958,3 +1872,310 @@ locked with key	1	body
 locked with key	3	keyhole	
 locked with key	8	shackle	
 locked with key	9		detail
+key	2	key	
+key	4		detail
+key	5		detail
+old key	1	bow	
+old key	7		detail
+e-mail	4	envelope	
+e-mail	6	letter	
+incoming envelope	4		detail
+incoming envelope	5		detail
+incoming envelope	6		detail
+incoming envelope	7		detail
+inbox tray	4	tray	
+inbox tray	5	arrow	
+package	1	top	
+package	2	side	
+closed mailbox with raised flag	1	post	
+closed mailbox with raised flag	7	flag	
+postbox	1	top	
+syringe	5	liquid	
+syringe	14	needle	
+drop of blood	1	drop	
+drop of blood	2		detail
+pill	1	bottom_half	half
+pill	2	top_half	half
+pill	3		detail
+coin	6	star	
+money bag	4	bag	
+money bag	8	tie	
+credit card	1	card	
+credit card	2	stripe	
+credit card	4	signature	
+receipt	1	paper	
+receipt	3		detail
+receipt	4		detail
+receipt	5		detail
+receipt	6		detail
+receipt	7		detail
+receipt	8		detail
+receipt	9		detail
+receipt	10		detail
+receipt	11		detail
+receipt	12		detail
+receipt	13		detail
+chart increasing with yen	3	line	
+chart increasing with yen	4	symbol	
+musical score	2	line5	line
+musical score	3	line1	line
+musical score	4	line3	line
+musical score	5	line2	line
+musical score	6	line4	line
+musical score	7	clef	
+musical notes	1	note1	note
+musical notes	2	note3	note
+musical notes	3	note2	note
+level slider	5		detail
+level slider	6		detail
+level slider	7		detail
+level slider	8		detail
+level slider	9		detail
+level slider	10		detail
+level slider	11		detail
+level slider	12		detail
+level slider	13		detail
+level slider	14		detail
+level slider	15	knob	
+microphone	4	handle	
+headphone	5	band	
+trumpet	16	mouthpiece	
+trombone	1	mouthpiece	
+trombone	9	bell	
+musical keyboard	2	white_key1	key
+musical keyboard	3	white_key2	key
+musical keyboard	4	white_key3	key
+musical keyboard	5	white_key4	key
+violin	15	bow	
+maracas	1	right_handle	handle
+maracas	2	left_handle	handle
+file folder	2	front	
+open file folder	1	back	
+open file folder	2	front	
+card index dividers	6	tab3	tab
+card index dividers	7	tab2	tab
+card index dividers	8	tab1	tab
+tear-off calendar	4	header	
+tear-off calendar	8	digit1	digit
+tear-off calendar	9	digit2	digit
+spiral notepad	6	ring1	ring
+spiral notepad	7	ring2	ring
+spiral notepad	8	ring3	ring
+spiral notepad	9	ring4	ring
+spiral notepad	10		detail
+spiral notepad	11		detail
+spiral notepad	12		detail
+spiral notepad	13		detail
+spiral notepad	14		detail
+spiral notepad	15		detail
+spiral notepad	16		detail
+spiral calendar	4	header	
+spiral calendar	6	ring1	ring
+spiral calendar	7	ring2	ring
+spiral calendar	8	ring3	ring
+spiral calendar	9	ring4	ring
+spiral calendar	10	ring5	ring
+spiral calendar	11	ring6	ring
+spiral calendar	12		detail
+spiral calendar	13		detail
+spiral calendar	14		detail
+spiral calendar	15		detail
+spiral calendar	16		detail
+framed picture	12	cloud	
+framed picture	16	tree	
+bookmark tabs	10		detail
+bookmark tabs	11		detail
+bookmark tabs	12		detail
+bookmark tabs	13		detail
+bookmark tabs	14	tab1	tab
+bookmark tabs	16	tab2	tab
+label	1	tag	
+label	5	string	
+goggles	2	strap	
+goggles	5	lens	
+lab coat	13	right_pocket	pocket
+lab coat	14	left_pocket	pocket
+lab coat	15	top_pocket	pocket
+shopping bags	1	handle	
+shopping bags	2	bag1	bag
+shopping bags	12	bag2	bag
+running shoe	7		detail
+running shoe	16	sole	
+flat shoe	5	sole	
+flat shoe	6		detail
+woman’s sandal	1	heel	
+woman’s sandal	8		detail
+rescue worker’s helmet	6	helmet	
+rescue worker’s helmet	9		detail
+rescue worker’s helmet	10		detail
+rescue worker’s helmet	11	cross	
+desktop computer	4	stand	
+desktop computer	11	screen	
+luggage	1	wheel1	wheel
+luggage	3	wheel2	wheel
+luggage	7	handle	
+luggage	11	sticker3	sticker
+luggage	12	sticker2	sticker
+luggage	13	sticker1	sticker
+door	1	door	
+door	2	top_panel	panel
+door	4	bottom_panel	panel
+broom	3	bristles	
+movie camera	12	right_reel	reel
+movie camera	14	left_reel	reel
+camera	1	button	
+camera	2	body	
+camera	11	viewfinder	
+camera	16	lens	
+magnifying glass tilted left	3	handle	
+magnifying glass tilted left	6		detail
+magnifying glass tilted left	7		detail
+magnifying glass tilted right	3	handle	
+magnifying glass tilted right	6		detail
+magnifying glass tilted right	7		detail
+flashlight	1	body	
+envelope with arrow	1	arrow	
+open mailbox with raised flag	1	post	
+open mailbox with raised flag	4	letter	
+open mailbox with raised flag	9	flag	
+open mailbox with lowered flag	1	post	
+open mailbox with lowered flag	3	box	
+yen banknote	2	band	
+yen banknote	5	symbol	
+dollar banknote	2	band	
+dollar banknote	4	symbol	
+euro banknote	2	band	
+euro banknote	6	symbol	
+pound banknote	2	band	
+pound banknote	6	symbol	
+money with wings	2	left_wing	wing
+money with wings	6	symbol	
+money with wings	10	band	
+money with wings	12	right_wing	wing
+radio	1	antenna	
+radio	11		detail
+radio	12		detail
+radio	13		detail
+radio	14		detail
+radio	15		detail
+guitar	1	neck	
+guitar	4	body	
+guitar	8	head	
+chart increasing	2		detail
+chart increasing	3		detail
+chart increasing	4		detail
+chart increasing	5		detail
+chart increasing	6		detail
+chart increasing	7		detail
+chart increasing	8		detail
+chart increasing	9		detail
+chart increasing	10		detail
+chart increasing	11		detail
+chart increasing	12	line	
+chart decreasing	2		detail
+chart decreasing	3		detail
+chart decreasing	4		detail
+chart decreasing	5		detail
+chart decreasing	6		detail
+chart decreasing	7		detail
+chart decreasing	8		detail
+chart decreasing	9		detail
+chart decreasing	10		detail
+chart decreasing	11		detail
+chart decreasing	12	line	
+bar chart	7	bar1	bar
+bar chart	8	bar2	bar
+bar chart	9	bar3	bar
+round pushpin	1	pin	
+round pushpin	3	head	
+round pushpin	4		detail
+paperclip	2	clip	
+straight ruler	1	ruler	
+straight ruler	4		detail
+straight ruler	5		detail
+straight ruler	6		detail
+straight ruler	7		detail
+straight ruler	8		detail
+straight ruler	9		detail
+straight ruler	10		detail
+straight ruler	11		detail
+straight ruler	12		detail
+straight ruler	13		detail
+straight ruler	14		detail
+straight ruler	15		detail
+straight ruler	16		detail
+triangular ruler	6		detail
+triangular ruler	7		detail
+triangular ruler	8		detail
+triangular ruler	9		detail
+triangular ruler	10		detail
+triangular ruler	11		detail
+triangular ruler	12		detail
+triangular ruler	13		detail
+triangular ruler	14		detail
+triangular ruler	15		detail
+triangular ruler	16		detail
+scissors	2	right_handle	handle
+scissors	8	screw	
+scissors	9	left_handle	handle
+scissors	10		detail
+scissors	11		detail
+card file box	3	box	
+file cabinet	2	top_drawer	drawer
+file cabinet	3	bottom_drawer	drawer
+wastebasket	3	basket	
+headstone	3	stone	
+headstone	6		detail
+headstone	7		detail
+headstone	8		detail
+headstone	9		detail
+funeral urn	1	urn	
+funeral urn	3		detail
+funeral urn	4		detail
+funeral urn	5		detail
+hamsa	8	pupil	
+mobile phone with arrow	1	arrow	
+telephone	1	handset	
+telephone	8	button6	button
+telephone	9	button1	button
+telephone	10	button8	button
+telephone	11	button5	button
+telephone	12	button7	button
+telephone	13	button4	button
+telephone	14	button3	button
+telephone	15	button2	button
+telephone	16	button9	button
+pager	11	screen	
+fax machine	11		detail
+fax machine	12		detail
+fax machine	13		detail
+stadium	3	right_flag	flag
+stadium	4	left_flag	flag
+stadium	5	stands	
+classical building	6	roof	
+classical building	14	column1	column
+classical building	15	column2	column
+classical building	16	column3	column
+derelict house	3	chimney	
+derelict house	6	left_window	window
+derelict house	10	door	
+derelict house	12	right_window	window
+house with garden	16	path	
+Japanese post office	2	post	
+Japanese post office	8	window2	window
+Japanese post office	9	window1	window
+Japanese post office	10	window3	window
+post office	12	roof	
+post office	14	door	
+post office	16	horn	
+hospital	3	door	
+hospital	8	window1	window
+hospital	9	window2	window
+hospital	10	window3	window
+hospital	11	window4	window
+hospital	12	window5	window
+hospital	13	window6	window
+hospital	14	window7	window
+hospital	15	window8	window
+hospital	16	cross	
+love hotel	16	heart	

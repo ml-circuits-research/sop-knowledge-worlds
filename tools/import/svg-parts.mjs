@@ -302,14 +302,17 @@ export function svgToParts(svg, { maxParts = 16, maxPoints = 40, budget = 200, t
         : el.kind === 'ellipse' ? [{ closed: true, points: ellipsePoints() }]
           : [{ closed: true, points: [[el.x, el.y], [el.x + el.w, el.y], [el.x + el.w, el.y + el.h], [el.x, el.y + el.h]].map((p) => apply(m, p)) }];
       if (el.fill) {
-        // Filled: every subpath is a polygon; one that lies inside an earlier, larger one of the same path is a hole.
+        // Filled: every subpath is a polygon; one that lies inside a larger one of the same path is a hole and is
+        // dropped. A shape that is mostly hole (a frame, a ring) would hide what is drawn before it, so it becomes
+        // a closed line along its outer edge.
         const rings = subpaths.filter((s) => s.points.length >= 3).map((s) => ({ points: s.points, area: area(s.points) }));
-        const kept = [];
-        for (const r of rings) {
-          const hole = kept.some((k) => k.area > r.area && inside(r.points[0][0], r.points[0][1], k.points));
-          if (!hole) kept.push(r);
-        }
-        for (const r of kept) parts.push({ ...base, shape: 'polygon', points: r.points, closed: true, area: r.area });
+        const holeOf = rings.map((r) => rings.find((k) => k !== r && k.area > r.area && inside(r.points[0][0], r.points[0][1], k.points)));
+        rings.forEach((r, i) => {
+          if (holeOf[i]) return;
+          const holes = rings.reduce((n, h, j) => n + (holeOf[j] === r ? h.area : 0), 0);
+          if (holes >= 0.5 * r.area) parts.push({ ...base, shape: 'line', points: [...r.points, r.points[0]], closed: false, area: r.area - holes });
+          else parts.push({ ...base, shape: 'polygon', points: r.points, closed: true, area: r.area });
+        });
       } else {
         for (const s of subpaths) if (s.points.length >= 2) { const b = bounds(s.points); parts.push({ ...base, shape: 'line', points: s.points, closed: false, area: Math.max(b.w, b.h) }); }
       }

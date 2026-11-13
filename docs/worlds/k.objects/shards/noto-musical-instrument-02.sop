@@ -377,7 +377,7 @@
 
 # maracas
 @k.objects.u1fa87 k.objects.object name=maracas core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1fa87.p1 k.objects.part of=maracas name=part1 shape=polygon x=54.9 y=58.1 w=20.9 h=38.7 z=1 colour=brown rgb="#E6A467" core.source="noto-emoji 99701e0"
+@k.objects.u1fa87.p1 k.objects.part of=maracas name=right_handle kind=handle named=model shape=polygon x=54.9 y=58.1 w=20.9 h=38.7 z=1 colour=brown rgb="#E6A467" core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p1.1 k.objects.point part=$k.objects.u1fa87.p1 n=1 x=67.1 y=58.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p1.2 k.objects.point part=$k.objects.u1fa87.p1 n=2 x=64.8 y=67.4 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p1.3 k.objects.point part=$k.objects.u1fa87.p1 n=3 x=55.1 y=87.5 core.source="noto-emoji 99701e0"
@@ -389,7 +389,7 @@
 @k.objects.u1fa87.p1.9 k.objects.point part=$k.objects.u1fa87.p1 n=9 x=69 y=92 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p1.10 k.objects.point part=$k.objects.u1fa87.p1 n=10 x=72.9 y=69 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p1.11 k.objects.point part=$k.objects.u1fa87.p1 n=11 x=75.8 y=61.5 core.source="noto-emoji 99701e0"
-@k.objects.u1fa87.p2 k.objects.part of=maracas name=part2 shape=polygon x=30.6 y=48.2 w=23.7 h=36.5 z=2 colour=brown rgb="#E6A467" core.source="noto-emoji 99701e0"
+@k.objects.u1fa87.p2 k.objects.part of=maracas name=left_handle kind=handle named=model shape=polygon x=30.6 y=48.2 w=23.7 h=36.5 z=2 colour=brown rgb="#E6A467" core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p2.1 k.objects.point part=$k.objects.u1fa87.p2 n=1 x=53.3 y=73.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p2.2 k.objects.point part=$k.objects.u1fa87.p2 n=2 x=41.8 y=55.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p2.3 k.objects.point part=$k.objects.u1fa87.p2 n=3 x=38.6 y=48.2 core.source="noto-emoji 99701e0"

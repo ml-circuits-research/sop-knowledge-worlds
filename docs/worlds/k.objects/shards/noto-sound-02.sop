@@ -6,7 +6,7 @@
 
 # bell with slash
 @k.objects.u1f515 k.objects.object name="bell with slash" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f515.p1 k.objects.part of="bell with slash" name=part1 shape=polygon x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=red rgb="#CC3333" core.source="noto-emoji 99701e0"
+@k.objects.u1f515.p1 k.objects.part of="bell with slash" name=part1 shape=line x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=red rgb="#CC3333" core.source="noto-emoji 99701e0"
 @k.objects.u1f515.p1.1 k.objects.point part=$k.objects.u1f515.p1 n=1 x=50 y=3.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f515.p1.2 k.objects.point part=$k.objects.u1f515.p1 n=2 x=35.2 y=5.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f515.p1.3 k.objects.point part=$k.objects.u1f515.p1 n=3 x=28.5 y=8.4 core.source="noto-emoji 99701e0"

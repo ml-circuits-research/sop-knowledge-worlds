@@ -111,7 +111,7 @@
 
 # ring buoy
 @k.objects.u1f6df k.objects.object name="ring buoy" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f6df.p1 k.objects.part of="ring buoy" name=part1 shape=polygon x=6.2 y=5.4 w=87.8 h=89.6 z=1 colour=grey rgb="#858585" core.source="noto-emoji 99701e0"
+@k.objects.u1f6df.p1 k.objects.part of="ring buoy" name=part1 shape=line x=6.2 y=5.4 w=87.8 h=89.6 z=1 colour=grey rgb="#858585" core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p1.1 k.objects.point part=$k.objects.u1f6df.p1 n=1 x=52.4 y=95 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p1.2 k.objects.point part=$k.objects.u1f6df.p1 n=2 x=22.6 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p1.3 k.objects.point part=$k.objects.u1f6df.p1 n=3 x=14.4 y=90.6 core.source="noto-emoji 99701e0"
@@ -133,7 +133,7 @@
 @k.objects.u1f6df.p1.19 k.objects.point part=$k.objects.u1f6df.p1 n=19 x=86.6 y=91.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p1.20 k.objects.point part=$k.objects.u1f6df.p1 n=20 x=80.5 y=93.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p1.21 k.objects.point part=$k.objects.u1f6df.p1 n=21 x=68.9 y=94.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f6df.p2 k.objects.part of="ring buoy" name=part2 shape=polygon x=6.1 y=5.4 w=87.7 h=89.5 z=2 colour=grey rgb="#5F6468" core.source="noto-emoji 99701e0"
+@k.objects.u1f6df.p2 k.objects.part of="ring buoy" name=part2 shape=line x=6.1 y=5.4 w=87.7 h=89.5 z=2 colour=grey rgb="#5F6468" core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p2.1 k.objects.point part=$k.objects.u1f6df.p2 n=1 x=93.8 y=42.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p2.2 k.objects.point part=$k.objects.u1f6df.p2 n=2 x=93.7 y=39.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p2.3 k.objects.point part=$k.objects.u1f6df.p2 n=3 x=91.9 y=39.6 core.source="noto-emoji 99701e0"
