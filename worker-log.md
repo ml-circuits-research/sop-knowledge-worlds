@@ -2858,3 +2858,4 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 
 - Q36: names of several words in `k.words` (about 170 names of the cores). Q37: a `sense` on the numbers and
   usage facts of the 70 names with two senses. Neither blocks; meanwhile nothing changes.
+- WORLD.md of `k.words` says which words have senses (the frequent words, the common things, the names of the cores).

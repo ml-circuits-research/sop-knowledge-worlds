@@ -1,7 +1,8 @@
 # k.words
 
-English words: the noun and verb senses of about 11,000 frequent words, and the adjective and adverb senses of the
-common ones, with opposites and chains of kinds, from WordNet 3.1.
+English words: the noun and verb senses of about 11,500 words (the frequent words, the 1,500 common things, and the
+one-word names of the hand-written worlds with the sense under the root of their world: kilogram a unit, Mars the
+planet), and the adjective and adverb senses of the common ones, with opposites and chains of kinds, from WordNet 3.1.
 
 ## What it knows
 
@@ -28,7 +29,7 @@ common ones, with opposites and chains of kinds, from WordNet 3.1.
 
 The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain beyond the common words (which carry `kind_of`), look the value up as a
 `word` again (its first sense is the usual one). A value may be a word that has no sense in the shards (only words of
-the frequency list have senses).
+the frequency list, the common things and the names of the cores have senses).
 
 ## Shards
 
