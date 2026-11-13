@@ -127,3 +127,20 @@ decent shape. Hand-writing gives 30 a round, so shapes must be imported.
 - **Pilot first:** 200 objects, previews as contact sheets (`docs/worlds/k.objects/preview/noto-*.png` are not needed; write
   the SVG previews and look at a montage yourself). Report: how many are recognisable at 160 px, wires and bytes per
   object, load time of one shard. Commit the pilot; then, if at least 85% are recognisable, run all and commit.
+
+## Reviewer 2026-11-13 08:40 — R2.7: name the parts of the imported objects (owner: "not perfect, but more than nothing")
+
+After R2.6, the imported parts are `part1…partN`. You (the agent) name them by looking at them.
+- **How:** for each imported object, render a labelling picture: the object at 320 px with each part outlined and numbered
+  (add a `--label` mode to `tools/render-svg.mjs`). Look at it (convert to PNG, read the image; contact sheets of 6 objects
+  work) and write the names to `sources/noto-emoji/part-names.tsv`: `object <tab> part number <tab> name <tab> kind`.
+  This file is committed; the import script reads it, so the build stays deterministic.
+- **Names:** plain English nouns a child would use (body, head, wheel, roof, door, window, leaf, stem, handle, wing, tail,
+  eye, ear, leg). Repeated parts get `left_`/`right_`/`front_`/`back_` or a number, plus `kind=` as in the hand-written
+  objects. Shadows, highlights and outlines get `kind=detail` and keep their `partN` name.
+- **Only when sure.** A part you cannot recognise keeps `partN`. Do not guess.
+- **Mark the origin:** named parts carry `named=model` (hand-written ones have no such key), so applications and the
+  reviewer can tell them apart. Add the key to the schema.
+- **Order:** the 200 pilot objects first; report how many parts got a name and show 12 labelled examples in
+  `docs/worlds/k.objects/preview/`. Then continue through all imported objects in batches of 100, one commit per batch.
+- Tests: every named part exists; names are unique inside an object; "what are the parts of a <object>" answers with the names.
