@@ -4,7 +4,8 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
-import { readPlaceSize, thingShards, letterOf } from '../tools/scenes-core.mjs';
+import { readPlaceSize, thingShards, allThings, letterOf } from '../tools/scenes-core.mjs';
+import { animalThings } from '../tools/animals-core.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -14,8 +15,8 @@ const objects = new Set(objectsWorld.ofType('k.objects.object').map((w) => tok(w
 const standIns = new Set(objectsWorld.ofType('k.objects.stand_in').map((w) => tok(w.attrs.name[0])));
 const things = scenes.ofType('k.scenes.thing');
 
-test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv', () => {
-  const files = thingShards(readPlaceSize(readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8')));
+test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv and, for the animals it lacks, from animals.tsv', () => {
+  const files = thingShards(allThings());
   const dir = join(WORLDS_DIR, 'k.scenes', 'shards');
   assert.deepEqual(readdirSync(dir).filter((f) => f.startsWith('things-')).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
@@ -25,10 +26,11 @@ test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv
   assert.throws(() => readPlaceSize('hat\tupstairs\t\tsmall\n'), /place/);
 });
 
-test('every thing with a usual place or size is a k.objects object or stand-in; nearly every object has one', () => {
+test('every thing with a usual place or size is a k.objects object or stand-in, or an animal of k.animals; nearly every object has one', () => {
+  const animalRows = new Set(animalThings().rows.map((r) => r.name));
   for (const w of things) {
     const name = tok(w.attrs.name[0]);
-    assert.ok(objects.has(name) || standIns.has(name), `${name} is neither an object nor a stand-in of k.objects`);
+    assert.ok(objects.has(name) || standIns.has(name) || animalRows.has(name), `${name} is neither an object nor a stand-in of k.objects, nor an animal`);
     assert.deepEqual(w.attrs.named, ['model'], name);
     assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], name);
     assert.ok(w.attrs.place || w.attrs.size, name);

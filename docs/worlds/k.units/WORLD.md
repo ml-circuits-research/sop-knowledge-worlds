@@ -17,8 +17,10 @@ Units of measure and how to convert them.
 
 `measures` (Round 9): `k.units.measure` (identity `world`, `type`, `key`): in which unit a number of another world
 is given (`unit`, a unit of this world), what it counts (`counts=person`, `counts=leg`), or that it is a place in an
-order (`ordinal=true`); `approximate=true` for the keys with the suffix `_about`. Written by
-`tools/measures-core.mjs`, which reads the schemas of the worlds it lists and refuses a number without an entry.
+order (`ordinal=true`), a position or length in a 0 to 100 frame (`frame=object`, `frame=face`), or a plain number
+(`plain=true`); `approximate=true` for the keys with the suffix `_about`. Written by `tools/measures-core.mjs`,
+which reads the schema of every world of the catalog (Q31: 135 numeric slots of 21 worlds) and refuses a number
+without an entry, in any world.
 
 ## Questions it helps with
 

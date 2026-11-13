@@ -34,7 +34,7 @@ export const ATTRIBUTES = [
 export const FOUND = [
   ['colour', 'k.attributes', 'k.attributes.thing', 'colour', 'common things'], ['colour', 'k.food', 'k.food.food', 'colour', 'foods'], ['colour', 'k.objects', 'k.objects.part', 'colour', 'each part of a drawing'], ['colour', 'k.attributes', 'k.attributes.drawn', 'drawn_colour', 'drawable things: the main colours of the drawing'],
   ['material', 'k.attributes', 'k.attributes.thing', 'material', 'common things'], ['material', 'k.commonsense', 'k.commonsense.thing', 'made_of', 'a few common things'],
-  ['size', 'k.scenes', 'k.scenes.thing', 'size', 'drawable things'], ['size', 'k.commonsense', 'k.commonsense.thing', 'size', 'a few common things'],
+  ['size', 'k.scenes', 'k.scenes.thing', 'size', 'drawable things'],
   ['place', 'k.scenes', 'k.scenes.thing', 'place', 'drawable things'], ['place', 'k.commonsense', 'k.commonsense.thing', 'at', 'a few common things'],
   ['kind', 'k.attributes', 'k.attributes.thing', 'kind', 'common things'], ['kind', 'k.animals', 'k.animals.animal', 'class', 'animals'], ['kind', 'k.food', 'k.food.food', 'kind', 'foods'],
   ['parts', 'k.objects', 'k.objects.part', 'name', 'drawings with named parts'], ['parts', 'k.layouts', 'k.layouts.joins', 'a', 'kinds joined by part_of'], ['parts', 'k.parts', 'k.parts.whole', 'has', 'common things, from WordNet'], ['parts', 'k.parts', 'k.parts.inherited', 'has', 'common things, through what they are a kind of'], ['parts', 'k.parts', 'k.parts.usual', 'has', 'common things without a part in WordNet, in plain words'],

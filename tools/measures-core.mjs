@@ -1,9 +1,11 @@
-// k.units.measure (Round 9): in which unit each number of the knowledge worlds listed here is given.
+// k.units.measure (Round 9; every world since Q31): in which unit each number of the knowledge worlds is given.
 //   node tools/measures-core.mjs     writes docs/worlds/k.units/shards/measures.sop
-// The tool reads the schemas of the worlds of MEASURES, takes every slot of kind number or integer, and looks its
-// key up: first under the type, then under '*' of the world. A numeric slot without an entry is an error, so a
-// new number cannot be published without its unit. An entry: { unit } (a k.units.unit), { counts } (what is
-// counted) or { ordinal: true } (a place in an order). A key that ends in `_about` is marked approximate.
+// The tool reads the schema of every world of the catalog, takes every slot of kind number or integer, and looks
+// its key up: first under the type, then under '*' of the world. A numeric slot without an entry is an error, in
+// any world, so a new number cannot be published without its unit. An entry: { unit } (a k.units.unit), { counts }
+// (what is counted), { ordinal: true } (a place in an order), { frame } (a position or a length in a frame of
+// coordinates that runs from 0 to 100; the value names the frame) or { plain: true } (the number is itself what
+// is meant: the value of a number word). A key that ends in `_about` is marked approximate.
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
 import { wire, header, writeShards } from './import/lib.mjs';
@@ -11,6 +13,8 @@ import { parse } from './sopworld/sopworld.mjs';
 
 const SRC = 'hand-core 1';
 const deg = { unit: 'degree' }, km2 = { unit: 'square kilometre' };
+const ord = { ordinal: true };
+const box = (frame) => ({ x: { frame }, y: { frame }, w: { frame }, h: { frame } });
 const BOX = { lat: deg, lon: deg, west: deg, south: deg, east: deg, north: deg };
 export const MEASURES = {
   'k.geo': {
@@ -25,6 +29,22 @@ export const MEASURES = {
     temperature_about: { unit: 'degree Celsius' }, amount_about: { unit: 'litre' }, length_about: { unit: 'metre' }, weight_about: { unit: 'kilogram' } } },
   'k.space': { body: { order: { ordinal: true }, size_rank: { ordinal: true }, moons: { counts: 'moon' }, moons_about: { counts: 'moon' }, orbit_years: { unit: 'year' }, orbit_days_about: { unit: 'day' },
     day_hours_about: { unit: 'hour' }, diameter_about: { unit: 'kilometre' }, distance_about: { unit: 'kilometre' }, temperature_about: { unit: 'degree Celsius' }, age_years_about: { unit: 'year' }, light_years_about: { unit: 'light year' } } },
+  // Q31: the other worlds. Boxes and points of drawings are in the frame of the drawing; `z` and `n` are orders.
+  'k.objects': { '*': { ...box('object'), z: ord, n: ord }, skeleton: { drawings: { counts: 'drawing' }, spread: { frame: 'object' } } },
+  'k.faces': { '*': { ...box('face'), z: ord, n: ord } },
+  'k.layouts': { slot: box('arrangement'), anchor: box('object') },
+  'k.wearables': { place: box('person drawing') },
+  'k.actions': { verb: { sense: ord } },
+  'k.words': { sense: { n: ord } },
+  'k.attributes': { thing: { wheels: { counts: 'wheel' } } },
+  'k.commonsense': { thing: { usually_count: { counts: 'thing of that name usually found together' } } },
+  'k.parts': { inherited: { steps: { counts: 'step from the thing up to the kind' } } },
+  'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } } },
+  'k.scenes': { has: { count: { counts: 'thing of that name in the scene' } } },
+  'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
+  'k.time': { month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord }, duration: { count: { counts: 'span that the key unit of the same fact names' } } },
+  'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } } },
+  'k.values': { scale: { steps: { counts: 'step' } }, step: { rank: ord }, direction: { x: { counts: 'step to the right in a picture' }, y: { counts: 'step downwards in a picture' } }, number: { value: { plain: true }, value_about: { plain: true } } },
 };
 
 // The numeric slots of a world: [type, key] in the order of the schema.
@@ -36,9 +56,10 @@ export function numericSlots(schemaText, world) {
 export function measureRows(worlds = scanWorlds(), units = null) {
   const known = units ?? new Set([...worlds.find((w) => w.id === 'k.units').shards.flatMap((s) => [...s.text.matchAll(/ k\.units\.unit name=("[^"]*"|\S+)/g)].map((m) => (m[1].startsWith('"') ? JSON.parse(m[1]) : m[1])))]);
   const rows = [];
-  for (const [world, table] of Object.entries(MEASURES)) {
-    const entry = worlds.find((w) => w.id === world);
-    if (!entry) throw new Error(`measures: no world ${world}`);
+  for (const world of Object.keys(MEASURES)) if (!worlds.some((w) => w.id === world)) throw new Error(`measures: no world ${world}`);
+  const order = [...Object.keys(MEASURES), ...worlds.map((w) => w.id).filter((id) => !MEASURES[id])];
+  for (const world of order) {
+    const entry = worlds.find((w) => w.id === world), table = MEASURES[world] ?? {};
     for (const [type, key] of numericSlots(entry.schemaText, world)) {
       const spec = table[type]?.[key] ?? table['*']?.[key];
       if (!spec) throw new Error(`measures: the number ${world}.${type}.${key} has no unit in tools/measures-core.mjs`);
@@ -50,9 +71,9 @@ export function measureRows(worlds = scanWorlds(), units = null) {
 }
 
 export function measuresShard(rows = measureRows()) {
-  const lines = rows.map((r) => wire(`k.units.measure.${r.world}.${r.type}.${r.key}`, 'k.units.measure', [['world', r.world], ['type', r.type], ['key', r.key], ['unit', r.unit], ['counts', r.counts],
+  const lines = rows.map((r) => wire(`k.units.measure.${r.world}.${r.type}.${r.key}`, 'k.units.measure', [['world', r.world], ['type', r.type], ['key', r.key], ['unit', r.unit], ['counts', r.counts], ['frame', r.frame], ['plain', r.plain ? 'true' : undefined],
     ['ordinal', r.ordinal ? 'true' : undefined], ['approximate', r.approximate ? 'true' : undefined]], SRC));
-  return `${header({ id: 'k.units/shards/measures', about: `in which unit the numbers of ${Object.keys(MEASURES).join(', ')} are given: ${rows.length} slots, each with its unit, with what it counts, or as a place in an order.`,
+  return `${header({ id: 'k.units/shards/measures', about: `in which unit the numbers of every knowledge world are given (${[...new Set(rows.map((r) => r.world))].join(', ')}): ${rows.length} slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.`,
     sources: ['hand-core 1 (hand-written in this repository: tools/measures-core.mjs)'], license: 'CC0-1.0', script: 'tools/measures-core.mjs' })}\n${lines.join('\n')}\n`;
 }
 

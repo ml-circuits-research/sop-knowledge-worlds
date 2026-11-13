@@ -1,5 +1,5 @@
-# k.scenes/shards/things-l: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 76 drawable things whose name starts with "l"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-l: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 85 things (the drawable things and the animals of k.animals) whose name starts with "l"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -10,6 +10,7 @@
 @k.scenes.thing.ladder k.scenes.thing name=ladder place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.ladle k.scenes.thing name=ladle place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lady_beetle k.scenes.thing name="lady beetle" place=ground size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.ladybird k.scenes.thing name=ladybird size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.lake k.scenes.thing name=lake place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.lamb k.scenes.thing name=lamb place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lamp k.scenes.thing name=lamp place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -18,6 +19,7 @@
 @k.scenes.thing.lane k.scenes.thing name=lane place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.lantern k.scenes.thing name=lantern place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.laptop k.scenes.thing name=laptop place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.lark k.scenes.thing name=lark place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lasagne k.scenes.thing name=lasagne place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.last_quarter_moon k.scenes.thing name="last quarter moon" place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.last_quarter_moon_face k.scenes.thing name="last quarter moon face" place=sky size=huge named=model core.source="hand-core 1"
@@ -34,12 +36,15 @@
 @k.scenes.thing.leaves k.scenes.thing name=leaves place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.led k.scenes.thing name=led place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.ledger k.scenes.thing name=ledger place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.leech k.scenes.thing name=leech place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.leek k.scenes.thing name=leek place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.leg_warmers k.scenes.thing name="leg warmers" place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lego k.scenes.thing name=lego place=indoors size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.lemming k.scenes.thing name=lemming place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.lemon k.scenes.thing name=lemon place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lemon_squash k.scenes.thing name="lemon squash" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lemonade k.scenes.thing name=lemonade place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.lemur k.scenes.thing name=lemur place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lens k.scenes.thing name=lens place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lentils k.scenes.thing name=lentils place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.leopard k.scenes.thing name=leopard place=ground size=medium named=model core.source="hand-core 1"
@@ -67,15 +72,19 @@
 @k.scenes.thing.locked_with_key k.scenes.thing name="locked with key" place=on_thing on=door size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.locker k.scenes.thing name=locker place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.locomotive k.scenes.thing name=locomotive place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.locust k.scenes.thing name=locust size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.log k.scenes.thing name=log place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.lollipop k.scenes.thing name=lollipop place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.long_drum k.scenes.thing name="long drum" place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.long_johns k.scenes.thing name="long johns" place=on_thing on=person size=small named=model core.source="hand-core 1"
+@k.scenes.thing.loon k.scenes.thing name=loon size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.lorry k.scenes.thing name=lorry place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.lotion k.scenes.thing name=lotion place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lotion_bottle k.scenes.thing name="lotion bottle" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lotus k.scenes.thing name=lotus place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.loudspeaker k.scenes.thing name=loudspeaker place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.louse k.scenes.thing name=louse place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.love_hotel k.scenes.thing name="love hotel" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.low_battery k.scenes.thing name="low battery" place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.luggage k.scenes.thing name=luggage place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.lynx k.scenes.thing name=lynx place=ground size=medium named=model core.source="hand-core 1"

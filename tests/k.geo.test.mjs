@@ -57,17 +57,17 @@ test('the shard numbers is what tools/geo-numbers.mjs gives; each fact joins an 
   assert.equal(geo.query({ type: 'k.geo.river', where: { name: 'Nile' }, seek: 'length_about' }).value, '6650');
 });
 
-test('k.units.measure: every number of the worlds listed has its unit, what it counts, or is a place in an order', () => {
+test('k.units.measure: every number of every world has its unit, what it counts, its frame, or is a place in an order or a plain number (Q31)', () => {
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.units', 'shards', 'measures.sop'), 'utf8'), measuresShard());
   const units = fullWorld('k.units', worlds);
   const names = new Set(units.ofType('k.units.unit').map((u) => one(u, 'name')));
   const measures = units.ofType('k.units.measure');
   let slots = 0;
-  for (const world of Object.keys(MEASURES)) for (const [type, key] of numericSlots(worlds.find((w) => w.id === world).schemaText, world)) {
+  for (const { id: world, schemaText } of worlds) for (const [type, key] of numericSlots(schemaText, world)) {
     slots++;
     const m = measures.filter((x) => one(x, 'world') === world && one(x, 'type') === type && one(x, 'key') === key);
     assert.equal(m.length, 1, `${world}.${type}.${key}`);
-    assert.equal([m[0].attrs.unit, m[0].attrs.counts, m[0].attrs.ordinal].filter(Boolean).length, 1, m[0].id);
+    assert.equal([m[0].attrs.unit, m[0].attrs.counts, m[0].attrs.ordinal, m[0].attrs.frame, m[0].attrs.plain].filter(Boolean).length, 1, m[0].id);
     if (m[0].attrs.unit) assert.ok(names.has(one(m[0], 'unit')), m[0].id);
     assert.equal(one(m[0], 'approximate') === 'true', key.endsWith('_about'), m[0].id);
   }
@@ -75,6 +75,11 @@ test('k.units.measure: every number of the worlds listed has its unit, what it c
   assert.equal(measureRows().length, slots);
   assert.equal(units.query({ type: 'k.units.measure', where: { world: 'k.geo', type: 'mountain', key: 'elevation' }, seek: 'unit' }).value, 'metre');
   assert.equal(units.fork().tell('@m1 k.units.measure world=k.app type=thing key=n unit=metre counts=thing', { ns: 'app' }).ok, false);
+  // The refusal holds for every world: a world that is not in the table at all, with a number, is an error.
+  const extra = { id: 'k.new', schemaText: '@k.new.t core.type of=k.new.t\n@k.new.t.n core.slot of=k.new.t key=n kind=number\n', shards: [] };
+  assert.throws(() => measureRows([...worlds, extra]), /k\.new\.t\.n has no unit/);
+  assert.equal(units.query({ type: 'k.units.measure', where: { world: 'k.objects', type: 'part', key: 'x' }, seek: 'frame' }).value, 'object');
+  assert.equal(units.query({ type: 'k.units.measure', where: { world: 'k.values', type: 'step', key: 'rank' }, seek: 'ordinal' }).value, 'true');
 });
 
 test('natural questions (Round 9 item 8): of the seeded sample of 100 about geography, at least 90 find a fact', () => {

@@ -3,7 +3,6 @@
 {"id":"cs-03","ask":"what can a bird do","query":{"type":"k.commonsense.thing","where":{"name":"bird"},"seek":"can"},"expect":{"status":"supported","values":["fly","sing"]}}
 {"id":"cs-04","ask":"what is a boat used for","query":{"type":"k.commonsense.thing","where":{"name":"boat"},"seek":"used_for"},"expect":{"status":"supported","value":"travel"}}
 {"id":"cs-05","ask":"what is a house made of","query":{"type":"k.commonsense.thing","where":{"name":"house"},"seek":"made_of"},"expect":{"status":"supported","values":["brick","wood"]}}
-{"id":"cs-06","ask":"how big is the sun","query":{"type":"k.commonsense.thing","where":{"name":"sun"},"seek":"size"},"expect":{"status":"supported","value":"huge"}}
 {"id":"cs-07","ask":"how many suns does a scene usually have","query":{"type":"k.commonsense.thing","where":{"name":"sun"},"seek":"usually_count"},"expect":{"status":"supported","value":"1"}}
 {"id":"cs-08","ask":"can a plane fly","query":{"type":"k.commonsense.thing","where":{"name":"plane","can":"fly"},"seek":"can","mode":"check"},"expect":{"status":"supported","value":"yes"}}
 {"id":"cs-09","ask":"which things are usually in the sky","query":{"type":"k.commonsense.thing","where":{"at":"sky"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["bird","sun","moon","cloud","plane","star"]}}

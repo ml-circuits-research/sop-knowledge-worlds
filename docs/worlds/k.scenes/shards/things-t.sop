@@ -1,9 +1,10 @@
-# k.scenes/shards/things-t: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 133 drawable things whose name starts with "t"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-t: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 144 things (the drawable things and the animals of k.animals) whose name starts with "t"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
 @k.scenes.thing.T-Rex k.scenes.thing name=T-Rex place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.Tasmanian_devil k.scenes.thing name="Tasmanian devil" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.Tokyo_tower k.scenes.thing name="Tokyo tower" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.t-shirt k.scenes.thing name=t-shirt place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.table k.scenes.thing name=table place=indoors size=medium named=model core.source="hand-core 1"
@@ -28,6 +29,8 @@
 @k.scenes.thing.tape k.scenes.thing name=tape place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tape_measure k.scenes.thing name="tape measure" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tape_recorder k.scenes.thing name="tape recorder" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.tapir k.scenes.thing name=tapir place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.tarantula k.scenes.thing name=tarantula place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tart k.scenes.thing name=tart place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.taxi k.scenes.thing name=taxi place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.tea k.scenes.thing name=tea place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -48,6 +51,8 @@
 @k.scenes.thing.tennis k.scenes.thing name=tennis place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tent k.scenes.thing name=tent place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.tequila k.scenes.thing name=tequila place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.termite k.scenes.thing name=termite size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.terrapin k.scenes.thing name=terrapin place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.test_tube k.scenes.thing name="test tube" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.text_phone k.scenes.thing name="text phone" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.theater k.scenes.thing name=theater place=ground size=huge named=model core.source="hand-core 1"
@@ -55,6 +60,8 @@
 @k.scenes.thing.thong_sandal k.scenes.thing name="thong sandal" place=on_thing on=foot size=small named=model core.source="hand-core 1"
 @k.scenes.thing.thread k.scenes.thing name=thread place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.throne k.scenes.thing name=throne place=indoors size=large named=model core.source="hand-core 1"
+@k.scenes.thing.thrush k.scenes.thing name=thrush place=sky size=small named=model core.source="hand-core 1"
+@k.scenes.thing.tick k.scenes.thing name=tick place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.ticket k.scenes.thing name=ticket place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.tie k.scenes.thing name=tie place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tiger k.scenes.thing name=tiger place=ground size=large named=model core.source="hand-core 1"
@@ -95,6 +102,7 @@
 @k.scenes.thing.torch k.scenes.thing name=torch place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tornado k.scenes.thing name=tornado place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.tortoise k.scenes.thing name=tortoise place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.toucan k.scenes.thing name=toucan place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.touch_screen k.scenes.thing name="touch screen" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toupee k.scenes.thing name=toupee place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.towel k.scenes.thing name=towel place=indoors size=small named=model core.source="hand-core 1"
@@ -116,6 +124,7 @@
 @k.scenes.thing.tray k.scenes.thing name=tray place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.treasure_chest k.scenes.thing name="treasure chest" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.tree k.scenes.thing name=tree place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.tree_frog k.scenes.thing name="tree frog" place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.tree_ornament_chocolate k.scenes.thing name="tree ornament chocolate" place=on_thing on=tree size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.tree_trunk k.scenes.thing name="tree trunk" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.triangular_ruler k.scenes.thing name="triangular ruler" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -125,6 +134,7 @@
 @k.scenes.thing.tropical_drink k.scenes.thing name="tropical drink" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tropical_fish k.scenes.thing name="tropical fish" place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.trousers k.scenes.thing name=trousers place=on_thing on=person size=small named=model core.source="hand-core 1"
+@k.scenes.thing.trout k.scenes.thing name=trout place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.trowel k.scenes.thing name=trowel place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.truck k.scenes.thing name=truck place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.trumpet k.scenes.thing name=trumpet place=indoors size=small named=model core.source="hand-core 1"
@@ -132,6 +142,7 @@
 @k.scenes.thing.tulip k.scenes.thing name=tulip place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tumbler_glass k.scenes.thing name="tumbler glass" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tuna k.scenes.thing name=tuna place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.tuna_fish k.scenes.thing name="tuna fish" place=water size=large named=model core.source="hand-core 1"
 @k.scenes.thing.turkey k.scenes.thing name=turkey place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.turnip k.scenes.thing name=turnip place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.turtle k.scenes.thing name=turtle place=water size=small named=model core.source="hand-core 1"

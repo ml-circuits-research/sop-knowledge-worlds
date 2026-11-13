@@ -1,10 +1,10 @@
 # k.commonsense: everyday common sense: where things usually are, what they can do, what they are used for and made
-# of, how big they are, and how many of them a scene usually has. Soft rules give advice, never refusals.
+# of, and how many of them a scene usually has. Soft rules give advice, never refusals.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.commonsense core.module name=k.commonsense version=1 exports=thing exports=placed core.source="hand-core 1"
+@k.commonsense core.module name=k.commonsense version=2 exports=thing exports=placed core.source="hand-core 1"
 
 # A thing of everyday life, named by an English lemma. Shared: it belongs to every namespace, so an application's
 # facts in its own namespace join with it.
@@ -17,7 +17,6 @@
 @k.commonsense.thing.is_a core.slot of=k.commonsense.thing key=is_a many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.part_of core.slot of=k.commonsense.thing key=part_of many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.has core.slot of=k.commonsense.thing key=has many=true kind=atom kind=string core.source="hand-core 1"
-@k.commonsense.thing.size core.slot of=k.commonsense.thing key=size enum=tiny enum=small enum=medium enum=large enum=huge core.source="hand-core 1"
 @k.commonsense.thing.usually_count core.slot of=k.commonsense.thing key=usually_count kind=integer min=1 core.source="hand-core 1"
 
 # A thing placed somewhere in a scene, as an application tells it (it may extend this type with its own).
@@ -58,4 +57,3 @@
 @k.commonsense.word.at core.word text=where text=live text=lives means=k.commonsense.thing.at core.source="hand-core 1"
 @k.commonsense.word.used_for core.word text=use text=used means=k.commonsense.thing.used_for core.source="hand-core 1"
 @k.commonsense.word.made_of core.word text=made text=material means=k.commonsense.thing.made_of core.source="hand-core 1"
-@k.commonsense.word.size core.word text=size text=big text=small means=k.commonsense.thing.size core.source="hand-core 1"

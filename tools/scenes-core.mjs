@@ -7,6 +7,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, byText } from './import/lib.mjs';
+import { animalThings } from './animals-core.mjs';
 
 const SRC = 'hand-core 1';
 const PLACES = ['sky', 'ground', 'water', 'indoors', 'on_thing'];
@@ -22,6 +23,13 @@ export function readPlaceSize(text) {
     if (place === 'on_thing' && !on) throw new Error(`place-size.tsv: ${name}: on what?`);
     return { name, place, on, size };
   });
+}
+
+// The rows of the table and, after them, a row for every animal of k.animals that the table lacks (Q32: the size
+// class of an animal is said here and nowhere else; tools/animals-core.mjs says how the row is made).
+export function allThings(text = readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8')) {
+  const rows = readPlaceSize(text);
+  return [...rows, ...animalThings(undefined, new Map(rows.map((r) => [r.name, r.size]))).rows];
 }
 
 // The first letter of a name, for the shard: a to z, or "0" for a digit or another sign.
@@ -43,8 +51,8 @@ export function thingShards(rows) {
   for (const [l, lines] of [...byLetter].sort((a, b) => byText(a[0], b[0]))) {
     files[`things-${l}.sop`] = `${header({
       id: `k.scenes/shards/things-${l}`,
-      about: `the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of ${lines.length} drawable things whose name starts with ${l === '0' ? 'a digit' : `"${l}"`}; labelled by a language model from the names (named=model), a sample checked against the drawings.`,
-      sources: ['hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)'],
+      about: `the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of ${lines.length} things (the drawable things and the animals of k.animals) whose name starts with ${l === '0' ? 'a digit' : `"${l}"`}; labelled by a language model from the names (named=model), a sample checked against the drawings.`,
+      sources: ['hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)'],
       license: 'CC0-1.0', script: 'tools/scenes-core.mjs',
     })}\n${lines.join('\n')}\n`;
   }
@@ -53,7 +61,7 @@ export function thingShards(rows) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const dir = join(WORLDS_DIR, 'k.scenes', 'shards');
-  const rows = readPlaceSize(readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8'));
+  const rows = allThings();
   const things = thingShards(rows);
   writeShards(dir, things, 'things-');
   let scenes = 0;

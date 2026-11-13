@@ -1,5 +1,5 @@
-# k.scenes/shards/things-v: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 28 drawable things whose name starts with "v"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-v: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 30 things (the drawable things and the animals of k.animals) whose name starts with "v"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -25,9 +25,11 @@
 @k.scenes.thing.vinegar k.scenes.thing name=vinegar place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.violet k.scenes.thing name=violet place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.violin k.scenes.thing name=violin place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.viper k.scenes.thing name=viper place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.visor k.scenes.thing name=visor place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.vodka k.scenes.thing name=vodka place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.volcano k.scenes.thing name=volcano place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.vole k.scenes.thing name=vole place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.volleyball k.scenes.thing name=volleyball place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.vr_headset k.scenes.thing name="vr headset" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.vulture k.scenes.thing name=vulture place=sky size=medium named=model core.source="hand-core 1"

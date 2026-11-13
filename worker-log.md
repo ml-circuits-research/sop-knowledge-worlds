@@ -2383,3 +2383,45 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Q32: the size class of an animal in `k.scenes.thing` and in `k.animals.animal` (meanwhile both, with the test that they agree).
 - Not taken up: the reviewer blocks of 21:55 (Round 10, second worker) and 22:40 (reusable `w.*` worlds, a README section on what belongs here): they are not part of Round 9.
 - Correction: the size classes compared with `k.scenes.thing` are 132, not 117 as the entry of item 2 said (counted now; corrected there and in Q32).
+
+## Q31 and Q32 applied (2026-11-13, first worker; reviewer block "2026-11-13 23:10")
+
+- **Q31 (the unit of a number):** `k.units.measure` now has one fact for every numeric slot of **every** world:
+  135 slots of 21 worlds (were 70 slots of 4). `tools/measures-core.mjs` reads the schema of every world of the
+  catalog and refuses a numeric slot without an entry, also in a world its table does not name (a test adds such
+  a world and expects the refusal). Two new keys, because most of the new numbers are neither a unit nor a count:
+  `frame` (a position or a length in a 0 to 100 frame: `object`, `face`, `arrangement`, `"person drawing"`; 51
+  slots) and `plain=true` (the value of a number word; 2 slots). Draw orders, sense numbers, month numbers and the
+  ranks of the `k.values` scales are `ordinal=true`; sides, corners, wheels, steps are counts; a month's days are
+  in `day`. `k.attributes` has one number today (`wheels`); the second worker's new numeric slots (Round 10 item
+  5) will be refused until they have an entry, which is what the answer asks for.
+- **Q32 (one home for place and size):** `k.animals.animal` has no `size` any more (the column stays in
+  `animals.tsv` as the source). `tools/scenes-core.mjs` adds a `k.scenes.thing` row for each of the 176 animals
+  that had none: the size of the table, and the place by rule (`tools/animals-core.mjs`, `usualPlace`): water for a
+  fish and for an animal that is not a bird whose first habitat is water (56), indoors where the first habitat is
+  the house (2), sky for a bird that flies and does not live on water only (30), ground for what cannot fly (70),
+  no place for the flying insects and the water birds (20). Checked against the 138 animals the hand table
+  already had: the rule agrees with 113 of them; where it does not, the table says something finer (hen and
+  turkey on the ground, a koala on a tree, a seal in the water), and the table wins there because the rule is
+  used only for animals with no row.
+- **Two names taken by another thing of another size:** `crane` (the machine, huge) and `tuna` (the tin, small).
+  The animals get the rows `"crane bird"` and `"tuna fish"`, and the new key `k.animals.animal.thing` names them.
+  Known weak: `kiwi` (the fruit and the bird are both small, so the rule sees no clash; the place of the fruit
+  stays; Round 11 item 3 draws the bird). Herring, sardine, cod now have a place as fish, which the food of the
+  same name inherits in ASPECTS.md (food, spatial 148 to 151): a sense question for the joins table.
+- **Also dropped:** `k.commonsense.thing.size` (15 facts; 7 of them disagreed with `k.scenes.thing`, written
+  earlier with other class limits). **Kept and said so in the test:** `k.space.body.size`, a planet's class among
+  the planets (no `tiny`), not the size class of things.
+- **Test for one home:** no slot `size` or `place` of any world but `k.scenes.thing` may have its enum; every
+  animal has exactly one `k.scenes.thing` with the size of the table. A general "same key, same name, two worlds"
+  test was measured and not written: 30 key and world pairs share names today (`kind` in six worlds with six
+  meanings, `can` in three); that needs the joins table of Round 10.
+- Versions: `k.animals` 2, `k.commonsense` 2 (a slot removed is breaking; CHANGELOG). Questions an-17 and cs-06
+  moved to `k.scenes` (sc-21 to sc-24).
+- **Looked at:** the 176 new rows as a list by place (one correction: canary indoors); the 25 disagreements of the
+  rule with the hand table. **Not looked at:** nothing else changed in content.
+- **Judgement that is mine:** the place rule; `frame` and `plain`; dropping the size of `k.commonsense`.
+- Numbers: `k.units` measures 135 wires, 18,473 bytes; `k.scenes` things 2,218 (were 2,042), 31 shards 461,813
+  bytes, largest `things-s` 281 wires; `k.animals` 597 wires, 105,814 bytes. COVERAGE.md: place 693 by name (637),
+  size 710 (650). Natural questions about animals: 81 of 100 (the same). Catalog 22 worlds, 857 shards, vocab
+  22,632 words; 0 errors, 0 warnings. npm test 2,667 pass, 0 fail.

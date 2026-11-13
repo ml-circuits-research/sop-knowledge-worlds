@@ -14,7 +14,6 @@
 {"id":"an-14","ask":"which drawing shows a ladybird","query":{"type":"k.animals.animal","where":{"name":"ladybird"},"seek":"drawing"},"expect":{"status":"supported","value":"\"lady beetle\""}}
 {"id":"an-15","ask":"an application's own animal is accepted","tell":"@a1 k.animals.animal name=dragon class=reptile legs=4 can=fly","ns":"app","expect":{"issues":[]}}
 {"id":"an-16","ask":"can a penguin fly: what a penguin cannot do","query":{"type":"k.animals.animal","where":{"name":"penguin"},"seek":"cannot","mode":"list"},"expect":{"status":"supported","values":["fly"]}}
-{"id":"an-17","ask":"how big is an elephant","query":{"type":"k.animals.animal","where":{"name":"elephant"},"seek":"size"},"expect":{"status":"supported","value":"huge"}}
 {"id":"an-18","ask":"what is a group of lions called","query":{"type":"k.animals.animal","where":{"name":"lion"},"seek":"group"},"expect":{"status":"supported","value":"pride"}}
 {"id":"an-19","ask":"can a cow fly","query":{"type":"k.animals.animal","where":{"name":"cow","cannot":"fly"},"seek":"name"},"expect":{"status":"supported","value":"cow"}}
 {"id":"an-20","ask":"what is a young hare called","query":{"type":"k.animals.animal","where":{"name":"hare"},"seek":"baby"},"expect":{"status":"supported","value":"leveret"}}

@@ -13,9 +13,13 @@ written by a language model, only where sure, and carry `named=model`. The table
   `eats` (many: typical food), `baby` (the name of the young: `puppy`, `joey`, `tadpole`), `can` (many: `fly`, `swim`,
   `run`, `climb`, `jump`, `dig` …), `cannot` (many: what it does not do: penguin, ostrich, emu, kiwi and cassowary `fly`;
   every animal that is not a bird or an insect and is not said to fly has `cannot=fly`, so "can a cow fly" finds a
-  fact), `size` (the size class of the grown animal, the classes of `k.scenes.thing`: tiny, small, medium, large,
-  huge), `group` (the name of a group: herd, flock, pack, pride, school, swarm, colony, pod, troop, mob, covey, clan),
-  `drawing` (the name of the `k.objects` object that draws it).
+  fact), `group` (the name of a group: herd, flock, pack, pride, school, swarm, colony, pod, troop, mob, covey, clan),
+  `drawing` (the name of the `k.objects` object that draws it), `thing` (see below).
+- **Size and place are not here** (Q32, Round 11): the size class of the grown animal and its usual place are the
+  `size` and `place` of the `k.scenes.thing` of the same name; every animal has one (`tools/scenes-core.mjs` adds a
+  row for an animal without a drawing, with the size of the table of animals and, by rule, the place). Where the
+  name is there the name of another thing of another size (`crane` the machine, `tuna` the tin), the animal's row
+  is `"crane bird"`, `"tuna fish"`, and `thing` on the animal names it.
 - A key is left out where animals of one name differ or the fact is not plain: the legs of a kangaroo or a monkey,
   the diet of a dog or a squirrel, the covering of an insect. A missing `can=fly` does not say "cannot fly";
   `cannot=fly` does. One fact never has the same verb in `can` and in `cannot` (a rule of the schema refuses it).
@@ -24,13 +28,14 @@ written by a language model, only where sure, and carry `named=model`. The table
 ## Shards
 
 `mammals` (124 animals), `birds` (65), `fish` (35), `reptiles-and-amphibians` (28), `invertebrates` (62): 314 animals,
-597 wires, 108,984 bytes. With a value: legs 284, covering 269, habitat 313, eats 283, young 261, sound 117, group 110.
+597 wires, 105,814 bytes. With a value: legs 284, covering 269, habitat 313, eats 283, young 261, sound 117, group 110.
 
 ## What was checked
 
 A seeded sample of 200 of the 314 rows was read again (`sources/hand-core/animals-audit.tsv`): 186 right, 12 wrong
-and corrected, 2 unclear with the value taken out. The other 114 rows were not read again. Where the drawing has
-the name of the animal, the size class is the one `k.scenes.thing` gives (a test).
+and corrected, 2 unclear with the value taken out. The other 114 rows were not read again. The size classes of
+the table of animals are published only as `k.scenes.thing` facts (a test: every animal has exactly one, and no
+other world states a size class or a usual place).
 
 ## Joins
 

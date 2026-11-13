@@ -1,5 +1,5 @@
-# k.scenes/shards/things-j: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 26 drawable things whose name starts with "j"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-j: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 29 things (the drawable things and the animals of k.animals) whose name starts with "j"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -9,12 +9,15 @@
 @k.scenes.thing.Jupiter k.scenes.thing name=Jupiter place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.jack_in_box k.scenes.thing name="jack in box" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jack-o-lantern k.scenes.thing name=jack-o-lantern place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.jackal k.scenes.thing name=jackal place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.jacket k.scenes.thing name=jacket place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jacket_-_mans k.scenes.thing name="jacket - mans" place=on_thing on=person size=small named=model core.source="hand-core 1"
+@k.scenes.thing.jaguar k.scenes.thing name=jaguar place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.jail k.scenes.thing name=jail place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.jam k.scenes.thing name=jam place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jam_tart k.scenes.thing name="jam tart" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jar k.scenes.thing name=jar place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.jay k.scenes.thing name=jay place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jeans k.scenes.thing name=jeans place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jeep k.scenes.thing name=jeep place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.jelly k.scenes.thing name=jelly place=indoors on=table size=small named=model core.source="hand-core 1"

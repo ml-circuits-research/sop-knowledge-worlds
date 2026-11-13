@@ -13,29 +13,7 @@ Blocking: yes/no. If no: the choice taken meanwhile.
 
 # Open
 
-## Q31 (Round 9, block "2026-11-13 21:30": numbers with units, 2026-11-13)
-Question: is one fact per numeric slot in `k.units` the right way to say the unit of a number
-(`k.units.measure world=k.geo type=mountain key=elevation unit=metre`), or should the unit be said in each world,
-or on every fact?
-Context: SOP Lang has no unit on a value, and a unit inside the value or in the key name would be a notation. Tried
-and published: the type `k.units.measure` (identity world, type, key; `unit`, or `counts` for a count, or
-`ordinal=true`; `approximate=true` for `_about` keys), written by `tools/measures-core.mjs`, which reads the schemas
-of `k.geo`, `k.animals`, `k.space`, `k.body` and refuses a numeric slot without an entry (70 slots). A host joins
-by the slot. Options: (a) keep; (b) a `<key>_unit` key on every fact (repeats one value thousands of times);
-(c) a type of each world (`k.geo.measure`), so that a world read alone knows its units; (d) sopworld: a unit on
-`core.slot`, which today notes an unknown attribute.
-Blocking: no. Meanwhile: (a). The worlds of the second worker (`k.attributes`, `k.parts`, `k.wearables`) are not
-in the list yet.
-
-## Q32 (Round 9 item 2, 2026-11-13)
-Question: the size class of an animal is now said in two places: `k.scenes.thing size=` (every drawable thing)
-and `k.animals.animal size=` (every animal, 179 of them with no drawing). Should one of them go?
-Context: the item asks for the size class among the facts of `k.animals`; the answer to Q28 says "no fact in two
-places". A test requires the two to agree where the drawing has the name of the animal (132 compared, all agree;
-`tuna` differs on purpose: the thing of `k.scenes` is a tin of tuna). Options: (a) keep both with the test;
-(b) `k.animals` has `size` only for animals without a `k.scenes.thing` (a host then looks in two places);
-(c) `k.scenes.thing` drops the size of things that are animals.
-Blocking: no. Meanwhile: (a).
+None.
 
 # Closed
 
@@ -348,3 +326,29 @@ audit): three to six everyday parts for each of the 1,500 things, in plain words
 window, seat), next to the WordNet facts; (c) only add plain-word synonyms for WordNet's part names as `core.word`.
 Blocking: no. Meanwhile: (a).
 Closed: answered "yes" in worker-tasks.md, block "2026-11-13 21:55": `plain` next to `has` (the last word of a part's name when WordNet says the part is a kind of it), and `k.parts.usual` (`named=model`) for 432 common things. Applied in the commit "Q30".
+
+## Q31 (Round 9, block "2026-11-13 21:30": numbers with units, 2026-11-13)
+Question: is one fact per numeric slot in `k.units` the right way to say the unit of a number
+(`k.units.measure world=k.geo type=mountain key=elevation unit=metre`), or should the unit be said in each world,
+or on every fact?
+Context: SOP Lang has no unit on a value, and a unit inside the value or in the key name would be a notation. Tried
+and published: the type `k.units.measure` (identity world, type, key; `unit`, or `counts` for a count, or
+`ordinal=true`; `approximate=true` for `_about` keys), written by `tools/measures-core.mjs`, which reads the schemas
+of `k.geo`, `k.animals`, `k.space`, `k.body` and refuses a numeric slot without an entry (70 slots). A host joins
+by the slot. Options: (a) keep; (b) a `<key>_unit` key on every fact (repeats one value thousands of times);
+(c) a type of each world (`k.geo.measure`), so that a world read alone knows its units; (d) sopworld: a unit on
+`core.slot`, which today notes an unknown attribute.
+Blocking: no. Meanwhile: (a). The worlds of the second worker (`k.attributes`, `k.parts`, `k.wearables`) are not
+in the list yet.
+Closed: answered "yes" in worker-tasks.md, block "2026-11-13 23:10": one `k.units.measure` fact per numeric slot, kept in `k.units`, now for every world (135 slots of 21 worlds; new keys `frame` for a position in a 0 to 100 frame and `plain` for the value of a number word); `tools/measures-core.mjs` refuses a number without a unit in any world. The scales of `k.values` are ranks (`ordinal=true`); `k.attributes` has one number (`wheels`).
+
+## Q32 (Round 9 item 2, 2026-11-13)
+Question: the size class of an animal is now said in two places: `k.scenes.thing size=` (every drawable thing)
+and `k.animals.animal size=` (every animal, 179 of them with no drawing). Should one of them go?
+Context: the item asks for the size class among the facts of `k.animals`; the answer to Q28 says "no fact in two
+places". A test requires the two to agree where the drawing has the name of the animal (132 compared, all agree;
+`tuna` differs on purpose: the thing of `k.scenes` is a tin of tuna). Options: (a) keep both with the test;
+(b) `k.animals` has `size` only for animals without a `k.scenes.thing` (a host then looks in two places);
+(c) `k.scenes.thing` drops the size of things that are animals.
+Blocking: no. Meanwhile: (a).
+Closed: answered "one home" in worker-tasks.md, block "2026-11-13 23:10": `k.animals.animal` has no `size`; `tools/scenes-core.mjs` adds a `k.scenes.thing` row for each of the 176 animals that had none (and `"crane bird"`, `"tuna fish"`, named by `thing=` on the animal); `k.commonsense.thing` drops its `size` too; a test forbids a second slot with the size or place classes in any world.

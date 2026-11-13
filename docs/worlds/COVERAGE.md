@@ -17,8 +17,8 @@ the place of the dog).
 
 | attribute | by its name | through its drawing | none | where |
 |---|---:|---:|---:|---|
-| place | 637 (42%) | 350 (23%) | 513 (34%) | `k.scenes.thing` (place) |
-| size | 650 (43%) | 365 (24%) | 485 (32%) | `k.scenes.thing` (size) |
+| place | 693 (46%) | 317 (21%) | 490 (33%) | `k.scenes.thing` (place) |
+| size | 710 (47%) | 330 (22%) | 460 (31%) | `k.scenes.thing` (size) |
 | colour (usual colour of the thing) | 225 (15%) | 48 (3%) | 1227 (82%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour (the usual one, or said to be any colour) | 312 (21%) | 90 (6%) | 1098 (73%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour the thing is drawn in | 653 (44%) | 369 (25%) | 478 (32%) | `k.attributes.drawn` (drawn_colour) |
@@ -56,7 +56,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.objects` | 1094 (73%) |
 | `k.parts` | 972 (65%) |
 | `k.people` | 1 (0%) |
-| `k.scenes` | 677 (45%) |
+| `k.scenes` | 735 (49%) |
 | `k.shapes` | 8 (1%) |
 | `k.space` | 9 (1%) |
 | `k.time` | 1 (0%) |

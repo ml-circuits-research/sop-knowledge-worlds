@@ -1,13 +1,13 @@
 # k.commonsense
 
 Everyday common sense, as soft knowledge: where things usually are, what they can do, what they are used for and
-made of, a size class, and how many of a thing a scene usually has. The soft rules never refuse; they give advice
+made of, and how many of a thing a scene usually has. The soft rules never refuse; they give advice
 after the application acted ("Done! A fish is usually in water, not in the sky.").
 
-## Schema (`schema.sop`, module `k.commonsense`, version 1)
+## Schema (`schema.sop`, module `k.commonsense`, version 2)
 
 - `k.commonsense.thing` (shared, closed): `name` (identity, an English lemma), `at` (many: typical locations), `can`
-  (many: capabilities), `used_for` (many), `made_of` (many), `size` (tiny, small, medium, large, huge),
+  (many: capabilities), `used_for` (many), `made_of` (many) (the size class of a thing is in `k.scenes.thing`, Q32),
   `usually_count` (how many a scene usually has; given only for one-of-a-kind things: sun, moon).
 - `k.commonsense.placed`: what an application tells when it puts a thing in a scene: `thing` (a name), `at` (where),
   `scene`. An application may extend it with a type of its own.

@@ -1,8 +1,9 @@
-# k.scenes/shards/things-a: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 45 drawable things whose name starts with "a"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-a: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 56 things (the drawable things and the animals of k.animals) whose name starts with "a"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
+@k.scenes.thing.aardvark k.scenes.thing name=aardvark place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.abacus k.scenes.thing name=abacus place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.accordion k.scenes.thing name=accordion place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.acorn k.scenes.thing name=acorn place=ground size=tiny named=model core.source="hand-core 1"
@@ -17,22 +18,31 @@
 @k.scenes.thing.airplane_departure k.scenes.thing name="airplane departure" place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.airport k.scenes.thing name=airport place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.alarm_clock k.scenes.thing name="alarm clock" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.albatross k.scenes.thing name=albatross size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.alembic k.scenes.thing name=alembic place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.alley k.scenes.thing name=alley place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.alligator k.scenes.thing name=alligator place=water size=large named=model core.source="hand-core 1"
 @k.scenes.thing.almond k.scenes.thing name=almond place=indoors on=table size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.alpaca k.scenes.thing name=alpaca place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.ambulance k.scenes.thing name=ambulance place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.american_football k.scenes.thing name="american football" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.amphora k.scenes.thing name=amphora place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.anaconda k.scenes.thing name=anaconda place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.anchor k.scenes.thing name=anchor size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.anchovy k.scenes.thing name=anchovy place=water size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.angelfish k.scenes.thing name=angelfish place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.ant k.scenes.thing name=ant place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.ant_eater k.scenes.thing name="ant eater" place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.anteater k.scenes.thing name=anteater place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.antelope k.scenes.thing name=antelope place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.aphid k.scenes.thing name=aphid size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.apple k.scenes.thing name=apple place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.apple_juice k.scenes.thing name="apple juice" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.apron k.scenes.thing name=apron place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.arch_lever_file k.scenes.thing name="arch lever file" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.archery_target k.scenes.thing name="archery target" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.arm_chair k.scenes.thing name="arm chair" place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.armadillo k.scenes.thing name=armadillo place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.armchair k.scenes.thing name=armchair place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.armor k.scenes.thing name=armor place=on_thing on=person size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.artichoke k.scenes.thing name=artichoke place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -48,3 +58,4 @@
 @k.scenes.thing.autonomous_car k.scenes.thing name="autonomous car" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.avocado k.scenes.thing name=avocado place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.axe k.scenes.thing name=axe place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.axolotl k.scenes.thing name=axolotl place=water size=small named=model core.source="hand-core 1"

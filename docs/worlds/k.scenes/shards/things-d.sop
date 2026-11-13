@@ -1,5 +1,5 @@
-# k.scenes/shards/things-d: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 75 drawable things whose name starts with "d"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-d: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 77 things (the drawable things and the animals of k.animals) whose name starts with "d"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -31,6 +31,7 @@
 @k.scenes.thing.dice k.scenes.thing name=dice place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.dictionary k.scenes.thing name=dictionary place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.diesel_locomotive k.scenes.thing name="diesel locomotive" place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.dingo k.scenes.thing name=dingo place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.dining_table k.scenes.thing name="dining table" place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.dinner_cold k.scenes.thing name="dinner cold" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.dinosaur k.scenes.thing name=dinosaur place=ground size=huge named=model core.source="hand-core 1"
@@ -77,4 +78,5 @@
 @k.scenes.thing.duck k.scenes.thing name=duck place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.dumper_truck k.scenes.thing name="dumper truck" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.dumpling k.scenes.thing name=dumpling place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.dung_beetle k.scenes.thing name="dung beetle" size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.dvd k.scenes.thing name=dvd place=indoors on=table size=small named=model core.source="hand-core 1"

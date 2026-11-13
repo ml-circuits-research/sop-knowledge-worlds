@@ -3,6 +3,13 @@
 Breaking schema changes, per world. The world's version is `version=` on the `core.module` wire of its `schema.sop`
 (sopworld 0.15.0; a `# version:` header line before) and the `version` of its catalog entry.
 
+## k.animals 2, k.commonsense 2 (2026-11-13, Round 11, Q32)
+
+- `k.animals.animal.size` and `k.commonsense.thing.size` are gone: the size class and the usual place of every thing,
+  animals included, are `k.scenes.thing` `size` and `place` (one home). Every animal has a `k.scenes.thing`; new key
+  `k.animals.animal.thing` names it where its name is not the animal's (`crane` → `"crane bird"`, `tuna` → `"tuna fish"`).
+- `k.units.measure` (Q31, not breaking): new keys `frame`, `plain`; one fact for every numeric slot of every world.
+
 ## k.geo 2 (2026-11-13)
 
 - `k.geo.country`: the identity `name` is now the common short name (`"United States"`, `Serbia`, `Russia`; it was

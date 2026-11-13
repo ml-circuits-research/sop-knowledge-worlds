@@ -1,5 +1,5 @@
-# k.scenes/shards/things-h: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 94 drawable things whose name starts with "h"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-h: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 103 things (the drawable things and the animals of k.animals) whose name starts with "h"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -13,6 +13,7 @@
 @k.scenes.thing.hairdryer k.scenes.thing name=hairdryer place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hairspray k.scenes.thing name=hairspray place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.half_orange_fruit k.scenes.thing name="half orange fruit" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.halibut k.scenes.thing name=halibut place=water size=large named=model core.source="hand-core 1"
 @k.scenes.thing.ham k.scenes.thing name=ham place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.ham_packet k.scenes.thing name="ham packet" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hamburger k.scenes.thing name=hamburger place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -20,6 +21,7 @@
 @k.scenes.thing.hammer k.scenes.thing name=hammer place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hammer_and_pick k.scenes.thing name="hammer and pick" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hammer_and_wrench k.scenes.thing name="hammer and wrench" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.hammerhead_shark k.scenes.thing name="hammerhead shark" place=water size=large named=model core.source="hand-core 1"
 @k.scenes.thing.hamsa k.scenes.thing name=hamsa place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.hamster k.scenes.thing name=hamster place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.hand_bag k.scenes.thing name="hand bag" place=on_thing on=hand size=small named=model core.source="hand-core 1"
@@ -56,7 +58,9 @@
 @k.scenes.thing.helmet_pilot k.scenes.thing name="helmet pilot" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hen k.scenes.thing name=hen place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.herb k.scenes.thing name=herb place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.hermit_crab k.scenes.thing name="hermit crab" place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.heron k.scenes.thing name=heron place=water size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.herring k.scenes.thing name=herring place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hibiscus k.scenes.thing name=hibiscus place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.high_chair k.scenes.thing name="high chair" place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.high-heeled_shoe k.scenes.thing name="high-heeled shoe" place=on_thing on=foot size=small named=model core.source="hand-core 1"
@@ -79,7 +83,9 @@
 @k.scenes.thing.hook k.scenes.thing name=hook place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.horizontal_traffic_light k.scenes.thing name="horizontal traffic light" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.horn k.scenes.thing name=horn place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.hornet k.scenes.thing name=hornet size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.horse k.scenes.thing name=horse place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.horsefly k.scenes.thing name=horsefly size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.hose k.scenes.thing name=hose place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.hospital k.scenes.thing name=hospital place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.hot_air_balloon k.scenes.thing name="hot air balloon" place=sky size=huge named=model core.source="hand-core 1"
@@ -95,5 +101,8 @@
 @k.scenes.thing.house k.scenes.thing name=house place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.house_with_garden k.scenes.thing name="house with garden" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.houses k.scenes.thing name=houses place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.hummingbird k.scenes.thing name=hummingbird place=sky size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.humpback_whale k.scenes.thing name="humpback whale" place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.hut k.scenes.thing name=hut place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.hyacinth k.scenes.thing name=hyacinth place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.hyena k.scenes.thing name=hyena place=ground size=medium named=model core.source="hand-core 1"

@@ -18,3 +18,7 @@
 {"id":"sc-18","ask":"what draws the farmhouse of a farm","query":{"type":"k.scenes.has","where":{"scene":"farm","thing":"farmhouse"},"seek":"drawing"},"expect":{"status":"supported","value":"house"}}
 {"id":"sc-19","ask":"where in the picture is the sea of a beach","query":{"type":"k.scenes.has","where":{"scene":"beach","thing":"sea"},"seek":"where"},"expect":{"status":"supported","value":"background"}}
 {"id":"sc-20","ask":"in which scenes is there usually a tractor","query":{"type":"k.scenes.has","where":{"thing":"tractor"},"seek":"scene","mode":"list"},"expect":{"status":"supported","values":["farm","field"]}}
+{"id":"sc-21","ask":"how big is an elephant","query":{"type":"k.scenes.thing","where":{"name":"elephant"},"seek":"size"},"expect":{"status":"supported","value":"huge"}}
+{"id":"sc-22","ask":"how big is a sparrow (an animal with no drawing)","query":{"type":"k.scenes.thing","where":{"name":"sparrow"},"seek":"size"},"expect":{"status":"supported","value":"small"}}
+{"id":"sc-23","ask":"where is a cod usually seen","query":{"type":"k.scenes.thing","where":{"name":"cod"},"seek":"place"},"expect":{"status":"supported","value":"water"}}
+{"id":"sc-24","ask":"how big is the crane that is a bird","query":{"type":"k.scenes.thing","where":{"name":"\"crane bird\""},"seek":"size"},"expect":{"status":"supported","value":"medium"}}

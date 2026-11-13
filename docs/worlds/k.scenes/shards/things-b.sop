@@ -1,8 +1,9 @@
-# k.scenes/shards/things-b: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 201 drawable things whose name starts with "b"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-b: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 214 things (the drawable things and the animals of k.animals) whose name starts with "b"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
+@k.scenes.thing.baboon k.scenes.thing name=baboon place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.baby_bottle k.scenes.thing name="baby bottle" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baby_chick k.scenes.thing name="baby chick" place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.baby_oil k.scenes.thing name="baby oil" place=indoors size=small named=model core.source="hand-core 1"
@@ -36,6 +37,8 @@
 @k.scenes.thing.barbeque k.scenes.thing name=barbeque place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.barber_pole k.scenes.thing name="barber pole" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.barn k.scenes.thing name=barn place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.barnacle k.scenes.thing name=barnacle place=water size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.barracuda k.scenes.thing name=barracuda place=water size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.baseball k.scenes.thing name=baseball place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baseball_base k.scenes.thing name="baseball base" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baseball_bat k.scenes.thing name="baseball bat" size=small named=model core.source="hand-core 1"
@@ -43,6 +46,7 @@
 @k.scenes.thing.basket k.scenes.thing name=basket place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.basketball k.scenes.thing name=basketball place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.basketball_ball k.scenes.thing name="basketball ball" place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.bass k.scenes.thing name=bass place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bat k.scenes.thing name=bat place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bath k.scenes.thing name=bath place=indoors size=large named=model core.source="hand-core 1"
 @k.scenes.thing.bath_mat k.scenes.thing name="bath mat" place=indoors size=small named=model core.source="hand-core 1"
@@ -100,6 +104,7 @@
 @k.scenes.thing.black_cat k.scenes.thing name="black cat" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.black_nib k.scenes.thing name="black nib" place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.blackberry k.scenes.thing name=blackberry place=indoors on=table size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.blackbird k.scenes.thing name=blackbird place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.blackboard k.scenes.thing name=blackboard place=on_thing on=wall size=large named=model core.source="hand-core 1"
 @k.scenes.thing.blackcurrant_juice k.scenes.thing name="blackcurrant juice" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.blackcurrants k.scenes.thing name=blackcurrants place=indoors on=table size=tiny named=model core.source="hand-core 1"
@@ -112,11 +117,15 @@
 @k.scenes.thing.blouse k.scenes.thing name=blouse place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.blowfish k.scenes.thing name=blowfish place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.blue_book k.scenes.thing name="blue book" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.blue_whale k.scenes.thing name="blue whale" place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.blueberries k.scenes.thing name=blueberries place=indoors on=table size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.bluebird k.scenes.thing name=bluebird place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.blusher k.scenes.thing name=blusher place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.boa k.scenes.thing name=boa place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.boar k.scenes.thing name=boar place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.boat k.scenes.thing name=boat place=water size=large named=model core.source="hand-core 1"
 @k.scenes.thing.bobble_hat k.scenes.thing name="bobble hat" place=on_thing on=head size=small named=model core.source="hand-core 1"
+@k.scenes.thing.bobcat k.scenes.thing name=bobcat place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bolt k.scenes.thing name=bolt place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.bomb k.scenes.thing name=bomb place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bonfire k.scenes.thing name=bonfire place=ground size=medium named=model core.source="hand-core 1"
@@ -188,9 +197,12 @@
 @k.scenes.thing.building k.scenes.thing name=building place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.building_construction k.scenes.thing name="building construction" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.bulb_holder k.scenes.thing name="bulb holder" place=indoors size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.bull k.scenes.thing name=bull place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.bullet k.scenes.thing name=bullet size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.bullet_train k.scenes.thing name="bullet train" place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.bullfrog k.scenes.thing name=bullfrog place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bullseye k.scenes.thing name=bullseye place=on_thing on=wall size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.bumblebee k.scenes.thing name=bumblebee size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.bun_-_hot_cross k.scenes.thing name="bun - hot cross" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bun_currant k.scenes.thing name="bun currant" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.bunk_beds k.scenes.thing name="bunk beds" place=indoors size=large named=model core.source="hand-core 1"
@@ -204,3 +216,4 @@
 @k.scenes.thing.butterfly k.scenes.thing name=butterfly place=sky size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.butternut_squash k.scenes.thing name="butternut squash" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.button k.scenes.thing name=button place=on_thing on=person size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.buzzard k.scenes.thing name=buzzard place=sky size=medium named=model core.source="hand-core 1"

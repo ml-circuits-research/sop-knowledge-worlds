@@ -1,5 +1,5 @@
-# k.scenes/shards/things-f: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 110 drawable things whose name starts with "f"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-f: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 115 things (the drawable things and the animals of k.animals) whose name starts with "f"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -9,6 +9,7 @@
 @k.scenes.thing.factory k.scenes.thing name=factory place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.fairy k.scenes.thing name=fairy place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.falafel k.scenes.thing name=falafel place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.falcon k.scenes.thing name=falcon place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.fallen_leaf k.scenes.thing name="fallen leaf" place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.fan k.scenes.thing name=fan place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.fax_machine k.scenes.thing name="fax machine" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -39,6 +40,7 @@
 @k.scenes.thing.fire_helmet k.scenes.thing name="fire helmet" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.fire_hose k.scenes.thing name="fire hose" place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.firecracker k.scenes.thing name=firecracker place=ground size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.firefly k.scenes.thing name=firefly size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.fireplace k.scenes.thing name=fireplace place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.fireworks k.scenes.thing name=fireworks place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.first_aid_bag k.scenes.thing name="first aid bag" place=indoors size=small named=model core.source="hand-core 1"
@@ -62,7 +64,9 @@
 @k.scenes.thing.flat_shoe k.scenes.thing name="flat shoe" place=on_thing on=foot size=small named=model core.source="hand-core 1"
 @k.scenes.thing.flatbread k.scenes.thing name=flatbread place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.flatscreen_tv k.scenes.thing name="flatscreen tv" place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.flea k.scenes.thing name=flea place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.floppy_disk k.scenes.thing name="floppy disk" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.flounder k.scenes.thing name=flounder place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.flour k.scenes.thing name=flour place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.flour_plain k.scenes.thing name="flour plain" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.flour_self_raising k.scenes.thing name="flour self raising" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -70,6 +74,7 @@
 @k.scenes.thing.flute k.scenes.thing name=flute place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.fly k.scenes.thing name=fly place=sky size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.flying_disc k.scenes.thing name="flying disc" place=sky size=small named=model core.source="hand-core 1"
+@k.scenes.thing.flying_fish k.scenes.thing name="flying fish" place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.flying_saucer k.scenes.thing name="flying saucer" place=sky size=large named=model core.source="hand-core 1"
 @k.scenes.thing.fog k.scenes.thing name=fog place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.foggy_mountain k.scenes.thing name="foggy mountain" place=ground size=huge named=model core.source="hand-core 1"

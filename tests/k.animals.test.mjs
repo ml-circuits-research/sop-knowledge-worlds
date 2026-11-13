@@ -4,7 +4,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
-import { readAnimals, animalShards, SIZES } from '../tools/animals-core.mjs';
+import { readAnimals, animalShards, animalThings, usualPlace, SIZES } from '../tools/animals-core.mjs';
+import { parse } from '../tools/sopworld/sopworld.mjs';
 import { sample } from '../tools/ask-sample.mjs';
 
 const worlds = scanWorlds();
@@ -12,11 +13,11 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const animals = fullWorld('k.animals', worlds).ofType('k.animals.animal');
 
-test('the shards are what tools/animals-core.mjs gives; 300 animals, each with class, size and the label named=model', () => {
+test('the shards are what tools/animals-core.mjs gives; 300 animals, each with class and the label named=model; none says a size (Q32)', () => {
   for (const [name, text] of Object.entries(animalShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', name), 'utf8'), text, name);
   assert.ok(animals.length >= 300, `${animals.length} animals`);
   for (const a of animals) {
-    assert.ok(SIZES.includes(one(a, 'size')), a.id);
+    assert.equal(a.attrs.size, undefined, a.id);
     assert.deepEqual(a.attrs.named, ['model'], a.id);
     assert.deepEqual(a.attrs['core.source'], ['"hand-core 1"'], a.id);
     assert.ok(a.attrs.habitat?.length || one(a, 'name') === 'flea', `${a.id}: where it lives`);
@@ -35,18 +36,47 @@ test('what cannot fly: every animal that is not a bird or an insect, unless it i
   assert.deepEqual(fliers, ['bat']);
 });
 
-test('a drawing is a k.objects object; where it has the name of the animal, the size class is that of k.scenes.thing', () => {
+test('Q32, one home: every animal has its size class in exactly one k.scenes.thing, the size of the table of animals', () => {
+  const things = new Map(fullWorld('k.scenes', worlds).ofType('k.scenes.thing').map((w) => [one(w, 'name'), w]));
+  const table = new Map(readAnimals().map((a) => [a.name, a]));
+  let other = 0;
+  for (const a of animals) {
+    const name = one(a, 'name'), at = one(a, 'thing') ?? name;
+    if (at !== name) { other++; assert.ok(things.has(name), `${name}: thing= is only for a name that another thing has`); assert.notEqual(one(things.get(name), 'size'), table.get(name).size, name); }
+    assert.ok(things.has(at), `${name}: no k.scenes.thing ${at}`);
+    assert.equal(one(things.get(at), 'size'), table.get(name).size, name);
+    assert.ok(SIZES.includes(one(things.get(at), 'size')), name);
+  }
+  assert.deepEqual([...animalThings().thingOf].sort(), [['crane', 'crane bird'], ['tuna', 'tuna fish']]);
+  assert.equal(other, 2);
+  // The place of a row made for an animal, by the rule.
+  assert.equal(one(things.get('cod'), 'place'), 'water');
+  assert.equal(one(things.get('sparrow'), 'place'), 'sky');
+  assert.equal(one(things.get('jaguar'), 'place'), 'ground');
+  assert.equal(things.get('bumblebee').attrs.place, undefined);
+  assert.equal(usualPlace({ class: 'mammal', habitat: ['sea', 'ice'], can: [], cannot: ['fly'] }), 'water');
+});
+
+test('Q32, one home: no world but k.scenes declares a size class or a usual place of a named thing', () => {
+  // The size class (tiny to huge) and the usual place (sky, ground, water, indoors, on_thing) are the enums of
+  // k.scenes.thing. Another slot with the key `size` or `place` whose enum is one of those is the same fact in a
+  // second home. k.space.body.size is not: it is a planet's class among the planets (small to huge, no tiny).
+  const classes = (w, key) => parse(w.schemaText).filter((s) => s.type === 'core.slot' && s.attrs.key?.[0] === key && s.attrs.enum);
+  const home = worlds.find((w) => w.id === 'k.scenes');
+  for (const key of ['size', 'place']) {
+    const own = classes(home, key).find((s) => s.attrs.of[0] === 'k.scenes.thing').attrs.enum.join(' ');
+    for (const w of worlds) for (const s of classes(w, key)) if (s.attrs.of[0] !== 'k.scenes.thing') assert.notEqual(s.attrs.enum.join(' '), own, `${s.id} repeats k.scenes.thing.${key}`);
+  }
+});
+
+test('a drawing is a k.objects object', () => {
   const objects = new Set();
   for (const s of worlds.find((w) => w.id === 'k.objects').shards) for (const m of s.text.matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)) objects.add(tok(m[1]));
-  const sizes = new Map(fullWorld('k.scenes', worlds).ofType('k.scenes.thing').map((w) => [one(w, 'name'), one(w, 'size')]));
-  let same = 0;
   for (const a of animals) {
     const d = one(a, 'drawing');
     if (!d) continue;
     assert.ok(objects.has(d), `${a.id}: no object ${d}`);
-    if (d === one(a, 'name') && sizes.get(d)) { assert.equal(one(a, 'size'), sizes.get(d), `${a.id}: k.scenes says ${sizes.get(d)}`); same++; }
   }
-  assert.ok(same >= 100, `${same} sizes compared`);
 });
 
 test('the audit: 200 rows of the table, each with a verdict; a wrong or unclear one has a note', () => {

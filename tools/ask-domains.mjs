@@ -17,7 +17,7 @@ export const DOMAINS = {
     templates: [
       ['how many legs does a {x} have', one('k.animals.animal', 'legs')],
       ['what covers the body of a {x}', one('k.animals.animal', 'covering')],
-      ['how big is a {x}', one('k.animals.animal', 'size')],
+      ['how big is a {x}', (x) => [{ type: 'k.scenes.thing', where: { name: '{x}' }, seek: 'size' }]],
       ['where does a {x} live', one('k.animals.animal', 'habitat')],
       ['what does a {x} eat', one('k.animals.animal', 'eats')],
       ['what sound does a {x} make', one('k.animals.animal', 'sound')],

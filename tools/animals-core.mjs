@@ -42,15 +42,46 @@ export function readAnimals(tsv = readFileSync(join(REPO, 'sources/hand-core/ani
   });
 }
 
-export function animalShards(animals = readAnimals()) {
+// Q32: the place and the size class of every thing live in k.scenes.thing, those of the animals too. The table of
+// animals keeps its column `size` as the source; this gives the k.scenes.thing rows for the animals that the table
+// of places and sizes (sources/hand-core/place-size.tsv) does not have, and says under which name the row of each
+// animal stands. An animal whose name is there the name of another thing of another size (a crane is also a
+// machine, tuna also a tin) gets a row under its name followed by `bird`, `fish` or `animal`. The place, by rule and
+// only where the rule is sure: `water` for a fish and for an animal that is not a bird and whose first habitat is
+// water; `indoors` where the first habitat is the house; `sky` for a bird that flies and does not live on water
+// only; `ground` for what cannot fly; none for the other flying birds and the flying insects.
+const WATER = ['sea', 'river', 'lake', 'pond', 'coral reef', 'swamp'];
+export function usualPlace(a) {
+  const wet = (h) => WATER.includes(h);
+  if (a.class === 'fish') return 'water';
+  if (a.habitat[0] === 'house') return 'indoors';
+  if (a.class === 'bird') return a.cannot.includes('fly') ? 'ground' : a.habitat.length && a.habitat.every(wet) ? '' : 'sky';
+  if (a.habitat.length && wet(a.habitat[0])) return 'water';
+  return a.cannot.includes('fly') ? 'ground' : '';
+}
+export function readPlaceSizeNames(tsv = readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8')) {
+  return new Map(tsv.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim())).map(([name, , , size = '']) => [name, size]));
+}
+export function animalThings(animals = readAnimals(), taken = readPlaceSizeNames()) {
+  const rows = [], thingOf = new Map();
+  for (const a of animals) {
+    if (taken.has(a.name) && taken.get(a.name) === a.size) continue;
+    const name = taken.has(a.name) ? `${a.name} ${['bird', 'fish'].includes(a.class) ? a.class : 'animal'}` : a.name;
+    if (taken.has(name)) { if (taken.get(name) !== a.size) throw new Error(`animals.tsv: ${a.name}: ${name} is ${taken.get(name)} in place-size.tsv, ${a.size} here`); } else rows.push({ name, place: usualPlace(a), on: '', size: a.size });
+    if (name !== a.name) thingOf.set(a.name, name);
+  }
+  return { rows, thingOf };
+}
+
+export function animalShards(animals = readAnimals(), thingOf = animalThings(animals).thingOf) {
   const files = {};
   for (const [file, about, classes] of SHARDS) {
     const mine = animals.filter((a) => classes.includes(a.class));
-    const facts = mine.map((a) => wire(`k.animals.animal.${seg(a.name)}`, 'k.animals.animal', [['name', a.name], ['class', a.class], ['legs', a.legs], ...a.covering.map((c) => ['covering', c]), ['size', a.size],
+    const facts = mine.map((a) => wire(`k.animals.animal.${seg(a.name)}`, 'k.animals.animal', [['name', a.name], ['class', a.class], ['legs', a.legs], ...a.covering.map((c) => ['covering', c]),
       ...a.sound.map((s) => ['sound', s]), ...a.habitat.map((h) => ['habitat', h]), ['diet', a.diet], ...a.eats.map((e) => ['eats', e]), ['baby', a.baby], ['group', a.group],
-      ...a.can.map((c) => ['can', c]), ...a.cannot.map((c) => ['cannot', c]), ['drawing', a.drawing], ['named', 'model']], SRC));
+      ...a.can.map((c) => ['can', c]), ...a.cannot.map((c) => ['cannot', c]), ['drawing', a.drawing], ['thing', thingOf.get(a.name)], ['named', 'model']], SRC));
     const words = mine.filter((a) => a.words.length).map((a) => wire(`k.animals.word.${seg(a.name)}`, 'core.word', [...a.words.map((w) => ['text', w]), ['means', a.name], ['of', 'k.animals.animal.name']], SRC));
-    files[`${file}.sop`] = `${header({ id: `k.animals/shards/${file}`, about: `${mine.length} ${about}: class, legs, covering, size class, sound, habitat, diet, food, the name of the young and of a group, abilities; and their plural forms and other names. Written by a language model, only where sure (named=model).`,
+    files[`${file}.sop`] = `${header({ id: `k.animals/shards/${file}`, about: `${mine.length} ${about}: class, legs, covering, sound, habitat, diet, food, the name of the young and of a group, abilities (the size class and the usual place are in k.scenes.thing); and their plural forms and other names. Written by a language model, only where sure (named=model).`,
       sources: ['hand-core 1 (hand-written in this repository: sources/hand-core/animals.tsv)'], license: 'CC0-1.0', script: 'tools/animals-core.mjs' })}\n${facts.join('\n')}\n\n# Words: plural forms and other names.\n${words.join('\n')}\n`;
   }
   return files;

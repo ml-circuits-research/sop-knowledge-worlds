@@ -1,5 +1,5 @@
-# k.scenes/shards/things-n: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 28 drawable things whose name starts with "n"; labelled by a language model from the names (named=model), a sample checked against the drawings.
-# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
+# k.scenes/shards/things-n: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 30 things (the drawable things and the animals of k.animals) whose name starts with "n"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
@@ -23,8 +23,10 @@
 @k.scenes.thing.new_moon k.scenes.thing name="new moon" place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.new_moon_face k.scenes.thing name="new moon face" place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.newspaper k.scenes.thing name=newspaper place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.newt k.scenes.thing name=newt place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.nightclub k.scenes.thing name=nightclub place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.nightgown k.scenes.thing name=nightgown place=on_thing on=person size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.nightingale k.scenes.thing name=nightingale place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.noodles k.scenes.thing name=noodles place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.notebook k.scenes.thing name=notebook place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.notebook_with_decorative_cover k.scenes.thing name="notebook with decorative cover" place=indoors on=table size=small named=model core.source="hand-core 1"
