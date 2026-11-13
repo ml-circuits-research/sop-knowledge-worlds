@@ -1,5 +1,5 @@
 {
- "version": "d16493dd366b",
+ "version": "260c028c2f74",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -1996,11 +1996,12 @@
     {
      "id": "k.faces/shards/presets",
      "path": "k.faces/shards/presets.sop",
-     "wires": 20,
-     "bytes": 5298,
+     "wires": 21,
+     "bytes": 5549,
      "keys": [
       "alien",
       "angry",
+      "baby",
       "bearded man",
       "boy",
       "child",
@@ -16452,6 +16453,46 @@
     "CC-BY-SA-4.0",
     "CC0-1.0",
     "WordNet-3.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.people",
+   "version": "1",
+   "schema": "k.people/schema.sop",
+   "exports": [
+    "k.people.kind",
+    "k.people.role"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.people/shards/kinds",
+     "path": "k.people/shards/kinds.sop",
+     "wires": 16,
+     "bytes": 2758,
+     "keys": [
+      "baby",
+      "boy",
+      "child",
+      "girl",
+      "grandfather",
+      "grandmother",
+      "man",
+      "woman"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
    ],
    "warnings": []
   },

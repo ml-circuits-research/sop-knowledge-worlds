@@ -3,6 +3,7 @@
 # license: CC0-1.0
 # script: tools/faces-core.mjs
 
+@k.faces.plain.preset.baby k.faces.preset name=baby style=plain shoulders=small neck=thin ears=small head=round cheeks="round blush" mouth=small nose=button eyes=dot skin=light hair_colour=blond eye_colour=blue clothes=white core.source="hand-core 1"
 @k.faces.plain.preset.child k.faces.preset name=child style=plain shoulders=small neck=thin ears=small head=round cheeks="round blush" mouth=smile nose=button eyes=large eyebrows=short hair_front=tuft skin=light hair_colour=brown eye_colour=blue clothes=red core.source="hand-core 1"
 @k.faces.plain.preset.girl k.faces.preset name=girl style=plain hair_back=pigtails shoulders=small neck=thin ears=small head=round cheeks=freckles mouth="big smile" nose=small eyes=lashes eyebrows=arched hair_front=fringe hat=bow skin=pale hair_colour=red eye_colour=green clothes=yellow core.source="hand-core 1"
 @k.faces.plain.preset.boy k.faces.preset name=boy style=plain shoulders=t-shirt neck=thin ears=round head=round mouth=grin nose=small eyes=round eyebrows=straight hair_front=spikes hat=cap skin=tan hair_colour="dark brown" eye_colour=brown clothes=green core.source="hand-core 1"

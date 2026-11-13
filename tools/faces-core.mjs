@@ -268,6 +268,7 @@ export const COLOURS = [
 
 // name -> variants by slot, and colours
 export const PRESETS = [
+  ['baby', { head: 'round', ears: 'small', neck: 'thin', eyes: 'dot', nose: 'button', mouth: 'small', cheeks: 'round blush', shoulders: 'small' }, ['light', 'blond', 'blue', 'white']],
   ['child', { head: 'round', ears: 'small', neck: 'thin', hair_front: 'tuft', eyebrows: 'short', eyes: 'large', nose: 'button', mouth: 'smile', cheeks: 'round blush', shoulders: 'small' }, ['light', 'brown', 'blue', 'red']],
   ['girl', { head: 'round', ears: 'small', neck: 'thin', hair_back: 'pigtails', hair_front: 'fringe', eyebrows: 'arched', eyes: 'lashes', nose: 'small', mouth: 'big smile', cheeks: 'freckles', hat: 'bow', shoulders: 'small' }, ['pale', 'red', 'green', 'yellow']],
   ['boy', { head: 'round', ears: 'round', neck: 'thin', hair_front: 'spikes', eyebrows: 'straight', eyes: 'round', nose: 'small', mouth: 'grin', hat: 'cap', shoulders: 't-shirt' }, ['tan', 'dark brown', 'brown', 'green']],

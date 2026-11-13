@@ -59,7 +59,7 @@ test('the faces page loads faces.json and filters the variants by style, slot, n
   const one = cell(afro);
   assert.ok(one.includes('src="worlds/k.faces/preview/variant-plain-hair_back-afro.svg"') && one.includes('hair_back') && one.includes('hand-core 1') && one.includes('CC0-1.0'));
   assert.ok(cell(faces.variants.find((v) => v.name === 'personas walrus')).includes('named by a model'));
-  assert.equal(facesOf(faces, 'plain').length, 13 + 7 + 40);
+  assert.equal(facesOf(faces, 'plain').length, 14 + 7 + 40);
   assert.equal(facesOf(faces, 'micah').length, 12);
   assert.ok(html.includes('href="faces.html"') && readFileSync(join(REPO, 'docs/index.html'), 'utf8').includes('href="faces.html"'));
 });

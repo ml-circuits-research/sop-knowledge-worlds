@@ -1382,3 +1382,24 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - **Judgement that is mine:** every hand link (a language model chose them; nothing but the look checks them);
   a general word is never linked to a particular thing (aircraft, jewelry, insect stay without).
 - Numbers: catalog 12 worlds, 770 shards, vocab 19,168 words; 0 errors, 0 warnings. npm test 2,368 pass, 0 fail.
+
+## Round 7 addendum, item 3 (2026-11-13): `k.people`, the kinds of person
+
+- **New world `k.people`** (version 1, exports `kind`, `role`; the roles come with R7.5). `k.people.kind`: baby,
+  child, boy, girl, man, woman, grandfather, grandmother, all with `drawing=person` (the one person drawing of
+  `k.objects`), and what varies it: `age` (baby, child, adult, old), `sex`, `height_about` (per cent of the height
+  of a grown man: 40, 65, 70, 70, 100, 93, 96, 89), `hair` (little, short, long, grey, white), `face` (the `k.faces`
+  preset of style `plain`), `is_a`. Shard `kinds`: 8 facts and 8 `core.word` facts (16 wires).
+- **Reachable by any name:** infant, newborn, kid, children, toddler, lad, lady, gentleman, grandpa, granddad,
+  grandad, grandma, granny, nan, nana, "old man", "old woman" and the plurals are `core.word` facts; a test reads
+  `vocab.json` and checks that each word leads to the shard.
+- **`k.faces` has a 14th preset, `baby`** (round head, no hair, dot eyes, button nose, small mouth, round blush), so
+  that every kind has a face. The random faces did not change (they are seeded per number).
+- **Looked at:** the eight faces of the kinds on one sheet at 160 px (baby, child, boy, girl, man, woman, old man,
+  old woman): each reads as its kind; the baby is the plainest (bald, two dots). **Not looked at:** a person drawn
+  in the eight heights; the person drawing is a stick figure, and nothing here draws it scaled or with hair. The
+  facts say how to vary it; a host has to do it.
+- **Judgement that is mine:** the heights (they are round figures for drawing, not measurements; hence `_about`);
+  `hair=long` for woman and girl and `short` for man and boy are the picture-book convention, nothing more.
+- **What SOP Lang could not say:** nothing. That a word of a kind "is" the kind uses `core.word … of=`, as elsewhere.
+- Numbers: catalog 13 worlds, 771 shards, vocab 19,183 words; 0 errors, 0 warnings. npm test 2,377 pass, 0 fail.

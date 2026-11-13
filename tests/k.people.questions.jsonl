@@ -1,0 +1,6 @@
+{"id":"pe-01","ask":"how is a grandfather drawn","query":{"type":"k.people.kind","where":{"name":"grandfather"},"seek":"drawing"},"expect":{"status":"supported","value":"person"}}
+{"id":"pe-02","ask":"which face does a grandmother have","query":{"type":"k.people.kind","where":{"name":"grandmother"},"seek":"face"},"expect":{"status":"supported","value":"\"old woman\""}}
+{"id":"pe-03","ask":"how tall is a child next to a grown man","query":{"type":"k.people.kind","where":{"name":"child"},"seek":"height_about"},"expect":{"status":"supported","value":"65"}}
+{"id":"pe-04","ask":"which kinds of person are old","query":{"type":"k.people.kind","where":{"age":"old"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["grandfather","grandmother"]}}
+{"id":"pe-05","ask":"what is the hair of a baby like","query":{"type":"k.people.kind","where":{"name":"baby"},"seek":"hair"},"expect":{"status":"supported","value":"little"}}
+{"id":"pe-06","ask":"which kinds of person are children","query":{"type":"k.people.kind","where":{"age":"child"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["child","boy","girl"]}}

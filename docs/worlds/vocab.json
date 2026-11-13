@@ -667,6 +667,7 @@
  ],
  "age": [
   "k.faces/schema.sop",
+  "k.people/schema.sop",
   "k.words/shards/ag"
  ],
  "aged": [
@@ -2946,7 +2947,8 @@
   "k.words/shards/ba"
  ],
  "babies": [
-  "k.objects/shards/noto-drink-01"
+  "k.objects/shards/noto-drink-01",
+  "k.people/shards/kinds"
  ],
  "babine": [
   "k.geo/shards/north-america"
@@ -2969,8 +2971,10 @@
  ],
  "baby": [
   "k.animals/schema.sop",
+  "k.faces/shards/presets",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-drink-01",
+  "k.people/shards/kinds",
   "k.words/shards/ba"
  ],
  "baby bottle": [
@@ -6819,6 +6823,7 @@
  ],
  "boy": [
   "k.faces/shards/presets",
+  "k.people/shards/kinds",
   "k.words/shards/bo"
  ],
  "boycott": [
@@ -6829,6 +6834,9 @@
  ],
  "boyle": [
   "k.words/shards/bo"
+ ],
+ "boys": [
+  "k.people/shards/kinds"
  ],
  "bozo": [
   "k.words/shards/bo"
@@ -10551,6 +10559,7 @@
  "child": [
   "k.faces/shards/presets",
   "k.objects/shards/figures",
+  "k.people/shards/kinds",
   "k.words/shards/ch"
  ],
  "childbirth": [
@@ -10560,6 +10569,7 @@
   "k.words/shards/ch"
  ],
  "children": [
+  "k.people/shards/kinds",
   "k.words/shards/ch"
  ],
  "chile": [
@@ -19792,6 +19802,7 @@
   "k.objects/shards/noto-time-01",
   "k.objects/shards/openmoji-animals-nature-02",
   "k.objects/shards/openmoji-technology-01",
+  "k.people/schema.sop",
   "k.words/shards/fa"
  ],
  "faces": [
@@ -23243,7 +23254,11 @@
   "k.words/shards/ge"
  ],
  "gentleman": [
+  "k.people/shards/kinds",
   "k.words/shards/ge"
+ ],
+ "gentlemen": [
+  "k.people/shards/kinds"
  ],
  "gentry": [
   "k.words/shards/ge"
@@ -23431,10 +23446,14 @@
  ],
  "girl": [
   "k.faces/shards/presets",
+  "k.people/shards/kinds",
   "k.words/shards/gi"
  ],
  "girlfriend": [
   "k.words/shards/gi"
+ ],
+ "girls": [
+  "k.people/shards/kinds"
  ],
  "gisenyi": [
   "k.geo/shards/africa"
@@ -24064,6 +24083,7 @@
   "k.geo/shards/north-america"
  ],
  "grandad": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
  ],
  "grandchild": [
@@ -24073,6 +24093,7 @@
   "k.words/shards/gr"
  ],
  "granddad": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
  ],
  "granddaughter": [
@@ -24088,19 +24109,35 @@
   "k.words/shards/gr"
  ],
  "grandfather": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
+ ],
+ "grandfathers": [
+  "k.people/shards/kinds"
  ],
  "grandiozny peak": [
   "k.geo/shards/asia"
  ],
  "grandma": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
+ ],
+ "grandmas": [
+  "k.people/shards/kinds"
  ],
  "grandmother": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
  ],
+ "grandmothers": [
+  "k.people/shards/kinds"
+ ],
  "grandpa": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
+ ],
+ "grandpas": [
+  "k.people/shards/kinds"
  ],
  "grandson": [
   "k.words/shards/gr"
@@ -24112,6 +24149,7 @@
   "k.words/shards/gr"
  ],
  "granny": [
+  "k.people/shards/kinds",
   "k.words/shards/gr"
  ],
  "grant": [
@@ -24986,6 +25024,7 @@
   "k.objects/shards/mulberry-leisure-toys-01",
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/things-2",
+  "k.people/schema.sop",
   "k.words/shards/ha"
  ],
  "hair conditioner": [
@@ -26086,6 +26125,7 @@
  ],
  "height": [
   "k.geo/schema.sop",
+  "k.people/schema.sop",
   "k.words/shards/he"
  ],
  "heights": [
@@ -28212,10 +28252,14 @@
  ],
  "infant": [
   "k.objects/shards/noto-drink-01",
+  "k.people/shards/kinds",
   "k.words/shards/in"
  ],
  "infantry": [
   "k.words/shards/in"
+ ],
+ "infants": [
+  "k.people/shards/kinds"
  ],
  "infect": [
   "k.words/shards/in"
@@ -30518,6 +30562,7 @@
   "k.words/shards/ki"
  ],
  "kid": [
+  "k.people/shards/kinds",
   "k.words/shards/ki"
  ],
  "kidded": [
@@ -30549,6 +30594,9 @@
  ],
  "kidneys": [
   "k.body/shards/core"
+ ],
+ "kids": [
+  "k.people/shards/kinds"
  ],
  "kiev": [
   "k.words/shards/ki"
@@ -31393,6 +31441,7 @@
   "k.words/shards/la"
  ],
  "lad": [
+  "k.people/shards/kinds",
   "k.words/shards/la"
  ],
  "ladder": [
@@ -31410,6 +31459,9 @@
  "laden": [
   "k.words/shards/la"
  ],
+ "ladies": [
+  "k.people/shards/kinds"
+ ],
  "ladies toilet": [
   "k.objects/shards/mulberry-building-public-01"
  ],
@@ -31417,9 +31469,13 @@
   "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.scenes/shards/things-l"
  ],
+ "lads": [
+  "k.people/shards/kinds"
+ ],
  "lady": [
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-clothing-03",
+  "k.people/shards/kinds",
   "k.words/shards/la"
  ],
  "lady beetle": [
@@ -35026,6 +35082,7 @@
   "k.objects/shards/figures",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-sky-weather-05",
+  "k.people/shards/kinds",
   "k.words/shards/ma"
  ],
  "mana": [
@@ -36288,6 +36345,7 @@
  ],
  "men": [
   "k.objects/shards/noto-drink-02",
+  "k.people/shards/kinds",
   "k.words/shards/ma",
   "k.words/shards/me"
  ],
@@ -39440,7 +39498,11 @@
   "k.geo/shards/africa"
  ],
  "nan": [
+  "k.people/shards/kinds",
   "k.words/shards/na"
+ ],
+ "nana": [
+  "k.people/shards/kinds"
  ],
  "nancy": [
   "k.words/shards/na"
@@ -39967,6 +40029,7 @@
  "newborn": [
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-drink-01",
+  "k.people/shards/kinds",
   "k.words/shards/ne"
  ],
  "newcastle": [
@@ -41333,6 +41396,7 @@
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-office-02",
+  "k.people/schema.sop",
   "k.words/shards/ol"
  ],
  "old key": [
@@ -41340,10 +41404,12 @@
   "k.scenes/shards/things-o"
  ],
  "old man": [
-  "k.faces/shards/presets"
+  "k.faces/shards/presets",
+  "k.people/shards/kinds"
  ],
  "old woman": [
-  "k.faces/shards/presets"
+  "k.faces/shards/presets",
+  "k.people/shards/kinds"
  ],
  "olenekskaya protoka": [
   "k.geo/shards/europe"
@@ -43651,6 +43717,7 @@
   "k.geo/schema.sop",
   "k.objects/shards/figures",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.people/schema.sop",
   "k.words/shards/pe"
  ],
  "people's democratic republic of algeria": [
@@ -43816,6 +43883,7 @@
  "person": [
   "k.objects/shards/figures",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.people/schema.sop",
   "k.scenes/shards/things-p",
   "k.words/shards/pe"
  ],
@@ -43969,6 +44037,9 @@
  ],
  "personnel": [
   "k.words/shards/pe"
+ ],
+ "persons": [
+  "k.people/schema.sop"
  ],
  "perspective": [
   "k.words/shards/pe"
@@ -59770,6 +59841,7 @@
   "k.words/shards/ta"
  ],
  "tall": [
+  "k.people/schema.sop",
   "k.words/shards/ta"
  ],
  "tallied": [
@@ -61419,7 +61491,11 @@
   "k.words/shards/to"
  ],
  "toddler": [
+  "k.people/shards/kinds",
   "k.words/shards/to"
+ ],
+ "toddlers": [
+  "k.people/shards/kinds"
  ],
  "toe": [
   "k.body/shards/core",
@@ -66929,6 +67005,7 @@
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-clothing-05",
+  "k.people/shards/kinds",
   "k.words/shards/wo"
  ],
  "woman with curly hair": [
@@ -66956,6 +67033,9 @@
  ],
  "womb": [
   "k.words/shards/wo"
+ ],
+ "women": [
+  "k.people/shards/kinds"
  ],
  "won": [
   "k.words/shards/wi",
