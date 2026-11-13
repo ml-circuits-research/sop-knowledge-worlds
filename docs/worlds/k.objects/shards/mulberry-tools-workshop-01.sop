@@ -5,7 +5,7 @@
 
 # apron
 @k.objects.mb47 k.objects.object name=apron core.source="mulberry fa94a93"
-@k.objects.mb47.p1 k.objects.part of=apron name=part1 shape=polygon x=19.4 y=34.4 w=40 h=56.8 z=1 colour=red rgb="#F73900" core.source="mulberry fa94a93"
+@k.objects.mb47.p1 k.objects.part of=apron name=apron named=model shape=polygon x=19.4 y=34.4 w=40 h=56.8 z=1 colour=red rgb="#F73900" core.source="mulberry fa94a93"
 @k.objects.mb47.p1.1 k.objects.point part=$k.objects.mb47.p1 n=1 x=59.4 y=57.5 core.source="mulberry fa94a93"
 @k.objects.mb47.p1.2 k.objects.point part=$k.objects.mb47.p1 n=2 x=58 y=90.7 core.source="mulberry fa94a93"
 @k.objects.mb47.p1.3 k.objects.point part=$k.objects.mb47.p1 n=3 x=39.2 y=91.2 core.source="mulberry fa94a93"
@@ -162,7 +162,7 @@
 
 # bolt
 @k.objects.mb213 k.objects.object name=bolt core.source="mulberry fa94a93"
-@k.objects.mb213.p1 k.objects.part of=bolt name=part1 shape=polygon x=41.5 y=28.3 w=18.2 h=33.9 z=1 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
+@k.objects.mb213.p1 k.objects.part of=bolt name=shaft named=model shape=polygon x=41.5 y=28.3 w=18.2 h=33.9 z=1 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
 @k.objects.mb213.p1.1 k.objects.point part=$k.objects.mb213.p1 n=1 x=59.7 y=28.3 core.source="mulberry fa94a93"
 @k.objects.mb213.p1.2 k.objects.point part=$k.objects.mb213.p1 n=2 x=59.5 y=57 core.source="mulberry fa94a93"
 @k.objects.mb213.p1.3 k.objects.point part=$k.objects.mb213.p1 n=3 x=56.9 y=60.2 core.source="mulberry fa94a93"
@@ -566,7 +566,7 @@
 
 # chisel
 @k.objects.mb480 k.objects.object name=chisel core.source="mulberry fa94a93"
-@k.objects.mb480.p1 k.objects.part of=chisel name=part1 shape=polygon x=43.4 y=59.3 w=13.3 h=31.6 z=1 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
+@k.objects.mb480.p1 k.objects.part of=chisel name=handle named=model shape=polygon x=43.4 y=59.3 w=13.3 h=31.6 z=1 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
 @k.objects.mb480.p1.1 k.objects.point part=$k.objects.mb480.p1 n=1 x=44.8 y=86.7 core.source="mulberry fa94a93"
 @k.objects.mb480.p1.2 k.objects.point part=$k.objects.mb480.p1 n=2 x=43.6 y=78.8 core.source="mulberry fa94a93"
 @k.objects.mb480.p1.3 k.objects.point part=$k.objects.mb480.p1 n=3 x=43.4 y=72.5 core.source="mulberry fa94a93"
@@ -754,7 +754,7 @@
 @k.objects.mb881.p3.5 k.objects.point part=$k.objects.mb881.p3 n=5 x=38.9 y=77.6 core.source="mulberry fa94a93"
 @k.objects.mb881.p3.6 k.objects.point part=$k.objects.mb881.p3 n=6 x=37.9 y=77.4 core.source="mulberry fa94a93"
 @k.objects.mb881.p3.7 k.objects.point part=$k.objects.mb881.p3 n=7 x=38.4 y=67.9 core.source="mulberry fa94a93"
-@k.objects.mb881.p4 k.objects.part of="delivery trolley" name=part4 shape=polygon x=61.7 y=76.1 w=6.7 h=9.7 z=4 colour=green rgb="#34A047" core.source="mulberry fa94a93"
+@k.objects.mb881.p4 k.objects.part of="delivery trolley" name=wheel named=model shape=polygon x=61.7 y=76.1 w=6.7 h=9.7 z=4 colour=green rgb="#34A047" core.source="mulberry fa94a93"
 @k.objects.mb881.p4.1 k.objects.point part=$k.objects.mb881.p4 n=1 x=65.1 y=76.1 core.source="mulberry fa94a93"
 @k.objects.mb881.p4.2 k.objects.point part=$k.objects.mb881.p4 n=2 x=67.4 y=77.5 core.source="mulberry fa94a93"
 @k.objects.mb881.p4.3 k.objects.point part=$k.objects.mb881.p4 n=3 x=68.4 y=81 core.source="mulberry fa94a93"
@@ -969,7 +969,7 @@
 
 # drill electric
 @k.objects.mb958 k.objects.object name="drill electric" core.source="mulberry fa94a93"
-@k.objects.mb958.p1 k.objects.part of="drill electric" name=part1 shape=polygon x=47.7 y=22.7 w=41 h=43.3 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb958.p1 k.objects.part of="drill electric" name=body named=model shape=polygon x=47.7 y=22.7 w=41 h=43.3 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb958.p1.1 k.objects.point part=$k.objects.mb958.p1 n=1 x=86.9 y=65.3 core.source="mulberry fa94a93"
 @k.objects.mb958.p1.2 k.objects.point part=$k.objects.mb958.p1 n=2 x=81.7 y=66 core.source="mulberry fa94a93"
 @k.objects.mb958.p1.3 k.objects.point part=$k.objects.mb958.p1 n=3 x=76.4 y=65 core.source="mulberry fa94a93"

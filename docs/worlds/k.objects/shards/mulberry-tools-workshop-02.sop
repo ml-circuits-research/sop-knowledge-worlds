@@ -5,7 +5,7 @@
 
 # file
 @k.objects.mb1103 k.objects.object name=file core.source="mulberry fa94a93"
-@k.objects.mb1103.p1 k.objects.part of=file name=part1 shape=polygon x=43.4 y=58.4 w=13.4 h=31.9 z=1 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
+@k.objects.mb1103.p1 k.objects.part of=file name=handle named=model shape=polygon x=43.4 y=58.4 w=13.4 h=31.9 z=1 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
 @k.objects.mb1103.p1.1 k.objects.point part=$k.objects.mb1103.p1 n=1 x=44.8 y=86.1 core.source="mulberry fa94a93"
 @k.objects.mb1103.p1.2 k.objects.point part=$k.objects.mb1103.p1 n=2 x=43.6 y=78.1 core.source="mulberry fa94a93"
 @k.objects.mb1103.p1.3 k.objects.point part=$k.objects.mb1103.p1 n=3 x=43.4 y=71.7 core.source="mulberry fa94a93"
@@ -539,14 +539,14 @@
 
 # nail
 @k.objects.mb2008 k.objects.object name=nail core.source="mulberry fa94a93"
-@k.objects.mb2008.p1 k.objects.part of=nail name=part1 shape=polygon x=44.9 y=18.1 w=10.1 h=73.7 z=1 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
+@k.objects.mb2008.p1 k.objects.part of=nail name=shaft named=model shape=polygon x=44.9 y=18.1 w=10.1 h=73.7 z=1 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
 @k.objects.mb2008.p1.1 k.objects.point part=$k.objects.mb2008.p1 n=1 x=55 y=18.1 core.source="mulberry fa94a93"
 @k.objects.mb2008.p1.2 k.objects.point part=$k.objects.mb2008.p1 n=2 x=55 y=80.2 core.source="mulberry fa94a93"
 @k.objects.mb2008.p1.3 k.objects.point part=$k.objects.mb2008.p1 n=3 x=50.1 y=91.8 core.source="mulberry fa94a93"
 @k.objects.mb2008.p1.4 k.objects.point part=$k.objects.mb2008.p1 n=4 x=44.9 y=80.2 core.source="mulberry fa94a93"
 @k.objects.mb2008.p1.5 k.objects.point part=$k.objects.mb2008.p1 n=5 x=44.9 y=18.1 core.source="mulberry fa94a93"
 @k.objects.mb2008.p1.6 k.objects.point part=$k.objects.mb2008.p1 n=6 x=49.9 y=18.5 core.source="mulberry fa94a93"
-@k.objects.mb2008.p2 k.objects.part of=nail name=part2 shape=polygon x=39.5 y=8.3 w=20.7 h=10.2 z=2 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
+@k.objects.mb2008.p2 k.objects.part of=nail name=head named=model shape=polygon x=39.5 y=8.3 w=20.7 h=10.2 z=2 colour=white rgb="#C8C8C8" core.source="mulberry fa94a93"
 @k.objects.mb2008.p2.1 k.objects.point part=$k.objects.mb2008.p2 n=1 x=49.9 y=8.3 core.source="mulberry fa94a93"
 @k.objects.mb2008.p2.2 k.objects.point part=$k.objects.mb2008.p2 n=2 x=54.7 y=8.9 core.source="mulberry fa94a93"
 @k.objects.mb2008.p2.3 k.objects.point part=$k.objects.mb2008.p2 n=3 x=58.3 y=10.4 core.source="mulberry fa94a93"
@@ -586,7 +586,7 @@
 
 # paint
 @k.objects.mb2117 k.objects.object name=paint core.source="mulberry fa94a93"
-@k.objects.mb2117.p1 k.objects.part of=paint name=part1 shape=polygon x=23.9 y=35.5 w=52.8 h=56.7 z=1 colour=purple rgb="#A800D4" core.source="mulberry fa94a93"
+@k.objects.mb2117.p1 k.objects.part of=paint name=tin named=model shape=polygon x=23.9 y=35.5 w=52.8 h=56.7 z=1 colour=purple rgb="#A800D4" core.source="mulberry fa94a93"
 @k.objects.mb2117.p1.1 k.objects.point part=$k.objects.mb2117.p1 n=1 x=23.9 y=40.3 core.source="mulberry fa94a93"
 @k.objects.mb2117.p1.2 k.objects.point part=$k.objects.mb2117.p1 n=2 x=23.9 y=35.5 core.source="mulberry fa94a93"
 @k.objects.mb2117.p1.3 k.objects.point part=$k.objects.mb2117.p1 n=3 x=24.3 y=36.7 core.source="mulberry fa94a93"
@@ -633,7 +633,7 @@
 @k.objects.mb2117.p2.19 k.objects.point part=$k.objects.mb2117.p2 n=19 x=34.7 y=28.9 core.source="mulberry fa94a93"
 @k.objects.mb2117.p2.20 k.objects.point part=$k.objects.mb2117.p2 n=20 x=42 y=27.8 core.source="mulberry fa94a93"
 @k.objects.mb2117.p2.21 k.objects.point part=$k.objects.mb2117.p2 n=21 x=50.3 y=27.4 core.source="mulberry fa94a93"
-@k.objects.mb2117.p3 k.objects.part of=paint name=part3 shape=polygon x=28 y=30.1 w=44.4 h=9.6 z=3 colour=purple rgb="#A800D4" core.source="mulberry fa94a93"
+@k.objects.mb2117.p3 k.objects.part of=paint name=paint named=model shape=polygon x=28 y=30.1 w=44.4 h=9.6 z=3 colour=purple rgb="#A800D4" core.source="mulberry fa94a93"
 @k.objects.mb2117.p3.1 k.objects.point part=$k.objects.mb2117.p3 n=1 x=50.2 y=30.1 core.source="mulberry fa94a93"
 @k.objects.mb2117.p3.2 k.objects.point part=$k.objects.mb2117.p3 n=2 x=57.2 y=30.4 core.source="mulberry fa94a93"
 @k.objects.mb2117.p3.3 k.objects.point part=$k.objects.mb2117.p3 n=3 x=65.9 y=31.5 core.source="mulberry fa94a93"
@@ -751,7 +751,7 @@
 @k.objects.mb2264.p3.2 k.objects.point part=$k.objects.mb2264.p3 n=2 x=56 y=42.6 core.source="mulberry fa94a93"
 @k.objects.mb2264.p3.3 k.objects.point part=$k.objects.mb2264.p3 n=3 x=56 y=48.1 core.source="mulberry fa94a93"
 @k.objects.mb2264.p3.4 k.objects.point part=$k.objects.mb2264.p3 n=4 x=51.6 y=48.1 core.source="mulberry fa94a93"
-@k.objects.mb2264.p4 k.objects.part of=pliers name=part4 shape=polygon x=51.1 y=49.7 w=16.1 h=43 z=4 colour=red rgb="#F73900" core.source="mulberry fa94a93"
+@k.objects.mb2264.p4 k.objects.part of=pliers name=right_handle kind=handle named=model shape=polygon x=51.1 y=49.7 w=16.1 h=43 z=4 colour=red rgb="#F73900" core.source="mulberry fa94a93"
 @k.objects.mb2264.p4.1 k.objects.point part=$k.objects.mb2264.p4 n=1 x=64.7 y=66.5 core.source="mulberry fa94a93"
 @k.objects.mb2264.p4.2 k.objects.point part=$k.objects.mb2264.p4 n=2 x=66.6 y=72.5 core.source="mulberry fa94a93"
 @k.objects.mb2264.p4.3 k.objects.point part=$k.objects.mb2264.p4 n=3 x=67.2 y=76.8 core.source="mulberry fa94a93"
@@ -777,7 +777,7 @@
 @k.objects.mb2264.p5.9 k.objects.point part=$k.objects.mb2264.p5 n=9 x=41.4 y=37.4 core.source="mulberry fa94a93"
 @k.objects.mb2264.p5.10 k.objects.point part=$k.objects.mb2264.p5 n=10 x=48.5 y=7 core.source="mulberry fa94a93"
 @k.objects.mb2264.p5.11 k.objects.point part=$k.objects.mb2264.p5 n=11 x=49.4 y=7 core.source="mulberry fa94a93"
-@k.objects.mb2264.p6 k.objects.part of=pliers name=part6 shape=polygon x=31.5 y=49.7 w=16.3 h=43.1 z=6 colour=red rgb="#F73900" core.source="mulberry fa94a93"
+@k.objects.mb2264.p6 k.objects.part of=pliers name=left_handle kind=handle named=model shape=polygon x=31.5 y=49.7 w=16.3 h=43.1 z=6 colour=red rgb="#F73900" core.source="mulberry fa94a93"
 @k.objects.mb2264.p6.1 k.objects.point part=$k.objects.mb2264.p6 n=1 x=42.1 y=49.7 core.source="mulberry fa94a93"
 @k.objects.mb2264.p6.2 k.objects.point part=$k.objects.mb2264.p6 n=2 x=47.8 y=49.7 core.source="mulberry fa94a93"
 @k.objects.mb2264.p6.3 k.objects.point part=$k.objects.mb2264.p6 n=3 x=39.8 y=66.6 core.source="mulberry fa94a93"

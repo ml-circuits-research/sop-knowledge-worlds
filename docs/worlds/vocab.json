@@ -2907,6 +2907,7 @@
   "k.objects/shards/mulberry-building-contents-01",
   "k.objects/shards/mulberry-clothes-accessories-01",
   "k.objects/shards/mulberry-holiday-and-travel-01",
+  "k.objects/shards/mulberry-science-01",
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-hotel-01",
@@ -3084,6 +3085,9 @@
   "k.objects/shards/mulberry-celebration-item-01",
   "k.objects/shards/mulberry-leisure-toys-01",
   "k.objects/shards/mulberry-leisure-toys-04",
+  "k.objects/shards/mulberry-sport-accessories-01",
+  "k.objects/shards/mulberry-sport-accessories-02",
+  "k.objects/shards/mulberry-sport-accessories-03",
   "k.objects/shards/noto-arts-crafts-01",
   "k.objects/shards/noto-event-01",
   "k.objects/shards/noto-food-asian-01",
@@ -3224,14 +3228,17 @@
   "k.objects/shards/openmoji-healthcare-01"
  ],
  "band1": [
+  "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-sky-weather-04",
   "k.objects/shards/noto-writing-01"
  ],
  "band2": [
+  "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-sky-weather-04",
   "k.objects/shards/noto-writing-01"
  ],
  "band3": [
+  "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-sky-weather-04"
  ],
  "band4": [
@@ -3570,6 +3577,7 @@
   "k.objects/shards/mulberry-holiday-and-travel-01",
   "k.objects/shards/mulberry-leisure-toys-02",
   "k.objects/shards/mulberry-leisure-toys-03",
+  "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-drink-01",
@@ -3669,6 +3677,7 @@
   "k.words/shards/ba"
  ],
  "bat": [
+  "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-sport-02",
   "k.words/shards/ba"
@@ -4856,6 +4865,7 @@
   "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/mulberry-food-kitchen-items-06",
   "k.objects/shards/mulberry-food-meals-and-snacks-04",
+  "k.objects/shards/mulberry-tools-workshop-03",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-sport-03",
   "k.objects/shards/noto-tool-01",
@@ -5270,6 +5280,7 @@
   "k.objects/shards/mulberry-leisure-toys-02",
   "k.objects/shards/mulberry-leisure-toys-03",
   "k.objects/shards/mulberry-music-instrument-01",
+  "k.objects/shards/mulberry-tools-workshop-01",
   "k.objects/shards/nature",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
@@ -5876,16 +5887,7 @@
  "bowling ball": [
   "k.objects/shards/mulberry-sport-accessories-02"
  ],
- "bowling gutter": [
-  "k.objects/shards/mulberry-sport-accessories-02"
- ],
  "bowling pins": [
-  "k.objects/shards/mulberry-sport-accessories-02"
- ],
- "bowling spare": [
-  "k.objects/shards/mulberry-sport-accessories-02"
- ],
- "bowling strike": [
   "k.objects/shards/mulberry-sport-accessories-02"
  ],
  "bowls": [
@@ -7542,6 +7544,7 @@
   "k.objects/shards/mulberry-healthcare-grooming-items-02",
   "k.objects/shards/mulberry-healthcare-grooming-items-03",
   "k.objects/shards/mulberry-healthcare-grooming-items-06",
+  "k.objects/shards/mulberry-tools-garden-02",
   "k.objects/shards/noto-food-prepared-05",
   "k.objects/shards/noto-office-03",
   "k.words/shards/ca"
@@ -8071,6 +8074,7 @@
  ],
  "case": [
   "k.objects/shards/mulberry-food-breads-and-baking-05",
+  "k.objects/shards/mulberry-tools-workshop-03",
   "k.objects/shards/noto-office-01",
   "k.words/shards/ca"
  ],
@@ -8477,6 +8481,7 @@
   "k.objects/shards/mulberry-celebration-item-02",
   "k.objects/shards/mulberry-electrical-general-01",
   "k.objects/shards/mulberry-plants-and-trees-01",
+  "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/nature",
   "k.objects/shards/noto-place-map-01",
   "k.objects/shards/noto-plant-flower-01",
@@ -9910,9 +9915,6 @@
  ],
  "climbing": [
   "k.words/shards/cl"
- ],
- "climbing rock": [
-  "k.objects/shards/mulberry-sport-accessories-02"
  ],
  "climbing wall": [
   "k.objects/shards/mulberry-sport-accessories-02"
@@ -15186,6 +15188,7 @@
   "k.words/shards/do"
  ],
  "dough": [
+  "k.objects/shards/mulberry-science-01",
   "k.words/shards/do"
  ],
  "doughnut": [
@@ -15889,9 +15892,6 @@
  "earthquake": [
   "k.objects/shards/noto-place-geographic-01",
   "k.words/shards/ea"
- ],
- "earths atmosphere": [
-  "k.objects/shards/mulberry-science-astronomy-01"
  ],
  "earthworm": [
   "k.objects/shards/mulberry-animal-other-invertebrates-01",
@@ -17456,6 +17456,7 @@
   "k.objects/shards/mulberry-healthcare-grooming-items-06",
   "k.objects/shards/mulberry-healthcare-grooming-items-07",
   "k.objects/shards/mulberry-leisure-toys-04",
+  "k.objects/shards/mulberry-tools-garden-01",
   "k.objects/shards/noto-animal-amphibian-01",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
@@ -18415,9 +18416,6 @@
  "first aid kit": [
   "k.objects/shards/openmoji-objects-01"
  ],
- "first base": [
-  "k.objects/shards/mulberry-sport-accessories-03"
- ],
  "first quarter moon": [
   "k.objects/shards/noto-sky-weather-01"
  ],
@@ -18591,6 +18589,7 @@
  "flame": [
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.objects/shards/mulberry-building-structure-01",
+  "k.objects/shards/mulberry-sport-accessories-03",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-household-03",
   "k.objects/shards/noto-light-video-02",
@@ -19112,7 +19111,7 @@
   "k.words/shards/fo"
  ],
  "football": [
-  "k.objects/shards/mulberry-sport-accessories-03",
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-sport-01",
   "k.words/shards/fo"
  ],
@@ -20295,8 +20294,8 @@
   "k.objects/shards/mulberry-clothes-sport-06",
   "k.objects/shards/mulberry-leisure-games-02",
   "k.objects/shards/mulberry-sport-accessories-01",
-  "k.objects/shards/mulberry-sport-accessories-03",
-  "k.objects/shards/mulberry-sport-accessories-04"
+  "k.objects/shards/mulberry-sport-accessories-02",
+  "k.objects/shards/mulberry-sport-accessories-03"
  ],
  "gaming": [
   "k.words/shards/ga"
@@ -20963,6 +20962,7 @@
   "k.words/shards/gl"
  ],
  "glove": [
+  "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/noto-sport-01",
   "k.objects/shards/noto-sport-03",
   "k.words/shards/gl"
@@ -21006,7 +21006,7 @@
   "k.words/shards/go"
  ],
  "goal": [
-  "k.objects/shards/mulberry-sport-accessories-03",
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-sport-02",
   "k.objects/shards/noto-sport-03",
   "k.words/shards/go"
@@ -21100,7 +21100,7 @@
   "k.words/shards/go"
  ],
  "golf club": [
-  "k.objects/shards/mulberry-sport-accessories-03"
+  "k.objects/shards/mulberry-sport-accessories-02"
  ],
  "goliath": [
   "k.words/shards/go"
@@ -22417,6 +22417,11 @@
   "k.objects/shards/mulberry-food-meals-and-snacks-04",
   "k.objects/shards/mulberry-healthcare-grooming-items-03",
   "k.objects/shards/mulberry-healthcare-medical-items-01",
+  "k.objects/shards/mulberry-sport-accessories-01",
+  "k.objects/shards/mulberry-tools-garden-01",
+  "k.objects/shards/mulberry-tools-garden-02",
+  "k.objects/shards/mulberry-tools-workshop-01",
+  "k.objects/shards/mulberry-tools-workshop-02",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
@@ -22813,6 +22818,9 @@
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-healthcare-medical-items-02",
   "k.objects/shards/mulberry-leisure-toys-02",
+  "k.objects/shards/mulberry-sport-accessories-02",
+  "k.objects/shards/mulberry-tools-workshop-02",
+  "k.objects/shards/mulberry-tools-workshop-03",
   "k.objects/shards/noto-animal-amphibian-01",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
@@ -23596,12 +23604,15 @@
   "k.objects/shards/mulberry-work-and-school-stationery-02"
  ],
  "hole1": [
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-food-prepared-02"
  ],
  "hole2": [
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-food-prepared-02"
  ],
  "hole3": [
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-food-prepared-02"
  ],
  "hole4": [
@@ -24505,6 +24516,10 @@
  "ice skate": [
   "k.objects/shards/noto-sport-03"
  ],
+ "ice_cap": [
+  "k.objects/shards/mulberry-science-astronomy-01",
+  "k.objects/shards/mulberry-science-astronomy-02"
+ ],
  "iceberg": [
   "k.objects/shards/noto-drink-03",
   "k.words/shards/ic"
@@ -25155,6 +25170,8 @@
   "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/mulberry-food-kitchen-items-05",
   "k.objects/shards/mulberry-food-kitchen-items-08",
+  "k.objects/shards/mulberry-tools-garden-01",
+  "k.objects/shards/mulberry-tools-workshop-03",
   "k.objects/shards/noto-food-asian-01",
   "k.words/shards/in"
  ],
@@ -27983,6 +28000,7 @@
   "k.words/shards/la"
  ],
  "land": [
+  "k.objects/shards/mulberry-science-astronomy-02",
   "k.words/shards/la"
  ],
  "land1": [
@@ -28639,9 +28657,13 @@
  "left_grass": [
   "k.objects/shards/mulberry-plants-and-trees-04"
  ],
+ "left_half": [
+  "k.objects/shards/mulberry-sport-accessories-02"
+ ],
  "left_handle": [
   "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-09",
+  "k.objects/shards/mulberry-tools-workshop-02",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-household-02",
@@ -28778,6 +28800,7 @@
  ],
  "left_ribbon": [
   "k.objects/shards/mulberry-clothes-accessories-01",
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-award-medal-01"
  ],
  "left_roof": [
@@ -31394,6 +31417,7 @@
  "mat": [
   "k.objects/shards/mulberry-building-contents-01",
   "k.objects/shards/mulberry-food-kitchen-items-06",
+  "k.objects/shards/mulberry-sport-accessories-03",
   "k.words/shards/ma"
  ],
  "matagalpa": [
@@ -31741,7 +31765,7 @@
   "k.words/shards/me"
  ],
  "medal": [
-  "k.objects/shards/mulberry-sport-accessories-03",
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-award-medal-01",
   "k.words/shards/me"
  ],
@@ -39280,6 +39304,7 @@
  ],
  "planet": [
   "k.objects/shards/more",
+  "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.words/shards/pl"
  ],
@@ -40098,7 +40123,6 @@
   "k.words/shards/po"
  ],
  "pottery": [
-  "k.objects/shards/mulberry-science-01",
   "k.words/shards/po"
  ],
  "potting": [
@@ -43580,9 +43604,13 @@
  "right_grass": [
   "k.objects/shards/mulberry-plants-and-trees-04"
  ],
+ "right_half": [
+  "k.objects/shards/mulberry-sport-accessories-02"
+ ],
  "right_handle": [
   "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-09",
+  "k.objects/shards/mulberry-tools-workshop-02",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-household-02",
@@ -43717,6 +43745,7 @@
  ],
  "right_ribbon": [
   "k.objects/shards/mulberry-clothes-accessories-01",
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-award-medal-01"
  ],
  "right_roof": [
@@ -46583,6 +46612,8 @@
   "k.words/shards/sh"
  ],
  "shaft": [
+  "k.objects/shards/mulberry-tools-workshop-01",
+  "k.objects/shards/mulberry-tools-workshop-02",
   "k.objects/shards/noto-tool-02",
   "k.words/shards/sh"
  ],
@@ -47248,7 +47279,7 @@
   "k.words/shards/sh"
  ],
  "shuttlecock": [
-  "k.objects/shards/mulberry-sport-accessories-04",
+  "k.objects/shards/mulberry-sport-accessories-03",
   "k.objects/shards/noto-sport-02"
  ],
  "shy": [
@@ -47433,7 +47464,6 @@
   "k.geo/shards/asia"
  ],
  "silence": [
-  "k.objects/shards/mulberry-science-02",
   "k.words/shards/si"
  ],
  "silent": [
@@ -48161,7 +48191,6 @@
   "k.words/shards/sm"
  ],
  "smooth": [
-  "k.objects/shards/mulberry-science-02",
   "k.words/shards/sm"
  ],
  "smoothie": [
@@ -49227,7 +49256,6 @@
   "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/mulberry-sport-accessories-03",
-  "k.objects/shards/mulberry-sport-accessories-04",
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-sport-01",
   "k.objects/shards/noto-sport-02",
@@ -49310,6 +49338,7 @@
   "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.objects/shards/mulberry-healthcare-grooming-items-07",
   "k.objects/shards/mulberry-science-01",
+  "k.objects/shards/mulberry-tools-garden-02",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-drink-01"
  ],
@@ -49681,6 +49710,7 @@
   "k.objects/shards/home",
   "k.objects/shards/mulberry-building-furniture-04",
   "k.objects/shards/mulberry-electrical-computer-01",
+  "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/noto-computer-01",
   "k.words/shards/st"
  ],
@@ -50141,7 +50171,7 @@
   "k.words/shards/st"
  ],
  "stirrups": [
-  "k.objects/shards/mulberry-sport-accessories-04"
+  "k.objects/shards/mulberry-sport-accessories-03"
  ],
  "stitch": [
   "k.words/shards/st"
@@ -53109,6 +53139,7 @@
   "k.objects/shards/mulberry-food-meals-and-snacks-08",
   "k.objects/shards/mulberry-food-vegetables-and-salads-01",
   "k.objects/shards/mulberry-food-vegetables-and-salads-05",
+  "k.objects/shards/mulberry-tools-workshop-02",
   "k.words/shards/ti"
  ],
  "tin can": [
@@ -53166,6 +53197,7 @@
   "k.words/shards/ti"
  ],
  "tip": [
+  "k.objects/shards/mulberry-sport-accessories-03",
   "k.objects/shards/noto-food-vegetable-02",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-tool-02",
@@ -53633,6 +53665,7 @@
  ],
  "torch": [
   "k.objects/shards/mulberry-electrical-general-02",
+  "k.objects/shards/mulberry-sport-accessories-03",
   "k.objects/shards/noto-light-video-02",
   "k.words/shards/to"
  ],
@@ -53955,7 +53988,7 @@
   "k.words/shards/tr"
  ],
  "trampoline": [
-  "k.objects/shards/mulberry-sport-accessories-04"
+  "k.objects/shards/mulberry-sport-accessories-03"
  ],
  "tramway": [
   "k.objects/shards/noto-transport-air-02"
@@ -54035,7 +54068,6 @@
   "k.words/shards/tr"
  ],
  "transparent": [
-  "k.objects/shards/mulberry-science-02",
   "k.objects/shards/noto-household-01"
  ],
  "transplant": [
@@ -54124,6 +54156,7 @@
   "k.objects/shards/mulberry-building-furniture-03",
   "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-09",
+  "k.objects/shards/mulberry-tools-garden-02",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/tr"
  ],
@@ -54293,7 +54326,7 @@
   "k.words/shards/tr"
  ],
  "tripod": [
-  "k.objects/shards/mulberry-science-02"
+  "k.objects/shards/mulberry-science-01"
  ],
  "tripoli": [
   "k.geo/shards/africa"
@@ -54407,6 +54440,7 @@
  "trousers": [
   "k.objects/shards/mulberry-clothes-general-05",
   "k.objects/shards/mulberry-clothes-general-06",
+  "k.objects/shards/mulberry-tools-garden-01",
   "k.objects/shards/noto-clothing-01",
   "k.words/shards/tr"
  ],
@@ -54513,6 +54547,7 @@
  "tub": [
   "k.objects/shards/mulberry-food-dairy-01",
   "k.objects/shards/mulberry-food-dairy-02",
+  "k.objects/shards/mulberry-science-01",
   "k.words/shards/tu"
  ],
  "tube": [
@@ -55411,7 +55446,7 @@
   "k.words/shards/ur"
  ],
  "uranus": [
-  "k.objects/shards/mulberry-science-astronomy-02"
+  "k.objects/shards/mulberry-science-astronomy-01"
  ],
  "urge": [
   "k.words/shards/ur"
@@ -56701,6 +56736,7 @@
  "wall": [
   "k.objects/shards/buildings",
   "k.objects/shards/mulberry-building-residential-01",
+  "k.objects/shards/mulberry-sport-accessories-02",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/openmoji-travel-places-01",
   "k.objects/shards/structures",
@@ -57001,9 +57037,6 @@
  "watermelon": [
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/wa"
- ],
- "waterproof": [
-  "k.objects/shards/mulberry-science-02"
  ],
  "waters": [
   "k.words/shards/wa"
@@ -57349,6 +57382,8 @@
  ],
  "wheel": [
   "k.objects/shards/mulberry-building-contents-05",
+  "k.objects/shards/mulberry-tools-garden-02",
+  "k.objects/shards/mulberry-tools-workshop-01",
   "k.objects/shards/noto-computer-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-transport-ground-01",
