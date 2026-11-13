@@ -8,3 +8,17 @@
 {"id":"ac-08","ask":"which words mark what a thing is removed from","query":{"type":"k.actions.role","where":{"act":"remove","name":"source"},"seek":"marker","mode":"list"},"expect":{"status":"supported","values":["from","\"out of\"","off"]}}
 {"id":"ac-09","ask":"in put the hat on the man, what is the man","query":{"type":"k.actions.verb","where":{"text":"\"put on\"","act":"place"},"seek":"after_particle"},"expect":{"status":"supported","value":"place"}}
 {"id":"ac-10","ask":"what does WordNet say rotate means here","query":{"type":"k.actions.verb","where":{"text":"rotate"},"seek":"gloss"},"expect":{"status":"supported","value":"\"cause to turn on an axis or center\""}}
+{"id":"ac-11","ask":"what do you cut with","query":{"type":"k.actions.action","where":{"name":"cut"},"seek":"tool","mode":"list"},"expect":{"status":"supported","values":["\"kitchen knife\"","scissors","saw"]}}
+{"id":"ac-12","ask":"who can fly","query":{"type":"k.actions.action","where":{"name":"fly"},"seek":"who","mode":"list"},"expect":{"status":"supported","values":["bird","insect","plane","kite","balloon"]}}
+{"id":"ac-13","ask":"what is the opposite of push","query":{"type":"k.actions.action","where":{"name":"push"},"seek":"opposite"},"expect":{"status":"supported","value":"pull"}}
+{"id":"ac-14","ask":"what undoes tying","query":{"type":"k.actions.action","where":{"name":"tie"},"seek":"undone_by"},"expect":{"status":"supported","value":"untie"}}
+{"id":"ac-15","ask":"what comes of melting","query":{"type":"k.actions.action","where":{"name":"melt"},"seek":"result"},"expect":{"status":"supported","value":"\"a liquid\""}}
+{"id":"ac-16","ask":"what is done with a broom","query":{"type":"k.actions.action","where":{"tool":"broom"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["clean","sweep"]}}
+{"id":"ac-17","ask":"what does one do in a library","query":{"type":"k.actions.action","where":{"where":"library"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["learn","read","choose","whisper"]}}
+{"id":"ac-18","ask":"which action is stroll close to","query":{"type":"k.actions.similar","where":{"name":"stroll"},"seek":"action"},"expect":{"status":"supported","value":"walk"}}
+{"id":"ac-19","ask":"which actions is grab close to","query":{"type":"k.actions.similar","where":{"name":"grab"},"seek":"action","mode":"list"},"expect":{"status":"supported","values":["catch","take"]}}
+{"id":"ac-20","ask":"what can be opened","query":{"type":"k.actions.action","where":{"name":"open"},"seek":"object","mode":"list"},"expect":{"status":"supported","values":["door","window","box","book","bottle","umbrella"]}}
+{"id":"ac-21","ask":"what kind of action is whisper","query":{"type":"k.actions.action","where":{"name":"whisper"},"seek":"group"},"expect":{"status":"supported","value":"talk"}}
+{"id":"ac-22","ask":"what undoes putting on","query":{"type":"k.actions.action","where":{"name":"\"put on\""},"seek":"undone_by"},"expect":{"status":"supported","value":"\"take off\""}}
+{"id":"ac-23","ask":"what does the wind do","query":{"type":"k.actions.action","where":{"who":"wind"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["blow","shake","\"knock down\"","break","bend","dry","uncover"]}}
+{"id":"ac-24","ask":"give an example of digging","query":{"type":"k.actions.action","where":{"name":"dig"},"seek":"example"},"expect":{"status":"supported","value":"\"A dog digs a hole in the garden.\""}}

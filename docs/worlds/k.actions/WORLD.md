@@ -41,7 +41,8 @@ filled in) and `sources/wordnet/act-verb-glosses.tsv`.
   is about cheerfulness), `cancel` and `reset` as undo, `order` as putting in an order, `print`, `redo`.
 - Only the listed senses of a verb mean the act: `draw` is sense 6 (represent by a drawing), not "pull".
 - Requests that are not verbs ("I want a tree", "how many …", "bigger!") are not here.
-- This world is not the 150 common verbs of everyday life (who cuts what with what): those are a separate task.
+- The everyday actions below (who cuts what with what) are separate facts: `k.actions.action` does not say which
+  act a verb means, and `k.actions.verb` does not say who does it.
 
 ## Joins
 
@@ -52,3 +53,44 @@ the sense (its three most frequent senses of a word); a test compares the glosse
 
 See `tests/k.actions.questions.jsonl`: which act erase means, the two acts of "put on", what enlarge changes and
 which way, what "with" marks after replace, the roles of remove and the words that mark its source.
+
+## Everyday actions (Round 7, R7.2)
+
+187 common actions, named by their verb: who or what does it, to what, with what, where, what comes of it, the
+opposite action, the action that undoes it, and an example sentence. Hand-written (`hand-core 1`, CC0-1.0). For
+talk about what things do, and for giving a verb in a sentence its usual roles.
+
+### What it knows
+
+- `k.actions.action` (identity `name`, the base form of the verb; phrases too: `"pick up"`, `"put on"`, `"take off"`,
+  `"put out"`, `"knock down"`): `group` (move 30, hands 29, make 15, change 30, sense 7, mind 16, talk 14, body 15,
+  social 19, nature 12); `who` (many: person, animal, bird, wind, sun); `object` (many: what it is done to; left out
+  for walk, sleep, rain); `tool` (many: a thing or a part of the body: `"kitchen knife"`, scissors, hand, tooth);
+  `where` (many: a `k.scenes` scene); `result` (a short phrase: melt gives `"a liquid"`); `opposite` (82 actions;
+  always said from both sides: push and pull, float and sink, buy and sell); `undone_by` (53 actions: tie and
+  untie, fold and unfold, melt and freeze, break is undone by mend); `example` (one sentence that uses the verb).
+- `core.word` facts: the other forms of every verb (cuts, cut, cutting; flies, flew, flying), worked out by rule
+  with the irregular forms given by hand; all read.
+- `k.actions.similar` (identity `name`, `action`): 442 verbs and phrases that mean nearly the same as an action or
+  are a kind of it (stroll is close to walk, `"rub out"` to erase, repair to mend, grab to catch and to take). They
+  are not `core.word` facts, because they are not the same action.
+
+### Shards
+
+`actions-move` (30 actions), `actions-hands` (29), `actions-make-change` (45), `actions-mind-talk` (37),
+`actions-body-social-nature` (46); 816 wires, written by `tools/actions-core.mjs` from `tools/actions-data.mjs`.
+
+### Joins
+
+By name, with no import: every `where` is a `k.scenes` scene; 243 of the 268 tools are a `k.objects` drawing, a
+stand-in or a `k.body` part (not: glass, toy, voice, net, sewing machine, paw, match, mud, vacuum cleaner, lid,
+magnifying glass, binoculars, ruler, skipping rope, traffic light: the drawings of some of these have longer
+names); 308 of the 542 things an action is done to have a drawing. Every verb that `k.commonsense` and `k.animals`
+use in `can` and `cannot` (swim, fly, run, climb, jump, dig, talk, sing, sail, rain, glow, float, drive, bark) is an
+action here.
+
+### Questions it answers
+
+"What do you cut with?", "Who can fly?", "What is the opposite of push?", "What undoes tying?", "What comes of
+melting?", "What is done with a broom?", "What does one do in a library?", "Which action is stroll close to?",
+"What does the wind do?" (`tests/k.actions.questions.jsonl`).

@@ -1709,3 +1709,37 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Numbers: k.actions 15 shards, 440 wires, 84,753 bytes. Catalog 16 worlds, 797 shards, vocab 19,769 words (before:
   15 worlds, 782 shards, 19,600 words at b705b3c; the first worker's hats are in between); 0 errors, 0 warnings.
   npm test 2,459 pass, 5 skipped, 0 fail.
+
+## R7.2 (2026-11-13): `k.actions`, 187 common verbs
+
+- **Two types added to `k.actions`** (now version 2, exports `act`, `role`, `verb`, `marking`, `action`, `similar`).
+  The second worker published `k.actions` for the acts of Round 8 while I wrote this as a world of its own; on
+  the rebase I merged the two as that worker's log entry asks: one module, their types and shards untouched, mine
+  beside them (shards `actions-*`, questions ac-11 to ac-24, `tests/k.actions.test.mjs`). `k.actions.action`: the verb, `group` (move,
+  hands, make, change, sense, mind, talk, body, social, nature), `who` (many), `object` (to what; many), `tool`
+  (many), `where` (k.scenes scenes; many), `result`, `opposite`, `undone_by`, `example`. 187 actions (150 asked
+  for), 5 of them phrases (pick up, put on, take off, put out, knock down). 82 have an opposite, 53 an action that
+  undoes them. Five shards by group (117, 125, 197, 165, 212 wires; 124,219 bytes), written by
+  `tools/actions-core.mjs` from `tools/actions-data.mjs`.
+- **Words:** the other forms of each verb (third person, past, -ing) are `core.word` facts, by rule with 174
+  forms of 118 verbs given by hand (irregular, doubled, or of a phrase). **All 187 lines of forms were read** (`--forms`): none wrong.
+- **Near-synonyms are not words:** 442 `k.actions.similar` facts (stroll → walk, rub out → erase, grab → catch and
+  take), the same choice as `k.objects.stand_in` (answer to Q21): a host that reads "stroll" as "walk" knows it has
+  widened the word. A verb that is an action itself is not listed as similar to another.
+- **Links to `k.commonsense`:** every verb used in `can` / `cannot` by `k.commonsense` and `k.animals` (14 verbs) is
+  an action; a test holds it. Nothing was imported: ConceptNet is still not reachable.
+- **Joins measured:** every `where` is a scene (a test); 243 of 268 tools are a drawing, a stand-in or a `k.body`
+  part; 308 of 542 things done-to have a drawing.
+- **Checked by test:** an opposite is said from both sides (the first table had 9 one-sided ones: run/walk,
+  wash/dirty, win/lose …; removed); `undone_by` and `opposite` name other actions; the example sentence uses the
+  verb.
+- **Not looked at / not checked:** nothing here is drawn. The facts were written by a language model and read
+  once in the table; the `who`, `object` and `result` values are short common-sense phrases with no second source.
+- **Next to the acts:** `k.actions.verb` (second worker) says which act a verb means and how its roles are marked;
+  `k.actions.action` says what people, animals and things do with a verb. 47 verbs are in both (cut, draw, erase,
+  join …); nothing joins the two types yet but the verb's text.
+- **Judgement that is mine:** which 187 verbs and everything said about them; "undone by" is said only where one
+  plain action puts things back (break → mend, hide → show), not for cut, burn or eat.
+- **What SOP Lang could not say:** that the opposite of an opposite is the action itself (a rule over two facts
+  with the values crossed): a test.
+- Numbers: k.actions 20 shards (5 of them `actions-*`: 816 wires, 124,219 bytes). Catalog 16 worlds, 802 shards, vocab 20,228 words; 0 errors, 0 warnings. npm test 2,482 pass, 0 fail.
