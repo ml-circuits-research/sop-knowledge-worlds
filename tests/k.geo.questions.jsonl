@@ -4,11 +4,13 @@
 {"id":"geo-04","ask":"which country has the capital Nairobi","query":{"type":"k.geo.country","where":{"capital":"Nairobi"},"seek":"name"},"expect":{"status":"supported","value":"Kenya"}}
 {"id":"geo-05","ask":"how many countries and territories are in South America","query":{"type":"k.geo.country","where":{"continent":"\"South America\""},"mode":"count"},"expect":{"status":"supported","value":"13"}}
 {"id":"geo-06","ask":"how high is Mount Everest","query":{"type":"k.geo.mountain","where":{"name":"\"Mount Everest\""},"seek":"elevation"},"expect":{"status":"supported","value":"8848"}}
-{"id":"geo-07","ask":"through which countries does the Danube flow","query":{"type":"k.geo.river","where":{"name":"Danube"},"seek":"country"},"expect":{"status":"supported","values":["Austria","Bulgaria","Croatia","Germany","Hungary","\"Republic of Serbia\"","Romania","Slovakia","Ukraine"]}}
+{"id":"geo-07","ask":"through which countries does the Danube flow","query":{"type":"k.geo.river","where":{"name":"Danube"},"seek":"country"},"expect":{"status":"supported","values":["Austria","Bulgaria","Croatia","Germany","Hungary","Romania","Serbia","Slovakia","Ukraine"]}}
 {"id":"geo-08","ask":"how many people live in Brazil","query":{"type":"k.geo.country","where":{"name":"Brazil"},"seek":"population"},"expect":{"status":"supported","value":"211049527"}}
 {"id":"geo-09","ask":"is Switzerland landlocked","query":{"type":"k.geo.country","where":{"name":"Switzerland"},"seek":"landlocked"},"expect":{"status":"supported","value":"true"}}
 {"id":"geo-10","ask":"what are the largest cities of Italy","query":{"type":"k.geo.city","where":{"country":"Italy"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Florence","Milan","Naples","Rome","Turin"]}}
 {"id":"geo-11","ask":"how large is Australia","query":{"type":"k.geo.country","where":{"name":"Australia"},"seek":"area"},"expect":{"status":"supported","value":"7692024"}}
 {"id":"geo-12","ask":"where are the Alps","query":{"type":"k.geo.range","where":{"name":"Alps"},"seek":"continent"},"expect":{"status":"supported","value":"Europe"}}
 {"id":"geo-13","ask":"what is Canberra the capital of","query":{"type":"k.geo.city","where":{"name":"Canberra"},"seek":"capital_of"},"expect":{"status":"supported","value":"Australia"}}
+{"id":"geo-15","ask":"what is the capital of the United States","query":{"type":"k.geo.country","where":{"name":"\"United States\""},"seek":"capital"},"expect":{"status":"supported","value":"\"Washington, D.C.\""}}
+{"id":"geo-16","ask":"what is the formal name of Serbia","query":{"type":"k.geo.country","where":{"name":"Serbia"},"seek":"formal"},"expect":{"status":"supported","value":"\"Republic of Serbia\""}}
 {"id":"geo-14","ask":"an application's own place is accepted","tell":"@p1 k.geo.city name=Testville country=Moldova population=12","ns":"app","expect":{"issues":[]}}

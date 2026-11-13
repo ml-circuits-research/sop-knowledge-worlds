@@ -5,10 +5,11 @@ Geography: countries, capitals, continents, neighbours, population, area, larges
 ## What it knows
 
 - `k.geo.continent`: `name` (Africa, Antarctica, Asia, Europe, North America, Oceania, South America).
-- `k.geo.country` (identity `name`): `code`, `official`, `capital` (many), `continent`, `region`, `neighbour` (many),
+- `k.geo.country` (identity `name`): `code`, `formal`, `capital` (many), `continent`, `region`, `neighbour` (many),
   `population`, `area` (square kilometres), `landlocked`, `independent`, `lat`, `lon` (a point inside it), `west`,
-  `south`, `east`, `north` (its box, in degrees). Names are Natural Earth's (`"United States of America"`,
-  `"Republic of Serbia"`); `core.word` facts give other names (`"United States"`, `Serbia`).
+  `south`, `east`, `north` (its box, in degrees). The name is the common short name (`"United States"`, `Serbia`:
+  Natural Earth's `NAME` or `NAME_LONG`, whichever is shorter and not abbreviated); `formal` is the formal name
+  (`"Republic of Serbia"`); `core.word` facts give the other names (`"United States of America"`, `"Dem. Rep. Congo"`).
 - `k.geo.city` (identity `name` + `country`): `capital_of` (the country, for a national capital), `population`,
   `lat`, `lon`. The national capitals and the 5 largest places of each country.
 - `k.geo.river` (identity `name` + `continent`): `country` (many: those it flows through), `lat`, `lon`, and its box.
@@ -25,7 +26,7 @@ Two per continent:
   It names each country again (`k.geo.country name=Moldova neighbour=…`), so when both shards are told the facts of
   one country are one wire. An application that wants public-domain facts only leaves these shards out.
 
-13 shards, 3,473 wires, 634,408 bytes; the largest is `asia` (811 wires, 140 kB).
+13 shards, 3,473 wires, 630,063 bytes; the largest is `asia` (811 wires, 140 kB).
 
 ## Sources
 

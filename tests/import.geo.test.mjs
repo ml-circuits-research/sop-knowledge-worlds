@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { importGeo, continentOf } from '../tools/import/geo.mjs';
+import { importGeo, continentOf, commonName } from '../tools/import/geo.mjs';
 
 const square = (x, y, s) => ({ type: 'Polygon', coordinates: [[[x, y], [x + s, y], [x + s, y + s], [x, y + s], [x, y]]] });
 const country = (code, name, x, extra = {}) => ({ properties: { TYPE: 'Sovereign country', ADMIN: name, ADM0_A3: code, NAME: name, NAME_LONG: name, NAME_EN: name, FORMAL_EN: `Republic of ${name}`, CONTINENT: 'Europe', REGION_UN: 'Europe', SUBREGION: 'Western Europe', POP_EST: 1000.4, LABEL_X: x + 5, LABEL_Y: 5, ...extra }, geometry: square(x, 0, 10) });
@@ -41,19 +41,19 @@ test('the geo importer writes a public-domain shard and a borders shard per cont
   const lines = (f) => files[f].split('\n').filter((l) => l.startsWith('@'));
   assert.deepEqual(lines('europe.sop'), [
     '@k.geo.continent.europe k.geo.continent name=Europe core.source="natural-earth 5.1.2"',
-    '@k.geo.country.AAA k.geo.country name=Aland code=AAA official="Republic of Aland" capital=Acity continent=Europe region="Western Europe" population=1000 independent=true lat=5 lon=5 west=0 south=0 east=10 north=10 core.source="natural-earth 5.1.2"',
-    '@k.geo.country.BBB k.geo.country name="Bee Land" code=BBB official="Republic of Bee Land" continent=Europe region="Western Europe" population=1000 independent=true lat=5 lon=15 west=10 south=0 east=20 north=10 core.source="natural-earth 5.1.2"',
+    '@k.geo.country.AAA k.geo.country name=Aland code=AAA formal="Republic of Aland" capital=Acity continent=Europe region="Western Europe" population=1000 independent=true lat=5 lon=5 west=0 south=0 east=10 north=10 core.source="natural-earth 5.1.2"',
+    '@k.geo.country.BBB k.geo.country name=Bee code=BBB formal="Republic of Bee Land" continent=Europe region="Western Europe" population=1000 independent=true lat=5 lon=15 west=10 south=0 east=20 north=10 core.source="natural-earth 5.1.2"',
     '@k.geo.city.AAA.Acity k.geo.city name=Acity country=Aland capital_of=Aland population=500 lat=5 lon=5 core.source="natural-earth 5.1.2"',
-    '@k.geo.city.BBB.Big_Town k.geo.city name="Big Town" country="Bee Land" population=900 lat=2 lon=12 core.source="natural-earth 5.1.2"',
-    '@k.geo.river.Flow.europe k.geo.river name=Flow continent=Europe country=Aland country="Bee Land" lat=3 lon=8.5 west=2 south=2 east=15 north=4 core.source="natural-earth 5.1.2"',
-    '@k.geo.mountain.Mount_High.europe k.geo.mountain name="Mount High" continent=Europe country="Bee Land" elevation=1234 lat=8 lon=12 core.source="natural-earth 5.1.2"',
+    '@k.geo.city.BBB.Big_Town k.geo.city name="Big Town" country=Bee population=900 lat=2 lon=12 core.source="natural-earth 5.1.2"',
+    '@k.geo.river.Flow.europe k.geo.river name=Flow continent=Europe country=Aland country=Bee lat=3 lon=8.5 west=2 south=2 east=15 north=4 core.source="natural-earth 5.1.2"',
+    '@k.geo.mountain.Mount_High.europe k.geo.mountain name="Mount High" continent=Europe country=Bee elevation=1234 lat=8 lon=12 core.source="natural-earth 5.1.2"',
     '@k.geo.range.High_Hills.europe k.geo.range name="High Hills" continent=Europe lat=7.5 lon=12.5 west=11 south=6 east=14 north=9 core.source="natural-earth 5.1.2"',
     '@k.geo.word.AAA core.word text="Republic of Aland" means=Aland of=k.geo.country.name core.source="natural-earth 5.1.2"',
-    '@k.geo.word.BBB core.word text=Bee text="Republic of Bee Land" means="Bee Land" of=k.geo.country.name core.source="natural-earth 5.1.2"',
+    '@k.geo.word.BBB core.word text="Bee Land" text="Republic of Bee Land" means=Bee of=k.geo.country.name core.source="natural-earth 5.1.2"',
   ]);
   assert.deepEqual(lines('europe-borders.sop'), [
-    '@k.geo.borders.AAA k.geo.country name=Aland neighbour="Bee Land" area=100 landlocked=true core.source="countries 5.1.0"',
-    '@k.geo.borders.BBB k.geo.country name="Bee Land" neighbour=Aland area=100.5 landlocked=false core.source="countries 5.1.0"',
+    '@k.geo.borders.AAA k.geo.country name=Aland neighbour=Bee area=100 landlocked=true core.source="countries 5.1.0"',
+    '@k.geo.borders.BBB k.geo.country name=Bee neighbour=Aland area=100.5 landlocked=false core.source="countries 5.1.0"',
   ]);
   assert.ok(files['europe.sop'].includes('# license: public-domain'));
   assert.ok(files['europe-borders.sop'].includes('# license: ODbL-1.0'));
@@ -77,4 +77,12 @@ test('the k.geo shards on disk are what the importer gives from the raw files', 
   const dir = join(WORLDS_DIR, 'k.geo', 'shards');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
+});
+
+test('the identity of a country is its common short name, written in full', () => {
+  assert.equal(commonName({ ADMIN: 'United States of America', NAME: 'United States of America', NAME_LONG: 'United States' }), 'United States');
+  assert.equal(commonName({ ADMIN: 'Republic of Serbia', NAME: 'Serbia', NAME_LONG: 'Serbia' }), 'Serbia');
+  assert.equal(commonName({ ADMIN: 'Democratic Republic of the Congo', NAME: 'Dem. Rep. Congo', NAME_LONG: 'Democratic Republic of the Congo' }), 'Democratic Republic of the Congo');
+  assert.equal(commonName({ ADMIN: 'Falkland Islands', NAME: 'Falkland Is.', NAME_LONG: 'Falkland Islands / Malvinas' }), 'Falkland Islands');
+  assert.equal(commonName({ ADMIN: 'Saint Martin', NAME: 'St-Martin', NAME_LONG: 'Saint-Martin' }), 'Saint-Martin');
 });

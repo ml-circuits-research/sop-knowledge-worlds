@@ -2945,6 +2945,7 @@
  ],
  "bahamas": [
   "k.geo/shards/north-america",
+  "k.geo/shards/north-america-borders",
   "k.words/shards/ba"
  ],
  "bahir dar": [
@@ -10948,6 +10949,7 @@
  ],
  "congo": [
   "k.geo/shards/africa",
+  "k.geo/shards/africa-borders",
   "k.words/shards/co"
  ],
  "congratulate": [
@@ -12668,7 +12670,8 @@
   "k.geo/shards/south-america"
  ],
  "côte d'ivoire": [
-  "k.geo/shards/africa"
+  "k.geo/shards/africa",
+  "k.geo/shards/africa-borders"
  ],
  "d": [
   "k.words/shards/d"
@@ -15683,8 +15686,7 @@
   "k.words/shards/ea"
  ],
  "east timor": [
-  "k.geo/shards/asia",
-  "k.geo/shards/asia-borders"
+  "k.geo/shards/asia"
  ],
  "easter": [
   "k.objects/shards/mulberry-celebration-item-01",
@@ -17276,7 +17278,8 @@
   "k.geo/shards/europe"
  ],
  "faeroe islands": [
-  "k.geo/shards/europe"
+  "k.geo/shards/europe",
+  "k.geo/shards/europe-borders"
  ],
  "fag": [
   "k.words/shards/fa"
@@ -17473,8 +17476,7 @@
   "k.words/shards/fa"
  ],
  "faroe islands": [
-  "k.geo/shards/europe",
-  "k.geo/shards/europe-borders"
+  "k.geo/shards/europe"
  ],
  "farrell": [
   "k.words/shards/fa"
@@ -17644,8 +17646,7 @@
   "k.geo/shards/africa"
  ],
  "federated states of micronesia": [
-  "k.geo/shards/oceania",
-  "k.geo/shards/oceania-borders"
+  "k.geo/shards/oceania"
  ],
  "federation": [
   "k.words/shards/fe"
@@ -23455,11 +23456,11 @@
   "k.objects/shards/noto-food-sweet-02"
  ],
  "hong kong": [
-  "k.geo/shards/asia"
- ],
- "hong kong s.a.r.": [
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders"
+ ],
+ "hong kong s.a.r.": [
+  "k.geo/shards/asia"
  ],
  "hong kong special administrative region, prc": [
   "k.geo/shards/asia"
@@ -25445,8 +25446,7 @@
   "k.words/shards/iv"
  ],
  "ivory coast": [
-  "k.geo/shards/africa",
-  "k.geo/shards/africa-borders"
+  "k.geo/shards/africa"
  ],
  "ivy": [
   "k.objects/shards/mulberry-plants-and-trees-02",
@@ -29787,11 +29787,11 @@
   "k.objects/shards/mulberry-food-nuts-01"
  ],
  "macao": [
-  "k.geo/shards/asia"
- ],
- "macao s.a.r": [
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders"
+ ],
+ "macao s.a.r": [
+  "k.geo/shards/asia"
  ],
  "macao special administrative region, prc": [
   "k.geo/shards/asia"
@@ -31636,7 +31636,8 @@
   "k.objects/shards/noto-animal-bug-02"
  ],
  "micronesia": [
-  "k.geo/shards/oceania"
+  "k.geo/shards/oceania",
+  "k.geo/shards/oceania-borders"
  ],
  "microphone": [
   "k.objects/shards/noto-music-01",
@@ -42270,8 +42271,7 @@
   "k.geo/shards/africa"
  ],
  "republic of serbia": [
-  "k.geo/shards/europe",
-  "k.geo/shards/europe-borders"
+  "k.geo/shards/europe"
  ],
  "republic of seychelles": [
   "k.geo/shards/africa"
@@ -42301,8 +42301,7 @@
   "k.geo/shards/asia"
  ],
  "republic of the congo": [
-  "k.geo/shards/africa",
-  "k.geo/shards/africa-borders"
+  "k.geo/shards/africa"
  ],
  "republic of the gambia": [
   "k.geo/shards/africa"
@@ -44136,8 +44135,7 @@
   "k.words/shards/sa"
  ],
  "saint barthelemy": [
-  "k.geo/shards/north-america",
-  "k.geo/shards/north-america-borders"
+  "k.geo/shards/north-america"
  ],
  "saint barthélemy": [
   "k.geo/shards/north-america"
@@ -44167,8 +44165,7 @@
   "k.geo/shards/north-america-borders"
  ],
  "saint martin": [
-  "k.geo/shards/north-america",
-  "k.geo/shards/north-america-borders"
+  "k.geo/shards/north-america"
  ],
  "saint mary peak": [
   "k.geo/shards/oceania"
@@ -44182,13 +44179,15 @@
   "k.geo/shards/north-america-borders"
  ],
  "saint-barthélemy": [
-  "k.geo/shards/north-america"
+  "k.geo/shards/north-america",
+  "k.geo/shards/north-america-borders"
  ],
  "saint-louis": [
   "k.geo/shards/africa"
  ],
  "saint-martin": [
-  "k.geo/shards/north-america"
+  "k.geo/shards/north-america",
+  "k.geo/shards/north-america-borders"
  ],
  "saint-martin (french part)": [
   "k.geo/shards/north-america"
@@ -45591,6 +45590,7 @@
  ],
  "serbia": [
   "k.geo/shards/europe",
+  "k.geo/shards/europe-borders",
   "k.words/shards/se"
  ],
  "serbian": [
@@ -51104,7 +51104,8 @@
   "k.words/shards/ta"
  ],
  "tanzania": [
-  "k.geo/shards/africa"
+  "k.geo/shards/africa",
+  "k.geo/shards/africa-borders"
  ],
  "tao": [
   "k.words/shards/ta"
@@ -51780,8 +51781,7 @@
   "k.words/shards/th"
  ],
  "the bahamas": [
-  "k.geo/shards/north-america",
-  "k.geo/shards/north-america-borders"
+  "k.geo/shards/north-america"
  ],
  "the bermudas or somers isles": [
   "k.geo/shards/north-america"
@@ -52269,7 +52269,8 @@
   "k.geo/shards/europe"
  ],
  "timor-leste": [
-  "k.geo/shards/asia"
+  "k.geo/shards/asia",
+  "k.geo/shards/asia-borders"
  ],
  "timothy": [
   "k.words/shards/ti"
@@ -54336,15 +54337,14 @@
   "k.geo/shards/north-america"
  ],
  "united republic of tanzania": [
-  "k.geo/shards/africa",
-  "k.geo/shards/africa-borders"
+  "k.geo/shards/africa"
  ],
  "united states": [
-  "k.geo/shards/north-america"
- ],
- "united states of america": [
   "k.geo/shards/north-america",
   "k.geo/shards/north-america-borders"
+ ],
+ "united states of america": [
+  "k.geo/shards/north-america"
  ],
  "united states virgin islands": [
   "k.geo/shards/north-america",
@@ -55810,14 +55810,14 @@
   "k.words/shards/wa"
  ],
  "wallis and futuna": [
-  "k.geo/shards/oceania",
-  "k.geo/shards/oceania-borders"
+  "k.geo/shards/oceania"
  ],
  "wallis and futuna is.": [
   "k.geo/shards/oceania"
  ],
  "wallis and futuna islands": [
-  "k.geo/shards/oceania"
+  "k.geo/shards/oceania",
+  "k.geo/shards/oceania-borders"
  ],
  "wallpaper": [
   "k.words/shards/wa"

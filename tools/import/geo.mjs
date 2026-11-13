@@ -32,6 +32,14 @@ const english = (en, name) => {
   return /[a-z]/.test(t) ? t : t.toLowerCase().replace(/(^|[\s-])(\p{L})/gu, (m, a, b) => a + b.toUpperCase());
 };
 
+// The identity of a country: its common short name. Natural Earth's NAME or NAME_LONG, whichever is shorter and
+// written in full ("United States", "Serbia"); where both are abbreviated ("Falkland Is."), its ADMIN name.
+const abbreviated = (t) => /\.|\//.test(t) || /(^|\s)St-/.test(t);
+export const commonName = (p) => {
+  const full = [p.NAME, p.NAME_LONG].filter((t) => t && !abbreviated(t)).sort((a, b) => a.length - b.length || byText(a, b));
+  return full[0] ?? p.ADMIN;
+};
+
 const rings = (g) => (g.type === 'Polygon' ? [g.coordinates] : g.type === 'MultiPolygon' ? g.coordinates : []);
 const lines = (g) => (g.type === 'LineString' ? [g.coordinates] : g.type === 'MultiLineString' ? g.coordinates : []);
 const bounds = (points) => {
@@ -61,7 +69,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     if (p.TYPE === 'Indeterminate' || !p.ADMIN || byCode.has(p.ADM0_A3)) { stats.dropped.countries++; continue; }
     const polys = rings(f.geometry).map((poly) => ({ poly, b: bounds(poly[0]) }));
     const b = bounds(polys.flatMap((x) => x.poly[0]));
-    byCode.set(p.ADM0_A3, { p, b, name: p.ADMIN, continent: continentOf(p) });
+    byCode.set(p.ADM0_A3, { p, b, name: commonName(p), continent: continentOf(p) });
     shapes.push({ code: p.ADM0_A3, polys, b });
   }
   const nameOf = (code) => byCode.get(code)?.name;
@@ -97,7 +105,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     const out = shards.get(continent);
     const caps = (capitals.get(code) ?? []).map((c) => ({ ...c, name: clean(c.name) })).sort((x, y) => (x.featurecla === 'Admin-0 capital' ? 0 : 1) - (y.featurecla === 'Admin-0 capital' ? 0 : 1) || byText(x.name, y.name)).map((c) => c.name);
     out.countries.push(w(`k.geo.country.${seg(code)}`, 'k.geo.country', [
-      ['name', name], ['code', code], ['official', p.FORMAL_EN ? text(p.FORMAL_EN) : undefined],
+      ['name', name], ['code', code], ['formal', p.FORMAL_EN ? text(p.FORMAL_EN) : undefined],
       ...[...new Set(caps)].map((x) => ['capital', x]),
       ['continent', continent], ['region', p.SUBREGION && !/^Seven seas/.test(p.SUBREGION) ? p.SUBREGION : undefined],
       ['population', p.POP_EST > 0 ? Math.round(p.POP_EST) : undefined],
@@ -106,7 +114,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
       ...box(b),
     ], sources(NE)));
     stats.countries++;
-    const other = [...new Set([p.NAME, p.NAME_LONG, p.NAME_EN, p.FORMAL_EN].filter((t) => t && t !== name))];
+    const other = [...new Set([p.ADMIN, p.NAME, p.NAME_LONG, p.NAME_EN, p.FORMAL_EN].filter((t) => t && t !== name))];
     if (other.length) {
       out.words.push(w(`k.geo.word.${seg(code)}`, 'core.word', [...other.map((t) => ['text', t]), ['means', name], ['of', 'k.geo.country.name']], sources(NE)));
       stats.words++;
