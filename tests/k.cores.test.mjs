@@ -54,8 +54,8 @@ test('an approximate count (_about) is never next to the exact one; a verb is ne
     for (const v of w.attrs.cannot ?? []) assert.ok(!(w.attrs.can ?? []).includes(v), `${w.id}: can and cannot ${v}`);
   }
   assert.ok(about >= 4);
-  const flightless = fullWorld('k.animals', worlds).query({ type: 'k.animals.animal', where: { cannot: 'fly' }, seek: 'name', mode: 'list' });
-  assert.deepEqual([...flightless.values].sort(), ['emu', 'ostrich', 'penguin']);
+  const flightless = fullWorld('k.animals', worlds).query({ type: 'k.animals.animal', where: { class: 'bird', cannot: 'fly' }, seek: 'name', mode: 'list' });
+  assert.deepEqual([...flightless.values].sort(), ['cassowary', 'emu', 'kiwi', 'ostrich', 'penguin']);
   const animals = fullWorld('k.animals', worlds).fork();
   assert.equal(animals.tell('@a1 k.animals.animal name=dragon class=reptile can=fly cannot=fly', { ns: 'app' }).ok, false);
   assert.equal(animals.tell('@a2 k.animals.animal name=drake class=reptile can=fly cannot=swim', { ns: 'app' }).ok, true);

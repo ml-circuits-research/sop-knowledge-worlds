@@ -1,0 +1,323 @@
+# name	class	size	habitat	diet	eats	sound	baby	group	can	cannot	legs	covering	words	drawing
+# The animals of k.animals (Round 3: 156; Round 9 item 2: 158 more and, for all, the size class and the name of a
+# group), written by a language model, only where sure (named=model); tools/animals-core.mjs writes the shards.
+# Lists are separated by commas. `size`: tiny (a mouse or smaller), small (up to a cat or a hen), medium (a dog, a
+# sheep), large (a horse, a lion), huge (an elephant, a whale): the classes of k.scenes.thing. `legs` and `covering`
+# empty: the usual of the class (mammal 4 and fur, bird 2 and feathers, fish 0 and scales, reptile 4 and scales,
+# amphibian 4 and skin, insect 6, arachnid 8, crustacean 10); "-": not said. `cannot=fly` is added by the tool for
+# every animal that is not a bird or an insect and is not said to fly. `words`: plurals and other names of the
+# same animal. `drawing`: the k.objects object that shows it (looked at). The audit: animals-audit.tsv.
+hen	bird	small	farm	omnivore	seeds, insects	cluck	chick	flock			2	feathers	hens, chicken, chickens	hen
+rooster	bird	small	farm	omnivore	seeds, insects	crow	chick				2	feathers	roosters, cockerel	rooster
+duck	bird	small	pond, lake, farm	omnivore	water plants, insects	quack	duckling	flock	fly, swim		2	feathers	ducks	duck
+goose	bird	medium	lake, farm	herbivore	grass	honk	gosling	flock	fly, swim		2	feathers	geese	goose
+turkey	bird	medium	farm	omnivore	seeds, insects	gobble	poult	flock			2	feathers	turkeys	turkey
+swan	bird	medium	lake, river	herbivore	water plants		cygnet		fly, swim		2	feathers	swans	swan
+pigeon	bird	small	city		seeds	coo	squab	flock	fly		2	feathers	pigeons	pigeon
+dove	bird	small	forest, city		seeds	coo	squab	flock	fly		2	feathers	doves	dove
+sparrow	bird	small	city, garden	omnivore	seeds, insects	chirp	chick	flock	fly		2	feathers	sparrows	
+crow	bird	small	field, city	omnivore		caw	chick	flock	fly		2	feathers	crows	
+magpie	bird	small	field, garden	omnivore			chick		fly		2	feathers	magpies	
+owl	bird	small	forest	carnivore	mice	hoot	owlet		fly		2	feathers	owls	owl
+eagle	bird	medium	mountain	carnivore	meat, fish	screech	eaglet		fly		2	feathers	eagles	eagle
+hawk	bird	small	forest, field	carnivore	meat	screech	chick		fly		2	feathers	hawks	
+falcon	bird	small	mountain, field	carnivore	birds		chick		fly		2	feathers	falcons	
+vulture	bird	medium	savanna, mountain	carnivore	dead animals		chick		fly		2	feathers	vultures	vulture
+parrot	bird	small	jungle		seeds, fruit, nuts	squawk	chick	flock	fly, talk		2	feathers	parrots	parrot
+penguin	bird	medium	sea, ice	carnivore	fish, krill		chick	colony	swim	fly	2	feathers	penguins	penguin
+ostrich	bird	large	savanna		plants		chick		run	fly	2	feathers	ostriches	ostrich
+emu	bird	large	grassland				chick		run	fly	2	feathers	emus	
+flamingo	bird	medium	lake		shrimp, algae		chick	flock	fly		2	feathers	flamingos	flamingo
+peacock	bird	medium	forest	omnivore			peachick		fly		2	feathers	peacocks	peacock
+stork	bird	medium	wetland, field	carnivore	frogs, fish		chick		fly		2	feathers	storks	
+heron	bird	medium	river, lake	carnivore	fish, frogs		chick		fly		2	feathers	herons	heron
+pelican	bird	medium	sea, lake	carnivore	fish		chick		fly, swim		2	feathers	pelicans	pelican
+seagull	bird	small	sea	omnivore	fish		chick	flock	fly, swim		2	feathers	seagulls, gull, gulls	seagull
+swallow	bird	small	field	carnivore	insects		chick	flock	fly		2	feathers	swallows	
+robin	bird	small	garden, forest		worms, insects, berries	sing	chick		fly		2	feathers	robins	robin
+nightingale	bird	small	forest		insects	sing	chick		fly		2	feathers	nightingales	
+canary	bird	small	house		seeds	sing	chick		fly		2	feathers	canaries	
+cuckoo	bird	small	forest	carnivore	insects	cuckoo	chick		fly		2	feathers	cuckoos	
+woodpecker	bird	small	forest	carnivore	insects		chick		fly, climb		2	feathers	woodpeckers	
+hummingbird	bird	tiny	forest, garden		nectar		chick		fly		2	feathers	hummingbirds	
+kingfisher	bird	small	river	carnivore	fish		chick		fly		2	feathers	kingfishers	
+toucan	bird	small	jungle		fruit		chick		fly		2	feathers	toucans	
+goldfish	fish	tiny	pond	omnivore			fry		swim		0	scales		goldfish
+shark	fish	large	sea	carnivore	fish		pup		swim		0	-	sharks	shark
+salmon	fish	small	sea, river	carnivore			fry		swim, jump		0	scales		
+tuna	fish	large	sea	carnivore	fish			school	swim		0	scales		
+trout	fish	small	river, lake	carnivore	insects		fry		swim		0	scales		
+carp	fish	small	lake, pond, river	omnivore			fry		swim		0	scales		fish koi carp
+cod	fish	small	sea	carnivore	fish				swim		0	scales		
+herring	fish	small	sea		plankton			school	swim		0	scales		
+sardine	fish	tiny	sea		plankton			school	swim		0	scales	sardines	
+pike	fish	medium	lake, river	carnivore	fish				swim		0	scales		
+eel	fish	small	river, sea	carnivore			elver		swim		0	-	eels	
+seahorse	fish	tiny	sea	carnivore			fry		swim		0	-	seahorses	seahorse
+clownfish	fish	tiny	coral reef	omnivore			fry		swim		0	scales		
+ant	insect	tiny	soil, garden	omnivore			larva	colony	climb, dig		6	-	ants	ant
+bee	insect	tiny	garden, field	herbivore	nectar, pollen	buzz	larva	swarm	fly		6	-	bees	bee
+wasp	insect	tiny	garden			buzz	larva	colony	fly		6	-	wasps	wasp
+butterfly	insect	tiny	garden, field	herbivore	nectar		caterpillar		fly		6	-	butterflies	butterfly
+moth	insect	tiny	garden, forest		nectar		caterpillar		fly		6	-	moths	moth
+fly	insect	tiny	house, farm			buzz	maggot		fly		6	-	flies	fly
+mosquito	insect	tiny	swamp, pond			buzz	larva	swarm	fly		6	-	mosquitoes	mosquito
+beetle	insect	tiny	forest, garden				grub				6	-	beetles	beetle
+ladybird	insect	tiny	garden	carnivore	aphids		larva		fly		6	-	ladybirds, ladybug, ladybugs	lady beetle
+grasshopper	insect	tiny	grassland, field	herbivore	grass, leaves	chirp	nymph		jump, fly		6	-	grasshoppers	
+cricket	insect	tiny	field, grassland	omnivore		chirp	nymph		jump		6	-	crickets	cricket
+dragonfly	insect	tiny	pond, river	carnivore	insects		nymph		fly		6	-	dragonflies	dragonfly
+cockroach	insect	tiny	house	omnivore			nymph		run		6	-	cockroaches	cockroach
+flea	insect	tiny			blood		larva		jump	fly	6	-	fleas	
+termite	insect	tiny	soil		wood		nymph	colony			6	-	termites	
+firefly	insect	tiny	forest, field				larva		fly, glow		6	-	fireflies	
+spider	arachnid	tiny	house, garden, forest	carnivore	insects		spiderling		climb		8	-	spiders	spider
+scorpion	arachnid	tiny	desert	carnivore	insects						8	-	scorpions	scorpion
+crab	crustacean	small	sea, beach	omnivore							10	shell	crabs	crab
+lobster	crustacean	small	sea	omnivore							10	shell	lobsters	lobster
+shrimp	crustacean	tiny	sea	omnivore					swim		10	shell		shrimp
+snail	mollusc	tiny	garden	herbivore	leaves				climb		-	shell	snails	snail
+slug	mollusc	tiny	garden	herbivore	leaves						-	skin	slugs	slug
+octopus	mollusc	medium	sea	carnivore	crabs, fish				swim		-	skin	octopuses	octopus
+squid	mollusc	small	sea	carnivore	fish				swim		-	skin		squid
+earthworm	worm	tiny	soil		dead leaves				dig		0	skin	earthworms, worm, worms	earthworm
+jellyfish	cnidarian	small	sea	carnivore	plankton, fish				swim		0	-		jellyfish
+starfish	echinoderm	small	sea	carnivore	shellfish						-	-		starfish
+dog	mammal	medium	house		meat	bark	puppy	pack	run, swim		4	fur	dogs	dog
+cat	mammal	small	house	carnivore	meat, fish	meow, purr	kitten		climb, jump		4	fur	cats	cat
+cow	mammal	large	farm	herbivore	grass	moo	calf	herd		climb	4	hair	cows	cow
+horse	mammal	large	farm	herbivore	grass, hay	neigh	foal	herd	run, jump, swim	climb	4	hair	horses	horse
+pony	mammal	medium	farm	herbivore	grass, hay	neigh	foal	herd	run	climb	4	hair	ponies	
+sheep	mammal	medium	farm	herbivore	grass	bleat	lamb	flock			4	wool		sheep
+goat	mammal	medium	farm, mountain	herbivore	grass, leaves	bleat	kid	herd	climb, jump		4	hair	goats	goat
+pig	mammal	medium	farm	omnivore		oink, grunt	piglet	herd		climb	4	-	pigs	pig
+donkey	mammal	large	farm	herbivore	grass, hay	bray	foal	herd		climb	4	hair	donkeys, ass	donkey
+rabbit	mammal	small	field, house	herbivore	grass, leaves		kit	colony	jump, run, dig		4	fur	rabbits, bunny, bunnies	rabbit
+mouse	mammal	tiny	house, field	omnivore	seeds	squeak	pup		run, climb		4	fur	mice	mouse
+rat	mammal	small	city	omnivore		squeak	pup		run, climb, swim		4	fur	rats	rat
+hamster	mammal	tiny	house	omnivore	seeds		pup				4	fur	hamsters	hamster
+guinea pig	mammal	small	house	herbivore	grass, hay	squeak	pup				4	fur	guinea pigs	guinea pig
+squirrel	mammal	small	forest, park		nuts, seeds				climb, jump		4	fur	squirrels	
+hedgehog	mammal	small	garden, forest		insects, worms		hoglet				4	spines	hedgehogs	hedgehog
+mole	mammal	small	soil	carnivore	worms, insects		pup		dig		4	fur	moles	
+bat	mammal	small	cave		insects, fruit	squeak	pup	colony	fly		2	fur	bats	bat
+fox	mammal	medium	forest	omnivore			cub		run		4	fur	foxes	fox
+wolf	mammal	medium	forest	carnivore	meat	howl	pup	pack	run		4	fur	wolves	wolf
+bear	mammal	large	forest, mountain	omnivore	fish, berries, honey	growl	cub		climb, swim, run		4	fur	bears	bear
+polar bear	mammal	large	ice, sea	carnivore	seals	growl	cub		swim, run		4	fur	polar bears	polar bear
+panda	mammal	large	forest, mountain	herbivore	bamboo		cub		climb		4	fur	pandas, giant panda	panda
+lion	mammal	large	savanna	carnivore	meat	roar	cub	pride	run		4	fur	lions	lion
+tiger	mammal	large	jungle, forest	carnivore	meat	roar	cub		run, swim		4	fur	tigers	tiger
+leopard	mammal	medium	savanna, forest	carnivore	meat	growl	cub		climb, run		4	fur	leopards	leopard
+cheetah	mammal	medium	savanna	carnivore	meat		cub		run		4	fur	cheetahs	cheetah
+jaguar	mammal	large	jungle	carnivore	meat	roar	cub		swim, climb		4	fur	jaguars	
+lynx	mammal	medium	forest, mountain	carnivore	meat		kitten		climb, jump		4	fur	lynxes	
+hyena	mammal	medium	savanna	carnivore	meat	laugh	cub	clan	run		4	fur	hyenas	
+elephant	mammal	huge	savanna, forest	herbivore	grass, leaves, fruit	trumpet	calf	herd	swim	climb	4	skin	elephants	elephant
+giraffe	mammal	huge	savanna	herbivore	leaves		calf	herd	run	climb	4	hair	giraffes	giraffe
+zebra	mammal	large	savanna	herbivore	grass		foal	herd	run	climb	4	hair	zebras	zebra
+hippopotamus	mammal	large	river, lake	herbivore	grass		calf		swim	climb	4	skin	hippopotamuses, hippo, hippos	hippopotamus
+rhinoceros	mammal	large	savanna	herbivore	grass, leaves		calf		run	climb	4	skin	rhinoceroses, rhino, rhinos	rhinoceros
+camel	mammal	large	desert	herbivore	grass, leaves		calf	herd		climb	4	hair	camels	camel
+llama	mammal	medium	mountain	herbivore	grass		cria	herd			4	wool	llamas	llama
+alpaca	mammal	medium	mountain	herbivore	grass		cria	herd			4	wool	alpacas	
+deer	mammal	medium	forest	herbivore	grass, leaves		fawn	herd	run, jump		4	hair		deer
+moose	mammal	large	forest	herbivore	leaves, water plants		calf		swim, run	climb	4	hair		moose
+reindeer	mammal	medium	tundra, forest	herbivore	lichen, grass		calf	herd	run		4	hair		reindeer
+antelope	mammal	medium	savanna	herbivore	grass, leaves		calf	herd	run, jump		4	hair	antelopes	antelope
+bison	mammal	large	grassland	herbivore	grass		calf	herd	run	climb	4	hair		bison
+buffalo	mammal	large	grassland, savanna	herbivore	grass		calf	herd		climb	4	hair	buffaloes	buffalo
+yak	mammal	large	mountain	herbivore	grass		calf	herd		climb	4	hair	yaks	
+ox	mammal	large	farm	herbivore	grass		calf			climb	4	hair	oxen	ox
+boar	mammal	medium	forest	omnivore		grunt	piglet		run		4	hair	boars	boar
+kangaroo	mammal	medium	grassland	herbivore	grass		joey	mob	jump		-	fur	kangaroos	kangaroo
+koala	mammal	small	forest	herbivore	eucalyptus leaves		joey		climb		4	fur	koalas	koala
+monkey	mammal	medium	jungle	omnivore	fruit, leaves, insects	chatter	infant	troop	climb, jump		-	fur	monkeys	monkey
+gorilla	mammal	large	jungle	herbivore	leaves, fruit		infant	troop	climb		-	fur	gorillas	gorilla
+chimpanzee	mammal	medium	jungle	omnivore	fruit, leaves, insects		infant	troop	climb		-	fur	chimpanzees, chimp, chimps	chimpanzee
+orangutan	mammal	medium	jungle		fruit, leaves		infant		climb		-	fur	orangutans	orangutan
+sloth	mammal	medium	jungle	herbivore	leaves				climb, swim		4	fur	sloths	sloth
+anteater	mammal	medium	grassland, forest		ants, termites		pup				4	fur	anteaters	ant eater
+raccoon	mammal	small	forest, city	omnivore			kit		climb, swim		4	fur	raccoons	raccoon
+skunk	mammal	small	forest, field	omnivore			kit				4	fur	skunks	skunk
+badger	mammal	small	forest	omnivore	worms, insects		cub		dig		4	fur	badgers	badger
+otter	mammal	small	river, sea	carnivore	fish		pup		swim		4	fur	otters	otter
+beaver	mammal	small	river, lake	herbivore	bark, leaves		kit		swim		4	fur	beavers	beaver
+porcupine	mammal	small	forest	herbivore	bark, leaves						4	spines	porcupines	porcupine
+meerkat	mammal	small	desert		insects		pup	mob	dig		4	fur	meerkats	
+seal	mammal	medium	sea, ice	carnivore	fish	bark	pup	colony	swim		-	fur	seals	seal
+walrus	mammal	large	sea, ice	carnivore	shellfish		calf	herd	swim		-	skin	walruses	walrus
+dolphin	mammal	large	sea	carnivore	fish	click, whistle	calf	pod	swim, jump	climb	0	skin	dolphins	dolphin
+whale	mammal	huge	sea	carnivore		sing	calf	pod	swim	climb	0	skin	whales	whale
+blue whale	mammal	huge	sea	carnivore	krill		calf		swim	climb	0	skin	blue whales	
+snake	reptile	small	forest, desert, grassland	carnivore	mice, frogs	hiss					0	scales	snakes	snake
+lizard	reptile	small	desert, forest		insects		hatchling		climb, run		4	scales	lizards	lizard
+crocodile	reptile	large	river, swamp	carnivore	fish, meat		hatchling		swim		4	scales	crocodiles	crocodile
+alligator	reptile	large	swamp, river	carnivore	fish, meat		hatchling		swim		4	scales	alligators	
+turtle	reptile	small	sea, pond				hatchling		swim		4	shell, scales	turtles	turtle
+tortoise	reptile	small	grassland, desert	herbivore	grass, leaves		hatchling				4	shell, scales	tortoises	tortoise
+chameleon	reptile	small	jungle, forest	carnivore	insects		hatchling		climb		4	scales	chameleons	chameleon
+iguana	reptile	small	jungle	herbivore	leaves, fruit		hatchling		climb, swim		4	scales	iguanas	
+gecko	reptile	tiny	house, forest, desert	carnivore	insects		hatchling		climb		4	scales	geckos	
+frog	amphibian	small	pond, river	carnivore	insects	croak	tadpole		jump, swim		4	skin	frogs	frog
+toad	amphibian	small	garden, pond	carnivore	insects, worms	croak	tadpole		jump, swim		4	skin	toads	toad
+newt	amphibian	tiny	pond	carnivore	insects, worms				swim		4	skin	newts	
+salamander	amphibian	small	forest, pond	carnivore	insects, worms						4	skin	salamanders	
+raven	bird	small	forest, mountain	omnivore	insects, seeds, carrion	croak	chick	flock	fly				ravens	raven
+finch	bird	small	forest, garden	herbivore	seeds	chirp	chick	flock	fly				finches	finch
+blackbird	bird	small	garden, forest	omnivore	worms, insects, berries	sing	chick		fly				blackbirds	
+starling	bird	small	town, field	omnivore	insects, berries, seeds		chick	flock	fly				starlings	
+lark	bird	small	field, meadow	omnivore	seeds, insects	sing	chick		fly				larks, skylark	
+bluebird	bird	small	field, garden	omnivore	insects, berries	sing	chick		fly				bluebirds	
+mockingbird	bird	small	garden, town	omnivore	insects, berries	sing	chick		fly				mockingbirds	
+quail	bird	small	field, grassland	omnivore	seeds, insects		chick	covey	fly, run				quails	quail
+pheasant	bird	small	field, forest	omnivore	seeds, insects, berries		chick		fly, run				pheasants	
+partridge	bird	small	field	omnivore	seeds, insects		chick	covey	fly, run				partridges	
+crane	bird	medium	marsh, field	omnivore	plants, insects, frogs		chick	flock	fly				cranes	
+ibis	bird	medium	marsh, river	carnivore	insects, frogs, fish		chick	flock	fly				ibises	
+puffin	bird	small	sea, cliff	carnivore	fish		chick	colony	fly, swim				puffins	puffin
+albatross	bird	medium	sea	carnivore	fish, squid		chick	colony	fly, swim				albatrosses	
+cormorant	bird	medium	sea, lake	carnivore	fish		chick	colony	fly, swim				cormorants	
+kiwi	bird	small	forest	omnivore	worms, insects, berries		chick		run	fly			kiwis	
+cockatoo	bird	small	forest	herbivore	seeds, nuts, fruit	squawk	chick	flock	fly, talk				cockatoos	
+parakeet	bird	small	grassland, house	herbivore	seeds, fruit	chirp	chick	flock	fly, talk				parakeets, budgie, budgies, budgerigar	
+macaw	bird	small	rainforest	herbivore	nuts, seeds, fruit	squawk	chick	flock	fly, talk				macaws	macaw
+condor	bird	medium	mountain	carnivore	carrion		chick		fly				condors	
+buzzard	bird	medium	forest, field	carnivore	mice, rabbits, carrion		chick		fly				buzzards	
+osprey	bird	medium	lake, river, sea	carnivore	fish		chick		fly				ospreys	
+wren	bird	small	garden, forest	carnivore	insects, spiders	sing	chick		fly				wrens	
+thrush	bird	small	garden, forest	omnivore	worms, snails, berries	sing	chick		fly				thrushes	
+jay	bird	small	forest	omnivore	acorns, insects, seeds	screech	chick		fly				jays	
+cardinal	bird	small	forest, garden	omnivore	seeds, insects, fruit	sing	chick		fly				cardinals	
+swift	bird	small	town, sky	carnivore	insects		chick	flock	fly				swifts	
+loon	bird	medium	lake, sea	carnivore	fish		chick		fly, swim				loons	
+cassowary	bird	large	rainforest	omnivore	fruit, insects		chick		run, swim	fly			cassowaries	
+roadrunner	bird	small	desert	carnivore	lizards, insects, snakes		chick		run, fly				roadrunners	
+swordfish	fish	large	sea	carnivore	fish, squid				swim			-		
+marlin	fish	large	sea	carnivore	fish, squid				swim				marlins	
+barracuda	fish	medium	sea	carnivore	fish			school	swim				barracudas	
+piranha	fish	small	river	omnivore	fish, insects, plants			school	swim				piranhas	
+catfish	fish	medium	river, lake	omnivore	fish, insects, plants		fry		swim			skin		
+perch	fish	small	lake, river	carnivore	insects, fish		fry	school	swim					
+bass	fish	small	lake, river, sea	carnivore	fish, insects		fry	school	swim					
+mackerel	fish	small	sea	carnivore	plankton, fish			school	swim					
+anchovy	fish	tiny	sea	carnivore	plankton			school	swim				anchovies	
+flounder	fish	small	sea	carnivore	worms, shrimps, fish				swim				flounders	
+halibut	fish	large	sea	carnivore	fish, crabs				swim					
+stingray	fish	medium	sea	carnivore	clams, shrimps, worms		pup		swim			skin	stingrays	
+manta ray	fish	huge	sea	carnivore	plankton		pup		swim			skin	manta rays	
+pufferfish	fish	small	sea	omnivore	snails, crabs, algae		fry		swim			skin, spines	puffer fish, blowfish	
+angelfish	fish	tiny	river, sea	omnivore	insects, algae, worms		fry	school	swim					
+guppy	fish	tiny	river, house	omnivore	insects, algae		fry	school	swim				guppies	
+sturgeon	fish	large	river, sea	carnivore	worms, shellfish, fish		fry		swim			-	sturgeons	
+minnow	fish	tiny	river, lake	omnivore	insects, algae		fry	school	swim				minnows	
+flying fish	fish	small	sea	omnivore	plankton			school	swim, jump					
+great white shark	fish	huge	sea	carnivore	seals, fish, dolphins		pup		swim			skin	great white sharks, white shark	
+hammerhead shark	fish	large	sea	carnivore	fish, squid, stingrays		pup	school	swim			skin	hammerhead sharks, hammerhead	
+whale shark	fish	huge	sea	carnivore	plankton		pup		swim			skin	whale sharks	
+bumblebee	insect	tiny	garden, meadow	herbivore	nectar, pollen	buzz	larva	colony	fly			hair	bumblebees	
+hornet	insect	tiny	forest, garden	omnivore	insects, fruit, nectar	buzz	larva	colony	fly				hornets	
+praying mantis	insect	tiny	garden, grassland	carnivore	insects		nymph						mantis, mantises	
+locust	insect	tiny	grassland, desert	herbivore	plants, crops		nymph	swarm	fly, jump				locusts	
+cicada	insect	tiny	forest	herbivore	sap	buzz	nymph		fly				cicadas	
+earwig	insect	tiny	garden	omnivore	plants, insects		nymph		fly				earwigs	earwig
+stick insect	insect	tiny	forest	herbivore	leaves		nymph		climb				stick insects	
+aphid	insect	tiny	garden	herbivore	sap		nymph	colony					aphids, greenfly	
+weevil	insect	tiny	field, garden	herbivore	plants, grain		grub						weevils	
+louse	insect	tiny	hair	carnivore	blood		nymph			fly, jump			lice	
+horsefly	insect	tiny	field, farm	carnivore	blood, nectar	buzz	larva		fly				horseflies	
+gnat	insect	tiny	marsh, garden				larva	swarm	fly				gnats	gnat
+stag beetle	insect	tiny	forest	herbivore	sap		grub		fly				stag beetles	
+dung beetle	insect	tiny	grassland, farm		dung		grub		fly, dig				dung beetles	
+tick	arachnid	tiny	grassland, forest	carnivore	blood		larva		climb	jump			ticks	
+mite	arachnid	tiny	soil, house				larva						mites	
+tarantula	arachnid	small	rainforest, desert	carnivore	insects, lizards, mice		spiderling		climb			hair	tarantulas	
+centipede	myriapod	tiny	soil, forest	carnivore	insects, worms				run		-		centipedes	centipede
+millipede	myriapod	tiny	soil, forest	herbivore	dead leaves						-		millipedes	
+woodlouse	crustacean	tiny	garden, forest	herbivore	dead leaves, wood						14	shell	woodlice	
+crayfish	crustacean	small	river, lake	omnivore	plants, snails, insects				swim			shell		
+prawn	crustacean	tiny	sea, river	omnivore	plankton, algae				swim			shell	prawns	prawn
+krill	crustacean	tiny	sea	herbivore	plankton			swarm	swim		-	shell		
+barnacle	crustacean	tiny	sea, rock		plankton						-	shell	barnacles	
+hermit crab	crustacean	tiny	sea, beach	omnivore	algae, dead animals							shell	hermit crabs	
+clam	mollusc	tiny	sea, sand		plankton				dig			shell	clams	
+oyster	mollusc	small	sea		plankton							shell	oysters	oyster
+mussel	mollusc	tiny	sea, rock, river		plankton							shell	mussels	mussel
+scallop	mollusc	tiny	sea		plankton				swim			shell	scallops	
+cuttlefish	mollusc	small	sea	carnivore	crabs, fish, shrimps				swim			skin		
+sea urchin	echinoderm	tiny	sea	herbivore	algae							spines	sea urchins	
+coral	cnidarian	small	sea		plankton			colony					corals	coral
+sea anemone	cnidarian	tiny	sea	carnivore	fish, plankton								sea anemones, anemone	
+leech	worm	tiny	pond, river	carnivore	blood				swim		0	skin	leeches	
+cobra	reptile	medium	forest, grassland	carnivore	mice, frogs, snakes	hiss	hatchling		swim, climb		0		cobras	
+python	reptile	large	rainforest, grassland	carnivore	mice, birds, monkeys	hiss	hatchling		swim, climb		0		pythons	
+rattlesnake	reptile	small	desert, grassland	carnivore	mice, rats, lizards	rattle, hiss			swim		0		rattlesnakes	
+viper	reptile	small	forest, grassland	carnivore	mice, lizards, frogs	hiss			swim		0		vipers	
+anaconda	reptile	large	rainforest, river, swamp	carnivore	fish, birds, capybaras	hiss			swim		0		anacondas	
+boa	reptile	medium	rainforest	carnivore	mice, birds, lizards	hiss			swim, climb		0		boas, boa constrictor	
+mamba	reptile	medium	grassland, forest	carnivore	mice, birds	hiss	hatchling		climb		0		mambas	
+Komodo dragon	reptile	large	island, grassland	carnivore	deer, pigs, carrion	hiss	hatchling		run, swim				Komodo dragons	
+monitor lizard	reptile	medium	forest, grassland, desert	carnivore	insects, eggs, mice	hiss	hatchling		run, swim, climb				monitor lizards	
+sea turtle	reptile	large	sea	omnivore	seagrass, jellyfish		hatchling		swim			scales, shell	sea turtles	
+terrapin	reptile	small	pond, river	omnivore	fish, insects, plants		hatchling		swim			scales, shell	terrapins	
+caiman	reptile	large	river, swamp	carnivore	fish, birds		hatchling		swim				caimans	
+tree frog	amphibian	tiny	rainforest, forest	carnivore	insects	croak	tadpole		jump, climb, swim				tree frogs	
+bullfrog	amphibian	small	pond, lake	carnivore	insects, fish, frogs	croak	tadpole		jump, swim				bullfrogs	
+axolotl	amphibian	small	lake	carnivore	worms, insects, fish				swim				axolotls	
+bull	mammal	large	farm, field	herbivore	grass, hay	bellow	calf	herd	run	climb		hair	bulls	
+mule	mammal	large	farm	herbivore	grass, hay	bray	foal		run	climb		hair	mules	mule
+chipmunk	mammal	small	forest	omnivore	nuts, seeds, berries	chirp	pup		climb, dig				chipmunks	chipmunk
+gerbil	mammal	tiny	desert, house	herbivore	seeds, grass	squeak	pup		dig, jump				gerbils	
+ferret	mammal	small	house, grassland	carnivore	meat, mice, rabbits		kit		run, dig				ferrets	ferret
+weasel	mammal	small	forest, field	carnivore	mice, voles, birds		kit		run, climb, swim				weasels	
+stoat	mammal	small	forest, field	carnivore	rabbits, mice, birds		kit		run, climb, swim				stoats, ermine	stoat
+mink	mammal	small	river, lake	carnivore	fish, frogs, mice		kit		swim, climb				minks	
+mongoose	mammal	small	grassland, forest	carnivore	insects, snakes, eggs		pup		run, dig				mongooses	
+hare	mammal	small	field, grassland	herbivore	grass, bark		leveret		run, jump				hares	hare
+vole	mammal	tiny	field, meadow	herbivore	grass, roots, seeds	squeak	pup		dig, swim				voles	
+shrew	mammal	tiny	forest, garden	carnivore	insects, worms	squeak	pup		dig				shrews	shrew
+lemming	mammal	tiny	tundra	herbivore	grass, moss	squeak	pup		dig, swim				lemmings	
+groundhog	mammal	small	field, forest	herbivore	grass, plants, fruit	whistle	pup		dig, climb, swim				groundhogs, woodchuck	
+prairie dog	mammal	small	grassland	herbivore	grass, seeds	bark	pup	colony	dig				prairie dogs	
+chinchilla	mammal	small	mountain, house	herbivore	grass, seeds	squeak	kit		jump				chinchillas	
+capybara	mammal	medium	river, swamp	herbivore	grass, water plants		pup	herd	swim				capybaras	
+armadillo	mammal	small	grassland, forest	omnivore	insects, worms		pup		dig, swim			shell	armadillos	
+platypus	mammal	small	river	carnivore	worms, insects, shrimps		puggle		swim, dig				platypuses	
+echidna	mammal	small	forest, grassland	carnivore	ants, termites		puggle		dig			spines, fur	echidnas	
+opossum	mammal	small	forest, town	omnivore	insects, fruit, eggs	hiss	joey		climb, swim				opossums, possum, possums	
+wombat	mammal	medium	forest, grassland	herbivore	grass, roots		joey		dig, run				wombats	
+wallaby	mammal	medium	forest, grassland	herbivore	grass, leaves		joey	mob	jump		-		wallabies	
+Tasmanian devil	mammal	small	forest	carnivore	carrion, birds, insects	screech, growl	joey		run, climb, swim				Tasmanian devils	
+dingo	mammal	medium	desert, grassland	carnivore	kangaroos, rabbits, birds	howl	pup	pack	run				dingoes	
+coyote	mammal	medium	desert, grassland, forest	omnivore	rabbits, mice, fruit	howl	pup	pack	run, swim				coyotes	
+jackal	mammal	medium	grassland, desert	omnivore	mice, birds, fruit, carrion	howl	pup	pack	run				jackals	
+cougar	mammal	large	mountain, forest	carnivore	deer, rabbits	growl, purr	cub		run, jump, climb, swim				cougars, puma, pumas, mountain lion	
+panther	mammal	large	rainforest, forest	carnivore	deer, pigs, monkeys	growl, roar	cub		run, climb, swim				panthers, black panther	
+bobcat	mammal	small	forest, desert	carnivore	rabbits, mice, birds	growl	kitten		run, climb, jump				bobcats	
+ocelot	mammal	small	rainforest	carnivore	mice, birds, lizards	growl	kitten		climb, swim, run				ocelots	
+snow leopard	mammal	medium	mountain	carnivore	goats, sheep, hares	growl	cub		climb, jump, run				snow leopards	
+baboon	mammal	medium	grassland	omnivore	fruit, seeds, insects, roots	bark	infant	troop	climb, run		-		baboons	
+mandrill	mammal	medium	rainforest	omnivore	fruit, seeds, insects	grunt	infant	troop	climb		-		mandrills	
+lemur	mammal	small	forest	herbivore	fruit, leaves		infant	troop	climb, jump		-		lemurs	
+gibbon	mammal	small	rainforest	omnivore	fruit, leaves, insects	sing	infant		climb		-		gibbons	
+elk	mammal	large	forest, mountain	herbivore	grass, leaves, bark	bugle	calf	herd	run, swim	climb				
+gazelle	mammal	medium	grassland, desert	herbivore	grass, leaves		fawn	herd	run, jump	climb			gazelles	
+impala	mammal	medium	grassland	herbivore	grass, leaves		calf	herd	run, jump	climb			impalas	
+wildebeest	mammal	large	grassland	herbivore	grass	grunt	calf	herd	run	climb			wildebeests, gnu, gnus	
+okapi	mammal	large	rainforest	herbivore	leaves, fruit		calf		run	climb			okapis	
+tapir	mammal	large	rainforest	herbivore	leaves, fruit	whistle	calf		swim, run	climb		hair	tapirs	
+warthog	mammal	medium	grassland	omnivore	grass, roots, fruit	grunt	piglet		run, dig	climb		hair	warthogs	
+manatee	mammal	large	sea, river	herbivore	seagrass, water plants		calf		swim	climb	0	skin	manatees, sea cow	
+sea lion	mammal	large	sea, beach	carnivore	fish, squid	bark	pup	colony	swim		-		sea lions	
+narwhal	mammal	large	sea, ice	carnivore	fish, squid, shrimps	click, whistle	calf	pod	swim	climb	0	skin	narwhals	narwhal
+beluga	mammal	large	sea, ice	carnivore	fish, crabs, squid	click, whistle	calf	pod	swim	climb	0	skin	belugas, beluga whale, white whale	beluga
+orca	mammal	huge	sea	carnivore	fish, seals, whales	click, whistle	calf	pod	swim, jump	climb	0	skin	orcas, killer whale, killer whales	orca
+porpoise	mammal	medium	sea	carnivore	fish, squid	click	calf	pod	swim	climb	0	skin	porpoises	porpoise
+humpback whale	mammal	huge	sea	carnivore	krill, fish	sing	calf	pod	swim, jump	climb	0	skin	humpback whales, humpback	
+sperm whale	mammal	huge	sea	carnivore	squid, fish	click	calf	pod	swim	climb	0	skin	sperm whales	
+grizzly bear	mammal	large	forest, mountain	omnivore	fish, berries, roots, meat	growl, roar	cub		run, swim, climb				grizzly bears, grizzly	
+red panda	mammal	small	forest, mountain	herbivore	bamboo, fruit		cub		climb				red pandas	
+aardvark	mammal	medium	grassland	carnivore	ants, termites		cub		dig			hair	aardvarks	
+pangolin	mammal	small	forest, grassland	carnivore	ants, termites		pup		dig, climb			scales	pangolins	
+ibex	mammal	medium	mountain	herbivore	grass, leaves	bleat	kid	herd	climb, jump					
+musk ox	mammal	large	tundra	herbivore	grass, moss		calf	herd	run	climb		wool, hair	musk oxen	

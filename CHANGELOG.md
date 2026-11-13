@@ -34,3 +34,11 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 - `k.space.body`: a fact with both `moons` and `moons_about` is refused (an approximate number is a second key with
   the suffix `_about`, never next to the exact one).
 - `k.objects`: the 44 club football kits of Mulberry are left out; one kit stays, named `"football kit"`.
+
+### k.animals 1 and k.layouts 1, additions (2026-11-13, Round 9, not breaking)
+
+- `k.animals.animal`: `size` (tiny, small, medium, large, huge), `group` (the name of a group), `named` (`model`,
+  now on every animal); the class `myriapod`. Every animal that is not a bird or an insect and is not said to fly
+  has `cannot=fly`. The shards are now written by `tools/animals-core.mjs` from `sources/hand-core/animals.tsv`.
+- `k.layouts.anchor`: `part` is absent on the anchors of the new shard `anchors-points` (a place in the frame of a
+  drawing whose parts have no names).

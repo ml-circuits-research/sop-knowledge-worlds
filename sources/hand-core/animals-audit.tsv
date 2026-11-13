@@ -1,0 +1,206 @@
+# n	name	verdict	note
+# The audit of k.animals (Round 9 item 2, 2026-11-13): a seeded sample of 200 of the 314 rows of animals.tsv, each
+# printed as one line with all its values (as the shard states them, with the values the tool adds) and read again
+# by the language model that wrote them: right (every value), wrong (a value corrected in animals.tsv; the note
+# says which) or unclear (a value taken out). The other 114 rows were not read again; the corrections of the same
+# kind were applied to them where known (mandrill: legs left out).
+1	hen	right	
+2	rooster	right	
+3	goose	right	
+4	pigeon	right	
+5	dove	right	
+6	sparrow	right	
+7	crow	right	
+8	magpie	right	
+9	owl	right	
+10	hawk	right	
+11	parrot	right	
+12	penguin	right	
+13	ostrich	right	
+14	flamingo	right	
+15	peacock	right	
+16	pelican	right	
+17	robin	right	
+18	nightingale	right	
+19	canary	right	
+20	cuckoo	right	
+21	woodpecker	right	
+22	kingfisher	right	
+23	toucan	right	
+24	goldfish	right	
+25	tuna	wrong	the size was that of the k.scenes thing "tuna", a tin of tuna; a tuna is large
+26	trout	right	
+27	cod	right	
+28	herring	right	
+29	sardine	right	
+30	eel	right	
+31	clownfish	right	
+32	ant	right	
+33	bee	right	
+34	wasp	right	
+35	fly	right	
+36	ladybird	right	
+37	dragonfly	right	
+38	cockroach	right	
+39	flea	right	
+40	termite	right	
+41	firefly	right	
+42	spider	right	
+43	scorpion	right	
+44	crab	right	
+45	lobster	right	
+46	shrimp	right	
+47	snail	right	
+48	slug	right	
+49	squid	right	
+50	starfish	right	
+51	dog	right	
+52	cat	right	
+53	horse	right	
+54	sheep	right	
+55	pig	right	
+56	donkey	right	
+57	rabbit	right	
+58	hamster	right	
+59	squirrel	right	
+60	hedgehog	right	
+61	fox	right	
+62	wolf	right	
+63	bear	right	
+64	polar bear	right	
+65	panda	right	
+66	leopard	right	
+67	jaguar	right	
+68	lynx	right	
+69	giraffe	right	
+70	hippopotamus	right	
+71	rhinoceros	right	
+72	camel	right	
+73	llama	right	
+74	alpaca	right	
+75	moose	right	
+76	reindeer	right	
+77	buffalo	right	
+78	yak	right	
+79	ox	right	
+80	boar	right	
+81	kangaroo	right	
+82	monkey	right	
+83	gorilla	right	
+84	chimpanzee	right	
+85	sloth	right	
+86	skunk	right	
+87	badger	right	
+88	otter	right	
+89	porcupine	right	
+90	meerkat	right	
+91	dolphin	right	
+92	whale	right	
+93	blue whale	right	
+94	snake	right	
+95	lizard	right	
+96	crocodile	right	
+97	alligator	right	
+98	turtle	right	
+99	tortoise	right	
+100	newt	right	
+101	raven	right	
+102	blackbird	right	
+103	lark	right	
+104	bluebird	right	
+105	quail	right	
+106	pheasant	right	
+107	crane	right	
+108	ibis	right	
+109	puffin	right	
+110	albatross	right	
+111	cormorant	right	
+112	cockatoo	right	
+113	macaw	right	
+114	condor	right	
+115	osprey	right	
+116	wren	right	
+117	thrush	right	
+118	jay	right	
+119	cardinal	right	
+120	swift	right	
+121	loon	right	
+122	swordfish	wrong	a grown swordfish has no scales; covering taken out
+123	marlin	right	
+124	piranha	wrong	said carnivore; piranhas also eat plants: omnivore
+125	bass	right	
+126	mackerel	right	
+127	anchovy	right	
+128	flounder	right	
+129	stingray	right	
+130	pufferfish	wrong	said carnivore with algae as food: omnivore
+131	guppy	right	
+132	sturgeon	wrong	said skin; a sturgeon has bony plates: covering taken out
+133	minnow	right	
+134	great white shark	right	
+135	hammerhead shark	right	
+136	hornet	right	
+137	praying mantis	wrong	fly and jump are not true of all: taken out
+138	locust	unclear	the sound chirp is not sure: taken out
+139	stick insect	right	
+140	aphid	right	
+141	weevil	right	
+142	louse	right	
+143	gnat	right	
+144	stag beetle	right	
+145	dung beetle	right	
+146	tick	right	
+147	mite	right	
+148	tarantula	wrong	said tiny; a tarantula is larger than a mouse: small
+149	crayfish	right	
+150	prawn	right	
+151	barnacle	right	
+152	clam	right	
+153	mussel	right	
+154	scallop	right	
+155	leech	wrong	no legs said; an earthworm has legs=0, so has the leech
+156	cobra	right	
+157	python	right	
+158	rattlesnake	right	
+159	viper	right	
+160	anaconda	right	
+161	mamba	right	
+162	sea turtle	right	
+163	terrapin	right	
+164	axolotl	right	
+165	bull	right	
+166	gerbil	right	
+167	hare	right	
+168	shrew	right	
+169	lemming	right	
+170	groundhog	right	
+171	prairie dog	right	
+172	platypus	right	
+173	echidna	right	
+174	opossum	right	
+175	wallaby	right	
+176	dingo	right	
+177	coyote	right	
+178	jackal	right	
+179	cougar	right	
+180	panther	right	
+181	ocelot	right	
+182	baboon	wrong	legs=4 said; left out as for the other apes and monkeys
+183	lemur	wrong	the young is an infant, not a pup; legs left out as for the monkey
+184	gibbon	wrong	legs=4 said; left out as for the other apes and monkeys
+185	gazelle	right	
+186	wildebeest	right	
+187	okapi	right	
+188	tapir	right	
+189	manatee	right	
+190	sea lion	wrong	said cannot climb; sea lions climb onto rocks: taken out
+191	beluga	right	
+192	orca	right	
+193	porpoise	right	
+194	humpback whale	right	
+195	sperm whale	right	
+196	grizzly bear	right	
+197	aardvark	unclear	swim is not sure: taken out
+198	pangolin	right	
+199	ibex	right	
+200	musk ox	right	

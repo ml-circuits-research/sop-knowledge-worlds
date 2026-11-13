@@ -1978,3 +1978,48 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.parts.test.mjs` (4; the equality with the import when the raw files are there), 6 questions.
 - Numbers: k.parts 24 shards, 677 wires, 145,908 bytes. Catalog 22 worlds, 844 shards, vocab 21,336 words (21,253); 0 errors, 0 warnings. npm test 2,570 pass, 5 skipped, 0 fail.
 - After the rebase on R9.1 (anchors): catalog 22 worlds, 845 shards, vocab 21,343 words; npm test 2,576 pass, 5 skipped, 0 fail.
+
+## Round 9, item 2 (2026-11-13, first worker): `k.animals`, 314 animals with size class, group name and what they cannot do
+
+- **314 animals** (were 156): 158 new ones (30 birds, 22 fish, 34 invertebrates, 15 reptiles and amphibians, 57
+  mammals) and, for all, two new keys: `size` (tiny … huge, the classes of `k.scenes.thing`) and `group` (herd,
+  flock, pack, pride, school, swarm, colony, pod, troop, mob, covey, clan). New class `myriapod` (centipede,
+  millipede). With a value: legs 284, covering 269, habitat 313, eats 283, young 261, sound 117, group 110.
+- **Can it fly, swim, climb:** every animal that is not a bird or an insect and is not said to fly gets
+  `cannot=fly` (225 animals with the five flightless birds and the flea), so "can a cow fly" finds a fact; `cannot=climb` is said for 36 hoofed
+  and sea animals; `can=swim` and `can=climb` where sure. A missing value still says nothing.
+- **Source:** all model-labelled. WordNet has no such facts in a form a rule can trust; a Wikidata dump of the
+  needed properties is not on GitHub that I know of, and I did not search for one. The table is now
+  `sources/hand-core/animals.tsv` and the shards are written by `tools/animals-core.mjs` (the 156 older rows were
+  moved into the table by a script, value for value). **Every animal now carries `named=model`**, also the older
+  ones: they were written the same way.
+- **Which animals:** the frequency list × WordNet's animal senses gives many words that are not kinds of animal
+  (tom, queen, chick, pet, beef, tail; 420 words read), so the 158 were chosen by hand with that list next to me:
+  common kinds a child's book has. Words for the male, the female and the young (mare, stallion, calf) are not
+  animals of their own here; breeds of dog are left out.
+- **Audit:** a seeded sample of 200 of the 314 rows, each printed with all its values and read again
+  (`animals-audit.tsv`): 186 right, 12 wrong and corrected (tuna: its size was that of the tin of tuna in
+  `k.scenes`; swordfish and sturgeon: covering; piranha and pufferfish: diet; praying mantis: abilities;
+  tarantula: size; leech, lemur, gibbon, baboon: legs or young; sea lion: climb), 2 unclear and taken out (the
+  sound of the locust, an aardvark swimming). **Not read again:** the other 114 rows.
+- **Drawings looked at:** one sheet of the 24 objects that carry the name of a new animal: 22 show the animal and
+  are joined by `drawing`; `crane` is the machine and `kiwi` the fruit, so those two animals have no drawing.
+  135 of 314 animals have a drawing.
+- **Size in two places:** `k.scenes.thing` has a size class for drawable things, `k.animals.animal.size` for
+  animals. A test requires that they agree where the drawing has the name of the animal (117 compared). For the
+  second worker: `k.attributes.found` names `k.scenes.thing` for size; for animals without a drawing the value is
+  now in `k.animals.animal.size`.
+- **Natural questions (item 8):** new tool `tools/ask-sample.mjs` (domains in `tools/ask-domains.mjs`): all
+  questions of a domain (a thing × a template), shuffled with a fixed seed, the first 100; a question finds a fact
+  when its sopworld query is supported, by the name or by a `core.word` of it. Animals (314 animals × 11
+  templates: legs, covering, size, habitat, food, sound, young, group, fly, swim, climb): **before 53 of 100,
+  now 81**. The 19 without a fact: the sound (7) and the group (6) of animals that have none said, and single
+  missing values. The coverage report of the common things (`tools/coverage.mjs`) is unchanged: 680 by name, 477
+  with no drawing.
+- **Judgement that is mine:** every value; the size classes of animals without a drawing; which group name.
+- **What SOP Lang could not say:** "an animal that is not a bird or an insect cannot fly unless said" as a rule
+  that adds the fact (the tool writes the facts instead).
+- Tests: `tests/k.animals.test.mjs` (5), questions an-17 to an-22.
+- Numbers: k.animals 5 shards, 597 wires, 108,984 bytes (was 294 wires, 46,944 bytes). Catalog 21 worlds, 821
+  shards, vocab 21,510 words (21,260); 0 errors, 0 warnings.
+- npm test: 2,580 pass, 1 fail on the first run (`can=glide` is not an action of `k.actions`); flying fish `glide` and gibbon `swing` were taken out and the failing file and the animal, catalog, validation and question tests run again: pass. After the rebase on R8.5 (`k.parts`): the same files again, pass.
