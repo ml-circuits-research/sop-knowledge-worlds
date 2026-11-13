@@ -1856,3 +1856,30 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Not looked at: nothing was drawn or labelled here.
 - Numbers: catalog 19 worlds, 811 shards, vocab 21,044 words; 0 errors, 0 warnings. npm test 2,529 pass, 0 fail.
 - After the rebase on R8.2 (`k.attributes`, second worker): catalog 20 worlds, 817 shards, vocab 21,070 words; npm test 2,544 pass, 0 fail.
+
+## Round 8, item 4 (2026-11-13, second worker): `k.wearables`
+
+- **New world `k.wearables`** (version 1, exports `place`, `wearable`), 2 shards, 236 wires, 38,970 bytes, written
+  by `tools/wearables-core.mjs`.
+- **Places:** 15 places on the body (head, hair, eyes, ears, face, neck, body, back, waist, arms, wrist, hands,
+  finger, legs, feet), each with its box on the drawing `person` of `k.objects` (the anchor on the body;
+  `named=model`), `pair=true` for seven, the `k.faces` slot that draws what is worn there (head: hat; eyes:
+  glasses; ears: earrings; body: shoulders: the anchor on a face is the box of that slot, not copied), and the
+  `k.body` part.
+- **Wearables:** 105, with `worn_on`, `covers`, `layer`, `pair`, `worn_for`; 91 name a drawing in `k.objects`, 36
+  a `k.faces` variant (`face_slot`, `face`); hood and cardigan have neither. Everything the roles of `k.people`
+  wear is a wearable here or a word of one (a test); four were added for that (police helmet, military helmet,
+  football kit, and "hat Christmas" as a word of Christmas hat).
+- **Looked at:** the 15 boxes drawn in colour over `preview/person.svg`, one picture at 700 px: all lie where the
+  name says. The person is a stick figure: body, back and waist are boxes around the body line. **Not looked at:**
+  the 91 drawings named (a test checks that each exists; whether each shows the wearable was not looked at
+  again here, the names were taken from the object list); no wearable was composed onto the person.
+- **Not done:** drawings for the common ones that have none. Every common wearable I listed already had a drawing
+  except 14 (cowboy hat, sun hat, beret, party hat, chef hat, headscarf, hood, bow, monocle, cardigan, cape,
+  cloak, overalls, space suit), and 12 of these are `k.faces` variants.
+- **Judgement that is mine:** the places and their boxes; where each thing is worn, what it covers, its layer and
+  what it is worn for.
+- **What SOP Lang could not say:** that `worn_on` names a place, `drawing` an object of another world, `face` a
+  variant of the named slot: tests.
+- Tests: `tests/k.wearables.test.mjs` (4), 8 questions (`we-01` to `we-08`).
+- Numbers: k.wearables 2 shards, 236 wires, 38,970 bytes. Catalog 21 worlds, 819 shards, vocab 21,209 words (21,070); 0 errors, 0 warnings. npm test 2,552 pass, 5 skipped, 0 fail.

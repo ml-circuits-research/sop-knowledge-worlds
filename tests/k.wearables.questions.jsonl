@@ -1,0 +1,8 @@
+{"id":"we-01","ask":"where is a scarf worn","query":{"type":"k.wearables.wearable","where":{"name":"scarf"},"seek":"worn_on"},"expect":{"status":"supported","value":"neck"}}
+{"id":"we-02","ask":"what is worn on the eyes","query":{"type":"k.wearables.wearable","where":{"worn_on":"eyes"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["glasses","sunglasses","goggles","monocle","\"diving mask\""]}}
+{"id":"we-03","ask":"what does a coat also cover","query":{"type":"k.wearables.wearable","where":{"name":"coat"},"seek":"covers","mode":"list"},"expect":{"status":"supported","values":["arms","legs"]}}
+{"id":"we-04","ask":"which face variant shows a bobble hat","query":{"type":"k.wearables.wearable","where":{"name":"\"bobble hat\""},"seek":"face"},"expect":{"status":"supported","value":"beanie"}}
+{"id":"we-05","ask":"which face slot draws what is worn on the head","query":{"type":"k.wearables.place","where":{"name":"head"},"seek":"face_slot"},"expect":{"status":"supported","value":"hat"}}
+{"id":"we-06","ask":"what is worn for rain","query":{"type":"k.wearables.wearable","where":{"worn_for":"rain"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["hood","raincoat","boots","\"wellington boots\""]}}
+{"id":"we-07","ask":"are socks worn under or over","query":{"type":"k.wearables.wearable","where":{"name":"socks"},"seek":"layer"},"expect":{"status":"supported","value":"under"}}
+{"id":"we-08","ask":"where on the person drawing is the head place","query":{"type":"k.wearables.place","where":{"name":"head"},"seek":"y"},"expect":{"status":"supported","value":"1"}}

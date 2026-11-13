@@ -101,7 +101,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.attributes` (6 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (3 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards), `k.values` (7 shards)
+- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.attributes` (6 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (3 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards), `k.values` (7 shards), `k.wearables` (2 shards)
 
 ## mulberry-fa94a93
 
