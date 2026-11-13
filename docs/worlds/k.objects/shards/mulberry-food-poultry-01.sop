@@ -5,7 +5,7 @@
 
 # chicken breast
 @k.objects.mb459 k.objects.object name="chicken breast" core.source="mulberry fa94a93"
-@k.objects.mb459.p1 k.objects.part of="chicken breast" name=part1 shape=polygon x=7.7 y=34.1 w=84.5 h=49.9 z=1 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
+@k.objects.mb459.p1 k.objects.part of="chicken breast" name=meat named=model shape=polygon x=7.7 y=34.1 w=84.5 h=49.9 z=1 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
 @k.objects.mb459.p1.1 k.objects.point part=$k.objects.mb459.p1 n=1 x=8.1 y=54.5 core.source="mulberry fa94a93"
 @k.objects.mb459.p1.2 k.objects.point part=$k.objects.mb459.p1 n=2 x=7.7 y=48.7 core.source="mulberry fa94a93"
 @k.objects.mb459.p1.3 k.objects.point part=$k.objects.mb459.p1 n=3 x=8.4 y=46 core.source="mulberry fa94a93"
@@ -332,7 +332,7 @@
 
 # chicken leg
 @k.objects.mb462 k.objects.object name="chicken leg" core.source="mulberry fa94a93"
-@k.objects.mb462.p1 k.objects.part of="chicken leg" name=part1 shape=polygon x=69.5 y=47 w=22.5 h=12.5 z=1 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
+@k.objects.mb462.p1 k.objects.part of="chicken leg" name=bone named=model shape=polygon x=69.5 y=47 w=22.5 h=12.5 z=1 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
 @k.objects.mb462.p1.1 k.objects.point part=$k.objects.mb462.p1 n=1 x=88.7 y=47 core.source="mulberry fa94a93"
 @k.objects.mb462.p1.2 k.objects.point part=$k.objects.mb462.p1 n=2 x=90.8 y=47.4 core.source="mulberry fa94a93"
 @k.objects.mb462.p1.3 k.objects.point part=$k.objects.mb462.p1 n=3 x=92 y=49 core.source="mulberry fa94a93"
@@ -349,7 +349,7 @@
 @k.objects.mb462.p1.14 k.objects.point part=$k.objects.mb462.p1 n=14 x=70.9 y=49.8 core.source="mulberry fa94a93"
 @k.objects.mb462.p1.15 k.objects.point part=$k.objects.mb462.p1 n=15 x=69.5 y=47.9 core.source="mulberry fa94a93"
 @k.objects.mb462.p1.16 k.objects.point part=$k.objects.mb462.p1 n=16 x=82.2 y=48.4 core.source="mulberry fa94a93"
-@k.objects.mb462.p2 k.objects.part of="chicken leg" name=part2 shape=polygon x=7.7 y=37.6 w=64.1 h=35 z=2 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
+@k.objects.mb462.p2 k.objects.part of="chicken leg" name=meat named=model shape=polygon x=7.7 y=37.6 w=64.1 h=35 z=2 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
 @k.objects.mb462.p2.1 k.objects.point part=$k.objects.mb462.p2 n=1 x=69.5 y=47.9 core.source="mulberry fa94a93"
 @k.objects.mb462.p2.2 k.objects.point part=$k.objects.mb462.p2 n=2 x=70.9 y=49.8 core.source="mulberry fa94a93"
 @k.objects.mb462.p2.3 k.objects.point part=$k.objects.mb462.p2 n=3 x=71.8 y=53.2 core.source="mulberry fa94a93"
@@ -502,7 +502,7 @@
 
 # chicken nuggets
 @k.objects.mb464 k.objects.object name="chicken nuggets" core.source="mulberry fa94a93"
-@k.objects.mb464.p1 k.objects.part of="chicken nuggets" name=part1 shape=polygon x=16.3 y=52.9 w=37.2 h=35.1 z=1 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
+@k.objects.mb464.p1 k.objects.part of="chicken nuggets" name=bottom_nugget kind=nugget named=model shape=polygon x=16.3 y=52.9 w=37.2 h=35.1 z=1 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
 @k.objects.mb464.p1.1 k.objects.point part=$k.objects.mb464.p1 n=1 x=51.4 y=72.7 core.source="mulberry fa94a93"
 @k.objects.mb464.p1.2 k.objects.point part=$k.objects.mb464.p1 n=2 x=53.5 y=75.9 core.source="mulberry fa94a93"
 @k.objects.mb464.p1.3 k.objects.point part=$k.objects.mb464.p1 n=3 x=53 y=79 core.source="mulberry fa94a93"
@@ -520,7 +520,7 @@
 @k.objects.mb464.p1.15 k.objects.point part=$k.objects.mb464.p1 n=15 x=33.1 y=56.4 core.source="mulberry fa94a93"
 @k.objects.mb464.p1.16 k.objects.point part=$k.objects.mb464.p1 n=16 x=37.5 y=62.7 core.source="mulberry fa94a93"
 @k.objects.mb464.p1.17 k.objects.point part=$k.objects.mb464.p1 n=17 x=43.9 y=66.1 core.source="mulberry fa94a93"
-@k.objects.mb464.p2 k.objects.part of="chicken nuggets" name=part2 shape=polygon x=43.1 y=43.8 w=41.1 h=25.6 z=2 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
+@k.objects.mb464.p2 k.objects.part of="chicken nuggets" name=right_nugget kind=nugget named=model shape=polygon x=43.1 y=43.8 w=41.1 h=25.6 z=2 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
 @k.objects.mb464.p2.1 k.objects.point part=$k.objects.mb464.p2 n=1 x=84.2 y=46.8 core.source="mulberry fa94a93"
 @k.objects.mb464.p2.2 k.objects.point part=$k.objects.mb464.p2 n=2 x=83.1 y=55.7 core.source="mulberry fa94a93"
 @k.objects.mb464.p2.3 k.objects.point part=$k.objects.mb464.p2 n=3 x=84 y=61.1 core.source="mulberry fa94a93"
@@ -538,7 +538,7 @@
 @k.objects.mb464.p2.15 k.objects.point part=$k.objects.mb464.p2 n=15 x=68.6 y=45.2 core.source="mulberry fa94a93"
 @k.objects.mb464.p2.16 k.objects.point part=$k.objects.mb464.p2 n=16 x=79.2 y=43.8 core.source="mulberry fa94a93"
 @k.objects.mb464.p2.17 k.objects.point part=$k.objects.mb464.p2 n=17 x=82.2 y=44.4 core.source="mulberry fa94a93"
-@k.objects.mb464.p3 k.objects.part of="chicken nuggets" name=part3 shape=polygon x=18.9 y=20.1 w=41.7 h=25.7 z=3 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
+@k.objects.mb464.p3 k.objects.part of="chicken nuggets" name=top_nugget kind=nugget named=model shape=polygon x=18.9 y=20.1 w=41.7 h=25.7 z=3 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
 @k.objects.mb464.p3.1 k.objects.point part=$k.objects.mb464.p3 n=1 x=59.8 y=35.1 core.source="mulberry fa94a93"
 @k.objects.mb464.p3.2 k.objects.point part=$k.objects.mb464.p3 n=2 x=60.6 y=40.8 core.source="mulberry fa94a93"
 @k.objects.mb464.p3.3 k.objects.point part=$k.objects.mb464.p3 n=3 x=56.7 y=43.7 core.source="mulberry fa94a93"
@@ -965,7 +965,7 @@
 @k.objects.mb1542.p4.3 k.objects.point part=$k.objects.mb1542.p4 n=3 x=64.8 y=14.5 core.source="mulberry fa94a93"
 @k.objects.mb1542.p4.4 k.objects.point part=$k.objects.mb1542.p4 n=4 x=73.8 y=10.8 core.source="mulberry fa94a93"
 @k.objects.mb1542.p4.5 k.objects.point part=$k.objects.mb1542.p4 n=5 x=74 y=10.1 core.source="mulberry fa94a93"
-@k.objects.mb1542.p5 k.objects.part of="goose roast" name=part5 shape=polygon x=8.3 y=32.5 w=67 h=35.1 z=5 colour=orange rgb="#FAA41F" core.source="mulberry fa94a93"
+@k.objects.mb1542.p5 k.objects.part of="goose roast" name=body named=model shape=polygon x=8.3 y=32.5 w=67 h=35.1 z=5 colour=orange rgb="#FAA41F" core.source="mulberry fa94a93"
 @k.objects.mb1542.p5.1 k.objects.point part=$k.objects.mb1542.p5 n=1 x=75.3 y=58.6 core.source="mulberry fa94a93"
 @k.objects.mb1542.p5.2 k.objects.point part=$k.objects.mb1542.p5 n=2 x=74.8 y=61.9 core.source="mulberry fa94a93"
 @k.objects.mb1542.p5.3 k.objects.point part=$k.objects.mb1542.p5 n=3 x=72.4 y=63.7 core.source="mulberry fa94a93"
@@ -1304,7 +1304,7 @@
 
 # wishbone
 @k.objects.mb3078 k.objects.object name=wishbone core.source="mulberry fa94a93"
-@k.objects.mb3078.p1 k.objects.part of=wishbone name=part1 shape=polygon x=7 y=9.1 w=86.2 h=80.7 z=1 colour=white rgb="#FFFFC2" core.source="mulberry fa94a93"
+@k.objects.mb3078.p1 k.objects.part of=wishbone name=bone named=model shape=polygon x=7 y=9.1 w=86.2 h=80.7 z=1 colour=white rgb="#FFFFC2" core.source="mulberry fa94a93"
 @k.objects.mb3078.p1.1 k.objects.point part=$k.objects.mb3078.p1 n=1 x=92.9 y=11.5 core.source="mulberry fa94a93"
 @k.objects.mb3078.p1.2 k.objects.point part=$k.objects.mb3078.p1 n=2 x=93.2 y=18.3 core.source="mulberry fa94a93"
 @k.objects.mb3078.p1.3 k.objects.point part=$k.objects.mb3078.p1 n=3 x=85.5 y=34.4 core.source="mulberry fa94a93"

@@ -49,7 +49,7 @@
 @k.objects.mb479.p4.7 k.objects.point part=$k.objects.mb479.p4 n=7 x=58 y=44.9 core.source="mulberry fa94a93"
 @k.objects.mb479.p4.8 k.objects.point part=$k.objects.mb479.p4 n=8 x=55.3 y=47 core.source="mulberry fa94a93"
 @k.objects.mb479.p4.9 k.objects.point part=$k.objects.mb479.p4 n=9 x=54.3 y=46.3 core.source="mulberry fa94a93"
-@k.objects.mb479.p5 k.objects.part of="chips packet" name=part5 shape=polygon x=25 y=35.7 w=48.3 h=56.4 z=5 colour=red rgb="#ED1D31" core.source="mulberry fa94a93"
+@k.objects.mb479.p5 k.objects.part of="chips packet" name=packet named=model shape=polygon x=25 y=35.7 w=48.3 h=56.4 z=5 colour=red rgb="#ED1D31" core.source="mulberry fa94a93"
 @k.objects.mb479.p5.1 k.objects.point part=$k.objects.mb479.p5 n=1 x=25.7 y=36.5 core.source="mulberry fa94a93"
 @k.objects.mb479.p5.2 k.objects.point part=$k.objects.mb479.p5 n=2 x=31.4 y=41.6 core.source="mulberry fa94a93"
 @k.objects.mb479.p5.3 k.objects.point part=$k.objects.mb479.p5 n=3 x=37.6 y=45.8 core.source="mulberry fa94a93"
@@ -493,7 +493,7 @@
 
 # green beans
 @k.objects.mb1562 k.objects.object name="green beans" core.source="mulberry fa94a93"
-@k.objects.mb1562.p1 k.objects.part of="green beans" name=part1 shape=polygon x=54.7 y=20.2 w=14.2 h=68.6 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb1562.p1 k.objects.part of="green beans" name=right_bean kind=bean named=model shape=polygon x=54.7 y=20.2 w=14.2 h=68.6 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb1562.p1.1 k.objects.point part=$k.objects.mb1562.p1 n=1 x=66.5 y=20.2 core.source="mulberry fa94a93"
 @k.objects.mb1562.p1.2 k.objects.point part=$k.objects.mb1562.p1 n=2 x=67.8 y=21.2 core.source="mulberry fa94a93"
 @k.objects.mb1562.p1.3 k.objects.point part=$k.objects.mb1562.p1 n=3 x=68.6 y=22.7 core.source="mulberry fa94a93"
@@ -510,7 +510,7 @@
 @k.objects.mb1562.p1.14 k.objects.point part=$k.objects.mb1562.p1 n=14 x=61.9 y=31.6 core.source="mulberry fa94a93"
 @k.objects.mb1562.p1.15 k.objects.point part=$k.objects.mb1562.p1 n=15 x=64.5 y=22.9 core.source="mulberry fa94a93"
 @k.objects.mb1562.p1.16 k.objects.point part=$k.objects.mb1562.p1 n=16 x=65.7 y=20.6 core.source="mulberry fa94a93"
-@k.objects.mb1562.p2 k.objects.part of="green beans" name=part2 shape=polygon x=42.3 y=14.1 w=14.2 h=68.6 z=2 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb1562.p2 k.objects.part of="green beans" name=middle_bean kind=bean named=model shape=polygon x=42.3 y=14.1 w=14.2 h=68.6 z=2 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb1562.p2.1 k.objects.point part=$k.objects.mb1562.p2 n=1 x=54.1 y=14.1 core.source="mulberry fa94a93"
 @k.objects.mb1562.p2.2 k.objects.point part=$k.objects.mb1562.p2 n=2 x=55.4 y=15 core.source="mulberry fa94a93"
 @k.objects.mb1562.p2.3 k.objects.point part=$k.objects.mb1562.p2 n=3 x=56.2 y=16.5 core.source="mulberry fa94a93"
@@ -527,7 +527,7 @@
 @k.objects.mb1562.p2.14 k.objects.point part=$k.objects.mb1562.p2 n=14 x=49.6 y=25.5 core.source="mulberry fa94a93"
 @k.objects.mb1562.p2.15 k.objects.point part=$k.objects.mb1562.p2 n=15 x=52.1 y=16.8 core.source="mulberry fa94a93"
 @k.objects.mb1562.p2.16 k.objects.point part=$k.objects.mb1562.p2 n=16 x=53.3 y=14.4 core.source="mulberry fa94a93"
-@k.objects.mb1562.p3 k.objects.part of="green beans" name=part3 shape=polygon x=29.2 y=20.2 w=14.2 h=68.6 z=3 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb1562.p3 k.objects.part of="green beans" name=left_bean kind=bean named=model shape=polygon x=29.2 y=20.2 w=14.2 h=68.6 z=3 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb1562.p3.1 k.objects.point part=$k.objects.mb1562.p3 n=1 x=41 y=20.2 core.source="mulberry fa94a93"
 @k.objects.mb1562.p3.2 k.objects.point part=$k.objects.mb1562.p3 n=2 x=42.3 y=21.2 core.source="mulberry fa94a93"
 @k.objects.mb1562.p3.3 k.objects.point part=$k.objects.mb1562.p3 n=3 x=43.1 y=22.7 core.source="mulberry fa94a93"
@@ -653,7 +653,7 @@
 @k.objects.mb1811.p5.9 k.objects.point part=$k.objects.mb1811.p5 n=9 x=48.7 y=40.4 core.source="mulberry fa94a93"
 @k.objects.mb1811.p5.10 k.objects.point part=$k.objects.mb1811.p5 n=10 x=45.4 y=44.3 core.source="mulberry fa94a93"
 @k.objects.mb1811.p5.11 k.objects.point part=$k.objects.mb1811.p5 n=11 x=45.4 y=39.8 core.source="mulberry fa94a93"
-@k.objects.mb1811.p6 k.objects.part of=leek name=part6 shape=polygon x=42.4 y=40.4 w=11.2 h=52.1 z=6 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
+@k.objects.mb1811.p6 k.objects.part of=leek name=stem named=model shape=polygon x=42.4 y=40.4 w=11.2 h=52.1 z=6 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
 @k.objects.mb1811.p6.1 k.objects.point part=$k.objects.mb1811.p6 n=1 x=53.5 y=86.9 core.source="mulberry fa94a93"
 @k.objects.mb1811.p6.2 k.objects.point part=$k.objects.mb1811.p6 n=2 x=53.6 y=90.8 core.source="mulberry fa94a93"
 @k.objects.mb1811.p6.3 k.objects.point part=$k.objects.mb1811.p6 n=3 x=52.5 y=92.5 core.source="mulberry fa94a93"
@@ -1073,7 +1073,7 @@
 
 # mange tout
 @k.objects.mb1886 k.objects.object name="mange tout" core.source="mulberry fa94a93"
-@k.objects.mb1886.p1 k.objects.part of="mange tout" name=part1 shape=polygon x=37.8 y=10.2 w=26.9 h=83.1 z=1 colour=green rgb="#6EBE44" core.source="mulberry fa94a93"
+@k.objects.mb1886.p1 k.objects.part of="mange tout" name=pod named=model shape=polygon x=37.8 y=10.2 w=26.9 h=83.1 z=1 colour=green rgb="#6EBE44" core.source="mulberry fa94a93"
 @k.objects.mb1886.p1.1 k.objects.point part=$k.objects.mb1886.p1 n=1 x=44.2 y=86.5 core.source="mulberry fa94a93"
 @k.objects.mb1886.p1.2 k.objects.point part=$k.objects.mb1886.p1 n=2 x=45.2 y=58.1 core.source="mulberry fa94a93"
 @k.objects.mb1886.p1.3 k.objects.point part=$k.objects.mb1886.p1 n=3 x=38.6 y=27.4 core.source="mulberry fa94a93"

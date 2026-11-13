@@ -5,7 +5,7 @@
 
 # butternut squash
 @k.objects.mb317 k.objects.object name="butternut squash" core.source="mulberry fa94a93"
-@k.objects.mb317.p1 k.objects.part of="butternut squash" name=part1 shape=polygon x=23.6 y=20.7 w=51.7 h=72.5 z=1 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
+@k.objects.mb317.p1 k.objects.part of="butternut squash" name=squash named=model shape=polygon x=23.6 y=20.7 w=51.7 h=72.5 z=1 colour=yellow rgb="#F6CC4B" core.source="mulberry fa94a93"
 @k.objects.mb317.p1.1 k.objects.point part=$k.objects.mb317.p1 n=1 x=39.4 y=21.7 core.source="mulberry fa94a93"
 @k.objects.mb317.p1.2 k.objects.point part=$k.objects.mb317.p1 n=2 x=47 y=20.7 core.source="mulberry fa94a93"
 @k.objects.mb317.p1.3 k.objects.point part=$k.objects.mb317.p1 n=3 x=54.6 y=22.1 core.source="mulberry fa94a93"
@@ -36,7 +36,7 @@
 @k.objects.mb317.p1.28 k.objects.point part=$k.objects.mb317.p1 n=28 x=29.5 y=30.1 core.source="mulberry fa94a93"
 @k.objects.mb317.p1.29 k.objects.point part=$k.objects.mb317.p1 n=29 x=32 y=26.1 core.source="mulberry fa94a93"
 @k.objects.mb317.p1.30 k.objects.point part=$k.objects.mb317.p1 n=30 x=35.2 y=23.4 core.source="mulberry fa94a93"
-@k.objects.mb317.p2 k.objects.part of="butternut squash" name=part2 shape=polygon x=38.6 y=6.7 w=11.2 h=15 z=2 colour=brown rgb="#9E5C26" core.source="mulberry fa94a93"
+@k.objects.mb317.p2 k.objects.part of="butternut squash" name=stalk named=model shape=polygon x=38.6 y=6.7 w=11.2 h=15 z=2 colour=brown rgb="#9E5C26" core.source="mulberry fa94a93"
 @k.objects.mb317.p2.1 k.objects.point part=$k.objects.mb317.p2 n=1 x=39.4 y=21.7 core.source="mulberry fa94a93"
 @k.objects.mb317.p2.2 k.objects.point part=$k.objects.mb317.p2 n=2 x=38.6 y=18.8 core.source="mulberry fa94a93"
 @k.objects.mb317.p2.3 k.objects.point part=$k.objects.mb317.p2 n=3 x=41.7 y=14.3 core.source="mulberry fa94a93"
@@ -502,7 +502,7 @@
 @k.objects.mb414.p3.2 k.objects.point part=$k.objects.mb414.p3 n=2 x=50.2 y=32.7 core.source="mulberry fa94a93"
 @k.objects.mb414.p3.3 k.objects.point part=$k.objects.mb414.p3 n=3 x=48.6 y=32.5 core.source="mulberry fa94a93"
 @k.objects.mb414.p3.4 k.objects.point part=$k.objects.mb414.p3 n=4 x=45.2 y=27.9 core.source="mulberry fa94a93"
-@k.objects.mb414.p4 k.objects.part of=celeriac name=part4 shape=polygon x=23.4 y=28.9 w=52.7 h=54.1 z=4 colour=white rgb="#FFFFC2" core.source="mulberry fa94a93"
+@k.objects.mb414.p4 k.objects.part of=celeriac name=root named=model shape=polygon x=23.4 y=28.9 w=52.7 h=54.1 z=4 colour=white rgb="#FFFFC2" core.source="mulberry fa94a93"
 @k.objects.mb414.p4.1 k.objects.point part=$k.objects.mb414.p4 n=1 x=23.6 y=55.2 core.source="mulberry fa94a93"
 @k.objects.mb414.p4.2 k.objects.point part=$k.objects.mb414.p4 n=2 x=28.6 y=40.6 core.source="mulberry fa94a93"
 @k.objects.mb414.p4.3 k.objects.point part=$k.objects.mb414.p4 n=3 x=35.3 y=32 core.source="mulberry fa94a93"
@@ -835,7 +835,7 @@
 
 # chilli pepper
 @k.objects.mb468 k.objects.object name="chilli pepper" core.source="mulberry fa94a93"
-@k.objects.mb468.p1 k.objects.part of="chilli pepper" name=part1 shape=polygon x=41.3 y=12.7 w=7.3 h=21 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb468.p1 k.objects.part of="chilli pepper" name=stalk named=model shape=polygon x=41.3 y=12.7 w=7.3 h=21 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb468.p1.1 k.objects.point part=$k.objects.mb468.p1 n=1 x=45.2 y=21.8 core.source="mulberry fa94a93"
 @k.objects.mb468.p1.2 k.objects.point part=$k.objects.mb468.p1 n=2 x=45.8 y=25.7 core.source="mulberry fa94a93"
 @k.objects.mb468.p1.3 k.objects.point part=$k.objects.mb468.p1 n=3 x=48.6 y=33.7 core.source="mulberry fa94a93"
@@ -845,7 +845,7 @@
 @k.objects.mb468.p1.7 k.objects.point part=$k.objects.mb468.p1 n=7 x=44 y=28.4 core.source="mulberry fa94a93"
 @k.objects.mb468.p1.8 k.objects.point part=$k.objects.mb468.p1 n=8 x=45.1 y=17.9 core.source="mulberry fa94a93"
 @k.objects.mb468.p1.9 k.objects.point part=$k.objects.mb468.p1 n=9 x=46.2 y=12.7 core.source="mulberry fa94a93"
-@k.objects.mb468.p2 k.objects.part of="chilli pepper" name=part2 shape=polygon x=36.8 y=32.7 w=27.3 h=58.9 z=2 colour=red rgb="#FF001C" core.source="mulberry fa94a93"
+@k.objects.mb468.p2 k.objects.part of="chilli pepper" name=pepper named=model shape=polygon x=36.8 y=32.7 w=27.3 h=58.9 z=2 colour=red rgb="#FF001C" core.source="mulberry fa94a93"
 @k.objects.mb468.p2.1 k.objects.point part=$k.objects.mb468.p2 n=1 x=48.6 y=33.7 core.source="mulberry fa94a93"
 @k.objects.mb468.p2.2 k.objects.point part=$k.objects.mb468.p2 n=2 x=48.7 y=35.6 core.source="mulberry fa94a93"
 @k.objects.mb468.p2.3 k.objects.point part=$k.objects.mb468.p2 n=3 x=47.3 y=42.8 core.source="mulberry fa94a93"

@@ -220,7 +220,7 @@
 
 # baby oil
 @k.objects.mb80 k.objects.object name="baby oil" core.source="mulberry fa94a93"
-@k.objects.mb80.p1 k.objects.part of="baby oil" name=part1 shape=polygon x=30.5 y=21.7 w=38 h=72.2 z=1 colour=white rgb="#A3D9FF" core.source="mulberry fa94a93"
+@k.objects.mb80.p1 k.objects.part of="baby oil" name=bottle named=model shape=polygon x=30.5 y=21.7 w=38 h=72.2 z=1 colour=white rgb="#A3D9FF" core.source="mulberry fa94a93"
 @k.objects.mb80.p1.1 k.objects.point part=$k.objects.mb80.p1 n=1 x=56 y=22 core.source="mulberry fa94a93"
 @k.objects.mb80.p1.2 k.objects.point part=$k.objects.mb80.p1 n=2 x=62.9 y=24.5 core.source="mulberry fa94a93"
 @k.objects.mb80.p1.3 k.objects.point part=$k.objects.mb80.p1 n=3 x=65.3 y=27.1 core.source="mulberry fa94a93"
@@ -257,7 +257,7 @@
 @k.objects.mb80.p2.9 k.objects.point part=$k.objects.mb80.p2 n=9 x=52.6 y=45.7 core.source="mulberry fa94a93"
 @k.objects.mb80.p2.10 k.objects.point part=$k.objects.mb80.p2 n=10 x=55.8 y=41.3 core.source="mulberry fa94a93"
 @k.objects.mb80.p2.11 k.objects.point part=$k.objects.mb80.p2 n=11 x=55.7 y=46 core.source="mulberry fa94a93"
-@k.objects.mb80.p3 k.objects.part of="baby oil" name=part3 shape=polygon x=42.5 y=9.1 w=13.5 h=16.3 z=3 colour=purple rgb="#0B00EA" core.source="mulberry fa94a93"
+@k.objects.mb80.p3 k.objects.part of="baby oil" name=cap named=model shape=polygon x=42.5 y=9.1 w=13.5 h=16.3 z=3 colour=purple rgb="#0B00EA" core.source="mulberry fa94a93"
 @k.objects.mb80.p3.1 k.objects.point part=$k.objects.mb80.p3 n=1 x=42.8 y=21.6 core.source="mulberry fa94a93"
 @k.objects.mb80.p3.2 k.objects.point part=$k.objects.mb80.p3 n=2 x=43 y=9.1 core.source="mulberry fa94a93"
 @k.objects.mb80.p3.3 k.objects.point part=$k.objects.mb80.p3 n=3 x=45.1 y=10.6 core.source="mulberry fa94a93"
@@ -517,7 +517,7 @@
 @k.objects.mb81.p7.12 k.objects.point part=$k.objects.mb81.p7 n=12 x=63.1 y=11.4 core.source="mulberry fa94a93"
 @k.objects.mb81.p7.13 k.objects.point part=$k.objects.mb81.p7 n=13 x=65.3 y=7.6 core.source="mulberry fa94a93"
 @k.objects.mb81.p7.14 k.objects.point part=$k.objects.mb81.p7 n=14 x=65.5 y=11.7 core.source="mulberry fa94a93"
-@k.objects.mb81.p8 k.objects.part of="baby powder" name=part8 shape=polygon x=14.6 y=21.3 w=35.3 h=70.9 z=8 colour=white rgb="#A3D9FF" core.source="mulberry fa94a93"
+@k.objects.mb81.p8 k.objects.part of="baby powder" name=bottle named=model shape=polygon x=14.6 y=21.3 w=35.3 h=70.9 z=8 colour=white rgb="#A3D9FF" core.source="mulberry fa94a93"
 @k.objects.mb81.p8.1 k.objects.point part=$k.objects.mb81.p8 n=1 x=49.9 y=31.9 core.source="mulberry fa94a93"
 @k.objects.mb81.p8.2 k.objects.point part=$k.objects.mb81.p8 n=2 x=49.9 y=82 core.source="mulberry fa94a93"
 @k.objects.mb81.p8.3 k.objects.point part=$k.objects.mb81.p8 n=3 x=49 y=85.3 core.source="mulberry fa94a93"
@@ -997,7 +997,7 @@
 
 # comb
 @k.objects.mb560 k.objects.object name=comb core.source="mulberry fa94a93"
-@k.objects.mb560.p1 k.objects.part of=comb name=part1 shape=polygon x=9.8 y=28.4 w=81 h=42.6 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb560.p1 k.objects.part of=comb name=comb named=model shape=polygon x=9.8 y=28.4 w=81 h=42.6 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb560.p1.1 k.objects.point part=$k.objects.mb560.p1 n=1 x=90.8 y=44 core.source="mulberry fa94a93"
 @k.objects.mb560.p1.2 k.objects.point part=$k.objects.mb560.p1 n=2 x=13.2 y=71 core.source="mulberry fa94a93"
 @k.objects.mb560.p1.3 k.objects.point part=$k.objects.mb560.p1 n=3 x=10.6 y=63.3 core.source="mulberry fa94a93"
