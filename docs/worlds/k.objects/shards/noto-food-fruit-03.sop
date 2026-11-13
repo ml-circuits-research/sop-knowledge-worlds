@@ -214,7 +214,7 @@
 
 # tomato
 @k.objects.u1f345 k.objects.object name=tomato core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f345.p1 k.objects.part of=tomato name=part1 shape=polygon x=2.8 y=22.4 w=91 h=69.3 z=1 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
+@k.objects.u1f345.p1 k.objects.part of=tomato name=fruit named=model shape=polygon x=2.8 y=22.4 w=91 h=69.3 z=1 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p1.1 k.objects.point part=$k.objects.u1f345.p1 n=1 x=93.6 y=54.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p1.2 k.objects.point part=$k.objects.u1f345.p1 n=2 x=93.8 y=44.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p1.3 k.objects.point part=$k.objects.u1f345.p1 n=3 x=92.5 y=39.4 core.source="noto-emoji 99701e0"
@@ -241,7 +241,7 @@
 @k.objects.u1f345.p1.24 k.objects.point part=$k.objects.u1f345.p1 n=24 x=25.6 y=89.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p1.25 k.objects.point part=$k.objects.u1f345.p1 n=25 x=51 y=91.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p1.26 k.objects.point part=$k.objects.u1f345.p1 n=26 x=81.7 y=78.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f345.p2 k.objects.part of=tomato name=fruit named=model shape=polygon x=19.6 y=36.3 w=77.2 h=57.9 z=2 colour=red rgb="#DC0D27" core.source="noto-emoji 99701e0"
+@k.objects.u1f345.p2 k.objects.part of=tomato name=part2 shape=polygon x=19.6 y=36.3 w=77.2 h=57.9 z=2 colour=red rgb="#DC0D27" core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p2.1 k.objects.point part=$k.objects.u1f345.p2 n=1 x=64.1 y=93 core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p2.2 k.objects.point part=$k.objects.u1f345.p2 n=2 x=73.4 y=89.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f345.p2.3 k.objects.point part=$k.objects.u1f345.p2 n=3 x=81.8 y=84.5 core.source="noto-emoji 99701e0"

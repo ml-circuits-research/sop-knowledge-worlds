@@ -172,7 +172,6 @@ rabbit face	14	whisker5	whisker
 rabbit face	15	whisker6	whisker
 hedgehog	1	spines	
 hedgehog	2	front_leg	leg
-hedgehog	3	head	
 hedgehog	7	eye	
 hedgehog	8	nose	
 hedgehog	9		detail
@@ -214,7 +213,6 @@ jellyfish	5	body
 jellyfish	11		detail
 squid	4	fin	
 squid	5	arms	
-squid	10	body	
 squid	13	left_eye	eye
 squid	14	right_eye	eye
 snake	1	tail	
@@ -222,9 +220,7 @@ snake	6	belly
 snake	7	tongue	
 snake	8	left_eye	eye
 snake	9	right_eye	eye
-snake	10	body	
 T-Rex	3	arm	
-T-Rex	16	body	
 thread	1	bottom	
 thread	8	top	
 thread	9		detail
@@ -238,7 +234,6 @@ thread	16		detail
 military medal	3	ribbon	
 military medal	5	star	
 2nd place medal	1	right_ribbon	ribbon
-2nd place medal	6	medal	
 2nd place medal	8	left_ribbon	ribbon
 blue book	2	pages	
 blue book	5	cover	
@@ -255,9 +250,9 @@ newspaper	10	picture
 glasses	1	left_lens	lens
 glasses	2	right_lens	lens
 glasses	3	frame	
-safety vest	2	stripe1	stripe
+safety vest	2	left_panel	stripe
 safety vest	3	stripe3	stripe
-safety vest	6	stripe2	stripe
+safety vest	6	right_panel	stripe
 safety vest	7	stripe4	stripe
 scarf	1	scarf	
 scarf	5	fringe2	fringe
@@ -318,7 +313,6 @@ teacup without handle	2	cup
 teacup without handle	3		detail
 teacup without handle	5	tea	
 teacup without handle	6		detail
-cocktail glass	3	glass	
 cocktail glass	13	olive	
 clinking glasses	2	drink1	drink
 clinking glasses	4	drink2	drink
@@ -421,7 +415,7 @@ hot dog	5	mustard
 cooking	7	egg_white	
 green salad	15	bowl	
 canned food	8	label	
-ice cream	4	stem	
+ice cream	4	glass	
 ice cream	5	base	
 ice cream	6	bowl	
 ice cream	16	cherry	
@@ -463,11 +457,11 @@ bed	7	left_leg	leg
 bed	11	blanket	
 shower	1	pipe	
 shower	4	head	
-shower	9	jet3	jet
-shower	11	jet2	jet
 shower	12	jet1	jet
-shower	14	jet4	jet
-shower	16	jet5	jet
+shower	10	jet2	jet
+shower	8	jet3	jet
+shower	13	jet4	jet
+shower	15	jet5	jet
 lotion bottle	1	bottle	
 lotion bottle	2	cap	
 lotion bottle	5	pump	
@@ -526,7 +520,6 @@ clipboard	7		detail
 clipboard	8		detail
 clipboard	9		detail
 clipboard	13	clip	
-cigarette	1	filter	
 cigarette	2	cigarette	
 nazar amulet	1	amulet	
 nazar amulet	2		detail
@@ -559,8 +552,6 @@ office building	12	window8	window
 office building	13	window9	window
 office building	15	left_door	door
 office building	16	right_door	door
-bank	10	left_column	column
-bank	12	right_column	column
 bank	13	door	
 bank	16	dollar_sign	
 school	1	building	
@@ -598,7 +589,6 @@ kaaba	10	band
 hibiscus	5	flower	
 hibiscus	6		detail
 hyacinth	3	stem	
-hyacinth	12	left_leaf	leaf
 deciduous tree	1	crown	
 deciduous tree	2		detail
 deciduous tree	5	trunk	
@@ -666,7 +656,6 @@ umbrella on ground	3	pole
 umbrella on ground	4	umbrella	
 umbrella on ground	6	tip	
 comet	1	tail	
-softball	1	ball	
 softball	5		detail
 softball	6		detail
 softball	7		detail
@@ -679,7 +668,7 @@ softball	13		detail
 softball	14		detail
 softball	15		detail
 softball	16		detail
-rugby football	1	ball	
+softball	2	ball	
 rugby football	4		detail
 rugby football	5		detail
 rugby football	6		detail
@@ -687,12 +676,12 @@ rugby football	7		detail
 rugby football	8		detail
 rugby football	9		detail
 rugby football	10		detail
+rugby football	2	ball	
 cricket game	3	bat	
 cricket game	4	handle	
 cricket game	9	ball	
 ping pong	3	handle	
 ping pong	4	paddle	
-ping pong	5	ball	
 hourglass done	1	bottom	
 hourglass done	4	glass	
 hourglass done	6	top	
@@ -701,10 +690,8 @@ hourglass done	8		detail
 stopwatch	2	button	
 stopwatch	15	hand	
 hammer	1	handle	
-hammer	2	head	
 hammer and wrench	1	wrench	
 hammer and wrench	7	handle	
-hammer and wrench	8	head	
 wrench	1	wrench	
 wrench	3		detail
 wrench	4		detail
@@ -895,7 +882,6 @@ lady beetle	14	spot4	spot
 lady beetle	15	spot5	spot
 lady beetle	16	spot6	spot
 spider	1	legs	
-spider	7	body	
 spider	9	left_eye	eye
 spider	10	right_eye	eye
 spider web	1	web	
@@ -923,7 +909,7 @@ orangutan	2	body
 guide dog	1	tail	
 guide dog	4	body	
 guide dog	5	collar	
-guide dog	8	head	
+guide dog	8	eye	
 guide dog	9	nose	
 guide dog	10	ear	
 guide dog	13	handle	
@@ -989,7 +975,6 @@ unicorn	9	eye
 unicorn	10	mane	
 deer	2	tail	
 deer	4	body	
-deer	7	head	
 deer	9	right_antler	antler
 deer	10	left_antler	antler
 cow face	1	right_horn	horn
@@ -1032,7 +1017,7 @@ pig	6	ear
 pig	9	nose	
 pig	11	right_eye	eye
 pig	12	left_eye	eye
-boar	6	body	
+boar	6	head	
 boar	7	ear	
 boar	8	tusk	
 boar	10	nose	
@@ -1175,11 +1160,8 @@ crab	11	leg6	leg
 crab	12	leg7	leg
 crab	13	left_claw	claw
 crab	14	right_claw	claw
-lobster	1	body	
 lobster	3	left_antenna	antenna
 lobster	4	right_antenna	antenna
-lobster	15	right_claw	claw
-lobster	16	left_claw	claw
 shrimp	1	body	
 shrimp	2	antenna2	antenna
 shrimp	3	antenna1	antenna
@@ -1196,12 +1178,10 @@ dragon face	7	left_horn	horn
 dragon face	8	right_horn	horn
 dragon face	13	right_eye	eye
 dragon face	14	left_eye	eye
-sauropod	3	body	
 sewing needle	2	needle	
 sewing needle	5	thread	
 yarn	1	ball	
 yarn	5	thread	
-trophy	4	cup	
 trophy	12	base	
 trophy	13	plate	
 sports medal	1	right_ribbon	ribbon
@@ -1369,7 +1349,7 @@ fork and knife with plate	1	plate
 fork and knife with plate	6	fork	
 fork and knife	2	fork	
 fork and knife	8	blade	
-spoon	2	handle	
+spoon	2	spoon	
 jar	1	jar	
 jar	2		detail
 jar	4	lid	
@@ -1404,7 +1384,6 @@ pouring liquid	5	liquid
 cup with straw	1	cup	
 cup with straw	2		detail
 cup with straw	5	straw	
-beverage box	5	straw	
 beverage box	8	box	
 beverage box	9		detail
 mate	1	cup	
@@ -1484,7 +1463,6 @@ ticket	7		detail
 ticket	8		detail
 bento box	1	box	
 rice cracker	2	cracker	
-rice ball	1	seaweed	
 rice ball	2	rice	
 rice ball	3		detail
 rice ball	4		detail
@@ -1542,7 +1520,6 @@ green apple	5	stem
 green apple	6	leaf	
 peach	1	right_leaf	leaf
 peach	2	left_leaf	leaf
-cherries	1	left_cherry	cherry
 cherries	3	right_cherry	cherry
 cherries	4		detail
 cherries	5		detail
@@ -1550,7 +1527,7 @@ cherries	6		detail
 cherries	7		detail
 cherries	8	stem	
 cherries	9	leaf	
-strawberry	2	fruit	
+cherries	2	left_cherry	cherry
 strawberry	5	leaves	
 strawberry	6	stem	
 strawberry	7		detail
@@ -1561,6 +1538,7 @@ strawberry	11		detail
 strawberry	12		detail
 strawberry	13		detail
 strawberry	14		detail
+strawberry	1	fruit	
 kiwi fruit	1	skin	
 kiwi fruit	2	flesh	
 kiwi fruit	3	core	
@@ -1577,10 +1555,10 @@ kiwi fruit	13		detail
 kiwi fruit	14		detail
 kiwi fruit	15		detail
 kiwi fruit	16		detail
-tomato	2	fruit	
 tomato	3		detail
 tomato	5	leaves	
 tomato	6	stem	
+tomato	1	fruit	
 olive	1	leaf1	leaf
 olive	2	olive1	olive
 olive	3	olive2	olive
@@ -1597,7 +1575,6 @@ bagel	6	hole
 pancakes	13	syrup	
 pancakes	15	butter	
 meat on bone	2	bone	
-meat on bone	5	meat	
 poultry leg	2	bone	
 poultry leg	4	meat	
 hamburger	1	bottom_bun	bun
@@ -1693,7 +1670,6 @@ potato	9		detail
 potato	10		detail
 potato	11		detail
 ear of corn	1	husk	
-ear of corn	3	corn	
 hot pepper	2	pepper	
 hot pepper	3		detail
 hot pepper	4		detail
@@ -2040,16 +2016,15 @@ open mailbox with raised flag	4	letter
 open mailbox with raised flag	9	flag	
 open mailbox with lowered flag	1	post	
 open mailbox with lowered flag	3	box	
-yen banknote	2	band	
 yen banknote	5	symbol	
-dollar banknote	2	band	
+yen banknote	4	band	
 dollar banknote	4	symbol	
-euro banknote	2	band	
+dollar banknote	6	band	
 euro banknote	6	symbol	
-pound banknote	2	band	
+euro banknote	4	band	
 pound banknote	6	symbol	
+pound banknote	4	band	
 money with wings	2	left_wing	wing
-money with wings	6	symbol	
 money with wings	10	band	
 money with wings	12	right_wing	wing
 radio	1	antenna	
@@ -2133,7 +2108,7 @@ funeral urn	1	urn
 funeral urn	3		detail
 funeral urn	4		detail
 funeral urn	5		detail
-hamsa	8	pupil	
+hamsa	8	eye	
 mobile phone with arrow	1	arrow	
 telephone	1	handset	
 telephone	8	button6	button
@@ -2153,9 +2128,6 @@ stadium	3	right_flag	flag
 stadium	4	left_flag	flag
 stadium	5	stands	
 classical building	6	roof	
-classical building	14	column1	column
-classical building	15	column2	column
-classical building	16	column3	column
 derelict house	3	chimney	
 derelict house	6	left_window	window
 derelict house	10	door	
@@ -2228,18 +2200,17 @@ globe with meridians	14		detail
 globe with meridians	15		detail
 compass	8	needle_north	needle
 compass	9	needle_south	needle
-compass	15	centre	
+compass	15	dial	
 tent	2	tent	
 tent	4	door	
 tent	5	peg1	peg
 tent	6	peg2	peg
 tent	7	peg3	peg
 cityscape	1	sky	
-sunrise over mountains	1	sun	
-sunrise	1	sun	
 sunrise	14	sea	
 sunrise	15		detail
 sunrise	16		detail
+sunrise	2	sun	
 sunset	2	sky	
 sunset	3	sun	
 bridge at night	1	sky	
@@ -2451,7 +2422,6 @@ bell	8		detail
 soccer ball	11	patch1	patch
 soccer ball	13	patch3	patch
 soccer ball	14	patch2	patch
-baseball	1	ball	
 baseball	5		detail
 baseball	6		detail
 baseball	7		detail
@@ -2464,8 +2434,7 @@ baseball	13		detail
 baseball	14		detail
 baseball	15		detail
 baseball	16		detail
-basketball	1	ball	
-american football	1	ball	
+baseball	2	ball	
 american football	5	top_stripe	stripe
 american football	6	bottom_stripe	stripe
 american football	8		detail
@@ -2474,6 +2443,7 @@ american football	10		detail
 american football	11		detail
 american football	12		detail
 american football	13		detail
+american football	2	ball	
 tennis	14	handle	
 tennis	16	ball	
 flying disc	6	disc	
@@ -2481,7 +2451,6 @@ flying disc	7		detail
 flying disc	8		detail
 flying disc	9		detail
 flying disc	10		detail
-bowling	2	ball	
 ice hockey	1	stick	
 ice hockey	8	puck	
 lacrosse	10	ball	
@@ -2745,8 +2714,8 @@ vertical traffic light	1	box
 vertical traffic light	2	red_light	light
 vertical traffic light	5	green_light	light
 vertical traffic light	8	yellow_light	light
-stop sign	2	sign	
 stop sign	3		detail
+stop sign	1	sign	
 anchor	1	anchor	
 sailboat	1	mast	
 sailboat	12	hull	
@@ -2776,3 +2745,6 @@ memo	3		detail
 memo	4		detail
 memo	5		detail
 memo	7	tip	
+sunrise over mountains	2	sun	
+basketball	2	ball	
+sunrise over mountains	13	mountains	

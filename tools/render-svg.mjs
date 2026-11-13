@@ -4,6 +4,7 @@
 //                                           list docs/gallery.html shows), to
 //                                           docs/worlds/k.objects/preview/ (or out-dir)
 //   node tools/render-svg.mjs --label <out-dir> [object ...]   labelling pictures: parts outlined and numbered
+// renderHighlighted (used by tools/audit-part-names.mjs): the object next to itself with one part highlighted.
 import { mkdirSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { fullWorld, scanWorlds, readHeader, WORLDS_DIR } from './lib/worlds.mjs';
@@ -139,6 +140,26 @@ export function renderLabelled(world, object) {
   const legend = rows.map((r, i) => `  <text x="1" y="${f(104 + i * 4)}" font-size="3" font-family="sans-serif">${esc(r)}</text>`).join('\n');
   const height = 100 + (rows.length ? rows.length * 4 + 2 : 0);
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 ${height}" width="320" height="${f(height * 3.2)}">\n  <title>${esc(object)}</title>\n  <rect width="100" height="${height}" fill="#fafafa"/>\n${body}\n${outlines}\n${numbers}\n${legend}\n</svg>\n`;
+}
+
+// An audit picture: the object as it is drawn (left) and the same object faded with only part number `n` (draw order,
+// from 1) in full colour, outlined, on top (right); underneath the part's name and the object's name.
+// compact: only the faded picture with the part, and two short lines of text (`label`, then the name and the object).
+export function renderHighlighted(world, object, n, { compact = false, label = '' } = {}) {
+  const parts = partsOf(world, object);
+  const p = parts[n - 1];
+  if (!p) throw new Error(`${object}: no part ${n}`);
+  const body = parts.map((q) => `  ${renderPart(q)}`).join('\n');
+  const thick = outlineOf(p).replace('stroke-width="0.5"', 'stroke-width="1.2"');
+  const faded = (opacity) => `  <rect width="100" height="100" fill="#fafafa"/>\n  <g opacity="${opacity}">\n${body}\n  </g>\n  ${renderPart(p)}\n  ${thick}\n`;
+  if (compact) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 122" width="200" height="244">\n  <title>${esc(object)}: ${esc(p.name)}</title>\n  <rect width="100" height="122" fill="#fff"/>\n${faded(0.3)}`
+      + `  <text x="1" y="110" font-size="9.5" font-family="sans-serif"><tspan fill="#555">${esc(label)}</tspan> <tspan font-weight="bold" fill="#c00060">${esc(p.name)}</tspan></text>\n`
+      + `  <text x="1" y="120" font-size="8.5" font-family="sans-serif">${esc(object)}</text>\n</svg>\n`;
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204 114" width="408" height="228">\n  <title>${esc(object)}: ${esc(p.name)}</title>\n  <rect width="204" height="114" fill="#fff"/>\n  <rect width="100" height="100" fill="#fafafa"/>\n${body}\n`
+    + `  <g transform="translate(104 0)">\n${faded(0.22)}  </g>\n`
+    + `  <text x="2" y="109" font-size="8" font-family="sans-serif"><tspan font-weight="bold" fill="#c00060">${esc(p.name)}</tspan> of ${esc(object)}</text>\n</svg>\n`;
 }
 
 export const objectsOf = (world) => world.ofType('k.objects.object').map((o) => one(o, 'name')).sort();

@@ -1,0 +1,203 @@
+# The audit of R4.1 (2026-11-13): 200 named parts drawn by `node tools/audit-part-names.mjs --seed 4` from the three
+# part-names.tsv files as they were at commit f33df47, each looked at with only that part highlighted.
+# n	source	object	part	name	verdict (right, wrong, unclear)
+1	noto-emoji	turkey	10	wattle	right
+2	noto-emoji	ant	8	eye	right
+3	noto-emoji	ant	10	legs	right
+4	noto-emoji	cricket	3	right_antenna	right
+5	noto-emoji	black cat	8	right_ear	right
+6	noto-emoji	leopard	12	spot1	right
+7	noto-emoji	camel	8	body	right
+8	noto-emoji	mouse face	14	right_ear	right
+9	noto-emoji	squid	13	left_eye	right
+10	noto-emoji	dress	1	skirt	right
+11	noto-emoji	crown	9	jewel5	right
+12	noto-emoji	billed cap	4	button	right
+13	noto-emoji	printer	7	body	right
+14	noto-emoji	clinking glasses	14	base2	right
+15	noto-emoji	jack-o-lantern	11	right_eye	right
+16	noto-emoji	cheese wedge	13	hole1	right
+17	noto-emoji	hot dog	4	bun	right
+18	noto-emoji	pool 8 ball	3	circle	right
+19	noto-emoji	shower	11	jet2	wrong
+20	noto-emoji	unlocked	2	keyhole	right
+21	noto-emoji	briefcase	13	handle	right
+22	noto-emoji	nazar amulet	5	pupil	right
+23	noto-emoji	bank	10	left_column	wrong
+24	noto-emoji	school	8	window3	right
+25	noto-emoji	barber pole	7	top	right
+26	noto-emoji	kaaba	10	band	right
+27	noto-emoji	sun behind large cloud	4	ray2	right
+28	noto-emoji	softball	1	ball	wrong
+29	noto-emoji	hourglass done	4	glass	right
+30	noto-emoji	hammer and wrench	1	wrench	right
+31	noto-emoji	helicopter	5	tail	right
+32	noto-emoji	tractor	1	exhaust	right
+33	noto-emoji	pen	2	tip	right
+34	noto-emoji	front-facing baby chick	1	right_leg	right
+35	noto-emoji	black bird	2	right_leg	right
+36	noto-emoji	snail	3	body	right
+37	noto-emoji	honeybee	12	head	right
+38	noto-emoji	monkey	8	left_ear	right
+39	noto-emoji	lion	10	nose	right
+40	noto-emoji	tiger	1	tail	right
+41	noto-emoji	cow face	5	muzzle	right
+42	noto-emoji	water buffalo	6	body	right
+43	noto-emoji	ram	14	nose	right
+44	noto-emoji	rabbit	10	eye	right
+45	noto-emoji	beaver	5	left_foot	right
+46	noto-emoji	spouting whale	4	body	right
+47	noto-emoji	blowfish	16	fin	right
+48	noto-emoji	lobster	15	right_claw	wrong
+49	noto-emoji	shrimp	1	body	right
+50	noto-emoji	necktie	6	tie	right
+51	noto-emoji	woman’s boot	8	zip	right
+52	noto-emoji	battery	4	plus	right
+53	noto-emoji	hot beverage	4	saucer	right
+54	noto-emoji	beverage box	5	straw	wrong
+55	noto-emoji	Japanese dolls	16	left_face	right
+56	noto-emoji	carp streamer	1	pole	right
+57	noto-emoji	takeout box	1	box	right
+58	noto-emoji	cherries	1	left_cherry	wrong
+59	noto-emoji	birthday cake	5	strawberry5	right
+60	noto-emoji	birthday cake	11	glow	right
+61	noto-emoji	eggplant	4	stem	unclear
+62	noto-emoji	magic wand	6	star1	right
+63	noto-emoji	video game	10	right_stick	right
+64	noto-emoji	video game	13	button3	right
+65	noto-emoji	slot machine	1	lever	right
+66	noto-emoji	elevator	6	head1	right
+67	noto-emoji	sponge	2	sponge	right
+68	noto-emoji	television	1	left_antenna	right
+69	noto-emoji	camera with flash	1	button	right
+70	noto-emoji	locked	7	shackle	right
+71	noto-emoji	violin	15	bow	right
+72	noto-emoji	movie camera	14	left_reel	right
+73	noto-emoji	yen banknote	2	band	wrong
+74	noto-emoji	money with wings	6	symbol	wrong
+75	noto-emoji	money with wings	12	right_wing	unclear
+76	noto-emoji	stadium	3	right_flag	right
+77	noto-emoji	classical building	15	column2	wrong
+78	noto-emoji	Japanese post office	2	post	unclear
+79	noto-emoji	factory	1	left_chimney	right
+80	noto-emoji	wedding	16	heart	right
+81	noto-emoji	compass	15	centre	wrong
+82	noto-emoji	tent	6	peg2	right
+83	noto-emoji	roller coaster	1	pillar1	right
+84	noto-emoji	cherry blossom	1	petals	right
+85	noto-emoji	wilted flower	8	leaf1	right
+86	noto-emoji	first quarter moon face	8	cheek	right
+87	noto-emoji	sun with face	2	rays	right
+88	noto-emoji	cloud with rain	1	cloud	right
+89	noto-emoji	watch	14	hour_hand	right
+90	noto-emoji	bow and arrow	4	arrow	right
+91	noto-emoji	bow and arrow	5	tip	right
+92	noto-emoji	small airplane	13	window	right
+93	noto-emoji	airplane arrival	13	tail	right
+94	noto-emoji	suspension railway	15	window2	right
+95	noto-emoji	tram car	15	window1	right
+96	noto-emoji	fire engine	9	left_wheel	right
+97	noto-emoji	horizontal traffic light	1	box	right
+98	noto-emoji	stop sign	2	sign	wrong
+99	noto-emoji	sailboat	1	mast	right
+100	noto-emoji	ship	1	right_funnel	right
+101	openmoji	poppy	3	centre	right
+102	openmoji	spouting-orca	1	body	right
+103	openmoji	spouting-orca	2	patch	right
+104	openmoji	live-shrimp	1	tail	right
+105	openmoji	champignon brown	1	stem	right
+106	openmoji	pepper mill	1	knob	right
+107	openmoji	gardening gloves	1	back_glove	right
+108	openmoji	lawn mower	2	body	right
+109	openmoji	spade	1	handle	right
+110	openmoji	first aid bag	2	cross	right
+111	openmoji	patient file	5	cross	right
+112	openmoji	liver	2	small_lobe	right
+113	openmoji	stomach	1	stomach	right
+114	openmoji	bed linen	1	pillow	right
+115	openmoji	armchair	4	seat	right
+116	openmoji	picture	6	right_mountain	right
+117	openmoji	french press	3	coffee	right
+118	openmoji	desk lamp	4	bulb	right
+119	openmoji	led	4	right_leg	right
+120	openmoji	calculator	13	button1	right
+121	openmoji	calculator	4	button7	right
+122	openmoji	calculator	7	button9	right
+123	openmoji	pagoda	12	door	right
+124	openmoji	oncoming fire engine	7	left_headlight	right
+125	openmoji	oncoming fire engine	6	right_headlight	right
+126	openmoji	oncoming fire engine	15	right_wheel	right
+127	openmoji	cafeteria	2	table	right
+128	openmoji	space shuttle	6	orbiter	right
+129	openmoji	space shuttle	2	left_booster	right
+130	openmoji	viennese coffee house	4	window	right
+131	mulberry	walrus	2	flipper	unclear
+132	mulberry	chimpanzee	4	body	right
+133	mulberry	reindeer	6	ear	right
+134	mulberry	bee bumble	11	left_wing	right
+135	mulberry	recycling bins	2	right_bin	right
+136	mulberry	vertical blinds	1	rail	right
+137	mulberry	wheelie bin	1	wheel	right
+138	mulberry	chest of drawers	3	top	right
+139	mulberry	standard lamp	2	base	right
+140	mulberry	stool	5	seat	right
+141	mulberry	bonfire	9	flame	right
+142	mulberry	mens toilet	3	pedestal	right
+143	mulberry	closed shop	6	roof	right
+144	mulberry	shop	7	roof	right
+145	mulberry	hankerchief	3	cloth	right
+146	mulberry	cap	3	peak	right
+147	mulberry	ear muffs	1	left_muff	right
+148	mulberry	mittens	2	left_mitten	right
+149	mulberry	petticoat	8	body	right
+150	mulberry	tie	3	knot	right
+151	mulberry	tie	5	collar	right
+152	mulberry	beer	3	head	right
+153	mulberry	cranberry juice	1	juice	right
+154	mulberry	milk	1	bottle	right
+155	mulberry	lamp	3	base	wrong
+156	mulberry	cctv	5	lens	right
+157	mulberry	remote control	6	yellow_button	right
+158	mulberry	mobile phone case	12	screen	right
+159	mulberry	cereal bran	4	bowl	right
+160	mulberry	pastry	1	pastry	right
+161	mulberry	creme fraiche	4	lid	unclear
+162	mulberry	egg boiled	1	egg	right
+163	mulberry	egg on toast	4	yolk	right
+164	mulberry	blackberry	1	right_leaf	right
+165	mulberry	sauce apple	13	apple	right
+166	mulberry	cereal bowl	4	inside	right
+167	mulberry	chopping board	3	blade	right
+168	mulberry	dish cloth	1	cloth	right
+169	mulberry	toaster	9	dial	right
+170	mulberry	meatballs and spaghetti	5	meatball3	right
+171	mulberry	pate	9	top	right
+172	mulberry	sandwich ham	1	top_slice	right
+173	mulberry	soup pea	15	spoon	right
+174	mulberry	soup tomato	15	spoon	right
+175	mulberry	soup vegetable	7	soup	right
+176	mulberry	takeaway burger and chips	10	bottom_bun	right
+177	mulberry	tin can	5	can	right
+178	mulberry	noodles	4	bowl	right
+179	mulberry	milkshake strawberry	1	foam	right
+180	mulberry	pie apple	3	dish	right
+181	mulberry	pie apple	13	apple	right
+182	mulberry	strawberry jam	3	lid	right
+183	mulberry	butternut squash	2	stalk	right
+184	mulberry	olives	4	right_olive	right
+185	mulberry	sweet potato	1	potato	right
+186	mulberry	cotton bud	1	left_tip	right
+187	mulberry	emery board	3	board	right
+188	mulberry	hairspray	4	can	right
+189	mulberry	first aid box	2	box	unclear
+190	mulberry	bubble mixture	3	cap	right
+191	mulberry	doll	4	body	right
+192	mulberry	drumsticks	3	bottom_stick	right
+193	mulberry	clover	1	leaf1	right
+194	mulberry	fabric	4	cloth	right
+195	mulberry	chisel	1	handle	right
+196	mulberry	paint	1	tin	right
+197	mulberry	paddles	1	left_paddle	right
+198	mulberry	arch lever file	1	front	right
+199	mulberry	glue	3	bottle	right
+200	mulberry	hole punch	7	lever	right

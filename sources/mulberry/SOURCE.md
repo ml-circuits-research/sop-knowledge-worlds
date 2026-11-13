@@ -25,4 +25,4 @@
   survive the conversion (31: drawn black, or only loose lines are left); and 44 club football kits (reviewer's
   answer to Q16). One kit stays: `renamed.tsv` (Mulberry name, object name) keeps "football kit blank" as "football kit".
 - **Counts (2026-11-13):** 3,435 symbols; 1,930 not things, 118 variants, 237 names already taken, 193 excluded;
-  **958 objects**, 13,498 parts (1,167 named, 6,334 details), 135,852 points, 149 shards.
+  **958 objects**, 13,498 parts (1,166 named, 6,334 details), 135,852 points, 149 shards.

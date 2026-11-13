@@ -61,3 +61,14 @@ test('OpenMoji and Mulberry objects have names too; strokes and outlines are det
   assert.equal(kettle.find((p) => p.name === 'body')?.shape, 'polygon');
   for (const p of kettle.filter((q) => q.shape === 'line')) assert.equal(tok(p.attrs.kind?.[0]), 'detail', p.name);
 });
+
+test('the audit sample of named parts is seeded: 200 parts over the three sources, the same for the same seed', async () => {
+  const { sample, namedRows, SOURCES } = await import('../tools/audit-part-names.mjs');
+  const rows = Object.fromEntries(SOURCES.map((s) => [s, namedRows(readFileSync(join(REPO, 'sources', s, 'part-names.tsv'), 'utf8'))]));
+  const a = sample(rows, { seed: 4 });
+  assert.equal(a.length, 200);
+  assert.deepEqual(a, sample(rows, { seed: 4 }));
+  assert.notDeepEqual(a, sample(rows, { seed: 5 }));
+  for (const s of SOURCES) assert.ok(a.filter((r) => r.source === s).length >= 30, s);
+  for (const r of a) assert.equal(partsOf(world, r.object)[r.n - 1]?.name, r.name);
+});

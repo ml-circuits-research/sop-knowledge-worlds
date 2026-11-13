@@ -397,7 +397,7 @@
 
 # rice ball
 @k.objects.u1f359 k.objects.object name="rice ball" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f359.p1 k.objects.part of="rice ball" name=seaweed named=model shape=polygon x=2.4 y=7.2 w=94.8 h=84.8 z=1 colour=white rgb="#CDCBBF" core.source="noto-emoji 99701e0"
+@k.objects.u1f359.p1 k.objects.part of="rice ball" name=part1 shape=polygon x=2.4 y=7.2 w=94.8 h=84.8 z=1 colour=white rgb="#CDCBBF" core.source="noto-emoji 99701e0"
 @k.objects.u1f359.p1.1 k.objects.point part=$k.objects.u1f359.p1 n=1 x=49.6 y=7.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f359.p1.2 k.objects.point part=$k.objects.u1f359.p1 n=2 x=53.4 y=7.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f359.p1.3 k.objects.point part=$k.objects.u1f359.p1 n=3 x=57.4 y=8.8 core.source="noto-emoji 99701e0"

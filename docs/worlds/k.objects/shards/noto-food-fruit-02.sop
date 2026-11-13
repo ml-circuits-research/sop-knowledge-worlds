@@ -743,7 +743,7 @@
 
 # cherries
 @k.objects.u1f352 k.objects.object name=cherries core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f352.p1 k.objects.part of=cherries name=left_cherry kind=cherry named=model shape=polygon x=14.2 y=59.2 w=72.1 h=38.8 z=1 colour=red rgb="#AF0C1A" core.source="noto-emoji 99701e0"
+@k.objects.u1f352.p1 k.objects.part of=cherries name=part1 shape=polygon x=14.2 y=59.2 w=72.1 h=38.8 z=1 colour=red rgb="#AF0C1A" core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p1.1 k.objects.point part=$k.objects.u1f352.p1 n=1 x=61.8 y=61.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p1.2 k.objects.point part=$k.objects.u1f352.p1 n=2 x=51.5 y=59.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p1.3 k.objects.point part=$k.objects.u1f352.p1 n=3 x=49.4 y=61.6 core.source="noto-emoji 99701e0"
@@ -773,7 +773,7 @@
 @k.objects.u1f352.p1.27 k.objects.point part=$k.objects.u1f352.p1 n=27 x=84.2 y=64 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p1.28 k.objects.point part=$k.objects.u1f352.p1 n=28 x=83.3 y=63 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p1.29 k.objects.point part=$k.objects.u1f352.p1 n=29 x=80.1 y=62 core.source="noto-emoji 99701e0"
-@k.objects.u1f352.p2 k.objects.part of=cherries name=part2 shape=polygon x=17.5 y=57.1 w=35.4 h=30.2 z=2 colour=red rgb="#DC0D27" core.source="noto-emoji 99701e0"
+@k.objects.u1f352.p2 k.objects.part of=cherries name=left_cherry kind=cherry named=model shape=polygon x=17.5 y=57.1 w=35.4 h=30.2 z=2 colour=red rgb="#DC0D27" core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p2.1 k.objects.point part=$k.objects.u1f352.p2 n=1 x=34.7 y=57.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p2.2 k.objects.point part=$k.objects.u1f352.p2 n=2 x=28.8 y=57.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p2.3 k.objects.point part=$k.objects.u1f352.p2 n=3 x=26.3 y=58.5 core.source="noto-emoji 99701e0"
@@ -928,7 +928,7 @@
 
 # strawberry
 @k.objects.u1f353 k.objects.object name=strawberry core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f353.p1 k.objects.part of=strawberry name=part1 shape=polygon x=12.5 y=12.5 w=77.2 h=76.1 z=1 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
+@k.objects.u1f353.p1 k.objects.part of=strawberry name=fruit named=model shape=polygon x=12.5 y=12.5 w=77.2 h=76.1 z=1 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p1.1 k.objects.point part=$k.objects.u1f353.p1 n=1 x=57.1 y=12.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p1.2 k.objects.point part=$k.objects.u1f353.p1 n=2 x=43.3 y=12.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p1.3 k.objects.point part=$k.objects.u1f353.p1 n=3 x=12.6 y=46.6 core.source="noto-emoji 99701e0"
@@ -946,7 +946,7 @@
 @k.objects.u1f353.p1.15 k.objects.point part=$k.objects.u1f353.p1 n=15 x=83.2 y=29.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p1.16 k.objects.point part=$k.objects.u1f353.p1 n=16 x=75.8 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p1.17 k.objects.point part=$k.objects.u1f353.p1 n=17 x=66.7 y=15.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f353.p2 k.objects.part of=strawberry name=fruit named=model shape=polygon x=19.4 y=65.3 w=71.7 h=31.8 z=2 colour=red rgb="#DC0D27" core.source="noto-emoji 99701e0"
+@k.objects.u1f353.p2 k.objects.part of=strawberry name=part2 shape=polygon x=19.4 y=65.3 w=71.7 h=31.8 z=2 colour=red rgb="#DC0D27" core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p2.1 k.objects.point part=$k.objects.u1f353.p2 n=1 x=52.5 y=91.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p2.2 k.objects.point part=$k.objects.u1f353.p2 n=2 x=66.2 y=96.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p2.3 k.objects.point part=$k.objects.u1f353.p2 n=3 x=71.3 y=97.1 core.source="noto-emoji 99701e0"

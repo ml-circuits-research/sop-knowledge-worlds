@@ -736,3 +736,50 @@ as the join from a fact to its drawing), Q18 (how to say an approximate number),
   301 shards, 296,943 wires, 35,854,358 bytes. Catalog: 10 worlds, 649 shards, vocab 17,769 words; 0 errors,
   0 warnings. npm test 2,143 pass, 0 fail (141 s).
 - Looked at: the previews of "football kit blank" and of one club kit. Nothing else.
+
+## R4.1 (2026-11-13): audit of the model's part names
+
+- **Tool:** `tools/audit-part-names.mjs` (seeded sample; `--all <source>` for every named part of a source; `--only`)
+  and `renderHighlighted` in `tools/render-svg.mjs`: the object as drawn, and next to it the object faded with only
+  the one part in full colour and outlined, the name underneath.
+- **Sample:** seed 4, 200 named parts of the 3,347 at f33df47: at least 30 a source, the rest in proportion:
+  Noto 100 of 2,027, OpenMoji 30 of 153, Mulberry 70 of 1,167. Looked at all 200 on 17 contact sheets of 12
+  (408 px a pair). The sample with every verdict is `sources/part-names-audit.tsv`.
+
+| Source | Sampled | Right | Wrong | Unclear | Wrong rate |
+| --- | --- | --- | --- | --- | --- |
+| Noto Emoji | 100 | 86 | 11 | 3 | **11%** |
+| OpenMoji | 30 | 30 | 0 | 0 | 0% |
+| Mulberry | 70 | 66 | 1 | 3 | 1.4% |
+| all | 200 | 182 | 12 | 6 | 6% |
+
+- **What was wrong.** Nearly always the same mistake: the name of the whole went to a layer under or over it. Noto
+  draws a thing as a dark base shape with the lit shape on top, so `ball`, `fruit`, `sign`, `band`, `left_cherry` sat
+  on the shade (softball, stop sign, yen banknote, cherries); dark gaps between columns were named columns (bank,
+  classical building); a thin edge was named a jet (shower), a small mark a claw or a symbol (lobster, money with
+  wings), the dial ring `centre` (compass), the tip of a straw `straw` (beverage box). Mulberry: `base` of lamp was
+  one facet of the base.
+- **Noto is above 10%, so all its names were looked at again:** all 2,027 named parts, each as a small highlight
+  picture (156 px, number and name underneath), on 43 contact sheets of 48. Verdicts: **1,932 right, 57 wrong
+  (2.8%), 38 unclear**. The first sample overstated the rate (11 of 100 against 57 of 2,027); the wrong names
+  cluster in a few objects. Fixes in `sources/noto-emoji/part-names.tsv`, each decided on a labelling picture and,
+  where a name moved to another part, checked on a highlight picture of that part:
+  - 28 names moved to the right part: `ball` (baseball, basketball, softball, american football, rugby football),
+    `fruit` (strawberry, tomato), `sign` (stop sign), `sun` (sunrise, sunrise over mountains), `band` (the four
+    banknotes), `left_cherry`, four jets of the shower; or the part renamed to what it is: `head` → `eye` (guide
+    dog), `body` → `head` (boar), `handle` → `spoon`, `stem` → `glass` (ice cream), `pupil` → `eye` (hamsa),
+    `centre` → `dial` (compass), `stripe1`, `stripe2` → `left_panel`, `right_panel` (safety vest); one name added
+    (`mountains`);
+  - 29 names removed (no part is clearly the thing): columns of bank and classical building, body and claws of
+    lobster, body of spider, squid, snake, T-Rex, sauropod, head of deer, hedgehog, hammer, hammer and wrench, and others.
+  - The 38 unclear ones stay as they are (a part of the right thing whose extent is odd: the lower half of a plate,
+    the belly of a bat named body, a wing drawn as a squiggle).
+- **Check after the fixes:** a second seeded sample of Noto (seed 5, 100 of the 1,999 names), looked at on 9 sheets:
+  96 right, **0 wrong**, 4 unclear.
+- Mulberry: the lamp's `base` row removed (no single part is the base). OpenMoji: nothing to fix.
+- **Not looked at:** the Mulberry and OpenMoji names outside the sample (1,097 and 123 names); the unnamed parts
+  (whether a part that should have a name lacks one); in the all-Noto pass the pictures are small, so a name on a
+  very small part (an eye, a button) was judged by its place only.
+- Numbers: Noto 1,999 named parts (was 2,027), 666 objects with a named part; Mulberry 1,166; OpenMoji 153; wires
+  unchanged (296,943), k.objects 35,853,917 bytes. Catalog 10 worlds, 649 shards, vocab 17,764 words; 0 errors,
+  0 warnings. npm test 2,144 pass, 0 fail (150 s).

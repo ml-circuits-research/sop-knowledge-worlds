@@ -6,7 +6,7 @@
 
 # cigarette
 @k.objects.u1f6ac k.objects.object name=cigarette core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f6ac.p1 k.objects.part of=cigarette name=filter named=model shape=polygon x=14.2 y=75.6 w=82.7 h=18.1 z=1 colour=white rgb="#EEEEEE" core.source="noto-emoji 99701e0"
+@k.objects.u1f6ac.p1 k.objects.part of=cigarette name=part1 shape=polygon x=14.2 y=75.6 w=82.7 h=18.1 z=1 colour=white rgb="#EEEEEE" core.source="noto-emoji 99701e0"
 @k.objects.u1f6ac.p1.1 k.objects.point part=$k.objects.u1f6ac.p1 n=1 x=92.6 y=93.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ac.p1.2 k.objects.point part=$k.objects.u1f6ac.p1 n=2 x=14.2 y=93.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ac.p1.3 k.objects.point part=$k.objects.u1f6ac.p1 n=3 x=14.2 y=75.6 core.source="noto-emoji 99701e0"
@@ -877,7 +877,7 @@
 @k.objects.u1faac.p7.35 k.objects.point part=$k.objects.u1faac.p7 n=35 x=27 y=44.8 core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p7.36 k.objects.point part=$k.objects.u1faac.p7 n=36 x=26.9 y=46.9 core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p7.37 k.objects.point part=$k.objects.u1faac.p7 n=37 x=28.9 y=50 core.source="noto-emoji 99701e0"
-@k.objects.u1faac.p8 k.objects.part of=hamsa name=pupil named=model shape=line x=31.4 y=56.5 w=37.3 h=25.1 z=8 colour=purple rgb="#002691" core.source="noto-emoji 99701e0"
+@k.objects.u1faac.p8 k.objects.part of=hamsa name=eye named=model shape=line x=31.4 y=56.5 w=37.3 h=25.1 z=8 colour=purple rgb="#002691" core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p8.1 k.objects.point part=$k.objects.u1faac.p8 n=1 x=50.1 y=56.5 core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p8.2 k.objects.point part=$k.objects.u1faac.p8 n=2 x=43.4 y=57.6 core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p8.3 k.objects.point part=$k.objects.u1faac.p8 n=3 x=38.4 y=60.4 core.source="noto-emoji 99701e0"

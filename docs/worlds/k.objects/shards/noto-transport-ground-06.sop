@@ -981,7 +981,7 @@
 
 # stop sign
 @k.objects.u1f6d1 k.objects.object name="stop sign" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f6d1.p1 k.objects.part of="stop sign" name=part1 shape=polygon x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=red rgb="#F44336" core.source="noto-emoji 99701e0"
+@k.objects.u1f6d1.p1 k.objects.part of="stop sign" name=sign named=model shape=polygon x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=red rgb="#F44336" core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p1.1 k.objects.point part=$k.objects.u1f6d1.p1 n=1 x=69.4 y=3.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p1.2 k.objects.point part=$k.objects.u1f6d1.p1 n=2 x=30.6 y=3.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p1.3 k.objects.point part=$k.objects.u1f6d1.p1 n=3 x=3.1 y=30.6 core.source="noto-emoji 99701e0"
@@ -990,7 +990,7 @@
 @k.objects.u1f6d1.p1.6 k.objects.point part=$k.objects.u1f6d1.p1 n=6 x=69.4 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p1.7 k.objects.point part=$k.objects.u1f6d1.p1 n=7 x=96.9 y=69.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p1.8 k.objects.point part=$k.objects.u1f6d1.p1 n=8 x=96.9 y=30.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d1.p2 k.objects.part of="stop sign" name=sign named=model shape=polygon x=30.6 y=30.6 w=66.3 h=66.3 z=2 colour=red rgb="#CC3333" core.source="noto-emoji 99701e0"
+@k.objects.u1f6d1.p2 k.objects.part of="stop sign" name=part2 shape=polygon x=30.6 y=30.6 w=66.3 h=66.3 z=2 colour=red rgb="#CC3333" core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p2.1 k.objects.point part=$k.objects.u1f6d1.p2 n=1 x=93.8 y=68.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p2.2 k.objects.point part=$k.objects.u1f6d1.p2 n=2 x=68.1 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p2.3 k.objects.point part=$k.objects.u1f6d1.p2 n=3 x=32.8 y=93.8 core.source="noto-emoji 99701e0"
