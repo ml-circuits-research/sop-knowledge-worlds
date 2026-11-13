@@ -59,6 +59,9 @@
  "abbot": [
   "k.words/shards/ab"
  ],
+ "abbreviation": [
+  "k.units/schema.sop"
+ ],
  "abc": [
   "k.words/shards/ab"
  ],
@@ -300,9 +303,11 @@
   "k.words/shards/ac"
  ],
  "acre": [
+  "k.units/shards/core",
   "k.words/shards/ac"
  ],
  "acres": [
+  "k.units/shards/core",
   "k.words/shards/ac"
  ],
  "act": [
@@ -1320,6 +1325,7 @@
  ],
  "angle": [
   "k.objects/shards/noto-office-03",
+  "k.units/shards/core",
   "k.words/shards/an"
  ],
  "angola": [
@@ -1685,10 +1691,14 @@
  "apps": [
   "k.objects/shards/openmoji-technology-01"
  ],
+ "apr": [
+  "k.time/shards/calendar"
+ ],
  "apricot": [
   "k.objects/shards/mulberry-food-fruit-01"
  ],
  "april": [
+  "k.time/shards/calendar",
   "k.words/shards/ap"
  ],
  "apron": [
@@ -1812,6 +1822,7 @@
  ],
  "area": [
   "k.geo/schema.sop",
+  "k.units/shards/core",
   "k.words/shards/ar"
  ],
  "arecibo": [
@@ -2444,7 +2455,11 @@
  "auditorium": [
   "k.words/shards/au"
  ],
+ "aug": [
+  "k.time/shards/calendar"
+ ],
  "august": [
+  "k.time/shards/calendar",
   "k.words/shards/au"
  ],
  "augustine": [
@@ -2565,6 +2580,7 @@
  "autumn": [
   "k.objects/shards/noto-food-asian-02",
   "k.objects/shards/noto-plant-other-02",
+  "k.time/shards/calendar",
   "k.words/shards/au"
  ],
  "auxiliary": [
@@ -8105,6 +8121,9 @@
  "cellphone": [
   "k.words/shards/ce"
  ],
+ "celsius": [
+  "k.units/shards/core"
+ ],
  "celtic": [
   "k.words/shards/ce"
  ],
@@ -8126,6 +8145,33 @@
  ],
  "center": [
   "k.words/shards/ce"
+ ],
+ "centigrade": [
+  "k.units/shards/core"
+ ],
+ "centiliter": [
+  "k.units/shards/core"
+ ],
+ "centiliters": [
+  "k.units/shards/core"
+ ],
+ "centilitre": [
+  "k.units/shards/core"
+ ],
+ "centilitres": [
+  "k.units/shards/core"
+ ],
+ "centimeter": [
+  "k.units/shards/core"
+ ],
+ "centimeters": [
+  "k.units/shards/core"
+ ],
+ "centimetre": [
+  "k.units/shards/core"
+ ],
+ "centimetres": [
+  "k.units/shards/core"
  ],
  "centipede": [
   "k.objects/shards/mulberry-animal-spiders-and-insects-01"
@@ -8156,7 +8202,11 @@
   "k.objects/shards/noto-plant-flower-02",
   "k.words/shards/ce"
  ],
+ "centuries": [
+  "k.time/shards/calendar"
+ ],
  "century": [
+  "k.time/shards/calendar",
   "k.words/shards/ce"
  ],
  "ceo": [
@@ -9353,6 +9403,9 @@
  "civilization": [
   "k.words/shards/ci"
  ],
+ "cl": [
+  "k.units/shards/core"
+ ],
  "clack": [
   "k.objects/shards/noto-clothing-03"
  ],
@@ -9848,7 +9901,11 @@
   "k.words/shards/cl"
  ],
  "cm": [
+  "k.units/shards/core",
   "k.words/shards/cm"
+ ],
+ "cm2": [
+  "k.units/shards/core"
  ],
  "co": [
   "k.words/shards/co"
@@ -10376,6 +10433,12 @@
  ],
  "common": [
   "k.words/shards/co"
+ ],
+ "common year": [
+  "k.time/shards/calendar"
+ ],
+ "common years": [
+  "k.time/shards/calendar"
  ],
  "commons": [
   "k.words/shards/co"
@@ -11107,9 +11170,11 @@
   "k.words/shards/co"
  ],
  "conversion": [
+  "k.units/schema.sop",
   "k.words/shards/co"
  ],
  "convert": [
+  "k.units/schema.sop",
   "k.words/shards/co"
  ],
  "convertible": [
@@ -12197,6 +12262,18 @@
   "k.objects/shards/noto-drink-03",
   "k.words/shards/cu"
  ],
+ "cubic meter": [
+  "k.units/shards/core"
+ ],
+ "cubic meters": [
+  "k.units/shards/core"
+ ],
+ "cubic metre": [
+  "k.units/shards/core"
+ ],
+ "cubic metres": [
+  "k.units/shards/core"
+ ],
  "cubical": [
   "k.objects/shards/noto-place-building-02"
  ],
@@ -12847,6 +12924,8 @@
  ],
  "day": [
   "k.objects/shards/noto-sky-weather-02",
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/da"
  ],
  "daybreak": [
@@ -12862,6 +12941,9 @@
   "k.words/shards/da"
  ],
  "days": [
+  "k.time/schema.sop",
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/da"
  ],
  "daytime": [
@@ -12967,8 +13049,15 @@
  "debut": [
   "k.words/shards/de"
  ],
+ "dec": [
+  "k.time/shards/calendar"
+ ],
  "decade": [
+  "k.time/shards/calendar",
   "k.words/shards/de"
+ ],
+ "decades": [
+  "k.time/shards/calendar"
  ],
  "decaf": [
   "k.words/shards/de"
@@ -12986,6 +13075,7 @@
   "k.words/shards/de"
  ],
  "december": [
+  "k.time/shards/calendar",
   "k.words/shards/de"
  ],
  "decency": [
@@ -13005,6 +13095,30 @@
  ],
  "deciduous tree": [
   "k.objects/shards/noto-plant-other-01"
+ ],
+ "deciliter": [
+  "k.units/shards/core"
+ ],
+ "deciliters": [
+  "k.units/shards/core"
+ ],
+ "decilitre": [
+  "k.units/shards/core"
+ ],
+ "decilitres": [
+  "k.units/shards/core"
+ ],
+ "decimeter": [
+  "k.units/shards/core"
+ ],
+ "decimeters": [
+  "k.units/shards/core"
+ ],
+ "decimetre": [
+  "k.units/shards/core"
+ ],
+ "decimetres": [
+  "k.units/shards/core"
  ],
  "decipher": [
   "k.words/shards/de"
@@ -13142,7 +13256,23 @@
   "k.words/shards/de"
  ],
  "degree": [
+  "k.units/shards/core",
   "k.words/shards/de"
+ ],
+ "degree celsius": [
+  "k.units/shards/core"
+ ],
+ "degree fahrenheit": [
+  "k.units/shards/core"
+ ],
+ "degrees": [
+  "k.units/shards/core"
+ ],
+ "degrees celsius": [
+  "k.units/shards/core"
+ ],
+ "degrees fahrenheit": [
+  "k.units/shards/core"
  ],
  "deity": [
   "k.words/shards/de"
@@ -14330,6 +14460,12 @@
  "djougou": [
   "k.geo/shards/africa"
  ],
+ "dl": [
+  "k.units/shards/core"
+ ],
+ "dm": [
+  "k.units/shards/core"
+ ],
  "dna": [
   "k.objects/shards/noto-science-01",
   "k.words/shards/dn"
@@ -15263,6 +15399,7 @@
   "k.words/shards/du"
  ],
  "duration": [
+  "k.time/schema.sop",
   "k.words/shards/du"
  ],
  "durban": [
@@ -17017,6 +17154,7 @@
   "k.words/shards/fa"
  ],
  "factor": [
+  "k.units/schema.sop",
   "k.words/shards/fa"
  ],
  "factory": [
@@ -17055,6 +17193,9 @@
  ],
  "faggot": [
   "k.words/shards/fa"
+ ],
+ "fahrenheit": [
+  "k.units/shards/core"
  ],
  "fail": [
   "k.words/shards/fa"
@@ -17114,6 +17255,7 @@
  ],
  "fall": [
   "k.objects/shards/noto-plant-other-02",
+  "k.time/shards/calendar",
   "k.words/shards/fa"
  ],
  "fallen": [
@@ -17377,7 +17519,11 @@
  "feature": [
   "k.words/shards/fe"
  ],
+ "feb": [
+  "k.time/shards/calendar"
+ ],
  "february": [
+  "k.time/shards/calendar",
   "k.words/shards/fe"
  ],
  "feces": [
@@ -17448,6 +17594,7 @@
  "feet": [
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-clothing-04",
+  "k.units/shards/core",
   "k.words/shards/fo"
  ],
  "feldberg": [
@@ -18573,6 +18720,7 @@
  "foot": [
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-clothing-04",
+  "k.units/shards/core",
   "k.words/shards/fo"
  ],
  "footage": [
@@ -18899,7 +19047,11 @@
   "k.words/shards/fo"
  ],
  "fortnight": [
+  "k.time/shards/calendar",
   "k.words/shards/fo"
+ ],
+ "fortnights": [
+  "k.time/shards/calendar"
  ],
  "fortress": [
   "k.words/shards/fo"
@@ -19214,6 +19366,9 @@
  "freya": [
   "k.words/shards/fr"
  ],
+ "fri": [
+  "k.time/shards/calendar"
+ ],
  "friar": [
   "k.words/shards/fr"
  ],
@@ -19222,7 +19377,11 @@
   "k.words/shards/fr"
  ],
  "friday": [
+  "k.time/shards/calendar",
   "k.words/shards/fr"
+ ],
+ "fridays": [
+  "k.time/shards/calendar"
  ],
  "fridge": [
   "k.objects/shards/mulberry-food-kitchen-items-04",
@@ -19384,6 +19543,9 @@
  "frying pan": [
   "k.objects/shards/mulberry-food-kitchen-items-04"
  ],
+ "ft": [
+  "k.units/shards/core"
+ ],
  "fuchun": [
   "k.geo/shards/asia"
  ],
@@ -19450,6 +19612,12 @@
  ],
  "full moon face": [
   "k.objects/shards/noto-sky-weather-02"
+ ],
+ "full turn": [
+  "k.units/shards/core"
+ ],
+ "full turns": [
+  "k.units/shards/core"
  ],
  "fuller": [
   "k.words/shards/fu"
@@ -19666,7 +19834,11 @@
   "k.words/shards/ga"
  ],
  "gallon": [
+  "k.units/shards/core",
   "k.words/shards/ga"
+ ],
+ "gallons": [
+  "k.units/shards/core"
  ],
  "gallows": [
   "k.words/shards/ga"
@@ -20733,13 +20905,23 @@
   "k.objects/shards/noto-plant-other-01"
  ],
  "gram": [
+  "k.units/shards/core",
   "k.words/shards/gr"
  ],
  "grammar": [
   "k.words/shards/gr"
  ],
+ "gramme": [
+  "k.units/shards/core"
+ ],
+ "grammes": [
+  "k.units/shards/core"
+ ],
  "gramps": [
   "k.words/shards/gr"
+ ],
+ "grams": [
+  "k.units/shards/core"
  ],
  "gran": [
   "k.words/shards/gr"
@@ -21498,6 +21680,7 @@
   "k.words/shards/h"
  ],
  "ha": [
+  "k.units/shards/core",
   "k.words/shards/ha"
  ],
  "ha-ha": [
@@ -22353,6 +22536,12 @@
  ],
  "hebrew": [
   "k.words/shards/he"
+ ],
+ "hectare": [
+  "k.units/shards/core"
+ ],
+ "hectares": [
+  "k.units/shards/core"
  ],
  "hector": [
   "k.words/shards/he"
@@ -23369,6 +23558,8 @@
   "k.words/shards/ho"
  ],
  "hour": [
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/ho"
  ],
  "hour_hand": [
@@ -23386,6 +23577,8 @@
  "hours": [
   "k.objects/shards/noto-place-building-03",
   "k.objects/shards/noto-time-01",
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/ho"
  ],
  "house": [
@@ -24114,10 +24307,14 @@
   "k.words/shards/in"
  ],
  "inch": [
+  "k.units/shards/core",
   "k.words/shards/in"
  ],
  "incheon": [
   "k.geo/shards/asia"
+ ],
+ "inches": [
+  "k.units/shards/core"
  ],
  "incident": [
   "k.words/shards/in"
@@ -25226,12 +25423,14 @@
   "k.words/shards/ja"
  ],
  "jan": [
+  "k.time/shards/calendar",
   "k.words/shards/ja"
  ],
  "janitor": [
   "k.words/shards/ja"
  ],
  "january": [
+  "k.time/shards/calendar",
   "k.words/shards/ja"
  ],
  "japan": [
@@ -25776,6 +25975,9 @@
  "jukebox": [
   "k.words/shards/ju"
  ],
+ "jul": [
+  "k.time/shards/calendar"
+ ],
  "julian": [
   "k.words/shards/ju"
  ],
@@ -25783,6 +25985,7 @@
   "k.geo/shards/south-america"
  ],
  "july": [
+  "k.time/shards/calendar",
   "k.words/shards/ju"
  ],
  "jump": [
@@ -25796,10 +25999,14 @@
  "jumping": [
   "k.words/shards/ju"
  ],
+ "jun": [
+  "k.time/shards/calendar"
+ ],
  "junction": [
   "k.words/shards/ju"
  ],
  "june": [
+  "k.time/shards/calendar",
   "k.words/shards/ju"
  ],
  "jung": [
@@ -26158,7 +26365,11 @@
   "k.words/shards/ke"
  ],
  "kelvin": [
+  "k.units/shards/core",
   "k.words/shards/ke"
+ ],
+ "kelvins": [
+  "k.units/shards/core"
  ],
  "kem": [
   "k.geo/shards/europe"
@@ -26284,6 +26495,7 @@
   "k.objects/shards/noto-lock-01"
  ],
  "kg": [
+  "k.units/shards/core",
   "k.words/shards/kg"
  ],
  "kgb": [
@@ -26400,7 +26612,41 @@
   "k.words/shards/ki"
  ],
  "kilo": [
+  "k.units/shards/core",
   "k.words/shards/ki"
+ ],
+ "kilogram": [
+  "k.units/shards/core"
+ ],
+ "kilograms": [
+  "k.units/shards/core"
+ ],
+ "kilometer": [
+  "k.units/shards/core"
+ ],
+ "kilometer per hour": [
+  "k.units/shards/core"
+ ],
+ "kilometers": [
+  "k.units/shards/core"
+ ],
+ "kilometers per hour": [
+  "k.units/shards/core"
+ ],
+ "kilometre": [
+  "k.units/shards/core"
+ ],
+ "kilometre per hour": [
+  "k.units/shards/core"
+ ],
+ "kilometres": [
+  "k.units/shards/core"
+ ],
+ "kilometres per hour": [
+  "k.units/shards/core"
+ ],
+ "kilos": [
+  "k.units/shards/core"
  ],
  "kimhandu": [
   "k.geo/shards/africa"
@@ -26606,7 +26852,14 @@
   "k.geo/shards/asia"
  ],
  "km": [
+  "k.units/shards/core",
   "k.words/shards/km"
+ ],
+ "km/h": [
+  "k.units/shards/core"
+ ],
+ "km2": [
+  "k.units/shards/core"
  ],
  "knack": [
   "k.words/shards/kn"
@@ -26678,7 +26931,11 @@
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-event-01",
   "k.objects/shards/noto-event-02",
+  "k.units/shards/core",
   "k.words/shards/kn"
+ ],
+ "knots": [
+  "k.units/shards/core"
  ],
  "knotted": [
   "k.words/shards/kn"
@@ -27337,6 +27594,9 @@
  "last quarter moon face": [
   "k.objects/shards/noto-sky-weather-02"
  ],
+ "lasts": [
+  "k.time/schema.sop"
+ ],
  "lata": [
   "k.geo/shards/oceania"
  ],
@@ -27480,6 +27740,9 @@
  "lazy": [
   "k.objects/shards/noto-animal-mammal-08"
  ],
+ "lb": [
+  "k.units/shards/core"
+ ],
  "le": [
   "k.words/shards/le"
  ],
@@ -27564,6 +27827,12 @@
  ],
  "leap": [
   "k.words/shards/le"
+ ],
+ "leap year": [
+  "k.time/shards/calendar"
+ ],
+ "leap years": [
+  "k.time/shards/calendar"
  ],
  "leaping": [
   "k.words/shards/le"
@@ -28021,6 +28290,7 @@
   "k.words/shards/le"
  ],
  "length": [
+  "k.units/shards/core",
   "k.words/shards/le"
  ],
  "lenin": [
@@ -28592,6 +28862,7 @@
   "k.geo/shards/europe"
  ],
  "liter": [
+  "k.units/shards/core",
   "k.words/shards/li"
  ],
  "literal": [
@@ -28600,9 +28871,18 @@
  "literature": [
   "k.words/shards/li"
  ],
+ "liters": [
+  "k.units/shards/core"
+ ],
  "lithuania": [
   "k.geo/shards/europe",
   "k.geo/shards/europe-borders"
+ ],
+ "litre": [
+  "k.units/shards/core"
+ ],
+ "litres": [
+  "k.units/shards/core"
  ],
  "litter": [
   "k.words/shards/li"
@@ -28848,6 +29128,7 @@
  ],
  "long": [
   "k.objects/shards/noto-musical-instrument-02",
+  "k.time/schema.sop",
   "k.words/shards/lo"
  ],
  "long drum": [
@@ -29247,6 +29528,15 @@
  ],
  "m": [
   "k.words/shards/m"
+ ],
+ "m/s": [
+  "k.units/shards/core"
+ ],
+ "m2": [
+  "k.units/shards/core"
+ ],
+ "m3": [
+  "k.units/shards/core"
  ],
  "ma": [
   "k.words/shards/ma"
@@ -29971,6 +30261,7 @@
   "k.geo/shards/africa"
  ],
  "mar": [
+  "k.time/shards/calendar",
   "k.words/shards/ma"
  ],
  "mara": [
@@ -30014,6 +30305,7 @@
   "k.words/shards/ma"
  ],
  "march": [
+  "k.time/shards/calendar",
   "k.words/shards/ma"
  ],
  "marches": [
@@ -30298,6 +30590,7 @@
  ],
  "mass": [
   "k.objects/shards/openmoji-healthcare-04",
+  "k.units/shards/core",
   "k.words/shards/ma"
  ],
  "massachusetts": [
@@ -30476,6 +30769,7 @@
   "k.words/shards/ma"
  ],
  "may": [
+  "k.time/shards/calendar",
   "k.words/shards/ma"
  ],
  "may pen": [
@@ -30611,10 +30905,14 @@
   "k.words/shards/me"
  ],
  "measure": [
+  "k.units/schema.sop",
   "k.words/shards/me"
  ],
  "measurement": [
   "k.words/shards/me"
+ ],
+ "measures": [
+  "k.units/schema.sop"
  ],
  "measuring": [
   "k.words/shards/me"
@@ -31002,7 +31300,17 @@
   "k.words/shards/me"
  ],
  "meter": [
+  "k.units/shards/core",
   "k.words/shards/me"
+ ],
+ "meter per second": [
+  "k.units/shards/core"
+ ],
+ "meters": [
+  "k.units/shards/core"
+ ],
+ "meters per second": [
+  "k.units/shards/core"
  ],
  "meth": [
   "k.words/shards/me"
@@ -31014,7 +31322,17 @@
   "k.words/shards/me"
  ],
  "metre": [
+  "k.units/shards/core",
   "k.words/shards/me"
+ ],
+ "metre per second": [
+  "k.units/shards/core"
+ ],
+ "metres": [
+  "k.units/shards/core"
+ ],
+ "metres per second": [
+  "k.units/shards/core"
  ],
  "metro": [
   "k.objects/shards/noto-transport-ground-01",
@@ -31041,7 +31359,11 @@
  "mezen": [
   "k.geo/shards/europe"
  ],
+ "mg": [
+  "k.units/shards/core"
+ ],
  "mi": [
+  "k.units/shards/core",
   "k.words/shards/mi"
  ],
  "miami": [
@@ -31159,10 +31481,20 @@
   "k.words/shards/mi"
  ],
  "mile": [
+  "k.units/shards/core",
   "k.words/shards/mi"
+ ],
+ "mile per hour": [
+  "k.units/shards/core"
  ],
  "mileage": [
   "k.words/shards/mi"
+ ],
+ "miles": [
+  "k.units/shards/core"
+ ],
+ "miles per hour": [
+  "k.units/shards/core"
  ],
  "militant": [
   "k.words/shards/mi"
@@ -31227,16 +31559,46 @@
   "k.words/shards/mi"
  ],
  "millennia": [
+  "k.time/shards/calendar",
   "k.words/shards/mi"
  ],
  "millennium": [
+  "k.time/shards/calendar",
   "k.words/shards/mi"
  ],
  "miller": [
   "k.words/shards/mi"
  ],
+ "milligram": [
+  "k.units/shards/core"
+ ],
+ "milligrams": [
+  "k.units/shards/core"
+ ],
+ "milliliter": [
+  "k.units/shards/core"
+ ],
+ "milliliters": [
+  "k.units/shards/core"
+ ],
+ "millilitre": [
+  "k.units/shards/core"
+ ],
+ "millilitres": [
+  "k.units/shards/core"
+ ],
  "millimeter": [
+  "k.units/shards/core",
   "k.words/shards/mi"
+ ],
+ "millimeters": [
+  "k.units/shards/core"
+ ],
+ "millimetre": [
+  "k.units/shards/core"
+ ],
+ "millimetres": [
+  "k.units/shards/core"
  ],
  "million": [
   "k.objects/shards/noto-money-01",
@@ -31389,12 +31751,16 @@
   "k.words/shards/mi"
  ],
  "minute": [
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/mi"
  ],
  "minute_hand": [
   "k.objects/shards/noto-time-01"
  ],
  "minutes": [
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/mi"
  ],
  "mio": [
@@ -31549,10 +31915,14 @@
  "mixture": [
   "k.words/shards/mi"
  ],
+ "ml": [
+  "k.units/shards/core"
+ ],
  "mlzes": [
   "k.geo/shards/north-america"
  ],
  "mm": [
+  "k.units/shards/core",
   "k.words/shards/mm"
  ],
  "mo": [
@@ -31770,6 +32140,7 @@
   "k.geo/shards/asia"
  ],
  "mon": [
+  "k.time/shards/calendar",
   "k.words/shards/mo"
  ],
  "mona": [
@@ -31799,7 +32170,11 @@
   "k.geo/shards/europe"
  ],
  "monday": [
+  "k.time/shards/calendar",
   "k.words/shards/mo"
+ ],
+ "mondays": [
+  "k.time/shards/calendar"
  ],
  "money": [
   "k.objects/shards/mulberry-money-01",
@@ -31973,10 +32348,14 @@
   "k.words/shards/mo"
  ],
  "month": [
+  "k.time/schema.sop",
   "k.words/shards/mo"
  ],
  "monthly": [
   "k.words/shards/mo"
+ ],
+ "months": [
+  "k.time/schema.sop"
  ],
  "montreal": [
   "k.words/shards/mo"
@@ -32932,6 +33311,9 @@
  ],
  "mp": [
   "k.words/shards/mp"
+ ],
+ "mph": [
+  "k.units/shards/core"
  ],
  "mps": [
   "k.words/shards/mp"
@@ -34662,6 +35044,9 @@
   "k.words/shards/zo",
   "k.words/shards/zu"
  ],
+ "nov": [
+  "k.time/shards/calendar"
+ ],
  "nova": [
   "k.words/shards/no"
  ],
@@ -34681,6 +35066,7 @@
   "k.words/shards/no"
  ],
  "november": [
+  "k.time/shards/calendar",
   "k.words/shards/no"
  ],
  "novi sad": [
@@ -34970,10 +35356,14 @@
  "ocoña": [
   "k.geo/shards/south-america"
  ],
+ "oct": [
+  "k.time/shards/calendar"
+ ],
  "octagonal": [
   "k.objects/shards/noto-transport-ground-06"
  ],
  "october": [
+  "k.time/shards/calendar",
   "k.words/shards/oc"
  ],
  "octoberfest": [
@@ -35671,7 +36061,11 @@
   "k.geo/shards/africa"
  ],
  "ounce": [
+  "k.units/shards/core",
   "k.words/shards/ou"
+ ],
+ "ounces": [
+  "k.units/shards/core"
  ],
  "out": [
   "k.words/shards/ou"
@@ -35921,6 +36315,9 @@
   "k.objects/shards/noto-animal-marine-03",
   "k.objects/shards/noto-food-asian-03",
   "k.words/shards/oy"
+ ],
+ "oz": [
+  "k.units/shards/core"
  ],
  "ozhogina": [
   "k.geo/shards/europe"
@@ -37898,10 +38295,14 @@
  "pint": [
   "k.objects/shards/mulberry-drink-containers-and-measures-01",
   "k.objects/shards/noto-drink-02",
+  "k.units/shards/core",
   "k.words/shards/pi"
  ],
  "pint half": [
   "k.objects/shards/mulberry-drink-containers-and-measures-01"
+ ],
+ "pints": [
+  "k.units/shards/core"
  ],
  "pioneer": [
   "k.words/shards/pi"
@@ -38888,6 +39289,7 @@
  ],
  "pound": [
   "k.objects/shards/noto-money-01",
+  "k.units/shards/core",
   "k.words/shards/po"
  ],
  "pound banknote": [
@@ -38897,7 +39299,8 @@
   "k.words/shards/po"
  ],
  "pounds": [
-  "k.objects/shards/noto-money-01"
+  "k.objects/shards/noto-money-01",
+  "k.units/shards/core"
  ],
  "pour": [
   "k.objects/shards/noto-drink-02",
@@ -40036,6 +40439,7 @@
   "k.words/shards/qu"
  ],
  "quantity": [
+  "k.units/schema.sop",
   "k.words/shards/qu"
  ],
  "quantum": [
@@ -40065,12 +40469,14 @@
  "quarter": [
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.time/shards/calendar",
   "k.words/shards/qu"
  ],
  "quarterback": [
   "k.words/shards/qu"
  ],
  "quarters": [
+  "k.time/shards/calendar",
   "k.words/shards/qu"
  ],
  "quartet": [
@@ -42152,6 +42558,12 @@
   "k.objects/shards/openmoji-technology-01",
   "k.words/shards/ri"
  ],
+ "right angle": [
+  "k.units/shards/core"
+ ],
+ "right angles": [
+  "k.units/shards/core"
+ ],
  "right click": [
   "k.objects/shards/mulberry-electrical-computer-02"
  ],
@@ -43862,6 +44274,7 @@
   "k.geo/shards/africa"
  ],
  "sat": [
+  "k.time/shards/calendar",
   "k.words/shards/sa",
   "k.words/shards/si"
  ],
@@ -43898,7 +44311,11 @@
   "k.objects/shards/mulberry-food-fruit-03"
  ],
  "saturday": [
+  "k.time/shards/calendar",
   "k.words/shards/sa"
+ ],
+ "saturdays": [
+  "k.time/shards/calendar"
  ],
  "saturn": [
   "k.objects/shards/mulberry-science-astronomy-01",
@@ -44468,10 +44885,14 @@
   "k.words/shards/se"
  ],
  "season": [
+  "k.time/schema.sop",
   "k.words/shards/se"
  ],
  "seasonal": [
   "k.words/shards/se"
+ ],
+ "seasons": [
+  "k.time/schema.sop"
  ],
  "seat": [
   "k.objects/shards/household",
@@ -44507,6 +44928,8 @@
  ],
  "second": [
   "k.objects/shards/noto-award-medal-01",
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/se"
  ],
  "second_rung": [
@@ -44520,6 +44943,10 @@
  ],
  "secondary": [
   "k.words/shards/se"
+ ],
+ "seconds": [
+  "k.time/shards/calendar",
+  "k.units/shards/core"
  ],
  "secrecy": [
   "k.words/shards/se"
@@ -44802,6 +45229,9 @@
   "k.geo/shards/asia",
   "k.words/shards/se"
  ],
+ "sep": [
+  "k.time/shards/calendar"
+ ],
  "separate": [
   "k.words/shards/se"
  ],
@@ -44812,6 +45242,7 @@
   "k.geo/shards/oceania"
  ],
  "september": [
+  "k.time/shards/calendar",
   "k.words/shards/se"
  ],
  "sequel": [
@@ -47430,6 +47861,7 @@
  ],
  "speed": [
   "k.objects/shards/noto-transport-ground-01",
+  "k.units/shards/core",
   "k.words/shards/sp"
  ],
  "speedboat": [
@@ -47772,6 +48204,7 @@
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-plant-flower-02",
+  "k.time/shards/calendar",
   "k.words/shards/sp"
  ],
  "spring onions": [
@@ -47839,6 +48272,42 @@
  ],
  "square": [
   "k.words/shards/sq"
+ ],
+ "square centimeter": [
+  "k.units/shards/core"
+ ],
+ "square centimeters": [
+  "k.units/shards/core"
+ ],
+ "square centimetre": [
+  "k.units/shards/core"
+ ],
+ "square centimetres": [
+  "k.units/shards/core"
+ ],
+ "square kilometer": [
+  "k.units/shards/core"
+ ],
+ "square kilometers": [
+  "k.units/shards/core"
+ ],
+ "square kilometre": [
+  "k.units/shards/core"
+ ],
+ "square kilometres": [
+  "k.units/shards/core"
+ ],
+ "square meter": [
+  "k.units/shards/core"
+ ],
+ "square meters": [
+  "k.units/shards/core"
+ ],
+ "square metre": [
+  "k.units/shards/core"
+ ],
+ "square metres": [
+  "k.units/shards/core"
  ],
  "square setsquare": [
   "k.objects/shards/mulberry-tools-workshop-03"
@@ -49171,6 +49640,7 @@
  "summer": [
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-transport-water-01",
+  "k.time/shards/calendar",
   "k.words/shards/su"
  ],
  "summertime": [
@@ -49204,6 +49674,7 @@
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/sky",
+  "k.time/shards/calendar",
   "k.words/shards/su"
  ],
  "sun behind cloud": [
@@ -49228,7 +49699,11 @@
   "k.geo/shards/asia"
  ],
  "sunday": [
+  "k.time/shards/calendar",
   "k.words/shards/su"
+ ],
+ "sundays": [
+  "k.time/shards/calendar"
  ],
  "sundown": [
   "k.words/shards/su"
@@ -49776,6 +50251,7 @@
  "symbol": [
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-money-02",
+  "k.units/schema.sop",
   "k.words/shards/sy"
  ],
  "sympathize": [
@@ -49909,6 +50385,12 @@
  ],
  "tables": [
   "k.objects/shards/household"
+ ],
+ "tablespoon": [
+  "k.units/shards/core"
+ ],
+ "tablespoons": [
+  "k.units/shards/core"
  ],
  "tablet": [
   "k.objects/shards/openmoji-technology-01",
@@ -50438,6 +50920,9 @@
  "tbilisi": [
   "k.geo/shards/asia"
  ],
+ "tbsp": [
+  "k.units/shards/core"
+ ],
  "tbt": [
   "k.objects/shards/noto-light-video-01",
   "k.objects/shards/noto-music-02"
@@ -50523,6 +51008,12 @@
  ],
  "teasing": [
   "k.words/shards/te"
+ ],
+ "teaspoon": [
+  "k.units/shards/core"
+ ],
+ "teaspoons": [
+  "k.units/shards/core"
  ],
  "teat": [
   "k.objects/shards/noto-drink-01"
@@ -50665,6 +51156,7 @@
  ],
  "temperature": [
   "k.objects/shards/openmoji-healthcare-03",
+  "k.units/shards/core",
   "k.words/shards/te"
  ],
  "tempi": [
@@ -51181,6 +51673,9 @@
  "thrust": [
   "k.words/shards/th"
  ],
+ "thu": [
+  "k.time/shards/calendar"
+ ],
  "thud": [
   "k.words/shards/th"
  ],
@@ -51227,7 +51722,11 @@
   "k.words/shards/th"
  ],
  "thursday": [
+  "k.time/shards/calendar",
   "k.words/shards/th"
+ ],
+ "thursdays": [
+  "k.time/shards/calendar"
  ],
  "thus": [
   "k.words/shards/th"
@@ -51348,6 +51847,7 @@
  ],
  "time": [
   "k.objects/shards/noto-time-01",
+  "k.units/shards/core",
   "k.words/shards/ti"
  ],
  "time-out": [
@@ -51716,6 +52216,12 @@
  ],
  "tonle sap": [
   "k.geo/shards/asia"
+ ],
+ "tonne": [
+  "k.units/shards/core"
+ ],
+ "tonnes": [
+  "k.units/shards/core"
  ],
  "tons": [
   "k.words/shards/to"
@@ -52694,6 +53200,9 @@
  "tsna": [
   "k.geo/shards/europe"
  ],
+ "tsp": [
+  "k.units/shards/core"
+ ],
  "tsunami": [
   "k.words/shards/ts"
  ],
@@ -52725,8 +53234,15 @@
  "tudor": [
   "k.words/shards/tu"
  ],
+ "tue": [
+  "k.time/shards/calendar"
+ ],
  "tuesday": [
+  "k.time/shards/calendar",
   "k.words/shards/tu"
+ ],
+ "tuesdays": [
+  "k.time/shards/calendar"
  ],
  "tug": [
   "k.words/shards/tu"
@@ -52893,6 +53409,7 @@
  ],
  "turn": [
   "k.objects/shards/noto-transport-ground-06",
+  "k.units/shards/core",
   "k.words/shards/tu"
  ],
  "turner": [
@@ -52907,6 +53424,9 @@
  ],
  "turnout": [
   "k.words/shards/tu"
+ ],
+ "turns": [
+  "k.units/shards/core"
  ],
  "turtle": [
   "k.objects/shards/noto-animal-reptile-01",
@@ -53383,6 +53903,7 @@
   "k.words/shards/un"
  ],
  "unit": [
+  "k.units/schema.sop",
   "k.words/shards/un"
  ],
  "unite": [
@@ -53416,6 +53937,9 @@
  "united states virgin islands": [
   "k.geo/shards/north-america",
   "k.geo/shards/north-america-borders"
+ ],
+ "units": [
+  "k.units/schema.sop"
  ],
  "unity": [
   "k.words/shards/un"
@@ -54635,6 +55159,7 @@
  ],
  "volume": [
   "k.objects/shards/noto-sound-01",
+  "k.units/shards/core",
   "k.words/shards/vo"
  ],
  "voluntary": [
@@ -55289,6 +55814,7 @@
   "k.words/shards/we"
  ],
  "wed": [
+  "k.time/shards/calendar",
   "k.words/shards/we"
  ],
  "wedded": [
@@ -55304,7 +55830,11 @@
   "k.words/shards/we"
  ],
  "wednesday": [
+  "k.time/shards/calendar",
   "k.words/shards/we"
+ ],
+ "wednesdays": [
+  "k.time/shards/calendar"
  ],
  "wee": [
   "k.words/shards/we"
@@ -55317,14 +55847,27 @@
   "k.words/shards/we"
  ],
  "week": [
+  "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/we"
+ ],
+ "weekday": [
+  "k.time/schema.sop"
+ ],
+ "weekdays": [
+  "k.time/schema.sop"
  ],
  "weekend": [
   "k.objects/shards/noto-clothing-01",
+  "k.time/schema.sop",
   "k.words/shards/we"
  ],
  "weekly": [
   "k.words/shards/we"
+ ],
+ "weeks": [
+  "k.time/shards/calendar",
+  "k.units/shards/core"
  ],
  "weenie": [
   "k.words/shards/we"
@@ -55988,6 +56531,7 @@
  ],
  "winter": [
   "k.objects/shards/noto-plant-other-03",
+  "k.time/shards/calendar",
   "k.words/shards/wi"
  ],
  "wipe": [
@@ -56550,7 +57094,11 @@
   "k.geo/shards/north-america"
  ],
  "yard": [
+  "k.units/shards/core",
   "k.words/shards/ya"
+ ],
+ "yards": [
+  "k.units/shards/core"
  ],
  "yarkant": [
   "k.geo/shards/asia"
@@ -56568,10 +57116,14 @@
  "yay": [
   "k.words/shards/ya"
  ],
+ "yd": [
+  "k.units/shards/core"
+ ],
  "yea": [
   "k.words/shards/ye"
  ],
  "year": [
+  "k.time/shards/calendar",
   "k.words/shards/ye"
  ],
  "yearbook": [
@@ -56584,6 +57136,7 @@
   "k.words/shards/ye"
  ],
  "years": [
+  "k.time/shards/calendar",
   "k.words/shards/ye"
  ],
  "yeast": [
@@ -56944,6 +57497,12 @@
  ],
  "zōri": [
   "k.objects/shards/noto-clothing-04"
+ ],
+ "°c": [
+  "k.units/shards/core"
+ ],
+ "°f": [
+  "k.units/shards/core"
  ],
  "åland": [
   "k.geo/shards/europe"

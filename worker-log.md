@@ -350,3 +350,20 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
   `sources/openmoji/part-names.tsv` and `sources/mulberry/part-names.tsv` exist and are read by the importers.
 - Size note for the reviewer: `docs/worlds` is now 56 MB (previews 9 MB). If that is too much for Pages or for the
   tests, the point budget per object (200) is the knob.
+
+## R2.4 (2026-11-13): k.units and k.time, hand-written
+
+- `k.units` (version 1): `k.units.quantity` (name, base) and `k.units.unit` (name, symbol, quantity, `factor` and
+  `offset` to the base unit, system). A value in the unit × factor + offset is the value in the base unit; the
+  arithmetic is left to the application. Shard `core`: 8 quantities, 44 units (length, mass, time, volume, area,
+  temperature, speed, angle; metric and imperial), 44 word wires (plurals, American spellings, symbols):
+  96 wires, 12,585 bytes, load 1 ms. Schema 15 wires.
+- `k.time` (version 1): `k.time.month` (n, days, leap_days, season_north, season_south), `weekday` (n from Monday,
+  weekend), `season` (n, after), `duration` (count × unit); months, weekdays and seasons are `complete=true`, so
+  "is there a 13th month" answers `no`. Shard `calendar`: 12 + 7 + 4 + 13 facts and 32 word wires: 68 wires, 7,587
+  bytes, load 1 ms. Schema 26 wires. No holidays (PLAN.md: names only, with a later import).
+- Tests: `tests/k.units.questions.jsonl` (11), `tests/k.time.questions.jsonl` (12).
+- Catalog: 6 worlds, 657 shards. 0 errors, 0 warnings. npm test: 2,226 tests, all pass except that the full run
+  was disturbed by my own edit of two schemas for the next task while it ran (the catalog freshness test saw them);
+  after setting those edits aside and rebuilding, the catalog, validation, question and page tests pass (132).
+  The next commit runs the whole suite again.

@@ -1,0 +1,11 @@
+{"id":"un-01","ask":"how many metres is a kilometre","query":{"type":"k.units.unit","where":{"name":"kilometre"},"seek":"factor"},"expect":{"status":"supported","value":"1000"}}
+{"id":"un-02","ask":"what does a pound measure","query":{"type":"k.units.unit","where":{"name":"pound"},"seek":"quantity"},"expect":{"status":"supported","value":"mass"}}
+{"id":"un-03","ask":"what is the symbol of the litre","query":{"type":"k.units.unit","where":{"name":"litre"},"seek":"symbol"},"expect":{"status":"supported","value":"l"}}
+{"id":"un-04","ask":"which units measure length","query":{"type":"k.units.unit","where":{"quantity":"length"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["millimetre","centimetre","decimetre","metre","kilometre","inch","foot","yard","mile"]}}
+{"id":"un-05","ask":"what is the base unit of mass","query":{"type":"k.units.quantity","where":{"name":"mass"},"seek":"base"},"expect":{"status":"supported","value":"kilogram"}}
+{"id":"un-06","ask":"what is added to degrees Celsius to get kelvin","query":{"type":"k.units.unit","where":{"name":"\"degree Celsius\""},"seek":"offset"},"expect":{"status":"supported","value":"273.15"}}
+{"id":"un-07","ask":"how many seconds is an hour","query":{"type":"k.units.unit","where":{"name":"hour"},"seek":"factor"},"expect":{"status":"supported","value":"3600"}}
+{"id":"un-08","ask":"which unit has the symbol kg","query":{"type":"k.units.unit","where":{"symbol":"kg"},"seek":"name"},"expect":{"status":"supported","value":"kilogram"}}
+{"id":"un-09","ask":"how many imperial units are there","query":{"type":"k.units.unit","where":{"system":"imperial"},"mode":"count"},"expect":{"status":"supported","value":"11"}}
+{"id":"un-10","ask":"an inch is 2.54 centimetres: its factor to the metre","query":{"type":"k.units.unit","where":{"name":"inch"},"seek":"factor"},"expect":{"status":"supported","value":"0.0254"}}
+{"id":"un-11","ask":"an application's own unit is accepted","tell":"@u1 k.units.unit name=smoot quantity=length factor=1.7018 system=other","ns":"app","expect":{"issues":[]}}

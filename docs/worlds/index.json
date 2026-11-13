@@ -1,5 +1,5 @@
 {
- "version": "d124dffa5f75",
+ "version": "659db8df35c5",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -11490,6 +11490,160 @@
    "licenses": [
     "Apache-2.0 AND Unicode-3.0",
     "CC-BY-SA-4.0",
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.time",
+   "version": "1",
+   "schema": "k.time/schema.sop",
+   "exports": [
+    "k.time.duration",
+    "k.time.month",
+    "k.time.season",
+    "k.time.weekday"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.time/shards/calendar",
+     "path": "k.time/shards/calendar.sop",
+     "wires": 68,
+     "bytes": 7587,
+     "keys": [
+      "april",
+      "august",
+      "autumn",
+      "century",
+      "common year",
+      "day",
+      "decade",
+      "december",
+      "february",
+      "fortnight",
+      "friday",
+      "hour",
+      "january",
+      "july",
+      "june",
+      "leap year",
+      "march",
+      "may",
+      "millennium",
+      "minute",
+      "monday",
+      "november",
+      "october",
+      "quarter",
+      "saturday",
+      "second",
+      "september",
+      "spring",
+      "summer",
+      "sunday",
+      "thursday",
+      "tuesday",
+      "wednesday",
+      "week",
+      "winter",
+      "year"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.units",
+   "version": "1",
+   "schema": "k.units/schema.sop",
+   "exports": [
+    "k.units.quantity",
+    "k.units.unit"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.units/shards/core",
+     "path": "k.units/shards/core.sop",
+     "wires": 96,
+     "bytes": 12585,
+     "keys": [
+      "acre",
+      "angle",
+      "area",
+      "centilitre",
+      "centimetre",
+      "cubic metre",
+      "day",
+      "decilitre",
+      "decimetre",
+      "degree",
+      "degree celsius",
+      "degree fahrenheit",
+      "foot",
+      "full turn",
+      "gallon",
+      "gram",
+      "hectare",
+      "hour",
+      "inch",
+      "kelvin",
+      "kilogram",
+      "kilometre",
+      "kilometre per hour",
+      "knot",
+      "length",
+      "litre",
+      "mass",
+      "metre",
+      "metre per second",
+      "mile",
+      "mile per hour",
+      "milligram",
+      "millilitre",
+      "millimetre",
+      "minute",
+      "ounce",
+      "pint",
+      "pound",
+      "right angle",
+      "second",
+      "speed",
+      "square centimetre",
+      "square kilometre",
+      "square metre",
+      "tablespoon",
+      "teaspoon",
+      "temperature",
+      "time",
+      "tonne",
+      "volume",
+      "week",
+      "yard"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
     "CC0-1.0"
    ],
    "warnings": []
