@@ -198,7 +198,7 @@
 
 # prawn
 @k.objects.mb2309 k.objects.object name=prawn core.source="mulberry fa94a93"
-@k.objects.mb2309.p1 k.objects.part of=prawn name=part1 shape=polygon x=83.3 y=44.3 w=10.1 h=18.9 z=1 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
+@k.objects.mb2309.p1 k.objects.part of=prawn name=tail named=model shape=polygon x=83.3 y=44.3 w=10.1 h=18.9 z=1 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
 @k.objects.mb2309.p1.1 k.objects.point part=$k.objects.mb2309.p1 n=1 x=90.9 y=60.1 core.source="mulberry fa94a93"
 @k.objects.mb2309.p1.2 k.objects.point part=$k.objects.mb2309.p1 n=2 x=90.1 y=63 core.source="mulberry fa94a93"
 @k.objects.mb2309.p1.3 k.objects.point part=$k.objects.mb2309.p1 n=3 x=89.4 y=63.2 core.source="mulberry fa94a93"
@@ -211,7 +211,7 @@
 @k.objects.mb2309.p1.10 k.objects.point part=$k.objects.mb2309.p1 n=10 x=93 y=58.7 core.source="mulberry fa94a93"
 @k.objects.mb2309.p1.11 k.objects.point part=$k.objects.mb2309.p1 n=11 x=93.4 y=61.6 core.source="mulberry fa94a93"
 @k.objects.mb2309.p1.12 k.objects.point part=$k.objects.mb2309.p1 n=12 x=93 y=62.4 core.source="mulberry fa94a93"
-@k.objects.mb2309.p2 k.objects.part of=prawn name=part2 shape=polygon x=14.4 y=27 w=37.1 h=11.2 z=2 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
+@k.objects.mb2309.p2 k.objects.part of=prawn name=head named=model shape=polygon x=14.4 y=27 w=37.1 h=11.2 z=2 colour=white rgb="#FFEEC8" core.source="mulberry fa94a93"
 @k.objects.mb2309.p2.1 k.objects.point part=$k.objects.mb2309.p2 n=1 x=16.2 y=33.1 core.source="mulberry fa94a93"
 @k.objects.mb2309.p2.2 k.objects.point part=$k.objects.mb2309.p2 n=2 x=14.4 y=32.3 core.source="mulberry fa94a93"
 @k.objects.mb2309.p2.3 k.objects.point part=$k.objects.mb2309.p2 n=3 x=14.4 y=31.5 core.source="mulberry fa94a93"

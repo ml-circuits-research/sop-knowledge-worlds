@@ -1,5 +1,5 @@
 {
- "version": "bc7c468f2cef",
+ "version": "bc890a5c3a9d",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -3787,16 +3787,27 @@
      "id": "k.objects/shards/mulberry-animal-birds-01",
      "path": "k.objects/shards/mulberry-animal-birds-01.sop",
      "wires": 1455,
-     "bytes": 172560,
+     "bytes": 172765,
      "keys": [
+      "beak",
+      "body",
       "budgie",
       "chick",
       "chicken live",
       "cockatiel",
       "cockerel",
+      "comb",
+      "crest",
+      "head",
       "heron",
+      "left_leg",
+      "neck",
       "ostrich",
-      "pelican"
+      "pelican",
+      "right_leg",
+      "tail",
+      "wattle",
+      "wing"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3808,13 +3819,20 @@
      "id": "k.objects/shards/mulberry-animal-birds-02",
      "path": "k.objects/shards/mulberry-animal-birds-02.sop",
      "wires": 1004,
-     "bytes": 119831,
+     "bytes": 119989,
      "keys": [
+      "beak",
+      "belly",
+      "body",
+      "breast",
+      "face",
+      "head",
       "puffin",
       "quail",
       "robin",
       "seagull",
-      "vulture"
+      "vulture",
+      "wing"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3826,11 +3844,13 @@
      "id": "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
      "path": "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01.sop",
      "wires": 555,
-     "bytes": 66177,
+     "bytes": 66199,
      "keys": [
+      "head",
       "mussel",
       "prawn",
-      "slug"
+      "slug",
+      "tail"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3842,12 +3862,19 @@
      "id": "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
      "path": "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01.sop",
      "wires": 974,
-     "bytes": 116996,
+     "bytes": 117129,
      "keys": [
+      "body",
+      "fin",
       "fish koi carp",
       "fish tropical",
+      "flipper",
       "killer whale",
+      "left_tusk",
+      "patch",
+      "right_tusk",
       "seahorse",
+      "tail",
       "walrus"
      ],
      "sources": [
@@ -3860,16 +3887,24 @@
      "id": "k.objects/shards/mulberry-animal-mammal-01",
      "path": "k.objects/shards/mulberry-animal-mammal-01.sop",
      "wires": 1576,
-     "bytes": 185505,
+     "bytes": 185717,
      "keys": [
       "ant eater",
       "antelope",
+      "body",
       "buffalo",
       "cheetah",
       "chimpanzee",
+      "ear",
+      "face",
       "ferret",
       "guinea pig",
-      "hare"
+      "hare",
+      "head",
+      "left_ear",
+      "nose",
+      "right_ear",
+      "tail"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3881,15 +3916,21 @@
      "id": "k.objects/shards/mulberry-animal-mammal-02",
      "path": "k.objects/shards/mulberry-animal-mammal-02.sop",
      "wires": 1303,
-     "bytes": 155831,
+     "bytes": 155951,
      "keys": [
+      "belly",
+      "body",
+      "ear",
+      "head",
+      "nose",
       "piglet",
       "porcupine",
       "reindeer",
       "sheep",
       "shrew",
       "stag",
-      "stoat"
+      "stoat",
+      "tail"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3916,9 +3957,13 @@
      "id": "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
      "path": "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01.sop",
      "wires": 770,
-     "bytes": 91933,
+     "bytes": 91975,
      "keys": [
+      "body",
       "chameleon",
+      "eye",
+      "head",
+      "leg",
       "rattle snake",
       "toad",
       "tortoise"
@@ -3933,16 +3978,25 @@
      "id": "k.objects/shards/mulberry-animal-spiders-and-insects-01",
      "path": "k.objects/shards/mulberry-animal-spiders-and-insects-01.sop",
      "wires": 1366,
-     "bytes": 161897,
+     "bytes": 162292,
      "keys": [
       "bee bumble",
       "bee honey",
+      "body",
       "caterpillar",
       "centipede",
       "crane fly",
       "dragonfly",
       "earwig",
-      "gnat"
+      "gnat",
+      "head",
+      "left_wing",
+      "lower_left_wing",
+      "lower_right_wing",
+      "right_wing",
+      "tail",
+      "upper_left_wing",
+      "upper_right_wing"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3954,9 +4008,18 @@
      "id": "k.objects/shards/mulberry-animal-spiders-and-insects-02",
      "path": "k.objects/shards/mulberry-animal-spiders-and-insects-02.sop",
      "wires": 348,
-     "bytes": 41814,
+     "bytes": 42043,
      "keys": [
+      "body",
+      "head",
+      "left_wing",
+      "lower_left_wing",
+      "lower_right_wing",
       "moth",
+      "right_wing",
+      "thorax",
+      "upper_left_wing",
+      "upper_right_wing",
       "wasp"
      ],
      "sources": [
@@ -3968,17 +4031,24 @@
     {
      "id": "k.objects/shards/mulberry-art-making-01",
      "path": "k.objects/shards/mulberry-art-making-01.sop",
-     "wires": 1117,
-     "bytes": 134074,
+     "wires": 527,
+     "bytes": 64987,
      "keys": [
-      "art",
+      "black_paint",
+      "blue_paint",
       "coloured paper",
       "craft table",
-      "cut and paste",
-      "finger painting",
+      "front_sheet",
+      "green_paint",
+      "lid",
       "paint box",
       "pen and paper",
-      "pencil and paper"
+      "pencil",
+      "pencil and paper",
+      "pink_paint",
+      "red_paint",
+      "table",
+      "yellow_paint"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -3990,8 +4060,9 @@
      "id": "k.objects/shards/mulberry-building-contents-01",
      "path": "k.objects/shards/mulberry-building-contents-01.sop",
      "wires": 1096,
-     "bytes": 130598,
+     "bytes": 130972,
      "keys": [
+      "bag",
       "bath",
       "bath mat",
       "bin bag",
@@ -3999,7 +4070,15 @@
       "blanket",
       "blinds",
       "book end",
-      "book ends"
+      "book ends",
+      "left_book",
+      "left_end",
+      "mat",
+      "middle_book",
+      "rail",
+      "right_book",
+      "right_end",
+      "roll"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4011,8 +4090,11 @@
      "id": "k.objects/shards/mulberry-building-contents-02",
      "path": "k.objects/shards/mulberry-building-contents-02.sop",
      "wires": 1074,
-     "bytes": 127036,
+     "bytes": 127125,
      "keys": [
+      "body",
+      "bottle",
+      "box",
       "chandelier",
       "cleaner spray",
       "cleaning box",
@@ -4020,7 +4102,11 @@
       "clothes peg",
       "curtains",
       "dishwasher powder",
-      "iron"
+      "handle",
+      "hanger",
+      "iron",
+      "pelmet",
+      "spray_head"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4032,13 +4118,23 @@
      "id": "k.objects/shards/mulberry-building-contents-03",
      "path": "k.objects/shards/mulberry-building-contents-03.sop",
      "wires": 860,
-     "bytes": 105000,
+     "bytes": 105183,
      "keys": [
+      "board",
+      "bulb",
+      "handle",
       "ironing board",
       "lampshade",
       "laundry basket",
+      "left_bin",
+      "left_lid",
+      "middle_lid",
       "mop",
       "recycling bins",
+      "right_bin",
+      "right_lid",
+      "rim",
+      "roller",
       "roller blind",
       "roman blind",
       "rotary washing line"
@@ -4052,17 +4148,22 @@
     {
      "id": "k.objects/shards/mulberry-building-contents-04",
      "path": "k.objects/shards/mulberry-building-contents-04.sop",
-     "wires": 1087,
-     "bytes": 131514,
+     "wires": 1085,
+     "bytes": 131100,
      "keys": [
+      "base",
+      "body",
+      "bowl",
+      "light",
+      "rail",
       "rug",
       "scrubbing brush",
       "spot light",
-      "string",
       "vacuum cleaner hand held",
       "vase",
       "vertical blinds",
-      "washing powder"
+      "washing powder",
+      "washing up bowl"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4073,14 +4174,16 @@
     {
      "id": "k.objects/shards/mulberry-building-contents-05",
      "path": "k.objects/shards/mulberry-building-contents-05.sop",
-     "wires": 633,
-     "bytes": 76193,
+     "wires": 366,
+     "bytes": 44300,
      "keys": [
-      "washing up bowl",
+      "bin",
+      "lid",
+      "opening",
       "washing up liquid",
       "waste paper bin",
-      "wheelie bin",
-      "wool"
+      "wheel",
+      "wheelie bin"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4092,9 +4195,10 @@
      "id": "k.objects/shards/mulberry-building-equipment-and-devices-01",
      "path": "k.objects/shards/mulberry-building-equipment-and-devices-01.sop",
      "wires": 591,
-     "bytes": 70876,
+     "bytes": 70888,
      "keys": [
       "blackboard",
+      "board",
       "dishwasher",
       "photocopier",
       "whiteboard"
