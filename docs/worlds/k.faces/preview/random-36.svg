@@ -1,24 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>random face 36</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <rect x="14" y="85" width="72" height="15" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>plate</title></rect>
-  <ellipse cx="20" cy="90" rx="2" ry="2" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
-  <ellipse cx="80" cy="90" rx="2" ry="2" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
-  <ellipse cx="50" cy="93" rx="3" ry="3" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>light</title></ellipse>
+  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>shirt</title></polygon>
+  <polygon points="8,100 10,93 26,87 38,84.5 45,100" fill="#2A2A2A" stroke="#333" stroke-width="0.8"><title>left_front</title></polygon>
+  <polygon points="92,100 90,93 74,87 62,84.5 55,100" fill="#2A2A2A" stroke="#333" stroke-width="0.8"><title>right_front</title></polygon>
+  <polygon points="50,93.5 40,90 40,97" fill="#2A2A2A" stroke="#333" stroke-width="0.8"><title>left_wing</title></polygon>
+  <polygon points="50,93.5 60,90 60,97" fill="#2A2A2A" stroke="#333" stroke-width="0.8"><title>right_wing</title></polygon>
+  <ellipse cx="50" cy="93.5" rx="2" ry="2" fill="#2A2A2A" stroke="#333" stroke-width="0.8"><title>knot</title></ellipse>
   <rect x="45" y="70" width="10" height="18" fill="#F3CFB3" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
   <ellipse cx="21.5" cy="48.5" rx="6.5" ry="6.5" fill="#F3CFB3" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
   <path d="M23 45 A5 3.5 0 0 0 23 52" fill="none" stroke="#D3A482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold</title></path>
   <ellipse cx="78.5" cy="48.5" rx="6.5" ry="6.5" fill="#F3CFB3" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
   <path d="M77 45 A5 3.5 0 0 1 77 52" fill="none" stroke="#D3A482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></path>
   <ellipse cx="50" cy="48" rx="28" ry="29" fill="#F3CFB3" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
-  <rect x="40" y="62" width="20" height="9" fill="#9AA4AE" stroke="#333" stroke-width="0.8"><title>plate</title></rect>
-  <polyline points="44,63.5 44,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_1</title></polyline>
-  <polyline points="48,63.5 48,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_2</title></polyline>
-  <polyline points="52,63.5 52,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_3</title></polyline>
-  <polyline points="56,63.5 56,69.5" fill="none" stroke="#3A3A3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>slot_4</title></polyline>
+  <rect x="40" y="63" width="20" height="7" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>teeth</title></rect>
+  <polyline points="40,66.5 60,66.5" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bite</title></polyline>
+  <polyline points="45,63 45,70" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_1</title></polyline>
+  <polyline points="50,63 50,70" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_2</title></polyline>
+  <polyline points="55,63 55,70" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_3</title></polyline>
   <polyline points="50,44 46.5,55 52,55" fill="none" stroke="#D3A482" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></polyline>
-  <path d="M31 41 A6 3 0 0 0 43 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
-  <path d="M57 41 A6 3 0 0 0 69 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
+  <path d="M31 43 A6 4 0 0 1 43 43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
+  <path d="M57 43 A6 4 0 0 1 69 43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
   <polygon points="29,33 32,29 38,27.5 44,29 45.5,32 44,33 38,31 32,32.5" fill="#F0F0F0" stroke="#333" stroke-width="0.8"><title>brow</title></polygon>
   <polygon points="71,33 68,29 62,27.5 56,29 54.5,32 56,33 62,31 68,32.5" fill="#F0F0F0" stroke="#333" stroke-width="0.8"><title>brow (mirrored)</title></polygon>
   <rect x="26" y="37" width="48" height="10" fill="#3A6EA5" stroke="#333" stroke-width="0.8"><title>visor</title></rect>

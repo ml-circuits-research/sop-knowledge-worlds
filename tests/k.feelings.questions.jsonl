@@ -5,3 +5,5 @@
 {"id":"fe-05","ask":"which feelings show as the angry expression","query":{"type":"k.feelings.feeling","where":{"expression":"angry"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["angry","jealous","frustrated"]}}
 {"id":"fe-06","ask":"what do the cheeks of someone shy look like","query":{"type":"k.feelings.feeling","where":{"name":"shy"},"seek":"cheeks"},"expect":{"status":"supported","value":"blush"}}
 {"id":"fe-07","ask":"is being proud pleasant","query":{"type":"k.feelings.feeling","where":{"name":"proud"},"seek":"tone"},"expect":{"status":"supported","value":"pleasant"}}
+{"id":"fe-08","ask":"which feelings does a face show like sad","query":{"type":"k.feelings.feeling","where":{"looks_like":"sad"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["lonely","disappointed","guilty","homesick"]}}
+{"id":"fe-09","ask":"how does the mouth of someone frustrated look","query":{"type":"k.feelings.feeling","where":{"name":"frustrated"},"seek":"mouth"},"expect":{"status":"supported","value":"gritted"}}

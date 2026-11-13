@@ -47,7 +47,7 @@ Sixteen slots, in draw order: `hair_back`, `shoulders`, `neck`, `ears`, `head`, 
 | head | round, oval, long, square, heart, wide, box |
 | ears | round, small, large, pointed, long, square |
 | neck | medium, thin, thick, tapered, necklace, pipe |
-| shoulders | t-shirt, v-neck, shirt, suit, hoodie, tank top, small, metal plate |
+| shoulders | t-shirt, v-neck, shirt, suit, hoodie, tank top, small, metal plate; work clothes and clothes of stories: lab coat, scrubs, chef jacket, apron, overalls, safety vest, uniform, fire jacket, sailor collar, space suit, robe, cloak, cape, fur coat, football shirt, bow tie, boiler suit |
 | hair_back | long straight, long wavy, long curly, bob, ponytail, pigtails, bun, afro |
 | hair_front | short, fringe, side parting, curly, spikes, bald on top, receding, centre parting, long sides, wavy, mohawk, tuft |
 | eyebrows | straight, thick, arched, thick arched, angry, sad, bushy, raised, short |
@@ -58,10 +58,10 @@ Sixteen slots, in draw order: `hair_back`, `shoulders`, `neck`, `ears`, `head`, 
 | beard | full, short, chinstrap, goatee, long, soul patch, sideburns, stubble |
 | moustache | thin, thick, handlebar, walrus, pencil, chevron |
 | glasses | round, square, small round, large, sunglasses, cat-eye, monocle, visor |
-| hat | cap, beanie, top hat, crown, cowboy hat, party hat, bow, antenna, sun hat |
+| hat | cap, beanie, top hat, crown, cowboy hat, party hat, bow, antenna, sun hat; work hats and hats of stories: chef hat, hard hat, fire helmet, police cap, pilot cap, nurse cap, sailor cap, military helmet, space helmet, knight helmet, pirate hat, witch hat, wizard hat, Santa hat, beret, fedora, swimming cap, judge wig, headscarf, flower wreath |
 | earrings | stud, hoop, drop, pearl, large hoop, star, bolt |
 
-134 variants. Colours: 11 skin (6 natural), 13 hair (8 natural), 10 eyes (7 natural), 11 clothes. Presets: child,
+175 variants (Round 7 added 20 hats and 17 kinds of clothes so that a job shows on the face, and for the feelings the eyes `downcast` and `looking up`, the mouth `gritted` and the cheeks `tear`). Colours: 11 skin (6 natural), 13 hair (8 natural), 10 eyes (7 natural), 11 clothes. Presets: child,
 girl, boy, woman, man, old woman, old man, bearded man, woman with curly hair, robot, alien, clown, queen.
 Expressions: happy, sad, angry, surprised, sleepy, wink, talking.
 

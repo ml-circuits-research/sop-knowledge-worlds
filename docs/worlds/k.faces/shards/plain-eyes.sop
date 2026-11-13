@@ -81,3 +81,19 @@
 @k.faces.plain.eyes.square k.faces.variant slot=eyes name=square style=plain shape=square kind=robot core.source="hand-core 1"
 @k.faces.plain.eyes.square.socket k.faces.part slot=eyes of=square name=socket shape=square x=31.5 y=36.5 w=11 h=11 z=1 colour=black rgb="#3A3A3A" core.source="hand-core 1"
 @k.faces.plain.eyes.square.light k.faces.part slot=eyes of=square name=light shape=square x=33.5 y=38.5 w=7 h=7 z=2 colour=yellow colour=blue tint=eyes core.source="hand-core 1"
+
+# eyes: downcast
+@k.faces.plain.eyes.downcast k.faces.variant slot=eyes name=downcast style=plain feel=open kind="looking down" core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.white k.faces.part slot=eyes of=downcast name=white shape=oval x=30 y=38 w=14 h=8 z=1 colour=white rgb="#FFFFFF" core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.iris k.faces.part slot=eyes of=downcast name=iris shape=circle x=34.5 y=41 w=5 h=5 z=2 colour=blue colour=brown tint=eyes core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.pupil k.faces.part slot=eyes of=downcast name=pupil shape=circle x=36 y=43 w=2 h=2 z=3 colour=black rgb="#1A1A1A" core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.lid k.faces.part slot=eyes of=downcast name=lid shape=rectangle x=29.5 y=36.5 w=15 h=3.5 z=4 colour=pink colour=brown tint=skin core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.lid_edge k.faces.part slot=eyes of=downcast name=lid_edge shape=line x=30 y=40 w=14 h=0 z=5 colour=black rgb="#1A1A1A" core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.lid_edge.p1 k.faces.point part=$k.faces.plain.eyes.downcast.lid_edge n=1 x=30 y=40 core.source="hand-core 1"
+@k.faces.plain.eyes.downcast.lid_edge.p2 k.faces.point part=$k.faces.plain.eyes.downcast.lid_edge n=2 x=44 y=40 core.source="hand-core 1"
+
+# eyes: looking up
+@k.faces.plain.eyes.looking_up k.faces.variant slot=eyes name="looking up" style=plain feel=open kind="looking up" core.source="hand-core 1"
+@k.faces.plain.eyes.looking_up.white k.faces.part slot=eyes of="looking up" name=white shape=oval x=30 y=37 w=14 h=9 z=1 colour=white rgb="#FFFFFF" core.source="hand-core 1"
+@k.faces.plain.eyes.looking_up.iris k.faces.part slot=eyes of="looking up" name=iris shape=circle x=34.5 y=37.5 w=5 h=5 z=2 colour=blue colour=brown tint=eyes core.source="hand-core 1"
+@k.faces.plain.eyes.looking_up.pupil k.faces.part slot=eyes of="looking up" name=pupil shape=circle x=36 y=38.5 w=2 h=2 z=3 colour=black rgb="#1A1A1A" core.source="hand-core 1"

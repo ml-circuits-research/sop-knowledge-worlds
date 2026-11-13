@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>random face 2</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#D64541" stroke="#333" stroke-width="0.8"><title>shirt</title></polygon>
-  <polygon points="40,84 50,90 42,96 35,86" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>left_collar</title></polygon>
-  <polygon points="60,84 50,90 58,96 65,86" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>right_collar</title></polygon>
-  <ellipse cx="50" cy="95.5" rx="1.5" ry="1.5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>button</title></ellipse>
+  <polygon points="8,100 10,93 26,87 40,84 60,84 74,87 90,93 92,100" fill="#F7F7F7" stroke="#333" stroke-width="0.8"><title>coat</title></polygon>
+  <polygon points="41,84 59,84 50,97" fill="#D64541" stroke="#333" stroke-width="0.8"><title>shirt_front</title></polygon>
+  <polygon points="40,84 49,97 43,100 35,87" fill="#ECECEC" stroke="#333" stroke-width="0.8"><title>left_lapel</title></polygon>
+  <polygon points="60,84 51,97 57,100 65,87" fill="#ECECEC" stroke="#333" stroke-width="0.8"><title>right_lapel</title></polygon>
+  <polyline points="70,92 70,98" fill="none" stroke="#2F5DA8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>pen</title></polyline>
   <rect x="45" y="70" width="10" height="18" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>neck</title></rect>
   <polygon points="28,44 13,39 18,52 28,58" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear</title></polygon>
   <polygon points="72,44 87,39 82,52 72,58" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></polygon>
@@ -14,16 +15,10 @@
   <ellipse cx="50" cy="66.5" rx="7" ry="4.5" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></ellipse>
   <ellipse cx="50" cy="69" rx="4" ry="2" fill="#E8788A" stroke="#333" stroke-width="0.8"><title>tongue</title></ellipse>
   <path d="M47 52 A3 3 0 0 0 53 52" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></path>
-  <ellipse cx="37" cy="42" rx="7" ry="4" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></ellipse>
-  <ellipse cx="37" cy="42.5" rx="2.5" ry="2.5" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
-  <ellipse cx="37" cy="42.5" rx="1" ry="1" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
-  <rect x="29.5" y="36.5" width="15" height="5.5" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>lid</title></rect>
-  <polyline points="30,42 44,42" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid_edge</title></polyline>
-  <ellipse cx="63" cy="42" rx="7" ry="4" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="42.5" rx="2.5" ry="2.5" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>iris (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="42.5" rx="1" ry="1" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil (mirrored)</title></ellipse>
-  <rect x="55.5" y="36.5" width="15" height="5.5" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>lid (mirrored)</title></rect>
-  <polyline points="70,42 56,42" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid_edge (mirrored)</title></polyline>
+  <rect x="31.5" y="36.5" width="11" height="11" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>socket</title></rect>
+  <rect x="33.5" y="38.5" width="7" height="7" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>light</title></rect>
+  <rect x="57.5" y="36.5" width="11" height="11" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>socket (mirrored)</title></rect>
+  <rect x="59.5" y="38.5" width="7" height="7" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>light (mirrored)</title></rect>
   <polygon points="29,29 45,29 45,33.5 29,33.5" fill="#2B2B2B" stroke="#333" stroke-width="0.8"><title>brow</title></polygon>
   <polygon points="71,29 55,29 55,33.5 71,33.5" fill="#2B2B2B" stroke="#333" stroke-width="0.8"><title>brow (mirrored)</title></polygon>
   <polygon points="20,42 21,34.2 24,27 28.8,20.8 35,16 42.2,13 50,12 57.8,13 65,16 71.2,20.8 76,27 79,34.2 80,42 79,36 72,24 62,26 50,16 38,26 28,24 21,36" fill="#2B2B2B" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>

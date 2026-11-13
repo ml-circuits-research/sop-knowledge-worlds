@@ -4632,6 +4632,19 @@
   {
    "style": "plain",
    "slot": "cheeks",
+   "name": "tear",
+   "file": "variant-plain-cheeks-tear.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "tear"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "cheeks",
    "name": "wrinkles",
    "file": "variant-plain-cheeks-wrinkles.svg",
    "source": "hand-core 1",
@@ -4993,6 +5006,22 @@
   {
    "style": "plain",
    "slot": "eyes",
+   "name": "downcast",
+   "file": "variant-plain-eyes-downcast.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "looking down"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "eyes",
    "name": "happy",
    "file": "variant-plain-eyes-happy.svg",
    "source": "hand-core 1",
@@ -5042,6 +5071,22 @@
     ],
     "kind": [
      "lashes"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "eyes",
+   "name": "looking up",
+   "file": "variant-plain-eyes-looking_up.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "looking up"
     ]
    }
   },
@@ -5616,6 +5661,19 @@
   {
    "style": "plain",
    "slot": "hat",
+   "name": "Santa hat",
+   "file": "variant-plain-hat-Santa_hat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "Santa hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
    "name": "antenna",
    "file": "variant-plain-hat-antenna.svg",
    "source": "hand-core 1",
@@ -5636,6 +5694,19 @@
    "features": {
     "kind": [
      "beanie"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "beret",
+   "file": "variant-plain-hat-beret.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "beret"
     ]
    }
   },
@@ -5671,6 +5742,22 @@
   {
    "style": "plain",
    "slot": "hat",
+   "name": "chef hat",
+   "file": "variant-plain-hat-chef_hat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "chef hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
    "name": "cowboy hat",
    "file": "variant-plain-hat-cowboy_hat.svg",
    "source": "hand-core 1",
@@ -5700,6 +5787,144 @@
   {
    "style": "plain",
    "slot": "hat",
+   "name": "fedora",
+   "file": "variant-plain-hat-fedora.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "fedora"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "fire helmet",
+   "file": "variant-plain-hat-fire_helmet.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "fire helmet"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "flower wreath",
+   "file": "variant-plain-hat-flower_wreath.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "flower wreath"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "hard hat",
+   "file": "variant-plain-hat-hard_hat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "hard hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "headscarf",
+   "file": "variant-plain-hat-headscarf.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "headscarf"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "judge wig",
+   "file": "variant-plain-hat-judge_wig.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "wig"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "knight helmet",
+   "file": "variant-plain-hat-knight_helmet.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "knight helmet"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "military helmet",
+   "file": "variant-plain-hat-military_helmet.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "military helmet"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "nurse cap",
+   "file": "variant-plain-hat-nurse_cap.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "nurse cap"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
    "name": "party hat",
    "file": "variant-plain-hat-party_hat.svg",
    "source": "hand-core 1",
@@ -5710,6 +5935,80 @@
     ],
     "kind": [
      "party hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "pilot cap",
+   "file": "variant-plain-hat-pilot_cap.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "pilot cap"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "pirate hat",
+   "file": "variant-plain-hat-pirate_hat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "wide"
+    ],
+    "kind": [
+     "pirate hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "police cap",
+   "file": "variant-plain-hat-police_cap.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "police cap"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "sailor cap",
+   "file": "variant-plain-hat-sailor_cap.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "sailor cap"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "space helmet",
+   "file": "variant-plain-hat-space_helmet.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "space helmet"
     ]
    }
   },
@@ -5732,6 +6031,19 @@
   {
    "style": "plain",
    "slot": "hat",
+   "name": "swimming cap",
+   "file": "variant-plain-hat-swimming_cap.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "swimming cap"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
    "name": "top hat",
    "file": "variant-plain-hat-top_hat.svg",
    "source": "hand-core 1",
@@ -5742,6 +6054,35 @@
     ],
     "kind": [
      "top hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "witch hat",
+   "file": "variant-plain-hat-witch_hat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "wide"
+    ],
+    "kind": [
+     "witch hat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "hat",
+   "name": "wizard hat",
+   "file": "variant-plain-hat-wizard_hat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "wizard hat"
     ]
    }
   },
@@ -6024,6 +6365,23 @@
     ],
     "kind": [
      "grin"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "mouth",
+   "name": "gritted",
+   "file": "variant-plain-mouth-gritted.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open",
+     "wide"
+    ],
+    "kind": [
+     "gritted teeth"
     ]
    }
   },
@@ -6373,6 +6731,135 @@
   {
    "style": "plain",
    "slot": "shoulders",
+   "name": "apron",
+   "file": "variant-plain-shoulders-apron.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "apron"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "boiler suit",
+   "file": "variant-plain-shoulders-boiler_suit.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "boiler suit"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "bow tie",
+   "file": "variant-plain-shoulders-bow_tie.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "waistcoat and bow tie"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "cape",
+   "file": "variant-plain-shoulders-cape.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "cape"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "chef jacket",
+   "file": "variant-plain-shoulders-chef_jacket.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "chef jacket"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "cloak",
+   "file": "variant-plain-shoulders-cloak.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "cloak"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "fire jacket",
+   "file": "variant-plain-shoulders-fire_jacket.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "fire jacket"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "football shirt",
+   "file": "variant-plain-shoulders-football_shirt.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "football shirt"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "fur coat",
+   "file": "variant-plain-shoulders-fur_coat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "fur-trimmed coat"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
    "name": "hoodie",
    "file": "variant-plain-shoulders-hoodie.svg",
    "source": "hand-core 1",
@@ -6380,6 +6867,22 @@
    "features": {
     "kind": [
      "hoodie"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "lab coat",
+   "file": "variant-plain-shoulders-lab_coat.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "lab coat"
     ]
    }
   },
@@ -6396,6 +6899,80 @@
     ],
     "kind": [
      "robot"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "overalls",
+   "file": "variant-plain-shoulders-overalls.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "overalls"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "robe",
+   "file": "variant-plain-shoulders-robe.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "robe"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "safety vest",
+   "file": "variant-plain-shoulders-safety_vest.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "safety vest"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "sailor collar",
+   "file": "variant-plain-shoulders-sailor_collar.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "sailor collar"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "scrubs",
+   "file": "variant-plain-shoulders-scrubs.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "scrubs"
     ]
    }
   },
@@ -6428,6 +7005,19 @@
     ],
     "kind": [
      "t-shirt"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "space suit",
+   "file": "variant-plain-shoulders-space_suit.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "kind": [
+     "space suit"
     ]
    }
   },
@@ -6470,6 +7060,22 @@
    "features": {
     "kind": [
      "tank top"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "shoulders",
+   "name": "uniform",
+   "file": "variant-plain-shoulders-uniform.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "age": [
+     "adult"
+    ],
+    "kind": [
+     "uniform"
     ]
    }
   },

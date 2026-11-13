@@ -15,9 +15,11 @@
   `"the dark"`, `"a loud noise"`); `opposite` (where there is a plain one: happy and sad, excited and bored, proud
   and ashamed, lonely and loved; angry, afraid, worried and nervous have calm); `reply` (a kind thing to say).
 - `core.word` facts: other words and the nouns (scared, frightened, fear; glad, joy; mad, cross, anger; anxious).
-- Several feelings look the same on a face, as they do on people: sad, lonely, disappointed, guilty, hurt and
-  homesick share the sad expression; calm and relieved share one face; angry and frustrated too. What tells them
-  apart is the cause, not the face.
+- `looks_like` names the feeling whose face a feeling shares, where a face cannot tell the two apart: lonely,
+  disappointed, guilty and homesick look like sad; grateful looks like happy; relieved looks like calm. What tells
+  them apart is the cause, not the face. The other 24 feelings each have a face of their own (a test checks it):
+  hurt is the sad face with tears, frustrated the angry face with gritted teeth, tired yawns, shy looks down,
+  hopeful looks up, proud smirks, nervous grits the teeth under worried eyebrows.
 
 ## Shards
 

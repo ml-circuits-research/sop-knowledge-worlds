@@ -1621,3 +1621,46 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   k.faces; anchors on their parts and the audit against the table; the joins asked for; 18 questions (la-01 to
   la-18); other names through the vocabulary index.
 - Numbers: k.layouts 3 shards, 463 wires, 73,236 bytes. Catalog 15 worlds, 782 shards, vocab 19,600 words; 0 errors, 0 warnings. npm test 2,440 pass, 0 fail.
+
+## Hats and work clothes; feelings that share a face (2026-11-13)
+
+- **`k.faces`, style plain: 175 variants (134).** 20 new hats (chef hat, hard hat, fire helmet, police cap, pilot
+  cap, nurse cap, sailor cap, military helmet, space helmet, knight helmet, pirate hat, witch hat, wizard hat,
+  Santa hat, beret, fedora, swimming cap, judge wig, headscarf, flower wreath; 29 hats now) and 17 new kinds of
+  clothes on the shoulders (lab coat, scrubs, chef jacket, apron, overalls, safety vest, uniform, fire jacket,
+  sailor collar, space suit, robe, cloak, cape, fur coat, football shirt, bow tie, boiler suit; 25 now). For the
+  feelings: eyes `downcast` and `looking up`, mouth `gritted`, cheeks `tear`. Drawn with primitives inside the box
+  of the slot, as the rest of `tools/faces-core.mjs`.
+- **`k.people`: 37 of the 60 roles changed their `hat` or `shoulders`** (cook: chef hat and chef jacket; builder:
+  hard hat and safety vest; firefighter: fire helmet and fire jacket; nurse: nurse cap and scrubs; police officer:
+  police cap and uniform; astronaut: space helmet and space suit; judge: wig and robe; knight, pirate, witch,
+  wizard, fairy, detective, superhero, Father Christmas …). Of the 36 jobs, **4 still have no face feature of
+  their own** (hairdresser, singer, dancer, photographer; about 25 before), and two pairs share a face (waiter and
+  musician; hairdresser and singer). A test holds this (at most 5 plain jobs, at least 33 different faces).
+- **Looked at:** every hat and every kind of clothes, each on the man or the woman preset (54 faces on 2 sheets at
+  150 px): all 20 hats read as what they are (the space helmet least: a white helmet with a red stripe); after
+  the look three clothes were changed because the neck covered their detail (bow tie, the clasp of the cloak, the
+  fur collar). Then a face for each of the 60 roles on one sheet at 125 px (the preset of the role, else of its
+  kind, else `man`, with its features): the jobs differ. Weak: the soldier's uniform takes the blue of the preset
+  under a green helmet; farmer, gardener and explorer share the sun hat and differ only by clothes; the lab coat
+  of doctor and vet is mostly hidden by the neck. That composer is a script of mine, not in the repository.
+  **Not looked at:** the regenerated sheet of 40 random faces (the new variants change which faces the seeds give),
+  the single-variant previews of the new variants, and the fur coat, cloak and bow tie alone after their change
+  (seen only on the role sheet: Father Christmas, wizard, king, waiter, musician).
+- **`k.feelings` version 2: `looks_like`.** A feeling whose face a face cannot tell from another says so: lonely,
+  disappointed, guilty, homesick `looks_like=sad`; grateful `looks_like=happy`; relieved `looks_like=calm`. The
+  other **24 feelings each have a face of their own** (15 distinct faces before): hurt (sad with tears),
+  frustrated (angry with gritted teeth), tired (sleepy, yawning mouth), proud (happy with a smirk), shy (looks
+  down, blush), embarrassed (eyes closed, round blush), hopeful (looks up), nervous (gritted teeth, worried
+  eyebrows). A test works out the face of every feeling (the expression, then its own variants) and requires that
+  feelings with the same face name one of them by `looks_like`, and no others do.
+- **Looked at:** all 30 feelings on the child and the woman preset (60 faces, one sheet at 125 px). Told apart by
+  eye: all 24. Weakest: jealous (the angry eyes and brows with a small mouth), worried next to confused (only the
+  eyebrows differ), bored next to tired (only the mouth). I first gave relieved raised eyebrows to part it from
+  calm; on the sheet the two could not be told apart, so relieved says `looks_like=calm` instead.
+- **Judgement that is mine:** which hat and clothes suit which role; which feelings a face can show (sad, guilty
+  and lonely cannot be parted, as the reviewer said; I added disappointed, homesick, grateful, relieved).
+- **What SOP Lang could not say:** "two feelings with the same face must say looks_like" compares several values
+  across facts and through another world's expression: a test.
+- Numbers: k.faces plain-hat 448 wires 56,411 bytes, plain-shoulders 509 wires 71,667 bytes; face previews 669
+  files. Catalog 15 worlds, 782 shards, vocab 19,661 words; 0 errors, 0 warnings. npm test 2,447 pass, 0 fail.

@@ -15,21 +15,20 @@
   <polyline points="30,58 36,63" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lower_line</title></polyline>
   <polyline points="73,53 67,55" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>upper_line (mirrored)</title></polyline>
   <polyline points="70,58 64,63" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lower_line (mirrored)</title></polyline>
-  <ellipse cx="50" cy="66.5" rx="7" ry="4.5" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></ellipse>
-  <ellipse cx="50" cy="69" rx="4" ry="2" fill="#E8788A" stroke="#333" stroke-width="0.8"><title>tongue</title></ellipse>
+  <polyline points="47,66 53,66" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>
   <path d="M44 52 A6 5 0 0 0 56 52" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></path>
   <ellipse cx="46.8" cy="53.8" rx="0.8" ry="0.8" fill="#75492A" stroke="#333" stroke-width="0.8"><title>left_nostril</title></ellipse>
   <ellipse cx="53.2" cy="53.8" rx="0.8" ry="0.8" fill="#75492A" stroke="#333" stroke-width="0.8"><title>right_nostril</title></ellipse>
-  <path d="M31 41 A6 3 0 0 0 43 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
-  <path d="M57 41 A6 3 0 0 0 69 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
+  <path d="M31 43 A6 4 0 0 1 43 43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
+  <path d="M57 43 A6 4 0 0 1 69 43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
   <polygon points="29,29 45,29 45,33.5 29,33.5" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>brow</title></polygon>
   <polygon points="71,29 55,29 55,33.5 71,33.5" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>brow (mirrored)</title></polygon>
   <polygon points="20,42 21,34.2 24,27 28.8,20.8 35,16 42.2,13 50,12 57.8,13 65,16 71.2,20.8 76,27 79,34.2 80,42 80,44 76,31 24,31 20,44" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>
   <polyline points="38,22 38,30" fill="none" stroke="#553016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>strand_1</title></polyline>
   <polyline points="50,21 50,30" fill="none" stroke="#553016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>strand_2</title></polyline>
   <polyline points="62,22 62,30" fill="none" stroke="#553016" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>strand_3</title></polyline>
-  <polygon points="26,27 24,8 35,18 42,4 50,16 58,4 65,18 76,8 74,27" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>crown</title></polygon>
-  <ellipse cx="35" cy="22" rx="2" ry="2" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>left_jewel</title></ellipse>
-  <ellipse cx="50" cy="21" rx="2" ry="2" fill="#2F5DA8" stroke="#333" stroke-width="0.8"><title>middle_jewel</title></ellipse>
-  <ellipse cx="65" cy="22" rx="2" ry="2" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>right_jewel</title></ellipse>
+  <polygon points="23,27 24.3,19.6 28.2,12.9 34.1,7.6 41.7,4.2 50,3 58.3,4.2 65.9,7.6 71.8,12.9 75.7,19.6 77,27" fill="#C62828" stroke="#333" stroke-width="0.8"><title>shell</title></polygon>
+  <rect x="47" y="3" width="6" height="10" fill="#8E1B1B" stroke="#333" stroke-width="0.8"><title>crest</title></rect>
+  <polygon points="18,25 82,25 92,32 8,32" fill="#8E1B1B" stroke="#333" stroke-width="0.8"><title>brim</title></polygon>
+  <polygon points="44,13 56,13 56,20 50,24 44,20" fill="#E8B923" stroke="#333" stroke-width="0.8"><title>badge</title></polygon>
 </svg>

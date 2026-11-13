@@ -23,11 +23,13 @@ Kinds of person, and 60 roles and jobs. Hand-written (`hand-core 1`, CC0-1.0).
   `syringe`); `works_at` (many: where the role is found; a scene of `k.scenes` in all cases but one, the judge's
   courthouse, which is an object); `does` (many: `teach`, `"put out fires"`); `hat`, `glasses`, `beard`, `moustache`,
   `shoulders` (the variant of that `k.faces` slot, style `plain`, that suits the role: a king `hat=crown
-  beard=full`, a pilot `hat=cap glasses=sunglasses shoulders=suit`); `face` (a `k.faces` preset, where one is the
+  beard=full`, a pilot `hat="pilot cap" glasses=sunglasses shoulders=uniform`); `face` (a `k.faces` preset, where one is the
   role: `clown`, `queen`, `"old woman"`); `drawing=person`.
-- 238 of the 239 things worn, held or used have a drawing (not the astronaut's space suit). `k.faces` has few hats
-  (cap, beanie, top hat, crown, cowboy hat, party hat, sun hat), so most jobs have no face feature of their own: a
-  host tells a doctor from a baker by what they wear and hold, not by the face.
+- 238 of the 239 things worn, held or used have a drawing (not the astronaut's space suit). Most jobs show on the
+  face: a cook has `hat="chef hat" shoulders="chef jacket"`, a builder `hat="hard hat" shoulders="safety vest"`, a
+  firefighter `hat="fire helmet" shoulders="fire jacket"`, a nurse `hat="nurse cap" shoulders=scrubs`. Four jobs
+  have no feature of their own (hairdresser, singer, dancer, photographer): a host tells them by what they hold.
+  Waiter and musician share one face (waistcoat and bow tie), hairdresser and singer another.
 
 ## Shards
 

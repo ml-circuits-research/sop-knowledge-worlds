@@ -42,6 +42,25 @@ test('every feeling shows on a face: a k.faces expression or variants that exist
   for (const [a, b] of [['happy', 'sad'], ['excited', 'bored'], ['proud', 'ashamed'], ['lonely', 'loved']]) { assert.equal(opposite[a], b); assert.equal(opposite[b], a); }
 });
 
+test('feelings that a face shows in the same way say so (looks_like); every other feeling has a face of its own', () => {
+  const expression = new Map(faces.ofType('k.faces.expression').filter((w) => tok(w.attrs.style[0]) === 'plain').map((w) => [tok(w.attrs.name[0]), w]));
+  // The face of a feeling: the variants of its expression, then its own.
+  const faceOf = (w) => {
+    const e = expression.get(tok(w.attrs.expression?.[0]));
+    return ['mouth', 'eyebrows', 'eyes', 'cheeks'].map((s) => tok(w.attrs[s]?.[0]) ?? tok(e?.attrs[s]?.[0]) ?? '').join(' / ');
+  };
+  const groups = new Map();
+  for (const w of feelings) { const f = faceOf(w); groups.set(f, [...(groups.get(f) ?? []), w]); }
+  for (const [face, group] of groups) {
+    const own = group.filter((w) => !w.attrs.looks_like);
+    assert.equal(own.length, 1, `${group.map((w) => tok(w.attrs.name[0])).join(', ')} share the face ${face}: all but one say looks_like`);
+    for (const w of group) for (const l of w.attrs.looks_like ?? []) assert.equal(tok(l), tok(own[0].attrs.name[0]), w.id);
+  }
+  const like = Object.fromEntries(feelings.filter((w) => w.attrs.looks_like).map((w) => [tok(w.attrs.name[0]), tok(w.attrs.looks_like[0])]));
+  assert.deepEqual(like, { lonely: 'sad', disappointed: 'sad', guilty: 'sad', homesick: 'sad', grateful: 'happy', relieved: 'calm' });
+  assert.equal(groups.size, 24, 'faces that differ');
+});
+
 test('other words reach the feeling through the vocabulary index', () => {
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
   for (const word of ['scared', 'glad', 'mad', 'fear', 'anxious', 'thankful', 'sleepy']) assert.ok(vocab[word]?.includes('k.feelings/shards/feelings'), word);

@@ -67,6 +67,15 @@ test('a role is drawn by the person; its kind is a kind; its face features are k
   }
 });
 
+test('jobs show on the face: at most five jobs have neither a hat, glasses, a beard nor work clothes; few share a face', () => {
+  const ordinary = new Set(['t-shirt', 'shirt', 'v-neck', 'hoodie', 'tank top', 'suit', undefined]);
+  const jobs = people.ofType('k.people.role').filter((w) => tok(w.attrs.group[0]) === 'job');
+  const plain = jobs.filter((w) => !w.attrs.hat && !w.attrs.glasses && !w.attrs.beard && !w.attrs.moustache && ordinary.has(tok(w.attrs.shoulders?.[0])));
+  assert.ok(plain.length <= 5, plain.map((w) => tok(w.attrs.name[0])).join(', '));
+  const faces = new Set(jobs.map((w) => ['hat', 'glasses', 'beard', 'moustache', 'shoulders'].map((k) => w.attrs[k]?.[0] ?? '').join('/')));
+  assert.ok(faces.size >= jobs.length - 3, `${faces.size} different faces for ${jobs.length} jobs`);
+});
+
 test('what roles wear, hold and use has a drawing for at least 95%; where they work is a scene for at least 90%', () => {
   let things = 0, drawn = 0, places = 0, found = 0;
   for (const w of roles) {

@@ -12,3 +12,6 @@
 {"id":"pe-12","ask":"who works on a farm","query":{"type":"k.people.role","where":{"works_at":"farm"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["vet","farmer"]}}
 {"id":"pe-13","ask":"what kind of person is a grandmother","query":{"type":"k.people.role","where":{"name":"grandmother"},"seek":"is"},"expect":{"status":"supported","value":"grandmother"}}
 {"id":"pe-14","ask":"what does an astronaut use","query":{"type":"k.people.role","where":{"name":"astronaut"},"seek":"uses","mode":"list"},"expect":{"status":"supported","values":["rocket","\"space shuttle\"","satellite"]}}
+{"id":"pe-15","ask":"which hat suits a firefighter","query":{"type":"k.people.role","where":{"name":"firefighter"},"seek":"hat"},"expect":{"status":"supported","value":"\"fire helmet\""}}
+{"id":"pe-16","ask":"who has a chef hat","query":{"type":"k.people.role","where":{"hat":"\"chef hat\""},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["cook","baker"]}}
+{"id":"pe-17","ask":"what clothes show on the shoulders of a builder","query":{"type":"k.people.role","where":{"name":"builder"},"seek":"shoulders"},"expect":{"status":"supported","value":"\"safety vest\""}}
