@@ -195,7 +195,7 @@
 
 # keyboard electric
 @k.objects.mb1768 k.objects.object name="keyboard electric" core.source="mulberry fa94a93"
-@k.objects.mb1768.p1 k.objects.part of="keyboard electric" name=part1 shape=polygon x=24.8 y=34.7 w=63.6 h=24.7 z=1 colour=white rgb="#FFFFFF" core.source="mulberry fa94a93"
+@k.objects.mb1768.p1 k.objects.part of="keyboard electric" name=body named=model shape=polygon x=24.8 y=34.7 w=63.6 h=24.7 z=1 colour=white rgb="#FFFFFF" core.source="mulberry fa94a93"
 @k.objects.mb1768.p1.1 k.objects.point part=$k.objects.mb1768.p1 n=1 x=60.5 y=34.7 core.source="mulberry fa94a93"
 @k.objects.mb1768.p1.2 k.objects.point part=$k.objects.mb1768.p1 n=2 x=84.5 y=34.7 core.source="mulberry fa94a93"
 @k.objects.mb1768.p1.3 k.objects.point part=$k.objects.mb1768.p1 n=3 x=87.3 y=35.9 core.source="mulberry fa94a93"

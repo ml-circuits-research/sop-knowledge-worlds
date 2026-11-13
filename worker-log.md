@@ -543,3 +543,11 @@ of k.objects), Q14 (naming pass for the new sources), Q15 (country names).
 - Mulberry now: 1054 objects, 14955 parts, **1004 named, 6842 details** (rule and eye); 547 objects
   with rows; 161 shards, 166148 wires, 19889936 bytes. Excluded so far: 97. k.objects: 2039 objects.
 - catalog: worlds 6 shards 647 vocab 17502; 0 errors, 0 warnings. npm test 2168 pass, 0 fail.
+
+## R3.1 naming, batch 11 (2026-11-13): Mulberry objects 901 to 1000 of 1,151 looked at
+
+- Looked at: the Mulberry objects 901 to 1000 (in shard order) on contact sheets of 20 at 300 px. Playground, toys, money, music instruments, plants and trees, science. Science is mostly ideas and adjectives (bendy, float, friction, gravity, magnetic, opaque) and diagram parts (Earth crust, mantle, cores): excluded. Sand pit and water table are drawn black.
+- This batch: rows for 47 objects; 29 objects moved to `sources/mulberry/excluded.tsv` (R3.2).
+- Mulberry now: 1025 objects, 14545 parts, **1092 named, 6652 details** (rule and eye); 594 objects
+  with rows; 157 shards, 161264 wires, 19310561 bytes. Excluded so far: 126. k.objects: 2010 objects.
+- catalog: worlds 6 shards 643 vocab 17498; 0 errors, 0 warnings. npm test 2139 pass, 0 fail.

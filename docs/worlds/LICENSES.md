@@ -38,7 +38,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC-BY-SA-4.0 (`LICENSE.txt`: "licensed under the Creative Commons Attribution-Share Alike License", https://creativecommons.org/licenses/by-sa/4.0/).
 - Attribution: Mulberry Symbols, Copyright 2018-2026 Steve Lee, https://mulberrysymbols.org , CC BY-SA 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: CC-BY-SA-4.0
-- Used by: `k.objects` (161 shards)
+- Used by: `k.objects` (157 shards)
 
 ## natural-earth-5.1.2
 

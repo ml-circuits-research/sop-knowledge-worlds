@@ -481,7 +481,7 @@
 
 # swing
 @k.objects.mb2751 k.objects.object name=swing core.source="mulberry fa94a93"
-@k.objects.mb2751.p1 k.objects.part of=swing name=part1 shape=polygon x=42.9 y=60.8 w=19.2 h=4.6 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
+@k.objects.mb2751.p1 k.objects.part of=swing name=seat named=model shape=polygon x=42.9 y=60.8 w=19.2 h=4.6 z=1 colour=green rgb="#33A02C" core.source="mulberry fa94a93"
 @k.objects.mb2751.p1.1 k.objects.point part=$k.objects.mb2751.p1 n=1 x=62.1 y=60.8 core.source="mulberry fa94a93"
 @k.objects.mb2751.p1.2 k.objects.point part=$k.objects.mb2751.p1 n=2 x=62.1 y=65.4 core.source="mulberry fa94a93"
 @k.objects.mb2751.p1.3 k.objects.point part=$k.objects.mb2751.p1 n=3 x=42.9 y=65.4 core.source="mulberry fa94a93"
