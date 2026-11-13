@@ -243,3 +243,33 @@ drawing (55.5%). Accepted.
   `MISSING.md` as "not drawable" with a reason, and they leave the count.
 - **R5.4** Report coverage again, and the same coverage for the 3,000 most frequent common things.
 - Report as before, with what was looked at and what was not.
+
+## Reviewer 2026-11-13 14:55 — Round 6 (owner): `k.faces`, faces built from replaceable parts (after Round 5)
+
+The owner wants avatars made of small vector elements that can be replaced, resized and recoloured, composed from a
+description, like a police sketch. The application will draw them with the same renderer as `k.objects`.
+
+- **R6.1 Schema `k.faces`** (imports `k.objects` conventions: primitive shapes, boxes in a 0–100 frame, points as wires, colours):
+  - `k.faces.slot`: the places of a face, each with an anchor box in the face frame and a draw order: head shape, ears,
+    neck, hair back, hair front, eyebrows, eyes, nose, mouth, cheeks, beard, moustache, glasses, hat, earrings, shoulders/clothes.
+  - `k.faces.variant`: one drawable shape for a slot (`slot=`, `name=`), with **plain descriptive features** as repeated keys a
+    person would say: `shape=round|oval|long|square|heart`, `size=small|medium|large`, `feel=thin|thick|curly|straight|wavy|
+    bushy|arched|flat|wide|narrow|open|closed|smiling|sad|surprised`, `length=short|medium|long`, and for whom it fits
+    (`age=child|adult|old`) where the drawing shows it. Its parts are `k.objects.part`-like wires drawn inside the slot box.
+  - Paired slots (eyes, eyebrows, ears) store one side; the other is mirrored by the renderer (`mirror=true` on the slot).
+  - `k.faces.preset`: a named face = one variant per slot plus colours (skin, hair, eyes, clothes): about 12 presets (child,
+    woman, man, old woman, old man, robot, cartoon styles), English names.
+  - `k.faces.expression`: happy, sad, angry, surprised, sleepy, wink, talking (open / closed mouth pair): which variants of
+    mouth, eyebrows and eyes it switches to.
+  - Colour lists as facts: natural skin, hair and eye colours with names.
+- **R6.2 Hand-written core:** at least 6 variants per slot (10 for hair, eyes, mouth), drawn with primitives, so that a face
+  can be assembled today. Previews: every variant alone, and a sheet of 40 seeded random combinations plus the presets
+  (`docs/worlds/k.faces/preview/`). Look at them; a combination must still look like a face (anchors line up).
+- **R6.3 Import** from DiceBear collections on GitHub (`dicebear/dicebear`), only styles under CC0 or CC BY (check each style's
+  licence file and record it; skip the rest): their parts are already separated per slot. Convert with the Noto converter
+  (curves to polygons, point budget), map each part to our slot and features (name them by looking, `named=model`), keep the
+  style name as `style=` so a face does not mix styles unless asked. Report per style: variants per slot, licence, and a
+  preview sheet. If a style does not survive the conversion, leave it out and say so.
+- **R6.4 Questions it must answer** (tests): "which mouths are there", "a long face with small eyes and thick eyebrows" →
+  the variants whose features match, ranked by how many features match; "what is the difference between preset A and B".
+- Gallery: add the faces to `docs/gallery.html` (a second tab or page) with the slot and features of each variant.
