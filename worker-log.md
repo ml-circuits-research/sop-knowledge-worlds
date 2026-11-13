@@ -2349,3 +2349,30 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   senses with an opposite (1,029 words), 1,044 with a near opposite, 9,342 with a chain; 321 shards (`co` is
   split in two), 31,926 wires, 7,258,687 bytes. Natural questions about words: the sample 100 of 100, all 292:
   275 (85 before). Catalog 22 worlds, 857 shards, vocab 22,610 words; 0 errors, 0 warnings.
+
+## Round 9, item 8, summary (2026-11-13, first worker): natural questions that find a fact, per domain
+
+- `node tools/ask-sample.mjs` (domains in `tools/ask-domains.mjs`; the things of each domain in
+  `sources/hand-core/questions/*.tsv`, written down without looking at the world, or, for animals, the table of
+  animals itself): a seeded sample of 100 questions per domain; a question finds a fact when its sopworld query
+  is supported, by the name of the thing or by a `core.word` of it. Before = the worlds at 66d8653 (after item 1).
+
+  | domain | sample of 100, before | now | all questions, before | now |
+  | --- | --- | --- | --- | --- |
+  | animals | 53 | 81 | not counted | not counted (3,454 questions) |
+  | geo | 66 | 97 | 299 of 428 | 405 |
+  | space | 45 | 95 | 54 of 126 | 121 |
+  | body | 59 | 95 | 117 of 210 | 190 |
+  | food | 59 | 92 | 194 of 300 | 282 |
+  | words | 33 | 100 | 85 of 292 | 275 |
+
+- **What the numbers are not:** the questions are templates over lists I wrote, not the 301 questions of the
+  demo's Talk tab (they are not in this repository), and the templates ask for keys that exist. A question in
+  other words, or about another property, is not counted. The samples of geo and words are luckier than the
+  whole (95% and 94% of all questions).
+- **Anchors (item 1)** have no domain here: the measure is the target of the item (51 of the 56 things that
+  another thing is on in `k.scenes` have an anchor; 26 before).
+- The coverage reports (`MISSING.md`, `COVERAGE.md`, `ASPECTS.md`) were run again after each item; the common
+  things with a drawing are unchanged by Round 9 (680 by name, 477 with none).
+- README: a paragraph on Round 9.
+- npm test on the pushed state of item 7 (7a4f373): 2,663 pass, 0 fail.

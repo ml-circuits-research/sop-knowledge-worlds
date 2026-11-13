@@ -23,5 +23,13 @@ comparatives, shapes, directions, positions, set words, number words), `k.attrib
 found, usual colour, material, wheels, abilities and use of 761 common things), `k.wearables` (what is worn where: 15 places on the body with their anchor on the
 person drawing, 105 wearables joined to drawings and face variants), `k.parts` (usual parts of 541 of the 1,500 common things, from WordNet).
 Coverage of the 1,500 common things per attribute and per world, with the gaps: `docs/worlds/COVERAGE.md`; families of things by aspect: `docs/worlds/k.attributes/ASPECTS.md`.
+Round 9 (the facts the Talk tab asked for): `k.layouts` has 225 anchors (where a thing sits, stands, lies or is put:
+swing, bench, bed, horse, bookcase, branch, roof; the feet and hips of the person); `k.animals` 314 animals with size
+class, group name and what they cannot do; `k.geo` capitals for 232 of 238 countries and territories, 100 lakes, 58
+deserts, 72 oceans and seas, river lengths and areas as `_about` values; `k.space` colours and why, days, years,
+widths, distances; `k.body` 91 parts with the parts of hand, eye, ear and mouth; `k.food` 229 foods with what dishes
+are made of; `k.words` opposites, adjectives and adverbs of the common words and chains of kinds. `k.units.measure`
+says in which unit every number of these worlds is given. `node tools/ask-sample.mjs` asks a seeded sample of 100
+natural questions per domain and counts those that find a fact by lookup.
 
 Agents working here start with [AGENTS.md](AGENTS.md).
