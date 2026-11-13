@@ -5,7 +5,7 @@
 
 # back garden
 @k.objects.mb85 k.objects.object name="back garden" core.source="mulberry fa94a93"
-@k.objects.mb85.p1 k.objects.part of="back garden" name=part1 shape=polygon x=12.2 y=64.5 w=75.5 h=22.5 z=1 colour=green rgb="#6EBE44" core.source="mulberry fa94a93"
+@k.objects.mb85.p1 k.objects.part of="back garden" name=lawn named=model shape=polygon x=12.2 y=64.5 w=75.5 h=22.5 z=1 colour=green rgb="#6EBE44" core.source="mulberry fa94a93"
 @k.objects.mb85.p1.1 k.objects.point part=$k.objects.mb85.p1 n=1 x=62.1 y=64.5 core.source="mulberry fa94a93"
 @k.objects.mb85.p1.2 k.objects.point part=$k.objects.mb85.p1 n=2 x=77.6 y=64.5 core.source="mulberry fa94a93"
 @k.objects.mb85.p1.3 k.objects.point part=$k.objects.mb85.p1 n=3 x=87.7 y=87 core.source="mulberry fa94a93"
@@ -53,7 +53,7 @@
 @k.objects.mb85.p7.2 k.objects.point part=$k.objects.mb85.p7 n=2 x=62.1 y=64.5 core.source="mulberry fa94a93"
 @k.objects.mb85.p7.3 k.objects.point part=$k.objects.mb85.p7 n=3 x=54.4 y=64.5 core.source="mulberry fa94a93"
 @k.objects.mb85.p7.4 k.objects.point part=$k.objects.mb85.p7 n=4 x=54.4 y=46.4 core.source="mulberry fa94a93"
-@k.objects.mb85.p8 k.objects.part of="back garden" name=part8 shape=polygon x=10.7 y=11.8 w=45.7 h=35.7 z=8 colour=green rgb="#33A048" core.source="mulberry fa94a93"
+@k.objects.mb85.p8 k.objects.part of="back garden" name=crown named=model shape=polygon x=10.7 y=11.8 w=45.7 h=35.7 z=8 colour=green rgb="#33A048" core.source="mulberry fa94a93"
 @k.objects.mb85.p8.1 k.objects.point part=$k.objects.mb85.p8 n=1 x=45.6 y=46.2 core.source="mulberry fa94a93"
 @k.objects.mb85.p8.2 k.objects.point part=$k.objects.mb85.p8 n=2 x=43.9 y=46.9 core.source="mulberry fa94a93"
 @k.objects.mb85.p8.3 k.objects.point part=$k.objects.mb85.p8 n=3 x=42.1 y=46.8 core.source="mulberry fa94a93"
@@ -196,7 +196,7 @@
 
 # barbeque
 @k.objects.mb115 k.objects.object name=barbeque core.source="mulberry fa94a93"
-@k.objects.mb115.p1 k.objects.part of=barbeque name=part1 shape=polygon x=25.8 y=19.9 w=48.9 h=24.9 z=1 colour=red rgb="#BE0000" core.source="mulberry fa94a93"
+@k.objects.mb115.p1 k.objects.part of=barbeque name=bowl named=model shape=polygon x=25.8 y=19.9 w=48.9 h=24.9 z=1 colour=red rgb="#BE0000" core.source="mulberry fa94a93"
 @k.objects.mb115.p1.1 k.objects.point part=$k.objects.mb115.p1 n=1 x=35.6 y=29 core.source="mulberry fa94a93"
 @k.objects.mb115.p1.2 k.objects.point part=$k.objects.mb115.p1 n=2 x=41.1 y=30.6 core.source="mulberry fa94a93"
 @k.objects.mb115.p1.3 k.objects.point part=$k.objects.mb115.p1 n=3 x=47.9 y=31.4 core.source="mulberry fa94a93"
@@ -516,7 +516,7 @@
 @k.objects.mb216.p8.3 k.objects.point part=$k.objects.mb216.p8 n=3 x=39.2 y=93.7 core.source="mulberry fa94a93"
 @k.objects.mb216.p8.4 k.objects.point part=$k.objects.mb216.p8 n=4 x=35.6 y=92.4 core.source="mulberry fa94a93"
 @k.objects.mb216.p8.5 k.objects.point part=$k.objects.mb216.p8 n=5 x=40.5 y=90.2 core.source="mulberry fa94a93"
-@k.objects.mb216.p9 k.objects.part of=bonfire name=part9 shape=polygon x=25.9 y=24 w=37.2 h=47.4 z=9 colour=red rgb="#ED1D31" core.source="mulberry fa94a93"
+@k.objects.mb216.p9 k.objects.part of=bonfire name=flame named=model shape=polygon x=25.9 y=24 w=37.2 h=47.4 z=9 colour=red rgb="#ED1D31" core.source="mulberry fa94a93"
 @k.objects.mb216.p9.1 k.objects.point part=$k.objects.mb216.p9 n=1 x=61.7 y=54.3 core.source="mulberry fa94a93"
 @k.objects.mb216.p9.2 k.objects.point part=$k.objects.mb216.p9 n=2 x=62.9 y=54.2 core.source="mulberry fa94a93"
 @k.objects.mb216.p9.3 k.objects.point part=$k.objects.mb216.p9 n=3 x=63.1 y=55.7 core.source="mulberry fa94a93"
@@ -915,7 +915,7 @@
 @k.objects.mb2279.p10.17 k.objects.point part=$k.objects.mb2279.p10 n=17 x=17.6 y=45.8 core.source="mulberry fa94a93"
 @k.objects.mb2279.p10.18 k.objects.point part=$k.objects.mb2279.p10 n=18 x=19.7 y=49.3 core.source="mulberry fa94a93"
 @k.objects.mb2279.p10.19 k.objects.point part=$k.objects.mb2279.p10 n=19 x=20.7 y=52.3 core.source="mulberry fa94a93"
-@k.objects.mb2279.p11 k.objects.part of=pond name=part11 shape=polygon x=23.4 y=39.6 w=68.9 h=35 z=11 colour=white rgb="#A3D9FF" core.source="mulberry fa94a93"
+@k.objects.mb2279.p11 k.objects.part of=pond name=water named=model shape=polygon x=23.4 y=39.6 w=68.9 h=35 z=11 colour=white rgb="#A3D9FF" core.source="mulberry fa94a93"
 @k.objects.mb2279.p11.1 k.objects.point part=$k.objects.mb2279.p11 n=1 x=83.5 y=46.4 core.source="mulberry fa94a93"
 @k.objects.mb2279.p11.2 k.objects.point part=$k.objects.mb2279.p11 n=2 x=87.8 y=49.2 core.source="mulberry fa94a93"
 @k.objects.mb2279.p11.3 k.objects.point part=$k.objects.mb2279.p11 n=3 x=90 y=51.3 core.source="mulberry fa94a93"

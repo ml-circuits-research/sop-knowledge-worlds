@@ -1,5 +1,5 @@
 {
- "version": "bc890a5c3a9d",
+ "version": "c82b9a481861",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -4195,7 +4195,7 @@
      "id": "k.objects/shards/mulberry-building-equipment-and-devices-01",
      "path": "k.objects/shards/mulberry-building-equipment-and-devices-01.sop",
      "wires": 591,
-     "bytes": 70888,
+     "bytes": 70900,
      "keys": [
       "blackboard",
       "board",
@@ -4213,16 +4213,27 @@
      "id": "k.objects/shards/mulberry-building-furniture-01",
      "path": "k.objects/shards/mulberry-building-furniture-01.sop",
      "wires": 895,
-     "bytes": 107537,
+     "bytes": 107823,
      "keys": [
       "arm chair",
+      "back",
       "bed four poster",
       "blanket chest",
       "book shelf",
       "bookcase",
       "bunk beds",
+      "canopy",
       "chair computer",
-      "chair dining"
+      "chair dining",
+      "left_arm",
+      "left_wheel",
+      "lid",
+      "middle_wheel",
+      "post",
+      "right_arm",
+      "right_wheel",
+      "seat",
+      "shelf"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4234,8 +4245,10 @@
      "id": "k.objects/shards/mulberry-building-furniture-02",
      "path": "k.objects/shards/mulberry-building-furniture-02.sop",
      "wires": 805,
-     "bytes": 96646,
+     "bytes": 96892,
      "keys": [
+      "back",
+      "bottom_drawer",
       "chair wing back",
       "chaise lounge",
       "chest of drawers",
@@ -4243,7 +4256,16 @@
       "corner cabinet",
       "cot",
       "cupboard",
-      "desk"
+      "desk",
+      "door",
+      "drawer",
+      "left_door",
+      "middle_drawer",
+      "seat",
+      "side",
+      "top",
+      "top_left_drawer",
+      "top_right_drawer"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4254,9 +4276,10 @@
     {
      "id": "k.objects/shards/mulberry-building-furniture-03",
      "path": "k.objects/shards/mulberry-building-furniture-03.sop",
-     "wires": 705,
-     "bytes": 86962,
+     "wires": 732,
+     "bytes": 90025,
      "keys": [
+      "back",
       "dining table",
       "double bed",
       "draining board",
@@ -4264,7 +4287,13 @@
       "dresser",
       "dressing table",
       "filing cabinet",
-      "furniture"
+      "headboard",
+      "high chair",
+      "mirror",
+      "side",
+      "table_top",
+      "top",
+      "tray"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4275,17 +4304,28 @@
     {
      "id": "k.objects/shards/mulberry-building-furniture-04",
      "path": "k.objects/shards/mulberry-building-furniture-04.sop",
-     "wires": 684,
-     "bytes": 85301,
+     "wires": 690,
+     "bytes": 85776,
      "keys": [
+      "base",
       "headboard",
-      "high chair",
+      "left_door",
       "locker",
       "medicine cabinet",
+      "middle_door",
       "nest of tables",
+      "picture",
       "picture frame",
+      "right_door",
       "rocking chair",
-      "single bed"
+      "seat",
+      "shade",
+      "side",
+      "single bed",
+      "stand",
+      "standard lamp",
+      "stool",
+      "top"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4296,11 +4336,11 @@
     {
      "id": "k.objects/shards/mulberry-building-furniture-05",
      "path": "k.objects/shards/mulberry-building-furniture-05.sop",
-     "wires": 291,
-     "bytes": 35640,
+     "wires": 77,
+     "bytes": 10103,
      "keys": [
-      "standard lamp",
-      "stool",
+      "left_foot",
+      "right_foot",
       "wardrobe"
      ],
      "sources": [
@@ -4313,14 +4353,19 @@
      "id": "k.objects/shards/mulberry-building-garden-and-farm-01",
      "path": "k.objects/shards/mulberry-building-garden-and-farm-01.sop",
      "wires": 987,
-     "bytes": 117189,
+     "bytes": 117246,
      "keys": [
       "back garden",
       "barbeque",
       "bench",
       "bonfire",
+      "bowl",
+      "crown",
       "field",
-      "pond"
+      "flame",
+      "lawn",
+      "pond",
+      "water"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4331,14 +4376,17 @@
     {
      "id": "k.objects/shards/mulberry-building-public-01",
      "path": "k.objects/shards/mulberry-building-public-01.sop",
-     "wires": 857,
-     "bytes": 103717,
+     "wires": 679,
+     "bytes": 82155,
      "keys": [
+      "cistern",
       "disabled toilet",
       "ladies toilet",
+      "left_door",
       "mens toilet",
-      "operating theatre",
-      "room",
+      "pedestal",
+      "right_door",
+      "roof",
       "surgery health centre"
      ],
      "sources": [
@@ -4351,28 +4399,12 @@
      "id": "k.objects/shards/mulberry-building-residential-01",
      "path": "k.objects/shards/mulberry-building-residential-01.sop",
      "wires": 132,
-     "bytes": 16351,
+     "bytes": 16384,
      "keys": [
-      "garage"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-building-school-01",
-     "path": "k.objects/shards/mulberry-building-school-01.sop",
-     "wires": 689,
-     "bytes": 83992,
-     "keys": [
-      "art room",
-      "class room",
-      "it room",
-      "music room",
-      "science room",
-      "sensory room"
+      "door",
+      "garage",
+      "roof",
+      "wall"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4384,11 +4416,14 @@
      "id": "k.objects/shards/mulberry-building-shop-01",
      "path": "k.objects/shards/mulberry-building-shop-01.sop",
      "wires": 219,
-     "bytes": 27779,
+     "bytes": 27856,
      "keys": [
       "closed shop",
+      "door",
       "open shop",
-      "shop"
+      "roof",
+      "shop",
+      "sign"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4399,32 +4434,30 @@
     {
      "id": "k.objects/shards/mulberry-building-structure-01",
      "path": "k.objects/shards/mulberry-building-structure-01.sop",
-     "wires": 880,
-     "bytes": 107180,
+     "wires": 813,
+     "bytes": 99191,
      "keys": [
-      "ceiling",
+      "bottom_left_panel",
+      "bottom_right_panel",
       "ceiling light",
       "chimney",
+      "door",
       "escalator",
       "fireplace",
-      "floor",
+      "flame",
       "front door",
-      "lift"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-building-structure-02",
-     "path": "k.objects/shards/mulberry-building-structure-02.sop",
-     "wires": 202,
-     "bytes": 25137,
-     "keys": [
+      "letterbox",
+      "lift",
+      "mantel",
       "stairs",
-      "wall"
+      "step1",
+      "step2",
+      "step3",
+      "step4",
+      "step5",
+      "step6",
+      "top_left_panel",
+      "top_right_panel"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4435,17 +4468,29 @@
     {
      "id": "k.objects/shards/mulberry-celebration-item-01",
      "path": "k.objects/shards/mulberry-celebration-item-01.sop",
-     "wires": 1306,
-     "bytes": 155579,
+     "wires": 1353,
+     "bytes": 161617,
      "keys": [
+      "ball",
+      "bell",
+      "cap",
       "christmas bauble",
       "christmas bell",
       "christmas decorations",
       "christmas lights",
       "christmas sock",
-      "christmas wreath",
+      "clapper",
+      "cuff",
       "easter egg",
-      "father christmas"
+      "father christmas",
+      "father christmas sack",
+      "green_light",
+      "knot",
+      "left_bauble",
+      "red_light",
+      "right_bauble",
+      "sock",
+      "yellow_light"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4456,16 +4501,28 @@
     {
      "id": "k.objects/shards/mulberry-celebration-item-02",
      "path": "k.objects/shards/mulberry-celebration-item-02.sop",
-     "wires": 1169,
-     "bytes": 139844,
+     "wires": 1184,
+     "bytes": 141468,
      "keys": [
       "birthday card",
+      "body",
       "broomstick",
       "card",
       "catherine wheel",
+      "centre",
       "cracker",
+      "dress",
       "elf",
-      "father christmas sack",
+      "face",
+      "fairy",
+      "front",
+      "handle",
+      "hat",
+      "left_shoe",
+      "left_wing",
+      "middle",
+      "right_shoe",
+      "right_wing",
       "rudolph"
      ],
      "sources": [
@@ -4477,17 +4534,30 @@
     {
      "id": "k.objects/shards/mulberry-celebration-item-03",
      "path": "k.objects/shards/mulberry-celebration-item-03.sop",
-     "wires": 1485,
-     "bytes": 176813,
+     "wires": 1486,
+     "bytes": 177661,
      "keys": [
-      "fairy",
+      "bobble",
+      "body",
+      "brim",
+      "dish",
+      "door",
+      "filling",
       "ghost",
       "guy",
-      "harvest",
+      "hat",
       "hat christmas",
       "haunted house",
+      "left_eye",
+      "left_window",
       "monster",
-      "present"
+      "mouth",
+      "present",
+      "pumpkin lantern",
+      "pumpkin pie",
+      "right_eye",
+      "right_window",
+      "stem"
      ],
      "sources": [
       "mulberry-fa94a93"
@@ -4498,30 +4568,20 @@
     {
      "id": "k.objects/shards/mulberry-celebration-item-04",
      "path": "k.objects/shards/mulberry-celebration-item-04.sop",
-     "wires": 1271,
-     "bytes": 152374,
+     "wires": 905,
+     "bytes": 108532,
      "keys": [
-      "pumpkin lantern",
-      "pumpkin pie",
+      "brim",
+      "cone",
+      "hat",
       "sack",
-      "tinsel",
+      "star",
+      "tree",
       "tree ornament chocolate",
+      "trunk",
       "witch",
       "witches hat",
-      "wrapping paper"
-     ],
-     "sources": [
-      "mulberry-fa94a93"
-     ],
-     "license": "CC-BY-SA-4.0",
-     "warnings": []
-    },
-    {
-     "id": "k.objects/shards/mulberry-celebration-item-05",
-     "path": "k.objects/shards/mulberry-celebration-item-05.sop",
-     "wires": 208,
-     "bytes": 25135,
-     "keys": [
+      "wrapping paper",
       "yule log"
      ],
      "sources": [
