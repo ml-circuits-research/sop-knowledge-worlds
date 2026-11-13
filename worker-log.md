@@ -535,3 +535,11 @@ of k.objects), Q14 (naming pass for the new sources), Q15 (country names).
 - Mulberry now: 1065 objects, 15131 parts, **907 named, 6916 details** (rule and eye); 481 objects
   with rows; 162 shards, 167953 wires, 20105430 bytes. Excluded so far: 86. k.objects: 2050 objects.
 - catalog: worlds 6 shards 648 vocab 17505; 0 errors, 0 warnings. npm test 2179 pass, 0 fail.
+
+## R3.1 naming, batch 10 (2026-11-13): Mulberry objects 801 to 900 of 1,151 looked at
+
+- Looked at: the Mulberry objects 801 to 900 (in shard order) on contact sheets of 20 at 300 px. Grooming items, medical items, holiday and travel, games, playground. Bottles and tubes name by bottle, cap, tube; faces used as a background for a product get a name only where clear. Excluded: groups, actions, places, sunscreen (drawn black), darts (the board is lost).
+- This batch: rows for 66 objects; 11 objects moved to `sources/mulberry/excluded.tsv` (R3.2).
+- Mulberry now: 1054 objects, 14955 parts, **1004 named, 6842 details** (rule and eye); 547 objects
+  with rows; 161 shards, 166148 wires, 19889936 bytes. Excluded so far: 97. k.objects: 2039 objects.
+- catalog: worlds 6 shards 647 vocab 17502; 0 errors, 0 warnings. npm test 2168 pass, 0 fail.
