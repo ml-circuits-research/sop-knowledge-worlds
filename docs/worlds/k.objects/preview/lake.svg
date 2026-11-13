@@ -1,12 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>lake</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="61,10 86,46 36,46" fill="grey" stroke="#333" stroke-width="0.8"><title>far_mountain</title></polygon>
-  <polygon points="28,18 50,46 6,46" fill="grey" stroke="#333" stroke-width="0.8"><title>near_mountain</title></polygon>
-  <rect x="2" y="44" width="96" height="52" fill="green" stroke="#333" stroke-width="0.8"><title>shore</title></rect>
-  <ellipse cx="50" cy="70" rx="40" ry="18" fill="blue" stroke="#333" stroke-width="0.8"><title>water</title></ellipse>
-  <polyline points="26,64 44,64" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_1</title></polyline>
-  <polyline points="50,76 72,76" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_2</title></polyline>
-  <rect x="84" y="34" width="4" height="16" fill="brown" stroke="#333" stroke-width="0.8"><title>trunk</title></rect>
-  <ellipse cx="86" cy="28" rx="10" ry="10" fill="green" stroke="#333" stroke-width="0.8"><title>crown</title></ellipse>
+  <ellipse cx="50" cy="50" rx="47" ry="28" fill="blue" stroke="#333" stroke-width="0.8"><title>water</title></ellipse>
+  <polyline points="22,40 42,40" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_1</title></polyline>
+  <polyline points="52,50 76,50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_2</title></polyline>
+  <polyline points="30,62 48,62" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_3</title></polyline>
 </svg>

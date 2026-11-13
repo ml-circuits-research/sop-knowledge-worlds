@@ -94,6 +94,10 @@ test('the sense check (Q22): a drawing of another physical WordNet sense counts;
   assert.deepEqual(grape.wrong, { drawing: 'grapes', note: 'the drawing shows a made-up other thing' });
   assert.deepEqual({ drawn: a.stats.drawn, wrongSense: a.stats.wrongSense, otherName: a.stats.otherName }, { drawn: 2, wrongSense: 1, otherName: 0 });
   assert.ok(missingPage(a).includes('| 6 | grape | other sense: the drawing shows a made-up other thing | a made-up fruit |'));
+  // Q25: an object written by hand for the name counts whatever the table says.
+  const hand = coverage({ ...opts, senseCheck: check(''), handObjects: new Set(['grapes']) });
+  assert.equal(hand.list.find((e) => e.word === 'grape').drawing, 'grapes');
+  assert.deepEqual({ drawn: hand.stats.drawn, wrongSense: hand.stats.wrongSense }, { drawn: 3, wrongSense: 0 });
   const b = coverage({ ...opts, senseCheck: check('slug') });
   assert.equal(b.list.find((e) => e.word === 'grape').drawing, 'slug');
   assert.deepEqual({ drawn: b.stats.drawn, wrongSense: b.stats.wrongSense, otherName: b.stats.otherName }, { drawn: 3, wrongSense: 1, otherName: 1 });

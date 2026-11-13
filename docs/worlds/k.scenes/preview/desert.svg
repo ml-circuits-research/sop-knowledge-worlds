@@ -1,22 +1,168 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" width="480" height="320">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 337" width="480" height="337">
   <title>desert</title>
-  <rect width="480" height="320" fill="#cfe8fa"/><rect y="170" width="480" height="150" fill="#f2dc9b"/>
-  <image href="../../k.objects/preview/sun.svg" x="95.4" y="21.8" width="56" height="56"><title>sun</title></image>
-  <image href="../../k.objects/preview/vulture.svg" x="310.8" y="0" width="40" height="40"><title>vulture</title></image>
-  <image href="../../k.objects/preview/pyramid.svg" x="190.4" y="79.1" width="84" height="84"><title>pyramid</title></image>
-  <image href="../../k.objects/preview/palm_tree.svg" x="0" y="98.2" width="112" height="112"><title>palm tree</title></image>
-  <image href="../../k.objects/preview/palm_tree.svg" x="2.2" y="113.6" width="112" height="112"><title>palm tree</title></image>
-  <image href="../../k.objects/preview/camel.svg" x="76.8" y="167.8" width="70" height="70"><title>camel</title></image>
-  <image href="../../k.objects/preview/camel.svg" x="102.5" y="158.3" width="70" height="70"><title>camel</title></image>
-  <image href="../../k.objects/preview/tent.svg" x="128.2" y="173.7" width="70" height="70"><title>tent</title></image>
-  <image href="../../k.objects/preview/cactus.svg" x="194.8" y="203.7" width="44" height="44"><title>cactus</title></image>
-  <image href="../../k.objects/preview/cactus.svg" x="220.5" y="219.1" width="44" height="44"><title>cactus</title></image>
-  <image href="../../k.objects/preview/cactus.svg" x="246.2" y="209.6" width="44" height="44"><title>cactus</title></image>
-  <image href="../../k.objects/preview/cactus.svg" x="299.7" y="200.1" width="44" height="44"><title>cactus</title></image>
-  <image href="../../k.objects/preview/rock.svg" x="325.5" y="215.5" width="44" height="44"><title>rock</title></image>
-  <image href="../../k.objects/preview/rock.svg" x="379" y="205.9" width="44" height="44"><title>rock</title></image>
-  <image href="../../k.objects/preview/rock.svg" x="404.7" y="196.4" width="44" height="44"><title>rock</title></image>
-  <image href="../../k.objects/preview/snake.svg" x="74" y="279.4" width="26" height="26"><title>snake</title></image>
-  <image href="../../k.objects/preview/lizard.svg" x="208.8" y="271.7" width="26" height="26"><title>lizard</title></image>
-  <image href="../../k.objects/preview/scorpion.svg" x="376.4" y="294.1" width="16" height="16"><title>scorpion</title></image>
+  <rect width="480" height="337" fill="#cfe8fa"/><rect y="132.8" width="480" height="204.2" fill="#f2dc9b"/>
+  <defs>
+    <symbol id="o-sun" viewBox="0 0 100 100">
+  <polyline points="50,5 50,20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_ray</title></polyline>
+  <polyline points="50,80 50,95" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bottom_ray</title></polyline>
+  <polyline points="5,50 20,50" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_ray</title></polyline>
+  <polyline points="80,50 95,50" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_ray</title></polyline>
+  <ellipse cx="50" cy="50" rx="25" ry="25" fill="yellow" stroke="#333" stroke-width="0.8"><title>disc</title></ellipse>
+    </symbol>
+    <symbol id="o-vulture" viewBox="0 0 100 100">
+  <polygon points="78.1,9.9 78.3,13.2 77.6,15.2 76.2,16.3 72.8,17.7 71.8,18.9 74,26.1 74.2,29.3 73.7,31.7 72.4,33 69.5,34.1 65.5,33.6 64.2,32.7 63.5,31.2 61.1,19.4 61.2,14.9 62.8,10.6 66.2,7 70.8,5.4 75.6,6.6 77.2,8.1" fill="#EE947D"><title>head</title></polygon>
+  <polygon points="85.3,17.3 78,14.4 78.1,9.9 78.2,10.4 85.6,15.7 86,16.9" fill="#FAA41F"><title>beak</title></polygon>
+  <polygon points="73.9,31 75.9,36.7 75.6,43.5 73.7,49.2 68.2,59.7 63.8,65.3 57.6,71 52.7,73.5 46.3,74.9 42.4,63.5 48.4,59.3 54,52.4 57.2,45 57.8,39.6 56,34.6 53.7,31.8 51.5,30.2 47.8,29.3 41.5,31.2 52.7,23.7 59.8,20.5 61.2,20.5 63.5,31.2 64.8,33.2 67.1,34.1 70.3,33.9 72.8,32.8" fill="#C8C8C8"><title>body</title></polygon>
+  <polygon points="61.1,84.7 58.1,85.7 57.6,85.1 52.8,73.9 52.1,73.7 55.5,72.7 58.5,83.3 59.5,84.6" fill="#EE947D"><title>part4</title></polygon>
+  <polygon points="46.3,74.9 47.9,74.7 51.4,85.7 53.1,89 51.8,90 49.8,86.5 46.9,78.9 45.5,75" fill="#EE947D"><title>part5</title></polygon>
+  <polygon points="40.9,75.3 31.5,79.7 27.2,83.3 22.2,85.9 25.9,78.9 30.2,77.6 33.6,75.2 37,71.1 41.7,63.7 42.4,63.5 46.3,74.9" fill="#C8C8C8"><title>part6</title></polygon>
+  <polygon points="19.4,77.6 17.6,76.5 21.7,63.9 28.2,47.2 33,38.3 37.9,33.6 44.8,29.9 49.1,29.4 52.7,30.9 54.8,33 56.8,36.3 57.8,41.3 56.5,47 54.5,51.5 52.4,54.7 46.6,60.8 41.7,63.7 35.9,72.7 31.3,77 28,78.5 25.5,78.9 22.5,78.7" fill="#7A7878"><title>wing</title></polygon>
+  <polygon points="25.9,78.9 22.2,85.9 17.5,87.5 22.1,78.6" fill="#C8C8C8"><title>part8</title></polygon>
+  <polygon points="22.1,78.6 17.5,87.5 13.9,88.1 13.8,87.2 14.8,84.9 19.4,77.6" fill="#C8C8C8"><title>part9</title></polygon>
+  <polyline points="78,9.8 78.3,13.2 77.6,15.2 76.2,16.3 72.8,17.7 71.8,18.9 74.2,27.7 73.4,32.1 71.1,33.6 67.9,34.2 65.5,33.6 63.8,32 61,18.2 61.5,13.9 63.5,9.5 67.1,6.5 71.7,5.5 76.1,6.9 78.5,10.7" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part10</title></polyline>
+  <polyline points="19.7,77.1 14.2,86.2 13.7,87.9 14.9,88.1 24.2,85 28.2,82.7 31.5,79.7 43.6,73.9" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part11</title></polyline>
+  <polyline points="17.5,87.4 26.4,70.5" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part12</title></polyline>
+  <polyline points="46.3,53.4 44,59.3 41,65 37,71.1 33.6,75.2 31.3,77 28,78.5 24.3,78.9 20.9,78.2 17.6,76.5 23.6,58.4 28.2,47.2 33,38.3 35.3,35.7 41.5,31.3 44.8,29.9 49.1,29.4 51.5,30.2 54.8,33 56.8,36.3 57.8,39.6 57.6,43.1 55.6,49.2 53.3,53.4 49.9,57.7 46.6,60.8 41.9,63.7" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part13</title></polyline>
+  <polyline points="41.5,31.2 55.3,22.3 59.8,20.5 61.5,20.6" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part14</title></polyline>
+  <polyline points="73.8,30.8 75.9,36.7 75.6,43.5 72.1,52.5 67,61.4 60.9,68.2 55.6,72.3 50.1,74.2 40.9,75.4" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
+  <polyline points="60.4,94.3 51.9,90.1 51.2,89.3 45.4,74.8" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
+    </symbol>
+    <symbol id="o-pyramid" viewBox="0 0 100 100">
+  <polygon points="50,15 90,90 98,82" fill="orange" stroke="#333" stroke-width="0.8"><title>side</title></polygon>
+  <rect x="2" y="88" width="96" height="8" fill="yellow" stroke="#333" stroke-width="0.8"><title>sand</title></rect>
+  <polygon points="50,15 90,90 10,90" fill="yellow" stroke="#333" stroke-width="0.8"><title>front</title></polygon>
+  <rect x="46" y="78" width="8" height="12" fill="black" stroke="#333" stroke-width="0.8"><title>door</title></rect>
+    </symbol>
+    <symbol id="o-palm_tree" viewBox="0 0 100 100">
+  <polygon points="56.3,40.4 48.2,45.8 51.6,50.9 54.9,57.8 56.5,63.6 57.7,71.3 57.8,81.9 54.3,91.5 54.1,94.4 55.2,96.1 57,96.6 69.9,97.1 71.4,96.1 71.9,93.6 68.1,65.2 65.5,56.4 63.1,50.8 59.5,44.6" fill="#DC8124"><title>part1</title></polygon>
+  <polygon points="63.7,85.2 70.6,84.6 71.2,88.9 63.8,89.3 55.8,87.9 57.3,83.9" fill="#C0711F"><title>part2</title></polygon>
+  <polygon points="58,73.7 58.1,77.5 65,77.7 69.7,76.6 69.3,72.7 64.3,73.8" fill="#C0711F"><title>part3</title></polygon>
+  <polygon points="56.4,62.9 61.9,62.6 66.8,60.5 67.8,64.1 63.7,66 57.9,66.6 57,66.4" fill="#C0711F"><title>part4</title></polygon>
+  <polygon points="54.4,56.3 59.6,55.2 63.9,52.5 59.7,43.2 49.5,46.9" fill="#A2672B"><title>part5</title></polygon>
+  <polygon points="54.2,44.9 71.7,50.3 74.2,43.2 78.7,52 81.4,45.3 89,54.9 83.8,36.6 60.6,35.9 70.2,28.4 66.8,22.5 73.2,26.4 73.4,19.1 84.4,18.9 68.9,12.9 53.3,25.5 53.5,15.6 47.4,14.9 55.6,3.5 45.6,6.4 40.2,27.7 23.6,23.7 11.3,34.3 18.2,38.9 23.7,32.5 21.6,39 27.3,39 30.6,32.9 37.3,39.3 18.5,49.4 16.5,70.3 22.4,55.6 24.8,62 27.9,51.9 35.8,51.1 31.8,65.7 38.4,76.8 39.3,60.7 43.8,65.7" fill="#728137"><title>part6</title></polygon>
+  <polygon points="56,48.3 57.8,38.6 57.6,35.5 56.6,35 55.6,35.8 54.1,41.8 50.4,35.4 49.3,34.2 48.1,34.1 47.6,34.9 47.8,36.6 50.9,43 44.2,41.1 42.8,41.3 42.6,42.4 46,44.7" fill="#BDCF47"><title>part7</title></polygon>
+  <polygon points="40.7,18.1 41.4,24 42.7,25.4 44.1,24.9 43.2,16.7 43.8,14.4 45.7,11.1 45.5,10.4 44.1,10.7 42.3,12.9" fill="#BDCF47"><title>part8</title></polygon>
+  <polygon points="27.5,26.7 30.7,26.1 31,25.4 29.7,24.8 26.9,24.9 23.1,25.7 20.1,27.3 15.6,31.5 14.3,33.6 14.3,35.6 15.3,36 16.4,35.5 19,31.7 21.9,29" fill="#BDCF47"><title>part9</title></polygon>
+  <polygon points="18.3,66 19.4,65 19.9,56.3 21.9,51.2 25.1,47.4 32,43 32.1,42.1 29.2,42.9 24.7,45.4 22.1,47.6 19.1,51.5 17.4,55.5 16.8,59.5 17,63.8" fill="#BDCF47"><title>part10</title></polygon>
+  <polygon points="37,54.5 35.2,57.4 34.3,63.9 35.4,69.6 36.5,71.6 38,72.3 38.8,71.4 39,70.2 36.8,63.4 37.4,55" fill="#BDCF47"><title>part11</title></polygon>
+    </symbol>
+    <symbol id="o-camel" viewBox="0 0 100 100">
+  <polygon points="49.1,63.9 41.1,65.9 42.2,79 40.3,86.7 37.2,90.9 37.4,92 38.8,92.9 43.7,93.2 45.7,92.7 46.3,91.7 46.6,89.3 50.2,80.5" fill="#DF9047"><title>front_leg</title></polygon>
+  <polygon points="68.8,68.9 70.2,78.6 68.6,84.8 66.6,89.5 67.2,90.4 68.4,91 72.7,91.3 74.9,90.4 75.8,89 76,86.3 78.3,77.6 77.5,72.8 76.1,65.1" fill="#DF9047"><title>back_leg</title></polygon>
+  <polygon points="42.9,14.4 31,29.8 14.3,30.2 14.3,29.8 9.7,33.9 15.2,32.8 21.8,36.2 22,42.9 31.9,49.1 37.7,39.8 38.2,34.1 41.5,28.5 42.8,20.6 45.2,18.3 46.1,16.7 46.2,14.8 45.4,12.7" fill="#DF9047"><title>part3</title></polygon>
+  <polygon points="40.4,19.4 39.7,26.8 38.6,30.5 35.4,33.9 31.9,35.6 29,35.8 24.9,35.1 14.9,31.4 11,33.5 7.3,33.8 4.6,32.1 3.1,29.4 3.5,23.8 5.6,20.2 7.1,18.7 11.3,16.7 18.5,15.4 23.8,11 27.1,9.6 29.9,9 31,7 32.7,6 35.4,6.7 36.2,9.2 38.1,10 40.2,11.9 43.4,11.2 45.2,12.4 45.7,13.6 45.4,15.7 43.8,17.4" fill="#F6B03E"><title>part4</title></polygon>
+  <polygon points="5.9,24 9.1,22.7 10.7,23.1 10.4,24.6 6.4,26.5 6.3,29 8,29.7 11.7,29.1 12,30.1 11.1,31.1 9.5,31.9 7.3,32 4.7,31.2 3.5,30.1 2.7,27.9 3.2,27.4 4.1,28.3 3.9,22.5 4.9,22" fill="#BA8859"><title>part5</title></polygon>
+  <polygon points="25.5,20 31.5,20.1 32.1,20.4 32.1,21.3 30.6,22.9 28.1,23.1 25.6,21.5" fill="#323230"><title>eye</title></polygon>
+  <polygon points="25.9,20.6 23,22.2 22.8,23 24.9,23.3 27.1,21.5 27.2,22.4 24.7,24.2 24.9,24.9 25.6,25 27.1,24.4 28.8,22.6 29.5,22.8 27.5,25.4 27.9,26.2 28.7,26.1 30.2,24.7 31,22.1" fill="#323230"><title>part7</title></polygon>
+  <polygon points="30.8,42.9 22,41.3 23.3,55 26.6,61.5 35.4,67 52.3,69.2 53.7,78.3 49,94 55.8,95 59.6,92.9 62.5,79.4 62.1,70.4 77.8,67.8 81.5,78.2 79.8,86.5 76.7,92.5 81.2,93.6 86.5,92 89.7,78.8 87.4,68.4 89.3,57.2 92.9,65.9 95.4,67.7 96.7,66.6 94.5,61.8 91.2,43.3 88.5,39.2 83.4,35.9 79.9,22.4 76.4,17 68.8,14 59.2,17.8 56.1,22.3 53.5,33.8 47.2,38.9 44.8,46.5 39.2,44.9 37.8,37.9 34.9,41.3" fill="#F6B03E"><title>body</title></polygon>
+  <polygon points="67.7,10.4 64,11.1 60.5,13.7 58,17.7 56,22.5 59.5,19.1 61,18.7 61.6,19.6 60.9,24.7 62.3,25.7 63.6,25.9 65.2,25 66.4,20.1 67.8,19.3 69.3,20.1 70.7,25.5 72.8,25.9 74.7,24.9 75,23.1 74.4,19.2 75.8,18 76.9,18.6 78,21 80.2,23.1 78.5,18 75.2,13.2 72.1,11.2" fill="#E09147"><title>part9</title></polygon>
+    </symbol>
+    <symbol id="o-tent" viewBox="0 0 100 100">
+  <polygon points="67.2,48.5 53.3,92 61,93.9 77.6,92.9 76.8,64.8" fill="#2F2F2F"><title>part1</title></polygon>
+  <polygon points="27.9,34.6 20.1,52.9 4.6,84.7 9.2,87.2 20.3,91.3 37.9,96.1 63.6,55.4 67.9,38 44.6,36.2 30.7,34.4" fill="#F19F40"><title>tent</title></polygon>
+  <polygon points="86.3,92.8 94.8,91.3 79.7,60.5 70.1,39 68.4,37.9 66.7,38.1 65.2,39.4 51.8,67.8 37.1,96 41.2,96.4 56.3,95.3 61.3,80.6 67.4,54.4 68.4,54.6 73.2,76" fill="#EC5F32"><title>part3</title></polygon>
+  <polygon points="62,94.6 59.9,95.7 54.7,96.5 46.7,96.6 45.4,96.4 45.1,95.8 53.2,85.5 57.6,78.4 63.6,66.2 66.6,54.6 67.8,53.3 68.7,54.2 73.4,70.6 74.9,74.1 82.2,84.4 90.5,92 87.9,93.3 82.8,94.5 78.1,94.4 74.8,93.7 67.8,54.9 63.5,77.5" fill="#9C2D1B"><title>door</title></polygon>
+  <polygon points="3.3,77 4.9,76.3 7,76.9 7.7,86.9 6.4,87.6 3.8,87.1" fill="#9C2D1B"><title>peg1</title></polygon>
+  <polygon points="32.4,87 34.6,86.3 37,87 37.1,97.1 36.2,97.5 33.1,97.3" fill="#9C2D1B"><title>peg2</title></polygon>
+  <polygon points="93,82.6 94.6,81.8 97,82.3 96.4,92.7 95.4,93.3 92.6,92.9" fill="#9C2D1B"><title>peg3</title></polygon>
+    </symbol>
+    <symbol id="o-cactus" viewBox="0 0 100 100">
+  <polygon points="59,50.4 63.9,51 65.8,49.4 65.6,33.1 66.3,28.4 67.5,26.1 71.4,24 77.2,24.5 79.6,26.3 81.4,30.3 82.1,43.2 80.1,53.7 76.2,59.7 70.5,63.4 59.6,66.7 52.4,73.3 40.6,78.1 31.6,76 27.3,73.6 23.1,69.9 19.4,62.2 16.8,39.3 17.7,32.7 20.4,29.5 25.6,28 28.6,28.2 32.4,31 34.4,38.4 33.8,57.2 34.8,60.4 36.5,62.3 40.5,62.6 48.1,60.4" fill="#8BC029"><title>part1</title></polygon>
+  <polygon points="71.9,27.7 70.2,31.5 70.3,44.6 68.7,51.5 65.2,53.6 60.6,54.1 57.1,55.5 40.7,68 34.9,66.8 31.3,62.3 30,55.8 29.4,36.1 28.5,33.1 27.4,32.8 27.9,56.3 28.9,61.7 31.2,66.3 35.2,68.9 40.4,69.8 59.6,56.3 66.1,55.3 69.3,53.6 71.1,51.3 72.3,45.8" fill="#59951B"><title>part2</title></polygon>
+  <polygon points="24.5,33.2 23,34.9 22.1,39.2 23.5,60.5 27.5,69 33.4,73.3 40.8,74.3 47.6,72.3 52.7,69 59.5,62 66.5,61 70.8,59.2 73.3,57.1 76,52.4 77.6,46.3 78.2,39.8 77.6,30.2 76.3,27.8 75.6,47.6 74,52.6 71.7,56 66.9,59.1 58.5,59.6 52.7,66.6 46.9,70.4 39.8,72.5 34.6,71.4 28.8,67.4 25.4,61.1 23.9,40.6" fill="#59951B"><title>part3</title></polygon>
+  <polygon points="50.5,6 44.5,7.5 41.1,10.5 37.8,17.4 37.3,23.5 40.5,88.1 43.3,93.9 46,95.7 50.9,96.5 54.1,96 57.9,94.2 60.5,88.7 60.4,56.2 62.4,21.7 61.7,15.7 60,11.3 56.4,7.7" fill="#8BC029"><title>part4</title></polygon>
+  <polygon points="46.8,9.3 44.7,11.2 42.6,15.9 41.8,29 43.8,86.6 44.4,91.2 45.8,94 46.5,91.7 44.1,24.5 44.6,18.2 47.2,9.9" fill="#59951B"><title>part5</title></polygon>
+  <polygon points="56,93.7 57.6,91.6 58.1,88 58.5,23.1 57.7,14.8 56,11 54.2,9.6 55.8,16 56.1,21.4" fill="#59951B"><title>part6</title></polygon>
+  <polygon points="50.4,9.6 49.3,12.3 48.7,19.3 50.1,88.8 50.4,93.9 51.4,94.7 52.3,93.1 51.7,17.1 51.5,11.8" fill="#59951B"><title>part7</title></polygon>
+  <polygon points="35.7,18.3 37.1,20.6 35.4,22.6 39.5,21.1 38.4,19.2" fill="#FFE068"><title>part8</title></polygon>
+  <polygon points="40.7,35.8 38.8,37.7 36.5,38.1 38,35.7 37,33.2" fill="#FFE068"><title>part9</title></polygon>
+  <polygon points="43.9,44.4 45.3,46.6 43.5,48.8 47.4,47.9 47.9,46.9 47.2,45.5" fill="#FFE068"><title>part10</title></polygon>
+  <polygon points="37.2,53.9 38.7,56.1 37.2,58.8 41,57.2 41.5,56.4 40.7,55" fill="#FFE068"><title>part11</title></polygon>
+  <polygon points="57.1,53.2 58.5,54.8 61.2,54.8 59.4,53 60.4,50.6 58.1,51.6" fill="#FFE068"><title>part12</title></polygon>
+  <polygon points="39.9,66 41.3,68.2 39.1,70.1 41.3,70.3 43.5,69.3 43.2,67.1" fill="#FFE068"><title>part13</title></polygon>
+  <polygon points="51.4,77.8 52.9,79.2 55.9,79.6 53.8,77.3 55.2,74.7 52.7,75.7" fill="#FFE068"><title>part14</title></polygon>
+  <polygon points="59.1,69.9 60.7,71.4 63.6,71.5 61.6,69.6 62.5,67.5 60.3,68.4" fill="#FFE068"><title>part15</title></polygon>
+  <polygon points="62.5,80.7 61.3,83.2 63.2,85 62.7,85.7 60.1,85 59.1,83.8 60.1,81.7" fill="#FFBF1B"><title>part16</title></polygon>
+    </symbol>
+    <symbol id="o-rock" viewBox="0 0 100 100">
+  <polygon points="7,70.9 4.7,63.6 5.5,57.3 8.8,49.2 16.4,35.1 18.9,33.1 32.6,24.6 47.6,9.4 60.9,6 63.6,5.9 65.4,6.7 71.8,15.8 88.2,42.6 88.8,53.6 92.1,64.6 92,73 91.1,78.4 85.9,86.5 84.5,87.9 79.8,89.8 62.6,95.7 55.7,95 19.8,89.3 16.6,88.2 14.9,86.7" fill="#8E8884"><title>part1</title></polygon>
+  <polygon points="24.5,89.8 47.3,93.6 38.6,83.6 40.3,73.4 25.5,75.9 19.3,70.4 13.1,63.1 10.3,59.1 9.7,57.4 11.3,44.4 5.5,57.3 4.7,61.5 5.1,65.8 9.7,76.9 14.9,86.7 17.6,88.7" fill="#37474F"><title>part2</title></polygon>
+  <polygon points="66.4,7.8 64.4,7.1 62.2,8.2 54.1,16.3 54.7,31.8 63.9,45 67,48.7 69.2,50.2 70.9,49.2 77.8,40.5 83.9,41 84.9,40 85.2,37.7" fill="#AEA298"><title>part3</title></polygon>
+  <polygon points="33.5,36.2 43.4,34.5 47.4,33.2 50,30.7 54.3,24.2 54.4,36 51.5,53.4 50.5,56.4 40.3,73.4 23.5,56.4 20.2,44.6 19.7,40.9 20.8,39.1 25.1,37.4" fill="#4C5C64"><title>part4</title></polygon>
+  <polygon points="52.5,16.2 51.5,14.1 51.5,11.8 55.3,7.3 48.3,9.1 46.2,10.5 32.6,24.6" fill="#4C5C64"><title>part5</title></polygon>
+  <polygon points="90.7,60.5 89.1,55.4 88.3,50.1 82.2,54.9 77.9,57.2 67.3,59.2 60.4,61.7 53.3,62.2 51.6,62.9 52.7,64.3 60.2,69.1 67.3,77.1 69.4,78.3 80.1,70.5 90.8,64.6 91.6,62.7" fill="#AEA298"><title>part6</title></polygon>
+  <polygon points="92.1,64.6 91.7,63.1 89.9,64.9 80.8,69.8 76.5,72.8 71,77.8 69.1,81 66.4,90.2 63.1,95.6 81.9,89 84.5,87.9 85.9,86.5 89.6,81.2 91.5,77.3" fill="#37474F"><title>part7</title></polygon>
+    </symbol>
+    <symbol id="o-snake" viewBox="0 0 100 100">
+  <polygon points="38,59.8 42.8,57.1 49.7,55.1 55.5,54.6 63.5,55.6 68.9,57.5 72.2,59.7 73.9,61.6 76.9,74.1 83,75.6 87.9,75.5 91.7,73.4 94.3,69.4 95,69.1 96.1,70.8 95.7,74.5 93.8,78.9 90.6,81.5 84,85 74.9,88.6 70.1,89.2 59.2,87 38,77.2" fill="#96A820"><title>tail</title></polygon>
+  <polygon points="45.4,75.2 48.6,71.7 52.4,70.2 55.5,70.3 58,71.2 61.5,74.4 49.3,78.4" fill="#70853B"><title>part2</title></polygon>
+  <polygon points="73.6,82.3 79,83.4 81.9,79.5 83.3,75.7 79.9,74.7 76.2,72.8 73,81.7" fill="#70853B"><title>part3</title></polygon>
+  <polygon points="39.5,4.5 46.1,5.9 54.1,11.7 57.3,17.6 58.1,24.6 53.9,38 41.6,59.4 40,69 42.3,72.8 44.6,74 54.9,74.6 57.4,72.4 57.8,65 60.7,61.2 67.6,59.2 73.5,61.4 77.7,70.5 77.8,80.2 75.8,85.1 72.1,89.4 66.2,92.8 57.7,94.8 46.3,95.1 38.7,93.6 27.4,87 21.4,78.4 20.2,70.4 22,59.7 24.2,54.3 32.1,41.4 33.7,36.3 31.8,33.5 24.1,31.3 20.4,28.5 17.8,24.2 17.5,18.8 19.8,12.8 25.3,7.4 31.3,5.1" fill="#BED04A"><title>part4</title></polygon>
+  <polygon points="72,89.4 79,83.4 85.8,82.4 90.7,80.2 93.6,77.3 95.9,73.1 94.9,77.5 93.3,81 88.7,86 82.3,88.6 78,89.3" fill="#E4DDA2"><title>part5</title></polygon>
+  <polygon points="17.6,67.9 18.4,73.7 22.2,81.9 28.1,88.2 32.9,90.9 27.7,86.3 23.8,80.8 22.3,77.3 21.4,73.2 21.3,68.7 21.9,64.9 24.8,57.8 32.5,45.2 35,40.1 35.4,36.6 34.4,34.8 32.9,33.7 30.2,33 31.7,35 31.8,36.9 29.5,41.5 22.6,52 20.3,56.6 18.2,63" fill="#E4DDA2"><title>belly</title></polygon>
+  <polygon points="19.5,23.5 22.9,27.2 14.8,34 5.5,38.6 6,37.6 11.8,32.6 5.2,32.9 2.9,32.3 11.9,29.5 16,26.8" fill="#EE6D33"><title>tongue</title></polygon>
+  <polygon points="33.5,11.9 31.2,12.8 29.4,12.4 28.6,10.8 29.3,8.7 31.7,7.1 34.4,7.7 34.9,9.9" fill="#323234"><title>left_eye</title></polygon>
+  <polygon points="42.9,21 40.3,21.8 38,20.8 37.4,18.6 38.6,16.1 41.6,15.1 44,16 44.5,18.7" fill="#323234"><title>right_eye</title></polygon>
+  <polygon points="52.1,34 51.8,36.5 53.5,38.8 56.3,32.4 53.5,32.5" fill="#E4DDA2"><title>part10</title></polygon>
+  <polygon points="50.7,44.1 42.7,42 41,43.4 40.6,45.5 42.8,47.8 47.5,49.4" fill="#E4DDA2"><title>part11</title></polygon>
+  <polygon points="43.9,55.1 35.5,53.5 33.9,54.7 33.5,56.4 34.4,57.9 36.3,58.9 41.6,59.6" fill="#E4DDA2"><title>part12</title></polygon>
+  <polygon points="39.9,65.1 31,66.1 29.7,67.9 29.7,69.8 30.6,70.9 32.7,71.7 40.8,71 40,68.5" fill="#E4DDA2"><title>part13</title></polygon>
+  <polygon points="43.1,73.3 40.6,81.5 41.9,83.4 44,84.2 45.7,84.1 46.9,83.4 48.2,81.4 49.3,74.8 45.8,74.4" fill="#E4DDA2"><title>part14</title></polygon>
+  <polygon points="55.3,74.4 61.4,80.9 63.6,81.3 65.5,79.9 65.5,77.6 64.5,75.3 62.6,73 59.4,70.7 57.5,70 57.2,72.7" fill="#E4DDA2"><title>part15</title></polygon>
+  <polygon points="58.7,66.8 59.9,67.5 64,66.3 68,65.9 70.9,66.5 74.9,68.8 75.6,68.7 75.9,67.8 75.6,66.1 73.7,64 70.8,62.2 67.4,61.4 63.7,61.9 60.8,63.2 59,65.1" fill="#E4DDA2"><title>part16</title></polygon>
+    </symbol>
+    <symbol id="o-lizard" viewBox="0 0 100 100">
+  <polygon points="17.4,24.1 18,15.5 22.8,6.7 26.8,3.7 31,5.9 38.9,17.4 39.8,31.3 58,41.8 68.6,54.1 77.6,87.7 81.6,89.4 84.6,87.9 84.2,83.6 79.6,82.4 81.8,79.9 86.3,79.8 89.6,82.3 90.9,87.3 88.3,93.3 80.1,96.3 71,92.2 58.4,68.1 35.5,52.3" fill="#02AB47"><title>body</title></polygon>
+  <polygon points="67.5,81 64.5,79.4 56.4,64.2 40.1,53 32.6,45.1 26.5,32.1 27.2,24.7 33.4,24.2 44.9,37.3 60.6,47.3 67.6,54.5 72,62.6 73.7,71.9 72.5,79.1" fill="#02AB47"><title>part2</title></polygon>
+  <polygon points="28.1,24.2 33.4,24.3 45.4,37.8 66.9,53.5 73.2,67 71.6,80.1 65.2,79.9 58.3,65.9 34.1,46.9 26.6,32.1 25.8,26.8" fill="#03AB47"><title>part3</title></polygon>
+  <polygon points="28.1,24.3 33.4,24.3 45.3,37.9 66.8,53.6 73.2,67 73.5,75 71.5,80.1 65.1,79.9 57.3,64.9 34.2,46.9 26.9,32.8 25.8,26.8" fill="#04AB47"><title>part4</title></polygon>
+  <polygon points="28.1,24.3 33.4,24.4 45.3,37.8 66.7,53.5 73.1,66.9 73.4,74.9 71.4,79.9 65.1,79.6 57.3,64.7 33.8,46.2 26.7,31.9 25.8,26.8" fill="#05AC47"><title>part5</title></polygon>
+  <polygon points="28.2,24.4 33.4,24.4 45.3,37.9 66.7,53.5 73.1,67.5 71.3,79.8 65.2,79.5 57.3,64.7 33.9,46.3 26.5,31.2 25.9,26.9" fill="#06AC47"><title>part6</title></polygon>
+  <polygon points="28.2,24.5 33.4,24.5 45.3,38 66.7,53.6 73.1,67.6 71.4,79.9 65.3,79.6 57.3,64.7 34,46.5 26.8,32.2 25.9,27" fill="#07AC47"><title>part7</title></polygon>
+  <polygon points="28.2,24.5 33.4,24.6 45.3,38.1 66.7,53.7 73.1,67.7 71.4,80 65.3,79.7 57.4,64.9 34.5,47.2 26.9,32.5 26,27.2" fill="#08AC47"><title>part8</title></polygon>
+  <polygon points="28.3,24.5 33.5,24.6 45.4,38.1 66.6,53.6 73,67.6 71.2,79.9 65.1,79.6 57.3,64.8 34.3,47.1 26.7,32.4 26,27.2" fill="#09AD48"><title>part9</title></polygon>
+  <polygon points="28.3,24.6 33.5,24.7 45.4,38.1 66.6,53.6 73,67.5 71.2,79.8 65.1,79.5 57.3,64.7 34,46.5 26.8,32.4 26,27.2" fill="#0AAD48"><title>part10</title></polygon>
+  <polygon points="28.4,24.6 33.6,24.7 45.4,38.1 66.5,53.7 72.9,67.5 71.1,79.8 65.1,79.5 56.3,63.9 33.9,46.7 26.5,31.7 26,27.3" fill="#0BAD48"><title>part11</title></polygon>
+  <polygon points="28.4,24.7 33.5,24.8 44.7,37.7 66.5,53.6 72.9,67.5 71.1,79.8 65.1,79.5 57.2,64.8 34.4,47.2 26.8,32.5 26.1,27.3" fill="#0CAD48"><title>part12</title></polygon>
+  <polygon points="28.4,24.7 33.5,24.8 45.2,38.1 66.4,53.5 72.8,67.3 71.1,79.5 65,79.2 57.1,64.6 34.4,47 26.8,32.4 26,27.8" fill="#0DAE48"><title>part13</title></polygon>
+  <polygon points="28.4,24.8 33.6,24.9 45.3,38.1 66.5,53.6 72.9,67.3 71.1,79.6 65.1,79.3 57.3,64.7 34.5,47.1 27,32.6 26.2,27.4" fill="#0EAE48"><title>part14</title></polygon>
+  <polygon points="28.4,24.8 33.6,25 44.8,37.7 66.4,53.6 72.7,67.3 71,79.5 64.9,79.2 57.1,64.7 33.7,46.2 26.7,31.9 26.2,27.5" fill="#0FAE48"><title>part15</title></polygon>
+  <polygon points="28.4,24.8 33.6,25 44.8,37.7 66.4,53.5 72.7,67.2 71,79.4 65,79.1 57.2,64.5 33.8,46 26.8,31.7 26.2,27.5" fill="#10AE48"><title>part16</title></polygon>
+    </symbol>
+    <symbol id="o-scorpion" viewBox="0 0 100 100">
+  <polygon points="57.4,40.2 46.6,42.3 43.4,36 37.3,34.5 43.5,44.9 34.9,40.3 19.4,45 25.5,47.2 34.7,45 39.7,48.6 20,49.8 35.6,51.2 39.1,57.8 23.6,53.2 16,55.6 11.9,80.3 19.8,90.8 21.8,89 16.6,67.5 30.1,64 57.6,69.8 65.9,68.8 67.9,88 59.2,97.4 73,92.9 79.8,70.7 77.7,65.5 70.6,61.4 75.6,59.5 90.1,67.3 76.4,54.7 68.2,56.2 75,49.5 89.1,56.6 74.7,44.2 67.8,50 73.7,41.3 81.9,40.1 73,37.6 65.9,45" fill="#BA8855"><title>body</title></polygon>
+  <polygon points="23,56.3 17.8,55.2 13,57.9 10.4,62 8.3,70.8 8.9,78 11.1,83.4 14.5,88 19.5,90.8 20.7,90.1 16.7,83.1 16.3,77 22.2,84.2 26.4,86.1 19.7,72.7 25.4,64 25.4,60.2" fill="#F2A159"><title>left_claw</title></polygon>
+  <polygon points="30.5,57.4 30.5,61.5 32.7,63.3 34.8,63.1 34.5,58.9" fill="#F2A159"><title>part3</title></polygon>
+  <polygon points="73.9,68.1 71,68.5 68.1,70.7 66.1,76 66.2,82.2 58.1,89.1 61.9,90.3 70.2,87.2 71,89.5 68,93 60,98.2 64.3,98.2 71.2,95.5 75.5,92.6 79,87.9 80.7,81.1 80.1,73.4 78.2,69.9" fill="#F2A159"><title>right_claw</title></polygon>
+  <polygon points="66.3,62.7 68.6,63.6 68.5,65.4 64.3,66.1 63.7,64" fill="#F2A159"><title>part5</title></polygon>
+  <polygon points="45.8,44.9 37.6,55.8 37,61.9 39.2,66.4 44.7,70.4 52.3,72.3 60,70.3 64.2,65.9 69.3,39.9 68.9,33.6 67.1,30.6 71.1,26 72.4,14.8 71.2,10 63.5,2.7 55.5,2.7 52.2,0.7 48.3,1.5 44.7,3.8 38.7,12.7 38.3,17.4 40.3,21.5 50.5,26.5 51.3,20.6 47.8,14.5 53.8,11 57.4,13.2 63,13.3 63,18.6 60.4,22.9 61.4,27.6 56.5,27.8 53.6,29.6" fill="#F2A159"><title>tail</title></polygon>
+  <polygon points="42.4,56.9 44.5,59.8 47.8,58 47.4,55.8 45.7,54.6 43.6,54.9" fill="#372D2B"><title>left_eye</title></polygon>
+  <polygon points="55.4,57.4 52.6,59.9 53.2,62 55.1,62.9 58,60.4" fill="#372D2B"><title>right_eye</title></polygon>
+  <polygon points="43.2,62.3 44.6,65.7 47.9,65.3 50.1,67.3 52.8,67.1 54.6,65.3 54,64.2 50.3,65.7 48.8,62.1 45.7,64.3" fill="#372D2B"><title>mouth</title></polygon>
+  <polygon points="40.4,50.8 47.4,47 55.2,46.9 61.9,50.6 66.3,57.5 66.3,54.2 64.2,50.8 56.4,45.6 47.2,45.7" fill="#BA8855"><title>part10</title></polygon>
+  <polygon points="46.5,43.6 52.3,41.1 57.3,40.8 62.1,42.7 67.9,48.4 68.2,47.4 64.2,41.8 57.8,39 49.1,40.5" fill="#BA8855"><title>part11</title></polygon>
+  <polygon points="49.2,37.3 55.3,34.6 60.2,34.8 65.5,37.4 69.2,41.8 67.3,36.7 60.3,33 52.8,33.7" fill="#BA8855"><title>part12</title></polygon>
+  <polygon points="60.5,24.6 67.6,27.9 67.8,29.3 62.5,28.5" fill="#B38354"><title>part13</title></polygon>
+  <polygon points="62.5,17.2 70,17.6 71,18.8 66.6,20.1 63.4,18.9" fill="#B38354"><title>part14</title></polygon>
+  <polygon points="55.7,2.6 57.2,4 56.7,7.5 52.9,11.6" fill="#B38354"><title>part15</title></polygon>
+  <polygon points="48.9,13.9 48.3,10.5 45.6,8.1 42.3,8 40.2,10.3 44.7,10.3 47.7,14.4" fill="#B38354"><title>part16</title></polygon>
+    </symbol>
+  </defs>
+  <use href="#o-sun" x="133.1" y="6" width="52" height="52"><title>sun</title></use>
+  <use href="#o-vulture" x="310.1" y="6" width="36.8" height="36.8"><title>vulture</title></use>
+  <use href="#o-pyramid" x="201.6" y="64" width="76.8" height="76.8"><title>pyramid</title></use>
+  <use href="#o-palm_tree" x="20.3" y="146.8" width="96" height="96"><title>palm tree</title></use>
+  <use href="#o-palm_tree" x="128.7" y="146.8" width="96" height="96"><title>palm tree</title></use>
+  <use href="#o-camel" x="237" y="176.8" width="66" height="66"><title>camel</title></use>
+  <use href="#o-camel" x="315.3" y="176.8" width="66" height="66"><title>camel</title></use>
+  <use href="#o-tent" x="393.7" y="176.8" width="66" height="66"><title>tent</title></use>
+  <use href="#o-cactus" x="34.9" y="248.8" width="46" height="46"><title>cactus</title></use>
+  <use href="#o-cactus" x="107.7" y="248.8" width="46" height="46"><title>cactus</title></use>
+  <use href="#o-cactus" x="180.6" y="248.8" width="46" height="46"><title>cactus</title></use>
+  <use href="#o-rock" x="253.4" y="248.8" width="46" height="46"><title>rock</title></use>
+  <use href="#o-rock" x="326.3" y="248.8" width="46" height="46"><title>rock</title></use>
+  <use href="#o-rock" x="399.1" y="248.8" width="46" height="46"><title>rock</title></use>
+  <use href="#o-snake" x="104" y="300.8" width="30" height="30"><title>snake</title></use>
+  <use href="#o-lizard" x="230" y="300.8" width="30" height="30"><title>lizard</title></use>
+  <use href="#o-scorpion" x="356" y="310.8" width="20" height="20"><title>scorpion</title></use>
 </svg>

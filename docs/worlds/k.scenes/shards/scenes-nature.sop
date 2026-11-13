@@ -137,7 +137,7 @@
 @k.scenes.word.scene.river core.word text=rivers text=stream text=riverside text=brook means=river of=k.scenes.scene.name core.source="hand-core 1"
 
 # lake
-@k.scenes.scene.lake k.scenes.scene name=lake kind=outdoors ground=grass time=day weather=sunny season=summer happens=swim happens="row a boat" happens=fish happens=sail drawing=lake core.source="hand-core 1"
+@k.scenes.scene.lake k.scenes.scene name=lake kind=outdoors ground=grass time=day weather=sunny season=summer happens=swim happens="row a boat" happens=fish happens=sail drawing="mountain lake" core.source="hand-core 1"
 @k.scenes.has.lake.sun k.scenes.has scene=lake thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.lake.cloud k.scenes.has scene=lake thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.lake.bird k.scenes.has scene=lake thing=bird count=2 where=sky drawing=bird core.source="hand-core 1"

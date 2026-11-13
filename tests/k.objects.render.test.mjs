@@ -14,8 +14,8 @@ const cy = (p) => p.y + p.h / 2;
 const TOL = 1;
 
 const handWritten = world.ofType('k.objects.object').filter((o) => o.attrs['core.source'].includes('"hand-core 1"'));
-test('there are 224 hand-written objects, and imported ones', () => {
-  assert.equal(handWritten.length, 224);
+test('there are 225 hand-written objects, and imported ones', () => {
+  assert.equal(handWritten.length, 225);
   assert.ok(objects.length >= 30);
   assert.equal(new Set(objects).size, objects.length, 'object names are unique');
 });

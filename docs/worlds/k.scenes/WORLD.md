@@ -107,8 +107,10 @@ CC0-1.0); the place and size labels were given by a language model (`named=model
 | pirate ship | 19 | 18 | pirate ship |
 
 61 scenes, 1088 things, 1062 with a drawing (97.6%). The pictures composed from these facts are in `preview/` (`preview/index.html`):
-`tools/render-scenes.mjs` places every thing by its layer, side and what it is on, in the size of its class, at most
-five of a thing. It is a plain composer to check the facts, not the application's.
+`tools/render-scenes.mjs` gives every place a band (sky or ceiling, far ground or wall, a strip for what fills its
+layer, water, near ground or floor, foreground), packs each band in rows, sizes by the size class, and draws at most
+three of a thing; nothing overlaps but a thing and what it is on. Every picture is one file (the object drawings are
+copied in, without their tile), so that a page can show it. It is a plain composer to check the facts, not the application's.
 
 ## Shards
 

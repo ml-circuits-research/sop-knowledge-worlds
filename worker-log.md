@@ -1531,3 +1531,42 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   stand-ins); R7.1 `k.scenes` (61 scenes); R7.5 `k.people` (60 roles); R7.4 `k.feelings` (30). **Not started:**
   addendum 2 (`k.layouts`, anchors, what joins what), R7.2 `k.actions`, R7.3 `k.colours` and `k.shapes`.
 - Numbers: catalog 14 worlds, 779 shards, vocab 19,484 words; 0 errors, 0 warnings. npm test 2,413 pass, 0 fail.
+
+## Scene previews: the two defects; Q24, Q25, Q26 applied (2026-11-13)
+
+- **Defect 1, the published page showed empty backgrounds.** Every scene picture is now one file with nothing
+  outside it: the object drawings it uses are copied in once each as a `<symbol>` and placed with `<use>`. A test
+  refuses any reference out of the file. New tool `tools/check-preview-page.mjs`, part of `npm run build`: it opens
+  the pictures and `preview/index.html` in headless Chrome, reads the screenshot (a small PNG reader, no new
+  dependency) and fails when a picture has under 3% of pixels that are not its background. Run on the pictures of
+  28039fa it fails for all 61 (0 pixels each); on the new ones it passes. Without Chrome it says so and checks nothing.
+- **Defect 2, heaps and white tiles.** The composer is rewritten and plain: one band per place (sky or ceiling;
+  far ground or wall; a strip for what fills its layer, with what is on it; water; near ground or floor;
+  foreground), each band packed in rows from left to right (at most 2, 2, 2, 3, 1 rows), sizes by the size class
+  (20, 30, 46, 66, 96 px; 0.8 of that in the sky and far away), at most 3 of a thing (2 of a thing that is on
+  another). When a band is too full it first draws one less of the thing drawn most often, then everything
+  smaller. A thing that is on another stands above it (a cup above the table) or, on water, inside it (a duck on
+  the pond); a water that carries much is drawn bigger. The tile of the object previews is not copied. The height
+  of a picture follows from its rows (199 to 551 px). A test checks for every scene: inside the frame, nothing
+  under 12 px, no two things overlap except a thing and what it is on.
+- **Looked at:** the published `preview/index.html` in headless Chrome (the command of the task, window 1220 wide,
+  the whole page in 7 crops): 5 of the 7 crops read at the first version (about 45 scenes), then after the last
+  change the top of the page (kitchen, bedroom, living room, bathroom) in Chrome and lake, river, harbour,
+  swimming pool, bathroom, zoo by rsvg-convert. Every picture read shows its drawings, no tile, rows, no heaps.
+  **Not looked at** after the last change (water hosts drawn bigger): the other scenes with a pond or a river
+  (farm, park, pond, jungle, savanna, zoo was) in Chrome; the test says nothing overlaps there.
+- **Still weak, and left so** (the real placing is the application's): the `river` and `path` objects are small
+  whole pictures and stay tiles in a scene; the road of the city street is the road drawing stretched to a strip
+  (its car is stretched with it); a person is a small stick figure next to large animals; things in the sky row
+  stand in a line.
+- **Q24:** puddle stays by the pond. New hand-written object `lake` (an oval of water with three ripples, nothing
+  else); the earlier one is `"mountain lake"` (words: mountain lake, tarn; place ground, size huge; the drawing of
+  the scene `lake`). Looked at both next to pond and river on one sheet at 330 px: the plain lake reads as water
+  seen from above. k.objects: **2,108 objects** (225 hand-written); shard `scenery` 76 wires.
+- **Q25:** `tools/coverage.mjs`: an object written by hand counts for its own name whatever WordNet lists (the
+  sense check cannot take it away); a test. No number changes: no hand-written object was held back by the sense
+  check, and `tablet` is OpenMoji's drawing, which the rule does not reach. Asked as **Q27**; meanwhile it stays
+  missing. Coverage as before: 1,022 of 1,500 reach a drawing, 478 have neither.
+- **Q26:** nothing waits; addendum 2 is next. Q24 to Q26 are moved to Closed in `questions.md`.
+- Numbers: scene previews 61 files and the page, 2,388 kB (440 kB when they referred to the object files).
+  Catalog 14 worlds, 779 shards, vocab 19,487 words (19,484); 0 errors, 0 warnings. npm test 2,414 pass, 0 fail.

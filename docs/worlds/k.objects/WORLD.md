@@ -51,10 +51,10 @@ object with the file of its picture, its shard, its source, the licence of its s
 | `land-2` | river bank, ditch, swamp, canyon |
 | `food-2` | vodka, dough, ginger, brandy, cocktail, gin, pudding, rum, pumpkin, nut, pod, wheat, hay, flour, sherry, tequila, syrup, muffin, ketchup |
 | `nature-2` | hawk, salmon, violet, iris, pine, finch, raven, mule, squirrel, kitten, calf |
-| `scenery` | lake, river, sea, sandcastle |
+| `scenery` | lake, mountain lake, river, sea, sandcastle |
 
-224 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
-things that had no drawing, see `MISSING.md`; 4 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+225 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
+things that had no drawing, see `MISSING.md`; 5 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 

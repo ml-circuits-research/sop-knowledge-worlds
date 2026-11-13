@@ -63,7 +63,7 @@ test('the audit of the labels: 200 rows, the wrong ones are corrected in the tab
 // ---- R7.1: the scenes
 import { existsSync } from 'node:fs';
 import { sceneShards, sceneWires, SCENES } from '../tools/scenes-data.mjs';
-import { readScenes, layout, renderScene, W as WIDTH, H as HEIGHT } from '../tools/render-scenes.mjs';
+import { readScenes, compose, renderScene, W as WIDTH } from '../tools/render-scenes.mjs';
 import { fileOf } from '../tools/render-svg.mjs';
 
 const sceneFacts = scenes.ofType('k.scenes.scene');
@@ -110,21 +110,44 @@ test('in every scene at least three quarters of the things have a drawing; over 
   assert.ok(drawn >= things * 0.95, `${drawn} of ${things}`);
 });
 
-test('every scene composes into a picture: each drawn instance lies inside the frame and its preview exists', () => {
+test('every scene composes into a picture: inside the frame, in rows, nothing overlaps but a thing and what it is on', () => {
   const dir = join(WORLDS_DIR, 'k.scenes', 'preview');
   const all = readScenes(scenes);
   assert.equal(all.length, sceneFacts.length);
   for (const s of all) {
-    const placed = layout(s);
-    assert.ok(placed.length >= 8, `${s.name}: ${placed.length} instances`);
-    for (const i of placed) {
-      assert.ok(i.x >= 0 && i.y >= 0 && i.x + i.s <= WIDTH + 0.01 && i.y <= HEIGHT, `${s.name}: ${i.thing} at ${i.x},${i.y}`);
+    const { height, items } = compose(s);
+    assert.ok(items.length >= 8, `${s.name}: ${items.length} instances`);
+    assert.ok(height >= 120 && height <= 600, `${s.name}: ${height} px high`);
+    const box = (i) => [i.x, i.y, i.x + i.s, i.y + (i.h ?? i.s)];
+    for (const i of items) {
+      const [x0, y0, x1, y1] = box(i);
+      assert.ok(x0 >= 0 && y0 >= 0 && x1 <= WIDTH + 0.01 && y1 <= height + 0.01, `${s.name}: ${i.thing} at ${i.x},${i.y}`);
+      assert.ok(i.fills || i.s >= 12, `${s.name}: ${i.thing} is drawn ${i.s} px small`);
       assert.ok(existsSync(join(WORLDS_DIR, 'k.objects', 'preview', `${fileOf(i.drawing)}.svg`)), `${s.name}: ${i.drawing}`);
     }
-    assert.equal(readFileSync(join(dir, `${fileOf(s.name)}.svg`), 'utf8'), renderScene(s), s.name);
+    for (let a = 0; a < items.length; a++) for (let b = a + 1; b < items.length; b++) {
+      const A = items[a], B = items[b];
+      if (A.on === B.thing || B.on === A.thing) continue; // a thing and what it is on
+      const [ax0, ay0, ax1, ay1] = box(A), [bx0, by0, bx1, by1] = box(B);
+      const overlap = Math.min(ax1, bx1) - Math.max(ax0, bx0) > 0.2 && Math.min(ay1, by1) - Math.max(ay0, by0) > 0.2;
+      assert.ok(!overlap, `${s.name}: ${A.thing} and ${B.thing} overlap`);
+    }
+    const text = readFileSync(join(dir, `${fileOf(s.name)}.svg`), 'utf8');
+    assert.equal(text, renderScene(s), s.name);
+    // One file with nothing outside it (a page shows it with <img>), and no tile behind the drawings.
+    for (const m of text.matchAll(/href="([^"]*)"/g)) assert.ok(m[1].startsWith('#o-'), `${s.name}: refers to ${m[1]}`);
+    assert.ok(!/<image|url\(|fill="#fafafa"/.test(text), s.name);
+    for (const m of text.matchAll(/<use href="#([^"]*)"/g)) assert.ok(text.includes(`<symbol id="${m[1]}"`), `${s.name}: ${m[1]}`);
   }
-  const beach = layout(all.find((s) => s.name === 'beach'));
-  const sea = beach.find((i) => i.thing === 'sea'), boat = beach.find((i) => i.thing === 'sailboat'), sun = beach.find((i) => i.thing === 'sun'), crab = beach.find((i) => i.thing === 'crab');
-  assert.ok(sea.fills && boat.y + boat.s > sea.y && boat.y < sea.y + sea.h, 'the boat is on the sea');
-  assert.ok(sun.y < sea.y && crab.y > sea.y + sea.h, 'the sun is above the sea, the crab below it');
+  const beach = compose(all.find((s) => s.name === 'beach'));
+  const of = (n) => beach.items.find((i) => i.thing === n);
+  const sea = of('sea'), boat = of('sailboat'), sun = of('sun'), crab = of('crab');
+  assert.ok(sea.fills && boat.y >= sea.y && boat.y + boat.s <= sea.y + sea.h, 'the boat is on the sea');
+  assert.ok(sun.y + sun.s <= sea.y && crab.y >= sea.y + sea.h, 'the sun is above the sea, the crab below it');
+  assert.ok(of('palm tree').s > of('person').s && of('person').s > of('crab').s, 'sizes follow the size class');
+  const farm = compose(all.find((s) => s.name === 'farm'));
+  const pond = farm.items.find((i) => i.thing === 'pond'), duck = farm.items.find((i) => i.thing === 'duck');
+  assert.ok(duck.on === 'pond' && duck.x >= pond.x && duck.x + duck.s <= pond.x + pond.s && duck.y >= pond.y && duck.y + duck.s <= pond.y + pond.s, 'the duck is on the pond');
+  const html = readFileSync(join(dir, 'index.html'), 'utf8');
+  assert.equal((html.match(/<img /g) ?? []).length, all.length);
 });

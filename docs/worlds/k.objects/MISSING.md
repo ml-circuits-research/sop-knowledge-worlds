@@ -13,8 +13,9 @@ the top of `tools/coverage.mjs`.
 looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`). A word counts as drawn when the
 drawing shows any physical sense of the word that WordNet has: 28 drawings show another sense than the one kept
 (the drawing `bank` is a building, the sense kept is the river bank) and count. 1 drawing shows a meaning that
-WordNet does not have for the word (the drawing `tablet` is a tablet computer); such a word counts as missing
-("other sense" in the list), unless an object of another name draws the sense kept (0).
+WordNet does not have for the word (the drawing `tablet` is a tablet computer, an imported drawing); such a word counts as missing
+("other sense" in the list), unless an object of another name draws the sense kept (0). An object
+written by hand in this repository counts for its own name whatever WordNet lists.
 
 | | Words | Share |
 | --- | --- | --- |

@@ -1,5 +1,5 @@
 {
- "version": "bb0c423090b9",
+ "version": "3d2d54827238",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -15421,8 +15421,8 @@
     {
      "id": "k.objects/shards/scenery",
      "path": "k.objects/shards/scenery.sop",
-     "wires": 64,
-     "bytes": 9206,
+     "wires": 76,
+     "bytes": 11017,
      "keys": [
       "bush",
       "crown",
@@ -15435,11 +15435,13 @@
       "land",
       "left_roof",
       "left_tower",
+      "mountain lake",
       "near_mountain",
       "right_roof",
       "right_tower",
       "ripple_1",
       "ripple_2",
+      "ripple_3",
       "river",
       "sand",
       "sandcastle",
@@ -16931,7 +16933,7 @@
      "id": "k.scenes/shards/scenes-nature",
      "path": "k.scenes/shards/scenes-nature.sop",
      "wires": 353,
-     "bytes": 48484,
+     "bytes": 48495,
      "keys": [
       "acorn",
       "angler",
@@ -18730,8 +18732,8 @@
     {
      "id": "k.scenes/shards/things-m",
      "path": "k.scenes/shards/things-m.sop",
-     "wires": 131,
-     "bytes": 16603,
+     "wires": 132,
+     "bytes": 16730,
      "keys": [
       "macadamias",
       "macaroni",
@@ -18849,6 +18851,7 @@
       "mount fuji",
       "mountain",
       "mountain cableway",
+      "mountain lake",
       "mountain railway",
       "mountains",
       "mouse",

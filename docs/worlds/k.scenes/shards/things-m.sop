@@ -1,4 +1,4 @@
-# k.scenes/shards/things-m: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 131 drawable things whose name starts with "m"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-m: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 132 drawable things whose name starts with "m"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -119,6 +119,7 @@
 @k.scenes.thing.mount_fuji k.scenes.thing name="mount fuji" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mountain k.scenes.thing name=mountain place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mountain_cableway k.scenes.thing name="mountain cableway" place=sky size=large named=model core.source="hand-core 1"
+@k.scenes.thing.mountain_lake k.scenes.thing name="mountain lake" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mountain_railway k.scenes.thing name="mountain railway" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mountains k.scenes.thing name=mountains place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mouse k.scenes.thing name=mouse place=ground size=tiny named=model core.source="hand-core 1"

@@ -30,6 +30,8 @@
 // that it is a sense of the word and physical (under ROOTS or under physical entity). A drawing that shows a sense WordNet does not have (the
 // drawing "tablet" is a tablet computer) does not count; the word is then missing, unless the table names another
 // object that draws the sense kept.
+// Reviewer's answer to Q25: an object written by hand in this repository counts for its own name whatever WordNet
+// lists (a general rule, no table): the sense check cannot take it away.
 // Two more ways to a drawing, after the WordNet links (Round 7): the word is a core.word of an object in a
 // hand-written shard (marsh is a word of the drawing swamp), or sources/coverage/hand-links.tsv links it by hand
 // (same: a core.word of the shard words-hand; kind: a stand-in of the shard stand-ins-hand).
@@ -84,7 +86,7 @@ export function plurals(word, exceptions) {
 // notLinks: the text of not-links.tsv (word, other word, reason): links the rule gives that a look at the drawing refuses.
 // senseCheck: the text of sense-check.tsv (word, drawing, verdict, note, instead, shown). notDrawable: the text of
 // not-drawable.tsv (word, reason).
-export function coverage({ files, freq, objects, notThings = '', notLinks = '', senseCheck = '', notDrawable = '', words = new Map(), handLinks = '', limit = LIMIT, roots = ROOTS }) {
+export function coverage({ files, freq, objects, notThings = '', notLinks = '', senseCheck = '', notDrawable = '', words = new Map(), handLinks = '', handObjects = new Set(), limit = LIMIT, roots = ROOTS }) {
   const rowsOf = (text) => text.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
   const undrawable = new Map(rowsOf(notDrawable).map(([word, reason]) => [word, reason]));
   const unlinked = new Set(notLinks.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').slice(0, 2).map((x) => x.trim()).join('\t')));
@@ -119,7 +121,8 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
   for (const name of [...objects].sort()) if (!byName.has(name.toLowerCase())) byName.set(name.toLowerCase(), name);
   const namedLike = (word) => byName.get(word) ?? plurals(word, exceptions).map((p) => byName.get(p)).find(Boolean) ?? null;
   // The drawing of a word: the object of its name, unless the sense check found that it shows another sense.
-  const isWrong = (word) => wrong.has(word) && wrong.get(word).drawing === namedLike(word);
+  // Reviewer's answer to Q25: an object written by hand for a name counts for that name whatever WordNet lists.
+  const isWrong = (word) => wrong.has(word) && wrong.get(word).drawing === namedLike(word) && !handObjects.has(namedLike(word));
   const drawingOf = (word) => (isWrong(word) ? (byName.get(wrong.get(word).instead?.toLowerCase()) ?? null) : namedLike(word));
   // The drawing of the sense kept, for links: a word whose drawing shows another sense (Q22) is drawn in the sense
   // kept only by the object that the table names (a winery is a kind of plant, the factory: not the green plant).
@@ -218,8 +221,9 @@ the top of \`tools/coverage.mjs\`.
 looked at next to the gloss of the sense kept (\`sources/coverage/sense-check.tsv\`). A word counts as drawn when the
 drawing shows any physical sense of the word that WordNet has: ${stats.otherSense} drawings show another sense than the one kept
 (the drawing \`bank\` is a building, the sense kept is the river bank) and count. ${stats.wrongSense} ${stats.wrongSense === 1 ? 'drawing shows' : 'drawings show'} a meaning that
-WordNet does not have for the word (the drawing \`tablet\` is a tablet computer); such a word counts as missing
-("other sense" in the list), unless an object of another name draws the sense kept (${stats.otherName}).
+WordNet does not have for the word (the drawing \`tablet\` is a tablet computer, an imported drawing); such a word counts as missing
+("other sense" in the list), unless an object of another name draws the sense kept (${stats.otherName}). An object
+written by hand in this repository counts for its own name whatever WordNet lists.
 
 | | Words | Share |
 | --- | --- | --- |
@@ -331,6 +335,16 @@ export function objectWords() {
   return words;
 }
 
+// The names of the objects of the hand-written shards (Q25: such an object counts for its own name).
+export function handObjectNames() {
+  const names = new Set();
+  for (const shard of scanWorlds().find((w) => w.id === 'k.objects').shards) {
+    if (!/^# script: none \(hand-written\)/m.test(shard.text)) continue;
+    for (const m of shard.text.matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)) names.add(m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]);
+  }
+  return names;
+}
+
 // The names of the k.objects objects, read from the shards.
 export function objectNames() {
   const names = [];
@@ -343,7 +357,7 @@ export function run(limit = LIMIT) {
   const files = Object.fromEntries(['index.noun', 'data.noun', 'noun.exc', 'index.sense'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(join(REPO, 'sources/frequency-words/raw/en_50k.txt'), 'utf8');
   const read = (name) => { const p = join(REPO, 'sources/coverage', name); return existsSync(p) ? readFileSync(p, 'utf8') : ''; };
-  return coverage({ files, freq, objects: objectNames(), notThings: read('not-things.tsv'), notLinks: read('not-links.tsv'), senseCheck: read('sense-check.tsv'), notDrawable: read('not-drawable.tsv'), words: objectWords(), handLinks: read('hand-links.tsv'), limit });
+  return coverage({ files, freq, objects: objectNames(), notThings: read('not-things.tsv'), notLinks: read('not-links.tsv'), senseCheck: read('sense-check.tsv'), notDrawable: read('not-drawable.tsv'), words: objectWords(), handLinks: read('hand-links.tsv'), handObjects: handObjectNames(), limit });
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
