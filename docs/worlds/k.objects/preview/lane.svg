@@ -1,8 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>lane</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="4,92 36,92 46,36 34,24 4,30" fill="green" stroke="#333" stroke-width="0.8"><title>left_hedge</title></polygon>
-  <polygon points="96,92 64,92 54,36 66,24 96,30" fill="green" stroke="#333" stroke-width="0.8"><title>right_hedge</title></polygon>
-  <polygon points="34,94 66,94 54,36 46,36" fill="brown" stroke="#333" stroke-width="0.8"><title>lane</title></polygon>
-  <polyline points="50,90 50,44" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>grass_strip</title></polyline>
+  <rect x="4" y="6" width="92" height="34" fill="blue" stroke="#333" stroke-width="0.8"><title>sky</title></rect>
+  <rect x="4" y="40" width="92" height="54" fill="green" stroke="#333" stroke-width="0.8"><title>fields</title></rect>
+  <polygon points="36,94 64,94 53,40 47,40" fill="brown" stroke="#333" stroke-width="0.8"><title>road</title></polygon>
+  <polygon points="4,94 36,94 47,40 44,34 4,58" fill="green" stroke="#333" stroke-width="0.8"><title>left_hedge</title></polygon>
+  <polygon points="96,94 64,94 53,40 56,34 96,58" fill="green" stroke="#333" stroke-width="0.8"><title>right_hedge</title></polygon>
+  <polyline points="45,92 49,44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_rut</title></polyline>
+  <polyline points="55,92 51,44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_rut</title></polyline>
+  <rect x="16" y="34" width="4" height="22" fill="brown" stroke="#333" stroke-width="0.8"><title>left_trunk</title></rect>
+  <rect x="80" y="34" width="4" height="22" fill="brown" stroke="#333" stroke-width="0.8"><title>right_trunk</title></rect>
+  <ellipse cx="18" cy="25" rx="11" ry="11" fill="green" stroke="#333" stroke-width="0.8"><title>left_tree</title></ellipse>
+  <ellipse cx="82" cy="25" rx="11" ry="11" fill="green" stroke="#333" stroke-width="0.8"><title>right_tree</title></ellipse>
 </svg>

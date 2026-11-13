@@ -967,3 +967,36 @@ with the new objects (its test passes; no browser run this round).
 - Numbers: `stand-ins-wordnet` 187 wires / 19,889 bytes; `words-wordnet` 63 / 7,954. k.objects 2,003 objects, 307
   shards, 298,323 wires, 36,033,293 bytes. Catalog: 10 worlds, 655 shards, 331,649 wires, 42,396,797 bytes, vocab
   18,104 words; 0 errors, 0 warnings. npm test 2,217 pass, 0 fail (182 s).
+
+## R5.3 batch 1 (2026-11-13): 25 hand-written things; pole, hole, lane, valley redrawn
+
+- **Which.** The next words of `MISSING.md` (after R5.1) with no drawing and no WordNet link, in list order: motel,
+  rifle, statue, pub, radar, nest, vodka, wagon, casino, tire, lance, pillow, dough, bin, embassy, cabinet, collar,
+  cannon, ginger, rod, brandy, sweater, plug; and, for `bank` and `shell` (R5.1), **`"river bank"`** and
+  **`"artillery shell"`**, which `sense-check.tsv` names as the drawings of the sense kept (column `instead`).
+- **Passed over** in that stretch (ranks 33 to 311), not drawn: plate (the sense kept is the base of baseball), wing
+  (of an aeroplane), chip (a wooden float), frame (of eyeglasses), hammer (of a gunlock), turtle (a sweater): "other
+  sense" words whose kept sense is rare or a part (Q22); bike (the sense kept is the motor bike; the link to
+  motorcycle was refused in R4.4), mall (a pedestrian walk), needle (of a conifer), barrel (of a gun), vault (a
+  burial chamber): the sense kept is not the common one or is a part or a room; jewelry, aircraft: general words
+  for many kinds of thing; pistol: the drawing `gun` already has the word `pistol`, which the count by name does not see.
+- Shards: `things-2` (16 objects), `places-2` (4), `land-2` (1), `food-2` (4). Same form as before: named parts
+  with primitive shapes, kinds for repeated parts, relative positions checked by the render test, typical colours.
+  Words: the name and its plural, and tyre, waggon, tavern, pullover, stopper, riverbank, cognac.
+- **Redrawn** (the reviewer's weakest four): pole (a red and white striped pole with a ball on top, in the ground),
+  hole (a brown rim, a dark hole, a mound with a shovel), lane (a narrow track between two hedges and two trees,
+  seen along it), valley (two slopes with trees and a house, a river between them, a mountain behind).
+- **Looked at:** all 29 previews (25 new, 4 redrawn) on one contact sheet (160 px each, the name underneath).
+  Redrawn after the first look: river bank (a dark blue sky read as water: sky removed, the river wider), pillow
+  (it looked like a wrapped sweet: now a striped pillow on a mattress, drawn twice), dough (its two folds read as a
+  smile). These three looked at again. Verdict with the name next to it: all recognisable; **weakest without the
+  name: ginger (yellow lumps), rod, pillow, plug (a bath plug with a chain), radar (a dish on a mast).** The four
+  redrawn ones are better than before; valley and lane are still scenes and not things.
+- The 23 new name matches have a row in `sense-check.tsv` (right: hand-written for the sense kept).
+- The new objects gave six new stand-ins by rule (applejack → brandy, baton → rod, wand → rod, bung → plug, cardigan
+  → sweater, trident → lance); trident → lance refused in `not-links.tsv` (three prongs against one point).
+- **Coverage of the 1,500 common things:** 585 with a drawing in the sense kept (39.0%), 63 by a synonym, 192 by a
+  stand-in: **840 reach a drawing (56.0%)**; 660 nothing.
+- Numbers: `things-2` 392 wires / 51,123 bytes, `places-2` 73 / 11,397, `land-2` 44 / 6,096, `food-2` 57 / 8,458.
+  **k.objects: 2,028 objects** (145 hand-written), 311 shards, 298,910 wires, 36,113,498 bytes. Catalog: 10 worlds,
+  659 shards, 332,236 wires, 42,477,002 bytes, vocab 18,257 words; 0 errors, 0 warnings. npm test 2,242 pass, 0 fail.

@@ -1,10 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>valley</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="50,26 72,72 28,72" fill="grey" stroke="#333" stroke-width="0.8"><title>far_mountain</title></polygon>
-  <ellipse cx="50" cy="12" rx="6" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>sun</title></ellipse>
-  <polygon points="2,20 44,70 40,94 2,94" fill="green" stroke="#333" stroke-width="0.8"><title>left_slope</title></polygon>
-  <polygon points="98,20 56,70 60,94 98,94" fill="green" stroke="#333" stroke-width="0.8"><title>right_slope</title></polygon>
-  <polygon points="44,70 56,70 60,94 40,94" fill="green" stroke="#333" stroke-width="0.8"><title>floor</title></polygon>
-  <polygon points="48,70 52,70 56,94 44,94" fill="blue" stroke="#333" stroke-width="0.8"><title>river</title></polygon>
+  <rect x="2" y="4" width="96" height="50" fill="blue" stroke="#333" stroke-width="0.8"><title>sky</title></rect>
+  <ellipse cx="76" cy="14" rx="6" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>sun</title></ellipse>
+  <polygon points="50,20 70,66 30,66" fill="grey" stroke="#333" stroke-width="0.8"><title>far_mountain</title></polygon>
+  <polygon points="50,20 56.5,35 43.5,35" fill="white" stroke="#333" stroke-width="0.8"><title>snow</title></polygon>
+  <polygon points="46,64 54,64 62,96 38,96" fill="blue" stroke="#333" stroke-width="0.8"><title>river</title></polygon>
+  <polygon points="2,22 46,64 38,96 2,96" fill="green" stroke="#333" stroke-width="0.8"><title>left_slope</title></polygon>
+  <polygon points="98,22 54,64 62,96 98,96" fill="green" stroke="#333" stroke-width="0.8"><title>right_slope</title></polygon>
+  <polygon points="15,50 20,66 10,66" fill="green" stroke="#333" stroke-width="0.8"><title>left_tree</title></polygon>
+  <polygon points="27,62 32,78 22,78" fill="green" stroke="#333" stroke-width="0.8"><title>second_tree</title></polygon>
+  <polygon points="85,50 90,66 80,66" fill="green" stroke="#333" stroke-width="0.8"><title>right_tree</title></polygon>
+  <rect x="66" y="70" width="10" height="10" fill="white" stroke="#333" stroke-width="0.8"><title>house</title></rect>
+  <polygon points="71,62 78,70 64,70" fill="red" stroke="#333" stroke-width="0.8"><title>roof</title></polygon>
 </svg>

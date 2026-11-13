@@ -12,18 +12,18 @@ the top of `tools/coverage.mjs`.
 "Has a drawing" compares the word with the name of a `k.objects` object (or its plural). Every such drawing was
 looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`): 29 drawings show another sense
 of the word (the drawing `bank` is a building, the sense kept is the river bank). Such a word counts as missing
-("other sense" in the list), unless an object of another name draws the sense kept (7 words). The drawing keeps its
+("other sense" in the list), unless an object of another name draws the sense kept (9 words). The drawing keeps its
 name, since the sense it shows is a common one too.
 
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name, in the sense kept | 560 | 37.3% |
+| with a drawing of that name, in the sense kept | 585 | 39.0% |
 | without, but a WordNet synonym has a drawing | 63 | 4.2% |
-| without, but the direct hypernym has a drawing | 187 | 12.5% |
-| with no drawing at all | 690 | 46.0% |
+| without, but the direct hypernym has a drawing | 192 | 12.8% |
+| with no drawing at all | 660 | 44.0% |
 
-## The 940 words without a drawing of their name, most frequent first
+## The 915 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a `core.word` fact of the shard `words-wordnet` (the word finds that drawing as
@@ -32,7 +32,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
-| 33 | bank | other sense: the drawing shows a bank building | sloping land (especially the slope beside a body of water) |
 | 38 | store | synonym shop | a mercantile establishment for the retail sale of goods or services |
 | 56 | engine | hypernym motor | motor that converts thermal energy to mechanical work |
 | 72 | photo | synonym photograph (drawing "photographs") | a representation of a person or scene in the form of a print or transparent slide or in digital format |
@@ -48,50 +47,26 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 192 | frame | other sense: the drawing shows a picture frame | the framework for a pair of eyeglasses |
 | 195 | hammer | other sense: the drawing shows the hand tool | the part of a gunlock that strikes the percussion cap when the trigger is pulled |
 | 198 | theatre | synonym theater | a building where theatrical performances or motion-picture shows can be presented |
-| 202 | shell | other sense: the drawing shows a seashell | ammunition consisting of a cylindrical metal casing containing an explosive charge and a projectile |
 | 207 | highway | hypernym road | a major road for any form of motor transport |
 | 208 | jet | synonym jet plane | an airplane powered by one or more jet engines |
-| 226 | motel |  | a motor hotel |
-| 227 | rifle |  | a shoulder firearm with a long barrel and a rifled bore |
-| 228 | statue |  | a sculpture representing a human or animal |
 | 232 | mall |  | a public area set aside as a pedestrian walk |
-| 238 | pub |  | tavern consisting of a building with a bar and public rooms |
-| 240 | radar |  | measuring instrument in which the echo of a pulse of microwave radiation is used to detect and locate distant objects |
 | 242 | counter | hypernym table | table consisting of a horizontal surface over which business is transacted |
-| 244 | nest |  | a structure in which animals lay eggs or give birth to their young |
-| 245 | vodka |  | unaged colorless liquor originating in Russia |
 | 248 | nut | hypernym seed (drawing "seeds") | usually large hard-shelled seed |
 | 249 | needle |  | the leaf of a conifer |
 | 253 | cellphone | synonym mobile phone | a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver |
-| 254 | wagon |  | any of various kinds of wheeled vehicles drawn by an animal or a tractor |
-| 255 | casino |  | a public building for gambling and entertainment |
-| 258 | tire |  | hoop that covers a wheel |
 | 261 | turtle | other sense: the drawing shows the animal | a sweater or jersey with a high close-fitting collar |
-| 262 | lance |  | a long pointed rod used as a tool or weapon |
-| 264 | pillow |  | a cushion to support the head of a sleeping person |
 | 267 | jewelry |  | an adornment (as a bracelet or ring or necklace) made of precious metals and set with gems (or imitation gems) |
-| 269 | dough |  | a flour mixture stiff enough to knead or roll |
 | 274 | puppy | hypernym dog | a young dog |
 | 276 | carpet | synonym rug | floor covering consisting of a piece of thick heavy fabric (usually with nap or pile) |
 | 277 | inn | hypernym hotel | a hotel providing overnight lodging for travelers |
-| 279 | bin |  | a container |
 | 280 | gum | synonym chewing gum | a preparation (usually made of sweetened chicle) for chewing |
 | 282 | aircraft |  | a vehicle that can fly |
-| 283 | embassy |  | a diplomatic building where ambassadors live or work |
-| 284 | cabinet |  | a piece of furniture resembling a cupboard with doors and shelves and drawers |
 | 285 | vault |  | a burial chamber (usually underground) |
-| 289 | collar |  | a band that fits around the neck and is usually folded over |
 | 293 | barrel |  | a tube through which a bullet travels when a gun is fired |
-| 294 | cannon |  | a large artillery gun that is usually on wheels |
-| 298 | ginger |  | perennial plants having thick branching aromatic rhizomes and leafy reedlike stems |
 | 300 | tub | synonym bathtub | a relatively large open container that you fill with water and use to wash the body |
-| 301 | rod |  | a long thin implement made of metal or wood |
 | 303 | cafe | hypernym restaurant | a small restaurant where drinks and snacks are sold |
-| 304 | brandy |  | distilled from wine or fermented fruit juice |
-| 305 | sweater |  | a crocheted or knitted garment covering the upper part of the body |
 | 307 | pistol |  | a firearm that is held and fired with one hand |
 | 308 | tomb | synonym grave | a place for the burial of a corpse (especially beneath the ground and marked by a tombstone) |
-| 311 | plug |  | blockage consisting of an object designed to fill a hole tightly |
 | 312 | reed |  | tall woody perennial grasses with hollow slender stems especially of the genera Arundo and Phragmites |
 | 314 | laser |  | an acronym for light amplification by stimulated emission of radiation |
 | 315 | missile | hypernym rocket | a rocket carrying a warhead of conventional or nuclear explosives |
@@ -309,7 +284,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 664 | underpants |  | an undergarment that covers the body from the waist no further than to the thighs |
 | 665 | zipper | synonym zip | a fastener for locking together two toothed edges by means of a sliding tab |
 | 666 | boiler |  | sealed vessel where water is converted to steam |
-| 667 | wand |  | a rod used by a magician or water diviner |
+| 667 | wand | hypernym rod | a rod used by a magician or water diviner |
 | 669 | crater |  | a bowl-shaped geological formation at the top of a volcano |
 | 670 | flea |  | any wingless bloodsucking parasitic insect noted for ability to leap |
 | 671 | peacock | other sense: the drawing shows the bird | European butterfly having reddish-brown wings each marked with a purple eyespot |
@@ -371,7 +346,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 752 | throttle |  | a valve that regulates the supply of fuel to the engine |
 | 753 | espresso | hypernym coffee | strong black coffee brewed by forcing hot water under pressure through finely ground coffee beans |
 | 755 | greenhouse | hypernym building | a building with glass walls and roof |
-| 757 | baton |  | a thin tapered rod used by a conductor to lead an orchestra or choir |
+| 757 | baton | hypernym rod | a thin tapered rod used by a conductor to lead an orchestra or choir |
 | 759 | arcade |  | a covered passageway with shops and stalls on either side |
 | 760 | rye |  | the seed of the cereal grass |
 | 761 | starship | synonym spaceship | a spacecraft designed to carry a crew into interstellar space (especially in science fiction) |
@@ -701,7 +676,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1190 | paintball |  | a capsule filled with water-soluble dye used as a projectile in playing the game of paintball |
 | 1191 | icebox |  | white goods in which food can be stored at low temperatures |
 | 1193 | corset |  | a woman's close-fitting foundation garment |
-| 1194 | cardigan |  | knitted jacket that is fastened up the front with buttons or a zipper |
+| 1194 | cardigan | hypernym sweater | knitted jacket that is fastened up the front with buttons or a zipper |
 | 1195 | sickle |  | an edge tool for cutting grass or crops |
 | 1196 | beret | hypernym cap | a cap with no brim or bill |
 | 1197 | frock |  | a long, loose outer garment |
@@ -806,7 +781,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1314 | apricot | hypernym fruit tree | Asian tree having clusters of usually white blossoms and edible fruit resembling the peach |
 | 1315 | microchip |  | electronic equipment consisting of a small crystal of a silicon semiconductor fabricated to carry out a number of electronic functions in an integrated circuit |
 | 1316 | jumpsuit |  | one-piece garment fashioned after a parachutist's uniform |
-| 1318 | applejack |  | distilled from hard cider |
+| 1318 | applejack | hypernym brandy | distilled from hard cider |
 | 1319 | paisley | hypernym fabric | a soft wool fabric with a colorful swirled pattern of curved shapes |
 | 1321 | airstrip |  | an airfield without normal airport facilities |
 | 1322 | backdrop |  | scenery hung at back of stage |
@@ -878,7 +853,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1394 | grotto | hypernym cave | a small cave (usually with attractive features) |
 | 1395 | goulash |  | a rich meat stew highly seasoned with paprika |
 | 1396 | hourglass |  | a sandglass that runs for sixty minutes |
-| 1397 | bung |  | a plug used to close a hole in a barrel or flask |
+| 1397 | bung | hypernym plug | a plug used to close a hole in a barrel or flask |
 | 1398 | solitaire |  | a gem (usually a diamond) in a setting by itself |
 | 1399 | hummus |  | a thick spread made from mashed chickpeas, tahini, lemon juice and garlic |
 | 1400 | microfilm |  | film on which materials are photographed at greatly reduced size |

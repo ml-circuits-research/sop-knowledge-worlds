@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>cannon</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="90" width="92" height="5" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <polygon points="8,76 52,60 56,68 12,88" fill="brown" stroke="#333" stroke-width="0.8"><title>carriage</title></polygon>
+  <ellipse cx="17" cy="57" rx="7" ry="7" fill="black" stroke="#333" stroke-width="0.8"><title>breech</title></ellipse>
+  <polygon points="18,50 86,26 91,38 24,66" fill="black" stroke="#333" stroke-width="0.8"><title>barrel</title></polygon>
+  <ellipse cx="75" cy="85" rx="5" ry="5" fill="black" stroke="#333" stroke-width="0.8"><title>ball_1</title></ellipse>
+  <ellipse cx="86" cy="85" rx="5" ry="5" fill="black" stroke="#333" stroke-width="0.8"><title>ball_2</title></ellipse>
+  <polygon points="84,23 90,21 96,37 90,40" fill="black" stroke="#333" stroke-width="0.8"><title>muzzle</title></polygon>
+  <ellipse cx="80.5" cy="76" rx="5" ry="5" fill="black" stroke="#333" stroke-width="0.8"><title>ball_3</title></ellipse>
+  <ellipse cx="44" cy="70" rx="20" ry="20" fill="brown" stroke="#333" stroke-width="0.8"><title>wheel</title></ellipse>
+  <polyline points="44,52 44,88" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spoke_1</title></polyline>
+  <polyline points="26,70 62,70" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spoke_2</title></polyline>
+  <polyline points="31,57 57,83" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spoke_3</title></polyline>
+  <polyline points="57,57 31,83" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spoke_4</title></polyline>
+  <ellipse cx="44" cy="70" rx="4" ry="4" fill="grey" stroke="#333" stroke-width="0.8"><title>hub</title></ellipse>
+</svg>

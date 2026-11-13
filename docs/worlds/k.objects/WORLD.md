@@ -46,9 +46,13 @@ object with the file of its picture, its shard, its source, the licence of its s
 | `land` | island, hole, hill, valley, cave, cliff, pit, grave |
 | `food` | meat, sugar, juice, orange, sauce, whiskey, corn, pork |
 | `things` | gun, suit, tape, bullet, sword, fan, painting, map, horn, trap, screen, tank, rope, mask, shoe, doorbell, cage, pipe, frame, underwear, shell, pole, string, tube, pan, throne |
+| `things-2` | artillery shell, rifle, statue, radar, nest, tire, lance, pillow, bin, cabinet, collar, cannon, rod, sweater, plug, wagon |
+| `places-2` | motel, pub, casino, embassy |
+| `land-2` | river bank |
+| `food-2` | vodka, dough, ginger, brandy |
 
-120 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4: the most frequent common things that had no
-drawing, see `MISSING.md`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+145 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 25 of Round 5: the most frequent common
+things that had no drawing, see `MISSING.md`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 
@@ -57,7 +61,7 @@ first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mul
 
 | Source | Objects | Shards | Licence | Names from |
 | --- | --- | --- | --- | --- |
-| hand-written | 120 | 14 | CC0-1.0 | this repository |
+| hand-written | 145 | 18 | CC0-1.0 | this repository |
 | Noto Emoji (`noto-<emoji subgroup>-<nn>`) | 811 | 124 | Apache-2.0 AND Unicode-3.0 | Unicode CLDR short names (`"dog face"`, `teapot`) |
 | OpenMoji (`openmoji-<group>-<nn>`) | 114 | 18 | CC-BY-SA-4.0 | OpenMoji annotations (`goldfish`, `"lawn mower"`) |
 | Mulberry Symbols (`mulberry-<category>-<nn>`) | 958 | 149 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |

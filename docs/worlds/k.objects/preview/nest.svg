@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>nest</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="82" width="92" height="6" fill="brown" stroke="#333" stroke-width="0.8"><title>branch</title></rect>
+  <ellipse cx="50" cy="51" rx="40" ry="11" fill="brown" stroke="#333" stroke-width="0.8"><title>rim</title></ellipse>
+  <ellipse cx="50" cy="51" rx="32" ry="7" fill="black" stroke="#333" stroke-width="0.8"><title>hollow</title></ellipse>
+  <ellipse cx="35.5" cy="42" rx="7.5" ry="10" fill="white" stroke="#333" stroke-width="0.8"><title>left_egg</title></ellipse>
+  <ellipse cx="50.5" cy="39" rx="7.5" ry="10" fill="white" stroke="#333" stroke-width="0.8"><title>middle_egg</title></ellipse>
+  <ellipse cx="65.5" cy="42" rx="7.5" ry="10" fill="white" stroke="#333" stroke-width="0.8"><title>right_egg</title></ellipse>
+  <polygon points="10,51 20,58 36,62 50,63 64,62 80,58 90,51 78,82 22,82" fill="brown" stroke="#333" stroke-width="0.8"><title>front</title></polygon>
+  <polyline points="20,62 44,76" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>twig_1</title></polyline>
+  <polyline points="38,66 70,74" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>twig_2</title></polyline>
+  <polyline points="80,62 56,79" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>twig_3</title></polyline>
+  <polyline points="28,78 50,68" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>twig_4</title></polyline>
+</svg>

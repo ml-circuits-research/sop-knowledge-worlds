@@ -1,0 +1,71 @@
+# k.objects/shards/food-2: vodka, dough, ginger, brandy. Parts with a primitive shape, a box in the 0 to 100 frame
+# of the object (x right, y down), a draw order z and typical colours; points for lines and polygons.
+# sources: hand-core 1 (hand-written in this repository)
+# license: CC0-1.0
+# script: none (hand-written)
+
+# vodka
+@k.objects.vodka k.objects.object name=vodka core.source="hand-core 1"
+@k.objects.vodka.bottle k.objects.part of=vodka name=bottle shape=rectangle x=26 y=36 w=26 h=54 z=1 colour=white colour=blue core.source="hand-core 1"
+@k.objects.vodka.shoulder k.objects.part of=vodka name=shoulder shape=triangle x=26 y=26 w=26 h=10 z=1 colour=white colour=blue pointing=up above=bottle core.source="hand-core 1"
+@k.objects.vodka.neck k.objects.part of=vodka name=neck shape=rectangle x=34 y=14 w=10 h=16 z=2 colour=white colour=blue above=bottle core.source="hand-core 1"
+@k.objects.vodka.cap k.objects.part of=vodka name=cap shape=rectangle x=33 y=6 w=12 h=9 z=3 colour=red colour=blue above=neck core.source="hand-core 1"
+@k.objects.vodka.label k.objects.part of=vodka name=label shape=rectangle x=26 y=52 w=26 h=20 z=2 colour=red colour=blue inside=bottle core.source="hand-core 1"
+@k.objects.vodka.label_band k.objects.part of=vodka name=label_band shape=rectangle x=26 y=59 w=26 h=5 z=3 colour=white inside=label core.source="hand-core 1"
+@k.objects.vodka.shot_glass k.objects.part of=vodka name=shot_glass shape=polygon x=62 y=66 w=22 h=24 z=1 colour=white colour=blue right_of=bottle core.source="hand-core 1"
+@k.objects.vodka.glass_base k.objects.part of=vodka name=glass_base shape=rectangle x=66 y=85 w=14 h=5 z=2 colour=grey colour=white inside=shot_glass core.source="hand-core 1"
+@k.objects.vodka.shot_glass.p1 k.objects.point part=$k.objects.vodka.shot_glass n=1 x=62 y=66 core.source="hand-core 1"
+@k.objects.vodka.shot_glass.p2 k.objects.point part=$k.objects.vodka.shot_glass n=2 x=84 y=66 core.source="hand-core 1"
+@k.objects.vodka.shot_glass.p3 k.objects.point part=$k.objects.vodka.shot_glass n=3 x=80 y=90 core.source="hand-core 1"
+@k.objects.vodka.shot_glass.p4 k.objects.point part=$k.objects.vodka.shot_glass n=4 x=66 y=90 core.source="hand-core 1"
+
+# dough
+@k.objects.dough k.objects.object name=dough core.source="hand-core 1"
+@k.objects.dough.board k.objects.part of=dough name=board shape=rectangle x=6 y=72 w=88 h=9 z=0 colour=brown core.source="hand-core 1"
+@k.objects.dough.dough k.objects.part of=dough name=dough shape=oval x=18 y=40 w=60 h=36 z=1 colour=white colour=yellow on=board core.source="hand-core 1"
+@k.objects.dough.fold k.objects.part of=dough name=fold shape=arc x=30 y=48 w=30 h=9 z=2 colour=grey opens=down inside=dough core.source="hand-core 1"
+@k.objects.dough.crease k.objects.part of=dough name=crease shape=line x=50 y=60 w=14 h=6 z=2 colour=grey inside=dough core.source="hand-core 1"
+@k.objects.dough.roller k.objects.part of=dough name=roller shape=rectangle x=40 y=18 w=40 h=10 z=3 colour=brown colour=yellow above=dough core.source="hand-core 1"
+@k.objects.dough.left_handle k.objects.part of=dough name=left_handle kind=handle shape=rectangle x=31 y=21 w=9 h=4 z=2 colour=brown colour=yellow left_of=roller core.source="hand-core 1"
+@k.objects.dough.right_handle k.objects.part of=dough name=right_handle kind=handle shape=rectangle x=80 y=21 w=9 h=4 z=2 colour=brown colour=yellow right_of=roller core.source="hand-core 1"
+@k.objects.dough.flour_1 k.objects.part of=dough name=flour_1 kind=flour shape=circle x=10 y=66 w=3 h=3 z=2 colour=white core.source="hand-core 1"
+@k.objects.dough.flour_2 k.objects.part of=dough name=flour_2 kind=flour shape=circle x=84 y=68 w=3 h=3 z=2 colour=white core.source="hand-core 1"
+@k.objects.dough.flour_3 k.objects.part of=dough name=flour_3 kind=flour shape=circle x=80 y=60 w=3 h=3 z=2 colour=white core.source="hand-core 1"
+@k.objects.dough.crease.p1 k.objects.point part=$k.objects.dough.crease n=1 x=50 y=60 core.source="hand-core 1"
+@k.objects.dough.crease.p2 k.objects.point part=$k.objects.dough.crease n=2 x=64 y=66 core.source="hand-core 1"
+
+# ginger
+@k.objects.ginger k.objects.object name=ginger core.source="hand-core 1"
+@k.objects.ginger.root k.objects.part of=ginger name=root shape=oval x=22 y=40 w=50 h=24 z=2 colour=yellow colour=brown core.source="hand-core 1"
+@k.objects.ginger.upper_knob k.objects.part of=ginger name=upper_knob kind=knob shape=oval x=56 y=26 w=28 h=20 z=1 colour=yellow colour=brown above=root core.source="hand-core 1"
+@k.objects.ginger.left_knob k.objects.part of=ginger name=left_knob kind=knob shape=oval x=8 y=30 w=26 h=18 z=1 colour=yellow colour=brown left_of=root core.source="hand-core 1"
+@k.objects.ginger.lower_knob k.objects.part of=ginger name=lower_knob kind=knob shape=oval x=36 y=58 w=22 h=20 z=1 colour=yellow colour=brown below=root core.source="hand-core 1"
+@k.objects.ginger.right_knob k.objects.part of=ginger name=right_knob kind=knob shape=oval x=62 y=50 w=28 h=16 z=1 colour=yellow colour=brown right_of=root core.source="hand-core 1"
+@k.objects.ginger.tip k.objects.part of=ginger name=tip kind=knob shape=oval x=76 y=18 w=12 h=12 z=0 colour=yellow colour=brown core.source="hand-core 1"
+@k.objects.ginger.ring_1 k.objects.part of=ginger name=ring_1 kind=ring shape=arc x=30 y=44 w=8 h=16 z=3 colour=brown opens=left inside=root core.source="hand-core 1"
+@k.objects.ginger.ring_2 k.objects.part of=ginger name=ring_2 kind=ring shape=arc x=46 y=44 w=8 h=16 z=3 colour=brown opens=left inside=root core.source="hand-core 1"
+@k.objects.ginger.ring_3 k.objects.part of=ginger name=ring_3 kind=ring shape=arc x=70 y=30 w=6 h=12 z=3 colour=brown opens=left inside=upper_knob core.source="hand-core 1"
+@k.objects.ginger.cut k.objects.part of=ginger name=cut shape=oval x=8 y=34 w=9 h=11 z=3 colour=white colour=yellow inside=left_knob core.source="hand-core 1"
+
+# brandy
+@k.objects.brandy k.objects.object name=brandy core.source="hand-core 1"
+@k.objects.brandy.bottle k.objects.part of=brandy name=bottle shape=rectangle x=12 y=40 w=26 h=50 z=1 colour=brown core.source="hand-core 1"
+@k.objects.brandy.shoulder k.objects.part of=brandy name=shoulder shape=triangle x=12 y=28 w=26 h=12 z=1 colour=brown pointing=up above=bottle core.source="hand-core 1"
+@k.objects.brandy.neck k.objects.part of=brandy name=neck shape=rectangle x=20 y=16 w=10 h=16 z=2 colour=brown above=bottle core.source="hand-core 1"
+@k.objects.brandy.cap k.objects.part of=brandy name=cap shape=rectangle x=19 y=9 w=12 h=8 z=3 colour=yellow above=neck core.source="hand-core 1"
+@k.objects.brandy.label k.objects.part of=brandy name=label shape=rectangle x=12 y=54 w=26 h=18 z=2 colour=yellow colour=white inside=bottle core.source="hand-core 1"
+@k.objects.brandy.bowl k.objects.part of=brandy name=bowl shape=circle x=50 y=34 w=40 h=40 z=1 colour=white right_of=bottle core.source="hand-core 1"
+@k.objects.brandy.drink k.objects.part of=brandy name=drink shape=polygon x=52 y=60 w=36 h=13 z=2 colour=orange colour=brown inside=bowl core.source="hand-core 1"
+@k.objects.brandy.stem k.objects.part of=brandy name=stem shape=rectangle x=68 y=73 w=4 h=13 z=0 colour=white colour=grey below=bowl core.source="hand-core 1"
+@k.objects.brandy.foot k.objects.part of=brandy name=foot shape=oval x=56 y=84 w=28 h=7 z=1 colour=white colour=grey below=stem core.source="hand-core 1"
+@k.objects.brandy.drink.p1 k.objects.point part=$k.objects.brandy.drink n=1 x=52 y=60 core.source="hand-core 1"
+@k.objects.brandy.drink.p2 k.objects.point part=$k.objects.brandy.drink n=2 x=88 y=60 core.source="hand-core 1"
+@k.objects.brandy.drink.p3 k.objects.point part=$k.objects.brandy.drink n=3 x=84 y=68 core.source="hand-core 1"
+@k.objects.brandy.drink.p4 k.objects.point part=$k.objects.brandy.drink n=4 x=76 y=73 core.source="hand-core 1"
+@k.objects.brandy.drink.p5 k.objects.point part=$k.objects.brandy.drink n=5 x=64 y=73 core.source="hand-core 1"
+@k.objects.brandy.drink.p6 k.objects.point part=$k.objects.brandy.drink n=6 x=56 y=68 core.source="hand-core 1"
+
+@k.objects.word.vodka core.word text=vodka text=vodkas means=vodka of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.dough core.word text=dough means=dough of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.ginger core.word text=ginger means=ginger of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.brandy core.word text=brandy text=brandies text=cognac means=brandy of=k.objects.object.name core.source="hand-core 1"

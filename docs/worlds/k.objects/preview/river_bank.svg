@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>river bank</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="40" y="62" width="56" height="32" fill="blue" stroke="#333" stroke-width="0.8"><title>river</title></rect>
+  <polygon points="4,30 40,30 46,38 4,38" fill="green" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <polygon points="4,38 46,38 68,70 58,94 4,94" fill="brown" stroke="#333" stroke-width="0.8"><title>slope</title></polygon>
+  <rect x="17" y="16" width="4" height="15" fill="brown" stroke="#333" stroke-width="0.8"><title>trunk</title></rect>
+  <polyline points="72,70 77,67 82,70 87,67 92,70" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wave_1</title></polyline>
+  <polyline points="66,80 71,77 76,80 81,77 86,80" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wave_2</title></polyline>
+  <polyline points="72,89 77,86 82,89 87,86 92,89" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wave_3</title></polyline>
+  <ellipse cx="28" cy="61.5" rx="6" ry="3.5" fill="grey" stroke="#333" stroke-width="0.8"><title>stone</title></ellipse>
+  <ellipse cx="19" cy="11" rx="11" ry="11" fill="green" stroke="#333" stroke-width="0.8"><title>crown</title></ellipse>
+  <polyline points="56,66 54,46" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>reed_1</title></polyline>
+  <polyline points="60,70 61,50" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>reed_2</title></polyline>
+  <polyline points="64,74 68,54" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>reed_3</title></polyline>
+</svg>

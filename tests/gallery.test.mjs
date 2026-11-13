@@ -32,7 +32,7 @@ test('the gallery page loads that list, shows lazy images, and its search finds 
   assert.deepEqual(filterObjects(list, 'HOUSE', '').map((o) => o.name).filter((n) => n === 'house' || n === 'lighthouse'), ['house', 'lighthouse']);
   assert.deepEqual(filterObjects(list, 'dog face', '').map((o) => o.name), ['dog face']);
   const hand = filterObjects(list, '', 'hand-core 1');
-  assert.equal(hand.length, 120);
+  assert.equal(hand.length, 145);
   assert.ok(hand.every((o) => o.license === 'CC0-1.0'));
   assert.equal(filterObjects(list, 'no such thing at all', '').length, 0);
   const one = cell(list.find((o) => o.name === 'house'));

@@ -425,16 +425,13 @@
 
 # pole
 @k.objects.pole k.objects.object name=pole core.source="hand-core 1"
-@k.objects.pole.ground k.objects.part of=pole name=ground shape=rectangle x=20 y=90 w=60 h=6 z=0 colour=green colour=brown core.source="hand-core 1"
-@k.objects.pole.base k.objects.part of=pole name=base shape=rectangle x=38 y=84 w=24 h=7 z=1 colour=grey on=ground core.source="hand-core 1"
-@k.objects.pole.pole k.objects.part of=pole name=pole shape=rectangle x=46 y=10 w=8 h=74 z=1 colour=brown colour=grey above=base core.source="hand-core 1"
-@k.objects.pole.cap k.objects.part of=pole name=cap shape=circle x=44 y=3 w=12 h=12 z=2 colour=yellow colour=grey above=pole core.source="hand-core 1"
-@k.objects.pole.upper_band k.objects.part of=pole name=upper_band kind=band shape=line x=46 y=30 w=8 h=0 z=2 colour=black inside=pole core.source="hand-core 1"
-@k.objects.pole.lower_band k.objects.part of=pole name=lower_band kind=band shape=line x=46 y=60 w=8 h=0 z=2 colour=black below=upper_band inside=pole core.source="hand-core 1"
-@k.objects.pole.upper_band.p1 k.objects.point part=$k.objects.pole.upper_band n=1 x=46 y=30 core.source="hand-core 1"
-@k.objects.pole.upper_band.p2 k.objects.point part=$k.objects.pole.upper_band n=2 x=54 y=30 core.source="hand-core 1"
-@k.objects.pole.lower_band.p1 k.objects.point part=$k.objects.pole.lower_band n=1 x=46 y=60 core.source="hand-core 1"
-@k.objects.pole.lower_band.p2 k.objects.point part=$k.objects.pole.lower_band n=2 x=54 y=60 core.source="hand-core 1"
+@k.objects.pole.ground k.objects.part of=pole name=ground shape=oval x=18 y=84 w=64 h=12 z=0 colour=green colour=brown core.source="hand-core 1"
+@k.objects.pole.pole k.objects.part of=pole name=pole shape=rectangle x=46 y=12 w=8 h=78 z=1 colour=white colour=grey above=ground core.source="hand-core 1"
+@k.objects.pole.stripe_1 k.objects.part of=pole name=stripe_1 kind=stripe shape=rectangle x=46 y=20 w=8 h=10 z=2 colour=red inside=pole core.source="hand-core 1"
+@k.objects.pole.stripe_2 k.objects.part of=pole name=stripe_2 kind=stripe shape=rectangle x=46 y=40 w=8 h=10 z=2 colour=red below=stripe_1 inside=pole core.source="hand-core 1"
+@k.objects.pole.stripe_3 k.objects.part of=pole name=stripe_3 kind=stripe shape=rectangle x=46 y=60 w=8 h=10 z=2 colour=red below=stripe_2 inside=pole core.source="hand-core 1"
+@k.objects.pole.stripe_4 k.objects.part of=pole name=stripe_4 kind=stripe shape=rectangle x=46 y=80 w=8 h=10 z=2 colour=red below=stripe_3 inside=pole core.source="hand-core 1"
+@k.objects.pole.cap k.objects.part of=pole name=cap shape=circle x=43 y=2 w=14 h=14 z=3 colour=yellow colour=grey above=pole core.source="hand-core 1"
 
 # string
 @k.objects.string k.objects.object name=string core.source="hand-core 1"

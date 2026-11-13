@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>hole</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <rect x="5" y="40" width="90" height="50" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
-  <ellipse cx="47" cy="64" rx="25" ry="12" fill="black" stroke="#333" stroke-width="0.8"><title>hole</title></ellipse>
-  <ellipse cx="82" cy="43" rx="12" ry="7" fill="brown" stroke="#333" stroke-width="0.8"><title>mound</title></ellipse>
-  <ellipse cx="17.5" cy="48" rx="3.5" ry="2" fill="grey" stroke="#333" stroke-width="0.8"><title>pebble_1</title></ellipse>
-  <ellipse cx="37.5" cy="82" rx="3.5" ry="2" fill="grey" stroke="#333" stroke-width="0.8"><title>pebble_2</title></ellipse>
+  <rect x="4" y="34" width="92" height="60" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <ellipse cx="43" cy="61" rx="29" ry="17" fill="brown" stroke="#333" stroke-width="0.8"><title>rim</title></ellipse>
+  <ellipse cx="43" cy="61" rx="23" ry="12" fill="black" stroke="#333" stroke-width="0.8"><title>hole</title></ellipse>
+  <rect x="75" y="26" width="10" height="12" fill="grey" stroke="#333" stroke-width="0.8"><title>shovel_blade</title></rect>
+  <ellipse cx="12.5" cy="82.5" rx="4.5" ry="2.5" fill="brown" stroke="#333" stroke-width="0.8"><title>clod_1</title></ellipse>
+  <ellipse cx="48.5" cy="86.5" rx="4.5" ry="2.5" fill="brown" stroke="#333" stroke-width="0.8"><title>clod_2</title></ellipse>
+  <polygon points="81,24 96,46 66,46" fill="brown" stroke="#333" stroke-width="0.8"><title>mound</title></polygon>
+  <polygon points="78,4 82,4 82,28 78,28" fill="yellow" stroke="#333" stroke-width="0.8"><title>shovel_handle</title></polygon>
+  <rect x="74" y="2" width="12" height="4" fill="yellow" stroke="#333" stroke-width="0.8"><title>shovel_grip</title></rect>
 </svg>
