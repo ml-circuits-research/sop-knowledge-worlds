@@ -18,12 +18,12 @@ name, since the sense it shows is a common one too.
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name, in the sense kept | 610 | 40.7% |
-| without, but a WordNet synonym has a drawing | 63 | 4.2% |
-| without, but the direct hypernym has a drawing | 173 | 11.5% |
-| with no drawing at all | 654 | 43.6% |
+| with a drawing of that name, in the sense kept | 635 | 42.3% |
+| without, but a WordNet synonym has a drawing | 65 | 4.3% |
+| without, but the direct hypernym has a drawing | 176 | 11.7% |
+| with no drawing at all | 624 | 41.6% |
 
-## The 890 words without a drawing of their name, most frequent first
+## The 865 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a `core.word` fact of the shard `words-wordnet` (the word finds that drawing as
@@ -93,56 +93,31 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 400 | rack |  | framework for holding objects |
 | 404 | tuna | other sense: the drawing shows a tin of tuna fish | tropical American prickly pear of Jamaica |
 | 405 | altar | hypernym table | the table in Christian churches where communion is given |
-| 409 | saddle |  | a seat for the rider of a horse or other animal |
 | 411 | gown | hypernym dress | a woman's dress, usually with a close-fitting bodice and a long flared skirt, often worn on formal occasions |
-| 416 | yacht |  | an expensive vessel propelled by sail or power and used for cruising or racing |
-| 417 | pod |  | the vessel that contains the seeds of a plant (not the seeds themselves) |
 | 419 | cane | hypernym walking stick | a stick that people can lean on to help them walk |
-| 420 | wheat |  | annual or biennial grass having erect flower spikes and light brown grains |
-| 421 | finch |  | any of numerous small songbirds with short stout bills adapted for crushing seeds |
 | 423 | chili |  | ground beef and chili peppers or chili powder often with tomatoes and kidney beans |
-| 425 | hay |  | grass mowed and cured for use as fodder |
 | 426 | continent |  | one of the large landmasses of the earth |
-| 427 | robe |  | any loose flowing garment |
-| 429 | mattress |  | a large thick pad filled with resilient material and often incorporating coiled springs, used as a bed or part of a bed |
 | 430 | grill |  | a restaurant where food is cooked on a grill |
 | 432 | grocery |  | a marketplace where groceries are sold |
-| 433 | supermarket |  | a large self-service grocery store selling groceries and dairy products and household goods |
-| 434 | pier |  | a platform built out from the shore into the water and supported by piles |
 | 436 | hose | other sense: the drawing shows a garden hose | socks and stockings and tights collectively (the British include underwear) |
-| 437 | porch |  | a structure attached to the exterior of a building often forming a covered entrance |
 | 441 | salon |  | gallery where works of art can be displayed |
-| 442 | fortress |  | a fortified defensive structure |
 | 443 | workshop |  | small workplace where handcrafts or manufacturing are done |
 | 444 | swine |  | stout-bodied short-legged omnivorous animals |
-| 447 | jewel |  | a precious or semiprecious stone incorporated into a piece of jewelry |
 | 450 | magnum |  | a large wine bottle for liquor or wine |
-| 451 | sherry |  | dry to sweet amber wine from the Jerez region of southern Spain or similar wines produced elsewhere |
-| 452 | refrigerator |  | white goods in which food can be stored at low temperatures |
 | 453 | laurel |  | any of various aromatic trees of the laurel family |
-| 455 | raven |  | large black bird with a straight bill and long wedge-shaped tail |
-| 458 | tequila |  | Mexican liquor made from fermented juices of an agave plant |
-| 459 | mule |  | hybrid offspring of a male donkey and a female horse |
 | 460 | bunker |  | a hazard on a golf course |
 | 461 | ape |  | any of various primates with short tails or no tail at all |
-| 463 | squirrel |  | a kind of arboreal rodent having a long bushy tail |
 | 464 | bomber | hypernym airplane | a military aircraft that drops bombs during flight |
 | 466 | steed |  | (literary) a spirited horse for state of war |
 | 468 | rail |  | a barrier consisting of a horizontal bar and supports |
-| 471 | gong |  | a percussion instrument consisting of a metal plate that is struck with a softheaded drumstick |
 | 476 | pickup | synonym pickup truck | a light truck with an open body and low sides and a tailboard |
 | 477 | grenade | hypernym bomb | a small explosive bomb thrown by hand or fired from a missile |
 | 478 | mustard |  | any of several cruciferous plants of the genus Brassica |
-| 479 | lens |  | a transparent optical device used to converge or diverge transmitted light and to form images |
 | 480 | jasmine | hypernym bush | any of several shrubs and vines of the genus Jasminum chiefly native to Asia |
-| 482 | shack |  | small crude shelter used as a dwelling |
 | 483 | bunk |  | a long trough for feeding cattle |
-| 485 | flour |  | fine powdery foodstuff obtained by grinding and sifting the meal of a cereal grain |
 | 486 | drone | other sense: the drawing shows a small aircraft with four rotors | stingless male bee in a colony of social bees (especially honeybees) whose sole function is to mate with the queen |
 | 489 | baggage | synonym luggage | cases used to carry belongings when traveling |
 | 491 | fax |  | duplicator that transmits the copy by wire or radio |
-| 492 | shrine |  | a place of worship hallowed by association with some sacred thing or person |
-| 493 | timer |  | a timepiece that measures a time interval and signals its end |
 | 494 | convent |  | a religious residence especially for nuns |
 | 498 | cereal | other sense: the drawing shows a bowl of breakfast cereal | grass whose starchy grains are used as food: wheat |
 | 500 | rag |  | a small piece of cloth or paper |
@@ -487,7 +462,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 979 | mantis |  | predacious long-bodied large-eyed insect of warm regions |
 | 980 | trough |  | a narrow depression (as in the earth or between ocean waves or in the ocean bed) |
 | 981 | pew | hypernym bench | long bench with backs |
-| 982 | wharf |  | a platform built out from the shore into the water and supported by piles |
+| 982 | wharf | synonym pier | a platform built out from the shore into the water and supported by piles |
 | 983 | polygraph |  | a medical instrument that records several physiological processes simultaneously (e.g., pulse rate and blood pressure and respiration and perspiration) |
 | 986 | slaughterhouse | hypernym building | a building where animals are butchered |
 | 987 | aspen |  | any of several trees of the genus Populus having leaves on flattened stalks so that they flutter in the lightest wind |
@@ -599,7 +574,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1127 | sunscreen |  | a cream spread on the skin |
 | 1128 | grate |  | a frame of iron bars to hold a fire |
 | 1130 | marmalade |  | a preserve made of the pulp and rind of citrus fruits |
-| 1132 | bathrobe |  | a loose-fitting robe of towelling |
+| 1132 | bathrobe | hypernym robe | a loose-fitting robe of towelling |
 | 1133 | chalice | hypernym cup | a bowl-shaped drinking vessel |
 | 1134 | saffron |  | Old World crocus having purple or white flowers with aromatic pungent orange stigmas used in flavoring food |
 | 1135 | dune |  | a ridge of sand created by the wind |
@@ -649,7 +624,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1188 | beagle |  | a small short-legged smooth-coated breed of hound |
 | 1189 | bazooka |  | a portable rocket launcher used by infantrymen as an antitank weapon |
 | 1190 | paintball |  | a capsule filled with water-soluble dye used as a projectile in playing the game of paintball |
-| 1191 | icebox |  | white goods in which food can be stored at low temperatures |
+| 1191 | icebox | synonym refrigerator | white goods in which food can be stored at low temperatures |
 | 1193 | corset |  | a woman's close-fitting foundation garment |
 | 1194 | cardigan | hypernym sweater | knitted jacket that is fastened up the front with buttons or a zipper |
 | 1195 | sickle |  | an edge tool for cutting grass or crops |
@@ -821,7 +796,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1386 | glider |  | aircraft supported only by the dynamic action of air against its surfaces |
 | 1387 | hydrant |  | a faucet for drawing water from a pipe or cask |
 | 1388 | hoarding |  | large outdoor signboard |
-| 1389 | veranda |  | a porch along the outside of a building (sometimes partly enclosed) |
+| 1389 | veranda | hypernym porch | a porch along the outside of a building (sometimes partly enclosed) |
 | 1390 | paella |  | saffron-flavored dish made of rice with shellfish and chicken |
 | 1391 | upholstery |  | covering (padding and springs and webbing and fabric) on a piece of furniture |
 | 1392 | lioness |  | a female lion |
@@ -880,7 +855,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1452 | aquatic |  | a plant that lives in or on water |
 | 1453 | anvil |  | a heavy block of iron or steel on which hot metals are shaped by hammering |
 | 1454 | cesspool |  | a covered cistern |
-| 1455 | futon |  | mattress consisting of a pad of cotton batting that is used for sleeping on the floor or on a raised frame |
+| 1455 | futon | hypernym mattress | mattress consisting of a pad of cotton batting that is used for sleeping on the floor or on a raised frame |
 | 1456 | arbor |  | tree (as opposed to shrub) |
 | 1457 | thermostat |  | a regulator for automatically regulating temperature by starting or stopping the supply of heat |
 | 1458 | surfboard |  | a narrow buoyant board for riding surf |

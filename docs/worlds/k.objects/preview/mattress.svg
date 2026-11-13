@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>mattress</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="8,46 28,28 92,28 72,46" fill="white" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <rect x="8" y="46" width="64" height="18" fill="white" stroke="#333" stroke-width="0.8"><title>front</title></rect>
+  <polygon points="72,46 92,28 92,46 72,64" fill="grey" stroke="#333" stroke-width="0.8"><title>side</title></polygon>
+  <polyline points="20,46 20,64" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stripe_1</title></polyline>
+  <polyline points="34,46 34,64" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stripe_2</title></polyline>
+  <polyline points="48,46 48,64" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stripe_3</title></polyline>
+  <polyline points="62,46 62,64" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stripe_4</title></polyline>
+  <ellipse cx="31.5" cy="36.5" rx="1.5" ry="1.5" fill="blue" stroke="#333" stroke-width="0.8"><title>tuft_1</title></ellipse>
+  <ellipse cx="49.5" cy="36.5" rx="1.5" ry="1.5" fill="blue" stroke="#333" stroke-width="0.8"><title>tuft_2</title></ellipse>
+  <ellipse cx="67.5" cy="36.5" rx="1.5" ry="1.5" fill="blue" stroke="#333" stroke-width="0.8"><title>tuft_3</title></ellipse>
+  <rect x="30" y="53" width="12" height="3" fill="black" stroke="#333" stroke-width="0.8"><title>handle</title></rect>
+</svg>

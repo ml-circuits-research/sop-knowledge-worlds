@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>timer</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="45" y="10" width="10" height="8" fill="red" stroke="#333" stroke-width="0.8"><title>button</title></rect>
+  <rect x="28" y="80" width="8" height="8" fill="black" stroke="#333" stroke-width="0.8"><title>left_foot</title></rect>
+  <rect x="64" y="80" width="8" height="8" fill="black" stroke="#333" stroke-width="0.8"><title>right_foot</title></rect>
+  <ellipse cx="50" cy="48" rx="32" ry="32" fill="white" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <ellipse cx="50" cy="48" rx="24" ry="24" fill="white" stroke="#333" stroke-width="0.8"><title>dial</title></ellipse>
+  <path d="M84 22 A6 7 0 0 1 84 36" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ring_1</title></path>
+  <path d="M16 22 A6 7 0 0 0 16 36" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ring_2</title></path>
+  <polyline points="50,26 50,32" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tick_12</title></polyline>
+  <polyline points="72,48 66,48" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tick_3</title></polyline>
+  <polyline points="50,70 50,64" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tick_6</title></polyline>
+  <polyline points="28,48 34,48" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tick_9</title></polyline>
+  <polyline points="50,48 62,34" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>pointer</title></polyline>
+  <ellipse cx="50" cy="48" rx="3" ry="3" fill="black" stroke="#333" stroke-width="0.8"><title>hub</title></ellipse>
+</svg>

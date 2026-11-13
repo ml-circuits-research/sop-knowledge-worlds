@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>jewel</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="30,26 70,26 86,44 14,44" fill="blue" stroke="#333" stroke-width="0.8"><title>crown</title></polygon>
+  <polygon points="14,44 86,44 50,90" fill="blue" stroke="#333" stroke-width="0.8"><title>pavilion</title></polygon>
+  <polygon points="38,26 62,26 58,44 42,44" fill="white" stroke="#333" stroke-width="0.8"><title>table</title></polygon>
+  <polyline points="42,44 50,90" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_facet</title></polyline>
+  <polyline points="58,44 50,90" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_facet</title></polyline>
+  <polyline points="14,44 86,44" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>girdle</title></polyline>
+  <polyline points="84,14 84,24" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>sparkle_1</title></polyline>
+  <polyline points="79,19 89,19" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>sparkle_2</title></polyline>
+</svg>

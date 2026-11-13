@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>shack</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="20,46 78,42 80,92 18,92" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></polygon>
+  <rect x="66" y="16" width="5" height="18" fill="black" stroke="#333" stroke-width="0.8"><title>pipe</title></rect>
+  <ellipse cx="70.5" cy="8.5" rx="4.5" ry="4.5" fill="grey" stroke="#333" stroke-width="0.8"><title>smoke</title></ellipse>
+  <polygon points="10,48 46,22 90,40 86,47 47,31 14,54" fill="grey" stroke="#333" stroke-width="0.8"><title>roof</title></polygon>
+  <polygon points="40,60 54,59 55,92 40,92" fill="black" stroke="#333" stroke-width="0.8"><title>door</title></polygon>
+  <rect x="62" y="58" width="11" height="11" fill="yellow" stroke="#333" stroke-width="0.8"><title>window</title></rect>
+  <polyline points="28,46 27,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>plank_1</title></polyline>
+  <polyline points="36,46 35,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>plank_2</title></polyline>
+  <polyline points="60,44 60,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>plank_3</title></polyline>
+  <polyline points="67.5,58 67.5,69" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>window_bar</title></polyline>
+  <rect x="22" y="70" width="10" height="8" fill="grey" stroke="#333" stroke-width="0.8"><title>patch</title></rect>
+</svg>

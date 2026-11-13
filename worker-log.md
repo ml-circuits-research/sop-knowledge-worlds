@@ -1176,3 +1176,26 @@ them; said here.
   21,550, `nature-2` 121 / 15,991. **k.objects: 2,053 objects** (170 hand-written), 312 shards, 299,442 wires,
   36,184,285 bytes. Catalog: 11 worlds, 740 shards, 342,950 wires, 44,223,900 bytes, vocab 18,831 words; 0 errors,
   0 warnings. npm test 2,297 pass, 0 fail.
+
+## R5.3 batch 3 (2026-11-13): 25 more hand-written things; 2,078 objects
+
+- **Which** (next in list order, drawable in the sense kept): saddle, yacht, pod, wheat, finch, hay, robe,
+  mattress, supermarket, pier, porch, fortress, jewel, sherry, refrigerator, raven, tequila, mule, squirrel, gong,
+  lens, shack, flour, shrine, timer. Shards: `things-2` (+9), `places-2` (+6), `food-2` (+6), `nature-2` (+4).
+- **Passed over** (ranks 409 to 493): chili (a dish), continent, grill and grocery (see supermarket), salon,
+  workshop (rooms), swine, steed, ape (kinds with no one shape; pig, horse and gorilla have drawings), magnum,
+  laurel, bunker (of a golf course), rail, mustard (the sense kept is the plant), bunk (a trough), fax.
+- Flour and hay are substances, drawn with what holds them (a sack with a scoop, a tied bale), as vodka, gin and
+  the other drinks are drawn with a bottle.
+- **Looked at:** all 25 previews on one contact sheet (160 px, name underneath), once; none redrawn. Verdict with
+  the name: all recognisable; **weakest without it: timer (reads as an alarm clock), lens (a blue oval on a stand
+  with rays), saddle, sherry and tequila (a bottle and a glass, told apart only by the label), wheat (thin).**
+- Two hand words dropped, because WordNet makes them stand-ins (a kind, Q21): bathrobe (→ robe), veranda (→ porch).
+  New links by rule: futon → mattress, bathrobe → robe, veranda → porch (stand-ins); icebox = refrigerator, wharf =
+  pier (synonyms). Refused: cod = pod, solitaire → jewel (the words mostly mean something else).
+- **Coverage of the 1,500 common things:** 635 drawn in the sense kept (42.3%), 65 synonyms, 176 stand-ins: **876
+  reach a drawing (58.4%)**; 624 nothing.
+- Numbers: `things-2` 776 wires / 101,321 bytes, `places-2` 296 / 41,693, `food-2` 338 / 44,750, `nature-2` 226 /
+  29,403. **k.objects: 2,078 objects** (195 hand-written), 312 shards, 300,114 wires, 36,271,493 bytes. Catalog: 11
+  worlds, 740 shards, 343,622 wires, 44,311,108 bytes, vocab 18,955 words; 0 errors, 0 warnings. npm test 2,322
+  pass, 0 fail.

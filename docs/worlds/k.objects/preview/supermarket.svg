@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>supermarket</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="86" width="92" height="8" fill="grey" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <rect x="8" y="38" width="84" height="48" fill="white" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <rect x="8" y="22" width="84" height="17" fill="red" stroke="#333" stroke-width="0.8"><title>sign</title></rect>
+  <rect x="13" y="46" width="24" height="24" fill="blue" stroke="#333" stroke-width="0.8"><title>left_window</title></rect>
+  <rect x="63" y="46" width="24" height="24" fill="blue" stroke="#333" stroke-width="0.8"><title>right_window</title></rect>
+  <rect x="41" y="54" width="18" height="32" fill="blue" stroke="#333" stroke-width="0.8"><title>door</title></rect>
+  <polygon points="40,27 58,27 55,34 43,34" fill="white" stroke="#333" stroke-width="0.8"><title>cart_basket</title></polygon>
+  <polyline points="36,25 40,27" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>cart_handle</title></polyline>
+  <polyline points="50,54 50,86" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>door_gap</title></polyline>
+  <ellipse cx="21" cy="62" rx="4" ry="4" fill="red" stroke="#333" stroke-width="0.8"><title>apple</title></ellipse>
+  <ellipse cx="30" cy="62" rx="4" ry="4" fill="orange" stroke="#333" stroke-width="0.8"><title>orange</title></ellipse>
+  <rect x="68" y="54" width="14" height="12" fill="yellow" stroke="#333" stroke-width="0.8"><title>box</title></rect>
+</svg>

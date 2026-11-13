@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>pier</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="4" y="58" width="92" height="36" fill="blue" stroke="#333" stroke-width="0.8"><title>sea</title></rect>
+  <polygon points="4,40 20,40 28,58 4,58" fill="green" stroke="#333" stroke-width="0.8"><title>shore</title></polygon>
+  <rect x="30" y="50" width="4" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>pile_1</title></rect>
+  <rect x="48" y="50" width="4" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>pile_2</title></rect>
+  <rect x="66" y="50" width="4" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>pile_3</title></rect>
+  <rect x="84" y="50" width="4" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>pile_4</title></rect>
+  <rect x="14" y="44" width="78" height="6" fill="brown" stroke="#333" stroke-width="0.8"><title>deck</title></rect>
+  <polyline points="20,34 90,34" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rail</title></polyline>
+  <polyline points="30,34 30,44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>post_1</title></polyline>
+  <polyline points="50,34 50,44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>post_2</title></polyline>
+  <polyline points="70,34 70,44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>post_3</title></polyline>
+  <polyline points="90,34 90,44" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>post_4</title></polyline>
+  <rect x="86" y="14" width="2" height="20" fill="black" stroke="#333" stroke-width="0.8"><title>lamp_post</title></rect>
+  <polyline points="8,70 13,67 18,70 23,67" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wave_1</title></polyline>
+  <polyline points="54,78 59,75 64,78 69,75" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wave_2</title></polyline>
+  <ellipse cx="87" cy="12" rx="4" ry="4" fill="yellow" stroke="#333" stroke-width="0.8"><title>lamp</title></ellipse>
+</svg>
