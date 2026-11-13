@@ -59,9 +59,11 @@
 # tree), `water` (things float or swim on it), `roof` (the roof of a building), `hook` (the thing hangs by it, or
 # another hangs from it), `base` (the thing itself stands or sits there on another). `x`, `y`, `w`, `h` are the box
 # of the place in the 0 to 100 frame of the object: a line when `w` or `h` is 0 (the upper edge of a seat), a point
-# when both are. `part` names the part of the object that the place lies on. `holds` names what usually goes there
-# (many); for a `base`, `on` names what the thing stands or sits on. `named=model`: the place was chosen by a
-# language model from the named parts of the object, only where sure, and looked at on the drawing.
+# when both are. `part` names the part of the object that the place lies on; it is absent where the parts of the
+# drawing have no names (imported drawings) or no part marks the place: the box is then all there is. `holds` names
+# what usually goes there (many); for a `base`, `on` names what the thing stands or sits on. `named=model`: the
+# place was chosen by a language model, from the named parts of the object or by looking at the drawing under a
+# grid, only where sure, and looked at again drawn on the object.
 @k.layouts.anchor core.type of=k.layouts.anchor shared=true closed=true core.source="hand-core 1"
 @k.layouts.anchor.of core.slot of=k.layouts.anchor key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.anchor.name core.slot of=k.layouts.anchor key=name id=true required=true kind=atom core.source="hand-core 1"

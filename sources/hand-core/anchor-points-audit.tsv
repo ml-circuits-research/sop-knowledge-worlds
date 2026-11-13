@@ -1,0 +1,107 @@
+# n	object	anchor	kind	x	y	w	h	verdict	note
+# The audit of the anchors given as places in the frame (Round 9 item 1, 2026-11-13): every row of anchor-points.tsv
+# as first written, drawn on its object (the box, line or point in red over the preview; tools/anchor-sheet.mjs, 70
+# pictures on 7 sheets at 330 px) and judged by the language model that wrote it, looking at the sheets: right,
+# wrong (corrected in anchor-points.tsv; the note says how; the six corrected rows were drawn and looked at again)
+# or unclear (taken out). Seats and tops that slope in the drawing (bench, sledge, ship) are given as a level line
+# through their middle and count as right when the line crosses the seat. Looked at under the grid and left out
+# because no place was sure: cot (the drawing does not show where the child lies), donkey (it bucks), witch,
+# broomstick, towel, beach towel, cow, turtle, cloud, cat, pillow, gate.
+1	desk	surface	surface	12	29	74	0	right	
+2	pond	water	water	14	45	72	24	right	
+3	blanket	top	surface	22	35	46	28	right	
+4	window	sill	surface	6	95	88	0	right	
+5	window	top	hook	8	6	84	0	right	
+6	bed	top	surface	38	66	54	0	right	
+7	sink	basin	inside	24	17	52	13	right	
+8	bathtub	tub	inside	16	51	74	16	right	
+9	cooker	top	surface	16	9	52	0	right	
+10	cooker	oven	inside	22	57	40	20	right	
+11	Christmas tree	top	top	50	6	0	0	right	
+12	Christmas tree	branches	inside	26	20	48	62	right	
+13	Christmas tree	foot	base	50	97	0	0	right	
+14	coffee table	surface	surface	12	37	76	0	right	
+15	branch	top	surface	62	37	0	0	right	
+16	branch	underside	hook	75	47	0	0	right	
+17	horse	back	seat	52	42	20	0	wrong	the line lay inside the body, under the upper edge of the back; moved up to y=38
+18	bookcase	top	surface	21	6	58	0	right	
+19	bookcase	upper_shelf	surface	24	37	52	0	right	
+20	bookcase	middle_shelf	surface	24	61	52	0	right	
+21	bookcase	lower_shelf	surface	24	85	52	0	right	
+22	birthday cake	top	surface	18	47	64	0	right	
+23	palm tree	crown	inside	12	5	76	55	right	
+24	palm tree	foot	base	65	93	0	0	right	
+25	fruit tree	crown	inside	14	18	52	38	right	
+26	fruit tree	foot	base	40	88	0	0	right	
+27	evergreen tree	crown	inside	20	10	62	72	right	
+28	evergreen tree	top	top	49	4	0	0	right	
+29	evergreen tree	foot	base	48	95	0	0	right	
+30	fireplace	mantel	surface	11	16	78	0	right	
+31	fireplace	hearth	inside	38	46	24	32	right	
+32	leafless tree	branch	surface	8	55	24	0	right	
+33	leafless tree	foot	base	50	95	0	0	right	
+34	treasure chest	inside	inside	22	30	58	38	right	
+35	swing	seat	seat	42	61	20	0	right	
+36	bench	seat	seat	28	56	58	0	right	
+37	stool	seat	seat	24	12	52	0	right	
+38	armchair	seat	seat	30	50	40	0	right	
+39	slide	top	seat	38	23	0	0	right	
+40	camel	hump	seat	68	13	0	0	right	
+41	elephant	back	seat	48	14	24	0	wrong	the right half of the line floated above the falling back; shortened and moved to the high part of the back
+42	motorcycle	seat	seat	52	60	22	0	right	
+43	motorcycle	handlebar	handle	30	43	12	6	right	
+44	sled	seat	seat	32	20	50	35	right	
+45	sledge	seat	seat	42	36	44	0	right	
+46	skateboard	deck	surface	15	28	70	35	right	
+47	canoe	inside	inside	15	53	70	8	right	
+48	ship	deck	surface	10	62	82	0	right	
+49	tractor	cab	inside	52	28	32	30	right	
+50	bus	inside	inside	12	42	76	18	right	
+51	bus	door	opening	30	47	12	38	right	
+52	plate	surface	surface	18	50	64	36	right	
+53	tray	surface	surface	18	35	66	30	right	
+54	bowl	inside	inside	10	24	80	20	right	
+55	basket	inside	inside	12	33	78	12	right	
+56	cart	inside	inside	30	30	58	22	wrong	the box took in the side wall of the cart; now only the open top
+57	wheelbarrow	inside	inside	30	38	55	12	right	
+58	wheelbarrow	handle	handle	7	24	10	6	right	
+59	wheelchair	seat	seat	28	42	34	0	wrong	the line lay under the bar of the seat; moved up onto it
+60	wheelchair	handle	handle	10	8	12	6	right	
+61	stairs	top_step	surface	35	27	30	0	right	
+62	stairs	bottom_step	surface	20	78	62	0	right	
+63	rug	surface	surface	25	35	45	35	wrong	the box reached past the lower edge of the rug onto the floor; now inside the rug
+64	cupboard	top	surface	15	18	70	0	right	
+65	cupboard	inside	inside	13	22	60	60	right	
+66	chest of drawers	top	surface	12	13	76	0	right	
+67	rock	top	surface	62	7	0	0	right	
+68	log	top	seat	25	32	55	0	wrong	the right end of the line floated above the falling upper edge; shortened to the left half
+69	hook	hook	hook	55	75	0	0	right	
+70	sailboat	deck	surface	12	84	76	0	right	
+71	rowing boat	inside	inside	18	42	62	8	right	
+72	high chair	seat	seat	38	50	24	0	right	
+73	high chair	tray	surface	34	31	34	0	right	
+74	rocking chair	seat	seat	25	60	45	0	right	
+75	saucer	centre	surface	40	44	20	12	right	
+76	pot	inside	inside	22	14	56	14	right	
+77	vase	mouth	opening	40	8	20	3	right	
+78	bucket	inside	inside	22	6	56	10	right	
+79	shopping cart	inside	inside	10	28	65	30	right	
+80	shopping cart	handle	handle	74	20	8	5	right	
+81	sleigh	seat	seat	42	40	38	22	right	
+82	trampoline	surface	surface	20	30	60	16	right	
+83	sun lounger	seat	seat	40	45	45	22	right	
+84	piano	top	surface	10	14	75	0	right	
+85	hot air balloon	basket	inside	46	82	9	10	right	
+86	lorry	load	inside	12	34	58	20	right	
+87	lorry	cab	inside	73	42	14	14	right	
+88	door	handle	handle	61	46	8	8	right	
+89	door	opening	opening	25	4	50	92	right	
+90	tree	branch	surface	70	45	0	0	right	
+91	tree	low_branch	hook	32	59	0	0	right	
+92	dog	neck	hook	37	47	0	0	right	
+93	person	feet	base	35	92	30	0	right	
+94	person	hips	base	50	62	0	0	right	
+95	single bed	top	surface	20	38	60	14	right	
+96	deciduous tree	crown	inside	12	5	76	68	right	
+97	deciduous tree	low_branch	hook	68	74	0	0	right	
+98	deciduous tree	foot	base	50	96	0	0	right	

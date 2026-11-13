@@ -1,0 +1,106 @@
+# object	anchor	kind	x	y	w	h	holds
+# Anchors given as a place in the frame of the drawing (Round 9 item 1, 2026-11-13), for k.objects objects whose
+# parts have no names (the imported drawings) and for places of hand-written objects that no part marks (the branch
+# of the tree, the feet of the person). `x`, `y`, `w`, `h`: the box of the place in the 0 to 100 frame of the
+# object, x to the right and y down; a line when w or h is 0, a point when both are. `holds` lists what usually
+# goes there, separated by commas; for a base it lists what the thing stands or sits on. Chosen by a language
+# model that looked at each drawing under a grid of ten units (tools/anchor-sheet.mjs --grid), only where sure
+# (named=model); every row was then drawn on its object and looked at: sources/hand-core/anchor-points-audit.tsv.
+desk	surface	surface	12	29	74	0	computer, book, lamp, pencil, paper
+pond	water	water	14	45	72	24	duck, frog, fish, water lily
+blanket	top	surface	22	35	46	28	picnic basket, plate, person, cat
+window	sill	surface	6	95	88	0	flowerpot, cat, candle
+window	top	hook	8	6	84	0	curtains, blinds
+bed	top	surface	38	66	54	0	person, cat, teddy bear, blanket
+sink	basin	inside	24	17	52	13	water, soap, dishes
+bathtub	tub	inside	16	51	74	16	water, person, foam, rubber duck
+cooker	top	surface	16	9	52	0	saucepan, frying pan, kettle
+cooker	oven	inside	22	57	40	20	cake, bread, pizza
+Christmas tree	top	top	50	6	0	0	star, angel
+Christmas tree	branches	inside	26	20	48	62	bauble, light, candle, tinsel
+Christmas tree	foot	base	50	97	0	0	floor, ground
+coffee table	surface	surface	12	37	76	0	cup, book, vase, magazine
+branch	top	surface	62	37	0	0	bird, owl, squirrel, nest, leaf, bud
+branch	underside	hook	75	47	0	0	swing, rope, bird feeder
+horse	back	seat	54	38	18	0	rider, saddle
+bookcase	top	surface	21	6	58	0	vase, box, clock
+bookcase	upper_shelf	surface	24	37	52	0	book, toy, box
+bookcase	middle_shelf	surface	24	61	52	0	book, toy, box
+bookcase	lower_shelf	surface	24	85	52	0	book, toy, box
+birthday cake	top	surface	18	47	64	0	candle, strawberry, cherry
+palm tree	crown	inside	12	5	76	55	coconut, monkey, parrot
+palm tree	foot	base	65	93	0	0	sand, ground
+fruit tree	crown	inside	14	18	52	38	apple, plum, pear, bird, nest
+fruit tree	foot	base	40	88	0	0	ground
+evergreen tree	crown	inside	20	10	62	72	snow, bird, cone, squirrel
+evergreen tree	top	top	49	4	0	0	star, bird
+evergreen tree	foot	base	48	95	0	0	ground
+fireplace	mantel	surface	11	16	78	0	clock, candle, photo, vase, stocking
+fireplace	hearth	inside	38	46	24	32	fire, log
+leafless tree	branch	surface	8	55	24	0	bird, owl, crow
+leafless tree	foot	base	50	95	0	0	ground
+treasure chest	inside	inside	22	30	58	38	gold, coin, jewel, crown
+swing	seat	seat	42	61	20	0	child, person
+bench	seat	seat	28	56	58	0	person, cat, bag
+stool	seat	seat	24	12	52	0	person
+armchair	seat	seat	30	50	40	0	person, cat, cushion
+slide	top	seat	38	23	0	0	child
+camel	hump	seat	68	13	0	0	rider
+elephant	back	seat	44	12	16	0	rider
+motorcycle	seat	seat	52	60	22	0	rider
+motorcycle	handlebar	handle	30	43	12	6	hand
+sled	seat	seat	32	20	50	35	child
+sledge	seat	seat	42	36	44	0	child
+skateboard	deck	surface	15	28	70	35	person, foot
+canoe	inside	inside	15	53	70	8	person, paddle
+ship	deck	surface	10	62	82	0	passenger, sailor
+tractor	cab	inside	52	28	32	30	farmer, driver
+bus	inside	inside	12	42	76	18	passenger, driver
+bus	door	opening	30	47	12	38	passenger
+plate	surface	surface	18	50	64	36	food, sandwich, cake
+tray	surface	surface	18	35	66	30	cup, plate, glass, food
+bowl	inside	inside	10	24	80	20	soup, fruit, cereal, salad
+basket	inside	inside	12	33	78	12	apple, bread, egg, fruit, laundry
+cart	inside	inside	30	28	55	12	hay, sack, vegetables
+wheelbarrow	inside	inside	30	38	55	12	soil, leaves, sand, bricks
+wheelbarrow	handle	handle	7	24	10	6	hand
+wheelchair	seat	seat	26	36	34	0	person
+wheelchair	handle	handle	10	8	12	6	hand
+stairs	top_step	surface	35	27	30	0	person, foot
+stairs	bottom_step	surface	20	78	62	0	person, foot
+rug	surface	surface	30	33	40	27	chair, table, cat, toy
+cupboard	top	surface	15	18	70	0	vase, lamp, box
+cupboard	inside	inside	13	22	60	60	plate, cup, clothes
+chest of drawers	top	surface	12	13	76	0	lamp, clock, photo, vase
+rock	top	surface	62	7	0	0	lizard, bird, person, seal
+log	top	seat	30	31	30	0	person, frog, bird
+hook	hook	hook	55	75	0	0	coat, rope, bag, towel
+sailboat	deck	surface	12	84	76	0	sailor, person
+rowing boat	inside	inside	18	42	62	8	rower, fisherman, person
+high chair	seat	seat	38	50	24	0	baby
+high chair	tray	surface	34	31	34	0	bowl, cup, spoon
+rocking chair	seat	seat	25	60	45	0	person, grandmother, cat
+saucer	centre	surface	40	44	20	12	cup
+pot	inside	inside	22	14	56	14	soil, plant, flower
+vase	mouth	opening	40	8	20	3	flower
+bucket	inside	inside	22	6	56	10	water, sand
+shopping cart	inside	inside	10	28	65	30	food, shopping
+shopping cart	handle	handle	74	20	8	5	hand
+sleigh	seat	seat	42	40	38	22	Santa Claus, presents, person
+trampoline	surface	surface	20	30	60	16	child, person
+sun lounger	seat	seat	40	45	45	22	person, towel
+piano	top	surface	10	14	75	0	vase, photo, lamp, metronome
+hot air balloon	basket	inside	46	82	9	10	person, pilot
+lorry	load	inside	12	34	58	20	boxes, sand, load
+lorry	cab	inside	73	42	14	14	driver
+door	handle	handle	61	46	8	8	hand
+door	opening	opening	25	4	50	92	person
+tree	branch	surface	70	45	0	0	bird, owl, squirrel, nest, cat
+tree	low_branch	hook	32	59	0	0	swing, rope, tyre
+dog	neck	hook	37	47	0	0	leash, collar
+person	feet	base	35	92	30	0	ground, floor, stage, step, skateboard
+person	hips	base	50	62	0	0	chair, bench, swing, horse, bicycle, sofa, stool
+single bed	top	surface	20	38	60	14	person, pillow, blanket, cat
+deciduous tree	crown	inside	12	5	76	68	bird, nest, apple, squirrel, owl
+deciduous tree	low_branch	hook	68	74	0	0	swing, rope, tyre
+deciduous tree	foot	base	50	96	0	0	ground

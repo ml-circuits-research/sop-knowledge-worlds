@@ -137,6 +137,32 @@ export function readAnchors(tsv, parts = handParts()) {
   });
 }
 
+// The names of all k.objects objects.
+export function objectNames() {
+  const names = new Set();
+  for (const shard of scanWorlds().find((w) => w.id === 'k.objects').shards) for (const m of shard.text.matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)) names.add(m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]);
+  return names;
+}
+
+// The rows of anchor-points.tsv (Round 9): an anchor given as a place in the frame of the drawing, for objects
+// whose parts have no names: { object, name, kind, holds, box }.
+export function readAnchorPoints(tsv, objects = objectNames(), taken = new Set()) {
+  const seen = new Set(taken);
+  return rows(tsv).map(([object, name, kind, x, y, w, h, holds = '']) => {
+    const where = `anchor-points.tsv: ${object} ${name}`;
+    if (!KINDS.includes(kind)) throw new Error(`${where}: kind ${kind}`);
+    if (!objects.has(object)) throw new Error(`${where}: no object "${object}"`);
+    if (!/^[a-z][a-z_]*$/.test(name ?? '')) throw new Error(`${where}: name`);
+    const box = [x, y, w, h].map(Number);
+    if (box.some((n) => !Number.isFinite(n) || n < 0) || [x, y, w, h].some((n) => n === '' || n === undefined) || box[0] + box[2] > 100 || box[1] + box[3] > 100) throw new Error(`${where}: the box is not in the frame`);
+    if (seen.has(`${object}\t${name}`)) throw new Error(`${where}: twice`);
+    seen.add(`${object}\t${name}`);
+    const list = holds.split(',').map((v) => v.trim()).filter(Boolean);
+    if (!list.length) throw new Error(`${where}: what goes there`);
+    return { object, name, kind, holds: list, box };
+  });
+}
+
 export function anchorWires(anchors) {
   return anchors.map((a) => wire(`k.layouts.anchor.${seg(a.object)}.${a.name}`, 'k.layouts.anchor', [['of', a.object], ['name', a.name], ['kind', a.kind], ['x', a.box[0]], ['y', a.box[1]], ['w', a.box[2]], ['h', a.box[3]], ['part', a.part],
     ...a.holds.map((h) => [a.kind === 'base' ? 'on' : 'holds', h]), ['named', 'model']], SRC));
@@ -158,13 +184,16 @@ export function readJoins(tsv) {
 }
 export const joinWires = (joins) => joins.map((j) => wire(`k.layouts.joins.${seg(j.a)}.${j.rel}.${seg(j.b)}`, 'k.layouts.joins', [['a', j.a], ['rel', j.rel], ['b', j.b], ['side', j.side], ['named', 'model']], SRC));
 
-export function layoutShards({ anchorsTsv = readFileSync(join(REPO, 'sources/hand-core/anchors.tsv'), 'utf8'), joinsTsv = readFileSync(join(REPO, 'sources/hand-core/joins.tsv'), 'utf8') } = {}) {
+export function layoutShards({ anchorsTsv = readFileSync(join(REPO, 'sources/hand-core/anchors.tsv'), 'utf8'), joinsTsv = readFileSync(join(REPO, 'sources/hand-core/joins.tsv'), 'utf8'),
+  pointsTsv = readFileSync(join(REPO, 'sources/hand-core/anchor-points.tsv'), 'utf8') } = {}) {
   const { lines, words } = layoutWires();
   const anchors = readAnchors(anchorsTsv), joins = readJoins(joinsTsv);
+  const points = readAnchorPoints(pointsTsv, undefined, new Set(anchors.map((a) => `${a.object}\t${a.name}`)));
   const head = (id, about, source) => header({ id: `k.layouts/shards/${id}`, about, sources: [`hand-core 1 (hand-written in this repository: ${source})`], license: 'CC0-1.0', script: 'tools/layouts-core.mjs' });
   return {
     'layouts.sop': `${head('layouts', `${LAYOUTS.length} named arrangements (${LAYOUTS.map((l) => l[0]).join(', ')}): their places, how the places sit to each other, what is usually arranged so; and other names of the arrangements.`, 'tools/layouts-core.mjs')}\n${lines.join('\n')}\n\n# Words: other names of the arrangements.\n${words.join('\n')}\n`,
     'anchors.sop': `${head('anchors', `${anchors.length} places on ${new Set(anchors.map((a) => a.object)).size} hand-written k.objects objects where another thing sits or attaches (seat, surface, top, handle, hand, opening, inside, water, roof, hook, base), each with its box in the frame of the object and what usually goes there; chosen by a language model from the named parts (named=model) and looked at on the drawings.`, 'sources/hand-core/anchors.tsv')}\n${anchorWires(anchors).join('\n')}\n`,
+    'anchors-points.sop': `${head('anchors-points', `${points.length} places on ${new Set(points.map((a) => a.object)).size} k.objects objects where another thing sits or attaches, given as a box, a line or a point in the frame of the drawing because the parts of the drawing have no names (imported drawings: the seat of the swing and the bench, the top of the bed, the back of the horse) or because no part marks the place (the branch of the tree, the feet of the person); chosen by a language model that looked at the drawing (named=model), and each looked at again drawn on its object.`, 'sources/hand-core/anchor-points.tsv')}\n${anchorWires(points).join('\n')}\n`,
     'joins.sop': `${head('joins', `${joins.length} facts on which kind of thing joins which (a roof attaches to a wall, a wheel is part of a car, a hat sits on a head, an arrow connects boxes) and on which side; written by a language model, only where sure (named=model).`, 'sources/hand-core/joins.tsv')}\n${joinWires(joins).join('\n')}\n`,
   };
 }

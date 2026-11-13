@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
-import { layoutShards, LAYOUTS, handParts, readAnchors, readJoins } from '../tools/layouts-core.mjs';
+import { layoutShards, LAYOUTS, handParts, readAnchors, readAnchorPoints, objectNames, readJoins } from '../tools/layouts-core.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -88,14 +88,17 @@ test('the face arrangement has the places of k.faces (style plain), with their b
   for (const r of relations.filter((x) => one(x, 'layout') === 'face' && one(x, 'rel') === 'behind')) assert.ok(z.get(one(r, 'a')) < z.get(one(r, 'b')), r.id);
 });
 
-test('anchors: on a hand-written object, on a part of it, inside its frame, with what goes there; the audit covers the table', () => {
-  const parts = handParts();
-  assert.ok(anchors.length >= 100, `${anchors.length} anchors`);
+test('anchors: on an object, inside its frame, with what goes there; with a part, inside that part of a hand-written object; the audits cover the tables', () => {
+  const parts = handParts(), objects = objectNames();
+  assert.ok(anchors.length >= 200, `${anchors.length} anchors`);
   for (const a of anchors) {
-    const p = parts.get(one(a, 'of'))?.get(one(a, 'part'));
-    assert.ok(p, `${a.id}: part ${one(a, 'part')}`);
     const [x, y, w, h] = ['x', 'y', 'w', 'h'].map((k) => Number(one(a, k)));
-    assert.ok(x >= p.x - 0.1 && y >= p.y - 0.1 && x + w <= p.x + p.w + 0.1 && y + h <= p.y + p.h + 0.1, `${a.id}: outside its part`);
+    assert.ok(objects.has(one(a, 'of')), `${a.id}: no object`);
+    if (a.attrs.part) {
+      const p = parts.get(one(a, 'of'))?.get(one(a, 'part'));
+      assert.ok(p, `${a.id}: part ${one(a, 'part')}`);
+      assert.ok(x >= p.x - 0.1 && y >= p.y - 0.1 && x + w <= p.x + p.w + 0.1 && y + h <= p.y + p.h + 0.1, `${a.id}: outside its part`);
+    }
     assert.ok(x + w <= 100 && y + h <= 100, a.id);
     assert.deepEqual(a.attrs.named, ['model'], a.id);
     assert.ok(one(a, 'kind') === 'base' ? a.attrs.on?.length && !a.attrs.holds : !a.attrs.on, `${a.id}: a base says what it is on; another anchor what it holds`);
@@ -118,8 +121,43 @@ test('anchors: on a hand-written object, on a part of it, inside its frame, with
     if (verdict === 'unclear') assert.equal(a, undefined, `${object} ${name}`);
   }
   for (const key of now.keys()) assert.ok(audit.some((r) => `${r[1]} ${r[2]}` === key), `${key} was not looked at`);
+  // Round 9: the anchors given as places in the frame, and their audit.
+  const points = new Map(readAnchorPoints(read('sources/hand-core/anchor-points.tsv')).map((a) => [`${a.object} ${a.name}`, a]));
+  const pointAudit = read('sources/hand-core/anchor-points-audit.tsv').split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t'));
+  for (const [, object, name, kind, x, y, w, h, verdict, note] of pointAudit) {
+    const a = points.get(`${object} ${name}`), was = [kind, ...[x, y, w, h].map(Number)];
+    assert.ok(['right', 'wrong', 'unclear'].includes(verdict), `${object} ${name}`);
+    if (verdict === 'right') assert.deepEqual([a?.kind, ...(a?.box ?? [])], was, `${object} ${name}`);
+    if (verdict === 'wrong') { assert.ok(note && a, `${object} ${name}`); assert.notDeepEqual([a.kind, ...a.box], was, `${object} ${name} is still as it was`); }
+    if (verdict === 'unclear') assert.equal(a, undefined, `${object} ${name}`);
+  }
+  for (const key of points.keys()) assert.ok(pointAudit.some((r) => `${r[1]} ${r[2]}` === key), `${key} was not looked at`);
+  for (const [object, kind] of [['swing', 'seat'], ['bench', 'seat'], ['bed', 'surface'], ['horse', 'seat'], ['bookcase', 'surface'], ['tree', 'hook'], ['roof', 'roof'], ['car', 'surface'], ['boat', 'surface'], ['bicycle', 'seat'], ['table', 'surface'], ['shelf', 'surface'], ['person', 'top'], ['person', 'hand'], ['person', 'base']]) {
+    assert.ok(anchors.some((a) => one(a, 'of') === object && one(a, 'kind') === kind), `${object}: ${kind}`);
+  }
+  assert.throws(() => readAnchorPoints('swing\tseat\tseat\t42\t61\t80\t0\tchild\n'), /not in the frame/);
+  assert.throws(() => readAnchorPoints('no such thing\tseat\tseat\t42\t61\t20\t0\tchild\n'), /no object/);
+  assert.throws(() => readAnchorPoints('swing\tseat\tseat\t42\t61\t20\t0\t\n'), /what goes there/);
   assert.throws(() => readAnchors('chair\tseat\tseat\tcushion\ttop\tperson\n'), /no part cushion/);
   assert.throws(() => readAnchors('chair\tseat\tperch\tseat\ttop\tperson\n'), /kind perch/);
+});
+
+test('Round 9: what another thing is usually on or in, in k.scenes, has an anchor on its drawing (but for a named few)', () => {
+  const scenes = fullWorld('k.scenes', worlds), objects = objectNames();
+  const anchored = new Set(anchors.map((a) => one(a, 'of')));
+  const BODY = { head: 'person', hand: 'person', foot: 'person' }; // the top of the head, the hands and the feet of the person
+  const drawing = new Map(scenes.ofType('k.scenes.has').map((w) => [`${one(w, 'scene')}\t${one(w, 'thing')}`, one(w, 'drawing')]));
+  const without = new Set();
+  let facts = 0, held = 0;
+  for (const w of [...scenes.ofType('k.scenes.has'), ...scenes.ofType('k.scenes.thing')]) for (const raw of w.attrs.on ?? []) {
+    const on = tok(raw);
+    const d = w.type === 'k.scenes.has' ? (drawing.get(`${one(w, 'scene')}\t${on}`) ?? (objects.has(on) ? on : null)) : (BODY[on] ?? (objects.has(on) ? on : null));
+    facts++;
+    if (anchored.has(d)) held++; else without.add(on);
+  }
+  // No drawing: pirate ship, stall, ceiling. A drawing that shows no sure place: cot, witch.
+  assert.deepEqual([...without].sort(), ['ceiling', 'cot', 'pirate ship', 'stall', 'witch']);
+  assert.ok(held >= facts * 0.97, `${held} of ${facts}`);
 });
 
 test('what joins what: the examples asked for; no kind joins itself; a part of a hand-written object is a part of its drawing', () => {

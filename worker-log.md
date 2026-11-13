@@ -1912,3 +1912,37 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - **Not done:** the numeric aspect has no unit yet on my side (wheels is a count); `k.units` joins are the first
   worker's part. The kinds of `k.colours`, `k.shapes`, `k.body`, `k.feelings` are not families yet.
 - Numbers: k.attributes 7 shards, 981 wires, 148,506 bytes (was 6 shards, 828 wires). Catalog 21 worlds, 820 shards, vocab 21,253 words (21,209); 0 errors, 0 warnings. npm test 2,559 pass, 5 skipped, 0 fail.
+
+## Round 9, item 1 (2026-11-13, first worker): anchors for what people sit, stand, lie or put things on
+
+- **98 new anchors as places in the frame** (`sources/hand-core/anchor-points.tsv`, shard `k.layouts/anchors-points`,
+  98 wires, 17,771 bytes) on 68 objects, for drawings whose parts have no names (62 imported objects) and for
+  places on hand-written objects that no part marks: swing, bench, stool, armchair, rocking chair, high chair,
+  wheelchair, sun lounger (seat); bed, single bed, desk, coffee table, bookcase (four shelves), cupboard, chest of
+  drawers, piano, cooker, fireplace, tray, plate, rug, blanket, trampoline, stairs, skateboard (surface); horse,
+  camel, elephant, motorcycle, sled, sledge, sleigh, log, slide (seat); ship, sailboat, canoe, rowing boat, bus,
+  tractor, lorry, hot air balloon, cart, wheelbarrow, shopping cart, basket, bowl, bucket, pot, sink, bathtub,
+  treasure chest (deck or inside); pond (water); five kinds of tree (crown, foot, a branch to sit on, a branch to
+  hang a swing from); door, window, vase, hook; on the person the feet and the hips (`kind=base`: what a standing
+  and a sitting person rests on) and on the dog the neck (leash). `part` is absent on these; the schema comment says so.
+- **10 new anchors on named parts** of hand-written objects (`anchors.tsv`, now 127): roof (roof, ridge), car
+  (roof), raft (deck), ladder (two rungs), fence (top rail), wagon, cradle, plane (inside).
+- **The list of the task:** swing, chair, bench, bed, table, shelf, boat, horse, bicycle, car, tree (branch), roof,
+  head (the top of the person's head, as before), hand (the person's hands, as before): all have an anchor now.
+- **Target, "every thing in `k.scenes` that another thing is usually on or in":** 56 different things are named
+  by `on=` (1,045 facts). Before: 26 had an anchor on their drawing (919 facts). Now: 51 (1,019 facts). Without:
+  pirate ship, stall, ceiling (no drawing in `k.objects`); cot and witch (looked at; the drawing shows no sure
+  place). A test holds this list.
+- **Looked at:** 99 drawings under a grid of ten units (9 sheets, `tools/anchor-sheet.mjs --grid`), from which the
+  places were read; then every one of the 98 rows drawn in red on its object (70 pictures on 7 sheets at 330 px)
+  and the 10 new part anchors (8 pictures). Verdicts in `anchor-points-audit.tsv`: 92 right, 6 wrong and
+  corrected (horse and elephant back, cart, wheelchair seat, rug, log), the six looked at again. Left out as not
+  sure: cot, donkey (it bucks), witch, broomstick, towel, beach towel, cow, turtle, cloud, cat, pillow, gate.
+- **Not looked at:** the 117 older anchors again; how a figure placed by these anchors looks (nothing composes
+  them here). A sloping seat (bench, sledge, ship deck) is given as a level line through its middle: off by up to
+  five units at the ends.
+- **Judgement that is mine:** every place and every `holds` list; the kind (a log and a slide top are `seat`).
+- **What SOP Lang could not say:** that `of` names an object of another world and the box lies in its drawing: tests.
+- Tests: `tests/k.layouts.test.mjs` (the audit of the new table, the target list), questions la-19 to la-23.
+- Numbers: k.layouts 4 shards, 571 wires (was 3 shards, 463). Catalog 20 worlds, 818 shards, vocab 21,077 words; 0 errors, 0 warnings. npm test 2,550 pass, 0 fail.
+- After the rebase on R8.4 (`k.wearables`, second worker): catalog 21 worlds, 820 shards, vocab 21,216 words; npm test 2,563 pass, 0 fail.

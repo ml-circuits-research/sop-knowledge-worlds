@@ -1,4 +1,4 @@
-# k.layouts/shards/anchors: 117 places on 93 hand-written k.objects objects where another thing sits or attaches (seat, surface, top, handle, hand, opening, inside, water, roof, hook, base), each with its box in the frame of the object and what usually goes there; chosen by a language model from the named parts (named=model) and looked at on the drawings.
+# k.layouts/shards/anchors: 127 places on 100 hand-written k.objects objects where another thing sits or attaches (seat, surface, top, handle, hand, opening, inside, water, roof, hook, base), each with its box in the frame of the object and what usually goes there; chosen by a language model from the named parts (named=model) and looked at on the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/anchors.tsv)
 # license: CC0-1.0
 # script: tools/layouts-core.mjs
@@ -120,3 +120,13 @@
 @k.layouts.anchor.robot.left_hand k.layouts.anchor of=robot name=left_hand kind=hand x=13 y=66 w=10 h=0 part=left_arm holds=ball holds=tool named=model core.source="hand-core 1"
 @k.layouts.anchor.robot.right_hand k.layouts.anchor of=robot name=right_hand kind=hand x=77 y=66 w=10 h=0 part=right_arm holds=ball holds=tool named=model core.source="hand-core 1"
 @k.layouts.anchor.hat.base k.layouts.anchor of=hat name=base kind=base x=6 y=82 w=88 h=0 part=brim on=head named=model core.source="hand-core 1"
+@k.layouts.anchor.roof.roof k.layouts.anchor of=roof name=roof kind=roof x=8 y=20 w=84 h=42 part=roof holds=chimney holds=bird holds=snow holds=cat named=model core.source="hand-core 1"
+@k.layouts.anchor.roof.ridge k.layouts.anchor of=roof name=ridge kind=top x=50 y=20 w=0 h=0 part=roof holds=bird holds=flag named=model core.source="hand-core 1"
+@k.layouts.anchor.car.roof k.layouts.anchor of=car name=roof kind=surface x=25 y=25 w=53 h=0 part=cabin holds=luggage holds=surfboard holds=light named=model core.source="hand-core 1"
+@k.layouts.anchor.raft.deck k.layouts.anchor of=raft name=deck kind=surface x=12 y=62 w=76 h=0 part=log_1 holds=person holds=tent holds=box named=model core.source="hand-core 1"
+@k.layouts.anchor.ladder.lower_rung k.layouts.anchor of=ladder name=lower_rung kind=surface x=31 y=75 w=38 h=0 part=fourth_rung holds=foot holds=person named=model core.source="hand-core 1"
+@k.layouts.anchor.ladder.upper_rung k.layouts.anchor of=ladder name=upper_rung kind=handle x=31 y=35 w=38 h=4 part=second_rung holds=hand named=model core.source="hand-core 1"
+@k.layouts.anchor.fence.top_rail k.layouts.anchor of=fence name=top_rail kind=surface x=5 y=45 w=90 h=0 part=top_rail holds=bird holds=cat named=model core.source="hand-core 1"
+@k.layouts.anchor.wagon.inside k.layouts.anchor of=wagon name=inside kind=inside x=14 y=44 w=64 h=18 part=box holds=sack holds=barrel holds=hay holds=person named=model core.source="hand-core 1"
+@k.layouts.anchor.cradle.bed k.layouts.anchor of=cradle name=bed kind=inside x=44 y=44 w=42 h=10 part=blanket holds=baby named=model core.source="hand-core 1"
+@k.layouts.anchor.plane.inside k.layouts.anchor of=plane name=inside kind=inside x=8 y=42 w=84 h=16 part=body holds=passenger holds=pilot named=model core.source="hand-core 1"

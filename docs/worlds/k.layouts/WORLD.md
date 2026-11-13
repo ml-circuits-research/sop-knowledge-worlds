@@ -23,12 +23,16 @@ diagram and puts things on or next to each other from knowledge.
 - The **face** has the places of `k.faces` (style `plain`) with the same boxes (the tool reads them there), and says
   how they sit: the eyebrows above the eyes, the eyes above the nose, the nose above the mouth, the hat on the head,
   the glasses around the eyes, the ears beside the head. The k.faces slots are the anchors of a face.
-- `k.layouts.anchor` (identity `of`, `name`): 117 places on 93 hand-written `k.objects` objects: `kind` (seat,
+- `k.layouts.anchor` (identity `of`, `name`): 225 places on 168 `k.objects` objects (127 on named parts of
+  hand-written objects, 98 given as a place in the frame of a drawing whose parts have no names): `kind` (seat,
   surface, top, handle, hand, opening, inside, water, roof, hook, base), the box `x`, `y`, `w`, `h` in the frame of
-  the object (a line when `w` or `h` is 0, a point when both are), the `part` it lies on, and `holds` (what goes
+  the object (a line when `w` or `h` is 0, a point when both are), the `part` it lies on (where the parts have names), and `holds` (what goes
   there) or, for a base, `on`. The seat of a chair is `x=25 y=55 w=50 h=0`; the top of a person's head holds a hat;
   the hands of the person are two points; the water of a lake, river, sea and pool is a box; 35 doors and gates are
-  openings. `named=model`.
+  openings. Round 9: the seat of the swing, the bench, the stool and the armchair, the top of the bed, the back of the
+  horse, the shelves of the bookcase, the branch of a tree (a place to sit and a place to hang a swing), the roof,
+  and on the person the feet and the hips (`kind=base`: what a standing and a sitting person rests on).
+  `named=model`.
 - `k.layouts.joins` (identity `a`, `rel`, `b`): 171 facts between kinds of thing: `part_of` (wheel, car),
   `attaches_to` (roof, wall), `sits_on` (hat, head), `hangs_from` (earring, ear), `goes_in` (key, lock), `worn_on`
   (scarf, neck), `grows_on` (leaf, branch), `held_in` (string, hand), `connects` (arrow, box; bridge, bank), with the
@@ -37,13 +41,13 @@ diagram and puts things on or next to each other from knowledge.
 
 ## Shards
 
-`layouts` (17 arrangements, 50 places, 91 relations, 17 word facts; 175 wires), `anchors` (117 wires), `joins` (171
-wires), written by `tools/layouts-core.mjs` from its own data, `sources/hand-core/anchors.tsv` and
-`sources/hand-core/joins.tsv`.
+`layouts` (17 arrangements, 50 places, 91 relations, 17 word facts; 175 wires), `anchors` (127 wires), `anchors-points` (98
+wires), `joins` (171 wires), written by `tools/layouts-core.mjs` from its own data, `sources/hand-core/anchors.tsv`,
+`sources/hand-core/anchor-points.tsv` and `sources/hand-core/joins.tsv`.
 
 ## Joins
 
-By name, with no import: `k.layouts.anchor.of` is a `k.objects` object and `part` a part of it; the places of the
+By name, with no import: `k.layouts.anchor.of` is a `k.objects` object and `part`, where given, a part of it; the places of the
 arrangement `face` are `k.faces.slot` names. The kinds of `k.layouts.joins` are common English nouns; many are also
 objects or parts in `k.objects` (39 of the 52 `part_of` facts whose whole is a hand-written object name a part of
 that drawing).
@@ -52,8 +56,11 @@ that drawing).
 
 - The boxes of the fixed arrangements agree with the relations said between their places (a test works it out for
   50 relations).
-- Every anchor was drawn on its object and looked at (`sources/hand-core/anchors-audit.tsv`: 118 rows, 115 right, 2
-  wrong and corrected, 1 unclear and taken out).
+- Every anchor was drawn on its object and looked at (`sources/hand-core/anchors-audit.tsv`: 128 rows, 125 right, 2
+  wrong and corrected, 1 unclear and taken out; `sources/hand-core/anchor-points-audit.tsv`: 98 rows, 92 right, 6
+  wrong and corrected and looked at again; `tools/anchor-sheet.mjs` draws them).
+- Of the 56 things that another thing is on or in according to `k.scenes`, 51 have an anchor on their drawing (a
+  test); not: pirate ship, stall and ceiling (no drawing), cot and witch (the drawing shows no sure place).
 - The joins were not checked against anything but the part names of the drawings; `k.commonsense` has no part facts
   yet, so none comes from there.
 
