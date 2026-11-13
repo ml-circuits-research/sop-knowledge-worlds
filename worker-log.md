@@ -1272,3 +1272,14 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   it, `k.objects.object` needs a key for the sense (a gloss, or a `k.words` synset): not asked for, not done.
 - **Open questions:** Q22 (correct the kept sense by hand where WordNet's counts keep a rare one?), Q23 (the list
   has 2,687 words, and its tail is unread).
+
+## Round 7, start (2026-11-13): sopworld 0.16.0
+
+- Pin moved from 0.15.0 (782cd0c) to **0.16.0 at commit 1e18f1d** of `ml-circuits-research/soplang-words-lib`
+  (`docs/sopworld.mjs`, build d41d73a9301a, sha256 a50efcb8…8507): `tools/sopworld/sopworld.mjs`, `VERSION`,
+  AGENTS.md, the page example, `docs/worlds/README.md`, the pin test. The repository vendors this one file and
+  depends on nothing else of the library.
+- No world changed: every schema and shard loads as before, 0 errors, 0 warnings. The catalog differs only in its
+  `sopworld` field and content hash. Nothing of the new standard pack (`std.numbers`, `std.order`, `std.boxes`) is
+  used yet.
+- Numbers: catalog 11 worlds, 740 shards, vocab 19,118 words. npm test 2,347 pass, 0 fail.

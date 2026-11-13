@@ -19,7 +19,7 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 ## index.json
 
 ```json
-{ "version": "<content hash>", "sopworld": "782cd0c",
+{ "version": "<content hash>", "sopworld": "1e18f1d",
   "worlds": [ { "id": "k.objects", "version": "1", "schema": "k.objects/schema.sop",
                 "exports": ["k.objects.object", "k.objects.part"], "depends": ["k.commonsense"],
                 "shards": [ { "id": "k.objects/shards/buildings", "path": "k.objects/shards/buildings.sop",

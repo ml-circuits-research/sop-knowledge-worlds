@@ -44,7 +44,7 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 
 ## sopworld version
 
-Validate with sopworld **0.15.0 at commit 782cd0c** of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
+Validate with sopworld **0.16.0 at commit 1e18f1d** of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
 is the single-file build). Pin by commit in `tools/sopworld/VERSION`; no tags. Upgrade only when the reviewer says so.
 
 ## Layout

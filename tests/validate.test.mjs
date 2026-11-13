@@ -14,7 +14,7 @@ test('the pinned sopworld build is the one VERSION names', () => {
   assert.equal(sha, v.sha256);
   assert.equal(version, v.version);
   assert.equal(build.hash, v.build);
-  assert.ok(v.commit.startsWith('782cd0c'));
+  assert.ok(v.commit.startsWith('1e18f1d'));
 });
 
 test('every world under docs/worlds loads with zero errors', () => {
