@@ -9,7 +9,7 @@
   shy, bored, lonely, worried, calm, jealous, disappointed, embarrassed, confused, curious, grateful, hopeful,
   nervous, ashamed, guilty, disgusted, loved, hurt, frustrated, relieved, homesick, amused.
 - `tone` (pleasant, unpleasant, neutral); `expression`: the `k.faces.expression` of style `plain` that fits (happy,
-  sad, angry, surprised, sleepy), where one does (21 feelings); `mouth`, `eyebrows`, `eyes`, `cheeks`: the variant
+  sad, angry, surprised, sleepy), where one does (20 feelings); `mouth`, `eyebrows`, `eyes`, `cheeks`: the variant
   of that `k.faces` slot that shows the feeling, put on after the expression or alone (shy: `mouth=small
   eyebrows=sad cheeks=blush`; calm: `mouth=smile eyebrows=straight eyes=closed`); `caused_by` (many: short phrases:
   `"the dark"`, `"a loud noise"`); `opposite` (where there is a plain one: happy and sad, excited and bored, proud

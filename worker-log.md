@@ -1496,9 +1496,9 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   (variants of those `k.faces` slots, put on after the expression or alone), `caused_by` (many), `opposite`,
   `reply` (a kind thing to say). Shard `feelings`: 30 facts and 30 `core.word` facts (scared, glad, mad, fear,
   anxious, thankful …), 60 wires, 12,966 bytes, written by `tools/feelings-core.mjs`.
-- **Joins:** 21 feelings name an expression (happy, sad, angry, surprised, sleepy); 9 have none that fits and say
-  the variants instead (shy, worried, calm, embarrassed, confused, curious, hopeful, nervous, disgusted, relieved
-  among them); every expression and variant named exists in `k.faces`. `wink` and `talking` are not feelings and
+- **Joins:** 20 feelings name an expression (happy, sad, angry, surprised, sleepy); 10 have none that fits and say
+  the variants instead (shy, worried, calm, embarrassed, confused, curious, hopeful, nervous, disgusted,
+  relieved); every expression and variant named exists in `k.faces`. `wink` and `talking` are not feelings and
   are not used.
 - **Looked at:** all 30 feelings composed on two presets (child, woman), 60 faces on one sheet at 120 px. Read as
   the feeling without the name: happy, sad, angry, afraid, surprised, tired, excited, shy, calm, embarrassed,
@@ -1513,4 +1513,11 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   that work before `k.feelings`. My task for this session named the order scenes, people, feelings, actions,
   colours, shapes, so the feelings came first. Addendum 2 is not started.
 - **What SOP Lang could not say:** nothing.
+- Numbers: catalog 14 worlds, 779 shards, vocab 19,484 words; 0 errors, 0 warnings. npm test 2,413 pass, 0 fail.
+
+## Correction (2026-11-13): the count of feelings with an expression
+
+- The R7.4 entry, the world page and the commit message of 85e1bd6 said 21 feelings name a `k.faces` expression and
+  9 do not. Counted from the shard it is **20 and 10**. The log entry above and `k.feelings/WORLD.md` are corrected;
+  the commit message of 85e1bd6 keeps the wrong figure. A test now counts it.
 - Numbers: catalog 14 worlds, 779 shards, vocab 19,484 words; 0 errors, 0 warnings. npm test 2,413 pass, 0 fail.

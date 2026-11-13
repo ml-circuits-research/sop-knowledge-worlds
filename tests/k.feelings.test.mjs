@@ -19,6 +19,7 @@ test('the shard is what tools/feelings-core.mjs gives; 30 feelings', () => {
   for (const [name, text] of Object.entries(feelingShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.feelings', 'shards', name), 'utf8'), text, name);
   assert.equal(feelings.length, FEELINGS.length);
   assert.ok(feelings.length >= 30);
+  assert.equal(feelings.filter((w) => w.attrs.expression).length, 20, 'feelings that name a k.faces expression');
 });
 
 test('every feeling shows on a face: a k.faces expression or variants that exist; it has causes and a kind reply', () => {
