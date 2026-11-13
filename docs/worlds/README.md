@@ -38,9 +38,11 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 
 ## vocab.json
 
-`{ "chimney": ["k.objects/shards/buildings"], ... }`. Built from the `text=` of `core.word` facts and from the
-identity values of the shard wires. A host translates a message to English, lemmatises it, looks each lemma up, and
-fetches only those shards.
+`{ "chimney": ["k.objects/shards/buildings"], "capital": ["k.geo/schema.sop"], ... }`. Built from the `text=` of
+`core.word` facts and from the identity values of the shard wires. A word for a value points to shard ids (the path
+without `.sop`); a word for a type or a key of a world ("capital", "synonym", "colour") points to the world's schema
+path (`k.<world>/schema.sop`): it says the world is relevant, and the other words of the message pick the shards. A
+host translates a message to English, lemmatises it, looks each lemma up, and fetches only those shards.
 
 ## Using them
 

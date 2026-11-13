@@ -11,13 +11,10 @@
 # An object that can be drawn. Its name is an English lemma; the same name in k.commonsense.thing is the same thing.
 @k.objects.object core.type of=k.objects.object shared=true closed=true core.source="hand-core 1"
 @k.objects.object.name core.slot of=k.objects.object key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-# A second drawing of an object that already has one: the same name, and the variant names where it comes from.
-@k.objects.object.variant core.slot of=k.objects.object key=variant id=true kind=atom core.source="hand-core 1"
 
 # A part of an object. One wire per instance: two windows are two parts (left_window, right_window) of kind window.
 @k.objects.part core.type of=k.objects.part shared=true closed=true core.source="hand-core 1"
 @k.objects.part.of core.slot of=k.objects.part key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.objects.part.variant core.slot of=k.objects.part key=variant id=true kind=atom core.source="hand-core 1"
 @k.objects.part.name core.slot of=k.objects.part key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.objects.part.kind core.slot of=k.objects.part key=kind kind=atom core.source="hand-core 1"
 @k.objects.part.shape core.slot of=k.objects.part key=shape required=true enum=rectangle enum=square enum=circle enum=oval enum=triangle enum=line enum=arc enum=polygon core.source="hand-core 1"

@@ -7,7 +7,7 @@ a draw order and typical colours, so that a renderer that has never seen an obje
 ## Schema (`schema.sop`, module `k.objects`, imports `k.commonsense`, version 2)
 
 - `k.objects.object` (shared, closed): `name` (identity, an English lemma; the same name in `k.commonsense.thing` is the
-  same thing, joined by value); `variant` (identity, optional: a second drawing of the same name).
+  same thing, joined by value).
 - `k.objects.part` (shared, closed), identity `of` + `name`:
   - `of`: the object's name; `name`: unique within the object (`left_window`); `kind`: for a part that occurs several
     times, what each one is (`window`). A repeated part is one wire per instance, each with its own box.
@@ -52,8 +52,7 @@ the CLDR keywords as `core.word` facts. Same format as the hand-written objects,
 - parts are named `part1…partN` unless `sources/noto-emoji/part-names.tsv` names them; such a part carries
   `named=model` (a language model named it by looking at a numbered picture). Shadows, highlights and outlines have
   `kind=detail`. No relative positions (`above`, `inside`, …) are given;
-- a hand-written object of the same name wins: the imported drawing is left out (questions.md Q12 asks how a second
-  drawing should be stored; the schema already has `variant` on objects and parts for it);
+- a hand-written object of the same name wins: the imported drawing is left out (reviewer's answer to Q12);
 - shards hold up to 8 objects of one emoji subgroup (`noto-animal-mammal-01`, `noto-food-fruit-02`). Sources
   `noto-emoji 99701e0` (Apache-2.0) and `cldr 48` (Unicode-3.0); the notices are `LICENSE.noto-emoji` and
   `LICENSE.cldr` in this folder.

@@ -69,7 +69,8 @@ const world = await addSchema('k.commonsense');
 const w = new World({ library });
 w.use('k.commonsense');   // or, in the application's own matrix: @app core.module name=app imports=k.commonsense
 
-// Only the shards that the words of the message point to.
+// Only the shards that the words of the message point to. (A word for a type or a key of a world points to the
+// world's schema path instead, e.g. vocab['capital'] is ['k.geo/schema.sop']: that world is relevant.)
 for (const id of vocab['fish'] ?? []) {
   const shard = world.shards.find((s) => s.id === id);
   if (shard) w.tell(await (await get(shard.path)).text());

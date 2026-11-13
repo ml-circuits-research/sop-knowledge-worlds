@@ -297,3 +297,12 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - Limits: boxes across the 180th meridian span −180..180; a query for a value with several wires (`capital_of` a
   country with two capitals) is `conflicting` in `value` mode, use `list`; names are Natural Earth's `ADMIN`
   ("United States of America", "Republic of Serbia"), other names are `core.word` facts.
+
+## Reviewer's answers of 09:25 applied (2026-11-13): Q10, Q12
+
+- Q10 (a): in `vocab.json` a word for a type or a key of a world points to the world's schema path
+  (`"capital": ["k.geo/schema.sop"]`), for every world; words for values still point to shards. `k.words` now has
+  schema words too (word, meaning, definition, synonym, kind, part). README and the page example say so.
+- Q12: `variant` removed from the `k.objects` schema (never used in a shard); imported drawings of the 18 names
+  with a hand-written object stay left out.
+- Numbers: 4 worlds, 463 shards, vocab 16,218 words; facts unchanged; npm test 931 pass.

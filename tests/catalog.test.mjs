@@ -41,10 +41,10 @@ test('LICENSES.md names every source and license of the catalog', () => {
   }
 });
 
-test('every vocab entry points to listed shards', () => {
+test('every vocab entry points to listed shards or to a schema', () => {
   const index = JSON.parse(readFileSync(join(WORLDS_DIR, 'index.json'), 'utf8'));
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
-  const ids = new Set(index.worlds.flatMap((w) => w.shards.map((s) => s.id)));
+  const ids = new Set(index.worlds.flatMap((w) => [w.schema, ...w.shards.map((s) => s.id)]));
   for (const [word, shards] of Object.entries(vocab)) {
     assert.equal(word, word.toLowerCase());
     assert.ok(shards.length > 0, word);
@@ -70,7 +70,7 @@ test('a fixture world gives keys, sources, license and vocabulary from words and
     assert.deepEqual(w.shards[0].keys, ['cup']);
     assert.deepEqual(w.shards[0].sources, ['test-1']);
     assert.equal(w.shards[0].nc, true);
-    assert.deepEqual(vocab, { cup: ['k.toy/shards/a'], item: ['k.toy/shards/a'], items: ['k.toy/shards/a'], mug: ['k.toy/shards/a'] });
+    assert.deepEqual(vocab, { cup: ['k.toy/shards/a'], item: ['k.toy/schema.sop'], items: ['k.toy/schema.sop'], mug: ['k.toy/shards/a'] });
     assert.match(index.version, /^[0-9a-f]{12}$/);
   } finally { rmSync(root, { recursive: true }); }
 });

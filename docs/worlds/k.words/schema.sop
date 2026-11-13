@@ -18,3 +18,10 @@
 @k.words.sense.is_a core.slot of=k.words.sense key=is_a many=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.instance_of core.slot of=k.words.sense key=instance_of many=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.part_of core.slot of=k.words.sense key=part_of many=true kind=atom kind=string core.source="hand-core 1"
+
+# Words for the type and keys of this world.
+@k.words.word.sense core.word text=word text=words text=sense text=meaning text=meanings means=k.words.sense core.source="hand-core 1"
+@k.words.word.gloss core.word text=definition text=gloss text=mean text=means means=k.words.sense.gloss core.source="hand-core 1"
+@k.words.word.synonym core.word text=synonym text=synonyms means=k.words.sense.synonym core.source="hand-core 1"
+@k.words.word.is_a core.word text=kind text=type means=k.words.sense.is_a core.source="hand-core 1"
+@k.words.word.part_of core.word text=part text=parts means=k.words.sense.part_of core.source="hand-core 1"

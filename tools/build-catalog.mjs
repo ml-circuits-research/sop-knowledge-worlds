@@ -131,15 +131,16 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       entry.warnings = r.warnings;
       return entry;
     });
-    // Words of the schema: a value word goes to the shards holding that value under that key;
-    // a word for a type or a key of the world goes to every shard of the world.
+    // Words of the schema: a word for a value goes to the shards holding that value under that key; a word for a
+    // type or a key of the world goes to the world's schema path (the host then knows the world is relevant and
+    // picks its shards by the other words of the message).
     for (const w of parse(world.schemaText)) {
       if (w.type !== 'core.word') continue;
       const means = text(w.attrs.means?.[0] ?? '');
       const of = w.attrs.of?.[0];
       const targets = of
         ? world.shards.filter((s) => shardWires.get(s.id).some((x) => (x.attrs[of.slice(of.lastIndexOf('.') + 1)] ?? []).some((t) => text(t) === means))).map((s) => s.id)
-        : world.shards.map((s) => s.id);
+        : [world.schemaPath];
       for (const t of w.attrs.text ?? []) for (const id of targets) addWord(text(t), id);
     }
     const schemaHeader = readHeader(world.schemaText);

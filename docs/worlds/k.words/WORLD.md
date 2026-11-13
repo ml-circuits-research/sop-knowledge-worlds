@@ -26,8 +26,7 @@ By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`); a one
 character is not a letter is in the shard of its first letter. A bucket that would pass the size limits is split into
 consecutive parts (`co-1`, `co-2`); none needs it today. `vocab.json` maps every word (lower case) and every
 irregular form to its shard. 318 shards, 28,951 wires, 5,610,059 bytes; the largest is `co` (1,185 wires, 229,974
-bytes). The schema declares no `core.word` for its keys, because the vocabulary index would then point such a word
-to all 318 shards (questions.md Q10).
+bytes).
 
 ## Sources
 
