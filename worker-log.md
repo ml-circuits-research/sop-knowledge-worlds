@@ -274,3 +274,26 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - **Recognisable after conversion: 801 of 811 (98.8%)**, judged on the 320 px labelling pictures. Not recognisable:
   spider web, gorilla, lizard, piñata, nesting dolls, brick, foggy, fog, link, parachute.
 - npm test 913 pass; 132,706 wires, 124 shards; vocab 13,269 words.
+
+## R2.3 (2026-11-13): k.geo from Natural Earth and mledoze/countries
+
+- Sources: Natural Earth 5.1.2 (`nvkelso/natural-earth-vector` v5.1.2, five GeoJSON files, public domain) and
+  mledoze/countries 5.1.0 (ODbL-1.0). Following the owner's rule (the more permissive source when a fact is in
+  both), everything Natural Earth has comes from it; the country list gives only neighbours, area and landlocked.
+- Two shards per continent: `<continent>` (public domain) and `<continent>-borders` (ODbL-1.0). The borders shard
+  names each country again; told together the two wires of a country merge into one (identity `name`), so
+  "neighbours of Moldova" and "capital of Moldova" are answered from one fact, and an application can leave the
+  ODbL shards out.
+- Schema (version 1): `k.geo.continent`, `country`, `city`, `river`, `mountain`, `range`; 65 matrix wires incl. 11
+  words. `capital_of` on a city names the country (no key means two things). Points and boxes only.
+- `tools/import/geo.mjs`: country of a point by point-in-polygon on the 1:50m outlines (rivers: countries their
+  line passes through; mountains: the country of the summit); river pieces of one name that touch within half a
+  degree are one river; English names where Natural Earth has them; capitalised names (ALPS) written Alps.
+- Numbers: 238 countries and territories (233 with borders facts), 872 cities, 1,074 rivers, 627 mountains, 216
+  ranges, 206 word wires; **3,473 wires, 13 shards, 634,408 bytes**; largest shard `asia` 811 wires / 140,448 bytes
+  / about 60 ms; all 13 in 0.25 s; 0 warnings, 0 errors. Import runs in 6 s.
+- Tests: `tests/import.geo.test.mjs` (a made-up two-country world; determinism; disk = importer when raw is there),
+  `tests/k.geo.questions.jsonl` (14). Catalog: 4 worlds, 463 shards, vocab 16,215 words. npm test 931 pass.
+- Limits: boxes across the 180th meridian span −180..180; a query for a value with several wires (`capital_of` a
+  country with two capitals) is `conflicting` in `value` mode, use `list`; names are Natural Earth's `ADMIN`
+  ("United States of America", "Republic of Serbia"), other names are `core.word` facts.

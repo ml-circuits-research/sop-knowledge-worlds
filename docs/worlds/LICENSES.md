@@ -13,6 +13,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: Apache-2.0 AND Unicode-3.0
 - Used by: `k.objects` (124 shards)
 
+## countries-5.1.0
+
+- What: a list of the world's countries with codes, borders, area and more. Used in `k.geo` only for what Natural Earth (public domain) does not have: land neighbours, area, landlocked.
+- Origin: https://github.com/mledoze/countries , tag `5.1.0` (commit `f931d9cfb70446d2d8e3c3193726b211f695afd3`), file `countries.json` (sha256 `1c097ce85e7fbae8e2dd9ab7e7b40056039737d2f4f4517fb4ff8aff43bb24b4`).
+- License: ODbL-1.0 (Open Database License: attribution, share-alike for the database).
+- Attribution: Contains information from mledoze/countries (https://github.com/mledoze/countries), which is made available under the Open Database License (ODbL) 1.0, https://opendatacommons.org/licenses/odbl/1-0/ .
+- Shard terms: ODbL-1.0
+- Used by: `k.geo` (6 shards)
+
 ## hand-core-1
 
 - What: the hand-written cores of the worlds (`k.commonsense`, `k.objects`): small sets of facts that define each schema and its tests before any bulk import. Written by the worker in this repository, checked by the reviewer.
@@ -21,6 +30,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Attribution: none required.
 - Shard terms: CC0-1.0
 - Used by: `k.commonsense` (1 shards), `k.objects` (7 shards)
+
+## natural-earth-5.1.2
+
+- What: public domain map data: countries, populated places, rivers, elevation points and physical regions, with names and attributes. Used for `k.geo`.
+- Origin: https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`, `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`, `ne_10m_geography_regions_polys` (`.geojson`).
+- License: public domain (`LICENSE.md` of the repository: "All versions of Natural Earth raster + vector map data found on this website are in the public domain"); written `public-domain` in shard headers and the catalog.
+- Attribution: none required. Made with Natural Earth, free vector and raster map data at naturalearthdata.com.
+- Shard terms: public-domain
+- Used by: `k.geo` (7 shards)
 
 ## noto-emoji-99701e0
 
