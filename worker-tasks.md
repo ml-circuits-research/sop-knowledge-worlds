@@ -357,3 +357,18 @@ Rules as before: free licences only, English only, sources on every wire, look a
 ## Reviewer 2026-11-13 21:30 — for both workers: aspects (owner's goal: transfer of knowledge between worlds)
 
 The demo will show one thing in several views (picture, diagram, chart, map, document, card) according to the aspects the thing has. Knowledge must say which kinds have which aspects. In `k.attributes` (second worker, after the current item): group the attributes into aspects (visual, spatial, relational, numeric, textual, geographic, temporal, social) as facts, and for the 1,500 common things plus the kinds of k.geo, k.animals, k.food, k.people, k.time, k.space say which aspects they have and where the values are found (which world, which key). One generated coverage table: kind family × aspect. First worker: when adding facts in Round 9, give numbers with units (joins `k.units`) so the numeric aspect is usable in charts.
+
+## Reviewer 2026-11-13 21:55 — Round 8 and aspects accepted at 1fdd08d; Q29, Q30; Round 10 (second worker)
+
+**Validated by the reviewer:** npm test 2,582 pass, 0 fail; 12 random `k.actions.verb` wires and 8 `k.attributes.thing` wires read (all sensible); ASPECTS.md read. Not looked at by the reviewer: k.wearables boxes, k.parts, k.values colours. Accepted: `k.actions` (14 acts, 291 verbs), `k.values`, `k.attributes` with aspects, `k.wearables`, `k.parts`, COVERAGE.md.
+- **Q29 → two facts, never mixed:** keep `colour` (usual colour) only where plain; add `drawn_colour` computed from the drawing (main fill colours mapped to `k.values` colour names) for every drawable thing; and `colour=any` for things that come in any colour (car, ball, shirt), model-labelled where sure. A host uses usual, then drawn.
+- **Q30 → yes:** next to WordNet's synset parts add the plain part word (`door` for "car door") as the name a user says, and model-labelled usual parts (`named=model`) for the common things with none; sampled audit as before.
+
+**Round 10 (second worker), in order. The demo's goal is now transfer of knowledge between its worlds, so joins between knowledge worlds matter as much as new facts:**
+1. Q29 and Q30 as above.
+2. **The 312 common things with no sense in `k.words`**: find why (multiword, plural, missing from the import) and fix by rule; report what remains.
+3. **One name, one thing across worlds:** a generated join table (`docs/worlds/JOINS.md` + facts): for every name used as a key in more than one world (duck in k.objects, k.animals, k.scenes, k.attributes, k.parts, k.words) say whether they are the same thing; flag clashes of sense (bat, crane, mouse, orange). Hosts need this to treat a thing as one thing in every view.
+4. **Reuse inside this repository** (the owner asks the library session for a reuse detector, `tools/reuse.mjs` in soplang-words-lib; if it exists when you get here, run it on our schemas and report; if not, do this by reading): which worlds repeat the same shape of facts (name + synonym words; place / size classes; is-a chains) and could share one module; propose, do not refactor yet (questions.md).
+5. **Numeric aspect for common things** (3% today): usual size in metres or centimetres, weight class, count of legs / wheels / sides, price class, speed class, with units from `k.units`; model-labelled, sampled audit. So that charts and comparisons have something to show ("which is heavier").
+6. **Temporal and social aspects**: when things are usually used or seen (season, time of day, age group), who uses them (joins `k.people` roles); for the things of `k.scenes`.
+7. Rerun ASPECTS.md and COVERAGE.md at the end of each item (they go stale), and add a test that fails when they are stale.
