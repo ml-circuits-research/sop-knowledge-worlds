@@ -1,4 +1,4 @@
-# k.attributes/shards/same-e: one name, one thing: for 63 names that start with "e" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-e: one name, one thing: for 67 names that start with "e" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -8,13 +8,15 @@
 @k.attributes.same.ear.body_part k.attributes.same name=ear sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ear_muffs.clothing k.attributes.same name="ear muffs" sense=clothing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.ear_of_corn.food k.attributes.same name="ear of corn" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.eardrum.body_part k.attributes.same name=eardrum sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.earlobe.body_part k.attributes.same name=earlobe sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.earring.clothing k.attributes.same name=earring sense=clothing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.earrings.clothing k.attributes.same name=earrings sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.earth.body_in_space k.attributes.same name=earth sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.space.body by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.earthworm.animal k.attributes.same name=earthworm sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.earwig.animal k.attributes.same name=earwig sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.earthworm.animal k.attributes.same name=earthworm sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.earwig.animal k.attributes.same name=earwig sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.easter_egg.thing k.attributes.same name="easter egg" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.echidna.animal k.attributes.same name=echidna sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.echidna.animal k.attributes.same name=echidna sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.eel.animal k.attributes.same name=eel sense=animal only=false in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.eel.place k.attributes.same name=eel sense=place only=false in=k.geo.river unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.egg.food k.attributes.same name=egg sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -42,7 +44,7 @@
 @k.attributes.same.emergency_exit.thing k.attributes.same name="emergency exit" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.emery_board.thing k.attributes.same name="emery board" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.empty_nest.plant k.attributes.same name="empty nest" sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.emu.animal k.attributes.same name=emu sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.emu.animal k.attributes.same name=emu sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.energy_monitor.thing k.attributes.same name="energy monitor" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.engine.thing k.attributes.same name=engine sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.english.place k.attributes.same name=english sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
@@ -54,6 +56,7 @@
 @k.attributes.same.espresso_machine.thing k.attributes.same name="espresso machine" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ethiopia.place k.attributes.same name=ethiopia sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.euro_banknote.thing k.attributes.same name="euro banknote" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.europa.body_in_space k.attributes.same name=europa sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.europe.place k.attributes.same name=europe sense=place only=true in=k.geo.continent by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.european_name_badge.thing k.attributes.same name="european name badge" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.evergreen_tree.plant k.attributes.same name="evergreen tree" sense=plant only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -67,3 +70,4 @@
 @k.attributes.same.eyebrow.body_part k.attributes.same name=eyebrow sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.eyebrow_pencil.thing k.attributes.same name="eyebrow pencil" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.eyelash_curler.thing k.attributes.same name="eyelash curler" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.eyelid.body_part k.attributes.same name=eyelid sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"

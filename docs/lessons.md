@@ -42,6 +42,10 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   new key, keeps one fact in one place.
 - **Verbs and frames are different layers** (hand-overs): "redo", "deselect", "export" are words of acts;
   "undo that change", "clear the selection", "give me" are frames and belong to the grammar world.
+- **A sense for a name comes from the world that owns the name** (k.words and the cores). "Mars" has a god and a
+  planet; the world `k.space` says which one it means, because its things lie under celestial body. Picking the
+  first WordNet sense under the root of the owning type is a join from a world to the dictionary that needs no
+  reading per word.
 ## Round 11 (first worker)
 
 - **Item 2: a reusable world is a schema with words and nothing else** (`w.list`, `w.seating`, `w.timeline`).

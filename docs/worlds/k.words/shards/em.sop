@@ -1,4 +1,4 @@
-# k.words/shards/em: senses of the words from "em" to "empty" (first letters "em").
+# k.words/shards/em: senses of the words from "em" to "emu" (first letters "em").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -90,3 +90,5 @@
 @k.words.empty.adjective.2 k.words.sense word=empty pos=adjective n=2 gloss="devoid of significance or force" synonym=hollow synonym=vacuous near_opposite=meaningful core.source="wordnet 3.1"
 @k.words.empty.adjective.3 k.words.sense word=empty pos=adjective n=3 gloss="needing nourishment" synonym=empty-bellied near_opposite=thirsty core.source="wordnet 3.1"
 @k.words.empty.forms core.word text=emptied text=emptier text=emptiest means=empty of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.emu.noun.1 k.words.sense word=emu pos=noun n=1 gloss="any of various systems of units for measuring electricity and magnetism" synonym="electromagnetic unit" is_a="unit of measurement" kind_of="unit of measurement" kind_of="definite quantity" kind_of=measure kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.emu.noun.2 k.words.sense word=emu pos=noun n=2 gloss="large Australian flightless bird similar to the ostrich but smaller" synonym="Dromaius novaehollandiae" synonym="Emu novaehollandiae" is_a=ratite kind_of=ratite kind_of=bird kind_of=vertebrate kind_of=chordate kind_of=animal kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"

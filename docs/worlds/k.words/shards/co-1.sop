@@ -1,4 +1,4 @@
-# k.words/shards/co-1: senses of the words from "co" to "confinement" (first letters "co", part 1 of 2).
+# k.words/shards/co-1: senses of the words from "co" to "confiscate" (first letters "co", part 1 of 2).
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -56,6 +56,7 @@
 @k.words.cock.verb.1 k.words.sense word=cock pos=verb n=1 gloss="tilt or slant to one side" is_a=cant core.source="wordnet 3.1"
 @k.words.cock.verb.2 k.words.sense word=cock pos=verb n=2 gloss="set the trigger of a firearm back for firing" is_a=put core.source="wordnet 3.1"
 @k.words.cock.verb.3 k.words.sense word=cock pos=verb n=3 gloss="to walk with a lofty proud gait, often in an attempt to impress others" synonym=tittup synonym=swagger synonym=ruffle synonym=prance synonym=strut synonym=sashay is_a=walk core.source="wordnet 3.1"
+@k.words.cockatoo.noun.1 k.words.sense word=cockatoo pos=noun n=1 gloss="white or light-colored crested parrot of the Australian region; often kept as cage birds" is_a=parrot kind_of=parrot kind_of=bird kind_of=vertebrate kind_of=chordate kind_of=animal kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.cockpit.noun.1 k.words.sense word=cockpit pos=noun n=1 gloss="compartment where the pilot sits while flying the aircraft" is_a=compartment part_of=aircraft kind_of=compartment kind_of=room kind_of=area kind_of=structure kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.cockpit.noun.2 k.words.sense word=cockpit pos=noun n=2 gloss="a pit for cockfights" is_a=pit kind_of=pit kind_of=enclosure kind_of=area kind_of=structure kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.cockpit.noun.3 k.words.sense word=cockpit pos=noun n=3 gloss="seat where the driver sits while driving a racing car" is_a=seat part_of=racer kind_of=seat kind_of=support kind_of=device kind_of=instrumentality kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
@@ -629,3 +630,10 @@
 @k.words.confinement.noun.1 k.words.sense word=confinement pos=noun n=1 gloss="concluding state of pregnancy; from the onset of contractions to the birth of a child" synonym=parturiency synonym=labor synonym=labour synonym=lying-in synonym=travail synonym=childbed is_a=parturition part_of=pregnancy core.source="wordnet 3.1"
 @k.words.confinement.noun.2 k.words.sense word=confinement pos=noun n=2 gloss="the act of restraining of a person's liberty by confining them" is_a=restraint core.source="wordnet 3.1"
 @k.words.confinement.noun.3 k.words.sense word=confinement pos=noun n=3 gloss="the state of being confined" is_a=subjugation core.source="wordnet 3.1"
+@k.words.confirm.verb.1 k.words.sense word=confirm pos=verb n=1 gloss="establish or strengthen as with new evidence or facts" synonym=corroborate synonym=sustain synonym=substantiate synonym=support synonym=affirm core.source="wordnet 3.1"
+@k.words.confirm.verb.2 k.words.sense word=confirm pos=verb n=2 gloss="strengthen or make more firm" synonym=reassert is_a=affirm core.source="wordnet 3.1"
+@k.words.confirm.verb.3 k.words.sense word=confirm pos=verb n=3 gloss="make more firm" is_a=strengthen core.source="wordnet 3.1"
+@k.words.confirmation.noun.1 k.words.sense word=confirmation pos=noun n=1 gloss="additional proof that something that was believed (some fact or hypothesis or theory) is correct" synonym=verification synonym=check synonym=substantiation is_a=proof core.source="wordnet 3.1"
+@k.words.confirmation.noun.2 k.words.sense word=confirmation pos=noun n=2 gloss="information that confirms or verifies" is_a=information core.source="wordnet 3.1"
+@k.words.confirmation.noun.3 k.words.sense word=confirmation pos=noun n=3 gloss="making something valid by formally ratifying or confirming it" synonym=ratification is_a=agreement core.source="wordnet 3.1"
+@k.words.confiscate.verb.1 k.words.sense word=confiscate pos=verb n=1 gloss="take temporary possession of as a security, by legal authority" synonym=impound synonym=attach synonym=sequester synonym=seize is_a=take core.source="wordnet 3.1"

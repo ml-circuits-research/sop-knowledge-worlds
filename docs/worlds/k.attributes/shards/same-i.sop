@@ -1,10 +1,10 @@
-# k.attributes/shards/same-i: one name, one thing: for 42 names that start with "i" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-i: one name, one thing: for 43 names that start with "i" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
 
-@k.attributes.same.ibex.animal k.attributes.same name=ibex sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.ibis.animal k.attributes.same name=ibis sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.ibex.animal k.attributes.same name=ibex sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.ibis.animal k.attributes.same name=ibis sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice.food k.attributes.same name=ice sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice_cream.food k.attributes.same name="ice cream" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ice_cream_tub.food k.attributes.same name="ice cream tub" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -17,8 +17,9 @@
 @k.attributes.same.igloo.thing k.attributes.same name=igloo sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.iguana.animal k.attributes.same name=iguana sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.illinois.place k.attributes.same name=illinois sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.impala.animal k.attributes.same name=impala sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.impala.animal k.attributes.same name=impala sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.inbox_tray.thing k.attributes.same name="inbox tray" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.incisor.body_part k.attributes.same name=incisor sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.incoming_envelope.thing k.attributes.same name="incoming envelope" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.incubator.thing k.attributes.same name=incubator sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.index_cards.thing k.attributes.same name="index cards" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -28,7 +29,7 @@
 @k.attributes.same.inn.place k.attributes.same name=inn sense=place only=true in=k.attributes.number in=k.attributes.thing in=k.geo.river in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.insect.thing k.attributes.same name=insect sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.intercom.thing k.attributes.same name=intercom sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.intestine.body_part k.attributes.same name=intestine sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object core.source="hand-core 1"
+@k.attributes.same.intestine.body_part k.attributes.same name=intestine sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.io.body_in_space k.attributes.same name=io sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.iphone.thing k.attributes.same name=iphone sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ipod.thing k.attributes.same name=ipod sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

@@ -12,7 +12,7 @@
 @k.attributes.same.napkin.thing k.attributes.same name=napkin sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.naples.place k.attributes.same name=naples sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nappy.clothing k.attributes.same name=nappy sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.narwhal.animal k.attributes.same name=narwhal sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.narwhal.animal k.attributes.same name=narwhal sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nashville.place k.attributes.same name=nashville sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.national_park.thing k.attributes.same name="national park" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.navy.colour k.attributes.same name=navy sense=colour only=true in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"

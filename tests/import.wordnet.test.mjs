@@ -4,8 +4,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { importWordnet, shortGloss, bucketOf, commonThings } from '../tools/import/wordnet.mjs';
+import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
+import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames } from '../tools/import/wordnet.mjs';
 
 const fixture = {
   'data.noun': [
@@ -100,7 +100,8 @@ const dict = join(REPO, 'sources/wordnet/raw/wordnet31');
 const list = join(REPO, 'sources/frequency-words/raw/en_50k.txt');
 test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list)) && 'raw files not downloaded' }, async () => {
   const names = ['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'];
-  const { files } = importWordnet(Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')])), readFileSync(list, 'utf8'), { extra: await commonThings() });
+  const raw = Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
+  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR) });
   const dir = join(WORLDS_DIR, 'k.words', 'shards');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
@@ -123,4 +124,17 @@ test('every common thing has the sense kept by the coverage rule in k.words, wit
     const mine = lines.get(e.word) ?? [];
     assert.ok(mine.some((l) => l.includes(`gloss=${JSON.stringify(short(e.gloss)).slice(0, -1)}`) && / (is_a|instance_of)=/.test(l)), e.word);
   }
+});
+
+// R11.1 left this cause to the importer: the one-word names of the hand-written worlds have a sense in k.words, the
+// one under the root of their world (kilogram a unit, Mars the planet, crane the bird).
+test('the one-word names of the hand-written worlds have their sense in k.words', { skip: !existsSync(dict) && 'raw files not downloaded' }, () => {
+  const raw = Object.fromEntries(['index.noun', 'data.noun'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
+  const core = coreNames(raw, WORLDS_DIR);
+  assert.ok(core.size >= 700);
+  const words = fullWorld('k.words');
+  const glossOf = (w) => words.ofType('k.words.sense').filter((s) => s.attrs.word[0].replace(/"/g, '').toLowerCase() === w && s.attrs.pos[0] === 'noun').map((s) => s.attrs.gloss[0]);
+  for (const w of ['kilogram', 'litre', 'emu', 'pancreas', 'falafel']) assert.ok(glossOf(w).length, w);
+  assert.ok(glossOf('mars').some((g) => /planet/.test(g)), 'mars');
+  assert.ok(glossOf('crane').some((g) => /bird/.test(g)), 'crane');
 });

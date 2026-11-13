@@ -1,4 +1,4 @@
-# k.attributes/shards/same-r: one name, one thing: for 130 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-r: one name, one thing: for 131 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -38,7 +38,7 @@
 @k.attributes.same.ready_meal_lamb.food k.attributes.same name="ready meal lamb" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.receipt.thing k.attributes.same name=receipt sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.recipe.food k.attributes.same name=recipe sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.rectangle.shape k.attributes.same name=rectangle sense=shape only=true in=k.shapes.shape in=k.values.shape core.source="hand-core 1"
+@k.attributes.same.rectangle.shape k.attributes.same name=rectangle sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.recycling_bins.thing k.attributes.same name="recycling bins" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.red.colour k.attributes.same name=red sense=colour only=false in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.red.place k.attributes.same name=red sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
@@ -57,10 +57,11 @@
 @k.attributes.same.republican.place k.attributes.same name=republican sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rescue_worker_s_helmet.clothing k.attributes.same name="rescue worker’s helmet" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.restaurant.thing k.attributes.same name=restaurant sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.retina.body_part k.attributes.same name=retina sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.revolver.thing k.attributes.same name=revolver sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rhino.animal k.attributes.same name=rhino sense=animal only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rhinoceros.animal k.attributes.same name=rhinoceros sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.rhombus.shape k.attributes.same name=rhombus sense=shape only=true in=k.shapes.shape in=k.values.shape core.source="hand-core 1"
+@k.attributes.same.rhombus.shape k.attributes.same name=rhombus sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rhubarb.food k.attributes.same name=rhubarb sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rib.body_part k.attributes.same name=rib sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ribbon.thing k.attributes.same name=ribbon sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -82,7 +83,7 @@
 @k.attributes.same.river_bank.thing k.attributes.same name="river bank" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.rivera.place k.attributes.same name=rivera sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.road.thing k.attributes.same name=road sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.called by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.roadrunner.animal k.attributes.same name=roadrunner sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.roadrunner.animal k.attributes.same name=roadrunner sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.roast_dinner.food k.attributes.same name="roast dinner" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.roasted_coffee_bean.food k.attributes.same name="roasted coffee bean" sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.roasted_sweet_potato.food k.attributes.same name="roasted sweet potato" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

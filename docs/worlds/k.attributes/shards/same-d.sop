@@ -1,4 +1,4 @@
-# k.attributes/shards/same-d: one name, one thing: for 128 names that start with "d" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-d: one name, one thing: for 129 names that start with "d" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -28,6 +28,7 @@
 @k.attributes.same.deep_fat_fryer.thing k.attributes.same name="deep fat fryer" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.deer.animal k.attributes.same name=deer sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.defibrillator.thing k.attributes.same name=defibrillator sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.deimos.body_in_space k.attributes.same name=deimos sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.delaware.place k.attributes.same name=delaware sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.delhi.place k.attributes.same name=delhi sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.delivery_trolley.thing k.attributes.same name="delivery trolley" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

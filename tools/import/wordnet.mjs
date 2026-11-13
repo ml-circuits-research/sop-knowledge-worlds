@@ -4,7 +4,7 @@
 //   node tools/import/wordnet.mjs [--dict sources/wordnet/raw/wordnet31] [--freq sources/frequency-words/raw/en_50k.txt]
 //                                 [--out docs/worlds/k.words/shards]
 // How to fetch the raw files: sources/wordnet/SOURCE.md and sources/frequency-words/SOURCE.md.
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { byText, seg, wire, text, header, writeShards, splitParts } from './lib.mjs';
@@ -188,10 +188,50 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
   return { files: out, stats };
 }
 
+// `extra`: the names of the hand-written worlds, then the common things with the sense kept for each (these win).
+export async function extraWords(files, worldsDir) {
+  return new Map([...coreNames(files, worldsDir), ...await commonThings()]);
+}
+
 // The common things and the sense kept for each (tools/coverage.mjs), for `extra`.
 export async function commonThings() {
   const { run } = await import('../coverage.mjs');
   return new Map(run().list.map((e) => [e.word, e.sense]));
+}
+
+// The names of the hand-written worlds (R11.1 left this cause to this tool: "What is a kilogram?" found no
+// definition, since `k.words` kept only frequent words). For each type that names things, the WordNet synsets its
+// things fall under (ROOTS); a name that is one word and has no sense yet is kept with its first noun sense that
+// lies under one of them (through is-a or instance-of): `emu` under animal, `kilogram` under unit of measurement,
+// `Mars` the planet, not the god. Names of several words are not taken (k.words keeps single words).
+export const CORE_ROOTS = {
+  'k.animals.animal': ['00015568'], 'k.food.food': ['00021445', '07571428'], 'k.units.unit': ['13604927'], 'k.body.part': ['05227735'],
+  'k.space.body': ['09262646'], 'k.space.kind': ['09262646'], 'k.shapes.shape': ['05071206', '00028005'], 'k.colours.colour': ['04963771'],
+  'k.people.role': ['00007846'], 'k.wearables.wearable': ['03055525', '03602662', '03127399'], 'k.time.duration': ['15137796'],
+};
+export function coreNames(files, worldsDir) {
+  const data = readData(files['data.noun']), index = readIndex(files['index.noun']);
+  const under = (offset, roots, seen = new Set()) => {
+    if (roots.includes(offset)) return true;
+    if (seen.has(offset) || !data.has(offset)) return false;
+    seen.add(offset);
+    return data.get(offset).pointers.some(([sym, off, tp]) => (sym === '@' || sym === '@i') && tp === 'n' && under(off, roots, seen));
+  };
+  const out = new Map();
+  for (const [type, roots] of Object.entries(CORE_ROOTS)) {
+    const world = type.split('.').slice(0, 2).join('.');
+    let dir;
+    try { dir = readdirSync(join(worldsDir, world, 'shards')); } catch { continue; }
+    for (const f of dir.filter((x) => x.endsWith('.sop')).sort()) {
+      for (const m of readFileSync(join(worldsDir, world, 'shards', f), 'utf8').matchAll(new RegExp(`^@\\S+ ${type.replace(/\./g, '\\.')} name=("[^"]*"|\\S+)`, 'gm'))) {
+        const name = (m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]).toLowerCase();
+        if (!LEMMA.test(name) || out.has(name)) continue;
+        const sense = (index.get(name) ?? []).find((o) => under(o, roots));
+        if (sense) out.set(name, sense);
+      }
+    }
+  }
+  return out;
 }
 
 // Not awaited at the top level: tools/coverage.mjs imports this module.
@@ -201,7 +241,7 @@ async function main() {
   const dict = arg('dict', join(repo, 'sources/wordnet/raw/wordnet31'));
   const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(arg('freq', join(repo, 'sources/frequency-words/raw/en_50k.txt')), 'utf8');
-  const { files: out, stats } = importWordnet(files, freq, { extra: await commonThings() });
+  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')) });
   writeShards(arg('out', join(repo, 'docs/worlds/k.words/shards')), out);
   console.log(JSON.stringify(stats));
 }

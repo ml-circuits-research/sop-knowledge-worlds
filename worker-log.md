@@ -2829,3 +2829,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   wires. Catalog 22 worlds, 911 shards, vocab 23,476 words; 0 errors, 0 warnings. npm test 2,710: 2,704 pass,
   6 skipped, 0 fail. The demo's real questions: unchanged (117 of 132 Talk failures found). After the rebase on R11.3 part 1:
   catalog 22 worlds, 918 shards, vocab 23,723 words; npm test 2,760: 2,754 pass, 6 skipped, 0 fail.
+
+## The names of the hand-written worlds in `k.words` (2026-11-14, second worker; a cause R11.1 left to the WordNet importer)
+
+- **Cause:** "What is a kilogram?", "What is a litre?" found no definition: `k.words` keeps the words of the first
+  20,000 lines of the frequency list and the common things, so about 340 names of the hand-written worlds
+  (animals, foods, units, body parts, shapes, wearables) had no sense.
+- **Rule** (`coreNames` in `tools/import/wordnet.mjs`): for each type that names things, the WordNet synsets its
+  things fall under (`CORE_ROOTS`: animal; food and solid food; unit of measurement; body part; celestial body;
+  the two senses of shape; colour; person; clothing, jewelry, covering; time period). A one-word name with no sense
+  yet is kept with its first noun sense under one of them, through is-a or instance-of, wherever it stands in the
+  frequency list and even beyond the third sense: emu, heron, kilogram, litre, millimetre, pancreas, cornea,
+  falafel, borscht, rhombus, octagon, turquoise; Mars is the planet, not the god. The common things keep the sense
+  the coverage rule chose (they win where both name a word). 734 names have a sense under their root.
+- **Numbers:** `k.words` 11,313 -> 11,481 words, 28,987 -> 29,310 senses, 321 shards (largest `re`, 186,781 bytes).
+  The demo's real questions (`tools/ask-real.mjs`): Talk failures found **117 -> 119** of 132 (kilogram, litre).
+- **Left:** names of several words (manta ray, light year, top hat, small intestine, police officer: `k.words`
+  keeps single words; taking multiword lemmas changes the word key of the world) and the feelings (adjectives:
+  happy, sad; their adjective senses are there for the common ones). Remaining one-word misses per type are in
+  the test's reach (a test checks kilogram, litre, emu, pancreas, falafel, Mars the planet, crane the bird).
+- **Looked at:** the list of the 734 names with a sense; the glosses of Mars, crane, kiwi, venus. **Not looked at:**
+  the 323 new senses one by one (WordNet's, kept by the same rule as the others).
+- Tests: `tests/import.wordnet.test.mjs` (1 more; the equality with the import now passes the core names).
+- Numbers: catalog 22 worlds, 918 shards, vocab 23,739 words; 0 errors, 0 warnings. npm test 2,761: 2,755 pass,
+  6 skipped, 0 fail.

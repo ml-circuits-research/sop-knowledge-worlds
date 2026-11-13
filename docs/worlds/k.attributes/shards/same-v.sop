@@ -1,4 +1,4 @@
-# k.attributes/shards/same-v: one name, one thing: for 46 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-v: one name, one thing: for 47 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -21,6 +21,7 @@
 @k.attributes.same.venus.body_in_space k.attributes.same name=venus sense="body in space" only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.veranda.thing k.attributes.same name=veranda sense=thing only=true in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vermouth.thing k.attributes.same name=vermouth sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.vertebra.body_part k.attributes.same name=vertebra sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vertical_blinds.thing k.attributes.same name="vertical blinds" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.vertical_traffic_light.thing k.attributes.same name="vertical traffic light" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.vest.clothing k.attributes.same name=vest sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
@@ -46,7 +47,7 @@
 @k.attributes.same.visor.clothing k.attributes.same name=visor sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vodka.food k.attributes.same name=vodka sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.volcano.thing k.attributes.same name=volcano sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.vole.animal k.attributes.same name=vole sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.vole.animal k.attributes.same name=vole sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.volleyball.thing k.attributes.same name=volleyball sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vr_headset.thing k.attributes.same name="vr headset" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.vulture.animal k.attributes.same name=vulture sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

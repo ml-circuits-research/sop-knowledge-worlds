@@ -1,4 +1,4 @@
-# k.attributes/shards/same-f: one name, one thing: for 153 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-f: one name, one thing: for 154 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -7,7 +7,7 @@
 @k.attributes.same.face.body_part k.attributes.same name=face sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.factory.thing k.attributes.same name=factory sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fairy.person k.attributes.same name=fairy sense=person only=true in=k.attributes.drawn in=k.objects.object in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.falafel.food k.attributes.same name=falafel sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.falafel.food k.attributes.same name=falafel sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.falcon.animal k.attributes.same name=falcon sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fallen_leaf.plant k.attributes.same name="fallen leaf" sense=plant only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.fan.thing k.attributes.same name=fan sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -89,7 +89,7 @@
 @k.attributes.same.floppy_disk.thing k.attributes.same name="floppy disk" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.florence.place k.attributes.same name=florence sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.floss.thing k.attributes.same name=floss sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.flounder.animal k.attributes.same name=flounder sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.flounder.animal k.attributes.same name=flounder sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.flour.food k.attributes.same name=flour sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.flour_plain.food k.attributes.same name="flour plain" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.flour_self_raising.food k.attributes.same name="flour self raising" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -109,6 +109,7 @@
 @k.attributes.same.foot.body_part k.attributes.same name=foot sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.football.thing k.attributes.same name=football sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.football_kit.clothing k.attributes.same name="football kit" sense=clothing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
+@k.attributes.same.footballer.person k.attributes.same name=footballer sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.forceps.thing k.attributes.same name=forceps sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.forehead.body_part k.attributes.same name=forehead sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.forest.thing k.attributes.same name=forest sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"

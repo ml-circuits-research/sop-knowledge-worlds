@@ -4,6 +4,9 @@
 # script: tools/import/wordnet.mjs
 
 @k.words.uranium.noun.1 k.words.sense word=uranium pos=noun n=1 gloss="a heavy toxic silvery-white radioactive metallic element; occurs in many isotopes; used for nuclear fuels and nuclear weapons" synonym=U synonym="atomic number 92" is_a="metallic element" core.source="wordnet 3.1"
+@k.words.uranus.noun.1 k.words.sense word=Uranus pos=noun n=1 gloss="(Greek mythology) god of the heavens; son and husband of Gaea and father of the Titans in ancient mythology" synonym=Ouranos instance_of="Greek deity" kind_of="Greek deity" kind_of=deity kind_of="spiritual being" kind_of=belief kind_of=content kind_of=cognition kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.uranus.noun.2 k.words.sense word=Uranus pos=noun n=2 gloss="a giant planet with a ring of ice particles; the 7th planet from the sun has a blue-green color and many satellites" instance_of="Jovian planet" instance_of="superior planet" instance_of="outer planet" kind_of="Jovian planet" kind_of=planet kind_of="celestial body" kind_of="natural object" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.uranus.spelling.Uranus core.word text=uranus means=Uranus of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.urge.noun.1 k.words.sense word=urge pos=noun n=1 gloss="an instinctive motive" synonym=impulse is_a=motivation core.source="wordnet 3.1"
 @k.words.urge.noun.2 k.words.sense word=urge pos=noun n=2 gloss="a strong restless desire" synonym=itch is_a=desire core.source="wordnet 3.1"
 @k.words.urge.verb.1 k.words.sense word=urge pos=verb n=1 gloss="force or impel in an indicated direction" synonym="urge on" synonym=press synonym=exhort is_a=rede core.source="wordnet 3.1"

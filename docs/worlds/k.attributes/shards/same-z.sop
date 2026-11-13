@@ -4,7 +4,7 @@
 # script: tools/joins.mjs
 
 @k.attributes.same.zebra.animal k.attributes.same name=zebra sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.zigzag.shape k.attributes.same name=zigzag sense=shape only=true in=k.shapes.shape in=k.values.shape core.source="hand-core 1"
+@k.attributes.same.zigzag.shape k.attributes.same name=zigzag sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.zip.clothing k.attributes.same name=zip sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.zipper.thing k.attributes.same name=zipper sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.zoo.thing k.attributes.same name=zoo sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
