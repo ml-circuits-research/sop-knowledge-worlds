@@ -195,3 +195,27 @@ and of the hand-written set were checked by eye. 2,136 drawable objects. Accepte
 - **R3.4 `docs/index.html`:** add a small gallery page `docs/gallery.html` that lists every `k.objects` object with its
   preview (lazy images, a search box, the source and licence per object), so the owner can browse all the shapes.
 - Report as before. Say exactly what was looked at and what was not.
+
+## Reviewer 2026-11-13 12:20 — Round 3 accepted; answers Q16–Q19; Round 4
+
+**Validated at d28a79f:** `npm test` 2,180 pass, 0 fail; catalog rebuild gives no diff. A sample of 22 facts from each of
+`k.space`, `k.animals`, `k.body`, `k.food` was read by the reviewer: no error found. 1,987 drawable objects, 10 worlds. Accepted.
+
+- **Q16:** keep one football kit as "football kit"; exclude the other 49.
+- **Q17:** yes, `drawing=<object name>` is the join from a fact to its drawing.
+- **Q18:** a second key with the suffix `_about` (`moons_about=95`) is the way to say an approximate number. Never both
+  keys on one fact. Write the rule in AGENTS.md.
+- **Q19:** `cannot=<verb>` next to `can=<verb>`. One fact never has the same verb in both.
+
+**Round 4: quality and coverage.**
+- **R4.1 Audit of the model's part names.** Take 200 named parts at random (seeded) over the three imported sources. For each,
+  render the object with only that part highlighted, look, and judge: right, wrong, or unclear. Report the error rate per
+  source in worker-log, fix the wrong ones in the TSV. If a source is above 10% wrong, look again at all its names.
+- **R4.2 Coverage of common things.** Build the list of the 1,500 most frequent English nouns that name a physical thing
+  (frequency list × WordNet: hyponyms of physical object, living thing, food, artifact; drop abstract senses). Report how
+  many have a drawing, and write `docs/worlds/k.objects/MISSING.md` with those that do not, most frequent first.
+- **R4.3 Hand-write the 60 most frequent missing things** (named parts, as the hand-written sets), with previews looked at.
+- **R4.4 Synonyms to drawings.** A word with no drawing whose WordNet synonym or direct hypernym has one ("automobile" →
+  car, "puppy" → dog) gets a `core.word` to that drawing in `k.objects`, marked `core.source` WordNet. Report how much
+  coverage this adds. No guessed links.
+- Report as before.
