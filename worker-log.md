@@ -1403,3 +1403,62 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   `hair=long` for woman and girl and `short` for man and boy are the picture-book convention, nothing more.
 - **What SOP Lang could not say:** nothing. That a word of a kind "is" the kind uses `core.word … of=`, as elsewhere.
 - Numbers: catalog 13 worlds, 771 shards, vocab 19,183 words; 0 errors, 0 warnings. npm test 2,377 pass, 0 fail.
+
+## R7.1 (2026-11-13): 61 scenes in `k.scenes`; each composed into a picture
+
+- **Schema:** `k.scenes.scene` (name, kind: outdoors / indoors / underwater / space, ground, time, weather, season,
+  happens, drawing) and `k.scenes.has` (scene + thing, count, where: sky / ceiling / background / wall / ground /
+  water / foreground, side, on, fills, drawing). `fills=true` was added after the first look (below).
+- **61 scenes** in four shards: `scenes-nature` (19: beach, farm, forest, mountains, meadow, river, lake, pond,
+  desert, jungle, savanna, arctic, island, garden, park, orchard, campsite, field, picnic; 353 wires, 48,484
+  bytes), `scenes-town` (15: city street, village, playground, market, harbour, airport, railway station,
+  construction site, petrol station, zoo, fairground, football pitch, swimming pool, circus, castle; 292 / 42,689),
+  `scenes-indoors` (17: kitchen, bedroom, living room, bathroom, classroom, office, supermarket, restaurant,
+  library, hospital, workshop, theatre, museum, cafe, nursery, laboratory, birthday party; 363 / 53,642),
+  `scenes-other` (10: space, underwater, night, winter, autumn, spring, rainy day, Christmas, Halloween, pirate
+  ship; 202 / 30,015). 1,088 `has` facts (12 to 26 things per scene), 61 word facts. Written by
+  `tools/scenes-core.mjs` from the data in `tools/scenes-data.mjs`.
+- **Things with a drawing: 1,062 of 1,088 (97.6%)**; per scene in `docs/worlds/k.scenes/WORLD.md` (the table): 42
+  scenes have a drawing for every thing; the lowest is the airport (12 of 15). Without a drawing: dune, iceberg,
+  lamp post, street lamp, sandbox, stall, control tower, runway, windsock, diving board, trapeze, ring, moat, pipe,
+  till, stage, seat, mobile, party hat, seaweed, shipwreck, firefly, snowball, pirate ship. People in a scene
+  (farmer, teacher, pirate, swimmer) are drawn by `person`.
+- **Looked at, the drawings behind the things:** (1) the 66 things I gave another object's drawing (`farmhouse` <
+  house, `crow` < "black bird"), on 2 sheets: **19 drawings taken away as misleading** (lamp post and street lamp
+  by the red and white pole, runway by the street, windsock by the flag, diving board by the bench, trapeze by the
+  swing, moat by the river, till by the cash machine, stage by the table, mobile by the star, party hat by the party
+  popper, shipwreck and pirate ship by the passenger liner, firefly by the star, snowball by the red ball, stall by
+  the camping tent, control tower by the castle tower …). (2) All 497 distinct drawings matched by name, on 6 sheets
+  of 84 at 100 px: **4 more taken away or changed**: `pipe` (the object is a pipe to smoke), `ring` (a finger ring),
+  `seat` (an aeroplane seat, for the theatre), `scales` in the supermarket (bathroom scales; now `balance scale`).
+  A thing can say `=-` in the data to refuse the object of its own name.
+- **Looked at, the scenes:** new tool `tools/render-scenes.mjs` composes every scene from the facts alone (layers by
+  `where`, the side, what a thing is on, the size class from `k.scenes.thing`, at most five of a thing; no
+  randomness) and writes `docs/worlds/k.scenes/preview/` (61 SVG that refer to the object previews, and
+  `index.html`; 440 kB). All 61 pictures looked at on 7 sheets of 9, twice for the first three sheets. What the
+  first look changed in the **facts**: things on water now say on which water (`sailboat` on `sea`, `duck` on
+  `pond`; a test requires it; before, the shark of the island lay on the sand); `fills=true` for the sea and the
+  road (the sea object is a square picture: drawn as a block in the middle of the beach it read as a poster); moon
+  and stars left the bedroom, snowflakes and the sleigh left the indoor Christmas; a size is looked up by the name
+  of the thing before the name of its drawing (a puddle drawn by the pond is small, not huge).
+- **Verdict by eye:** recognisable as the scene: beach, farm, field, forest, meadow, orchard, desert, savanna,
+  arctic, campsite, harbour, island, mountains, garden, park, playground, village, city street, airport, railway
+  station, construction site, space, underwater, night, winter, autumn, spring, rainy day, Halloween, pond, lake.
+  **Weak:** the rooms (kitchen, bathroom, office, restaurant, supermarket, library, cafe, laboratory): small things
+  on tables and shelves shrink to dots, and furniture has no depth; market and fairground (the stalls have no
+  drawing); swimming pool (the pool sits on the horizon); zoo (crowded on one side); pirate ship (no ship: its
+  crew and cannon stand in the sea). The river, path and lake objects are whole small pictures (seen from above,
+  or with their own mountains) and stay blocks in a scene. These are limits of the composer and of the object
+  drawings more than of the facts; the composer is a check, not the application's renderer.
+- **Not looked at:** the published SVG files in a browser (I looked at the same layouts with the drawings copied
+  in, rasterised by rsvg-convert); `index.html` of the previews.
+- **Judgement that is mine:** which 61 scenes, what is in each and how many, where (a hand-written core); the
+  refusals of drawings above.
+- **What SOP Lang could not say:** "a thing on water must say on which water unless the ground of its scene is
+  water" joins `has` with its scene and negates a value there; I wrote it as a test, not as a rule. That a thing's
+  `on` names a thing of the same scene is a test too.
+- Tests: the shards are what the tool gives; scene, drawing and `on` exist; every scene has at least 10 things and
+  two things that happen; at least three quarters of a scene's things have a drawing; every scene lays out inside
+  the frame and its preview file is what the composer gives; 10 new questions (sc-11 to sc-20).
+- Numbers: k.scenes 31 shards, 3,249 wires, 438,609 bytes. Catalog 13 worlds, 775 shards, vocab 19,328 words; 0
+  errors, 0 warnings. npm test 2,391 pass, 0 fail.

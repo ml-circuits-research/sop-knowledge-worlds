@@ -47,7 +47,9 @@
 # rest), `wall` (on the back wall of a room), `ground` (standing on the ground or the floor), `water` (on or in the
 # water of the scene), `foreground` (near, in front of the rest); `side` is `left`, `centre` or `right` where the
 # thing has a usual side; `on` names another thing of the same scene that it is on or in (a duck on the pond, a cup
-# on the table); `drawing` names the k.objects object that draws the thing, where one exists.
+# on the table), and a thing on or in the water of a scene that is not all water says on which water (a boat on the
+# sea); `fills=true` says that the thing fills its layer from side to side (the sea behind a beach, the road of a
+# street); `drawing` names the k.objects object that draws the thing, where one exists.
 @k.scenes.has core.type of=k.scenes.has shared=true closed=true core.source="hand-core 1"
 @k.scenes.has.scene core.slot of=k.scenes.has key=scene id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.scenes.has.thing core.slot of=k.scenes.has key=thing id=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -55,6 +57,7 @@
 @k.scenes.has.where core.slot of=k.scenes.has key=where required=true enum=sky enum=ceiling enum=background enum=wall enum=ground enum=water enum=foreground core.source="hand-core 1"
 @k.scenes.has.side core.slot of=k.scenes.has key=side enum=left enum=centre enum=right core.source="hand-core 1"
 @k.scenes.has.on core.slot of=k.scenes.has key=on kind=atom kind=string core.source="hand-core 1"
+@k.scenes.has.fills core.slot of=k.scenes.has key=fills kind=boolean core.source="hand-core 1"
 @k.scenes.has.drawing core.slot of=k.scenes.has key=drawing kind=atom kind=string core.source="hand-core 1"
 
 # Words for the types and keys of this world.

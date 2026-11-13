@@ -8,3 +8,13 @@
 {"id":"sc-08","ask":"where is a cup usually","query":{"type":"k.scenes.thing","where":{"name":"cup"},"seek":"place"},"expect":{"status":"supported","value":"indoors"}}
 {"id":"sc-09","ask":"what is usually on a horse","query":{"type":"k.scenes.thing","where":{"on":"horse"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["saddle","stirrups"]}}
 {"id":"sc-10","ask":"how big is a cow","query":{"type":"k.scenes.thing","where":{"name":"cow"},"seek":"size"},"expect":{"status":"supported","value":"large"}}
+{"id":"sc-11","ask":"what is usually in the sky at a beach","query":{"type":"k.scenes.has","where":{"scene":"beach","where":"sky"},"seek":"thing","mode":"list"},"expect":{"status":"supported","values":["sun","cloud","seagull"]}}
+{"id":"sc-12","ask":"how many cows are usually on a farm","query":{"type":"k.scenes.has","where":{"scene":"farm","thing":"cow"},"seek":"count"},"expect":{"status":"supported","value":"3"}}
+{"id":"sc-13","ask":"what is the duck on at a farm","query":{"type":"k.scenes.has","where":{"scene":"farm","thing":"duck"},"seek":"on"},"expect":{"status":"supported","value":"pond"}}
+{"id":"sc-14","ask":"what covers the ground at a beach","query":{"type":"k.scenes.scene","where":{"name":"beach"},"seek":"ground"},"expect":{"status":"supported","value":"sand"}}
+{"id":"sc-15","ask":"what happens in a classroom","query":{"type":"k.scenes.scene","where":{"name":"classroom"},"seek":"happens","mode":"list"},"expect":{"status":"supported","values":["learn","read","write","count","\"raise a hand\""]}}
+{"id":"sc-16","ask":"which scenes are underwater","query":{"type":"k.scenes.scene","where":{"kind":"underwater"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["underwater"]}}
+{"id":"sc-17","ask":"what weather fits winter","query":{"type":"k.scenes.scene","where":{"name":"winter"},"seek":"weather"},"expect":{"status":"supported","value":"snowy"}}
+{"id":"sc-18","ask":"what draws the farmhouse of a farm","query":{"type":"k.scenes.has","where":{"scene":"farm","thing":"farmhouse"},"seek":"drawing"},"expect":{"status":"supported","value":"house"}}
+{"id":"sc-19","ask":"where in the picture is the sea of a beach","query":{"type":"k.scenes.has","where":{"scene":"beach","thing":"sea"},"seek":"where"},"expect":{"status":"supported","value":"background"}}
+{"id":"sc-20","ask":"in which scenes is there usually a tractor","query":{"type":"k.scenes.has","where":{"thing":"tractor"},"seek":"scene","mode":"list"},"expect":{"status":"supported","values":["farm","field"]}}

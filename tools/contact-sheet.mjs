@@ -18,7 +18,7 @@ export function contactSheets(rows, out, { cols = 8, rowsPerPage = 5, size = 150
     rows.slice(p * per, (p + 1) * per).forEach(([name, caption], i) => {
       const svg = name.endsWith('.svg') ? name : join(preview, `${fileOf(name)}.svg`);
       const png = join(out, 'cells', `${p}-${i}.png`);
-      if (existsSync(svg)) execFileSync('rsvg-convert', ['-w', String(size), '-h', String(size), '-b', 'white', '-o', png, svg]);
+      if (existsSync(svg)) execFileSync('rsvg-convert', ['-a', '-w', String(size), '-h', String(size), '-b', 'white', '-o', png, svg]);
       else execFileSync('convert', ['-size', `${size}x${size}`, 'xc:#fdd', png]);
       args.push('-label', (caption ?? name).replace(/\|/g, '\n'), png);
     });
