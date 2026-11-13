@@ -74,4 +74,4 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: the WordNet licence (permissive: use, copy, modify and distribute for any purpose, with the copyright notice kept); written `WordNet-3.0` in shard headers and the catalog, the name of the licence text.
 - Attribution: WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved. THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. The full licence text is `LICENSE` in the archive and at https://wordnet.princeton.edu/license-and-commercial-use . Which words are kept was chosen with the FrequencyWords list (see `sources/frequency-words/SOURCE.md`).
 - Shard terms: WordNet-3.0
-- Used by: `k.words` (318 shards)
+- Used by: `k.objects` (1 shards), `k.words` (318 shards)

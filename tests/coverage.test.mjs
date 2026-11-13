@@ -4,8 +4,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { coverage, missingPage, plurals, run, objectNames } from '../tools/coverage.mjs';
+import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
+import { coverage, missingPage, wordsShard, WORDS_SHARD, plurals, run, objectNames } from '../tools/coverage.mjs';
 
 const files = {
   'data.noun': [
@@ -71,4 +71,30 @@ test('MISSING.md on disk is what the tool gives; the list has 1,500 words', { sk
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.objects', 'MISSING.md'), 'utf8'), missingPage(result));
   const names = new Set(objectNames());
   for (const e of result.list) { if (e.drawing) assert.ok(names.has(e.drawing), e.word); if (e.link) assert.ok(names.has(e.link.drawing), e.word); }
+});
+
+test('the links are a shard of core.word facts with WordNet as the source', () => {
+  const text = wordsShard(coverage(opts));
+  assert.ok(text.includes('# license: WordNet-3.0'));
+  assert.deepEqual(text.split('\n').filter((l) => l.startsWith('@')), [
+    '@k.objects.wordnet.same.automobile core.word text=automobile means=car of=k.objects.object.name core.source="wordnet 3.1"',
+    '@k.objects.wordnet.kind.puppy core.word text=puppy means=Dog of=k.objects.object.name core.source="wordnet 3.1"',
+  ]);
+});
+
+test('words-wordnet.sop on disk is what the tool gives; every word names an object and is not an object name itself', { skip: !raw && 'raw files not downloaded' }, () => {
+  const result = run();
+  assert.equal(readFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${WORDS_SHARD}.sop`), 'utf8'), wordsShard(result));
+  const names = new Set(objectNames());
+  const lower = new Set([...names].map((n) => n.toLowerCase()));
+  const world = fullWorld('k.objects');
+  const words = world.ofType('core.word').filter((w) => w.attrs['core.source']?.includes('"wordnet 3.1"'));
+  assert.equal(words.length, result.stats.bySynonym + result.stats.byHypernym);
+  for (const w of words) {
+    const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
+    assert.ok(names.has(tok(w.attrs.means[0])), w.id);
+    assert.ok(!lower.has(tok(w.attrs.text[0])), w.id);
+  }
+  const puppy = words.find((w) => w.attrs.text[0] === 'puppy');
+  assert.equal(puppy?.attrs.means[0], 'dog');
 });

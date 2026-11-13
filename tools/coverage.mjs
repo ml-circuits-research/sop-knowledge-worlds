@@ -1,7 +1,8 @@
 // Coverage of common things by k.objects (R4.2): the most frequent English nouns that name a physical thing
 // (frequency list x WordNet), which of them have a drawing, and which word without one has a WordNet synonym or
 // direct hypernym with a drawing (R4.4). Deterministic.
-//   node tools/coverage.mjs            writes docs/worlds/k.objects/MISSING.md and prints the numbers
+//   node tools/coverage.mjs            writes docs/worlds/k.objects/MISSING.md and the shard
+//                                      docs/worlds/k.objects/shards/words-wordnet.sop, and prints the numbers
 //   node tools/coverage.mjs --list     prints the list (rank, word, count, drawing, link) as TSV instead
 // The rule, for a word of the frequency list (the word itself, no inflection; rank = its place among the kept words):
 //   1. it is a noun lemma of WordNet, spelt with letters only, at least three of them;
@@ -24,6 +25,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
 import { readData, readIndex } from './import/wordnet.mjs';
+import { wire, seg, header } from './import/lib.mjs';
 
 export const LIMIT = 1500;
 // physical object, living thing, food (nutrient), food (solid food), artifact
@@ -174,7 +176,8 @@ bank).
 ## The ${missing.length} words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
-that has a drawing. The gloss is WordNet's, for the sense kept.
+that has a drawing; each link is a \`core.word\` fact of the shard \`words-wordnet\`, so that the word finds that
+drawing. The gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
@@ -184,6 +187,21 @@ Sources of this page: the order of the words is from FrequencyWords 2018 by Herm
 OpenSubtitles 2018); the senses, synonyms and hypernyms are from Princeton WordNet 3.1 (WordNet licence, see
 \`k.words/LICENSE\`). This page is under CC BY-SA 4.0.
 `;
+}
+
+// R4.4: the links as a k.objects shard: a core.word from the word to the object that draws its synonym or its direct
+// hypernym, with WordNet as the source. The synonyms first, then the hypernyms, each by word.
+export const WORDS_SHARD = 'words-wordnet';
+export function wordsShard({ list }) {
+  const links = list.filter((e) => e.link).sort((a, b) => (a.word < b.word ? -1 : a.word > b.word ? 1 : 0));
+  const lines = (kind, id) => links.filter((e) => e.link.kind === kind)
+    .map((e) => wire(`k.objects.wordnet.${id}.${seg(e.word)}`, 'core.word', [['text', e.word], ['means', e.link.drawing], ['of', 'k.objects.object.name']], 'wordnet 3.1'));
+  return `${header({
+    id: `k.objects/shards/${WORDS_SHARD}`,
+    about: 'words for common things that have no drawing of their own: each word names the object that draws its WordNet synonym (the same thing) or its direct hypernym (the kind of thing it is: a puppy is drawn by the dog).',
+    sources: ['wordnet 3.1 (Princeton WordNet 3.1: synonyms and direct hypernyms; the words are the common things of tools/coverage.mjs, chosen with frequency-words 2018)'],
+    license: 'WordNet-3.0', script: 'tools/coverage.mjs',
+  })}\n# The word and the object are the same thing (WordNet synonyms).\n${lines('synonym', 'same').join('\n')}\n\n# The object is the kind of thing the word names (the word's direct hypernym in WordNet).\n${lines('hypernym', 'kind').join('\n')}\n`;
 }
 
 // The names of the k.objects objects, read from the shards.
@@ -207,6 +225,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     for (const e of result.list) console.log([e.rank, e.word, e.count, e.drawing ?? '', e.link ? `${e.link.kind} ${e.link.word} -> ${e.link.drawing}` : '', e.gloss].join('\t'));
   } else {
     writeFileSync(join(WORLDS_DIR, 'k.objects', 'MISSING.md'), missingPage(result));
+    writeFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${WORDS_SHARD}.sop`), wordsShard(result));
     console.log(JSON.stringify(result.stats));
   }
 }

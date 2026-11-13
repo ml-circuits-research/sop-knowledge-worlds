@@ -1,5 +1,5 @@
 {
- "version": "763560194a6a",
+ "version": "6e958957eeea",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -13265,6 +13265,18 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.objects/shards/words-wordnet",
+     "path": "k.objects/shards/words-wordnet.sop",
+     "wires": 250,
+     "bytes": 30238,
+     "keys": [],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -13272,12 +13284,14 @@
     "hand-core-1",
     "mulberry-fa94a93",
     "noto-emoji-99701e0",
-    "openmoji-3e01de5"
+    "openmoji-3e01de5",
+    "wordnet-3.1"
    ],
    "licenses": [
     "Apache-2.0 AND Unicode-3.0",
     "CC-BY-SA-4.0",
-    "CC0-1.0"
+    "CC0-1.0",
+    "WordNet-3.0"
    ],
    "warnings": []
   },

@@ -861,3 +861,73 @@ as the join from a fact to its drawing), Q18 (how to say an approximate number),
   shards, 298,073 wires, 36,005,450 bytes. Catalog: 10 worlds, 653 shards, vocab 18,022 words; 0 errors, 0 warnings.
 - **Coverage after R4.3:** 582 of the 1,500 common things have a drawing of their name (38.8%; 522 before): the 60
   new drawings. npm test 2,211 pass, 0 fail (139 s).
+
+## R4.4 (2026-11-13): synonyms and direct hypernyms to drawings
+
+- `tools/coverage.mjs` now also writes the shard `k.objects/shards/words-wordnet` (source `wordnet 3.1`, licence
+  WordNet-3.0, script `tools/coverage.mjs`): one `core.word text=<word> means=<object> of=k.objects.object.name` per
+  common thing without a drawing whose WordNet synonym (ids `k.objects.wordnet.same.<word>`) or direct hypernym
+  (`k.objects.wordnet.kind.<word>`) has one. **250 wires, 30,238 bytes: 63 synonyms** (couch → sofa, cellphone →
+  "mobile phone", theatre → theater) **and 187 hypernyms** (puppy → dog, cathedral → church, skyscraper → building).
+- **No guessed links, two guards.** (1) By rule: the other word must be kept by the same rule in that same synset
+  (its physical sense with the most counts). This alone removed about 80 of the first 315 links (iris → flag, theater →
+  house, penitentiary → pen, tire → ring). (2) By looking: I read all the links and looked at the drawings whose
+  name can mean two things (26 previews on one sheet: construction, slug, motor, cereal, hose, plant, station,
+  fabric, mints, poultry, bush, ring, toilet, tap, …); **`sources/coverage/not-links.tsv` refuses 41 links** with a
+  reason: the drawing of that name is another thing (building → "construction", a roadworks barrier; wheat →
+  "cereal", a bowl of breakfast cereal; stocking → "hose", a garden hose) or the word mostly means something else
+  than the sense WordNet's counts keep (blade, grinder, bike, barrel, hammock, hydrant).
+- **Not looked at:** the other drawings behind the links (the 250 words point to 159 distinct objects; about 135
+  of them not looked at): for them I relied on the
+  name and on the sense guard. A hypernym link gives the picture of the kind, not of the thing (every shop for
+  bakery, pharmacy, bookstore; "herb" for basil, parsley, dill); a host can tell the two by the id.
+- 35 of the 250 words were already a keyword of some object (emoji keywords: bike, store, photo, globe …); the
+  WordNet word is added next to those.
+- The scope is the 1,500 common things only (the list that was read); words further down the frequency list get
+  no link.
+- **Coverage of the 1,500 common things:**
+
+| | Before Round 4 (R4.2) | After R4.3 | After R4.4 |
+| --- | --- | --- | --- |
+| a drawing of that name | 522 (34.8%) | 582 (38.8%) | 582 (38.8%) |
+| a word to a synonym's drawing | 0 | 0 | 63 (4.2%) |
+| a word to the hypernym's drawing | 0 | 0 | 187 (12.5%) |
+| reach a drawing | 522 (34.8%) | 582 (38.8%) | **832 (55.5%)** |
+| nothing | 978 | 918 | 668 |
+
+  R4.4 adds 250 words (16.7 points). Had the links been made before the 60 drawings, they would have been 215.
+- Tests: `tests/coverage.test.mjs` (the shard from the fixture; the shard on disk is what the tool gives; every
+  word names an object and is not itself an object name; puppy → dog).
+- Numbers: k.objects 2,003 objects, 306 shards, 298,323 wires, 36,035,688 bytes. Catalog: 10 worlds, 654 shards,
+  331,649 wires, 42,399,192 bytes, vocab 18,102 words; 0 errors, 0 warnings. npm test 2,213 pass, 0 fail (159 s).
+
+## Round 4 report (2026-11-13)
+
+**Done, in order:** answers Q16 to Q19 (f33df47), R4.1 (bef5cc9), R4.2 (a09dde9), R4.3 in two batches (517b821,
+1f12433), R4.4 (this commit).
+
+**R4.1 audit error rates** (200 named parts, seed 4; `sources/part-names-audit.tsv`): Noto 11 wrong of 100 (11%, 3
+unclear), OpenMoji 0 of 30, Mulberry 1 of 70 (1.4%, 3 unclear). Noto was above 10%, so all its 2,027 names were
+looked at: 57 wrong (2.8%), 38 unclear; 28 moved or renamed, 29 removed; a second sample of 100 after the fixes: 0
+wrong, 4 unclear. Named parts now: Noto 1,999, OpenMoji 153, Mulberry 1,166.
+
+**Coverage of the 1,500 common things:** 522 with a drawing before (34.8%); 582 after the 60 hand-written objects
+(38.8%); 832 reach a drawing with the WordNet words (55.5%); 668 have nothing (`MISSING.md`).
+
+**k.objects:** 2,003 objects (120 hand-written, 811 Noto, 114 OpenMoji, 958 Mulberry after the football kits),
+306 shards. The 2,000 target is passed.
+
+**Looked at:** the 200 audit pictures (17 sheets); all 2,027 Noto names as small highlight pictures (43 sheets);
+about 50 labelling and highlight pictures while fixing; the second Noto sample (9 sheets); the 60 hand-written
+previews (6 sheets, three objects twice); 26 drawings behind doubtful links; two football kits. **Not looked at:**
+Mulberry and OpenMoji names outside the audit sample; whether unnamed parts should have a name; the 522 drawings
+that match a common thing by name against the sense kept; most drawings behind the WordNet links; the gallery page
+with the new objects (its test passes; no browser run this round).
+
+**Judgement that is mine, not a rule:** the 695 words of `not-things.tsv` and the 41 links of `not-links.tsv`
+(Q20); which of the first missing words were passed over as not drawable (they are in `not-things.tsv`).
+
+**What SOP Lang could not say, or only with a workaround:** whether a `core.word` link is "the same thing" or
+"the kind of thing" (said by the id and by the order in the shard; `core.word` has no standard key for it). Q21.
+
+**Open questions:** Q20 (is the list of common things right as built), Q21 (a key for the kind of a word link).

@@ -193,3 +193,15 @@ not in the list, although `k.objects` has drawings of some. Options: (1) keep; (
 (man, woman, baby, king, doctor) and body parts as two more lists; (3) a stricter mechanical rule and no reading
 (the list then has names and verb forms in its first hundred).
 Blocking: no. Meanwhile: (1).
+
+## Q21 (task R4.4, 2026-11-13)
+Question: how should a `core.word` say that its word is not the thing itself but a kind of it (`puppy` → the drawing
+of `dog`), as opposed to a synonym (`couch` → `sofa`)?
+Context: `core.word` has `text`, `means`, `of`. A host that draws "a puppy" with the dog drawing may want to know it
+is only the kind. Tried: `core.word text=… means=dog of=k.objects.object.name as=kind` told to a fork of the world
+is accepted by sopworld 0.15.0 with no warning, but no reader knows such a key and nothing checks its values, so I
+did not publish a key of my own. Workaround: the id says it (`k.objects.wordnet.same.<word>`, `k.objects.wordnet.kind.<word>`) and the
+shard lists the synonyms first. Options: (a) keep; (b) two shards (`words-same`, `words-kind`) so that the catalog
+entry says it; (c) a type of `k.objects` for the link (`k.objects.drawn_by word=puppy object=dog as=kind`) instead of
+`core.word`, which the vocabulary builder would then have to read; (d) sopworld: a standard key on `core.word`.
+Blocking: no. Meanwhile: (a).

@@ -17,21 +17,22 @@ bank).
 | --- | --- | --- |
 | Common things | 1,500 | |
 | with a drawing of that name | 582 | 38.8% |
-| without, but a WordNet synonym has a drawing | 65 | 4.3% |
-| without, but the direct hypernym has a drawing | 192 | 12.8% |
-| with no drawing at all | 661 | 44.1% |
+| without, but a WordNet synonym has a drawing | 63 | 4.2% |
+| without, but the direct hypernym has a drawing | 187 | 12.5% |
+| with no drawing at all | 668 | 44.5% |
 
 ## The 918 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
-that has a drawing. The gloss is WordNet's, for the sense kept.
+that has a drawing; each link is a `core.word` fact of the shard `words-wordnet`, so that the word finds that
+drawing. The gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
 | 38 | store | synonym shop | a mercantile establishment for the retail sale of goods or services |
 | 56 | engine | hypernym motor | motor that converts thermal energy to mechanical work |
 | 72 | photo | synonym photograph (drawing "photographs") | a representation of a person or scene in the form of a print or transparent slide or in digital format |
-| 95 | bike | synonym motorcycle | a motor vehicle with two wheels and a strong frame |
+| 95 | bike |  | a motor vehicle with two wheels and a strong frame |
 | 113 | palace | synonym castle | a large and stately mansion |
 | 154 | couch | synonym sofa | an upholstered seat for more than one person |
 | 156 | closet | synonym cupboard | a small room (or recess) or cabinet used for storage space |
@@ -69,9 +70,9 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 284 | cabinet |  | a piece of furniture resembling a cupboard with doors and shelves and drawers |
 | 285 | vault |  | a burial chamber (usually underground) |
 | 289 | collar |  | a band that fits around the neck and is usually folded over |
-| 293 | barrel | hypernym tube | a tube through which a bullet travels when a gun is fired |
+| 293 | barrel |  | a tube through which a bullet travels when a gun is fired |
 | 294 | cannon |  | a large artillery gun that is usually on wheels |
-| 298 | ginger | hypernym herb | perennial plants having thick branching aromatic rhizomes and leafy reedlike stems |
+| 298 | ginger |  | perennial plants having thick branching aromatic rhizomes and leafy reedlike stems |
 | 300 | tub | synonym bathtub | a relatively large open container that you fill with water and use to wash the body |
 | 301 | rod |  | a long thin implement made of metal or wood |
 | 303 | cafe | hypernym restaurant | a small restaurant where drinks and snacks are sold |
@@ -598,7 +599,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1091 | clementine |  | a variety of mandarin orange that is grown around the Mediterranean and in South Africa |
 | 1092 | halibut |  | lean flesh of very large flatfish of Atlantic or Pacific |
 | 1093 | mural | hypernym painting | a painting that is applied to a wall surface |
-| 1094 | hammock | hypernym hill | a small natural hill |
+| 1094 | hammock |  | a small natural hill |
 | 1095 | buttercup | hypernym herb | any of various plants of the genus Ranunculus |
 | 1096 | refinery |  | an industrial plant for purifying a crude substance |
 | 1097 | mane |  | long coarse hair growing from the crest of the animal's neck |
@@ -792,7 +793,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1327 | vino | synonym wine | fermented juice (of grapes especially) |
 | 1329 | coupe | hypernym car | a car with two doors and front seats and a luggage compartment |
 | 1330 | pastrami |  | highly seasoned cut of smoked beef |
-| 1331 | flipper | hypernym shoe | a shoe for swimming |
+| 1331 | flipper |  | a shoe for swimming |
 | 1332 | scaffold |  | a platform from which criminals are executed (hanged or beheaded) |
 | 1334 | mullet |  | highly valued lean flesh of marine or freshwater mullet |
 | 1335 | liqueur |  | strong highly flavored sweet liquor usually drunk after a meal |
@@ -843,7 +844,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1383 | pajama | synonym pyjama (drawing "pyjamas") | a pair of loose trousers tied by a drawstring around the waist |
 | 1385 | racehorse | hypernym horse | a horse bred for racing |
 | 1386 | glider |  | aircraft supported only by the dynamic action of air against its surfaces |
-| 1387 | hydrant | synonym tap | a faucet for drawing water from a pipe or cask |
+| 1387 | hydrant |  | a faucet for drawing water from a pipe or cask |
 | 1388 | hoarding |  | large outdoor signboard |
 | 1389 | veranda |  | a porch along the outside of a building (sometimes partly enclosed) |
 | 1390 | paella |  | saffron-flavored dish made of rice with shellfish and chicken |
@@ -870,7 +871,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1416 | nautilus |  | a submarine that is propelled by nuclear power |
 | 1417 | platypus |  | small densely furred aquatic monotreme of Australia and Tasmania having a broad bill and tail and webbed feet |
 | 1419 | loin | hypernym cut of meat | a cut of meat taken from the side and back of an animal between the ribs and the rump |
-| 1421 | anklet | hypernym shoe | a shoe for a child or woman that has a strap around the ankle |
+| 1421 | anklet |  | a shoe for a child or woman that has a strap around the ankle |
 | 1422 | paprika | synonym bell pepper | plant bearing large mild thick-walled usually bell-shaped fruits |
 | 1423 | boathouse |  | a shed at the edge of a river or lake |
 | 1424 | phonograph |  | machine in which rotating records cause a stylus to vibrate and the vibrations are amplified acoustically or electronically |
