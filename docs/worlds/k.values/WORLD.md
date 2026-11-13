@@ -15,8 +15,8 @@ a place in the picture, which of several things, or a number.
 - `k.values.scale` and `k.values.step` (identity `scale`, `name`; `rank` from 1, the least): size (tiny, small,
   medium, large, huge: the sizes of `k.scenes.thing`), length, width, height, thickness, amount (none, a bit, some,
   a lot, all), degree (slightly, somewhat, quite, very, extremely), brightness, speed, weight, temperature,
-  distance, loudness: 13 scales, 44 steps. Other words for a step are `core.word` facts (big: large; little: small).
-- `k.values.comparative` (identity `text`, `scale`): 82 comparatives and superlatives with `way` (up: towards the
+  distance, loudness, price (cheap, medium, expensive: the price class of `k.attributes.number`): 14 scales, 47 steps. Other words for a step are `core.word` facts (big: large; little: small).
+- `k.values.comparative` (identity `text`, `scale`): 90 comparatives and superlatives with `way` (up: towards the
   most) and `degree` (bigger: size, up; shortest: length and height, down; more, fewer, least).
 - `k.values.shape`: 30 shape names, `solid=true` for the six with depth; plurals and adjectives as words (round:
   circle). Sides, corners and things of a shape are not here.
@@ -31,7 +31,7 @@ a place in the picture, which of several things, or a number.
 
 ## Shards
 
-`colours-css` (233 wires), `colours-common` (44), `scales` (171), `shapes` (60), `directions` (61), `sets` (37),
+`colours-css` (233 wires), `colours-common` (44), `scales` (186), `shapes` (60), `directions` (61), `sets` (37),
 `numbers` (232): 838 wires. Written by `tools/values-core.mjs`.
 
 ## What it does not know

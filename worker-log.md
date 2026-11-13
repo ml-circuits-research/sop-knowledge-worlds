@@ -2669,3 +2669,45 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   from Q33 (taken by the second worker) to Q35.
 - Numbers: catalog 22 worlds, 903 shards, 3 schemas; vocab 23,293 to 23,325 words; 0 errors, 0 warnings.
   npm test 2,696: 2,695 pass, 1 skipped, 0 fail.
+## Round 10, item 5 (2026-11-14, second worker): the numeric aspect of common things
+
+- **New type `k.attributes.number`** (3 shards `numbers-a-f`, `-g-o`, `-p-z`; 990 wires, 163,488 bytes), written by
+  the new `tools/numbers-core.mjs` from the new table `sources/hand-core/numbers.tsv` (975 rows, model-labelled,
+  `named=model`, from the everyday meaning of the name): `size_about` (longest side, metres) 975, `weight_about`
+  (kilograms) 855, `speed_about` (usual top speed, km/h, for what moves by itself or carries people, animals
+  among them) 232, `legs` of things that are not animals 14 (a test forbids it on a name of `k.animals`), `sides` 8,
+  `price_class` 645. **Classes computed, not labelled:** `weight_class` (light under 2 kg, heavy over 30 kg) and
+  `speed_class` (slow under 10 km/h, fast over 60 km/h) come from the number in the tool, so they never disagree with
+  it. All three classes are steps of `k.values` scales: weight and speed existed; **new scale `price`** (cheap,
+  medium, expensive) with comparatives cheaper, dearer, more expensive and their superlatives.
+- **Joins, which is the point of the item:** `k.units.measure` for the five numbers (metre, kilogram, kilometre
+  per hour, counts leg, counts side); `k.attributes.found` for size, weight (number and class), speed (number and
+  class), legs, sides (also `k.shapes.shape.sides`), price; three new attributes (speed, sides, price; `holds`
+  gets the value `class`); kinds name weight, speed, price where usual; `k.attributes.shows` rows for common
+  thing, animal and food; `tools/joins.mjs` knows the type (sense from the name, unknown), so `k.attributes.same`
+  now covers 3,330 names (68 clashes, as before). So "which is heavier, a horse or a cow" goes comparative ->
+  scale weight -> found -> `weight_about` of both.
+- **k.body:** `length_about` for 21 more parts of an adult (hand, foot, arm, leg, head, the face parts, heart, brain,
+  stomach, kidney, liver, tooth ...) and `weight_about` for kidney, stomach, eye; `k.attributes.found` size ->
+  `k.body.part.length_about`. "Which is bigger, a hand or a foot" was a gap the first worker left for this item.
+- **A defect of `tools/ask-real.mjs` found by these numbers and fixed by cause:** a comparison took for each thing
+  the first key it had, so "a train or a tent" compared the size class of the train with the metres of the tent.
+  Now two things are compared under one key both have, and only a thing without it falls back. The demo's real
+  questions (same tool): Talk failures found **115 -> 117** of 132 (horse or cow, hand or foot); knowledge 36 of 40.
+- **Audit** (`sources/hand-core/numbers-audit.tsv`): a seeded sample of 100 rows read against what I know: 97 right,
+  1 wrong (the speed of an ant), 2 unclear and left (a bell, a bale: which one); then every row whose weight over
+  the cube of its size is below 0.1 or above 1,000 kg per cubic metre (50 read): 3 wrong (caviar, spider, bug, all
+  too heavy), corrected. **Not read again:** the other ~820 rows; the price classes beyond the sample (they are the
+  coarsest and the most dependent on the reader); the 21 body lengths were written once.
+- **Left out on purpose:** substances and drinks, places and landforms with no one size (street, island), bodies
+  in space (k.space has them), the weight of buildings. COVERAGE.md has four new rows (size in metres 975 + 66
+  through the drawing, weight 855 + 38, speed 232 + 18, price 645 + 42); the gap lists are those substances and places.
+- **ASPECTS.md:** common thing numeric **45 (3%) -> 1,042 (69%)**; animal 291 -> 299; food – -> 87.
+- **Known weak:** a number is keyed by the name; for the 68 clash names (turkey, crane) it is the everyday sense
+  (the bird, the machine), and `k.attributes.same` does not say which sense a number has.
+- **Judgement that is mine:** every number and price class; the thresholds of the classes; what to leave out.
+- **What SOP Lang could not say:** that `weight_class` is a function of `weight_about` (a test checks it), and that
+  the values of a class slot are the steps of a named scale (an enum repeated; a test checks it).
+- Tests: `tests/k.attributes.test.mjs` (1 more), questions at-21 to at-23, at-08 and at-09 changed with the facts.
+- Numbers (after the rebase on R11.2): k.attributes 44 shards, 7,515 wires; `k.units` measures 144; `k.values` scales 186 wires. Catalog 22
+  worlds, 906 shards, 3 schemas, vocab 23,351 words; 0 errors, 0 warnings. npm test 2,700: 2,694 pass, 6 skipped, 0 fail.

@@ -15,7 +15,7 @@ written by a language model, only where sure (`named=model`).
   sentence on what a main organ or part does (23 parts: "The kidneys filter waste out of the blood and make urine.");
   `count_per_part` (5 fingers on a hand); approximate numbers with their units in `k.units.measure`: `count_about`
   (600 muscles, 100,000 hairs), `temperature_about` (the body, 37 degrees Celsius), `amount_about` (5 litres of
-  blood), `length_about` (the small intestine, 6 metres), `weight_about` (the brain, 1.4 kilograms). A part never
+  blood), `length_about` (the small intestine, 6 metres; the main outer parts and organs of an adult, 21 more: a hand 0.19, a foot 0.26 metres; model-labelled, Round 10 item 5), `weight_about` (the brain, 1.4 kilograms). A part never
   has both `count` and `count_about`.
 - `k.body.sense` (complete: exactly five): `name` (sight, hearing, smell, taste, touch) and `organ` (eye, ear, nose,
   tongue, skin).

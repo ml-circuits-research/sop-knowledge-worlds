@@ -158,7 +158,11 @@ export function ask(cat, question) {
   for (const c of scaleSpans) for (const sc of c.scales) {
     const places = cat.found.get(sc.scale) ?? [];
     const ts = thingSpans.filter((t) => !overlap(t, c));
-    const withValue = ts.map((t) => { for (const x of t.things) for (const p of places) if (p.type === x.type) { const vals = factsOf(x).flatMap((f) => valuesOf(f, p.key)); if (vals.length) return { t, x, p, vals }; } return null; });
+    // Two things are compared under one key where they both have it (the size class of both, not a class for one and
+    // metres for the other); a thing without it falls back to the first key it has.
+    const valueAt = (t, p) => { for (const x of t.things) if (p.type === x.type) { const vals = factsOf(x).flatMap((f) => valuesOf(f, p.key)); if (vals.length) return { t, x, p, vals }; } return null; };
+    const shared = places.find((p) => ts.length > 0 && ts.every((t) => valueAt(t, p)));
+    const withValue = ts.map((t) => (shared ? valueAt(t, shared) : places.map((p) => valueAt(t, p)).find(Boolean) ?? null));
     if (ts.length) push({ kind: 'scale', rank: 4, scale: sc.scale, thing: withValue.find(Boolean)?.x ?? ts[0].things[0], key: places.length ? places.map((p) => `${p.type}.${p.key}`).join(' ') : null, noPlace: !places.length,
       found: withValue.every(Boolean), answer: withValue.filter(Boolean).map((v) => `${v.x.name}: ${v.vals.join(', ')}`), used: used(c, ...ts), missing: ts.filter((t, i) => !withValue[i]).map((t) => t.text), lemma: ts.some((t) => t.lemma) });
     // A superlative with a word for a type ("the longest river"): some fact of the type has the scale's key.

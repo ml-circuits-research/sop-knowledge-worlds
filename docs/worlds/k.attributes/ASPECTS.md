@@ -8,9 +8,9 @@ through a synonym or a stand-in has the value.
 
 | family | things | visual | spatial | relational | numeric | textual | geographic | temporal | social |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| common thing | 1500 | 1045 (70%) | 1043 (70%) | 1500 (100%) | 45 (3%) | 1500 (100%) | – | – | – |
-| animal | 314 | 293 (93%) | 314 (100%) | 314 (100%) | 291 (93%) | 236 (75%) | – | – | – |
-| food | 229 | 207 (90%) | 151 (66%) | 229 (100%) | – | 158 (69%) | – | – | – |
+| common thing | 1500 | 1045 (70%) | 1043 (70%) | 1500 (100%) | 1042 (69%) | 1500 (100%) | – | – | – |
+| animal | 314 | 293 (93%) | 314 (100%) | 314 (100%) | 299 (95%) | 236 (75%) | – | – | – |
+| food | 229 | 207 (90%) | 151 (66%) | 229 (100%) | 87 (38%) | 158 (69%) | – | – | – |
 | country | 253 | – | – | 253 (100%) | 251 (99%) | 238 (94%) | 253 (100%) | – | – |
 | city | 1380 | – | – | 1380 (100%) | 1380 (100%) | – | 1380 (100%) | – | – |
 | river | 1065 | – | – | 1065 (100%) | – | – | 1065 (100%) | – | – |
@@ -27,9 +27,9 @@ through a synonym or a stand-in has the value.
 
 ## Where the values are
 
-- **common thing**: visual: `k.objects.object` (name), `k.objects.stand_in` (drawing), `k.attributes.thing` (colour, material), `k.objects.part` (colour), `k.attributes.drawn` (drawn_colour, drawn_shade); spatial: `k.scenes.thing` (place, size, on), `k.layouts.anchor` (kind); relational: `k.words.sense` (is_a, part_of, synonym), `k.attributes.thing` (kind, can, used_for), `k.layouts.joins` (rel), `k.objects.part` (name), `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has); numeric: `k.attributes.thing` (wheels); textual: `k.words.sense` (gloss).
-- **animal**: visual: `k.animals.animal` (drawing, covering), `k.attributes.thing` (colour); spatial: `k.animals.animal` (habitat), `k.scenes.thing` (place, size); relational: `k.animals.animal` (class, diet, eats, baby, can, cannot); numeric: `k.animals.animal` (legs); textual: `k.animals.animal` (sound), `k.words.sense` (gloss).
-- **food**: visual: `k.food.food` (colour, drawing); spatial: `k.scenes.thing` (place, size); relational: `k.food.food` (kind, botanically, grows_on, comes_from, eaten); textual: `k.words.sense` (gloss).
+- **common thing**: visual: `k.objects.object` (name), `k.objects.stand_in` (drawing), `k.attributes.thing` (colour, material), `k.objects.part` (colour), `k.attributes.drawn` (drawn_colour, drawn_shade); spatial: `k.scenes.thing` (place, size, on), `k.layouts.anchor` (kind); relational: `k.words.sense` (is_a, part_of, synonym), `k.attributes.thing` (kind, can, used_for), `k.layouts.joins` (rel), `k.objects.part` (name), `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has); numeric: `k.attributes.thing` (wheels), `k.attributes.number` (size_about, weight_about, weight_class, speed_about, speed_class, legs, sides, price_class); textual: `k.words.sense` (gloss).
+- **animal**: visual: `k.animals.animal` (drawing, covering), `k.attributes.thing` (colour); spatial: `k.animals.animal` (habitat), `k.scenes.thing` (place, size); relational: `k.animals.animal` (class, diet, eats, baby, can, cannot); numeric: `k.animals.animal` (legs), `k.attributes.number` (size_about, weight_about, speed_about); textual: `k.animals.animal` (sound), `k.words.sense` (gloss).
+- **food**: visual: `k.food.food` (colour, drawing); spatial: `k.scenes.thing` (place, size); relational: `k.food.food` (kind, botanically, grows_on, comes_from, eaten); numeric: `k.attributes.number` (size_about, weight_about, price_class); textual: `k.words.sense` (gloss).
 - **country**: relational: `k.geo.country` (capital, continent, region, neighbour); numeric: `k.geo.country` (population, area); textual: `k.geo.country` (formal, code); geographic: `k.geo.country` (lat, lon, west, south, east, north).
 - **city**: relational: `k.geo.city` (country, capital_of); numeric: `k.geo.city` (population); geographic: `k.geo.city` (lat, lon).
 - **river**: relational: `k.geo.river` (continent, country); geographic: `k.geo.river` (lat, lon, west, south, east, north).

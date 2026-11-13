@@ -9,5 +9,5 @@
 @k.attributes.same.quarter.time k.attributes.same name=quarter sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.queen.person k.attributes.same name=queen sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.quiche_flan.food k.attributes.same name="quiche flan" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.quill.thing k.attributes.same name=quill sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.quilt.thing k.attributes.same name=quilt sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.quill.thing k.attributes.same name=quill sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.quilt.thing k.attributes.same name=quilt sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

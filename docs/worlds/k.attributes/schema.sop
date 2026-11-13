@@ -6,12 +6,12 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
 @k.attributes.attribute.name core.slot of=k.attributes.attribute key=name id=true required=true kind=atom core.source="hand-core 1"
-@k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use core.source="hand-core 1"
+@k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use enum=class core.source="hand-core 1"
 @k.attributes.attribute.aspect core.slot of=k.attributes.attribute key=aspect required=true kind=atom core.source="hand-core 1"
 @k.attributes.attribute.about core.slot of=k.attributes.attribute key=about required=true kind=string core.source="hand-core 1"
 
@@ -56,6 +56,27 @@
 @k.attributes.drawn.name core.slot of=k.attributes.drawn key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
 @k.attributes.drawn.drawn_shade core.slot of=k.attributes.drawn key=drawn_shade many=true kind=atom kind=string core.source="hand-core 1"
+
+# The usual numbers of a common thing (tools/numbers-core.mjs), each only where it is plain and about right, for
+# a usual grown one in its everyday meaning: `size_about` the length of its longest side in metres; `weight_about`
+# its weight in kilograms; `speed_about` its usual top speed in kilometres per hour, when it moves by itself or
+# carries people; `legs` the legs of a thing that is not an animal (a chair; the legs of animals are in k.animals);
+# `sides` its flat sides where they are counted (a dice, a box). `weight_class` and `speed_class` are steps of the
+# k.values scales weight and speed, computed from the number (light under 2 kg, heavy over 30 kg; slow under
+# 10 km/h, fast over 60 km/h), never labelled apart; `price_class` (a step of the k.values scale price) says
+# whether it is cheap, medium or expensive to buy. The units are in k.units.measure. `named=model`: the values were
+# given by a language model from the name of the thing.
+@k.attributes.number core.type of=k.attributes.number shared=true closed=true core.source="hand-core 1"
+@k.attributes.number.name core.slot of=k.attributes.number key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.number.size_about core.slot of=k.attributes.number key=size_about kind=number min=0 core.source="hand-core 1"
+@k.attributes.number.weight_about core.slot of=k.attributes.number key=weight_about kind=number min=0 core.source="hand-core 1"
+@k.attributes.number.weight_class core.slot of=k.attributes.number key=weight_class enum=light enum=medium enum=heavy core.source="hand-core 1"
+@k.attributes.number.speed_about core.slot of=k.attributes.number key=speed_about kind=number min=0 core.source="hand-core 1"
+@k.attributes.number.speed_class core.slot of=k.attributes.number key=speed_class enum=slow enum=medium enum=fast core.source="hand-core 1"
+@k.attributes.number.legs core.slot of=k.attributes.number key=legs kind=integer min=0 core.source="hand-core 1"
+@k.attributes.number.sides core.slot of=k.attributes.number key=sides kind=integer min=0 core.source="hand-core 1"
+@k.attributes.number.price_class core.slot of=k.attributes.number key=price_class enum=cheap enum=medium enum=expensive core.source="hand-core 1"
+@k.attributes.number.named core.slot of=k.attributes.number key=named enum=model core.source="hand-core 1"
 
 # One name, one thing across worlds (computed by tools/joins.mjs): for a name that facts of more than one world
 # carry, its `sense` and the types (`in`, many) whose facts with that name are about that one thing. `only=true`:
@@ -105,6 +126,11 @@
 @k.attributes.word.material core.word text=material text=made text="made of" text="made from" means=k.attributes.thing.material core.source="hand-core 1"
 @k.attributes.word.wheels core.word text=wheel text=wheels means=k.attributes.thing.wheels core.source="hand-core 1"
 @k.attributes.word.can core.word text=can text=able means=k.attributes.thing.can core.source="hand-core 1"
+@k.attributes.word.number core.word text=numbers text="how big" text="how heavy" text="how fast" text=measurements means=k.attributes.number core.source="hand-core 1"
+@k.attributes.word.size_about core.word text=size text=long text=big text=metres text=meters means=k.attributes.number.size_about core.source="hand-core 1"
+@k.attributes.word.weight_about core.word text=weight text=weigh text=weighs text=heavy text=kilograms text=kilos means=k.attributes.number.weight_about core.source="hand-core 1"
+@k.attributes.word.speed_about core.word text=speed text=fast text=quick text="kilometres per hour" means=k.attributes.number.speed_about core.source="hand-core 1"
+@k.attributes.word.price_class core.word text=price text=cost text=costs text=expensive text=cheap means=k.attributes.number.price_class core.source="hand-core 1"
 @k.attributes.word.used_for core.word text=use text=used text="used for" text=for means=k.attributes.thing.used_for core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -121,6 +147,12 @@
 @k.attributes.word.key.thing.can core.word text=do means=k.attributes.thing.can core.source="hand-core 1"
 @k.attributes.word.key.thing.named core.word text=named means=k.attributes.thing.named core.source="hand-core 1"
 @k.attributes.word.key.drawn.drawn_shade core.word text="drawn shade" means=k.attributes.drawn.drawn_shade core.source="hand-core 1"
+@k.attributes.word.key.number.weight_class core.word text="weight class" means=k.attributes.number.weight_class core.source="hand-core 1"
+@k.attributes.word.key.number.speed_class core.word text="speed class" means=k.attributes.number.speed_class core.source="hand-core 1"
+@k.attributes.word.key.number.legs core.word text=legs means=k.attributes.number.legs core.source="hand-core 1"
+@k.attributes.word.key.number.sides core.word text=sides means=k.attributes.number.sides core.source="hand-core 1"
+@k.attributes.word.key.number.price_class core.word text="price class" means=k.attributes.number.price_class core.source="hand-core 1"
+@k.attributes.word.key.number.named core.word text=named means=k.attributes.number.named core.source="hand-core 1"
 @k.attributes.word.key.same.sense core.word text=sense means=k.attributes.same.sense core.source="hand-core 1"
 @k.attributes.word.key.same.only core.word text=only means=k.attributes.same.only core.source="hand-core 1"
 @k.attributes.word.key.same.in core.word text=in means=k.attributes.same.in core.source="hand-core 1"

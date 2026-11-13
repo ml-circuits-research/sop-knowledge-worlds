@@ -17,6 +17,15 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   type and, for drawings, the group the source filed them in. Nothing in SOP Lang can refer to the shard a fact
   is in, so the rule lives in a tool and its output is facts; the facts must be regenerated when any world
   changes, which is why `npm run build` runs the tool.
+- **A class next to a number should be computed, not labelled** (R10.5). `weight_class` and `speed_class` come from
+  `weight_about` and `speed_about` by a threshold in the tool, so the two never disagree; only `price_class`, which
+  has no number behind it, is labelled. The class values are steps of a `k.values` scale, so a comparative word
+  ("heavier") reaches both the class and the number through one join (`k.attributes.found`).
+- **Comparing needs one key for both sides** (R10.5). Once a thing had two keys for one scale (a size class and
+  metres), a host that takes "the first key each thing has" compares unlike values. Lesson for hosts and for the
+  catalog: a scale may be found under several keys, and a comparison must pick a key both things share.
+- **A cheap mechanical check finds what reading does not** (R10.5): weight over the cube of the size flagged three
+  wrong weights that a reading of 100 random rows had passed.
 
 ## Round 11 (first worker)
 

@@ -5,8 +5,8 @@
 {"id":"at-05","ask":"what can a helicopter do","query":{"type":"k.attributes.thing","where":{"name":"helicopter"},"seek":"can","mode":"list"},"expect":{"status":"supported","values":["fly","move"]}}
 {"id":"at-06","ask":"what is a ladder used for","query":{"type":"k.attributes.thing","where":{"name":"ladder"},"seek":"used_for"},"expect":{"status":"supported","value":"\"climbing\""}}
 {"id":"at-07","ask":"which things are usually pink","query":{"type":"k.attributes.thing","where":{"colour":"pink"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["flamingo","pig","worm","blossom","\"cherry blossom\"","lotus"]}}
-{"id":"at-08","ask":"where is the number of legs of an animal found","query":{"type":"k.attributes.found","where":{"attribute":"legs"},"seek":"type"},"expect":{"status":"supported","value":"k.animals.animal"}}
-{"id":"at-09","ask":"which attributes does a vehicle usually have","query":{"type":"k.attributes.kind","where":{"name":"vehicle"},"seek":"attribute","mode":"list"},"expect":{"status":"supported","values":["colour","size","place","parts","material","wheels","can","used_for"]}}
+{"id":"at-08","ask":"where is the number of legs found (animals, and things that are not animals)","query":{"type":"k.attributes.found","where":{"attribute":"legs"},"seek":"type","mode":"list"},"expect":{"status":"supported","values":["k.animals.animal","k.attributes.number"]}}
+{"id":"at-09","ask":"which attributes does a vehicle usually have","query":{"type":"k.attributes.kind","where":{"name":"vehicle"},"seek":"attribute","mode":"list"},"expect":{"status":"supported","values":["colour","size","weight","speed","price","place","parts","material","wheels","can","used_for"]}}
 {"id":"at-10","ask":"what kind of thing is a violin","query":{"type":"k.attributes.thing","where":{"name":"violin"},"seek":"kind"},"expect":{"status":"supported","value":"instrument"}}
 {"id":"at-11","ask":"which aspect does colour belong to","query":{"type":"k.attributes.attribute","where":{"name":"colour"},"seek":"aspect"},"expect":{"status":"supported","value":"visual"}}
 {"id":"at-12","ask":"which view shows the numeric aspect","query":{"type":"k.attributes.aspect","where":{"name":"numeric"},"seek":"shown_in"},"expect":{"status":"supported","value":"chart"}}
@@ -18,3 +18,6 @@
 {"id":"at-18","ask":"which shades is the budgie drawn in","query":{"type":"k.attributes.drawn","where":{"name":"budgie"},"seek":"drawn_shade","mode":"list"},"expect":{"status":"supported","values":["lemon","lime"]}}
 {"id":"at-19","ask":"is a duck the same thing in every world","query":{"type":"k.attributes.same","where":{"name":"duck"},"seek":"only"},"expect":{"status":"supported","value":"true"}}
 {"id":"at-20","ask":"which senses has the name orange","query":{"type":"k.attributes.same","where":{"name":"orange"},"seek":"sense","mode":"list"},"expect":{"status":"supported","values":["food","colour","place"]}}
+{"id":"at-21","ask":"how heavy is a horse","query":{"type":"k.attributes.number","where":{"name":"horse"},"seek":"weight_about"},"expect":{"status":"supported","value":"500"}}
+{"id":"at-22","ask":"is a snail fast or slow","query":{"type":"k.attributes.number","where":{"name":"snail"},"seek":"speed_class"},"expect":{"status":"supported","value":"slow"}}
+{"id":"at-23","ask":"is a violin expensive","query":{"type":"k.attributes.number","where":{"name":"violin"},"seek":"price_class"},"expect":{"status":"supported","value":"expensive"}}

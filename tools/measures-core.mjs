@@ -37,7 +37,7 @@ export const MEASURES = {
   'k.wearables': { place: box('person drawing') },
   'k.actions': { verb: { sense: ord } },
   'k.words': { sense: { n: ord } },
-  'k.attributes': { thing: { wheels: { counts: 'wheel' } } },
+  'k.attributes': { thing: { wheels: { counts: 'wheel' } }, number: { size_about: { unit: 'metre' }, weight_about: { unit: 'kilogram' }, speed_about: { unit: 'kilometre per hour' }, legs: { counts: 'leg' }, sides: { counts: 'side' } } },
   'k.commonsense': { thing: { usually_count: { counts: 'thing of that name usually found together' } } },
   'k.parts': { inherited: { steps: { counts: 'step from the thing up to the kind' } } },
   'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } } },

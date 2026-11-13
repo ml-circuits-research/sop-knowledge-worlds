@@ -80,6 +80,8 @@ export const SCALES = [
   ['temperature', 'how hot a thing is', ['cold: freezing, icy, chilly', 'cool', 'warm', 'hot: boiling']],
   ['distance', 'how far away a thing is', ['near: close, nearby', 'far: distant, far away']],
   ['loudness', 'how loud a sound is', ['quiet: soft', 'loud: noisy']],
+  // Round 10 item 5: the price class of k.attributes.number.
+  ['price', 'how much a thing usually costs to buy', ['cheap: inexpensive, low-priced', 'medium: moderately priced', 'expensive: dear, costly, pricey']],
 ];
 // Comparatives and superlatives: [scale, towards the most (up) or the least (down), comparatives, superlatives].
 export const COMPARATIVES = [
@@ -95,6 +97,7 @@ export const COMPARATIVES = [
   ['temperature', 'up', 'warmer, hotter', 'warmest, hottest'], ['temperature', 'down', 'colder, cooler', 'coldest, coolest'],
   ['distance', 'up', 'farther, further', 'farthest, furthest'], ['distance', 'down', 'nearer, closer', 'nearest, closest'],
   ['loudness', 'up', 'louder', 'loudest'], ['loudness', 'down', 'quieter, softer', 'quietest, softest'],
+  ['price', 'up', 'dearer, pricier, more expensive', 'dearest, priciest, most expensive'], ['price', 'down', 'cheaper', 'cheapest'],
 ];
 
 // ---- Shapes: [name, solid, other words] ---------------------------------------------------------------------------

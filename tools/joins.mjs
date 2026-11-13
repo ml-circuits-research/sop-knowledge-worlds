@@ -43,7 +43,7 @@ export const TYPES = [
   ['k.time.month', 'name', 'time'], ['k.time.weekday', 'name', 'time'], ['k.time.season', 'name', 'time'], ['k.time.duration', 'name', 'time'],
   ['k.attributes.thing', 'name', (w) => KIND_SENSE[tok(w.attrs.kind?.[0])] ?? null],
   ['k.scenes.thing', 'name', 'drawing'], ['k.attributes.drawn', 'name', 'drawing'], ['k.layouts.anchor', 'of', 'drawing'],
-  ['k.commonsense.thing', 'name', null],
+  ['k.commonsense.thing', 'name', null], ['k.attributes.number', 'name', null],
   ['k.words.sense', 'word', 'word'], ['k.parts.whole', 'name', 'word'], ['k.parts.inherited', 'name', 'word'], ['k.parts.usual', 'name', 'word'], ['k.parts.called', 'of', 'word'],
 ];
 

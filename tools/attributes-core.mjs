@@ -36,6 +36,10 @@ export const ATTRIBUTES = [
   ['distance', 'number', 'how far away a thing is', 'numeric'],
   ['temperature', 'number', 'how hot or cold a thing is', 'numeric'],
   ['weight', 'number', 'how heavy a thing is', 'numeric'],
+  // Round 10 item 5: the numbers of k.attributes.number.
+  ['speed', 'number', 'how fast a thing moves', 'numeric'],
+  ['sides', 'number', 'how many flat sides it has', 'numeric'],
+  ['price', 'class', 'how much it usually costs to buy: a step of the k.values scale price', 'numeric'],
 ];
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
@@ -55,22 +59,27 @@ export const FOUND = [
   ['sound', 'k.animals', 'k.animals.animal', 'sound', 'animals'],
   ['size', 'k.geo', 'k.geo.country', 'area', 'countries: the area'], ['size', 'k.geo', 'k.geo.continent', 'area_about', 'continents: the area'], ['size', 'k.geo', 'k.geo.lake', 'area_about', 'lakes: the area'],
   ['size', 'k.geo', 'k.geo.desert', 'area_about', 'deserts: the area'], ['size', 'k.geo', 'k.geo.sea', 'area_about', 'oceans and seas: the area'], ['size', 'k.space', 'k.space.body', 'diameter_about', 'bodies in space: the width'],
-  ['length', 'k.geo', 'k.geo.river', 'length_about', 'rivers'], ['length', 'k.body', 'k.body.part', 'length_about', 'a few parts of the body'],
+  ['length', 'k.geo', 'k.geo.river', 'length_about', 'rivers'], ['length', 'k.body', 'k.body.part', 'length_about', 'the main parts of the body of an adult'], ['size', 'k.body', 'k.body.part', 'length_about', 'the main parts of the body of an adult: the length'],
   ['height', 'k.geo', 'k.geo.mountain', 'elevation', 'mountains'], ['height', 'k.people', 'k.people.kind', 'height_about', 'kinds of person'],
   ['distance', 'k.space', 'k.space.body', 'distance_about', 'bodies in space'], ['temperature', 'k.space', 'k.space.body', 'temperature_about', 'bodies in space'], ['temperature', 'k.body', 'k.body.part', 'temperature_about', 'the body'],
   ['weight', 'k.body', 'k.body.part', 'weight_about', 'a few parts of the body'],
+  ['size', 'k.attributes', 'k.attributes.number', 'size_about', 'common things: the longest side, in metres'], ['weight', 'k.attributes', 'k.attributes.number', 'weight_about', 'common things, in kilograms'],
+  ['weight', 'k.attributes', 'k.attributes.number', 'weight_class', 'common things: light, medium or heavy, steps of the k.values scale weight'], ['legs', 'k.attributes', 'k.attributes.number', 'legs', 'things that are not animals: furniture'],
+  ['speed', 'k.attributes', 'k.attributes.number', 'speed_about', 'common things that move by themselves or carry people, animals among them, in kilometres per hour'],
+  ['speed', 'k.attributes', 'k.attributes.number', 'speed_class', 'common things that move: slow, medium or fast, steps of the k.values scale speed'], ['sides', 'k.attributes', 'k.attributes.number', 'sides', 'common things whose flat sides are counted'],
+  ['sides', 'k.shapes', 'k.shapes.shape', 'sides', 'shapes'], ['price', 'k.attributes', 'k.attributes.number', 'price_class', 'common things that are bought'],
   ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'], ['used_for', 'k.commonsense', 'k.commonsense.thing', 'used_for', 'a few common things'],
 ];
 // The attributes a kind of thing usually has: [kind, attributes].
 export const KINDS = [
-  ['animal', 'colour, size, place, parts, legs, covering, lives, eats, can, cannot, sound'], ['creature', 'colour, size, can'], ['person', 'size, parts, can'],
-  ['plant', 'colour, size, place, parts, can'], ['food', 'colour, kind, size'], ['drink', 'colour'],
-  ['vehicle', 'colour, size, place, parts, material, wheels, can, used_for'], ['machine', 'size, material, parts, can, used_for'],
+  ['animal', 'colour, size, weight, speed, place, parts, legs, covering, lives, eats, can, cannot, sound'], ['creature', 'colour, size, can'], ['person', 'size, parts, can'],
+  ['plant', 'colour, size, place, parts, can'], ['food', 'colour, kind, size, weight, price'], ['drink', 'colour'],
+  ['vehicle', 'colour, size, weight, speed, price, place, parts, material, wheels, can, used_for'], ['machine', 'size, material, parts, can, used_for'],
   ['building', 'size, place, parts, material, used_for'], ['place', 'colour, size, used_for'], ['landform', 'colour, size, material'], ['sky', 'colour, size, material, can'],
-  ['furniture', 'colour, size, place, parts, material, used_for'], ['appliance', 'size, place, material, used_for'], ['device', 'size, material, can, used_for'],
-  ['clothing', 'colour, size, material, used_for'], ['jewellery', 'colour, material, used_for'], ['container', 'size, material, used_for'],
-  ['tool', 'size, material, parts, can, used_for'], ['weapon', 'size, material, can, used_for'], ['tableware', 'colour, size, material, used_for'],
-  ['toy', 'colour, size, material, can, used_for'], ['instrument', 'colour, size, material, parts, used_for'], ['part', 'material, can, used_for'],
+  ['furniture', 'colour, size, weight, legs, price, place, parts, material, used_for'], ['appliance', 'size, weight, price, place, material, used_for'], ['device', 'size, weight, price, material, can, used_for'],
+  ['clothing', 'colour, size, price, material, used_for'], ['jewellery', 'colour, price, material, used_for'], ['container', 'size, material, used_for'],
+  ['tool', 'size, weight, price, material, parts, can, used_for'], ['weapon', 'size, material, can, used_for'], ['tableware', 'colour, size, material, used_for'],
+  ['toy', 'colour, size, price, material, can, used_for'], ['instrument', 'colour, size, weight, price, material, parts, used_for'], ['part', 'material, can, used_for'],
   ['material', 'colour, can, used_for'], ['natural thing', 'colour, size, material'],
 ];
 
@@ -115,6 +124,7 @@ common thing | relational | k.parts.whole | name | has
 common thing | relational | k.parts.inherited | name | has
 common thing | relational | k.parts.usual | name | has
 common thing | numeric | k.attributes.thing | name | wheels
+common thing | numeric | k.attributes.number | name | size_about, weight_about, weight_class, speed_about, speed_class, legs, sides, price_class
 common thing | textual | k.words.sense | word | gloss
 animal | visual | k.animals.animal | name | drawing, covering
 animal | visual | k.attributes.thing | name | colour
@@ -122,11 +132,13 @@ animal | spatial | k.animals.animal | name | habitat
 animal | spatial | k.scenes.thing | name | place, size
 animal | relational | k.animals.animal | name | class, diet, eats, baby, can, cannot
 animal | numeric | k.animals.animal | name | legs
+animal | numeric | k.attributes.number | name | size_about, weight_about, speed_about
 animal | textual | k.animals.animal | name | sound
 animal | textual | k.words.sense | word | gloss
 food | visual | k.food.food | name | colour, drawing
 food | spatial | k.scenes.thing | name | place, size
 food | relational | k.food.food | name | kind, botanically, grows_on, comes_from, eaten
+food | numeric | k.attributes.number | name | size_about, weight_about, price_class
 food | textual | k.words.sense | word | gloss
 country | relational | k.geo.country | name | capital, continent, region, neighbour
 country | numeric | k.geo.country | name | population, area

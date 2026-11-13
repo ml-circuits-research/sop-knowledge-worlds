@@ -32,7 +32,11 @@ the place of the dog).
 | what it can do | 276 (18%) | 63 (4%) | 1161 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
 | what it is used for | 336 (22%) | 142 (9%) | 1022 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
 | wheels | 33 (2%) | 12 (1%) | 1455 (97%) | `k.attributes.thing` (wheels) |
-| legs | 147 (10%) | 26 (2%) | 1327 (88%) | `k.animals.animal` (legs) |
+| legs | 161 (11%) | 27 (2%) | 1312 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
+| size in metres (the longest side) | 975 (65%) | 66 (4%) | 459 (31%) | `k.attributes.number` (size_about) |
+| weight in kilograms | 855 (57%) | 38 (3%) | 607 (40%) | `k.attributes.number` (weight_about), `k.body.part` (weight_about) |
+| speed (top speed in km/h) | 232 (15%) | 18 (1%) | 1250 (83%) | `k.attributes.number` (speed_about) |
+| price class | 645 (43%) | 42 (3%) | 813 (54%) | `k.attributes.number` (price_class) |
 | kind (what it is a kind of) | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (is_a, instance_of) |
 | definition | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (gloss) |
 | where it is worn | 37 (2%) | 21 (1%) | 1442 (96%) | `k.wearables.wearable` (worn_on) |
@@ -45,7 +49,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 24 (2%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1027 (68%) |
+| `k.attributes` | 1227 (82%) |
 | `k.body` | 4 (0%) |
 | `k.colours` | 8 (1%) |
 | `k.commonsense` | 17 (1%) |
@@ -87,3 +91,5 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **material**: world, person, honey, dog, hospital, street, coffee, road, building, hotel, station, horse, fish, prison, bank, tea, camera, store, jail, cat, shop, wine, island, beer, chicken, hole, bomb, bird, rose, restaurant
 - **what it can do**: house, world, person, honey, bed, earth, hospital, street, coffee, road, picture, building, hotel, bag, station, rock, box, key, prison, stick, bank, tea, camera, wall, store, jail, shop, wine, island, beer
 - **what it is used for**: world, person, dog, earth, street, building, station, rock, sun, horse, star, prison, stick, wall, jail, cat, island, planet, moon, chicken, hole, engine, bomb, bird, stone, beach, rose, cake, meat, mountain
+- **size in metres (the longest side)**: world, honey, earth, street, coffee, road, station, sun, star, bank, tea, wall, wine, island, beer, planet, moon, hole, beach, milk, meat, mountain, path, sugar, hill, pocket, plant, chocolate, soup, champagne
+- **weight in kilograms**: house, world, honey, earth, hospital, street, coffee, road, building, hotel, station, sun, star, prison, bank, tea, wall, store, jail, shop, wine, island, beer, planet, moon, hole, beach, rose, restaurant, milk

@@ -16,7 +16,7 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 export const COVERAGE_PAGE = join(WORLDS_DIR, 'COVERAGE.md');
 const GAP = 30;
 // Attributes that only some kinds of things have: no list of gaps is printed for them.
-const SOME_KINDS = new Set(['wheels', 'legs', 'where it is worn']);
+const SOME_KINDS = new Set(['wheels', 'legs', 'where it is worn', 'speed (top speed in km/h)', 'price class']);
 
 // What is counted: [label, [type, the key that names the thing, the keys that count (any of them)] ...].
 export const ROWS = [
@@ -35,7 +35,11 @@ export const ROWS = [
   ['what it can do', ['k.attributes.thing', 'name', ['can']], ['k.animals.animal', 'name', ['can']], ['k.commonsense.thing', 'name', ['can']]],
   ['what it is used for', ['k.attributes.thing', 'name', ['used_for']], ['k.commonsense.thing', 'name', ['used_for']]],
   ['wheels', ['k.attributes.thing', 'name', ['wheels']]],
-  ['legs', ['k.animals.animal', 'name', ['legs']]],
+  ['legs', ['k.animals.animal', 'name', ['legs']], ['k.attributes.number', 'name', ['legs']]],
+  ['size in metres (the longest side)', ['k.attributes.number', 'name', ['size_about']]],
+  ['weight in kilograms', ['k.attributes.number', 'name', ['weight_about']], ['k.body.part', 'name', ['weight_about']]],
+  ['speed (top speed in km/h)', ['k.attributes.number', 'name', ['speed_about']]],
+  ['price class', ['k.attributes.number', 'name', ['price_class']]],
   ['kind (what it is a kind of)', ['k.words.sense', 'word', ['is_a', 'instance_of']]],
   ['definition', ['k.words.sense', 'word', ['gloss']]],
   ['where it is worn', ['k.wearables.wearable', 'name', ['worn_on']]],

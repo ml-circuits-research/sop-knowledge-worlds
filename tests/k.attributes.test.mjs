@@ -114,3 +114,33 @@ test('Q29: `any` never stands next to a colour; the drawn colours are what tools
   assert.deepEqual(by.get('elephant'), ['grey']);
   assert.deepEqual(by.get('tree'), ['green']);
 });
+
+// Round 10 item 5: the usual numbers of the common things.
+import { numberShards, readNumbers, weightClass, speedClass } from '../tools/numbers-core.mjs';
+
+test('k.attributes.number: the shards are what tools/numbers-core.mjs gives; classes follow the numbers and are steps of the k.values scales; every number has its unit', () => {
+  for (const [name, text] of Object.entries(numberShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.attributes', 'shards', name), 'utf8'), text, name);
+  const numbers = world.ofType('k.attributes.number');
+  assert.equal(numbers.length, readNumbers().length);
+  assert.ok(numbers.length >= 900);
+  const values = fullWorld('k.values', worlds);
+  const steps = (scale) => new Set(values.ofType('k.values.step').filter((s) => one(s, 'scale') === scale).map((s) => one(s, 'name')));
+  const scale = { weight_class: steps('weight'), speed_class: steps('speed'), price_class: steps('price') };
+  const animals = new Set(fullWorld('k.animals', worlds).ofType('k.animals.animal').map((a) => one(a, 'name')));
+  for (const n of numbers) {
+    assert.equal(one(n, 'named'), 'model', n.id);
+    for (const [k, s] of Object.entries(scale)) if (n.attrs[k]) assert.ok(s.has(one(n, k)), `${n.id}: ${k}`);
+    assert.equal(one(n, 'weight_class'), weightClass(n.attrs.weight_about ? Number(one(n, 'weight_about')) : undefined), n.id);
+    assert.equal(one(n, 'speed_class'), speedClass(n.attrs.speed_about ? Number(one(n, 'speed_about')) : undefined), n.id);
+    if (n.attrs.legs) assert.ok(!animals.has(one(n, 'name')), `${n.id}: the legs of an animal are in k.animals`);
+  }
+  const measures = fullWorld('k.units', worlds).ofType('k.units.measure').filter((m) => one(m, 'world') === 'k.attributes' && one(m, 'type') === 'number').map((m) => one(m, 'key'));
+  for (const k of ['size_about', 'weight_about', 'speed_about', 'legs', 'sides']) assert.ok(measures.includes(k), k);
+  const by = (name) => numbers.find((n) => one(n, 'name') === name);
+  assert.ok(Number(one(by('cow'), 'weight_about')) > Number(one(by('horse'), 'weight_about')), 'a cow is heavier than a horse');
+  assert.equal(one(by('elephant'), 'weight_class'), 'heavy');
+  assert.equal(one(by('cheetah'), 'speed_class'), 'fast');
+  assert.equal(one(by('snail'), 'speed_class'), 'slow');
+  assert.equal(one(by('chair'), 'legs'), '4');
+  assert.equal(one(by('dice'), 'sides'), '6');
+});

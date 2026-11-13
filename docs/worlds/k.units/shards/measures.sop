@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values): 139 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values): 144 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -118,6 +118,11 @@
 @k.units.measure.k.actions.verb.sense k.units.measure world=k.actions type=verb key=sense ordinal=true core.source="hand-core 1"
 @k.units.measure.k.words.sense.n k.units.measure world=k.words type=sense key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.attributes.thing.wheels k.units.measure world=k.attributes type=thing key=wheels counts=wheel core.source="hand-core 1"
+@k.units.measure.k.attributes.number.size_about k.units.measure world=k.attributes type=number key=size_about unit=metre approximate=true core.source="hand-core 1"
+@k.units.measure.k.attributes.number.weight_about k.units.measure world=k.attributes type=number key=weight_about unit=kilogram approximate=true core.source="hand-core 1"
+@k.units.measure.k.attributes.number.speed_about k.units.measure world=k.attributes type=number key=speed_about unit="kilometre per hour" approximate=true core.source="hand-core 1"
+@k.units.measure.k.attributes.number.legs k.units.measure world=k.attributes type=number key=legs counts=leg core.source="hand-core 1"
+@k.units.measure.k.attributes.number.sides k.units.measure world=k.attributes type=number key=sides counts=side core.source="hand-core 1"
 @k.units.measure.k.commonsense.thing.usually_count k.units.measure world=k.commonsense type=thing key=usually_count counts="thing of that name usually found together" core.source="hand-core 1"
 @k.units.measure.k.parts.inherited.steps k.units.measure world=k.parts type=inherited key=steps counts="step from the thing up to the kind" core.source="hand-core 1"
 @k.units.measure.k.people.kind.height_about k.units.measure world=k.people type=kind key=height_about counts="hundredth of the height of a grown man" approximate=true core.source="hand-core 1"
