@@ -65,10 +65,36 @@ Sixteen slots, in draw order: `hair_back`, `shoulders`, `neck`, `ears`, `head`, 
 girl, boy, woman, man, old woman, old man, bearded man, woman with curly hair, robot, alien, clown, queen.
 Expressions: happy, sad, angry, surprised, sleepy, wink, talking.
 
+## Imported styles (DiceBear)
+
+Seven styles converted from the JSON definitions of https://github.com/dicebear/styles by `tools/import/dicebear.mjs`
+(see `sources/dicebear/SOURCE.md`; credits and the licence text in `LICENSE.dicebear`). Each style has its own slots
+(shard `<style>-slots`: the box its variants fill, the draw order) and one shard per slot (`<style>-<slot>`). A
+variant is named `"<style> <variant>"` and keeps `style=<style>`, so a face does not mix styles unless asked. Parts
+are named `part1`, `part2`, …; colours that the style takes from a list are `tint` (skin, hair, clothes) with the
+style's first colour as `rgb`. Imported slots are not mirrored (a style draws both eyes in one variant).
+
+| Style | Licence | Variants | Slots (variants) |
+| --- | --- | --- | --- |
+| `cutouts` | CC0-1.0 | 38 | head 6, hair_front 7, eyebrows 4, cheeks 1, eyes 7, nose 6, mouth 7 |
+| `pixel-art` | CC0-1.0 | 132 | head 1, accessories 4, shoulders 23, eyes 12, glasses 14, mouth 23, hair_front 45, hat 10 |
+| `miniavs` | CC-BY-4.0 | 25 | head 3, shoulders 2, hair_front 9, mouth 2, eyes 3, cheeks 1, glasses 1, moustache 4 |
+| `personas` | CC-BY-4.0 | 41 | head 1, eyes 6, hair_front 18, shoulders 4, mouth 7, beard 5 |
+| `micah` | CC-BY-4.0 | 40 | head 1, mouth 8, beard 2, eyebrows 4, hair_front 8, eyes 5, glasses 2, nose 3, ears 2, earrings 2, shoulders 3 |
+| `toon-head` | CC-BY-4.0 | 33 | hair_back 4, shoulders 1, head 1, clothes 5, mouth 3, beard 5, eyes 5, eyebrows 5, hair_front 4 |
+| `big-smile` | CC-BY-4.0 | 38 | head 1, mouth 8, eyes 8, hair_front 13, accessories 8 |
+
+347 variants; 232 have features given by a language model that looked at them (`named=model`,
+`sources/dicebear/features.tsv`); `length` of hair also comes from the tags of the definitions. What the conversion
+loses: holes, masks, clips and stroke widths; curves become polygons. Left out: 8 variants that convert to nothing
+(6 of personas, 2 of toon-head) and the 8 beards of pixel-art (drawn with a mask; they would cover the face). The
+imported styles have no presets and no expressions.
+
 ## Previews
 
 `preview/`: every variant alone with the box of its slot dashed (`variant-<style>-<slot>-<name>.svg`), the presets,
-the expressions on the preset `woman`, and 40 seeded random faces of the style `plain`; `index.html` shows them all.
+the expressions on the preset `woman`, 40 seeded random faces of the style `plain` and 12 of every imported style
+(`random-<style>-NN.svg`); `index.html` shows them all.
 
 ## Questions it helps with
 

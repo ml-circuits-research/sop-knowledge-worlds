@@ -22,6 +22,69 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: ODbL-1.0
 - Used by: `k.geo` (6 shards)
 
+## dicebear-big-smile-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC-BY-4.0
+- Used by: `k.faces` (6 shards)
+
+## dicebear-cutouts-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC0-1.0
+- Used by: `k.faces` (8 shards)
+
+## dicebear-micah-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC-BY-4.0
+- Used by: `k.faces` (12 shards)
+
+## dicebear-miniavs-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC-BY-4.0
+- Used by: `k.faces` (9 shards)
+
+## dicebear-personas-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC-BY-4.0
+- Used by: `k.faces` (7 shards)
+
+## dicebear-pixel-art-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC0-1.0
+- Used by: `k.faces` (9 shards)
+
+## dicebear-toon-head-67f54a0
+
+- What: the official avatar style definitions of DiceBear: one JSON file per style, with the canvas, the components (hair, eyes, mouth, …), their variants as SVG elements, and the colour lists. Used for `k.faces`: the slots, variants and parts of seven styles.
+- Origin: https://github.com/dicebear/styles , commit `67f54a0d45034c078cdb03e7374037eeacd6ab62`, folder `src`. (Round 6 named `dicebear/dicebear`; the styles are no longer in that repository, its README points here.)
+- License: each style has its own, in the `meta` block of its definition and in `LICENSE.md` of the repository. Imported: `cutouts` and `pixel-art` (CC0 1.0), `miniavs`, `personas`, `micah`, `toon-head`, `big-smile` (CC BY 4.0). The importer stops if a definition names another licence than the one listed in `tools/import/dicebear.mjs`. Not imported because of the licence: `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use": not one of the licences of PLAN.md), `icons` (MIT, but not faces).
+- Attribution: cutouts: "Cutouts" by DiceBear, CC0 1.0. pixel-art: "Pixel Art" by DiceBear, CC0 1.0. miniavs: remix of "Miniavs - Free Avatar Creator" by Webpixels, CC BY 4.0. personas: remix of "Personas by Draftbit" by Draftbit - draftbit.com, CC BY 4.0. micah: remix of "Avatar Illustration System" by Micah Lanier, CC BY 4.0. toon-head: remix of "ToonHead" by Johan Melin, CC BY 4.0. big-smile: remix of "Custom Avatar" by Ashley Seo, CC BY 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours. Links and the licence text: `docs/worlds/k.faces/LICENSE.dicebear`.
+- Shard terms: CC-BY-4.0
+- Used by: `k.faces` (10 shards)
+
 ## hand-core-1
 
 - What: the hand-written cores of the worlds (`k.commonsense`, `k.objects`, `k.units`, `k.time`, `k.space`, `k.animals`, `k.body`, `k.food`, and the schemas of the others): small sets of facts that define each schema and its tests before any bulk import. Written by the worker in this repository, checked by the reviewer.

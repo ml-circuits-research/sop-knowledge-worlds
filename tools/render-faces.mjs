@@ -2,7 +2,8 @@
 //   node tools/render-faces.mjs [out-dir]   writes to docs/worlds/k.faces/preview/ (or out-dir): every variant alone
 //                                           (variant-<style>-<slot>-<name>.svg), every preset (preset-<name>.svg),
 //                                           the expressions on one preset (expression-<name>.svg), 40 seeded random
-//                                           faces of the style `plain` (random-NN.svg), index.html and faces.json
+//                                           faces of the style `plain` (random-NN.svg), 12 of every other style
+//                                           (random-<style>-NN.svg), index.html and faces.json
 //                                           (the list docs/gallery.html shows)
 // A face is: one variant for some slots of one style, and four colours. The parts of the variants are drawn slot by
 // slot in the draw order of the slots; a slot with mirror=true is drawn twice, the second time mirrored at x = 50.
@@ -145,6 +146,7 @@ export function randomFace(world, seed, style = 'plain') {
 }
 
 export const RANDOM_FACES = 40;
+export const RANDOM_FACES_OTHER = 12; // of every other style
 export const EXPRESSION_PRESET = 'woman';
 export const variantFile = (v) => `variant-${fileOf(v.style)}-${fileOf(v.slot)}-${fileOf(v.name)}.svg`;
 
@@ -162,17 +164,24 @@ export function renderAll(world) {
     files[name] = renderFace(world, face, `random face ${i}`);
     randoms.push({ file: name, seed: i, ...face });
   }
-  const fig = (file, caption, size = 160) => `<figure><img src="${file}" alt="${esc(caption)}" width="${size}" height="${size}" loading="lazy"><figcaption>${esc(caption)}</figcaption></figure>`;
   const styles = [...new Set(variants.map((v) => v.style))];
+  const others = styles.filter((s) => s !== 'plain');
+  const otherRandoms = [];
+  for (const style of others) for (let i = 1; i <= RANDOM_FACES_OTHER; i++) {
+    const name = `random-${fileOf(style)}-${String(i).padStart(2, '0')}.svg`;
+    files[name] = renderFace(world, randomFace(world, i, style), `random face ${i} of the style ${style}`);
+    otherRandoms.push({ file: name, seed: i, style });
+  }
+  const fig = (file, caption, size = 160) => `<figure><img src="${file}" alt="${esc(caption)}" width="${size}" height="${size}" loading="lazy"><figcaption>${esc(caption)}</figcaption></figure>`;
   const sections = styles.map((style) => `<h2>Variants of the style ${esc(style)}</h2>\n${variants.filter((v) => v.style === style).map((v) => fig(variantFile(v), `${v.slot}: ${v.name}`, 120)).join('\n')}`).join('\n');
   files['index.html'] = `<!DOCTYPE html>\n<html lang="en">\n<head><meta charset="utf-8"><title>k.faces previews</title>\n<style>body{font:14px system-ui,sans-serif;margin:2rem}figure{display:inline-block;margin:.5rem;text-align:center;vertical-align:top}img{border:1px solid #ddd}</style></head>\n<body>\n<h1>k.faces previews</h1>\n<p>Drawn by tools/render-faces.mjs from the facts alone. ${variants.length} variants, ${idx.presets.length} presets.</p>\n`
     + `<h2>Presets</h2>\n${idx.presets.map((p) => fig(`preset-${fileOf(p.name)}.svg`, p.name)).join('\n')}\n<h2>Expressions (on the preset ${esc(EXPRESSION_PRESET)})</h2>\n${idx.expressions.map((e) => fig(`expression-${fileOf(e.name)}.svg`, e.name)).join('\n')}\n`
-    + `<h2>${RANDOM_FACES} random faces (seeds 1 to ${RANDOM_FACES})</h2>\n${randoms.map((r) => fig(r.file, `seed ${r.seed}`)).join('\n')}\n${sections}\n</body>\n</html>\n`;
+    + `<h2>${RANDOM_FACES} random faces (seeds 1 to ${RANDOM_FACES})</h2>\n${randoms.map((r) => fig(r.file, `seed ${r.seed}`)).join('\n')}\n${others.map((style) => `<h2>${RANDOM_FACES_OTHER} random faces of the style ${esc(style)}</h2>\n${otherRandoms.filter((r) => r.style === style).map((r) => fig(r.file, `seed ${r.seed}`)).join('\n')}`).join('\n')}\n${sections}\n</body>\n</html>\n`;
   const list = {
     variants: variants.map((v) => ({ style: v.style, slot: v.slot, name: v.name, file: variantFile(v), source: v.source, ...(v.named ? { named: v.named } : {}), features: v.features })),
     presets: idx.presets.map((p) => ({ name: p.name, style: p.style, file: `preset-${fileOf(p.name)}.svg` })),
     expressions: idx.expressions.map((e) => ({ name: e.name, style: e.style, file: `expression-${fileOf(e.name)}.svg` })),
-    random: randoms.map((r) => ({ file: r.file, seed: r.seed })),
+    random: [...randoms.map((r) => ({ file: r.file, seed: r.seed, style: 'plain' })), ...otherRandoms],
   };
   files['faces.json'] = `${JSON.stringify(list, null, 1)}\n`;
   return files;

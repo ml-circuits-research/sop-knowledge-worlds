@@ -1,5 +1,5 @@
 {
- "version": "83202ceb6604",
+ "version": "5d214c798122",
  "sopworld": "782cd0c",
  "worlds": [
   {
@@ -394,6 +394,133 @@
    "depends": [],
    "shards": [
     {
+     "id": "k.faces/shards/big-smile-accessories",
+     "path": "k.faces/shards/big-smile-accessories.sop",
+     "wires": 392,
+     "bytes": 68911,
+     "keys": [
+      "accessories",
+      "big-smile cat ears",
+      "big-smile clown nose",
+      "big-smile face mask",
+      "big-smile glasses",
+      "big-smile mustache",
+      "big-smile sailormoon crown",
+      "big-smile sleep mask",
+      "big-smile sunglasses"
+     ],
+     "sources": [
+      "dicebear-big-smile-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/big-smile-eyes",
+     "path": "k.faces/shards/big-smile-eyes.sop",
+     "wires": 328,
+     "bytes": 51629,
+     "keys": [
+      "big-smile angry",
+      "big-smile cheery",
+      "big-smile confused",
+      "big-smile normal",
+      "big-smile sad",
+      "big-smile sleepy",
+      "big-smile starstruck",
+      "big-smile winking",
+      "eyes"
+     ],
+     "sources": [
+      "dicebear-big-smile-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/big-smile-hair-front",
+     "path": "k.faces/shards/big-smile-hair-front.sop",
+     "wires": 633,
+     "bytes": 107931,
+     "keys": [
+      "big-smile bangs",
+      "big-smile bowl cut hair",
+      "big-smile braids",
+      "big-smile bun hair",
+      "big-smile curly bob",
+      "big-smile curly short hair",
+      "big-smile fro bun",
+      "big-smile half shaved head",
+      "big-smile mohawk",
+      "big-smile shaved head",
+      "big-smile short hair",
+      "big-smile straight hair",
+      "big-smile wavy bob",
+      "hair_front"
+     ],
+     "sources": [
+      "dicebear-big-smile-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/big-smile-head",
+     "path": "k.faces/shards/big-smile-head.sop",
+     "wires": 50,
+     "bytes": 7980,
+     "keys": [
+      "big-smile base",
+      "head"
+     ],
+     "sources": [
+      "dicebear-big-smile-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/big-smile-mouth",
+     "path": "k.faces/shards/big-smile-mouth.sop",
+     "wires": 352,
+     "bytes": 57161,
+     "keys": [
+      "big-smile awkward smile",
+      "big-smile braces",
+      "big-smile gap smile",
+      "big-smile kawaii",
+      "big-smile open sad",
+      "big-smile opened smile",
+      "big-smile teeth smile",
+      "big-smile unimpressed",
+      "mouth"
+     ],
+     "sources": [
+      "dicebear-big-smile-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/big-smile-slots",
+     "path": "k.faces/shards/big-smile-slots.sop",
+     "wires": 5,
+     "bytes": 1194,
+     "keys": [
+      "accessories",
+      "big-smile",
+      "eyes",
+      "hair_front",
+      "head",
+      "mouth"
+     ],
+     "sources": [
+      "dicebear-big-smile-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
      "id": "k.faces/shards/colours",
      "path": "k.faces/shards/colours.sop",
      "wires": 45,
@@ -427,6 +554,952 @@
      ],
      "sources": [
       "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-cheeks",
+     "path": "k.faces/shards/cutouts-cheeks.sop",
+     "wires": 18,
+     "bytes": 3225,
+     "keys": [
+      "cheeks",
+      "cutouts torn"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-eyebrows",
+     "path": "k.faces/shards/cutouts-eyebrows.sop",
+     "wires": 41,
+     "bytes": 7286,
+     "keys": [
+      "cutouts dashes",
+      "cutouts mono",
+      "cutouts strips",
+      "cutouts uneven",
+      "eyebrows"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-eyes",
+     "path": "k.faces/shards/cutouts-eyes.sop",
+     "wires": 125,
+     "bytes": 20165,
+     "keys": [
+      "cutouts big small",
+      "cutouts circle square",
+      "cutouts ink dots",
+      "cutouts pair",
+      "cutouts ring dot",
+      "cutouts sleepy open",
+      "cutouts squares",
+      "eyes"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-hair-front",
+     "path": "k.faces/shards/cutouts-hair-front.sop",
+     "wires": 122,
+     "bytes": 20028,
+     "keys": [
+      "cutouts crest",
+      "cutouts curls",
+      "cutouts fringe",
+      "cutouts long",
+      "cutouts side part",
+      "cutouts swoosh",
+      "cutouts tufts",
+      "hair_front"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-head",
+     "path": "k.faces/shards/cutouts-head.sop",
+     "wires": 85,
+     "bytes": 13026,
+     "keys": [
+      "cutouts blob",
+      "cutouts block",
+      "cutouts pear",
+      "cutouts slanted",
+      "cutouts tall",
+      "cutouts wide",
+      "head"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-mouth",
+     "path": "k.faces/shards/cutouts-mouth.sop",
+     "wires": 80,
+     "bytes": 12814,
+     "keys": [
+      "cutouts gasp",
+      "cutouts grin",
+      "cutouts smile",
+      "cutouts strip",
+      "cutouts torn smile",
+      "cutouts wavy",
+      "cutouts zigzag",
+      "mouth"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-nose",
+     "path": "k.faces/shards/cutouts-nose.sop",
+     "wires": 45,
+     "bytes": 7437,
+     "keys": [
+      "cutouts bent",
+      "cutouts dab",
+      "cutouts hook",
+      "cutouts strip",
+      "cutouts torn triangle",
+      "cutouts wedge",
+      "nose"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/cutouts-slots",
+     "path": "k.faces/shards/cutouts-slots.sop",
+     "wires": 7,
+     "bytes": 1388,
+     "keys": [
+      "cheeks",
+      "cutouts",
+      "eyebrows",
+      "eyes",
+      "hair_front",
+      "head",
+      "mouth",
+      "nose"
+     ],
+     "sources": [
+      "dicebear-cutouts-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-beard",
+     "path": "k.faces/shards/micah-beard.sop",
+     "wires": 82,
+     "bytes": 12747,
+     "keys": [
+      "beard",
+      "micah beard",
+      "micah scruff"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-earrings",
+     "path": "k.faces/shards/micah-earrings.sop",
+     "wires": 17,
+     "bytes": 3166,
+     "keys": [
+      "earrings",
+      "micah hoop",
+      "micah stud"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-ears",
+     "path": "k.faces/shards/micah-ears.sop",
+     "wires": 80,
+     "bytes": 12353,
+     "keys": [
+      "ears",
+      "micah attached",
+      "micah detached"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-eyebrows",
+     "path": "k.faces/shards/micah-eyebrows.sop",
+     "wires": 88,
+     "bytes": 15038,
+     "keys": [
+      "eyebrows",
+      "micah down",
+      "micah eyelashes down",
+      "micah eyelashes up",
+      "micah up"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-eyes",
+     "path": "k.faces/shards/micah-eyes.sop",
+     "wires": 128,
+     "bytes": 19688,
+     "keys": [
+      "eyes",
+      "micah eyes",
+      "micah eyes shadow",
+      "micah round",
+      "micah smiling",
+      "micah smiling shadow"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-glasses",
+     "path": "k.faces/shards/micah-glasses.sop",
+     "wires": 81,
+     "bytes": 12556,
+     "keys": [
+      "glasses",
+      "micah round",
+      "micah square"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-hair-front",
+     "path": "k.faces/shards/micah-hair-front.sop",
+     "wires": 216,
+     "bytes": 33978,
+     "keys": [
+      "hair_front",
+      "micah danny phantom",
+      "micah doug funny",
+      "micah fonze",
+      "micah full",
+      "micah mr clean",
+      "micah mr t",
+      "micah pixie",
+      "micah turban"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-head",
+     "path": "k.faces/shards/micah-head.sop",
+     "wires": 42,
+     "bytes": 6691,
+     "keys": [
+      "head",
+      "micah standard"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-mouth",
+     "path": "k.faces/shards/micah-mouth.sop",
+     "wires": 125,
+     "bytes": 19008,
+     "keys": [
+      "micah frown",
+      "micah laughing",
+      "micah nervous",
+      "micah pucker",
+      "micah sad",
+      "micah smile",
+      "micah smirk",
+      "micah surprised",
+      "mouth"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-nose",
+     "path": "k.faces/shards/micah-nose.sop",
+     "wires": 22,
+     "bytes": 3830,
+     "keys": [
+      "micah curve",
+      "micah pointed",
+      "micah tound",
+      "nose"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-shoulders",
+     "path": "k.faces/shards/micah-shoulders.sop",
+     "wires": 124,
+     "bytes": 19647,
+     "keys": [
+      "micah collared",
+      "micah crew",
+      "micah open",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/micah-slots",
+     "path": "k.faces/shards/micah-slots.sop",
+     "wires": 11,
+     "bytes": 1906,
+     "keys": [
+      "beard",
+      "earrings",
+      "ears",
+      "eyebrows",
+      "eyes",
+      "glasses",
+      "hair_front",
+      "head",
+      "micah",
+      "mouth",
+      "nose",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-micah-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-cheeks",
+     "path": "k.faces/shards/miniavs-cheeks.sop",
+     "wires": 3,
+     "bytes": 1195,
+     "keys": [
+      "cheeks",
+      "miniavs default"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-eyes",
+     "path": "k.faces/shards/miniavs-eyes.sop",
+     "wires": 39,
+     "bytes": 6834,
+     "keys": [
+      "eyes",
+      "miniavs confident",
+      "miniavs happy",
+      "miniavs normal"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-glasses",
+     "path": "k.faces/shards/miniavs-glasses.sop",
+     "wires": 38,
+     "bytes": 6428,
+     "keys": [
+      "glasses",
+      "miniavs normal"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-hair-front",
+     "path": "k.faces/shards/miniavs-hair-front.sop",
+     "wires": 309,
+     "bytes": 50619,
+     "keys": [
+      "hair_front",
+      "miniavs balndess",
+      "miniavs classic 01",
+      "miniavs classic 02",
+      "miniavs curly",
+      "miniavs elvis",
+      "miniavs long",
+      "miniavs pony tail",
+      "miniavs slaughter",
+      "miniavs stylish"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-head",
+     "path": "k.faces/shards/miniavs-head.sop",
+     "wires": 96,
+     "bytes": 14408,
+     "keys": [
+      "head",
+      "miniavs normal",
+      "miniavs thin",
+      "miniavs wide"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-moustache",
+     "path": "k.faces/shards/miniavs-moustache.sop",
+     "wires": 62,
+     "bytes": 11278,
+     "keys": [
+      "miniavs freddy",
+      "miniavs horshoe",
+      "miniavs pencil thin",
+      "miniavs pencil thin beard",
+      "moustache"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-mouth",
+     "path": "k.faces/shards/miniavs-mouth.sop",
+     "wires": 72,
+     "bytes": 11998,
+     "keys": [
+      "miniavs default",
+      "miniavs missing tooth",
+      "mouth"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-shoulders",
+     "path": "k.faces/shards/miniavs-shoulders.sop",
+     "wires": 19,
+     "bytes": 3793,
+     "keys": [
+      "miniavs golf",
+      "miniavs t shirt",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/miniavs-slots",
+     "path": "k.faces/shards/miniavs-slots.sop",
+     "wires": 8,
+     "bytes": 1594,
+     "keys": [
+      "cheeks",
+      "eyes",
+      "glasses",
+      "hair_front",
+      "head",
+      "miniavs",
+      "moustache",
+      "mouth",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-miniavs-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-beard",
+     "path": "k.faces/shards/personas-beard.sop",
+     "wires": 94,
+     "bytes": 15698,
+     "keys": [
+      "beard",
+      "personas beard mustache",
+      "personas goatee",
+      "personas pyramid",
+      "personas soul patch",
+      "personas walrus"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-eyes",
+     "path": "k.faces/shards/personas-eyes.sop",
+     "wires": 192,
+     "bytes": 29853,
+     "keys": [
+      "eyes",
+      "personas glasses",
+      "personas happy",
+      "personas open",
+      "personas sleep",
+      "personas sunglasses",
+      "personas wink"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-hair-front",
+     "path": "k.faces/shards/personas-hair-front.sop",
+     "wires": 631,
+     "bytes": 106019,
+     "keys": [
+      "hair_front",
+      "personas balding",
+      "personas beanie",
+      "personas bob bangs",
+      "personas bob cut",
+      "personas bun undercut",
+      "personas cap",
+      "personas curly",
+      "personas curly bun",
+      "personas curly high top",
+      "personas extra long",
+      "personas fade",
+      "personas long",
+      "personas mohawk",
+      "personas pigtails",
+      "personas short combover",
+      "personas short combover chops",
+      "personas side shave",
+      "personas straight bun"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-head",
+     "path": "k.faces/shards/personas-head.sop",
+     "wires": 34,
+     "bytes": 5479,
+     "keys": [
+      "head",
+      "personas base"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-mouth",
+     "path": "k.faces/shards/personas-mouth.sop",
+     "wires": 82,
+     "bytes": 13474,
+     "keys": [
+      "mouth",
+      "personas big smile",
+      "personas frown",
+      "personas lips",
+      "personas pacifier",
+      "personas smile",
+      "personas smirk",
+      "personas surprise"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-shoulders",
+     "path": "k.faces/shards/personas-shoulders.sop",
+     "wires": 85,
+     "bytes": 14444,
+     "keys": [
+      "personas checkered",
+      "personas rounded",
+      "personas small",
+      "personas squared",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/personas-slots",
+     "path": "k.faces/shards/personas-slots.sop",
+     "wires": 6,
+     "bytes": 1299,
+     "keys": [
+      "beard",
+      "eyes",
+      "hair_front",
+      "head",
+      "mouth",
+      "personas",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-personas-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-accessories",
+     "path": "k.faces/shards/pixel-art-accessories.sop",
+     "wires": 44,
+     "bytes": 8525,
+     "keys": [
+      "accessories",
+      "pixel-art variant 01",
+      "pixel-art variant 02",
+      "pixel-art variant 03",
+      "pixel-art variant 04"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-eyes",
+     "path": "k.faces/shards/pixel-art-eyes.sop",
+     "wires": 284,
+     "bytes": 47058,
+     "keys": [
+      "eyes",
+      "pixel-art variant 01",
+      "pixel-art variant 02",
+      "pixel-art variant 03",
+      "pixel-art variant 04",
+      "pixel-art variant 05",
+      "pixel-art variant 06",
+      "pixel-art variant 07",
+      "pixel-art variant 08",
+      "pixel-art variant 09",
+      "pixel-art variant 10",
+      "pixel-art variant 11",
+      "pixel-art variant 12"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-glasses",
+     "path": "k.faces/shards/pixel-art-glasses.sop",
+     "wires": 334,
+     "bytes": 54930,
+     "keys": [
+      "glasses",
+      "pixel-art dark 01",
+      "pixel-art dark 02",
+      "pixel-art dark 03",
+      "pixel-art dark 04",
+      "pixel-art dark 05",
+      "pixel-art dark 06",
+      "pixel-art dark 07",
+      "pixel-art light 01",
+      "pixel-art light 02",
+      "pixel-art light 03",
+      "pixel-art light 04",
+      "pixel-art light 05",
+      "pixel-art light 06",
+      "pixel-art light 07"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-hair-front",
+     "path": "k.faces/shards/pixel-art-hair-front.sop",
+     "wires": 1265,
+     "bytes": 214907,
+     "keys": [
+      "hair_front",
+      "pixel-art long 01",
+      "pixel-art long 02",
+      "pixel-art long 03",
+      "pixel-art long 04",
+      "pixel-art long 05",
+      "pixel-art long 06",
+      "pixel-art long 07",
+      "pixel-art long 08",
+      "pixel-art long 09",
+      "pixel-art long 10",
+      "pixel-art long 11",
+      "pixel-art long 12",
+      "pixel-art long 13",
+      "pixel-art long 14",
+      "pixel-art long 15",
+      "pixel-art long 16",
+      "pixel-art long 17",
+      "pixel-art long 18",
+      "pixel-art long 19",
+      "pixel-art long 20",
+      "pixel-art long 21",
+      "pixel-art short 01",
+      "pixel-art short 02",
+      "pixel-art short 03",
+      "pixel-art short 04",
+      "pixel-art short 05",
+      "pixel-art short 06",
+      "pixel-art short 07",
+      "pixel-art short 08",
+      "pixel-art short 09",
+      "pixel-art short 10",
+      "pixel-art short 11",
+      "pixel-art short 12",
+      "pixel-art short 13",
+      "pixel-art short 14",
+      "pixel-art short 15",
+      "pixel-art short 16",
+      "pixel-art short 17",
+      "pixel-art short 18",
+      "pixel-art short 19",
+      "pixel-art short 20",
+      "pixel-art short 21",
+      "pixel-art short 22",
+      "pixel-art short 23",
+      "pixel-art short 24"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-hat",
+     "path": "k.faces/shards/pixel-art-hat.sop",
+     "wires": 128,
+     "bytes": 20815,
+     "keys": [
+      "hat",
+      "pixel-art variant 01",
+      "pixel-art variant 02",
+      "pixel-art variant 03",
+      "pixel-art variant 04",
+      "pixel-art variant 05",
+      "pixel-art variant 06",
+      "pixel-art variant 07",
+      "pixel-art variant 08",
+      "pixel-art variant 09",
+      "pixel-art variant 10"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-head",
+     "path": "k.faces/shards/pixel-art-head.sop",
+     "wires": 34,
+     "bytes": 5564,
+     "keys": [
+      "head",
+      "pixel-art base"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-mouth",
+     "path": "k.faces/shards/pixel-art-mouth.sop",
+     "wires": 219,
+     "bytes": 35441,
+     "keys": [
+      "mouth",
+      "pixel-art happy 01",
+      "pixel-art happy 02",
+      "pixel-art happy 03",
+      "pixel-art happy 04",
+      "pixel-art happy 05",
+      "pixel-art happy 06",
+      "pixel-art happy 07",
+      "pixel-art happy 08",
+      "pixel-art happy 09",
+      "pixel-art happy 10",
+      "pixel-art happy 11",
+      "pixel-art happy 12",
+      "pixel-art happy 13",
+      "pixel-art sad 01",
+      "pixel-art sad 02",
+      "pixel-art sad 03",
+      "pixel-art sad 04",
+      "pixel-art sad 05",
+      "pixel-art sad 06",
+      "pixel-art sad 07",
+      "pixel-art sad 08",
+      "pixel-art sad 09",
+      "pixel-art sad 10"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-shoulders",
+     "path": "k.faces/shards/pixel-art-shoulders.sop",
+     "wires": 347,
+     "bytes": 59996,
+     "keys": [
+      "pixel-art variant 01",
+      "pixel-art variant 02",
+      "pixel-art variant 03",
+      "pixel-art variant 04",
+      "pixel-art variant 05",
+      "pixel-art variant 06",
+      "pixel-art variant 07",
+      "pixel-art variant 08",
+      "pixel-art variant 09",
+      "pixel-art variant 10",
+      "pixel-art variant 11",
+      "pixel-art variant 12",
+      "pixel-art variant 13",
+      "pixel-art variant 14",
+      "pixel-art variant 15",
+      "pixel-art variant 16",
+      "pixel-art variant 17",
+      "pixel-art variant 18",
+      "pixel-art variant 19",
+      "pixel-art variant 20",
+      "pixel-art variant 21",
+      "pixel-art variant 22",
+      "pixel-art variant 23",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/pixel-art-slots",
+     "path": "k.faces/shards/pixel-art-slots.sop",
+     "wires": 8,
+     "bytes": 1620,
+     "keys": [
+      "accessories",
+      "eyes",
+      "glasses",
+      "hair_front",
+      "hat",
+      "head",
+      "mouth",
+      "pixel-art",
+      "shoulders"
+     ],
+     "sources": [
+      "dicebear-pixel-art-67f54a0"
      ],
      "license": "CC0-1.0",
      "warnings": []
@@ -982,12 +2055,202 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-beard",
+     "path": "k.faces/shards/toon-head-beard.sop",
+     "wires": 116,
+     "bytes": 19754,
+     "keys": [
+      "beard",
+      "toon-head chin",
+      "toon-head chin moustache",
+      "toon-head full beard",
+      "toon-head long beard",
+      "toon-head moustache twirl"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-clothes",
+     "path": "k.faces/shards/toon-head-clothes.sop",
+     "wires": 144,
+     "bytes": 24119,
+     "keys": [
+      "clothes",
+      "toon-head dress",
+      "toon-head open jacket",
+      "toon-head shirt",
+      "toon-head t shirt",
+      "toon-head turtle neck"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-eyebrows",
+     "path": "k.faces/shards/toon-head-eyebrows.sop",
+     "wires": 176,
+     "bytes": 29119,
+     "keys": [
+      "eyebrows",
+      "toon-head angry",
+      "toon-head happy",
+      "toon-head neutral",
+      "toon-head raised",
+      "toon-head sad"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-eyes",
+     "path": "k.faces/shards/toon-head-eyes.sop",
+     "wires": 202,
+     "bytes": 31151,
+     "keys": [
+      "eyes",
+      "toon-head bow",
+      "toon-head happy",
+      "toon-head humble",
+      "toon-head wide",
+      "toon-head wink"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-hair-back",
+     "path": "k.faces/shards/toon-head-hair-back.sop",
+     "wires": 184,
+     "bytes": 31860,
+     "keys": [
+      "hair_back",
+      "toon-head long straight",
+      "toon-head long wavy",
+      "toon-head neck high",
+      "toon-head shoulder high"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-hair-front",
+     "path": "k.faces/shards/toon-head-hair-front.sop",
+     "wires": 140,
+     "bytes": 23921,
+     "keys": [
+      "hair_front",
+      "toon-head bun",
+      "toon-head side comed",
+      "toon-head spiky",
+      "toon-head undercut"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-head",
+     "path": "k.faces/shards/toon-head-head.sop",
+     "wires": 33,
+     "bytes": 5449,
+     "keys": [
+      "head",
+      "toon-head head"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-mouth",
+     "path": "k.faces/shards/toon-head-mouth.sop",
+     "wires": 60,
+     "bytes": 9992,
+     "keys": [
+      "mouth",
+      "toon-head agape",
+      "toon-head angry",
+      "toon-head laugh"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-shoulders",
+     "path": "k.faces/shards/toon-head-shoulders.sop",
+     "wires": 18,
+     "bytes": 3464,
+     "keys": [
+      "shoulders",
+      "toon-head body"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/toon-head-slots",
+     "path": "k.faces/shards/toon-head-slots.sop",
+     "wires": 9,
+     "bytes": 1759,
+     "keys": [
+      "beard",
+      "clothes",
+      "eyebrows",
+      "eyes",
+      "hair_back",
+      "hair_front",
+      "head",
+      "mouth",
+      "shoulders",
+      "toon-head"
+     ],
+     "sources": [
+      "dicebear-toon-head-67f54a0"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
     }
    ],
    "sources": [
+    "dicebear-big-smile-67f54a0",
+    "dicebear-cutouts-67f54a0",
+    "dicebear-micah-67f54a0",
+    "dicebear-miniavs-67f54a0",
+    "dicebear-personas-67f54a0",
+    "dicebear-pixel-art-67f54a0",
+    "dicebear-toon-head-67f54a0",
     "hand-core-1"
    ],
    "licenses": [
+    "CC-BY-4.0",
     "CC0-1.0"
    ],
    "warnings": []

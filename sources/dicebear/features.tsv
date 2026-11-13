@@ -1,0 +1,237 @@
+# style	slot	variant	features (key=value columns; feel and age may repeat)
+# The features of the imported DiceBear variants (R6.3), written by a language model that looked at every variant
+# alone on contact sheets (tools/render-faces.mjs). Read by tools/import/dicebear.mjs; a variant with a row gets
+# named=model. The variants of the style pixel-art have no rows, except its glasses and hats: at 16 by 16 pixels
+# their shape says too little.
+cutouts	head	blob	shape=round
+cutouts	head	block	shape=square
+cutouts	head	pear	feel=narrow	kind=pear
+cutouts	head	slanted	shape=square	kind=slanted
+cutouts	head	tall	shape=long	kind=pointed
+cutouts	head	wide	feel=wide	shape=oval
+cutouts	hair_front	crest	size=small	length=short	kind=crest
+cutouts	hair_front	curls	feel=curly	length=short
+cutouts	hair_front	fringe	length=short	kind=fringe
+cutouts	hair_front	long	length=long	feel=straight
+cutouts	hair_front	sidePart	length=short	kind=side parting
+cutouts	hair_front	swoosh	length=short	kind=swoosh
+cutouts	hair_front	tufts	size=small	length=short	kind=tufts
+cutouts	eyebrows	dashes	feel=thin	feel=flat	size=small
+cutouts	eyebrows	mono	feel=thick	feel=flat	kind=monobrow
+cutouts	eyebrows	strips	feel=thick	feel=flat
+cutouts	eyebrows	uneven	feel=arched	kind=uneven
+cutouts	cheeks	torn	kind=blush
+cutouts	eyes	bigSmall	feel=open	kind=uneven
+cutouts	eyes	circleSquare	feel=open	kind=uneven
+cutouts	eyes	inkDots	size=small	kind=dot
+cutouts	eyes	pair	feel=open	shape=round
+cutouts	eyes	ringDot	size=large	kind=uneven
+cutouts	eyes	sleepyOpen	kind=wink
+cutouts	eyes	squares	shape=square	feel=open
+cutouts	nose	bent	size=medium	kind=bent
+cutouts	nose	dab	shape=round	size=small	kind=button
+cutouts	nose	hook	kind=hooked	size=small
+cutouts	nose	strip	length=long	feel=narrow
+cutouts	nose	tornTriangle	kind=pointed
+cutouts	nose	wedge	kind=pointed	size=small
+cutouts	mouth	gasp	feel=open	feel=surprised	shape=round	size=small
+cutouts	mouth	grin	feel=open	kind=grin
+cutouts	mouth	smile	feel=smiling	feel=closed
+cutouts	mouth	strip	feel=flat	feel=closed
+cutouts	mouth	tornSmile	feel=smiling	feel=thick
+cutouts	mouth	wavy	feel=wavy	feel=closed
+cutouts	mouth	zigzag	feel=wavy	feel=closed	kind=zigzag
+miniavs	head	normal	shape=long	kind=profile
+miniavs	head	thin	shape=long	feel=narrow	kind=profile
+miniavs	head	wide	feel=wide	kind=profile
+miniavs	hair_front	balndess	length=short	kind=shaved lines
+miniavs	hair_front	classic01	length=short	kind=side parting
+miniavs	hair_front	classic02	length=short	feel=wavy
+miniavs	hair_front	curly	length=short	feel=curly
+miniavs	hair_front	elvis	length=short	kind=quiff
+miniavs	hair_front	long	length=long	feel=straight
+miniavs	hair_front	ponyTail	length=long	kind=ponytail
+miniavs	hair_front	slaughter	length=short	kind=bald on top
+miniavs	hair_front	stylish	length=short	kind=quiff
+miniavs	eyes	confident	feel=narrow	size=small
+miniavs	eyes	happy	size=small	kind=dot
+miniavs	eyes	normal	size=small	shape=square
+miniavs	cheeks	default	kind=blush
+miniavs	glasses	normal	shape=round
+miniavs	moustache	freddy	feel=thick
+miniavs	moustache	horshoe	feel=thick	kind=horseshoe
+miniavs	moustache	pencilThin	feel=thin	kind=pencil
+miniavs	moustache	pencilThinBeard	feel=thin	kind=pencil with soul patch
+miniavs	mouth	default	feel=smiling	feel=open
+miniavs	mouth	missingTooth	feel=smiling	feel=open	kind=missing tooth
+miniavs	shoulders	golf	kind=polo shirt
+miniavs	shoulders	tShirt	kind=t-shirt
+personas	beard	beardMustache	feel=thick	kind=full beard
+personas	beard	goatee	kind=goatee	feel=thin
+personas	beard	pyramid	kind=moustache	feel=thick
+personas	beard	soulPatch	kind=soul patch	size=small
+personas	beard	walrus	kind=moustache	feel=thick
+personas	eyes	glasses	kind=sunglasses
+personas	eyes	happy	feel=closed	feel=smiling
+personas	eyes	open	size=small	kind=dot
+personas	eyes	sleep	feel=closed
+personas	eyes	sunglasses	kind=sunglasses
+personas	eyes	wink	kind=wink
+personas	hair_front	balding	length=short	kind=bald on top
+personas	hair_front	beanie	kind=beanie
+personas	hair_front	bobBangs	length=medium	kind=bob	feel=straight
+personas	hair_front	bobCut	length=medium	kind=bob	feel=straight
+personas	hair_front	bunUndercut	kind=bun	size=small
+personas	hair_front	cap	kind=cap
+personas	hair_front	curly	length=medium	feel=curly
+personas	hair_front	curlyBun	feel=curly	kind=bun
+personas	hair_front	curlyHighTop	length=short	feel=curly
+personas	hair_front	extraLong	length=long	feel=straight
+personas	hair_front	fade	length=short	kind=fade
+personas	hair_front	long	length=long	feel=straight
+personas	hair_front	mohawk	length=short	kind=mohawk
+personas	hair_front	pigtails	kind=pigtails	age=child
+personas	hair_front	shortCombover	length=short	kind=side parting
+personas	hair_front	shortComboverChops	length=short	kind=side parting
+personas	hair_front	sideShave	length=long	kind=shaved on one side
+personas	hair_front	straightBun	kind=bun	feel=straight
+personas	mouth	bigSmile	feel=smiling	feel=open
+personas	mouth	frown	feel=sad	feel=closed
+personas	mouth	lips	feel=thick	feel=closed	kind=full lips
+personas	mouth	pacifier	kind=pacifier	age=child
+personas	mouth	smile	feel=smiling	feel=closed
+personas	mouth	smirk	feel=closed	kind=smirk
+personas	mouth	surprise	feel=open	feel=surprised	shape=round	size=small
+personas	shoulders	checkered	feel=wide
+personas	shoulders	rounded	shape=round	feel=wide
+personas	shoulders	small	size=small	feel=narrow
+personas	shoulders	squared	shape=square
+micah	beard	beard	feel=thick	kind=full beard
+micah	beard	scruff	kind=stubble
+micah	earrings	hoop	kind=hoop
+micah	earrings	stud	kind=stud	size=small
+micah	eyebrows	down	feel=sad	feel=thin
+micah	eyebrows	eyelashesDown	feel=thick	kind=lashes
+micah	eyebrows	eyelashesUp	feel=thick	kind=lashes
+micah	eyebrows	up	feel=arched	feel=thin
+micah	eyes	eyes	feel=open	shape=oval
+micah	eyes	eyesShadow	feel=open	kind=eye shadow
+micah	eyes	round	shape=round	size=small	feel=open
+micah	eyes	smiling	feel=closed	feel=smiling
+micah	eyes	smilingShadow	feel=closed	feel=smiling	kind=eye shadow
+micah	glasses	round	shape=round
+micah	glasses	square	shape=square
+micah	hair_front	dannyPhantom	length=medium	kind=quiff
+micah	hair_front	dougFunny	length=short	kind=three hairs
+micah	hair_front	fonze	length=short	kind=quiff
+micah	hair_front	full	length=long	feel=wavy
+micah	hair_front	mrClean	kind=bald
+micah	hair_front	mrT	length=short	kind=mohawk
+micah	hair_front	pixie	length=medium	kind=ponytail
+micah	hair_front	turban	kind=turban
+micah	mouth	frown	feel=sad	feel=closed
+micah	mouth	laughing	feel=smiling	feel=open
+micah	mouth	nervous	feel=open	kind=grin
+micah	mouth	pucker	size=small	kind=pucker
+micah	mouth	sad	feel=sad	feel=closed	size=small
+micah	mouth	smile	feel=smiling	feel=closed
+micah	mouth	smirk	feel=smiling	feel=closed	size=small
+micah	mouth	surprised	feel=open	feel=surprised	shape=round
+micah	nose	curve	size=small
+micah	nose	pointed	size=medium	kind=pointed
+micah	nose	tound	size=small	shape=round
+micah	shoulders	collared	kind=shirt
+micah	shoulders	crew	kind=t-shirt
+micah	shoulders	open	kind=open collar
+toon-head	beard	chin	size=small	kind=soul patch
+toon-head	beard	chinMoustache	size=small	kind=moustache
+toon-head	beard	fullBeard	feel=thick	kind=full beard
+toon-head	beard	longBeard	length=long	feel=thick	kind=long beard
+toon-head	beard	moustacheTwirl	kind=moustache
+toon-head	clothes	dress	kind=dress
+toon-head	clothes	openJacket	kind=jacket
+toon-head	clothes	shirt	kind=shirt
+toon-head	clothes	tShirt	kind=t-shirt
+toon-head	clothes	turtleNeck	kind=turtle neck
+toon-head	eyebrows	angry	feel=thick	kind=angry
+toon-head	eyebrows	happy	feel=thick	feel=arched
+toon-head	eyebrows	neutral	feel=thick	feel=flat
+toon-head	eyebrows	raised	feel=thick	feel=arched	feel=surprised
+toon-head	eyebrows	sad	feel=thick	feel=sad
+toon-head	eyes	bow	feel=closed	feel=smiling
+toon-head	eyes	happy	feel=open	shape=round
+toon-head	eyes	humble	feel=closed
+toon-head	eyes	wide	feel=open	feel=wide	size=large
+toon-head	eyes	wink	kind=wink
+toon-head	hair_back	longStraight	length=long	feel=straight
+toon-head	hair_back	longWavy	length=long	feel=wavy
+toon-head	hair_back	neckHigh	length=short
+toon-head	hair_back	shoulderHigh	length=medium
+toon-head	hair_front	bun	kind=bun
+toon-head	hair_front	sideComed	length=short	kind=side parting
+toon-head	hair_front	spiky	length=short	kind=spikes
+toon-head	hair_front	undercut	length=short	kind=undercut
+toon-head	mouth	agape	feel=open	size=small
+toon-head	mouth	angry	feel=open	kind=grin
+toon-head	mouth	laugh	feel=open	feel=smiling
+big-smile	accessories	catEars	kind=cat ears
+big-smile	accessories	clownNose	kind=clown nose
+big-smile	accessories	faceMask	kind=face mask
+big-smile	accessories	glasses	kind=glasses
+big-smile	accessories	mustache	kind=moustache
+big-smile	accessories	sailormoonCrown	kind=tiara
+big-smile	accessories	sleepMask	kind=sleep mask
+big-smile	accessories	sunglasses	kind=sunglasses
+big-smile	eyes	angry	kind=angry
+big-smile	eyes	cheery	feel=open
+big-smile	eyes	confused	feel=open	kind=uneven
+big-smile	eyes	normal	feel=open
+big-smile	eyes	sad	feel=sad
+big-smile	eyes	sleepy	feel=closed
+big-smile	eyes	starstruck	feel=open	size=large	kind=stars
+big-smile	eyes	winking	kind=wink
+big-smile	hair_front	bangs	length=long	kind=fringe	feel=straight
+big-smile	hair_front	bowlCutHair	length=short	kind=bowl cut
+big-smile	hair_front	braids	length=long	kind=braids
+big-smile	hair_front	bunHair	kind=bun
+big-smile	hair_front	curlyBob	length=medium	feel=curly	kind=bob
+big-smile	hair_front	curlyShortHair	length=short	feel=curly
+big-smile	hair_front	froBun	feel=curly	kind=bun
+big-smile	hair_front	halfShavedHead	length=medium	kind=shaved on one side
+big-smile	hair_front	mohawk	length=short	kind=mohawk
+big-smile	hair_front	shavedHead	length=short
+big-smile	hair_front	shortHair	length=short
+big-smile	hair_front	straightHair	length=long	feel=straight
+big-smile	hair_front	wavyBob	length=medium	feel=wavy	kind=bob
+big-smile	mouth	awkwardSmile	feel=open	kind=grin
+big-smile	mouth	braces	feel=open	feel=smiling	kind=braces
+big-smile	mouth	gapSmile	feel=open	feel=smiling	kind=missing tooth
+big-smile	mouth	kawaii	feel=closed	feel=wavy	size=small
+big-smile	mouth	openSad	feel=open	feel=sad
+big-smile	mouth	openedSmile	feel=open	feel=smiling	size=large
+big-smile	mouth	teethSmile	feel=open	kind=grin
+big-smile	mouth	unimpressed	feel=flat	feel=closed
+pixel-art	glasses	dark01	kind=sunglasses
+pixel-art	glasses	dark02	kind=sunglasses
+pixel-art	glasses	dark03	kind=sunglasses
+pixel-art	glasses	dark04	kind=sunglasses
+pixel-art	glasses	dark05	kind=sunglasses
+pixel-art	glasses	dark06	kind=sunglasses
+pixel-art	glasses	dark07	kind=sunglasses
+pixel-art	glasses	light01	kind=glasses
+pixel-art	glasses	light02	kind=glasses
+pixel-art	glasses	light03	kind=glasses
+pixel-art	glasses	light04	kind=glasses
+pixel-art	glasses	light05	kind=glasses
+pixel-art	glasses	light06	kind=glasses
+pixel-art	glasses	light07	kind=glasses
+pixel-art	hat	variant01	kind=hat
+pixel-art	hat	variant02	kind=cap
+pixel-art	hat	variant03	kind=hat
+pixel-art	hat	variant04	kind=hat
+pixel-art	hat	variant05	kind=hat
+pixel-art	hat	variant06	kind=hat
+pixel-art	hat	variant07	kind=cap
+pixel-art	hat	variant08	kind=hat
+pixel-art	hat	variant09	kind=hat
+pixel-art	hat	variant10	kind=hat

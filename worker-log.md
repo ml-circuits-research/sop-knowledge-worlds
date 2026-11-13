@@ -1050,3 +1050,50 @@ with the new objects (its test passes; no browser run this round).
   pass, 0 fail.
 - Still to do in Round 6: R6.3 (import; the styles are now JSON definitions in `dicebear/styles`, not in
   `dicebear/dicebear`) and the faces in the gallery.
+
+## R6.3 (2026-11-13): seven DiceBear styles imported into `k.faces`
+
+- **Where the styles are.** `dicebear/dicebear` no longer holds them (its README points to
+  `github.com/dicebear/styles`: one JSON definition per style, 78 files, with the licence in each `meta` block and in
+  `LICENSE.md`). Cloned at commit 67f54a0 into `sources/dicebear/raw/styles` (git-ignored). `sources/dicebear/SOURCE.md`.
+- **Licences checked** (the `meta` block of all 78 definitions printed and read): CC0 1.0 and CC BY 4.0 styles are
+  eligible; `avataaars`, `avataaars-neutral`, `bottts`, `bottts-neutral` ("free for personal and commercial use")
+  are skipped as unclear; `icons` is MIT but not faces. The importer refuses a definition whose licence is not the
+  one written next to its name in `tools/import/dicebear.mjs`.
+- **Importer** `tools/import/dicebear.mjs` (test `tests/import.dicebear.test.mjs`: a made-up definition, and "the
+  shards on disk are what the importer gives"): a component is a slot of its style, placed where the definition
+  places it (nested components too: the eyes inside the head); a variant is a `k.faces.variant` named `"<style>
+  <variant>"`; its elements go through `tools/import/svg-parts.mjs` (the Noto converter: at most 14 parts, 32 points
+  a polygon, 150 points a variant); a colour taken from the style's skin, hair or clothing list becomes `tint` with
+  the first colour of the list as `rgb`; elements on the canvas itself become the slot `head`; `use` elements are
+  replaced by what they refer to. The slot box is the bounds of its variants.
+- **Imported, with the preview looked at for each** (16 random faces a style at 170 px on two sheets while
+  building; the committed 12 a style at 110 px on one sheet; every variant alone at 120 px on 8 sheets):
+
+| Style | Licence | Variants | Left out | Verdict of the look |
+| --- | --- | --- | --- | --- |
+| cutouts | CC0-1.0 | 38 in 7 slots | 0 | survives; paper-cut faces, all parts in place |
+| pixel-art | CC0-1.0 | 132 in 8 slots | 8 beards (mask: a full square) | survives; blocky, every face reads; some long hair covers the sides of the face |
+| miniavs | CC-BY-4.0 | 25 in 8 slots | 0 | survives; profile heads |
+| personas | CC-BY-4.0 | 41 in 6 slots | 6 empty (hair `bald`, `buzzcut`, beard `shadow`, nose ×3: only strokes or translucent) | survives, but **without noses** |
+| micah | CC-BY-4.0 | 40 in 11 slots | 0 | survives; thin strokes are drawn thicker than in the original |
+| toon-head | CC-BY-4.0 | 33 in 9 slots | 2 mouths (mask) | survives; the rear hair has a black inner shape that the head covers |
+| big-smile | CC-BY-4.0 | 38 in 5 slots | 0 | survives |
+
+  No style had to be dropped. 347 variants, 1,063 parts.
+- **What the conversion loses** (seen on the sheets): holes, masks and clips (hence the left-out variants), stroke
+  widths (every line is drawn 2 units wide), gradients; curves are polygons. Elements that a definition draws after
+  a nested component (micah: two strokes of the beard after the mouth, one of the detached ear) are drawn before it.
+- **Features** (`sources/dicebear/features.tsv`, 232 rows, `named=model`): given by me from the 8 sheets of single
+  variants, with DiceBear's variant name next to each (the names helped: `bobBangs`, `walrus`); `length` also from
+  the `hairLength` tags. **Not named:** 115 variants: the single heads, and pixel-art except its glasses and hats
+  (at 16 by 16 pixels a mouth is three squares). Not checked: the features against the drawing at a larger size; a
+  second opinion on any of them.
+- **Not tried:** adventurer, big-ears, croodles, lorelei, notionists, open-peeps and the other CC0 / CC BY styles
+  (large definitions or line drawings with holes); the `-neutral` forms.
+- Previews: `docs/worlds/k.faces/preview/` now has 627 files (481 variants alone, 13 presets, 7 expressions, 40 + 84
+  random faces, `index.html`, `faces.json`), 3.0 MB.
+- Numbers: k.faces 80 shards, 10,182 wires, 1,676,111 bytes (largest: `pixel-art-hair-front`, 1,265 wires, 214,907
+  bytes). By style: cutouts 8 shards / 523 wires, pixel-art 9 / 2,663, miniavs 9 / 646, personas 7 / 1,124, micah 12
+  / 1,016, toon-head 10 / 1,082, big-smile 6 / 1,760. Catalog: 11 worlds, 739 shards, 342,418 wires, 44,153,113
+  bytes, vocab 18,702 words; 0 errors, 0 warnings. npm test 2,271 pass, 0 fail.
