@@ -1,5 +1,5 @@
 # k.words/shards/ov: noun and verb senses of the words from "oval" to "overweight" (first letters "ov").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -8,6 +8,8 @@
 @k.words.over.noun.1 k.words.sense word=over pos=noun n=1 gloss="(cricket) the division of play during which six balls are bowled at the batsman by one player from the other team from the same end of the pitch" is_a=part part_of="playing period" core.source="wordnet 3.1"
 @k.words.overall.noun.1 k.words.sense word=overall pos=noun n=1 gloss="(usually plural) work clothing consisting of denim trousers (usually with a bib and shoulder straps)" is_a=work-clothing core.source="wordnet 3.1"
 @k.words.overall.noun.2 k.words.sense word=overall pos=noun n=2 gloss="a loose protective coverall or smock worn over ordinary clothing for dirty work" synonym=boilersuit synonym="boilers suit" is_a=coverall core.source="wordnet 3.1"
+@k.words.overcoat.noun.1 k.words.sense word=overcoat pos=noun n=1 gloss="a heavy coat worn over clothes in winter" synonym=greatcoat synonym=topcoat is_a=coat core.source="wordnet 3.1"
+@k.words.overcoat.noun.2 k.words.sense word=overcoat pos=noun n=2 gloss="an additional protective coating (as of paint or varnish)" synonym=overcoating is_a=coating core.source="wordnet 3.1"
 @k.words.overcome.verb.1 k.words.sense word=overcome pos=verb n=1 gloss="win a victory over" synonym="get the better of" synonym=defeat core.source="wordnet 3.1"
 @k.words.overcome.verb.2 k.words.sense word=overcome pos=verb n=2 gloss="get on top of; deal with successfully" synonym="get over" synonym=subdue synonym=surmount synonym=master is_a=beat core.source="wordnet 3.1"
 @k.words.overcome.verb.3 k.words.sense word=overcome pos=verb n=3 gloss="overcome, as with emotions or perceptual stimuli" synonym=overwhelm synonym=overpower synonym="sweep over" synonym=whelm synonym=overtake is_a=arouse core.source="wordnet 3.1"

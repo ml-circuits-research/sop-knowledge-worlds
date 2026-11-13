@@ -1,5 +1,5 @@
 # k.words/shards/up: noun and verb senses of the words from "up" to "uptown" (first letters "up").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -25,6 +25,8 @@
 @k.words.uphold.verb.2 k.words.sense word=uphold pos=verb n=2 gloss="stand up for; stick up for; of causes, principles, or ideals" is_a=defend core.source="wordnet 3.1"
 @k.words.uphold.verb.3 k.words.sense word=uphold pos=verb n=3 gloss="support against an opponent" synonym=maintain is_a=confirm core.source="wordnet 3.1"
 @k.words.uphold.forms core.word text=upheld means=uphold of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.upholstery.noun.1 k.words.sense word=upholstery pos=noun n=1 gloss="covering (padding and springs and webbing and fabric) on a piece of furniture" is_a=covering part_of=seat core.source="wordnet 3.1"
+@k.words.upholstery.noun.2 k.words.sense word=upholstery pos=noun n=2 gloss="the craft of upholstering" is_a=trade core.source="wordnet 3.1"
 @k.words.upload.verb.1 k.words.sense word=upload pos=verb n=1 gloss="transfer a file or program to a central computer from a smaller computer or a computer at a remote location" is_a=transfer core.source="wordnet 3.1"
 @k.words.upper.noun.1 k.words.sense word=upper pos=noun n=1 gloss="the higher of two berths" synonym="upper berth" is_a=berth core.source="wordnet 3.1"
 @k.words.upper.noun.2 k.words.sense word=upper pos=noun n=2 gloss="piece of leather or synthetic material that forms the part of a shoe or boot above the sole that encases the foot" is_a="piece of leather" part_of=shoe part_of=boot core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
 # k.words/shards/br: noun and verb senses of the words from "br" to "bryan" (first letters "br").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -198,6 +198,11 @@
 @k.words.brilliance.noun.1 k.words.sense word=brilliance pos=noun n=1 gloss="a light within the field of vision that is brighter than the brightness to which the eyes are adapted" synonym=glare synonym=blaze is_a=brightness core.source="wordnet 3.1"
 @k.words.brilliance.noun.2 k.words.sense word=brilliance pos=noun n=2 gloss="the quality of being magnificent or splendid or grand" synonym=magnificence synonym=splendor synonym=splendour synonym=grandeur synonym=grandness is_a=elegance core.source="wordnet 3.1"
 @k.words.brilliance.noun.3 k.words.sense word=brilliance pos=noun n=3 gloss="unusual mental ability" synonym=genius is_a=intelligence core.source="wordnet 3.1"
+@k.words.brim.noun.1 k.words.sense word=brim pos=noun n=1 gloss="the top edge of a vessel or other container" synonym=rim synonym=lip is_a=edge part_of=vessel core.source="wordnet 3.1"
+@k.words.brim.noun.2 k.words.sense word=brim pos=noun n=2 gloss="a circular projection that sticks outward from the crown of a hat" is_a=projection part_of=hat core.source="wordnet 3.1"
+@k.words.brim.verb.1 k.words.sense word=brim pos=verb n=1 gloss="be completely full" is_a=have core.source="wordnet 3.1"
+@k.words.brim.verb.2 k.words.sense word=brim pos=verb n=2 gloss="fill as much as possible" is_a=fill core.source="wordnet 3.1"
+@k.words.brim.forms core.word text=brimmed text=brimming means=brim of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.bring.verb.1 k.words.sense word=bring pos=verb n=1 gloss="take something or somebody with oneself somewhere" synonym=convey synonym=take is_a=transport core.source="wordnet 3.1"
 @k.words.bring.verb.2 k.words.sense word=bring pos=verb n=2 gloss="cause to come into a particular state or condition" is_a=change core.source="wordnet 3.1"
 @k.words.bring.verb.3 k.words.sense word=bring pos=verb n=3 gloss="cause to happen or to occur as a consequence" synonym=work synonym=play synonym=wreak synonym="make for" is_a=make core.source="wordnet 3.1"
@@ -234,6 +239,7 @@
 @k.words.brochure.noun.1 k.words.sense word=brochure pos=noun n=1 gloss="a small book usually having a paper cover" synonym=booklet synonym=folder synonym=leaflet synonym=pamphlet is_a=book core.source="wordnet 3.1"
 @k.words.broker.noun.1 k.words.sense word=broker pos=noun n=1 gloss="a businessman who buys or sells for another in exchange for a commission" synonym=agent synonym=factor is_a=businessperson core.source="wordnet 3.1"
 @k.words.broker.verb.1 k.words.sense word=broker pos=verb n=1 gloss="act as a broker" is_a=negociate core.source="wordnet 3.1"
+@k.words.bronco.noun.1 k.words.sense word=bronco pos=noun n=1 gloss="an unbroken or imperfectly broken mustang" synonym=bronc synonym=broncho is_a=mustang core.source="wordnet 3.1"
 @k.words.bronx.noun.1 k.words.sense word=Bronx pos=noun n=1 gloss="a borough of New York City" instance_of=borough part_of="New York" core.source="wordnet 3.1"
 @k.words.bronx.spelling.Bronx core.word text=bronx means=Bronx of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.bronze.noun.1 k.words.sense word=bronze pos=noun n=1 gloss="an alloy of copper and tin and sometimes other elements; also any copper-base alloy containing other elements in place of tin" is_a="copper-base alloy" core.source="wordnet 3.1"

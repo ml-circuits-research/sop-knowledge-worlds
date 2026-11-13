@@ -1,5 +1,5 @@
 # k.words/shards/ap: noun and verb senses of the words from "apache" to "apron" (first letters "ap").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -28,6 +28,8 @@
 @k.words.appalling.noun.1 k.words.sense word=appalling pos=noun n=1 gloss="an experience that appalls" is_a=experience core.source="wordnet 3.1"
 @k.words.apparatus.noun.1 k.words.sense word=apparatus pos=noun n=1 gloss="equipment designed to serve a specific function" synonym=setup is_a=equipment core.source="wordnet 3.1"
 @k.words.apparatus.noun.2 k.words.sense word=apparatus pos=noun n=2 gloss="(anatomy) a group of body parts that work together to perform a given function" is_a="body part" core.source="wordnet 3.1"
+@k.words.apparel.noun.1 k.words.sense word=apparel pos=noun n=1 gloss="clothing in general" synonym="wearing apparel" synonym=dress synonym=clothes is_a=clothing core.source="wordnet 3.1"
+@k.words.apparel.verb.1 k.words.sense word=apparel pos=verb n=1 gloss="provide with clothes or put clothes on" synonym=dress synonym=clothe synonym=enclothe synonym=garb synonym=raiment synonym=tog synonym=garment synonym=habilitate synonym="fit out" is_a="change state" core.source="wordnet 3.1"
 @k.words.appeal.noun.1 k.words.sense word=appeal pos=noun n=1 gloss="earnest or urgent request" synonym=entreaty synonym=prayer is_a=request core.source="wordnet 3.1"
 @k.words.appeal.noun.2 k.words.sense word=appeal pos=noun n=2 gloss="attractiveness that interests or pleases or stimulates" synonym=appealingness synonym=charm is_a=attractiveness core.source="wordnet 3.1"
 @k.words.appeal.noun.3 k.words.sense word=appeal pos=noun n=3 gloss="(law) a legal proceeding in which the appellant resorts to a higher court for the purpose of obtaining a review of a lower court decision and a reversal of the lower court's judgment or the granting of a new trial" is_a=proceeding core.source="wordnet 3.1"
@@ -51,6 +53,7 @@
 @k.words.applause.noun.1 k.words.sense word=applause pos=noun n=1 gloss="a demonstration of approval by clapping the hands together" synonym="hand clapping" synonym=clapping is_a=approval part_of=ovation core.source="wordnet 3.1"
 @k.words.apple.noun.1 k.words.sense word=apple pos=noun n=1 gloss="fruit with red or yellow or green skin and sweet to tart crisp whitish flesh" is_a="edible fruit" is_a=pome part_of=apple core.source="wordnet 3.1"
 @k.words.apple.noun.2 k.words.sense word=apple pos=noun n=2 gloss="native Eurasian tree widely cultivated in many varieties for its firm rounded edible fruits" synonym="orchard apple tree" synonym="Malus pumila" is_a="apple tree" core.source="wordnet 3.1"
+@k.words.applejack.noun.1 k.words.sense word=applejack pos=noun n=1 gloss="distilled from hard cider" is_a=brandy core.source="wordnet 3.1"
 @k.words.application.noun.1 k.words.sense word=application pos=noun n=1 gloss="the act of bringing something to bear; using it for a particular purpose" synonym="practical application" is_a=use core.source="wordnet 3.1"
 @k.words.application.noun.2 k.words.sense word=application pos=noun n=2 gloss="a verbal or written request for assistance or employment or admission to a school" is_a=request core.source="wordnet 3.1"
 @k.words.application.noun.3 k.words.sense word=application pos=noun n=3 gloss="the work of applying something" synonym=coating synonym=covering is_a="manual labor" core.source="wordnet 3.1"
@@ -91,6 +94,9 @@
 @k.words.approval.noun.3 k.words.sense word=approval pos=noun n=3 gloss="acceptance as satisfactory" synonym="favorable reception" synonym="favourable reception" is_a=acceptance core.source="wordnet 3.1"
 @k.words.approve.verb.1 k.words.sense word=approve pos=verb n=1 gloss="give sanction to" synonym=O.K. synonym=okay synonym=sanction is_a=authorize core.source="wordnet 3.1"
 @k.words.approve.verb.2 k.words.sense word=approve pos=verb n=2 gloss="judge to be right or commendable; think well of" is_a=evaluate core.source="wordnet 3.1"
+@k.words.apricot.noun.1 k.words.sense word=apricot pos=noun n=1 gloss="Asian tree having clusters of usually white blossoms and edible fruit resembling the peach" synonym="apricot tree" is_a="fruit tree" core.source="wordnet 3.1"
+@k.words.apricot.noun.2 k.words.sense word=apricot pos=noun n=2 gloss="downy yellow to rosy-colored fruit resembling a small peach" is_a="edible fruit" part_of="common apricot" core.source="wordnet 3.1"
+@k.words.apricot.noun.3 k.words.sense word=apricot pos=noun n=3 gloss="a shade of pink tinged with yellow" synonym="yellowish pink" synonym=peach synonym="salmon pink" is_a=pink core.source="wordnet 3.1"
 @k.words.april.noun.1 k.words.sense word=April pos=noun n=1 gloss="the month following March and preceding May" synonym=Apr is_a="Gregorian calendar month" part_of="Gregorian calendar" core.source="wordnet 3.1"
 @k.words.april.spelling.April core.word text=april means=April of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.apron.noun.1 k.words.sense word=apron pos=noun n=1 gloss="a garment of cloth or leather or plastic that is tied about the waist and worn to protect your clothing" is_a="protective garment" core.source="wordnet 3.1"

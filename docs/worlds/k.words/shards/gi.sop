@@ -1,5 +1,5 @@
 # k.words/shards/gi: noun and verb senses of the words from "gi" to "giving" (first letters "gi").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -49,6 +49,8 @@
 @k.words.ginger.noun.3 k.words.sense word=ginger pos=noun n=3 gloss="pungent rhizome of the common ginger plant; used fresh as a seasoning especially in Asian cookery" synonym=gingerroot is_a=flavorer part_of="common ginger" core.source="wordnet 3.1"
 @k.words.ginger.verb.1 k.words.sense word=ginger pos=verb n=1 gloss="add ginger to in order to add flavor" is_a=zest core.source="wordnet 3.1"
 @k.words.gingerbread.noun.1 k.words.sense word=gingerbread pos=noun n=1 gloss="cake flavored with ginger" is_a=cake core.source="wordnet 3.1"
+@k.words.ginseng.noun.1 k.words.sense word=ginseng pos=noun n=1 gloss="aromatic root of ginseng plants" is_a=root part_of=ginseng part_of="American ginseng" core.source="wordnet 3.1"
+@k.words.ginseng.noun.2 k.words.sense word=ginseng pos=noun n=2 gloss="Chinese herb with palmately compound leaves and small greenish flowers and forked aromatic roots believed to have medicinal powers" synonym=nin-sin synonym="Panax ginseng" synonym="Panax schinseng" synonym="Panax pseudoginseng" is_a=herb core.source="wordnet 3.1"
 @k.words.giraffe.noun.1 k.words.sense word=giraffe pos=noun n=1 gloss="tallest living quadruped; having a spotted coat and small horns and very long neck and legs; of savannahs of tropical Africa" synonym=camelopard synonym="Giraffa camelopardalis" is_a=ruminant core.source="wordnet 3.1"
 @k.words.girl.noun.1 k.words.sense word=girl pos=noun n=1 gloss="a young female" synonym=miss synonym=missy synonym="young lady" synonym="young woman" synonym=fille is_a=woman core.source="wordnet 3.1"
 @k.words.girl.noun.2 k.words.sense word=girl pos=noun n=2 gloss="a youthful female person" synonym="female child" synonym="little girl" is_a=female core.source="wordnet 3.1"

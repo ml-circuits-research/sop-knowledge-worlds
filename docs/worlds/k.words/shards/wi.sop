@@ -1,5 +1,5 @@
 # k.words/shards/wi: noun and verb senses of the words from "wi" to "wizard" (first letters "wi").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -7,6 +7,9 @@
 @k.words.wi.spelling.WI core.word text=wi means=WI of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.wick.noun.1 k.words.sense word=wick pos=noun n=1 gloss="any piece of cord that conveys liquid by capillary action" is_a=cord core.source="wordnet 3.1"
 @k.words.wick.noun.2 k.words.sense word=wick pos=noun n=2 gloss="a loosely woven cord (in a candle or oil lamp) that draws fuel by capillary action up into the flame" synonym=taper is_a=cord part_of="oil lamp" part_of=candle core.source="wordnet 3.1"
+@k.words.wicket.noun.1 k.words.sense word=wicket pos=noun n=1 gloss="cricket equipment consisting of a set of three stumps topped by crosspieces; used in playing cricket" is_a="cricket equipment" core.source="wordnet 3.1"
+@k.words.wicket.noun.2 k.words.sense word=wicket pos=noun n=2 gloss="a small arch used as croquet equipment" synonym=hoop is_a="croquet equipment" core.source="wordnet 3.1"
+@k.words.wicket.noun.3 k.words.sense word=wicket pos=noun n=3 gloss="small gate or door (especially one that is part of a larger door)" synonym="wicket door" synonym="wicket gate" is_a=gate core.source="wordnet 3.1"
 @k.words.widow.noun.1 k.words.sense word=widow pos=noun n=1 gloss="a woman whose husband is dead especially one who has not remarried" synonym="widow woman" is_a=woman core.source="wordnet 3.1"
 @k.words.widow.verb.1 k.words.sense word=widow pos=verb n=1 gloss="cause to be without a spouse" is_a=leave core.source="wordnet 3.1"
 @k.words.widower.noun.1 k.words.sense word=widower pos=noun n=1 gloss="a man whose wife is dead especially one who has not remarried" synonym=widowman is_a=man core.source="wordnet 3.1"
@@ -24,6 +27,9 @@
 @k.words.wiggle.verb.1 k.words.sense word=wiggle pos=verb n=1 gloss="move to and fro" synonym=jiggle synonym=joggle is_a=shake core.source="wordnet 3.1"
 @k.words.wild.noun.1 k.words.sense word=wild pos=noun n=1 gloss="a wild primitive state untouched by civilization" synonym="natural state" synonym="state of nature" is_a=state core.source="wordnet 3.1"
 @k.words.wild.noun.2 k.words.sense word=wild pos=noun n=2 gloss="a wild and uninhabited area left in its natural condition" synonym=wilderness is_a="geographical area" core.source="wordnet 3.1"
+@k.words.wildcat.noun.1 k.words.sense word=wildcat pos=noun n=1 gloss="an exploratory oil well drilled in land not known to be an oil field" synonym="wildcat well" is_a="oil well" core.source="wordnet 3.1"
+@k.words.wildcat.noun.2 k.words.sense word=wildcat pos=noun n=2 gloss="a cruelly rapacious person" synonym=beast synonym=wolf synonym=savage synonym=brute is_a=attacker core.source="wordnet 3.1"
+@k.words.wildcat.noun.3 k.words.sense word=wildcat pos=noun n=3 gloss="any small or medium-sized cat resembling the domestic cat and living in the wild" is_a=cat core.source="wordnet 3.1"
 @k.words.wilde.noun.1 k.words.sense word=Wilde pos=noun n=1 gloss="Irish writer and wit (1854-1900)" synonym="Oscar Wilde" synonym="Oscar Fingal O'Flahertie Wills Wilde" instance_of=writer instance_of=dramatist core.source="wordnet 3.1"
 @k.words.wilde.spelling.Wilde core.word text=wilde means=Wilde of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.wilder.noun.1 k.words.sense word=Wilder pos=noun n=1 gloss="United States writer and dramatist (1897-1975)" synonym="Thornton Wilder" synonym="Thornton Niven Wilder" instance_of=writer instance_of=dramatist core.source="wordnet 3.1"
@@ -98,6 +104,7 @@
 @k.words.window.noun.3 k.words.sense word=window pos=noun n=3 gloss="a transparent panel (as of an envelope) inserted in an otherwise opaque material" is_a=panel part_of="window envelope" core.source="wordnet 3.1"
 @k.words.windows.noun.1 k.words.sense word=Windows pos=noun n=1 gloss="(trademark) an operating system with a graphical user interface" is_a="operating system" core.source="wordnet 3.1"
 @k.words.windows.spelling.Windows core.word text=windows means=Windows of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.windscreen.noun.1 k.words.sense word=windscreen pos=noun n=1 gloss="transparent screen (as of glass) to protect occupants of a vehicle" synonym=windshield is_a=screen part_of="motor vehicle" part_of=airplane part_of=motorboat core.source="wordnet 3.1"
 @k.words.windshield.noun.1 k.words.sense word=windshield pos=noun n=1 gloss="transparent screen (as of glass) to protect occupants of a vehicle" synonym=windscreen is_a=screen part_of="motor vehicle" part_of=airplane part_of=motorboat core.source="wordnet 3.1"
 @k.words.windsor.noun.1 k.words.sense word=Windsor pos=noun n=1 gloss="a city in southeastern Ontario on the Detroit River opposite Detroit" instance_of=city core.source="wordnet 3.1"
 @k.words.windsor.noun.2 k.words.sense word=Windsor pos=noun n=2 gloss="the British royal family since 1917" synonym="House of Windsor" is_a=dynasty core.source="wordnet 3.1"
@@ -106,6 +113,7 @@
 @k.words.wine.noun.2 k.words.sense word=wine pos=noun n=2 gloss="a red as dark as red wine" synonym=wine-colored synonym=wine-coloured is_a="dark red" core.source="wordnet 3.1"
 @k.words.wine.verb.1 k.words.sense word=wine pos=verb n=1 gloss="drink wine" is_a="hit the bottle" core.source="wordnet 3.1"
 @k.words.wine.verb.2 k.words.sense word=wine pos=verb n=2 gloss="treat to wine" is_a=regale core.source="wordnet 3.1"
+@k.words.winery.noun.1 k.words.sense word=winery pos=noun n=1 gloss="an establishment where wine is made" synonym="wine maker" is_a=establishment is_a=plant core.source="wordnet 3.1"
 @k.words.wing.noun.1 k.words.sense word=wing pos=noun n=1 gloss="a movable organ for flying (one of a pair)" is_a=organ part_of=bird part_of=bat part_of=insect part_of=angel core.source="wordnet 3.1"
 @k.words.wing.noun.2 k.words.sense word=wing pos=noun n=2 gloss="one of the horizontal airfoils on either side of the fuselage of an airplane" is_a=airfoil part_of=airplane core.source="wordnet 3.1"
 @k.words.wing.noun.3 k.words.sense word=wing pos=noun n=3 gloss="a stage area out of sight of the audience" synonym=offstage synonym=backstage is_a=stage core.source="wordnet 3.1"

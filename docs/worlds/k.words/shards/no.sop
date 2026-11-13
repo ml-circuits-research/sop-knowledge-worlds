@@ -1,5 +1,5 @@
-# k.words/shards/no: noun and verb senses of the words from "no" to "nowhere" (first letters "no").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/no: noun and verb senses of the words from "no" to "nozzle" (first letters "no").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -25,6 +25,8 @@
 @k.words.nod.forms core.word text=nodded text=nodding means=nod of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.noel.noun.1 k.words.sense word=Noel pos=noun n=1 gloss="period extending from Dec. 24 to Jan. 6" synonym=Christmas synonym=Christmastide synonym=Christmastime synonym=Yule synonym=Yuletide is_a=season part_of=December part_of=January core.source="wordnet 3.1"
 @k.words.noel.spelling.Noel core.word text=noel means=Noel of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.nog.noun.1 k.words.sense word=nog pos=noun n=1 gloss="a wooden pin pushed or driven into a surface" synonym=peg is_a=pin core.source="wordnet 3.1"
+@k.words.nog.noun.2 k.words.sense word=nog pos=noun n=2 gloss="a wooden block built into a masonry wall so that joinery structure can be nailed to it" is_a=block core.source="wordnet 3.1"
 @k.words.noise.noun.1 k.words.sense word=noise pos=noun n=1 gloss="sound of any kind (especially unintelligible or dissonant sound)" is_a=sound core.source="wordnet 3.1"
 @k.words.noise.noun.2 k.words.sense word=noise pos=noun n=2 gloss="the auditory experience of sound that lacks musical quality; sound that is a disagreeable auditory experience" synonym=dissonance synonym=racket is_a=sound core.source="wordnet 3.1"
 @k.words.noise.noun.3 k.words.sense word=noise pos=noun n=3 gloss="electrical or acoustic activity that can disturb communication" synonym=interference synonym=disturbance is_a=trouble core.source="wordnet 3.1"
@@ -130,3 +132,5 @@
 @k.words.now.noun.1 k.words.sense word=now pos=noun n=1 gloss="the momentary present" is_a=present core.source="wordnet 3.1"
 @k.words.nowadays.noun.1 k.words.sense word=nowadays pos=noun n=1 gloss="the period of time that is happening now; any continuous stretch of time including the moment of speech" synonym=present is_a=time core.source="wordnet 3.1"
 @k.words.nowhere.noun.1 k.words.sense word=nowhere pos=noun n=1 gloss="an insignificant place" is_a=obscurity core.source="wordnet 3.1"
+@k.words.nozzle.noun.1 k.words.sense word=nozzle pos=noun n=1 gloss="a projecting spout from which a fluid is discharged" synonym=nose is_a=spout part_of=oilcan part_of="sprinkler system" part_of="gas burner" core.source="wordnet 3.1"
+@k.words.nozzle.noun.2 k.words.sense word=nozzle pos=noun n=2 gloss="informal terms for the nose" synonym=beak synonym=honker synonym=hooter synonym=snoot synonym=snout synonym=schnozzle synonym=schnoz is_a=nose core.source="wordnet 3.1"

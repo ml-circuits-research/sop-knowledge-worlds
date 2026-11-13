@@ -1,5 +1,5 @@
 # k.words/shards/th: noun and verb senses of the words from "th" to "thus" (first letters "th").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -52,6 +52,9 @@
 @k.words.theresa.spelling.Theresa core.word text=theresa means=Theresa of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.thermal.noun.1 k.words.sense word=thermal pos=noun n=1 gloss="rising current of warm air" is_a=wind core.source="wordnet 3.1"
 @k.words.thermometer.noun.1 k.words.sense word=thermometer pos=noun n=1 gloss="measuring instrument for measuring temperature" is_a="measuring instrument" core.source="wordnet 3.1"
+@k.words.thermos.noun.1 k.words.sense word=thermos pos=noun n=1 gloss="vacuum flask that preserves temperature of hot or cold drinks" synonym="thermos bottle" synonym="thermos flask" is_a="vacuum flask" core.source="wordnet 3.1"
+@k.words.thermostat.noun.1 k.words.sense word=thermostat pos=noun n=1 gloss="a regulator for automatically regulating temperature by starting or stopping the supply of heat" synonym=thermoregulator is_a=regulator part_of="cooling system" part_of=incubator core.source="wordnet 3.1"
+@k.words.thermostat.verb.1 k.words.sense word=thermostat pos=verb n=1 gloss="control the temperature with a thermostat" is_a=control core.source="wordnet 3.1"
 @k.words.thesis.noun.1 k.words.sense word=thesis pos=noun n=1 gloss="an unproved statement put forward as a premise in an argument" is_a=premise core.source="wordnet 3.1"
 @k.words.thesis.noun.2 k.words.sense word=thesis pos=noun n=2 gloss="a treatise advancing a new point of view resulting from research; usually a requirement for an advanced academic degree" synonym=dissertation is_a=treatise core.source="wordnet 3.1"
 @k.words.thesis.forms core.word text=theses means=thesis of=k.words.sense.word core.source="wordnet 3.1"
@@ -138,6 +141,8 @@
 @k.words.threshold.noun.1 k.words.sense word=threshold pos=noun n=1 gloss="the starting point for a new state or experience" is_a=beginning core.source="wordnet 3.1"
 @k.words.threshold.noun.2 k.words.sense word=threshold pos=noun n=2 gloss="the smallest detectable sensation" synonym=limen is_a=sensation core.source="wordnet 3.1"
 @k.words.threshold.noun.3 k.words.sense word=threshold pos=noun n=3 gloss="the entrance (the space in a wall) through which you enter or leave a room or building; the space that a door can close" synonym=doorway synonym=door synonym="room access" is_a=entrance part_of=wall core.source="wordnet 3.1"
+@k.words.thrift.noun.1 k.words.sense word=thrift pos=noun n=1 gloss="any of numerous sun-loving low-growing evergreens of the genus Armeria having round heads of pink or white flowers" is_a=subshrub core.source="wordnet 3.1"
+@k.words.thrift.noun.2 k.words.sense word=thrift pos=noun n=2 gloss="extreme care in spending money; reluctance to spend money unnecessarily" synonym=parsimony synonym=parsimoniousness synonym=penny-pinching is_a=frugality core.source="wordnet 3.1"
 @k.words.thrill.noun.1 k.words.sense word=thrill pos=noun n=1 gloss="the swift release of a store of affective force" synonym=bang synonym=boot synonym=charge synonym=rush synonym=flush synonym=kick is_a=exhilaration core.source="wordnet 3.1"
 @k.words.thrill.noun.2 k.words.sense word=thrill pos=noun n=2 gloss="an almost pleasurable sensation of fright" synonym=frisson synonym=shiver synonym=chill synonym=quiver synonym=shudder synonym=tingle is_a=fear core.source="wordnet 3.1"
 @k.words.thrill.noun.3 k.words.sense word=thrill pos=noun n=3 gloss="something that causes you to experience a sudden intense feeling or sensation" is_a=excitation core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
 # k.words/shards/al: noun and verb senses of the words from "al" to "aluminum" (first letters "al").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -128,6 +128,7 @@
 @k.words.alternate.verb.2 k.words.sense word=alternate pos=verb n=2 gloss="exchange people temporarily to fulfill certain jobs and functions" is_a=exchange core.source="wordnet 3.1"
 @k.words.alternate.verb.3 k.words.sense word=alternate pos=verb n=3 gloss="be an understudy or alternate for a role" synonym=understudy is_a=memorize core.source="wordnet 3.1"
 @k.words.alternative.noun.1 k.words.sense word=alternative pos=noun n=1 gloss="one of a number of things from which only one can be chosen" synonym=option synonym=choice is_a="decision making" core.source="wordnet 3.1"
+@k.words.althea.noun.1 k.words.sense word=althea pos=noun n=1 gloss="any of various plants of the genus Althaea; similar to but having smaller flowers than genus Alcea" synonym=althaea synonym=hollyhock is_a=mallow core.source="wordnet 3.1"
 @k.words.altitude.noun.1 k.words.sense word=altitude pos=noun n=1 gloss="elevation especially above sea level or above the earth's surface" synonym=height is_a=elevation core.source="wordnet 3.1"
 @k.words.altitude.noun.2 k.words.sense word=altitude pos=noun n=2 gloss="the perpendicular distance from the base of a geometric figure to the opposite vertex (or side if parallel)" is_a=distance core.source="wordnet 3.1"
 @k.words.altitude.noun.3 k.words.sense word=altitude pos=noun n=3 gloss="angular distance above the horizon (especially of a celestial object)" synonym=elevation synonym=EL synonym=ALT is_a="angular position" core.source="wordnet 3.1"

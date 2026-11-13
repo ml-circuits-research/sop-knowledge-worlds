@@ -1,5 +1,5 @@
 # k.words/shards/so: noun and verb senses of the words from "so" to "soy" (first letters "so").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -99,6 +99,9 @@
 @k.words.solid.noun.2 k.words.sense word=solid pos=noun n=2 gloss="the state in which a substance has no tendency to flow under moderate stress; resists forces (such as compression) that tend to deform it; and retains a definite size and shape" synonym=solidness synonym="solid state" is_a="state of matter" core.source="wordnet 3.1"
 @k.words.solid.noun.3 k.words.sense word=solid pos=noun n=3 gloss="a three-dimensional shape" is_a=shape core.source="wordnet 3.1"
 @k.words.solidarity.noun.1 k.words.sense word=solidarity pos=noun n=1 gloss="a union of interests or purposes or sympathies among members of a group" is_a=commonality core.source="wordnet 3.1"
+@k.words.solitaire.noun.1 k.words.sense word=solitaire pos=noun n=1 gloss="a gem (usually a diamond) in a setting by itself" is_a=jewel core.source="wordnet 3.1"
+@k.words.solitaire.noun.2 k.words.sense word=solitaire pos=noun n=2 gloss="extinct flightless bird related to the dodo" synonym="Pezophaps solitaria" is_a="columbiform bird" core.source="wordnet 3.1"
+@k.words.solitaire.noun.3 k.words.sense word=solitaire pos=noun n=3 gloss="a dull grey North American thrush noted for its beautiful song" is_a=thrush core.source="wordnet 3.1"
 @k.words.solitary.noun.1 k.words.sense word=solitary pos=noun n=1 gloss="confinement of a prisoner in isolation from other prisoners" synonym="solitary confinement" is_a=confinement core.source="wordnet 3.1"
 @k.words.solitary.noun.2 k.words.sense word=solitary pos=noun n=2 gloss="one who lives in solitude" synonym=hermit synonym=recluse synonym=solitudinarian synonym=troglodyte is_a=loner core.source="wordnet 3.1"
 @k.words.solitude.noun.1 k.words.sense word=solitude pos=noun n=1 gloss="a state of social isolation" synonym=purdah is_a=isolation core.source="wordnet 3.1"

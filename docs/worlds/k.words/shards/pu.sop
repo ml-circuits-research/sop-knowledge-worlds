@@ -1,5 +1,5 @@
 # k.words/shards/pu: noun and verb senses of the words from "pu" to "puzzle" (first letters "pu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -59,12 +59,14 @@
 @k.words.pulp.noun.3 k.words.sense word=pulp pos=noun n=3 gloss="a mixture of cellulose fibers" is_a=cellulose core.source="wordnet 3.1"
 @k.words.pulp.verb.1 k.words.sense word=pulp pos=verb n=1 gloss="remove the pulp from, as from a fruit" is_a="take out" core.source="wordnet 3.1"
 @k.words.pulp.verb.2 k.words.sense word=pulp pos=verb n=2 gloss="reduce to pulp" is_a=grind core.source="wordnet 3.1"
+@k.words.pulpit.noun.1 k.words.sense word=pulpit pos=noun n=1 gloss="a platform raised above the surrounding level to give prominence to the person on it" synonym=dais synonym=podium synonym=rostrum synonym=ambo synonym=stump synonym=soapbox is_a=platform core.source="wordnet 3.1"
 @k.words.pulse.noun.1 k.words.sense word=pulse pos=noun n=1 gloss="(electronics) a sharp transient wave in the normal electrical state (or a series of such transients)" synonym=pulsation synonym=pulsing synonym=impulse is_a=wave core.source="wordnet 3.1"
 @k.words.pulse.noun.2 k.words.sense word=pulse pos=noun n=2 gloss="the rhythmic contraction and expansion of the arteries with each beat of the heart" synonym=pulsation synonym=heartbeat synonym=beat is_a="periodic event" core.source="wordnet 3.1"
 @k.words.pulse.noun.3 k.words.sense word=pulse pos=noun n=3 gloss="the rate at which the heart beats; usually measured to obtain a quick evaluation of a person's health" synonym="pulse rate" synonym="heart rate" is_a="vital sign" is_a=rate core.source="wordnet 3.1"
 @k.words.pulse.verb.1 k.words.sense word=pulse pos=verb n=1 gloss="expand and contract rhythmically; beat rhythmically" synonym=pulsate synonym=throb is_a=beat core.source="wordnet 3.1"
 @k.words.pulse.verb.2 k.words.sense word=pulse pos=verb n=2 gloss="produce or modulate (as electromagnetic waves) in the form of short bursts or pulses or cause an apparatus to produce pulses" synonym=pulsate is_a=produce core.source="wordnet 3.1"
 @k.words.pulse.verb.3 k.words.sense word=pulse pos=verb n=3 gloss="drive by or as if by pulsation" is_a=move core.source="wordnet 3.1"
+@k.words.puma.noun.1 k.words.sense word=puma pos=noun n=1 gloss="large American feline resembling a lion" synonym=cougar synonym=catamount synonym="mountain lion" synonym=painter synonym=panther synonym="Felis concolor" is_a=wildcat core.source="wordnet 3.1"
 @k.words.pump.noun.1 k.words.sense word=pump pos=noun n=1 gloss="a mechanical device that moves fluid or gas by pressure or suction" is_a="mechanical device" part_of="fuel system" part_of="cooling system" core.source="wordnet 3.1"
 @k.words.pump.noun.2 k.words.sense word=pump pos=noun n=2 gloss="the hollow muscular organ located behind the sternum and between the lungs; its rhythmic contractions move the blood through the body" synonym=heart synonym=ticker is_a="internal organ" part_of="circulatory system" core.source="wordnet 3.1"
 @k.words.pump.noun.3 k.words.sense word=pump pos=noun n=3 gloss="a low-cut shoe without fastenings" is_a=shoe core.source="wordnet 3.1"

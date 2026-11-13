@@ -1,5 +1,5 @@
 # k.words/shards/ph: noun and verb senses of the words from "phantom" to "physics" (first letters "ph").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -48,8 +48,12 @@
 @k.words.phone.noun.3 k.words.sense word=phone pos=noun n=3 gloss="electro-acoustic transducer for converting electric signals into sounds; it is held over or inserted into the ear" synonym=earphone synonym=earpiece synonym=headphone is_a="electro-acoustic transducer" core.source="wordnet 3.1"
 @k.words.phone.verb.1 k.words.sense word=phone pos=verb n=1 gloss="get or try to get into communication (with someone) by telephone" synonym=call synonym=telephone synonym="call up" synonym=ring is_a=telecommunicate core.source="wordnet 3.1"
 @k.words.phoney.noun.1 k.words.sense word=phoney pos=noun n=1 gloss="a person who professes beliefs and opinions that he or she does not hold in order to conceal his or her real feelings or motives" synonym=hypocrite synonym=dissembler synonym=dissimulator synonym=phony synonym=pretender is_a=deceiver core.source="wordnet 3.1"
+@k.words.phonograph.noun.1 k.words.sense word=phonograph pos=noun n=1 gloss="machine in which rotating records cause a stylus to vibrate and the vibrations are amplified acoustically or electronically" synonym="record player" is_a=machine part_of="audio system" core.source="wordnet 3.1"
 @k.words.phony.noun.1 k.words.sense word=phony pos=noun n=1 gloss="a person who professes beliefs and opinions that he or she does not hold in order to conceal his or her real feelings or motives" synonym=hypocrite synonym=dissembler synonym=dissimulator synonym=phoney synonym=pretender is_a=deceiver core.source="wordnet 3.1"
 @k.words.photo.noun.1 k.words.sense word=photo pos=noun n=1 gloss="a representation of a person or scene in the form of a print or transparent slide or in digital format" synonym=photograph synonym=exposure synonym=picture synonym=pic is_a=representation core.source="wordnet 3.1"
+@k.words.photocopy.noun.1 k.words.sense word=photocopy pos=noun n=1 gloss="a photographic copy of written or printed or graphic work" is_a=photograph is_a=copy core.source="wordnet 3.1"
+@k.words.photocopy.verb.1 k.words.sense word=photocopy pos=verb n=1 gloss="reproduce by xerography" synonym="run off" synonym=xerox is_a=reproduce core.source="wordnet 3.1"
+@k.words.photocopy.forms core.word text=photocopied means=photocopy of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.photograph.noun.1 k.words.sense word=photograph pos=noun n=1 gloss="a representation of a person or scene in the form of a print or transparent slide or in digital format" synonym=photo synonym=exposure synonym=picture synonym=pic is_a=representation core.source="wordnet 3.1"
 @k.words.photograph.verb.1 k.words.sense word=photograph pos=verb n=1 gloss="record on photographic film" synonym=snap synonym=shoot is_a=record core.source="wordnet 3.1"
 @k.words.photograph.verb.2 k.words.sense word=photograph pos=verb n=2 gloss="undergo being photographed in a certain way" core.source="wordnet 3.1"

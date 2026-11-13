@@ -1,5 +1,5 @@
 # k.words/shards/do: noun and verb senses of the words from "do" to "dozens" (first letters "do").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -11,6 +11,8 @@
 @k.words.do.verb.3 k.words.sense word=do pos=verb n=3 gloss="get (something) done" synonym=perform is_a="carry through" core.source="wordnet 3.1"
 @k.words.do.spelling.DO core.word text=do means=DO of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.do.forms core.word text=did text=done means=do of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.dobson.noun.1 k.words.sense word=dobson pos=noun n=1 gloss="large brown aquatic larva of the dobsonfly; used as fishing bait" synonym=hellgrammiate is_a=larva core.source="wordnet 3.1"
+@k.words.dobson.noun.2 k.words.sense word=dobson pos=noun n=2 gloss="large soft-bodied insect having long slender mandibles in the male; aquatic larvae often used as bait" synonym=dobsonfly synonym="dobson fly" synonym="Corydalus cornutus" is_a=neuropteron core.source="wordnet 3.1"
 @k.words.doc.noun.1 k.words.sense word=doc pos=noun n=1 gloss="a licensed medical practitioner" synonym=doctor synonym=physician synonym=MD synonym=Dr. synonym=medico is_a="medical practitioner" core.source="wordnet 3.1"
 @k.words.doc.noun.2 k.words.sense word=DoC pos=noun n=2 gloss="the United States federal department that promotes and administers domestic and foreign trade (including management of the census and the patent office); created in 1913" synonym="Department of Commerce" synonym="Commerce Department" synonym=Commerce is_a="executive department" core.source="wordnet 3.1"
 @k.words.doc.spelling.DoC core.word text=doc means=DoC of=k.words.sense.word core.source="wordnet 3.1"
@@ -64,6 +66,8 @@
 @k.words.dog.forms core.word text=dogged text=dogging means=dog of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.doggie.noun.1 k.words.sense word=doggie pos=noun n=1 gloss="informal terms for dogs" synonym=pooch synonym=doggy synonym=barker synonym=bow-wow is_a=dog core.source="wordnet 3.1"
 @k.words.doggy.noun.1 k.words.sense word=doggy pos=noun n=1 gloss="informal terms for dogs" synonym=pooch synonym=doggie synonym=barker synonym=bow-wow is_a=dog core.source="wordnet 3.1"
+@k.words.doghouse.noun.1 k.words.sense word=doghouse pos=noun n=1 gloss="outbuilding that serves as a shelter for a dog" synonym=kennel synonym="dog house" is_a=outbuilding is_a=shelter core.source="wordnet 3.1"
+@k.words.doghouse.noun.2 k.words.sense word=doghouse pos=noun n=2 gloss="an idiomatic term for being in disfavor" is_a=disfavor core.source="wordnet 3.1"
 @k.words.dole.noun.1 k.words.sense word=dole pos=noun n=1 gloss="a share of money or food or clothing that has been charitably given" is_a=share core.source="wordnet 3.1"
 @k.words.dole.noun.2 k.words.sense word=dole pos=noun n=2 gloss="money received from the state" synonym=pogy synonym=pogey is_a="social welfare" core.source="wordnet 3.1"
 @k.words.doll.noun.1 k.words.sense word=doll pos=noun n=1 gloss="a small replica of a person; used as a toy" synonym=dolly is_a=plaything core.source="wordnet 3.1"
@@ -71,6 +75,8 @@
 @k.words.dollar.noun.1 k.words.sense word=dollar pos=noun n=1 gloss="the basic monetary unit in many countries; equal to 100 cents" is_a="monetary unit" core.source="wordnet 3.1"
 @k.words.dollar.noun.2 k.words.sense word=dollar pos=noun n=2 gloss="a piece of paper money worth one dollar" synonym="dollar bill" synonym="one dollar bill" synonym=buck synonym=clam is_a=bill core.source="wordnet 3.1"
 @k.words.dollar.noun.3 k.words.sense word=dollar pos=noun n=3 gloss="a United States coin worth one dollar" is_a=coin core.source="wordnet 3.1"
+@k.words.dollhouse.noun.1 k.words.sense word=dollhouse pos=noun n=1 gloss="a house so small that it is likened to a child's plaything" synonym="doll's house" is_a=house core.source="wordnet 3.1"
+@k.words.dollhouse.noun.2 k.words.sense word=dollhouse pos=noun n=2 gloss="a small model of a house used as a toy by children" synonym="doll's house" is_a=plaything core.source="wordnet 3.1"
 @k.words.dolly.noun.1 k.words.sense word=dolly pos=noun n=1 gloss="conveyance consisting of a wheeled support on which a camera can be mounted" is_a=conveyance core.source="wordnet 3.1"
 @k.words.dolly.noun.2 k.words.sense word=dolly pos=noun n=2 gloss="conveyance consisting of a wheeled platform for moving heavy objects" is_a=conveyance core.source="wordnet 3.1"
 @k.words.dolly.noun.3 k.words.sense word=dolly pos=noun n=3 gloss="a small replica of a person; used as a toy" synonym=doll is_a=plaything core.source="wordnet 3.1"

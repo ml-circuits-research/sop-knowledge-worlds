@@ -59,8 +59,11 @@ const spelt = (word) => word.replace(/_/g, ' ');
 export const bucketOf = (lemma) => (/^[a-z]{2}/.test(lemma) ? lemma.slice(0, 2) : lemma[0]);
 
 // files: { 'index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc' } as text; freq: the list as text.
-export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, limits } = {}) {
-  const wanted = new Set();
+// extra (Round 10, item 2): Map(word -> noun synset offset) of words that are kept whatever their place in the
+// frequency list, each with that sense even when it is not among the first senses: the common things of
+// tools/coverage.mjs with the sense kept there (427 of them come after the 20,000th line of the list).
+export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, limits, extra = new Map() } = {}) {
+  const wanted = new Set([...extra.keys()].filter((w) => LEMMA.test(w)));
   for (const line of freq.split('\n').slice(0, wordLimit)) {
     const w = line.trim().split(/\s+/)[0]?.toLowerCase();
     if (w && LEMMA.test(w)) wanted.add(w);
@@ -77,7 +80,9 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
     const index = readIndex(files[`index.${pos}`]);
     for (const lemma of [...index.keys()].filter((l) => wanted.has(l)).sort(byText)) {
       const g = group(lemma);
-      index.get(lemma).slice(0, senseLimit).forEach((offset, i) => {
+      const all = index.get(lemma);
+      const kept = all.map((offset, i) => [offset, i]).filter(([offset, i]) => i < senseLimit || (p === 'n' && extra.get(lemma) === offset));
+      kept.forEach(([offset, i]) => {
         const s = data.get(offset);
         if (OFFENSIVE.test(s.gloss)) { stats.skipped++; return; }
         const own = s.words.find((w) => w.toLowerCase() === lemma) ?? lemma;
@@ -133,7 +138,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
       out[`${name}.sop`] = `${header({
         id: `k.words/shards/${name}`,
         about: `noun and verb senses of the words from "${first}" to "${last}" (first letters "${b}"${parts.length > 1 ? `, part ${i + 1} of ${parts.length}` : ''}).`,
-        sources: ['wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)'],
+        sources: [`wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent${extra.size ? ', and the common things of tools/coverage.mjs' : ''})`],
         license: 'WordNet-3.0',
         script: 'tools/import/wordnet.mjs',
       })}\n${part.flatMap((g) => g.lines).join('\n')}\n`;
@@ -143,13 +148,21 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
   return { files: out, stats };
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+// The common things and the sense kept for each (tools/coverage.mjs), for `extra`.
+export async function commonThings() {
+  const { run } = await import('../coverage.mjs');
+  return new Map(run().list.map((e) => [e.word, e.sense]));
+}
+
+// Not awaited at the top level: tools/coverage.mjs imports this module.
+async function main() {
   const repo = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
   const arg = (name, dflt) => { const i = process.argv.indexOf(`--${name}`); return i < 0 ? dflt : process.argv[i + 1]; };
   const dict = arg('dict', join(repo, 'sources/wordnet/raw/wordnet31'));
   const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(arg('freq', join(repo, 'sources/frequency-words/raw/en_50k.txt')), 'utf8');
-  const { files: out, stats } = importWordnet(files, freq);
+  const { files: out, stats } = importWordnet(files, freq, { extra: await commonThings() });
   writeShards(arg('out', join(repo, 'docs/worlds/k.words/shards')), out);
   console.log(JSON.stringify(stats));
 }
+if (import.meta.url === `file://${process.argv[1]}`) main();

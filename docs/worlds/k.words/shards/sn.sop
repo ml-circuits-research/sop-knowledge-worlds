@@ -1,5 +1,5 @@
 # k.words/shards/sn: noun and verb senses of the words from "snack" to "snug" (first letters "sn").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -29,6 +29,7 @@
 @k.words.snap.verb.2 k.words.sense word=snap pos=verb n=2 gloss="separate or cause to separate abruptly" synonym=tear synonym=rupture synonym=bust is_a=separate core.source="wordnet 3.1"
 @k.words.snap.verb.3 k.words.sense word=snap pos=verb n=3 gloss="break suddenly and abruptly, as under tension" synonym=crack is_a=break core.source="wordnet 3.1"
 @k.words.snap.forms core.word text=snapped text=snapping means=snap of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.snapshot.noun.1 k.words.sense word=snapshot pos=noun n=1 gloss="an informal photograph; usually made with a small hand-held camera" synonym=snap synonym=shot is_a=photograph core.source="wordnet 3.1"
 @k.words.snatch.noun.1 k.words.sense word=snatch pos=noun n=1 gloss="a small fragment" synonym=bit is_a=fragment core.source="wordnet 3.1"
 @k.words.snatch.noun.3 k.words.sense word=snatch pos=noun n=3 gloss="(law) the unlawful act of capturing and carrying away a person against their will and holding them in false imprisonment" synonym=kidnapping is_a=capture core.source="wordnet 3.1"
 @k.words.snatch.verb.1 k.words.sense word=snatch pos=verb n=1 gloss="to grasp hastily or eagerly" synonym="snatch up" synonym=snap is_a=seize core.source="wordnet 3.1"

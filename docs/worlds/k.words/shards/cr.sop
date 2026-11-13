@@ -1,5 +1,5 @@
 # k.words/shards/cr: noun and verb senses of the words from "crab" to "crystal" (first letters "cr").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -61,6 +61,7 @@
 @k.words.crank.verb.3 k.words.sense word=crank pos=verb n=3 gloss="rotate with a crank" synonym="crank up" is_a=rotate core.source="wordnet 3.1"
 @k.words.crap.verb.1 k.words.sense word=crap pos=verb n=1 gloss="have a bowel movement" synonym=stool synonym=defecate synonym=shit synonym="take a shit" synonym="take a crap" synonym=ca-ca synonym=make is_a=excrete core.source="wordnet 3.1"
 @k.words.crap.forms core.word text=crapped text=crapping means=crap of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.crapper.noun.1 k.words.sense word=crapper pos=noun n=1 gloss="a plumbing fixture for defecation and urination" synonym=toilet synonym=can synonym=commode synonym=pot synonym=potty synonym=stool synonym=throne is_a="plumbing fixture" part_of=toilet part_of=bathroom core.source="wordnet 3.1"
 @k.words.craps.noun.1 k.words.sense word=craps pos=noun n=1 gloss="expressions used when when two dice are thrown and both come up showing one spot" synonym="snake eyes" is_a=two core.source="wordnet 3.1"
 @k.words.craps.noun.2 k.words.sense word=craps pos=noun n=2 gloss="a gambling game played with two dice; a first throw of 7 or 11 wins and a first throw of 2, 3, or 12 loses and a first throw of any other number must be repeated to win before a 7 is thrown, which loses the bet and the dice" is_a="game of chance" core.source="wordnet 3.1"
 @k.words.crash.noun.1 k.words.sense word=crash pos=noun n=1 gloss="a loud resonant repeating noise" synonym=clang synonym=clangor synonym=clangour synonym=clangoring synonym=clank synonym=clash is_a=noise core.source="wordnet 3.1"
@@ -89,6 +90,8 @@
 @k.words.crawl.verb.2 k.words.sense word=crawl pos=verb n=2 gloss="feel as if crawling with insects" is_a=feel core.source="wordnet 3.1"
 @k.words.crawl.verb.3 k.words.sense word=crawl pos=verb n=3 gloss="be full of" is_a=teem core.source="wordnet 3.1"
 @k.words.crawling.noun.1 k.words.sense word=crawling pos=noun n=1 gloss="a slow mode of locomotion on hands and knees or dragging the body" synonym=crawl synonym=creep synonym=creeping is_a=locomotion core.source="wordnet 3.1"
+@k.words.crayon.noun.1 k.words.sense word=crayon pos=noun n=1 gloss="writing implement consisting of a colored stick of composition wax used for writing and drawing" synonym="wax crayon" is_a="writing implement" core.source="wordnet 3.1"
+@k.words.crayon.verb.1 k.words.sense word=crayon pos=verb n=1 gloss="write, draw, or trace with a crayon" is_a=draw core.source="wordnet 3.1"
 @k.words.craziness.noun.1 k.words.sense word=craziness pos=noun n=1 gloss="informal terms for insanity" synonym=daftness synonym=flakiness is_a=insanity core.source="wordnet 3.1"
 @k.words.craziness.noun.2 k.words.sense word=craziness pos=noun n=2 gloss="the quality of being rash and foolish" synonym=folly synonym=foolishness synonym=madness is_a=stupidity core.source="wordnet 3.1"
 @k.words.craziness.noun.3 k.words.sense word=craziness pos=noun n=3 gloss="foolish or senseless behavior" synonym=folly synonym=foolery synonym=tomfoolery synonym=lunacy synonym=indulgence is_a=play core.source="wordnet 3.1"
@@ -136,10 +139,16 @@
 @k.words.creep.verb.2 k.words.sense word=creep pos=verb n=2 gloss="to go stealthily or furtively" synonym=sneak synonym=mouse synonym=pussyfoot is_a=walk core.source="wordnet 3.1"
 @k.words.creep.verb.3 k.words.sense word=creep pos=verb n=3 gloss="grow or spread, often in such a way as to cover (a surface)" is_a=diffuse core.source="wordnet 3.1"
 @k.words.creep.forms core.word text=crept means=creep of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.creeper.noun.1 k.words.sense word=creeper pos=noun n=1 gloss="any plant (as ivy or periwinkle) that grows by creeping" is_a="vascular plant" core.source="wordnet 3.1"
+@k.words.creeper.noun.2 k.words.sense word=creeper pos=noun n=2 gloss="a person who crawls or creeps along the ground" synonym=crawler is_a=person core.source="wordnet 3.1"
+@k.words.creeper.noun.3 k.words.sense word=creeper pos=noun n=3 gloss="any of various small insectivorous birds of the northern hemisphere that climb up a tree trunk supporting themselves on stiff tail feathers and their feet" synonym="tree creeper" is_a=oscine core.source="wordnet 3.1"
 @k.words.creeping.noun.1 k.words.sense word=creeping pos=noun n=1 gloss="a slow mode of locomotion on hands and knees or dragging the body" synonym=crawl synonym=crawling synonym=creep is_a=locomotion core.source="wordnet 3.1"
 @k.words.creeps.noun.1 k.words.sense word=creeps pos=noun n=1 gloss="a disease of cattle and sheep attributed to a dietary deficiency; characterized by anemia and softening of the bones and a slow stiff gait" is_a="animal disease" core.source="wordnet 3.1"
 @k.words.creeps.noun.2 k.words.sense word=creeps pos=noun n=2 gloss="a feeling of fear and revulsion" is_a=fear core.source="wordnet 3.1"
 @k.words.cremation.noun.1 k.words.sense word=cremation pos=noun n=1 gloss="the incineration of a dead body" is_a=incineration core.source="wordnet 3.1"
+@k.words.crematorium.noun.1 k.words.sense word=crematorium pos=noun n=1 gloss="a mortuary where corpses are cremated" synonym=crematory is_a=morgue core.source="wordnet 3.1"
+@k.words.crematorium.noun.2 k.words.sense word=crematorium pos=noun n=2 gloss="a furnace where a corpse can be burned and reduced to ashes" synonym=crematory synonym="cremation chamber" is_a=furnace core.source="wordnet 3.1"
+@k.words.crematorium.forms core.word text=crematoria means=crematorium of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.crescent.noun.1 k.words.sense word=crescent pos=noun n=1 gloss="any shape resembling the curved shape of the moon in its first or last quarters" is_a=curve core.source="wordnet 3.1"
 @k.words.crest.noun.1 k.words.sense word=crest pos=noun n=1 gloss="the top line of a hill, mountain, or wave" is_a=line core.source="wordnet 3.1"
 @k.words.crest.noun.2 k.words.sense word=crest pos=noun n=2 gloss="the top or extreme point of something (usually a mountain or hill)" synonym=peak synonym=crown synonym=top synonym=tip synonym=summit is_a="topographic point" core.source="wordnet 3.1"
@@ -197,6 +206,7 @@
 @k.words.crockett.spelling.Crockett core.word text=crockett means=Crockett of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.crocodile.noun.1 k.words.sense word=crocodile pos=noun n=1 gloss="large voracious aquatic reptile having a long snout with massive jaws and sharp teeth and a body covered with bony plates; of sluggish tropical waters" is_a="crocodilian reptile" core.source="wordnet 3.1"
 @k.words.croft.noun.1 k.words.sense word=croft pos=noun n=1 gloss="a small farm worked by a crofter" is_a=farm core.source="wordnet 3.1"
+@k.words.croissant.noun.1 k.words.sense word=croissant pos=noun n=1 gloss="very rich flaky crescent-shaped roll" synonym="crescent roll" is_a=bun core.source="wordnet 3.1"
 @k.words.cromwell.noun.1 k.words.sense word=Cromwell pos=noun n=1 gloss="English general and statesman who led the parliamentary army in the English Civil War (1599-1658)" synonym="Oliver Cromwell" synonym=Ironsides instance_of=general instance_of=statesman core.source="wordnet 3.1"
 @k.words.cromwell.spelling.Cromwell core.word text=cromwell means=Cromwell of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.crook.noun.1 k.words.sense word=crook pos=noun n=1 gloss="someone who has committed a crime or has been legally convicted of a crime" synonym=criminal synonym=felon synonym=outlaw synonym=malefactor is_a=principal core.source="wordnet 3.1"
@@ -251,6 +261,8 @@
 @k.words.crown.verb.2 k.words.sense word=crown pos=verb n=2 gloss="be the culminating event" synonym=top is_a=culminate core.source="wordnet 3.1"
 @k.words.crown.verb.3 k.words.sense word=crown pos=verb n=3 gloss="form the topmost part of" is_a=head core.source="wordnet 3.1"
 @k.words.crown.spelling.Crown core.word text=crown means=Crown of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.crucifix.noun.1 k.words.sense word=crucifix pos=noun n=1 gloss="representation of the cross on which Jesus died" synonym=rood synonym=rood-tree is_a=Cross core.source="wordnet 3.1"
+@k.words.crucifix.noun.2 k.words.sense word=crucifix pos=noun n=2 gloss="a gymnastic exercise performed on the rings when the gymnast supports himself with both arms extended horizontally" is_a="gymnastic exercise" core.source="wordnet 3.1"
 @k.words.crucify.verb.1 k.words.sense word=crucify pos=verb n=1 gloss="kill by nailing onto a cross" is_a=execute core.source="wordnet 3.1"
 @k.words.crucify.verb.2 k.words.sense word=crucify pos=verb n=2 gloss="treat cruelly" synonym=torment synonym=rag synonym=bedevil synonym=dun synonym=frustrate is_a=harass core.source="wordnet 3.1"
 @k.words.crucify.verb.3 k.words.sense word=crucify pos=verb n=3 gloss="hold within limits and control" synonym=mortify synonym=subdue is_a=control core.source="wordnet 3.1"
@@ -301,6 +313,8 @@
 @k.words.crust.noun.2 k.words.sense word=crust pos=noun n=2 gloss="a hard outer layer that covers something" synonym=incrustation synonym=encrustation is_a=covering core.source="wordnet 3.1"
 @k.words.crust.noun.3 k.words.sense word=crust pos=noun n=3 gloss="the trait of being rude and impertinent; inclined to take liberties" synonym=gall synonym=impertinence synonym=impudence synonym=insolence synonym=cheekiness synonym=freshness is_a=discourtesy core.source="wordnet 3.1"
 @k.words.crust.verb.1 k.words.sense word=crust pos=verb n=1 gloss="form a crust or form into a crust" is_a="change surface" core.source="wordnet 3.1"
+@k.words.crutch.noun.1 k.words.sense word=crutch pos=noun n=1 gloss="a wooden or metal staff that fits under the armpit and reaches to the ground; used by disabled person while walking" is_a=staff core.source="wordnet 3.1"
+@k.words.crutch.noun.2 k.words.sense word=crutch pos=noun n=2 gloss="anything that serves as an expedient" is_a=expedient core.source="wordnet 3.1"
 @k.words.cry.noun.1 k.words.sense word=cry pos=noun n=1 gloss="a loud utterance; often in protest or opposition" synonym=outcry synonym=call synonym=yell synonym=shout synonym=vociferation is_a=utterance core.source="wordnet 3.1"
 @k.words.cry.noun.2 k.words.sense word=cry pos=noun n=2 gloss="a loud utterance of emotion (especially when inarticulate)" synonym=yell is_a=utterance core.source="wordnet 3.1"
 @k.words.cry.noun.3 k.words.sense word=cry pos=noun n=3 gloss="a slogan used to rally support for a cause" synonym="war cry" synonym="rallying cry" synonym="battle cry" synonym=watchword is_a=motto core.source="wordnet 3.1"

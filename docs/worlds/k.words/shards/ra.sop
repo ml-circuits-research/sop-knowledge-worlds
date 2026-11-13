@@ -1,5 +1,5 @@
 # k.words/shards/ra: noun and verb senses of the words from "ra" to "razor" (first letters "ra").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -25,6 +25,7 @@
 @k.words.race.verb.1 k.words.sense word=race pos=verb n=1 gloss="move hurridly" synonym=rush synonym=hotfoot synonym=hasten synonym=hie synonym=speed synonym="pelt along" synonym="rush along" synonym="cannonball along" synonym="bucket along" synonym="belt along" synonym="step on it" is_a=travel core.source="wordnet 3.1"
 @k.words.race.verb.2 k.words.sense word=race pos=verb n=2 gloss="compete in a race" synonym=run is_a=compete core.source="wordnet 3.1"
 @k.words.race.verb.3 k.words.sense word=race pos=verb n=3 gloss="to work as fast as possible towards a goal, sometimes in competition with others" is_a=act core.source="wordnet 3.1"
+@k.words.racehorse.noun.1 k.words.sense word=racehorse pos=noun n=1 gloss="a horse bred for racing" synonym="race horse" synonym=bangtail is_a=horse core.source="wordnet 3.1"
 @k.words.racer.noun.1 k.words.sense word=racer pos=noun n=1 gloss="someone who drives racing cars at high speeds" synonym="race driver" synonym="automobile driver" is_a=driver core.source="wordnet 3.1"
 @k.words.racer.noun.2 k.words.sense word=racer pos=noun n=2 gloss="a fast car that competes in races" synonym="race car" synonym="racing car" is_a=car core.source="wordnet 3.1"
 @k.words.racer.noun.3 k.words.sense word=racer pos=noun n=3 gloss="an animal that races" is_a=animal core.source="wordnet 3.1"
@@ -65,6 +66,9 @@
 @k.words.radio.verb.1 k.words.sense word=radio pos=verb n=1 gloss="transmit messages via radio waves" is_a=communicate core.source="wordnet 3.1"
 @k.words.radiology.noun.1 k.words.sense word=radiology pos=noun n=1 gloss="the branch of medical science dealing with the medical use of X-rays or other penetrating radiation" is_a="medical science" core.source="wordnet 3.1"
 @k.words.radiology.noun.2 k.words.sense word=radiology pos=noun n=2 gloss="(radiology) examination of the inner structure of opaque objects using X rays or other penetrating radiation" synonym=radioscopy is_a=imaging core.source="wordnet 3.1"
+@k.words.radish.noun.1 k.words.sense word=radish pos=noun n=1 gloss="pungent fleshy edible root" is_a="root vegetable" is_a="cruciferous vegetable" part_of="radish plant" core.source="wordnet 3.1"
+@k.words.radish.noun.2 k.words.sense word=radish pos=noun n=2 gloss="radish of Japan with a long hard durable root eaten raw or cooked" synonym=daikon synonym="Japanese radish" synonym="Raphanus sativus longipinnatus" is_a="radish plant" core.source="wordnet 3.1"
+@k.words.radish.noun.3 k.words.sense word=radish pos=noun n=3 gloss="pungent edible root of any of various cultivated radish plants" is_a=root part_of="radish plant" core.source="wordnet 3.1"
 @k.words.radius.noun.1 k.words.sense word=radius pos=noun n=1 gloss="the length of a line segment between the center and circumference of a circle or sphere" synonym=r is_a=length part_of=diameter core.source="wordnet 3.1"
 @k.words.radius.noun.2 k.words.sense word=radius pos=noun n=2 gloss="a straight line from the center to the perimeter of a circle (or from the center to the surface of a sphere)" is_a="straight line" core.source="wordnet 3.1"
 @k.words.radius.noun.3 k.words.sense word=radius pos=noun n=3 gloss="a circular region whose area is indicated by the length of its radius" is_a=region core.source="wordnet 3.1"
@@ -128,6 +132,7 @@
 @k.words.raise.verb.1 k.words.sense word=raise pos=verb n=1 gloss="raise the level or amount of something" is_a=increase core.source="wordnet 3.1"
 @k.words.raise.verb.2 k.words.sense word=raise pos=verb n=2 gloss="raise from a lower to a higher position" synonym=lift synonym=elevate synonym="get up" synonym="bring up" is_a=move core.source="wordnet 3.1"
 @k.words.raise.verb.3 k.words.sense word=raise pos=verb n=3 gloss="cause to be heard or known; express or utter" is_a=express core.source="wordnet 3.1"
+@k.words.raisin.noun.1 k.words.sense word=raisin pos=noun n=1 gloss="dried grape" is_a="dried fruit" core.source="wordnet 3.1"
 @k.words.raising.noun.1 k.words.sense word=raising pos=noun n=1 gloss="the event of something being raised upward" synonym=elevation synonym=lift is_a=rise core.source="wordnet 3.1"
 @k.words.raising.noun.2 k.words.sense word=raising pos=noun n=2 gloss="the properties acquired as a consequence of the way you were treated as a child" synonym=rearing synonym=nurture is_a=upbringing core.source="wordnet 3.1"
 @k.words.raising.noun.3 k.words.sense word=raising pos=noun n=3 gloss="helping someone grow up to be an accepted member of the community" synonym=breeding synonym="bringing up" synonym=fostering synonym=fosterage synonym=nurture synonym=rearing synonym=upbringing is_a=socialization core.source="wordnet 3.1"
@@ -234,6 +239,8 @@
 @k.words.rat.verb.2 k.words.sense word=rat pos=verb n=2 gloss="employ scabs or strike breakers in" is_a=hire core.source="wordnet 3.1"
 @k.words.rat.verb.3 k.words.sense word=rat pos=verb n=3 gloss="take the place of work of someone on strike" synonym=fink synonym=scab synonym=blackleg is_a=work core.source="wordnet 3.1"
 @k.words.rat.forms core.word text=ratted text=ratting means=rat of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.ratchet.noun.1 k.words.sense word=ratchet pos=noun n=1 gloss="mechanical device consisting of a toothed wheel or rack engaged with a pawl that permits it to move in only one direction" synonym=rachet synonym=ratch is_a="mechanical device" part_of="spiral ratchet screwdriver" core.source="wordnet 3.1"
+@k.words.ratchet.verb.1 k.words.sense word=ratchet pos=verb n=1 gloss="move by degrees in one direction only" synonym="rachet up" synonym="ratchet down" is_a=advance core.source="wordnet 3.1"
 @k.words.rate.noun.1 k.words.sense word=rate pos=noun n=1 gloss="a magnitude or frequency relative to a time unit" is_a="magnitude relation" core.source="wordnet 3.1"
 @k.words.rate.noun.2 k.words.sense word=rate pos=noun n=2 gloss="amount of a charge or payment relative to some basis" synonym="charge per unit" is_a=charge core.source="wordnet 3.1"
 @k.words.rate.noun.3 k.words.sense word=rate pos=noun n=3 gloss="the relative speed of progress or change" synonym=pace is_a="temporal property" core.source="wordnet 3.1"
@@ -256,6 +263,7 @@
 @k.words.rattle.noun.3 k.words.sense word=rattle pos=noun n=3 gloss="loosely connected horny sections at the end of a rattlesnake's tail" is_a=tail part_of=rattlesnake core.source="wordnet 3.1"
 @k.words.rattle.verb.1 k.words.sense word=rattle pos=verb n=1 gloss="make short successive sounds" is_a=sound core.source="wordnet 3.1"
 @k.words.rattle.verb.2 k.words.sense word=rattle pos=verb n=2 gloss="shake and cause to make a rattling noise" is_a=shake core.source="wordnet 3.1"
+@k.words.rattlesnake.noun.1 k.words.sense word=rattlesnake pos=noun n=1 gloss="pit viper with horny segments at the end of the tail that rattle when shaken" synonym=rattler is_a="pit viper" core.source="wordnet 3.1"
 @k.words.rattling.noun.1 k.words.sense word=rattling pos=noun n=1 gloss="a rapid series of short loud sounds (as might be heard with a stethoscope in some types of respiratory disorders)" synonym=rattle synonym=rale is_a=noise core.source="wordnet 3.1"
 @k.words.rave.noun.1 k.words.sense word=rave pos=noun n=1 gloss="a dance party that lasts all night and electronically synthesized music is played" is_a=dance core.source="wordnet 3.1"
 @k.words.rave.noun.2 k.words.sense word=rave pos=noun n=2 gloss="an extravagantly enthusiastic review" is_a=review core.source="wordnet 3.1"
@@ -268,6 +276,7 @@
 @k.words.raven.verb.3 k.words.sense word=raven pos=verb n=3 gloss="eat greedily" synonym=devour synonym=guttle synonym=pig is_a=eat core.source="wordnet 3.1"
 @k.words.ravine.noun.1 k.words.sense word=ravine pos=noun n=1 gloss="a deep narrow steep-sided valley (especially one formed by running water)" is_a=valley core.source="wordnet 3.1"
 @k.words.raving.noun.1 k.words.sense word=raving pos=noun n=1 gloss="declaiming wildly" is_a=declamation core.source="wordnet 3.1"
+@k.words.ravioli.noun.1 k.words.sense word=ravioli pos=noun n=1 gloss="small circular or square cases of dough with savory fillings" synonym=cappelletti is_a=pasta core.source="wordnet 3.1"
 @k.words.raw.noun.1 k.words.sense word=raw pos=noun n=1 gloss="informal terms for nakedness" synonym=altogether synonym="birthday suit" is_a=nakedness core.source="wordnet 3.1"
 @k.words.ray.noun.1 k.words.sense word=ray pos=noun n=1 gloss="a column of light (as from a beacon)" synonym=beam synonym="beam of light" synonym="light beam" synonym="ray of light" synonym=shaft synonym="shaft of light" synonym=irradiation is_a=light core.source="wordnet 3.1"
 @k.words.ray.noun.2 k.words.sense word=ray pos=noun n=2 gloss="a branch of an umbel or an umbelliform inflorescence" is_a=pedicel core.source="wordnet 3.1"

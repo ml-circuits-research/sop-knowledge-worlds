@@ -1,5 +1,5 @@
 # k.words/shards/le: noun and verb senses of the words from "le" to "lexington" (first letters "le").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -142,6 +142,7 @@
 @k.words.lemon.noun.2 k.words.sense word=lemon pos=noun n=2 gloss="a strong yellow color" synonym=gamboge synonym="lemon yellow" synonym=maize is_a=yellow core.source="wordnet 3.1"
 @k.words.lemon.noun.3 k.words.sense word=lemon pos=noun n=3 gloss="a small evergreen tree that originated in Asia but is widely cultivated for its fruit" synonym="lemon tree" synonym="Citrus limon" is_a=citrus core.source="wordnet 3.1"
 @k.words.lemonade.noun.1 k.words.sense word=lemonade pos=noun n=1 gloss="sweetened beverage of diluted lemon juice" is_a="fruit drink" core.source="wordnet 3.1"
+@k.words.lemur.noun.1 k.words.sense word=lemur pos=noun n=1 gloss="large-eyed arboreal prosimian having foxy faces and long furry tails" is_a=primate core.source="wordnet 3.1"
 @k.words.lena.noun.1 k.words.sense word=Lena pos=noun n=1 gloss="a Russian river in Siberia; flows northward into the Laptev Sea" synonym="Lena River" instance_of=river part_of=Siberia core.source="wordnet 3.1"
 @k.words.lena.spelling.Lena core.word text=lena means=Lena of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.lend.verb.1 k.words.sense word=lend pos=verb n=1 gloss="bestow a quality on" synonym=impart synonym=bestow synonym=contribute synonym=add synonym=bring is_a=change core.source="wordnet 3.1"

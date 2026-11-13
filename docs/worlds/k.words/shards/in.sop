@@ -1,5 +1,5 @@
 # k.words/shards/in: noun and verb senses of the words from "in" to "involvement" (first letters "in").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -30,6 +30,7 @@
 @k.words.inch.verb.1 k.words.sense word=inch pos=verb n=1 gloss="advance slowly, as if by inches" synonym=edge is_a=advance core.source="wordnet 3.1"
 @k.words.incident.noun.1 k.words.sense word=incident pos=noun n=1 gloss="a single distinct event" is_a=happening part_of=episode core.source="wordnet 3.1"
 @k.words.incident.noun.2 k.words.sense word=incident pos=noun n=2 gloss="a public disturbance" is_a=disturbance core.source="wordnet 3.1"
+@k.words.incinerator.noun.1 k.words.sense word=incinerator pos=noun n=1 gloss="a furnace for incinerating (especially to dispose of refuse)" is_a=furnace core.source="wordnet 3.1"
 @k.words.incision.noun.1 k.words.sense word=incision pos=noun n=1 gloss="a depression scratched or carved into a surface" synonym=scratch synonym=prick synonym=slit synonym=dent is_a=depression core.source="wordnet 3.1"
 @k.words.incision.noun.2 k.words.sense word=incision pos=noun n=2 gloss="the cutting of or into body tissues or organs (especially by a surgeon as part of an operation)" synonym=section synonym="surgical incision" is_a=cut part_of=operation core.source="wordnet 3.1"
 @k.words.include.verb.1 k.words.sense word=include pos=verb n=1 gloss="have as a part, be made up out of" core.source="wordnet 3.1"
@@ -52,6 +53,7 @@
 @k.words.increase.noun.3 k.words.sense word=increase pos=noun n=3 gloss="a process of becoming larger or longer or more numerous or more important" synonym=increment synonym=growth is_a=process core.source="wordnet 3.1"
 @k.words.increase.verb.1 k.words.sense word=increase pos=verb n=1 gloss="become bigger or greater in amount" is_a="change magnitude" core.source="wordnet 3.1"
 @k.words.increase.verb.2 k.words.sense word=increase pos=verb n=2 gloss="make bigger or more" is_a=change core.source="wordnet 3.1"
+@k.words.incubator.noun.1 k.words.sense word=incubator pos=noun n=1 gloss="apparatus consisting of a box designed to maintain a constant temperature by the use of a thermostat; used for chicks or premature infants" synonym=brooder is_a=apparatus core.source="wordnet 3.1"
 @k.words.incurable.noun.1 k.words.sense word=incurable pos=noun n=1 gloss="a person whose disease is incurable" is_a="sick person" core.source="wordnet 3.1"
 @k.words.independence.noun.1 k.words.sense word=independence pos=noun n=1 gloss="freedom from control or influence of another or others" synonym=independency is_a=freedom core.source="wordnet 3.1"
 @k.words.independence.noun.2 k.words.sense word=independence pos=noun n=2 gloss="the successful ending of the American Revolution" is_a=victory core.source="wordnet 3.1"

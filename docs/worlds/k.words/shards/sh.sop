@@ -1,5 +1,5 @@
 # k.words/shards/sh: noun and verb senses of the words from "shack" to "shy" (first letters "sh").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -68,6 +68,10 @@
 @k.words.shanghai.noun.1 k.words.sense word=Shanghai pos=noun n=1 gloss="the largest city of China; located in the east on the Pacific; one of the largest ports in the world" instance_of=city instance_of=port part_of=China core.source="wordnet 3.1"
 @k.words.shanghai.verb.1 k.words.sense word=shanghai pos=verb n=1 gloss="take (someone) against his will for compulsory service, especially on board a ship" synonym=impress is_a=kidnap core.source="wordnet 3.1"
 @k.words.shanghai.spelling.Shanghai core.word text=shanghai means=Shanghai of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.shank.noun.1 k.words.sense word=shank pos=noun n=1 gloss="a cut of meat (beef or veal or mutton or lamb) from the upper part of the leg" is_a=cut core.source="wordnet 3.1"
+@k.words.shank.noun.2 k.words.sense word=shank pos=noun n=2 gloss="the part of the human leg between the knee and the ankle" is_a="body part" part_of=leg core.source="wordnet 3.1"
+@k.words.shank.noun.3 k.words.sense word=shank pos=noun n=3 gloss="cylinder forming a long narrow part of something" synonym=stem is_a=cylinder part_of=anchor part_of=key part_of=handle part_of=nail part_of=pin part_of=wineglass core.source="wordnet 3.1"
+@k.words.shank.verb.1 k.words.sense word=shank pos=verb n=1 gloss="hit (a golf ball) with the heel of a club, causing the ball to veer in the wrong direction" is_a=hit core.source="wordnet 3.1"
 @k.words.shankar.noun.1 k.words.sense word=Shankar pos=noun n=1 gloss="Indian sitar player who popularized classical Indian music in the West (born in 1920)" synonym="Ravi Shankar" instance_of="sitar player" core.source="wordnet 3.1"
 @k.words.shankar.spelling.Shankar core.word text=shankar means=Shankar of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.shannon.noun.1 k.words.sense word=Shannon pos=noun n=1 gloss="United States electrical engineer who pioneered mathematical communication theory (1916-2001)" synonym="Claude Shannon" synonym="Claude E. Shannon" synonym="Claude Elwood Shannon" instance_of=engineer core.source="wordnet 3.1"
@@ -120,6 +124,7 @@
 @k.words.shawn.noun.1 k.words.sense word=Shawn pos=noun n=1 gloss="United States dancer and choreographer who collaborated with Ruth Saint Denis (1891-1972)" synonym="Ted Shawn" instance_of=dancer instance_of=choreographer core.source="wordnet 3.1"
 @k.words.shawn.spelling.Shawn core.word text=shawn means=Shawn of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.shay.noun.1 k.words.sense word=shay pos=noun n=1 gloss="a carriage consisting of two wheels and a calash top; drawn by a single horse" synonym=chaise is_a=carriage core.source="wordnet 3.1"
+@k.words.shears.noun.1 k.words.sense word=shears pos=noun n=1 gloss="large scissors with strong blades" is_a=scissors core.source="wordnet 3.1"
 @k.words.shed.noun.1 k.words.sense word=shed pos=noun n=1 gloss="an outbuilding with a single story; used for shelter or storage" is_a=outbuilding core.source="wordnet 3.1"
 @k.words.shed.verb.1 k.words.sense word=shed pos=verb n=1 gloss="get rid of" synonym=cast synonym="cast off" synonym="shake off" synonym=throw synonym="throw off" synonym="throw away" synonym=drop is_a=remove core.source="wordnet 3.1"
 @k.words.shed.verb.2 k.words.sense word=shed pos=verb n=2 gloss="pour out in drops or small quantities or as if in drops or small quantities" synonym=spill synonym="pour forth" is_a=pour core.source="wordnet 3.1"
@@ -192,6 +197,7 @@
 @k.words.shilling.noun.1 k.words.sense word=shilling pos=noun n=1 gloss="the basic unit of money in Uganda; equal to 100 cents" synonym="Ugandan shilling" is_a="Ugandan monetary unit" core.source="wordnet 3.1"
 @k.words.shilling.noun.2 k.words.sense word=shilling pos=noun n=2 gloss="the basic unit of money in Tanzania; equal to 100 cents" synonym="Tanzanian shilling" is_a="Tanzanian monetary unit" core.source="wordnet 3.1"
 @k.words.shilling.noun.3 k.words.sense word=shilling pos=noun n=3 gloss="the basic unit of money in Somalia; equal to 100 cents" synonym="Somalian shilling" is_a="Somalian monetary unit" core.source="wordnet 3.1"
+@k.words.shim.noun.1 k.words.sense word=shim pos=noun n=1 gloss="a thin wedge of material (wood or metal or stone) for driving into crevices" is_a=wedge core.source="wordnet 3.1"
 @k.words.shin.noun.1 k.words.sense word=shin pos=noun n=1 gloss="the front part of the human leg between the knee and the ankle" is_a="body part" part_of=leg core.source="wordnet 3.1"
 @k.words.shin.noun.2 k.words.sense word=shin pos=noun n=2 gloss="a cut of meat from the lower part of the leg" synonym="shin bone" is_a=cut core.source="wordnet 3.1"
 @k.words.shin.noun.3 k.words.sense word=shin pos=noun n=3 gloss="the 22nd letter of the Hebrew alphabet" is_a=letter part_of="Hebrew alphabet" core.source="wordnet 3.1"
@@ -212,6 +218,12 @@
 @k.words.shipment.noun.2 k.words.sense word=shipment pos=noun n=2 gloss="the act of sending off something" synonym=dispatch synonym=despatch is_a=departure core.source="wordnet 3.1"
 @k.words.shipping.noun.1 k.words.sense word=shipping pos=noun n=1 gloss="the commercial enterprise of moving goods and materials" synonym=transportation synonym=transport is_a="commercial enterprise" part_of=commerce core.source="wordnet 3.1"
 @k.words.shipping.noun.2 k.words.sense word=shipping pos=noun n=2 gloss="conveyance provided by the ships belonging to one country or industry" synonym="cargo ships" synonym="merchant marine" synonym="merchant vessels" is_a=conveyance core.source="wordnet 3.1"
+@k.words.shipwreck.noun.1 k.words.sense word=shipwreck pos=noun n=1 gloss="a wrecked ship (or a part of one)" is_a=ship core.source="wordnet 3.1"
+@k.words.shipwreck.noun.2 k.words.sense word=shipwreck pos=noun n=2 gloss="an irretrievable loss" is_a=ruin core.source="wordnet 3.1"
+@k.words.shipwreck.noun.3 k.words.sense word=shipwreck pos=noun n=3 gloss="an accident that destroys a ship at sea" synonym=wreck is_a=accident core.source="wordnet 3.1"
+@k.words.shipwreck.verb.1 k.words.sense word=shipwreck pos=verb n=1 gloss="ruin utterly" is_a=ruin core.source="wordnet 3.1"
+@k.words.shipwreck.verb.2 k.words.sense word=shipwreck pos=verb n=2 gloss="suffer failure, as in some enterprise" is_a=fail core.source="wordnet 3.1"
+@k.words.shipwreck.verb.3 k.words.sense word=shipwreck pos=verb n=3 gloss="cause to experience shipwreck" is_a=subject core.source="wordnet 3.1"
 @k.words.shipyard.noun.1 k.words.sense word=shipyard pos=noun n=1 gloss="a workplace where ships are built or repaired" is_a=workplace core.source="wordnet 3.1"
 @k.words.shirt.noun.1 k.words.sense word=shirt pos=noun n=1 gloss="a garment worn on the upper half of the body" is_a=garment core.source="wordnet 3.1"
 @k.words.shirt.verb.1 k.words.sense word=shirt pos=verb n=1 gloss="put a shirt on" is_a=dress core.source="wordnet 3.1"

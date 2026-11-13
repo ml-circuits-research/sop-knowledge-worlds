@@ -1,5 +1,5 @@
 # k.words/shards/pl: noun and verb senses of the words from "place" to "plymouth" (first letters "pl").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -90,6 +90,7 @@
 @k.words.platoon.noun.3 k.words.sense word=platoon pos=noun n=3 gloss="a group of persons who are engaged in a common activity" is_a="social group" core.source="wordnet 3.1"
 @k.words.platter.noun.1 k.words.sense word=platter pos=noun n=1 gloss="a large shallow dish used for serving food" is_a=flatware core.source="wordnet 3.1"
 @k.words.platter.noun.2 k.words.sense word=platter pos=noun n=2 gloss="sound recording consisting of a disk with a continuous groove; used to reproduce music by rotating while a phonograph needle tracks in the groove" synonym="phonograph record" synonym="phonograph recording" synonym=record synonym=disk synonym=disc is_a="sound recording" core.source="wordnet 3.1"
+@k.words.platypus.noun.1 k.words.sense word=platypus pos=noun n=1 gloss="small densely furred aquatic monotreme of Australia and Tasmania having a broad bill and tail and webbed feet; only species in the family Ornithorhynchidae" synonym=duckbill synonym="duckbilled platypus" synonym="duck-billed platypus" synonym="Ornithorhynchus anatinus" is_a=monotreme core.source="wordnet 3.1"
 @k.words.play.noun.1 k.words.sense word=play pos=noun n=1 gloss="a dramatic work intended for performance by actors on a stage" synonym=drama synonym="dramatic play" is_a="dramatic composition" core.source="wordnet 3.1"
 @k.words.play.noun.2 k.words.sense word=play pos=noun n=2 gloss="a theatrical performance of a drama" is_a=show core.source="wordnet 3.1"
 @k.words.play.noun.3 k.words.sense word=play pos=noun n=3 gloss="a preset plan of action in team sports" is_a="plan of action" core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
 # k.words/shards/ga: noun and verb senses of the words from "ga" to "gazette" (first letters "ga").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -10,6 +10,9 @@
 @k.words.ga.spelling.Ga core.word text=ga means=Ga of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.gab.noun.1 k.words.sense word=gab pos=noun n=1 gloss="light informal conversation for social occasions" synonym=chitchat synonym=chit-chat synonym="chit chat" synonym="small talk" synonym=gabfest synonym=gossip synonym=tittle-tattle synonym="chin wag" synonym=chin-wag synonym="chin wagging" synonym=chin-wagging synonym=causerie is_a=chat core.source="wordnet 3.1"
 @k.words.gab.verb.1 k.words.sense word=gab pos=verb n=1 gloss="talk profusely" synonym=yak is_a=communicate core.source="wordnet 3.1"
+@k.words.gable.noun.1 k.words.sense word=gable pos=noun n=1 gloss="the vertical triangular wall between the sloping ends of gable roof" synonym="gable end" synonym="gable wall" is_a=wall core.source="wordnet 3.1"
+@k.words.gable.noun.2 k.words.sense word=Gable pos=noun n=2 gloss="United States film actor (1901-1960)" synonym="Clark Gable" synonym="William Clark Gable" instance_of=actor core.source="wordnet 3.1"
+@k.words.gable.spelling.Gable core.word text=gable means=Gable of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.gabriel.noun.1 k.words.sense word=Gabriel pos=noun n=1 gloss="(Bible) the archangel who was the messenger of God" is_a=archangel core.source="wordnet 3.1"
 @k.words.gabriel.spelling.Gabriel core.word text=gabriel means=Gabriel of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.gadget.noun.1 k.words.sense word=gadget pos=noun n=1 gloss="a device or control that is very useful for a particular job" synonym=appliance synonym=contraption synonym=contrivance synonym=convenience synonym=gizmo synonym=gismo synonym=widget is_a=device core.source="wordnet 3.1"
@@ -76,6 +79,7 @@
 @k.words.gamma.noun.2 k.words.sense word=gamma pos=noun n=2 gloss="a unit of magnetic field strength equal to one-hundred-thousandth of an oersted" is_a="field strength unit" part_of=oersted core.source="wordnet 3.1"
 @k.words.gamma.noun.3 k.words.sense word=Gamma pos=noun n=3 gloss="Portuguese navigator who led an expedition around the Cape of Good Hope in 1497; he sighted and named Natal on Christmas Day before crossing the Indian Ocean (1469-1524)" synonym="da Gamma" synonym="Vasco da Gamma" instance_of=navigator core.source="wordnet 3.1"
 @k.words.gamma.spelling.Gamma core.word text=gamma means=Gamma of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.gander.noun.1 k.words.sense word=gander pos=noun n=1 gloss="mature male goose" is_a=goose core.source="wordnet 3.1"
 @k.words.gandhi.noun.1 k.words.sense word=Gandhi pos=noun n=1 gloss="daughter of Nehru who served as prime minister of India from 1966 to 1977 (1917-1984)" synonym="Indira Gandhi" synonym="Indira Nehru Gandhi" synonym="Mrs. Gandhi" instance_of=statesman core.source="wordnet 3.1"
 @k.words.gandhi.noun.2 k.words.sense word=Gandhi pos=noun n=2 gloss="political and spiritual leader during India's struggle with Great Britain for home rule; an advocate of passive resistance (1869-1948)" synonym="Mahatma Gandhi" synonym="Mohandas Karamchand Gandhi" instance_of="nationalist leader" instance_of="spiritual leader" core.source="wordnet 3.1"
 @k.words.gandhi.spelling.Gandhi core.word text=gandhi means=Gandhi of=k.words.sense.word core.source="wordnet 3.1"
@@ -86,6 +90,9 @@
 @k.words.gang.noun.3 k.words.sense word=gang pos=noun n=3 gloss="an organized group of workmen" synonym=crew synonym="work party" is_a=unit core.source="wordnet 3.1"
 @k.words.gang.verb.1 k.words.sense word=gang pos=verb n=1 gloss="act as an organized group" synonym="gang up" is_a=group core.source="wordnet 3.1"
 @k.words.gangster.noun.1 k.words.sense word=gangster pos=noun n=1 gloss="a criminal who is a member of gang" synonym=mobster is_a=criminal core.source="wordnet 3.1"
+@k.words.gangway.noun.1 k.words.sense word=gangway pos=noun n=1 gloss="a temporary passageway of planks (as over mud on a building site)" is_a=passageway core.source="wordnet 3.1"
+@k.words.gangway.noun.2 k.words.sense word=gangway pos=noun n=2 gloss="a temporary bridge for getting on and off a vessel at dockside" synonym=gangplank synonym=gangboard is_a=footbridge core.source="wordnet 3.1"
+@k.words.gangway.noun.3 k.words.sense word=gangway pos=noun n=3 gloss="passageway between seating areas as in an auditorium or passenger vehicle or between areas of shelves of goods as in stores" synonym=aisle is_a=passageway core.source="wordnet 3.1"
 @k.words.gao.noun.1 k.words.sense word=GAO pos=noun n=1 gloss="an independent nonpartisan federal agency that acts as the investigative arm of Congress making the executive branch accountable to Congress and the government accountable to citizens of the United States" synonym="Government Accounting Office" synonym="United States Government Accounting Office" is_a=agency core.source="wordnet 3.1"
 @k.words.gao.spelling.GAO core.word text=gao means=GAO of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.gap.noun.1 k.words.sense word=gap pos=noun n=1 gloss="a conspicuous disparity or difference as between two figures" synonym=spread is_a=disparity core.source="wordnet 3.1"
@@ -93,6 +100,8 @@
 @k.words.gap.noun.3 k.words.sense word=gap pos=noun n=3 gloss="a narrow opening" synonym=crack is_a=opening core.source="wordnet 3.1"
 @k.words.gap.verb.1 k.words.sense word=gap pos=verb n=1 gloss="make an opening or gap in" synonym=breach is_a=open core.source="wordnet 3.1"
 @k.words.gap.forms core.word text=gapped text=gapping means=gap of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.gar.noun.1 k.words.sense word=gar pos=noun n=1 gloss="primitive predaceous North American fish covered with hard scales and having long jaws with needlelike teeth" synonym=garfish synonym=garpike synonym=billfish synonym="Lepisosteus osseus" is_a=ganoid core.source="wordnet 3.1"
+@k.words.gar.noun.2 k.words.sense word=gar pos=noun n=2 gloss="elongate European surface-dwelling predacious fishes with long toothed jaws; abundant in coastal waters" synonym=needlefish synonym=billfish is_a="teleost fish" core.source="wordnet 3.1"
 @k.words.garage.noun.1 k.words.sense word=garage pos=noun n=1 gloss="an outbuilding (or part of a building) for housing automobiles" is_a=outbuilding core.source="wordnet 3.1"
 @k.words.garage.noun.2 k.words.sense word=garage pos=noun n=2 gloss="a repair shop where cars and trucks are serviced and repaired" synonym="service department" is_a="repair shop" core.source="wordnet 3.1"
 @k.words.garage.verb.1 k.words.sense word=garage pos=verb n=1 gloss="keep or store in a garage" is_a=store core.source="wordnet 3.1"
@@ -111,6 +120,8 @@
 @k.words.gardner.spelling.Gardner core.word text=gardner means=Gardner of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.garfield.noun.1 k.words.sense word=Garfield pos=noun n=1 gloss="20th President of the United States; assassinated by a frustrated office-seeker (1831-1881)" synonym="James Garfield" synonym="James A. Garfield" synonym="James Abraham Garfield" synonym="President Garfield" instance_of="President of the United States" core.source="wordnet 3.1"
 @k.words.garfield.spelling.Garfield core.word text=garfield means=Garfield of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.gargoyle.noun.1 k.words.sense word=gargoyle pos=noun n=1 gloss="a spout that terminates in a grotesquely carved figure of a person or animal" is_a=spout core.source="wordnet 3.1"
+@k.words.gargoyle.noun.2 k.words.sense word=gargoyle pos=noun n=2 gloss="an ornament consisting of a grotesquely carved figure of a person or animal" is_a=decoration core.source="wordnet 3.1"
 @k.words.garibaldi.noun.1 k.words.sense word=Garibaldi pos=noun n=1 gloss="Italian patriot whose conquest of Sicily and Naples led to the formation of the Italian state (1807-1882)" synonym="Giuseppe Garibaldi" instance_of=general instance_of=patriot core.source="wordnet 3.1"
 @k.words.garibaldi.noun.2 k.words.sense word=garibaldi pos=noun n=2 gloss="a loose high-necked blouse with long sleeves; styled after the red flannel shirts worn by Garibaldi's soldiers" is_a=blouse core.source="wordnet 3.1"
 @k.words.garibaldi.spelling.Garibaldi core.word text=garibaldi means=Garibaldi of=k.words.sense.word core.source="wordnet 3.1"
@@ -133,6 +144,8 @@
 @k.words.garrison.noun.3 k.words.sense word=garrison pos=noun n=3 gloss="the troops who maintain and guard a fortified place" is_a="military personnel" core.source="wordnet 3.1"
 @k.words.garrison.verb.1 k.words.sense word=garrison pos=verb n=1 gloss="station (troops) in a fort or garrison" is_a=station core.source="wordnet 3.1"
 @k.words.garrison.spelling.Garrison core.word text=garrison means=Garrison of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.garter.noun.1 k.words.sense word=garter pos=noun n=1 gloss="a band (usually elastic) worn around the leg to hold up a stocking (or around the arm to hold up a sleeve)" synonym=supporter is_a=band core.source="wordnet 3.1"
+@k.words.garter.verb.1 k.words.sense word=garter pos=verb n=1 gloss="fasten with or as if with a garter" is_a=fasten core.source="wordnet 3.1"
 @k.words.gary.noun.1 k.words.sense word=Gary pos=noun n=1 gloss="a city in northwest Indiana on Lake Michigan; steel production" instance_of=city instance_of="port of entry" part_of=Indiana core.source="wordnet 3.1"
 @k.words.gary.spelling.Gary core.word text=gary means=Gary of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.gas.noun.1 k.words.sense word=gas pos=noun n=1 gloss="the state of matter distinguished from the solid and liquid states by: relatively low density and viscosity; relatively great expansion and contraction with changes in pressure and temperature; the ability to diffuse readily; and the spontaneous tendency to become distributed uniformly throughout any container" synonym="gaseous state" is_a="state of matter" core.source="wordnet 3.1"
@@ -177,5 +190,8 @@
 @k.words.gay.noun.1 k.words.sense word=gay pos=noun n=1 gloss="someone who is sexually attracted to persons of the same sex" synonym=homosexual synonym=homophile synonym=homo is_a=person core.source="wordnet 3.1"
 @k.words.gaze.noun.1 k.words.sense word=gaze pos=noun n=1 gloss="a long fixed look" synonym=regard is_a=stare core.source="wordnet 3.1"
 @k.words.gaze.verb.1 k.words.sense word=gaze pos=verb n=1 gloss="look at with fixed eyes" synonym=stare is_a=look core.source="wordnet 3.1"
+@k.words.gazebo.noun.1 k.words.sense word=gazebo pos=noun n=1 gloss="a small roofed building affording shade and rest" synonym=summerhouse is_a=building core.source="wordnet 3.1"
+@k.words.gazebo.forms core.word text=gazeboes means=gazebo of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.gazelle.noun.1 k.words.sense word=gazelle pos=noun n=1 gloss="small swift graceful antelope of Africa and Asia having lustrous eyes" is_a=antelope core.source="wordnet 3.1"
 @k.words.gazette.noun.1 k.words.sense word=gazette pos=noun n=1 gloss="a newspaper or official journal" is_a=newspaper core.source="wordnet 3.1"
 @k.words.gazette.verb.1 k.words.sense word=gazette pos=verb n=1 gloss="publish in a gazette" is_a=print core.source="wordnet 3.1"

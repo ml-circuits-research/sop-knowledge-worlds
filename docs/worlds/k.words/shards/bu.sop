@@ -1,5 +1,5 @@
 # k.words/shards/bu: noun and verb senses of the words from "bubble" to "buzzer" (first letters "bu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -118,6 +118,7 @@
 @k.words.bulldog.verb.1 k.words.sense word=bulldog pos=verb n=1 gloss="attack viciously and ferociously" is_a=assail core.source="wordnet 3.1"
 @k.words.bulldog.verb.2 k.words.sense word=bulldog pos=verb n=2 gloss="throw a steer by seizing the horns and twisting the neck, as in a rodeo" is_a=overcome core.source="wordnet 3.1"
 @k.words.bulldog.forms core.word text=bulldogging means=bulldog of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.bulldozer.noun.1 k.words.sense word=bulldozer pos=noun n=1 gloss="large powerful tractor; a large blade in front flattens areas of ground" synonym=dozer is_a=tractor core.source="wordnet 3.1"
 @k.words.bullet.noun.1 k.words.sense word=bullet pos=noun n=1 gloss="a projectile that is fired from a gun" synonym=slug is_a=projectile part_of=cartridge core.source="wordnet 3.1"
 @k.words.bullet.noun.2 k.words.sense word=bullet pos=noun n=2 gloss="a high-speed passenger train" synonym="bullet train" is_a="passenger train" core.source="wordnet 3.1"
 @k.words.bullet.noun.3 k.words.sense word=bullet pos=noun n=3 gloss="(baseball) a pitch thrown with maximum velocity" synonym=fastball synonym=heater synonym=smoke synonym=hummer is_a=pitch core.source="wordnet 3.1"
@@ -163,7 +164,11 @@
 @k.words.bundle.verb.1 k.words.sense word=bundle pos=verb n=1 gloss="make into a bundle" synonym="bundle up" synonym="roll up" is_a=pack core.source="wordnet 3.1"
 @k.words.bundle.verb.2 k.words.sense word=bundle pos=verb n=2 gloss="gather or cause to gather into a cluster" synonym=bunch synonym=cluster synonym=clump is_a=form core.source="wordnet 3.1"
 @k.words.bundle.verb.3 k.words.sense word=bundle pos=verb n=3 gloss="compress into a wad" synonym=pack synonym=wad synonym=compact is_a=arrange core.source="wordnet 3.1"
+@k.words.bung.noun.1 k.words.sense word=bung pos=noun n=1 gloss="a plug used to close a hole in a barrel or flask" synonym=spile is_a=plug part_of=barrel core.source="wordnet 3.1"
+@k.words.bung.verb.1 k.words.sense word=bung pos=verb n=1 gloss="give a tip or gratuity to in return for a service, beyond the compensation agreed on" synonym=tip synonym=fee is_a=give core.source="wordnet 3.1"
+@k.words.bung.verb.2 k.words.sense word=bung pos=verb n=2 gloss="close with a cork or stopper" is_a=close core.source="wordnet 3.1"
 @k.words.bungalow.noun.1 k.words.sense word=bungalow pos=noun n=1 gloss="a small house with a single story" synonym=cottage is_a=house core.source="wordnet 3.1"
+@k.words.bungee.noun.1 k.words.sense word=bungee pos=noun n=1 gloss="an elasticized rope" synonym="bungee cord" is_a=rope core.source="wordnet 3.1"
 @k.words.bunk.noun.1 k.words.sense word=bunk pos=noun n=1 gloss="a long trough for feeding cattle" synonym="feed bunk" is_a=manger core.source="wordnet 3.1"
 @k.words.bunk.noun.2 k.words.sense word=bunk pos=noun n=2 gloss="a bed on a ship or train; usually in tiers" synonym=berth synonym="built in bed" is_a=bed core.source="wordnet 3.1"
 @k.words.bunk.noun.3 k.words.sense word=bunk pos=noun n=3 gloss="a rough bed (as at a campsite)" is_a=bed core.source="wordnet 3.1"
@@ -242,6 +247,8 @@
 @k.words.burr.verb.1 k.words.sense word=burr pos=verb n=1 gloss="remove the burrs from" synonym=bur is_a=remove core.source="wordnet 3.1"
 @k.words.burr.spelling.Burr core.word text=burr means=Burr of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.burrito.noun.1 k.words.sense word=burrito pos=noun n=1 gloss="a flour tortilla folded around a filling" is_a=dish core.source="wordnet 3.1"
+@k.words.burrow.noun.1 k.words.sense word=burrow pos=noun n=1 gloss="a hole made by an animal, usually for shelter" synonym=tunnel is_a=hole core.source="wordnet 3.1"
+@k.words.burrow.verb.1 k.words.sense word=burrow pos=verb n=1 gloss="move through by or as by digging" synonym=tunnel is_a=dig core.source="wordnet 3.1"
 @k.words.burst.noun.1 k.words.sense word=burst pos=noun n=1 gloss="the act of exploding or bursting" synonym=explosion is_a="change of integrity" core.source="wordnet 3.1"
 @k.words.burst.noun.2 k.words.sense word=burst pos=noun n=2 gloss="rapid simultaneous discharge of firearms" synonym=fusillade synonym=salvo synonym=volley is_a=fire core.source="wordnet 3.1"
 @k.words.burst.noun.3 k.words.sense word=burst pos=noun n=3 gloss="a sudden flurry of activity (often for no obvious reason)" synonym=fit is_a=activity core.source="wordnet 3.1"
@@ -304,11 +311,13 @@
 @k.words.butter.noun.1 k.words.sense word=butter pos=noun n=1 gloss="an edible emulsion of fat globules made by churning milk or cream; for cooking and table use" is_a="dairy product" is_a=food core.source="wordnet 3.1"
 @k.words.butter.noun.2 k.words.sense word=butter pos=noun n=2 gloss="a fighter who strikes the opponent with his head" is_a=combatant core.source="wordnet 3.1"
 @k.words.butter.verb.1 k.words.sense word=butter pos=verb n=1 gloss="spread butter on" is_a=cover core.source="wordnet 3.1"
+@k.words.buttercup.noun.1 k.words.sense word=buttercup pos=noun n=1 gloss="any of various plants of the genus Ranunculus" synonym=butterflower synonym=butter-flower synonym=crowfoot synonym=goldcup synonym=kingcup is_a=herb core.source="wordnet 3.1"
 @k.words.butterfly.noun.1 k.words.sense word=butterfly pos=noun n=1 gloss="diurnal insect typically having a slender body with knobbed antennae and broad colorful wings" is_a="lepidopterous insect" core.source="wordnet 3.1"
 @k.words.butterfly.noun.2 k.words.sense word=butterfly pos=noun n=2 gloss="a swimming stroke in which the arms are thrown forward together out of the water while the feet kick up and down" synonym="butterfly stroke" is_a="swimming stroke" core.source="wordnet 3.1"
 @k.words.butterfly.verb.1 k.words.sense word=butterfly pos=verb n=1 gloss="flutter like a butterfly" is_a=flit core.source="wordnet 3.1"
 @k.words.butterfly.verb.2 k.words.sense word=butterfly pos=verb n=2 gloss="cut and spread open, as in preparation for cooking" is_a=unfold core.source="wordnet 3.1"
 @k.words.butterfly.verb.3 k.words.sense word=butterfly pos=verb n=3 gloss="talk or behave amorously, without serious intentions" synonym="chat up" synonym=flirt synonym=dally synonym=coquet synonym=coquette synonym=romance synonym=philander synonym=mash is_a=talk core.source="wordnet 3.1"
+@k.words.buttermilk.noun.1 k.words.sense word=buttermilk pos=noun n=1 gloss="residue from making butter from sour raw milk; or pasteurized milk curdled by adding a culture" is_a=milk core.source="wordnet 3.1"
 @k.words.buttocks.noun.1 k.words.sense word=buttocks pos=noun n=1 gloss="the fleshy part of the human body that you sit on" synonym=nates synonym=arse synonym=butt synonym=backside synonym=bum synonym=buns synonym=can synonym=fundament synonym=hindquarters synonym="hind end" synonym=keister synonym=posterior synonym=prat synonym=rear synonym="rear end" synonym=rump synonym=stern synonym=seat synonym=tail synonym="tail end" synonym=tooshie synonym=tush synonym=bottom synonym=behind synonym=derriere synonym=fanny synonym=ass is_a="body part" part_of=torso core.source="wordnet 3.1"
 @k.words.button.noun.1 k.words.sense word=button pos=noun n=1 gloss="a round fastener sewn to shirts and coats etc to fit through buttonholes" is_a=fastener core.source="wordnet 3.1"
 @k.words.button.noun.2 k.words.sense word=button pos=noun n=2 gloss="an electrical switch operated by pressing" synonym="push button" synonym=push is_a=switch part_of="push-button radio" core.source="wordnet 3.1"
@@ -327,5 +336,7 @@
 @k.words.buzz.verb.1 k.words.sense word=buzz pos=verb n=1 gloss="make a buzzing sound" synonym=bombinate synonym=bombilate is_a=sound core.source="wordnet 3.1"
 @k.words.buzz.verb.2 k.words.sense word=buzz pos=verb n=2 gloss="fly low" is_a=fly core.source="wordnet 3.1"
 @k.words.buzz.verb.3 k.words.sense word=buzz pos=verb n=3 gloss="be noisy with activity" synonym=hum synonym=seethe is_a=be core.source="wordnet 3.1"
+@k.words.buzzard.noun.1 k.words.sense word=buzzard pos=noun n=1 gloss="a New World vulture that is common in South America and Central America and the southern United States" synonym="turkey buzzard" synonym="turkey vulture" synonym="Cathartes aura" is_a="New World vulture" core.source="wordnet 3.1"
+@k.words.buzzard.noun.2 k.words.sense word=buzzard pos=noun n=2 gloss="the common European short-winged hawk" synonym="Buteo buteo" is_a=hawk core.source="wordnet 3.1"
 @k.words.buzzer.noun.1 k.words.sense word=buzzer pos=noun n=1 gloss="a push button at an outer door that gives a ringing or buzzing signal when pushed" synonym=doorbell synonym=bell is_a="push button" core.source="wordnet 3.1"
 @k.words.buzzer.noun.2 k.words.sense word=buzzer pos=noun n=2 gloss="a signaling device that makes a buzzing sound" is_a="signaling device" core.source="wordnet 3.1"

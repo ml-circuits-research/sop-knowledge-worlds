@@ -1,5 +1,5 @@
 # k.words/shards/ci: noun and verb senses of the words from "ci" to "civilization" (first letters "ci").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -45,6 +45,7 @@
 @k.words.circuit.noun.2 k.words.sense word=circuit pos=noun n=2 gloss="a journey or route all the way around a particular place or area" synonym=tour is_a=journey core.source="wordnet 3.1"
 @k.words.circuit.noun.3 k.words.sense word=circuit pos=noun n=3 gloss="an established itinerary of venues or events that a particular group of people travel to" is_a=path core.source="wordnet 3.1"
 @k.words.circuit.verb.1 k.words.sense word=circuit pos=verb n=1 gloss="make a circuit" is_a=travel core.source="wordnet 3.1"
+@k.words.circuitry.noun.1 k.words.sense word=circuitry pos=noun n=1 gloss="electronic equipment consisting of a system of circuits" is_a="electronic equipment" core.source="wordnet 3.1"
 @k.words.circular.noun.1 k.words.sense word=circular pos=noun n=1 gloss="an advertisement (usually printed on a page or in a leaflet) intended for wide distribution" synonym=handbill synonym=bill synonym=broadside synonym=broadsheet synonym=flier synonym=flyer synonym=throwaway is_a=ad core.source="wordnet 3.1"
 @k.words.circulation.noun.1 k.words.sense word=circulation pos=noun n=1 gloss="the dissemination of copies of periodicals (as newspapers or magazines)" is_a=dissemination core.source="wordnet 3.1"
 @k.words.circulation.noun.2 k.words.sense word=circulation pos=noun n=2 gloss="movement through a circuit; especially the movement of blood through the heart and blood vessels" is_a="organic phenomenon" core.source="wordnet 3.1"
@@ -64,6 +65,8 @@
 @k.words.citizen.noun.1 k.words.sense word=citizen pos=noun n=1 gloss="a native or naturalized member of a state or other political community" is_a=national core.source="wordnet 3.1"
 @k.words.citizenship.noun.1 k.words.sense word=citizenship pos=noun n=1 gloss="the status of a citizen with rights and duties" is_a="legal status" core.source="wordnet 3.1"
 @k.words.citizenship.noun.2 k.words.sense word=citizenship pos=noun n=2 gloss="conduct as a citizen" is_a=demeanor core.source="wordnet 3.1"
+@k.words.citrus.noun.1 k.words.sense word=citrus pos=noun n=1 gloss="any of numerous fruits of the genus Citrus having thick rind and juicy pulp; grown in warm regions" synonym="citrus fruit" synonym="citrous fruit" is_a="edible fruit" part_of=citrus core.source="wordnet 3.1"
+@k.words.citrus.noun.2 k.words.sense word=citrus pos=noun n=2 gloss="any of numerous tropical usually thorny evergreen trees of the genus Citrus having leathery evergreen leaves and widely cultivated for their juicy edible fruits having leathery aromatic rinds" synonym="citrus tree" is_a="fruit tree" core.source="wordnet 3.1"
 @k.words.city.noun.1 k.words.sense word=city pos=noun n=1 gloss="a large and densely populated urban area; may include several independent administrative districts" synonym=metropolis synonym="urban center" is_a=municipality core.source="wordnet 3.1"
 @k.words.city.noun.2 k.words.sense word=city pos=noun n=2 gloss="an incorporated administrative district established by state charter" is_a="administrative district" core.source="wordnet 3.1"
 @k.words.city.noun.3 k.words.sense word=city pos=noun n=3 gloss="people living in a large densely populated municipality" synonym=metropolis is_a=municipality core.source="wordnet 3.1"

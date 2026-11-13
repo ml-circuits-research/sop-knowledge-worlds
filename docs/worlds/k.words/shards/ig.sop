@@ -1,5 +1,5 @@
-# k.words/shards/ig: noun and verb senses of the words from "ignite" to "ignore" (first letters "ig").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ig: noun and verb senses of the words from "ignite" to "iguana" (first letters "ig").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -13,3 +13,4 @@
 @k.words.ignore.verb.1 k.words.sense word=ignore pos=verb n=1 gloss="refuse to acknowledge" synonym=disregard synonym=snub synonym=cut is_a=treat core.source="wordnet 3.1"
 @k.words.ignore.verb.2 k.words.sense word=ignore pos=verb n=2 gloss="bar from attention or consideration" synonym=dismiss synonym=disregard synonym="brush aside" synonym="brush off" synonym=discount synonym="push aside" is_a=reject core.source="wordnet 3.1"
 @k.words.ignore.verb.3 k.words.sense word=ignore pos=verb n=3 gloss="fail to notice" core.source="wordnet 3.1"
+@k.words.iguana.noun.1 k.words.sense word=iguana pos=noun n=1 gloss="large herbivorous tropical American arboreal lizards with a spiny crest along the back; used as human food in Central America and South America" synonym="common iguana" synonym="Iguana iguana" is_a=iguanid core.source="wordnet 3.1"

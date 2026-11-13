@@ -1,5 +1,5 @@
 # k.words/shards/to: noun and verb senses of the words from "toad" to "toyota" (first letters "to").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -28,6 +28,7 @@
 @k.words.toe.verb.1 k.words.sense word=toe pos=verb n=1 gloss="walk so that the toes assume an indicated position or direction" is_a=walk core.source="wordnet 3.1"
 @k.words.toe.verb.2 k.words.sense word=toe pos=verb n=2 gloss="drive obliquely" synonym=toenail is_a=force core.source="wordnet 3.1"
 @k.words.toe.verb.3 k.words.sense word=toe pos=verb n=3 gloss="hit (a golf ball) with the toe of the club" is_a=hit core.source="wordnet 3.1"
+@k.words.toffee.noun.1 k.words.sense word=toffee pos=noun n=1 gloss="caramelized sugar cooled in thin sheets" synonym=brittle synonym=toffy is_a=candy core.source="wordnet 3.1"
 @k.words.tofu.noun.1 k.words.sense word=tofu pos=noun n=1 gloss="cheeselike food made of curdled soybean milk" synonym="bean curd" is_a=curd core.source="wordnet 3.1"
 @k.words.toil.noun.1 k.words.sense word=toil pos=noun n=1 gloss="productive work (especially physical work done for wages)" synonym=labor synonym=labour is_a=work core.source="wordnet 3.1"
 @k.words.toil.verb.1 k.words.sense word=toil pos=verb n=1 gloss="work hard" synonym=labor synonym=labour synonym=fag synonym=travail synonym=grind synonym=drudge synonym=dig synonym=moil is_a=work core.source="wordnet 3.1"
@@ -70,6 +71,7 @@
 @k.words.tone.verb.1 k.words.sense word=tone pos=verb n=1 gloss="utter monotonously and repetitively and rhythmically" synonym=chant synonym=intone is_a=talk core.source="wordnet 3.1"
 @k.words.tone.verb.2 k.words.sense word=tone pos=verb n=2 gloss="vary the pitch of one's speech" synonym=inflect synonym=modulate is_a=talk core.source="wordnet 3.1"
 @k.words.tone.verb.3 k.words.sense word=tone pos=verb n=3 gloss="change the color or tone of" is_a=discolor core.source="wordnet 3.1"
+@k.words.tongs.noun.1 k.words.sense word=tongs pos=noun n=1 gloss="any of various devices for taking hold of objects; usually have two hinged legs with handles above and pointed hooks below" synonym="pair of tongs" is_a=device core.source="wordnet 3.1"
 @k.words.tongue.noun.1 k.words.sense word=tongue pos=noun n=1 gloss="a mobile mass of muscular tissue covered with mucous membrane and located in the oral cavity" synonym=lingua synonym=glossa synonym=clapper is_a=organ is_a=articulator part_of=mouth part_of=throat core.source="wordnet 3.1"
 @k.words.tongue.noun.2 k.words.sense word=tongue pos=noun n=2 gloss="a human written or spoken language used by a community; opposed to e.g. a computer language" synonym="natural language" is_a=language core.source="wordnet 3.1"
 @k.words.tongue.noun.3 k.words.sense word=tongue pos=noun n=3 gloss="any long thin projection that is transient" synonym=knife is_a=projection core.source="wordnet 3.1"
@@ -86,6 +88,7 @@
 @k.words.tool.verb.1 k.words.sense word=tool pos=verb n=1 gloss="drive" is_a=drive core.source="wordnet 3.1"
 @k.words.tool.verb.2 k.words.sense word=tool pos=verb n=2 gloss="ride in a car with no particular goal and just for the pleasure of it" synonym=joyride synonym="tool around" is_a=ride core.source="wordnet 3.1"
 @k.words.tool.verb.3 k.words.sense word=tool pos=verb n=3 gloss="furnish with tools" is_a=supply core.source="wordnet 3.1"
+@k.words.toolbox.noun.1 k.words.sense word=toolbox pos=noun n=1 gloss="a box or chest or cabinet for holding hand tools" synonym="tool chest" synonym="tool cabinet" synonym="tool case" is_a=chest core.source="wordnet 3.1"
 @k.words.toot.noun.1 k.words.sense word=toot pos=noun n=1 gloss="a blast of a horn" is_a=sound core.source="wordnet 3.1"
 @k.words.toot.noun.2 k.words.sense word=toot pos=noun n=2 gloss="revelry in drinking; a merry drinking party" synonym=carouse synonym=carousal synonym=bender synonym=booze-up is_a=revel core.source="wordnet 3.1"
 @k.words.toot.verb.1 k.words.sense word=toot pos=verb n=1 gloss="make a loud noise" synonym=honk synonym=blare synonym=beep synonym=claxon is_a=sound core.source="wordnet 3.1"
@@ -97,6 +100,7 @@
 @k.words.toothbrush.noun.1 k.words.sense word=toothbrush pos=noun n=1 gloss="small brush; has long handle; used to clean teeth" is_a=brush is_a=toiletry core.source="wordnet 3.1"
 @k.words.toothbrush.noun.2 k.words.sense word=toothbrush pos=noun n=2 gloss="slang for a mustache" synonym=soup-strainer is_a=mustache core.source="wordnet 3.1"
 @k.words.toothpaste.noun.1 k.words.sense word=toothpaste pos=noun n=1 gloss="a dentifrice in the form of a paste" is_a=dentifrice core.source="wordnet 3.1"
+@k.words.toothpick.noun.1 k.words.sense word=toothpick pos=noun n=1 gloss="pick consisting of a small strip of wood or plastic; used to pick food from between the teeth" is_a=pick is_a=strip core.source="wordnet 3.1"
 @k.words.top.noun.1 k.words.sense word=top pos=noun n=1 gloss="the upper part of anything" is_a=region core.source="wordnet 3.1"
 @k.words.top.noun.2 k.words.sense word=top pos=noun n=2 gloss="the highest or uppermost side of anything" synonym="top side" synonym="upper side" synonym=upside is_a=side core.source="wordnet 3.1"
 @k.words.top.noun.3 k.words.sense word=top pos=noun n=3 gloss="the top or extreme point of something (usually a mountain or hill)" synonym=peak synonym=crown synonym=crest synonym=tip synonym=summit is_a="topographic point" core.source="wordnet 3.1"
@@ -154,6 +158,8 @@
 @k.words.total.verb.2 k.words.sense word=total pos=verb n=2 gloss="determine the sum of" synonym=tot synonym="tot up" synonym=sum synonym="sum up" synonym=summate synonym="tote up" synonym=add synonym="add together" synonym=tally synonym="add up" is_a=count core.source="wordnet 3.1"
 @k.words.total.verb.3 k.words.sense word=total pos=verb n=3 gloss="damage beyond the point of repair" is_a=damage core.source="wordnet 3.1"
 @k.words.total.forms core.word text=totalled text=totalling means=total of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.tote.noun.1 k.words.sense word=tote pos=noun n=1 gloss="a capacious bag or basket" synonym=carryall synonym=holdall synonym="tote bag" is_a=bag core.source="wordnet 3.1"
+@k.words.tote.verb.1 k.words.sense word=tote pos=verb n=1 gloss="carry with difficulty" synonym=lug synonym=tug is_a=transport core.source="wordnet 3.1"
 @k.words.totem.noun.1 k.words.sense word=totem pos=noun n=1 gloss="a clan or tribe identified by their kinship to a common totemic object" is_a=kin core.source="wordnet 3.1"
 @k.words.totem.noun.2 k.words.sense word=totem pos=noun n=2 gloss="emblem consisting of an object such as an animal or plant; serves as the symbol of a family or clan (especially among American Indians)" is_a=emblem core.source="wordnet 3.1"
 @k.words.touch.noun.1 k.words.sense word=touch pos=noun n=1 gloss="the event of something coming in contact with the body" synonym=touching is_a=contact core.source="wordnet 3.1"
@@ -169,6 +175,7 @@
 @k.words.tough.noun.1 k.words.sense word=tough pos=noun n=1 gloss="someone who learned to fight in the streets rather than being formally trained in the sport of boxing" synonym="street fighter" is_a=combatant core.source="wordnet 3.1"
 @k.words.tough.noun.2 k.words.sense word=tough pos=noun n=2 gloss="an aggressive and violent young criminal" synonym=hood synonym=hoodlum synonym=goon synonym=punk synonym=thug synonym=toughie synonym=strong-armer is_a=criminal core.source="wordnet 3.1"
 @k.words.tough.noun.3 k.words.sense word=tough pos=noun n=3 gloss="a cruel and brutal fellow" synonym=bully synonym=hooligan synonym=ruffian synonym=roughneck synonym=rowdy synonym=yob synonym=yobo synonym=yobbo is_a=attacker core.source="wordnet 3.1"
+@k.words.toupee.noun.1 k.words.sense word=toupee pos=noun n=1 gloss="a small hairpiece to cover partial baldness" synonym=toupe is_a=hairpiece core.source="wordnet 3.1"
 @k.words.tour.noun.1 k.words.sense word=tour pos=noun n=1 gloss="a journey or route all the way around a particular place or area" synonym=circuit is_a=journey core.source="wordnet 3.1"
 @k.words.tour.noun.2 k.words.sense word=tour pos=noun n=2 gloss="a time period for working (after which you will be relieved by someone else)" synonym=go synonym=spell synonym=turn is_a=shift core.source="wordnet 3.1"
 @k.words.tour.noun.3 k.words.sense word=tour pos=noun n=3 gloss="a period of time spent in military service" synonym=enlistment synonym=hitch synonym="term of enlistment" synonym="tour of duty" synonym="duty tour" is_a="time period" core.source="wordnet 3.1"
@@ -177,6 +184,7 @@
 @k.words.tourist.noun.1 k.words.sense word=tourist pos=noun n=1 gloss="someone who travels for pleasure" synonym=tourer synonym=holidaymaker is_a=traveler core.source="wordnet 3.1"
 @k.words.tournament.noun.1 k.words.sense word=tournament pos=noun n=1 gloss="a sporting competition in which contestants play a series of games to decide the winner" synonym=tourney is_a=contest core.source="wordnet 3.1"
 @k.words.tournament.noun.2 k.words.sense word=tournament pos=noun n=2 gloss="a series of jousts between knights contesting for a prize" is_a=contest core.source="wordnet 3.1"
+@k.words.tourniquet.noun.1 k.words.sense word=tourniquet pos=noun n=1 gloss="bandage that stops the flow of blood from an artery by applying pressure" synonym="compression bandage" is_a=bandage core.source="wordnet 3.1"
 @k.words.tours.noun.1 k.words.sense word=Tours pos=noun n=1 gloss="an industrial city in western France on the Loire River" instance_of=city part_of=France core.source="wordnet 3.1"
 @k.words.tours.spelling.Tours core.word text=tours means=Tours of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.tout.noun.1 k.words.sense word=tout pos=noun n=1 gloss="someone who buys tickets to an event in order to resell them at a profit" synonym="ticket tout" is_a=scalper core.source="wordnet 3.1"

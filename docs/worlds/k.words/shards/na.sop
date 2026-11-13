@@ -1,5 +1,5 @@
 # k.words/shards/na: noun and verb senses of the words from "na" to "nazi" (first letters "na").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -48,6 +48,7 @@
 @k.words.nap.noun.3 k.words.sense word=nap pos=noun n=3 gloss="the yarn (as in a rug or velvet or corduroy) that stands up from the weave" synonym=pile is_a=thread core.source="wordnet 3.1"
 @k.words.nap.verb.1 k.words.sense word=nap pos=verb n=1 gloss="take a siesta" synonym=catnap synonym="catch a wink" is_a=sleep core.source="wordnet 3.1"
 @k.words.nap.forms core.word text=napped text=napping means=nap of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.napa.noun.1 k.words.sense word=napa pos=noun n=1 gloss="plant with an elongated head of broad stalked leaves resembling celery; used as a vegetable in east Asia" synonym="Chinese cabbage" synonym="celery cabbage" synonym=pe-tsai synonym="Brassica rapa pekinensis" is_a=crucifer core.source="wordnet 3.1"
 @k.words.napkin.noun.1 k.words.sense word=napkin pos=noun n=1 gloss="a small piece of table linen that is used to wipe the mouth and to cover the lap in order to protect clothing" synonym="table napkin" synonym=serviette is_a="table linen" core.source="wordnet 3.1"
 @k.words.napkin.noun.2 k.words.sense word=napkin pos=noun n=2 gloss="garment consisting of a folded cloth drawn up between the legs and fastened at the waist; worn by infants to catch excrement" synonym=diaper synonym=nappy is_a=garment core.source="wordnet 3.1"
 @k.words.naples.noun.1 k.words.sense word=Naples pos=noun n=1 gloss="a port and tourist center in southwestern Italy; capital of the Campania region" synonym=Napoli instance_of=city instance_of=port part_of=Campania core.source="wordnet 3.1"
@@ -56,6 +57,7 @@
 @k.words.napoleon.noun.2 k.words.sense word=napoleon pos=noun n=2 gloss="a rectangular piece of pastry with thin flaky layers and filled with custard cream" is_a="French pastry" core.source="wordnet 3.1"
 @k.words.napoleon.noun.3 k.words.sense word=Napoleon pos=noun n=3 gloss="a card game similar to whist; usually played for stakes" synonym=nap is_a="card game" core.source="wordnet 3.1"
 @k.words.napoleon.spelling.Napoleon core.word text=napoleon means=Napoleon of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.nappy.noun.1 k.words.sense word=nappy pos=noun n=1 gloss="garment consisting of a folded cloth drawn up between the legs and fastened at the waist; worn by infants to catch excrement" synonym=diaper synonym=napkin is_a=garment core.source="wordnet 3.1"
 @k.words.narrative.noun.1 k.words.sense word=narrative pos=noun n=1 gloss="a message that tells the particulars of an act or occurrence or course of events; presented in writing or drama or cinema or as a radio or television program" synonym=narration synonym=story synonym=tale is_a=message core.source="wordnet 3.1"
 @k.words.narrator.noun.1 k.words.sense word=narrator pos=noun n=1 gloss="someone who tells a story" synonym=storyteller synonym=teller is_a=speaker core.source="wordnet 3.1"
 @k.words.narrow.noun.1 k.words.sense word=narrow pos=noun n=1 gloss="a narrow strait connecting two bodies of water" is_a=strait core.source="wordnet 3.1"
@@ -92,6 +94,10 @@
 @k.words.naught.noun.2 k.words.sense word=naught pos=noun n=2 gloss="complete failure" is_a=failure core.source="wordnet 3.1"
 @k.words.nausea.noun.1 k.words.sense word=nausea pos=noun n=1 gloss="the state that precedes vomiting" synonym=sickness is_a=symptom core.source="wordnet 3.1"
 @k.words.nausea.noun.2 k.words.sense word=nausea pos=noun n=2 gloss="disgust so strong it makes you feel sick" is_a=disgust core.source="wordnet 3.1"
+@k.words.nautilus.noun.1 k.words.sense word=nautilus pos=noun n=1 gloss="a submarine that is propelled by nuclear power" synonym="nuclear submarine" synonym="nuclear-powered submarine" is_a=submarine core.source="wordnet 3.1"
+@k.words.nautilus.noun.2 k.words.sense word=nautilus pos=noun n=2 gloss="cephalopod mollusk of warm seas whose females have delicate papery spiral shells" synonym="paper nautilus" synonym=Argonaut synonym="Argonauta argo" is_a=octopod core.source="wordnet 3.1"
+@k.words.nautilus.noun.3 k.words.sense word=nautilus pos=noun n=3 gloss="cephalopod of the Indian and Pacific oceans having a spiral shell with pale pearly partitions" synonym="chambered nautilus" synonym="pearly nautilus" is_a=cephalopod core.source="wordnet 3.1"
+@k.words.nautilus.forms core.word text=nautili means=nautilus of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.navigate.verb.1 k.words.sense word=navigate pos=verb n=1 gloss="travel on water propelled by wind or by other means" synonym=voyage synonym=sail is_a=travel core.source="wordnet 3.1"
 @k.words.navigate.verb.2 k.words.sense word=navigate pos=verb n=2 gloss="act as the navigator in a car, plane, or vessel and plan, direct, plot the path and position of the conveyance" synonym=pilot is_a=steer core.source="wordnet 3.1"
 @k.words.navigate.verb.3 k.words.sense word=navigate pos=verb n=3 gloss="direct carefully and safely" is_a=steer core.source="wordnet 3.1"

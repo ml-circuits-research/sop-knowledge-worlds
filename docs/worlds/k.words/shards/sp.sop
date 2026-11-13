@@ -1,5 +1,5 @@
 # k.words/shards/sp: noun and verb senses of the words from "spa" to "spying" (first letters "sp").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -37,6 +37,7 @@
 @k.words.spank.noun.1 k.words.sense word=spank pos=noun n=1 gloss="a slap with the flat of the hand" is_a=smack core.source="wordnet 3.1"
 @k.words.spank.verb.1 k.words.sense word=spank pos=verb n=1 gloss="give a spanking to; subject to a spanking" synonym=paddle synonym=larrup is_a=beat core.source="wordnet 3.1"
 @k.words.spanking.noun.1 k.words.sense word=spanking pos=noun n=1 gloss="the act of slapping on the buttocks" is_a=discipline core.source="wordnet 3.1"
+@k.words.spanner.noun.1 k.words.sense word=spanner pos=noun n=1 gloss="a hand tool that is used to hold or twist a nut or bolt" synonym=wrench is_a="hand tool" core.source="wordnet 3.1"
 @k.words.spare.noun.1 k.words.sense word=spare pos=noun n=1 gloss="an extra component of a machine or other apparatus" synonym="spare part" is_a=component core.source="wordnet 3.1"
 @k.words.spare.noun.2 k.words.sense word=spare pos=noun n=2 gloss="an extra car wheel and tire for a four-wheel vehicle" synonym="fifth wheel" is_a="car wheel" core.source="wordnet 3.1"
 @k.words.spare.noun.3 k.words.sense word=spare pos=noun n=3 gloss="a score in tenpins; knocking down all ten after rolling two balls" is_a=score core.source="wordnet 3.1"
@@ -332,6 +333,7 @@
 @k.words.sprinkle.verb.1 k.words.sense word=sprinkle pos=verb n=1 gloss="distribute loosely" synonym=scatter synonym=dot synonym=dust synonym=disperse is_a=discharge core.source="wordnet 3.1"
 @k.words.sprinkle.verb.2 k.words.sense word=sprinkle pos=verb n=2 gloss="cause (a liquid) to spatter about, especially with force" synonym=splash synonym=splosh is_a=scatter core.source="wordnet 3.1"
 @k.words.sprinkle.verb.3 k.words.sense word=sprinkle pos=verb n=3 gloss="rain gently" synonym=spit synonym=spatter synonym=patter synonym=pitter-patter is_a=rain core.source="wordnet 3.1"
+@k.words.sprinkler.noun.1 k.words.sense word=sprinkler pos=noun n=1 gloss="mechanical device that attaches to a garden hose for watering lawn or garden" is_a="mechanical device" core.source="wordnet 3.1"
 @k.words.sprint.noun.1 k.words.sense word=sprint pos=noun n=1 gloss="a quick run" synonym=dash is_a=run core.source="wordnet 3.1"
 @k.words.sprint.verb.1 k.words.sense word=sprint pos=verb n=1 gloss="run very fast, usually for a short distance" is_a=run core.source="wordnet 3.1"
 @k.words.sprout.noun.1 k.words.sense word=sprout pos=noun n=1 gloss="any new growth of a plant such as a new branch or a bud" is_a="plant organ" core.source="wordnet 3.1"

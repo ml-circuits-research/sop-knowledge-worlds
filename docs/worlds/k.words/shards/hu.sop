@@ -1,5 +1,5 @@
 # k.words/shards/hu: noun and verb senses of the words from "hua" to "hutton" (first letters "hu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -56,6 +56,7 @@
 @k.words.humanity.noun.2 k.words.sense word=humanity pos=noun n=2 gloss="the quality of being human" synonym=humanness synonym=manhood is_a=quality core.source="wordnet 3.1"
 @k.words.humanity.noun.3 k.words.sense word=humanity pos=noun n=3 gloss="all of the living human inhabitants of the earth" synonym=world synonym="human race" synonym=humankind synonym="human beings" synonym=humans synonym=mankind synonym=man is_a=homo is_a=group core.source="wordnet 3.1"
 @k.words.humankind.noun.1 k.words.sense word=humankind pos=noun n=1 gloss="all of the living human inhabitants of the earth" synonym=world synonym="human race" synonym=humanity synonym="human beings" synonym=humans synonym=mankind synonym=man is_a=homo is_a=group core.source="wordnet 3.1"
+@k.words.humanoid.noun.1 k.words.sense word=humanoid pos=noun n=1 gloss="an automaton that resembles a human being" synonym=android synonym="mechanical man" is_a=automaton core.source="wordnet 3.1"
 @k.words.humans.noun.1 k.words.sense word=humans pos=noun n=1 gloss="all of the living human inhabitants of the earth" synonym=world synonym="human race" synonym=humanity synonym=humankind synonym="human beings" synonym=mankind synonym=man is_a=homo is_a=group core.source="wordnet 3.1"
 @k.words.humble.verb.1 k.words.sense word=humble pos=verb n=1 gloss="cause to be unpretentious" is_a=change core.source="wordnet 3.1"
 @k.words.humble.verb.2 k.words.sense word=humble pos=verb n=2 gloss="cause to feel shame; hurt the pride of" synonym=humiliate synonym=mortify synonym=chagrin synonym=abase is_a=hurt core.source="wordnet 3.1"
@@ -68,6 +69,8 @@
 @k.words.humility.noun.2 k.words.sense word=humility pos=noun n=2 gloss="a humble feeling" synonym=humbleness is_a=feeling core.source="wordnet 3.1"
 @k.words.humming.noun.1 k.words.sense word=humming pos=noun n=1 gloss="a humming noise" synonym=hum is_a=noise core.source="wordnet 3.1"
 @k.words.humming.noun.2 k.words.sense word=humming pos=noun n=2 gloss="the act of singing with closed lips" is_a=singing core.source="wordnet 3.1"
+@k.words.hummingbird.noun.1 k.words.sense word=hummingbird pos=noun n=1 gloss="tiny American bird having brilliant iridescent plumage and long slender bills; wings are specialized for vibrating flight" is_a="apodiform bird" core.source="wordnet 3.1"
+@k.words.hummus.noun.1 k.words.sense word=hummus pos=noun n=1 gloss="a thick spread made from mashed chickpeas, tahini, lemon juice and garlic; used especially as a dip for pita; originated in the Middle East" synonym=humus synonym=hommos synonym=hoummos synonym=humous is_a=spread core.source="wordnet 3.1"
 @k.words.humor.noun.1 k.words.sense word=humor pos=noun n=1 gloss="a message whose ingenuity or verbal skill or incongruity has the power to evoke laughter" synonym=wit synonym=humour synonym=witticism synonym=wittiness is_a=message core.source="wordnet 3.1"
 @k.words.humor.noun.2 k.words.sense word=humor pos=noun n=2 gloss="the trait of appreciating (and being able to express) the humorous" synonym=humour synonym="sense of humor" synonym="sense of humour" is_a=playfulness core.source="wordnet 3.1"
 @k.words.humor.noun.3 k.words.sense word=humor pos=noun n=3 gloss="a characteristic (habitual or relatively temporary) state of feeling" synonym=temper synonym=mood synonym=humour is_a=feeling core.source="wordnet 3.1"

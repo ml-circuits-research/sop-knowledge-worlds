@@ -1,5 +1,5 @@
 # k.words/shards/go: noun and verb senses of the words from "go" to "gown" (first letters "go").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -60,6 +60,9 @@
 @k.words.goliath.noun.1 k.words.sense word=Goliath pos=noun n=1 gloss="(Old Testament) a giant Philistine warrior who was slain by David with a slingshot" instance_of=warrior core.source="wordnet 3.1"
 @k.words.goliath.noun.2 k.words.sense word=goliath pos=noun n=2 gloss="someone or something that is abnormally large and powerful" synonym=giant synonym=behemoth synonym=monster synonym=colossus is_a=anomaly core.source="wordnet 3.1"
 @k.words.goliath.spelling.Goliath core.word text=goliath means=Goliath of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.gondola.noun.1 k.words.sense word=gondola pos=noun n=1 gloss="a low flat-bottomed freight car with fixed sides but no roof" synonym="gondola car" is_a="freight car" core.source="wordnet 3.1"
+@k.words.gondola.noun.2 k.words.sense word=gondola pos=noun n=2 gloss="long narrow flat-bottomed boat propelled by sculling; traditionally used on canals of Venice" is_a=boat core.source="wordnet 3.1"
+@k.words.gondola.noun.3 k.words.sense word=gondola pos=noun n=3 gloss="the compartment that is suspended from an airship and that carries personnel and the cargo and the power plant" synonym=car is_a=compartment part_of=airship core.source="wordnet 3.1"
 @k.words.goner.noun.1 k.words.sense word=goner pos=noun n=1 gloss="a person in desperate straits; someone doomed" synonym=toast is_a=desperate core.source="wordnet 3.1"
 @k.words.gong.noun.1 k.words.sense word=gong pos=noun n=1 gloss="a percussion instrument consisting of a metal plate that is struck with a softheaded drumstick" synonym=tam-tam is_a="percussion instrument" core.source="wordnet 3.1"
 @k.words.gong.noun.2 k.words.sense word=gong pos=noun n=2 gloss="a percussion instrument consisting of a set of tuned bells that are struck with a hammer; used as an orchestral instrument" synonym=chime synonym=bell is_a="percussion instrument" core.source="wordnet 3.1"
@@ -121,6 +124,10 @@
 @k.words.gothic.noun.2 k.words.sense word=Gothic pos=noun n=2 gloss="a heavy typeface in use from 15th to 18th centuries" synonym="black letter" is_a=font core.source="wordnet 3.1"
 @k.words.gothic.noun.3 k.words.sense word=Gothic pos=noun n=3 gloss="a style of architecture developed in northern France that spread throughout Europe between the 12th and 16th centuries; characterized by slender vertical piers and counterbalancing buttresses and by vaulting and pointed arches" synonym="Gothic architecture" is_a="architectural style" core.source="wordnet 3.1"
 @k.words.gothic.spelling.Gothic core.word text=gothic means=Gothic of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.goulash.noun.1 k.words.sense word=goulash pos=noun n=1 gloss="a rich meat stew highly seasoned with paprika" synonym="Hungarian goulash" synonym=gulyas is_a=stew core.source="wordnet 3.1"
+@k.words.gourd.noun.1 k.words.sense word=gourd pos=noun n=1 gloss="bottle made from the dried shell of a bottle gourd" synonym=calabash is_a=bottle core.source="wordnet 3.1"
+@k.words.gourd.noun.2 k.words.sense word=gourd pos=noun n=2 gloss="any of numerous inedible fruits with hard rinds" is_a=fruit core.source="wordnet 3.1"
+@k.words.gourd.noun.3 k.words.sense word=gourd pos=noun n=3 gloss="any vine of the family Cucurbitaceae that bears fruits with hard rinds" synonym="gourd vine" is_a=vine core.source="wordnet 3.1"
 @k.words.gourmet.noun.1 k.words.sense word=gourmet pos=noun n=1 gloss="a person devoted to refined sensuous enjoyment (especially good food and drink)" synonym=epicure synonym=gastronome synonym="bon vivant" synonym=epicurean synonym=foodie is_a=sensualist core.source="wordnet 3.1"
 @k.words.govern.verb.1 k.words.sense word=govern pos=verb n=1 gloss="bring into conformity with rules or principles or usage; impose regulations" synonym=regulate synonym=regularize synonym=regularise synonym=order is_a=decide core.source="wordnet 3.1"
 @k.words.govern.verb.2 k.words.sense word=govern pos=verb n=2 gloss="direct or strongly influence the behavior of" is_a=control core.source="wordnet 3.1"

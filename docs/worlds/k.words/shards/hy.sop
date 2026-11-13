@@ -1,5 +1,5 @@
 # k.words/shards/hy: noun and verb senses of the words from "hybrid" to "hysteria" (first letters "hy").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -14,6 +14,8 @@
 @k.words.hydra.noun.3 k.words.sense word=hydra pos=noun n=3 gloss="trouble that cannot be overcome by a single effort because of its many aspects or its persistent and pervasive quality" is_a=trouble core.source="wordnet 3.1"
 @k.words.hydra.spelling.Hydra core.word text=hydra means=Hydra of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.hydra.forms core.word text=hydrae means=hydra of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.hydrant.noun.1 k.words.sense word=hydrant pos=noun n=1 gloss="a faucet for drawing water from a pipe or cask" synonym="water faucet" synonym="water tap" synonym=tap is_a=faucet is_a="plumbing fixture" core.source="wordnet 3.1"
+@k.words.hydrant.noun.2 k.words.sense word=hydrant pos=noun n=2 gloss="a discharge pipe with a valve and spout at which water may be drawn from the mains of waterworks" is_a="discharge pipe" core.source="wordnet 3.1"
 @k.words.hydrogen.noun.1 k.words.sense word=hydrogen pos=noun n=1 gloss="a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe" synonym=H synonym="atomic number 1" is_a="chemical element" is_a=gas core.source="wordnet 3.1"
 @k.words.hyena.noun.1 k.words.sense word=hyena pos=noun n=1 gloss="doglike nocturnal mammal of Africa and southern Asia that feeds chiefly on carrion" synonym=hyaena is_a=canine core.source="wordnet 3.1"
 @k.words.hygiene.noun.1 k.words.sense word=hygiene pos=noun n=1 gloss="a condition promoting sanitary practices" is_a=sanitariness core.source="wordnet 3.1"

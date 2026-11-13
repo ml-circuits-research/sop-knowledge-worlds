@@ -1,5 +1,5 @@
 # k.words/shards/dr: noun and verb senses of the words from "dracula" to "dryer" (first letters "dr").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -23,6 +23,7 @@
 @k.words.dragon.noun.2 k.words.sense word=dragon pos=noun n=2 gloss="a fiercely vigilant and unpleasant woman" synonym=tartar is_a="unpleasant woman" core.source="wordnet 3.1"
 @k.words.dragon.noun.3 k.words.sense word=Dragon pos=noun n=3 gloss="a faint constellation twisting around the north celestial pole and lying between Ursa Major and Cepheus" synonym=Draco instance_of=constellation core.source="wordnet 3.1"
 @k.words.dragon.spelling.Dragon core.word text=dragon means=Dragon of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.dragonfly.noun.1 k.words.sense word=dragonfly pos=noun n=1 gloss="slender-bodied non-stinging insect having iridescent wings that are outspread at rest; adults and nymphs feed on mosquitoes etc." synonym="darning needle" synonym="devil's darning needle" synonym="sewing needle" synonym="snake feeder" synonym="snake doctor" synonym="mosquito hawk" synonym="skeeter hawk" is_a=odonate core.source="wordnet 3.1"
 @k.words.drain.noun.1 k.words.sense word=drain pos=noun n=1 gloss="emptying something accomplished by allowing liquid to run out of it" synonym=drainage is_a=emptying core.source="wordnet 3.1"
 @k.words.drain.noun.2 k.words.sense word=drain pos=noun n=2 gloss="tube inserted into a body cavity (as during surgery) to remove unwanted material" is_a=tube core.source="wordnet 3.1"
 @k.words.drain.noun.3 k.words.sense word=drain pos=noun n=3 gloss="a pipe through which liquid is carried away" synonym=drainpipe synonym="waste pipe" is_a=pipe core.source="wordnet 3.1"

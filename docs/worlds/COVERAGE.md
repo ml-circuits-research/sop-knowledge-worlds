@@ -33,8 +33,8 @@ the place of the dog).
 | what it is used for | 336 (22%) | 142 (9%) | 1022 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
 | wheels | 33 (2%) | 12 (1%) | 1455 (97%) | `k.attributes.thing` (wheels) |
 | legs | 141 (9%) | 25 (2%) | 1334 (89%) | `k.animals.animal` (legs) |
-| kind (what it is a kind of) | 1072 (71%) | 116 (8%) | 312 (21%) | `k.words.sense` (is_a) |
-| definition | 1073 (72%) | 115 (8%) | 312 (21%) | `k.words.sense` (gloss) |
+| kind (what it is a kind of) | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (is_a, instance_of) |
+| definition | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (gloss) |
 | where it is worn | 37 (2%) | 21 (1%) | 1442 (96%) | `k.wearables.wearable` (worn_on) |
 
 ## Worlds
@@ -63,7 +63,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.units` | 2 (0%) |
 | `k.values` | 19 (1%) |
 | `k.wearables` | 62 (4%) |
-| `k.words` | 1075 (72%) |
+| `k.words` | 1500 (100%) |
 
 ## Gaps
 
@@ -86,5 +86,3 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **material**: world, person, honey, dog, hospital, street, coffee, road, building, hotel, station, horse, fish, prison, bank, tea, camera, store, jail, cat, shop, wine, island, beer, chicken, hole, bomb, bird, rose, restaurant
 - **what it can do**: house, world, person, honey, bed, earth, hospital, street, coffee, road, picture, building, hotel, bag, station, rock, box, key, prison, stick, bank, tea, camera, wall, store, jail, shop, wine, island, beer
 - **what it is used for**: world, person, dog, earth, street, building, station, rock, sun, horse, star, prison, stick, wall, jail, cat, island, planet, moon, chicken, hole, engine, bomb, bird, stone, beach, rose, cake, meat, mountain
-- **kind (what it is a kind of)**: sunflower, popsicle, ravioli, wrapper, raisin, crucifix, cooker, steamer, blackberry, lifeboat, shim, clementine, hammock, refinery, mane, confessional, hoe, motorway, teapot, switchboard, locomotive, turban, rattlesnake, chimpanzee, mistletoe, trident, corvette, crutch, licorice, chisel
-- **definition**: sunflower, popsicle, ravioli, wrapper, raisin, crucifix, cooker, steamer, blackberry, lifeboat, shim, clementine, hammock, refinery, mane, confessional, hoe, motorway, teapot, switchboard, locomotive, turban, rattlesnake, chimpanzee, mistletoe, trident, corvette, crutch, licorice, chisel

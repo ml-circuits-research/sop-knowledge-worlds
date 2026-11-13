@@ -1,5 +1,5 @@
 # k.words/shards/ja: noun and verb senses of the words from "jab" to "jazz" (first letters "ja").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -55,6 +55,7 @@
 @k.words.jaguar.noun.1 k.words.sense word=jaguar pos=noun n=1 gloss="a large spotted feline of tropical America similar to the leopard; in some classifications considered a member of the genus Felis" synonym=panther synonym="Panthera onca" synonym="Felis onca" is_a="big cat" core.source="wordnet 3.1"
 @k.words.jail.noun.1 k.words.sense word=jail pos=noun n=1 gloss="a correctional institution used to detain persons who are in the lawful custody of the government (either accused persons awaiting trial or convicted persons serving a sentence)" synonym=jailhouse synonym=gaol synonym=clink synonym=slammer synonym=poky synonym=pokey is_a="correctional institution" core.source="wordnet 3.1"
 @k.words.jail.verb.1 k.words.sense word=jail pos=verb n=1 gloss="lock up or confine, in or as in a jail" synonym=imprison synonym=incarcerate synonym=lag synonym=immure synonym="put behind bars" synonym=jug synonym=gaol synonym="put away" synonym=remand is_a=confine core.source="wordnet 3.1"
+@k.words.jailhouse.noun.1 k.words.sense word=jailhouse pos=noun n=1 gloss="a correctional institution used to detain persons who are in the lawful custody of the government (either accused persons awaiting trial or convicted persons serving a sentence)" synonym=jail synonym=gaol synonym=clink synonym=slammer synonym=poky synonym=pokey is_a="correctional institution" core.source="wordnet 3.1"
 @k.words.jam.noun.1 k.words.sense word=jam pos=noun n=1 gloss="preserve of crushed fruit" is_a=conserve core.source="wordnet 3.1"
 @k.words.jam.noun.2 k.words.sense word=jam pos=noun n=2 gloss="informal terms for a difficult situation" synonym=fix synonym=hole synonym=mess synonym=muddle synonym=pickle synonym="kettle of fish" is_a=difficulty core.source="wordnet 3.1"
 @k.words.jam.noun.3 k.words.sense word=jam pos=noun n=3 gloss="a dense crowd of people" synonym=crush synonym=press is_a=crowd core.source="wordnet 3.1"

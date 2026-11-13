@@ -1,5 +1,5 @@
 # k.words/shards/ne: noun and verb senses of the words from "ne" to "newton" (first letters "ne").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -25,6 +25,7 @@
 @k.words.neck.noun.3 k.words.sense word=neck pos=noun n=3 gloss="a cut of meat from the neck of an animal" is_a=cut core.source="wordnet 3.1"
 @k.words.neck.verb.1 k.words.sense word=neck pos=verb n=1 gloss="kiss, embrace, or fondle with sexual passion" synonym="make out" is_a=pet core.source="wordnet 3.1"
 @k.words.necklace.noun.1 k.words.sense word=necklace pos=noun n=1 gloss="jewelry consisting of a cord or chain (often bearing gems) worn about the neck as an ornament (especially by women)" is_a=jewelry core.source="wordnet 3.1"
+@k.words.necktie.noun.1 k.words.sense word=necktie pos=noun n=1 gloss="neckwear consisting of a long narrow piece of material worn (mostly by men) under a collar and tied in knot at the front" synonym=tie is_a=neckwear core.source="wordnet 3.1"
 @k.words.nectar.noun.1 k.words.sense word=nectar pos=noun n=1 gloss="a sweet liquid secretion that is attractive to pollinators" is_a=secretion core.source="wordnet 3.1"
 @k.words.nectar.noun.2 k.words.sense word=nectar pos=noun n=2 gloss="fruit juice especially when undiluted" is_a="fruit juice" core.source="wordnet 3.1"
 @k.words.nectar.noun.3 k.words.sense word=nectar pos=noun n=3 gloss="(classical mythology) the food and drink of the gods; mortals who ate it became immortal" synonym=ambrosia is_a=dainty core.source="wordnet 3.1"
@@ -146,6 +147,7 @@
 @k.words.newspaper.noun.1 k.words.sense word=newspaper pos=noun n=1 gloss="a daily or weekly publication on folded sheets; contains news and articles and advertisements" synonym=paper is_a=press core.source="wordnet 3.1"
 @k.words.newspaper.noun.2 k.words.sense word=newspaper pos=noun n=2 gloss="a business firm that publishes newspapers" synonym=paper synonym="newspaper publisher" is_a=publisher core.source="wordnet 3.1"
 @k.words.newspaper.noun.3 k.words.sense word=newspaper pos=noun n=3 gloss="the physical object that is the product of a newspaper publisher" synonym=paper is_a=product core.source="wordnet 3.1"
+@k.words.newsstand.noun.1 k.words.sense word=newsstand pos=noun n=1 gloss="a stall where newspapers and other periodicals are sold" is_a=stall core.source="wordnet 3.1"
 @k.words.newt.noun.1 k.words.sense word=newt pos=noun n=1 gloss="small usually bright-colored semiaquatic salamanders of North America and Europe and northern Asia" synonym=triton is_a=salamander core.source="wordnet 3.1"
 @k.words.newton.noun.1 k.words.sense word=Newton pos=noun n=1 gloss="English mathematician and physicist; remembered for developing the calculus and for his law of gravitation and his three laws of motion (1642-1727)" synonym="Isaac Newton" synonym="Sir Isaac Newton" instance_of=mathematician instance_of=physicist core.source="wordnet 3.1"
 @k.words.newton.noun.2 k.words.sense word=newton pos=noun n=2 gloss="a unit of force equal to the force that imparts an acceleration of 1 m/sec/sec to a mass of 1 kilogram; equal to 100,000 dynes" synonym=N is_a="force unit" part_of=sthene core.source="wordnet 3.1"

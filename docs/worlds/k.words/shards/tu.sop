@@ -1,11 +1,13 @@
 # k.words/shards/tu: noun and verb senses of the words from "tub" to "tuxedo" (first letters "tu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
 @k.words.tub.noun.1 k.words.sense word=tub pos=noun n=1 gloss="a relatively large open container that you fill with water and use to wash the body" synonym=bathtub synonym="bathing tub" is_a=vessel part_of=bathroom core.source="wordnet 3.1"
 @k.words.tub.noun.2 k.words.sense word=tub pos=noun n=2 gloss="a large open vessel for holding or storing liquids" synonym=vat is_a=vessel core.source="wordnet 3.1"
 @k.words.tub.noun.3 k.words.sense word=tub pos=noun n=3 gloss="the amount that a tub will hold" synonym=tubful is_a=containerful core.source="wordnet 3.1"
+@k.words.tuba.noun.1 k.words.sense word=tuba pos=noun n=1 gloss="the lowest brass wind instrument" synonym="bass horn" synonym=sousaphone is_a=brass is_a=bass core.source="wordnet 3.1"
+@k.words.tuba.forms core.word text=tubae means=tuba of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.tube.noun.1 k.words.sense word=tube pos=noun n=1 gloss="conduit consisting of a long hollow object (usually cylindrical) used to hold and conduct objects or liquids or gases" synonym=tubing is_a=conduit core.source="wordnet 3.1"
 @k.words.tube.noun.2 k.words.sense word=tube pos=noun n=2 gloss="electronic device consisting of a system of electrodes arranged in an evacuated glass or metal envelope" synonym="vacuum tube" synonym="thermionic vacuum tube" synonym="thermionic tube" synonym="electron tube" synonym="thermionic valve" is_a="electronic device" part_of=circuit core.source="wordnet 3.1"
 @k.words.tube.noun.3 k.words.sense word=tube pos=noun n=3 gloss="a hollow cylindrical shape" synonym=pipe is_a=cylinder core.source="wordnet 3.1"
@@ -57,6 +59,7 @@
 @k.words.tuna.noun.1 k.words.sense word=tuna pos=noun n=1 gloss="tropical American prickly pear of Jamaica" synonym="Opuntia tuna" is_a="prickly pear" core.source="wordnet 3.1"
 @k.words.tuna.noun.2 k.words.sense word=tuna pos=noun n=2 gloss="important warm-water fatty fish of the genus Thunnus of the family Scombridae; usually served as steaks" synonym="tuna fish" synonym=tunny is_a="saltwater fish" part_of=tuna core.source="wordnet 3.1"
 @k.words.tuna.noun.3 k.words.sense word=tuna pos=noun n=3 gloss="any very large marine food and game fish of the genus Thunnus; related to mackerel; chiefly of warm waters" synonym=tunny is_a=scombroid is_a="food fish" core.source="wordnet 3.1"
+@k.words.tundra.noun.1 k.words.sense word=tundra pos=noun n=1 gloss="a vast treeless plain in the Arctic regions where the subsoil is permanently frozen" is_a=plain core.source="wordnet 3.1"
 @k.words.tune.noun.1 k.words.sense word=tune pos=noun n=1 gloss="a succession of notes forming a distinctive sequence" synonym=melody synonym=air synonym=strain synonym="melodic line" synonym=line synonym="melodic phrase" is_a=music core.source="wordnet 3.1"
 @k.words.tune.noun.2 k.words.sense word=tune pos=noun n=2 gloss="the property of producing accurately a note of a given pitch" is_a=pitch core.source="wordnet 3.1"
 @k.words.tune.noun.3 k.words.sense word=tune pos=noun n=3 gloss="the adjustment of a radio receiver or other circuit to a required frequency" is_a=alteration core.source="wordnet 3.1"
@@ -69,6 +72,9 @@
 @k.words.tunnel.verb.1 k.words.sense word=tunnel pos=verb n=1 gloss="move through by or as by digging" synonym=burrow is_a=dig core.source="wordnet 3.1"
 @k.words.tunnel.verb.2 k.words.sense word=tunnel pos=verb n=2 gloss="force a way through" is_a=penetrate core.source="wordnet 3.1"
 @k.words.tunnel.forms core.word text=tunnelled text=tunnelling means=tunnel of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.turban.noun.1 k.words.sense word=turban pos=noun n=1 gloss="a traditional Muslim headdress consisting of a long scarf wrapped around the head" is_a=headdress core.source="wordnet 3.1"
+@k.words.turban.noun.2 k.words.sense word=turban pos=noun n=2 gloss="a small round woman's hat" synonym=pillbox synonym=toque is_a=millinery core.source="wordnet 3.1"
+@k.words.turbine.noun.1 k.words.sense word=turbine pos=noun n=1 gloss="rotary engine in which the kinetic energy of a moving fluid is converted into mechanical energy by causing a bladed rotor to rotate" is_a="rotary engine" core.source="wordnet 3.1"
 @k.words.turbulence.noun.1 k.words.sense word=turbulence pos=noun n=1 gloss="unstable flow of a liquid or gas" synonym=turbulency is_a="physical phenomenon" core.source="wordnet 3.1"
 @k.words.turbulence.noun.2 k.words.sense word=turbulence pos=noun n=2 gloss="instability in the atmosphere" is_a="bad weather" core.source="wordnet 3.1"
 @k.words.turbulence.noun.3 k.words.sense word=turbulence pos=noun n=3 gloss="a state of violent disturbance and disorder (as in politics or social conditions generally)" synonym=upheaval synonym="Sturm und Drang" is_a=disorder core.source="wordnet 3.1"
@@ -103,6 +109,8 @@
 @k.words.turning.noun.1 k.words.sense word=turning pos=noun n=1 gloss="the act of changing or reversing the direction of the course" synonym=turn is_a="change of course" core.source="wordnet 3.1"
 @k.words.turning.noun.2 k.words.sense word=turning pos=noun n=2 gloss="act of changing in practice or custom" is_a=change core.source="wordnet 3.1"
 @k.words.turning.noun.3 k.words.sense word=turning pos=noun n=3 gloss="a shaving created when something is produced by turning it on a lathe" is_a=paring core.source="wordnet 3.1"
+@k.words.turnip.noun.1 k.words.sense word=turnip pos=noun n=1 gloss="widely cultivated plant having a large fleshy edible white or yellow root" synonym="white turnip" synonym="Brassica rapa" is_a="turnip plant" core.source="wordnet 3.1"
+@k.words.turnip.noun.2 k.words.sense word=turnip pos=noun n=2 gloss="root of any of several members of the mustard family" is_a="root vegetable" is_a="cruciferous vegetable" part_of="turnip plant" core.source="wordnet 3.1"
 @k.words.turnout.noun.1 k.words.sense word=turnout pos=noun n=1 gloss="the group that gathers together for a particular occasion" is_a=gathering core.source="wordnet 3.1"
 @k.words.turnout.noun.2 k.words.sense word=turnout pos=noun n=2 gloss="a part of a road that has been widened to allow cars to pass or park" synonym=widening is_a=part part_of=road core.source="wordnet 3.1"
 @k.words.turnout.noun.3 k.words.sense word=turnout pos=noun n=3 gloss="a short stretch of railroad track used to store rolling stock or enable trains on the same line to pass" synonym=siding synonym="railroad siding" synonym=sidetrack is_a="railroad track" core.source="wordnet 3.1"

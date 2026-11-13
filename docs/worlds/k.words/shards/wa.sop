@@ -1,5 +1,5 @@
 # k.words/shards/wa: noun and verb senses of the words from "wa" to "ways" (first letters "wa").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -133,6 +133,9 @@
 @k.words.wardrobe.noun.1 k.words.sense word=wardrobe pos=noun n=1 gloss="a tall piece of furniture that provides storage space for clothes; has a door and rails or hooks for hanging clothes" synonym=closet synonym=press is_a=furniture core.source="wordnet 3.1"
 @k.words.wardrobe.noun.2 k.words.sense word=wardrobe pos=noun n=2 gloss="collection of clothing belonging to one person" is_a=collection part_of=clothing core.source="wordnet 3.1"
 @k.words.wardrobe.noun.3 k.words.sense word=wardrobe pos=noun n=3 gloss="collection of costumes belonging to a theatrical company" is_a=collection part_of=costume core.source="wordnet 3.1"
+@k.words.ware.noun.1 k.words.sense word=ware pos=noun n=1 gloss="articles of the same kind or material; usually used in combination: `silverware', `software'" is_a=article core.source="wordnet 3.1"
+@k.words.ware.noun.2 k.words.sense word=ware pos=noun n=2 gloss="commodities offered for sale" synonym=merchandise synonym=product is_a=commodity part_of="mercantile establishment" core.source="wordnet 3.1"
+@k.words.ware.verb.1 k.words.sense word=ware pos=verb n=1 gloss="spend extravagantly" synonym=consume synonym=squander synonym=waste is_a=spend core.source="wordnet 3.1"
 @k.words.warehouse.noun.1 k.words.sense word=warehouse pos=noun n=1 gloss="a storehouse for goods and merchandise" synonym="storage warehouse" is_a=storehouse core.source="wordnet 3.1"
 @k.words.warehouse.verb.1 k.words.sense word=warehouse pos=verb n=1 gloss="store in a warehouse" is_a=store core.source="wordnet 3.1"
 @k.words.warfare.noun.1 k.words.sense word=warfare pos=noun n=1 gloss="the waging of armed conflict against an enemy" synonym=war is_a="military action" core.source="wordnet 3.1"

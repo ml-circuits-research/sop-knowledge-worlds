@@ -1,5 +1,5 @@
 # k.words/shards/li: noun and verb senses of the words from "li" to "lizard" (first letters "li").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -47,6 +47,8 @@
 @k.words.lick.verb.3 k.words.sense word=lick pos=verb n=3 gloss="find the solution to (a problem or question) or understand the meaning of" synonym=solve synonym="work out" synonym="figure out" synonym="puzzle out" synonym=work is_a=understand core.source="wordnet 3.1"
 @k.words.licking.noun.1 k.words.sense word=licking pos=noun n=1 gloss="an unsuccessful ending to a struggle or contest" synonym=defeat is_a=ending is_a=failure core.source="wordnet 3.1"
 @k.words.licking.noun.2 k.words.sense word=licking pos=noun n=2 gloss="the act of inflicting corporal punishment with repeated blows" synonym=beating synonym=thrashing synonym=drubbing synonym=lacing synonym=trouncing synonym=whacking is_a="corporal punishment" core.source="wordnet 3.1"
+@k.words.licorice.noun.1 k.words.sense word=licorice pos=noun n=1 gloss="deep-rooted coarse-textured plant native to the Mediterranean region having blue flowers and pinnately compound leaves; widely cultivated in Europe for its long thick sweet roots" synonym=liquorice synonym="Glycyrrhiza glabra" is_a=herb core.source="wordnet 3.1"
+@k.words.licorice.noun.2 k.words.sense word=licorice pos=noun n=2 gloss="a black candy flavored with the dried root of the licorice plant" synonym=liquorice is_a=candy core.source="wordnet 3.1"
 @k.words.lid.noun.1 k.words.sense word=lid pos=noun n=1 gloss="either of two folds of skin that can be moved to cover or open the eye" synonym=eyelid synonym=palpebra is_a="protective fold" part_of=eye core.source="wordnet 3.1"
 @k.words.lid.noun.2 k.words.sense word=lid pos=noun n=2 gloss="a movable top or cover (hinged or separate) for closing the opening at the top of a box, chest, jar, pan, etc." is_a=top part_of=box part_of=chest part_of=jar core.source="wordnet 3.1"
 @k.words.lid.noun.3 k.words.sense word=lid pos=noun n=3 gloss="headdress that protects the head from bad weather; has shaped crown and usually a brim" synonym=hat synonym=chapeau is_a=headdress core.source="wordnet 3.1"
@@ -71,6 +73,7 @@
 @k.words.life.noun.2 k.words.sense word=life pos=noun n=2 gloss="the experience of being alive; the course of human events and activities" synonym=living is_a=experience core.source="wordnet 3.1"
 @k.words.life.noun.3 k.words.sense word=life pos=noun n=3 gloss="the course of existence of an individual; the actions and events that occur in living" is_a=being core.source="wordnet 3.1"
 @k.words.life.forms core.word text=lives means=life of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.lifeboat.noun.1 k.words.sense word=lifeboat pos=noun n=1 gloss="a strong sea boat designed to rescue people from a sinking ship" is_a="sea boat" core.source="wordnet 3.1"
 @k.words.lifeguard.noun.1 k.words.sense word=lifeguard pos=noun n=1 gloss="an attendant employed at a beach or pool to protect swimmers from accidents" synonym=lifesaver is_a=attendant core.source="wordnet 3.1"
 @k.words.lifeline.noun.1 k.words.sense word=lifeline pos=noun n=1 gloss="a crease on the palm; its length is said by palmists to indicate how long you will live" synonym="line of life" synonym="life line" is_a=wrinkle core.source="wordnet 3.1"
 @k.words.lifeline.noun.2 k.words.sense word=lifeline pos=noun n=2 gloss="support that enables people to survive or to continue doing something (often by providing an essential connection)" is_a=support core.source="wordnet 3.1"
@@ -115,6 +118,7 @@
 @k.words.likeness.noun.1 k.words.sense word=likeness pos=noun n=1 gloss="similarity in appearance or character or nature between persons or things" synonym=alikeness synonym=similitude is_a=similarity core.source="wordnet 3.1"
 @k.words.likeness.noun.2 k.words.sense word=likeness pos=noun n=2 gloss="picture consisting of a graphic image of a person or thing" synonym=semblance is_a=picture core.source="wordnet 3.1"
 @k.words.liking.noun.1 k.words.sense word=liking pos=noun n=1 gloss="a feeling of pleasure and enjoyment" is_a=feeling core.source="wordnet 3.1"
+@k.words.lilac.noun.1 k.words.sense word=lilac pos=noun n=1 gloss="any of various plants of the genus Syringa having large panicles of usually fragrant flowers" is_a=shrub core.source="wordnet 3.1"
 @k.words.lilith.noun.1 k.words.sense word=Lilith pos=noun n=1 gloss="in ancient Semitic folklore: a female demon who attacks children" is_a="Semitic deity" core.source="wordnet 3.1"
 @k.words.lilith.spelling.Lilith core.word text=lilith means=Lilith of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.lily.noun.1 k.words.sense word=lily pos=noun n=1 gloss="any liliaceous plant of the genus Lilium having showy pendulous flowers" is_a="liliaceous plant" core.source="wordnet 3.1"
@@ -196,12 +200,14 @@
 @k.words.lion.noun.2 k.words.sense word=lion pos=noun n=2 gloss="a celebrity who is lionized (much sought after)" synonym="social lion" is_a=celebrity core.source="wordnet 3.1"
 @k.words.lion.noun.3 k.words.sense word=Lion pos=noun n=3 gloss="(astrology) a person who is born while the sun is in Leo" synonym=Leo is_a=person core.source="wordnet 3.1"
 @k.words.lion.spelling.Lion core.word text=lion means=Lion of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.lioness.noun.1 k.words.sense word=lioness pos=noun n=1 gloss="a female lion" is_a=lion core.source="wordnet 3.1"
 @k.words.lip.noun.1 k.words.sense word=lip pos=noun n=1 gloss="either of two fleshy folds of tissue that surround the mouth and play a role in speaking" is_a="external body part" is_a=articulator part_of=mouth core.source="wordnet 3.1"
 @k.words.lip.noun.2 k.words.sense word=lip pos=noun n=2 gloss="(botany) either of the two parts of a bilabiate corolla or calyx" is_a="plant part" core.source="wordnet 3.1"
 @k.words.lip.noun.3 k.words.sense word=lip pos=noun n=3 gloss="an impudent or insolent rejoinder" synonym=sass synonym=sassing synonym=backtalk synonym="back talk" synonym=mouth is_a=rejoinder core.source="wordnet 3.1"
 @k.words.lipstick.noun.1 k.words.sense word=lipstick pos=noun n=1 gloss="makeup that is used to color the lips" synonym="lip rouge" is_a=makeup core.source="wordnet 3.1"
 @k.words.lipstick.verb.1 k.words.sense word=lipstick pos=verb n=1 gloss="form by tracing with lipstick" is_a=delineate core.source="wordnet 3.1"
 @k.words.lipstick.verb.2 k.words.sense word=lipstick pos=verb n=2 gloss="apply lipstick to" is_a="make up" core.source="wordnet 3.1"
+@k.words.liqueur.noun.1 k.words.sense word=liqueur pos=noun n=1 gloss="strong highly flavored sweet liquor usually drunk after a meal" synonym=cordial is_a=alcohol core.source="wordnet 3.1"
 @k.words.liquid.noun.1 k.words.sense word=liquid pos=noun n=1 gloss="a substance that is liquid at room temperature and pressure" is_a=fluid core.source="wordnet 3.1"
 @k.words.liquid.noun.2 k.words.sense word=liquid pos=noun n=2 gloss="the state in which a substance exhibits a characteristic readiness to flow with little or no tendency to disperse and relatively high incompressibility" synonym=liquidness synonym=liquidity synonym="liquid state" is_a="state of matter" core.source="wordnet 3.1"
 @k.words.liquid.noun.3 k.words.sense word=liquid pos=noun n=3 gloss="fluid matter having no fixed shape but a fixed volume" is_a=fluid core.source="wordnet 3.1"

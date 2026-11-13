@@ -1,5 +1,5 @@
-# k.words/shards/ch: noun and verb senses of the words from "chad" to "chute" (first letters "ch").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ch: noun and verb senses of the words from "chad" to "chutney" (first letters "ch").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -21,6 +21,8 @@
 @k.words.chair.verb.2 k.words.sense word=chair pos=verb n=2 gloss="preside over" synonym=moderate synonym=lead is_a="hash out" core.source="wordnet 3.1"
 @k.words.chairman.noun.1 k.words.sense word=chairman pos=noun n=1 gloss="the officer who presides at the meetings of an organization" synonym=president synonym=chairwoman synonym=chair synonym=chairperson is_a="presiding officer" core.source="wordnet 3.1"
 @k.words.chairman.verb.1 k.words.sense word=chairman pos=verb n=1 gloss="act or preside as chair, as of an academic department in a university" synonym=chair is_a=head core.source="wordnet 3.1"
+@k.words.chalet.noun.1 k.words.sense word=chalet pos=noun n=1 gloss="a Swiss house with a sloping roof and wide eaves or a house built in this style" is_a=house core.source="wordnet 3.1"
+@k.words.chalice.noun.1 k.words.sense word=chalice pos=noun n=1 gloss="a bowl-shaped drinking vessel; especially the Eucharistic cup" synonym=goblet is_a=cup core.source="wordnet 3.1"
 @k.words.chalk.noun.1 k.words.sense word=chalk pos=noun n=1 gloss="a soft whitish calcite" is_a=calcite core.source="wordnet 3.1"
 @k.words.chalk.noun.2 k.words.sense word=chalk pos=noun n=2 gloss="a pure flat white with little reflectance" is_a=white core.source="wordnet 3.1"
 @k.words.chalk.noun.3 k.words.sense word=chalk pos=noun n=3 gloss="an amphetamine derivative (trade name Methedrine) used in the form of a crystalline hydrochloride; used as a stimulant to the nervous system and as an appetite suppressant" synonym=methamphetamine synonym="methamphetamine hydrochloride" synonym=Methedrine synonym=meth synonym=deoxyephedrine synonym="chicken feed" synonym=crank synonym=glass synonym=ice synonym=shabu synonym=trash is_a=amphetamine is_a="controlled substance" core.source="wordnet 3.1"
@@ -46,6 +48,7 @@
 @k.words.chameleon.noun.2 k.words.sense word=Chameleon pos=noun n=2 gloss="a faint constellation in the polar region of the southern hemisphere near Apus and Mensa" synonym=Chamaeleon instance_of=constellation core.source="wordnet 3.1"
 @k.words.chameleon.noun.3 k.words.sense word=chameleon pos=noun n=3 gloss="lizard of Africa and Madagascar able to change skin color and having a projectile tongue" synonym=chamaeleon is_a=lizard core.source="wordnet 3.1"
 @k.words.chameleon.spelling.Chameleon core.word text=chameleon means=Chameleon of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.chamomile.noun.1 k.words.sense word=chamomile pos=noun n=1 gloss="Eurasian plant with apple-scented foliage and white-rayed flowers and feathery leaves used medicinally; in some classification systems placed in genus Anthemis" synonym=camomile synonym="Chamaemelum nobilis" synonym="Anthemis nobilis" is_a=herb core.source="wordnet 3.1"
 @k.words.champ.noun.1 k.words.sense word=champ pos=noun n=1 gloss="someone who has won first place in a competition" synonym=champion synonym=title-holder is_a=rival core.source="wordnet 3.1"
 @k.words.champ.verb.1 k.words.sense word=champ pos=verb n=1 gloss="chafe at the bit, like horses" is_a=chew core.source="wordnet 3.1"
 @k.words.champ.verb.2 k.words.sense word=champ pos=verb n=2 gloss="chew noisily" synonym=chomp is_a=chew core.source="wordnet 3.1"
@@ -137,6 +140,9 @@
 @k.words.charcoal.noun.2 k.words.sense word=charcoal pos=noun n=2 gloss="a stick of black carbon material used for drawing" synonym=fusain is_a="writing implement" core.source="wordnet 3.1"
 @k.words.charcoal.noun.3 k.words.sense word=charcoal pos=noun n=3 gloss="a very dark grey color" synonym="charcoal grey" synonym="charcoal gray" synonym="oxford grey" synonym="oxford gray" is_a=gray core.source="wordnet 3.1"
 @k.words.charcoal.verb.1 k.words.sense word=charcoal pos=verb n=1 gloss="draw, trace, or represent with charcoal" is_a=draw core.source="wordnet 3.1"
+@k.words.chardonnay.noun.1 k.words.sense word=Chardonnay pos=noun n=1 gloss="white wine grape" synonym="chardonnay grape" is_a=vinifera core.source="wordnet 3.1"
+@k.words.chardonnay.noun.2 k.words.sense word=Chardonnay pos=noun n=2 gloss="dry white table wine resembling Chablis but made from Chardonnay grapes" synonym="Pinot Chardonnay" is_a="white wine" core.source="wordnet 3.1"
+@k.words.chardonnay.spelling.Chardonnay core.word text=chardonnay means=Chardonnay of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.charge.noun.1 k.words.sense word=charge pos=noun n=1 gloss="an impetuous rush toward someone or something" is_a=attack core.source="wordnet 3.1"
 @k.words.charge.noun.2 k.words.sense word=charge pos=noun n=2 gloss="(criminal law) a pleading describing some wrong or offense" synonym=complaint is_a=pleading part_of=indictment core.source="wordnet 3.1"
 @k.words.charge.noun.3 k.words.sense word=charge pos=noun n=3 gloss="the price charged for some article or service" is_a=cost core.source="wordnet 3.1"
@@ -344,6 +350,7 @@
 @k.words.chimney.noun.1 k.words.sense word=chimney pos=noun n=1 gloss="a vertical flue that provides a path through which smoke from a fire is carried away through the wall or roof of a building" is_a=flue core.source="wordnet 3.1"
 @k.words.chimney.noun.2 k.words.sense word=chimney pos=noun n=2 gloss="a glass flue surrounding the wick of an oil lamp" synonym="lamp chimney" is_a=flue part_of="oil lamp" core.source="wordnet 3.1"
 @k.words.chimp.noun.1 k.words.sense word=chimp pos=noun n=1 gloss="intelligent somewhat arboreal ape of equatorial African forests" synonym=chimpanzee synonym="Pan troglodytes" is_a="great ape" core.source="wordnet 3.1"
+@k.words.chimpanzee.noun.1 k.words.sense word=chimpanzee pos=noun n=1 gloss="intelligent somewhat arboreal ape of equatorial African forests" synonym=chimp synonym="Pan troglodytes" is_a="great ape" core.source="wordnet 3.1"
 @k.words.chin.noun.1 k.words.sense word=chin pos=noun n=1 gloss="the protruding part of the lower jaw" synonym=mentum is_a=feature part_of=face core.source="wordnet 3.1"
 @k.words.chin.noun.2 k.words.sense word=Chin pos=noun n=2 gloss="Kamarupan languages spoken in western Burma and Bangladesh and easternmost India" synonym=Kuki synonym=Kuki-Chin is_a=Kamarupan core.source="wordnet 3.1"
 @k.words.chin.verb.1 k.words.sense word=chin pos=verb n=1 gloss="raise oneself while hanging from one's hands until one's chin is level with the support bar" synonym="chin up" is_a=raise core.source="wordnet 3.1"
@@ -366,10 +373,16 @@
 @k.words.chip.verb.2 k.words.sense word=chip pos=verb n=2 gloss="cut a nick into" synonym=nick is_a=cut core.source="wordnet 3.1"
 @k.words.chip.verb.3 k.words.sense word=chip pos=verb n=3 gloss="play a chip shot" is_a=shoot core.source="wordnet 3.1"
 @k.words.chip.forms core.word text=chipped text=chipping means=chip of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.chipmunk.noun.1 k.words.sense word=chipmunk pos=noun n=1 gloss="a burrowing ground squirrel of western America and Asia; has cheek pouches and a light and dark stripe running down the body" is_a=squirrel core.source="wordnet 3.1"
 @k.words.chips.noun.1 k.words.sense word=chips pos=noun n=1 gloss="strips of potato fried in deep fat" synonym="french fries" synonym="french-fried potatoes" synonym=fries is_a=potato core.source="wordnet 3.1"
 @k.words.chirp.noun.1 k.words.sense word=chirp pos=noun n=1 gloss="a sharp sound made by small birds or insects" is_a=sound core.source="wordnet 3.1"
 @k.words.chirp.verb.1 k.words.sense word=chirp pos=verb n=1 gloss="make high-pitched sounds" synonym=peep synonym=cheep synonym=chirrup is_a=utter core.source="wordnet 3.1"
 @k.words.chirp.verb.2 k.words.sense word=chirp pos=verb n=2 gloss="sing in modulation" synonym=tweedle is_a=sing core.source="wordnet 3.1"
+@k.words.chisel.noun.1 k.words.sense word=chisel pos=noun n=1 gloss="an edge tool with a flat steel blade with a cutting edge" is_a="edge tool" core.source="wordnet 3.1"
+@k.words.chisel.verb.1 k.words.sense word=chisel pos=verb n=1 gloss="engage in deceitful behavior; practice trickery or fraud" synonym=cheat is_a=deceive core.source="wordnet 3.1"
+@k.words.chisel.verb.2 k.words.sense word=chisel pos=verb n=2 gloss="deprive somebody of something by deceit" synonym=cheat synonym="rip off" is_a=victimize core.source="wordnet 3.1"
+@k.words.chisel.verb.3 k.words.sense word=chisel pos=verb n=3 gloss="carve with a chisel" is_a=carve core.source="wordnet 3.1"
+@k.words.chisel.forms core.word text=chiselled text=chiselling means=chisel of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.chivalry.noun.1 k.words.sense word=chivalry pos=noun n=1 gloss="courtesy towards women" synonym=gallantry synonym=politesse is_a=courtesy core.source="wordnet 3.1"
 @k.words.chivalry.noun.2 k.words.sense word=chivalry pos=noun n=2 gloss="the medieval principles governing knighthood and knightly conduct" synonym=knightliness is_a=principle core.source="wordnet 3.1"
 @k.words.chlorine.noun.1 k.words.sense word=chlorine pos=noun n=1 gloss="a common nonmetallic element belonging to the halogens; best known as a heavy yellow irritating toxic gas; used to purify water and as a bleaching agent and disinfectant; occurs naturally only as a salt (as in sea water)" synonym=Cl synonym="atomic number 17" is_a="chemical element" is_a=gas is_a=halogen core.source="wordnet 3.1"
@@ -435,6 +448,7 @@
 @k.words.chow.noun.2 k.words.sense word=chow pos=noun n=2 gloss="informal terms for a meal" synonym=chuck synonym=eats synonym=grub is_a=fare core.source="wordnet 3.1"
 @k.words.chow.noun.3 k.words.sense word=chow pos=noun n=3 gloss="breed of medium-sized dogs with a thick coat and fluffy curled tails and distinctive blue-black tongues; believed to have originated in northern China" synonym="chow chow" is_a=spitz core.source="wordnet 3.1"
 @k.words.chow.spelling.Chow core.word text=chow means=Chow of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.chowder.noun.1 k.words.sense word=chowder pos=noun n=1 gloss="a thick soup or stew made with milk and bacon and onions and potatoes" is_a=soup core.source="wordnet 3.1"
 @k.words.christ.noun.1 k.words.sense word=Christ pos=noun n=1 gloss="a teacher and prophet born in Bethlehem and active in Nazareth; his life and sermons form the basis for Christianity (circa 4 BC - AD 29)" synonym=Jesus synonym="Jesus of Nazareth" synonym="the Nazarene" synonym="Jesus Christ" synonym=Savior synonym=Saviour synonym="Good Shepherd" synonym=Redeemer synonym=Deliverer instance_of=Son instance_of=Jew instance_of=prophet core.source="wordnet 3.1"
 @k.words.christ.noun.2 k.words.sense word=christ pos=noun n=2 gloss="any expected deliverer" synonym=messiah is_a=savior core.source="wordnet 3.1"
 @k.words.christ.spelling.Christ core.word text=christ means=Christ of=k.words.sense.word core.source="wordnet 3.1"
@@ -483,3 +497,4 @@
 @k.words.chute.noun.1 k.words.sense word=chute pos=noun n=1 gloss="rescue equipment consisting of a device that fills with air and retards your fall" synonym=parachute is_a="rescue equipment" core.source="wordnet 3.1"
 @k.words.chute.noun.2 k.words.sense word=chute pos=noun n=2 gloss="sloping channel through which things can descend" synonym=slide synonym=slideway synonym="sloping trough" is_a=gutter core.source="wordnet 3.1"
 @k.words.chute.verb.1 k.words.sense word=chute pos=verb n=1 gloss="jump from an airplane and descend with a parachute" synonym=parachute synonym=jump is_a=dive core.source="wordnet 3.1"
+@k.words.chutney.noun.1 k.words.sense word=chutney pos=noun n=1 gloss="a spicy condiment made of chopped fruits or vegetables cooked in vinegar and sugar with ginger and spices" synonym="Indian relish" is_a=condiment core.source="wordnet 3.1"

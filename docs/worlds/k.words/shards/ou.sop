@@ -1,5 +1,5 @@
 # k.words/shards/ou: noun and verb senses of the words from "ounce" to "outskirts" (first letters "ou").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -23,6 +23,7 @@
 @k.words.outfit.noun.3 k.words.sense word=outfit pos=noun n=3 gloss="gear consisting of a set of articles or tools for a specified purpose" synonym=kit is_a=gear core.source="wordnet 3.1"
 @k.words.outfit.verb.1 k.words.sense word=outfit pos=verb n=1 gloss="provide with (something) usually for a specific purpose" synonym=equip synonym=fit synonym="fit out" is_a=supply core.source="wordnet 3.1"
 @k.words.outfit.forms core.word text=outfitted text=outfitting means=outfit of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.outhouse.noun.1 k.words.sense word=outhouse pos=noun n=1 gloss="a small outbuilding with a bench having holes through which a user can defecate" synonym=privy synonym=earth-closet synonym=jakes is_a=outbuilding core.source="wordnet 3.1"
 @k.words.outing.noun.1 k.words.sense word=outing pos=noun n=1 gloss="a journey taken for pleasure" synonym=excursion synonym=jaunt synonym=junket synonym="pleasure trip" synonym=expedition synonym=sashay is_a=journey core.source="wordnet 3.1"
 @k.words.outing.noun.2 k.words.sense word=outing pos=noun n=2 gloss="a day devoted to an outdoor social gathering" synonym="field day" synonym=picnic is_a=vacation core.source="wordnet 3.1"
 @k.words.outlaw.noun.1 k.words.sense word=outlaw pos=noun n=1 gloss="someone who has committed a crime or has been legally convicted of a crime" synonym=criminal synonym=felon synonym=crook synonym=malefactor is_a=principal core.source="wordnet 3.1"

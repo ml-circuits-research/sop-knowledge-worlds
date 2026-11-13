@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { importWordnet, shortGloss, bucketOf } from '../tools/import/wordnet.mjs';
+import { importWordnet, shortGloss, bucketOf, commonThings } from '../tools/import/wordnet.mjs';
 
 const fixture = {
   'data.noun': [
@@ -71,10 +71,29 @@ test('gloss and bucket helpers', () => {
 
 const dict = join(REPO, 'sources/wordnet/raw/wordnet31');
 const list = join(REPO, 'sources/frequency-words/raw/en_50k.txt');
-test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list)) && 'raw files not downloaded' }, () => {
+test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list)) && 'raw files not downloaded' }, async () => {
   const names = ['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc'];
-  const { files } = importWordnet(Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')])), readFileSync(list, 'utf8'));
+  const { files } = importWordnet(Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')])), readFileSync(list, 'utf8'), { extra: await commonThings() });
   const dir = join(WORLDS_DIR, 'k.words', 'shards');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
+});
+
+// Round 10, item 2: every common thing of tools/coverage.mjs has its sense in k.words, whatever its place in the
+// frequency list (427 of the 1,500 come after the 20,000th line).
+test('every common thing has the sense kept by the coverage rule in k.words, with a definition and a kind', { skip: !(existsSync(dict) && existsSync(list)) && 'raw files not downloaded' }, async () => {
+  const { run } = await import('../tools/coverage.mjs');
+  const { shortGloss: short } = await import('../tools/import/wordnet.mjs');
+  const dir = join(WORLDS_DIR, 'k.words', 'shards');
+  const lines = new Map();
+  for (const f of readdirSync(dir)) for (const l of readFileSync(join(dir, f), 'utf8').split('\n')) {
+    const m = / k\.words\.sense word=(\S+) pos=noun /.exec(l);
+    if (m) { const w = m[1].toLowerCase(); if (!lines.has(w)) lines.set(w, []); lines.get(w).push(l); }
+  }
+  const { list: things } = run();
+  assert.equal(things.length, 1500);
+  for (const e of things) {
+    const mine = lines.get(e.word) ?? [];
+    assert.ok(mine.some((l) => l.includes(`gloss=${JSON.stringify(short(e.gloss)).slice(0, -1)}`) && / (is_a|instance_of)=/.test(l)), e.word);
+  }
 });

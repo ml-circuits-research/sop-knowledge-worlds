@@ -1,5 +1,5 @@
 # k.words/shards/po: noun and verb senses of the words from "po" to "pox" (first letters "po").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -96,6 +96,7 @@
 @k.words.polo.noun.2 k.words.sense word=polo pos=noun n=2 gloss="a game similar to field hockey but played on horseback using long-handled mallets and a wooden ball" is_a="field game" core.source="wordnet 3.1"
 @k.words.polo.spelling.Polo core.word text=polo means=Polo of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.polygraph.noun.1 k.words.sense word=polygraph pos=noun n=1 gloss="a medical instrument that records several physiological processes simultaneously (e.g., pulse rate and blood pressure and respiration and perspiration)" is_a="medical instrument" core.source="wordnet 3.1"
+@k.words.poncho.noun.1 k.words.sense word=poncho pos=noun n=1 gloss="a blanket-like cloak with a hole in the center for the head" is_a=cloak core.source="wordnet 3.1"
 @k.words.pond.noun.1 k.words.sense word=pond pos=noun n=1 gloss="a small lake" synonym=pool is_a=lake core.source="wordnet 3.1"
 @k.words.pong.noun.1 k.words.sense word=pong pos=noun n=1 gloss="an unpleasant smell" synonym=niff is_a=malodor core.source="wordnet 3.1"
 @k.words.pony.noun.1 k.words.sense word=pony pos=noun n=1 gloss="a range horse of the western United States" is_a=horse core.source="wordnet 3.1"
@@ -127,12 +128,14 @@
 @k.words.pope.spelling.Pope core.word text=pope means=Pope of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.popping.noun.1 k.words.sense word=popping pos=noun n=1 gloss="a sharp explosive sound as from a gunshot or drawing a cork" synonym=pop is_a=sound core.source="wordnet 3.1"
 @k.words.poppy.noun.1 k.words.sense word=poppy pos=noun n=1 gloss="annual or biennial or perennial herbs having showy flowers" is_a=flower core.source="wordnet 3.1"
+@k.words.popsicle.noun.1 k.words.sense word=popsicle pos=noun n=1 gloss="ice cream or water ice on a small wooden stick" synonym="ice lolly" synonym=lolly synonym=lollipop is_a="frozen dessert" core.source="wordnet 3.1"
 @k.words.popularity.noun.1 k.words.sense word=popularity pos=noun n=1 gloss="the quality of being widely admired or accepted or sought after" is_a=quality core.source="wordnet 3.1"
 @k.words.population.noun.1 k.words.sense word=population pos=noun n=1 gloss="the people who inhabit a territory or state" is_a=people core.source="wordnet 3.1"
 @k.words.population.noun.2 k.words.sense word=population pos=noun n=2 gloss="a group of organisms of the same species inhabiting a given area" is_a=group core.source="wordnet 3.1"
 @k.words.population.noun.3 k.words.sense word=population pos=noun n=3 gloss="(statistics) the entire aggregation of items from which samples can be drawn" synonym=universe is_a=collection core.source="wordnet 3.1"
 @k.words.porcelain.noun.1 k.words.sense word=porcelain pos=noun n=1 gloss="ceramic ware made of a more or less translucent ceramic" is_a="ceramic ware" core.source="wordnet 3.1"
 @k.words.porch.noun.1 k.words.sense word=porch pos=noun n=1 gloss="a structure attached to the exterior of a building often forming a covered entrance" is_a=structure part_of=house core.source="wordnet 3.1"
+@k.words.porcupine.noun.1 k.words.sense word=porcupine pos=noun n=1 gloss="relatively large rodents with sharp erectile bristles mingled with the fur" synonym=hedgehog is_a=rodent core.source="wordnet 3.1"
 @k.words.pork.noun.1 k.words.sense word=pork pos=noun n=1 gloss="meat from a domestic hog or pig" synonym=porc is_a=meat part_of=hog core.source="wordnet 3.1"
 @k.words.pork.noun.2 k.words.sense word=pork pos=noun n=2 gloss="a legislative appropriation designed to ingratiate legislators with their constituents" synonym="pork barrel" is_a=appropriation core.source="wordnet 3.1"
 @k.words.porn.noun.1 k.words.sense word=porn pos=noun n=1 gloss="creative activity (writing or pictures or films etc.) of no literary or artistic value other than to stimulate sexual desire" synonym=pornography synonym=porno synonym=erotica synonym=smut is_a=creation core.source="wordnet 3.1"
@@ -154,6 +157,7 @@
 @k.words.porter.noun.3 k.words.sense word=Porter pos=noun n=3 gloss="United States writer of novels and short stories (1890-1980)" synonym="Katherine Anne Porter" instance_of=writer core.source="wordnet 3.1"
 @k.words.porter.verb.1 k.words.sense word=porter pos=verb n=1 gloss="carry luggage or supplies" is_a=transport core.source="wordnet 3.1"
 @k.words.porter.spelling.Porter core.word text=porter means=Porter of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.porterhouse.noun.1 k.words.sense word=porterhouse pos=noun n=1 gloss="large steak from the thick end of the short loin containing a T-shaped bone and large piece of tenderloin" synonym="porterhouse steak" is_a=beefsteak part_of="beef loin" core.source="wordnet 3.1"
 @k.words.portfolio.noun.1 k.words.sense word=portfolio pos=noun n=1 gloss="a large, flat, thin case for carrying loose papers or drawings or maps; usually leather" is_a=case core.source="wordnet 3.1"
 @k.words.portfolio.noun.2 k.words.sense word=portfolio pos=noun n=2 gloss="a set of pieces of creative work collected to be shown to potential customers or employers" is_a=set core.source="wordnet 3.1"
 @k.words.portfolio.noun.3 k.words.sense word=portfolio pos=noun n=3 gloss="a list of the financial assets held by an individual or a bank or other financial institution" is_a=list core.source="wordnet 3.1"

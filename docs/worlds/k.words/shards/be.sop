@@ -1,5 +1,5 @@
 # k.words/shards/be: noun and verb senses of the words from "be" to "bey" (first letters "be").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -23,6 +23,7 @@
 @k.words.bead.verb.2 k.words.sense word=bead pos=verb n=2 gloss="decorate by sewing beads onto" is_a=decorate core.source="wordnet 3.1"
 @k.words.bead.verb.3 k.words.sense word=bead pos=verb n=3 gloss="string together like beads" is_a=string core.source="wordnet 3.1"
 @k.words.beads.noun.1 k.words.sense word=beads pos=noun n=1 gloss="several beads threaded together on a string" synonym="string of beads" is_a=string core.source="wordnet 3.1"
+@k.words.beagle.noun.1 k.words.sense word=beagle pos=noun n=1 gloss="a small short-legged smooth-coated breed of hound" is_a=hound core.source="wordnet 3.1"
 @k.words.beak.noun.1 k.words.sense word=beak pos=noun n=1 gloss="beaklike mouth of animals other than birds (e.g., turtles)" is_a=mouth core.source="wordnet 3.1"
 @k.words.beak.noun.2 k.words.sense word=beak pos=noun n=2 gloss="horny projecting mouth of a bird" synonym=bill synonym=neb synonym=nib synonym=pecker is_a=mouth part_of=bird core.source="wordnet 3.1"
 @k.words.beak.noun.3 k.words.sense word=beak pos=noun n=3 gloss="a beaklike, tapering tip on certain plant structures" is_a=tip core.source="wordnet 3.1"
@@ -98,6 +99,8 @@
 @k.words.bed.verb.2 k.words.sense word=bed pos=verb n=2 gloss="place (plants) in a prepared bed of soil" is_a=plant core.source="wordnet 3.1"
 @k.words.bed.verb.3 k.words.sense word=bed pos=verb n=3 gloss="put to bed" is_a=put core.source="wordnet 3.1"
 @k.words.bed.forms core.word text=bedded text=bedding means=bed of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.bedrock.noun.1 k.words.sense word=bedrock pos=noun n=1 gloss="solid unweathered rock lying beneath surface deposits of soil" is_a=rock core.source="wordnet 3.1"
+@k.words.bedrock.noun.2 k.words.sense word=bedrock pos=noun n=2 gloss="principles from which other truths can be derived" synonym=fundamentals synonym=basics synonym="fundamental principle" synonym="basic principle" is_a=principle core.source="wordnet 3.1"
 @k.words.bedroom.noun.1 k.words.sense word=bedroom pos=noun n=1 gloss="a room used primarily for sleeping" synonym="sleeping room" synonym="sleeping accommodation" synonym=chamber synonym=bedchamber is_a=room part_of=dwelling core.source="wordnet 3.1"
 @k.words.bedside.noun.1 k.words.sense word=bedside pos=noun n=1 gloss="space by the side of a bed (especially the bed of a sick or dying person)" is_a=side core.source="wordnet 3.1"
 @k.words.bedtime.noun.1 k.words.sense word=bedtime pos=noun n=1 gloss="the time you go to bed" is_a=hour core.source="wordnet 3.1"
@@ -108,10 +111,16 @@
 @k.words.beef.noun.3 k.words.sense word=beef pos=noun n=3 gloss="informal terms for objecting" synonym=gripe synonym=kick synonym=bitch synonym=squawk is_a=objection core.source="wordnet 3.1"
 @k.words.beef.verb.1 k.words.sense word=beef pos=verb n=1 gloss="complain" synonym=gripe synonym=bitch synonym=grouse synonym=crab synonym=squawk synonym=bellyache synonym=holler is_a=complain core.source="wordnet 3.1"
 @k.words.beef.forms core.word text=beeves means=beef of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.beehive.noun.1 k.words.sense word=beehive pos=noun n=1 gloss="any workplace where people are very busy" is_a=workplace core.source="wordnet 3.1"
+@k.words.beehive.noun.2 k.words.sense word=beehive pos=noun n=2 gloss="a structure that provides a natural habitation for bees; as in a hollow tree" synonym=hive is_a=nest core.source="wordnet 3.1"
+@k.words.beehive.noun.3 k.words.sense word=beehive pos=noun n=3 gloss="a hairdo resembling a beehive" is_a=hairdo core.source="wordnet 3.1"
 @k.words.beep.noun.1 k.words.sense word=beep pos=noun n=1 gloss="a short high tone produced as a signal or warning" synonym=bleep is_a=sound core.source="wordnet 3.1"
 @k.words.beep.verb.1 k.words.sense word=beep pos=verb n=1 gloss="make a loud noise" synonym=honk synonym=blare synonym=claxon synonym=toot is_a=sound core.source="wordnet 3.1"
 @k.words.beep.verb.2 k.words.sense word=beep pos=verb n=2 gloss="call, summon, or alert with a beeper" is_a=call core.source="wordnet 3.1"
+@k.words.beeper.noun.1 k.words.sense word=beeper pos=noun n=1 gloss="an electronic device that generates a series of beeps when the person carrying it is being paged" synonym=pager is_a="electronic device" core.source="wordnet 3.1"
 @k.words.beer.noun.1 k.words.sense word=beer pos=noun n=1 gloss="a general name for alcoholic beverages made by fermenting a cereal (or mixture of cereals) flavored with hops" is_a=brew core.source="wordnet 3.1"
+@k.words.beet.noun.1 k.words.sense word=beet pos=noun n=1 gloss="biennial Eurasian plant usually having a swollen edible root; widely cultivated as a food crop" synonym="common beet" synonym="Beta vulgaris" is_a=vegetable core.source="wordnet 3.1"
+@k.words.beet.noun.2 k.words.sense word=beet pos=noun n=2 gloss="round red root vegetable" synonym=beetroot is_a="root vegetable" part_of=beetroot core.source="wordnet 3.1"
 @k.words.beethoven.noun.1 k.words.sense word=Beethoven pos=noun n=1 gloss="German composer of instrumental music (especially symphonic and chamber music); continued to compose after he lost his hearing (1770-1827)" synonym="van Beethoven" synonym="Ludwig van Beethoven" instance_of=composer core.source="wordnet 3.1"
 @k.words.beethoven.noun.2 k.words.sense word=Beethoven pos=noun n=2 gloss="the music of Beethoven" is_a=music core.source="wordnet 3.1"
 @k.words.beethoven.spelling.Beethoven core.word text=beethoven means=Beethoven of=k.words.sense.word core.source="wordnet 3.1"
@@ -251,6 +260,7 @@
 @k.words.benton.noun.1 k.words.sense word=Benton pos=noun n=1 gloss="United States artist whose paintings portrayed life in the Midwest and South (1889-1975)" synonym="Thomas Hart Benton" instance_of=painter core.source="wordnet 3.1"
 @k.words.benton.noun.2 k.words.sense word=Benton pos=noun n=2 gloss="United States legislator who opposed the use of paper currency (1782-1858)" synonym="Thomas Hart Benton" synonym="Old Bullion" instance_of=legislator core.source="wordnet 3.1"
 @k.words.benton.spelling.Benton core.word text=benton means=Benton of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.beret.noun.1 k.words.sense word=beret pos=noun n=1 gloss="a cap with no brim or bill; made of soft cloth" is_a=cap core.source="wordnet 3.1"
 @k.words.berg.noun.1 k.words.sense word=berg pos=noun n=1 gloss="a large mass of ice floating at sea; usually broken off of a polar glacier" synonym=iceberg is_a="ice mass" is_a=floater core.source="wordnet 3.1"
 @k.words.berg.noun.2 k.words.sense word=Berg pos=noun n=2 gloss="Austrian composer in Schoenberg's twelve-tone music system (1885-1935)" synonym="Alban Berg" instance_of=composer core.source="wordnet 3.1"
 @k.words.berg.spelling.Berg core.word text=berg means=Berg of=k.words.sense.word core.source="wordnet 3.1"
@@ -296,6 +306,8 @@
 @k.words.beta.noun.1 k.words.sense word=beta pos=noun n=1 gloss="the 2nd letter of the Greek alphabet" is_a=letter core.source="wordnet 3.1"
 @k.words.beta.noun.2 k.words.sense word=Beta pos=noun n=2 gloss="beets" synonym="genus Beta" is_a="caryophylloid dicot genus" is_a=Chenopodiaceae core.source="wordnet 3.1"
 @k.words.beta.spelling.Beta core.word text=beta means=Beta of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.betel.noun.1 k.words.sense word=betel pos=noun n=1 gloss="a leaf of a vine from the betel pepper" synonym="betel leaf" is_a=leaf core.source="wordnet 3.1"
+@k.words.betel.noun.2 k.words.sense word=betel pos=noun n=2 gloss="Asian pepper plant whose leaves are chewed with betel nut (seed of the betel palm) by southeast Asians" synonym="betel pepper" synonym="Piper betel" is_a="true pepper" core.source="wordnet 3.1"
 @k.words.beth.noun.1 k.words.sense word=beth pos=noun n=1 gloss="the 2nd letter of the Hebrew alphabet" is_a=letter core.source="wordnet 3.1"
 @k.words.bethlehem.noun.1 k.words.sense word=Bethlehem pos=noun n=1 gloss="a town in eastern Pennsylvania on the Lehigh River to the northwest of Philadelphia; an important center for steel production" instance_of=town part_of=Pennsylvania core.source="wordnet 3.1"
 @k.words.bethlehem.noun.2 k.words.sense word=Bethlehem pos=noun n=2 gloss="a small town near Jerusalem on the West Bank of the Jordan River; early home of David and regarded as the place where Jesus was born" synonym="Bayt Lahm" synonym="Bethlehem Ephrathah" synonym=Bethlehem-Judah instance_of=town part_of="West Bank" core.source="wordnet 3.1"

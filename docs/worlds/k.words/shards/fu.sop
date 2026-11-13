@@ -1,5 +1,5 @@
 # k.words/shards/fu: noun and verb senses of the words from "fuck" to "fuzz" (first letters "fu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -99,6 +99,7 @@
 @k.words.fuss.noun.3 k.words.sense word=fuss pos=noun n=3 gloss="a quarrel about petty points" synonym=bicker synonym=bickering synonym=spat synonym=tiff synonym=squabble synonym=pettifoggery is_a=quarrel core.source="wordnet 3.1"
 @k.words.fuss.verb.1 k.words.sense word=fuss pos=verb n=1 gloss="worry unnecessarily or excessively" synonym=niggle synonym=fret is_a=worry core.source="wordnet 3.1"
 @k.words.fuss.verb.2 k.words.sense word=fuss pos=verb n=2 gloss="care for like a mother" synonym=mother synonym=overprotect is_a=care core.source="wordnet 3.1"
+@k.words.futon.noun.1 k.words.sense word=futon pos=noun n=1 gloss="mattress consisting of a pad of cotton batting that is used for sleeping on the floor or on a raised frame" is_a=mattress core.source="wordnet 3.1"
 @k.words.future.noun.1 k.words.sense word=future pos=noun n=1 gloss="the time yet to come" synonym=hereafter synonym=futurity synonym="time to come" is_a=time core.source="wordnet 3.1"
 @k.words.future.noun.2 k.words.sense word=future pos=noun n=2 gloss="a verb tense that expresses actions or states in the future" synonym="future tense" is_a=tense core.source="wordnet 3.1"
 @k.words.future.noun.3 k.words.sense word=future pos=noun n=3 gloss="bulk commodities bought or sold at an agreed price for delivery at a specified future date" is_a=commodity core.source="wordnet 3.1"

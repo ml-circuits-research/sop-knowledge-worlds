@@ -1,5 +1,5 @@
 # k.words/shards/di: noun and verb senses of the words from "diabetes" to "dizzy" (first letters "di").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -114,6 +114,8 @@
 @k.words.diligence.noun.1 k.words.sense word=diligence pos=noun n=1 gloss="conscientiousness in paying proper attention to a task; giving the degree of care required in a given situation" is_a=conscientiousness core.source="wordnet 3.1"
 @k.words.diligence.noun.2 k.words.sense word=diligence pos=noun n=2 gloss="persevering determination to perform a task" synonym=industriousness synonym=industry is_a=determination core.source="wordnet 3.1"
 @k.words.diligence.noun.3 k.words.sense word=diligence pos=noun n=3 gloss="a diligent effort" synonym=application is_a=effort core.source="wordnet 3.1"
+@k.words.dill.noun.1 k.words.sense word=dill pos=noun n=1 gloss="aromatic Old World herb having aromatic threadlike foliage and seeds used as seasoning" synonym="Anethum graveolens" is_a=herb core.source="wordnet 3.1"
+@k.words.dill.noun.2 k.words.sense word=dill pos=noun n=2 gloss="aromatic threadlike foliage of the dill plant used as seasoning" synonym="dill weed" is_a=herb part_of=dill core.source="wordnet 3.1"
 @k.words.dim.verb.1 k.words.sense word=dim pos=verb n=1 gloss="switch (a car's headlights) from a higher to a lower beam" synonym=dip is_a="change intensity" core.source="wordnet 3.1"
 @k.words.dim.verb.2 k.words.sense word=dim pos=verb n=2 gloss="become dim or lusterless" is_a=change core.source="wordnet 3.1"
 @k.words.dim.verb.3 k.words.sense word=dim pos=verb n=3 gloss="make dim or lusterless" is_a=darken core.source="wordnet 3.1"
@@ -138,6 +140,7 @@
 @k.words.ding.noun.1 k.words.sense word=ding pos=noun n=1 gloss="a ringing sound" is_a=sound core.source="wordnet 3.1"
 @k.words.ding.noun.2 k.words.sense word=ding pos=noun n=2 gloss="an impression in a surface (as made by a blow)" synonym=dent synonym=gouge synonym=nick is_a=blemish core.source="wordnet 3.1"
 @k.words.ding.verb.1 k.words.sense word=ding pos=verb n=1 gloss="go `ding dong', like a bell" synonym=dong synonym=dingdong is_a=ring core.source="wordnet 3.1"
+@k.words.dinghy.noun.1 k.words.sense word=dinghy pos=noun n=1 gloss="a small boat of shallow draft with cross thwarts for seats and rowlocks for oars with which it is propelled" synonym=dory synonym=rowboat is_a="small boat" core.source="wordnet 3.1"
 @k.words.dingo.noun.1 k.words.sense word=dingo pos=noun n=1 gloss="wolflike yellowish-brown wild dog of Australia" synonym=warrigal synonym=warragal synonym="Canis dingo" is_a="wild dog" core.source="wordnet 3.1"
 @k.words.dingo.forms core.word text=dingoes means=dingo of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.dining.noun.1 k.words.sense word=dining pos=noun n=1 gloss="the act of eating dinner" is_a=eating core.source="wordnet 3.1"
@@ -325,9 +328,12 @@
 @k.words.dispatch.verb.3 k.words.sense word=dispatch pos=verb n=3 gloss="kill intentionally and with premeditation" synonym=murder synonym=slay synonym=hit synonym="bump off" synonym=off synonym="polish off" synonym=remove is_a=kill core.source="wordnet 3.1"
 @k.words.dispatcher.noun.1 k.words.sense word=dispatcher pos=noun n=1 gloss="the official who signals the beginning of a race or competition" synonym=starter is_a=official core.source="wordnet 3.1"
 @k.words.dispatcher.noun.2 k.words.sense word=dispatcher pos=noun n=2 gloss="employee of a transportation company who controls the departures of vehicles according to weather conditions and in the interest of efficient service" is_a=employee core.source="wordnet 3.1"
+@k.words.dispensary.noun.1 k.words.sense word=dispensary pos=noun n=1 gloss="clinic where medicine and medical supplies are dispensed" is_a=clinic core.source="wordnet 3.1"
 @k.words.dispense.verb.1 k.words.sense word=dispense pos=verb n=1 gloss="administer or bestow, as in small portions" synonym=distribute synonym=administer synonym="mete out" synonym=deal synonym="parcel out" synonym=lot synonym="shell out" synonym="deal out" synonym="dish out" synonym=allot synonym="dole out" is_a=give core.source="wordnet 3.1"
 @k.words.dispense.verb.2 k.words.sense word=dispense pos=verb n=2 gloss="grant a dispensation; grant an exemption" is_a=exempt core.source="wordnet 3.1"
 @k.words.dispense.verb.3 k.words.sense word=dispense pos=verb n=3 gloss="give or apply (medications)" synonym=administer is_a=treat core.source="wordnet 3.1"
+@k.words.dispenser.noun.1 k.words.sense word=dispenser pos=noun n=1 gloss="a container so designed that the contents can be used in prescribed amounts" is_a=container core.source="wordnet 3.1"
+@k.words.dispenser.noun.2 k.words.sense word=dispenser pos=noun n=2 gloss="a person who dispenses" is_a=supplier core.source="wordnet 3.1"
 @k.words.disperse.verb.1 k.words.sense word=disperse pos=verb n=1 gloss="distribute loosely" synonym=scatter synonym=sprinkle synonym=dot synonym=dust is_a=discharge core.source="wordnet 3.1"
 @k.words.disperse.verb.2 k.words.sense word=disperse pos=verb n=2 gloss="to cause to separate and go in different directions" synonym=dissipate synonym=dispel synonym="break up" synonym=scatter is_a=separate core.source="wordnet 3.1"
 @k.words.disperse.verb.3 k.words.sense word=disperse pos=verb n=3 gloss="cause to separate" synonym="break up" synonym=scatter is_a="change integrity" core.source="wordnet 3.1"

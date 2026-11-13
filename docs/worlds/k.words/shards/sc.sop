@@ -1,8 +1,12 @@
-# k.words/shards/sc: noun and verb senses of the words from "scale" to "scum" (first letters "sc").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/sc: noun and verb senses of the words from "scaffold" to "scum" (first letters "sc").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
+@k.words.scaffold.noun.1 k.words.sense word=scaffold pos=noun n=1 gloss="a platform from which criminals are executed (hanged or beheaded)" is_a=platform part_of="instrument of execution" core.source="wordnet 3.1"
+@k.words.scaffold.noun.2 k.words.sense word=scaffold pos=noun n=2 gloss="a temporary arrangement erected around a building for convenience of workers" is_a=arrangement part_of=scaffolding core.source="wordnet 3.1"
+@k.words.scaffold.verb.1 k.words.sense word=scaffold pos=verb n=1 gloss="provide with a scaffold for support" is_a=hold core.source="wordnet 3.1"
+@k.words.scaffolding.noun.1 k.words.sense word=scaffolding pos=noun n=1 gloss="a system of scaffolds" synonym=staging is_a=system core.source="wordnet 3.1"
 @k.words.scale.noun.1 k.words.sense word=scale pos=noun n=1 gloss="an ordered reference standard" synonym="scale of measurement" synonym="graduated table" synonym="ordered series" is_a=standard core.source="wordnet 3.1"
 @k.words.scale.noun.2 k.words.sense word=scale pos=noun n=2 gloss="relative magnitude" is_a="magnitude relation" core.source="wordnet 3.1"
 @k.words.scale.noun.3 k.words.sense word=scale pos=noun n=3 gloss="the ratio between the size of something and a representation of it" is_a=proportion core.source="wordnet 3.1"
@@ -190,6 +194,7 @@
 @k.words.scrap.verb.2 k.words.sense word=scrap pos=verb n=2 gloss="have a disagreement over something" synonym=quarrel synonym=dispute synonym=argufy synonym=altercate is_a=argue core.source="wordnet 3.1"
 @k.words.scrap.verb.3 k.words.sense word=scrap pos=verb n=3 gloss="make into scrap or refuse" is_a=convert core.source="wordnet 3.1"
 @k.words.scrap.forms core.word text=scrapped text=scrapping means=scrap of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.scrapbook.noun.1 k.words.sense word=scrapbook pos=noun n=1 gloss="an album into which clippings or notes or pictures can be pasted" is_a=album core.source="wordnet 3.1"
 @k.words.scrape.noun.1 k.words.sense word=scrape pos=noun n=1 gloss="a harsh noise made by scraping" synonym=scraping synonym=scratch synonym=scratching is_a=noise core.source="wordnet 3.1"
 @k.words.scrape.noun.2 k.words.sense word=scrape pos=noun n=2 gloss="an abraded area where the skin is torn or worn off" synonym=abrasion synonym=scratch synonym=excoriation is_a=wound core.source="wordnet 3.1"
 @k.words.scrape.noun.3 k.words.sense word=scrape pos=noun n=3 gloss="a deep bow with the foot drawn backwards (indicating excessive humility)" synonym=scraping is_a=bow core.source="wordnet 3.1"

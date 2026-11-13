@@ -1,5 +1,5 @@
 # k.words/shards/ty: noun and verb senses of the words from "tying" to "tyson" (first letters "ty").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -15,6 +15,7 @@
 @k.words.typewriter.noun.1 k.words.sense word=typewriter pos=noun n=1 gloss="hand-operated character printer for printing written messages one character at a time" is_a="character printer" core.source="wordnet 3.1"
 @k.words.typhoon.noun.1 k.words.sense word=typhoon pos=noun n=1 gloss="a tropical cyclone occurring in the western Pacific or Indian oceans" is_a=cyclone core.source="wordnet 3.1"
 @k.words.typing.noun.1 k.words.sense word=typing pos=noun n=1 gloss="writing done with a typewriter" synonym=typewriting is_a=writing core.source="wordnet 3.1"
+@k.words.tyrannosaurus.noun.1 k.words.sense word=tyrannosaurus pos=noun n=1 gloss="large carnivorous bipedal dinosaur having enormous teeth with knifelike serrations; may have been a scavenger rather than an active predator; later Cretaceous period in North America" synonym=tyrannosaur synonym="Tyrannosaurus rex" is_a=theropod core.source="wordnet 3.1"
 @k.words.tyranny.noun.1 k.words.sense word=tyranny pos=noun n=1 gloss="a form of government in which the ruler is an absolute dictator (not restricted by a constitution or laws or opposition etc.)" synonym=dictatorship synonym=absolutism synonym=authoritarianism synonym=Caesarism synonym=despotism synonym=monocracy synonym="one-man rule" synonym=shogunate synonym=Stalinism synonym=totalitarianism is_a=autocracy core.source="wordnet 3.1"
 @k.words.tyranny.noun.2 k.words.sense word=tyranny pos=noun n=2 gloss="dominance through threat of punishment and violence" synonym=absolutism synonym=despotism is_a=dominance core.source="wordnet 3.1"
 @k.words.tyrant.noun.1 k.words.sense word=tyrant pos=noun n=1 gloss="a cruel and oppressive dictator" synonym=autocrat synonym=despot is_a=dictator core.source="wordnet 3.1"

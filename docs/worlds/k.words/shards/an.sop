@@ -1,5 +1,5 @@
 # k.words/shards/an: noun and verb senses of the words from "an" to "anxiety" (first letters "an").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -57,6 +57,7 @@
 @k.words.angelica.noun.1 k.words.sense word=angelica pos=noun n=1 gloss="any of various tall and stout herbs of the genus Angelica having pinnately compound leaves and small white or greenish flowers in compound umbels" synonym=angelique is_a=herb core.source="wordnet 3.1"
 @k.words.angelica.noun.2 k.words.sense word=angelica pos=noun n=2 gloss="candied stalks of the angelica plant" is_a=flavorer core.source="wordnet 3.1"
 @k.words.angelica.noun.3 k.words.sense word=angelica pos=noun n=3 gloss="aromatic stems or leaves or roots of Angelica Archangelica" is_a=herb core.source="wordnet 3.1"
+@k.words.angelique.noun.1 k.words.sense word=angelique pos=noun n=1 gloss="any of various tall and stout herbs of the genus Angelica having pinnately compound leaves and small white or greenish flowers in compound umbels" synonym=angelica is_a=herb core.source="wordnet 3.1"
 @k.words.anger.noun.1 k.words.sense word=anger pos=noun n=1 gloss="a strong emotion; a feeling that is oriented toward some real or supposed grievance" synonym=choler synonym=ire is_a=emotion core.source="wordnet 3.1"
 @k.words.anger.noun.2 k.words.sense word=anger pos=noun n=2 gloss="the state of being angry" synonym=angriness is_a="emotional arousal" core.source="wordnet 3.1"
 @k.words.anger.noun.3 k.words.sense word=anger pos=noun n=3 gloss="belligerence aroused by a real or supposed wrong (personified as one of the deadly sins)" synonym=wrath synonym=ire synonym=ira is_a="mortal sin" core.source="wordnet 3.1"
@@ -81,6 +82,9 @@
 @k.words.animation.noun.2 k.words.sense word=animation pos=noun n=2 gloss="the property of being able to survive and grow" synonym=vitality is_a=animateness core.source="wordnet 3.1"
 @k.words.animation.noun.3 k.words.sense word=animation pos=noun n=3 gloss="quality of being active or spirited or alive and vigorous" synonym=spiritedness synonym=invigoration synonym=brio synonym=vivification is_a=activeness core.source="wordnet 3.1"
 @k.words.ankle.noun.1 k.words.sense word=ankle pos=noun n=1 gloss="a gliding joint between the distal ends of the tibia and fibula and the proximal end of the talus" synonym="ankle joint" synonym="mortise joint" synonym="articulatio talocruralis" is_a="gliding joint" part_of=leg core.source="wordnet 3.1"
+@k.words.anklet.noun.1 k.words.sense word=anklet pos=noun n=1 gloss="a shoe for a child or woman that has a strap around the ankle" is_a=shoe core.source="wordnet 3.1"
+@k.words.anklet.noun.2 k.words.sense word=anklet pos=noun n=2 gloss="a sock that reaches just above the ankle" synonym=anklets synonym=bobbysock synonym=bobbysocks is_a=sock core.source="wordnet 3.1"
+@k.words.anklet.noun.3 k.words.sense word=anklet pos=noun n=3 gloss="an ornament worn around the ankle" synonym="ankle bracelet" is_a=bracelet core.source="wordnet 3.1"
 @k.words.anna.noun.1 k.words.sense word=anna pos=noun n=1 gloss="a former copper coin of Pakistan and India" is_a="Pakistani monetary unit" is_a="Indian monetary unit" core.source="wordnet 3.1"
 @k.words.anne.noun.1 k.words.sense word=Anne pos=noun n=1 gloss="Queen of England and Scotland and Ireland; daughter if James II and the last of the Stuart monarchs; in 1707 she was the last English ruler to exercise the royal veto over parliament (1665-1714)" instance_of="Queen of England" core.source="wordnet 3.1"
 @k.words.anne.spelling.Anne core.word text=anne means=Anne of=k.words.sense.word core.source="wordnet 3.1"
@@ -115,6 +119,7 @@
 @k.words.antarctica.spelling.Antarctica core.word text=antarctica means=Antarctica of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.ante.noun.1 k.words.sense word=ante pos=noun n=1 gloss="(poker) the initial contribution that each player makes to the pot" is_a=stake core.source="wordnet 3.1"
 @k.words.ante.verb.1 k.words.sense word=ante pos=verb n=1 gloss="place one's stake" is_a="bet on" core.source="wordnet 3.1"
+@k.words.antelope.noun.1 k.words.sense word=antelope pos=noun n=1 gloss="graceful Old World ruminant with long legs and horns directed upward and backward; includes gazelles; springboks; impalas; addax; gerenuks; blackbucks; dik-diks" is_a=bovid core.source="wordnet 3.1"
 @k.words.antenna.noun.1 k.words.sense word=antenna pos=noun n=1 gloss="an electrical device that sends or receives radio or television signals" synonym=aerial synonym="transmitting aerial" is_a="electrical device" part_of=receiver part_of=transmitter core.source="wordnet 3.1"
 @k.words.antenna.noun.2 k.words.sense word=antenna pos=noun n=2 gloss="sensitivity similar to that of a receptor organ" synonym=feeler is_a=sensitivity core.source="wordnet 3.1"
 @k.words.antenna.noun.3 k.words.sense word=antenna pos=noun n=3 gloss="one of a pair of mobile appendages on the head of e.g. insects and crustaceans; typically sensitive to touch and taste" synonym=feeler is_a=tentacle core.source="wordnet 3.1"
@@ -144,5 +149,7 @@
 @k.words.anu.noun.1 k.words.sense word=Anu pos=noun n=1 gloss="Babylonian god of the sky; one of the supreme triad including Bel and Ea" instance_of="Semitic deity" core.source="wordnet 3.1"
 @k.words.anu.spelling.Anu core.word text=anu means=Anu of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.anus.noun.1 k.words.sense word=anus pos=noun n=1 gloss="the excretory opening at the end of the alimentary canal" is_a=orifice part_of=rectum core.source="wordnet 3.1"
+@k.words.anvil.noun.1 k.words.sense word=anvil pos=noun n=1 gloss="a heavy block of iron or steel on which hot metals are shaped by hammering" is_a=block part_of=forge core.source="wordnet 3.1"
+@k.words.anvil.noun.2 k.words.sense word=anvil pos=noun n=2 gloss="the ossicle between the malleus and the stapes" synonym=incus is_a="auditory ossicle" part_of="middle ear" core.source="wordnet 3.1"
 @k.words.anxiety.noun.1 k.words.sense word=anxiety pos=noun n=1 gloss="(psychiatry) a relatively permanent state of worry and nervousness occurring in a variety of mental disorders, usually accompanied by compulsive behavior or attacks of panic" synonym=anxiousness is_a="psychological state" core.source="wordnet 3.1"
 @k.words.anxiety.noun.2 k.words.sense word=anxiety pos=noun n=2 gloss="a vague unpleasant emotion that is experienced in anticipation of some (usually ill-defined) misfortune" is_a=emotion core.source="wordnet 3.1"

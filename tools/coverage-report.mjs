@@ -36,7 +36,7 @@ export const ROWS = [
   ['what it is used for', ['k.attributes.thing', 'name', ['used_for']], ['k.commonsense.thing', 'name', ['used_for']]],
   ['wheels', ['k.attributes.thing', 'name', ['wheels']]],
   ['legs', ['k.animals.animal', 'name', ['legs']]],
-  ['kind (what it is a kind of)', ['k.words.sense', 'word', ['is_a']]],
+  ['kind (what it is a kind of)', ['k.words.sense', 'word', ['is_a', 'instance_of']]],
   ['definition', ['k.words.sense', 'word', ['gloss']]],
   ['where it is worn', ['k.wearables.wearable', 'name', ['worn_on']]],
 ];

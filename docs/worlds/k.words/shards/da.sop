@@ -1,5 +1,5 @@
 # k.words/shards/da: noun and verb senses of the words from "da" to "dazzle" (first letters "da").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -14,6 +14,8 @@
 @k.words.dagger.noun.1 k.words.sense word=dagger pos=noun n=1 gloss="a short knife with a pointed blade used for piercing or stabbing" synonym=sticker is_a=knife core.source="wordnet 3.1"
 @k.words.dagger.noun.2 k.words.sense word=dagger pos=noun n=2 gloss="a character used in printing to indicate a cross reference or footnote" synonym=obelisk is_a=character core.source="wordnet 3.1"
 @k.words.dah.noun.1 k.words.sense word=dah pos=noun n=1 gloss="the longer of the two telegraphic signals used in Morse code" synonym=dash is_a="telegraphic signal" part_of=Morse core.source="wordnet 3.1"
+@k.words.dahl.noun.1 k.words.sense word=dahl pos=noun n=1 gloss="tropical woody herb with showy yellow flowers and flat pods; much cultivated in the tropics" synonym="pigeon pea" synonym="pigeon-pea plant" synonym="cajan pea" synonym="catjang pea" synonym="red gram" synonym=dhal synonym="Cajanus cajan" is_a=shrub core.source="wordnet 3.1"
+@k.words.dahl.noun.2 k.words.sense word=dahl pos=noun n=2 gloss="small highly nutritious seed of the tropical pigeon-pea plant" synonym="cajan pea" synonym="pigeon pea" is_a=pea part_of="pigeon pea" core.source="wordnet 3.1"
 @k.words.dahlia.noun.1 k.words.sense word=dahlia pos=noun n=1 gloss="any of several plants of or developed from the species Dahlia pinnata having tuberous roots and showy rayed variously colored flower heads; native to the mountains of Mexico and Central America and Colombia" synonym="Dahlia pinnata" is_a=flower core.source="wordnet 3.1"
 @k.words.daily.noun.1 k.words.sense word=daily pos=noun n=1 gloss="a newspaper that is published every day" is_a=newspaper core.source="wordnet 3.1"
 @k.words.dairy.noun.1 k.words.sense word=dairy pos=noun n=1 gloss="a farm where dairy products are produced" synonym="dairy farm" is_a=farm core.source="wordnet 3.1"
@@ -66,6 +68,7 @@
 @k.words.dancer.noun.1 k.words.sense word=dancer pos=noun n=1 gloss="a performer who dances professionally" synonym="professional dancer" synonym=terpsichorean is_a=performer core.source="wordnet 3.1"
 @k.words.dancer.noun.2 k.words.sense word=dancer pos=noun n=2 gloss="a person who participates in a social gathering arranged for dancing (as a ball)" synonym="social dancer" is_a=person core.source="wordnet 3.1"
 @k.words.dancing.noun.1 k.words.sense word=dancing pos=noun n=1 gloss="taking a series of rhythmical steps (and movements) in time to music" synonym=dance synonym=terpsichore synonym=saltation is_a=diversion is_a="performing arts" core.source="wordnet 3.1"
+@k.words.dandelion.noun.1 k.words.sense word=dandelion pos=noun n=1 gloss="any of several herbs of the genus Taraxacum having long tap roots and deeply notched leaves and bright yellow flowers followed by fluffy seed balls" synonym=blowball is_a=herb core.source="wordnet 3.1"
 @k.words.dandy.noun.1 k.words.sense word=dandy pos=noun n=1 gloss="a man who is much concerned with his dress and appearance" synonym=dude synonym=fop synonym=gallant synonym=sheik synonym=beau synonym=swell synonym="fashion plate" synonym=clotheshorse is_a=man core.source="wordnet 3.1"
 @k.words.dandy.noun.2 k.words.sense word=dandy pos=noun n=2 gloss="a sailing vessel with two masts; a small mizzen is aft of the rudderpost" synonym=yawl is_a="sailing vessel" core.source="wordnet 3.1"
 @k.words.dane.noun.1 k.words.sense word=Dane pos=noun n=1 gloss="a native or inhabitant of Denmark" is_a=European core.source="wordnet 3.1"
@@ -98,6 +101,7 @@
 @k.words.darkness.noun.1 k.words.sense word=darkness pos=noun n=1 gloss="absence of light or illumination" synonym=dark is_a=illumination core.source="wordnet 3.1"
 @k.words.darkness.noun.2 k.words.sense word=darkness pos=noun n=2 gloss="an unilluminated area" synonym=dark synonym=shadow is_a=scene core.source="wordnet 3.1"
 @k.words.darkness.noun.3 k.words.sense word=darkness pos=noun n=3 gloss="absence of moral or spiritual values" synonym=wickedness synonym=dark is_a=condition core.source="wordnet 3.1"
+@k.words.darkroom.noun.1 k.words.sense word=darkroom pos=noun n=1 gloss="a room in which photographs are developed" is_a=room core.source="wordnet 3.1"
 @k.words.darling.noun.1 k.words.sense word=darling pos=noun n=1 gloss="a special loved one" synonym=favorite synonym=favourite synonym=pet synonym=dearie synonym=deary synonym=ducky is_a=lover core.source="wordnet 3.1"
 @k.words.darling.noun.2 k.words.sense word=Darling pos=noun n=2 gloss="an Australian river; tributary of the Murray River" synonym="Darling River" instance_of=river part_of=Australia core.source="wordnet 3.1"
 @k.words.darling.spelling.Darling core.word text=darling means=Darling of=k.words.sense.word core.source="wordnet 3.1"
@@ -121,6 +125,8 @@
 @k.words.dash.verb.1 k.words.sense word=dash pos=verb n=1 gloss="run or move very quickly or hastily" synonym=dart synonym=scoot synonym=scud synonym=flash synonym=shoot is_a=rush core.source="wordnet 3.1"
 @k.words.dash.verb.2 k.words.sense word=dash pos=verb n=2 gloss="break into pieces, as by striking or knocking over" synonym=smash is_a=break core.source="wordnet 3.1"
 @k.words.dash.verb.3 k.words.sense word=dash pos=verb n=3 gloss="hurl or thrust violently" synonym=crash is_a=hurl core.source="wordnet 3.1"
+@k.words.dashboard.noun.1 k.words.sense word=dashboard pos=noun n=1 gloss="protective covering consisting of a panel to protect people from the splashing water or mud etc." synonym=splashboard synonym=splasher is_a="protective covering" part_of=vehicle core.source="wordnet 3.1"
+@k.words.dashboard.noun.2 k.words.sense word=dashboard pos=noun n=2 gloss="instrument panel on an automobile or airplane containing dials and controls" synonym=fascia is_a="control panel" core.source="wordnet 3.1"
 @k.words.dat.noun.1 k.words.sense word=DAT pos=noun n=1 gloss="a digital tape recording of sound" synonym="digital audiotape" is_a=audiotape core.source="wordnet 3.1"
 @k.words.dat.spelling.DAT core.word text=dat means=DAT of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.data.noun.1 k.words.sense word=data pos=noun n=1 gloss="a collection of facts from which conclusions may be drawn" synonym=information is_a=collection core.source="wordnet 3.1"

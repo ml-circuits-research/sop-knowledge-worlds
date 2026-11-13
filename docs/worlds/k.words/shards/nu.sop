@@ -1,5 +1,5 @@
 # k.words/shards/nu: noun and verb senses of the words from "nu" to "nutter" (first letters "nu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -56,7 +56,13 @@
 @k.words.nut.spelling.Nut core.word text=nut means=Nut of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.nut.forms core.word text=nutted text=nutting means=nut of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.nutcase.noun.1 k.words.sense word=nutcase pos=noun n=1 gloss="someone deranged and possibly dangerous" synonym=crazy synonym=loony synonym=looney synonym=weirdo is_a=lunatic core.source="wordnet 3.1"
+@k.words.nutcracker.noun.1 k.words.sense word=nutcracker pos=noun n=1 gloss="a compound lever used to crack nuts open" is_a="compound lever" core.source="wordnet 3.1"
+@k.words.nutcracker.noun.2 k.words.sense word=nutcracker pos=noun n=2 gloss="any of various small short-tailed songbirds with strong feet and a sharp beak that feed on small nuts and insects" synonym=nuthatch is_a=oscine core.source="wordnet 3.1"
+@k.words.nutcracker.noun.3 k.words.sense word=nutcracker pos=noun n=3 gloss="speckled birds that feed on nuts" is_a="corvine bird" core.source="wordnet 3.1"
+@k.words.nutmeg.noun.1 k.words.sense word=nutmeg pos=noun n=1 gloss="East Indian tree widely cultivated in the tropics for its aromatic seed; source of two spices: nutmeg and mace" synonym="nutmeg tree" synonym="Myristica fragrans" is_a="spice tree" core.source="wordnet 3.1"
+@k.words.nutmeg.noun.2 k.words.sense word=nutmeg pos=noun n=2 gloss="hard aromatic seed of the nutmeg tree used as spice when grated or ground" is_a=spice part_of=nutmeg core.source="wordnet 3.1"
 @k.words.nutrition.noun.1 k.words.sense word=nutrition pos=noun n=1 gloss="(physiology) the organic process of nourishing or being nourished; the processes by which an organism assimilates food and uses it for growth and maintenance" is_a="organic process" core.source="wordnet 3.1"
 @k.words.nutrition.noun.2 k.words.sense word=nutrition pos=noun n=2 gloss="a source of materials to nourish the body" synonym=nutriment synonym=nourishment synonym=sustenance synonym=aliment synonym=alimentation synonym=victuals is_a=food core.source="wordnet 3.1"
 @k.words.nutrition.noun.3 k.words.sense word=nutrition pos=noun n=3 gloss="the scientific study of food and drink (especially in humans)" is_a=science core.source="wordnet 3.1"
+@k.words.nutshell.noun.1 k.words.sense word=nutshell pos=noun n=1 gloss="the shell around the kernel of a nut" is_a=shell core.source="wordnet 3.1"
 @k.words.nutter.noun.1 k.words.sense word=nutter pos=noun n=1 gloss="a person who is regarded as eccentric or mad" synonym=wacko synonym=whacko is_a=eccentric core.source="wordnet 3.1"

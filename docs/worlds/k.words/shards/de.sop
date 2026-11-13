@@ -1,5 +1,5 @@
 # k.words/shards/de: noun and verb senses of the words from "de" to "dewey" (first letters "de").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -177,6 +177,7 @@
 @k.words.defiance.noun.1 k.words.sense word=defiance pos=noun n=1 gloss="intentionally contemptuous behavior or attitude" synonym=rebelliousness is_a=intractability core.source="wordnet 3.1"
 @k.words.defiance.noun.2 k.words.sense word=defiance pos=noun n=2 gloss="a hostile challenge" is_a=challenge core.source="wordnet 3.1"
 @k.words.defiance.noun.3 k.words.sense word=defiance pos=noun n=3 gloss="a defiant act" is_a=resistance core.source="wordnet 3.1"
+@k.words.defibrillator.noun.1 k.words.sense word=defibrillator pos=noun n=1 gloss="an electronic device that administers an electric shock of preset voltage to the heart through the chest wall in an attempt to restore the normal rhythm of the heart during ventricular fibrillation" is_a="electronic device" core.source="wordnet 3.1"
 @k.words.deficit.noun.1 k.words.sense word=deficit pos=noun n=1 gloss="the property of being an amount by which something is less than expected or required" synonym=shortage synonym=shortfall is_a=insufficiency core.source="wordnet 3.1"
 @k.words.deficit.noun.2 k.words.sense word=deficit pos=noun n=2 gloss="a deficiency or failure in neurological or mental functioning" is_a=lack core.source="wordnet 3.1"
 @k.words.deficit.noun.3 k.words.sense word=deficit pos=noun n=3 gloss="(sports) the score by which a team or individual is losing" is_a=score core.source="wordnet 3.1"

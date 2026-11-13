@@ -1,5 +1,5 @@
 # k.words/shards/bl: noun and verb senses of the words from "black" to "blush" (first letters "bl").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -8,6 +8,13 @@
 @k.words.black.noun.3 k.words.sense word=Black pos=noun n=3 gloss="British chemist who identified carbon dioxide and who formulated the concepts of specific heat and latent heat (1728-1799)" synonym="Joseph Black" instance_of=chemist core.source="wordnet 3.1"
 @k.words.black.verb.1 k.words.sense word=black pos=verb n=1 gloss="make or become black" synonym=blacken synonym=melanize synonym=melanise is_a=discolor core.source="wordnet 3.1"
 @k.words.black.spelling.Black core.word text=black means=Black of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.blackberry.noun.1 k.words.sense word=blackberry pos=noun n=1 gloss="large sweet black or very dark purple edible aggregate fruit of any of various bushes of the genus Rubus" is_a=berry is_a=drupelet part_of="true blackberry" part_of="western blackberry" core.source="wordnet 3.1"
+@k.words.blackberry.noun.2 k.words.sense word=blackberry pos=noun n=2 gloss="bramble with sweet edible black or dark purple berries that usually do not separate from the receptacle" synonym="blackberry bush" is_a="bramble bush" core.source="wordnet 3.1"
+@k.words.blackberry.verb.1 k.words.sense word=blackberry pos=verb n=1 gloss="pick or gather blackberries" is_a=berry core.source="wordnet 3.1"
+@k.words.blackberry.forms core.word text=blackberried means=blackberry of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.blackbird.noun.1 k.words.sense word=blackbird pos=noun n=1 gloss="any bird of the family Icteridae whose male is black or predominantly black" synonym="New World blackbird" is_a="New World oriole" core.source="wordnet 3.1"
+@k.words.blackbird.noun.2 k.words.sense word=blackbird pos=noun n=2 gloss="common black European thrush" synonym=merl synonym=merle synonym=ouzel synonym=ousel synonym="European blackbird" synonym="Turdus merula" is_a=thrush core.source="wordnet 3.1"
+@k.words.blackboard.noun.1 k.words.sense word=blackboard pos=noun n=1 gloss="sheet of slate; for writing with chalk" synonym=chalkboard is_a=sheet core.source="wordnet 3.1"
 @k.words.blackjack.noun.1 k.words.sense word=blackjack pos=noun n=1 gloss="a common scrubby deciduous tree of central and southeastern United States having dark bark and broad three-lobed (club-shaped) leaves; tends to form dense thickets" synonym="blackjack oak" synonym="jack oak" synonym="Quercus marilandica" is_a="scrub oak" core.source="wordnet 3.1"
 @k.words.blackjack.noun.2 k.words.sense word=blackjack pos=noun n=2 gloss="a piece of metal covered by leather with a flexible handle; used for hitting people" synonym=cosh synonym=sap is_a=bludgeon core.source="wordnet 3.1"
 @k.words.blackjack.noun.3 k.words.sense word=blackjack pos=noun n=3 gloss="a flag usually bearing a white skull and crossbones on a black background; indicates a pirate ship" synonym="black flag" synonym="pirate flag" synonym="Jolly Roger" is_a=flag core.source="wordnet 3.1"
@@ -160,14 +167,23 @@
 @k.words.blow.verb.2 k.words.sense word=blow pos=verb n=2 gloss="be blowing or storming" core.source="wordnet 3.1"
 @k.words.blow.verb.3 k.words.sense word=blow pos=verb n=3 gloss="free of obstruction by blowing air through" is_a=exhaust core.source="wordnet 3.1"
 @k.words.blow.forms core.word text=blew text=blown means=blow of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.blower.noun.1 k.words.sense word=blower pos=noun n=1 gloss="a device that produces a current of air" is_a=device core.source="wordnet 3.1"
+@k.words.blower.noun.2 k.words.sense word=blower pos=noun n=2 gloss="a fan run by an electric motor" synonym="electric fan" is_a=fan core.source="wordnet 3.1"
+@k.words.blower.noun.3 k.words.sense word=blower pos=noun n=3 gloss="large aquatic carnivorous mammal with fin-like forelimbs no hind limbs, including: whales; dolphins; porpoises; narwhals" synonym=cetacean synonym="cetacean mammal" is_a="aquatic mammal" core.source="wordnet 3.1"
 @k.words.blowing.noun.1 k.words.sense word=blowing pos=noun n=1 gloss="processing that involves blowing a gas" is_a=processing core.source="wordnet 3.1"
 @k.words.blowjob.noun.1 k.words.sense word=blowjob pos=noun n=1 gloss="slang for fellatio" synonym="cock sucking" is_a=fellatio core.source="wordnet 3.1"
+@k.words.blowtorch.noun.1 k.words.sense word=blowtorch pos=noun n=1 gloss="a burner that mixes air and gas to produce a very hot flame" synonym=torch synonym=blowlamp is_a=burner core.source="wordnet 3.1"
 @k.words.blue.noun.1 k.words.sense word=blue pos=noun n=1 gloss="blue color or pigment; resembling the color of the clear sky in the daytime" synonym=blueness is_a="chromatic color" core.source="wordnet 3.1"
 @k.words.blue.noun.2 k.words.sense word=blue pos=noun n=2 gloss="blue clothing" is_a=clothing core.source="wordnet 3.1"
 @k.words.blue.noun.3 k.words.sense word=blue pos=noun n=3 gloss="any organization or party whose uniforms or badges are blue" is_a=organization core.source="wordnet 3.1"
 @k.words.blue.verb.1 k.words.sense word=blue pos=verb n=1 gloss="turn blue" is_a=discolor core.source="wordnet 3.1"
+@k.words.bluebell.noun.1 k.words.sense word=bluebell pos=noun n=1 gloss="sometimes placed in genus Scilla" synonym="wild hyacinth" synonym="wood hyacinth" synonym=harebell synonym="Hyacinthoides nonscripta" synonym="Scilla nonscripta" is_a="liliaceous plant" core.source="wordnet 3.1"
+@k.words.bluebell.noun.2 k.words.sense word=bluebell pos=noun n=2 gloss="one of the most handsome prairie wildflowers having large erect bell-shaped bluish flowers; of moist places in prairies and fields from eastern Colorado and Nebraska south to New Mexico and Texas" synonym="prairie gentian" synonym="tulip gentian" synonym="Eustoma grandiflorum" is_a=wildflower core.source="wordnet 3.1"
+@k.words.bluebell.noun.3 k.words.sense word=bluebell pos=noun n=3 gloss="perennial of northern hemisphere with slender stems and bell-shaped blue flowers" synonym=harebell synonym="Campanula rotundifolia" is_a=campanula core.source="wordnet 3.1"
 @k.words.blueberry.noun.1 k.words.sense word=blueberry pos=noun n=1 gloss="any of numerous shrubs of the genus Vaccinium bearing blueberries" synonym="blueberry bush" is_a=shrub core.source="wordnet 3.1"
 @k.words.blueberry.noun.2 k.words.sense word=blueberry pos=noun n=2 gloss="sweet edible dark-blue berries of either low-growing or high-growing blueberry plants" is_a=berry part_of="dwarf bilberry" part_of="high-bush blueberry" core.source="wordnet 3.1"
+@k.words.bluebird.noun.1 k.words.sense word=bluebird pos=noun n=1 gloss="fruit-eating mostly brilliant blue songbird of the East Indies" synonym="fairy bluebird" is_a=oscine core.source="wordnet 3.1"
+@k.words.bluebird.noun.2 k.words.sense word=bluebird pos=noun n=2 gloss="blue North American songbird" is_a=thrush core.source="wordnet 3.1"
 @k.words.blueprint.noun.1 k.words.sense word=blueprint pos=noun n=1 gloss="something intended as a guide for making something else" synonym=design synonym=pattern is_a=plan core.source="wordnet 3.1"
 @k.words.blueprint.noun.2 k.words.sense word=blueprint pos=noun n=2 gloss="photographic print of plans or technical drawings etc." is_a=photograph core.source="wordnet 3.1"
 @k.words.blueprint.verb.1 k.words.sense word=blueprint pos=verb n=1 gloss="make a blueprint of" synonym=draft synonym=draught is_a=design core.source="wordnet 3.1"

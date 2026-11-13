@@ -1,5 +1,5 @@
 # k.words/shards/re: noun and verb senses of the words from "re" to "reynolds" (first letters "re").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -281,6 +281,7 @@
 @k.words.refill.noun.1 k.words.sense word=refill pos=noun n=1 gloss="a prescription drug that is provided again" is_a="prescription drug" core.source="wordnet 3.1"
 @k.words.refill.noun.2 k.words.sense word=refill pos=noun n=2 gloss="a commercial product that refills a container with its appropriate contents" is_a=merchandise core.source="wordnet 3.1"
 @k.words.refill.verb.1 k.words.sense word=refill pos=verb n=1 gloss="fill something that had previously been emptied" synonym=replenish synonym="fill again" is_a=fill core.source="wordnet 3.1"
+@k.words.refinery.noun.1 k.words.sense word=refinery pos=noun n=1 gloss="an industrial plant for purifying a crude substance" is_a=plant core.source="wordnet 3.1"
 @k.words.reflect.verb.1 k.words.sense word=reflect pos=verb n=1 gloss="manifest or bring back" is_a=indicate core.source="wordnet 3.1"
 @k.words.reflect.verb.2 k.words.sense word=reflect pos=verb n=2 gloss="reflect deeply on a subject" synonym="chew over" synonym="think over" synonym=meditate synonym=ponder synonym=excogitate synonym=contemplate synonym=muse synonym=mull synonym="mull over" synonym=ruminate synonym=speculate is_a=think core.source="wordnet 3.1"
 @k.words.reflect.verb.3 k.words.sense word=reflect pos=verb n=3 gloss="to throw or bend back (from a surface)" synonym=reverberate core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
 # k.words/shards/wh: noun and verb senses of the words from "whack" to "why" (first letters "wh").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -26,6 +26,8 @@
 @k.words.wheel.verb.1 k.words.sense word=wheel pos=verb n=1 gloss="change directions as if revolving on a pivot" synonym="wheel around" is_a=revolve core.source="wordnet 3.1"
 @k.words.wheel.verb.2 k.words.sense word=wheel pos=verb n=2 gloss="wheel somebody or something" synonym="wheel around" is_a=transport core.source="wordnet 3.1"
 @k.words.wheel.verb.3 k.words.sense word=wheel pos=verb n=3 gloss="move along on or as if on wheels or a wheeled vehicle" synonym=roll is_a=travel core.source="wordnet 3.1"
+@k.words.wheelbarrow.noun.1 k.words.sense word=wheelbarrow pos=noun n=1 gloss="a cart for carrying small loads; has handles and one or more wheels" synonym=barrow synonym="garden cart" synonym="lawn cart" is_a=handcart core.source="wordnet 3.1"
+@k.words.wheelbarrow.verb.1 k.words.sense word=wheelbarrow pos=verb n=1 gloss="transport in a wheelbarrow" is_a=transport core.source="wordnet 3.1"
 @k.words.wheelchair.noun.1 k.words.sense word=wheelchair pos=noun n=1 gloss="a movable chair mounted on large wheels; for invalids or those who cannot walk; frequently propelled by the occupant" is_a=chair core.source="wordnet 3.1"
 @k.words.wheeler.noun.1 k.words.sense word=Wheeler pos=noun n=1 gloss="Scottish archaeologist (1890-1976)" synonym="Sir Mortimer Wheeler" synonym="Sir Robert Eric Mortimer Wheeler" instance_of=archeologist core.source="wordnet 3.1"
 @k.words.wheeler.noun.2 k.words.sense word=wheeler pos=noun n=2 gloss="someone who makes and repairs wooden wheels" synonym=wheelwright is_a=wright core.source="wordnet 3.1"

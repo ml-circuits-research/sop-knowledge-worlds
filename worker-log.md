@@ -2279,3 +2279,26 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.parts.test.mjs` (2 more), questions pa-7 to pa-9.
 - Numbers: k.parts 25 shards, 1,109 wires (were 24 and 677). Catalog 22 worlds, 853 shards, vocab 21,936 words; 0 errors, 0 warnings.
 - After the rebase on R9.5 (k.body): catalog 22 worlds, 853 shards, vocab 21,999 words; npm test 2,638 pass, 5 skipped, 0 fail.
+
+## Round 10, item 2 (2026-11-13, second worker): the common things with no sense in `k.words`
+
+- **Why they were missing:** one cause. `k.words` kept the words of the first 20,000 lines of the frequency
+  list; **427** of the 1,500 common things stand later in it (sunflower, teapot, locomotive, chimpanzee, raisin).
+  (COVERAGE.md said 312: that count let a word borrow the sense of its drawing; by name 428 were missing.) None
+  was missing because of several words, a plural or the limit of three senses: the list of common things has
+  single lower-case lemmas only, and the sense the coverage rule keeps is always among the first three. The 428th,
+  `isle`, had its sense but WordNet gives it `instance_of=island`, not `is_a`.
+- **Fixed by rule, no table:** `tools/import/wordnet.mjs` takes `extra`, the common things of
+  `tools/coverage.mjs` with the sense kept there: such a word is kept wherever it stands in the frequency list,
+  and that sense is kept even beyond the third (none needed it today). The coverage report counts `instance_of`
+  as a kind next to `is_a`.
+- **What remains: nothing.** Kind 1,500 of 1,500 by name (was 1,072 + 116 through the drawing, none 312);
+  definition 1,500 (the same before). A test (when the raw files are there) checks for every common thing that
+  the gloss of the sense kept is in `k.words` with a kind.
+- **Looked at:** the counts by cause; the new senses of sunflower, teapot and turtle. **Not read:** the 689 new
+  sense wires (they are WordNet's, written by the same rule as the other 26,116).
+- `k.words`: 10,898 words (were 10,471), 26,805 senses (26,116), 319 shards (318), 29668 wires, 5767722 bytes; the
+  largest shard is `co`, 1,205 wires, 233,632 bytes. Words beyond the 1,500 common things are as before.
+- **Judgement that is mine:** none. **What SOP Lang could not say:** nothing new.
+- Tests: `tests/import.wordnet.test.mjs` (1 more; the equality with the import now passes `extra`).
+- Numbers: catalog 22 worlds, 855 shards, vocab 22,167 words; 0 errors, 0 warnings. npm test 2,648 pass, 5 skipped, 0 fail.

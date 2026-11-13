@@ -1,5 +1,5 @@
 # k.words/shards/ju: noun and verb senses of the words from "jubilee" to "juvenile" (first letters "ju").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -58,6 +58,7 @@
 @k.words.jumper.noun.3 k.words.sense word=jumper pos=noun n=3 gloss="a crocheted or knitted garment covering the upper part of the body" synonym=sweater is_a=garment core.source="wordnet 3.1"
 @k.words.jumping.noun.1 k.words.sense word=jumping pos=noun n=1 gloss="the act of participating in an athletic competition in which you must jump" is_a="track and field" core.source="wordnet 3.1"
 @k.words.jumping.noun.2 k.words.sense word=jumping pos=noun n=2 gloss="the act of jumping; propelling yourself off the ground" synonym=jump is_a=propulsion core.source="wordnet 3.1"
+@k.words.jumpsuit.noun.1 k.words.sense word=jumpsuit pos=noun n=1 gloss="one-piece garment fashioned after a parachutist's uniform" synonym="jump suit" is_a=garment core.source="wordnet 3.1"
 @k.words.junction.noun.1 k.words.sense word=junction pos=noun n=1 gloss="the place where two or more things come together" is_a="topographic point" core.source="wordnet 3.1"
 @k.words.junction.noun.2 k.words.sense word=junction pos=noun n=2 gloss="the state of being joined together" synonym=conjunction synonym=conjugation synonym=colligation is_a=union core.source="wordnet 3.1"
 @k.words.junction.noun.3 k.words.sense word=junction pos=noun n=3 gloss="the shape or manner in which things come together and a connection is made" synonym=articulation synonym=join synonym=joint synonym=juncture is_a=connection core.source="wordnet 3.1"
@@ -71,6 +72,8 @@
 @k.words.junior.noun.1 k.words.sense word=junior pos=noun n=1 gloss="term of address for a disrespectful and annoying male" is_a=upstart core.source="wordnet 3.1"
 @k.words.junior.noun.2 k.words.sense word=junior pos=noun n=2 gloss="a third-year undergraduate" is_a=lowerclassman core.source="wordnet 3.1"
 @k.words.junior.noun.3 k.words.sense word=junior pos=noun n=3 gloss="the younger of two persons" is_a=person core.source="wordnet 3.1"
+@k.words.juniper.noun.1 k.words.sense word=juniper pos=noun n=1 gloss="desert shrub of Syria and Arabia having small white flowers; constitutes the juniper of the Old Testament; sometimes placed in genus Genista" synonym=retem synonym=raetam synonym="juniper bush" synonym="Retama raetam" synonym="Genista raetam" is_a=shrub core.source="wordnet 3.1"
+@k.words.juniper.noun.2 k.words.sense word=juniper pos=noun n=2 gloss="coniferous shrub or small tree with berrylike cones" is_a=cypress core.source="wordnet 3.1"
 @k.words.junk.noun.1 k.words.sense word=junk pos=noun n=1 gloss="the remains of something that has been destroyed or broken up" synonym=debris synonym=dust synonym=rubble synonym=detritus is_a=rubbish core.source="wordnet 3.1"
 @k.words.junk.noun.2 k.words.sense word=junk pos=noun n=2 gloss="any of various Chinese boats with a high poop and lugsails" is_a=boat core.source="wordnet 3.1"
 @k.words.junk.verb.1 k.words.sense word=junk pos=verb n=1 gloss="dispose of (something useless or old)" synonym=trash synonym=scrap is_a=discard core.source="wordnet 3.1"

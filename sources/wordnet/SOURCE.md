@@ -15,8 +15,8 @@
 - **How to fetch:** `mkdir -p sources/wordnet/raw && cd sources/wordnet/raw && curl -L -o wordnet31.zip
   https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/corpora/wordnet31.zip
   && unzip wordnet31.zip` ; then `node tools/import/wordnet.mjs`.
-- **What is kept:** for the words of the frequency list (its first 20,000 lines; lower case letters, digits and
-  hyphens only) that WordNet has as a noun or a verb: the 3 most frequent senses per part of speech, each with the
+- **What is kept:** for the words of the frequency list (its first 20,000 lines, and the common things of
+  `tools/coverage.mjs` wherever they stand in it; lower case letters, digits and hyphens only) that WordNet has as a noun or a verb: the 3 most frequent senses per part of speech, each with the
   definition part of its gloss (no example sentences), the other words of its synset (`synonym`), the first word of
   each hypernym synset (`is_a`), of each instance hypernym (`instance_of`) and of each part holonym (`part_of`); the
   irregular forms of `noun.exc` and `verb.exc` as `core.word` facts. Senses that WordNet marks as slurs, offensive

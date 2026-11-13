@@ -1,5 +1,5 @@
 # k.words/shards/ai: noun and verb senses of the words from "ai" to "aisle" (first letters "ai").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -36,6 +36,8 @@
 @k.words.airplane.noun.1 k.words.sense word=airplane pos=noun n=1 gloss="an aircraft that has a fixed wing and is powered by propellers or jets" synonym=aeroplane synonym=plane is_a="heavier-than-air craft" core.source="wordnet 3.1"
 @k.words.airport.noun.1 k.words.sense word=airport pos=noun n=1 gloss="an airfield equipped with control tower and hangars as well as accommodations for passengers and cargo" synonym=airdrome synonym=aerodrome synonym=drome is_a=airfield core.source="wordnet 3.1"
 @k.words.airs.noun.1 k.words.sense word=airs pos=noun n=1 gloss="affected manners intended to impress others" synonym=pose is_a=affectedness core.source="wordnet 3.1"
+@k.words.airship.noun.1 k.words.sense word=airship pos=noun n=1 gloss="a steerable self-propelled aircraft" synonym=dirigible is_a="lighter-than-air craft" core.source="wordnet 3.1"
+@k.words.airstrip.noun.1 k.words.sense word=airstrip pos=noun n=1 gloss="an airfield without normal airport facilities" synonym="flight strip" synonym="landing strip" synonym=strip is_a=airfield core.source="wordnet 3.1"
 @k.words.airway.noun.1 k.words.sense word=airway pos=noun n=1 gloss="a duct that provides ventilation (as in mines)" synonym="air passage" synonym="air duct" is_a=duct core.source="wordnet 3.1"
 @k.words.airway.noun.2 k.words.sense word=airway pos=noun n=2 gloss="a designated route followed by airplanes in flying from one airport to another" synonym="air lane" synonym="flight path" synonym=skyway is_a=path core.source="wordnet 3.1"
 @k.words.airway.noun.3 k.words.sense word=airway pos=noun n=3 gloss="the passages through which air enters and leaves the body" synonym="respiratory tract" is_a=tract part_of="respiratory system" core.source="wordnet 3.1"

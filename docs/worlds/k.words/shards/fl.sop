@@ -1,5 +1,5 @@
 # k.words/shards/fl: noun and verb senses of the words from "flack" to "flying" (first letters "fl").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -13,6 +13,10 @@
 @k.words.flag.verb.2 k.words.sense word=flag pos=verb n=2 gloss="provide with a flag" is_a=mark core.source="wordnet 3.1"
 @k.words.flag.verb.3 k.words.sense word=flag pos=verb n=3 gloss="droop, sink, or settle from or as if from pressure or loss of tautness" synonym=sag synonym=droop synonym=swag is_a=sink core.source="wordnet 3.1"
 @k.words.flag.forms core.word text=flagged text=flagging means=flag of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.flagpole.noun.1 k.words.sense word=flagpole pos=noun n=1 gloss="surveying instrument consisting of a straight rod painted in bands of alternate red and white each one foot wide; used for sightings by surveyors" synonym="range pole" synonym="ranging pole" is_a="surveying instrument" core.source="wordnet 3.1"
+@k.words.flagpole.noun.2 k.words.sense word=flagpole pos=noun n=2 gloss="a tall staff or pole on which a flag is raised" synonym=flagstaff is_a=staff core.source="wordnet 3.1"
+@k.words.flagship.noun.1 k.words.sense word=flagship pos=noun n=1 gloss="the chief one of a related group" is_a=thing core.source="wordnet 3.1"
+@k.words.flagship.noun.2 k.words.sense word=flagship pos=noun n=2 gloss="the ship that carries the commander of a fleet and flies his flag" is_a=ship core.source="wordnet 3.1"
 @k.words.flair.noun.1 k.words.sense word=flair pos=noun n=1 gloss="a natural talent" synonym=genius is_a=endowment core.source="wordnet 3.1"
 @k.words.flair.noun.2 k.words.sense word=flair pos=noun n=2 gloss="distinctive and stylish elegance" synonym=dash synonym=elan synonym=panache synonym=style is_a=elegance core.source="wordnet 3.1"
 @k.words.flair.noun.3 k.words.sense word=flair pos=noun n=3 gloss="a shape that spreads outward" synonym=flare is_a=shape core.source="wordnet 3.1"
@@ -27,6 +31,8 @@
 @k.words.flame.verb.2 k.words.sense word=flame pos=verb n=2 gloss="be in flames or aflame" is_a=burn core.source="wordnet 3.1"
 @k.words.flame.verb.3 k.words.sense word=flame pos=verb n=3 gloss="criticize harshly, usually via an electronic medium" is_a=chastise core.source="wordnet 3.1"
 @k.words.flaming.noun.1 k.words.sense word=flaming pos=noun n=1 gloss="the process of combustion of inflammable materials producing heat and light and (often) smoke" synonym=fire synonym=flame is_a=combustion core.source="wordnet 3.1"
+@k.words.flamingo.noun.1 k.words.sense word=flamingo pos=noun n=1 gloss="large pink to scarlet web-footed wading bird with down-bent bill; inhabits brackish lakes" is_a="wading bird" core.source="wordnet 3.1"
+@k.words.flamingo.forms core.word text=flamingoes means=flamingo of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.flanders.noun.1 k.words.sense word=Flanders pos=noun n=1 gloss="a medieval country in northern Europe that included regions now parts of northern France and Belgium and southwestern Netherlands" instance_of="European country" part_of=Europe core.source="wordnet 3.1"
 @k.words.flanders.spelling.Flanders core.word text=flanders means=Flanders of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.flank.noun.1 k.words.sense word=flank pos=noun n=1 gloss="the side of military or naval formation" synonym=wing is_a=formation core.source="wordnet 3.1"
@@ -137,6 +143,8 @@
 @k.words.flip.verb.2 k.words.sense word=flip pos=verb n=2 gloss="cause to go on or to be engaged or set in operation" synonym=throw synonym=switch is_a=engage core.source="wordnet 3.1"
 @k.words.flip.verb.3 k.words.sense word=flip pos=verb n=3 gloss="look through a book or other written material" synonym=flick synonym=thumb synonym=riffle synonym=leaf synonym=riff is_a=peruse core.source="wordnet 3.1"
 @k.words.flip.forms core.word text=flipped text=flipping means=flip of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.flipper.noun.1 k.words.sense word=flipper pos=noun n=1 gloss="a shoe for swimming; the paddle-like front is an aid in swimming (especially underwater)" synonym=fin is_a=shoe core.source="wordnet 3.1"
+@k.words.flipper.noun.2 k.words.sense word=flipper pos=noun n=2 gloss="the flat broad limb of aquatic animals specialized for swimming" is_a=limb part_of="aquatic vertebrate" part_of="aquatic mammal" core.source="wordnet 3.1"
 @k.words.flirt.noun.1 k.words.sense word=flirt pos=noun n=1 gloss="a seductive woman who uses her sex appeal to exploit men" synonym=coquette synonym=vamp synonym=vamper synonym=minx synonym=tease synonym=prickteaser is_a=woman core.source="wordnet 3.1"
 @k.words.flirt.noun.2 k.words.sense word=flirt pos=noun n=2 gloss="playful behavior intended to arouse sexual interest" synonym=flirting synonym=flirtation synonym=coquetry synonym=dalliance synonym=toying is_a=play core.source="wordnet 3.1"
 @k.words.flirt.verb.1 k.words.sense word=flirt pos=verb n=1 gloss="talk or behave amorously, without serious intentions" synonym="chat up" synonym=dally synonym=butterfly synonym=coquet synonym=coquette synonym=romance synonym=philander synonym=mash is_a=talk core.source="wordnet 3.1"

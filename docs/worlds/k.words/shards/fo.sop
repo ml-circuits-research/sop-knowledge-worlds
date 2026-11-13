@@ -1,5 +1,5 @@
 # k.words/shards/fo: noun and verb senses of the words from "fo" to "fox" (first letters "fo").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -60,6 +60,8 @@
 @k.words.folly.noun.1 k.words.sense word=folly pos=noun n=1 gloss="the trait of acting stupidly or rashly" synonym=foolishness synonym=unwiseness is_a=trait core.source="wordnet 3.1"
 @k.words.folly.noun.2 k.words.sense word=folly pos=noun n=2 gloss="a stupid mistake" synonym=stupidity synonym=betise synonym=foolishness synonym=imbecility is_a=mistake core.source="wordnet 3.1"
 @k.words.folly.noun.3 k.words.sense word=folly pos=noun n=3 gloss="the quality of being rash and foolish" synonym=foolishness synonym=craziness synonym=madness is_a=stupidity core.source="wordnet 3.1"
+@k.words.fondue.noun.1 k.words.sense word=fondue pos=noun n=1 gloss="cubes of meat or seafood cooked in hot oil and then dipped in any of various sauces" synonym=fondu is_a=dish core.source="wordnet 3.1"
+@k.words.fondue.noun.2 k.words.sense word=fondue pos=noun n=2 gloss="hot cheese or chocolate melted to the consistency of a sauce into which bread or fruits are dipped" synonym=fondu is_a=dish core.source="wordnet 3.1"
 @k.words.font.noun.1 k.words.sense word=font pos=noun n=1 gloss="a specific size and style of type within a type family" synonym=fount synonym=typeface synonym=face synonym=case is_a=type core.source="wordnet 3.1"
 @k.words.font.noun.2 k.words.sense word=font pos=noun n=2 gloss="bowl for baptismal water" synonym="baptismal font" synonym=baptistry synonym=baptistery is_a=basin core.source="wordnet 3.1"
 @k.words.food.noun.1 k.words.sense word=food pos=noun n=1 gloss="any substance that can be metabolized by an animal to give energy and build tissue" synonym=nutrient is_a=substance core.source="wordnet 3.1"
@@ -92,6 +94,8 @@
 @k.words.footprint.noun.1 k.words.sense word=footprint pos=noun n=1 gloss="a mark of a foot or shoe on a surface" synonym=footmark synonym=step is_a=mark core.source="wordnet 3.1"
 @k.words.footprint.noun.2 k.words.sense word=footprint pos=noun n=2 gloss="a trace suggesting that something was once present or felt or otherwise important" is_a=trace core.source="wordnet 3.1"
 @k.words.footprint.noun.3 k.words.sense word=footprint pos=noun n=3 gloss="the area taken up by some object" is_a=area core.source="wordnet 3.1"
+@k.words.footwear.noun.1 k.words.sense word=footwear pos=noun n=1 gloss="clothing worn on a person's feet" is_a=clothing core.source="wordnet 3.1"
+@k.words.footwear.noun.2 k.words.sense word=footwear pos=noun n=2 gloss="covering for a person's feet" synonym=footgear is_a=covering core.source="wordnet 3.1"
 @k.words.forbid.verb.1 k.words.sense word=forbid pos=verb n=1 gloss="command against" synonym=prohibit synonym=interdict synonym=proscribe synonym=veto synonym=disallow synonym=nix is_a=command core.source="wordnet 3.1"
 @k.words.forbid.verb.2 k.words.sense word=forbid pos=verb n=2 gloss="keep from happening or arising; make impossible" synonym=prevent synonym=forestall synonym=foreclose synonym=preclude core.source="wordnet 3.1"
 @k.words.forbid.forms core.word text=forbad text=forbade text=forbidden text=forbidding means=forbid of=k.words.sense.word core.source="wordnet 3.1"
@@ -101,6 +105,7 @@
 @k.words.force.verb.1 k.words.sense word=force pos=verb n=1 gloss="to cause to do through pressure or necessity, by physical, moral or intellectual means" synonym=coerce synonym=hale synonym=squeeze synonym=pressure is_a=compel core.source="wordnet 3.1"
 @k.words.force.verb.2 k.words.sense word=force pos=verb n=2 gloss="urge or force (a person) to an action; constrain or motivate" synonym=impel is_a=cause core.source="wordnet 3.1"
 @k.words.force.verb.3 k.words.sense word=force pos=verb n=3 gloss="move with force" synonym=push is_a=move core.source="wordnet 3.1"
+@k.words.forceps.noun.1 k.words.sense word=forceps pos=noun n=1 gloss="an extractor consisting of a pair of pincers used in medical treatment (especially for the delivery of babies)" is_a=extractor core.source="wordnet 3.1"
 @k.words.ford.noun.1 k.words.sense word=Ford pos=noun n=1 gloss="United States film maker (1896-1973)" synonym="John Ford" instance_of="film maker" core.source="wordnet 3.1"
 @k.words.ford.noun.2 k.words.sense word=Ford pos=noun n=2 gloss="grandson of Henry Ford (1917-1987)" synonym="Henry Ford II" instance_of=industrialist core.source="wordnet 3.1"
 @k.words.ford.noun.3 k.words.sense word=Ford pos=noun n=3 gloss="son of Henry Ford (1893-1943)" synonym="Edsel Bryant Ford" instance_of=industrialist core.source="wordnet 3.1"
@@ -225,6 +230,7 @@
 @k.words.founder.verb.2 k.words.sense word=founder pos=verb n=2 gloss="sink below the surface" is_a=sink core.source="wordnet 3.1"
 @k.words.founder.verb.3 k.words.sense word=founder pos=verb n=3 gloss="break down, literally or metaphorically" synonym=collapse synonym="fall in" synonym="cave in" synonym=give synonym="give way" synonym=break is_a=change core.source="wordnet 3.1"
 @k.words.founding.noun.1 k.words.sense word=founding pos=noun n=1 gloss="the act of starting something for the first time; introducing something new" synonym=initiation synonym=foundation synonym=institution synonym=origination synonym=creation synonym=innovation synonym=introduction synonym=instauration is_a=beginning core.source="wordnet 3.1"
+@k.words.foundry.noun.1 k.words.sense word=foundry pos=noun n=1 gloss="factory where metal castings are produced" synonym=metalworks is_a=factory core.source="wordnet 3.1"
 @k.words.fountain.noun.1 k.words.sense word=fountain pos=noun n=1 gloss="a structure from which an artificially produced jet of water arises" is_a=structure core.source="wordnet 3.1"
 @k.words.fountain.noun.2 k.words.sense word=fountain pos=noun n=2 gloss="a natural flow of ground water" synonym=spring synonym=outflow synonym=outpouring synonym="natural spring" is_a="geological formation" core.source="wordnet 3.1"
 @k.words.fountain.noun.3 k.words.sense word=fountain pos=noun n=3 gloss="an artificially produced flow of water" synonym=jet is_a=flow core.source="wordnet 3.1"

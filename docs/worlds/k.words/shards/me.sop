@@ -1,5 +1,5 @@
 # k.words/shards/me: noun and verb senses of the words from "me" to "mexico" (first letters "me").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -97,6 +97,7 @@
 @k.words.meeting.noun.2 k.words.sense word=meeting pos=noun n=2 gloss="a small informal social gathering" synonym="get together" is_a="social gathering" core.source="wordnet 3.1"
 @k.words.meeting.noun.3 k.words.sense word=meeting pos=noun n=3 gloss="a casual or unexpected convergence" synonym=encounter is_a=convergence core.source="wordnet 3.1"
 @k.words.meg.noun.1 k.words.sense word=meg pos=noun n=1 gloss="the number that is represented as a one followed by 6 zeros" synonym=million synonym=1000000 synonym="one thousand thousand" is_a="large integer" core.source="wordnet 3.1"
+@k.words.megaphone.noun.1 k.words.sense word=megaphone pos=noun n=1 gloss="a cone-shaped acoustic device held to the mouth to intensify and direct the human voice" is_a="acoustic device" core.source="wordnet 3.1"
 @k.words.mei.noun.1 k.words.sense word=mei pos=noun n=1 gloss="Japanese ornamental tree with fragrant white or pink blossoms and small yellow fruits" synonym="Japanese apricot" synonym="Prunus mume" is_a=apricot core.source="wordnet 3.1"
 @k.words.melancholy.noun.1 k.words.sense word=melancholy pos=noun n=1 gloss="a feeling of thoughtful sadness" is_a=sadness core.source="wordnet 3.1"
 @k.words.melancholy.noun.2 k.words.sense word=melancholy pos=noun n=2 gloss="a constitutional tendency to be gloomy and depressed" is_a=depression core.source="wordnet 3.1"
@@ -188,6 +189,7 @@
 @k.words.merge.verb.3 k.words.sense word=merge pos=verb n=3 gloss="join or combine" synonym=unite synonym=unify is_a=change core.source="wordnet 3.1"
 @k.words.merger.noun.1 k.words.sense word=merger pos=noun n=1 gloss="the combination of two or more commercial companies" synonym=amalgamation synonym=uniting is_a=consolidation core.source="wordnet 3.1"
 @k.words.merger.noun.2 k.words.sense word=merger pos=noun n=2 gloss="an occurrence that involves the production of a union" synonym=fusion synonym=unification is_a=union core.source="wordnet 3.1"
+@k.words.meringue.noun.1 k.words.sense word=meringue pos=noun n=1 gloss="sweet topping especially for pies made of beaten egg whites and sugar" is_a=topping core.source="wordnet 3.1"
 @k.words.merit.noun.1 k.words.sense word=merit pos=noun n=1 gloss="any admirable quality or attribute" synonym=virtue is_a=worth core.source="wordnet 3.1"
 @k.words.merit.noun.2 k.words.sense word=merit pos=noun n=2 gloss="the quality of being deserving (e.g., deserving assistance)" synonym=deservingness synonym=meritoriousness is_a=worthiness core.source="wordnet 3.1"
 @k.words.merit.verb.1 k.words.sense word=merit pos=verb n=1 gloss="be worthy or deserving" synonym=deserve is_a=be core.source="wordnet 3.1"

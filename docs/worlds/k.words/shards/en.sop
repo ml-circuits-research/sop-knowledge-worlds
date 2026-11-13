@@ -1,10 +1,13 @@
 # k.words/shards/en: noun and verb senses of the words from "en" to "envy" (first letters "en").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
 @k.words.en.noun.1 k.words.sense word=en pos=noun n=1 gloss="half the width of an em" synonym=nut is_a="linear unit" part_of=em core.source="wordnet 3.1"
 @k.words.enable.verb.1 k.words.sense word=enable pos=verb n=1 gloss="render capable or able for some task" is_a=change core.source="wordnet 3.1"
+@k.words.enclosure.noun.1 k.words.sense word=enclosure pos=noun n=1 gloss="a structure consisting of an area that has been enclosed for some purpose" is_a=area core.source="wordnet 3.1"
+@k.words.enclosure.noun.2 k.words.sense word=enclosure pos=noun n=2 gloss="the act of enclosing something inside something else" synonym=enclosing synonym=envelopment synonym=inclosure is_a=insertion core.source="wordnet 3.1"
+@k.words.enclosure.noun.3 k.words.sense word=enclosure pos=noun n=3 gloss="a naturally enclosed space" synonym="natural enclosure" is_a=space core.source="wordnet 3.1"
 @k.words.encore.noun.1 k.words.sense word=encore pos=noun n=1 gloss="an extra or repeated performance; usually given in response to audience demand" is_a=performance core.source="wordnet 3.1"
 @k.words.encore.verb.1 k.words.sense word=encore pos=verb n=1 gloss="request an encore, from a performer" is_a=request core.source="wordnet 3.1"
 @k.words.encounter.noun.1 k.words.sense word=encounter pos=noun n=1 gloss="a minor short-term fight" synonym=brush synonym=clash synonym=skirmish is_a=fight core.source="wordnet 3.1"

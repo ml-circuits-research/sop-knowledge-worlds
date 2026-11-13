@@ -1,5 +1,5 @@
 # k.words/shards/su: noun and verb senses of the words from "sub" to "suv" (first letters "su").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -126,6 +126,8 @@
 @k.words.sully.spelling.Sully core.word text=sully means=Sully of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.sully.forms core.word text=sullied means=sully of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.sultan.noun.1 k.words.sense word=sultan pos=noun n=1 gloss="the ruler of a Muslim country (especially of the former Ottoman Empire)" synonym="grand Turk" is_a=ruler core.source="wordnet 3.1"
+@k.words.sultana.noun.1 k.words.sense word=sultana pos=noun n=1 gloss="pale yellow seedless grape used for raisins and wine" is_a="vinifera grape" core.source="wordnet 3.1"
+@k.words.sultana.noun.2 k.words.sense word=sultana pos=noun n=2 gloss="dried seedless grape" synonym="seedless raisin" is_a=raisin core.source="wordnet 3.1"
 @k.words.sum.noun.1 k.words.sense word=sum pos=noun n=1 gloss="a quantity of money" synonym="sum of money" synonym=amount synonym="amount of money" is_a=assets core.source="wordnet 3.1"
 @k.words.sum.noun.2 k.words.sense word=sum pos=noun n=2 gloss="a quantity obtained by the addition of a group of numbers" synonym=amount synonym=total is_a=quantity core.source="wordnet 3.1"
 @k.words.sum.noun.3 k.words.sense word=sum pos=noun n=3 gloss="the final aggregate" synonym=summation synonym="sum total" is_a=collection core.source="wordnet 3.1"
@@ -155,10 +157,12 @@
 @k.words.sun.verb.1 k.words.sense word=sun pos=verb n=1 gloss="expose one's body to the sun" synonym=sunbathe is_a=lie core.source="wordnet 3.1"
 @k.words.sun.verb.2 k.words.sense word=sun pos=verb n=2 gloss="expose to the rays of the sun or affect by exposure to the sun" synonym=insolate synonym=solarize synonym=solarise is_a=expose core.source="wordnet 3.1"
 @k.words.sun.forms core.word text=sunned text=sunning means=sun of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.sundae.noun.1 k.words.sense word=sundae pos=noun n=1 gloss="ice cream served with a topping" synonym="ice-cream sundae" is_a="frozen dessert" core.source="wordnet 3.1"
 @k.words.sunday.noun.1 k.words.sense word=Sunday pos=noun n=1 gloss="first day of the week; observed as a day of rest and worship by most Christians" synonym="Lord's Day" synonym=Dominicus synonym=Sun is_a="rest day" part_of=weekend core.source="wordnet 3.1"
 @k.words.sunday.noun.2 k.words.sense word=Sunday pos=noun n=2 gloss="United States evangelist (1862-1935)" synonym="Billy Sunday" synonym="William Ashley Sunday" instance_of=evangelist core.source="wordnet 3.1"
 @k.words.sunday.spelling.Sunday core.word text=sunday means=Sunday of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.sundown.noun.1 k.words.sense word=sundown pos=noun n=1 gloss="the time in the evening at which the sun begins to fall below the horizon" synonym=sunset is_a=hour part_of=evening core.source="wordnet 3.1"
+@k.words.sunflower.noun.1 k.words.sense word=sunflower pos=noun n=1 gloss="any plant of the genus Helianthus having large flower heads with dark disk florets and showy yellow rays" synonym=helianthus is_a=flower core.source="wordnet 3.1"
 @k.words.sung.noun.1 k.words.sense word=Sung pos=noun n=1 gloss="the imperial dynasty of China from 960 to 1279; noted for art and literature and philosophy" synonym="Sung dynasty" synonym=Song synonym="Song dynasty" is_a=dynasty core.source="wordnet 3.1"
 @k.words.sung.spelling.Sung core.word text=sung means=Sung of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.sunglasses.noun.1 k.words.sense word=sunglasses pos=noun n=1 gloss="(plural) spectacles that are darkened or polarized to protect the eyes from the glare of the sun" synonym="dark glasses" synonym=shades is_a=spectacles core.source="wordnet 3.1"
@@ -166,6 +170,7 @@
 @k.words.sunrise.noun.1 k.words.sense word=sunrise pos=noun n=1 gloss="the first light of day" synonym=dawn synonym=dawning synonym=morning synonym=aurora synonym="first light" synonym=daybreak synonym="break of day" synonym="break of the day" synonym=dayspring synonym=sunup synonym=cockcrow is_a=hour core.source="wordnet 3.1"
 @k.words.sunrise.noun.2 k.words.sense word=sunrise pos=noun n=2 gloss="atmospheric phenomena accompanying the daily appearance of the sun" is_a="atmospheric phenomenon" core.source="wordnet 3.1"
 @k.words.sunrise.noun.3 k.words.sense word=sunrise pos=noun n=3 gloss="the daily event of the sun rising above the horizon" is_a="periodic event" core.source="wordnet 3.1"
+@k.words.sunscreen.noun.1 k.words.sense word=sunscreen pos=noun n=1 gloss="a cream spread on the skin; contains a chemical (as PABA) to filter out ultraviolet light and so protect from sunburn" synonym=sunblock synonym="sun blocker" is_a=cream core.source="wordnet 3.1"
 @k.words.sunset.noun.1 k.words.sense word=sunset pos=noun n=1 gloss="the time in the evening at which the sun begins to fall below the horizon" synonym=sundown is_a=hour part_of=evening core.source="wordnet 3.1"
 @k.words.sunset.noun.2 k.words.sense word=sunset pos=noun n=2 gloss="atmospheric phenomena accompanying the daily disappearance of the sun" is_a="atmospheric phenomenon" core.source="wordnet 3.1"
 @k.words.sunset.noun.3 k.words.sense word=sunset pos=noun n=3 gloss="the daily event of the sun sinking below the horizon" is_a="periodic event" core.source="wordnet 3.1"
@@ -237,6 +242,8 @@
 @k.words.surface.verb.1 k.words.sense word=surface pos=verb n=1 gloss="come to the surface" synonym="come up" synonym="rise up" synonym=rise is_a=ascend core.source="wordnet 3.1"
 @k.words.surface.verb.2 k.words.sense word=surface pos=verb n=2 gloss="put a coat on; cover the surface of; furnish with a surface" synonym=coat is_a=cover core.source="wordnet 3.1"
 @k.words.surface.verb.3 k.words.sense word=surface pos=verb n=3 gloss="appear or become visible; make a showing" synonym="come on" synonym="come out" synonym="turn up" synonym="show up" is_a=appear core.source="wordnet 3.1"
+@k.words.surfboard.noun.1 k.words.sense word=surfboard pos=noun n=1 gloss="a narrow buoyant board for riding surf" is_a=board core.source="wordnet 3.1"
+@k.words.surfboard.verb.1 k.words.sense word=surfboard pos=verb n=1 gloss="ride the waves of the sea with a surfboard" synonym=surf is_a=glide core.source="wordnet 3.1"
 @k.words.surfer.noun.1 k.words.sense word=surfer pos=noun n=1 gloss="someone who engages in surfboarding" synonym=surfboarder is_a=swimmer core.source="wordnet 3.1"
 @k.words.surfing.noun.1 k.words.sense word=surfing pos=noun n=1 gloss="the sport of riding a surfboard toward the shore on the crest of a wave" synonym=surfboarding synonym=surfriding is_a="water sport" core.source="wordnet 3.1"
 @k.words.surge.noun.1 k.words.sense word=surge pos=noun n=1 gloss="a sudden forceful flow" synonym=rush synonym=spate synonym=upsurge is_a=flow core.source="wordnet 3.1"
@@ -311,6 +318,9 @@
 @k.words.sustain.verb.1 k.words.sense word=sustain pos=verb n=1 gloss="lengthen or extend in duration or space" synonym=prolong synonym="keep up" is_a=continue core.source="wordnet 3.1"
 @k.words.sustain.verb.2 k.words.sense word=sustain pos=verb n=2 gloss="undergo (as of injuries and illnesses)" synonym=suffer synonym=have synonym=get is_a=experience core.source="wordnet 3.1"
 @k.words.sustain.verb.3 k.words.sense word=sustain pos=verb n=3 gloss="provide with nourishment" synonym=nourish synonym=nurture is_a=provide core.source="wordnet 3.1"
+@k.words.sustenance.noun.1 k.words.sense word=sustenance pos=noun n=1 gloss="a source of materials to nourish the body" synonym=nutriment synonym=nourishment synonym=nutrition synonym=aliment synonym=alimentation synonym=victuals is_a=food core.source="wordnet 3.1"
+@k.words.sustenance.noun.2 k.words.sense word=sustenance pos=noun n=2 gloss="the financial means whereby one lives" synonym=support synonym=keep synonym=livelihood synonym=living synonym="bread and butter" is_a=resource core.source="wordnet 3.1"
+@k.words.sustenance.noun.3 k.words.sense word=sustenance pos=noun n=3 gloss="the act of sustaining life by food or providing a means of subsistence" synonym=sustentation synonym=sustainment synonym=maintenance synonym=upkeep is_a=support core.source="wordnet 3.1"
 @k.words.suture.noun.1 k.words.sense word=suture pos=noun n=1 gloss="an immovable joint (especially between the bones of the skull)" synonym=sutura synonym="fibrous joint" is_a=joint core.source="wordnet 3.1"
 @k.words.suture.noun.2 k.words.sense word=suture pos=noun n=2 gloss="a seam used in surgery" synonym="surgical seam" is_a=seam core.source="wordnet 3.1"
 @k.words.suture.noun.3 k.words.sense word=suture pos=noun n=3 gloss="thread of catgut or silk or wire used by surgeons to stitch tissues together" is_a=thread core.source="wordnet 3.1"

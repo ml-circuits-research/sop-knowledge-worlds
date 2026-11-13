@@ -1,5 +1,5 @@
 # k.words/shards/fe: noun and verb senses of the words from "fe" to "fez" (first letters "fe").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -51,6 +51,9 @@
 @k.words.feed.forms core.word text=fed means=feed of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.feedback.noun.1 k.words.sense word=feedback pos=noun n=1 gloss="the process in which part of the output of a system is returned to its input in order to regulate its further output" is_a="natural process" core.source="wordnet 3.1"
 @k.words.feedback.noun.2 k.words.sense word=feedback pos=noun n=2 gloss="response to an inquiry or experiment" is_a=answer core.source="wordnet 3.1"
+@k.words.feeder.noun.1 k.words.sense word=feeder pos=noun n=1 gloss="an animal being fattened or suitable for fattening" is_a="domestic animal" core.source="wordnet 3.1"
+@k.words.feeder.noun.2 k.words.sense word=feeder pos=noun n=2 gloss="someone who consumes food for nourishment" synonym=eater is_a=consumer core.source="wordnet 3.1"
+@k.words.feeder.noun.3 k.words.sense word=feeder pos=noun n=3 gloss="a branch that flows into the main stream" synonym=tributary synonym=confluent synonym=affluent is_a=branch core.source="wordnet 3.1"
 @k.words.feeding.noun.1 k.words.sense word=feeding pos=noun n=1 gloss="the act of consuming food" synonym=eating is_a=consumption core.source="wordnet 3.1"
 @k.words.feeding.noun.2 k.words.sense word=feeding pos=noun n=2 gloss="the act of supplying food and nourishment" synonym=alimentation is_a=provision core.source="wordnet 3.1"
 @k.words.feel.noun.1 k.words.sense word=feel pos=noun n=1 gloss="an intuitive awareness" is_a=awareness core.source="wordnet 3.1"
@@ -105,6 +108,9 @@
 @k.words.fender.noun.1 k.words.sense word=fender pos=noun n=1 gloss="a barrier that surrounds the wheels of a vehicle to block splashing water or mud" synonym=wing is_a=barrier part_of=car core.source="wordnet 3.1"
 @k.words.fender.noun.2 k.words.sense word=fender pos=noun n=2 gloss="an inclined metal frame at the front of a locomotive to clear the track" synonym=buffer synonym=cowcatcher synonym=pilot is_a=framework part_of=locomotive core.source="wordnet 3.1"
 @k.words.fender.noun.3 k.words.sense word=fender pos=noun n=3 gloss="a low metal guard to confine falling coals to a hearth" is_a=guard core.source="wordnet 3.1"
+@k.words.fennel.noun.1 k.words.sense word=fennel pos=noun n=1 gloss="any of several aromatic herbs having edible seeds and leaves and stems" is_a=herb core.source="wordnet 3.1"
+@k.words.fennel.noun.2 k.words.sense word=fennel pos=noun n=2 gloss="aromatic bulbous stem base eaten cooked or raw in salads" synonym="Florence fennel" synonym=finocchio is_a=vegetable part_of="Florence fennel" core.source="wordnet 3.1"
+@k.words.fennel.noun.3 k.words.sense word=fennel pos=noun n=3 gloss="leaves used for seasoning" synonym="common fennel" is_a=herb part_of="common fennel" core.source="wordnet 3.1"
 @k.words.ferdinand.noun.1 k.words.sense word=Ferdinand pos=noun n=1 gloss="the king of Castile and Aragon who ruled jointly with his wife Isabella; his marriage to Isabella I in 1469 marked the beginning of the modern state of Spain and their capture of Granada from the Moors in 1492 united Spain as one country; they instituted the Spanish Inquisition in 1478 and supported the expedition of Christopher Columbus in 1492 (1452-1516)" synonym="King Ferdinand" synonym="Ferdinand of Aragon" synonym="Ferdinand V" synonym="Ferdinand the Catholic" instance_of=king core.source="wordnet 3.1"
 @k.words.ferdinand.spelling.Ferdinand core.word text=ferdinand means=Ferdinand of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.fern.noun.1 k.words.sense word=fern pos=noun n=1 gloss="any of numerous flowerless and seedless vascular plants having true roots from a rhizome and fronds that uncurl upward; reproduce by spores" is_a=pteridophyte core.source="wordnet 3.1"

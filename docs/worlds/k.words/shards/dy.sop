@@ -1,5 +1,5 @@
 # k.words/shards/dy: noun and verb senses of the words from "dye" to "dynasty" (first letters "dy").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -15,4 +15,5 @@
 @k.words.dynamics.noun.1 k.words.sense word=dynamics pos=noun n=1 gloss="the branch of mechanics concerned with the forces that cause motions of bodies" synonym=kinetics is_a=mechanics core.source="wordnet 3.1"
 @k.words.dynamite.noun.1 k.words.sense word=dynamite pos=noun n=1 gloss="an explosive containing nitrate sensitized with nitroglycerin absorbed on wood pulp" is_a="explosive compound" core.source="wordnet 3.1"
 @k.words.dynamite.verb.1 k.words.sense word=dynamite pos=verb n=1 gloss="blow up with dynamite" is_a=explode core.source="wordnet 3.1"
+@k.words.dynamo.noun.1 k.words.sense word=dynamo pos=noun n=1 gloss="generator consisting of a coil (the armature) that rotates between the poles of an electromagnet (the field magnet) causing a current to flow in the armature" is_a=generator core.source="wordnet 3.1"
 @k.words.dynasty.noun.1 k.words.sense word=dynasty pos=noun n=1 gloss="a sequence of powerful leaders in the same family" is_a=family core.source="wordnet 3.1"

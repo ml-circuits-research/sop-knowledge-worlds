@@ -1,5 +1,5 @@
-# k.words/shards/fi: noun and verb senses of the words from "fiance" to "fixing" (first letters "fi").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/fi: noun and verb senses of the words from "fiance" to "fizz" (first letters "fi").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -34,6 +34,7 @@
 @k.words.fiend.noun.2 k.words.sense word=fiend pos=noun n=2 gloss="an evil supernatural being" synonym=devil synonym=demon synonym=daemon synonym=daimon is_a="evil spirit" core.source="wordnet 3.1"
 @k.words.fiend.noun.3 k.words.sense word=fiend pos=noun n=3 gloss="a person motivated by irrational enthusiasm (as for a cause)" synonym=fanatic is_a=enthusiast core.source="wordnet 3.1"
 @k.words.fiesta.noun.1 k.words.sense word=fiesta pos=noun n=1 gloss="an elaborate party (often outdoors)" synonym=fete synonym=feast is_a=party core.source="wordnet 3.1"
+@k.words.fife.noun.1 k.words.sense word=fife pos=noun n=1 gloss="a small high-pitched flute similar to a piccolo; has a shrill tone and is used chiefly to accompany drums in a marching band" is_a=flute core.source="wordnet 3.1"
 @k.words.fifteen.noun.1 k.words.sense word=fifteen pos=noun n=1 gloss="the cardinal number that is the sum of fourteen and one" synonym=15 synonym=XV is_a="large integer" core.source="wordnet 3.1"
 @k.words.fifth.noun.1 k.words.sense word=fifth pos=noun n=1 gloss="a quantity of liquor equal to one fifth of a United States gallon" is_a="United States liquid unit" core.source="wordnet 3.1"
 @k.words.fifth.noun.2 k.words.sense word=fifth pos=noun n=2 gloss="position five in a countable series of things" is_a=rank core.source="wordnet 3.1"
@@ -84,9 +85,15 @@
 @k.words.fill.verb.1 k.words.sense word=fill pos=verb n=1 gloss="make full, also in a metaphorical sense" synonym="fill up" synonym="make full" is_a=change core.source="wordnet 3.1"
 @k.words.fill.verb.2 k.words.sense word=fill pos=verb n=2 gloss="become full" synonym="fill up" is_a="change state" core.source="wordnet 3.1"
 @k.words.fill.verb.3 k.words.sense word=fill pos=verb n=3 gloss="occupy the whole of" synonym=occupy is_a=be core.source="wordnet 3.1"
+@k.words.fillet.noun.1 k.words.sense word=fillet pos=noun n=1 gloss="a boneless steak cut from the tenderloin of beef" synonym=filet is_a=beefsteak part_of="beef tenderloin" core.source="wordnet 3.1"
+@k.words.fillet.noun.2 k.words.sense word=fillet pos=noun n=2 gloss="a longitudinal slice or boned side of a fish" synonym=filet synonym="fish fillet" synonym="fish filet" is_a=piece core.source="wordnet 3.1"
+@k.words.fillet.noun.3 k.words.sense word=fillet pos=noun n=3 gloss="a bundle of sensory nerve fibers going to the thalamus" synonym=lemniscus is_a="sensory nerve" core.source="wordnet 3.1"
+@k.words.fillet.verb.1 k.words.sense word=fillet pos=verb n=1 gloss="decorate with a lace of geometric designs" synonym=filet is_a=decorate core.source="wordnet 3.1"
+@k.words.fillet.verb.2 k.words.sense word=fillet pos=verb n=2 gloss="cut into filets" synonym=filet is_a=carve core.source="wordnet 3.1"
 @k.words.filling.noun.1 k.words.sense word=filling pos=noun n=1 gloss="any material that fills a space or container" synonym=fill is_a=material core.source="wordnet 3.1"
 @k.words.filling.noun.2 k.words.sense word=filling pos=noun n=2 gloss="flow into something (as a container)" is_a=flow core.source="wordnet 3.1"
 @k.words.filling.noun.3 k.words.sense word=filling pos=noun n=3 gloss="a food mixture used to fill pastry or sandwiches etc." is_a=concoction core.source="wordnet 3.1"
+@k.words.filly.noun.1 k.words.sense word=filly pos=noun n=1 gloss="a young female horse under the age of four" is_a=foal is_a=female core.source="wordnet 3.1"
 @k.words.film.noun.1 k.words.sense word=film pos=noun n=1 gloss="a form of entertainment that enacts a story by sound and a sequence of images giving the illusion of continuous movement" synonym=movie synonym=picture synonym="moving picture" synonym="moving-picture show" synonym="motion picture" synonym="motion-picture show" synonym="picture show" synonym=pic synonym=flick is_a=show is_a=product core.source="wordnet 3.1"
 @k.words.film.noun.2 k.words.sense word=film pos=noun n=2 gloss="a medium that disseminates moving pictures" synonym=cinema synonym=celluloid is_a=medium core.source="wordnet 3.1"
 @k.words.film.noun.3 k.words.sense word=film pos=noun n=3 gloss="photographic material consisting of a base of celluloid covered with a photographic emulsion; used to make negatives or transparencies" synonym="photographic film" is_a="photographic paper" core.source="wordnet 3.1"
@@ -178,6 +185,8 @@
 @k.words.fireball.noun.2 k.words.sense word=fireball pos=noun n=2 gloss="a highly energetic and indefatigable person" synonym=powerhouse synonym="human dynamo" synonym="ball of fire" is_a=actor core.source="wordnet 3.1"
 @k.words.fireball.noun.3 k.words.sense word=fireball pos=noun n=3 gloss="a ball of fire (such as the sun or a ball-shaped discharge of lightning)" is_a=ball core.source="wordnet 3.1"
 @k.words.firefighter.noun.1 k.words.sense word=firefighter pos=noun n=1 gloss="a member of a fire department who tries to extinguish fires" synonym=fireman synonym="fire fighter" synonym=fire-eater is_a=defender core.source="wordnet 3.1"
+@k.words.firefly.noun.1 k.words.sense word=firefly pos=noun n=1 gloss="tropical American click beetle having bright luminous spots" synonym="fire beetle" synonym="Pyrophorus noctiluca" is_a="elaterid beetle" core.source="wordnet 3.1"
+@k.words.firefly.noun.2 k.words.sense word=firefly pos=noun n=2 gloss="nocturnal beetle common in warm regions having luminescent abdominal organs" synonym="lightning bug" is_a=beetle core.source="wordnet 3.1"
 @k.words.firehouse.noun.1 k.words.sense word=firehouse pos=noun n=1 gloss="a station housing fire apparatus and firemen" synonym="fire station" is_a=station part_of=infrastructure core.source="wordnet 3.1"
 @k.words.fireman.noun.1 k.words.sense word=fireman pos=noun n=1 gloss="play in which children pretend to put out a fire" is_a=play core.source="wordnet 3.1"
 @k.words.fireman.noun.2 k.words.sense word=fireman pos=noun n=2 gloss="a laborer who tends fires (as on a coal-fired train or steamship)" synonym=stoker is_a=laborer core.source="wordnet 3.1"
@@ -246,3 +255,5 @@
 @k.words.fixing.noun.1 k.words.sense word=fixing pos=noun n=1 gloss="the act of putting something in working order again" synonym=repair synonym=fix synonym=fixture synonym=mend synonym=mending synonym=reparation is_a=improvement core.source="wordnet 3.1"
 @k.words.fixing.noun.2 k.words.sense word=fixing pos=noun n=2 gloss="restraint that attaches to something or holds something in place" synonym=fastener synonym=fastening synonym=holdfast is_a=restraint core.source="wordnet 3.1"
 @k.words.fixing.noun.3 k.words.sense word=fixing pos=noun n=3 gloss="the sterilization of an animal" synonym=neutering synonym=altering is_a=sterilization core.source="wordnet 3.1"
+@k.words.fizz.noun.1 k.words.sense word=fizz pos=noun n=1 gloss="an effervescent beverage (usually alcoholic)" is_a=beverage core.source="wordnet 3.1"
+@k.words.fizz.verb.1 k.words.sense word=fizz pos=verb n=1 gloss="become bubbly or frothy or foaming" synonym=foam synonym=froth synonym=effervesce synonym=sparkle synonym="form bubbles" is_a=bubble core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
-# k.words/shards/mo: noun and verb senses of the words from "mo" to "mozart" (first letters "mo").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/mo: noun and verb senses of the words from "mo" to "mozzarella" (first letters "mo").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -10,6 +10,7 @@
 @k.words.mo.spelling.Mo core.word text=mo means=Mo of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.moan.noun.1 k.words.sense word=moan pos=noun n=1 gloss="an utterance expressing pain or disapproval" synonym=groan is_a=utterance core.source="wordnet 3.1"
 @k.words.moan.verb.1 k.words.sense word=moan pos=verb n=1 gloss="indicate pain, discomfort, or displeasure" synonym=groan is_a=utter core.source="wordnet 3.1"
+@k.words.moat.noun.1 k.words.sense word=moat pos=noun n=1 gloss="ditch dug as a fortification and usually filled with water" synonym=fosse is_a=trench core.source="wordnet 3.1"
 @k.words.mob.noun.1 k.words.sense word=mob pos=noun n=1 gloss="a disorderly crowd of people" synonym=rabble synonym=rout is_a=crowd core.source="wordnet 3.1"
 @k.words.mob.noun.2 k.words.sense word=mob pos=noun n=2 gloss="a loose affiliation of gangsters in charge of organized criminal activities" synonym=syndicate synonym="crime syndicate" synonym=family is_a="organized crime" core.source="wordnet 3.1"
 @k.words.mob.noun.3 k.words.sense word=mob pos=noun n=3 gloss="an association of criminals" synonym=gang synonym=pack synonym=ring is_a=association core.source="wordnet 3.1"
@@ -25,6 +26,7 @@
 @k.words.mockery.noun.1 k.words.sense word=mockery pos=noun n=1 gloss="showing your contempt by derision" synonym=jeer synonym=jeering synonym=scoff synonym=scoffing is_a=derision core.source="wordnet 3.1"
 @k.words.mockery.noun.2 k.words.sense word=mockery pos=noun n=2 gloss="a composition that imitates or misrepresents somebody's style, usually in a humorous way" synonym=parody synonym=lampoon synonym=spoof synonym=sendup synonym=send-up synonym=takeoff synonym=burlesque synonym=travesty synonym=pasquinade synonym=put-on is_a=caricature core.source="wordnet 3.1"
 @k.words.mockery.noun.3 k.words.sense word=mockery pos=noun n=3 gloss="humorous or satirical mimicry" synonym=parody synonym=takeoff is_a=apery core.source="wordnet 3.1"
+@k.words.mockingbird.noun.1 k.words.sense word=mockingbird pos=noun n=1 gloss="long-tailed grey-and-white songbird of the southern United States able to mimic songs of other birds" synonym=mocker synonym="Mimus polyglotktos" is_a=oscine core.source="wordnet 3.1"
 @k.words.mode.noun.1 k.words.sense word=mode pos=noun n=1 gloss="how something is done or how it happens" synonym=manner synonym=style synonym=way synonym=fashion is_a=property core.source="wordnet 3.1"
 @k.words.mode.noun.2 k.words.sense word=mode pos=noun n=2 gloss="a particular functioning condition or arrangement" is_a=condition core.source="wordnet 3.1"
 @k.words.mode.noun.3 k.words.sense word=mode pos=noun n=3 gloss="a classification of propositions on the basis of whether they claim necessity or possibility or impossibility" synonym=modality is_a="logical relation" core.source="wordnet 3.1"
@@ -57,6 +59,7 @@
 @k.words.mohammed.spelling.Mohammed core.word text=mohammed means=Mohammed of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.moisture.noun.1 k.words.sense word=moisture pos=noun n=1 gloss="wetness caused by water" synonym=wet is_a=wetness core.source="wordnet 3.1"
 @k.words.mojo.noun.1 k.words.sense word=mojo pos=noun n=1 gloss="a magic power or magic spell" is_a=magic core.source="wordnet 3.1"
+@k.words.molasses.noun.1 k.words.sense word=molasses pos=noun n=1 gloss="thick dark syrup produced by boiling down juice from sugar cane; especially during sugar refining" is_a=syrup core.source="wordnet 3.1"
 @k.words.mold.noun.1 k.words.sense word=mold pos=noun n=1 gloss="the distinctive form in which a thing is made" synonym=cast synonym=mould synonym=stamp is_a=solid core.source="wordnet 3.1"
 @k.words.mold.noun.2 k.words.sense word=mold pos=noun n=2 gloss="container into which liquid is poured to create a given shape when it hardens" synonym=mould synonym=cast is_a=container core.source="wordnet 3.1"
 @k.words.mold.noun.3 k.words.sense word=mold pos=noun n=3 gloss="loose soil rich in organic matter" synonym=mould is_a=soil core.source="wordnet 3.1"
@@ -95,6 +98,7 @@
 @k.words.money.noun.1 k.words.sense word=money pos=noun n=1 gloss="the most common medium of exchange; functions as legal tender" is_a="medium of exchange" part_of="money supply" core.source="wordnet 3.1"
 @k.words.money.noun.2 k.words.sense word=money pos=noun n=2 gloss="wealth reckoned in terms of money" is_a=wealth core.source="wordnet 3.1"
 @k.words.money.noun.3 k.words.sense word=money pos=noun n=3 gloss="the official currency issued by a government or national bank" is_a=currency core.source="wordnet 3.1"
+@k.words.mongoose.noun.1 k.words.sense word=mongoose pos=noun n=1 gloss="agile grizzled Old World viverrine; preys on snakes and rodents" is_a=viverrine core.source="wordnet 3.1"
 @k.words.mongrel.noun.2 k.words.sense word=mongrel pos=noun n=2 gloss="an inferior dog or one of mixed breed" synonym=cur synonym=mutt is_a=dog core.source="wordnet 3.1"
 @k.words.monitor.noun.1 k.words.sense word=monitor pos=noun n=1 gloss="someone who supervises (an examination)" synonym=proctor is_a=supervisor core.source="wordnet 3.1"
 @k.words.monitor.noun.2 k.words.sense word=monitor pos=noun n=2 gloss="someone who gives a warning so that a mistake can be avoided" synonym=admonisher synonym=reminder is_a=defender core.source="wordnet 3.1"
@@ -238,6 +242,10 @@
 @k.words.morton.noun.1 k.words.sense word=Morton pos=noun n=1 gloss="United States jazz musician who moved from ragtime to New Orleans jazz (1885-1941)" synonym="Jelly Roll Morton" synonym="Ferdinand Joseph La Menthe Morton" instance_of="jazz musician" core.source="wordnet 3.1"
 @k.words.morton.spelling.Morton core.word text=morton means=Morton of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.mortuary.noun.1 k.words.sense word=mortuary pos=noun n=1 gloss="a building (or room) where dead bodies are kept before burial or cremation" synonym=morgue synonym="dead room" is_a=building core.source="wordnet 3.1"
+@k.words.mosaic.noun.1 k.words.sense word=mosaic pos=noun n=1 gloss="art consisting of a design made of small pieces of colored stone or glass" is_a=art core.source="wordnet 3.1"
+@k.words.mosaic.noun.2 k.words.sense word=mosaic pos=noun n=2 gloss="viral disease in solanaceous plants (tomatoes, potatoes, tobacco) resulting in mottling and often shriveling of the leaves" is_a="plant disease" core.source="wordnet 3.1"
+@k.words.mosaic.noun.3 k.words.sense word=Mosaic pos=noun n=3 gloss="a freeware browser" instance_of=browser core.source="wordnet 3.1"
+@k.words.mosaic.spelling.Mosaic core.word text=mosaic means=Mosaic of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.moscow.noun.1 k.words.sense word=Moscow pos=noun n=1 gloss="a city of central European Russia; formerly capital of both the Soviet Union and Soviet Russia; since 1991 the capital of the Russian Federation" synonym="capital of the Russian Federation" synonym="Russian capital" instance_of="national capital" part_of=Russia core.source="wordnet 3.1"
 @k.words.moscow.spelling.Moscow core.word text=moscow means=Moscow of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.moses.noun.1 k.words.sense word=Moses pos=noun n=1 gloss="(Old Testament) the Hebrew prophet who led the Israelites from Egypt across the Red sea on a journey known as the Exodus; Moses received the Ten Commandments from God on Mount Sinai" instance_of=prophet core.source="wordnet 3.1"
@@ -260,6 +268,9 @@
 @k.words.mother-in-law.forms core.word text=mothers-in-law means=mother-in-law of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.motherhood.noun.1 k.words.sense word=motherhood pos=noun n=1 gloss="the kinship relation between an offspring and the mother" synonym=maternity is_a=kinship core.source="wordnet 3.1"
 @k.words.motherland.noun.1 k.words.sense word=motherland pos=noun n=1 gloss="the country where you were born" synonym=fatherland synonym=homeland synonym="mother country" synonym="country of origin" synonym="native land" is_a=country core.source="wordnet 3.1"
+@k.words.motif.noun.1 k.words.sense word=motif pos=noun n=1 gloss="a design or figure that consists of recurring shapes or colors, as in architecture or decoration" synonym=motive is_a=design core.source="wordnet 3.1"
+@k.words.motif.noun.2 k.words.sense word=motif pos=noun n=2 gloss="a theme that is repeated or elaborated in a piece of music" synonym=motive is_a=theme core.source="wordnet 3.1"
+@k.words.motif.noun.3 k.words.sense word=motif pos=noun n=3 gloss="a unifying idea that is a recurrent element in literary or artistic work" synonym=theme is_a=idea core.source="wordnet 3.1"
 @k.words.motion.noun.1 k.words.sense word=motion pos=noun n=1 gloss="the use of movements (especially of the hands) to communicate familiar or prearranged signals" synonym=gesture is_a="visual communication" core.source="wordnet 3.1"
 @k.words.motion.noun.2 k.words.sense word=motion pos=noun n=2 gloss="a natural event that involves a change in the position or location of something" synonym=movement is_a=happening core.source="wordnet 3.1"
 @k.words.motion.noun.3 k.words.sense word=motion pos=noun n=3 gloss="a change of position that does not entail a change of location" synonym=movement synonym=move synonym=motility is_a=change core.source="wordnet 3.1"
@@ -278,6 +289,7 @@
 @k.words.motorbike.verb.1 k.words.sense word=motorbike pos=verb n=1 gloss="ride a motorcycle" synonym=motorcycle synonym=cycle is_a=ride core.source="wordnet 3.1"
 @k.words.motorcycle.noun.1 k.words.sense word=motorcycle pos=noun n=1 gloss="a motor vehicle with two wheels and a strong frame" synonym=bike is_a="motor vehicle" core.source="wordnet 3.1"
 @k.words.motorcycle.verb.1 k.words.sense word=motorcycle pos=verb n=1 gloss="ride a motorcycle" synonym=motorbike synonym=cycle is_a=ride core.source="wordnet 3.1"
+@k.words.motorway.noun.1 k.words.sense word=motorway pos=noun n=1 gloss="a broad highway designed for high-speed traffic" synonym=expressway synonym=freeway synonym=pike synonym="state highway" synonym=superhighway synonym=throughway synonym=thruway is_a=highway core.source="wordnet 3.1"
 @k.words.motto.noun.1 k.words.sense word=motto pos=noun n=1 gloss="a favorite saying of a sect or political group" synonym=slogan synonym=catchword synonym=shibboleth is_a=saying core.source="wordnet 3.1"
 @k.words.motto.forms core.word text=mottoes means=motto of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.mould.noun.1 k.words.sense word=mould pos=noun n=1 gloss="loose soil rich in organic matter" synonym=mold is_a=soil core.source="wordnet 3.1"
@@ -323,6 +335,9 @@
 @k.words.mouth.verb.3 k.words.sense word=mouth pos=verb n=3 gloss="touch with the mouth" is_a=touch core.source="wordnet 3.1"
 @k.words.mouthful.noun.1 k.words.sense word=mouthful pos=noun n=1 gloss="the quantity that can be held in the mouth" is_a=containerful core.source="wordnet 3.1"
 @k.words.mouthful.noun.2 k.words.sense word=mouthful pos=noun n=2 gloss="a small amount eaten or drunk" synonym=taste is_a="small indefinite quantity" part_of=helping core.source="wordnet 3.1"
+@k.words.mouthpiece.noun.1 k.words.sense word=mouthpiece pos=noun n=1 gloss="a part that goes over or into the mouth of a person" is_a=aperture part_of=respirator core.source="wordnet 3.1"
+@k.words.mouthpiece.noun.2 k.words.sense word=mouthpiece pos=noun n=2 gloss="an acoustic device; the part of a telephone into which a person speaks" is_a="acoustic device" part_of=telephone core.source="wordnet 3.1"
+@k.words.mouthpiece.noun.3 k.words.sense word=mouthpiece pos=noun n=3 gloss="a spokesperson (as a lawyer)" synonym=mouth is_a=spokesperson core.source="wordnet 3.1"
 @k.words.move.noun.1 k.words.sense word=move pos=noun n=1 gloss="the act of deciding to do something" is_a=decision core.source="wordnet 3.1"
 @k.words.move.noun.2 k.words.sense word=move pos=noun n=2 gloss="the act of changing your residence or place of business" synonym=relocation is_a=change core.source="wordnet 3.1"
 @k.words.move.noun.3 k.words.sense word=move pos=noun n=3 gloss="a change of position that does not entail a change of location" synonym=motion synonym=movement synonym=motility is_a=change core.source="wordnet 3.1"
@@ -341,3 +356,4 @@
 @k.words.mozart.noun.1 k.words.sense word=Mozart pos=noun n=1 gloss="prolific Austrian composer and child prodigy; master of the classical style in all its forms of his time (1756-1791)" synonym="Wolfgang Amadeus Mozart" instance_of=composer core.source="wordnet 3.1"
 @k.words.mozart.noun.2 k.words.sense word=Mozart pos=noun n=2 gloss="the music of Mozart" is_a=music core.source="wordnet 3.1"
 @k.words.mozart.spelling.Mozart core.word text=mozart means=Mozart of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.mozzarella.noun.1 k.words.sense word=mozzarella pos=noun n=1 gloss="mild white Italian cheese" is_a=cheese core.source="wordnet 3.1"

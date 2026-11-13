@@ -25,13 +25,14 @@ the frequency list have senses).
 By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`); a one-letter word or a word whose second
 character is not a letter is in the shard of its first letter. A bucket that would pass the size limits is split into
 consecutive parts (`co-1`, `co-2`); none needs it today. `vocab.json` maps every word (lower case) and every
-irregular form to its shard. 318 shards, 28,951 wires, 5,610,059 bytes; the largest is `co` (1,185 wires, 229,974
+irregular form to its shard. 319 shards, 29,668 wires, 5,767,722 bytes; the largest is `co` (1,205 wires, 233,632
 bytes).
 
 ## Sources
 
 WordNet 3.1 (`core.source="wordnet 3.1"`, WordNet licence), words chosen with the FrequencyWords 2018 English list
-(first 20,000 lines). The licence text is `LICENSE` in this folder. See `sources/wordnet/SOURCE.md`, `sources/frequency-words/SOURCE.md` and `../LICENSES.md`.
+(first 20,000 lines, and the 1,500 common things of `tools/coverage.mjs` wherever they stand in the list: 427 of
+them come later, sunflower, teapot, locomotive, chimpanzee; each with the sense that rule keeps). The licence text is `LICENSE` in this folder. See `sources/wordnet/SOURCE.md`, `sources/frequency-words/SOURCE.md` and `../LICENSES.md`.
 Import: `node tools/import/wordnet.mjs`.
 
 ## Questions it helps with

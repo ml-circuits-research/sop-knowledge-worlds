@@ -1,5 +1,5 @@
 # k.words/shards/ke: noun and verb senses of the words from "keaton" to "keypad" (first letters "ke").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -24,6 +24,7 @@
 @k.words.keeping.noun.1 k.words.sense word=keeping pos=noun n=1 gloss="conformity or harmony" is_a=conformity core.source="wordnet 3.1"
 @k.words.keeping.noun.2 k.words.sense word=keeping pos=noun n=2 gloss="the responsibility of a guardian or keeper" synonym=guardianship synonym=safekeeping is_a=duty core.source="wordnet 3.1"
 @k.words.keeping.noun.3 k.words.sense word=keeping pos=noun n=3 gloss="the act of retaining something" synonym=retention synonym=holding is_a=possession core.source="wordnet 3.1"
+@k.words.keepsake.noun.1 k.words.sense word=keepsake pos=noun n=1 gloss="something of sentimental value" synonym=souvenir synonym=token synonym=relic is_a=object core.source="wordnet 3.1"
 @k.words.keg.noun.1 k.words.sense word=keg pos=noun n=1 gloss="the quantity contained in a keg" synonym=kegful is_a=containerful core.source="wordnet 3.1"
 @k.words.keg.noun.2 k.words.sense word=keg pos=noun n=2 gloss="small cask or barrel" is_a=barrel core.source="wordnet 3.1"
 @k.words.keller.noun.1 k.words.sense word=Keller pos=noun n=1 gloss="United States lecturer and writer who was blind and deaf from the age of 19 months; Anne Sullivan taught her to read and write and speak; Helen Keller graduated from college and went on to champion the cause of blind and deaf people (1880-1968)" synonym="Helen Keller" synonym="Helen Adams Keller" instance_of=lecturer instance_of=writer core.source="wordnet 3.1"
@@ -32,6 +33,7 @@
 @k.words.kelly.noun.2 k.words.sense word=Kelly pos=noun n=2 gloss="United States film actress who retired when she married into the royal family of Monaco (1928-1982)" synonym="Grace Kelly" synonym="Grace Patricia Kelly" synonym="Princess Grace of Monaco" instance_of=actress core.source="wordnet 3.1"
 @k.words.kelly.noun.3 k.words.sense word=Kelly pos=noun n=3 gloss="United States dancer who performed in many musical films (1912-1996)" synonym="Gene Kelly" synonym="Eugene Curran Kelly" instance_of=dancer instance_of=choreographer instance_of=actor core.source="wordnet 3.1"
 @k.words.kelly.spelling.Kelly core.word text=kelly means=Kelly of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.kelp.noun.1 k.words.sense word=kelp pos=noun n=1 gloss="large brown seaweeds having fluted leathery fronds" is_a="brown algae" core.source="wordnet 3.1"
 @k.words.kelvin.noun.1 k.words.sense word=kelvin pos=noun n=1 gloss="the basic unit of thermodynamic temperature adopted under the Systeme International d'Unites" synonym=K is_a="temperature unit" core.source="wordnet 3.1"
 @k.words.kelvin.noun.2 k.words.sense word=Kelvin pos=noun n=2 gloss="British physicist who invented the Kelvin scale of temperature and pioneered undersea telegraphy (1824-1907)" synonym="First Baron Kelvin" synonym="William Thompson" instance_of=physicist core.source="wordnet 3.1"
 @k.words.kelvin.spelling.Kelvin core.word text=kelvin means=Kelvin of=k.words.sense.word core.source="wordnet 3.1"
@@ -65,4 +67,5 @@
 @k.words.key.verb.3 k.words.sense word=key pos=verb n=3 gloss="vandalize a car by scratching the sides with a key" is_a=vandalize core.source="wordnet 3.1"
 @k.words.keyboard.noun.1 k.words.sense word=keyboard pos=noun n=1 gloss="device consisting of a set of keys on a piano or organ or typewriter or typesetting machine or computer or the like" is_a=device part_of=piano part_of=organ part_of=typewriter part_of=computer part_of=terminal part_of="typesetting machine" core.source="wordnet 3.1"
 @k.words.keyboard.noun.2 k.words.sense word=keyboard pos=noun n=2 gloss="holder consisting of an arrangement of hooks on which keys or locks can be hung" is_a=holder core.source="wordnet 3.1"
+@k.words.keyhole.noun.1 k.words.sense word=keyhole pos=noun n=1 gloss="the hole where a key is inserted" is_a=hole part_of=lock core.source="wordnet 3.1"
 @k.words.keypad.noun.1 k.words.sense word=keypad pos=noun n=1 gloss="a keyboard that is a data input device for computers; arrangement of keys is modelled after the typewriter keyboard" synonym="computer keyboard" is_a=keyboard is_a="data input device" core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
-# k.words/shards/ki: noun and verb senses of the words from "ki" to "kitty" (first letters "ki").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ki: noun and verb senses of the words from "ki" to "kiwi" (first letters "ki").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -42,6 +42,7 @@
 @k.words.killing.noun.2 k.words.sense word=killing pos=noun n=2 gloss="the act of terminating a life" synonym=kill synonym="putting to death" is_a=termination core.source="wordnet 3.1"
 @k.words.killing.noun.3 k.words.sense word=killing pos=noun n=3 gloss="a very large profit" synonym=cleanup is_a="net income" core.source="wordnet 3.1"
 @k.words.kilo.noun.1 k.words.sense word=kilo pos=noun n=1 gloss="one thousand grams; the basic unit of mass adopted under the Systeme International d'Unites" synonym=kilogram synonym=kg is_a="metric weight unit" part_of=myriagram core.source="wordnet 3.1"
+@k.words.kilt.noun.1 k.words.sense word=kilt pos=noun n=1 gloss="a knee-length pleated tartan skirt worn by men as part of the traditional dress in the Highlands of northern Scotland" is_a=skirt core.source="wordnet 3.1"
 @k.words.kimono.noun.1 k.words.sense word=kimono pos=noun n=1 gloss="a loose robe; imitated from robes originally worn by Japanese" is_a=robe core.source="wordnet 3.1"
 @k.words.kin.noun.1 k.words.sense word=kin pos=noun n=1 gloss="a person having kinship with another or others" synonym=kinsperson synonym=family is_a=relative core.source="wordnet 3.1"
 @k.words.kin.noun.2 k.words.sense word=kin pos=noun n=2 gloss="group of people related by blood or marriage" synonym="kin group" synonym="kinship group" synonym=kindred synonym=clan synonym=tribe is_a="social group" core.source="wordnet 3.1"
@@ -60,6 +61,7 @@
 @k.words.kingston.noun.2 k.words.sense word=Kingston pos=noun n=2 gloss="a town in southeast Ontario on Lake Ontario near the head of the Saint Lawrence River" instance_of=town part_of=Ontario core.source="wordnet 3.1"
 @k.words.kingston.noun.3 k.words.sense word=Kingston pos=noun n=3 gloss="capital and largest city of Jamaica" synonym="capital of Jamaica" synonym="Jamaican capital" instance_of="national capital" part_of=Jamaica core.source="wordnet 3.1"
 @k.words.kingston.spelling.Kingston core.word text=kingston means=Kingston of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.kiosk.noun.1 k.words.sense word=kiosk pos=noun n=1 gloss="small area set off by walls for special use" synonym=booth synonym=cubicle synonym=stall is_a=closet core.source="wordnet 3.1"
 @k.words.kip.noun.1 k.words.sense word=kip pos=noun n=1 gloss="sleep" is_a=sleep core.source="wordnet 3.1"
 @k.words.kip.noun.2 k.words.sense word=kip pos=noun n=2 gloss="the basic unit of money in Laos" is_a="Laotian monetary unit" core.source="wordnet 3.1"
 @k.words.kip.noun.3 k.words.sense word=kip pos=noun n=3 gloss="a gymnastic exercise performed starting from a position with the legs over the upper body and moving to an erect position by arching the back and swinging the legs out and down while forcing the chest upright" synonym=upstart is_a="gymnastic exercise" core.source="wordnet 3.1"
@@ -90,3 +92,7 @@
 @k.words.kitty.noun.1 k.words.sense word=kitty pos=noun n=1 gloss="the combined stakes of the betters" synonym=pool is_a=stake core.source="wordnet 3.1"
 @k.words.kitty.noun.2 k.words.sense word=kitty pos=noun n=2 gloss="the cumulative amount involved in a game (such as poker)" synonym=pot synonym=jackpot is_a=stake core.source="wordnet 3.1"
 @k.words.kitty.noun.3 k.words.sense word=kitty pos=noun n=3 gloss="young domestic cat" synonym=kitten is_a="young mammal" core.source="wordnet 3.1"
+@k.words.kiwi.noun.1 k.words.sense word=kiwi pos=noun n=1 gloss="climbing vine native to China; cultivated in New Zealand for its fuzzy edible fruit with green meat" synonym="Chinese gooseberry" synonym="kiwi vine" synonym="Actinidia chinensis" synonym="Actinidia deliciosa" is_a=vine core.source="wordnet 3.1"
+@k.words.kiwi.noun.2 k.words.sense word=Kiwi pos=noun n=2 gloss="a native or inhabitant of New Zealand" synonym="New Zealander" is_a=inhabitant core.source="wordnet 3.1"
+@k.words.kiwi.noun.3 k.words.sense word=kiwi pos=noun n=3 gloss="fuzzy brown egg-shaped fruit with slightly tart green flesh" synonym="kiwi fruit" synonym="Chinese gooseberry" is_a="edible fruit" part_of="Chinese gooseberry" core.source="wordnet 3.1"
+@k.words.kiwi.spelling.Kiwi core.word text=kiwi means=Kiwi of=k.words.sense.word core.source="wordnet 3.1"

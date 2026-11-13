@@ -1,5 +1,5 @@
-# k.words/shards/ax: noun and verb senses of the words from "ax" to "axis" (first letters "ax").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ax: noun and verb senses of the words from "ax" to "axle" (first letters "ax").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -15,3 +15,4 @@
 @k.words.axis.noun.3 k.words.sense word=Axis pos=noun n=3 gloss="in World War II the alliance of Germany and Italy in 1936 which later included Japan and other nations" is_a=alliance core.source="wordnet 3.1"
 @k.words.axis.spelling.Axis core.word text=axis means=Axis of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.axis.forms core.word text=axes means=axis of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.axle.noun.1 k.words.sense word=axle pos=noun n=1 gloss="a shaft on which a wheel rotates" is_a=shaft part_of="wheeled vehicle" core.source="wordnet 3.1"

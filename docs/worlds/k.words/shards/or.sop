@@ -1,5 +1,5 @@
 # k.words/shards/or: noun and verb senses of the words from "or" to "orphanage" (first letters "or").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -42,6 +42,8 @@
 @k.words.ordinary.noun.1 k.words.sense word=ordinary pos=noun n=1 gloss="a judge of a probate court" is_a=judge core.source="wordnet 3.1"
 @k.words.ordinary.noun.2 k.words.sense word=ordinary pos=noun n=2 gloss="the expected or commonplace condition or situation" is_a=condition core.source="wordnet 3.1"
 @k.words.ordinary.noun.3 k.words.sense word=ordinary pos=noun n=3 gloss="a clergyman appointed to prepare condemned prisoners for death" is_a=clergyman core.source="wordnet 3.1"
+@k.words.ordnance.noun.1 k.words.sense word=ordnance pos=noun n=1 gloss="military supplies" synonym=munition synonym="ordnance store" is_a=armament core.source="wordnet 3.1"
+@k.words.ordnance.noun.2 k.words.sense word=ordnance pos=noun n=2 gloss="large but transportable armament" synonym=artillery synonym="heavy weapon" synonym=gun is_a=armament part_of=battery core.source="wordnet 3.1"
 @k.words.ore.noun.1 k.words.sense word=ore pos=noun n=1 gloss="a mineral that contains metal that is valuable enough to be mined" is_a=mineral core.source="wordnet 3.1"
 @k.words.ore.noun.2 k.words.sense word=ore pos=noun n=2 gloss="a monetary subunit in Denmark and Norway and Sweden; 100 ore equal 1 krona" is_a="fractional monetary unit" part_of="Swedish krona" part_of="Danish krone" part_of="Norwegian krone" core.source="wordnet 3.1"
 @k.words.oregon.noun.1 k.words.sense word=Oregon pos=noun n=1 gloss="a state in northwestern United States on the Pacific" synonym="Beaver State" synonym=OR synonym=Ore. instance_of="American state" part_of="United States" core.source="wordnet 3.1"

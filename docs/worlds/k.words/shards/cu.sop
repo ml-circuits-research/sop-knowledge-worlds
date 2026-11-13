@@ -1,5 +1,5 @@
 # k.words/shards/cu: noun and verb senses of the words from "cub" to "cutting" (first letters "cu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -13,6 +13,7 @@
 @k.words.cuba.spelling.Cuba core.word text=cuba means=Cuba of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.cuban.noun.1 k.words.sense word=Cuban pos=noun n=1 gloss="a native or inhabitant of Cuba" is_a="West Indian" core.source="wordnet 3.1"
 @k.words.cuban.spelling.Cuban core.word text=cuban means=Cuban of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.cubby.noun.1 k.words.sense word=cubby pos=noun n=1 gloss="a small secluded room" synonym=cubbyhole synonym=snuggery synonym=snug is_a=room core.source="wordnet 3.1"
 @k.words.cube.noun.1 k.words.sense word=cube pos=noun n=1 gloss="a hexahedron with six equal squares as faces" synonym="regular hexahedron" is_a="regular polyhedron" core.source="wordnet 3.1"
 @k.words.cube.noun.2 k.words.sense word=cube pos=noun n=2 gloss="a three-dimensional shape with six square or rectangular sides" synonym=block is_a=solid core.source="wordnet 3.1"
 @k.words.cube.noun.3 k.words.sense word=cube pos=noun n=3 gloss="the product of three equal terms" synonym="third power" is_a=number core.source="wordnet 3.1"
@@ -76,6 +77,8 @@
 @k.words.curb.verb.2 k.words.sense word=curb pos=verb n=2 gloss="keep to the curb" is_a=restrain core.source="wordnet 3.1"
 @k.words.curb.verb.3 k.words.sense word=curb pos=verb n=3 gloss="place restrictions on" synonym=restrict synonym=curtail synonym="cut back" is_a=limit core.source="wordnet 3.1"
 @k.words.curb.spelling.Curb core.word text=curb means=Curb of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.curd.noun.1 k.words.sense word=curd pos=noun n=1 gloss="a coagulated liquid resembling milk curd" is_a=foodstuff core.source="wordnet 3.1"
+@k.words.curd.noun.2 k.words.sense word=curd pos=noun n=2 gloss="coagulated milk; used to make cheese" is_a="dairy product" core.source="wordnet 3.1"
 @k.words.cure.noun.1 k.words.sense word=cure pos=noun n=1 gloss="a medicine or therapy that cures disease or relieve pain" synonym=remedy synonym=curative synonym=therapeutic is_a=medicine part_of=treatment core.source="wordnet 3.1"
 @k.words.cure.verb.1 k.words.sense word=cure pos=verb n=1 gloss="provide a cure for, make healthy again" synonym="bring around" synonym=heal is_a=help core.source="wordnet 3.1"
 @k.words.cure.verb.2 k.words.sense word=cure pos=verb n=2 gloss="prepare by drying, salting, or chemical processing in order to preserve" is_a=preserve core.source="wordnet 3.1"
@@ -145,6 +148,8 @@
 @k.words.cut.verb.3 k.words.sense word=cut pos=verb n=3 gloss="turn sharply; change direction abruptly" synonym=swerve synonym=sheer synonym=curve synonym=trend synonym=veer synonym=slue synonym=slew is_a=turn core.source="wordnet 3.1"
 @k.words.cut.forms core.word text=cutting means=cut of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.cutler.noun.1 k.words.sense word=cutler pos=noun n=1 gloss="a dealer in cutlery" is_a=trader core.source="wordnet 3.1"
+@k.words.cutlery.noun.1 k.words.sense word=cutlery pos=noun n=1 gloss="a cutting implement; a tool for cutting" synonym=cutter synonym="cutting tool" is_a="cutting implement" core.source="wordnet 3.1"
+@k.words.cutlery.noun.2 k.words.sense word=cutlery pos=noun n=2 gloss="tableware implements for cutting and eating food" synonym="eating utensil" is_a=tableware core.source="wordnet 3.1"
 @k.words.cutter.noun.1 k.words.sense word=cutter pos=noun n=1 gloss="someone who cuts or carves stone" synonym=stonecutter is_a=quarryman core.source="wordnet 3.1"
 @k.words.cutter.noun.2 k.words.sense word=cutter pos=noun n=2 gloss="someone who carves the meat" synonym=carver is_a=diner core.source="wordnet 3.1"
 @k.words.cutter.noun.3 k.words.sense word=cutter pos=noun n=3 gloss="someone whose work is cutting (as e.g. cutting cloth for garments)" is_a="skilled worker" core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
 # k.words/shards/si: noun and verb senses of the words from "si" to "size" (first letters "si").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -18,6 +18,8 @@
 @k.words.sicily.spelling.Sicily core.word text=sicily means=Sicily of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.sick.noun.1 k.words.sense word=sick pos=noun n=1 gloss="people who are sick" is_a=people core.source="wordnet 3.1"
 @k.words.sick.verb.1 k.words.sense word=sick pos=verb n=1 gloss="eject the contents of the stomach through the mouth" synonym=vomit synonym="vomit up" synonym=purge synonym=cast synonym=cat synonym="be sick" synonym=disgorge synonym=regorge synonym=retch synonym=puke synonym=barf synonym=spew synonym=spue synonym=chuck synonym=upchuck synonym=honk synonym=regurgitate synonym="throw up" is_a=excrete core.source="wordnet 3.1"
+@k.words.sickbay.noun.1 k.words.sense word=sickbay pos=noun n=1 gloss="(nautical) a room for the treatment of the sick or injured (as on a ship)" synonym="sick berth" is_a=room core.source="wordnet 3.1"
+@k.words.sickle.noun.1 k.words.sense word=sickle pos=noun n=1 gloss="an edge tool for cutting grass or crops; has a curved blade and a short handle" synonym="reaping hook" synonym="reap hook" is_a="edge tool" core.source="wordnet 3.1"
 @k.words.sickness.noun.1 k.words.sense word=sickness pos=noun n=1 gloss="impairment of normal physiological function affecting part or all of an organism" synonym=illness synonym=unwellness synonym=malady is_a="ill health" core.source="wordnet 3.1"
 @k.words.sickness.noun.2 k.words.sense word=sickness pos=noun n=2 gloss="defectiveness or unsoundness" is_a=defectiveness core.source="wordnet 3.1"
 @k.words.sickness.noun.3 k.words.sense word=sickness pos=noun n=3 gloss="the state that precedes vomiting" synonym=nausea is_a=symptom core.source="wordnet 3.1"
@@ -79,6 +81,8 @@
 @k.words.silence.noun.3 k.words.sense word=silence pos=noun n=3 gloss="a refusal to speak when expected" synonym=muteness is_a=uncommunicativeness core.source="wordnet 3.1"
 @k.words.silence.verb.1 k.words.sense word=silence pos=verb n=1 gloss="cause to be quiet or not talk" synonym=hush synonym=quieten synonym=still synonym="shut up" synonym="hush up" is_a=suppress core.source="wordnet 3.1"
 @k.words.silence.verb.2 k.words.sense word=silence pos=verb n=2 gloss="keep from expression, for example by threats or pressure" is_a=suppress core.source="wordnet 3.1"
+@k.words.silencer.noun.1 k.words.sense word=silencer pos=noun n=1 gloss="short tube attached to the muzzle of a gun that deadens the sound of firing" is_a=tube core.source="wordnet 3.1"
+@k.words.silencer.noun.2 k.words.sense word=silencer pos=noun n=2 gloss="a tubular acoustic device inserted in the exhaust system that is designed to reduce noise" synonym=muffler is_a="acoustic device" part_of=exhaust core.source="wordnet 3.1"
 @k.words.silhouette.noun.1 k.words.sense word=silhouette pos=noun n=1 gloss="an outline of a solid object (as cast by its shadow)" is_a=outline core.source="wordnet 3.1"
 @k.words.silhouette.noun.2 k.words.sense word=silhouette pos=noun n=2 gloss="a drawing of the outline of an object; filled in with some uniform color" is_a=drawing core.source="wordnet 3.1"
 @k.words.silhouette.verb.1 k.words.sense word=silhouette pos=verb n=1 gloss="project on a background, such as a screen, like a silhouette" is_a=project core.source="wordnet 3.1"
@@ -88,6 +92,8 @@
 @k.words.silk.noun.1 k.words.sense word=silk pos=noun n=1 gloss="a fabric made from the fine threads produced by certain insect larvae" is_a=fabric core.source="wordnet 3.1"
 @k.words.silk.noun.2 k.words.sense word=silk pos=noun n=2 gloss="animal fibers produced by silkworms and other larvae that spin cocoons and by most spiders" is_a="animal fiber" core.source="wordnet 3.1"
 @k.words.silly.noun.1 k.words.sense word=silly pos=noun n=1 gloss="a word used for misbehaving children" is_a=child core.source="wordnet 3.1"
+@k.words.silo.noun.1 k.words.sense word=silo pos=noun n=1 gloss="a cylindrical tower used for storing silage" is_a=tower core.source="wordnet 3.1"
+@k.words.silo.noun.2 k.words.sense word=silo pos=noun n=2 gloss="military installation consisting of an underground structure where ballistic missiles can be stored and fired" is_a="military installation" core.source="wordnet 3.1"
 @k.words.silva.noun.1 k.words.sense word=silva pos=noun n=1 gloss="the forest trees growing in a country or region" synonym=sylva is_a=forest core.source="wordnet 3.1"
 @k.words.silva.forms core.word text=silvae means=silva of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.silver.noun.1 k.words.sense word=silver pos=noun n=1 gloss="a soft white precious univalent metallic element having the highest electrical and thermal conductivity of any metal; occurs in argentite and in free form; used in coins and jewelry and tableware and photography" synonym=Ag synonym="atomic number 47" is_a="noble metal" is_a=conductor core.source="wordnet 3.1"
@@ -116,6 +122,7 @@
 @k.words.simulation.noun.1 k.words.sense word=simulation pos=noun n=1 gloss="the act of imitating the behavior of some situation or some process by means of something suitably analogous (especially for the purpose of study or personnel training)" is_a=model core.source="wordnet 3.1"
 @k.words.simulation.noun.2 k.words.sense word=simulation pos=noun n=2 gloss="(computer science) the technique of representing the real world by a computer program" synonym="computer simulation" is_a=technique is_a=model core.source="wordnet 3.1"
 @k.words.simulation.noun.3 k.words.sense word=simulation pos=noun n=3 gloss="representation of something (sometimes on a smaller scale)" synonym=model is_a=representation core.source="wordnet 3.1"
+@k.words.simulator.noun.1 k.words.sense word=simulator pos=noun n=1 gloss="a machine that simulates an environment for the purpose of training or research" is_a=machine core.source="wordnet 3.1"
 @k.words.sin.noun.1 k.words.sense word=sin pos=noun n=1 gloss="estrangement from god" synonym=sinfulness synonym=wickedness is_a=unrighteousness core.source="wordnet 3.1"
 @k.words.sin.noun.2 k.words.sense word=sin pos=noun n=2 gloss="an act that is regarded by theologians as a transgression of God's will" synonym=sinning is_a=transgression core.source="wordnet 3.1"
 @k.words.sin.noun.3 k.words.sense word=sin pos=noun n=3 gloss="ratio of the length of the side opposite the given angle to the length of the hypotenuse of a right-angled triangle" synonym=sine is_a="trigonometric function" core.source="wordnet 3.1"

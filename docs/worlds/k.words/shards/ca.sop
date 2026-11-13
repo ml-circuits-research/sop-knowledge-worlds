@@ -1,5 +1,5 @@
 # k.words/shards/ca: noun and verb senses of the words from "ca" to "cayman" (first letters "ca").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -11,6 +11,7 @@
 @k.words.cab.noun.2 k.words.sense word=cab pos=noun n=2 gloss="small two-wheeled horse-drawn carriage; with two seats and a folding hood" synonym=cabriolet is_a=carriage core.source="wordnet 3.1"
 @k.words.cab.noun.3 k.words.sense word=cab pos=noun n=3 gloss="a car driven by a person whose job is to take passengers where they want to go in exchange for money" synonym=hack synonym=taxi synonym=taxicab is_a=car core.source="wordnet 3.1"
 @k.words.cab.verb.1 k.words.sense word=cab pos=verb n=1 gloss="ride in a taxicab" synonym=taxi is_a=ride core.source="wordnet 3.1"
+@k.words.cabana.noun.1 k.words.sense word=cabana pos=noun n=1 gloss="a small tent used as a dressing room beside the sea or a swimming pool" is_a=tent core.source="wordnet 3.1"
 @k.words.cabaret.noun.1 k.words.sense word=cabaret pos=noun n=1 gloss="a spot that is open late at night and that provides entertainment (as singers or dancers) as well as dancing and food and drink" synonym=nightclub synonym="night club" synonym=club synonym=nightspot is_a=spot core.source="wordnet 3.1"
 @k.words.cabaret.noun.2 k.words.sense word=cabaret pos=noun n=2 gloss="a series of acts at a night club" synonym=floorshow synonym="floor show" is_a=show core.source="wordnet 3.1"
 @k.words.cabbage.noun.1 k.words.sense word=cabbage pos=noun n=1 gloss="any of various types of cabbage" synonym=chou is_a="cruciferous vegetable" part_of=cabbage core.source="wordnet 3.1"
@@ -59,6 +60,7 @@
 @k.words.cake.noun.2 k.words.sense word=cake pos=noun n=2 gloss="small flat mass of chopped food" synonym=patty is_a=dish core.source="wordnet 3.1"
 @k.words.cake.noun.3 k.words.sense word=cake pos=noun n=3 gloss="baked goods made from or based on a mixture of flour, sugar, eggs, and fat" is_a="baked goods" core.source="wordnet 3.1"
 @k.words.cake.verb.1 k.words.sense word=cake pos=verb n=1 gloss="form a coat over" synonym=coat is_a=cover core.source="wordnet 3.1"
+@k.words.calamari.noun.1 k.words.sense word=calamari pos=noun n=1 gloss="(Italian cuisine) squid prepared as food" synonym=squid synonym=calamary is_a=seafood part_of=squid core.source="wordnet 3.1"
 @k.words.calamity.noun.1 k.words.sense word=calamity pos=noun n=1 gloss="an event resulting in great loss and misfortune" synonym=catastrophe synonym=disaster synonym=tragedy synonym=cataclysm is_a=misfortune core.source="wordnet 3.1"
 @k.words.calcium.noun.1 k.words.sense word=calcium pos=noun n=1 gloss="a white metallic element that burns with a brilliant light; the fifth most abundant element in the earth's crust; an important component of most plants and animals" synonym=Ca synonym="atomic number 20" is_a="metallic element" core.source="wordnet 3.1"
 @k.words.calculate.verb.1 k.words.sense word=calculate pos=verb n=1 gloss="make a mathematical calculation or computation" synonym=cipher synonym=cypher synonym=compute synonym="work out" synonym=reckon synonym=figure is_a=reason core.source="wordnet 3.1"
@@ -298,6 +300,7 @@
 @k.words.carbon.noun.1 k.words.sense word=carbon pos=noun n=1 gloss="an abundant nonmetallic tetravalent element occurring in three allotropic forms: amorphous carbon and graphite and diamond; occurs in all organic compounds" synonym=C synonym="atomic number 6" is_a="chemical element" core.source="wordnet 3.1"
 @k.words.carbon.noun.2 k.words.sense word=carbon pos=noun n=2 gloss="a thin paper coated on one side with a dark waxy substance (often containing carbon); used to transfer characters from the original to an under sheet of paper" synonym="carbon paper" is_a=paper core.source="wordnet 3.1"
 @k.words.carbon.noun.3 k.words.sense word=carbon pos=noun n=3 gloss="a copy made with carbon paper" synonym="carbon copy" is_a=copy core.source="wordnet 3.1"
+@k.words.carburetor.noun.1 k.words.sense word=carburetor pos=noun n=1 gloss="mixes air with gasoline vapor prior to explosion" synonym=carburettor is_a="mechanical device" part_of="fuel system" core.source="wordnet 3.1"
 @k.words.carcass.noun.1 k.words.sense word=carcass pos=noun n=1 gloss="the dead body of an animal especially one slaughtered and dressed for food" synonym=carcase is_a=body core.source="wordnet 3.1"
 @k.words.card.noun.1 k.words.sense word=card pos=noun n=1 gloss="one of a set of small pieces of stiff paper marked in various ways and used for playing games or for telling fortunes" is_a=paper core.source="wordnet 3.1"
 @k.words.card.noun.2 k.words.sense word=card pos=noun n=2 gloss="a card certifying the identity of the bearer" synonym="identity card" is_a="positive identification" core.source="wordnet 3.1"
@@ -305,6 +308,9 @@
 @k.words.card.verb.1 k.words.sense word=card pos=verb n=1 gloss="separate the fibers of" synonym=tease is_a=separate core.source="wordnet 3.1"
 @k.words.card.verb.2 k.words.sense word=card pos=verb n=2 gloss="ask someone for identification to determine whether he or she is old enough to consume liquor" is_a=see core.source="wordnet 3.1"
 @k.words.cardboard.noun.1 k.words.sense word=cardboard pos=noun n=1 gloss="a stiff moderately thick paper" synonym="composition board" is_a=paper is_a="packing material" core.source="wordnet 3.1"
+@k.words.cardigan.noun.1 k.words.sense word=cardigan pos=noun n=1 gloss="knitted jacket that is fastened up the front with buttons or a zipper" is_a=sweater core.source="wordnet 3.1"
+@k.words.cardigan.noun.2 k.words.sense word=Cardigan pos=noun n=2 gloss="slightly bowlegged variety of corgi having rounded ears and a long tail" synonym="Cardigan Welsh corgi" is_a=corgi core.source="wordnet 3.1"
+@k.words.cardigan.spelling.Cardigan core.word text=cardigan means=Cardigan of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.cardinal.noun.1 k.words.sense word=cardinal pos=noun n=1 gloss="(Roman Catholic Church) one of a group of more than 100 prominent bishops in the Sacred College who advise the Pope and elect new Popes" is_a=bishop core.source="wordnet 3.1"
 @k.words.cardinal.noun.2 k.words.sense word=cardinal pos=noun n=2 gloss="the number of elements in a mathematical set; denotes a quantity but not the order" synonym="cardinal number" is_a=number core.source="wordnet 3.1"
 @k.words.cardinal.noun.3 k.words.sense word=cardinal pos=noun n=3 gloss="a variable color averaging a vivid red" synonym=carmine is_a=red core.source="wordnet 3.1"
@@ -327,6 +333,7 @@
 @k.words.caribbean.noun.1 k.words.sense word=Caribbean pos=noun n=1 gloss="an arm of the Atlantic Ocean between North and South America; the origin of the Gulf stream" synonym="Caribbean Sea" instance_of=sea core.source="wordnet 3.1"
 @k.words.caribbean.noun.2 k.words.sense word=Caribbean pos=noun n=2 gloss="region including the Caribbean Islands" instance_of="geographical area" core.source="wordnet 3.1"
 @k.words.caribbean.spelling.Caribbean core.word text=caribbean means=Caribbean of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.caribou.noun.1 k.words.sense word=caribou pos=noun n=1 gloss="Arctic deer with large antlers in both sexes; called `reindeer' in Eurasia and `caribou' in North America" synonym=reindeer synonym="Greenland caribou" synonym="Rangifer tarandus" is_a=deer core.source="wordnet 3.1"
 @k.words.caring.noun.1 k.words.sense word=caring pos=noun n=1 gloss="a loving feeling" synonym=lovingness is_a=love core.source="wordnet 3.1"
 @k.words.carlos.noun.1 k.words.sense word=Carlos pos=noun n=1 gloss="Venezuelan master terrorist raised by a Marxist-Leninist father; trained and worked with many terrorist groups (born in 1949)" synonym=Sanchez synonym="Ilich Sanchez" synonym="Ilich Ramirez Sanchez" synonym="Carlos the Jackal" synonym=Salim synonym="Andres Martinez" synonym=Taurus synonym="Glen Gebhard" synonym="Hector Hevodidbon" synonym="Michael Assat" instance_of=terrorist core.source="wordnet 3.1"
 @k.words.carlos.spelling.Carlos core.word text=carlos means=Carlos of=k.words.sense.word core.source="wordnet 3.1"
@@ -515,12 +522,18 @@
 @k.words.catherine.noun.1 k.words.sense word=Catherine pos=noun n=1 gloss="first wife of Henry VIII; Henry VIII's divorce from her was the initial step of the Reformation in England (1485-1536)" synonym="Catherine of Aragon" instance_of=wife core.source="wordnet 3.1"
 @k.words.catherine.noun.2 k.words.sense word=Catherine pos=noun n=2 gloss="empress of Russia who greatly increased the territory of the empire (1729-1796)" synonym="Catherine II" synonym="Catherine the Great" instance_of=empress core.source="wordnet 3.1"
 @k.words.catherine.spelling.Catherine core.word text=catherine means=Catherine of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.catheter.noun.1 k.words.sense word=catheter pos=noun n=1 gloss="a thin flexible tube inserted into the body to permit introduction or withdrawal of fluids or to keep the passageway open" is_a=tube core.source="wordnet 3.1"
 @k.words.catholic.noun.1 k.words.sense word=Catholic pos=noun n=1 gloss="a member of a Catholic church" is_a=Christian core.source="wordnet 3.1"
 @k.words.catholic.spelling.Catholic core.word text=catholic means=Catholic of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.cattle.noun.1 k.words.sense word=cattle pos=noun n=1 gloss="domesticated bovine animals as a group regardless of sex or age" synonym=cows synonym=kine synonym=oxen synonym="Bos taurus" is_a=bovine core.source="wordnet 3.1"
+@k.words.catwalk.noun.1 k.words.sense word=catwalk pos=noun n=1 gloss="narrow platform extending out into an auditorium" is_a=platform core.source="wordnet 3.1"
+@k.words.catwalk.noun.2 k.words.sense word=catwalk pos=noun n=2 gloss="narrow pathway high in the air (as above a stage or between parts of a building or along a bridge)" is_a=walk core.source="wordnet 3.1"
 @k.words.caucasian.noun.1 k.words.sense word=Caucasian pos=noun n=1 gloss="a Caucasian" synonym=White synonym="White person" is_a=person core.source="wordnet 3.1"
 @k.words.caucasian.noun.2 k.words.sense word=Caucasian pos=noun n=2 gloss="a number of languages spoken in the Caucasus that are unrelated to languages spoken elsewhere" synonym="Caucasian language" is_a="natural language" core.source="wordnet 3.1"
 @k.words.caucasian.spelling.Caucasian core.word text=caucasian means=Caucasian of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.cauldron.noun.1 k.words.sense word=cauldron pos=noun n=1 gloss="a very large pot that is used for boiling" synonym=caldron is_a=pot core.source="wordnet 3.1"
+@k.words.cauliflower.noun.1 k.words.sense word=cauliflower pos=noun n=1 gloss="a plant having a large edible head of crowded white flower buds" synonym="Brassica oleracea botrytis" is_a=crucifer core.source="wordnet 3.1"
+@k.words.cauliflower.noun.2 k.words.sense word=cauliflower pos=noun n=2 gloss="compact head of white undeveloped flowers" is_a="cruciferous vegetable" part_of=cauliflower core.source="wordnet 3.1"
 @k.words.cause.noun.1 k.words.sense word=cause pos=noun n=1 gloss="events that provide the generative force that is the origin of something" is_a=origin core.source="wordnet 3.1"
 @k.words.cause.noun.2 k.words.sense word=cause pos=noun n=2 gloss="a justification for something existing or happening" synonym=reason synonym=grounds is_a=justification core.source="wordnet 3.1"
 @k.words.cause.noun.3 k.words.sense word=cause pos=noun n=3 gloss="a series of actions advancing a principle or tending toward a particular end" synonym=campaign synonym=crusade synonym=drive synonym=movement synonym=effort is_a=venture core.source="wordnet 3.1"

@@ -1,5 +1,5 @@
 # k.words/shards/se: noun and verb senses of the words from "se" to "seymour" (first letters "se").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -10,6 +10,7 @@
 @k.words.sea.noun.1 k.words.sense word=sea pos=noun n=1 gloss="a division of an ocean or a large body of salt water partially enclosed by land" is_a="body of water" part_of=hydrosphere core.source="wordnet 3.1"
 @k.words.sea.noun.2 k.words.sense word=sea pos=noun n=2 gloss="anything apparently limitless in quantity or volume" synonym=ocean is_a="large indefinite quantity" core.source="wordnet 3.1"
 @k.words.sea.noun.3 k.words.sense word=sea pos=noun n=3 gloss="turbulent water with swells of considerable size" is_a="turbulent flow" core.source="wordnet 3.1"
+@k.words.seaboard.noun.1 k.words.sense word=seaboard pos=noun n=1 gloss="the shore of a sea or ocean regarded as a resort" synonym=seaside is_a=seashore core.source="wordnet 3.1"
 @k.words.seafood.noun.1 k.words.sense word=seafood pos=noun n=1 gloss="edible fish (broadly including freshwater fish) or shellfish or roe etc" is_a=food core.source="wordnet 3.1"
 @k.words.seagull.noun.1 k.words.sense word=seagull pos=noun n=1 gloss="mostly white aquatic bird having long pointed wings and short legs" synonym=gull synonym="sea gull" is_a=larid core.source="wordnet 3.1"
 @k.words.seal.noun.1 k.words.sense word=seal pos=noun n=1 gloss="fastener consisting of a resinous composition that is plastic when warm; used for sealing documents and parcels and letters" synonym="sealing wax" is_a=fastener core.source="wordnet 3.1"

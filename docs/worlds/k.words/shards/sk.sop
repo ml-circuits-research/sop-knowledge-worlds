@@ -1,5 +1,5 @@
-# k.words/shards/sk: noun and verb senses of the words from "skank" to "sky" (first letters "sk").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/sk: noun and verb senses of the words from "skank" to "skyscraper" (first letters "sk").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -68,3 +68,5 @@
 @k.words.skunk.verb.1 k.words.sense word=skunk pos=verb n=1 gloss="defeat by a lurch" synonym=lurch is_a="get the better of" core.source="wordnet 3.1"
 @k.words.sky.noun.1 k.words.sense word=sky pos=noun n=1 gloss="the atmosphere and outer space as viewed from the earth" is_a=atmosphere part_of=Earth core.source="wordnet 3.1"
 @k.words.sky.verb.1 k.words.sense word=sky pos=verb n=1 gloss="throw or toss with a light motion" synonym=flip synonym=toss synonym=pitch is_a=fling core.source="wordnet 3.1"
+@k.words.skylight.noun.1 k.words.sense word=skylight pos=noun n=1 gloss="a window in a roof to admit daylight" synonym=fanlight is_a=window core.source="wordnet 3.1"
+@k.words.skyscraper.noun.1 k.words.sense word=skyscraper pos=noun n=1 gloss="a very tall building with many stories" is_a=building core.source="wordnet 3.1"

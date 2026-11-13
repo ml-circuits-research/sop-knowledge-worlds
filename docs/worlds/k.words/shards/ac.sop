@@ -1,5 +1,5 @@
 # k.words/shards/ac: noun and verb senses of the words from "ac" to "acute" (first letters "ac").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -101,6 +101,7 @@
 @k.words.acknowledge.verb.1 k.words.sense word=acknowledge pos=verb n=1 gloss="declare to be true or admit the existence or reality or truth of" synonym=admit is_a=declare core.source="wordnet 3.1"
 @k.words.acknowledge.verb.2 k.words.sense word=acknowledge pos=verb n=2 gloss="report the receipt of" synonym=receipt is_a=communicate core.source="wordnet 3.1"
 @k.words.acknowledge.verb.3 k.words.sense word=acknowledge pos=verb n=3 gloss="express recognition of the presence or existence of, or acquaintance with" synonym=notice is_a=react core.source="wordnet 3.1"
+@k.words.acorn.noun.1 k.words.sense word=acorn pos=noun n=1 gloss="fruit of the oak tree: a smooth thin-walled nut in a woody cup-shaped base" is_a=fruit part_of=oak core.source="wordnet 3.1"
 @k.words.acoustic.noun.1 k.words.sense word=acoustic pos=noun n=1 gloss="a remedy for hearing loss or deafness" is_a=remedy core.source="wordnet 3.1"
 @k.words.acquaintance.noun.1 k.words.sense word=acquaintance pos=noun n=1 gloss="personal knowledge or information about someone or something" synonym=familiarity synonym=conversance synonym=conversancy is_a=information core.source="wordnet 3.1"
 @k.words.acquaintance.noun.2 k.words.sense word=acquaintance pos=noun n=2 gloss="a relationship less intimate than friendship" synonym=acquaintanceship is_a=relationship core.source="wordnet 3.1"

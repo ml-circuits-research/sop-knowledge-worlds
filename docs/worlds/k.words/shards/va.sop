@@ -1,5 +1,5 @@
 # k.words/shards/va: noun and verb senses of the words from "va" to "vault" (first letters "va").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -20,6 +20,9 @@
 @k.words.vacuum.noun.3 k.words.sense word=vacuum pos=noun n=3 gloss="a region that is devoid of matter" synonym=vacuity is_a=region core.source="wordnet 3.1"
 @k.words.vacuum.verb.1 k.words.sense word=vacuum pos=verb n=1 gloss="clean with a vacuum cleaner" synonym=vacuum-clean synonym=hoover is_a=clean core.source="wordnet 3.1"
 @k.words.vacuum.forms core.word text=vacua means=vacuum of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.vagabond.noun.1 k.words.sense word=vagabond pos=noun n=1 gloss="anything that resembles a vagabond in having no fixed place" is_a=object core.source="wordnet 3.1"
+@k.words.vagabond.noun.2 k.words.sense word=vagabond pos=noun n=2 gloss="a wanderer who has no established residence or visible means of support" synonym=vagrant synonym=drifter synonym=floater synonym=clochard is_a=wanderer is_a="poor person" core.source="wordnet 3.1"
+@k.words.vagabond.verb.1 k.words.sense word=vagabond pos=verb n=1 gloss="move about aimlessly or without any destination, often in search of food or employment" synonym=roll synonym=wander synonym=swan synonym=stray synonym=tramp synonym=roam synonym=cast synonym=ramble synonym=rove synonym=range synonym=drift is_a=travel core.source="wordnet 3.1"
 @k.words.vagina.noun.1 k.words.sense word=vagina pos=noun n=1 gloss="the lower part of the female reproductive tract; a moist canal in female mammals extending from the labia minora to the uterus" is_a=duct part_of="female genitalia" part_of="female reproductive system" core.source="wordnet 3.1"
 @k.words.vagina.forms core.word text=vaginae means=vagina of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.vale.noun.1 k.words.sense word=vale pos=noun n=1 gloss="a long depression in the surface of the land that usually contains a river" synonym=valley is_a="natural depression" core.source="wordnet 3.1"
@@ -55,6 +58,9 @@
 @k.words.vancouver.noun.3 k.words.sense word=Vancouver pos=noun n=3 gloss="a port city in southwestern British Columbia on an arm of the Pacific Ocean opposite Vancouver Island; Canada's chief Pacific port and third largest city" instance_of=city instance_of=port part_of="British Columbia" core.source="wordnet 3.1"
 @k.words.vancouver.spelling.Vancouver core.word text=vancouver means=Vancouver of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.vandalism.noun.1 k.words.sense word=vandalism pos=noun n=1 gloss="willful wanton and malicious destruction of the property of others" synonym=hooliganism synonym="malicious mischief" is_a=mischief is_a=destruction core.source="wordnet 3.1"
+@k.words.vane.noun.1 k.words.sense word=vane pos=noun n=1 gloss="mechanical device attached to an elevated structure; rotates freely to show the direction of the wind" synonym=weathervane synonym="weather vane" synonym="wind vane" is_a="mechanical device" core.source="wordnet 3.1"
+@k.words.vane.noun.2 k.words.sense word=vane pos=noun n=2 gloss="a fin attached to the tail of an arrow, bomb or missile in order to stabilize or guide it" is_a=fin part_of=missile part_of=arrow core.source="wordnet 3.1"
+@k.words.vane.noun.3 k.words.sense word=vane pos=noun n=3 gloss="flat surface that rotates and pushes against air or water" synonym=blade is_a="rotating mechanism" part_of=propeller part_of=helicopter part_of=windmill part_of=turbine part_of=oar core.source="wordnet 3.1"
 @k.words.vanessa.noun.1 k.words.sense word=Vanessa pos=noun n=1 gloss="painted beauty and red admiral" synonym="genus Vanessa" is_a="arthropod genus" core.source="wordnet 3.1"
 @k.words.vanessa.spelling.Vanessa core.word text=vanessa means=Vanessa of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.vanilla.noun.1 k.words.sense word=vanilla pos=noun n=1 gloss="any of numerous climbing plants of the genus Vanilla having fleshy leaves and clusters of large waxy highly fragrant white or green or topaz flowers" is_a=orchid core.source="wordnet 3.1"
@@ -77,6 +83,8 @@
 @k.words.variety.noun.1 k.words.sense word=variety pos=noun n=1 gloss="a collection containing a variety of sorts of things" synonym=assortment synonym=mixture synonym="mixed bag" synonym=miscellany synonym=miscellanea synonym=salmagundi synonym=smorgasbord synonym=potpourri synonym=motley is_a=collection core.source="wordnet 3.1"
 @k.words.variety.noun.2 k.words.sense word=variety pos=noun n=2 gloss="noticeable heterogeneity" synonym=diverseness synonym=diversity synonym=multifariousness is_a=heterogeneity core.source="wordnet 3.1"
 @k.words.variety.noun.3 k.words.sense word=variety pos=noun n=3 gloss="(biology) a taxonomic category consisting of members of a species that differ from others of the same species in minor but heritable characteristics" is_a="taxonomic group" part_of=species core.source="wordnet 3.1"
+@k.words.varnish.noun.1 k.words.sense word=varnish pos=noun n=1 gloss="a coating that provides a hard, lustrous, transparent finish to a surface" is_a=coating core.source="wordnet 3.1"
+@k.words.varnish.verb.1 k.words.sense word=varnish pos=verb n=1 gloss="cover with varnish" synonym=seal is_a=coat core.source="wordnet 3.1"
 @k.words.varsity.noun.1 k.words.sense word=varsity pos=noun n=1 gloss="a British abbreviation of `university'; usually refers to Oxford University or Cambridge University" is_a=university core.source="wordnet 3.1"
 @k.words.varsity.noun.2 k.words.sense word=varsity pos=noun n=2 gloss="a team representing a college or university" synonym="first team" is_a=team core.source="wordnet 3.1"
 @k.words.vary.verb.1 k.words.sense word=vary pos=verb n=1 gloss="become different in some particular way, without permanently losing one's or its former characteristics or essence" synonym=change synonym=alter core.source="wordnet 3.1"

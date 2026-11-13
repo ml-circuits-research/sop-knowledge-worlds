@@ -1,10 +1,11 @@
 # k.words/shards/ho: noun and verb senses of the words from "ho" to "howling" (first letters "ho").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
 @k.words.ho.noun.1 k.words.sense word=Ho pos=noun n=1 gloss="a trivalent metallic element of the rare earth group; occurs together with yttrium; forms highly magnetic compounds" synonym=holmium synonym="atomic number 67" is_a="metallic element" core.source="wordnet 3.1"
 @k.words.ho.spelling.Ho core.word text=ho means=Ho of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.hoarding.noun.1 k.words.sense word=hoarding pos=noun n=1 gloss="large outdoor signboard" synonym=billboard is_a=signboard core.source="wordnet 3.1"
 @k.words.hoax.noun.1 k.words.sense word=hoax pos=noun n=1 gloss="something intended to deceive; deliberate trickery intended to gain an advantage" synonym=fraud synonym=fraudulence synonym=dupery synonym=humbug synonym=put-on is_a=trickery core.source="wordnet 3.1"
 @k.words.hoax.verb.1 k.words.sense word=hoax pos=verb n=1 gloss="subject to a playful hoax or joke" synonym="pull someone's leg" synonym="play a joke on" is_a=deceive core.source="wordnet 3.1"
 @k.words.hobbs.noun.1 k.words.sense word=Hobbs pos=noun n=1 gloss="notable English cricketer (1882-1963)" synonym="Sir Jack Hobbs" synonym="John Berry Hobbs" instance_of=cricketer core.source="wordnet 3.1"
@@ -17,6 +18,8 @@
 @k.words.hobo.forms core.word text=hoboes means=hobo of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.hockey.noun.1 k.words.sense word=hockey pos=noun n=1 gloss="a game resembling ice hockey that is played on an open field; two opposing teams use curved hockey sticks try to drive a ball into the opponents' net" synonym="field hockey" is_a="field game" core.source="wordnet 3.1"
 @k.words.hockey.noun.2 k.words.sense word=hockey pos=noun n=2 gloss="a game played on an ice rink by two opposing teams of six skaters each who try to knock a flat round puck into the opponents' goal with angled hockey sticks" synonym="ice hockey" synonym="hockey game" is_a="athletic game" is_a="contact sport" core.source="wordnet 3.1"
+@k.words.hoe.noun.1 k.words.sense word=hoe pos=noun n=1 gloss="a tool with a flat blade attached at right angles to a long handle" is_a=tool core.source="wordnet 3.1"
+@k.words.hoe.verb.1 k.words.sense word=hoe pos=verb n=1 gloss="dig with a hoe" is_a=till core.source="wordnet 3.1"
 @k.words.hoffman.noun.1 k.words.sense word=Hoffman pos=noun n=1 gloss="United States sculptor (1887-1966)" synonym="Malvina Hoffman" instance_of=sculptor core.source="wordnet 3.1"
 @k.words.hoffman.noun.2 k.words.sense word=Hoffman pos=noun n=2 gloss="versatile United States film actor (born in 1937)" synonym="Dustin Hoffman" instance_of=actor core.source="wordnet 3.1"
 @k.words.hoffman.spelling.Hoffman core.word text=hoffman means=Hoffman of=k.words.sense.word core.source="wordnet 3.1"
@@ -113,6 +116,9 @@
 @k.words.homo.noun.2 k.words.sense word=homo pos=noun n=2 gloss="any living or extinct member of the family Hominidae characterized by superior intelligence, articulate speech, and erect carriage" synonym=man synonym="human being" synonym=human is_a=hominid core.source="wordnet 3.1"
 @k.words.homosexual.noun.1 k.words.sense word=homosexual pos=noun n=1 gloss="someone who is sexually attracted to persons of the same sex" synonym=homophile synonym=homo synonym=gay is_a=person core.source="wordnet 3.1"
 @k.words.homosexuality.noun.1 k.words.sense word=homosexuality pos=noun n=1 gloss="a sexual attraction to (or sexual relations with) persons of the same sex" synonym=homosexualism synonym=homoeroticism synonym=queerness synonym=gayness is_a="sexual activity" core.source="wordnet 3.1"
+@k.words.hone.noun.1 k.words.sense word=hone pos=noun n=1 gloss="a whetstone made of fine gritstone; used for sharpening razors" is_a=whetstone core.source="wordnet 3.1"
+@k.words.hone.verb.1 k.words.sense word=hone pos=verb n=1 gloss="sharpen with a hone" is_a=sharpen core.source="wordnet 3.1"
+@k.words.hone.verb.2 k.words.sense word=hone pos=verb n=2 gloss="make perfect or complete" synonym=perfect is_a=better core.source="wordnet 3.1"
 @k.words.honesty.noun.1 k.words.sense word=honesty pos=noun n=1 gloss="the quality of being honest" synonym=honestness is_a=righteousness core.source="wordnet 3.1"
 @k.words.honesty.noun.2 k.words.sense word=honesty pos=noun n=2 gloss="southeastern European plant cultivated for its fragrant purplish flowers and round flat papery silver-white seedpods that are used for indoor decoration" synonym="silver dollar" synonym="money plant" synonym="satin flower" synonym=satinpod synonym="Lunaria annua" is_a=herb core.source="wordnet 3.1"
 @k.words.honey.noun.1 k.words.sense word=honey pos=noun n=1 gloss="a sweet yellow liquid produced by bees" is_a=sweetening core.source="wordnet 3.1"
@@ -163,6 +169,8 @@
 @k.words.hooker.spelling.Hooker core.word text=hooker means=Hooker of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.hooking.noun.1 k.words.sense word=hooking pos=noun n=1 gloss="a golf shot that curves to the left for a right-handed golfer" synonym=hook synonym=draw is_a="golf stroke" core.source="wordnet 3.1"
 @k.words.hooks.noun.1 k.words.sense word=hooks pos=noun n=1 gloss="large strong hand (as of a fighter)" synonym="meat hooks" synonym=maulers is_a=hand core.source="wordnet 3.1"
+@k.words.hookup.noun.1 k.words.sense word=hookup pos=noun n=1 gloss="a device providing a connection between a power source and a user" is_a=connection core.source="wordnet 3.1"
+@k.words.hookup.noun.2 k.words.sense word=hookup pos=noun n=2 gloss="a system of components assembled together for a particular purpose" synonym=assemblage is_a=system core.source="wordnet 3.1"
 @k.words.hoop.noun.1 k.words.sense word=hoop pos=noun n=1 gloss="a light curved skeleton to spread out a skirt" is_a=skeleton part_of=hoopskirt core.source="wordnet 3.1"
 @k.words.hoop.noun.2 k.words.sense word=hoop pos=noun n=2 gloss="a rigid circular band of metal or wood or other material used for holding or fastening or hanging or pulling" synonym=ring is_a=band part_of="wagon wheel" part_of=barrel core.source="wordnet 3.1"
 @k.words.hoop.noun.3 k.words.sense word=hoop pos=noun n=3 gloss="a small arch used as croquet equipment" synonym=wicket is_a="croquet equipment" core.source="wordnet 3.1"
@@ -229,6 +237,9 @@
 @k.words.horseman.noun.1 k.words.sense word=horseman pos=noun n=1 gloss="a man skilled in equitation" synonym=equestrian synonym="horseback rider" is_a=rider core.source="wordnet 3.1"
 @k.words.horseman.noun.2 k.words.sense word=horseman pos=noun n=2 gloss="a person who breeds and cares for horses" synonym="horse fancier" is_a="animal fancier" core.source="wordnet 3.1"
 @k.words.horsepower.noun.1 k.words.sense word=horsepower pos=noun n=1 gloss="a unit of power equal to 746 watts" synonym=HP synonym=H.P. is_a="power unit" core.source="wordnet 3.1"
+@k.words.horseshoe.noun.1 k.words.sense word=horseshoe pos=noun n=1 gloss="game equipment consisting of an open ring of iron used in playing horseshoes" is_a="game equipment" core.source="wordnet 3.1"
+@k.words.horseshoe.noun.2 k.words.sense word=horseshoe pos=noun n=2 gloss="U-shaped plate nailed to underside of horse's hoof" synonym=shoe is_a=plate core.source="wordnet 3.1"
+@k.words.horseshoe.verb.1 k.words.sense word=horseshoe pos=verb n=1 gloss="equip (a horse) with a horseshoe or horseshoes" is_a=equip core.source="wordnet 3.1"
 @k.words.hose.noun.1 k.words.sense word=hose pos=noun n=1 gloss="socks and stockings and tights collectively (the British include underwear)" synonym=hosiery is_a=footwear core.source="wordnet 3.1"
 @k.words.hose.noun.2 k.words.sense word=hose pos=noun n=2 gloss="man's close-fitting garment of the 16th and 17th centuries covering the legs and reaching up to the waist; worn with a doublet" is_a=garment core.source="wordnet 3.1"
 @k.words.hose.noun.3 k.words.sense word=hose pos=noun n=3 gloss="a flexible pipe for conveying a liquid or gas" synonym=hosepipe is_a=tube core.source="wordnet 3.1"
@@ -262,6 +273,7 @@
 @k.words.hour.noun.1 k.words.sense word=hour pos=noun n=1 gloss="a period of time equal to 1/24th of a day" synonym=hr synonym="60 minutes" is_a="time unit" part_of=day core.source="wordnet 3.1"
 @k.words.hour.noun.2 k.words.sense word=hour pos=noun n=2 gloss="clock time" synonym="time of day" is_a="clock time" core.source="wordnet 3.1"
 @k.words.hour.noun.3 k.words.sense word=hour pos=noun n=3 gloss="a special and memorable period" is_a="time period" core.source="wordnet 3.1"
+@k.words.hourglass.noun.1 k.words.sense word=hourglass pos=noun n=1 gloss="a sandglass that runs for sixty minutes" is_a=sandglass core.source="wordnet 3.1"
 @k.words.hours.noun.1 k.words.sense word=hours pos=noun n=1 gloss="a period of time assigned for work" is_a="work time" core.source="wordnet 3.1"
 @k.words.hours.noun.2 k.words.sense word=hours pos=noun n=2 gloss="an indefinite period of time" is_a="time period" core.source="wordnet 3.1"
 @k.words.house.noun.1 k.words.sense word=house pos=noun n=1 gloss="a dwelling that serves as living quarters for one or more families" is_a=dwelling is_a=building core.source="wordnet 3.1"
@@ -269,6 +281,7 @@
 @k.words.house.noun.3 k.words.sense word=house pos=noun n=3 gloss="the members of a religious community living together" is_a=community core.source="wordnet 3.1"
 @k.words.house.verb.1 k.words.sense word=house pos=verb n=1 gloss="contain or cover" is_a=accommodate core.source="wordnet 3.1"
 @k.words.house.verb.2 k.words.sense word=house pos=verb n=2 gloss="provide housing for" synonym="put up" synonym=domiciliate is_a=shelter core.source="wordnet 3.1"
+@k.words.houseboat.noun.1 k.words.sense word=houseboat pos=noun n=1 gloss="a barge that is designed and equipped for use as a dwelling" is_a=barge core.source="wordnet 3.1"
 @k.words.household.noun.1 k.words.sense word=household pos=noun n=1 gloss="a social unit living together" synonym=family synonym=house synonym=home synonym=menage is_a=unit core.source="wordnet 3.1"
 @k.words.housekeeper.noun.1 k.words.sense word=housekeeper pos=noun n=1 gloss="a servant who is employed to perform domestic task in a household" is_a=domestic core.source="wordnet 3.1"
 @k.words.housekeeping.noun.1 k.words.sense word=housekeeping pos=noun n=1 gloss="the work of cleaning and running a house" synonym=housework is_a=work core.source="wordnet 3.1"

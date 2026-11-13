@@ -1,5 +1,5 @@
 # k.words/shards/ta: noun and verb senses of the words from "ta" to "taylor" (first letters "ta").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -13,6 +13,7 @@
 @k.words.table.noun.3 k.words.sense word=table pos=noun n=3 gloss="a piece of furniture with tableware for a meal laid out on it" is_a=furniture core.source="wordnet 3.1"
 @k.words.table.verb.1 k.words.sense word=table pos=verb n=1 gloss="hold back to a later time" synonym=postpone synonym=prorogue synonym="hold over" synonym="put over" synonym=shelve synonym="set back" synonym=defer synonym=remit synonym="put off" is_a=delay core.source="wordnet 3.1"
 @k.words.table.verb.2 k.words.sense word=table pos=verb n=2 gloss="arrange or enter in tabular form" synonym=tabularize synonym=tabularise synonym=tabulate is_a=arrange core.source="wordnet 3.1"
+@k.words.tablecloth.noun.1 k.words.sense word=tablecloth pos=noun n=1 gloss="a covering spread over a dining table" is_a="table linen" core.source="wordnet 3.1"
 @k.words.tablet.noun.1 k.words.sense word=tablet pos=noun n=1 gloss="a slab of stone or wood suitable for bearing an inscription" is_a=slab core.source="wordnet 3.1"
 @k.words.tablet.noun.2 k.words.sense word=tablet pos=noun n=2 gloss="a number of sheets of paper fastened together along one edge" synonym=pad synonym="pad of paper" is_a=paper core.source="wordnet 3.1"
 @k.words.tablet.noun.3 k.words.sense word=tablet pos=noun n=3 gloss="a small flat compressed cake of some substance" is_a=cake core.source="wordnet 3.1"
@@ -38,6 +39,7 @@
 @k.words.tactics.noun.1 k.words.sense word=tactics pos=noun n=1 gloss="the branch of military science dealing with detailed maneuvers to achieve objectives set by strategy" is_a="military science" core.source="wordnet 3.1"
 @k.words.tactics.noun.2 k.words.sense word=tactics pos=noun n=2 gloss="a plan for attaining a particular goal" synonym=tactic synonym=maneuver synonym=manoeuvre is_a="plan of action" core.source="wordnet 3.1"
 @k.words.tad.noun.1 k.words.sense word=tad pos=noun n=1 gloss="a slight amount or degree of difference" synonym=shade is_a="small indefinite quantity" core.source="wordnet 3.1"
+@k.words.taffy.noun.1 k.words.sense word=taffy pos=noun n=1 gloss="chewy candy of sugar or syrup boiled until thick and pulled until glossy" is_a=candy core.source="wordnet 3.1"
 @k.words.tag.noun.1 k.words.sense word=tag pos=noun n=1 gloss="a label written or printed on paper, cardboard, or plastic that is attached to something to indicate its owner, nature, price, etc." synonym=ticket is_a=label core.source="wordnet 3.1"
 @k.words.tag.noun.2 k.words.sense word=tag pos=noun n=2 gloss="a label associated with something for the purpose of identification" is_a=label core.source="wordnet 3.1"
 @k.words.tag.noun.3 k.words.sense word=tag pos=noun n=3 gloss="a small piece of cloth or paper" synonym=rag synonym=shred synonym="tag end" synonym=tatter is_a="piece of cloth" core.source="wordnet 3.1"
@@ -73,6 +75,9 @@
 @k.words.take.verb.2 k.words.sense word=take pos=verb n=2 gloss="require (time or space)" synonym=occupy synonym="use up" is_a=use core.source="wordnet 3.1"
 @k.words.take.verb.3 k.words.sense word=take pos=verb n=3 gloss="take somebody somewhere" synonym=lead synonym=direct synonym=conduct synonym=guide core.source="wordnet 3.1"
 @k.words.take.forms core.word text=taken text=took means=take of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.takeaway.noun.1 k.words.sense word=takeaway pos=noun n=1 gloss="prepared food that is intended to be eaten off of the premises" synonym=takeout synonym="takeout food" is_a="convenience food" core.source="wordnet 3.1"
+@k.words.takeaway.noun.2 k.words.sense word=takeaway pos=noun n=2 gloss="a concession made by a labor union to a company that is trying to lower its expenditures" is_a=concession core.source="wordnet 3.1"
+@k.words.takeaway.noun.3 k.words.sense word=takeaway pos=noun n=3 gloss="the act of taking the ball or puck away from the team on the offense (as by the interception of a pass)" is_a=maneuver core.source="wordnet 3.1"
 @k.words.takeoff.noun.1 k.words.sense word=takeoff pos=noun n=1 gloss="a departure; especially of airplanes" is_a=departure core.source="wordnet 3.1"
 @k.words.takeoff.noun.2 k.words.sense word=takeoff pos=noun n=2 gloss="the initial ascent of an airplane as it becomes airborne" is_a=rise core.source="wordnet 3.1"
 @k.words.takeoff.noun.3 k.words.sense word=takeoff pos=noun n=3 gloss="a composition that imitates or misrepresents somebody's style, usually in a humorous way" synonym=parody synonym=lampoon synonym=spoof synonym=sendup synonym=send-up synonym=mockery synonym=burlesque synonym=travesty synonym=pasquinade synonym=put-on is_a=caricature core.source="wordnet 3.1"
@@ -109,6 +114,7 @@
 @k.words.tally.verb.3 k.words.sense word=tally pos=verb n=3 gloss="keep score, as in games" synonym="chalk up" is_a=record core.source="wordnet 3.1"
 @k.words.tally.forms core.word text=tallied means=tally of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.tam.noun.1 k.words.sense word=tam pos=noun n=1 gloss="a woolen cap of Scottish origin" synonym=tam-o'-shanter synonym=tammy is_a=cap core.source="wordnet 3.1"
+@k.words.tambourine.noun.1 k.words.sense word=tambourine pos=noun n=1 gloss="a shallow drum with a single drumhead and with metallic disks in the sides" is_a=drum core.source="wordnet 3.1"
 @k.words.tame.verb.1 k.words.sense word=tame pos=verb n=1 gloss="correct by punishment or discipline" synonym=chasten synonym=subdue is_a=change core.source="wordnet 3.1"
 @k.words.tame.verb.2 k.words.sense word=tame pos=verb n=2 gloss="make less strong or intense; soften" synonym="tone down" synonym=moderate is_a=change core.source="wordnet 3.1"
 @k.words.tame.verb.3 k.words.sense word=tame pos=verb n=3 gloss="adapt (a wild plant or unclaimed land) to the environment" synonym=domesticate synonym=cultivate synonym=naturalize synonym=naturalise is_a=adapt core.source="wordnet 3.1"
@@ -132,6 +138,9 @@
 @k.words.tang.noun.2 k.words.sense word=Tang pos=noun n=2 gloss="the imperial dynasty of China from 618 to 907" synonym="Tang dynasty" is_a=dynasty core.source="wordnet 3.1"
 @k.words.tang.noun.3 k.words.sense word=tang pos=noun n=3 gloss="the taste experience when a savoury condiment is taken into the mouth" synonym=relish synonym=flavor synonym=flavour synonym=sapidity synonym=savor synonym=savour synonym=smack synonym=nip is_a=taste core.source="wordnet 3.1"
 @k.words.tang.spelling.Tang core.word text=tang means=Tang of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.tangerine.noun.1 k.words.sense word=tangerine pos=noun n=1 gloss="a variety of mandarin orange" synonym="tangerine tree" is_a=mandarin core.source="wordnet 3.1"
+@k.words.tangerine.noun.2 k.words.sense word=tangerine pos=noun n=2 gloss="any of various deep orange mandarins grown in the United States and southern Africa" is_a=mandarin part_of=tangerine core.source="wordnet 3.1"
+@k.words.tangerine.noun.3 k.words.sense word=tangerine pos=noun n=3 gloss="a reddish to vivid orange color" is_a="reddish orange" core.source="wordnet 3.1"
 @k.words.tango.noun.1 k.words.sense word=tango pos=noun n=1 gloss="a ballroom dance of Latin-American origin" is_a="ballroom dancing" core.source="wordnet 3.1"
 @k.words.tango.noun.2 k.words.sense word=tango pos=noun n=2 gloss="music written in duple time for dancing the tango" is_a="dance music" core.source="wordnet 3.1"
 @k.words.tango.verb.1 k.words.sense word=tango pos=verb n=1 gloss="dance a tango" is_a=dance core.source="wordnet 3.1"
@@ -166,6 +175,7 @@
 @k.words.tape.verb.2 k.words.sense word=tape pos=verb n=2 gloss="record on videotape" synonym=videotape is_a=record core.source="wordnet 3.1"
 @k.words.tape.verb.3 k.words.sense word=tape pos=verb n=3 gloss="register electronically" synonym=record is_a=record core.source="wordnet 3.1"
 @k.words.taping.noun.1 k.words.sense word=taping pos=noun n=1 gloss="a recording made on magnetic tape" synonym=tape synonym="tape recording" is_a=recording core.source="wordnet 3.1"
+@k.words.tapioca.noun.1 k.words.sense word=tapioca pos=noun n=1 gloss="granular preparation of cassava starch used to thicken especially puddings" is_a=foodstuff core.source="wordnet 3.1"
 @k.words.tapping.noun.1 k.words.sense word=tapping pos=noun n=1 gloss="the sound of light blow or knock" is_a=sound core.source="wordnet 3.1"
 @k.words.taps.noun.1 k.words.sense word=taps pos=noun n=1 gloss="(military) signal to turn the lights out" synonym=lights-out is_a="bugle call" core.source="wordnet 3.1"
 @k.words.tar.noun.1 k.words.sense word=tar pos=noun n=1 gloss="any of various dark heavy viscid substances obtained as a residue" synonym=pitch is_a=bitumen core.source="wordnet 3.1"
@@ -208,6 +218,7 @@
 @k.words.tat.forms core.word text=tatted text=tatting means=tat of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.tate.noun.1 k.words.sense word=Tate pos=noun n=1 gloss="United States poet and critic (1899-1979)" synonym="Allen Tate" synonym="John Orley Allen Tate" instance_of=critic instance_of=poet core.source="wordnet 3.1"
 @k.words.tate.spelling.Tate core.word text=tate means=Tate of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.tater.noun.1 k.words.sense word=tater pos=noun n=1 gloss="an edible tuber native to South America; a staple food of Ireland" synonym=potato synonym="white potato" synonym="Irish potato" synonym=murphy synonym=spud is_a="root vegetable" is_a=starches is_a="solanaceous vegetable" part_of=potato core.source="wordnet 3.1"
 @k.words.tattoo.noun.1 k.words.sense word=tattoo pos=noun n=1 gloss="a drumbeat or bugle call that signals the military to return to their quarters" is_a=drumbeat is_a="bugle call" core.source="wordnet 3.1"
 @k.words.tattoo.noun.2 k.words.sense word=tattoo pos=noun n=2 gloss="a design on the skin made by tattooing" is_a=design core.source="wordnet 3.1"
 @k.words.tattoo.noun.3 k.words.sense word=tattoo pos=noun n=3 gloss="the practice of making a design on the skin by pricking and staining" is_a=decoration core.source="wordnet 3.1"

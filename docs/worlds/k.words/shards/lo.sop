@@ -1,5 +1,5 @@
 # k.words/shards/lo: noun and verb senses of the words from "load" to "loyalty" (first letters "lo").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -60,6 +60,7 @@
 @k.words.locking.noun.1 k.words.sense word=locking pos=noun n=1 gloss="the act of locking something up to protect it" synonym=lockup is_a=protection core.source="wordnet 3.1"
 @k.words.lockup.noun.1 k.words.sense word=lockup pos=noun n=1 gloss="jail in a local police station" is_a=jail core.source="wordnet 3.1"
 @k.words.lockup.noun.2 k.words.sense word=lockup pos=noun n=2 gloss="the act of locking something up to protect it" synonym=locking is_a=protection core.source="wordnet 3.1"
+@k.words.locomotive.noun.1 k.words.sense word=locomotive pos=noun n=1 gloss="a wheeled vehicle consisting of a self-propelled engine that is used to draw trains along railway tracks" synonym=engine synonym="locomotive engine" synonym="railway locomotive" is_a="self-propelled vehicle" core.source="wordnet 3.1"
 @k.words.lodge.noun.1 k.words.sense word=Lodge pos=noun n=1 gloss="English physicist who studied electromagnetic radiation and was a pioneer of radiotelegraphy (1851-1940)" synonym="Sir Oliver Lodge" synonym="Sir Oliver Joseph Lodge" instance_of=physicist core.source="wordnet 3.1"
 @k.words.lodge.noun.2 k.words.sense word=lodge pos=noun n=2 gloss="a formal association of people with similar interests" synonym=club synonym="social club" synonym=society synonym=guild synonym=gild synonym=order is_a=association core.source="wordnet 3.1"
 @k.words.lodge.noun.3 k.words.sense word=lodge pos=noun n=3 gloss="small house at the entrance to the grounds of a country mansion; usually occupied by a gatekeeper or gardener" is_a=gatehouse core.source="wordnet 3.1"
@@ -89,6 +90,8 @@
 @k.words.logic.noun.2 k.words.sense word=logic pos=noun n=2 gloss="reasoned and reasonable judgment" is_a="common sense" core.source="wordnet 3.1"
 @k.words.logic.noun.3 k.words.sense word=logic pos=noun n=3 gloss="the principles that guide reasoning within a given field or situation" is_a=principle core.source="wordnet 3.1"
 @k.words.logo.noun.1 k.words.sense word=logo pos=noun n=1 gloss="a company emblem or device" synonym=logotype is_a=trademark core.source="wordnet 3.1"
+@k.words.loin.noun.1 k.words.sense word=loin pos=noun n=1 gloss="a cut of meat taken from the side and back of an animal between the ribs and the rump" is_a=cut core.source="wordnet 3.1"
+@k.words.loin.noun.2 k.words.sense word=loin pos=noun n=2 gloss="either side of the backbone between the hipbone and the ribs in humans as well as quadrupeds" synonym=lumbus is_a="body part" part_of=quadruped part_of=homo core.source="wordnet 3.1"
 @k.words.loki.noun.1 k.words.sense word=Loki pos=noun n=1 gloss="(Norse mythology) trickster; god of discord and mischief; contrived death of Balder and was overcome by Thor" instance_of="Norse deity" core.source="wordnet 3.1"
 @k.words.loki.spelling.Loki core.word text=loki means=Loki of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.lollipop.noun.1 k.words.sense word=lollipop pos=noun n=1 gloss="ice cream or water ice on a small wooden stick" synonym="ice lolly" synonym=lolly synonym=popsicle is_a="frozen dessert" core.source="wordnet 3.1"

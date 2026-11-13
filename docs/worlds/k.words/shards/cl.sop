@@ -1,5 +1,5 @@
 # k.words/shards/cl: noun and verb senses of the words from "claim" to "clyde" (first letters "cl").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -104,6 +104,8 @@
 @k.words.clearing.noun.2 k.words.sense word=clearing pos=noun n=2 gloss="the act of freeing from suspicion" is_a=liberation core.source="wordnet 3.1"
 @k.words.clearing.noun.3 k.words.sense word=clearing pos=noun n=3 gloss="the act of removing solid particles from a liquid" synonym=clarification is_a=improvement core.source="wordnet 3.1"
 @k.words.cleaver.noun.1 k.words.sense word=cleaver pos=noun n=1 gloss="a butcher's knife having a large square blade" synonym="meat cleaver" synonym=chopper is_a=knife core.source="wordnet 3.1"
+@k.words.clementine.noun.1 k.words.sense word=clementine pos=noun n=1 gloss="a variety of mandarin orange that is grown around the Mediterranean and in South Africa" synonym="clementine tree" is_a=mandarin core.source="wordnet 3.1"
+@k.words.clementine.noun.2 k.words.sense word=clementine pos=noun n=2 gloss="a mandarin orange of a deep reddish orange color and few seeds" is_a=mandarin core.source="wordnet 3.1"
 @k.words.cleopatra.noun.1 k.words.sense word=Cleopatra pos=noun n=1 gloss="beautiful and charismatic queen of Egypt; mistress of Julius Caesar and later of Mark Antony; killed herself to avoid capture by Octavian (69-30 BC)" instance_of=queen instance_of=Egyptian core.source="wordnet 3.1"
 @k.words.cleopatra.spelling.Cleopatra core.word text=cleopatra means=Cleopatra of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.clergy.noun.1 k.words.sense word=clergy pos=noun n=1 gloss="in Christianity, clergymen collectively (as distinguished from the laity)" is_a=priesthood core.source="wordnet 3.1"
@@ -161,6 +163,10 @@
 @k.words.clip.verb.2 k.words.sense word=clip pos=verb n=2 gloss="run at a moderately swift pace" synonym=trot synonym=jog is_a=run core.source="wordnet 3.1"
 @k.words.clip.verb.3 k.words.sense word=clip pos=verb n=3 gloss="attach with a clip" is_a=attach core.source="wordnet 3.1"
 @k.words.clip.forms core.word text=clipped text=clipping means=clip of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.clipboard.noun.1 k.words.sense word=clipboard pos=noun n=1 gloss="a small writing board with a clip at the top for holding papers" is_a="writing board" core.source="wordnet 3.1"
+@k.words.clipper.noun.1 k.words.sense word=clipper pos=noun n=1 gloss="(electronics) a nonlinear electronic circuit whose output is limited in amplitude; used to limit the instantaneous amplitude of a waveform (to clip off the peaks of a waveform)" synonym=limiter is_a=circuit core.source="wordnet 3.1"
+@k.words.clipper.noun.2 k.words.sense word=clipper pos=noun n=2 gloss="a fast sailing ship used in former times" synonym="clipper ship" is_a="sailing vessel" core.source="wordnet 3.1"
+@k.words.clipper.noun.3 k.words.sense word=clipper pos=noun n=3 gloss="shears for cutting grass or shrubbery (often used in the plural)" is_a=shears core.source="wordnet 3.1"
 @k.words.clive.noun.1 k.words.sense word=Clive pos=noun n=1 gloss="British general and statesman whose victory at Plassey in 1757 strengthened British control of India (1725-1774)" synonym="Robert Clive" synonym="Baron Clive" synonym="Baron Clive of Plassey" instance_of=general instance_of=statesman core.source="wordnet 3.1"
 @k.words.clive.spelling.Clive core.word text=clive means=Clive of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.cloak.noun.1 k.words.sense word=cloak pos=noun n=1 gloss="anything that covers or conceals" is_a=covering core.source="wordnet 3.1"

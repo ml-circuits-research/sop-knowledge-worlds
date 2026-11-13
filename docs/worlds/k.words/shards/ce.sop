@@ -1,5 +1,5 @@
-# k.words/shards/ce: noun and verb senses of the words from "ce" to "certificate" (first letters "ce").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ce: noun and verb senses of the words from "ce" to "cesspool" (first letters "ce").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -51,6 +51,7 @@
 @k.words.center.verb.1 k.words.sense word=center pos=verb n=1 gloss="center upon" synonym="focus on" synonym="center on" synonym="revolve around" synonym="revolve about" synonym="concentrate on" is_a=refer core.source="wordnet 3.1"
 @k.words.center.verb.2 k.words.sense word=center pos=verb n=2 gloss="direct one's attention on something" synonym=concentrate synonym=focus synonym=centre synonym=pore synonym=rivet is_a=think core.source="wordnet 3.1"
 @k.words.center.verb.3 k.words.sense word=center pos=verb n=3 gloss="move into the center" synonym=centre is_a=move core.source="wordnet 3.1"
+@k.words.centipede.noun.1 k.words.sense word=centipede pos=noun n=1 gloss="chiefly nocturnal predacious arthropod having a flattened body of 15 to 173 segments each with a pair of legs, the foremost pair being modified as prehensors" is_a=arthropod core.source="wordnet 3.1"
 @k.words.central.noun.1 k.words.sense word=central pos=noun n=1 gloss="a workplace that serves as a telecommunications facility where lines from telephones can be connected together to permit communication" synonym="telephone exchange" synonym=exchange is_a=workplace part_of="telephone system" core.source="wordnet 3.1"
 @k.words.centre.noun.1 k.words.sense word=Centre pos=noun n=1 gloss="a low-lying region in central France" instance_of="French region" part_of=France core.source="wordnet 3.1"
 @k.words.centre.noun.2 k.words.sense word=centre pos=noun n=2 gloss="an area that is approximately central within some larger region" synonym=center synonym=middle synonym=heart synonym=eye is_a=area core.source="wordnet 3.1"
@@ -75,3 +76,4 @@
 @k.words.certificate.noun.2 k.words.sense word=certificate pos=noun n=2 gloss="a formal declaration that documents a fact of relevance to finance and investment; the holder has a right to receive interest or dividends" synonym=security is_a="legal document" core.source="wordnet 3.1"
 @k.words.certificate.verb.1 k.words.sense word=certificate pos=verb n=1 gloss="present someone with a certificate" is_a=award core.source="wordnet 3.1"
 @k.words.certificate.verb.2 k.words.sense word=certificate pos=verb n=2 gloss="authorize by certificate" is_a=authorize core.source="wordnet 3.1"
+@k.words.cesspool.noun.1 k.words.sense word=cesspool pos=noun n=1 gloss="a covered cistern; waste water and sewage flow into it" synonym=cesspit synonym=sink synonym=sump is_a=cistern core.source="wordnet 3.1"

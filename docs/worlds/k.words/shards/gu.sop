@@ -1,10 +1,11 @@
 # k.words/shards/gu: noun and verb senses of the words from "gu" to "guy" (first letters "gu").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
 @k.words.gu.noun.1 k.words.sense word=GU pos=noun n=1 gloss="the largest and southernmost island in the Marianas which is administered as a territory of the United States; it was ceded by Spain to the United States in 1898" synonym=Guam instance_of=island part_of="Mariana Islands" core.source="wordnet 3.1"
 @k.words.gu.spelling.GU core.word text=gu means=GU of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.guacamole.noun.1 k.words.sense word=guacamole pos=noun n=1 gloss="a dip made of mashed avocado mixed with chopped onions and other seasonings" is_a=dip core.source="wordnet 3.1"
 @k.words.guan.noun.1 k.words.sense word=guan pos=noun n=1 gloss="any of several large turkey-like game birds of the family Cracidae; native to jungles of tropical America; resembling the curassows and valued as food" is_a="gallinaceous bird" core.source="wordnet 3.1"
 @k.words.guarantee.noun.1 k.words.sense word=guarantee pos=noun n=1 gloss="a written assurance that some product or service will be provided or will meet certain specifications" synonym=warrant synonym=warrantee synonym=warranty is_a=assurance core.source="wordnet 3.1"
 @k.words.guarantee.noun.2 k.words.sense word=guarantee pos=noun n=2 gloss="an unconditional commitment that something will happen or that something is true" is_a=assurance core.source="wordnet 3.1"
@@ -32,6 +33,7 @@
 @k.words.guest.noun.2 k.words.sense word=Guest pos=noun n=2 gloss="United States journalist (born in England) noted for his syndicated homey verse (1881-1959)" synonym="Edgar Guest" synonym="Edgar Albert Guest" instance_of=journalist core.source="wordnet 3.1"
 @k.words.guest.noun.3 k.words.sense word=guest pos=noun n=3 gloss="a customer of a hotel or restaurant etc." is_a=customer core.source="wordnet 3.1"
 @k.words.guest.spelling.Guest core.word text=guest means=Guest of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.guesthouse.noun.1 k.words.sense word=guesthouse pos=noun n=1 gloss="a house separate from the main house; for housing guests" is_a=house core.source="wordnet 3.1"
 @k.words.guidance.noun.1 k.words.sense word=guidance pos=noun n=1 gloss="something that provides direction or advice as to a decision or course of action" synonym=counsel synonym=counseling synonym=counselling synonym=direction is_a=message core.source="wordnet 3.1"
 @k.words.guidance.noun.2 k.words.sense word=guidance pos=noun n=2 gloss="the act of guiding or showing the way" synonym=steering is_a=management core.source="wordnet 3.1"
 @k.words.guidance.noun.3 k.words.sense word=guidance pos=noun n=3 gloss="the act of setting and holding a course" synonym=steering synonym=direction is_a=control core.source="wordnet 3.1"
@@ -55,6 +57,7 @@
 @k.words.gulf.noun.1 k.words.sense word=gulf pos=noun n=1 gloss="an arm of a sea or ocean partly enclosed by land; larger than a bay" is_a="body of water" part_of=sea core.source="wordnet 3.1"
 @k.words.gulf.noun.2 k.words.sense word=gulf pos=noun n=2 gloss="an unbridgeable disparity (as from a failure of understanding)" synonym=disconnect synonym=disconnection is_a=disparity core.source="wordnet 3.1"
 @k.words.gulf.noun.3 k.words.sense word=gulf pos=noun n=3 gloss="a deep wide chasm" is_a=chasm core.source="wordnet 3.1"
+@k.words.gully.noun.1 k.words.sense word=gully pos=noun n=1 gloss="deep ditch cut by running water (especially after a prolonged downpour)" is_a=valley core.source="wordnet 3.1"
 @k.words.gulp.noun.1 k.words.sense word=gulp pos=noun n=1 gloss="a large and hurried swallow" synonym=draft synonym=draught synonym=swig is_a=swallow core.source="wordnet 3.1"
 @k.words.gulp.noun.2 k.words.sense word=gulp pos=noun n=2 gloss="a spasmodic reflex of the throat made as if in swallowing" synonym=gulping is_a=reflex core.source="wordnet 3.1"
 @k.words.gulp.verb.1 k.words.sense word=gulp pos=verb n=1 gloss="to swallow hurriedly or greedily or in one draught" synonym=quaff synonym=swig is_a=drink core.source="wordnet 3.1"
@@ -75,6 +78,7 @@
 @k.words.gunman.noun.1 k.words.sense word=gunman pos=noun n=1 gloss="a professional killer who uses a gun" synonym=gunslinger synonym="hired gun" synonym=gun synonym="gun for hire" synonym=triggerman synonym="hit man" synonym=hitman synonym=torpedo synonym=shooter is_a=murderer core.source="wordnet 3.1"
 @k.words.gunman.noun.2 k.words.sense word=gunman pos=noun n=2 gloss="a person who shoots a gun (as regards their ability)" synonym=gun is_a=shot core.source="wordnet 3.1"
 @k.words.gunner.noun.1 k.words.sense word=gunner pos=noun n=1 gloss="a serviceman in the artillery" synonym=artilleryman synonym=cannoneer synonym="machine gunner" is_a=serviceman core.source="wordnet 3.1"
+@k.words.gunnery.noun.1 k.words.sense word=gunnery pos=noun n=1 gloss="guns collectively" is_a=weaponry core.source="wordnet 3.1"
 @k.words.gunny.noun.1 k.words.sense word=gunny pos=noun n=1 gloss="coarse jute fabric" synonym=burlap is_a=sacking core.source="wordnet 3.1"
 @k.words.gunpoint.noun.1 k.words.sense word=gunpoint pos=noun n=1 gloss="the gun muzzle's direction" synonym=point is_a="gun muzzle" core.source="wordnet 3.1"
 @k.words.gunpowder.noun.1 k.words.sense word=gunpowder pos=noun n=1 gloss="a mixture of potassium nitrate, charcoal, and sulfur in a 75:15:10 ratio which is used in gunnery, time fuses, and fireworks" synonym=powder is_a=explosive core.source="wordnet 3.1"

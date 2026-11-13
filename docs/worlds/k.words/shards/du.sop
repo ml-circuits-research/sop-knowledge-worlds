@@ -1,5 +1,5 @@
 # k.words/shards/du: noun and verb senses of the words from "dubai" to "duty" (first letters "du").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -33,6 +33,8 @@
 @k.words.duet.noun.2 k.words.sense word=duet pos=noun n=2 gloss="two performers or singers who perform together" synonym=duette synonym=duo is_a="musical organization" core.source="wordnet 3.1"
 @k.words.duet.noun.3 k.words.sense word=duet pos=noun n=3 gloss="a pair who associate with one another" synonym=couple synonym=twosome synonym=duo is_a=pair core.source="wordnet 3.1"
 @k.words.duff.noun.1 k.words.sense word=duff pos=noun n=1 gloss="a stiff flour pudding steamed or boiled usually and containing e.g. currants and raisins and citron" synonym="plum duff" is_a=pudding core.source="wordnet 3.1"
+@k.words.duffel.noun.1 k.words.sense word=duffel pos=noun n=1 gloss="a large cylindrical bag of heavy cloth; for carrying personal belongings" synonym="duffel bag" synonym="duffle bag" synonym=duffle is_a="drawstring bag" core.source="wordnet 3.1"
+@k.words.duffel.noun.2 k.words.sense word=duffel pos=noun n=2 gloss="a coarse heavy woolen fabric" synonym=duffle is_a=fabric core.source="wordnet 3.1"
 @k.words.dug.noun.1 k.words.sense word=dug pos=noun n=1 gloss="an udder or breast or teat" is_a="mammary gland" part_of="female mammal" core.source="wordnet 3.1"
 @k.words.duke.noun.1 k.words.sense word=duke pos=noun n=1 gloss="a British peer of the highest rank" is_a=peer core.source="wordnet 3.1"
 @k.words.duke.noun.2 k.words.sense word=duke pos=noun n=2 gloss="a nobleman (in various countries) of high rank" is_a=Lord core.source="wordnet 3.1"
@@ -66,6 +68,7 @@
 @k.words.dun.forms core.word text=dunned text=dunning means=dun of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.duncan.noun.1 k.words.sense word=Duncan pos=noun n=1 gloss="United States dancer and pioneer of modern dance (1878-1927)" synonym="Isadora Duncan" instance_of=dancer core.source="wordnet 3.1"
 @k.words.duncan.spelling.Duncan core.word text=duncan means=Duncan of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.dune.noun.1 k.words.sense word=dune pos=noun n=1 gloss="a ridge of sand created by the wind; found in deserts or near lakes and oceans" synonym="sand dune" is_a=ridge core.source="wordnet 3.1"
 @k.words.dung.noun.1 k.words.sense word=dung pos=noun n=1 gloss="fecal matter of animals" synonym=droppings synonym=muck is_a="fecal matter" core.source="wordnet 3.1"
 @k.words.dung.verb.1 k.words.sense word=dung pos=verb n=1 gloss="fertilize or dress with dung" is_a=fertilize core.source="wordnet 3.1"
 @k.words.dung.verb.2 k.words.sense word=dung pos=verb n=2 gloss="defecate; used of animals" is_a=stool core.source="wordnet 3.1"

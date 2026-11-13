@@ -1,5 +1,5 @@
 # k.words/shards/te: noun and verb senses of the words from "te" to "texture" (first letters "te").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -26,6 +26,7 @@
 @k.words.team.verb.1 k.words.sense word=team pos=verb n=1 gloss="form a team" synonym="team up" is_a=group core.source="wordnet 3.1"
 @k.words.teammate.noun.1 k.words.sense word=teammate pos=noun n=1 gloss="a fellow member of a team" synonym=mate is_a=associate core.source="wordnet 3.1"
 @k.words.teamwork.noun.1 k.words.sense word=teamwork pos=noun n=1 gloss="cooperative work done by a team (especially when it is effective)" is_a=cooperation core.source="wordnet 3.1"
+@k.words.teapot.noun.1 k.words.sense word=teapot pos=noun n=1 gloss="pot for brewing tea; usually has a spout and handle" is_a=pot core.source="wordnet 3.1"
 @k.words.tear.noun.1 k.words.sense word=tear pos=noun n=1 gloss="a drop of the clear salty saline solution secreted by the lacrimal glands" synonym=teardrop is_a=drop part_of="lacrimal secretion" core.source="wordnet 3.1"
 @k.words.tear.noun.2 k.words.sense word=tear pos=noun n=2 gloss="an opening made forcibly as by pulling apart" synonym=rip synonym=rent synonym=snag synonym=split is_a=opening core.source="wordnet 3.1"
 @k.words.tear.noun.3 k.words.sense word=tear pos=noun n=3 gloss="an occasion for excessive eating or drinking" synonym=bust synonym=binge synonym=bout is_a=revel core.source="wordnet 3.1"
@@ -195,6 +196,7 @@
 @k.words.terrace.verb.1 k.words.sense word=terrace pos=verb n=1 gloss="provide (a house) with a terrace" synonym=terrasse is_a=supply core.source="wordnet 3.1"
 @k.words.terrace.verb.2 k.words.sense word=terrace pos=verb n=2 gloss="make into terraces as for cultivation" is_a=shape core.source="wordnet 3.1"
 @k.words.terrain.noun.1 k.words.sense word=terrain pos=noun n=1 gloss="a piece of ground having specific characteristics or military potential" is_a=tract core.source="wordnet 3.1"
+@k.words.terrier.noun.1 k.words.sense word=terrier pos=noun n=1 gloss="any of several usually small short-bodied breeds originally trained to hunt animals living underground" is_a="hunting dog" core.source="wordnet 3.1"
 @k.words.territorial.noun.1 k.words.sense word=territorial pos=noun n=1 gloss="nonprofessional soldier member of a territorial military unit" is_a=soldier core.source="wordnet 3.1"
 @k.words.territorial.noun.2 k.words.sense word=territorial pos=noun n=2 gloss="a territorial military unit" synonym="territorial reserve" is_a=guard part_of=militia core.source="wordnet 3.1"
 @k.words.territory.noun.1 k.words.sense word=territory pos=noun n=1 gloss="a region marked off for administrative or other purposes" synonym=district synonym="territorial dominion" synonym=dominion is_a=region core.source="wordnet 3.1"

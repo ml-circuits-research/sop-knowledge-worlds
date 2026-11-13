@@ -1,5 +1,5 @@
 # k.words/shards/tr: noun and verb senses of the words from "trace" to "try" (first letters "tr").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -87,6 +87,7 @@
 @k.words.tramp.verb.1 k.words.sense word=tramp pos=verb n=1 gloss="travel on foot, especially on a walking expedition" is_a=hike core.source="wordnet 3.1"
 @k.words.tramp.verb.2 k.words.sense word=tramp pos=verb n=2 gloss="walk heavily and firmly, as when weary, or through mud" synonym=slog synonym=footslog synonym=plod synonym=trudge synonym=pad is_a=walk core.source="wordnet 3.1"
 @k.words.tramp.verb.3 k.words.sense word=tramp pos=verb n=3 gloss="cross on foot" is_a=traverse core.source="wordnet 3.1"
+@k.words.trampoline.noun.1 k.words.sense word=trampoline pos=noun n=1 gloss="gymnastic apparatus consisting of a strong canvas sheet attached with springs to a metal frame; used for tumbling" is_a="gymnastic apparatus" core.source="wordnet 3.1"
 @k.words.trance.noun.1 k.words.sense word=trance pos=noun n=1 gloss="a psychological state induced by (or as if induced by) a magical incantation" synonym=enchantment synonym=spell is_a="psychological state" core.source="wordnet 3.1"
 @k.words.trance.noun.2 k.words.sense word=trance pos=noun n=2 gloss="a state of mind in which consciousness is fragile and voluntary action is poor or missing; a state resembling deep sleep" is_a=unconsciousness core.source="wordnet 3.1"
 @k.words.trance.verb.1 k.words.sense word=trance pos=verb n=1 gloss="attract; cause to be enamored" synonym=capture synonym=enamour synonym=catch synonym=becharm synonym=enamor synonym=captivate synonym=beguile synonym=charm synonym=fascinate synonym=bewitch synonym=entrance synonym=enchant is_a=attract core.source="wordnet 3.1"
@@ -166,6 +167,7 @@
 @k.words.trap.verb.2 k.words.sense word=trap pos=verb n=2 gloss="catch in or as if in a trap" synonym=entrap synonym=snare synonym=ensnare synonym=trammel is_a=capture core.source="wordnet 3.1"
 @k.words.trap.verb.3 k.words.sense word=trap pos=verb n=3 gloss="hold or catch as if in a trap" is_a=hold core.source="wordnet 3.1"
 @k.words.trap.forms core.word text=trapped text=trapping means=trap of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.trapeze.noun.1 k.words.sense word=trapeze pos=noun n=1 gloss="a swing used by circus acrobats" is_a=swing core.source="wordnet 3.1"
 @k.words.trash.noun.1 k.words.sense word=trash pos=noun n=1 gloss="worthless material that is to be disposed of" synonym=rubbish synonym=scrap is_a=waste core.source="wordnet 3.1"
 @k.words.trash.noun.2 k.words.sense word=trash pos=noun n=2 gloss="worthless people" synonym=scum is_a=rabble core.source="wordnet 3.1"
 @k.words.trash.noun.3 k.words.sense word=trash pos=noun n=3 gloss="nonsensical talk or writing" synonym=folderol synonym=rubbish synonym=tripe synonym=trumpery synonym=wish-wash synonym=applesauce synonym=codswallop is_a=drivel core.source="wordnet 3.1"
@@ -195,6 +197,9 @@
 @k.words.tread.verb.2 k.words.sense word=tread pos=verb n=2 gloss="tread or stomp heavily or roughly" synonym=trample is_a=walk core.source="wordnet 3.1"
 @k.words.tread.verb.3 k.words.sense word=tread pos=verb n=3 gloss="crush as if by treading on" is_a=squash core.source="wordnet 3.1"
 @k.words.tread.forms core.word text=trod text=trodden means=tread of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.treadmill.noun.1 k.words.sense word=treadmill pos=noun n=1 gloss="an exercise device consisting of an endless belt on which a person can walk or jog without changing place" is_a="exercise device" core.source="wordnet 3.1"
+@k.words.treadmill.noun.2 k.words.sense word=treadmill pos=noun n=2 gloss="a mill that is powered by men or animals walking on a circular belt or climbing steps" synonym=treadwheel synonym=tread-wheel is_a=mill core.source="wordnet 3.1"
+@k.words.treadmill.noun.3 k.words.sense word=treadmill pos=noun n=3 gloss="a job involving drudgery and confinement" synonym="salt mine" is_a=occupation core.source="wordnet 3.1"
 @k.words.treason.noun.1 k.words.sense word=treason pos=noun n=1 gloss="a crime that undermines the offender's government" synonym="high treason" synonym="lese majesty" is_a=crime core.source="wordnet 3.1"
 @k.words.treason.noun.2 k.words.sense word=treason pos=noun n=2 gloss="disloyalty by virtue of subversive behavior" synonym=subversiveness synonym=traitorousness is_a=disloyalty core.source="wordnet 3.1"
 @k.words.treason.noun.3 k.words.sense word=treason pos=noun n=3 gloss="an act of deliberate betrayal" synonym=treachery synonym=betrayal synonym=perfidy is_a=dishonesty core.source="wordnet 3.1"
@@ -275,6 +280,7 @@
 @k.words.trick.noun.2 k.words.sense word=trick pos=noun n=2 gloss="a period of work or duty" is_a=shift core.source="wordnet 3.1"
 @k.words.trick.noun.3 k.words.sense word=trick pos=noun n=3 gloss="an attempt to get you to do something foolish or imprudent" is_a=dishonesty core.source="wordnet 3.1"
 @k.words.trick.verb.1 k.words.sense word=trick pos=verb n=1 gloss="deceive somebody" synonym=flim-flam synonym="play a joke on" synonym="play tricks" synonym=fob synonym=fox synonym="pull a fast one on" synonym="play a trick on" is_a=deceive core.source="wordnet 3.1"
+@k.words.trident.noun.1 k.words.sense word=trident pos=noun n=1 gloss="a spear with three prongs" is_a=spear core.source="wordnet 3.1"
 @k.words.trifle.noun.1 k.words.sense word=trifle pos=noun n=1 gloss="a cold pudding made of layers of sponge cake spread with fruit or jelly; may be decorated with nuts, cream, or chocolate" is_a=pudding core.source="wordnet 3.1"
 @k.words.trifle.noun.2 k.words.sense word=trifle pos=noun n=2 gloss="a detail that is considered insignificant" synonym=triviality is_a=detail core.source="wordnet 3.1"
 @k.words.trifle.noun.3 k.words.sense word=trifle pos=noun n=3 gloss="something of small importance" synonym=triviality synonym=trivia synonym="small beer" is_a=object core.source="wordnet 3.1"
@@ -312,11 +318,14 @@
 @k.words.trip.verb.2 k.words.sense word=trip pos=verb n=2 gloss="cause to stumble" synonym="trip up" core.source="wordnet 3.1"
 @k.words.trip.verb.3 k.words.sense word=trip pos=verb n=3 gloss="make a trip for pleasure" synonym=travel synonym=jaunt core.source="wordnet 3.1"
 @k.words.trip.forms core.word text=tripped text=tripping means=trip of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.tripe.noun.1 k.words.sense word=tripe pos=noun n=1 gloss="lining of the stomach of a ruminant (especially a bovine) used as food" is_a="variety meat" core.source="wordnet 3.1"
+@k.words.tripe.noun.2 k.words.sense word=tripe pos=noun n=2 gloss="nonsensical talk or writing" synonym=folderol synonym=rubbish synonym=trumpery synonym=trash synonym=wish-wash synonym=applesauce synonym=codswallop is_a=drivel core.source="wordnet 3.1"
 @k.words.triple.noun.1 k.words.sense word=triple pos=noun n=1 gloss="a base hit at which the batter stops safely at third base" synonym="three-base hit" synonym=three-bagger is_a="base hit" core.source="wordnet 3.1"
 @k.words.triple.noun.2 k.words.sense word=triple pos=noun n=2 gloss="a set of three similar things considered as a unit" synonym=trio synonym=triad synonym=triplet is_a=set core.source="wordnet 3.1"
 @k.words.triple.noun.3 k.words.sense word=triple pos=noun n=3 gloss="a quantity that is three times as great as another" is_a=multiple core.source="wordnet 3.1"
 @k.words.triple.verb.1 k.words.sense word=triple pos=verb n=1 gloss="increase threefold" synonym=treble is_a=multiply core.source="wordnet 3.1"
 @k.words.triple.verb.2 k.words.sense word=triple pos=verb n=2 gloss="hit a three-base hit" is_a=hit core.source="wordnet 3.1"
+@k.words.tripod.noun.1 k.words.sense word=tripod pos=noun n=1 gloss="a three-legged rack used for support" is_a=rack core.source="wordnet 3.1"
 @k.words.tristan.noun.1 k.words.sense word=Tristan pos=noun n=1 gloss="(Middle Ages) the nephew of the king of Cornwall who (according to legend) fell in love with his uncle's bride (Iseult) after they mistakenly drank a love potion that left them eternally in love with each other" synonym=Tristram instance_of="fictional character" core.source="wordnet 3.1"
 @k.words.tristan.spelling.Tristan core.word text=tristan means=Tristan of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.triumph.noun.1 k.words.sense word=triumph pos=noun n=1 gloss="a successful ending of a struggle or contest" synonym=victory is_a=ending is_a=success core.source="wordnet 3.1"
@@ -335,6 +344,7 @@
 @k.words.troll.verb.2 k.words.sense word=troll pos=verb n=2 gloss="cause to move round and round" is_a=wheel core.source="wordnet 3.1"
 @k.words.troll.verb.3 k.words.sense word=troll pos=verb n=3 gloss="sing the parts of (a round) in succession" is_a=sing core.source="wordnet 3.1"
 @k.words.trolley.noun.1 k.words.sense word=trolley pos=noun n=1 gloss="a wheeled vehicle that runs on rails and is propelled by electricity" synonym=streetcar synonym=tram synonym=tramcar synonym="trolley car" is_a="self-propelled vehicle" part_of="trolley line" core.source="wordnet 3.1"
+@k.words.trombone.noun.1 k.words.sense word=trombone pos=noun n=1 gloss="a brass instrument consisting of a long tube whose length can be varied by a U-shaped slide" is_a=brass core.source="wordnet 3.1"
 @k.words.troop.noun.1 k.words.sense word=troop pos=noun n=1 gloss="a group of soldiers" is_a="army unit" core.source="wordnet 3.1"
 @k.words.troop.noun.2 k.words.sense word=troop pos=noun n=2 gloss="a cavalry unit corresponding to an infantry company" is_a="army unit" core.source="wordnet 3.1"
 @k.words.troop.noun.3 k.words.sense word=troop pos=noun n=3 gloss="a unit of Girl or Boy Scouts" synonym="scout troop" synonym="scout group" is_a=unit core.source="wordnet 3.1"
@@ -365,6 +375,7 @@
 @k.words.trough.noun.2 k.words.sense word=trough pos=noun n=2 gloss="a channel along the eaves or on the roof; collects and carries away rainwater" synonym=gutter is_a=channel part_of="gable roof" core.source="wordnet 3.1"
 @k.words.trough.noun.3 k.words.sense word=trough pos=noun n=3 gloss="a concave shape with an open top" synonym=bowl is_a="concave shape" core.source="wordnet 3.1"
 @k.words.troupe.noun.1 k.words.sense word=troupe pos=noun n=1 gloss="organization of performers and associated personnel (especially theatrical)" synonym=company is_a=organization core.source="wordnet 3.1"
+@k.words.trouser.noun.1 k.words.sense word=trouser pos=noun n=1 gloss="a garment (or part of a garment) designed for or relating to trousers" is_a=garment part_of=trousers core.source="wordnet 3.1"
 @k.words.trousers.noun.1 k.words.sense word=trousers pos=noun n=1 gloss="(usually in the plural) a garment extending from the waist to the knee or ankle, covering each leg separately" synonym="pair of trousers" synonym=pant is_a=garment core.source="wordnet 3.1"
 @k.words.trout.noun.1 k.words.sense word=trout pos=noun n=1 gloss="flesh of any of several primarily freshwater game and food fishes" is_a=fish core.source="wordnet 3.1"
 @k.words.trout.noun.2 k.words.sense word=trout pos=noun n=2 gloss="any of various game and food fishes of cool fresh waters mostly smaller than typical salmons" is_a=salmonid is_a="food fish" core.source="wordnet 3.1"

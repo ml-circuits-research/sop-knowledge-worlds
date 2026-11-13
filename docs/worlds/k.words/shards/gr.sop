@@ -1,5 +1,5 @@
 # k.words/shards/gr: noun and verb senses of the words from "grab" to "grunt" (first letters "gr").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -54,6 +54,7 @@
 @k.words.gram.noun.2 k.words.sense word=Gram pos=noun n=2 gloss="Danish physician and bacteriologist who developed a method of staining bacteria to distinguish among them (1853-1938)" synonym="Hans C. J. Gram" instance_of=bacteriologist core.source="wordnet 3.1"
 @k.words.gram.spelling.Gram core.word text=gram means=Gram of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.grammar.noun.1 k.words.sense word=grammar pos=noun n=1 gloss="the branch of linguistics that deals with syntax and morphology (and sometimes also deals with semantics)" is_a="descriptive linguistics" core.source="wordnet 3.1"
+@k.words.gramophone.noun.1 k.words.sense word=gramophone pos=noun n=1 gloss="an antique record player; the sound of the vibrating needle is amplified acoustically" synonym="acoustic gramophone" is_a="record player" core.source="wordnet 3.1"
 @k.words.gramps.noun.1 k.words.sense word=gramps pos=noun n=1 gloss="the father of your father or mother" synonym=grandfather synonym=granddad synonym=grandad synonym=granddaddy synonym=grandpa is_a=grandparent core.source="wordnet 3.1"
 @k.words.gran.noun.1 k.words.sense word=gran pos=noun n=1 gloss="the mother of your father or mother" synonym=grandma synonym=grandmother synonym=granny synonym=grannie synonym=nan synonym=nanna is_a=grandparent core.source="wordnet 3.1"
 @k.words.grand.noun.1 k.words.sense word=grand pos=noun n=1 gloss="the cardinal number that is the product of 10 and 100" synonym=thousand synonym="one thousand" synonym=1000 synonym=M synonym=K synonym=chiliad synonym=G synonym=thou synonym=yard is_a="large integer" core.source="wordnet 3.1"
@@ -70,6 +71,7 @@
 @k.words.grandmother.noun.1 k.words.sense word=grandmother pos=noun n=1 gloss="the mother of your father or mother" synonym=grandma synonym=granny synonym=grannie synonym=gran synonym=nan synonym=nanna is_a=grandparent core.source="wordnet 3.1"
 @k.words.grandpa.noun.1 k.words.sense word=grandpa pos=noun n=1 gloss="the father of your father or mother" synonym=grandfather synonym=gramps synonym=granddad synonym=grandad synonym=granddaddy is_a=grandparent core.source="wordnet 3.1"
 @k.words.grandson.noun.1 k.words.sense word=grandson pos=noun n=1 gloss="a male grandchild" is_a=grandchild core.source="wordnet 3.1"
+@k.words.grange.noun.1 k.words.sense word=grange pos=noun n=1 gloss="an outlying farm" is_a=farm core.source="wordnet 3.1"
 @k.words.granger.noun.1 k.words.sense word=granger pos=noun n=1 gloss="a person who operates a farm" synonym=farmer synonym=husbandman synonym=sodbuster is_a=creator core.source="wordnet 3.1"
 @k.words.granite.noun.1 k.words.sense word=granite pos=noun n=1 gloss="plutonic igneous rock having visibly crystalline texture; generally composed of feldspar and mica and quartz" is_a=batholith core.source="wordnet 3.1"
 @k.words.granite.noun.2 k.words.sense word=granite pos=noun n=2 gloss="something having the quality of granite (unyielding firmness)" is_a=steadiness core.source="wordnet 3.1"
@@ -104,6 +106,12 @@
 @k.words.grass.spelling.Grass core.word text=grass means=Grass of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.grasshopper.noun.1 k.words.sense word=grasshopper pos=noun n=1 gloss="terrestrial plant-eating insect with hind legs adapted for leaping" synonym=hopper is_a="orthopterous insect" core.source="wordnet 3.1"
 @k.words.grasshopper.noun.2 k.words.sense word=grasshopper pos=noun n=2 gloss="a cocktail made of creme de menthe and cream (sometimes with creme de cacao)" is_a=cocktail core.source="wordnet 3.1"
+@k.words.grate.noun.1 k.words.sense word=grate pos=noun n=1 gloss="a frame of iron bars to hold a fire" synonym=grating is_a=framework part_of=stove part_of=furnace core.source="wordnet 3.1"
+@k.words.grate.noun.2 k.words.sense word=grate pos=noun n=2 gloss="a harsh rasping sound made by scraping something" is_a=noise core.source="wordnet 3.1"
+@k.words.grate.noun.3 k.words.sense word=grate pos=noun n=3 gloss="a barrier that has parallel or crossed bars blocking a passage but admitting air" synonym=grating is_a=barrier core.source="wordnet 3.1"
+@k.words.grate.verb.1 k.words.sense word=grate pos=verb n=1 gloss="furnish with a grate" is_a=supply core.source="wordnet 3.1"
+@k.words.grate.verb.2 k.words.sense word=grate pos=verb n=2 gloss="gnaw into; make resentful or angry" synonym="eat into" synonym=fret synonym=rankle is_a=annoy core.source="wordnet 3.1"
+@k.words.grate.verb.3 k.words.sense word=grate pos=verb n=3 gloss="reduce to small shreds or pulverize by rubbing against a rough or sharp perforated surface" is_a=rub core.source="wordnet 3.1"
 @k.words.gratitude.noun.1 k.words.sense word=gratitude pos=noun n=1 gloss="a feeling of thankfulness and appreciation" is_a=feeling core.source="wordnet 3.1"
 @k.words.grave.noun.1 k.words.sense word=grave pos=noun n=1 gloss="death of a person" is_a=death core.source="wordnet 3.1"
 @k.words.grave.noun.2 k.words.sense word=grave pos=noun n=2 gloss="a place for the burial of a corpse (especially beneath the ground and marked by a tombstone)" synonym=tomb is_a="topographic point" core.source="wordnet 3.1"
@@ -179,6 +187,7 @@
 @k.words.grey.verb.1 k.words.sense word=grey pos=verb n=1 gloss="make grey" synonym=gray is_a=color core.source="wordnet 3.1"
 @k.words.grey.verb.2 k.words.sense word=grey pos=verb n=2 gloss="turn grey" synonym=gray is_a=discolor core.source="wordnet 3.1"
 @k.words.grey.spelling.Grey core.word text=grey means=Grey of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.greyhound.noun.1 k.words.sense word=greyhound pos=noun n=1 gloss="a tall slender dog of an ancient breed noted for swiftness and keen sight; used as a racing dog" is_a=hound is_a=racer core.source="wordnet 3.1"
 @k.words.grid.noun.1 k.words.sense word=grid pos=noun n=1 gloss="a pattern of regularly spaced horizontal and vertical lines" is_a=form core.source="wordnet 3.1"
 @k.words.grid.noun.2 k.words.sense word=grid pos=noun n=2 gloss="a system of high tension cables by which electrical power is distributed throughout a region" synonym="power system" synonym="power grid" is_a=facility part_of=infrastructure core.source="wordnet 3.1"
 @k.words.grid.noun.3 k.words.sense word=grid pos=noun n=3 gloss="a perforated or corrugated metal plate used in a storage battery as a conductor and support for the active material" synonym="storage-battery grid" is_a=plate part_of="storage battery" core.source="wordnet 3.1"
@@ -232,6 +241,7 @@
 @k.words.grocer.noun.1 k.words.sense word=grocer pos=noun n=1 gloss="a retail merchant who sells foodstuffs (and some household supplies)" is_a=merchant core.source="wordnet 3.1"
 @k.words.grocery.noun.1 k.words.sense word=grocery pos=noun n=1 gloss="a marketplace where groceries are sold" synonym="grocery store" synonym="food market" synonym=market is_a=marketplace core.source="wordnet 3.1"
 @k.words.grocery.noun.2 k.words.sense word=grocery pos=noun n=2 gloss="(usually plural) consumer goods sold by a grocer" synonym=foodstuff is_a="consumer goods" core.source="wordnet 3.1"
+@k.words.grog.noun.1 k.words.sense word=grog pos=noun n=1 gloss="rum cut with water" is_a=rum core.source="wordnet 3.1"
 @k.words.groin.noun.1 k.words.sense word=groin pos=noun n=1 gloss="the crease at the junction of the inner part of the thigh with the trunk together with the adjacent region and often including the external genitals" synonym=inguen is_a=area part_of=loins core.source="wordnet 3.1"
 @k.words.groin.noun.2 k.words.sense word=groin pos=noun n=2 gloss="a curved edge formed by two intersecting vaults" is_a=edge core.source="wordnet 3.1"
 @k.words.groin.noun.3 k.words.sense word=groin pos=noun n=3 gloss="a protective structure of stone or concrete; extends from shore into the water to prevent a beach from washing away" synonym=breakwater synonym=groyne synonym=mole synonym=bulwark synonym=seawall synonym=jetty is_a=barrier core.source="wordnet 3.1"
@@ -253,6 +263,8 @@
 @k.words.gross.noun.2 k.words.sense word=gross pos=noun n=2 gloss="the entire amount of income before any deductions are made" synonym=revenue synonym=receipts is_a=sum core.source="wordnet 3.1"
 @k.words.gross.verb.1 k.words.sense word=gross pos=verb n=1 gloss="earn before taxes, expenses, etc." is_a=gain core.source="wordnet 3.1"
 @k.words.grotesque.noun.1 k.words.sense word=grotesque pos=noun n=1 gloss="art characterized by an incongruous mixture of parts of humans and animals interwoven with plants" is_a=art core.source="wordnet 3.1"
+@k.words.grotto.noun.1 k.words.sense word=grotto pos=noun n=1 gloss="a small cave (usually with attractive features)" synonym=grot is_a=cave core.source="wordnet 3.1"
+@k.words.grotto.forms core.word text=grottoes means=grotto of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.ground.noun.1 k.words.sense word=ground pos=noun n=1 gloss="the solid part of the earth's surface" synonym=land synonym="dry land" synonym=earth synonym="solid ground" synonym="terra firma" is_a=object part_of=Earth core.source="wordnet 3.1"
 @k.words.ground.noun.2 k.words.sense word=ground pos=noun n=2 gloss="a rational motive for a belief or action" synonym=reason is_a="rational motive" core.source="wordnet 3.1"
 @k.words.ground.noun.3 k.words.sense word=ground pos=noun n=3 gloss="the loose soft material that makes up a large part of the land surface" synonym=earth is_a=material core.source="wordnet 3.1"
@@ -267,6 +279,10 @@
 @k.words.group.noun.3 k.words.sense word=group pos=noun n=3 gloss="a set that is closed, associative, has an identity element and every element has an inverse" synonym="mathematical group" is_a=set core.source="wordnet 3.1"
 @k.words.group.verb.1 k.words.sense word=group pos=verb n=1 gloss="arrange into a group or groups" is_a=classify core.source="wordnet 3.1"
 @k.words.group.verb.2 k.words.sense word=group pos=verb n=2 gloss="form a group or group together" synonym=aggroup is_a=meet core.source="wordnet 3.1"
+@k.words.grouse.noun.1 k.words.sense word=grouse pos=noun n=1 gloss="flesh of any of various grouse of the family Tetraonidae; usually roasted; flesh too dry to broil" is_a=wildfowl part_of=grouse core.source="wordnet 3.1"
+@k.words.grouse.noun.2 k.words.sense word=grouse pos=noun n=2 gloss="popular game bird having a plump body and feathered legs and feet" is_a="game bird" core.source="wordnet 3.1"
+@k.words.grouse.verb.1 k.words.sense word=grouse pos=verb n=1 gloss="hunt grouse" is_a=fowl core.source="wordnet 3.1"
+@k.words.grouse.verb.2 k.words.sense word=grouse pos=verb n=2 gloss="complain" synonym=gripe synonym=bitch synonym=crab synonym=beef synonym=squawk synonym=bellyache synonym=holler is_a=complain core.source="wordnet 3.1"
 @k.words.grove.noun.1 k.words.sense word=grove pos=noun n=1 gloss="a small growth of trees without underbrush" is_a=forest core.source="wordnet 3.1"
 @k.words.grove.noun.2 k.words.sense word=grove pos=noun n=2 gloss="garden consisting of a small cultivated wood without undergrowth" synonym=woodlet synonym=orchard synonym=plantation is_a=garden core.source="wordnet 3.1"
 @k.words.groves.noun.1 k.words.sense word=Groves pos=noun n=1 gloss="United States general who served as military director of the atomic bomb project (1896-1970)" synonym="Leslie Richard Groves" instance_of=general core.source="wordnet 3.1"

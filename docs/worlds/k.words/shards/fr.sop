@@ -1,5 +1,5 @@
 # k.words/shards/fr: noun and verb senses of the words from "fr" to "frying" (first letters "fr").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -148,6 +148,10 @@
 @k.words.fringe.verb.2 k.words.sense word=fringe pos=verb n=2 gloss="decorate with or as if with a surrounding fringe" is_a=surround core.source="wordnet 3.1"
 @k.words.frisbee.noun.1 k.words.sense word=Frisbee pos=noun n=1 gloss="a light, plastic disk about 10 inches in diameter; propelled with a flip of the wrist for recreation or competition" is_a=disk is_a=plaything core.source="wordnet 3.1"
 @k.words.frisbee.spelling.Frisbee core.word text=frisbee means=Frisbee of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.frock.noun.1 k.words.sense word=frock pos=noun n=1 gloss="a long, loose outer garment" is_a=overgarment core.source="wordnet 3.1"
+@k.words.frock.noun.2 k.words.sense word=frock pos=noun n=2 gloss="a habit worn by clerics" is_a=habit core.source="wordnet 3.1"
+@k.words.frock.noun.3 k.words.sense word=frock pos=noun n=3 gloss="a one-piece garment for a woman; has skirt and bodice" synonym=dress is_a="woman's clothing" core.source="wordnet 3.1"
+@k.words.frock.verb.1 k.words.sense word=frock pos=verb n=1 gloss="put a frock on" is_a=dress core.source="wordnet 3.1"
 @k.words.frog.noun.1 k.words.sense word=frog pos=noun n=1 gloss="any of various tailless stout-bodied amphibians with long hind limbs for leaping; semiaquatic and terrestrial species" synonym=toad synonym="toad frog" synonym=anuran synonym=batrachian synonym=salientian is_a=amphibian core.source="wordnet 3.1"
 @k.words.frog.noun.2 k.words.sense word=frog pos=noun n=2 gloss="a person of French descent" synonym=Gaul is_a=Frenchman core.source="wordnet 3.1"
 @k.words.frog.noun.3 k.words.sense word=frog pos=noun n=3 gloss="a decorative loop of braid or cord" is_a=adornment core.source="wordnet 3.1"
@@ -191,4 +195,5 @@
 @k.words.fry.verb.3 k.words.sense word=fry pos=verb n=3 gloss="kill by electrocution, as in the electric chair" synonym=electrocute is_a=kill core.source="wordnet 3.1"
 @k.words.fry.spelling.Fry core.word text=fry means=Fry of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.fry.forms core.word text=fried means=fry of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.fryer.noun.1 k.words.sense word=fryer pos=noun n=1 gloss="flesh of a medium-sized young chicken suitable for frying" synonym=frier synonym=pullet is_a=chicken core.source="wordnet 3.1"
 @k.words.frying.noun.1 k.words.sense word=frying pos=noun n=1 gloss="cooking in fat or oil in a pan or griddle" synonym=sauteing is_a=cooking core.source="wordnet 3.1"

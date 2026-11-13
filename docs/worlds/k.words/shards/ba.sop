@@ -1,5 +1,5 @@
-# k.words/shards/ba: noun and verb senses of the words from "ba" to "bazaar" (first letters "ba").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ba: noun and verb senses of the words from "ba" to "bazooka" (first letters "ba").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -45,6 +45,7 @@
 @k.words.backbone.noun.1 k.words.sense word=backbone pos=noun n=1 gloss="a central cohesive source of support and stability" synonym=anchor synonym=mainstay synonym=keystone synonym=linchpin synonym=lynchpin is_a=support core.source="wordnet 3.1"
 @k.words.backbone.noun.2 k.words.sense word=backbone pos=noun n=2 gloss="fortitude and determination" synonym=grit synonym=guts synonym=moxie synonym=sand synonym=gumption is_a=fortitude core.source="wordnet 3.1"
 @k.words.backbone.noun.3 k.words.sense word=backbone pos=noun n=3 gloss="the series of vertebrae forming the axis of the skeleton and protecting the spinal cord" synonym="spinal column" synonym="vertebral column" synonym=spine synonym=back synonym=rachis is_a="skeletal structure" part_of="axial skeleton" core.source="wordnet 3.1"
+@k.words.backdrop.noun.1 k.words.sense word=backdrop pos=noun n=1 gloss="scenery hung at back of stage" synonym=background synonym=backcloth is_a=scenery core.source="wordnet 3.1"
 @k.words.background.noun.1 k.words.sense word=background pos=noun n=1 gloss="a person's social heritage: previous experience or training" is_a=inheritance core.source="wordnet 3.1"
 @k.words.background.noun.2 k.words.sense word=background pos=noun n=2 gloss="the part of a scene (or picture) that lies behind objects in the foreground" synonym=ground is_a=view core.source="wordnet 3.1"
 @k.words.background.noun.3 k.words.sense word=background pos=noun n=3 gloss="information that is essential to understanding a situation or problem" synonym="background knowledge" is_a=information core.source="wordnet 3.1"
@@ -89,6 +90,7 @@
 @k.words.baggage.noun.1 k.words.sense word=baggage pos=noun n=1 gloss="cases used to carry belongings when traveling" synonym=luggage is_a=case core.source="wordnet 3.1"
 @k.words.baggage.noun.2 k.words.sense word=baggage pos=noun n=2 gloss="a worthless or immoral woman" is_a=woman core.source="wordnet 3.1"
 @k.words.baggage.noun.3 k.words.sense word=baggage pos=noun n=3 gloss="the portable equipment and supplies of an army" is_a=materiel core.source="wordnet 3.1"
+@k.words.bagging.noun.1 k.words.sense word=bagging pos=noun n=1 gloss="coarse fabric used for bags or sacks" synonym=sacking is_a=fabric core.source="wordnet 3.1"
 @k.words.baghdad.noun.1 k.words.sense word=Baghdad pos=noun n=1 gloss="capital and largest city of Iraq; located on the Tigris River" synonym=Bagdad synonym="capital of Iraq" instance_of="national capital" part_of=Iraq core.source="wordnet 3.1"
 @k.words.baghdad.spelling.Baghdad core.word text=baghdad means=Baghdad of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.bahamas.noun.1 k.words.sense word=Bahamas pos=noun n=1 gloss="island country in the Atlantic to the east of Florida and Cuba; a popular winter resort" synonym="Commonwealth of the Bahamas" synonym="Bahama Islands" instance_of=country part_of="West Indies" part_of=Caribbean core.source="wordnet 3.1"
@@ -196,6 +198,8 @@
 @k.words.bang.verb.3 k.words.sense word=bang pos=verb n=3 gloss="close violently" synonym=slam is_a=close core.source="wordnet 3.1"
 @k.words.bangalore.noun.1 k.words.sense word=Bangalore pos=noun n=1 gloss="an industrial city in south central India (west of Chennai)" instance_of=city part_of=India core.source="wordnet 3.1"
 @k.words.bangalore.spelling.Bangalore core.word text=bangalore means=Bangalore of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.banger.noun.1 k.words.sense word=banger pos=noun n=1 gloss="(British informal) pork sausage" is_a="pork sausage" core.source="wordnet 3.1"
+@k.words.banger.noun.2 k.words.sense word=banger pos=noun n=2 gloss="firework consisting of a small explosive charge and fuse in a heavy paper casing" synonym=firecracker synonym=cracker is_a=firework core.source="wordnet 3.1"
 @k.words.banging.noun.1 k.words.sense word=banging pos=noun n=1 gloss="a continuing very loud noise" is_a=noise core.source="wordnet 3.1"
 @k.words.banging.noun.2 k.words.sense word=banging pos=noun n=2 gloss="the act of subjecting to strong attack" synonym=battering is_a=fight core.source="wordnet 3.1"
 @k.words.bangkok.noun.1 k.words.sense word=Bangkok pos=noun n=1 gloss="the capital and largest city and chief port of Thailand; a leading city in southeastern Asia; noted for Buddhist architecture" synonym="capital of Thailand" synonym="Krung Thep" instance_of="national capital" instance_of=port part_of=Thailand core.source="wordnet 3.1"
@@ -251,6 +255,10 @@
 @k.words.barbecue.noun.2 k.words.sense word=barbecue pos=noun n=2 gloss="a cookout in which food is cooked over an open fire; especially a whole animal carcass roasted on a spit" synonym=barbeque is_a=cookout core.source="wordnet 3.1"
 @k.words.barbecue.noun.3 k.words.sense word=barbecue pos=noun n=3 gloss="a rack to hold meat for cooking over hot charcoal usually out of doors" synonym=barbeque is_a=rack core.source="wordnet 3.1"
 @k.words.barbecue.verb.1 k.words.sense word=barbecue pos=verb n=1 gloss="cook outdoors on a barbecue grill" synonym=barbeque synonym="cook out" is_a=grill core.source="wordnet 3.1"
+@k.words.barbeque.noun.1 k.words.sense word=barbeque pos=noun n=1 gloss="meat that has been barbecued or grilled in a highly seasoned sauce" synonym=barbecue is_a=dish core.source="wordnet 3.1"
+@k.words.barbeque.noun.2 k.words.sense word=barbeque pos=noun n=2 gloss="a cookout in which food is cooked over an open fire; especially a whole animal carcass roasted on a spit" synonym=barbecue is_a=cookout core.source="wordnet 3.1"
+@k.words.barbeque.noun.3 k.words.sense word=barbeque pos=noun n=3 gloss="a rack to hold meat for cooking over hot charcoal usually out of doors" synonym=barbecue is_a=rack core.source="wordnet 3.1"
+@k.words.barbeque.verb.1 k.words.sense word=barbeque pos=verb n=1 gloss="cook outdoors on a barbecue grill" synonym=barbecue synonym="cook out" is_a=grill core.source="wordnet 3.1"
 @k.words.barber.noun.1 k.words.sense word=Barber pos=noun n=1 gloss="United States composer (1910-1981)" synonym="Samuel Barber" instance_of=composer core.source="wordnet 3.1"
 @k.words.barber.noun.2 k.words.sense word=barber pos=noun n=2 gloss="a hairdresser who cuts hair and shaves beards as a trade" is_a=hairdresser core.source="wordnet 3.1"
 @k.words.barber.verb.1 k.words.sense word=barber pos=verb n=1 gloss="perform the services of a barber: cut the hair and/or beard of" is_a=groom core.source="wordnet 3.1"
@@ -289,6 +297,7 @@
 @k.words.baron.noun.2 k.words.sense word=baron pos=noun n=2 gloss="a British peer of the lowest rank" is_a=peer core.source="wordnet 3.1"
 @k.words.baron.noun.3 k.words.sense word=baron pos=noun n=3 gloss="a very wealthy or powerful businessman" synonym="big businessman" synonym="business leader" synonym=king synonym=magnate synonym=mogul synonym=power synonym="top executive" synonym=tycoon is_a=businessman core.source="wordnet 3.1"
 @k.words.baroness.noun.1 k.words.sense word=baroness pos=noun n=1 gloss="a noblewoman who holds the rank of baron or who is the wife or widow of a baron" is_a=Lady core.source="wordnet 3.1"
+@k.words.barracuda.noun.1 k.words.sense word=barracuda pos=noun n=1 gloss="any voracious marine fish of the genus Sphyraena having an elongated cylindrical body and large mouth with projecting lower jaw and long strong teeth" is_a="spiny-finned fish" core.source="wordnet 3.1"
 @k.words.barrel.noun.1 k.words.sense word=barrel pos=noun n=1 gloss="a tube through which a bullet travels when a gun is fired" synonym="gun barrel" is_a=tube part_of=gun core.source="wordnet 3.1"
 @k.words.barrel.noun.2 k.words.sense word=barrel pos=noun n=2 gloss="a cylindrical container that holds liquids" synonym=cask is_a=vessel core.source="wordnet 3.1"
 @k.words.barrel.noun.3 k.words.sense word=barrel pos=noun n=3 gloss="a bulging cylindrical shape; hollow with flat ends" synonym=drum is_a=cylinder core.source="wordnet 3.1"
@@ -373,8 +382,11 @@
 @k.words.bathe.verb.1 k.words.sense word=bathe pos=verb n=1 gloss="cleanse the entire body" is_a=cleanse core.source="wordnet 3.1"
 @k.words.bathe.verb.2 k.words.sense word=bathe pos=verb n=2 gloss="suffuse or envelope with something" is_a=envelop core.source="wordnet 3.1"
 @k.words.bathe.verb.3 k.words.sense word=bathe pos=verb n=3 gloss="swim for pleasure or recreation" is_a=swim core.source="wordnet 3.1"
+@k.words.bathhouse.noun.1 k.words.sense word=bathhouse pos=noun n=1 gloss="a building containing dressing rooms for bathers" synonym="bathing machine" is_a=building core.source="wordnet 3.1"
+@k.words.bathhouse.noun.2 k.words.sense word=bathhouse pos=noun n=2 gloss="a building containing public baths" synonym=bagnio is_a=house core.source="wordnet 3.1"
 @k.words.bathing.noun.1 k.words.sense word=bathing pos=noun n=1 gloss="immersing the body in water or sunshine" is_a=diversion core.source="wordnet 3.1"
 @k.words.bathing.noun.2 k.words.sense word=bathing pos=noun n=2 gloss="the act of washing yourself (or another person)" synonym=washup is_a=wash is_a=cleaning core.source="wordnet 3.1"
+@k.words.bathrobe.noun.1 k.words.sense word=bathrobe pos=noun n=1 gloss="a loose-fitting robe of towelling; worn after a bath or swim" is_a=robe core.source="wordnet 3.1"
 @k.words.bathroom.noun.1 k.words.sense word=bathroom pos=noun n=1 gloss="a room (as in a residence) containing a bathtub or shower and usually a washbasin and toilet" is_a=room part_of=dwelling core.source="wordnet 3.1"
 @k.words.bathroom.noun.2 k.words.sense word=bathroom pos=noun n=2 gloss="a room or building equipped with one or more toilets" synonym=toilet synonym=lavatory synonym=lav synonym=can synonym=john synonym=privy is_a=room core.source="wordnet 3.1"
 @k.words.bathtub.noun.1 k.words.sense word=bathtub pos=noun n=1 gloss="a relatively large open container that you fill with water and use to wash the body" synonym="bathing tub" synonym=tub is_a=vessel part_of=bathroom core.source="wordnet 3.1"
@@ -405,6 +417,10 @@
 @k.words.bay.noun.3 k.words.sense word=bay pos=noun n=3 gloss="small Mediterranean evergreen tree with small blackish berries and glossy aromatic leaves used for flavoring in cooking; also used by ancient Greeks to crown victors" synonym="true laurel" synonym="bay laurel" synonym="bay tree" synonym="Laurus nobilis" is_a=laurel core.source="wordnet 3.1"
 @k.words.bay.verb.1 k.words.sense word=bay pos=verb n=1 gloss="utter in deep prolonged tones" is_a=talk core.source="wordnet 3.1"
 @k.words.bay.verb.2 k.words.sense word=bay pos=verb n=2 gloss="bark with prolonged noises, of dogs" synonym=quest is_a=bark core.source="wordnet 3.1"
+@k.words.bayonet.noun.1 k.words.sense word=bayonet pos=noun n=1 gloss="a knife that can be fixed to the end of a rifle and used as a weapon" is_a=knife core.source="wordnet 3.1"
+@k.words.bayonet.verb.1 k.words.sense word=bayonet pos=verb n=1 gloss="stab or kill someone with a bayonet" is_a=knife core.source="wordnet 3.1"
+@k.words.bayonet.forms core.word text=bayonetted text=bayonetting means=bayonet of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.bazaar.noun.1 k.words.sense word=bazaar pos=noun n=1 gloss="a shop where a variety of goods are sold" synonym=bazar is_a=shop core.source="wordnet 3.1"
 @k.words.bazaar.noun.2 k.words.sense word=bazaar pos=noun n=2 gloss="a street of small shops (especially in Orient)" synonym=bazar is_a=marketplace core.source="wordnet 3.1"
 @k.words.bazaar.noun.3 k.words.sense word=bazaar pos=noun n=3 gloss="a sale of miscellany; often for charity" synonym=fair is_a=sale core.source="wordnet 3.1"
+@k.words.bazooka.noun.1 k.words.sense word=bazooka pos=noun n=1 gloss="a portable rocket launcher used by infantrymen as an antitank weapon" is_a=launcher core.source="wordnet 3.1"

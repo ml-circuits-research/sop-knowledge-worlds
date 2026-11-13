@@ -1,7 +1,10 @@
-# k.words/shards/ny: noun and verb senses of the words from "nylon" to "nylon" (first letters "ny").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# k.words/shards/ny: noun and verb senses of the words from "nylon" to "nymph" (first letters "ny").
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
 @k.words.nylon.noun.1 k.words.sense word=nylon pos=noun n=1 gloss="a thermoplastic polyamide; a family of strong resilient synthetic fibers" is_a="man-made fiber" is_a=polyamide core.source="wordnet 3.1"
 @k.words.nylon.noun.2 k.words.sense word=nylon pos=noun n=2 gloss="a synthetic fabric" is_a=fabric core.source="wordnet 3.1"
+@k.words.nymph.noun.1 k.words.sense word=nymph pos=noun n=1 gloss="(classical mythology) a minor nature goddess usually depicted as a beautiful maiden" is_a="Greco-Roman deity" core.source="wordnet 3.1"
+@k.words.nymph.noun.2 k.words.sense word=nymph pos=noun n=2 gloss="a larva of an insect with incomplete metamorphosis (as the dragonfly or mayfly)" is_a=larva core.source="wordnet 3.1"
+@k.words.nymph.noun.3 k.words.sense word=nymph pos=noun n=3 gloss="a voluptuously beautiful young woman" synonym=houri is_a=woman core.source="wordnet 3.1"

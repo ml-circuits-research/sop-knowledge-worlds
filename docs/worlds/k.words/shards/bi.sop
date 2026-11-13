@@ -1,5 +1,5 @@
 # k.words/shards/bi: noun and verb senses of the words from "bi" to "biz" (first letters "bi").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -69,6 +69,9 @@
 @k.words.bind.verb.2 k.words.sense word=bind pos=verb n=2 gloss="create social or emotional ties" synonym=tie synonym=attach synonym=bond is_a=relate core.source="wordnet 3.1"
 @k.words.bind.verb.3 k.words.sense word=bind pos=verb n=3 gloss="make fast; tie or secure, with or as if with a rope" is_a=attach core.source="wordnet 3.1"
 @k.words.bind.forms core.word text=bound means=bind of=k.words.sense.word core.source="wordnet 3.1"
+@k.words.binder.noun.1 k.words.sense word=binder pos=noun n=1 gloss="a machine that cuts grain and binds it in sheaves" synonym="reaper binder" is_a=harvester core.source="wordnet 3.1"
+@k.words.binder.noun.2 k.words.sense word=binder pos=noun n=2 gloss="something used to bind separate particles together or facilitate adhesion to a surface" is_a="adhesive material" core.source="wordnet 3.1"
+@k.words.binder.noun.3 k.words.sense word=binder pos=noun n=3 gloss="holds loose papers or magazines" synonym=ring-binder is_a="protective covering" core.source="wordnet 3.1"
 @k.words.binding.noun.1 k.words.sense word=binding pos=noun n=1 gloss="the capacity to attract and hold something" is_a=attraction core.source="wordnet 3.1"
 @k.words.binding.noun.2 k.words.sense word=binding pos=noun n=2 gloss="strip sewn over or along an edge for reinforcement or decoration" is_a=sewing core.source="wordnet 3.1"
 @k.words.binding.noun.3 k.words.sense word=binding pos=noun n=3 gloss="the act of applying a bandage" synonym=dressing synonym=bandaging is_a="medical care" core.source="wordnet 3.1"
@@ -110,6 +113,7 @@
 @k.words.bishop.noun.2 k.words.sense word=bishop pos=noun n=2 gloss="port wine mulled with oranges and cloves" is_a="mulled wine" core.source="wordnet 3.1"
 @k.words.bishop.noun.3 k.words.sense word=bishop pos=noun n=3 gloss="(chess) a piece that can be moved diagonally over unoccupied squares of the same color" is_a=chessman core.source="wordnet 3.1"
 @k.words.bison.noun.1 k.words.sense word=bison pos=noun n=1 gloss="any of several large humped bovids having shaggy manes and large heads and short horns" is_a=bovid core.source="wordnet 3.1"
+@k.words.bistro.noun.1 k.words.sense word=bistro pos=noun n=1 gloss="a small informal restaurant; serves wine" is_a=restaurant core.source="wordnet 3.1"
 @k.words.bit.noun.1 k.words.sense word=bit pos=noun n=1 gloss="a small piece or quantity of something" synonym=spot is_a="small indefinite quantity" core.source="wordnet 3.1"
 @k.words.bit.noun.2 k.words.sense word=bit pos=noun n=2 gloss="a small fragment of something broken off from the whole" synonym=chip synonym=flake synonym=fleck synonym=scrap is_a=fragment core.source="wordnet 3.1"
 @k.words.bit.noun.3 k.words.sense word=bit pos=noun n=3 gloss="an indefinitely short time" synonym=moment synonym=mo synonym=minute synonym=second is_a=time core.source="wordnet 3.1"

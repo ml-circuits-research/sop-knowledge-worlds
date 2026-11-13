@@ -1,5 +1,5 @@
 # k.words/shards/pr: noun and verb senses of the words from "pr" to "prying" (first letters "pr").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -23,10 +23,14 @@
 @k.words.praise.noun.1 k.words.sense word=praise pos=noun n=1 gloss="an expression of approval and commendation" synonym=congratulations synonym=kudos synonym=extolment is_a=approval core.source="wordnet 3.1"
 @k.words.praise.noun.2 k.words.sense word=praise pos=noun n=2 gloss="offering words of homage as an act of worship" is_a=worship core.source="wordnet 3.1"
 @k.words.praise.verb.1 k.words.sense word=praise pos=verb n=1 gloss="express approval of" is_a=measure core.source="wordnet 3.1"
+@k.words.pram.noun.1 k.words.sense word=pram pos=noun n=1 gloss="a small vehicle with four wheels in which a baby or child is pushed around" synonym="baby buggy" synonym="baby carriage" synonym=carriage synonym=perambulator synonym=stroller synonym=go-cart synonym=pushchair synonym=pusher is_a="wheeled vehicle" core.source="wordnet 3.1"
 @k.words.prank.noun.1 k.words.sense word=prank pos=noun n=1 gloss="acting like a clown or buffoon" synonym=buffoonery synonym=clowning synonym=japery synonym=frivolity synonym=harlequinade is_a=folly core.source="wordnet 3.1"
 @k.words.prank.noun.2 k.words.sense word=prank pos=noun n=2 gloss="a ludicrous or grotesque act done for fun and amusement" synonym=antic synonym=joke synonym=trick synonym=caper synonym=put-on is_a=diversion core.source="wordnet 3.1"
 @k.words.prank.verb.1 k.words.sense word=prank pos=verb n=1 gloss="dress or decorate showily or gaudily" is_a=decorate core.source="wordnet 3.1"
 @k.words.prank.verb.2 k.words.sense word=prank pos=verb n=2 gloss="dress up showily" is_a=overdress core.source="wordnet 3.1"
+@k.words.prawn.noun.1 k.words.sense word=prawn pos=noun n=1 gloss="any of various edible decapod crustaceans" synonym=shrimp is_a=seafood part_of=shrimp core.source="wordnet 3.1"
+@k.words.prawn.noun.2 k.words.sense word=prawn pos=noun n=2 gloss="shrimp-like decapod crustacean having two pairs of pincers; most are edible" is_a="decapod crustacean" core.source="wordnet 3.1"
+@k.words.prawn.verb.1 k.words.sense word=prawn pos=verb n=1 gloss="fish for prawns" is_a=fish core.source="wordnet 3.1"
 @k.words.pray.verb.1 k.words.sense word=pray pos=verb n=1 gloss="address a deity, a prophet, a saint or an object of worship; say a prayer" is_a=commune core.source="wordnet 3.1"
 @k.words.pray.verb.2 k.words.sense word=pray pos=verb n=2 gloss="call upon in supplication; entreat" synonym=beg synonym=implore is_a=plead core.source="wordnet 3.1"
 @k.words.prayer.noun.1 k.words.sense word=prayer pos=noun n=1 gloss="the act of communicating with a deity (especially as a petition or in adoration or contrition or thanksgiving)" synonym=supplication is_a=worship core.source="wordnet 3.1"
@@ -44,6 +48,7 @@
 @k.words.precedent.noun.2 k.words.sense word=precedent pos=noun n=2 gloss="(civil law) a law established by following earlier judicial decisions" synonym="case law" synonym="common law" is_a="civil law" core.source="wordnet 3.1"
 @k.words.precedent.noun.3 k.words.sense word=precedent pos=noun n=3 gloss="a system of jurisprudence based on judicial precedents rather than statutory laws" synonym="common law" synonym="case law" is_a=law core.source="wordnet 3.1"
 @k.words.precinct.noun.1 k.words.sense word=precinct pos=noun n=1 gloss="a district of a city or town marked out for administrative purposes" is_a="city district" core.source="wordnet 3.1"
+@k.words.precipice.noun.1 k.words.sense word=precipice pos=noun n=1 gloss="a very steep cliff" is_a=cliff core.source="wordnet 3.1"
 @k.words.precision.noun.1 k.words.sense word=precision pos=noun n=1 gloss="the quality of being reproducible in amount or performance" synonym=preciseness is_a=exactness core.source="wordnet 3.1"
 @k.words.predator.noun.1 k.words.sense word=predator pos=noun n=1 gloss="someone who attacks in search of booty" synonym=marauder synonym=vulture synonym=piranha is_a=attacker core.source="wordnet 3.1"
 @k.words.predator.noun.2 k.words.sense word=predator pos=noun n=2 gloss="any animal that lives by preying on other animals" synonym="predatory animal" is_a=animal core.source="wordnet 3.1"

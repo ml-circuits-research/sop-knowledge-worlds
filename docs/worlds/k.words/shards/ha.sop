@@ -1,5 +1,5 @@
 # k.words/shards/ha: noun and verb senses of the words from "ha" to "hazel" (first letters "ha").
-# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent)
+# sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
@@ -39,6 +39,7 @@
 @k.words.haircut.noun.2 k.words.sense word=haircut pos=noun n=2 gloss="the act of cutting the hair" is_a=cut core.source="wordnet 3.1"
 @k.words.hairdo.noun.1 k.words.sense word=hairdo pos=noun n=1 gloss="the arrangement of the hair (especially a woman's hair)" synonym=hairstyle synonym="hair style" synonym=coiffure synonym=coif is_a=hair core.source="wordnet 3.1"
 @k.words.hairdresser.noun.1 k.words.sense word=hairdresser pos=noun n=1 gloss="someone who cuts or beautifies hair" synonym=hairstylist synonym=stylist synonym=styler is_a=craftsman core.source="wordnet 3.1"
+@k.words.hairpin.noun.1 k.words.sense word=hairpin pos=noun n=1 gloss="a double pronged pin used to hold women's hair in place" is_a=pin core.source="wordnet 3.1"
 @k.words.hairstyle.noun.1 k.words.sense word=hairstyle pos=noun n=1 gloss="the arrangement of the hair (especially a woman's hair)" synonym=hairdo synonym="hair style" synonym=coiffure synonym=coif is_a=hair core.source="wordnet 3.1"
 @k.words.haiti.noun.1 k.words.sense word=Haiti pos=noun n=1 gloss="a republic in the West Indies on the western part of the island of Hispaniola; achieved independence from France in 1804; the poorest and most illiterate nation in the western hemisphere" synonym="Republic of Haiti" instance_of=country part_of=Hispaniola part_of=Caribbean core.source="wordnet 3.1"
 @k.words.haiti.noun.2 k.words.sense word=Haiti pos=noun n=2 gloss="an island in the West Indies" synonym=Hispaniola synonym=Hayti instance_of=island part_of="Greater Antilles" core.source="wordnet 3.1"
@@ -56,6 +57,8 @@
 @k.words.half.noun.2 k.words.sense word=half pos=noun n=2 gloss="one of two divisions into which some games or performances are divided: the two divisions are separated by an interval" is_a=part part_of="playing period" part_of=football part_of=basketball core.source="wordnet 3.1"
 @k.words.half.forms core.word text=halves means=half of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.half-hour.noun.1 k.words.sense word=half-hour pos=noun n=1 gloss="a half of an hour" synonym="30 minutes" is_a="time unit" part_of=hour core.source="wordnet 3.1"
+@k.words.halibut.noun.1 k.words.sense word=halibut pos=noun n=1 gloss="lean flesh of very large flatfish of Atlantic or Pacific" is_a=flatfish part_of=halibut core.source="wordnet 3.1"
+@k.words.halibut.noun.2 k.words.sense word=halibut pos=noun n=2 gloss="marine food fish of the northern Atlantic or northern Pacific; the largest flatfish and one of the largest teleost fishes" synonym=holibut is_a=flatfish core.source="wordnet 3.1"
 @k.words.hall.noun.1 k.words.sense word=hall pos=noun n=1 gloss="an interior passage or corridor onto which rooms open" synonym=hallway is_a=corridor core.source="wordnet 3.1"
 @k.words.hall.noun.2 k.words.sense word=hall pos=noun n=2 gloss="a large entrance or reception room or area" synonym=anteroom synonym=antechamber synonym="entrance hall" synonym=foyer synonym=lobby synonym=vestibule is_a=room part_of=building core.source="wordnet 3.1"
 @k.words.hall.noun.3 k.words.sense word=hall pos=noun n=3 gloss="a large room for gatherings or entertainment" is_a=room core.source="wordnet 3.1"
@@ -100,6 +103,8 @@
 @k.words.hammer.verb.1 k.words.sense word=hammer pos=verb n=1 gloss="beat with or as if with a hammer" is_a=beat core.source="wordnet 3.1"
 @k.words.hammer.verb.2 k.words.sense word=hammer pos=verb n=2 gloss="create by hammering" synonym=forge is_a=beat core.source="wordnet 3.1"
 @k.words.hammering.noun.1 k.words.sense word=hammering pos=noun n=1 gloss="the act of pounding (delivering repeated heavy blows)" synonym=hammer synonym=pound synonym=pounding is_a=blow core.source="wordnet 3.1"
+@k.words.hammock.noun.1 k.words.sense word=hammock pos=noun n=1 gloss="a small natural hill" synonym=knoll synonym=mound synonym=hillock synonym=hummock is_a=hill core.source="wordnet 3.1"
+@k.words.hammock.noun.2 k.words.sense word=hammock pos=noun n=2 gloss="a hanging bed of canvas or rope netting (usually suspended between two trees); swings easily" synonym=sack is_a=bed core.source="wordnet 3.1"
 @k.words.hampshire.noun.1 k.words.sense word=Hampshire pos=noun n=1 gloss="a county of southern England on the English Channel" instance_of=county part_of=England core.source="wordnet 3.1"
 @k.words.hampshire.noun.2 k.words.sense word=Hampshire pos=noun n=2 gloss="British breed of hornless dark-faced domestic sheep" synonym="Hampshire down" is_a="domestic sheep" core.source="wordnet 3.1"
 @k.words.hampshire.spelling.Hampshire core.word text=hampshire means=Hampshire of=k.words.sense.word core.source="wordnet 3.1"
@@ -167,6 +172,7 @@
 @k.words.hani.noun.1 k.words.sense word=Hani pos=noun n=1 gloss="a Loloish language" synonym=Akha is_a=Loloish core.source="wordnet 3.1"
 @k.words.hani.spelling.Hani core.word text=hani means=Hani of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.hank.noun.1 k.words.sense word=hank pos=noun n=1 gloss="a coil of rope or wool or yarn" is_a=coil core.source="wordnet 3.1"
+@k.words.hanky.noun.1 k.words.sense word=hanky pos=noun n=1 gloss="a square piece of cloth used for wiping the eyes or nose or as a costume accessory" synonym=handkerchief synonym=hankie synonym=hankey is_a="piece of cloth" core.source="wordnet 3.1"
 @k.words.hannibal.noun.1 k.words.sense word=Hannibal pos=noun n=1 gloss="general who commanded the Carthaginian army in the second Punic War; crossed the Alps and defeated the Romans but was recalled to defend Carthage and was defeated (247-182 BC)" instance_of=general instance_of=Carthaginian core.source="wordnet 3.1"
 @k.words.hannibal.noun.2 k.words.sense word=Hannibal pos=noun n=2 gloss="a town in northeast Missouri on the Mississippi River; boyhood home of Mark Twain" instance_of=town part_of=Missouri core.source="wordnet 3.1"
 @k.words.hannibal.spelling.Hannibal core.word text=hannibal means=Hannibal of=k.words.sense.word core.source="wordnet 3.1"
@@ -233,6 +239,8 @@
 @k.words.harp.verb.1 k.words.sense word=harp pos=verb n=1 gloss="come back to" synonym=dwell is_a=repeat core.source="wordnet 3.1"
 @k.words.harp.verb.2 k.words.sense word=harp pos=verb n=2 gloss="play the harp" is_a=play core.source="wordnet 3.1"
 @k.words.harper.noun.1 k.words.sense word=harper pos=noun n=1 gloss="someone who plays the harp" synonym=harpist is_a=musician core.source="wordnet 3.1"
+@k.words.harpoon.noun.1 k.words.sense word=harpoon pos=noun n=1 gloss="a spear with a shaft and barbed point for throwing; used for catching large fish or whales; a strong line is attached to it" is_a=spear core.source="wordnet 3.1"
+@k.words.harpoon.verb.1 k.words.sense word=harpoon pos=verb n=1 gloss="spear with a harpoon" is_a=catch core.source="wordnet 3.1"
 @k.words.harris.noun.1 k.words.sense word=Harris pos=noun n=1 gloss="United States author who wrote the stories about Uncle Remus (1848-1908)" synonym="Joel Harris" synonym="Joel Chandler Harris" instance_of=writer core.source="wordnet 3.1"
 @k.words.harris.noun.2 k.words.sense word=Harris pos=noun n=2 gloss="United States linguist (born in Ukraine) who developed mathematical linguistics and interpreted speech and writing in a social context (1909-1992)" synonym="Zellig Harris" synonym="Zellig Sabbatai Harris" instance_of=linguist core.source="wordnet 3.1"
 @k.words.harris.noun.3 k.words.sense word=Harris pos=noun n=3 gloss="United States diplomat who was instrumental in opening Japan to foreign trade (1804-1878)" synonym="Townsend Harris" instance_of=diplomat core.source="wordnet 3.1"
@@ -310,6 +318,9 @@
 @k.words.haven.noun.1 k.words.sense word=haven pos=noun n=1 gloss="a shelter serving as a place of safety or sanctuary" synonym=oasis is_a=shelter core.source="wordnet 3.1"
 @k.words.haven.noun.2 k.words.sense word=haven pos=noun n=2 gloss="a sheltered port where ships can take on or discharge cargo" synonym=seaport synonym=harbor synonym=harbour is_a=port part_of=seafront core.source="wordnet 3.1"
 @k.words.havoc.noun.1 k.words.sense word=havoc pos=noun n=1 gloss="violent and needless disturbance" synonym=mayhem is_a=disturbance core.source="wordnet 3.1"
+@k.words.haw.noun.1 k.words.sense word=haw pos=noun n=1 gloss="a spring-flowering shrub or small tree of the genus Crataegus" synonym=hawthorn is_a=shrub core.source="wordnet 3.1"
+@k.words.haw.noun.2 k.words.sense word=haw pos=noun n=2 gloss="the nictitating membrane of a horse" is_a="nictitating membrane" core.source="wordnet 3.1"
+@k.words.haw.verb.1 k.words.sense word=haw pos=verb n=1 gloss="utter `haw'" is_a=utter core.source="wordnet 3.1"
 @k.words.hawaii.noun.1 k.words.sense word=Hawaii pos=noun n=1 gloss="a state in the United States in the central Pacific on the Hawaiian Islands" synonym=Hawai'i synonym="Aloha State" synonym=HI synonym=Haw. instance_of="American state" part_of="United States" part_of="Hawaiian Islands" core.source="wordnet 3.1"
 @k.words.hawaii.noun.2 k.words.sense word=Hawaii pos=noun n=2 gloss="the largest and southernmost of the Hawaii islands; has several volcanic peaks" synonym="Hawaii Island" instance_of=island part_of="Hawaiian Islands" core.source="wordnet 3.1"
 @k.words.hawaii.spelling.Hawaii core.word text=hawaii means=Hawaii of=k.words.sense.word core.source="wordnet 3.1"
