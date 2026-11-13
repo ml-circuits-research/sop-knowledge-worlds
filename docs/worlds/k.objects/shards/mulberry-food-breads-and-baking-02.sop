@@ -410,7 +410,7 @@
 
 # bread slice
 @k.objects.mb254 k.objects.object name="bread slice" core.source="mulberry fa94a93"
-@k.objects.mb254.p1 k.objects.part of="bread slice" name=part1 shape=polygon x=29.2 y=12.9 w=44.9 h=78.5 z=1 colour=white rgb="#FFF5B4" core.source="mulberry fa94a93"
+@k.objects.mb254.p1 k.objects.part of="bread slice" name=slice named=model shape=polygon x=29.2 y=12.9 w=44.9 h=78.5 z=1 colour=white rgb="#FFF5B4" core.source="mulberry fa94a93"
 @k.objects.mb254.p1.1 k.objects.point part=$k.objects.mb254.p1 n=1 x=65.5 y=16.1 core.source="mulberry fa94a93"
 @k.objects.mb254.p1.2 k.objects.point part=$k.objects.mb254.p1 n=2 x=67.8 y=18.5 core.source="mulberry fa94a93"
 @k.objects.mb254.p1.3 k.objects.point part=$k.objects.mb254.p1 n=3 x=68.6 y=21.1 core.source="mulberry fa94a93"
@@ -437,7 +437,7 @@
 @k.objects.mb254.p1.24 k.objects.point part=$k.objects.mb254.p1 n=24 x=52.5 y=13 core.source="mulberry fa94a93"
 @k.objects.mb254.p1.25 k.objects.point part=$k.objects.mb254.p1 n=25 x=57 y=12.9 core.source="mulberry fa94a93"
 @k.objects.mb254.p1.26 k.objects.point part=$k.objects.mb254.p1 n=26 x=60.9 y=13.6 core.source="mulberry fa94a93"
-@k.objects.mb254.p2 k.objects.part of="bread slice" name=part2 shape=polygon x=22.1 y=9.2 w=43.4 h=82.6 z=2 colour=orange rgb="#FAA41A" core.source="mulberry fa94a93"
+@k.objects.mb254.p2 k.objects.part of="bread slice" name=crust named=model shape=polygon x=22.1 y=9.2 w=43.4 h=82.6 z=2 colour=orange rgb="#FAA41A" core.source="mulberry fa94a93"
 @k.objects.mb254.p2.1 k.objects.point part=$k.objects.mb254.p2 n=1 x=65.5 y=16 core.source="mulberry fa94a93"
 @k.objects.mb254.p2.2 k.objects.point part=$k.objects.mb254.p2 n=2 x=60.9 y=13.6 core.source="mulberry fa94a93"
 @k.objects.mb254.p2.3 k.objects.point part=$k.objects.mb254.p2 n=3 x=57 y=12.9 core.source="mulberry fa94a93"
