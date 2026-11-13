@@ -298,3 +298,12 @@ The demo will fill gaps from knowledge (PSys2 WORLDS-AS-MODULES, M3). Make sure 
 2. **Usual relative size** class (tiny … huge) for the same things.
 3. **Person kinds** in k.people: child, baby, boy, girl, man, woman, grandfather, grandmother as variants of one person drawing (age, hair, height) and all reachable by any of their names.
 4. **Stand-ins found missing today:** villa → house, puddle → small lake, donkey, grandfather. Add them and report how many of the 1,500 common things still have neither a drawing nor a stand-in.
+
+## Reviewer 2026-11-13 17:25 — Rounds 5 and 6 accepted at 99a5508; Q22 → (c); Q23 → the estimate is enough
+
+**Validated:** npm test 2,347 pass, 0 fail (reported; reviewer run at 78a4d6f: 2,288 pass, 0 fail). Reviewer looked at one sheet: 13 presets, 7 expressions, 40 random core faces, 20 imported (big-smile, cutouts). The core faces are good and varied; the sheet went to the owner.
+- **Q22 → (c).** A common thing counts as drawn when the drawing shows any physical sense of the word that WordNet has; no override table, no hunt for the rare sense. Recount coverage with this rule and remove baseball plate, horse-drawn lorry and the like from MISSING.md.
+- **Q23 → accepted as an estimate.** Do not read the tail; the 1,500 list is the measure.
+- Faces: the host draws mirrored slots twice (accepted); the preset check stays a test until sopworld can say it.
+
+**Next: Round 7 with its addendum** (usual place and relative size for every drawable thing, person kinds, the stand-ins the owner's log missed), k.scenes first. Move to sopworld 0.16.0 at the start.
