@@ -54,3 +54,9 @@ rows were taken out on a first reading (a hole of a bagel, a twig of a nest). Re
 
 See `tests/k.parts.questions.jsonl`: the parts of a knife and a chair, what a bicycle has as a wheeled vehicle,
 which things have a handle.
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: `k.parts.called`, what people call the parts of 23 things they draw (house, tree, sun, car, flower, cat, dog, fish, bird, boat, person …): 91 parts with the other words for each (the crown of a tree: leaves, foliage, top). The words hold for that thing only.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

@@ -3,6 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { handSources } from '../tools/lib/worlds.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -20,7 +21,7 @@ test('every drawing names an object of k.objects', () => {
 test('k.animals has 150 animals and k.food 150 foods; every fact carries hand-core as its source', () => {
   assert.ok(all('k.animals', 'k.animals.animal').length >= 150);
   assert.ok(all('k.food', 'k.food.food').length >= 150);
-  for (const [world, type] of CORES) for (const w of all(world, type)) assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+  for (const [world, type] of CORES) for (const w of all(world, type)) assert.ok(handSources(w.attrs['core.source']), w.id);
 });
 
 test('k.space: the planets are numbered 1 to 8 by order and by size; what is orbited exists', () => {

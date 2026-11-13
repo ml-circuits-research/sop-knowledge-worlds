@@ -70,3 +70,9 @@ that drawing).
 "What is above the eyes in a face?", "Where does a person sit on a chair?", "What goes on top of a head?", "Which
 things have a water surface?", "What does a hat sit on?", "On which side of a wall does a roof attach?", "What is a
 wheel part of?", "What does an arrow connect?" (`tests/k.layouts.questions.jsonl`).
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: `k.layouts.joins` with the new relation `around`: chairs, stools, plates, cups and people around a table, a bench at a fire, a chair at a desk.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

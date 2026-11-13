@@ -25,7 +25,7 @@ test('colours: 141 CSS colours with an exact RGB value, common names with a usua
   for (const c of colours) {
     assert.ok(/^#[0-9A-F]{6}$/.test(one(c, 'rgb') ?? one(c, 'rgb_about')), c.id);
     assert.ok(!(c.attrs.rgb && c.attrs.rgb_about), c.id);
-    assert.equal(one(c, 'core.source'), c.attrs.css ? 'css-colors 2.1.1' : 'hand-core 1', c.id);
+    assert.ok(c.attrs.css ? one(c, 'core.source') === 'css-colors 2.1.1' : /^(hand-core 1|psys2-worlds [0-9a-f]+)$/.test(one(c, 'core.source')), c.id);
     if (!c.attrs.css) assert.ok(c.attrs.rgb_about, c.id);
   }
   const byName = new Map(colours.map((c) => [one(c, 'name'), c]));

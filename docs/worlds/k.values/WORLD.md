@@ -46,3 +46,9 @@ a place in the picture, which of several things, or a number.
 See `tests/k.values.questions.jsonl`: the RGB value of crimson, the basic colour of navy, where large stands on
 the size scale, which way smaller moves, the two scales of shorter, the opposite of clockwise, what each picks,
 the value of twenty-three and of fifth.
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: the colour skin; 13 more words for colours (ginger, light-blue, and short spellings: grn, blu, blk); `k.values.shade`, 6 shade words with how they change a colour (light, pale, soft, bright, dark, deep); `k.values.reply`, yes and no with 25 and 15 other ways of saying them; the shape names polygon, quadrilateral and rhombus.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

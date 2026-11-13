@@ -2425,3 +2425,57 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   bytes, largest `things-s` 281 wires; `k.animals` 597 wires, 105,814 bytes. COVERAGE.md: place 693 by name (637),
   size 710 (650). Natural questions about animals: 81 of 100 (the same). Catalog 22 worlds, 857 shards, vocab
   22,632 words; 0 errors, 0 warnings. npm test 2,667 pass, 0 fail.
+
+## Round 10, item 0 (2026-11-13, second worker): what the PSys2 tab worlds knew and ours lacked
+
+- **New import `tools/import/psys2.mjs`** (`--from` a PSys2 checkout, read only) and the generated page
+  **`docs/worlds/FROM-PSYS2.md`**: for each of the eight files named by the reviewer a table of what it has and
+  ours lacked, what was taken into which world, what was left and why, and where the two disagree. The facts are
+  18 shards named `psys2*` in ten worlds, 1,042 wires, 190 kB; the facts of one thing merge with those already
+  there. Source cited: PSys2 commit `6b63b2ba`, the last one that changed a file read (the copy at `/tmp/wt2`
+  moved from `6c3f38c5` to `dd18a937` while I worked; none of those commits touched these files).
+- **Taken** (numbers from the tool):
+  - `k.geo`: `code2`, `currency`, `language` for 234 countries; 15 missing territories; 42 more names of
+    countries; 518 more cities (353 we had by name; 123 lie within a quarter of a degree of a city we have and
+    were left as suburbs or other spellings); new type `k.geo.group`, 8 groups with members as of 2024.
+  - `k.animals`: 72 foods, 8 sounds (woof, baa), 7 legs, 10 diets, 2 coverings, 1 young, 2 swims; 3 names.
+  - `k.shapes`: rhombus, quadrilateral, 7 `is_a`, 4 things of a shape. `k.colours`: primary, secondary, neutral
+    for 9 colours, 2 things. `k.time`: weekend. `k.commonsense`: 1 place. `k.scenes`: 3 `on`. `k.layouts`: 7
+    joins with the new relation `around`. `k.values`: skin, 13 colour words, 6 shade words (new type
+    `k.values.shade`), yes and no with 40 words (new type `k.values.reply`), 3 shape names. `k.parts`: new type
+    `k.parts.called`, 91 parts of 23 things with their other names.
+- **Licences.** The reviewer's ruling (CC0, `psys2-worlds <commit>`) covers the hand-written knowledge.
+  `geo.map/kb.sop` is not hand-written: PSys2 generated it from mledoze/countries (ODbL-1.0), country-json (MIT)
+  and GeoNames (CC BY 4.0). So the country shard keeps `countries 5.1.0` and ODbL-1.0, the city shards a new
+  source `geonames` and CC-BY-4.0 (`sources/geonames/SOURCE.md`), each with `psys2-worlds` as a second source;
+  nothing was taken from country-json (no population). All three licences allow open reuse.
+- **Left, with the reason on the page:** values we have from our own sources; negative shape facts; articles;
+  sentences a host can make from a fact; the demo's layout numbers for a face; its palette values, drawings and
+  default colours; the phrases of its lexicon; no-words that are refusals to act; country search keys that are a
+  name with its ending cut ("barbado") or a word of another country ("korea"): two rules in the tool, found by
+  reading the 80 words of the first version.
+- **Disagreements:** ours kept everywhere; the real ones are **Q33** (independent for 14 countries, three
+  capitals, the population of the United Kingdom in PSys2, the continent of Cyprus, the young of a rabbit, fur or
+  hair) together with two facts our keys cannot hold (a square is a rhombus; a year has 52 weeks).
+- **Looked at:** the generated page in full; every fourth animal fact; the list of the country names taken (three
+  times, until the cut names were gone); every ninth `k.parts.called` fact; the whole `k.values` shard; one
+  group (Balkans). **Not looked at:** the 518 cities one by one (their country is checked by a test to be one of
+  ours; that none is a suburb of a city we lack is not checked); currencies and languages (the source's values,
+  two read: Japan, Switzerland); the other 7 groups' members; three quarters of the animal facts.
+- **Other workers' files touched, and why:** tests of the hand-written worlds asserted `hand-core 1` as the only
+  source of every fact; six now use `handSources` (`tools/lib/worlds.mjs`: hand-core, and psys2-worlds where a
+  fact was laid next to it). Four question expectations changed with the knowledge (a bird is also on the
+  ground; 14 countries and territories in South America; Genoa and Palermo among the cities of Italy; rhombus
+  and quadrilateral among the four-sided shapes). `tests/k.layouts.test.mjs`: `road` joins the things without an
+  anchor; a join from PSys2 has no `named`. `tools/measures-core.mjs`: `k.geo.group.as_of` is a place in an
+  order. `tools/import/lib.mjs`: `writeShards` never removes a `psys2*` shard for another tool.
+- **Judgement that is mine:** the eight name pairs of countries spelt differently in the two lists; that chicken,
+  hippo and worm are our hen, hippopotamus and earthworm; the quarter of a degree; which no-words are refusals;
+  that a shape without a kind gets quadrilateral before polygon.
+- **What SOP Lang could not say:** that a word for a part holds only for one thing (`k.parts.called` is a type of
+  its own for that, since `core.word` names a value for every fact); "a square is a rhombus" next to "a square is
+  a rectangle" with a single-valued key.
+- Tests: `tests/import.psys2.test.mjs` (4; the equality with the import when the checkout is at the commit of the
+  page), 9 new questions.
+- Numbers: catalog 22 worlds, 873 shards, vocab 22,755 words; 0 errors, 0 warnings. npm test 2,660 pass, 5 skipped, 0 fail (one run before the last change of the cited commit; then the psys2, catalog and question tests again: 396 pass).
+- After the rebase on the first worker's Q31 and Q32 (measures for every world; the size of an animal in `k.scenes`): my question is **Q33**; `k.values.shade` got its two measures; the import was run again. Catalog 22 worlds, 875 shards, vocab 23,215 words; npm test 2,675 pass, 5 skipped, 0 fail.

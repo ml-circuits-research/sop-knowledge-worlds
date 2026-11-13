@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/values-core.mjs
 
-@k.values core.module name=k.values version=1 exports=colour exports=scale exports=step exports=comparative exports=shape exports=direction exports=position exports=set_word exports=number core.source="hand-core 1"
+@k.values core.module name=k.values version=1 exports=colour exports=scale exports=step exports=comparative exports=shape exports=direction exports=position exports=set_word exports=number exports=shade exports=reply core.source="hand-core 1"
 
 # A colour name. `rgb` is its value as a string of the form "#RRGGBB" (the form k.objects and k.faces use), exact
 # for a CSS colour, whose keyword is `css`; a common name that has no fixed value has `rgb_about` instead, a usual
@@ -91,3 +91,17 @@
 @k.values.word.position core.word text=position text=positions means=k.values.position core.source="hand-core 1"
 @k.values.word.number core.word text=number text=numbers means=k.values.number core.source="hand-core 1"
 @k.values.word.scale core.word text=scale text=scales means=k.values.scale core.source="hand-core 1"
+
+# A shade word: a word said before a colour name that changes the colour ("light blue", "deep red"). `lightness`
+# says how much lighter (above 0) or darker (below 0) the colour becomes, `saturation` how much more (above 0) or
+# less (below 0) colour it has, each as a part of the full range (0.2 is a fifth).
+@k.values.shade core.type of=k.values.shade shared=true closed=true core.source="hand-core 1"
+@k.values.shade.name core.slot of=k.values.shade key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.values.shade.lightness core.slot of=k.values.shade key=lightness required=true kind=number min=-1 max=1 core.source="hand-core 1"
+@k.values.shade.saturation core.slot of=k.values.shade key=saturation required=true kind=number min=-1 max=1 core.source="hand-core 1"
+
+# The two replies to a question that asks whether something is so: yes and no. The many ways of saying each
+# (yeah, sure, of course; nope, no way) are core.word facts of the shard.
+@k.values.reply core.type of=k.values.reply shared=true closed=true core.source="hand-core 1"
+@k.values.reply.name core.slot of=k.values.reply key=name id=true required=true enum=yes enum=no core.source="hand-core 1"
+@k.values.reply.opposite core.slot of=k.values.reply key=opposite enum=yes enum=no core.source="hand-core 1"

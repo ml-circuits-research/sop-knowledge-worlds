@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { handSources } from '../tools/lib/worlds.mjs';
 import { colourShards, shapeShards, COLOURS, SHAPES } from '../tools/colours-shapes-core.mjs';
 
 const worlds = scanWorlds();
@@ -20,7 +21,8 @@ test('the shards are what tools/colours-shapes-core.mjs gives', () => {
   for (const [name, text] of Object.entries(colourShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.colours', 'shards', name), 'utf8'), text, name);
   for (const [name, text] of Object.entries(shapeShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.shapes', 'shards', name), 'utf8'), text, name);
   assert.equal(colours.length, COLOURS.length);
-  assert.equal(shapes.length, SHAPES.length);
+  // Two more shapes come from the PSys2 tab worlds (shard psys2: rhombus, quadrilateral).
+  assert.equal(shapes.filter((w) => !['rhombus', 'quadrilateral'].includes(one(w, 'name'))).length, SHAPES.length);
   assert.ok(colours.length >= 30 && shapes.length >= 30);
 });
 
@@ -36,7 +38,7 @@ test('colours: every family is a colour of its own family; lighter and darker ag
       assert.ok((TONE[one(other, 'tone')] - TONE[one(w, 'tone')]) * sign >= 0, `${w.id}: ${v} is not ${k}`);
     }
     for (const v of w.attrs.complement ?? []) assert.equal(one(by.get(tok(v)), 'complement'), name, `${w.id}: complement from both sides`);
-    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+    assert.ok(handSources(w.attrs['core.source']), w.id);
   }
   for (const [a, b] of [['red', 'green'], ['blue', 'orange'], ['yellow', 'purple']]) assert.equal(one(by.get(a), 'complement'), b);
   // The basic colours: every family name of the schema is there.
@@ -68,7 +70,7 @@ test('shapes: flat shapes have sides, solids have faces and edges; what a shape 
     for (const v of w.attrs.face ?? []) assert.equal(one(by.get(tok(v)), 'kind'), 'flat', `${w.id}: face ${v}`);
     // A flat shape with straight sides only has as many corners as sides.
     if (kind === 'flat' && one(w, 'round') === 'false' && w.attrs.sides) assert.equal(one(w, 'sides'), one(w, 'corners'), w.id);
-    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+    assert.ok(handSources(w.attrs['core.source']), w.id);
   }
   const n = (name, k) => Number(one(by.get(name), k));
   assert.deepEqual(['triangle', 'square', 'pentagon', 'hexagon', 'octagon'].map((s) => n(s, 'sides')), [3, 4, 5, 6, 8]);

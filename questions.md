@@ -352,3 +352,25 @@ places". A test requires the two to agree where the drawing has the name of the 
 (c) `k.scenes.thing` drops the size of things that are animals.
 Blocking: no. Meanwhile: (a).
 Closed: answered "one home" in worker-tasks.md, block "2026-11-13 23:10": `k.animals.animal` has no `size`; `tools/scenes-core.mjs` adds a `k.scenes.thing` row for each of the 176 animals that had none (and `"crane bird"`, `"tuna fish"`, named by `thing=` on the animal); `k.commonsense.thing` drops its `size` too; a test forbids a second slot with the size or place classes in any world.
+
+## Q33 (Round 10 item 0, second worker, 2026-11-13)
+Question: where the PSys2 tab worlds and ours disagree, which value stays? And may two facts that our keys cannot hold be said?
+Context: `docs/worlds/FROM-PSYS2.md` lists every disagreement; ours is kept everywhere. The ones that are more
+than spelling: (1) **independent**, 14 countries: PSys2 (mledoze/countries 5.1.0, `independent`) says false for
+Aruba, Åland, Curaçao, Guernsey, Greenland, Hong Kong, Isle of Man, Jersey, Macao, Sint Maarten and Taiwan, and
+true for Cuba, Israel and Kazakhstan; ours (Natural Earth 5.1.2, derived from its `TYPE` column) says the
+opposite for each. Ours looks wrong for Cuba, Israel and Kazakhstan at least. (2) **capital**: Burundi (PSys2
+Gitega, ours Bujumbura: the capital moved in 2019), Kazakhstan (Astana; ours Nur-Sultan: renamed back in 2022),
+Palau (Ngerulmud; ours Melekeok, the state it lies in); the other seven are spellings. (3) **population**:
+United Kingdom 1,885,400 in PSys2 (country-json; plainly wrong) against 66,834,405. (4) **continent**: Cyprus
+(PSys2 Europe, ours Asia); three sub-Antarctic territories (PSys2 Antarctica; ours Africa or North America).
+(5) **animals**: the young of a rabbit (PSys2 bunny, ours kit); the covering of cow, horse, goat, donkey,
+giraffe, zebra, deer and camel (PSys2 fur, ours hair).
+Two facts PSys2 has cannot be said next to ours: "a square is a rhombus" (`k.shapes.shape.is_a` holds one
+value, and a square is a rectangle) and "a year has 52 weeks" (`k.time.duration` has one count and one unit per
+name, and a year is 12 months).
+Options: (a) keep ours everywhere and leave the two facts out; (b) take the country list's `independent` and
+the newer capitals (Gitega, Astana) over Natural Earth, keep the rest; (c) make `is_a` of a shape hold many, and
+let a duration be told in several units (identity `name` + `unit`): both change published schemas.
+Blocking: no. Meanwhile: (a); the demo keeps nothing of these (ours answers).
+

@@ -131,3 +131,9 @@ the same name in `k.commonsense.thing`, `k.animals.animal` and `k.food.food` giv
 See `tests/k.scenes.questions.jsonl`: where the sun, a duck, a goat or a swing usually is; how big a house, a cow
 or a bee is; what a hat is usually on; what is usually on a horse; what is in the sky at a beach; how many cows a
 farm has; what the duck is on; what happens in a classroom; which scenes have a tractor.
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: a wheel and a car are on the road, a book on a shelf (`on`).
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

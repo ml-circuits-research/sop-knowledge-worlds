@@ -8,3 +8,4 @@
 {"id":"co-08","ask":"which colours give brown","query":{"type":"k.colours.mix","where":{"gives":"brown"},"seek":"a","mode":"list"},"expect":{"status":"supported","values":["green","blue","purple"]}}
 {"id":"co-09","ask":"which colours are metallic","query":{"type":"k.colours.colour","where":{"kind":"metallic"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["gold","silver"]}}
 {"id":"co-10","ask":"is navy light or dark","query":{"type":"k.colours.colour","where":{"name":"navy"},"seek":"tone"},"expect":{"status":"supported","value":"dark"}}
+{"id":"co-p1","ask":"which colours are primary","query":{"type":"k.colours.colour","where":{"kind":"primary"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["red","yellow","blue"]}}

@@ -7,3 +7,4 @@
 {"id":"pa-7","ask":"does a car have a door","query":{"type":"k.parts.whole","where":{"name":"car","plain":"door"},"seek":"name"},"expect":{"status":"supported","value":"car"}}
 {"id":"pa-8","ask":"what are the parts of a dog","query":{"type":"k.parts.usual","where":{"name":"dog"},"seek":"has","mode":"list"},"expect":{"status":"supported","values":["head","body","leg","tail","ear","paw","nose","fur"]}}
 {"id":"pa-9","ask":"which things have a spout","query":{"type":"k.parts.usual","where":{"has":"spout"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["kettle","teapot"]}}
+{"id":"pa-p1","ask":"what else is the crown of a tree called","query":{"type":"k.parts.called","where":{"of":"tree","part":"crown"},"seek":"also","mode":"list"},"expect":{"status":"supported","values":["leaves","leaf","top","foliage","branches"]}}

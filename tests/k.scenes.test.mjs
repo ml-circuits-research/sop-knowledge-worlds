@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { readPlaceSize, thingShards, allThings, letterOf } from '../tools/scenes-core.mjs';
 import { animalThings } from '../tools/animals-core.mjs';
+import { handSources } from '../tools/lib/worlds.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -32,7 +33,7 @@ test('every thing with a usual place or size is a k.objects object or stand-in, 
     const name = tok(w.attrs.name[0]);
     assert.ok(objects.has(name) || standIns.has(name) || animalRows.has(name), `${name} is neither an object nor a stand-in of k.objects, nor an animal`);
     assert.deepEqual(w.attrs.named, ['model'], name);
-    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], name);
+    assert.ok(handSources(w.attrs['core.source']), name);
     assert.ok(w.attrs.place || w.attrs.size, name);
   }
   const named = new Set(things.map((w) => tok(w.attrs.name[0])));
@@ -92,7 +93,7 @@ test('what a scene has: the scene exists, a drawing is an object, what a thing i
     assert.ok(names.has(s), w.id);
     for (const d of w.attrs.drawing ?? []) assert.ok(objects.has(tok(d)), `${w.id}: drawing ${d}`);
     for (const o of w.attrs.on ?? []) assert.ok(inScene.get(s).has(tok(o)), `${w.id}: on ${o}`);
-    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+    assert.ok(handSources(w.attrs['core.source']), w.id);
     // A thing on the water of a scene that is not all water says on which water.
     if (w.attrs.where[0] === 'water' && kind.get(s) !== 'underwater' && ground.get(s) !== 'water') assert.ok(w.attrs.on, `${w.id}: on which water?`);
   }

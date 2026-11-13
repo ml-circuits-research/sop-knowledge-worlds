@@ -86,7 +86,7 @@
 # where sure.
 @k.layouts.joins core.type of=k.layouts.joins shared=true closed=true core.source="hand-core 1"
 @k.layouts.joins.a core.slot of=k.layouts.joins key=a id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.layouts.joins.rel core.slot of=k.layouts.joins key=rel id=true required=true enum=part_of enum=attaches_to enum=sits_on enum=hangs_from enum=goes_in enum=worn_on enum=grows_on enum=held_in enum=connects core.source="hand-core 1"
+@k.layouts.joins.rel core.slot of=k.layouts.joins key=rel id=true required=true enum=part_of enum=attaches_to enum=sits_on enum=hangs_from enum=goes_in enum=worn_on enum=grows_on enum=held_in enum=connects enum=around core.source="hand-core 1"
 @k.layouts.joins.b core.slot of=k.layouts.joins key=b id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.joins.side core.slot of=k.layouts.joins key=side enum=top enum=bottom enum=side enum=front enum=back enum=end enum=edge enum=corner enum=centre enum=inside enum=around core.source="hand-core 1"
 @k.layouts.joins.named core.slot of=k.layouts.joins key=named enum=model core.source="hand-core 1"

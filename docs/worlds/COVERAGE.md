@@ -29,10 +29,10 @@ the place of the dog).
 | parts or joins between kinds | 64 (4%) | 78 (5%) | 1358 (91%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 102 (7%) | 1265 (84%) | `k.layouts.anchor` (kind) |
 | material | 303 (20%) | 104 (7%) | 1093 (73%) | `k.attributes.thing` (material), `k.commonsense.thing` (made_of) |
-| what it can do | 275 (18%) | 62 (4%) | 1163 (78%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| what it can do | 276 (18%) | 63 (4%) | 1161 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
 | what it is used for | 336 (22%) | 142 (9%) | 1022 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
 | wheels | 33 (2%) | 12 (1%) | 1455 (97%) | `k.attributes.thing` (wheels) |
-| legs | 141 (9%) | 25 (2%) | 1334 (89%) | `k.animals.animal` (legs) |
+| legs | 147 (10%) | 26 (2%) | 1327 (88%) | `k.animals.animal` (legs) |
 | kind (what it is a kind of) | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (is_a, instance_of) |
 | definition | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (gloss) |
 | where it is worn | 37 (2%) | 21 (1%) | 1442 (96%) | `k.wearables.wearable` (worn_on) |
@@ -54,14 +54,14 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.geo` | 20 (1%) |
 | `k.layouts` | 210 (14%) |
 | `k.objects` | 1094 (73%) |
-| `k.parts` | 972 (65%) |
+| `k.parts` | 977 (65%) |
 | `k.people` | 1 (0%) |
 | `k.scenes` | 735 (49%) |
 | `k.shapes` | 8 (1%) |
 | `k.space` | 9 (1%) |
 | `k.time` | 1 (0%) |
 | `k.units` | 2 (0%) |
-| `k.values` | 19 (1%) |
+| `k.values` | 20 (1%) |
 | `k.wearables` | 62 (4%) |
 | `k.words` | 1500 (100%) |
 

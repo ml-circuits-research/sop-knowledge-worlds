@@ -23,7 +23,7 @@
 @k.colours.colour.lighter core.slot of=k.colours.colour key=lighter kind=atom kind=string core.source="hand-core 1"
 @k.colours.colour.darker core.slot of=k.colours.colour key=darker kind=atom kind=string core.source="hand-core 1"
 @k.colours.colour.complement core.slot of=k.colours.colour key=complement kind=atom kind=string core.source="hand-core 1"
-@k.colours.colour.kind core.slot of=k.colours.colour key=kind enum=metallic core.source="hand-core 1"
+@k.colours.colour.kind core.slot of=k.colours.colour key=kind enum=metallic enum=primary enum=secondary enum=neutral core.source="hand-core 1"
 @k.colours.colour.thing core.slot of=k.colours.colour key=thing many=true kind=atom kind=string core.source="hand-core 1"
 
 # What two colours of paint give when they are mixed: `a` and `b` (in the order of the alphabet, so that a pair is

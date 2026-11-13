@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { handSources } from '../tools/lib/worlds.mjs';
 import { layoutShards, LAYOUTS, handParts, readAnchors, readAnchorPoints, objectNames, readJoins } from '../tools/layouts-core.mjs';
 
 const worlds = scanWorlds();
@@ -19,7 +20,7 @@ test('the shards are what tools/layouts-core.mjs gives; the arrangements asked f
   assert.equal(layouts.length, LAYOUTS.length);
   const names = new Set(layouts.map((w) => one(w, 'name')));
   for (const n of ['row', 'column', 'grid', 'ring', 'scatter', 'corners', 'stack', 'tree', 'flow', 'landscape', 'face', 'room', 'family photo']) assert.ok(names.has(n), n);
-  for (const w of [...layouts, ...slots, ...relations, ...anchors, ...joins]) assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+  for (const w of [...layouts, ...slots, ...relations, ...anchors, ...joins]) assert.ok(handSources(w.attrs['core.source']), w.id);
   for (const w of layouts) { assert.ok(w.attrs.usual_for.length >= 4, w.id); assert.ok(tok(w.attrs.about[0]).length > 20, w.id); }
 });
 
@@ -156,7 +157,8 @@ test('Round 9: what another thing is usually on or in, in k.scenes, has an ancho
     if (anchored.has(d)) held++; else without.add(on);
   }
   // No drawing: pirate ship, stall, ceiling. A drawing that shows no sure place: cot, witch.
-  assert.deepEqual([...without].sort(), ['ceiling', 'cot', 'pirate ship', 'stall', 'witch']);
+  // A road is a region of the picture (k.scenes psys2: a car is on the road), not a drawing with a place to sit.
+  assert.deepEqual([...without].sort(), ['ceiling', 'cot', 'pirate ship', 'road', 'stall', 'witch']);
   assert.ok(held >= facts * 0.97, `${held} of ${facts}`);
 });
 
@@ -164,7 +166,7 @@ test('what joins what: the examples asked for; no kind joins itself; a part of a
   const has = (a, rel, b) => joins.some((j) => one(j, 'a') === a && one(j, 'rel') === rel && one(j, 'b') === b);
   for (const [a, rel, b] of [['roof', 'attaches_to', 'wall'], ['wheel', 'part_of', 'car'], ['hat', 'sits_on', 'head'], ['arrow', 'connects', 'box'], ['arrow', 'attaches_to', 'box']]) assert.ok(has(a, rel, b), `${a} ${rel} ${b}`);
   assert.ok(joins.length >= 150, `${joins.length} joins`);
-  for (const j of joins) { assert.notEqual(one(j, 'a'), one(j, 'b'), j.id); assert.deepEqual(j.attrs.named, ['model'], j.id); }
+  for (const j of joins) { assert.notEqual(one(j, 'a'), one(j, 'b'), j.id); assert.ok(j.attrs.named?.[0] === 'model' || /psys2-worlds/.test(j.attrs['core.source'][0]), j.id); }
   // "a part_of b" where b is a hand-written drawing: count those whose drawing has a part of that name or kind.
   const parts = handParts();
   const partOf = joins.filter((j) => one(j, 'rel') === 'part_of' && parts.has(one(j, 'b')));

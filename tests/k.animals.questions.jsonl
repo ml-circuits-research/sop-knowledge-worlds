@@ -19,3 +19,4 @@
 {"id":"an-20","ask":"what is a young hare called","query":{"type":"k.animals.animal","where":{"name":"hare"},"seek":"baby"},"expect":{"status":"supported","value":"leveret"}}
 {"id":"an-21","ask":"which animals live in a pod","query":{"type":"k.animals.animal","where":{"group":"pod"},"seek":"name","mode":"count"},"expect":{"status":"supported","value":"8"}}
 {"id":"an-22","ask":"what does an orca eat","query":{"type":"k.animals.animal","where":{"name":"orca"},"seek":"eats","mode":"list"},"expect":{"status":"supported","values":["fish","seals","whales"]}}
+{"id":"an-p1","ask":"what does a dog say","query":{"type":"k.animals.animal","where":{"name":"dog"},"seek":"sound","mode":"list"},"expect":{"status":"supported","values":["bark","woof"]}}

@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values): 135 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values): 138 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -52,6 +52,7 @@
 @k.units.measure.k.geo.sea.north k.units.measure world=k.geo type=sea key=north unit=degree core.source="hand-core 1"
 @k.units.measure.k.geo.continent.area_about k.units.measure world=k.geo type=continent key=area_about unit="square kilometre" approximate=true core.source="hand-core 1"
 @k.units.measure.k.geo.river.length_about k.units.measure world=k.geo type=river key=length_about unit=kilometre approximate=true core.source="hand-core 1"
+@k.units.measure.k.geo.group.as_of k.units.measure world=k.geo type=group key=as_of ordinal=true core.source="hand-core 1"
 @k.units.measure.k.animals.animal.legs k.units.measure world=k.animals type=animal key=legs counts=leg core.source="hand-core 1"
 @k.units.measure.k.body.part.count k.units.measure world=k.body type=part key=count counts="part of that name in an adult" core.source="hand-core 1"
 @k.units.measure.k.body.part.child_count k.units.measure world=k.body type=part key=child_count counts="part of that name in a young child" core.source="hand-core 1"
@@ -138,3 +139,5 @@
 @k.units.measure.k.values.direction.y k.units.measure world=k.values type=direction key=y counts="step downwards in a picture" core.source="hand-core 1"
 @k.units.measure.k.values.number.value k.units.measure world=k.values type=number key=value plain=true core.source="hand-core 1"
 @k.units.measure.k.values.number.value_about k.units.measure world=k.values type=number key=value_about plain=true approximate=true core.source="hand-core 1"
+@k.units.measure.k.values.shade.lightness k.units.measure world=k.values type=shade key=lightness plain=true core.source="hand-core 1"
+@k.units.measure.k.values.shade.saturation k.units.measure world=k.values type=shade key=saturation plain=true core.source="hand-core 1"

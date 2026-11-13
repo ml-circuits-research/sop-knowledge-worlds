@@ -41,3 +41,9 @@ from the workers' network; see `sources/conceptnet/SOURCE.md`.
 
 - A soft issue is advice: after a fish was put in the sky, "where does a fish live" still answers `water`
   (sopworld 0.15.0).
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: a bird is also on the ground.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

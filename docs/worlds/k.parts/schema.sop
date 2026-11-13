@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/parts.mjs
 
-@k.parts core.module name=k.parts version=1 exports=whole exports=inherited exports=usual core.source="hand-core 1"
+@k.parts core.module name=k.parts version=1 exports=whole exports=inherited exports=usual exports=called core.source="hand-core 1"
 
 # A thing and its own parts. `name` is the common word; `gloss` is WordNet's definition of the sense meant (the
 # sense that names a physical thing and is the most frequent one, as tools/coverage.mjs keeps it); `has` (many)
@@ -42,3 +42,11 @@
 # Words for the types and keys of this world.
 @k.parts.word.whole core.word text=part text=parts text="made up of" text=consists means=k.parts.whole core.source="hand-core 1"
 @k.parts.word.has core.word text=has text=have text=with means=k.parts.whole.has core.source="hand-core 1"
+
+# What people call a part of a thing when they draw or describe it: `of` the thing, `part` the name of the part,
+# `also` (many) the other words for that part of that thing (the crown of a tree: leaves, foliage, top; the walls
+# of a house: wall). The words hold for that thing only ("top" is the crown of a tree, not of a house).
+@k.parts.called core.type of=k.parts.called shared=true closed=true core.source="hand-core 1"
+@k.parts.called.of core.slot of=k.parts.called key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.parts.called.part core.slot of=k.parts.called key=part id=true required=true kind=atom core.source="hand-core 1"
+@k.parts.called.also core.slot of=k.parts.called key=also many=true kind=atom kind=string core.source="hand-core 1"

@@ -2,7 +2,7 @@
 {"id":"sh-02","ask":"how many corners has a cube","query":{"type":"k.shapes.shape","where":{"name":"cube"},"seek":"corners"},"expect":{"status":"supported","value":"8"}}
 {"id":"sh-03","ask":"is a circle round","query":{"type":"k.shapes.shape","where":{"name":"circle"},"seek":"round"},"expect":{"status":"supported","value":"true"}}
 {"id":"sh-04","ask":"what is shaped like a cone","query":{"type":"k.shapes.shape","where":{"name":"cone"},"seek":"thing","mode":"list"},"expect":{"status":"supported","values":["\"ice cream\"","\"party popper\"","funnel","volcano","carrot"]}}
-{"id":"sh-05","ask":"which shapes have four sides","query":{"type":"k.shapes.shape","where":{"sides":"4"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["square","rectangle","diamond","parallelogram","trapezium"]}}
+{"id":"sh-05","ask":"which shapes have four sides","query":{"type":"k.shapes.shape","where":{"sides":"4"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["quadrilateral","rhombus","square","rectangle","diamond","parallelogram","trapezium"]}}
 {"id":"sh-06","ask":"what does a sphere look like from the front","query":{"type":"k.shapes.shape","where":{"name":"sphere"},"seek":"flat"},"expect":{"status":"supported","value":"circle"}}
 {"id":"sh-07","ask":"what shape are the faces of a cube","query":{"type":"k.shapes.shape","where":{"name":"cube"},"seek":"face"},"expect":{"status":"supported","value":"square"}}
 {"id":"sh-08","ask":"what is a square a kind of","query":{"type":"k.shapes.shape","where":{"name":"square"},"seek":"is_a"},"expect":{"status":"supported","value":"rectangle"}}

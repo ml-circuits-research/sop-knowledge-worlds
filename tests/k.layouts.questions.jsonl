@@ -21,3 +21,4 @@
 {"id":"la-21","ask":"what hangs from the branch of a tree","query":{"type":"k.layouts.anchor","where":{"of":"tree","kind":"hook"},"seek":"holds","mode":"list"},"expect":{"status":"supported","values":["swing","rope","tyre"]}}
 {"id":"la-22","ask":"what does a sitting person sit on","query":{"type":"k.layouts.anchor","where":{"of":"person","name":"hips"},"seek":"on","mode":"list"},"expect":{"status":"supported","values":["chair","bench","swing","horse","bicycle","sofa","stool"]}}
 {"id":"la-23","ask":"which things have a seat","query":{"type":"k.layouts.anchor","where":{"kind":"seat"},"seek":"of","mode":"count"},"expect":{"status":"supported","value":"22"}}
+{"id":"la-p1","ask":"what stands around a table","query":{"type":"k.layouts.joins","where":{"rel":"around","b":"table"},"seek":"a","mode":"list"},"expect":{"status":"supported","values":["chair","stool","plate","person","cup"]}}

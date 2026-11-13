@@ -68,3 +68,9 @@ Italy; whether Switzerland is landlocked.
 - Natural Earth's rivers are named piece by piece, so no length is worked out from them (the Nile's line is 2,760
   km long there); the outlines of deserts and seas are for labels, so no area is worked out from them either.
 - The rivers of Siberia (Lena, Ob, Amur) are filed under Europe: Natural Earth files Russia there.
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2-countries` (ODbL-1.0): the two-letter code (`code2`), `currency` and `language` (many) of 234 countries, 15 territories that were missing (Palestine, Gibraltar, French Guiana, Réunion …) and 42 more names of countries (uk, britain, usa, holland, burma, Türkiye); `psys2-cities-<continent>` (CC-BY-4.0, GeoNames): 518 more cities; `psys2-groups` (CC0): `k.geo.group`, 8 groups of countries with their members as of 2024 (European Union, NATO, Scandinavia, Nordic countries, Baltic states, Benelux, Balkans, Middle East).
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

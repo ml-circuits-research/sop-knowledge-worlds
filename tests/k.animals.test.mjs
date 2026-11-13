@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { readAnimals, animalShards, animalThings, usualPlace, SIZES } from '../tools/animals-core.mjs';
 import { parse } from '../tools/sopworld/sopworld.mjs';
+import { handSources } from '../tools/lib/worlds.mjs';
 import { sample } from '../tools/ask-sample.mjs';
 
 const worlds = scanWorlds();
@@ -19,7 +20,7 @@ test('the shards are what tools/animals-core.mjs gives; 300 animals, each with c
   for (const a of animals) {
     assert.equal(a.attrs.size, undefined, a.id);
     assert.deepEqual(a.attrs.named, ['model'], a.id);
-    assert.deepEqual(a.attrs['core.source'], ['"hand-core 1"'], a.id);
+    assert.ok(handSources(a.attrs['core.source']), a.id);
     assert.ok(a.attrs.habitat?.length || one(a, 'name') === 'flea', `${a.id}: where it lives`);
   }
   const count = (k) => animals.filter((a) => a.attrs[k]?.length).length;

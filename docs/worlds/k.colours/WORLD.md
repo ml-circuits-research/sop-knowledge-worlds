@@ -32,3 +32,9 @@ colour, or their conversion kept few colours: a brown plum, a green pond).
 
 "What do red and yellow make?", "What is a darker blue?", "What kind of colour is maroon?", "Which colours are
 greens?", "Which colour does a banana have?", "Which colours give brown?" (`tests/k.colours.questions.jsonl`).
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: `kind` primary (red, yellow, blue), secondary (orange, green, purple) and neutral (black, white, grey); fire truck and ocean as things of a colour.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

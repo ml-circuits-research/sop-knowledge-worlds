@@ -31,9 +31,11 @@ export const header = ({ id, about, sources, license, script }) =>
   [`# ${id}: ${about}`, ...sources.map((s) => `# sources: ${s}`), `# license: ${license}`, `# script: ${script}`, ''].join('\n');
 
 // Replaces the .sop files of a shard directory (those whose name starts with `prefix`) by `files` (name -> text).
+// The shards `psys2*` belong to tools/import/psys2.mjs, which lays facts next to those of every world: no other
+// tool removes them (only a call whose prefix names them).
 export function writeShards(dir, files, prefix = '') {
   mkdirSync(dir, { recursive: true });
-  for (const old of readdirSync(dir)) if (old.endsWith('.sop') && old.startsWith(prefix)) rmSync(join(dir, old));
+  for (const old of readdirSync(dir)) if (old.endsWith('.sop') && old.startsWith(prefix) && (prefix.startsWith('psys2') || !old.startsWith('psys2'))) rmSync(join(dir, old));
   for (const [name, text] of Object.entries(files)) writeFileSync(join(dir, name), text);
 }
 

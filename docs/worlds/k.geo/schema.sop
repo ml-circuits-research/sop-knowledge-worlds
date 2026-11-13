@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/geo.mjs
 
-@k.geo core.module name=k.geo version=2 exports=continent exports=country exports=city exports=river exports=mountain exports=range exports=lake exports=desert exports=sea core.source="hand-core 1"
+@k.geo core.module name=k.geo version=2 exports=continent exports=country exports=city exports=river exports=mountain exports=range exports=lake exports=desert exports=sea exports=group core.source="hand-core 1"
 
 @k.geo.continent core.type of=k.geo.continent shared=true closed=true core.source="hand-core 1"
 @k.geo.continent.name core.slot of=k.geo.continent key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -17,6 +17,11 @@
 @k.geo.country core.type of=k.geo.country shared=true closed=true core.source="hand-core 1"
 @k.geo.country.name core.slot of=k.geo.country key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.code core.slot of=k.geo.country key=code kind=atom core.source="hand-core 1"
+# `code2` is the two-letter code of the country (ISO 3166-1 alpha-2: FR) next to the three-letter `code` (FRA);
+# `currency` the name of its money; `language` (many) its official languages (from the country list, shard psys2-countries).
+@k.geo.country.code2 core.slot of=k.geo.country key=code2 kind=atom core.source="hand-core 1"
+@k.geo.country.currency core.slot of=k.geo.country key=currency kind=atom kind=string core.source="hand-core 1"
+@k.geo.country.language core.slot of=k.geo.country key=language many=true kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.formal core.slot of=k.geo.country key=formal kind=string core.source="hand-core 1"
 @k.geo.country.capital core.slot of=k.geo.country key=capital many=true kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.continent core.slot of=k.geo.country key=continent kind=atom kind=string core.source="hand-core 1"
@@ -139,3 +144,13 @@
 @k.geo.word.desert core.word text=desert text=deserts means=k.geo.desert core.source="hand-core 1"
 @k.geo.word.sea core.word text=sea text=seas text=ocean text=oceans text=gulf text=bay means=k.geo.sea core.source="hand-core 1"
 @k.geo.word.length core.word text=length text=long means=k.geo.river.length_about core.source="hand-core 1"
+
+# A group of countries by a treaty or by custom (the European Union, NATO, Scandinavia, the Balkans): `member`
+# (many) names its countries (values of k.geo.country.name), `as_of` the year the list was written.
+@k.geo.group core.type of=k.geo.group shared=true closed=true core.source="hand-core 1"
+@k.geo.group.name core.slot of=k.geo.group key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.group.member core.slot of=k.geo.group key=member many=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.group.as_of core.slot of=k.geo.group key=as_of kind=integer core.source="hand-core 1"
+@k.geo.word.group core.word text=group text=union text=alliance text=member text=members means=k.geo.group core.source="hand-core 1"
+@k.geo.word.currency core.word text=currency text=money means=k.geo.country.currency core.source="hand-core 1"
+@k.geo.word.language core.word text=language text=languages text=speak text=spoken means=k.geo.country.language core.source="hand-core 1"

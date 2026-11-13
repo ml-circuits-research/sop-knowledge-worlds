@@ -86,3 +86,18 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 ### k.words 1, additions (2026-11-13, Round 9, not breaking)
 
 - `k.words.sense`: `pos` may be `adjective` or `adverb`; new keys `opposite`, `near_opposite`, `kind_of` (many).
+
+### Additions from the PSys2 tab worlds (2026-11-13, Round 10 item 0, not breaking)
+
+Facts in shards named `psys2*` (source `psys2-worlds <commit>`), merged with the facts of the same thing; see
+`docs/worlds/FROM-PSYS2.md`. New keys and types:
+- `k.geo.country`: `code2`, `currency`, `language` (many); new type `k.geo.group` (name, `member` many, `as_of`).
+  15 more territories, 518 more cities, 80 more names of countries. **A count of the countries of a continent
+  changes** (South America: 14 with French Guiana).
+- `k.colours.colour.kind` also takes `primary`, `secondary`, `neutral`.
+- `k.layouts.joins.rel` also takes `around`.
+- `k.values`: new types `shade` (name, lightness, saturation) and `reply` (yes, no), exported.
+- `k.parts`: new type `called` (of, part, `also` many), exported.
+- `k.shapes`: the shapes rhombus and quadrilateral; `is_a` for triangle, rectangle, pentagon, hexagon, octagon.
+- Facts of the hand-written worlds may now carry two sources (`hand-core 1` and `psys2-worlds <commit>`).
+

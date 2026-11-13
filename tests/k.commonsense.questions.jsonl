@@ -1,5 +1,5 @@
 {"id":"cs-01","ask":"where does a fish live","query":{"type":"k.commonsense.thing","where":{"name":"fish"},"seek":"at"},"expect":{"status":"supported","value":"water"}}
-{"id":"cs-02","ask":"where is a bird","query":{"type":"k.commonsense.thing","where":{"name":"bird"},"seek":"at"},"expect":{"status":"supported","values":["sky","tree"]}}
+{"id":"cs-02","ask":"where is a bird","query":{"type":"k.commonsense.thing","where":{"name":"bird"},"seek":"at"},"expect":{"status":"supported","values":["sky","tree","ground"]}}
 {"id":"cs-03","ask":"what can a bird do","query":{"type":"k.commonsense.thing","where":{"name":"bird"},"seek":"can"},"expect":{"status":"supported","values":["fly","sing"]}}
 {"id":"cs-04","ask":"what is a boat used for","query":{"type":"k.commonsense.thing","where":{"name":"boat"},"seek":"used_for"},"expect":{"status":"supported","value":"travel"}}
 {"id":"cs-05","ask":"what is a house made of","query":{"type":"k.commonsense.thing","where":{"name":"house"},"seek":"made_of"},"expect":{"status":"supported","values":["brick","wood"]}}

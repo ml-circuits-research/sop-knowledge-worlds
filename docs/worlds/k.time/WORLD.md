@@ -20,3 +20,9 @@ CC0-1.0).
 
 See `tests/k.time.questions.jsonl`: how many days April has, which month is the 9th, which months are summer in the
 south, the day after which a weekend starts, how many days a week has, what comes after spring.
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: a weekend has two days.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

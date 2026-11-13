@@ -46,3 +46,9 @@ drawn by `"lady beetle"`); the same `name` in `k.commonsense.thing` (fish, bird,
 
 See `tests/k.animals.questions.jsonl`: what sound a cow makes, what a baby kangaroo is called, how many legs a spider
 has, which animals are amphibians, what a panda eats, where a camel lives, which mammal can fly.
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: for 55 animals, foods ours did not name (72), the sound as a child says it (woof, baa, hee-haw), legs, diet, covering, young and swimming where ours had none; chicken, hippo and worm as words of hen, hippopotamus and earthworm.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).

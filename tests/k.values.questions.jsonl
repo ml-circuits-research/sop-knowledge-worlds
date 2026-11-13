@@ -10,3 +10,4 @@
 {"id":"va-10","ask":"what number is twenty-three","query":{"type":"k.values.number","where":{"text":"twenty-three","kind":"cardinal"},"seek":"value"},"expect":{"status":"supported","value":"23"}}
 {"id":"va-11","ask":"which number is fifth","query":{"type":"k.values.number","where":{"text":"fifth","kind":"ordinal"},"seek":"value"},"expect":{"status":"supported","value":"5"}}
 {"id":"va-12","ask":"is a cube a solid shape","query":{"type":"k.values.shape","where":{"name":"cube"},"seek":"solid"},"expect":{"status":"supported","value":"true"}}
+{"id":"va-p1","ask":"how much lighter is a pale colour","query":{"type":"k.values.shade","where":{"name":"pale"},"seek":"lightness"},"expect":{"status":"supported","value":"0.3"}}

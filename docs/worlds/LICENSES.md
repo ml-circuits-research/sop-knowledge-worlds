@@ -20,7 +20,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: ODbL-1.0 (Open Database License: attribution, share-alike for the database).
 - Attribution: Contains information from mledoze/countries (https://github.com/mledoze/countries), which is made available under the Open Database License (ODbL) 1.0, https://opendatacommons.org/licenses/odbl/1-0/ .
 - Shard terms: ODbL-1.0
-- Used by: `k.geo` (6 shards)
+- Used by: `k.geo` (7 shards)
 
 ## css-colors-2.1.1
 
@@ -94,6 +94,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: CC-BY-4.0
 - Used by: `k.faces` (10 shards)
 
+## geonames-all-the-cities-3.1.0
+
+- What: cities of the world with country, population and position.
+- Origin: https://www.geonames.org , as packaged by the npm package `all-the-cities` 3.1.0 and selected by the PSys2 script `scripts/build-geo-data.mjs` (the largest cities and the capitals, 1,001 in all); read here from `worlds/geo.map/kb.sop` of PSys2 at commit `6b63b2ba`, not from GeoNames itself.
+- License: CC-BY-4.0.
+- Attribution: Contains data from GeoNames (https://www.geonames.org), licensed under CC BY 4.0.
+- Shard terms: CC-BY-4.0
+- Used by: `k.geo` (7 shards)
+
 ## hand-core-1
 
 - What: the hand-written cores of the worlds (`k.commonsense`, `k.objects`, `k.units`, `k.time`, `k.space`, `k.animals`, `k.body`, `k.food`, and the schemas of the others): small sets of facts that define each schema and its tests before any bulk import. Written by the worker in this repository, checked by the reviewer.
@@ -138,6 +147,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Attribution: All emojis designed by OpenMoji – the open-source emoji and icon project (https://openmoji.org). License: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ . The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: CC-BY-SA-4.0
 - Used by: `k.attributes` (1 shards), `k.objects` (18 shards)
+
+## psys2-worlds-6b63b2ba
+
+- What: the general knowledge that the demo application PSys2 carried in its own tab worlds: animals, shapes and colours, time, common sense, colour and shade words, yes and no words, the names of the parts of the things it draws, groups of countries. Taken here so that the demo holds no general knowledge of its own.
+- Origin: the PSys2 repository of this project (github.com/ml-circuits-research, private), files `worlds/kids.animals/kb.sop`, `worlds/kids.shapes/kb.sop`, `worlds/kids.time/kb.sop`, `worlds/common.sense/kb.sop`, `worlds/space/space.mjs`, `worlds/art.draw/scene.mjs`, `worlds/lang.common/lexicon.sop`, `worlds/geo.map/kb.sop`.
+- License: CC0-1.0 for the hand-written knowledge (the project's own data; the reviewer's ruling in `worker-tasks.md`, block "2026-11-13 22:30"). The file `geo.map/kb.sop` is not hand-written: it was generated from mledoze/countries (ODbL-1.0) and GeoNames (CC-BY-4.0); the facts taken from it keep those sources (`countries 5.1.0`, `geonames all-the-cities-3.1.0`) and licences, with `psys2-worlds` as a second source.
+- Attribution: none needed for the hand-written part.
+- Shard terms: CC-BY-4.0, CC0-1.0, ODbL-1.0
+- Used by: `k.animals` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.geo` (9 shards), `k.layouts` (1 shards), `k.parts` (1 shards), `k.scenes` (1 shards), `k.shapes` (1 shards), `k.time` (1 shards), `k.values` (1 shards)
 
 ## wordnet-3.1
 

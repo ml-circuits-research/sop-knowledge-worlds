@@ -23,6 +23,7 @@ export const MEASURES = {
     city: { population: { counts: 'person' } },
     river: { length_about: { unit: 'kilometre' } },
     mountain: { elevation: { unit: 'metre' } },
+    group: { as_of: { ordinal: true } },
   },
   'k.animals': { animal: { legs: { counts: 'leg' } } },
   'k.body': { part: { count: { counts: 'part of that name in an adult' }, child_count: { counts: 'part of that name in a young child' }, count_per_part: { counts: 'part of that name on one larger part' }, count_about: { counts: 'part of that name in an adult' },
@@ -44,7 +45,8 @@ export const MEASURES = {
   'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
   'k.time': { month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord }, duration: { count: { counts: 'span that the key unit of the same fact names' } } },
   'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } } },
-  'k.values': { scale: { steps: { counts: 'step' } }, step: { rank: ord }, direction: { x: { counts: 'step to the right in a picture' }, y: { counts: 'step downwards in a picture' } }, number: { value: { plain: true }, value_about: { plain: true } } },
+  'k.values': { scale: { steps: { counts: 'step' } }, step: { rank: ord }, direction: { x: { counts: 'step to the right in a picture' }, y: { counts: 'step downwards in a picture' } }, number: { value: { plain: true }, value_about: { plain: true } },
+    shade: { lightness: { plain: true }, saturation: { plain: true } } },
 };
 
 // The numeric slots of a world: [type, key] in the order of the schema.

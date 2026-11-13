@@ -2,12 +2,12 @@
 {"id":"geo-02","ask":"which countries are next to Moldova","query":{"type":"k.geo.country","where":{"name":"Moldova"},"seek":"neighbour"},"expect":{"status":"supported","values":["Romania","Ukraine"]}}
 {"id":"geo-03","ask":"on which continent is France","query":{"type":"k.geo.country","where":{"name":"France"},"seek":"continent"},"expect":{"status":"supported","value":"Europe"}}
 {"id":"geo-04","ask":"which country has the capital Nairobi","query":{"type":"k.geo.country","where":{"capital":"Nairobi"},"seek":"name"},"expect":{"status":"supported","value":"Kenya"}}
-{"id":"geo-05","ask":"how many countries and territories are in South America","query":{"type":"k.geo.country","where":{"continent":"\"South America\""},"mode":"count"},"expect":{"status":"supported","value":"13"}}
+{"id":"geo-05","ask":"how many countries and territories are in South America","query":{"type":"k.geo.country","where":{"continent":"\"South America\""},"mode":"count"},"expect":{"status":"supported","value":"14"}}
 {"id":"geo-06","ask":"how high is Mount Everest","query":{"type":"k.geo.mountain","where":{"name":"\"Mount Everest\""},"seek":"elevation"},"expect":{"status":"supported","value":"8848"}}
 {"id":"geo-07","ask":"through which countries does the Danube flow","query":{"type":"k.geo.river","where":{"name":"Danube"},"seek":"country"},"expect":{"status":"supported","values":["Austria","Bulgaria","Croatia","Germany","Hungary","Romania","Serbia","Slovakia","Ukraine"]}}
 {"id":"geo-08","ask":"how many people live in Brazil","query":{"type":"k.geo.country","where":{"name":"Brazil"},"seek":"population"},"expect":{"status":"supported","value":"211049527"}}
 {"id":"geo-09","ask":"is Switzerland landlocked","query":{"type":"k.geo.country","where":{"name":"Switzerland"},"seek":"landlocked"},"expect":{"status":"supported","value":"true"}}
-{"id":"geo-10","ask":"what are the largest cities of Italy","query":{"type":"k.geo.city","where":{"country":"Italy"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Florence","Milan","Naples","Rome","Turin"]}}
+{"id":"geo-10","ask":"what are the largest cities of Italy","query":{"type":"k.geo.city","where":{"country":"Italy"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Florence","Milan","Naples","Rome","Turin","Genoa","Palermo"]}}
 {"id":"geo-11","ask":"how large is Australia","query":{"type":"k.geo.country","where":{"name":"Australia"},"seek":"area"},"expect":{"status":"supported","value":"7692024"}}
 {"id":"geo-12","ask":"where are the Alps","query":{"type":"k.geo.range","where":{"name":"Alps"},"seek":"continent"},"expect":{"status":"supported","value":"Europe"}}
 {"id":"geo-13","ask":"what is Canberra the capital of","query":{"type":"k.geo.city","where":{"name":"Canberra"},"seek":"capital_of"},"expect":{"status":"supported","value":"Australia"}}
@@ -22,3 +22,7 @@
 {"id":"geo-22","ask":"how large is Asia","query":{"type":"k.geo.continent","where":{"name":"Asia"},"seek":"area_about"},"expect":{"status":"supported","value":"44600000"}}
 {"id":"geo-23","ask":"how large is the Pacific Ocean","query":{"type":"k.geo.sea","where":{"name":"\"Pacific Ocean\""},"seek":"area_about"},"expect":{"status":"supported","value":"165000000"}}
 {"id":"geo-24","ask":"which countries lie on Lake Victoria","query":{"type":"k.geo.lake","where":{"name":"\"Lake Victoria\""},"seek":"country","mode":"list"},"expect":{"status":"supported","values":["Kenya","Tanzania","Uganda"]}}
+{"id":"geo-p1","ask":"what is the currency of Japan","query":{"type":"k.geo.country","where":{"name":"Japan"},"seek":"currency"},"expect":{"status":"supported","value":"\"Japanese yen\""}}
+{"id":"geo-p2","ask":"which languages are spoken in Switzerland","query":{"type":"k.geo.country","where":{"name":"Switzerland"},"seek":"language","mode":"list"},"expect":{"status":"supported","values":["French","\"Swiss German\"","Italian","Romansh"]}}
+{"id":"geo-p3","ask":"which country has the code FR","query":{"type":"k.geo.country","where":{"code2":"FR"},"seek":"name"},"expect":{"status":"supported","value":"France"}}
+{"id":"geo-p4","ask":"which countries are in the Benelux","query":{"type":"k.geo.group","where":{"name":"Benelux"},"seek":"member","mode":"list"},"expect":{"status":"supported","values":["Belgium","Netherlands","Luxembourg"]}}

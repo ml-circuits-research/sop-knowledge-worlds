@@ -45,6 +45,10 @@ export function readHeader(text) {
   return header;
 }
 
+// The sources of a hand-written fact: hand-core, and psys2-worlds where tools/import/psys2.mjs laid a fact of the
+// PSys2 tab worlds next to it (the facts of one thing merge). For tests of the hand-written worlds.
+export const handSources = (sources) => (sources ?? []).length > 0 && sources.every((s) => s === '"hand-core 1"' || /^"psys2-worlds [0-9a-f]+"$/.test(s)) && (sources.includes('"hand-core 1"') || sources.length === 1);
+
 export const library = (worlds) => Object.fromEntries(worlds.map((w) => [w.id, w.schemaText]));
 
 export const isMatrix = (wire, text) => SCHEMA_TYPES.has(wire.type);

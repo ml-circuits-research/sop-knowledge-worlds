@@ -33,3 +33,9 @@ polygon, drop, cloud shape, wavy line, hemisphere, egg shape, prism, torus).
 
 "How many sides has a hexagon?", "How many corners has a cube?", "Is a circle round?", "What is shaped like a
 cone?", "Which shapes have four sides?", "What shape are the faces of a cube?" (`tests/k.shapes.questions.jsonl`).
+
+## From the PSys2 tab worlds
+
+Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
+merge with the others). `psys2`: the shapes rhombus and quadrilateral, `is_a` for triangle, rectangle, pentagon, hexagon and octagon (so a square is a rectangle, a quadrilateral, a polygon by the chain), and four more things of a shape.
+What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).
