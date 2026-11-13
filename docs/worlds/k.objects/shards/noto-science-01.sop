@@ -115,7 +115,7 @@
 
 # satellite antenna
 @k.objects.u1f4e1 k.objects.object name="satellite antenna" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f4e1.p1 k.objects.part of="satellite antenna" name=part1 shape=polygon x=15.6 y=79.5 w=58 h=17.4 z=1 colour=white rgb="#94D1E0" core.source="noto-emoji 99701e0"
+@k.objects.u1f4e1.p1 k.objects.part of="satellite antenna" name=base named=model shape=polygon x=15.6 y=79.5 w=58 h=17.4 z=1 colour=white rgb="#94D1E0" core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p1.1 k.objects.point part=$k.objects.u1f4e1.p1 n=1 x=15.6 y=91.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p1.2 k.objects.point part=$k.objects.u1f4e1.p1 n=2 x=17 y=88 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p1.3 k.objects.point part=$k.objects.u1f4e1.p1 n=3 x=24.1 y=83.5 core.source="noto-emoji 99701e0"
@@ -207,7 +207,7 @@
 @k.objects.u1f4e1.p6.22 k.objects.point part=$k.objects.u1f4e1.p6 n=22 x=29 y=5.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p6.23 k.objects.point part=$k.objects.u1f4e1.p6 n=23 x=39.6 y=9.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p6.24 k.objects.point part=$k.objects.u1f4e1.p6 n=24 x=50.9 y=15.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e1.p7 k.objects.part of="satellite antenna" name=part7 shape=polygon x=7.2 y=3.2 w=67.5 h=64.2 z=7 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
+@k.objects.u1f4e1.p7 k.objects.part of="satellite antenna" name=dish named=model shape=polygon x=7.2 y=3.2 w=67.5 h=64.2 z=7 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p7.1 k.objects.point part=$k.objects.u1f4e1.p7 n=1 x=72.6 y=64.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p7.2 k.objects.point part=$k.objects.u1f4e1.p7 n=2 x=74.2 y=62.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p7.3 k.objects.point part=$k.objects.u1f4e1.p7 n=3 x=74.7 y=58.7 core.source="noto-emoji 99701e0"

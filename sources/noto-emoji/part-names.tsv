@@ -1,3 +1,836 @@
 # object	part number	name	kind
 # Written by a language model looking at numbered labelling pictures (tools/render-svg.mjs --label). A part that is
 # not listed, or has no name, keeps its partN name. kind=detail marks shadows, highlights and outlines.
+frog	1	head	
+frog	2	right_eye	eye
+frog	3	left_eye	eye
+frog	4	left_nostril	nostril
+frog	5	right_nostril	nostril
+frog	6	mouth	
+frog	7		detail
+frog	8		detail
+turkey	1	legs	
+turkey	3	tail	
+turkey	4	body	
+turkey	5	head	
+turkey	6	eye	
+turkey	7	beak	
+turkey	10	wattle	
+baby chick	1	left_leg	leg
+baby chick	2	right_leg	leg
+baby chick	3	body	
+baby chick	4	beak	
+baby chick	5	eye	
+baby chick	6	wing	
+eagle	1	wing	
+eagle	2	tail	
+eagle	3	body	
+eagle	4	head	
+eagle	5	beak	
+eagle	7	eye	
+eagle	9	left_foot	foot
+eagle	10	right_foot	foot
+feather	7	quill	
+wing	1		detail
+wing	2	wing	
+ant	1	front_leg	leg
+ant	3	left_antenna	antenna
+ant	4	right_antenna	antenna
+ant	5	body	
+ant	6		detail
+ant	7		detail
+ant	8	eye	
+ant	10	legs	
+ant	11		detail
+ant	12		detail
+ant	13		detail
+ant	14		detail
+cricket	1	back_leg	leg
+cricket	2	left_antenna	antenna
+cricket	3	right_antenna	antenna
+cricket	4	body	
+cricket	9	head	
+cricket	10	eye	
+scorpion	1	body	
+scorpion	2	left_claw	claw
+scorpion	4	right_claw	claw
+scorpion	6	tail	
+scorpion	7	left_eye	eye
+scorpion	8	right_eye	eye
+scorpion	9	mouth	
+microbe	13	body	
+microbe	16	nucleus	
+dog face	1	head	
+dog face	2	patch	
+dog face	3	left_eye	eye
+dog face	4	right_eye	eye
+dog face	5	nose	
+dog face	6	tongue	
+dog face	7		detail
+dog face	8	mouth	
+dog face	9		detail
+dog face	10	right_ear	ear
+dog face	11		detail
+dog face	12	left_ear	ear
+wolf	1	head	
+wolf	2	right_ear	ear
+wolf	3	left_ear	ear
+wolf	4	muzzle	
+wolf	5	right_eye	eye
+wolf	6	left_eye	eye
+wolf	7	nose	
+wolf	8	mouth	
+black cat	1	front_leg	leg
+black cat	3	left_ear	ear
+black cat	7	body	
+black cat	8	right_ear	ear
+leopard	2	front_leg	leg
+leopard	3	back_leg	leg
+leopard	4	tail	
+leopard	5		detail
+leopard	6	ear	
+leopard	7	head	
+leopard	10	body	
+leopard	12	spot1	spot
+leopard	13	spot2	spot
+leopard	14	spot3	spot
+leopard	15	spot4	spot
+leopard	16	spot5	spot
+horse	1	ear	
+horse	2	tail	
+horse	3	mane	
+horse	4	leg1	leg
+horse	7	body	
+horse	8	leg2	leg
+horse	9	leg3	leg
+horse	10	head	
+horse	12	hoof1	hoof
+horse	13	hoof2	hoof
+horse	14	hoof3	hoof
+horse	15	hoof4	hoof
+bison	1	left_horn	horn
+bison	4	body	
+bison	8	tail	
+bison	9	nose	
+bison	10	hoof3	hoof
+bison	11	hoof4	hoof
+bison	12	hoof2	hoof
+bison	13	hoof1	hoof
+bison	14	head	
+bison	15	right_horn	horn
+cow	1	left_horn	horn
+cow	3	tail	
+cow	4	udder	
+cow	5	body	
+cow	6	patch2	patch
+cow	7	patch3	patch
+cow	8	patch1	patch
+cow	9	patch6	patch
+cow	10	ear	
+cow	12	right_horn	horn
+cow	14	nose	
+cow	15	patch4	patch
+cow	16	patch5	patch
+pig nose	1		detail
+pig nose	2	nose	
+pig nose	5	right_nostril	nostril
+pig nose	6	left_nostril	nostril
+camel	1	front_leg	leg
+camel	2	back_leg	leg
+camel	6	eye	
+camel	8	body	
+elephant	1	body	
+elephant	5	eye	
+elephant	7	tusk	
+mouse face	1	head	
+mouse face	2	whisker4	whisker
+mouse face	3	whisker5	whisker
+mouse face	4	whisker6	whisker
+mouse face	5	whisker1	whisker
+mouse face	6	whisker2	whisker
+mouse face	7	whisker3	whisker
+mouse face	8	right_eye	eye
+mouse face	9	left_eye	eye
+mouse face	10	teeth	
+mouse face	11	nose	
+mouse face	12	left_ear	ear
+mouse face	13		detail
+mouse face	14	right_ear	ear
+mouse face	15		detail
+rabbit face	1	head	
+rabbit face	2		detail
+rabbit face	3		detail
+rabbit face	4	muzzle	
+rabbit face	5	left_eye	eye
+rabbit face	6	right_eye	eye
+rabbit face	9	nose	
+rabbit face	10	whisker1	whisker
+rabbit face	11	whisker2	whisker
+rabbit face	12	whisker3	whisker
+rabbit face	13	whisker4	whisker
+rabbit face	14	whisker5	whisker
+rabbit face	15	whisker6	whisker
+hedgehog	1	spines	
+hedgehog	2	front_leg	leg
+hedgehog	3	head	
+hedgehog	7	eye	
+hedgehog	8	nose	
+hedgehog	9		detail
+hedgehog	10		detail
+hedgehog	11		detail
+hedgehog	12		detail
+hedgehog	13		detail
+hedgehog	14		detail
+hedgehog	15		detail
+hedgehog	16		detail
+koala	1	head	
+koala	2		detail
+koala	3	right_ear	ear
+koala	4		detail
+koala	5	left_ear	ear
+koala	6	right_eye	eye
+koala	7	left_eye	eye
+koala	8		detail
+koala	9		detail
+koala	10	mouth	
+koala	11		detail
+koala	12	nose	
+koala	13		detail
+koala	14		detail
+skunk	1	body	
+skunk	2	stripe2	stripe
+skunk	3	stripe1	stripe
+orca	2	body	
+orca	3	patch	
+orca	7	belly	
+orca	8	flipper	
+shark	1	body	
+shark	2	belly	
+shark	4	eye	
+shark	9	gill1	gill
+shark	10	gill2	gill
+shark	11	gill3	gill
+jellyfish	5	body	
+jellyfish	11		detail
+squid	4	fin	
+squid	5	arms	
+squid	10	body	
+squid	13	left_eye	eye
+squid	14	right_eye	eye
+snake	1	tail	
+snake	6	belly	
+snake	7	tongue	
+snake	8	left_eye	eye
+snake	9	right_eye	eye
+snake	10	body	
+T-Rex	3	arm	
+T-Rex	16	body	
+thread	1	bottom	
+thread	8	top	
+thread	9		detail
+thread	10		detail
+thread	11		detail
+thread	12		detail
+thread	13		detail
+thread	14		detail
+thread	15		detail
+thread	16		detail
+military medal	3	ribbon	
+military medal	5	star	
+2nd place medal	1	right_ribbon	ribbon
+2nd place medal	6	medal	
+2nd place medal	8	left_ribbon	ribbon
+blue book	2	pages	
+blue book	5	cover	
+blue book	7	spine	
+ledger	1	cover	
+ledger	2	pages	
+newspaper	4		detail
+newspaper	5		detail
+newspaper	6		detail
+newspaper	7		detail
+newspaper	8		detail
+newspaper	9		detail
+newspaper	10	picture	
+label	5	hole	
+label	6	string	
+glasses	1	left_lens	lens
+glasses	2	right_lens	lens
+glasses	3	frame	
+safety vest	2	stripe1	stripe
+safety vest	3	stripe3	stripe
+safety vest	6	stripe2	stripe
+safety vest	7	stripe4	stripe
+scarf	1	scarf	
+scarf	5	fringe2	fringe
+scarf	9	fringe1	fringe
+dress	1	skirt	
+dress	2	top	
+dress	3	belt	
+briefs	2		detail
+briefs	3		detail
+briefs	4	briefs	
+folding hand fan	3	handle	
+shopping bags	1	handle	
+shopping bags	2	bag1	bag
+shopping bags	10	bag2	bag
+running shoe	8		detail
+running shoe	16	sole	
+woman’s sandal	1	sole	
+woman’s sandal	7	strap	
+woman’s sandal	9		detail
+crown	3	crown	
+crown	4	jewel1	jewel
+crown	6	jewel2	jewel
+crown	7	jewel3	jewel
+crown	8	jewel4	jewel
+crown	9	jewel5	jewel
+crown	11		detail
+crown	13		detail
+crown	14		detail
+crown	15		detail
+crown	16		detail
+billed cap	4	button	
+billed cap	6	bill	
+ring	1	band	
+ring	13		detail
+ring	14		detail
+low battery	1	battery	
+low battery	3	plus	
+low battery	4		detail
+low battery	7	charge	
+low battery	9		detail
+printer	2	paper	
+printer	7	body	
+abacus	1	rod4	rod
+abacus	2	rod3	rod
+abacus	3	rod2	rod
+abacus	4	rod1	rod
+abacus	5	bead4	bead
+abacus	6	bead3	bead
+abacus	7	bead5	bead
+abacus	8	bead7	bead
+abacus	9	bead6	bead
+abacus	10	bead1	bead
+abacus	11	bead2	bead
+abacus	12	bead8	bead
+chopsticks	1	stick1	stick
+chopsticks	3	stick2	stick
+kitchen knife	2		detail
+kitchen knife	3	blade	
+kitchen knife	5	handle	
+baby bottle	1	bottle	
+baby bottle	2	milk	
+baby bottle	3		detail
+baby bottle	11	teat	
+teacup without handle	1	base	
+teacup without handle	2	cup	
+teacup without handle	3		detail
+teacup without handle	5	tea	
+teacup without handle	6		detail
+cocktail glass	3	glass	
+cocktail glass	13	olive	
+clinking glasses	2	drink1	drink
+clinking glasses	4	drink2	drink
+clinking glasses	5		detail
+clinking glasses	6		detail
+clinking glasses	14	base2	base
+clinking glasses	16	base1	base
+bubble tea	6	pearl3	pearl
+bubble tea	7	pearl6	pearl
+bubble tea	8	pearl2	pearl
+bubble tea	10	pearl4	pearl
+bubble tea	11	pearl1	pearl
+bubble tea	12	pearl5	pearl
+bubble tea	14	lid	
+bubble tea	15	straw	
+bubble tea	16		detail
+jack-o-lantern	3	stem	
+jack-o-lantern	11	right_eye	eye
+jack-o-lantern	13	left_eye	eye
+firecracker	8	fuse	
+firecracker	9	spark	
+tanabata tree	9	paper2	paper
+tanabata tree	11	paper3	paper
+tanabata tree	12	paper1	paper
+tanabata tree	16	paper4	paper
+wind chime	8	string	
+wind chime	10		detail
+wind chime	11	flower1	flower
+wind chime	12	flower2	flower
+wrapped gift	1	box	
+wrapped gift	7	ribbon2	ribbon
+wrapped gift	8	ribbon1	ribbon
+wrapped gift	12		detail
+wrapped gift	14		detail
+cooked rice	1	base	
+cooked rice	2	bowl	
+cooked rice	6		detail
+cooked rice	7		detail
+cooked rice	8		detail
+cooked rice	9		detail
+cooked rice	10		detail
+roasted sweet potato	1		detail
+roasted sweet potato	2	potato	
+roasted sweet potato	3	inside	
+roasted sweet potato	4		detail
+roasted sweet potato	5		detail
+roasted sweet potato	6		detail
+roasted sweet potato	7		detail
+roasted sweet potato	8		detail
+fortune cookie	2	cookie	
+fortune cookie	6	paper	
+tangerine	1	fruit	
+tangerine	3	leaf	
+tangerine	4	stem	
+tangerine	5		detail
+tangerine	7		detail
+tangerine	8		detail
+tangerine	9		detail
+tangerine	10		detail
+tangerine	11		detail
+pineapple	1	fruit	
+pineapple	2		detail
+pineapple	3		detail
+pineapple	4		detail
+pineapple	5		detail
+pineapple	6		detail
+pineapple	7		detail
+pineapple	8		detail
+pineapple	9	leaves	
+pineapple	10		detail
+pineapple	11		detail
+pear	1	fruit	
+pear	2	stem	
+pear	3		detail
+pear	4		detail
+pear	5		detail
+pear	6		detail
+pear	7		detail
+pear	8		detail
+coconut	1	shell	
+coconut	12		detail
+coconut	13		detail
+coconut	14		detail
+coconut	15		detail
+coconut	16		detail
+bread	1	crust	
+bread	2	slice	
+cheese wedge	1	top	
+cheese wedge	2	side	
+cheese wedge	3	hole7	hole
+cheese wedge	10	hole5	hole
+cheese wedge	11	hole6	hole
+cheese wedge	12	hole4	hole
+cheese wedge	13	hole1	hole
+cheese wedge	14	hole2	hole
+cheese wedge	15	hole3	hole
+hot dog	3	sausage	
+hot dog	4	bun	
+hot dog	5	mustard	
+cooking	7	egg_white	
+green salad	15	bowl	
+canned food	8	label	
+ice cream	4	stem	
+ice cream	5	base	
+ice cream	6	bowl	
+ice cream	16	cherry	
+shortcake	8	cream	
+carrot	1	root	
+carrot	4		detail
+carrot	5		detail
+carrot	6		detail
+carrot	7		detail
+carrot	8		detail
+carrot	9		detail
+carrot	10	leaves	
+cucumber	1	cucumber	
+onion	4		detail
+onion	5		detail
+onion	6		detail
+pool 8 ball	1	ball	
+pool 8 ball	2		detail
+pool 8 ball	3	circle	
+pool 8 ball	4	number	
+pool 8 ball	5		detail
+pool 8 ball	6		detail
+joystick	1	base	
+joystick	2		detail
+joystick	4	stick	
+joystick	5	knob	
+joystick	6		detail
+joystick	8	button	
+teddy bear	1	body	
+teddy bear	6	bow	
+teddy bear	7	head	
+teddy bear	8	left_ear	ear
+teddy bear	9	right_ear	ear
+chess pawn	3	head	
+chess pawn	4		detail
+door	1	door	
+door	3	top_panel	panel
+door	4		detail
+door	6	bottom_panel	panel
+door	7		detail
+bed	1	headboard	
+bed	6	right_leg	leg
+bed	7	left_leg	leg
+bed	11	blanket	
+shower	1	pipe	
+shower	4	head	
+shower	9	jet3	jet
+shower	11	jet2	jet
+shower	12	jet1	jet
+shower	14	jet4	jet
+shower	16	jet5	jet
+lotion bottle	1	bottle	
+lotion bottle	2	cap	
+lotion bottle	5	pump	
+lotion bottle	7		detail
+lotion bottle	8	drop	
+roll of paper	3	hole	
+toothbrush	1	handle	
+toothbrush	13		detail
+clapper board	1	board	
+clapper board	3		detail
+clapper board	14		detail
+video camera	1	lens	
+video camera	9	body	
+candle	1	glow	
+candle	2	candle	
+candle	3		detail
+candle	5	flame	
+diya lamp	1	bowl	
+diya lamp	14	flame	
+unlocked	1	body	
+unlocked	2	keyhole	
+unlocked	7	shackle	
+unlocked	8		detail
+outbox tray	3	tray	
+outbox tray	5	arrow	
+closed mailbox with lowered flag	1	post	
+closed mailbox with lowered flag	3	box	
+closed mailbox with lowered flag	8	flag	
+ballot box with ballot	4	slot	
+ballot box with ballot	7	ballot	
+adhesive bandage	2	bandage	
+yen banknote	1		detail
+yen banknote	2	band	
+yen banknote	6	symbol	
+money with wings	2	left_wing	wing
+money with wings	11	band	
+money with wings	13	right_wing	wing
+musical note	1	note	
+control knobs	1	panel	
+saxophone	1	mouthpiece	
+saxophone	2	body	
+saxophone	3	bell	
+saxophone	4	key1	key
+saxophone	5	key2	key
+saxophone	6	key3	key
+saxophone	7	key4	key
+saxophone	8		detail
+guitar	1	neck	
+guitar	4	body	
+guitar	8	head	
+drum	2	body	
+drum	14	left_stick	stick
+drum	15	right_stick	stick
+briefcase	4	case	
+briefcase	11		detail
+briefcase	13	handle	
+calendar	1	page	
+calendar	2	header	
+calendar	7	digit1	digit
+calendar	8	digit2	digit
+card index	6	card	
+clipboard	4		detail
+clipboard	5		detail
+clipboard	7		detail
+clipboard	8		detail
+clipboard	9		detail
+clipboard	13	clip	
+card file box	3	box	
+cigarette	1	filter	
+cigarette	2	cigarette	
+nazar amulet	1	amulet	
+nazar amulet	2		detail
+nazar amulet	4	iris	
+nazar amulet	5	pupil	
+identification card	1	card	
+identification card	4	stripe	
+identification card	5		detail
+identification card	6		detail
+identification card	7		detail
+identification card	8		detail
+telephone receiver	1	handset	
+telephone receiver	16		detail
+building construction	1	crane	
+hut	1	base	
+hut	2	wall	
+hut	4	door	
+hut	6	roof1	roof
+hut	7	roof2	roof
+hut	8	roof3	roof
+office building	1	building	
+office building	5	window1	window
+office building	6	window2	window
+office building	7	window3	window
+office building	8	window4	window
+office building	9	window5	window
+office building	10	window6	window
+office building	11	window7	window
+office building	12	window8	window
+office building	13	window9	window
+office building	15	left_door	door
+office building	16	right_door	door
+bank	10	left_column	column
+bank	12	right_column	column
+bank	13	door	
+bank	16	dollar_sign	
+school	1	building	
+school	5	window1	window
+school	6	window2	window
+school	8	window3	window
+school	9	window4	window
+school	14	clock	
+school	15	left_bush	bush
+school	16	right_bush	bush
+wedding	1	tower_roof	
+wedding	4	roof	
+wedding	8	wall	
+wedding	9	window	
+wedding	11	door	
+mount fuji	1	mountain	
+desert island	1	water	
+globe showing Americas	1	ocean	
+globe showing Americas	5	land1	land
+globe showing Americas	7	land2	land
+map of Japan	1	sea	
+night with stars	1	sky	
+night with stars	2	moon	
+night with stars	3	star	
+cityscape at dusk	1	sky	
+carousel horse	1	pole	
+barber pole	2	stripe1	stripe
+barber pole	3	stripe2	stripe
+barber pole	4	stripe3	stripe
+barber pole	7	top	
+barber pole	9		detail
+barber pole	15		detail
+mosque	4	right_minaret	minaret
+mosque	7	left_minaret	minaret
+mosque	13	door	
+mosque	16	crescent	
+kaaba	1	right_side	side
+kaaba	2	left_side	side
+kaaba	10	band	
+hibiscus	5	flower	
+hibiscus	6		detail
+hyacinth	3	stem	
+hyacinth	12	left_leaf	leaf
+deciduous tree	1	crown	
+deciduous tree	2		detail
+deciduous tree	5	trunk	
+herb	1	stem	
+herb	2	leaf3	leaf
+herb	3	leaf4	leaf
+herb	4	leaf2	leaf
+herb	5	leaf1	leaf
+herb	6	leaf5	leaf
+herb	7		detail
+herb	8		detail
+herb	9		detail
+herb	10		detail
+herb	11		detail
+leaf fluttering in wind	1	leaf1	leaf
+leaf fluttering in wind	2	leaf2	leaf
+leaf fluttering in wind	3		detail
+leaf fluttering in wind	4		detail
+leaf fluttering in wind	5		detail
+leaf fluttering in wind	6		detail
+leaf fluttering in wind	7		detail
+leaf fluttering in wind	8		detail
+leaf fluttering in wind	9		detail
+leaf fluttering in wind	10		detail
+leafless tree	4	trunk	
+satellite antenna	1	base	
+satellite antenna	7	dish	
+waning gibbous moon	1	moon	
+waning gibbous moon	12		detail
+new moon face	2	face	
+new moon face	3	right_eye	eye
+new moon face	4	left_eye	eye
+new moon face	5	mouth	
+new moon face	6		detail
+new moon face	7	nose	
+full moon face	1	face	
+full moon face	2	left_eye	eye
+full moon face	3	right_eye	eye
+full moon face	4	nose	
+full moon face	5	mouth	
+full moon face	6		detail
+full moon face	7	right_cheek	cheek
+full moon face	8	left_cheek	cheek
+milky way	2	ground	
+milky way	12	star2	star
+milky way	13	star3	star
+milky way	14	star5	star
+milky way	15	star1	star
+milky way	16	star4	star
+sun behind large cloud	1	sun	
+sun behind large cloud	2		detail
+sun behind large cloud	3	ray1	ray
+sun behind large cloud	4	ray2	ray
+sun behind large cloud	5	ray3	ray
+sun behind large cloud	6	ray4	ray
+sun behind large cloud	7	ray5	ray
+sun behind large cloud	8	cloud	
+sun behind large cloud	9		detail
+cloud with lightning	7	cloud	
+cloud with lightning	8		detail
+cyclone	1	spiral	
+umbrella on ground	1	sand	
+umbrella on ground	2		detail
+umbrella on ground	3	pole	
+umbrella on ground	4	umbrella	
+umbrella on ground	6	tip	
+comet	1	tail	
+softball	1	ball	
+softball	5		detail
+softball	6		detail
+softball	7		detail
+softball	8		detail
+softball	9		detail
+softball	10		detail
+softball	11		detail
+softball	12		detail
+softball	13		detail
+softball	14		detail
+softball	15		detail
+softball	16		detail
+rugby football	1	ball	
+rugby football	4		detail
+rugby football	5		detail
+rugby football	6		detail
+rugby football	7		detail
+rugby football	8		detail
+rugby football	9		detail
+rugby football	10		detail
+cricket game	3	bat	
+cricket game	4	handle	
+cricket game	9	ball	
+ping pong	3	handle	
+ping pong	4	paddle	
+ping pong	5	ball	
+running shirt	4	shirt	
+running shirt	5	stripe	
+running shirt	8		detail
+hourglass done	1	bottom	
+hourglass done	4	glass	
+hourglass done	6	top	
+hourglass done	7	sand	
+hourglass done	8		detail
+stopwatch	2	button	
+stopwatch	15	hand	
+hammer	1	handle	
+hammer	2	head	
+hammer and wrench	1	wrench	
+hammer and wrench	7	handle	
+hammer and wrench	8	head	
+wrench	1	wrench	
+wrench	3		detail
+wrench	4		detail
+wrench	5		detail
+clamp	5	frame	
+broken chain	1	link1	link
+broken chain	7	link2	link
+broken chain	13		detail
+broken chain	14		detail
+broken chain	15		detail
+broken chain	16		detail
+magnet	5	tip2	tip
+magnet	6	tip1	tip
+airplane departure	1	runway	
+airplane departure	2		detail
+airplane departure	3		detail
+airplane departure	4		detail
+airplane departure	5		detail
+airplane departure	6		detail
+airplane departure	7	tail	
+airplane departure	9	body	
+helicopter	1	skid	
+helicopter	2	rotor	
+helicopter	5	tail	
+helicopter	7	body	
+helicopter	8	window	
+satellite	1	left_panel	panel
+satellite	9	right_panel	panel
+high-speed train	9	window	
+station	2	platform	
+station	5	sign	
+station	6	pole	
+station	16	window	
+tram car	1	left_wheel	wheel
+tram car	2	right_wheel	wheel
+tram car	6	roof	
+tram car	10	window1	window
+tram car	11	window2	window
+minibus	1	body	
+minibus	5	right_wheel	wheel
+minibus	6		detail
+minibus	7	left_wheel	wheel
+minibus	8		detail
+minibus	9	tail_light	
+minibus	10	headlight	
+taxi	1	body	
+taxi	2	headlight	
+taxi	3	sign	
+taxi	5	front_window	window
+taxi	8	back_window	window
+taxi	9	tail_light	
+taxi	10		detail
+taxi	11		detail
+taxi	12		detail
+taxi	13	left_wheel	wheel
+taxi	14		detail
+taxi	15	right_wheel	wheel
+taxi	16		detail
+sport utility vehicle	1	spare_wheel	
+sport utility vehicle	4	left_wheel	wheel
+sport utility vehicle	5		detail
+sport utility vehicle	6	right_wheel	wheel
+sport utility vehicle	7		detail
+sport utility vehicle	9	tail_light	
+sport utility vehicle	13	front_window	window
+tractor	1	exhaust	
+tractor	6	window	
+tractor	8	roof	
+manual wheelchair	3	front_wheel	wheel
+skateboard	6	wheel2	wheel
+skateboard	8	wheel3	wheel
+skateboard	12	wheel1	wheel
+skateboard	16	deck	
+railway track	1	mountain1	mountain
+railway track	2	mountain2	mountain
+police car light	1	base	
+construction	1	left_leg	leg
+construction	2	right_leg	leg
+construction	4	top_board	board
+construction	5		detail
+construction	6		detail
+construction	7		detail
+construction	8		detail
+construction	9		detail
+construction	12		detail
+construction	13		detail
+construction	14		detail
+construction	15		detail
+construction	16		detail
+canoe	2	boat	
+canoe	8		detail
+motor boat	1	motor	
+motor boat	9	window1	window
+motor boat	10	window2	window
+pen	2	tip	
+pen	13	ring	

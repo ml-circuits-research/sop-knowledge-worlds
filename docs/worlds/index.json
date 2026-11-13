@@ -1,5 +1,5 @@
 {
- "version": "314c584ed1a6",
+ "version": "a5b96c624d98",
  "sopworld": "c7247e2",
  "worlds": [
   {
@@ -239,9 +239,15 @@
      "id": "k.objects/shards/noto-animal-amphibian-01",
      "path": "k.objects/shards/noto-animal-amphibian-01.sop",
      "wires": 130,
-     "bytes": 15957,
+     "bytes": 16118,
      "keys": [
-      "frog"
+      "frog",
+      "head",
+      "left_eye",
+      "left_nostril",
+      "mouth",
+      "right_eye",
+      "right_nostril"
      ],
      "sources": [
       "cldr-48",
@@ -254,12 +260,24 @@
      "id": "k.objects/shards/noto-animal-bird-01",
      "path": "k.objects/shards/noto-animal-bird-01.sop",
      "wires": 860,
-     "bytes": 103710,
+     "bytes": 104031,
      "keys": [
       "baby chick",
+      "beak",
+      "body",
       "eagle",
+      "eye",
       "feather",
+      "head",
+      "left_foot",
+      "left_leg",
+      "legs",
+      "quill",
+      "right_foot",
+      "right_leg",
+      "tail",
       "turkey",
+      "wattle",
       "wing"
      ],
      "sources": [
@@ -273,12 +291,27 @@
      "id": "k.objects/shards/noto-animal-bug-01",
      "path": "k.objects/shards/noto-animal-bug-01.sop",
      "wires": 825,
-     "bytes": 99956,
+     "bytes": 100428,
      "keys": [
       "ant",
+      "back_leg",
+      "body",
       "cricket",
+      "eye",
+      "front_leg",
+      "head",
+      "left_antenna",
+      "left_claw",
+      "left_eye",
+      "legs",
       "microbe",
-      "scorpion"
+      "mouth",
+      "nucleus",
+      "right_antenna",
+      "right_claw",
+      "right_eye",
+      "scorpion",
+      "tail"
      ],
      "sources": [
       "cldr-48",
@@ -291,15 +324,54 @@
      "id": "k.objects/shards/noto-animal-mammal-01",
      "path": "k.objects/shards/noto-animal-mammal-01.sop",
      "wires": 1525,
-     "bytes": 187038,
+     "bytes": 188378,
      "keys": [
+      "back_leg",
       "bison",
       "black cat",
+      "body",
       "cow",
       "dog face",
+      "ear",
+      "front_leg",
+      "head",
+      "hoof1",
+      "hoof2",
+      "hoof3",
+      "hoof4",
       "horse",
+      "left_ear",
+      "left_eye",
+      "left_horn",
+      "left_nostril",
+      "leg1",
+      "leg2",
+      "leg3",
       "leopard",
+      "mane",
+      "mouth",
+      "muzzle",
+      "nose",
+      "patch",
+      "patch1",
+      "patch2",
+      "patch3",
+      "patch4",
+      "patch5",
+      "patch6",
       "pig nose",
+      "right_ear",
+      "right_eye",
+      "right_horn",
+      "right_nostril",
+      "spot1",
+      "spot2",
+      "spot3",
+      "spot4",
+      "spot5",
+      "tail",
+      "tongue",
+      "udder",
       "wolf"
      ],
      "sources": [
@@ -313,15 +385,38 @@
      "id": "k.objects/shards/noto-animal-mammal-02",
      "path": "k.objects/shards/noto-animal-mammal-02.sop",
      "wires": 1343,
-     "bytes": 161498,
+     "bytes": 162633,
      "keys": [
+      "back_leg",
+      "body",
       "camel",
       "elephant",
+      "eye",
+      "front_leg",
+      "head",
       "hedgehog",
       "koala",
+      "left_ear",
+      "left_eye",
       "mouse face",
+      "mouth",
+      "muzzle",
+      "nose",
       "rabbit face",
-      "skunk"
+      "right_ear",
+      "right_eye",
+      "skunk",
+      "spines",
+      "stripe1",
+      "stripe2",
+      "teeth",
+      "tusk",
+      "whisker1",
+      "whisker2",
+      "whisker3",
+      "whisker4",
+      "whisker5",
+      "whisker6"
      ],
      "sources": [
       "cldr-48",
@@ -334,10 +429,22 @@
      "id": "k.objects/shards/noto-animal-marine-01",
      "path": "k.objects/shards/noto-animal-marine-01.sop",
      "wires": 783,
-     "bytes": 94710,
+     "bytes": 94957,
      "keys": [
+      "arms",
+      "belly",
+      "body",
+      "eye",
+      "fin",
+      "flipper",
+      "gill1",
+      "gill2",
+      "gill3",
       "jellyfish",
+      "left_eye",
       "orca",
+      "patch",
+      "right_eye",
       "shark",
       "squid"
      ],
@@ -352,10 +459,17 @@
      "id": "k.objects/shards/noto-animal-reptile-01",
      "path": "k.objects/shards/noto-animal-reptile-01.sop",
      "wires": 423,
-     "bytes": 51364,
+     "bytes": 51479,
      "keys": [
+      "arm",
+      "belly",
+      "body",
+      "left_eye",
+      "right_eye",
       "snake",
-      "t-rex"
+      "t-rex",
+      "tail",
+      "tongue"
      ],
      "sources": [
       "cldr-48",
@@ -368,9 +482,11 @@
      "id": "k.objects/shards/noto-arts-crafts-01",
      "path": "k.objects/shards/noto-arts-crafts-01.sop",
      "wires": 184,
-     "bytes": 22718,
+     "bytes": 22837,
      "keys": [
-      "thread"
+      "bottom",
+      "thread",
+      "top"
      ],
      "sources": [
       "cldr-48",
@@ -383,10 +499,15 @@
      "id": "k.objects/shards/noto-award-medal-01",
      "path": "k.objects/shards/noto-award-medal-01.sop",
      "wires": 302,
-     "bytes": 37130,
+     "bytes": 37227,
      "keys": [
       "2nd place medal",
-      "military medal"
+      "left_ribbon",
+      "medal",
+      "military medal",
+      "ribbon",
+      "right_ribbon",
+      "star"
      ],
      "sources": [
       "cldr-48",
@@ -399,12 +520,18 @@
      "id": "k.objects/shards/noto-book-paper-01",
      "path": "k.objects/shards/noto-book-paper-01.sop",
      "wires": 505,
-     "bytes": 61598,
+     "bytes": 61767,
      "keys": [
       "blue book",
+      "cover",
+      "hole",
       "label",
       "ledger",
-      "newspaper"
+      "newspaper",
+      "pages",
+      "picture",
+      "spine",
+      "string"
      ],
      "sources": [
       "cldr-48",
@@ -417,16 +544,32 @@
      "id": "k.objects/shards/noto-clothing-01",
      "path": "k.objects/shards/noto-clothing-01.sop",
      "wires": 1068,
-     "bytes": 129487,
+     "bytes": 129877,
      "keys": [
+      "bag1",
+      "bag2",
+      "belt",
       "briefs",
       "dress",
       "folding hand fan",
+      "frame",
+      "fringe1",
+      "fringe2",
       "glasses",
+      "handle",
+      "left_lens",
+      "right_lens",
       "running shoe",
       "safety vest",
       "scarf",
-      "shopping bags"
+      "shopping bags",
+      "skirt",
+      "sole",
+      "stripe1",
+      "stripe2",
+      "stripe3",
+      "stripe4",
+      "top"
      ],
      "sources": [
       "cldr-48",
@@ -439,11 +582,21 @@
      "id": "k.objects/shards/noto-clothing-02",
      "path": "k.objects/shards/noto-clothing-02.sop",
      "wires": 666,
-     "bytes": 80783,
+     "bytes": 81069,
      "keys": [
+      "band",
+      "bill",
       "billed cap",
+      "button",
       "crown",
+      "jewel1",
+      "jewel2",
+      "jewel3",
+      "jewel4",
+      "jewel5",
       "ring",
+      "sole",
+      "strap",
       "woman’s sandal"
      ],
      "sources": [
@@ -457,12 +610,29 @@
      "id": "k.objects/shards/noto-computer-01",
      "path": "k.objects/shards/noto-computer-01.sop",
      "wires": 580,
-     "bytes": 71120,
+     "bytes": 71458,
      "keys": [
       "abacus",
+      "battery",
+      "bead1",
+      "bead2",
+      "bead3",
+      "bead4",
+      "bead5",
+      "bead6",
+      "bead7",
+      "bead8",
+      "body",
+      "charge",
       "computer disk",
       "low battery",
-      "printer"
+      "paper",
+      "plus",
+      "printer",
+      "rod1",
+      "rod2",
+      "rod3",
+      "rod4"
      ],
      "sources": [
       "cldr-48",
@@ -475,10 +645,14 @@
      "id": "k.objects/shards/noto-dishware-01",
      "path": "k.objects/shards/noto-dishware-01.sop",
      "wires": 114,
-     "bytes": 14337,
+     "bytes": 14422,
      "keys": [
+      "blade",
       "chopsticks",
-      "kitchen knife"
+      "handle",
+      "kitchen knife",
+      "stick1",
+      "stick2"
      ],
      "sources": [
       "cldr-48",
@@ -491,13 +665,33 @@
      "id": "k.objects/shards/noto-drink-01",
      "path": "k.objects/shards/noto-drink-01.sop",
      "wires": 937,
-     "bytes": 114262,
+     "bytes": 114673,
      "keys": [
       "baby bottle",
+      "base",
+      "base1",
+      "base2",
+      "bottle",
       "bubble tea",
       "clinking glasses",
       "cocktail glass",
-      "teacup without handle"
+      "cup",
+      "drink1",
+      "drink2",
+      "glass",
+      "lid",
+      "milk",
+      "olive",
+      "pearl1",
+      "pearl2",
+      "pearl3",
+      "pearl4",
+      "pearl5",
+      "pearl6",
+      "straw",
+      "tea",
+      "teacup without handle",
+      "teat"
      ],
      "sources": [
       "cldr-48",
@@ -510,10 +704,25 @@
      "id": "k.objects/shards/noto-event-01",
      "path": "k.objects/shards/noto-event-01.sop",
      "wires": 939,
-     "bytes": 114156,
+     "bytes": 114491,
      "keys": [
+      "box",
       "firecracker",
+      "flower1",
+      "flower2",
+      "fuse",
       "jack-o-lantern",
+      "left_eye",
+      "paper1",
+      "paper2",
+      "paper3",
+      "paper4",
+      "ribbon1",
+      "ribbon2",
+      "right_eye",
+      "spark",
+      "stem",
+      "string",
       "tanabata tree",
       "wind chime",
       "wrapped gift"
@@ -529,11 +738,17 @@
      "id": "k.objects/shards/noto-food-asian-01",
      "path": "k.objects/shards/noto-food-asian-01.sop",
      "wires": 661,
-     "bytes": 79578,
+     "bytes": 79783,
      "keys": [
+      "base",
+      "bowl",
       "cooked rice",
+      "cookie",
       "fish cake with swirl",
       "fortune cookie",
+      "inside",
+      "paper",
+      "potato",
       "roasted sweet potato"
      ],
      "sources": [
@@ -547,12 +762,17 @@
      "id": "k.objects/shards/noto-food-fruit-01",
      "path": "k.objects/shards/noto-food-fruit-01.sop",
      "wires": 898,
-     "bytes": 108458,
+     "bytes": 108864,
      "keys": [
       "blueberries",
       "coconut",
+      "fruit",
+      "leaf",
+      "leaves",
       "pear",
       "pineapple",
+      "shell",
+      "stem",
       "tangerine"
      ],
      "sources": [
@@ -566,16 +786,32 @@
      "id": "k.objects/shards/noto-food-prepared-01",
      "path": "k.objects/shards/noto-food-prepared-01.sop",
      "wires": 1487,
-     "bytes": 179312,
+     "bytes": 179569,
      "keys": [
       "bacon",
+      "bowl",
       "bread",
+      "bun",
       "cheese wedge",
       "cooking",
+      "crust",
+      "egg_white",
       "green salad",
+      "hole1",
+      "hole2",
+      "hole3",
+      "hole4",
+      "hole5",
+      "hole6",
+      "hole7",
       "hot dog",
+      "mustard",
       "pretzel",
-      "tamale"
+      "sausage",
+      "side",
+      "slice",
+      "tamale",
+      "top"
      ],
      "sources": [
       "cldr-48",
@@ -588,9 +824,10 @@
      "id": "k.objects/shards/noto-food-prepared-02",
      "path": "k.objects/shards/noto-food-prepared-02.sop",
      "wires": 157,
-     "bytes": 19301,
+     "bytes": 19313,
      "keys": [
-      "canned food"
+      "canned food",
+      "label"
      ],
      "sources": [
       "cldr-48",
@@ -603,11 +840,16 @@
      "id": "k.objects/shards/noto-food-sweet-01",
      "path": "k.objects/shards/noto-food-sweet-01.sop",
      "wires": 618,
-     "bytes": 75032,
+     "bytes": 75089,
      "keys": [
+      "base",
+      "bowl",
       "candy",
+      "cherry",
+      "cream",
       "ice cream",
-      "shortcake"
+      "shortcake",
+      "stem"
      ],
      "sources": [
       "cldr-48",
@@ -620,12 +862,14 @@
      "id": "k.objects/shards/noto-food-vegetable-01",
      "path": "k.objects/shards/noto-food-vegetable-01.sop",
      "wires": 627,
-     "bytes": 75478,
+     "bytes": 75624,
      "keys": [
       "carrot",
       "cucumber",
       "ginger root",
-      "onion"
+      "leaves",
+      "onion",
+      "root"
      ],
      "sources": [
       "cldr-48",
@@ -638,12 +882,24 @@
      "id": "k.objects/shards/noto-game-01",
      "path": "k.objects/shards/noto-game-01.sop",
      "wires": 862,
-     "bytes": 103354,
+     "bytes": 103602,
      "keys": [
+      "ball",
+      "base",
+      "body",
+      "bow",
       "bullseye",
+      "button",
       "chess pawn",
+      "circle",
+      "head",
       "joystick",
+      "knob",
+      "left_ear",
+      "number",
       "pool 8 ball",
+      "right_ear",
+      "stick",
       "teddy bear"
      ],
      "sources": [
@@ -657,14 +913,33 @@
      "id": "k.objects/shards/noto-household-01",
      "path": "k.objects/shards/noto-household-01.sop",
      "wires": 782,
-     "bytes": 95189,
+     "bytes": 95570,
      "keys": [
       "bed",
+      "blanket",
+      "bottle",
+      "bottom_panel",
+      "cap",
       "door",
+      "drop",
+      "handle",
+      "head",
+      "headboard",
+      "hole",
+      "jet1",
+      "jet2",
+      "jet3",
+      "jet4",
+      "jet5",
+      "left_leg",
       "lotion bottle",
+      "pipe",
+      "pump",
+      "right_leg",
       "roll of paper",
       "shower",
-      "toothbrush"
+      "toothbrush",
+      "top_panel"
      ],
      "sources": [
       "cldr-48",
@@ -677,11 +952,17 @@
      "id": "k.objects/shards/noto-light-video-01",
      "path": "k.objects/shards/noto-light-video-01.sop",
      "wires": 582,
-     "bytes": 71236,
+     "bytes": 71364,
      "keys": [
+      "board",
+      "body",
+      "bowl",
       "candle",
       "clapper board",
       "diya lamp",
+      "flame",
+      "glow",
+      "lens",
       "video camera"
      ],
      "sources": [
@@ -695,8 +976,11 @@
      "id": "k.objects/shards/noto-lock-01",
      "path": "k.objects/shards/noto-lock-01.sop",
      "wires": 145,
-     "bytes": 17783,
+     "bytes": 17834,
      "keys": [
+      "body",
+      "keyhole",
+      "shackle",
       "unlocked"
      ],
      "sources": [
@@ -710,12 +994,19 @@
      "id": "k.objects/shards/noto-mail-01",
      "path": "k.objects/shards/noto-mail-01.sop",
      "wires": 348,
-     "bytes": 43281,
+     "bytes": 43360,
      "keys": [
+      "arrow",
+      "ballot",
       "ballot box with ballot",
+      "box",
       "closed mailbox with lowered flag",
       "envelope",
-      "outbox tray"
+      "flag",
+      "outbox tray",
+      "post",
+      "slot",
+      "tray"
      ],
      "sources": [
       "cldr-48",
@@ -728,9 +1019,10 @@
      "id": "k.objects/shards/noto-medical-01",
      "path": "k.objects/shards/noto-medical-01.sop",
      "wires": 83,
-     "bytes": 10383,
+     "bytes": 10397,
      "keys": [
-      "adhesive bandage"
+      "adhesive bandage",
+      "bandage"
      ],
      "sources": [
       "cldr-48",
@@ -743,9 +1035,13 @@
      "id": "k.objects/shards/noto-money-01",
      "path": "k.objects/shards/noto-money-01.sop",
      "wires": 318,
-     "bytes": 39102,
+     "bytes": 39200,
      "keys": [
+      "band",
+      "left_wing",
       "money with wings",
+      "right_wing",
+      "symbol",
       "yen banknote"
      ],
      "sources": [
@@ -759,10 +1055,12 @@
      "id": "k.objects/shards/noto-music-01",
      "path": "k.objects/shards/noto-music-01.sop",
      "wires": 144,
-     "bytes": 18084,
+     "bytes": 18107,
      "keys": [
       "control knobs",
-      "musical note"
+      "musical note",
+      "note",
+      "panel"
      ],
      "sources": [
       "cldr-48",
@@ -775,11 +1073,22 @@
      "id": "k.objects/shards/noto-musical-instrument-01",
      "path": "k.objects/shards/noto-musical-instrument-01.sop",
      "wires": 644,
-     "bytes": 78160,
+     "bytes": 78390,
      "keys": [
+      "bell",
+      "body",
       "drum",
       "guitar",
       "harp",
+      "head",
+      "key1",
+      "key2",
+      "key3",
+      "key4",
+      "left_stick",
+      "mouthpiece",
+      "neck",
+      "right_stick",
       "saxophone"
      ],
      "sources": [
@@ -793,14 +1102,23 @@
      "id": "k.objects/shards/noto-office-01",
      "path": "k.objects/shards/noto-office-01.sop",
      "wires": 1005,
-     "bytes": 122423,
+     "bytes": 122621,
      "keys": [
+      "box",
       "briefcase",
       "calendar",
+      "card",
       "card file box",
       "card index",
+      "case",
+      "clip",
       "clipboard",
-      "linked paperclips"
+      "digit1",
+      "digit2",
+      "handle",
+      "header",
+      "linked paperclips",
+      "page"
      ],
      "sources": [
       "cldr-48",
@@ -813,11 +1131,17 @@
      "id": "k.objects/shards/noto-other-object-01",
      "path": "k.objects/shards/noto-other-object-01.sop",
      "wires": 421,
-     "bytes": 51395,
+     "bytes": 51544,
      "keys": [
+      "amulet",
+      "card",
       "cigarette",
+      "filter",
       "identification card",
-      "nazar amulet"
+      "iris",
+      "nazar amulet",
+      "pupil",
+      "stripe"
      ],
      "sources": [
       "cldr-48",
@@ -830,8 +1154,9 @@
      "id": "k.objects/shards/noto-phone-01",
      "path": "k.objects/shards/noto-phone-01.sop",
      "wires": 194,
-     "bytes": 24139,
+     "bytes": 24165,
      "keys": [
+      "handset",
       "telephone receiver"
      ],
      "sources": [
@@ -845,14 +1170,42 @@
      "id": "k.objects/shards/noto-place-building-01",
      "path": "k.objects/shards/noto-place-building-01.sop",
      "wires": 933,
-     "bytes": 113990,
+     "bytes": 114726,
      "keys": [
       "bank",
+      "base",
+      "building",
       "building construction",
+      "clock",
+      "crane",
+      "dollar_sign",
+      "door",
       "hut",
+      "left_bush",
+      "left_column",
+      "left_door",
       "office building",
+      "right_bush",
+      "right_column",
+      "right_door",
+      "roof",
+      "roof1",
+      "roof2",
+      "roof3",
       "school",
-      "wedding"
+      "tower_roof",
+      "wall",
+      "wedding",
+      "window",
+      "window1",
+      "window2",
+      "window3",
+      "window4",
+      "window5",
+      "window6",
+      "window7",
+      "window8",
+      "window9"
      ],
      "sources": [
       "cldr-48",
@@ -865,10 +1218,12 @@
      "id": "k.objects/shards/noto-place-geographic-01",
      "path": "k.objects/shards/noto-place-geographic-01.sop",
      "wires": 429,
-     "bytes": 52310,
+     "bytes": 52337,
      "keys": [
       "desert island",
-      "mount fuji"
+      "mount fuji",
+      "mountain",
+      "water"
      ],
      "sources": [
       "cldr-48",
@@ -881,10 +1236,14 @@
      "id": "k.objects/shards/noto-place-map-01",
      "path": "k.objects/shards/noto-place-map-01.sop",
      "wires": 406,
-     "bytes": 49081,
+     "bytes": 49147,
      "keys": [
       "globe showing americas",
-      "map of japan"
+      "land1",
+      "land2",
+      "map of japan",
+      "ocean",
+      "sea"
      ],
      "sources": [
       "cldr-48",
@@ -897,12 +1256,20 @@
      "id": "k.objects/shards/noto-place-other-01",
      "path": "k.objects/shards/noto-place-other-01.sop",
      "wires": 501,
-     "bytes": 62749,
+     "bytes": 62914,
      "keys": [
       "barber pole",
       "carousel horse",
       "cityscape at dusk",
-      "night with stars"
+      "moon",
+      "night with stars",
+      "pole",
+      "sky",
+      "star",
+      "stripe1",
+      "stripe2",
+      "stripe3",
+      "top"
      ],
      "sources": [
       "cldr-48",
@@ -915,10 +1282,17 @@
      "id": "k.objects/shards/noto-place-religious-01",
      "path": "k.objects/shards/noto-place-religious-01.sop",
      "wires": 306,
-     "bytes": 37872,
+     "bytes": 38024,
      "keys": [
+      "band",
+      "crescent",
+      "door",
       "kaaba",
-      "mosque"
+      "left_minaret",
+      "left_side",
+      "mosque",
+      "right_minaret",
+      "right_side"
      ],
      "sources": [
       "cldr-48",
@@ -931,11 +1305,14 @@
      "id": "k.objects/shards/noto-plant-flower-01",
      "path": "k.objects/shards/noto-plant-flower-01.sop",
      "wires": 625,
-     "bytes": 75655,
+     "bytes": 75716,
      "keys": [
+      "flower",
       "hibiscus",
       "hyacinth",
-      "lotus"
+      "left_leaf",
+      "lotus",
+      "stem"
      ],
      "sources": [
       "cldr-48",
@@ -948,12 +1325,20 @@
      "id": "k.objects/shards/noto-plant-other-01",
      "path": "k.objects/shards/noto-plant-other-01.sop",
      "wires": 587,
-     "bytes": 70884,
+     "bytes": 71253,
      "keys": [
+      "crown",
       "deciduous tree",
       "herb",
       "leaf fluttering in wind",
-      "leafless tree"
+      "leaf1",
+      "leaf2",
+      "leaf3",
+      "leaf4",
+      "leaf5",
+      "leafless tree",
+      "stem",
+      "trunk"
      ],
      "sources": [
       "cldr-48",
@@ -966,8 +1351,10 @@
      "id": "k.objects/shards/noto-science-01",
      "path": "k.objects/shards/noto-science-01.sop",
      "wires": 317,
-     "bytes": 39101,
+     "bytes": 39123,
      "keys": [
+      "base",
+      "dish",
       "petri dish",
       "satellite antenna"
      ],
@@ -982,13 +1369,35 @@
      "id": "k.objects/shards/noto-sky-weather-01",
      "path": "k.objects/shards/noto-sky-weather-01.sop",
      "wires": 1135,
-     "bytes": 137617,
+     "bytes": 138188,
      "keys": [
+      "cloud",
       "cloud with lightning",
       "cyclone",
+      "face",
       "full moon face",
+      "ground",
+      "left_cheek",
+      "left_eye",
       "milky way",
+      "moon",
+      "mouth",
       "new moon face",
+      "nose",
+      "ray1",
+      "ray2",
+      "ray3",
+      "ray4",
+      "ray5",
+      "right_cheek",
+      "right_eye",
+      "spiral",
+      "star1",
+      "star2",
+      "star3",
+      "star4",
+      "star5",
+      "sun",
       "sun behind large cloud",
       "waning gibbous moon",
       "waxing crescent moon"
@@ -1004,9 +1413,14 @@
      "id": "k.objects/shards/noto-sky-weather-02",
      "path": "k.objects/shards/noto-sky-weather-02.sop",
      "wires": 189,
-     "bytes": 23175,
+     "bytes": 23245,
      "keys": [
       "comet",
+      "pole",
+      "sand",
+      "tail",
+      "tip",
+      "umbrella",
       "umbrella on ground"
      ],
      "sources": [
@@ -1036,14 +1450,20 @@
      "id": "k.objects/shards/noto-sport-01",
      "path": "k.objects/shards/noto-sport-01.sop",
      "wires": 1075,
-     "bytes": 130004,
+     "bytes": 130362,
      "keys": [
+      "ball",
+      "bat",
       "cricket game",
       "goal net",
+      "handle",
+      "paddle",
       "ping pong",
       "rugby football",
       "running shirt",
-      "softball"
+      "shirt",
+      "softball",
+      "stripe"
      ],
      "sources": [
       "cldr-48",
@@ -1056,10 +1476,16 @@
      "id": "k.objects/shards/noto-time-01",
      "path": "k.objects/shards/noto-time-01.sop",
      "wires": 193,
-     "bytes": 23893,
+     "bytes": 23974,
      "keys": [
+      "bottom",
+      "button",
+      "glass",
+      "hand",
       "hourglass done",
-      "stopwatch"
+      "sand",
+      "stopwatch",
+      "top"
      ],
      "sources": [
       "cldr-48",
@@ -1072,14 +1498,21 @@
      "id": "k.objects/shards/noto-tool-01",
      "path": "k.objects/shards/noto-tool-01.sop",
      "wires": 1026,
-     "bytes": 128017,
+     "bytes": 128271,
      "keys": [
       "boomerang",
       "broken chain",
       "clamp",
+      "frame",
       "hammer",
       "hammer and wrench",
+      "handle",
+      "head",
+      "link1",
+      "link2",
       "magnet",
+      "tip1",
+      "tip2",
       "wrench"
      ],
      "sources": [
@@ -1093,11 +1526,19 @@
      "id": "k.objects/shards/noto-transport-air-01",
      "path": "k.objects/shards/noto-transport-air-01.sop",
      "wires": 542,
-     "bytes": 66630,
+     "bytes": 66840,
      "keys": [
       "airplane departure",
+      "body",
       "helicopter",
-      "satellite"
+      "left_panel",
+      "right_panel",
+      "rotor",
+      "runway",
+      "satellite",
+      "skid",
+      "tail",
+      "window"
      ],
      "sources": [
       "cldr-48",
@@ -1110,16 +1551,33 @@
      "id": "k.objects/shards/noto-transport-ground-01",
      "path": "k.objects/shards/noto-transport-ground-01.sop",
      "wires": 1381,
-     "bytes": 168797,
+     "bytes": 169545,
      "keys": [
+      "back_window",
+      "body",
+      "exhaust",
+      "front_wheel",
+      "front_window",
+      "headlight",
       "high-speed train",
+      "left_wheel",
       "manual wheelchair",
       "minibus",
+      "platform",
+      "pole",
+      "right_wheel",
+      "roof",
+      "sign",
+      "spare_wheel",
       "sport utility vehicle",
       "station",
+      "tail_light",
       "taxi",
       "tractor",
-      "tram car"
+      "tram car",
+      "window",
+      "window1",
+      "window2"
      ],
      "sources": [
       "cldr-48",
@@ -1132,12 +1590,22 @@
      "id": "k.objects/shards/noto-transport-ground-02",
      "path": "k.objects/shards/noto-transport-ground-02.sop",
      "wires": 653,
-     "bytes": 79746,
+     "bytes": 80094,
      "keys": [
+      "base",
       "construction",
+      "deck",
+      "left_leg",
+      "mountain1",
+      "mountain2",
       "police car light",
       "railway track",
-      "skateboard"
+      "right_leg",
+      "skateboard",
+      "top_board",
+      "wheel1",
+      "wheel2",
+      "wheel3"
      ],
      "sources": [
       "cldr-48",
@@ -1150,10 +1618,14 @@
      "id": "k.objects/shards/noto-transport-water-01",
      "path": "k.objects/shards/noto-transport-water-01.sop",
      "wires": 274,
-     "bytes": 33787,
+     "bytes": 33873,
      "keys": [
+      "boat",
       "canoe",
-      "motor boat"
+      "motor",
+      "motor boat",
+      "window1",
+      "window2"
      ],
      "sources": [
       "cldr-48",
@@ -1166,9 +1638,11 @@
      "id": "k.objects/shards/noto-writing-01",
      "path": "k.objects/shards/noto-writing-01.sop",
      "wires": 178,
-     "bytes": 21834,
+     "bytes": 21854,
      "keys": [
-      "pen"
+      "pen",
+      "ring",
+      "tip"
      ],
      "sources": [
       "cldr-48",

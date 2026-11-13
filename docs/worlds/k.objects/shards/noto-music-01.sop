@@ -6,7 +6,7 @@
 
 # musical note
 @k.objects.u1f3b5 k.objects.object name="musical note" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f3b5.p1 k.objects.part of="musical note" name=part1 shape=polygon x=11.2 y=6.5 w=72.9 h=86.9 z=1 colour=grey rgb="#546E7A" core.source="noto-emoji 99701e0"
+@k.objects.u1f3b5.p1 k.objects.part of="musical note" name=note named=model shape=polygon x=11.2 y=6.5 w=72.9 h=86.9 z=1 colour=grey rgb="#546E7A" core.source="noto-emoji 99701e0"
 @k.objects.u1f3b5.p1.1 k.objects.point part=$k.objects.u1f3b5.p1 n=1 x=81.9 y=6.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b5.p1.2 k.objects.point part=$k.objects.u1f3b5.p1 n=2 x=29.2 y=14.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b5.p1.3 k.objects.point part=$k.objects.u1f3b5.p1 n=3 x=27.6 y=15 core.source="noto-emoji 99701e0"
@@ -50,7 +50,7 @@
 
 # control knobs
 @k.objects.u1f39b k.objects.object name="control knobs" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f39b.p1 k.objects.part of="control knobs" name=part1 shape=polygon x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=grey rgb="#BDBDBD" core.source="noto-emoji 99701e0"
+@k.objects.u1f39b.p1 k.objects.part of="control knobs" name=panel named=model shape=polygon x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=grey rgb="#BDBDBD" core.source="noto-emoji 99701e0"
 @k.objects.u1f39b.p1.1 k.objects.point part=$k.objects.u1f39b.p1 n=1 x=87.5 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f39b.p1.2 k.objects.point part=$k.objects.u1f39b.p1 n=2 x=12.5 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f39b.p1.3 k.objects.point part=$k.objects.u1f39b.p1 n=3 x=9.5 y=96.4 core.source="noto-emoji 99701e0"

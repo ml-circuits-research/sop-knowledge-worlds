@@ -6,7 +6,7 @@
 
 # telephone receiver
 @k.objects.u1f4de k.objects.object name="telephone receiver" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f4de.p1 k.objects.part of="telephone receiver" name=part1 shape=polygon x=3.2 y=5.4 w=92.1 h=90.7 z=1 colour=grey rgb="#424242" core.source="noto-emoji 99701e0"
+@k.objects.u1f4de.p1 k.objects.part of="telephone receiver" name=handset named=model shape=polygon x=3.2 y=5.4 w=92.1 h=90.7 z=1 colour=grey rgb="#424242" core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p1.1 k.objects.point part=$k.objects.u1f4de.p1 n=1 x=3.2 y=19.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p1.2 k.objects.point part=$k.objects.u1f4de.p1 n=2 x=3.3 y=26 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p1.3 k.objects.point part=$k.objects.u1f4de.p1 n=3 x=5 y=34.7 core.source="noto-emoji 99701e0"
@@ -182,7 +182,7 @@
 @k.objects.u1f4de.p15.5 k.objects.point part=$k.objects.u1f4de.p15 n=5 x=8.8 y=25.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p15.6 k.objects.point part=$k.objects.u1f4de.p15 n=6 x=6.7 y=22.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p15.7 k.objects.point part=$k.objects.u1f4de.p15 n=7 x=6.1 y=18.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4de.p16 k.objects.part of="telephone receiver" name=part16 shape=polygon x=23.9 y=37.5 w=31.5 h=33.9 z=16 colour=grey rgb="#8C8C8C" core.source="noto-emoji 99701e0"
+@k.objects.u1f4de.p16 k.objects.part of="telephone receiver" name=part16 kind=detail shape=polygon x=23.9 y=37.5 w=31.5 h=33.9 z=16 colour=grey rgb="#8C8C8C" core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p16.1 k.objects.point part=$k.objects.u1f4de.p16 n=1 x=25 y=37.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p16.2 k.objects.point part=$k.objects.u1f4de.p16 n=2 x=26.1 y=37.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p16.3 k.objects.point part=$k.objects.u1f4de.p16 n=3 x=26.9 y=38.2 core.source="noto-emoji 99701e0"

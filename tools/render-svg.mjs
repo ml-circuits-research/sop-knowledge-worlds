@@ -136,7 +136,7 @@ export function renderLabelled(world, object) {
 export const objectsOf = (world) => world.ofType('k.objects.object').map((o) => one(o, 'name')).sort();
 
 // Twelve imported objects whose labelled pictures are kept with the previews.
-export const LABEL_EXAMPLES = ['dog face', 'turtle', 'tulip', 'red apple', 'hamburger', 'teapot', 'school', 'locomotive', 'sailboat', 'guitar', 'key', 'alarm clock'];
+export const LABEL_EXAMPLES = ['dog face', 'frog', 'baby chick', 'mouse face', 'taxi', 'hut', 'saxophone', 'teddy bear', 'hot dog', 'hammer', 'office building', 'full moon face'];
 
 export function renderAll(world) {
   const files = {};

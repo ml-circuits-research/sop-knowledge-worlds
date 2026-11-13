@@ -182,3 +182,22 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - Tests: `tests/import.noto.test.mjs` (made-up SVG and list; primitives, holes, overlays, gradients, names from the
   TSV, determinism; disk shards = importer output when raw files are present), render test for every object.
   npm test 300 pass, 24 s.
+
+## R2.7 pilot (2026-11-13): names for the parts of the 200 pilot objects
+
+- `tools/render-svg.mjs --label <dir> [object …]`: the object at 320 px, every part outlined and numbered in draw
+  order (the number sits on a spot later parts do not cover, when there is one), names underneath once they exist.
+- Looked at all 200 objects on 34 contact sheets of 6 and wrote `sources/noto-emoji/part-names.tsv`
+  (`object, part number, name, kind`; 833 rows). The import script reads it; the build stays deterministic.
+- **611 of 2,429 parts got a name (25%), 222 more are marked `kind=detail`** (highlights, veins, stripes, text
+  lines) and keep `partN`; 181 of 200 objects have at least one row. Named parts carry `named=model`; repeated parts
+  have `left_`/`right_`/`front_`/`back_` or a number and a `kind` (`eye`, `ear`, `wheel`, `window`, `whisker`).
+- What kept parts unnamed (only-when-sure rule): drawings made of many overlapping layers of one thing (a part and
+  its shade or outline at the same place: which is "the body"?), facets (diamond, pretzel, bacon, tamale), and
+  numbers that sit on top of each other. Animals, faces, vehicles and buildings name well; food and tools less.
+- 12 labelled examples in `docs/worlds/k.objects/preview/label-*.svg` (dog face, frog, baby chick, mouse face, taxi,
+  hut, saxophone, teddy bear, hot dog, hammer, office building, full moon face), shown on the preview page.
+- Tests: `tests/k.objects.names.test.mjs` (every TSV row is a part that exists with that name, kind and
+  `named=model`; names unique inside an object; "parts of a dog face" answers head, eyes, ears, nose, mouth, tongue,
+  patch; "which objects have a wheel" now also finds taxi, minibus, skateboard). Vocabulary: part names are words
+  (`wheel` → the shards with wheels); 12,210 words. npm test 302 pass.
