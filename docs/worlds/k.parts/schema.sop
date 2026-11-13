@@ -50,3 +50,18 @@
 @k.parts.called.of core.slot of=k.parts.called key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.parts.called.part core.slot of=k.parts.called key=part id=true required=true kind=atom core.source="hand-core 1"
 @k.parts.called.also core.slot of=k.parts.called key=also many=true kind=atom kind=string core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.parts.word.key.whole.gloss core.word text=gloss means=k.parts.whole.gloss core.source="hand-core 1"
+@k.parts.word.key.whole.has core.word text=built text=inside means=k.parts.whole.has core.source="hand-core 1"
+@k.parts.word.key.whole.plain core.word text=plain text=has text=have means=k.parts.whole.plain core.source="hand-core 1"
+@k.parts.word.key.inherited core.word text=part text=parts means=k.parts.inherited core.source="hand-core 1"
+@k.parts.word.key.inherited.from core.word text=from means=k.parts.inherited.from core.source="hand-core 1"
+@k.parts.word.key.inherited.steps core.word text=steps means=k.parts.inherited.steps core.source="hand-core 1"
+@k.parts.word.key.inherited.has core.word text=has text=have text=with means=k.parts.inherited.has core.source="hand-core 1"
+@k.parts.word.key.inherited.plain core.word text=plain means=k.parts.inherited.plain core.source="hand-core 1"
+@k.parts.word.key.usual core.word text=part text=parts means=k.parts.usual core.source="hand-core 1"
+@k.parts.word.key.usual.has core.word text=has text=have text=with text=built text=inside means=k.parts.usual.has core.source="hand-core 1"
+@k.parts.word.key.usual.named core.word text=named means=k.parts.usual.named core.source="hand-core 1"
+@k.parts.word.key.called.part core.word text=part means=k.parts.called.part core.source="hand-core 1"
+@k.parts.word.key.called.also core.word text=also means=k.parts.called.also core.source="hand-core 1"

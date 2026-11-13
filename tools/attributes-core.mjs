@@ -29,6 +29,13 @@ export const ATTRIBUTES = [
   ['covering', 'material', 'what covers the body of an animal', 'visual'],
   ['sound', 'verb', 'the sound it makes', 'textual'],
   ['used_for', 'use', 'what people use it for', 'relational'],
+  // Round 11 item 1: the attributes that the scales of k.values order (longer, higher, farther, hotter, heavier),
+  // named as the scale, so that a comparative finds the keys that hold the numbers.
+  ['length', 'number', 'how long a thing is', 'numeric'],
+  ['height', 'number', 'how high or tall a thing is', 'numeric'],
+  ['distance', 'number', 'how far away a thing is', 'numeric'],
+  ['temperature', 'number', 'how hot or cold a thing is', 'numeric'],
+  ['weight', 'number', 'how heavy a thing is', 'numeric'],
 ];
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
@@ -46,6 +53,12 @@ export const FOUND = [
   ['eats', 'k.animals', 'k.animals.animal', 'eats', 'animals'],
   ['covering', 'k.animals', 'k.animals.animal', 'covering', 'animals'],
   ['sound', 'k.animals', 'k.animals.animal', 'sound', 'animals'],
+  ['size', 'k.geo', 'k.geo.country', 'area', 'countries: the area'], ['size', 'k.geo', 'k.geo.continent', 'area_about', 'continents: the area'], ['size', 'k.geo', 'k.geo.lake', 'area_about', 'lakes: the area'],
+  ['size', 'k.geo', 'k.geo.desert', 'area_about', 'deserts: the area'], ['size', 'k.geo', 'k.geo.sea', 'area_about', 'oceans and seas: the area'], ['size', 'k.space', 'k.space.body', 'diameter_about', 'bodies in space: the width'],
+  ['length', 'k.geo', 'k.geo.river', 'length_about', 'rivers'], ['length', 'k.body', 'k.body.part', 'length_about', 'a few parts of the body'],
+  ['height', 'k.geo', 'k.geo.mountain', 'elevation', 'mountains'], ['height', 'k.people', 'k.people.kind', 'height_about', 'kinds of person'],
+  ['distance', 'k.space', 'k.space.body', 'distance_about', 'bodies in space'], ['temperature', 'k.space', 'k.space.body', 'temperature_about', 'bodies in space'], ['temperature', 'k.body', 'k.body.part', 'temperature_about', 'the body'],
+  ['weight', 'k.body', 'k.body.part', 'weight_about', 'a few parts of the body'],
   ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'], ['used_for', 'k.commonsense', 'k.commonsense.thing', 'used_for', 'a few common things'],
 ];
 // The attributes a kind of thing usually has: [kind, attributes].

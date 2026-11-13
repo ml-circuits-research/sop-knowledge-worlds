@@ -31,5 +31,11 @@ widths, distances; `k.body` 91 parts with the parts of hand, eye, ear and mouth;
 are made of; `k.words` opposites, adjectives and adverbs of the common words and chains of kinds. `k.units.measure`
 says in which unit every number of these worlds is given. `node tools/ask-sample.mjs` asks a seeded sample of 100
 natural questions per domain and counts those that find a fact by lookup.
+Round 11 (the demo's real questions): `node tools/ask-real.mjs` answers the 292 questions of
+`sources/psys2-eval` (the Talk tab's failed questions and the demo's lookup set) from the catalog by the words of
+each question alone (the thing, the asked key, a value, a scale) and says for each one that finds nothing why:
+thing missing, key missing, key of another kind of thing, word not in the vocabulary. Every key of every named
+type now has a `core.word` (`tools/key-words.mjs` writes the block at the end of each schema), and `k.units.measure`
+says the unit of every number of every world.
 
 Agents working here start with [AGENTS.md](AGENTS.md).

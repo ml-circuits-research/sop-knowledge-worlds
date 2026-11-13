@@ -75,6 +75,7 @@ export function animalThings(animals = readAnimals(), taken = readPlaceSizeNames
 
 export function animalShards(animals = readAnimals(), thingOf = animalThings(animals).thingOf) {
   const files = {};
+  files['classes.sop'] = classShard();
   for (const [file, about, classes] of SHARDS) {
     const mine = animals.filter((a) => classes.includes(a.class));
     const facts = mine.map((a) => wire(`k.animals.animal.${seg(a.name)}`, 'k.animals.animal', [['name', a.name], ['class', a.class], ['legs', a.legs], ...a.covering.map((c) => ['covering', c]),
@@ -87,8 +88,20 @@ export function animalShards(animals = readAnimals(), thingOf = animalThings(ani
   return files;
 }
 
+// The classes of animals and what is plain of a whole class (Round 11 item 1: "how many legs do insects have"):
+// the walking legs and the covering that the table gives an animal of the class when its row says nothing.
+// Only where it holds for the whole class: a snake is a reptile without legs, a whale a mammal without fur.
+const SURE_LEGS = ['bird', 'fish', 'insect', 'arachnid'], SURE_COVER = ['bird', 'fish', 'reptile'];
+const PLURAL = { mammal: 'mammals', bird: 'birds', fish: 'fishes', reptile: 'reptiles', amphibian: 'amphibians', insect: 'insects', arachnid: 'arachnids', crustacean: 'crustaceans', mollusc: 'molluscs', worm: 'worms', myriapod: 'myriapods' };
+export function classShard() {
+  const facts = CLASSES.map((c) => wire(`k.animals.class.${c}`, 'k.animals.class', [['name', c], ['legs', SURE_LEGS.includes(c) ? LEGS[c] : undefined], ['covering', SURE_COVER.includes(c) ? COVER[c] : undefined], ['named', 'model']], SRC));
+  const words = CLASSES.filter((c) => PLURAL[c]).map((c) => wire(`k.animals.word.class.${c}`, 'core.word', [['text', PLURAL[c]], ['means', c], ['of', 'k.animals.class.name']], SRC));
+  return `${header({ id: 'k.animals/shards/classes', about: `the ${CLASSES.length} classes of animals of this world, and, only where it holds for the whole class, the number of walking legs (${SURE_LEGS.join(', ')}) and the covering (${SURE_COVER.join(', ')}).`,
+    sources: ['hand-core 1 (hand-written in this repository: tools/animals-core.mjs)'], license: 'CC0-1.0', script: 'tools/animals-core.mjs' })}\n${facts.join('\n')}\n\n# Words: plural forms.\n${words.join('\n')}\n`;
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const files = animalShards();
+  const files = { ...animalShards(), 'classes.sop': classShard() };
   writeShards(join(WORLDS_DIR, 'k.animals', 'shards'), files);
   console.log(Object.entries(files).map(([f, t]) => `${f}: ${t.split('\n').filter((l) => l.startsWith('@')).length} wires, ${Buffer.byteLength(t)} bytes`).join('\n'));
 }

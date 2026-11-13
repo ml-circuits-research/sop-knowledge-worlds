@@ -35,3 +35,11 @@
 @k.feelings.word.reply core.word text=reply text=say text=answer means=k.feelings.feeling.reply core.source="hand-core 1"
 @k.feelings.word.looks_like core.word text="looks like" text="same face" text=alike means=k.feelings.feeling.looks_like core.source="hand-core 1"
 @k.feelings.word.expression core.word text=expression text=face text=looks means=k.feelings.feeling.expression core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.feelings.word.key.feeling.tone core.word text=tone text=good text=bad means=k.feelings.feeling.tone core.source="hand-core 1"
+@k.feelings.word.key.feeling.mouth core.word text=mouth means=k.feelings.feeling.mouth core.source="hand-core 1"
+@k.feelings.word.key.feeling.eyebrows core.word text=eyebrows means=k.feelings.feeling.eyebrows core.source="hand-core 1"
+@k.feelings.word.key.feeling.eyes core.word text=eyes means=k.feelings.feeling.eyes core.source="hand-core 1"
+@k.feelings.word.key.feeling.cheeks core.word text=cheeks means=k.feelings.feeling.cheeks core.source="hand-core 1"
+@k.feelings.word.key.feeling.caused_by core.word text="caused by" means=k.feelings.feeling.caused_by core.source="hand-core 1"

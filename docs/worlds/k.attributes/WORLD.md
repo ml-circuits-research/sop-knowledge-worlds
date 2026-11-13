@@ -5,7 +5,7 @@ are found in the worlds, and the usual values of common things that no other wor
 
 ## What it knows
 
-- `k.attributes.attribute`: colour, material, size, place, kind, parts, legs, wheels, can, cannot, lives, eats,
+- `k.attributes.attribute` (Round 11: also length, height, distance, temperature, weight, named as the scales of `k.values`, with the keys that hold the numbers): colour, material, size, place, kind, parts, legs, wheels, can, cannot, lives, eats,
   covering, sound, used_for, with `holds` and `about`.
 - `k.attributes.found` (identity `attribute`, `type`, `key`): where the values are: the colour of a food is
   `k.food.food.colour`, of a common thing `k.attributes.thing.colour`, of each part of a drawing

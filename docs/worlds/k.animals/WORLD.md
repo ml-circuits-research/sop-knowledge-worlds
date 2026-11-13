@@ -27,6 +27,9 @@ written by a language model, only where sure, and carry `named=model`. The table
 
 ## Shards
 
+`classes` (Round 11): `k.animals.class`: the 13 classes, with what holds for the whole class only: `legs` (bird 2,
+fish 0, insect 6, arachnid 8) and `covering` (bird, fish, reptile); so "how many legs do insects have" is a lookup.
+
 `mammals` (124 animals), `birds` (65), `fish` (35), `reptiles-and-amphibians` (28), `invertebrates` (62): 314 animals,
 597 wires, 105,814 bytes. With a value: legs 284, covering 269, habitat 313, eats 283, young 261, sound 117, group 110.
 

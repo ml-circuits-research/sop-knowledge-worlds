@@ -42,3 +42,11 @@
 @k.colours.word.darker core.word text=darker text=deeper means=k.colours.colour.darker core.source="hand-core 1"
 @k.colours.word.complement core.word text=complement text=complementary text=opposite means=k.colours.colour.complement core.source="hand-core 1"
 @k.colours.word.mix core.word text=mix text=mixes text=mixed text=mixing text=make text=makes means=k.colours.mix core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.colours.word.key.colour.tone core.word text=tone means=k.colours.colour.tone core.source="hand-core 1"
+@k.colours.word.key.colour.temperature core.word text=temperature means=k.colours.colour.temperature core.source="hand-core 1"
+@k.colours.word.key.colour.kind core.word text=kind means=k.colours.colour.kind core.source="hand-core 1"
+@k.colours.word.key.colour.thing core.word text=thing means=k.colours.colour.thing core.source="hand-core 1"
+@k.colours.word.key.mix.b core.word text=b means=k.colours.mix.b core.source="hand-core 1"
+@k.colours.word.key.mix.gives core.word text=gives means=k.colours.mix.gives core.source="hand-core 1"

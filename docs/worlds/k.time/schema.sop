@@ -40,3 +40,15 @@
 @k.time.word.duration core.word text=long text=lasts text=duration means=k.time.duration core.source="hand-core 1"
 @k.time.word.days core.word text=days means=k.time.month.days core.source="hand-core 1"
 @k.time.word.weekend core.word text=weekend means=k.time.weekday.weekend core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.time.word.key.month.n core.word text=n means=k.time.month.n core.source="hand-core 1"
+@k.time.word.key.month.days core.word text=long means=k.time.month.days core.source="hand-core 1"
+@k.time.word.key.month.leap_days core.word text="leap days" means=k.time.month.leap_days core.source="hand-core 1"
+@k.time.word.key.month.season_north core.word text="season north" means=k.time.month.season_north core.source="hand-core 1"
+@k.time.word.key.month.season_south core.word text="season south" means=k.time.month.season_south core.source="hand-core 1"
+@k.time.word.key.weekday.n core.word text=n means=k.time.weekday.n core.source="hand-core 1"
+@k.time.word.key.season.n core.word text=n means=k.time.season.n core.source="hand-core 1"
+@k.time.word.key.season.after core.word text=after means=k.time.season.after core.source="hand-core 1"
+@k.time.word.key.duration.count core.word text=count text=many means=k.time.duration.count core.source="hand-core 1"
+@k.time.word.key.duration.unit core.word text=unit means=k.time.duration.unit core.source="hand-core 1"

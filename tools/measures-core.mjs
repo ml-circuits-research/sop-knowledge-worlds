@@ -25,7 +25,7 @@ export const MEASURES = {
     mountain: { elevation: { unit: 'metre' } },
     group: { as_of: { ordinal: true } },
   },
-  'k.animals': { animal: { legs: { counts: 'leg' } } },
+  'k.animals': { '*': { legs: { counts: 'leg' } } },
   'k.body': { part: { count: { counts: 'part of that name in an adult' }, child_count: { counts: 'part of that name in a young child' }, count_per_part: { counts: 'part of that name on one larger part' }, count_about: { counts: 'part of that name in an adult' },
     temperature_about: { unit: 'degree Celsius' }, amount_about: { unit: 'litre' }, length_about: { unit: 'metre' }, weight_about: { unit: 'kilogram' } } },
   'k.space': { body: { order: { ordinal: true }, size_rank: { ordinal: true }, moons: { counts: 'moon' }, moons_about: { counts: 'moon' }, orbit_years: { unit: 'year' }, orbit_days_about: { unit: 'day' },

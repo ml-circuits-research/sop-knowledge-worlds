@@ -2479,3 +2479,77 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   page), 9 new questions.
 - Numbers: catalog 22 worlds, 873 shards, vocab 22,755 words; 0 errors, 0 warnings. npm test 2,660 pass, 5 skipped, 0 fail (one run before the last change of the cited commit; then the psys2, catalog and question tests again: 396 pass).
 - After the rebase on the first worker's Q31 and Q32 (measures for every world; the size of an animal in `k.scenes`): my question is **Q33**; `k.values.shade` got its two measures; the import was run again. Catalog 22 worlds, 875 shards, vocab 23,215 words; npm test 2,675 pass, 5 skipped, 0 fail.
+
+## Round 11, item 1 (2026-11-13, first worker): the demo's real questions, answered from the catalog; gaps filled by cause
+
+- **The questions** (`sources/psys2-eval/real-questions.jsonl`, from PSys2 at `0bd36ec0`, SOURCE.md): 132 failed
+  questions of the Talk tab (`failures.jsonl`, rows with E-T1 or E-T3; 3 rows that are counts left out) and 160 of
+  the lookup set (80 drawing and 80 knowledge messages; half of each with an invented noun, where the right
+  outcome is "not found"; the 40 control rows are commands, not questions).
+- **`tools/ask-real.mjs`:** it finds the words of a question in the catalog and nothing more: a thing (a name or
+  a `core.word` of a fact), an asked key (a word a schema gives to a slot or a type), a value of a key of the
+  thing's type ("is a cake a fruit": `kind`), a comparative or a step of a `k.values` scale (the keys of the scale
+  come from `k.attributes.found`), two units of one quantity. No grammar; function words are a list in the tool.
+  A question finds a fact when a fact of the thing has the key; with no key it asks what the thing is (`gloss`,
+  `about`, else its kind). Words of the question the reading does not use make it "found in part"; a word the
+  catalog does not know at all makes it "not found".
+- **Before and after, same tool** (before = the catalog at 29b55f1):
+
+  | set | before | now |
+  | --- | --- | --- |
+  | Talk failures (132): found | 103 | 115 |
+  | found in part | 5 | 3 |
+  | not found: key missing | 15 | 7 |
+  | not found: key of another kind of thing | 2 | 2 |
+  | not found: word for the asked key not in vocabulary | 3 | 1 |
+  | not found: no thing named / needs the conversation | 4 | 4 |
+  | lookup set, knowledge, real nouns (40): found, answer as the demo expects | 27 | 35 |
+  | lookup set, drawings, real nouns (40): found | 0 (33 in part) | 28 (12 in part) |
+  | invented nouns (80): rightly not found | 77 | 77 |
+
+  The Talk failures were recorded against an older catalog: Round 9 had already filled most of them (103 found
+  before this item). The 12 drawing questions "in part" are "a diagram / a box shaped like a X": the drawing of X
+  is found, the words diagram and box are left over (they are the demo's own things). `snarf` is a word of
+  WordNet, so 3 of the 80 invented questions find something.
+- **Gaps filled, by cause:**
+  1. *The asked word is no key* (the largest cause): 241 of the 337 keys of the named types had no `core.word`.
+     `tools/key-words.mjs` writes a block at the end of every schema: for each key its own name as a word, and the
+     everyday words of a small table (can, do, find, where, made from, kind of, draw, sketch, show, define; 60
+     lines, each a way of asking, not a question). 439 word wires in 22 schemas; a test requires a word for every
+     key and the block to be what the tool gives.
+  2. *A scale with no key*: `k.attributes.found` now says where the numbers of the scales are: size (the area of
+     countries, continents, lakes, deserts, seas; the width of bodies in space), and five new attributes named as
+     the scales: length, height, distance, temperature, weight. "Is Brazil big", "the longest river", "the biggest
+     country" find the numbers.
+  3. *A fact about a whole class*: new type `k.animals.class` (shard `classes`, 13 classes): legs and covering only
+     where they hold for the whole class (bird 2, fish 0, insect 6, arachnid 8; feathers, scales).
+- **What remains, by cause** (not filled; none is a single question to patch):
+  - no definition: `kilogram`, `litre`, `noun`, `verb` and about 340 names of the hand cores (animals, foods,
+    units, wearables) have no sense in `k.words`, which keeps frequent single words; needs the WordNet import to
+    take the names of the cores (the second worker's tool; not done here);
+  - no number for a scale: speed (horse or cow), the size of parts of the body (hand or foot): Round 10 item 5;
+  - legs of things that are not animals (a table), of an octopus and a centipede (left out on purpose: arms, many);
+  - what rice is made of; what is inside an eye (`inside` says where a part is, not what is in it); eyes of a spider;
+  - "the healthiest food", "why do we sleep": no key anywhere; "the capital of the Sahara": rightly none.
+- **Read:** every answer of the 132 Talk questions and of the 80 knowledge questions, after each change of the
+  tool (the lists are long; I read them for wrong readings, not for wrong facts). **Known wrong or weak readings
+  that count as found:** "What has a roof and a door" (answers the parts of a roof); "How many fingers does a hand
+  have" (10, the count in the body, not 5); "Is the moon a planet" (answers what a moon orbits); "Which planet has
+  rings" lists all planets with a `rings` fact, true or false; a definition lists every sense (dolphin: the fish
+  first). **Not read:** the 80 drawing rows one by one (two patterns); the 439 word wires beyond the table.
+- **Sense clash** was asked for as a cause: the tool has no way to see one (the joins table is not there yet);
+  by reading, the definitions with several senses are the place where it shows.
+- **Judgement that is mine:** the list of function words; the ranking of readings (most words used, then an
+  asked key before a value before a search before "what is it"); the table of everyday words.
+- **What SOP Lang could not say:** that a `core.word` asks for a key (a word that means a slot) as opposed to
+  naming a value; both are `core.word` with `means`, told apart by whether `means` is a slot id.
+- COVERAGE.md and ASPECTS.md run again (the words of the schemas count as vocabulary: a few counts rise by 1 to 3).
+- Numbers: `k.animals` 7 shards; `classes` 24 wires, 2,934 bytes; `k.units` measures 136; `k.attributes`
+  attributes shard 20 attributes, 43 found facts. Catalog 22 worlds, 858 shards, vocab 22,706 words; 0 errors,
+  0 warnings. npm test 2,671 pass, 0 fail.
+- **After the rebase on R10.0 (second worker: 18 `psys2` shards):** schemas with a conflict were taken as theirs
+  and the key-word block written again (443 wires); measures, catalog and reports generated again, not merged.
+  The octopus now has `legs=8` (theirs), so the knowledge set finds 36 of 40. `tests/import.geo.test.mjs` failed
+  on main where the raw files are present (it compared the directory with the importer's files; the `psys2-`
+  shards are not the importer's): the comparison now leaves them out. Catalog 22 worlds, 876 shards, vocab 23,291
+  words; 0 errors, 0 warnings. npm test 2,684: 2,683 pass, 1 skipped, 0 fail.

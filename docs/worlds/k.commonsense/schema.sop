@@ -57,3 +57,16 @@
 @k.commonsense.word.at core.word text=where text=live text=lives means=k.commonsense.thing.at core.source="hand-core 1"
 @k.commonsense.word.used_for core.word text=use text=used means=k.commonsense.thing.used_for core.source="hand-core 1"
 @k.commonsense.word.made_of core.word text=made text=material means=k.commonsense.thing.made_of core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.commonsense.word.key.thing.at core.word text=at text=find text=found text=place means=k.commonsense.thing.at core.source="hand-core 1"
+@k.commonsense.word.key.thing.can core.word text=can text=able text=do means=k.commonsense.thing.can core.source="hand-core 1"
+@k.commonsense.word.key.thing.used_for core.word text="used for" means=k.commonsense.thing.used_for core.source="hand-core 1"
+@k.commonsense.word.key.thing.made_of core.word text="made of" means=k.commonsense.thing.made_of core.source="hand-core 1"
+@k.commonsense.word.key.thing.is_a core.word text="is a" means=k.commonsense.thing.is_a core.source="hand-core 1"
+@k.commonsense.word.key.thing.part_of core.word text="part of" means=k.commonsense.thing.part_of core.source="hand-core 1"
+@k.commonsense.word.key.thing.has core.word text=has means=k.commonsense.thing.has core.source="hand-core 1"
+@k.commonsense.word.key.thing.usually_count core.word text="usually count" means=k.commonsense.thing.usually_count core.source="hand-core 1"
+@k.commonsense.word.key.placed.thing core.word text=thing means=k.commonsense.placed.thing core.source="hand-core 1"
+@k.commonsense.word.key.placed.at core.word text=at means=k.commonsense.placed.at core.source="hand-core 1"
+@k.commonsense.word.key.placed.scene core.word text=scene means=k.commonsense.placed.scene core.source="hand-core 1"

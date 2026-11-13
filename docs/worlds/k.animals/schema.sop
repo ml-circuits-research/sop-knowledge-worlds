@@ -7,7 +7,7 @@
 # Round 11 (Q32, breaking for a host that read `size` here): the size class and the usual place of an animal are in
 # k.scenes.thing, as for every other thing; `thing` names that fact where its name is not the name of the animal.
 
-@k.animals core.module name=k.animals version=2 exports=animal core.source="hand-core 1"
+@k.animals core.module name=k.animals version=2 exports=animal exports=class core.source="hand-core 1"
 
 # An animal, named by its common English name (the same name in k.objects is its drawing, in k.commonsense its
 # everyday facts). `legs` counts walking legs (a bird has 2, a fish 0); `covering` is what covers its body; `sound`
@@ -36,6 +36,15 @@
 @k.animals.animal.group core.slot of=k.animals.animal key=group kind=atom core.source="hand-core 1"
 @k.animals.animal.named core.slot of=k.animals.animal key=named enum=model core.source="hand-core 1"
 
+# A class of animals and what every animal of the class has: the number of walking legs (an insect has 6, a
+# spider and the other arachnids 8, a bird 2, a fish 0) and the covering (feathers, scales). The key is left out
+# where animals of the class differ (a snake is a reptile without legs, a whale a mammal without fur).
+@k.animals.class core.type of=k.animals.class shared=true closed=true core.source="hand-core 1"
+@k.animals.class.name core.slot of=k.animals.class key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.animals.class.legs core.slot of=k.animals.class key=legs kind=integer min=0 core.source="hand-core 1"
+@k.animals.class.covering core.slot of=k.animals.class key=covering enum=fur enum=hair enum=wool enum=feathers enum=scales enum=skin enum=shell enum=spines core.source="hand-core 1"
+@k.animals.class.named core.slot of=k.animals.class key=named enum=model core.source="hand-core 1"
+
 # One fact never has the same verb in `can` and in `cannot`.
 @k.animals.both.can k.animals.animal name=?animal can=?verb
 @k.animals.both.cannot k.animals.animal name=?animal cannot=?verb
@@ -53,3 +62,14 @@
 @k.animals.word.baby core.word text=baby text=young means=k.animals.animal.baby core.source="hand-core 1"
 @k.animals.word.cannot core.word text=cannot text="can not" means=k.animals.animal.cannot core.source="hand-core 1"
 @k.animals.word.group core.word text=group text=herd text=flock text=pack means=k.animals.animal.group core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.animals.word.key.animal.baby core.word text=called means=k.animals.animal.baby core.source="hand-core 1"
+@k.animals.word.key.animal.can core.word text=can text=able text=do means=k.animals.animal.can core.source="hand-core 1"
+@k.animals.word.key.animal.cannot core.word text=unable means=k.animals.animal.cannot core.source="hand-core 1"
+@k.animals.word.key.animal.drawing core.word text=drawing means=k.animals.animal.drawing core.source="hand-core 1"
+@k.animals.word.key.animal.thing core.word text=thing means=k.animals.animal.thing core.source="hand-core 1"
+@k.animals.word.key.animal.named core.word text=named means=k.animals.animal.named core.source="hand-core 1"
+@k.animals.word.key.class.legs core.word text=legs means=k.animals.class.legs core.source="hand-core 1"
+@k.animals.word.key.class.covering core.word text=covering means=k.animals.class.covering core.source="hand-core 1"
+@k.animals.word.key.class.named core.word text=named means=k.animals.class.named core.source="hand-core 1"

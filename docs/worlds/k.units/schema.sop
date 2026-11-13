@@ -49,3 +49,18 @@
 @k.units.word.factor core.word text=convert text=conversion text=factor means=k.units.unit.factor core.source="hand-core 1"
 @k.units.word.quantity core.word text=quantity text=measures means=k.units.unit.quantity core.source="hand-core 1"
 @k.units.word.measure core.word text=measured text="in which unit" means=k.units.measure core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.units.word.key.quantity core.word text=quantity means=k.units.quantity core.source="hand-core 1"
+@k.units.word.key.quantity.base core.word text=base means=k.units.quantity.base core.source="hand-core 1"
+@k.units.word.key.unit.quantity core.word text=measure text=kind means=k.units.unit.quantity core.source="hand-core 1"
+@k.units.word.key.unit.offset core.word text=offset means=k.units.unit.offset core.source="hand-core 1"
+@k.units.word.key.unit.system core.word text=system means=k.units.unit.system core.source="hand-core 1"
+@k.units.word.key.measure.type core.word text=type means=k.units.measure.type core.source="hand-core 1"
+@k.units.word.key.measure.key core.word text=key means=k.units.measure.key core.source="hand-core 1"
+@k.units.word.key.measure.unit core.word text=unit means=k.units.measure.unit core.source="hand-core 1"
+@k.units.word.key.measure.counts core.word text=counts means=k.units.measure.counts core.source="hand-core 1"
+@k.units.word.key.measure.frame core.word text=frame means=k.units.measure.frame core.source="hand-core 1"
+@k.units.word.key.measure.plain core.word text=plain means=k.units.measure.plain core.source="hand-core 1"
+@k.units.word.key.measure.ordinal core.word text=ordinal means=k.units.measure.ordinal core.source="hand-core 1"
+@k.units.word.key.measure.approximate core.word text=approximate means=k.units.measure.approximate core.source="hand-core 1"

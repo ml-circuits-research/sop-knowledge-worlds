@@ -39,6 +39,7 @@
  ],
  "a": [
   "k.attributes/shards/attributes",
+  "k.layouts/schema.sop",
   "k.values/shards/numbers",
   "k.words/shards/a"
  ],
@@ -188,7 +189,9 @@
   "k.words/shards/ab"
  ],
  "able": [
+  "k.animals/schema.sop",
   "k.attributes/schema.sop",
+  "k.commonsense/schema.sop",
   "k.words/shards/ab"
  ],
  "aboard": [
@@ -207,10 +210,18 @@
   "k.words/shards/ab"
  ],
  "about": [
+  "k.actions/schema.sop",
+  "k.attributes/schema.sop",
+  "k.body/schema.sop",
+  "k.layouts/schema.sop",
+  "k.space/schema.sop",
+  "k.values/schema.sop",
+  "k.wearables/schema.sop",
   "k.words/shards/ab"
  ],
  "above": [
   "k.layouts/shards/layouts",
+  "k.objects/schema.sop",
   "k.words/shards/ab"
  ],
  "abraham": [
@@ -1097,7 +1108,11 @@
  ],
  "after": [
   "k.attributes/shards/aspects",
+  "k.time/schema.sop",
   "k.words/shards/af"
+ ],
+ "after particle": [
+  "k.actions/schema.sop"
  ],
  "afterlife": [
   "k.words/shards/af"
@@ -1136,6 +1151,9 @@
   "k.faces/schema.sop",
   "k.people/schema.sop",
   "k.words/shards/ag"
+ ],
+ "age years": [
+  "k.space/schema.sop"
  ],
  "age_years_about": [
   "k.units/shards/measures"
@@ -1725,6 +1743,7 @@
   "k.words/shards/al"
  ],
  "also": [
+  "k.parts/schema.sop",
   "k.words/shards/al"
  ],
  "altai mountains": [
@@ -1918,6 +1937,9 @@
  "amoeba": [
   "k.objects/shards/noto-animal-bug-02"
  ],
+ "among": [
+  "k.layouts/schema.sop"
+ ],
  "amor": [
   "k.words/shards/am"
  ],
@@ -1926,6 +1948,7 @@
  ],
  "amount": [
   "k.actions/shards/acts",
+  "k.body/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/am"
  ],
@@ -1934,6 +1957,12 @@
  ],
  "amp": [
   "k.words/shards/am"
+ ],
+ "amphibian": [
+  "k.animals/shards/classes"
+ ],
+ "amphibians": [
+  "k.animals/shards/classes"
  ],
  "amphora": [
   "k.attributes/shards/drawn-noto",
@@ -2719,6 +2748,9 @@
  "approve": [
   "k.words/shards/ap"
  ],
+ "approximate": [
+  "k.units/schema.sop"
+ ],
  "apps": [
   "k.objects/shards/openmoji-technology-01"
  ],
@@ -2804,6 +2836,12 @@
  ],
  "arabic": [
   "k.words/shards/ar"
+ ],
+ "arachnid": [
+  "k.animals/shards/classes"
+ ],
+ "arachnids": [
+  "k.animals/shards/classes"
  ],
  "arad": [
   "k.geo/shards/psys2-cities-europe"
@@ -2938,12 +2976,14 @@
  ],
  "area": [
   "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes",
   "k.geo/schema.sop",
   "k.units/shards/core",
   "k.units/shards/measures",
   "k.words/shards/ar"
  ],
  "area_about": [
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "arecibo": [
@@ -3327,6 +3367,9 @@
   "k.actions/shards/verbs-change",
   "k.words/shards/as"
  ],
+ "as of": [
+  "k.geo/schema.sop"
+ ],
  "as salt": [
   "k.geo/shards/asia"
  ],
@@ -3574,6 +3617,7 @@
  "at": [
   "k.actions/shards/verbs-pick",
   "k.attributes/shards/attributes",
+  "k.commonsense/schema.sop",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
   "k.words/shards/at"
@@ -3756,6 +3800,7 @@
   "k.words/shards/at"
  ],
  "attribute": [
+  "k.actions/schema.sop",
   "k.actions/shards/acts",
   "k.attributes/schema.sop"
  ],
@@ -4112,6 +4157,7 @@
   "k.words/shards/ax"
  ],
  "axis": [
+  "k.values/schema.sop",
   "k.words/shards/ax"
  ],
  "axle": [
@@ -4152,6 +4198,8 @@
   "k.geo/shards/asia"
  ],
  "b": [
+  "k.colours/schema.sop",
+  "k.layouts/schema.sop",
   "k.words/shards/b"
  ],
  "ba": [
@@ -4423,6 +4471,7 @@
   "k.geo/shards/psys2-cities-europe"
  ],
  "bad": [
+  "k.feelings/schema.sop",
   "k.words/shards/ba"
  ],
  "bade": [
@@ -5449,6 +5498,7 @@
   "k.objects/shards/sky",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.units/schema.sop",
   "k.words/shards/ba"
  ],
  "base1": [
@@ -5503,6 +5553,7 @@
   "k.feelings/shards/feelings"
  ],
  "basic": [
+  "k.values/schema.sop",
   "k.words/shards/ba"
  ],
  "basically": [
@@ -6024,6 +6075,7 @@
  ],
  "beard": [
   "k.attributes/shards/aspects",
+  "k.faces/schema.sop",
   "k.faces/shards/micah-beard",
   "k.faces/shards/micah-slots",
   "k.faces/shards/personas-beard",
@@ -6036,6 +6088,7 @@
   "k.layouts/shards/layouts",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-mammal-05",
+  "k.people/schema.sop",
   "k.words/shards/be"
  ],
  "bearded man": [
@@ -6512,10 +6565,14 @@
  "belongings": [
   "k.words/shards/be"
  ],
+ "belongs": [
+  "k.body/schema.sop"
+ ],
  "beloved": [
   "k.words/shards/be"
  ],
  "below": [
+  "k.objects/schema.sop",
   "k.words/shards/be"
  ],
  "belt": [
@@ -7281,6 +7338,7 @@
   "k.geo/shards/north-america"
  ],
  "bird": [
+  "k.animals/shards/classes",
   "k.attributes/shards/drawn-hand",
   "k.commonsense/shards/core",
   "k.commonsense/shards/psys2",
@@ -7316,6 +7374,7 @@
   "k.words/shards/bi"
  ],
  "birds": [
+  "k.animals/shards/classes",
   "k.commonsense/shards/core",
   "k.objects/shards/animals"
  ],
@@ -8279,6 +8338,9 @@
  "body in space": [
   "k.attributes/shards/aspects"
  ],
+ "body part": [
+  "k.wearables/schema.sop"
+ ],
  "bodyguard": [
   "k.words/shards/bo"
  ],
@@ -8740,7 +8802,8 @@
   "k.words/shards/bo"
  ],
  "botanically": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.food/schema.sop"
  ],
  "botev peak": [
   "k.geo/shards/europe"
@@ -10338,6 +10401,7 @@
  ],
  "built": [
   "k.actions/shards/actions-make-change",
+  "k.parts/schema.sop",
   "k.words/shards/bu"
  ],
  "bujumbura": [
@@ -11003,6 +11067,7 @@
  ],
  "by": [
   "k.actions/shards/verbs-change",
+  "k.attributes/schema.sop",
   "k.words/shards/by"
  ],
  "bye": [
@@ -11410,7 +11475,8 @@
   "k.geo/shards/south-america"
  ],
  "called": [
-  "k.actions/shards/actions-mind-talk"
+  "k.actions/shards/actions-mind-talk",
+  "k.animals/schema.sop"
  ],
  "caller": [
   "k.words/shards/ca"
@@ -11572,9 +11638,11 @@
   "k.words/shards/ca"
  ],
  "can": [
+  "k.animals/schema.sop",
   "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.commonsense/schema.sop",
   "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-meals-and-snacks-08",
   "k.objects/shards/mulberry-healthcare-grooming-items-02",
@@ -11929,6 +11997,9 @@
   "k.attributes/shards/aspects",
   "k.geo/schema.sop",
   "k.words/shards/ca"
+ ],
+ "capital of": [
+  "k.geo/schema.sop"
  ],
  "capital_of": [
   "k.attributes/shards/aspects"
@@ -12716,6 +12787,9 @@
   "k.feelings/schema.sop",
   "k.words/shards/ca"
  ],
+ "caused by": [
+  "k.feelings/schema.sop"
+ ],
  "causes": [
   "k.feelings/schema.sop"
  ],
@@ -12933,6 +13007,9 @@
   "k.parts/shards/psys2",
   "k.values/shards/directions",
   "k.words/shards/ce"
+ ],
+ "centered": [
+  "k.objects/schema.sop"
  ],
  "centigrade": [
   "k.units/shards/core"
@@ -13690,12 +13767,14 @@
  ],
  "cheeks": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/cutouts-cheeks",
   "k.faces/shards/cutouts-slots",
   "k.faces/shards/miniavs-cheeks",
   "k.faces/shards/miniavs-slots",
   "k.faces/shards/plain-cheeks",
   "k.faces/shards/slots",
+  "k.feelings/schema.sop",
   "k.layouts/shards/layouts",
   "k.parts/shards/psys2"
  ],
@@ -14073,6 +14152,9 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
   "k.words/shards/ch"
+ ],
+ "child count": [
+  "k.body/schema.sop"
  ],
  "child_count": [
   "k.units/shards/measures"
@@ -14961,6 +15043,7 @@
   "k.objects/shards/mulberry-work-and-school-stationery-03",
   "k.objects/shards/mulberry-work-and-school-stationery-04",
   "k.scenes/shards/scenes-indoors",
+  "k.units/shards/measures",
   "k.words/shards/cl"
  ],
  "class photo": [
@@ -15365,6 +15448,7 @@
   "k.words/shards/cl"
  ],
  "clothes": [
+  "k.faces/schema.sop",
   "k.faces/shards/colours",
   "k.faces/shards/toon-head-clothes",
   "k.faces/shards/toon-head-slots",
@@ -15553,6 +15637,9 @@
  ],
  "cm2": [
   "k.units/shards/core"
+ ],
+ "cnidarian": [
+  "k.animals/shards/classes"
  ],
  "co": [
   "k.words/shards/co-1"
@@ -15768,7 +15855,11 @@
  ],
  "code": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.words/shards/co-1"
+ ],
+ "code2": [
+  "k.geo/schema.sop"
  ],
  "cody": [
   "k.words/shards/co-1"
@@ -15884,6 +15975,7 @@
   "k.objects/shards/noto-sky-weather-04",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-sky-weather-06",
+  "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/co-1"
  ],
@@ -16027,6 +16119,7 @@
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
+  "k.space/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/co-1"
  ],
@@ -16066,6 +16159,7 @@
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
+  "k.space/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/co-1"
  ],
@@ -16075,6 +16169,9 @@
  ],
  "colour of the drawing": [
   "k.attributes/schema.sop"
+ ],
+ "colour why": [
+  "k.space/schema.sop"
  ],
  "coloured": [
   "k.attributes/schema.sop",
@@ -16117,6 +16214,7 @@
  ],
  "column": [
   "k.layouts/shards/layouts",
+  "k.values/schema.sop",
   "k.words/shards/co-1"
  ],
  "column_1": [
@@ -16234,6 +16332,9 @@
  ],
  "comes": [
   "k.actions/shards/actions-move",
+  "k.food/schema.sop"
+ ],
+ "comes from": [
   "k.food/schema.sop"
  ],
  "comes_from": [
@@ -16516,6 +16617,7 @@
   "k.words/shards/co-1"
  ],
  "complement": [
+  "k.actions/schema.sop",
   "k.colours/schema.sop"
  ],
  "complementary": [
@@ -17878,9 +17980,15 @@
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-ask",
   "k.attributes/shards/aspects",
+  "k.body/schema.sop",
+  "k.layouts/schema.sop",
   "k.scenes/schema.sop",
+  "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/co-2"
+ ],
+ "count per part": [
+  "k.body/schema.sop"
  ],
  "count_about": [
   "k.units/shards/measures"
@@ -17934,7 +18042,8 @@
   "k.words/shards/co-2"
  ],
  "counts": [
-  "k.actions/shards/actions-mind-talk"
+  "k.actions/shards/actions-mind-talk",
+  "k.units/schema.sop"
  ],
  "county": [
   "k.words/shards/co-2"
@@ -18060,7 +18169,9 @@
   "k.words/shards/co-2"
  ],
  "covers": [
-  "k.actions/shards/actions-make-change"
+  "k.actions/shards/actions-make-change",
+  "k.attributes/schema.sop",
+  "k.wearables/schema.sop"
  ],
  "covert": [
   "k.words/shards/co-2"
@@ -18853,7 +18964,11 @@
   "k.words/shards/cr"
  ],
  "crustacean": [
+  "k.animals/shards/classes",
   "k.objects/shards/openmoji-animals-nature-02"
+ ],
+ "crustaceans": [
+  "k.animals/shards/classes"
  ],
  "crutch": [
   "k.attributes/shards/drawn-noto",
@@ -18904,6 +19019,9 @@
  ],
  "crêt de la neige": [
   "k.geo/shards/europe"
+ ],
+ "css": [
+  "k.values/schema.sop"
  ],
  "ct": [
   "k.words/shards/ct"
@@ -20188,6 +20306,9 @@
  "day care": [
   "k.scenes/shards/scenes-indoors"
  ],
+ "day hours": [
+  "k.space/schema.sop"
+ ],
  "day_hours_about": [
   "k.units/shards/measures"
  ],
@@ -20575,6 +20696,7 @@
   "k.words/shards/de"
  ],
  "define": [
+  "k.words/schema.sop",
   "k.words/shards/de"
  ],
  "defining": [
@@ -20599,6 +20721,7 @@
  ],
  "degree": [
   "k.units/shards/core",
+  "k.values/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/de"
  ],
@@ -20898,6 +21021,7 @@
  ],
  "depth": [
   "k.objects/shards/land",
+  "k.values/schema.sop",
   "k.words/shards/de"
  ],
  "depths": [
@@ -21274,6 +21398,7 @@
   "k.words/shards/di"
  ],
  "diameter_about": [
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "diamond": [
@@ -21967,11 +22092,13 @@
   "k.words/shards/di"
  ],
  "distance": [
+  "k.attributes/shards/attributes",
   "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/di"
  ],
  "distance_about": [
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "distant": [
@@ -22182,8 +22309,12 @@
  ],
  "do": [
   "k.actions/schema.sop",
+  "k.animals/schema.sop",
+  "k.attributes/schema.sop",
   "k.body/schema.sop",
+  "k.commonsense/schema.sop",
   "k.objects/shards/noto-office-02",
+  "k.people/schema.sop",
   "k.scenes/schema.sop",
   "k.words/shards/do"
  ],
@@ -22286,7 +22417,8 @@
   "k.actions/schema.sop",
   "k.attributes/shards/aspects",
   "k.body/schema.sop",
-  "k.people/schema.sop"
+  "k.people/schema.sop",
+  "k.space/schema.sop"
  ],
  "dog": [
   "k.animals/shards/mammals",
@@ -22952,6 +23084,7 @@
  "draw": [
   "k.actions/shards/actions-make-change",
   "k.actions/shards/verbs-make",
+  "k.objects/schema.sop",
   "k.words/shards/dr"
  ],
  "drawer": [
@@ -22970,8 +23103,15 @@
  ],
  "drawing": [
   "k.actions/shards/actions-make-change",
+  "k.animals/schema.sop",
   "k.attributes/shards/aspects",
+  "k.body/schema.sop",
+  "k.food/schema.sop",
   "k.objects/schema.sop",
+  "k.people/schema.sop",
+  "k.scenes/schema.sop",
+  "k.space/schema.sop",
+  "k.wearables/schema.sop",
   "k.words/shards/dr"
  ],
  "drawing pin": [
@@ -22980,6 +23120,7 @@
   "k.scenes/shards/things-d"
  ],
  "drawings": [
+  "k.objects/schema.sop",
   "k.units/shards/measures"
  ],
  "drawn": [
@@ -22987,6 +23128,9 @@
   "k.words/shards/dr"
  ],
  "drawn colour": [
+  "k.attributes/schema.sop"
+ ],
+ "drawn shade": [
   "k.attributes/schema.sop"
  ],
  "drawn_colour": [
@@ -23840,6 +23984,7 @@
  "earrings": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/things-worn",
+  "k.faces/schema.sop",
   "k.faces/shards/micah-earrings",
   "k.faces/shards/micah-slots",
   "k.faces/shards/plain-earrings",
@@ -23851,6 +23996,7 @@
  ],
  "ears": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/micah-ears",
   "k.faces/shards/micah-slots",
   "k.faces/shards/plain-ears",
@@ -23911,6 +24057,7 @@
  ],
  "east": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.units/shards/measures",
   "k.values/shards/directions",
   "k.words/shards/ea"
@@ -23996,6 +24143,7 @@
   "k.animals/shards/mammals"
  ],
  "echinoderm": [
+  "k.animals/shards/classes",
   "k.parts/shards/s"
  ],
  "echo": [
@@ -24521,6 +24669,7 @@
  ],
  "elevation": [
   "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes",
   "k.geo/schema.sop",
   "k.objects/shards/openmoji-travel-places-02",
   "k.units/shards/measures"
@@ -25118,6 +25267,9 @@
   "k.values/shards/sets",
   "k.words/shards/eq"
  ],
+ "equal sides": [
+  "k.shapes/schema.sop"
+ ],
  "equality": [
   "k.words/shards/eq"
  ],
@@ -25595,6 +25747,7 @@
   "k.words/shards/ex"
  ],
  "example": [
+  "k.actions/schema.sop",
   "k.words/shards/ex"
  ],
  "exceed": [
@@ -25771,6 +25924,7 @@
  "explain": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-ask",
+  "k.words/schema.sop",
   "k.words/shards/ex"
  ],
  "explanation": [
@@ -25934,6 +26088,9 @@
   "k.parts/shards/psys2",
   "k.words/shards/ey"
  ],
+ "eye colour": [
+  "k.faces/schema.sop"
+ ],
  "eye drops": [
   "k.attributes/shards/drawn-mulberry",
   "k.objects/shards/mulberry-healthcare-medical-items-01",
@@ -25958,6 +26115,7 @@
  ],
  "eyebrows": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/cutouts-eyebrows",
   "k.faces/shards/cutouts-slots",
   "k.faces/shards/micah-eyebrows",
@@ -25966,6 +26124,7 @@
   "k.faces/shards/slots",
   "k.faces/shards/toon-head-eyebrows",
   "k.faces/shards/toon-head-slots",
+  "k.feelings/schema.sop",
   "k.layouts/shards/layouts"
  ],
  "eyeglasses": [
@@ -25991,6 +26150,7 @@
  ],
  "eyes": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/big-smile-eyes",
   "k.faces/shards/big-smile-slots",
   "k.faces/shards/colours",
@@ -26008,6 +26168,7 @@
   "k.faces/shards/slots",
   "k.faces/shards/toon-head-eyes",
   "k.faces/shards/toon-head-slots",
+  "k.feelings/schema.sop",
   "k.layouts/shards/layouts",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
@@ -26085,11 +26246,15 @@
   "k.objects/shards/openmoji-technology-01",
   "k.people/schema.sop",
   "k.shapes/schema.sop",
+  "k.wearables/schema.sop",
   "k.wearables/shards/places",
   "k.words/shards/fa"
  ],
  "face mask": [
   "k.wearables/shards/wearables"
+ ],
+ "face slot": [
+  "k.wearables/schema.sop"
  ],
  "faces": [
   "k.body/shards/core",
@@ -26750,6 +26915,7 @@
  ],
  "feel": [
   "k.actions/shards/actions-hands",
+  "k.faces/schema.sop",
   "k.feelings/schema.sop",
   "k.words/shards/fe"
  ],
@@ -27210,7 +27376,8 @@
   "k.scenes/shards/scenes-town"
  ],
  "fills": [
-  "k.actions/shards/actions-hands"
+  "k.actions/shards/actions-hands",
+  "k.scenes/schema.sop"
  ],
  "filly": [
   "k.objects/shards/stand-ins-hand",
@@ -27297,6 +27464,8 @@
  "find": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-ask",
+  "k.commonsense/schema.sop",
+  "k.scenes/schema.sop",
   "k.words/shards/fi"
  ],
  "find out": [
@@ -27613,6 +27782,7 @@
   "k.words/shards/fi"
  ],
  "fish": [
+  "k.animals/shards/classes",
   "k.attributes/shards/drawn-hand",
   "k.commonsense/shards/core",
   "k.layouts/shards/joins",
@@ -27680,6 +27850,7 @@
   "k.geo/shards/north-america"
  ],
  "fishes": [
+  "k.animals/shards/classes",
   "k.commonsense/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/noto-animal-marine-01",
@@ -28263,6 +28434,7 @@
  ],
  "flows": [
   "k.actions/shards/actions-body-social-nature",
+  "k.geo/schema.sop",
   "k.layouts/shards/layouts"
  ],
  "flu": [
@@ -28646,7 +28818,9 @@
  "for": [
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-pick",
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.body/schema.sop",
+  "k.wearables/schema.sop"
  ],
  "for sure": [
   "k.values/shards/psys2"
@@ -28844,6 +29018,7 @@
  ],
  "formal": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.objects/shards/noto-clothing-05",
   "k.words/shards/fo"
  ],
@@ -29027,6 +29202,8 @@
  ],
  "found": [
   "k.actions/shards/actions-mind-talk",
+  "k.commonsense/schema.sop",
+  "k.scenes/schema.sop",
   "k.words/shards/fi",
   "k.words/shards/fo"
  ],
@@ -29186,6 +29363,7 @@
   "k.objects/shards/vehicles",
   "k.parts/shards/f",
   "k.scenes/shards/things-f",
+  "k.units/schema.sop",
   "k.words/shards/fr"
  ],
  "framed": [
@@ -29553,7 +29731,8 @@
  ],
  "from": [
   "k.actions/shards/verbs-make",
-  "k.actions/shards/verbs-remove"
+  "k.actions/shards/verbs-remove",
+  "k.parts/schema.sop"
  ],
  "fromage frais": [
   "k.attributes/shards/drawn-mulberry",
@@ -31026,7 +31205,8 @@
   "k.words/shards/gi"
  ],
  "gives": [
-  "k.actions/shards/actions-hands"
+  "k.actions/shards/actions-hands",
+  "k.colours/schema.sop"
  ],
  "giving": [
   "k.actions/shards/actions-hands",
@@ -31102,6 +31282,7 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/things-worn",
+  "k.faces/schema.sop",
   "k.faces/shards/micah-glasses",
   "k.faces/shards/micah-slots",
   "k.faces/shards/miniavs-glasses",
@@ -31114,6 +31295,7 @@
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-drink-02",
+  "k.people/schema.sop",
   "k.scenes/shards/things-g",
   "k.wearables/shards/wearables",
   "k.words/shards/gl"
@@ -31216,7 +31398,9 @@
   "k.words/shards/gl"
  ],
  "gloss": [
+  "k.actions/schema.sop",
   "k.attributes/shards/aspects",
+  "k.parts/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/gl"
  ],
@@ -31545,6 +31729,7 @@
   "k.words/shards/go"
  ],
  "good": [
+  "k.feelings/schema.sop",
   "k.objects/shards/noto-event-02",
   "k.words/shards/go"
  ],
@@ -32550,6 +32735,7 @@
   "k.objects/shards/places-2",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.scenes/schema.sop",
   "k.words/shards/gr"
  ],
  "groundhog": [
@@ -32564,11 +32750,14 @@
   "k.words/shards/gr"
  ],
  "group": [
+  "k.actions/schema.sop",
   "k.actions/shards/acts",
   "k.actions/shards/verbs-group",
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
   "k.geo/schema.sop",
+  "k.people/schema.sop",
+  "k.space/schema.sop",
   "k.units/shards/measures",
   "k.values/shards/numbers",
   "k.words/shards/gr"
@@ -32612,6 +32801,9 @@
  ],
  "grows": [
   "k.actions/shards/actions-body-social-nature",
+  "k.food/schema.sop"
+ ],
+ "grows on": [
   "k.food/schema.sop"
  ],
  "grows_on": [
@@ -33086,7 +33278,11 @@
   "k.geo/shards/europe"
  ],
  "h": [
+  "k.faces/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
   "k.units/shards/measures",
+  "k.wearables/schema.sop",
   "k.words/shards/h"
  ],
  "ha": [
@@ -33165,11 +33361,17 @@
   "k.wearables/shards/places",
   "k.words/shards/ha"
  ],
+ "hair back": [
+  "k.faces/schema.sop"
+ ],
  "hair band": [
   "k.wearables/shards/wearables"
  ],
  "hair bow": [
   "k.wearables/shards/wearables"
+ ],
+ "hair colour": [
+  "k.faces/schema.sop"
  ],
  "hair conditioner": [
   "k.attributes/shards/drawn-mulberry",
@@ -33195,6 +33397,9 @@
   "k.attributes/shards/drawn-mulberry",
   "k.objects/shards/mulberry-healthcare-grooming-items-03",
   "k.scenes/shards/things-h"
+ ],
+ "hair front": [
+  "k.faces/schema.sop"
  ],
  "hair pick": [
   "k.attributes/shards/drawn-noto",
@@ -34007,8 +34212,10 @@
  "has": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.commonsense/schema.sop",
   "k.parts/schema.sop",
   "k.scenes/schema.sop",
+  "k.space/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/ha"
  ],
@@ -34034,6 +34241,7 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/things-worn",
+  "k.faces/schema.sop",
   "k.faces/shards/pixel-art-hat",
   "k.faces/shards/pixel-art-slots",
   "k.faces/shards/plain-hat",
@@ -34056,6 +34264,7 @@
   "k.parts/shards/b",
   "k.parts/shards/h",
   "k.parts/shards/s",
+  "k.people/schema.sop",
   "k.scenes/shards/things-h",
   "k.wearables/shards/wearables",
   "k.words/shards/ha"
@@ -34252,6 +34461,7 @@
  "head": [
   "k.actions/shards/actions-move",
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/big-smile-head",
   "k.faces/shards/big-smile-slots",
   "k.faces/shards/cutouts-head",
@@ -34667,6 +34877,7 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "height": [
+  "k.attributes/shards/attributes",
   "k.geo/schema.sop",
   "k.people/schema.sop",
   "k.values/shards/scales",
@@ -34674,6 +34885,7 @@
  ],
  "height_about": [
   "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "heights": [
@@ -35481,7 +35693,9 @@
   "k.words/shards/ho"
  ],
  "holds": [
+  "k.actions/schema.sop",
   "k.actions/shards/actions-hands",
+  "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
   "k.layouts/schema.sop",
   "k.people/schema.sop"
@@ -36089,6 +36303,7 @@
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-tool-01",
+  "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/ho"
  ],
@@ -37212,6 +37427,7 @@
  ],
  "in": [
   "k.attributes/shards/aspects",
+  "k.space/schema.sop",
   "k.words/shards/in"
  ],
  "in a circle": [
@@ -37381,6 +37597,7 @@
   "k.words/shards/in"
  ],
  "independent": [
+  "k.geo/schema.sop",
   "k.words/shards/in"
  ],
  "independent state of papua new guinea": [
@@ -37727,6 +37944,7 @@
   "k.words/shards/in"
  ],
  "insect": [
+  "k.animals/shards/classes",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
   "k.objects/shards/mulberry-animal-other-invertebrates-01",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
@@ -37735,6 +37953,9 @@
   "k.objects/shards/noto-animal-bug-02",
   "k.parts/shards/i",
   "k.words/shards/in"
+ ],
+ "insects": [
+  "k.animals/shards/classes"
  ],
  "insert": [
   "k.actions/shards/verbs-place",
@@ -37746,6 +37967,7 @@
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/layouts",
+  "k.objects/schema.sop",
   "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-02",
   "k.objects/shards/mulberry-food-kitchen-items-03",
@@ -37758,6 +37980,7 @@
   "k.objects/shards/noto-food-asian-01",
   "k.objects/shards/places",
   "k.objects/shards/things",
+  "k.parts/schema.sop",
   "k.words/shards/in"
  ],
  "inside a house": [
@@ -37813,6 +38036,9 @@
  ],
  "instance": [
   "k.words/shards/in"
+ ],
+ "instance of": [
+  "k.words/schema.sop"
  ],
  "instant": [
   "k.words/shards/in"
@@ -38287,7 +38513,14 @@
  ],
  "is": [
   "k.attributes/shards/aspects",
+  "k.people/schema.sop",
   "k.words/shards/be"
+ ],
+ "is a": [
+  "k.commonsense/schema.sop",
+  "k.people/schema.sop",
+  "k.shapes/schema.sop",
+  "k.words/schema.sop"
  ],
  "is_a": [
   "k.attributes/shards/aspects"
@@ -39708,6 +39941,9 @@
  "k.body": [
   "k.units/shards/measures"
  ],
+ "k.body.part": [
+  "k.attributes/shards/attributes"
+ ],
  "k.commonsense": [
   "k.units/shards/measures"
  ],
@@ -39727,17 +39963,32 @@
  "k.geo.city": [
   "k.attributes/shards/aspects"
  ],
+ "k.geo.continent": [
+  "k.attributes/shards/attributes"
+ ],
  "k.geo.country": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes"
+ ],
+ "k.geo.desert": [
+  "k.attributes/shards/attributes"
+ ],
+ "k.geo.lake": [
+  "k.attributes/shards/attributes"
  ],
  "k.geo.mountain": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes"
  ],
  "k.geo.range": [
   "k.attributes/shards/aspects"
  ],
  "k.geo.river": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes"
+ ],
+ "k.geo.sea": [
+  "k.attributes/shards/attributes"
  ],
  "k.layouts": [
   "k.units/shards/measures"
@@ -39781,7 +40032,8 @@
   "k.units/shards/measures"
  ],
  "k.people.kind": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes"
  ],
  "k.people.role": [
   "k.attributes/shards/aspects"
@@ -39800,7 +40052,8 @@
   "k.units/shards/measures"
  ],
  "k.space.body": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.attributes/shards/attributes"
  ],
  "k.time": [
   "k.units/shards/measures"
@@ -40303,6 +40556,7 @@
   "k.words/shards/ke"
  ],
  "key": [
+  "k.attributes/schema.sop",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/things-objects",
   "k.layouts/shards/joins",
@@ -40310,6 +40564,7 @@
   "k.objects/shards/noto-lock-01",
   "k.parts/shards/k",
   "k.scenes/shards/things-k",
+  "k.units/schema.sop",
   "k.words/shards/ke"
  ],
  "key1": [
@@ -40606,15 +40861,31 @@
  "kind": [
   "k.actions/shards/acts",
   "k.animals/schema.sop",
+  "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.body/schema.sop",
+  "k.colours/schema.sop",
+  "k.faces/schema.sop",
   "k.food/schema.sop",
+  "k.geo/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
+  "k.people/schema.sop",
+  "k.scenes/schema.sop",
+  "k.shapes/schema.sop",
+  "k.space/schema.sop",
+  "k.units/schema.sop",
   "k.units/shards/measures",
+  "k.values/schema.sop",
+  "k.wearables/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/ki"
  ],
  "kind of": [
-  "k.colours/schema.sop"
+  "k.colours/schema.sop",
+  "k.food/schema.sop",
+  "k.words/schema.sop"
  ],
  "kind of person": [
   "k.attributes/shards/aspects"
@@ -42104,6 +42375,9 @@
   "k.objects/shards/stand-ins-hand",
   "k.words/shards/la"
  ],
+ "landlocked": [
+  "k.geo/schema.sop"
+ ],
  "landlord": [
   "k.words/shards/la"
  ],
@@ -42330,6 +42604,7 @@
  ],
  "lat": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.units/shards/measures"
  ],
  "lata": [
@@ -42522,6 +42797,7 @@
   "k.words/shards/li"
  ],
  "layer": [
+  "k.wearables/schema.sop",
   "k.words/shards/la"
  ],
  "laying": [
@@ -42673,6 +42949,9 @@
  "leap": [
   "k.actions/shards/actions-move",
   "k.words/shards/le"
+ ],
+ "leap days": [
+  "k.time/schema.sop"
  ],
  "leap year": [
   "k.time/shards/calendar"
@@ -42828,6 +43107,9 @@
   "k.objects/shards/openmoji-technology-01",
   "k.values/shards/directions",
   "k.words/shards/le"
+ ],
+ "left of": [
+  "k.objects/schema.sop"
  ],
  "left side": [
   "k.values/shards/directions"
@@ -43754,6 +44036,8 @@
   "k.words/shards/le"
  ],
  "length": [
+  "k.attributes/shards/attributes",
+  "k.body/schema.sop",
   "k.faces/schema.sop",
   "k.geo/schema.sop",
   "k.units/shards/core",
@@ -43761,6 +44045,7 @@
   "k.words/shards/le"
  ],
  "length_about": [
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "lengthen": [
@@ -44277,6 +44562,7 @@
   "k.units/shards/core"
  ],
  "light years": [
+  "k.space/schema.sop",
   "k.units/shards/core"
  ],
  "light yellow": [
@@ -44382,7 +44668,8 @@
   "k.words/shards/li"
  ],
  "lightness": [
-  "k.units/shards/measures"
+  "k.units/shards/measures",
+  "k.values/schema.sop"
  ],
  "lightning": [
   "k.objects/shards/noto-sky-weather-03",
@@ -45170,6 +45457,7 @@
  ],
  "lon": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.units/shards/measures"
  ],
  "london": [
@@ -45283,7 +45571,8 @@
   "k.feelings/schema.sop"
  ],
  "looks like": [
-  "k.feelings/schema.sop"
+  "k.feelings/schema.sop",
+  "k.objects/schema.sop"
  ],
  "loon": [
   "k.animals/shards/birds",
@@ -46071,14 +46360,18 @@
   "k.attributes/schema.sop",
   "k.commonsense/schema.sop",
   "k.food/schema.sop",
+  "k.space/schema.sop",
   "k.words/shards/ma"
  ],
  "made from": [
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.food/schema.sop"
  ],
  "made of": [
   "k.attributes/schema.sop",
-  "k.food/schema.sop"
+  "k.commonsense/schema.sop",
+  "k.food/schema.sop",
+  "k.space/schema.sop"
  ],
  "made up of": [
   "k.parts/schema.sop"
@@ -46374,6 +46667,7 @@
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-make",
   "k.colours/schema.sop",
+  "k.food/schema.sop",
   "k.words/shards/ma"
  ],
  "make a copy of": [
@@ -46551,11 +46845,15 @@
   "k.words/shards/ma"
  ],
  "mammal": [
+  "k.animals/shards/classes",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
   "k.words/shards/ma"
+ ],
+ "mammals": [
+  "k.animals/shards/classes"
  ],
  "mammoth": [
   "k.attributes/shards/drawn-noto",
@@ -46743,6 +47041,7 @@
   "k.words/shards/ma"
  ],
  "manner": [
+  "k.values/schema.sop",
   "k.words/shards/ma"
  ],
  "manners": [
@@ -46865,7 +47164,10 @@
   "k.words/shards/ma"
  ],
  "many": [
+  "k.attributes/schema.sop",
   "k.body/schema.sop",
+  "k.shapes/schema.sop",
+  "k.time/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/ma"
  ],
@@ -49352,6 +49654,7 @@
  "mirror": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/things-objects",
+  "k.faces/schema.sop",
   "k.objects/shards/mulberry-building-furniture-03",
   "k.objects/shards/mulberry-healthcare-grooming-items-02",
   "k.objects/shards/mulberry-healthcare-grooming-items-05",
@@ -49790,6 +50093,12 @@
  ],
  "moles": [
   "k.animals/shards/mammals"
+ ],
+ "mollusc": [
+  "k.animals/shards/classes"
+ ],
+ "molluscs": [
+  "k.animals/shards/classes"
  ],
  "mollusk": [
   "k.objects/shards/noto-animal-marine-02"
@@ -51202,15 +51511,18 @@
  ],
  "moustache": [
   "k.attributes/shards/aspects",
+  "k.faces/schema.sop",
   "k.faces/shards/miniavs-moustache",
   "k.faces/shards/miniavs-slots",
   "k.faces/shards/plain-moustache",
   "k.faces/shards/slots",
   "k.layouts/shards/layouts",
+  "k.people/schema.sop",
   "k.words/shards/mo"
  ],
  "mouth": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/big-smile-mouth",
   "k.faces/shards/big-smile-slots",
   "k.faces/shards/cutouts-mouth",
@@ -51227,6 +51539,7 @@
   "k.faces/shards/slots",
   "k.faces/shards/toon-head-mouth",
   "k.faces/shards/toon-head-slots",
+  "k.feelings/schema.sop",
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
@@ -51249,6 +51562,9 @@
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/things-2",
   "k.words/shards/mo"
+ ],
+ "mouth alt": [
+  "k.faces/schema.sop"
  ],
  "mouthful": [
   "k.words/shards/mo"
@@ -51780,6 +52096,12 @@
  "mykolayiv": [
   "k.geo/shards/psys2-cities-europe"
  ],
+ "myriapod": [
+  "k.animals/shards/classes"
+ ],
+ "myriapods": [
+  "k.animals/shards/classes"
+ ],
  "myrtle": [
   "k.words/shards/my"
  ],
@@ -51831,7 +52153,11 @@
  ],
  "n": [
   "k.attributes/shards/aspects",
+  "k.faces/schema.sop",
+  "k.objects/schema.sop",
+  "k.time/schema.sop",
   "k.units/shards/measures",
+  "k.words/schema.sop",
   "k.words/shards/n"
  ],
  "n'djamena": [
@@ -51956,11 +52282,16 @@
   "k.geo/shards/asia"
  ],
  "name": [
+  "k.actions/schema.sop",
   "k.actions/shards/acts",
   "k.actions/shards/verbs-ask",
   "k.actions/shards/verbs-change",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.faces/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
+  "k.values/schema.sop",
   "k.words/shards/na"
  ],
  "name_board": [
@@ -51969,6 +52300,22 @@
  "name_plate": [
   "k.objects/shards/structures",
   "k.objects/shards/things"
+ ],
+ "named": [
+  "k.actions/schema.sop",
+  "k.animals/schema.sop",
+  "k.attributes/schema.sop",
+  "k.body/schema.sop",
+  "k.faces/schema.sop",
+  "k.food/schema.sop",
+  "k.geo/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
+  "k.parts/schema.sop",
+  "k.scenes/schema.sop",
+  "k.space/schema.sop",
+  "k.values/schema.sop",
+  "k.wearables/schema.sop"
  ],
  "namekagon": [
   "k.geo/shards/north-america"
@@ -52202,6 +52549,7 @@
   "k.words/shards/na"
  ],
  "natural": [
+  "k.faces/schema.sop",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/na"
  ],
@@ -52321,6 +52669,9 @@
   "k.values/shards/scales",
   "k.words/shards/ne"
  ],
+ "near opposite": [
+  "k.words/schema.sop"
+ ],
  "near_mountain": [
   "k.objects/shards/scenery"
  ],
@@ -52359,6 +52710,7 @@
  ],
  "neck": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/plain-neck",
   "k.faces/shards/slots",
   "k.layouts/shards/anchors-points",
@@ -52425,6 +52777,7 @@
   "k.words/shards/ne"
  ],
  "needed": [
+  "k.actions/schema.sop",
   "k.words/shards/ne"
  ],
  "needier": [
@@ -53241,6 +53594,7 @@
  ],
  "north": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.units/shards/measures",
   "k.values/shards/directions",
   "k.words/shards/no"
@@ -53326,6 +53680,7 @@
  ],
  "nose": [
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/cutouts-nose",
   "k.faces/shards/cutouts-slots",
   "k.faces/shards/micah-nose",
@@ -54113,6 +54468,7 @@
   "k.words/shards/ob"
  ],
  "object": [
+  "k.actions/schema.sop",
   "k.objects/schema.sop",
   "k.words/shards/ob"
  ],
@@ -54336,7 +54692,8 @@
   "k.body/shards/core"
  ],
  "of": [
-  "k.actions/shards/verbs-change"
+  "k.actions/shards/verbs-change",
+  "k.faces/schema.sop"
  ],
  "of course": [
   "k.values/shards/psys2"
@@ -54408,6 +54765,7 @@
   "k.words/shards/of"
  ],
  "offset": [
+  "k.units/schema.sop",
   "k.units/shards/measures"
  ],
  "offspring": [
@@ -54513,6 +54871,7 @@
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-office-02",
   "k.people/schema.sop",
+  "k.space/schema.sop",
   "k.words/shards/ol"
  ],
  "old key": [
@@ -54662,7 +55021,10 @@
  ],
  "on": [
   "k.attributes/shards/aspects",
+  "k.layouts/schema.sop",
   "k.layouts/shards/layouts",
+  "k.objects/schema.sop",
+  "k.scenes/schema.sop",
   "k.wearables/schema.sop",
   "k.words/shards/on"
  ],
@@ -54742,6 +55104,9 @@
  ],
  "one after the other": [
   "k.layouts/shards/layouts"
+ ],
+ "one eye": [
+  "k.faces/schema.sop"
  ],
  "one half": [
   "k.values/shards/numbers"
@@ -54885,7 +55250,9 @@
   "k.words/shards/op"
  ],
  "opens": [
-  "k.actions/shards/actions-hands"
+  "k.actions/shards/actions-hands",
+  "k.faces/schema.sop",
+  "k.objects/schema.sop"
  ],
  "opera": [
   "k.scenes/shards/scenes-indoors",
@@ -54935,6 +55302,7 @@
   "k.actions/schema.sop",
   "k.colours/schema.sop",
   "k.feelings/schema.sop",
+  "k.values/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/op"
  ],
@@ -54976,6 +55344,10 @@
  ],
  "option": [
   "k.words/shards/op"
+ ],
+ "optional": [
+  "k.faces/schema.sop",
+  "k.layouts/schema.sop"
  ],
  "or": [
   "k.words/shards/or"
@@ -55058,6 +55430,12 @@
   "k.space/schema.sop",
   "k.words/shards/or"
  ],
+ "orbit days": [
+  "k.space/schema.sop"
+ ],
+ "orbit years": [
+  "k.space/schema.sop"
+ ],
  "orbit_days_about": [
   "k.units/shards/measures"
  ],
@@ -55114,6 +55492,7 @@
   "k.words/shards/or"
  ],
  "ordered": [
+  "k.layouts/schema.sop",
   "k.words/shards/or"
  ],
  "ordering": [
@@ -55123,6 +55502,7 @@
   "k.words/shards/or"
  ],
  "ordinal": [
+  "k.units/schema.sop",
   "k.values/shards/numbers"
  ],
  "ordinance": [
@@ -55159,6 +55539,7 @@
   "k.values/shards/psys2"
  ],
  "organ": [
+  "k.body/schema.sop",
   "k.objects/shards/openmoji-healthcare-02",
   "k.words/shards/or"
  ],
@@ -56004,7 +56385,9 @@
  ],
  "pair": [
   "k.actions/shards/verbs-group",
+  "k.layouts/schema.sop",
   "k.values/shards/numbers",
+  "k.wearables/schema.sop",
   "k.words/shards/pa"
  ],
  "paisley": [
@@ -56665,11 +57048,20 @@
   "k.actions/shards/acts",
   "k.attributes/shards/attributes",
   "k.body/schema.sop",
+  "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
   "k.words/shards/pa"
+ ],
+ "part of": [
+  "k.body/schema.sop",
+  "k.commonsense/schema.sop",
+  "k.words/schema.sop"
+ ],
+ "part of speech": [
+  "k.words/schema.sop"
  ],
  "part_of": [
   "k.attributes/shards/aspects",
@@ -58429,6 +58821,9 @@
  "pickles": [
   "k.food/shards/dishes"
  ],
+ "picks": [
+  "k.values/schema.sop"
+ ],
  "picks up": [
   "k.actions/shards/actions-hands"
  ],
@@ -59473,6 +59868,7 @@
   "k.actions/shards/verbs-place",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.commonsense/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/shards/noto-award-medal-01",
   "k.scenes/schema.sop",
@@ -59498,6 +59894,8 @@
  ],
  "plain": [
   "k.faces/shards/slots",
+  "k.parts/schema.sop",
+  "k.units/schema.sop",
   "k.words/shards/pl"
  ],
  "plaintiff": [
@@ -60091,6 +60489,10 @@
   "k.objects/shards/things-2",
   "k.shapes/shards/shapes"
  ],
+ "pointing": [
+  "k.faces/schema.sop",
+  "k.objects/schema.sop"
+ ],
  "points": [
   "k.shapes/schema.sop",
   "k.values/shards/shapes"
@@ -60626,6 +61028,9 @@
  ],
  "portuguese republic": [
   "k.geo/shards/europe"
+ ],
+ "pos": [
+  "k.words/schema.sop"
  ],
  "pose": [
   "k.words/shards/po"
@@ -63188,6 +63593,7 @@
  "rank": [
   "k.actions/shards/verbs-group",
   "k.units/shards/measures",
+  "k.values/schema.sop",
   "k.words/shards/ra"
  ],
  "ranking": [
@@ -63656,6 +64062,7 @@
  ],
  "recipe": [
   "k.attributes/shards/drawn-mulberry",
+  "k.food/schema.sop",
   "k.objects/shards/mulberry-food-meals-and-snacks-05",
   "k.scenes/shards/things-r",
   "k.words/shards/re"
@@ -64018,6 +64425,7 @@
  ],
  "region": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.words/shards/re"
  ],
  "registan desert": [
@@ -64116,7 +64524,8 @@
   "k.words/shards/re"
  ],
  "rel": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.layouts/schema.sop"
  ],
  "relapse": [
   "k.words/shards/re"
@@ -64423,9 +64832,13 @@
   "k.words/shards/re"
  ],
  "reptile": [
+  "k.animals/shards/classes",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/re"
+ ],
+ "reptiles": [
+  "k.animals/shards/classes"
  ],
  "republic": [
   "k.words/shards/re"
@@ -65085,6 +65498,11 @@
  "reşiţa": [
   "k.geo/shards/psys2-cities-europe"
  ],
+ "rgb": [
+  "k.faces/schema.sop",
+  "k.objects/schema.sop",
+  "k.values/schema.sop"
+ ],
  "rhein": [
   "k.geo/shards/europe"
  ],
@@ -65366,6 +65784,9 @@
  ],
  "right angles": [
   "k.units/shards/core"
+ ],
+ "right of": [
+  "k.objects/schema.sop"
  ],
  "right side": [
   "k.values/shards/directions"
@@ -67109,6 +67530,7 @@
   "k.actions/shards/actions-move",
   "k.layouts/shards/layouts",
   "k.objects/shards/structures",
+  "k.values/schema.sop",
   "k.words/shards/ro"
  ],
  "row_line_1": [
@@ -68515,7 +68937,8 @@
   "k.geo/shards/psys2-cities-europe"
  ],
  "saturation": [
-  "k.units/shards/measures"
+  "k.units/shards/measures",
+  "k.values/schema.sop"
  ],
  "saturday": [
   "k.time/shards/calendar",
@@ -68905,6 +69328,7 @@
   "k.words/shards/sc"
  ],
  "scene": [
+  "k.commonsense/schema.sop",
   "k.scenes/schema.sop",
   "k.words/shards/sc"
  ],
@@ -69501,6 +69925,12 @@
   "k.units/shards/measures",
   "k.words/shards/se"
  ],
+ "season north": [
+  "k.time/schema.sop"
+ ],
+ "season south": [
+  "k.time/schema.sop"
+ ],
  "season_north": [
   "k.attributes/shards/aspects"
  ],
@@ -69942,6 +70372,7 @@
   "k.words/shards/se"
  ],
  "sense": [
+  "k.actions/schema.sop",
   "k.body/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
@@ -69988,6 +70419,9 @@
  ],
  "sep": [
   "k.time/shards/calendar"
+ ],
+ "separable": [
+  "k.actions/schema.sop"
  ],
  "separate": [
   "k.actions/shards/actions-make-change",
@@ -70349,6 +70783,7 @@
  ],
  "sex": [
   "k.attributes/shards/aspects",
+  "k.people/schema.sop",
   "k.words/shards/se"
  ],
  "sexier": [
@@ -70408,6 +70843,7 @@
   "k.objects/shards/places-2"
  ],
  "shade": [
+  "k.faces/schema.sop",
   "k.objects/shards/mulberry-building-furniture-04",
   "k.objects/shards/mulberry-electrical-general-01",
   "k.objects/shards/noto-household-01",
@@ -70565,6 +71001,9 @@
  ],
  "shaped": [
   "k.shapes/schema.sop"
+ ],
+ "shaped like": [
+  "k.objects/schema.sop"
  ],
  "shapes": [
   "k.shapes/schema.sop",
@@ -71252,6 +71691,7 @@
  "shoulders": [
   "k.attributes/shards/aspects",
   "k.body/shards/core",
+  "k.faces/schema.sop",
   "k.faces/shards/micah-shoulders",
   "k.faces/shards/micah-slots",
   "k.faces/shards/miniavs-shoulders",
@@ -71265,7 +71705,8 @@
   "k.faces/shards/toon-head-shoulders",
   "k.faces/shards/toon-head-slots",
   "k.layouts/shards/layouts",
-  "k.objects/shards/things-2"
+  "k.objects/shards/things-2",
+  "k.people/schema.sop"
  ],
  "shout": [
   "k.actions/shards/actions-mind-talk",
@@ -71313,6 +71754,7 @@
  "show": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-change",
+  "k.objects/schema.sop",
   "k.words/shards/sh"
  ],
  "show the way": [
@@ -71358,6 +71800,9 @@
  ],
  "shown": [
   "k.words/shards/sh"
+ ],
+ "shown in": [
+  "k.attributes/schema.sop"
  ],
  "shows": [
   "k.actions/shards/actions-mind-talk"
@@ -71548,6 +71993,7 @@
   "k.words/shards/si"
  ],
  "side": [
+  "k.layouts/schema.sop",
   "k.objects/shards/food-2",
   "k.objects/shards/home",
   "k.objects/shards/mulberry-building-furniture-02",
@@ -71562,6 +72008,7 @@
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/structures",
   "k.objects/shards/things-2",
+  "k.scenes/schema.sop",
   "k.shapes/schema.sop",
   "k.words/shards/si"
  ],
@@ -72159,10 +72606,14 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.faces/schema.sop",
+  "k.geo/schema.sop",
   "k.scenes/schema.sop",
   "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/si"
+ ],
+ "size rank": [
+  "k.space/schema.sop"
  ],
  "size up": [
   "k.actions/shards/actions-mind-talk"
@@ -72228,6 +72679,7 @@
   "k.actions/shards/actions-make-change",
   "k.actions/shards/verbs-make",
   "k.attributes/shards/things-objects",
+  "k.objects/schema.sop",
   "k.words/shards/sk"
  ],
  "skewer": [
@@ -73597,6 +74049,7 @@
  "solid": [
   "k.objects/shards/noto-place-building-01",
   "k.shapes/schema.sop",
+  "k.values/schema.sop",
   "k.words/shards/so"
  ],
  "solidarity": [
@@ -73856,6 +74309,7 @@
  ],
  "south": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.units/shards/measures",
   "k.values/shards/directions",
   "k.words/shards/so"
@@ -74749,6 +75203,7 @@
   "k.words/shards/sp"
  ],
  "spread": [
+  "k.objects/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/sp"
  ],
@@ -75769,7 +76224,9 @@
   "k.layouts/shards/layouts",
   "k.objects/shards/openmoji-travel-places-01",
   "k.objects/shards/places",
+  "k.parts/schema.sop",
   "k.units/shards/measures",
+  "k.values/schema.sop",
   "k.words/shards/st"
  ],
  "stereo": [
@@ -76653,6 +77110,7 @@
   "k.geo/shards/europe"
  ],
  "style": [
+  "k.faces/schema.sop",
   "k.words/shards/st"
  ],
  "stylist": [
@@ -77855,6 +78313,9 @@
   "k.units/schema.sop",
   "k.words/shards/sy"
  ],
+ "symmetric": [
+  "k.shapes/schema.sop"
+ ],
  "sympathize": [
   "k.words/shards/sy"
  ],
@@ -77939,6 +78400,7 @@
   "k.objects/shards/food-2"
  ],
  "system": [
+  "k.units/schema.sop",
   "k.words/shards/sy"
  ],
  "syvash": [
@@ -79189,12 +79651,17 @@
   "k.words/shards/te"
  ],
  "temperature": [
+  "k.attributes/shards/attributes",
+  "k.body/schema.sop",
+  "k.colours/schema.sop",
   "k.objects/shards/openmoji-healthcare-03",
+  "k.space/schema.sop",
   "k.units/shards/core",
   "k.values/shards/scales",
   "k.words/shards/te"
  ],
  "temperature_about": [
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "tempi": [
@@ -79763,7 +80230,11 @@
  ],
  "thing": [
   "k.actions/shards/acts",
+  "k.animals/schema.sop",
+  "k.colours/schema.sop",
   "k.commonsense/schema.sop",
+  "k.scenes/schema.sop",
+  "k.shapes/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/th"
  ],
@@ -80524,7 +80995,8 @@
   "k.words/shards/ti"
  ],
  "tint": [
-  "k.actions/shards/verbs-change"
+  "k.actions/shards/verbs-change",
+  "k.faces/schema.sop"
  ],
  "tiny": [
   "k.values/shards/scales",
@@ -80923,6 +81395,8 @@
   "k.words/shards/to"
  ],
  "tone": [
+  "k.colours/schema.sop",
+  "k.feelings/schema.sop",
   "k.geo/shards/asia",
   "k.words/shards/to"
  ],
@@ -83260,8 +83734,13 @@
   "k.words/shards/ty"
  ],
  "type": [
+  "k.attributes/schema.sop",
+  "k.units/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/ty"
+ ],
+ "type of": [
+  "k.words/schema.sop"
  ],
  "typewriter": [
   "k.parts/shards/t",
@@ -83502,6 +83981,9 @@
  "una": [
   "k.geo/shards/south-america"
  ],
+ "unable": [
+  "k.animals/schema.sop"
+ ],
  "unbelievable": [
   "k.words/shards/un"
  ],
@@ -83659,6 +84141,9 @@
   "k.actions/schema.sop",
   "k.words/shards/un"
  ],
+ "undone by": [
+  "k.actions/schema.sop"
+ ],
  "undress": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/un"
@@ -83753,6 +84238,7 @@
  ],
  "unit": [
   "k.attributes/shards/aspects",
+  "k.time/schema.sop",
   "k.units/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/un"
@@ -84150,7 +84636,8 @@
   "k.words/shards/us"
  ],
  "used for": [
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.commonsense/schema.sop"
  ],
  "used_for": [
   "k.attributes/shards/aspects",
@@ -84182,9 +84669,15 @@
   "k.layouts/schema.sop",
   "k.words/shards/us"
  ],
+ "usual for": [
+  "k.layouts/schema.sop"
+ ],
  "usually": [
   "k.scenes/schema.sop",
   "k.words/shards/us"
+ ],
+ "usually count": [
+  "k.commonsense/schema.sop"
  ],
  "usually_count": [
   "k.units/shards/measures"
@@ -84340,8 +84833,10 @@
   "k.objects/shards/noto-money-01"
  ],
  "value": [
+  "k.actions/schema.sop",
   "k.actions/shards/acts",
   "k.units/shards/measures",
+  "k.values/schema.sop",
   "k.words/shards/va"
  ],
  "value_about": [
@@ -85590,7 +86085,11 @@
   "k.geo/shards/europe"
  ],
  "w": [
+  "k.faces/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
   "k.units/shards/measures",
+  "k.wearables/schema.sop",
   "k.words/shards/w"
  ],
  "w. branch susquehanna": [
@@ -86060,6 +86559,7 @@
  "warm": [
   "k.colours/schema.sop",
   "k.objects/shards/openmoji-healthcare-02",
+  "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/wa"
  ],
@@ -86434,6 +86934,7 @@
  "way": [
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.values/schema.sop",
   "k.words/shards/wa"
  ],
  "wayne": [
@@ -86659,12 +87160,15 @@
   "k.actions/shards/actions-mind-talk"
  ],
  "weight": [
+  "k.attributes/shards/attributes",
+  "k.body/schema.sop",
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/openmoji-healthcare-04",
   "k.values/shards/scales",
   "k.words/shards/we"
  ],
  "weight_about": [
+  "k.attributes/shards/attributes",
   "k.units/shards/measures"
  ],
  "weighty": [
@@ -86762,6 +87266,7 @@
  ],
  "west": [
   "k.attributes/shards/aspects",
+  "k.geo/schema.sop",
   "k.units/shards/measures",
   "k.values/shards/directions",
   "k.words/shards/we"
@@ -87012,6 +87517,7 @@
   "k.actions/schema.sop",
   "k.body/schema.sop",
   "k.commonsense/schema.sop",
+  "k.geo/schema.sop",
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/openmoji-technology-01",
   "k.scenes/schema.sop",
@@ -88207,6 +88713,7 @@
   "k.scenes/shards/scenes-indoors"
  ],
  "world": [
+  "k.attributes/schema.sop",
   "k.attributes/shards/drawn-mulberry",
   "k.objects/shards/mulberry-science-astronomy-02",
   "k.objects/shards/noto-place-map-01",
@@ -88225,6 +88732,7 @@
   "k.objects/shards/noto-place-map-01"
  ],
  "worm": [
+  "k.animals/shards/classes",
   "k.animals/shards/invertebrates",
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-noto",
@@ -88238,11 +88746,18 @@
   "k.words/shards/wo"
  ],
  "worms": [
+  "k.animals/shards/classes",
   "k.animals/shards/invertebrates"
  ],
  "worn": [
   "k.wearables/schema.sop",
   "k.words/shards/we"
+ ],
+ "worn for": [
+  "k.wearables/schema.sop"
+ ],
+ "worn on": [
+  "k.wearables/schema.sop"
  ],
  "worn out": [
   "k.feelings/shards/feelings"
@@ -88500,7 +89015,12 @@
   "k.words/shards/wy"
  ],
  "x": [
+  "k.faces/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
   "k.units/shards/measures",
+  "k.values/schema.sop",
+  "k.wearables/schema.sop",
   "k.words/shards/x"
  ],
  "x-ray": [
@@ -88577,7 +89097,12 @@
   "k.scenes/shards/things-x"
  ],
  "y": [
+  "k.faces/schema.sop",
+  "k.layouts/schema.sop",
+  "k.objects/schema.sop",
   "k.units/shards/measures",
+  "k.values/schema.sop",
+  "k.wearables/schema.sop",
   "k.words/shards/y"
  ],
  "ya": [
@@ -88755,6 +89280,7 @@
   "k.words/shards/ye"
  ],
  "year": [
+  "k.space/schema.sop",
   "k.time/shards/calendar",
   "k.units/shards/core",
   "k.words/shards/ye"
@@ -89051,6 +89577,8 @@
   "k.objects/shards/noto-food-asian-02"
  ],
  "z": [
+  "k.faces/schema.sop",
+  "k.objects/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/z"
  ],

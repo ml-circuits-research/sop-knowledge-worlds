@@ -1,5 +1,5 @@
 {
- "version": "2b2d40877685",
+ "version": "11367e94a5e3",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -1267,7 +1267,8 @@
    "version": "2",
    "schema": "k.animals/schema.sop",
    "exports": [
-    "k.animals.animal"
+    "k.animals.animal",
+    "k.animals.class"
    ],
    "depends": [],
    "shards": [
@@ -1342,6 +1343,32 @@
       "vulture",
       "woodpecker",
       "wren"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.animals/shards/classes",
+     "path": "k.animals/shards/classes.sop",
+     "wires": 24,
+     "bytes": 2934,
+     "keys": [
+      "amphibian",
+      "arachnid",
+      "bird",
+      "cnidarian",
+      "crustacean",
+      "echinoderm",
+      "fish",
+      "insect",
+      "mammal",
+      "mollusc",
+      "myriapod",
+      "reptile",
+      "worm"
      ],
      "sources": [
       "hand-core-1"
@@ -1891,12 +1918,14 @@
     {
      "id": "k.attributes/shards/attributes",
      "path": "k.attributes/shards/attributes.sop",
-     "wires": 70,
-     "bytes": 12244,
+     "wires": 89,
+     "bytes": 15707,
      "keys": [
       "a",
       "animal",
       "appliance",
+      "area",
+      "area_about",
       "at",
       "building",
       "can",
@@ -1908,29 +1937,47 @@
       "covering",
       "creature",
       "device",
+      "diameter_about",
+      "distance",
+      "distance_about",
       "drawn_colour",
       "drink",
       "eats",
+      "elevation",
       "food",
       "furniture",
       "habitat",
       "has",
+      "height",
+      "height_about",
       "instrument",
       "jewellery",
       "k.animals.animal",
       "k.attributes.drawn",
       "k.attributes.thing",
+      "k.body.part",
       "k.commonsense.thing",
       "k.food.food",
+      "k.geo.continent",
+      "k.geo.country",
+      "k.geo.desert",
+      "k.geo.lake",
+      "k.geo.mountain",
+      "k.geo.river",
+      "k.geo.sea",
       "k.layouts.joins",
       "k.objects.part",
       "k.parts.inherited",
       "k.parts.usual",
       "k.parts.whole",
+      "k.people.kind",
       "k.scenes.thing",
+      "k.space.body",
       "kind",
       "landform",
       "legs",
+      "length",
+      "length_about",
       "lives",
       "machine",
       "made_of",
@@ -1946,11 +1993,15 @@
       "sky",
       "sound",
       "tableware",
+      "temperature",
+      "temperature_about",
       "tool",
       "toy",
       "used_for",
       "vehicle",
       "weapon",
+      "weight",
+      "weight_about",
       "wheels"
      ],
      "sources": [
@@ -29176,8 +29227,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 138,
-     "bytes": 18868,
+     "wires": 139,
+     "bytes": 18995,
      "keys": [
       "age_years_about",
       "amount_about",
@@ -29189,6 +29240,7 @@
       "body",
       "child_count",
       "city",
+      "class",
       "continent",
       "corners",
       "count",
