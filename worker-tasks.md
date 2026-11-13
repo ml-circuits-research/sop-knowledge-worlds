@@ -161,3 +161,6 @@ checked by eye: the shapes are good. 811 objects, 2,027 parts named by the model
   the choice and its licence before the full run. Target: 2,000 distinct common objects. Report how many new ones each
   source really adds.
 - Then continue with R2.3, R2.4, R2.5 and the two import scripts.
+- **sopworld 0.15.0 (commit 782cd0c)** is validated: soft issues no longer make knowledge conflicting, the merge is
+  order-independent, `core.module version=` is accepted. Upgrade the pin (tools/sopworld + VERSION), move the schema
+  versions from the header to `version=`, and remove the fork workaround from the page example and tests. One commit.
