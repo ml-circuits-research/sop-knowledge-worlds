@@ -16,6 +16,6 @@ Status (Round 7): thirteen worlds are published: `k.commonsense`, `k.objects` (2
 `docs/gallery.html`), `k.words`, `k.geo`, `k.units`, `k.time`, and the hand-written cores `k.space`, `k.animals`,
 `k.body`, `k.food`, and `k.faces` (faces built from replaceable parts; previews in
 `docs/worlds/k.faces/preview/index.html`), `k.scenes` (the usual place and relative size of drawable things, and 61 typical scenes; previews in
-`docs/worlds/k.scenes/preview/index.html`) and `k.people` (kinds of person). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
+`docs/worlds/k.scenes/preview/index.html`) and `k.people` (kinds of person, 60 roles and jobs). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
 the build network; the import scripts for the first two exist with fixture tests).
 Agents working here start with [AGENTS.md](AGENTS.md).

@@ -1462,3 +1462,29 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   the frame and its preview file is what the composer gives; 10 new questions (sc-11 to sc-20).
 - Numbers: k.scenes 31 shards, 3,249 wires, 438,609 bytes. Catalog 13 worlds, 775 shards, vocab 19,328 words; 0
   errors, 0 warnings. npm test 2,391 pass, 0 fail.
+
+## R7.5 (2026-11-13): 60 roles and jobs in `k.people`
+
+- **`k.people.role`**: 36 jobs, 8 family members, 16 figures of stories; keys `group`, `is` (a `k.people.kind`),
+  `wears`, `holds`, `uses`, `works_at`, `does`, the face features `hat`, `glasses`, `beard`, `moustache`,
+  `shoulders` (variants of `k.faces`, style `plain`), `face` (a preset), `drawing=person`. Shards `roles-jobs` (72
+  wires), `roles-family` (16), `roles-story` (32), written by `tools/people-core.mjs`; each role has a `core.word`
+  with its plural and other names (chef, fireman, cop, mum, santa).
+- **Joins:** 238 of the 239 things worn, held or used are `k.objects` objects (not the astronaut's space suit);
+  56 of 57 workplaces are `k.scenes` scenes (not the judge's courthouse, which is an object); every face feature
+  is a variant that exists; every `is` is a kind.
+- **Looked at:** (1) the 63 drawings of worn, held and used things that the scene sheets had not shown, on one
+  sheet at 100 px: 3 taken out (astronaut `helmet`: a bicycle helmet; sailor `cap`: a baseball cap; postman `bag`:
+  a red handbag). The other about 175 had been looked at with the scenes. (2) A face composed for every role (the
+  preset of `face`, else of its kind, else `man`, with the role's features put on) on one sheet of 60 at 120 px:
+  the family, king, queen, prince, princess, cowboy, magician, farmer, gardener, explorer, pilot, police officer,
+  fisherman, painter, clown, Father Christmas, teacher, doctor, scientist, librarian read as different people;
+  **about 25 jobs come out as the plain man** (nurse, dentist, vet, cook, baker, builder, carpenter, plumber …)
+  because `k.faces` has no hat or clothes for them: only seven hats exist there. The pirate has no hat either.
+  That sheet is mine, for the look: no such composer is in the repository.
+- **Judgement that is mine:** which roles; what each wears, holds, uses and does (a hand-written core); that jobs
+  say no `is` (a doctor is not a man or a woman); the family roles carry the kind.
+- **What SOP Lang could not say:** nothing new. `grandmother` is the name of a kind and of a role; they are two
+  types, so two facts, joined by `is`.
+- Numbers: k.people 4 shards, 136 wires, 26,758 bytes. Catalog 13 worlds, 778 shards, vocab 19,416 words; 0 errors,
+  0 warnings. npm test 2,402 pass, 0 fail.

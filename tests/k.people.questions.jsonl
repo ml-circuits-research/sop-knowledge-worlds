@@ -4,3 +4,11 @@
 {"id":"pe-04","ask":"which kinds of person are old","query":{"type":"k.people.kind","where":{"age":"old"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["grandfather","grandmother"]}}
 {"id":"pe-05","ask":"what is the hair of a baby like","query":{"type":"k.people.kind","where":{"name":"baby"},"seek":"hair"},"expect":{"status":"supported","value":"little"}}
 {"id":"pe-06","ask":"which kinds of person are children","query":{"type":"k.people.kind","where":{"age":"child"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["child","boy","girl"]}}
+{"id":"pe-07","ask":"what does a doctor wear","query":{"type":"k.people.role","where":{"name":"doctor"},"seek":"wears"},"expect":{"status":"supported","value":"\"lab coat\""}}
+{"id":"pe-08","ask":"what does a doctor hold","query":{"type":"k.people.role","where":{"name":"doctor"},"seek":"holds"},"expect":{"status":"supported","value":"stethoscope"}}
+{"id":"pe-09","ask":"where does a teacher work","query":{"type":"k.people.role","where":{"name":"teacher"},"seek":"works_at"},"expect":{"status":"supported","value":"classroom"}}
+{"id":"pe-10","ask":"who holds a sword","query":{"type":"k.people.role","where":{"holds":"sword"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["king","prince","knight","pirate"]}}
+{"id":"pe-11","ask":"which hat suits a king","query":{"type":"k.people.role","where":{"name":"king"},"seek":"hat"},"expect":{"status":"supported","value":"crown"}}
+{"id":"pe-12","ask":"who works on a farm","query":{"type":"k.people.role","where":{"works_at":"farm"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["vet","farmer"]}}
+{"id":"pe-13","ask":"what kind of person is a grandmother","query":{"type":"k.people.role","where":{"name":"grandmother"},"seek":"is"},"expect":{"status":"supported","value":"grandmother"}}
+{"id":"pe-14","ask":"what does an astronaut use","query":{"type":"k.people.role","where":{"name":"astronaut"},"seek":"uses","mode":"list"},"expect":{"status":"supported","values":["rocket","\"space shuttle\"","satellite"]}}

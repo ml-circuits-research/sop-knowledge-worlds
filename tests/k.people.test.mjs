@@ -35,3 +35,45 @@ test('every kind is reached by any of its names: the vocabulary index sends the 
   const names = new Set(kinds.map((w) => tok(w.attrs.name[0])));
   for (const w of words) assert.ok(names.has(tok(w.attrs.means[0])), w.id);
 });
+
+// ---- R7.5: roles and jobs
+import { readdirSync } from 'node:fs';
+import { roleShards, ROLES } from '../tools/people-core.mjs';
+
+const roles = people.ofType('k.people.role');
+const facesWorld = fullWorld('k.faces', worlds);
+const variants = new Set(facesWorld.ofType('k.faces.variant').filter((w) => tok(w.attrs.style[0]) === 'plain').map((w) => `${tok(w.attrs.slot[0])} ${tok(w.attrs.name[0])}`));
+const sceneNames = new Set(fullWorld('k.scenes', worlds).ofType('k.scenes.scene').map((w) => tok(w.attrs.name[0])));
+
+test('the role shards are what tools/people-core.mjs gives; 60 roles in three groups', () => {
+  const files = roleShards();
+  const dir = join(WORLDS_DIR, 'k.people', 'shards');
+  assert.deepEqual(readdirSync(dir).filter((f) => f.startsWith('roles-')).sort(), Object.keys(files).sort());
+  for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
+  assert.equal(roles.length, ROLES.length);
+  assert.ok(roles.length >= 60);
+  for (const name of ['doctor', 'farmer', 'pirate', 'astronaut', 'grandmother']) assert.ok(roles.some((w) => tok(w.attrs.name[0]) === name), name);
+});
+
+test('a role is drawn by the person; its kind is a kind; its face features are k.faces variants of style plain', () => {
+  const kindNames = new Set(kinds.map((w) => tok(w.attrs.name[0])));
+  for (const w of roles) {
+    assert.equal(tok(w.attrs.drawing[0]), 'person', w.id);
+    for (const k of w.attrs.is ?? []) assert.ok(kindNames.has(tok(k)), `${w.id}: is ${k}`);
+    for (const slot of ['hat', 'glasses', 'beard', 'moustache', 'shoulders']) for (const v of w.attrs[slot] ?? []) assert.ok(variants.has(`${slot} ${tok(v)}`), `${w.id}: ${slot} ${v}`);
+    for (const f of w.attrs.face ?? []) assert.ok(presets.has(tok(f)), `${w.id}: face ${f}`);
+    assert.ok(w.attrs.does?.length, `${w.id}: what the role does`);
+    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+  }
+});
+
+test('what roles wear, hold and use has a drawing for at least 95%; where they work is a scene for at least 90%', () => {
+  let things = 0, drawn = 0, places = 0, found = 0;
+  for (const w of roles) {
+    for (const key of ['wears', 'holds', 'uses']) for (const v of w.attrs[key] ?? []) { things++; if (objects.has(tok(v))) drawn++; }
+    for (const v of w.attrs.works_at ?? []) { places++; if (sceneNames.has(tok(v))) found++; }
+  }
+  assert.ok(things >= 200, `${things} things`);
+  assert.ok(drawn >= things * 0.95, `${drawn} of ${things} things have a drawing`);
+  assert.ok(found >= places * 0.9, `${found} of ${places} places are scenes`);
+});

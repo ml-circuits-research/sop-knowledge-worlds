@@ -542,6 +542,9 @@
   "k.objects/shards/openmoji-travel-places-01",
   "k.words/shards/ad"
  ],
+ "adventurer": [
+  "k.people/shards/roles-story"
+ ],
  "adversary": [
   "k.words/shards/ad"
  ],
@@ -754,6 +757,9 @@
  ],
  "airlock": [
   "k.words/shards/ai"
+ ],
+ "airman": [
+  "k.people/shards/roles-jobs"
  ],
  "airplane": [
   "k.commonsense/shards/core",
@@ -1427,6 +1433,7 @@
   "k.words/shards/an"
  ],
  "angler": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-nature"
  ],
  "angola": [
@@ -1481,6 +1488,9 @@
   "k.objects/shards/openmoji-animals-nature-01",
   "k.objects/shards/openmoji-animals-nature-02",
   "k.words/shards/an"
+ ],
+ "animal doctor": [
+  "k.people/shards/roles-jobs"
  ],
  "animal park": [
   "k.scenes/shards/scenes-town"
@@ -2279,11 +2289,15 @@
  ],
  "artist": [
   "k.objects/shards/noto-arts-crafts-01",
+  "k.people/shards/roles-jobs",
   "k.words/shards/ar"
  ],
  "artist palette": [
   "k.objects/shards/noto-arts-crafts-01",
   "k.scenes/shards/things-a"
+ ],
+ "artists": [
+  "k.people/shards/roles-jobs"
  ],
  "arts": [
   "k.objects/shards/noto-arts-crafts-01",
@@ -2495,8 +2509,12 @@
   "k.words/shards/as"
  ],
  "astronaut": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-other",
   "k.words/shards/as"
+ ],
+ "astronauts": [
+  "k.people/shards/roles-jobs"
  ],
  "astronomer": [
   "k.words/shards/as"
@@ -2720,12 +2738,18 @@
   "k.words/shards/au"
  ],
  "aunt": [
+  "k.people/shards/roles-family",
   "k.words/shards/au"
  ],
  "auntie": [
+  "k.people/shards/roles-family",
   "k.words/shards/au"
  ],
+ "aunts": [
+  "k.people/shards/roles-family"
+ ],
  "aunty": [
+  "k.people/shards/roles-family",
   "k.words/shards/au"
  ],
  "auob": [
@@ -3352,7 +3376,11 @@
   "k.scenes/shards/things-b"
  ],
  "baker": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ba"
+ ],
+ "bakers": [
+  "k.people/shards/roles-jobs"
  ],
  "bakery": [
   "k.objects/shards/noto-food-prepared-01",
@@ -3505,6 +3533,7 @@
   "k.words/shards/ba"
  ],
  "ballerina": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ba"
  ],
  "ballet": [
@@ -3858,6 +3887,7 @@
  ],
  "barber": [
   "k.objects/shards/noto-place-other-02",
+  "k.people/shards/roles-jobs",
   "k.words/shards/ba"
  ],
  "barber pole": [
@@ -7320,6 +7350,9 @@
   "k.scenes/shards/things-b",
   "k.words/shards/br"
  ],
+ "bricklayer": [
+  "k.people/shards/roles-jobs"
+ ],
  "bricks": [
   "k.objects/shards/mulberry-leisure-toys-01",
   "k.objects/shards/noto-place-building-01",
@@ -7572,6 +7605,7 @@
   "k.words/shards/br"
  ],
  "brother": [
+  "k.people/shards/roles-family",
   "k.words/shards/br"
  ],
  "brother-in-law": [
@@ -7579,6 +7613,9 @@
  ],
  "brotherhood": [
   "k.words/shards/br"
+ ],
+ "brothers": [
+  "k.people/shards/roles-family"
  ],
  "brothers-in-law": [
   "k.words/shards/br"
@@ -7710,6 +7747,9 @@
  "bucaramanga": [
   "k.geo/shards/south-america"
  ],
+ "buccaneer": [
+  "k.people/shards/roles-story"
+ ],
  "buchanan": [
   "k.geo/shards/africa",
   "k.words/shards/bu"
@@ -7825,8 +7865,12 @@
   "k.words/shards/bu"
  ],
  "builder": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-town",
   "k.words/shards/bu"
+ ],
+ "builders": [
+  "k.people/shards/roles-jobs"
  ],
  "building": [
   "k.objects/shards/noto-place-building-01",
@@ -8193,6 +8237,12 @@
  "bus double decker": [
   "k.objects/shards/mulberry-transport-road-01",
   "k.scenes/shards/things-b"
+ ],
+ "bus driver": [
+  "k.people/shards/roles-jobs"
+ ],
+ "bus drivers": [
+  "k.people/shards/roles-jobs"
  ],
  "bus single decker": [
   "k.objects/shards/mulberry-transport-road-01",
@@ -9283,6 +9333,7 @@
   "k.words/shards/ca"
  ],
  "caretaker": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ca"
  ],
  "cargo": [
@@ -9366,7 +9417,11 @@
  ],
  "carpenter": [
   "k.objects/shards/noto-tool-02",
+  "k.people/shards/roles-jobs",
   "k.words/shards/ca"
+ ],
+ "carpenters": [
+  "k.people/shards/roles-jobs"
  ],
  "carpentry": [
   "k.objects/shards/noto-tool-02",
@@ -9394,6 +9449,9 @@
  ],
  "carrier": [
   "k.words/shards/ca"
+ ],
+ "carries": [
+  "k.people/schema.sop"
  ],
  "carroll": [
   "k.words/shards/ca"
@@ -9499,6 +9557,7 @@
   "k.food/shards/grains-nuts-and-pulses"
  ],
  "cashier": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/ca"
  ],
@@ -10584,13 +10643,18 @@
  ],
  "chef": [
   "k.objects/shards/noto-dishware-01",
+  "k.people/shards/roles-jobs",
   "k.words/shards/ch"
+ ],
+ "chefs": [
+  "k.people/shards/roles-jobs"
  ],
  "chemical": [
   "k.words/shards/ch"
  ],
  "chemist": [
   "k.objects/shards/noto-science-01",
+  "k.people/shards/roles-jobs",
   "k.words/shards/ch"
  ],
  "chemistry": [
@@ -11554,6 +11618,7 @@
  ],
  "cleaner": [
   "k.objects/shards/openmoji-technology-02",
+  "k.people/shards/roles-jobs",
   "k.words/shards/cl"
  ],
  "cleaner spray": [
@@ -11561,6 +11626,7 @@
   "k.scenes/shards/things-c"
  ],
  "cleaners": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/cl"
  ],
  "cleaning": [
@@ -11824,6 +11890,7 @@
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-clothing-05",
+  "k.people/schema.sop",
   "k.words/shards/cl"
  ],
  "clothes hanger": [
@@ -11896,11 +11963,15 @@
  ],
  "clown": [
   "k.faces/shards/presets",
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-town",
   "k.words/shards/cl"
  ],
  "clownfish": [
   "k.animals/shards/fish"
+ ],
+ "clowns": [
+  "k.people/shards/roles-story"
  ],
  "club": [
   "k.objects/shards/mulberry-leisure-games-01",
@@ -13068,6 +13139,9 @@
  "conjure": [
   "k.words/shards/co"
  ],
+ "conjurer": [
+  "k.people/shards/roles-story"
+ ],
  "connect": [
   "k.words/shards/co"
  ],
@@ -13186,6 +13260,9 @@
  ],
  "construction site": [
   "k.scenes/shards/scenes-town"
+ ],
+ "construction worker": [
+  "k.people/shards/roles-jobs"
  ],
  "consuelo peak": [
   "k.geo/shards/oceania"
@@ -13391,6 +13468,7 @@
   "k.words/shards/co"
  ],
  "cook": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/co"
  ],
@@ -13446,6 +13524,9 @@
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.scenes/shards/things-c"
  ],
+ "cooks": [
+  "k.people/shards/roles-jobs"
+ ],
  "cool": [
   "k.objects/shards/noto-clothing-03",
   "k.words/shards/co"
@@ -13488,6 +13569,7 @@
   "k.words/shards/co"
  ],
  "cop": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/co"
  ],
  "cope": [
@@ -13730,6 +13812,9 @@
  ],
  "cosmetics": [
   "k.objects/shards/noto-clothing-06"
+ ],
+ "cosmonaut": [
+  "k.people/shards/roles-jobs"
  ],
  "cosmos": [
   "k.scenes/shards/scenes-other",
@@ -13991,13 +14076,20 @@
   "k.words/shards/co"
  ],
  "cowboy": [
+  "k.people/shards/roles-story",
   "k.words/shards/co"
  ],
  "cowboy hat": [
   "k.faces/shards/plain-hat"
  ],
+ "cowboys": [
+  "k.people/shards/roles-story"
+ ],
  "cowcatcher": [
   "k.objects/shards/noto-transport-ground-01"
+ ],
+ "cowgirl": [
+  "k.people/shards/roles-story"
  ],
  "cowl": [
   "k.words/shards/co"
@@ -15183,12 +15275,14 @@
  ],
  "dad": [
   "k.objects/shards/noto-clothing-06",
+  "k.people/shards/roles-family",
   "k.words/shards/da"
  ],
  "dada": [
   "k.words/shards/da"
  ],
  "daddy": [
+  "k.people/shards/roles-family",
   "k.words/shards/da"
  ],
  "dadu": [
@@ -15348,7 +15442,11 @@
   "k.words/shards/da"
  ],
  "dancer": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/da"
+ ],
+ "dancers": [
+  "k.people/shards/roles-jobs"
  ],
  "dancing": [
   "k.words/shards/da"
@@ -16062,7 +16160,11 @@
   "k.scenes/shards/things-d"
  ],
  "dentist": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/de"
+ ],
+ "dentists": [
+  "k.people/shards/roles-jobs"
  ],
  "denver": [
   "k.words/shards/de"
@@ -16309,7 +16411,11 @@
   "k.words/shards/de"
  ],
  "detective": [
+  "k.people/shards/roles-story",
   "k.words/shards/de"
+ ],
+ "detectives": [
+  "k.people/shards/roles-story"
  ],
  "detector": [
   "k.words/shards/de"
@@ -17202,11 +17308,15 @@
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-medical-01",
   "k.objects/shards/noto-place-building-02",
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/do"
  ],
  "doctor's surgery": [
   "k.scenes/shards/scenes-indoors"
+ ],
+ "doctors": [
+  "k.people/shards/roles-jobs"
  ],
  "doctrine": [
   "k.words/shards/do"
@@ -17254,7 +17364,8 @@
   "k.words/shards/do"
  ],
  "does": [
-  "k.body/schema.sop"
+  "k.body/schema.sop",
+  "k.people/schema.sop"
  ],
  "dog": [
   "k.animals/shards/mammals",
@@ -17736,7 +17847,8 @@
   "k.words/shards/do"
  ],
  "dr": [
-  "k.objects/shards/noto-clothing-01"
+  "k.objects/shards/noto-clothing-01",
+  "k.people/shards/roles-jobs"
  ],
  "dracula": [
   "k.words/shards/dr"
@@ -17968,7 +18080,11 @@
   "k.words/shards/dr"
  ],
  "driver": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/dr"
+ ],
+ "drivers": [
+  "k.people/shards/roles-jobs"
  ],
  "driveway": [
   "k.objects/shards/stand-ins-wordnet",
@@ -19943,7 +20059,11 @@
   "k.words/shards/ex"
  ],
  "explorer": [
+  "k.people/shards/roles-story",
   "k.words/shards/ex"
+ ],
+ "explorers": [
+  "k.people/shards/roles-story"
  ],
  "explosion": [
   "k.objects/shards/noto-tool-01",
@@ -20270,6 +20390,9 @@
  "fairground": [
   "k.scenes/shards/scenes-town"
  ],
+ "fairies": [
+  "k.people/shards/roles-story"
+ ],
  "fairness": [
   "k.words/shards/fa"
  ],
@@ -20277,6 +20400,7 @@
   "k.objects/shards/mulberry-celebration-item-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-game-01",
+  "k.people/shards/roles-story",
   "k.scenes/shards/things-f",
   "k.words/shards/fa"
  ],
@@ -20456,8 +20580,12 @@
   "k.words/shards/fa"
  ],
  "farmer": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/fa"
+ ],
+ "farmers": [
+  "k.people/shards/roles-jobs"
  ],
  "farmhouse": [
   "k.objects/shards/stand-ins-wordnet",
@@ -20518,10 +20646,12 @@
   "k.words/shards/fa"
  ],
  "father": [
+  "k.people/shards/roles-family",
   "k.words/shards/fa"
  ],
  "father christmas": [
   "k.objects/shards/mulberry-celebration-item-01",
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-f"
  ],
@@ -20535,6 +20665,9 @@
  ],
  "fatherland": [
   "k.words/shards/fa"
+ ],
+ "fathers": [
+  "k.people/shards/roles-family"
  ],
  "fathers-in-law": [
   "k.words/shards/fa"
@@ -21203,7 +21336,11 @@
   "k.scenes/shards/things-f"
  ],
  "firefighter": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/fi"
+ ],
+ "firefighters": [
+  "k.people/shards/roles-jobs"
  ],
  "fireflies": [
   "k.animals/shards/invertebrates"
@@ -21216,7 +21353,11 @@
   "k.words/shards/fi"
  ],
  "fireman": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/fi"
+ ],
+ "firemen": [
+  "k.people/shards/roles-jobs"
  ],
  "fireplace": [
   "k.objects/shards/mulberry-building-structure-01",
@@ -21354,11 +21495,16 @@
   "k.scenes/shards/things-f"
  ],
  "fisher": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/fi"
  ],
  "fisherman": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-town",
   "k.words/shards/fi"
+ ],
+ "fishermen": [
+  "k.people/shards/roles-jobs"
  ],
  "fishers peak": [
   "k.geo/shards/north-america"
@@ -22090,6 +22236,15 @@
  ],
  "football pitch": [
   "k.scenes/shards/scenes-town"
+ ],
+ "football player": [
+  "k.people/shards/roles-jobs"
+ ],
+ "footballer": [
+  "k.people/shards/roles-jobs"
+ ],
+ "footballers": [
+  "k.people/shards/roles-jobs"
  ],
  "footing": [
   "k.words/shards/fo"
@@ -23415,7 +23570,11 @@
   "k.scenes/shards/things-g"
  ],
  "gardener": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ga"
+ ],
+ "gardeners": [
+  "k.people/shards/roles-jobs"
  ],
  "gardening": [
   "k.objects/shards/mulberry-building-garden-and-farm-01",
@@ -24579,6 +24738,7 @@
  ],
  "grandad": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "grandchild": [
@@ -24589,6 +24749,7 @@
  ],
  "granddad": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "granddaughter": [
@@ -24605,6 +24766,7 @@
  ],
  "grandfather": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "grandfathers": [
@@ -24615,6 +24777,7 @@
  ],
  "grandma": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "grandmas": [
@@ -24622,6 +24785,7 @@
  ],
  "grandmother": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "grandmothers": [
@@ -24629,6 +24793,7 @@
  ],
  "grandpa": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "grandpas": [
@@ -24645,6 +24810,7 @@
  ],
  "granny": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/gr"
  ],
  "grant": [
@@ -25016,6 +25182,7 @@
   "k.words/shards/gr"
  ],
  "grocer": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/gr"
  ],
  "grocery": [
@@ -25309,6 +25476,9 @@
   "k.scenes/shards/things-g",
   "k.words/shards/gu"
  ],
+ "guitarist": [
+  "k.people/shards/roles-jobs"
+ ],
  "gulf": [
   "k.words/shards/gu"
  ],
@@ -25593,7 +25763,11 @@
   "k.words/shards/ha"
  ],
  "hairdresser": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ha"
+ ],
+ "hairdressers": [
+  "k.people/shards/roles-jobs"
  ],
  "hairdryer": [
   "k.objects/shards/mulberry-healthcare-grooming-items-03",
@@ -26874,6 +27048,7 @@
   "k.words/shards/he"
  ],
  "hero": [
+  "k.people/shards/roles-story",
   "k.words/shards/he"
  ],
  "herod": [
@@ -27263,6 +27438,7 @@
   "k.words/shards/ho"
  ],
  "hold": [
+  "k.people/schema.sop",
   "k.words/shards/ho"
  ],
  "holdall": [
@@ -27274,6 +27450,9 @@
  ],
  "holding": [
   "k.words/shards/ho"
+ ],
+ "holds": [
+  "k.people/schema.sop"
  ],
  "holdup": [
   "k.words/shards/ho"
@@ -29852,6 +30031,7 @@
   "k.words/shards/ja"
  ],
  "janitor": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ja"
  ],
  "january": [
@@ -30242,6 +30422,7 @@
  ],
  "job": [
   "k.objects/shards/noto-place-building-02",
+  "k.people/schema.sop",
   "k.words/shards/jo"
  ],
  "jobbed": [
@@ -30249,6 +30430,9 @@
  ],
  "jobbing": [
   "k.words/shards/jo"
+ ],
+ "jobs": [
+  "k.people/schema.sop"
  ],
  "jock": [
   "k.words/shards/jo"
@@ -30294,6 +30478,9 @@
  ],
  "join": [
   "k.words/shards/jo"
+ ],
+ "joiner": [
+  "k.people/shards/roles-jobs"
  ],
  "joining": [
   "k.words/shards/jo"
@@ -30445,12 +30632,14 @@
   "k.words/shards/ju"
  ],
  "judge": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ju"
  ],
  "judgement": [
   "k.words/shards/ju"
  ],
  "judges": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ju"
  ],
  "judging": [
@@ -31272,6 +31461,7 @@
  ],
  "king": [
   "k.objects/shards/noto-clothing-05",
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-town",
   "k.words/shards/ki"
  ],
@@ -31331,6 +31521,9 @@
  ],
  "kingfishers": [
   "k.animals/shards/birds"
+ ],
+ "kings": [
+  "k.people/shards/roles-story"
  ],
  "kingston": [
   "k.geo/shards/north-america",
@@ -31528,11 +31721,13 @@
   "k.words/shards/kn"
  ],
  "knight": [
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-town",
   "k.words/shards/kn"
  ],
  "knights": [
-  "k.objects/shards/noto-animal-reptile-01"
+  "k.objects/shards/noto-animal-reptile-01",
+  "k.people/shards/roles-story"
  ],
  "knit": [
   "k.objects/shards/noto-arts-crafts-01",
@@ -33863,8 +34058,12 @@
   "k.objects/shards/noto-tool-03"
  ],
  "librarian": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/li"
+ ],
+ "librarians": [
+  "k.people/shards/roles-jobs"
  ],
  "libraries": [
   "k.scenes/shards/scenes-indoors"
@@ -35405,7 +35604,11 @@
  ],
  "magician": [
   "k.objects/shards/noto-game-01",
+  "k.people/shards/roles-story",
   "k.words/shards/ma"
+ ],
+ "magicians": [
+  "k.people/shards/roles-story"
  ],
  "magistrate": [
   "k.words/shards/ma"
@@ -35512,6 +35715,7 @@
   "k.objects/shards/structures"
  ],
  "mailman": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ma"
  ],
  "main": [
@@ -35687,6 +35891,7 @@
   "k.words/shards/ma"
  ],
  "mama": [
+  "k.people/shards/roles-family",
   "k.words/shards/ma"
  ],
  "mamas": [
@@ -36799,10 +37004,12 @@
  ],
  "mechanic": [
   "k.objects/shards/noto-tool-03",
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/me"
  ],
  "mechanics": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/me"
  ],
  "mechanism": [
@@ -38342,6 +38549,7 @@
   "k.words/shards/me"
  ],
  "mom": [
+  "k.people/shards/roles-family",
   "k.words/shards/mo"
  ],
  "moma": [
@@ -38363,6 +38571,7 @@
   "k.words/shards/mo"
  ],
  "mommy": [
+  "k.people/shards/roles-family",
   "k.words/shards/mo"
  ],
  "momskiy khrebet": [
@@ -38878,6 +39087,7 @@
   "k.words/shards/mo"
  ],
  "mother": [
+  "k.people/shards/roles-family",
   "k.words/shards/mo"
  ],
  "mother-in-law": [
@@ -38888,6 +39098,9 @@
  ],
  "motherland": [
   "k.words/shards/mo"
+ ],
+ "mothers": [
+  "k.people/shards/roles-family"
  ],
  "mothers-in-law": [
   "k.words/shards/mo"
@@ -39788,6 +40001,7 @@
   "k.words/shards/mu"
  ],
  "mum": [
+  "k.people/shards/roles-family",
   "k.words/shards/mu"
  ],
  "mumbai": [
@@ -39798,6 +40012,7 @@
   "k.words/shards/mu"
  ],
  "mummy": [
+  "k.people/shards/roles-family",
   "k.words/shards/mu"
  ],
  "mun": [
@@ -39925,7 +40140,11 @@
   "k.scenes/shards/things-m"
  ],
  "musician": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/mu"
+ ],
+ "musicians": [
+  "k.people/shards/roles-jobs"
  ],
  "muskingum": [
   "k.geo/shards/north-america"
@@ -40192,10 +40411,12 @@
  ],
  "nan": [
   "k.people/shards/kinds",
+  "k.people/shards/roles-family",
   "k.words/shards/na"
  ],
  "nana": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "k.people/shards/roles-family"
  ],
  "nancy": [
   "k.words/shards/na"
@@ -41685,6 +41906,7 @@
   "k.geo/shards/asia"
  ],
  "nurse": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/nu"
  ],
@@ -41694,6 +41916,9 @@
  "nursery": [
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/nu"
+ ],
+ "nurses": [
+  "k.people/shards/roles-jobs"
  ],
  "nursing": [
   "k.words/shards/nu"
@@ -42028,6 +42253,7 @@
   "k.scenes/shards/things-o"
  ],
  "officer": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/of"
  ],
  "offices": [
@@ -43216,7 +43442,11 @@
  ],
  "painter": [
   "k.objects/shards/noto-arts-crafts-01",
+  "k.people/shards/roles-jobs",
   "k.words/shards/pa"
+ ],
+ "painters": [
+  "k.people/shards/roles-jobs"
  ],
  "painting": [
   "k.objects/shards/noto-arts-crafts-01",
@@ -43449,6 +43679,7 @@
   "k.words/shards/pa"
  ],
  "papa": [
+  "k.people/shards/roles-family",
   "k.words/shards/pa"
  ],
  "papaloapan": [
@@ -45051,7 +45282,11 @@
   "k.words/shards/ph"
  ],
  "photographer": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ph"
+ ],
+ "photographers": [
+  "k.people/shards/roles-jobs"
  ],
  "photographs": [
   "k.objects/shards/mulberry-holiday-and-travel-01",
@@ -45073,6 +45308,7 @@
   "k.geo/shards/asia"
  ],
  "physician": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ph"
  ],
  "physicist": [
@@ -45091,6 +45327,7 @@
   "k.geo/shards/oceania"
  ],
  "pianist": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/pi"
  ],
  "piano": [
@@ -45426,8 +45663,12 @@
   "k.scenes/shards/things-p"
  ],
  "pilot": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-town",
   "k.words/shards/pi"
+ ],
+ "pilots": [
+  "k.people/shards/roles-jobs"
  ],
  "pimp": [
   "k.words/shards/pi"
@@ -45593,6 +45834,7 @@
  ],
  "pirate": [
   "k.objects/shards/noto-animal-bird-03",
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-other",
   "k.words/shards/pi"
  ],
@@ -45600,6 +45842,7 @@
   "k.scenes/shards/scenes-other"
  ],
  "pirates": [
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-other"
  ],
  "pisco": [
@@ -46260,6 +46503,7 @@
   "k.scenes/shards/things-p"
  ],
  "player": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-town",
   "k.words/shards/pl"
  ],
@@ -46421,7 +46665,11 @@
  ],
  "plumber": [
   "k.objects/shards/noto-household-01",
+  "k.people/shards/roles-jobs",
   "k.words/shards/pl"
+ ],
+ "plumbers": [
+  "k.people/shards/roles-jobs"
  ],
  "plumbing": [
   "k.words/shards/pl"
@@ -46609,6 +46857,7 @@
  "police": [
   "k.objects/shards/noto-transport-ground-03",
   "k.objects/shards/noto-transport-ground-06",
+  "k.people/shards/roles-jobs",
   "k.words/shards/po"
  ],
  "police car": [
@@ -46623,12 +46872,19 @@
   "k.objects/shards/mulberry-clothes-general-04",
   "k.scenes/shards/things-p"
  ],
+ "police officer": [
+  "k.people/shards/roles-jobs"
+ ],
  "police radio": [
   "k.objects/shards/mulberry-electrical-phone-01",
   "k.scenes/shards/things-p"
  ],
  "policeman": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/po"
+ ],
+ "policewoman": [
+  "k.people/shards/roles-jobs"
  ],
  "policy": [
   "k.words/shards/po"
@@ -47046,6 +47302,9 @@
   "k.objects/shards/noto-sound-01",
   "k.scenes/shards/things-p"
  ],
+ "postal worker": [
+  "k.people/shards/roles-jobs"
+ ],
  "postbox": [
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-mail-02",
@@ -47062,7 +47321,11 @@
   "k.words/shards/po"
  ],
  "postman": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/po"
+ ],
+ "postmen": [
+  "k.people/shards/roles-jobs"
  ],
  "postmortem": [
   "k.words/shards/po"
@@ -47075,6 +47338,9 @@
  ],
  "posture": [
   "k.words/shards/po"
+ ],
+ "postwoman": [
+  "k.people/shards/roles-jobs"
  ],
  "pot": [
   "k.objects/shards/mulberry-food-dairy-01",
@@ -47497,6 +47763,7 @@
   "k.words/shards/pr"
  ],
  "prince": [
+  "k.people/shards/roles-story",
   "k.words/shards/pr"
  ],
  "prince albert mountains": [
@@ -47505,8 +47772,15 @@
  "prince charles mountains": [
   "k.geo/shards/antarctica"
  ],
+ "princes": [
+  "k.people/shards/roles-story"
+ ],
  "princess": [
+  "k.people/shards/roles-story",
   "k.words/shards/pr"
+ ],
+ "princesses": [
+  "k.people/shards/roles-story"
  ],
  "princeton": [
   "k.words/shards/pr"
@@ -48453,6 +48727,7 @@
  "queen": [
   "k.faces/shards/presets",
   "k.objects/shards/noto-clothing-05",
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-town",
   "k.words/shards/qu"
  ],
@@ -48463,6 +48738,7 @@
   "k.geo/shards/antarctica"
  ],
  "queens": [
+  "k.people/shards/roles-story",
   "k.words/shards/qu"
  ],
  "queer": [
@@ -50255,6 +50531,7 @@
   "k.words/shards/re"
  ],
  "researcher": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/re"
  ],
  "resemblance": [
@@ -51933,7 +52210,11 @@
   "k.geo/shards/africa"
  ],
  "role": [
+  "k.people/schema.sop",
   "k.words/shards/ro"
+ ],
+ "roles": [
+  "k.people/schema.sop"
  ],
  "rolf": [
   "k.words/shards/ro"
@@ -52743,7 +53024,11 @@
   "k.words/shards/sa"
  ],
  "sailor": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/sa"
+ ],
+ "sailors": [
+  "k.people/shards/roles-jobs"
  ],
  "sails": [
   "k.objects/shards/vehicles"
@@ -52786,6 +53071,9 @@
  ],
  "saint mary peak": [
   "k.geo/shards/oceania"
+ ],
+ "saint nicholas": [
+  "k.people/shards/roles-story"
  ],
  "saint pierre and miquelon": [
   "k.geo/shards/north-america",
@@ -53175,11 +53463,15 @@
  ],
  "santa": [
   "k.geo/shards/south-america",
+  "k.people/shards/roles-story",
   "k.words/shards/sa"
  ],
  "santa ana": [
   "k.geo/shards/north-america",
   "k.geo/shards/south-america"
+ ],
+ "santa claus": [
+  "k.people/shards/roles-story"
  ],
  "santa cruz": [
   "k.geo/shards/south-america"
@@ -53679,6 +53971,7 @@
   "k.scenes/shards/scenes-indoors"
  ],
  "schoolteacher": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/sc"
  ],
  "science": [
@@ -53692,8 +53985,12 @@
  ],
  "scientist": [
   "k.objects/shards/noto-clothing-01",
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/sc"
+ ],
+ "scientists": [
+  "k.people/shards/roles-jobs"
  ],
  "scientology": [
   "k.words/shards/sc"
@@ -54022,6 +54319,7 @@
   "k.objects/shards/things"
  ],
  "seaman": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/se"
  ],
  "search": [
@@ -54334,6 +54632,7 @@
   "k.words/shards/se"
  ],
  "seller": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/se"
  ],
  "sellers": [
@@ -55287,8 +55586,17 @@
   "k.scenes/shards/things-s",
   "k.words/shards/sh"
  ],
+ "shop assistant": [
+  "k.people/shards/roles-jobs"
+ ],
  "shop_window": [
   "k.objects/shards/places-2"
+ ],
+ "shopkeeper": [
+  "k.people/shards/roles-jobs"
+ ],
+ "shopkeepers": [
+  "k.people/shards/roles-jobs"
  ],
  "shoplifting": [
   "k.words/shards/sh"
@@ -55873,7 +56181,11 @@
   "k.words/shards/si"
  ],
  "singer": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/si"
+ ],
+ "singers": [
+  "k.people/shards/roles-jobs"
  ],
  "singing": [
   "k.words/shards/si"
@@ -55957,10 +56269,14 @@
   "k.words/shards/si"
  ],
  "sister": [
+  "k.people/shards/roles-family",
   "k.words/shards/si"
  ],
  "sister-in-law": [
   "k.words/shards/si"
+ ],
+ "sisters": [
+  "k.people/shards/roles-family"
  ],
  "sisters-in-law": [
   "k.words/shards/si"
@@ -56371,6 +56687,9 @@
  ],
  "slept": [
   "k.words/shards/sl"
+ ],
+ "sleuth": [
+  "k.people/shards/roles-story"
  ],
  "slew": [
   "k.words/shards/sl"
@@ -56966,6 +57285,9 @@
  "soccer pitch": [
   "k.scenes/shards/scenes-town"
  ],
+ "soccer player": [
+  "k.people/shards/roles-jobs"
+ ],
  "social": [
   "k.words/shards/so"
  ],
@@ -57089,7 +57411,11 @@
  ],
  "soldier": [
   "k.objects/shards/noto-clothing-06",
+  "k.people/shards/roles-jobs",
   "k.words/shards/so"
+ ],
+ "soldiers": [
+  "k.people/shards/roles-jobs"
  ],
  "sole": [
   "k.objects/shards/more",
@@ -57200,6 +57526,7 @@
   "k.words/shards/so"
  ],
  "sorcerer": [
+  "k.people/shards/roles-story",
   "k.words/shards/so"
  ],
  "sore": [
@@ -57411,6 +57738,9 @@
  "spacecraft": [
   "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/sp"
+ ],
+ "spaceman": [
+  "k.people/shards/roles-jobs"
  ],
  "spaceship": [
   "k.objects/shards/mulberry-transport-space-01",
@@ -59965,6 +60295,12 @@
   "k.objects/shards/noto-sport-01",
   "k.words/shards/su"
  ],
+ "superhero": [
+  "k.people/shards/roles-story"
+ ],
+ "superheroes": [
+  "k.people/shards/roles-story"
+ ],
  "superintendent": [
   "k.words/shards/su"
  ],
@@ -60394,8 +60730,12 @@
   "k.words/shards/sw"
  ],
  "swimmer": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-town",
   "k.words/shards/sw"
+ ],
+ "swimmers": [
+  "k.people/shards/roles-jobs"
  ],
  "swimming": [
   "k.objects/shards/noto-clothing-01",
@@ -61337,8 +61677,12 @@
   "k.words/shards/te"
  ],
  "teacher": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/te"
+ ],
+ "teachers": [
+  "k.people/shards/roles-jobs"
  ],
  "teaching": [
   "k.words/shards/te"
@@ -62879,7 +63223,8 @@
  "tools": [
   "k.objects/shards/mulberry-tools-workshop-01",
   "k.objects/shards/mulberry-tools-workshop-02",
-  "k.objects/shards/mulberry-tools-workshop-03"
+  "k.objects/shards/mulberry-tools-workshop-03",
+  "k.people/schema.sop"
  ],
  "toon-head": [
   "k.faces/shards/toon-head-slots"
@@ -64803,7 +65148,11 @@
   "k.words/shards/un"
  ],
  "uncle": [
+  "k.people/shards/roles-family",
   "k.words/shards/un"
+ ],
+ "uncles": [
+  "k.people/shards/roles-family"
  ],
  "uncompahgre peak": [
   "k.geo/shards/north-america"
@@ -65260,6 +65609,7 @@
  ],
  "use": [
   "k.commonsense/schema.sop",
+  "k.people/schema.sop",
   "k.words/shards/us"
  ],
  "used": [
@@ -65267,6 +65617,9 @@
  ],
  "user": [
   "k.words/shards/us"
+ ],
+ "uses": [
+  "k.people/schema.sop"
  ],
  "usher": [
   "k.words/shards/us"
@@ -65931,6 +66284,7 @@
   "k.words/shards/ve"
  ],
  "vet": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ve"
  ],
  "veteran": [
@@ -65940,6 +66294,7 @@
   "k.objects/shards/openmoji-animals-nature-01"
  ],
  "veterinarian": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/ve"
  ],
  "veto": [
@@ -65947,6 +66302,9 @@
  ],
  "vetoes": [
   "k.words/shards/ve"
+ ],
+ "vets": [
+  "k.people/shards/roles-jobs"
  ],
  "vetted": [
   "k.words/shards/ve"
@@ -66578,8 +66936,12 @@
   "k.geo/shards/oceania"
  ],
  "waiter": [
+  "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/wa"
+ ],
+ "waiters": [
+  "k.people/shards/roles-jobs"
  ],
  "waiting": [
   "k.objects/shards/noto-time-01",
@@ -66589,7 +66951,11 @@
   "k.geo/shards/oceania"
  ],
  "waitress": [
+  "k.people/shards/roles-jobs",
   "k.words/shards/wa"
+ ],
+ "waitresses": [
+  "k.people/shards/roles-jobs"
  ],
  "wake": [
   "k.words/shards/wa"
@@ -67129,6 +67495,7 @@
   "k.words/shards/we"
  ],
  "wear": [
+  "k.people/schema.sop",
   "k.words/shards/we"
  ],
  "wearied": [
@@ -67136,6 +67503,9 @@
  ],
  "wearing": [
   "k.words/shards/we"
+ ],
+ "wears": [
+  "k.people/schema.sop"
  ],
  "weary": [
   "k.words/shards/we"
@@ -68171,12 +68541,16 @@
   "k.objects/shards/mulberry-celebration-item-04",
   "k.objects/shards/noto-game-01",
   "k.objects/shards/noto-household-02",
+  "k.people/shards/roles-story",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-w",
   "k.words/shards/wi"
  ],
  "witchcraft": [
   "k.words/shards/wi"
+ ],
+ "witches": [
+  "k.people/shards/roles-story"
  ],
  "witches hat": [
   "k.objects/shards/mulberry-celebration-item-04",
@@ -68221,7 +68595,11 @@
  ],
  "wizard": [
   "k.objects/shards/noto-game-01",
+  "k.people/shards/roles-story",
   "k.words/shards/wi"
+ ],
+ "wizards": [
+  "k.people/shards/roles-story"
  ],
  "woe": [
   "k.words/shards/wo"
@@ -68369,6 +68747,7 @@
   "k.words/shards/we"
  ],
  "work": [
+  "k.people/schema.sop",
   "k.words/shards/wo"
  ],
  "workbench": [
@@ -68388,11 +68767,16 @@
   "k.words/shards/wo"
  ],
  "workplace": [
+  "k.people/schema.sop",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/wo"
  ],
  "works": [
+  "k.people/schema.sop",
   "k.words/shards/wo"
+ ],
+ "works at": [
+  "k.people/schema.sop"
  ],
  "workshop": [
   "k.objects/shards/mulberry-tools-workshop-01",

@@ -1,5 +1,5 @@
 {
- "version": "56278446532a",
+ "version": "de7a7e29dfe8",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -16480,6 +16480,105 @@
       "grandmother",
       "man",
       "woman"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.people/shards/roles-family",
+     "path": "k.people/shards/roles-family.sop",
+     "wires": 16,
+     "bytes": 2855,
+     "keys": [
+      "aunt",
+      "brother",
+      "father",
+      "grandfather",
+      "grandmother",
+      "mother",
+      "sister",
+      "uncle"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.people/shards/roles-jobs",
+     "path": "k.people/shards/roles-jobs.sop",
+     "wires": 72,
+     "bytes": 14715,
+     "keys": [
+      "astronaut",
+      "baker",
+      "builder",
+      "bus driver",
+      "carpenter",
+      "cleaner",
+      "cook",
+      "dancer",
+      "dentist",
+      "doctor",
+      "farmer",
+      "firefighter",
+      "fisherman",
+      "footballer",
+      "gardener",
+      "hairdresser",
+      "judge",
+      "librarian",
+      "mechanic",
+      "musician",
+      "nurse",
+      "painter",
+      "photographer",
+      "pilot",
+      "plumber",
+      "police officer",
+      "postman",
+      "sailor",
+      "scientist",
+      "shopkeeper",
+      "singer",
+      "soldier",
+      "swimmer",
+      "teacher",
+      "vet",
+      "waiter"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.people/shards/roles-story",
+     "path": "k.people/shards/roles-story.sop",
+     "wires": 32,
+     "bytes": 6430,
+     "keys": [
+      "clown",
+      "cowboy",
+      "detective",
+      "explorer",
+      "fairy",
+      "father christmas",
+      "king",
+      "knight",
+      "magician",
+      "pirate",
+      "prince",
+      "princess",
+      "queen",
+      "superhero",
+      "witch",
+      "wizard"
      ],
      "sources": [
       "hand-core-1"
