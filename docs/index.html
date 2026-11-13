@@ -80,7 +80,7 @@ console.log(answer.status, answer.value);   // supported water
 
 // Soft knowledge: advice after acting, never a refusal.
 const r = w.tell('@p1 k.commonsense.placed thing=fish at=sky scene=s1', { ns: 'scene' });
-console.log(r.ok, r.issues.map((i) => i.why));   // true, [ 'A fish usually lives in water, not in the sky.', ... ]</pre>
+console.log(r.ok, r.issues.map((i) => i.why));   // true, [ 'A fish is usually in water, not in the sky.', ... ]</pre>
 <p class="muted">The contract is in PLAN.md §2 of the repository. Facts can also be given to a world as a fact provider
 (<code>new World({ facts })</code>) instead of being told. Knowledge types are <code>shared=true</code>, so facts the
 application tells in its own namespace are joined with them.</p>

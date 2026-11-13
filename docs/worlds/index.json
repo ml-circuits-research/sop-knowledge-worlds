@@ -1,5 +1,53 @@
 {
- "version": "824248b0f2f0",
+ "version": "4da773ee0672",
  "sopworld": "c7247e2",
- "worlds": []
+ "worlds": [
+  {
+   "id": "k.commonsense",
+   "version": "1",
+   "schema": "k.commonsense/schema.sop",
+   "exports": [
+    "k.commonsense.placed",
+    "k.commonsense.thing"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.commonsense/shards/core",
+     "path": "k.commonsense/shards/core.sop",
+     "wires": 30,
+     "bytes": 3963,
+     "keys": [
+      "bird",
+      "boat",
+      "car",
+      "cat",
+      "cloud",
+      "dog",
+      "fish",
+      "flower",
+      "grass",
+      "house",
+      "moon",
+      "plane",
+      "star",
+      "sun",
+      "tree"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  }
+ ]
 }

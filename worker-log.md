@@ -36,3 +36,23 @@ One entry per task: what was done, numbers (wires, shards, bytes, load time, war
   `docs/worlds` with `fetch` served from disk (skipped until `k.commonsense` exists).
 - `docs/worlds/README.md` explains the files, `index.json` fields and `vocab.json`. `.nojekyll` kept.
 - Numbers: 0 worlds; catalog version changes with README (it hashes the folder); npm test 11 pass, 1 skipped.
+
+## T4 (2026-11-13): k.commonsense core
+
+- `docs/worlds/k.commonsense/schema.sop` (module `k.commonsense`, exports `thing`, `placed`; version 1 as a header line,
+  Q3): `k.commonsense.thing` (shared, closed; `name` identity, `at`/`can`/`used_for`/`made_of` many, `size` enum
+  tiny..huge, `usually_count` integer); `k.commonsense.placed` (`thing`, `at`, `scene`) for what an application puts in
+  a scene; 4 soft denies: water thing in the sky, water thing on grass (each with `?thing` and `?place` in `why`), a
+  thing that cannot fly and is not usually in the sky placed in the sky (`not=` twice), more than `usually_count` in one
+  scene (`core.calc fn=count over=`, with `core.select=first` on the anchor so there is one issue per scene and thing,
+  not one per placement); 5 schema words. Matrix ids fully qualified (Q4).
+- `shards/core.sop`: 15 things + 15 `core.word` (forms such as fishes, airplane), every wire `core.source="hand-core 1"`.
+- `sources/hand-core/SOURCE.md`; license CC0-1.0 provisional (Q2). `WORLD.md`.
+- `tests/k.commonsense.questions.jsonl`: 20 lines (10 queries, 10 statements with their soft issues), run by
+  `tests/questions.test.mjs` on a fork each; every statement must be accepted. The page example now runs too.
+- Numbers: schema 37 wires, 5,095 bytes, load 18 ms; shard 30 wires, 3,963 bytes, load 10 ms; 0 warnings, 0 issues;
+  vocab 45 words; npm test 33 pass.
+- Found: an answer resting on a knowledge wire with a standing issue is `conflicting` (S50), so a scene with a fish in the
+  sky makes "where does a fish live" conflicting (noted in WORLD.md). Order-dependent merge: a fact of a subtype told
+  after a fact of its parent type with the same identity is not merged (two wires), told before it is (one wire); so
+  `k.objects.object` does not extend `k.commonsense.thing` (joined by name instead).
