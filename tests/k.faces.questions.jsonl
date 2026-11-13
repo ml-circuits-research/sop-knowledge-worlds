@@ -1,0 +1,12 @@
+{"id":"fa-1","ask":"which mouths are there","query":{"type":"k.faces.variant","where":{"slot":"mouth","style":"plain"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["smile","\"big smile\"","neutral","sad","open","talking","small","wide","smirk","\"full lips\"","grin","\"tongue out\"","frown","grille"]}}
+{"id":"fa-2","ask":"how many kinds of eyes are there","query":{"type":"k.faces.variant","where":{"slot":"eyes","style":"plain"},"mode":"count"},"expect":{"status":"supported","value":"11"}}
+{"id":"fa-3","ask":"which eyebrows are thick","query":{"type":"k.faces.variant","where":{"slot":"eyebrows","feel":"thick"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["thick","\"thick arched\"","bushy"]}}
+{"id":"fa-4","ask":"which head is long","query":{"type":"k.faces.variant","where":{"slot":"head","shape":"long"},"seek":"name"},"expect":{"status":"supported","value":"long"}}
+{"id":"fa-5","ask":"which hair is a ponytail","query":{"type":"k.faces.variant","where":{"kind":"ponytail"},"seek":"slot"},"expect":{"status":"supported","value":"hair_back"}}
+{"id":"fa-6","ask":"which slots come in pairs","query":{"type":"k.faces.slot","where":{"style":"plain","mirror":"true"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["ears","cheeks","eyes","eyebrows","earrings"]}}
+{"id":"fa-7","ask":"what mouth does the old man have","query":{"type":"k.faces.preset","where":{"name":"\"old man\""},"seek":"mouth"},"expect":{"status":"supported","value":"neutral"}}
+{"id":"fa-8","ask":"which mouth does a sad face switch to","query":{"type":"k.faces.expression","where":{"name":"sad"},"seek":"mouth"},"expect":{"status":"supported","value":"sad"}}
+{"id":"fa-9","ask":"which skin colours do people have","query":{"type":"k.faces.colour","where":{"of":"skin","natural":"true"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["pale","light","tan","olive","brown","\"dark brown\""]}}
+{"id":"fa-10","ask":"what is the rgb of blond hair","query":{"type":"k.faces.colour","where":{"of":"hair","name":"blond"},"seek":"rgb"},"expect":{"status":"supported","value":"\"#E8C46A\""}}
+{"id":"fa-11","ask":"which parts does the round eye have","query":{"type":"k.faces.part","where":{"slot":"eyes","of":"round"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["white","iris","pupil"]}}
+{"id":"fa-12","ask":"which beards fit an old face","query":{"type":"k.faces.variant","where":{"slot":"beard","age":"old"},"seek":"name"},"expect":{"status":"supported","value":"long"}}

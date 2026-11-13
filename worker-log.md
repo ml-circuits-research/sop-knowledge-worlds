@@ -1000,3 +1000,53 @@ with the new objects (its test passes; no browser run this round).
 - Numbers: `things-2` 392 wires / 51,123 bytes, `places-2` 73 / 11,397, `land-2` 44 / 6,096, `food-2` 57 / 8,458.
   **k.objects: 2,028 objects** (145 hand-written), 311 shards, 298,910 wires, 36,113,498 bytes. Catalog: 10 worlds,
   659 shards, 332,236 wires, 42,477,002 bytes, vocab 18,257 words; 0 errors, 0 warnings. npm test 2,242 pass, 0 fail.
+
+## R6.1, R6.2, R6.4 (2026-11-13): `k.faces`, schema and hand-written core; the questions
+
+- **Order.** By the coordinator's instruction Round 6 comes after R5.1 and R5.3 batch 1; the rest of Round 5
+  (R5.2, R5.3 batches 2 to 4, R5.4) follows it.
+- **Schema** (`docs/worlds/k.faces/schema.sop`, module `k.faces` version 1, no imports): `k.faces.slot` (identity
+  style + name: anchor box, draw order `z`, `mirror`, `optional`), `k.faces.variant` (identity slot + name: `style`,
+  and the features `shape`, `size`, `length`, `feel` (many), `age` (many), `kind`, `named`), `k.faces.part` and
+  `k.faces.point` (the keys of `k.objects.part` and `k.objects.point`, plus `tint`), `k.faces.colour` (of + name:
+  `rgb`, `shade`, `natural`), `k.faces.preset`, `k.faces.expression`.
+- **Decisions that are mine:**
+  - Parts are in the frame of the face (0 to 100), not in a frame of their slot: a face is then just the parts of
+    the chosen variants in the draw order of the slots, drawn by the `k.objects` part renderer with no transform;
+    the test checks that every part lies inside the box of its slot. Resizing a part is a scale about its box.
+  - Slots belong to a style (identity `style` + `name`), because an imported style places its parts elsewhere.
+  - `tint` on a part says which face colour fills it (skin, hair, eyes, clothes, and `_shade` for the darker tone:
+    a nose is drawn in the shade of the skin, so it shows on every skin). Hats, glasses and earrings keep their own
+    colours.
+  - `kind` (a free word: ponytail, goatee, "top hat") was added to the features asked: the enumerations alone
+    cannot say what a hat or a beard is. The enumerations are exactly the reviewer's.
+  - A wink needs one eye only: `one_eye` on the expression (the eye on the viewer's right). Talking is `mouth` +
+    `mouth_alt`.
+  - The preset's colour keys are `skin`, `hair_colour`, `eye_colour`, `clothes` (`eyes` is the slot key).
+- **Core** (style `plain`, `tools/faces-core.mjs`, committed: the coordinates are hand-chosen, curved outlines are
+  sampled from an ellipse by the script, so the shards say `script: tools/faces-core.mjs`): 16 slots, **134
+  variants** (head 7, ears 6, neck 6, shoulders 8, hair_back 8, hair_front 12, eyebrows 9, eyes 11, nose 8, mouth
+  14, cheeks 7, beard 8, moustache 6, glasses 8, hat 9, earrings 7), 45 colours (6 natural skins, 8 natural hair
+  colours, 7 natural eye colours), **13 presets** (child, girl, boy, woman, man, old woman, old man, bearded man,
+  woman with curly hair, robot, alien, clown, queen), 7 expressions.
+- **Renderer** `tools/render-faces.mjs` (uses `renderPart` of `tools/render-svg.mjs`): `composeFace`, `presetFace`,
+  `randomFace` (seeded), previews in `docs/worlds/k.faces/preview/` (134 variants alone with the slot box dashed, 13
+  presets, 7 expressions on the preset woman, 40 random faces, `index.html`, `faces.json`): 196 files.
+- **Looked at:** one sheet of the 13 presets and the 7 expressions (180 px each); one sheet of the 40 random faces
+  (180 px); two sheets with all 134 variants alone (130 px, 70 and 64). Verdict: every preset and every one of the
+  40 random combinations reads as a face; ears, hair, glasses, beard and hat sit where they should on all seven head
+  shapes. Weak points seen: a fringe covers the eyebrows; the `grin` looks like the robot's `grille`; a red mouth
+  has little contrast on a red beard; on the box head the pointed and round ears look stuck on; the `long curly`
+  hair shows only its side curls behind a wide head. Nothing was redrawn after the look (two box sizes were
+  corrected before it, by the script's check). **Not looked at:** every variant on every head shape (only what the
+  40 random faces and the presets happen to combine); the expressions on presets other than `woman`; sizes below 130 px.
+- **R6.4** (`tests/k.faces.questions.jsonl`, 12 questions, and `tests/k.faces.test.mjs`): "which mouths are there"
+  (a list query); "a long face with small eyes and thick eyebrows" → `findVariants` (one sopworld query per wanted
+  feature, variants ranked by the number of features matched: `thick arched` before `thick`, `bushy`, `arched`,
+  `raised` for thick + arched); "what is the difference between preset A and B" → `presetDifference` (woman / old
+  woman: hair colour, glasses, cheeks, …).
+- Numbers: k.faces 19 shards, 1,368 wires, 211,471 bytes (largest shard 228 wires, 34,888 bytes). Catalog: 11
+  worlds, 678 shards, 333,604 wires, 42,688,473 bytes, vocab 18,381 words; 0 errors, 0 warnings. npm test 2,266
+  pass, 0 fail.
+- Still to do in Round 6: R6.3 (import; the styles are now JSON definitions in `dicebear/styles`, not in
+  `dicebear/dicebear`) and the faces in the gallery.
