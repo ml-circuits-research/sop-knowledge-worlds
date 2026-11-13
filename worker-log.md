@@ -82,3 +82,38 @@ One entry per task: what was done, numbers (wires, shards, bytes, load time, war
   vehicles 110 / 14,774 / 7; total 392 wires, 54,985 bytes; 0 warnings, 0 errors. Catalog: 2 worlds, 8 shards, 238
   vocab words. npm test 80 pass.
 - Questions Q5-Q8.
+
+## T6 (2026-11-13): Round 1 report
+
+**Numbers.** 2 worlds, 2 schemas (69 matrix wires), 8 shards, 422 fact wires, 58,948 bytes of shards; 0 errors, 0
+warnings, 0 standing issues. Load: `k.commonsense` complete (schema + shard) 22 ms, `k.objects` complete (both schemas,
+all 8 shards) 49 ms, single shards 2-10 ms. Catalog: 238 vocab words. npm test: 80 pass (validation, catalog,
+page example, 34 world questions, render test for 30 objects).
+
+**What worked.**
+- Modules exactly as PLAN.md §2 says: a schema in the `library`, `use` or `imports=`, exports limiting reads; types
+  `shared=true` so an application's facts in its own namespace join knowledge facts by value.
+- Soft rules as `core.deny … soft=true` with variables in `why`; a count rule with `core.calc fn=count over=` and
+  `core.select=first` on the anchor gives one issue per scene and thing. Nothing is refused.
+- `query` answers the test questions directly (`value`, `values` for many keys, `list`, `count`, `check`).
+- Drawable parts: a renderer with no knowledge of the objects draws all 30 from the facts (see `preview/`).
+- The page's JS example is run by the tests, so it cannot drift from the sopworld API.
+
+**What the schema could not say, or only with a workaround.**
+- A world's schema version: `core.module` does not read `version=` (warning) → `# version:` header line (Q3).
+- Short matrix ids clash with the application's ids under `imports=` (ids unchanged) → fully qualified ids (Q4).
+- A subtype across modules (`k.objects.object extends k.commonsense.thing`) merges order-dependently → no `extends`,
+  joined by name (Q8).
+- "A water thing placed in the sky or on grass": no "one of" in a pattern → two soft denies with a `core.check fn=eq`
+  each (no new syntax needed, but the rule is written twice).
+- Orientation of triangles and arcs is not given by a box → `pointing` / `opens` keys (Q5). Repeated parts → unique
+  names plus `kind` (Q6). Points name their part by reference (Q7).
+- An answer that rests on a knowledge wire with a standing issue is `conflicting` (S50): once a fish is in the sky,
+  "where does a fish live" is conflicting. Applications should ask knowledge questions on a fork without the scene,
+  or read `alternatives`.
+- The catalog version is a content hash, not a git sha (Q1). The hand-core license is provisionally CC0-1.0 (Q2).
+
+**Not done in Round 1 (not asked in T1-T6):** `docs/worlds/LICENSES.md` (PLAN.md §5) and a CI workflow (M0); both are
+small and can come with Round 2. `CHANGELOG.md` will start with the first breaking schema change.
+
+**Questions for the reviewer:** Q1-Q8 in `questions.md`.
