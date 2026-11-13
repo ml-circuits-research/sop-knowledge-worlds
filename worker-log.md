@@ -264,3 +264,13 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - part-names.tsv: rows for 592 objects; **1,767 parts named, 708 marked detail** (measured). Scenes (cityscape, national park, desert) get only a sun or
   a sky; weather and flowers name well (sun, cloud, rays, stem, petals).
 - Not recognisable: foggy, fog (plain grey areas). 8 so far of 709.
+
+## R2.7 batch 6 (2026-11-13): the last 102 objects looked at (811 of 811)
+
+- Sport, clocks, tools, weapons, air, rail and road vehicles, ships, pens.
+- **R2.7 done for every imported object.** part-names.tsv: rows for 680 of 811 objects; **2,027 of 10,152 parts
+  named (20%), 748 more marked `kind=detail`**; 131 objects have no sure name at all (layered food, facets, scenes).
+  Vehicles name best (wheels, windows, lights, mirrors with `kind`), then animals and faces.
+- **Recognisable after conversion: 801 of 811 (98.8%)**, judged on the 320 px labelling pictures. Not recognisable:
+  spider web, gorilla, lizard, piñata, nesting dolls, brick, foggy, fog, link, parachute.
+- npm test 913 pass; 132,706 wires, 124 shards; vocab 13,269 words.

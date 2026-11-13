@@ -6,7 +6,7 @@
 
 # anchor
 @k.objects.u2693 k.objects.object name=anchor core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u2693.p1 k.objects.part of=anchor name=part1 shape=polygon x=6.6 y=3.3 w=86.8 h=93.2 z=1 colour=grey rgb="#82AEC0" core.source="noto-emoji 99701e0"
+@k.objects.u2693.p1 k.objects.part of=anchor name=anchor named=model shape=polygon x=6.6 y=3.3 w=86.8 h=93.2 z=1 colour=grey rgb="#82AEC0" core.source="noto-emoji 99701e0"
 @k.objects.u2693.p1.1 k.objects.point part=$k.objects.u2693.p1 n=1 x=93.4 y=55.5 core.source="noto-emoji 99701e0"
 @k.objects.u2693.p1.2 k.objects.point part=$k.objects.u2693.p1 n=2 x=91 y=53.7 core.source="noto-emoji 99701e0"
 @k.objects.u2693.p1.3 k.objects.point part=$k.objects.u2693.p1 n=3 x=77.9 y=66.3 core.source="noto-emoji 99701e0"
@@ -323,7 +323,7 @@
 
 # sailboat
 @k.objects.u26f5 k.objects.object name=sailboat core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u26f5.p1 k.objects.part of=sailboat name=part1 shape=line x=53 y=4.3 w=5.8 h=83.4 z=1 colour=grey rgb="#82AEC0" core.source="noto-emoji 99701e0"
+@k.objects.u26f5.p1 k.objects.part of=sailboat name=mast named=model shape=line x=53 y=4.3 w=5.8 h=83.4 z=1 colour=grey rgb="#82AEC0" core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p1.1 k.objects.point part=$k.objects.u26f5.p1 n=1 x=58.8 y=4.3 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p1.2 k.objects.point part=$k.objects.u26f5.p1 n=2 x=53 y=87.7 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p2 k.objects.part of=sailboat name=part2 shape=polygon x=9.2 y=3.1 w=48.7 h=77.5 z=2 colour=red rgb="#FF7043" core.source="noto-emoji 99701e0"
@@ -405,7 +405,7 @@
 @k.objects.u26f5.p11.5 k.objects.point part=$k.objects.u26f5.p11 n=5 x=66.9 y=77.5 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p11.6 k.objects.point part=$k.objects.u26f5.p11 n=6 x=68.6 y=79.2 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p11.7 k.objects.point part=$k.objects.u26f5.p11 n=7 x=70.3 y=85.8 core.source="noto-emoji 99701e0"
-@k.objects.u26f5.p12 k.objects.part of=sailboat name=part12 shape=polygon x=8.2 y=80.2 w=84.8 h=16.7 z=12 colour=white rgb="#B9E4EA" core.source="noto-emoji 99701e0"
+@k.objects.u26f5.p12 k.objects.part of=sailboat name=hull named=model shape=polygon x=8.2 y=80.2 w=84.8 h=16.7 z=12 colour=white rgb="#B9E4EA" core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p12.1 k.objects.point part=$k.objects.u26f5.p12 n=1 x=19 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p12.2 k.objects.point part=$k.objects.u26f5.p12 n=2 x=16.9 y=96.5 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p12.3 k.objects.point part=$k.objects.u26f5.p12 n=3 x=15 y=95.4 core.source="noto-emoji 99701e0"
@@ -586,7 +586,7 @@
 
 # speedboat
 @k.objects.u1f6a4 k.objects.object name=speedboat core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f6a4.p1 k.objects.part of=speedboat name=part1 shape=polygon x=82 y=60.8 w=13.3 h=13.8 z=1 colour=grey rgb="#455A64" core.source="noto-emoji 99701e0"
+@k.objects.u1f6a4.p1 k.objects.part of=speedboat name=motor named=model shape=polygon x=82 y=60.8 w=13.3 h=13.8 z=1 colour=grey rgb="#455A64" core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p1.1 k.objects.point part=$k.objects.u1f6a4.p1 n=1 x=92.2 y=74.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p1.2 k.objects.point part=$k.objects.u1f6a4.p1 n=2 x=82 y=70.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p1.3 k.objects.point part=$k.objects.u1f6a4.p1 n=3 x=82.9 y=62.8 core.source="noto-emoji 99701e0"
@@ -624,7 +624,7 @@
 @k.objects.u1f6a4.p3.8 k.objects.point part=$k.objects.u1f6a4.p3 n=8 x=34.9 y=74 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p3.9 k.objects.point part=$k.objects.u1f6a4.p3 n=9 x=62.2 y=77.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p3.10 k.objects.point part=$k.objects.u1f6a4.p3 n=10 x=97.5 y=80.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a4.p4 k.objects.part of=speedboat name=part4 shape=polygon x=9.9 y=72.3 w=86.1 h=19.9 z=4 colour=red rgb="#A12524" core.source="noto-emoji 99701e0"
+@k.objects.u1f6a4.p4 k.objects.part of=speedboat name=part4 kind=detail shape=polygon x=9.9 y=72.3 w=86.1 h=19.9 z=4 colour=red rgb="#A12524" core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p4.1 k.objects.point part=$k.objects.u1f6a4.p4 n=1 x=61.3 y=86.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p4.2 k.objects.point part=$k.objects.u1f6a4.p4 n=2 x=66.9 y=81.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p4.3 k.objects.point part=$k.objects.u1f6a4.p4 n=3 x=56 y=81.2 core.source="noto-emoji 99701e0"
@@ -750,7 +750,7 @@
 @k.objects.u1f6f3.p6.4 k.objects.point part=$k.objects.u1f6f3.p6 n=4 x=86.8 y=38.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p6.5 k.objects.point part=$k.objects.u1f6f3.p6 n=5 x=86.4 y=48.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p6.6 k.objects.point part=$k.objects.u1f6f3.p6 n=6 x=92.3 y=49.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f3.p7 k.objects.part of="passenger ship" name=part7 shape=polygon x=74.6 y=21.3 w=12.7 h=16 z=7 colour=red rgb="#F44336" core.source="noto-emoji 99701e0"
+@k.objects.u1f6f3.p7 k.objects.part of="passenger ship" name=funnel named=model shape=polygon x=74.6 y=21.3 w=12.7 h=16 z=7 colour=red rgb="#F44336" core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p7.1 k.objects.point part=$k.objects.u1f6f3.p7 n=1 x=80.2 y=21.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p7.2 k.objects.point part=$k.objects.u1f6f3.p7 n=2 x=86.9 y=22.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p7.3 k.objects.point part=$k.objects.u1f6f3.p7 n=3 x=87.3 y=22.8 core.source="noto-emoji 99701e0"
@@ -835,7 +835,7 @@
 @k.objects.u1f6f3.p13.15 k.objects.point part=$k.objects.u1f6f3.p13 n=15 x=96.9 y=66 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p13.16 k.objects.point part=$k.objects.u1f6f3.p13 n=16 x=81.2 y=65.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p13.17 k.objects.point part=$k.objects.u1f6f3.p13 n=17 x=78.8 y=66.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f3.p14 k.objects.part of="passenger ship" name=part14 shape=polygon x=4.8 y=73.1 w=91.5 h=23.4 z=14 colour=blue rgb="#2167A1" core.source="noto-emoji 99701e0"
+@k.objects.u1f6f3.p14 k.objects.part of="passenger ship" name=hull named=model shape=polygon x=4.8 y=73.1 w=91.5 h=23.4 z=14 colour=blue rgb="#2167A1" core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p14.1 k.objects.point part=$k.objects.u1f6f3.p14 n=1 x=4.8 y=73.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p14.2 k.objects.point part=$k.objects.u1f6f3.p14 n=2 x=6.3 y=81.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p14.3 k.objects.point part=$k.objects.u1f6f3.p14 n=3 x=9.2 y=89.8 core.source="noto-emoji 99701e0"
@@ -943,7 +943,7 @@
 @k.objects.u26f4.p13.7 k.objects.point part=$k.objects.u26f4.p13 n=7 x=48.9 y=13 core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p13.8 k.objects.point part=$k.objects.u26f4.p13 n=8 x=66.2 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p13.9 k.objects.point part=$k.objects.u26f4.p13 n=9 x=66.7 y=18.3 core.source="noto-emoji 99701e0"
-@k.objects.u26f4.p14 k.objects.part of=ferry name=part14 shape=polygon x=3.1 y=62.8 w=93.8 h=34.1 z=14 colour=blue rgb="#2167A1" core.source="noto-emoji 99701e0"
+@k.objects.u26f4.p14 k.objects.part of=ferry name=hull named=model shape=polygon x=3.1 y=62.8 w=93.8 h=34.1 z=14 colour=blue rgb="#2167A1" core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p14.1 k.objects.point part=$k.objects.u26f4.p14 n=1 x=4.6 y=62.8 core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p14.2 k.objects.point part=$k.objects.u26f4.p14 n=2 x=3.6 y=63.1 core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p14.3 k.objects.point part=$k.objects.u26f4.p14 n=3 x=3.1 y=63.9 core.source="noto-emoji 99701e0"
