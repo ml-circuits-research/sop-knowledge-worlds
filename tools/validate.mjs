@@ -47,6 +47,8 @@ export function validateWorlds(root = WORLDS_DIR) {
       for (const w of wires) {
         if (isMatrix(w)) errors.push(`${shard.path}: @${w.id} is a matrix wire (${w.type}); shards hold facts only`);
         else if (!w.attrs['core.source']) errors.push(`${shard.path}: @${w.id} has no core.source`);
+        // An open world takes a fact of a type no schema declares; here every fact's type must be declared.
+        if (!isMatrix(w) && !w.type.startsWith('core.') && !base.world.schema(w.type)) errors.push(`${shard.path}: @${w.id} is of the type ${w.type}, which no schema declares`);
       }
       if (wires.length > MAX_WIRES) errors.push(`${shard.path}: ${wires.length} wires, more than ${MAX_WIRES}`);
       if (shard.bytes > MAX_BYTES) errors.push(`${shard.path}: ${shard.bytes} bytes, more than ${MAX_BYTES}`);

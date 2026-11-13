@@ -50,6 +50,7 @@ test('refusals, a missing source, a missing header and a duplicate across shards
     'k.toy/shards/a.sop': `${head}@k.toy.a k.toy.item name=a core.source="test 1"\n@k.toy.b k.toy.item name=b\n`,
     'k.toy/shards/b.sop': `${head}@k.toy.a k.toy.item name=c core.source="test 1"\n`,
     'k.toy/shards/c.sop': '@k.toy.d k.toy.item name=d name=e core.source="test 1"\n',
+    'k.toy/shards/d.sop': `${head}@k.toy.e k.toy.thing name=e core.source="test 1"\n`,
   });
   try {
     const r = validateWorlds(root);
@@ -59,6 +60,7 @@ test('refusals, a missing source, a missing header and a duplicate across shards
     assert.match(all, /with the other shards/);
     assert.match(all, /c\.sop: the header has no "# sources:" line/);
     assert.match(all, /c\.sop: cardinality/);
+    assert.match(all, /d\.sop: @k\.toy\.e is of the type k\.toy\.thing, which no schema declares/);
   } finally { rmSync(root, { recursive: true }); }
 });
 

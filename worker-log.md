@@ -2617,3 +2617,21 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - **Looked at:** the detector's table in full; the 22 schemas by grep of the slot declarations, not line by
   line. **Not looked at:** reuse between shards (same facts in two worlds): `k.attributes.same` and the first
   worker's test "no key for the same thing in two worlds" cover that side.
+
+## Defect found and closed (2026-11-14, second worker): `k.attributes.same` was not declared in the schema
+
+- The R10.3 commit (a4e2e46) published 27 shards of `k.attributes.same` (3,202 facts) but not the type: the
+  change of `docs/worlds/k.attributes/schema.sop` is not in any commit (lost in a rebase on R11.1, which took
+  that schema from the other side). sopworld takes facts of an undeclared type in an open world without an error
+  or a warning, so the build and npm test passed; the catalog listed no export `k.attributes.same`, and the test
+  "a word for every key" did not see its keys.
+- **Fixed:** the type and its six slots (name, sense, only, in, unsure, by_word) declared, exported; the key-word
+  block written again (`tools/key-words.mjs`, 448 wires, were 443 + 5 new). **New check:** `tools/validate.mjs`
+  refuses a fact whose type no schema declares (core types aside), with a fixture test. Run on the whole
+  catalog it found only these 3,202 facts.
+- Regenerated: joins (3,130 names, 68 clashes: one more than the log of R10.3 said, from R11.1's changes; the
+  shards were already at 68), catalog, COVERAGE.md (`k.attributes` reaches 1,027 common things through the
+  vocabulary, was 744: the names of the joins are now words of a known type), ASPECTS.md unchanged.
+- New file **`docs/lessons.md`** (standing direction): a few lines per item on what it taught about reuse.
+- Numbers: catalog 22 worlds, 903 shards, vocab 23,293 words; 0 errors, 0 warnings. npm test 2,690: 2,684 pass,
+  6 skipped, 0 fail.

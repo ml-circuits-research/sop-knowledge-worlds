@@ -46,8 +46,8 @@ are found in the worlds, and the usual values of common things that no other wor
 
 - `k.attributes.same` (identity `name`, `sense`): for the 3,130 names that facts of more than one world carry,
   the sense of the name and the types (`in`) whose facts with that name are about that one thing. `only=true`
-  (3,063 names): one sense in the whole catalog, so a host may treat the thing as one thing in every view (duck:
-  `k.objects.object`, `k.animals.animal`, `k.scenes.thing`, `k.attributes.drawn`). `only=false` (67 names, each
+  (3,062 names): one sense in the whole catalog, so a host may treat the thing as one thing in every view (duck:
+  `k.objects.object`, `k.animals.animal`, `k.scenes.thing`, `k.attributes.drawn`). `only=false` (68 names, each
   sense its own fact): orange is a food, a colour and a river; the drawing `crane` is the machine and the
   drawing `kiwi` the fruit, while `k.animals` has the birds; turkey is an animal, a food and a country.
   `by_word` lists the types keyed by the word whatever it means (`k.words.sense`, `k.parts`).

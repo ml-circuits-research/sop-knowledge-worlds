@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -56,6 +56,19 @@
 @k.attributes.drawn.name core.slot of=k.attributes.drawn key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
 @k.attributes.drawn.drawn_shade core.slot of=k.attributes.drawn key=drawn_shade many=true kind=atom kind=string core.source="hand-core 1"
+
+# One name, one thing across worlds (computed by tools/joins.mjs): for a name that facts of more than one world
+# carry, its `sense` and the types (`in`, many) whose facts with that name are about that one thing. `only=true`:
+# the name has one sense in the whole catalog; `only=false`: it has several, each sense with its own fact, and a
+# host must not join facts across them. `unsure` (many): types whose fact gives no sense by itself; `by_word`
+# (many): types keyed by the word whatever it means (k.words.sense, k.parts), whose gloss says which sense.
+@k.attributes.same core.type of=k.attributes.same shared=true closed=true core.source="hand-core 1"
+@k.attributes.same.name core.slot of=k.attributes.same key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.same.sense core.slot of=k.attributes.same key=sense id=true required=true enum=animal enum=food enum=plant enum=person enum="body part" enum=clothing enum=colour enum=shape enum=place enum=time enum="body in space" enum=thing core.source="hand-core 1"
+@k.attributes.same.only core.slot of=k.attributes.same key=only required=true kind=boolean core.source="hand-core 1"
+@k.attributes.same.in core.slot of=k.attributes.same key=in many=true kind=atom core.source="hand-core 1"
+@k.attributes.same.unsure core.slot of=k.attributes.same key=unsure many=true kind=atom core.source="hand-core 1"
+@k.attributes.same.by_word core.slot of=k.attributes.same key=by_word many=true kind=atom core.source="hand-core 1"
 
 # An aspect: a side of a thing that one kind of view can show. `shown_in` (many) names the views that show it
 # (picture, diagram, chart, map, document, card), where that is plain.
@@ -108,6 +121,11 @@
 @k.attributes.word.key.thing.can core.word text=do means=k.attributes.thing.can core.source="hand-core 1"
 @k.attributes.word.key.thing.named core.word text=named means=k.attributes.thing.named core.source="hand-core 1"
 @k.attributes.word.key.drawn.drawn_shade core.word text="drawn shade" means=k.attributes.drawn.drawn_shade core.source="hand-core 1"
+@k.attributes.word.key.same.sense core.word text=sense means=k.attributes.same.sense core.source="hand-core 1"
+@k.attributes.word.key.same.only core.word text=only means=k.attributes.same.only core.source="hand-core 1"
+@k.attributes.word.key.same.in core.word text=in means=k.attributes.same.in core.source="hand-core 1"
+@k.attributes.word.key.same.unsure core.word text=unsure means=k.attributes.same.unsure core.source="hand-core 1"
+@k.attributes.word.key.same.by_word core.word text="by word" means=k.attributes.same.by_word core.source="hand-core 1"
 @k.attributes.word.key.aspect.about core.word text=about means=k.attributes.aspect.about core.source="hand-core 1"
 @k.attributes.word.key.aspect.shown_in core.word text="shown in" means=k.attributes.aspect.shown_in core.source="hand-core 1"
 @k.attributes.word.key.family.about core.word text=about means=k.attributes.family.about core.source="hand-core 1"
