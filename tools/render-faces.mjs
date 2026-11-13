@@ -9,7 +9,7 @@
 // slot in the draw order of the slots; a slot with mirror=true is drawn twice, the second time mirrored at x = 50.
 import { mkdirSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { fullWorld, WORLDS_DIR } from './lib/worlds.mjs';
+import { fullWorld, scanWorlds, readHeader, WORLDS_DIR } from './lib/worlds.mjs';
 import { renderPart, fileOf } from './render-svg.mjs';
 
 const tok = (t) => (t !== undefined && t.startsWith('"') ? JSON.parse(t) : t);
@@ -177,8 +177,14 @@ export function renderAll(world) {
   files['index.html'] = `<!DOCTYPE html>\n<html lang="en">\n<head><meta charset="utf-8"><title>k.faces previews</title>\n<style>body{font:14px system-ui,sans-serif;margin:2rem}figure{display:inline-block;margin:.5rem;text-align:center;vertical-align:top}img{border:1px solid #ddd}</style></head>\n<body>\n<h1>k.faces previews</h1>\n<p>Drawn by tools/render-faces.mjs from the facts alone. ${variants.length} variants, ${idx.presets.length} presets.</p>\n`
     + `<h2>Presets</h2>\n${idx.presets.map((p) => fig(`preset-${fileOf(p.name)}.svg`, p.name)).join('\n')}\n<h2>Expressions (on the preset ${esc(EXPRESSION_PRESET)})</h2>\n${idx.expressions.map((e) => fig(`expression-${fileOf(e.name)}.svg`, e.name)).join('\n')}\n`
     + `<h2>${RANDOM_FACES} random faces (seeds 1 to ${RANDOM_FACES})</h2>\n${randoms.map((r) => fig(r.file, `seed ${r.seed}`)).join('\n')}\n${others.map((style) => `<h2>${RANDOM_FACES_OTHER} random faces of the style ${esc(style)}</h2>\n${otherRandoms.filter((r) => r.style === style).map((r) => fig(r.file, `seed ${r.seed}`)).join('\n')}`).join('\n')}\n${sections}\n</body>\n</html>\n`;
+  // The licence of a style: that of its shards.
+  const licence = new Map();
+  for (const shard of scanWorlds().find((w) => w.id === 'k.faces')?.shards ?? []) {
+    const m = / k\.faces\.variant slot=\S+ name=(?:"[^"]*"|\S+) style=("[^"]*"|\S+)/.exec(shard.text);
+    if (m) licence.set(tok(m[1]), readHeader(shard.text).license?.[0] ?? '');
+  }
   const list = {
-    variants: variants.map((v) => ({ style: v.style, slot: v.slot, name: v.name, file: variantFile(v), source: v.source, ...(v.named ? { named: v.named } : {}), features: v.features })),
+    variants: variants.map((v) => ({ style: v.style, slot: v.slot, name: v.name, file: variantFile(v), source: v.source, license: licence.get(v.style) ?? '', ...(v.named ? { named: v.named } : {}), features: v.features })),
     presets: idx.presets.map((p) => ({ name: p.name, style: p.style, file: `preset-${fileOf(p.name)}.svg` })),
     expressions: idx.expressions.map((e) => ({ name: e.name, style: e.style, file: `expression-${fileOf(e.name)}.svg` })),
     random: [...randoms.map((r) => ({ file: r.file, seed: r.seed, style: 'plain' })), ...otherRandoms],

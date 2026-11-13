@@ -39,3 +39,27 @@ test('the gallery page loads that list, shows lazy images, and its search finds 
   assert.ok(one.includes('src="worlds/k.objects/preview/house.svg"') && one.includes('hand-core 1') && one.includes('CC0-1.0'));
   assert.ok(readFileSync(join(REPO, 'docs/index.html'), 'utf8').includes('href="gallery.html"'));
 });
+
+// docs/faces.html and the list it shows (docs/worlds/k.faces/preview/faces.json, written by tools/render-faces.mjs).
+test('the faces page loads faces.json and filters the variants by style, slot, name and features', () => {
+  const dir = join(WORLDS_DIR, 'k.faces', 'preview');
+  const faces = JSON.parse(readFileSync(join(dir, 'faces.json'), 'utf8'));
+  const page = readFileSync(join(REPO, 'docs/faces.html'), 'utf8');
+  assert.ok(page.includes("'worlds/k.faces/preview/faces.json'") && page.includes('loading="lazy"') && page.includes('type="search"'));
+  for (const x of [...faces.variants, ...faces.presets, ...faces.expressions, ...faces.random]) assert.ok(existsSync(join(dir, x.file)), x.file);
+  for (const v of faces.variants) { assert.ok(v.style && v.slot && v.name && v.source, v.file); assert.ok(['CC0-1.0', 'CC-BY-4.0'].includes(v.license), `${v.name}: ${v.license}`); }
+  const script = /<script>([\s\S]*?)<\/script>/.exec(page)[1];
+  const { filterVariants, facesOf, cell, featureText } = new Function(`${script}\nreturn { filterVariants, facesOf, cell, featureText };`)();
+  assert.deepEqual(filterVariants(faces.variants, 'curly', 'plain', 'hair_back').map((v) => v.name), ['afro', 'long curly']);
+  assert.deepEqual(filterVariants(faces.variants, 'top hat', '', '').map((v) => v.name), ['top hat']);
+  assert.equal(filterVariants(faces.variants, '', 'cutouts', '').length, 38);
+  assert.ok(filterVariants(faces.variants, '', '', 'mouth').length > 40);
+  const afro = faces.variants.find((v) => v.style === 'plain' && v.name === 'afro');
+  assert.equal(featureText(afro), 'size large, feel curly, kind afro');
+  const one = cell(afro);
+  assert.ok(one.includes('src="worlds/k.faces/preview/variant-plain-hair_back-afro.svg"') && one.includes('hair_back') && one.includes('hand-core 1') && one.includes('CC0-1.0'));
+  assert.ok(cell(faces.variants.find((v) => v.name === 'personas walrus')).includes('named by a model'));
+  assert.equal(facesOf(faces, 'plain').length, 13 + 7 + 40);
+  assert.equal(facesOf(faces, 'micah').length, 12);
+  assert.ok(html.includes('href="faces.html"') && readFileSync(join(REPO, 'docs/index.html'), 'utf8').includes('href="faces.html"'));
+});

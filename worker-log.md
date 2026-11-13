@@ -1097,3 +1097,26 @@ with the new objects (its test passes; no browser run this round).
   bytes). By style: cutouts 8 shards / 523 wires, pixel-art 9 / 2,663, miniavs 9 / 646, personas 7 / 1,124, micah 12
   / 1,016, toon-head 10 / 1,082, big-smile 6 / 1,760. Catalog: 11 worlds, 739 shards, 342,418 wires, 44,153,113
   bytes, vocab 18,702 words; 0 errors, 0 warnings. npm test 2,271 pass, 0 fail.
+
+## Round 6, gallery (2026-11-13): `docs/faces.html`; Round 6 report
+
+- `docs/faces.html` (a second page, linked from `docs/gallery.html` and `docs/index.html`): whole faces first (the
+  presets, the expressions, the random faces of the chosen style), then every variant alone with its slot, its
+  features, "named by a model" where that is so, its source and the licence of its shard; search over name, slot and
+  features; filters by style and slot. It reads `worlds/k.faces/preview/faces.json` (which now carries the licence of
+  each variant). Test in `tests/gallery.test.mjs` (the page's own functions run on the real list).
+- **Not looked at:** the page in a browser (no browser run; only its script was run by the test).
+- Numbers: catalog 11 worlds, 739 shards, vocab 18,702 words; 0 errors, 0 warnings. npm test 2,272 pass, 0 fail.
+
+**Round 6 report.** Done: R6.1 schema, R6.2 core (134 variants, 16 slots, 13 presets, 7 expressions, 45 colours),
+R6.4 questions (fe214ad); R6.3 import of seven DiceBear styles, 347 variants (e8a1c8c); the faces gallery (this
+commit). k.faces: 481 variants in 8 styles, 80 shards, 10,182 wires, 1,676,111 bytes.
+**Looked at:** presets and expressions (1 sheet), 40 random plain faces (1 sheet), the 134 plain variants alone (2
+sheets), random faces of the seven imported styles (2 sheets while building, 1 sheet of the committed ones), the 347
+imported variants alone (8 sheets; the first pixel-art sheet before its beards were removed). **Not looked at:** the
+faces page in a browser; every variant on every head; imported variants larger than 120 px.
+**What SOP Lang could not say, or only with a workaround:** nothing blocked. Two things are conventions that a host
+must know and that no rule checks: that the parts of a mirrored slot are drawn twice (`mirror=true` on the slot), and
+that a preset's slot keys hold names of variants of the same style (sopworld cannot check a value against the
+identity of another type that has two identity keys; `tests/k.faces.test.mjs` does). No question written for
+them; said here.
