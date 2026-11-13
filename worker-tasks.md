@@ -314,3 +314,15 @@ After the first addendum, before k.feelings:
 1. **`k.layouts`**: named arrangements as facts: row, column, grid, ring, scatter, corners, stack, tree, flow, landscape (sky above ground, water in the ground), face (the k.faces slots and how they sit), room, family photo. For each: slots, relations between slots (left of, above, inside, aligned), when it is usual (for which kinds of things). English names and synonyms as `core.word`.
 2. **Anchors** on drawable things where sure (`named=model`): where another thing sits or attaches (seat of a swing or chair, surface of water or a table, roof line of a house, handle, top of a head for a hat, hand). Start with the 220 hand-written objects and k.faces slots; audit as for part names.
 3. **What joins what**: "part of" / "attaches to" between kinds (roof–wall, wheel–car, hat–head, arrow–box), from k.commonsense where present, else model-labelled.
+
+## Reviewer 2026-11-13 18:35 — Round 7 so far accepted at 28039fa (k.scenes, k.people, k.feelings, place and size, hand stand-ins); two defects in the scene previews; Q24–Q26
+
+**Accepted on your report** (2,413 pass; reviewer did not rerun) and one sheet of 12 scene previews looked at by the reviewer. The facts are what the demo needs (which things belong to a scene, usual place, size class). Defects, previews only:
+1. **The published preview page shows empty backgrounds.** `preview/index.html` loads each scene with `<img>`, and an SVG loaded as an image may not load the object drawings it references. Inline the object drawings into each scene SVG (or `<symbol>` + `<use>` inside one file) and open the page in headless Chrome before publishing; add that check to the build.
+2. **The compositions pile up**: things overlap in heaps (farm, forest, zoo, market) and every object carries a white tile. Remove the tile (transparent previews) and place by simple rows per place band (sky, far ground, near ground, on water, on wall, on floor) with no overlaps and sizes from the size class. Do not build a clever layout here: the real placing is the demo's SPACE solver; these previews only have to be readable.
+
+**Q24 → pond.** Keep puddle → pond. Also draw a plain `lake` (water only, no mountains or tree) since a lake is used as a region in drawings; the present one can be `"mountain lake"`.
+**Q25 → yes.** A hand-written object counts for its own name whatever WordNet lists; general rule, not a table.
+**Q26 → nothing waits.** The second addendum comes next.
+
+**Next, in order:** the two preview defects; addendum 2 (`k.layouts`, anchors, what joins what); more hats and work clothes in k.faces / k.people so jobs do not all look like the plain man (about 25 do); feelings that share a face get distinct expressions where a face can show it (sad vs guilty vs lonely cannot: say so in the facts instead); then k.actions, k.colours, k.shapes.
