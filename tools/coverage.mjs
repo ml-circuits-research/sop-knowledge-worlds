@@ -30,6 +30,9 @@
 // that it is a sense of the word and physical (under ROOTS or under physical entity). A drawing that shows a sense WordNet does not have (the
 // drawing "tablet" is a tablet computer) does not count; the word is then missing, unless the table names another
 // object that draws the sense kept.
+// Two more ways to a drawing, after the WordNet links (Round 7): the word is a core.word of an object in a
+// hand-written shard (marsh is a word of the drawing swamp), or sources/coverage/hand-links.tsv links it by hand
+// (same: a core.word of the shard words-hand; kind: a stand-in of the shard stand-ins-hand).
 // sources/coverage/not-drawable.tsv (R5.3): things that cannot be drawn as an object (materials, substances without
 // a container); they leave the list and are named on the page.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -81,7 +84,7 @@ export function plurals(word, exceptions) {
 // notLinks: the text of not-links.tsv (word, other word, reason): links the rule gives that a look at the drawing refuses.
 // senseCheck: the text of sense-check.tsv (word, drawing, verdict, note, instead, shown). notDrawable: the text of
 // not-drawable.tsv (word, reason).
-export function coverage({ files, freq, objects, notThings = '', notLinks = '', senseCheck = '', notDrawable = '', limit = LIMIT, roots = ROOTS }) {
+export function coverage({ files, freq, objects, notThings = '', notLinks = '', senseCheck = '', notDrawable = '', words = new Map(), handLinks = '', limit = LIMIT, roots = ROOTS }) {
   const rowsOf = (text) => text.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
   const undrawable = new Map(rowsOf(notDrawable).map(([word, reason]) => [word, reason]));
   const unlinked = new Set(notLinks.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').slice(0, 2).map((x) => x.trim()).join('\t')));
@@ -135,7 +138,8 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     const phys = (index.get(key) ?? []).filter(isPhysical);
     return phys.length ? phys.reduce((best, s) => ((t.get(s) ?? 0) > (t.get(best) ?? 0) ? s : best), phys[0]) : null;
   };
-  const stats = { nouns: 0, verbOrOther: 0, abstract: 0, otherKinds: 0, plurals: 0, persons: 0, offensive: 0, notThings: 0, notDrawable: 0, kept: 0, drawn: 0, otherSense: 0, otherName: 0, wrongSense: 0, bySynonym: 0, byHypernym: 0 };
+  const hand = new Map(rowsOf(handLinks).map(([word, link, drawing]) => [word, { link, drawing }]));
+  const stats = { nouns: 0, verbOrOther: 0, abstract: 0, otherKinds: 0, plurals: 0, persons: 0, offensive: 0, notThings: 0, notDrawable: 0, kept: 0, drawn: 0, otherSense: 0, otherName: 0, wrongSense: 0, bySynonym: 0, byHypernym: 0, byWord: 0, byHandSame: 0, byHandKind: 0 };
   const list = [];
   const notDrawn = [];
   const persons = [];
@@ -173,6 +177,9 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
       const hyper = synonym ? null : hypernyms(sense).map(drawn).find(Boolean);
       if (synonym) entry.link = { kind: 'synonym', word: synonym[0], drawing: synonym[1] };
       else if (hyper) entry.link = { kind: 'hypernym', word: hyper[0], drawing: hyper[1] };
+      // Round 7: a word of an object in a hand-written shard, then a link written by hand.
+      else if (byName.has(words.get(word)?.toLowerCase())) entry.link = { kind: 'word', word: words.get(word), drawing: byName.get(words.get(word).toLowerCase()) };
+      else if (hand.has(word) && byName.has(hand.get(word).drawing.toLowerCase())) entry.link = { kind: hand.get(word).link === 'same' ? 'hand synonym' : 'hand stand-in', word: hand.get(word).drawing, drawing: byName.get(hand.get(word).drawing.toLowerCase()) };
     }
     list.push(entry);
   }
@@ -183,6 +190,9 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
   stats.wrongSense = list.filter((e) => e.wrong).length;
   stats.bySynonym = list.filter((e) => e.link?.kind === 'synonym').length;
   stats.byHypernym = list.filter((e) => e.link?.kind === 'hypernym').length;
+  stats.byWord = list.filter((e) => e.link?.kind === 'word').length;
+  stats.byHandSame = list.filter((e) => e.link?.kind === 'hand synonym').length;
+  stats.byHandKind = list.filter((e) => e.link?.kind === 'hand stand-in').length;
   return { list, stats, persons, notDrawn };
 }
 
@@ -190,7 +200,7 @@ export function missingPage({ list, stats, persons, notDrawn = [] }) {
   const missing = list.filter((e) => !e.drawing);
   const pct = (n) => `${(100 * n / list.length).toFixed(1)}%`;
   const num = (n) => String(n).replace(/\B(?=(\d{3})+$)/g, ',');
-  const none = list.length - stats.drawn - stats.bySynonym - stats.byHypernym;
+  const none = list.filter((e) => !e.drawing && !e.link).length;
   const rows = missing.map((e) => `| ${e.rank} | ${e.word} | ${e.link ? `${e.link.kind} ${e.link.word}${e.link.word === e.link.drawing ? '' : ` (drawing "${e.link.drawing}")`}` : e.wrong ? `other sense: ${e.wrong.note}` : ''} | ${e.gloss.replace(/\|/g, '/')} |`);
   const undrawn = notDrawn.map((e) => `| ${e.word} | ${e.reason} | ${e.gloss.replace(/\|/g, '/')} |`);
   return `# k.objects: common things without a drawing
@@ -217,6 +227,8 @@ WordNet does not have for the word (the drawing \`tablet\` is a tablet computer)
 | with a drawing of that name | ${stats.drawn} | ${pct(stats.drawn)} |
 | without, but a WordNet synonym has a drawing | ${stats.bySynonym} | ${pct(stats.bySynonym)} |
 | without, but the direct hypernym has a drawing | ${stats.byHypernym} | ${pct(stats.byHypernym)} |
+| without, but it is another word of an object (hand-written) | ${stats.byWord + stats.byHandSame} | ${pct(stats.byWord + stats.byHandSame)} |
+| without, but a stand-in written by hand has a drawing | ${stats.byHandKind} | ${pct(stats.byHandKind)} |
 | with no drawing at all | ${none} | ${pct(none)} |
 
 ## The ${missing.length} words without a drawing of their name, most frequent first
@@ -224,7 +236,9 @@ WordNet does not have for the word (the drawing \`tablet\` is a tablet computer)
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a \`core.word\` fact of the shard \`words-wordnet\` (the word finds that drawing as
 its own); a hypernym is a \`k.objects.stand_in\` fact of the shard \`stand-ins-wordnet\` (the drawing of the kind stands
-in for the thing). The gloss is WordNet's, for the sense kept.
+in for the thing). "word" is a \`core.word\` of that object in its own shard; "hand synonym" and "hand stand-in" are
+links written by hand (\`sources/coverage/hand-links.tsv\`, the shards \`words-hand\` and \`stand-ins-hand\`). The
+gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
@@ -271,6 +285,52 @@ export function standInsShard({ list }) {
   })}\n${lines.join('\n')}\n`;
 }
 
+// Round 7: the links written by hand (every row of hand-links.tsv, also for words outside the list), as two shards.
+export const HAND_WORDS_SHARD = 'words-hand';
+export const HAND_STAND_INS_SHARD = 'stand-ins-hand';
+export function handRows(text, objects, words = new Map()) {
+  const names = new Set(objects);
+  const rows = text.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
+  const seen = new Set();
+  for (const [word, link, drawing] of rows) {
+    if (!['same', 'kind'].includes(link)) throw new Error(`hand-links.tsv: ${word}: link ${link}`);
+    if (!names.has(drawing)) throw new Error(`hand-links.tsv: ${word}: no object "${drawing}"`);
+    if (names.has(word)) throw new Error(`hand-links.tsv: ${word} is an object itself`);
+    if (seen.has(word)) throw new Error(`hand-links.tsv: ${word} twice`);
+    if (words.has(word)) throw new Error(`hand-links.tsv: ${word} is already a word of the object "${words.get(word)}"`);
+    seen.add(word);
+  }
+  return rows.sort((a, b) => (a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
+}
+export function handShards(text, objects, words = new Map()) {
+  const rows = handRows(text, objects, words);
+  const same = rows.filter((r) => r[1] === 'same').map(([word, , drawing]) => wire(`k.objects.hand.same.${seg(word)}`, 'core.word', [['text', word], ['means', drawing], ['of', 'k.objects.object.name']], 'hand-core 1'));
+  const kind = rows.filter((r) => r[1] === 'kind').map(([word, , drawing]) => wire(`k.objects.hand.kind.${seg(word)}`, 'k.objects.stand_in', [['name', word], ['drawing', drawing]], 'hand-core 1'));
+  const head = (id, about) => header({ id: `k.objects/shards/${id}`, about, sources: ['hand-core 1 (hand-written in this repository: sources/coverage/hand-links.tsv)'], license: 'CC0-1.0', script: 'tools/coverage.mjs' });
+  return {
+    [`${HAND_WORDS_SHARD}.sop`]: `${head(HAND_WORDS_SHARD, 'words that name the same thing as an object and are not found by the WordNet rule (bike is the bicycle, tombstone the headstone); written by hand, every drawing looked at.')}\n${same.join('\n')}\n`,
+    [`${HAND_STAND_INS_SHARD}.sop`]: `${head(HAND_STAND_INS_SHARD, 'things that have no drawing of their own and are drawn by the object of their kind, written by hand where the WordNet rule gives nothing (a sparrow by the bird, a villa by the house, a puddle by the pond); every drawing looked at.')}\n${kind.join('\n')}\n`,
+  };
+}
+
+// The words of the objects in the hand-written shards (core.word ... of=k.objects.object.name), lower case -> object.
+// Only hand-written shards: the words of the imported ones are the keywords of their source (bike for a lock).
+// The shards that this tool writes are left out.
+export function objectWords() {
+  const generated = new Set([WORDS_SHARD, STAND_INS_SHARD, HAND_WORDS_SHARD, HAND_STAND_INS_SHARD].map((s) => `k.objects/shards/${s}`));
+  const words = new Map();
+  const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
+  for (const shard of scanWorlds().find((w) => w.id === 'k.objects').shards) {
+    if (generated.has(shard.id) || !/^# script: none \(hand-written\)/m.test(shard.text)) continue; // imported shards hold search keywords, not names
+    for (const line of shard.text.split('\n')) {
+      if (!/^@\S+ core\.word /.test(line) || !line.includes(' of=k.objects.object.name')) continue;
+      const means = /\smeans=("[^"]*"|\S+)/.exec(line)?.[1];
+      for (const m of line.matchAll(/\stext=("[^"]*"|\S+)/g)) if (means && !words.has(tok(m[1]).toLowerCase())) words.set(tok(m[1]).toLowerCase(), tok(means));
+    }
+  }
+  return words;
+}
+
 // The names of the k.objects objects, read from the shards.
 export function objectNames() {
   const names = [];
@@ -283,7 +343,7 @@ export function run(limit = LIMIT) {
   const files = Object.fromEntries(['index.noun', 'data.noun', 'noun.exc', 'index.sense'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(join(REPO, 'sources/frequency-words/raw/en_50k.txt'), 'utf8');
   const read = (name) => { const p = join(REPO, 'sources/coverage', name); return existsSync(p) ? readFileSync(p, 'utf8') : ''; };
-  return coverage({ files, freq, objects: objectNames(), notThings: read('not-things.tsv'), notLinks: read('not-links.tsv'), senseCheck: read('sense-check.tsv'), notDrawable: read('not-drawable.tsv'), limit });
+  return coverage({ files, freq, objects: objectNames(), notThings: read('not-things.tsv'), notLinks: read('not-links.tsv'), senseCheck: read('sense-check.tsv'), notDrawable: read('not-drawable.tsv'), words: objectWords(), handLinks: read('hand-links.tsv'), limit });
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
@@ -297,6 +357,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     writeFileSync(join(WORLDS_DIR, 'k.objects', 'MISSING.md'), missingPage(result));
     writeFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${WORDS_SHARD}.sop`), wordsShard(result));
     writeFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${STAND_INS_SHARD}.sop`), standInsShard(result));
+    const handText = readFileSync(join(REPO, 'sources/coverage/hand-links.tsv'), 'utf8');
+    for (const [name, text] of Object.entries(handShards(handText, objectNames(), objectWords()))) writeFileSync(join(WORLDS_DIR, 'k.objects', 'shards', name), text);
     console.log(JSON.stringify(result.stats));
   }
 }

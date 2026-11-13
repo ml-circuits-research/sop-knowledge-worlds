@@ -1,4 +1,4 @@
-# k.scenes/shards/things-s: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 256 drawable things whose name starts with "s"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-s: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 258 drawable things whose name starts with "s"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -21,6 +21,7 @@
 @k.scenes.thing.salt k.scenes.thing name=salt place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.salt_mill k.scenes.thing name="salt mill" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.sandals k.scenes.thing name=sandals place=on_thing on=foot size=small named=model core.source="hand-core 1"
+@k.scenes.thing.sandcastle k.scenes.thing name=sandcastle place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.sandpaper k.scenes.thing name=sandpaper place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.sandwich k.scenes.thing name=sandwich place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.sandwich_cheese k.scenes.thing name="sandwich cheese" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -62,6 +63,7 @@
 @k.scenes.thing.scroll k.scenes.thing name=scroll place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.scrubbing_brush k.scenes.thing name="scrubbing brush" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.sculpture k.scenes.thing name=sculpture place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.sea k.scenes.thing name=sea place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.seagull k.scenes.thing name=seagull place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.seahorse k.scenes.thing name=seahorse place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.seal k.scenes.thing name=seal place=water size=medium named=model core.source="hand-core 1"

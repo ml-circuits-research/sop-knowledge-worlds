@@ -1,4 +1,4 @@
-# k.scenes/shards/things-v: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 27 drawable things whose name starts with "v"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-v: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 28 drawable things whose name starts with "v"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -20,6 +20,7 @@
 @k.scenes.thing.video_tape k.scenes.thing name="video tape" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.videocassette k.scenes.thing name=videocassette place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.viennese_coffee_house k.scenes.thing name="viennese coffee house" place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.villa k.scenes.thing name=villa place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.vine k.scenes.thing name=vine place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.vinegar k.scenes.thing name=vinegar place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.violet k.scenes.thing name=violet place=ground size=tiny named=model core.source="hand-core 1"

@@ -1,0 +1,97 @@
+# word	link	drawing
+# Links from a word to a drawing that are written by hand (Round 7 addendum, 2026-11-13), for words that have no
+# drawing of their own and no link by the WordNet rule of tools/coverage.mjs. link is "same" (the word names the
+# same thing as the object: a core.word of the shard words-hand) or "kind" (the object draws the kind of thing:
+# a k.objects.stand_in fact of the shard stand-ins-hand: a sparrow is drawn by the bird). Chosen by a language
+# model that looked at every drawing next to the word; links that would mislead were left out (a musket by the
+# pistol-like gun, a lager by the black beer, an iguana by the lizard that is hard to read).
+aspen	kind	deciduous tree
+baboon	kind	monkey
+barracuda	kind	fish
+beagle	kind	dog
+beet	same	beetroot
+binder	same	ring binder
+blackbird	kind	bird
+blender	same	food blender
+bluebell	kind	flower
+bluebird	kind	bird
+bronco	kind	horse
+bulldog	kind	dog
+bullock	kind	ox
+buttercup	kind	flower
+carp	same	fish koi carp
+cassette	same	cassette tape
+catfish	kind	fish
+cavern	kind	cave
+cedar	kind	evergreen tree
+chardonnay	kind	wine
+chateau	kind	manor
+chilli	same	chilli pepper
+citadel	kind	fortress
+clementine	kind	tangerine
+cobra	kind	snake
+cod	kind	fish
+colt	kind	horse
+dandelion	kind	flower
+dinghy	kind	boat
+faucet	same	tap
+filly	kind	horse
+frock	kind	dress
+greyhound	kind	dog
+grizzly	kind	bear
+gurney	same	stretcher
+halibut	kind	fish
+handgun	kind	gun
+hatchet	kind	axe
+herring	kind	fish
+hornet	kind	wasp
+hound	kind	dog
+hourglass	same	hourglass done
+hummingbird	kind	bird
+jigsaw	same	jigsaw puzzle
+kilt	kind	skirt
+landline	kind	telephone
+lark	kind	bird
+latte	kind	latte macchiato
+mackerel	kind	fish
+magpie	kind	bird
+mallet	kind	hammer
+marlin	kind	fish
+marmalade	kind	jam
+mockingbird	kind	bird
+mustang	kind	horse
+nightingale	kind	bird
+palette	same	artist palette
+partridge	kind	bird
+penitentiary	same	prison
+pheasant	kind	bird
+platter	kind	plate
+porterhouse	kind	steak
+projector	kind	film projector
+puddle	kind	pond
+python	kind	snake
+quilt	kind	blanket
+rattlesnake	same	rattle snake
+revolver	kind	gun
+saber	kind	sword
+sabre	kind	sword
+saloon	kind	pub
+sardine	kind	fish
+sledgehammer	kind	hammer
+sparrow	kind	bird
+stallion	kind	horse
+starling	kind	bird
+steed	kind	horse
+streetcar	same	tram
+sultana	kind	raisin
+sundae	kind	ice cream
+swine	kind	pig
+tablecloth	same	table cloth
+terrier	kind	dog
+tiara	kind	crown
+tigress	kind	tiger
+tombstone	same	headstone
+trout	kind	fish
+tuxedo	kind	suit
+videotape	same	video tape
+villa	kind	house

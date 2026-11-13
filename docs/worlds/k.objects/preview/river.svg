@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>river</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="2" y="10" width="96" height="84" fill="green" stroke="#333" stroke-width="0.8"><title>land</title></rect>
+  <polygon points="44,10 38,30 52,50 30,72 22,94 62,94 70,72 72,50 56,30 54,10" fill="blue" stroke="#333" stroke-width="0.8"><title>water</title></polygon>
+  <polyline points="46,40 58,44" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_1</title></polyline>
+  <polyline points="40,82 56,80" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ripple_2</title></polyline>
+  <ellipse cx="18" cy="65.5" rx="6" ry="3.5" fill="grey" stroke="#333" stroke-width="0.8"><title>stone_1</title></ellipse>
+  <ellipse cx="83" cy="85" rx="5" ry="3" fill="grey" stroke="#333" stroke-width="0.8"><title>stone_2</title></ellipse>
+  <rect x="84" y="36" width="4" height="16" fill="brown" stroke="#333" stroke-width="0.8"><title>trunk</title></rect>
+  <ellipse cx="17" cy="31" rx="11" ry="7" fill="green" stroke="#333" stroke-width="0.8"><title>bush</title></ellipse>
+  <ellipse cx="86" cy="28" rx="10" ry="10" fill="green" stroke="#333" stroke-width="0.8"><title>crown</title></ellipse>
+</svg>

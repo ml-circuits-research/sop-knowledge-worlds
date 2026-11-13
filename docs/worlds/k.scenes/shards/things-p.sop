@@ -1,4 +1,4 @@
-# k.scenes/shards/things-p: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 191 drawable things whose name starts with "p"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-p: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 192 drawable things whose name starts with "p"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -182,6 +182,7 @@
 @k.scenes.thing.prison k.scenes.thing name=prison place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.pub k.scenes.thing name=pub place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.pudding k.scenes.thing name=pudding place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.puddle k.scenes.thing name=puddle place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.puffin k.scenes.thing name=puffin place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pumice_stone k.scenes.thing name="pumice stone" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pumpkin k.scenes.thing name=pumpkin place=ground size=small named=model core.source="hand-core 1"

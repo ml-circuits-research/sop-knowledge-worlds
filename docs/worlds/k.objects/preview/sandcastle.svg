@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>sandcastle</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="50" cy="86" rx="46" ry="8" fill="yellow" stroke="#333" stroke-width="0.8"><title>sand</title></ellipse>
+  <rect x="24" y="56" width="52" height="30" fill="yellow" stroke="#333" stroke-width="0.8"><title>wall</title></rect>
+  <rect x="12" y="42" width="20" height="44" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_tower</title></rect>
+  <rect x="68" y="42" width="20" height="44" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_tower</title></rect>
+  <rect x="40" y="30" width="20" height="30" fill="yellow" stroke="#333" stroke-width="0.8"><title>keep</title></rect>
+  <polygon points="22,26 34,42 10,42" fill="orange" stroke="#333" stroke-width="0.8"><title>left_roof</title></polygon>
+  <polygon points="78,26 90,42 66,42" fill="orange" stroke="#333" stroke-width="0.8"><title>right_roof</title></polygon>
+  <ellipse cx="50" cy="76" rx="6" ry="10" fill="brown" stroke="#333" stroke-width="0.8"><title>door</title></ellipse>
+  <polyline points="50,30 50,10" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>flagpole</title></polyline>
+  <polygon points="64,14.5 50,10 50,19" fill="red" stroke="#333" stroke-width="0.8"><title>flag</title></polygon>
+</svg>

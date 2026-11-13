@@ -51,9 +51,10 @@ object with the file of its picture, its shard, its source, the licence of its s
 | `land-2` | river bank, ditch, swamp, canyon |
 | `food-2` | vodka, dough, ginger, brandy, cocktail, gin, pudding, rum, pumpkin, nut, pod, wheat, hay, flour, sherry, tequila, syrup, muffin, ketchup |
 | `nature-2` | hawk, salmon, violet, iris, pine, finch, raven, mule, squirrel, kitten, calf |
+| `scenery` | lake, river, sea, sandcastle |
 
-220 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
-things that had no drawing, see `MISSING.md`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+224 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
+things that had no drawing, see `MISSING.md`; 4 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 
@@ -96,6 +97,10 @@ help common things that have no drawing of their own:
 - `stand-ins-wordnet`: a `k.objects.stand_in name=<word> drawing=<object>` fact for a thing that is a kind of something
   with a drawing (its direct hypernym in WordNet: `puppy` → `dog`; ids `k.objects.wordnet.kind.<word>`). The object
   shows the kind, not the thing, so a host can say "I drew a dog for the puppy". A stand-in is never a `core.word`.
+- `words-hand` and `stand-ins-hand`: the same two kinds of link, written by hand where the WordNet rule gives
+  nothing (`tombstone` → `headstone`; `sparrow` → `bird`, `villa` → `house`, `puddle` → `pond`; ids
+  `k.objects.hand.same.<word>`, `k.objects.hand.kind.<word>`; source `hand-core 1`). The table is
+  `sources/coverage/hand-links.tsv`; every drawing was looked at next to the word.
 
 A link is made only when WordNet keeps both words in the same sense; the links refused after a look at the drawing
 are in `sources/coverage/not-links.tsv`.

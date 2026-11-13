@@ -1345,3 +1345,40 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - New tool `tools/contact-sheet.mjs` (the previews of a list of objects with captions, as PNG pages; needs
   rsvg-convert and ImageMagick).
 - Numbers: catalog 12 worlds, 767 shards, vocab 19,122 words; 0 errors, 0 warnings. npm test 2,362 pass, 0 fail.
+
+## Round 7 addendum, item 4 (2026-11-13): stand-ins written by hand; lake, river, sea, sandcastle drawn
+
+- **The four of the owner's log:** `villa` → `house` and `puddle` → `pond` are stand-in facts of the new shard
+  `stand-ins-hand`, with their own place and size in `k.scenes` (villa: ground, huge; puddle: ground, small).
+  **Puddle goes to the pond, not to a lake:** there was no lake drawing at all; I drew one (below), but it is a
+  lake with mountains and a tree, and the pond (an oval of water with reeds) reads as a puddle much better.
+  `donkey` already had a drawing (the Noto object `donkey`; `k.animals` joins it with `drawing=donkey`; `k.scenes`
+  now says ground, large): nothing was missing in the worlds for it. `grandfather` is a person, not an object:
+  it comes with the person kinds of `k.people` (next commit).
+- **Hand links** (`sources/coverage/hand-links.tsv`, read by `tools/coverage.mjs`, which writes the shards
+  `words-hand` (17 `core.word`) and `stand-ins-hand` (73 `k.objects.stand_in`), source `hand-core 1`): 90 links for
+  words that have no drawing and no WordNet link. Same thing: tombstone = headstone, hourglass = "hourglass done",
+  streetcar = tram, faucet = tap, beet = beetroot … Kind: sparrow, lark, magpie … → bird; trout, cod, herring …
+  → fish; hound, beagle, terrier … → dog; stallion, colt, mustang … → horse; cobra, python → snake; handgun,
+  revolver → gun; hatchet → axe; tuxedo → suit; tiara → crown; cedar → "evergreen tree"; chateau → manor;
+  citadel → fortress; saloon → pub …
+- **Looked at:** all 104 links I first wrote, each as the drawing at 120 px with "word = drawing" or "word <
+  drawing" underneath (3 sheets, all read). **8 dropped as misleading:** musket (the gun is a pistol), cheesecake
+  (the cake looks like a pudding), lager (the beer is black), pendant and locket (the necklace is two strings of
+  beads), iguana (the lizard is hard to read), lifeboat (the boat is a sailing boat), venison (the meat is hard
+  to read). 2 changed: chateau → manor (not the small house), puddle → pond. 6 dropped because the word is
+  already a `core.word` of that object in its hand-written shard (bike, gem, pavement, pistol, stronghold, tavern).
+- **Coverage now also counts the words of hand-written objects** (marsh is a word of the drawing `swamp`: it was
+  counted as "nothing" before). Only hand-written shards: the `core.word` facts of the imported shards are the
+  search keywords of their source (CLDR gives "bike" for a lock), not names; counting them would be wrong (I
+  tried it, saw `bike → "locked with key"`, and restricted it).
+- **Four hand-written objects for scenes** (shard `scenery`, 64 wires, 9,206 bytes): lake, river, sea, sandcastle.
+  Looked at on one sheet at 260 px next to pond, "water wave", house and beach: all four recognisable with the
+  name; the river is seen from above (a blue band through green land), the sea is a blue field with white wave
+  arcs and a sun. Not redrawn. k.objects: **2,107 objects** (224 hand-written).
+- **Coverage of the 1,500 common things:** 679 with a drawing of their name, 68 WordNet synonyms, 179 WordNet
+  stand-ins, 25 other words of an object (8 in hand-written shards, 17 in `words-hand`), 71 hand stand-ins:
+  **1,022 reach a drawing (68.1%; 926 before)**. **478 have neither a drawing nor a stand-in** (574 before).
+- **Judgement that is mine:** every hand link (a language model chose them; nothing but the look checks them);
+  a general word is never linked to a particular thing (aircraft, jewelry, insect stay without).
+- Numbers: catalog 12 worlds, 770 shards, vocab 19,168 words; 0 errors, 0 warnings. npm test 2,368 pass, 0 fail.

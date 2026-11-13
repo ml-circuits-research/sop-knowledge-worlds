@@ -22,21 +22,25 @@ WordNet does not have for the word (the drawing `tablet` is a tablet computer); 
 | with a drawing of that name | 679 | 45.3% |
 | without, but a WordNet synonym has a drawing | 68 | 4.5% |
 | without, but the direct hypernym has a drawing | 179 | 11.9% |
-| with no drawing at all | 574 | 38.3% |
+| without, but it is another word of an object (hand-written) | 25 | 1.7% |
+| without, but a stand-in written by hand has a drawing | 71 | 4.7% |
+| with no drawing at all | 478 | 31.9% |
 
 ## The 821 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a `core.word` fact of the shard `words-wordnet` (the word finds that drawing as
 its own); a hypernym is a `k.objects.stand_in` fact of the shard `stand-ins-wordnet` (the drawing of the kind stands
-in for the thing). The gloss is WordNet's, for the sense kept.
+in for the thing). "word" is a `core.word` of that object in its own shard; "hand synonym" and "hand stand-in" are
+links written by hand (`sources/coverage/hand-links.tsv`, the shards `words-hand` and `stand-ins-hand`). The
+gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
 | 38 | store | synonym shop | a mercantile establishment for the retail sale of goods or services |
 | 56 | engine | hypernym motor | motor that converts thermal energy to mechanical work |
 | 72 | photo | synonym photograph (drawing "photographs") | a representation of a person or scene in the form of a print or transparent slide or in digital format |
-| 95 | bike |  | a motor vehicle with two wheels and a strong frame |
+| 95 | bike | word bicycle | a motor vehicle with two wheels and a strong frame |
 | 113 | palace | synonym castle | a large and stately mansion |
 | 154 | couch | synonym sofa | an upholstered seat for more than one person |
 | 156 | closet | synonym cupboard | a small room (or recess) or cabinet used for storage space |
@@ -59,7 +63,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 293 | barrel |  | a tube through which a bullet travels when a gun is fired |
 | 300 | tub | synonym bathtub | a relatively large open container that you fill with water and use to wash the body |
 | 303 | cafe | hypernym restaurant | a small restaurant where drinks and snacks are sold |
-| 307 | pistol |  | a firearm that is held and fired with one hand |
+| 307 | pistol | word gun | a firearm that is held and fired with one hand |
 | 308 | tomb | synonym grave | a place for the burial of a corpse (especially beneath the ground and marked by a tombstone) |
 | 312 | reed |  | tall woody perennial grasses with hollow slender stems especially of the genera Arundo and Phragmites |
 | 314 | missile | hypernym rocket | a rocket carrying a warhead of conventional or nuclear explosives |
@@ -77,7 +81,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 366 | buzzer | synonym doorbell | a push button at an outer door that gives a ringing or buzzing signal when pushed |
 | 368 | clip |  | a metal frame or container holding cartridges |
 | 372 | brake |  | a restraint used to slow or stop a vehicle |
-| 374 | marsh |  | low-lying wet land with grassy vegetation |
+| 374 | marsh | word swamp | low-lying wet land with grassy vegetation |
 | 382 | shutter |  | a mechanical device on a camera that opens and closes to control the time of a photographic exposure |
 | 385 | whisky | synonym whiskey | a liquor made from fermented mash of grain |
 | 387 | globe | synonym earth (drawing "Earth") | the 3rd planet from the sun |
@@ -93,13 +97,13 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 430 | grocery |  | a marketplace where groceries are sold |
 | 439 | salon |  | gallery where works of art can be displayed |
 | 441 | workshop |  | small workplace where handcrafts or manufacturing are done |
-| 442 | swine |  | stout-bodied short-legged omnivorous animals |
+| 442 | swine | hand stand-in pig | stout-bodied short-legged omnivorous animals |
 | 448 | magnum |  | a large wine bottle for liquor or wine |
 | 451 | laurel |  | any of various aromatic trees of the laurel family |
 | 458 | bunker |  | a hazard on a golf course |
 | 459 | ape |  | any of various primates with short tails or no tail at all |
 | 462 | bomber | hypernym airplane | a military aircraft that drops bombs during flight |
-| 464 | steed |  | (literary) a spirited horse for state of war |
+| 464 | steed | hand stand-in horse | (literary) a spirited horse for state of war |
 | 466 | rail |  | a barrier consisting of a horizontal bar and supports |
 | 474 | pickup | synonym pickup truck | a light truck with an open body and low sides and a tailboard |
 | 475 | grenade | hypernym bomb | a small explosive bomb thrown by hand or fired from a missile |
@@ -131,8 +135,8 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 547 | falcon | hypernym hawk | diurnal birds of prey having long pointed powerful wings adapted for swift flight |
 | 548 | gravy |  | a sauce made by adding stock, flour, or other ingredients to the juice and fat that drips from cooking meats |
 | 556 | marker |  | some conspicuous object used to distinguish or mark something |
-| 557 | gem |  | art highly prized for its beauty or perfection |
-| 559 | colt |  | a young male horse under the age of four |
+| 557 | gem | word jewel | art highly prized for its beauty or perfection |
+| 559 | colt | hand stand-in horse | a young male horse under the age of four |
 | 560 | airline |  | a hose that carries air under pressure |
 | 561 | gutter |  | a channel along the eaves or on the roof |
 | 563 | jewellery |  | an adornment (as a bracelet or ring or necklace) made of precious metals and set with gems (or imitation gems) |
@@ -148,18 +152,18 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 592 | basil | hypernym herb | any of several Old World tropical aromatic annual or perennial herbs of the genus Ocimum |
 | 593 | cocoa | synonym hot chocolate | a beverage made from cocoa powder and milk and sugar |
 | 595 | bulb |  | a modified bud consisting of a thickened globular underground stem serving as a reproductive structure |
-| 600 | cobra |  | venomous Asiatic and African elapid snakes that can expand the skin of the neck into a hood |
+| 600 | cobra | hand stand-in snake | venomous Asiatic and African elapid snakes that can expand the skin of the neck into a hood |
 | 602 | dungeon |  | the main tower within the walls of a medieval castle or fortress |
 | 604 | tablet | other sense: the drawing shows a tablet computer | a slab of stone or wood suitable for bearing an inscription |
-| 605 | saloon |  | a room or establishment where alcoholic drinks are served over a counter |
+| 605 | saloon | hand stand-in pub | a room or establishment where alcoholic drinks are served over a counter |
 | 606 | serpent | synonym snake | limbless scaly elongate reptile |
 | 607 | curb |  | an edge between a sidewalk and a roadway consisting of a line of curbstones (usually forming part of a gutter) |
-| 608 | tavern |  | a building with a bar that is licensed to sell alcoholic drinks |
+| 608 | tavern | word pub | a building with a bar that is licensed to sell alcoholic drinks |
 | 609 | caviar |  | salted roe of sturgeon or other large fish |
 | 610 | trench | hypernym ditch | a ditch dug as a fortification having a parapet of the excavated earth |
 | 612 | tonic |  | lime- or lemon-flavored carbonated water containing quinine |
 | 614 | margarita | hypernym cocktail | a cocktail made of tequila and triple sec with lime and lemon juice |
-| 615 | hound |  | any of several breeds of dog used for hunting typically having large drooping ears |
+| 615 | hound | hand stand-in dog | any of several breeds of dog used for hunting typically having large drooping ears |
 | 616 | cloak |  | anything that covers or conceals |
 | 619 | intercom |  | a communication system linking different rooms within a building or ship etc |
 | 622 | freeway | synonym motorway | a broad highway designed for high-speed traffic |
@@ -168,19 +172,19 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 625 | harness |  | a support consisting of an arrangement of straps for holding something to the body (especially one supporting a person suspended from a parachute) |
 | 626 | reel |  | a roll of photographic film holding a series of frames to be projected by a movie projector |
 | 627 | typewriter |  | hand-operated character printer for printing written messages one character at a time |
-| 628 | revolver |  | a pistol with a revolving cylinder (usually having six chambers for bullets) |
+| 628 | revolver | hand stand-in gun | a pistol with a revolving cylinder (usually having six chambers for bullets) |
 | 629 | coyote | hypernym wolf | small wolf native to western North America |
 | 631 | panther |  | a large spotted feline of tropical America similar to the leopard |
-| 632 | trout |  | flesh of any of several primarily freshwater game and food fishes |
+| 632 | trout | hand stand-in fish | flesh of any of several primarily freshwater game and food fishes |
 | 633 | bandage |  | a piece of soft material that covers and protects an injured part of the body |
 | 634 | bumper |  | a glass filled to the brim (especially as a toast) |
 | 635 | mare | hypernym horse | female equine animal |
 | 638 | boulevard | hypernym street | a wide street or thoroughfare |
 | 639 | rook |  | (chess) the piece that can move any number of unoccupied squares in a direction parallel to the sides of the chessboard |
-| 640 | cod |  | the vessel that contains the seeds of a plant (not the seeds themselves) |
+| 640 | cod | hand stand-in fish | the vessel that contains the seeds of a plant (not the seeds themselves) |
 | 641 | infirmary | synonym hospital | a health facility where patients receive treatment |
 | 642 | cinnamon |  | aromatic bark used as a spice |
-| 643 | latte |  | strong espresso coffee with a topping of frothed steamed milk |
+| 643 | latte | hand stand-in latte macchiato | strong espresso coffee with a topping of frothed steamed milk |
 | 645 | dairy |  | a farm where dairy products are produced |
 | 646 | slope |  | an elevated geological formation |
 | 648 | spacecraft | hypernym satellite | a craft capable of traveling in outer space |
@@ -190,7 +194,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 653 | napkin |  | a small piece of table linen that is used to wipe the mouth and to cover the lap in order to protect clothing |
 | 655 | staircase | synonym stairway | a way of access (upward and downward) consisting of a set of steps |
 | 658 | parcel | synonym package | a wrapped container |
-| 659 | underpants |  | an undergarment that covers the body from the waist no further than to the thighs |
+| 659 | underpants | word underwear | an undergarment that covers the body from the waist no further than to the thighs |
 | 660 | zipper | synonym zip | a fastener for locking together two toothed edges by means of a sliding tab |
 | 661 | boiler |  | sealed vessel where water is converted to steam |
 | 662 | wand | hypernym rod | a rod used by a magician or water diviner |
@@ -199,10 +203,10 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 667 | bungalow | hypernym house | a small house with a single story |
 | 668 | cone |  | any cone-shaped artifact |
 | 669 | sauna |  | a Finnish steam bath |
-| 670 | sparrow |  | any of several small dull-colored singing birds feeding on seeds or insects |
+| 670 | sparrow | hand stand-in bird | any of several small dull-colored singing birds feeding on seeds or insects |
 | 672 | knob |  | a circular rounded projection or protuberance |
 | 675 | capitol |  | a building occupied by a state legislature |
-| 677 | nightingale |  | European songbird noted for its melodious nocturnal song |
+| 677 | nightingale | hand stand-in bird | European songbird noted for its melodious nocturnal song |
 | 678 | raspberry |  | woody brambles bearing usually red but sometimes black or yellow fruits that separate from the receptacle when ripe and are rounder and smaller than blackberries |
 | 679 | suv | synonym sport utility vehicle | a high-performance four-wheel drive car built on a truck chassis |
 | 680 | sphere |  | any spherically shaped artifact |
@@ -218,7 +222,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 695 | heater |  | device that heats water or supplies warmth to a room |
 | 697 | rouge |  | makeup consisting of a pink or red powder applied to the cheeks |
 | 698 | chariot |  | a light four-wheel horse-drawn ceremonial carriage |
-| 699 | videotape |  | a video recording made on magnetic tape |
+| 699 | videotape | hand synonym video tape | a video recording made on magnetic tape |
 | 700 | furnace |  | an enclosed chamber in which heat is produced to heat buildings, destroy refuse, smelt or refine ores, etc. |
 | 701 | lever |  | a rigid bar pivoted about a fulcrum |
 | 702 | alligator |  | either of two amphibious reptiles related to crocodiles but with shorter broader snouts |
@@ -237,18 +241,18 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 727 | rhino | synonym rhinoceros | massive powerful herbivorous odd-toed ungulate of southeast Asia and Africa having very thick skin and one or two horns on the snout |
 | 729 | helm |  | steering mechanism for a vessel |
 | 731 | viper | hypernym snake | venomous Old World snakes characterized by hollow venom-conducting fangs in the upper jaw |
-| 732 | mustang |  | small hardy range horse of the western plains descended from horses brought by the Spanish |
+| 732 | mustang | hand stand-in horse | small hardy range horse of the western plains descended from horses brought by the Spanish |
 | 733 | tofu |  | cheeselike food made of curdled soybean milk |
-| 734 | chateau |  | an impressive country house (or castle) in France |
+| 734 | chateau | hand stand-in manor | an impressive country house (or castle) in France |
 | 735 | veal | hypernym meat | meat from a calf |
 | 736 | isle | hypernym island | a small island |
 | 737 | amulet |  | a trinket or piece of jewelry usually hung about the neck and thought to be a magical protection against evil or disease |
 | 738 | convertible | hypernym car | a car that has top that can be folded or removed |
-| 739 | pavement |  | the paved surface of a thoroughfare |
-| 740 | projector |  | an optical device for projecting a beam of light |
+| 739 | pavement | word sidewalk | the paved surface of a thoroughfare |
+| 740 | projector | hand stand-in film projector | an optical device for projecting a beam of light |
 | 742 | detonator |  | a mechanical or electrical explosive device or a small amount of explosive |
 | 743 | jug | hypernym bottle | a large bottle with a narrow mouth |
-| 744 | platter |  | a large shallow dish used for serving food |
+| 744 | platter | hand stand-in plate | a large shallow dish used for serving food |
 | 746 | ledge |  | a projecting ridge on a mountain or submerged under water |
 | 747 | throttle |  | a valve that regulates the supply of fuel to the engine |
 | 748 | espresso | hypernym coffee | strong black coffee brewed by forcing hot water under pressure through finely ground coffee beans |
@@ -273,9 +277,9 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 780 | locket |  | a small ornamental case |
 | 781 | risotto |  | rice cooked with broth and sprinkled with grated cheese |
 | 782 | aquarium |  | a tank or pool or bowl filled with water for keeping live fish and underwater animals |
-| 783 | lark |  | North American songbirds having a yellow breast |
+| 783 | lark | hand stand-in bird | North American songbirds having a yellow breast |
 | 786 | basin |  | a bowl-shaped vessel |
-| 788 | cassette |  | a container that holds a magnetic tape used for recording or playing sound or video |
+| 788 | cassette | hand synonym cassette tape | a container that holds a magnetic tape used for recording or playing sound or video |
 | 791 | iceberg |  | a large mass of ice floating at sea |
 | 792 | hutch | hypernym cage | a cage (usually made of wood and wire mesh) for small animals |
 | 794 | stump |  | the base part of a tree that remains standing after the tree has been felled |
@@ -288,16 +292,16 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 801 | sedan | hypernym car | a car that is closed and that has front and rear seats and two or four doors |
 | 802 | trifle |  | a cold pudding made of layers of sponge cake spread with fruit or jelly |
 | 804 | bonnet | hypernym hat | a hat tied under the chin |
-| 806 | bullock |  | young bull |
+| 806 | bullock | hand stand-in ox | young bull |
 | 807 | binoculars |  | (plural) an optical instrument designed for simultaneous use by both eyes |
 | 809 | cello |  | a large stringed instrument |
-| 810 | herring |  | valuable flesh of fatty fish from shallow waters of northern Atlantic or Pacific |
+| 810 | herring | hand stand-in fish | valuable flesh of fatty fish from shallow waters of northern Atlantic or Pacific |
 | 811 | orchid | hypernym flower | any of numerous plants of the orchid family usually having flowers of unusual shapes and beautiful colors |
 | 814 | caramel | hypernym candy | firm chewy candy made from caramelized sugar and butter and milk |
 | 815 | stocking |  | close-fitting hosiery to cover the foot and leg |
-| 816 | tuxedo |  | semiformal evening dress for men |
+| 816 | tuxedo | hand stand-in suit | semiformal evening dress for men |
 | 817 | oatmeal | hypernym porridge | porridge made of rolled oats |
-| 818 | python |  | large Old World boas |
+| 818 | python | hand stand-in snake | large Old World boas |
 | 819 | sesame |  | East Indian annual erect herb |
 | 820 | wreckage |  | the remaining parts of something that has been wrecked |
 | 822 | seaweed |  | plant growing in the sea, especially marine algae |
@@ -305,20 +309,20 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 824 | chime |  | a percussion instrument consisting of a set of tuned bells that are struck with a hammer |
 | 825 | pouch | hypernym bag | a small or medium size container for holding or carrying things |
 | 826 | blindfold |  | a cloth used to cover the eyes |
-| 827 | hatchet |  | weapon consisting of a fighting ax |
+| 827 | hatchet | hand stand-in axe | weapon consisting of a fighting ax |
 | 828 | pollen |  | the fine spores that contain male gametes and that are borne by an anther in a flowering plant |
-| 829 | penitentiary |  | a correctional institution for those convicted of major crimes |
+| 829 | penitentiary | hand synonym prison | a correctional institution for those convicted of major crimes |
 | 831 | mound |  | (baseball) the slight elevation on which the pitcher stands |
 | 832 | peninsula |  | a large mass of land projecting into a body of water |
 | 833 | radiator |  | any object that radiates energy |
-| 834 | stallion |  | uncastrated adult male horse |
-| 835 | bulldog |  | a sturdy thickset short-haired breed with a large head and strong undershot lower jaw |
+| 834 | stallion | hand stand-in horse | uncastrated adult male horse |
+| 835 | bulldog | hand stand-in dog | a sturdy thickset short-haired breed with a large head and strong undershot lower jaw |
 | 837 | taro | hypernym root (drawing "roots") | edible starchy tuberous root of taro plants |
 | 838 | glacier |  | a slowly moving mass of ice |
-| 839 | grizzly |  | powerful brownish-yellow bear of the uplands of western North America |
+| 839 | grizzly | hand stand-in bear | powerful brownish-yellow bear of the uplands of western North America |
 | 841 | mortar |  | a muzzle-loading high-angle gun with a short barrel that fires shells at high elevations for a short range |
 | 842 | bugle |  | a brass instrument without valves |
-| 843 | gurney |  | a metal stretcher with wheels |
+| 843 | gurney | hand synonym stretcher | a metal stretcher with wheels |
 | 844 | fern |  | any of numerous flowerless and seedless vascular plants having true roots from a rhizome and fronds that uncurl upward |
 | 845 | myrtle |  | widely cultivated as a groundcover for its dark green shiny leaves and usually blue-violet flowers |
 | 846 | plateau |  | a relatively flat highland |
@@ -328,7 +332,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 850 | clockwork |  | any mechanism of geared wheels that is driven by a coiled spring |
 | 851 | bog |  | wet spongy ground of decomposing vegetation |
 | 855 | limousine | hypernym car | large luxurious car |
-| 856 | catfish |  | flesh of scaleless food fish of the southern United States |
+| 856 | catfish | hand stand-in fish | flesh of scaleless food fish of the southern United States |
 | 857 | bellows |  | (used in the plural) a mechanical device that blows a strong current of air |
 | 859 | meatball |  | ground meat formed into a ball and fried or simmered in broth |
 | 860 | cider |  | a beverage made from juice pressed from apples |
@@ -336,9 +340,9 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 863 | farmhouse | hypernym house | house for a farmer and family |
 | 864 | freighter |  | a cargo ship |
 | 865 | jerky | hypernym meat | meat (especially beef) cut in strips and dried in the sun |
-| 866 | partridge |  | flesh of either quail or grouse |
+| 866 | partridge | hand stand-in bird | flesh of either quail or grouse |
 | 867 | mutton | hypernym meat | meat from a mature domestic sheep |
-| 868 | blender |  | an electrically powered mixer with whirling blades that mix or chop or liquefy foods |
+| 868 | blender | hand synonym food blender | an electrically powered mixer with whirling blades that mix or chop or liquefy foods |
 | 869 | labyrinth | synonym maze | complex system of paths or tunnels in which it is easy to get lost |
 | 870 | observatory |  | a building designed and equipped to observe astronomical phenomena |
 | 872 | chainsaw |  | portable power saw |
@@ -349,7 +353,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 879 | slab |  | block consisting of a thick piece of something |
 | 880 | mortuary | hypernym building | a building (or room) where dead bodies are kept before burial or cremation |
 | 882 | tanker |  | a cargo ship designed to carry crude oil in bulk |
-| 884 | tombstone |  | a stone that is used to mark a grave |
+| 884 | tombstone | hand synonym headstone | a stone that is used to mark a grave |
 | 885 | pendant |  | an adornment that hangs from a piece of jewelry (necklace or earring) |
 | 886 | harmonica |  | a small rectangular free-reed instrument having a row of free reeds set back in air holes and played by blowing into the desired hole |
 | 887 | vial |  | a small bottle that contains a drug (especially a sealed sterile container for injection by needle) |
@@ -364,7 +368,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 897 | possum |  | nocturnal arboreal marsupial having a naked prehensile tail found from southern North America to northern South America |
 | 899 | swimsuit | synonym swimming costume | tight fitting garment worn for swimming |
 | 901 | pepperoni | hypernym sausage (drawing "sausages") | a pork and beef sausage (or a thin slice of this sausage) |
-| 902 | cedar |  | any of numerous trees of the family Cupressaceae that resemble cedars |
+| 902 | cedar | hand stand-in evergreen tree | any of numerous trees of the family Cupressaceae that resemble cedars |
 | 904 | battleship |  | large and heavily armoured warship |
 | 905 | leech |  | carnivorous or bloodsucking aquatic or terrestrial worms typically having a sucker at each end |
 | 906 | burr |  | seed vessel having hooks or prickles |
@@ -376,12 +380,12 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 914 | floss | hypernym thread | a soft loosely twisted thread used in embroidery |
 | 915 | mainframe |  | a large digital computer serving 100-400 users and occupying a special air-conditioned room |
 | 918 | viola |  | any of the numerous plants of the genus Viola |
-| 919 | mackerel |  | flesh of very important usually small (to 18 in) fatty Atlantic fish |
+| 919 | mackerel | hand stand-in fish | flesh of very important usually small (to 18 in) fatty Atlantic fish |
 | 921 | wick |  | any piece of cord that conveys liquid by capillary action |
 | 923 | bazaar | hypernym shop | a shop where a variety of goods are sold |
 | 925 | cougar |  | large American feline resembling a lion |
 | 928 | brewery |  | a plant where beer is brewed by fermentation |
-| 929 | saber |  | a fencing sword with a v-shaped blade and a slightly curved handle |
+| 929 | saber | hand stand-in sword | a fencing sword with a v-shaped blade and a slightly curved handle |
 | 930 | scuba |  | a device (trade name Aqua-Lung) that lets divers breathe under water |
 | 931 | fender |  | a barrier that surrounds the wheels of a vehicle to block splashing water or mud |
 | 932 | elk | synonym moose | large northern deer with enormous flattened antlers in the male |
@@ -396,7 +400,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 941 | grasshopper |  | terrestrial plant-eating insect with hind legs adapted for leaping |
 | 942 | muzzle |  | the open circular discharging end of a gun |
 | 943 | seatbelt |  | a safety belt used in a car or plane to hold you in your seat in case of an accident |
-| 944 | faucet |  | a regulator for controlling the flow of a liquid from a reservoir |
+| 944 | faucet | hand synonym tap | a regulator for controlling the flow of a liquid from a reservoir |
 | 945 | boutique | hypernym shop | a shop that sells women's clothes and jewelry |
 | 946 | silverware |  | tableware made of silver or silver plate or pewter or stainless steel |
 | 947 | auditorium |  | the area of a theater or concert hall where the audience sits |
@@ -404,15 +408,15 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 949 | crowbar |  | a heavy iron lever with one end forged into a wedge |
 | 951 | canopy |  | the transparent covering of an aircraft cockpit |
 | 952 | rickshaw | hypernym cart | a small two-wheeled cart for one passenger |
-| 954 | baboon |  | large terrestrial monkeys having doglike muzzles |
+| 954 | baboon | hand stand-in monkey | large terrestrial monkeys having doglike muzzles |
 | 956 | garret |  | floor consisting of open space at the top of a house just below roof |
 | 958 | decaf | hypernym coffee | coffee with the caffeine removed |
-| 963 | chilli |  | very hot and finely tapering pepper of special pungency |
+| 963 | chilli | hand synonym chilli pepper | very hot and finely tapering pepper of special pungency |
 | 964 | meatloaf |  | a baked loaf of ground meat |
 | 966 | filet |  | a boneless steak cut from the tenderloin of beef |
 | 967 | bumblebee | hypernym bee | robust hairy social bee of temperate regions |
 | 968 | ravine | hypernym valley | a deep narrow steep-sided valley (especially one formed by running water) |
-| 972 | starling |  | gregarious birds native to the Old World |
+| 972 | starling | hand stand-in bird | gregarious birds native to the Old World |
 | 973 | hearse |  | a vehicle for carrying a coffin to a church or a cemetery |
 | 974 | mantis |  | predacious long-bodied large-eyed insect of warm regions |
 | 975 | trough |  | a narrow depression (as in the earth or between ocean waves or in the ocean bed) |
@@ -420,21 +424,21 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 977 | wharf | synonym pier | a platform built out from the shore into the water and supported by piles |
 | 978 | polygraph |  | a medical instrument that records several physiological processes simultaneously (e.g., pulse rate and blood pressure and respiration and perspiration) |
 | 981 | slaughterhouse | hypernym building | a building where animals are butchered |
-| 982 | aspen |  | any of several trees of the genus Populus having leaves on flattened stalks so that they flutter in the lightest wind |
+| 982 | aspen | hand stand-in deciduous tree | any of several trees of the genus Populus having leaves on flattened stalks so that they flutter in the lightest wind |
 | 983 | podium |  | a platform raised above the surrounding level to give prominence to the person on it |
-| 984 | stronghold |  | a strongly fortified defensive structure |
+| 984 | stronghold | word fortress | a strongly fortified defensive structure |
 | 985 | airlock |  | a chamber that provides access to space where air is under pressure |
 | 986 | elm | hypernym tree | any of various trees of the genus Ulmus: important timber or shade trees |
 | 989 | shipyard |  | a workplace where ships are built or repaired |
-| 990 | carp |  | the lean flesh of a fish that is often farmed |
+| 990 | carp | hand synonym fish koi carp | the lean flesh of a fish that is often farmed |
 | 991 | minivan | hypernym car | a small box-shaped passenger van |
-| 992 | tiara |  | a jeweled headdress worn by women on formal occasions |
+| 992 | tiara | hand stand-in crown | a jeweled headdress worn by women on formal occasions |
 | 993 | newt |  | small usually bright-colored semiaquatic salamanders of North America and Europe and northern Asia |
 | 995 | cubicle |  | small room in which a monk or nun lives |
 | 997 | keypad | synonym computer keyboard | a keyboard that is a data input device for computers |
 | 998 | mousse |  | a rich, frothy, creamy dessert made with whipped egg whites and heavy cream |
 | 999 | dredge |  | a power shovel to remove material from a channel or riverbed |
-| 1000 | handgun |  | a firearm that is held and fired with one hand |
+| 1000 | handgun | hand stand-in gun | a firearm that is held and fired with one hand |
 | 1001 | corral |  | a pen for cattle |
 | 1004 | cocoon |  | silky envelope spun by the larvae of many insects to protect pupas and by spiders to protect eggs |
 | 1005 | galley |  | a large medieval vessel with a single deck propelled by sails and oars with guns at stern and prow |
@@ -450,26 +454,26 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1017 | propeller |  | a mechanical device that rotates to push against air or water |
 | 1018 | blazer | hypernym jacket | lightweight single-breasted jacket |
 | 1019 | ballpark | hypernym stadium | a facility in which ball games are played (especially baseball games) |
-| 1020 | hornet |  | large stinging paper wasp |
+| 1020 | hornet | hand stand-in wasp | large stinging paper wasp |
 | 1022 | extinguisher | synonym fire extinguisher | a manually operated device for extinguishing small fires |
 | 1023 | cannonball |  | a solid projectile that in former times was fired from a cannon |
 | 1024 | cartridge |  | ammunition consisting of a cylindrical casing containing an explosive charge and a bullet |
 | 1025 | staple |  | (usually in the plural) a necessary commodity for which demand is constant |
-| 1028 | quilt |  | bedding made of two layers of cloth filled with stuffing and stitched together |
+| 1028 | quilt | hand stand-in blanket | bedding made of two layers of cloth filled with stuffing and stitched together |
 | 1029 | conduit |  | a passage (a pipe or tunnel) through which water or electric wires can pass |
 | 1030 | dipper | hypernym ladle | a ladle that has a cup with a long handle |
 | 1031 | pedestal |  | a support or foundation |
 | 1032 | weir | hypernym dam | a low dam built across a stream to raise its level or divert its flow |
-| 1034 | citadel |  | a stronghold into which people could go for shelter during a battle |
+| 1034 | citadel | hand stand-in fortress | a stronghold into which people could go for shelter during a battle |
 | 1035 | canister |  | a metallic cylinder packed with shot and used as ammunition in a firearm |
 | 1036 | truffle |  | any of various highly prized edible subterranean fungi of the genus Tuber |
 | 1037 | stork |  | large mostly Old World wading birds typically having white-and-black plumage |
-| 1039 | jigsaw |  | a portable power saw with a reciprocating blade |
+| 1039 | jigsaw | hand synonym jigsaw puzzle | a portable power saw with a reciprocating blade |
 | 1040 | louse |  | wingless usually flattened bloodsucking insect parasitic on warm-blooded animals |
-| 1041 | cavern |  | any large dark enclosed space |
+| 1041 | cavern | hand stand-in cave | any large dark enclosed space |
 | 1042 | warship |  | a government ship that is available for waging war |
 | 1043 | rein |  | one of a pair of long straps (usually connected to the bit or the headpiece) used to control a horse |
-| 1044 | pheasant |  | large long-tailed gallinaceous bird native to the Old World but introduced elsewhere |
+| 1044 | pheasant | hand stand-in bird | large long-tailed gallinaceous bird native to the Old World but introduced elsewhere |
 | 1045 | yam |  | edible tuber of any of several yams |
 | 1046 | maggot |  | the larva of the housefly and blowfly commonly found in decaying organic matter |
 | 1047 | prune |  | dried plum |
@@ -497,26 +501,26 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1079 | crucifix |  | representation of the cross on which Jesus died |
 | 1083 | lifeboat |  | a strong sea boat designed to rescue people from a sinking ship |
 | 1084 | shim |  | a thin wedge of material (wood or metal or stone) for driving into crevices |
-| 1085 | chardonnay |  | white wine grape |
-| 1086 | clementine |  | a variety of mandarin orange that is grown around the Mediterranean and in South Africa |
-| 1087 | halibut |  | lean flesh of very large flatfish of Atlantic or Pacific |
+| 1085 | chardonnay | hand stand-in wine | white wine grape |
+| 1086 | clementine | hand stand-in tangerine | a variety of mandarin orange that is grown around the Mediterranean and in South Africa |
+| 1087 | halibut | hand stand-in fish | lean flesh of very large flatfish of Atlantic or Pacific |
 | 1088 | mural | hypernym painting | a painting that is applied to a wall surface |
 | 1089 | hammock |  | a small natural hill |
-| 1090 | buttercup |  | any of various plants of the genus Ranunculus |
+| 1090 | buttercup | hand stand-in flower | any of various plants of the genus Ranunculus |
 | 1091 | refinery |  | an industrial plant for purifying a crude substance |
 | 1092 | mane |  | long coarse hair growing from the crest of the animal's neck |
 | 1093 | confessional |  | a booth where a priest sits to hear confessions |
 | 1097 | switchboard |  | telephone central where circuits are completed with patchcords |
 | 1099 | overcoat | hypernym coat | a heavy coat worn over clothes in winter |
 | 1100 | turban |  | a traditional Muslim headdress consisting of a long scarf wrapped around the head |
-| 1101 | rattlesnake |  | pit viper with horny segments at the end of the tail that rattle when shaken |
+| 1101 | rattlesnake | hand synonym rattle snake | pit viper with horny segments at the end of the tail that rattle when shaken |
 | 1104 | trident |  | a spear with three prongs |
 | 1105 | corvette |  | a highly maneuverable escort warship |
 | 1107 | silo | hypernym tower | a cylindrical tower used for storing silage |
 | 1108 | licorice |  | deep-rooted coarse-textured plant native to the Mediterranean region having blue flowers and pinnately compound leaves |
 | 1110 | bistro | hypernym restaurant | a small informal restaurant |
 | 1112 | gable |  | the vertical triangular wall between the sloping ends of gable roof |
-| 1113 | filly |  | a young female horse under the age of four |
+| 1113 | filly | hand stand-in horse | a young female horse under the age of four |
 | 1114 | beeper | synonym pager | an electronic device that generates a series of beeps when the person carrying it is being paged |
 | 1115 | treadmill |  | an exercise device consisting of an endless belt on which a person can walk or jog without changing place |
 | 1116 | veggie |  | edible seeds or roots or stems or leaves or bulbs or tubers or nonsweet fruits of any of numerous herbaceous plant |
@@ -527,7 +531,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1121 | bedrock | hypernym rock | solid unweathered rock lying beneath surface deposits of soil |
 | 1122 | sunscreen |  | a cream spread on the skin |
 | 1123 | grate |  | a frame of iron bars to hold a fire |
-| 1125 | marmalade |  | a preserve made of the pulp and rind of citrus fruits |
+| 1125 | marmalade | hand stand-in jam | a preserve made of the pulp and rind of citrus fruits |
 | 1127 | bathrobe | hypernym robe | a loose-fitting robe of towelling |
 | 1128 | chalice | hypernym cup | a bowl-shaped drinking vessel |
 | 1129 | saffron |  | Old World crocus having purple or white flowers with aromatic pungent orange stigmas used in flavoring food |
@@ -537,7 +541,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1134 | bongo | hypernym drum | a small drum |
 | 1135 | firefly |  | tropical American click beetle having bright luminous spots |
 | 1136 | ratchet |  | mechanical device consisting of a toothed wheel or rack engaged with a pawl that permits it to move in only one direction |
-| 1137 | bluebell |  | sometimes placed in genus Scilla |
+| 1137 | bluebell | hand stand-in flower | sometimes placed in genus Scilla |
 | 1138 | burrow |  | a hole made by an animal, usually for shelter |
 | 1139 | boardwalk |  | a walkway made of wooden boards |
 | 1140 | scrapbook |  | an album into which clippings or notes or pictures can be pasted |
@@ -548,11 +552,11 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1147 | laundromat |  | a self-service laundry (service mark Laundromat) where coin-operated washing machines are available to individual customers |
 | 1148 | humanoid | hypernym robot | an automaton that resembles a human being |
 | 1149 | doghouse | synonym kennel | outbuilding that serves as a shelter for a dog |
-| 1150 | binder |  | a machine that cuts grain and binds it in sheaves |
+| 1150 | binder | hand synonym ring binder | a machine that cuts grain and binds it in sheaves |
 | 1151 | shank | hypernym cut of meat | a cut of meat (beef or veal or mutton or lamb) from the upper part of the leg |
 | 1152 | blower |  | a device that produces a current of air |
 | 1155 | eggnog |  | a punch made of sweetened milk or cream mixed with eggs and usually alcoholic liquor |
-| 1156 | sundae |  | ice cream served with a topping |
+| 1156 | sundae | hand stand-in ice cream | ice cream served with a topping |
 | 1157 | emblem |  | special design or visual object representing a quality, type, group, etc. |
 | 1158 | thermos |  | vacuum flask that preserves temperature of hot or cold drinks |
 | 1159 | midge | hypernym gnat | minute two-winged mosquito-like fly lacking biting mouthparts |
@@ -566,16 +570,16 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1169 | silencer | hypernym tube | short tube attached to the muzzle of a gun that deadens the sound of firing |
 | 1171 | catheter | hypernym tube | a thin flexible tube inserted into the body to permit introduction or withdrawal of fluids or to keep the passageway open |
 | 1172 | dill | hypernym herb | aromatic Old World herb having aromatic threadlike foliage and seeds used as seasoning |
-| 1173 | bronco |  | an unbroken or imperfectly broken mustang |
+| 1173 | bronco | hand stand-in horse | an unbroken or imperfectly broken mustang |
 | 1174 | shipwreck |  | a wrecked ship (or a part of one) |
 | 1175 | vagabond |  | anything that resembles a vagabond in having no fixed place |
 | 1176 | guesthouse | hypernym house | a house separate from the main house |
 | 1177 | yoghurt | synonym yogurt | a custard-like food made from curdled milk |
 | 1179 | musket |  | a muzzle-loading shoulder gun with a long barrel |
-| 1180 | blackbird |  | any bird of the family Icteridae whose male is black or predominantly black |
+| 1180 | blackbird | hand stand-in bird | any bird of the family Icteridae whose male is black or predominantly black |
 | 1181 | landfill |  | a low area that has been filled in |
 | 1182 | stetson | hypernym hat | a hat made of felt with a creased crown |
-| 1183 | beagle |  | a small short-legged smooth-coated breed of hound |
+| 1183 | beagle | hand stand-in dog | a small short-legged smooth-coated breed of hound |
 | 1184 | bazooka |  | a portable rocket launcher used by infantrymen as an antitank weapon |
 | 1185 | paintball |  | a capsule filled with water-soluble dye used as a projectile in playing the game of paintball |
 | 1186 | icebox | synonym refrigerator | white goods in which food can be stored at low temperatures |
@@ -583,11 +587,11 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1189 | cardigan | hypernym sweater | knitted jacket that is fastened up the front with buttons or a zipper |
 | 1190 | sickle |  | an edge tool for cutting grass or crops |
 | 1191 | beret |  | a cap with no brim or bill |
-| 1192 | frock |  | a long, loose outer garment |
+| 1192 | frock | hand stand-in dress | a long, loose outer garment |
 | 1193 | trapeze | hypernym swing | a swing used by circus acrobats |
 | 1194 | gourd |  | bottle made from the dried shell of a bottle gourd |
 | 1195 | sanitarium | hypernym hospital | a hospital for recuperation or for the treatment of chronic diseases |
-| 1196 | marlin |  | large long-jawed oceanic sport fishes |
+| 1196 | marlin | hand stand-in fish | large long-jawed oceanic sport fishes |
 | 1197 | klaxon |  | a kind of loud horn formerly used on motor vehicles |
 | 1198 | buttermilk | hypernym milk | residue from making butter from sour raw milk |
 | 1199 | palanquin |  | a closed litter carried on the shoulders of four bearers |
@@ -595,24 +599,24 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1202 | zucchini | synonym courgette | marrow squash plant whose fruit are eaten when small |
 | 1204 | tuba |  | the lowest brass wind instrument |
 | 1205 | kiosk |  | small area set off by walls for special use |
-| 1207 | tablecloth |  | a covering spread over a dining table |
+| 1207 | tablecloth | hand synonym table cloth | a covering spread over a dining table |
 | 1208 | iguana |  | large herbivorous tropical American arboreal lizards with a spiny crest along the back |
 | 1209 | corkscrew |  | a bottle opener that pulls corks |
-| 1210 | mockingbird |  | long-tailed grey-and-white songbird of the southern United States able to mimic songs of other birds |
+| 1210 | mockingbird | hand stand-in bird | long-tailed grey-and-white songbird of the southern United States able to mimic songs of other birds |
 | 1211 | shears | hypernym scissors | large scissors with strong blades |
 | 1212 | pendulum |  | an apparatus consisting of an object mounted so that it swings freely under the influence of gravity |
-| 1213 | landline |  | a telephone line that travels over terrestrial circuits |
+| 1213 | landline | hand stand-in telephone | a telephone line that travels over terrestrial circuits |
 | 1214 | slingshot |  | a plaything consisting of a Y-shaped stick with elastic between the arms |
 | 1215 | axle |  | a shaft on which a wheel rotates |
 | 1216 | duffel |  | a large cylindrical bag of heavy cloth |
 | 1217 | flagship |  | the chief one of a related group |
 | 1219 | bulldozer | hypernym tractor | large powerful tractor |
-| 1221 | greyhound |  | a tall slender dog of an ancient breed noted for swiftness and keen sight |
-| 1222 | palette |  | board that provides a flat surface on which artists mix paints and the range of colors used |
-| 1223 | sabre |  | a fencing sword with a v-shaped blade and a slightly curved handle |
+| 1221 | greyhound | hand stand-in dog | a tall slender dog of an ancient breed noted for swiftness and keen sight |
+| 1222 | palette | hand synonym artist palette | board that provides a flat surface on which artists mix paints and the range of colors used |
+| 1223 | sabre | hand stand-in sword | a fencing sword with a v-shaped blade and a slightly curved handle |
 | 1225 | horseshoe |  | game equipment consisting of an open ring of iron used in playing horseshoes |
 | 1228 | gander | hypernym goose | mature male goose |
-| 1230 | bluebird |  | fruit-eating mostly brilliant blue songbird of the East Indies |
+| 1230 | bluebird | hand stand-in bird | fruit-eating mostly brilliant blue songbird of the East Indies |
 | 1231 | outhouse |  | a small outbuilding with a bench having holes through which a user can defecate |
 | 1232 | airship |  | a steerable self-propelled aircraft |
 | 1233 | fife | hypernym flute | a small high-pitched flute similar to a piccolo |
@@ -622,7 +626,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1238 | curd |  | a coagulated liquid resembling milk curd |
 | 1239 | satchel | hypernym luggage | luggage consisting of a small case with a flat bottom and (usually) a shoulder strap |
 | 1240 | periscope |  | an optical instrument that provides a view of an otherwise obstructed field |
-| 1241 | beet |  | biennial Eurasian plant usually having a swollen edible root |
+| 1241 | beet | hand synonym beetroot | biennial Eurasian plant usually having a swollen edible root |
 | 1242 | grange |  | an outlying farm |
 | 1243 | venison |  | meat from a deer used as food |
 | 1244 | toothpick |  | pick consisting of a small strip of wood or plastic |
@@ -635,7 +639,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1253 | calamari | synonym squid | (Italian cuisine) squid prepared as food |
 | 1254 | manger |  | a container (usually in a barn or stable) from which cattle or horses feed |
 | 1255 | fryer |  | flesh of a medium-sized young chicken suitable for frying |
-| 1256 | sardine |  | small fatty fish usually canned |
+| 1256 | sardine | hand stand-in fish | small fatty fish usually canned |
 | 1257 | marigold | hypernym flower | any of various tropical American plants of the genus Tagetes widely cultivated for their showy yellow or orange flowers |
 | 1258 | hairpin |  | a double pronged pin used to hold women's hair in place |
 | 1259 | hanky | synonym handkerchief | a square piece of cloth used for wiping the eyes or nose or as a costume accessory |
@@ -660,7 +664,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1283 | miso |  | a thick paste made from fermented soybeans and barley or rice malt |
 | 1285 | cubby |  | a small secluded room |
 | 1286 | angelique | hypernym herb | any of various tall and stout herbs of the genus Angelica having pinnately compound leaves and small white or greenish flowers in compound umbels |
-| 1287 | streetcar |  | a wheeled vehicle that runs on rails and is propelled by electricity |
+| 1287 | streetcar | hand synonym tram | a wheeled vehicle that runs on rails and is propelled by electricity |
 | 1288 | stagecoach |  | a large coach-and-four formerly used to carry passengers and mail on regular routes between towns |
 | 1289 | pram |  | a small vehicle with four wheels in which a baby or child is pushed around |
 | 1290 | bungee | hypernym rope | an elasticized rope |
@@ -671,7 +675,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1295 | lilac | hypernym bush | any of various plants of the genus Syringa having large panicles of usually fragrant flowers |
 | 1296 | kelp |  | large brown seaweeds having fluted leathery fronds |
 | 1297 | chamomile | hypernym herb | Eurasian plant with apple-scented foliage and white-rayed flowers and feathery leaves used medicinally |
-| 1298 | terrier |  | any of several usually small short-bodied breeds originally trained to hunt animals living underground |
+| 1298 | terrier | hand stand-in dog | any of several usually small short-bodied breeds originally trained to hunt animals living underground |
 | 1299 | defibrillator |  | an electronic device that administers an electric shock of preset voltage to the heart through the chest wall in an attempt to restore the normal rhythm of the heart during ventricular fibrillation |
 | 1300 | padding |  | artifact consisting of soft or resilient material used to fill or give shape or protect or add comfort |
 | 1301 | mosaic |  | art consisting of a design made of small pieces of colored stone or glass |
@@ -702,11 +706,11 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1331 | blowtorch |  | a burner that mixes air and gas to produce a very hot flame |
 | 1332 | cob |  | nut of any of several trees of the genus Corylus |
 | 1333 | bagging |  | coarse fabric used for bags or sacks |
-| 1334 | mallet |  | a sports implement with a long handle and a head like a hammer |
+| 1334 | mallet | hand stand-in hammer | a sports implement with a long handle and a head like a hammer |
 | 1335 | gar |  | primitive predaceous North American fish covered with hard scales and having long jaws with needlelike teeth |
 | 1336 | skyscraper | hypernym building | a very tall building with many stories |
 | 1337 | sprinkler |  | mechanical device that attaches to a garden hose for watering lawn or garden |
-| 1338 | dinghy |  | a small boat of shallow draft with cross thwarts for seats and rowlocks for oars with which it is propelled |
+| 1338 | dinghy | hand stand-in boat | a small boat of shallow draft with cross thwarts for seats and rowlocks for oars with which it is propelled |
 | 1339 | manhole |  | a hole (usually with a flush cover) through which a person can gain access to an underground structure |
 | 1340 | launchpad |  | a platform from which rockets or space craft are launched |
 | 1341 | clipper |  | (electronics) a nonlinear electronic circuit whose output is limited in amplitude |
@@ -726,11 +730,11 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1355 | feeder |  | an animal being fattened or suitable for fattening |
 | 1357 | veg |  | edible seeds or roots or stems or leaves or bulbs or tubers or nonsweet fruits of any of numerous herbaceous plant |
 | 1358 | sustenance |  | a source of materials to nourish the body |
-| 1359 | sledgehammer |  | a heavy long-handled hammer used to drive stakes or wedges |
+| 1359 | sledgehammer | hand stand-in hammer | a heavy long-handled hammer used to drive stakes or wedges |
 | 1360 | simulator |  | a machine that simulates an environment for the purpose of training or research |
 | 1361 | dollhouse | hypernym house | a house so small that it is likened to a child's plaything |
 | 1362 | tightrope | hypernym rope | tightly stretched rope or wire on which acrobats perform high above the ground |
-| 1363 | tigress |  | a female tiger |
+| 1363 | tigress | hand stand-in tiger | a female tiger |
 | 1365 | hookup |  | a device providing a connection between a power source and a user |
 | 1366 | bonanza |  | an especially rich vein of precious ore |
 | 1367 | nozzle |  | a projecting spout from which a fluid is discharged |
@@ -742,7 +746,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1373 | couscous |  | a spicy dish that originated in northern Africa |
 | 1374 | napa |  | plant with an elongated head of broad stalked leaves resembling celery |
 | 1376 | skylight | hypernym window | a window in a roof to admit daylight |
-| 1377 | sultana |  | pale yellow seedless grape used for raisins and wine |
+| 1377 | sultana | hand stand-in raisin | pale yellow seedless grape used for raisins and wine |
 | 1378 | pajama | synonym pyjama (drawing "pyjamas") | a pair of loose trousers tied by a drawstring around the waist |
 | 1380 | racehorse | hypernym horse | a horse bred for racing |
 | 1381 | glider |  | aircraft supported only by the dynamic action of air against its surfaces |
@@ -754,7 +758,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1387 | lioness |  | a female lion |
 | 1389 | grotto | hypernym cave | a small cave (usually with attractive features) |
 | 1390 | goulash |  | a rich meat stew highly seasoned with paprika |
-| 1391 | hourglass |  | a sandglass that runs for sixty minutes |
+| 1391 | hourglass | hand synonym hourglass done | a sandglass that runs for sixty minutes |
 | 1392 | bung | hypernym plug | a plug used to close a hole in a barrel or flask |
 | 1393 | solitaire |  | a gem (usually a diamond) in a setting by itself |
 | 1394 | hummus |  | a thick spread made from mashed chickpeas, tahini, lemon juice and garlic |
@@ -767,7 +771,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1402 | banger |  | (British informal) pork sausage |
 | 1406 | chutney |  | a spicy condiment made of chopped fruits or vegetables cooked in vinegar and sugar with ginger and spices |
 | 1407 | yolk | synonym egg yolk | the yellow spherical part of an egg that is surrounded by the albumen |
-| 1408 | hummingbird |  | tiny American bird having brilliant iridescent plumage and long slender bills |
+| 1408 | hummingbird | hand stand-in bird | tiny American bird having brilliant iridescent plumage and long slender bills |
 | 1409 | beehive |  | any workplace where people are very busy |
 | 1410 | gazebo |  | a small roofed building affording shade and rest |
 | 1411 | nautilus |  | a submarine that is propelled by nuclear power |
@@ -780,12 +784,12 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1420 | mouthpiece |  | a part that goes over or into the mouth of a person |
 | 1421 | manta |  | a blanket that is used as a cloak or shawl |
 | 1422 | armadillo |  | burrowing chiefly nocturnal mammal with body covered with strong horny plates |
-| 1423 | magpie |  | long-tailed black-and-white crow that utters a raucous chattering call |
+| 1423 | magpie | hand stand-in bird | long-tailed black-and-white crow that utters a raucous chattering call |
 | 1424 | nog |  | a wooden pin pushed or driven into a surface |
 | 1425 | photocopy |  | a photographic copy of written or printed or graphic work |
 | 1426 | coating |  | a thin layer covering something |
 | 1427 | salamander |  | any of various typically terrestrial amphibians that resemble lizards and that return to water only to breed |
-| 1428 | barracuda |  | any voracious marine fish of the genus Sphyraena having an elongated cylindrical body and large mouth with projecting lower jaw and long strong teeth |
+| 1428 | barracuda | hand stand-in fish | any voracious marine fish of the genus Sphyraena having an elongated cylindrical body and large mouth with projecting lower jaw and long strong teeth |
 | 1429 | jailhouse | synonym jail | a correctional institution used to detain persons who are in the lawful custody of the government (either accused persons awaiting trial or convicted persons serving a sentence) |
 | 1430 | pulpit |  | a platform raised above the surrounding level to give prominence to the person on it |
 | 1431 | ladybug | synonym lady beetle | small round bright-colored and spotted beetle that usually feeds on aphids and other insect pests |
@@ -821,7 +825,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1462 | tundra |  | a vast treeless plain in the Arctic regions where the subsoil is permanently frozen |
 | 1464 | dispensary |  | clinic where medicine and medical supplies are dispensed |
 | 1465 | lemur |  | large-eyed arboreal prosimian having foxy faces and long furry tails |
-| 1466 | porterhouse |  | large steak from the thick end of the short loin containing a T-shaped bone and large piece of tenderloin |
+| 1466 | porterhouse | hand stand-in steak | large steak from the thick end of the short loin containing a T-shaped bone and large piece of tenderloin |
 | 1467 | cabana | hypernym tent | a small tent used as a dressing room beside the sea or a swimming pool |
 | 1468 | dynamo |  | generator consisting of a coil (the armature) that rotates between the poles of an electromagnet (the field magnet) causing a current to flow in the armature |
 | 1469 | boudoir |  | a lady's bedroom or private sitting room |
@@ -839,7 +843,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1482 | keepsake |  | something of sentimental value |
 | 1483 | dahl |  | tropical woody herb with showy yellow flowers and flat pods |
 | 1484 | foundry | hypernym factory | factory where metal castings are produced |
-| 1485 | kilt |  | a knee-length pleated tartan skirt worn by men as part of the traditional dress in the Highlands of northern Scotland |
+| 1485 | kilt | hand stand-in skirt | a knee-length pleated tartan skirt worn by men as part of the traditional dress in the Highlands of northern Scotland |
 | 1486 | commissary | hypernym shop | a retail store that sells equipment and provisions (usually to military personnel) |
 | 1487 | nymph |  | a larva of an insect with incomplete metamorphosis (as the dragonfly or mayfly) |
 | 1489 | gargoyle |  | a spout that terminates in a grotesquely carved figure of a person or animal |
@@ -848,7 +852,7 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1492 | ied |  | an explosive device that is improvised |
 | 1493 | vermouth | hypernym wine | any of several white wines flavored with aromatic herbs |
 | 1494 | althea |  | any of various plants of the genus Althaea |
-| 1495 | dandelion |  | any of several herbs of the genus Taraxacum having long tap roots and deeply notched leaves and bright yellow flowers followed by fluffy seed balls |
+| 1495 | dandelion | hand stand-in flower | any of several herbs of the genus Taraxacum having long tap roots and deeply notched leaves and bright yellow flowers followed by fluffy seed balls |
 | 1496 | sweatpants | hypernym trousers | loose-fitting trousers with elastic cuffs |
 | 1497 | hone |  | a whetstone made of fine gritstone |
 | 1498 | precipice | hypernym cliff | a very steep cliff |
