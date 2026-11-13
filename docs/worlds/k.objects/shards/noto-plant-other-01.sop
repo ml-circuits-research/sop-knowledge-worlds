@@ -6,7 +6,7 @@
 
 # seedling
 @k.objects.u1f331 k.objects.object name=seedling core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f331.p1 k.objects.part of=seedling name=part1 shape=polygon x=47.8 y=37.7 w=16.6 h=58.9 z=1 colour=green rgb="#99C23B" core.source="noto-emoji 99701e0"
+@k.objects.u1f331.p1 k.objects.part of=seedling name=stem named=model shape=polygon x=47.8 y=37.7 w=16.6 h=58.9 z=1 colour=green rgb="#99C23B" core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p1.1 k.objects.point part=$k.objects.u1f331.p1 n=1 x=52.7 y=37.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p1.2 k.objects.point part=$k.objects.u1f331.p1 n=2 x=51.8 y=52.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p1.3 k.objects.point part=$k.objects.u1f331.p1 n=3 x=53.9 y=62.6 core.source="noto-emoji 99701e0"
@@ -22,7 +22,7 @@
 @k.objects.u1f331.p1.13 k.objects.point part=$k.objects.u1f331.p1 n=13 x=64.4 y=77 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p1.14 k.objects.point part=$k.objects.u1f331.p1 n=14 x=63.4 y=67.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p1.15 k.objects.point part=$k.objects.u1f331.p1 n=15 x=59.4 y=49.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f331.p2 k.objects.part of=seedling name=part2 shape=polygon x=52.2 y=5.6 w=43.2 h=45.3 z=2 colour=green rgb="#99C23B" core.source="noto-emoji 99701e0"
+@k.objects.u1f331.p2 k.objects.part of=seedling name=right_leaf kind=leaf named=model shape=polygon x=52.2 y=5.6 w=43.2 h=45.3 z=2 colour=green rgb="#99C23B" core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p2.1 k.objects.point part=$k.objects.u1f331.p2 n=1 x=52.2 y=35.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p2.2 k.objects.point part=$k.objects.u1f331.p2 n=2 x=54.8 y=29.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p2.3 k.objects.point part=$k.objects.u1f331.p2 n=3 x=59.1 y=22 core.source="noto-emoji 99701e0"
@@ -45,7 +45,7 @@
 @k.objects.u1f331.p2.20 k.objects.point part=$k.objects.u1f331.p2 n=20 x=55.7 y=50.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p2.21 k.objects.point part=$k.objects.u1f331.p2 n=21 x=54.2 y=49.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p2.22 k.objects.point part=$k.objects.u1f331.p2 n=22 x=53.7 y=48.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f331.p3 k.objects.part of=seedling name=part3 shape=polygon x=2.3 y=21.1 w=53.6 h=33.8 z=3 colour=green rgb="#99C23B" core.source="noto-emoji 99701e0"
+@k.objects.u1f331.p3 k.objects.part of=seedling name=left_leaf kind=leaf named=model shape=polygon x=2.3 y=21.1 w=53.6 h=33.8 z=3 colour=green rgb="#99C23B" core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p3.1 k.objects.point part=$k.objects.u1f331.p3 n=1 x=2.3 y=28.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p3.2 k.objects.point part=$k.objects.u1f331.p3 n=2 x=5.7 y=36.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p3.3 k.objects.point part=$k.objects.u1f331.p3 n=3 x=10.1 y=42.3 core.source="noto-emoji 99701e0"
@@ -65,7 +65,7 @@
 @k.objects.u1f331.p3.17 k.objects.point part=$k.objects.u1f331.p3 n=17 x=13.8 y=22 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p3.18 k.objects.point part=$k.objects.u1f331.p3 n=18 x=9.3 y=23.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p3.19 k.objects.point part=$k.objects.u1f331.p3 n=19 x=4.2 y=26.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f331.p4 k.objects.part of=seedling name=part4 shape=polygon x=56.4 y=10.7 w=29.9 h=34.6 z=4 colour=white rgb="#E6DC9F" core.source="noto-emoji 99701e0"
+@k.objects.u1f331.p4 k.objects.part of=seedling name=part4 kind=detail shape=polygon x=56.4 y=10.7 w=29.9 h=34.6 z=4 colour=white rgb="#E6DC9F" core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p4.1 k.objects.point part=$k.objects.u1f331.p4 n=1 x=67.7 y=24 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p4.2 k.objects.point part=$k.objects.u1f331.p4 n=2 x=63.8 y=29.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p4.3 k.objects.point part=$k.objects.u1f331.p4 n=3 x=59.5 y=36.1 core.source="noto-emoji 99701e0"
@@ -80,7 +80,7 @@
 @k.objects.u1f331.p4.12 k.objects.point part=$k.objects.u1f331.p4 n=12 x=85.2 y=10.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p4.13 k.objects.point part=$k.objects.u1f331.p4 n=13 x=78.6 y=14.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p4.14 k.objects.point part=$k.objects.u1f331.p4 n=14 x=72.2 y=19.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f331.p5 k.objects.part of=seedling name=part5 shape=polygon x=11.3 y=29 w=41 h=17.4 z=5 colour=white rgb="#E6DC9F" core.source="noto-emoji 99701e0"
+@k.objects.u1f331.p5 k.objects.part of=seedling name=part5 kind=detail shape=polygon x=11.3 y=29 w=41 h=17.4 z=5 colour=white rgb="#E6DC9F" core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p5.1 k.objects.point part=$k.objects.u1f331.p5 n=1 x=32.4 y=32 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p5.2 k.objects.point part=$k.objects.u1f331.p5 n=2 x=23.7 y=29.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p5.3 k.objects.point part=$k.objects.u1f331.p5 n=3 x=17 y=29 core.source="noto-emoji 99701e0"
@@ -101,7 +101,7 @@
 # potted plant
 @k.objects.u1fab4 k.objects.object name="potted plant" core.source="noto-emoji 99701e0" core.source="cldr 48"
 @k.objects.u1fab4.p1 k.objects.part of="potted plant" name=part1 shape=oval x=33.4 y=81.3 w=33.2 h=15.4 z=1 colour=red rgb="#D44A28" core.source="noto-emoji 99701e0"
-@k.objects.u1fab4.p2 k.objects.part of="potted plant" name=part2 shape=polygon x=22.2 y=58.9 w=55.6 h=32.7 z=2 colour=red rgb="#ED603A" core.source="noto-emoji 99701e0"
+@k.objects.u1fab4.p2 k.objects.part of="potted plant" name=pot named=model shape=polygon x=22.2 y=58.9 w=55.6 h=32.7 z=2 colour=red rgb="#ED603A" core.source="noto-emoji 99701e0"
 @k.objects.u1fab4.p2.1 k.objects.point part=$k.objects.u1fab4.p2 n=1 x=77.8 y=67.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fab4.p2.2 k.objects.point part=$k.objects.u1fab4.p2 n=2 x=69.6 y=83.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fab4.p2.3 k.objects.point part=$k.objects.u1fab4.p2 n=3 x=50 y=91.6 core.source="noto-emoji 99701e0"
@@ -314,7 +314,7 @@
 
 # evergreen tree
 @k.objects.u1f332 k.objects.object name="evergreen tree" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f332.p1 k.objects.part of="evergreen tree" name=part1 shape=polygon x=41.1 y=80.2 w=15.7 h=16.5 z=1 colour=brown rgb="#855B51" core.source="noto-emoji 99701e0"
+@k.objects.u1f332.p1 k.objects.part of="evergreen tree" name=trunk named=model shape=polygon x=41.1 y=80.2 w=15.7 h=16.5 z=1 colour=brown rgb="#855B51" core.source="noto-emoji 99701e0"
 @k.objects.u1f332.p1.1 k.objects.point part=$k.objects.u1f332.p1 n=1 x=44.1 y=80.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f332.p1.2 k.objects.point part=$k.objects.u1f332.p1 n=2 x=43.2 y=86.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f332.p1.3 k.objects.point part=$k.objects.u1f332.p1 n=3 x=41.1 y=92.1 core.source="noto-emoji 99701e0"

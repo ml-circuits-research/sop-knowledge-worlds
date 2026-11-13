@@ -6,7 +6,7 @@
 
 # sunflower
 @k.objects.u1f33b k.objects.object name=sunflower core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f33b.p1 k.objects.part of=sunflower name=part1 shape=polygon x=43.4 y=66.7 w=10 h=30 z=1 colour=green rgb="#94A71A" core.source="noto-emoji 99701e0"
+@k.objects.u1f33b.p1 k.objects.part of=sunflower name=stem named=model shape=polygon x=43.4 y=66.7 w=10 h=30 z=1 colour=green rgb="#94A71A" core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p1.1 k.objects.point part=$k.objects.u1f33b.p1 n=1 x=53.4 y=66.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p1.2 k.objects.point part=$k.objects.u1f33b.p1 n=2 x=47.6 y=67.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p1.3 k.objects.point part=$k.objects.u1f33b.p1 n=3 x=46.1 y=84.4 core.source="noto-emoji 99701e0"
@@ -136,7 +136,7 @@
 @k.objects.u1f33b.p7.26 k.objects.point part=$k.objects.u1f33b.p7 n=26 x=63.2 y=23.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p7.27 k.objects.point part=$k.objects.u1f33b.p7 n=27 x=59.7 y=21 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p7.28 k.objects.point part=$k.objects.u1f33b.p7 n=28 x=55.4 y=19.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f33b.p8 k.objects.part of=sunflower name=part8 shape=polygon x=34.8 y=24.9 w=31.9 h=32.5 z=8 colour=brown rgb="#6D4D42" core.source="noto-emoji 99701e0"
+@k.objects.u1f33b.p8 k.objects.part of=sunflower name=centre named=model shape=polygon x=34.8 y=24.9 w=31.9 h=32.5 z=8 colour=brown rgb="#6D4D42" core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p8.1 k.objects.point part=$k.objects.u1f33b.p8 n=1 x=50.1 y=24.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p8.2 k.objects.point part=$k.objects.u1f33b.p8 n=2 x=43.9 y=26.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p8.3 k.objects.point part=$k.objects.u1f33b.p8 n=3 x=39.9 y=28.6 core.source="noto-emoji 99701e0"
@@ -160,7 +160,7 @@
 
 # blossom
 @k.objects.u1f33c k.objects.object name=blossom core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f33c.p1 k.objects.part of=blossom name=part1 shape=polygon x=3.7 y=5.5 w=92.3 h=89.9 z=1 colour=yellow rgb="#FFD042" core.source="noto-emoji 99701e0"
+@k.objects.u1f33c.p1 k.objects.part of=blossom name=petals named=model shape=polygon x=3.7 y=5.5 w=92.3 h=89.9 z=1 colour=yellow rgb="#FFD042" core.source="noto-emoji 99701e0"
 @k.objects.u1f33c.p1.1 k.objects.point part=$k.objects.u1f33c.p1 n=1 x=69.1 y=29.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f33c.p1.2 k.objects.point part=$k.objects.u1f33c.p1 n=2 x=75.6 y=17 core.source="noto-emoji 99701e0"
 @k.objects.u1f33c.p1.3 k.objects.point part=$k.objects.u1f33c.p1 n=3 x=70.8 y=8.1 core.source="noto-emoji 99701e0"
@@ -497,7 +497,7 @@
 @k.objects.u1f337.p8.14 k.objects.point part=$k.objects.u1f337.p8 n=14 x=47.4 y=29.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p8.15 k.objects.point part=$k.objects.u1f337.p8 n=15 x=49.6 y=23.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p8.16 k.objects.point part=$k.objects.u1f337.p8 n=16 x=54.2 y=15.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f337.p9 k.objects.part of=tulip name=part9 shape=polygon x=24.4 y=6.5 w=51.4 h=56.2 z=9 colour=pink rgb="#F387AB" core.source="noto-emoji 99701e0"
+@k.objects.u1f337.p9 k.objects.part of=tulip name=flower named=model shape=polygon x=24.4 y=6.5 w=51.4 h=56.2 z=9 colour=pink rgb="#F387AB" core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p9.1 k.objects.point part=$k.objects.u1f337.p9 n=1 x=75.7 y=33.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p9.2 k.objects.point part=$k.objects.u1f337.p9 n=2 x=74.1 y=23.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p9.3 k.objects.point part=$k.objects.u1f337.p9 n=3 x=71.9 y=15.3 core.source="noto-emoji 99701e0"

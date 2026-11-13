@@ -6,7 +6,7 @@
 
 # new moon
 @k.objects.u1f311 k.objects.object name="new moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f311.p1 k.objects.part of="new moon" name=part1 shape=circle x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=black rgb="#22404C" core.source="noto-emoji 99701e0"
+@k.objects.u1f311.p1 k.objects.part of="new moon" name=moon named=model shape=circle x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=black rgb="#22404C" core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p2 k.objects.part of="new moon" name=part2 shape=polygon x=38.2 y=4.9 w=11.8 h=3.8 z=2 colour=black rgb="#1B2E35" core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p2.1 k.objects.point part=$k.objects.u1f311.p2 n=1 x=50 y=7 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p2.2 k.objects.point part=$k.objects.u1f311.p2 n=2 x=48.2 y=8.2 core.source="noto-emoji 99701e0"
@@ -16,7 +16,7 @@
 @k.objects.u1f311.p2.6 k.objects.point part=$k.objects.u1f311.p2 n=6 x=39.7 y=5.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p2.7 k.objects.point part=$k.objects.u1f311.p2 n=7 x=43.9 y=4.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p2.8 k.objects.point part=$k.objects.u1f311.p2 n=8 x=48.2 y=5.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f311.p3 k.objects.part of="new moon" name=part3 shape=polygon x=54.1 y=12.3 w=39.8 h=40.9 z=3 colour=black rgb="#1B2E35" core.source="noto-emoji 99701e0"
+@k.objects.u1f311.p3 k.objects.part of="new moon" name=part3 kind=detail shape=polygon x=54.1 y=12.3 w=39.8 h=40.9 z=3 colour=black rgb="#1B2E35" core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p3.1 k.objects.point part=$k.objects.u1f311.p3 n=1 x=93.3 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p3.2 k.objects.point part=$k.objects.u1f311.p3 n=2 x=93.9 y=40.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p3.3 k.objects.point part=$k.objects.u1f311.p3 n=3 x=93.1 y=36.1 core.source="noto-emoji 99701e0"
@@ -104,7 +104,7 @@
 @k.objects.u1f311.p9.6 k.objects.point part=$k.objects.u1f311.p9 n=6 x=61.9 y=6.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p9.7 k.objects.point part=$k.objects.u1f311.p9 n=7 x=64.9 y=7.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p9.8 k.objects.point part=$k.objects.u1f311.p9 n=8 x=67 y=8.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f311.p10 k.objects.part of="new moon" name=part10 shape=polygon x=7.1 y=9.6 w=41.9 h=62.3 z=10 colour=black rgb="#1B2E35" core.source="noto-emoji 99701e0"
+@k.objects.u1f311.p10 k.objects.part of="new moon" name=part10 kind=detail shape=polygon x=7.1 y=9.6 w=41.9 h=62.3 z=10 colour=black rgb="#1B2E35" core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p10.1 k.objects.point part=$k.objects.u1f311.p10 n=1 x=44.1 y=12.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p10.2 k.objects.point part=$k.objects.u1f311.p10 n=2 x=38.6 y=12.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p10.3 k.objects.point part=$k.objects.u1f311.p10 n=3 x=31.8 y=16.1 core.source="noto-emoji 99701e0"
@@ -357,7 +357,7 @@
 
 # first quarter moon
 @k.objects.u1f313 k.objects.object name="first quarter moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f313.p1 k.objects.part of="first quarter moon" name=part1 shape=polygon x=3.1 y=3.1 w=49.2 h=93.8 z=1 colour=black rgb="#22404C" core.source="noto-emoji 99701e0"
+@k.objects.u1f313.p1 k.objects.part of="first quarter moon" name=dark_half kind=half named=model shape=polygon x=3.1 y=3.1 w=49.2 h=93.8 z=1 colour=black rgb="#22404C" core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p1.1 k.objects.point part=$k.objects.u1f313.p1 n=1 x=3.1 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p1.2 k.objects.point part=$k.objects.u1f313.p1 n=2 x=3.7 y=57.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p1.3 k.objects.point part=$k.objects.u1f313.p1 n=3 x=5.5 y=64.8 core.source="noto-emoji 99701e0"
@@ -382,7 +382,7 @@
 @k.objects.u1f313.p1.22 k.objects.point part=$k.objects.u1f313.p1 n=22 x=8.4 y=28.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p1.23 k.objects.point part=$k.objects.u1f313.p1 n=23 x=5.5 y=35.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p1.24 k.objects.point part=$k.objects.u1f313.p1 n=24 x=3.7 y=42.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f313.p2 k.objects.part of="first quarter moon" name=part2 shape=polygon x=50 y=3.1 w=46.9 h=93.8 z=2 colour=white rgb="#FCE5AC" core.source="noto-emoji 99701e0"
+@k.objects.u1f313.p2 k.objects.part of="first quarter moon" name=light_half kind=half named=model shape=polygon x=50 y=3.1 w=46.9 h=93.8 z=2 colour=white rgb="#FCE5AC" core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p2.1 k.objects.point part=$k.objects.u1f313.p2 n=1 x=96.9 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p2.2 k.objects.point part=$k.objects.u1f313.p2 n=2 x=96.3 y=42.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p2.3 k.objects.point part=$k.objects.u1f313.p2 n=3 x=94.5 y=35.2 core.source="noto-emoji 99701e0"
@@ -737,7 +737,7 @@
 
 # full moon
 @k.objects.u1f315 k.objects.object name="full moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f315.p1 k.objects.part of="full moon" name=part1 shape=circle x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=white rgb="#FCE5AC" core.source="noto-emoji 99701e0"
+@k.objects.u1f315.p1 k.objects.part of="full moon" name=moon named=model shape=circle x=3.1 y=3.1 w=93.8 h=93.8 z=1 colour=white rgb="#FCE5AC" core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p2 k.objects.part of="full moon" name=part2 shape=polygon x=37 y=4.9 w=11.7 h=3.9 z=2 colour=white rgb="#F1C688" core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p2.1 k.objects.point part=$k.objects.u1f315.p2 n=1 x=48.7 y=6.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p2.2 k.objects.point part=$k.objects.u1f315.p2 n=2 x=47 y=8 core.source="noto-emoji 99701e0"
@@ -747,7 +747,7 @@
 @k.objects.u1f315.p2.6 k.objects.point part=$k.objects.u1f315.p2 n=6 x=38.3 y=6.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p2.7 k.objects.point part=$k.objects.u1f315.p2 n=7 x=42.5 y=4.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p2.8 k.objects.point part=$k.objects.u1f315.p2 n=8 x=46.9 y=5.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f315.p3 k.objects.part of="full moon" name=part3 shape=polygon x=54.1 y=12.3 w=39.8 h=40.9 z=3 colour=white rgb="#F1C688" core.source="noto-emoji 99701e0"
+@k.objects.u1f315.p3 k.objects.part of="full moon" name=part3 kind=detail shape=polygon x=54.1 y=12.3 w=39.8 h=40.9 z=3 colour=white rgb="#F1C688" core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p3.1 k.objects.point part=$k.objects.u1f315.p3 n=1 x=93.3 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p3.2 k.objects.point part=$k.objects.u1f315.p3 n=2 x=93.9 y=40.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p3.3 k.objects.point part=$k.objects.u1f315.p3 n=3 x=93.1 y=36.1 core.source="noto-emoji 99701e0"
@@ -835,7 +835,7 @@
 @k.objects.u1f315.p9.6 k.objects.point part=$k.objects.u1f315.p9 n=6 x=61.9 y=6.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p9.7 k.objects.point part=$k.objects.u1f315.p9 n=7 x=64.9 y=7.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p9.8 k.objects.point part=$k.objects.u1f315.p9 n=8 x=67 y=8.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f315.p10 k.objects.part of="full moon" name=part10 shape=polygon x=7.1 y=9.6 w=41.9 h=62.3 z=10 colour=white rgb="#F1C688" core.source="noto-emoji 99701e0"
+@k.objects.u1f315.p10 k.objects.part of="full moon" name=part10 kind=detail shape=polygon x=7.1 y=9.6 w=41.9 h=62.3 z=10 colour=white rgb="#F1C688" core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p10.1 k.objects.point part=$k.objects.u1f315.p10 n=1 x=44.1 y=12.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p10.2 k.objects.point part=$k.objects.u1f315.p10 n=2 x=38.6 y=12.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p10.3 k.objects.point part=$k.objects.u1f315.p10 n=3 x=31.8 y=16.1 core.source="noto-emoji 99701e0"
@@ -1087,7 +1087,7 @@
 
 # last quarter moon
 @k.objects.u1f317 k.objects.object name="last quarter moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f317.p1 k.objects.part of="last quarter moon" name=part1 shape=polygon x=3.1 y=3.1 w=49.2 h=93.8 z=1 colour=white rgb="#FCE5AC" core.source="noto-emoji 99701e0"
+@k.objects.u1f317.p1 k.objects.part of="last quarter moon" name=light_half kind=half named=model shape=polygon x=3.1 y=3.1 w=49.2 h=93.8 z=1 colour=white rgb="#FCE5AC" core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p1.1 k.objects.point part=$k.objects.u1f317.p1 n=1 x=3.1 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p1.2 k.objects.point part=$k.objects.u1f317.p1 n=2 x=3.7 y=57.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p1.3 k.objects.point part=$k.objects.u1f317.p1 n=3 x=5.5 y=64.8 core.source="noto-emoji 99701e0"
@@ -1112,7 +1112,7 @@
 @k.objects.u1f317.p1.22 k.objects.point part=$k.objects.u1f317.p1 n=22 x=8.4 y=28.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p1.23 k.objects.point part=$k.objects.u1f317.p1 n=23 x=5.5 y=35.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p1.24 k.objects.point part=$k.objects.u1f317.p1 n=24 x=3.7 y=42.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f317.p2 k.objects.part of="last quarter moon" name=part2 shape=polygon x=50 y=3.1 w=46.9 h=93.8 z=2 colour=black rgb="#22404C" core.source="noto-emoji 99701e0"
+@k.objects.u1f317.p2 k.objects.part of="last quarter moon" name=dark_half kind=half named=model shape=polygon x=50 y=3.1 w=46.9 h=93.8 z=2 colour=black rgb="#22404C" core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p2.1 k.objects.point part=$k.objects.u1f317.p2 n=1 x=96.9 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p2.2 k.objects.point part=$k.objects.u1f317.p2 n=2 x=96.3 y=42.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p2.3 k.objects.point part=$k.objects.u1f317.p2 n=3 x=94.5 y=35.2 core.source="noto-emoji 99701e0"

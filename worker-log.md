@@ -257,3 +257,10 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
   part-names.tsv: rows for 509 objects; **1,537 parts named, 641 marked detail**.
 - Not recognisable so far (of 601 looked at): spider web, gorilla, lizard, piñata, nesting dolls, brick. 6.
 - npm test 913 pass; vocab 13,186 words.
+
+## R2.7 batch 5 (2026-11-13): 108 more objects looked at (709 of 811)
+
+- Buildings, places, scenes, flowers, plants, science, moons, weather, sound, balls.
+- part-names.tsv: rows for 592 objects; **1,767 parts named, 708 marked detail** (measured). Scenes (cityscape, national park, desert) get only a sun or
+  a sky; weather and flowers name well (sun, cloud, rays, stem, petals).
+- Not recognisable: foggy, fog (plain grey areas). 8 so far of 709.

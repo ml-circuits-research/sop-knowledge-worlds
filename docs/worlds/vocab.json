@@ -2458,6 +2458,24 @@
   "k.objects/shards/noto-place-religious-01",
   "k.words/shards/ba"
  ],
+ "band1": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "band2": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "band3": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "band4": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "band5": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "band6": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
  "bandage": [
   "k.objects/shards/noto-medical-01",
   "k.words/shards/ba"
@@ -2681,6 +2699,8 @@
   "k.objects/shards/noto-game-02",
   "k.objects/shards/noto-hotel-01",
   "k.objects/shards/noto-place-building-01",
+  "k.objects/shards/noto-place-building-03",
+  "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-science-01",
   "k.objects/shards/noto-transport-ground-06",
   "k.objects/shards/sky",
@@ -3959,6 +3979,7 @@
   "k.words/shards/bo"
  ],
  "bolt": [
+  "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-tool-02",
   "k.words/shards/bo"
  ],
@@ -4199,6 +4220,9 @@
  ],
  "bottom_ray": [
   "k.objects/shards/sky"
+ ],
+ "bottom_stripe": [
+  "k.objects/shards/noto-sport-01"
  ],
  "bottoms": [
   "k.objects/shards/noto-drink-02"
@@ -4792,15 +4816,21 @@
  ],
  "bubble1": [
   "k.objects/shards/noto-household-02",
-  "k.objects/shards/noto-household-03"
+  "k.objects/shards/noto-household-03",
+  "k.objects/shards/noto-science-01"
  ],
  "bubble2": [
   "k.objects/shards/noto-household-02",
-  "k.objects/shards/noto-household-03"
+  "k.objects/shards/noto-household-03",
+  "k.objects/shards/noto-science-01"
  ],
  "bubble3": [
   "k.objects/shards/noto-household-02",
-  "k.objects/shards/noto-household-03"
+  "k.objects/shards/noto-household-03",
+  "k.objects/shards/noto-science-01"
+ ],
+ "bubble4": [
+  "k.objects/shards/noto-science-01"
  ],
  "bubbles": [
   "k.objects/shards/noto-household-03"
@@ -4912,6 +4942,7 @@
  "bulb": [
   "k.objects/shards/noto-food-vegetable-02",
   "k.objects/shards/noto-light-video-02",
+  "k.objects/shards/noto-sky-weather-02",
   "k.words/shards/bu"
  ],
  "bulgaria": [
@@ -5198,11 +5229,13 @@
  ],
  "button1": [
   "k.objects/shards/noto-game-01",
-  "k.objects/shards/noto-phone-01"
+  "k.objects/shards/noto-phone-01",
+  "k.objects/shards/noto-sky-weather-05"
  ],
  "button2": [
   "k.objects/shards/noto-game-01",
-  "k.objects/shards/noto-phone-01"
+  "k.objects/shards/noto-phone-01",
+  "k.objects/shards/noto-sky-weather-05"
  ],
  "button3": [
   "k.objects/shards/noto-game-01",
@@ -5284,6 +5317,15 @@
  "cabin": [
   "k.objects/shards/vehicles",
   "k.words/shards/ca"
+ ],
+ "cabin1": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "cabin2": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "cabin3": [
+  "k.objects/shards/noto-place-other-02"
  ],
  "cabinet": [
   "k.objects/shards/noto-office-03",
@@ -5632,6 +5674,7 @@
   "k.objects/shards/noto-food-prepared-05",
   "k.objects/shards/noto-food-vegetable-03",
   "k.objects/shards/noto-household-02",
+  "k.objects/shards/noto-plant-other-02",
   "k.words/shards/ca"
  ],
  "capability": [
@@ -6162,6 +6205,9 @@
  ],
  "centre": [
   "k.objects/shards/nature",
+  "k.objects/shards/noto-place-map-01",
+  "k.objects/shards/noto-plant-flower-01",
+  "k.objects/shards/noto-plant-flower-02",
   "k.words/shards/ce"
  ],
  "century": [
@@ -6471,6 +6517,7 @@
   "k.words/shards/ch"
  ],
  "cheek": [
+  "k.objects/shards/noto-sky-weather-02",
   "k.words/shards/ch"
  ],
  "cheer": [
@@ -8355,6 +8402,7 @@
  ],
  "cone": [
   "k.objects/shards/noto-food-sweet-01",
+  "k.objects/shards/noto-sound-01",
   "k.words/shards/co"
  ],
  "coney": [
@@ -10005,6 +10053,9 @@
   "k.objects/shards/noto-sky-weather-01",
   "k.words/shards/da"
  ],
+ "dark_half": [
+  "k.objects/shards/noto-sky-weather-01"
+ ],
  "darkness": [
   "k.words/shards/da"
  ],
@@ -10923,10 +10974,12 @@
   "k.words/shards/di"
  ],
  "digit1": [
-  "k.objects/shards/noto-office-01"
+  "k.objects/shards/noto-office-01",
+  "k.objects/shards/noto-place-building-03"
  ],
  "digit2": [
-  "k.objects/shards/noto-office-01"
+  "k.objects/shards/noto-office-01",
+  "k.objects/shards/noto-place-building-03"
  ],
  "dignity": [
   "k.words/shards/di"
@@ -11574,8 +11627,20 @@
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/noto-place-building-02",
+  "k.objects/shards/noto-place-building-03",
+  "k.objects/shards/noto-place-other-01",
+  "k.objects/shards/noto-place-other-03",
   "k.objects/shards/noto-place-religious-01",
   "k.words/shards/do"
+ ],
+ "door1": [
+  "k.objects/shards/noto-place-religious-01"
+ ],
+ "door2": [
+  "k.objects/shards/noto-place-religious-01"
+ ],
+ "door3": [
+  "k.objects/shards/noto-place-religious-01"
  ],
  "doorbell": [
   "k.words/shards/do"
@@ -13578,6 +13643,8 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-clothing-01",
+  "k.objects/shards/noto-sky-weather-02",
+  "k.objects/shards/noto-sky-weather-04",
   "k.words/shards/ey"
  ],
  "eyeball": [
@@ -14346,6 +14413,7 @@
  "fire": [
   "k.objects/shards/noto-event-01",
   "k.objects/shards/noto-household-03",
+  "k.objects/shards/noto-place-geographic-01",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-transport-ground-03",
   "k.words/shards/fi"
@@ -14572,6 +14640,7 @@
   "k.words/shards/fl"
  ],
  "flask": [
+  "k.objects/shards/noto-science-01",
   "k.words/shards/fl"
  ],
  "flat": [
@@ -15629,6 +15698,7 @@
   "k.words/shards/fu"
  ],
  "funnel": [
+  "k.objects/shards/noto-sky-weather-04",
   "k.words/shards/fu"
  ],
  "funnelled": [
@@ -16685,6 +16755,7 @@
  ],
  "grass": [
   "k.commonsense/shards/core",
+  "k.objects/shards/noto-place-geographic-01",
   "k.words/shards/gr"
  ],
  "grasshopper": [
@@ -17309,6 +17380,8 @@
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-music-01",
   "k.objects/shards/noto-office-01",
+  "k.objects/shards/noto-sky-weather-05",
+  "k.objects/shards/noto-sport-01",
   "k.objects/shards/noto-sport-02",
   "k.objects/shards/noto-tool-01",
   "k.words/shards/ha"
@@ -17493,6 +17566,7 @@
   "k.objects/shards/figures",
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/noto-clothing-06",
+  "k.objects/shards/noto-sky-weather-05",
   "k.words/shards/ha"
  ],
  "hatch": [
@@ -21464,11 +21538,13 @@
  ],
  "leaf1": [
   "k.objects/shards/noto-food-fruit-03",
+  "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-plant-other-01",
   "k.objects/shards/noto-plant-other-02"
  ],
  "leaf2": [
   "k.objects/shards/noto-food-fruit-03",
+  "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-plant-other-01",
   "k.objects/shards/noto-plant-other-02"
  ],
@@ -21607,7 +21683,8 @@
   "k.objects/shards/figures"
  ],
  "left_base": [
-  "k.objects/shards/noto-event-02"
+  "k.objects/shards/noto-event-02",
+  "k.objects/shards/noto-place-religious-01"
  ],
  "left_bush": [
   "k.objects/shards/noto-place-building-03"
@@ -21618,12 +21695,18 @@
  "left_cherry": [
   "k.objects/shards/noto-food-fruit-02"
  ],
+ "left_chimney": [
+  "k.objects/shards/noto-place-building-03"
+ ],
  "left_claw": [
   "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-animal-marine-02"
  ],
  "left_column": [
   "k.objects/shards/noto-place-building-02"
+ ],
+ "left_dome": [
+  "k.objects/shards/noto-place-religious-01"
  ],
  "left_door": [
   "k.objects/shards/noto-place-building-02"
@@ -21659,7 +21742,8 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-event-01",
-  "k.objects/shards/noto-sky-weather-02"
+  "k.objects/shards/noto-sky-weather-02",
+  "k.objects/shards/noto-sky-weather-05"
  ],
  "left_face": [
   "k.objects/shards/noto-event-02"
@@ -21694,7 +21778,8 @@
  ],
  "left_leaf": [
   "k.objects/shards/noto-food-fruit-02",
-  "k.objects/shards/noto-plant-flower-02"
+  "k.objects/shards/noto-plant-flower-02",
+  "k.objects/shards/noto-plant-other-01"
  ],
  "left_leg": [
   "k.objects/shards/animals",
@@ -21703,6 +21788,7 @@
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-household-01",
+  "k.objects/shards/noto-science-01",
   "k.objects/shards/noto-transport-ground-06"
  ],
  "left_lens": [
@@ -21733,6 +21819,9 @@
  ],
  "left_pocket": [
   "k.objects/shards/noto-clothing-01"
+ ],
+ "left_post": [
+  "k.objects/shards/noto-place-religious-01"
  ],
  "left_puff": [
   "k.objects/shards/sky"
@@ -21780,6 +21869,8 @@
  "left_window": [
   "k.objects/shards/buildings",
   "k.objects/shards/noto-place-building-02",
+  "k.objects/shards/noto-place-building-03",
+  "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/vehicles"
  ],
  "left_wing": [
@@ -21807,17 +21898,20 @@
  "leg1": [
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
-  "k.objects/shards/noto-animal-marine-02"
+  "k.objects/shards/noto-animal-marine-02",
+  "k.objects/shards/noto-science-01"
  ],
  "leg2": [
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
-  "k.objects/shards/noto-animal-marine-02"
+  "k.objects/shards/noto-animal-marine-02",
+  "k.objects/shards/noto-science-01"
  ],
  "leg3": [
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
-  "k.objects/shards/noto-animal-marine-02"
+  "k.objects/shards/noto-animal-marine-02",
+  "k.objects/shards/noto-science-01"
  ],
  "leg4": [
   "k.objects/shards/noto-animal-marine-02"
@@ -22119,6 +22213,9 @@
  "light rail": [
   "k.objects/shards/noto-transport-ground-01"
  ],
+ "light_half": [
+  "k.objects/shards/noto-sky-weather-01"
+ ],
  "lighten": [
   "k.words/shards/li"
  ],
@@ -22294,6 +22391,7 @@
  "liquid": [
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-medical-01",
+  "k.objects/shards/noto-science-01",
   "k.words/shards/li"
  ],
  "liquor": [
@@ -24169,6 +24267,9 @@
  "middle_ball": [
   "k.objects/shards/figures"
  ],
+ "middle_leg": [
+  "k.objects/shards/noto-science-01"
+ ],
  "middle_merlon": [
   "k.objects/shards/buildings"
  ],
@@ -25062,6 +25163,7 @@
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.objects/shards/noto-sky-weather-05",
   "k.words/shards/mo"
  ],
  "mouthful": [
@@ -25568,6 +25670,12 @@
   "k.objects/shards/noto-arts-crafts-01",
   "k.objects/shards/noto-medical-01",
   "k.words/shards/ne"
+ ],
+ "needle_north": [
+  "k.objects/shards/noto-place-map-01"
+ ],
+ "needle_south": [
+  "k.objects/shards/noto-place-map-01"
  ],
  "needy": [
   "k.words/shards/ne"
@@ -28391,13 +28499,16 @@
   "k.words/shards/pa"
  ],
  "patch1": [
-  "k.objects/shards/noto-animal-mammal-04"
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-sport-01"
  ],
  "patch2": [
-  "k.objects/shards/noto-animal-mammal-04"
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-sport-01"
  ],
  "patch3": [
-  "k.objects/shards/noto-animal-mammal-04"
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-sport-01"
  ],
  "patch4": [
   "k.objects/shards/noto-animal-mammal-04"
@@ -28662,6 +28773,15 @@
  ],
  "peg": [
   "k.words/shards/pe"
+ ],
+ "peg1": [
+  "k.objects/shards/noto-place-other-01"
+ ],
+ "peg2": [
+  "k.objects/shards/noto-place-other-01"
+ ],
+ "peg3": [
+  "k.objects/shards/noto-place-other-01"
  ],
  "pegasus": [
   "k.words/shards/pe"
@@ -28964,8 +29084,25 @@
  "petal": [
   "k.objects/shards/nature"
  ],
+ "petal1": [
+  "k.objects/shards/noto-plant-flower-01"
+ ],
+ "petal2": [
+  "k.objects/shards/noto-plant-flower-01"
+ ],
+ "petal3": [
+  "k.objects/shards/noto-plant-flower-01"
+ ],
+ "petal4": [
+  "k.objects/shards/noto-plant-flower-01"
+ ],
+ "petal5": [
+  "k.objects/shards/noto-plant-flower-01"
+ ],
  "petals": [
-  "k.objects/shards/nature"
+  "k.objects/shards/nature",
+  "k.objects/shards/noto-plant-flower-01",
+  "k.objects/shards/noto-plant-flower-02"
  ],
  "peter": [
   "k.words/shards/pe"
@@ -29364,6 +29501,15 @@
  ],
  "pillar": [
   "k.words/shards/pi"
+ ],
+ "pillar1": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "pillar2": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "pillar3": [
+  "k.objects/shards/noto-place-other-02"
  ],
  "pillow": [
   "k.words/shards/pi"
@@ -29843,6 +29989,7 @@
  "pole": [
   "k.objects/shards/noto-event-02",
   "k.objects/shards/noto-household-01",
+  "k.objects/shards/noto-place-geographic-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-sport-03",
@@ -31615,7 +31762,14 @@
  "ray5": [
   "k.objects/shards/noto-sky-weather-03"
  ],
+ "ray6": [
+  "k.objects/shards/noto-sky-weather-03"
+ ],
+ "ray7": [
+  "k.objects/shards/noto-sky-weather-03"
+ ],
  "rays": [
+  "k.objects/shards/noto-sky-weather-02",
   "k.objects/shards/sky"
  ],
  "razor": [
@@ -32812,7 +32966,8 @@
   "k.objects/shards/figures"
  ],
  "right_base": [
-  "k.objects/shards/noto-event-02"
+  "k.objects/shards/noto-event-02",
+  "k.objects/shards/noto-place-religious-01"
  ],
  "right_bush": [
   "k.objects/shards/noto-place-building-03"
@@ -32823,12 +32978,18 @@
  "right_cherry": [
   "k.objects/shards/noto-food-fruit-02"
  ],
+ "right_chimney": [
+  "k.objects/shards/noto-place-building-03"
+ ],
  "right_claw": [
   "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-animal-marine-02"
  ],
  "right_column": [
   "k.objects/shards/noto-place-building-02"
+ ],
+ "right_dome": [
+  "k.objects/shards/noto-place-religious-01"
  ],
  "right_door": [
   "k.objects/shards/noto-place-building-02"
@@ -32864,7 +33025,8 @@
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-event-01",
-  "k.objects/shards/noto-sky-weather-02"
+  "k.objects/shards/noto-sky-weather-02",
+  "k.objects/shards/noto-sky-weather-05"
  ],
  "right_face": [
   "k.objects/shards/noto-event-02"
@@ -32898,7 +33060,8 @@
   "k.objects/shards/noto-animal-reptile-01"
  ],
  "right_leaf": [
-  "k.objects/shards/noto-food-fruit-02"
+  "k.objects/shards/noto-food-fruit-02",
+  "k.objects/shards/noto-plant-other-01"
  ],
  "right_leg": [
   "k.objects/shards/animals",
@@ -32907,6 +33070,7 @@
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-household-01",
+  "k.objects/shards/noto-science-01",
   "k.objects/shards/noto-transport-ground-06"
  ],
  "right_lens": [
@@ -32937,6 +33101,9 @@
  ],
  "right_pocket": [
   "k.objects/shards/noto-clothing-01"
+ ],
+ "right_post": [
+  "k.objects/shards/noto-place-religious-01"
  ],
  "right_puff": [
   "k.objects/shards/sky"
@@ -32984,6 +33151,8 @@
  "right_window": [
   "k.objects/shards/buildings",
   "k.objects/shards/noto-place-building-02",
+  "k.objects/shards/noto-place-building-03",
+  "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/vehicles"
  ],
  "right_wing": [
@@ -33359,6 +33528,9 @@
   "k.objects/shards/buildings",
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/noto-place-building-02",
+  "k.objects/shards/noto-place-building-03",
+  "k.objects/shards/noto-place-other-03",
+  "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/noto-transport-ground-04",
   "k.words/shards/ro"
  ],
@@ -34459,6 +34631,7 @@
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-place-map-01",
+  "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-transport-water-01",
   "k.words/shards/se"
  ],
@@ -35705,6 +35878,7 @@
  ],
  "sign": [
   "k.objects/shards/noto-other-object-01",
+  "k.objects/shards/noto-place-building-03",
   "k.objects/shards/noto-transport-ground-03",
   "k.objects/shards/noto-transport-ground-06",
   "k.words/shards/si"
@@ -36032,7 +36206,11 @@
  ],
  "sky": [
   "k.objects/shards/noto-event-01",
+  "k.objects/shards/noto-place-geographic-01",
+  "k.objects/shards/noto-place-geographic-02",
   "k.objects/shards/noto-place-other-01",
+  "k.objects/shards/noto-place-other-02",
+  "k.objects/shards/noto-sky-weather-03",
   "k.words/shards/sk"
  ],
  "skydive": [
@@ -36493,6 +36671,21 @@
  ],
  "snowflake": [
   "k.objects/shards/noto-sky-weather-05"
+ ],
+ "snowflake1": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "snowflake2": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "snowflake3": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "snowflake4": [
+  "k.objects/shards/noto-sky-weather-04"
+ ],
+ "snowflake5": [
+  "k.objects/shards/noto-sky-weather-04"
  ],
  "snowman": [
   "k.objects/shards/figures",
@@ -37241,26 +37434,32 @@
  ],
  "spot1": [
   "k.objects/shards/noto-animal-bug-01",
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-plant-other-02"
  ],
  "spot2": [
   "k.objects/shards/noto-animal-bug-01",
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-plant-other-02"
  ],
  "spot3": [
   "k.objects/shards/noto-animal-bug-01",
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-plant-other-02"
  ],
  "spot4": [
   "k.objects/shards/noto-animal-bug-01",
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-plant-other-02"
  ],
  "spot5": [
   "k.objects/shards/noto-animal-bug-01",
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-plant-other-02"
  ],
  "spot6": [
-  "k.objects/shards/noto-animal-bug-01"
+  "k.objects/shards/noto-animal-bug-01",
+  "k.objects/shards/noto-plant-other-02"
  ],
  "spotlight": [
   "k.words/shards/sp"
@@ -37599,6 +37798,9 @@
  "stare": [
   "k.words/shards/st"
  ],
+ "starfish": [
+  "k.objects/shards/noto-place-geographic-01"
+ ],
  "starlight": [
   "k.words/shards/st"
  ],
@@ -37715,6 +37917,15 @@
   "k.objects/shards/noto-transport-ground-01",
   "k.words/shards/st"
  ],
+ "steam1": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "steam2": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "steam3": [
+  "k.objects/shards/noto-place-other-02"
+ ],
  "steaming": [
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-food-asian-01",
@@ -37761,8 +37972,10 @@
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-food-vegetable-01",
   "k.objects/shards/noto-food-vegetable-03",
+  "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/noto-plant-flower-02",
   "k.objects/shards/noto-plant-other-01",
+  "k.objects/shards/noto-plant-other-02",
   "k.words/shards/st"
  ],
  "stemmed": [
@@ -37776,6 +37989,18 @@
  ],
  "step": [
   "k.words/shards/st"
+ ],
+ "step1": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "step2": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "step3": [
+  "k.objects/shards/noto-place-other-02"
+ ],
+ "step4": [
+  "k.objects/shards/noto-place-other-02"
  ],
  "stepfather": [
   "k.words/shards/st"
@@ -38505,6 +38730,7 @@
  ],
  "sun": [
   "k.commonsense/shards/core",
+  "k.objects/shards/noto-place-geographic-01",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-plant-flower-02",
@@ -39659,6 +39885,7 @@
   "k.words/shards/te"
  ],
  "tent": [
+  "k.objects/shards/noto-place-geographic-01",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-03",
   "k.words/shards/te"
@@ -40460,6 +40687,8 @@
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-mail-02",
   "k.objects/shards/noto-place-other-02",
+  "k.objects/shards/noto-place-other-03",
+  "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/noto-time-01",
   "k.words/shards/to"
  ],
@@ -40495,6 +40724,9 @@
  ],
  "top_ray": [
   "k.objects/shards/sky"
+ ],
+ "top_stripe": [
+  "k.objects/shards/noto-sport-01"
  ],
  "tophat": [
   "k.objects/shards/noto-clothing-05"
@@ -40631,6 +40863,9 @@
   "k.objects/shards/buildings",
   "k.objects/shards/noto-place-building-03",
   "k.words/shards/to"
+ ],
+ "tower_roof": [
+  "k.objects/shards/noto-place-building-03"
  ],
  "towers": [
   "k.objects/shards/buildings"
@@ -43021,6 +43256,7 @@
   "k.objects/shards/noto-game-01",
   "k.objects/shards/noto-household-02",
   "k.objects/shards/noto-place-geographic-01",
+  "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-sky-weather-06",
   "k.words/shards/wa"
  ],
@@ -43652,6 +43888,7 @@
  "window": [
   "k.objects/shards/buildings",
   "k.objects/shards/noto-household-01",
+  "k.objects/shards/noto-place-religious-01",
   "k.objects/shards/noto-transport-air-01",
   "k.objects/shards/noto-transport-ground-01",
   "k.objects/shards/noto-transport-ground-04",
@@ -44020,6 +44257,7 @@
  ],
  "wrap": [
   "k.objects/shards/noto-food-prepared-03",
+  "k.objects/shards/noto-plant-flower-01",
   "k.words/shards/wr"
  ],
  "wrapped": [
