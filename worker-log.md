@@ -13,3 +13,16 @@ One entry per task: what was done, numbers (wires, shards, bytes, load time, war
   errors, a shard without the `# sources:` / `# license:` / `# script:` header lines, a fact without `core.source`,
   a matrix wire in a shard, more than 2,000 wires or 300 kB.
 - Numbers: 0 worlds yet; npm test 5/5 pass (fixture worlds check that each error kind is caught).
+
+## T2 (2026-11-13): catalog and vocabulary builders
+
+- `tools/build-catalog.mjs` validates everything (stops on any error), then writes `docs/worlds/index.json` (PLAN.md §2
+  format; per world also `version` from the schema's `# version:` header line and `warnings`; per shard `license`,
+  `nc: true` for NC licenses, `warnings`) and `docs/worlds/vocab.json`. `--check` exits 1 when the files are stale.
+- Catalog `version`: a sha256 (12 hex) of every file under `docs/worlds` except the two generated ones, not the git sha
+  (a commit cannot contain its own sha; see Q1).
+- Vocabulary: lowercased `text=` of shard `core.word` wires -> that shard; identity-key values of shard wires -> that
+  shard; schema `core.word` for a value (`of=`) -> the shards holding that value, for a type or key -> every shard of
+  the world. Shard `keys` = its identity-key values, lowercased, sorted.
+- Sorted output, 1-space JSON indent; a test rebuilds in memory and compares byte for byte with the files on disk.
+- Numbers: 0 worlds, 0 shards, 0 words; npm test 10/10 pass.
