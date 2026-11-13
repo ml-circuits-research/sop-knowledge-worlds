@@ -519,3 +519,11 @@ of k.objects), Q14 (naming pass for the new sources), Q15 (country names).
 - Mulberry now: 1076 objects, 15307 parts, **722 named, 6971 details** (rule and eye); 376 objects
   with rows; 162 shards, 170081 wires, 20355346 bytes. Excluded so far: 75. k.objects: 2061 objects.
 - catalog: worlds 6 shards 648 vocab 17478; 0 errors, 0 warnings. npm test 2190 pass, 0 fail.
+
+## R3.1 naming, batch 8 (2026-11-13): Mulberry objects 601 to 700 of 1,151 looked at
+
+- Looked at: the Mulberry objects 601 to 700 (in shard order) on contact sheets of 20 at 300 px. Kitchen items, meals and snacks, meat, nuts. Meals name by bowl, soup, spoon, bun; layered food (lasagne, quiche, ham) gets no name. Groups (banquet buffet, food cold, meat, nuts) are excluded; fish battered is drawn black.
+- This batch: rows for 54 objects; 7 objects moved to `sources/mulberry/excluded.tsv` (R3.2).
+- Mulberry now: 1069 objects, 15195 parts, **817 named, 6938 details** (rule and eye); 430 objects
+  with rows; 162 shards, 168792 wires, 20203136 bytes. Excluded so far: 82. k.objects: 2054 objects.
+- catalog: worlds 6 shards 648 vocab 17488; 0 errors, 0 warnings. npm test 2183 pass, 0 fail.

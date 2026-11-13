@@ -139,3 +139,11 @@ Context: the short names of Natural Earth (`NAME`) are abbreviated ("Dem. Rep. C
 `NAME_EN` has "People's Republic of China". The short common names of mledoze/countries are better but ODbL; using
 them as the identity would put ODbL names into the public-domain shards.
 Blocking: no. Meanwhile: `ADMIN`.
+
+## Q16 (task R3.2, 2026-11-13)
+Question: should the 50 club football kits of Mulberry ("football kit Arsenal" … "football kit Wolves") stay as objects?
+Context: each is a recognisable thing (a shirt and shorts in the club's colours) and survives the conversion, so the
+rule of R3.2 (not a thing, or does not survive) does not exclude them. But they are 50 near-identical drawings named
+after English clubs of one season, about 4% of the Mulberry objects, and of little use to a general application.
+Options: (a) keep all; (b) keep only "football kit blank"; (c) keep one kit and name it "football kit".
+Blocking: no. Meanwhile: (a), all kept; shirt and shorts are named where one number is clear.

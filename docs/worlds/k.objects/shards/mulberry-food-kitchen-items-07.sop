@@ -936,7 +936,7 @@
 
 # spatula
 @k.objects.mb2640 k.objects.object name=spatula core.source="mulberry fa94a93"
-@k.objects.mb2640.p1 k.objects.part of=spatula name=part1 shape=polygon x=46.5 y=31.3 w=6.2 h=62.7 z=1 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
+@k.objects.mb2640.p1 k.objects.part of=spatula name=handle named=model shape=polygon x=46.5 y=31.3 w=6.2 h=62.7 z=1 colour=brown rgb="#9E5B16" core.source="mulberry fa94a93"
 @k.objects.mb2640.p1.1 k.objects.point part=$k.objects.mb2640.p1 n=1 x=52.5 y=31.3 core.source="mulberry fa94a93"
 @k.objects.mb2640.p1.2 k.objects.point part=$k.objects.mb2640.p1 n=2 x=52.7 y=91.3 core.source="mulberry fa94a93"
 @k.objects.mb2640.p1.3 k.objects.point part=$k.objects.mb2640.p1 n=3 x=51.8 y=93.2 core.source="mulberry fa94a93"
