@@ -2,7 +2,9 @@
 
 Drawable objects: their parts, how the parts sit relative to each other, and for every part a primitive shape, a box,
 a draw order and typical colours, so that a renderer that has never seen an object can draw it from the facts alone.
-`tools/render-svg.mjs` is such a renderer; its pictures are in [`preview/`](preview/index.html).
+`tools/render-svg.mjs` is such a renderer; its pictures are in [`preview/`](preview/index.html). The gallery
+[`../../gallery.html`](../../gallery.html) shows them all with a search box; it reads `preview/objects.json` (every
+object with the file of its picture, its shard, its source, the licence of its shard, and how many parts are named).
 
 ## Schema (`schema.sop`, module `k.objects`, imports `k.commonsense`, version 2)
 

@@ -637,3 +637,30 @@ one name differ.
 - **Numbers:** catalog 10 worlds, 654 shards, vocab 17,811 words; every new shard loads in under 15 ms; 0 errors,
   0 warnings. npm test 2,183 pass, 0 fail (108 s).
 - Questions Q17 (the `drawing` join), Q18 (approximate numbers), Q19 ("cannot").
+
+## R3.4 (2026-11-13): the gallery page
+
+- `docs/gallery.html`: every `k.objects` object with its preview (`loading="lazy"`), a search box (every word of
+  the text must be in the name), a source filter with counts, and under each picture the name, the source of the
+  drawing, the licence of its shard and "n of m parts named". Linked from `docs/index.html`.
+- It reads `docs/worlds/k.objects/preview/objects.json`, written by `tools/render-svg.mjs` with the previews
+  (`objectList`: name, file, shard, source = the first `core.source` of the object fact, licence = the `# license:`
+  line of its shard, parts, named), sorted by name; the existing "previews are up to date" test covers it.
+- `tests/gallery.test.mjs`: the list has every object once, each picture exists, sources and licences are known
+  ones; the page's own search function is run on the list (house and lighthouse for "HOUSE", 60 hand-written
+  objects all CC0-1.0).
+- Checked in headless Chrome against the local `docs` folder, served under the path `/sop-knowledge-worlds/` as on
+  GitHub Pages (github.io itself is not reachable): the page shows "1987 of 1987 objects" and 1,987 figures; only 49
+  pictures are fetched at first (lazy) and more on scrolling; all 1,987 picture addresses answer 200; typing "HOUSE"
+  leaves 7 objects (house, lighthouse, ...), all drawn; the source filter lists the four sources with their counts
+  and "hand-core 1" leaves 60; no script errors, no request outside the site (only the browser's own favicon.ico,
+  404); 7 columns at 1200 px, 2 at 400 px, no sideways scrolling; the link on `index.html` resolves to the gallery.
+  All addresses are relative; no build step, no external script, font or style.
+- `objects.json` is deterministic: two runs of `tools/render-svg.mjs` into empty folders give the committed bytes;
+  rebuilding the catalog gives no diff.
+- Looked at by eye: three screenshots (the top at 1200 px in the first session; the top and the bottom at 400 px).
+  Not looked at: the 1,987 pictures in the gallery one by one (they are the previews already published), other
+  browsers than Chrome, the page on github.io.
+- Numbers: 1,987 objects in the list (hand-core 60, noto-emoji 811, openmoji 114, mulberry 1,002); `objects.json`
+  355,672 bytes; `gallery.html` 3,968 bytes.
+- npm test: 2,185 pass, 0 fail (127 s), on the committed tree.

@@ -1,11 +1,12 @@
 // Test renderer: draws a k.objects object from the world's facts alone (parts, boxes, shapes, z, colours, points)
 // as a plain SVG. No dependencies besides the pinned sopworld.
-//   node tools/render-svg.mjs [out-dir]     writes <object>.svg for every object, and index.html, to
+//   node tools/render-svg.mjs [out-dir]     writes <object>.svg for every object, index.html and objects.json (the
+//                                           list docs/gallery.html shows), to
 //                                           docs/worlds/k.objects/preview/ (or out-dir)
 //   node tools/render-svg.mjs --label <out-dir> [object ...]   labelling pictures: parts outlined and numbered
 import { mkdirSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { fullWorld, WORLDS_DIR } from './lib/worlds.mjs';
+import { fullWorld, scanWorlds, readHeader, WORLDS_DIR } from './lib/worlds.mjs';
 
 export const SHAPES = ['rectangle', 'square', 'circle', 'oval', 'triangle', 'line', 'arc', 'polygon'];
 const tok = (t) => (t !== undefined && t.startsWith('"') ? JSON.parse(t) : t);
@@ -145,6 +146,22 @@ export const objectsOf = (world) => world.ofType('k.objects.object').map((o) => 
 // Twelve imported objects whose labelled pictures are kept with the previews.
 export const LABEL_EXAMPLES = ['dog face', 'frog', 'baby chick', 'mouse face', 'taxi', 'hut', 'saxophone', 'teddy bear', 'hot dog', 'hammer', 'office building', 'full moon face'];
 
+// For the gallery (docs/gallery.html): every object with the file of its picture, its shard, where its drawing comes
+// from (the first source of its object fact), the licence of its shard, and how many of its parts have a name.
+export function objectList(world) {
+  const where = new Map();
+  for (const shard of scanWorlds().find((w) => w.id === 'k.objects')?.shards ?? []) {
+    const license = readHeader(shard.text).license?.[0] ?? '';
+    for (const m of shard.text.matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)) where.set(tok(m[1]), { shard: shard.id, license });
+  }
+  return world.ofType('k.objects.object').map((o) => {
+    const name = one(o, 'name');
+    const parts = partsOf(world, name);
+    return { name, file: `${fileOf(name)}.svg`, shard: where.get(name)?.shard ?? '', source: tok(o.attrs['core.source']?.[0]) ?? '', license: where.get(name)?.license ?? '',
+      parts: parts.length, named: parts.filter((p) => !/^part\d+$/.test(p.name)).length };
+  }).sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
+}
+
 export function renderAll(world) {
   const files = {};
   const names = objectsOf(world);
@@ -153,6 +170,7 @@ export function renderAll(world) {
   const cells = names.map((n) => `<figure><img src="${fileOf(n)}.svg" alt="${esc(n)}" width="160" height="160" loading="lazy"><figcaption>${esc(n)}</figcaption></figure>`).join('\n');
   const labelled = LABEL_EXAMPLES.filter((n) => names.includes(n)).map((n) => `<figure><img src="label-${fileOf(n)}.svg" alt="${esc(n)}, parts numbered" width="320" loading="lazy"><figcaption>${esc(n)}</figcaption></figure>`).join('\n');
   files['index.html'] = `<!DOCTYPE html>\n<html lang="en">\n<head><meta charset="utf-8"><title>k.objects previews</title>\n<style>body{font:14px system-ui,sans-serif;margin:2rem}figure{display:inline-block;margin:.5rem;text-align:center;vertical-align:top}img{border:1px solid #ddd}</style></head>\n<body>\n<h1>k.objects previews</h1>\n<p>Drawn by tools/render-svg.mjs from the facts alone. ${names.length} objects.</p>\n${cells}\n${labelled ? `<h2>Parts, numbered in draw order</h2>\n${labelled}\n` : ''}</body>\n</html>\n`;
+  files['objects.json'] = `[\n${objectList(world).map((o) => JSON.stringify(o)).join(',\n')}\n]\n`;
   return files;
 }
 

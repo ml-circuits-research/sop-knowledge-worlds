@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>k.objects gallery</title>
+<style>
+  body { font: 15px/1.5 system-ui, -apple-system, Segoe UI, sans-serif; margin: 1.5rem; color: #1d1d1f; }
+  h1 { font-size: 1.5rem; margin: 0 0 .2rem; }
+  .lead { color: #555; margin: 0 0 1rem; max-width: 60rem; }
+  .bar { position: sticky; top: 0; background: #fff; padding: .6rem 0; display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; border-bottom: 1px solid #e5e5e5; z-index: 1; }
+  input[type=search] { font: inherit; padding: .4rem .6rem; width: 18rem; max-width: 100%; border: 1px solid #bbb; border-radius: 6px; }
+  select { font: inherit; padding: .35rem .4rem; border: 1px solid #bbb; border-radius: 6px; }
+  #count { color: #555; }
+  #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: .8rem; margin-top: 1rem; }
+  figure { margin: 0; text-align: center; }
+  figure img { width: 100%; height: auto; aspect-ratio: 1; border: 1px solid #ddd; border-radius: 6px; background: #fafafa; }
+  figcaption { font-size: 13px; line-height: 1.3; margin-top: .2rem; }
+  figcaption b { display: block; font-weight: 600; overflow-wrap: anywhere; }
+  figcaption span { color: #666; font-size: 12px; overflow-wrap: anywhere; }
+  .muted { color: #777; }
+</style>
+</head>
+<body>
+<h1>k.objects gallery</h1>
+<p class="lead">Every drawable object of the world <code>k.objects</code>, drawn from its facts alone (parts, boxes,
+shapes, colours, points) by <code>tools/render-svg.mjs</code>. Under each picture: the object's name, its source and
+the licence of its shard, and how many of its parts have a name. <a href="index.html">How applications use the worlds.</a></p>
+
+<div class="bar">
+  <label for="q">Search</label>
+  <input id="q" type="search" placeholder="a name, e.g. kettle" autocomplete="off">
+  <label for="source">Source</label>
+  <select id="source"><option value="">all sources</option></select>
+  <span id="count" class="muted">Loading…</span>
+</div>
+<div id="grid"></div>
+
+<script>
+const LIST = 'worlds/k.objects/preview/objects.json';
+const PREVIEW = 'worlds/k.objects/preview/';
+const esc = (s) => String(s).replace(/[&<>"]/g, (x) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[x]));
+// The objects whose name holds every word of the search text, from the chosen source (all when none is chosen).
+function filterObjects(objects, text, source) {
+  const words = text.toLowerCase().split(/\s+/).filter(Boolean);
+  return objects.filter((o) => (!source || o.source === source) && words.every((w) => o.name.toLowerCase().includes(w)));
+}
+function cell(o) {
+  const parts = `${o.named} of ${o.parts} parts named`;
+  return `<figure><img src="${PREVIEW}${encodeURIComponent(o.file)}" alt="${esc(o.name)}" width="160" height="160" loading="lazy">`
+    + `<figcaption><b>${esc(o.name)}</b><span>${esc(o.source)} · ${esc(o.license)}<br>${parts}</span></figcaption></figure>`;
+}
+if (typeof document !== 'undefined') {
+  fetch(LIST).then((r) => r.json()).then((objects) => {
+    const q = document.getElementById('q'), source = document.getElementById('source'), grid = document.getElementById('grid'), count = document.getElementById('count');
+    for (const s of [...new Set(objects.map((o) => o.source))].sort()) source.insertAdjacentHTML('beforeend', `<option value="${esc(s)}">${esc(s)} (${objects.filter((o) => o.source === s).length})</option>`);
+    const show = () => {
+      const found = filterObjects(objects, q.value, source.value);
+      grid.innerHTML = found.map(cell).join('');
+      count.textContent = `${found.length} of ${objects.length} objects`;
+    };
+    q.addEventListener('input', show);
+    source.addEventListener('change', show);
+    show();
+  }).catch((e) => { document.getElementById('count').textContent = `The list of objects could not be loaded (${e.message}).`; });
+}
+</script>
+</body>
+</html>
