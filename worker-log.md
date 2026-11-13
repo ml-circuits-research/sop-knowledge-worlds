@@ -117,3 +117,14 @@ page example, 34 world questions, render test for 30 objects).
 small and can come with Round 2. `CHANGELOG.md` will start with the first breaking schema change.
 
 **Questions for the reviewer:** Q1-Q8 in `questions.md`.
+
+## R2.1 (2026-11-13): Q7 rename, rule 4, LICENSES.md, CI
+
+- Q7: `k.objects.point` refers to its part with `part=$<part id>` (was `of=`); identity `part` + `n`. 139 point wires in
+  7 shards, the renderer, WORLD.md. `k.objects` schema version 2; `CHANGELOG.md` started (breaking change).
+- AGENTS.md rule 4: matrix ids fully qualified.
+- `tools/build-catalog.mjs` also writes `docs/worlds/LICENSES.md`: per source of a published shard, the `What`,
+  `Origin`, `License` and `Attribution` lines of `sources/<id>/SOURCE.md`, the shard terms and the worlds using it.
+  It is a generated file (not part of the content hash); the catalog test compares it byte for byte.
+- `.github/workflows/test.yml`: `npm test` and `build-catalog --check` on push and pull request (node 22).
+- Numbers: unchanged facts (2 worlds, 8 shards, 422 fact wires, 58,948 shard bytes, 0 warnings); npm test 81 pass.

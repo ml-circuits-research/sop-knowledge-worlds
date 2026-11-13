@@ -15,6 +15,7 @@ test('the catalog builds without errors', () => {
 test('index.json and vocab.json on disk are what a build gives (a rerun gives no diff)', () => {
   assert.equal(readFileSync(join(WORLDS_DIR, 'index.json'), 'utf8'), serialize(built.index));
   assert.equal(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'), serialize(built.vocab));
+  assert.equal(readFileSync(join(WORLDS_DIR, 'LICENSES.md'), 'utf8'), built.licenses);
   assert.equal(serialize(buildCatalog().index), serialize(built.index));
 });
 
@@ -31,6 +32,13 @@ test('every shard listed exists and every shard file is listed', () => {
     }
   }
   for (const w of scanWorlds()) for (const s of w.shards) assert.ok(listed.has(s.id), `${s.id} is listed`);
+});
+
+test('LICENSES.md names every source and license of the catalog', () => {
+  for (const w of built.index.worlds) {
+    for (const src of w.sources) assert.ok(built.licenses.includes(`## ${src}\n`), src);
+    for (const l of w.licenses) assert.ok(built.licenses.includes(l), l);
+  }
 });
 
 test('every vocab entry points to listed shards', () => {

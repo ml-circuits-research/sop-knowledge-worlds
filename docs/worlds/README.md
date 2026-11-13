@@ -1,7 +1,7 @@
 # Knowledge worlds catalog
 
 This folder is served by GitHub Pages. Everything in it is generated or validated by the tools of the repository
-(`npm test` checks it); do not edit `index.json` or `vocab.json` by hand: run `node tools/build-catalog.mjs`.
+(`npm test` checks it); do not edit `index.json`, `vocab.json` or `LICENSES.md` by hand: run `node tools/build-catalog.mjs`.
 
 ## Files
 
@@ -14,6 +14,7 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 - `k.<world>/WORLD.md`: what the world knows, its sources, and questions it helps with.
 - `index.json`: the catalog.
 - `vocab.json`: lowercased English lemma → shard ids.
+- `LICENSES.md`: the terms and attribution text of every source, generated with the catalog.
 
 ## index.json
 
@@ -27,7 +28,7 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
                 "sources": ["hand-core-1"], "licenses": ["CC0-1.0"], "warnings": [] } ] }
 ```
 
-- `version`: a hash of every file in this folder except `index.json` and `vocab.json`. Pin it; cache shards by it.
+- `version`: a hash of every file in this folder except the generated ones (`index.json`, `vocab.json`, `LICENSES.md`). Pin it; cache shards by it.
 - `sopworld`: the sopworld commit every file was validated with.
 - World `version`: the schema's version (its `# version:` header line); a breaking schema change raises it.
 - `exports`: the types other modules may read. `depends`: worlds whose schemas must be in the same library.

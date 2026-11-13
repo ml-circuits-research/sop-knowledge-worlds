@@ -20,7 +20,7 @@ a draw order and typical colours, so that a renderer that has never seen an obje
   - `opens` (arc: the open side; up when absent): an arc is half the ellipse that fills its box; `opens=up` is a smile.
   - relative position: `above`, `below`, `inside`, `left_of`, `right_of`, `on` (many; names of other parts of the same
     object), `centered=true` (centred left to right in the frame).
-- `k.objects.point` (shared, closed), identity `of` + `n`: a point of a line or polygon part: `of` (a reference to the
+- `k.objects.point` (shared, closed), identity `part` + `n`: a point of a line or polygon part: `part` (a reference to the
   part), `n` (1, 2, ...: drawing order), `x`, `y` (in the frame of the object). Lines are open, polygons closed.
 - Exports: `k.objects.object`, `k.objects.part`, `k.objects.point`.
 
@@ -49,4 +49,4 @@ positions agree with the boxes.
 
 Ask for the parts of an object (`ofType('k.objects.part')` or `ask('k.objects.part of=house name=?n shape=?s ...')`),
 sort by `z`, and draw each shape in its box, scaled to the size wanted; for lines and polygons read the points
-(`k.objects.point of=$<part id>`). A diagram can use the boxes alone as a skeleton.
+(`k.objects.point part=$<part id>`). A diagram can use the boxes alone as a skeleton.

@@ -15,7 +15,7 @@ const f = (n) => String(Math.round(n * 100) / 100);
 export function partsOf(world, object) {
   const points = new Map();
   for (const p of world.ofType('k.objects.point')) {
-    const of = one(p, 'of').slice(1);
+    const of = one(p, 'part').slice(1);
     if (!points.has(of)) points.set(of, []);
     points.get(of).push({ n: num(p, 'n'), x: num(p, 'x'), y: num(p, 'y') });
   }

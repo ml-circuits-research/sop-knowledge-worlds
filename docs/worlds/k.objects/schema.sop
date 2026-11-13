@@ -1,7 +1,7 @@
 # k.objects: drawable objects: their parts, how the parts sit relative to each other, and a box, a primitive shape, a
 # draw order and a typical colour per part, so that a renderer that has never seen an object can draw it from the
 # facts alone. The frame of every object is 0 to 100 on both axes, x to the right and y downwards.
-# version: 1
+# version: 2
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
@@ -34,9 +34,10 @@
 @k.objects.part.on core.slot of=k.objects.part key=on many=true kind=atom core.source="hand-core 1"
 @k.objects.part.centered core.slot of=k.objects.part key=centered kind=boolean core.source="hand-core 1"
 
-# A point of a line or polygon part, in the frame of the object, in drawing order.
+# A point of a line or polygon part, in the frame of the object, in drawing order. `part` refers to the part wire;
+# `of` always names the object.
 @k.objects.point core.type of=k.objects.point shared=true closed=true core.source="hand-core 1"
-@k.objects.point.of core.slot of=k.objects.point key=of id=true required=true kind=ref to=k.objects.part core.source="hand-core 1"
+@k.objects.point.part core.slot of=k.objects.point key=part id=true required=true kind=ref to=k.objects.part core.source="hand-core 1"
 @k.objects.point.n core.slot of=k.objects.point key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.objects.point.x core.slot of=k.objects.point key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.objects.point.y core.slot of=k.objects.point key=y required=true kind=number min=0 max=100 core.source="hand-core 1"

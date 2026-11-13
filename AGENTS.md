@@ -20,6 +20,8 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
    dots are part of names. If you need new syntax, stop and ask in `questions.md`.
 4. **Names are owned.** Each world is a sopworld module named `k.<world>` (example `k.objects`) and declares types and
    slots only under its prefix (`k.objects.part`). It lists what others may read with `core.module … exports=`.
+   Matrix ids are written fully qualified (`@k.objects.part.name`, never `@t` or `@k1`), so that a module loaded
+   through `imports=` (ids unchanged) never clashes with the ids of the application.
 5. **Small shards.** An instance shard is at most about 2,000 wires and about 300 kB uncompressed. Shard by a
    natural key (domain, first letter, region, category) so that one shard answers one kind of question.
 6. **Every fact carries its source.** `core.source="<source id> <version>"` on every imported wire (as the PSys2 geo kb
