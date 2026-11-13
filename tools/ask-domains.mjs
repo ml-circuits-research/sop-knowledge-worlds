@@ -57,4 +57,15 @@ export const DOMAINS = {
       kind: [['what is a {x}', one('k.space.kind', 'about')], ['what is a {x} made of', one('k.space.kind', 'made_of')]],
     },
   },
+  // sources/hand-core/questions/body.tsv: parts of the body by their common names, written without looking at k.body.
+  body: {
+    things: () => rows('sources/hand-core/questions/body.tsv'),
+    templates: (() => {
+      const count = ['how many {x}s does a person have', () => [{ type: 'k.body.part', where: { name: '{x}' }, seek: 'count' }, { type: 'k.body.part', where: { name: '{x}' }, seek: 'count_about' }]];
+      const where = ['where on the body is the {x}', () => [{ type: 'k.body.part', where: { name: '{x}' }, seek: 'part_of' }, { type: 'k.body.part', where: { name: '{x}' }, seek: 'inside' }]];
+      const does = ['what does the {x} do', () => [{ type: 'k.body.part', where: { name: '{x}' }, seek: 'does' }, { type: 'k.body.part', where: { name: '{x}' }, seek: 'about' }]];
+      const parts = ['which parts does the {x} have', () => [{ type: 'k.body.part', where: { part_of: '{x}' }, seek: 'name', mode: 'list' }, { type: 'k.body.part', where: { inside: '{x}' }, seek: 'name', mode: 'list' }]];
+      return { part: [count, where, does], organ: [count, where, does, ['say in a sentence what the {x} does', one('k.body.part', 'about')]], whole: [count, parts, does] };
+    })(),
+  },
 };

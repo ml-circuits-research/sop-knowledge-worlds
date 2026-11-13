@@ -61,3 +61,7 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
   `any` never stands next to a colour. A host that reads `colour` as a colour name must expect it.
 - New type `k.attributes.drawn` (name, `drawn_colour` many, `drawn_shade` many; exported): the main colours of the
   drawing of a thing, computed by `tools/drawn-colour.mjs`; four shards `drawn-*`, one per source of drawings.
+### k.body 1, additions (2026-11-13, Round 9, not breaking)
+
+- `k.body.part`: `about`, `count_per_part`, `count_about`, `temperature_about`, `amount_about`, `length_about`,
+  `weight_about`, `named`. A part with both `count` and `count_about` is refused.

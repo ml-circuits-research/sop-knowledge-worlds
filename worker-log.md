@@ -2185,3 +2185,32 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Numbers: k.attributes 11 shards (were 7), 3,091 wires. Catalog 22 worlds, 849 shards, vocab 21,598 words; 0 errors, 0 warnings.
 - After the rebase on R9.3 (k.geo places): catalog 22 worlds, 852 shards, vocab 21,886 words; npm test 2,610 pass, 5 skipped, 0 fail.
 
+## Round 9, item 5 (2026-11-13, first worker): `k.body`: parts of hand, eye, ear and mouth, counts, what each organ does
+
+- **91 parts** (were 53). New: the hand (palm, index, middle, ring and little finger, knuckle, fingertip), the eye
+  (pupil, iris, eyelid, eyelash, cornea, lens, retina, the white of the eye), the ear (outer ear, earlobe, ear
+  canal, eardrum, middle ear, inner ear), the mouth (gum, palate, incisor, canine, premolar, molar, wisdom
+  tooth, milk tooth, jaw), and throat, windpipe, gullet, small and large intestine, pancreas, spinal cord,
+  vertebra; each with where it is, how many and what it does where that is plain.
+- **Counts:** `count_per_part` (5 fingers on a hand, 5 toes on a foot); the four kinds of tooth add up to 32, the
+  milk teeth are the 20 of `child_count`; 33 vertebrae; `count_about` for muscles (600) and hairs (100,000).
+- **What each main organ does, in one plain sentence (`about`):** 23 parts (brain, heart, lung, stomach, liver,
+  kidney, intestine, small and large intestine, bladder, skin, pancreas, windpipe, gullet, spinal cord, and eye,
+  ear, nose, tongue, tooth, skeleton, muscle, blood where a sentence helps). 13 outer parts got a `does` they
+  lacked (finger, thumb, toe, leg, arm, wrist, ankle, shoulder, hip, eyebrow, lip, head, chest).
+- **Numbers with units** (`k.units.measure`, 8 slots of `k.body`): the body's temperature (37 degrees Celsius),
+  the blood of an adult (5 litres), the length of the small and large intestine (6 and 1.5 metres), the weight
+  of brain, heart and liver (1.4, 0.3, 1.5 kilograms), all `_about`.
+- **All model-labelled:** `named=model` is now on every part; no source was imported. **I read the 38 new wires
+  and the 23 sentences once more in the shard after writing them**; a test checks the counts against each other.
+  Not checked against a second source.
+- **Natural questions (item 8), body:** 66 parts written down without looking at `k.body`, 210 questions (how
+  many, where, what it does, which parts it has, a sentence for organs). The seeded sample of 100: **before 59,
+  now 95**. All 210: before 117, now 190. Without a fact: what the back, heel, chin, cheek, forehead, belly or
+  face "does", where muscles, veins, nerves and blood are, how many veins, nerves, gums, knuckles there are.
+- **Judgement that is mine:** the sentences; `jaw count=2` (upper and lower); `eyelid count=4`; 33 vertebrae
+  (books also say 24 for the movable ones).
+- Tests: `tests/k.body.test.mjs` (4), questions bd-14 to bd-20.
+- Numbers: k.body 1 shard, 175 wires, 23,725 bytes (was 112 wires, 12,168 bytes). Catalog 22 worlds, 848 shards, vocab 21,963 words; 0 errors, 0 warnings.
+- `COVERAGE.md` and `ASPECTS.md` run again: one number changes in the first, nothing in the second.
+- npm test 2,634 pass, 0 fail.

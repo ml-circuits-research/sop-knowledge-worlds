@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of k.geo, k.animals, k.space are given: 62 slots, each with its unit, with what it counts, or as a place in an order.
+# k.units/shards/measures: in which unit the numbers of k.geo, k.animals, k.body, k.space are given: 70 slots, each with its unit, with what it counts, or as a place in an order.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -53,6 +53,14 @@
 @k.units.measure.k.geo.continent.area_about k.units.measure world=k.geo type=continent key=area_about unit="square kilometre" approximate=true core.source="hand-core 1"
 @k.units.measure.k.geo.river.length_about k.units.measure world=k.geo type=river key=length_about unit=kilometre approximate=true core.source="hand-core 1"
 @k.units.measure.k.animals.animal.legs k.units.measure world=k.animals type=animal key=legs counts=leg core.source="hand-core 1"
+@k.units.measure.k.body.part.count k.units.measure world=k.body type=part key=count counts="part of that name in an adult" core.source="hand-core 1"
+@k.units.measure.k.body.part.child_count k.units.measure world=k.body type=part key=child_count counts="part of that name in a young child" core.source="hand-core 1"
+@k.units.measure.k.body.part.count_per_part k.units.measure world=k.body type=part key=count_per_part counts="part of that name on one larger part" core.source="hand-core 1"
+@k.units.measure.k.body.part.count_about k.units.measure world=k.body type=part key=count_about counts="part of that name in an adult" approximate=true core.source="hand-core 1"
+@k.units.measure.k.body.part.temperature_about k.units.measure world=k.body type=part key=temperature_about unit="degree Celsius" approximate=true core.source="hand-core 1"
+@k.units.measure.k.body.part.amount_about k.units.measure world=k.body type=part key=amount_about unit=litre approximate=true core.source="hand-core 1"
+@k.units.measure.k.body.part.length_about k.units.measure world=k.body type=part key=length_about unit=metre approximate=true core.source="hand-core 1"
+@k.units.measure.k.body.part.weight_about k.units.measure world=k.body type=part key=weight_about unit=kilogram approximate=true core.source="hand-core 1"
 @k.units.measure.k.space.body.order k.units.measure world=k.space type=body key=order ordinal=true core.source="hand-core 1"
 @k.units.measure.k.space.body.size_rank k.units.measure world=k.space type=body key=size_rank ordinal=true core.source="hand-core 1"
 @k.units.measure.k.space.body.moons k.units.measure world=k.space type=body key=moons counts=moon core.source="hand-core 1"
