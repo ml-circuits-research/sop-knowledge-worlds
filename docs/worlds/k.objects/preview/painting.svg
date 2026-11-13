@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>painting</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="40,16 50,6 60,16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wire</title></polyline>
+  <rect x="10" y="16" width="80" height="66" fill="brown" stroke="#333" stroke-width="0.8"><title>frame</title></rect>
+  <rect x="17" y="23" width="66" height="52" fill="blue" stroke="#333" stroke-width="0.8"><title>sky</title></rect>
+  <rect x="17" y="62" width="66" height="13" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
+  <ellipse cx="70" cy="34" rx="6" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>sun</title></ellipse>
+  <polygon points="41,40 60,64 22,64" fill="grey" stroke="#333" stroke-width="0.8"><title>mountain</title></polygon>
+</svg>

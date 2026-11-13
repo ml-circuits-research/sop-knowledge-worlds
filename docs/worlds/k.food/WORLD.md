@@ -16,11 +16,11 @@ Common foods and drinks, as a child's encyclopedia describes them. Hand-written 
 ## Shards
 
 `fruit` (32 foods), `vegetables` (29), `grains-nuts-and-pulses` (25), `animal-foods` (25), `other` (43: sweets,
-drinks, seasonings, herbs, oils, sauces, dishes): 154 foods, 254 wires, 33,290 bytes.
+drinks, seasonings, herbs, oils, sauces, dishes): 154 foods, 254 wires, 33,319 bytes.
 
 ## Joins
 
-By name, with no import: `drawing` is the `name` of a `k.objects.object` (123 of 154 foods have one; `grape` is drawn by `grapes`); `comes_from`
+By name, with no import: `drawing` is the `name` of a `k.objects.object` (125 of 154 foods have one; `grape` is drawn by `grapes`); `comes_from`
 values that are animals are names of `k.animals.animal` (`cow`, `hen`, `pig`, `sheep`, `bee`).
 
 ## Questions it helps with

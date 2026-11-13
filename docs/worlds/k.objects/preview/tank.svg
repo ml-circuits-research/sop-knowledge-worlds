@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>tank</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="50" cy="79" rx="42" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>track</title></ellipse>
+  <rect x="64" y="49" width="32" height="5" fill="green" stroke="#333" stroke-width="0.8"><title>barrel</title></rect>
+  <polygon points="10,62 90,62 84,76 16,76" fill="green" stroke="#333" stroke-width="0.8"><title>hull</title></polygon>
+  <polygon points="32,62 36,44 64,44 68,62" fill="green" stroke="#333" stroke-width="0.8"><title>turret</title></polygon>
+  <ellipse cx="50" cy="43" rx="6" ry="3" fill="green" stroke="#333" stroke-width="0.8"><title>hatch</title></ellipse>
+  <ellipse cx="21" cy="80" rx="6" ry="6" fill="grey" stroke="#333" stroke-width="0.8"><title>wheel_1</title></ellipse>
+  <ellipse cx="40" cy="82" rx="6" ry="6" fill="grey" stroke="#333" stroke-width="0.8"><title>wheel_2</title></ellipse>
+  <ellipse cx="60" cy="82" rx="6" ry="6" fill="grey" stroke="#333" stroke-width="0.8"><title>wheel_3</title></ellipse>
+  <ellipse cx="79" cy="80" rx="6" ry="6" fill="grey" stroke="#333" stroke-width="0.8"><title>wheel_4</title></ellipse>
+</svg>

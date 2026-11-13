@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>shoe</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="10" y="80" width="18" height="8" fill="black" stroke="#333" stroke-width="0.8"><title>heel</title></rect>
+  <rect x="10" y="74" width="80" height="7" fill="black" stroke="#333" stroke-width="0.8"><title>sole</title></rect>
+  <polygon points="10,75 12,44 34,40 44,54 70,58 88,66 90,75" fill="brown" stroke="#333" stroke-width="0.8"><title>upper</title></polygon>
+  <ellipse cx="24" cy="42" rx="10" ry="4" fill="black" stroke="#333" stroke-width="0.8"><title>opening</title></ellipse>
+  <polyline points="38,49 48,53" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>first_lace</title></polyline>
+  <polyline points="44,55 56,57" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>second_lace</title></polyline>
+  <polyline points="72,59 70,74" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>toe_cap</title></polyline>
+</svg>

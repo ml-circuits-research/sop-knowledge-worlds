@@ -10,3 +10,6 @@
 {"id":"ob-10","ask":"what colours can a cat be","query":{"type":"k.objects.part","where":{"of":"cat","name":"body"},"seek":"colour"},"expect":{"status":"supported","values":["grey","black","orange"]}}
 {"id":"ob-13","ask":"where does a fish live (common sense comes with k.objects)","query":{"type":"k.commonsense.thing","where":{"name":"fish"},"seek":"at"},"expect":{"status":"supported","value":"water"}}
 {"id":"ob-14","ask":"a fish in the sky, in a world that composes k.objects","tell":"@p1 k.commonsense.placed thing=fish at=sky scene=s1","ns":"scene","expect":{"ok":true,"issues":["A fish is usually in water, not in the sky.","A fish cannot fly, so it is not usually in the sky."]}}
+{"id":"ob-r4-1","ask":"how many bars does a jail have","query":{"type":"k.objects.part","where":{"of":"jail","kind":"bar"},"mode":"count"},"expect":{"status":"supported","value":"6"}}
+{"id":"ob-r4-2","ask":"what is above the body of a restaurant","query":{"type":"k.objects.part","where":{"of":"restaurant","above":"body"},"seek":"name"},"expect":{"status":"supported","value":"awning"}}
+{"id":"ob-r4-3","ask":"what colour is the blade of a sword","query":{"type":"k.objects.part","where":{"of":"sword","name":"blade"},"seek":"colour","mode":"list"},"expect":{"status":"supported","values":["grey","white"]}}

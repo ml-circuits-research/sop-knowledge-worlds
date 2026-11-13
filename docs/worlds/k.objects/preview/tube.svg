@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>tube</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="16" cy="50" rx="8" ry="16" fill="grey" stroke="#333" stroke-width="0.8"><title>left_end</title></ellipse>
+  <rect x="16" y="34" width="64" height="32" fill="grey" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <ellipse cx="80" cy="50" rx="8" ry="16" fill="grey" stroke="#333" stroke-width="0.8"><title>right_end</title></ellipse>
+  <polyline points="22,40 66,40" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>shine</title></polyline>
+  <ellipse cx="80" cy="50" rx="5" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>hole</title></ellipse>
+</svg>

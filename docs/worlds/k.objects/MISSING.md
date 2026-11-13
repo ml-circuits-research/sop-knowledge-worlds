@@ -16,56 +16,30 @@ bank).
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name | 556 | 37.1% |
-| without, but a WordNet synonym has a drawing | 64 | 4.3% |
-| without, but the direct hypernym has a drawing | 181 | 12.1% |
-| with no drawing at all | 699 | 46.6% |
+| with a drawing of that name | 582 | 38.8% |
+| without, but a WordNet synonym has a drawing | 65 | 4.3% |
+| without, but the direct hypernym has a drawing | 192 | 12.8% |
+| with no drawing at all | 661 | 44.1% |
 
-## The 944 words without a drawing of their name, most frequent first
+## The 918 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing. The gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
-| 8 | gun |  | a weapon that discharges a missile at high velocity (especially from a metal tube or barrel) |
 | 38 | store | synonym shop | a mercantile establishment for the retail sale of goods or services |
-| 52 | suit |  | a set of garments (usually including a jacket and trousers or skirt) for outerwear all of the same fabric and color |
 | 56 | engine | hypernym motor | motor that converts thermal energy to mechanical work |
-| 68 | tape |  | a long thin piece of cloth or paper as used for binding or fastening |
 | 72 | photo | synonym photograph (drawing "photographs") | a representation of a person or scene in the form of a print or transparent slide or in digital format |
-| 77 | bullet |  | a projectile that is fired from a gun |
-| 78 | sword |  | a cutting or thrusting weapon that has a long metal blade and a hilt with a hand guard |
-| 82 | fan |  | a device for creating a current of air by movement of a surface or surfaces |
-| 93 | painting |  | graphic art consisting of an artistic composition made by applying paints to a surface |
 | 95 | bike | synonym motorcycle | a motor vehicle with two wheels and a strong frame |
-| 102 | map |  | a diagrammatic representation of the earth's surface (or part of it) |
-| 103 | horn |  | a noisemaker (as at parties or games) that makes a loud noise when you blow through it |
-| 110 | trap |  | a device in which something (usually an animal) can be caught and penned |
 | 113 | palace | synonym castle | a large and stately mansion |
-| 138 | screen |  | a white or silvered surface where pictures can be projected for viewing |
-| 144 | tank |  | an enclosed armored military vehicle |
-| 146 | rope |  | a strong line |
-| 152 | mask |  | a covering to disguise or conceal the face |
 | 154 | couch | synonym sofa | an upholstered seat for more than one person |
-| 155 | shoe |  | footwear shaped to fit the foot (below the ankle) with a flexible upper of leather or plastic and a sole and heel of heavier material |
 | 156 | closet | synonym cupboard | a small room (or recess) or cabinet used for storage space |
 | 167 | teddy | synonym teddy bear | plaything consisting of a child's toy bear (usually plush and stuffed with soft materials) |
-| 184 | doorbell |  | a push button at an outer door that gives a ringing or buzzing signal when pushed |
-| 185 | cage |  | an enclosure made or wire or metal bars in which birds or animals can be kept |
 | 187 | trunk | synonym tree trunk | the main stem of a tree |
-| 188 | pipe |  | a tube with a small bowl at one end |
-| 192 | frame |  | the framework for a pair of eyeglasses |
-| 194 | underwear |  | undergarment worn next to the skin and under the outer garments |
 | 198 | theatre | synonym theater | a building where theatrical performances or motion-picture shows can be presented |
-| 202 | shell |  | ammunition consisting of a cylindrical metal casing containing an explosive charge and a projectile |
-| 206 | pole |  | a long (usually round) rod of wood or metal or plastic |
 | 207 | highway | hypernym road | a major road for any form of motor transport |
 | 208 | jet | synonym jet plane | an airplane powered by one or more jet engines |
-| 213 | string |  | a lightweight cord |
-| 220 | tube |  | conduit consisting of a long hollow object (usually cylindrical) used to hold and conduct objects or liquids or gases |
-| 221 | pan |  | cooking utensil consisting of a wide metal vessel |
-| 222 | throne |  | the chair of state for a monarch, bishop, etc. |
 | 226 | motel |  | a motor hotel |
 | 227 | rifle |  | a shoulder firearm with a long barrel and a rifled bore |
 | 228 | statue |  | a sculpture representing a human or animal |
@@ -95,7 +69,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 284 | cabinet |  | a piece of furniture resembling a cupboard with doors and shelves and drawers |
 | 285 | vault |  | a burial chamber (usually underground) |
 | 289 | collar |  | a band that fits around the neck and is usually folded over |
-| 293 | barrel |  | a tube through which a bullet travels when a gun is fired |
+| 293 | barrel | hypernym tube | a tube through which a bullet travels when a gun is fired |
 | 294 | cannon |  | a large artillery gun that is usually on wheels |
 | 298 | ginger | hypernym herb | perennial plants having thick branching aromatic rhizomes and leafy reedlike stems |
 | 300 | tub | synonym bathtub | a relatively large open container that you fill with water and use to wash the body |
@@ -135,7 +109,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 362 | sketch |  | preliminary drawing for later elaboration |
 | 363 | salmon |  | any of various large food and game fishes of northern waters |
 | 364 | wig |  | hairpiece covering the head and made of real or synthetic hair |
-| 367 | buzzer |  | a push button at an outer door that gives a ringing or buzzing signal when pushed |
+| 367 | buzzer | synonym doorbell | a push button at an outer door that gives a ringing or buzzing signal when pushed |
 | 369 | clip |  | a metal frame or container holding cartridges |
 | 370 | iris |  | plants with sword-shaped leaves and erect stalks bearing bright-colored flowers composed of three petals and three drooping sepals |
 | 373 | brake |  | a restraint used to slow or stop a vehicle |
@@ -350,7 +324,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 713 | bookstore | hypernym shop | a shop where books are sold |
 | 714 | fudge | hypernym candy | soft creamy candy |
 | 716 | sonar |  | a measuring instrument that sends out an acoustic pulse in water and measures distances in terms of the time for the echo of the pulse to return |
-| 717 | miniature |  | painting or drawing included in a book (especially in illuminated medieval manuscripts) |
+| 717 | miniature | hypernym painting | painting or drawing included in a book (especially in illuminated medieval manuscripts) |
 | 718 | windshield |  | transparent screen (as of glass) to protect occupants of a vehicle |
 | 719 | antenna |  | an electrical device that sends or receives radio or television signals |
 | 721 | urn | hypernym vase | a large vase that usually has a pedestal or feet |
@@ -400,7 +374,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 791 | basin |  | a bowl-shaped vessel |
 | 793 | cassette |  | a container that holds a magnetic tape used for recording or playing sound or video |
 | 796 | iceberg |  | a large mass of ice floating at sea |
-| 797 | hutch |  | a cage (usually made of wood and wire mesh) for small animals |
+| 797 | hutch | hypernym cage | a cage (usually made of wood and wire mesh) for small animals |
 | 799 | stump |  | the base part of a tree that remains standing after the tree has been felled |
 | 800 | cabaret |  | a spot that is open late at night and that provides entertainment (as singers or dancers) as well as dancing and food and drink |
 | 801 | boulder | hypernym rock | a large smooth mass of rock detached from its place of origin |
@@ -623,7 +597,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1090 | chardonnay |  | white wine grape |
 | 1091 | clementine |  | a variety of mandarin orange that is grown around the Mediterranean and in South Africa |
 | 1092 | halibut |  | lean flesh of very large flatfish of Atlantic or Pacific |
-| 1093 | mural |  | a painting that is applied to a wall surface |
+| 1093 | mural | hypernym painting | a painting that is applied to a wall surface |
 | 1094 | hammock | hypernym hill | a small natural hill |
 | 1095 | buttercup | hypernym herb | any of various plants of the genus Ranunculus |
 | 1096 | refinery |  | an industrial plant for purifying a crude substance |
@@ -686,8 +660,8 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1169 | oar |  | an implement used to propel or steer a boat |
 | 1170 | keyhole |  | the hole where a key is inserted |
 | 1173 | gazelle | hypernym antelope | small swift graceful antelope of Africa and Asia having lustrous eyes |
-| 1174 | silencer |  | short tube attached to the muzzle of a gun that deadens the sound of firing |
-| 1176 | catheter |  | a thin flexible tube inserted into the body to permit introduction or withdrawal of fluids or to keep the passageway open |
+| 1174 | silencer | hypernym tube | short tube attached to the muzzle of a gun that deadens the sound of firing |
+| 1176 | catheter | hypernym tube | a thin flexible tube inserted into the body to permit introduction or withdrawal of fluids or to keep the passageway open |
 | 1177 | dill | hypernym herb | aromatic Old World herb having aromatic threadlike foliage and seeds used as seasoning |
 | 1178 | bronco |  | an unbroken or imperfectly broken mustang |
 | 1179 | shipwreck | hypernym ship | a wrecked ship (or a part of one) |
@@ -786,7 +760,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1292 | streetcar |  | a wheeled vehicle that runs on rails and is propelled by electricity |
 | 1293 | stagecoach |  | a large coach-and-four formerly used to carry passengers and mail on regular routes between towns |
 | 1294 | pram |  | a small vehicle with four wheels in which a baby or child is pushed around |
-| 1295 | bungee |  | an elasticized rope |
+| 1295 | bungee | hypernym rope | an elasticized rope |
 | 1296 | jib |  | any triangular fore-and-aft sail (set forward of the foremast) |
 | 1297 | yoke |  | fabric comprising a fitted part at the top of a garment |
 | 1298 | ware |  | articles of the same kind or material |
@@ -818,7 +792,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1327 | vino | synonym wine | fermented juice (of grapes especially) |
 | 1329 | coupe | hypernym car | a car with two doors and front seats and a luggage compartment |
 | 1330 | pastrami |  | highly seasoned cut of smoked beef |
-| 1331 | flipper |  | a shoe for swimming |
+| 1331 | flipper | hypernym shoe | a shoe for swimming |
 | 1332 | scaffold |  | a platform from which criminals are executed (hanged or beheaded) |
 | 1334 | mullet |  | highly valued lean flesh of marine or freshwater mullet |
 | 1335 | liqueur |  | strong highly flavored sweet liquor usually drunk after a meal |
@@ -852,7 +826,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1364 | sledgehammer |  | a heavy long-handled hammer used to drive stakes or wedges |
 | 1365 | simulator |  | a machine that simulates an environment for the purpose of training or research |
 | 1366 | dollhouse | hypernym house | a house so small that it is likened to a child's plaything |
-| 1367 | tightrope |  | tightly stretched rope or wire on which acrobats perform high above the ground |
+| 1367 | tightrope | hypernym rope | tightly stretched rope or wire on which acrobats perform high above the ground |
 | 1368 | tigress |  | a female tiger |
 | 1370 | hookup |  | a device providing a connection between a power source and a user |
 | 1371 | bonanza |  | an especially rich vein of precious ore |
@@ -896,7 +870,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1416 | nautilus |  | a submarine that is propelled by nuclear power |
 | 1417 | platypus |  | small densely furred aquatic monotreme of Australia and Tasmania having a broad bill and tail and webbed feet |
 | 1419 | loin | hypernym cut of meat | a cut of meat taken from the side and back of an animal between the ribs and the rump |
-| 1421 | anklet |  | a shoe for a child or woman that has a strap around the ankle |
+| 1421 | anklet | hypernym shoe | a shoe for a child or woman that has a strap around the ankle |
 | 1422 | paprika | synonym bell pepper | plant bearing large mild thick-walled usually bell-shaped fruits |
 | 1423 | boathouse |  | a shed at the edge of a river or lake |
 | 1424 | phonograph |  | machine in which rotating records cause a stylus to vibrate and the vibrations are amplified acoustically or electronically |
@@ -955,7 +929,7 @@ that has a drawing. The gloss is WordNet's, for the sense kept.
 | 1480 | tapioca |  | granular preparation of cassava starch used to thicken especially puddings |
 | 1481 | crapper |  | a plumbing fixture for defecation and urination |
 | 1482 | fizz |  | an effervescent beverage (usually alcoholic) |
-| 1483 | panzer |  | an armored vehicle or tank |
+| 1483 | panzer | hypernym tank | an armored vehicle or tank |
 | 1484 | winery | hypernym plant | an establishment where wine is made |
 | 1485 | pane |  | sheet glass cut in shapes for windows or doors |
 | 1486 | gunnery |  | guns collectively |

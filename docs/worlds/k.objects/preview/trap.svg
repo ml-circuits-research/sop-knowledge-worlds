@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>trap</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="8" y="36" width="84" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>board</title></rect>
+  <rect x="46" y="36" width="6" height="40" fill="grey" stroke="#333" stroke-width="0.8"><title>spring</title></rect>
+  <rect x="22" y="49" width="14" height="14" fill="grey" stroke="#333" stroke-width="0.8"><title>bait_plate</title></rect>
+  <polyline points="52,42 86,42 86,70 52,70" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>snap_bar</title></polyline>
+  <polygon points="29,51 34,60 24,60" fill="yellow" stroke="#333" stroke-width="0.8"><title>cheese</title></polygon>
+  <polyline points="36,56 46,56" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>catch</title></polyline>
+</svg>

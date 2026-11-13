@@ -43,8 +43,9 @@ object with the file of its picture, its shard, its source, the licence of its s
 | `places` | street, building, prison, jail, restaurant, airport, temple, library, theater, museum, fort, warehouse, wall, roof, lane, alley, path, pool |
 | `land` | island, hole, hill, valley, cave, cliff, pit, grave |
 | `food` | meat, sugar, juice, orange, sauce, whiskey, corn, pork |
+| `things` | gun, suit, tape, bullet, sword, fan, painting, map, horn, trap, screen, tank, rope, mask, shoe, doorbell, cage, pipe, frame, underwear, shell, pole, string, tube, pan, throne |
 
-94 hand-written objects (30 of Round 1, 30 of Round 2, 34 of Round 4: the most frequent common things that had no
+120 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4: the most frequent common things that had no
 drawing, see `MISSING.md`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
@@ -54,12 +55,12 @@ first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mul
 
 | Source | Objects | Shards | Licence | Names from |
 | --- | --- | --- | --- | --- |
-| hand-written | 94 | 13 | CC0-1.0 | this repository |
+| hand-written | 120 | 14 | CC0-1.0 | this repository |
 | Noto Emoji (`noto-<emoji subgroup>-<nn>`) | 811 | 124 | Apache-2.0 AND Unicode-3.0 | Unicode CLDR short names (`"dog face"`, `teapot`) |
 | OpenMoji (`openmoji-<group>-<nn>`) | 114 | 18 | CC-BY-SA-4.0 | OpenMoji annotations (`goldfish`, `"lawn mower"`) |
 | Mulberry Symbols (`mulberry-<category>-<nn>`) | 958 | 149 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |
 
-1,977 objects in all (193 Mulberry symbols are left out: 149 that are not a recognisable thing and 44 club football kits, see
+2,003 objects in all (193 Mulberry symbols are left out: 149 that are not a recognisable thing and 44 club football kits, see
 `sources/mulberry/excluded.tsv`). A name of several words is a string. The keywords or tags of a source are `core.word` facts.
 Differences from the hand-written objects:
 

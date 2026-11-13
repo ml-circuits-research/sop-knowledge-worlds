@@ -838,3 +838,26 @@ as the join from a fact to its drawing), Q18 (how to say an approximate number),
 - Numbers: `places` 378 wires / 53,901 bytes, `land` 154 / 19,580, `food` 127 / 16,104. k.objects: **1,977 objects**
   (94 hand-written + 811 + 114 + 958), 304 shards, 297,602 wires, 35,943,502 bytes. Catalog: 10 worlds, 652 shards, vocab 17,930 words;
   0 errors, 0 warnings. Coverage now: 556 of 1,500 with a drawing of their name. npm test 2,182 pass, 0 fail (140 s).
+
+## R4.3 batch 2 (2026-11-13): the other 26 hand-written things; 2,003 objects
+
+- Shard `things`: gun, suit, tape, bullet, sword, fan, painting, map, horn, trap, screen, tank, rope, mask, shoe,
+  doorbell, cage, pipe, frame, underwear, shell, pole, string, tube, pan, throne. Same form as batch 1. Words: each
+  object's name and plural, and a few other names where the drawing is exactly that (pistol for gun, mousetrap for
+  trap, seashell for shell, underpants, whisky, maize, twine, theatre); no word that is the name of another object.
+- **Looked at:** all 26 previews on three contact sheets (260 px each), once; none redrawn. All recognisable with
+  the name next to them; weakest without it: rope (rings like a target with a loose end), trap (a mousetrap seen
+  from above), pole.
+- Two drawings do not show the sense `MISSING.md` kept for the word: `shell` is a seashell (the sense kept was the
+  ammunition), `frame` is a picture frame (the sense kept was the frame of a pair of glasses). Both are what the
+  word names first for a child; the coverage count is by name.
+- Four of the 60 already had a drawing under a longer name that the name-based count does not see: sugar ("sugar
+  white"), corn ("ear of corn"), pork ("pork chop"), sauce ("sauce tomato"). Found only now, through the `drawing`
+  keys of `k.food`; they are drawn again by hand here.
+- `k.food`: `drawing=orange` on orange and `drawing=juice` on juice (125 of 154 foods have a drawing; 33,319 bytes).
+- Three questions added (`ob-r4-1` to `-3`: bars of a jail, what is above the body of a restaurant, the colours of
+  a sword's blade).
+- Numbers: `things` 471 wires / 62,005 bytes. **k.objects: 2,003 objects** (120 hand-written + 811 + 114 + 958), 305
+  shards, 298,073 wires, 36,005,450 bytes. Catalog: 10 worlds, 653 shards, vocab 18,022 words; 0 errors, 0 warnings.
+- **Coverage after R4.3:** 582 of the 1,500 common things have a drawing of their name (38.8%; 522 before): the 60
+  new drawings. npm test 2,211 pass, 0 fail (139 s).
