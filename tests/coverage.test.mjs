@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
-import { coverage, missingPage, wordsShard, WORDS_SHARD, plurals, run, objectNames } from '../tools/coverage.mjs';
+import { coverage, missingPage, wordsShard, standInsShard, WORDS_SHARD, STAND_INS_SHARD, plurals, run, objectNames } from '../tools/coverage.mjs';
 
 const files = {
   'data.noun': [
@@ -73,13 +73,37 @@ test('MISSING.md on disk is what the tool gives; the list has 1,500 words', { sk
   for (const e of result.list) { if (e.drawing) assert.ok(names.has(e.drawing), e.word); if (e.link) assert.ok(names.has(e.link.drawing), e.word); }
 });
 
-test('the links are a shard of core.word facts with WordNet as the source', () => {
+test('a synonym is a core.word, a hypernym is a k.objects.stand_in fact, both with WordNet as the source', () => {
   const text = wordsShard(coverage(opts));
   assert.ok(text.includes('# license: WordNet-3.0'));
   assert.deepEqual(text.split('\n').filter((l) => l.startsWith('@')), [
     '@k.objects.wordnet.same.automobile core.word text=automobile means=car of=k.objects.object.name core.source="wordnet 3.1"',
-    '@k.objects.wordnet.kind.puppy core.word text=puppy means=Dog of=k.objects.object.name core.source="wordnet 3.1"',
   ]);
+  const standIns = standInsShard(coverage(opts));
+  assert.ok(standIns.includes('# license: WordNet-3.0'));
+  assert.deepEqual(standIns.split('\n').filter((l) => l.startsWith('@')), [
+    '@k.objects.wordnet.kind.puppy k.objects.stand_in name=puppy drawing=Dog core.source="wordnet 3.1"',
+  ]);
+});
+
+test('the sense check: a drawing that shows another sense does not count, unless another object draws the sense kept', () => {
+  const check = (instead) => `# word\tdrawing\tverdict\tnote\tinstead\ncar\tcar\tright\t\t\ngrape\tgrapes\twrong\tthe drawing shows a made-up other thing\t${instead}\n`;
+  const a = coverage({ ...opts, senseCheck: check('') });
+  const grape = a.list.find((e) => e.word === 'grape');
+  assert.equal(grape.drawing, null);
+  assert.deepEqual(grape.wrong, { drawing: 'grapes', note: 'the drawing shows a made-up other thing' });
+  assert.deepEqual({ drawn: a.stats.drawn, wrongSense: a.stats.wrongSense, otherName: a.stats.otherName }, { drawn: 2, wrongSense: 1, otherName: 0 });
+  assert.ok(missingPage(a).includes('| 6 | grape | other sense: the drawing shows a made-up other thing | a made-up fruit |'));
+  const b = coverage({ ...opts, senseCheck: check('slug') });
+  assert.equal(b.list.find((e) => e.word === 'grape').drawing, 'slug');
+  assert.deepEqual({ drawn: b.stats.drawn, wrongSense: b.stats.wrongSense, otherName: b.stats.otherName }, { drawn: 3, wrongSense: 1, otherName: 1 });
+});
+
+test('a thing that is not drawable leaves the list and is named on the page', () => {
+  const r = coverage({ ...opts, notDrawable: '# word\treason\nkettle\ta made-up reason\n' });
+  assert.ok(!r.list.some((e) => e.word === 'kettle'));
+  assert.equal(r.stats.notDrawable, 1);
+  assert.ok(missingPage(r).includes('| kettle | a made-up reason | a made-up pot |'));
 });
 
 test('words-wordnet.sop on disk is what the tool gives; every word names an object and is not an object name itself', { skip: !raw && 'raw files not downloaded' }, () => {
@@ -89,12 +113,35 @@ test('words-wordnet.sop on disk is what the tool gives; every word names an obje
   const lower = new Set([...names].map((n) => n.toLowerCase()));
   const world = fullWorld('k.objects');
   const words = world.ofType('core.word').filter((w) => w.attrs['core.source']?.includes('"wordnet 3.1"'));
-  assert.equal(words.length, result.stats.bySynonym + result.stats.byHypernym);
+  assert.equal(words.length, result.stats.bySynonym);
+  const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
   for (const w of words) {
-    const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
     assert.ok(names.has(tok(w.attrs.means[0])), w.id);
     assert.ok(!lower.has(tok(w.attrs.text[0])), w.id);
   }
-  const puppy = words.find((w) => w.attrs.text[0] === 'puppy');
-  assert.equal(puppy?.attrs.means[0], 'dog');
+  assert.equal(words.find((w) => w.attrs.text[0] === 'couch')?.attrs.means[0], 'sofa');
+  // The hypernyms: stand-in facts, never a word (Q21).
+  assert.equal(readFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${STAND_INS_SHARD}.sop`), 'utf8'), standInsShard(result));
+  const standIns = world.ofType('k.objects.stand_in');
+  assert.equal(standIns.length, result.stats.byHypernym);
+  for (const w of standIns) {
+    assert.ok(names.has(tok(w.attrs.drawing[0])), w.id);
+    assert.ok(!lower.has(tok(w.attrs.name[0])), w.id);
+    assert.ok(!words.some((x) => x.attrs.text[0] === w.attrs.name[0]), w.id);
+  }
+  assert.equal(standIns.find((w) => w.attrs.name[0] === 'puppy')?.attrs.drawing[0], 'dog');
+});
+
+test('sense-check.tsv has one verdict for every common thing with an object of its name, and no other row', { skip: !raw && 'raw files not downloaded' }, () => {
+  const rows = readFileSync(join(REPO, 'sources/coverage/sense-check.tsv'), 'utf8').split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t'));
+  const names = new Set(objectNames());
+  const result = run();
+  const matched = new Map(result.list.filter((e) => e.wrong || (e.drawing && !e.link)).map((e) => [e.word, e.wrong ? e.wrong.drawing : e.drawing]));
+  assert.deepEqual(rows.map((r) => r[0]).sort(), [...matched.keys()].sort());
+  for (const [word, drawing, verdict, note, instead] of rows) {
+    assert.equal(drawing, matched.get(word), word);
+    assert.ok(['right', 'wrong', 'unclear'].includes(verdict), word);
+    if (verdict !== 'right') assert.ok(note, `${word}: a note says what the drawing shows`);
+    if (instead) { assert.equal(verdict, 'wrong', word); assert.ok(names.has(instead), `${word}: ${instead}`); }
+  }
 });

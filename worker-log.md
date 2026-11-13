@@ -931,3 +931,39 @@ with the new objects (its test passes; no browser run this round).
 "the kind of thing" (said by the id and by the order in the shard; `core.word` has no standard key for it). Q21.
 
 **Open questions:** Q20 (is the list of common things right as built), Q21 (a key for the kind of a word link).
+
+## R5.1 (2026-11-13): stand-in facts (Q21); the sense check of the 582 name-matched drawings
+
+- **Q21.** New type `k.objects.stand_in` (`name` identity, `drawing` required; exported; schema version 3) and shard
+  `stand-ins-wordnet`: the **187 hypernym links** are now `k.objects.stand_in name=puppy drawing=dog` (ids
+  `k.objects.wordnet.kind.<word>` as before, source `wordnet 3.1`); `words-wordnet` keeps only the **63 synonyms** as
+  `core.word`. The vocabulary still finds the 187 words (the catalog reads identity keys). Question `ob-r5-1`.
+- **Sense check.** All 582 drawings that match a common thing by name, each at 160 px with the word and WordNet's
+  gloss of the sense kept underneath, on 20 contact sheets of 30; all 20 sheets read. Verdicts in
+  `sources/coverage/sense-check.tsv` (word, drawing, verdict, note, instead): **523 right, 29 wrong sense, 30 unclear.**
+  - **Wrong sense (29):** bank, plant, cake, plate, chocolate, wing, chip, frame, hammer, shell, turtle, glove, tuna,
+    hose, drone, cereal, dolphin, tablet, peacock, cruiser, cracker, lorry, stretcher, tram, cot, lollipop, steamer,
+    barbeque, headstone. In all 29 the drawing shows a common meaning of the word (often the commoner one: Q22), so
+    **no object was renamed**; the 29 list entries no longer count as drawn by that name.
+  - For 7 of them an object of another name draws the sense kept (column `instead`; these 7 drawings were looked
+    at on one sheet): plant → factory, chocolate → "hot chocolate", cruiser → "police car", tram → "aerial tramway",
+    cake → soap, glove → "baseball glove", lollipop → "ice lolly". They count as drawn. The other **22 count as
+    missing** ("other sense" in `MISSING.md`) and get no WordNet link (the word already finds the object of its name).
+  - `bank`, `shell`, `frame`: wrong sense, kept names (a bank building, a seashell and a picture frame are common),
+    entries missing; the river bank and the artillery shell are for R5.3.
+  - **Unclear (30):** the sense is the meat and the drawing the animal or the reverse (chicken, beef, lamb, lobster,
+    octopus, squid); the sense is the tree and the drawing its fruit (almond, pistachio, grapefruit, mango, kiwi);
+    a near sense (toilet, bath, castle, hut, ribbon, visor, loudspeaker); a drawing that is hard to read (pocket,
+    wire, necklace, berry, parachute, brooch, pate, lizard, freezer, dishwasher, sausage, dvd). They still count.
+  - A vegetable or flower whose sense is "the plant" and whose drawing is the part one knows it by counts as right.
+- `tools/coverage.mjs`: reads `sense-check.tsv` (and `not-drawable.tsv` for R5.3); `--limit N` prints the numbers
+  for a longer list without writing. A test checks that the table has exactly one row for every name match.
+- **Coverage of the 1,500 common things after the sense check:** 560 with a drawing in the sense kept (37.3%; it
+  was 582 by name: minus 29, plus 7), 63 by a synonym, 187 by a stand-in: **810 reach a drawing (54.0%; 832
+  before)**; 690 nothing.
+- **Not looked at:** nothing new besides the 582 + 7 drawings; the size of a cell is 160 px, so small details were
+  not judged. The stand-in and synonym drawings are R5.2.
+- Question Q22 (should the kept sense be corrected by hand where WordNet's counts keep a rare one).
+- Numbers: `stand-ins-wordnet` 187 wires / 19,889 bytes; `words-wordnet` 63 / 7,954. k.objects 2,003 objects, 307
+  shards, 298,323 wires, 36,033,293 bytes. Catalog: 10 worlds, 655 shards, 331,649 wires, 42,396,797 bytes, vocab
+  18,104 words; 0 errors, 0 warnings. npm test 2,217 pass, 0 fail (182 s).

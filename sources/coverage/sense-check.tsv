@@ -1,0 +1,587 @@
+# word	drawing	verdict	note	instead
+# The sense check (R5.1): every common thing of tools/coverage.mjs that has a drawing of its name, with the verdict of a
+# language model that looked at the drawing next to WordNet's gloss of the sense kept: right, wrong (the drawing shows
+# another sense of the word; the note says which) or unclear. A wrong entry counts as missing, unless "instead" names
+# an object that draws the sense kept. Rows of hand-written objects made for the sense kept say so in the note.
+house	house	right		
+world	world	right		
+car	car	right		
+door	door	right		
+phone	phone	right		
+person	person	right		
+honey	honey	right		
+gun	gun	right		
+bed	bed	right		
+dog	dog	right		
+earth	Earth	right		
+hospital	hospital	right		
+street	street	right		
+coffee	coffee	right		
+road	road	right		
+picture	picture	right		
+building	building	right		
+ship	ship	right		
+hotel	hotel	right		
+bag	bag	right		
+station	station	right		
+rock	rock	right		
+sun	sun	right		
+box	box	right		
+horse	horse	right		
+ball	ball	right		
+key	key	right		
+boat	boat	right		
+fish	fish	right		
+star	star	right		
+prison	prison	right		
+stick	stick	right		
+bank	bank	wrong	the drawing shows a bank building	
+tea	tea	right		
+camera	camera	right		
+window	window	right		
+wall	wall	right		
+jail	jail	right		
+cat	cat	right		
+shop	shop	right		
+wine	wine	right		
+island	island	right		
+plane	plane	right		
+tree	tree	right		
+truck	truck	right		
+beer	beer	right		
+computer	computer	right		
+planet	planet	right		
+bus	bus	right		
+moon	moon	right		
+suit	suit	right		
+bell	bell	right		
+chicken	chicken	unclear	the sense is the meat; the drawing is the live bird	
+hole	hole	right		
+bomb	bomb	right		
+bottle	bottle	right		
+bird	bird	right		
+stone	stone	right		
+pants	pants	right		
+beach	beach	right		
+knife	knife	right		
+rose	rose	right		
+hat	hat	right		
+restaurant	restaurant	right		
+cup	cup	right		
+tape	tape	right		
+milk	milk	right		
+cake	cake	wrong	the drawing shows a baked cake	soap
+meat	meat	right		
+bridge	bridge	right		
+chair	chair	right		
+mountain	mountain	right		
+shirt	shirt	right		
+bullet	bullet	right		
+sword	sword	right		
+shower	shower	right		
+desk	desk	right		
+pool	pool	right		
+fan	fan	right		
+pig	pig	right		
+path	path	right		
+roof	roof	right		
+sugar	sugar	right		
+gate	gate	right		
+coat	coat	right		
+cheese	cheese	right		
+castle	castle	unclear	the sense is a stately mansion; the drawing is a fortified castle	
+hill	hill	right		
+bread	bread	right		
+painting	painting	right		
+pocket	pocket	unclear	the drawing is hard to read as a pocket	
+clock	clock	right		
+plant	plant	wrong	the drawing shows a living plant	factory
+toilet	toilet	unclear	the sense is the room; the drawing is the fixture	
+telephone	telephone	right		
+airport	airport	right		
+bath	bath	unclear	the sense is any vessel for immersing; the drawing is a bathtub	
+map	map	right		
+horn	horn	right		
+temple	temple	right		
+jacket	jacket	right		
+grave	grave	right		
+pizza	pizza	right		
+plate	plate	wrong	the drawing shows a dinner plate	
+chocolate	chocolate	wrong	the drawing shows a bar of chocolate	hot chocolate
+trap	trap	right		
+soup	soup	right		
+rat	rat	right		
+piano	piano	right		
+factory	factory	right		
+mirror	mirror	right		
+taxi	taxi	right		
+monkey	monkey	right		
+candy	candy	right		
+flower	flower	right		
+egg	egg	right		
+champagne	champagne	right		
+wolf	wolf	right		
+rice	rice	right		
+cow	cow	right		
+juice	juice	right		
+tower	tower	right		
+wheel	wheel	right		
+button	button	right		
+pie	pie	right		
+pot	pot	right		
+garage	garage	right		
+ambulance	ambulance	right		
+stairs	stairs	right		
+snake	snake	right		
+lily	lily	right		
+elevator	elevator	right		
+screen	screen	right		
+robin	robin	right		
+pen	pen	right		
+valley	valley	right		
+wire	wire	unclear	the drawing is hard to read as a wire	
+library	library	right		
+tank	tank	right		
+apple	apple	right		
+rope	rope	right		
+theater	theater	right		
+belt	belt	right		
+doll	doll	right		
+chick	chick	right		
+guitar	guitar	right		
+mask	mask	right		
+dish	dish	right		
+shoe	shoe	right		
+bowl	bowl	right		
+museum	museum	right		
+sandwich	sandwich	right		
+package	package	right		
+lion	lion	right		
+flag	flag	right		
+wallet	wallet	right		
+lane	lane	right		
+orange	orange	right		
+bud	bud	right		
+cave	cave	right		
+wing	wing	wrong	the drawing shows the wing of a bird	
+fox	fox	right		
+butter	butter	right		
+sauce	sauce	right		
+grass	grass	right		
+cap	cap	right		
+sheep	sheep	right		
+rabbit	rabbit	right		
+robot	robot	right		
+purse	purse	right		
+turkey	turkey	right		
+holly	holly	right		
+beef	beef	unclear	the sense is the cattle; the drawing is the meat	
+chip	chips	wrong	the drawing shows fried potato chips	
+bug	bug	right		
+doorbell	doorbell	right		
+cage	cage	right		
+cliff	cliff	right		
+pipe	pipe	right		
+salad	salad	right		
+mouse	mouse	right		
+pit	pit	right		
+frame	frame	wrong	the drawing shows a picture frame	
+fence	fence	right		
+underwear	underwear	right		
+hammer	hammer	wrong	the drawing shows the hand tool	
+helicopter	helicopter	right		
+photograph	photographs	right		
+rocket	rocket	right		
+bush	bush	right		
+shark	shark	right		
+shell	shell	wrong	the drawing shows a seashell	
+necklace	necklace	unclear	the drawing is two strings of beads	
+fort	fort	right		
+alley	alley	right		
+pole	pole	right		
+elephant	elephant	right		
+goat	goat	right		
+whiskey	whiskey	right		
+locker	locker	right		
+string	string	right		
+corn	corn	right		
+tent	tent	right		
+warehouse	warehouse	right		
+lemon	lemon	right		
+motor	motor	right		
+steak	steak	right		
+tube	tube	right		
+pan	pan	right		
+throne	throne	right		
+bee	bee	right		
+cable	cable	right		
+pork	pork	right		
+fridge	fridge	right		
+brick	brick	right		
+pill	pill	right		
+bucket	bucket	right		
+weed	weeds	right		
+satellite	satellite	right		
+eagle	eagle	right		
+barn	barn	right		
+lamb	lamb	unclear	the sense is the young sheep; the drawing is the meat	
+cookie	cookie	right		
+sack	sack	right		
+suitcase	suitcase	right		
+blanket	blanket	right		
+towel	towel	right		
+daisy	daisy	right		
+spider	spider	right		
+bacon	bacon	right		
+potato	potato	right		
+root	roots	right		
+boot	boot	right		
+turtle	turtle	wrong	the drawing shows the animal	
+drawer	drawer	right		
+cart	cart	right		
+ham	ham	right		
+luggage	luggage	right		
+basket	basket	right		
+shield	shield	right		
+hut	hut	unclear	the sense is a military shelter; the drawing is a thatched hut	
+coffin	coffin	right		
+lamp	lamp	right		
+banana	banana	right		
+bench	bench	right		
+helmet	helmet	right		
+envelope	envelope	right		
+oven	oven	right		
+ladder	ladder	right		
+drum	drum	right		
+motorcycle	motorcycle	right		
+skirt	skirt	right		
+frog	frog	right		
+perfume	perfume	right		
+goose	goose	right		
+deer	deer	right		
+candle	candle	right		
+balloon	balloon	right		
+sausage	sausages	unclear	the drawing is hard to read as sausages	
+airplane	airplane	right		
+curtain	curtains	right		
+laptop	laptop	right		
+seed	seeds	right		
+bra	bra	right		
+worm	worm	right		
+butterfly	butterfly	right		
+bicycle	bicycle	right		
+glove	gloves	wrong	the drawing shows a pair of gloves for the cold	baseball glove
+peanut	peanut	right		
+leaf	leaf	right		
+jar	jar	right		
+ivy	ivy	right		
+buffalo	buffalo	right		
+trousers	trousers	right		
+bean	beans	right		
+pencil	pencil	right		
+umbrella	umbrella	right		
+spoon	spoon	right		
+torch	torch	right		
+lipstick	lipstick	right		
+cricket	cricket	right		
+crab	crab	right		
+sofa	sofa	right		
+scissors	scissors	right		
+briefcase	briefcase	right		
+puppet	puppet	right		
+fountain	fountain	right		
+fork	fork	right		
+scarf	scarf	right		
+stadium	stadium	right		
+jeep	jeep	right		
+wheelchair	wheelchair	right		
+ski	skis	right		
+lobster	lobster	unclear	the sense is the meat; the drawing is the live animal	
+shelf	shelf	right		
+pasta	pasta	right		
+wardrobe	wardrobe	right		
+tomato	tomato	right		
+axe	axe	right		
+razor	razor	right		
+pigeon	pigeon	right		
+violin	violin	right		
+tuna	tuna	wrong	the drawing shows a tin of tuna fish	
+jelly	jelly	right		
+rug	rug	right		
+popcorn	popcorn	right		
+dvd	dvd	unclear	the drawing looks like a colour wheel	
+swan	swan	right		
+sock	sock	right		
+volcano	volcano	right		
+tray	tray	right		
+owl	owl	right		
+spaghetti	spaghetti	right		
+feather	feather	right		
+curry	curry	right		
+coconut	coconut	right		
+submarine	submarine	right		
+hose	hose	wrong	the drawing shows a garden hose	
+garlic	garlic	right		
+sushi	sushi	right		
+dagger	dagger	right		
+peach	peach	right		
+freezer	freezer	unclear	the drawing is an open cabinet	
+shovel	shovel	right		
+comet	comet	right		
+backpack	backpack	right		
+spaceship	spaceship	right		
+ant	ant	right		
+camel	camel	right		
+parrot	parrot	right		
+dinosaur	dinosaur	right		
+rooster	rooster	right		
+cupboard	cupboard	right		
+dove	dove	right		
+lizard	lizard	unclear	the drawing is hard to read as a lizard	
+comb	comb	right		
+onion	onion	right		
+blossom	blossom	right		
+lemonade	lemonade	right		
+drone	drone	wrong	the drawing shows a small aircraft with four rotors	
+strawberry	strawberry	right		
+microphone	microphone	right		
+gorilla	gorilla	right		
+poppy	poppy	right		
+hen	hen	right		
+trumpet	trumpet	right		
+cereal	cereal	wrong	the drawing shows a bowl of breakfast cereal	
+penguin	penguin	right		
+bathtub	bathtub	right		
+kettle	kettle	right		
+toad	toad	right		
+moose	moose	right		
+compass	compass	right		
+stereo	stereo	right		
+flute	flute	right		
+tractor	tractor	right		
+broom	broom	right		
+vase	vase	right		
+panda	panda	right		
+carrot	carrot	right		
+toothbrush	toothbrush	right		
+cabbage	cabbage	right		
+mosque	mosque	right		
+pickle	pickle	right		
+flashlight	flashlight	right		
+keyboard	keyboard	right		
+sunglasses	sunglasses	right		
+ribbon	ribbon	unclear	the sense is any long thin thing; the drawing is a bow	
+yogurt	yogurt	right		
+chimney	chimney	right		
+blouse	blouse	right		
+berry	berry	unclear	the drawing is one red ball on a stalk	
+hamburger	hamburger	right		
+biscuit	biscuits	right		
+meteor	meteor	right		
+stool	stool	right		
+lotus	lotus	right		
+fireplace	fireplace	right		
+beetle	beetle	right		
+reindeer	reindeer	right		
+crocodile	crocodile	right		
+magnet	magnet	right		
+bouquet	bouquet	right		
+dolphin	dolphin	wrong	the drawing shows the sea mammal	
+lantern	lantern	right		
+parachute	parachute	unclear	the drawing is hard to read as a parachute	
+noodle	noodles	right		
+octopus	octopus	unclear	the sense is the food; the drawing is the live animal	
+tablet	tablet	wrong	the drawing shows a tablet computer	
+apron	apron	right		
+automobile	automobile	right		
+pastry	pastry	right		
+cupcake	cupcake	right		
+squid	squid	unclear	the sense is the food; the drawing is the live animal	
+mushroom	mushroom	right		
+mailbox	mailbox	right		
+pineapple	pineapple	right		
+ramp	ramp	right		
+lighthouse	lighthouse	right		
+cracker	cracker	wrong	the drawing shows a Christmas cracker	
+grape	grapes	right		
+mosquito	mosquito	right		
+pea	pea	right		
+hare	hare	right		
+pancake	pancakes	right		
+peacock	peacock	wrong	the drawing shows the bird	
+melon	melon	right		
+dresser	dresser	right		
+goldfish	goldfish	right		
+boar	boar	right		
+handbag	handbag	right		
+vinegar	vinegar	right		
+earring	earrings	right		
+cockroach	cockroach	right		
+sari	sari	right		
+sleigh	sleigh	right		
+moth	moth	right		
+cruiser	cruiser	wrong	the drawing shows a motor boat	police car
+screwdriver	screwdriver	right		
+mango	mango	unclear	the sense is the tree; the drawing is the fruit	
+lorry	lorry	wrong	the drawing shows a motor truck	
+vine	vine	right		
+lotion	lotion	right		
+porridge	porridge	right		
+harp	harp	right		
+syringe	syringe	right		
+oyster	oyster	right		
+watermelon	watermelon	right		
+goggles	goggles	right		
+hedge	hedge	right		
+zebra	zebra	right		
+scarecrow	scarecrow	right		
+stag	stag	right		
+canoe	canoe	right		
+microscope	microscope	right		
+cucumber	cucumber	right		
+hangar	hangar	right		
+clover	clover	right		
+vulture	vulture	right		
+hamster	hamster	right		
+hedgehog	hedgehog	right		
+bagel	bagel	right		
+tram	tram	wrong	the drawing shows a streetcar on rails	aerial tramway
+dishwasher	dishwasher	unclear	the drawing is hard to read	
+kangaroo	kangaroo	right		
+pear	pear	right		
+stretcher	stretcher	wrong	the drawing shows a stretcher for carrying a patient	
+banjo	banjo	right		
+spinach	spinach	right		
+giraffe	giraffe	right		
+pager	pager	right		
+snail	snail	right		
+cheetah	cheetah	right		
+tights	tights	right		
+broccoli	broccoli	right		
+cactus	cactus	right		
+burrito	burrito	right		
+mayonnaise	mayonnaise	right		
+jellyfish	jellyfish	right		
+cot	cot	wrong	the drawing shows a bed for a small child	
+blueberry	blueberries	right		
+softball	softball	right		
+tortoise	tortoise	right		
+poodle	poodle	right		
+almond	almond	unclear	the sense is the tree; the drawing is the nut	
+caterpillar	caterpillar	right		
+lollipop	lollipop	wrong	the drawing shows a round sweet on a stick	ice lolly
+sled	sled	right		
+waffle	waffle	right		
+snowman	snowman	right		
+accordion	accordion	right		
+kimono	kimono	right		
+ipod	iPod	right		
+casserole	casserole	right		
+skateboard	skateboard	right		
+celery	celery	right		
+piglet	piglet	right		
+custard	custard	right		
+raincoat	raincoat	right		
+thermometer	thermometer	right		
+walnut	walnut	right		
+asparagus	asparagus	right		
+slipper	slippers	right		
+saxophone	saxophone	right		
+aeroplane	aeroplane	right		
+brooch	brooch	unclear	the drawing is a ring of dots	
+tulip	tulip	right		
+marshmallow	marshmallows	right		
+nightgown	nightgown	right		
+grapefruit	grapefruit	unclear	the sense is the tree; the drawing is the fruit	
+deodorant	deodorant	right		
+sledge	sledge	right		
+sweatshirt	sweatshirt	right		
+ferret	ferret	right		
+chandelier	chandelier	right		
+seagull	seagull	right		
+cranberry	cranberries	right		
+handcuff	handcuffs	right		
+omelette	omelette	right		
+stairway	stairway	right		
+pretzel	pretzel	right		
+bead	beads	right		
+kebab	kebab	right		
+windmill	windmill	right		
+bison	bison	right		
+dumpling	dumpling	right		
+eggplant	eggplant	right		
+synagogue	synagogue	right		
+ventilator	ventilator	right		
+avocado	avocado	right		
+inhaler	inhaler	right		
+mascara	mascara	right		
+loudspeaker	loudspeaker	unclear	the drawing is a megaphone	
+kennel	kennel	right		
+walrus	walrus	right		
+pliers	pliers	right		
+moped	moped	right		
+sunflower	sunflower	right		
+ravioli	ravioli	right		
+raisin	raisin	right		
+cooker	cooker	right		
+steamer	steamer	wrong	the drawing shows a steaming pot	
+blackberry	blackberry	right		
+hoe	hoe	right		
+motorway	motorway	right		
+teapot	teapot	right		
+locomotive	locomotive	right		
+chimpanzee	chimpanzee	right		
+mistletoe	mistletoe	right		
+crutch	crutch	right		
+chisel	chisel	right		
+pelican	pelican	right		
+armchair	armchair	right		
+trampoline	trampoline	right		
+blackboard	blackboard	right		
+antelope	antelope	right		
+cauliflower	cauliflower	right		
+croissant	croissant	right		
+flamingo	flamingo	right		
+radish	radish	right		
+fondue	fondue	right		
+dragonfly	dragonfly	right		
+trombone	trombone	right		
+turnip	turnip	right		
+koala	koala	right		
+toolbox	toolbox	right		
+nappy	nappy	right		
+stapler	stapler	right		
+rhubarb	rhubarb	right		
+barbeque	barbeque	wrong	the drawing shows the grill	
+sailboat	sailboat	right		
+prawn	prawn	right		
+necktie	necktie	right		
+fennel	fennel	right		
+rhinoceros	rhinoceros	right		
+acorn	acorn	right		
+pistachio	pistachios	unclear	the sense is the tree; the drawing is the nut	
+starfish	starfish	right		
+kiwi	kiwi	unclear	the sense is the vine; the drawing is the fruit	
+eraser	eraser	right		
+meringue	meringues	right		
+wheelbarrow	wheelbarrow	right		
+porcupine	porcupine	right		
+tangerine	tangerine	right		
+chipmunk	chipmunk	right		
+llama	llama	right		
+tripod	tripod	right		
+forceps	forceps	right		
+stethoscope	stethoscope	right		
+headstone	headstone	wrong	the drawing shows a gravestone	
+stair	stairs	right		
+trouser	trousers	right		
+centipede	centipede	right		
+toupee	toupee	right		
+visor	visor	unclear	the sense is a part of a medieval helmet; the drawing is a worker with a helmet and a visor	
+tongs	tongs	right		
+pate	pate	unclear	the drawing is hard to read	
+varnish	varnish	right		
+clipboard	clipboard	right		
+megaphone	megaphone	right		
+crayon	crayon	right		
+sandal	sandals	right		

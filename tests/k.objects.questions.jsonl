@@ -13,3 +13,4 @@
 {"id":"ob-r4-1","ask":"how many bars does a jail have","query":{"type":"k.objects.part","where":{"of":"jail","kind":"bar"},"mode":"count"},"expect":{"status":"supported","value":"6"}}
 {"id":"ob-r4-2","ask":"what is above the body of a restaurant","query":{"type":"k.objects.part","where":{"of":"restaurant","above":"body"},"seek":"name"},"expect":{"status":"supported","value":"awning"}}
 {"id":"ob-r4-3","ask":"what colour is the blade of a sword","query":{"type":"k.objects.part","where":{"of":"sword","name":"blade"},"seek":"colour","mode":"list"},"expect":{"status":"supported","values":["grey","white"]}}
+{"id":"ob-r5-1","ask":"which drawing stands in for a puppy","query":{"type":"k.objects.stand_in","where":{"name":"puppy"},"seek":"drawing"},"expect":{"status":"supported","value":"dog"}}

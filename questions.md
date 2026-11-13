@@ -205,3 +205,19 @@ shard lists the synonyms first. Options: (a) keep; (b) two shards (`words-same`,
 entry says it; (c) a type of `k.objects` for the link (`k.objects.drawn_by word=puppy object=dog as=kind`) instead of
 `core.word`, which the vocabulary builder would then have to read; (d) sopworld: a standard key on `core.word`.
 Blocking: no. Meanwhile: (a).
+
+## Q22 (task R5.1, 2026-11-13)
+Question: when the sense that the rule keeps for a common word is not what the word names first (WordNet's counts
+keep `plate` as the base of baseball, `cake` as a block of soap, `lorry` as a horse-drawn wagon, `turtle` as a
+sweater, `tablet` as a slab for an inscription), should the kept sense be changed by hand?
+Context: the sense check found 29 name-matched drawings that show another sense than the one kept. In every one of
+them the drawing shows the common meaning (a dinner plate, a baked cake, a truck, the animal, a tablet computer) and
+the sense kept is the rarer one. By the rule of Round 5 the drawing keeps its name and the list entry counts as
+missing, so `MISSING.md` now asks for a baseball plate and a horse-drawn lorry near its top. `bank`, `shell` and
+`frame` are of this kind too (both senses common). Options: (a) keep: the entry is missing, and a drawing for the
+sense kept gets another name (`"river bank"`), found through the `instead` column of `sense-check.tsv`; (b) a table
+of sense overrides (word, WordNet sense, reason), read by `tools/coverage.mjs`, so that the list asks for the sense
+the drawing shows: this is a second reading by a language model, as `not-things.tsv`; (c) keep the entry as drawn
+when the drawing shows any physical sense of the word that WordNet has.
+Blocking: no. Meanwhile: (a); in R5.3 an "other sense" word is drawn under another name only when the sense kept
+is itself a common thing (river bank, artillery shell); the others are passed over and listed in the log.

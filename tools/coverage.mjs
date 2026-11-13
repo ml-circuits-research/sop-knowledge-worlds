@@ -1,8 +1,10 @@
 // Coverage of common things by k.objects (R4.2): the most frequent English nouns that name a physical thing
 // (frequency list x WordNet), which of them have a drawing, and which word without one has a WordNet synonym or
-// direct hypernym with a drawing (R4.4). Deterministic.
-//   node tools/coverage.mjs            writes docs/worlds/k.objects/MISSING.md and the shard
-//                                      docs/worlds/k.objects/shards/words-wordnet.sop, and prints the numbers
+// direct hypernym with a drawing (R4.4, R5.1). Deterministic.
+//   node tools/coverage.mjs            writes docs/worlds/k.objects/MISSING.md and the shards words-wordnet.sop
+//                                      (synonyms, core.word) and stand-ins-wordnet.sop (hypernyms,
+//                                      k.objects.stand_in) of docs/worlds/k.objects/shards, and prints the numbers
+//   node tools/coverage.mjs --limit 3000   only prints the numbers for a longer list (nothing is written)
 //   node tools/coverage.mjs --list     prints the list (rank, word, count, drawing, link) as TSV instead
 // The rule, for a word of the frequency list (the word itself, no inflection; rank = its place among the kept words):
 //   1. it is a noun lemma of WordNet, spelt with letters only, at least three of them;
@@ -21,6 +23,11 @@
 //      that are more frequent than the noun, parts and sides that are not things).
 // A word has a drawing when a k.objects object has its name (compared in lower case; the plural form of the word,
 // as WordNet's rules and exceptions give it, counts too: grape has "grapes").
+// The sense check (R5.1, sources/coverage/sense-check.tsv): a drawing of the word's name that was looked at next to
+// the gloss of the sense kept and shows another sense (the drawing "bank" is a building, the sense kept is the river
+// bank) does not count; the word is then missing, unless the table names another object that draws the sense kept.
+// sources/coverage/not-drawable.tsv (R5.3): things that cannot be drawn as an object (materials, substances without
+// a container); they leave the list and are named on the page.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
@@ -66,7 +73,12 @@ export function plurals(word, exceptions) {
 // files: { 'index.noun', 'data.noun', 'noun.exc', 'index.sense' } as text; freq: the frequency list as text;
 // objects: the names of the k.objects objects; notThings: the text of not-things.tsv.
 // notLinks: the text of not-links.tsv (word, other word, reason): links the rule gives that a look at the drawing refuses.
-export function coverage({ files, freq, objects, notThings = '', notLinks = '', limit = LIMIT, roots = ROOTS }) {
+// senseCheck: the text of sense-check.tsv (word, drawing, verdict, note, instead). notDrawable: the text of
+// not-drawable.tsv (word, reason).
+export function coverage({ files, freq, objects, notThings = '', notLinks = '', senseCheck = '', notDrawable = '', limit = LIMIT, roots = ROOTS }) {
+  const rowsOf = (text) => text.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
+  const wrong = new Map(rowsOf(senseCheck).filter((r) => r[2] === 'wrong').map(([word, drawing, , note, instead]) => [word, { drawing, note, instead: instead || null }]));
+  const undrawable = new Map(rowsOf(notDrawable).map(([word, reason]) => [word, reason]));
   const unlinked = new Set(notLinks.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').slice(0, 2).map((x) => x.trim()).join('\t')));
   const data = readData(files['data.noun']);
   const index = readIndex(files['index.noun']);
@@ -86,7 +98,10 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
   };
   const byName = new Map(); // lower case -> the object's name (the first in sorted order)
   for (const name of [...objects].sort()) if (!byName.has(name.toLowerCase())) byName.set(name.toLowerCase(), name);
-  const drawingOf = (word) => byName.get(word) ?? plurals(word, exceptions).map((p) => byName.get(p)).find(Boolean) ?? null;
+  const namedLike = (word) => byName.get(word) ?? plurals(word, exceptions).map((p) => byName.get(p)).find(Boolean) ?? null;
+  // The drawing of a word: the object of its name, unless the sense check found that it shows another sense.
+  const isWrong = (word) => wrong.has(word) && wrong.get(word).drawing === namedLike(word);
+  const drawingOf = (word) => (isWrong(word) ? (byName.get(wrong.get(word).instead?.toLowerCase()) ?? null) : namedLike(word));
 
   const rankOf = new Map(); // word -> its line in the frequency list
   freq.split('\n').forEach((line, i) => { const w = line.trim().split(/\s+/)[0]; if (w && !rankOf.has(w)) rankOf.set(w, i); });
@@ -100,8 +115,9 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     const phys = (index.get(key) ?? []).filter(isPhysical);
     return phys.length ? phys.reduce((best, s) => ((t.get(s) ?? 0) > (t.get(best) ?? 0) ? s : best), phys[0]) : null;
   };
-  const stats = { nouns: 0, verbOrOther: 0, abstract: 0, otherKinds: 0, plurals: 0, persons: 0, offensive: 0, notThings: 0, kept: 0, drawn: 0, bySynonym: 0, byHypernym: 0 };
+  const stats = { nouns: 0, verbOrOther: 0, abstract: 0, otherKinds: 0, plurals: 0, persons: 0, offensive: 0, notThings: 0, notDrawable: 0, kept: 0, drawn: 0, otherName: 0, wrongSense: 0, bySynonym: 0, byHypernym: 0 };
   const list = [];
+  const notDrawn = [];
   const persons = [];
   const seen = new Set();
   for (const line of freq.split('\n')) {
@@ -123,8 +139,10 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     if (singulars(word).some((b) => rankOf.get(b) < rankOf.get(word))) { stats.plurals++; continue; }
     if (senses.some((s) => OFFENSIVE.test(data.get(s).gloss))) { stats.offensive++; continue; }
     if (excluded.has(word)) { stats.notThings++; continue; }
-    const entry = { rank: list.length + 1, word, count: Number(count), gloss: data.get(sense).gloss.split(';')[0].trim(), drawing: drawingOf(word), link: null };
-    if (!entry.drawing) {
+    if (undrawable.has(word)) { stats.notDrawable++; notDrawn.push({ word, reason: undrawable.get(word), gloss: data.get(sense).gloss.split(';')[0].trim() }); continue; }
+    const entry = { rank: list.length + 1, word, count: Number(count), gloss: data.get(sense).gloss.split(';')[0].trim(), drawing: drawingOf(word), link: null, wrong: isWrong(word) ? { drawing: namedLike(word), note: wrong.get(word).note } : null };
+    // A word whose own name is an object (of another sense) gets no link: the word already finds that object.
+    if (!entry.drawing && !entry.wrong) {
       // R4.4: a synonym in the kept sense, then a direct hypernym of it, that has a drawing. The other word must be
       // kept in that same sense too (a bullet is also called a slug, but "slug" is first of all the animal, and so
       // is its drawing). Words of several words are compared with their spaces ("ice cream").
@@ -139,17 +157,20 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
   }
   stats.kept = list.length;
   stats.drawn = list.filter((e) => e.drawing).length;
+  stats.otherName = list.filter((e) => e.drawing && e.wrong).length;
+  stats.wrongSense = list.filter((e) => e.wrong).length;
   stats.bySynonym = list.filter((e) => e.link?.kind === 'synonym').length;
   stats.byHypernym = list.filter((e) => e.link?.kind === 'hypernym').length;
-  return { list, stats, persons };
+  return { list, stats, persons, notDrawn };
 }
 
-export function missingPage({ list, stats, persons }) {
+export function missingPage({ list, stats, persons, notDrawn = [] }) {
   const missing = list.filter((e) => !e.drawing);
   const pct = (n) => `${(100 * n / list.length).toFixed(1)}%`;
   const num = (n) => String(n).replace(/\B(?=(\d{3})+$)/g, ',');
   const none = list.length - stats.drawn - stats.bySynonym - stats.byHypernym;
-  const rows = missing.map((e) => `| ${e.rank} | ${e.word} | ${e.link ? `${e.link.kind} ${e.link.word}${e.link.word === e.link.drawing ? '' : ` (drawing "${e.link.drawing}")`}` : ''} | ${e.gloss.replace(/\|/g, '/')} |`);
+  const rows = missing.map((e) => `| ${e.rank} | ${e.word} | ${e.link ? `${e.link.kind} ${e.link.word}${e.link.word === e.link.drawing ? '' : ` (drawing "${e.link.drawing}")`}` : e.wrong ? `other sense: ${e.wrong.note}` : ''} | ${e.gloss.replace(/\|/g, '/')} |`);
+  const undrawn = notDrawn.map((e) => `| ${e.word} | ${e.reason} | ${e.gloss.replace(/\|/g, '/')} |`);
   return `# k.objects: common things without a drawing
 
 Generated by \`tools/coverage.mjs\`; do not edit by hand.
@@ -161,14 +182,16 @@ noun counts. Words for persons (WordNet's noun.person: ${num(persons.length)} wo
 ${persons.slice(0, 6).join(', ')}) and the words of \`sources/coverage/not-things.tsv\` are left out. The rule is at
 the top of \`tools/coverage.mjs\`.
 
-"Has a drawing" compares names only: the word and the name of a \`k.objects\` object (or its plural). It does not
-check that the drawing shows the sense kept here (the drawing \`bank\` is a building, the sense kept is the river
-bank).
+"Has a drawing" compares the word with the name of a \`k.objects\` object (or its plural). Every such drawing was
+looked at next to the gloss of the sense kept (\`sources/coverage/sense-check.tsv\`): ${stats.wrongSense} drawings show another sense
+of the word (the drawing \`bank\` is a building, the sense kept is the river bank). Such a word counts as missing
+("other sense" in the list), unless an object of another name draws the sense kept (${stats.otherName} words). The drawing keeps its
+name, since the sense it shows is a common one too.
 
 | | Words | Share |
 | --- | --- | --- |
 | Common things | ${num(list.length)} | |
-| with a drawing of that name | ${stats.drawn} | ${pct(stats.drawn)} |
+| with a drawing of that name, in the sense kept | ${stats.drawn} | ${pct(stats.drawn)} |
 | without, but a WordNet synonym has a drawing | ${stats.bySynonym} | ${pct(stats.bySynonym)} |
 | without, but the direct hypernym has a drawing | ${stats.byHypernym} | ${pct(stats.byHypernym)} |
 | with no drawing at all | ${none} | ${pct(none)} |
@@ -176,32 +199,53 @@ bank).
 ## The ${missing.length} words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
-that has a drawing; each link is a \`core.word\` fact of the shard \`words-wordnet\`, so that the word finds that
-drawing. The gloss is WordNet's, for the sense kept.
+that has a drawing: a synonym is a \`core.word\` fact of the shard \`words-wordnet\` (the word finds that drawing as
+its own); a hypernym is a \`k.objects.stand_in\` fact of the shard \`stand-ins-wordnet\` (the drawing of the kind stands
+in for the thing). The gloss is WordNet's, for the sense kept.
 
 | Rank | Word | Link | Sense (WordNet 3.1) |
 | --- | --- | --- | --- |
 ${rows.join('\n')}
+${undrawn.length ? `
+## Not drawable: ${undrawn.length} words that left the list
 
+Common words for things that cannot be drawn as an object (\`sources/coverage/not-drawable.tsv\`).
+
+| Word | Why | Sense (WordNet 3.1) |
+| --- | --- | --- |
+${undrawn.join('\n')}
+` : ''}
 Sources of this page: the order of the words is from FrequencyWords 2018 by Hermit Dave (CC BY-SA 4.0, made from
 OpenSubtitles 2018); the senses, synonyms and hypernyms are from Princeton WordNet 3.1 (WordNet licence, see
 \`k.words/LICENSE\`). This page is under CC BY-SA 4.0.
 `;
 }
 
-// R4.4: the links as a k.objects shard: a core.word from the word to the object that draws its synonym or its direct
-// hypernym, with WordNet as the source. The synonyms first, then the hypernyms, each by word.
+// R4.4, R5.1 (Q21): the links as two k.objects shards, with WordNet as the source. A synonym is the same thing: a
+// core.word from the word to the object. A direct hypernym is only the kind of thing: a k.objects.stand_in fact
+// (name = the word, drawing = the object that draws its kind), so that a host can say "I drew a dog for the puppy".
 export const WORDS_SHARD = 'words-wordnet';
 export function wordsShard({ list }) {
   const links = list.filter((e) => e.link).sort((a, b) => (a.word < b.word ? -1 : a.word > b.word ? 1 : 0));
-  const lines = (kind, id) => links.filter((e) => e.link.kind === kind)
-    .map((e) => wire(`k.objects.wordnet.${id}.${seg(e.word)}`, 'core.word', [['text', e.word], ['means', e.link.drawing], ['of', 'k.objects.object.name']], 'wordnet 3.1'));
+  const lines = links.filter((e) => e.link.kind === 'synonym')
+    .map((e) => wire(`k.objects.wordnet.same.${seg(e.word)}`, 'core.word', [['text', e.word], ['means', e.link.drawing], ['of', 'k.objects.object.name']], 'wordnet 3.1'));
   return `${header({
     id: `k.objects/shards/${WORDS_SHARD}`,
-    about: 'words for common things that have no drawing of their own: each word names the object that draws its WordNet synonym (the same thing) or its direct hypernym (the kind of thing it is: a puppy is drawn by the dog).',
-    sources: ['wordnet 3.1 (Princeton WordNet 3.1: synonyms and direct hypernyms; the words are the common things of tools/coverage.mjs, chosen with frequency-words 2018)'],
+    about: 'words for common things that have no drawing of their own: each word names the object that draws its WordNet synonym (the same thing: a couch is drawn by the sofa).',
+    sources: ['wordnet 3.1 (Princeton WordNet 3.1: synonyms; the words are the common things of tools/coverage.mjs, chosen with frequency-words 2018)'],
     license: 'WordNet-3.0', script: 'tools/coverage.mjs',
-  })}\n# The word and the object are the same thing (WordNet synonyms).\n${lines('synonym', 'same').join('\n')}\n\n# The object is the kind of thing the word names (the word's direct hypernym in WordNet).\n${lines('hypernym', 'kind').join('\n')}\n`;
+  })}\n${lines.join('\n')}\n`;
+}
+export const STAND_INS_SHARD = 'stand-ins-wordnet';
+export function standInsShard({ list }) {
+  const lines = list.filter((e) => e.link?.kind === 'hypernym').sort((a, b) => (a.word < b.word ? -1 : a.word > b.word ? 1 : 0))
+    .map((e) => wire(`k.objects.wordnet.kind.${seg(e.word)}`, 'k.objects.stand_in', [['name', e.word], ['drawing', e.link.drawing]], 'wordnet 3.1'));
+  return `${header({
+    id: `k.objects/shards/${STAND_INS_SHARD}`,
+    about: 'common things that have no drawing of their own and are a kind of something that has one: the drawing of the kind stands in for the thing (a puppy is drawn by the dog; the direct hypernym in WordNet).',
+    sources: ['wordnet 3.1 (Princeton WordNet 3.1: direct hypernyms; the words are the common things of tools/coverage.mjs, chosen with frequency-words 2018)'],
+    license: 'WordNet-3.0', script: 'tools/coverage.mjs',
+  })}\n${lines.join('\n')}\n`;
 }
 
 // The names of the k.objects objects, read from the shards.
@@ -211,21 +255,25 @@ export function objectNames() {
   return names;
 }
 
-export function run() {
+export function run(limit = LIMIT) {
   const dict = join(REPO, 'sources/wordnet/raw/wordnet31');
   const files = Object.fromEntries(['index.noun', 'data.noun', 'noun.exc', 'index.sense'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(join(REPO, 'sources/frequency-words/raw/en_50k.txt'), 'utf8');
   const read = (name) => { const p = join(REPO, 'sources/coverage', name); return existsSync(p) ? readFileSync(p, 'utf8') : ''; };
-  return coverage({ files, freq, objects: objectNames(), notThings: read('not-things.tsv'), notLinks: read('not-links.tsv') });
+  return coverage({ files, freq, objects: objectNames(), notThings: read('not-things.tsv'), notLinks: read('not-links.tsv'), senseCheck: read('sense-check.tsv'), notDrawable: read('not-drawable.tsv'), limit });
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const result = run();
-  if (process.argv.includes('--list')) {
-    for (const e of result.list) console.log([e.rank, e.word, e.count, e.drawing ?? '', e.link ? `${e.link.kind} ${e.link.word} -> ${e.link.drawing}` : '', e.gloss].join('\t'));
+  const at = process.argv.indexOf('--limit');
+  const result = run(at > 0 ? Number(process.argv[at + 1]) : LIMIT);
+  if (at > 0 && !process.argv.includes('--list')) {
+    console.log(JSON.stringify(result.stats));
+  } else if (process.argv.includes('--list')) {
+    for (const e of result.list) console.log([e.rank, e.word, e.count, e.drawing ?? '', e.link ? `${e.link.kind} ${e.link.word} -> ${e.link.drawing}` : e.wrong ? `other sense (${e.wrong.drawing})` : '', e.gloss].join('\t'));
   } else {
     writeFileSync(join(WORLDS_DIR, 'k.objects', 'MISSING.md'), missingPage(result));
     writeFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${WORDS_SHARD}.sop`), wordsShard(result));
+    writeFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${STAND_INS_SHARD}.sop`), standInsShard(result));
     console.log(JSON.stringify(result.stats));
   }
 }
