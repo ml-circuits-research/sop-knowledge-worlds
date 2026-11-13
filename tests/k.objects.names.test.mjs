@@ -51,3 +51,13 @@ test('"what are the parts of a dog face" answers with the names', () => {
   const wheels = world.query({ type: 'k.objects.part', where: { kind: 'wheel' }, seek: 'of', mode: 'list' });
   for (const o of ['car', 'bicycle', 'taxi']) assert.ok(wheels.values.includes(o), `${o} has wheels`);
 });
+
+test('OpenMoji and Mulberry objects have names too; strokes and outlines are details by rule', () => {
+  const lights = world.query({ type: 'k.objects.part', where: { of: '"traffic lights"', kind: 'light' }, seek: 'name', mode: 'list' });
+  assert.deepEqual([...lights.values].sort(), ['amber_light', 'green_light', 'red_light']);
+  const wheels = world.query({ type: 'k.objects.part', where: { kind: 'wheel' }, seek: 'of', mode: 'list' });
+  for (const o of ['"car toy"', '"diesel locomotive"', '"cargo bike"']) assert.ok(wheels.values.includes(o), `${o} has wheels`);
+  const kettle = partsOf(world, 'kettle');
+  assert.equal(kettle.find((p) => p.name === 'body')?.shape, 'polygon');
+  for (const p of kettle.filter((q) => q.shape === 'line')) assert.equal(tok(p.attrs.kind?.[0]), 'detail', p.name);
+});

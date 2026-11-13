@@ -51,9 +51,10 @@ first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mul
 | hand-written | 60 | 10 | CC0-1.0 | this repository |
 | Noto Emoji (`noto-<emoji subgroup>-<nn>`) | 811 | 124 | Apache-2.0 AND Unicode-3.0 | Unicode CLDR short names (`"dog face"`, `teapot`) |
 | OpenMoji (`openmoji-<group>-<nn>`) | 114 | 18 | CC-BY-SA-4.0 | OpenMoji annotations (`goldfish`, `"lawn mower"`) |
-| Mulberry Symbols (`mulberry-<category>-<nn>`) | 1,151 | 174 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |
+| Mulberry Symbols (`mulberry-<category>-<nn>`) | 1,002 | 154 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |
 
-2,136 objects in all. A name of several words is a string. The keywords or tags of a source are `core.word` facts.
+1,987 objects in all (149 Mulberry symbols that are not a recognisable thing are left out, see
+`sources/mulberry/excluded.tsv`). A name of several words is a string. The keywords or tags of a source are `core.word` facts.
 Differences from the hand-written objects:
 
 - every visible element of the drawing is one part, in draw order (`z` = 1, 2, …); at most 16 parts an object (the
@@ -64,7 +65,10 @@ Differences from the hand-written objects:
   pink, brown); `rgb` keeps the exact colour as a string (`"#D27856"`). A renderer may use either;
 - parts are named `part1…partN` unless `sources/<source>/part-names.tsv` names them; such a part carries
   `named=model` (a language model named it by looking at a numbered picture). Shadows, highlights and outlines have
-  `kind=detail`. No relative positions (`above`, `inside`, …) are given. So far the Noto objects have been named;
+  `kind=detail`; for OpenMoji and Mulberry (outline styles) a part that is only a stroke, and a black shape with the
+  box of a filled part, is a detail by rule unless the names file says otherwise. No relative positions (`above`,
+  `inside`, …) are given. Named so far: Noto 2,027 of 10,152 parts, OpenMoji 153 of 1,322, Mulberry 1,237 of 14,202
+  (and 748, 652 and 6,520 details);
 - shards hold up to 8 objects of one group. The licence notices are `LICENSE.noto-emoji`, `LICENSE.cldr`,
   `LICENSE.openmoji` and `LICENSE.mulberry` in this folder; see `../LICENSES.md`.
 

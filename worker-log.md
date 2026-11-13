@@ -567,3 +567,40 @@ of k.objects), Q14 (naming pass for the new sources), Q15 (country names).
 - Mulberry now: 1002 objects, 14202 parts, **1237 named, 6520 details** (rule and eye); 687 objects
   with rows; 154 shards, 157504 wires, 18863450 bytes. Excluded so far: 149. k.objects: 1987 objects.
 - catalog: worlds 6 shards 640 vocab 17496; 0 errors, 0 warnings. npm test 2116 pass, 0 fail.
+
+## R3.1 and R3.2 done (2026-11-13): every OpenMoji and Mulberry object looked at; Mulberry cleaned
+
+**What was looked at.** All 1,265 objects of the two sources, each one on a labelling picture (parts outlined and
+numbered, 300 px) on 63 contact sheets of 20: the 114 OpenMoji objects (6 sheets) and the 1,151 Mulberry objects
+(57 sheets). I read every sheet once. **What was not looked at:** the pictures after naming (the names were not
+checked a second time against the drawings; the names test checks only that each row names an existing part); the
+small blue numbers of rule-made details were mostly too small to read at this size, so a stroke that is a real part
+(a mouth, a handle drawn as a line) was named only in a few clear cases and otherwise stays a detail; the previews
+of the 1,002 kept Mulberry objects were not looked at again after the exclusions.
+
+**Naming (R3.1).** By rule first (strokes, and black shapes with the box of a filled part: `kind=detail`), then by eye,
+only when sure:
+
+| Source | Objects | Parts | Named (`named=model`) | Details | Objects with a named part |
+| --- | --- | --- | --- | --- | --- |
+| OpenMoji | 114 | 1,322 | 153 (12%) | 652 | 78 |
+| Mulberry | 1,002 | 14,202 | 1,237 (9%) | 6,520 | 687 |
+| (Noto, Round 2) | 811 | 10,152 | 2,027 (20%) | 748 | 680 |
+
+Of the parts that are not details, 23% (OpenMoji) and 16% (Mulberry) have a name. What kept parts unnamed: two
+numbers on one place (a fill and its shade), drawings made of many like pieces (leaves, facets, stripes, keys), food
+on plates, and scenes. Usually one to three names an object: the main body and the clear attachments (wheels,
+handle, lid, cap, spoon, leaves).
+
+**Cleaning (R3.2).** `sources/mulberry/excluded.tsv`: **149 names** with a reason, skipped by
+`tools/import/mulberry.mjs`: 118 that are not one recognisable thing (22 groups of things, 13 ideas, 7 adjectives,
+12 actions and activities, 8 places drawn by a symbol convention, parts pointed at with an arrow, sizes and
+measures, kinds of programme, events) and 31 that do not survive the conversion (11 drawn black: lager, orange,
+pumpkin, sunscreen, sand pit …; the rest are loose lines or pieces: wire, wool, tea towel, darts, bubble wrap).
+**Final count: 1,002 Mulberry objects; k.objects has 1,987 objects** (60 hand-written + 811 + 114 + 1,002), 306
+shards, 303,505 wires, 36,660,352 bytes; previews 8.3 MB. This is below the 2,000 target by 13.
+Kept on purpose, for the reviewer to decide: the 50 club football kits (Q16); objects where a small picture of the
+source (a cow, a chicken, a pig) or a hand sits next to the thing (milk, lamb, ham, deodorant).
+OpenMoji: nothing excluded (no exclusion file was asked); weak as things: barcode, gps, intestine.
+
+npm test: 2,117 pass, 0 fail (one test added: names of Mulberry and OpenMoji parts, details by rule).

@@ -20,5 +20,8 @@
   toys, money, instruments, plants, science, sport accessories, tools, transport, stationery); the first drawing
   of a thing (no `_2`, `_3` variants); names no earlier source has. Name: the file name with spaces;
   `core.word`: the tags. Not kept: verbs, people, feelings, flags, maps, letters, numbers, descriptive symbols.
-- **Counts (2026-11-13):** 3,435 symbols; 1,930 not things, 118 variants, 236 names already taken; **1,151 new
-  objects**, 16,361 parts, 161,425 points, 174 shards.
+  Also not kept: the 149 names in `excluded.tsv` (name, reason), found by looking at every converted drawing: ideas,
+  adjectives, actions, places, groups of things, parts pointed at with an arrow (118), and drawings that do not
+  survive the conversion (31: drawn black, or only loose lines are left).
+- **Counts (2026-11-13):** 3,435 symbols; 1,930 not things, 118 variants, 237 names already taken, 149 excluded;
+  **1,002 objects**, 14,202 parts (1,237 named, 6,520 details), 141,622 points, 154 shards.
