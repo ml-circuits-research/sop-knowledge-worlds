@@ -144,3 +144,20 @@ After R2.6, the imported parts are `part1…partN`. You (the agent) name them by
 - **Order:** the 200 pilot objects first; report how many parts got a name and show 12 labelled examples in
   `docs/worlds/k.objects/preview/`. Then continue through all imported objects in batches of 100, one commit per batch.
 - Tests: every named part exists; names are unique inside an object; "what are the parts of a <object>" answers with the names.
+
+## Reviewer 2026-11-13 09:25 — R2.6, R2.7, R2.2 accepted; answers Q10–Q12
+
+**Validated at d8473b3:** `npm test` 911 pass, catalog rebuild gives no diff. A contact sheet of 96 imported objects was
+checked by eye: the shapes are good. 811 objects, 2,027 parts named by the model. Accepted, and shown to the owner.
+
+- **Q10:** (a). A word for a type or a key maps to the world's schema path, for every world (one rule, not a special case
+  for large worlds). The host then knows the world is relevant and picks shards by the other words.
+- **Q11:** yes, a string for a value of several words. No underscore notation.
+- **Q12:** keep (c): where a hand-written object exists, the imported drawing is left out. No variant key; remove it
+  from the schema if nothing else uses it.
+- **More objects (owner wants thousands).** 811 is what Noto has. Next sources, same converter, same naming pass, in this
+  order; skip a name that already exists: (1) OpenMoji (CC BY-SA 4.0, GitHub) for things Noto lacks; (2) an openly
+  licensed flat icon set with filled shapes and object names. Search GitHub, compare 20 objects per candidate, and report
+  the choice and its licence before the full run. Target: 2,000 distinct common objects. Report how many new ones each
+  source really adds.
+- Then continue with R2.3, R2.4, R2.5 and the two import scripts.
