@@ -1,4 +1,4 @@
-# k.attributes/shards/attributes: 23 attributes of things (colour, material, size, place, kind, parts, legs, wheels, can, cannot, lives, eats, covering, sound, used_for, length, height, distance, temperature, weight, speed, sides, price), in which world, type and key the values of each are found, and which attributes 26 kinds of things usually have.
+# k.attributes/shards/attributes: 28 attributes of things (colour, material, size, place, kind, parts, legs, wheels, can, cannot, lives, eats, covering, sound, used_for, length, height, distance, temperature, weight, speed, sides, price, season, time, weather, age, user), in which world, type and key the values of each are found, and which attributes 26 kinds of things usually have.
 # sources: hand-core 1 (hand-written in this repository: tools/attributes-core.mjs)
 # license: CC0-1.0
 # script: tools/attributes-core.mjs
@@ -26,6 +26,11 @@
 @k.attributes.attribute.speed k.attributes.attribute name=speed holds=number aspect=numeric about="how fast a thing moves" core.source="hand-core 1"
 @k.attributes.attribute.sides k.attributes.attribute name=sides holds=number aspect=numeric about="how many flat sides it has" core.source="hand-core 1"
 @k.attributes.attribute.price k.attributes.attribute name=price holds=class aspect=numeric about="how much it usually costs to buy: a step of the k.values scale price" core.source="hand-core 1"
+@k.attributes.attribute.season k.attributes.attribute name=season holds=time aspect=temporal about="the season in which a thing is usually used or seen" core.source="hand-core 1"
+@k.attributes.attribute.time k.attributes.attribute name=time holds=time aspect=temporal about="the time of day at which a thing is usually used or seen" core.source="hand-core 1"
+@k.attributes.attribute.weather k.attributes.attribute name=weather holds=time aspect=temporal about="the weather in which a thing is usually used or seen" core.source="hand-core 1"
+@k.attributes.attribute.age k.attributes.attribute name=age holds=person aspect=social about="the age of the people who usually use it" core.source="hand-core 1"
+@k.attributes.attribute.user k.attributes.attribute name=user holds=person aspect=social about="the role of the people who usually use it" core.source="hand-core 1"
 
 # Where the values are found.
 @k.attributes.found.colour.k_attributes_thing.colour k.attributes.found attribute=colour world=k.attributes type=k.attributes.thing key=colour covers="common things" core.source="hand-core 1"
@@ -79,6 +84,15 @@
 @k.attributes.found.sides.k_attributes_number.sides k.attributes.found attribute=sides world=k.attributes type=k.attributes.number key=sides covers="common things whose flat sides are counted" core.source="hand-core 1"
 @k.attributes.found.sides.k_shapes_shape.sides k.attributes.found attribute=sides world=k.shapes type=k.shapes.shape key=sides covers="shapes" core.source="hand-core 1"
 @k.attributes.found.price.k_attributes_number.price_class k.attributes.found attribute=price world=k.attributes type=k.attributes.number key=price_class covers="common things that are bought" core.source="hand-core 1"
+@k.attributes.found.season.k_attributes_usage.season k.attributes.found attribute=season world=k.attributes type=k.attributes.usage key=season covers="things of k.scenes" core.source="hand-core 1"
+@k.attributes.found.season.k_scenes_scene.season k.attributes.found attribute=season world=k.scenes type=k.scenes.scene key=season covers="scenes" core.source="hand-core 1"
+@k.attributes.found.time.k_attributes_usage.time k.attributes.found attribute=time world=k.attributes type=k.attributes.usage key=time covers="things of k.scenes" core.source="hand-core 1"
+@k.attributes.found.time.k_scenes_scene.time k.attributes.found attribute=time world=k.scenes type=k.scenes.scene key=time covers="scenes" core.source="hand-core 1"
+@k.attributes.found.weather.k_attributes_usage.weather k.attributes.found attribute=weather world=k.attributes type=k.attributes.usage key=weather covers="things of k.scenes" core.source="hand-core 1"
+@k.attributes.found.weather.k_scenes_scene.weather k.attributes.found attribute=weather world=k.scenes type=k.scenes.scene key=weather covers="scenes" core.source="hand-core 1"
+@k.attributes.found.age.k_attributes_usage.age k.attributes.found attribute=age world=k.attributes type=k.attributes.usage key=age covers="things of k.scenes" core.source="hand-core 1"
+@k.attributes.found.age.k_people_kind.age k.attributes.found attribute=age world=k.people type=k.people.kind key=age covers="kinds of person" core.source="hand-core 1"
+@k.attributes.found.user.k_attributes_usage.used_by k.attributes.found attribute=user world=k.attributes type=k.attributes.usage key=used_by covers="things of k.scenes whose role does not list them" core.source="hand-core 1"
 @k.attributes.found.used_for.k_attributes_thing.used_for k.attributes.found attribute=used_for world=k.attributes type=k.attributes.thing key=used_for covers="common things" core.source="hand-core 1"
 @k.attributes.found.used_for.k_commonsense_thing.used_for k.attributes.found attribute=used_for world=k.commonsense type=k.commonsense.thing key=used_for covers="a few common things" core.source="hand-core 1"
 

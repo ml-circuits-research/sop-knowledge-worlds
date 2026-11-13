@@ -8,7 +8,7 @@ through a synonym or a stand-in has the value.
 
 | family | things | visual | spatial | relational | numeric | textual | geographic | temporal | social |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| common thing | 1500 | 1045 (70%) | 1043 (70%) | 1500 (100%) | 1042 (69%) | 1500 (100%) | – | – | – |
+| common thing | 1500 | 1045 (70%) | 1043 (70%) | 1500 (100%) | 1042 (69%) | 1500 (100%) | – | 89 (6%) | 148 (10%) |
 | animal | 314 | 293 (93%) | 314 (100%) | 314 (100%) | 299 (95%) | 236 (75%) | – | – | – |
 | food | 229 | 207 (90%) | 151 (66%) | 229 (100%) | 87 (38%) | 158 (69%) | – | – | – |
 | country | 253 | – | – | 253 (100%) | 251 (99%) | 238 (94%) | 253 (100%) | – | – |
@@ -24,10 +24,11 @@ through a synonym or a stand-in has the value.
 | season | 4 | – | – | 4 (100%) | – | – | – | 4 (100%) | – |
 | duration | 14 | – | – | 13 (93%) | 13 (93%) | – | – | – | – |
 | body in space | 28 | 16 (57%) | 15 (54%) | 28 (100%) | 9 (32%) | – | – | 10 (36%) | – |
+| scene thing | 2218 | 2045 (92%) | 2218 (100%) | 761 (34%) | 587 (26%) | – | – | 257 (12%) | 256 (12%) |
 
 ## Where the values are
 
-- **common thing**: visual: `k.objects.object` (name), `k.objects.stand_in` (drawing), `k.attributes.thing` (colour, material), `k.objects.part` (colour), `k.attributes.drawn` (drawn_colour, drawn_shade); spatial: `k.scenes.thing` (place, size, on), `k.layouts.anchor` (kind); relational: `k.words.sense` (is_a, part_of, synonym), `k.attributes.thing` (kind, can, used_for), `k.layouts.joins` (rel), `k.objects.part` (name), `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has); numeric: `k.attributes.thing` (wheels), `k.attributes.number` (size_about, weight_about, weight_class, speed_about, speed_class, legs, sides, price_class); textual: `k.words.sense` (gloss).
+- **common thing**: visual: `k.objects.object` (name), `k.objects.stand_in` (drawing), `k.attributes.thing` (colour, material), `k.objects.part` (colour), `k.attributes.drawn` (drawn_colour, drawn_shade); spatial: `k.scenes.thing` (place, size, on), `k.layouts.anchor` (kind); relational: `k.words.sense` (is_a, part_of, synonym), `k.attributes.thing` (kind, can, used_for), `k.layouts.joins` (rel), `k.objects.part` (name), `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has); numeric: `k.attributes.thing` (wheels), `k.attributes.number` (size_about, weight_about, weight_class, speed_about, speed_class, legs, sides, price_class); textual: `k.words.sense` (gloss); temporal: `k.attributes.usage` (season, time, weather); social: `k.attributes.usage` (age, used_by), `k.people.role` (name).
 - **animal**: visual: `k.animals.animal` (drawing, covering), `k.attributes.thing` (colour); spatial: `k.animals.animal` (habitat), `k.scenes.thing` (place, size); relational: `k.animals.animal` (class, diet, eats, baby, can, cannot); numeric: `k.animals.animal` (legs), `k.attributes.number` (size_about, weight_about, speed_about); textual: `k.animals.animal` (sound), `k.words.sense` (gloss).
 - **food**: visual: `k.food.food` (colour, drawing); spatial: `k.scenes.thing` (place, size); relational: `k.food.food` (kind, botanically, grows_on, comes_from, eaten); numeric: `k.attributes.number` (size_about, weight_about, price_class); textual: `k.words.sense` (gloss).
 - **country**: relational: `k.geo.country` (capital, continent, region, neighbour); numeric: `k.geo.country` (population, area); textual: `k.geo.country` (formal, code); geographic: `k.geo.country` (lat, lon, west, south, east, north).
@@ -43,3 +44,4 @@ through a synonym or a stand-in has the value.
 - **season**: relational: `k.time.month` (name); temporal: `k.time.season` (n, after).
 - **duration**: relational: `k.time.duration` (unit); numeric: `k.time.duration` (count).
 - **body in space**: visual: `k.space.body` (colour, drawing, rings); spatial: `k.space.body` (order, in); relational: `k.space.body` (kind, orbits, group); numeric: `k.space.body` (size_rank, moons, moons_about); temporal: `k.space.body` (orbit_years).
+- **scene thing**: visual: `k.attributes.drawn` (drawn_colour), `k.attributes.thing` (colour); spatial: `k.scenes.thing` (place, size, on); relational: `k.attributes.thing` (kind, can, used_for), `k.parts.usual` (has); numeric: `k.attributes.number` (size_about, weight_about, speed_about, price_class); temporal: `k.attributes.usage` (season, time, weather); social: `k.attributes.usage` (age, used_by), `k.people.role` (name).

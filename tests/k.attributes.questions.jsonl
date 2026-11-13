@@ -21,3 +21,6 @@
 {"id":"at-21","ask":"how heavy is a horse","query":{"type":"k.attributes.number","where":{"name":"horse"},"seek":"weight_about"},"expect":{"status":"supported","value":"500"}}
 {"id":"at-22","ask":"is a snail fast or slow","query":{"type":"k.attributes.number","where":{"name":"snail"},"seek":"speed_class"},"expect":{"status":"supported","value":"slow"}}
 {"id":"at-23","ask":"is a violin expensive","query":{"type":"k.attributes.number","where":{"name":"violin"},"seek":"price_class"},"expect":{"status":"supported","value":"expensive"}}
+{"id":"at-24","ask":"in which season is a sled used","query":{"type":"k.attributes.usage","where":{"name":"sled"},"seek":"season","mode":"list"},"expect":{"status":"supported","values":["winter"]}}
+{"id":"at-25","ask":"who uses a stethoscope","query":{"type":"k.attributes.usage","where":{"name":"stethoscope"},"seek":"used_by","mode":"list"},"expect":{"status":"supported","values":["doctor","nurse","vet"]}}
+{"id":"at-26","ask":"in what weather is an umbrella used","query":{"type":"k.attributes.usage","where":{"name":"umbrella"},"seek":"weather","mode":"list"},"expect":{"status":"supported","values":["rainy"]}}

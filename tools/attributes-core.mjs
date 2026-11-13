@@ -40,6 +40,12 @@ export const ATTRIBUTES = [
   ['speed', 'number', 'how fast a thing moves', 'numeric'],
   ['sides', 'number', 'how many flat sides it has', 'numeric'],
   ['price', 'class', 'how much it usually costs to buy: a step of the k.values scale price', 'numeric'],
+  // Round 10 item 6: when and by whom a thing is used or seen.
+  ['season', 'time', 'the season in which a thing is usually used or seen', 'temporal'],
+  ['time', 'time', 'the time of day at which a thing is usually used or seen', 'temporal'],
+  ['weather', 'time', 'the weather in which a thing is usually used or seen', 'temporal'],
+  ['age', 'person', 'the age of the people who usually use it', 'social'],
+  ['user', 'person', 'the role of the people who usually use it', 'social'],
 ];
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
@@ -68,6 +74,11 @@ export const FOUND = [
   ['speed', 'k.attributes', 'k.attributes.number', 'speed_about', 'common things that move by themselves or carry people, animals among them, in kilometres per hour'],
   ['speed', 'k.attributes', 'k.attributes.number', 'speed_class', 'common things that move: slow, medium or fast, steps of the k.values scale speed'], ['sides', 'k.attributes', 'k.attributes.number', 'sides', 'common things whose flat sides are counted'],
   ['sides', 'k.shapes', 'k.shapes.shape', 'sides', 'shapes'], ['price', 'k.attributes', 'k.attributes.number', 'price_class', 'common things that are bought'],
+  ['season', 'k.attributes', 'k.attributes.usage', 'season', 'things of k.scenes'], ['season', 'k.scenes', 'k.scenes.scene', 'season', 'scenes'],
+  ['time', 'k.attributes', 'k.attributes.usage', 'time', 'things of k.scenes'], ['time', 'k.scenes', 'k.scenes.scene', 'time', 'scenes'],
+  ['weather', 'k.attributes', 'k.attributes.usage', 'weather', 'things of k.scenes'], ['weather', 'k.scenes', 'k.scenes.scene', 'weather', 'scenes'],
+  ['age', 'k.attributes', 'k.attributes.usage', 'age', 'things of k.scenes'], ['age', 'k.people', 'k.people.kind', 'age', 'kinds of person'],
+  ['user', 'k.attributes', 'k.attributes.usage', 'used_by', 'things of k.scenes whose role does not list them'],
   ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'], ['used_for', 'k.commonsense', 'k.commonsense.thing', 'used_for', 'a few common things'],
 ];
 // The attributes a kind of thing usually has: [kind, attributes].
@@ -92,8 +103,8 @@ export const ASPECTS = [
   ['numeric', 'what can be counted or measured about a thing', 'chart'],
   ['textual', 'what is said about a thing in words: a definition, a formal name, a sound', 'document, card'],
   ['geographic', 'where on the Earth a thing is', 'map'],
-  ['temporal', 'when a thing is, how long it lasts, what comes before and after', ''],
-  ['social', 'what a person is among people: age, sex, family, job', ''],
+  ['temporal', 'when a thing is, or is usually used or seen (season, time of day, weather), how long it lasts, what comes before and after', ''],
+  ['social', 'what a person is among people (age, sex, family, job), and who a thing is for or used by', ''],
 ];
 // A family of things: [name, about, world, type, the key of that type that names the thing]. The family
 // "common thing" has no type of its own: its things are the frequent English nouns that name a physical thing.
@@ -106,6 +117,7 @@ export const FAMILIES = [
   ['month', 'a month of the year', 'k.time', 'k.time.month', 'name'], ['weekday', 'a day of the week', 'k.time', 'k.time.weekday', 'name'], ['season', 'a season', 'k.time', 'k.time.season', 'name'],
   ['duration', 'a length of time', 'k.time', 'k.time.duration', 'name'],
   ['body in space', 'a planet, moon, star or other body', 'k.space', 'k.space.body', 'name'],
+  ['scene thing', 'a thing that has a usual place and size for scenes (the things of k.scenes)', 'k.scenes', 'k.scenes.thing', 'name'],
 ];
 // Where a family shows an aspect: family | aspect | type | the key that names the thing | the keys that hold values.
 const SHOWS_TEXT = `
@@ -126,6 +138,9 @@ common thing | relational | k.parts.usual | name | has
 common thing | numeric | k.attributes.thing | name | wheels
 common thing | numeric | k.attributes.number | name | size_about, weight_about, weight_class, speed_about, speed_class, legs, sides, price_class
 common thing | textual | k.words.sense | word | gloss
+common thing | temporal | k.attributes.usage | name | season, time, weather
+common thing | social | k.attributes.usage | name | age, used_by
+common thing | social | k.people.role | uses | name
 animal | visual | k.animals.animal | name | drawing, covering
 animal | visual | k.attributes.thing | name | colour
 animal | spatial | k.animals.animal | name | habitat
@@ -175,6 +190,15 @@ body in space | spatial | k.space.body | name | order, in
 body in space | relational | k.space.body | name | kind, orbits, group
 body in space | numeric | k.space.body | name | size_rank, moons, moons_about
 body in space | temporal | k.space.body | name | orbit_years
+scene thing | visual | k.attributes.drawn | name | drawn_colour
+scene thing | visual | k.attributes.thing | name | colour
+scene thing | spatial | k.scenes.thing | name | place, size, on
+scene thing | relational | k.attributes.thing | name | kind, can, used_for
+scene thing | relational | k.parts.usual | name | has
+scene thing | numeric | k.attributes.number | name | size_about, weight_about, speed_about, price_class
+scene thing | temporal | k.attributes.usage | name | season, time, weather
+scene thing | social | k.attributes.usage | name | age, used_by
+scene thing | social | k.people.role | uses | name
 `;
 export const SHOWS = SHOWS_TEXT.split('\n').filter((l) => l.trim()).map((l) => { const [family, aspect, type, by, keys] = l.split('|').map((x) => x.trim()); return { family, aspect, type, by, keys: list(keys), world: type.split('.').slice(0, 2).join('.') }; });
 

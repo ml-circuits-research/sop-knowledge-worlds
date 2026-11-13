@@ -26,6 +26,12 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   catalog: a scale may be found under several keys, and a comparison must pick a key both things share.
 - **A cheap mechanical check finds what reading does not** (R10.5): weight over the cube of the size flagged three
   wrong weights that a reading of 100 random rows had passed.
+- **Join by value, not only by name** (R10.6). The usage facts take the very values of `k.scenes.scene` (season,
+  time, weather) and of `k.people.kind.age`, so "which things fit this scene" is an equality of values across two
+  worlds with no mapping table. SOP Lang cannot say that two slots share one enum; a test compares them.
+- **A reverse relation must have one home** (R10.6). `k.people.role.uses` (role -> thing) and a new `used_by`
+  (thing -> role) would say the same fact twice; the tool drops from `used_by` every pair the role already lists,
+  and the aspect table reads `uses` backwards. Which direction is the home is a choice to write down.
 
 ## Round 11 (first worker)
 

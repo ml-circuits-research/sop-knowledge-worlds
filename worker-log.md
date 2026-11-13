@@ -2711,3 +2711,32 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.attributes.test.mjs` (1 more), questions at-21 to at-23, at-08 and at-09 changed with the facts.
 - Numbers (after the rebase on R11.2): k.attributes 44 shards, 7,515 wires; `k.units` measures 144; `k.values` scales 186 wires. Catalog 22
   worlds, 906 shards, 3 schemas, vocab 23,351 words; 0 errors, 0 warnings. npm test 2,700: 2,694 pass, 6 skipped, 0 fail.
+
+## Round 10, item 6 (2026-11-14, second worker): temporal and social aspects of the things of `k.scenes`
+
+- **New type `k.attributes.usage`** (shard `usage`, 338 wires), written by the new `tools/usage-core.mjs` from the
+  new table `sources/hand-core/usage.tsv` (368 rows, model-labelled, only where plain): `season` 100, `time` of day
+  177, `weather` 58, `age` 107, `used_by` 121 rows (69 facts after the rule below).
+- **Joins, by value, not by new words:** `season`, `time` and `weather` take exactly the values of
+  `k.scenes.scene` (a test compares the enums), so a host fills a winter night scene with things whose usage says
+  winter and night; `age` takes the ages of `k.people.kind`; `used_by` names a `k.people.role`. **One fact, one
+  place:** where a role already lists the thing in its own `uses` (the farmer and the tractor), the tool drops
+  that role from `used_by` (52 dropped; 30 rows then had nothing left and give no fact); who uses a thing is read
+  from both, and `k.attributes.shows` has a social row for `k.people.role` by `uses`.
+- **Attributes and aspects:** five new attributes (season, time, weather, age, user; `holds` gets `time` and
+  `person`) with `found` facts in `k.attributes.usage`, `k.scenes.scene` and `k.people.kind`; the aspects temporal
+  and social are reworded to cover things (when a thing is used or seen; who it is for). A new family **scene
+  thing** (the 2,218 things of `k.scenes`) has its row in ASPECTS.md: visual 92%, spatial 100%, relational 34%,
+  numeric 26%, temporal **257 (12%)**, social **256 (12%)**. Common things: temporal – -> 89 (6%), social – -> 148 (10%).
+- **Audit** (`sources/hand-core/usage-audit.tsv`): a seeded sample of 60 rows read: 55 right, 5 unclear (bath in
+  the evening, a baguette and a briefcase in the morning: those two times removed; a shower cap in the morning;
+  a bonfire in autumn, which holds where bonfire night is kept). **Not read again:** the other 308 rows.
+- **What was left out:** most things of `k.scenes` have no plain season, time or user and get no fact (a chair, a
+  bowl): 12% is the honest share, not a gap to fill by guessing. Animals active at night got `time=night` only
+  where I am sure (owl, bat, hedgehog, moth, fox, raccoon, firefly); a full "active at" for animals belongs in
+  `k.animals` and was not done.
+- **Judgement that is mine:** every row; that weather is a temporal aspect.
+- **What SOP Lang could not say:** that the enum of a slot is the enum of a slot of another world (a test compares them).
+- Tests: `tests/k.attributes.test.mjs` (1 more), questions at-24 to at-26.
+- Numbers: k.attributes 45 shards; catalog 22 worlds, 907 shards, 3 schemas, vocab 23,358 words; 0 errors, 0 warnings.
+  npm test 2,704: 2,698 pass, 6 skipped, 0 fail.

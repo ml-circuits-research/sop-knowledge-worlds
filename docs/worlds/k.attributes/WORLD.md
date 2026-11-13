@@ -56,6 +56,15 @@ are found in the worlds, and the usual values of common things that no other wor
   (street, island, valley), bodies in space (`k.space` has them); the weight of buildings.
 - Table `sources/hand-core/numbers.tsv`; audit `sources/hand-core/numbers-audit.tsv`.
 
+## When and by whom
+
+- `k.attributes.usage` (identity `name`, Round 10 item 6): for 338 things of `k.scenes`, model-labelled, only where
+  plain: `season` (100), `time` of day (177), `weather` (58), with the values of `k.scenes.scene` (a sled fits a
+  winter scene with snow; an owl a night scene); `age` (107: baby, child, adult, old, the ages of `k.people.kind`);
+  `used_by` (69 facts; a `k.people.role`, only where the role does not already list the thing in its `uses`).
+  Written by `tools/usage-core.mjs` from `sources/hand-core/usage.tsv`; audit `usage-audit.tsv`.
+- The family `scene thing` (the 2,218 things of `k.scenes`) has its row in ASPECTS.md: temporal 257, social 256.
+
 ## One name, one thing
 
 - `k.attributes.same` (identity `name`, `sense`): for the 3,330 names that facts of more than one world carry,
@@ -75,7 +84,7 @@ places, food and drink), `things-big` (vehicles, machines, buildings), `things-w
 `things-objects` (the rest). Written by `tools/attributes-core.mjs` from `sources/hand-core/attributes.tsv`.
 `drawn-hand`, `drawn-mulberry`, `drawn-noto`, `drawn-openmoji` (one per source of drawings, with the licence of
 that source), written by `tools/drawn-colour.mjs`. `numbers-a-f`, `numbers-g-o`, `numbers-p-z` (the numbers of
-common things), written by `tools/numbers-core.mjs`.
+common things), written by `tools/numbers-core.mjs`. `usage` (when and by whom), written by `tools/usage-core.mjs`.
 
 ## Audit
 

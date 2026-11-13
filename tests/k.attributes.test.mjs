@@ -144,3 +144,32 @@ test('k.attributes.number: the shards are what tools/numbers-core.mjs gives; cla
   assert.equal(one(by('chair'), 'legs'), '4');
   assert.equal(one(by('dice'), 'sides'), '6');
 });
+
+// Round 10 item 6: when and by whom the things of k.scenes are used or seen.
+import { usageShards, readUsage, roleUses } from '../tools/usage-core.mjs';
+
+test('k.attributes.usage: the shard is what tools/usage-core.mjs gives; every thing is a thing of k.scenes; values are those of k.scenes.scene, k.people.kind and k.people.role; no role is repeated', () => {
+  for (const [name, text] of Object.entries(usageShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.attributes', 'shards', name), 'utf8'), text, name);
+  const usage = world.ofType('k.attributes.usage');
+  assert.ok(usage.length >= 300 && usage.length <= readUsage().length);
+  const scenes = fullWorld('k.scenes', worlds);
+  const sceneThings = new Set(scenes.ofType('k.scenes.thing').map((t) => one(t, 'name')));
+  const enumOf = (w, type, key) => [...(schemaWorld(worlds, w).world.schema(type).keys[key].enum ?? [])].map(String).sort();
+  const own = schemaWorld(worlds, 'k.attributes').world;
+  for (const k of ['season', 'time', 'weather']) assert.deepEqual([...own.schema('k.attributes.usage').keys[k].enum].map(String).sort(), enumOf('k.scenes', 'k.scenes.scene', k), k);
+  assert.deepEqual([...own.schema('k.attributes.usage').keys.age.enum].map(String).sort(), enumOf('k.people', 'k.people.kind', 'age'));
+  const uses = roleUses(worlds);
+  for (const u of usage) {
+    assert.equal(one(u, 'named'), 'model', u.id);
+    assert.ok(sceneThings.has(one(u, 'name')), `${u.id}: not a thing of k.scenes`);
+    for (const r of (u.attrs.used_by ?? []).map(tok)) {
+      assert.ok(uses.has(r), `${u.id}: ${r} is no role of k.people`);
+      assert.ok(!uses.get(r).has(one(u, 'name')), `${u.id}: ${r} already lists it`);
+    }
+  }
+  const by = (name) => usage.find((u) => one(u, 'name') === name);
+  assert.deepEqual(by('sled').attrs.season, ['winter']);
+  assert.ok(by('owl').attrs.time.includes('night'));
+  assert.ok(by('stethoscope').attrs.used_by.includes('doctor'));
+  assert.equal(by('tractor').attrs.used_by, undefined, 'the farmer lists the tractor in k.people');
+});

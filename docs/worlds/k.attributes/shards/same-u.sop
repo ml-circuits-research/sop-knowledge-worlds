@@ -4,9 +4,9 @@
 # script: tools/joins.mjs
 
 @k.attributes.same.ukraine.place k.attributes.same name=ukraine sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.umbrella.thing k.attributes.same name=umbrella sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.umbrella_on_ground.thing k.attributes.same name="umbrella on ground" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.umbrella_with_rain_drops.thing k.attributes.same name="umbrella with rain drops" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.umbrella.thing k.attributes.same name=umbrella sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.umbrella_on_ground.thing k.attributes.same name="umbrella on ground" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.umbrella_with_rain_drops.thing k.attributes.same name="umbrella with rain drops" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.uncle.person k.attributes.same name=uncle sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.underground_train.thing k.attributes.same name="underground train" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.underpants.clothing k.attributes.same name=underpants sense=clothing only=true in=k.attributes.number in=k.wearables.wearable by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

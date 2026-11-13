@@ -6,12 +6,12 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
 @k.attributes.attribute.name core.slot of=k.attributes.attribute key=name id=true required=true kind=atom core.source="hand-core 1"
-@k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use enum=class core.source="hand-core 1"
+@k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use enum=class enum=time enum=person core.source="hand-core 1"
 @k.attributes.attribute.aspect core.slot of=k.attributes.attribute key=aspect required=true kind=atom core.source="hand-core 1"
 @k.attributes.attribute.about core.slot of=k.attributes.attribute key=about required=true kind=string core.source="hand-core 1"
 
@@ -78,6 +78,20 @@
 @k.attributes.number.price_class core.slot of=k.attributes.number key=price_class enum=cheap enum=medium enum=expensive core.source="hand-core 1"
 @k.attributes.number.named core.slot of=k.attributes.number key=named enum=model core.source="hand-core 1"
 
+# When and by whom a thing of k.scenes is usually used or seen (tools/usage-core.mjs), each only where it is plain:
+# `season`, `time` and `weather` (many) take the values of k.scenes.scene, so a thing fits a scene with the same
+# value (a sled in winter and snow, an owl at night); `age` (many) the ages of k.people.kind (a rattle for a baby,
+# beer for an adult); `used_by` (many) names a k.people.role that uses it, where the role does not already list it in
+# its own `uses` (who uses a thing: both). `named=model`: the values were given by a language model.
+@k.attributes.usage core.type of=k.attributes.usage shared=true closed=true core.source="hand-core 1"
+@k.attributes.usage.name core.slot of=k.attributes.usage key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.usage.season core.slot of=k.attributes.usage key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
+@k.attributes.usage.time core.slot of=k.attributes.usage key=time many=true enum=morning enum=day enum=evening enum=night core.source="hand-core 1"
+@k.attributes.usage.weather core.slot of=k.attributes.usage key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
+@k.attributes.usage.age core.slot of=k.attributes.usage key=age many=true enum=baby enum=child enum=adult enum=old core.source="hand-core 1"
+@k.attributes.usage.used_by core.slot of=k.attributes.usage key=used_by many=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.usage.named core.slot of=k.attributes.usage key=named enum=model core.source="hand-core 1"
+
 # One name, one thing across worlds (computed by tools/joins.mjs): for a name that facts of more than one world
 # carry, its `sense` and the types (`in`, many) whose facts with that name are about that one thing. `only=true`:
 # the name has one sense in the whole catalog; `only=false`: it has several, each sense with its own fact, and a
@@ -131,6 +145,7 @@
 @k.attributes.word.weight_about core.word text=weight text=weigh text=weighs text=heavy text=kilograms text=kilos means=k.attributes.number.weight_about core.source="hand-core 1"
 @k.attributes.word.speed_about core.word text=speed text=fast text=quick text="kilometres per hour" means=k.attributes.number.speed_about core.source="hand-core 1"
 @k.attributes.word.price_class core.word text=price text=cost text=costs text=expensive text=cheap means=k.attributes.number.price_class core.source="hand-core 1"
+@k.attributes.word.usage core.word text=when text="who uses" text="used by" text=season text="time of day" means=k.attributes.usage core.source="hand-core 1"
 @k.attributes.word.used_for core.word text=use text=used text="used for" text=for means=k.attributes.thing.used_for core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -153,6 +168,12 @@
 @k.attributes.word.key.number.sides core.word text=sides means=k.attributes.number.sides core.source="hand-core 1"
 @k.attributes.word.key.number.price_class core.word text="price class" means=k.attributes.number.price_class core.source="hand-core 1"
 @k.attributes.word.key.number.named core.word text=named means=k.attributes.number.named core.source="hand-core 1"
+@k.attributes.word.key.usage.season core.word text=season means=k.attributes.usage.season core.source="hand-core 1"
+@k.attributes.word.key.usage.time core.word text=time means=k.attributes.usage.time core.source="hand-core 1"
+@k.attributes.word.key.usage.weather core.word text=weather means=k.attributes.usage.weather core.source="hand-core 1"
+@k.attributes.word.key.usage.age core.word text=age means=k.attributes.usage.age core.source="hand-core 1"
+@k.attributes.word.key.usage.used_by core.word text="used by" means=k.attributes.usage.used_by core.source="hand-core 1"
+@k.attributes.word.key.usage.named core.word text=named means=k.attributes.usage.named core.source="hand-core 1"
 @k.attributes.word.key.same.sense core.word text=sense means=k.attributes.same.sense core.source="hand-core 1"
 @k.attributes.word.key.same.only core.word text=only means=k.attributes.same.only core.source="hand-core 1"
 @k.attributes.word.key.same.in core.word text=in means=k.attributes.same.in core.source="hand-core 1"

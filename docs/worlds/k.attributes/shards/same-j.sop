@@ -3,8 +3,8 @@
 # license: CC0-1.0
 # script: tools/joins.mjs
 
-@k.attributes.same.jack_in_box.thing k.attributes.same name="jack in box" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.jack-o-lantern.thing k.attributes.same name=jack-o-lantern sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.jack_in_box.thing k.attributes.same name="jack in box" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.jack-o-lantern.thing k.attributes.same name=jack-o-lantern sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jackal.animal k.attributes.same name=jackal sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jacket.clothing k.attributes.same name=jacket sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jacket_-_mans.clothing k.attributes.same name="jacket - mans" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -36,7 +36,7 @@
 @k.attributes.same.jet_plane.thing k.attributes.same name="jet plane" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jewel.clothing k.attributes.same name=jewel sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jigsaw.thing k.attributes.same name=jigsaw sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.jigsaw_puzzle.thing k.attributes.same name="jigsaw puzzle" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.jigsaw_puzzle.thing k.attributes.same name="jigsaw puzzle" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jigsaw_puzzle_piece.thing k.attributes.same name="jigsaw puzzle piece" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jordan.place k.attributes.same name=jordan sense=place only=true in=k.geo.country in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.joystick.thing k.attributes.same name=joystick sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -50,6 +50,6 @@
 @k.attributes.same.jumpsuit.thing k.attributes.same name=jumpsuit sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.june.time k.attributes.same name=june sense=time only=true in=k.time.month by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jungle.thing k.attributes.same name=jungle sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.jungle_gym.thing k.attributes.same name="jungle gym" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.jungle_gym.thing k.attributes.same name="jungle gym" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.juniper.thing k.attributes.same name=juniper sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jupiter.body_in_space k.attributes.same name=jupiter sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.space.body by_word=k.words.sense core.source="hand-core 1"

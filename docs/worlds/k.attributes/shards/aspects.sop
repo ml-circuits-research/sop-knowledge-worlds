@@ -1,4 +1,4 @@
-# k.attributes/shards/aspects: the 8 aspects of things (visual, spatial, relational, numeric, textual, geographic, temporal, social), 16 families of things, and for each family and aspect the world, type and key where the values are found.
+# k.attributes/shards/aspects: the 8 aspects of things (visual, spatial, relational, numeric, textual, geographic, temporal, social), 17 families of things, and for each family and aspect the world, type and key where the values are found.
 # sources: hand-core 1 (hand-written in this repository: tools/attributes-core.mjs)
 # license: CC0-1.0
 # script: tools/attributes-core.mjs
@@ -9,8 +9,8 @@
 @k.attributes.aspect.numeric k.attributes.aspect name=numeric about="what can be counted or measured about a thing" shown_in=chart core.source="hand-core 1"
 @k.attributes.aspect.textual k.attributes.aspect name=textual about="what is said about a thing in words: a definition, a formal name, a sound" shown_in=document shown_in=card core.source="hand-core 1"
 @k.attributes.aspect.geographic k.attributes.aspect name=geographic about="where on the Earth a thing is" shown_in=map core.source="hand-core 1"
-@k.attributes.aspect.temporal k.attributes.aspect name=temporal about="when a thing is, how long it lasts, what comes before and after" core.source="hand-core 1"
-@k.attributes.aspect.social k.attributes.aspect name=social about="what a person is among people: age, sex, family, job" core.source="hand-core 1"
+@k.attributes.aspect.temporal k.attributes.aspect name=temporal about="when a thing is, or is usually used or seen (season, time of day, weather), how long it lasts, what comes before and after" core.source="hand-core 1"
+@k.attributes.aspect.social k.attributes.aspect name=social about="what a person is among people (age, sex, family, job), and who a thing is for or used by" core.source="hand-core 1"
 
 # Families of things.
 @k.attributes.family.common_thing k.attributes.family name="common thing" about="a frequent English noun that names a physical thing (the list of 1,500 of tools/coverage.mjs)" core.source="hand-core 1"
@@ -29,6 +29,7 @@
 @k.attributes.family.season k.attributes.family name=season about="a season" world=k.time type=k.time.season by=name core.source="hand-core 1"
 @k.attributes.family.duration k.attributes.family name=duration about="a length of time" world=k.time type=k.time.duration by=name core.source="hand-core 1"
 @k.attributes.family.body_in_space k.attributes.family name="body in space" about="a planet, moon, star or other body" world=k.space type=k.space.body by=name core.source="hand-core 1"
+@k.attributes.family.scene_thing k.attributes.family name="scene thing" about="a thing that has a usual place and size for scenes (the things of k.scenes)" world=k.scenes type=k.scenes.thing by=name core.source="hand-core 1"
 
 # Where a family shows an aspect.
 @k.attributes.shows.common_thing.visual.k_objects_object.name k.attributes.shows family="common thing" aspect=visual world=k.objects type=k.objects.object key=name by=name core.source="hand-core 1"
@@ -63,6 +64,12 @@
 @k.attributes.shows.common_thing.numeric.k_attributes_number.sides k.attributes.shows family="common thing" aspect=numeric world=k.attributes type=k.attributes.number key=sides by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.numeric.k_attributes_number.price_class k.attributes.shows family="common thing" aspect=numeric world=k.attributes type=k.attributes.number key=price_class by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.textual.k_words_sense.gloss k.attributes.shows family="common thing" aspect=textual world=k.words type=k.words.sense key=gloss by=word core.source="hand-core 1"
+@k.attributes.shows.common_thing.temporal.k_attributes_usage.season k.attributes.shows family="common thing" aspect=temporal world=k.attributes type=k.attributes.usage key=season by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.temporal.k_attributes_usage.time k.attributes.shows family="common thing" aspect=temporal world=k.attributes type=k.attributes.usage key=time by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.temporal.k_attributes_usage.weather k.attributes.shows family="common thing" aspect=temporal world=k.attributes type=k.attributes.usage key=weather by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.social.k_attributes_usage.age k.attributes.shows family="common thing" aspect=social world=k.attributes type=k.attributes.usage key=age by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.social.k_attributes_usage.used_by k.attributes.shows family="common thing" aspect=social world=k.attributes type=k.attributes.usage key=used_by by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.social.k_people_role.name k.attributes.shows family="common thing" aspect=social world=k.people type=k.people.role key=name by=uses core.source="hand-core 1"
 @k.attributes.shows.animal.visual.k_animals_animal.drawing k.attributes.shows family=animal aspect=visual world=k.animals type=k.animals.animal key=drawing by=name core.source="hand-core 1"
 @k.attributes.shows.animal.visual.k_animals_animal.covering k.attributes.shows family=animal aspect=visual world=k.animals type=k.animals.animal key=covering by=name core.source="hand-core 1"
 @k.attributes.shows.animal.visual.k_attributes_thing.colour k.attributes.shows family=animal aspect=visual world=k.attributes type=k.attributes.thing key=colour by=name core.source="hand-core 1"
@@ -179,3 +186,22 @@
 @k.attributes.shows.body_in_space.numeric.k_space_body.moons k.attributes.shows family="body in space" aspect=numeric world=k.space type=k.space.body key=moons by=name core.source="hand-core 1"
 @k.attributes.shows.body_in_space.numeric.k_space_body.moons_about k.attributes.shows family="body in space" aspect=numeric world=k.space type=k.space.body key=moons_about by=name core.source="hand-core 1"
 @k.attributes.shows.body_in_space.temporal.k_space_body.orbit_years k.attributes.shows family="body in space" aspect=temporal world=k.space type=k.space.body key=orbit_years by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.visual.k_attributes_drawn.drawn_colour k.attributes.shows family="scene thing" aspect=visual world=k.attributes type=k.attributes.drawn key=drawn_colour by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.visual.k_attributes_thing.colour k.attributes.shows family="scene thing" aspect=visual world=k.attributes type=k.attributes.thing key=colour by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.spatial.k_scenes_thing.place k.attributes.shows family="scene thing" aspect=spatial world=k.scenes type=k.scenes.thing key=place by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.spatial.k_scenes_thing.size k.attributes.shows family="scene thing" aspect=spatial world=k.scenes type=k.scenes.thing key=size by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.spatial.k_scenes_thing.on k.attributes.shows family="scene thing" aspect=spatial world=k.scenes type=k.scenes.thing key=on by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.relational.k_attributes_thing.kind k.attributes.shows family="scene thing" aspect=relational world=k.attributes type=k.attributes.thing key=kind by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.relational.k_attributes_thing.can k.attributes.shows family="scene thing" aspect=relational world=k.attributes type=k.attributes.thing key=can by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.relational.k_attributes_thing.used_for k.attributes.shows family="scene thing" aspect=relational world=k.attributes type=k.attributes.thing key=used_for by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.relational.k_parts_usual.has k.attributes.shows family="scene thing" aspect=relational world=k.parts type=k.parts.usual key=has by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.numeric.k_attributes_number.size_about k.attributes.shows family="scene thing" aspect=numeric world=k.attributes type=k.attributes.number key=size_about by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.numeric.k_attributes_number.weight_about k.attributes.shows family="scene thing" aspect=numeric world=k.attributes type=k.attributes.number key=weight_about by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.numeric.k_attributes_number.speed_about k.attributes.shows family="scene thing" aspect=numeric world=k.attributes type=k.attributes.number key=speed_about by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.numeric.k_attributes_number.price_class k.attributes.shows family="scene thing" aspect=numeric world=k.attributes type=k.attributes.number key=price_class by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.temporal.k_attributes_usage.season k.attributes.shows family="scene thing" aspect=temporal world=k.attributes type=k.attributes.usage key=season by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.temporal.k_attributes_usage.time k.attributes.shows family="scene thing" aspect=temporal world=k.attributes type=k.attributes.usage key=time by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.temporal.k_attributes_usage.weather k.attributes.shows family="scene thing" aspect=temporal world=k.attributes type=k.attributes.usage key=weather by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.social.k_attributes_usage.age k.attributes.shows family="scene thing" aspect=social world=k.attributes type=k.attributes.usage key=age by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.social.k_attributes_usage.used_by k.attributes.shows family="scene thing" aspect=social world=k.attributes type=k.attributes.usage key=used_by by=name core.source="hand-core 1"
+@k.attributes.shows.scene_thing.social.k_people_role.name k.attributes.shows family="scene thing" aspect=social world=k.people type=k.people.role key=name by=uses core.source="hand-core 1"
