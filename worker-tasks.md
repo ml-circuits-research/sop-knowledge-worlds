@@ -353,3 +353,7 @@ Rules as before: free licences only, English only, sources on every wire, look a
 6. **k.food**: what common dishes and foods are made of; kind (fruit, vegetable, grain, dairy, meat); usual colour (joins `k.colours`).
 7. **k.words**: opposites and kind-of chains answered by lookup for the 3,000 common words (check coverage, fill gaps from WordNet antonyms and hypernyms).
 8. After each item rerun the coverage report and say how many of a seeded sample of 100 natural questions of that domain now find a fact.
+
+## Reviewer 2026-11-13 21:30 — for both workers: aspects (owner's goal: transfer of knowledge between worlds)
+
+The demo will show one thing in several views (picture, diagram, chart, map, document, card) according to the aspects the thing has. Knowledge must say which kinds have which aspects. In `k.attributes` (second worker, after the current item): group the attributes into aspects (visual, spatial, relational, numeric, textual, geographic, temporal, social) as facts, and for the 1,500 common things plus the kinds of k.geo, k.animals, k.food, k.people, k.time, k.space say which aspects they have and where the values are found (which world, which key). One generated coverage table: kind family × aspect. First worker: when adding facts in Round 9, give numbers with units (joins `k.units`) so the numeric aspect is usable in charts.
