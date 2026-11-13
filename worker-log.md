@@ -1812,3 +1812,32 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   `k.values.colour` by name or word (all 33 are); 28 of the 36 shapes are named by `k.values.shape` (not: polygon,
   drop, cloud shape, wavy line, hemisphere, egg shape, prism, torus). The generated files were rebuilt, not merged.
 - Numbers: catalog 19 worlds, 811 shards, vocab 21,044 words; 0 errors, 0 warnings. npm test 2,529 pass, 0 fail.
+
+## Round 8, item 2 (2026-11-13, second worker): `k.attributes`
+
+- **New world `k.attributes`** (version 1, exports `attribute`, `found`, `kind`, `thing`), 6 shards, 828 wires,
+  119,537 bytes, written by `tools/attributes-core.mjs`.
+- **Attributes and where they are found:** 15 attributes; 26 `k.attributes.found` facts name the world, type and
+  key that hold the values (size and place: `k.scenes.thing`; legs, habitat, food, covering, sound: 
+  `k.animals.animal`; colour of foods: `k.food.food`). **Nothing is copied** from those worlds: an application
+  reads the value where it is. A test checks that each world, type and key exists. 26 kinds of things with the
+  attributes each usually has.
+- **Usual values:** `k.attributes.thing`, 761 things from `sources/hand-core/attributes.tsv`, all `named=model`:
+  kind 688, colour 256, material 423, wheels 47, can 242, used_for 459. The names are those of the 1,500 common
+  things first (about 480 rows), then animals for their colour (69), then nature, materials, vehicles and
+  household things. A key is given only where it is plain; I took the colour away again from about 90 rows of
+  the first draft (a gun, a tank, a barn, a postbox, a pencil, a raincoat, a rocket, a statue, drinks).
+- **Short of the task:** the reviewer asked for the usual colours of 2,000 things. There are 256 here and 254 in
+  `k.food`. Most common things have no usual colour, and for the rest I stopped where I was no longer sure. No
+  source was imported for this: ConceptNet is not reachable; WordNet glosses were not mined (a gloss rarely says a
+  colour in a form a rule can trust). Number of legs, habitat and food exist only for the 294 animals of
+  `k.animals`.
+- **Audit:** a seeded sample of 90 rows read again: 87 right, 0 wrong, 3 unclear, all three corrected (temple:
+  stone taken out; roller skate: kind taken out; one row with no value dropped, and with it 10 other rows that
+  said nothing). `sources/hand-core/attributes-audit.tsv`. **Not read again:** the other 671 rows after writing
+  them; the colours of the first 480 rows were read once more as a list.
+- **Judgement that is mine:** every value; the kinds; which attributes a kind has.
+- **What SOP Lang could not say:** that a `found` fact names a type and key that exist in another world: a test.
+- Tests: `tests/k.attributes.test.mjs` (4), 10 questions (`at-01` to `at-10`).
+- Numbers: k.attributes 6 shards, 828 wires, 119,537 bytes. Catalog 18 worlds, 815 shards, vocab 20,982 words (20,954); 0 errors, 0 warnings. npm test 2,510 pass, 5 skipped, 0 fail.
+- After the rebase on R7.3 (k.colours, k.shapes): catalog 20 worlds, 817 shards, vocab 21,070 words; npm test 2,539 pass, 5 skipped, 0 fail.

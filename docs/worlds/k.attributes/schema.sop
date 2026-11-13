@@ -1,0 +1,53 @@
+# k.attributes: the attributes of kinds of things. Which attributes a kind of thing usually has (an animal: legs,
+# covering, what it eats; a vehicle: wheels, what it is made of), in which world the values of an attribute are
+# found, and the usual values of common things that no other world says: colour, material, wheels, what it can do,
+# what it is used for.
+# sources: hand-core 1 (hand-written in this repository; the usual values are labelled by a language model)
+# license: CC0-1.0
+# script: none (hand-written); the shards are written by tools/attributes-core.mjs
+
+@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing core.source="hand-core 1"
+
+# An attribute of things. `holds` says what kind of value it takes.
+@k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
+@k.attributes.attribute.name core.slot of=k.attributes.attribute key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use core.source="hand-core 1"
+@k.attributes.attribute.about core.slot of=k.attributes.attribute key=about required=true kind=string core.source="hand-core 1"
+
+# Where the values of an attribute are found: the facts of `type` (in the world `world`) carry them under `key`,
+# named by the thing. `covers` says for which things. An attribute is found in several places (the colour of a
+# food in k.food, of a common thing here); the values are not copied from one world to another.
+@k.attributes.found core.type of=k.attributes.found shared=true closed=true core.source="hand-core 1"
+@k.attributes.found.attribute core.slot of=k.attributes.found key=attribute id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.found.world core.slot of=k.attributes.found key=world required=true kind=atom core.source="hand-core 1"
+@k.attributes.found.type core.slot of=k.attributes.found key=type id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.found.key core.slot of=k.attributes.found key=key id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.found.covers core.slot of=k.attributes.found key=covers required=true kind=string core.source="hand-core 1"
+
+# A kind of thing and the attributes (many) that things of the kind usually have.
+@k.attributes.kind core.type of=k.attributes.kind shared=true closed=true core.source="hand-core 1"
+@k.attributes.kind.name core.slot of=k.attributes.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.kind.attribute core.slot of=k.attributes.kind key=attribute many=true required=true kind=atom core.source="hand-core 1"
+
+# The usual values of a common thing, each only where it is plain: a missing key says nothing (a car has no usual
+# colour). `kind` names a k.attributes.kind; `colour` (many) is one of the eleven basic colours (the names of
+# k.objects.part.colour and of k.values.colour.basic); `material` (many) what it is usually made of; `wheels` how
+# many wheels it usually has (0: it is a vehicle without wheels); `can` (many) what it can do; `used_for` (many)
+# what people use it for. `named=model`: the values were given by a language model from the name of the thing.
+@k.attributes.thing core.type of=k.attributes.thing shared=true closed=true core.source="hand-core 1"
+@k.attributes.thing.name core.slot of=k.attributes.thing key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.thing.kind core.slot of=k.attributes.thing key=kind kind=atom kind=string core.source="hand-core 1"
+@k.attributes.thing.colour core.slot of=k.attributes.thing key=colour many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
+@k.attributes.thing.material core.slot of=k.attributes.thing key=material many=true kind=atom core.source="hand-core 1"
+@k.attributes.thing.wheels core.slot of=k.attributes.thing key=wheels kind=integer min=0 core.source="hand-core 1"
+@k.attributes.thing.can core.slot of=k.attributes.thing key=can many=true kind=atom core.source="hand-core 1"
+@k.attributes.thing.used_for core.slot of=k.attributes.thing key=used_for many=true kind=string core.source="hand-core 1"
+@k.attributes.thing.named core.slot of=k.attributes.thing key=named enum=model core.source="hand-core 1"
+
+# Words for the types and keys of this world.
+@k.attributes.word.attribute core.word text=attribute text=attributes text=property text=properties text=feature text=features means=k.attributes.attribute core.source="hand-core 1"
+@k.attributes.word.colour core.word text=colour text=color text=coloured text=colored means=k.attributes.thing.colour core.source="hand-core 1"
+@k.attributes.word.material core.word text=material text=made text="made of" text="made from" means=k.attributes.thing.material core.source="hand-core 1"
+@k.attributes.word.wheels core.word text=wheel text=wheels means=k.attributes.thing.wheels core.source="hand-core 1"
+@k.attributes.word.can core.word text=can text=able means=k.attributes.thing.can core.source="hand-core 1"
+@k.attributes.word.used_for core.word text=use text=used text="used for" text=for means=k.attributes.thing.used_for core.source="hand-core 1"

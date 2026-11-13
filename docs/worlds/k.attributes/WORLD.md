@@ -1,0 +1,45 @@
+# k.attributes
+
+The attributes of kinds of things: which attributes a kind of thing usually has, where the values of each attribute
+are found in the worlds, and the usual values of common things that no other world says.
+
+## What it knows
+
+- `k.attributes.attribute`: colour, material, size, place, kind, parts, legs, wheels, can, cannot, lives, eats,
+  covering, sound, used_for, with `holds` and `about`.
+- `k.attributes.found` (identity `attribute`, `type`, `key`): where the values are: the colour of a food is
+  `k.food.food.colour`, of a common thing `k.attributes.thing.colour`, of each part of a drawing
+  `k.objects.part.colour`; the size and place of a drawable thing are `k.scenes.thing.size` and `.place`; legs,
+  habitat (lives), eats, covering, sound, can and cannot of an animal are in `k.animals.animal`. 26 facts; a test
+  checks that every world, type and key named exists. Values are not copied between worlds.
+- `k.attributes.kind`: 26 kinds of things (animal, plant, vehicle, building, furniture, clothing, tool, container,
+  toy, instrument, device …) and the attributes each usually has.
+- `k.attributes.thing` (identity `name`): 761 common things with `kind` (688), `colour` (256; one of the eleven
+  basic colours, many: a zebra is black and white), `material` (423), `wheels` (47; 0 for a boat or a sledge),
+  `can` (242: fly, swim, float, roll, move, grow, burn, melt, shine, ring …), `used_for` (459). Every fact is
+  `named=model`: the values were given by a language model from the name of the thing, each only where it is
+  plain. **A missing key says nothing**: a car, a shirt or a book has no usual colour, so none is given.
+
+## Shards
+
+`attributes` (67 wires), `things-living` (animals and creatures), `things-nature` (plants, land, sky, materials,
+places, food and drink), `things-big` (vehicles, machines, buildings), `things-worn` (clothing, jewellery),
+`things-objects` (the rest). Written by `tools/attributes-core.mjs` from `sources/hand-core/attributes.tsv`.
+
+## Audit
+
+A seeded sample of 90 rows of the table was read again: 87 right, 0 wrong, 3 unclear (corrected: the material of
+a temple, the kind of a roller skate, one empty row). Record: `sources/hand-core/attributes-audit.tsv`.
+
+## What it does not know
+
+- The usual colour of most things: 256 things here and the 254 foods of `k.food`, not the 2,000 asked for. Colours
+  that depend on the country or the make were left out (a postbox, a taxi, a barn, a pencil).
+- Legs, food and habitat of animals are only in `k.animals` (294 animals); nothing was taken from WordNet glosses
+  or ConceptNet (ConceptNet is not reachable from the build network).
+
+## Questions it helps with
+
+See `tests/k.attributes.questions.jsonl`: the colour of grass and of a zebra, the wheels of a bicycle, what a
+window is made of, what a helicopter can do, what a ladder is used for, which things are pink, where the number
+of legs is found, which attributes a vehicle has.

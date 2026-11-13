@@ -1,0 +1,10 @@
+{"id":"at-01","ask":"what colour is grass","query":{"type":"k.attributes.thing","where":{"name":"grass"},"seek":"colour"},"expect":{"status":"supported","value":"green"}}
+{"id":"at-02","ask":"what colours is a zebra","query":{"type":"k.attributes.thing","where":{"name":"zebra"},"seek":"colour","mode":"list"},"expect":{"status":"supported","values":["black","white"]}}
+{"id":"at-03","ask":"how many wheels does a bicycle have","query":{"type":"k.attributes.thing","where":{"name":"bicycle"},"seek":"wheels"},"expect":{"status":"supported","value":"2"}}
+{"id":"at-04","ask":"what is a window made of","query":{"type":"k.attributes.thing","where":{"name":"window"},"seek":"material"},"expect":{"status":"supported","value":"glass"}}
+{"id":"at-05","ask":"what can a helicopter do","query":{"type":"k.attributes.thing","where":{"name":"helicopter"},"seek":"can","mode":"list"},"expect":{"status":"supported","values":["fly","move"]}}
+{"id":"at-06","ask":"what is a ladder used for","query":{"type":"k.attributes.thing","where":{"name":"ladder"},"seek":"used_for"},"expect":{"status":"supported","value":"\"climbing\""}}
+{"id":"at-07","ask":"which things are usually pink","query":{"type":"k.attributes.thing","where":{"colour":"pink"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["flamingo","pig","worm","blossom","\"cherry blossom\"","lotus"]}}
+{"id":"at-08","ask":"where is the number of legs of an animal found","query":{"type":"k.attributes.found","where":{"attribute":"legs"},"seek":"type"},"expect":{"status":"supported","value":"k.animals.animal"}}
+{"id":"at-09","ask":"which attributes does a vehicle usually have","query":{"type":"k.attributes.kind","where":{"name":"vehicle"},"seek":"attribute","mode":"list"},"expect":{"status":"supported","values":["colour","size","place","parts","material","wheels","can","used_for"]}}
+{"id":"at-10","ask":"what kind of thing is a violin","query":{"type":"k.attributes.thing","where":{"name":"violin"},"seek":"kind"},"expect":{"status":"supported","value":"instrument"}}
