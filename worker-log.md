@@ -2853,3 +2853,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: `tests/import.wordnet.test.mjs` (1 more; the equality with the import now passes the core names).
 - Numbers: catalog 22 worlds, 918 shards, vocab 23,739 words; 0 errors, 0 warnings. npm test 2,761: 2,755 pass,
   6 skipped, 0 fail.
+
+## Questions Q36 and Q37 (2026-11-14, second worker)
+
+- Q36: names of several words in `k.words` (about 170 names of the cores). Q37: a `sense` on the numbers and
+  usage facts of the 70 names with two senses. Neither blocks; meanwhile nothing changes.

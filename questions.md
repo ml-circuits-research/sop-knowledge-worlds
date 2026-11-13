@@ -425,3 +425,24 @@ Options: (a) do 1, 4 and 6 here now (they need nothing new from the library; 1 a
 both workers), ask the library for 2, 3 and 5; (b) wait for the library's `std.schema` format and do all in one
 pass; (c) leave as is: the joins by name work and `k.attributes.same` says which names are one thing.
 Blocking: no. Meanwhile: (c); nothing is refactored.
+
+
+## Q36 (cause left by R11.1, second worker, 2026-11-14)
+Question: may `k.words` take names of several words (manta ray, light year, top hat, small intestine, police officer)?
+Context: the one-word names of the hand-written worlds now have their sense (734 names, the first WordNet sense
+under the root of their world). About 170 names of several words do not: `k.words` keys a sense by `word`, an atom
+(`LEMMA` in `tools/import/wordnet.mjs`), and its shards by the first two letters. WordNet has most of them as
+lemmas with underscores (manta_ray, light_year, small_intestine). Taking them makes `word` a string for those
+senses and needs a rule for the shard of a word with a space; hosts that look a word up by its text are unchanged.
+Options: (a) take the multiword names of the cores only (about 170), `word` a quoted string; (b) also the multiword
+lemmas of the frequent words (many thousands: phrasal nouns); (c) leave them out.
+Blocking: no. Meanwhile: (c); the WORLD.md of each core keeps its own `about` where it has one.
+
+## Q37 (Round 10 items 5 and 6, second worker, 2026-11-14)
+Question: should the numbers and usage of a thing name the sense they are about, for the 70 names with two senses?
+Context: `k.attributes.number` and `k.attributes.usage` are keyed by name, labelled for the everyday sense (turkey
+the bird, crane the machine where a drawing is the machine, orange the fruit). `k.attributes.same` knows that these
+names have several senses but cannot say which one a number belongs to. A key `sense` (the values of
+`k.attributes.same.sense`) on those facts would make the join exact; it costs a second identity key (name, sense).
+Options: (a) add `sense` to number and usage facts of clash names only; (b) to every fact of the two types; (c) leave as is.
+Blocking: no. Meanwhile: (c); the log and WORLD.md say that the everyday sense is meant.
