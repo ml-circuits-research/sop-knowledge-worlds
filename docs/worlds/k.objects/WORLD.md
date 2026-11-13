@@ -4,10 +4,10 @@ Drawable objects: their parts, how the parts sit relative to each other, and for
 a draw order and typical colours, so that a renderer that has never seen an object can draw it from the facts alone.
 `tools/render-svg.mjs` is such a renderer; its pictures are in [`preview/`](preview/index.html).
 
-## Schema (`schema.sop`, module `k.objects`, imports `k.commonsense`, version 1)
+## Schema (`schema.sop`, module `k.objects`, imports `k.commonsense`, version 2)
 
 - `k.objects.object` (shared, closed): `name` (identity, an English lemma; the same name in `k.commonsense.thing` is the
-  same thing, joined by value).
+  same thing, joined by value); `variant` (identity, optional: a second drawing of the same name).
 - `k.objects.part` (shared, closed), identity `of` + `name`:
   - `of`: the object's name; `name`: unique within the object (`left_window`); `kind`: for a part that occurs several
     times, what each one is (`window`). A repeated part is one wire per instance, each with its own box.
@@ -36,7 +36,27 @@ a draw order and typical colours, so that a renderer that has never seen an obje
 | `figures` | person (stick figure), robot, snowman |
 | `household` | table, chair, cup, umbrella, ladder |
 
-30 objects, 168 parts, 139 points, words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+30 hand-written objects, 168 parts, 139 points, words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+
+## Imported objects (shards `noto-<subgroup>-<nn>`)
+
+Everyday things converted from the Noto Emoji drawings by `tools/import/noto-emoji.mjs`, named by the Unicode CLDR
+English short names (`"dog face"`, `teapot`, `"sport utility vehicle"`; a name of several words is a string), with
+the CLDR keywords as `core.word` facts. Same format as the hand-written objects, with these differences:
+
+- every visible element of the drawing is one part, in draw order (`z` = 1, 2, …); at most 16 parts an object (the
+  largest), at most 40 points a part and about 200 points an object;
+- shapes: `polygon` (most), `line`, and `circle`, `oval`, `rectangle`, `square` where the drawing has them;
+- `colour` is the nearest name of the schema's list (black, white, grey, red, orange, yellow, green, blue, purple,
+  pink, brown); `rgb` keeps the exact colour as a string (`"#D27856"`). A renderer may use either;
+- parts are named `part1…partN` unless `sources/noto-emoji/part-names.tsv` names them; such a part carries
+  `named=model` (a language model named it by looking at a numbered picture). Shadows, highlights and outlines have
+  `kind=detail`. No relative positions (`above`, `inside`, …) are given;
+- a hand-written object of the same name wins: the imported drawing is left out (questions.md Q12 asks how a second
+  drawing should be stored; the schema already has `variant` on objects and parts for it);
+- shards hold up to 8 objects of one emoji subgroup (`noto-animal-mammal-01`, `noto-food-fruit-02`). Sources
+  `noto-emoji 99701e0` (Apache-2.0) and `cldr 48` (Unicode-3.0); the notices are `LICENSE.noto-emoji` and
+  `LICENSE.cldr` in this folder.
 
 ## Questions it helps with
 

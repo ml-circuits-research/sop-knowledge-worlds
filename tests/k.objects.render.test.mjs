@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { fullWorld, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { SHAPES, partsOf, objectsOf, renderAll } from '../tools/render-svg.mjs';
+import { SHAPES, partsOf, objectsOf, renderAll, fileOf } from '../tools/render-svg.mjs';
 
 const world = fullWorld('k.objects');
 const objects = objectsOf(world);
@@ -13,7 +13,12 @@ const cx = (p) => p.x + p.w / 2;
 const cy = (p) => p.y + p.h / 2;
 const TOL = 1;
 
-test('there are 30 objects', () => assert.equal(objects.length, 30));
+const handWritten = world.ofType('k.objects.object').filter((o) => o.attrs['core.source'].includes('"hand-core 1"'));
+test('there are 30 hand-written objects, and imported ones', () => {
+  assert.equal(handWritten.length, 30);
+  assert.ok(objects.length >= 30);
+  assert.equal(new Set(objects).size, objects.length, 'object names are unique');
+});
 
 for (const name of objects) {
   test(`${name} is drawable from its facts`, () => {
@@ -58,8 +63,9 @@ test('the previews in docs/worlds/k.objects/preview are what the renderer draws 
   const files = renderAll(world);
   const dir = join(WORLDS_DIR, 'k.objects', 'preview');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
+  for (const object of objects) assert.equal((files[`${fileOf(object)}.svg`].match(/<title>/g) ?? []).length, partsOf(world, object).length + 1, object);
   for (const [name, text] of Object.entries(files)) {
     assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
-    if (name.endsWith('.svg')) assert.equal((text.match(/<title>/g) ?? []).length, partsOf(world, name.slice(0, -4)).length + 1);
+    
   }
 });

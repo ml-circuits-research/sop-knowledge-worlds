@@ -1,5 +1,5 @@
 {
- "version": "47e38847326e",
+ "version": "314c584ed1a6",
  "sopworld": "c7247e2",
  "worlds": [
   {
@@ -236,6 +236,948 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/noto-animal-amphibian-01",
+     "path": "k.objects/shards/noto-animal-amphibian-01.sop",
+     "wires": 130,
+     "bytes": 15957,
+     "keys": [
+      "frog"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-bird-01",
+     "path": "k.objects/shards/noto-animal-bird-01.sop",
+     "wires": 860,
+     "bytes": 103710,
+     "keys": [
+      "baby chick",
+      "eagle",
+      "feather",
+      "turkey",
+      "wing"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-bug-01",
+     "path": "k.objects/shards/noto-animal-bug-01.sop",
+     "wires": 825,
+     "bytes": 99956,
+     "keys": [
+      "ant",
+      "cricket",
+      "microbe",
+      "scorpion"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-01",
+     "path": "k.objects/shards/noto-animal-mammal-01.sop",
+     "wires": 1525,
+     "bytes": 187038,
+     "keys": [
+      "bison",
+      "black cat",
+      "cow",
+      "dog face",
+      "horse",
+      "leopard",
+      "pig nose",
+      "wolf"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-mammal-02",
+     "path": "k.objects/shards/noto-animal-mammal-02.sop",
+     "wires": 1343,
+     "bytes": 161498,
+     "keys": [
+      "camel",
+      "elephant",
+      "hedgehog",
+      "koala",
+      "mouse face",
+      "rabbit face",
+      "skunk"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-marine-01",
+     "path": "k.objects/shards/noto-animal-marine-01.sop",
+     "wires": 783,
+     "bytes": 94710,
+     "keys": [
+      "jellyfish",
+      "orca",
+      "shark",
+      "squid"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-animal-reptile-01",
+     "path": "k.objects/shards/noto-animal-reptile-01.sop",
+     "wires": 423,
+     "bytes": 51364,
+     "keys": [
+      "snake",
+      "t-rex"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-arts-crafts-01",
+     "path": "k.objects/shards/noto-arts-crafts-01.sop",
+     "wires": 184,
+     "bytes": 22718,
+     "keys": [
+      "thread"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-award-medal-01",
+     "path": "k.objects/shards/noto-award-medal-01.sop",
+     "wires": 302,
+     "bytes": 37130,
+     "keys": [
+      "2nd place medal",
+      "military medal"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-book-paper-01",
+     "path": "k.objects/shards/noto-book-paper-01.sop",
+     "wires": 505,
+     "bytes": 61598,
+     "keys": [
+      "blue book",
+      "label",
+      "ledger",
+      "newspaper"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-clothing-01",
+     "path": "k.objects/shards/noto-clothing-01.sop",
+     "wires": 1068,
+     "bytes": 129487,
+     "keys": [
+      "briefs",
+      "dress",
+      "folding hand fan",
+      "glasses",
+      "running shoe",
+      "safety vest",
+      "scarf",
+      "shopping bags"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-clothing-02",
+     "path": "k.objects/shards/noto-clothing-02.sop",
+     "wires": 666,
+     "bytes": 80783,
+     "keys": [
+      "billed cap",
+      "crown",
+      "ring",
+      "woman’s sandal"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-computer-01",
+     "path": "k.objects/shards/noto-computer-01.sop",
+     "wires": 580,
+     "bytes": 71120,
+     "keys": [
+      "abacus",
+      "computer disk",
+      "low battery",
+      "printer"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-dishware-01",
+     "path": "k.objects/shards/noto-dishware-01.sop",
+     "wires": 114,
+     "bytes": 14337,
+     "keys": [
+      "chopsticks",
+      "kitchen knife"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-drink-01",
+     "path": "k.objects/shards/noto-drink-01.sop",
+     "wires": 937,
+     "bytes": 114262,
+     "keys": [
+      "baby bottle",
+      "bubble tea",
+      "clinking glasses",
+      "cocktail glass",
+      "teacup without handle"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-event-01",
+     "path": "k.objects/shards/noto-event-01.sop",
+     "wires": 939,
+     "bytes": 114156,
+     "keys": [
+      "firecracker",
+      "jack-o-lantern",
+      "tanabata tree",
+      "wind chime",
+      "wrapped gift"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-asian-01",
+     "path": "k.objects/shards/noto-food-asian-01.sop",
+     "wires": 661,
+     "bytes": 79578,
+     "keys": [
+      "cooked rice",
+      "fish cake with swirl",
+      "fortune cookie",
+      "roasted sweet potato"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-fruit-01",
+     "path": "k.objects/shards/noto-food-fruit-01.sop",
+     "wires": 898,
+     "bytes": 108458,
+     "keys": [
+      "blueberries",
+      "coconut",
+      "pear",
+      "pineapple",
+      "tangerine"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-prepared-01",
+     "path": "k.objects/shards/noto-food-prepared-01.sop",
+     "wires": 1487,
+     "bytes": 179312,
+     "keys": [
+      "bacon",
+      "bread",
+      "cheese wedge",
+      "cooking",
+      "green salad",
+      "hot dog",
+      "pretzel",
+      "tamale"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-prepared-02",
+     "path": "k.objects/shards/noto-food-prepared-02.sop",
+     "wires": 157,
+     "bytes": 19301,
+     "keys": [
+      "canned food"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-sweet-01",
+     "path": "k.objects/shards/noto-food-sweet-01.sop",
+     "wires": 618,
+     "bytes": 75032,
+     "keys": [
+      "candy",
+      "ice cream",
+      "shortcake"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-food-vegetable-01",
+     "path": "k.objects/shards/noto-food-vegetable-01.sop",
+     "wires": 627,
+     "bytes": 75478,
+     "keys": [
+      "carrot",
+      "cucumber",
+      "ginger root",
+      "onion"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-game-01",
+     "path": "k.objects/shards/noto-game-01.sop",
+     "wires": 862,
+     "bytes": 103354,
+     "keys": [
+      "bullseye",
+      "chess pawn",
+      "joystick",
+      "pool 8 ball",
+      "teddy bear"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-household-01",
+     "path": "k.objects/shards/noto-household-01.sop",
+     "wires": 782,
+     "bytes": 95189,
+     "keys": [
+      "bed",
+      "door",
+      "lotion bottle",
+      "roll of paper",
+      "shower",
+      "toothbrush"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-light-video-01",
+     "path": "k.objects/shards/noto-light-video-01.sop",
+     "wires": 582,
+     "bytes": 71236,
+     "keys": [
+      "candle",
+      "clapper board",
+      "diya lamp",
+      "video camera"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-lock-01",
+     "path": "k.objects/shards/noto-lock-01.sop",
+     "wires": 145,
+     "bytes": 17783,
+     "keys": [
+      "unlocked"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-mail-01",
+     "path": "k.objects/shards/noto-mail-01.sop",
+     "wires": 348,
+     "bytes": 43281,
+     "keys": [
+      "ballot box with ballot",
+      "closed mailbox with lowered flag",
+      "envelope",
+      "outbox tray"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-medical-01",
+     "path": "k.objects/shards/noto-medical-01.sop",
+     "wires": 83,
+     "bytes": 10383,
+     "keys": [
+      "adhesive bandage"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-money-01",
+     "path": "k.objects/shards/noto-money-01.sop",
+     "wires": 318,
+     "bytes": 39102,
+     "keys": [
+      "money with wings",
+      "yen banknote"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-music-01",
+     "path": "k.objects/shards/noto-music-01.sop",
+     "wires": 144,
+     "bytes": 18084,
+     "keys": [
+      "control knobs",
+      "musical note"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-musical-instrument-01",
+     "path": "k.objects/shards/noto-musical-instrument-01.sop",
+     "wires": 644,
+     "bytes": 78160,
+     "keys": [
+      "drum",
+      "guitar",
+      "harp",
+      "saxophone"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-office-01",
+     "path": "k.objects/shards/noto-office-01.sop",
+     "wires": 1005,
+     "bytes": 122423,
+     "keys": [
+      "briefcase",
+      "calendar",
+      "card file box",
+      "card index",
+      "clipboard",
+      "linked paperclips"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-other-object-01",
+     "path": "k.objects/shards/noto-other-object-01.sop",
+     "wires": 421,
+     "bytes": 51395,
+     "keys": [
+      "cigarette",
+      "identification card",
+      "nazar amulet"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-phone-01",
+     "path": "k.objects/shards/noto-phone-01.sop",
+     "wires": 194,
+     "bytes": 24139,
+     "keys": [
+      "telephone receiver"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-building-01",
+     "path": "k.objects/shards/noto-place-building-01.sop",
+     "wires": 933,
+     "bytes": 113990,
+     "keys": [
+      "bank",
+      "building construction",
+      "hut",
+      "office building",
+      "school",
+      "wedding"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-geographic-01",
+     "path": "k.objects/shards/noto-place-geographic-01.sop",
+     "wires": 429,
+     "bytes": 52310,
+     "keys": [
+      "desert island",
+      "mount fuji"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-map-01",
+     "path": "k.objects/shards/noto-place-map-01.sop",
+     "wires": 406,
+     "bytes": 49081,
+     "keys": [
+      "globe showing americas",
+      "map of japan"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-other-01",
+     "path": "k.objects/shards/noto-place-other-01.sop",
+     "wires": 501,
+     "bytes": 62749,
+     "keys": [
+      "barber pole",
+      "carousel horse",
+      "cityscape at dusk",
+      "night with stars"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-place-religious-01",
+     "path": "k.objects/shards/noto-place-religious-01.sop",
+     "wires": 306,
+     "bytes": 37872,
+     "keys": [
+      "kaaba",
+      "mosque"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-plant-flower-01",
+     "path": "k.objects/shards/noto-plant-flower-01.sop",
+     "wires": 625,
+     "bytes": 75655,
+     "keys": [
+      "hibiscus",
+      "hyacinth",
+      "lotus"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-plant-other-01",
+     "path": "k.objects/shards/noto-plant-other-01.sop",
+     "wires": 587,
+     "bytes": 70884,
+     "keys": [
+      "deciduous tree",
+      "herb",
+      "leaf fluttering in wind",
+      "leafless tree"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-science-01",
+     "path": "k.objects/shards/noto-science-01.sop",
+     "wires": 317,
+     "bytes": 39101,
+     "keys": [
+      "petri dish",
+      "satellite antenna"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sky-weather-01",
+     "path": "k.objects/shards/noto-sky-weather-01.sop",
+     "wires": 1135,
+     "bytes": 137617,
+     "keys": [
+      "cloud with lightning",
+      "cyclone",
+      "full moon face",
+      "milky way",
+      "new moon face",
+      "sun behind large cloud",
+      "waning gibbous moon",
+      "waxing crescent moon"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sky-weather-02",
+     "path": "k.objects/shards/noto-sky-weather-02.sop",
+     "wires": 189,
+     "bytes": 23175,
+     "keys": [
+      "comet",
+      "umbrella on ground"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sound-01",
+     "path": "k.objects/shards/noto-sound-01.sop",
+     "wires": 418,
+     "bytes": 51228,
+     "keys": [
+      "postal horn",
+      "speaker medium volume"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-sport-01",
+     "path": "k.objects/shards/noto-sport-01.sop",
+     "wires": 1075,
+     "bytes": 130004,
+     "keys": [
+      "cricket game",
+      "goal net",
+      "ping pong",
+      "rugby football",
+      "running shirt",
+      "softball"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-time-01",
+     "path": "k.objects/shards/noto-time-01.sop",
+     "wires": 193,
+     "bytes": 23893,
+     "keys": [
+      "hourglass done",
+      "stopwatch"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-tool-01",
+     "path": "k.objects/shards/noto-tool-01.sop",
+     "wires": 1026,
+     "bytes": 128017,
+     "keys": [
+      "boomerang",
+      "broken chain",
+      "clamp",
+      "hammer",
+      "hammer and wrench",
+      "magnet",
+      "wrench"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-air-01",
+     "path": "k.objects/shards/noto-transport-air-01.sop",
+     "wires": 542,
+     "bytes": 66630,
+     "keys": [
+      "airplane departure",
+      "helicopter",
+      "satellite"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-ground-01",
+     "path": "k.objects/shards/noto-transport-ground-01.sop",
+     "wires": 1381,
+     "bytes": 168797,
+     "keys": [
+      "high-speed train",
+      "manual wheelchair",
+      "minibus",
+      "sport utility vehicle",
+      "station",
+      "taxi",
+      "tractor",
+      "tram car"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-ground-02",
+     "path": "k.objects/shards/noto-transport-ground-02.sop",
+     "wires": 653,
+     "bytes": 79746,
+     "keys": [
+      "construction",
+      "police car light",
+      "railway track",
+      "skateboard"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-transport-water-01",
+     "path": "k.objects/shards/noto-transport-water-01.sop",
+     "wires": 274,
+     "bytes": 33787,
+     "keys": [
+      "canoe",
+      "motor boat"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/noto-writing-01",
+     "path": "k.objects/shards/noto-writing-01.sop",
+     "wires": 178,
+     "bytes": 21834,
+     "keys": [
+      "pen"
+     ],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/sky",
      "path": "k.objects/shards/sky.sop",
      "wires": 52,
@@ -319,9 +1261,12 @@
     }
    ],
    "sources": [
-    "hand-core-1"
+    "cldr-48",
+    "hand-core-1",
+    "noto-emoji-99701e0"
    ],
    "licenses": [
+    "Apache-2.0 AND Unicode-3.0",
     "CC0-1.0"
    ],
    "warnings": []

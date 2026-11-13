@@ -100,3 +100,16 @@ Context: the slots say `kind=atom kind=string`. A query must then quote: `where:
 answers come back as the quoted token. The other option, WordNet's own `domestic_animal`, would be an underscore
 notation inside a value.
 Blocking: no. Meanwhile: strings for several words.
+
+## Q12 (task R2.6, 2026-11-13)
+Question: how should the parts of a second drawing of an object (`k.objects.object name=house variant=noto`) be keyed,
+so that "what are the parts of a house" still answers with the hand-written parts only?
+Context: tried: the schema now has `variant` as an optional identity key on objects and on parts, and
+`k.objects.part of=house variant=noto name=part1` stays a separate wire. But a query cannot ask for "no variant":
+`{ type: 'k.objects.part', where: { of: 'house' }, seek: 'name', mode: 'list' }` then answers body, roof, …, part1, …
+part16 as soon as both shards are loaded (the test ob-01 fails). Options: (a) the variant's parts name another
+object value (`of="house noto"`, a small notation); (b) a default `variant=hand` on every hand-written object and
+part (then every question must say which variant); (c) leave the 18 imported drawings out while a hand-written one
+exists; (d) sopworld: a query condition for an absent key.
+Blocking: no. Meanwhile: (c). Left out: dog, cat, bird, fish, butterfly, mountain, house, castle, train, bicycle,
+rocket, sun, star, cloud, umbrella, snowman, ladder, chair.

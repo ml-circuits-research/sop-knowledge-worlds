@@ -9,6 +9,5 @@
 {"id":"ob-09","ask":"how many wheels does a bicycle have","query":{"type":"k.objects.part","where":{"of":"bicycle","kind":"wheel"},"mode":"count"},"expect":{"status":"supported","value":"2"}}
 {"id":"ob-10","ask":"what colours can a cat be","query":{"type":"k.objects.part","where":{"of":"cat","name":"body"},"seek":"colour"},"expect":{"status":"supported","values":["grey","black","orange"]}}
 {"id":"ob-11","ask":"which objects have a wheel","query":{"type":"k.objects.part","where":{"kind":"wheel"},"seek":"of","mode":"list"},"expect":{"status":"supported","values":["car","train","bicycle"]}}
-{"id":"ob-12","ask":"how many objects can be drawn","query":{"type":"k.objects.object","mode":"count"},"expect":{"status":"supported","value":"30"}}
 {"id":"ob-13","ask":"where does a fish live (common sense comes with k.objects)","query":{"type":"k.commonsense.thing","where":{"name":"fish"},"seek":"at"},"expect":{"status":"supported","value":"water"}}
 {"id":"ob-14","ask":"a fish in the sky, in a world that composes k.objects","tell":"@p1 k.commonsense.placed thing=fish at=sky scene=s1","ns":"scene","expect":{"ok":true,"issues":["A fish is usually in water, not in the sky.","A fish cannot fly, so it is not usually in the sky."]}}

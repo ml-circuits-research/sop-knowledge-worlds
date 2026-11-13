@@ -148,10 +148,37 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
   raw is absent), `tests/k.words.questions.jsonl` (11).
 - Numbers: 19,697 usable list words → 10,471 words with a noun or verb sense, 26,116 senses, 2,835 `core.word`
   wires (1,264 irregular forms); **28,951 wires, 318 shards, 5,610,059 bytes**; largest shard `co` 1,185 wires,
-  229,974 bytes, load 21 ms; median shard under 2 ms; all 318 shards one after another 0.4 s of load (0.8 s for the
+  229,974 bytes, load 21 to 35 ms; median shard under 2 ms; all 318 shards one after another 0.8 s of load (0.8 s for the
   whole world in one instance); schema 8 ms; 0 warnings, 0 errors. Catalog: 3 worlds, 326 shards, vocab 11,726 words
   (index.json 262 kB, vocab.json 484 kB). npm test 97 pass in about 10 s.
 - Limits found: values are words, not senses (a reference to a sense in another shard would dangle), so chains
   (`dog` → `canine` → …) are followed by looking the value up as a word again; values of several words are strings
   (Q11); a capitalised word is its own value (`word=China` sense 1, `word=china` sense 2), found from lower case
   through a `core.word` fact.
+
+## R2.6 pilot (2026-11-13): 200 drawable objects from Noto Emoji
+
+(Done right after R2.1 as the reviewer asked at 08:35; R2.2 was already pushed when that message arrived.)
+- Sources: `googlefonts/noto-emoji` 99701e0, folder `2D/svg` (Apache-2.0, `2D/svg/LICENSE`); names, keywords and
+  groups from Unicode CLDR 48 (`cldr-json` 48.2.3 annotations, `emoji-test.txt` of `unicode-org/cldr` release-48;
+  Unicode-3.0). Notices published as `k.objects/LICENSE.noto-emoji` and `LICENSE.cldr`. Shard licence
+  `Apache-2.0 AND Unicode-3.0`. Twemoji was not compared: the first 20 Noto conversions were all recognisable next
+  to the originals, and Apache-2.0 is the more permissive of the two.
+- `tools/import/svg-parts.mjs` (SVG reader without dependencies: path flattening incl. curves and arcs, transforms,
+  style and attribute fills, gradients to one flat colour, Douglas-Peucker, colour names by nearest CIE Lab distance)
+  and `tools/import/noto-emoji.mjs`. Things kept: 861 emoji in the groups Animals & Nature, Food & Drink, Travel &
+  Places, Activities, Objects; 32 dropped as not things (clock faces per half hour, card suits); 829 remain, of which
+  18 have a hand-written object of the same name and are left out (Q12). **The 1,200 to 1,800 expected are not
+  there**: without faces, people, hands, flags and symbols the emoji set has about 830 things.
+- Schema additions (not breaking): `variant` (object, part), `rgb`, `named`, colour enum of 11 names, names may be
+  strings. Renderer: exact colours drawn flat, names of several words, `--label` mode (parts outlined and numbered).
+  Catalog: `part1…partN` are placeholders, not vocabulary words.
+- Pilot = every 4th thing in list order (`sources/noto-emoji/limit.txt` = 200): **200 objects, 2,429 parts, 29,499
+  points, 200 word wires; 32,328 wires, 53 shards, 3,937,882 bytes** = 162 wires and 19.7 kB an object on average
+  (12.1 parts, 147 points). One shard (avg 610 wires, 74 kB) loads in about 20 ms; all 53 in 1.0 s; 0 warnings.
+- **Looked at all 200 at 160 px (4 contact sheets): 197 recognisable (98.5%)**. Weak: abacus (beads lost to the
+  16-part cap), computer disk and ring (holes dropped). Fixed after the first look: translucent highlights (opacity
+  under 0.75) were drawn solid and hid the candy and the diya lamp; they are dropped now.
+- Tests: `tests/import.noto.test.mjs` (made-up SVG and list; primitives, holes, overlays, gradients, names from the
+  TSV, determinism; disk shards = importer output when raw files are present), render test for every object.
+  npm test 300 pass, 24 s.

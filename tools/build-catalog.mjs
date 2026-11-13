@@ -17,6 +17,8 @@ const GENERATED = new Set(['index.json', 'vocab.json', 'LICENSES.md']);
 
 // A value token as plain text: strings unquoted; references and variables are not words.
 const text = (token) => (token.startsWith('"') ? str(token) : /^[$?]/.test(token) ? null : token);
+// Names that stand for "not named yet" (part1, part2, ... of an imported drawing) are not words.
+const PLACEHOLDER = /^part\d+$/;
 const isWordy = (t) => t && /\p{L}/u.test(t);
 const lemma = (t) => t.toLowerCase();
 const sourceId = (s) => text(s).trim().split(/\s+/).join('-');
@@ -115,7 +117,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
         }
         for (const k of identityKeys(w.type)) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
-          if (isWordy(x)) { keys.push(lemma(x)); addWord(x, shard.id); }
+          if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id); }
         }
       }
       const license = header.license?.[0] ?? null;
