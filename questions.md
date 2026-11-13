@@ -147,3 +147,32 @@ rule of R3.2 (not a thing, or does not survive) does not exclude them. But they 
 after English clubs of one season, about 4% of the Mulberry objects, and of little use to a general application.
 Options: (a) keep all; (b) keep only "football kit blank"; (c) keep one kit and name it "football kit".
 Blocking: no. Meanwhile: (a), all kept; shirt and shorts are named where one number is clear.
+
+## Q17 (task R3.3, 2026-11-13)
+Question: is a plain name the right join from a fact to its drawing (`k.animals.animal name=ladybird
+drawing="lady beetle"`), with no import of `k.objects`?
+Context: "join by name, as before" works when the names are equal (`dog`). They often are not (`grape` / `grapes`,
+`ladybird` / `"lady beetle"`, `Sun` / `sun`), and sometimes an object of the same name shows something else (`nail`,
+the tin of `tuna`). So each core type has a key `drawing` holding the object's name. sopworld does not check it (a
+test does: `tests/k.cores.test.mjs`). Options: (a) keep the name key; (b) `imports=k.objects` and a reference to the
+object fact, which would dangle unless the object's shard is told too; (c) put the link on the `k.objects` side
+(`k.objects.object name="lady beetle" shows=ladybird`), which needs the importers to read the cores.
+Blocking: no. Meanwhile: (a).
+
+## Q18 (task R3.3, 2026-11-13)
+Question: how should a number that is only "about" be said?
+Context: the task asks for moon counts "as about". SOP Lang has a value or no value; a value cannot be marked as
+approximate without a notation inside it. Workaround: two keys on `k.space.body`: `moons` (exact: Earth 1, Mars 2)
+and `moons_about` (Jupiter 95, Saturn 270, Uranus 28, Neptune 16), and the word "about" in the name of
+`orbit_years`' description only. A host must know to read both keys. Options: (a) keep two keys; (b) one key plus a
+boolean `moons_exact=false`; (c) sopworld: a standard way to mark a value as approximate.
+Blocking: no. Meanwhile: (a).
+
+## Q19 (task R3.3, 2026-11-13)
+Question: should the cores say what an animal cannot do (a penguin cannot fly), and how?
+Context: `can=fly` is a repeated key, as in `k.commonsense`; a missing value does not mean "cannot" (the type is
+closed, but the fact is only incomplete), so "can a penguin fly" has no supported "no". The soft rule of
+`k.commonsense` already reads a missing `can=fly` as "cannot fly", which is right for a fish and wrong for an animal
+that is simply not listed. Options: (a) leave as is; (b) a second repeated key `cannot` for the well-known cases
+(penguin, ostrich, emu, kiwi: fly); (c) booleans `flies`, `swims` on every animal.
+Blocking: no. Meanwhile: (a).

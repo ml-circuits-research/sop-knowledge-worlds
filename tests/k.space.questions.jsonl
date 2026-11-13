@@ -1,0 +1,15 @@
+{"id":"sp-01","ask":"which planet is the third from the Sun","query":{"type":"k.space.body","where":{"order":3},"seek":"name"},"expect":{"status":"supported","value":"Earth"}}
+{"id":"sp-02","ask":"which is the largest planet","query":{"type":"k.space.body","where":{"size_rank":1},"seek":"name"},"expect":{"status":"supported","value":"Jupiter"}}
+{"id":"sp-03","ask":"how many moons does Mars have","query":{"type":"k.space.body","where":{"name":"Mars"},"seek":"moons"},"expect":{"status":"supported","value":"2"}}
+{"id":"sp-04","ask":"about how many moons does Jupiter have","query":{"type":"k.space.body","where":{"name":"Jupiter"},"seek":"moons_about"},"expect":{"status":"supported","value":"95"}}
+{"id":"sp-05","ask":"does Saturn have rings","query":{"type":"k.space.body","where":{"name":"Saturn"},"seek":"rings"},"expect":{"status":"supported","value":"true"}}
+{"id":"sp-06","ask":"which planets are rocky","query":{"type":"k.space.body","where":{"kind":"planet","group":"rocky"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Mercury","Venus","Earth","Mars"]}}
+{"id":"sp-07","ask":"what does the Moon orbit","query":{"type":"k.space.body","where":{"name":"Moon"},"seek":"orbits"},"expect":{"status":"supported","value":"Earth"}}
+{"id":"sp-08","ask":"which moons orbit Jupiter","query":{"type":"k.space.body","where":{"kind":"moon","orbits":"Jupiter"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Io","Europa","Ganymede","Callisto"]}}
+{"id":"sp-09","ask":"how many planets are there","query":{"type":"k.space.body","where":{"kind":"planet"},"mode":"count"},"expect":{"status":"supported","value":"8"}}
+{"id":"sp-10","ask":"how long is a year on Neptune, in Earth years","query":{"type":"k.space.body","where":{"name":"Neptune"},"seek":"orbit_years"},"expect":{"status":"supported","value":"165"}}
+{"id":"sp-11","ask":"what kind of thing is Pluto","query":{"type":"k.space.body","where":{"name":"Pluto"},"seek":"kind"},"expect":{"status":"supported","value":"\"dwarf planet\""}}
+{"id":"sp-12","ask":"which galaxy is the Sun in","query":{"type":"k.space.body","where":{"name":"Sun"},"seek":"in"},"expect":{"status":"supported","value":"\"Milky Way\""}}
+{"id":"sp-13","ask":"what is a comet made of","query":{"type":"k.space.kind","where":{"name":"comet"},"seek":"made_of","mode":"list"},"expect":{"status":"supported","values":["ice","dust"]}}
+{"id":"sp-14","ask":"which drawing shows Saturn","query":{"type":"k.space.body","where":{"name":"Saturn"},"seek":"drawing"},"expect":{"status":"supported","value":"Saturn"}}
+{"id":"sp-15","ask":"an application's own star is accepted","tell":"@s1 k.space.body name=Vega kind=star","ns":"app","expect":{"issues":[]}}

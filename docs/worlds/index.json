@@ -1,7 +1,336 @@
 {
- "version": "d992a2862931",
+ "version": "4d5ea88321ff",
  "sopworld": "782cd0c",
  "worlds": [
+  {
+   "id": "k.animals",
+   "version": "1",
+   "schema": "k.animals/schema.sop",
+   "exports": [
+    "k.animals.animal"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.animals/shards/birds",
+     "path": "k.animals/shards/birds.sop",
+     "wires": 70,
+     "bytes": 11092,
+     "keys": [
+      "canary",
+      "crow",
+      "cuckoo",
+      "dove",
+      "duck",
+      "eagle",
+      "emu",
+      "falcon",
+      "flamingo",
+      "goose",
+      "hawk",
+      "hen",
+      "heron",
+      "hummingbird",
+      "kingfisher",
+      "magpie",
+      "nightingale",
+      "ostrich",
+      "owl",
+      "parrot",
+      "peacock",
+      "pelican",
+      "penguin",
+      "pigeon",
+      "robin",
+      "rooster",
+      "seagull",
+      "sparrow",
+      "stork",
+      "swallow",
+      "swan",
+      "toucan",
+      "turkey",
+      "vulture",
+      "woodpecker"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.animals/shards/fish",
+     "path": "k.animals/shards/fish.sop",
+     "wires": 17,
+     "bytes": 2895,
+     "keys": [
+      "carp",
+      "clownfish",
+      "cod",
+      "eel",
+      "goldfish",
+      "herring",
+      "pike",
+      "salmon",
+      "sardine",
+      "seahorse",
+      "shark",
+      "trout",
+      "tuna"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.animals/shards/invertebrates",
+     "path": "k.animals/shards/invertebrates.sop",
+     "wires": 52,
+     "bytes": 7952,
+     "keys": [
+      "ant",
+      "bee",
+      "beetle",
+      "butterfly",
+      "cockroach",
+      "crab",
+      "cricket",
+      "dragonfly",
+      "earthworm",
+      "firefly",
+      "flea",
+      "fly",
+      "grasshopper",
+      "jellyfish",
+      "ladybird",
+      "lobster",
+      "mosquito",
+      "moth",
+      "octopus",
+      "scorpion",
+      "shrimp",
+      "slug",
+      "snail",
+      "spider",
+      "squid",
+      "starfish",
+      "termite",
+      "wasp"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.animals/shards/mammals",
+     "path": "k.animals/shards/mammals.sop",
+     "wires": 129,
+     "bytes": 20478,
+     "keys": [
+      "alpaca",
+      "anteater",
+      "antelope",
+      "badger",
+      "bat",
+      "bear",
+      "beaver",
+      "bison",
+      "blue whale",
+      "boar",
+      "buffalo",
+      "camel",
+      "cat",
+      "cheetah",
+      "chimpanzee",
+      "cow",
+      "deer",
+      "dog",
+      "dolphin",
+      "donkey",
+      "elephant",
+      "fox",
+      "giraffe",
+      "goat",
+      "gorilla",
+      "guinea pig",
+      "hamster",
+      "hedgehog",
+      "hippopotamus",
+      "horse",
+      "hyena",
+      "jaguar",
+      "kangaroo",
+      "koala",
+      "leopard",
+      "lion",
+      "llama",
+      "lynx",
+      "meerkat",
+      "mole",
+      "monkey",
+      "moose",
+      "mouse",
+      "orangutan",
+      "otter",
+      "ox",
+      "panda",
+      "pig",
+      "polar bear",
+      "pony",
+      "porcupine",
+      "rabbit",
+      "raccoon",
+      "rat",
+      "reindeer",
+      "rhinoceros",
+      "seal",
+      "sheep",
+      "skunk",
+      "sloth",
+      "squirrel",
+      "tiger",
+      "walrus",
+      "whale",
+      "wolf",
+      "yak",
+      "zebra"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.animals/shards/reptiles-and-amphibians",
+     "path": "k.animals/shards/reptiles-and-amphibians.sop",
+     "wires": 26,
+     "bytes": 4527,
+     "keys": [
+      "alligator",
+      "chameleon",
+      "crocodile",
+      "frog",
+      "gecko",
+      "iguana",
+      "lizard",
+      "newt",
+      "salamander",
+      "snake",
+      "toad",
+      "tortoise",
+      "turtle"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.body",
+   "version": "1",
+   "schema": "k.body/schema.sop",
+   "exports": [
+    "k.body.part",
+    "k.body.sense"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.body/shards/core",
+     "path": "k.body/shards/core.sop",
+     "wires": 112,
+     "bytes": 12168,
+     "keys": [
+      "ankle",
+      "arm",
+      "artery",
+      "back",
+      "belly",
+      "bladder",
+      "blood",
+      "body",
+      "bone",
+      "brain",
+      "cheek",
+      "chest",
+      "chin",
+      "ear",
+      "elbow",
+      "eye",
+      "eyebrow",
+      "face",
+      "finger",
+      "foot",
+      "forehead",
+      "hair",
+      "hand",
+      "head",
+      "hearing",
+      "heart",
+      "heel",
+      "hip",
+      "intestine",
+      "kidney",
+      "knee",
+      "leg",
+      "lip",
+      "liver",
+      "lung",
+      "mouth",
+      "muscle",
+      "nail",
+      "neck",
+      "nerve",
+      "nose",
+      "rib",
+      "shoulder",
+      "sight",
+      "skeleton",
+      "skin",
+      "skull",
+      "smell",
+      "spine",
+      "stomach",
+      "taste",
+      "thumb",
+      "toe",
+      "tongue",
+      "tooth",
+      "touch",
+      "vein",
+      "wrist"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
   {
    "id": "k.commonsense",
    "version": "1",
@@ -33,6 +362,243 @@
       "star",
       "sun",
       "tree"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.food",
+   "version": "1",
+   "schema": "k.food/schema.sop",
+   "exports": [
+    "k.food.food"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.food/shards/animal-foods",
+     "path": "k.food/shards/animal-foods.sop",
+     "wires": 34,
+     "bytes": 4438,
+     "keys": [
+      "bacon",
+      "beef",
+      "butter",
+      "cheese",
+      "chicken",
+      "cod",
+      "crab",
+      "cream",
+      "egg",
+      "ham",
+      "herring",
+      "lamb",
+      "lobster",
+      "milk",
+      "mussel",
+      "oyster",
+      "pork",
+      "salmon",
+      "sardine",
+      "sausage",
+      "shrimp",
+      "steak",
+      "tuna",
+      "turkey",
+      "yogurt"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.food/shards/fruit",
+     "path": "k.food/shards/fruit.sop",
+     "wires": 64,
+     "bytes": 8098,
+     "keys": [
+      "apple",
+      "apricot",
+      "avocado",
+      "banana",
+      "blackberry",
+      "blackcurrant",
+      "blueberry",
+      "cherry",
+      "coconut",
+      "date",
+      "fig",
+      "gooseberry",
+      "grape",
+      "grapefruit",
+      "kiwi",
+      "lemon",
+      "lime",
+      "mandarin",
+      "mango",
+      "melon",
+      "olive",
+      "orange",
+      "papaya",
+      "peach",
+      "pear",
+      "pineapple",
+      "plum",
+      "pomegranate",
+      "quince",
+      "raspberry",
+      "strawberry",
+      "watermelon"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.food/shards/grains-nuts-and-pulses",
+     "path": "k.food/shards/grains-nuts-and-pulses.sop",
+     "wires": 41,
+     "bytes": 5221,
+     "keys": [
+      "almond",
+      "barley",
+      "bean",
+      "bread",
+      "bread roll",
+      "cashew",
+      "chestnut",
+      "chickpea",
+      "corn",
+      "flour",
+      "hazelnut",
+      "lentil",
+      "noodles",
+      "oats",
+      "pasta",
+      "peanut",
+      "pecan",
+      "pistachio",
+      "rice",
+      "rye",
+      "soybean",
+      "spaghetti",
+      "toast",
+      "walnut",
+      "wheat"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.food/shards/other",
+     "path": "k.food/shards/other.sop",
+     "wires": 63,
+     "bytes": 8039,
+     "keys": [
+      "apple juice",
+      "basil",
+      "biscuit",
+      "cake",
+      "chocolate",
+      "cinnamon",
+      "coffee",
+      "doughnut",
+      "french fries",
+      "ginger",
+      "hamburger",
+      "honey",
+      "hot chocolate",
+      "hot dog",
+      "ice cream",
+      "jam",
+      "juice",
+      "ketchup",
+      "lemonade",
+      "maple syrup",
+      "marmalade",
+      "milkshake",
+      "mint",
+      "mustard",
+      "olive oil",
+      "omelette",
+      "orange juice",
+      "pancake",
+      "parsley",
+      "pepper",
+      "pie",
+      "pizza",
+      "popcorn",
+      "porridge",
+      "salad",
+      "salt",
+      "sandwich",
+      "soup",
+      "sugar",
+      "sunflower oil",
+      "tea",
+      "tofu",
+      "water"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.food/shards/vegetables",
+     "path": "k.food/shards/vegetables.sop",
+     "wires": 52,
+     "bytes": 7494,
+     "keys": [
+      "artichoke",
+      "asparagus",
+      "aubergine",
+      "beetroot",
+      "bell pepper",
+      "broccoli",
+      "cabbage",
+      "carrot",
+      "cauliflower",
+      "celery",
+      "chilli pepper",
+      "courgette",
+      "cucumber",
+      "garlic",
+      "green bean",
+      "kale",
+      "leek",
+      "lettuce",
+      "mushroom",
+      "onion",
+      "parsnip",
+      "pea",
+      "potato",
+      "pumpkin",
+      "radish",
+      "spinach",
+      "sweet potato",
+      "tomato",
+      "turnip"
      ],
      "sources": [
       "hand-core-1"
@@ -12363,6 +12929,97 @@
    "licenses": [
     "Apache-2.0 AND Unicode-3.0",
     "CC-BY-SA-4.0",
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.space",
+   "version": "1",
+   "schema": "k.space/schema.sop",
+   "exports": [
+    "k.space.body",
+    "k.space.kind"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.space/shards/kinds",
+     "path": "k.space/shards/kinds.sop",
+     "wires": 16,
+     "bytes": 2133,
+     "keys": [
+      "asteroid",
+      "comet",
+      "dwarf planet",
+      "galaxy",
+      "moon",
+      "planet",
+      "solar system",
+      "star"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.space/shards/solar-system",
+     "path": "k.space/shards/solar-system.sop",
+     "wires": 24,
+     "bytes": 3575,
+     "keys": [
+      "callisto",
+      "deimos",
+      "earth",
+      "europa",
+      "ganymede",
+      "halley's comet",
+      "io",
+      "jupiter",
+      "mars",
+      "mercury",
+      "moon",
+      "neptune",
+      "phobos",
+      "pluto",
+      "saturn",
+      "sun",
+      "titan",
+      "triton",
+      "uranus",
+      "venus"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.space/shards/stars-and-galaxies",
+     "path": "k.space/shards/stars-and-galaxies.sop",
+     "wires": 8,
+     "bytes": 1075,
+     "keys": [
+      "andromeda galaxy",
+      "milky way",
+      "polaris",
+      "proxima centauri",
+      "sirius"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
     "CC0-1.0"
    ],
    "warnings": []

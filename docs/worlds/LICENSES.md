@@ -24,12 +24,12 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 
 ## hand-core-1
 
-- What: the hand-written cores of the worlds (`k.commonsense`, `k.objects`): small sets of facts that define each schema and its tests before any bulk import. Written by the worker in this repository, checked by the reviewer.
+- What: the hand-written cores of the worlds (`k.commonsense`, `k.objects`, `k.units`, `k.time`, `k.space`, `k.animals`, `k.body`, `k.food`, and the schemas of the others): small sets of facts that define each schema and its tests before any bulk import. Written by the worker in this repository, checked by the reviewer.
 - Origin: this repository.
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0
-- Used by: `k.commonsense` (1 shards), `k.objects` (10 shards), `k.time` (1 shards), `k.units` (1 shards)
+- Used by: `k.animals` (5 shards), `k.body` (1 shards), `k.commonsense` (1 shards), `k.food` (5 shards), `k.objects` (10 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards)
 
 ## mulberry-fa94a93
 

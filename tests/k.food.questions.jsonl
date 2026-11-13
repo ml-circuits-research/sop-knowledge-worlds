@@ -1,0 +1,14 @@
+{"id":"fd-01","ask":"what kind of food is a carrot","query":{"type":"k.food.food","where":{"name":"carrot"},"seek":"kind"},"expect":{"status":"supported","value":"vegetable"}}
+{"id":"fd-02","ask":"what colour is a banana","query":{"type":"k.food.food","where":{"name":"banana"},"seek":"colour"},"expect":{"status":"supported","value":"yellow"}}
+{"id":"fd-03","ask":"where does an apple grow","query":{"type":"k.food.food","where":{"name":"apple"},"seek":"grows_on"},"expect":{"status":"supported","value":"tree"}}
+{"id":"fd-04","ask":"where does a potato grow","query":{"type":"k.food.food","where":{"name":"potato"},"seek":"grows_on"},"expect":{"status":"supported","value":"underground"}}
+{"id":"fd-05","ask":"what does cheese come from","query":{"type":"k.food.food","where":{"name":"cheese"},"seek":"comes_from"},"expect":{"status":"supported","value":"milk"}}
+{"id":"fd-06","ask":"what does honey come from","query":{"type":"k.food.food","where":{"name":"honey"},"seek":"comes_from"},"expect":{"status":"supported","value":"bee"}}
+{"id":"fd-07","ask":"is a potato eaten raw or cooked","query":{"type":"k.food.food","where":{"name":"potato"},"seek":"eaten"},"expect":{"status":"supported","value":"cooked"}}
+{"id":"fd-08","ask":"what is a tomato, botanically","query":{"type":"k.food.food","where":{"name":"tomato"},"seek":"botanically"},"expect":{"status":"supported","value":"fruit"}}
+{"id":"fd-09","ask":"which fruits are blue","query":{"type":"k.food.food","where":{"kind":"fruit","colour":"blue"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["blueberry"]}}
+{"id":"fd-10","ask":"which foods are made from potato","query":{"type":"k.food.food","where":{"comes_from":"potato"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["\"french fries\""]}}
+{"id":"fd-11","ask":"which fruits grow on a vine","query":{"type":"k.food.food","where":{"kind":"fruit","grows_on":"vine"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["kiwi","grape","watermelon","melon"]}}
+{"id":"fd-12","ask":"how many kinds of nut are there","query":{"type":"k.food.food","where":{"kind":"nut"},"mode":"count"},"expect":{"status":"supported","value":"8"}}
+{"id":"fd-13","ask":"which drawing shows a grape","query":{"type":"k.food.food","where":{"name":"grape"},"seek":"drawing"},"expect":{"status":"supported","value":"grapes"}}
+{"id":"fd-14","ask":"an application's own food is accepted","tell":"@f1 k.food.food name=\"moon cheese\" kind=dairy colour=green","ns":"app","expect":{"issues":[]}}

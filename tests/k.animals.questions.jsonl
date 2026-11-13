@@ -1,0 +1,15 @@
+{"id":"an-01","ask":"what sound does a cow make","query":{"type":"k.animals.animal","where":{"name":"cow"},"seek":"sound"},"expect":{"status":"supported","value":"moo"}}
+{"id":"an-02","ask":"what is a baby kangaroo called","query":{"type":"k.animals.animal","where":{"name":"kangaroo"},"seek":"baby"},"expect":{"status":"supported","value":"joey"}}
+{"id":"an-03","ask":"how many legs does a spider have","query":{"type":"k.animals.animal","where":{"name":"spider"},"seek":"legs"},"expect":{"status":"supported","value":"8"}}
+{"id":"an-04","ask":"what class of animal is a frog","query":{"type":"k.animals.animal","where":{"name":"frog"},"seek":"class"},"expect":{"status":"supported","value":"amphibian"}}
+{"id":"an-05","ask":"what covers a bird like the owl","query":{"type":"k.animals.animal","where":{"name":"owl"},"seek":"covering"},"expect":{"status":"supported","value":"feathers"}}
+{"id":"an-06","ask":"is a lion a herbivore or a carnivore","query":{"type":"k.animals.animal","where":{"name":"lion"},"seek":"diet"},"expect":{"status":"supported","value":"carnivore"}}
+{"id":"an-07","ask":"what does a panda eat","query":{"type":"k.animals.animal","where":{"name":"panda"},"seek":"eats"},"expect":{"status":"supported","value":"bamboo"}}
+{"id":"an-08","ask":"where does a camel live","query":{"type":"k.animals.animal","where":{"name":"camel"},"seek":"habitat"},"expect":{"status":"supported","value":"desert"}}
+{"id":"an-09","ask":"which animal says quack","query":{"type":"k.animals.animal","where":{"sound":"quack"},"seek":"name"},"expect":{"status":"supported","value":"duck"}}
+{"id":"an-10","ask":"which animals are amphibians","query":{"type":"k.animals.animal","where":{"class":"amphibian"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["frog","toad","newt","salamander"]}}
+{"id":"an-11","ask":"what can a penguin do","query":{"type":"k.animals.animal","where":{"name":"penguin"},"seek":"can","mode":"list"},"expect":{"status":"supported","values":["swim"]}}
+{"id":"an-12","ask":"which mammal can fly","query":{"type":"k.animals.animal","where":{"class":"mammal","can":"fly"},"seek":"name"},"expect":{"status":"supported","value":"bat"}}
+{"id":"an-13","ask":"how many arachnids are there","query":{"type":"k.animals.animal","where":{"class":"arachnid"},"mode":"count"},"expect":{"status":"supported","value":"2"}}
+{"id":"an-14","ask":"which drawing shows a ladybird","query":{"type":"k.animals.animal","where":{"name":"ladybird"},"seek":"drawing"},"expect":{"status":"supported","value":"\"lady beetle\""}}
+{"id":"an-15","ask":"an application's own animal is accepted","tell":"@a1 k.animals.animal name=dragon class=reptile legs=4 can=fly","ns":"app","expect":{"issues":[]}}

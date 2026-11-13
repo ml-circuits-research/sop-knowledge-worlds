@@ -66,6 +66,7 @@
   "k.words/shards/ab"
  ],
  "abdomen": [
+  "k.body/shards/core",
   "k.words/shards/ab"
  ],
  "abdominal": [
@@ -979,7 +980,11 @@
   "k.words/shards/al"
  ],
  "alligator": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.words/shards/al"
+ ],
+ "alligators": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "allow": [
   "k.words/shards/al"
@@ -997,9 +1002,13 @@
   "k.words/shards/al"
  ],
  "almond": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-01",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/al"
+ ],
+ "almonds": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "alms": [
   "k.words/shards/al"
@@ -1014,7 +1023,11 @@
   "k.words/shards/al"
  ],
  "alpaca": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-05"
+ ],
+ "alpacas": [
+  "k.animals/shards/mammals"
  ],
  "alpha": [
   "k.objects/shards/noto-animal-mammal-02",
@@ -1296,6 +1309,9 @@
  "andromeda": [
   "k.words/shards/an"
  ],
+ "andromeda galaxy": [
+  "k.space/shards/stars-and-galaxies"
+ ],
  "anesthesia": [
   "k.words/shards/an"
  ],
@@ -1346,6 +1362,7 @@
   "k.geo/shards/north-america"
  ],
  "animal": [
+  "k.animals/schema.sop",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
@@ -1377,6 +1394,7 @@
   "k.words/shards/an"
  ],
  "animals": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-06"
  ],
@@ -1387,7 +1405,11 @@
   "k.geo/shards/asia"
  ],
  "ankle": [
+  "k.body/shards/core",
   "k.words/shards/an"
+ ],
+ "ankles": [
+  "k.body/shards/core"
  ],
  "anna": [
   "k.words/shards/an"
@@ -1439,6 +1461,7 @@
   "k.words/shards/an"
  ],
  "ant": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/an"
  ],
@@ -1459,8 +1482,18 @@
  "ante": [
   "k.words/shards/an"
  ],
+ "anteater": [
+  "k.animals/shards/mammals"
+ ],
+ "anteaters": [
+  "k.animals/shards/mammals"
+ ],
  "antelope": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-01"
+ ],
+ "antelopes": [
+  "k.animals/shards/mammals"
  ],
  "antenna": [
   "k.objects/shards/animals",
@@ -1527,6 +1560,9 @@
  ],
  "antony": [
   "k.words/shards/an"
+ ],
+ "ants": [
+  "k.animals/shards/invertebrates"
  ],
  "antsirabe": [
   "k.geo/shards/africa"
@@ -1632,6 +1668,7 @@
   "k.words/shards/ap"
  ],
  "apple": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/mulberry-food-meals-and-snacks-04",
@@ -1642,9 +1679,11 @@
   "k.words/shards/ap"
  ],
  "apple juice": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-01"
  ],
  "apples": [
+  "k.food/shards/fruit",
   "k.objects/shards/nature"
  ],
  "appliance": [
@@ -1697,6 +1736,12 @@
  ],
  "apr": [
   "k.time/shards/calendar"
+ ],
+ "apricot": [
+  "k.food/shards/fruit"
+ ],
+ "apricots": [
+  "k.food/shards/fruit"
  ],
  "april": [
   "k.time/shards/calendar",
@@ -1897,6 +1942,7 @@
   "k.words/shards/ar"
  ],
  "arm": [
+  "k.body/shards/core",
   "k.objects/shards/figures",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/ar"
@@ -1933,6 +1979,7 @@
   "k.words/shards/ar"
  ],
  "arms": [
+  "k.body/shards/core",
   "k.objects/shards/figures",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/ar"
@@ -1955,6 +2002,9 @@
  ],
  "arose": [
   "k.words/shards/ar"
+ ],
+ "around": [
+  "k.space/schema.sop"
  ],
  "arouse": [
   "k.words/shards/ar"
@@ -2021,7 +2071,11 @@
  "artashat": [
   "k.geo/shards/asia"
  ],
+ "arteries": [
+  "k.body/shards/core"
+ ],
  "artery": [
+  "k.body/shards/core",
   "k.words/shards/ar"
  ],
  "arthritis": [
@@ -2031,7 +2085,11 @@
   "k.words/shards/ar"
  ],
  "artichoke": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-01"
+ ],
+ "artichokes": [
+  "k.food/shards/vegetables"
  ],
  "article": [
   "k.words/shards/ar"
@@ -2160,6 +2218,7 @@
   "k.geo/shards/africa"
  ],
  "asparagus": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-01",
   "k.words/shards/as"
  ],
@@ -2173,6 +2232,7 @@
   "k.words/shards/as"
  ],
  "ass": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03",
   "k.words/shards/as"
  ],
@@ -2250,7 +2310,11 @@
   "k.words/shards/as"
  ],
  "asteroid": [
+  "k.space/shards/kinds",
   "k.words/shards/as"
+ ],
+ "asteroids": [
+  "k.space/shards/kinds"
  ],
  "asthma": [
   "k.words/shards/as"
@@ -2417,8 +2481,12 @@
   "k.words/shards/au"
  ],
  "aubergine": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-01",
   "k.objects/shards/noto-food-vegetable-01"
+ ],
+ "aubergines": [
+  "k.food/shards/vegetables"
  ],
  "aucanquilcha": [
   "k.geo/shards/south-america"
@@ -2614,8 +2682,12 @@
   "k.words/shards/av"
  ],
  "avocado": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-vegetable-01",
   "k.words/shards/av"
+ ],
+ "avocados": [
+  "k.food/shards/fruit"
  ],
  "avoid": [
   "k.words/shards/av"
@@ -2738,6 +2810,7 @@
   "k.objects/shards/noto-game-02"
  ],
  "baby": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-drink-01",
   "k.words/shards/ba"
@@ -2785,6 +2858,7 @@
   "k.words/shards/ba"
  ],
  "back": [
+  "k.body/shards/core",
   "k.geo/shards/north-america",
   "k.objects/shards/home",
   "k.objects/shards/household",
@@ -2829,6 +2903,7 @@
   "k.objects/shards/noto-transport-ground-03"
  ],
  "backbone": [
+  "k.body/shards/core",
   "k.words/shards/ba"
  ],
  "background": [
@@ -2843,6 +2918,9 @@
  ],
  "backpacking": [
   "k.objects/shards/noto-clothing-04"
+ ],
+ "backs": [
+  "k.body/shards/core"
  ],
  "backseat": [
   "k.words/shards/ba"
@@ -2863,6 +2941,7 @@
   "k.words/shards/ba"
  ],
  "bacon": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/ba"
@@ -2886,8 +2965,12 @@
   "k.words/shards/ba"
  ],
  "badger": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08",
   "k.words/shards/ba"
+ ],
+ "badgers": [
+  "k.animals/shards/mammals"
  ],
  "badminton": [
   "k.objects/shards/noto-sport-02"
@@ -3208,12 +3291,16 @@
   "k.words/shards/ba"
  ],
  "banana": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/ba"
  ],
  "banana bunch": [
   "k.objects/shards/mulberry-food-fruit-01"
+ ],
+ "bananas": [
+  "k.food/shards/fruit"
  ],
  "banas": [
   "k.geo/shards/asia"
@@ -3484,6 +3571,7 @@
   "k.words/shards/ba"
  ],
  "barley": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.words/shards/ba"
  ],
  "barn": [
@@ -3643,6 +3731,7 @@
   "k.words/shards/ba"
  ],
  "basil": [
+  "k.food/shards/other",
   "k.words/shards/ba"
  ],
  "basin": [
@@ -3683,6 +3772,7 @@
   "k.words/shards/ba"
  ],
  "bat": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-sport-02",
@@ -3725,6 +3815,9 @@
  ],
  "baton": [
   "k.words/shards/ba"
+ ],
+ "bats": [
+  "k.animals/shards/mammals"
  ],
  "battalion": [
   "k.words/shards/ba"
@@ -3898,6 +3991,7 @@
   "k.words/shards/be"
  ],
  "bean": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/openmoji-food-drink-01",
   "k.words/shards/be"
  ],
@@ -3917,6 +4011,7 @@
   "k.objects/shards/mulberry-leisure-toys-01"
  ],
  "beans": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-vegetable-02",
   "k.objects/shards/noto-food-vegetable-03"
  ],
@@ -3930,6 +4025,7 @@
   "k.objects/shards/noto-food-vegetable-03"
  ],
  "bear": [
+  "k.animals/shards/mammals",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
@@ -3947,6 +4043,9 @@
  ],
  "bearing": [
   "k.words/shards/be"
+ ],
+ "bears": [
+  "k.animals/shards/mammals"
  ],
  "beartown mountain": [
   "k.geo/shards/north-america"
@@ -3990,9 +4089,13 @@
   "k.words/shards/be"
  ],
  "beaver": [
+  "k.animals/shards/mammals",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-07",
   "k.words/shards/be"
+ ],
+ "beavers": [
+  "k.animals/shards/mammals"
  ],
  "became": [
   "k.words/shards/be"
@@ -4034,6 +4137,7 @@
   "k.words/shards/be"
  ],
  "bee": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/more",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/be"
@@ -4045,6 +4149,7 @@
   "k.objects/shards/mulberry-animal-spiders-and-insects-01"
  ],
  "beef": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-meat-01",
   "k.words/shards/be"
  ],
@@ -4073,20 +4178,33 @@
   "k.geo/shards/europe"
  ],
  "bees": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/more"
  ],
  "beet": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-03"
  ],
  "beethoven": [
   "k.words/shards/be"
  ],
  "beetle": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/be"
  ],
+ "beetles": [
+  "k.animals/shards/invertebrates"
+ ],
  "beetroot": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-01"
+ ],
+ "beetroots": [
+  "k.food/shards/vegetables"
+ ],
+ "beets": [
+  "k.food/shards/vegetables"
  ],
  "beeves": [
   "k.words/shards/be"
@@ -4222,7 +4340,11 @@
   "k.words/shards/be"
  ],
  "bell pepper": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-01"
+ ],
+ "bell peppers": [
+  "k.food/shards/vegetables"
  ],
  "bell with slash": [
   "k.objects/shards/noto-sound-02"
@@ -4242,10 +4364,14 @@
  "bellied": [
   "k.words/shards/be"
  ],
+ "bellies": [
+  "k.body/shards/core"
+ ],
  "bellows": [
   "k.words/shards/be"
  ],
  "belly": [
+  "k.body/shards/core",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/noto-animal-bird-01",
@@ -4737,6 +4863,7 @@
   "k.words/shards/bi"
  ],
  "biscuit": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-breads-and-baking-01",
   "k.words/shards/bi"
  ],
@@ -4744,6 +4871,7 @@
   "k.objects/shards/mulberry-food-breads-and-baking-01"
  ],
  "biscuits": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-breads-and-baking-01"
  ],
  "bisexual": [
@@ -4756,6 +4884,7 @@
   "k.words/shards/bi"
  ],
  "bison": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-04",
   "k.words/shards/bi"
  ],
@@ -4829,16 +4958,24 @@
  "black_paint": [
   "k.objects/shards/mulberry-art-making-01"
  ],
+ "blackberries": [
+  "k.food/shards/fruit"
+ ],
  "blackberry": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-01"
  ],
  "blackboard": [
   "k.objects/shards/mulberry-building-equipment-and-devices-01"
  ],
+ "blackcurrant": [
+  "k.food/shards/fruit"
+ ],
  "blackcurrant juice": [
   "k.objects/shards/mulberry-drink-type-01"
  ],
  "blackcurrants": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-01"
  ],
  "blackfish": [
@@ -4863,7 +5000,11 @@
   "k.geo/shards/oceania"
  ],
  "bladder": [
+  "k.body/shards/core",
   "k.words/shards/bl"
+ ],
+ "bladders": [
+  "k.body/shards/core"
  ],
  "blade": [
   "k.objects/shards/mulberry-food-dairy-02",
@@ -5039,6 +5180,7 @@
   "k.words/shards/bl"
  ],
  "blood": [
+  "k.body/shards/core",
   "k.objects/shards/noto-medical-01",
   "k.objects/shards/openmoji-healthcare-02",
   "k.words/shards/bl"
@@ -5123,8 +5265,17 @@
  "blue nile": [
   "k.geo/shards/africa"
  ],
+ "blue planet": [
+  "k.space/shards/solar-system"
+ ],
  "blue ridge mountains": [
   "k.geo/shards/north-america"
+ ],
+ "blue whale": [
+  "k.animals/shards/mammals"
+ ],
+ "blue whales": [
+  "k.animals/shards/mammals"
  ],
  "blue_button": [
   "k.objects/shards/mulberry-electrical-media-02"
@@ -5136,9 +5287,11 @@
   "k.objects/shards/mulberry-art-making-01"
  ],
  "blueberries": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-02"
  ],
  "blueberry": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/bl"
  ],
@@ -5185,6 +5338,7 @@
   "k.words/shards/bo"
  ],
  "boar": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-04",
   "k.words/shards/bo"
  ],
@@ -5205,6 +5359,9 @@
  "boards": [
   "k.objects/shards/home",
   "k.words/shards/bo"
+ ],
+ "boars": [
+  "k.animals/shards/mammals"
  ],
  "boast": [
   "k.words/shards/bo"
@@ -5252,7 +5409,12 @@
  "bodied": [
   "k.words/shards/bo"
  ],
+ "bodies": [
+  "k.body/shards/core"
+ ],
  "body": [
+  "k.body/schema.sop",
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/buildings",
   "k.objects/shards/figures",
@@ -5446,6 +5608,7 @@
   "k.words/shards/bo"
  ],
  "bone": [
+  "k.body/shards/core",
   "k.objects/shards/mulberry-food-poultry-01",
   "k.objects/shards/noto-food-prepared-02",
   "k.objects/shards/openmoji-healthcare-03",
@@ -5455,6 +5618,7 @@
   "k.words/shards/bo"
  ],
  "bones": [
+  "k.body/shards/core",
   "k.objects/shards/noto-medical-01",
   "k.words/shards/bo"
  ],
@@ -5859,6 +6023,7 @@
   "k.objects/shards/mulberry-clothes-accessories-01"
  ],
  "bowel": [
+  "k.body/shards/core",
   "k.words/shards/bo"
  ],
  "bowels": [
@@ -6029,8 +6194,12 @@
   "k.words/shards/br"
  ],
  "brain": [
+  "k.body/shards/core",
   "k.objects/shards/openmoji-healthcare-03",
   "k.words/shards/br"
+ ],
+ "brains": [
+  "k.body/shards/core"
  ],
  "brake": [
   "k.words/shards/br"
@@ -6132,6 +6301,7 @@
   "k.words/shards/br"
  ],
  "bread": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-prepared-01",
   "k.objects/shards/noto-food-prepared-03",
   "k.words/shards/br"
@@ -6140,6 +6310,7 @@
   "k.objects/shards/mulberry-food-breads-and-baking-01"
  ],
  "bread roll": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-breads-and-baking-01"
  ],
  "bread roll filled": [
@@ -6147,6 +6318,9 @@
  ],
  "bread roll granary": [
   "k.objects/shards/mulberry-food-breads-and-baking-02"
+ ],
+ "bread rolls": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "bread slice": [
   "k.objects/shards/mulberry-food-breads-and-baking-02"
@@ -6401,6 +6575,7 @@
   "k.words/shards/br"
  ],
  "broccoli": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/br"
  ],
@@ -6667,11 +6842,13 @@
   "k.words/shards/bu"
  ],
  "buffalo": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-04",
   "k.words/shards/bu"
  ],
  "buffaloes": [
+  "k.animals/shards/mammals",
   "k.words/shards/bu"
  ],
  "buffer": [
@@ -6876,7 +7053,11 @@
  "bunker": [
   "k.words/shards/bu"
  ],
+ "bunnies": [
+  "k.animals/shards/mammals"
+ ],
  "bunny": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-07",
   "k.words/shards/bu"
  ],
@@ -6921,10 +7102,12 @@
   "k.geo/shards/europe"
  ],
  "burger": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/bu"
  ],
  "burgers": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-vegetable-02"
  ],
  "burgess": [
@@ -7083,6 +7266,7 @@
   "k.words/shards/bu"
  ],
  "butter": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-food-prepared-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/bu"
@@ -7091,9 +7275,11 @@
   "k.objects/shards/noto-plant-flower-02"
  ],
  "butterflies": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/animals"
  ],
  "butterfly": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/animals",
   "k.words/shards/bu"
  ],
@@ -7243,9 +7429,13 @@
   "k.words/shards/ca"
  ],
  "cabbage": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-02",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/ca"
+ ],
+ "cabbages": [
+  "k.food/shards/vegetables"
  ],
  "cabbie": [
   "k.objects/shards/noto-transport-ground-03"
@@ -7351,6 +7541,7 @@
   "k.words/shards/ca"
  ],
  "cake": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-sweets-and-desserts-02",
   "k.objects/shards/mulberry-food-sweets-and-desserts-04",
   "k.objects/shards/noto-food-asian-02",
@@ -7378,6 +7569,9 @@
  ],
  "cake tin": [
   "k.objects/shards/mulberry-food-kitchen-items-01"
+ ],
+ "cakes": [
+  "k.food/shards/other"
  ],
  "calabria": [
   "k.geo/shards/europe"
@@ -7450,6 +7644,9 @@
  "calling": [
   "k.words/shards/ca"
  ],
+ "callisto": [
+  "k.space/shards/solar-system"
+ ],
  "calm": [
   "k.objects/shards/noto-plant-flower-01",
   "k.words/shards/ca"
@@ -7490,11 +7687,15 @@
   "k.words/shards/co"
  ],
  "camel": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/ca"
  ],
  "camelot": [
   "k.words/shards/ca"
+ ],
+ "camels": [
+  "k.animals/shards/mammals"
  ],
  "camera": [
   "k.objects/shards/mulberry-electrical-media-02",
@@ -7591,7 +7792,11 @@
  "canalling": [
   "k.words/shards/ca"
  ],
+ "canaries": [
+  "k.animals/shards/birds"
+ ],
  "canary": [
+  "k.animals/shards/birds",
   "k.words/shards/ca"
  ],
  "canberra": [
@@ -7816,6 +8021,7 @@
   "k.objects/shards/noto-animal-mammal-05"
  ],
  "capsicum": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-01"
  ],
  "capsule": [
@@ -7981,6 +8187,7 @@
   "k.objects/shards/noto-place-other-02"
  ],
  "carp": [
+  "k.animals/shards/fish",
   "k.objects/shards/noto-event-02",
   "k.words/shards/ca"
  ],
@@ -8021,9 +8228,13 @@
   "k.words/shards/ca"
  ],
  "carrot": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-meals-and-snacks-05",
   "k.objects/shards/noto-food-vegetable-01",
   "k.words/shards/ca"
+ ],
+ "carrots": [
+  "k.food/shards/vegetables"
  ],
  "carry": [
   "k.words/shards/ca"
@@ -8098,7 +8309,11 @@
   "k.objects/shards/mulberry-money-01"
  ],
  "cashew": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-01"
+ ],
+ "cashews": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "cashier": [
   "k.words/shards/ca"
@@ -8182,6 +8397,7 @@
   "k.words/shards/ca"
  ],
  "cat": [
+  "k.animals/shards/mammals",
   "k.commonsense/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/noto-animal-mammal-02",
@@ -8242,6 +8458,7 @@
   "k.words/shards/ca"
  ],
  "cats": [
+  "k.animals/shards/mammals",
   "k.commonsense/shards/core",
   "k.objects/shards/animals"
  ],
@@ -8267,7 +8484,11 @@
   "k.words/shards/ca"
  ],
  "cauliflower": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-02"
+ ],
+ "cauliflowers": [
+  "k.food/shards/vegetables"
  ],
  "cause": [
   "k.words/shards/ca"
@@ -8397,6 +8618,7 @@
   "k.objects/shards/mulberry-food-vegetables-and-salads-02"
  ],
  "celery": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-02",
   "k.words/shards/ce"
  ],
@@ -8690,8 +8912,12 @@
   "k.geo/shards/africa"
  ],
  "chameleon": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.words/shards/ch"
+ ],
+ "chameleons": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "champ": [
   "k.words/shards/ch"
@@ -8975,11 +9201,15 @@
   "k.words/shards/ch"
  ],
  "cheek": [
+  "k.body/shards/core",
   "k.objects/shards/noto-sky-weather-02",
   "k.words/shards/ch"
  ],
  "cheekha dar": [
   "k.geo/shards/asia"
+ ],
+ "cheeks": [
+  "k.body/shards/core"
  ],
  "cheer": [
   "k.words/shards/ch"
@@ -8998,6 +9228,7 @@
   "k.objects/shards/noto-drink-02"
  ],
  "cheese": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-dairy-01",
   "k.objects/shards/noto-food-prepared-02",
   "k.objects/shards/noto-food-prepared-04",
@@ -9025,9 +9256,16 @@
  "cheesecake": [
   "k.words/shards/ch"
  ],
+ "cheeses": [
+  "k.food/shards/animal-foods"
+ ],
  "cheetah": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.words/shards/ch"
+ ],
+ "cheetahs": [
+  "k.animals/shards/mammals"
  ],
  "chef": [
   "k.objects/shards/noto-dishware-01",
@@ -9070,9 +9308,11 @@
   "k.words/shards/ch"
  ],
  "cherries": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-02"
  ],
  "cherry": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-01",
   "k.objects/shards/mulberry-food-fruit-03",
   "k.objects/shards/noto-food-fruit-02",
@@ -9095,6 +9335,7 @@
   "k.objects/shards/noto-game-03"
  ],
  "chest": [
+  "k.body/shards/core",
   "k.objects/shards/noto-tool-03",
   "k.words/shards/ch"
  ],
@@ -9105,11 +9346,16 @@
   "k.words/shards/ch"
  ],
  "chestnut": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/ch"
  ],
  "chestnuts": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-01"
+ ],
+ "chests": [
+  "k.body/shards/core"
  ],
  "chevy": [
   "k.words/shards/ch"
@@ -9147,6 +9393,8 @@
   "k.words/shards/ch"
  ],
  "chicken": [
+  "k.animals/shards/birds",
+  "k.food/shards/animal-foods",
   "k.objects/shards/more",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-food-prepared-02",
@@ -9171,10 +9419,15 @@
   "k.objects/shards/mulberry-food-poultry-01"
  ],
  "chickens": [
+  "k.animals/shards/birds",
   "k.objects/shards/more"
  ],
  "chickpea": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-prepared-03"
+ ],
+ "chickpeas": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "chiclayo": [
   "k.geo/shards/south-america"
@@ -9205,16 +9458,25 @@
   "k.words/shards/ch"
  ],
  "chili": [
+  "k.food/shards/vegetables",
   "k.words/shards/ch"
+ ],
+ "chili pepper": [
+  "k.food/shards/vegetables"
  ],
  "chill": [
   "k.words/shards/ch"
  ],
  "chilli": [
+  "k.food/shards/vegetables",
   "k.words/shards/ch"
  ],
  "chilli pepper": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-02"
+ ],
+ "chilli peppers": [
+  "k.food/shards/vegetables"
  ],
  "chillies": [
   "k.words/shards/ch"
@@ -9244,12 +9506,21 @@
   "k.geo/shards/africa"
  ],
  "chimp": [
+  "k.animals/shards/mammals",
   "k.words/shards/ch"
  ],
  "chimpanzee": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-01"
  ],
+ "chimpanzees": [
+  "k.animals/shards/mammals"
+ ],
+ "chimps": [
+  "k.animals/shards/mammals"
+ ],
  "chin": [
+  "k.body/shards/core",
   "k.words/shards/ch"
  ],
  "chin hills": [
@@ -9290,6 +9561,9 @@
  "chino": [
   "k.words/shards/ch"
  ],
+ "chins": [
+  "k.body/shards/core"
+ ],
  "chip": [
   "k.objects/shards/mulberry-money-01",
   "k.objects/shards/noto-food-sweet-01",
@@ -9320,6 +9594,7 @@
   "k.words/shards/ch"
  ],
  "chips": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-vegetables-and-salads-02",
   "k.words/shards/ch"
  ],
@@ -9354,6 +9629,7 @@
   "k.geo/shards/africa"
  ],
  "chocolate": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-sweets-and-desserts-01",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-food-sweet-01",
@@ -9374,6 +9650,9 @@
  ],
  "chocolate log": [
   "k.objects/shards/mulberry-food-breads-and-baking-04"
+ ],
+ "chocolates": [
+  "k.food/shards/other"
  ],
  "choice": [
   "k.words/shards/ch"
@@ -9622,6 +9901,7 @@
   "k.words/shards/ci"
  ],
  "cinnamon": [
+  "k.food/shards/other",
   "k.words/shards/ci"
  ],
  "cipher": [
@@ -9789,6 +10069,7 @@
   "k.words/shards/cl"
  ],
  "class": [
+  "k.animals/schema.sop",
   "k.objects/shards/mulberry-building-equipment-and-devices-01",
   "k.objects/shards/mulberry-building-furniture-04",
   "k.objects/shards/mulberry-clothes-accessories-02",
@@ -10141,6 +10422,9 @@
  "clown": [
   "k.words/shards/cl"
  ],
+ "clownfish": [
+  "k.animals/shards/fish"
+ ],
  "club": [
   "k.objects/shards/mulberry-leisure-games-01",
   "k.objects/shards/noto-drink-01",
@@ -10276,6 +10560,7 @@
   "k.objects/shards/mulberry-animal-birds-01"
  ],
  "cockerel": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-01"
  ],
  "cockpit": [
@@ -10283,8 +10568,12 @@
   "k.words/shards/co"
  ],
  "cockroach": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/co"
+ ],
+ "cockroaches": [
+  "k.animals/shards/invertebrates"
  ],
  "cocksucker": [
   "k.words/shards/co"
@@ -10305,13 +10594,19 @@
   "k.words/shards/co"
  ],
  "coconut": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-03",
   "k.words/shards/co"
+ ],
+ "coconuts": [
+  "k.food/shards/fruit"
  ],
  "cocoon": [
   "k.words/shards/co"
  ],
  "cod": [
+  "k.animals/shards/fish",
+  "k.food/shards/animal-foods",
   "k.words/shards/co"
  ],
  "codded": [
@@ -10327,6 +10622,7 @@
   "k.words/shards/co"
  ],
  "coffee": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/openmoji-food-drink-01",
@@ -10344,6 +10640,9 @@
  ],
  "coffee table": [
   "k.objects/shards/mulberry-building-furniture-02"
+ ],
+ "coffees": [
+  "k.food/shards/other"
  ],
  "coffin": [
   "k.objects/shards/noto-other-object-01",
@@ -10500,6 +10799,7 @@
   "k.words/shards/co"
  ],
  "color": [
+  "k.food/schema.sop",
   "k.objects/schema.sop",
   "k.words/shards/co"
  ],
@@ -10519,6 +10819,7 @@
   "k.words/shards/co"
  ],
  "colour": [
+  "k.food/schema.sop",
   "k.objects/schema.sop",
   "k.words/shards/co"
  ],
@@ -10618,9 +10919,16 @@
  "comedy": [
   "k.words/shards/co"
  ],
+ "comes": [
+  "k.food/schema.sop"
+ ],
  "comet": [
   "k.objects/shards/noto-sky-weather-05",
+  "k.space/shards/kinds",
   "k.words/shards/co"
+ ],
+ "comets": [
+  "k.space/shards/kinds"
  ],
  "comfort": [
   "k.objects/shards/openmoji-healthcare-02",
@@ -11505,6 +11813,7 @@
   "k.geo/shards/oceania-borders"
  ],
  "cooked": [
+  "k.food/schema.sop",
   "k.objects/shards/noto-food-asian-01"
  ],
  "cooked rice": [
@@ -11515,9 +11824,13 @@
   "k.objects/shards/mulberry-food-kitchen-items-02"
  ],
  "cookie": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-asian-02",
   "k.objects/shards/noto-food-sweet-01",
   "k.words/shards/co"
+ ],
+ "cookies": [
+  "k.food/shards/other"
  ],
  "cooking": [
   "k.objects/shards/mulberry-building-contents-03",
@@ -11676,6 +11989,7 @@
   "k.words/shards/co"
  ],
  "corn": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-food-vegetable-01",
   "k.words/shards/co"
@@ -11942,7 +12256,11 @@
   "k.geo/shards/south-america"
  ],
  "courgette": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03"
+ ],
+ "courgettes": [
+  "k.food/shards/vegetables"
  ],
  "courier": [
   "k.words/shards/co"
@@ -12006,13 +12324,18 @@
  "coverage": [
   "k.words/shards/co"
  ],
+ "covered": [
+  "k.animals/schema.sop"
+ ],
  "covering": [
+  "k.animals/schema.sop",
   "k.words/shards/co"
  ],
  "covert": [
   "k.words/shards/co"
  ],
  "cow": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-04",
   "k.words/shards/co"
  ],
@@ -12038,6 +12361,7 @@
   "k.geo/shards/north-america"
  ],
  "cows": [
+  "k.animals/shards/mammals",
   "k.words/shards/co"
  ],
  "cox": [
@@ -12053,6 +12377,8 @@
   "k.words/shards/cp"
  ],
  "crab": [
+  "k.animals/shards/invertebrates",
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/cr"
  ],
@@ -12063,6 +12389,7 @@
   "k.words/shards/cr"
  ],
  "crabs": [
+  "k.animals/shards/invertebrates",
   "k.words/shards/cr"
  ],
  "crack": [
@@ -12182,6 +12509,7 @@
   "k.words/shards/cr"
  ],
  "cream": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-food-sweet-01",
   "k.words/shards/cr"
  ],
@@ -12282,6 +12610,7 @@
   "k.words/shards/cr"
  ],
  "cricket": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-sport-02",
   "k.words/shards/cr"
@@ -12291,6 +12620,9 @@
  ],
  "cricket game": [
   "k.objects/shards/noto-sport-02"
+ ],
+ "crickets": [
+  "k.animals/shards/invertebrates"
  ],
  "cried": [
   "k.words/shards/cr"
@@ -12360,8 +12692,12 @@
   "k.words/shards/cr"
  ],
  "crocodile": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/cr"
+ ],
+ "crocodiles": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "crocus hill": [
   "k.geo/shards/north-america"
@@ -12430,6 +12766,7 @@
   "k.words/shards/cr"
  ],
  "crow": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/cr"
  ],
@@ -12453,6 +12790,9 @@
  ],
  "crown mountain": [
   "k.geo/shards/north-america"
+ ],
+ "crows": [
+  "k.animals/shards/birds"
  ],
  "cruach nam miseag": [
   "k.geo/shards/europe"
@@ -12598,11 +12938,19 @@
   "k.geo/shards/south-america"
  ],
  "cuckoo": [
+  "k.animals/shards/birds",
   "k.words/shards/cu"
  ],
+ "cuckoos": [
+  "k.animals/shards/birds"
+ ],
  "cucumber": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-01",
   "k.words/shards/cu"
+ ],
+ "cucumbers": [
+  "k.food/shards/vegetables"
  ],
  "cuddle": [
   "k.words/shards/cu"
@@ -13192,12 +13540,14 @@
   "k.words/shards/da"
  ],
  "date": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-office-01",
   "k.objects/shards/noto-plant-flower-01",
   "k.words/shards/da"
  ],
  "dates": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-01"
  ],
  "dating": [
@@ -13512,6 +13862,7 @@
   "k.objects/shards/mulberry-food-kitchen-items-02"
  ],
  "deer": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.words/shards/de"
@@ -13589,6 +13940,9 @@
  ],
  "degrees fahrenheit": [
   "k.units/shards/core"
+ ],
+ "deimos": [
+  "k.space/shards/solar-system"
  ],
  "deity": [
   "k.words/shards/de"
@@ -14224,6 +14578,7 @@
   "k.objects/shards/openmoji-transport-and-map-symbols-01"
  ],
  "diet": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/di"
  ],
@@ -14812,6 +15167,7 @@
   "k.geo/shards/europe"
  ],
  "do": [
+  "k.body/schema.sop",
   "k.objects/shards/noto-office-02",
   "k.words/shards/do"
  ],
@@ -14876,7 +15232,11 @@
   "k.objects/shards/openmoji-animals-nature-01",
   "k.words/shards/do"
  ],
+ "does": [
+  "k.body/schema.sop"
+ ],
  "dog": [
+  "k.animals/shards/mammals",
   "k.commonsense/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/noto-animal-mammal-01",
@@ -14885,6 +15245,9 @@
  ],
  "dog face": [
   "k.objects/shards/noto-animal-mammal-01"
+ ],
+ "dog star": [
+  "k.space/shards/stars-and-galaxies"
  ],
  "dogged": [
   "k.words/shards/do"
@@ -14902,6 +15265,7 @@
   "k.objects/shards/structures"
  ],
  "dogs": [
+  "k.animals/shards/mammals",
   "k.commonsense/shards/core",
   "k.objects/shards/animals"
  ],
@@ -14938,8 +15302,12 @@
   "k.words/shards/do"
  ],
  "dolphin": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-marine-01",
   "k.words/shards/do"
+ ],
+ "dolphins": [
+  "k.animals/shards/mammals"
  ],
  "domain": [
   "k.words/shards/do"
@@ -15030,8 +15398,12 @@
   "k.geo/shards/north-america"
  ],
  "donkey": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03",
   "k.words/shards/do"
+ ],
+ "donkeys": [
+  "k.animals/shards/mammals"
  ],
  "donna": [
   "k.words/shards/do"
@@ -15046,8 +15418,12 @@
   "k.words/shards/do"
  ],
  "donut": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-sweet-01",
   "k.words/shards/do"
+ ],
+ "donuts": [
+  "k.food/shards/other"
  ],
  "doodle": [
   "k.words/shards/do"
@@ -15205,8 +15581,12 @@
   "k.words/shards/do"
  ],
  "doughnut": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-sweet-01",
   "k.words/shards/do"
+ ],
+ "doughnuts": [
+  "k.food/shards/other"
  ],
  "douglas": [
   "k.geo/shards/europe",
@@ -15216,12 +15596,16 @@
   "k.geo/shards/asia"
  ],
  "dove": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-01",
   "k.words/shards/di",
   "k.words/shards/do"
  ],
  "dover": [
   "k.words/shards/do"
+ ],
+ "doves": [
+  "k.animals/shards/birds"
  ],
  "down": [
   "k.objects/shards/noto-animal-mammal-08",
@@ -15291,7 +15675,11 @@
  "dragon face": [
   "k.objects/shards/noto-animal-reptile-01"
  ],
+ "dragonflies": [
+  "k.animals/shards/invertebrates"
+ ],
  "dragonfly": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01"
  ],
  "drain": [
@@ -15604,12 +15992,16 @@
   "k.words/shards/du"
  ],
  "duck": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/du"
  ],
  "duckling": [
   "k.objects/shards/noto-animal-bird-02"
+ ],
+ "ducks": [
+  "k.animals/shards/birds"
  ],
  "ducky": [
   "k.words/shards/du"
@@ -15788,6 +16180,12 @@
  "dwarf": [
   "k.words/shards/dw"
  ],
+ "dwarf planet": [
+  "k.space/shards/kinds"
+ ],
+ "dwarf planets": [
+  "k.space/shards/kinds"
+ ],
  "dwarves": [
   "k.words/shards/dw"
  ],
@@ -15847,13 +16245,18 @@
   "k.words/shards/ea"
  ],
  "eagle": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-02",
   "k.words/shards/ea"
  ],
  "eagle mountain": [
   "k.geo/shards/north-america"
  ],
+ "eagles": [
+  "k.animals/shards/birds"
+ ],
  "ear": [
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-animal-mammal-02",
@@ -15895,11 +16298,13 @@
   "k.objects/shards/mulberry-clothes-jewellery-01"
  ],
  "ears": [
+  "k.body/shards/core",
   "k.objects/shards/animals"
  ],
  "earth": [
   "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-place-map-01",
+  "k.space/shards/solar-system",
   "k.words/shards/ea"
  ],
  "earthquake": [
@@ -15907,8 +16312,12 @@
   "k.words/shards/ea"
  ],
  "earthworm": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/mulberry-animal-other-invertebrates-01",
   "k.objects/shards/noto-animal-bug-02"
+ ],
+ "earthworms": [
+  "k.animals/shards/invertebrates"
  ],
  "earwig": [
   "k.objects/shards/mulberry-animal-spiders-and-insects-01"
@@ -15943,11 +16352,13 @@
   "k.objects/shards/noto-food-prepared-04"
  ],
  "eat": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/ea"
  ],
  "eaten": [
+  "k.food/schema.sop",
   "k.words/shards/ea"
  ],
  "eater": [
@@ -15957,6 +16368,7 @@
   "k.words/shards/ea"
  ],
  "eats": [
+  "k.animals/schema.sop",
   "k.words/shards/ea"
  ],
  "ebola": [
@@ -16064,8 +16476,12 @@
   "k.words/shards/ee"
  ],
  "eel": [
+  "k.animals/shards/fish",
   "k.geo/shards/north-america",
   "k.words/shards/ee"
+ ],
+ "eels": [
+  "k.animals/shards/fish"
  ],
  "effect": [
   "k.words/shards/ef"
@@ -16080,6 +16496,7 @@
   "k.words/shards/ef"
  ],
  "egg": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-eggs-01",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-food-prepared-03",
@@ -16112,10 +16529,15 @@
   "k.objects/shards/noto-food-prepared-04"
  ],
  "eggplant": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-01",
   "k.words/shards/eg"
  ],
+ "eggplants": [
+  "k.food/shards/vegetables"
+ ],
  "eggs": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-eggs-01",
   "k.objects/shards/noto-plant-other-02",
   "k.words/shards/eg"
@@ -16204,7 +16626,11 @@
   "k.geo/shards/europe"
  ],
  "elbow": [
+  "k.body/shards/core",
   "k.words/shards/el"
+ ],
+ "elbows": [
+  "k.body/shards/core"
  ],
  "elburz mountains": [
   "k.geo/shards/asia"
@@ -16296,8 +16722,12 @@
   "k.words/shards/el"
  ],
  "elephant": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-06",
   "k.words/shards/el"
+ ],
+ "elephants": [
+  "k.animals/shards/mammals"
  ],
  "elevated": [
   "k.words/shards/el"
@@ -16508,6 +16938,12 @@
  ],
  "ems": [
   "k.geo/shards/europe"
+ ],
+ "emu": [
+  "k.animals/shards/birds"
+ ],
+ "emus": [
+  "k.animals/shards/birds"
  ],
  "en": [
   "k.words/shards/en"
@@ -16997,6 +17433,9 @@
  "euro banknote": [
   "k.objects/shards/noto-money-01"
  ],
+ "europa": [
+  "k.space/shards/solar-system"
+ ],
  "europe": [
   "k.geo/shards/europe",
   "k.objects/shards/noto-place-map-01",
@@ -17380,6 +17819,7 @@
   "k.words/shards/ex"
  ],
  "eye": [
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/more",
@@ -17413,10 +17853,14 @@
   "k.words/shards/ey"
  ],
  "eyebrow": [
+  "k.body/shards/core",
   "k.words/shards/ey"
  ],
  "eyebrow pencil": [
   "k.objects/shards/mulberry-healthcare-grooming-items-02"
+ ],
+ "eyebrows": [
+  "k.body/shards/core"
  ],
  "eyeglasses": [
   "k.objects/shards/noto-clothing-01"
@@ -17425,6 +17869,7 @@
   "k.objects/shards/mulberry-healthcare-grooming-items-02"
  ],
  "eyes": [
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.words/shards/ey"
@@ -17461,6 +17906,7 @@
   "k.words/shards/fa"
  ],
  "face": [
+  "k.body/shards/core",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-celebration-item-02",
@@ -17489,6 +17935,9 @@
   "k.objects/shards/openmoji-animals-nature-02",
   "k.objects/shards/openmoji-technology-01",
   "k.words/shards/fa"
+ ],
+ "faces": [
+  "k.body/shards/core"
  ],
  "facial": [
   "k.words/shards/fa"
@@ -17595,7 +18044,11 @@
   "k.objects/shards/noto-food-prepared-03"
  ],
  "falcon": [
+  "k.animals/shards/birds",
   "k.words/shards/fa"
+ ],
+ "falcons": [
+  "k.animals/shards/birds"
  ],
  "falkland is.": [
   "k.geo/shards/south-america"
@@ -17938,12 +18391,14 @@
   "k.words/shards/fe"
  ],
  "feeling": [
+  "k.body/shards/core",
   "k.words/shards/fe"
  ],
  "feelings": [
   "k.words/shards/fe"
  ],
  "feet": [
+  "k.body/shards/core",
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-clothing-04",
   "k.units/shards/core",
@@ -18163,6 +18618,7 @@
   "k.words/shards/fi"
  ],
  "fig": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.words/shards/fi"
  ],
@@ -18174,6 +18630,9 @@
  ],
  "fighting": [
   "k.words/shards/fi"
+ ],
+ "figs": [
+  "k.food/shards/fruit"
  ],
  "figure": [
   "k.words/shards/fi"
@@ -18298,6 +18757,7 @@
   "k.words/shards/fi"
  ],
  "finger": [
+  "k.body/shards/core",
   "k.words/shards/fi"
  ],
  "finger puppet": [
@@ -18305,6 +18765,9 @@
  ],
  "fingerprint": [
   "k.words/shards/fi"
+ ],
+ "fingers": [
+  "k.body/shards/core"
  ],
  "finish": [
   "k.words/shards/fi"
@@ -18385,6 +18848,12 @@
  ],
  "firefighter": [
   "k.words/shards/fi"
+ ],
+ "fireflies": [
+  "k.animals/shards/invertebrates"
+ ],
+ "firefly": [
+  "k.animals/shards/invertebrates"
  ],
  "firehouse": [
   "k.words/shards/fi"
@@ -18621,7 +19090,11 @@
   "k.words/shards/fl"
  ],
  "flamingo": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-02"
+ ],
+ "flamingos": [
+  "k.animals/shards/birds"
  ],
  "flanders": [
   "k.words/shards/fl"
@@ -18715,7 +19188,11 @@
   "k.words/shards/fl"
  ],
  "flea": [
+  "k.animals/shards/invertebrates",
   "k.words/shards/fl"
+ ],
+ "fleas": [
+  "k.animals/shards/invertebrates"
  ],
  "fled": [
   "k.words/shards/fl"
@@ -18751,6 +19228,7 @@
   "k.words/shards/fl"
  ],
  "flies": [
+  "k.animals/shards/invertebrates",
   "k.words/shards/fl"
  ],
  "flight": [
@@ -18850,6 +19328,7 @@
   "k.words/shards/fl"
  ],
  "flour": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.words/shards/fl"
  ],
  "flour plain": [
@@ -18931,6 +19410,7 @@
   "k.words/shards/fl"
  ],
  "fly": [
+  "k.animals/shards/invertebrates",
   "k.geo/shards/oceania",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-03",
@@ -19047,6 +19527,8 @@
   "k.words/shards/fo"
  ],
  "food": [
+  "k.animals/schema.sop",
+  "k.food/schema.sop",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/mulberry-celebration-item-01",
   "k.objects/shards/mulberry-celebration-item-03",
@@ -19101,6 +19583,9 @@
  "food blender": [
   "k.objects/shards/mulberry-food-kitchen-items-03"
  ],
+ "foods": [
+  "k.food/schema.sop"
+ ],
  "fool": [
   "k.words/shards/fo"
  ],
@@ -19111,6 +19596,7 @@
   "k.words/shards/fo"
  ],
  "foot": [
+  "k.body/shards/core",
   "k.objects/shards/more",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-clothing-04",
@@ -19312,7 +19798,11 @@
   "k.words/shards/fo"
  ],
  "forehead": [
+  "k.body/shards/core",
   "k.words/shards/fo"
+ ],
+ "foreheads": [
+  "k.body/shards/core"
  ],
  "foreigner": [
   "k.words/shards/fo"
@@ -19549,6 +20039,7 @@
   "k.words/shards/fo"
  ],
  "fox": [
+  "k.animals/shards/mammals",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-02",
   "k.words/shards/fo"
@@ -19558,6 +20049,9 @@
  ],
  "fox mountain": [
   "k.geo/shards/north-america"
+ ],
+ "foxes": [
+  "k.animals/shards/mammals"
  ],
  "foxtail": [
   "k.objects/shards/openmoji-gardening-01"
@@ -19721,6 +20215,7 @@
   "k.objects/shards/openmoji-food-drink-02"
  ],
  "french fries": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-02"
  ],
  "french polynesia": [
@@ -19814,6 +20309,7 @@
   "k.words/shards/fr"
  ],
  "fries": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/fr"
  ],
@@ -19839,6 +20335,7 @@
   "k.words/shards/fr"
  ],
  "frog": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/noto-animal-amphibian-01",
   "k.words/shards/fr"
  ],
@@ -19847,6 +20344,9 @@
  ],
  "frogging": [
   "k.words/shards/fr"
+ ],
+ "frogs": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "fromage frais": [
   "k.objects/shards/mulberry-food-dairy-01"
@@ -20232,8 +20732,12 @@
  "gala": [
   "k.words/shards/ga"
  ],
+ "galaxies": [
+  "k.space/shards/kinds"
+ ],
  "galaxy": [
   "k.objects/shards/openmoji-travel-places-01",
+  "k.space/shards/kinds",
   "k.words/shards/ga"
  ],
  "galați": [
@@ -20361,6 +20865,9 @@
  "gannett peak": [
   "k.geo/shards/north-america"
  ],
+ "ganymede": [
+  "k.space/shards/solar-system"
+ ],
  "gao": [
   "k.geo/shards/africa",
   "k.words/shards/ga"
@@ -20431,6 +20938,7 @@
   "k.words/shards/ga"
  ],
  "garlic": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-breads-and-baking-04",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/ga"
@@ -20552,6 +21060,12 @@
   "k.objects/shards/noto-tool-02",
   "k.words/shards/ge"
  ],
+ "gecko": [
+  "k.animals/shards/reptiles-and-amphibians"
+ ],
+ "geckos": [
+  "k.animals/shards/reptiles-and-amphibians"
+ ],
  "gee": [
   "k.words/shards/ge"
  ],
@@ -20559,6 +21073,7 @@
   "k.words/shards/ge"
  ],
  "geese": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/go"
  ],
@@ -20768,6 +21283,9 @@
  "giant": [
   "k.words/shards/gi"
  ],
+ "giant panda": [
+  "k.animals/shards/mammals"
+ ],
  "gibberish": [
   "k.words/shards/gi"
  ],
@@ -20816,6 +21334,7 @@
   "k.words/shards/gi"
  ],
  "ginger": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/gi"
  ],
@@ -20832,8 +21351,12 @@
   "k.words/shards/gi"
  ],
  "giraffe": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/gi"
+ ],
+ "giraffes": [
+  "k.animals/shards/mammals"
  ],
  "girl": [
   "k.words/shards/gi"
@@ -21036,8 +21559,12 @@
   "k.words/shards/go"
  ],
  "goat": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/go"
+ ],
+ "goats": [
+  "k.animals/shards/mammals"
  ],
  "gob": [
   "k.words/shards/go"
@@ -21101,6 +21628,7 @@
   "k.geo/shards/north-america"
  ],
  "goldfish": [
+  "k.animals/shards/fish",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.words/shards/go"
  ],
@@ -21185,13 +21713,18 @@
   "k.words/shards/go"
  ],
  "goose": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/go"
  ],
  "goose roast": [
   "k.objects/shards/mulberry-food-poultry-01"
  ],
+ "gooseberries": [
+  "k.food/shards/fruit"
+ ],
  "gooseberry": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-02"
  ],
  "gora burun-shibertuy": [
@@ -21240,8 +21773,12 @@
   "k.words/shards/go"
  ],
  "gorilla": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-01",
   "k.words/shards/go"
+ ],
+ "gorillas": [
+  "k.animals/shards/mammals"
  ],
  "gospel": [
   "k.words/shards/go"
@@ -21431,6 +21968,7 @@
   "k.words/shards/gr"
  ],
  "grape": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/gr"
  ],
@@ -21462,6 +22000,7 @@
   "k.objects/shards/noto-food-fruit-01"
  ],
  "grapefruit": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.words/shards/gr"
@@ -21469,7 +22008,11 @@
  "grapefruit juice": [
   "k.objects/shards/mulberry-drink-type-02"
  ],
+ "grapefruits": [
+  "k.food/shards/fruit"
+ ],
  "grapes": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-01"
  ],
  "graph": [
@@ -21494,8 +22037,12 @@
   "k.words/shards/gr"
  ],
  "grasshopper": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/gr"
+ ],
+ "grasshoppers": [
+  "k.animals/shards/invertebrates"
  ],
  "grater": [
   "k.objects/shards/mulberry-food-kitchen-items-04"
@@ -21600,7 +22147,11 @@
  "green apple": [
   "k.objects/shards/noto-food-fruit-02"
  ],
+ "green bean": [
+  "k.food/shards/vegetables"
+ ],
  "green beans": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03"
  ],
  "green book": [
@@ -21809,6 +22360,7 @@
   "k.words/shards/gr"
  ],
  "grow": [
+  "k.food/schema.sop",
   "k.objects/shards/noto-plant-other-01",
   "k.words/shards/gr"
  ],
@@ -21824,6 +22376,9 @@
  ],
  "grown": [
   "k.words/shards/gr"
+ ],
+ "grows": [
+  "k.food/schema.sop"
  ],
  "growth": [
   "k.objects/shards/noto-money-02",
@@ -21967,7 +22522,11 @@
   "k.geo/shards/africa"
  ],
  "guinea pig": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-01"
+ ],
+ "guinea pigs": [
+  "k.animals/shards/mammals"
  ],
  "guinea-bissau": [
   "k.geo/shards/africa",
@@ -21982,6 +22541,12 @@
  ],
  "gulf": [
   "k.words/shards/gu"
+ ],
+ "gull": [
+  "k.animals/shards/birds"
+ ],
+ "gulls": [
+  "k.animals/shards/birds"
  ],
  "gulp": [
   "k.words/shards/gu"
@@ -22061,6 +22626,7 @@
   "k.geo/shards/south-america"
  ],
  "gut": [
+  "k.body/shards/core",
   "k.objects/shards/openmoji-healthcare-02",
   "k.words/shards/gu"
  ],
@@ -22134,6 +22700,7 @@
   "k.words/shards/ha"
  ],
  "habitat": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-plant-other-01",
   "k.words/shards/ha"
  ],
@@ -22175,6 +22742,7 @@
   "k.geo/shards/asia"
  ],
  "hair": [
+  "k.body/shards/core",
   "k.objects/shards/mulberry-healthcare-medical-items-01",
   "k.objects/shards/mulberry-leisure-toys-01",
   "k.objects/shards/noto-clothing-05",
@@ -22262,6 +22830,9 @@
  "hallelujah": [
   "k.words/shards/ha"
  ],
+ "halley's comet": [
+  "k.space/shards/solar-system"
+ ],
  "halloween": [
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-event-01",
@@ -22290,6 +22861,7 @@
   "k.words/shards/ha"
  ],
  "ham": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-meat-01",
   "k.words/shards/ha"
  ],
@@ -22301,11 +22873,15 @@
   "k.words/shards/ha"
  ],
  "hamburger": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/ha"
  ],
  "hamburger carton": [
   "k.objects/shards/mulberry-food-meals-and-snacks-03"
+ ],
+ "hamburgers": [
+  "k.food/shards/other"
  ],
  "hamersley range": [
   "k.geo/shards/oceania"
@@ -22359,8 +22935,12 @@
   "k.objects/shards/noto-other-object-01"
  ],
  "hamster": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-06",
   "k.words/shards/ha"
+ ],
+ "hamsters": [
+  "k.animals/shards/mammals"
  ],
  "han": [
   "k.geo/shards/asia",
@@ -22370,6 +22950,7 @@
   "k.words/shards/ha"
  ],
  "hand": [
+  "k.body/shards/core",
   "k.objects/shards/noto-clothing-02",
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-other-object-01",
@@ -22482,6 +23063,7 @@
   "k.words/shards/ha"
  ],
  "hands": [
+  "k.body/shards/core",
   "k.words/shards/ha"
  ],
  "handset": [
@@ -22784,6 +23366,7 @@
   "k.geo/shards/oceania"
  ],
  "hawk": [
+  "k.animals/shards/birds",
   "k.words/shards/ha"
  ],
  "hawking": [
@@ -22791,6 +23374,9 @@
  ],
  "hawkins": [
   "k.words/shards/ha"
+ ],
+ "hawks": [
+  "k.animals/shards/birds"
  ],
  "hawthorne": [
   "k.words/shards/ha"
@@ -22818,12 +23404,17 @@
   "k.words/shards/ha"
  ],
  "hazelnut": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-01"
+ ],
+ "hazelnuts": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "he": [
   "k.words/shards/he"
  ],
  "head": [
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/more",
@@ -22909,6 +23500,9 @@
  "headquarters": [
   "k.words/shards/he"
  ],
+ "heads": [
+  "k.body/shards/core"
+ ],
  "heads-up": [
   "k.words/shards/he"
  ],
@@ -22956,6 +23550,7 @@
   "k.geo/shards/africa-borders"
  ],
  "hearing": [
+  "k.body/shards/core",
   "k.words/shards/he"
  ],
  "hearsay": [
@@ -22968,6 +23563,7 @@
   "k.words/shards/he"
  ],
  "heart": [
+  "k.body/shards/core",
   "k.objects/shards/more",
   "k.objects/shards/mulberry-leisure-games-01",
   "k.objects/shards/noto-medical-01",
@@ -23000,6 +23596,7 @@
   "k.words/shards/he"
  ],
  "hearts": [
+  "k.body/shards/core",
   "k.objects/shards/more",
   "k.words/shards/he"
  ],
@@ -23063,19 +23660,25 @@
   "k.objects/shards/mulberry-tools-garden-01"
  ],
  "hedgehog": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-07",
   "k.words/shards/he"
+ ],
+ "hedgehogs": [
+  "k.animals/shards/mammals"
  ],
  "heed": [
   "k.words/shards/he"
  ],
  "heel": [
+  "k.body/shards/core",
   "k.objects/shards/more",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-clothing-05",
   "k.words/shards/he"
  ],
  "heels": [
+  "k.body/shards/core",
   "k.objects/shards/noto-clothing-04"
  ],
  "height": [
@@ -23187,6 +23790,7 @@
   "k.words/shards/he"
  ],
  "hen": [
+  "k.animals/shards/birds",
   "k.objects/shards/more",
   "k.words/shards/he"
  ],
@@ -23197,6 +23801,7 @@
   "k.words/shards/he"
  ],
  "hens": [
+  "k.animals/shards/birds",
   "k.objects/shards/more"
  ],
  "hepatitis": [
@@ -23284,7 +23889,11 @@
   "k.words/shards/he"
  ],
  "heron": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-01"
+ ],
+ "herons": [
+  "k.animals/shards/birds"
  ],
  "herpes": [
   "k.words/shards/he"
@@ -23296,6 +23905,8 @@
   "k.words/shards/he"
  ],
  "herring": [
+  "k.animals/shards/fish",
+  "k.food/shards/animal-foods",
   "k.words/shards/he"
  ],
  "hesitate": [
@@ -23458,6 +24069,7 @@
   "k.words/shards/hi"
  ],
  "hip": [
+  "k.body/shards/core",
   "k.words/shards/hi"
  ],
  "hip-hop": [
@@ -23470,11 +24082,22 @@
   "k.words/shards/hi"
  ],
  "hippo": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-06",
   "k.words/shards/hi"
  ],
  "hippopotamus": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-06"
+ ],
+ "hippopotamuses": [
+  "k.animals/shards/mammals"
+ ],
+ "hippos": [
+  "k.animals/shards/mammals"
+ ],
+ "hips": [
+  "k.body/shards/core"
  ],
  "hire": [
   "k.words/shards/hi"
@@ -23772,6 +24395,7 @@
   "k.words/shards/ho"
  ],
  "honey": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-07",
@@ -23954,6 +24578,7 @@
   "k.words/shards/ho"
  ],
  "horse": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-place-other-02",
   "k.words/shards/ho"
@@ -23971,6 +24596,7 @@
   "k.words/shards/ho"
  ],
  "horses": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "horseshoe": [
@@ -24035,10 +24661,15 @@
   "k.objects/shards/mulberry-healthcare-grooming-items-04"
  ],
  "hot chocolate": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02"
  ],
  "hot dog": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-03"
+ ],
+ "hot dogs": [
+  "k.food/shards/other"
  ],
  "hot pepper": [
   "k.objects/shards/noto-food-vegetable-01"
@@ -24312,6 +24943,12 @@
  "humming": [
   "k.words/shards/hu"
  ],
+ "hummingbird": [
+  "k.animals/shards/birds"
+ ],
+ "hummingbirds": [
+  "k.animals/shards/birds"
+ ],
  "humor": [
   "k.words/shards/hu"
  ],
@@ -24450,7 +25087,11 @@
   "k.words/shards/hy"
  ],
  "hyena": [
+  "k.animals/shards/mammals",
   "k.words/shards/hy"
+ ],
+ "hyenas": [
+  "k.animals/shards/mammals"
  ],
  "hygiene": [
   "k.objects/shards/noto-household-03",
@@ -24521,10 +25162,14 @@
   "k.words/shards/ic"
  ],
  "ice cream": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-sweet-01"
  ],
  "ice cream tub": [
   "k.objects/shards/mulberry-food-sweets-and-desserts-02"
+ ],
+ "ice creams": [
+  "k.food/shards/other"
  ],
  "ice hockey": [
   "k.objects/shards/noto-sport-02"
@@ -24631,6 +25276,12 @@
  ],
  "igombe": [
   "k.geo/shards/africa"
+ ],
+ "iguana": [
+  "k.animals/shards/reptiles-and-amphibians"
+ ],
+ "iguanas": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "ii": [
   "k.words/shards/ii"
@@ -25183,6 +25834,7 @@
   "k.words/shards/in"
  ],
  "inside": [
+  "k.body/schema.sop",
   "k.objects/shards/mulberry-food-kitchen-items-01",
   "k.objects/shards/mulberry-food-kitchen-items-02",
   "k.objects/shards/mulberry-food-kitchen-items-03",
@@ -25418,7 +26070,11 @@
   "k.words/shards/in"
  ],
  "intestine": [
+  "k.body/shards/core",
   "k.objects/shards/openmoji-healthcare-02"
+ ],
+ "intestines": [
+  "k.body/shards/core"
  ],
  "intimacy": [
   "k.words/shards/in"
@@ -25527,6 +26183,7 @@
   "k.words/shards/in"
  ],
  "io": [
+  "k.space/shards/solar-system",
   "k.words/shards/io"
  ],
  "ion": [
@@ -25907,7 +26564,11 @@
   "k.words/shards/ja"
  ],
  "jaguar": [
+  "k.animals/shards/mammals",
   "k.words/shards/ja"
+ ],
+ "jaguars": [
+  "k.animals/shards/mammals"
  ],
  "jail": [
   "k.words/shards/ja"
@@ -25922,6 +26583,7 @@
   "k.geo/shards/asia"
  ],
  "jam": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-sweets-and-desserts-02",
   "k.words/shards/ja"
  ],
@@ -25951,6 +26613,9 @@
  ],
  "jamming": [
   "k.words/shards/ja"
+ ],
+ "jams": [
+  "k.food/shards/other"
  ],
  "jan": [
   "k.time/shards/calendar",
@@ -26101,6 +26766,7 @@
   "k.objects/shards/mulberry-food-sweets-and-desserts-02"
  ],
  "jellyfish": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/je"
  ],
@@ -26496,12 +27162,16 @@
   "k.words/shards/ju"
  ],
  "juice": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-drink-type-03",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-drink-03",
   "k.words/shards/ju"
+ ],
+ "juices": [
+  "k.food/shards/other"
  ],
  "jukebox": [
   "k.words/shards/ju"
@@ -26567,6 +27237,7 @@
  ],
  "jupiter": [
   "k.objects/shards/mulberry-science-astronomy-01",
+  "k.space/shards/solar-system",
   "k.words/shards/ju"
  ],
  "jura mountains": [
@@ -26662,6 +27333,7 @@
   "k.geo/shards/asia"
  ],
  "kale": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/ka"
  ],
@@ -26699,8 +27371,12 @@
   "k.geo/shards/africa"
  ],
  "kangaroo": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08",
   "k.words/shards/ka"
+ ],
+ "kangaroos": [
+  "k.animals/shards/mammals"
  ],
  "kangen": [
   "k.geo/shards/africa"
@@ -26964,6 +27640,7 @@
   "k.geo/shards/asia"
  ],
  "ketchup": [
+  "k.food/shards/other",
   "k.words/shards/ke"
  ],
  "kettle": [
@@ -27118,9 +27795,13 @@
   "k.words/shards/ki"
  ],
  "kidney": [
+  "k.body/shards/core",
   "k.objects/shards/noto-food-vegetable-02",
   "k.objects/shards/openmoji-healthcare-02",
   "k.words/shards/ki"
+ ],
+ "kidneys": [
+  "k.body/shards/core"
  ],
  "kiev": [
   "k.words/shards/ki"
@@ -27195,6 +27876,8 @@
   "k.words/shards/ki"
  ],
  "kind": [
+  "k.animals/schema.sop",
+  "k.food/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/ki"
  ],
@@ -27261,6 +27944,12 @@
  ],
  "kingdom of tonga": [
   "k.geo/shards/oceania"
+ ],
+ "kingfisher": [
+  "k.animals/shards/birds"
+ ],
+ "kingfishers": [
+  "k.animals/shards/birds"
  ],
  "kingston": [
   "k.geo/shards/north-america",
@@ -27351,11 +28040,15 @@
   "k.geo/shards/africa"
  ],
  "kiwi": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/noto-food-fruit-03"
  ],
  "kiwi fruit": [
   "k.objects/shards/noto-food-fruit-03"
+ ],
+ "kiwis": [
+  "k.food/shards/fruit"
  ],
  "kiz?lirmak": [
   "k.geo/shards/asia"
@@ -27401,6 +28094,7 @@
   "k.words/shards/kn"
  ],
  "knee": [
+  "k.body/shards/core",
   "k.words/shards/kn"
  ],
  "kneel": [
@@ -27408,6 +28102,9 @@
  ],
  "kneeling": [
   "k.words/shards/kn"
+ ],
+ "knees": [
+  "k.body/shards/core"
  ],
  "knelt": [
   "k.words/shards/kn"
@@ -27516,7 +28213,11 @@
   "k.words/shards/ko"
  ],
  "koala": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "koalas": [
+  "k.animals/shards/mammals"
  ],
  "kobe": [
   "k.words/shards/ko"
@@ -27902,10 +28603,18 @@
   "k.objects/shards/noto-animal-bug-01"
  ],
  "ladybird": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01"
  ],
+ "ladybirds": [
+  "k.animals/shards/invertebrates"
+ ],
  "ladybug": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01"
+ ],
+ "ladybugs": [
+  "k.animals/shards/invertebrates"
  ],
  "ladyship": [
   "k.words/shards/la"
@@ -27978,6 +28687,7 @@
   "k.words/shards/la"
  ],
  "lamb": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-meat-01",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/la"
@@ -28115,6 +28825,9 @@
  ],
  "large_lobe": [
   "k.objects/shards/openmoji-healthcare-02"
+ ],
+ "largest": [
+  "k.space/schema.sop"
  ],
  "lark": [
   "k.words/shards/la"
@@ -28497,7 +29210,11 @@
   "k.words/shards/le"
  ],
  "leek": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03"
+ ],
+ "leeks": [
+  "k.food/shards/vegetables"
  ],
  "left": [
   "k.objects/shards/noto-light-video-02",
@@ -28933,6 +29650,8 @@
   "k.words/shards/le"
  ],
  "leg": [
+  "k.animals/schema.sop",
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/household",
@@ -28994,6 +29713,8 @@
   "k.objects/shards/mulberry-leisure-toys-03"
  ],
  "legs": [
+  "k.animals/schema.sop",
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/household",
@@ -29023,6 +29744,7 @@
   "k.words/shards/le"
  ],
  "lemon": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/le"
@@ -29031,8 +29753,12 @@
   "k.objects/shards/mulberry-drink-type-02"
  ],
  "lemonade": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.words/shards/le"
+ ],
+ "lemons": [
+  "k.food/shards/fruit"
  ],
  "lemosos": [
   "k.geo/shards/asia"
@@ -29077,7 +29803,11 @@
  "lent": [
   "k.words/shards/le"
  ],
+ "lentil": [
+  "k.food/shards/grains-nuts-and-pulses"
+ ],
  "lentils": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03"
  ],
  "leo": [
@@ -29097,8 +29827,12 @@
   "k.words/shards/le"
  ],
  "leopard": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03",
   "k.words/shards/le"
+ ],
+ "leopards": [
+  "k.animals/shards/mammals"
  ],
  "leprechaun": [
   "k.words/shards/le"
@@ -29146,9 +29880,13 @@
   "k.words/shards/le"
  ],
  "lettuce": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/le"
+ ],
+ "lettuces": [
+  "k.food/shards/vegetables"
  ],
  "leukemia": [
   "k.words/shards/le"
@@ -29458,11 +30196,15 @@
   "k.words/shards/li"
  ],
  "lime": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/li"
  ],
  "limerick": [
   "k.geo/shards/europe"
+ ],
+ "limes": [
+  "k.food/shards/fruit"
  ],
  "limestone": [
   "k.words/shards/li"
@@ -29583,15 +30325,23 @@
   "k.geo/shards/europe"
  ],
  "lion": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-marine-01",
   "k.words/shards/li"
  ],
+ "lions": [
+  "k.animals/shards/mammals"
+ ],
  "lip": [
+  "k.body/shards/core",
   "k.words/shards/li"
  ],
  "lip balm": [
   "k.objects/shards/mulberry-healthcare-grooming-items-04"
+ ],
+ "lips": [
+  "k.body/shards/core"
  ],
  "lipstick": [
   "k.objects/shards/noto-clothing-06",
@@ -29692,6 +30442,7 @@
   "k.geo/shards/asia"
  ],
  "live": [
+  "k.animals/schema.sop",
   "k.commonsense/schema.sop",
   "k.words/shards/li"
  ],
@@ -29705,13 +30456,18 @@
   "k.words/shards/li"
  ],
  "liver": [
+  "k.body/shards/core",
   "k.objects/shards/openmoji-healthcare-02",
   "k.words/shards/li"
  ],
  "liverpool": [
   "k.words/shards/li"
  ],
+ "livers": [
+  "k.body/shards/core"
+ ],
  "lives": [
+  "k.animals/schema.sop",
   "k.commonsense/schema.sop",
   "k.words/shards/li"
  ],
@@ -29725,8 +30481,12 @@
   "k.words/shards/li"
  ],
  "lizard": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/li"
+ ],
+ "lizards": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "liège": [
   "k.geo/shards/europe"
@@ -29735,7 +30495,11 @@
   "k.geo/shards/europe"
  ],
  "llama": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-05"
+ ],
+ "llamas": [
+  "k.animals/shards/mammals"
  ],
  "lloyd": [
   "k.words/shards/ll"
@@ -29795,8 +30559,13 @@
   "k.geo/shards/africa"
  ],
  "lobster": [
+  "k.animals/shards/invertebrates",
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/lo"
+ ],
+ "lobsters": [
+  "k.animals/shards/invertebrates"
  ],
  "local": [
   "k.words/shards/lo"
@@ -30255,7 +31024,11 @@
   "k.words/shards/lu"
  ],
  "lung": [
+  "k.body/shards/core",
   "k.words/shards/lu"
+ ],
+ "lungs": [
+  "k.body/shards/core"
  ],
  "lungwebungu": [
   "k.geo/shards/africa"
@@ -30323,6 +31096,12 @@
  ],
  "lynch": [
   "k.words/shards/ly"
+ ],
+ "lynx": [
+  "k.animals/shards/mammals"
+ ],
+ "lynxes": [
+  "k.animals/shards/mammals"
  ],
  "lyon": [
   "k.geo/shards/europe",
@@ -30466,6 +31245,7 @@
  ],
  "made": [
   "k.commonsense/schema.sop",
+  "k.food/schema.sop",
   "k.words/shards/ma"
  ],
  "madeira": [
@@ -30572,6 +31352,12 @@
  "magnum": [
   "k.words/shards/ma"
  ],
+ "magpie": [
+  "k.animals/shards/birds"
+ ],
+ "magpies": [
+  "k.animals/shards/birds"
+ ],
  "mahajanga": [
   "k.geo/shards/africa"
  ],
@@ -30660,6 +31446,7 @@
   "k.words/shards/ma"
  ],
  "maize": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-vegetable-01"
  ],
  "maja jezercë": [
@@ -30864,7 +31651,11 @@
   "k.geo/shards/asia"
  ],
  "mandarin": [
+  "k.food/shards/fruit",
   "k.words/shards/ma"
+ ],
+ "mandarins": [
+  "k.food/shards/fruit"
  ],
  "mandate": [
   "k.words/shards/ma"
@@ -30886,6 +31677,7 @@
   "k.objects/shards/mulberry-food-vegetables-and-salads-03"
  ],
  "mango": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/ma"
  ],
@@ -30893,6 +31685,7 @@
   "k.geo/shards/africa"
  ],
  "mangoes": [
+  "k.food/shards/fruit",
   "k.words/shards/ma"
  ],
  "mangoky": [
@@ -31032,6 +31825,9 @@
  "manuscript": [
   "k.words/shards/ma"
  ],
+ "many": [
+  "k.body/schema.sop"
+ ],
  "manzini": [
   "k.geo/shards/africa"
  ],
@@ -31064,6 +31860,9 @@
  ],
  "maple leaf": [
   "k.objects/shards/noto-plant-other-02"
+ ],
+ "maple syrup": [
+  "k.food/shards/other"
  ],
  "mapped": [
   "k.words/shards/ma"
@@ -31218,6 +32017,9 @@
  "marlowe": [
   "k.words/shards/ma"
  ],
+ "marmalade": [
+  "k.food/shards/other"
+ ],
  "marmite": [
   "k.objects/shards/mulberry-food-ingredients-01"
  ],
@@ -31267,6 +32069,7 @@
  ],
  "mars": [
   "k.objects/shards/mulberry-science-astronomy-01",
+  "k.space/shards/solar-system",
   "k.words/shards/ma"
  ],
  "marseille": [
@@ -31878,6 +32681,12 @@
  "medusae": [
   "k.words/shards/me"
  ],
+ "meerkat": [
+  "k.animals/shards/mammals"
+ ],
+ "meerkats": [
+  "k.animals/shards/mammals"
+ ],
  "meet": [
   "k.words/shards/me"
  ],
@@ -31917,8 +32726,12 @@
   "k.words/shards/me"
  ],
  "melon": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/me"
+ ],
+ "melons": [
+  "k.food/shards/fruit"
  ],
  "melt": [
   "k.words/shards/me"
@@ -32022,6 +32835,7 @@
  "mercury": [
   "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/openmoji-healthcare-03",
+  "k.space/shards/solar-system",
   "k.words/shards/me"
  ],
  "mercy": [
@@ -32207,6 +33021,7 @@
   "k.words/shards/mi"
  ],
  "mice": [
+  "k.animals/shards/mammals",
   "k.words/shards/mo"
  ],
  "michael": [
@@ -32381,6 +33196,7 @@
   "k.words/shards/mi"
  ],
  "milk": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
@@ -32404,6 +33220,7 @@
   "k.words/shards/mi"
  ],
  "milkshake": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-food-sweets-and-desserts-03",
   "k.words/shards/mi"
@@ -32417,11 +33234,15 @@
  "milkshake strawberry": [
   "k.objects/shards/mulberry-food-sweets-and-desserts-03"
  ],
+ "milkshakes": [
+  "k.food/shards/other"
+ ],
  "milky": [
   "k.objects/shards/noto-sky-weather-03"
  ],
  "milky way": [
-  "k.objects/shards/noto-sky-weather-03"
+  "k.objects/shards/noto-sky-weather-03",
+  "k.space/shards/stars-and-galaxies"
  ],
  "mill": [
   "k.objects/shards/structures",
@@ -32610,6 +33431,7 @@
   "k.geo/shards/europe"
  ],
  "mint": [
+  "k.food/shards/other",
   "k.words/shards/mi"
  ],
  "mints": [
@@ -32947,6 +33769,7 @@
   "k.geo/shards/europe"
  ],
  "mole": [
+  "k.animals/shards/mammals",
   "k.words/shards/mo"
  ],
  "molecule": [
@@ -32954,6 +33777,9 @@
  ],
  "molepolole": [
   "k.geo/shards/africa"
+ ],
+ "moles": [
+  "k.animals/shards/mammals"
  ],
  "mollusk": [
   "k.objects/shards/noto-animal-marine-02"
@@ -33074,11 +33900,15 @@
   "k.words/shards/mo"
  ],
  "monkey": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-01",
   "k.words/shards/mo"
  ],
  "monkey face": [
   "k.objects/shards/noto-animal-mammal-01"
+ ],
+ "monkeys": [
+  "k.animals/shards/mammals"
  ],
  "mono": [
   "k.words/shards/mo"
@@ -33250,6 +34080,8 @@
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.objects/shards/sky",
+  "k.space/shards/kinds",
+  "k.space/shards/solar-system",
   "k.words/shards/mo"
  ],
  "moon cake": [
@@ -33263,7 +34095,9 @@
  ],
  "moons": [
   "k.commonsense/shards/core",
-  "k.objects/shards/sky"
+  "k.objects/shards/sky",
+  "k.space/schema.sop",
+  "k.space/shards/kinds"
  ],
  "moonshine": [
   "k.words/shards/mo"
@@ -33275,6 +34109,7 @@
   "k.words/shards/mo"
  ],
  "moose": [
+  "k.animals/shards/mammals",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-03",
   "k.words/shards/mo"
@@ -33419,10 +34254,12 @@
   "k.words/shards/mo"
  ],
  "mosquito": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-02",
   "k.words/shards/mo"
  ],
  "mosquitoes": [
+  "k.animals/shards/invertebrates",
   "k.words/shards/mo"
  ],
  "moss": [
@@ -33447,6 +34284,7 @@
   "k.words/shards/mo"
  ],
  "moth": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/mulberry-animal-spiders-and-insects-02",
   "k.words/shards/mo"
  ],
@@ -33464,6 +34302,9 @@
  ],
  "mothers-in-law": [
   "k.words/shards/mo"
+ ],
+ "moths": [
+  "k.animals/shards/invertebrates"
  ],
  "motion": [
   "k.words/shards/mo"
@@ -34073,6 +34914,7 @@
   "k.geo/shards/africa"
  ],
  "mouse": [
+  "k.animals/shards/mammals",
   "k.objects/shards/home",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-computer-01",
@@ -34098,6 +34940,7 @@
   "k.words/shards/mo"
  ],
  "mouth": [
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/mulberry-celebration-item-03",
@@ -34121,6 +34964,9 @@
   "k.objects/shards/mulberry-healthcare-medical-items-01",
   "k.objects/shards/noto-musical-instrument-01",
   "k.objects/shards/openmoji-objects-02"
+ ],
+ "mouths": [
+  "k.body/shards/core"
  ],
  "move": [
   "k.objects/shards/noto-transport-ground-04",
@@ -34351,7 +35197,11 @@
   "k.geo/shards/asia"
  ],
  "muscle": [
+  "k.body/shards/core",
   "k.words/shards/mu"
+ ],
+ "muscles": [
+  "k.body/shards/core"
  ],
  "muse": [
   "k.words/shards/mu"
@@ -34364,12 +35214,16 @@
   "k.words/shards/mu"
  ],
  "mushroom": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-03",
   "k.objects/shards/noto-plant-other-02",
   "k.words/shards/mu"
  ],
  "mushroom fungi": [
   "k.objects/shards/openmoji-food-drink-01"
+ ],
+ "mushrooms": [
+  "k.food/shards/vegetables"
  ],
  "music": [
   "k.objects/shards/mulberry-music-instrument-01",
@@ -34407,7 +35261,11 @@
   "k.words/shards/mu"
  ],
  "mussel": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01"
+ ],
+ "mussels": [
+  "k.food/shards/animal-foods"
  ],
  "mussolini": [
   "k.words/shards/mu"
@@ -34422,6 +35280,7 @@
   "k.words/shards/mu"
  ],
  "mustard": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-03",
   "k.words/shards/mu"
  ],
@@ -34575,6 +35434,7 @@
   "k.geo/shards/asia"
  ],
  "nail": [
+  "k.body/shards/core",
   "k.objects/shards/mulberry-tools-workshop-02",
   "k.words/shards/na"
  ],
@@ -34589,6 +35449,9 @@
  ],
  "nail polish remover": [
   "k.objects/shards/mulberry-healthcare-grooming-items-05"
+ ],
+ "nails": [
+  "k.body/shards/core"
  ],
  "nairobi": [
   "k.geo/shards/africa"
@@ -34860,6 +35723,7 @@
   "k.geo/shards/north-america"
  ],
  "neck": [
+  "k.body/shards/core",
   "k.objects/shards/home",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.objects/shards/noto-clothing-02",
@@ -34871,6 +35735,9 @@
   "k.objects/shards/mulberry-clothes-jewellery-01",
   "k.objects/shards/noto-clothing-06",
   "k.words/shards/ne"
+ ],
+ "necks": [
+  "k.body/shards/core"
  ],
  "necktie": [
   "k.objects/shards/noto-clothing-01"
@@ -34988,6 +35855,7 @@
  ],
  "neptune": [
   "k.objects/shards/mulberry-science-astronomy-01",
+  "k.space/shards/solar-system",
   "k.words/shards/ne"
  ],
  "nerd": [
@@ -34997,9 +35865,11 @@
   "k.words/shards/ne"
  ],
  "nerve": [
+  "k.body/shards/core",
   "k.words/shards/ne"
  ],
  "nerves": [
+  "k.body/shards/core",
   "k.words/shards/ne"
  ],
  "ness": [
@@ -35144,6 +36014,7 @@
   "k.words/shards/ne"
  ],
  "newt": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.words/shards/ne"
  ],
  "newton": [
@@ -35151,6 +36022,9 @@
  ],
  "newtontoppen": [
   "k.geo/shards/europe"
+ ],
+ "newts": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "ng": [
   "k.words/shards/ng"
@@ -35268,7 +36142,11 @@
   "k.words/shards/ni"
  ],
  "nightingale": [
+  "k.animals/shards/birds",
   "k.words/shards/ni"
+ ],
+ "nightingales": [
+  "k.animals/shards/birds"
  ],
  "nightmare": [
   "k.words/shards/ni"
@@ -35379,6 +36257,7 @@
   "k.words/shards/no"
  ],
  "noise": [
+  "k.animals/schema.sop",
   "k.words/shards/no"
  ],
  "nominate": [
@@ -35400,10 +36279,12 @@
   "k.words/shards/no"
  ],
  "noodle": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-asian-01",
   "k.words/shards/no"
  ],
  "noodles": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-pastas-and-rice-01"
  ],
  "noon": [
@@ -35457,6 +36338,9 @@
  "north saskatchewan": [
   "k.geo/shards/north-america"
  ],
+ "north star": [
+  "k.space/shards/stars-and-galaxies"
+ ],
  "northeast": [
   "k.words/shards/no"
  ],
@@ -35482,6 +36366,7 @@
   "k.words/shards/no"
  ],
  "nose": [
+  "k.body/shards/core",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/mulberry-animal-mammal-01",
@@ -35499,6 +36384,9 @@
   "k.objects/shards/noto-transport-ground-01",
   "k.objects/shards/vehicles",
   "k.words/shards/no"
+ ],
+ "noses": [
+  "k.body/shards/core"
  ],
  "noshaq": [
   "k.geo/shards/asia"
@@ -36082,12 +36970,18 @@
  "oasis": [
   "k.words/shards/oa"
  ],
+ "oat": [
+  "k.food/shards/grains-nuts-and-pulses"
+ ],
  "oath": [
   "k.words/shards/oa"
  ],
  "oatmeal": [
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/oa"
+ ],
+ "oats": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "ob": [
   "k.geo/shards/europe"
@@ -36228,8 +37122,12 @@
   "k.words/shards/oc"
  ],
  "octopus": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/oc"
+ ],
+ "octopuses": [
+  "k.animals/shards/invertebrates"
  ],
  "od": [
   "k.words/shards/od"
@@ -36409,11 +37307,13 @@
   "k.geo/shards/africa"
  ],
  "olive": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-fruit-03",
   "k.words/shards/ol"
  ],
  "olive oil": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-ingredients-01"
  ],
  "olive1": [
@@ -36426,6 +37326,7 @@
   "k.words/shards/ol"
  ],
  "olives": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04"
  ],
  "olivier": [
@@ -36469,8 +37370,12 @@
   "k.words/shards/om"
  ],
  "omelette": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-eggs-01",
   "k.words/shards/om"
+ ],
+ "omelettes": [
+  "k.food/shards/other"
  ],
  "omen": [
   "k.words/shards/om"
@@ -36521,11 +37426,15 @@
   "k.geo/shards/africa"
  ],
  "onion": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/on"
  ],
  "onion rings": [
   "k.objects/shards/mulberry-food-meals-and-snacks-03"
+ ],
+ "onions": [
+  "k.food/shards/vegetables"
  ],
  "onon": [
   "k.geo/shards/europe"
@@ -36649,6 +37558,7 @@
   "k.geo/shards/africa"
  ],
  "orange": [
+  "k.food/shards/fruit",
   "k.geo/shards/africa",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-food-fruit-01",
@@ -36657,11 +37567,21 @@
  "orange book": [
   "k.objects/shards/noto-book-paper-01"
  ],
+ "orange juice": [
+  "k.food/shards/other"
+ ],
  "orange walk": [
   "k.geo/shards/north-america"
  ],
+ "oranges": [
+  "k.food/shards/fruit"
+ ],
  "orangutan": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-01"
+ ],
+ "orangutans": [
+  "k.animals/shards/mammals"
  ],
  "oranjestad": [
   "k.geo/shards/north-america"
@@ -36673,10 +37593,14 @@
   "k.words/shards/or"
  ],
  "orbit": [
+  "k.space/schema.sop",
   "k.words/shards/or"
  ],
  "orbiter": [
   "k.objects/shards/openmoji-travel-places-01"
+ ],
+ "orbits": [
+  "k.space/schema.sop"
  ],
  "orca": [
   "k.objects/shards/noto-animal-marine-01",
@@ -36700,6 +37624,7 @@
  ],
  "order": [
   "k.objects/shards/noto-animal-mammal-02",
+  "k.space/schema.sop",
   "k.words/shards/or"
  ],
  "ordering": [
@@ -36848,8 +37773,12 @@
   "k.geo/shards/europe"
  ],
  "ostrich": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.words/shards/os"
+ ],
+ "ostriches": [
+  "k.animals/shards/birds"
  ],
  "oswald": [
   "k.words/shards/os"
@@ -36867,8 +37796,12 @@
   "k.geo/shards/north-america"
  ],
  "otter": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08",
   "k.words/shards/ot"
+ ],
+ "otters": [
+  "k.animals/shards/mammals"
  ],
  "ottoman": [
   "k.words/shards/ot"
@@ -37127,8 +38060,12 @@
   "k.words/shards/ow"
  ],
  "owl": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-02",
   "k.words/shards/ow"
+ ],
+ "owls": [
+  "k.animals/shards/birds"
  ],
  "own": [
   "k.words/shards/ow"
@@ -37140,10 +38077,12 @@
   "k.words/shards/ow"
  ],
  "ox": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-04",
   "k.words/shards/ox"
  ],
  "oxen": [
+  "k.animals/shards/mammals",
   "k.words/shards/ox"
  ],
  "oxford": [
@@ -37159,9 +38098,13 @@
   "k.geo/shards/africa"
  ],
  "oyster": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-03",
   "k.objects/shards/noto-food-asian-03",
   "k.words/shards/oy"
+ ],
+ "oysters": [
+  "k.food/shards/animal-foods"
  ],
  "oz": [
   "k.units/shards/core"
@@ -37444,15 +38387,21 @@
   "k.geo/shards/north-america"
  ],
  "pancake": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-01",
   "k.words/shards/pa"
  ],
  "pancakes": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-01"
  ],
  "panda": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08",
   "k.words/shards/pa"
+ ],
+ "pandas": [
+  "k.animals/shards/mammals"
  ],
  "pandora": [
   "k.words/shards/pa"
@@ -37521,6 +38470,12 @@
  ],
  "papaloapan": [
   "k.geo/shards/north-america"
+ ],
+ "papaya": [
+  "k.food/shards/fruit"
+ ],
+ "papayas": [
+  "k.food/shards/fruit"
  ],
  "papeete": [
   "k.geo/shards/oceania"
@@ -37731,14 +38686,23 @@
   "k.words/shards/pa"
  ],
  "parrot": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/pa"
  ],
  "parrots": [
+  "k.animals/shards/birds",
   "k.objects/shards/openmoji-animals-nature-02"
  ],
+ "parsley": [
+  "k.food/shards/other"
+ ],
  "parsnip": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04"
+ ],
+ "parsnips": [
+  "k.food/shards/vegetables"
  ],
  "parson": [
   "k.words/shards/pa"
@@ -37747,6 +38711,7 @@
   "k.words/shards/pa"
  ],
  "part": [
+  "k.body/schema.sop",
   "k.objects/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/pa"
@@ -37779,6 +38744,7 @@
   "k.words/shards/pa"
  ],
  "parts": [
+  "k.body/schema.sop",
   "k.objects/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/pa"
@@ -37844,6 +38810,7 @@
   "k.words/shards/pa"
  ],
  "pasta": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-pastas-and-rice-01",
   "k.objects/shards/noto-food-asian-01",
   "k.words/shards/pa"
@@ -38064,6 +39031,7 @@
   "k.words/shards/pe"
  ],
  "pea": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04",
   "k.objects/shards/noto-food-vegetable-03",
   "k.words/shards/pe"
@@ -38084,12 +39052,20 @@
   "k.words/shards/pe"
  ],
  "peach": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/pe"
  ],
+ "peaches": [
+  "k.food/shards/fruit"
+ ],
  "peacock": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-02",
   "k.words/shards/pe"
+ ],
+ "peacocks": [
+  "k.animals/shards/birds"
  ],
  "peahen": [
   "k.objects/shards/noto-animal-bird-02"
@@ -38105,6 +39081,7 @@
   "k.geo/shards/asia"
  ],
  "peanut": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-01",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/pe"
@@ -38113,10 +39090,12 @@
   "k.objects/shards/mulberry-food-ingredients-01"
  ],
  "peanuts": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-vegetable-02",
   "k.words/shards/pe"
  ],
  "pear": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-03",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/pe"
@@ -38146,7 +39125,11 @@
  "pearl6": [
   "k.objects/shards/noto-drink-03"
  ],
+ "pears": [
+  "k.food/shards/fruit"
+ ],
  "peas": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04"
  ],
  "peasant": [
@@ -38162,7 +39145,11 @@
   "k.geo/shards/europe"
  ],
  "pecan": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-02"
+ ],
+ "pecans": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "pechora": [
   "k.geo/shards/europe"
@@ -38251,7 +39238,11 @@
   "k.words/shards/pe"
  ],
  "pelican": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-01"
+ ],
+ "pelicans": [
+  "k.animals/shards/birds"
  ],
  "pelly": [
   "k.geo/shards/north-america"
@@ -38331,8 +39322,12 @@
   "k.words/shards/pe"
  ],
  "penguin": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-01",
   "k.words/shards/pe"
+ ],
+ "penguins": [
+  "k.animals/shards/birds"
  ],
  "penicillin": [
   "k.words/shards/pe"
@@ -38407,6 +39402,7 @@
   "k.words/shards/pe"
  ],
  "pepper": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-vegetables-and-salads-02",
   "k.objects/shards/noto-food-vegetable-01",
   "k.objects/shards/openmoji-food-drink-02",
@@ -38743,6 +39739,9 @@
  "pho": [
   "k.objects/shards/noto-food-asian-01"
  ],
+ "phobos": [
+  "k.space/shards/solar-system"
+ ],
  "phoebe": [
   "k.words/shards/ph"
  ],
@@ -38956,6 +39955,7 @@
   "k.geo/shards/asia"
  ],
  "pie": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-sweet-02",
   "k.words/shards/pi"
  ],
@@ -38987,7 +39987,11 @@
  "pierrot": [
   "k.words/shards/pi"
  ],
+ "pies": [
+  "k.food/shards/other"
+ ],
  "pig": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/pi"
@@ -38999,8 +40003,12 @@
   "k.objects/shards/noto-animal-mammal-05"
  ],
  "pigeon": [
+  "k.animals/shards/birds",
   "k.objects/shards/openmoji-animals-nature-02",
   "k.words/shards/pi"
+ ],
+ "pigeons": [
+  "k.animals/shards/birds"
  ],
  "pigged": [
   "k.words/shards/pi"
@@ -39018,6 +40026,9 @@
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.words/shards/pi"
  ],
+ "pigs": [
+  "k.animals/shards/mammals"
+ ],
  "pik aborigen": [
   "k.geo/shards/asia"
  ],
@@ -39034,6 +40045,7 @@
   "k.words/shards/pi"
  ],
  "pike": [
+  "k.animals/shards/fish",
   "k.words/shards/pi"
  ],
  "pilcomayo": [
@@ -39127,11 +40139,15 @@
   "k.objects/shards/mulberry-food-nuts-02"
  ],
  "pineapple": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/pi"
  ],
  "pineapple juice": [
   "k.objects/shards/mulberry-drink-type-02"
+ ],
+ "pineapples": [
+  "k.food/shards/fruit"
  ],
  "pinega": [
   "k.geo/shards/europe"
@@ -39221,7 +40237,11 @@
  "pissing": [
   "k.words/shards/pi"
  ],
+ "pistachio": [
+  "k.food/shards/grains-nuts-and-pulses"
+ ],
  "pistachios": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-02"
  ],
  "pistol": [
@@ -39282,12 +40302,16 @@
   "k.geo/shards/europe"
  ],
  "pizza": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-02",
   "k.objects/shards/noto-food-vegetable-03",
   "k.words/shards/pi"
  ],
  "pizza cutter": [
   "k.objects/shards/mulberry-food-kitchen-items-06"
+ ],
+ "pizzas": [
+  "k.food/shards/other"
  ],
  "piña": [
   "k.objects/shards/noto-food-fruit-03"
@@ -39335,12 +40359,14 @@
   "k.objects/shards/more",
   "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.space/shards/kinds",
   "k.words/shards/pl"
  ],
  "planets": [
   "k.objects/shards/more",
   "k.objects/shards/mulberry-science-astronomy-01",
-  "k.objects/shards/mulberry-science-astronomy-02"
+  "k.objects/shards/mulberry-science-astronomy-02",
+  "k.space/shards/kinds"
  ],
  "plank": [
   "k.words/shards/pl"
@@ -39567,6 +40593,7 @@
   "k.words/shards/pl"
  ],
  "plum": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/mulberry-food-fruit-03",
   "k.words/shards/pl"
@@ -39586,6 +40613,9 @@
  ],
  "plump": [
   "k.words/shards/pl"
+ ],
+ "plums": [
+  "k.food/shards/fruit"
  ],
  "plunder": [
   "k.words/shards/pl"
@@ -39611,6 +40641,7 @@
  ],
  "pluto": [
   "k.objects/shards/mulberry-science-astronomy-01",
+  "k.space/shards/solar-system",
   "k.words/shards/pl"
  ],
  "plutonium": [
@@ -39713,7 +40744,14 @@
   "k.objects/shards/noto-animal-mammal-07"
  ],
  "polar bear": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-07"
+ ],
+ "polar bears": [
+  "k.animals/shards/mammals"
+ ],
+ "polaris": [
+  "k.space/shards/stars-and-galaxies"
  ],
  "pole": [
   "k.objects/shards/more",
@@ -39787,7 +40825,11 @@
   "k.geo/shards/oceania"
  ],
  "pomegranate": [
+  "k.food/shards/fruit",
   "k.objects/shards/openmoji-food-drink-01"
+ ],
+ "pomegranates": [
+  "k.food/shards/fruit"
  ],
  "ponce": [
   "k.geo/shards/north-america"
@@ -39803,10 +40845,14 @@
  "pongola": [
   "k.geo/shards/africa"
  ],
+ "ponies": [
+  "k.animals/shards/mammals"
+ ],
  "pontic mountains": [
   "k.geo/shards/asia"
  ],
  "pony": [
+  "k.animals/shards/mammals",
   "k.words/shards/po"
  ],
  "ponytail": [
@@ -39847,6 +40893,7 @@
   "k.objects/shards/mulberry-clothes-general-04"
  ],
  "popcorn": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/po"
  ],
@@ -39891,10 +40938,15 @@
   "k.words/shards/po"
  ],
  "porcupine": [
+  "k.animals/shards/mammals",
   "k.geo/shards/north-america",
   "k.objects/shards/mulberry-animal-mammal-02"
  ],
+ "porcupines": [
+  "k.animals/shards/mammals"
+ ],
  "pork": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-meat-01",
   "k.objects/shards/mulberry-food-meat-02",
   "k.objects/shards/noto-animal-mammal-04",
@@ -39925,6 +40977,7 @@
   "k.objects/shards/openmoji-animals-nature-01"
  ],
  "porridge": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-breads-and-baking-05",
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/po"
@@ -40119,12 +41172,14 @@
   "k.words/shards/po"
  ],
  "potato": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-05",
   "k.objects/shards/noto-food-asian-01",
   "k.objects/shards/noto-food-vegetable-01",
   "k.words/shards/po"
  ],
  "potatoes": [
+  "k.food/shards/vegetables",
   "k.words/shards/po"
  ],
  "potential": [
@@ -40251,9 +41306,13 @@
   "k.words/shards/pr"
  ],
  "prawn": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
   "k.objects/shards/noto-food-asian-02",
   "k.objects/shards/openmoji-animals-nature-02"
+ ],
+ "prawns": [
+  "k.food/shards/animal-foods"
  ],
  "pray": [
   "k.words/shards/pr"
@@ -40869,6 +41928,9 @@
  "provoke": [
   "k.words/shards/pr"
  ],
+ "proxima centauri": [
+  "k.space/shards/stars-and-galaxies"
+ ],
  "proximity": [
   "k.words/shards/pr"
  ],
@@ -41033,6 +42095,7 @@
   "k.words/shards/pu"
  ],
  "pumpkin": [
+  "k.food/shards/vegetables",
   "k.objects/shards/noto-event-01",
   "k.objects/shards/noto-food-sweet-02",
   "k.words/shards/pu"
@@ -41042,6 +42105,9 @@
  ],
  "pumpkin pie": [
   "k.objects/shards/mulberry-celebration-item-03"
+ ],
+ "pumpkins": [
+  "k.food/shards/vegetables"
  ],
  "pun": [
   "k.words/shards/pu"
@@ -41438,6 +42504,12 @@
  "quilt": [
   "k.words/shards/qu"
  ],
+ "quince": [
+  "k.food/shards/fruit"
+ ],
+ "quinces": [
+  "k.food/shards/fruit"
+ ],
  "quincy": [
   "k.words/shards/qu"
  ],
@@ -41499,11 +42571,15 @@
   "k.words/shards/ra"
  ],
  "rabbit": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-07",
   "k.words/shards/ra"
  ],
  "rabbit face": [
   "k.objects/shards/noto-animal-mammal-07"
+ ],
+ "rabbits": [
+  "k.animals/shards/mammals"
  ],
  "rabble": [
   "k.words/shards/ra"
@@ -41512,8 +42588,12 @@
   "k.words/shards/ra"
  ],
  "raccoon": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-02",
   "k.words/shards/ra"
+ ],
+ "raccoons": [
+  "k.animals/shards/mammals"
  ],
  "race": [
   "k.words/shards/ra"
@@ -41580,8 +42660,12 @@
   "k.words/shards/ra"
  ],
  "radish": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04",
   "k.objects/shards/noto-food-vegetable-03"
+ ],
+ "radishes": [
+  "k.food/shards/vegetables"
  ],
  "radius": [
   "k.words/shards/ra"
@@ -41822,10 +42906,15 @@
  "rash": [
   "k.words/shards/ra"
  ],
+ "raspberries": [
+  "k.food/shards/fruit"
+ ],
  "raspberry": [
+  "k.food/shards/fruit",
   "k.words/shards/ra"
  ],
  "rat": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-06",
   "k.words/shards/ra"
  ],
@@ -41846,6 +42935,9 @@
  ],
  "rational": [
   "k.words/shards/ra"
+ ],
+ "rats": [
+  "k.animals/shards/mammals"
  ],
  "ratted": [
   "k.words/shards/ra"
@@ -41883,6 +42975,7 @@
   "k.objects/shards/mulberry-food-pastas-and-rice-01"
  ],
  "raw": [
+  "k.food/schema.sop",
   "k.words/shards/ra"
  ],
  "rawalpindi": [
@@ -42205,6 +43298,9 @@
  "red paper lantern": [
   "k.objects/shards/noto-light-video-02"
  ],
+ "red planet": [
+  "k.space/shards/solar-system"
+ ],
  "red_button": [
   "k.objects/shards/mulberry-electrical-media-02"
  ],
@@ -42404,6 +43500,7 @@
   "k.words/shards/re"
  ],
  "reindeer": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.words/shards/re"
  ],
@@ -43287,10 +44384,18 @@
   "k.geo/shards/europe"
  ],
  "rhino": [
+  "k.animals/shards/mammals",
   "k.words/shards/rh"
  ],
  "rhinoceros": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-06"
+ ],
+ "rhinoceroses": [
+  "k.animals/shards/mammals"
+ ],
+ "rhinos": [
+  "k.animals/shards/mammals"
  ],
  "rhne": [
   "k.geo/shards/europe"
@@ -43315,6 +44420,7 @@
   "k.words/shards/ri"
  ],
  "rib": [
+  "k.body/shards/core",
   "k.words/shards/ri"
  ],
  "ribbed": [
@@ -43338,10 +44444,14 @@
  "ribeira": [
   "k.geo/shards/south-america"
  ],
+ "ribs": [
+  "k.body/shards/core"
+ ],
  "ricardo": [
   "k.words/shards/ri"
  ],
  "rice": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-pastas-and-rice-01",
   "k.objects/shards/noto-food-asian-01",
   "k.objects/shards/noto-plant-other-01",
@@ -43909,6 +45019,7 @@
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-transport-water-01",
   "k.objects/shards/noto-writing-01",
+  "k.space/schema.sop",
   "k.words/shards/ri"
  ],
  "ring binder": [
@@ -43948,6 +45059,7 @@
   "k.words/shards/ri"
  ],
  "rings": [
+  "k.space/schema.sop",
   "k.words/shards/ri"
  ],
  "rinjani": [
@@ -44152,8 +45264,12 @@
   "k.words/shards/ro"
  ],
  "robin": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.words/shards/ro"
+ ],
+ "robins": [
+  "k.animals/shards/birds"
  ],
  "robinson": [
   "k.words/shards/ro"
@@ -44405,8 +45521,12 @@
   "k.words/shards/ro"
  ],
  "rooster": [
+  "k.animals/shards/birds",
   "k.objects/shards/noto-animal-bird-01",
   "k.words/shards/ro"
+ ],
+ "roosters": [
+  "k.animals/shards/birds"
  ],
  "root": [
   "k.objects/shards/mulberry-food-vegetables-and-salads-01",
@@ -44789,6 +45909,7 @@
   "k.geo/shards/africa"
  ],
  "rye": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.words/shards/ry"
  ],
  "s": [
@@ -45009,6 +46130,7 @@
   "k.words/shards/sa"
  ],
  "salad": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-vegetables-and-salad-01",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03",
   "k.objects/shards/noto-food-prepared-04",
@@ -45025,8 +46147,17 @@
  "salado": [
   "k.geo/shards/south-america"
  ],
+ "salads": [
+  "k.food/shards/other"
+ ],
  "salalah": [
   "k.geo/shards/asia"
+ ],
+ "salamander": [
+  "k.animals/shards/reptiles-and-amphibians"
+ ],
+ "salamanders": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "salami": [
   "k.words/shards/sa"
@@ -45071,6 +46202,8 @@
   "k.words/shards/sa"
  ],
  "salmon": [
+  "k.animals/shards/fish",
+  "k.food/shards/animal-foods",
   "k.geo/shards/north-america",
   "k.words/shards/sa"
  ],
@@ -45088,6 +46221,7 @@
   "k.words/shards/sa"
  ],
  "salt": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-05",
   "k.words/shards/sa"
  ],
@@ -45244,6 +46378,7 @@
   "k.words/shards/sa"
  ],
  "sandwich": [
+  "k.food/shards/other",
   "k.objects/shards/noto-food-prepared-03",
   "k.words/shards/sa"
  ],
@@ -45261,6 +46396,9 @@
  ],
  "sandwich toasted": [
   "k.objects/shards/mulberry-food-meals-and-snacks-05"
+ ],
+ "sandwiches": [
+  "k.food/shards/other"
  ],
  "sane": [
   "k.geo/shards/europe"
@@ -45357,6 +46495,14 @@
  "sarcasm": [
   "k.words/shards/sa"
  ],
+ "sardine": [
+  "k.animals/shards/fish",
+  "k.food/shards/animal-foods"
+ ],
+ "sardines": [
+  "k.animals/shards/fish",
+  "k.food/shards/animal-foods"
+ ],
  "sarh": [
   "k.geo/shards/africa"
  ],
@@ -45429,6 +46575,7 @@
   "k.objects/shards/more",
   "k.objects/shards/mulberry-science-astronomy-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.space/shards/solar-system",
   "k.words/shards/sa"
  ],
  "saturnine": [
@@ -45481,6 +46628,7 @@
   "k.objects/shards/noto-animal-reptile-01"
  ],
  "sausage": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-breads-and-baking-05",
   "k.objects/shards/mulberry-food-meat-02",
   "k.objects/shards/noto-food-prepared-03",
@@ -45499,6 +46647,7 @@
   "k.objects/shards/mulberry-food-breads-and-baking-05"
  ],
  "sausages": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-meat-02"
  ],
  "sauðárkrókur": [
@@ -45570,6 +46719,9 @@
  ],
  "saying": [
   "k.words/shards/sa"
+ ],
+ "says": [
+  "k.animals/schema.sop"
  ],
  "scale": [
   "k.objects/shards/noto-tool-03",
@@ -45783,8 +46935,12 @@
   "k.objects/shards/noto-animal-bug-02"
  ],
  "scorpion": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-02",
   "k.words/shards/sc"
+ ],
+ "scorpions": [
+  "k.animals/shards/invertebrates"
  ],
  "scorpius": [
   "k.objects/shards/noto-animal-bug-02"
@@ -45979,15 +47135,27 @@
   "k.words/shards/se"
  ],
  "seagull": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.words/shards/se"
  ],
+ "seagulls": [
+  "k.animals/shards/birds"
+ ],
  "seahorse": [
+  "k.animals/shards/fish",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01"
  ],
+ "seahorses": [
+  "k.animals/shards/fish"
+ ],
  "seal": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-marine-01",
   "k.words/shards/se"
+ ],
+ "seals": [
+  "k.animals/shards/mammals"
  ],
  "seaman": [
   "k.words/shards/se"
@@ -46165,6 +47333,7 @@
   "k.objects/shards/openmoji-food-drink-01"
  ],
  "seeing": [
+  "k.body/shards/core",
   "k.words/shards/se"
  ],
  "seek": [
@@ -46334,8 +47503,12 @@
   "k.words/shards/se"
  ],
  "sense": [
+  "k.body/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/se"
+ ],
+ "senses": [
+  "k.body/schema.sop"
  ],
  "sensing": [
   "k.words/shards/se"
@@ -46768,8 +47941,12 @@
   "k.geo/shards/asia"
  ],
  "shark": [
+  "k.animals/shards/fish",
   "k.objects/shards/noto-animal-marine-01",
   "k.words/shards/sh"
+ ],
+ "sharks": [
+  "k.animals/shards/fish"
  ],
  "sharp": [
   "k.objects/shards/noto-household-02",
@@ -46845,6 +48022,7 @@
   "k.words/shards/sh"
  ],
  "sheep": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/sh"
@@ -47175,8 +48353,12 @@
   "k.words/shards/sh"
  ],
  "shoulder": [
+  "k.body/shards/core",
   "k.objects/shards/home",
   "k.words/shards/sh"
+ ],
+ "shoulders": [
+  "k.body/shards/core"
  ],
  "shout": [
   "k.words/shards/sh"
@@ -47255,6 +48437,8 @@
   "k.words/shards/sh"
  ],
  "shrimp": [
+  "k.animals/shards/invertebrates",
+  "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-food-asian-02",
   "k.objects/shards/openmoji-animals-nature-02",
@@ -47431,6 +48615,7 @@
   "k.words/shards/si"
  ],
  "sight": [
+  "k.body/shards/core",
   "k.words/shards/si"
  ],
  "sighting": [
@@ -47664,6 +48849,9 @@
   "k.objects/shards/noto-transport-ground-06",
   "k.words/shards/si"
  ],
+ "sirius": [
+  "k.space/shards/stars-and-galaxies"
+ ],
  "sis": [
   "k.words/shards/si"
  ],
@@ -47732,6 +48920,7 @@
  ],
  "size": [
   "k.commonsense/schema.sop",
+  "k.space/schema.sop",
   "k.words/shards/si"
  ],
  "skalistyy golets": [
@@ -47764,8 +48953,12 @@
   "k.geo/shards/north-america"
  ],
  "skeleton": [
+  "k.body/shards/core",
   "k.objects/shards/noto-medical-01",
   "k.words/shards/sk"
+ ],
+ "skeletons": [
+  "k.body/shards/core"
  ],
  "skelleftelven": [
   "k.geo/shards/europe"
@@ -47799,6 +48992,7 @@
   "k.words/shards/sk"
  ],
  "skin": [
+  "k.body/shards/core",
   "k.objects/shards/mulberry-leisure-toys-02",
   "k.objects/shards/noto-food-fruit-03",
   "k.objects/shards/openmoji-food-drink-01",
@@ -47841,12 +49035,20 @@
   "k.geo/shards/europe"
  ],
  "skull": [
+  "k.body/shards/core",
   "k.objects/shards/noto-medical-01",
   "k.words/shards/sk"
  ],
+ "skulls": [
+  "k.body/shards/core"
+ ],
  "skunk": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08",
   "k.words/shards/sk"
+ ],
+ "skunks": [
+  "k.animals/shards/mammals"
  ],
  "sky": [
   "k.objects/shards/noto-event-01",
@@ -48092,7 +49294,11 @@
   "k.objects/shards/noto-game-02"
  ],
  "sloth": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "sloths": [
+  "k.animals/shards/mammals"
  ],
  "slots": [
   "k.objects/shards/noto-game-02"
@@ -48122,6 +49328,7 @@
   "k.words/shards/sl"
  ],
  "slug": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/sl"
@@ -48131,6 +49338,9 @@
  ],
  "slugging": [
   "k.words/shards/sl"
+ ],
+ "slugs": [
+  "k.animals/shards/invertebrates"
  ],
  "slum": [
   "k.words/shards/sl"
@@ -48179,6 +49389,9 @@
   "k.objects/shards/openmoji-gardening-01",
   "k.objects/shards/openmoji-healthcare-03"
  ],
+ "smallest": [
+  "k.space/schema.sop"
+ ],
  "smallpox": [
   "k.words/shards/sm"
  ],
@@ -48201,10 +49414,12 @@
   "k.words/shards/sm"
  ],
  "smell": [
+  "k.body/shards/core",
   "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/sm"
  ],
  "smelling": [
+  "k.body/shards/core",
   "k.words/shards/sm"
  ],
  "smelt": [
@@ -48271,13 +49486,21 @@
   "k.words/shards/sn"
  ],
  "snail": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-01",
   "k.words/shards/sn"
  ],
+ "snails": [
+  "k.animals/shards/invertebrates"
+ ],
  "snake": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/sn"
+ ],
+ "snakes": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "snap": [
   "k.objects/shards/noto-light-video-01",
@@ -48586,6 +49809,13 @@
  "solar cell": [
   "k.objects/shards/openmoji-technology-02"
  ],
+ "solar system": [
+  "k.space/schema.sop",
+  "k.space/shards/kinds"
+ ],
+ "solar systems": [
+  "k.space/shards/kinds"
+ ],
  "sold": [
   "k.words/shards/se"
  ],
@@ -48733,6 +49963,7 @@
   "k.words/shards/so"
  ],
  "sound": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-music-01",
   "k.objects/shards/noto-sound-01",
   "k.objects/shards/noto-sound-02",
@@ -48745,6 +49976,7 @@
   "k.words/shards/so"
  ],
  "soup": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-meals-and-snacks-06",
   "k.objects/shards/mulberry-food-meals-and-snacks-07",
   "k.objects/shards/noto-food-asian-01",
@@ -48771,6 +50003,9 @@
  ],
  "soup vegetable": [
   "k.objects/shards/mulberry-food-meals-and-snacks-07"
+ ],
+ "soups": [
+  "k.food/shards/other"
  ],
  "sour": [
   "k.objects/shards/noto-food-fruit-01",
@@ -48857,7 +50092,11 @@
   "k.words/shards/so"
  ],
  "soybean": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-vegetable-03"
+ ],
+ "soybeans": [
+  "k.food/shards/grains-nuts-and-pulses"
  ],
  "spa": [
   "k.words/shards/sp"
@@ -48869,6 +50108,7 @@
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-transport-air-02",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.space/schema.sop",
   "k.words/shards/sp"
  ],
  "space shuttle": [
@@ -48894,6 +50134,7 @@
   "k.words/shards/sp"
  ],
  "spaghetti": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-asian-01",
   "k.words/shards/sp"
  ],
@@ -48960,7 +50201,11 @@
   "k.words/shards/sp"
  ],
  "sparrow": [
+  "k.animals/shards/birds",
   "k.words/shards/sp"
+ ],
+ "sparrows": [
+  "k.animals/shards/birds"
  ],
  "spartan": [
   "k.words/shards/sp"
@@ -49112,11 +50357,15 @@
   "k.words/shards/sp"
  ],
  "spider": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-02",
   "k.words/shards/sp"
  ],
  "spider web": [
   "k.objects/shards/noto-animal-bug-02"
+ ],
+ "spiders": [
+  "k.animals/shards/invertebrates"
  ],
  "spied": [
   "k.words/shards/sp"
@@ -49159,6 +50408,7 @@
   "k.words/shards/sp"
  ],
  "spinach": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-05",
   "k.words/shards/sp"
  ],
@@ -49166,6 +50416,7 @@
   "k.words/shards/sp"
  ],
  "spine": [
+  "k.body/shards/core",
   "k.objects/shards/home",
   "k.objects/shards/mulberry-work-and-school-stationery-01",
   "k.objects/shards/mulberry-work-and-school-stationery-04",
@@ -49173,6 +50424,7 @@
   "k.words/shards/sp"
  ],
  "spines": [
+  "k.body/shards/core",
   "k.objects/shards/noto-animal-mammal-07"
  ],
  "spinning": [
@@ -49570,6 +50822,7 @@
   "k.words/shards/sq"
  ],
  "squid": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/sq"
  ],
@@ -49577,8 +50830,12 @@
   "k.words/shards/sq"
  ],
  "squirrel": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-07",
   "k.words/shards/sq"
+ ],
+ "squirrels": [
+  "k.animals/shards/mammals"
  ],
  "squirt": [
   "k.words/shards/sq"
@@ -49814,6 +51071,7 @@
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/noto-transport-ground-02",
   "k.objects/shards/sky",
+  "k.space/shards/kinds",
   "k.words/shards/st"
  ],
  "star stacker": [
@@ -49844,6 +51102,7 @@
   "k.words/shards/st"
  ],
  "starfish": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/mulberry-animal-other-invertebrates-01",
   "k.objects/shards/noto-place-geographic-01"
  ],
@@ -49865,7 +51124,8 @@
  "stars": [
   "k.commonsense/shards/core",
   "k.objects/shards/noto-place-other-01",
-  "k.objects/shards/sky"
+  "k.objects/shards/sky",
+  "k.space/shards/kinds"
  ],
  "starship": [
   "k.words/shards/st"
@@ -49972,9 +51232,13 @@
   "k.words/shards/st"
  ],
  "steak": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-meat-02",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/st"
+ ],
+ "steaks": [
+  "k.food/shards/animal-foods"
  ],
  "steal": [
   "k.words/shards/st"
@@ -50254,8 +51518,12 @@
   "k.words/shards/st"
  ],
  "stomach": [
+  "k.body/shards/core",
   "k.objects/shards/openmoji-healthcare-02",
   "k.words/shards/st"
+ ],
+ "stomachs": [
+  "k.body/shards/core"
  ],
  "stomp": [
   "k.words/shards/st"
@@ -50321,7 +51589,11 @@
   "k.words/shards/st"
  ],
  "stork": [
+  "k.animals/shards/birds",
   "k.words/shards/st"
+ ],
+ "storks": [
+  "k.animals/shards/birds"
  ],
  "storm": [
   "k.words/shards/st"
@@ -50405,7 +51677,11 @@
   "k.objects/shards/noto-drink-03",
   "k.words/shards/st"
  ],
+ "strawberries": [
+  "k.food/shards/fruit"
+ ],
  "strawberry": [
+  "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-sweets-and-desserts-03",
   "k.objects/shards/noto-food-fruit-02",
   "k.words/shards/st"
@@ -50813,6 +52089,7 @@
   "k.words/shards/su"
  ],
  "sugar": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-food-ingredients-02",
   "k.objects/shards/noto-food-sweet-01",
   "k.words/shards/su"
@@ -50938,6 +52215,7 @@
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/sky",
+  "k.space/shards/solar-system",
   "k.time/shards/calendar",
   "k.words/shards/su"
  ],
@@ -50974,6 +52252,9 @@
  ],
  "sunflower": [
   "k.objects/shards/noto-plant-flower-02"
+ ],
+ "sunflower oil": [
+  "k.food/shards/other"
  ],
  "sung": [
   "k.words/shards/si",
@@ -51274,7 +52555,11 @@
   "k.geo/shards/africa"
  ],
  "swallow": [
+  "k.animals/shards/birds",
   "k.words/shards/sw"
+ ],
+ "swallows": [
+  "k.animals/shards/birds"
  ],
  "swam": [
   "k.words/shards/sw"
@@ -51289,9 +52574,13 @@
   "k.words/shards/sw"
  ],
  "swan": [
+  "k.animals/shards/birds",
   "k.geo/shards/oceania",
   "k.objects/shards/noto-animal-bird-02",
   "k.words/shards/sw"
+ ],
+ "swans": [
+  "k.animals/shards/birds"
  ],
  "swanson": [
   "k.words/shards/sw"
@@ -51374,10 +52663,18 @@
   "k.objects/shards/noto-food-sweet-02",
   "k.words/shards/sw"
  ],
+ "sweet pepper": [
+  "k.food/shards/vegetables"
+ ],
  "sweet potato": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-05"
  ],
+ "sweet potatoes": [
+  "k.food/shards/vegetables"
+ ],
  "sweetcorn": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-vegetables-and-salads-05"
  ],
  "sweetheart": [
@@ -52123,10 +53420,12 @@
   "k.objects/shards/noto-clothing-06"
  ],
  "taste": [
+  "k.body/shards/core",
   "k.objects/shards/noto-food-prepared-05",
   "k.words/shards/ta"
  ],
  "tasting": [
+  "k.body/shards/core",
   "k.words/shards/ta"
  ],
  "tat": [
@@ -52216,6 +53515,7 @@
   "k.geo/shards/oceania"
  ],
  "tea": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-drink-03",
@@ -52286,6 +53586,9 @@
  "tears": [
   "k.words/shards/te"
  ],
+ "teas": [
+  "k.food/shards/other"
+ ],
  "tease": [
   "k.words/shards/te"
  ],
@@ -52346,6 +53649,7 @@
   "k.words/shards/te"
  ],
  "teeth": [
+  "k.body/shards/core",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-household-03",
@@ -52552,6 +53856,12 @@
  ],
  "terminator": [
   "k.words/shards/te"
+ ],
+ "termite": [
+  "k.animals/shards/invertebrates"
+ ],
+ "termites": [
+  "k.animals/shards/invertebrates"
  ],
  "terms": [
   "k.words/shards/te"
@@ -52989,8 +54299,12 @@
   "k.words/shards/th"
  ],
  "thumb": [
+  "k.body/shards/core",
   "k.objects/shards/noto-sport-03",
   "k.words/shards/th"
+ ],
+ "thumbs": [
+  "k.body/shards/core"
  ],
  "thump": [
   "k.words/shards/th"
@@ -53103,6 +54417,7 @@
   "k.words/shards/ti"
  ],
  "tiger": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-02",
   "k.words/shards/ti"
  ],
@@ -53110,6 +54425,7 @@
   "k.objects/shards/noto-animal-mammal-02"
  ],
  "tigers": [
+  "k.animals/shards/mammals",
   "k.words/shards/ti"
  ],
  "tighten": [
@@ -53305,6 +54621,7 @@
   "k.words/shards/ti"
  ],
  "titan": [
+  "k.space/shards/solar-system",
   "k.words/shards/ti"
  ],
  "titanic": [
@@ -53327,8 +54644,12 @@
   "k.words/shards/ti"
  ],
  "toad": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.words/shards/to"
+ ],
+ "toads": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "toadstool": [
   "k.objects/shards/noto-plant-other-02"
@@ -53337,6 +54658,7 @@
   "k.geo/shards/africa"
  ],
  "toast": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-eggs-01",
   "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.objects/shards/noto-food-prepared-01",
@@ -53377,6 +54699,7 @@
   "k.words/shards/to"
  ],
  "toe": [
+  "k.body/shards/core",
   "k.objects/shards/more",
   "k.words/shards/to"
  ],
@@ -53404,7 +54727,11 @@
  "toe8": [
   "k.objects/shards/noto-animal-mammal-08"
  ],
+ "toes": [
+  "k.body/shards/core"
+ ],
  "tofu": [
+  "k.food/shards/other",
   "k.words/shards/to"
  ],
  "toggling": [
@@ -53464,6 +54791,7 @@
   "k.words/shards/to"
  ],
  "tomato": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-drink-type-03",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/mulberry-food-vegetables-and-salad-01",
@@ -53479,6 +54807,7 @@
   "k.objects/shards/mulberry-food-vegetables-and-salads-05"
  ],
  "tomatoes": [
+  "k.food/shards/vegetables",
   "k.words/shards/to"
  ],
  "tomb": [
@@ -53520,9 +54849,13 @@
   "k.geo/shards/asia"
  ],
  "tongue": [
+  "k.body/shards/core",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/to"
+ ],
+ "tongues": [
+  "k.body/shards/core"
  ],
  "tonic": [
   "k.words/shards/to"
@@ -53571,6 +54904,7 @@
   "k.words/shards/to"
  ],
  "tooth": [
+  "k.body/shards/core",
   "k.objects/shards/noto-food-sweet-02",
   "k.words/shards/to"
  ],
@@ -53776,9 +55110,13 @@
   "k.words/shards/to"
  ],
  "tortoise": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/to"
+ ],
+ "tortoises": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "torture": [
   "k.words/shards/to"
@@ -53804,7 +55142,14 @@
  "totem": [
   "k.words/shards/to"
  ],
+ "toucan": [
+  "k.animals/shards/birds"
+ ],
+ "toucans": [
+  "k.animals/shards/birds"
+ ],
  "touch": [
+  "k.body/shards/core",
   "k.words/shards/to"
  ],
  "touch screen": [
@@ -54399,6 +55744,9 @@
  "tristan": [
   "k.words/shards/tr"
  ],
+ "triton": [
+  "k.space/shards/solar-system"
+ ],
  "triumph": [
   "k.words/shards/tr"
  ],
@@ -54504,6 +55852,7 @@
   "k.words/shards/tr"
  ],
  "trout": [
+  "k.animals/shards/fish",
   "k.words/shards/tr"
  ],
  "trowel": [
@@ -54706,6 +56055,7 @@
   "k.geo/shards/asia"
  ],
  "tummy": [
+  "k.body/shards/core",
   "k.words/shards/tu"
  ],
  "tumnin": [
@@ -54721,6 +56071,8 @@
   "k.geo/shards/south-america"
  ],
  "tuna": [
+  "k.animals/shards/fish",
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-fish-and-seafood-01",
   "k.words/shards/tu"
  ],
@@ -54781,11 +56133,16 @@
   "k.words/shards/tu"
  ],
  "turkey": [
+  "k.animals/shards/birds",
+  "k.food/shards/animal-foods",
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/tu"
+ ],
+ "turkeys": [
+  "k.animals/shards/birds"
  ],
  "turkish": [
   "k.words/shards/tu"
@@ -54822,8 +56179,12 @@
   "k.words/shards/tu"
  ],
  "turnip": [
+  "k.food/shards/vegetables",
   "k.objects/shards/mulberry-food-vegetables-and-salads-06",
   "k.objects/shards/noto-food-vegetable-03"
+ ],
+ "turnips": [
+  "k.food/shards/vegetables"
  ],
  "turnout": [
   "k.words/shards/tu"
@@ -54832,8 +56193,12 @@
   "k.units/shards/core"
  ],
  "turtle": [
+  "k.animals/shards/reptiles-and-amphibians",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/tu"
+ ],
+ "turtles": [
+  "k.animals/shards/reptiles-and-amphibians"
  ],
  "turves": [
   "k.words/shards/tu"
@@ -55502,7 +56867,8 @@
   "k.words/shards/ur"
  ],
  "uranus": [
-  "k.objects/shards/mulberry-science-astronomy-01"
+  "k.objects/shards/mulberry-science-astronomy-01",
+  "k.space/shards/solar-system"
  ],
  "urge": [
   "k.words/shards/ur"
@@ -55835,7 +57201,11 @@
   "k.words/shards/ve"
  ],
  "vein": [
+  "k.body/shards/core",
   "k.words/shards/ve"
+ ],
+ "veins": [
+  "k.body/shards/core"
  ],
  "velhas": [
   "k.geo/shards/south-america"
@@ -55896,6 +57266,7 @@
  ],
  "venus": [
   "k.objects/shards/mulberry-science-astronomy-02",
+  "k.space/shards/solar-system",
   "k.words/shards/ve"
  ],
  "verb": [
@@ -56437,6 +57808,7 @@
   "k.words/shards/vi"
  ],
  "vision": [
+  "k.body/shards/core",
   "k.words/shards/vi"
  ],
  "visionary": [
@@ -56621,8 +57993,12 @@
   "k.words/shards/vu"
  ],
  "vulture": [
+  "k.animals/shards/birds",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.words/shards/vu"
+ ],
+ "vultures": [
+  "k.animals/shards/birds"
  ],
  "vuoksi": [
   "k.geo/shards/europe"
@@ -56821,12 +58197,20 @@
   "k.words/shards/wa"
  ],
  "walnut": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/mulberry-food-nuts-02",
   "k.words/shards/wa"
  ],
+ "walnuts": [
+  "k.food/shards/grains-nuts-and-pulses"
+ ],
  "walrus": [
+  "k.animals/shards/mammals",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
   "k.words/shards/wa"
+ ],
+ "walruses": [
+  "k.animals/shards/mammals"
  ],
  "walter": [
   "k.words/shards/wa"
@@ -57015,8 +58399,12 @@
   "k.words/shards/wa"
  ],
  "wasp": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/mulberry-animal-spiders-and-insects-02",
   "k.words/shards/wa"
+ ],
+ "wasps": [
+  "k.animals/shards/invertebrates"
  ],
  "waste": [
   "k.objects/shards/noto-office-03",
@@ -57045,6 +58433,7 @@
   "k.words/shards/wa"
  ],
  "water": [
+  "k.food/shards/other",
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.objects/shards/mulberry-drink-type-03",
   "k.objects/shards/mulberry-transport-water-01",
@@ -57091,8 +58480,12 @@
   "k.words/shards/wa"
  ],
  "watermelon": [
+  "k.food/shards/fruit",
   "k.objects/shards/noto-food-fruit-01",
   "k.words/shards/wa"
+ ],
+ "watermelons": [
+  "k.food/shards/fruit"
  ],
  "waters": [
   "k.words/shards/wa"
@@ -57404,9 +58797,13 @@
   "k.geo/shards/oceania"
  ],
  "whale": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.words/shards/wh"
+ ],
+ "whales": [
+  "k.animals/shards/mammals"
  ],
  "wham": [
   "k.words/shards/wh"
@@ -57433,6 +58830,7 @@
   "k.words/shards/wh"
  ],
  "wheat": [
+  "k.food/shards/grains-nuts-and-pulses",
   "k.objects/shards/noto-food-prepared-01",
   "k.words/shards/wh"
  ],
@@ -57500,6 +58898,7 @@
   "k.objects/shards/vehicles"
  ],
  "where": [
+  "k.body/schema.sop",
   "k.commonsense/schema.sop",
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/openmoji-technology-01"
@@ -58073,6 +59472,7 @@
   "k.words/shards/wa"
  ],
  "wolf": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-02",
   "k.words/shards/wo"
  ],
@@ -58083,6 +59483,7 @@
   "k.words/shards/wo"
  ],
  "wolves": [
+  "k.animals/shards/mammals",
   "k.words/shards/wo"
  ],
  "woman": [
@@ -58140,6 +59541,12 @@
  ],
  "wooden spoon": [
   "k.objects/shards/mulberry-food-kitchen-items-09"
+ ],
+ "woodpecker": [
+  "k.animals/shards/birds"
+ ],
+ "woodpeckers": [
+  "k.animals/shards/birds"
  ],
  "woods": [
   "k.words/shards/wo"
@@ -58204,6 +59611,7 @@
  "world": [
   "k.objects/shards/mulberry-science-astronomy-02",
   "k.objects/shards/noto-place-map-01",
+  "k.space/shards/solar-system",
   "k.words/shards/wo"
  ],
  "world map": [
@@ -58213,11 +59621,15 @@
   "k.objects/shards/noto-place-map-01"
  ],
  "worm": [
+  "k.animals/shards/invertebrates",
   "k.objects/shards/noto-animal-bug-02",
   "k.words/shards/wo"
  ],
  "wormhole": [
   "k.words/shards/wo"
+ ],
+ "worms": [
+  "k.animals/shards/invertebrates"
  ],
  "worn": [
   "k.words/shards/we"
@@ -58339,7 +59751,11 @@
   "k.words/shards/wr"
  ],
  "wrist": [
+  "k.body/shards/core",
   "k.words/shards/wr"
+ ],
+ "wrists": [
+  "k.body/shards/core"
  ],
  "writ": [
   "k.words/shards/wr"
@@ -58456,6 +59872,7 @@
   "k.words/shards/ya"
  ],
  "yak": [
+  "k.animals/shards/mammals",
   "k.words/shards/ya"
  ],
  "yakked": [
@@ -58463,6 +59880,9 @@
  ],
  "yakking": [
   "k.words/shards/ya"
+ ],
+ "yaks": [
+  "k.animals/shards/mammals"
  ],
  "yakuza": [
   "k.words/shards/ya"
@@ -58657,6 +60077,9 @@
  "yoga": [
   "k.words/shards/yo"
  ],
+ "yoghurt": [
+  "k.food/shards/animal-foods"
+ ],
  "yogi": [
   "k.words/shards/yo"
  ],
@@ -58664,8 +60087,12 @@
   "k.words/shards/yo"
  ],
  "yogurt": [
+  "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-dairy-02",
   "k.words/shards/yo"
+ ],
+ "yogurts": [
+  "k.food/shards/animal-foods"
  ],
  "yokohama": [
   "k.geo/shards/asia"
@@ -58703,6 +60130,7 @@
   "k.geo/shards/asia"
  ],
  "young": [
+  "k.animals/schema.sop",
   "k.objects/shards/noto-plant-other-01",
   "k.words/shards/yo"
  ],
@@ -58809,8 +60237,12 @@
   "k.words/shards/ze"
  ],
  "zebra": [
+  "k.animals/shards/mammals",
   "k.objects/shards/noto-animal-mammal-03",
   "k.words/shards/ze"
+ ],
+ "zebras": [
+  "k.animals/shards/mammals"
  ],
  "zed": [
   "k.words/shards/ze"
@@ -58917,6 +60349,9 @@
  "zoom": [
   "k.objects/shards/noto-transport-ground-04",
   "k.words/shards/zo"
+ ],
+ "zucchini": [
+  "k.food/shards/vegetables"
  ],
  "zugspitze": [
   "k.geo/shards/europe"

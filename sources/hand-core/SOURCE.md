@@ -1,6 +1,7 @@
 # hand-core: hand-written core facts
 
-- **What:** the hand-written cores of the worlds (`k.commonsense`, `k.objects`): small sets of facts that define each
+- **What:** the hand-written cores of the worlds (`k.commonsense`, `k.objects`, `k.units`, `k.time`, `k.space`,
+  `k.animals`, `k.body`, `k.food`, and the schemas of the others): small sets of facts that define each
   schema and its tests before any bulk import. Written by the worker in this repository, checked by the reviewer.
 - **Version:** `1` (`core.source="hand-core 1"`). A new edition of the cores that changes facts raises the number.
 - **Origin:** this repository.

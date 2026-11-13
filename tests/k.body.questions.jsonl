@@ -1,0 +1,13 @@
+{"id":"bd-01","ask":"how many eyes does a person have","query":{"type":"k.body.part","where":{"name":"eye"},"seek":"count"},"expect":{"status":"supported","value":"2"}}
+{"id":"bd-02","ask":"how many teeth does an adult have","query":{"type":"k.body.part","where":{"name":"tooth"},"seek":"count"},"expect":{"status":"supported","value":"32"}}
+{"id":"bd-03","ask":"how many teeth does a young child have","query":{"type":"k.body.part","where":{"name":"tooth"},"seek":"child_count"},"expect":{"status":"supported","value":"20"}}
+{"id":"bd-04","ask":"where is the heart","query":{"type":"k.body.part","where":{"name":"heart"},"seek":"inside"},"expect":{"status":"supported","value":"chest"}}
+{"id":"bd-05","ask":"what does the heart do","query":{"type":"k.body.part","where":{"name":"heart"},"seek":"does"},"expect":{"status":"supported","value":"\"pumps blood\""}}
+{"id":"bd-06","ask":"what is a finger part of","query":{"type":"k.body.part","where":{"name":"finger"},"seek":"part_of"},"expect":{"status":"supported","value":"hand"}}
+{"id":"bd-07","ask":"which parts are in the chest","query":{"type":"k.body.part","where":{"inside":"chest"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["heart","lung","rib"]}}
+{"id":"bd-08","ask":"which part of the body sees","query":{"type":"k.body.part","where":{"does":"sees"},"seek":"name"},"expect":{"status":"supported","value":"eye"}}
+{"id":"bd-09","ask":"how many bones does an adult have","query":{"type":"k.body.part","where":{"name":"bone"},"seek":"count"},"expect":{"status":"supported","value":"206"}}
+{"id":"bd-10","ask":"which part of the body is used for the sense of taste","query":{"type":"k.body.sense","where":{"name":"taste"},"seek":"organ"},"expect":{"status":"supported","value":"tongue"}}
+{"id":"bd-11","ask":"how many senses are there","query":{"type":"k.body.sense","mode":"count"},"expect":{"status":"supported","value":"5"}}
+{"id":"bd-12","ask":"which parts are part of the face","query":{"type":"k.body.part","where":{"part_of":"face"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["forehead","eye","eyebrow","nose","cheek","mouth","chin"]}}
+{"id":"bd-13","ask":"an application's own part is accepted","tell":"@b1 k.body.part name=tail kind=part part_of=body count=1","ns":"app","expect":{"issues":[]}}

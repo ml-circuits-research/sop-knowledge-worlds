@@ -604,3 +604,36 @@ source (a cow, a chicken, a pig) or a hand sits next to the thing (milk, lamb, h
 OpenMoji: nothing excluded (no exclusion file was asked); weak as things: barcode, gps, intestine.
 
 npm test: 2,117 pass, 0 fail (one test added: names of Mulberry and OpenMoji parts, details by rule).
+
+## R3.3 (2026-11-13): four hand-written cores: k.space, k.animals, k.body, k.food
+
+Source `hand-core 1`, CC0-1.0. Written from compact tables through a throwaway formatter (not committed; the `.sop`
+files are the source), as in Rounds 1 and 2. Every fact was written from what I know a child's encyclopedia states;
+none was looked up (no source is reachable) and a key was left out wherever I was not sure or animals or foods of
+one name differ.
+
+| World | Types | Facts | Wires | Shards | Bytes | With a `drawing` |
+| --- | --- | --- | --- | --- | --- | --- |
+| `k.space` | `body`, `kind` | 25 bodies (Sun, 8 planets, Pluto, 9 moons, Halley's Comet, 3 stars, 2 galaxies), 8 kinds | 48 | 3 | 6,783 | 18 |
+| `k.animals` | `animal` | 156 animals (67 mammals, 35 birds, 13 fish, 9 reptiles, 4 amphibians, 28 invertebrates) | 294 | 5 | 46,944 | 113 |
+| `k.body` | `part`, `sense` | 53 parts, 5 senses | 112 | 1 | 12,168 | 5 |
+| `k.food` | `food` | 154 foods | 254 | 5 | 33,290 | 123 |
+
+- **Schemas** (version 1 each; 29, 22, 18 and 16 matrix wires incl. words): closed shared types, enums for classes,
+  coverings, diets, kinds, colours (the 11 colour names of `k.objects`), `many=true` for covering, sound, habitat,
+  eats, can, colour, comes_from, eaten, does.
+- **Joins by name, no imports:** `drawing=<name of a k.objects object>` on a fact (259 in all; `ladybird` →
+  `"lady beetle"`, `grape` → `grapes`, `Sun` → `sun`). A drawing that shows something else under the same name is
+  not joined (the metal `nail`, the tin of `tuna` for the fish, the bird for turkey meat, the heart shape for the
+  organ). Names equal to `k.commonsense` things (fish, bird, dog, cat, sun, moon, star) join there by value.
+- **Left out on purpose:** legs of kangaroo, monkey, apes, seal, walrus, octopus, snail; diet of dog, squirrel,
+  hedgehog, bat, parrot and others where books differ; coverings of insects; colours of most dishes; distances,
+  diameters and temperatures in space. Moon counts of the giant planets are `moons_about` (Jupiter 95, Saturn 270,
+  Uranus 28, Neptune 16, as known in 2025), exact `moons` only for 0, 1, 2 and Pluto's 5 (Q18).
+- **Tests:** `tests/k.{space,animals,body,food}.questions.jsonl` (15 + 15 + 13 + 14 questions, each world with one
+  application fact that must be accepted), `tests/k.cores.test.mjs` (every `drawing` is an object of `k.objects`;
+  150 animals and foods; planets numbered 1 to 8 by order and by size; `orbits`, `in`, `part_of`, `inside`, `organ`,
+  `comes_from` name things that exist).
+- **Numbers:** catalog 10 worlds, 654 shards, vocab 17,811 words; every new shard loads in under 15 ms; 0 errors,
+  0 warnings. npm test 2,183 pass, 0 fail (108 s).
+- Questions Q17 (the `drawing` join), Q18 (approximate numbers), Q19 ("cannot").
