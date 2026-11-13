@@ -8,3 +8,8 @@
 {"id":"at-08","ask":"where is the number of legs of an animal found","query":{"type":"k.attributes.found","where":{"attribute":"legs"},"seek":"type"},"expect":{"status":"supported","value":"k.animals.animal"}}
 {"id":"at-09","ask":"which attributes does a vehicle usually have","query":{"type":"k.attributes.kind","where":{"name":"vehicle"},"seek":"attribute","mode":"list"},"expect":{"status":"supported","values":["colour","size","place","parts","material","wheels","can","used_for"]}}
 {"id":"at-10","ask":"what kind of thing is a violin","query":{"type":"k.attributes.thing","where":{"name":"violin"},"seek":"kind"},"expect":{"status":"supported","value":"instrument"}}
+{"id":"at-11","ask":"which aspect does colour belong to","query":{"type":"k.attributes.attribute","where":{"name":"colour"},"seek":"aspect"},"expect":{"status":"supported","value":"visual"}}
+{"id":"at-12","ask":"which view shows the numeric aspect","query":{"type":"k.attributes.aspect","where":{"name":"numeric"},"seek":"shown_in"},"expect":{"status":"supported","value":"chart"}}
+{"id":"at-13","ask":"which keys hold the geographic aspect of a city","query":{"type":"k.attributes.shows","where":{"family":"city","aspect":"geographic"},"seek":"key","mode":"list"},"expect":{"status":"supported","values":["lat","lon"]}}
+{"id":"at-14","ask":"which aspects does a mountain show","query":{"type":"k.attributes.shows","where":{"family":"mountain"},"seek":"aspect","mode":"list"},"expect":{"status":"supported","values":["relational","numeric","geographic"]}}
+{"id":"at-15","ask":"in which type is the numeric aspect of a country","query":{"type":"k.attributes.shows","where":{"family":"country","aspect":"numeric","key":"population"},"seek":"type"},"expect":{"status":"supported","value":"k.geo.country"}}

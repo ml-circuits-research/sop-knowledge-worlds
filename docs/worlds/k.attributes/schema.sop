@@ -6,12 +6,13 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows core.source="hand-core 1"
 
-# An attribute of things. `holds` says what kind of value it takes.
+# An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
 @k.attributes.attribute.name core.slot of=k.attributes.attribute key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use core.source="hand-core 1"
+@k.attributes.attribute.aspect core.slot of=k.attributes.attribute key=aspect required=true kind=atom core.source="hand-core 1"
 @k.attributes.attribute.about core.slot of=k.attributes.attribute key=about required=true kind=string core.source="hand-core 1"
 
 # Where the values of an attribute are found: the facts of `type` (in the world `world`) carry them under `key`,
@@ -44,7 +45,35 @@
 @k.attributes.thing.used_for core.slot of=k.attributes.thing key=used_for many=true kind=string core.source="hand-core 1"
 @k.attributes.thing.named core.slot of=k.attributes.thing key=named enum=model core.source="hand-core 1"
 
+# An aspect: a side of a thing that one kind of view can show. `shown_in` (many) names the views that show it
+# (picture, diagram, chart, map, document, card), where that is plain.
+@k.attributes.aspect core.type of=k.attributes.aspect shared=true closed=true core.source="hand-core 1"
+@k.attributes.aspect.name core.slot of=k.attributes.aspect key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.aspect.about core.slot of=k.attributes.aspect key=about required=true kind=string core.source="hand-core 1"
+@k.attributes.aspect.shown_in core.slot of=k.attributes.aspect key=shown_in many=true enum=picture enum=diagram enum=chart enum=map enum=document enum=card core.source="hand-core 1"
+
+# A family of things that share their aspects: the things of one type of a world (`world`, `type`; the key `by`
+# of that type names the thing). The family "common thing" has no type of its own.
+@k.attributes.family core.type of=k.attributes.family shared=true closed=true core.source="hand-core 1"
+@k.attributes.family.name core.slot of=k.attributes.family key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.family.about core.slot of=k.attributes.family key=about required=true kind=string core.source="hand-core 1"
+@k.attributes.family.world core.slot of=k.attributes.family key=world kind=atom core.source="hand-core 1"
+@k.attributes.family.type core.slot of=k.attributes.family key=type kind=atom core.source="hand-core 1"
+@k.attributes.family.by core.slot of=k.attributes.family key=by kind=atom core.source="hand-core 1"
+
+# A family shows an aspect: the facts of `type` (world `world`) whose key `by` is the name of the thing carry a
+# value of the aspect under `key`. A family has an aspect when it has at least one such fact; how many things of
+# the family have a value is counted in ASPECTS.md, not here.
+@k.attributes.shows core.type of=k.attributes.shows shared=true closed=true core.source="hand-core 1"
+@k.attributes.shows.family core.slot of=k.attributes.shows key=family id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.shows.aspect core.slot of=k.attributes.shows key=aspect required=true kind=atom core.source="hand-core 1"
+@k.attributes.shows.world core.slot of=k.attributes.shows key=world required=true kind=atom core.source="hand-core 1"
+@k.attributes.shows.type core.slot of=k.attributes.shows key=type id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.shows.key core.slot of=k.attributes.shows key=key id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.shows.by core.slot of=k.attributes.shows key=by required=true kind=atom core.source="hand-core 1"
+
 # Words for the types and keys of this world.
+@k.attributes.word.aspect core.word text=aspect text=aspects text=view text=views means=k.attributes.aspect core.source="hand-core 1"
 @k.attributes.word.attribute core.word text=attribute text=attributes text=property text=properties text=feature text=features means=k.attributes.attribute core.source="hand-core 1"
 @k.attributes.word.colour core.word text=colour text=color text=coloured text=colored means=k.attributes.thing.colour core.source="hand-core 1"
 @k.attributes.word.material core.word text=material text=made text="made of" text="made from" means=k.attributes.thing.material core.source="hand-core 1"

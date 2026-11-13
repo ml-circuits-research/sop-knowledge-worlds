@@ -57,3 +57,33 @@ test('things reach their shard through the vocabulary index', () => {
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
   for (const [word, shard] of [['frog', 'things-living'], ['grass', 'things-nature'], ['car', 'things-big'], ['scarf', 'things-worn'], ['hammer', 'things-objects']]) assert.ok(vocab[word]?.includes(`k.attributes/shards/${shard}`), word);
 });
+
+// Aspects (reviewer, 2026-11-13 21:30).
+import { existsSync as exists } from 'node:fs';
+import { ASPECTS, FAMILIES, SHOWS } from '../tools/attributes-core.mjs';
+
+test('aspects: every attribute belongs to one; every family and every row names a world, type and keys that exist', () => {
+  const aspects = new Set(world.ofType('k.attributes.aspect').map((a) => one(a, 'name')));
+  assert.deepEqual([...aspects].sort(), ['geographic', 'numeric', 'relational', 'social', 'spatial', 'temporal', 'textual', 'visual']);
+  for (const a of world.ofType('k.attributes.attribute')) assert.ok(aspects.has(one(a, 'aspect')), a.id);
+  const families = new Set(world.ofType('k.attributes.family').map((f) => one(f, 'name')));
+  assert.equal(families.size, FAMILIES.length);
+  const schemaOf = new Map();
+  const keysOf = (w, type) => { if (!schemaOf.has(w)) schemaOf.set(w, schemaWorld(worlds, w).world); return schemaOf.get(w).schema(type)?.keys; };
+  for (const f of world.ofType('k.attributes.family')) if (f.attrs.type) assert.ok(keysOf(one(f, 'world'), one(f, 'type'))?.[one(f, 'by')], f.id);
+  const rows = world.ofType('k.attributes.shows');
+  assert.equal(rows.length, SHOWS.reduce((n, r) => n + r.keys.length, 0));
+  for (const r of rows) {
+    assert.ok(families.has(one(r, 'family')) && aspects.has(one(r, 'aspect')), r.id);
+    const keys = keysOf(one(r, 'world'), one(r, 'type'));
+    assert.ok(keys?.[one(r, 'key')] && keys?.[one(r, 'by')], `${r.id}: ${one(r, 'type')} has no key ${one(r, 'key')} or ${one(r, 'by')}`);
+  }
+  for (const f of families) assert.ok(rows.some((r) => one(r, 'family') === f), `${f} shows no aspect`);
+  assert.equal(ASPECTS.length, 8);
+});
+
+test('ASPECTS.md has a row for every family and a column for every aspect (the counts change when other worlds grow: rerun tools/aspects-report.mjs)', () => {
+  const page = readFileSync(join(WORLDS_DIR, 'k.attributes', 'ASPECTS.md'), 'utf8');
+  for (const [family] of FAMILIES) assert.ok(page.includes(`| ${family} | `), family);
+  assert.ok(page.includes(`| family | things | ${ASPECTS.map((a) => a[0]).join(' | ')} |`));
+});

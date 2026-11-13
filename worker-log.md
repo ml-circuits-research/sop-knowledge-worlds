@@ -1883,3 +1883,32 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   variant of the named slot: tests.
 - Tests: `tests/k.wearables.test.mjs` (4), 8 questions (`we-01` to `we-08`).
 - Numbers: k.wearables 2 shards, 236 wires, 38,970 bytes. Catalog 21 worlds, 819 shards, vocab 21,209 words (21,070); 0 errors, 0 warnings. npm test 2,552 pass, 5 skipped, 0 fail.
+
+## Aspects in `k.attributes` (reviewer block 2026-11-13 21:30; second worker)
+
+- **Order:** the block asked for this before `k.wearables`; `k.wearables` was already pushed when the block
+  arrived, so this comes right after it.
+- **Aspects as facts:** `k.attributes.aspect`, 8 aspects (visual, spatial, relational, numeric, textual,
+  geographic, temporal, social) with `shown_in` where plain (picture, diagram, chart, map, document, card; none
+  for temporal and social: I was not sure which view). Every `k.attributes.attribute` now names its `aspect`.
+- **Which kinds have which aspects, and where:** `k.attributes.family`, 16 families (common thing; animal; food;
+  country, city, river, mountain, mountain range, continent; kind of person, role; month, weekday, season,
+  duration; body in space) and `k.attributes.shows`, 129 facts: family, aspect, world, type, key, and `by` (the key
+  of that type that names the thing). A test checks that every type and key exists. New shard `aspects` (153
+  wires). No per-thing fact was written for the 1,500 common things: a thing has an aspect when a fact named by
+  it has one of the keys, which is a lookup; the table counts it.
+- **One generated table:** `docs/worlds/k.attributes/ASPECTS.md`, written by `tools/aspects-report.mjs` (needs the
+  raw WordNet and frequency files for the row of the common things). Common things, of 1,500: visual 1,044,
+  spatial 1,018, relational 1,280, numeric 45, textual 1,188. Animals (156): visual 152, spatial 155, numeric 144.
+  Countries (238): relational, textual, geographic all, numeric 237. Rivers and mountain ranges have no number;
+  continents have nothing but a name and the countries that name them; bodies in space: numeric 9 of 25.
+  **The counts go stale when another world grows: rerun `node tools/aspects-report.mjs`** (the test checks only
+  the rows and columns, so it does not break the other worker's runs).
+- **Correction:** the `k.attributes` entry above and its world page said `k.animals` has 294 animals and `k.food`
+  254 foods; those were wire counts with the word facts. Counted by type: 156 animals, 154 foods. The page is
+  corrected.
+- **Judgement that is mine:** which key belongs to which aspect (habitat and works_at as spatial; can and used_for
+  as relational; sound and gloss as textual; orbit_years as temporal; material and covering as visual).
+- **Not done:** the numeric aspect has no unit yet on my side (wheels is a count); `k.units` joins are the first
+  worker's part. The kinds of `k.colours`, `k.shapes`, `k.body`, `k.feelings` are not families yet.
+- Numbers: k.attributes 7 shards, 981 wires, 148,506 bytes (was 6 shards, 828 wires). Catalog 21 worlds, 820 shards, vocab 21,253 words (21,209); 0 errors, 0 warnings. npm test 2,559 pass, 5 skipped, 0 fail.
