@@ -20,29 +20,77 @@
 <p class="lead">Reusable knowledge worlds for <a href="https://github.com/ml-circuits-research/soplang-words-lib">sopworld</a>:
 schemas and instances in SOP Lang, loaded by applications on demand.</p>
 
+<p>Each world is a sopworld <em>module</em> named <code>k.&lt;world&gt;</code> (its schema: types, slots, rules and
+soft rules) plus small <em>shards</em> of facts. Everything is SOP Lang and English; every fact names its source in
+<code>core.source</code>. An application loads a schema as a module of its own world and tells only the shards that
+the words of the current message point to.</p>
+
 <h2>Files</h2>
 <ul>
-  <li><a href="worlds/index.json"><code>worlds/index.json</code></a>: the catalog, listing worlds, schemas, shards, sources and licenses.</li>
-  <li><a href="worlds/vocab.json"><code>worlds/vocab.json</code></a>: an English word mapped to the shards where it matters.</li>
-  <li><code>worlds/k.&lt;world&gt;/schema.sop</code> and <code>worlds/k.&lt;world&gt;/shards/*.sop</code>: SOP Lang files.</li>
+  <li><a href="worlds/index.json"><code>worlds/index.json</code></a>: the catalog: <code>version</code> (pin it and cache
+    by it), <code>sopworld</code> (the sopworld commit everything was validated with), and per world its
+    <code>schema</code>, <code>exports</code>, <code>depends</code>, <code>shards</code> (path, wires, bytes, keys,
+    sources, license, <code>nc</code> for non-commercial terms, warnings), sources and licenses.</li>
+  <li><a href="worlds/vocab.json"><code>worlds/vocab.json</code></a>: an English lemma mapped to the ids of the shards where it matters.</li>
+  <li><code>worlds/k.&lt;world&gt;/schema.sop</code>, <code>worlds/k.&lt;world&gt;/shards/*.sop</code> and
+    <code>worlds/k.&lt;world&gt;/WORLD.md</code>.</li>
 </ul>
 
 <h2>Worlds</h2>
 <div id="worlds" class="muted">No worlds published yet.</div>
 
 <h2>Use from an application</h2>
-<pre>1. fetch worlds/index.json and pin its version
-2. for the English words of a message, look up worlds/vocab.json and get the shard paths
-3. load the world's schema.sop as a sopworld module (library + core.use)
-4. load only those shards (told, or as a fact provider)</pre>
-<p class="muted">The contract is in PLAN.md §2 of the repository. Shards are small; load only those that
-<code>vocab.json</code> points to for the words of the current message.</p>
+<p>Fetch the catalog, fetch a schema and the shard that a word points to, load them into a sopworld
+<code>World</code>, and ask. The library of the world must hold the schema of every world listed in
+<code>depends</code> too.</p>
+<pre id="example">import { World } from './sopworld.mjs';   // sopworld 0.14.0: the commit in catalog.sopworld
+
+const base = 'https://ml-circuits-research.github.io/sop-knowledge-worlds/worlds/';
+const get = async (path) => {
+  const r = await fetch(base + path);
+  if (!r.ok) throw new Error(`${path}: ${r.status}`);
+  return r;
+};
+
+const catalog = await (await get('index.json')).json();   // pin catalog.version, cache by it
+const vocab = await (await get('vocab.json')).json();
+
+// The schema of a world, and those it depends on, as modules of the library.
+const library = {};
+const addSchema = async (id) => {
+  const entry = catalog.worlds.find((w) => w.id === id);
+  if (library[id]) return entry;
+  library[id] = await (await get(entry.schema)).text();
+  for (const dep of entry.depends) await addSchema(dep);
+  return entry;
+};
+const world = await addSchema('k.commonsense');
+
+const w = new World({ library });
+w.use('k.commonsense');   // or, in the application's own matrix: @app core.module name=app imports=k.commonsense
+
+// Only the shards that the words of the message point to.
+for (const id of vocab['fish'] ?? []) {
+  const shard = world.shards.find((s) => s.id === id);
+  if (shard) w.tell(await (await get(shard.path)).text());
+}
+
+const answer = w.query({ type: 'k.commonsense.thing', where: { name: 'fish' }, seek: 'at' });
+console.log(answer.status, answer.value);   // supported water
+
+// Soft knowledge: advice after acting, never a refusal.
+const r = w.tell('@p1 k.commonsense.placed thing=fish at=sky scene=s1', { ns: 'scene' });
+console.log(r.ok, r.issues.map((i) => i.why));   // true, [ 'A fish usually lives in water, not in the sky.', ... ]</pre>
+<p class="muted">The contract is in PLAN.md §2 of the repository. Facts can also be given to a world as a fact provider
+(<code>new World({ facts })</code>) instead of being told. Knowledge types are <code>shared=true</code>, so facts the
+application tells in its own namespace are joined with them.</p>
 
 <script>
 fetch('worlds/index.json').then((r) => r.ok ? r.json() : null).then((c) => {
   if (!c || !Array.isArray(c.worlds) || !c.worlds.length) return;
-  const rows = c.worlds.map((w) => `<tr><td><code>${w.id}</code></td><td>${(w.shards || []).length}</td><td>${(w.licenses || []).join(', ')}</td></tr>`).join('');
-  document.getElementById('worlds').outerHTML = `<table><tr><th>World</th><th>Shards</th><th>Licenses</th></tr>${rows}</table>`;
+  const esc = (s) => String(s).replace(/[&<>]/g, (x) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[x]));
+  const rows = c.worlds.map((w) => `<tr><td><code>${esc(w.id)}</code></td><td>${(w.shards || []).length}</td><td>${(w.shards || []).reduce((n, s) => n + s.wires, 0)}</td><td>${esc((w.licenses || []).join(', '))}</td></tr>`).join('');
+  document.getElementById('worlds').outerHTML = `<p class="muted">Catalog version <code>${esc(c.version)}</code>, sopworld <code>${esc(c.sopworld)}</code>.</p><table><tr><th>World</th><th>Shards</th><th>Wires</th><th>Licenses</th></tr>${rows}</table>`;
 }).catch(() => {});
 </script>
 </body>

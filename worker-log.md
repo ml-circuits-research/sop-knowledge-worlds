@@ -26,3 +26,13 @@ One entry per task: what was done, numbers (wires, shards, bytes, load time, war
   the world. Shard `keys` = its identity-key values, lowercased, sorted.
 - Sorted output, 1-space JSON indent; a test rebuilds in memory and compares byte for byte with the files on disk.
 - Numbers: 0 worlds, 0 shards, 0 words; npm test 10/10 pass.
+
+## T3 (2026-11-13): Pages
+
+- `docs/index.html`: one plain page: what this is, the files and the catalog fields, the list of worlds read from
+  `index.json` at run time (shards, wires, licenses), and a minimal JS example in place of the numbered steps: fetch the
+  catalog and vocab, fetch a schema (and those in `depends`) into the `library`, `use` it, tell the shards that
+  `vocab['fish']` points to, `query`, and a soft issue. `tests/page.test.mjs` runs the example itself against
+  `docs/worlds` with `fetch` served from disk (skipped until `k.commonsense` exists).
+- `docs/worlds/README.md` explains the files, `index.json` fields and `vocab.json`. `.nojekyll` kept.
+- Numbers: 0 worlds; catalog version changes with README (it hashes the folder); npm test 11 pass, 1 skipped.
