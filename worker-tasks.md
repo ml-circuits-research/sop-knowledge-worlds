@@ -307,3 +307,10 @@ The demo will fill gaps from knowledge (PSys2 WORLDS-AS-MODULES, M3). Make sure 
 - Faces: the host draws mirrored slots twice (accepted); the preset check stays a test until sopworld can say it.
 
 **Next: Round 7 with its addendum** (usual place and relative size for every drawable thing, person kinds, the stand-ins the owner's log missed), k.scenes first. Move to sopworld 0.16.0 at the start.
+
+## Reviewer 2026-11-13 17:40 — Round 7 addendum 2: what the SPACE world asks knowledge for (owner)
+
+After the first addendum, before k.feelings:
+1. **`k.layouts`**: named arrangements as facts: row, column, grid, ring, scatter, corners, stack, tree, flow, landscape (sky above ground, water in the ground), face (the k.faces slots and how they sit), room, family photo. For each: slots, relations between slots (left of, above, inside, aligned), when it is usual (for which kinds of things). English names and synonyms as `core.word`.
+2. **Anchors** on drawable things where sure (`named=model`): where another thing sits or attaches (seat of a swing or chair, surface of water or a table, roof line of a house, handle, top of a head for a hat, hand). Start with the 220 hand-written objects and k.faces slots; audit as for part names.
+3. **What joins what**: "part of" / "attaches to" between kinds (roof–wall, wheel–car, hat–head, arrow–box), from k.commonsense where present, else model-labelled.
