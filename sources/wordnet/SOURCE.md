@@ -27,3 +27,10 @@
   283 senses; `sources/wordnet/act-verb-glosses.tsv`, rewritten by `node tools/acts-core.mjs --glosses`).
 - **Also kept, for `k.parts`:** the part meronyms of the kept sense of the 1,500 common things and of their
   hypernyms up to two steps, each by the first word of its synset, and the gloss of the sense (`tools/import/parts.mjs`).
+- **Round 9 (2026-11-13), also kept:** antonyms (`opposite`: the lexical pointer `!` of the word in the sense); for
+  an adjective without one, the antonym of the adjective it is similar to (`near_opposite`: the pointer `&`, then
+  `!`); the adjective and adverb senses (first 3) of the common words (the first 3,000 lines of the frequency list
+  and the common things of `tools/coverage.mjs`); the chain of first hypernyms to the top (`kind_of`) for the noun
+  and verb senses of those words. Counts with Round 10 item 2: 11,313 words, 28,987 senses (1,648 adjective, 534
+  adverb), 1,377 senses with an opposite, 1,044 with a near opposite, 9,342 with a chain; 31,926 wires in 321
+  shards, 7,258,687 bytes.

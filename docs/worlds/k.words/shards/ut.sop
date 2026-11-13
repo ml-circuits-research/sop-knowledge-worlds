@@ -1,4 +1,4 @@
-# k.words/shards/ut: noun and verb senses of the words from "utah" to "utter" (first letters "ut").
+# k.words/shards/ut: senses of the words from "utah" to "utter" (first letters "ut").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -8,11 +8,11 @@
 @k.words.uterus.noun.1 k.words.sense word=uterus pos=noun n=1 gloss="a hollow muscular organ in the pelvic cavity of females; contains the developing fetus" synonym=womb is_a="female internal reproductive organ" part_of="female reproductive system" core.source="wordnet 3.1"
 @k.words.uterus.forms core.word text=uteri means=uterus of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.utility.noun.1 k.words.sense word=utility pos=noun n=1 gloss="a company that performs a public service; subject to government regulation" synonym="public utility" synonym="public utility company" synonym="public-service corporation" is_a=service core.source="wordnet 3.1"
-@k.words.utility.noun.2 k.words.sense word=utility pos=noun n=2 gloss="the quality of being of practical use" synonym=usefulness is_a=quality core.source="wordnet 3.1"
+@k.words.utility.noun.2 k.words.sense word=utility pos=noun n=2 gloss="the quality of being of practical use" synonym=usefulness is_a=quality opposite=inutility core.source="wordnet 3.1"
 @k.words.utility.noun.3 k.words.sense word=utility pos=noun n=3 gloss="the service (electric power or water or transportation) provided by a public utility" is_a=service core.source="wordnet 3.1"
 @k.words.utmost.noun.1 k.words.sense word=utmost pos=noun n=1 gloss="the greatest possible degree" synonym=uttermost synonym=maximum synonym="level best" is_a=limit core.source="wordnet 3.1"
 @k.words.utopia.noun.1 k.words.sense word=Utopia pos=noun n=1 gloss="a book written by Sir Thomas More (1516) describing the perfect society on an imaginary island" instance_of=book core.source="wordnet 3.1"
-@k.words.utopia.noun.2 k.words.sense word=utopia pos=noun n=2 gloss="ideally perfect state; especially in its social and political and moral aspects" is_a=state core.source="wordnet 3.1"
+@k.words.utopia.noun.2 k.words.sense word=utopia pos=noun n=2 gloss="ideally perfect state; especially in its social and political and moral aspects" is_a=state opposite=dystopia core.source="wordnet 3.1"
 @k.words.utopia.noun.3 k.words.sense word=utopia pos=noun n=3 gloss="a work of fiction describing a utopia" is_a=fiction core.source="wordnet 3.1"
 @k.words.utopia.spelling.Utopia core.word text=utopia means=Utopia of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.utter.verb.1 k.words.sense word=utter pos=verb n=1 gloss="articulate; either verbally or with a cry, shout, or noise" synonym=express synonym=verbalize synonym=verbalise synonym="give tongue to" core.source="wordnet 3.1"

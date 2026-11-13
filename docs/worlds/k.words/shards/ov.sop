@@ -1,15 +1,19 @@
-# k.words/shards/ov: noun and verb senses of the words from "oval" to "overweight" (first letters "ov").
+# k.words/shards/ov: senses of the words from "oval" to "overweight" (first letters "ov").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
 @k.words.oval.noun.1 k.words.sense word=oval pos=noun n=1 gloss="a closed plane curve resulting from the intersection of a circular cone and a plane cutting completely through it" synonym=ellipse is_a="conic section" core.source="wordnet 3.1"
-@k.words.oven.noun.1 k.words.sense word=oven pos=noun n=1 gloss="kitchen appliance used for baking or roasting" is_a="kitchen appliance" core.source="wordnet 3.1"
-@k.words.over.noun.1 k.words.sense word=over pos=noun n=1 gloss="(cricket) the division of play during which six balls are bowled at the batsman by one player from the other team from the same end of the pitch" is_a=part part_of="playing period" core.source="wordnet 3.1"
+@k.words.oven.noun.1 k.words.sense word=oven pos=noun n=1 gloss="kitchen appliance used for baking or roasting" is_a="kitchen appliance" kind_of="kitchen appliance" kind_of="home appliance" kind_of=appliance kind_of=durables kind_of="consumer goods" kind_of=commodity kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.over.noun.1 k.words.sense word=over pos=noun n=1 gloss="(cricket) the division of play during which six balls are bowled at the batsman by one player from the other team from the same end of the pitch" is_a=part part_of="playing period" kind_of=part kind_of=concept kind_of=idea kind_of=content kind_of=cognition kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.over.adjective.1 k.words.sense word=over pos=adjective n=1 gloss="having come or been brought to a conclusion" synonym=complete synonym=concluded synonym=ended synonym="all over" synonym=terminated near_opposite=unfinished core.source="wordnet 3.1"
+@k.words.over.adverb.1 k.words.sense word=over pos=adverb n=1 gloss="at or to a point across intervening space etc." core.source="wordnet 3.1"
+@k.words.over.adverb.2 k.words.sense word=over pos=adverb n=2 gloss="throughout an area" core.source="wordnet 3.1"
+@k.words.over.adverb.3 k.words.sense word=over pos=adverb n=3 gloss="throughout a period of time" synonym=o'er core.source="wordnet 3.1"
 @k.words.overall.noun.1 k.words.sense word=overall pos=noun n=1 gloss="(usually plural) work clothing consisting of denim trousers (usually with a bib and shoulder straps)" is_a=work-clothing core.source="wordnet 3.1"
 @k.words.overall.noun.2 k.words.sense word=overall pos=noun n=2 gloss="a loose protective coverall or smock worn over ordinary clothing for dirty work" synonym=boilersuit synonym="boilers suit" is_a=coverall core.source="wordnet 3.1"
-@k.words.overcoat.noun.1 k.words.sense word=overcoat pos=noun n=1 gloss="a heavy coat worn over clothes in winter" synonym=greatcoat synonym=topcoat is_a=coat core.source="wordnet 3.1"
-@k.words.overcoat.noun.2 k.words.sense word=overcoat pos=noun n=2 gloss="an additional protective coating (as of paint or varnish)" synonym=overcoating is_a=coating core.source="wordnet 3.1"
+@k.words.overcoat.noun.1 k.words.sense word=overcoat pos=noun n=1 gloss="a heavy coat worn over clothes in winter" synonym=greatcoat synonym=topcoat is_a=coat kind_of=coat kind_of=overgarment kind_of=garment kind_of=clothing kind_of=covering kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.overcoat.noun.2 k.words.sense word=overcoat pos=noun n=2 gloss="an additional protective coating (as of paint or varnish)" synonym=overcoating is_a=coating kind_of=coating kind_of=covering kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.overcome.verb.1 k.words.sense word=overcome pos=verb n=1 gloss="win a victory over" synonym="get the better of" synonym=defeat core.source="wordnet 3.1"
 @k.words.overcome.verb.2 k.words.sense word=overcome pos=verb n=2 gloss="get on top of; deal with successfully" synonym="get over" synonym=subdue synonym=surmount synonym=master is_a=beat core.source="wordnet 3.1"
 @k.words.overcome.verb.3 k.words.sense word=overcome pos=verb n=3 gloss="overcome, as with emotions or perceptual stimuli" synonym=overwhelm synonym=overpower synonym="sweep over" synonym=whelm synonym=overtake is_a=arouse core.source="wordnet 3.1"
@@ -58,5 +62,5 @@
 @k.words.overthrow.verb.2 k.words.sense word=overthrow pos=verb n=2 gloss="rule against" synonym=overrule synonym=overturn synonym=override synonym=reverse is_a=rule core.source="wordnet 3.1"
 @k.words.overthrow.forms core.word text=overthrew text=overthrown means=overthrow of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.overtime.noun.1 k.words.sense word=overtime pos=noun n=1 gloss="work done in addition to regular working hours" is_a="work time" core.source="wordnet 3.1"
-@k.words.overtime.noun.2 k.words.sense word=overtime pos=noun n=2 gloss="playing time beyond regulation, to break a tie" synonym="extra time" is_a="time period" part_of="athletic game" core.source="wordnet 3.1"
+@k.words.overtime.noun.2 k.words.sense word=overtime pos=noun n=2 gloss="playing time beyond regulation, to break a tie" synonym="extra time" is_a="time period" part_of="athletic game" opposite="regulation time" core.source="wordnet 3.1"
 @k.words.overweight.noun.1 k.words.sense word=overweight pos=noun n=1 gloss="the property of excessive fatness" synonym=corpulence synonym=stoutness synonym=adiposis is_a=fleshiness core.source="wordnet 3.1"

@@ -2302,3 +2302,50 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - **Judgement that is mine:** none. **What SOP Lang could not say:** nothing new.
 - Tests: `tests/import.wordnet.test.mjs` (1 more; the equality with the import now passes `extra`).
 - Numbers: catalog 22 worlds, 855 shards, vocab 22,167 words; 0 errors, 0 warnings. npm test 2,648 pass, 5 skipped, 0 fail.
+
+## Round 9, item 7 (2026-11-13, first worker): `k.words`: opposites and chains of kinds by lookup
+
+- **Coverage checked first** (the 2,978 words in the first 3,000 lines of the frequency list): 2,001 had a sense in
+  `k.words`; none had an opposite (no key for it, and no adjectives at all); 1,997 had a direct kind (`is_a`) but
+  a chain needed one lookup per step and broke at kinds of several words or outside the list.
+- **Opposites, from WordNet's antonyms:** new key `opposite` on a sense: the antonym of that word in that sense
+  (the lexical pointer, so `run` has it and its synonym `jog` not). 1,372 senses of 1,024 words. **Adjectives and
+  adverbs are now imported** for the words of the first 3,000 lines (first 3 senses: 757 adjectives, 285 adverbs),
+  because most opposites people ask for are adjectives. New key `near_opposite` for an adjective with no antonym
+  of its own: the antonym of the adjective WordNet files it as similar to (huge → small, by way of large); 998
+  senses; a key of its own because it is weaker.
+- **Chains of kinds:** new key `kind_of` on the noun and verb senses of the first 3,000 lines (6,459 senses):
+  the first hypernym, its first hypernym, and so on to the top, nearest first. "Is a dog an animal" is one
+  lookup. `is_a` (all direct kinds) is unchanged.
+- **Coverage now:** 2,416 of the 2,978 words have a sense (the rest are function words and inflected forms);
+  599 have an opposite, 953 an opposite or a near opposite; all 1,997 with a direct kind have the chain.
+- **Read:** a sample of 40 senses with an opposite or a near opposite (every 60th), each with its gloss: the 22
+  direct opposites are all right (remember: forget; succeed: fail; here: there; square: round); of the 18 near
+  opposites 16 read well (desperate: hopeful; late: punctual) and 2 are noise from WordNet's odd adjectives (`d`,
+  the Roman numeral: ordinal; `one`: different). **Not read:** the other 2,330; the chains beyond dog, car, apple,
+  river, day, friend, man, war.
+- **What WordNet does not give:** it pairs big with little and large with small; friend, war, day, top, north,
+  entrance have no antonym among their first three senses. Nothing was added by hand.
+- **Natural questions (item 8), words:** 146 common words written down without looking at `k.words` (61
+  adjectives, 25 verbs, 20 nouns with a well-known opposite, 40 nouns), 292 questions (the opposite, the
+  meaning, what kind of thing). The seeded sample of 100: **before 33, now 100**; the sample is lucky: of all
+  292, before 85, now 267 (the first question without a fact is the 104th). Without a fact: the opposite of
+  south, north, top, bottom, day, enemy, exit, entrance, start, take; and words beyond the first 3,000 lines
+  (thick, narrow, shallow as adjectives; the kind of hammer, salmon, violin, pencil, potato, eagle, bee, oak,
+  spoon: they have `is_a` but no chain).
+- **For the second worker (Round 10 item 2, the common things with no sense in `k.words`):** I changed
+  `tools/import/wordnet.mjs` (pointers now carry source and target word numbers; adjectives and adverbs; three
+  new keys). The chain could be given to all 20,000 words by setting `commonLimit`; it adds about 3 MB.
+- `COVERAGE.md` and `ASPECTS.md` run again: one number changes in the first.
+- Tests: `tests/k.words.test.mjs` (3), `tests/import.wordnet.test.mjs` (one more, on a fixture), questions wd-13 to wd-18.
+- Numbers: k.words 319 shards, 31,143 wires, 6,694,397 bytes (was 318 shards, 28,951 wires, 5,610,059 bytes);
+  the largest shard is `co` (261,271 bytes). Catalog 22 worlds, 854 shards, vocab 22,459 words; 0 errors, 0 warnings.
+- After the rebase on Q30 (`k.parts`, second worker): catalog 22 worlds, 855 shards, vocab 22,490 words. npm test 2,662 pass, 0 fail.
+- **After the rebase on R10.2 (second worker: `k.words` keeps every common thing, 427 of them from beyond the
+  20,000th line):** both changes to `tools/import/wordnet.mjs` merged by hand (theirs: `extra`; mine: opposites,
+  adjectives and adverbs, chains) and the shards written again by the merged tool, not merged. The common words
+  that get adjectives, adverbs and the chain are now the first 3,000 lines **and the common things** (so hammer,
+  salmon, violin have their chain). k.words now: 11,313 words, 28,987 senses (1,648 adjective, 534 adverb), 1,377
+  senses with an opposite (1,029 words), 1,044 with a near opposite, 9,342 with a chain; 321 shards (`co` is
+  split in two), 31,926 wires, 7,258,687 bytes. Natural questions about words: the sample 100 of 100, all 292:
+  275 (85 before). Catalog 22 worlds, 857 shards, vocab 22,610 words; 0 errors, 0 warnings.

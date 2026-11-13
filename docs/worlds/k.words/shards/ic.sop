@@ -1,17 +1,17 @@
-# k.words/shards/ic: noun and verb senses of the words from "ice" to "icu" (first letters "ic").
+# k.words/shards/ic: senses of the words from "ice" to "icu" (first letters "ic").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.ice.noun.1 k.words.sense word=ice pos=noun n=1 gloss="water frozen in the solid state" synonym="water ice" is_a=crystal core.source="wordnet 3.1"
-@k.words.ice.noun.2 k.words.sense word=ice pos=noun n=2 gloss="the frozen part of a body of water" is_a=object core.source="wordnet 3.1"
-@k.words.ice.noun.3 k.words.sense word=ice pos=noun n=3 gloss="diamonds" synonym=sparkler is_a=diamond core.source="wordnet 3.1"
-@k.words.ice.verb.1 k.words.sense word=ice pos=verb n=1 gloss="decorate with frosting" synonym=frost is_a=cover core.source="wordnet 3.1"
-@k.words.ice.verb.2 k.words.sense word=ice pos=verb n=2 gloss="cause to become ice or icy" is_a=freeze core.source="wordnet 3.1"
-@k.words.ice.verb.3 k.words.sense word=ice pos=verb n=3 gloss="put ice on or put on ice" is_a=cool core.source="wordnet 3.1"
-@k.words.iceberg.noun.1 k.words.sense word=iceberg pos=noun n=1 gloss="a large mass of ice floating at sea; usually broken off of a polar glacier" synonym=berg is_a="ice mass" is_a=floater core.source="wordnet 3.1"
-@k.words.iceberg.noun.2 k.words.sense word=iceberg pos=noun n=2 gloss="lettuce with crisp tightly packed light-green leaves in a firm head" synonym="crisphead lettuce" synonym="iceberg lettuce" is_a=lettuce part_of="head lettuce" core.source="wordnet 3.1"
-@k.words.icebox.noun.1 k.words.sense word=icebox pos=noun n=1 gloss="white goods in which food can be stored at low temperatures" synonym=refrigerator is_a="white goods" core.source="wordnet 3.1"
+@k.words.ice.noun.1 k.words.sense word=ice pos=noun n=1 gloss="water frozen in the solid state" synonym="water ice" is_a=crystal kind_of=crystal kind_of=solid kind_of=matter kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.ice.noun.2 k.words.sense word=ice pos=noun n=2 gloss="the frozen part of a body of water" is_a=object kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.ice.noun.3 k.words.sense word=ice pos=noun n=3 gloss="diamonds" synonym=sparkler is_a=diamond kind_of=diamond kind_of=jewel kind_of=jewelry kind_of=adornment kind_of=decoration kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.ice.verb.1 k.words.sense word=ice pos=verb n=1 gloss="decorate with frosting" synonym=frost is_a=cover kind_of=cover core.source="wordnet 3.1"
+@k.words.ice.verb.2 k.words.sense word=ice pos=verb n=2 gloss="cause to become ice or icy" is_a=freeze kind_of=freeze kind_of=change core.source="wordnet 3.1"
+@k.words.ice.verb.3 k.words.sense word=ice pos=verb n=3 gloss="put ice on or put on ice" is_a=cool kind_of=cool kind_of=change core.source="wordnet 3.1"
+@k.words.iceberg.noun.1 k.words.sense word=iceberg pos=noun n=1 gloss="a large mass of ice floating at sea; usually broken off of a polar glacier" synonym=berg is_a="ice mass" is_a=floater kind_of="ice mass" kind_of="geological formation" kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.iceberg.noun.2 k.words.sense word=iceberg pos=noun n=2 gloss="lettuce with crisp tightly packed light-green leaves in a firm head" synonym="crisphead lettuce" synonym="iceberg lettuce" is_a=lettuce part_of="head lettuce" kind_of=lettuce kind_of="salad green" kind_of=greens kind_of=vegetable kind_of=produce kind_of=food kind_of=solid kind_of=matter kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.icebox.noun.1 k.words.sense word=icebox pos=noun n=1 gloss="white goods in which food can be stored at low temperatures" synonym=refrigerator is_a="white goods" kind_of="white goods" kind_of="home appliance" kind_of=appliance kind_of=durables kind_of="consumer goods" kind_of=commodity kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.iceland.noun.1 k.words.sense word=Iceland pos=noun n=1 gloss="an island republic on the island of Iceland; became independent of Denmark in 1944" synonym="Republic of Iceland" instance_of="European country" part_of=Iceland part_of=Europe core.source="wordnet 3.1"
 @k.words.iceland.noun.2 k.words.sense word=Iceland pos=noun n=2 gloss="a volcanic island in the North Atlantic near the Arctic Circle" instance_of=island part_of=Atlantic core.source="wordnet 3.1"
 @k.words.iceland.spelling.Iceland core.word text=iceland means=Iceland of=k.words.sense.word core.source="wordnet 3.1"

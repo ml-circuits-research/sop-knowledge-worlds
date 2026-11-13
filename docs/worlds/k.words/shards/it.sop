@@ -1,14 +1,15 @@
-# k.words/shards/it: noun and verb senses of the words from "it" to "itinerary" (first letters "it").
+# k.words/shards/it: senses of the words from "it" to "itinerary" (first letters "it").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.it.noun.1 k.words.sense word=IT pos=noun n=1 gloss="the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information" synonym="information technology" is_a=engineering core.source="wordnet 3.1"
+@k.words.it.noun.1 k.words.sense word=IT pos=noun n=1 gloss="the branch of engineering that deals with the use of computers and telecommunications to retrieve and store and transmit information" synonym="information technology" is_a=engineering kind_of=engineering kind_of=discipline kind_of="knowledge domain" kind_of=content kind_of=cognition kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
 @k.words.it.spelling.IT core.word text=it means=IT of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.italian.noun.1 k.words.sense word=Italian pos=noun n=1 gloss="a native or inhabitant of Italy" is_a=European core.source="wordnet 3.1"
-@k.words.italian.noun.2 k.words.sense word=Italian pos=noun n=2 gloss="the Romance language spoken in Italy" is_a=Romance core.source="wordnet 3.1"
+@k.words.italian.noun.1 k.words.sense word=Italian pos=noun n=1 gloss="a native or inhabitant of Italy" is_a=European kind_of=European kind_of=inhabitant kind_of=person kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.italian.noun.2 k.words.sense word=Italian pos=noun n=2 gloss="the Romance language spoken in Italy" is_a=Romance kind_of=Romance kind_of=Latin kind_of=Italic kind_of=Indo-European kind_of="natural language" kind_of=language kind_of=communication kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.italian.adjective.1 k.words.sense word=Italian pos=adjective n=1 gloss="of or pertaining to or characteristic of Italy or its people or culture or language" core.source="wordnet 3.1"
 @k.words.italian.spelling.Italian core.word text=italian means=Italian of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.italy.noun.1 k.words.sense word=Italy pos=noun n=1 gloss="a republic in southern Europe on the Italian Peninsula; was the core of the Roman Republic and the Roman Empire between the 4th century BC and the 5th century AD" synonym="Italian Republic" synonym=Italia instance_of="European country" part_of=Europe core.source="wordnet 3.1"
+@k.words.italy.noun.1 k.words.sense word=Italy pos=noun n=1 gloss="a republic in southern Europe on the Italian Peninsula; was the core of the Roman Republic and the Roman Empire between the 4th century BC and the 5th century AD" synonym="Italian Republic" synonym=Italia instance_of="European country" part_of=Europe kind_of="European country" kind_of=country kind_of="administrative district" kind_of=district kind_of=region kind_of=location kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.italy.spelling.Italy core.word text=italy means=Italy of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.itch.noun.1 k.words.sense word=itch pos=noun n=1 gloss="a contagious skin infection caused by the itch mite; characterized by persistent itching and skin irritation" synonym=scabies is_a=infection core.source="wordnet 3.1"
 @k.words.itch.noun.2 k.words.sense word=itch pos=noun n=2 gloss="a strong restless desire" synonym=urge is_a=desire core.source="wordnet 3.1"

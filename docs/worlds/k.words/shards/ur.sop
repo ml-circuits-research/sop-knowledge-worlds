@@ -1,4 +1,4 @@
-# k.words/shards/ur: noun and verb senses of the words from "uranium" to "urn" (first letters "ur").
+# k.words/shards/ur: senses of the words from "uranium" to "urn" (first letters "ur").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -12,6 +12,7 @@
 @k.words.urgency.noun.1 k.words.sense word=urgency pos=noun n=1 gloss="the state of being urgent; an earnest and insistent necessity" is_a=necessity core.source="wordnet 3.1"
 @k.words.urgency.noun.2 k.words.sense word=urgency pos=noun n=2 gloss="pressing importance requiring speedy action" is_a=importance core.source="wordnet 3.1"
 @k.words.urgency.noun.3 k.words.sense word=urgency pos=noun n=3 gloss="an urgent situation calling for prompt action" is_a=situation core.source="wordnet 3.1"
+@k.words.urgent.adjective.1 k.words.sense word=urgent pos=adjective n=1 gloss="compelling immediate action" synonym=pressing near_opposite=beseeching core.source="wordnet 3.1"
 @k.words.urine.noun.1 k.words.sense word=urine pos=noun n=1 gloss="liquid excretory product" synonym=piss synonym=pee synonym=piddle synonym=weewee synonym=water is_a="body waste" core.source="wordnet 3.1"
-@k.words.urn.noun.1 k.words.sense word=urn pos=noun n=1 gloss="a large vase that usually has a pedestal or feet" is_a=vase core.source="wordnet 3.1"
-@k.words.urn.noun.2 k.words.sense word=urn pos=noun n=2 gloss="a large pot for making coffee or tea" is_a=pot core.source="wordnet 3.1"
+@k.words.urn.noun.1 k.words.sense word=urn pos=noun n=1 gloss="a large vase that usually has a pedestal or feet" is_a=vase kind_of=vase kind_of=jar kind_of=vessel kind_of=container kind_of=instrumentality kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.urn.noun.2 k.words.sense word=urn pos=noun n=2 gloss="a large pot for making coffee or tea" is_a=pot kind_of=pot kind_of="cooking utensil" kind_of="kitchen utensil" kind_of=utensil kind_of=implement kind_of=instrumentality kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"

@@ -1,4 +1,4 @@
-# k.words/shards/oc: noun and verb senses of the words from "occasion" to "octopus" (first letters "oc").
+# k.words/shards/oc: senses of the words from "occasion" to "octopus" (first letters "oc").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -26,10 +26,10 @@
 @k.words.occur.forms core.word text=occurred text=occurring means=occur of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.occurrence.noun.1 k.words.sense word=occurrence pos=noun n=1 gloss="an event that happens" synonym=happening synonym=occurrent synonym="natural event" is_a=event core.source="wordnet 3.1"
 @k.words.occurrence.noun.2 k.words.sense word=occurrence pos=noun n=2 gloss="an instance of something occurring" is_a=presence core.source="wordnet 3.1"
-@k.words.ocean.noun.1 k.words.sense word=ocean pos=noun n=1 gloss="a large body of water constituting a principal part of the hydrosphere" is_a="body of water" part_of=hydrosphere core.source="wordnet 3.1"
-@k.words.ocean.noun.2 k.words.sense word=ocean pos=noun n=2 gloss="anything apparently limitless in quantity or volume" synonym=sea is_a="large indefinite quantity" core.source="wordnet 3.1"
+@k.words.ocean.noun.1 k.words.sense word=ocean pos=noun n=1 gloss="a large body of water constituting a principal part of the hydrosphere" is_a="body of water" part_of=hydrosphere kind_of="body of water" kind_of=thing kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.ocean.noun.2 k.words.sense word=ocean pos=noun n=2 gloss="anything apparently limitless in quantity or volume" synonym=sea is_a="large indefinite quantity" kind_of="large indefinite quantity" kind_of="indefinite quantity" kind_of=measure kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
 @k.words.october.noun.1 k.words.sense word=October pos=noun n=1 gloss="the month following September and preceding November" synonym=Oct is_a="Gregorian calendar month" part_of="Gregorian calendar" core.source="wordnet 3.1"
 @k.words.october.spelling.October core.word text=october means=October of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.octopus.noun.1 k.words.sense word=octopus pos=noun n=1 gloss="tentacles of octopus prepared as food" is_a=seafood part_of=octopus core.source="wordnet 3.1"
-@k.words.octopus.noun.2 k.words.sense word=octopus pos=noun n=2 gloss="bottom-living cephalopod having a soft oval body with eight long tentacles" synonym=devilfish is_a=octopod core.source="wordnet 3.1"
+@k.words.octopus.noun.1 k.words.sense word=octopus pos=noun n=1 gloss="tentacles of octopus prepared as food" is_a=seafood part_of=octopus kind_of=seafood kind_of=food kind_of=solid kind_of=matter kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.octopus.noun.2 k.words.sense word=octopus pos=noun n=2 gloss="bottom-living cephalopod having a soft oval body with eight long tentacles" synonym=devilfish is_a=octopod kind_of=octopod kind_of=cephalopod kind_of=mollusk kind_of=invertebrate kind_of=animal kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.octopus.forms core.word text=octopi means=octopus of=k.words.sense.word core.source="wordnet 3.1"

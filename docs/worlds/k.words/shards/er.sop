@@ -1,10 +1,10 @@
-# k.words/shards/er: noun and verb senses of the words from "er" to "eruption" (first letters "er").
+# k.words/shards/er: senses of the words from "er" to "eruption" (first letters "er").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.er.noun.1 k.words.sense word=Er pos=noun n=1 gloss="a trivalent metallic element of the rare earth group; occurs with yttrium" synonym=erbium synonym="atomic number 68" is_a="metallic element" core.source="wordnet 3.1"
-@k.words.er.noun.2 k.words.sense word=ER pos=noun n=2 gloss="a room in a hospital or clinic staffed and equipped to provide emergency care to persons requiring immediate medical treatment" synonym="emergency room" is_a="hospital room" core.source="wordnet 3.1"
+@k.words.er.noun.1 k.words.sense word=Er pos=noun n=1 gloss="a trivalent metallic element of the rare earth group; occurs with yttrium" synonym=erbium synonym="atomic number 68" is_a="metallic element" kind_of="metallic element" kind_of="chemical element" kind_of=substance kind_of=matter kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.er.noun.2 k.words.sense word=ER pos=noun n=2 gloss="a room in a hospital or clinic staffed and equipped to provide emergency care to persons requiring immediate medical treatment" synonym="emergency room" is_a="hospital room" kind_of="hospital room" kind_of=room kind_of=area kind_of=structure kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.er.spelling.ER core.word text=er means=ER of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.er.spelling.Er core.word text=er means=Er of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.era.noun.1 k.words.sense word=era pos=noun n=1 gloss="a period marked by distinctive character or reckoned from a fixed point or event" synonym=epoch is_a="time period" core.source="wordnet 3.1"
@@ -15,8 +15,8 @@
 @k.words.eradicate.verb.2 k.words.sense word=eradicate pos=verb n=2 gloss="destroy completely, as if down to the roots" synonym=uproot synonym=extirpate synonym="root out" synonym=exterminate is_a=destroy core.source="wordnet 3.1"
 @k.words.erase.verb.1 k.words.sense word=erase pos=verb n=1 gloss="remove from memory or existence" synonym="wipe out" is_a=kill core.source="wordnet 3.1"
 @k.words.erase.verb.2 k.words.sense word=erase pos=verb n=2 gloss="remove by or as if by rubbing or erasing" synonym="rub out" synonym="score out" synonym=efface synonym="wipe off" is_a=delete core.source="wordnet 3.1"
-@k.words.erase.verb.3 k.words.sense word=erase pos=verb n=3 gloss="wipe out digitally or magnetically recorded information" synonym=delete is_a="take away" core.source="wordnet 3.1"
-@k.words.eraser.noun.1 k.words.sense word=eraser pos=noun n=1 gloss="an implement used to erase something" is_a=implement core.source="wordnet 3.1"
+@k.words.erase.verb.3 k.words.sense word=erase pos=verb n=3 gloss="wipe out digitally or magnetically recorded information" synonym=delete is_a="take away" opposite=record core.source="wordnet 3.1"
+@k.words.eraser.noun.1 k.words.sense word=eraser pos=noun n=1 gloss="an implement used to erase something" is_a=implement kind_of=implement kind_of=instrumentality kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.erect.verb.1 k.words.sense word=erect pos=verb n=1 gloss="construct, build, or erect" synonym=raise synonym=rear synonym="set up" synonym="put up" is_a=construct core.source="wordnet 3.1"
 @k.words.erect.verb.2 k.words.sense word=erect pos=verb n=2 gloss="cause to rise up" synonym=rear is_a=raise core.source="wordnet 3.1"
 @k.words.erection.noun.1 k.words.sense word=erection pos=noun n=1 gloss="an erect penis" synonym=hard-on is_a="sexual arousal" core.source="wordnet 3.1"

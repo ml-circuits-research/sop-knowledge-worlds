@@ -1,12 +1,12 @@
-# k.words/shards/oi: noun and verb senses of the words from "oil" to "ointment" (first letters "oi").
+# k.words/shards/oi: senses of the words from "oil" to "ointment" (first letters "oi").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.oil.noun.1 k.words.sense word=oil pos=noun n=1 gloss="a slippery or viscous liquid or liquefiable substance not miscible with water" is_a=lipid core.source="wordnet 3.1"
-@k.words.oil.noun.2 k.words.sense word=oil pos=noun n=2 gloss="oil paint containing pigment that is used by an artist" synonym="oil color" synonym="oil colour" is_a="oil paint" core.source="wordnet 3.1"
-@k.words.oil.noun.3 k.words.sense word=oil pos=noun n=3 gloss="a dark oil consisting mainly of hydrocarbons" synonym=petroleum synonym="crude oil" synonym=crude synonym="rock oil" synonym="fossil oil" is_a=oil is_a="fossil fuel" core.source="wordnet 3.1"
-@k.words.oil.verb.1 k.words.sense word=oil pos=verb n=1 gloss="cover with oil, as if by rubbing" is_a=cover core.source="wordnet 3.1"
-@k.words.oil.verb.2 k.words.sense word=oil pos=verb n=2 gloss="administer an oil or ointment to; often in a religious ceremony of blessing" synonym=anoint synonym=inunct synonym=anele synonym=embrocate is_a=bless core.source="wordnet 3.1"
+@k.words.oil.noun.1 k.words.sense word=oil pos=noun n=1 gloss="a slippery or viscous liquid or liquefiable substance not miscible with water" is_a=lipid kind_of=lipid kind_of=macromolecule kind_of=molecule kind_of=unit kind_of=thing kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.oil.noun.2 k.words.sense word=oil pos=noun n=2 gloss="oil paint containing pigment that is used by an artist" synonym="oil color" synonym="oil colour" is_a="oil paint" kind_of="oil paint" kind_of=paint kind_of=coating kind_of=covering kind_of=artifact kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.oil.noun.3 k.words.sense word=oil pos=noun n=3 gloss="a dark oil consisting mainly of hydrocarbons" synonym=petroleum synonym="crude oil" synonym=crude synonym="rock oil" synonym="fossil oil" is_a=oil is_a="fossil fuel" kind_of=oil kind_of=lipid kind_of=macromolecule kind_of=molecule kind_of=unit kind_of=thing kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.oil.verb.1 k.words.sense word=oil pos=verb n=1 gloss="cover with oil, as if by rubbing" is_a=cover kind_of=cover core.source="wordnet 3.1"
+@k.words.oil.verb.2 k.words.sense word=oil pos=verb n=2 gloss="administer an oil or ointment to; often in a religious ceremony of blessing" synonym=anoint synonym=inunct synonym=anele synonym=embrocate is_a=bless kind_of=bless kind_of=raise kind_of="call up" kind_of=make core.source="wordnet 3.1"
 @k.words.ointment.noun.1 k.words.sense word=ointment pos=noun n=1 gloss="semisolid preparation (usually containing a medicine) applied externally as a remedy or for soothing an irritation" synonym=unction synonym=unguent synonym=balm synonym=salve is_a=remedy core.source="wordnet 3.1"
 @k.words.ointment.noun.2 k.words.sense word=ointment pos=noun n=2 gloss="toiletry consisting of any of various substances in the form of a thick liquid that have a soothing and moisturizing effect when applied to the skin" synonym=cream synonym=emollient is_a=toiletry core.source="wordnet 3.1"

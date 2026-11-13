@@ -12,7 +12,9 @@ import { byText, seg, wire, text, header, writeShards, splitParts } from './lib.
 export const SOURCE = 'wordnet 3.1';
 export const WORD_LIMIT = 20000;   // the first lines of the frequency list
 export const SENSE_LIMIT = 3;      // the most frequent senses of a word per part of speech (WordNet's order)
-const POS = { n: 'noun', v: 'verb' };
+const POS = { n: 'noun', v: 'verb', a: 'adjective', r: 'adverb' };
+const FILE = { n: 'noun', v: 'verb', a: 'adj', r: 'adv' };
+export const COMMON_LIMIT = 3000;  // Round 9: the lines of the list whose words also get adjective and adverb senses and the chain `kind_of`
 // Senses that WordNet itself marks as slurs or vulgar are left out (the worlds are also read by children's applications).
 const OFFENSIVE = /ethnic slur|\((?:[a-z]+ )?(?:offensive|vulgar|obscene|taboo|derogatory)(?: [a-z]+)?\)|\b(?:offensive|derogatory|disparaging|obscene|vulgar|insulting|contemptuous|pejorative) (?:terms?|names?|words?|slang|expression)\b/i;
 const LEMMA = /^[a-z][a-z0-9-]*$/; // what can be an atom and a segment of an id
@@ -30,8 +32,9 @@ export function readData(text) {
     let at = 4 + 2 * count;
     const pointerCount = Number(f[at++]);
     const pointers = [];
-    for (let i = 0; i < pointerCount; i++, at += 4) pointers.push([f[at], f[at + 1], f[at + 2]]);
-    synsets.set(f[0], { words, pointers, gloss: bar < 0 ? '' : line.slice(bar + 3).trim() });
+    // A pointer: [symbol, offset, pos, source word number, target word number] (0 and 0: between the synsets).
+    for (let i = 0; i < pointerCount; i++, at += 4) pointers.push([f[at], f[at + 1], f[at + 2], parseInt(f[at + 3].slice(0, 2), 16), parseInt(f[at + 3].slice(2), 16)]);
+    synsets.set(f[0], { words, pointers, kind: f[2], gloss: bar < 0 ? '' : line.slice(bar + 3).trim() });
   }
   return synsets;
 }
@@ -62,23 +65,48 @@ export const bucketOf = (lemma) => (/^[a-z]{2}/.test(lemma) ? lemma.slice(0, 2) 
 // extra (Round 10, item 2): Map(word -> noun synset offset) of words that are kept whatever their place in the
 // frequency list, each with that sense even when it is not among the first senses: the common things of
 // tools/coverage.mjs with the sense kept there (427 of them come after the 20,000th line of the list).
-export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, limits, extra = new Map() } = {}) {
+// Round 9: the common words are those of the first `commonLimit` lines of the list and the words of `extra`: they
+// also get their adjective and adverb senses (files 'index.adj', 'data.adj', 'index.adv', 'data.adv', where given)
+// and, on their noun and verb senses, the chain `kind_of`. Every sense gets its `opposite`.
+export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map() } = {}) {
   const wanted = new Set([...extra.keys()].filter((w) => LEMMA.test(w)));
+  const common = new Set(commonLimit > 0 ? wanted : []);
+  for (const line of freq.split('\n').slice(0, commonLimit)) {
+    const w = line.trim().split(/\s+/)[0]?.toLowerCase();
+    if (w && LEMMA.test(w)) common.add(w);
+  }
   for (const line of freq.split('\n').slice(0, wordLimit)) {
     const w = line.trim().split(/\s+/)[0]?.toLowerCase();
     if (w && LEMMA.test(w)) wanted.add(w);
   }
-  const stats = { listed: wanted.size, words: 0, senses: 0, skipped: 0, forms: 0, spellings: 0, shards: 0 };
+  const stats = { listed: wanted.size, words: 0, senses: 0, skipped: 0, forms: 0, spellings: 0, shards: 0, opposites: 0, nearOpposites: 0, chains: 0 };
   const groups = new Map(); // lemma -> { lemma, senses, words }
   const group = (lemma) => {
     if (!groups.has(lemma)) groups.set(lemma, { lemma, senses: [], words: [] });
     return groups.get(lemma);
   };
-  for (const p of ['n', 'v']) {
+  // Adjectives and adverbs (Round 9) only where their files are given, and only for the common words.
+  for (const p of ['n', 'v', 'a', 'r'].filter((x) => files[`data.${FILE[x]}`])) {
     const pos = POS[p];
-    const data = readData(files[`data.${pos}`]);
-    const index = readIndex(files[`index.${pos}`]);
-    for (const lemma of [...index.keys()].filter((l) => wanted.has(l)).sort(byText)) {
+    const data = readData(files[`data.${FILE[p]}`]);
+    const index = readIndex(files[`index.${FILE[p]}`]);
+    const keep = p === 'n' || p === 'v' ? wanted : common;
+    // The word a lexical pointer of a synset leads to: the antonym of one word of the synset is one word of another.
+    const lexical = (s, own, symbol) => [...new Set(s.pointers.filter(([sym, off, tp, from]) => sym === symbol && data.has(off) && (tp === p || (p === 'a' && tp === 's'))
+      && (from === 0 || s.words[from - 1]?.toLowerCase() === own.toLowerCase())).map(([, off, , , to]) => spelt(data.get(off).words[to > 0 ? to - 1 : 0])))];
+    // The chain of kinds: the first hypernym of the sense, its first hypernym, and so on to the top; nearest first.
+    const chain = (offset) => {
+      const out = [], seen = new Set([offset]);
+      for (let at = offset; ;) {
+        const up = data.get(at).pointers.find(([sym, off, tp]) => (sym === '@' || sym === '@i') && tp === p && data.has(off));
+        if (!up || seen.has(up[1])) break;
+        seen.add(up[1]);
+        out.push(spelt(data.get(up[1]).words[0]));
+        at = up[1];
+      }
+      return out;
+    };
+    for (const lemma of [...index.keys()].filter((l) => keep.has(l)).sort(byText)) {
       const g = group(lemma);
       const all = index.get(lemma);
       const kept = all.map((offset, i) => [offset, i]).filter(([offset, i]) => i < senseLimit || (p === 'n' && extra.get(lemma) === offset));
@@ -88,20 +116,32 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
         const own = s.words.find((w) => w.toLowerCase() === lemma) ?? lemma;
         const targets = (symbol) => [...new Set(s.pointers.filter(([sym, , tp]) => sym === symbol && tp === p)
           .map(([, off]) => spelt(data.get(off).words[0])))];
+        // Round 9. The opposite: WordNet's antonym of this word in this sense. Where an adjective has none of its own
+        // but is filed as similar to one that has (huge is similar to large, the opposite of small), the opposite of
+        // that one is its near opposite. The chain of kinds: for the noun and verb senses of the common words.
+        const opposite = lexical(s, own, '!');
+        const near = opposite.length || p !== 'a' ? [] : [...new Set(s.pointers.filter(([sym, off]) => sym === '&' && data.has(off)).flatMap(([, off]) => lexical(data.get(off), data.get(off).words[0], '!')))];
+        const kinds = (p === 'n' || p === 'v') && common.has(lemma) ? chain(offset) : [];
         const line = wire(`k.words.${seg(lemma)}.${pos}.${i + 1}`, 'k.words.sense', [
           ['word', own], ['pos', pos], ['n', i + 1], ['gloss', text(shortGloss(s.gloss))],
           ...[...new Set(s.words.filter((w) => w !== own).map(spelt))].map((w) => ['synonym', w]),
           ...targets('@').map((w) => ['is_a', w]),
           ...targets('@i').map((w) => ['instance_of', w]),
           ...targets('#p').map((w) => ['part_of', w]),
+          ...opposite.map((w) => ['opposite', w]),
+          ...near.map((w) => ['near_opposite', w]),
+          ...kinds.map((w) => ['kind_of', w]),
         ], SOURCE);
+        stats.opposites += opposite.length ? 1 : 0;
+        stats.nearOpposites += near.length ? 1 : 0;
+        stats.chains += kinds.length ? 1 : 0;
         g.senses.push(line);
         stats.senses++;
         if (own !== lemma && !g.words.some((x) => x.own === own)) g.words.push({ own });
       });
     }
     // Irregular forms (children -> child), for the words kept.
-    for (const line of files[`${pos}.exc`].split('\n')) {
+    for (const line of (files[`${FILE[p]}.exc`] ?? '').split('\n')) {
       const [form, ...bases] = line.trim().split(/\s+/);
       if (!form || !LEMMA.test(form)) continue;
       for (const base of bases) {
@@ -137,7 +177,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
       const first = part[0].lemma, last = part[part.length - 1].lemma;
       out[`${name}.sop`] = `${header({
         id: `k.words/shards/${name}`,
-        about: `noun and verb senses of the words from "${first}" to "${last}" (first letters "${b}"${parts.length > 1 ? `, part ${i + 1} of ${parts.length}` : ''}).`,
+        about: `senses of the words from "${first}" to "${last}" (first letters "${b}"${parts.length > 1 ? `, part ${i + 1} of ${parts.length}` : ''}).`,
         sources: [`wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent${extra.size ? ', and the common things of tools/coverage.mjs' : ''})`],
         license: 'WordNet-3.0',
         script: 'tools/import/wordnet.mjs',
@@ -159,7 +199,7 @@ async function main() {
   const repo = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
   const arg = (name, dflt) => { const i = process.argv.indexOf(`--${name}`); return i < 0 ? dflt : process.argv[i + 1]; };
   const dict = arg('dict', join(repo, 'sources/wordnet/raw/wordnet31'));
-  const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
+  const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(arg('freq', join(repo, 'sources/frequency-words/raw/en_50k.txt')), 'utf8');
   const { files: out, stats } = importWordnet(files, freq, { extra: await commonThings() });
   writeShards(arg('out', join(repo, 'docs/worlds/k.words/shards')), out);

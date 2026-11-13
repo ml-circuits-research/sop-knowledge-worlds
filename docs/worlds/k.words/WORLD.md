@@ -1,22 +1,32 @@
 # k.words
 
-English words: the noun and verb senses of about 10,000 frequent words, from WordNet 3.1.
+English words: the noun and verb senses of about 11,000 frequent words, and the adjective and adverb senses of the
+common ones, with opposites and chains of kinds, from WordNet 3.1.
 
 ## What it knows
 
 - `k.words.sense` (shared, closed), identity `word` + `pos` + `n`: one sense of a word.
-  - `word`: the word as WordNet spells it (`dog`, `Paris`). `pos`: `noun` or `verb`.
+  - `word`: the word as WordNet spells it (`dog`, `Paris`). `pos`: `noun`, `verb`, `adjective` or `adverb` (the
+    last two only for the common words: those of the first 3,000 lines of the frequency list and the common things
+    of `tools/coverage.mjs`; 803 adjectives, 287 adverbs).
   - `n`: the sense number in WordNet; 1 is the most frequent sense. At most the first 3 senses per part of speech
     are kept, and senses marked as slurs or vulgar are left out, so a number may be missing.
   - `gloss`: a short definition (a string).
   - `synonym`: other words with this sense. `is_a`: what it is a kind of. `instance_of`: what a named thing is
     (`Paris` → `national capital`). `part_of`: what it is a part of (`wheel` → `wheeled vehicle`). All many; a value
     of one word is an atom, a value of several words is a string (`"domestic animal"`).
+  - Round 9: `opposite`: WordNet's antonym of the word in this sense (`hot` → `cold`, `open` → `close`, `man` →
+    `woman`; 1,377 senses of 1,029 words). `near_opposite`: for an adjective without an antonym of its own, the
+    antonym of the adjective it is filed as similar to (`huge` is similar to `large` → `small`; 1,044 senses);
+    weaker, and so a key of its own. `kind_of`: the chain of kinds upward from the sense, nearest first, through the
+    first kind at each step (`dog` → canine, carnivore, placental, mammal, vertebrate, chordate, animal, organism,
+    "living thing", whole, object, "physical entity", entity), on the noun and verb senses of the common words
+    (9,342 senses): "is a dog an animal" is one lookup, `where: { word: 'dog', pos: 'noun', n: 1, kind_of: 'animal' }`.
 - `core.word` facts in the shards: irregular forms (`text=children means=child`) and lower-case text for capitalised
   words (`text=paris means=Paris`), both `of=k.words.sense.word`.
 - Exports: `k.words.sense`.
 
-The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain, look the value up as a
+The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain beyond the common words (which carry `kind_of`), look the value up as a
 `word` again (its first sense is the usual one). A value may be a word that has no sense in the shards (only words of
 the frequency list have senses).
 
@@ -24,8 +34,8 @@ the frequency list have senses).
 
 By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`); a one-letter word or a word whose second
 character is not a letter is in the shard of its first letter. A bucket that would pass the size limits is split into
-consecutive parts (`co-1`, `co-2`); none needs it today. `vocab.json` maps every word (lower case) and every
-irregular form to its shard. 319 shards, 29,668 wires, 5,767,722 bytes; the largest is `co` (1,205 wires, 233,632
+consecutive parts: `co` is now `co-1` and `co-2`. `vocab.json` maps every word (lower case) and every
+irregular form to its shard. 321 shards, 31,926 wires, 7,258,687 bytes; the largest is `re` (895 wires, 185,968
 bytes).
 
 ## Sources
@@ -43,3 +53,12 @@ Import: `node tools/import/wordnet.mjs`.
 - "Another word for car?" → `seek: 'synonym'` → `auto`, `automobile`, `machine`, `motorcar`
 - "Which words are kinds of canine?" → `{ where: { is_a: 'canine' }, seek: 'word', mode: 'list' }` (over the shards
   that are loaded)
+- "What is the opposite of hot?" → `{ type: 'k.words.sense', where: { word: 'hot', pos: 'adjective', n: 1 }, seek: 'opposite' }` → `cold`
+- "Is a dog an animal?" → `where: { word: 'dog', pos: 'noun', n: 1, kind_of: 'animal' }`
+
+## Limits of the opposites
+
+WordNet's antonyms are between words, and it pairs `big` with `little` and `large` with `small`; `friend`, `war` and
+`day` have no antonym among their first three senses. Of the 2,978 words in the first 3,000 lines of the frequency
+list, 2,416 have a sense here (the others are function words and inflected forms), 599 have an opposite and 953 an
+opposite or a near opposite.

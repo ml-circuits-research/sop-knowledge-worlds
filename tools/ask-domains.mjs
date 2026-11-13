@@ -77,4 +77,15 @@ export const DOMAINS = {
       dish: [['what is {x} made of', one('k.food.food', 'made_of')], ['what kind of food is {x}', one('k.food.food', 'kind')], ['is {x} eaten raw or cooked', one('k.food.food', 'eaten')]],
     },
   },
+  // sources/hand-core/questions/words.tsv: common words, written without looking at k.words.
+  words: {
+    things: () => rows('sources/hand-core/questions/words.tsv'),
+    templates: (() => {
+      const sense = (pos, key) => ({ type: 'k.words.sense', where: { word: '{x}', pos }, seek: key, mode: 'list' });
+      const opposite = (pos) => ['what is the opposite of {x}', () => [sense(pos, 'opposite'), sense(pos, 'near_opposite')]];
+      const means = (pos) => ['what does {x} mean', () => [sense(pos, 'gloss')]];
+      return { adjective: [opposite('adjective'), means('adjective')], verb: [opposite('verb'), means('verb')], pair: [opposite('noun'), means('noun')],
+        noun: [['what kind of thing is a {x}', () => [sense('noun', 'kind_of')]], means('noun')] };
+    })(),
+  },
 };

@@ -9,3 +9,9 @@
 {"id":"wd-09","ask":"how many noun senses of bank are kept","query":{"type":"k.words.sense","where":{"word":"bank","pos":"noun"},"mode":"count"},"expect":{"status":"supported","value":"3"}}
 {"id":"wd-10","ask":"what is a finger a part of","query":{"type":"k.words.sense","where":{"word":"finger","pos":"noun","n":1},"seek":"part_of"},"expect":{"status":"supported","value":"hand"}}
 {"id":"wd-11","ask":"an application's own fact is accepted next to the words","tell":"@n1 k.words.sense word=blorb pos=noun n=1 gloss=\"a made-up word\" is_a=thing","ns":"app","expect":{"issues":[]}}
+{"id":"wd-13","ask":"what is the opposite of hot","query":{"type":"k.words.sense","where":{"word":"hot","pos":"adjective","n":1},"seek":"opposite"},"expect":{"status":"supported","value":"cold"}}
+{"id":"wd-14","ask":"what is the opposite of open (to open)","query":{"type":"k.words.sense","where":{"word":"open","pos":"verb","n":1},"seek":"opposite"},"expect":{"status":"supported","value":"close"}}
+{"id":"wd-15","ask":"is a dog an animal: the kinds of a dog","query":{"type":"k.words.sense","where":{"word":"dog","pos":"noun","n":1,"kind_of":"animal"},"seek":"word"},"expect":{"status":"supported","value":"dog"}}
+{"id":"wd-16","ask":"what is huge nearly the opposite of","query":{"type":"k.words.sense","where":{"word":"huge","pos":"adjective","n":1},"seek":"near_opposite"},"expect":{"status":"supported","value":"small"}}
+{"id":"wd-17","ask":"which words have the opposite cold","query":{"type":"k.words.sense","where":{"pos":"adjective","n":1,"opposite":"cold"},"seek":"word"},"expect":{"status":"supported","value":"hot"}}
+{"id":"wd-18","ask":"what does quickly mean","query":{"type":"k.words.sense","where":{"word":"quickly","pos":"adverb","n":1},"seek":"gloss"},"expect":{"status":"supported","value":"\"with speed\""}}

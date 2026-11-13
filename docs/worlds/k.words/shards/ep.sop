@@ -1,4 +1,4 @@
-# k.words/shards/ep: noun and verb senses of the words from "epi" to "episode" (first letters "ep").
+# k.words/shards/ep: senses of the words from "epi" to "episode" (first letters "ep").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -10,6 +10,6 @@
 @k.words.epiphany.noun.1 k.words.sense word=epiphany pos=noun n=1 gloss="a divine manifestation" is_a=manifestation core.source="wordnet 3.1"
 @k.words.epiphany.noun.2 k.words.sense word=Epiphany pos=noun n=2 gloss="twelve days after Christmas; celebrates the visit of the three wise men to the infant Jesus" synonym="Epiphany of Our Lord" synonym="Twelfth day" synonym="Three Kings' Day" synonym="January 6" is_a="Christian holy day" part_of=January core.source="wordnet 3.1"
 @k.words.epiphany.spelling.Epiphany core.word text=epiphany means=Epiphany of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.episode.noun.1 k.words.sense word=episode pos=noun n=1 gloss="a happening that is distinctive in a series of related events" is_a=happening core.source="wordnet 3.1"
-@k.words.episode.noun.2 k.words.sense word=episode pos=noun n=2 gloss="a brief section of a literary or dramatic work that forms part of a connected series" is_a=section core.source="wordnet 3.1"
-@k.words.episode.noun.3 k.words.sense word=episode pos=noun n=3 gloss="a part of a broadcast serial" synonym=installment synonym=instalment is_a=broadcast part_of=serial core.source="wordnet 3.1"
+@k.words.episode.noun.1 k.words.sense word=episode pos=noun n=1 gloss="a happening that is distinctive in a series of related events" is_a=happening kind_of=happening kind_of=event kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.episode.noun.2 k.words.sense word=episode pos=noun n=2 gloss="a brief section of a literary or dramatic work that forms part of a connected series" is_a=section kind_of=section kind_of=writing kind_of="written communication" kind_of=communication kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.episode.noun.3 k.words.sense word=episode pos=noun n=3 gloss="a part of a broadcast serial" synonym=installment synonym=instalment is_a=broadcast part_of=serial kind_of=broadcast kind_of=show kind_of="social event" kind_of=event kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
