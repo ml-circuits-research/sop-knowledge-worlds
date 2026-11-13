@@ -326,3 +326,14 @@ After the first addendum, before k.feelings:
 **Q26 → nothing waits.** The second addendum comes next.
 
 **Next, in order:** the two preview defects; addendum 2 (`k.layouts`, anchors, what joins what); more hats and work clothes in k.faces / k.people so jobs do not all look like the plain man (about 25 do); feelings that share a face get distinct expressions where a face can show it (sad vs guilty vs lonely cannot: say so in the facts instead); then k.actions, k.colours, k.shapes.
+
+## Reviewer 2026-11-13 19:35 — Round 8: the knowledge the demo's new design needs (owner: "as much general knowledge as we can")
+
+The demo moves to universal acts over world schemas (PSys2 worker-tasks.md, "ACTS × SCHEMAS"). Every role of a request may be filled from knowledge. After the open items of Round 7 (preview defects, k.layouts, anchors, joins), in this order:
+1. **`k.actions` as the words of the acts.** For the acts make, remove, change, place, connect, group, take apart, pick, ask, copy, send, undo, save, load: the English verbs and phrases that mean them (WordNet verb synsets and their lemmas where the licence allows, plus phrasal verbs: put on, take off, get rid of, turn into), each with the roles it takes and the prepositions that mark them (on, to, next to, into, with, from). Sense-check by reading, as for the nouns. This replaces verb lists in the demo.
+2. **`k.attributes`**: for kinds of things, which attributes they usually have and usual values: colour (usual colours of 2,000 things: a banana is yellow), material, size class (exists), number of legs / wheels, can it fly / swim / move, where it lives, what it eats, what it is used for. Sources: k.commonsense / ConceptNet where licensed, WordNet glosses, else model-labelled (`named=model`) with a sampled audit.
+3. **`k.values`**: colour names with RGB and synonyms (CSS colours are free; add common names), size and amount words in order (tiny … huge; a bit … a lot), shape names, directions, "random / different / same / each" as set words, number words and ordinals.
+4. **`k.wearables`** joined to k.faces and k.people: what is worn where (hat on head, glasses on eyes, earrings on ears, scarf on neck), with drawings for the common ones and the anchor on the body or face.
+5. **Parts for more things**: part names exist for drawings; add for the 1,500 common things the usual parts even with no drawing (a car has wheels, doors, engine), from WordNet meronyms.
+6. **Coverage report** per world: how many of the 1,500 common things have place, size, colour, parts, a drawing, a stand-in; the gaps drive the next round.
+Rules as before: free licences only, English only, sources on every wire, look at samples and say what was not looked at.
