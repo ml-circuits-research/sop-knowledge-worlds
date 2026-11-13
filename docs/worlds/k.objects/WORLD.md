@@ -104,7 +104,9 @@ are in `sources/coverage/not-links.tsv`.
 most frequent English nouns that name a physical thing (frequency list × WordNet), most frequent first, with the
 WordNet synonym or direct hypernym that has a drawing where there is one. Every drawing that matches a common thing
 by name was looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`: right, wrong sense,
-unclear); a drawing of another sense keeps its name and the word counts as missing.
+unclear); a drawing of another sense keeps its name and the word counts as missing. Words that cannot be drawn as an object
+(`sources/coverage/not-drawable.tsv`) leave the list and are named at the end of `MISSING.md`. After Round 5, 907 of
+the 1,500 reach a drawing (660 by a drawing of the sense kept, 68 by a synonym, 179 by a stand-in).
 
 ## Questions it helps with
 

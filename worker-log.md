@@ -1229,3 +1229,46 @@ them; said here.
   52,350, `nature-2` 277 / 36,762. **k.objects: 2,103 objects** (220 hand-written), 312 shards, 300,793 wires,
   36,361,883 bytes. Catalog: 11 worlds, 740 shards, 344,301 wires, 44,401,498 bytes, vocab 19,118 words; 0 errors,
   0 warnings. npm test 2,347 pass, 0 fail.
+
+## R5.4 (2026-11-13): coverage again; Round 5 report
+
+**Coverage of the 1,500 most frequent common things** (`node tools/coverage.mjs`; the list lost five not-drawable
+words and took the next five):
+
+| | Before Round 5 (R4.4) | After R5.1 (sense check) | After R5.2 (links looked at) | Now |
+| --- | --- | --- | --- | --- |
+| a drawing, in the sense kept | 582 (38.8%, by name only) | 560 (37.3%) | 585 (39.0%, with batch 1) | **660 (44.0%)** |
+| a word to a synonym's drawing | 63 | 63 | 63 | 68 |
+| a stand-in (the drawing of its kind) | 187 | 187 | 167 | 179 |
+| reach a drawing | 832 (55.5%) | 810 (54.0%) | 815 (54.3%) | **907 (60.5%)** |
+| nothing | 668 | 690 | 685 | 593 |
+
+Of the 660: 651 are an object of that name and 9 an object of another name (`sense-check.tsv`, column `instead`).
+29 words have an object of their name that shows another sense; 20 of those still count as missing.
+
+**The same for "the 3,000 most frequent"** (`node tools/coverage.mjs --limit 3000`): the frequency list of 50,000
+words holds only **2,687** common things by the rule, so the count is over 2,687. Before Round 5: 655 by name, 103
+synonyms, 484 stand-ins: 1,242 reach a drawing (46.1% of 2,692). **Now: 733 with a drawing (27.3%), 112 synonyms,
+491 stand-ins: 1,336 reach a drawing (49.7%)**; 1,351 nothing. This is an upper estimate: after the 1,500th word
+the list was not read (names and verb forms are still in it), its 73 name matches were not sense-checked, and its
+356 links are counted by rule only (not published, not looked at). Q23.
+
+**Round 5 report.** Commits: R5.1 c8b65cd; R5.3 batch 1 4381f02; (Round 6: fe214ad, e8a1c8c, 10fd8d3); R5.2 2f0ca53;
+R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
+- **Sense check (R5.1):** 582 name-matched drawings looked at next to the gloss: 523 right, 29 wrong sense, 30
+  unclear (after R5.2: 522 / 29 / 31). No object renamed: every wrong-sense drawing shows a common meaning. `bank`,
+  `shell`, `frame`: wrong sense; `"river bank"` and `"artillery shell"` drawn; the frame of a pair of glasses not.
+- **Links (R5.1, R5.2):** 187 hypernym links moved to `k.objects.stand_in`; all 255 links looked at; 25 removed.
+- **Hand-written (R5.3):** 100 new objects (k.objects 2,103; 220 hand-written), 4 redrawn; 5 words not drawable.
+- **Looked at in Round 5:** 20 sheets of the sense check (582 drawings) and 1 of the 7 replacements; 9 sheets of the
+  links (255); 4 sheets of the new objects (104 previews) and 2 small sheets of redrawn ones. **Not looked at:** the
+  17 new links that batches 2 to 4 produced, as links (their drawings are the new objects); the tail of the long list;
+  the gallery page in a browser; whether an "unclear" drawing should be redrawn.
+- **Judgement that is mine, not a rule:** the verdicts of `sense-check.tsv`; the 32 new rows of `not-links.tsv`;
+  which missing words were passed over as not drawable in the sense kept (listed in the four batch entries); the
+  five words of `not-drawable.tsv`.
+- **What SOP Lang could not say:** nothing new. The sense of a word is not in the world: an object has a name, not
+  a WordNet sense, so "the drawing `bank` shows the building" lives in a TSV beside the tool. If a host should know
+  it, `k.objects.object` needs a key for the sense (a gloss, or a `k.words` synset): not asked for, not done.
+- **Open questions:** Q22 (correct the kept sense by hand where WordNet's counts keep a rare one?), Q23 (the list
+  has 2,687 words, and its tail is unread).

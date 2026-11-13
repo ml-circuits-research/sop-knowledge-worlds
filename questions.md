@@ -221,3 +221,16 @@ the drawing shows: this is a second reading by a language model, as `not-things.
 when the drawing shows any physical sense of the word that WordNet has.
 Blocking: no. Meanwhile: (a); in R5.3 an "other sense" word is drawn under another name only when the sense kept
 is itself a common thing (river bank, artillery shell); the others are passed over and listed in the log.
+
+## Q23 (task R5.4, 2026-11-13)
+Question: the frequency list has only 2,687 common things by the rule, not 3,000; and the part after the 1,500th
+has not been read or looked at. Is a count over it wanted as it is, or should that part be read first?
+Context: `sources/frequency-words/raw/en_50k.txt` has 50,000 words; the rule of `tools/coverage.mjs` keeps 2,687 of
+them (`node tools/coverage.mjs --limit 3000` prints the numbers and writes nothing). For the words after the 1,500th:
+`not-things.tsv` was written by reading about 2,200 candidates and has little past the 1,500th, so names, verb forms
+and general words are still in that part; none of its name matches went through the sense check; its links are
+counted by rule but not published and not looked at (the shards hold only the links of the 1,500). So the numbers
+for the long list are an upper estimate. Options: (a) keep them as an estimate, labelled so; (b) read and
+sense-check the tail (about 1,200 words, 73 name matches, about 350 links) in a later round; (c) a longer frequency
+list, to reach 3,000.
+Blocking: no. Meanwhile: (a).
