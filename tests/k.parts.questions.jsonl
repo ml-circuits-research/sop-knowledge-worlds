@@ -4,3 +4,6 @@
 {"id":"pa-04","ask":"which sense of tree is meant","query":{"type":"k.parts.whole","where":{"name":"tree"},"seek":"gloss"},"expect":{"status":"supported","value":"\"a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms\""}}
 {"id":"pa-05","ask":"which things have a handle among their own parts","query":{"type":"k.parts.whole","where":{"has":"handle"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["baggage","briefcase","faucet","luggage","umbrella"]}}
 {"id":"pa-06","ask":"what is a dog's part as a canine","query":{"type":"k.parts.inherited","where":{"name":"dog","from":"canine"},"seek":"has"},"expect":{"status":"supported","value":"paw"}}
+{"id":"pa-7","ask":"does a car have a door","query":{"type":"k.parts.whole","where":{"name":"car","plain":"door"},"seek":"name"},"expect":{"status":"supported","value":"car"}}
+{"id":"pa-8","ask":"what are the parts of a dog","query":{"type":"k.parts.usual","where":{"name":"dog"},"seek":"has","mode":"list"},"expect":{"status":"supported","values":["head","body","leg","tail","ear","paw","nose","fur"]}}
+{"id":"pa-9","ask":"which things have a spout","query":{"type":"k.parts.usual","where":{"has":"spout"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["kettle","teapot"]}}

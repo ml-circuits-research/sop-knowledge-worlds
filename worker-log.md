@@ -2243,3 +2243,39 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.food.test.mjs` (3), questions fd-15 to fd-20.
 - Numbers: k.food 6 shards, 347 wires, 51,883 bytes (was 5 shards, 254 wires, 33,319 bytes). Catalog 22 worlds,
   853 shards, vocab 22,017 words; 0 errors, 0 warnings. npm test 2,647 pass, 0 fail.
+
+
+## Round 10, item 1b (2026-11-13, second worker): Q30 applied: plain part words and model-labelled usual parts in `k.parts`
+
+- **The plain word next to WordNet's name:** new key `plain` (many) on `k.parts.whole` and `k.parts.inherited`.
+  Rule (in `tools/import/parts.mjs`, no table): for a part whose name has several words, the last word, when
+  WordNet says the part is a kind of what that word names ("car door" is a kind of "door"; "automobile engine" of
+  "engine"; "car wheel" of "wheel"; a "heating system" is a kind of "utility", so it gets none). **450 plain
+  words on 240 facts**; the commonest: door 44, stone 33, gear 30, wheel 24, brake 19, room 17, light 16, engine
+  16, seat 14. "Does a car have a door" is now a lookup (`name=car plain=door`). `core.source` stays
+  `wordnet 3.1`: the word is derived from WordNet by rule.
+- **Usual parts, model-labelled:** new type `k.parts.usual` (`named=model`, `hand-core 1`), shard `usual`, 432
+  wires, 51,417 bytes, 1,436 parts, from the new table `sources/hand-core/usual-parts.tsv` (tool
+  `tools/parts-core.mjs`): 429 of the 959 common things that had no part, and dog, cat and house, whose WordNet
+  parts miss the everyday ones. **970 of the 1,500 common things now have a part** (were 541); 530 have none:
+  foods, drinks, materials, things with no plain parts, and the less frequent ones I was not sure of.
+- **What I read:** the list of the 959 things once, writing parts for 461; a first reading took out 26 rows (a
+  hole of a bagel, a twig of a nest, a point of a star; the words with two meanings iris, viola, colt, calf); then
+  a seeded sample of **120 rows printed next to WordNet's gloss** of the sense the coverage rule keeps: 117 right,
+  3 wrong and taken out (bank, boa: the word names two things; doorknob). Record: `usual-parts-audit.tsv`. All
+  the 91 different plain words were read as a list with their counts (a few are not words a person would use
+  for the part: accessory 12, sac 10, system 3, action 3; they stay, since the rule is WordNet's).
+  **Not read again:** the other 315 rows of the table; the 450 plain words fact by fact.
+- **Known weak:** the usual parts are given for the everyday meaning of the name, which is not always the sense
+  the coverage rule keeps (the gloss kept for `cake` is a block of soap, for `plant` a factory, for `peacock` a
+  butterfly; the parts are those of the cake, the plant and the bird). Animals get a general list (head, body,
+  leg, tail and what stands out: horn, hump, mane, fin, shell), not anatomy.
+- `k.attributes`: parts are now also found in `k.parts.usual` (28 `found` facts; 1 `shows` row more).
+  COVERAGE.md: new row "parts (WordNet, or usual parts in plain words)": 970 by name + 44 through the drawing,
+  none 486 (WordNet alone: 541 + 57, none 902). ASPECTS.md: common things, relational 1,374 of 1,500 (was 1,326).
+- **Judgement that is mine:** every usual part; which things have plain parts at all.
+- **What SOP Lang could not say:** that a `plain` word belongs to one of the `has` values of the same fact
+  (repeated keys are two independent lists); a test checks that it is the last word of one of them.
+- Tests: `tests/k.parts.test.mjs` (2 more), questions pa-7 to pa-9.
+- Numbers: k.parts 25 shards, 1,109 wires (were 24 and 677). Catalog 22 worlds, 853 shards, vocab 21,936 words; 0 errors, 0 warnings.
+- After the rebase on R9.5 (k.body): catalog 22 worlds, 853 shards, vocab 21,999 words; npm test 2,638 pass, 5 skipped, 0 fail.

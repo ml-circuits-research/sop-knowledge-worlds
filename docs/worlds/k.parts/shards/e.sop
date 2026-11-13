@@ -3,7 +3,7 @@
 # license: WordNet-3.0
 # script: tools/import/parts.mjs
 
-@k.parts.inherited.eagle.bird k.parts.inherited name=eagle from=bird steps=2 has=beak has=furcula has=feather has=wing has=pennon has="bird's foot" has=uropygium has=hindquarters has="air sac" has="uropygial gland" has=syrinx core.source="wordnet 3.1"
+@k.parts.inherited.eagle.bird k.parts.inherited name=eagle from=bird steps=2 has=beak has=furcula has=feather has=wing has=pennon has="bird's foot" has=uropygium has=hindquarters has="air sac" has="uropygial gland" has=syrinx plain=foot plain=sac core.source="wordnet 3.1"
 @k.parts.whole.earth k.parts.whole name=earth gloss="the 3rd planet from the sun; the planet we live on" has=atmosphere has=hemisphere has="Van Allen belt" has=hydrosphere has=land has=lithosphere has=sky core.source="wordnet 3.1"
 @k.parts.whole.egg k.parts.whole name=egg gloss="animal reproductive body consisting of an ovum or embryo together with nutritive and protective envelopes; especially the thin-shelled reproductive body laid by e.g. female birds" has=chalaza has=yolk core.source="wordnet 3.1"
 @k.parts.whole.elephant k.parts.whole name=elephant gloss="five-toed pachyderm" has=tusk has=proboscis core.source="wordnet 3.1"

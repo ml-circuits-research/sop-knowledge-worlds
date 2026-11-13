@@ -37,6 +37,7 @@
 @k.attributes.found.parts.k_layouts_joins.a k.attributes.found attribute=parts world=k.layouts type=k.layouts.joins key=a covers="kinds joined by part_of" core.source="hand-core 1"
 @k.attributes.found.parts.k_parts_whole.has k.attributes.found attribute=parts world=k.parts type=k.parts.whole key=has covers="common things, from WordNet" core.source="hand-core 1"
 @k.attributes.found.parts.k_parts_inherited.has k.attributes.found attribute=parts world=k.parts type=k.parts.inherited key=has covers="common things, through what they are a kind of" core.source="hand-core 1"
+@k.attributes.found.parts.k_parts_usual.has k.attributes.found attribute=parts world=k.parts type=k.parts.usual key=has covers="common things without a part in WordNet, in plain words" core.source="hand-core 1"
 @k.attributes.found.legs.k_animals_animal.legs k.attributes.found attribute=legs world=k.animals type=k.animals.animal key=legs covers="animals" core.source="hand-core 1"
 @k.attributes.found.wheels.k_attributes_thing.wheels k.attributes.found attribute=wheels world=k.attributes type=k.attributes.thing key=wheels covers="vehicles" core.source="hand-core 1"
 @k.attributes.found.can.k_attributes_thing.can k.attributes.found attribute=can world=k.attributes type=k.attributes.thing key=can covers="common things" core.source="hand-core 1"

@@ -37,7 +37,7 @@ export const FOUND = [
   ['size', 'k.scenes', 'k.scenes.thing', 'size', 'drawable things'], ['size', 'k.commonsense', 'k.commonsense.thing', 'size', 'a few common things'],
   ['place', 'k.scenes', 'k.scenes.thing', 'place', 'drawable things'], ['place', 'k.commonsense', 'k.commonsense.thing', 'at', 'a few common things'],
   ['kind', 'k.attributes', 'k.attributes.thing', 'kind', 'common things'], ['kind', 'k.animals', 'k.animals.animal', 'class', 'animals'], ['kind', 'k.food', 'k.food.food', 'kind', 'foods'],
-  ['parts', 'k.objects', 'k.objects.part', 'name', 'drawings with named parts'], ['parts', 'k.layouts', 'k.layouts.joins', 'a', 'kinds joined by part_of'], ['parts', 'k.parts', 'k.parts.whole', 'has', 'common things, from WordNet'], ['parts', 'k.parts', 'k.parts.inherited', 'has', 'common things, through what they are a kind of'],
+  ['parts', 'k.objects', 'k.objects.part', 'name', 'drawings with named parts'], ['parts', 'k.layouts', 'k.layouts.joins', 'a', 'kinds joined by part_of'], ['parts', 'k.parts', 'k.parts.whole', 'has', 'common things, from WordNet'], ['parts', 'k.parts', 'k.parts.inherited', 'has', 'common things, through what they are a kind of'], ['parts', 'k.parts', 'k.parts.usual', 'has', 'common things without a part in WordNet, in plain words'],
   ['legs', 'k.animals', 'k.animals.animal', 'legs', 'animals'],
   ['wheels', 'k.attributes', 'k.attributes.thing', 'wheels', 'vehicles'],
   ['can', 'k.attributes', 'k.attributes.thing', 'can', 'common things'], ['can', 'k.animals', 'k.animals.animal', 'can', 'animals'], ['can', 'k.commonsense', 'k.commonsense.thing', 'can', 'a few common things'],
@@ -100,6 +100,7 @@ common thing | relational | k.layouts.joins | a | rel
 common thing | relational | k.objects.part | of | name
 common thing | relational | k.parts.whole | name | has
 common thing | relational | k.parts.inherited | name | has
+common thing | relational | k.parts.usual | name | has
 common thing | numeric | k.attributes.thing | name | wheels
 common thing | textual | k.words.sense | word | gloss
 animal | visual | k.animals.animal | name | drawing, covering

@@ -3,4 +3,4 @@
 # license: WordNet-3.0
 # script: tools/import/parts.mjs
 
-@k.parts.inherited.yacht.vessel k.parts.inherited name=yacht from=vessel steps=1 has=anchor has=bilge has="bilge keel" has=bow has=hull has=rudder has=wale has=washboard core.source="wordnet 3.1"
+@k.parts.inherited.yacht.vessel k.parts.inherited name=yacht from=vessel steps=1 has=anchor has=bilge has="bilge keel" has=bow has=hull has=rudder has=wale has=washboard plain=keel core.source="wordnet 3.1"

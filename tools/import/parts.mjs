@@ -4,12 +4,12 @@
 // kind-of steps (k.parts.inherited, one fact per kind). Deterministic.
 //   node tools/import/parts.mjs      writes docs/worlds/k.parts/shards/*.sop (needs the raw files of
 //                                    sources/wordnet/SOURCE.md and sources/frequency-words/SOURCE.md)
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from '../lib/worlds.mjs';
 import { readData, shortGloss } from './wordnet.mjs';
 import { run } from '../coverage.mjs';
-import { wire, header, seg, text, writeShards, byText } from './lib.mjs';
+import { wire, header, seg, text, byText } from './lib.mjs';
 
 export const SOURCE = 'wordnet 3.1';
 export const STEPS = 2;
@@ -32,7 +32,19 @@ export function importParts(dataText, list, notParts = '') {
   const first = (offset) => spelt(data.get(offset).words[0]);
   // The parts of a synset; a part filed under foods is left out when the whole is not a food (a horse has no
   // "horsemeat", a citrus tree no "citrus" as a part one would name).
-  const partsOf = (offset) => [...new Set(data.get(offset).pointers.filter(([sym, o, pos]) => sym === '%p' && pos === 'n' && (lexFile.get(o) !== FOOD_FILE || lexFile.get(offset) === FOOD_FILE)).map(([, o]) => first(o)))];
+  const partsOf = (offset) => [...new Set(data.get(offset).pointers.filter(([sym, o, pos]) => sym === '%p' && pos === 'n' && (lexFile.get(o) !== FOOD_FILE || lexFile.get(offset) === FOOD_FILE)).map(([, o]) => { const name = first(o); const w = plainOf(o, name); if (w) plain.set(name, w); return name; }))];
+  // The plain word of a part with a name of several words (reviewer's answer to Q30): its last word, when WordNet
+  // says that the part is a kind of what that word names ("car door" is a kind of "door", so a user says "door";
+  // a "heating system" is not a kind of "system" in WordNet and keeps its name only).
+  const plain = new Map();
+  const plainOf = (offset, name) => {
+    const words = name.split(' ');
+    if (words.length < 2) return null;
+    const last = words[words.length - 1].toLowerCase();
+    const kinds = data.get(offset).pointers.filter(([sym, , pos]) => sym === '@' && pos === 'n').flatMap(([, o]) => data.get(o).words.map((w) => spelt(w).toLowerCase()));
+    return kinds.includes(last) ? last : null;
+  };
+  const plainWords = (parts, word) => [...new Set(parts.map((p) => plain.get(p)).filter((w) => w && w !== word && !parts.includes(w)))];
   const groups = [];
   const stats = { things: list.length, withOwn: 0, withAny: 0, own: 0, inherited: 0 };
   for (const e of [...list].sort((a, b) => byText(a.word, b.word))) {
@@ -40,7 +52,7 @@ export function importParts(dataText, list, notParts = '') {
     const own = partsOf(e.sense).filter((p) => p.toLowerCase() !== e.word);
     const seen = new Set(own);
     if (own.length) {
-      lines.push(wire(`k.parts.whole.${seg(e.word)}`, 'k.parts.whole', [['name', e.word], ['gloss', text(shortGloss(data.get(e.sense).gloss))], ...own.map((p) => ['has', p])], SOURCE));
+      lines.push(wire(`k.parts.whole.${seg(e.word)}`, 'k.parts.whole', [['name', e.word], ['gloss', text(shortGloss(data.get(e.sense).gloss))], ...own.map((p) => ['has', p]), ...plainWords(own, e.word).map((p) => ['plain', p])], SOURCE));
       stats.withOwn++; stats.own += own.length;
     }
     let cur = e.sense;
@@ -54,7 +66,7 @@ export function importParts(dataText, list, notParts = '') {
       const parts = partsOf(cur).filter((p) => !seen.has(p) && p.toLowerCase() !== e.word && !isRefused(e.word, kind, p));
       if (!parts.length) continue;
       for (const p of parts) seen.add(p);
-      lines.push(wire(`k.parts.inherited.${seg(e.word)}.${seg(kind)}`, 'k.parts.inherited', [['name', e.word], ['from', kind], ['steps', step], ...parts.map((p) => ['has', p])], SOURCE));
+      lines.push(wire(`k.parts.inherited.${seg(e.word)}.${seg(kind)}`, 'k.parts.inherited', [['name', e.word], ['from', kind], ['steps', step], ...parts.map((p) => ['has', p]), ...plainWords(parts, e.word).map((p) => ['plain', p])], SOURCE));
       stats.inherited += parts.length;
     }
     if (lines.length) { stats.withAny++; groups.push({ word: e.word, lines }); }
@@ -74,6 +86,9 @@ export function runParts() {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const { files, stats } = runParts();
-  writeShards(join(WORLDS_DIR, 'k.parts', 'shards'), files);
+  // One call per letter: only the shards of this import are replaced (usual.sop is written by tools/parts-core.mjs).
+  const dir = join(WORLDS_DIR, 'k.parts', 'shards');
+  for (const old of readdirSync(dir)) if (/^[a-z]\.sop$/.test(old)) rmSync(join(dir, old));
+  for (const [name, text] of Object.entries(files)) writeFileSync(join(dir, name), text);
   console.log(JSON.stringify(stats));
 }

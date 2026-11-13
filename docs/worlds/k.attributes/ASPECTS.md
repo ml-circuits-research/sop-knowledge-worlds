@@ -8,7 +8,7 @@ through a synonym or a stand-in has the value.
 
 | family | things | visual | spatial | relational | numeric | textual | geographic | temporal | social |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| common thing | 1500 | 1045 (70%) | 1018 (68%) | 1326 (88%) | 45 (3%) | 1188 (79%) | – | – | – |
+| common thing | 1500 | 1045 (70%) | 1018 (68%) | 1374 (92%) | 45 (3%) | 1188 (79%) | – | – | – |
 | animal | 314 | 293 (93%) | 313 (100%) | 314 (100%) | 284 (90%) | 205 (65%) | – | – | – |
 | food | 229 | 207 (90%) | 148 (65%) | 229 (100%) | – | 139 (61%) | – | – | – |
 | country | 238 | – | – | 238 (100%) | 237 (100%) | 238 (100%) | 238 (100%) | – | – |
@@ -27,7 +27,7 @@ through a synonym or a stand-in has the value.
 
 ## Where the values are
 
-- **common thing**: visual: `k.objects.object` (name), `k.objects.stand_in` (drawing), `k.attributes.thing` (colour, material), `k.objects.part` (colour), `k.attributes.drawn` (drawn_colour, drawn_shade); spatial: `k.scenes.thing` (place, size, on), `k.layouts.anchor` (kind); relational: `k.words.sense` (is_a, part_of, synonym), `k.attributes.thing` (kind, can, used_for), `k.layouts.joins` (rel), `k.objects.part` (name), `k.parts.whole` (has), `k.parts.inherited` (has); numeric: `k.attributes.thing` (wheels); textual: `k.words.sense` (gloss).
+- **common thing**: visual: `k.objects.object` (name), `k.objects.stand_in` (drawing), `k.attributes.thing` (colour, material), `k.objects.part` (colour), `k.attributes.drawn` (drawn_colour, drawn_shade); spatial: `k.scenes.thing` (place, size, on), `k.layouts.anchor` (kind); relational: `k.words.sense` (is_a, part_of, synonym), `k.attributes.thing` (kind, can, used_for), `k.layouts.joins` (rel), `k.objects.part` (name), `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has); numeric: `k.attributes.thing` (wheels); textual: `k.words.sense` (gloss).
 - **animal**: visual: `k.animals.animal` (drawing, covering), `k.attributes.thing` (colour); spatial: `k.animals.animal` (habitat), `k.scenes.thing` (place, size); relational: `k.animals.animal` (class, diet, eats, baby, can, cannot); numeric: `k.animals.animal` (legs); textual: `k.animals.animal` (sound), `k.words.sense` (gloss).
 - **food**: visual: `k.food.food` (colour, drawing); spatial: `k.scenes.thing` (place, size); relational: `k.food.food` (kind, botanically, grows_on, comes_from, eaten); textual: `k.words.sense` (gloss).
 - **country**: relational: `k.geo.country` (capital, continent, region, neighbour); numeric: `k.geo.country` (population, area); textual: `k.geo.country` (formal, code); geographic: `k.geo.country` (lat, lon, west, south, east, north).

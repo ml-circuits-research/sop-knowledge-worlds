@@ -27,6 +27,7 @@ export const ROWS = [
   ['colour the thing is drawn in', ['k.attributes.drawn', 'name', ['drawn_colour']]],
   ['colour of the parts of a drawing', ['k.objects.part', 'of', ['colour']]],
   ['parts (WordNet, own or inherited)', ['k.parts.whole', 'name', ['has']], ['k.parts.inherited', 'name', ['has']]],
+  ['parts (WordNet, or usual parts in plain words)', ['k.parts.whole', 'name', ['has']], ['k.parts.inherited', 'name', ['has']], ['k.parts.usual', 'name', ['has']]],
   ['parts (named parts of a drawing)', ['k.objects.part', 'of', ['name'], (w) => !/^part\d+$/.test(tok(w.attrs.name?.[0] ?? 'part0'))]],
   ['parts or joins between kinds', ['k.layouts.joins', 'b', ['a']]],
   ['anchor (where another thing sits)', ['k.layouts.anchor', 'of', ['kind']]],

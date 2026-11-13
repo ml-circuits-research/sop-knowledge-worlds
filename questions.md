@@ -325,3 +325,4 @@ rule follows without bringing in an elevator for a doghouse); 959 common things 
 audit): three to six everyday parts for each of the 1,500 things, in plain words (car: wheel, door, engine,
 window, seat), next to the WordNet facts; (c) only add plain-word synonyms for WordNet's part names as `core.word`.
 Blocking: no. Meanwhile: (a).
+Closed: answered "yes" in worker-tasks.md, block "2026-11-13 21:55": `plain` next to `has` (the last word of a part's name when WordNet says the part is a kind of it), and `k.parts.usual` (`named=model`) for 432 common things. Applied in the commit "Q30".

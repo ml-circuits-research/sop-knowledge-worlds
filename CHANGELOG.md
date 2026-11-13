@@ -69,3 +69,10 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 ### k.food 1, additions (2026-11-13, Round 9, not breaking)
 
 - `k.food.food`: `made_of` (many), `named`. New shard `dishes`.
+
+
+### k.parts 1, additions (2026-11-13, Round 10, not breaking)
+
+- `k.parts.whole.plain`, `k.parts.inherited.plain` (many): the plain word for a part with a name of several words.
+- New type `k.parts.usual` (name, `has` many, `named=model`; exported), shard `usual`: usual parts in plain words.
+
