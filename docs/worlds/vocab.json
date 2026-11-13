@@ -794,6 +794,9 @@
   "k.people/schema.sop",
   "k.words/shards/ag"
  ],
+ "age_years_about": [
+  "k.units/shards/measures"
+ ],
  "aged": [
   "k.words/shards/ag"
  ],
@@ -1298,6 +1301,9 @@
  "alpha": [
   "k.objects/shards/noto-animal-mammal-02",
   "k.words/shards/al"
+ ],
+ "alpha centauri": [
+  "k.space/shards/stars-and-galaxies"
  ],
  "alphabet": [
   "k.words/shards/al"
@@ -5938,6 +5944,9 @@
  "betel": [
   "k.parts/shards/b"
  ],
+ "betelgeuse": [
+  "k.space/shards/stars-and-galaxies"
+ ],
  "beth": [
   "k.words/shards/be"
  ],
@@ -6556,6 +6565,12 @@
  ],
  "black hills": [
   "k.geo/shards/north-america"
+ ],
+ "black hole": [
+  "k.space/shards/kinds"
+ ],
+ "black holes": [
+  "k.space/shards/kinds"
  ],
  "black mountain": [
   "k.geo/shards/north-america",
@@ -7270,6 +7285,7 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.objects/shards/vehicles",
+  "k.units/shards/measures",
   "k.wearables/shards/places",
   "k.words/shards/bo"
  ],
@@ -15280,7 +15296,11 @@
   "k.words/shards/co"
  ],
  "constellation": [
+  "k.space/shards/kinds",
   "k.words/shards/co"
+ ],
+ "constellations": [
+  "k.space/shards/kinds"
  ],
  "constitution": [
   "k.words/shards/co"
@@ -18131,12 +18151,16 @@
  ],
  "day": [
   "k.objects/shards/noto-sky-weather-02",
+  "k.space/schema.sop",
   "k.time/shards/calendar",
   "k.units/shards/core",
   "k.words/shards/da"
  ],
  "day care": [
   "k.scenes/shards/scenes-indoors"
+ ],
+ "day_hours_about": [
+  "k.units/shards/measures"
  ],
  "daybreak": [
   "k.words/shards/da"
@@ -19153,7 +19177,11 @@
   "k.words/shards/di"
  ],
  "diameter": [
+  "k.space/schema.sop",
   "k.words/shards/di"
+ ],
+ "diameter_about": [
+  "k.units/shards/measures"
  ],
  "diamond": [
   "k.objects/shards/mulberry-leisure-games-01",
@@ -19790,8 +19818,12 @@
   "k.words/shards/di"
  ],
  "distance": [
+  "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/di"
+ ],
+ "distance_about": [
+  "k.units/shards/measures"
  ],
  "distant": [
   "k.values/shards/scales"
@@ -23814,6 +23846,7 @@
  ],
  "far": [
   "k.layouts/shards/layouts",
+  "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/fa"
  ],
@@ -35958,6 +35991,9 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes"
  ],
+ "k.space": [
+  "k.units/shards/measures"
+ ],
  "k.space.body": [
   "k.attributes/shards/aspects"
  ],
@@ -40121,8 +40157,20 @@
  "light steel blue": [
   "k.values/shards/colours-css"
  ],
+ "light year": [
+  "k.units/shards/core"
+ ],
+ "light years": [
+  "k.units/shards/core"
+ ],
  "light yellow": [
   "k.values/shards/colours-css"
+ ],
+ "light-year": [
+  "k.units/shards/core"
+ ],
+ "light-years": [
+  "k.units/shards/core"
  ],
  "light1": [
   "k.objects/shards/noto-transport-air-02"
@@ -40153,6 +40201,9 @@
  ],
  "light_half": [
   "k.objects/shards/noto-sky-weather-01"
+ ],
+ "light_years_about": [
+  "k.units/shards/measures"
  ],
  "lightblue": [
   "k.values/shards/colours-css"
@@ -43853,11 +43904,15 @@
   "k.attributes/shards/things-nature",
   "k.objects/shards/openmoji-travel-places-01",
   "k.scenes/shards/things-m",
+  "k.space/shards/kinds",
   "k.words/shards/me"
  ],
  "meteorite": [
   "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/me"
+ ],
+ "meteors": [
+  "k.space/shards/kinds"
  ],
  "meter": [
   "k.units/shards/core",
@@ -45502,10 +45557,12 @@
   "k.commonsense/shards/core",
   "k.objects/shards/sky",
   "k.space/schema.sop",
-  "k.space/shards/kinds"
+  "k.space/shards/kinds",
+  "k.units/shards/measures"
  ],
  "moons_about": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.units/shards/measures"
  ],
  "moonshine": [
   "k.words/shards/mo"
@@ -49906,8 +49963,12 @@
   "k.space/schema.sop",
   "k.words/shards/or"
  ],
+ "orbit_days_about": [
+  "k.units/shards/measures"
+ ],
  "orbit_years": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.units/shards/measures"
  ],
  "orbiter": [
   "k.objects/shards/openmoji-travel-places-01"
@@ -49953,6 +50014,7 @@
   "k.attributes/shards/aspects",
   "k.objects/shards/noto-animal-mammal-02",
   "k.space/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/or"
  ],
  "ordering": [
@@ -64641,7 +64703,11 @@
  "shooting star": [
   "k.objects/shards/noto-sky-weather-03",
   "k.scenes/shards/scenes-other",
-  "k.scenes/shards/things-s"
+  "k.scenes/shards/things-s",
+  "k.space/shards/kinds"
+ ],
+ "shooting stars": [
+  "k.space/shards/kinds"
  ],
  "shootout": [
   "k.words/shards/sh"
@@ -65628,7 +65694,8 @@
   "k.actions/shards/actions-mind-talk"
  ],
  "size_rank": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.units/shards/measures"
  ],
  "skalistyy golets": [
   "k.geo/shards/asia"
@@ -67693,6 +67760,7 @@
  "spin": [
   "k.actions/shards/actions-move",
   "k.actions/shards/verbs-change",
+  "k.space/schema.sop",
   "k.words/shards/sp"
  ],
  "spinach": [
@@ -72084,6 +72152,9 @@
   "k.values/shards/scales",
   "k.words/shards/te"
  ],
+ "temperature_about": [
+  "k.units/shards/measures"
+ ],
  "tempi": [
   "k.words/shards/te"
  ],
@@ -75513,6 +75584,7 @@
   "k.actions/shards/actions-move",
   "k.actions/shards/verbs-change",
   "k.objects/shards/noto-transport-ground-06",
+  "k.space/schema.sop",
   "k.units/shards/core",
   "k.words/shards/tu"
  ],
@@ -76892,6 +76964,7 @@
   "k.words/shards/ve"
  ],
  "vega": [
+  "k.space/shards/stars-and-galaxies",
   "k.words/shards/ve"
  ],
  "vegan": [
@@ -79446,6 +79519,7 @@
  ],
  "why": [
   "k.feelings/schema.sop",
+  "k.space/schema.sop",
   "k.words/shards/wh"
  ],
  "wi": [
@@ -79458,6 +79532,7 @@
   "k.faces/shards/plain-head",
   "k.faces/shards/plain-mouth",
   "k.faces/shards/plain-nose",
+  "k.space/schema.sop",
   "k.values/shards/scales"
  ],
  "widen": [
@@ -79476,6 +79551,7 @@
   "k.words/shards/wi"
  ],
  "width": [
+  "k.space/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/wi"
  ],

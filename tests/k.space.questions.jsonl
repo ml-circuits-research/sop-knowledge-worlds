@@ -13,3 +13,10 @@
 {"id":"sp-13","ask":"what is a comet made of","query":{"type":"k.space.kind","where":{"name":"comet"},"seek":"made_of","mode":"list"},"expect":{"status":"supported","values":["ice","dust"]}}
 {"id":"sp-14","ask":"which drawing shows Saturn","query":{"type":"k.space.body","where":{"name":"Saturn"},"seek":"drawing"},"expect":{"status":"supported","value":"Saturn"}}
 {"id":"sp-15","ask":"an application's own star is accepted","tell":"@s1 k.space.body name=Vega kind=star","ns":"app","expect":{"issues":[]}}
+{"id":"sp-16","ask":"why is Mars red","query":{"type":"k.space.body","where":{"name":"Mars"},"seek":"colour_why"},"expect":{"status":"supported","value":"\"Its soil is full of iron that has rusted.\""}}
+{"id":"sp-17","ask":"how long is a day on Jupiter, in hours","query":{"type":"k.space.body","where":{"name":"Jupiter"},"seek":"day_hours_about"},"expect":{"status":"supported","value":"9.9"}}
+{"id":"sp-18","ask":"how wide is the Sun, in kilometres","query":{"type":"k.space.body","where":{"name":"Sun"},"seek":"diameter_about"},"expect":{"status":"supported","value":"1390000"}}
+{"id":"sp-19","ask":"how far is the Moon from the Earth","query":{"type":"k.space.body","where":{"name":"Moon"},"seek":"distance_about"},"expect":{"status":"supported","value":"384000"}}
+{"id":"sp-20","ask":"how far away is the nearest star","query":{"type":"k.space.body","where":{"name":"\"Proxima Centauri\""},"seek":"light_years_about"},"expect":{"status":"supported","value":"4.2"}}
+{"id":"sp-21","ask":"what is a black hole","query":{"type":"k.space.kind","where":{"name":"\"black hole\""},"seek":"about"},"expect":{"status":"supported","value":"\"A black hole is a place in space where gravity is so strong that not even light can get out.\""}}
+{"id":"sp-22","ask":"what colour is Venus","query":{"type":"k.space.body","where":{"name":"Venus"},"seek":"colour","mode":"list"},"expect":{"status":"supported","values":["yellow","white"]}}

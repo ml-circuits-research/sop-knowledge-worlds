@@ -21,6 +21,8 @@ export const MEASURES = {
     mountain: { elevation: { unit: 'metre' } },
   },
   'k.animals': { animal: { legs: { counts: 'leg' } } },
+  'k.space': { body: { order: { ordinal: true }, size_rank: { ordinal: true }, moons: { counts: 'moon' }, moons_about: { counts: 'moon' }, orbit_years: { unit: 'year' }, orbit_days_about: { unit: 'day' },
+    day_hours_about: { unit: 'hour' }, diameter_about: { unit: 'kilometre' }, distance_about: { unit: 'kilometre' }, temperature_about: { unit: 'degree Celsius' }, age_years_about: { unit: 'year' }, light_years_about: { unit: 'light year' } } },
 };
 
 // The numeric slots of a world: [type, key] in the order of the schema.

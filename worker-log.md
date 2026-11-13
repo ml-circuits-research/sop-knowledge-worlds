@@ -2112,3 +2112,38 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Numbers: k.geo 15 shards, 3,858 wires, 695,907 bytes (was 13 shards, 3,473 wires, 630,063 bytes); k.units 2
   shards. Catalog 22 worlds, 848 shards, vocab 21,881 words; 0 errors, 0 warnings.
 - After the rebase on R8.6 (the coverage report, second worker): `tools/coverage-report.mjs` run again; one line changes in `COVERAGE.md` (`k.units` now has a word for 2 of the common things). npm test 2,611 pass, 0 fail.
+
+## Round 9, item 4 (2026-11-13, first worker): `k.space`: colours and why, days and years, widths, distances, stars, kinds
+
+- **Planets:** every planet now has `colour` (Venus, Jupiter and Saturn had none) and `colour_why`, one plain
+  sentence ("Its soil is full of iron that has rusted."); `day_hours_about` (one turn, in Earth hours),
+  `orbit_days_about` for the four inner planets (the year in Earth years was there), `diameter_about` and
+  `distance_about` in kilometres. Moons, rings and order were there.
+- **Sun and Moon:** colour and why, width, the length of a turn; the Sun's surface temperature (5,500 degrees
+  Celsius) and age (4,600,000,000 years); the Moon's distance from the Earth (384,000 km) and its trip around
+  it (27 days). Six named moons have a width.
+- **Stars:** three more (Alpha Centauri, Vega, Betelgeuse); `light_years_about` for Proxima Centauri (4.2),
+  Alpha Centauri (4.4), Sirius (8.6), Vega (25) and the Andromeda Galaxy (2,500,000). No distance for Polaris and
+  Betelgeuse: books differ.
+- **Kinds:** `about`, one plain sentence saying what each kind is; three new kinds (constellation, meteor with
+  the word "shooting star", black hole).
+- **Units:** every number of `k.space` is in `k.units.measure` (12 slots: hour, day, year, kilometre, degree
+  Celsius, light year, counts of moons, two ordinals); new unit `"light year"`.
+- **The earlier page said "not here: distances, diameters"** because books give them differently. They are here
+  now as `_about` values of at most three digits, where books agree. All values are from memory (`named=model`,
+  now on every fact of the world), with no second source in reach; **I read the whole table once more after
+  writing it**, and a test checks the columns against each other: distances and years grow with the order;
+  years squared equal distances cubed (Kepler's third law) within 8% for all eight planets; the size rank is the
+  order of the widths; days and years of one orbit agree within 5%.
+- **Natural questions (item 8), space:** 27 things written down without looking at `k.space` (the planets, Pluto,
+  the Sun, the Moon, 6 stars, 10 kinds), 126 questions. The seeded sample of 100: **before 45, now 95**. All 126:
+  before 54, now 121. Without a fact: the distance of the North Star and of Betelgeuse; what a planet, a moon and
+  a black hole are made of.
+- `COVERAGE.md` and `ASPECTS.md` run again: one number changes in the first (`k.space` has a word for one more
+  common thing) and the row "body in space" in the second (28 bodies, more of them with a numeric aspect).
+- **Not looked at:** nothing is drawn here.
+- **Judgement that is mine:** the sentences; that a day is the turn around the axis (Mercury's sunrise to sunrise
+  is longer); the rounding.
+- Tests: `tests/k.space.test.mjs` (4), questions sp-16 to sp-22, un-14.
+- Numbers: k.space 3 shards, 57 wires, 11,544 bytes (was 48 wires, 6,783 bytes). Catalog 22 worlds, 848 shards,
+  vocab 21,900 words; 0 errors, 0 warnings. npm test 2,623 pass, 0 fail.

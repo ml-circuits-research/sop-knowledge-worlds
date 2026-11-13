@@ -41,4 +41,20 @@ export const DOMAINS = {
       continent: [['how large is {x}', one('k.geo.continent', 'area_about')], ['how many countries are in {x}', () => [{ type: 'k.geo.country', where: { continent: '{x}' }, mode: 'count' }]]],
     },
   },
+  // sources/hand-core/questions/space.tsv: the planets, the Sun, the Moon, well-known stars, the kinds of thing in space.
+  space: {
+    things: () => rows('sources/hand-core/questions/space.tsv'),
+    templates: {
+      planet: [['how many moons does {x} have', () => [{ type: 'k.space.body', where: { name: '{x}' }, seek: 'moons' }, { type: 'k.space.body', where: { name: '{x}' }, seek: 'moons_about' }]], ['does {x} have rings', one('k.space.body', 'rings')],
+        ['which planet from the Sun is {x}', one('k.space.body', 'order')], ['what colour is {x}', one('k.space.body', 'colour')], ['why does {x} have its colour', one('k.space.body', 'colour_why')],
+        ['how long is a day on {x}', one('k.space.body', 'day_hours_about')], ['how long is a year on {x}', one('k.space.body', 'orbit_years')], ['how wide is {x}', one('k.space.body', 'diameter_about')], ['how far is {x} from the Sun', one('k.space.body', 'distance_about')]],
+      dwarf: [['what kind of thing is {x}', one('k.space.body', 'kind')], ['how many moons does {x} have', one('k.space.body', 'moons')], ['how long is a year on {x}', one('k.space.body', 'orbit_years')], ['how wide is {x}', one('k.space.body', 'diameter_about')]],
+      sun: [['how wide is the {x}', one('k.space.body', 'diameter_about')], ['how hot is the {x}', one('k.space.body', 'temperature_about')], ['how old is the {x}', one('k.space.body', 'age_years_about')], ['what colour is the {x}', one('k.space.body', 'colour')],
+        ['what kind of thing is the {x}', one('k.space.body', 'kind')], ['why does the {x} have its colour', one('k.space.body', 'colour_why')]],
+      moon: [['how wide is the {x}', one('k.space.body', 'diameter_about')], ['how far is the {x} from the Earth', one('k.space.body', 'distance_about')], ['what does the {x} go around', one('k.space.body', 'orbits')],
+        ['how long does the {x} take to go around the Earth', one('k.space.body', 'orbit_days_about')], ['what colour is the {x}', one('k.space.body', 'colour')], ['why does the {x} shine', one('k.space.body', 'colour_why')]],
+      star: [['how far away is {x}', one('k.space.body', 'light_years_about')], ['what kind of thing is {x}', one('k.space.body', 'kind')], ['in which galaxy is {x}', one('k.space.body', 'in')]],
+      kind: [['what is a {x}', one('k.space.kind', 'about')], ['what is a {x} made of', one('k.space.kind', 'made_of')]],
+    },
+  },
 };

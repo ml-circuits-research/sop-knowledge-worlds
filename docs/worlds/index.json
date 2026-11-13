@@ -1,5 +1,5 @@
 {
- "version": "dc11c26c304f",
+ "version": "87d5d6cd294c",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -24765,13 +24765,16 @@
     {
      "id": "k.space/shards/kinds",
      "path": "k.space/shards/kinds.sop",
-     "wires": 16,
-     "bytes": 2133,
+     "wires": 22,
+     "bytes": 3905,
      "keys": [
       "asteroid",
+      "black hole",
       "comet",
+      "constellation",
       "dwarf planet",
       "galaxy",
+      "meteor",
       "moon",
       "planet",
       "solar system",
@@ -24787,7 +24790,7 @@
      "id": "k.space/shards/solar-system",
      "path": "k.space/shards/solar-system.sop",
      "wires": 24,
-     "bytes": 3575,
+     "bytes": 5885,
      "keys": [
       "callisto",
       "deimos",
@@ -24819,14 +24822,17 @@
     {
      "id": "k.space/shards/stars-and-galaxies",
      "path": "k.space/shards/stars-and-galaxies.sop",
-     "wires": 8,
-     "bytes": 1075,
+     "wires": 11,
+     "bytes": 1754,
      "keys": [
+      "alpha centauri",
       "andromeda galaxy",
+      "betelgeuse",
       "milky way",
       "polaris",
       "proxima centauri",
-      "sirius"
+      "sirius",
+      "vega"
      ],
      "sources": [
       "hand-core-1"
@@ -24927,8 +24933,8 @@
     {
      "id": "k.units/shards/core",
      "path": "k.units/shards/core.sop",
-     "wires": 98,
-     "bytes": 12803,
+     "wires": 100,
+     "bytes": 13101,
      "keys": [
       "acre",
       "angle",
@@ -24955,6 +24961,7 @@
       "kilometre per hour",
       "knot",
       "length",
+      "light year",
       "litre",
       "mass",
       "metre",
@@ -24993,32 +25000,46 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 50,
-     "bytes": 6572,
+     "wires": 62,
+     "bytes": 8398,
      "keys": [
+      "age_years_about",
       "animal",
       "area",
       "area_about",
+      "body",
       "city",
       "continent",
       "country",
+      "day_hours_about",
       "desert",
+      "diameter_about",
+      "distance_about",
       "east",
       "elevation",
       "k.animals",
       "k.geo",
+      "k.space",
       "lake",
       "lat",
       "legs",
       "length_about",
+      "light_years_about",
       "lon",
+      "moons",
+      "moons_about",
       "mountain",
       "north",
+      "orbit_days_about",
+      "orbit_years",
+      "order",
       "population",
       "range",
       "river",
       "sea",
+      "size_rank",
       "south",
+      "temperature_about",
       "west"
      ],
      "sources": [

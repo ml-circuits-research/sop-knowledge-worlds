@@ -23,7 +23,7 @@ through a synonym or a stand-in has the value.
 | weekday | 7 | – | – | – | – | – | – | 7 (100%) | – |
 | season | 4 | – | – | 4 (100%) | – | – | – | 4 (100%) | – |
 | duration | 13 | – | – | 12 (92%) | 12 (92%) | – | – | – | – |
-| body in space | 25 | 14 (56%) | 12 (48%) | 25 (100%) | 9 (36%) | – | – | 10 (40%) | – |
+| body in space | 28 | 16 (57%) | 15 (54%) | 28 (100%) | 9 (32%) | – | – | 10 (36%) | – |
 
 ## Where the values are
 

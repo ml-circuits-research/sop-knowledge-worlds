@@ -55,7 +55,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.people` | 1 (0%) |
 | `k.scenes` | 677 (45%) |
 | `k.shapes` | 8 (1%) |
-| `k.space` | 8 (1%) |
+| `k.space` | 9 (1%) |
 | `k.time` | 1 (0%) |
 | `k.units` | 2 (0%) |
 | `k.values` | 19 (1%) |

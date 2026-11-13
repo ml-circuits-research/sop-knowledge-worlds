@@ -48,3 +48,9 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 - `k.geo`: new types `lake`, `desert`, `sea`; `area_about` and `named` on `continent`; `length_about` and `named` on
   `river`; `capital` may now come from the `-borders` shard. New shards `seas` and `numbers`.
 - `k.units`: new type `measure` (the unit of a number of another world) and shard `measures`; new unit `year`.
+
+### k.space 1, additions (2026-11-13, Round 9, not breaking)
+
+- `k.space.body`: `colour_why`, `day_hours_about`, `orbit_days_about`, `diameter_about`, `distance_about`,
+  `temperature_about`, `age_years_about`, `light_years_about`, `named`. `k.space.kind`: `about`, `named`.
+  `k.units`: the unit `"light year"`.
