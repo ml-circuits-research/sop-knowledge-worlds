@@ -11,7 +11,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: Unicode-3.0 (Unicode License V3, permissive, with the copyright notice kept).
 - Attribution: Copyright © 1991-2025 Unicode, Inc. Unicode CLDR data, used under the Unicode License V3 (text: `docs/worlds/k.objects/LICENSE.cldr`).
 - Shard terms: Apache-2.0 AND Unicode-3.0
-- Used by: `k.objects` (124 shards)
+- Used by: `k.attributes` (1 shards), `k.objects` (124 shards)
 
 ## countries-5.1.0
 
@@ -101,7 +101,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.attributes` (7 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.geo` (1 shards), `k.layouts` (4 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (2 shards), `k.values` (7 shards), `k.wearables` (2 shards)
+- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.attributes` (8 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.geo` (1 shards), `k.layouts` (4 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (2 shards), `k.values` (7 shards), `k.wearables` (2 shards)
 
 ## mulberry-fa94a93
 
@@ -110,7 +110,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC-BY-SA-4.0 (`LICENSE.txt`: "licensed under the Creative Commons Attribution-Share Alike License", https://creativecommons.org/licenses/by-sa/4.0/).
 - Attribution: Mulberry Symbols, Copyright 2018-2026 Steve Lee, https://mulberrysymbols.org , CC BY-SA 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: CC-BY-SA-4.0
-- Used by: `k.objects` (149 shards)
+- Used by: `k.attributes` (1 shards), `k.objects` (149 shards)
 
 ## natural-earth-5.1.2
 
@@ -128,7 +128,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: Apache-2.0 (`2D/svg/LICENSE` in the repository: "Copyright 2013 Google, Inc. All Rights Reserved. Licensed under the Apache License, Version 2.0"; the fonts are OFL-1.1 and the flag images public domain; neither is used).
 - Attribution: Noto Emoji, Copyright 2013 Google, Inc., licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0 ; the notice is `docs/worlds/k.objects/LICENSE.noto-emoji`). The drawings were changed: converted to simplified polygons and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: Apache-2.0 AND Unicode-3.0
-- Used by: `k.objects` (124 shards)
+- Used by: `k.attributes` (1 shards), `k.objects` (124 shards)
 
 ## openmoji-3e01de5
 
@@ -137,7 +137,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC-BY-SA-4.0 (`LICENSE.txt` of the repository).
 - Attribution: All emojis designed by OpenMoji – the open-source emoji and icon project (https://openmoji.org). License: CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ . The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: CC-BY-SA-4.0
-- Used by: `k.objects` (18 shards)
+- Used by: `k.attributes` (1 shards), `k.objects` (18 shards)
 
 ## wordnet-3.1
 

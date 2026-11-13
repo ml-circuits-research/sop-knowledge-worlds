@@ -23,6 +23,7 @@
 @k.attributes.found.colour.k_attributes_thing.colour k.attributes.found attribute=colour world=k.attributes type=k.attributes.thing key=colour covers="common things" core.source="hand-core 1"
 @k.attributes.found.colour.k_food_food.colour k.attributes.found attribute=colour world=k.food type=k.food.food key=colour covers="foods" core.source="hand-core 1"
 @k.attributes.found.colour.k_objects_part.colour k.attributes.found attribute=colour world=k.objects type=k.objects.part key=colour covers="each part of a drawing" core.source="hand-core 1"
+@k.attributes.found.colour.k_attributes_drawn.drawn_colour k.attributes.found attribute=colour world=k.attributes type=k.attributes.drawn key=drawn_colour covers="drawable things: the main colours of the drawing" core.source="hand-core 1"
 @k.attributes.found.material.k_attributes_thing.material k.attributes.found attribute=material world=k.attributes type=k.attributes.thing key=material covers="common things" core.source="hand-core 1"
 @k.attributes.found.material.k_commonsense_thing.made_of k.attributes.found attribute=material world=k.commonsense type=k.commonsense.thing key=made_of covers="a few common things" core.source="hand-core 1"
 @k.attributes.found.size.k_scenes_thing.size k.attributes.found attribute=size world=k.scenes type=k.scenes.thing key=size covers="drawable things" core.source="hand-core 1"

@@ -36,6 +36,8 @@
 @k.attributes.shows.common_thing.visual.k_attributes_thing.colour k.attributes.shows family="common thing" aspect=visual world=k.attributes type=k.attributes.thing key=colour by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.visual.k_attributes_thing.material k.attributes.shows family="common thing" aspect=visual world=k.attributes type=k.attributes.thing key=material by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.visual.k_objects_part.colour k.attributes.shows family="common thing" aspect=visual world=k.objects type=k.objects.part key=colour by=of core.source="hand-core 1"
+@k.attributes.shows.common_thing.visual.k_attributes_drawn.drawn_colour k.attributes.shows family="common thing" aspect=visual world=k.attributes type=k.attributes.drawn key=drawn_colour by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.visual.k_attributes_drawn.drawn_shade k.attributes.shows family="common thing" aspect=visual world=k.attributes type=k.attributes.drawn key=drawn_shade by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.spatial.k_scenes_thing.place k.attributes.shows family="common thing" aspect=spatial world=k.scenes type=k.scenes.thing key=place by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.spatial.k_scenes_thing.size k.attributes.shows family="common thing" aspect=spatial world=k.scenes type=k.scenes.thing key=size by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.spatial.k_scenes_thing.on k.attributes.shows family="common thing" aspect=spatial world=k.scenes type=k.scenes.thing key=on by=name core.source="hand-core 1"

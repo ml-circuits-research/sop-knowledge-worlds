@@ -22,7 +22,9 @@ const SOME_KINDS = new Set(['wheels', 'legs', 'where it is worn']);
 export const ROWS = [
   ['place', ['k.scenes.thing', 'name', ['place']]],
   ['size', ['k.scenes.thing', 'name', ['size']]],
-  ['colour (usual colour of the thing)', ['k.attributes.thing', 'name', ['colour']], ['k.food.food', 'name', ['colour']]],
+  ['colour (usual colour of the thing)', ['k.attributes.thing', 'name', ['colour'], (w) => !(w.attrs.colour ?? []).includes('any')], ['k.food.food', 'name', ['colour']]],
+  ['colour (the usual one, or said to be any colour)', ['k.attributes.thing', 'name', ['colour']], ['k.food.food', 'name', ['colour']]],
+  ['colour the thing is drawn in', ['k.attributes.drawn', 'name', ['drawn_colour']]],
   ['colour of the parts of a drawing', ['k.objects.part', 'of', ['colour']]],
   ['parts (WordNet, own or inherited)', ['k.parts.whole', 'name', ['has']], ['k.parts.inherited', 'name', ['has']]],
   ['parts (named parts of a drawing)', ['k.objects.part', 'of', ['name'], (w) => !/^part\d+$/.test(tok(w.attrs.name?.[0] ?? 'part0'))]],

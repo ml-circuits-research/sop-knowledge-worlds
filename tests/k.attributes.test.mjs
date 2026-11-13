@@ -46,7 +46,7 @@ test('the facts asked for; the audit names rows of the table', () => {
   assert.deepEqual(by.get('car').attrs.wheels, ['4']);
   assert.deepEqual(by.get('bicycle').attrs.wheels, ['2']);
   assert.ok(by.get('plane').attrs.can.includes('fly'));
-  assert.ok(!by.get('car').attrs.colour, 'a car has no usual colour');
+  assert.deepEqual(by.get('car').attrs.colour, ['any'], 'a car has no usual colour: it comes in any');
   const audit = readFileSync(join(REPO, 'sources/hand-core/attributes-audit.tsv'), 'utf8').split('\n').filter(Boolean).slice(1).map((l) => l.split('\t'));
   assert.equal(audit.length, 90);
   assert.equal(audit.filter((r) => r[1] === 'wrong').length, 0);
@@ -86,4 +86,31 @@ test('ASPECTS.md has a row for every family and a column for every aspect (the c
   const page = readFileSync(join(WORLDS_DIR, 'k.attributes', 'ASPECTS.md'), 'utf8');
   for (const [family] of FAMILIES) assert.ok(page.includes(`| ${family} | `), family);
   assert.ok(page.includes(`| family | things | ${ASPECTS.map((a) => a[0]).join(' | ')} |`));
+});
+
+// Q29 (reviewer, 2026-11-13 21:55): the usual colour, "any colour" and the colour of the drawing are separate facts.
+import { drawnShards } from '../tools/drawn-colour.mjs';
+
+test('Q29: `any` never stands next to a colour; the drawn colours are what tools/drawn-colour.mjs computes, for every drawing with a filled part', () => {
+  const any = things.filter((t) => (t.attrs.colour ?? []).includes('any'));
+  assert.ok(any.length >= 100);
+  for (const t of any) assert.deepEqual(t.attrs.colour, ['any'], t.id);
+  for (const n of ['car', 'ball', 'shirt']) assert.deepEqual(things.find((t) => one(t, 'name') === n).attrs.colour, ['any'], n);
+  const { files, rows } = drawnShards();
+  for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(WORLDS_DIR, 'k.attributes', 'shards', name), 'utf8'), text, name);
+  const drawn = world.ofType('k.attributes.drawn');
+  assert.equal(drawn.length, rows.length);
+  const objects = new Set(fullWorld('k.objects', worlds).ofType('k.objects.object').map((o) => one(o, 'name')));
+  assert.ok(objects.size - drawn.length <= 5, 'only drawings made of lines have no drawn colour');
+  const shades = new Set(fullWorld('k.values', worlds).ofType('k.values.colour').map((c) => one(c, 'name')));
+  for (const d of drawn) {
+    assert.ok(objects.has(one(d, 'name')), d.id);
+    assert.ok(d.attrs.drawn_colour.length >= 1 && d.attrs.drawn_colour.length <= 3, d.id);
+    for (const s of d.attrs.drawn_shade) assert.ok(shades.has(tok(s)), `${d.id}: ${s}`);
+    assert.ok(!d.attrs.named, d.id);
+  }
+  const by = new Map(drawn.map((d) => [one(d, 'name'), d.attrs.drawn_colour]));
+  assert.deepEqual(by.get('sun'), ['yellow']);
+  assert.deepEqual(by.get('elephant'), ['grey']);
+  assert.deepEqual(by.get('tree'), ['green']);
 });

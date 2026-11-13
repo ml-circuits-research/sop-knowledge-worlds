@@ -18,7 +18,15 @@ are found in the worlds, and the usual values of common things that no other wor
   basic colours, many: a zebra is black and white), `material` (423), `wheels` (47; 0 for a boat or a sledge),
   `can` (242: fly, swim, float, roll, move, grow, burn, melt, shine, ring …), `used_for` (459). Every fact is
   `named=model`: the values were given by a language model from the name of the thing, each only where it is
-  plain. **A missing key says nothing**: a car, a shirt or a book has no usual colour, so none is given.
+  plain. **A missing key says nothing.** `colour=any` (116 things: a car, a ball, a shirt, a book) says that the
+  thing comes in any colour and has no usual one; it never stands next to a colour.
+- `k.attributes.drawn` (identity `name`): for 2,103 drawable things of `k.objects` the main colours of the drawing,
+  the largest first, at most three: `drawn_colour` (one of the eleven basic colours) and `drawn_shade` (the nearest
+  colour name of `k.values.colour`: silver, mustard, light sky blue). Computed by `tools/drawn-colour.mjs` from the
+  parts as they are drawn (a grid of 60 × 60 places, the topmost filled part at each; a colour is kept from a fifth
+  of the filled places). It says how the thing is drawn, not its usual colour: the two facts are never mixed. A
+  host that needs a colour takes `k.attributes.thing.colour`, then `drawn_colour`. Five drawings made of lines only
+  (water, conical flask, tripod, backstop, goal) have none.
 
 ## Aspects
 
@@ -39,6 +47,8 @@ are found in the worlds, and the usual values of common things that no other wor
 `attributes` (67 wires), `aspects` (153 wires), `things-living` (animals and creatures), `things-nature` (plants, land, sky, materials,
 places, food and drink), `things-big` (vehicles, machines, buildings), `things-worn` (clothing, jewellery),
 `things-objects` (the rest). Written by `tools/attributes-core.mjs` from `sources/hand-core/attributes.tsv`.
+`drawn-hand`, `drawn-mulberry`, `drawn-noto`, `drawn-openmoji` (one per source of drawings, with the licence of
+that source), written by `tools/drawn-colour.mjs`.
 
 ## Audit
 
@@ -48,7 +58,9 @@ a temple, the kind of a roller skate, one empty row). Record: `sources/hand-core
 ## What it does not know
 
 - The usual colour of most things: 256 things here and the 154 foods of `k.food`, not the 2,000 asked for. Colours
-  that depend on the country or the make were left out (a postbox, a taxi, a barn, a pencil).
+  that depend on the country or the make were left out (a postbox, a taxi, a barn).
+- The drawn colour is only as good as the colour names: a pale cream or a skin tone has no basic colour of its own
+  and is given as yellow or brown (the shade says cream, apricot, blanched almond); an outline is not counted.
 - Legs, food and habitat of animals are only in `k.animals` (156 animals); nothing was taken from WordNet glosses
   or ConceptNet (ConceptNet is not reachable from the build network).
 

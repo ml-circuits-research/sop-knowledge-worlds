@@ -20,6 +20,8 @@ the place of the dog).
 | place | 637 (42%) | 350 (23%) | 513 (34%) | `k.scenes.thing` (place) |
 | size | 650 (43%) | 365 (24%) | 485 (32%) | `k.scenes.thing` (size) |
 | colour (usual colour of the thing) | 203 (14%) | 46 (3%) | 1251 (83%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (the usual one, or said to be any colour) | 290 (19%) | 89 (6%) | 1121 (75%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour the thing is drawn in | 653 (44%) | 369 (25%) | 478 (32%) | `k.attributes.drawn` (drawn_colour) |
 | colour of the parts of a drawing | 654 (44%) | 369 (25%) | 477 (32%) | `k.objects.part` (colour) |
 | parts (WordNet, own or inherited) | 541 (36%) | 57 (4%) | 902 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
 | parts (named parts of a drawing) | 545 (36%) | 312 (21%) | 643 (43%) | `k.objects.part` (name) |
@@ -42,7 +44,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 24 (2%) |
 | `k.animals` | 163 (11%) |
-| `k.attributes` | 542 (36%) |
+| `k.attributes` | 744 (50%) |
 | `k.body` | 1 (0%) |
 | `k.colours` | 8 (1%) |
 | `k.commonsense` | 17 (1%) |
@@ -72,6 +74,8 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **place**: gun, engine, bullet, sword, rope, wing, pipe, motor, tube, mall, needle, root, lance, jewelry, shield, coffin, aircraft, vault, barrel, rod, pistol, reed, shotgun, dock, runway, cape, balcony, marina, sketch, clip
 - **size**: wing, grass, mall, needle, root, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel
 - **colour (usual colour of the thing)**: house, world, car, door, phone, person, gun, bed, dog, hospital, picture, building, ship, hotel, bag, station, horse, ball, key, boat, fish, star, prison, stick, bank, camera, window, wall, store, jail
+- **colour (the usual one, or said to be any colour)**: house, world, phone, person, gun, bed, dog, hospital, picture, building, ship, hotel, station, horse, key, fish, star, prison, stick, bank, camera, window, wall, store, jail, cat, shop, wine, island, plane
+- **colour the thing is drawn in**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail
 - **colour of the parts of a drawing**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail
 - **parts (WordNet, own or inherited)**: honey, street, coffee, picture, bag, station, rock, ball, star, stick, bank, tea, jail, wine, island, beer, moon, suit, hole, stone, pants, beach, cup, tape, milk, cake, meat, photo, bullet, pool
 - **parts (named parts of a drawing)**: honey, hotel, rock, window, engine, photo, coat, pocket, toilet, bath, chocolate, piano, candy, wheel, wire, belt, dish, sandwich, butter, grass, beef, chip, bug, photograph, necklace, motor, steak, brick, mall, weed

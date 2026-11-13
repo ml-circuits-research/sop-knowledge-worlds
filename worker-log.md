@@ -2147,3 +2147,41 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.space.test.mjs` (4), questions sp-16 to sp-22, un-14.
 - Numbers: k.space 3 shards, 57 wires, 11,544 bytes (was 48 wires, 6,783 bytes). Catalog 22 worlds, 848 shards,
   vocab 21,900 words; 0 errors, 0 warnings. npm test 2,623 pass, 0 fail.
+
+## Round 10, item 1a (2026-11-13, second worker): Q29 applied: usual colour, any colour, drawn colour
+
+- **Three facts, never mixed.** (1) `k.attributes.thing.colour` stays as it was: 256 things, only where plain.
+  (2) `colour=any` on **116** things of the table that come in any colour (car, ball, shirt, bag, hat, cup, pen,
+  shoe, towel, balloon, umbrella, book, door, suitcase, flower, gem, sofa …): model-labelled, chosen by reading
+  the 505 rows without a colour and keeping those I am sure of; `any` is a new value of the enum and never stands
+  next to a colour (test). (3) New type **`k.attributes.drawn`**: `drawn_colour` (the eleven basic colours) and
+  `drawn_shade` (the nearest of the 170 colour names of `k.values.colour`) for **2,103 of the 2,108** drawings of
+  `k.objects`, the largest first, at most three (one colour 1,151 things, two 830, three 122). Not model-labelled:
+  computed by the new `tools/drawn-colour.mjs`; the source of each fact is the source of its drawing, and the four
+  shards (`drawn-hand` 225 wires, `drawn-mulberry` 953, `drawn-noto` 811, `drawn-openmoji` 114; 354,567 bytes
+  together) carry the licence of that source.
+- **How it is computed:** the drawing is sampled on 60 × 60 places; the topmost filled part at each place gives its
+  exact colour (`rgb`; for a hand-written part the value of its first colour name); lines and arcs do not count. The
+  value is mapped to the nearest `k.values` colour (CIE Lab): that name is the shade, its `basic` the basic colour
+  (for the 62 names without one, the basic of the nearest name that has one). A colour is kept from a fifth of the
+  filled places. Five drawings have only lines (water, conical flask, tripod, backstop, goal) and get no fact.
+- **Looked at:** two contact sheets, 80 drawings of a seeded sample of 120, each with its computed colours and
+  shades under it. About 73 of 80 read right (ship red and white, wheel grey, tangerine orange, crocodile green,
+  poodle grey). The weak ones are all of one kind: a pale cream or skin tone has no basic colour and comes out as
+  yellow (mains socket, sandpaper, the face under a swimming cap, a hand on a touch screen) or brown (the pig,
+  shade apricot); an orange-brown is brown (cricket bat). The first version, which used the colour name already on
+  the part, was worse (elephant white, frog yellow, pig white) and was replaced before publishing.
+  **Not looked at:** the third sheet (40 drawings) and the other 1,983; the 116 `any` rows were not read a second time.
+- `k.attributes.found`: colour is now also found in `k.attributes.drawn` (27 facts); `k.attributes.shows`: 2 rows
+  more (common thing, visual). `tools/attributes-core.mjs` now replaces only its own shards.
+- **COVERAGE.md** (regenerated, two new rows): usual colour 203 + 46 as before; usual or any colour 290 by name +
+  89 through the drawing (none 1,121, was 1,251); drawn colour 653 + 369 (none 478). ASPECTS.md regenerated (no
+  count changes: the visual aspect already counted the part colours).
+- **Judgement that is mine:** which things are `any`; the threshold of a fifth and the limit of three; that an
+  outline does not count.
+- **What SOP Lang could not say:** that `any` excludes the other values of the same key (a test).
+- Tests: `tests/k.attributes.test.mjs` (1 more: `any` alone, the shards equal the tool's output, every shade is a
+  `k.values` colour), questions at-16 to at-18.
+- Numbers: k.attributes 11 shards (were 7), 3,091 wires. Catalog 22 worlds, 849 shards, vocab 21,598 words; 0 errors, 0 warnings.
+- After the rebase on R9.3 (k.geo places): catalog 22 worlds, 852 shards, vocab 21,886 words; npm test 2,610 pass, 5 skipped, 0 fail.
+

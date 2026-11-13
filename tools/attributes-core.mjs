@@ -32,7 +32,7 @@ export const ATTRIBUTES = [
 ];
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
-  ['colour', 'k.attributes', 'k.attributes.thing', 'colour', 'common things'], ['colour', 'k.food', 'k.food.food', 'colour', 'foods'], ['colour', 'k.objects', 'k.objects.part', 'colour', 'each part of a drawing'],
+  ['colour', 'k.attributes', 'k.attributes.thing', 'colour', 'common things'], ['colour', 'k.food', 'k.food.food', 'colour', 'foods'], ['colour', 'k.objects', 'k.objects.part', 'colour', 'each part of a drawing'], ['colour', 'k.attributes', 'k.attributes.drawn', 'drawn_colour', 'drawable things: the main colours of the drawing'],
   ['material', 'k.attributes', 'k.attributes.thing', 'material', 'common things'], ['material', 'k.commonsense', 'k.commonsense.thing', 'made_of', 'a few common things'],
   ['size', 'k.scenes', 'k.scenes.thing', 'size', 'drawable things'], ['size', 'k.commonsense', 'k.commonsense.thing', 'size', 'a few common things'],
   ['place', 'k.scenes', 'k.scenes.thing', 'place', 'drawable things'], ['place', 'k.commonsense', 'k.commonsense.thing', 'at', 'a few common things'],
@@ -91,6 +91,7 @@ common thing | visual | k.objects.object | name | name
 common thing | visual | k.objects.stand_in | name | drawing
 common thing | visual | k.attributes.thing | name | colour, material
 common thing | visual | k.objects.part | of | colour
+common thing | visual | k.attributes.drawn | name | drawn_colour, drawn_shade
 common thing | spatial | k.scenes.thing | name | place, size, on
 common thing | spatial | k.layouts.anchor | of | kind
 common thing | relational | k.words.sense | word | is_a, part_of, synonym
@@ -188,6 +189,10 @@ export function attributeShards() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  writeShards(join(WORLDS_DIR, 'k.attributes', 'shards'), attributeShards());
+  // Only the shards of this tool are replaced (drawn-*.sop are written by tools/drawn-colour.mjs, numbers-*.sop and
+  // usage-*.sop by the tools named in their headers).
+  const files = attributeShards();
+  const mine = (prefix) => Object.fromEntries(Object.entries(files).filter(([name]) => name.startsWith(prefix)));
+  for (const prefix of ['attributes.', 'aspects.', 'things-']) writeShards(join(WORLDS_DIR, 'k.attributes', 'shards'), mine(prefix), prefix);
   console.log(`${readThings().length} things`);
 }

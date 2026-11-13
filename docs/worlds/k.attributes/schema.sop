@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=1 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -30,20 +30,32 @@
 @k.attributes.kind.name core.slot of=k.attributes.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.kind.attribute core.slot of=k.attributes.kind key=attribute many=true required=true kind=atom core.source="hand-core 1"
 
-# The usual values of a common thing, each only where it is plain: a missing key says nothing (a car has no usual
-# colour). `kind` names a k.attributes.kind; `colour` (many) is one of the eleven basic colours (the names of
-# k.objects.part.colour and of k.values.colour.basic); `material` (many) what it is usually made of; `wheels` how
+# The usual values of a common thing, each only where it is plain: a missing key says nothing. `kind` names a
+# k.attributes.kind; `colour` (many) is one of the eleven basic colours (the names of k.objects.part.colour and of
+# k.values.colour.basic), or the one value `any`: the thing comes in any colour and has no usual one (a car, a
+# ball, a shirt); `any` never stands next to a colour. How a thing is drawn is another fact: k.attributes.drawn.
+# A host that needs a colour takes the usual one, then the drawn one. `material` (many) what it is usually made of; `wheels` how
 # many wheels it usually has (0: it is a vehicle without wheels); `can` (many) what it can do; `used_for` (many)
 # what people use it for. `named=model`: the values were given by a language model from the name of the thing.
 @k.attributes.thing core.type of=k.attributes.thing shared=true closed=true core.source="hand-core 1"
 @k.attributes.thing.name core.slot of=k.attributes.thing key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.thing.kind core.slot of=k.attributes.thing key=kind kind=atom kind=string core.source="hand-core 1"
-@k.attributes.thing.colour core.slot of=k.attributes.thing key=colour many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
+@k.attributes.thing.colour core.slot of=k.attributes.thing key=colour many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown enum=any core.source="hand-core 1"
 @k.attributes.thing.material core.slot of=k.attributes.thing key=material many=true kind=atom core.source="hand-core 1"
 @k.attributes.thing.wheels core.slot of=k.attributes.thing key=wheels kind=integer min=0 core.source="hand-core 1"
 @k.attributes.thing.can core.slot of=k.attributes.thing key=can many=true kind=atom core.source="hand-core 1"
 @k.attributes.thing.used_for core.slot of=k.attributes.thing key=used_for many=true kind=string core.source="hand-core 1"
 @k.attributes.thing.named core.slot of=k.attributes.thing key=named enum=model core.source="hand-core 1"
+
+# The colours a drawable thing is drawn in: computed from the drawing of k.objects that has the name `name`
+# (tools/drawn-colour.mjs), the largest first, at most three. `drawn_colour` (many) is one of the eleven basic
+# colours; `drawn_shade` (many) is the nearest colour name of k.values.colour to each main fill colour. This says
+# how the thing is drawn, never what colour it usually is (a car that happens to be drawn red): the usual colour
+# is k.attributes.thing.colour, and the two are never mixed. The source of the fact is the source of the drawing.
+@k.attributes.drawn core.type of=k.attributes.drawn shared=true closed=true core.source="hand-core 1"
+@k.attributes.drawn.name core.slot of=k.attributes.drawn key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
+@k.attributes.drawn.drawn_shade core.slot of=k.attributes.drawn key=drawn_shade many=true kind=atom kind=string core.source="hand-core 1"
 
 # An aspect: a side of a thing that one kind of view can show. `shown_in` (many) names the views that show it
 # (picture, diagram, chart, map, document, card), where that is plain.
@@ -76,6 +88,7 @@
 @k.attributes.word.aspect core.word text=aspect text=aspects text=view text=views means=k.attributes.aspect core.source="hand-core 1"
 @k.attributes.word.attribute core.word text=attribute text=attributes text=property text=properties text=feature text=features means=k.attributes.attribute core.source="hand-core 1"
 @k.attributes.word.colour core.word text=colour text=color text=coloured text=colored means=k.attributes.thing.colour core.source="hand-core 1"
+@k.attributes.word.drawn_colour core.word text=drawn text="drawn colour" text="colour of the drawing" means=k.attributes.drawn.drawn_colour core.source="hand-core 1"
 @k.attributes.word.material core.word text=material text=made text="made of" text="made from" means=k.attributes.thing.material core.source="hand-core 1"
 @k.attributes.word.wheels core.word text=wheel text=wheels means=k.attributes.thing.wheels core.source="hand-core 1"
 @k.attributes.word.can core.word text=can text=able means=k.attributes.thing.can core.source="hand-core 1"

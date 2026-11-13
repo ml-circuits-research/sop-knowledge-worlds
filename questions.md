@@ -313,6 +313,7 @@ things of the gap list that have one in a later pass; (b) take the main colour o
 marked as coming from the drawing (wrong for a car that happens to be drawn red); (c) also say "any colour" as a
 fact for things that have no usual one (car, shirt, book), so that a missing value means "not looked at".
 Blocking: no. Meanwhile: (a).
+Closed: answered "two facts, never mixed" in worker-tasks.md, block "2026-11-13 21:55": `colour` stays only where plain; `k.attributes.drawn` holds `drawn_colour` computed from the drawing for 2,103 drawable things; `colour=any` on 116 things that come in any colour. Applied in the commit "Q29".
 
 ## Q30 (Round 8 item 5, second worker, 2026-11-13)
 Question: `k.parts` holds WordNet's parts under WordNet's names and only for 541 of the 1,500 common things. Should

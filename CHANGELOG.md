@@ -54,3 +54,10 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
 - `k.space.body`: `colour_why`, `day_hours_about`, `orbit_days_about`, `diameter_about`, `distance_about`,
   `temperature_about`, `age_years_about`, `light_years_about`, `named`. `k.space.kind`: `about`, `named`.
   `k.units`: the unit `"light year"`.
+
+### k.attributes 1, additions (2026-11-13, Round 10, not breaking)
+
+- `k.attributes.thing.colour` also takes `any`: the thing comes in any colour and has no usual one (116 things).
+  `any` never stands next to a colour. A host that reads `colour` as a colour name must expect it.
+- New type `k.attributes.drawn` (name, `drawn_colour` many, `drawn_shade` many; exported): the main colours of the
+  drawing of a thing, computed by `tools/drawn-colour.mjs`; four shards `drawn-*`, one per source of drawings.

@@ -10,7 +10,7 @@ export const COLOURS = {
   brown: [140, 85, 45],
 };
 
-const lab = ([r, g, b]) => {
+export const lab = ([r, g, b]) => {
   const f = (v) => { const c = v / 255; return c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
   const [R, G, B] = [f(r), f(g), f(b)];
   const x = (0.4124 * R + 0.3576 * G + 0.1805 * B) / 0.95047, y = 0.2126 * R + 0.7152 * G + 0.0722 * B, z = (0.0193 * R + 0.1192 * G + 0.9505 * B) / 1.08883;

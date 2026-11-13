@@ -1,7 +1,7 @@
 name	kind	colour	material	wheels	can	used_for
 house	building		brick, wood, stone			living
-car	vehicle		metal	4	move	travelling
-door	part		wood		open	going in and out
+car	vehicle	any	metal	4	move	travelling
+door	part	any	wood		open	going in and out
 phone	device		plastic, metal		ring	talking
 honey	food	yellow				eating
 gun	weapon		metal		shoot	shooting
@@ -15,13 +15,13 @@ road	place	grey				driving
 picture			paper			looking at
 ship	vehicle		metal	0	float, move	travelling
 hotel	building					staying overnight
-bag	container		cloth, leather, plastic			carrying
+bag	container	any	cloth, leather, plastic			carrying
 rock	natural thing	grey	rock			
 sun	sky	yellow	gas		shine	
 box	container	brown	cardboard			storing
-ball	toy		rubber		roll, bounce	playing
+ball	toy	any	rubber		roll, bounce	playing
 key	tool		metal			locking
-boat	vehicle		wood	0	float, move	travelling
+boat	vehicle	any	wood	0	float, move	travelling
 star	sky		gas		shine	
 prison	building					
 stick	natural thing		wood			
@@ -39,8 +39,8 @@ airplane	vehicle		metal		fly, move	travelling
 aeroplane	vehicle		metal		fly, move	travelling
 aircraft	vehicle		metal		fly, move	travelling
 tree	plant	green, brown	wood		grow	shade
-truck	vehicle		metal		move	carrying loads
-lorry	vehicle		metal		move	carrying loads
+truck	vehicle	any	metal		move	carrying loads
+lorry	vehicle	any	metal		move	carrying loads
 beer	drink					drinking
 computer	device		plastic, metal			working
 planet	sky		rock			
@@ -52,14 +52,14 @@ engine	part		metal
 bomb	weapon				explode	
 bottle	container		glass, plastic			holding drinks
 stone	natural thing	grey	rock			
-pants	clothing		cloth			wearing
-trousers	clothing		cloth			wearing
+pants	clothing	any	cloth			wearing
+trousers	clothing	any	cloth			wearing
 beach	place	yellow	sand			
 knife	tool	grey	metal		cut	cutting
 rose	plant	red			grow	
-hat	clothing		cloth			wearing
+hat	clothing	any	cloth			wearing
 restaurant	building					eating
-cup	tableware		china			drinking
+cup	tableware	any	china			drinking
 tape			plastic			sticking
 milk	drink	white				drinking
 photo			paper			looking at
@@ -67,7 +67,7 @@ photograph			paper			looking at
 bridge	building		stone, metal			crossing
 chair	furniture		wood			sitting
 mountain	landform	grey	rock			
-shirt	clothing		cloth			wearing
+shirt	clothing	any	cloth			wearing
 bullet	weapon		metal			
 sword	weapon	grey	metal		cut	fighting
 shower	appliance					washing
@@ -78,13 +78,13 @@ path	place					walking
 roof	part					
 sugar	food	white				sweetening
 gate	part		wood, metal		open	
-coat	clothing		cloth			keeping warm
+coat	clothing	any	cloth			keeping warm
 castle	building		stone			
 hill	landform	green				
 painting						looking at
 pocket	part		cloth			carrying
-bike	vehicle		metal	2	move	riding
-bicycle	vehicle		metal	2	move	riding
+bike	vehicle	any	metal	2	move	riding
+bicycle	vehicle	any	metal	2	move	riding
 clock	device				tick	telling the time
 plant	plant	green			grow	
 toilet	furniture	white	china		flush	
@@ -95,7 +95,7 @@ bathtub	furniture					washing
 map			paper			finding the way
 horn	instrument		metal			making music
 temple	building					praying
-jacket	clothing		cloth			wearing
+jacket	clothing	any	cloth			wearing
 grave	place					
 plate	tableware		china			eating
 trap	tool					catching
@@ -104,13 +104,13 @@ piano	instrument	black	wood			making music
 factory	building					making things
 mirror			glass			looking at yourself
 taxi	vehicle		metal	4	move	travelling
-candy	food		sugar			eating
-flower	plant				grow	
+candy	food	any	sugar			eating
+flower	plant	any			grow	
 champagne	drink					drinking
 juice	drink					drinking
 tower	building		stone			
 wheel	part	black	rubber, metal		roll, spin	
-button	part		plastic			fastening
+button	part	any	plastic			fastening
 pot	container		metal			cooking
 garage	building					keeping a car
 ambulance	vehicle	white	metal	4	move	carrying the sick
@@ -119,7 +119,7 @@ lily	plant	white			grow
 elevator	device		metal		move	going up and down
 lift	device		metal		move	going up and down
 screen	device		glass			
-pen	tool		plastic		write	writing
+pen	tool	any	plastic		write	writing
 valley	landform	green				
 wire			metal			
 library	building					borrowing books
@@ -130,19 +130,19 @@ theatre	building					watching plays
 belt	clothing		leather			holding trousers up
 doll	toy		plastic			playing
 guitar	instrument		wood			making music
-mask	clothing					covering the face
+mask	clothing	any				covering the face
 dish	tableware		china			eating
-couch	furniture		cloth			sitting
-sofa	furniture		cloth			sitting
-shoe	clothing		leather			walking
+couch	furniture	any	cloth			sitting
+sofa	furniture	any	cloth			sitting
+shoe	clothing	any	leather			walking
 closet	furniture		wood			keeping clothes
 wardrobe	furniture		wood			keeping clothes
-bowl	tableware		china			eating
+bowl	tableware	any	china			eating
 museum	building					showing old things
 package	container		cardboard			sending
 parcel	container		cardboard			sending
-flag			cloth		wave	
-wallet	container		leather			carrying money
+flag		any	cloth		wave	
+wallet	container	any	leather			carrying money
 lane	place					
 bud	plant	green			grow	
 teddy	toy	brown	cloth			cuddling
@@ -150,9 +150,9 @@ teddy bear	toy	brown	cloth			cuddling
 cave	landform		rock			
 wing	part					flying
 grass	plant	green			grow	
-cap	clothing		cloth			wearing
+cap	clothing	any	cloth			wearing
 robot	machine		metal		move	
-purse	container		leather			carrying money
+purse	container	any	leather			carrying money
 holly	plant	green, red			grow	
 doorbell	device				ring	
 cage	container		metal			keeping animals
@@ -162,7 +162,7 @@ pipe			metal			carrying water
 pit	landform					
 frame			wood			holding a picture
 fence	part		wood			
-underwear	clothing		cloth			wearing
+underwear	clothing	any	cloth			wearing
 hammer	tool		metal, wood			hitting nails
 helicopter	vehicle		metal		fly, move	travelling
 rocket	vehicle		metal	0	fly, move	going to space
@@ -178,7 +178,7 @@ whiskey	drink					drinking
 whisky	drink					drinking
 locker	furniture		metal			keeping things
 string						tying
-tent	building		cloth			camping
+tent	building	any	cloth			camping
 warehouse	building					storing
 motor	part		metal			
 pan	container		metal			cooking
@@ -190,7 +190,7 @@ fridge	appliance		metal			keeping food cold
 refrigerator	appliance		metal			keeping food cold
 brick		red	clay			building
 mall	building					buying
-bucket	container		plastic, metal			carrying water
+bucket	container	any	plastic, metal			carrying water
 weed	plant	green			grow	
 satellite	machine		metal		fly	
 barn	building		wood			keeping animals
@@ -199,77 +199,77 @@ radar	device
 cookie	food					eating
 sack	container		cloth			carrying
 vodka	drink					drinking
-suitcase	container					carrying clothes
-blanket			wool			keeping warm
+suitcase	container	any				carrying clothes
+blanket		any	wool			keeping warm
 needle	tool	grey	metal			sewing
-towel			cloth			drying
+towel		any	cloth			drying
 daisy	plant	white, yellow			grow	
 wagon	vehicle		wood	4	move	carrying loads
 casino	building					
 tire	part	black	rubber		roll	
-boot	clothing		leather			walking
+boot	clothing	any	leather			walking
 lance	weapon		wood, metal			
 drawer	part		wood		open	keeping things
-pillow			cloth			sleeping
+pillow		any	cloth			sleeping
 cart	vehicle		wood	2	move	carrying loads
-luggage	container					carrying clothes
+luggage	container	any				carrying clothes
 basket	container					carrying
 shield	weapon		metal			protecting
 hut	building		wood			living
 coffin	container		wood			
 lamp	device				shine	giving light
-carpet			wool			covering the floor
+carpet		any	wool			covering the floor
 inn	building					staying overnight
 bin	container		plastic, metal			holding rubbish
 bench	furniture		wood			sitting
 embassy	building					
 cabinet	furniture		wood			keeping things
-helmet	clothing					protecting the head
+helmet	clothing	any				protecting the head
 envelope	container	white	paper			sending letters
 oven	appliance		metal			baking
 collar	clothing					
 ladder	tool		wood, metal			climbing
 drum	instrument					making music
-motorcycle	vehicle		metal	2	move	riding
-motorbike	vehicle		metal	2	move	riding
+motorcycle	vehicle	any	metal	2	move	riding
+motorbike	vehicle	any	metal	2	move	riding
 barrel	container		wood		roll	storing
 cannon	weapon		metal	2	shoot	
-skirt	clothing		cloth			wearing
+skirt	clothing	any	cloth			wearing
 perfume						smelling nice
 tub	container					
 cafe	building					drinking coffee
 brandy	drink					drinking
-sweater	clothing		wool			keeping warm
+sweater	clothing	any	wool			keeping warm
 candle		white	wax		burn	giving light
 pistol	weapon		metal		shoot	shooting
 tomb	building		stone			
-balloon	toy		rubber		float	
+balloon	toy	any	rubber		float	
 plug	part		plastic			
 missile	weapon		metal		fly, explode	
 carriage	vehicle		wood	4	move	travelling
-curtain			cloth			covering a window
-curtains			cloth			covering a window
+curtain		any	cloth			covering a window
+curtains		any	cloth			covering a window
 laptop	device		plastic, metal			working
 seed	plant				grow	
 mill	building					grinding grain
 shotgun	weapon		metal, wood		shoot	shooting
 cocktail	drink					drinking
-bra	clothing		cloth			wearing
+bra	clothing	any	cloth			wearing
 ditch	landform					
 gin	drink					drinking
 dock	place					
 runway	place					
-glove	clothing					keeping hands warm
-gloves	clothing					keeping hands warm
+glove	clothing	any				keeping hands warm
+gloves	clothing	any				keeping hands warm
 bracelet	jewellery					wearing
 leaf	plant	green				
 jar	container		glass			storing
 ivy	plant	green			grow, climb	
 violet	plant	purple			grow	
-cape	clothing		cloth			wearing
+cape	clothing	any	cloth			wearing
 armor	clothing	grey	metal			protecting
-pencil	tool		wood		write	writing
-umbrella	tool		cloth		open	keeping dry
+pencil	tool	any	wood		write	writing
+umbrella	tool	any	cloth		open	keeping dry
 spoon	tableware	grey	metal			eating
 swamp	landform	green				
 marsh	landform	green				
@@ -288,12 +288,12 @@ briefcase	container		leather			carrying papers
 puppet	toy					playing
 fountain			stone			
 fork	tableware	grey	metal			eating
-scarf	clothing		wool			keeping warm
+scarf	clothing	any	wool			keeping warm
 chapel	building		stone			praying
 railway	place		metal			
 peg			wood, plastic			
 stadium	building					watching sport
-jeep	vehicle		metal	4	move	travelling
+jeep	vehicle	any	metal	4	move	travelling
 rum	drink					drinking
 wheelchair	vehicle		metal	4	move	
 ski						skiing
@@ -309,19 +309,19 @@ rack	furniture
 pine	plant	green	wood		grow	
 violin	instrument		wood			making music
 altar	furniture		stone			
-rug			wool			covering the floor
+rug		any	wool			covering the floor
 saddle			leather			riding
 dvd			plastic		spin	
-gown	clothing		cloth			wearing
-sock	clothing		cloth			wearing
-socks	clothing		cloth			wearing
+gown	clothing	any	cloth			wearing
+sock	clothing	any	cloth			wearing
+socks	clothing	any	cloth			wearing
 volcano	landform		rock		erupt	
 tray	tableware					carrying
 yacht	vehicle			0	float, move	sailing
 cane	tool		wood			walking
 feather	natural thing					
 hay	plant	yellow				feeding animals
-robe	clothing		cloth			wearing
+robe	clothing	any	cloth			wearing
 mattress						sleeping
 grill	appliance		metal			cooking
 supermarket	building					buying food
@@ -332,17 +332,17 @@ porch	part
 dagger	weapon		metal		cut	
 fortress	building		stone			
 freezer	appliance		metal			freezing food
-jewel	jewellery				shine	
-gem	jewellery				shine	
+jewel	jewellery	any			shine	
+gem	jewellery	any			shine	
 shovel	tool		metal, wood			digging
 spade	tool		metal, wood			digging
 comet	sky		ice			
-backpack	container		cloth			carrying
+backpack	container	any	cloth			carrying
 spaceship	vehicle		metal	0	fly, move	travelling in space
 spacecraft	vehicle		metal	0	fly, move	travelling in space
 cupboard	furniture		wood			keeping things
 gong	instrument	yellow	metal			
-comb	tool		plastic			combing hair
+comb	tool	any	plastic			combing hair
 lens	part		glass			
 blossom	plant	pink, white				
 shack	building		wood			
@@ -356,7 +356,7 @@ convent	building
 poppy	plant	red			grow	
 trumpet	instrument	yellow	metal			making music
 rag			cloth			cleaning
-scooter	vehicle		metal	2	move	riding
+scooter	vehicle	any	metal	2	move	riding
 kettle	appliance		metal			boiling water
 compass	tool					finding the way
 monastery	building		stone			
@@ -364,11 +364,11 @@ stereo	device					playing music
 flute	instrument		metal			making music
 tractor	vehicle		metal	4	move	farm work
 broom	tool		wood			sweeping
-vase	container		china, glass			holding flowers
+vase	container	any	china, glass			holding flowers
 nightclub	building					dancing
-handkerchief			cloth			
+handkerchief		any	cloth			
 syrup	food					
-toothbrush	tool		plastic			cleaning teeth
+toothbrush	tool	any	plastic			cleaning teeth
 mosque	building					praying
 asteroid	sky		rock			
 cathedral	building		stone			praying
@@ -376,10 +376,10 @@ keyboard	device		plastic			typing
 coop	building		wood			keeping hens
 sunglasses	clothing		plastic, glass			shading the eyes
 courthouse	building					
-ribbon			cloth			tying
+ribbon		any	cloth			tying
 crib	furniture		wood			sleeping
 chimney	part		brick			letting smoke out
-blouse	clothing		cloth			wearing
+blouse	clothing	any	cloth			wearing
 ketchup	food	red				
 meteor	sky		rock			
 stool	furniture		wood			sitting
@@ -396,15 +396,15 @@ sidewalk	place		concrete			walking
 pavement	place					walking
 leash			leather			leading a dog
 raft	vehicle		wood	0	float	
-bouquet	plant					
+bouquet	plant	any				
 bulb	device		glass		shine	giving light
 light bulb	device		glass		shine	giving light
 monument	building		stone			
 lantern	device				shine	giving light
-parachute			cloth			
+parachute		any	cloth			
 tablet	device					
-apron	clothing		cloth			keeping clothes clean
-automobile	vehicle		metal	4	move	travelling
+apron	clothing	any	cloth			keeping clothes clean
+automobile	vehicle	any	metal	4	move	travelling
 mailbox	container		metal			holding letters
 postbox	container		metal			posting letters
 ramp	part					
@@ -417,8 +417,8 @@ magic wand	tool
 dresser	furniture		wood			keeping clothes
 earring	jewellery					wearing
 earrings	jewellery					wearing
-handbag	container		leather			carrying
-sari	clothing		cloth			wearing
+handbag	container	any	leather			carrying
+sari	clothing	any	cloth			wearing
 sleigh	vehicle		wood	0	move	travelling on snow
 sled	vehicle		wood	0	move	sliding on snow
 sledge	vehicle		wood	0	move	sliding on snow
@@ -427,9 +427,9 @@ harp	instrument		wood			making music
 syringe	tool		plastic			
 goggles	clothing		plastic			protecting the eyes
 hedge	plant	green			grow	
-jug	container					pouring
+jug	container	any				pouring
 scarecrow			straw			scaring birds
-canoe	vehicle		wood	0	float, move	paddling
+canoe	vehicle	any	wood	0	float, move	paddling
 microscope	device					looking at small things
 hangar	building					keeping planes
 clover	plant	green			grow	
@@ -438,18 +438,18 @@ dishwasher	appliance		metal			washing dishes
 stretcher	tool					carrying the sick
 banjo	instrument					making music
 iceberg	landform	white	ice		float	
-tights	clothing		cloth			wearing
+tights	clothing	any	cloth			wearing
 cactus	plant	green			grow	
-kimono	clothing		cloth			wearing
-raincoat	clothing					keeping dry
+kimono	clothing	any	cloth			wearing
+raincoat	clothing	any				keeping dry
 thermometer	tool		glass			measuring temperature
-slipper	clothing		cloth			wearing
-slippers	clothing		cloth			wearing
+slipper	clothing	any	cloth			wearing
+slippers	clothing	any	cloth			wearing
 saxophone	instrument	yellow	metal			making music
 brooch	jewellery					wearing
 tulip	plant	red, yellow			grow	
-nightgown	clothing		cloth			sleeping
-sweatshirt	clothing		cloth			wearing
+nightgown	clothing	any	cloth			sleeping
+sweatshirt	clothing	any	cloth			wearing
 chandelier	device		glass		shine	giving light
 windmill	building				spin	grinding grain
 sunflower	plant	yellow			grow	
@@ -458,21 +458,21 @@ locomotive	vehicle		metal		move	pulling a train
 train	vehicle		metal		move	travelling
 crutch	tool					walking
 chisel	tool		metal		cut	
-armchair	furniture		cloth			sitting
+armchair	furniture	any	cloth			sitting
 trampoline	toy					jumping
 blackboard		black				writing
 trombone	instrument	yellow	metal			making music
 toolbox	container		metal			keeping tools
 sailboat	vehicle			0	float, move	sailing
-necktie	clothing		cloth			wearing
-tie	clothing		cloth			wearing
+necktie	clothing	any	cloth			wearing
+tie	clothing	any	cloth			wearing
 eraser	tool		rubber			rubbing out
 wheelbarrow	vehicle		metal	1	move	carrying loads
 skyscraper	building		glass, metal			
 headstone			stone			
 hourglass	device		glass, sand			measuring time
 megaphone	device					
-crayon	tool		wax			drawing
+crayon	tool	any	wax			drawing
 clipboard	tool					
 tongs	tool		metal			
 visor	clothing					
@@ -654,11 +654,11 @@ candy cane	food	red, white	sugar			eating
 hat Christmas	clothing	red, white	cloth			wearing
 Father Christmas	person	red, white				
 tennis ball	toy	yellow	rubber		roll, bounce	playing
-book			paper			reading
+book		any	paper			reading
 newspaper			paper			reading
-notebook			paper			writing
+notebook		any	paper			writing
 letter			paper			
-card			paper			
+card		any	paper			
 table	furniture		wood			
 dining table	furniture		wood			eating
 coffee table	furniture		wood			
@@ -682,37 +682,37 @@ tumbler glass	tableware		glass			drinking
 glass bottle	container		glass			holding drinks
 plastic bottle	container		plastic			holding drinks
 plastic bag	container		plastic			carrying
-lego	toy		plastic			building
-wellington boots	clothing		rubber			keeping feet dry
-yarn	material		wool			knitting
+lego	toy	any	plastic			building
+wellington boots	clothing	any	rubber			keeping feet dry
+yarn	material	any	wool			knitting
 sandcastle		yellow	sand			
 watering can	tool					watering
-kite	toy				fly	playing
-hot air balloon	vehicle			0	fly, float	travelling
-skateboard	vehicle		wood	4	roll, move	riding
+kite	toy	any			fly	playing
+hot air balloon	vehicle	any		0	fly, float	travelling
+skateboard	vehicle	any	wood	4	roll, move	riding
 roller skate				4	roll	skating
 shopping cart	vehicle		metal	4	roll	carrying shopping
-kick scooter	vehicle			2	roll, move	riding
-moped	vehicle		metal	2	move	riding
-van	vehicle		metal	4	move	carrying loads
+kick scooter	vehicle	any		2	roll, move	riding
+moped	vehicle	any	metal	2	move	riding
+van	vehicle	any	metal	4	move	carrying loads
 police car	vehicle		metal	4	move	
-racing car	vehicle		metal	4	move	racing
-pickup truck	vehicle		metal	4	move	carrying loads
+racing car	vehicle	any	metal	4	move	racing
+pickup truck	vehicle	any	metal	4	move	carrying loads
 ferry	vehicle		metal	0	float, move	carrying people over water
 rowing boat	vehicle		wood	0	float, move	rowing
 speedboat	vehicle			0	float, move	
 motor boat	vehicle			0	float, move	
 glider	vehicle				fly	
 airship	vehicle				fly, float	
-tricycle	vehicle		metal	3	move	riding
+tricycle	vehicle	any	metal	3	move	riding
 unicycle	vehicle		metal	1	move	riding
-pram	vehicle			4	roll	carrying a baby
+pram	vehicle	any		4	roll	carrying a baby
 swing	toy				swing	playing
 slide	toy					playing
 playground slide	toy					playing
 see saw	toy					playing
 jigsaw puzzle	toy		cardboard			playing
-yo-yo	toy				spin	playing
+yo-yo	toy	any			spin	playing
 xylophone	instrument					making music
 accordion	instrument					making music
 tambourine	instrument					making music
@@ -737,16 +737,16 @@ cot	furniture		wood			sleeping
 high chair	furniture					
 rocking chair	furniture		wood		rock	sitting
 hammock	furniture		cloth		swing	resting
-dress	clothing		cloth			wearing
-shorts	clothing		cloth			wearing
-t-shirt	clothing		cloth			wearing
-jumper	clothing		wool			keeping warm
-pyjamas	clothing		cloth			sleeping
-mittens	clothing		wool			keeping hands warm
-sandals	clothing		leather			walking
-trainers	clothing					running
-boots	clothing		leather			walking
-swimming costume	clothing					swimming
+dress	clothing	any	cloth			wearing
+shorts	clothing	any	cloth			wearing
+t-shirt	clothing	any	cloth			wearing
+jumper	clothing	any	wool			keeping warm
+pyjamas	clothing	any	cloth			sleeping
+mittens	clothing	any	wool			keeping hands warm
+sandals	clothing	any	leather			walking
+trainers	clothing	any				running
+boots	clothing	any	leather			walking
+swimming costume	clothing	any				swimming
 school	building					learning
 church	building		stone			praying
 farm	place					growing food
