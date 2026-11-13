@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { REPO } from './lib/worlds.mjs';
 
 const column = (path, n = 0) => readFileSync(join(REPO, path), 'utf8').split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t')[n].trim());
+const rows = (path) => readFileSync(join(REPO, path), 'utf8').split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
 const one = (type, key, where = {}) => () => [{ type, where: { name: '{x}', ...where }, seek: key }];
 const canDo = (type, verb) => () => [{ type, where: { name: '{x}', can: verb }, seek: 'name' }, { type, where: { name: '{x}', cannot: verb }, seek: 'name' }];
 
@@ -26,5 +27,18 @@ export const DOMAINS = {
       ['can a {x} swim', canDo('k.animals.animal', 'swim')],
       ['can a {x} climb', canDo('k.animals.animal', 'climb')],
     ],
+  },
+  // sources/hand-core/questions/geo.tsv: well-known places by the names people use, written without looking at k.geo.
+  geo: {
+    things: () => rows('sources/hand-core/questions/geo.tsv'),
+    templates: {
+      country: [['what is the capital of {x}', one('k.geo.country', 'capital')], ['on which continent is {x}', one('k.geo.country', 'continent')], ['how many people live in {x}', one('k.geo.country', 'population')], ['how large is {x}', one('k.geo.country', 'area')]],
+      river: [['how long is the river {x}', one('k.geo.river', 'length_about')], ['through which countries does the {x} flow', one('k.geo.river', 'country')]],
+      mountain: [['how high is {x}', one('k.geo.mountain', 'elevation')], ['on which continent is {x}', one('k.geo.mountain', 'continent')]],
+      lake: [['how large is {x}', one('k.geo.lake', 'area_about')], ['in which countries is {x}', one('k.geo.lake', 'country')]],
+      desert: [['how large is the {x}', one('k.geo.desert', 'area_about')], ['on which continent is the {x}', one('k.geo.desert', 'continent')]],
+      sea: [['how large is the {x}', one('k.geo.sea', 'area_about')], ['is the {x} an ocean, a sea or a gulf', one('k.geo.sea', 'kind')]],
+      continent: [['how large is {x}', one('k.geo.continent', 'area_about')], ['how many countries are in {x}', () => [{ type: 'k.geo.country', where: { continent: '{x}' }, mode: 'count' }]]],
+    },
   },
 };

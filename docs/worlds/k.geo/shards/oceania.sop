@@ -1,4 +1,4 @@
-# k.geo/shards/oceania: Oceania: 25 countries and territories, 41 cities, 78 rivers, 50 mountains, 13 mountain ranges.
+# k.geo/shards/oceania: Oceania: 25 countries and territories, 41 cities, 78 rivers, 50 mountains, 13 mountain ranges, 7 lakes, 6 deserts.
 # sources: natural-earth 5.1.2 (Natural Earth, public domain)
 # license: public-domain
 # script: tools/import/geo.mjs
@@ -211,6 +211,19 @@
 @k.geo.range.Owen_Stanley_Range.oceania k.geo.range name="Owen Stanley Range" continent=Oceania lat=-8.93 lon=148.32 west=146.74 south=-10.24 east=149.9 north=-7.61 core.source="natural-earth 5.1.2"
 @k.geo.range.Selwyn_Mountains.oceania k.geo.range name="Selwyn Mountains" continent=Oceania lat=-20.77 lon=140.17 west=139.13 south=-21.68 east=141.21 north=-19.86 core.source="natural-earth 5.1.2"
 @k.geo.range.Southern_Alps_Ka_Tiritiri_o_te_Moana.oceania k.geo.range name="Southern Alps/Kā Tiritiri o te Moana" continent=Oceania lat=-43.71 lon=170.03 west=166.77 south=-46.02 east=173.3 north=-41.41 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Barlee k.geo.lake name="Lake Barlee" continent=Oceania country=Australia area_about=2100 lat=-29.23 lon=119.54 west=119.08 south=-29.59 east=119.99 north=-28.87 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Carnegie k.geo.lake name="Lake Carnegie" continent=Oceania country=Australia area_about=1520 lat=-26.26 lon=122.65 west=122.09 south=-26.58 east=123.21 north=-25.93 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Eyre_North k.geo.lake name="Lake Eyre North" continent=Oceania country=Australia area_about=8140 lat=-28.48 lon=137.42 west=136.78 south=-29.11 east=138.05 north=-27.85 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Frome k.geo.lake name="Lake Frome" continent=Oceania country=Australia area_about=2580 lat=-30.7 lon=139.77 west=139.49 south=-31.13 east=140.05 north=-30.26 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Gairdner k.geo.lake name="Lake Gairdner" continent=Oceania country=Australia area_about=4240 lat=-31.71 lon=135.86 west=135.4 south=-32.35 east=136.32 north=-31.06 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Mackay k.geo.lake name="Lake Mackay" continent=Oceania country=Australia area_about=3590 lat=-22.33 lon=128.78 west=128.31 south=-22.69 east=129.25 north=-21.98 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Torrens k.geo.lake name="Lake Torrens" continent=Oceania country=Australia area_about=5160 lat=-31.05 lon=137.67 west=137.2 south=-31.93 east=138.14 north=-30.17 core.source="natural-earth 5.1.2"
+@k.geo.desert.Gibson_Desert k.geo.desert name="Gibson Desert" continent=Oceania lat=-24.43 lon=125.02 west=122.92 south=-25.82 east=127.12 north=-23.04 core.source="natural-earth 5.1.2"
+@k.geo.desert.Great_Sandy_Desert k.geo.desert name="Great Sandy Desert" continent=Oceania lat=-20.62 lon=124.87 west=121.3 south=-22.62 east=128.45 north=-18.62 core.source="natural-earth 5.1.2"
+@k.geo.desert.Great_Victoria_Desert k.geo.desert name="Great Victoria Desert" continent=Oceania lat=-28.18 lon=128.06 west=123.76 south=-29.76 east=132.36 north=-26.59 core.source="natural-earth 5.1.2"
+@k.geo.desert.Simpson_Desert k.geo.desert name="Simpson Desert" continent=Oceania lat=-25.32 lon=137.36 west=135.76 south=-26.92 east=138.95 north=-23.72 core.source="natural-earth 5.1.2"
+@k.geo.desert.Strzelecki_Desert k.geo.desert name="Strzelecki Desert" continent=Oceania lat=-29.77 lon=141.61 west=140.08 south=-31.09 east=143.15 north=-28.45 core.source="natural-earth 5.1.2"
+@k.geo.desert.Tanami_Desert k.geo.desert name="Tanami Desert" continent=Oceania lat=-19.65 lon=131.66 west=130.25 south=-20.67 east=133.06 north=-18.63 core.source="natural-earth 5.1.2"
 @k.geo.word.ATC core.word text="Ashmore and Cartier Is." text="Territory of Ashmore and Cartier Islands" means="Ashmore and Cartier Islands" of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.AUS core.word text="Commonwealth of Australia" means=Australia of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.COK core.word text="Cook Is." means="Cook Islands" of=k.geo.country.name core.source="natural-earth 5.1.2"
@@ -231,3 +244,5 @@
 @k.geo.word.TON core.word text="Kingdom of Tonga" means=Tonga of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.VUT core.word text="Republic of Vanuatu" means=Vanuatu of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.WLF core.word text="Wallis and Futuna" text="Wallis and Futuna Is." means="Wallis and Futuna Islands" of=k.geo.country.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Eyre_North core.word text="Kati Thanda" means="Lake Eyre North" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Mackay core.word text=Wilkinkarra means="Lake Mackay" of=k.geo.lake.name core.source="natural-earth 5.1.2"

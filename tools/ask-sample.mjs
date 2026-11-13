@@ -28,7 +28,11 @@ export function sample(domain, { root = WORLDS_DIR, n = 100 } = {}) {
   const d = DOMAINS[domain];
   const worlds = scanWorlds(root);
   const all = [];
-  for (const e of d.things()) for (const [ask, queries] of d.templates) all.push({ thing: e, ask: ask.replace('{x}', e), queries });
+  // A thing is a name, or [name, kind]: then only the templates of that kind apply (d.templates is then an object).
+  for (const t of d.things()) {
+    const [e, kind] = Array.isArray(t) ? t : [t, null];
+    for (const [ask, queries] of (kind ? d.templates[kind] : d.templates)) all.push({ thing: e, ask: ask.replace('{x}', e), queries });
+  }
   const rnd = rng(seedOf(domain));
   for (let i = all.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [all[i], all[j]] = [all[j], all[i]]; }
   const picked = all.slice(0, n);

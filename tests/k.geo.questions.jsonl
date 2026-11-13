@@ -14,3 +14,11 @@
 {"id":"geo-15","ask":"what is the capital of the United States","query":{"type":"k.geo.country","where":{"name":"\"United States\""},"seek":"capital"},"expect":{"status":"supported","value":"\"Washington, D.C.\""}}
 {"id":"geo-16","ask":"what is the formal name of Serbia","query":{"type":"k.geo.country","where":{"name":"Serbia"},"seek":"formal"},"expect":{"status":"supported","value":"\"Republic of Serbia\""}}
 {"id":"geo-14","ask":"an application's own place is accepted","tell":"@p1 k.geo.city name=Testville country=Moldova population=12","ns":"app","expect":{"issues":[]}}
+{"id":"geo-17","ask":"how long is the Nile","query":{"type":"k.geo.river","where":{"name":"Nile"},"seek":"length_about"},"expect":{"status":"supported","value":"6650"}}
+{"id":"geo-18","ask":"what is the capital of South Sudan","query":{"type":"k.geo.country","where":{"name":"\"South Sudan\""},"seek":"capital"},"expect":{"status":"supported","value":"Juba"}}
+{"id":"geo-19","ask":"how large is Lake Superior","query":{"type":"k.geo.lake","where":{"name":"\"Lake Superior\""},"seek":"area_about"},"expect":{"status":"supported","value":"82100"}}
+{"id":"geo-20","ask":"which oceans are there","query":{"type":"k.geo.sea","where":{"kind":"ocean"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["\"Arctic Ocean\"","\"Atlantic Ocean\"","\"Indian Ocean\"","\"Pacific Ocean\"","\"Southern Ocean\""]}}
+{"id":"geo-21","ask":"how large is the Sahara","query":{"type":"k.geo.desert","where":{"name":"Sahara"},"seek":"area_about"},"expect":{"status":"supported","value":"9200000"}}
+{"id":"geo-22","ask":"how large is Asia","query":{"type":"k.geo.continent","where":{"name":"Asia"},"seek":"area_about"},"expect":{"status":"supported","value":"44600000"}}
+{"id":"geo-23","ask":"how large is the Pacific Ocean","query":{"type":"k.geo.sea","where":{"name":"\"Pacific Ocean\""},"seek":"area_about"},"expect":{"status":"supported","value":"165000000"}}
+{"id":"geo-24","ask":"which countries lie on Lake Victoria","query":{"type":"k.geo.lake","where":{"name":"\"Lake Victoria\""},"seek":"country","mode":"list"},"expect":{"status":"supported","values":["Kenya","Tanzania","Uganda"]}}

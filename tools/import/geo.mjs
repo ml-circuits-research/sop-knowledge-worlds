@@ -1,9 +1,12 @@
 // Natural Earth 5.1.2 + mledoze/countries 5.1.0 -> k.geo shards. Per continent, from Natural Earth (public domain):
 // countries (capital, continent, region, population, centre, bounding box), their largest cities, rivers, mountains
 // and mountain ranges with names; and, in a second shard per continent, what only the country list has (ODbL):
-// neighbours, area, landlocked. The two shards name the same countries, so their facts merge when both are told.
+// neighbours, area, landlocked, and the capital where Natural Earth marks none. The two shards name the same
+// countries, so their facts merge when both are told. Round 9: the 100 largest lakes with the area of their
+// outline, the deserts, and a shard `seas` with the oceans, seas, gulfs, bays, straits and channels.
 // No geometry beyond a centre point and a bounding box. Deterministic.
-//   node tools/import/geo.mjs [--ne sources/natural-earth/raw] [--countries sources/countries/raw/countries.json]
+//   node tools/import/geo.mjs [--ne sources/natural-earth/raw]   (then writes numbers.sop again: tools/geo-numbers.mjs)
+//   options:                  [--ne sources/natural-earth/raw] [--countries sources/countries/raw/countries.json]
 //                             [--out docs/worlds/k.geo/shards]
 // How to fetch the raw files: sources/natural-earth/SOURCE.md and sources/countries/SOURCE.md.
 import { readFileSync } from 'node:fs';
@@ -49,6 +52,31 @@ const bounds = (points) => {
 };
 const box = (b) => [['west', r2(b.w)], ['south', r2(b.s)], ['east', r2(b.e)], ['north', r2(b.n)]];
 const centre = (b) => [['lat', r2((b.s + b.n) / 2)], ['lon', r2((b.w + b.e) / 2)]];
+// Round 9: the area of a polygon on the sphere, in square kilometres (mean radius 6371.0088 km).
+const RAD = Math.PI / 180, EARTH = 6371.0088;
+const ringArea = (ring) => {
+  let sum = 0;
+  for (let i = 0; i < ring.length - 1; i++) {
+    let dx = ring[i + 1][0] - ring[i][0];
+    if (dx > 180) dx -= 360; else if (dx < -180) dx += 360;
+    sum += dx * RAD * (2 + Math.sin(ring[i][1] * RAD) + Math.sin(ring[i + 1][1] * RAD));
+  }
+  return Math.abs(sum * EARTH * EARTH / 2);
+};
+export const sphereArea = (g) => rings(g).reduce((n, poly) => n + ringArea(poly[0]) - poly.slice(1).reduce((m, hole) => m + ringArea(hole), 0), 0);
+// An approximate number keeps three significant digits.
+export const round3 = (n) => { const k = 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, n))) - 2); return Math.round(n / k) * k; };
+export const LAKES = 100;
+export const SEA_KINDS = ['ocean', 'sea', 'gulf', 'bay', 'strait', 'channel'];
+// The name of a lake: Natural Earth's name ("Lake Victoria", "Great Bear Lake", "IJsselmeer"); where that name has
+// the word for lake of another language ("Lago Titicaca", "Qinghai Hu", "Uvs Nuur"), "Lake" and the English name
+// ("Lake Titicaca"). Bays and channels of a lake and lagoons are not lakes of their own: null.
+const lakeName = (p) => {
+  const name = clean(p.name), en = clean(p.name_en ?? '').split('/')[0].replace(/ (Hu|Nuur|Co|Köli)$/, '');
+  if (/ (Bay|Channel)$/.test(name) || /^(Laguna|Lagoa) /.test(name)) return null;
+  if (!en || !(/^(Lago( de)?|Lac|Danau) [^l-]/.test(name) || / (Hu|Nuur|Co|Köli|Ko‘l)$/.test(name) || /jrvi$/.test(name))) return name;
+  return / Lake$/.test(en) ? en : `Lake ${en}`;
+};
 const inRing = (x, y, ring) => {
   let inside = false;
   for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
@@ -59,8 +87,8 @@ const inRing = (x, y, ring) => {
 };
 
 // input: { countries (array of the country list), admin, places, rivers, elevations, regions (GeoJSON features) }
-export function importGeo({ countries, admin, places, rivers, elevations, regions }, { citiesPerCountry = CITIES_PER_COUNTRY } = {}) {
-  const stats = { countries: 0, borders: 0, cities: 0, rivers: 0, mountains: 0, ranges: 0, words: 0, dropped: { countries: 0, cities: 0, rivers: 0, mountains: 0 } };
+export function importGeo({ countries, admin, places, rivers, elevations, regions, lakes = [], marine = [] }, { citiesPerCountry = CITIES_PER_COUNTRY } = {}) {
+  const stats = { countries: 0, borders: 0, cities: 0, rivers: 0, mountains: 0, ranges: 0, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, words: 0, dropped: { countries: 0, cities: 0, rivers: 0, mountains: 0 } };
   // Natural Earth countries by their code: properties, polygons (for "which country is this point in"), bounds.
   const byCode = new Map();
   const shapes = [];
@@ -85,7 +113,8 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     return null;
   };
 
-  const shards = new Map(CONTINENTS.map((c) => [c, { countries: [], cities: [], rivers: [], mountains: [], ranges: [], words: [], borders: [] }]));
+  const shards = new Map(CONTINENTS.map((c) => [c, { countries: [], cities: [], rivers: [], mountains: [], ranges: [], lakes: [], deserts: [], words: [], borders: [] }]));
+  const noCapital = new Set();
   const sources = (...s) => s;
   const w = (id, type, entries, srcs) => wire(id, type, entries, srcs[0]) + srcs.slice(1).map((s) => ` core.source=${JSON.stringify(s)}`).join('');
 
@@ -104,6 +133,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     const { p, b, name, continent } = byCode.get(code);
     const out = shards.get(continent);
     const caps = (capitals.get(code) ?? []).map((c) => ({ ...c, name: clean(c.name) })).sort((x, y) => (x.featurecla === 'Admin-0 capital' ? 0 : 1) - (y.featurecla === 'Admin-0 capital' ? 0 : 1) || byText(x.name, y.name)).map((c) => c.name);
+    if (!caps.length) noCapital.add(code);
     out.countries.push(w(`k.geo.country.${seg(code)}`, 'k.geo.country', [
       ['name', name], ['code', code], ['formal', p.FORMAL_EN ? text(p.FORMAL_EN) : undefined],
       ...[...new Set(caps)].map((x) => ['capital', x]),
@@ -129,6 +159,8 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     const { name, continent } = byCode.get(code);
     shards.get(continent).borders.push({ name, line: w(`k.geo.borders.${seg(code)}`, 'k.geo.country', [
       ['name', name],
+      // Round 9: the capital, where Natural Earth marks none (territories, South Sudan, Nauru).
+      ...(noCapital.has(code) ? (c.capital ?? []).filter(Boolean).map((x) => { stats.capitalsFromList++; return ['capital', clean(x)]; }) : []),
       ...[...new Set(c.borders.map(neCode).map(nameOf).filter(Boolean))].sort(byText).map((n) => ['neighbour', n]),
       ['area', c.area > 0 ? r2(c.area) : undefined], ['landlocked', c.landlocked === true],
     ], sources(MC)) });
@@ -261,17 +293,78 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     stats.ranges++;
   }
 
+  // Round 9. Lakes: the LAKES largest natural lakes by the area of their outline (no reservoirs), with that area in
+  // square kilometres as `area_about` (worked out on the sphere from the 1:10m outline; water levels change).
+  const lakeByName = new Map();
+  for (const f of lakes) {
+    const p = f.properties;
+    if (!p.name || p.featurecla === 'Reservoir') continue;
+    const name = lakeName(p);
+    if (!name) continue;
+    const g = lakeByName.get(name) ?? { name, area: 0, points: [], other: new Set() };
+    g.area += sphereArea(f.geometry);
+    g.points.push(...rings(f.geometry).flatMap((poly) => poly[0]));
+    for (const t of [p.name, ...(p.name_alt ?? '').split('|')].map((x) => clean(x ?? '')).filter((x) => x && x !== name)) g.other.add(t);
+    lakeByName.set(name, g);
+  }
+  for (const g of [...lakeByName.values()].sort((a, b) => b.area - a.area || byText(a.name, b.name)).slice(0, LAKES).sort((a, b) => byText(a.name, b.name))) {
+    const b = bounds(g.points);
+    const count = new Map();
+    const step = Math.max(1, Math.floor(g.points.length / 300));
+    for (let i = 0; i < g.points.length; i += step) { const code = countryAt(g.points[i][0], g.points[i][1]); if (code) count.set(code, (count.get(code) ?? 0) + 1); }
+    if (!count.size) continue;
+    const perContinent = new Map();
+    for (const [code, n] of count) perContinent.set(byCode.get(code).continent, (perContinent.get(byCode.get(code).continent) ?? 0) + n);
+    const continent = [...perContinent.keys()].sort((x, y) => perContinent.get(y) - perContinent.get(x) || byText(x, y))[0];
+    const out = shards.get(continent);
+    out.lakes.push(w(`k.geo.lake.${seg(g.name)}`, 'k.geo.lake', [['name', g.name], ['continent', continent], ...[...count.keys()].map(nameOf).sort(byText).map((c) => ['country', c]),
+      ['area_about', round3(g.area)], ...centre(b), ...box(b)], sources(NE)));
+    if (g.other.size) { out.words.push(w(`k.geo.word.lake.${seg(g.name)}`, 'core.word', [...[...g.other].sort(byText).map((t) => ['text', t]), ['means', g.name], ['of', 'k.geo.lake.name']], sources(NE))); stats.words++; }
+    stats.lakes++;
+  }
+  // Deserts: a name, a continent, a centre and a bounding box (the outlines are for labels: no area from them).
+  const deserts = new Map();
+  for (const f of regions) {
+    const p = f.properties;
+    const name = english(p.NAME_EN, p.NAME);
+    if (p.FEATURECLA !== 'Desert' || !name || !CONTINENTS.includes(p.REGION)) continue;
+    const points = rings(f.geometry).flatMap((poly) => poly[0]);
+    if (deserts.has(name)) deserts.get(name).points.push(...points); else deserts.set(name, { name, continent: p.REGION, points });
+  }
+  for (const name of [...deserts.keys()].sort(byText)) {
+    const g = deserts.get(name);
+    const b = bounds(g.points);
+    shards.get(g.continent).deserts.push(w(`k.geo.desert.${seg(g.name)}`, 'k.geo.desert', [['name', g.name], ['continent', g.continent], ...centre(b), ...box(b)], sources(NE)));
+    stats.deserts++;
+  }
+  // Seas: the oceans and the seas, gulfs, bays, straits and channels that Natural Earth ranks 0 to 3, by name.
+  const seas = new Map();
+  for (const f of marine) {
+    const p = f.properties;
+    const name = english(p.name_en, p.name);
+    if (!name || !SEA_KINDS.includes(p.featurecla) || p.scalerank > 3) continue;
+    const points = rings(f.geometry).flatMap((poly) => poly[0]);
+    if (seas.has(name)) seas.get(name).points.push(...points); else seas.set(name, { name, kind: p.featurecla, points });
+  }
+  const seaLines = [];
+  for (const name of [...seas.keys()].sort(byText)) {
+    const g = seas.get(name);
+    const b = bounds(g.points);
+    seaLines.push(w(`k.geo.sea.${seg(g.name)}`, 'k.geo.sea', [['name', g.name], ['kind', g.kind], ...centre(b), ...box(b)], sources(NE)));
+    stats.seas++;
+  }
+
   const files = {};
   for (const continent of CONTINENTS) {
     const s = shards.get(continent);
     const name = shardName(continent);
     const body = [
       w(`k.geo.continent.${seg(name)}`, 'k.geo.continent', [['name', continent]], sources(NE)),
-      ...s.countries, ...s.cities, ...s.rivers, ...s.mountains, ...s.ranges, ...s.words,
+      ...s.countries, ...s.cities, ...s.rivers, ...s.mountains, ...s.ranges, ...s.lakes, ...s.deserts, ...s.words,
     ];
     files[`${name}.sop`] = `${header({
       id: `k.geo/shards/${name}`,
-      about: `${continent}: ${s.countries.length} countries and territories, ${s.cities.length} cities, ${s.rivers.length} rivers, ${s.mountains.length} mountains, ${s.ranges.length} mountain ranges.`,
+      about: `${continent}: ${s.countries.length} countries and territories, ${s.cities.length} cities, ${s.rivers.length} rivers, ${s.mountains.length} mountains, ${s.ranges.length} mountain ranges, ${s.lakes.length} lakes, ${s.deserts.length} deserts.`,
       sources: ['natural-earth 5.1.2 (Natural Earth, public domain)'],
       license: 'public-domain',
       script: 'tools/import/geo.mjs',
@@ -279,12 +372,17 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     if (!s.borders.length) continue;
     files[`${name}-borders.sop`] = `${header({
       id: `k.geo/shards/${name}-borders`,
-      about: `${continent}: the neighbours, the area in square kilometres and whether it is landlocked, for ${s.borders.length} countries and territories. Tell it with the shard ${name}: the facts of one country merge.`,
+      about: `${continent}: the neighbours, the area in square kilometres and whether it is landlocked, for ${s.borders.length} countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard ${name}: the facts of one country merge.`,
       sources: ['countries 5.1.0 (mledoze/countries, ODbL-1.0)'],
       license: 'ODbL-1.0',
       script: 'tools/import/geo.mjs',
     })}\n${s.borders.sort((a, b) => byText(a.name, b.name)).map((x) => x.line).join('\n')}\n`;
   }
+  if (seaLines.length) files['seas.sop'] = `${header({
+    id: 'k.geo/shards/seas',
+    about: `${seaLines.length} oceans, seas, gulfs, bays, straits and channels: the kind, a centre and a bounding box.`,
+    sources: ['natural-earth 5.1.2 (Natural Earth, public domain)'], license: 'public-domain', script: 'tools/import/geo.mjs',
+  })}\n${seaLines.join('\n')}\n`;
   return { files, stats };
 }
 
@@ -300,7 +398,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     rivers: features('ne_10m_rivers_lake_centerlines'),
     elevations: features('ne_10m_geography_regions_elevation_points'),
     regions: features('ne_10m_geography_regions_polys'),
+    lakes: features('ne_10m_lakes'),
+    marine: features('ne_10m_geography_marine_polys'),
   });
-  writeShards(arg('out', join(repo, 'docs/worlds/k.geo/shards')), files);
+  const out = arg('out', join(repo, 'docs/worlds/k.geo/shards'));
+  writeShards(out, files);
+  // The hand-written numbers (tools/geo-numbers.mjs) name things of these shards: written again after them.
+  if (out === join(repo, 'docs/worlds/k.geo/shards')) { const { numbersShard } = await import('../geo-numbers.mjs'); writeShards(out, { 'numbers.sop': numbersShard() }, 'numbers'); }
   console.log(JSON.stringify(stats));
 }

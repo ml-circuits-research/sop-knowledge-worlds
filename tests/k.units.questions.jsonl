@@ -9,3 +9,5 @@
 {"id":"un-09","ask":"how many imperial units are there","query":{"type":"k.units.unit","where":{"system":"imperial"},"mode":"count"},"expect":{"status":"supported","value":"11"}}
 {"id":"un-10","ask":"an inch is 2.54 centimetres: its factor to the metre","query":{"type":"k.units.unit","where":{"name":"inch"},"seek":"factor"},"expect":{"status":"supported","value":"0.0254"}}
 {"id":"un-11","ask":"an application's own unit is accepted","tell":"@u1 k.units.unit name=smoot quantity=length factor=1.7018 system=other","ns":"app","expect":{"issues":[]}}
+{"id":"un-12","ask":"in which unit is the height of a mountain given","query":{"type":"k.units.measure","where":{"world":"k.geo","type":"mountain","key":"elevation"},"seek":"unit"},"expect":{"status":"supported","value":"metre"}}
+{"id":"un-13","ask":"what does the population of a country count","query":{"type":"k.units.measure","where":{"world":"k.geo","type":"country","key":"population"},"seek":"counts"},"expect":{"status":"supported","value":"person"}}

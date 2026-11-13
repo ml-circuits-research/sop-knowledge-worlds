@@ -57,6 +57,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.shapes` | 8 (1%) |
 | `k.space` | 8 (1%) |
 | `k.time` | 1 (0%) |
+| `k.units` | 2 (0%) |
 | `k.values` | 19 (1%) |
 | `k.wearables` | 62 (4%) |
 | `k.words` | 1075 (72%) |

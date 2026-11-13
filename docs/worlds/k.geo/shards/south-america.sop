@@ -1,4 +1,4 @@
-# k.geo/shards/south-america: South America: 13 countries and territories, 63 cities, 121 rivers, 52 mountains, 22 mountain ranges.
+# k.geo/shards/south-america: South America: 13 countries and territories, 63 cities, 121 rivers, 52 mountains, 22 mountain ranges, 5 lakes, 3 deserts.
 # sources: natural-earth 5.1.2 (Natural Earth, public domain)
 # license: public-domain
 # script: tools/import/geo.mjs
@@ -275,6 +275,14 @@
 @k.geo.range.Serra_dos_Gradaus.south-america k.geo.range name="Serra dos Gradaús" continent="South America" lat=-8.42 lon=-50.71 west=-52.1 south=-11.09 east=-49.33 north=-5.76 core.source="natural-earth 5.1.2"
 @k.geo.range.Tumuc-Humac_Mountains.south-america k.geo.range name="Tumuc-Humac Mountains" continent="South America" lat=2.47 lon=-54.45 west=-56.28 south=1.67 east=-52.62 north=3.27 core.source="natural-earth 5.1.2"
 @k.geo.range.Wilhelmina_Mountains.south-america k.geo.range name="Wilhelmina Mountains" continent="South America" lat=3.62 lon=-56.28 west=-57.41 south=2.27 east=-55.14 north=4.98 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Argentino k.geo.lake name="Lake Argentino" continent="South America" country=Argentina area_about=1450 lat=-50.32 lon=-72.65 west=-73.33 south=-50.67 east=-71.97 north=-49.97 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_General_Carrera k.geo.lake name="Lake General Carrera" continent="South America" country=Argentina country=Chile area_about=1890 lat=-46.65 lon=-72.04 west=-72.94 south=-47.03 east=-71.14 north=-46.28 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Poopo k.geo.lake name="Lake Poopó" continent="South America" country=Bolivia area_about=1560 lat=-18.61 lon=-67.07 west=-67.26 south=-19.19 east=-66.87 north=-18.02 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Titicaca k.geo.lake name="Lake Titicaca" continent="South America" country=Bolivia country=Peru area_about=8130 lat=-15.92 lon=-69.31 west=-70.04 south=-16.6 east=-68.58 north=-15.24 core.source="natural-earth 5.1.2"
+@k.geo.lake.Mar_Chiquita k.geo.lake name="Mar Chiquita" continent="South America" country=Argentina area_about=2100 lat=-30.73 lon=-62.62 west=-63.02 south=-30.94 east=-62.21 north=-30.51 core.source="natural-earth 5.1.2"
+@k.geo.desert.Atacama_Desert k.geo.desert name="Atacama Desert" continent="South America" lat=-22.95 lon=-69.39 west=-70.91 south=-28 east=-67.87 north=-17.89 core.source="natural-earth 5.1.2"
+@k.geo.desert.Caatinga k.geo.desert name=Caatinga continent="South America" lat=-6.9 lon=-40.02 west=-45.11 south=-11.38 east=-34.94 north=-2.42 core.source="natural-earth 5.1.2"
+@k.geo.desert.Salar_de_Uyuni k.geo.desert name="Salar de Uyuni" continent="South America" lat=-20.25 lon=-67.39 west=-68.05 south=-21.26 east=-66.73 north=-19.24 core.source="natural-earth 5.1.2"
 @k.geo.word.ARG core.word text="Argentine Republic" means=Argentina of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.BOL core.word text="Plurinational State of Bolivia" means=Bolivia of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.BRA core.word text="Federative Republic of Brazil" means=Brazil of=k.geo.country.name core.source="natural-earth 5.1.2"
@@ -288,3 +296,8 @@
 @k.geo.word.SUR core.word text="Republic of Suriname" means=Suriname of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.URY core.word text="Oriental Republic of Uruguay" means=Uruguay of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.VEN core.word text="Bolivarian Republic of Venezuela" means=Venezuela of=k.geo.country.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Argentino core.word text="Lago Argentino" means="Lake Argentino" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_General_Carrera core.word text="Lago Buenos Aires" means="Lake General Carrera" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Poopo core.word text="Lago Poopó" means="Lake Poopó" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Titicaca core.word text="Lago Titicaca" means="Lake Titicaca" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Mar_Chiquita core.word text="Mar de Ansenuza" means="Mar Chiquita" of=k.geo.lake.name core.source="natural-earth 5.1.2"

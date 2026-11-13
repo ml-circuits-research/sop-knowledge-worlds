@@ -1,4 +1,4 @@
-# k.geo/shards/europe: Europe: 50 countries and territories, 192 cities, 245 rivers, 83 mountains, 27 mountain ranges.
+# k.geo/shards/europe: Europe: 50 countries and territories, 192 cities, 245 rivers, 83 mountains, 27 mountain ranges, 15 lakes, 0 deserts.
 # sources: natural-earth 5.1.2 (Natural Earth, public domain)
 # license: public-domain
 # script: tools/import/geo.mjs
@@ -601,6 +601,21 @@
 @k.geo.range.Ural_Mountains.europe k.geo.range name="Ural Mountains" continent=Europe lat=59.96 lon=61.56 west=56.22 south=51.57 east=66.91 north=68.36 core.source="natural-earth 5.1.2"
 @k.geo.range.Vatnajokull.europe k.geo.range name=Vatnajökull continent=Europe lat=64.45 lon=-16.76 west=-18.17 south=64 east=-15.35 north=64.91 core.source="natural-earth 5.1.2"
 @k.geo.range.Vosges_Mountains.europe k.geo.range name="Vosges Mountains" continent=Europe lat=48.81 lon=7.34 west=6.52 south=47.81 east=8.16 north=49.82 core.source="natural-earth 5.1.2"
+@k.geo.lake.IJsselmeer k.geo.lake name=IJsselmeer continent=Europe country=Netherlands area_about=1960 lat=52.67 lon=5.42 west=4.97 south=52.26 east=5.87 north=53.08 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Baikal k.geo.lake name="Lake Baikal" continent=Europe country=Russia area_about=31400 lat=53.63 lon=106.83 west=103.71 south=51.47 east=109.96 north=55.79 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Chany k.geo.lake name="Lake Chany" continent=Europe country=Russia area_about=2030 lat=54.83 lon=77.39 west=76.72 south=54.6 east=78.07 north=55.07 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Inari k.geo.lake name="Lake Inari" continent=Europe country=Finland area_about=1610 lat=69.07 lon=27.92 west=27.01 south=68.7 east=28.83 north=69.44 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Khanka k.geo.lake name="Lake Khanka" continent=Europe country=China country=Russia area_about=4040 lat=44.93 lon=132.41 west=131.98 south=44.53 east=132.84 north=45.34 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Ladoga k.geo.lake name="Lake Ladoga" continent=Europe country=Russia area_about=17600 lat=60.84 lon=31.38 west=29.8 south=59.9 east=32.95 north=61.78 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Onega k.geo.lake name="Lake Onega" continent=Europe country=Russia area_about=9890 lat=61.89 lon=35.19 west=33.93 south=60.85 east=36.46 north=62.92 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Peipus k.geo.lake name="Lake Peipus" continent=Europe country=Estonia country=Russia area_about=2750 lat=58.62 lon=27.39 west=26.95 south=58.22 east=27.84 north=59.02 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Saimaa k.geo.lake name="Lake Saimaa" continent=Europe country=Finland area_about=9310 lat=62.33 lon=28.45 west=26.88 south=61.06 east=30.02 north=63.6 core.source="natural-earth 5.1.2"
+@k.geo.lake.Lake_Taymyr k.geo.lake name="Lake Taymyr" continent=Europe country=Russia area_about=4620 lat=74.5 lon=102.46 west=99.12 south=73.83 east=105.79 north=75.18 core.source="natural-earth 5.1.2"
+@k.geo.lake.Malaren k.geo.lake name=Mälaren continent=Europe country=Sweden area_about=1810 lat=59.52 lon=17.06 west=16.02 south=59.22 east=18.1 north=59.81 core.source="natural-earth 5.1.2"
+@k.geo.lake.Paijanne k.geo.lake name=Päijänne continent=Europe country=Finland area_about=4190 lat=62.09 lon=26.16 west=25.14 south=60.93 east=27.18 north=63.25 core.source="natural-earth 5.1.2"
+@k.geo.lake.Syvash k.geo.lake name=Syvash continent=Europe country=Russia country=Ukraine area_about=2340 lat=45.77 lon=34.56 west=33.67 south=45.25 east=35.46 north=46.28 core.source="natural-earth 5.1.2"
+@k.geo.lake.Vanern k.geo.lake name=Vänern continent=Europe country=Sweden area_about=5720 lat=58.88 lon=13.21 west=12.3 south=58.36 east=14.12 north=59.41 core.source="natural-earth 5.1.2"
+@k.geo.lake.Vattern k.geo.lake name=Vättern continent=Europe country=Sweden area_about=1950 lat=58.33 lon=14.54 west=14.09 south=57.78 east=14.99 north=58.88 core.source="natural-earth 5.1.2"
 @k.geo.word.ALB core.word text="Republic of Albania" means=Albania of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.AND core.word text="Principality of Andorra" means=Andorra of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.AUT core.word text="Republic of Austria" means=Austria of=k.geo.country.name core.source="natural-earth 5.1.2"
@@ -646,3 +661,8 @@
 @k.geo.word.GBR core.word text="United Kingdom of Great Britain and Northern Ireland" means="United Kingdom" of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.VAT core.word text="Vatican City" text="State of the Vatican City" means=Vatican of=k.geo.country.name core.source="natural-earth 5.1.2"
 @k.geo.word.ALD core.word text=Aland text="Åland Islands" means=Åland of=k.geo.country.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.IJsselmeer core.word text="Lake IJssel, Lake Yssel" means=IJsselmeer of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Inari core.word text=Inarijrvi means="Lake Inari" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Khanka core.word text="Xingkai Hu, Ozero Khanka" means="Lake Khanka" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Lake_Peipus core.word text="Lake Peipsi-Pihkva" means="Lake Peipus" of=k.geo.lake.name core.source="natural-earth 5.1.2"
+@k.geo.word.lake.Malaren core.word text="Lake Malar" means=Mälaren of=k.geo.lake.name core.source="natural-earth 5.1.2"

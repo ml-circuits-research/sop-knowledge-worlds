@@ -13,7 +13,12 @@ Units of measure and how to convert them.
 - `core.word` facts: plurals, American spellings and symbols (`kilometers`, `km` → `kilometre`).
 - Imperial volume units are the British ones (pint 0.568 l, gallon 4.546 l).
 
-One shard, `core`: 8 quantities, 44 units, 44 word wires. Hand-written (`hand-core 1`, CC0-1.0).
+`core`: 8 quantities, 45 units, 45 word wires. Hand-written (`hand-core 1`, CC0-1.0).
+
+`measures` (Round 9): `k.units.measure` (identity `world`, `type`, `key`): in which unit a number of another world
+is given (`unit`, a unit of this world), what it counts (`counts=person`, `counts=leg`), or that it is a place in an
+order (`ordinal=true`); `approximate=true` for the keys with the suffix `_about`. Written by
+`tools/measures-core.mjs`, which reads the schemas of the worlds it lists and refuses a number without an entry.
 
 ## Questions it helps with
 

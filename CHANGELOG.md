@@ -42,3 +42,9 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
   has `cannot=fly`. The shards are now written by `tools/animals-core.mjs` from `sources/hand-core/animals.tsv`.
 - `k.layouts.anchor`: `part` is absent on the anchors of the new shard `anchors-points` (a place in the frame of a
   drawing whose parts have no names).
+
+### k.geo 2 and k.units 1, additions (2026-11-13, Round 9, not breaking)
+
+- `k.geo`: new types `lake`, `desert`, `sea`; `area_about` and `named` on `continent`; `length_about` and `named` on
+  `river`; `capital` may now come from the `-borders` shard. New shards `seas` and `numbers`.
+- `k.units`: new type `measure` (the unit of a number of another world) and shard `measures`; new unit `year`.

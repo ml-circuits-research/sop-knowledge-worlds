@@ -13,3 +13,5 @@
 - **What is kept:** per country that Natural Earth also has (joined by code; 233 of 250): `neighbour` (the
   countries of `borders`), `area` (square kilometres), `landlocked`; in the shards `<continent>-borders`, which keep
   this licence. Everything else of `k.geo` comes from Natural Earth (the owner's rule: the more permissive source).
+- **Round 9 (2026-11-13):** also kept: `capital`, only for the 37 countries and territories for which Natural Earth
+  marks no capital; in the `-borders` shards, under ODbL like the rest of the list.

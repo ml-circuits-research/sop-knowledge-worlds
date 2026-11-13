@@ -1,4 +1,4 @@
-# k.geo/shards/asia-borders: Asia: the neighbours, the area in square kilometres and whether it is landlocked, for 50 countries and territories. Tell it with the shard asia: the facts of one country merge.
+# k.geo/shards/asia-borders: Asia: the neighbours, the area in square kilometres and whether it is landlocked, for 50 countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard asia: the facts of one country merge.
 # sources: countries 5.1.0 (mledoze/countries, ODbL-1.0)
 # license: ODbL-1.0
 # script: tools/import/geo.mjs
@@ -14,7 +14,7 @@
 @k.geo.borders.CHN k.geo.country name=China neighbour=Afghanistan neighbour=Bhutan neighbour="Hong Kong" neighbour=India neighbour=Kazakhstan neighbour=Kyrgyzstan neighbour=Laos neighbour=Macao neighbour=Mongolia neighbour=Myanmar neighbour=Nepal neighbour="North Korea" neighbour=Pakistan neighbour=Russia neighbour=Tajikistan neighbour=Vietnam area=9706961 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.CYP k.geo.country name=Cyprus area=9251 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.GEO k.geo.country name=Georgia neighbour=Armenia neighbour=Azerbaijan neighbour=Russia neighbour=Turkey area=69700 landlocked=false core.source="countries 5.1.0"
-@k.geo.borders.HKG k.geo.country name="Hong Kong" neighbour=China area=1104 landlocked=false core.source="countries 5.1.0"
+@k.geo.borders.HKG k.geo.country name="Hong Kong" capital="City of Victoria" neighbour=China area=1104 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.IND k.geo.country name=India neighbour=Bangladesh neighbour=Bhutan neighbour=China neighbour=Myanmar neighbour=Nepal neighbour=Pakistan area=3287590 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.IDN k.geo.country name=Indonesia neighbour=Malaysia neighbour="Papua New Guinea" neighbour=Timor-Leste area=1904569 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.IRN k.geo.country name=Iran neighbour=Afghanistan neighbour=Armenia neighbour=Azerbaijan neighbour=Iraq neighbour=Pakistan neighbour=Turkey neighbour=Turkmenistan area=1648195 landlocked=false core.source="countries 5.1.0"

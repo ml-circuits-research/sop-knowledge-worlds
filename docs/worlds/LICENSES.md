@@ -101,7 +101,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.attributes` (7 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.layouts` (4 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (1 shards), `k.values` (7 shards), `k.wearables` (2 shards)
+- Used by: `k.actions` (18 shards), `k.animals` (5 shards), `k.attributes` (7 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.faces` (19 shards), `k.feelings` (1 shards), `k.food` (5 shards), `k.geo` (1 shards), `k.layouts` (4 shards), `k.objects` (22 shards), `k.people` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.time` (1 shards), `k.units` (2 shards), `k.values` (7 shards), `k.wearables` (2 shards)
 
 ## mulberry-fa94a93
 
@@ -115,11 +115,11 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 ## natural-earth-5.1.2
 
 - What: public domain map data: countries, populated places, rivers, elevation points and physical regions, with names and attributes. Used for `k.geo`.
-- Origin: https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`, `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`, `ne_10m_geography_regions_polys` (`.geojson`).
+- Origin: https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`, `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`, `ne_10m_geography_regions_polys`, `ne_10m_lakes`, `ne_10m_geography_marine_polys` (`.geojson`).
 - License: public domain (`LICENSE.md` of the repository: "All versions of Natural Earth raster + vector map data found on this website are in the public domain"); written `public-domain` in shard headers and the catalog.
 - Attribution: none required. Made with Natural Earth, free vector and raster map data at naturalearthdata.com.
 - Shard terms: public-domain
-- Used by: `k.geo` (7 shards)
+- Used by: `k.geo` (8 shards)
 
 ## noto-emoji-99701e0
 

@@ -1,4 +1,4 @@
-# k.geo/shards/africa-borders: Africa: the neighbours, the area in square kilometres and whether it is landlocked, for 58 countries and territories. Tell it with the shard africa: the facts of one country merge.
+# k.geo/shards/africa-borders: Africa: the neighbours, the area in square kilometres and whether it is landlocked, for 58 countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard africa: the facts of one country merge.
 # sources: countries 5.1.0 (mledoze/countries, ODbL-1.0)
 # license: ODbL-1.0
 # script: tools/import/geo.mjs
@@ -7,7 +7,7 @@
 @k.geo.borders.AGO k.geo.country name=Angola neighbour=Congo neighbour="Democratic Republic of the Congo" neighbour=Namibia neighbour=Zambia area=1246700 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.BEN k.geo.country name=Benin neighbour="Burkina Faso" neighbour=Niger neighbour=Nigeria neighbour=Togo area=112622 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.BWA k.geo.country name=Botswana neighbour=Namibia neighbour="South Africa" neighbour=Zambia neighbour=Zimbabwe area=582000 landlocked=true core.source="countries 5.1.0"
-@k.geo.borders.IOT k.geo.country name="British Indian Ocean Territory" area=60 landlocked=false core.source="countries 5.1.0"
+@k.geo.borders.IOT k.geo.country name="British Indian Ocean Territory" capital="Diego Garcia" area=60 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.BFA k.geo.country name="Burkina Faso" neighbour=Benin neighbour="Côte d'Ivoire" neighbour=Ghana neighbour=Mali neighbour=Niger neighbour=Togo area=272967 landlocked=true core.source="countries 5.1.0"
 @k.geo.borders.BDI k.geo.country name=Burundi neighbour="Democratic Republic of the Congo" neighbour=Rwanda neighbour=Tanzania area=27834 landlocked=true core.source="countries 5.1.0"
 @k.geo.borders.CPV k.geo.country name="Cabo Verde" area=4033 landlocked=false core.source="countries 5.1.0"
@@ -23,7 +23,7 @@
 @k.geo.borders.GNQ k.geo.country name="Equatorial Guinea" neighbour=Cameroon neighbour=Gabon area=28051 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.ERI k.geo.country name=Eritrea neighbour=Djibouti neighbour=Ethiopia neighbour=Sudan area=117600 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.ETH k.geo.country name=Ethiopia neighbour=Djibouti neighbour=Eritrea neighbour=Kenya neighbour=Somalia neighbour="South Sudan" neighbour=Sudan area=1104300 landlocked=true core.source="countries 5.1.0"
-@k.geo.borders.ATF k.geo.country name="French Southern and Antarctic Lands" area=7747 landlocked=false core.source="countries 5.1.0"
+@k.geo.borders.ATF k.geo.country name="French Southern and Antarctic Lands" capital=Port-aux-Français area=7747 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.GAB k.geo.country name=Gabon neighbour=Cameroon neighbour=Congo neighbour="Equatorial Guinea" area=267668 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.GMB k.geo.country name=Gambia neighbour=Senegal area=10689 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.GHA k.geo.country name=Ghana neighbour="Burkina Faso" neighbour="Côte d'Ivoire" neighbour=Togo area=238533 landlocked=false core.source="countries 5.1.0"
@@ -45,13 +45,13 @@
 @k.geo.borders.NER k.geo.country name=Niger neighbour=Algeria neighbour=Benin neighbour="Burkina Faso" neighbour=Chad neighbour=Libya neighbour=Mali neighbour=Nigeria area=1267000 landlocked=true core.source="countries 5.1.0"
 @k.geo.borders.NGA k.geo.country name=Nigeria neighbour=Benin neighbour=Cameroon neighbour=Chad neighbour=Niger area=923768 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.RWA k.geo.country name=Rwanda neighbour=Burundi neighbour="Democratic Republic of the Congo" neighbour=Tanzania neighbour=Uganda area=26338 landlocked=true core.source="countries 5.1.0"
-@k.geo.borders.SHN k.geo.country name="Saint Helena" area=394 landlocked=false core.source="countries 5.1.0"
+@k.geo.borders.SHN k.geo.country name="Saint Helena" capital=Jamestown area=394 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.SEN k.geo.country name=Senegal neighbour=Gambia neighbour=Guinea neighbour=Guinea-Bissau neighbour=Mali neighbour=Mauritania area=196722 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.SYC k.geo.country name=Seychelles area=452 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.SLE k.geo.country name="Sierra Leone" neighbour=Guinea neighbour=Liberia area=71740 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.SOM k.geo.country name=Somalia neighbour=Djibouti neighbour=Ethiopia neighbour=Kenya area=637657 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.ZAF k.geo.country name="South Africa" neighbour=Botswana neighbour=Lesotho neighbour=Mozambique neighbour=Namibia neighbour=Zimbabwe neighbour=eSwatini area=1221037 landlocked=false core.source="countries 5.1.0"
-@k.geo.borders.SDS k.geo.country name="South Sudan" neighbour="Central African Republic" neighbour="Democratic Republic of the Congo" neighbour=Ethiopia neighbour=Kenya neighbour=Sudan neighbour=Uganda area=619745 landlocked=true core.source="countries 5.1.0"
+@k.geo.borders.SDS k.geo.country name="South Sudan" capital=Juba neighbour="Central African Republic" neighbour="Democratic Republic of the Congo" neighbour=Ethiopia neighbour=Kenya neighbour=Sudan neighbour=Uganda area=619745 landlocked=true core.source="countries 5.1.0"
 @k.geo.borders.SDN k.geo.country name=Sudan neighbour="Central African Republic" neighbour=Chad neighbour=Egypt neighbour=Eritrea neighbour=Ethiopia neighbour=Libya neighbour="South Sudan" area=1886068 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.STP k.geo.country name="São Tomé and Principe" area=964 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.TZA k.geo.country name=Tanzania neighbour=Burundi neighbour="Democratic Republic of the Congo" neighbour=Kenya neighbour=Malawi neighbour=Mozambique neighbour=Rwanda neighbour=Uganda neighbour=Zambia area=945087 landlocked=false core.source="countries 5.1.0"

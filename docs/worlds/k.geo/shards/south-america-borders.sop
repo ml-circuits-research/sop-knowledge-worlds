@@ -1,4 +1,4 @@
-# k.geo/shards/south-america-borders: South America: the neighbours, the area in square kilometres and whether it is landlocked, for 13 countries and territories. Tell it with the shard south-america: the facts of one country merge.
+# k.geo/shards/south-america-borders: South America: the neighbours, the area in square kilometres and whether it is landlocked, for 13 countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard south-america: the facts of one country merge.
 # sources: countries 5.1.0 (mledoze/countries, ODbL-1.0)
 # license: ODbL-1.0
 # script: tools/import/geo.mjs
@@ -9,7 +9,7 @@
 @k.geo.borders.CHL k.geo.country name=Chile neighbour=Argentina neighbour=Bolivia neighbour=Peru area=756102 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.COL k.geo.country name=Colombia neighbour=Brazil neighbour=Ecuador neighbour=Panama neighbour=Peru neighbour=Venezuela area=1141748 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.ECU k.geo.country name=Ecuador neighbour=Colombia neighbour=Peru area=276841 landlocked=false core.source="countries 5.1.0"
-@k.geo.borders.FLK k.geo.country name="Falkland Islands" area=12173 landlocked=false core.source="countries 5.1.0"
+@k.geo.borders.FLK k.geo.country name="Falkland Islands" capital=Stanley area=12173 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.GUY k.geo.country name=Guyana neighbour=Brazil neighbour=Suriname neighbour=Venezuela area=214969 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.PRY k.geo.country name=Paraguay neighbour=Argentina neighbour=Bolivia neighbour=Brazil area=406752 landlocked=true core.source="countries 5.1.0"
 @k.geo.borders.PER k.geo.country name=Peru neighbour=Bolivia neighbour=Brazil neighbour=Chile neighbour=Colombia neighbour=Ecuador area=1285216 landlocked=false core.source="countries 5.1.0"

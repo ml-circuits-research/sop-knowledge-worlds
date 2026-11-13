@@ -2063,3 +2063,52 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Q29: the usual colour for the rest of the 2,000 things (only where plain; from the drawing; or "any colour" as a
   fact). Q30: plain names and model-labelled parts next to WordNet's in `k.parts`. Neither blocks; meanwhile (a)
   in both. Round 8 of the second worker is done as far as the six items and the aspects go.
+
+## Round 9, item 3 (2026-11-13, first worker): places beyond countries in `k.geo`; `k.units.measure` (the unit of every number)
+
+- **Capitals:** "capital of X" was answered for 195 of 238 countries and territories. Now for 232: the 37 for which
+  Natural Earth marks no capital get it from the country list (mledoze/countries, ODbL, in the `-borders` shards):
+  South Sudan, Nauru, Greenland, Puerto Rico, Hong Kong … Still none: Macao, Northern Cyprus, Åland and three
+  territories without inhabitants (neither source names one). A test holds: every independent country but those
+  three answers.
+- **Lakes, from Natural Earth (`ne_10m_lakes`, newly fetched):** `k.geo.lake`, the 100 largest natural lakes with
+  the countries on their shores and `area_about` in square kilometres: the area of the 1:10m outline worked out on
+  the sphere, three digits kept. Checked against the usual figures in a test: Superior 82,100 (82,100), Victoria
+  67,300 (68,900), Baikal 31,400 (31,500), Titicaca 8,130 (8,370).
+- **Deserts and seas, from Natural Earth:** `k.geo.desert` (58) and `k.geo.sea` (72: the 5 oceans, 45 seas, gulfs,
+  bays, straits, channels of scale rank 0 to 3; `ne_10m_geography_marine_polys`, newly fetched), each with kind or
+  continent, centre and box.
+- **What the geometry does not give, and I did not take from it:** river lengths (Natural Earth names rivers
+  piece by piece: its Nile line is 2,760 km, its Amazon 3,150 km) and the areas of deserts and seas (label
+  outlines: its Mediterranean is 1.57 million km² because the Tyrrhenian and the others are cut out; its Libyan
+  Desert is 3 million km²). I worked them out, read the first thirty of each, and dropped them.
+- **Hand-written numbers instead (`tools/geo-numbers.mjs`, shard `numbers`, `hand-core 1`, `named=model`,
+  `_about`):** the length of 54 well-known rivers, the area of the 5 oceans, 17 seas, 17 deserts and the 7
+  continents, as usually given; 12 other names (Amazon for Natural Earth's "Amazonas", Yellow River for "Huang").
+  Each fact names a thing of the imported shards (the tool refuses otherwise) and merges with it. Left out because
+  the usual figures disagree: Yenisei, Brahmaputra, Irtysh, Salween, Madeira, Okavango, Ebro, Bay of Bengal, East
+  China Sea, Chihuahuan and Libyan Desert. **These numbers are from memory, with no second source in reach**
+  (Wikidata is not reachable); a test checks only their order of size.
+- **Mountains:** 627 already had `elevation` in metres; nothing added.
+- **`k.units.measure` (the reviewer's block of 21:30: numbers with units):** a new type in `k.units` and shard
+  `measures` (50 wires): for every numeric slot of `k.geo` and `k.animals` the unit (`unit=metre`, a
+  `k.units.unit`), what it counts (`counts=person`, `counts=leg`) or `ordinal=true`; `approximate=true` for
+  `_about` keys. `tools/measures-core.mjs` reads the schemas and refuses a numeric slot without an entry, so a
+  number cannot be published without its unit in the worlds listed; the other Round 9 worlds join the list with
+  their items. New unit `year`. **A choice of mine, not asked for in this form:** the unit is said once per
+  slot, not on every fact, and in `k.units`, not in each world. If the reviewer wants it elsewhere it is one tool.
+- **Natural questions (item 8), geography:** 160 well-known places written down without looking at `k.geo`
+  (`sources/hand-core/questions/geo.tsv`: 60 countries, 25 rivers, 20 mountains, 15 lakes, 10 deserts, 17 seas
+  and oceans, the continents), 428 questions (capital, continent, population, area; length, countries; height;
+  area …). The seeded sample of 100: **before 66, now 97**. All 428: before 299, now 405. Without a fact: Lake
+  Chad, Lake Geneva and Lake Constance (not among the 100 largest), the Dead Sea, the Mojave and the Arabian
+  Desert (not in Natural Earth's list), Kilimanjaro, Vesuvius, Mount Olympus, Mount Cook, Kangchenjunga (not
+  under these names among the 627 summits). The coverage of common things is unchanged (680 by name).
+- **Looked at:** the names of all 100 lakes, 58 deserts and 72 seas as printed; the 37 capitals from the list.
+  **Not looked at:** the countries on the shores of the lakes beyond Lake Victoria (a test); the boxes.
+- **Seen and left:** Natural Earth files Russia under Europe, so Lena, Ob and Amur are rivers "in Europe".
+- Tests: `tests/k.geo.test.mjs` (5), `tests/import.geo.test.mjs` (one more, on a fixture), questions geo-17 to
+  geo-24, un-12, un-13.
+- Numbers: k.geo 15 shards, 3,858 wires, 695,907 bytes (was 13 shards, 3,473 wires, 630,063 bytes); k.units 2
+  shards. Catalog 22 worlds, 848 shards, vocab 21,881 words; 0 errors, 0 warnings.
+- After the rebase on R8.6 (the coverage report, second worker): `tools/coverage-report.mjs` run again; one line changes in `COVERAGE.md` (`k.units` now has a word for 2 of the common things). npm test 2,611 pass, 0 fail.
