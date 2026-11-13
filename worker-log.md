@@ -224,3 +224,12 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - Seen while labelling, not recognisable after conversion: spider web (the holes of the web are dropped: a dark
   blob), gorilla, panda (dark shapes cover the face), lizard (head and legs lost to the 16-part cap). 4 of 108.
 - npm test 913 pass; 133,565 wires, 124 shards (unchanged); vocab 13,022 words.
+
+## R2.7 batch 2 (2026-11-13): 108 more objects looked at (416 of 811)
+
+- Books and paper, clothes, shoes, hats, computer things, dishware, drinks, events, Asian food, first fruits.
+- part-names.tsv: rows for 361 objects; **1,205 parts named, 387 marked detail** (this batch: +203 names, +119
+  details, 83 of 108 objects with a row). Clothes, food and drinks name less than animals: often only the main part
+  (cup, bottle, shirt) and a few details are sure.
+- Not recognisable: optical disk, dvd (plain discs; the hole and the shine are lost). 2 of 108.
+- npm test 913 pass; shards unchanged in number and wires; vocab 13,088 words.

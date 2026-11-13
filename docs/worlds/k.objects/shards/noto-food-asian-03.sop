@@ -6,7 +6,7 @@
 
 # takeout box
 @k.objects.u1f961 k.objects.object name="takeout box" core.source="noto-emoji 99701e0" core.source="cldr 48"
-@k.objects.u1f961.p1 k.objects.part of="takeout box" name=part1 shape=polygon x=5.9 y=3.3 w=88.1 h=93.7 z=1 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
+@k.objects.u1f961.p1 k.objects.part of="takeout box" name=box named=model shape=polygon x=5.9 y=3.3 w=88.1 h=93.7 z=1 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
 @k.objects.u1f961.p1.1 k.objects.point part=$k.objects.u1f961.p1 n=1 x=56.6 y=63 core.source="noto-emoji 99701e0"
 @k.objects.u1f961.p1.2 k.objects.point part=$k.objects.u1f961.p1 n=2 x=86.1 y=29.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f961.p1.3 k.objects.point part=$k.objects.u1f961.p1 n=3 x=94 y=20.1 core.source="noto-emoji 99701e0"
