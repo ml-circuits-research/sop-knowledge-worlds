@@ -1,0 +1,177 @@
+# a	rel	b	side
+# What joins what between kinds of thing (Round 7 addendum 2, 2026-11-13), as k.layouts.joins says it: a is rel b;
+# rel is part_of, attaches_to, sits_on, hangs_from, goes_in, worn_on, grows_on, held_in or connects; side says
+# where on b (top, bottom, side, front, back, end, edge, corner, centre, inside, around), empty when there is no
+# usual place. Written by a language model, only where sure (named=model); k.commonsense has no part facts yet,
+# so none comes from there. tools/layouts-core.mjs writes the shard `joins`.
+roof	attaches_to	wall	top
+roof	part_of	house	top
+wall	part_of	house	
+door	part_of	house	front
+window	part_of	wall	
+window	part_of	house	
+chimney	attaches_to	roof	top
+chimney	part_of	house	top
+floor	part_of	room	bottom
+ceiling	part_of	room	top
+wall	part_of	room	side
+step	part_of	stairs	
+rung	part_of	ladder	
+tower	part_of	castle	
+gate	part_of	fence	
+gate	part_of	castle	front
+battlement	part_of	tower	top
+wheel	part_of	car	bottom
+wheel	part_of	bicycle	bottom
+wheel	part_of	truck	bottom
+wheel	part_of	train	bottom
+wheel	part_of	wagon	bottom
+wheel	attaches_to	axle	end
+door	part_of	car	side
+engine	part_of	car	front
+headlight	part_of	car	front
+windscreen	part_of	car	front
+steering wheel	part_of	car	inside
+seat	part_of	car	inside
+seat	part_of	bicycle	top
+handlebar	part_of	bicycle	front
+pedal	part_of	bicycle	bottom
+saddle	sits_on	horse	top
+wing	part_of	plane	side
+tail	part_of	plane	back
+propeller	attaches_to	plane	front
+sail	attaches_to	mast	side
+mast	part_of	boat	top
+anchor	hangs_from	boat	front
+wagon	attaches_to	locomotive	back
+trailer	attaches_to	truck	back
+chimney	part_of	locomotive	top
+hat	sits_on	head	top
+crown	sits_on	head	top
+helmet	worn_on	head	top
+glasses	sits_on	nose	top
+glasses	worn_on	face	front
+mask	worn_on	face	front
+earring	hangs_from	ear	bottom
+necklace	worn_on	neck	around
+scarf	worn_on	neck	around
+tie	worn_on	neck	front
+collar	worn_on	neck	around
+leash	attaches_to	collar	
+ring	worn_on	finger	around
+bracelet	worn_on	wrist	around
+watch	worn_on	wrist	around
+glove	worn_on	hand	around
+shoe	worn_on	foot	around
+sock	worn_on	foot	around
+boot	worn_on	foot	around
+belt	worn_on	waist	around
+backpack	worn_on	back	
+head	attaches_to	neck	top
+neck	attaches_to	body	top
+arm	attaches_to	shoulder	side
+hand	part_of	arm	end
+finger	part_of	hand	end
+leg	attaches_to	body	bottom
+foot	part_of	leg	end
+toe	part_of	foot	end
+eye	part_of	face	
+nose	part_of	face	centre
+mouth	part_of	face	bottom
+ear	part_of	head	side
+hair	grows_on	head	top
+beard	grows_on	chin	
+tail	part_of	dog	back
+tail	part_of	cat	back
+wing	part_of	bird	side
+beak	part_of	bird	front
+feather	part_of	bird	
+fin	part_of	fish	
+horn	part_of	cow	top
+trunk	part_of	elephant	front
+leaf	grows_on	branch	
+branch	attaches_to	trunk	side
+trunk	part_of	tree	bottom
+root	part_of	tree	bottom
+crown	part_of	tree	top
+flower	grows_on	stem	top
+petal	part_of	flower	around
+apple	grows_on	tree	
+fruit	grows_on	branch	
+nest	sits_on	branch	top
+handle	part_of	cup	side
+handle	part_of	door	side
+handle	part_of	bag	top
+handle	part_of	pan	side
+handle	part_of	suitcase	top
+lid	sits_on	pot	top
+lid	sits_on	box	top
+lid	sits_on	jar	top
+cap	sits_on	bottle	top
+cork	goes_in	bottle	top
+spout	part_of	teapot	side
+leg	part_of	table	bottom
+leg	part_of	chair	bottom
+back	part_of	chair	back
+seat	part_of	chair	
+drawer	goes_in	desk	front
+shelf	attaches_to	wall	
+cushion	sits_on	sofa	top
+pillow	sits_on	bed	top
+blanket	sits_on	bed	top
+mattress	sits_on	bed	top
+lampshade	sits_on	lamp	top
+bulb	goes_in	lamp	
+plug	goes_in	socket	
+key	goes_in	lock	
+lock	part_of	door	side
+hinge	attaches_to	door	side
+picture	hangs_from	wall	
+picture	goes_in	frame	inside
+clock	hangs_from	wall	
+curtain	hangs_from	window	top
+coat	hangs_from	hook	
+hook	attaches_to	wall	
+nail	goes_in	wall	
+arrow	connects	box	edge
+arrow	attaches_to	box	edge
+arrowhead	part_of	arrow	end
+line	connects	point	
+label	attaches_to	arrow	centre
+caption	attaches_to	picture	bottom
+flag	attaches_to	pole	top
+kite	attaches_to	string	end
+balloon	attaches_to	string	end
+string	held_in	hand	
+bucket	hangs_from	rope	end
+swing	hangs_from	branch	
+bridge	connects	bank	
+road	connects	town	
+rail	part_of	track	
+button	attaches_to	shirt	front
+pocket	part_of	trousers	side
+sleeve	part_of	shirt	side
+hood	part_of	coat	top
+lace	part_of	shoe	top
+sole	part_of	shoe	bottom
+heel	part_of	shoe	back
+zip	part_of	jacket	front
+blade	attaches_to	handle	end
+blade	part_of	knife	
+string	part_of	guitar	front
+key	part_of	piano	front
+screen	part_of	computer	
+page	part_of	book	inside
+cover	part_of	book	
+candle	sits_on	cake	top
+cherry	sits_on	cake	top
+straw	goes_in	glass	top
+egg	goes_in	nest	
+letter	goes_in	envelope	
+stamp	attaches_to	envelope	corner
+envelope	goes_in	mailbox	
+coin	goes_in	purse	
+star	sits_on	Christmas tree	top
+bauble	hangs_from	Christmas tree	
+cup	sits_on	saucer	top
+rider	sits_on	horse	top

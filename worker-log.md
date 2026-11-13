@@ -1570,3 +1570,54 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - **Q26:** nothing waits; addendum 2 is next. Q24 to Q26 are moved to Closed in `questions.md`.
 - Numbers: scene previews 61 files and the page, 2,388 kB (440 kB when they referred to the object files).
   Catalog 14 worlds, 779 shards, vocab 19,487 words (19,484); 0 errors, 0 warnings. npm test 2,414 pass, 0 fail.
+
+## Round 7 addendum 2 (2026-11-13): `k.layouts`: arrangements, anchors, what joins what
+
+- **New world `k.layouts`** (version 1, exports `layout`, `slot`, `relation`, `anchor`, `joins`), three shards written
+  by `tools/layouts-core.mjs`: `layouts` (175 wires, 30,812 bytes), `anchors` (117 wires, 20,096 bytes), `joins`
+  (171 wires, 22,328 bytes).
+- **1. Arrangements:** 17 `k.layouts.layout` facts: the 13 asked for (row, column, grid, ring, scatter, corners,
+  stack, tree, flow, landscape, face, room, family photo) and pyramid, radial, nested, border. 50 places
+  (`k.layouts.slot`: count, pair, optional, what it holds, the arrangement inside it, and for the fixed pictures a
+  usual box in a 0 to 100 frame), 91 relations (`k.layouts.relation`: left_of, above, inside, around, on, behind,
+  beside, aligned_row, aligned_column, same_size, smaller_than, evenly_spaced, apart, joined_to), `usual_for` (4
+  to 6 phrases each), 17 `core.word` facts with other names (queue, pile, circle, flowchart, hierarchy, scenery,
+  group photo …). In a place for many things a relation names the same place twice and says `among=neighbours` or
+  `among=all` (a row: `item left_of item among=neighbours`); a grid is rows (`arranged=row`) one above the other.
+- **The face** has the 16 places of `k.faces` (style plain) and their boxes, read from the k.faces shard by the tool
+  (a test compares them), with 24 relations. I wrote no separate anchors for faces: a k.faces slot already is the
+  place where a variant sits (box, draw order, mirror); the arrangement adds how the places sit to each other.
+- **2. Anchors:** `k.layouts.anchor`, 117 places on 93 of the 225 hand-written objects: 35 openings (doors, gates,
+  a mailbox slot, the opening of a shoe), 23 surfaces (table, shelves, stove, bridge deck, roads), 13 handles, 12
+  insides (cup, pan, the crown of a tree, a nest, the cabin of a car), 7 waters (lake, mountain lake, river, sea,
+  pool, swamp, under the bridge), 6 tops (head of the person, hill, mountain, tower, pole, train chimney), 5 seats
+  (chair, sofa, throne, saddle, bicycle), 5 roofs, 4 hands (person, robot), 4 bases (hat, flag, house, tree), 3
+  hooks. The table `sources/hand-core/anchors.tsv` names the object, a named part and where on the part's box
+  (box, an edge, a corner, top_centre); the tool works out the box, so an anchor always lies on its part.
+  `named=model`. They are in `k.layouts`, named by the object (as `k.scenes.thing` is), so `k.objects` did not change.
+- **Audit of the anchors, all of them:** each of the 118 rows first written was drawn on its object (the box, line
+  or point in colour over the preview), 3 sheets of up to 40 at 150 px, all read: **115 right, 2 wrong, 1 unclear**
+  (1.7% wrong). Wrong and corrected: the umbrella handle (the part `handle` is the whole stick; now the hook), the
+  top of the hill (a line over the whole width; now the point top_centre). Unclear and taken out: the clip of the
+  leash. The two corrected ones were drawn and looked at again. Record: `sources/hand-core/anchors-audit.tsv`.
+- **Not done for anchors:** the 132 hand-written objects without one (animals, food, bottles, most land forms,
+  tools: no place I was sure of, e.g. the back of the mule, the ladder's rungs) and all 1,883 imported objects:
+  their parts are mostly unnamed, so a rule from part names does not reach them. The swing of the reviewer's
+  example is an imported drawing: no anchor.
+- **3. What joins what:** `k.layouts.joins`, 171 facts between kinds: 79 part_of, 25 attaches_to, 19 sits_on, 16
+  worn_on, 12 goes_in, 9 hangs_from, 6 grows_on, 4 connects, 1 held_in, with the side of the second kind where
+  there is a usual one (roof attaches_to wall, side top; wheel part_of car, side bottom; hat sits_on head, side
+  top; arrow connects box and attaches_to box, side edge). **All model-labelled** (`named=model`): `k.commonsense`
+  has no `part_of` or `has` fact at all in its one shard, so nothing comes from there. The only check besides
+  reading the table: of the 52 part_of facts whose whole is a hand-written drawing, 39 name a part of that drawing
+  (the other 13 are parts the drawing does not show: the engine of the car, the root of the tree).
+- **Judgement that is mine:** which arrangements beyond the 13, their places, boxes and relations (the boxes are
+  round figures for a first layout; a test checks that they agree with the relations, 50 of them); which anchors
+  and what each holds; every join.
+- **What SOP Lang could not say:** that `among` is present exactly when `a` and `b` are the same place (a rule
+  would have to compare two values of one fact): a test. That a relation's places belong to its arrangement, and
+  that an anchor lies on a part of its object: tests (joins across facts, and across worlds by name).
+- Tests: the shards are what the tool gives; places and relations; boxes against relations; the face against
+  k.faces; anchors on their parts and the audit against the table; the joins asked for; 18 questions (la-01 to
+  la-18); other names through the vocabulary index.
+- Numbers: k.layouts 3 shards, 463 wires, 73,236 bytes. Catalog 15 worlds, 782 shards, vocab 19,600 words; 0 errors, 0 warnings. npm test 2,440 pass, 0 fail.

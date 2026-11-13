@@ -1,0 +1,125 @@
+# object	anchor	kind	part	at	holds
+# The anchors of the hand-written objects of k.objects (Round 7 addendum 2, 2026-11-13), as k.layouts.anchor says
+# them: the place on a drawable thing where another thing sits or attaches. `part` is a named part of the object;
+# `at` says where on the box of that part the place is: box (the whole box), top, bottom, left, right (that edge),
+# top_left, top_right, bottom_left, bottom_right, top_centre, centre (a point). tools/layouts-core.mjs works out the box from
+# the part and writes the shard `anchors` (named=model). `holds` lists what usually goes there, separated by
+# commas; for a base it lists what the thing stands on. Chosen by a language model from the part names, only where
+# sure; every row was looked at on the drawing: sources/hand-core/anchors-audit.tsv.
+table	surface	surface	top	top	cup, plate, book, vase, lamp
+chair	seat	seat	seat	top	person
+sofa	seat	seat	seat	top	person, cat, cushion
+throne	seat	seat	seat	top	king, queen
+saddle	seat	seat	seat	top	rider
+bicycle	seat	seat	seat	top	person
+bicycle	handlebar	handle	handlebar	box	hand
+cup	handle	handle	handle	box	hand
+cup	inside	inside	body	box	tea, coffee, milk
+umbrella	handle	handle	hook	box	hand
+suitcase	handle	handle	handle	box	hand
+bag	handle	handle	handle	box	hand
+oven	handle	handle	handle	box	hand
+oven	inside	inside	door	box	cake, bread, pizza
+refrigerator	handle	handle	upper_handle	box	hand
+pan	handle	handle	handle	box	hand
+pan	inside	inside	inside	box	egg, food
+bin	handle	handle	handle	box	hand
+bin	inside	inside	body	box	rubbish
+sword	grip	handle	grip	box	hand
+gun	grip	handle	grip	box	hand
+lance	grip	handle	grip	box	hand
+leash	handle	handle	handle	box	hand
+flag	foot	base	pole	bottom	ground, hand
+shelf	upper_shelf	surface	top_board	top	book, toy, vase
+shelf	middle_shelf	surface	middle_board	top	book, toy, vase
+shelf	lower_shelf	surface	bottom_board	top	book, toy, vase
+cabinet	top	surface	body	top	vase, lamp, book
+stove	hob	surface	hob	top	pan, pot, kettle
+mattress	top	surface	top	box	person, pillow, blanket
+mat	surface	surface	mat	box	shoe, foot
+wall	top	surface	cap	top	cat, bird
+bridge	deck	surface	deck	top	car, person
+pier	deck	surface	deck	top	person
+porch	floor	surface	floor	top	person, chair
+theater	stage	surface	stage	top	actor
+sidewalk	sidewalk	surface	sidewalk	box	person
+sidewalk	road	surface	road	box	car
+street	road	surface	road	box	car
+path	path	surface	path	box	person
+railway	track	surface	bed	box	train
+airport	runway	surface	runway	box	plane
+island	sand	surface	sand	top	person, palm tree
+cliff	top	surface	grass	top	person
+boat	deck	surface	hull	top	person
+yacht	deck	surface	hull	top	person
+hill	top	top	hill	top_centre	tree, house, person
+mountain	top	top	snow_cap	top	flag, climber
+tower	top	top	top	top	flag
+pole	top	top	cap	top	flag
+train	chimney	top	chimney	top	smoke
+car	inside	inside	cabin	box	person
+truck	cargo	inside	cargo	box	box, load
+truck	cab	inside	cab	box	driver
+train	cabin	inside	cabin	box	driver
+house	door	opening	door	box	person
+house	roof	roof	roof	box	chimney, bird, snow
+house	foot	base	body	bottom	ground
+barn	roof	roof	roof	box	bird, snow
+kennel	roof	roof	roof	box	snow
+shack	roof	roof	roof	box	snow
+pub	roof	roof	roof	box	chimney, snow
+castle	gate	opening	gate	box	person, knight
+lighthouse	door	opening	door	box	person
+barn	door	opening	door	box	cow, horse, person
+kennel	door	opening	door	box	dog
+tower	door	opening	door	box	person
+windmill	door	opening	door	box	person
+pyramid	door	opening	door	box	person
+igloo	entrance	opening	entrance	box	person
+cave	mouth	opening	mouth	box	bear, bat
+pub	door	opening	door	box	person
+casino	door	opening	door	box	person
+chapel	door	opening	door	box	person
+supermarket	door	opening	door	box	person
+shack	door	opening	door	box	person
+convent	door	opening	door	box	person
+manor	door	opening	door	box	person
+building	door	opening	door	box	person
+restaurant	door	opening	door	box	person
+library	door	opening	door	box	person
+museum	door	opening	door	box	person
+warehouse	door	opening	door	box	person, truck
+embassy	door	opening	door	box	person
+courthouse	door	opening	door	box	person
+coop	door	opening	door	box	hen
+porch	door	opening	door	box	person
+fort	gate	opening	gate	box	person, soldier
+fortress	gate	opening	gate	box	person, soldier
+prison	gate	opening	gate	box	person
+sandcastle	door	opening	door	box	
+mailbox	slot	opening	slot	box	letter
+box	top	opening	top	box	toy, book
+boot	opening	opening	cuff	top	foot, leg
+sock	opening	opening	cuff	top	foot
+shoe	opening	opening	opening	box	foot
+tree	crown	inside	crown	box	bird, nest, apple, squirrel
+tree	foot	base	trunk	bottom	ground
+nest	hollow	inside	hollow	box	egg, bird
+crib	inside	inside	mattress	top	baby
+frame	opening	inside	opening	box	picture, photo
+frame	hanger	hook	hanger	box	nail
+painting	wire	hook	wire	box	nail
+cage	ring	hook	ring	box	hand, hook
+pool	water	water	water	box	swimmer, ball
+lake	water	water	water	box	boat, duck, swan, fish
+mountain lake	water	water	water	box	boat, duck, swan, fish
+river	water	water	water	box	boat, duck, fish
+sea	water	water	water	box	ship, boat, whale, fish
+swamp	water	water	water	box	frog, crocodile
+bridge	water	water	water	box	boat, duck
+person	head_top	top	head	top	hat, cap, crown, helmet
+person	left_hand	hand	left_arm	bottom_left	ball, bag, flag, balloon
+person	right_hand	hand	right_arm	bottom_right	ball, bag, flag, balloon
+robot	left_hand	hand	left_arm	bottom	ball, tool
+robot	right_hand	hand	right_arm	bottom	ball, tool
+hat	base	base	brim	bottom	head
