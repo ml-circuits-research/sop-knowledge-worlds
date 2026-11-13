@@ -1120,3 +1120,30 @@ must know and that no rule checks: that the parts of a mirrored slot are drawn t
 that a preset's slot keys hold names of variants of the same style (sopworld cannot check a value against the
 identity of another type that has two identity keys; `tests/k.faces.test.mjs` does). No question written for
 them; said here.
+
+## R5.2 (2026-11-13): the synonym and stand-in drawings looked at; 25 stand-ins removed
+
+- **Looked at:** all 255 links (63 synonyms, 192 stand-ins; 162 distinct drawings), each as the drawing at 160 px
+  with "word = drawing" or "word < drawing" and WordNet's gloss of the word underneath, on 9 contact sheets of 30;
+  all 9 read. So every drawing behind a link has now been looked at next to the word it serves, not only the about
+  135 that R4.4 left.
+- **Synonyms:** all 63 kept (couch = sofa, cellphone = mobile phone, tub = bathtub, zucchini = courgette, …). Weak
+  but not wrong: palace = castle (a fortress), transporter = car transporter (a small drawing), chute = parachute.
+- **Stand-ins removed: 25** (`sources/coverage/not-links.tsv`, each with its reason; 68 rows now):
+  - the drawing of the kind shows something too particular: greenhouse, rink, observatory, gazebo, tavern →
+    building (a block of flats); warship, shipwreck → ship (a passenger liner); vial → bottle (a wine bottle); gravy
+    → sauce (a bottle of red sauce); cauldron → pot (looks like a flowerpot); gable → wall (a brick wall); beret →
+    cap (a cap with a bill); lioness → lion (a mane); headset → telephone receiver; nut → seeds (a packet);
+    photocopy → photographs (a camera);
+  - the word mostly means something else than the sense kept: grill (the thing one cooks on), licorice (the sweet),
+    sesame (the seeds), papaya and apricot (the fruit, not the tree), dahl (the dish), arbor (a garden shelter);
+  - a flower drawn as a sprig of leaves: buttercup, dandelion → herb.
+- **Kept although only the kind is shown** (that is what a stand-in says): morgue, mortuary, clubhouse,
+  slaughterhouse, bathhouse, skyscraper → building; bakery, pharmacy, bookstore and nine other shops → shop; basil,
+  parsley, rosemary, dill and other herbs → herb; altar, counter → table; bomber → airplane; missile → rocket;
+  quill → pen; flask, jug → bottle; chalice → cup; silo → tower; bulldozer → tractor.
+- One verdict of R5.1 changed by this look: `pot` is now unclear (the drawing looks like a flowerpot; the sense
+  kept is a cooking pot). Sense check now: 522 right, 29 wrong, 31 unclear of the 582, plus the 23 hand-written.
+- **Coverage of the 1,500 common things:** 585 drawn in the sense kept, 63 synonyms, 167 stand-ins: **815 reach a
+  drawing (54.3%; 840 before this look)**; 685 nothing.
+- Numbers: `stand-ins-wordnet` 167 wires. Catalog: 11 worlds, 739 shards, vocab 18,691 words; 0 errors, 0 warnings. npm test 2,272 pass, 0 fail.
