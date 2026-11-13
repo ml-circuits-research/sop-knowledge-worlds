@@ -1649,7 +1649,8 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   (seen only on the role sheet: Father Christmas, wizard, king, waiter, musician).
 - **`k.feelings` version 2: `looks_like`.** A feeling whose face a face cannot tell from another says so: lonely,
   disappointed, guilty, homesick `looks_like=sad`; grateful `looks_like=happy`; relieved `looks_like=calm`. The
-  other **24 feelings each have a face of their own** (15 distinct faces before): hurt (sad with tears),
+  other **24 feelings each have a face of their own** (23 different faces before, and the 7 feelings that shared
+  one did not say so): hurt (sad with tears),
   frustrated (angry with gritted teeth), tired (sleepy, yawning mouth), proud (happy with a smirk), shy (looks
   down, blush), embarrassed (eyes closed, round blush), hopeful (looks up), nervous (gritted teeth, worried
   eyebrows). A test works out the face of every feeling (the expression, then its own variants) and requires that
@@ -1662,5 +1663,5 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   and lonely cannot be parted, as the reviewer said; I added disappointed, homesick, grateful, relieved).
 - **What SOP Lang could not say:** "two feelings with the same face must say looks_like" compares several values
   across facts and through another world's expression: a test.
-- Numbers: k.faces plain-hat 448 wires 56,411 bytes, plain-shoulders 509 wires 71,667 bytes; face previews 669
+- Numbers: k.faces plain-hat 386 wires 56,411 bytes, plain-shoulders 455 wires 71,667 bytes; face previews 669
   files. Catalog 15 worlds, 782 shards, vocab 19,661 words; 0 errors, 0 warnings. npm test 2,447 pass, 0 fail.
