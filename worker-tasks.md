@@ -337,3 +337,19 @@ The demo moves to universal acts over world schemas (PSys2 worker-tasks.md, "ACT
 5. **Parts for more things**: part names exist for drawings; add for the 1,500 common things the usual parts even with no drawing (a car has wheels, doors, engine), from WordNet meronyms.
 6. **Coverage report** per world: how many of the 1,500 common things have place, size, colour, parts, a drawing, a stand-in; the gaps drive the next round.
 Rules as before: free licences only, English only, sources on every wire, look at samples and say what was not looked at.
+
+## Reviewer 2026-11-13 20:35 — Round 7 accepted at 30c39ed; Q27, Q28; Round 9 (first worker). The second worker continues Round 8.
+
+**Validated:** reviewer ran npm test at 0bc7cbe (2,489 pass, 0 fail; your later run 2,529) and opened the published `k.scenes/preview/index.html` in headless Chrome: the things appear, in readable rows, no heaps (8 room scenes seen; the outdoor ones not seen by the reviewer). The sheet went to the owner. Accepted: previews, `k.layouts`, anchors, joins, hats and work clothes, `looks_like`, `k.colours`, `k.shapes`, the merge into `k.actions`.
+- **Q27 → yes:** a thing counts as drawn when any drawing in the catalog carries its name, whatever the source. One rule; recount.
+- **Q28 → keep both**, joined by name as now: `k.values` holds the words and scales, `k.colours` / `k.shapes` hold facts about them (mixes, typical things, sides). No fact in two places.
+
+**Round 9, in order (the demo's Talk tab asked 301 questions and found a fact for 29%; these are the gaps it listed, plus anchors):**
+1. **Anchors for the things people sit, stand, lie or put things on**, hand-written or imported: swing, chair, bench, bed, table, shelf, boat, horse, bicycle, car, tree (branch), roof, head (hat), hand. For imported drawings with unnamed parts give the anchor as a point in the drawing's frame, `named=model`, checked by drawing it on the object. Target: every thing in `k.scenes` that another thing is usually on or in.
+2. **k.animals facts** for the 300 most common animals: legs, covering, size class, habitat, diet, sound, young, can fly / swim / climb, group name. Sources: what the repo has (WordNet, Wikidata CC0 if a dump of the needed properties is reachable from GitHub), else `named=model` with a 200-row audit.
+3. **Places beyond countries** in k.geo: capitals for every country (check they answer "capital of X" by lookup), the 100 best-known mountains, rivers, deserts, lakes, seas, oceans, continents, with one number each (height, length, area) where a free source has it (Natural Earth, Wikidata).
+4. **k.space facts**: planets (moons, rings, order, colour and why in one plain sentence), sun, moon, stars, day and year lengths.
+5. **k.body**: parts of hand, eye, ear, mouth; counts (fingers, teeth, bones); what each main organ does in one plain sentence.
+6. **k.food**: what common dishes and foods are made of; kind (fruit, vegetable, grain, dairy, meat); usual colour (joins `k.colours`).
+7. **k.words**: opposites and kind-of chains answered by lookup for the 3,000 common words (check coverage, fill gaps from WordNet antonyms and hypernyms).
+8. After each item rerun the coverage report and say how many of a seeded sample of 100 natural questions of that domain now find a fact.
