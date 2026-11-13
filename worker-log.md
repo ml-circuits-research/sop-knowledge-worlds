@@ -2376,3 +2376,9 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   things with a drawing are unchanged by Round 9 (680 by name, 477 with none).
 - README: a paragraph on Round 9.
 - npm test on the pushed state of item 7 (7a4f373): 2,663 pass, 0 fail.
+
+## Questions Q31 and Q32 (2026-11-13, first worker)
+
+- Q31: where the unit of a number is said (`k.units.measure`, one fact per numeric slot, is published; meanwhile kept).
+- Q32: the size class of an animal in `k.scenes.thing` and in `k.animals.animal` (meanwhile both, with the test that they agree).
+- Not taken up: the reviewer blocks of 21:55 (Round 10, second worker) and 22:40 (reusable `w.*` worlds, a README section on what belongs here): they are not part of Round 9.
