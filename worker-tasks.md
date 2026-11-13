@@ -273,3 +273,20 @@ description, like a police sketch. The application will draw them with the same 
 - **R6.4 Questions it must answer** (tests): "which mouths are there", "a long face with small eyes and thick eyebrows" →
   the variants whose features match, ranked by how many features match; "what is the difference between preset A and B".
 - Gallery: add the faces to `docs/gallery.html` (a second tab or page) with the slot and features of each variant.
+
+## Reviewer 2026-11-13 16:00 — Round 7 (after Round 6): knowledge that makes the demo richer
+
+Hand-written cores (CC0, tests, facts a child's encyclopedia would state), joined to `k.objects` by `drawing=`:
+- **R7.1 `k.scenes`**: 60 typical scenes (beach, farm, city street, forest, kitchen, classroom, playground, space, underwater,
+  winter…): what is usually there (`has=<thing>`, with a usual count and a usual place: sky, ground, left, centre, background),
+  what happens there, the time and weather that fit. So "draw a beach" can be composed from things that have drawings.
+  Report for each scene how many of its things have a drawing.
+- **R7.2 `k.actions`**: 150 common verbs: who or what can do it, to what, with what tool, where, and the result
+  ("cut: a person cuts bread with a knife"; "fly: birds, planes"), plus opposite and "undone by". Links to `k.commonsense`.
+- **R7.3 `k.colours` and `k.shapes`**: colour names with their family, light/dark, what mixes into what, typical things of
+  that colour; shapes with sides, corners, round or not, and things of that shape.
+- **R7.4 `k.feelings`**: 30 feelings: how the face shows it (links to `k.faces.expression`), what usually causes it, the
+  opposite, a kind reply. For the avatar and the Talk tab.
+- **R7.5 `k.people`**: 60 roles and jobs (doctor, farmer, pirate, astronaut, grandmother…): what they wear, hold and use,
+  where they work; features that map to `k.faces` and to things with drawings.
+Order: R7.1 first (the drawing demo needs it), then R7.4 and R7.5 (avatars), then R7.2, R7.3.
