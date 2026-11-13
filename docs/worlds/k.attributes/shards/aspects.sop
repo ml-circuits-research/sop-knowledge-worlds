@@ -48,6 +48,8 @@
 @k.attributes.shows.common_thing.relational.k_attributes_thing.used_for k.attributes.shows family="common thing" aspect=relational world=k.attributes type=k.attributes.thing key=used_for by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.relational.k_layouts_joins.rel k.attributes.shows family="common thing" aspect=relational world=k.layouts type=k.layouts.joins key=rel by=a core.source="hand-core 1"
 @k.attributes.shows.common_thing.relational.k_objects_part.name k.attributes.shows family="common thing" aspect=relational world=k.objects type=k.objects.part key=name by=of core.source="hand-core 1"
+@k.attributes.shows.common_thing.relational.k_parts_whole.has k.attributes.shows family="common thing" aspect=relational world=k.parts type=k.parts.whole key=has by=name core.source="hand-core 1"
+@k.attributes.shows.common_thing.relational.k_parts_inherited.has k.attributes.shows family="common thing" aspect=relational world=k.parts type=k.parts.inherited key=has by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.numeric.k_attributes_thing.wheels k.attributes.shows family="common thing" aspect=numeric world=k.attributes type=k.attributes.thing key=wheels by=name core.source="hand-core 1"
 @k.attributes.shows.common_thing.textual.k_words_sense.gloss k.attributes.shows family="common thing" aspect=textual world=k.words type=k.words.sense key=gloss by=word core.source="hand-core 1"
 @k.attributes.shows.animal.visual.k_animals_animal.drawing k.attributes.shows family=animal aspect=visual world=k.animals type=k.animals.animal key=drawing by=name core.source="hand-core 1"

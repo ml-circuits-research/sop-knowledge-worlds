@@ -1946,3 +1946,35 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/k.layouts.test.mjs` (the audit of the new table, the target list), questions la-19 to la-23.
 - Numbers: k.layouts 4 shards, 571 wires (was 3 shards, 463). Catalog 20 worlds, 818 shards, vocab 21,077 words; 0 errors, 0 warnings. npm test 2,550 pass, 0 fail.
 - After the rebase on R8.4 (`k.wearables`, second worker): catalog 21 worlds, 820 shards, vocab 21,216 words; npm test 2,563 pass, 0 fail.
+
+## Round 8, item 5 (2026-11-13, second worker): `k.parts`, usual parts of common things
+
+- **New world `k.parts`** (version 1, exports `whole`, `inherited`), 24 shards by first letter, 677 wires, 145,908
+  bytes, `core.source="wordnet 3.1"`, written by the new import `tools/import/parts.mjs` from the list of
+  `tools/coverage.mjs` (the sense kept there) and WordNet's part meronyms. For that, a coverage entry now also
+  carries its `sense` (one field added in `tools/coverage.mjs`; nothing it writes changes).
+- **Own parts:** `k.parts.whole`, 307 things, 816 parts, with the gloss of the sense. **Inherited:**
+  `k.parts.inherited`, 370 facts for 328 things, one or two kind-of steps up. **541 of the 1,500 common things
+  have at least one part; 959 have none.** The reviewer's example holds in WordNet's names: a car has "car door",
+  "automobile engine" and, as a motor vehicle, "car wheel".
+- **What I read, and what it changed:** (1) a seeded sample of 70 facts of the first version (inherited up to
+  three steps): the own parts were right as WordNet data, but about 20 of the 49 inherited facts misled (a bra
+  with sleeves, a clam with a carapace, a pony with horsemeat, an accordion with a bell). So: at most two steps;
+  the second step only for 13 kinds; kinds too general are not followed (28 names); parts filed under foods are
+  not parts of a plant or animal. (2) Then **every inherited fact** of the second version (about 520 lines, each
+  to 110 characters; the long lists are those of building, car, motor vehicle, garment and bird, read in full
+  once): `sources/coverage/not-parts.tsv` refuses 26 kinds for every thing, 51 single things and one single
+  part, each with a reason. (3) Every fourth own-part fact (77 of 307) with the start of its gloss.
+  **Not read:** the other 230 own-part facts; the inherited facts after the refusals were not printed again
+  (a test checks that nothing refused is left).
+- **Known weak:** the sense is the one the coverage rule keeps (turtle the sweater, lobster the meat; the gloss
+  says it); WordNet's own lists hold odd parts (a dog's only own part is "flag"; a building has an elevator and a
+  cullis); a part is named by the first word of its synset ("car door"), so "door" does not find it; a house gets
+  rooms but no roof (roof is a part of "building", further up than the rule follows). No model-labelled parts
+  were added for the 959 things without one.
+- `k.attributes`: the attribute `parts` is now also found in `k.parts` (2 `found` facts, 2 `shows` rows; 131 rows);
+  `ASPECTS.md` regenerated (common things, relational: 1,326 of 1,500, was 1,280).
+- **What SOP Lang could not say:** nothing new.
+- Tests: `tests/k.parts.test.mjs` (4; the equality with the import when the raw files are there), 6 questions.
+- Numbers: k.parts 24 shards, 677 wires, 145,908 bytes. Catalog 22 worlds, 844 shards, vocab 21,336 words (21,253); 0 errors, 0 warnings. npm test 2,570 pass, 5 skipped, 0 fail.
+- After the rebase on R9.1 (anchors): catalog 22 worlds, 845 shards, vocab 21,343 words; npm test 2,576 pass, 5 skipped, 0 fail.

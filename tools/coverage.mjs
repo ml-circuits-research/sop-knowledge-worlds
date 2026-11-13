@@ -162,7 +162,7 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     if (senses.some((s) => OFFENSIVE.test(data.get(s).gloss))) { stats.offensive++; continue; }
     if (excluded.has(word)) { stats.notThings++; continue; }
     if (undrawable.has(word)) { stats.notDrawable++; notDrawn.push({ word, reason: undrawable.get(word), gloss: data.get(sense).gloss.split(';')[0].trim() }); continue; }
-    const entry = { rank: list.length + 1, word, count: Number(count), gloss: data.get(sense).gloss.split(';')[0].trim(), drawing: drawingOf(word), link: null,
+    const entry = { rank: list.length + 1, word, sense, count: Number(count), gloss: data.get(sense).gloss.split(';')[0].trim(), drawing: drawingOf(word), link: null,
       other: isOther(word) ? other.get(word) : null };
     // A word whose own name is an object (of another sense) gets no link: the word already finds that object.
     if (!entry.drawing) {

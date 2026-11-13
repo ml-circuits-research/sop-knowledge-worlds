@@ -25,3 +25,5 @@
   1,264 irregular forms, 2,021 capitalised spellings; 28,951 wires in 318 shards, 5,610,059 bytes.
 - **Also kept, for `k.actions`:** the gloss of the verb senses named in `sources/hand-core/act-verbs.tsv` (269 verbs,
   283 senses; `sources/wordnet/act-verb-glosses.tsv`, rewritten by `node tools/acts-core.mjs --glosses`).
+- **Also kept, for `k.parts`:** the part meronyms of the kept sense of the 1,500 common things and of their
+  hypernyms up to two steps, each by the first word of its synset, and the gloss of the sense (`tools/import/parts.mjs`).
