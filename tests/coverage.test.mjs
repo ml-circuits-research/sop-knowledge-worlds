@@ -86,8 +86,8 @@ test('a synonym is a core.word, a hypernym is a k.objects.stand_in fact, both wi
   ]);
 });
 
-test('the sense check: a drawing that shows another sense does not count, unless another object draws the sense kept', () => {
-  const check = (instead) => `# word\tdrawing\tverdict\tnote\tinstead\ncar\tcar\tright\t\t\ngrape\tgrapes\twrong\tthe drawing shows a made-up other thing\t${instead}\n`;
+test('the sense check (Q22): a drawing of another physical WordNet sense counts; one of no WordNet sense does not', () => {
+  const check = (instead, shown = '') => `# word\tdrawing\tverdict\tnote\tinstead\tshown\ncar\tcar\tright\t\t\t\ngrape\tgrapes\twrong\tthe drawing shows a made-up other thing\t${instead}\t${shown}\n`;
   const a = coverage({ ...opts, senseCheck: check('') });
   const grape = a.list.find((e) => e.word === 'grape');
   assert.equal(grape.drawing, null);
@@ -97,6 +97,19 @@ test('the sense check: a drawing that shows another sense does not count, unless
   const b = coverage({ ...opts, senseCheck: check('slug') });
   assert.equal(b.list.find((e) => e.word === 'grape').drawing, 'slug');
   assert.deepEqual({ drawn: b.stats.drawn, wrongSense: b.stats.wrongSense, otherName: b.stats.otherName }, { drawn: 3, wrongSense: 1, otherName: 1 });
+  // slug has two physical senses; the sense kept is the animal (00000010). A drawing of the projectile still counts.
+  const slug = (shown) => `# word\tdrawing\tverdict\tnote\tinstead\tshown\nslug\tslug\twrong\tthe drawing shows the projectile\t\t${shown}\n`;
+  const withSlug = { ...opts, freq: `${opts.freq}slug 60\n` };
+  const c = coverage({ ...withSlug, senseCheck: slug('00000009') });
+  const entry = c.list.find((e) => e.word === 'slug');
+  assert.equal(entry.drawing, 'slug');
+  assert.equal(entry.wrong, null);
+  assert.equal(entry.other.shown, '00000009');
+  assert.deepEqual({ otherSense: c.stats.otherSense, wrongSense: c.stats.wrongSense }, { otherSense: 1, wrongSense: 0 });
+  assert.ok(!missingPage(c).includes('| slug |'));
+  assert.equal(coverage({ ...withSlug, senseCheck: slug('') }).list.find((e) => e.word === 'slug').drawing, null);
+  assert.throws(() => coverage({ ...withSlug, senseCheck: slug('00000007') }), /not a physical noun sense/);
+  assert.throws(() => coverage({ ...withSlug, senseCheck: slug('00000003') }), /not a physical noun sense/);
 });
 
 test('a thing that is not drawable leaves the list and is named on the page', () => {
@@ -138,7 +151,10 @@ test('sense-check.tsv has one verdict for every common thing with an object of i
   const result = run();
   const matched = new Map(result.list.filter((e) => e.wrong || (e.drawing && !e.link)).map((e) => [e.word, e.wrong ? e.wrong.drawing : e.drawing]));
   assert.deepEqual(rows.map((r) => r[0]).sort(), [...matched.keys()].sort());
-  for (const [word, drawing, verdict, note, instead] of rows) {
+  assert.equal(result.stats.wrongSense, rows.filter((r) => r[2] === 'wrong' && !r[5]).length);
+  assert.equal(result.stats.otherSense, rows.filter((r) => r[2] === 'wrong' && r[5]).length);
+  for (const [word, drawing, verdict, note, instead, shown] of rows) {
+    if (shown) { assert.equal(verdict, 'wrong', word); assert.match(shown, /^\d{8}$/, word); }
     assert.equal(drawing, matched.get(word), word);
     assert.ok(['right', 'wrong', 'unclear'].includes(verdict), word);
     if (verdict !== 'right') assert.ok(note, `${word}: a note says what the drawing shows`);

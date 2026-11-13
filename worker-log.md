@@ -1283,3 +1283,27 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   `sopworld` field and content hash. Nothing of the new standard pack (`std.numbers`, `std.order`, `std.boxes`) is
   used yet.
 - Numbers: catalog 11 worlds, 740 shards, vocab 19,118 words. npm test 2,347 pass, 0 fail.
+
+## Q22 (c) and Q23 applied (2026-11-13): coverage recounted
+
+- **Rule (Q22 → c):** a common thing counts as drawn when the drawing of its name shows any physical sense of the
+  word that WordNet has. `sense-check.tsv` has a sixth column `shown`: the WordNet 3.1 noun synset that the drawing
+  shows, for the 29 rows with the verdict `wrong`. `tools/coverage.mjs` checks that it is a sense of the word and
+  lies under physical entity (a bird's wing is a body part, not under physical object, so the check is against
+  physical entity and not only the four roots of the list). No override of the sense kept, no new reading.
+- **28 of the 29 count now** (bank, cake, plant, plate, chocolate, wing, chip, frame, hammer, shell, turtle, glove,
+  tuna, hose, drone, cereal, dolphin, cracker, peacock, cruiser, lorry, tram, stretcher, cot, lollipop, steamer,
+  barbeque, headstone). **One stays missing: `tablet`**: the drawing is a tablet computer, and WordNet 3.1 has no
+  such sense (slab, pad of paper, cake of a substance, pill). The synset for each was picked by its gloss and
+  printed; I did not look at the 29 drawings again (they were looked at in R5.1).
+- **Links keep the sense kept:** a stand-in or synonym goes to the object that draws the sense kept (the column
+  `instead`), not to the drawing of the other sense: winery stays a stand-in of `factory`, not of the green `plant`.
+  Without this the recount moved that one link; both link shards are unchanged.
+- **MISSING.md:** the baseball plate, the horse-drawn lorry, the block of soap, the sweater called turtle and the
+  others have left it; 821 words without a drawing of their name (840 before), one of them "other sense" (tablet).
+- **Coverage of the 1,500:** 679 with a drawing of their name (45.3%; 660 before), 68 synonyms, 179 stand-ins:
+  **926 reach a drawing (61.7%; 907 before)**; 574 nothing (593). The long list (Q23, an estimate, tail not read):
+  752, 112, 491: 1,355 of 2,687 (50.4%; 1,336 before).
+- `questions.md` has sections Open (none) and Closed (Q1 to Q23).
+- Numbers: catalog 11 worlds, 740 shards, vocab 19,118 words; 0 errors, 0 warnings.
+- npm test 2,347 pass, 0 fail.

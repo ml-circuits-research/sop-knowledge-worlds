@@ -11,6 +11,14 @@ Context: what was tried, what the options are.
 Blocking: yes/no. If no: the choice taken meanwhile.
 ```
 
+# Open
+
+None.
+
+# Closed
+
+Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").
+
 ## Q1 (task T2, 2026-11-13)
 Question: may the catalog `version` be a content hash of `docs/worlds` instead of the git sha?
 Context: PLAN.md §2 says `"version": "<git sha>"`, but `index.json` is committed, and a commit cannot contain its own
@@ -221,6 +229,7 @@ the drawing shows: this is a second reading by a language model, as `not-things.
 when the drawing shows any physical sense of the word that WordNet has.
 Blocking: no. Meanwhile: (a); in R5.3 an "other sense" word is drawn under another name only when the sense kept
 is itself a common thing (river bank, artillery shell); the others are passed over and listed in the log.
+Closed: answered (c) in worker-tasks.md, block "2026-11-13 17:25"; applied in the commit "Q22 (c)".
 
 ## Q23 (task R5.4, 2026-11-13)
 Question: the frequency list has only 2,687 common things by the rule, not 3,000; and the part after the 1,500th
@@ -234,3 +243,4 @@ for the long list are an upper estimate. Options: (a) keep them as an estimate, 
 sense-check the tail (about 1,200 words, 73 name matches, about 350 links) in a later round; (c) a longer frequency
 list, to reach 3,000.
 Blocking: no. Meanwhile: (a).
+Closed: accepted as an estimate in worker-tasks.md, block "2026-11-13 17:25"; the tail is not read.

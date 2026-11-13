@@ -1,8 +1,11 @@
-# word	drawing	verdict	note	instead
+# word	drawing	verdict	note	instead	shown
 # The sense check (R5.1): every common thing of tools/coverage.mjs that has a drawing of its name, with the verdict of a
 # language model that looked at the drawing next to WordNet's gloss of the sense kept: right, wrong (the drawing shows
-# another sense of the word; the note says which) or unclear. A wrong entry counts as missing, unless "instead" names
-# an object that draws the sense kept. Rows of hand-written objects made for the sense kept say so in the note.
+# another sense of the word; the note says which) or unclear. Reviewer's answer to Q22: a wrong entry still counts as
+# drawn when the drawing shows a physical sense of the word that WordNet has; "shown" is that sense (the offset of the
+# noun synset in WordNet 3.1; the tool checks it). A wrong entry without it counts as missing. "instead" names an
+# object that draws the sense kept, where one exists; links to the word in the sense kept use that object. Rows of
+# hand-written objects made for the sense kept say so in the note.
 house	house	right		
 world	world	right		
 car	car	right		
@@ -35,7 +38,7 @@ fish	fish	right
 star	star	right		
 prison	prison	right		
 stick	stick	right		
-bank	bank	wrong	the drawing shows a bank building	river bank
+bank	bank	wrong	the drawing shows a bank building	river bank	02790795
 tea	tea	right		
 camera	camera	right		
 window	window	right		
@@ -70,7 +73,7 @@ restaurant	restaurant	right
 cup	cup	right		
 tape	tape	right		
 milk	milk	right		
-cake	cake	wrong	the drawing shows a baked cake	soap
+cake	cake	wrong	the drawing shows a baked cake	soap	07644479
 meat	meat	right		
 bridge	bridge	right		
 chair	chair	right		
@@ -95,7 +98,7 @@ bread	bread	right
 painting	painting	right		
 pocket	pocket	unclear	the drawing is hard to read as a pocket	
 clock	clock	right		
-plant	plant	wrong	the drawing shows a living plant	factory
+plant	plant	wrong	the drawing shows a living plant	factory	00017402
 toilet	toilet	unclear	the sense is the room; the drawing is the fixture	
 telephone	telephone	right		
 airport	airport	right		
@@ -106,8 +109,8 @@ temple	temple	right
 jacket	jacket	right		
 grave	grave	right		
 pizza	pizza	right		
-plate	plate	wrong	the drawing shows a dinner plate	
-chocolate	chocolate	wrong	the drawing shows a bar of chocolate	hot chocolate
+plate	plate	wrong	the drawing shows a dinner plate		03965779
+chocolate	chocolate	wrong	the drawing shows a bar of chocolate	hot chocolate	07617570
 trap	trap	right		
 soup	soup	right		
 rat	rat	right		
@@ -163,7 +166,7 @@ lane	lane	right
 orange	orange	right		
 bud	bud	right		
 cave	cave	right		
-wing	wing	wrong	the drawing shows the wing of a bird	
+wing	wing	wrong	the drawing shows the wing of a bird		02154277
 fox	fox	right		
 butter	butter	right		
 sauce	sauce	right		
@@ -176,7 +179,7 @@ purse	purse	right
 turkey	turkey	right		
 holly	holly	right		
 beef	beef	unclear	the sense is the cattle; the drawing is the meat	
-chip	chips	wrong	the drawing shows fried potato chips	
+chip	chips	wrong	the drawing shows fried potato chips		07728304
 bug	bug	right		
 doorbell	doorbell	right		
 cage	cage	right		
@@ -185,16 +188,16 @@ pipe	pipe	right
 salad	salad	right		
 mouse	mouse	right		
 pit	pit	right		
-frame	frame	wrong	the drawing shows a picture frame	
+frame	frame	wrong	the drawing shows a picture frame		03395829
 fence	fence	right		
 underwear	underwear	right		
-hammer	hammer	wrong	the drawing shows the hand tool	
+hammer	hammer	wrong	the drawing shows the hand tool		03486255
 helicopter	helicopter	right		
 photograph	photographs	right		
 rocket	rocket	right		
 bush	bush	right		
 shark	shark	right		
-shell	shell	wrong	the drawing shows a seashell	artillery shell
+shell	shell	wrong	the drawing shows a seashell	artillery shell	01906823
 necklace	necklace	unclear	the drawing is two strings of beads	
 fort	fort	right		
 alley	alley	right		
@@ -247,7 +250,7 @@ potato	potato	right
 tire	tire	right	hand-written for the sense kept (R5.3)	
 root	roots	right		
 boot	boot	right		
-turtle	turtle	wrong	the drawing shows the animal	
+turtle	turtle	wrong	the drawing shows the animal		01665425
 lance	lance	right	hand-written for the sense kept (R5.3)	
 drawer	drawer	right		
 pillow	pillow	right	hand-written for the sense kept (R5.3)	
@@ -298,7 +301,7 @@ gin	gin	right	hand-written for the sense kept (R5.3)
 worm	worm	right		
 butterfly	butterfly	right		
 bicycle	bicycle	right		
-glove	gloves	wrong	the drawing shows a pair of gloves for the cold	baseball glove
+glove	gloves	wrong	the drawing shows a pair of gloves for the cold	baseball glove	03446036
 peanut	peanut	right		
 bracelet	bracelet	right	hand-written for the sense kept (R5.3)	
 leaf	leaf	right		
@@ -353,7 +356,7 @@ canyon	canyon	right	hand-written for the sense kept (R5.3)
 pine	pine	right	hand-written for the sense kept (R5.3)	
 pigeon	pigeon	right		
 violin	violin	right		
-tuna	tuna	wrong	the drawing shows a tin of tuna fish	
+tuna	tuna	wrong	the drawing shows a tin of tuna fish		07796603
 jelly	jelly	right		
 rug	rug	right		
 popcorn	popcorn	right		
@@ -378,7 +381,7 @@ coconut	coconut	right
 supermarket	supermarket	right	hand-written for the sense kept (R5.3)	
 pier	pier	right	hand-written for the sense kept (R5.3)	
 submarine	submarine	right		
-hose	hose	wrong	the drawing shows a garden hose	
+hose	hose	wrong	the drawing shows a garden hose		03545055
 porch	porch	right	hand-written for the sense kept (R5.3)	
 garlic	garlic	right		
 sushi	sushi	right		
@@ -413,7 +416,7 @@ blossom	blossom	right
 shack	shack	right	hand-written for the sense kept (R5.3)	
 lemonade	lemonade	right		
 flour	flour	right	hand-written for the sense kept (R5.3)	
-drone	drone	wrong	the drawing shows a small aircraft with four rotors	
+drone	drone	wrong	the drawing shows a small aircraft with four rotors		03250592
 strawberry	strawberry	right		
 microphone	microphone	right		
 gorilla	gorilla	right		
@@ -423,7 +426,7 @@ convent	convent	right	hand-written for the sense kept (R5.3)
 poppy	poppy	right		
 hen	hen	right		
 trumpet	trumpet	right		
-cereal	cereal	wrong	the drawing shows a bowl of breakfast cereal	
+cereal	cereal	wrong	the drawing shows a bowl of breakfast cereal		07718541
 penguin	penguin	right		
 rag	rag	right	hand-written for the sense kept (R5.3)	
 bathtub	bathtub	right		
@@ -483,13 +486,13 @@ sidewalk	sidewalk	right	hand-written for the sense kept (R5.3)
 leash	leash	right	hand-written for the sense kept (R5.3)	
 raft	raft	right	hand-written for the sense kept (R5.3)	
 bouquet	bouquet	right		
-dolphin	dolphin	wrong	the drawing shows the sea mammal	
+dolphin	dolphin	wrong	the drawing shows the sea mammal		02071627
 monument	monument	right	hand-written for the sense kept (R5.3)	
 lantern	lantern	right		
 parachute	parachute	unclear	the drawing is hard to read as a parachute	
 noodle	noodles	right		
 octopus	octopus	unclear	the sense is the food; the drawing is the live animal	
-tablet	tablet	wrong	the drawing shows a tablet computer	
+tablet	tablet	wrong	the drawing shows a tablet computer		
 apron	apron	right		
 automobile	automobile	right		
 pastry	pastry	right		
@@ -500,13 +503,13 @@ mailbox	mailbox	right
 pineapple	pineapple	right		
 ramp	ramp	right		
 lighthouse	lighthouse	right		
-cracker	cracker	wrong	the drawing shows a Christmas cracker	
+cracker	cracker	wrong	the drawing shows a Christmas cracker		03130003
 grape	grapes	right		
 mosquito	mosquito	right		
 pea	pea	right		
 hare	hare	right		
 pancake	pancakes	right		
-peacock	peacock	wrong	the drawing shows the bird	
+peacock	peacock	wrong	the drawing shows the bird		01808784
 melon	melon	right		
 dresser	dresser	right		
 goldfish	goldfish	right		
@@ -518,10 +521,10 @@ cockroach	cockroach	right
 sari	sari	right		
 sleigh	sleigh	right		
 moth	moth	right		
-cruiser	cruiser	wrong	the drawing shows a motor boat	police car
+cruiser	cruiser	wrong	the drawing shows a motor boat	police car	02936275
 screwdriver	screwdriver	right		
 mango	mango	unclear	the sense is the tree; the drawing is the fruit	
-lorry	lorry	wrong	the drawing shows a motor truck	
+lorry	lorry	wrong	the drawing shows a motor truck		03695799
 vine	vine	right		
 lotion	lotion	right		
 porridge	porridge	right		
@@ -543,11 +546,11 @@ vulture	vulture	right
 hamster	hamster	right		
 hedgehog	hedgehog	right		
 bagel	bagel	right		
-tram	tram	wrong	the drawing shows a streetcar on rails	aerial tramway
+tram	tram	wrong	the drawing shows a streetcar on rails	aerial tramway	04342573
 dishwasher	dishwasher	unclear	the drawing is hard to read	
 kangaroo	kangaroo	right		
 pear	pear	right		
-stretcher	stretcher	wrong	the drawing shows a stretcher for carrying a patient	
+stretcher	stretcher	wrong	the drawing shows a stretcher for carrying a patient		04343930
 banjo	banjo	right		
 spinach	spinach	right		
 giraffe	giraffe	right		
@@ -560,14 +563,14 @@ cactus	cactus	right
 burrito	burrito	right		
 mayonnaise	mayonnaise	right		
 jellyfish	jellyfish	right		
-cot	cot	wrong	the drawing shows a bed for a small child	
+cot	cot	wrong	the drawing shows a bed for a small child		03136225
 blueberry	blueberries	right		
 softball	softball	right		
 tortoise	tortoise	right		
 poodle	poodle	right		
 almond	almond	unclear	the sense is the tree; the drawing is the nut	
 caterpillar	caterpillar	right		
-lollipop	lollipop	wrong	the drawing shows a round sweet on a stick	ice lolly
+lollipop	lollipop	wrong	the drawing shows a round sweet on a stick	ice lolly	07623214
 sled	sled	right		
 waffle	waffle	right		
 snowman	snowman	right		
@@ -622,7 +625,7 @@ sunflower	sunflower	right
 ravioli	ravioli	right		
 raisin	raisin	right		
 cooker	cooker	right		
-steamer	steamer	wrong	the drawing shows a steaming pot	
+steamer	steamer	wrong	the drawing shows a steaming pot		04316686
 blackberry	blackberry	right		
 hoe	hoe	right		
 motorway	motorway	right		
@@ -650,7 +653,7 @@ toolbox	toolbox	right
 nappy	nappy	right		
 stapler	stapler	right		
 rhubarb	rhubarb	right		
-barbeque	barbeque	wrong	the drawing shows the grill	
+barbeque	barbeque	wrong	the drawing shows the grill		02793692
 sailboat	sailboat	right		
 prawn	prawn	right		
 necktie	necktie	right		
@@ -670,7 +673,7 @@ llama	llama	right
 tripod	tripod	right		
 forceps	forceps	right		
 stethoscope	stethoscope	right		
-headstone	headstone	wrong	the drawing shows a gravestone	
+headstone	headstone	wrong	the drawing shows a gravestone		03460432
 stair	stairs	right		
 trouser	trousers	right		
 centipede	centipede	right		

@@ -10,20 +10,21 @@ man, sir, father, guy, girl, dad) and the words of `sources/coverage/not-things.
 the top of `tools/coverage.mjs`.
 
 "Has a drawing" compares the word with the name of a `k.objects` object (or its plural). Every such drawing was
-looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`): 29 drawings show another sense
-of the word (the drawing `bank` is a building, the sense kept is the river bank). Such a word counts as missing
-("other sense" in the list), unless an object of another name draws the sense kept (9 words). The drawing keeps its
-name, since the sense it shows is a common one too.
+looked at next to the gloss of the sense kept (`sources/coverage/sense-check.tsv`). A word counts as drawn when the
+drawing shows any physical sense of the word that WordNet has: 28 drawings show another sense than the one kept
+(the drawing `bank` is a building, the sense kept is the river bank) and count. 1 drawing shows a meaning that
+WordNet does not have for the word (the drawing `tablet` is a tablet computer); such a word counts as missing
+("other sense" in the list), unless an object of another name draws the sense kept (0).
 
 | | Words | Share |
 | --- | --- | --- |
 | Common things | 1,500 | |
-| with a drawing of that name, in the sense kept | 660 | 44.0% |
+| with a drawing of that name | 679 | 45.3% |
 | without, but a WordNet synonym has a drawing | 68 | 4.5% |
 | without, but the direct hypernym has a drawing | 179 | 11.9% |
-| with no drawing at all | 593 | 39.5% |
+| with no drawing at all | 574 | 38.3% |
 
-## The 840 words without a drawing of their name, most frequent first
+## The 821 words without a drawing of their name, most frequent first
 
 "Rank" is the place of the word in the list of common things. "Link" names a WordNet synonym or direct hypernym
 that has a drawing: a synonym is a `core.word` fact of the shard `words-wordnet` (the word finds that drawing as
@@ -36,16 +37,11 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 56 | engine | hypernym motor | motor that converts thermal energy to mechanical work |
 | 72 | photo | synonym photograph (drawing "photographs") | a representation of a person or scene in the form of a print or transparent slide or in digital format |
 | 95 | bike |  | a motor vehicle with two wheels and a strong frame |
-| 108 | plate | other sense: the drawing shows a dinner plate | (baseball) base consisting of a rubber slab where the batter stands |
 | 113 | palace | synonym castle | a large and stately mansion |
 | 154 | couch | synonym sofa | an upholstered seat for more than one person |
 | 156 | closet | synonym cupboard | a small room (or recess) or cabinet used for storage space |
 | 167 | teddy | synonym teddy bear | plaything consisting of a child's toy bear (usually plush and stuffed with soft materials) |
-| 169 | wing | other sense: the drawing shows the wing of a bird | one of the horizontal airfoils on either side of the fuselage of an airplane |
-| 182 | chip | other sense: the drawing shows fried potato chips | a triangular wooden float attached to the end of a log line |
 | 187 | trunk | synonym tree trunk | the main stem of a tree |
-| 192 | frame | other sense: the drawing shows a picture frame | the framework for a pair of eyeglasses |
-| 195 | hammer | other sense: the drawing shows the hand tool | the part of a gunlock that strikes the percussion cap when the trigger is pulled |
 | 198 | theatre | synonym theater | a building where theatrical performances or motion-picture shows can be presented |
 | 207 | highway | hypernym road | a major road for any form of motor transport |
 | 208 | jet | synonym jet plane | an airplane powered by one or more jet engines |
@@ -53,7 +49,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 242 | counter | hypernym table | table consisting of a horizontal surface over which business is transacted |
 | 249 | needle |  | the leaf of a conifer |
 | 253 | cellphone | synonym mobile phone | a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver |
-| 261 | turtle | other sense: the drawing shows the animal | a sweater or jersey with a high close-fitting collar |
 | 267 | jewelry |  | an adornment (as a bracelet or ring or necklace) made of precious metals and set with gems (or imitation gems) |
 | 274 | puppy | hypernym dog | a young dog |
 | 276 | carpet | synonym rug | floor covering consisting of a piece of thick heavy fabric (usually with nap or pile) |
@@ -89,7 +84,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 389 | delta |  | a low triangular area of alluvial deposits where a river divides before entering a larger body of water |
 | 394 | ridge |  | a long narrow natural elevation or striation |
 | 398 | rack |  | framework for holding objects |
-| 402 | tuna | other sense: the drawing shows a tin of tuna fish | tropical American prickly pear of Jamaica |
 | 403 | altar | hypernym table | the table in Christian churches where communion is given |
 | 409 | gown | hypernym dress | a woman's dress, usually with a close-fitting bodice and a long flared skirt, often worn on formal occasions |
 | 417 | cane | hypernym walking stick | a stick that people can lean on to help them walk |
@@ -97,7 +91,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 424 | continent |  | one of the large landmasses of the earth |
 | 428 | grill |  | a restaurant where food is cooked on a grill |
 | 430 | grocery |  | a marketplace where groceries are sold |
-| 434 | hose | other sense: the drawing shows a garden hose | socks and stockings and tights collectively (the British include underwear) |
 | 439 | salon |  | gallery where works of art can be displayed |
 | 441 | workshop |  | small workplace where handcrafts or manufacturing are done |
 | 442 | swine |  | stout-bodied short-legged omnivorous animals |
@@ -113,10 +106,8 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 476 | mustard |  | any of several cruciferous plants of the genus Brassica |
 | 478 | jasmine | hypernym bush | any of several shrubs and vines of the genus Jasminum chiefly native to Asia |
 | 481 | bunk |  | a long trough for feeding cattle |
-| 484 | drone | other sense: the drawing shows a small aircraft with four rotors | stingless male bee in a colony of social bees (especially honeybees) whose sole function is to mate with the queen |
 | 487 | baggage | synonym luggage | cases used to carry belongings when traveling |
 | 489 | fax |  | duplicator that transmits the copy by wire or radio |
-| 496 | cereal | other sense: the drawing shows a bowl of breakfast cereal | grass whose starchy grains are used as food: wheat |
 | 500 | scooter |  | a motorboat resembling a motor scooter |
 | 502 | sewer |  | a waste pipe that carries away sewage or surface water |
 | 503 | hull |  | dry outer covering of a fruit or seed or nut |
@@ -157,7 +148,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 592 | basil | hypernym herb | any of several Old World tropical aromatic annual or perennial herbs of the genus Ocimum |
 | 593 | cocoa | synonym hot chocolate | a beverage made from cocoa powder and milk and sugar |
 | 595 | bulb |  | a modified bud consisting of a thickened globular underground stem serving as a reproductive structure |
-| 596 | dolphin | other sense: the drawing shows the sea mammal | large slender food and game fish widely distributed in warm seas (especially around Hawaii) |
 | 600 | cobra |  | venomous Asiatic and African elapid snakes that can expand the skin of the neck into a hood |
 | 602 | dungeon |  | the main tower within the walls of a medieval castle or fortress |
 | 604 | tablet | other sense: the drawing shows a tablet computer | a slab of stone or wood suitable for bearing an inscription |
@@ -193,7 +183,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 643 | latte |  | strong espresso coffee with a topping of frothed steamed milk |
 | 645 | dairy |  | a farm where dairy products are produced |
 | 646 | slope |  | an elevated geological formation |
-| 647 | cracker | other sense: the drawing shows a Christmas cracker | a thin crisp wafer made of flour and water with or without leavening and shortening |
 | 648 | spacecraft | hypernym satellite | a craft capable of traveling in outer space |
 | 649 | fiddle | synonym violin | bowed stringed instrument that is the highest member of the violin family |
 | 650 | stein | synonym beer mug | a mug intended for serving beer |
@@ -207,7 +196,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 662 | wand | hypernym rod | a rod used by a magician or water diviner |
 | 664 | crater |  | a bowl-shaped geological formation at the top of a volcano |
 | 665 | flea |  | any wingless bloodsucking parasitic insect noted for ability to leap |
-| 666 | peacock | other sense: the drawing shows the bird | European butterfly having reddish-brown wings each marked with a purple eyespot |
 | 667 | bungalow | hypernym house | a small house with a single story |
 | 668 | cone |  | any cone-shaped artifact |
 | 669 | sauna |  | a Finnish steam bath |
@@ -242,7 +230,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 712 | miniature | hypernym painting | painting or drawing included in a book (especially in illuminated medieval manuscripts) |
 | 713 | windshield |  | transparent screen (as of glass) to protect occupants of a vehicle |
 | 714 | antenna |  | an electrical device that sends or receives radio or television signals |
-| 715 | lorry | other sense: the drawing shows a motor truck | a large low horse-drawn wagon without sides |
 | 716 | urn | hypernym vase | a large vase that usually has a pedestal or feet |
 | 720 | gavel |  | a small mallet used by a presiding officer or a judge |
 | 721 | hive |  | a man-made receptacle that houses a swarm of bees |
@@ -287,7 +274,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 781 | risotto |  | rice cooked with broth and sprinkled with grated cheese |
 | 782 | aquarium |  | a tank or pool or bowl filled with water for keeping live fish and underwater animals |
 | 783 | lark |  | North American songbirds having a yellow breast |
-| 785 | stretcher | other sense: the drawing shows a stretcher for carrying a patient | a wooden framework on which canvas is stretched and fixed for oil painting |
 | 786 | basin |  | a bowl-shaped vessel |
 | 788 | cassette |  | a container that holds a magnetic tape used for recording or playing sound or video |
 | 791 | iceberg |  | a large mass of ice floating at sea |
@@ -330,7 +316,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 837 | taro | hypernym root (drawing "roots") | edible starchy tuberous root of taro plants |
 | 838 | glacier |  | a slowly moving mass of ice |
 | 839 | grizzly |  | powerful brownish-yellow bear of the uplands of western North America |
-| 840 | cot | other sense: the drawing shows a bed for a small child | a sheath worn to protect a finger |
 | 841 | mortar |  | a muzzle-loading high-angle gun with a short barrel that fires shells at high elevations for a short range |
 | 842 | bugle |  | a brass instrument without valves |
 | 843 | gurney |  | a metal stretcher with wheels |
@@ -510,7 +495,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1075 | popsicle | synonym ice lolly | ice cream or water ice on a small wooden stick |
 | 1077 | wrapper |  | a loose dressing gown for women |
 | 1079 | crucifix |  | representation of the cross on which Jesus died |
-| 1081 | steamer | other sense: the drawing shows a steaming pot | a clam that is usually steamed in the shell |
 | 1083 | lifeboat |  | a strong sea boat designed to rescue people from a sinking ship |
 | 1084 | shim |  | a thin wedge of material (wood or metal or stone) for driving into crevices |
 | 1085 | chardonnay |  | white wine grape |
@@ -626,7 +610,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1221 | greyhound |  | a tall slender dog of an ancient breed noted for swiftness and keen sight |
 | 1222 | palette |  | board that provides a flat surface on which artists mix paints and the range of colors used |
 | 1223 | sabre |  | a fencing sword with a v-shaped blade and a slightly curved handle |
-| 1224 | barbeque | other sense: the drawing shows the grill | meat that has been barbecued or grilled in a highly seasoned sauce |
 | 1225 | horseshoe |  | game equipment consisting of an open ring of iron used in playing horseshoes |
 | 1228 | gander | hypernym goose | mature male goose |
 | 1230 | bluebird |  | fruit-eating mostly brilliant blue songbird of the East Indies |
@@ -758,7 +741,6 @@ in for the thing). The gloss is WordNet's, for the sense kept.
 | 1372 | spanner | synonym wrench | a hand tool that is used to hold or twist a nut or bolt |
 | 1373 | couscous |  | a spicy dish that originated in northern Africa |
 | 1374 | napa |  | plant with an elongated head of broad stalked leaves resembling celery |
-| 1375 | headstone | other sense: the drawing shows a gravestone | the central building block at the top of an arch or vault |
 | 1376 | skylight | hypernym window | a window in a roof to admit daylight |
 | 1377 | sultana |  | pale yellow seedless grape used for raisins and wine |
 | 1378 | pajama | synonym pyjama (drawing "pyjamas") | a pair of loose trousers tied by a drawstring around the waist |

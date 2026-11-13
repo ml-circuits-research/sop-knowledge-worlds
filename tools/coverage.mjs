@@ -23,9 +23,13 @@
 //      that are more frequent than the noun, parts and sides that are not things).
 // A word has a drawing when a k.objects object has its name (compared in lower case; the plural form of the word,
 // as WordNet's rules and exceptions give it, counts too: grape has "grapes").
-// The sense check (R5.1, sources/coverage/sense-check.tsv): a drawing of the word's name that was looked at next to
-// the gloss of the sense kept and shows another sense (the drawing "bank" is a building, the sense kept is the river
-// bank) does not count; the word is then missing, unless the table names another object that draws the sense kept.
+// The sense check (R5.1, sources/coverage/sense-check.tsv): every drawing of a word's name was looked at next to the
+// gloss of the sense kept. Reviewer's answer to Q22: a common thing counts as drawn when the drawing shows any
+// physical sense of the word that WordNet has (the drawing "bank" is a building, the sense kept is the river bank:
+// drawn). The table names that sense in its last column (the offset of the WordNet noun synset); the tool checks
+// that it is a sense of the word and physical (under ROOTS or under physical entity). A drawing that shows a sense WordNet does not have (the
+// drawing "tablet" is a tablet computer) does not count; the word is then missing, unless the table names another
+// object that draws the sense kept.
 // sources/coverage/not-drawable.tsv (R5.3): things that cannot be drawn as an object (materials, substances without
 // a container); they leave the list and are named on the page.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
@@ -38,6 +42,8 @@ export const LIMIT = 1500;
 // physical object, living thing, food (nutrient), food (solid food), artifact
 export const ROOTS = ['00002684', '00004258', '00021445', '07571428', '00022119'];
 // Lexicographer files: 03 noun.Tops, 05 noun.animal, 06 noun.artifact, 13 noun.food, 17 noun.object, 20 noun.plant.
+// A sense that a drawing may show (Q22): anything under physical entity (a wing is a body part, not an object).
+export const PHYSICAL_ENTITY = '00001930';
 export const KINDS = ['03', '05', '06', '13', '17', '20'];
 const PERSON_FILE = '18'; // noun.person
 const OFFENSIVE = /ethnic slur|\((?:[a-z]+ )?(?:offensive|vulgar|obscene|taboo|derogatory)(?: [a-z]+)?\)|\b(?:offensive|derogatory|disparaging|obscene|vulgar|insulting|contemptuous|pejorative) (?:terms?|names?|words?|slang|expression)\b/i;
@@ -73,11 +79,10 @@ export function plurals(word, exceptions) {
 // files: { 'index.noun', 'data.noun', 'noun.exc', 'index.sense' } as text; freq: the frequency list as text;
 // objects: the names of the k.objects objects; notThings: the text of not-things.tsv.
 // notLinks: the text of not-links.tsv (word, other word, reason): links the rule gives that a look at the drawing refuses.
-// senseCheck: the text of sense-check.tsv (word, drawing, verdict, note, instead). notDrawable: the text of
+// senseCheck: the text of sense-check.tsv (word, drawing, verdict, note, instead, shown). notDrawable: the text of
 // not-drawable.tsv (word, reason).
 export function coverage({ files, freq, objects, notThings = '', notLinks = '', senseCheck = '', notDrawable = '', limit = LIMIT, roots = ROOTS }) {
   const rowsOf = (text) => text.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim()));
-  const wrong = new Map(rowsOf(senseCheck).filter((r) => r[2] === 'wrong').map(([word, drawing, , note, instead]) => [word, { drawing, note, instead: instead || null }]));
   const undrawable = new Map(rowsOf(notDrawable).map(([word, reason]) => [word, reason]));
   const unlinked = new Set(notLinks.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').slice(0, 2).map((x) => x.trim()).join('\t')));
   const data = readData(files['data.noun']);
@@ -96,12 +101,27 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     physical.set(offset, yes);
     return yes;
   };
+  const isEntity = (offset, seen = new Set()) => roots.includes(offset) || offset === PHYSICAL_ENTITY || (!seen.has(offset) && seen.add(offset) && hypernyms(offset).some((h) => isEntity(h, seen)));
+  // Verdict "wrong": the drawing shows another sense than the one kept. With a physical WordNet sense of the word in
+  // the column `shown` it still counts as drawn (`other`); without one it does not (`wrong`).
+  const wrong = new Map();
+  const other = new Map();
+  for (const [word, drawing, verdict, note, instead, shown] of rowsOf(senseCheck)) {
+    if (verdict !== 'wrong') continue;
+    if (!shown) { wrong.set(word, { drawing, note, instead: instead || null }); continue; }
+    if (!(index.get(word) ?? []).includes(shown) || !isEntity(shown)) throw new Error(`sense-check.tsv: ${shown} is not a physical noun sense of "${word}"`);
+    other.set(word, { drawing, note, shown, instead: instead || null });
+  }
   const byName = new Map(); // lower case -> the object's name (the first in sorted order)
   for (const name of [...objects].sort()) if (!byName.has(name.toLowerCase())) byName.set(name.toLowerCase(), name);
   const namedLike = (word) => byName.get(word) ?? plurals(word, exceptions).map((p) => byName.get(p)).find(Boolean) ?? null;
   // The drawing of a word: the object of its name, unless the sense check found that it shows another sense.
   const isWrong = (word) => wrong.has(word) && wrong.get(word).drawing === namedLike(word);
   const drawingOf = (word) => (isWrong(word) ? (byName.get(wrong.get(word).instead?.toLowerCase()) ?? null) : namedLike(word));
+  // The drawing of the sense kept, for links: a word whose drawing shows another sense (Q22) is drawn in the sense
+  // kept only by the object that the table names (a winery is a kind of plant, the factory: not the green plant).
+  const isOther = (word) => other.has(word) && other.get(word).drawing === namedLike(word);
+  const keptDrawingOf = (word) => (isOther(word) ? (byName.get(other.get(word).instead?.toLowerCase()) ?? null) : drawingOf(word));
 
   const rankOf = new Map(); // word -> its line in the frequency list
   freq.split('\n').forEach((line, i) => { const w = line.trim().split(/\s+/)[0]; if (w && !rankOf.has(w)) rankOf.set(w, i); });
@@ -115,7 +135,7 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     const phys = (index.get(key) ?? []).filter(isPhysical);
     return phys.length ? phys.reduce((best, s) => ((t.get(s) ?? 0) > (t.get(best) ?? 0) ? s : best), phys[0]) : null;
   };
-  const stats = { nouns: 0, verbOrOther: 0, abstract: 0, otherKinds: 0, plurals: 0, persons: 0, offensive: 0, notThings: 0, notDrawable: 0, kept: 0, drawn: 0, otherName: 0, wrongSense: 0, bySynonym: 0, byHypernym: 0 };
+  const stats = { nouns: 0, verbOrOther: 0, abstract: 0, otherKinds: 0, plurals: 0, persons: 0, offensive: 0, notThings: 0, notDrawable: 0, kept: 0, drawn: 0, otherSense: 0, otherName: 0, wrongSense: 0, bySynonym: 0, byHypernym: 0 };
   const list = [];
   const notDrawn = [];
   const persons = [];
@@ -140,14 +160,15 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
     if (senses.some((s) => OFFENSIVE.test(data.get(s).gloss))) { stats.offensive++; continue; }
     if (excluded.has(word)) { stats.notThings++; continue; }
     if (undrawable.has(word)) { stats.notDrawable++; notDrawn.push({ word, reason: undrawable.get(word), gloss: data.get(sense).gloss.split(';')[0].trim() }); continue; }
-    const entry = { rank: list.length + 1, word, count: Number(count), gloss: data.get(sense).gloss.split(';')[0].trim(), drawing: drawingOf(word), link: null, wrong: isWrong(word) ? { drawing: namedLike(word), note: wrong.get(word).note } : null };
+    const entry = { rank: list.length + 1, word, count: Number(count), gloss: data.get(sense).gloss.split(';')[0].trim(), drawing: drawingOf(word), link: null, wrong: isWrong(word) ? { drawing: namedLike(word), note: wrong.get(word).note } : null,
+      other: isOther(word) ? other.get(word) : null };
     // A word whose own name is an object (of another sense) gets no link: the word already finds that object.
     if (!entry.drawing && !entry.wrong) {
       // R4.4: a synonym in the kept sense, then a direct hypernym of it, that has a drawing. The other word must be
       // kept in that same sense too (a bullet is also called a slug, but "slug" is first of all the animal, and so
       // is its drawing). Words of several words are compared with their spaces ("ice cream").
       const spelt = (w) => w.replace(/_/g, ' ').toLowerCase();
-      const drawn = (synset) => data.get(synset).words.map(spelt).filter((w) => w !== word && keptSense(w) === synset && !unlinked.has(`${word}\t${w}`)).map((w) => [w, drawingOf(w)]).find(([, d]) => d);
+      const drawn = (synset) => data.get(synset).words.map(spelt).filter((w) => w !== word && keptSense(w) === synset && !unlinked.has(`${word}\t${w}`)).map((w) => [w, keptDrawingOf(w)]).find(([, d]) => d);
       const synonym = drawn(sense);
       const hyper = synonym ? null : hypernyms(sense).map(drawn).find(Boolean);
       if (synonym) entry.link = { kind: 'synonym', word: synonym[0], drawing: synonym[1] };
@@ -157,6 +178,7 @@ export function coverage({ files, freq, objects, notThings = '', notLinks = '', 
   }
   stats.kept = list.length;
   stats.drawn = list.filter((e) => e.drawing).length;
+  stats.otherSense = list.filter((e) => e.other).length;
   stats.otherName = list.filter((e) => e.drawing && e.wrong).length;
   stats.wrongSense = list.filter((e) => e.wrong).length;
   stats.bySynonym = list.filter((e) => e.link?.kind === 'synonym').length;
@@ -183,15 +205,16 @@ ${persons.slice(0, 6).join(', ')}) and the words of \`sources/coverage/not-thing
 the top of \`tools/coverage.mjs\`.
 
 "Has a drawing" compares the word with the name of a \`k.objects\` object (or its plural). Every such drawing was
-looked at next to the gloss of the sense kept (\`sources/coverage/sense-check.tsv\`): ${stats.wrongSense} drawings show another sense
-of the word (the drawing \`bank\` is a building, the sense kept is the river bank). Such a word counts as missing
-("other sense" in the list), unless an object of another name draws the sense kept (${stats.otherName} words). The drawing keeps its
-name, since the sense it shows is a common one too.
+looked at next to the gloss of the sense kept (\`sources/coverage/sense-check.tsv\`). A word counts as drawn when the
+drawing shows any physical sense of the word that WordNet has: ${stats.otherSense} drawings show another sense than the one kept
+(the drawing \`bank\` is a building, the sense kept is the river bank) and count. ${stats.wrongSense} ${stats.wrongSense === 1 ? 'drawing shows' : 'drawings show'} a meaning that
+WordNet does not have for the word (the drawing \`tablet\` is a tablet computer); such a word counts as missing
+("other sense" in the list), unless an object of another name draws the sense kept (${stats.otherName}).
 
 | | Words | Share |
 | --- | --- | --- |
 | Common things | ${num(list.length)} | |
-| with a drawing of that name, in the sense kept | ${stats.drawn} | ${pct(stats.drawn)} |
+| with a drawing of that name | ${stats.drawn} | ${pct(stats.drawn)} |
 | without, but a WordNet synonym has a drawing | ${stats.bySynonym} | ${pct(stats.bySynonym)} |
 | without, but the direct hypernym has a drawing | ${stats.byHypernym} | ${pct(stats.byHypernym)} |
 | with no drawing at all | ${none} | ${pct(none)} |
