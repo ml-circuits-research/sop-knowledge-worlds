@@ -1143,6 +1143,12 @@
   "k.objects/shards/noto-science-01",
   "k.words/shards/an"
  ],
+ "antenna1": [
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "antenna2": [
+  "k.objects/shards/noto-animal-marine-02"
+ ],
  "antennae": [
   "k.objects/shards/animals",
   "k.words/shards/an"
@@ -2169,6 +2175,7 @@
   "k.objects/shards/household",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05"
  ],
  "back_wheel": [
@@ -2624,6 +2631,7 @@
  ],
  "base": [
   "k.objects/shards/buildings",
+  "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-food-asian-01",
   "k.objects/shards/noto-food-sweet-01",
@@ -2836,6 +2844,7 @@
   "k.words/shards/be"
  ],
  "beard": [
+  "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/be"
  ],
  "bearer": [
@@ -3071,6 +3080,7 @@
   "k.words/shards/be"
  ],
  "belly": [
+  "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.words/shards/be"
@@ -3799,13 +3809,16 @@
   "k.objects/shards/nature",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-bug-02",
+  "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-animal-mammal-06",
+  "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
@@ -4275,6 +4288,8 @@
   "k.words/shards/br"
  ],
  "branch": [
+  "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-plant-other-02",
   "k.words/shards/br"
  ],
@@ -7098,6 +7113,7 @@
  ],
  "cloud": [
   "k.commonsense/shards/core",
+  "k.objects/shards/noto-arts-crafts-01",
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/noto-sky-weather-04",
   "k.objects/shards/sky",
@@ -7345,6 +7361,8 @@
   "k.words/shards/co"
  ],
  "collar": [
+  "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-clothing-03",
   "k.words/shards/co"
@@ -7718,6 +7736,7 @@
   "k.words/shards/co"
  ],
  "comb": [
+  "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-clothing-05",
   "k.words/shards/co"
  ],
@@ -9450,6 +9469,7 @@
  ],
  "cup": [
   "k.objects/shards/household",
+  "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-household-01",
@@ -12083,8 +12103,12 @@
  ],
  "ear": [
   "k.objects/shards/animals",
+  "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-06",
+  "k.objects/shards/noto-animal-mammal-07",
+  "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-food-vegetable-01",
   "k.objects/shards/noto-plant-other-01",
   "k.words/shards/ea"
@@ -13330,11 +13354,16 @@
   "k.objects/shards/figures",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-animal-bug-01",
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-marine-01",
+  "k.objects/shards/noto-animal-marine-02",
+  "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-clothing-01",
   "k.words/shards/ey"
  ],
@@ -14021,6 +14050,7 @@
  ],
  "fin": [
   "k.objects/shards/animals",
+  "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/vehicles",
   "k.words/shards/fi"
@@ -14697,6 +14727,7 @@
   "k.words/shards/fo"
  ],
  "foot": [
+  "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-clothing-04",
   "k.words/shards/fo"
  ],
@@ -15199,6 +15230,7 @@
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-animal-mammal-07"
  ],
@@ -17007,6 +17039,7 @@
  ],
  "handle": [
   "k.objects/shards/household",
+  "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-clothing-04",
   "k.objects/shards/noto-dishware-01",
@@ -18176,6 +18209,8 @@
   "k.words/shards/ho"
  ],
  "horn": [
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-sound-01",
   "k.words/shards/ho"
  ],
@@ -20717,6 +20752,7 @@
   "k.objects/shards/noto-clothing-01"
  ],
  "label": [
+  "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-book-paper-03",
   "k.objects/shards/noto-food-prepared-05",
   "k.words/shards/la"
@@ -21182,6 +21218,7 @@
   "k.words/shards/le"
  ],
  "leash": [
+  "k.objects/shards/noto-animal-mammal-01",
   "k.words/shards/le"
  ],
  "least": [
@@ -21238,7 +21275,11 @@
  ],
  "left_antenna": [
   "k.objects/shards/animals",
-  "k.objects/shards/noto-animal-bug-01"
+  "k.objects/shards/noto-animal-bug-01",
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "left_antler": [
+  "k.objects/shards/noto-animal-mammal-03"
  ],
  "left_arm": [
   "k.objects/shards/figures"
@@ -21250,7 +21291,8 @@
   "k.objects/shards/noto-sky-weather-02"
  ],
  "left_claw": [
-  "k.objects/shards/noto-animal-bug-02"
+  "k.objects/shards/noto-animal-bug-02",
+  "k.objects/shards/noto-animal-marine-02"
  ],
  "left_column": [
   "k.objects/shards/noto-place-building-02"
@@ -21260,9 +21302,12 @@
  ],
  "left_ear": [
   "k.objects/shards/animals",
+  "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-06",
+  "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-game-02"
  ],
@@ -21270,12 +21315,19 @@
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/noto-animal-amphibian-01",
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
+  "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-event-01",
@@ -21285,10 +21337,15 @@
   "k.objects/shards/vehicles"
  ],
  "left_foot": [
-  "k.objects/shards/noto-animal-bird-02"
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bird-03",
+  "k.objects/shards/noto-animal-mammal-07"
  ],
  "left_horn": [
-  "k.objects/shards/noto-animal-mammal-04"
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-05",
+  "k.objects/shards/noto-animal-reptile-01"
  ],
  "left_leaf": [
   "k.objects/shards/noto-plant-flower-02"
@@ -21298,6 +21355,7 @@
   "k.objects/shards/figures",
   "k.objects/shards/household",
   "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-transport-ground-06"
  ],
@@ -21315,6 +21373,7 @@
  ],
  "left_nostril": [
   "k.objects/shards/noto-animal-amphibian-01",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05"
  ],
  "left_panel": [
@@ -21360,6 +21419,8 @@
   "k.objects/shards/vehicles"
  ],
  "left_wing": [
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-money-01"
  ],
  "leftover": [
@@ -21375,17 +21436,36 @@
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/household",
+  "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-food-prepared-02",
   "k.words/shards/le"
  ],
  "leg1": [
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-marine-02"
  ],
  "leg2": [
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-marine-02"
  ],
  "leg3": [
-  "k.objects/shards/noto-animal-mammal-03"
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "leg4": [
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "leg5": [
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "leg6": [
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "leg7": [
+  "k.objects/shards/noto-animal-marine-02"
  ],
  "legacy": [
   "k.words/shards/le"
@@ -21408,6 +21488,8 @@
   "k.objects/shards/household",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bug-01",
+  "k.objects/shards/noto-animal-bug-02",
+  "k.objects/shards/noto-animal-mammal-05",
   "k.words/shards/le"
  ],
  "legume": [
@@ -24585,7 +24667,11 @@
   "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
+  "k.objects/shards/noto-animal-marine-01",
+  "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.words/shards/mo"
  ],
@@ -24853,6 +24939,8 @@
  ],
  "muzzle": [
   "k.objects/shards/noto-animal-mammal-02",
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-07",
   "k.words/shards/mu"
  ],
@@ -25500,6 +25588,7 @@
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
+  "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.objects/shards/noto-transport-ground-01",
   "k.objects/shards/vehicles",
@@ -26619,6 +26708,7 @@
   "k.words/shards/op"
  ],
  "opening": [
+  "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-household-01",
   "k.words/shards/op"
  ],
@@ -27143,6 +27233,12 @@
  "pad": [
   "k.objects/shards/noto-office-01",
   "k.words/shards/pa"
+ ],
+ "pad1": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "pad2": [
+  "k.objects/shards/noto-animal-mammal-08"
  ],
  "padded": [
   "k.words/shards/pa"
@@ -27884,6 +27980,7 @@
  ],
  "patch": [
   "k.objects/shards/noto-animal-mammal-01",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-marine-01",
   "k.words/shards/pa"
  ],
@@ -29075,6 +29172,7 @@
   "k.words/shards/pl"
  ],
  "plate": [
+  "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-dishware-01",
   "k.words/shards/pl"
  ],
@@ -32262,7 +32360,11 @@
  ],
  "right_antenna": [
   "k.objects/shards/animals",
-  "k.objects/shards/noto-animal-bug-01"
+  "k.objects/shards/noto-animal-bug-01",
+  "k.objects/shards/noto-animal-marine-02"
+ ],
+ "right_antler": [
+  "k.objects/shards/noto-animal-mammal-03"
  ],
  "right_arm": [
   "k.objects/shards/figures"
@@ -32274,7 +32376,8 @@
   "k.objects/shards/noto-sky-weather-02"
  ],
  "right_claw": [
-  "k.objects/shards/noto-animal-bug-02"
+  "k.objects/shards/noto-animal-bug-02",
+  "k.objects/shards/noto-animal-marine-02"
  ],
  "right_column": [
   "k.objects/shards/noto-place-building-02"
@@ -32284,9 +32387,12 @@
  ],
  "right_ear": [
   "k.objects/shards/animals",
+  "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-06",
+  "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-game-02"
  ],
@@ -32294,12 +32400,19 @@
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/noto-animal-amphibian-01",
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-02",
+  "k.objects/shards/noto-animal-mammal-03",
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
+  "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-event-01",
@@ -32309,16 +32422,22 @@
   "k.objects/shards/vehicles"
  ],
  "right_foot": [
-  "k.objects/shards/noto-animal-bird-02"
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bird-03",
+  "k.objects/shards/noto-animal-mammal-07"
  ],
  "right_horn": [
-  "k.objects/shards/noto-animal-mammal-04"
+  "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-05",
+  "k.objects/shards/noto-animal-reptile-01"
  ],
  "right_leg": [
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.objects/shards/household",
   "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-household-01",
   "k.objects/shards/noto-transport-ground-06"
  ],
@@ -32336,6 +32455,7 @@
  ],
  "right_nostril": [
   "k.objects/shards/noto-animal-amphibian-01",
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05"
  ],
  "right_panel": [
@@ -32381,6 +32501,8 @@
   "k.objects/shards/vehicles"
  ],
  "right_wing": [
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bug-02",
   "k.objects/shards/noto-money-01"
  ],
  "righteousness": [
@@ -33282,6 +33404,7 @@
   "k.words/shards/sa"
  ],
  "sand": [
+  "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-time-01",
   "k.words/shards/sa"
@@ -34600,6 +34723,8 @@
   "k.words/shards/sh"
  ],
  "shell": [
+  "k.objects/shards/noto-animal-bird-01",
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-food-fruit-03",
   "k.words/shards/sh"
@@ -36388,6 +36513,30 @@
  "spike": [
   "k.words/shards/sp"
  ],
+ "spike1": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike2": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike3": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike4": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike5": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike6": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike7": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
+ "spike8": [
+  "k.objects/shards/noto-animal-marine-01"
+ ],
  "spill": [
   "k.objects/shards/noto-drink-02",
   "k.words/shards/sp"
@@ -36548,19 +36697,27 @@
   "k.words/shards/sp"
  ],
  "spot1": [
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "spot2": [
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "spot3": [
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "spot4": [
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03"
  ],
  "spot5": [
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-mammal-03"
+ ],
+ "spot6": [
+  "k.objects/shards/noto-animal-bug-01"
  ],
  "spotlight": [
   "k.words/shards/sp"
@@ -36580,6 +36737,9 @@
  ],
  "spouse": [
   "k.words/shards/sp"
+ ],
+ "spout": [
+  "k.objects/shards/noto-animal-marine-01"
  ],
  "spouting": [
   "k.objects/shards/noto-animal-marine-01"
@@ -37143,6 +37303,7 @@
   "k.words/shards/st"
  ],
  "stinger": [
+  "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-animal-marine-02"
  ],
  "stink": [
@@ -38365,9 +38526,17 @@
   "k.objects/shards/animals",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-02",
+  "k.objects/shards/noto-animal-bird-03",
   "k.objects/shards/noto-animal-bug-02",
+  "k.objects/shards/noto-animal-mammal-01",
+  "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
+  "k.objects/shards/noto-animal-mammal-05",
+  "k.objects/shards/noto-animal-mammal-06",
+  "k.objects/shards/noto-animal-mammal-07",
+  "k.objects/shards/noto-animal-marine-01",
+  "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-sky-weather-05",
   "k.objects/shards/noto-transport-air-01",
@@ -39519,6 +39688,30 @@
  "toe": [
   "k.words/shards/to"
  ],
+ "toe1": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe2": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe3": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe4": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe5": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe6": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe7": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
+ "toe8": [
+  "k.objects/shards/noto-animal-mammal-08"
+ ],
  "tofu": [
   "k.words/shards/to"
  ],
@@ -40518,6 +40711,7 @@
   "k.words/shards/tu"
  ],
  "tusk": [
+  "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-06"
  ],
  "tut": [
@@ -42560,22 +42754,27 @@
   "k.words/shards/wh"
  ],
  "whisker1": [
+  "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07"
  ],
  "whisker2": [
+  "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07"
  ],
  "whisker3": [
+  "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07"
  ],
  "whisker4": [
+  "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07"
  ],
  "whisker5": [
+  "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-animal-mammal-07"
  ],
@@ -42862,6 +43061,7 @@
  ],
  "wings": [
   "k.objects/shards/animals",
+  "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/vehicles",
   "k.words/shards/wi"

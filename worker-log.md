@@ -214,3 +214,13 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - npm test: 913 pass in 60 s (one render test per object; validation loads every shard twice).
 - The 611 objects outside the pilot are looked at one by one during R2.7 (labelling pictures); what is found
   unrecognisable there is reported with those batches.
+
+## R2.7 batch 1 (2026-11-13): 108 more objects looked at (308 of 811)
+
+- Animals (birds, bugs, mammals, marine, reptiles) and the first arts and book objects, on 9 sheets of 12.
+- part-names.tsv now has rows for 278 objects: **1,002 parts named, 268 marked detail** (this batch: +391 names,
+  +46 details, 97 of 108 objects got at least one row). Faces name almost completely (cat face 12 of 16, cow face
+  11 of 11); whole animals mostly body, head, tail, legs, eyes.
+- Seen while labelling, not recognisable after conversion: spider web (the holes of the web are dropped: a dark
+  blob), gorilla, panda (dark shapes cover the face), lizard (head and legs lost to the 16-part cap). 4 of 108.
+- npm test 913 pass; 133,565 wires, 124 shards (unchanged); vocab 13,022 words.
