@@ -31,7 +31,7 @@ in the list yet.
 Question: the size class of an animal is now said in two places: `k.scenes.thing size=` (every drawable thing)
 and `k.animals.animal size=` (every animal, 179 of them with no drawing). Should one of them go?
 Context: the item asks for the size class among the facts of `k.animals`; the answer to Q28 says "no fact in two
-places". A test requires the two to agree where the drawing has the name of the animal (117 compared, all agree;
+places". A test requires the two to agree where the drawing has the name of the animal (132 compared, all agree;
 `tuna` differs on purpose: the thing of `k.scenes` is a tin of tuna). Options: (a) keep both with the test;
 (b) `k.animals` has `size` only for animals without a `k.scenes.thing` (a host then looks in two places);
 (c) `k.scenes.thing` drops the size of things that are animals.

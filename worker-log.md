@@ -2006,7 +2006,7 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   are joined by `drawing`; `crane` is the machine and `kiwi` the fruit, so those two animals have no drawing.
   135 of 314 animals have a drawing.
 - **Size in two places:** `k.scenes.thing` has a size class for drawable things, `k.animals.animal.size` for
-  animals. A test requires that they agree where the drawing has the name of the animal (117 compared). For the
+  animals. A test requires that they agree where the drawing has the name of the animal (132 compared). For the
   second worker: `k.attributes.found` names `k.scenes.thing` for size; for animals without a drawing the value is
   now in `k.animals.animal.size`.
 - **Natural questions (item 8):** new tool `tools/ask-sample.mjs` (domains in `tools/ask-domains.mjs`): all
@@ -2382,3 +2382,4 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Q31: where the unit of a number is said (`k.units.measure`, one fact per numeric slot, is published; meanwhile kept).
 - Q32: the size class of an animal in `k.scenes.thing` and in `k.animals.animal` (meanwhile both, with the test that they agree).
 - Not taken up: the reviewer blocks of 21:55 (Round 10, second worker) and 22:40 (reusable `w.*` worlds, a README section on what belongs here): they are not part of Round 9.
+- Correction: the size classes compared with `k.scenes.thing` are 132, not 117 as the entry of item 2 said (counted now; corrected there and in Q32).
