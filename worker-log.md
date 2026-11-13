@@ -664,3 +664,59 @@ one name differ.
 - Numbers: 1,987 objects in the list (hand-core 60, noto-emoji 811, openmoji 114, mulberry 1,002); `objects.json`
   355,672 bytes; `gallery.html` 3,968 bytes.
 - npm test: 2,185 pass, 0 fail (127 s), on the committed tree.
+
+## Round 3 report (2026-11-13)
+
+**Done, in order:** R3.1 (Q15, then the naming pass: 13 batches, one commit each), R3.2 (with the batches; summary
+commit ed11f25), R3.3, R3.4.
+
+**Worlds now** (sopworld 0.15.0 at 782cd0c; 0 errors, 0 warnings; catalog 10 worlds, 654 shards, vocab 17,811 words;
+`docs/worlds` 53 MB):
+
+| World | Shards | Wires | Bytes | What | Terms |
+| --- | --- | --- | --- | --- | --- |
+| k.commonsense | 1 | 30 | 3,963 | 15 things, 4 soft rules | CC0-1.0 |
+| k.objects | 306 | 303,505 | 36,660,352 | 1,987 drawable objects (60 hand-written, 811 Noto, 114 OpenMoji, 1,002 Mulberry); 3,417 imported parts named, 7,920 details | CC0-1.0; Apache-2.0 AND Unicode-3.0; CC-BY-SA-4.0 |
+| k.words | 318 | 28,951 | 5,610,059 | 10,471 words, 26,116 senses | WordNet licence |
+| k.geo | 13 | 3,473 | 630,063 | 238 countries by common short name, 872 cities, 1,074 rivers, 627 mountains, 216 ranges | public domain; ODbL-1.0 |
+| k.units | 1 | 96 | 12,585 | 8 quantities, 44 units | CC0-1.0 |
+| k.time | 1 | 68 | 7,587 | months, weekdays, seasons, durations | CC0-1.0 |
+| k.space | 3 | 48 | 6,783 | 25 bodies, 8 kinds | CC0-1.0 |
+| k.animals | 5 | 294 | 46,944 | 156 animals | CC0-1.0 |
+| k.body | 1 | 112 | 12,168 | 53 parts, 5 senses | CC0-1.0 |
+| k.food | 5 | 254 | 33,290 | 154 foods | CC0-1.0 |
+
+**Objects and named parts per source** (from `preview/objects.json`; a part counts as named when its name is not
+`partN`):
+
+| Source | Objects | Objects with a named part | Parts | Parts named |
+| --- | --- | --- | --- | --- |
+| hand-core 1 | 60 | 60 | 353 | 353 |
+| noto-emoji 99701e0 | 811 | 668 | 10,152 | 2,027 |
+| openmoji 3e01de5 | 114 | 78 | 1,322 | 153 |
+| mulberry fa94a93 | 1,002 | 687 | 14,202 | 1,237 |
+| all | 1,987 | 1,493 | 26,029 | 3,770 |
+
+The other worlds have no drawable objects; their catalog totals are 654 shards, 336,831 wires, 43,023,794 bytes.
+
+**Looked at, as the entries above say:** every one of the 1,265 OpenMoji and Mulberry labelling pictures, once, on
+63 contact sheets of 20 at 300 px (R3.1, R3.2); the gallery in headless Chrome (counts, search, source filter, lazy
+loading, all picture addresses) and three screenshots of it (R3.4). **Not looked at:** the named pictures a second
+time; the previews of the kept Mulberry objects after cleaning; most of the small numbers of rule-made details; the
+1,987 gallery pictures one by one; the gallery on github.io or in another browser; the previews of the Noto objects
+(unchanged this round). The facts of the four cores were not checked against any book or site (none is reachable):
+they are what I am sure a child's encyclopedia says.
+
+**Below target:** k.objects has 1,987 objects, 13 under 2,000, after 149 Mulberry exclusions.
+
+**What SOP Lang could not say, or only with a workaround:** an approximate number (two keys, Q18); "cannot" (a
+missing value of a repeated key is not a no, Q19); a checked link to a fact in another world's shard (a name key
+and a test, Q17); "a tomato is a vegetable in the kitchen and a fruit for a botanist" (two keys, `kind` and
+`botanically`); a count that depends on age (`count` and `child_count`).
+
+**Open questions** (`questions.md`, none blocking): Q16 (keep the 50 football kits of Mulberry?), Q17 (a name key
+as the join from a fact to its drawing), Q18 (how to say an approximate number), Q19 (how to say "cannot").
+
+**Not fetched, as before:** ConceptNet, Quick, Draw!, Wikidata (network: GitHub, npm and pip only).
+
+**Tests:** npm test 2,185 pass, 0 fail (127 s) at 7da94f4.
