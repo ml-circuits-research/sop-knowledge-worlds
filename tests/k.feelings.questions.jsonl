@@ -1,0 +1,7 @@
+{"id":"fe-01","ask":"how does a face show that someone is afraid","query":{"type":"k.feelings.feeling","where":{"name":"afraid"},"seek":"expression"},"expect":{"status":"supported","value":"surprised"}}
+{"id":"fe-02","ask":"what is the opposite of happy","query":{"type":"k.feelings.feeling","where":{"name":"happy"},"seek":"opposite"},"expect":{"status":"supported","value":"sad"}}
+{"id":"fe-03","ask":"what makes someone afraid","query":{"type":"k.feelings.feeling","where":{"name":"afraid"},"seek":"caused_by","mode":"list"},"expect":{"status":"supported","values":["\"the dark\"","\"a loud noise\"","\"a big dog\""]}}
+{"id":"fe-04","ask":"what can one say to someone who is sad","query":{"type":"k.feelings.feeling","where":{"name":"sad"},"seek":"reply"},"expect":{"status":"supported","value":"\"I am sorry you are sad. Do you want to tell me about it?\""}}
+{"id":"fe-05","ask":"which feelings show as the angry expression","query":{"type":"k.feelings.feeling","where":{"expression":"angry"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["angry","jealous","frustrated"]}}
+{"id":"fe-06","ask":"what do the cheeks of someone shy look like","query":{"type":"k.feelings.feeling","where":{"name":"shy"},"seek":"cheeks"},"expect":{"status":"supported","value":"blush"}}
+{"id":"fe-07","ask":"is being proud pleasant","query":{"type":"k.feelings.feeling","where":{"name":"proud"},"seek":"tone"},"expect":{"status":"supported","value":"pleasant"}}

@@ -634,6 +634,9 @@
   "k.geo/shards/asia-borders",
   "k.words/shards/af"
  ],
+ "afraid": [
+  "k.feelings/shards/feelings"
+ ],
  "africa": [
   "k.geo/shards/africa",
   "k.objects/shards/noto-place-map-01",
@@ -1085,6 +1088,9 @@
  "aloha": [
   "k.words/shards/al"
  ],
+ "alone": [
+  "k.feelings/shards/feelings"
+ ],
  "alonso": [
   "k.words/shards/al"
  ],
@@ -1156,6 +1162,9 @@
  ],
  "amaze": [
   "k.words/shards/am"
+ ],
+ "amazed": [
+  "k.feelings/shards/feelings"
  ],
  "amazon": [
   "k.words/shards/am"
@@ -1296,7 +1305,11 @@
  "amuse": [
   "k.words/shards/am"
  ],
+ "amused": [
+  "k.feelings/shards/feelings"
+ ],
  "amusement": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-place-other-02",
   "k.words/shards/am"
  ],
@@ -1425,6 +1438,7 @@
   "k.objects/shards/stand-ins-wordnet"
  ],
  "anger": [
+  "k.feelings/shards/feelings",
   "k.words/shards/an"
  ],
  "angle": [
@@ -1442,7 +1456,8 @@
  ],
  "angry": [
   "k.faces/shards/plain-eyebrows",
-  "k.faces/shards/presets"
+  "k.faces/shards/presets",
+  "k.feelings/shards/feelings"
  ],
  "anguilla": [
   "k.geo/shards/north-america",
@@ -1550,6 +1565,9 @@
  "annoy": [
   "k.words/shards/an"
  ],
+ "annoyed": [
+  "k.feelings/shards/feelings"
+ ],
  "annoying": [
   "k.words/shards/an"
  ],
@@ -1560,6 +1578,7 @@
   "k.words/shards/an"
  ],
  "answer": [
+  "k.feelings/schema.sop",
   "k.words/shards/an"
  ],
  "ant": [
@@ -1690,6 +1709,9 @@
  ],
  "anxiety": [
   "k.words/shards/an"
+ ],
+ "anxious": [
+  "k.feelings/shards/feelings"
  ],
  "aoraki / mount cook": [
   "k.geo/shards/oceania"
@@ -2355,6 +2377,9 @@
  "ash": [
   "k.words/shards/as"
  ],
+ "ashamed": [
+  "k.feelings/shards/feelings"
+ ],
  "ashes": [
   "k.objects/shards/noto-other-object-01",
   "k.words/shards/as"
@@ -2508,6 +2533,9 @@
  "asthma": [
   "k.words/shards/as"
  ],
+ "astonished": [
+  "k.feelings/shards/feelings"
+ ],
  "astronaut": [
   "k.people/shards/roles-jobs",
   "k.scenes/shards/scenes-other",
@@ -2534,6 +2562,9 @@
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
   "k.words/shards/at"
+ ],
+ "at ease": [
+  "k.feelings/shards/feelings"
  ],
  "at night": [
   "k.scenes/shards/scenes-other"
@@ -2947,6 +2978,9 @@
  ],
  "awesome": [
   "k.objects/shards/noto-event-01"
+ ],
+ "awkward": [
+  "k.feelings/shards/feelings"
  ],
  "awn_1": [
   "k.objects/shards/food-2"
@@ -4106,6 +4140,9 @@
  "bash": [
   "k.words/shards/ba"
  ],
+ "bashful": [
+  "k.feelings/shards/feelings"
+ ],
  "basic": [
   "k.words/shards/ba"
  ],
@@ -4580,6 +4617,9 @@
  ],
  "became": [
   "k.words/shards/be"
+ ],
+ "because": [
+  "k.feelings/schema.sop"
  ],
  "beck": [
   "k.words/shards/be"
@@ -6607,7 +6647,11 @@
   "k.words/shards/be",
   "k.words/shards/bo"
  ],
+ "bored": [
+  "k.feelings/shards/feelings"
+ ],
  "boredom": [
+  "k.feelings/shards/feelings",
   "k.words/shards/bo"
  ],
  "borgia": [
@@ -8770,6 +8814,7 @@
   "k.space/shards/solar-system"
  ],
  "calm": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-plant-flower-01",
   "k.words/shards/ca"
  ],
@@ -9326,6 +9371,9 @@
  "care": [
   "k.words/shards/ca"
  ],
+ "cared for": [
+  "k.feelings/shards/feelings"
+ ],
  "career": [
   "k.words/shards/ca"
  ],
@@ -9776,7 +9824,11 @@
   "k.food/shards/vegetables"
  ],
  "cause": [
+  "k.feelings/schema.sop",
   "k.words/shards/ca"
+ ],
+ "causes": [
+  "k.feelings/schema.sop"
  ],
  "causing": [
   "k.words/shards/ca"
@@ -10576,6 +10628,9 @@
  "cheer": [
   "k.words/shards/ch"
  ],
+ "cheerful": [
+  "k.feelings/shards/feelings"
+ ],
  "cheering": [
   "k.objects/shards/noto-sound-01",
   "k.words/shards/ch"
@@ -10683,6 +10738,9 @@
  ],
  "cherish": [
   "k.words/shards/ch"
+ ],
+ "cherished": [
+  "k.feelings/shards/feelings"
  ],
  "cherokee": [
   "k.words/shards/ch"
@@ -12943,6 +13001,9 @@
  "concern": [
   "k.words/shards/co"
  ],
+ "concerned": [
+  "k.feelings/shards/feelings"
+ ],
  "concert": [
   "k.words/shards/co"
  ],
@@ -13099,7 +13160,11 @@
  "confuse": [
   "k.words/shards/co"
  ],
+ "confused": [
+  "k.feelings/shards/feelings"
+ ],
  "confusion": [
+  "k.feelings/shards/feelings",
   "k.words/shards/co"
  ],
  "conga": [
@@ -14534,6 +14599,7 @@
   "k.words/shards/cr"
  ],
  "cross": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/mulberry-healthcare-medical-items-01",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-place-building-02",
@@ -14917,9 +14983,11 @@
   "k.words/shards/cu"
  ],
  "curiosity": [
+  "k.feelings/shards/feelings",
   "k.words/shards/cu"
  ],
  "curious": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-animal-mammal-02"
  ],
  "curl": [
@@ -16914,7 +16982,11 @@
  "disappoint": [
   "k.words/shards/di"
  ],
+ "disappointed": [
+  "k.feelings/shards/feelings"
+ ],
  "disappointment": [
+  "k.feelings/shards/feelings",
   "k.words/shards/di"
  ],
  "disapprove": [
@@ -17004,7 +17076,11 @@
   "k.words/shards/di"
  ],
  "disgust": [
+  "k.feelings/shards/feelings",
   "k.words/shards/di"
+ ],
+ "disgusted": [
+  "k.feelings/shards/feelings"
  ],
  "dish": [
   "k.objects/shards/mulberry-celebration-item-03",
@@ -17803,6 +17879,7 @@
   "k.animals/shards/birds"
  ],
  "down": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-animal-mammal-08",
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-office-02",
@@ -18487,6 +18564,7 @@
   "k.words/shards/e"
  ],
  "eager": [
+  "k.feelings/shards/feelings",
   "k.words/shards/ea"
  ],
  "eagle": [
@@ -19109,7 +19187,11 @@
  "embarrass": [
   "k.words/shards/em"
  ],
+ "embarrassed": [
+  "k.feelings/shards/feelings"
+ ],
  "embarrassment": [
+  "k.feelings/shards/feelings",
   "k.words/shards/em"
  ],
  "embassies": [
@@ -19189,7 +19271,11 @@
   "k.words/shards/em"
  ],
  "emotion": [
+  "k.feelings/schema.sop",
   "k.words/shards/em"
+ ],
+ "emotions": [
+  "k.feelings/schema.sop"
  ],
  "empanada": [
   "k.objects/shards/noto-food-asian-02"
@@ -19469,6 +19555,9 @@
  "envied": [
   "k.words/shards/en"
  ],
+ "envious": [
+  "k.feelings/shards/feelings"
+ ],
  "environment": [
   "k.words/shards/en"
  ],
@@ -19476,6 +19565,7 @@
   "k.words/shards/en"
  ],
  "envy": [
+  "k.feelings/shards/feelings",
   "k.words/shards/en"
  ],
  "epi": [
@@ -19911,9 +20001,11 @@
   "k.words/shards/ex"
  ],
  "excited": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-event-01"
  ],
  "excitement": [
+  "k.feelings/shards/feelings",
   "k.words/shards/ex"
  ],
  "exclaiming": [
@@ -19961,6 +20053,9 @@
  "exhaust": [
   "k.objects/shards/noto-transport-ground-04",
   "k.words/shards/ex"
+ ],
+ "exhausted": [
+  "k.feelings/shards/feelings"
  ],
  "exhaustion": [
   "k.words/shards/ex"
@@ -20087,6 +20182,7 @@
  ],
  "expression": [
   "k.faces/schema.sop",
+  "k.feelings/schema.sop",
   "k.words/shards/ex"
  ],
  "expressions": [
@@ -20275,6 +20371,7 @@
   "k.body/shards/core",
   "k.faces/schema.sop",
   "k.faces/shards/plain-head",
+  "k.feelings/schema.sop",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/mulberry-celebration-item-02",
@@ -20740,7 +20837,11 @@
   "k.words/shards/fe"
  ],
  "fear": [
+  "k.feelings/shards/feelings",
   "k.words/shards/fe"
+ ],
+ "fearful": [
+  "k.feelings/shards/feelings"
  ],
  "feast": [
   "k.words/shards/fe"
@@ -20769,6 +20870,9 @@
  ],
  "fed": [
   "k.words/shards/fe"
+ ],
+ "fed up": [
+  "k.feelings/shards/feelings"
  ],
  "federal": [
   "k.words/shards/fe"
@@ -20823,14 +20927,20 @@
   "k.words/shards/fe"
  ],
  "feel": [
+  "k.feelings/schema.sop",
   "k.words/shards/fe"
  ],
  "feeling": [
   "k.body/shards/core",
+  "k.feelings/schema.sop",
   "k.words/shards/fe"
  ],
  "feelings": [
+  "k.feelings/schema.sop",
   "k.words/shards/fe"
+ ],
+ "feels": [
+  "k.feelings/schema.sop"
  ],
  "feet": [
   "k.body/shards/core",
@@ -22900,6 +23010,9 @@
  "frighten": [
   "k.words/shards/fr"
  ],
+ "frightened": [
+  "k.feelings/shards/feelings"
+ ],
  "frightening": [
   "k.words/shards/fr"
  ],
@@ -23085,7 +23198,11 @@
  "fruitcake": [
   "k.words/shards/fr"
  ],
+ "frustrated": [
+  "k.feelings/shards/feelings"
+ ],
  "frustration": [
+  "k.feelings/shards/feelings",
   "k.words/shards/fr"
  ],
  "fry": [
@@ -23271,6 +23388,9 @@
  ],
  "fur": [
   "k.words/shards/fu"
+ ],
+ "furious": [
+  "k.feelings/shards/feelings"
  ],
  "furnace": [
   "k.words/shards/fu"
@@ -24134,6 +24254,7 @@
   "k.words/shards/gl"
  ],
  "glad": [
+  "k.feelings/shards/feelings",
   "k.words/shards/gl"
  ],
  "gladiator": [
@@ -24904,11 +25025,15 @@
  "grasshoppers": [
   "k.animals/shards/invertebrates"
  ],
+ "grateful": [
+  "k.feelings/shards/feelings"
+ ],
  "grater": [
   "k.objects/shards/mulberry-food-kitchen-items-04",
   "k.scenes/shards/things-g"
  ],
  "gratitude": [
+  "k.feelings/shards/feelings",
   "k.words/shards/gr"
  ],
  "grauspitz": [
@@ -25445,7 +25570,11 @@
   "k.words/shards/gu"
  ],
  "guilt": [
+  "k.feelings/shards/feelings",
   "k.words/shards/gu"
+ ],
+ "guilty": [
+  "k.feelings/shards/feelings"
  ],
  "guinea": [
   "k.geo/shards/africa",
@@ -26186,11 +26315,13 @@
   "k.scenes/schema.sop"
  ],
  "happiness": [
+  "k.feelings/shards/feelings",
   "k.words/shards/ha"
  ],
  "happy": [
   "k.faces/shards/plain-eyes",
   "k.faces/shards/presets",
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-food-sweet-01"
  ],
  "harare": [
@@ -27600,6 +27731,12 @@
  "homer": [
   "k.words/shards/ho"
  ],
+ "homesick": [
+  "k.feelings/shards/feelings"
+ ],
+ "homesickness": [
+  "k.feelings/shards/feelings"
+ ],
  "hometown": [
   "k.words/shards/ho"
  ],
@@ -27789,9 +27926,11 @@
   "k.words/shards/ho"
  ],
  "hope": [
+  "k.feelings/shards/feelings",
   "k.words/shards/ho"
  ],
  "hopeful": [
+  "k.feelings/shards/feelings",
   "k.words/shards/ho"
  ],
  "hopkins": [
@@ -28346,6 +28485,7 @@
   "k.words/shards/hu"
  ],
  "hurt": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-medical-01",
   "k.words/shards/hu"
  ],
@@ -29362,6 +29502,9 @@
  "interest": [
   "k.words/shards/in"
  ],
+ "interested": [
+  "k.feelings/shards/feelings"
+ ],
  "interface": [
   "k.words/shards/in"
  ],
@@ -29670,6 +29813,9 @@
  ],
  "irritate": [
   "k.words/shards/ir"
+ ],
+ "irritated": [
+  "k.feelings/shards/feelings"
  ],
  "irs": [
   "k.words/shards/ir"
@@ -30125,7 +30271,11 @@
  "jbel toubkal": [
   "k.geo/shards/africa"
  ],
+ "jealous": [
+  "k.feelings/shards/feelings"
+ ],
  "jealousy": [
+  "k.feelings/shards/feelings",
   "k.words/shards/je"
  ],
  "jean": [
@@ -30411,6 +30561,9 @@
  "jirisan": [
   "k.geo/shards/asia"
  ],
+ "jittery": [
+  "k.feelings/shards/feelings"
+ ],
  "jiuling mountains": [
   "k.geo/shards/asia"
  ],
@@ -30601,10 +30754,14 @@
   "k.words/shards/jo"
  ],
  "joy": [
+  "k.feelings/shards/feelings",
   "k.words/shards/jo"
  ],
  "joyce": [
   "k.words/shards/jo"
+ ],
+ "joyful": [
+  "k.feelings/shards/feelings"
  ],
  "joystick": [
   "k.objects/shards/noto-game-02",
@@ -33939,6 +34096,9 @@
  "let": [
   "k.words/shards/le"
  ],
+ "let down": [
+  "k.feelings/shards/feelings"
+ ],
  "letter": [
   "k.objects/shards/mulberry-work-and-school-stationery-02",
   "k.objects/shards/noto-mail-01",
@@ -34879,10 +35039,17 @@
   "k.words/shards/lo"
  ],
  "loneliness": [
+  "k.feelings/shards/feelings",
   "k.words/shards/lo"
+ ],
+ "lonely": [
+  "k.feelings/shards/feelings"
  ],
  "loner": [
   "k.words/shards/lo"
+ ],
+ "lonesome": [
+  "k.feelings/shards/feelings"
  ],
  "long": [
   "k.faces/shards/plain-beard",
@@ -34936,6 +35103,9 @@
  ],
  "lookout": [
   "k.words/shards/lo"
+ ],
+ "looks": [
+  "k.feelings/schema.sop"
  ],
  "loony": [
   "k.words/shards/lo"
@@ -35076,6 +35246,7 @@
   "k.words/shards/lo"
  ],
  "love": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-musical-instrument-02",
   "k.objects/shards/noto-place-building-03",
   "k.objects/shards/noto-plant-flower-01",
@@ -35084,6 +35255,9 @@
  "love hotel": [
   "k.objects/shards/noto-place-building-03",
   "k.scenes/shards/things-l"
+ ],
+ "loved": [
+  "k.feelings/shards/feelings"
  ],
  "lovely": [
   "k.words/shards/lo"
@@ -35511,6 +35685,7 @@
   "k.geo/shards/oceania"
  ],
  "mad": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-prepared-05"
  ],
@@ -38231,6 +38406,9 @@
  "misdemeanor": [
   "k.words/shards/mi"
  ],
+ "miserable": [
+  "k.feelings/shards/feelings"
+ ],
  "misery": [
   "k.words/shards/mi"
  ],
@@ -38334,6 +38512,9 @@
  ],
  "mix-up": [
   "k.words/shards/mi"
+ ],
+ "mixed up": [
+  "k.feelings/shards/feelings"
  ],
  "mixer": [
   "k.objects/shards/mulberry-food-kitchen-items-06",
@@ -38847,6 +39028,7 @@
   "k.words/shards/mo"
  ],
  "mood": [
+  "k.feelings/schema.sop",
   "k.words/shards/mo"
  ],
  "moody": [
@@ -40814,7 +40996,11 @@
  ],
  "nerves": [
   "k.body/shards/core",
+  "k.feelings/shards/feelings",
   "k.words/shards/ne"
+ ],
+ "nervous": [
+  "k.feelings/shards/feelings"
  ],
  "ness": [
   "k.geo/shards/europe",
@@ -41389,6 +41575,9 @@
  ],
  "nostalgia": [
   "k.words/shards/no"
+ ],
+ "nosy": [
+  "k.feelings/shards/feelings"
  ],
  "not": [
   "k.objects/shards/noto-sound-02",
@@ -42219,6 +42408,9 @@
  "offend": [
   "k.words/shards/of"
  ],
+ "offended": [
+  "k.feelings/shards/feelings"
+ ],
  "offender": [
   "k.words/shards/of"
  ],
@@ -42609,6 +42801,7 @@
   "k.words/shards/op"
  ],
  "opposite": [
+  "k.feelings/schema.sop",
   "k.words/shards/op"
  ],
  "opposition": [
@@ -42632,6 +42825,9 @@
  ],
  "optimist": [
   "k.words/shards/op"
+ ],
+ "optimistic": [
+  "k.feelings/shards/feelings"
  ],
  "option": [
   "k.words/shards/op"
@@ -44341,6 +44537,9 @@
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-plant-flower-01",
   "k.words/shards/pe"
+ ],
+ "peaceful": [
+  "k.feelings/shards/feelings"
  ],
  "peach": [
   "k.food/shards/fruit",
@@ -46584,6 +46783,9 @@
  "please": [
   "k.words/shards/pl"
  ],
+ "pleased": [
+  "k.feelings/shards/feelings"
+ ],
  "pleasing": [
   "k.words/shards/pl"
  ],
@@ -47729,6 +47931,7 @@
   "k.words/shards/pr"
  ],
  "pride": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-sky-weather-04",
   "k.words/shards/pr"
  ],
@@ -48131,6 +48334,7 @@
   "k.words/shards/pr"
  ],
  "proud": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-animal-bird-02"
  ],
  "prove": [
@@ -48562,6 +48766,9 @@
  "puzzle piece": [
   "k.objects/shards/noto-game-02",
   "k.scenes/shards/things-p"
+ ],
+ "puzzled": [
+  "k.feelings/shards/feelings"
  ],
  "pyasina": [
   "k.geo/shards/europe"
@@ -49988,6 +50195,9 @@
  "relaxation": [
   "k.words/shards/re"
  ],
+ "relaxed": [
+  "k.feelings/shards/feelings"
+ ],
  "relay": [
   "k.words/shards/re"
  ],
@@ -50004,10 +50214,14 @@
   "k.words/shards/re"
  ],
  "relief": [
+  "k.feelings/shards/feelings",
   "k.words/shards/re"
  ],
  "relieve": [
   "k.words/shards/re"
+ ],
+ "relieved": [
+  "k.feelings/shards/feelings"
  ],
  "religion": [
   "k.objects/shards/noto-clothing-06",
@@ -50186,6 +50400,7 @@
   "k.words/shards/re"
  ],
  "reply": [
+  "k.feelings/schema.sop",
   "k.words/shards/re"
  ],
  "report": [
@@ -52920,6 +53135,7 @@
   "k.faces/shards/plain-eyebrows",
   "k.faces/shards/plain-mouth",
   "k.faces/shards/presets",
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-musical-instrument-01",
   "k.objects/shards/noto-sky-weather-06"
  ],
@@ -52938,6 +53154,7 @@
   "k.words/shards/sa"
  ],
  "sadness": [
+  "k.feelings/shards/feelings",
   "k.words/shards/sa"
  ],
  "safari": [
@@ -53787,6 +54004,7 @@
   "k.words/shards/sa"
  ],
  "say": [
+  "k.feelings/schema.sop",
   "k.words/shards/sa"
  ],
  "saying": [
@@ -53856,6 +54074,9 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-s",
   "k.words/shards/sc"
+ ],
+ "scared": [
+  "k.feelings/shards/feelings"
  ],
  "scarf": [
   "k.objects/shards/noto-clothing-02",
@@ -55102,6 +55323,7 @@
   "k.words/shards/sh"
  ],
  "shame": [
+  "k.feelings/shards/feelings",
   "k.words/shards/sh"
  ],
  "shammed": [
@@ -55868,11 +56090,15 @@
   "k.scenes/shards/things-s"
  ],
  "shy": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-clothing-03",
   "k.words/shards/sh"
  ],
  "shymkent": [
   "k.geo/shards/asia"
+ ],
+ "shyness": [
+  "k.feelings/shards/feelings"
  ],
  "shāh fōlādī": [
   "k.geo/shards/asia"
@@ -55895,6 +56121,9 @@
  "sick": [
   "k.objects/shards/noto-medical-01",
   "k.words/shards/si"
+ ],
+ "sickened": [
+  "k.feelings/shards/feelings"
  ],
  "sickness": [
   "k.words/shards/si"
@@ -56666,7 +56895,8 @@
  ],
  "sleepy": [
   "k.faces/shards/plain-eyes",
-  "k.faces/shards/presets"
+  "k.faces/shards/presets",
+  "k.feelings/shards/feelings"
  ],
  "sleet": [
   "k.words/shards/sl"
@@ -58915,6 +59145,9 @@
  "startle": [
   "k.words/shards/st"
  ],
+ "startled": [
+  "k.feelings/shards/feelings"
+ ],
  "starvation": [
   "k.words/shards/st"
  ],
@@ -60435,12 +60668,14 @@
   "k.words/shards/su"
  ],
  "surprise": [
+  "k.feelings/shards/feelings",
   "k.objects/shards/noto-event-03",
   "k.words/shards/su"
  ],
  "surprised": [
   "k.faces/shards/plain-eyes",
-  "k.faces/shards/presets"
+  "k.faces/shards/presets",
+  "k.feelings/shards/feelings"
  ],
  "surrender": [
   "k.words/shards/su"
@@ -61971,6 +62206,7 @@
   "k.words/shards/te"
  ],
  "tense": [
+  "k.feelings/shards/feelings",
   "k.words/shards/te"
  ],
  "tension": [
@@ -62051,6 +62287,9 @@
  ],
  "terrier": [
   "k.objects/shards/stand-ins-hand"
+ ],
+ "terrified": [
+  "k.feelings/shards/feelings"
  ],
  "territorial": [
   "k.words/shards/te"
@@ -62160,6 +62399,9 @@
  ],
  "thank": [
   "k.words/shards/th"
+ ],
+ "thankful": [
+  "k.feelings/shards/feelings"
  ],
  "thanks": [
   "k.words/shards/th"
@@ -62455,6 +62697,9 @@
  "thrill": [
   "k.words/shards/th"
  ],
+ "thrilled": [
+  "k.feelings/shards/feelings"
+ ],
  "thriller": [
   "k.words/shards/th"
  ],
@@ -62623,6 +62868,9 @@
  "tickle": [
   "k.words/shards/ti"
  ],
+ "tickled": [
+  "k.feelings/shards/feelings"
+ ],
  "tickling": [
   "k.words/shards/ti"
  ],
@@ -62737,6 +62985,7 @@
   "k.words/shards/ti"
  ],
  "timid": [
+  "k.feelings/shards/feelings",
   "k.words/shards/ti"
  ],
  "timing": [
@@ -62877,6 +63126,9 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-t",
   "k.words/shards/ti"
+ ],
+ "tired": [
+  "k.feelings/shards/feelings"
  ],
  "tires": [
   "k.objects/shards/things-2"
@@ -65262,6 +65514,9 @@
  "undress": [
   "k.words/shards/un"
  ],
+ "uneasy": [
+  "k.feelings/shards/feelings"
+ ],
  "unemployed": [
   "k.words/shards/un"
  ],
@@ -65285,6 +65540,9 @@
  ],
  "unhappiness": [
   "k.words/shards/un"
+ ],
+ "unhappy": [
+  "k.feelings/shards/feelings"
  ],
  "unicorn": [
   "k.objects/shards/noto-animal-mammal-03",
@@ -67508,6 +67766,7 @@
   "k.people/schema.sop"
  ],
  "weary": [
+  "k.feelings/shards/feelings",
   "k.words/shards/we"
  ],
  "weasel": [
@@ -68084,6 +68343,7 @@
   "k.words/shards/wh"
  ],
  "why": [
+  "k.feelings/schema.sop",
   "k.words/shards/wh"
  ],
  "wi": [
@@ -68818,10 +69078,15 @@
  "worn": [
   "k.words/shards/we"
  ],
+ "worn out": [
+  "k.feelings/shards/feelings"
+ ],
  "worried": [
+  "k.feelings/shards/feelings",
   "k.words/shards/wo"
  ],
  "worry": [
+  "k.feelings/shards/feelings",
   "k.words/shards/wo"
  ],
  "worrying": [
@@ -68854,6 +69119,7 @@
   "k.words/shards/wo"
  ],
  "wounded": [
+  "k.feelings/shards/feelings",
   "k.words/shards/wo"
  ],
  "wove": [

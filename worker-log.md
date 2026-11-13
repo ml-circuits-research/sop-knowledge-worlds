@@ -1488,3 +1488,29 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
   types, so two facts, joined by `is`.
 - Numbers: k.people 4 shards, 136 wires, 26,758 bytes. Catalog 13 worlds, 778 shards, vocab 19,416 words; 0 errors,
   0 warnings. npm test 2,402 pass, 0 fail.
+
+## R7.4 (2026-11-13): `k.feelings`, 30 feelings
+
+- **New world `k.feelings`** (version 1, exports `feeling`): `k.feelings.feeling` with `tone` (pleasant,
+  unpleasant, neutral), `expression` (a `k.faces.expression`, style `plain`), `mouth`, `eyebrows`, `eyes`, `cheeks`
+  (variants of those `k.faces` slots, put on after the expression or alone), `caused_by` (many), `opposite`,
+  `reply` (a kind thing to say). Shard `feelings`: 30 facts and 30 `core.word` facts (scared, glad, mad, fear,
+  anxious, thankful …), 60 wires, 12,966 bytes, written by `tools/feelings-core.mjs`.
+- **Joins:** 21 feelings name an expression (happy, sad, angry, surprised, sleepy); 9 have none that fits and say
+  the variants instead (shy, worried, calm, embarrassed, confused, curious, hopeful, nervous, disgusted, relieved
+  among them); every expression and variant named exists in `k.faces`. `wink` and `talking` are not feelings and
+  are not used.
+- **Looked at:** all 30 feelings composed on two presets (child, woman), 60 faces on one sheet at 120 px. Read as
+  the feeling without the name: happy, sad, angry, afraid, surprised, tired, excited, shy, calm, embarrassed,
+  disgusted, ashamed, amused, bored. **Not told apart by the face:** sad, lonely, disappointed, guilty, hurt and
+  homesick (all the sad expression); angry and frustrated; calm and relieved; curious and hopeful differ only by
+  the eyes; jealous is a mild angry face; nervous (a straight wide mouth under worried brows) is weak. The world
+  page says that the cause tells these apart, not the face.
+- **Judgement that is mine:** which 30 feelings, their causes and replies (the replies are short, kind, and ask a
+  question back where that fits; they are for a child's talk partner, not advice); opposites only where plain
+  (11 feelings have one).
+- **Order:** the reviewer's block "2026-11-13 17:40" (addendum 2: `k.layouts`, anchors, what joins what) asks for
+  that work before `k.feelings`. My task for this session named the order scenes, people, feelings, actions,
+  colours, shapes, so the feelings came first. Addendum 2 is not started.
+- **What SOP Lang could not say:** nothing.
+- Numbers: catalog 14 worlds, 779 shards, vocab 19,484 words; 0 errors, 0 warnings. npm test 2,413 pass, 0 fail.

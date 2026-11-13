@@ -1,5 +1,5 @@
 {
- "version": "de7a7e29dfe8",
+ "version": "c76d01998ecc",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -2252,6 +2252,67 @@
    ],
    "licenses": [
     "CC-BY-4.0",
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.feelings",
+   "version": "1",
+   "schema": "k.feelings/schema.sop",
+   "exports": [
+    "k.feelings.feeling"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.feelings/shards/feelings",
+     "path": "k.feelings/shards/feelings.sop",
+     "wires": 60,
+     "bytes": 12966,
+     "keys": [
+      "afraid",
+      "amused",
+      "angry",
+      "ashamed",
+      "bored",
+      "calm",
+      "confused",
+      "curious",
+      "disappointed",
+      "disgusted",
+      "embarrassed",
+      "excited",
+      "frustrated",
+      "grateful",
+      "guilty",
+      "happy",
+      "homesick",
+      "hopeful",
+      "hurt",
+      "jealous",
+      "lonely",
+      "loved",
+      "nervous",
+      "proud",
+      "relieved",
+      "sad",
+      "shy",
+      "surprised",
+      "tired",
+      "worried"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
     "CC0-1.0"
    ],
    "warnings": []
