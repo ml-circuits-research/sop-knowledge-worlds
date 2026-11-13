@@ -224,7 +224,9 @@
   "k.space/schema.sop",
   "k.values/schema.sop",
   "k.wearables/schema.sop",
-  "k.words/shards/ab"
+  "k.words/shards/ab",
+  "w.list/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "above": [
   "k.layouts/shards/layouts",
@@ -1663,7 +1665,8 @@
   "k.words/shards/al"
  ],
  "allergy": [
-  "k.words/shards/al"
+  "k.words/shards/al",
+  "w.seating/schema.sop"
  ],
  "alley": [
   "k.attributes/shards/drawn-hand",
@@ -1992,7 +1995,8 @@
   "k.actions/shards/acts",
   "k.body/schema.sop",
   "k.values/shards/scales",
-  "k.words/shards/am"
+  "k.words/shards/am",
+  "w.list/schema.sop"
  ],
  "amount_about": [
   "k.units/shards/measures"
@@ -3731,7 +3735,9 @@
   "k.commonsense/schema.sop",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
-  "k.words/shards/at"
+  "k.words/shards/at",
+  "w.seating/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "at ease": [
   "k.feelings/shards/feelings"
@@ -6597,6 +6603,9 @@
  "beginning": [
   "k.words/shards/be"
  ],
+ "begins": [
+  "w.timeline/schema.sop"
+ ],
  "begun": [
   "k.words/shards/be"
  ],
@@ -6802,7 +6811,9 @@
   "k.words/shards/be"
  ],
  "belongs": [
-  "k.body/schema.sop"
+  "k.body/schema.sop",
+  "w.list/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "beloved": [
   "k.words/shards/be"
@@ -9377,7 +9388,8 @@
  ],
  "bought": [
   "k.actions/shards/actions-body-social-nature",
-  "k.words/shards/bu"
+  "k.words/shards/bu",
+  "w.list/schema.sop"
  ],
  "boulder": [
   "k.attributes/shards/same-b",
@@ -11965,7 +11977,10 @@
  ],
  "called": [
   "k.actions/shards/actions-mind-talk",
-  "k.animals/schema.sop"
+  "k.animals/schema.sop",
+  "w.list/schema.sop",
+  "w.seating/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "caller": [
   "k.words/shards/ca"
@@ -13781,7 +13796,8 @@
   "k.geo/shards/north-america"
  ],
  "certain": [
-  "k.words/shards/ce"
+  "k.words/shards/ce",
+  "w.timeline/schema.sop"
  ],
  "certainly": [
   "k.values/shards/psys2",
@@ -13858,7 +13874,8 @@
   "k.parts/shards/w",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-c",
-  "k.words/shards/ch"
+  "k.words/shards/ch",
+  "w.seating/schema.sop"
  ],
  "chair computer": [
   "k.attributes/shards/drawn-mulberry",
@@ -13883,7 +13900,8 @@
   "k.words/shards/ch"
  ],
  "chairs": [
-  "k.objects/shards/household"
+  "k.objects/shards/household",
+  "w.seating/schema.sop"
  ],
  "chaise lounge": [
   "k.attributes/shards/drawn-mulberry",
@@ -14337,13 +14355,17 @@
   "k.words/shards/ch"
  ],
  "checked": [
-  "k.words/shards/ch"
+  "k.words/shards/ch",
+  "w.list/schema.sop"
  ],
  "checkerboard": [
   "k.layouts/shards/layouts"
  ],
  "checkers": [
   "k.words/shards/ch"
+ ],
+ "checklist": [
+  "w.list/schema.sop"
  ],
  "checkmate": [
   "k.words/shards/ch"
@@ -15333,6 +15355,9 @@
  ],
  "chronicle": [
   "k.words/shards/ch"
+ ],
+ "chronology": [
+  "w.timeline/schema.sop"
  ],
  "chu yang sin": [
   "k.geo/shards/asia"
@@ -17203,7 +17228,8 @@
   "k.words/shards/co-1"
  ],
  "comment": [
-  "k.words/shards/co-1"
+  "k.words/shards/co-1",
+  "w.list/schema.sop"
  ],
  "commentary": [
   "k.words/shards/co-1"
@@ -18835,7 +18861,8 @@
   "k.words/shards/co-2"
  ],
  "counted": [
-  "k.actions/shards/actions-mind-talk"
+  "k.actions/shards/actions-mind-talk",
+  "w.timeline/schema.sop"
  ],
  "counter": [
   "k.attributes/shards/same-c",
@@ -21159,7 +21186,8 @@
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-office-01",
   "k.objects/shards/noto-plant-flower-01",
-  "k.words/shards/da"
+  "k.words/shards/da",
+  "w.timeline/schema.sop"
  ],
  "dates": [
   "k.attributes/shards/drawn-mulberry",
@@ -22462,7 +22490,8 @@
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
   "k.objects/shards/noto-food-fruit-02",
-  "k.words/shards/di"
+  "k.words/shards/di",
+  "w.seating/schema.sop"
  ],
  "dietrich": [
   "k.words/shards/di"
@@ -23590,7 +23619,8 @@
  ],
  "done": [
   "k.objects/shards/noto-time-01",
-  "k.words/shards/do"
+  "k.words/shards/do",
+  "w.list/schema.sop"
  ],
  "donets": [
   "k.geo/shards/europe"
@@ -26059,7 +26089,8 @@
   "k.objects/shards/mulberry-food-breads-and-baking-04",
   "k.objects/shards/mulberry-plants-and-trees-03",
   "k.objects/shards/mulberry-work-and-school-stationery-01",
-  "k.words/shards/en"
+  "k.words/shards/en",
+  "w.timeline/schema.sop"
  ],
  "endanger": [
   "k.words/shards/en"
@@ -26068,7 +26099,8 @@
   "k.words/shards/en"
  ],
  "ended": [
-  "k.words/shards/en"
+  "k.words/shards/en",
+  "w.timeline/schema.sop"
  ],
  "ending": [
   "k.words/shards/en"
@@ -26078,6 +26110,9 @@
  ],
  "endorsement": [
   "k.words/shards/en"
+ ],
+ "ends": [
+  "w.timeline/schema.sop"
  ],
  "endurance": [
   "k.words/shards/en"
@@ -26269,11 +26304,15 @@
  "entrepreneur": [
   "k.words/shards/en"
  ],
+ "entries": [
+  "w.list/schema.sop"
+ ],
  "entrust": [
   "k.words/shards/en"
  ],
  "entry": [
-  "k.words/shards/en"
+  "k.words/shards/en",
+  "w.list/schema.sop"
  ],
  "enugu": [
   "k.geo/shards/psys2-cities-africa"
@@ -26702,7 +26741,11 @@
   "k.layouts/shards/layouts"
  ],
  "event": [
-  "k.words/shards/ev"
+  "k.words/shards/ev",
+  "w.timeline/schema.sop"
+ ],
+ "events": [
+  "w.timeline/schema.sop"
  ],
  "eventually": [
   "k.words/shards/ev"
@@ -26797,7 +26840,8 @@
   "k.words/shards/ex"
  ],
  "exact": [
-  "k.words/shards/ex"
+  "k.words/shards/ex",
+  "w.timeline/schema.sop"
  ],
  "exactly": [
   "k.values/shards/psys2",
@@ -27552,7 +27596,8 @@
  "family": [
   "k.colours/schema.sop",
   "k.objects/shards/noto-clothing-05",
-  "k.words/shards/fa"
+  "k.words/shards/fa",
+  "w.seating/schema.sop"
  ],
  "family photo": [
   "k.layouts/shards/layouts"
@@ -28654,7 +28699,8 @@
   "k.words/shards/fi"
  ],
  "finished": [
-  "k.words/shards/fi"
+  "k.words/shards/fi",
+  "w.list/schema.sop"
  ],
  "finishing": [
   "k.words/shards/fi"
@@ -30025,7 +30071,8 @@
   "k.actions/shards/verbs-pick",
   "k.attributes/schema.sop",
   "k.body/schema.sop",
-  "k.wearables/schema.sop"
+  "k.wearables/schema.sop",
+  "w.list/schema.sop"
  ],
  "for sure": [
   "k.values/shards/psys2"
@@ -30968,7 +31015,8 @@
  "from": [
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-remove",
-  "k.parts/schema.sop"
+  "k.parts/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "fromage frais": [
   "k.attributes/shards/drawn-mulberry",
@@ -34291,13 +34339,17 @@
  ],
  "guest": [
   "k.scenes/shards/scenes-indoors",
-  "k.words/shards/gu"
+  "k.words/shards/gu",
+  "w.seating/schema.sop"
  ],
  "guesthouse": [
   "k.attributes/shards/same-g",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/g",
   "k.words/shards/gu"
+ ],
+ "guests": [
+  "w.seating/schema.sop"
  ],
  "gugu": [
   "k.geo/shards/africa"
@@ -35430,6 +35482,9 @@
  "happen": [
   "k.scenes/schema.sop",
   "k.words/shards/ha"
+ ],
+ "happened": [
+  "w.timeline/schema.sop"
  ],
  "happening": [
   "k.words/shards/ha"
@@ -37003,7 +37058,8 @@
   "k.words/shards/hi"
  ],
  "history": [
-  "k.words/shards/hi"
+  "k.words/shards/hi",
+  "w.timeline/schema.sop"
  ],
  "hit": [
   "k.actions/shards/actions-hands",
@@ -38026,7 +38082,14 @@
   "k.geo/shards/europe"
  ],
  "how many": [
-  "k.scenes/schema.sop"
+  "k.scenes/schema.sop",
+  "w.list/schema.sop"
+ ],
+ "how many seats": [
+  "w.seating/schema.sop"
+ ],
+ "how much": [
+  "w.list/schema.sop"
  ],
  "howard": [
   "k.words/shards/ho"
@@ -38952,7 +39015,9 @@
   "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
   "k.space/schema.sop",
-  "k.words/shards/in"
+  "k.words/shards/in",
+  "w.list/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "in a circle": [
   "k.layouts/shards/layouts"
@@ -40203,7 +40268,11 @@
  ],
  "item": [
   "k.layouts/shards/layouts",
-  "k.words/shards/it"
+  "k.words/shards/it",
+  "w.list/schema.sop"
+ ],
+ "items": [
+  "w.list/schema.sop"
  ],
  "itinerary": [
   "k.words/shards/it"
@@ -42494,7 +42563,8 @@
   "k.values/schema.sop",
   "k.wearables/schema.sop",
   "k.words/schema.sop",
-  "k.words/shards/ki"
+  "k.words/shards/ki",
+  "w.timeline/schema.sop"
  ],
  "kind of": [
   "k.colours/schema.sop",
@@ -44258,6 +44328,9 @@
   "k.attributes/shards/same-l",
   "k.objects/shards/noto-sky-weather-02",
   "k.scenes/shards/things-l"
+ ],
+ "lasted": [
+  "w.timeline/schema.sop"
  ],
  "lasts": [
   "k.time/schema.sop"
@@ -46750,7 +46823,8 @@
   "k.actions/shards/verbs-ask",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-office-02",
-  "k.words/shards/li"
+  "k.words/shards/li",
+  "w.list/schema.sop"
  ],
  "listen": [
   "k.actions/shards/actions-mind-talk",
@@ -46777,6 +46851,9 @@
  ],
  "listing": [
   "k.words/shards/li"
+ ],
+ "lists": [
+  "w.list/schema.sop"
  ],
  "lit": [
   "k.actions/shards/actions-make-change",
@@ -47232,7 +47309,8 @@
   "k.objects/shards/noto-musical-instrument-02",
   "k.time/schema.sop",
   "k.values/shards/scales",
-  "k.words/shards/lo"
+  "k.words/shards/lo",
+  "w.seating/schema.sop"
  ],
  "long curly": [
   "k.faces/shards/plain-hair-back"
@@ -51051,6 +51129,12 @@
  "miles per hour": [
   "k.units/shards/core"
  ],
+ "milestone": [
+  "w.timeline/schema.sop"
+ ],
+ "milestones": [
+  "w.timeline/schema.sop"
+ ],
  "militant": [
   "k.words/shards/mi"
  ],
@@ -52511,7 +52595,8 @@
  ],
  "more": [
   "k.values/shards/scales",
-  "k.words/shards/mo"
+  "k.words/shards/mo",
+  "w.timeline/schema.sop"
  ],
  "morelia": [
   "k.geo/shards/psys2-cities-north-america"
@@ -54286,7 +54371,10 @@
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.values/schema.sop",
-  "k.words/shards/na"
+  "k.words/shards/na",
+  "w.list/schema.sop",
+  "w.seating/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "name_board": [
   "k.objects/shards/places-2"
@@ -54779,7 +54867,8 @@
   "k.geo/shards/europe"
  ],
  "need": [
-  "k.words/shards/ne"
+  "k.words/shards/ne",
+  "w.seating/schema.sop"
  ],
  "needed": [
   "k.actions/schema.sop",
@@ -54806,7 +54895,8 @@
   "k.objects/shards/noto-place-map-01"
  ],
  "needs": [
-  "k.words/shards/ne"
+  "k.words/shards/ne",
+  "w.seating/schema.sop"
  ],
  "needy": [
   "k.words/shards/ne"
@@ -55786,7 +55876,9 @@
   "k.objects/shards/noto-music-01",
   "k.objects/shards/noto-office-01",
   "k.objects/shards/things-2",
-  "k.words/shards/no"
+  "k.words/shards/no",
+  "w.list/schema.sop",
+  "w.seating/schema.sop"
  ],
  "note1": [
   "k.objects/shards/noto-music-01"
@@ -55830,7 +55922,9 @@
   "k.objects/shards/noto-music-01",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/noto-writing-01",
-  "k.objects/shards/openmoji-healthcare-01"
+  "k.objects/shards/openmoji-healthcare-01",
+  "w.list/schema.sop",
+  "w.seating/schema.sop"
  ],
  "nothing": [
   "k.objects/shards/noto-dishware-01",
@@ -56313,7 +56407,9 @@
   "k.objects/shards/noto-game-01",
   "k.units/shards/measures",
   "k.values/schema.sop",
-  "k.words/shards/nu"
+  "k.words/shards/nu",
+  "w.list/schema.sop",
+  "w.seating/schema.sop"
  ],
  "numbers": [
   "k.values/schema.sop",
@@ -57084,7 +57180,9 @@
   "k.objects/schema.sop",
   "k.scenes/schema.sop",
   "k.wearables/schema.sop",
-  "k.words/shards/on"
+  "k.words/shards/on",
+  "w.list/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "on the back": [
   "k.wearables/shards/places"
@@ -57568,7 +57666,8 @@
   "k.objects/shards/noto-animal-mammal-02",
   "k.space/schema.sop",
   "k.units/shards/measures",
-  "k.words/shards/or"
+  "k.words/shards/or",
+  "w.list/schema.sop"
  ],
  "ordered": [
   "k.layouts/schema.sop",
@@ -58287,6 +58386,9 @@
  "packing": [
   "k.objects/shards/noto-hotel-01",
   "k.words/shards/pa"
+ ],
+ "packing list": [
+  "w.list/schema.sop"
  ],
  "pact": [
   "k.words/shards/pa"
@@ -59266,7 +59368,8 @@
   "k.objects/shards/noto-game-02",
   "k.objects/shards/noto-musical-instrument-02",
   "k.scenes/shards/scenes-indoors",
-  "k.words/shards/pa"
+  "k.words/shards/pa",
+  "w.seating/schema.sop"
  ],
  "party hat": [
   "k.faces/shards/plain-hat",
@@ -60170,7 +60273,8 @@
   "k.objects/shards/figures",
   "k.objects/shards/openmoji-travel-places-01",
   "k.people/schema.sop",
-  "k.words/shards/pe"
+  "k.words/shards/pe",
+  "w.seating/schema.sop"
  ],
  "people's democratic republic of algeria": [
   "k.geo/shards/africa"
@@ -60408,7 +60512,8 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-p",
-  "k.words/shards/pe"
+  "k.words/shards/pe",
+  "w.seating/schema.sop"
  ],
  "person1": [
   "k.objects/shards/noto-household-01"
@@ -62167,7 +62272,9 @@
   "k.objects/shards/noto-award-medal-01",
   "k.scenes/schema.sop",
   "k.units/shards/measures",
-  "k.words/shards/pl"
+  "k.words/shards/pl",
+  "w.list/schema.sop",
+  "w.seating/schema.sop"
  ],
  "place setting": [
   "k.attributes/shards/drawn-mulberry",
@@ -62179,7 +62286,8 @@
   "k.words/shards/pl"
  ],
  "places": [
-  "k.layouts/schema.sop"
+  "k.layouts/schema.sop",
+  "w.seating/schema.sop"
  ],
  "placket": [
   "k.objects/shards/things-2"
@@ -63417,7 +63525,9 @@
  "position": [
   "k.actions/shards/verbs-place",
   "k.values/schema.sop",
-  "k.words/shards/po"
+  "k.words/shards/po",
+  "w.list/schema.sop",
+  "w.seating/schema.sop"
  ],
  "positions": [
   "k.values/schema.sop"
@@ -65352,7 +65462,8 @@
  ],
  "quantity": [
   "k.units/schema.sop",
-  "k.words/shards/qu"
+  "k.words/shards/qu",
+  "w.list/schema.sop"
  ],
  "quantum": [
   "k.words/shards/qu"
@@ -70034,7 +70145,8 @@
   "k.shapes/schema.sop",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "w.seating/schema.sop"
  ],
  "round blush": [
   "k.faces/shards/plain-cheeks"
@@ -71802,7 +71914,8 @@
  ],
  "says": [
   "k.actions/shards/actions-mind-talk",
-  "k.animals/schema.sop"
+  "k.animals/schema.sop",
+  "w.list/schema.sop"
  ],
  "scaffold": [
   "k.words/shards/sc"
@@ -71979,7 +72092,8 @@
   "k.words/shards/sc"
  ],
  "schedule": [
-  "k.words/shards/sc"
+  "k.words/shards/sc",
+  "w.timeline/schema.sop"
  ],
  "schelde": [
   "k.geo/shards/europe"
@@ -72629,7 +72743,8 @@
   "k.parts/shards/w",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-s",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.seating/schema.sop"
  ],
  "seat_tube": [
   "k.objects/shards/vehicles"
@@ -72638,11 +72753,22 @@
   "k.parts/shards/usual",
   "k.words/shards/se"
  ],
+ "seated": [
+  "w.seating/schema.sop"
+ ],
  "seating": [
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.seating/schema.sop"
+ ],
+ "seating chart": [
+  "w.seating/schema.sop"
+ ],
+ "seating plan": [
+  "w.seating/schema.sop"
  ],
  "seats": [
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.seating/schema.sop"
  ],
  "seattle": [
   "k.attributes/shards/same-s",
@@ -73683,7 +73809,8 @@
   "k.shapes/schema.sop",
   "k.units/shards/measures",
   "k.values/schema.sop",
-  "k.words/shards/sh"
+  "k.words/shards/sh",
+  "w.seating/schema.sop"
  ],
  "shape puzzle": [
   "k.attributes/shards/drawn-mulberry",
@@ -74331,6 +74458,9 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-s"
  ],
+ "shopping list": [
+  "w.list/schema.sop"
+ ],
  "shore": [
   "k.objects/shards/places-2",
   "k.objects/shards/scenery",
@@ -74737,7 +74867,8 @@
   "k.objects/shards/things-2",
   "k.scenes/schema.sop",
   "k.shapes/schema.sop",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.seating/schema.sop"
  ],
  "side by side": [
   "k.layouts/shards/layouts"
@@ -75209,7 +75340,8 @@
  ],
  "sit": [
   "k.actions/shards/actions-body-social-nature",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.seating/schema.sop"
  ],
  "sit down": [
   "k.actions/shards/actions-body-social-nature"
@@ -75228,7 +75360,8 @@
  ],
  "sits": [
   "k.actions/shards/actions-body-social-nature",
-  "k.layouts/schema.sop"
+  "k.layouts/schema.sop",
+  "w.seating/schema.sop"
  ],
  "sits_on": [
   "k.layouts/shards/joins"
@@ -75238,7 +75371,8 @@
  ],
  "sitting": [
   "k.actions/shards/actions-body-social-nature",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.seating/schema.sop"
  ],
  "sitting room": [
   "k.scenes/shards/scenes-indoors"
@@ -75348,7 +75482,8 @@
   "k.scenes/schema.sop",
   "k.space/schema.sop",
   "k.values/shards/scales",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.seating/schema.sop"
  ],
  "size rank": [
   "k.space/schema.sop"
@@ -77000,7 +77135,8 @@
  ],
  "sort": [
   "k.actions/shards/verbs-group",
-  "k.words/shards/so"
+  "k.words/shards/so",
+  "w.timeline/schema.sop"
  ],
  "sorting": [
   "k.words/shards/so"
@@ -78159,7 +78295,8 @@
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
-  "k.words/shards/sq"
+  "k.words/shards/sq",
+  "w.seating/schema.sop"
  ],
  "square centimeter": [
   "k.units/shards/core"
@@ -78762,7 +78899,8 @@
  ],
  "start": [
   "k.objects/shards/things-2",
-  "k.words/shards/st"
+  "k.words/shards/st",
+  "w.timeline/schema.sop"
  ],
  "starter": [
   "k.words/shards/st"
@@ -78775,6 +78913,9 @@
  ],
  "startled": [
   "k.feelings/shards/feelings"
+ ],
+ "starts": [
+  "w.timeline/schema.sop"
  ],
  "starvation": [
   "k.words/shards/st"
@@ -80617,7 +80758,8 @@
  ],
  "sure": [
   "k.values/shards/psys2",
-  "k.words/shards/su"
+  "k.words/shards/su",
+  "w.timeline/schema.sop"
  ],
  "sure thing": [
   "k.values/shards/psys2"
@@ -81454,7 +81596,8 @@
   "k.parts/shards/d",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-t",
-  "k.words/shards/ta"
+  "k.words/shards/ta",
+  "w.seating/schema.sop"
  ],
  "table cloth": [
   "k.attributes/shards/drawn-mulberry",
@@ -81462,6 +81605,9 @@
   "k.objects/shards/mulberry-food-kitchen-items-08",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-t"
+ ],
+ "table plan": [
+  "w.seating/schema.sop"
  ],
  "table_top": [
   "k.objects/shards/mulberry-building-furniture-03",
@@ -81472,7 +81618,8 @@
   "k.words/shards/ta"
  ],
  "tables": [
-  "k.objects/shards/household"
+  "k.objects/shards/household",
+  "w.seating/schema.sop"
  ],
  "tablespoon": [
   "k.units/shards/core"
@@ -82173,7 +82320,11 @@
   "k.geo/shards/asia"
  ],
  "task": [
-  "k.words/shards/ta"
+  "k.words/shards/ta",
+  "w.list/schema.sop"
+ ],
+ "tasks": [
+  "w.list/schema.sop"
  ],
  "tasman sea": [
   "k.geo/shards/seas"
@@ -82949,7 +83100,8 @@
   "k.words/shards/te"
  ],
  "text": [
-  "k.words/shards/te"
+  "k.words/shards/te",
+  "w.list/schema.sop"
  ],
  "text phone": [
   "k.attributes/shards/drawn-mulberry",
@@ -83281,7 +83433,8 @@
   "k.scenes/schema.sop",
   "k.shapes/schema.sop",
   "k.units/shards/measures",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.list/schema.sop"
  ],
  "things": [
   "k.commonsense/schema.sop",
@@ -83742,6 +83895,9 @@
  "tick_9": [
   "k.objects/shards/things-2"
  ],
+ "ticked": [
+  "w.list/schema.sop"
+ ],
  "ticket": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-t",
@@ -83883,7 +84039,8 @@
  ],
  "till": [
   "k.scenes/shards/scenes-indoors",
-  "k.words/shards/ti"
+  "k.words/shards/ti",
+  "w.timeline/schema.sop"
  ],
  "tilt": [
   "k.actions/shards/verbs-change",
@@ -83914,14 +84071,22 @@
   "k.objects/shards/noto-time-01",
   "k.scenes/schema.sop",
   "k.units/shards/core",
-  "k.words/shards/ti"
+  "k.words/shards/ti",
+  "w.timeline/schema.sop"
+ ],
+ "time line": [
+  "w.timeline/schema.sop"
  ],
  "time-out": [
   "k.words/shards/ti"
  ],
  "timeline": [
   "k.layouts/shards/layouts",
-  "k.words/shards/ti"
+  "k.words/shards/ti",
+  "w.timeline/schema.sop"
+ ],
+ "timelines": [
+  "w.timeline/schema.sop"
  ],
  "timepiece": [
   "k.parts/shards/c"
@@ -84202,7 +84367,9 @@
  ],
  "title": [
   "k.objects/shards/home",
-  "k.words/shards/ti"
+  "k.words/shards/ti",
+  "w.list/schema.sop",
+  "w.timeline/schema.sop"
  ],
  "tito": [
   "k.words/shards/ti"
@@ -84218,7 +84385,8 @@
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-pick",
-  "k.actions/shards/verbs-undo"
+  "k.actions/shards/verbs-undo",
+  "w.timeline/schema.sop"
  ],
  "to the back": [
   "k.values/shards/directions"
@@ -84231,6 +84399,9 @@
  ],
  "to the right": [
   "k.values/shards/directions"
+ ],
+ "to-do list": [
+  "w.list/schema.sop"
  ],
  "toad": [
   "k.animals/shards/reptiles-and-amphibians",
@@ -84303,6 +84474,9 @@
  ],
  "toddlers": [
   "k.people/shards/kinds"
+ ],
+ "todo list": [
+  "w.list/schema.sop"
  ],
  "toe": [
   "k.attributes/shards/same-t",
@@ -86920,7 +87094,8 @@
   "k.attributes/schema.sop",
   "k.units/schema.sop",
   "k.words/schema.sop",
-  "k.words/shards/ty"
+  "k.words/shards/ty",
+  "w.timeline/schema.sop"
  ],
  "type of": [
   "k.words/schema.sop"
@@ -87433,7 +87608,8 @@
   "k.time/schema.sop",
   "k.units/schema.sop",
   "k.units/shards/measures",
-  "k.words/shards/un"
+  "k.words/shards/un",
+  "w.timeline/schema.sop"
  ],
  "unite": [
   "k.words/shards/un"
@@ -87559,6 +87735,9 @@
  ],
  "unties": [
   "k.actions/shards/actions-hands"
+ ],
+ "until": [
+  "w.timeline/schema.sop"
  ],
  "untouchable": [
   "k.words/shards/un"
@@ -90672,6 +90851,9 @@
  "wharves": [
   "k.words/shards/wh"
  ],
+ "what": [
+  "w.timeline/schema.sop"
+ ],
  "what for": [
   "k.body/schema.sop"
  ],
@@ -90816,6 +90998,9 @@
   "k.parts/shards/psys2",
   "k.units/shards/measures"
  ],
+ "when": [
+  "w.timeline/schema.sop"
+ ],
  "where": [
   "k.actions/schema.sop",
   "k.body/schema.sop",
@@ -90824,7 +91009,8 @@
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/openmoji-technology-01",
   "k.scenes/schema.sop",
-  "k.wearables/schema.sop"
+  "k.wearables/schema.sop",
+  "w.seating/schema.sop"
  ],
  "whereabouts": [
   "k.words/shards/wh"
@@ -91066,6 +91252,9 @@
  "who": [
   "k.actions/schema.sop",
   "k.words/shards/wh"
+ ],
+ "who sits where": [
+  "w.seating/schema.sop"
  ],
  "whole": [
   "k.words/shards/wh"
@@ -91731,7 +91920,8 @@
   "k.actions/schema.sop",
   "k.actions/shards/verbs-ask",
   "k.actions/shards/verbs-change",
-  "k.parts/schema.sop"
+  "k.parts/schema.sop",
+  "w.seating/schema.sop"
  ],
  "withdraw": [
   "k.words/shards/wi"
@@ -92645,7 +92835,8 @@
   "k.space/schema.sop",
   "k.time/shards/calendar",
   "k.units/shards/core",
-  "k.words/shards/ye"
+  "k.words/shards/ye",
+  "w.timeline/schema.sop"
  ],
  "yearbook": [
   "k.words/shards/ye"

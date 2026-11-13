@@ -13,7 +13,22 @@ Blocking: yes/no. If no: the choice taken meanwhile.
 
 # Open
 
-None.
+## Q35 (Round 11 item 2, first worker, 2026-11-13)
+Question: the reusable worlds `w.*` need `std.schema` and `std.acts`, which the pinned sopworld 0.16.0 (1e18f1d)
+does not have. May the whole repository move to the library's current release (0.26.0, 4c33e81), or should the
+two builds stay side by side?
+Context: AGENTS.md says "upgrade only when the reviewer says so". Done meanwhile: a second pinned build in
+`tools/sopworld/w/` (0.26.0; VERSION with commit and sha256, checked by a test), used only by
+`tools/lib/schemas.mjs` for `w.*`; the knowledge worlds are validated with 0.16.0 as before; `index.json` names
+both (`sopworld`, `sopworld_schemas`). The sessions pass on 0.25.0 (01d29cd) and on 0.26.0 alike. Not tried:
+validating the `k.*` worlds with 0.26.0. Options: (a) keep two builds; (b) upgrade everything to 0.26.0 after a
+run of the whole suite on it; (c) wait for a library release the reviewer names.
+Two things seen in the library while writing the sessions, for the library's session (not worked around in the
+schemas; both seen again on 0.26.0): the act `make` accepts a thing without a `required` attribute
+(`make kind=w.list.item` with no `text` is done, with no violation); and `undo` right after the act `remove` does
+not bring the removed thing back but undoes the step before it (make a, make b, remove b, undo: a is gone, b
+stays gone).
+Blocking: no. Meanwhile: (a).
 
 # Closed
 

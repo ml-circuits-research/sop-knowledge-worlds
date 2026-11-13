@@ -64,6 +64,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.values` | 20 (1%) |
 | `k.wearables` | 62 (4%) |
 | `k.words` | 1500 (100%) |
+| `w.seating` | 2 (0%) |
 
 ## Gaps
 

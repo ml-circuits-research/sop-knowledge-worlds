@@ -1,5 +1,5 @@
 {
- "version": "ba0b271879ae",
+ "version": "90b6bc20cced",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -50274,5 +50274,243 @@
    ],
    "warnings": []
   }
- ]
+ ],
+ "schemas": [
+  {
+   "id": "w.list",
+   "version": "1",
+   "schema": "w.list/schema.sop",
+   "about": "lists of items in order, which can be ticked off",
+   "names": [
+    "list",
+    "lists",
+    "shopping list",
+    "to-do list",
+    "todo list",
+    "checklist",
+    "packing list"
+   ],
+   "kinds": [
+    {
+     "type": "w.list.list",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "about"
+     ],
+     "words": [
+      "list",
+      "lists",
+      "checklist"
+     ]
+    },
+    {
+     "type": "w.list.item",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "text",
+      "list",
+      "n",
+      "done",
+      "amount",
+      "note"
+     ],
+     "words": [
+      "item",
+      "items",
+      "entry",
+      "entries",
+      "thing",
+      "task",
+      "tasks"
+     ]
+    }
+   ],
+   "wires": 27,
+   "bytes": 4023,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.seating",
+   "version": "1",
+   "schema": "w.seating/schema.sop",
+   "about": "a seating plan: tables, seats and the guests on them",
+   "names": [
+    "seating plan",
+    "seating chart",
+    "seating",
+    "table plan",
+    "who sits where"
+   ],
+   "kinds": [
+    {
+     "type": "w.seating.table",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "shape",
+      "seats"
+     ],
+     "words": [
+      "table",
+      "tables"
+     ]
+    },
+    {
+     "type": "w.seating.seat",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "table",
+      "n"
+     ],
+     "words": [
+      "seat",
+      "seats",
+      "chair",
+      "chairs",
+      "place",
+      "places"
+     ]
+    },
+    {
+     "type": "w.seating.guest",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "connect",
+      "group",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "name",
+      "seat",
+      "party",
+      "needs",
+      "note"
+     ],
+     "words": [
+      "guest",
+      "guests",
+      "person",
+      "people"
+     ]
+    }
+   ],
+   "wires": 35,
+   "bytes": 5513,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.timeline",
+   "version": "1",
+   "schema": "w.timeline/schema.sop",
+   "about": "timelines: events in order of time",
+   "names": [
+    "timeline",
+    "timelines",
+    "time line",
+    "chronology",
+    "history",
+    "schedule"
+   ],
+   "kinds": [
+    {
+     "type": "w.timeline.timeline",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "unit",
+      "from",
+      "to"
+     ],
+     "words": [
+      "timeline",
+      "timelines"
+     ]
+    },
+    {
+     "type": "w.timeline.event",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "connect",
+      "group",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "title",
+      "timeline",
+      "at",
+      "until",
+      "sort",
+      "about",
+      "certain"
+     ],
+     "words": [
+      "event",
+      "events",
+      "milestone",
+      "milestones",
+      "happened"
+     ]
+    }
+   ],
+   "wires": 33,
+   "bytes": 5428,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  }
+ ],
+ "sopworld_schemas": "4c33e81"
 }

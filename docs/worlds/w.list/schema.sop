@@ -1,0 +1,44 @@
+# w.list: a reusable world: lists of items in order, which can be ticked off (a shopping list, a to-do list, a
+# packing list). Declared as data in the library's std.schema format; the acts of std.acts drive it (make, remove,
+# change, pick, ask, copy); it has no rule and no function of its own.
+# sources: hand-core 1 (hand-written in this repository)
+# license: CC0-1.0
+# script: none (hand-written)
+# needs: sopworld with std.schema and std.acts (tools/sopworld/w/VERSION)
+
+@w.list core.module name=w.list version=1 exports=list exports=item core.source="hand-core 1"
+@w.list.world std.schema.world name=w.list doc="lists of items in order, which can be ticked off" core.source="hand-core 1"
+
+# A list. `name` is what it is called (shopping); `about` says what it is for.
+@w.list.list core.type of=w.list.list extends=std.schema.thing closed=true core.source="hand-core 1"
+@w.list.list.name core.slot of=w.list.list key=name required=true kind=atom kind=string core.source="hand-core 1"
+@w.list.list.about core.slot of=w.list.list key=about kind=string core.source="hand-core 1"
+
+# An item of a list. `text` is what it says; `list` refers to its list; `n` is its place in the list, from 1;
+# `done` says whether it is ticked off; `amount` how many or how much (2, "a litre"); `note` anything else.
+@w.list.item core.type of=w.list.item extends=std.schema.thing closed=true core.source="hand-core 1"
+@w.list.item.text core.slot of=w.list.item key=text required=true kind=atom kind=string core.source="hand-core 1"
+@w.list.item.list core.slot of=w.list.item key=list type=w.list.list core.source="hand-core 1"
+@w.list.item.n core.slot of=w.list.item key=n kind=integer min=1 step=1 core.source="hand-core 1"
+@w.list.item.done core.slot of=w.list.item key=done kind=boolean default=false core.source="hand-core 1"
+@w.list.item.amount core.slot of=w.list.item key=amount kind=atom kind=string core.source="hand-core 1"
+@w.list.item.note core.slot of=w.list.item key=note kind=string core.source="hand-core 1"
+
+# The kinds and the acts that apply to them. At most 20 lists and 500 items.
+@w.list.kind.list std.schema.kind of=w.list.list world=w.list acts=make acts=remove acts=change acts=pick acts=ask acts=copy core.source="hand-core 1"
+@w.list.kind.item std.schema.kind of=w.list.item world=w.list acts=make acts=remove acts=change acts=pick acts=ask acts=copy core.source="hand-core 1"
+@w.list.limit.list std.schema.limit of=w.list.list max=20 core.source="hand-core 1"
+@w.list.limit.item std.schema.limit of=w.list.item max=500 core.source="hand-core 1"
+
+# Words: for the world (how a host finds it by name), its kinds and its keys.
+@w.list.word.world core.word text=list text=lists text="shopping list" text="to-do list" text="todo list" text=checklist text="packing list" means=w.list of=std.schema.world.name core.source="hand-core 1"
+@w.list.word.list core.word text=list text=lists text=checklist means=w.list.list core.source="hand-core 1"
+@w.list.word.item core.word text=item text=items text=entry text=entries text=thing text=task text=tasks means=w.list.item core.source="hand-core 1"
+@w.list.word.name core.word text=name text=called text=title means=w.list.list.name core.source="hand-core 1"
+@w.list.word.about core.word text=about text=for means=w.list.list.about core.source="hand-core 1"
+@w.list.word.item.list core.word text=on text=in text=belongs means=w.list.item.list core.source="hand-core 1"
+@w.list.word.text core.word text=text text=says means=w.list.item.text core.source="hand-core 1"
+@w.list.word.n core.word text=place text=position text=number text=order means=w.list.item.n core.source="hand-core 1"
+@w.list.word.done core.word text=done text=ticked text=checked text=finished text=bought means=w.list.item.done core.source="hand-core 1"
+@w.list.word.amount core.word text=amount text="how many" text="how much" text=quantity means=w.list.item.amount core.source="hand-core 1"
+@w.list.word.note core.word text=note text=notes text=comment means=w.list.item.note core.source="hand-core 1"

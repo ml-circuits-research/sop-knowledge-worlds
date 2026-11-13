@@ -2635,3 +2635,37 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - New file **`docs/lessons.md`** (standing direction): a few lines per item on what it taught about reuse.
 - Numbers: catalog 22 worlds, 903 shards, vocab 23,293 words; 0 errors, 0 warnings. npm test 2,690: 2,684 pass,
   6 skipped, 0 fail.
+
+## Round 11, item 2 (2026-11-13, first worker): reusable worlds `w.*` and the README section
+
+- **README**: the section "What belongs here, what belongs to the library, what stays in an application"
+  (block 22:40). `docs/worlds/README.md` says what `w.<name>/schema.sop` is and where the catalog lists it.
+- **Three reusable worlds written from scratch** in the library's `std.schema` format, data only (no rule, no
+  function; the catalog builder refuses one), source `hand-core 1`, CC0-1.0, each with WORLD.md:
+  `w.list` (list, item: 27 wires, 4,023 bytes), `w.seating` (table, seat, guest: 35 wires, 5,513 bytes),
+  `w.timeline` (timeline, event: 33 wires, 5,428 bytes). Kinds with their acts (`std.schema.kind`), limits
+  (`std.schema.limit`), a `core.word` for the world, every kind and every key.
+- **Catalog**: `index.json` has `schemas` (id, version, names, kinds with acts, attributes and words, wires,
+  bytes, warnings) and `sopworld_schemas`; the words go to `vocab.json` with the schema's path ("seating plan"
+  -> `w.seating/schema.sop`). `tests/catalog.test.mjs` now accepts a vocabulary entry that points to a schema.
+- **Engine**: `std.schema` and `std.acts` are not in the pinned 0.16.0, so a second build is pinned in
+  `tools/sopworld/w/` (0.26.0 at 4c33e81, the library's current release; the sessions passed on 0.25.0 too),
+  used only by `tools/lib/schemas.mjs`; a test checks its sha256. The `k.*` worlds stay on 0.16.0. **Q35**.
+- **Tests** `tests/w.schemas.test.mjs` (6): each world loads with std.acts with no error or warning, all three
+  together without a clash, the catalog entry is what the builder gives, a host finds each by six names, the
+  pin; one session per world (make, ask, change by a step and back with undo, pick, copy, connect, remove;
+  refusals: an act not allowed, a value outside an enum with the allowed values, a reference to the wrong kind).
+- **Seen in the library and not worked around** (in Q35 for the library's session): `make` accepts a thing
+  without a `required` attribute; `undo` right after `remove` undoes the step before it, not the remove.
+  Checked again on 0.26.0 by a script outside the repository.
+- **Looked at:** the three schemas and WORLD.md files in full; the `schemas` part of `index.json`; the vocab
+  entries of five words (seating plan, table, list, timeline, history). **Not looked at:** the other 26 new
+  vocabulary words one by one. COVERAGE.md changed by one line: `w.seating` reaches 2 common things (table,
+  seat words), which is the vocabulary, not knowledge.
+- **Judgement that is mine:** the keys of each kind and the words (for example "schedule" and "history" find
+  the timeline); the limits (20 lists, 500 items, 50 tables, 1,000 events).
+- The previous worker of this clone was stopped by a usage limit with this work uncommitted; it was taken over,
+  rebased on R10.3, R10.4 and the R10.3 defect, the pin moved from 0.25.0 to 0.26.0, the question renumbered
+  from Q33 (taken by the second worker) to Q35.
+- Numbers: catalog 22 worlds, 903 shards, 3 schemas; vocab 23,293 to 23,325 words; 0 errors, 0 warnings.
+  npm test 2,696: 2,695 pass, 1 skipped, 0 fail.

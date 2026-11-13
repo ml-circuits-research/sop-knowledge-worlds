@@ -12,6 +12,10 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 - `k.<world>/shards/<key>.sop`: facts only, at most about 2,000 wires and 300 kB each. Each starts with a header
   (`# sources:`, `# license:`, `# script:`) and every wire carries `core.source="<source id> <version>"`.
 - `k.<world>/WORLD.md`: what the world knows, its sources, and questions it helps with.
+- `w.<name>/schema.sop`: a **reusable world**: a schema in the library's `std.schema` format (kinds, attributes, the
+  acts that apply, words), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`
+  (`names`: the words that find it; `kinds` with their `acts`, `attributes` and `words`); `sopworld_schemas` is the
+  commit of the sopworld build they are validated with.
 - `index.json`: the catalog.
 - `vocab.json`: lowercased English lemma → shard ids.
 - `LICENSES.md`: the terms and attribution text of every source, generated with the catalog.

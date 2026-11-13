@@ -38,4 +38,24 @@ thing missing, key missing, key of another kind of thing, word not in the vocabu
 type now has a `core.word` (`tools/key-words.mjs` writes the block at the end of each schema), and `k.units.measure`
 says the unit of every number of every world.
 
+## What belongs here, what belongs to the library, what stays in an application
+
+- **Here (this repository):** every world written in SOP Lang alone that more than one application could use,
+  loaded by lookup. Two namespaces. `k.*` is **knowledge**: facts and their schemas (animals, places, words, the
+  usual place and size of things), the words for values and for the acts, layouts, common-sense rules about kinds.
+  `w.*` is **reusable worlds**: schemas of things a user makes and changes (a list, a seating plan, a timeline),
+  declared in the library's `std.schema` format, with words, and no rule or function of their own. Both are found
+  through `docs/worlds/index.json` (`worlds`, `schemas`) and `vocab.json`. Nothing here names an application.
+- **The library ([soplang-words-lib](https://github.com/ml-circuits-research/soplang-words-lib)):** the engine and
+  every module that needs a **function**: the acts themselves (`std.acts`), fillers (`std.fill`, `std.know`),
+  solvers for space and time, arithmetic on units, anything that computes. A world here may say *that* a rule
+  needs a function and name it with `core.function`; the function is written there.
+- **An application:** what is true only of it or of one user: its tabs and commands, the wording of its replies,
+  translation, the things of a session, what a user taught, its own drawings and styles. If a second application
+  would want it, it moves here.
+
+Reusable worlds so far: `w.list`, `w.seating`, `w.timeline` (each with a `WORLD.md`; sessions in
+`tests/w.schemas.test.mjs`). They are validated with a newer sopworld build than the knowledge worlds
+(`tools/sopworld/w/VERSION`), because `std.schema` does not exist in the pinned 0.16.0.
+
 Agents working here start with [AGENTS.md](AGENTS.md).

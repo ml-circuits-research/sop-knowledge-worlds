@@ -44,7 +44,7 @@ test('LICENSES.md names every source and license of the catalog', () => {
 test('every vocab entry points to listed shards or to a schema', () => {
   const index = JSON.parse(readFileSync(join(WORLDS_DIR, 'index.json'), 'utf8'));
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
-  const ids = new Set(index.worlds.flatMap((w) => [w.schema, ...w.shards.map((s) => s.id)]));
+  const ids = new Set([...index.worlds.flatMap((w) => [w.schema, ...w.shards.map((s) => s.id)]), ...(index.schemas ?? []).map((s) => s.schema)]);
   for (const [word, shards] of Object.entries(vocab)) {
     assert.equal(word, word.toLowerCase());
     assert.ok(shards.length > 0, word);
