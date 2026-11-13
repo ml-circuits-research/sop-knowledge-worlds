@@ -46,6 +46,18 @@ option, never one sign or construct with two meanings.
 - **Tests:** "what are the parts of a house", "where is the roof of a house" → `above body`, and "what colour is a
   tree's crown" → `green`.
 
+**T5 amendment (reviewer, 2026-11-13 08:10): the parts must be drawable.** A renderer that has never seen the object must
+be able to draw it from the facts alone, with basic shapes only. So every `k.objects.part` also has:
+- `shape`: one of a small closed set of primitives declared in the schema: rectangle, square, circle, oval, triangle,
+  line, arc, polygon. Nothing else.
+- its box `x y w h` in the 0–100 frame of the object (required, not optional), a draw order (`z`), and a typical colour.
+- for `polygon` and `line` only: its points as separate wires (`k.objects.point of=<part> n=<order> x= y=`), never a
+  list inside one value.
+- a repeated part is one wire per instance (two windows are two parts with their own boxes), not a count.
+Add a test renderer `tools/render-svg.mjs` (world facts → a plain SVG, about 100 lines, no dependencies) and write the 30
+SVG files to `docs/worlds/k.objects/preview/` so the reviewer and the owner can look at them. The test: every object
+renders, every part is inside the frame, and no part has an unknown shape. The reviewer judges the pictures by eye.
+
 **T6. Log and report.** Write `worker-log.md` with numbers per task. Close the round with a short report in
 `worker-log.md`: what worked, what the schema could not say, and questions for the reviewer.
 
