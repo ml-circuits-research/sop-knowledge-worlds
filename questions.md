@@ -300,3 +300,27 @@ to `k.colours.colour` and let `k.values` refer to it.
 Blocking: no. Meanwhile: (a). The second worker published `k.values` on the same reading while this was written:
 every colour of `k.colours` joins a `k.values.colour` by name or word (a test), 28 of the 36 shapes a `k.values.shape`.
 Closed: answered "keep both" in worker-tasks.md, block "2026-11-13 20:35": `k.values` holds the words and scales, `k.colours` and `k.shapes` the facts about them, joined by name; no fact in two places. Nothing to change.
+
+## Q29 (Round 8 item 2, second worker, 2026-11-13)
+Question: the usual colour was asked for 2,000 things; `k.attributes` has it for 256 (and `k.food` for its foods).
+How should the rest be done?
+Context: I labelled only where the colour is plain and not a matter of country or make (grass, a fire engine, a
+zebra; not a car, a postbox, a pencil), and stopped where I was no longer sure. `docs/worlds/COVERAGE.md`: 249 of
+the 1,500 common things have a usual colour by their name or through their drawing; 1,251 have none, and for many
+of those none exists. Every drawing has the colours of its parts (`k.objects.part.colour`, 1,023 of 1,500), which
+says how the thing is drawn, not what colour it usually is. Options: (a) keep "only where plain", and label the
+things of the gap list that have one in a later pass; (b) take the main colour of the drawing as the usual colour,
+marked as coming from the drawing (wrong for a car that happens to be drawn red); (c) also say "any colour" as a
+fact for things that have no usual one (car, shirt, book), so that a missing value means "not looked at".
+Blocking: no. Meanwhile: (a).
+
+## Q30 (Round 8 item 5, second worker, 2026-11-13)
+Question: `k.parts` holds WordNet's parts under WordNet's names and only for 541 of the 1,500 common things. Should
+the common names and the missing things be added by a language model?
+Context: WordNet names a part by its synset ("car door", "automobile engine", "car wheel"), so "door" does not
+find the part of a car; a house gets rooms but no roof or wall (those belong to "building", further up than the
+rule follows without bringing in an elevator for a doghouse); 959 common things have no part at all (dog: only
+"flag"). Options: (a) leave `k.parts` as the WordNet import; (b) add a model-labelled layer (`named=model`, sampled
+audit): three to six everyday parts for each of the 1,500 things, in plain words (car: wheel, door, engine,
+window, seat), next to the WordNet facts; (c) only add plain-word synonyms for WordNet's part names as `core.word`.
+Blocking: no. Meanwhile: (a).

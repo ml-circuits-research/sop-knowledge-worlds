@@ -2057,3 +2057,9 @@ R5.3 batch 2 78a4d6f, batch 3 3b17125, batch 4 04eeec8; R5.4 this commit.
 - Tests: `tests/coverage-report.test.mjs` (3).
 - Numbers: catalog 22 worlds, 845 shards, vocab 21,343 words; 0 errors, 0 warnings. npm test 2,579 pass, 5 skipped, 0 fail.
 - After the rebase on R9.2 (314 animals): both pages regenerated (animals 314 in ASPECTS.md; legs and what it can do change in COVERAGE.md); catalog 22 worlds, 845 shards, vocab 21,593 words; npm test 2,590 pass, 5 skipped, 0 fail.
+
+## Questions Q29 and Q30 (2026-11-13, second worker)
+
+- Q29: the usual colour for the rest of the 2,000 things (only where plain; from the drawing; or "any colour" as a
+  fact). Q30: plain names and model-labelled parts next to WordNet's in `k.parts`. Neither blocks; meanwhile (a)
+  in both. Round 8 of the second worker is done as far as the six items and the aspects go.
