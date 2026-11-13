@@ -233,3 +233,11 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
   (cup, bottle, shirt) and a few details are sure.
 - Not recognisable: optical disk, dvd (plain discs; the hole and the shine are lost). 2 of 108.
 - npm test 913 pass; shards unchanged in number and wires; vocab 13,088 words.
+
+## R2.7 batch 3 (2026-11-13): 108 more objects looked at (524 of 811)
+
+- Fruit, bread, meat, prepared food, sweets, vegetables, games, household, cameras and lights, locks.
+- part-names.tsv: rows for 458 objects; **1,444 parts named, 558 marked detail** (this batch: +239 names, +171
+  details, 97 of 108 objects with a row).
+- Not recognisable: piñata, mirror ball, nesting dolls. 3 of 108.
+- npm test 913 pass; shards unchanged in number and wires.
