@@ -31,6 +31,12 @@ See `tests/k.commonsense.questions.jsonl`: where does a fish live (`water`), wha
 things are usually in the sky, how many suns does a scene usually have (`1`); and soft issues for a fish in the sky, a
 boat on the grass, a car in the sky, two suns in one scene; nothing is refused.
 
+## Bulk import (not run yet)
+
+`tools/import/conceptnet.mjs` will add ConceptNet 5.7 facts as shards `conceptnet-<letter>` (keys `at`, `can`,
+`used_for`, `made_of`, and `is_a`, `part_of`, `has`, which the schema already declares). The dump is not reachable
+from the workers' network; see `sources/conceptnet/SOURCE.md`.
+
 ## Notes
 
 - A soft issue is advice: after a fish was put in the sky, "where does a fish live" still answers `water`

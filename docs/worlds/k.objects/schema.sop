@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.objects core.module name=k.objects version=2 imports=k.commonsense exports=object exports=part exports=point core.source="hand-core 1"
+@k.objects core.module name=k.objects version=2 imports=k.commonsense exports=object exports=part exports=point exports=skeleton core.source="hand-core 1"
 
 # An object that can be drawn. Its name is an English lemma; the same name in k.commonsense.thing is the same thing.
 @k.objects.object core.type of=k.objects.object shared=true closed=true core.source="hand-core 1"
@@ -44,6 +44,20 @@
 @k.objects.point.n core.slot of=k.objects.point key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.objects.point.x core.slot of=k.objects.point key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.objects.point.y core.slot of=k.objects.point key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
+
+# A sketch skeleton: where people usually put the n-th stroke when they draw the object quickly (a box in the 0 to
+# 100 frame), from many drawings. `part` names the part of the object that the box matches, when one does;
+# `drawings` is how many drawings it rests on and `spread` how far they disagree (0 to 100, smaller is surer).
+@k.objects.skeleton core.type of=k.objects.skeleton shared=true closed=true core.source="hand-core 1"
+@k.objects.skeleton.of core.slot of=k.objects.skeleton key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.objects.skeleton.n core.slot of=k.objects.skeleton key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
+@k.objects.skeleton.x core.slot of=k.objects.skeleton key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.objects.skeleton.y core.slot of=k.objects.skeleton key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.objects.skeleton.w core.slot of=k.objects.skeleton key=w required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.objects.skeleton.h core.slot of=k.objects.skeleton key=h required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.objects.skeleton.part core.slot of=k.objects.skeleton key=part kind=atom core.source="hand-core 1"
+@k.objects.skeleton.drawings core.slot of=k.objects.skeleton key=drawings kind=integer min=1 core.source="hand-core 1"
+@k.objects.skeleton.spread core.slot of=k.objects.skeleton key=spread kind=number min=0 max=100 core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.objects.word.object core.word text=object text=objects text=drawing text=picture means=k.objects.object core.source="hand-core 1"

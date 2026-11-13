@@ -9,11 +9,14 @@
 # A thing of everyday life, named by an English lemma. Shared: it belongs to every namespace, so an application's
 # facts in its own namespace join with it.
 @k.commonsense.thing core.type of=k.commonsense.thing shared=true closed=true core.source="hand-core 1"
-@k.commonsense.thing.name core.slot of=k.commonsense.thing key=name id=true required=true kind=atom core.source="hand-core 1"
-@k.commonsense.thing.at core.slot of=k.commonsense.thing key=at many=true kind=atom core.source="hand-core 1"
-@k.commonsense.thing.can core.slot of=k.commonsense.thing key=can many=true kind=atom core.source="hand-core 1"
-@k.commonsense.thing.used_for core.slot of=k.commonsense.thing key=used_for many=true kind=atom core.source="hand-core 1"
-@k.commonsense.thing.made_of core.slot of=k.commonsense.thing key=made_of many=true kind=atom core.source="hand-core 1"
+@k.commonsense.thing.name core.slot of=k.commonsense.thing key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.at core.slot of=k.commonsense.thing key=at many=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.can core.slot of=k.commonsense.thing key=can many=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.used_for core.slot of=k.commonsense.thing key=used_for many=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.made_of core.slot of=k.commonsense.thing key=made_of many=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.is_a core.slot of=k.commonsense.thing key=is_a many=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.part_of core.slot of=k.commonsense.thing key=part_of many=true kind=atom kind=string core.source="hand-core 1"
+@k.commonsense.thing.has core.slot of=k.commonsense.thing key=has many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.size core.slot of=k.commonsense.thing key=size enum=tiny enum=small enum=medium enum=large enum=huge core.source="hand-core 1"
 @k.commonsense.thing.usually_count core.slot of=k.commonsense.thing key=usually_count kind=integer min=1 core.source="hand-core 1"
 

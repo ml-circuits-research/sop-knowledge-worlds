@@ -365,5 +365,29 @@ small and can come with Round 2. `CHANGELOG.md` will start with the first breaki
 - Tests: `tests/k.units.questions.jsonl` (11), `tests/k.time.questions.jsonl` (12).
 - Catalog: 6 worlds, 657 shards. 0 errors, 0 warnings. npm test: 2,226 tests, all pass except that the full run
   was disturbed by my own edit of two schemas for the next task while it ran (the catalog freshness test saw them);
-  after setting those edits aside and rebuilding, the catalog, validation, question and page tests pass (132).
+  after setting those edits aside and rebuilding, the catalog, validation, question and page tests pass (99).
   The next commit runs the whole suite again.
+
+(Correction: the R2.4 commit message, b4be692, says 132 for the catalog, validation, question and page tests; the
+measured number is 99.)
+
+## Import scripts for sources this network cannot reach (2026-11-13): ConceptNet and Quick, Draw!
+
+- **No data of either source is in the repository.** Both scripts are tested on fixtures invented for the tests,
+  in the formats of the real files; `sources/conceptnet/SOURCE.md` and `sources/quickdraw/SOURCE.md` say NOT
+  FETCHED and give the download and run commands for a machine with an open network.
+- `tools/import/conceptnet.mjs`: streams `conceptnet-assertions-5.7.0.csv(.gz)`; English edges of weight 2 or more;
+  AtLocation → `at`, CapableOf → `can`, UsedFor → `used_for`, MadeOf → `made_of`, IsA → `is_a`, PartOf →
+  `part_of`, HasA → `has`; one `k.commonsense.thing` per start term, values by weight; things of the hand-written
+  core are left to it; shards `conceptnet-<letter>` split inside the size gate; CC-BY-SA-4.0.
+  For it, `k.commonsense.thing` got three more keys (`is_a`, `part_of`, `has`, many) and its keys take strings for
+  names of several words (additive; version stays 1). Part-of facts go to `k.commonsense`, not to `k.objects`,
+  whose parts must be drawable.
+- `tools/import/quickdraw.mjs`: reads `<category>.ndjson` (first 2,000 recognised drawings); the skeleton rests on
+  the drawings with the most common stroke count; stroke n = the median box of their n-th strokes, with the spread
+  of the stroke centres; usable when at least 20 drawings and 15% of them agree on the count and the mean spread is
+  15 or less; each stroke names the hand-named part of the `k.objects` object it overlaps most (at least 0.3 of the
+  union), if any. New type `k.objects.skeleton` (of, n, x, y, w, h, part, drawings, spread; additive). The script
+  prints which categories are usable, which is the report the plan asks for. CC-BY-4.0.
+- Tests: `tests/import.conceptnet.test.mjs`, `tests/import.quickdraw.test.mjs` (filtering, mapping, determinism,
+  and that the output loads in sopworld with the schemas and answers a query).

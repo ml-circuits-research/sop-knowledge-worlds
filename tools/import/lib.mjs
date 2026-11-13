@@ -30,10 +30,10 @@ export const wire = (id, type, entries, source) => {
 export const header = ({ id, about, sources, license, script }) =>
   [`# ${id}: ${about}`, ...sources.map((s) => `# sources: ${s}`), `# license: ${license}`, `# script: ${script}`, ''].join('\n');
 
-// Replaces the .sop files of a shard directory by `files` (name -> text).
-export function writeShards(dir, files) {
+// Replaces the .sop files of a shard directory (those whose name starts with `prefix`) by `files` (name -> text).
+export function writeShards(dir, files, prefix = '') {
   mkdirSync(dir, { recursive: true });
-  for (const old of readdirSync(dir)) if (old.endsWith('.sop')) rmSync(join(dir, old));
+  for (const old of readdirSync(dir)) if (old.endsWith('.sop') && old.startsWith(prefix)) rmSync(join(dir, old));
   for (const [name, text] of Object.entries(files)) writeFileSync(join(dir, name), text);
 }
 

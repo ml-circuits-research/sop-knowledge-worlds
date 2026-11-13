@@ -14,3 +14,9 @@ Breaking schema changes, per world. The world's version is `version=` on the `co
   `name` and `of` may be strings (names of several words); `colour` is now an enum of 11 names.
 - `variant` on objects and parts, added with the pilot and never used in a shard, is removed again (reviewer's
   answer to Q12: where a hand-written object exists, the imported drawing is left out).
+
+### k.commonsense 1 and k.objects 2, additions (2026-11-13, not breaking)
+
+- `k.commonsense.thing`: `is_a`, `part_of`, `has` (many); `name`, `at`, `can`, `used_for`, `made_of` also take
+  strings (names of several words). For the ConceptNet import.
+- `k.objects.skeleton` (of, n, x, y, w, h, part, drawings, spread): sketch skeletons, for the Quick, Draw! import.
