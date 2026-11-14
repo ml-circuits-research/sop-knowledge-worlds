@@ -79,9 +79,8 @@ bulk import, so that the schema is shaped by use, not by the dump.
 This project is non-commercial, open-source research. **We import only what we can publish openly on GitHub Pages.**
 Anything that cannot be published is not imported at all; there is no restricted or private area.
 - **Allowed:** public domain and CC0 (Wikidata); permissive licenses (MIT, BSD, Apache, MPL, the WordNet license, CC BY,
-  ODbL with attribution); share-alike (CC BY-SA, e.g. ConceptNet); and non-commercial licenses (CC BY-NC, CC BY-NC-SA),
-  because this is non-commercial research. A shard keeps its source's terms: share-alike stays share-alike, NC stays NC.
-- **Not imported:** no-derivatives (ND), since we transform everything; "no redistribution"; "research use only, do not share";
+  ODbL with attribution); share-alike (CC BY-SA, e.g. ConceptNet), kept in shards of their own. A shard keeps its source's terms.
+- **Not imported:** non-commercial (NC) licences (owner's rule: the worlds must be reusable by any application); no-derivatives (ND), since we transform everything; "no redistribution"; "research use only, do not share";
   and any source with unclear terms.
 - Every shard header and catalog entry names its license. `docs/worlds/LICENSES.md` is generated with the attribution
   texts. The catalog marks NC shards (`"nc": true`) so that a future commercial user could filter them out.

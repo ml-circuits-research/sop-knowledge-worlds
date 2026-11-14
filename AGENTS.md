@@ -32,7 +32,7 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
    turn them into shards deterministically (same input, byte-identical output). Commit the scripts and the shards,
    never the raw dumps.
 9. **Only what can be published.** See "Licenses" in PLAN.md: import only sources we may publish openly (CC0, permissive,
-   CC BY, BY-SA, BY-NC, BY-NC-SA). Do not import no-derivatives, no-redistribution or unclear sources at all. Record every
+   CC BY, BY-SA). Do not import non-commercial (NC), no-derivatives, no-redistribution, research-only or unclear sources at all. Record every
    source's license in `sources/<id>/SOURCE.md` and in the catalog.
 10. **Approximate numbers, "cannot", drawings** (reviewer's answers Q17 to Q19). A number that is only approximate goes
     in a second key with the suffix `_about` (`moons_about=95` next to the exact key `moons`); never both keys on one
