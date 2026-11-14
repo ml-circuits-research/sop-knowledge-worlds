@@ -55,6 +55,9 @@ each question alone (the thing, the asked key, a value, a scale) and says for ea
 thing missing, key missing, key of another kind of thing, word not in the vocabulary. Every key of every named
 type now has a `core.word` (`tools/key-words.mjs` writes the block at the end of each schema), and `k.units.measure`
 says the unit of every number of every world.
+Block 03:20 (PSys2's knowledge gaps): `k.music` (the values of music notation: 35 note names, 16 intervals, 30 keys
+with signature, relative key and triads, 90 scales, 209 chords, each with its notes; written by rule) and the sounds
+of animals from WordNet's glosses in `k.animals`.
 
 ## What belongs here, what belongs to the library, what stays in an application
 

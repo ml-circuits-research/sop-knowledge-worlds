@@ -1,0 +1,12 @@
+{"id":"mu-01","ask":"what notes are in a C major chord","query":{"type":"k.music.chord","where":{"name":"C"},"seek":"note","mode":"list"},"expect":{"status":"supported","values":["C","E","G"]}}
+{"id":"mu-02","ask":"tell me the notes of a G major chord","query":{"type":"k.music.chord","where":{"name":"G"},"seek":"note","mode":"list"},"expect":{"status":"supported","values":["G","B","D"]}}
+{"id":"mu-03","ask":"play the G major scale","query":{"type":"k.music.scale","where":{"name":"\"G major scale\""},"seek":"note","mode":"list"},"expect":{"status":"supported","values":["G","A","B","C","D","E","F#"]}}
+{"id":"mu-04","ask":"what key has 5 sharps","query":{"type":"k.music.key","where":{"sharps":5,"mode":"major"},"seek":"name"},"expect":{"status":"supported","value":"\"B major\""}}
+{"id":"mu-05","ask":"what is the relative minor of C major","query":{"type":"k.music.key","where":{"name":"\"C major\""},"seek":"relative"},"expect":{"status":"supported","value":"\"A minor\""}}
+{"id":"mu-06","ask":"how many sharps in E major","query":{"type":"k.music.key","where":{"name":"\"E major\""},"seek":"sharps"},"expect":{"status":"supported","value":"4"}}
+{"id":"mu-07","ask":"what notes are in a C7 chord","query":{"type":"k.music.chord","where":{"name":"C7"},"seek":"note","mode":"list"},"expect":{"status":"supported","values":["C","E","G","Bb"]}}
+{"id":"mu-08","ask":"what is the tonic of the D minor scale","query":{"type":"k.music.scale","where":{"name":"\"D minor scale\""},"seek":"tonic"},"expect":{"status":"supported","value":"D"}}
+{"id":"mu-09","ask":"which triads does F major have","query":{"type":"k.music.key","where":{"name":"\"F major\""},"seek":"chord","mode":"list"},"expect":{"status":"supported","values":["F","Gm","Am","Bb","C","Dm","Edim"]}}
+{"id":"mu-10","ask":"what is another name for C sharp","query":{"type":"k.music.note","where":{"name":"C#"},"seek":"enharmonic","mode":"list"},"expect":{"status":"supported","values":["Db","B##"]}}
+{"id":"mu-11","ask":"how many semitones in a major third","query":{"type":"k.music.interval","where":{"name":"\"major third\""},"seek":"semitones"},"expect":{"status":"supported","value":"4"}}
+{"id":"mu-12","ask":"what key signature does B flat major have","query":{"type":"k.music.key","where":{"name":"\"Bb major\""},"seek":"signature","mode":"list"},"expect":{"status":"supported","values":["Bb","Eb"]}}

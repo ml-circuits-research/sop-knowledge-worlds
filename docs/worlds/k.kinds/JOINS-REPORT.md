@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **167** in 28 worlds; distinct values 5621, meeting a target 5461 (97.2 %), open 160
+- declared joins: **180** in 29 worlds; distinct values 5960, meeting a target 5800 (97.3 %), open 160
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **110**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **111**; left undeclared on purpose: 6
 
 ## Declared joins
 
@@ -111,6 +111,19 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.motion | `k.motion.step.splitter` | `k.motion.splitter` | name | 1 | 1 |  |
 | k.motion | `k.motion.viseme.style` | `k.faces.canon` | style | 1 | 1 |  |
 | k.motion | `k.motion.when.rule` | `k.motion.rule` | name | 12 | 12 |  |
+| k.music | `k.music.chord.note` | `k.music.note` | name | 34 | 34 |  |
+| k.music | `k.music.chord.root` | `k.music.note` | name | 21 | 21 |  |
+| k.music | `k.music.key.chord` | `k.music.chord` | name | 49 | 49 |  |
+| k.music | `k.music.key.enharmonic` | `k.music.key` | name | 12 | 12 |  |
+| k.music | `k.music.key.parallel` | `k.music.key` | name | 24 | 24 |  |
+| k.music | `k.music.key.relative` | `k.music.key` | name | 30 | 30 |  |
+| k.music | `k.music.key.scale` | `k.music.scale` | name | 30 | 30 |  |
+| k.music | `k.music.key.signature` | `k.music.note` | name | 14 | 14 |  |
+| k.music | `k.music.key.tonic` | `k.music.note` | name | 18 | 18 |  |
+| k.music | `k.music.note.enharmonic` | `k.music.note` | name | 35 | 35 |  |
+| k.music | `k.music.scale.key` | `k.music.key` | name | 30 | 30 |  |
+| k.music | `k.music.scale.note` | `k.music.note` | name | 24 | 24 |  |
+| k.music | `k.music.scale.tonic` | `k.music.note` | name | 18 | 18 |  |
 | k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 144 | 144 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.people | `k.people.kind.face` | `k.faces.preset` | name | 8 | 8 |  |
@@ -259,6 +272,7 @@ exact (token for token) against the first candidate; the value share itself also
 | k.motion | `k.motion.set.key` | value | `k.body.part` | name | 4 | 1 |
 | k.motion | `k.motion.step.key` | value | `k.body.part` | name | 1 | 1 |
 | k.motion | `k.motion.when.feature` | value | `k.attributes.attribute` | name | 1 | 0 |
+| k.music | `k.music.note.letter` | value | `k.music.chord`, `k.music.note` | name | 7 | 7 |
 | k.objects | `k.objects.part.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 8 | 8 |
 | k.objects | `k.objects.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
 | k.objects | `k.objects.part.pointing` | value | `k.values.direction` | name | 4 | 4 |

@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 242 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 247 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -55,6 +55,11 @@
 @k.units.measure.k.geo.group.as_of k.units.measure world=k.geo type=group key=as_of ordinal=true core.source="hand-core 1"
 @k.units.measure.k.animals.animal.legs k.units.measure world=k.animals type=animal key=legs counts=leg core.source="hand-core 1"
 @k.units.measure.k.animals.class.legs k.units.measure world=k.animals type=class key=legs counts=leg core.source="hand-core 1"
+@k.units.measure.k.music.note.pitch_class k.units.measure world=k.music type=note key=pitch_class counts="semitone above C" core.source="hand-core 1"
+@k.units.measure.k.music.interval.semitones k.units.measure world=k.music type=interval key=semitones counts=semitone core.source="hand-core 1"
+@k.units.measure.k.music.interval.number k.units.measure world=k.music type=interval key=number ordinal=true core.source="hand-core 1"
+@k.units.measure.k.music.key.sharps k.units.measure world=k.music type=key key=sharps counts=sharp core.source="hand-core 1"
+@k.units.measure.k.music.key.flats k.units.measure world=k.music type=key key=flats counts=flat core.source="hand-core 1"
 @k.units.measure.k.body.part.count k.units.measure world=k.body type=part key=count counts="part of that name in an adult" core.source="hand-core 1"
 @k.units.measure.k.body.part.child_count k.units.measure world=k.body type=part key=child_count counts="part of that name in a young child" core.source="hand-core 1"
 @k.units.measure.k.body.part.count_per_part k.units.measure world=k.body type=part key=count_per_part counts="part of that name on one larger part" core.source="hand-core 1"

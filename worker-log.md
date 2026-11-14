@@ -4845,3 +4845,35 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   dictionary at the next build. Rerun: 13,100 lemmas (8,917 nouns, 3,364 verbs, 819 adjectives), round trip 36,059
   of 36,059 cells; inflectBy agreement unchanged (plural 96.5 %, third 99.9 %, past 95.5 %, ing 95.7 %, comparative
   and superlative 99.7 %). Tests: w.lang.en.morph 6, catalog 8, validate 5, repo 1 pass.
+
+
+## 2026-11-15 — first worker: k.music, music notation as typed values (block 03:20 item 2; PSys2 Q15)
+
+- New world `k.music` (version 1, CC0, `hand-core 1`, written by rule by the new `tools/music-core.mjs` from the note
+  letters, accidentals, interval patterns and the orders of sharps and flats; no input but the tool): 3 shards, 745
+  wires, 189,912 bytes, 0 warnings.
+  - `k.music.note`: 35 note names as the music world writes them (`C`, `F#`, `Bb`, `F##`, `Bbb`): letter,
+    accidental, pitch_class, enharmonic; spoken forms as words ("C sharp", "C-sharp", "C♯", "B flat").
+  - `k.music.interval`: 16 intervals (semitones, number, quality); "tritone", "half step", "whole step".
+  - `k.music.key`: 30 keys (15 major, 15 minor, up to 7 sharps or flats): tonic, mode, sharps or flats (excludes),
+    signature in written order, relative, parallel, enharmonic, scale, the 7 triads by degree. Words "key of G",
+    "G major key", "F sharp minor". The names are the music world's key names ("C major", "Eb major").
+  - `k.music.scale`: 90 scales (major on the 15 major tonics; natural, harmonic, melodic minor on the 15 minor ones;
+    major and minor pentatonic), notes in order, key.
+  - `k.music.chord`: 209 chords (12 qualities on 17 roots, plus B#dim, Cb, E#dim, E#m, Fb that the keys name), named
+    by chord symbol (`C`, `Dm`, `C7`, `Cmaj7`, `F#m7b5`), root, quality, notes in order. "G major" alone is the key;
+    every chord word says chord, triad or another quality ("G major chord", "D minor triad", "G seventh").
+- So "G's major scale" has a typed value to bind: the scale "G major scale" with `tonic=G`, `type=major`; a checker
+  that binds the tonic cannot accept "D major scale" for it. Joins: 13 declared, all met (339 values).
+- Measures (k.units.measure): pitch_class counts semitones above C, interval semitones, interval number an ordinal,
+  sharps and flats counted. Key words block written by tools/key-words.mjs (with everyday words: notes, in, chords,
+  triads, key signature).
+- Not here (WORLD.md): which chord a set of notes makes (a host's match over `note`; a query names one value per
+  key), inversions and slash chords, church modes, blues and chromatic scales, tempo and duration words, solfège.
+- Tests: tests/k.music.test.mjs (4: shards = tool output; every reference met; theory checks: letters once per scale,
+  major steps 2-2-1-2-2-2, relative minor a minor third below with the same signature, 5 chords spelt; the music
+  world's key names, "key of G", "G major chord" -> G, "F sharp minor", "C sharp", "G major" is not a chord word);
+  tests/k.music.questions.jsonl (12 questions from PSys2's failing rows: notes of C and G major chords, the G major
+  scale, the key with 5 sharps, the relative minor of C major, sharps in E major, C7, triads of F major, ...).
+  `npm run test:changed` on 6b50041: 31 files, 256 tests, 253 pass, 2 skipped, 1 fail (COVERAGE.md stale with the new
+  world: `npm run reports` rerun, coverage-report 4 pass).
