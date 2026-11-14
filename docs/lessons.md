@@ -431,3 +431,19 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Under memory contention the common failure is SIGKILL, and the common conflict is a generated file.** A test
   wrapper that reruns killed files alone behind a memory gate, and a sync script that resolves conflicts in generated
   files by regenerating them, made pushes possible with four workers on one 8 GB machine.
+## Reviewer 21:55 (third worker): the up edges for cousins
+
+- **Several parents come from joining what the worlds already say, not from typing a taxonomy.** Every second parent
+  of a cow (farm animal, animal with legs, herbivore) was a key of k.animals read as an edge; the new nodes (farm
+  animal) need only one parent each to join the graph. The cost is names: a parent made from a value ("thing for
+  travelling") is a phrase, and the report must say which nodes are made.
+- **A dictionary's chain is about senses, the graph is about names.** WordNet's `kind_of` lists the first word of each
+  hypernym synset; read as names, the chain of "carriage" (a railway car) made "car" a wheeled vehicle. An edge from a
+  chain word is safe only where that word's own chosen sense has that parent.
+- **A head-noun rule is cheap and mostly right, and its errors are idioms** (teddy bear, guinea pig, Komodo dragon): a
+  sample of 100 found 6, all of one kind, so an exception list closes them; the source's naming habit matters too
+  (Mulberry puts the qualifier last).
+- **Alternation rules are patterns over whole sentences, so their order and their own outputs are the risk**: a rule
+  whose output matches another rule's input loops (have / does ... have), and a general rule placed before a specific
+  one eats it (how {x} are before how many {y} there are). The canonical forms as fixpoints and the frame examples as
+  a check (17 of 352 changed: exactly the variants) found both.

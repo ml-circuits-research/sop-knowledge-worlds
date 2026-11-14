@@ -136,6 +136,35 @@ slots keep the register (its persons by the pronouns' person and number, no dire
 has none, no contraction where it has none, no present verb in a narrative), and a sentence filled with sample
 fillers is not longer than the register's `sentence_max`.
 
+## Alternations: variants back to the canonical form (reviewer 21:55; the library's Q54 item 2)
+
+Shard `alternations` (`tools/lang-en-alternations.mjs`), read by the library's `normalise` / `alternationsOf`
+(sopworld 0.75): `w.lang.en.alternation name= n= family= from= to= mode=`, a rule over a whole sentence that brings a
+variant back to the form a frame is written in, so the frames need not list their variants. `from` / `to` are the
+library's patterns (words; `{x}` a span of one word or more, shortest first; `{x:base}` the base of a span's first
+word); the library's `[a|b]` is not used (hard rule 3): each alternative is a fact of its own. `n` is the order they are
+tried in (the first whose pattern covers the whole sentence; to a fixpoint, at most 6 steps): specific before general.
+
+| family (parent) | rules | example |
+|---|---|---|
+| polite word, ability question, desire, suggestion, sequence lead (request wrapper) | please, could / can / would / will you, I want you to, I'd like to, let's, now | can you please draw a cat -> draw a cat (request) |
+| question vs command (question form) | tell me / do you know / I want to know / I wonder + wh, + if / whether | tell me where the cat is -> where is the cat |
+| embedded question (question form) | the copula or does back before the subject | what colour the car is -> what colour is the car |
+| wh in situ (question form) | the question word back to the front | a cow makes what sound -> what sound does a cow make |
+| passive (voice) | one rule per participle of 24 common verbs (a span for the verb would read "the cat is sitting by the door" as a passive) | the mouse was chased by the cat -> the cat chase the mouse |
+| dative shift (argument order) | 9 verbs with to, 10 with for, the one who gets it a pronoun (me, us, them): the frames write it after to (send table 2 to the diagram) | draw me a sheep -> draw a sheep for me |
+| ellipsis (context) | and, also, too, as well, the same for, what about, how about | what about the tree? -> the tree (ellipsis) |
+
+`w.lang.en.alternation_family` gives the families and the family above each (up to `alternation`): the up edges of a
+construction for the library's cousins. `w.lang.en.alternation_case`: 35 test sentences with their canonical form,
+the rules applied in order and the mode; `tests/w.lang.en.alternations.test.mjs` checks them with a copy of the
+library's reading (the pin, 0.63, has no `normalise`), and the library's own 0.75 `normalise` gives the same 35 (checked once from its source, not in the tests).
+Of the 352 frame examples, 17 are changed by an alternation ("Pastel colours please.", "Draw me a nice picture.",
+"Tell me how many houses there are."): they are the variants the second worker marks.
+Not covered: double objects with a noun recipient ("give the dog the ball": two spans side by side cannot be told
+apart), tell and show with me (they ask: "tell me the capital of Japan"), plural have in embedded questions (the
+canonical form ends in have and would match its own rule), would you mind + -ing.
+
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the

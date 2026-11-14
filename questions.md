@@ -819,3 +819,32 @@ std.plan as value bindings (`fixChoices`, a script that rewrites the method's fa
 one planner. 100 seeded stories each hold every hard constraint of k.story (checked by k.story's own `checkPlan` from
 the facts). When std.plan reads `choose`, the reader is deleted and the test runs through std.plan alone.
 Blocking: no (the facts are published in this form; a script converts them if the library amends the keys).
+
+## Q58 ([LIB] reviewer 21:55 / the library's Q54 item 2, third worker, 2026-11-14): reading the alternations of w.lang.en
+Question: will `normalise` / `alternationsOf` read the published facts as below, and may four points change?
+Context: `w.lang.en/shards/alternations` holds 368 rules (`w.lang.en.alternation name= n= family= from= to= mode=`) in
+11 families with parents (`w.lang.en.alternation_family`) and 35 test sentences (`w.lang.en.alternation_case`); the
+library's own 0.75 `normalise`, given the world, brings all 35 to their canonical form with the rules named.
+1. **Mode**: the first mode applied wins, so "can you tell me where the cat is" is read as `request` (can_you comes
+   first), not `question`. Proposed: question and ellipsis outrank request (or: the mode of the last rule that has one).
+2. **Order**: rules are tried in told order; with lazy loading a host may tell shards in another order. Each fact has
+   `n` (its place): please sort by `n` when it is there.
+3. **No `[a|b]`** (hard rule 3 here: no `a|b` in a value): each alternative is its own fact (the four "could / can /
+   would / will you", the passive per auxiliary and participle). A class of words would say it once without notation:
+   may a pattern name a word class of the language world, `{x:wh}` = one word of `w.lang.en.wh` (or `{x:aux}`)?
+4. **Typed spans**: a double object with a noun recipient ("give the dog the ball") cannot be split by two spans side
+   by side (shortest first gives "the | dog the ball"); only pronoun recipients are written. A span typed by the
+   reader (`{x:thing}`, read by readByTypes) would cover it.
+Families are on every rule for the cousins (construction -> alternation family -> its parent). Blocking: no.
+
+## Q59 (reviewer 21:55, third worker, 2026-11-14): three choices in the up edges of k.kinds
+Question: are these right, or should they change?
+Context: `k.kinds.parent` (8,389 edges, six dimensions: kind, place, feature, use, material, diet; PARENTS.md).
+1. **Part of** (an eye is part of a face) and **origin** (beef comes from a cow, k.food comes_from) are not up edges
+   here: they are other relations than "is a kind of", though going up a part-of edge also gives plausible siblings
+   (nose, mouth). Take them as dimensions `part_of` and `origin`?
+2. **One home**: the `is_a` of k.commonsense, k.people and k.shapes (they extend `k.kinds.kind`) are not copied into
+   `k.kinds.parent`; a reader takes both. Copy them (one type to read, a fact in two places) instead?
+3. **Names as nodes**: a name with two senses (bat the animal and the club) is one node with the parents of both;
+   k.attributes.same knows the senses. Add `sense=` to the edges of such names?
+Blocking: no.

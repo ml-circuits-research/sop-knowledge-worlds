@@ -1,5 +1,5 @@
 {
- "version": "19cec227b103",
+ "version": "23d9e01da604",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -76673,6 +76673,9 @@
    "version": "2",
    "schema": "w.lang.en/schema.sop",
    "exports": [
+    "w.lang.en.alternation",
+    "w.lang.en.alternation_case",
+    "w.lang.en.alternation_family",
     "w.lang.en.anaphor",
     "w.lang.en.answer",
     "w.lang.en.aux",
@@ -76727,6 +76730,54 @@
    ],
    "depends": [],
    "shards": [
+    {
+     "id": "w.lang.en/shards/alternations",
+     "path": "w.lang.en/shards/alternations.sop",
+     "wires": 420,
+     "bytes": 82424,
+     "keys": [
+      "a cow makes what sound",
+      "a spider has how many legs",
+      "and a dog too",
+      "can you please draw a cat",
+      "can you tell me if bolivia is landlocked?",
+      "can you tell me what colour the car is?",
+      "could you open the door?",
+      "do you know how many legs a spider has",
+      "do you know how many neighbours hungary has?",
+      "draw me a sheep",
+      "give me the ball",
+      "i want to draw a house",
+      "i want you to make the sun yellow",
+      "i wonder who lives in the castle",
+      "i'd like you to remove the tree",
+      "let's add a guest",
+      "now move the cat to the left",
+      "open the door",
+      "open the door please",
+      "penguins live where",
+      "please open the door",
+      "please send us the picture",
+      "read me a story",
+      "tell me how many houses there are",
+      "tell me the capital of japan",
+      "tell me where the cat is",
+      "the capital of france is what",
+      "the car is what colour",
+      "the cat is sitting by the door",
+      "the house was painted by the girl",
+      "the mouse was chased by the cat",
+      "the picture has been sent by ann",
+      "the same for the house",
+      "what about the tree?",
+      "what is the capital of france"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
     {
      "id": "w.lang.en/shards/clauses",
      "path": "w.lang.en/shards/clauses.sop",

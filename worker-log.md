@@ -4159,7 +4159,6 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - k.words: 348 shards, 43,710 wires, 8,676,705 bytes. Tests: tests/import.wordnet.test.mjs (usage and frequency on
   the fixture; shards on disk equal the import), tests/k.words.test.mjs (bands computed from Zipf, CC BY-SA, every
   banded word has a sense, the k.genres join).
-<<<<<<< HEAD
 ## 2026-11-14 — third worker: k.kinds, the up edges of the catalog with several parents (reviewer 21:55)
 
 - New type `k.kinds.parent name= is_a= dimension= from= key= value= group=` (k.kinds version 2, exports kind and
@@ -4218,9 +4217,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests one file at a time: k.actions.families 5, k.actions.acts 8, k.actions 4, validate 5, w.lang.en 21,
   templates 8, k.procedures 15, joins 3, questions 424, shared-modules 5, ask-real 4, catalog 8 (alone after a
   SIGKILL); 0 fail. Catalog 32 worlds, 1,021 shards.
-<<<<<<< HEAD
 
-=======
 ## Block 21:20 task 1 (2026-11-14, second worker): `w.chart` published
 
 - `docs/worlds/w.chart/` (schema.sop 41 wires, 6.2 kB, WORLD.md): a world schema in the `std.schema` format, no rule
@@ -4242,8 +4239,6 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Full run of this commit before the last rebase (one file at a time, `/home/claude/w2tools/runall.sh` in a worktree):
   2,979 tests, 2,974 pass, 5 skipped, 0 fail, no file killed (15 minutes). Rebased on k.words register (fa8a629): catalog 32 worlds, 1,005 shards,
   vocab 24,894 words; then on k.kinds up edges and k.actions families (a523fa4): 1,021 shards, vocab 25,713 words; catalog 8, w.schemas 14, k.procedures 15 pass after the rebase.
->>>>>>> 4b59348 (w.chart: charts of numbers as a world schema (chart with form, series, values by category; 41 wires, 6.2 kB, 0 warnings), and the w.chart method of a chart of the things there in k.procedures (24 methods))
-=======
 
 
 ## 2026-11-14 — first worker: w.lang.ro on sopworld 0.63: no exceptions left, the article in the templates (block "16:50")
@@ -4258,7 +4253,6 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Re-measured on PSys2's 240 Romanian commands: exact spelling 99.5% (first reading 99.2%), through the folds 99.7%,
   the casual variants typed without diacritics 99.7% (1,163 of 1,167; was 92.2%).
 - w.lang.ro: 949 wires (morphology 402, irregular 225, closed 240, templates 3, schema 79). Tests 9 / 9.
->>>>>>> f864cba (w.lang.ro on sopworld 0.63: no exception left (round trip 2,916/2,916 exact and without diacritics), the indefinite article in the templates (am desenat o casă roșie))
 
 ## 2026-11-14 — first worker: w.lang.ro, a dictionary derived from UniMorph (blocks "18:20" item 2 and item 3, "19:35")
 
@@ -4278,3 +4272,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: tests/w.lang.ro.test.mjs 10 / 10 (the derived folder: licence, classes exist, genders follow the class, no
   hand lemma, no sense guessed; files equal the tool's output when the raw file is here; fit >= 75%, agreement >= 90%;
   derived lemmas read back with both dictionaries).
+
+## 2026-11-14 — third worker: alternations of w.lang.en as facts (reviewer 21:55; the library's Q54 item 2)
+
+- New types in w.lang.en: `w.lang.en.alternation name= n= family= from= to= mode=` (the library's format, with the
+  order `n` and the family), `w.lang.en.alternation_family name= about= parent=`, `w.lang.en.alternation_case text=
+  canonical= applied= mode=`. Shard `w.lang.en/shards/alternations` (tools/lang-en-alternations.mjs): 368 rules in
+  11 families under 5 parents (request wrapper: polite word 3, ability question 4, desire 7, suggestion 3, sequence
+  lead 3; question form: question vs command 55, embedded question 41, wh in situ 42; voice: passive 144; argument
+  order: dative shift 57; context: ellipsis 9), 17 families and 35 test sentences; 420 wires, 82,424 bytes.
+- `from` / `to` in the library's pattern notation (words and `{x}` spans) without `[a|b]` (hard rule 3): each
+  alternative a fact, generated from tables. The passive is one rule per participle of 24 common verbs (a span for the
+  verb read "the cat is sitting by the door" as a passive); the dative shift covers pronoun recipients only and not
+  tell / show ("tell me the capital of Japan" asks); the canonical form is the one the frames use (send X to Y).
+- Checks: the 35 sentences come back to their canonical forms with the rules named, by a copy of the library's 0.75
+  reading in the test (the pin, 0.63, has no `normalise`; delete the copy at the next pin) and, once, by the
+  library's own `normalise` from its source (35 of 35). Canonical forms are fixpoints. Of the 352 frame examples, 17
+  are changed by an alternation (12 with "please", "Draw me a nice picture.", "Tell me how many houses there are.",
+  "Can you tell me if Bolivia is landlocked?"...): the variants the second worker marks; the family names here are the
+  ones a variant frame can name. Two loops / wrong orders were found by these checks and fixed (Lessons).
+- tests/w.lang.en.test.mjs: the notation check allows `{x}` spans in an alternation's from / to (not `|`, `[`, `]`)
+  and a question mark in a test sentence. Questions: Q58 [LIB] (mode precedence, order by n, a word class instead of
+  [a|b], typed spans for double objects), Q59 (part-of and origin edges, one home for told is_a, senses of names).
+- Tests one file at a time: w.lang.en.alternations 4, w.lang.en 21, templates 8, validate 5, questions 424, ask-real
+  4, catalog 8; 0 fail. Catalog 32 worlds, 1,022 shards, vocab 25,736 words.

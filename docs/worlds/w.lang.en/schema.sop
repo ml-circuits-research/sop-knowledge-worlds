@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=discourse exports=slot exports=onset core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -319,6 +319,33 @@
 @w.lang.en.onset core.type of=w.lang.en.onset shared=true closed=true core.source="hand-core 1"
 @w.lang.en.onset.begins core.slot of=w.lang.en.onset key=begins id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.onset.sound core.slot of=w.lang.en.onset key=sound required=true enum=vowel enum=consonant core.source="hand-core 1"
+
+# ---- alternations (reviewer 21:55; the library's questions.md Q54 item 2: sopworld 0.75 normalise) ----
+# A rule over a whole sentence that brings a variant back to the canonical form a frame is written in (passive, wh in
+# situ, question vs command, request wrappers, dative shift, ellipsis), in the library's format: `from` and `to` are
+# its patterns (words, `{x}` a span of one word or more, shortest first; `{x:base}` in `to` the base form of the
+# span's first word); `mode` what the wrapper says about the sentence (request, question, ellipsis). No `[a|b]`: each
+# alternative is a fact of its own. `n` is the order the rules are tried in (the first that matches the whole
+# sentence, to a fixpoint). `family` is the alternation family (the up edge of a construction, for the cousins).
+@w.lang.en.alternation core.type of=w.lang.en.alternation shared=true closed=true core.source="hand-core 1"
+@w.lang.en.alternation.name core.slot of=w.lang.en.alternation key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.alternation.n core.slot of=w.lang.en.alternation key=n required=true kind=integer min=1 core.source="hand-core 1"
+@w.lang.en.alternation.family core.slot of=w.lang.en.alternation key=family required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.alternation.from core.slot of=w.lang.en.alternation key=from required=true kind=string core.source="hand-core 1"
+@w.lang.en.alternation.to core.slot of=w.lang.en.alternation key=to required=true kind=string core.source="hand-core 1"
+@w.lang.en.alternation.mode core.slot of=w.lang.en.alternation key=mode enum=request enum=question enum=ellipsis core.source="hand-core 1"
+# A family of alternations and the family above it (a layered graph up to "alternation").
+@w.lang.en.alternation_family core.type of=w.lang.en.alternation_family shared=true closed=true core.source="hand-core 1"
+@w.lang.en.alternation_family.name core.slot of=w.lang.en.alternation_family key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.alternation_family.about core.slot of=w.lang.en.alternation_family key=about required=true kind=string core.source="hand-core 1"
+@w.lang.en.alternation_family.parent core.slot of=w.lang.en.alternation_family key=parent kind=atom kind=string core.source="hand-core 1"
+# A test sentence: a variant, its canonical form, the alternations applied in order, the mode.
+@w.lang.en.alternation_case core.type of=w.lang.en.alternation_case shared=true closed=true core.source="hand-core 1"
+@w.lang.en.alternation_case.text core.slot of=w.lang.en.alternation_case key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.alternation_case.canonical core.slot of=w.lang.en.alternation_case key=canonical required=true kind=string core.source="hand-core 1"
+@w.lang.en.alternation_case.applied core.slot of=w.lang.en.alternation_case key=applied many=true kind=atom core.source="hand-core 1"
+@w.lang.en.alternation_case.mode core.slot of=w.lang.en.alternation_case key=mode enum=request enum=question enum=ellipsis core.source="hand-core 1"
+@w.lang.en.word.alternation core.word text=alternation text=alternations text=variant text=paraphrase means=w.lang.en.alternation core.source="hand-core 1"
 
 # ---- clause structure ----
 # What joins two clauses: `cut` whether a splitter cuts there without other evidence, `card_cut` whether it cuts when

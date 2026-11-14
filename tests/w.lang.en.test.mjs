@@ -46,7 +46,12 @@ test('w.lang.en: every wire has a source; no notation inside values', () => {
     // a template's text is in the library's template notation (std.morph realise: {role}, {role:f=v}), the one
     // notation the reviewer asked for (block 17:05), read by the library, as in w.lang.ro
     const TEMPLATE = /^w\.lang\.en\.(template|discourse)$/.test(w.type);
-    for (const [k, vs] of Object.entries(w.attrs)) if (!PROSE.has(k) && !(TEMPLATE && k === 'text')) for (const x of vs.map(tok)) {
+    // an alternation's from and to are in the library's pattern notation ({x} spans; Q54 there, reviewer 21:55), without
+    // its [a|b] alternatives (each alternative a fact): only the spans are allowed
+    const PATTERN = (k) => w.type === 'w.lang.en.alternation' && (k === 'from' || k === 'to');
+    for (const [k, vs] of Object.entries(w.attrs)) if (PATTERN(k)) { for (const x of vs.map(tok)) if (/[|[\]*+]/.test(x.replace(/\{[a-z_]+(:base)?\}/g, ''))) bad.push(`${w.id} ${k}=${x}`); }
+    // a test sentence of an alternation is a sentence as typed ("could you open the door?")
+    else if (!PROSE.has(k) && !(TEMPLATE && k === 'text') && !(w.type === 'w.lang.en.alternation_case' && (k === 'text' || k === 'canonical'))) for (const x of vs.map(tok)) {
       // a list in one value, a set of choices, an optional or repeated mark, a range, a pattern, a "_" for a space
       if (/[|[\]{}*+]|\.\.|\$\d|^\^/.test(x) || (/,/.test(x) && x !== ',') || (/\?$/.test(x) && !/^\?/.test(x)) || (/_/.test(x) && WORDS.has(k))) bad.push(`${w.id} ${k}=${x}`);
     }
