@@ -5306,3 +5306,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Questions: geo-p1 ("what is the currency of Japan", k.geo) dropped, as un-c5 asks it of k.units; un-c7 "what is the
   currency of France" (k.units, euro) added. tests/import.psys2.test.mjs: no country has a `currency` key.
 - Docs: k.units/WORLD.md (the one home), k.geo/WORLD.md, the k.geo schema comment.
+
+## 2026-11-15 — third worker: full suite at the end of the round (block 07:45)
+
+- Commits: ca5d4aa (order criterion), c9864d6 (kind after the topic), 009dc3f (single-letter names).
+- `npm run test:all` on 009dc3f: 82 files, 3,118 tests, 3,110 pass, 0 fail, 8 skipped, 445 s. Slowest: derived 65 s,
+  k.attributes 41 s (both over 30 s, not touched by this round), k.cores 28 s, gallery 26 s, questions 24 s;
+  w.lang.en.diagram-frames 1.0 s.
+- Note: 009dc3f was rebased onto 0463758 (worker-tasks.md only) after its test:changed and pushed before testing that
+  tip again; the full suite above is on that tip.
+- Open: "connect a to c" in lower case still reads "a" as the article; "link A with D" reads D as the tool (an older
+  frame, acts.connect.tool, outranks acts.connect for "with"); "put the parts in a tree" is read as a diagram of
+  parts, a host with parts already drawn should take the layout reading that comes next.

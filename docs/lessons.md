@@ -628,3 +628,16 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   James does not make James a common word.
 - **Benchmark in interleaved pairs and say the load.** The same declared join cost +1.3 s on a quiet machine and
   looked like +10 s or nothing under a load of 4.5; only pairs run back to back, with the load noted, said which.
+
+## Reviewer 07:45 round (third worker): order criterion, kind after the topic, single-letter names
+
+- **A role's filler class is a join, not a free capture.** The criterion "by distance" became readable only when it
+  was a word of an attribute that can order things (holds a number, a size or a scale step); as free words it took
+  "by the window" from the place frames. Words for attribute values (`core.word of=k.attributes.attribute.name`) let
+  the lexicon be derived, and `k.attributes.found` then names where the values are (the planets by distance are
+  k.space's order, which a test checks).
+- **A word that is both a kind of diagram and a drawable thing needs the other world to decide.** "In a tree" is a
+  bird's place, a layout and a diagram. Deriving "kinds that name no drawing" from k.objects, and asking a topic head
+  joined to a k.diagrams fill ("the parts of") before taking the diagram reading, kept "draw a bird in a tree" a bird.
+- **Case carries meaning a lower-casing tokenizer throws away.** A capital single letter after connect/from/to is a
+  name; the reader keeps a name mask beside the tokens instead of changing the tokens, so every frame stays as it was.
