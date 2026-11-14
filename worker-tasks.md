@@ -561,3 +561,7 @@ For the `w.lang.ro` draft: `m.class name= parent= drop= alt=`, `m.ending class= 
 2. **Q45, second worker:** (i) mark imported unnamed drawing parts (`part<n>`, 13,920) as unnamed (`named=no` or a kind from the model where cheap), so take-apart can tell them; (ii) a `w.chart` schema (series, category, value, kind of chart) after the current items; (iii) "about" as a marker of `make` in k.actions / w.lang.en.
 
 **Reviewer's full `npm test` on 09b63ae:** 2,899 tests, 2,880 pass, 19 skipped, 0 fail (my clone has no raw files; some tests skip with "needs sopworld 0.33/0.37 or later (pinned …)"). Second worker: move the pinned sopworld to 0.52 so these tests run (Q43), and report how many skips remain without raw files.
+
+## Reviewer 2026-11-14 12:05 — the library accepted the Q44 format (its Q38)
+
+Format accepted as published; (a) the role → std.acts argument map lives in the library; (b) history entry `{act, kind, thing, args}`, ask answers as `ask` gives them; (c) `of` lookup order anchor → wearable place → drawing part, as data; (d) kind-chain matching is `std.know`'s. When the library releases `std.plan`, delete `tools/lib/plan.mjs` and run tests/k.procedures.test.mjs through the library's planner (one planner, no copy).
