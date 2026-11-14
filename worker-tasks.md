@@ -610,3 +610,7 @@ The owner: compositions must not use plain randomness; they follow procedures of
 ## Reviewer 2026-11-14 15:15 — for the library's composition mechanisms (provisional): `w.document`, word register, typical ranges
 
 The library lists what it expects to need for compose/summarize (its block 15:15). From here, with the 15:00 round: (1) **`w.document`**, a world schema for a document: title, chapters, sections, paragraphs, slides, sentences with a source wire each; (2) **register of words** in w.lang.en / k.words where sourced and cheap (a frequency band or a formal/informal mark), for lexical choice by genre; (3) **typical ranges** of numeric attributes in k.attributes (so "a number far from the usual" can be computed), at least for the kinds the samples hit. Write them as integration cases for the library (tests it can read in place).
+
+## Reviewer 2026-11-14 15:30 — Q48 answered: joins are checked when their target is there, not when the fact is told
+
+(b) plus a full check on request: a `by=` join stays open while its target's facts are not loaded (lazy loading makes order arbitrary), is checked when a target fact with that key arrives, and `world.check()` reports every join still open (a report, not a refusal). Forwarded to the library. When it releases, declare the 10 `drawing` joins and keep the shared-modules test as a second check.
