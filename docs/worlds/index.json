@@ -1,5 +1,5 @@
 {
- "version": "c6c81540d94f",
+ "version": "edb21ee913fa",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -37179,6 +37179,122 @@
    "warnings": []
   },
   {
+   "id": "k.story",
+   "version": "1",
+   "schema": "k.story/schema.sop",
+   "exports": [
+    "k.story.constraint",
+    "k.story.element",
+    "k.story.goal",
+    "k.story.obstacle",
+    "k.story.source"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.story/shards/goals-obstacles",
+     "path": "k.story/shards/goals-obstacles.sop",
+     "wires": 20,
+     "bytes": 7931,
+     "keys": [
+      "dragon",
+      "fence",
+      "find a thing",
+      "mountain",
+      "reach a place",
+      "rescue someone",
+      "river",
+      "sea",
+      "tree",
+      "visit someone",
+      "wall"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.story/shards/sources",
+     "path": "k.story/shards/sources.sop",
+     "wires": 12,
+     "bytes": 5808,
+     "keys": [
+      "aristotle",
+      "chekhov1889",
+      "field1979",
+      "freytag1863",
+      "labovwaletzky1967",
+      "mandlerjohnson1977",
+      "olrik1909",
+      "propp1968",
+      "rumelhart1975",
+      "steinglenn1979",
+      "thorndyke1977",
+      "trabasso1985"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.story/shards/structure",
+     "path": "k.story/shards/structure.sop",
+     "wires": 32,
+     "bytes": 12905,
+     "keys": [
+      "attempt",
+      "attempts fail",
+      "ending",
+      "ending reaches the goal",
+      "goal",
+      "helper",
+      "helper belongs in the setting",
+      "helper comes before the turning point",
+      "helper differs from the protagonist",
+      "helper has the means",
+      "means",
+      "means comes before the resolution",
+      "means overcomes the obstacle",
+      "obstacle",
+      "obstacle blocks the goal",
+      "protagonist",
+      "protagonist belongs in the setting",
+      "protagonist can make the attempts",
+      "protagonist can overcome with the means",
+      "protagonist can reach the goal",
+      "protagonist lacks the means",
+      "resolution",
+      "resolution uses the means",
+      "setting",
+      "setting has the obstacle",
+      "target",
+      "target differs from the characters",
+      "target differs from the setting",
+      "target fits the goal",
+      "target in the setting",
+      "turning point",
+      "turning point gives the means"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
    "id": "k.time",
    "version": "4",
    "schema": "k.time/schema.sop",
@@ -37496,8 +37612,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 222,
-     "bytes": 31247,
+     "wires": 226,
+     "bytes": 31820,
      "keys": [
       "after",
       "age_years_about",
@@ -37545,6 +37661,7 @@
       "duration",
       "east",
       "edges",
+      "element",
       "elevation",
       "ellipsis.lead",
       "ellipsis.param",
@@ -37590,6 +37707,7 @@
       "k.scenes",
       "k.shapes",
       "k.space",
+      "k.story",
       "k.time",
       "k.units",
       "k.values",

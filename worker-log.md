@@ -3922,3 +3922,30 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   outlines per genre all satisfy the structure (parts in order within counts, every required place made, sentences
   within counts); distinct outlines of 1,000: scientific article 1,000, presentation 999, essay 981, story 589,
   report 687. Reference reading `outline(facts, genre, rnd)` (twenty lines).
+
+## 2026-11-14 — third worker: k.story, how a story is built (blocks "15:00" item 2, "17:05")
+
+- **World** (`docs/worlds/k.story`, generator `tools/story-core.mjs`, `hand-core 1`, CC0): schema (5 types: source,
+  element, goal, obstacle, constraint) and three shards: `sources` (12 works), `structure` (11 elements in the order
+  told, each with its part and move of the story genre of k.genres, the types that fill it, its Propp function, story
+  grammar node and place in Freytag's arc; 21 constraints, 18 hard and 3 soft), `goals-obstacles` (4 goals as acts of
+  k.actions; 16 obstacles: a k.scenes thing as it blocks one goal, how, the acts that get past it, their tools as the
+  means, the acts tried in vain). 64 shard wires, 27 kB; 0 warnings.
+- **Nothing invented but the structure:** characters are k.people kinds and roles and k.animals; places k.scenes
+  scenes; obstacles k.scenes things with k.objects drawings; means tools of k.actions acts with drawings; helpers the
+  roles whose holds/uses have the means (sailor, cowboy, firefighter, builder, carpenter, knight, king, prince,
+  pirate). Constraints: the protagonist can reach the goal (who of its act up the chain of kinds), the target fits
+  the goal, the obstacle blocks the goal, the setting has it, the protagonist lacks the means, the helper has it,
+  1-3 attempts that fail, the helper before the turning point, the turning point gives the means, the resolution
+  uses it (Chekhov), the ending reaches the goal; soft: protagonist, helper and target belong in the setting.
+- **Sources:** Propp (1928/1968), Rumelhart (1975), Mandler and Johnson (1977), Stein and Glenn (1979), Thorndyke
+  (1977), Trabasso and van den Broek (1985), Freytag (1863), Field (1979), Labov and Waletzky (1967), Olrik (1909),
+  Chekhov (1889), Aristotle. Own choices marked `own`.
+- **Integration case** (`tests/k.story.test.mjs`, 5 tests): every reference resolves; two hand-traced plans hold every
+  hard constraint (a girl, the castle's dragon, the knight's sword; a boy, the river, the sailor's sailboat), broken
+  plans are refused by the constraint they break; **642,752 plans** over the catalog hold every hard constraint;
+  1,000 sampled (seeded) and checked again from the facts: 0 broken; uniform samples hold each soft constraint in
+  only 1-2 of 100 (a composer weights). Reference reading: `storyKb`, `storyPlans`, `checkPlan`.
+- **Corpus check** (`tests/k.story.corpus.test.mjs`, TinyStories 1,000 stories, CDLA-Sharing-1.0, read in place from
+  PSys2's data/external, not copied): setting before complication in 571/605 stories, complication before resolution
+  in 130/139 (94% each).

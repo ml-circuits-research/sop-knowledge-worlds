@@ -99,6 +99,14 @@ Block "15:00" item 1 (third worker): `k.genres`, document types as structure, mo
 rhetorical moves, and 5 registers (person, tense, voice, sentence length, vocabulary band, what each allows), with 24
 published works in `docs/worlds/k.genres/WORLD.md`; read by the library's `std.compose`.
 
+Block "15:00" item 2 (third worker): `k.story`, how a story is built: 11 elements in the order told (setting,
+protagonist, goal, target, obstacle, attempts, helper, means, turning point, resolution, ending) joined to Propp's
+functions, the story grammars and Freytag's arc; 4 kinds of goals (acts of k.actions) and 16 obstacles (things of
+k.scenes as they block a goal, the acts that get past them with their tools, the acts tried in vain); 21 constraints
+(18 hard, 3 soft) between the elements, from 12 published works (`docs/worlds/k.story/WORLD.md`). Characters, places
+and things are names of k.people, k.animals, k.scenes and k.objects; 642,752 story plans over the catalog hold every
+hard constraint.
+
 Block "13:00" (first worker): `w.lang.ro`, a first draft of Romanian as a language world in the library's `std.morph`
 notation: 44 paradigm classes with inheritance, 341 cells, irregulars, folds, clitics, closed classes and three reply
 templates (936 wires), with an external dictionary of 255 lemmas (`dictionary/<letter>.tsv`, 14.8 kB) joined to k.words

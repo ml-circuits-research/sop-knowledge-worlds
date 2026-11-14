@@ -373,6 +373,7 @@
   "k.procedures/schema.sop",
   "k.procedures/shards/tasks",
   "k.space/schema.sop",
+  "k.story/schema.sop",
   "k.values/schema.sop",
   "k.wearables/schema.sop",
   "k.words/shards/ab",
@@ -662,6 +663,7 @@
  "act": [
   "k.actions/schema.sop",
   "k.procedures/schema.sop",
+  "k.story/schema.sop",
   "k.words/shards/ac"
  ],
  "acting": [
@@ -1453,6 +1455,7 @@
   "k.words/shards/ai"
  ],
  "aim": [
+  "k.story/schema.sop",
   "k.words/shards/ai"
  ],
  "ain": [
@@ -3389,6 +3392,7 @@
  "arc": [
   "k.attributes/shards/same-a",
   "k.shapes/shards/shapes",
+  "k.story/schema.sop",
   "k.values/shards/shapes",
   "k.words/shards/ar"
  ],
@@ -3581,6 +3585,7 @@
  ],
  "aristotle": [
   "k.genres/shards/sources",
+  "k.story/shards/sources",
   "k.words/shards/ar"
  ],
  "arithmetic": [
@@ -4385,7 +4390,11 @@
  "attempt": [
   "k.genres/shards/moves",
   "k.genres/shards/story",
+  "k.story/shards/structure",
   "k.words/shards/at"
+ ],
+ "attempts fail": [
+  "k.story/shards/structure"
  ],
  "attend": [
   "k.words/shards/at"
@@ -9060,6 +9069,9 @@
  ],
  "blocking": [
   "k.words/shards/bl"
+ ],
+ "blocks": [
+  "k.story/schema.sop"
  ],
  "bloemfontein": [
   "k.geo/shards/africa"
@@ -15954,6 +15966,9 @@
  "chefs": [
   "k.people/shards/roles-jobs"
  ],
+ "chekhov1889": [
+  "k.story/shards/sources"
+ ],
  "chelyabinsk": [
   "k.geo/shards/psys2-cities-europe"
  ],
@@ -17110,7 +17125,8 @@
  ],
  "cite": [
   "k.genres/schema.sop",
-  "k.interest/schema.sop"
+  "k.interest/schema.sop",
+  "k.story/schema.sop"
  ],
  "cities": [
   "k.geo/schema.sop",
@@ -19755,6 +19771,12 @@
  ],
  "constitutional": [
   "k.words/shards/co-2"
+ ],
+ "constraint": [
+  "k.story/schema.sop"
+ ],
+ "constraints": [
+  "k.story/schema.sop"
  ],
  "construct": [
   "k.actions/shards/actions-make-change",
@@ -24645,6 +24667,7 @@
   "k.words/shards/di"
  ],
  "difficulty": [
+  "k.story/schema.sop",
   "k.words/shards/di"
  ],
  "dig": [
@@ -25668,7 +25691,8 @@
  ],
  "doi": [
   "k.genres/schema.sop",
-  "k.interest/schema.sop"
+  "k.interest/schema.sop",
+  "k.story/schema.sop"
  ],
  "doi inthanon": [
   "k.geo/shards/asia"
@@ -26300,6 +26324,7 @@
   "k.objects/shards/noto-animal-reptile-01",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-d",
+  "k.story/shards/goals-obstacles",
   "k.words/shards/dr"
  ],
  "dragon face": [
@@ -28150,7 +28175,12 @@
   "k.objects/shards/noto-plant-flower-01"
  ],
  "element": [
+  "k.story/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/el"
+ ],
+ "element of a story": [
+  "k.story/schema.sop"
  ],
  "element_1": [
   "k.objects/shards/things-3"
@@ -28594,8 +28624,12 @@
  ],
  "ending": [
   "k.genres/shards/story",
+  "k.story/shards/structure",
   "k.units/shards/measures",
   "k.words/shards/en"
+ ],
+ "ending reaches the goal": [
+  "k.story/shards/structure"
  ],
  "endorse": [
   "k.words/shards/en"
@@ -30821,6 +30855,7 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-f",
+  "k.story/shards/goals-obstacles",
   "k.words/shards/fe"
  ],
  "fences": [
@@ -31018,6 +31053,9 @@
   "k.attributes/shards/same-f",
   "k.objects/shards/noto-sport-02",
   "k.scenes/shards/things-f"
+ ],
+ "field1979": [
+  "k.story/shards/sources"
  ],
  "fielding": [
   "k.words/shards/fi"
@@ -31237,7 +31275,8 @@
  ],
  "fills": [
   "k.actions/shards/actions-hands",
-  "k.scenes/schema.sop"
+  "k.scenes/schema.sop",
+  "k.story/schema.sop"
  ],
  "filly": [
   "k.attributes/shards/numbers-a-f",
@@ -31369,6 +31408,9 @@
   "k.scenes/schema.sop",
   "k.words/shards/fi"
  ],
+ "find a thing": [
+  "k.story/shards/goals-obstacles"
+ ],
  "find out": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-ask"
@@ -31380,6 +31422,7 @@
   "k.actions/shards/actions-mind-talk",
   "k.genres/schema.sop",
   "k.interest/schema.sop",
+  "k.story/schema.sop",
   "k.words/shards/fi"
  ],
  "findings": [
@@ -33847,7 +33890,8 @@
   "k.words/shards/fr"
  ],
  "freytag1863": [
-  "k.genres/shards/sources"
+  "k.genres/shards/sources",
+  "k.story/shards/sources"
  ],
  "frg": [
   "k.geo/shards/aliases"
@@ -36127,6 +36171,8 @@
   "k.procedures/schema.sop",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-g",
+  "k.story/schema.sop",
+  "k.story/shards/structure",
   "k.units/shards/measures",
   "k.words/shards/go"
  ],
@@ -36140,7 +36186,8 @@
   "k.words/shards/go"
  ],
  "goals": [
-  "k.procedures/schema.sop"
+  "k.procedures/schema.sop",
+  "k.story/schema.sop"
  ],
  "goat": [
   "k.animals/shards/mammals",
@@ -36672,6 +36719,7 @@
   "k.words/shards/gr"
  ],
  "grammar": [
+  "k.story/schema.sop",
   "k.words/shards/gr",
   "w.lang.en/schema.sop"
  ],
@@ -40078,7 +40126,20 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "helper": [
+  "k.story/shards/structure",
   "k.words/shards/he"
+ ],
+ "helper belongs in the setting": [
+  "k.story/shards/structure"
+ ],
+ "helper comes before the turning point": [
+  "k.story/shards/structure"
+ ],
+ "helper differs from the protagonist": [
+  "k.story/shards/structure"
+ ],
+ "helper has the means": [
+  "k.story/shards/structure"
  ],
  "helping": [
   "k.actions/shards/actions-body-social-nature",
@@ -41869,6 +41930,7 @@
   "k.geo/shards/europe"
  ],
  "how": [
+  "k.story/schema.sop",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/ellipsis"
  ],
@@ -42984,6 +43046,9 @@
  ],
  "in the snow": [
   "k.scenes/shards/scenes-other"
+ ],
+ "in the way": [
+  "k.story/schema.sop"
  ],
  "in turn": [
   "k.values/shards/sets"
@@ -45849,6 +45914,9 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes"
  ],
+ "k.story": [
+  "k.units/shards/measures"
+ ],
  "k.time": [
   "k.units/shards/measures"
  ],
@@ -47836,7 +47904,8 @@
   "k.interest/shards/sources"
  ],
  "labovwaletzky1967": [
-  "k.genres/shards/sources"
+  "k.genres/shards/sources",
+  "k.story/shards/sources"
  ],
  "labrador sea": [
   "k.geo/shards/seas"
@@ -53509,7 +53578,8 @@
   "k.words/shards/ma"
  ],
  "mandlerjohnson1977": [
-  "k.genres/shards/sources"
+  "k.genres/shards/sources",
+  "k.story/shards/sources"
  ],
  "mandrill": [
   "k.animals/shards/mammals",
@@ -54613,6 +54683,7 @@
  "max": [
   "k.genres/schema.sop",
   "k.motion/schema.sop",
+  "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/ma"
  ],
@@ -54784,8 +54855,16 @@
  "means": [
   "k.actions/schema.sop",
   "k.actions/shards/acts",
+  "k.story/schema.sop",
+  "k.story/shards/structure",
   "k.words/schema.sop",
   "k.words/shards/me"
+ ],
+ "means comes before the resolution": [
+  "k.story/shards/structure"
+ ],
+ "means overcomes the obstacle": [
+  "k.story/shards/structure"
  ],
  "meant": [
   "k.words/shards/me"
@@ -56275,6 +56354,7 @@
   "k.genres/schema.sop",
   "k.geo/shards/asia",
   "k.motion/schema.sop",
+  "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/mi"
  ],
@@ -58464,6 +58544,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-m",
   "k.shapes/shards/shapes",
+  "k.story/shards/goals-obstacles",
   "k.units/shards/measures",
   "k.words/shards/mo"
  ],
@@ -58687,6 +58768,7 @@
   "k.genres/schema.sop",
   "k.motion/schema.sop",
   "k.objects/shards/noto-transport-ground-04",
+  "k.story/schema.sop",
   "k.words/shards/mo"
  ],
  "moved": [
@@ -59322,6 +59404,7 @@
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/tasks",
+  "k.story/schema.sop",
   "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
@@ -61982,7 +62065,15 @@
   "k.words/shards/ob"
  ],
  "obstacle": [
+  "k.story/schema.sop",
+  "k.story/shards/structure",
   "k.words/shards/ob"
+ ],
+ "obstacle blocks the goal": [
+  "k.story/shards/structure"
+ ],
+ "obstacles": [
+  "k.story/schema.sop"
  ],
  "obstinate": [
   "k.words/shards/ob"
@@ -62472,6 +62563,9 @@
  ],
  "oloy": [
   "k.geo/shards/europe"
+ ],
+ "olrik1909": [
+  "k.story/shards/sources"
  ],
  "olt": [
   "k.geo/shards/europe"
@@ -63329,6 +63423,7 @@
  "other": [
   "k.actions/shards/acts",
   "k.procedures/schema.sop",
+  "k.story/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/ot",
   "w.lang.en/shards/grammar"
@@ -63630,6 +63725,9 @@
  "overcome": [
   "k.words/shards/ov"
  ],
+ "overcome by": [
+  "k.story/schema.sop"
+ ],
  "overdid": [
   "k.words/shards/ov"
  ],
@@ -63753,6 +63851,7 @@
  "own": [
   "k.genres/schema.sop",
   "k.interest/schema.sop",
+  "k.story/schema.sop",
   "k.words/shards/ow"
  ],
  "owner": [
@@ -64862,6 +64961,7 @@
   "k.objects/schema.sop",
   "k.parts/schema.sop",
   "k.procedures/shards/from-knowledge",
+  "k.story/schema.sop",
   "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
@@ -68044,6 +68144,9 @@
   "w.map/schema.sop",
   "w.seating/schema.sop"
  ],
+ "place kind": [
+  "k.story/schema.sop"
+ ],
  "place setting": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
@@ -68517,6 +68620,7 @@
   "k.geo/shards/psys2-cities-europe"
  ],
  "plot": [
+  "k.story/schema.sop",
   "k.words/shards/pl"
  ],
  "plotted": [
@@ -70378,6 +70482,7 @@
   "k.objects/shards/noto-tool-03"
  ],
  "problem": [
+  "k.story/schema.sop",
   "k.words/shards/pr"
  ],
  "problems": [
@@ -70608,6 +70713,12 @@
  "proposition": [
   "k.words/shards/pr"
  ],
+ "propp": [
+  "k.story/schema.sop"
+ ],
+ "propp1968": [
+  "k.story/shards/sources"
+ ],
  "propped": [
   "k.words/shards/pr"
  ],
@@ -70646,6 +70757,24 @@
  ],
  "prostitution": [
   "k.words/shards/pr"
+ ],
+ "protagonist": [
+  "k.story/shards/structure"
+ ],
+ "protagonist belongs in the setting": [
+  "k.story/shards/structure"
+ ],
+ "protagonist can make the attempts": [
+  "k.story/shards/structure"
+ ],
+ "protagonist can overcome with the means": [
+  "k.story/shards/structure"
+ ],
+ "protagonist can reach the goal": [
+  "k.story/shards/structure"
+ ],
+ "protagonist lacks the means": [
+  "k.story/shards/structure"
  ],
  "protect": [
   "k.objects/shards/noto-other-object-01",
@@ -71619,6 +71748,7 @@
   "k.actions/shards/verbs-ask"
  ],
  "quest": [
+  "k.story/schema.sop",
   "k.words/shards/qu"
  ],
  "question": [
@@ -72571,6 +72701,9 @@
  "reach": [
   "k.words/shards/re"
  ],
+ "reach a place": [
+  "k.story/shards/goals-obstacles"
+ ],
  "reaching": [
   "k.words/shards/re"
  ],
@@ -73150,11 +73283,13 @@
  "reference": [
   "k.genres/schema.sop",
   "k.interest/schema.sop",
+  "k.story/schema.sop",
   "k.words/shards/re"
  ],
  "references": [
   "k.genres/schema.sop",
-  "k.interest/schema.sop"
+  "k.interest/schema.sop",
+  "k.story/schema.sop"
  ],
  "referred": [
   "k.words/shards/re"
@@ -73393,6 +73528,7 @@
  "relation": [
   "k.layouts/schema.sop",
   "k.people/shards/kinds",
+  "k.story/schema.sop",
   "k.words/shards/re"
  ],
  "relational": [
@@ -74064,6 +74200,9 @@
   "k.objects/shards/noto-transport-water-01",
   "k.words/shards/re"
  ],
+ "rescue someone": [
+  "k.story/shards/goals-obstacles"
+ ],
  "rescue worker’s helmet": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-r",
@@ -74153,7 +74292,11 @@
  ],
  "resolution": [
   "k.genres/shards/story",
+  "k.story/shards/structure",
   "k.words/shards/re"
+ ],
+ "resolution uses the means": [
+  "k.story/shards/structure"
  ],
  "resolve": [
   "k.genres/shards/moves",
@@ -75802,6 +75945,7 @@
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-r",
   "k.shapes/shards/shapes",
+  "k.story/shards/goals-obstacles",
   "k.units/shards/measures",
   "k.words/shards/ri"
  ],
@@ -76887,6 +77031,7 @@
  ],
  "rule": [
   "k.objects/shards/noto-office-03",
+  "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/ru"
  ],
@@ -76897,6 +77042,9 @@
   "k.objects/shards/noto-office-03",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/ru"
+ ],
+ "rules": [
+  "k.story/schema.sop"
  ],
  "ruling": [
   "k.words/shards/ru"
@@ -76918,6 +77066,9 @@
  ],
  "rumbling": [
   "k.words/shards/ru"
+ ],
+ "rumelhart1975": [
+  "k.story/shards/sources"
  ],
  "ruminant": [
   "k.parts/shards/d",
@@ -79268,6 +79419,7 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-s",
+  "k.story/shards/goals-obstacles",
   "k.units/shards/measures",
   "k.words/shards/se"
  ],
@@ -80258,7 +80410,11 @@
   "k.objects/shards/things-3",
   "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
+  "k.story/shards/structure",
   "k.words/shards/se"
+ ],
+ "setting has the obstacle": [
+  "k.story/shards/structure"
  ],
  "settle": [
   "k.actions/shards/actions-body-social-nature",
@@ -84361,12 +84517,14 @@
   "k.actions/shards/acts",
   "k.genres/schema.sop",
   "k.interest/schema.sop",
+  "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/so"
  ],
  "sources": [
   "k.genres/schema.sop",
-  "k.interest/schema.sop"
+  "k.interest/schema.sop",
+  "k.story/schema.sop"
  ],
  "sous": [
   "k.geo/shards/africa"
@@ -86475,7 +86633,8 @@
   "k.words/shards/st"
  ],
  "steinglenn1979": [
-  "k.genres/shards/sources"
+  "k.genres/shards/sources",
+  "k.story/shards/sources"
  ],
  "stella": [
   "k.words/shards/st"
@@ -86989,6 +87148,15 @@
   "k.genres/shards/story",
   "k.words/shards/st"
  ],
+ "story element": [
+  "k.story/schema.sop"
+ ],
+ "story elements": [
+  "k.story/schema.sop"
+ ],
+ "story structure": [
+  "k.story/schema.sop"
+ ],
  "stout": [
   "k.words/shards/st"
  ],
@@ -87239,6 +87407,7 @@
   "k.scenes/shards/scenes-town"
  ],
  "strength": [
+  "k.story/schema.sop",
   "k.words/shards/st"
  ],
  "strengthen": [
@@ -89928,7 +90097,21 @@
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-game-01",
   "k.procedures/shards/from-knowledge",
+  "k.story/schema.sop",
+  "k.story/shards/structure",
   "k.words/shards/ta"
+ ],
+ "target differs from the characters": [
+  "k.story/shards/structure"
+ ],
+ "target differs from the setting": [
+  "k.story/shards/structure"
+ ],
+ "target fits the goal": [
+  "k.story/shards/structure"
+ ],
+ "target in the setting": [
+  "k.story/shards/structure"
  ],
  "tarim": [
   "k.geo/shards/asia"
@@ -91454,6 +91637,9 @@
  ],
  "thorn": [
   "k.words/shards/th"
+ ],
+ "thorndyke1977": [
+  "k.story/shards/sources"
  ],
  "thornton": [
   "k.words/shards/th"
@@ -93561,6 +93747,9 @@
   "k.objects/shards/mulberry-leisure-toys-03",
   "k.objects/shards/mulberry-leisure-toys-04"
  ],
+ "trabasso1985": [
+  "k.story/shards/sources"
+ ],
  "trace": [
   "k.words/shards/tr"
  ],
@@ -94091,6 +94280,7 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-t",
   "k.shapes/shards/shapes",
+  "k.story/shards/goals-obstacles",
   "k.words/shards/tr"
  ],
  "tree frog": [
@@ -94227,6 +94417,9 @@
  ],
  "tried": [
   "k.words/shards/tr"
+ ],
+ "tried by": [
+  "k.story/schema.sop"
  ],
  "trifle": [
   "k.attributes/shards/drawn-hand",
@@ -95018,7 +95211,11 @@
  ],
  "turning point": [
   "k.genres/shards/moves",
-  "k.genres/shards/story"
+  "k.genres/shards/story",
+  "k.story/shards/structure"
+ ],
+ "turning point gives the means": [
+  "k.story/shards/structure"
  ],
  "turnip": [
   "k.attributes/shards/drawn-mulberry",
@@ -97628,6 +97825,9 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/vi"
  ],
+ "visit someone": [
+  "k.story/shards/goals-obstacles"
+ ],
  "visitation": [
   "k.words/shards/vi"
  ],
@@ -98194,6 +98394,7 @@
   "k.parts/shards/w",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-w",
+  "k.story/shards/goals-obstacles",
   "k.words/shards/wa"
  ],
  "wall tile": [
@@ -101599,6 +101800,7 @@
   "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.space/schema.sop",
+  "k.story/schema.sop",
   "k.time/shards/calendar",
   "k.time/shards/derived",
   "k.units/shards/core",
