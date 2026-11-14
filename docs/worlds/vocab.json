@@ -432,6 +432,7 @@
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-genres",
   "k.kinds/shards/relations-interest",
+  "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-procedures",
@@ -16160,7 +16161,9 @@
   "k.actions/shards/verbs-change",
   "k.attributes/schema.sop",
   "k.attributes/shards/narration",
+  "k.kinds/schema.sop",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-procedures",
   "k.procedures/schema.sop",
   "k.words/shards/by",
@@ -32484,6 +32487,9 @@
  "distinct": [
   "k.values/shards/sets"
  ],
+ "distinct_positions": [
+  "k.kinds/shards/structures"
+ ],
  "distinction": [
   "k.words/shards/di",
   "k.words/shards/frequency-d"
@@ -36796,6 +36802,9 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-time",
   "k.units/shards/measures"
+ ],
+ "ends_after_start": [
+  "k.kinds/shards/structures"
  ],
  "ends_without_point": [
   "k.interest/shards/features"
@@ -42909,13 +42918,11 @@
   "k.actions/shards/actions-mind-talk",
   "k.attributes/shards/narration",
   "k.commonsense/schema.sop",
+  "k.kinds/schema.sop",
   "k.scenes/schema.sop",
   "k.words/shards/fi",
   "k.words/shards/fo",
   "k.words/shards/frequency-f"
- ],
- "found by": [
-  "k.kinds/schema.sop"
  ],
  "foundation": [
   "k.words/shards/fo",
@@ -58033,9 +58040,6 @@
   "k.words/shards/frequency-j",
   "k.words/shards/jo"
  ],
- "joined by": [
-  "k.kinds/schema.sop"
- ],
  "joined_to": [
   "k.layouts/shards/layouts"
  ],
@@ -58955,6 +58959,10 @@
  ],
  "k.kinds.cast": [
   "k.attributes/shards/narration"
+ ],
+ "k.kinds.constraint": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-kinds"
  ],
  "k.kinds.form": [
   "k.attributes/shards/narration"
@@ -60531,6 +60539,7 @@
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-food",
   "k.kinds/shards/relations-geo",
+  "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-objects",
@@ -68997,7 +69006,9 @@
  ],
  "many": [
   "k.attributes/schema.sop",
+  "k.attributes/shards/narration",
   "k.body/schema.sop",
+  "k.kinds/schema.sop",
   "k.shapes/schema.sop",
   "k.time/schema.sop",
   "k.values/shards/scales",
@@ -77697,6 +77708,9 @@
  "no_point_at_end": [
   "k.interest/shards/features"
  ],
+ "no_self_link": [
+  "k.kinds/shards/structures"
+ ],
  "noah": [
   "k.words/shards/frequency-n",
   "k.words/shards/no"
@@ -78980,7 +78994,7 @@
   "k.words/shards/frequency-o",
   "k.words/shards/ob"
  ],
- "object key": [
+ "object by": [
   "k.kinds/schema.sop"
  ],
  "object sense": [
@@ -79336,6 +79350,7 @@
   "k.actions/shards/verbs-change",
   "k.attributes/shards/narration",
   "k.faces/schema.sop",
+  "k.kinds/schema.sop",
   "k.kinds/shards/relations-attributes",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-motion",
@@ -79801,8 +79816,10 @@
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
   "k.commonsense/schema.sop",
+  "k.kinds/schema.sop",
   "k.kinds/shards/relations-attributes",
   "k.kinds/shards/relations-commonsense",
+  "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-objects",
@@ -79972,6 +79989,9 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces",
   "k.motion/shards/rules"
+ ],
+ "one_of_each_kind": [
+  "k.kinds/shards/structures"
  ],
  "onega": [
   "k.geo/shards/europe"
@@ -93463,6 +93483,10 @@
  "referring": [
   "k.words/shards/re"
  ],
+ "refers": [
+  "k.attributes/shards/narration",
+  "k.kinds/schema.sop"
+ ],
  "refill": [
   "k.words/shards/frequency-r",
   "k.words/shards/re"
@@ -94554,6 +94578,10 @@
  "require": [
   "k.words/shards/frequency-r",
   "k.words/shards/re"
+ ],
+ "required": [
+  "k.attributes/shards/narration",
+  "k.kinds/schema.sop"
  ],
  "requirement": [
   "k.words/shards/frequency-r",
@@ -111269,6 +111297,7 @@
   "k.kinds/schema.sop",
   "k.kinds/shards/group-hand",
   "k.kinds/shards/group-mulberry",
+  "k.kinds/shards/relations-kinds",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-s",
@@ -129026,6 +129055,7 @@
  "within": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-time",
+  "k.kinds/shards/structures",
   "k.time/schema.sop",
   "k.words/shards/frequency-w",
   "k.words/shards/wi"
@@ -129501,9 +129531,11 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/narration",
   "k.attributes/shards/same-w",
+  "k.kinds/schema.sop",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-procedures",
   "k.kinds/shards/relations-units",
   "k.kinds/shards/wordnet-2",

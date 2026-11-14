@@ -116,7 +116,7 @@ drawing is any thing of that name; the senses of `k.objects.object` depend on th
 
 For the library's transfer by analogy: each world schema, and each knowledge world whose things a live world makes
 or reads, says which **structures** it is and which of its types, keys and acts plays each **role** (shard
-`structures`, written by `tools/structures-core.mjs`, 231 wires).
+`structures`, written by `tools/structures-core.mjs`, 237 wires).
 
 | structure | roles (the first two needed) | worlds |
 |---|---|---|
@@ -135,3 +135,13 @@ guest in a seat ~ an event at a time ~ a thing in a slot of a layout; a drawing'
 face's part); the roles one world casts and the other does not are what a transfer may offer (a timeline's event has
 an end, a start and a finish of its timeline; a list has none). Measured in `tests/k.kinds.structures.test.mjs`: 96
 pairs of worlds share a structure, 343 filler pairs aligned, 174 roles offered for transfer.
+
+For the library's `alignWorlds` (its Q61, block 02:00), each `k.kinds.role` also says `refers` (the role it points to:
+a slot to its container, the key `assigned` to the slot, `part_of` to the whole), `of` (for a key role, the role whose
+key it is), `many` (a key role: several values or one, so an item has one slot; a role that is a thing: one thing of
+the role it refers to, else one world, holds several of it) and `required` (the structure needs it). The casts are the
+map from a world's types to roles (the library's `structure_of`). Constraints are facts `k.kinds.constraint structure=
+name= kind=capacity|distinct|order on=<role> about= world= by=`: a container's capacity (w.seating, by its
+std.schema.capacity), an item's slot within its container and an element not ending before it starts (w.timeline,
+by its denies), one part of each kind (w.face, by its deny), distinct positions in a sequence (k.genres, k.procedures,
+k.story) and no link from a node to itself (k.geo), these two held by the facts and checked by the test.

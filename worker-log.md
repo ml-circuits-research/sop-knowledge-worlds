@@ -4607,3 +4607,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Fix of step 1's test: a join declared on a parent type (k.time.ordered) holds for its children's relations.
 - Tests: `npm run test:changed` (build 123 s; 33 files, 376 tests): 374 pass, 1 skipped, 1 fail (the parent-type case
   above), fixed and rerun: k.kinds.joins-report 3 pass.
+
+## 2026-11-15 — third worker: role facts and constraints for k.kinds.structure (block 02:00; the library's Q61)
+
+- `k.kinds.role` gains, for all 39 roles of the 6 structures: `refers` (the role it points to: slot -> container,
+  assigned -> slot, part_of -> whole, element_of -> sequence, from / to -> node, next -> element; 21 roles), `of` (the
+  role whose key a key role is; 27), `many` (a key role: several values or one, so an item has one slot; a role that
+  is a thing: one thing of the role it refers to, else one world, holds several) and `required` (= the structure's
+  `needs`). A key role that refers is single-valued (tested). The 153 casts stay the map from a world's types to roles
+  (the library's proposed `structure_of`); 71 cast keys are keys of the type the world casts to their `of` role.
+- New type `k.kinds.constraint structure= name= kind=capacity|distinct|order on=<role> about= world= by=` (k.kinds
+  version 6, exported): capacity of a container (w.seating, by w.seating.room), within (w.timeline, by its three
+  inside denies), one_of_each_kind (w.face, by w.face.one), ends_after_start (w.timeline, by w.timeline.order.ends),
+  distinct_positions (k.genres, k.procedures, k.story) and no_self_link (k.geo), the last two held by the facts and
+  checked by the test. Not given: a constraint no world holds by a rule or by its facts (one guest per seat is not a
+  rule of w.seating; one value per category not of w.chart).
+- Names: the library wrote `k.kinds.structure.role` / `k.kinds.structure.constraint`; `k.kinds.structure.role` is
+  already the slot `role` of k.kinds.structure, so the keys go on the existing type `k.kinds.role` and the
+  constraint is `k.kinds.constraint` (same keys).
+- Shard structures 237 wires, 43,824 bytes (was 231 / 40,792); relations-kinds and narration gain the new keys
+  (narrate=no); catalog 32 worlds, 1,063 shards, 26,480 words; 0 warnings. WORLD.md says it.
+- Tests: k.kinds.structures 6 / 6 (two new: roles' direction, cardinality and required, the library's examples;
+  constraints' kinds, roles, worlds, rules and the facts that hold them), k.kinds.relations 5, joins-report 3,
+  k.kinds 8, narration 3, shared-modules 5, questions 424, repo 1, validate 5, catalog 8.

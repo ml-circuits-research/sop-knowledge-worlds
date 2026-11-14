@@ -4,12 +4,44 @@
 // "values by category"), and which of its types, keys or acts plays each role of the structure. Two worlds of one
 // structure are aligned role by role, so the library computes an analogy (a guest in a seat ~ an event at a time ~ a
 // thing in a slot of a layout) instead of a hand-made pair.
+// The library's Q61 (its answer to our Q60, block 02:00): per role, the direction (`refers`: the role it points to: a
+// slot to its container, the key `assigned` to the slot), the cardinality (`many`) and `required`, with `of` (the role
+// whose key a key role is); and the constraints of each structure as facts (`k.kinds.constraint`: capacity, distinct,
+// order), each with the worlds where a rule or the facts of the world hold it.
 //   node tools/structures-core.mjs     writes docs/worlds/k.kinds/shards/structures.sop
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, text } from './import/lib.mjs';
 
 const SRC = 'hand-core 1';
+
+// Per role of each structure: `refers` the role it points to, `of` the role whose key it is (a key role), and `many`:
+// for a key role, whether the key holds several values (an item has one slot: assigned many=false); for a role that is
+// a thing, whether one thing of the role it refers to (else one world) holds several of it (a container holds many
+// slots, a slot many items up to the capacity). `required` = the structure needs it (the first two roles).
+export const ROLE_FACTS = {
+  assignment: { item: { refers: 'slot', many: true }, slot: { refers: 'container', many: true }, assigned: { of: 'item', refers: 'slot', many: false },
+    container: { many: true }, slot_of: { of: 'slot', refers: 'container', many: false }, capacity: { of: 'container', many: false }, order: { of: 'slot', many: false }, constraint: { many: true } },
+  'whole with parts': { whole: { many: true }, part: { refers: 'whole', many: true }, part_of: { of: 'part', refers: 'whole', many: false }, part_kind: { of: 'part', many: false },
+    position: { of: 'part', many: false }, size: { of: 'part', many: false }, order: { of: 'part', many: false } },
+  sequence: { element: { refers: 'sequence', many: true }, position: { of: 'element', many: false }, sequence: { many: true }, element_of: { of: 'element', refers: 'sequence', many: false },
+    end: { of: 'element', many: false }, start: { of: 'sequence', many: false }, finish: { of: 'sequence', many: false }, next: { of: 'element', refers: 'element', many: false } },
+  graph: { node: { many: true }, link: { refers: 'node', many: true }, from: { of: 'link', refers: 'node', many: false }, to: { of: 'link', refers: 'node', many: false }, label: { of: 'link', many: false } },
+  placement: { thing: { refers: 'space', many: true }, position: { of: 'thing', many: false }, space: { many: true }, layer: { of: 'thing', many: false }, size: { of: 'thing', many: false } },
+  'values by category': { value: { refers: 'series', many: true }, category: { of: 'value', many: false }, series: { many: true }, value_of: { of: 'value', refers: 'series', many: false },
+    unit: { of: 'series', many: false }, order: { of: 'value', many: false } },
+};
+
+// The constraints: [structure, name, kind, on (a role), about, worlds where it holds, `by` the rules that make it hold
+// there (wire ids of the world schemas; none: the facts hold it, checked by tests/k.kinds.structures.test.mjs)].
+export const CONSTRAINTS = [
+  ['assignment', 'capacity', 'capacity', 'container', 'a container takes at most as many slots or items as its capacity', ['w.seating'], ['w.seating.room']],
+  ['assignment', 'within', 'order', 'assigned', 'the slot an item is given lies inside the bounds of its container', ['w.timeline'], ['w.timeline.inside.before', 'w.timeline.inside.after', 'w.timeline.inside.lasts_after']],
+  ['whole with parts', 'one_of_each_kind', 'distinct', 'part_kind', 'a whole has at most one part of each kind', ['w.face'], ['w.face.one']],
+  ['sequence', 'ends_after_start', 'order', 'end', 'an element does not end before its position', ['w.timeline'], ['w.timeline.order.ends']],
+  ['sequence', 'distinct_positions', 'distinct', 'position', 'no two elements of one sequence share a position', ['k.genres', 'k.procedures', 'k.story'], []],
+  ['graph', 'no_self_link', 'distinct', 'link', 'a link joins a node to another node, never to itself', ['k.geo'], []],
+];
 
 // The structures: name, about, roles in order (the first two are needed: every world of the structure casts them),
 // and what each role is.
@@ -88,12 +120,16 @@ const castId = (world, structure, role, filler) => `k.kinds.cast.${world}.${seg(
 export function structuresShard() {
   const lines = [];
   for (const s of STRUCTURES) lines.push(wire(`k.kinds.structure.${seg(s.name)}`, 'k.kinds.structure', [['name', s.name], ['about', text(s.about)], ...s.roles.map((r) => ['role', r[0]]), ...s.roles.slice(0, 2).map((r) => ['needs', r[0]])], SRC));
-  for (const s of STRUCTURES) for (const [r, about] of s.roles) lines.push(wire(`k.kinds.role.${seg(s.name)}.${r}`, 'k.kinds.role', [['structure', s.name], ['name', r], ['about', text(about)]], SRC));
+  for (const s of STRUCTURES) for (const [i, [r, about]] of s.roles.entries()) {
+    const f = ROLE_FACTS[s.name][r];
+    lines.push(wire(`k.kinds.role.${seg(s.name)}.${r}`, 'k.kinds.role', [['structure', s.name], ['name', r], ['about', text(about)], ['of', f.of], ['refers', f.refers], ['many', String(f.many)], ['required', String(i < 2)]], SRC));
+  }
+  for (const [structure, name, kind, on, about, worlds, by] of CONSTRAINTS) lines.push(wire(`k.kinds.constraint.${seg(structure)}.${name}`, 'k.kinds.constraint', [['structure', structure], ['name', name], ['kind', kind], ['on', on], ['about', text(about)], ...worlds.map((w) => ['world', w]), ...by.map((b) => ['by', b])], SRC));
   for (const [world, structure, about, cast] of FORMS) {
     lines.push(wire(`k.kinds.form.${world}.${seg(structure)}`, 'k.kinds.form', [['world', world], ['structure', structure], ['about', text(about)]], SRC));
     for (const [role, filler, as] of cast) lines.push(wire(castId(world, structure, role, filler), 'k.kinds.cast', [['world', world], ['structure', structure], ['role', role], ['filler', filler], ['as', as]], SRC));
   }
-  return `${header({ id: 'k.kinds/shards/structures', about: `the structures of worlds, for alignment: ${STRUCTURES.length} structures with their roles, and how ${new Set(FORMS.map((f) => f[0])).size} worlds are each (${FORMS.length} forms, ${FORMS.reduce((n, f) => n + f[3].length, 0)} roles cast to their types, keys and acts).`,
+  return `${header({ id: 'k.kinds/shards/structures', about: `the structures of worlds, for alignment: ${STRUCTURES.length} structures with their roles (direction, cardinality, required) and ${CONSTRAINTS.length} constraints, and how ${new Set(FORMS.map((f) => f[0])).size} worlds are each (${FORMS.length} forms, ${FORMS.reduce((n, f) => n + f[3].length, 0)} roles cast to their types, keys and acts).`,
     sources: ['hand-core 1 (hand-written in this repository: tools/structures-core.mjs)'], license: 'CC0-1.0', script: 'tools/structures-core.mjs' })}\n${lines.join('\n')}\n`;
 }
 

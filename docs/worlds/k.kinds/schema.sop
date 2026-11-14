@@ -9,7 +9,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.kinds core.module name=k.kinds version=4 exports=kind exports=parent exports=argument exports=relation exports=structure exports=role exports=form exports=cast core.source="hand-core 1"
+@k.kinds core.module name=k.kinds version=5 exports=kind exports=parent exports=argument exports=relation exports=structure exports=role exports=form exports=cast exports=constraint core.source="hand-core 1"
 
 # A thing or kind with a name: `is_a` the kinds right above it, `kind_of` every kind above it (derived by the rules).
 @k.kinds.kind core.type of=k.kinds.kind shared=true core.source="hand-core 1"
@@ -90,11 +90,31 @@
 @k.kinds.structure.about core.slot of=k.kinds.structure key=about required=true kind=string core.source="hand-core 1"
 @k.kinds.structure.role core.slot of=k.kinds.structure key=role many=true required=true kind=atom core.source="hand-core 1"
 @k.kinds.structure.needs core.slot of=k.kinds.structure key=needs many=true kind=atom core.source="hand-core 1"
-# A role of a structure: `structure`, `name`, `about`.
+# A role of a structure: `structure`, `name`, `about`. For the library's alignWorlds (its Q61): `refers` the role it
+# points to (a slot to its container; the key `assigned` to the slot), `of` the role whose key it is (for a key role),
+# `many` its cardinality (a key role: the key holds several values, so an item has one slot: assigned many=false; a
+# role that is a thing: one thing of the role it refers to, else one world, holds several of it: a container holds
+# many slots), `required` (the structure needs it: every world of the structure casts it).
 @k.kinds.role core.type of=k.kinds.role closed=true core.source="hand-core 1"
 @k.kinds.role.structure core.slot of=k.kinds.role key=structure id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.kinds.role.name core.slot of=k.kinds.role key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.kinds.role.about core.slot of=k.kinds.role key=about required=true kind=string core.source="hand-core 1"
+@k.kinds.role.of core.slot of=k.kinds.role key=of kind=atom core.source="hand-core 1"
+@k.kinds.role.refers core.slot of=k.kinds.role key=refers kind=atom core.source="hand-core 1"
+@k.kinds.role.many core.slot of=k.kinds.role key=many required=true kind=boolean core.source="hand-core 1"
+@k.kinds.role.required core.slot of=k.kinds.role key=required required=true kind=boolean core.source="hand-core 1"
+# A constraint of a structure (the library's Q61): `structure`, `name`, `kind` (capacity: at most so many; distinct: no
+# two the same; order: one comes before another), `on` the role it constrains, `about`; `world` (many) the worlds where
+# it holds and `by` (many) the rules of those worlds that make it hold (wire ids; none: the facts hold it, checked by
+# tests/k.kinds.structures.test.mjs).
+@k.kinds.constraint core.type of=k.kinds.constraint closed=true core.source="hand-core 1"
+@k.kinds.constraint.structure core.slot of=k.kinds.constraint key=structure id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.constraint.name core.slot of=k.kinds.constraint key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.constraint.kind core.slot of=k.kinds.constraint key=kind required=true enum=capacity enum=distinct enum=order core.source="hand-core 1"
+@k.kinds.constraint.on core.slot of=k.kinds.constraint key=on required=true kind=atom core.source="hand-core 1"
+@k.kinds.constraint.about core.slot of=k.kinds.constraint key=about required=true kind=string core.source="hand-core 1"
+@k.kinds.constraint.world core.slot of=k.kinds.constraint key=world many=true kind=atom core.source="hand-core 1"
+@k.kinds.constraint.by core.slot of=k.kinds.constraint key=by many=true kind=atom core.source="hand-core 1"
 # A world is a structure (`world`, `structure`, `about`: how); a world may be several (a seating plan is an
 # assignment, a graph of guests and a placement of tables).
 @k.kinds.form core.type of=k.kinds.form closed=true core.source="hand-core 1"
@@ -135,13 +155,23 @@
 @k.kinds.word.key.relation.object_type core.word text="object type" means=k.kinds.relation.object_type core.source="hand-core 1"
 @k.kinds.word.key.relation.object_sense core.word text="object sense" means=k.kinds.relation.object_sense core.source="hand-core 1"
 @k.kinds.word.key.relation.scale core.word text=scale means=k.kinds.relation.scale core.source="hand-core 1"
-@k.kinds.word.key.relation.found core.word text="found by" means=k.kinds.relation.found core.source="hand-core 1"
-@k.kinds.word.key.relation.object_by core.word text="object key" text="joined by" means=k.kinds.relation.object_by core.source="hand-core 1"
+@k.kinds.word.key.relation.found core.word text=found means=k.kinds.relation.found core.source="hand-core 1"
+@k.kinds.word.key.relation.object_by core.word text="object by" means=k.kinds.relation.object_by core.source="hand-core 1"
 @k.kinds.word.key.structure.about core.word text=about means=k.kinds.structure.about core.source="hand-core 1"
 @k.kinds.word.key.structure.role core.word text=role means=k.kinds.structure.role core.source="hand-core 1"
 @k.kinds.word.key.structure.needs core.word text=needs means=k.kinds.structure.needs core.source="hand-core 1"
 @k.kinds.word.key.role.name core.word text=name means=k.kinds.role.name core.source="hand-core 1"
 @k.kinds.word.key.role.about core.word text=about means=k.kinds.role.about core.source="hand-core 1"
+@k.kinds.word.key.role.of core.word text=of means=k.kinds.role.of core.source="hand-core 1"
+@k.kinds.word.key.role.refers core.word text=refers means=k.kinds.role.refers core.source="hand-core 1"
+@k.kinds.word.key.role.many core.word text=many means=k.kinds.role.many core.source="hand-core 1"
+@k.kinds.word.key.role.required core.word text=required means=k.kinds.role.required core.source="hand-core 1"
+@k.kinds.word.key.constraint.name core.word text=name means=k.kinds.constraint.name core.source="hand-core 1"
+@k.kinds.word.key.constraint.kind core.word text=kind means=k.kinds.constraint.kind core.source="hand-core 1"
+@k.kinds.word.key.constraint.on core.word text=on means=k.kinds.constraint.on core.source="hand-core 1"
+@k.kinds.word.key.constraint.about core.word text=about means=k.kinds.constraint.about core.source="hand-core 1"
+@k.kinds.word.key.constraint.world core.word text=world means=k.kinds.constraint.world core.source="hand-core 1"
+@k.kinds.word.key.constraint.by core.word text=by means=k.kinds.constraint.by core.source="hand-core 1"
 @k.kinds.word.key.form.structure core.word text=structure means=k.kinds.form.structure core.source="hand-core 1"
 @k.kinds.word.key.form.about core.word text=about means=k.kinds.form.about core.source="hand-core 1"
 @k.kinds.word.key.cast.structure core.word text=structure means=k.kinds.cast.structure core.source="hand-core 1"

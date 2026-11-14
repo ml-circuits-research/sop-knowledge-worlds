@@ -9,7 +9,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
 import { scanSchemas } from '../tools/lib/schemas.mjs';
-import { structuresShard, STRUCTURES, FORMS } from '../tools/structures-core.mjs';
+import { structuresShard, STRUCTURES, FORMS, CONSTRAINTS } from '../tools/structures-core.mjs';
 import { parse } from '../tools/sopworld/sopworld.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -46,6 +46,8 @@ test('the shard is what tools/structures-core.mjs gives, and it loads with k.kin
   const w = fullWorld('k.kinds');
   assert.equal(w.ofType('k.kinds.structure').length, STRUCTURES.length);
   assert.equal(w.ofType('k.kinds.form').length, FORMS.length);
+  assert.equal(w.ofType('k.kinds.constraint').length, CONSTRAINTS.length);
+  assert.ok(w.ofType('k.kinds.role').every((r) => r.attrs.many && r.attrs.required));
 });
 
 test('every world schema has a structure; every form casts the roles its structure needs, and only roles of it', () => {
@@ -101,4 +103,66 @@ test('analogies are computed from the structures: aligned types, and the roles o
   }
   console.log(`structures ${structures.size}; worlds ${new Set(forms.map((f) => one(f, 'world'))).size}; forms ${forms.length}; casts ${casts.length}; world pairs sharing a structure ${pairs}; aligned filler pairs ${aligned}; roles offered for transfer ${offered}`);
   assert.ok(pairs >= 30 && aligned >= pairs);
+});
+
+// The library's Q61 (block 02:00): per role refers / of / many / required, and constraints as facts.
+const roles = facts.filter((w) => w.type === 'k.kinds.role');
+const roleOf = (structure, name) => roles.find((r) => one(r, 'structure') === structure && one(r, 'name') === name);
+const constraints = facts.filter((w) => w.type === 'k.kinds.constraint');
+
+test('Q61: every role says its direction, cardinality and whether it is required; refers and of name roles of its structure', () => {
+  for (const [name, s] of structures) {
+    const rs = all(s, 'role');
+    assert.deepEqual(roles.filter((r) => one(r, 'structure') === name).map((r) => one(r, 'name')), rs, name);
+    for (const r of rs.map((x) => roleOf(name, x))) {
+      assert.ok(['true', 'false'].includes(one(r, 'many')) && ['true', 'false'].includes(one(r, 'required')), `${name}.${one(r, 'name')}`);
+      assert.equal(one(r, 'required') === 'true', all(s, 'needs').includes(one(r, 'name')), `${name}.${one(r, 'name')}: required is needs`);
+      for (const k of ['refers', 'of']) if (one(r, k)) assert.ok(rs.includes(one(r, k)) && one(r, k) !== one(r, 'name') || one(r, 'name') === 'next', `${name}.${one(r, 'name')} ${k}=${one(r, k)}`);
+      // A key role (of=) that refers is single-valued: one thing names one other.
+      if (one(r, 'of') && one(r, 'refers')) assert.equal(one(r, 'many'), 'false', `${name}.${one(r, 'name')}`);
+    }
+    // The things of a structure go up by refers to a top that refers to nothing (no cycle but next, element to element).
+    for (const r of rs) { let x = r, n = 0; while (x && n < 5) { const to = one(roleOf(name, x), 'refers'); if (!to || to === x || one(roleOf(name, x), 'name') === 'next') break; x = to; n += 1; } assert.ok(n < 5, `${name}.${r}: refers cycle`); }
+  }
+  // The library's examples: a slot refers to its container, the key assigned to the slot; an item has one slot.
+  assert.equal(one(roleOf('assignment', 'slot'), 'refers'), 'container');
+  assert.deepEqual(['refers', 'of', 'many'].map((k) => one(roleOf('assignment', 'assigned'), k)), ['slot', 'item', 'false']);
+  assert.equal(one(roleOf('assignment', 'slot'), 'many'), 'true');
+  assert.deepEqual(['refers', 'of'].map((k) => one(roleOf('whole with parts', 'part_of'), k)), ['whole', 'part']);
+  // In the worlds, a key cast to a role with of= is a key of the type cast to that of= role (when the world casts it).
+  let checked = 0;
+  for (const c of casts.filter((x) => one(x, 'as') === 'key')) {
+    const of = one(roleOf(one(c, 'structure'), one(c, 'role')), 'of');
+    const owners = castOf(one(c, 'world'), one(c, 'structure')).filter((x) => one(x, 'role') === of && one(x, 'as') === 'type').map((x) => one(x, 'filler'));
+    if (!of || !owners.length) continue;
+    const f = one(c, 'filler');
+    if (owners.includes(f.slice(0, f.lastIndexOf('.')))) checked += 1;
+  }
+  console.log(`roles ${roles.length}; keys of the type cast to their of= role: ${checked}`);
+  assert.ok(checked >= 40, `${checked}`);
+});
+
+test('Q61: constraints as facts: kind, the role they constrain, the worlds where they hold and the rules that make them hold', () => {
+  assert.deepEqual([...new Set(constraints.map((c) => one(c, 'kind')))].sort(), ['capacity', 'distinct', 'order']);
+  for (const c of constraints) {
+    const s = one(c, 'structure'), on = one(c, 'on');
+    assert.ok(all(structures.get(s), 'role').includes(on), `${one(c, 'name')}: ${on}`);
+    for (const world of all(c, 'world')) {
+      assert.ok(forms.some((f) => one(f, 'world') === world && one(f, 'structure') === s), `${world} is no ${s}`);
+      // The world casts the role it constrains, or the key role whose thing it is.
+      assert.ok(castOf(world, s).some((x) => one(x, 'role') === on), `${world}: ${on} not cast`);
+    }
+    // Each rule named by `by` is a wire of the schema of one of its worlds.
+    for (const by of all(c, 'by')) assert.ok(all(c, 'world').some((w) => parse(readFileSync(join(WORLDS_DIR, w, 'schema.sop'), 'utf8')).some((x) => x.id === by)), by);
+  }
+  // Without a rule, the facts hold it: positions are distinct per sequence; no country neighbours itself.
+  const facts2 = (world, type) => fullWorld(world).ofType(type);
+  for (const [world, type, holder] of [['k.genres', 'k.genres.part', 'genre'], ['k.procedures', 'k.procedures.step', 'method'], ['k.story', 'k.story.element', 'story']]) {
+    const seen = new Set();
+    for (const f of facts2(world, type)) { const k = `${one(f, holder)}|${one(f, 'n')}`; assert.ok(!seen.has(k), `${world}: ${k} twice`); seen.add(k); }
+    assert.ok(seen.size > 5, world);
+  }
+  assert.ok(facts2('k.geo', 'k.geo.country').every((f) => !all(f, 'neighbour').includes(one(f, 'name'))));
+  const by = new Map(constraints.map((c) => [one(c, 'name'), all(c, 'by').length ? 'rule' : 'facts']));
+  console.log(`constraints ${constraints.length}: ${[...by].map(([n, b]) => `${n} (${b})`).join(', ')}`);
 });

@@ -1,5 +1,5 @@
 {
- "version": "0bccdff3161d",
+ "version": "67654ffbbc8f",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4449,8 +4449,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 975,
-     "bytes": 187745,
+     "wires": 986,
+     "bytes": 189999,
      "keys": [
       "a",
       "about",
@@ -4705,6 +4705,7 @@
       "k.interest.source",
       "k.kinds.argument",
       "k.kinds.cast",
+      "k.kinds.constraint",
       "k.kinds.form",
       "k.kinds.kind",
       "k.kinds.parent",
@@ -4814,6 +4815,7 @@
       "low",
       "made_of",
       "manner",
+      "many",
       "marker",
       "material",
       "max",
@@ -4900,6 +4902,7 @@
       "rank",
       "reads",
       "recognition",
+      "refers",
       "region",
       "register",
       "rel",
@@ -4907,6 +4910,7 @@
       "repeat_max",
       "repeat_min",
       "reply",
+      "required",
       "result",
       "rgb",
       "rgb_about",
@@ -19938,11 +19942,12 @@
   },
   {
    "id": "k.kinds",
-   "version": "4",
+   "version": "5",
    "schema": "k.kinds/schema.sop",
    "exports": [
     "k.kinds.argument",
     "k.kinds.cast",
+    "k.kinds.constraint",
     "k.kinds.form",
     "k.kinds.kind",
     "k.kinds.parent",
@@ -28998,21 +29003,28 @@
     {
      "id": "k.kinds/shards/relations-kinds",
      "path": "k.kinds/shards/relations-kinds.sop",
-     "wires": 11,
-     "bytes": 2241,
+     "wires": 18,
+     "bytes": 3428,
      "keys": [
+      "about",
+      "by",
       "derived",
       "dimension",
       "from",
       "group",
       "is_a",
+      "k.kinds.constraint",
       "k.kinds.kind",
       "k.kinds.parent",
       "key",
+      "kind",
       "kind_of",
       "name",
+      "on",
       "sense",
-      "value"
+      "structure",
+      "value",
+      "world"
      ],
      "sources": [
       "hand-core-1"
@@ -29660,8 +29672,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 231,
-     "bytes": 40792,
+     "wires": 237,
+     "bytes": 43824,
      "keys": [
       "assigned",
       "assignment",
@@ -29670,9 +29682,11 @@
       "connect",
       "constraint",
       "container",
+      "distinct_positions",
       "element",
       "element_of",
       "end",
+      "ends_after_start",
       "finish",
       "from",
       "graph",
@@ -29754,7 +29768,9 @@
       "layer",
       "link",
       "next",
+      "no_self_link",
       "node",
+      "one_of_each_kind",
       "order",
       "part",
       "part_kind",
@@ -29837,7 +29853,8 @@
       "w.timeline.timeline.from",
       "w.timeline.timeline.to",
       "whole",
-      "whole with parts"
+      "whole with parts",
+      "within"
      ],
      "sources": [
       "hand-core-1"
