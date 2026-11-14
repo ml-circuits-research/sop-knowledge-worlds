@@ -165,3 +165,10 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   numbers sat under `unsure` for every sense of their name (turkey: bird, food, country). The facts themselves knew
   which they meant (a turkey running 40 km/h); writing `sense=` on the 34 facts of names with several senses, and
   having the join read it, made the join exact without touching the 3,400 names that have one sense.
+- **A wrong boolean is often the wrong column, not wrong rows** (Q33). Natural Earth's `TYPE` made 13 countries wrong
+  in `independent`; its `SOVEREIGNT` agreed with the country list everywhere but for four states of limited
+  recognition. One rule replaced a list of thirteen exceptions, and the rest is the honest residue: a boolean cannot
+  say "disputed", so it is left unsaid and asked about.
+- **Keep a fact in the shard of the licence it comes from.** Putting a second source on a public-domain wire looked
+  harmless, but the catalog then listed the shard under ODbL terms. A wire of the same identity in the list's own
+  shard says the same thing and merges when both are told.

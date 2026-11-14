@@ -1,4 +1,4 @@
-# k.geo/shards/africa-borders: Africa: the neighbours, the area in square kilometres and whether it is landlocked, for 58 countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard africa: the facts of one country merge.
+# k.geo/shards/africa-borders: Africa: the neighbours, the area in square kilometres and whether it is landlocked, for 58 countries and territories, and the capital of those for which Natural Earth marks none or an older one. Tell it with the shard africa: the facts of one country merge.
 # sources: countries 5.1.0 (mledoze/countries, ODbL-1.0)
 # license: ODbL-1.0
 # script: tools/import/geo.mjs
@@ -9,7 +9,8 @@
 @k.geo.borders.BWA k.geo.country name=Botswana neighbour=Namibia neighbour="South Africa" neighbour=Zambia neighbour=Zimbabwe area=582000 landlocked=true core.source="countries 5.1.0"
 @k.geo.borders.IOT k.geo.country name="British Indian Ocean Territory" capital="Diego Garcia" area=60 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.BFA k.geo.country name="Burkina Faso" neighbour=Benin neighbour="Côte d'Ivoire" neighbour=Ghana neighbour=Mali neighbour=Niger neighbour=Togo area=272967 landlocked=true core.source="countries 5.1.0"
-@k.geo.borders.BDI k.geo.country name=Burundi neighbour="Democratic Republic of the Congo" neighbour=Rwanda neighbour=Tanzania area=27834 landlocked=true core.source="countries 5.1.0"
+@k.geo.borders.BDI k.geo.country name=Burundi capital=Gitega neighbour="Democratic Republic of the Congo" neighbour=Rwanda neighbour=Tanzania area=27834 landlocked=true core.source="countries 5.1.0"
+@k.geo.borders.city.BDI.Gitega k.geo.city name=Gitega country=Burundi capital_of=Burundi core.source="countries 5.1.0"
 @k.geo.borders.CPV k.geo.country name="Cabo Verde" area=4033 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.CMR k.geo.country name=Cameroon neighbour="Central African Republic" neighbour=Chad neighbour=Congo neighbour="Equatorial Guinea" neighbour=Gabon neighbour=Nigeria area=475442 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.CAF k.geo.country name="Central African Republic" neighbour=Cameroon neighbour=Chad neighbour=Congo neighbour="Democratic Republic of the Congo" neighbour="South Sudan" neighbour=Sudan area=622984 landlocked=true core.source="countries 5.1.0"

@@ -1,4 +1,4 @@
-# k.geo/shards/oceania-borders: Oceania: the neighbours, the area in square kilometres and whether it is landlocked, for 24 countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard oceania: the facts of one country merge.
+# k.geo/shards/oceania-borders: Oceania: the neighbours, the area in square kilometres and whether it is landlocked, for 24 countries and territories, and the capital of those for which Natural Earth marks none or an older one. Tell it with the shard oceania: the facts of one country merge.
 # sources: countries 5.1.0 (mledoze/countries, ODbL-1.0)
 # license: ODbL-1.0
 # script: tools/import/geo.mjs
@@ -18,7 +18,7 @@
 @k.geo.borders.NIU k.geo.country name=Niue capital=Alofi area=260 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.NFK k.geo.country name="Norfolk Island" capital=Kingston area=36 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.MNP k.geo.country name="Northern Mariana Islands" capital=Saipan area=464 landlocked=false core.source="countries 5.1.0"
-@k.geo.borders.PLW k.geo.country name=Palau area=459 landlocked=false core.source="countries 5.1.0"
+@k.geo.borders.PLW k.geo.country name=Palau capital=Ngerulmud area=459 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.PNG k.geo.country name="Papua New Guinea" neighbour=Indonesia area=462840 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.PCN k.geo.country name="Pitcairn Islands" capital=Adamstown area=47 landlocked=false core.source="countries 5.1.0"
 @k.geo.borders.WSM k.geo.country name=Samoa area=2842 landlocked=false core.source="countries 5.1.0"

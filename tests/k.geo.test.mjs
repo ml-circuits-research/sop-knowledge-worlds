@@ -20,8 +20,8 @@ test('"capital of X" is answered by lookup for every independent country but thr
     if (one(c, 'independent') !== 'true') continue;
     if (geo.query({ type: 'k.geo.country', where: { name: c.attrs.name[0] }, seek: 'capital' }).status !== 'supported') without.push(one(c, 'name'));
   }
-  // Neither Natural Earth nor the country list names a capital for these.
-  assert.deepEqual(without.sort(), ['Macao', 'Northern Cyprus', 'Åland']);
+  // Q33: Macao, Northern Cyprus and Åland (no capital in either source) are no longer called independent.
+  assert.deepEqual(without.sort(), []);
   assert.equal(geo.query({ type: 'k.geo.country', where: { name: '"South Sudan"' }, seek: 'capital' }).value, 'Juba');
   assert.equal(geo.query({ type: 'k.geo.country', where: { name: 'France' }, seek: 'capital' }).value, 'Paris');
 });
@@ -86,4 +86,24 @@ test('natural questions (Round 9 item 8): of the seeded sample of 100 about geog
   const r = sample('geo');
   assert.equal(r.asked, 100);
   assert.ok(r.found >= 90, `${r.found} of 100`);
+});
+
+test('Q33: capitals of today (Gitega, Astana, Ngerulmud), independence by sovereign, Cyprus counted in Europe politically', () => {
+  const ask = (name, seek) => geo.query({ type: 'k.geo.country', where: { name }, seek, mode: 'list' }).values?.map(String) ?? [];
+  assert.deepEqual(ask('Burundi', 'capital'), ['Gitega']);
+  assert.deepEqual(ask('Kazakhstan', 'capital'), ['Astana']);
+  assert.deepEqual(ask('Palau', 'capital'), ['Ngerulmud']);
+  const city = (name) => geo.ofType('k.geo.city').find((c) => one(c, 'name') === name);
+  assert.equal(one(city('Gitega'), 'capital_of'), 'Burundi');
+  assert.equal(one(city('Bujumbura'), 'capital_of'), undefined);
+  assert.equal(one(city('Astana'), 'capital_of'), 'Kazakhstan');
+  assert.equal(city('Nur-Sultan'), undefined, 'renamed: Nur-Sultan is a word for Astana');
+  const country = (name) => geo.ofType('k.geo.country').find((c) => one(c, 'name') === name && c.attrs.independent);
+  for (const n of ['Cuba', 'Israel', 'Kazakhstan', 'Cyprus', 'France']) assert.equal(one(country(n), 'independent'), 'true', n);
+  for (const n of ['Aruba', 'Curaçao', '"Sint Maarten"', 'Guernsey', 'Jersey', '"Isle of Man"', 'Greenland', '"Hong Kong"', 'Macao', 'Åland']) assert.equal(one(country(tok(n)), 'independent'), 'false', n);
+  for (const n of ['Taiwan', 'Kosovo', 'Somaliland', 'Northern Cyprus']) assert.equal(country(n), undefined, `${n}: independent is not said`);
+  const cyprus = geo.ofType('k.geo.country').filter((c) => one(c, 'name') === 'Cyprus');
+  assert.deepEqual(cyprus.map((c) => one(c, 'continent')).filter(Boolean), ['Asia']);
+  assert.deepEqual(cyprus.map((c) => one(c, 'political_continent')).filter(Boolean), ['Europe']);
+  assert.equal(geo.ofType('k.geo.country').filter((c) => c.attrs.political_continent).length, 1);
 });

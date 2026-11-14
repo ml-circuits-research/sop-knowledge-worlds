@@ -1,5 +1,5 @@
 {
- "version": "3bdb3846875b",
+ "version": "aba9a24da09a",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -13397,7 +13397,7 @@
   },
   {
    "id": "k.geo",
-   "version": "2",
+   "version": "3",
    "schema": "k.geo/schema.sop",
    "exports": [
     "k.geo.city",
@@ -13416,8 +13416,8 @@
     {
      "id": "k.geo/shards/africa-borders",
      "path": "k.geo/shards/africa-borders.sop",
-     "wires": 58,
-     "bytes": 10997,
+     "wires": 59,
+     "bytes": 11147,
      "keys": [
       "algeria",
       "angola",
@@ -13444,6 +13444,7 @@
       "gabon",
       "gambia",
       "ghana",
+      "gitega",
       "guinea",
       "guinea-bissau",
       "heard island and mcdonald islands",
@@ -13488,7 +13489,7 @@
      "id": "k.geo/shards/africa",
      "path": "k.geo/shards/africa.sop",
      "wires": 713,
-     "bytes": 126409,
+     "bytes": 126355,
      "keys": [
       "abay",
       "abidjan",
@@ -14191,11 +14192,12 @@
     {
      "id": "k.geo/shards/asia-borders",
      "path": "k.geo/shards/asia-borders.sop",
-     "wires": 50,
-     "bytes": 8694,
+     "wires": 51,
+     "bytes": 8877,
      "keys": [
       "afghanistan",
       "armenia",
+      "astana",
       "azerbaijan",
       "bahrain",
       "bangladesh",
@@ -14254,8 +14256,8 @@
     {
      "id": "k.geo/shards/asia",
      "path": "k.geo/shards/asia.sop",
-     "wires": 873,
-     "bytes": 151090,
+     "wires": 874,
+     "bytes": 151131,
      "keys": [
       "abakan range",
       "abu dhabi",
@@ -14299,6 +14301,7 @@
       "ashgabat",
       "asia",
       "asir mountains",
+      "astana",
       "atrak",
       "atshan",
       "az zarqa",
@@ -14810,7 +14813,6 @@
       "northern cyprus",
       "noshaq",
       "nu",
-      "nur-sultan",
       "obasta tsukai",
       "olgiy",
       "oman",
@@ -15073,7 +15075,7 @@
      "id": "k.geo/shards/europe-borders",
      "path": "k.geo/shards/europe-borders.sop",
      "wires": 49,
-     "bytes": 9011,
+     "bytes": 9027,
      "keys": [
       "albania",
       "andorra",
@@ -15135,7 +15137,7 @@
      "id": "k.geo/shards/europe",
      "path": "k.geo/shards/europe.sop",
      "wires": 663,
-     "bytes": 116889,
+     "bytes": 116875,
      "keys": [
       "aalborg",
       "adige",
@@ -15755,7 +15757,7 @@
      "id": "k.geo/shards/north-america-borders",
      "path": "k.geo/shards/north-america-borders.sop",
      "wires": 39,
-     "bytes": 5551,
+     "bytes": 5567,
      "keys": [
       "anguilla",
       "antigua and barbuda",
@@ -15807,7 +15809,7 @@
      "id": "k.geo/shards/north-america",
      "path": "k.geo/shards/north-america.sop",
      "wires": 618,
-     "bytes": 124438,
+     "bytes": 124441,
      "keys": [
       "aberdeen lake",
       "adirondack mountains",
@@ -16513,7 +16515,7 @@
      "id": "k.geo/shards/oceania-borders",
      "path": "k.geo/shards/oceania-borders.sop",
      "wires": 24,
-     "bytes": 3170,
+     "bytes": 3204,
      "keys": [
       "american samoa",
       "australia",
@@ -16550,7 +16552,7 @@
      "id": "k.geo/shards/oceania",
      "path": "k.geo/shards/oceania.sop",
      "wires": 243,
-     "bytes": 46198,
+     "bytes": 46164,
      "keys": [
       "adelaide",
       "agana",
@@ -17928,7 +17930,7 @@
      "id": "k.geo/shards/south-america-borders",
      "path": "k.geo/shards/south-america-borders.sop",
      "wires": 13,
-     "bytes": 2634,
+     "bytes": 2650,
      "keys": [
       "argentina",
       "bolivia",

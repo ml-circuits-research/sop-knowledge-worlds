@@ -75,6 +75,21 @@ shares a whole slot: a slot that must be required (`k.drawing.part.colour`), tak
 like the slot groups of Q34 item 2).
 Blocking: no. Meanwhile: inheritance where the slot is the same, a test for the rest.
 
+## Q41 (Q33 applied, second worker, 2026-11-14)
+Question: what should `k.geo.country.independent` say for the four states that govern themselves without being
+generally recognised (Taiwan, Kosovo, Somaliland, Northern Cyprus)?
+Context: Q33 (b) is applied with one rule instead of a list: `independent` follows Natural Earth's `SOVEREIGNT` (the
+country is its own sovereign) instead of its `TYPE`. That fixes Cuba, Israel, Kazakhstan (now true) and Aruba, Åland,
+Curaçao, Guernsey, Greenland, Hong Kong, Isle of Man, Jersey, Macao, Sint Maarten (now false), and agrees with the
+country list for every country it has, but for four: Natural Earth makes them their own sovereign while noting
+another state's claim ("Claimed by China", "by Somalia", "by Cyprus") or the list does not call them independent
+(Taiwan false, Kosovo null; Somaliland and Northern Cyprus are not in it). Before, Taiwan, Somaliland and Northern
+Cyprus were true and Kosovo false. A boolean takes a side either way.
+Options: (a) leave `independent` unsaid for the four (a host answers "not known"); (b) unsaid, plus a key that says
+why (`recognition=limited`, or `claimed_by=<country>` from Natural Earth's note); (c) follow the country list
+(Taiwan false, the other three unsaid); (d) follow Natural Earth (all four true).
+Blocking: no. Meanwhile: (a); WORLD.md and the schema say so, and a test keeps the four unsaid.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

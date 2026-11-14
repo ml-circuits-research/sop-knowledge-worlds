@@ -93,3 +93,11 @@ test('natural questions (Round 9 item 8): of the seeded sample of 100 about anim
   assert.equal(r.asked, 100);
   assert.ok(r.found >= 80, `${r.found} of 100`);
 });
+
+test('Q33: the young of a rabbit is a kit, and "bunny" is a word for it', () => {
+  const schema = readFileSync(join(WORLDS_DIR, 'k.animals', 'schema.sop'), 'utf8');
+  const word = parse(schema).find((w) => w.type === 'core.word' && w.attrs.means?.[0] === 'kit');
+  assert.ok(word && word.attrs.text.includes('bunny') && word.attrs.of[0] === 'k.animals.animal.baby');
+  const rabbit = parse(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', 'mammals.sop'), 'utf8')).find((w) => w.attrs.name?.[0] === 'rabbit');
+  assert.deepEqual(rabbit.attrs.baby, ['kit']);
+});

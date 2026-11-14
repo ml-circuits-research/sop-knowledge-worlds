@@ -3188,3 +3188,36 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   `sense`). Catalog 25 worlds, 937 shards, vocab 24,256 words; validate 962 files, 0 errors.
   npm test 2,864: 2,859 pass, 5 skipped, 0 fail (the catalog test failed once on a stale index.json after a WORLD.md
   edit; rebuilt and rerun).
+
+## Q33 facts (2026-11-14, second worker): capitals of today, independence by sovereign, Cyprus, kit and bunny
+
+- The fact changes of the reviewer's answer to Q33 ((b) + (c)); the schema part was done before (shapes: Q34 (a)
+  commit; durations: the first worker's k.time). Raw data fetched again as SOURCE.md says (Natural Earth v5.1.2,
+  mledoze/countries f931d9c); before any change the import gave the committed shards byte for byte.
+- **Independent, by one rule instead of a list:** Natural Earth's `SOVEREIGNT` (the country is its own sovereign),
+  not its `TYPE` (which says `Country` for Aruba, Greenland, Hong Kong, Jersey and `Sovereignty` / `Disputed` for Cuba,
+  Kazakhstan, Israel). Cuba, Israel, Kazakhstan now true; Aruba, Åland, Curaçao, Guernsey, Greenland, Hong Kong, Isle
+  of Man, Jersey, Macao, Sint Maarten now false (the 11 read one by one: all ten territories of another state; the
+  eleventh is Taiwan). The rule agrees with the country list for every country it has but four that govern themselves
+  without general recognition (Natural Earth notes another state's claim, or the list does not say independent):
+  Taiwan, Kosovo, Somaliland, Northern Cyprus: `independent` not said (was true, false, true, true). Q41 asks.
+- **Capitals of today:** Burundi Gitega (not Bujumbura), Kazakhstan Astana (Natural Earth's Nur-Sultan, renamed; Natural
+  Earth itself gives Astana as `namepar`, so the city is `Astana` in the Natural Earth shard with `Nur-Sultan` as a
+  `core.word`), Palau Ngerulmud (not Melekeok). Named in `tools/import/geo.mjs` (`CAPITAL_FROM_LIST`: a rename cannot
+  be told from a spelling by the data); the import checks that the list names them. What only the list says goes
+  into its ODbL borders shards (the capital, and `capital_of` of Gitega and Astana as a `k.geo.city` wire that merges
+  by name and country), so the public-domain shards still cite Natural Earth alone (a first try put two sources on
+  the Natural Earth wires: LICENSES.md then showed two shards under ODbL terms; undone).
+- **Cyprus:** new key `k.geo.country.political_continent` (k.geo version 3), from the list's region where it names
+  another real continent than Natural Earth's: only Cyprus (Asia; politically Europe). Islands in the open ocean and
+  the sub-Antarctic territories keep ours, as the answer says.
+- **Animals:** `@k.animals.word.baby.kit core.word text=bunny text=bunnies means=kit of=k.animals.animal.baby` in the
+  schema; the rabbit's baby stays `kit`; hair / fur ours, UK population ours (nothing to do).
+- FROM-PSYS2.md rerun from the cited commit 6b63b2ba (`git archive` into /tmp; /tmp/wt2 untouched): capital
+  disagreements 10 -> 7 (the spellings), independent 14 -> 0; one PSys2 city (Astana) is now one we have by name.
+- Tests: k.geo (Q33: capitals, capital_of, the renamed city, independent for 5 + 10 countries, the four unsaid,
+  Cyprus); the old test "every independent country but three has a capital" now has none without (the three were
+  Macao, Northern Cyprus, Åland: not independent); k.animals (bunny).
+- Numbers: k.geo 15 shards (Natural Earth and list), 3,858 -> 3,861 wires, 695,907 -> 696,264 bytes; geo import
+  stats: capitals from the list 37 -> 40. Catalog 25 worlds, 937 shards, vocab 24,256 -> 24,258 words (astana,
+  political continent). validate 962 files, 0 errors. npm test 2,866: 2,861 pass, 5 skipped, 0 fail.

@@ -60,6 +60,8 @@
 @k.animals.word.diet core.word text=diet means=k.animals.animal.diet core.source="hand-core 1"
 @k.animals.word.eats core.word text=eats text=eat text=food means=k.animals.animal.eats core.source="hand-core 1"
 @k.animals.word.baby core.word text=baby text=young means=k.animals.animal.baby core.source="hand-core 1"
+# Q33: the young of a rabbit is a kit; "bunny" is the everyday word for it (as a child's book says it).
+@k.animals.word.baby.kit core.word text=bunny text=bunnies means=kit of=k.animals.animal.baby core.source="hand-core 1"
 @k.animals.word.cannot core.word text=cannot text="can not" means=k.animals.animal.cannot core.source="hand-core 1"
 @k.animals.word.group core.word text=group text=herd text=flock text=pack means=k.animals.animal.group core.source="hand-core 1"
 

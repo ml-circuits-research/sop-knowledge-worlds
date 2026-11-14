@@ -22,6 +22,30 @@ const clean = (t) => String(t).replace(/\s+/g, ' ').trim();
 const r2 = (n) => String(Math.round(n * 100) / 100);
 const shardName = (continent) => continent.toLowerCase().split(' ').join('-');
 
+// Q33 (reviewer's answer): capitals that changed after the data of Natural Earth 5.1.2. The country list names the
+// capital of today; Natural Earth's is no longer the capital (Bujumbura; Melekeok, the state Ngerulmud lies in) or the
+// city was renamed (Nur-Sultan is Astana again since 2022; Natural Earth itself gives Astana as the city's other name,
+// `namepar`, so the city keeps its Natural Earth source). The data cannot tell a rename from a spelling (Ulaanbaatar,
+// Ulan Bator), so the countries are named here; the capital itself is taken from the list (the import checks it), and
+// what only the list says (the country's capital, the city's capital_of) goes into the shard of the list.
+export const CAPITAL_FROM_LIST = { BDI: 'Gitega', KAZ: 'Astana', PLW: 'Ngerulmud' };
+export const CITY_RENAMED = { KAZ: { from: 'Nur-Sultan', to: 'Astana' } };
+// Q33: independent. Natural Earth's TYPE says `Country` for territories of another state (Aruba, Greenland, Hong Kong,
+// Jersey) and `Sovereignty` or `Disputed` for some states (Cuba, Kazakhstan, Israel); its SOVEREIGNT says who the
+// sovereign is, and agrees with the country list everywhere but for states that govern themselves without being
+// generally recognised. For those (Natural Earth notes "Claimed by" another state, or the list does not say
+// independent: Taiwan, Kosovo, Somaliland, Northern Cyprus) `independent` is not said.
+export const independentOf = (p, listed) => {
+  const own = p.SOVEREIGNT ? p.SOVEREIGNT === p.ADMIN : p.TYPE === 'Sovereign country' || p.TYPE === 'Country';
+  if (!own) return false;
+  if (/Claimed by/.test(p.NOTE_BRK ?? '') || (listed && listed.independent !== undefined && listed.independent !== true)) return undefined;
+  return true;
+};
+// Q33: the continent a country is counted in politically, from the region of the country list, where that is another
+// continent than the geographic one of Natural Earth (Cyprus: Asia, politically Europe). Not for islands in the open
+// ocean, whose continent is already that of their UN region.
+const listContinent = (c) => (c.region === 'Americas' ? (c.subregion === 'South America' ? 'South America' : 'North America') : c.region === 'Antarctic' ? 'Antarctica' : c.region);
+
 // The continent of a Natural Earth country: its CONTINENT, or for islands in the open ocean its UN region.
 export const continentOf = (p) => {
   if (CONTINENTS.includes(p.CONTINENT)) return p.CONTINENT;
@@ -124,9 +148,16 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     const p = f.properties;
     if (p.featurecla !== 'Admin-0 capital' && p.featurecla !== 'Admin-0 capital alt') continue;
     const code = codeOf(p.adm0_a3, p.sov_a3);
-    if (!code || !p.name) continue;
+    if (!code || !p.name || CAPITAL_FROM_LIST[code]) continue;
     if (!capitals.has(code)) capitals.set(code, []);
     capitals.get(code).push(p);
+  }
+  // The country list by Natural Earth's code (the list's code -> Natural Earth's where they differ).
+  const LIST_CODE = { UNK: 'KOS', PSE: 'PSX', SSD: 'SDS', ESH: 'SAH' };
+  const neCode = (c) => (byCode.has(c) ? c : LIST_CODE[c]);
+  const listed = new Map(countries.map((c) => [neCode(c.cca3), c]).filter(([k]) => k));
+  for (const [code, capital] of Object.entries(CAPITAL_FROM_LIST)) {
+    if (byCode.has(code) && listed.has(code) && !(listed.get(code).capital ?? []).includes(capital)) throw new Error(`the country list does not name ${capital} the capital of ${code}`);
   }
   const codes = [...byCode.keys()].sort((a, b) => byText(nameOf(a), nameOf(b)) || byText(a, b));
   for (const code of codes) {
@@ -139,7 +170,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
       ...[...new Set(caps)].map((x) => ['capital', x]),
       ['continent', continent], ['region', p.SUBREGION && !/^Seven seas/.test(p.SUBREGION) ? p.SUBREGION : undefined],
       ['population', p.POP_EST > 0 ? Math.round(p.POP_EST) : undefined],
-      ['independent', p.TYPE === 'Sovereign country' || p.TYPE === 'Country'],
+      ['independent', independentOf(p, listed.get(code))],
       ['lat', Number.isFinite(p.LABEL_Y) ? r2(p.LABEL_Y) : r2((b.s + b.n) / 2)], ['lon', Number.isFinite(p.LABEL_X) ? r2(p.LABEL_X) : r2((b.w + b.e) / 2)],
       ...box(b),
     ], sources(NE)));
@@ -151,18 +182,18 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     }
   }
   // What only the country list has: neighbours, area, landlocked. Joined by the country code; named as above.
-  const LIST_CODE = { UNK: 'KOS', PSE: 'PSX', SSD: 'SDS', ESH: 'SAH' }; // the list's code -> Natural Earth's
-  const neCode = (c) => (byCode.has(c) ? c : LIST_CODE[c]);
   for (const c of [...countries].sort((a, b) => byText(a.cca3, b.cca3))) {
     const code = neCode(c.cca3);
     if (!code || !byCode.has(code)) continue;
-    const { name, continent } = byCode.get(code);
+    const { name, continent, p } = byCode.get(code);
+    const political = CONTINENTS.includes(p.CONTINENT) && CONTINENTS.includes(listContinent(c)) && listContinent(c) !== continent ? listContinent(c) : undefined;
     shards.get(continent).borders.push({ name, line: w(`k.geo.borders.${seg(code)}`, 'k.geo.country', [
       ['name', name],
       // Round 9: the capital, where Natural Earth marks none (territories, South Sudan, Nauru).
       ...(noCapital.has(code) ? (c.capital ?? []).filter(Boolean).map((x) => { stats.capitalsFromList++; return ['capital', clean(x)]; }) : []),
       ...[...new Set(c.borders.map(neCode).map(nameOf).filter(Boolean))].sort(byText).map((n) => ['neighbour', n]),
       ['area', c.area > 0 ? r2(c.area) : undefined], ['landlocked', c.landlocked === true],
+      ['political_continent', political],
     ], sources(MC)) });
     stats.borders++;
   }
@@ -178,11 +209,19 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
   }
   for (const code of [...perCountry.keys()].sort(byText)) {
     const list = perCountry.get(code).sort((a, b) => b.pop_max - a.pop_max || byText(a.name, b.name));
-    const capital = (p) => p.featurecla === 'Admin-0 capital' || p.featurecla === 'Admin-0 capital alt';
+    const renamed = CITY_RENAMED[code];
+    for (const p of list) if (renamed && p.name === renamed.from) {
+      if (p.namepar !== renamed.to && p.nameascii !== renamed.to) throw new Error(`Natural Earth does not give ${renamed.to} as a name of ${renamed.from}`);
+      p.name = renamed.to;
+    }
+    // Q33: where the capital is the list's, Natural Earth's mark is not used; the place the list names keeps its
+    // place among the cities, and its capital_of is said in the shard of the list.
+    const listCapital = CAPITAL_FROM_LIST[code];
+    const capital = (p) => (listCapital ? false : p.featurecla === 'Admin-0 capital' || p.featurecla === 'Admin-0 capital alt');
     const seen = new Set();
     const kept = [];
     list.forEach((p, i) => {
-      if (seen.has(p.name) || !(i < citiesPerCountry || capital(p))) return;
+      if (seen.has(p.name) || !(i < citiesPerCountry || capital(p) || p.name === listCapital)) return;
       seen.add(p.name);
       kept.push(p);
     });
@@ -193,6 +232,8 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
         ['name', p.name], ['country', country], ['capital_of', capital(p) ? country : undefined],
         ['population', Math.round(p.pop_max)], ['lat', r2(p.latitude)], ['lon', r2(p.longitude)],
       ], sources(NE)));
+      if (renamed && p.name === renamed.to) out.words.push(w(`k.geo.word.city.${code}.${seg(renamed.from)}`, 'core.word', [['text', renamed.from], ['means', renamed.to], ['of', 'k.geo.city.name']], sources(NE)));
+      if (p.name === listCapital) out.borders.push({ name: `${country} ${p.name}`, line: w(`k.geo.borders.city.${code}.${seg(p.name)}`, 'k.geo.city', [['name', p.name], ['country', country], ['capital_of', country]], sources(MC)) });
       stats.cities++;
     }
   }
@@ -372,7 +413,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     if (!s.borders.length) continue;
     files[`${name}-borders.sop`] = `${header({
       id: `k.geo/shards/${name}-borders`,
-      about: `${continent}: the neighbours, the area in square kilometres and whether it is landlocked, for ${s.borders.length} countries and territories, and the capital of those for which Natural Earth marks none. Tell it with the shard ${name}: the facts of one country merge.`,
+      about: `${continent}: the neighbours, the area in square kilometres and whether it is landlocked, for ${s.borders.filter((x) => x.line.includes(' k.geo.country ')).length} countries and territories, and the capital of those for which Natural Earth marks none or an older one. Tell it with the shard ${name}: the facts of one country merge.`,
       sources: ['countries 5.1.0 (mledoze/countries, ODbL-1.0)'],
       license: 'ODbL-1.0',
       script: 'tools/import/geo.mjs',

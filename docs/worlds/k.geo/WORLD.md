@@ -8,7 +8,7 @@ ranges, lakes, deserts, oceans and seas, each with a number where a free source 
 - `k.geo.continent`: `name` (Africa, Antarctica, Asia, Europe, North America, Oceania, South America), `area_about`
   (square kilometres, the usual figure; `named=model`).
 - `k.geo.country` (identity `name`): `code`, `formal`, `capital` (many), `continent`, `region`, `neighbour` (many),
-  `population`, `area` (square kilometres), `landlocked`, `independent`, `lat`, `lon` (a point inside it), `west`,
+  `population`, `area` (square kilometres), `landlocked`, `independent`, `political_continent`, `lat`, `lon` (a point inside it), `west`,
   `south`, `east`, `north` (its box, in degrees). The name is the common short name (`"United States"`, `Serbia`:
   Natural Earth's `NAME` or `NAME_LONG`, whichever is shorter and not abbreviated); `formal` is the formal name
   (`"Republic of Serbia"`); `core.word` facts give the other names (`"United States of America"`, `"Dem. Rep. Congo"`).
@@ -43,9 +43,17 @@ Two per continent:
   deserts and continents), hand-written (`hand-core 1`, CC0-1.0, `named=model`; `tools/geo-numbers.mjs`). Each fact
   names a thing of the other shards, so the facts merge when both are told.
 - `<continent>-borders` also has the `capital` of the 37 countries and territories for which Natural Earth marks
-  none (South Sudan, Nauru, Greenland, Puerto Rico …).
+  none (South Sudan, Nauru, Greenland, Puerto Rico …), and of three whose capital changed after Natural Earth's data
+  (Q33): Burundi (Gitega, not Bujumbura), Kazakhstan (Astana; Natural Earth's Nur-Sultan is the same city, renamed:
+  the city is `Astana`, Natural Earth's own other name for it, with `Nur-Sultan` as a `core.word`), Palau (Ngerulmud,
+  not Melekeok). The countries are named in `tools/import/geo.mjs` (a rename cannot be told from a spelling by the
+  data); the capitals are the list's, and so is the `capital_of` of Gitega and Astana (a `k.geo.city` wire in the
+  borders shard that merges with the city of the continent shard).
+- Q33: `independent` follows Natural Earth's `SOVEREIGNT` (a country that is its own sovereign), not its `TYPE`,
+  which called Cuba, Israel and Kazakhstan not independent and Aruba, Greenland, Hong Kong, Jersey independent; the
+  country list agrees everywhere. `political_continent` (from the list's region): Cyprus, Europe.
 
-15 shards, 3,858 wires, 695,907 bytes; the largest is `asia`.
+15 shards, 3,861 wires, 696,264 bytes; the largest is `asia`.
 
 ## Sources
 
@@ -63,7 +71,9 @@ Italy; whether Switzerland is landlocked.
 - A box that crosses the 180th meridian spans −180 to 180 (Russia, Fiji, United States).
 - Rivers carry the countries their line passes through at Natural Earth's 1:10m scale; a border river may miss one.
 - Two rivers or mountains of one name on one continent: only the larger is kept.
-- Disputed and dependent territories are listed as Natural Earth lists them, with `independent=false`.
+- Dependent territories are listed as Natural Earth lists them, with `independent=false`. For the four that govern
+  themselves without being generally recognised (Taiwan, Kosovo, Somaliland, Northern Cyprus) `independent` is not
+  said: Natural Earth notes another state's claim, or the country list does not call them independent.
 - No capital is known for Macao, Northern Cyprus, Åland and three territories without inhabitants.
 - Natural Earth's rivers are named piece by piece, so no length is worked out from them (the Nile's line is 2,760
   km long there); the outlines of deserts and seas are for labels, so no area is worked out from them either.
