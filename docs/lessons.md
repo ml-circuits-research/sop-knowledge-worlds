@@ -407,3 +407,27 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   what is missing 12/13) and overturned three requirements: a helper (13 of 33; the Grimm tales have one, the fables
   not), attempts (23 of 33) and a happy ending (17 of 33). The synthetic stories agreed with the tales on everything
   but set-up and pay-off (3 of 21 against 13 of 20): what they lack is exactly what makes a tale feel made.
+
+## k.interest, w.document, the register of words, w.lang.ro on 0.63 and UniMorph (first worker, blocks 14:45 to 19:35)
+
+- **A finding gives a direction, never a number.** Every feature of k.interest says which works its direction rests on
+  (`source`) and, separately, that its numbers are this repository's (`own`); weights are ranges a host may sample
+  inside. Keeping the two apart made the citations honest and left the tuning to the library without touching them.
+- **Product, not sum.** Silvia's two appraisals multiply: an obvious fact scores 0 however concrete it is, and an
+  incomprehensible novelty too. With a sum, concreteness alone would have carried "a dog is a mammal". The structure
+  of a theory is worth more to a program than its list of factors.
+- **A dozen lines of reference arithmetic are the integration case.** `share` and `score` in the tool, tested on real
+  facts (penguin > elephant's weight > dog is a mammal), let the library read k.interest within the hour (0.65).
+- **The join surface of a document is the wire id.** `w.document.sentence.fact` holds the ids of the facts a sentence
+  states, so "every claim traces to a fact" is a test over the whole catalog, not a promise of the composer.
+- **Share-alike data gets its own shards from the first line.** Frequency next to WordNet facts would have changed the
+  terms of 321 shards; 26 shards of their own keep WordNet's terms and let a host leave the share-alike part out.
+- **A band computed from a published scale beats a band of list positions.** wordfreq's Zipf value (a standard scale)
+  arrived while FrequencyWords bands were drafted; switching before publishing cost one function, and the band is now
+  computed from the number on the same fact, so the two cannot disagree.
+- **Noisy labels, good forms.** UniMorph Romanian mislabels noun cells; matching sets of forms against what each class
+  generates fit 82% of lemmas and agreed with the hand classes for 92%. The 753 that fit nothing are a list of missing
+  alternations, the next classes to write.
+- **Under memory contention the common failure is SIGKILL, and the common conflict is a generated file.** A test
+  wrapper that reruns killed files alone behind a memory gate, and a sync script that resolves conflicts in generated
+  files by regenerating them, made pushes possible with four workers on one 8 GB machine.

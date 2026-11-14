@@ -4259,3 +4259,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   the casual variants typed without diacritics 99.7% (1,163 of 1,167; was 92.2%).
 - w.lang.ro: 949 wires (morphology 402, irregular 225, closed 240, templates 3, schema 79). Tests 9 / 9.
 >>>>>>> f864cba (w.lang.ro on sopworld 0.63: no exception left (round trip 2,916/2,916 exact and without diacritics), the indefinite article in the templates (am desenat o casă roșie))
+
+## 2026-11-14 — first worker: w.lang.ro, a dictionary derived from UniMorph (blocks "18:20" item 2 and item 3, "19:35")
+
+- **Import** (`tools/lang-ro-unimorph.mjs`; `sources/unimorph-ron`, CC BY-SA 3.0, psys2 ea2b29e7, copied to the
+  git-ignored raw folder): 84,679 rows read, 4,388 lemma and part-of-speech pairs. Each lemma goes to the paradigm class
+  whose generated forms contain every comparable UniMorph form (at least 3), compared as sets of forms because the
+  file's noun labels are wrong in places (casa labelled plural; "niște case" singular); article words, să, a and the
+  vocative, past tenses, gerund and negative imperative left out; label noise ("definite articulation") dropped.
+- **Result:** a class fits 3,612 (82%: nouns 2,012 / 2,308, verbs 951 / 1,205, adjectives 649 / 875; 1,339 with a second
+  class generating the same forms, the fewest extra forms then the first class win); none for 753 (alternations no
+  class has yet: sc > șt, ea > e; irregulars; noise), 23 with fewer than 3 forms. The hand class fits for 144 of the 156
+  lemmas both have (92%). 3,466 rows written (hand lemmas left out: the hand row wins), lemma + class + gender, empty
+  sense; `docs/worlds/w.lang.ro/dictionary-unimorph/` 23 files, 67.7 kB, CC-BY-SA-3.0 headers; no form stored.
+- **Re-measured** (`tools/lang-ro-coverage.mjs`, PSys2's ro-en-meaning rows at a4357c2e read in place; a word counts
+  when some reading exists): hand Romanian 28,752 words, 75.6% read with the hand dictionary, 81.7% with UniMorph
+  added; machine Romanian 17,855 words, 51.8% and 59.8%. Meaning-kept needs the frames layer (18:20 item 1, not done).
+- Tests: tests/w.lang.ro.test.mjs 10 / 10 (the derived folder: licence, classes exist, genders follow the class, no
+  hand lemma, no sense guessed; files equal the tool's output when the raw file is here; fit >= 75%, agreement >= 90%;
+  derived lemmas read back with both dictionaries).

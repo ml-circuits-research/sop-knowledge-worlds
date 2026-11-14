@@ -79,3 +79,27 @@ the acts in Romanian, and a reading into acts are the next draft (block "09:25" 
 verbs that have no imperative (vrea, putea) are what the class gives, not words. The indefinite article in a template
 is a role `art` that the host fills with the lemma `un` (`{art@kind}` agrees with the noun: o casă, un copac); the
 definite article is a cell of the noun (`{thing:def=yes}`), as the library answered (its Q40).
+
+## A bigger dictionary, derived from UniMorph (blocks "18:20" item 2, "19:35")
+
+`dictionary-unimorph/<letter>.tsv` (23 files, 3,466 lemmas, 67.7 kB, **CC BY-SA 3.0**, a folder of its own):
+lemma, class, gender, an empty sense, in the hand dictionary's format. `tools/lang-ro-unimorph.mjs` reads UniMorph
+Romanian (84,679 rows, 4,388 lemma and part-of-speech pairs; `sources/unimorph-ron`) and puts each lemma into the
+paradigm class whose generated forms contain every form UniMorph gives for it (at least 3), by sets of forms, not by
+UniMorph's labels (the file labels some noun cells wrongly: casa as plural). Compared: nouns without the vocative and
+with the article words stripped; adjectives' indefinite forms; verbs' present, conjunctive, positive imperative,
+infinitive and participle (the past tenses and the gerund are not cells here). Where several classes generate all
+the forms, the one with the fewest forms UniMorph lacks wins, then the first class.
+
+- A class fits 3,612 of 4,388 (82%; nouns 2,012 of 2,308, verbs 951 of 1,205, adjectives 649 of 875); in 1,339 of
+  them another class generates the same forms. No class for 753 (alternations no class has yet: sc > șt in gâscă,
+  gâște; ea > e; irregulars such as greu, grea; and some noise of the file); 23 have fewer than 3 forms.
+- Of the 156 UniMorph lemmas that the hand dictionary has, the hand class is among the fitting ones for 144 (92%).
+  The hand rows win; their lemmas are not repeated in the derived files.
+- A host loads both: for a letter, the hand file, then the derived one (`dictionary({ read })` over the two folders).
+  The derived rows have no sense: they read a word to its lemma and class, not to a meaning.
+- Coverage on PSys2's ro-en-meaning set (10,259 rows at psys2 a4357c2e, read in place, `node tools/lang-ro-coverage.mjs
+  <psys2>/training/eval/ro-en-meaning/rows.jsonl`; a word counts when some reading exists: a closed-class word or a
+  form a lemma's class generates): hand Romanian 28,752 words, 75.6% read with the hand dictionary, 81.7% with
+  UniMorph added; machine Romanian 17,855 words, 51.8% and 59.8%. The meaning of a row needs the frames layer
+  (block "18:20" item 1), not yet written.

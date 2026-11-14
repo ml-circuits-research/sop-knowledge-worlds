@@ -197,3 +197,41 @@ test('w.lang.ro: Romanian stays in its world: no other world names it, and its w
   assert.deepEqual(bad, []);
 });
 
+
+// The dictionary derived from UniMorph (blocks "18:20" item 2, "19:35"): lemma -> class only, in a folder of its own
+// under UniMorph's licence; the files are what tools/lang-ro-unimorph.mjs gives from the raw file (when it is here).
+test('w.lang.ro: the dictionary derived from UniMorph: its own folder and licence, classes that exist, no lemma of the hand dictionary', async () => {
+  const { run } = await import('../tools/lang-ro-unimorph.mjs');
+  const dir = join(DIR, 'dictionary-unimorph');
+  const names = readdirSync(dir).filter((f) => f.endsWith('.tsv')).sort();
+  const handLemmas = new Set(LEXICON.map((r) => r[0]));
+  let rows = 0;
+  for (const f of names) {
+    const text = readFileSync(join(dir, f), 'utf8');
+    assert.match(text, /^# license: CC-BY-SA-3\.0$/m, f);
+    for (const line of text.split('\n').filter((l) => l && !l.startsWith('#'))) {
+      const [lemma, cls, gender, sense] = line.split('\t');
+      rows++;
+      assert.ok(m.classes.has(cls), `${lemma}: ${cls}`);
+      assert.ok(!handLemmas.has(lemma), `${lemma} is in the hand dictionary`);
+      assert.equal(sense, '', 'no sense is guessed');
+      assert.equal(gender, cls.match(/^([mfn])\./)?.[1] ?? '', lemma);
+    }
+  }
+  assert.ok(rows >= 3000, `${rows} derived lemmas`);
+  const raw = join(REPO, 'sources/unimorph-ron/raw/ron.tsv');
+  if (existsSync(raw)) {
+    const { files, stats } = run(raw);
+    assert.deepEqual(names, Object.keys(files).sort());
+    for (const [name, t] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), t, name);
+    console.log(`UniMorph: ${stats.lemmas} lemmas; a class fits ${stats.fit + stats.tie} (${stats.tie} with another class generating as well), none ${stats.none}, too few forms ${stats.few}; of the ${stats.hand} hand lemmas, the hand class fits for ${stats.handAgrees}`);
+    assert.ok((stats.fit + stats.tie) / stats.lemmas >= 0.75);
+    assert.ok(stats.handAgrees / stats.hand >= 0.9, 'the derivation agrees with the hand classes');
+  }
+  // With the derived dictionary added, a word of the hand dictionary reads as before, and new lemmas read.
+  const read = (folder) => (p) => { const f = join(DIR, folder, `${p}.tsv`); return existsSync(f) ? readFileSync(f, 'utf8') : null; };
+  const both = dictionary({ read: (p) => [read('dictionary')(p), read('dictionary-unimorph')(p)].filter(Boolean).join('\n') || null, fold: (s) => fold(m, s) });
+  assert.ok(analyse(m, 'desenează', { dictionary: both }).some((r) => r.lemma === 'desena'));
+  const sample = readFileSync(join(dir, 'c.tsv'), 'utf8').split('\n').filter((l) => l && !l.startsWith('#')).slice(0, 20).map((l) => l.split('\t'));
+  for (const [lemma, cls] of sample) assert.ok(analyse(m, lemma, { dictionary: both }).some((r) => r.lemma === lemma && r.class === cls), `${lemma} ${cls}`);
+});
