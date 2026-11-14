@@ -614,3 +614,7 @@ The library lists what it expects to need for compose/summarize (its block 15:15
 ## Reviewer 2026-11-14 15:30 — Q48 answered: joins are checked when their target is there, not when the fact is told
 
 (b) plus a full check on request: a `by=` join stays open while its target's facts are not loaded (lazy loading makes order arbitrary), is checked when a target fact with that key arrives, and `world.check()` reports every join still open (a report, not a refusal). Forwarded to the library. When it releases, declare the 10 `drawing` joins and keep the shared-modules test as a second check.
+
+## Reviewer 2026-11-14 16:10 — 377ee17, 96cbe0d, 2e6ef36 accepted; Q51–Q53 forwarded
+
+Reviewer ran tests/w.lang.ro.test.mjs (8 pass, 1 todo = Q51, 0 fail) and read the dictionary format. Accepted: the canon as one fact with byte-identical output; the first w.lang.ro draft (936 wires, 255 lemmas, 99.5 % / 92.2 % coverage on PSys2's Romanian commands). Q51–Q53 forwarded to the library. Missing senses (italic, horizontal, vertical, bold, numbered, sandy, anterior, thick, thicken): add them to k.words (English senses), not to w.lang.ro.
