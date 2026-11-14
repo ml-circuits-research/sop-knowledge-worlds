@@ -71,8 +71,11 @@
 @w.lang.en.prep.instead_of w.lang.en.prep text="instead of" rel=instead_of role=replacement core.source="hand-core 1"
 @w.lang.en.prep.rather_than w.lang.en.prep text="rather than" rel=instead_of role=replacement core.source="hand-core 1"
 
-# ---- temporal prepositions -> the order in time of k.time (k.time.before: earlier, later) ----
-@w.lang.en.prep.time.join.before w.lang.en.prep.time text=before rel=before order=earlier relation=k.time.before first_is=earlier core.source="hand-core 1"
-@w.lang.en.prep.time.join.after w.lang.en.prep.time text=after rel=after order=later relation=k.time.before first_is=later core.source="hand-core 1"
-@w.lang.en.prep.time.join.earlier_than w.lang.en.prep.time text="earlier than" rel=before order=earlier relation=k.time.before first_is=earlier core.source="hand-core 1"
-@w.lang.en.prep.time.join.later_than w.lang.en.prep.time text="later than" rel=after order=later relation=k.time.before first_is=later core.source="hand-core 1"
+# ---- temporal prepositions -> the order in time of k.time (k.time.before: earlier, later; k.time.during: time, span) ----
+@w.lang.en.prep.time.join.before w.lang.en.prep.time text=before rel=before order=earlier relation=k.time.before first_is=earlier second_is=later core.source="hand-core 1"
+@w.lang.en.prep.time.join.after w.lang.en.prep.time text=after rel=after order=later relation=k.time.before first_is=later second_is=earlier core.source="hand-core 1"
+@w.lang.en.prep.time.join.earlier_than w.lang.en.prep.time text="earlier than" rel=before order=earlier relation=k.time.before first_is=earlier second_is=later core.source="hand-core 1"
+@w.lang.en.prep.time.join.later_than w.lang.en.prep.time text="later than" rel=after order=later relation=k.time.before first_is=later second_is=earlier core.source="hand-core 1"
+@w.lang.en.prep.time.join.until w.lang.en.prep.time text=until rel=until order=earlier relation=k.time.before first_is=earlier second_is=later core.source="hand-core 1"
+@w.lang.en.prep.time.join.since w.lang.en.prep.time text=since rel=since order=later relation=k.time.before first_is=later second_is=earlier core.source="hand-core 1"
+@w.lang.en.prep.time.join.during w.lang.en.prep.time text=during rel=during order=within relation=k.time.during first_is=time second_is=span core.source="hand-core 1"

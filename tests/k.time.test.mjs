@@ -88,3 +88,13 @@ test('durations: several units for one span, each fact one count or one count_ab
   assert.deepEqual(d.filter((f) => one(f, 'name') === 'week').map((f) => one(f, 'unit')).sort(), ['day', 'hour']);
   assert.equal(exact.get('fortnight|week') * 7, exact.get('fortnight|day'));
 });
+
+test('during (Round 12): every hour within its part of the day, every month within its season in each hemisphere, nothing else', () => {
+  const during = w.ofType('k.time.during').map((w) => [one(w, 'time'), one(w, 'span'), one(w, 'hemisphere') ?? null].join('|'));
+  const want = [
+    ...w.ofType('k.time.hour').map((h) => [one(h, 'name'), one(h, 'part'), null].join('|')),
+    ...w.ofType('k.time.month').flatMap((m) => [[one(m, 'name'), one(m, 'season_north'), 'north'].join('|'), [one(m, 'name'), one(m, 'season_south'), 'south'].join('|')]),
+  ];
+  assert.equal(want.length, 48);
+  assert.deepEqual([...new Set(during)].sort(), [...new Set(want)].sort());
+});

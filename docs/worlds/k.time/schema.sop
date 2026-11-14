@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.time core.module name=k.time version=2 exports=ordered exports=cycle exports=before exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration core.source="hand-core 1"
+@k.time core.module name=k.time version=3 exports=ordered exports=cycle exports=before exports=during exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration core.source="hand-core 1"
 
 # Order in time. Every time that repeats in a cycle (a weekday in the week, a month in the year, a season, a part of
 # the day, an hour of the clock) is a `k.time.ordered`: `cycle` names its cycle, `n` is its position in it, `next`
@@ -112,6 +112,26 @@
 @k.time.hour.am_pm core.slot of=k.time.hour key=am_pm required=true enum=am enum=pm core.source="hand-core 1"
 @k.time.hour.part core.slot of=k.time.hour key=part required=true enum=morning enum=afternoon enum=evening enum=night core.source="hand-core 1"
 
+# Which time lies within which span (Round 12, the preposition "during"): an hour within its part of the day ("9 am
+# is during the morning"); a month within its season, in the `hemisphere` said ("January is during winter" in the
+# north, during summer in the south). Derived by three rules from the hours and the months, so it never disagrees with
+# them. Complete: a pair that is not there is "no" ("3 pm is not during the morning").
+@k.time.during core.type of=k.time.during shared=true closed=true complete=true core.source="hand-core 1"
+@k.time.during.time core.slot of=k.time.during key=time id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.during.span core.slot of=k.time.during key=span id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.during.hemisphere core.slot of=k.time.during key=hemisphere id=true enum=north enum=south core.source="hand-core 1"
+# `derived=true`: a fact that a rule of this module made, written by tools/derive.mjs into the shard `derived`.
+@k.time.during.derived core.slot of=k.time.during key=derived kind=boolean core.source="hand-core 1"
+@k.time.during.hour.when k.time.hour name=?time part=?span
+@k.time.during.hour.then k.time.during time=?time span=?span
+@k.time.during.hour core.rule when=$k.time.during.hour.when then=$k.time.during.hour.then core.source="hand-core 1"
+@k.time.during.north.when k.time.month name=?time season_north=?span
+@k.time.during.north.then k.time.during time=?time span=?span hemisphere=north
+@k.time.during.north core.rule when=$k.time.during.north.when then=$k.time.during.north.then core.source="hand-core 1"
+@k.time.during.south.when k.time.month name=?time season_south=?span
+@k.time.during.south.then k.time.during time=?time span=?span hemisphere=south
+@k.time.during.south core.rule when=$k.time.during.south.when then=$k.time.during.south.then core.source="hand-core 1"
+
 # A span of time: it is `count` times the span `unit` names (a week is 7 days), or about `count_about` times
 # (a month is about 30 days). A span may be told in several units, one fact each (a week is 7 days, a week is 168
 # hours): `name` and `unit` together are its identity. The second has no smaller unit here.
@@ -165,6 +185,9 @@
 @k.time.word.key.hour.hour12 core.word text=hour12 text="12-hour clock" means=k.time.hour.hour12 core.source="hand-core 1"
 @k.time.word.key.hour.am_pm core.word text="am pm" text=am text=pm means=k.time.hour.am_pm core.source="hand-core 1"
 @k.time.word.key.hour.part core.word text=part means=k.time.hour.part core.source="hand-core 1"
+@k.time.word.key.during.span core.word text=span means=k.time.during.span core.source="hand-core 1"
+@k.time.word.key.during.hemisphere core.word text=hemisphere means=k.time.during.hemisphere core.source="hand-core 1"
+@k.time.word.key.during.derived core.word text=derived means=k.time.during.derived core.source="hand-core 1"
 @k.time.word.key.duration.count core.word text=count text=many means=k.time.duration.count core.source="hand-core 1"
 @k.time.word.key.duration.count_about core.word text=count means=k.time.duration.count_about core.source="hand-core 1"
 @k.time.word.key.duration.unit core.word text=unit means=k.time.duration.unit core.source="hand-core 1"

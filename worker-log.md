@@ -3286,3 +3286,32 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   already joined). The 16 test files that read generated files: 108 pass; the full run was on the base before Q37.
 - And on the Q33 facts (second worker): my question renumbered Q42 (Q41 is the second worker's); vocab 24,259
   words; the 18 test files that read generated files or k.geo, k.animals: 117 pass.
+## Round 12, part 4 (2026-11-14, second worker): during, until and since joined to k.time
+
+- The reviewer's block 02:15 names five temporal prepositions the demo reads (before, after, during, until, since);
+  before and after were joined (part 3), the other three had nothing in k.time to compare.
+- **k.time version 3: `k.time.during`** (time, span, hemisphere; complete, derived): three rules make it from the hours'
+  `part` and the months' `season_north` / `season_south`: 24 hours within their part of the day, 12 months within
+  their season in each hemisphere (48 facts). "3 pm during the morning" is "no" (complete). Key words by
+  tools/key-words.mjs (`time`, `span`, `hemisphere`).
+- **w.lang.en:** `second_is` (new slot) next to `first_is` (which now may be `time`) on the joined temporal
+  prepositions, so a host knows both keys of the relation; until (`first_is=earlier second_is=later`) and since
+  (`later` / `earlier`) name `k.time.before`, and their `span` (end, start; from the hand-over) says the end or start
+  itself counts ("Friday until Friday"); during names `k.time.during` (`time` / `span`). All 7 temporal prepositions
+  are joined (hand-joins.sop, facts that merge with the imported ones).
+- Tests: w.lang.en (every joined preposition's keys are keys of its relation; Monday until Friday, Friday until
+  Friday, not Saturday until Friday; Friday since Monday; January during winter in the north and summer in the south,
+  not summer in the north; 9 am during the morning, not 3 pm); k.time (the 48 facts are exactly the hours' parts and
+  the months' seasons).
+- k.time is the first worker's world by history; this adds a type and three rules and changes no fact. If the
+  derived-facts shard (first worker, Round 11 next item 3) lands first, its generator has to be rerun on a rebase.
+- Not done (still open in w.lang.en WORLD.md): imperative clauses as productions, possessive "of" beyond parts.
+- Numbers: k.time schema 117 -> 132 wires (version 3; derived when loaded: 48 during facts); w.lang.en schema 252 ->
+  253 wires, hand-joins 62 -> 65 wires, 10,198 bytes. Catalog 25 worlds, 937 shards, vocab 24,258 words; validate
+  962 files, 0 errors. npm test 2,867: 2,862 pass, 5 skipped, 0 fail.
+- After the rebase on the derived-facts commit (5a9f1a1, first worker): `k.time.during` declares `derived` (boolean,
+  as the other derived types; the catalog refused the derived wires without it), `node tools/derive.mjs` rerun: the
+  k.time shard `derived` 391 -> 439 wires (the 48 during facts); joins, reports and catalog rebuilt. k.time schema on
+  main 121 -> 138 wires; catalog 25 worlds, 941 shards, vocab 24,259 words; validate 966 files, 0 errors. npm test
+  after the rebase: 2,860 pass, 5 skipped, and tests/catalog.test.mjs killed (SIGKILL, not an assertion); that file
+  alone: 6 pass.

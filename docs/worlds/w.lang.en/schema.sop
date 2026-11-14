@@ -76,10 +76,14 @@
 @w.lang.en.prep.time.order core.slot of=w.lang.en.prep.time key=order required=true enum=earlier enum=later enum=within core.source="psys2 78f45863"
 @w.lang.en.prep.time.span core.slot of=w.lang.en.prep.time key=span enum=start enum=end core.source="psys2 78f45863"
 @w.lang.en.prep.time.in core.slot of=w.lang.en.prep.time key=in many=true kind=atom core.source="psys2 78f45863"
-# The join to k.time: `relation` the fact type that says the order (k.time.before), `first_is` which of its keys the
-# first thing of the phrase is ("Monday before Friday": Monday is the `earlier`; "December after November": the `later`).
+# The join to k.time: `relation` the fact type that says it (k.time.before, k.time.during), `first_is` and `second_is`
+# which of its keys the first and the second thing of the phrase are ("Monday before Friday": Monday is the `earlier`,
+# Friday the `later`; "December after November": December the `later`; "January during winter": January the `time`,
+# winter the `span`). With `span` (until, since) the second thing is where a span ends or starts, so the same time
+# holds too ("open until Friday" includes Friday): a host also accepts the first thing equal to the second.
 @w.lang.en.prep.time.relation core.slot of=w.lang.en.prep.time key=relation kind=atom core.source="hand-core 1"
-@w.lang.en.prep.time.first_is core.slot of=w.lang.en.prep.time key=first_is enum=earlier enum=later core.source="hand-core 1"
+@w.lang.en.prep.time.first_is core.slot of=w.lang.en.prep.time key=first_is enum=earlier enum=later enum=time core.source="hand-core 1"
+@w.lang.en.prep.time.second_is core.slot of=w.lang.en.prep.time key=second_is enum=earlier enum=later enum=span core.source="hand-core 1"
 
 # Ordinals and small cardinals a reader needs before the catalog is reachable. k.values.number holds every number
 # word; these agree with it (a test). `last` counts from the end (value -1).

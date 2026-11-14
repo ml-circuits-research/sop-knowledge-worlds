@@ -1,5 +1,5 @@
 {
- "version": "a045f7f8bebe",
+ "version": "20f0c3bb18d9",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -36334,12 +36334,13 @@
   },
   {
    "id": "k.time",
-   "version": "2",
+   "version": "3",
    "schema": "k.time/schema.sop",
    "exports": [
     "k.time.before",
     "k.time.cycle",
     "k.time.duration",
+    "k.time.during",
     "k.time.hour",
     "k.time.month",
     "k.time.ordered",
@@ -36446,8 +36447,8 @@
     {
      "id": "k.time/shards/derived",
      "path": "k.time/shards/derived.sop",
-     "wires": 391,
-     "bytes": 55292,
+     "wires": 439,
+     "bytes": 62250,
      "keys": [
       "1 am",
       "1 pm",
@@ -36509,6 +36510,9 @@
       "year"
      ],
      "sources": [
+      "rule-k.time.during.hour",
+      "rule-k.time.during.north",
+      "rule-k.time.during.south",
       "rule-k.time.order",
       "rule-k.time.season_in.first_north",
       "rule-k.time.season_in.first_south",
@@ -36537,6 +36541,9 @@
    "sources": [
     "hand-core-1",
     "psys2-worlds-6b63b2ba",
+    "rule-k.time.during.hour",
+    "rule-k.time.during.north",
+    "rule-k.time.during.south",
     "rule-k.time.order",
     "rule-k.time.season_in.first_north",
     "rule-k.time.season_in.first_south",
@@ -54843,8 +54850,8 @@
     {
      "id": "w.lang.en/shards/hand-joins",
      "path": "w.lang.en/shards/hand-joins.sop",
-     "wires": 62,
-     "bytes": 9600,
+     "wires": 65,
+     "bytes": 10198,
      "keys": [
       "above",
       "according to",
@@ -54859,6 +54866,7 @@
       "by",
       "by means of",
       "close to",
+      "during",
       "earlier than",
       "in",
       "in front of",
@@ -54878,11 +54886,13 @@
       "over",
       "rather than",
       "right of",
+      "since",
       "through",
       "to the left of",
       "to the right of",
       "under",
       "underneath",
+      "until",
       "using",
       "via"
      ],

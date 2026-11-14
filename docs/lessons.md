@@ -172,6 +172,9 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Keep a fact in the shard of the licence it comes from.** Putting a second source on a public-domain wire looked
   harmless, but the catalog then listed the shard under ODbL terms. A wire of the same identity in the list's own
   shard says the same thing and merges when both are told.
+- **A join of a relation word says both keys, not one** (during, Round 12). `first_is` was enough while every temporal
+  preposition read the same two-key relation (before: earlier, later); the first relation with other keys (during:
+  time, span) needed `second_is` too. Naming both keys costs one slot and lets a host read any relation the same way.
 
 
 ## Derived facts visible to tools (first worker, block "02:45" item 3)

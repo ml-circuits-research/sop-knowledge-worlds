@@ -15,7 +15,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | --- | --- |
 | determiners | 31 determiners and quantifiers, with kind, number, definiteness, person; `in` = the PSys2 list (view) a word was in |
 | pronouns | 21 pronouns (case, person, number, gender, what they refer to), 14 anaphoric noun phrases ("that one") in the order they are tried |
-| prepositions | 32 prepositions as relations (place, goal, source, way; roles), 7 temporal ones (`w.lang.en.prep.time`: earlier, later, within; joined to `k.time.before`) |
+| prepositions | 32 prepositions as relations (place, goal, source, way; roles), 7 temporal ones (`w.lang.en.prep.time`: earlier, later, within; all 7 joined: to `k.time.before`, and during to `k.time.during`) |
 | numbers | 11 ordinals, 13 small cardinals (agree with `k.values.number`) |
 | morphology | 11 inflection rules in order, 5 irregular plurals, 31 noun exceptions, 20 contractions, 6 contraction endings (and core-plurals, hand-morphology: 201 irregular plurals more) |
 | ellipsis | 19 lead and 4 trail markers of a fragment, 10 repeats, 27 sentence starters, 6 limits |
@@ -84,8 +84,10 @@ right construction and head, with the nouns and adjectives taken from `k.words`.
   after a frame lead ("from now on the squares are grey"); was and were. Each parses with the library (a test).
 - Filled after k.time got its order (version 2): the temporal prepositions name `k.time.before` (`relation`) and
   which of its keys the first thing is (`first_is`): "Monday before Friday" holds when Monday is the `earlier`;
-  "December after November" when December is the `later`; `pp.time` is no longer a hole. during, until and since
-  have no fact of k.time to read yet. Still open: imperative clauses as productions (the frames say them), a
+  "December after November" when December is the `later`; `pp.time` is no longer a hole. until and since name the
+  same order (`second_is` the end or the start of a span, which itself counts: "Monday until Friday", "Friday since
+  Monday"); during names `k.time.during` (k.time version 3: "January during winter" in the north, "9 am during the
+  morning"). Still open: imperative clauses as productions (the frames say them), a
   possessive "of" beyond parts.
 - The library's tokenizer drops commas, so the coordination separator "," is not read ("a sun, a cloud and a man"
   parses only as "a sun and a cloud and a man"); questions.md Q39.

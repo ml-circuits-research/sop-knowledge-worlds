@@ -24,6 +24,10 @@ The calendar: months, weekdays, seasons and spans of time.
   rules make it from the months' `season_north` / `season_south` and `next` (a month whose season differs from the
   month before it starts its season), so it cannot disagree with the months: winter in the north is December to
   February, spring in the south September to November.
+- `k.time.during` (complete, **derived**, version 3): a `time` within a `span`: an hour within its part of the day
+  ("9 am" during the morning), a month within its season in a `hemisphere` (January during winter in the north,
+  during summer in the south). Three rules from the hours' `part` and the months' `season_north` / `season_south`: 48
+  facts. It is what the preposition "during" of `w.lang.en` reads.
 - `k.time.part_of_day` (complete): morning, afternoon, evening, night, with `n`, `next`, and `starts_about` /
   `ends_about` in hours after midnight (5, 12, 17, 21: everyday usage, which varies, hence `_about`).
 - `k.time.hour` (complete): the 24 hours of the clock, named as said (`midnight`, `"1 am"` ... `noon`, `"1 pm"` ...
@@ -38,8 +42,8 @@ The calendar: months, weekdays, seasons and spans of time.
 - No holidays: `k.time` has none yet (PLAN.md lists their names for a later import), so none has a place in time.
 
 Shards: `calendar` (months, weekdays, seasons, cycles, durations, words), `clock` (parts of the day, hours, words).
-The derived facts (`k.time.before`, `k.time.season_in`) are made by the rules of the schema when the shards are
-loaded, and written into the generated shard `derived` (391 wires, `derived=true`, `core.source="rule <rule id>"`,
+The derived facts (`k.time.before`, `k.time.season_in`, `k.time.during`) are made by the rules of the schema when the shards are
+loaded, and written into the generated shard `derived` (439 wires, `derived=true`, `core.source="rule <rule id>"`,
 by `tools/derive.mjs`) for tools and hosts that read shards without the rules. Hand-written (`hand-core 1`, CC0-1.0).
 
 ## Questions it helps with

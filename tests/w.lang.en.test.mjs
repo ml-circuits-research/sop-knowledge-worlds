@@ -113,12 +113,31 @@ test('w.lang.en joins k.actions: every marker of a role of k.actions is a prepos
 test('w.lang.en joins k.time: "Monday is before Friday", "December comes after November" by the order of k.time', () => {
   const time = fullWorld('k.time', worlds);
   const prep = (t) => { const ps = of('prep.time').filter((p) => one(p, 'text') === t); return Object.assign({}, ...ps.map((p) => Object.fromEntries(Object.entries(p.attrs).map(([k, x]) => [k, tok(x[0])])))); };
-  const holds = (a, t, b) => { const p = prep(t); const [earlier, later] = p.first_is === 'earlier' ? [a, b] : [b, a];
-    return time.ofType(p.relation).some((w) => tok(w.attrs.earlier[0]) === earlier && tok(w.attrs.later[0]) === later); };
+  // The first thing fills the key first_is, the second the key second_is; with `span` (until, since) the same time holds too.
+  const holds = (a, t, b, more = {}) => { const p = prep(t);
+    if (p.span && a === b) return true;
+    const want = { [p.first_is]: a, [p.second_is]: b, ...more };
+    return time.ofType(p.relation).some((w) => Object.entries(want).every(([k, x]) => tok(w.attrs[k]?.[0]) === x)); };
+  for (const t of ['before', 'after', 'earlier than', 'later than', 'until', 'since', 'during']) {
+    const p = prep(t);
+    assert.ok(p.relation && p.first_is && p.second_is, t);
+    assert.ok(time.schema(p.relation)?.keys[p.first_is] && time.schema(p.relation).keys[p.second_is], `${t}: keys of ${p.relation}`);
+  }
   assert.equal(holds('Monday', 'before', 'Friday'), true);
   assert.equal(holds('Friday', 'before', 'Monday'), false);
   assert.equal(holds('December', 'after', 'November'), true);
   assert.equal(holds('spring', 'earlier than', 'summer'), true);
+  // Round 12: until and since name the end and the start of a span; during, a span that holds the time.
+  assert.equal(holds('Monday', 'until', 'Friday'), true);
+  assert.equal(holds('Friday', 'until', 'Friday'), true, 'the end counts');
+  assert.equal(holds('Saturday', 'until', 'Friday'), false);
+  assert.equal(holds('Friday', 'since', 'Monday'), true);
+  assert.equal(holds('Monday', 'since', 'Friday'), false);
+  assert.equal(holds('January', 'during', 'winter', { hemisphere: 'north' }), true);
+  assert.equal(holds('January', 'during', 'summer', { hemisphere: 'south' }), true);
+  assert.equal(holds('January', 'during', 'summer', { hemisphere: 'north' }), false);
+  assert.equal(holds('9 am', 'during', 'morning'), true);
+  assert.equal(holds('3 pm', 'during', 'morning'), false);
   assert.equal(of('construction').find((c) => one(c, 'name') === 'pp.time').attrs.status, undefined, 'no longer a hole');
 });
 
