@@ -4315,7 +4315,8 @@
   "k.values/shards/sets"
  ],
  "all over": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "all the": [
   "k.values/shards/sets"
@@ -4486,7 +4487,8 @@
   "w.seating/schema.sop"
  ],
  "along the edge": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "alonso": [
   "k.words/shards/al",
@@ -6037,7 +6039,8 @@
   "k.words/shards/frequency-a"
  ],
  "anticlockwise": [
-  "k.values/shards/directions"
+  "k.values/shards/directions",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "antidote": [
   "k.words/shards/an",
@@ -7244,6 +7247,18 @@
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
  ],
+ "around the center": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "around the centre": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "around the edge": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "around the middle": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "around the neck": [
   "k.wearables/shards/places"
  ],
@@ -7275,7 +7290,8 @@
   "k.layouts/schema.sop",
   "k.words/shards/ar",
   "k.words/shards/frequency-a",
-  "w.diagram/schema.sop"
+  "w.diagram/schema.sop",
+  "w.lang.en/schema.sop"
  ],
  "arrangement": [
   "k.diagrams/schema.sop",
@@ -7283,10 +7299,12 @@
   "k.layouts/schema.sop",
   "k.words/shards/ar",
   "k.words/shards/frequency-a",
-  "w.diagram/schema.sop"
+  "w.diagram/schema.sop",
+  "w.lang.en/schema.sop"
  ],
  "arrangements": [
-  "k.layouts/schema.sop"
+  "k.layouts/schema.sop",
+  "w.lang.en/schema.sop"
  ],
  "arranging": [
   "k.words/shards/ar",
@@ -7580,6 +7598,9 @@
  ],
  "as a rule": [
   "w.lang.en/shards/clauses"
+ ],
+ "as a tree": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "as of": [
   "k.geo/schema.sop"
@@ -7987,11 +8008,15 @@
  "at ease": [
   "k.feelings/shards/feelings"
  ],
+ "at equal distances": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "at night": [
   "k.scenes/shards/scenes-other"
  ],
  "at random": [
-  "k.values/shards/sets"
+  "k.values/shards/sets",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "at the back": [
   "k.values/shards/directions"
@@ -17381,6 +17406,9 @@
  ],
  "bottom right corner": [
   "k.values/shards/directions"
+ ],
+ "bottom to top": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "bottom-left": [
   "k.values/shards/directions"
@@ -28564,7 +28592,8 @@
   "k.words/shards/frequency-c"
  ],
  "clockwise": [
-  "k.values/shards/directions"
+  "k.values/shards/directions",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "clockwork": [
   "k.attributes/shards/drawn-hand",
@@ -32679,7 +32708,8 @@
   "k.genres/shards/scientific-article"
  ],
  "counter-clockwise": [
-  "k.values/shards/directions"
+  "k.values/shards/directions",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "counterargument": [
   "k.genres/shards/essay",
@@ -32687,7 +32717,8 @@
   "k.procedures/shards/compose"
  ],
  "counterclockwise": [
-  "k.values/shards/directions"
+  "k.values/shards/directions",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "counterfeit": [
   "k.words/shards/co-2",
@@ -46975,6 +47006,9 @@
  "equalling": [
   "k.words/shards/eq"
  ],
+ "equally spaced": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "equals": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-procedures",
@@ -47623,6 +47657,12 @@
  ],
  "evenings": [
   "k.time/shards/clock"
+ ],
+ "evenly": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "evenly spaced": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "evenly_spaced": [
   "k.layouts/shards/layouts"
@@ -55221,17 +55261,29 @@
   "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
  ],
+ "from bottom to top": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "from here on": [
   "w.lang.en/shards/clauses"
  ],
+ "from left to right": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "from now on": [
   "w.lang.en/shards/clauses"
+ ],
+ "from right to left": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "from then on": [
   "w.lang.en/shards/clauses"
  ],
  "from today on": [
   "w.lang.en/shards/clauses"
+ ],
+ "from top to bottom": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "fromage frais": [
   "k.attributes/shards/drawn-mulberry",
@@ -67385,6 +67437,9 @@
   "k.objects/shards/noto-transport-ground-06",
   "k.scenes/shards/things-h"
  ],
+ "horizontally": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "hormone": [
   "k.words/shards/frequency-h",
   "k.words/shards/ho"
@@ -69545,10 +69600,39 @@
   "w.timeline/schema.sop"
  ],
  "in a circle": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a column": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a grid": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a line": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a pyramid": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a ring": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "in a row": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a stack": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a straight line": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a table": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "in a tree": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "in front": [
   "k.values/shards/directions"
@@ -69560,6 +69644,9 @@
  "in future": [
   "w.lang.en/shards/clauses"
  ],
+ "in rows and columns": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "in the background": [
   "k.values/shards/directions"
  ],
@@ -69570,10 +69657,14 @@
   "k.values/shards/directions"
  ],
  "in the corners": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "in the foreground": [
   "k.values/shards/directions"
+ ],
+ "in the four corners": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "in the future": [
   "w.lang.en/shards/clauses"
@@ -78073,6 +78164,9 @@
   "k.words/shards/frequency-l",
   "k.words/shards/la"
  ],
+ "laid out": [
+  "w.lang.en/schema.sop"
+ ],
  "laila": [
   "k.people/shards/given-names-l"
  ],
@@ -79670,6 +79764,9 @@
  ],
  "left side": [
   "k.values/shards/directions"
+ ],
+ "left to right": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "left-hand side": [
   "k.values/shards/directions"
@@ -94377,7 +94474,8 @@
   "k.scenes/shards/things-n"
  ],
  "nested": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "nesting": [
   "k.layouts/shards/layouts",
@@ -94674,7 +94772,8 @@
   "w.lang.en/shards/prepositions"
  ],
  "next to each other": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "next_max": [
   "k.procedures/shards/compose"
@@ -97522,7 +97621,8 @@
   "w.lang.en/shards/hand-joins"
  ],
  "on top of each other": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "on_topic": [
   "k.interest/shards/features"
@@ -97588,10 +97688,15 @@
   "w.lang.en/shards/numbers"
  ],
  "one above the other": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "one after the other": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
+ ],
+ "one below the other": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "one eye": [
   "k.faces/schema.sop"
@@ -97603,7 +97708,8 @@
   "k.values/shards/numbers"
  ],
  "one inside the other": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "one more": [
   "k.values/shards/sets"
@@ -97619,6 +97725,9 @@
  ],
  "one thousand": [
   "k.values/shards/numbers"
+ ],
+ "one under the other": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "one-piece": [
   "k.objects/shards/noto-clothing-02",
@@ -98977,7 +99086,8 @@
  ],
  "overlapping": [
   "k.words/shards/frequency-o",
-  "k.words/shards/ov"
+  "k.words/shards/ov",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "overload": [
   "k.words/shards/frequency-o",
@@ -109939,6 +110049,9 @@
  "radial": [
   "k.layouts/shards/layouts"
  ],
+ "radially": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "radiation": [
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
@@ -110484,7 +110597,8 @@
   "k.values/shards/sets"
  ],
  "randomly": [
-  "k.values/shards/sets"
+  "k.values/shards/sets",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "randy": [
   "k.people/shards/given-names-r"
@@ -113849,6 +113963,9 @@
  "right side": [
   "k.values/shards/directions"
  ],
+ "right to left": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "right-hand side": [
   "k.values/shards/directions"
  ],
@@ -116158,6 +116275,9 @@
  ],
  "round bread": [
   "k.objects/shards/openmoji-food-drink-02"
+ ],
+ "round in a circle": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "round mountain": [
   "k.geo/shards/oceania"
@@ -119739,7 +119859,8 @@
   "k.words/shards/sc"
  ],
  "scattered": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "scavenger": [
   "k.words/shards/frequency-s",
@@ -123847,7 +123968,8 @@
   "w.seating/schema.sop"
  ],
  "side by side": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "side chapel": [
   "k.kinds/shards/part_of-wordnet-3"
@@ -127391,6 +127513,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
+ "spaced evenly": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "spaceman": [
   "k.people/shards/roles-jobs"
  ],
@@ -128468,7 +128593,8 @@
  "spread out": [
   "k.actions/shards/actions-make-change",
   "k.actions/shards/verbs-place",
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "spreading": [
   "k.words/shards/frequency-s",
@@ -128913,7 +129039,8 @@
  ],
  "stacked": [
   "k.attributes/shards/attributes",
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "stacks": [
   "k.layouts/shards/layouts",
@@ -129936,6 +130063,9 @@
  ],
  "step back": [
   "k.actions/shards/verbs-undo"
+ ],
+ "step by step": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "step1": [
   "k.objects/shards/mulberry-building-structure-01",
@@ -139571,7 +139701,8 @@
   "k.values/shards/directions"
  ],
  "top to bottom": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "top up": [
   "k.actions/shards/actions-hands"
@@ -145089,6 +145220,9 @@
   "k.kinds/shards/head",
   "k.objects/shards/noto-transport-ground-06",
   "k.scenes/shards/things-v"
+ ],
+ "vertically": [
+  "w.lang.en/shards/hand-arrangements"
  ],
  "vertices": [
   "k.shapes/schema.sop"

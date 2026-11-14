@@ -4971,3 +4971,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   5 known (the chart frames; was 14 known); new test: the shard is the tool's output, 29 roles, 9 moved frames.
 - tests/w.lang.en.test.mjs: the join of frame roles to k.actions follows mode_map (a frame of group in the mode apart
   names roles of take apart), and the 07:40 comparison skips the moved frames after checking they are here.
+
+## 2026-11-15 — third worker: arrangement phrases in w.lang.en (block 04:40 item 4)
+
+- `w.lang.en.arrangement text= layout= relation= inverse= direction= diagram_layout=` (new type, exported; shard
+  hand-arrangements, 58 phrases, 9.5 kB, CC0): in a circle / ring / clockwise -> ring, circular; in a grid / in rows
+  and columns -> grid; in a row / side by side -> row; in a column / one above the other -> column; evenly / equally
+  spaced -> evenly_spaced; left to right -> row, left_of, left_to_right (right to left: inverse=yes); top to bottom ->
+  column, above; stacked, in a pyramid, scattered, at random, in the corners, around the centre, one inside the other
+  (nested, around inverse), step by step (flow), along the edge (border), overlapping (a diagram layout only).
+  `layout` is a declared join to k.layouts.layout (JOINS-REPORT regenerated); a relation named with an arrangement is
+  one that arrangement has in k.layouts.
+- Tests: new tests/w.lang.en.arrangement.test.mjs (3: joins to k.layouts and w.diagram; the reviewer's phrases; a
+  phrase for every repeating arrangement and for tree, radial, corners, border; every w.diagram layout asked by a
+  phrase and used by a k.diagrams kind). `npm run test:changed` 39 files, 255 tests, 253 pass, 2 skipped; after
+  rebasing on 7855ca2 (29 general frames) and rebuilding: catalog, validate, repo, w.lang.en.arrangement 3, closed 3,
+  morph 6, w.lang.en 22, frames 3, joins-report 3, coverage-report 4 pass.

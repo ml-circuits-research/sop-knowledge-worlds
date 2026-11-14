@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -111,6 +111,20 @@
 @w.lang.en.closed.text core.slot of=w.lang.en.closed key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
 @w.lang.en.closed.class core.slot of=w.lang.en.closed key=class id=true required=true enum=determiner enum=pronoun enum=preposition enum=conjunction enum=auxiliary enum=numeral enum=ordinal enum=adverb enum=particle enum=interjection core.source="hand-core 1"
 @w.lang.en.closed.from core.slot of=w.lang.en.closed key=from many=true required=true kind=atom core.source="hand-core 1"
+
+# A phrase that says how things are arranged (block "04:40" item 4: "in a circle", "evenly", "left to right", "top to
+# bottom"): `layout` the arrangement of k.layouts it names (ring, grid, row, column ...), `relation` the k.layouts
+# relation it asks between the things (evenly_spaced, left_of, above, inside, apart), `inverse=yes` when it says that
+# relation the other way round (right to left), `direction` the order it reads the things in, `diagram_layout` the
+# layout of a w.diagram it asks for (circular, grid, left_right, top_down, radial, overlapping, free). Hand-written
+# (shard hand-arrangements); a test keeps every value a value of k.layouts and w.diagram.
+@w.lang.en.arrangement core.type of=w.lang.en.arrangement shared=true closed=true core.source="hand-core 1"
+@w.lang.en.arrangement.text core.slot of=w.lang.en.arrangement key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.arrangement.layout core.slot of=w.lang.en.arrangement key=layout kind=atom kind=string type=k.layouts.layout by=name core.source="hand-core 1"
+@w.lang.en.arrangement.relation core.slot of=w.lang.en.arrangement key=relation enum=left_of enum=above enum=inside enum=around enum=on enum=beside enum=evenly_spaced enum=apart enum=aligned_row enum=aligned_column core.source="hand-core 1"
+@w.lang.en.arrangement.inverse core.slot of=w.lang.en.arrangement key=inverse enum=yes core.source="hand-core 1"
+@w.lang.en.arrangement.direction core.slot of=w.lang.en.arrangement key=direction enum=left_to_right enum=right_to_left enum=top_to_bottom enum=bottom_to_top enum=clockwise enum=anticlockwise core.source="hand-core 1"
+@w.lang.en.arrangement.diagram_layout core.slot of=w.lang.en.arrangement key=diagram_layout enum=top_down enum=left_right enum=radial enum=circular enum=grid enum=overlapping enum=free core.source="hand-core 1"
 
 # ---- morphology ----
 # A rule of inflection: `op` singular (from a plural) or plural (from a singular), or (block "02:55", shard
@@ -554,6 +568,7 @@
 
 @w.lang.en.word.closed core.word text="word class" text="closed class" text="function word" text="function words" means=w.lang.en.closed core.source="hand-core 1"
 @w.lang.en.word.class core.word text="paradigm class" text="inflection class" text=inflection text=conjugation means=w.lang.en.class core.source="hand-core 1"
+@w.lang.en.word.arrangement core.word text=arrangement text=arrangements text=arranged text="laid out" means=w.lang.en.arrangement core.source="hand-core 1"
 @w.lang.en.word.aux core.word text=auxiliary text="auxiliary verb" means=w.lang.en.aux core.source="hand-core 1"
 @w.lang.en.word.frame core.word text="argument frame" text=frame text=frames means=w.lang.en.frame core.source="hand-core 1"
 @w.lang.en.word.rule core.word text="grammar rule" text=production means=w.lang.en.rule core.source="hand-core 1"

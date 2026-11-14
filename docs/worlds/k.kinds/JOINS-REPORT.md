@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **188** in 30 worlds; distinct values 6273, meeting a target 6113 (97.4 %), open 160
+- declared joins: **189** in 30 worlds; distinct values 6286, meeting a target 6126 (97.5 %), open 160
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **112**; left undeclared on purpose: 6
 
@@ -198,6 +198,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | w.face | `w.face.face.expression` | `k.faces.expression` | name | 0 | 0 |  |
 | w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |
 | w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
+| w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 13 | 13 |  |
 | w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
 | w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 15 | 14 | `own` |
 | w.lang.en | `w.lang.en.mode_map.act` | `k.actions.act` | name | 2 | 2 |  |

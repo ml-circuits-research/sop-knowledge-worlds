@@ -297,6 +297,19 @@ question words by word); the marker lists (answers, corrections, leads, skipped 
 one table. Open-class words in the lists get no class (45: want, think, like, lose, new, the attribute nouns colour,
 size ...), and `tests/w.lang.en.closed.test.mjs` fails on a new word of a list that has neither.
 
+## Arrangement phrases (block "04:40" item 4)
+
+`w.lang.en.arrangement text= layout= relation= inverse= direction= diagram_layout=` (shard `hand-arrangements`, 58
+phrases, CC0): how a request says things are to be arranged, joined to what can carry it out. "in a circle", "in a
+ring", "clockwise" are the k.layouts arrangement `ring` and a w.diagram's `circular` layout; "in a grid", "in rows
+and columns" `grid`; "in a row", "side by side" `row`; "in a column", "one above the other" `column`; "evenly",
+"equally spaced" the k.layouts relation `evenly_spaced`; "left to right" `row` with `left_of` and the direction
+left_to_right ("right to left": the same relation, `inverse=yes`); "top to bottom" `column` with `above`; "stacked",
+"in a pyramid", "scattered", "at random", "in the corners", "around the centre", "one inside the other", "step by
+step", "along the edge", "overlapping". A relation named with an arrangement is one that arrangement has in k.layouts;
+every repeating arrangement and every diagram layout has a phrase (`tests/w.lang.en.arrangement.test.mjs`). The
+library reads them as acts over a layout (its block 04:40); no frame here uses them yet.
+
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the
