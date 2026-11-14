@@ -716,3 +716,7 @@ Accepted 37b83b5, bb61a21 (8,389 up edges over 6 dimensions, licence shards kept
 ## Reviewer 2026-11-15 01:20 — second worker's abstraction facts accepted; Q60–Q62
 
 Accepted d9b0de9 (18 argument classes, 919 typed relations), 73c4f2b (k.words coverage: 128 of 138 failing-paraphrase words reach a sense), f85a3af (6 structures, 33 forms of 17 worlds), 9e0e1eb (45 of 352 frames marked as variants). **Q60** forwarded to the library (it decides cardinality/direction/constraint mapping when `alignWorlds` needs them). **Q61:** declared joins are the source: a `joins=<type>` on schema slots, `k.kinds.relation` read from them; the value-share computation stays as a **report** that flags undeclared or broken joins (a test that warns, never one that fails because another world grew). **Q62:** asked PSys2's machine for the US Social Security baby-names data (public domain); it lands in psys2 data/external/.
+
+## Reviewer 2026-11-15 02:00 — pin 0.90 accepted (364c1a4); [LIB] role facts for k.kinds.structure
+
+Accepted 364c1a4 (one build on 0.90, normalise copy deleted). The library (its Q61) accepts the argument/relation/variant formats and asks, per structure role: `refers` (direction), `many` (cardinality), `required`, and constraint facts (capacity, distinct, order) — formats proposed in its worker-log ("answer to Q60"). Third worker, after its current item: add them to k.kinds.structure for the 17 worlds.
