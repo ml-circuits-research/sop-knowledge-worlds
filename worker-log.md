@@ -4413,3 +4413,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   k.kinds.structures 4, k.kinds 6, w.lang.en.abstraction 5, w.lang.en 21, w.lang.en.alternations 4, templates 8,
   k.words.paraphrase 2, k.values 5, k.cores 6, w.schemas 14, k.procedures 15, ask-real 4, k.attributes 11, k.geo 7,
   w.lang.ro 10, k.interest 5 pass.
+
+## 2026-11-15 — third worker: the one build moved to sopworld 0.90.0 (reviewer 00:40)
+
+- `tools/sopworld/sopworld.mjs` is the library's `docs/sopworld.mjs` at 7f3c31a (release 0.90.0, build e3dabf08a71f,
+  sha256 33e3ef4c…); `tools/sopworld/VERSION`, `tests/validate.test.mjs`, AGENTS.md, README.md, docs/index.html,
+  docs/worlds/README.md and w.lang.en/WORLD.md name it. `npm run build`: 32 worlds, 1,022 shards, 25,751 words; no
+  shard, warning or derived fact changed (the catalog differed in its `sopworld` commit and content hash only).
+- `tests/w.lang.en.alternations.test.mjs`: the test's copy of `normalise` / `alternationsOf` is deleted; it reads
+  the pinned build's `normalise(world, text, { rules })`. The library's `alternationsOf` carries no `n` and keeps the
+  world's order, so the test now checks that the world's order is `n`. 35 / 35 sentences as before, same rules, same
+  modes, canonical forms fixpoints, 17 of 352 frame examples changed.
+- No test changed behaviour with the new build: nothing for questions.md [LIB].
+- Found red on main before the move (not the pin): `tests/k.geo.test.mjs` "every number has its unit" failed on
+  `w.lang.en.alternation.n` (my a52dbec); fixed upstream at the same time (9e0e1eb), so no change of mine is left there.
+- Full suite one file at a time (61 files) on the new build: 2,981 pass, 1 fail (that k.geo test, then fixed and
+  rerun: 7 / 7), 17 skipped; after the fix validate 5 / 5, catalog 8 / 8. Slowest files (s): k.compose 229,
+  catalog 150, k.attributes 91, validate 72, k.cores 42, k.wearables 42, k.colours-shapes 40, derived 39,
+  k.objects.names 39, k.objects.render 34.
+- After rebasing onto 04bd420 (k.kinds relations and structures, w.lang.en variants): `npm run build` at the tip
+  with 0.90.0 changes nothing but the catalog's version (32 worlds, 1,056 shards, 25,989 words). The new and changed
+  tests on 0.90.0: k.kinds.relations 5, k.kinds.structures 4, k.kinds 6, k.words.paraphrase 2, w.lang.en.abstraction
+  5, w.lang.en 21, w.lang.en.alternations 4, templates 8, k.values 5, k.words 6, k.geo 7, coverage-report 2, validate
+  5, catalog 8 (killed once by memory, rerun alone) pass.

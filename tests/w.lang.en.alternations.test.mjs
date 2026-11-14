@@ -1,15 +1,15 @@
 // w.lang.en alternations (reviewer 21:55; the library's Q54 item 2): variants of a sentence brought back to the
 // canonical form a frame is written in, by rules that are facts of the language world. Checks: the shard is what the
 // tool writes and loads in the schema; families form a layered graph; every test sentence comes back to its canonical
-// form with the rules named, read by the library's semantics of `normalise` (sopworld 0.75, src/alternate.mjs there),
-// copied below as a reference reading because the pinned build (0.63) has no `normalise`: delete the copy and use
-// the pinned `normalise` when the pin reaches 0.75 (one reader, reviewer 12:05).
+// form with the rules named, read by the pinned build's `normalise` (src/alternate.mjs of the library; the test's
+// copy of it was deleted when the pin reached 0.90, reviewer 00:40).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, schemaWorld } from '../tools/lib/worlds.mjs';
 import { alternationShard, CASES } from '../tools/lang-en-alternations.mjs';
+import { normalise as libNormalise, alternationsOf } from '../tools/sopworld/sopworld.mjs';
 
 const path = join(WORLDS_DIR, 'w.lang.en', 'shards', 'alternations.sop');
 const base = schemaWorld(scanWorlds(), 'w.lang.en');
@@ -17,32 +17,9 @@ const world = base.world.fork();
 const told = world.tell(readFileSync(path, 'utf8'));
 const bare = (v) => String(v).replace(/^"|"$/g, '').replace(/\\"/g, '"');
 
-// The library's reading (sopworld 0.75 alternationsOf / normalise), unchanged but for the order: by `n`.
-const alternationsOf = (w) => w.ofType('w.lang.en.alternation').map((x) => ({ n: Number(x.attrs.n[0]), name: bare(x.attrs.name[0]), from: bare(x.attrs.from[0]), to: bare(x.attrs.to[0]), ...(x.attrs.mode ? { mode: bare(x.attrs.mode[0]) } : {}) })).sort((a, b) => a.n - b.n);
-function match(pat, toks, i, env, k) {
-  if (k === pat.length) return i === toks.length ? env : null;
-  const p = pat[k];
-  const span = /^\{([a-z_]+)\}$/.exec(p);
-  if (span) { for (let j = i + 1; j <= toks.length; j++) { const r = match(pat, toks, j, { ...env, [span[1]]: toks.slice(i, j) }, k + 1); if (r) return r; } return null; }
-  const alts = /^\[(.*)\]$/.exec(p) ? p.slice(1, -1).split('|') : [p];
-  return i < toks.length && alts.includes(toks[i]) ? match(pat, toks, i + 1, env, k + 1) : null;
-}
-function normalise(R, text, max = 6) {
-  const baseOf = (w) => w.replace(/ied$/, 'y').replace(/(?<=[^aeiou][aeiou]?[^aeiou])ed$/, '').replace(/ed$/, 'e').replace(/s$/, '');
-  let toks = String(text).toLowerCase().replace(/[?!.]+\s*$/, '').match(/[\p{L}\p{N}_'-]+/gu) || [];
-  const applied = []; let mode;
-  for (let n = 0; n < max; n++) {
-    let hit = null;
-    for (const r of R) { const env = match(r.from.split(/\s+/), toks, 0, {}, 0); if (env) { hit = { r, env }; break; } }
-    if (!hit) break;
-    const out = [];
-    for (const t of hit.r.to.split(/\s+/)) { const m = /^\{([a-z_]+)(?::(base))?\}$/.exec(t); if (m) out.push(...(m[2] ? [baseOf(hit.env[m[1]][0]), ...hit.env[m[1]].slice(1)] : hit.env[m[1]])); else out.push(t); }
-    if (out.join(' ') === toks.join(' ')) break;
-    toks = out; applied.push(hit.r.name); if (hit.r.mode) mode ??= hit.r.mode;
-  }
-  return { text: toks.join(' '), applied, ...(mode ? { mode } : {}) };
-}
+// The library's reading, one reader (reviewer 12:05): the pinned build's alternationsOf / normalise.
 const R = alternationsOf(world);
+const normalise = (rules, text) => libNormalise(world, text, { rules });
 
 test('the shard is what tools/lang-en-alternations.mjs writes, and loads in the schema of w.lang.en with no error or warning', () => {
   assert.equal(readFileSync(path, 'utf8'), alternationShard());
@@ -61,7 +38,10 @@ test('every alternation has a family; families form a layered graph up to "alter
   }
   const used = new Set(world.ofType('w.lang.en.alternation').map((f) => bare(f.attrs.family[0])));
   for (const f of ['polite word', 'ability question', 'desire', 'question vs command', 'embedded question', 'wh in situ', 'passive', 'dative shift', 'ellipsis']) assert.ok(used.has(f), f);
-  assert.deepEqual(R.map((r) => r.n), R.map((_, i) => i + 1), 'n is the order told');
+  // The library applies the rules in the order the world holds them: that order is `n`.
+  const ns = world.ofType('w.lang.en.alternation').map((x) => Number(x.attrs.n[0]));
+  assert.deepEqual(ns, ns.map((_, i) => i + 1), 'n is the order told');
+  assert.equal(R.length, ns.length);
 });
 
 test('every test sentence comes back to its canonical form with the rules named, in order, by the library\'s reading', () => {

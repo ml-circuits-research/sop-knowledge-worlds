@@ -61,7 +61,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 - **Views.** `in=` keeps the lists PSys2 had in its modules; `grammarView(world, type, view)` gives one,
   `viewDiff` says where two differ, so that unifying them is a measured decision of the application.
 
-Checked by `tests/w.lang.en.test.mjs` with the one library build of this repository (`tools/sopworld/VERSION`, 0.63.0): the
+Checked by `tests/w.lang.en.test.mjs` with the one library build of this repository (`tools/sopworld/VERSION`, 0.90.0): the
 noun-phrase examples ("the big red house", "the legs of the crocodile", "the house's door", "table 1 or table 2",
 "some of the tables", "everything except the tree", "the other table") and four question shapes parse with the
 right construction and head, with the nouns and adjectives taken from `k.words`.
@@ -157,8 +157,8 @@ tried in (the first whose pattern covers the whole sentence; to a fixpoint, at m
 
 `w.lang.en.alternation_family` gives the families and the family above each (up to `alternation`): the up edges of a
 construction for the library's cousins. `w.lang.en.alternation_case`: 35 test sentences with their canonical form,
-the rules applied in order and the mode; `tests/w.lang.en.alternations.test.mjs` checks them with a copy of the
-library's reading (the pin, 0.63, has no `normalise`), and the library's own 0.75 `normalise` gives the same 35 (checked once from its source, not in the tests).
+the rules applied in order and the mode; `tests/w.lang.en.alternations.test.mjs` checks them with the
+library's own `normalise` (the pin, 0.90.0; one reader, no copy in the tests).
 Of the 352 frame examples, 17 are changed by an alternation ("Pastel colours please.", "Draw me a nice picture.",
 "Tell me how many houses there are."): they are the variants the second worker marks.
 Not covered: double objects with a noun recipient ("give the dog the ball": two spans side by side cannot be told
