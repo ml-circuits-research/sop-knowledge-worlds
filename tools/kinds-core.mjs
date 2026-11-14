@@ -12,7 +12,20 @@
 //               machine), wings;
 //   - use:      what a thing is used for (k.attributes used_for), where a wearable is worn (k.wearables worn_on);
 //   - material: what a thing is made of (k.attributes material);
-//   - diet:     what an animal eats (k.animals diet: a herbivore).
+//   - diet:     what an animal eats (k.animals diet: a herbivore);
+//   - part_of:  what a part belongs to (Q59 (1): a wheel is part of a car, whose other parts are its siblings): the
+//               parts WordNet lists for a thing and for the kinds above it (k.parts whole and inherited, has and
+//               the plain word of a part's name, plain: a car wheel, a wheel), the usual parts of a thing (k.parts
+//               usual has), what people call a part of a thing (k.parts called part), the larger part of a body
+//               part (k.body part_of);
+//   - origin:   what a food comes from or grows on (k.food comes_from, grows_on: beef comes from a cow, an apple
+//               grows on a tree).
+// part_of and origin edges are derived (Q59 (2)): they point at the source fact by `from`, `key`, `value`, and that
+// fact stays the one home. They are added after every kind edge and only for a pair no edge relates yet, so a pair
+// the catalog or WordNet relates by kind keeps its kind edge, and a part's name gets no WordNet chain of its own here.
+// `sense` (Q59 (3)): on the edges of a name with two senses (k.attributes.same only=false: turkey the bird and the
+// food), the sense the edge is about: the sense whose types (`in`) hold the fact it is read from, or for a WordNet
+// edge the sense that chose the WordNet sense. Left out where the fact says no sense (k.parts, keyed by word).
 // The parents that are made here (farm animal, thing with wheels, road vehicle) get their own parents (shard
 // `classes`), so the graph goes up 2-3 layers from every thing. The `is_a` of the worlds that extend k.kinds.kind
 // (k.commonsense, k.people kind and role, k.shapes) are already up edges in their own worlds and are not copied: the
@@ -24,7 +37,7 @@ import { WORLDS_DIR, scanWorlds, readHeader } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, byText, splitParts } from './import/lib.mjs';
 
 export const PARENTS_PAGE = join(WORLDS_DIR, 'k.kinds', 'PARENTS.md');
-export const DIMENSIONS = ['kind', 'place', 'feature', 'use', 'material', 'diet'];
+export const DIMENSIONS = ['kind', 'place', 'feature', 'use', 'material', 'diet', 'part_of', 'origin'];
 const HAND = 'hand-core 1';
 
 // The facts of some types, read from the shard lines (keys with their values, strings unquoted), with their shard.
@@ -112,13 +125,25 @@ const srcOf = (f) => f.attrs['core.source'] ?? [HAND];
 
 export function kindsGraph(worlds = scanWorlds()) {
   const T = ['k.animals.animal', 'k.attributes.thing', 'k.food.food', 'k.body.part', 'k.space.body', 'k.wearables.wearable', 'k.people.kind', 'k.people.role',
-    'k.shapes.shape', 'k.commonsense.thing', 'k.objects.object', 'k.parts.whole', 'k.parts.inherited', 'k.parts.usual', 'k.words.sense'];
+    'k.shapes.shape', 'k.commonsense.thing', 'k.objects.object', 'k.parts.whole', 'k.parts.inherited', 'k.parts.usual', 'k.parts.called', 'k.words.sense',
+    'k.attributes.same'];
   const F = readFacts(T, worlds);
-  const edges = new Map(); // `${name}\t${is_a}` -> edge (the first reason kept: the catalog's own facts before WordNet's)
-  const add = (name, isA, dimension, reason) => {
+  // Names with two senses (k.attributes.same only=false), lower case -> [{ sense, in: Set of types }].
+  const two = new Map();
+  for (const f of F['k.attributes.same']) if (f.attrs.only?.[0] === 'false') (two.get(f.attrs.name[0].toLowerCase()) ?? two.set(f.attrs.name[0].toLowerCase(), []).get(f.attrs.name[0].toLowerCase())).push({ sense: f.attrs.sense[0], in: new Set(f.attrs.in ?? []) });
+  const senseOf = (name, from, hint) => {
+    const l = two.get(name.toLowerCase());
+    if (!l) return undefined;
+    if (hint) return l.some((x) => x.sense === hint) ? hint : undefined;
+    const m = l.filter((x) => x.in.has(from));
+    return m.length === 1 ? m[0].sense : undefined;
+  };
+  const edges = new Map(); // `${name}\t${is_a}[\t${sense}]` -> edge (the first reason kept: the catalog's own facts before WordNet's)
+  const add = (name, isA, dimension, { senseHint, ...reason }) => {
     if (!name || !isA || name === isA || STOP.has(isA)) return;
-    const k = `${name}\t${isA}`;
-    if (!edges.has(k)) edges.set(k, { name, is_a: isA, dimension, ...reason });
+    const s = reason.made ? undefined : senseOf(name, reason.from, senseHint);
+    const k = `${name}\t${isA}${s ? `\t${s}` : ''}`;
+    if (!edges.has(k)) edges.set(k, { name, is_a: isA, dimension, ...reason, ...(s ? { sense: s } : {}) });
   };
   // The things of the catalog and the sense each is given (the first owner that says one).
   const sense = new Map(), owners = new Map();
@@ -212,15 +237,17 @@ export function kindsGraph(worlds = scanWorlds()) {
   for (const e of edges.values()) if (!parentSense.has(e.is_a)) parentSense.set(e.is_a, sense.get(e.name) ?? null);
   const chosen = new Map();
   const names = [...new Set([...owners.keys(), ...parentSense.keys()])].sort(byText);
-  const reasonOf = (f, key) => ({ from: 'k.words.sense', key, value: `${f.attrs.word[0]} noun ${f.attrs.n[0]}`, source: srcOf(f)[0] });
+  const reasonOf = (f, key, senseHint) => ({ from: 'k.words.sense', key, value: `${f.attrs.word[0]} noun ${f.attrs.n[0]}`, source: srcOf(f)[0], senseHint });
+  const senseUsed = new Map(); // name -> the sense of the catalog that chose its WordNet sense
   // First the hypernyms of each name's own sense, then the chains above (so an edge's reason is its own sense).
   for (const name of names) {
     if (STOP.has(name)) continue;
-    const f = wordnetOf(name, sense.get(name) ?? parentSense.get(name) ?? 'thing');
+    const s = sense.get(name) ?? parentSense.get(name) ?? 'thing';
+    const f = wordnetOf(name, s);
     if (!f) continue;
-    chosen.set(name, f);
-    for (const p of f.attrs.is_a ?? []) add(name, p, 'kind', reasonOf(f, 'is_a'));
-    for (const p of f.attrs.instance_of ?? []) add(name, p, 'kind', reasonOf(f, 'instance_of'));
+    chosen.set(name, f); senseUsed.set(name, s);
+    for (const p of f.attrs.is_a ?? []) add(name, p, 'kind', reasonOf(f, 'is_a', s));
+    for (const p of f.attrs.instance_of ?? []) add(name, p, 'kind', reasonOf(f, 'instance_of', s));
   }
   // A word of a chain is the first word of a hypernym, whose sense is not said: the edge is kept only where that
   // word's chosen sense (or, for a word that is no thing, one of its senses) has that parent, so that the chain of
@@ -231,12 +258,20 @@ export function kindsGraph(worlds = scanWorlds()) {
     const f = chosen.get(name);
     if (!f) continue;
     const chain = f.attrs.kind_of ?? [];
-    for (let i = 0; i + 1 < chain.length; i += 1) if (chainOk(chain[i], chain[i + 1])) add(chain[i], chain[i + 1], 'kind', reasonOf(f, 'kind_of'));
+    for (let i = 0; i + 1 < chain.length; i += 1) if (chainOk(chain[i], chain[i + 1])) add(chain[i], chain[i + 1], 'kind', reasonOf(f, 'kind_of', senseUsed.get(chain[i])));
   }
+  // part_of: what a part belongs to; origin: what a food comes from or grows on (derived edges, after every kind edge,
+  // for pairs no edge relates yet).
+  const related = new Set([...edges.values()].map((e) => `${e.name}\t${e.is_a}`));
+  const derive = (name, isA, dimension, reason) => { if (!related.has(`${name}\t${isA}`)) add(name, isA, dimension, reason); };
+  for (const t of ['k.parts.whole', 'k.parts.inherited', 'k.parts.usual']) for (const f of F[t]) for (const key of ['has', 'plain']) for (const p of f.attrs[key] ?? []) derive(p, f.attrs.name[0], 'part_of', { from: t, key, value: p, source: srcOf(f)[0] });
+  for (const f of F['k.parts.called']) for (const p of f.attrs.part ?? []) derive(p, f.attrs.of[0], 'part_of', { from: 'k.parts.called', key: 'part', value: p, source: srcOf(f)[0] });
+  for (const f of F['k.body.part']) for (const w of f.attrs.part_of ?? []) derive(f.attrs.name[0], w, 'part_of', { from: 'k.body.part', key: 'part_of', value: w, source: srcOf(f)[0] });
+  for (const f of F['k.food.food']) for (const key of ['comes_from', 'grows_on']) for (const v of f.attrs[key] ?? []) derive(f.attrs.name[0], v, 'origin', { from: 'k.food.food', key, value: v, source: srcOf(f)[0] });
   // The is_a told in the worlds that extend k.kinds.kind: up edges already, not copied (counted by the report).
   const told = [];
   for (const t of ['k.commonsense.thing', 'k.people.kind', 'k.people.role', 'k.shapes.shape']) for (const f of F[t]) if (f.attrs.derived?.[0] !== 'true') for (const p of f.attrs.is_a ?? []) told.push({ name: f.attrs.name[0], is_a: p, dimension: 'kind', from: t, key: 'is_a' });
-  return { told, edges: [...edges.values()].sort((a, b) => byText(a.name, b.name) || byText(a.is_a, b.is_a)), owners, sense, chosen };
+  return { told, edges: [...edges.values()].sort((a, b) => byText(a.name, b.name) || byText(a.is_a, b.is_a) || byText(a.sense ?? '', b.sense ?? '')), owners, sense, chosen, two };
 }
 
 // The licence of a shard, from its header.
@@ -253,7 +288,7 @@ const SHARD_OF = (e) => {
 export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
   const byShard = new Map();
   for (const e of g.edges) (byShard.get(SHARD_OF(e)) ?? byShard.set(SHARD_OF(e), []).get(SHARD_OF(e))).push(e);
-  const line = (e) => wire(`k.kinds.parent.${seg(e.name)}.${seg(e.is_a)}`, 'k.kinds.parent', [['name', e.name], ['is_a', e.is_a], ['dimension', e.dimension], ['from', e.from], ['key', e.key], ['value', e.value], ['group', e.group]], e.source.split('\t')[0]).replace(/$/, e.source.includes('\t') ? e.source.split('\t').slice(1).map((s) => ` core.source=${JSON.stringify(s)}`).join('') : '');
+  const line = (e) => wire(`k.kinds.parent.${seg(e.name)}.${seg(e.is_a)}${e.sense ? `.${seg(e.sense)}` : ''}`, 'k.kinds.parent', [['name', e.name], ['is_a', e.is_a], ['dimension', e.dimension], ['from', e.from], ['key', e.key], ['value', e.value], ['group', e.group], ['sense', e.sense]], e.source.split('\t')[0]).replace(/$/, e.source.includes('\t') ? e.source.split('\t').slice(1).map((s) => ` core.source=${JSON.stringify(s)}`).join('') : '');
   const ABOUT = {
     kind: 'what a thing is, by the classes of the catalog\'s own facts (k.animals class, k.attributes kind, k.food kind, k.body kind, k.space kind, k.wearables kind, k.people role is and group)',
     head: 'what a thing of a name of several words is by the head of its name (a Christmas cake is a cake, a cloud with rain a cloud, a DVD player a player)',
@@ -264,6 +299,9 @@ export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
     use: 'what a thing is for (k.attributes used_for) and where a wearable is worn (k.wearables worn_on)',
     material: 'what a thing is made of (k.attributes material)',
     diet: 'what an animal eats (k.animals diet): a herbivore, a carnivore, an omnivore',
+    part_of: 'what a part belongs to, derived from the usual parts of k.parts (usual has), what people call a part of a thing (k.parts called) and the larger part of a body part (k.body part_of): a leg is part of an ant',
+    'part_of-wordnet': 'what a part belongs to, derived from the WordNet parts of k.parts (whole and inherited: has and plain): a fuselage is part of an aeroplane, a car wheel and a wheel of a car',
+    origin: 'what a food comes from or grows on, derived from k.food comes_from and grows_on: beef comes from a cow, an apple grows on a tree',
     wordnet: 'what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it',
     'group-hand': 'the hand-written group of a drawing (k.objects)', 'group-noto': 'the Unicode subgroup a Noto Emoji drawing is filed in (k.objects)',
     'group-mulberry': 'the Mulberry symbols category a drawing is filed in (k.objects)', 'group-openmoji': 'the OpenMoji group a drawing is filed in (k.objects)',
@@ -291,11 +329,11 @@ export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
 // Where the plain second parent of a single-parent thing would come from, per the worlds that name it.
 const HINTS = {
   'k.objects.object': 'Drawings with a group kind (Mulberry, Noto) and no WordNet sense or one outside the root of their group; the plain second parent is the class a k.attributes.thing fact would give (761 things have one) or the WordNet sense of the head of a Mulberry name, whose qualifier comes last ("chair computer")',
-  'k.food.food': 'The k.food kind and the WordNet hypernym are the same word (beef: meat; basil: herb), so one edge; the plain second is on another dimension: what the food comes from or grows on (k.food comes_from, grows_on: a food from an animal, a fruit of a tree), not taken yet',
+  'k.food.food': 'The k.food kind and the WordNet hypernym are the same word (beef: meat; basil: herb), so one edge, and k.food says neither comes_from nor grows_on (the origin edges, Q59): the plain second is where the food comes from',
   'k.shapes.shape': 'Shapes with only their WordNet sense: k.shapes says no is_a for them; the plain second is a k.shapes is_a (a circle is a round shape, a cylinder a solid of revolution)',
   'k.food.food, k.objects.object': 'As k.food.food; the drawing group says the same kind (vegetable, dish)',
   'k.attributes.thing, k.objects.object': 'The k.attributes kind or material only; the WordNet sense is missing or outside the root (fire, rainbow)',
-  'k.body.part': 'Parts with the k.body kind only (part, bone): the plain second is what they are part of (k.body part_of), an up edge on another dimension not taken here',
+  'k.body.part': 'Parts with the k.body kind only (part, bone) and no part_of in k.body or k.parts: the plain second is what they are part of',
   'k.space.body': 'Named bodies with their kind only: the plain second is the system they belong to (k.space in, orbits)',
 };
 
@@ -309,6 +347,7 @@ export function parentsReport(g = kindsGraph()) {
   const dims = (n) => new Set((up.get(n) ?? []).map((e) => e.dimension));
   const byDim = Object.fromEntries(DIMENSIONS.map((d) => [d, g.edges.filter((e) => e.dimension === d).length]));
   const multi = things.filter((n) => dims(n).size >= 2).length;
+  const twoEdges = g.edges.filter((e) => g.two.has(e.name.toLowerCase())), twoNames = new Set(twoEdges.map((e) => e.name.toLowerCase()));
   // A second parent is plain where the thing's own world has a class key it does not fill, or a drawing has no
   // group kind and no class: the owner types of each single-parent thing say which.
   const ownerList = (n) => [...g.owners.get(n)].sort(byText).join(', ');
@@ -319,11 +358,13 @@ export function parentsReport(g = kindsGraph()) {
     '',
     'Generated by `tools/kinds-core.mjs` from the shards; do not edit by hand. The edges are `k.kinds.parent` facts',
     '(shards `k.kinds/shards/*`); with the `is_a` of k.commonsense, k.people and k.shapes (which extend `k.kinds.kind`)',
-    'they are every "up" edge the catalog has (reviewer 21:55).',
+    'they are every "up" edge the catalog has (reviewer 21:55). The part_of and origin edges are derived from k.parts,',
+    'k.body and k.food (Q59): `from`, `key`, `value` name the fact, which stays their one home.',
     '',
     `- ${g.edges.length} edges over ${new Set(g.edges.map((e) => e.name)).size} names (things of the catalog, the kinds above them and WordNet's chain); per dimension: ${DIMENSIONS.map((d) => `${d} ${byDim[d]}`).join(', ')}.`,
     `- ${things.length} things of the catalog (the names of k.animals, k.objects, k.food, k.attributes, k.body, k.space, k.wearables, k.people, k.shapes, k.commonsense): ${multi} with parents on two or more dimensions, ${things.length - none.length - one.length - multi} with several parents on one, ${one.length} with one parent, ${none.length} with none.`,
     `- WordNet senses chosen for ${g.chosen.size} names.`,
+    `- Names with two senses (k.attributes.same only=false): ${g.two.size}; ${twoNames.size} of them have edges, ${twoEdges.filter((e) => e.sense).length} of their ${twoEdges.length} edges carry \`sense\` (${DIMENSIONS.map((d) => [d, twoEdges.filter((e) => e.sense && e.dimension === d).length]).filter((x) => x[1]).map((x) => x.join(' ')).join(', ')}); the other ${twoEdges.filter((e) => !e.sense).length} are read from facts that say no sense (k.parts, keyed by word: ${twoEdges.filter((e) => !e.sense && e.from.startsWith('k.parts')).length}) or that the types of no one sense hold.`,
     '',
     '## Things with no parent',
     '',

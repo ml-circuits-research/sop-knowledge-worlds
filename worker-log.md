@@ -4500,3 +4500,32 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   are canonical frames for 17 verb-ellipsis and wrapper variants of change (tools/lang-en-variants.mjs reads every
   frame). Regenerated, and the tool is now in `npm run build` (0.3 s) so a frame change regenerates it; then catalog,
   abstraction, repo pass; the other 30 files passed in that run.
+
+## 2026-11-15 — third worker: Q59 answers in k.kinds.parent: part_of and origin dimensions, `sense=` (reviewer 00:40)
+
+- Two new dimensions of `k.kinds.parent`, derived at build by tools/kinds-core.mjs (no hand copy; `from`, `key`,
+  `value` name the source fact, which stays the one home), added after every kind edge and only for pairs no other
+  edge relates: **part_of** 5,156 edges (k.parts whole / inherited / usual `has` and `plain`, k.parts called `part`,
+  k.body `part_of`: wheel, car wheel, door, bumper -> car; leg -> ant; eyebrow -> face; a car has 66 parts and 5+
+  other vehicles have a wheel) and **origin** 148 edges (k.food `comes_from` and `grows_on`: beef -> cow; cheese,
+  butter, yogurt -> milk; apple -> tree; carrot -> underground). k.parts inherited is taken because WordNet files the
+  car wheel under motor vehicle, which has no part list of its own (without it a wheel was no part of a car).
+- **`sense=`** (schema: slot `k.kinds.parent.sense`, id=true, the enum of k.attributes.same) on the edges of the 70
+  names with two senses (k.attributes.same only=false): 287 of their 371 edges (61 names) carry it — the sense whose
+  `in` types hold the fact the edge is read from, or for a WordNet edge the sense that chose the WordNet sense; the
+  other 84 come from facts keyed by word (k.parts, 73) or from types no single sense holds. The sense is part of the
+  edge's id, so a pair can hold for both senses (cod, herring, salmon, sardine, tuna are fish as animals and as foods:
+  5 new kind edges). Bat is one sense in the catalog (no club), so it has none.
+- Numbers: 13,698 edges (was 8,389) over 4,513 names; things with parents on 2+ dimensions 1,181 (was 935), one
+  parent 946 (was 1,009), none 64. New shards: part_of 1,556 wires / 233,185 B (CC0), part_of-wordnet-1..3 1,217 /
+  1,199 / 1,184 wires, 198,281 / 200,600 / 192,957 B (WordNet-3.0), origin 148 wires / 23,795 B (CC0); 0 warnings.
+  Catalog 32 worlds, 1,061 shards, 26,455 words. PARENTS.md and k.kinds WORLD.md say both; relations-kinds gains the
+  sense key.
+- tests/k.kinds.test.mjs 8 / 8 (two new: Q59 (1, 2) part_of / origin examples, cousins through a car, derived only
+  and one edge per pair, shards of their own; Q59 (3) sense examples, sense from the fact's types, unique ids).
+- Full suite of the round, 65 files one at a time on 0.90.0: 3,000 pass, 0 fail, 17 skipped (catalog killed by
+  memory once in the touched run and rerun alone: 8 / 8).
+- Rebased onto 8972c83 (narration, phrasing, test-run): `npm run build` again (k.attributes narration gains
+  `k.kinds.parent.sense` narrate=no; catalog 32 worlds, 1,063 shards, 26,471 words); after it k.kinds 8,
+  k.kinds.relations 5, k.kinds.structures 4, k.attributes.narration 3, w.lang.en.phrasing 3, k.interest 5, repo 1,
+  questions 424, shared-modules 5, validate 5, catalog 8 pass.

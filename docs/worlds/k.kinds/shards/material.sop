@@ -375,7 +375,7 @@
 @k.kinds.parent.ribbon.thing_made_of_cloth k.kinds.parent name=ribbon is_a="thing made of cloth" dimension=material from=k.attributes.thing key=material value=cloth core.source="hand-core 1"
 @k.kinds.parent.rifle.thing_made_of_metal k.kinds.parent name=rifle is_a="thing made of metal" dimension=material from=k.attributes.thing key=material value=metal core.source="hand-core 1"
 @k.kinds.parent.rifle.thing_made_of_wood k.kinds.parent name=rifle is_a="thing made of wood" dimension=material from=k.attributes.thing key=material value=wood core.source="hand-core 1"
-@k.kinds.parent.ring.thing_made_of_gold k.kinds.parent name=ring is_a="thing made of gold" dimension=material from=k.attributes.thing key=material value=gold core.source="hand-core 1"
+@k.kinds.parent.ring.thing_made_of_gold.clothing k.kinds.parent name=ring is_a="thing made of gold" dimension=material from=k.attributes.thing key=material value=gold sense=clothing core.source="hand-core 1"
 @k.kinds.parent.river.thing_made_of_water k.kinds.parent name=river is_a="thing made of water" dimension=material from=k.attributes.thing key=material value=water core.source="hand-core 1"
 @k.kinds.parent.robe.thing_made_of_cloth k.kinds.parent name=robe is_a="thing made of cloth" dimension=material from=k.attributes.thing key=material value=cloth core.source="hand-core 1"
 @k.kinds.parent.robot.thing_made_of_metal k.kinds.parent name=robot is_a="thing made of metal" dimension=material from=k.attributes.thing key=material value=metal core.source="hand-core 1"

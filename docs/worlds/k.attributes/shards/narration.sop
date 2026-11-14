@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (218 of 972 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (218 of 973 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -475,6 +475,7 @@
 @k.attributes.narration.k.kinds.parent.key k.attributes.narration type=k.kinds.parent key=key narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.parent.value k.attributes.narration type=k.kinds.parent key=value narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.parent.group k.attributes.narration type=k.kinds.parent key=group narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
+@k.attributes.narration.k.kinds.parent.sense k.attributes.narration type=k.kinds.parent key=sense narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.argument.name k.attributes.narration type=k.kinds.argument key=name narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.argument.about k.attributes.narration type=k.kinds.argument key=about narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.argument.live k.attributes.narration type=k.kinds.argument key=live narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"

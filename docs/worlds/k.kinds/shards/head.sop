@@ -295,7 +295,7 @@
 @k.kinds.parent.motor_scooter.scooter k.kinds.parent name="motor scooter" is_a=scooter dimension=kind from=k.objects.object key=name value="motor scooter" core.source="hand-core 1"
 @k.kinds.parent.motorbike_helmet.helmet k.kinds.parent name="motorbike helmet" is_a=helmet dimension=kind from=k.objects.object key=name value="motorbike helmet" core.source="hand-core 1"
 @k.kinds.parent.motorized_wheelchair.wheelchair k.kinds.parent name="motorized wheelchair" is_a=wheelchair dimension=kind from=k.objects.object key=name value="motorized wheelchair" core.source="hand-core 1"
-@k.kinds.parent.mount_fuji.fuji k.kinds.parent name="mount fuji" is_a=fuji dimension=kind from=k.objects.object key=name value="mount fuji" core.source="hand-core 1"
+@k.kinds.parent.mount_fuji.fuji.thing k.kinds.parent name="mount fuji" is_a=fuji dimension=kind from=k.objects.object key=name value="mount fuji" sense=thing core.source="hand-core 1"
 @k.kinds.parent.mountain_lake.lake k.kinds.parent name="mountain lake" is_a=lake dimension=kind from=k.objects.object key=name value="mountain lake" core.source="hand-core 1"
 @k.kinds.parent.mountain_railway.railway k.kinds.parent name="mountain railway" is_a=railway dimension=kind from=k.objects.object key=name value="mountain railway" core.source="hand-core 1"
 @k.kinds.parent.mouse_trap.trap k.kinds.parent name="mouse trap" is_a=trap dimension=kind from=k.objects.object key=name value="mouse trap" core.source="hand-core 1"
