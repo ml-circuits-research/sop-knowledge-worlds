@@ -245,6 +245,9 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
         ['name', p.name], ['country', country], ['capital_of', capital(p) ? country : undefined],
         ['population', Math.round(p.pop_max)], ['lat', r2(p.latitude)], ['lon', r2(p.longitude)],
       ], sources(NE)));
+      // block 07:40 item 3: the city's former or other name in Natural Earth (`namepar`: Bombay, Madras, Rangoon)
+      const par = clean(p.namepar ?? '');
+      if (par && par !== p.name && !(renamed && par === renamed.to) && /^\p{Lu}[\p{L}\s'.-]*$/u.test(par)) { out.words.push(w(`k.geo.word.city.${code}.par.${seg(p.name)}`, 'core.word', [['text', par], ['means', p.name], ['of', 'k.geo.city.name']], sources(NE))); stats.words++; }
       if (renamed && p.name === renamed.to) out.words.push(w(`k.geo.word.city.${code}.${seg(renamed.from)}`, 'core.word', [['text', renamed.from], ['means', renamed.to], ['of', 'k.geo.city.name']], sources(NE)));
       if (p.name === listCapital) out.borders.push({ name: `${country} ${p.name}`, line: w(`k.geo.borders.city.${code}.${seg(p.name)}`, 'k.geo.city', [['name', p.name], ['country', country], ['capital_of', country]], sources(MC)) });
       stats.cities++;

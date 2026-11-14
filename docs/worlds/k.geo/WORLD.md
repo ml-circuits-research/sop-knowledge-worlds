@@ -52,8 +52,16 @@ Two per continent:
 - Q33: `independent` follows Natural Earth's `SOVEREIGNT` (a country that is its own sovereign), not its `TYPE`,
   which called Cuba, Israel and Kazakhstan not independent and Aruba, Greenland, Hong Kong, Jersey independent; the
   country list agrees everywhere. `political_continent` (from the list's region): Cyprus, Europe.
+- Other names of places (block 07:40 item 3): in the continent shards, the city's other name that Natural Earth gives
+  (`namepar`: Bombay, Madras, Calcutta, Rangoon, Wien, Copenhagen; 30 words); `aliases` (WordNet-3.0, written by
+  `tools/geo-aliases.mjs`): the synonyms of the WordNet sense of a country or city that are proper names (Peking and
+  Peiping for Beijing, Persia for Iran, Holland for the Netherlands, Constantinople for Istanbul; 70 places, 103
+  words). A sense is the place when it is a kind of country or nation, or for a city when it lies in the city's
+  country; it is not when one of its other names is another place of k.geo (the Congo whose other name is Zaire is
+  the other Congo) or when it is about a former state (Russia as the USSR). WordNet gives former names too (Persia,
+  Siam, Constantinople) and names in the country's own language (Deutschland, Suomi): read as the place.
 
-15 shards, 3,861 wires, 696,264 bytes; the largest is `asia`.
+16 shards, 3,961 wires, 711,678 bytes; the largest is `asia`.
 
 ## Sources
 

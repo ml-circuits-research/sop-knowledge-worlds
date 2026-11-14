@@ -1,7 +1,7 @@
 # Knowledge worlds catalog
 
 This folder is served by GitHub Pages. Everything in it is generated or validated by the tools of the repository
-(`npm test` checks it); do not edit `index.json`, `vocab.json` or `LICENSES.md` by hand: run `node tools/build-catalog.mjs`.
+(`npm test` checks it); do not edit `index.json`, `vocab.json`, `vocab-kinds.json` or `LICENSES.md` by hand: run `node tools/build-catalog.mjs`.
 
 **Three kinds of worlds** (names used in every repository and in the library's docs): a **world schema** says what
 a kind of world is (its kinds of things, attributes, value types, acts, limits, rules and the words for them) and
@@ -59,6 +59,15 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
 without `.sop`); a word for a type or a key of a world ("capital", "synonym", "colour") points to the world's schema
 path (`k.<world>/schema.sop`): it says the world is relevant, and the other words of the message pick the shards. A
 host translates a message to English, lemmatises it, looks each lemma up, and fetches only those shards.
+
+## vocab-kinds.json
+
+The same words and shards, grouped by what the word names there: `{ "back": { "k.body.part": [...],
+"k.geo.river": ["k.geo/shards/north-america"], ... }, "peking": { "k.geo.city": ["k.geo/shards/aliases"] },
+"capital": { "k.geo.country.capital": ["k.geo/schema.sop"] } }`. The kind is the type of the wire whose identity
+value the word is, the type of the key a `core.word` gives another word for (`of=`), the type or key a word of a
+schema means, or the reusable world (`w.seating`) its words name. A reader that cannot resolve rivers or mountains
+skips those kinds before it fetches anything. One line per word; a host that does not need it never loads it.
 
 ## Using them
 

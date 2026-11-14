@@ -1,5 +1,6 @@
 // Scans docs/worlds, validates every world, and writes docs/worlds/index.json (the catalog, PLAN.md §2) and
-// docs/worlds/vocab.json (English lemma -> shard ids) and docs/worlds/LICENSES.md (the terms and attribution texts of
+// docs/worlds/vocab.json (English lemma -> shard ids), docs/worlds/vocab-kinds.json (English lemma -> the kind of
+// thing or key it names -> shard ids) and docs/worlds/LICENSES.md (the terms and attribution texts of
 // every source, from sources/<id>/SOURCE.md). Deterministic: sorted, no dates; a rerun gives no diff.
 //   node tools/build-catalog.mjs [worlds-dir]      write the files
 //   node tools/build-catalog.mjs --check           exit 1 when the files on disk are not what a build gives
@@ -14,7 +15,7 @@ import { scanSchemas, describeSchema } from './lib/schemas.mjs';
 const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const uniqSorted = (xs) => [...new Set(xs)].sort(byText);
 const SOPWORLD = /commit: (\w{7})/.exec(readFileSync(join(REPO, 'tools/sopworld/VERSION'), 'utf8'))[1];
-const GENERATED = new Set(['index.json', 'vocab.json', 'LICENSES.md']);
+const GENERATED = new Set(['index.json', 'vocab.json', 'vocab-kinds.json', 'LICENSES.md']);
 
 // A value token as plain text: strings unquoted; references and variables are not words.
 const text = (token) => (token.startsWith('"') ? str(token) : /^[$?]/.test(token) ? null : token);
@@ -88,12 +89,24 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   if (!v.ok) return { errors: v.errors };
   const { worlds, results } = v;
   const vocab = new Map();
-  const addWord = (word, shardId) => {
+  // Block 07:40 item 3: what each word names: the type of the thing whose identity value it is (back: k.geo.river), the
+  // type whose name a `core.word` gives another word for (Peking: k.geo.city), or the type or key a word of a schema
+  // means (capital: k.geo.country.capital); a reusable world's words name the world (w.seating).
+  const kinds = new Map();
+  const addWord = (word, shardId, kind) => {
     if (!isWordy(word)) return;
     const k = lemma(word);
     if (!vocab.has(k)) vocab.set(k, new Set());
     vocab.get(k).add(shardId);
+    if (!kind) return;
+    if (!kinds.has(k)) kinds.set(k, new Map());
+    const byKind = kinds.get(k);
+    if (!byKind.has(kind)) byKind.set(kind, new Set());
+    byKind.get(kind).add(shardId);
   };
+  // the type of a slot id (k.geo.city.name -> k.geo.city); a word with no `of` means a type or a key itself
+  const typeOfSlot = (slot) => slot.slice(0, slot.lastIndexOf('.'));
+  const kindOfWord = (w) => (w.attrs.of?.[0] ? typeOfSlot(w.attrs.of[0]) : text(w.attrs.means?.[0] ?? '') || null);
   const entries = [];
   for (const world of worlds) {
     const info = moduleInfo(world.schemaText) ?? { name: world.id, version: null, imports: [], exports: [] };
@@ -114,14 +127,14 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       const keys = [];
       for (const w of wires) {
         if (w.type === 'core.word') {
-          for (const t of w.attrs.text ?? []) addWord(text(t), shard.id);
+          for (const t of w.attrs.text ?? []) addWord(text(t), shard.id, kindOfWord(w));
           continue;
         }
         // a reusable world of facts (w.lang.en) names its own parts (frames, constructions, categories): only the
         // keys that hold English words make vocabulary
         for (const k of identityKeys(w.type).filter((x) => !world.id.startsWith('w.') || WORD_KEYS.has(x))) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
-          if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id); }
+          if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id, w.type); }
         }
       }
       const license = header.license?.[0] ?? null;
@@ -145,7 +158,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       const targets = of
         ? world.shards.filter((s) => shardWires.get(s.id).some((x) => (x.attrs[of.slice(of.lastIndexOf('.') + 1)] ?? []).some((t) => text(t) === means))).map((s) => s.id)
         : [world.schemaPath];
-      for (const t of w.attrs.text ?? []) for (const id of targets) addWord(text(t), id);
+      for (const t of w.attrs.text ?? []) for (const id of targets) addWord(text(t), id, kindOfWord(w));
     }
     entries.push({
       id: world.id,
@@ -164,26 +177,29 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   for (const s of scanSchemas(root)) {
     const d = describeSchema(s);
     if (d.errors.length) return { errors: d.errors };
-    for (const t of d.allWords) addWord(t, s.schemaPath);
+    for (const t of d.allWords) addWord(t, s.schemaPath, d.entry.id ?? d.entry.name ?? null);
     schemas.push(d.entry);
   }
   const index = { version: contentVersion(root), sopworld: SOPWORLD, worlds: entries };
   if (schemas.length) index.schemas = schemas;
   const vocabObj = Object.fromEntries([...vocab.keys()].sort(byText).map((k) => [k, [...vocab.get(k)].sort(byText)]));
-  return { errors: [], index, vocab: vocabObj, licenses: licensesText(index, sourcesDir) };
+  const kindsObj = Object.fromEntries([...kinds.keys()].sort(byText).map((k) => [k, Object.fromEntries([...kinds.get(k).keys()].sort(byText).map((t) => [t, [...kinds.get(k).get(t)].sort(byText)]))]));
+  return { errors: [], index, vocab: vocabObj, vocabKinds: kindsObj, licenses: licensesText(index, sourcesDir) };
 }
 
 export const serialize = (obj) => `${JSON.stringify(obj, null, 1)}\n`;
+// one line per word (vocab-kinds.json would be three times the size of vocab.json with one line per value)
+export const serializeCompact = (obj) => `{\n${Object.entries(obj).map(([k, v]) => `${JSON.stringify(k)}:${JSON.stringify(v)}`).join(',\n')}\n}\n`;
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const check = process.argv.includes('--check');
   const root = process.argv.slice(2).find((a) => !a.startsWith('--')) ?? WORLDS_DIR;
-  const { errors, index, vocab, licenses } = buildCatalog(root);
+  const { errors, index, vocab, vocabKinds, licenses } = buildCatalog(root);
   if (errors.length) {
     for (const e of errors) console.error(`error: ${e}`);
     process.exit(1);
   }
-  const files = { 'index.json': serialize(index), 'vocab.json': serialize(vocab), 'LICENSES.md': licenses };
+  const files = { 'index.json': serialize(index), 'vocab.json': serialize(vocab), 'vocab-kinds.json': serializeCompact(vocabKinds), 'LICENSES.md': licenses };
   let stale = false;
   for (const [name, content] of Object.entries(files)) {
     const p = join(root, name);

@@ -76,8 +76,8 @@ test('the k.geo shards on disk are what the importer gives from the raw files', 
     lakes: features('ne_10m_lakes'), marine: features('ne_10m_geography_marine_polys'),
   });
   const dir = join(WORLDS_DIR, 'k.geo', 'shards');
-  // numbers.sop is hand-written (tools/geo-numbers.mjs; tests/k.geo.test.mjs).
-  assert.deepEqual(readdirSync(dir).filter((f) => f !== 'numbers.sop' && !f.startsWith('psys2-')).sort(), Object.keys(files).sort());
+  // numbers.sop is hand-written (tools/geo-numbers.mjs; tests/k.geo.test.mjs); aliases.sop is written by tools/geo-aliases.mjs.
+  assert.deepEqual(readdirSync(dir).filter((f) => f !== 'numbers.sop' && f !== 'aliases.sop' && !f.startsWith('psys2-')).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
 });
 

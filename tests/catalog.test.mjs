@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync, mkdtempSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { buildCatalog, serialize } from '../tools/build-catalog.mjs';
+import { buildCatalog, serialize, serializeCompact } from '../tools/build-catalog.mjs';
 import { scanWorlds, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 
 const built = buildCatalog();
@@ -16,6 +16,7 @@ test('index.json and vocab.json on disk are what a build gives (a rerun gives no
   assert.equal(readFileSync(join(WORLDS_DIR, 'index.json'), 'utf8'), serialize(built.index));
   assert.equal(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'), serialize(built.vocab));
   assert.equal(readFileSync(join(WORLDS_DIR, 'LICENSES.md'), 'utf8'), built.licenses);
+  assert.equal(readFileSync(join(WORLDS_DIR, 'vocab-kinds.json'), 'utf8'), serializeCompact(built.vocabKinds));
   assert.equal(serialize(buildCatalog().index), serialize(built.index));
 });
 
@@ -73,4 +74,17 @@ test('a fixture world gives keys, sources, license and vocabulary from words and
     assert.deepEqual(vocab, { cup: ['k.toy/shards/a'], item: ['k.toy/schema.sop'], items: ['k.toy/schema.sop'], mug: ['k.toy/shards/a'] });
     assert.match(index.version, /^[0-9a-f]{12}$/);
   } finally { rmSync(root, { recursive: true }); }
+});
+
+test('block 07:40 item 3: vocab-kinds.json says what each word names, with the same shards as vocab.json', () => {
+  const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
+  const kinds = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab-kinds.json'), 'utf8'));
+  for (const [word, byKind] of Object.entries(kinds)) for (const shards of Object.values(byKind)) for (const s of shards) assert.ok(vocab[word].includes(s), `${word}: ${s}`);
+  const covered = Object.keys(vocab).filter((w) => kinds[w]).length;
+  assert.equal(covered, Object.keys(vocab).length, 'every word has a kind');
+  // "back" is a river of k.geo (a reader that cannot resolve rivers skips it), and a part of the body
+  assert.ok(kinds.back['k.geo.river'] && kinds.back['k.body.part']);
+  assert.deepEqual(kinds.peking['k.geo.city'], ['k.geo/shards/aliases']);
+  assert.deepEqual(kinds.capital['k.geo.country.capital'], ['k.geo/schema.sop']);
+  assert.ok(kinds['seating plan']['w.seating']);
 });

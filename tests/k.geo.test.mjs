@@ -111,3 +111,20 @@ test('Q33: capitals of today (Gitega, Astana, Ngerulmud), independence by sovere
   assert.deepEqual(cyprus.map((c) => one(c, 'political_continent')).filter(Boolean), ['Europe']);
   assert.equal(geo.ofType('k.geo.country').filter((c) => c.attrs.political_continent).length, 1);
 });
+
+test('block 07:40 item 3: other names of places (WordNet synonyms that are proper names, Natural Earth namepar), fresh', async () => {
+  const { aliasesShard } = await import('../tools/geo-aliases.mjs');
+  assert.equal(readFileSync(join(WORLDS_DIR, 'k.geo', 'shards', 'aliases.sop'), 'utf8'), aliasesShard());
+  const geo = fullWorld('k.geo', worlds);
+  const words = geo.ofType('core.word');
+  const means = (t, of) => words.filter((w) => (w.attrs.text ?? []).map(tok).includes(t) && one(w, 'of') === of).map((w) => one(w, 'means'));
+  assert.deepEqual(means('Peking', 'k.geo.city.name'), ['Beijing']);
+  assert.deepEqual(means('Bombay', 'k.geo.city.name'), ['Mumbai']);
+  assert.deepEqual(means('Calcutta', 'k.geo.city.name'), ['Kolkata']);
+  assert.deepEqual(means('Persia', 'k.geo.country.name'), ['Iran']);
+  assert.deepEqual(means('Zaire', 'k.geo.country.name'), [], 'Zaire is the other Congo');
+  assert.deepEqual(means('Soviet Union', 'k.geo.country.name'), [], 'a former state is not Russia');
+  assert.deepEqual(means('Peach State', 'k.geo.country.name'), [], 'the US state is not the country Georgia');
+  const places = new Set(geo.ofType('k.geo.country').concat(geo.ofType('k.geo.city')).map((w) => one(w, 'name')));
+  for (const w of words.filter((x) => /^k\.geo\.word\.alias\./.test(x.id))) for (const t of (w.attrs.text ?? []).map(tok)) assert.ok(!places.has(t), `${t} is a place of its own`);
+});

@@ -1,5 +1,5 @@
 {
- "version": "bd78936b7b70",
+ "version": "148f0278d0ab",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -13850,8 +13850,8 @@
     {
      "id": "k.geo/shards/africa",
      "path": "k.geo/shards/africa.sop",
-     "wires": 713,
-     "bytes": 126375,
+     "wires": 715,
+     "bytes": 126625,
      "keys": [
       "abay",
       "abidjan",
@@ -14506,6 +14506,18 @@
      "warnings": []
     },
     {
+     "id": "k.geo/shards/aliases",
+     "path": "k.geo/shards/aliases.sop",
+     "wires": 70,
+     "bytes": 11605,
+     "keys": [],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
      "id": "k.geo/shards/antarctica",
      "path": "k.geo/shards/antarctica.sop",
      "wires": 33,
@@ -14618,8 +14630,8 @@
     {
      "id": "k.geo/shards/asia",
      "path": "k.geo/shards/asia.sop",
-     "wires": 874,
-     "bytes": 151171,
+     "wires": 884,
+     "bytes": 152418,
      "keys": [
       "abakan range",
       "abu dhabi",
@@ -15498,8 +15510,8 @@
     {
      "id": "k.geo/shards/europe",
      "path": "k.geo/shards/europe.sop",
-     "wires": 663,
-     "bytes": 116895,
+     "wires": 676,
+     "bytes": 118493,
      "keys": [
       "aalborg",
       "adige",
@@ -16170,8 +16182,8 @@
     {
      "id": "k.geo/shards/north-america",
      "path": "k.geo/shards/north-america.sop",
-     "wires": 618,
-     "bytes": 124441,
+     "wires": 623,
+     "bytes": 125075,
      "keys": [
       "aberdeen lake",
       "adirondack mountains",
@@ -18608,12 +18620,14 @@
     "geonames-all-the-cities-3.1.0",
     "hand-core-1",
     "natural-earth-5.1.2",
-    "psys2-worlds-6b63b2ba"
+    "psys2-worlds-6b63b2ba",
+    "wordnet-3.1"
    ],
    "licenses": [
     "CC-BY-4.0",
     "CC0-1.0",
     "ODbL-1.0",
+    "WordNet-3.0",
     "public-domain"
    ],
    "warnings": []

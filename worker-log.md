@@ -3500,3 +3500,33 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   name; decomposition to depth 3, at most 200 acts; four points left to the library (role -> argument map, history
   and answer keys, the order `of` is looked up, kind-chain matching).
 - Nothing built yet in this commit; the world follows in the next ones. No test run (questions.md and the log only).
+## Block 07:40 item 3 (2026-11-14, second worker): the kind of each vocabulary word; other names of places
+
+- **`docs/worlds/vocab-kinds.json`** (new generated file, `tools/build-catalog.mjs`): every word of vocab.json with
+  its shards grouped by what the word names there: the type of the wire whose identity value it is (back:
+  `k.geo.river`, `k.body.part`, ...), the type of the key a `core.word` gives another word for (`of=`), the type or
+  key a schema word means (capital: `k.geo.country.capital`), or the reusable world (`w.seating`). Every word has a
+  kind (a test), the shards agree with vocab.json; one line per word, 2.9 MB (vocab.json 2.0 MB), loaded only by a
+  host that wants it. vocab.json itself is unchanged in format. README, docs/index.html say so; the catalog test
+  checks it is fresh.
+- **Aliases (Peking), two sources, each in the shard of its licence:** (1) Natural Earth's `namepar` in the geo
+  import: 30 `core.word` (Bombay, Madras, Calcutta, Rangoon, Bangalore, Mecca, Wien, Copenhagen, Gothenburg ...);
+  (2) `tools/geo-aliases.mjs` (in `npm run build`, freshness test), a join of k.geo to k.words: the synonyms of the
+  WordNet sense of a country or city that are proper names, into `k.geo/shards/aliases` (WordNet-3.0): 70 places, 103
+  words (Peking and Peiping for Beijing, Persia for Iran, Holland, Siam, Constantinople, Bharat).
+- **Three wrong joins found in the dry run, fixed by rule, each with a test:** "state" in the country pattern took the
+  US states (Georgia got "Peach State", Jersey "New Jersey"): only country or nation now; a sense one of whose other
+  names is another place of k.geo is that place (Congo got Zaire, the other Congo; now French Congo); a sense about
+  a former state is not the place (Russia got Soviet Union and USSR).
+- Looked at: all 109 names of the dry run (above). Not done: GeoNames alternate names (no language tags in the
+  packages the network reaches, so English could not be told from other languages); short names (Cluj) PSys2
+  handles by a rule of its own.
+- Tests: catalog (vocab-kinds fresh; every word has a kind; back is a river and a body part; peking a city in the
+  aliases shard; capital the key; "seating plan" w.seating); k.geo (aliases fresh; Peking, Bombay, Calcutta, Persia;
+  not Zaire, Soviet Union, Peach State; no alias is a place of its own); import.geo leaves aliases.sop out.
+- Numbers: k.geo 15 -> 16 shards of its own (3,861 -> 3,961 wires; words 249 -> 279 from namepar; aliases 70 wires,
+  11,605 bytes); catalog 25 worlds, 947 shards, vocab 24,309 -> 24,427 words; vocab-kinds.json 2,917,230 bytes.
+  npm test 2,884: 2,877 pass, 7 skipped, 0 fail (a first run failed on a stale index.json after a WORLD.md edit
+  and on the import test not knowing the new shard; both fixed).
+- Rebased on Q44 (first worker) and three reviewer blocks: index.json rebuilt; vocab 24,427 words. npm test 2,884:
+  2,877 pass, 7 skipped, 0 fail.
