@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.layouts core.module name=k.layouts version=1 exports=layout exports=slot exports=relation exports=anchor exports=joins core.source="hand-core 1"
+@k.layouts core.module name=k.layouts version=2 imports=k.named exports=layout exports=slot exports=relation exports=anchor exports=joins core.source="hand-core 1"
 
 # A named arrangement. `kind` is `repeating` when it arranges any number of like things (a row, a ring) and `fixed`
 # when it has named places, each for its own kind of thing (a landscape, a face). `about` says it in one sentence;
@@ -64,7 +64,7 @@
 # what usually goes there (many); for a `base`, `on` names what the thing stands or sits on. `named=model`: the
 # place was chosen by a language model, from the named parts of the object or by looking at the drawing under a
 # grid, only where sure, and looked at again drawn on the object.
-@k.layouts.anchor core.type of=k.layouts.anchor shared=true closed=true core.source="hand-core 1"
+@k.layouts.anchor core.type of=k.layouts.anchor extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.layouts.anchor.of core.slot of=k.layouts.anchor key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.anchor.name core.slot of=k.layouts.anchor key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.layouts.anchor.kind core.slot of=k.layouts.anchor key=kind required=true enum=seat enum=surface enum=top enum=handle enum=hand enum=opening enum=inside enum=water enum=roof enum=hook enum=base core.source="hand-core 1"
@@ -75,7 +75,6 @@
 @k.layouts.anchor.part core.slot of=k.layouts.anchor key=part kind=atom core.source="hand-core 1"
 @k.layouts.anchor.holds core.slot of=k.layouts.anchor key=holds many=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.anchor.on core.slot of=k.layouts.anchor key=on many=true kind=atom kind=string core.source="hand-core 1"
-@k.layouts.anchor.named core.slot of=k.layouts.anchor key=named enum=model core.source="hand-core 1"
 
 # Which kind of thing joins which: `a` is `rel` `b`. `part_of`: a is a part of b (a wheel of a car); `attaches_to`: a
 # is fixed to b (a roof to a wall, an arrow to a box); `sits_on`: a rests on b and can be taken off (a hat on a head,
@@ -84,12 +83,11 @@
 # says where on b: `top`, `bottom`, `side` (left or right), `front`, `back`, `end`, `edge`, `corner`, `centre`,
 # `inside`, `around`. Kinds are named by their common English noun. `named=model`: written by a language model, only
 # where sure.
-@k.layouts.joins core.type of=k.layouts.joins shared=true closed=true core.source="hand-core 1"
+@k.layouts.joins core.type of=k.layouts.joins extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.layouts.joins.a core.slot of=k.layouts.joins key=a id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.joins.rel core.slot of=k.layouts.joins key=rel id=true required=true enum=part_of enum=attaches_to enum=sits_on enum=hangs_from enum=goes_in enum=worn_on enum=grows_on enum=held_in enum=connects enum=around core.source="hand-core 1"
 @k.layouts.joins.b core.slot of=k.layouts.joins key=b id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.joins.side core.slot of=k.layouts.joins key=side enum=top enum=bottom enum=side enum=front enum=back enum=end enum=edge enum=corner enum=centre enum=inside enum=around core.source="hand-core 1"
-@k.layouts.joins.named core.slot of=k.layouts.joins key=named enum=model core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.layouts.word.layout core.word text=layout text=layouts text=arrangement text=arrangements text=arranged text=arrange means=k.layouts.layout core.source="hand-core 1"
@@ -127,8 +125,6 @@
 @k.layouts.word.key.anchor.h core.word text=h means=k.layouts.anchor.h core.source="hand-core 1"
 @k.layouts.word.key.anchor.part core.word text=part means=k.layouts.anchor.part core.source="hand-core 1"
 @k.layouts.word.key.anchor.on core.word text=on means=k.layouts.anchor.on core.source="hand-core 1"
-@k.layouts.word.key.anchor.named core.word text=named means=k.layouts.anchor.named core.source="hand-core 1"
 @k.layouts.word.key.joins.rel core.word text=rel means=k.layouts.joins.rel core.source="hand-core 1"
 @k.layouts.word.key.joins.b core.word text=b means=k.layouts.joins.b core.source="hand-core 1"
 @k.layouts.word.key.joins.side core.word text=side means=k.layouts.joins.side core.source="hand-core 1"
-@k.layouts.word.key.joins.named core.word text=named means=k.layouts.joins.named core.source="hand-core 1"

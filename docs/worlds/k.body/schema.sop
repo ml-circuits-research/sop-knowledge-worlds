@@ -4,13 +4,13 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.body core.module name=k.body version=1 exports=part exports=sense core.source="hand-core 1"
+@k.body core.module name=k.body version=2 imports=k.named exports=part exports=sense core.source="hand-core 1"
 
 # A part of the human body. `kind`: an outer part, an organ, a bone, or a tissue found all over the body, or the
 # whole body. `part_of` names the larger part it belongs to; `inside` names the part an inner part lies in; `count`
 # is how many an adult has (`child_count`: how many a young child has, where that differs); `does` says what it does;
 # `drawing` names the k.objects object that draws it.
-@k.body.part core.type of=k.body.part shared=true closed=true core.source="hand-core 1"
+@k.body.part core.type of=k.body.part extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.body.part.name core.slot of=k.body.part key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.body.part.kind core.slot of=k.body.part key=kind required=true enum=whole enum=part enum=organ enum=bone enum=tissue core.source="hand-core 1"
 @k.body.part.part_of core.slot of=k.body.part key=part_of kind=atom core.source="hand-core 1"
@@ -26,15 +26,11 @@
 # approximate count are never both on one part. `named=model`: written by a language model, only where sure.
 @k.body.part.about core.slot of=k.body.part key=about kind=string core.source="hand-core 1"
 @k.body.part.count_per_part core.slot of=k.body.part key=count_per_part kind=integer min=1 core.source="hand-core 1"
-@k.body.part.count_about core.slot of=k.body.part key=count_about kind=integer min=1 core.source="hand-core 1"
+@k.body.part.count_about core.slot of=k.body.part key=count_about excludes=count kind=integer min=1 core.source="hand-core 1"
 @k.body.part.temperature_about core.slot of=k.body.part key=temperature_about kind=number core.source="hand-core 1"
 @k.body.part.amount_about core.slot of=k.body.part key=amount_about kind=number min=0 core.source="hand-core 1"
 @k.body.part.length_about core.slot of=k.body.part key=length_about kind=number min=0 core.source="hand-core 1"
 @k.body.part.weight_about core.slot of=k.body.part key=weight_about kind=number min=0 core.source="hand-core 1"
-@k.body.part.named core.slot of=k.body.part key=named enum=model core.source="hand-core 1"
-@k.body.both.exact k.body.part name=?part count=?exact
-@k.body.both.about k.body.part name=?part count_about=?about
-@k.body.both core.deny when=$k.body.both.exact when=$k.body.both.about why="The ?part has both an exact and an approximate count." core.source="hand-core 1"
 
 # One of the five senses and the part of the body it works with.
 @k.body.sense core.type of=k.body.sense shared=true closed=true complete=true core.source="hand-core 1"
@@ -63,5 +59,4 @@
 @k.body.word.key.part.amount_about core.word text=amount means=k.body.part.amount_about core.source="hand-core 1"
 @k.body.word.key.part.length_about core.word text=length means=k.body.part.length_about core.source="hand-core 1"
 @k.body.word.key.part.weight_about core.word text=weight means=k.body.part.weight_about core.source="hand-core 1"
-@k.body.word.key.part.named core.word text=named means=k.body.part.named core.source="hand-core 1"
 @k.body.word.key.sense.organ core.word text=organ means=k.body.sense.organ core.source="hand-core 1"

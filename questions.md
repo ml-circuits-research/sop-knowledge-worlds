@@ -252,6 +252,23 @@ styles, or one style with per-age slot boxes), a drawing task of its own; (d) va
 size, roundness, tilt, openness), item 2 of the block, which this experiment did not try: the anchors-and-scale maps
 were enough to measure the canon, and redrawing 181 variants as parameters only pays if (c) is wanted.
 Blocking: no. Meanwhile: (a).
+## Q48 (block "06:55" item 2, second worker, 2026-11-14): a join by key that does not depend on load order
+Question: may `drawing=` and the other joins to `k.objects` wait for a join check that does not refuse a fact told
+before the wire it names (a check at the end of a load, by `world.check()`, or one that is open until the target's
+facts are there), instead of being declared now with `type=k.objects.object by=name`?
+Context: declared on the 10 `drawing` slots of 8 worlds, the joins held when the k.objects shards were told first
+(a load of all of them gave no violation), but sopworld 0.52 checks a `by=` join when a fact is told, as soon as the
+target type is declared. `k.objects` imports `k.commonsense`, which imports `k.animals` and `k.food`, so
+`fullWorld('k.objects')` (and any host that loads a module's imports first) tells 400 animal and food facts before
+any object, and each is refused ("must be the name of a k.objects.object wire"). A host that loads shards lazily
+(by the words of a message) would be refused whenever a fact comes before the shard of its drawing. The join of a
+stand-in inside k.objects cannot be declared at all while every shard must load alone.
+Options: (a) the library checks `by=` joins after a load, or on request, and leaves them open while telling; (b) the
+check is open until a fact of the target type with that key is told (a missing target is then a report, not a
+refusal); (c) declare them and make every loader tell the target world's shards first (k.objects before its own
+imports: a cycle in practice).
+Blocking: no. Meanwhile: the joins are not declared; `tests/shared-modules.test.mjs` checks that every `drawing=` of
+every world names an object (1,000+ joins, none missing), and docs/worlds/README.md says why.
 
 # Closed
 

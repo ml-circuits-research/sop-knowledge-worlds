@@ -62,5 +62,5 @@ test('a word for every key: each schema ends with the block of tools/key-words.m
     assert.ok(text.includes(START), w.id);
   }
   const have = new Set([...cat.keyWords.values()].flat().map((k) => `${k.type}.${k.key}`));
-  for (const [type, t] of cat.types) if (t.nameKey && type.startsWith('k.')) for (const key of t.slots.keys()) if (key !== t.nameKey) assert.ok(have.has(`${type}.${key}`), `${type}.${key} has no word`);
+  for (const [type, t] of cat.types) if (t.nameKey && type.startsWith('k.')) for (const [key, slot] of t.slots) if (key !== t.nameKey) assert.ok(have.has(`${slot.from ?? type}.${key}`), `${type}.${key} has no word`); // an inherited key has the word of the type that declares it
 });

@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.scenes core.module name=k.scenes version=1 exports=thing exports=scene exports=has core.source="hand-core 1"
+@k.scenes core.module name=k.scenes version=2 imports=k.named exports=thing exports=scene exports=has core.source="hand-core 1"
 
 # The usual place and the relative size of a thing, named as its drawing in k.objects (the same name) or as a
 # stand-in there. `place` is where one usually sees it: in the `sky` (also: in the air), on the `ground` (outdoors),
@@ -17,12 +17,11 @@
 # `huge` is bigger than a truck (a house, a tree, a ship, a mountain, the sun). A key is left out where the thing
 # has no usual place or the size is not plain. `named=model`: the label was given by a language model from the
 # name of the thing, and only where sure; a sample was checked against the drawings.
-@k.scenes.thing core.type of=k.scenes.thing shared=true closed=true core.source="hand-core 1"
+@k.scenes.thing core.type of=k.scenes.thing extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.scenes.thing.name core.slot of=k.scenes.thing key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.scenes.thing.place core.slot of=k.scenes.thing key=place enum=sky enum=ground enum=water enum=indoors enum=on_thing core.source="hand-core 1"
 @k.scenes.thing.on core.slot of=k.scenes.thing key=on many=true kind=atom kind=string core.source="hand-core 1"
 @k.scenes.thing.size core.slot of=k.scenes.thing key=size enum=tiny enum=small enum=medium enum=large enum=huge core.source="hand-core 1"
-@k.scenes.thing.named core.slot of=k.scenes.thing key=named enum=model core.source="hand-core 1"
 
 # A thing that is on another thing says which.
 @k.scenes.on_what.fact k.scenes.thing name=?thing place=on_thing core.absent=on
@@ -76,7 +75,6 @@
 @k.scenes.word.key.thing core.word text=thing means=k.scenes.thing core.source="hand-core 1"
 @k.scenes.word.key.thing.place core.word text=where text=find text=found means=k.scenes.thing.place core.source="hand-core 1"
 @k.scenes.word.key.thing.on core.word text=on means=k.scenes.thing.on core.source="hand-core 1"
-@k.scenes.word.key.thing.named core.word text=named means=k.scenes.thing.named core.source="hand-core 1"
 @k.scenes.word.key.scene.kind core.word text=kind means=k.scenes.scene.kind core.source="hand-core 1"
 @k.scenes.word.key.scene.ground core.word text=ground means=k.scenes.scene.ground core.source="hand-core 1"
 @k.scenes.word.key.scene.drawing core.word text=drawing means=k.scenes.scene.drawing core.source="hand-core 1"

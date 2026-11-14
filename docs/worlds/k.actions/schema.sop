@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/acts-core.mjs
 
-@k.actions core.module name=k.actions version=2 exports=act exports=role exports=verb exports=marking exports=action exports=similar core.source="hand-core 1"
+@k.actions core.module name=k.actions version=3 imports=k.named exports=act exports=role exports=verb exports=marking exports=action exports=similar core.source="hand-core 1"
 
 # An act: one of the few things a person can ask for, whatever the things are. `about` says it in plain words;
 # `opposite` names the act that does the contrary, where there is one; `role` names the roles the act takes (many).
@@ -40,7 +40,7 @@
 # `separable=true`: the object may stand between the verb and its particle ("take the hat off"); `after_particle`
 # names the role of a second noun phrase after the particle ("put the hat on the man": the place).
 # `named=model`: that the sense means the act, and the roles, were read and judged by a language model.
-@k.actions.verb core.type of=k.actions.verb shared=true closed=true core.source="hand-core 1"
+@k.actions.verb core.type of=k.actions.verb extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.actions.verb.text core.slot of=k.actions.verb key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.verb.act core.slot of=k.actions.verb key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.verb.sense core.slot of=k.actions.verb key=sense many=true kind=integer min=1 core.source="hand-core 1"
@@ -51,7 +51,6 @@
 @k.actions.verb.value core.slot of=k.actions.verb key=value kind=atom kind=string core.source="hand-core 1"
 @k.actions.verb.separable core.slot of=k.actions.verb key=separable kind=boolean core.source="hand-core 1"
 @k.actions.verb.after_particle core.slot of=k.actions.verb key=after_particle kind=atom kind=string core.source="hand-core 1"
-@k.actions.verb.named core.slot of=k.actions.verb key=named enum=model core.source="hand-core 1"
 
 # After this verb (in this act) the word `marker` marks the role `role` ("replace the cat with a dog": with marks
 # the replacement). It comes before the markers of the role itself.
@@ -121,7 +120,6 @@
 @k.actions.word.key.verb.value core.word text=value means=k.actions.verb.value core.source="hand-core 1"
 @k.actions.word.key.verb.separable core.word text=separable means=k.actions.verb.separable core.source="hand-core 1"
 @k.actions.word.key.verb.after_particle core.word text="after particle" means=k.actions.verb.after_particle core.source="hand-core 1"
-@k.actions.word.key.verb.named core.word text=named means=k.actions.verb.named core.source="hand-core 1"
 @k.actions.word.key.marking.act core.word text=act means=k.actions.marking.act core.source="hand-core 1"
 @k.actions.word.key.marking.marker core.word text=marker means=k.actions.marking.marker core.source="hand-core 1"
 @k.actions.word.key.marking.role core.word text=role means=k.actions.marking.role core.source="hand-core 1"

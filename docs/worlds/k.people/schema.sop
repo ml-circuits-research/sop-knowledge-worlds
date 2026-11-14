@@ -15,7 +15,6 @@
 # kind `person` is above every other (a man, a woman, a child, a baby is a person), and `relative` (a member of a
 # family) is a person; these two have no one age or height, so `age` and `height_about` are not required.
 @k.people.kind core.type of=k.people.kind extends=k.kinds.kind shared=true closed=true core.source="hand-core 1"
-@k.people.kind.name core.slot of=k.people.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.people.kind.age core.slot of=k.people.kind key=age enum=baby enum=child enum=adult enum=old core.source="hand-core 1"
 @k.people.kind.sex core.slot of=k.people.kind key=sex enum=male enum=female core.source="hand-core 1"
 @k.people.kind.height_about core.slot of=k.people.kind key=height_about kind=integer min=1 max=120 core.source="hand-core 1"

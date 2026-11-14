@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.faces core.module name=k.faces version=2 imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression exports=canon core.source="hand-core 1"
+@k.faces core.module name=k.faces version=3 imports=k.named imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression exports=canon core.source="hand-core 1"
 
 # A place of a face in one style: its anchor box in the face frame and its draw order (lower first). The parts of a
 # variant lie inside the box of its slot. `mirror=true`: the slot is a pair (eyes, eyebrows, ears, cheeks, earrings);
@@ -28,7 +28,7 @@
 # whom it fits, where the drawing shows it; many) and `kind` (what a person would call it: ponytail, goatee, cap).
 # `style` keeps the drawings of one hand together: a face does not mix styles unless asked. `named=model`: a
 # language model gave the features by looking at an imported drawing.
-@k.faces.variant core.type of=k.faces.variant shared=true closed=true core.source="hand-core 1"
+@k.faces.variant core.type of=k.faces.variant extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.faces.variant.slot core.slot of=k.faces.variant key=slot id=true required=true kind=atom core.source="hand-core 1"
 @k.faces.variant.name core.slot of=k.faces.variant key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.faces.variant.style core.slot of=k.faces.variant key=style required=true kind=atom kind=string core.source="hand-core 1"
@@ -38,7 +38,6 @@
 @k.faces.variant.feel core.slot of=k.faces.variant key=feel many=true enum=thin enum=thick enum=curly enum=straight enum=wavy enum=bushy enum=arched enum=flat enum=wide enum=narrow enum=open enum=closed enum=smiling enum=sad enum=surprised core.source="hand-core 1"
 @k.faces.variant.age core.slot of=k.faces.variant key=age many=true enum=child enum=adult enum=old core.source="hand-core 1"
 @k.faces.variant.kind core.slot of=k.faces.variant key=kind kind=atom kind=string core.source="hand-core 1"
-@k.faces.variant.named core.slot of=k.faces.variant key=named enum=model core.source="hand-core 1"
 
 # A part of a variant, a part of k.drawing (as the parts of k.objects): a primitive shape with a box in the face frame, a draw order inside the
 # variant and typical colours. `slot` and `of` name the variant. `tint` says which colour of the face fills the part
@@ -144,7 +143,6 @@
 @k.faces.word.key.variant.style core.word text=style means=k.faces.variant.style core.source="hand-core 1"
 @k.faces.word.key.variant.feel core.word text=feel means=k.faces.variant.feel core.source="hand-core 1"
 @k.faces.word.key.variant.kind core.word text=kind means=k.faces.variant.kind core.source="hand-core 1"
-@k.faces.word.key.variant.named core.word text=named means=k.faces.variant.named core.source="hand-core 1"
 @k.faces.word.key.part.of core.word text=of means=k.faces.part.of core.source="hand-core 1"
 @k.faces.word.key.part.name core.word text=name means=k.faces.part.name core.source="hand-core 1"
 @k.faces.word.key.part.kind core.word text=kind means=k.faces.part.kind core.source="hand-core 1"

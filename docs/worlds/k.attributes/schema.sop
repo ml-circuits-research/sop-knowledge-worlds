@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=3 exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=4 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -52,7 +52,7 @@
 # A host that needs a colour takes the usual one, then the drawn one. `material` (many) what it is usually made of; `wheels` how
 # many wheels it usually has (0: it is a vehicle without wheels); `can` (many) what it can do; `used_for` (many)
 # what people use it for. `named=model`: the values were given by a language model from the name of the thing.
-@k.attributes.thing core.type of=k.attributes.thing shared=true closed=true core.source="hand-core 1"
+@k.attributes.thing core.type of=k.attributes.thing extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.attributes.thing.name core.slot of=k.attributes.thing key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.thing.kind core.slot of=k.attributes.thing key=kind kind=atom kind=string core.source="hand-core 1"
 @k.attributes.thing.colour core.slot of=k.attributes.thing key=colour many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown enum=any core.source="hand-core 1"
@@ -60,7 +60,6 @@
 @k.attributes.thing.wheels core.slot of=k.attributes.thing key=wheels kind=integer min=0 core.source="hand-core 1"
 @k.attributes.thing.can core.slot of=k.attributes.thing key=can many=true kind=atom core.source="hand-core 1"
 @k.attributes.thing.used_for core.slot of=k.attributes.thing key=used_for many=true kind=string core.source="hand-core 1"
-@k.attributes.thing.named core.slot of=k.attributes.thing key=named enum=model core.source="hand-core 1"
 
 # The colours a drawable thing is drawn in: computed from the drawing of k.objects that has the name `name`
 # (tools/drawn-colour.mjs), the largest first, at most three. `drawn_colour` (many) is one of the eleven basic
@@ -82,7 +81,7 @@
 # whether it is cheap, medium or expensive to buy. The units are in k.units.measure. `named=model`: the values were
 # given by a language model from the name of the thing. Q37: `sense`, only on the facts of a name with several
 # senses (k.attributes.same with only=false: turkey the bird and the food), says which one the numbers are about.
-@k.attributes.number core.type of=k.attributes.number shared=true closed=true core.source="hand-core 1"
+@k.attributes.number core.type of=k.attributes.number extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.attributes.number.name core.slot of=k.attributes.number key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.number.sense core.slot of=k.attributes.number key=sense id=true enum=animal enum=food enum=plant enum=person enum="body part" enum=clothing enum=colour enum=shape enum=place enum=time enum="body in space" enum=thing core.source="hand-core 1"
 @k.attributes.number.size_about core.slot of=k.attributes.number key=size_about kind=number min=0 core.source="hand-core 1"
@@ -93,7 +92,6 @@
 @k.attributes.number.legs core.slot of=k.attributes.number key=legs kind=integer min=0 core.source="hand-core 1"
 @k.attributes.number.sides core.slot of=k.attributes.number key=sides kind=integer min=0 core.source="hand-core 1"
 @k.attributes.number.price_class core.slot of=k.attributes.number key=price_class enum=cheap enum=medium enum=expensive core.source="hand-core 1"
-@k.attributes.number.named core.slot of=k.attributes.number key=named enum=model core.source="hand-core 1"
 
 # When and by whom a thing of k.scenes is usually used or seen (tools/usage-core.mjs), each only where it is plain:
 # `season`, `time` and `weather` (many) take the values of k.scenes.scene, so a thing fits a scene with the same
@@ -101,7 +99,7 @@
 # beer for an adult); `used_by` (many) names a k.people.role that uses it, where the role does not already list it in
 # its own `uses` (who uses a thing: both). `named=model`: the values were given by a language model. Q37: `sense`,
 # only on the facts of a name with several senses (star the shape and the body in space), says which one is meant.
-@k.attributes.usage core.type of=k.attributes.usage shared=true closed=true core.source="hand-core 1"
+@k.attributes.usage core.type of=k.attributes.usage extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.attributes.usage.name core.slot of=k.attributes.usage key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.usage.sense core.slot of=k.attributes.usage key=sense id=true enum=animal enum=food enum=plant enum=person enum="body part" enum=clothing enum=colour enum=shape enum=place enum=time enum="body in space" enum=thing core.source="hand-core 1"
 @k.attributes.usage.season core.slot of=k.attributes.usage key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
@@ -109,7 +107,6 @@
 @k.attributes.usage.weather core.slot of=k.attributes.usage key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
 @k.attributes.usage.age core.slot of=k.attributes.usage key=age many=true enum=baby enum=child enum=adult enum=old core.source="hand-core 1"
 @k.attributes.usage.used_by core.slot of=k.attributes.usage key=used_by many=true kind=atom kind=string core.source="hand-core 1"
-@k.attributes.usage.named core.slot of=k.attributes.usage key=named enum=model core.source="hand-core 1"
 
 # One name, one thing across worlds (computed by tools/joins.mjs): for a name that facts of more than one world
 # carry, its `sense` and the types (`in`, many) whose facts with that name are about that one thing. `only=true`:
@@ -185,7 +182,6 @@
 @k.attributes.word.key.thing.kind core.word text=kind means=k.attributes.thing.kind core.source="hand-core 1"
 @k.attributes.word.key.thing.wheels core.word text=many means=k.attributes.thing.wheels core.source="hand-core 1"
 @k.attributes.word.key.thing.can core.word text=do means=k.attributes.thing.can core.source="hand-core 1"
-@k.attributes.word.key.thing.named core.word text=named means=k.attributes.thing.named core.source="hand-core 1"
 @k.attributes.word.key.drawn.drawn_shade core.word text="drawn shade" means=k.attributes.drawn.drawn_shade core.source="hand-core 1"
 @k.attributes.word.key.number.sense core.word text=sense means=k.attributes.number.sense core.source="hand-core 1"
 @k.attributes.word.key.number.weight_class core.word text="weight class" means=k.attributes.number.weight_class core.source="hand-core 1"
@@ -193,14 +189,12 @@
 @k.attributes.word.key.number.legs core.word text=legs means=k.attributes.number.legs core.source="hand-core 1"
 @k.attributes.word.key.number.sides core.word text=sides means=k.attributes.number.sides core.source="hand-core 1"
 @k.attributes.word.key.number.price_class core.word text="price class" means=k.attributes.number.price_class core.source="hand-core 1"
-@k.attributes.word.key.number.named core.word text=named means=k.attributes.number.named core.source="hand-core 1"
 @k.attributes.word.key.usage.sense core.word text=sense means=k.attributes.usage.sense core.source="hand-core 1"
 @k.attributes.word.key.usage.season core.word text=season means=k.attributes.usage.season core.source="hand-core 1"
 @k.attributes.word.key.usage.time core.word text=time means=k.attributes.usage.time core.source="hand-core 1"
 @k.attributes.word.key.usage.weather core.word text=weather means=k.attributes.usage.weather core.source="hand-core 1"
 @k.attributes.word.key.usage.age core.word text=age means=k.attributes.usage.age core.source="hand-core 1"
 @k.attributes.word.key.usage.used_by core.word text="used by" means=k.attributes.usage.used_by core.source="hand-core 1"
-@k.attributes.word.key.usage.named core.word text=named means=k.attributes.usage.named core.source="hand-core 1"
 @k.attributes.word.key.same.sense core.word text=sense means=k.attributes.same.sense core.source="hand-core 1"
 @k.attributes.word.key.same.only core.word text=only means=k.attributes.same.only core.source="hand-core 1"
 @k.attributes.word.key.same.in core.word text=in means=k.attributes.same.in core.source="hand-core 1"

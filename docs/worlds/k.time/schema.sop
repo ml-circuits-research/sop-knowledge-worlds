@@ -163,7 +163,7 @@
 @k.time.duration core.type of=k.time.duration shared=true closed=true core.source="hand-core 1"
 @k.time.duration.name core.slot of=k.time.duration key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.duration.count core.slot of=k.time.duration key=count kind=number min=0 core.source="hand-core 1"
-@k.time.duration.count_about core.slot of=k.time.duration key=count_about kind=number min=0 core.source="hand-core 1"
+@k.time.duration.count_about core.slot of=k.time.duration key=count_about excludes=count kind=number min=0 core.source="hand-core 1"
 @k.time.duration.unit core.slot of=k.time.duration key=unit id=true kind=atom kind=string core.source="hand-core 1"
 
 # Words for the types and keys of this world.

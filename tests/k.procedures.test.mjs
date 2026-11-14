@@ -81,7 +81,8 @@ test('bindings: one source each; every name used is bound; knowledge types and k
     const m = /core\.slot of=(\S+) key=(\S+)/.exec(line);
     if (m) { if (!types.has(m[1])) types.set(m[1], new Set()); types.get(m[1]).add(m[2]); }
   }
-  const slotsOf = (t) => { const s = new Set(types.get(t) ?? []); for (const w of worlds) { const m = new RegExp(`core\\.type of=${t.replace(/\./g, '\\.')} extends=(\\S+)`).exec(w.schemaText); if (m) for (const k of slotsOf(m[1])) s.add(k); } return s; };
+  // the slots of a type and of every type it extends (its parent and its slot groups: k.named.labelled gives named)
+  const slotsOf = (t) => { const s = new Set(types.get(t) ?? []); for (const w of worlds) { const m = new RegExp(`core\\.type of=${t.replace(/\./g, '\\.')}( [^\\n]*)`).exec(w.schemaText); if (m) for (const [, p] of m[1].matchAll(/ extends=(\S+)/g)) for (const k of slotsOf(p)) s.add(k); } return s; };
   for (const m of methods) {
     const has = (n, what) => assert.ok(m.bind[n], `${m.name}: ${what} names no binding: ${n}`);
     for (const [n, bd] of Object.entries(m.bind)) {

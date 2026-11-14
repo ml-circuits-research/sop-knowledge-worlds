@@ -47515,6 +47515,9 @@
   "k.procedures/shards/from-knowledge",
   "k.words/shards/la"
  ],
+ "labelled by a model": [
+  "k.named/schema.sop"
+ ],
  "labelling": [
   "k.words/shards/la"
  ],
@@ -59164,21 +59167,12 @@
   "k.objects/shards/things"
  ],
  "named": [
-  "k.actions/schema.sop",
-  "k.animals/schema.sop",
-  "k.attributes/schema.sop",
-  "k.body/schema.sop",
-  "k.faces/schema.sop",
-  "k.food/schema.sop",
-  "k.geo/schema.sop",
-  "k.layouts/schema.sop",
-  "k.objects/schema.sop",
+  "k.named/schema.sop",
   "k.parts/schema.sop",
-  "k.procedures/shards/from-knowledge",
-  "k.scenes/schema.sop",
-  "k.space/schema.sop",
-  "k.values/schema.sop",
-  "k.wearables/schema.sop"
+  "k.procedures/shards/from-knowledge"
+ ],
+ "named by a model": [
+  "k.named/schema.sop"
  ],
  "namekagon": [
   "k.geo/shards/north-america"

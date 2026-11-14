@@ -3742,3 +3742,37 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Measured: plain shards +938 bytes (303,565 with the canon); validate 0 errors; k.faces, canon, catalog, questions,
   joins, w.schemas tests pass; the adult canon still moves eyes and mouths (and still overlaps: the test kept).
 - `npm test` (in a worktree of this commit): 2,917 tests, 2,916 pass, 1 skipped, 0 fail.
+
+## Block 06:55 item 2 (2026-11-14, second worker): slot group k.named, excludes, the four warnings, joins to drawings
+
+- **`k.named`** (new module, no shards; WORLD.md): `k.named.labelled` with the one slot `named` (`enum=model`). The
+  21 types that declared it take it by `extends=k.named.labelled` (a second `extends`, a slot group, where the type had
+  a parent: `k.objects.part` extends `k.drawing.part` and `k.named.labelled`); their 13 modules import `k.named` (each
+  version + 1). `k.parts.usual` keeps its own slot: `named` is required there, which a shared slot cannot say.
+- **The four `ambiguous-key` warnings are gone:** `k.commonsense.thing`, `k.people.kind` and `k.shapes.shape` no longer
+  declare `name` again (it is `k.kinds.kind.name`, the same flags). validate: 980 files, 0 errors, 0 warnings.
+- **`excludes=`** on the five approximate keys that have an exact twin on their type (`k.body.part.count_about`,
+  `k.space.body.moons_about`, `k.values.colour.rgb_about`, `k.values.number.value_about`,
+  `k.time.duration.count_about`); the three `core.deny` copies that said it are gone (`k.body.both`, `k.values.both`,
+  `k.space.both`). `k.animals.both` (can / cannot: values, not keys) and `k.units.measure.both` (unit / counts) stay.
+- **Joins to drawings: tried, then not declared (Q48).** Declared as `type=k.objects.object by=name` on the 10
+  `drawing` slots of 8 worlds, they held when the k.objects shards were told first (no violation over all of them),
+  but sopworld checks a `by=` join when a fact is told, as soon as the type is declared: `fullWorld('k.objects')`
+  tells the animals and foods of its imports (k.commonsense imports them) before any object and refused them, and
+  the in-world join of a stand-in cannot load shard by shard. A test now checks every `drawing=` of every world
+  against the objects (all hold); docs/worlds/README.md says why; Q48 asks the library for a check after a load.
+- Tests: shared-modules (only k.named and k.parts declare `named`; 21 types take it and import k.named; the five
+  pairs exclude each other and a colour with rgb and rgb_about is refused with `excludes`; no `both` deny but the
+  two kept; every drawing join holds); the k.drawing test knows the new lineage of `k.objects.part`.
+- Two readers of schema text missed the inherited keys (`name` now only on k.kinds.kind, `named` on k.named.labelled):
+  `tools/ask-real.mjs` (a type now takes the slots of every type it extends, and its parent's identity key when it
+  has none; an inherited key's word is that of the declaring type) and the bindings test of k.procedures (its
+  `slotsOf` read only the first `extends`). The real-question counts are back above their thresholds.
+- Numbers: 28 worlds (k.named new), 952 shards, vocab 24,564 words; 13 schemas changed (each version + 1) and the
+  three that no longer redeclare `name`; validate 980 files, 0 errors, 0 warnings (were 4). npm test 2,916: 2,911
+  pass, 5 skipped, 0 fail (a first run was killed while two other workers' suites ran on the machine).
+- Rebased on the first worker's 0.56.0 build move (377ee17) and k.faces canon (96cbe0d): the k.faces module line
+  merged by hand (canon exported, k.named imported, version 3); my question renumbered Q48 (Q47 is the first
+  worker's); generated files rebuilt (28 worlds, 953 shards, vocab 24,578 words); validate on 0.56: 981 files, 0
+  errors. npm test 2,916: 2,910 pass, 5 skipped, tests/catalog.test.mjs killed (SIGKILL, under the load of other
+  suites); that file alone: 8 pass.

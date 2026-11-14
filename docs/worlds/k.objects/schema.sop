@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.objects core.module name=k.objects version=4 imports=k.commonsense imports=k.drawing exports=object exports=part exports=point exports=skeleton exports=stand_in core.source="hand-core 1"
+@k.objects core.module name=k.objects version=5 imports=k.named imports=k.commonsense imports=k.drawing exports=object exports=part exports=point exports=skeleton exports=stand_in core.source="hand-core 1"
 
 # An object that can be drawn. Its name is an English lemma; the same name in k.commonsense.thing is the same thing.
 @k.objects.object core.type of=k.objects.object shared=true closed=true core.source="hand-core 1"
@@ -13,12 +13,11 @@
 
 # A part of an object: a part of k.drawing (shape, box, draw order, colours, direction) that belongs to an object.
 # One wire per instance: two windows are two parts (left_window, right_window) of kind window.
-@k.objects.part core.type of=k.objects.part extends=k.drawing.part shared=true closed=true core.source="hand-core 1"
+@k.objects.part core.type of=k.objects.part extends=k.drawing.part extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.objects.part.of core.slot of=k.objects.part key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.objects.part.name core.slot of=k.objects.part key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.objects.part.kind core.slot of=k.objects.part key=kind kind=atom core.source="hand-core 1"
 # Who named the part: absent for hand-written parts; `model` when a language model named an imported part by looking at it.
-@k.objects.part.named core.slot of=k.objects.part key=named enum=model core.source="hand-core 1"
 @k.objects.part.above core.slot of=k.objects.part key=above many=true kind=atom core.source="hand-core 1"
 @k.objects.part.below core.slot of=k.objects.part key=below many=true kind=atom core.source="hand-core 1"
 @k.objects.part.inside core.slot of=k.objects.part key=inside many=true kind=atom core.source="hand-core 1"
@@ -51,6 +50,8 @@
 # kind, not the thing itself; a word for the same thing (couch, sofa) is a core.word instead.
 @k.objects.stand_in core.type of=k.objects.stand_in shared=true closed=true core.source="hand-core 1"
 @k.objects.stand_in.name core.slot of=k.objects.stand_in key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+# The join of a stand-in to its drawing is not declared with `type=` / `by=`: the objects are in other shards of this
+# world, and every shard must load alone (a host loads them lazily); tests/k.objects.names.test.mjs checks it.
 @k.objects.stand_in.drawing core.slot of=k.objects.stand_in key=drawing required=true kind=atom kind=string core.source="hand-core 1"
 
 # Words for the types and keys of this world.
@@ -64,7 +65,6 @@
 @k.objects.word.key.object core.word text=draw text=sketch text=show text="shaped like" text="looks like" means=k.objects.object core.source="hand-core 1"
 @k.objects.word.key.part.name core.word text=name means=k.objects.part.name core.source="hand-core 1"
 @k.objects.word.key.part.kind core.word text=kind means=k.objects.part.kind core.source="hand-core 1"
-@k.objects.word.key.part.named core.word text=named means=k.objects.part.named core.source="hand-core 1"
 @k.objects.word.key.part.above core.word text=above means=k.objects.part.above core.source="hand-core 1"
 @k.objects.word.key.part.below core.word text=below means=k.objects.part.below core.source="hand-core 1"
 @k.objects.word.key.part.inside core.word text=inside means=k.objects.part.inside core.source="hand-core 1"

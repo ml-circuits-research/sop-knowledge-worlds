@@ -24,6 +24,12 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
   module derive from the told facts, each wire with `derived=true` and `core.source="rule <rule id>"`, so that a
   host or a tool that reads shards sees them without running the rules. A test keeps them fresh.
 - `k.<world>/WORLD.md`: what the world knows, its sources, and questions it helps with.
+- Shared modules with no facts of their own: `k.kinds` (`is_a`, and `kind_of` by its rules), `k.drawing` (parts and
+  points of a drawing), `k.named` (the slot `named=model`, taken by 21 types through `extends=k.named.labelled`, a
+  slot group of sopworld 0.34+). A world that takes one imports it. An approximate key (`moons_about`) and its exact
+  twin (`moons`) exclude each other on the slot (`excludes=`), not by a rule. The joins to drawings (`drawing=`) are
+  checked by a test, not declared with `type=` / `by=`: sopworld checks such a join when a fact is told, so a fact
+  told before the object it names would be refused (questions.md Q48).
 - `w.<name>/schema.sop`: a **reusable world**: a schema in the library's `std.schema` format (kinds, attributes, the
   acts that apply, words), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`
   (`names`: the words that find it; `kinds` with their `acts`, `attributes` and `words`). They are validated with

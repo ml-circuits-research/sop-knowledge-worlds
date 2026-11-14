@@ -44,10 +44,25 @@ export function loadCatalog(root = WORLDS_DIR) {
   const worlds = scanWorlds(root);
   const words = [];
   for (const w of worlds) for (const s of parse(w.schemaText)) {
-    if (s.type === 'core.type') types.set(s.attrs.of[0], { slots: new Map(), ids: [] });
-    if (s.type === 'core.slot') { const t = types.get(s.attrs.of[0]); t.slots.set(s.attrs.key[0], { many: s.attrs.many?.[0] === 'true', enum: s.attrs.enum?.map(tok) }); if (s.attrs.id?.[0] === 'true') t.ids.push(s.attrs.key[0]); }
+    if (s.type === 'core.type') types.set(s.attrs.of[0], { slots: new Map(), ids: [], extends: s.attrs.extends ?? [] });
+    if (s.type === 'core.slot') { const t = types.get(s.attrs.of[0]); t.slots.set(s.attrs.key[0], { many: s.attrs.many?.[0] === 'true', enum: s.attrs.enum?.map(tok), from: s.attrs.of[0] }); if (s.attrs.id?.[0] === 'true') t.ids.push(s.attrs.key[0]); }
     if (s.type === 'core.word') words.push(s);
   }
+  // a type has the slots of the types it extends (its parent and its slot groups); with no identity key of its own,
+  // it has its parent's (k.shapes.shape takes name from k.kinds.kind; 21 types take named from k.named.labelled)
+  const inherit = (t, seen = new Set()) => {
+    if (seen.has(t)) return;
+    seen.add(t);
+    const x = types.get(t);
+    for (const p of x?.extends ?? []) {
+      inherit(p, seen);
+      const px = types.get(p);
+      if (!px) continue;
+      for (const [k, v] of px.slots) if (!x.slots.has(k)) x.slots.set(k, v);
+      if (!x.ids.length) x.ids.push(...px.ids);
+    }
+  };
+  for (const t of types.keys()) inherit(t);
   for (const t of types.values()) t.nameKey = ['name', 'word', 'text'].includes(t.ids[0]) ? t.ids[0] : null;
   for (const w of worlds) for (const s of w.shards) for (const f of parse(s.text)) {
     if (f.type === 'core.word') { words.push(f); continue; }

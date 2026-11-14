@@ -17,7 +17,6 @@
 # circle). `is_a` names the more general shapes (from k.kinds, many: a square is a rectangle and a rhombus; `kind_of`, derived, every one above). `thing` names things that typically have
 # the shape (many; the name of a k.objects object where there is one).
 @k.shapes.shape core.type of=k.shapes.shape extends=k.kinds.kind shared=true closed=true core.source="hand-core 1"
-@k.shapes.shape.name core.slot of=k.shapes.shape key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.shapes.shape.kind core.slot of=k.shapes.shape key=kind required=true enum=flat enum=solid enum=line core.source="hand-core 1"
 @k.shapes.shape.sides core.slot of=k.shapes.shape key=sides kind=integer min=0 core.source="hand-core 1"
 @k.shapes.shape.corners core.slot of=k.shapes.shape key=corners kind=integer min=0 core.source="hand-core 1"
