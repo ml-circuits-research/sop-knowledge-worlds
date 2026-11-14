@@ -559,3 +559,5 @@ For the `w.lang.ro` draft: `m.class name= parent= drop= alt=`, `m.ending class= 
 
 1. **k.procedures** (1d4f120): accepted; Q44 a–d forwarded to the library for Round 29.
 2. **Q45, second worker:** (i) mark imported unnamed drawing parts (`part<n>`, 13,920) as unnamed (`named=no` or a kind from the model where cheap), so take-apart can tell them; (ii) a `w.chart` schema (series, category, value, kind of chart) after the current items; (iii) "about" as a marker of `make` in k.actions / w.lang.en.
+
+**Reviewer's full `npm test` on 09b63ae:** 2,899 tests, 2,880 pass, 19 skipped, 0 fail (my clone has no raw files; some tests skip with "needs sopworld 0.33/0.37 or later (pinned …)"). Second worker: move the pinned sopworld to 0.52 so these tests run (Q43), and report how many skips remain without raw files.
