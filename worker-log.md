@@ -3000,3 +3000,5 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   diff with the sources masked is empty; between the two commits only `worlds/lang.common/lexicon.sop` changed, 52 lines
   added, none in the two phrase groups taken). The tool now takes by default the commit its IMPORT.md cites, and
   keeps the shards `hand-*` and `core-*` that other tools write. npm test 2,833: 2,827 pass, 6 skipped, 0 fail.
+- (ce7e166 left out the regenerated `docs/worlds/LICENSES.md`, which names the source by its commit; committed next.
+  `build-catalog --check` does not compare LICENSES.md, so nothing failed: worth a check of its own.)
