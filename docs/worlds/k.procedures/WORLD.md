@@ -102,6 +102,8 @@ steps are acts not yet done, and no report without a history.
 - No `w.chart` schema: a chart is a list of counts (`w.list`) for now (Q45).
 - A slide or a chapter of a repeated part (the points of a presentation, the arguments of an essay) takes the part's
   place `n` in the genre; the composer numbers them in order.
-- "About a topic" is the goal's role `value` until k.actions gives `make` an `about` role (Q45 (iii)).
+- "About a topic" is the role `topic` of `make` (marked by about, Q45 (iii), 53b002b): needed by the presentation, the
+  essay and the scientific article; optional for the story, where it is only preferred (soft) as the obstacle, setting,
+  helper, protagonist or target, because "one of them is the topic" is a disjunction the format cannot say.
 - The role -> argument map of `std.acts` (`number` -> `amount`, a place with `rel` and `of` -> `at` or `rel` and `ref`)
   is the library's (Q44 a).

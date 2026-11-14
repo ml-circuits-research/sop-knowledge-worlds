@@ -287,25 +287,28 @@ export const METHODS = [
 
   // ---- compositions (block "15:00" item 3): a genre of k.genres written as a w.document, its choice points as
   // `choose` bindings solved jointly under their matches and sampled by k.interest (questions.md Q57) ----
-  { shard: 'compose', name: 'write a story', act: 'make', world: 'w.document', example: ['write a story', 'tell me a story'],
-    about: 'A story by the book (k.story, the genre "story" of k.genres): choose together a goal, an obstacle that blocks it, a setting that has the obstacle, the means that overcomes it, the act that uses the means, a helper who has the means, a protagonist who can have the goal and lacks the means, one to three attempts that fail, and the target of the goal; then make the document and one chapter per part of the genre. Each element of k.story is the binding of its name (turning point: turning_point); std.compose tells it in its part with its move.',
-    goal: { kind: { value: 'story' } },
+  { shard: 'compose', name: 'write a story', act: 'make', world: 'w.document', example: ['write a story', 'tell me a story', 'tell me a story about a dragon'],
+    about: 'A story by the book (k.story, the genre "story" of k.genres): choose together a goal, an obstacle that blocks it, a setting that has the obstacle, the means that overcomes it, the act that uses the means, a helper who has the means, a protagonist who can have the goal and lacks the means, one to three attempts that fail, and the target of the goal; then make the document and one chapter per part of the genre. Each element of k.story is the binding of its name (turning point: turning_point); std.compose tells it in its part with its move. A topic ("a story about a dragon", the role topic of make) is preferred as the obstacle, setting, helper, protagonist or target.',
+    goal: { kind: { value: 'story' }, topic: {} },
     bind: {
+      // "a story about a dragon": the topic is preferred (soft, Q57) as the obstacle, the setting, the helper, the
+      // protagonist or the target; a hard "one of them is the topic" is a disjunction the format cannot say.
+      topic: { goal: 'topic' },
       doc: { step: [1] },
       parts: { from: 'k.genres.part', match: { genre: { value: 'story' } } },
       goal: { from: 'k.story.goal', choose: 1 },
       goal_act: { from: 'k.actions.action', choose: 1, match: { name: { equals: 'goal', equals_key: 'act' }, who: { equals: 'protagonist', equals_key: 'name' } } },
-      obstacle: { from: 'k.story.obstacle', choose: 1, match: { blocks: { equals: 'goal', equals_key: 'name' } } },
-      setting: { from: 'k.scenes.has', choose: 1, match: { thing: { equals: 'obstacle', equals_key: 'thing' } } },
+      obstacle: { from: 'k.story.obstacle', choose: 1, match: { blocks: { equals: 'goal', equals_key: 'name' }, thing: { equals: 'topic', soft: true } } },
+      setting: { from: 'k.scenes.has', choose: 1, match: { thing: { equals: 'obstacle', equals_key: 'thing' }, scene: { equals: 'topic', soft: true } } },
       means: { from: 'k.story.obstacle', key: 'means', choose: 1, match: { thing: { equals: 'obstacle', equals_key: 'thing' }, blocks: { equals: 'obstacle', equals_key: 'blocks' } } },
       resolution: { from: 'k.actions.action', choose: 1, match: { name: { equals: 'obstacle', equals_key: 'overcome_by' }, tool: { equals: 'means' }, who: { equals: 'protagonist', equals_key: 'name' } } },
       helper_holds: { from: 'k.people.role', match: { holds: { equals: 'means' } } },
       helper_uses: { from: 'k.people.role', match: { uses: { equals: 'means' } } },
-      helper: { together: ['helper_holds', 'helper_uses'], choose: 1, match: { works_at: { equals: 'setting', equals_key: 'scene', soft: true } } },
+      helper: { together: ['helper_holds', 'helper_uses'], choose: 1, match: { works_at: { equals: 'setting', equals_key: 'scene', soft: true }, name: { equals: 'topic', soft: true } } },
       protagonist_kind: { from: 'k.people.kind' },
       protagonist_role: { from: 'k.people.role', match: { group: { present: true } } },
       protagonist_animal: { from: 'k.animals.animal' },
-      protagonist: { together: ['protagonist_kind', 'protagonist_role', 'protagonist_animal'], choose: 1, match: { holds: { differs: 'means' }, uses: { differs: 'means' }, name: { differs: 'helper', equals_key: 'name' }, works_at: { equals: 'setting', equals_key: 'scene', soft: true } } },
+      protagonist: { together: ['protagonist_kind', 'protagonist_role', 'protagonist_animal'], choose: 1, match: { holds: { differs: 'means' }, uses: { differs: 'means' }, name: [{ differs: 'helper', equals_key: 'name' }, { equals: 'topic', soft: true }], works_at: { equals: 'setting', equals_key: 'scene', soft: true } } },
       attempts_min: { from: 'k.story.element', key: 'min', match: { name: { value: 'attempt' } } },
       attempts_max: { from: 'k.story.element', key: 'max', match: { name: { value: 'attempt' } } },
       attempt: { from: 'k.actions.action', choose: 'attempts_max', choose_min: 'attempts_min', match: { name: { equals: 'obstacle', equals_key: 'tried_by' }, who: { equals: 'protagonist', equals_key: 'name' } } },
@@ -318,7 +321,7 @@ export const METHODS = [
       target_place: { from: 'k.scenes.scene', match: { kind: { equals: 'goal_place', equals_key: 'place_kind' }, name: { differs: 'setting', equals_key: 'scene' } } },
       target_thing: { from: 'k.objects.object', match: { name: { equals: 'thing_names' } } },
       target_being: { together: ['being_names'], match: { name: { equals: 'beings' } } },
-      target: { together: ['target_place', 'target_thing', 'target_being'], choose: 1, match: { name: [{ differs: 'protagonist', equals_key: 'name' }, { differs: 'helper', equals_key: 'name' }] } },
+      target: { together: ['target_place', 'target_thing', 'target_being'], choose: 1, match: { name: [{ differs: 'protagonist', equals_key: 'name' }, { differs: 'helper', equals_key: 'name' }, { equals: 'topic', soft: true }] } },
       turning_point: { value: 'give' },
       ending: { together: ['goal'] },
     },
@@ -330,9 +333,9 @@ export const METHODS = [
 
   { shard: 'compose', name: 'write a presentation about a topic', act: 'make', world: 'w.document', example: ['write a presentation about penguins', 'make slides about Peru'],
     about: 'A presentation (the genre "presentation" of k.genres) about a topic: choose three to five points, statements of the catalog about the topic on different keys, sampled by k.interest; then make the document, the title, agenda, summary and closing slides, and one content slide per point.',
-    goal: { kind: { value: 'presentation' }, value: { needed: true } },
+    goal: { kind: { value: 'presentation' }, topic: { needed: true } },
     bind: {
-      topic: { goal: 'value' }, doc: { step: [1] },
+      topic: { goal: 'topic' }, doc: { step: [1] },
       single: { from: 'k.genres.part', match: { genre: { value: 'presentation' }, max: { value: 1 } } },
       points_min: { from: 'k.genres.part', key: 'min', match: { genre: { value: 'presentation' }, name: { value: 'point' } } },
       points_max: { from: 'k.genres.part', key: 'max', match: { genre: { value: 'presentation' }, name: { value: 'point' } } },
@@ -348,9 +351,9 @@ export const METHODS = [
 
   { shard: 'compose', name: 'write an essay about a topic', act: 'make', world: 'w.document', example: ['write an essay about penguins'],
     about: 'An essay (the genre "essay" of k.genres) about a topic: choose two to four arguments, statements about the topic on different keys, and a counterargument on another key, sampled by k.interest (arguments that surprise, a counterargument that is what a reader assumes); then make the document, the introduction, counterargument and conclusion chapters and one chapter per argument.',
-    goal: { kind: { value: 'essay' }, value: { needed: true } },
+    goal: { kind: { value: 'essay' }, topic: { needed: true } },
     bind: {
-      topic: { goal: 'value' }, doc: { step: [1] },
+      topic: { goal: 'topic' }, doc: { step: [1] },
       single: { from: 'k.genres.part', match: { genre: { value: 'essay' }, max: { value: 1 } } },
       args_min: { from: 'k.genres.part', key: 'min', match: { genre: { value: 'essay' }, name: { value: 'argument' } } },
       args_max: { from: 'k.genres.part', key: 'max', match: { genre: { value: 'essay' }, name: { value: 'argument' } } },
@@ -367,9 +370,9 @@ export const METHODS = [
 
   { shard: 'compose', name: 'write a scientific article about a topic', act: 'make', world: 'w.document', example: ['write a scientific article about penguins', 'a paper about Peru'],
     about: 'A scientific article (the genre "scientific article" of k.genres, IMRaD) about a topic: choose two to five results, statements about the topic on different keys, sampled by k.interest (numbers with units first); the methods are the types of the catalog those statements come from; then make the document and one chapter per required part (abstract, introduction, methods, results, discussion).',
-    goal: { kind: { value: 'scientific article' }, value: { needed: true } },
+    goal: { kind: { value: 'scientific article' }, topic: { needed: true } },
     bind: {
-      topic: { goal: 'value' }, doc: { step: [1] },
+      topic: { goal: 'topic' }, doc: { step: [1] },
       parts: { from: 'k.genres.part', match: { genre: { value: 'scientific article' }, min: { not: 0 } } },
       results_min: { from: 'k.genres.step', key: 'min', match: { genre: { value: 'scientific article' }, part: { value: 'results' }, move: { value: 'report result' } } },
       results_max: { from: 'k.genres.step', key: 'max', match: { genre: { value: 'scientific article' }, part: { value: 'results' }, move: { value: 'report result' } } },

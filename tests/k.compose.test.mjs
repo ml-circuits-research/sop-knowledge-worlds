@@ -111,7 +111,7 @@ test(`write a story: ${STORIES} seeded stories, each holds every hard constraint
 });
 
 test('write a presentation about penguins: the first solution (no seed) and its slides; a seeded one differs; every point is a different key of a statement about the topic', () => {
-  const goal = { act: 'make', roles: { kind: 'presentation', value: 'penguin' } };
+  const goal = { act: 'make', roles: { kind: 'presentation', topic: 'penguin' } };
   const r = compose('write a presentation about a topic', goal);
   assert.deepEqual(r.choices, { points: ['class', 'legs', 'covering', 'habitat', 'diet'] });
   assert.deepEqual(r.plan.lines, [
@@ -137,15 +137,15 @@ test('write a presentation about penguins: the first solution (no seed) and its 
 
 test('write an essay and a scientific article: arguments and results on different keys, the counterargument on another key', () => {
   for (let seed = 1; seed <= 20; seed += 1) {
-    const e = solveChoices(methodFacts(store, 'write an essay about a topic'), { store, isA, types: TYPES, goal: { value: 'penguin' }, rnd: seeded(seed) });
+    const e = solveChoices(methodFacts(store, 'write an essay about a topic'), { store, isA, types: TYPES, goal: { topic: 'penguin' }, rnd: seeded(seed) });
     const args = e.chosen.get('arguments'), counter = e.chosen.get('counterargument')[0];
     assert.ok(args.length >= 2 && args.length <= 4 && new Set(args.map((x) => x.key)).size === args.length, `essay ${seed}`);
     assert.ok(!args.some((x) => x.key === counter.key), `essay ${seed}: counterargument on another key`);
-    const a = solveChoices(methodFacts(store, 'write a scientific article about a topic'), { store, isA, types: TYPES, goal: { value: 'Peru' }, rnd: seeded(seed) });
+    const a = solveChoices(methodFacts(store, 'write a scientific article about a topic'), { store, isA, types: TYPES, goal: { topic: 'Peru' }, rnd: seeded(seed) });
     const res = a.chosen.get('results');
     assert.ok(res.length >= 2 && res.length <= 5 && new Set(res.map((x) => x.key)).size === res.length, `article ${seed}`);
   }
-  const r = compose('write a scientific article about a topic', { act: 'make', roles: { kind: 'scientific article', value: 'Peru' } });
+  const r = compose('write a scientific article about a topic', { act: 'make', roles: { kind: 'scientific article', topic: 'Peru' } });
   assert.deepEqual(r.plan.lines.slice(1), ['Abstract', 'Introduction', 'Methods', 'Results', 'Discussion'].map((h, i) => `make kind=w.document.chapter document=document1 n=${i + 1} part=${h.toLowerCase()} title=${h}`));
 });
 
@@ -165,4 +165,32 @@ test('write a report of what was done: the acts done, the things there, next ste
     assert.ok(next.every((a) => !history.some((h) => h.act === a)), `seed ${seed}: a next step not yet done`);
   }
   assert.equal(solveChoices(methodFacts(store, 'write a report of what was done'), { store, isA, history: [], live }), null);
+});
+
+test('the four topical methods take the topic in the role topic of make (marked by about, 53b002b), not in value', () => {
+  const role = store.facts('k.actions.role').find((f) => one(f, 'act') === 'make' && one(f, 'name') === 'topic');
+  assert.deepEqual(role?.attrs.marker, ['about']);
+  const goalOf = (m) => Object.fromEntries(store.facts('k.procedures.goal').filter((f) => one(f, 'method') === m).map((f) => [one(f, 'role'), one(f, 'needed') === 'true']));
+  for (const m of ['write a presentation about a topic', 'write an essay about a topic', 'write a scientific article about a topic']) {
+    assert.deepEqual(goalOf(m), { kind: false, topic: true }, m);
+    assert.equal(methodFacts(store, m).get('topic').goal, 'topic', m);
+  }
+  assert.deepEqual(goalOf('write a story'), { kind: false, topic: false });
+  // A goal that still says value has no topic: no presentation.
+  assert.equal(compose('write a presentation about a topic', { act: 'make', roles: { kind: 'presentation', value: 'penguin' } }), null);
+});
+
+test('write a story about a dragon: the topic is preferred (soft) as an element; without a topic the stories are the same as before', () => {
+  const elements = (c) => ['obstacle', 'setting', 'helper', 'protagonist', 'target'].flatMap((k) => c[k] ?? []);
+  let withTopic = 0, without = 0;
+  for (let seed = 1; seed <= 40; seed += 1) {
+    const a = solveChoices(methodFacts(store, 'write a story'), { store, isA, goal: { topic: 'dragon' }, rnd: seeded(seed) });
+    const b = solveChoices(methodFacts(store, 'write a story'), { store, isA, rnd: seeded(seed) });
+    const c = names(a);
+    assert.deepEqual(checkPlan(kb, constraints, asPlan(c)).hard, [], `seed ${seed}`);
+    if (elements(c).includes('dragon')) withTopic += 1;
+    if (elements(names(b)).includes('dragon')) without += 1;
+  }
+  assert.ok(withTopic > without, `dragon in ${withTopic} stories with the topic, ${without} without`);
+  console.log(`write a story about a dragon: the dragon is an element of ${withTopic} of 40 seeded stories (${without} without the topic)`);
 });

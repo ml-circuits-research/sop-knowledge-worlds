@@ -4115,3 +4115,16 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   protagonists, 8 helpers); the presentation about penguins (class, legs, covering, habitat, diet) and its ten slides;
   20 seeded presentations, essays and articles keep keys apart; a report's next steps are acts not yet done, and no
   report without a history.
+
+## 2026-11-14 — third worker: the topical compositions take the role topic of make (reviewer 21:55 follow-up)
+
+- `tools/procedures-core.mjs`: write a presentation / an essay / a scientific article about a topic take the topic in
+  the goal role `topic` of make (marked by about, 53b002b), needed, instead of `value`; their binding `topic` reads
+  it. Write a story takes an optional `topic` ("tell me a story about a dragon"), preferred by soft matches (Q57) as
+  the obstacle, setting, helper, protagonist or target; a hard "one of them is the topic" is a disjunction the format
+  cannot say. Without a topic the seeded stories are the same as before (a soft match on an empty binding weighs 1).
+- `k.procedures/shards/compose`: 236 -> 243 wires, 48,532 bytes; 28 methods. `tests/k.compose.test.mjs` 6 -> 8:
+  the four methods' goals (topic needed for three, optional for the story; a goal that still says value gets no
+  presentation), and the dragon is an element of 10 of 40 seeded stories with the topic, 7 without (x2 weight only).
+- Catalog 32 worlds, 978 shards, vocab 24,876 words. Tests run one file at a time: k.compose 8/8, k.procedures 15/15,
+  k.genres 7, k.interest 5, k.story 5, w.document 3, catalog 8, validate 5; 0 fail.
