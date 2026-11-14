@@ -6,6 +6,15 @@ world and the facts of other knowledge worlds. Hand-written (`hand-core 1`, CC0-
 The planner that applies the methods is the library's `std.plan` (Round 29); the format is proposed to it in
 `questions.md` Q44. Complex behaviour comes from knowledge and orchestration, not from code in live worlds.
 
+**Established term** (block 05:25): these are the methods of hierarchical task network (HTN) planning, as in SHOP2
+(Nau, Au, Ilghami, Kuter, Murdock, Wu & Yaman 2003, *Journal of Artificial Intelligence Research* 20, 379-404,
+doi:10.1613/jair.1141: a method decomposes a compound task into a partially ordered set of subtasks when its
+precondition holds in the current state; tasks are planned in the order they will be done). Where this model differs:
+a method's roles are filled by bindings over the facts of knowledge worlds as well as the live state; std.plan keeps one
+method per goal (fitting goal facts, world and preconditions, then the lowest `rank`) and does not backtrack over
+methods as SHOP2 does depth-first (only the `choose` bindings are searched, with backtracking); and decomposition is
+bounded (depth 3, 200 acts, no method inside its own expansion).
+
 ## The format
 
 | Type | Identity | Says |

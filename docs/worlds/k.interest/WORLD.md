@@ -8,6 +8,13 @@ the choice points of a composition procedure (`k.procedures`) are sampled among 
 allow, **weighted by these scores**: "random but by the book", never free random. No language model is involved:
 every measure is computed from facts.
 
+**Established terms** (block 05:25): the appraisal structure of interest is Silvia's (2005, *Emotion* 5(1), 89-102,
+doi:10.1037/1528-3542.5.1.89: novelty-complexity and coping potential), and the score serves content determination,
+the first task of document planning in Reiter & Dale (2000, *Building Natural Language Generation Systems*): which
+messages to say. Where this model differs: Silvia's appraisals are a reader's, measured in experiments; here they are
+computed from facts and the text with hand-set weight ranges, a relevance factor and a penalty are added, and the
+score weights a seeded draw among the candidates the constraints allow rather than ranking messages for one reader.
+
 ## The format
 
 | Type | Identity | Says |

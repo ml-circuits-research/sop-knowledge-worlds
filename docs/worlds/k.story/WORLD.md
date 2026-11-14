@@ -10,6 +10,13 @@ the library's `std.compose` through the procedure "write a story" of `k.procedur
 elements, solved jointly under these constraints (finite domains: the facts of the catalog), and sampled among the
 solutions by the weights of `k.interest` and the soft constraints here. No language model is involved.
 
+**Established terms** (block 05:25): a story grammar (Rumelhart 1975: rewrite rules such as Story -> Setting + Episode,
+recursive; Mandler & Johnson 1977; Propp's functions before them) used for content determination and document planning
+in the sense of Reiter & Dale (2000, *Building Natural Language Generation Systems*). Where this model differs: no
+rewrite rules and no recursion (no episode inside an episode): 11 elements in a fixed order with counts (one to three
+attempts) and 21 constraints between them, solved jointly over the facts of the catalog to generate a plan, where the
+grammars were written to parse and recall stories.
+
 ## The format
 
 | Type | Identity | Says |

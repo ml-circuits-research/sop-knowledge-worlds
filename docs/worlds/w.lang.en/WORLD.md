@@ -81,6 +81,11 @@ European). `shape` is the roles in k.actions order, then the frame's mode, then 
 "add a guest called Ann"); `none` for a template without roles. `frame` names the frame(s) the template realises and
 `needs` that frame's needs: a host uses the template only in a world that meets them.
 
+**Established term** (block 05:25): these templates are surface realisation, the last stage of the natural language
+generation pipeline of Reiter & Dale (2000, *Building Natural Language Generation Systems*, Cambridge University
+Press). Where this model differs: realisation is by templates with slots, inflection and the article (std.morph), not
+by a grammar of English; the stages between (lexicalisation, aggregation, referring expressions) are the host's.
+
 | act | templates (shapes) |
 | --- | --- |
 | make | kind; kind.number; kind.value; kind.number.value; kind.place (needs in); kind.value.name (named); kind.place.value.name (in) |
@@ -142,6 +147,13 @@ variant back to the form a frame is written in, so the frames need not list thei
 library's patterns (words; `{x}` a span of one word or more, shortest first; `{x:base}` the base of a span's first
 word); the library's `[a|b]` is not used (hard rule 3): each alternative is a fact of its own. `n` is the order they are
 tried in (the first whose pattern covers the whole sentence; to a fixpoint, at most 6 steps): specific before general.
+
+**Established term** (block 05:25): an alternation is a transformation in Harris's sense (1957, Co-occurrence and
+transformation in linguistic structure, *Language* 33, 283-340: a mapping from one sentence form to another under
+which the co-occurrence restrictions between words found in one also hold in the other, as in active and passive).
+Where this model differs: the rules are directed (from a variant to the one form the frames are written in, never
+back), work on spans of words rather than on sentence forms of word classes, and some are restricted by word (the
+passive one participle at a time).
 
 | family (parent) | rules | example |
 |---|---|---|

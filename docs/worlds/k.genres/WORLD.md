@@ -10,6 +10,14 @@ Read by the library's `std.compose`: a composition is the plan (`std.plan`) of t
 register by the language world's templates. A written document is a `w.document` live world: its `genre`,
 `register`, chapter or slide `part` and sentence `move` name the facts of this world. No language model is involved.
 
+**Established term** (block 05:25): in the natural language generation pipeline of Reiter & Dale (2000, *Building
+Natural Language Generation Systems*, Cambridge University Press: document planning = content determination and
+document structuring, then microplanning, then surface realisation), a genre's parts and steps are the document
+structure and its moves the messages to say; the register constrains microplanning and realisation. Where this model
+differs: the structure is not built from discourse relations between the chosen messages but fixed per genre (from
+genre analysis), and the messages are chosen by the procedure's constraints and k.interest's weights, not by rules
+written for one domain.
+
 ## The format
 
 | Type | Identity | Says |

@@ -5155,3 +5155,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   this round's work; derived and k.cores are over 30 s as before).
 - Order: item 4 (drawables) was done after Q64 because the second worker had the k.scenes stand-ins in flight in the
   same files (stand-ins-hand, MISSING.md); its push came first, and the stand-ins here do not overlap its 59.
+
+## 2026-11-15 — third worker: established terms in the WORLD.md files (block 05:25; 06:00 item 2)
+
+- One paragraph each, "Established term(s)", with one reference checked against its source (publisher page, DOI
+  record or the paper) and how this model differs; no world or type renamed:
+  - k.procedures: HTN methods, SHOP2 (Nau et al. 2003, JAIR 20, 379-404, doi:10.1613/jair.1141; checked in the paper:
+    methods decompose a compound task into partially ordered subtasks, planned in execution order, depth-first
+    backtracking). Differs: bindings over knowledge facts; std.plan keeps one method per goal by rank and does not
+    backtrack over methods (only `choose` is searched); depth 3, 200 acts.
+  - k.genres, k.story, k.interest: NLG pipeline of Reiter & Dale (2000, CUP: document planning = content determination
+    and document structuring; microplanning; surface realisation). k.genres: fixed structure per genre, not built from
+    discourse relations. k.story: story grammars (Rumelhart 1975 rewrite rules, recursive; Mandler & Johnson 1977, Cog.
+    Psych. 9(1), 111-151); differs: flat, 11 elements and 21 constraints, generation not parsing. k.interest: Silvia
+    2005 (Emotion 5(1), 89-102: novelty-complexity and coping potential) as content determination; differs: computed
+    from facts, relevance and penalty added, a weighted draw.
+  - k.kinds (structures): structure mapping, Gentner 1983 (Cognitive Science 7(2), 155-170: relations, not attributes;
+    systematicity). Differs: structures declared by hand, alignment role by role, no higher-order relations.
+  - w.lang.en: alternations as transformations, Harris 1957 (Language 33, 283-340: a mapping between sentence forms
+    that keeps co-occurrence restrictions); differs: directed to the canonical form, over spans, some by word.
+    Templates as surface realisation (Reiter & Dale 2000); differs: templates with slots and morphology, the stages
+    between are the host's.
+  - k.diagrams already cites its sources (Gilbreth, ISO 5807, Sugiyama et al., Reingold and Tilford ...): unchanged.
+- Two pages could not be opened (permission not answered in time): the SHOP2 PDF at jair.org (read instead at
+  artlab.unist.ac.kr) and the CL review of Reiter & Dale at aclanthology.org (the LINGUIST List review was read).

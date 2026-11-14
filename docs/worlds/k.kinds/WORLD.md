@@ -118,6 +118,12 @@ For the library's transfer by analogy: each world schema, and each knowledge wor
 or reads, says which **structures** it is and which of its types, keys and acts plays each **role** (shard
 `structures`, written by `tools/structures-core.mjs`, 237 wires).
 
+**Established term** (block 05:25): structure mapping (Gentner 1983, *Cognitive Science* 7(2), 155-170,
+doi:10.1207/s15516709cog0702_3): an analogy maps relations between objects, not their attributes, preferring systems
+of relations (systematicity). Where this model differs: the relational structure of each world is declared by hand
+(seven structures, their roles, casts and constraints), not found by matching predicates, and alignment is role by
+role within one shared structure, with no higher-order relations to weigh.
+
 | structure | roles (the first two needed) | worlds |
 |---|---|---|
 | assignment (items in slots under constraints) | item, slot, assigned, container, slot_of, capacity, order, constraint | w.seating, w.timeline, k.layouts |
