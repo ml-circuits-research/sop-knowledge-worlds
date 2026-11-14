@@ -11,6 +11,7 @@
 //   part; a range "2..5" becomes min and max; a regular expression becomes an ending and the words it stands for.
 // - every wire has core.source; references to PSys2 code (`from=`, `read=`) go to comments, not to facts.
 // - what is about one application (tabs: `tab-only`, `tab-priority`) is left out and listed in WORLD.md.
+import { MOVED_HERE } from '../lang-en-role-frames.mjs';
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { execFileSync } from 'node:child_process';
@@ -129,7 +130,11 @@ export function importLangEn(read, commit, local) {
     const LSRC = `psys2 ${local.commit}`;
     const WL = Wof(LSRC);
     const lsource = `${LSRC} (PSys2 src/lang/en.local.mjs: frames and joiners written after the import of the hand-over, in the format of this world; the project's own data)`;
-    const lfr = parse(localPart(local.text, 'frames')).map((w) => ({ ...w, type: 'lang.en.frame', id: w.id.replace(/^w\.lang\.en\./, 'lang.en.') }));
+    // Q64: the frames that did not read their own example are fixed and kept in this repository (shard role-frames,
+    // tools/lang-en-role-frames.mjs); PSys2 deletes its copies, the import leaves them out
+    const moved = new Set(MOVED_HERE.map((m) => m[0]));
+    const lfr = parse(localPart(local.text, 'frames')).filter((w) => !moved.has(one(w, 'name'))).map((w) => ({ ...w, type: 'lang.en.frame', id: w.id.replace(/^w\.lang\.en\./, 'lang.en.') }));
+    notes.changed.push(`${moved.size} frames of src/lang/en.local.mjs that did not read their own example are not imported: they are fixed and kept in the shard role-frames (tools/lang-en-role-frames.mjs, Q64): ${[...moved].join(', ')}`);
     const known = new Set(fr.filter((w) => one(w, 'act') !== 'own').map((w) => w.id));
     for (const w of lfr) if (known.has(w.id)) throw new Error(`${w.id}: a frame of the hand-over again`);
     const bySet = framesOf(lfr, WL, notes, { own: true });

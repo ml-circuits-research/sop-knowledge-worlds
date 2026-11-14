@@ -4944,3 +4944,30 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   again on 06b4358 (currencies; 34 worlds, 1,107 shards, 33,236 words): catalog 8, validate 5, repo 1, coverage-report 4,
   k.diagrams 6, k.time 7, w.schemas 15, k.kinds.structures 6, narration 3 pass; ask-real 4,
   questions 426 pass.
+
+
+## 2026-11-15 — first worker: Q64, general frames for the 29 roles; PSys2's 9 failing local frames fixed here
+
+- New shard `w.lang.en/shards/role-frames` (CC0, `tools/lang-en-role-frames.mjs`; 278 wires, 44,298 bytes): **29
+  general frames, one per role of k.actions that no general frame read**, each from the role's markers in k.actions
+  (make.part "with", make.material "out of/from/made of", make.topic "about", change.old value "from ... to",
+  change.replacement "replace ... with/by/for", place.direction "towards", place.source "from ... <prep>", connect.tool
+  "using/by means of/by/with", group.target/group/criterion "with", "into", "by", take apart.parts/source/tool
+  "into", "from/off", "with/using", pick.source "from/out of/among", pick.other "over/instead of/rather than",
+  ask.other "compare ... with/to/and", copy.place, send.means "by/via/through", send.format "as", undo.thing/number/
+  state, save.thing/place, load.source, redo.thing/number, deselect.thing); 2 role maps (change old -> "old value",
+  copy rel -> place). **Roles of k.actions no general frame reads: 29 -> 0 of 57** (the test now requires 0).
+- **For PSys2 (delete these from src/lang/en.local.mjs; they live here now, same names):**
+  `acts.facts.ask.what.in.lead` (the thing before "is", as its example says), `acts.media.m.pick.play.bare` ("play"
+  is one of its words), `acts.media.m.pick.again` (priority 13 -> 15, over acts.media.m.pick.play),
+  `acts.media.m.pick.play.kind.of` (7 -> 15, over acts.media.m.make.melody.colon; a closing "please"),
+  `acts.media.m.pick.play.kind.bare` (6 -> 15), `acts.text.make.blank` (12 -> 13, over acts.text.make.kind),
+  `acts.text.make.numbered` (12 -> 14, over acts.text.make.text), `acts.text.make.blank.at` (13 -> 14),
+  `acts.facts.layer.on.want.pin` (13 -> 15, over acts.facts.layer.on.pin.verb). The import leaves them out
+  (`MOVED_HERE`; IMPORT.md says so); the 07:40 test checks that each is published here.
+- Priorities chosen so no other frame lost its example: acts.change.replace 11 (below the chart's swap-for frame),
+  acts.save.thing and .place 10 (acts.save keeps "Save it as lunch" by its literal "it"), undo.thing and redo.thing 9
+  (acts.undo keeps "Undo that"). tests/w.lang.en.frames.test.mjs: 386 frames, 370 read their example best, 11 tie,
+  5 known (the chart frames; was 14 known); new test: the shard is the tool's output, 29 roles, 9 moved frames.
+- tests/w.lang.en.test.mjs: the join of frame roles to k.actions follows mode_map (a frame of group in the mode apart
+  names roles of take apart), and the 07:40 comparison skips the moved frames after checking they are here.

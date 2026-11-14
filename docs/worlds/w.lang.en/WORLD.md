@@ -192,9 +192,8 @@ canonical form ends in have and would match its own rule), would you mind + -ing
 reads its example (a host lexicon it names takes any one to three words; what each took is the lexicon of the frame's
 kind of world, `needs`), then in its world (those lexicons, every frame the world meets) the best reading is the frame
 or one with the same act, mode and roles. Of 357 frames 333 read their example best, 10 tie with a frame of the same
-reading, 14 are listed with the reason (`KNOWN`; the test fails on a new failure and on a listed frame that passes):
-9 of PSys2's local frames (media, text, facts: an example that does not follow its frame, a frame that loses to a
-broader one of its set; they are published as PSys2 wrote them) and 5 of the chart frames (orders among one set).
+reading, 5 are listed with the reason (`KNOWN`; the test fails on a new failure and on a listed frame that passes):
+the chart frames (orders among one set); the 9 local frames of PSys2 listed before are fixed (Q64, below).
 What the test found and is fixed: in the reader, a `rest` capture takes at least one word; apostrophes inside a word
 are dropped ("don't" is the frames' "dont"); the thing a frame acts on does not end in a preposition or a determiner;
 a phrasal verb k.actions marks `separable` is also read with its particle back next to the verb ("take the tables
@@ -204,11 +203,22 @@ import, `FRAME_FIXES`, `FRAME_PRIORITY`): acts.change.add1's determiner, "give y
 "colour list please", acts.apart.2 over the direction frames; in the host lexicon (`hostLexicon`): a word with an
 adjective sense right before a noun is its modifier, not the first noun of a compound ("red house"; "apple pie" still
 compounds).
-**Frame asks**: 29 of the 57 roles of k.actions have no general frame (counted by the test): make.part, make.material,
-make.topic, change.old value, change.replacement, place.direction, place.source, connect.tool, group.target,
-group.group, group.criterion, take apart.parts, take apart.source, take apart.tool, pick.source, pick.other, ask.other,
-copy.place, send.means, send.format, undo.thing, undo.number, undo.state, save.thing, save.place, load.source,
-redo.thing, redo.number, deselect.thing (questions.md Q64).
+**Frame asks** (Q64, shard `role-frames`, `tools/lang-en-role-frames.mjs`): every one of the 57 roles of k.actions is
+read by a general frame. The 29 that had none got one each, built from the role's markers in k.actions: "Draw a
+house with a red door" (make.part), "Make a boat out of paper" (make.material), "Make a chart about sales"
+(make.topic), "Change the car from red to blue" (change.old value), "Replace the hat with a crown"
+(change.replacement), "Move the car towards the house", "Move the cat from the sofa to the bed", "Connect the boxes
+using a line", "Group the cat with the dog", "Group the guests into teams", "Sort the guests by colour", "Cut the cake
+into slices", "Detach the wheel from the car", "Cut the paper with scissors", "Pick a card from the deck", "Pick the
+cat instead of the dog", "Compare the cat with the dog", "Copy the star to the corner", "Send the picture by email",
+"Send the chart as a PDF", "Undo the colour change", "Undo 3 steps", "Go back to the start", "Save the drawing as
+lunch", "Save the drawing to my files", "Load lunch from my files", "Redo the colour change", "Redo 2 steps",
+"Deselect the circle". **The nine frames of PSys2's local file that did not read their own example are fixed and kept
+here** (same names; the import leaves them out and PSys2 deletes its copies): acts.facts.ask.what.in.lead (the thing
+before "is"), acts.media.m.pick.play.bare ("play" a word of its own), acts.media.m.pick.again, .play.kind.of and
+.play.kind.bare (priority 15 over pick.play and make.melody.colon), acts.text.make.blank (13), .numbered and
+.blank.at (14 over make.text), acts.facts.layer.on.want.pin (15 over pin.verb). The frames test now reads 370 of 386
+examples best, 11 tie, and lists 5 (the chart frames).
 
 ## How each attribute is said (block 00:05 item 2)
 

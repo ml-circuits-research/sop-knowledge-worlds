@@ -1,5 +1,5 @@
 {
- "version": "0ad395c463db",
+ "version": "889d7cfe51a8",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -86766,8 +86766,8 @@
     {
      "id": "w.lang.en/shards/frames-acts-facts",
      "path": "w.lang.en/shards/frames-acts-facts.sop",
-     "wires": 505,
-     "bytes": 91099,
+     "wires": 487,
+     "bytes": 87776,
      "keys": [],
      "sources": [
       "psys2-447a5f9a"
@@ -86778,8 +86778,8 @@
     {
      "id": "w.lang.en/shards/frames-acts-media",
      "path": "w.lang.en/shards/frames-acts-media.sop",
-     "wires": 151,
-     "bytes": 32562,
+     "wires": 132,
+     "bytes": 28339,
      "keys": [],
      "sources": [
       "psys2-447a5f9a"
@@ -86814,8 +86814,8 @@
     {
      "id": "w.lang.en/shards/frames-acts-text",
      "path": "w.lang.en/shards/frames-acts-text.sop",
-     "wires": 193,
-     "bytes": 34780,
+     "wires": 173,
+     "bytes": 31191,
      "keys": [],
      "sources": [
       "psys2-447a5f9a"
@@ -87284,6 +87284,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/role-frames",
+     "path": "w.lang.en/shards/role-frames.sop",
+     "wires": 278,
+     "bytes": 44298,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/templates-acts",
      "path": "w.lang.en/shards/templates-acts.sop",
      "wires": 55,
@@ -87326,7 +87338,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 50,
-     "bytes": 29976,
+     "bytes": 30358,
      "keys": [],
      "sources": [
       "hand-core-1"

@@ -1,5 +1,6 @@
 // w.lang.en (Round 12): PSys2's English grammar hand-over, imported under this repository's rules, joined to
 // k.words / k.actions / k.values, and read by the library's std.grammar (the one pinned build, tools/sopworld/VERSION; Q35).
+import { MOVED_HERE } from '../tools/lang-en-role-frames.mjs';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -111,7 +112,9 @@ test('w.lang.en joins k.actions: every role of every frame is a role of its act 
       ?? maps.find((x) => !one(x, 'frame') && !one(x, 'takes') && one(x, 'act') === act && one(x, 'role') === r);
     const actRole = m ? one(m, 'act_role') : r;
     if (m) mapped++; else same++;
-    assert.ok(acts.get(act).has(actRole), `${name}: ${r} -> ${act}.${actRole}`);
+    // the act of a frame in a mode with a mode_map is the act it means (group apart: take apart; pick none: deselect)
+    const meant = one(of('mode_map').find((x) => one(x, 'act') === act && one(x, 'mode') === one(f, 'mode')) ?? { attrs: {} }, 'means') ?? act;
+    assert.ok(acts.get(act).has(actRole) || acts.get(meant)?.has(actRole), `${name}: ${r} -> ${meant}.${actRole}`);
   }
   for (const m of maps) assert.ok(acts.get(one(m, 'act'))?.has(one(m, 'act_role')), m.id);
   assert.ok(mapped > 50 && same > 200, `${mapped} mapped, ${same} by name`);
@@ -210,10 +213,13 @@ test('w.lang.en (block 07:40): every frame of src/lang/en.local.mjs is published
   const src = execFileSync('git', ['-C', '/tmp/wt2', 'show', `${localCommit}:src/lang/en.local.mjs`], { encoding: 'utf8' });
   const local = parse(localPart(src, 'frames'));
   const partsOf = (name) => of('part').filter((p) => one(p, 'frame') === name).sort((a, b) => one(a, 'at') - one(b, 'at'));
+  // Q64: the frames that did not read their own example are fixed and kept here (shard role-frames); PSys2 deletes them
+  const moved = new Set(MOVED_HERE.map((m) => m[0]));
   for (const w of local) {
     const name = one(w, 'name');
     const f = of('frame').find((x) => one(x, 'name') === name);
     assert.ok(f, name);
+    if (moved.has(name)) { assert.match(f.attrs['core.source'][0], /hand-core/, name); continue; }
     for (const k of ['act', 'mode', 'set', 'priority', 'needs', 'after', 'example']) assert.equal(one(f, k), one(w, k), `${name}: ${k}`);
     assert.deepEqual(v(f, 'role'), v(w, 'role'), `${name}: roles`);
     assert.equal(patternOf(partsOf(name)), one(w, 'pattern').trim().split(/\s+/).join(' '), `${name}: pattern`);

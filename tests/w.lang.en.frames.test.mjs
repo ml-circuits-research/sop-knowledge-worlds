@@ -28,16 +28,7 @@ const given = new Set(all.filter((w) => w.type === 'w.lang.en.lex').map((l) => o
 
 // Frames whose example is not read as said, with why (to fix in the frames, or a reader the library has and this one not).
 export const KNOWN = {
-  // frames of PSys2's local file (src/lang/en.local.mjs, published as written; tests/w.lang.en.test.mjs compares them):
-  'acts.facts.ask.what.in.lead': 'the example puts the thing before "is" ("what continent Egypt is in"), the frame after it; acts.facts.ask.what.thing.is.in reads it the same',
-  'acts.media.m.pick.play.bare': 'the bare verb "play" is not among the frame\'s words (play something, play music...)',
-  'acts.media.m.pick.again': '"again" is read as part of the thing by acts.media.m.pick.play (priority over the again frame)',
-  'acts.media.m.pick.play.kind.of': 'acts.media.m.make.melody.colon (a kind and the rest as notes) outranks it; PSys2 orders by the frame list',
-  'acts.media.m.pick.play.kind.bare': 'as acts.media.m.pick.play.kind.of',
-  'acts.text.make.blank': 'acts.text.make.kind reads "start a new chapter" with the same act but mode text, not blank ("new" is a word of the blank frame only)',
-  'acts.text.make.numbered': 'acts.text.make.text takes "3: The Return" as the text; the numbered frame needs priority over it',
-  'acts.text.make.blank.at': 'acts.text.make.text takes "after the title" as the text; the place frame needs priority over it',
-  'acts.facts.layer.on.want.pin': 'acts.facts.layer.on.pin.verb takes "on Berlin" as the thing (the preposition is not split off)',
+  // (Q64: the nine frames of PSys2's local file that were listed here are fixed in the shard role-frames)
   // frames of the chart world (data), ordering among PSys2's frames of one set:
   'acts.data.change.nice': 'acts.data.change.value.d takes "a nice green" as the value; the nice frame (the adjective as a word of its own) has no priority over it',
   'acts.data.remove.out.all': 'acts.remove.out (a general frame, priority 11) reads "take all the values out"',
@@ -101,5 +92,13 @@ test('frames: the roles of k.actions that no general frame reads (asks for frame
   }
   const unread = [...acts].flatMap(([a, rs]) => rs.filter((r) => !read.has(`${a}.${r}`)).map((r) => `${a}.${r}`));
   console.log(`# roles of k.actions no general frame reads: ${unread.length} of ${[...acts.values()].flat().length}: ${unread.join(', ')}`);
-  assert.ok(unread.length <= 40, unread.join(', '));
+  // Q64: every role has a general frame now (shard role-frames, tools/lang-en-role-frames.mjs)
+  assert.deepEqual(unread, []);
+});
+
+test('frames (Q64): the shard role-frames is what tools/lang-en-role-frames.mjs gives; one frame per role it asks for', async () => {
+  const { roleFrameShard, ROLE_FRAMES, MOVED_HERE } = await import('../tools/lang-en-role-frames.mjs');
+  assert.equal(readFileSync(join(WORLDS_DIR, 'w.lang.en', 'shards', 'role-frames.sop'), 'utf8'), roleFrameShard());
+  assert.equal(new Set(ROLE_FRAMES.map((f) => f[4])).size, 29);
+  assert.equal(MOVED_HERE.length, 9);
 });
