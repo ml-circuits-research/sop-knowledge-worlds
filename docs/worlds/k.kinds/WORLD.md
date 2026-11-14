@@ -77,7 +77,7 @@ reading), two kinds of facts, written by `tools/relations-core.mjs` (part of `np
   `tools/joins.mjs`: animal, food, plant, person, body part, clothing, colour, shape, place, time, body in space,
   thing) and examples. "Send it to Ann": the recipient holds `person`, so k.people kinds and roles and the people
   of the live world fill it, a colour does not.
-- **`k.kinds.relation`** (shards `relations-<world>`, one per knowledge world, 919): every key of every type of every knowledge world, read as a
+- **`k.kinds.relation`** (shards `relations-<world>`, one per knowledge world, 938): every key of every type of every knowledge world, read as a
   relation, with its `subject` (the kind of the type in a word: animal, country; `word` for types keyed by the word,
   `thing` for types keyed by a drawing), `subject_sense`, and its `object`: the class, `object_type` (the types
   whose things the values name, the best first), `object_sense`, and `scale` (the k.values scale of an enum).
@@ -103,8 +103,8 @@ singulars), at most three, within nine tenths of the best share; types keyed by 
 k.parts) only when no other joins, so a key of English words is a `word`. A key that joins nothing is a `word` too.
 
 Measured (`tests/k.kinds.relations.test.mjs`): every role of k.actions holds a class; every key of every
-knowledge type has a relation (919: 182 word, 151 number, 142 value, 120 thing, 84 text, 77 amount, 50 boolean,
-38 kind, 24 place, 24 time, 22 act, 3 group, 2 person); 28 relations of the first host's question frames take
+knowledge type has a relation (938: 188 word, 153 number, 148 value, 118 thing, 86 text, 77 amount, 50 boolean,
+39 kind, 27 time, 24 place, 23 act, 3 group, 2 person; found: 158 declared, 463 schema, 317 value); 28 relations of the first host's question frames take
 the subject and object they must; the 74 keys that the readings of the 292 real questions reach
 (`tools/ask-real.mjs`) all have a relation, and none of a named class lacks its object type.
 

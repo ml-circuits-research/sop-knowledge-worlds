@@ -922,3 +922,15 @@ it comes back as `question`, the mode the published test sentence says; the exce
 is now checked against its own mode. Canonical texts and the rules applied (35 of 35) are unchanged under 0.93's
 rule order by specificity.
 Blocking: no.
+
+## Q66 [LIB] (Q61, second worker, 2026-11-15): a declared join is checked by a scan of the target type, and compares raw tokens
+Question: (1) could the `by=` check use an index of the target type by the join key (built once per type and key,
+kept up to date on tell / retract) instead of scanning every wire of the type for each value? (2) should `"horse"` and
+`horse` (a quoted string and an atom of the same text) meet in a join, as they mean one name?
+Context: this repository now declares 166 joins (`type=T by=k`, `match=` for two keys) and reads `k.kinds.relation`
+from them. (1) `_validate` does `[...byType.get(s.type)].map(...).some(fits)` per value: declaring `k.objects.part of`
+-> `k.objects.object` (27,902 parts, 2,211 objects) made loading k.objects go from 28 s to 49 s, so that join is left
+undeclared (docs/worlds/k.kinds/JOINS-REPORT.md says why); k.geo's 15 joins cost 0.3 s. (2) A world written by hand
+can quote a name one shard and not in another; the check treats them as two values (the importers here always quote
+the same way, so nothing is open for that reason today; the report compares token for token as the library does).
+Blocking: no. Meanwhile: the costly join is left out with its reason and checked by a test over the shards.

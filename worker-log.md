@@ -4755,3 +4755,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   After rebasing on 6c46b13 and rebuilding: `npm run test:changed` 43 files, 336 tests, 335 pass, 1 skipped, 0 fail;
   rebased again on 20cdace (k.people.given_name), rebuilt (catalog 32 worlds, 1,091 shards, 29,129 words): catalog 8,
   k.attributes.narration 3, w.lang.en.closed 3, repo 1, validate 5 pass.
+## 2026-11-15 — second worker: Q66 [LIB], lessons, k.kinds numbers; full suite of the round
+
+- questions.md Q66 [LIB]: the `by=` check scans the target type per value (k.objects part `of` would add 21 s), and
+  `"horse"` / `horse` do not meet. docs/lessons.md: a section for Q61 / Q62 (seven lessons). k.kinds/WORLD.md: 938
+  relations (158 declared, 463 schema, 317 value).

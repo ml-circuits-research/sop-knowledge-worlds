@@ -504,3 +504,29 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   kept as a word; it never matched, so the frame silently lost its verbs. Turning it into data (`act=` on the part)
   made the frame read, and also made it compete where it had not (the layout frame took "put the house next to the
   tree"): fixing one gap can open a conflict, so the general frame test runs on every change.
+
+## Q61 and Q62 (second worker): declared joins as the source of truth; given names
+
+- **A join the engine already knows beats a new keyword.** The reviewer's answer said `joins=<type>`; the library has
+  had `type=T by=k` (and `match=` for a second key) since 0.60, checked per value and left open while the target is
+  not loaded. Declaring with it costs nothing new: the engine reports open joins, the sampler fills the slot from the
+  target, and the relation facts read the declaration. Look in the engine's reference before naming syntax.
+- **An exact check finds what a folded statistic hid.** The value share (case folded, plurals singular, half the
+  values) had typed `k.scenes.has.thing` as things; compared token for token as the engine does, 89 of 595 things of
+  the scenes have no drawing of that name (beach ball, control tower), "magnifying glass" is drawn only "tilted left",
+  a role works at a courthouse that is no scene. A suggestion may be lenient; a declaration must be checked exactly.
+- **A report must not fail when another world grows; a declaration may.** The relations test used to compare every
+  generated fact, so new facts anywhere made it red until a rebuild. Splitting by how a fact was found (`found=`
+  declared / schema / value) let the declared and schema facts be strict and the value-share facts a warning.
+- **A per-value check has a price per value.** 166 joins cost little except one: the parts of 2,211 drawings (27,902
+  facts) scanning the drawings added 21 s to a load. The cheapest fix is a reason in the report and a test over the
+  shards; the right one is an index in the engine (Q66).
+- **A join on a parent type holds for its children, and only a type can be the target.** `cycle` declared once on
+  k.time.ordered types five worlds' cycles; `next` (the next month is a month) cannot be declared there, because the
+  target is the fact's own type. Inheritance shares a slot, not a slot that refers to "my own type".
+- **`world.check()` issues now mix open joins with rule issues.** A test that counted the issues of soft rules broke
+  as soon as a slot of the loaded world declared a join to a world the test did not load; a test of rules reads the
+  issues of rules (kind other than `open-join`).
+- **Names that are words cost vocabulary noise.** 2,990 given names made 15 common things (Rose, Cliff) also lead to
+  a k.people shard: a host that loads by word now fetches a names shard for "rose". A frequency band on the fact
+  lets a reader weigh "a name" against the thing; the vocabulary itself cannot.
