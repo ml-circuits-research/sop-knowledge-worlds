@@ -37,7 +37,7 @@ const input = {
 test('the geo importer writes a public-domain shard and a borders shard per continent', () => {
   const { files, stats } = importGeo(input, { citiesPerCountry: 1 });
   assert.deepEqual(Object.keys(files).sort(), ['africa.sop', 'antarctica.sop', 'asia.sop', 'europe-borders.sop', 'europe.sop', 'north-america.sop', 'oceania.sop', 'south-america.sop']);
-  assert.deepEqual(stats, { countries: 2, borders: 2, cities: 2, rivers: 1, mountains: 1, ranges: 1, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, words: 2, dropped: { countries: 1, cities: 1, rivers: 1, mountains: 0 } });
+  assert.deepEqual(stats, { countries: 2, borders: 2, cities: 2, rivers: 1, mountains: 1, ranges: 1, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, citiesFromList: 0, words: 2, dropped: { countries: 1, cities: 1, rivers: 1, mountains: 0 } });
   const lines = (f) => files[f].split('\n').filter((l) => l.startsWith('@'));
   assert.deepEqual(lines('europe.sop'), [
     '@k.geo.continent.europe k.geo.continent name=Europe core.source="natural-earth 5.1.2"',
@@ -110,6 +110,11 @@ test('Round 9: lakes with the area of their outline, deserts, seas; a capital fr
   // Aland has a capital in Natural Earth (Acity): the list's is not taken. Bee Land has none: the list's is.
   assert.ok(lines('europe-borders.sop').some((l) => l.startsWith('@k.geo.borders.BBB k.geo.country name=Bee capital=Beeville ')));
   assert.ok(!files['europe-borders.sop'].includes('Listed'));
+  // Reviewer 04:10 item 2: every capital is a city; Beeville is no place of Natural Earth, so it is the list's city
+  // (no coordinates), in the list's shard.
+  assert.ok(lines('europe-borders.sop').includes('@k.geo.borders.city.BBB.Beeville k.geo.city name=Beeville country=Bee capital_of=Bee core.source="countries 5.1.0"'));
+  assert.equal(stats.citiesFromList, 1);
+  assert.ok(!files['europe.sop'].includes('Beeville'));
 });
 
 test('Q41: recognition is limited where a self-governing state is claimed or disputed without an ISO code, and independent is then unsaid', () => {

@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **189** in 30 worlds; distinct values 6304, meeting a target 6233 (98.9 %), open 71
+- declared joins: **189** in 30 worlds; distinct values 6347, meeting a target 6286 (99 %), open 61
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **113**; left undeclared on purpose: 6
 
@@ -82,9 +82,9 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.genres | `k.genres.step.genre` | `k.genres.genre` | name | 5 | 5 |  |
 | k.genres | `k.genres.step.move` | `k.genres.move` | name | 41 | 41 |  |
 | k.genres | `k.genres.step.source` | `k.genres.source` | name | 17 | 17 |  |
-| k.geo | `k.geo.city.capital_of` | `k.geo.country` | name | 205 | 205 |  |
-| k.geo | `k.geo.city.country` | `k.geo.country` | name | 245 | 245 |  |
-| k.geo | `k.geo.country.capital` | `k.geo.city` | name | 262 | 252 | `"City of Victoria"`, `"Cockburn Town"`, `"Diego Garcia"`, `"El Aaiún"`, `"King Edward Point"`, `Fakaofo`, … (10) |
+| k.geo | `k.geo.city.capital_of` | `k.geo.country` | name | 245 | 245 |  |
+| k.geo | `k.geo.city.country` | `k.geo.country` | name | 248 | 248 |  |
+| k.geo | `k.geo.country.capital` | `k.geo.city` | name | 262 | 262 |  |
 | k.geo | `k.geo.country.continent` | `k.geo.continent` | name | 7 | 7 |  |
 | k.geo | `k.geo.country.neighbour` | `k.geo.country` | name | 160 | 160 |  |
 | k.geo | `k.geo.country.political_continent` | `k.geo.continent` | name | 1 | 1 |  |

@@ -49,6 +49,15 @@ Two per continent:
   not Melekeok). The countries are named in `tools/import/geo.mjs` (a rename cannot be told from a spelling by the
   data); the capitals are the list's, and so is the `capital_of` of Gitega and Astana (a `k.geo.city` wire in the
   borders shard that merges with the city of the continent shard).
+- Every capital is a city (reviewer 04:10 item 2): each capital the list gives has a `k.geo.city` wire with
+  `capital_of` in the borders shard; it merges with Natural Earth's city of that name, or, where Natural Earth has
+  no place of that name, it is the list's own city, with its name and country and no coordinates or population
+  (City of Victoria, Diego Garcia, King Edward Point, Ngerulmud, Saipan, and 30 more, many of which a PSys2 city
+  shard places). Where Natural Earth has the very place under another name, the capital is Natural Earth's city and
+  the list's spelling a `core.word` for it: Hagåtña for Agana, Papeetē for Papeete, Cockburn Town for Natural
+  Earth's "Grand Turk" (the town, named after its island). The countries that only the list has (shard
+  `psys2-countries`: Western Sahara, Tokelau, Réunion …) get their capital city the same way (El Aaiún, Fakaofo).
+  Every `capital` of every country now meets a city (`k.geo.country.capital`: 0 open).
 - Q33: `independent` follows Natural Earth's `SOVEREIGNT` (a country that is its own sovereign), not its `TYPE`,
   which called Cuba, Israel and Kazakhstan not independent and Aruba, Greenland, Hong Kong, Jersey independent; the
   country list agrees everywhere. `political_continent` (from the list's region): Cyprus, Europe.

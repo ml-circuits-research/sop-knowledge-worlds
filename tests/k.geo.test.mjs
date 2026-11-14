@@ -128,3 +128,22 @@ test('block 07:40 item 3: other names of places (WordNet synonyms that are prope
   const places = new Set(geo.ofType('k.geo.country').concat(geo.ofType('k.geo.city')).map((w) => one(w, 'name')));
   for (const w of words.filter((x) => /^k\.geo\.word\.alias\./.test(x.id))) for (const t of (w.attrs.text ?? []).map(tok)) assert.ok(!places.has(t), `${t} is a place of its own`);
 });
+
+test('reviewer 04:10 item 2: every capital of a country is a k.geo city whose capital_of is that country; the list spellings of the same places are words', () => {
+  const cities = geo.ofType('k.geo.city');
+  const capitalOf = new Map();
+  for (const c of cities) for (const k of c.attrs.capital_of ?? []) { const n = one(c, 'name'); if (!capitalOf.has(n)) capitalOf.set(n, new Set()); capitalOf.get(n).add(tok(k)); }
+  const missing = [];
+  for (const c of geo.ofType('k.geo.country')) for (const cap of (c.attrs.capital ?? []).map(tok)) if (!capitalOf.get(cap)?.has(one(c, 'name'))) missing.push(`${one(c, 'name')}: ${cap}`);
+  assert.deepEqual(missing, []);
+  assert.equal(geo.check().issues.filter((i) => i.kind === 'open-join' && i.key === 'capital').length, 0);
+  for (const [list, ne, country] of [['Hagåtña', 'Agana', 'Guam'], ['Papeetē', 'Papeete', '"French Polynesia"'], ['Cockburn Town', 'Grand Turk', '"Turks and Caicos Islands"']]) {
+    assert.ok(geo.ofType('core.word').some((w) => (w.attrs.text ?? []).map(tok).includes(list) && one(w, 'means') === ne), list);
+    assert.deepEqual(geo.query({ type: 'k.geo.country', where: { name: country }, seek: 'capital', mode: 'list' }).values?.map(String).map(tok), [ne], ne);
+  }
+  // the list's own cities, where Natural Earth has none of that name: a name, a country and capital_of, nothing else
+  for (const n of ['Diego Garcia', 'King Edward Point', 'Fakaofo', 'El Aaiún', 'Ngerulmud', 'City of Victoria', 'Saipan']) {
+    const c = cities.find((x) => one(x, 'name') === n);
+    assert.ok(c && c.attrs.capital_of && !c.attrs.lat && !c.attrs.population, n);
+  }
+});

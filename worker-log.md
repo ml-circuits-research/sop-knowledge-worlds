@@ -5026,3 +5026,28 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   tests/k.layouts.test.mjs: the pirate ship is no longer a thing without a drawing (the stall is: its stand-in, the
   shop, has no anchor). COVERAGE.md and ASPECTS.md regenerated (`npm run reports`). Note: "mobile" is a hand word of
   the phone, so the vocabulary sends the nursery's mobile to the phone.
+
+## 2026-11-15 — second worker: every capital is a k.geo city (reviewer 04:10, item 2)
+
+- The 10 capitals that were no k.geo city: Natural Earth (1:10m populated places, 5.1.2) has **none of them under that
+  name**; it has three of the very places under another (Agana for Hagåtña, Papeete for Papeetē, its point "Grand
+  Turk" at 21.47, -71.14 for Cockburn Town, the town named after its island: each marked `Admin-0 region capital` of
+  that territory, which the import checks), marks a neighbouring place or the island for four (Grytviken for King
+  Edward Point, Atafu for Fakaofo, Capitol Hill for Saipan, Melekeok for Ngerulmud: Q33 kept the list's), counts
+  El Aaiún in Morocco (Laayoune), and has no place for Diego Garcia or the City of Victoria (its "Hong Kong" point
+  is in Kowloon). So, keeping each fact in the shard of its licence (tools/import/geo.mjs):
+  - the 3 same places: the country's `capital` names Natural Earth's city, the list's spelling is a `core.word` for
+    it, and the city's `capital_of` is said by a wire of the list (borders shard, ODbL) that merges with Natural
+    Earth's city (`CAPITAL_SAME_PLACE`);
+  - every other capital the list gives (for the 40 territories Natural Earth marks none for, and for the list's
+    countries Natural Earth's 1:50m countries lack: Western Sahara, Tokelau, Réunion, Gibraltar ...) is a
+    `k.geo.city` with `capital_of` in the list's borders shard: it merges with Natural Earth's (or a PSys2 shard's)
+    city of that name, or is the list's own city, with name and country only (37 such: Diego Garcia, King Edward
+    Point, Fakaofo, El Aaiún, Ngerulmud, City of Victoria, Saipan, and 30 that other shards place).
+- Numbers: `k.geo.country.capital` 262 of 262 values meet a city (was 252); `k.geo.city.capital_of` 245 of 245;
+  59 new wires in the 6 borders shards (291 wires, 48,459 bytes); k.geo loads in the same time, 0 open joins of
+  `capital`. Declared joins in all: 189 in 30 worlds, 6,286 of 6,347 values meet (99 %), 0 broken.
+- Tests: tests/import.geo.test.mjs (stats `citiesFromList`; a list capital that is no place of Natural Earth becomes
+  the list's city in the borders shard and not in the public-domain one); tests/k.geo.test.mjs new test: every
+  capital of every country is a city whose `capital_of` is that country, no open join of `capital`, the three words,
+  the seven list cities have no coordinates. Docs: k.geo/WORLD.md, sources/countries/SOURCE.md.
