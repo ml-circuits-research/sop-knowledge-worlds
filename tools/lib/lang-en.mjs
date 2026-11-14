@@ -83,3 +83,134 @@ export function hostLexicon(world, sentence, worlds) {
   }
   return lex;
 }
+
+// ---- reading a sentence by the argument frames, and realising a template (block 17:05: act generation templates) ----
+// The smallest reference reading of `w.lang.en.frame` / `w.lang.en.part` that a host does (PSys2 reads them in its own
+// acts reader): every frame whose `needs` the world meets is matched against the words; a part is a lead, a
+// determiner, a verb of the act (k.actions), a word or phrase, a lexicon word, or a role capture (words, rest, a
+// number, a preposition, a lexicon word). Of the ways a frame matches, the one with the most literal words wins (then the first: captures shortest first, fixed parts longest first); of the frames
+// that match, the highest priority wins, then the one with more literal words, then the one with fewer captured
+// words (the library's order, 0.58). The frame's roles go to the roles of k.actions by `w.lang.en.role_map`, its act
+// by `w.lang.en.mode_map` (PSys2's group/apart is the act take apart).
+const toks = (s) => String(s).toLowerCase().replace(/[.?!,;:]+/g, ' ').trim().split(/\s+/).filter(Boolean);
+
+// `kindPhrase(words) -> { head, mods }`: how the host reads the noun phrase of a kind ("red tables": head table, mods
+// red), so that a modifier said inside the kind is the act's value (k.actions make.value).
+export function frameReader(wires, actionWires, { lexicons = {}, needs = () => true, kindPhrase = null } = {}) {
+  const of = (t) => wires.filter((w) => w.type === `w.lang.en.${t}`);
+  const items = (list) => [...new Set(list)].map(toks).filter((x) => x.length).sort((a, b) => b.length - a.length);
+  const phrases = new Map(of('phrase').map((p) => [one(p, 'name'), vals(p, 'item')]));
+  const lexes = new Map([...of('lex').map((l) => [one(l, 'name'), vals(l, 'item')]), ...Object.entries(lexicons)]);
+  const verbs = new Map();
+  for (const v of actionWires.filter((w) => w.type === 'k.actions.verb')) (verbs.get(one(v, 'act')) ?? verbs.set(one(v, 'act'), []).get(one(v, 'act'))).push(one(v, 'text'));
+  const dets = items(of('det').map((d) => one(d, 'text')));
+  const preps = items([...of('prep'), ...of('prep.time')].map((p) => one(p, 'text')));
+  const numerals = new Set(of('numeral').map((n) => one(n, 'text')));
+  const maps = of('role_map'), modes = of('mode_map');
+  const fixed = of('fixed');
+  const partsOf = new Map();
+  for (const p of of('part')) (partsOf.get(one(p, 'frame')) ?? partsOf.set(one(p, 'frame'), []).get(one(p, 'frame'))).push(p);
+  for (const ps of partsOf.values()) ps.sort((a, b) => Number(one(a, 'at')) - Number(one(b, 'at')));
+  // a lexicon word may be said in the plural ("tables" for the kind table)
+  const lexItems = (name) => { const xs = lexes.get(name) ?? []; return items([...xs, ...xs.map((x) => `${x}s`)]); };
+  const compiled = of('frame').filter((f) => needs(one(f, 'needs'))).map((f) => ({ f, parts: (partsOf.get(one(f, 'name')) ?? []).map((p) => {
+    const is = one(p, 'is'), opt = one(p, 'optional') === 'yes';
+    if (is === 'lead') return { kind: 'fixed', alts: items(phrases.get(one(p, 'phrase')) ?? []), opt: true, literal: true };
+    if (is === 'det') return { kind: 'fixed', alts: dets, opt: true };
+    if (is === 'verb') return { kind: 'fixed', alts: items(verbs.get(one(p, 'act')) ?? []), opt, literal: true };
+    if (is === 'word' || is === 'phrase') return { kind: 'fixed', alts: items([...vals(p, 'word'), ...vals(p, 'phrase').flatMap((x) => phrases.get(x) ?? [])]), opt, literal: true };
+    if (is === 'lexicon') return { kind: 'fixed', alts: lexItems(one(p, 'lexicon')), opt, literal: true };
+    const takes = one(p, 'takes');
+    const cap = { kind: 'role', role: one(p, 'role'), takes, opt, max: Number(one(p, 'max_words') ?? 1e9) };
+    if (takes === 'prep') return { ...cap, alts: preps };
+    if (takes === 'lexicon') return { ...cap, alts: lexItems(one(p, 'lexicon')) };
+    return cap;
+  }) }));
+
+  function match(parts, ws) { // the best match: most literal words, then the first in the search order; { roles, literal, captured }
+    const roles = {};
+    let literal = 0, best = null, steps = 0;
+    const go = (i, j) => { // bounded: parts x words, each alternative once per position, at most 20,000 steps a frame
+      if (++steps > 20000) return;
+      if (i === parts.length) { if (j === ws.length && (!best || literal > best.literal)) best = { roles: { ...roles }, literal }; return; }
+      const p = parts[i];
+      const alts = p.alts ?? null;
+      if (alts) for (const a of alts) {
+        if (a.every((t, k) => ws[j + k] === t)) {
+          if (p.kind === 'role') roles[p.role] = a.join(' ');
+          if (p.literal) literal += a.length;
+          go(i + 1, j + a.length);
+          if (p.literal) literal -= a.length;
+          if (p.kind === 'role') delete roles[p.role];
+        }
+      }
+      else if (p.takes === 'number') {
+        if (ws[j] !== undefined && (/^\d+$/.test(ws[j]) || numerals.has(ws[j]))) { roles[p.role] = ws[j]; go(i + 1, j + 1); delete roles[p.role]; }
+      } else { // words or rest: one word or more, shortest first (rest: to the end)
+        const from = p.takes === 'rest' ? ws.length - j : 1;
+        for (let n = from; n <= Math.min(p.max, ws.length - j); n++) { roles[p.role] = ws.slice(j, j + n).join(' '); go(i + 1, j + n); }
+        delete roles[p.role];
+      }
+      if (p.opt) go(i + 1, j);
+    };
+    go(0, 0);
+    return best ? { ...best, captured: Object.values(best.roles).reduce((s, x) => s + toks(x).length, 0) } : null;
+  }
+
+  const actRoleOf = (name, act, role, takes) => {
+    const m = maps.find((x) => one(x, 'frame') === name && one(x, 'role') === role)
+      ?? maps.find((x) => !one(x, 'frame') && one(x, 'act') === act && one(x, 'role') === role && one(x, 'takes') === takes)
+      ?? maps.find((x) => !one(x, 'frame') && !one(x, 'takes') && one(x, 'act') === act && one(x, 'role') === role);
+    return m ? { role: one(m, 'act_role'), marker: one(m, 'marker') === 'yes' } : { role, marker: false };
+  };
+
+  /** Every frame that reads the sentence, best first: { frame, act, mode, priority, roles (frame roles), args (k.actions roles) }. */
+  return function read(sentence) {
+    const ws = toks(sentence);
+    const out = [];
+    for (const { f, parts } of compiled) {
+      const m = match(parts, ws);
+      if (!m) continue;
+      const name = one(f, 'name'), act = one(f, 'act'), mode = one(f, 'mode');
+      const args = {};
+      for (const x of fixed.filter((y) => one(y, 'frame') === name)) m.roles[one(x, 'role')] = one(x, 'value');
+      for (const [r, text] of Object.entries(m.roles)) {
+        const p = parts.find((x) => x.role === r);
+        const k = actRoleOf(name, act, r, p?.takes);
+        if (k.marker) args[`${k.role}.marker`] = text; else args[k.role] = args[k.role] ? `${args[k.role]} ${text}` : text;
+      }
+      if (kindPhrase && args.kind) { const np = kindPhrase(args.kind); if (np?.head) { args.kind = np.head; if (np.mods?.length) args.value = [...np.mods, ...(args.value ? [args.value] : [])].join(' '); } }
+      const mm = modes.find((x) => one(x, 'act') === act && one(x, 'mode') === mode);
+      out.push({ frame: name, act: mm ? one(mm, 'means') : act, mode, priority: Number(one(f, 'priority')), literal: m.literal, captured: m.captured, roles: m.roles, args });
+    }
+    return out.sort((a, b) => b.priority - a.priority || b.literal - a.literal || a.captured - b.captured);
+  };
+}
+
+// The article before a word: `a` or `an` by the sound the word begins with (`w.lang.en.det before=`), the spelling's
+// first letter unless a `w.lang.en.onset` fact says otherwise for the longest beginning it names (an hour, a unicorn).
+export function articleFor(wires, word) {
+  const w = String(word).toLowerCase();
+  const onset = wires.filter((x) => x.type === 'w.lang.en.onset' && w.startsWith(one(x, 'begins'))).sort((a, b) => one(b, 'begins').length - one(a, 'begins').length)[0];
+  const sound = onset ? one(onset, 'sound') : /^[aeiou]/.test(w) ? 'vowel' : 'consonant';
+  return one(wires.find((x) => x.type === 'w.lang.en.det' && one(x, 'before') === sound), 'text');
+}
+
+// A template filled (the library's notation, std.morph `realise`): `{role}` the filler as given, `{role:num=pl}` its
+// plural by the morphology rules of w.lang.en; the article `a` takes its form from the next word. The first letter is
+// made upper case. Returns null when a role of the template has no filler.
+export function realiseEn(wires, text, fillers) {
+  const facts = { inflect: wires.filter((w) => w.type === 'w.lang.en.inflect'), irregular: wires.filter((w) => w.type === 'w.lang.en.irregular'), exceptions: wires.filter((w) => w.type === 'w.lang.en.noun.exception') };
+  let missing = false;
+  let s = text.replace(/\{([\w.]+)(?::([^}@]*))?(?:@(\w+))?\}/g, (_, role, cells) => {
+    const v = fillers[role];
+    if (v === undefined || v === null || v === '') { missing = true; return ''; }
+    const feat = Object.fromEntries((cells || '').split(',').filter(Boolean).map((x) => x.split('=')));
+    if (feat.num === 'pl') { const ws = String(v).split(' '); ws[ws.length - 1] = inflect(facts, ws[ws.length - 1], 'plural'); return ws.join(' '); }
+    return String(v);
+  });
+  if (missing) return null;
+  const article = new Set(wires.filter((w) => w.type === 'w.lang.en.det' && one(w, 'before')).map((w) => one(w, 'text')));
+  s = s.replace(/\b(a|an) (\S+)/gi, (m, a, next) => (article.has(a.toLowerCase()) ? `${articleFor(wires, next)} ${next}` : m));
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}

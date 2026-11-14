@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=onset core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -29,6 +29,9 @@
 @w.lang.en.det.meaning core.slot of=w.lang.en.det key=meaning kind=atom core.source="psys2 78f45863"
 @w.lang.en.det.note core.slot of=w.lang.en.det key=note kind=string core.source="psys2 78f45863"
 @w.lang.en.det.in core.slot of=w.lang.en.det key=in many=true kind=atom core.source="psys2 78f45863"
+# `before`: the sound of the next word that takes this form of the article (a house, an apple; block 17:05, for
+# generation): the first letter of the word's spelling, unless a `w.lang.en.onset` fact names its beginning.
+@w.lang.en.det.before core.slot of=w.lang.en.det key=before enum=vowel enum=consonant core.source="hand-core 1"
 
 # A pronoun. `refers`: thing (a thing of the scene or of the dialogue), place, an agent by gender (m, f, any), or
 # the user, or the assistant. `case` may repeat (it: subject and object).
@@ -244,6 +247,13 @@
 @w.lang.en.role_map.takes core.slot of=w.lang.en.role_map key=takes enum=words enum=rest enum=number enum=prep enum=lexicon core.source="hand-core 1"
 @w.lang.en.role_map.frame core.slot of=w.lang.en.role_map key=frame kind=atom core.source="hand-core 1"
 @w.lang.en.role_map.doc core.slot of=w.lang.en.role_map key=doc kind=string core.source="hand-core 1"
+# The join from the act and mode of a frame to the act of k.actions where the two differ: PSys2 read "take apart" as
+# the act group in the mode apart, and "deselect everything" as pick in the mode none. A frame with no mode_map is the
+# k.actions act of its `act`.
+@w.lang.en.mode_map core.type of=w.lang.en.mode_map shared=true closed=true core.source="hand-core 1"
+@w.lang.en.mode_map.act core.slot of=w.lang.en.mode_map key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.mode_map.mode core.slot of=w.lang.en.mode_map key=mode id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.mode_map.means core.slot of=w.lang.en.mode_map key=means required=true kind=atom kind=string core.source="hand-core 1"
 # A fixed argument of a frame: "Call yourself Robi" sets the attribute name.
 @w.lang.en.fixed core.type of=w.lang.en.fixed shared=true closed=true core.source="hand-core 1"
 @w.lang.en.fixed.frame core.slot of=w.lang.en.fixed key=frame id=true required=true kind=atom core.source="hand-core 1"
@@ -259,6 +269,37 @@
 @w.lang.en.lex.name core.slot of=w.lang.en.lex key=name id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.lex.doc core.slot of=w.lang.en.lex key=doc kind=string core.source="psys2 78f45863"
 @w.lang.en.lex.item core.slot of=w.lang.en.lex key=item many=true required=true kind=string core.source="psys2 78f45863"
+
+# ---- generation ----
+# A generation template of an act (block 14:15 item 1, 17:05): one imperative sentence (a question for ask) per act
+# and argument shape, the realisation side of a frame. `text` is in the library's template notation (std.morph
+# `realise`): `{role}` a role of the act in k.actions, filled as given; `{role:num=pl}` in the plural; the article
+# `a` takes its form from the next word (`w.lang.en.det before=`). What fills a role: `kind` the name of a kind
+# (house), `thing`, `source`, `target`, `recipient` a thing of the live world as a host refers to it, with its
+# determiner (the house, table 1, Ann), `place` a relation and a thing (next to the tree), `value`, `amount`,
+# `direction`, `number`, `name`, `topic` and `attribute` a word. `role` (many) lists the roles in the text; `shape`
+# names the argument shape (the roles in k.actions order, then the mode, then a fixed attribute, joined by dots;
+# `none` without roles), unique per act, so that `templateFor(act, shape)` finds it; `mode` the frame's mode where the
+# template fixes it; `attribute` the attribute a value is of where the template fixes it (called: name). `frame`
+# (many) is the frame it realises (one per lexicon its value may come from: bigger, smaller): read back by
+# w.lang.en's frames it gives the same act, mode and roles (a test, for every template with sample fillers); `needs`
+# is that frame's `needs` (the template is for worlds that meet it). A number 1 takes the shape without the number.
+@w.lang.en.template core.type of=w.lang.en.template shared=true closed=true core.source="hand-core 1"
+@w.lang.en.template.name core.slot of=w.lang.en.template key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.template.act core.slot of=w.lang.en.template key=act required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.template.shape core.slot of=w.lang.en.template key=shape required=true kind=atom core.source="hand-core 1"
+@w.lang.en.template.mode core.slot of=w.lang.en.template key=mode kind=atom core.source="hand-core 1"
+@w.lang.en.template.attribute core.slot of=w.lang.en.template key=attribute kind=atom core.source="hand-core 1"
+@w.lang.en.template.role core.slot of=w.lang.en.template key=role many=true kind=atom core.source="hand-core 1"
+@w.lang.en.template.frame core.slot of=w.lang.en.template key=frame many=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.template.needs core.slot of=w.lang.en.template key=needs kind=atom core.source="hand-core 1"
+@w.lang.en.template.text core.slot of=w.lang.en.template key=text required=true kind=string core.source="hand-core 1"
+@w.lang.en.template.example core.slot of=w.lang.en.template key=example kind=string core.source="hand-core 1"
+# The sound a word begins with where its first letter misleads (an hour, a unicorn, a European): a word that begins
+# with `begins` (the longest that fits) begins with `sound`. Read for the article (a, an) in generation.
+@w.lang.en.onset core.type of=w.lang.en.onset shared=true closed=true core.source="hand-core 1"
+@w.lang.en.onset.begins core.slot of=w.lang.en.onset key=begins id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.onset.sound core.slot of=w.lang.en.onset key=sound required=true enum=vowel enum=consonant core.source="hand-core 1"
 
 # ---- clause structure ----
 # What joins two clauses: `cut` whether a splitter cuts there without other evidence, `card_cut` whether it cuts when

@@ -84,3 +84,7 @@
 @w.lang.en.prep.time.join.until w.lang.en.prep.time text=until rel=until order=earlier relation=k.time.before first_is=earlier second_is=later core.source="hand-core 1"
 @w.lang.en.prep.time.join.since w.lang.en.prep.time text=since rel=since order=later relation=k.time.before first_is=later second_is=earlier core.source="hand-core 1"
 @w.lang.en.prep.time.join.during w.lang.en.prep.time text=during rel=during order=within relation=k.time.during first_is=time second_is=span core.source="hand-core 1"
+
+# ---- frame act and mode -> k.actions act (where they differ) ----
+@w.lang.en.mode_map.group.apart w.lang.en.mode_map act=group mode=apart means="take apart" core.source="hand-core 1"
+@w.lang.en.mode_map.pick.none w.lang.en.mode_map act=pick mode=none means=deselect core.source="hand-core 1"

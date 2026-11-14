@@ -1,5 +1,5 @@
 {
- "version": "683021ab0f5e",
+ "version": "d87650f417a2",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -55390,11 +55390,13 @@
     "w.lang.en.joiner",
     "w.lang.en.joiner.keep",
     "w.lang.en.lex",
+    "w.lang.en.mode_map",
     "w.lang.en.neg",
     "w.lang.en.neg.imperative",
     "w.lang.en.neg.imperative.skip",
     "w.lang.en.noun.exception",
     "w.lang.en.numeral",
+    "w.lang.en.onset",
     "w.lang.en.ordinal",
     "w.lang.en.other",
     "w.lang.en.part",
@@ -55406,6 +55408,7 @@
     "w.lang.en.relpron",
     "w.lang.en.role_map",
     "w.lang.en.rule",
+    "w.lang.en.template",
     "w.lang.en.wh",
     "w.lang.en.word"
    ],
@@ -55971,8 +55974,8 @@
     {
      "id": "w.lang.en/shards/hand-joins",
      "path": "w.lang.en/shards/hand-joins.sop",
-     "wires": 69,
-     "bytes": 11051,
+     "wires": 71,
+     "bytes": 11346,
      "keys": [
       "above",
       "according to",
@@ -56250,6 +56253,21 @@
      ],
      "sources": [
       "psys2-78f45863"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/templates-acts",
+     "path": "w.lang.en/shards/templates-acts.sop",
+     "wires": 55,
+     "bytes": 11011,
+     "keys": [
+      "a",
+      "an"
+     ],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "CC0-1.0",
      "warnings": []

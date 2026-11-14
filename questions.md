@@ -757,3 +757,17 @@ Options: (a) leave `independent` unsaid for the four (a host answers "not known"
 why (`recognition=limited`, or `claimed_by=<country>` from Natural Earth's note); (c) follow the country list
 (Taiwan false, the other three unsaid); (d) follow Natural Earth (all four true).
 Blocking: no. Meanwhile: (a); WORLD.md and the schema say so, and a test keeps the four unsaid.
+
+## Q54 ([LIB] block 17:05, fourth worker, 2026-11-14): realising English templates with std.morph
+Question: how should the library's `realise` give the English forms the w.lang.en templates ask for?
+Context: `w.lang.en.template` (34 act templates) uses the library's notation. Two English rules are not cells of a
+paradigm in std.morph's sense: (1) `{kind:num=pl}`: English nouns have no class in a dictionary; their plural is
+w.lang.en's `inflect` rules plus irregulars (mice, sheep); (2) the article `a` takes its form from the next word
+(`an apple`, `an hour`, `a unicorn`): `w.lang.en.det before=vowel|consonant` and `w.lang.en.onset begins= sound=`.
+The reference realiser here (`realiseEn` in tools/lib/lang-en.mjs) does both; the library's `realise` returns the
+lemma unchanged for a word its dictionary lacks ("add 3 house").
+Options: (a) `realise` takes a `generate(lemma, feat)` hook, and the host passes w.lang.en's inflection; the article
+is a post-step the language world declares (a form of a word chosen by the next word's sound, as facts); (b) w.lang.en
+declares English nouns as `m.class` (s, es, y>ies, f>ves) with the class chosen by the ending, so `realise` needs no
+dictionary row for a regular noun; (c) the host realises English itself.
+Blocking: no. Meanwhile: (c) through `realiseEn`; the facts are written so (a) or (b) can read them.

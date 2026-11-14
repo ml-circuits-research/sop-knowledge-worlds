@@ -26,6 +26,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | joiners-keep | `keep`: a word after "and" that continues the noun phrase before it (its: "Highlight Romania and its neighbours") |
 | hand-grammar, hand-joins | what this repository added: 4 constructions with 7 productions (and 4 helpers), the words of AUXNEG, HAVE, IF, THEN; 27 role maps (4 for the frames written after the import); 15 prepositions joined to k.layouts and 20 new ones |
 | phrases | 81 phrase groups (politeness, fillers, answers, degree, comparison, request and question shapes, undo, redo) and 4 lexicons the frames name |
+| templates-acts | generation (block 17:05): 34 templates of the 16 acts of k.actions, one per act and argument shape; the article forms (a, an) and 19 onsets |
 
 ## How a host reads it
 
@@ -62,6 +63,47 @@ Checked by `tests/w.lang.en.test.mjs` with the one library build of this reposit
 noun-phrase examples ("the big red house", "the legs of the crocodile", "the house's door", "table 1 or table 2",
 "some of the tables", "everything except the tree", "the other table") and four question shapes parse with the
 right construction and head, with the nouns and adjectives taken from `k.words`.
+
+## Generation: templates of the acts (block 17:05; 14:15 item 1)
+
+`w.lang.en.template` gives one sentence per act and argument shape, imperative (a question for ask), for the
+library's realisation (std.morph `realise` / `templateFor(act, shape)`, read with `types: { template:
+'w.lang.en.template' }`) and the round trip of std.sample: `add a {kind}.`, `add {number} {kind:num=pl}.`, `make
+{thing} {value}.`, `change the {attribute} of {thing} to {value}.`, `put {thing} {place}.`, `take apart {thing}.`,
+`what is the {topic} of {thing}?`. Slots are roles of the act in k.actions (`role=` lists them). A `kind` is filled
+with a kind's name, a `thing` (and `source`, `target`, `recipient`) with the thing as the host refers to it, with
+its determiner ("the house", "table 1", "Ann"), a `place` with a relation and a thing ("next to the tree"); the other
+roles with a word. `{role:num=pl}` is the plural by this world's morphology; the article `a` becomes `an` before a
+vowel sound (`w.lang.en.det before=`, and `w.lang.en.onset` where the spelling misleads: an hour, a unicorn, a
+European). `shape` is the roles in k.actions order, then the frame's mode, then a fixed attribute (`kind.value.name`:
+"add a guest called Ann"); `none` for a template without roles. `frame` names the frame(s) the template realises and
+`needs` that frame's needs: a host uses the template only in a world that meets them.
+
+| act | templates (shapes) |
+| --- | --- |
+| make | kind; kind.number; kind.value; kind.number.value; kind.place (needs in); kind.value.name (named); kind.place.value.name (in) |
+| remove | thing; thing.source (in) |
+| change | thing.value (values); thing.attribute.value.set (attrs); thing.value.amount (scale: a bit bigger); thing.attribute.amount.more / .less (number: add 2 seats to table 1) |
+| place | thing.place (in); thing.direction (dir); thing.direction.amount (scale) |
+| connect, group, take apart, pick | thing.target; thing.group; thing; thing |
+| deselect, undo, redo | none ("deselect everything", "undo that", "redo that"); undo number (textual) |
+| ask | topic.thing.what (attrs); thing.where (in); thing.count; place.what (in) |
+| copy, send, save, load | thing; thing, thing.recipient; name; thing |
+
+**Read back by this world's own grammar** (`tests/w.lang.en.templates.test.mjs`): every template, realised with two
+sets of sample fillers (68 sentences), is read by the frames (the reference frame reader `frameReader` in
+`tools/lib/lang-en.mjs`: the frames a general world of things meets, and the template's own `needs`; priority, then
+literal words, then fewer captured words, the library's order) to the same act, mode and roles, through the role maps
+and `w.lang.en.mode_map` (PSys2's group/apart is the act take apart, pick/none is deselect); a kind's noun phrase is
+read by this world's productions with k.words ("3 red tables": kind table, value red). What the frames cannot read,
+the templates do not say: 28 of the 56 roles of k.actions have no template (make.part, make.material, change.old
+value, change.replacement outside the avatar's and a chart's frames, place.source, connect.tool, the target, group
+and criterion of group, pick.source and other, ask.other, copy.number, send.means and format, undo.state,
+save.format, deselect.thing...): each needs a frame first. Found on the way: "Add a seat to table 1" is not read by
+its own frame (acts.change.add1 has no determiner before the attribute; the templates use the number form), and "take
+the tables apart" is read as a move apart where the direction frames apply (the template says "take apart the
+tables"); "red house" is also a compound of two nouns for the productions (red is a noun), so a host takes the
+reading with the most modifiers.
 
 ## Joins
 

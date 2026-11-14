@@ -43,7 +43,10 @@ test('w.lang.en: every wire has a source; no notation inside values', () => {
     if (!w.attrs['core.source']) bad.push(`${w.id}: no core.source`);
     if (w.type.startsWith('core.')) continue;
     if (false) bad.push(`${w.id}: no core.source`);
-    for (const [k, vs] of Object.entries(w.attrs)) if (!PROSE.has(k)) for (const x of vs.map(tok)) {
+    // a template's text is in the library's template notation (std.morph realise: {role}, {role:f=v}), the one
+    // notation the reviewer asked for (block 17:05), read by the library, as in w.lang.ro
+    const TEMPLATE = /^w\.lang\.en\.(template|discourse)$/.test(w.type);
+    for (const [k, vs] of Object.entries(w.attrs)) if (!PROSE.has(k) && !(TEMPLATE && k === 'text')) for (const x of vs.map(tok)) {
       // a list in one value, a set of choices, an optional or repeated mark, a range, a pattern, a "_" for a space
       if (/[|[\]{}*+]|\.\.|\$\d|^\^/.test(x) || (/,/.test(x) && x !== ',') || (/\?$/.test(x) && !/^\?/.test(x)) || (/_/.test(x) && WORDS.has(k))) bad.push(`${w.id} ${k}=${x}`);
     }

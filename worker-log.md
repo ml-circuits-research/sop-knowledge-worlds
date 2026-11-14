@@ -3992,3 +3992,28 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   No new goals, obstacles or helpers (those of the tales map to kinds k.story already uses). TinyStories adds nothing
   over the tales (close on every measure but set-up, 3/21): it can be dropped. Plans over the catalog: still
   642,752; the reference reader allows stories without attempts.
+
+## Block 17:05 task 1 (2026-11-14, fourth worker): act generation templates in w.lang.en
+
+- **Format** (`w.lang.en.template`, schema section "generation"): `name`, `act`, `shape`, `mode`, `attribute`, `role`
+  (many), `frame` (many), `needs`, `text`, `example`; `text` in the library's template notation (std.morph
+  `realise`: `{role}`, `{role:num=pl}`), so `morphOf(world, { types: { template: 'w.lang.en.template' } })` and
+  `templateFor(act, shape)` read it. Slots are the roles of k.actions (`kind`, `thing`, `place`, `value`, ...); a
+  `thing` is filled with the host's referring expression ("the house", "table 1"), a `place` with relation + thing.
+  `shape` = the roles in k.actions order, then the mode, then a fixed attribute (`kind.value.name`), unique per act.
+- **Shard** `templates-acts` (hand-written, CC0): 34 templates for all 16 acts (make 7, change 5, ask 4, place 3,
+  remove 2, send 2, undo 2, one each for connect, group, take apart, pick, deselect, copy, redo, save, load); the
+  article forms (`w.lang.en.det before=vowel|consonant`) and 19 onsets (an hour, a unicorn, a European). 55 wires,
+  11.0 kB, load 66 ms, 0 warnings. `hand-joins`: 2 `w.lang.en.mode_map` (frame group/apart is the act take apart,
+  pick/none is deselect).
+- **Read back** (`tests/w.lang.en.templates.test.mjs`, 4 tests): every template, realised with two filler sets (68
+  sentences), is read by w.lang.en's frames (reference reader `frameReader` in `tools/lib/lang-en.mjs`: the frames
+  a general world meets plus the template's `needs`; priority, literal words, fewer captured words) to the same act,
+  mode and roles; a kind's noun phrase is split by w.lang.en's productions with k.words ("3 red tables": kind table,
+  value red). `realiseEn`: plural by w.lang.en's inflection, `a`/`an` by onset. 28 of the 56 k.actions roles have
+  no template because no general frame reads them (listed in WORLD.md).
+- Found: acts.change.add1 / less1 do not read their own examples ("Add a seat to table 1": no determiner before the
+  attribute); "take the tables apart" reads as a move apart where the direction frames apply; "red house" also parses
+  as a noun compound (a host takes the reading with most modifiers). Q54 ([LIB]): how std.morph `realise` should give
+  English plurals and the article.
+- The no-notation test of w.lang.en exempts `text` of templates (the library's notation, asked for by the reviewer).
