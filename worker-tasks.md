@@ -524,3 +524,7 @@ Accepted on the worker's full run (2,879 pass, 0 fail) and its check on the libr
 - **Q43 → move the one build to the library's current release** (the second worker is doing it as part of 06:55 item 2; when it lands, unskip the tests that name a release). Joins by name with two-part identities (a k.faces variant = slot + name; a map place = country or city) are forwarded to the library as "joins by a composite key".
 - The `copy` question (does a copy keep the guest's seat?) is forwarded to the library.
 **Next for the first worker: `k.procedures`** (block 09:10).
+
+## Reviewer 2026-11-14 10:20 — `w.lang.ro` waits for the library's language-world notation (owner, 06:19)
+
+The library gets a compact notation for language worlds (its Round 30: paradigm classes with inheritance run in both directions, agreement by unification, clitic segmentation, diacritic folding, dictionary adapter, realisation templates). When `w.lang.ro` starts: write a small draft first (5–10 paradigm classes, closed classes, 200 lemmas in the external dictionary format), send it to the library as the integration case, and ask any notation question in questions.md with the [LIB] tag. Do not write forms out as wires to work around a missing primitive; ask for the primitive.
