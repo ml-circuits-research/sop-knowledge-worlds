@@ -333,6 +333,7 @@ CC0) reads the diagram wording PSys2 measured (psys2 training/eval/diagram-gap-2
 | "Call the arrow yes.", "Label the arrow from A to B no.", "Write yes on the arrow." | acts.change.label.edge, .edge.ends, .edge.on | change/set, attribute `label` (fixed), thing the edge ("arrow from a to b"), value |
 | "Make a flowchart of making tea.", "A hierarchy of the parts of a car." | acts.make.diagram, .diagram.bare | make, kind (a kind of diagram), topic |
 | "Make a timeline of the planets by distance.", "A timeline of the planets by distance from the sun." (block 07:45 item 1) | acts.make.diagram.order, .order.bare | make, kind, topic, criterion (an attribute that can order things) |
+| "Draw the planets on a timeline.", "Draw the parts of a car as a tree.", "Put the parts of a car in a tree.", "Draw the planets in order of distance from the sun on a timeline." (block 07:45 item 2) | acts.make.diagram.after, .after.as, .after.of, .after.order | make, topic, kind after it (criterion where said) |
 
 The lexicons are derived from their homes: `diagram.direction` is the arrangement phrases of a row or column in one
 direction whose diagram layout is left_right or top_down (left to right, from top to bottom, downwards, across the page
@@ -357,8 +358,19 @@ a criterion read is an attribute, and `k.attributes.found` says where its values
 distance_about; the planets by distance are k.space's `order` 1 to 8, a test checks it). Besides the two diagram frames,
 the general frames acts.make.by ("Make a list of the planets by size.") and acts.place.order ("Line up the planets in
 order of size.") in the shard role-frames; "sorted by", "ordered by", "ranked by" are words of the frames before the
-marker by. The preposition "in order of" (rel by, role criterion) is in the shard hand-joins. Not covered: "draw the planets in order of distance from the sun on a timeline" (the
-kind after the topic); a single-letter name A is the determiner "a" to the reference reader ("connect A to C").
+marker by. The preposition "in order of" (rel by, role criterion) is in the shard hand-joins.
+
+**The kind after the topic** (block 07:45 item 2). "In a tree" is also where a bird sits and how boxes already drawn
+are laid out (acts.place.layout), so the kind is read after the topic only where nothing else can be meant: with on or
+in, a kind whose words name no drawing of k.objects (lexicon `diagram.kind.only`, derived: every kind word but tree;
+"draw a bird in a tree" stays a bird in a tree); with as or in the form of, any kind; after a verb of showing or
+arranging, any kind when the topic names the nodes of a fill (lexicon `diagram.topic.head`: parts, steps, stages,
+seasons, kinds, cities ..., each joined to the type of a `k.diagrams.fill`; "put the parts of a car in a tree" is a
+tree, "put the boxes in a tree" and "put the nest of the bird in a tree" stay layouts); with an order criterion, any
+kind ("put the planets in order of size on a timeline"). The topic of acts.make.diagram.after.of is three parts
+(head, of, whole) mapped to the topic by role maps. A host that has the things named already drawn still sees the
+layout reading next. Not covered then: the kind after the topic and single-letter names (both
+block 07:45, below).
 
 ## Joins
 

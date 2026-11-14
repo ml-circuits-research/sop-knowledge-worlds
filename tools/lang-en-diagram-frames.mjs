@@ -11,7 +11,7 @@
 // an edge, the arrangement phrases), so they cannot disagree; `npm run build` reruns this tool.
 //   node tools/lang-en-diagram-frames.mjs     writes docs/worlds/w.lang.en/shards/diagram-frames.sop
 // Deterministic: input the three files named above. tests/w.lang.en.diagram-frames.test.mjs reads every request back.
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
 import { WORLDS_DIR } from './lib/worlds.mjs';
@@ -19,6 +19,11 @@ import { wire, header, text } from './import/lib.mjs';
 import { frameLines, rolesOf } from './lang-en-role-frames.mjs';
 
 const SRC = 'hand-core 1';
+// Nouns a request names the nodes of a fill with, before "of" ("put the parts of a car in a tree"): noun -> the type of
+// the k.diagrams.fill whose facts they are (block 07:45 item 2; a test checks each type is a fill type).
+export const TOPIC_HEADS = { parts: 'k.parts.usual', 'main parts': 'k.parts.usual', steps: 'k.procedures.step', stages: 'k.time.ordered', phases: 'k.time.ordered',
+  'life cycle': 'k.time.ordered', seasons: 'k.time.ordered', months: 'k.time.ordered', kinds: 'k.kinds.parent', types: 'k.kinds.parent', cities: 'k.geo.city',
+  neighbours: 'k.geo.country', neighbors: 'k.geo.country', elements: 'k.story.element' };
 // the values of k.attributes.attribute holds whose attributes can order things: a number, a size, a step of a scale
 export const ORDERABLE = ['number', 'size', 'class'];
 // the words that mark the criterion (block 07:45 item 1): the markers of the criterion of make in k.actions, and the
@@ -45,11 +50,17 @@ export function lexicons() {
   // scale (k.attributes.attribute holds), by their names and their words (core.word of=k.attributes.attribute.name)
   const attrs = read('k.attributes', 'shards', 'attributes.sop').filter((w) => w.type === 'k.attributes.attribute' && ORDERABLE.includes(one(w, 'holds'))).map((w) => one(w, 'name'));
   const attrWords = read('k.attributes', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name' && attrs.includes(one(w, 'means'))).flatMap((w) => vals(w, 'text'));
+  // the names of the drawings of k.objects (read by pattern: the shards are 36 MB), to tell "in a tree" the place
+  const odir = join(WORLDS_DIR, 'k.objects', 'shards');
+  const drawings = new Set(readdirSync(odir).filter((f) => f.endsWith('.sop')).flatMap((f) => [...readFileSync(join(odir, f), 'utf8').matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)].map((m) => tok(m[1]).toLowerCase())));
   const sorted = (xs) => [...new Set(xs.map((x) => x.toLowerCase()))].sort();
   return {
     'diagram.kind': { doc: 'Kinds of diagram: the names of k.diagrams.kind and their words (core.word of=k.diagrams.kind.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...kinds, ...kindWords]) },
     'diagram.edge': { doc: "Words for an edge of a diagram: w.diagram's words for w.diagram.edge, singular (a reader takes the plural too); derived by tools/lang-en-diagram-frames.mjs.", items: sorted(edgeWords) },
     'diagram.edge.from': { doc: 'Words that begin the two ends of an edge after its noun ("the arrow from A to B", "the line between A and B").', items: ['between', 'from', 'going from', 'leading from', 'that goes from', 'which goes from'] },
+    'diagram.kind.only': { doc: 'Kinds of diagram whose words name no drawing of k.objects (all of diagram.kind but tree): "draw the planets on a timeline" is a timeline, "draw a bird in a tree" a bird in a tree; derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...kinds, ...kindWords]).filter((k) => !drawings.has(k)) },
+    'diagram.topic.head': { doc: 'Nouns that name what a fill of k.diagrams gives, said before "of" in a topic ("the parts of a car", "the stages of a frog\'s life"): each joined to the type of a k.diagrams.fill (TOPIC_HEADS in tools/lang-en-diagram-frames.mjs).', items: sorted(Object.keys(TOPIC_HEADS)) },
+    'diagram.topic.of': { doc: 'The word that joins a topic head to its whole ("the parts of a car").', items: ['of'] },
     'order.criterion': { doc: 'Attributes that can put things in order, the criterion of make, place and group (k.actions): the names of the k.attributes attributes that hold a number, a size or a step of a scale, and their words (core.word of=k.attributes.attribute.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...attrs, ...attrWords]) },
     'diagram.direction': { doc: 'Directions of a layout: the arrangement phrases (w.lang.en.arrangement) of a row or column in one direction whose diagram layout is left_right or top_down; derived by tools/lang-en-diagram-frames.mjs.', items: sorted(directions) },
   };
@@ -58,8 +69,11 @@ export function lexicons() {
 const lead = ['lead'], det = ['det'];
 const verb = (act) => ['verb', act];
 const role = (r, takes = 'words', more = {}) => ['role', r, takes, more];
-const word = (words, optional = false) => ['word', words, optional];
+const word = (words, optional = false, act = undefined) => ['word', words, optional, act];
 const OF = ['of', 'about', 'for', 'on', 'showing', 'that shows', 'to show', 'explaining'];
+// verbs of showing (with the verbs of make) and of arranging that take the kind after the topic
+const SHOW = ['show', 'display', 'plot', 'present', 'map out'];
+const ARRANGE = ['put', 'place', 'arrange', 'organise', 'organize', 'lay out', 'set out', 'sort', 'order', 'turn', 'line up'];
 // what may follow the criterion: "sorted by how far they are"
 const ORDER_TAIL = ['they are', 'it is', 'each one is', 'they are from the sun', 'first', 'order'];
 const LABEL = ['label', 'call', 'name', 'mark', 'title', 'caption', 'tag'];
@@ -96,12 +110,27 @@ export const FRAMES = [
   ['acts.make.diagram.order.bare', 'make', undefined, 5, undefined, 'A timeline of the planets by distance from the sun.',
     [lead, det, role('thing', 'lexicon', { lexicon: 'diagram.kind' }), word(OF), det, role('topic'), word(orderBy()), det, role('criterion', 'lexicon', { lexicon: 'order.criterion' }), word(ORDER_TAIL, true)],
     null, 'a diagram of a kind about a topic in the order of an attribute, without a verb (priority 5, over the bare kind-about-topic frame)'],
+  // block 07:45 item 2: the kind after the topic ("draw the planets on a timeline", "put the parts of a car in a tree")
+  ['acts.make.diagram.after', 'make', undefined, 14, undefined, 'Draw the planets on a timeline.',
+    [lead, word(SHOW, false, 'make'), det, role('topic'), word(['on', 'in', 'onto', 'into']), det, role('thing', 'lexicon', { lexicon: 'diagram.kind.only' })],
+    null, 'the kind after the topic, said with on or in (a kind that names no drawing: "draw a bird in a tree" stays a bird)'],
+  ['acts.make.diagram.after.as', 'make', undefined, 14, undefined, 'Draw the parts of a car as a tree.',
+    [lead, word([...SHOW, ...ARRANGE], false, 'make'), det, role('topic'), word(['as', 'in the form of', 'into the form of']), det, role('thing', 'lexicon', { lexicon: 'diagram.kind' })],
+    null, 'the kind after the topic, said with as'],
+  ['acts.make.diagram.after.of', 'make', undefined, 14, undefined, 'Put the parts of a car in a tree.',
+    [lead, word([...SHOW, ...ARRANGE], false, 'make'), det, role('topic', 'lexicon', { lexicon: 'diagram.topic.head' }), role('of', 'lexicon', { lexicon: 'diagram.topic.of', optional: true }), role('whole', 'words', { optional: true }), word(['on', 'in', 'onto', 'into']), det, role('thing', 'lexicon', { lexicon: 'diagram.kind' })],
+    null, 'the kind after a topic that names the nodes of a fill ("the parts of a car", "the seasons"); the three parts are the topic (role maps)'],
+  ['acts.make.diagram.after.order', 'make', undefined, 15, undefined, 'Draw the planets in order of distance from the sun on a timeline.',
+    [lead, word([...SHOW, ...ARRANGE], false, 'make'), det, role('topic'), word(orderBy()), det, role('criterion', 'lexicon', { lexicon: 'order.criterion' }), word(ORDER_TAIL, true), word(['on', 'in', 'onto', 'into', 'as']), det, role('thing', 'lexicon', { lexicon: 'diagram.kind' })],
+    null, 'the kind after the topic and its order criterion'],
   ['acts.make.diagram.bare', 'make', undefined, 4, undefined, 'A cycle diagram of the four seasons.',
     [lead, det, role('thing', 'lexicon', { lexicon: 'diagram.kind' }), word(['of', 'about', 'for', 'on', 'showing', 'that shows', 'to show', 'explaining']), det, role('topic')],
     null, 'a diagram of a kind about a topic, without a verb (priority 4, under the statement frames of acts.state: "The cycle of a week is week." is a statement)'],
 ];
 // Role maps: the two parts that name the ends of an edge are part of the thing ("arrow" "from" "a to b").
 export const ROLE_MAPS = [
+  ['make.of.topic', 'make', 'of', 'topic', 'acts.make.diagram.after.of', 'Put the parts of a car in a tree: "of" is part of the topic, the parts of a car'],
+  ['make.whole.topic', 'make', 'whole', 'topic', 'acts.make.diagram.after.of', 'Put the parts of a car in a tree: "a car" is part of the topic'],
   ['change.link.edge', 'change', 'link', 'thing', 'acts.change.label.edge.ends', 'Label the arrow from A to B no: "from" is part of the thing, the arrow from A to B'],
   ['change.ends.edge', 'change', 'ends', 'thing', 'acts.change.label.edge.ends', 'Label the arrow from A to B no: "A to B" is part of the thing'],
 ];

@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { parse } from '../tools/sopworld/sopworld.mjs';
 import { WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { frameReader, toks } from '../tools/lib/lang-en.mjs';
-import { diagramFrameShard, lexicons } from '../tools/lang-en-diagram-frames.mjs';
+import { diagramFrameShard, lexicons, TOPIC_HEADS } from '../tools/lang-en-diagram-frames.mjs';
 
 const shardsOf = (id) => readdirSync(join(WORLDS_DIR, id, 'shards')).filter((f) => f.endsWith('.sop')).sort().map((f) => readFileSync(join(WORLDS_DIR, id, 'shards', f), 'utf8'));
 const all = shardsOf('w.lang.en').flatMap((t) => parse(t));
@@ -89,6 +89,24 @@ const ORDER = [
   ['line up the planets in order of size', '', 'place/', { thing: 'planets', criterion: 'size' }],
   ['sort the planets by size', '', 'group/group', { thing: 'planets', criterion: 'size' }],
   ['sort the animals in order of how heavy they are', '', 'group/group', { thing: 'animals', criterion: 'how heavy they are' }],
+];
+// The kind after the topic (block 07:45 item 2): with on/in only a kind that names no drawing ("draw a bird in a tree"
+// is a bird), with as any kind, and any kind after a topic that names the nodes of a fill ("the parts of a car").
+const AFTER = [
+  ['draw the planets in order of distance from the sun on a timeline', '', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'distance from the sun' }],
+  ['put the parts of a car in a tree', '', 'make/', { kind: 'tree', topic: 'parts of a car' }],
+  ['draw the planets on a timeline', '', 'make/', { kind: 'timeline', topic: 'planets' }],
+  ['draw the parts of a car as a tree', '', 'make/', { kind: 'tree', topic: 'parts of a car' }],
+  ['show the steps of making tea in a flowchart', '', 'make/', { kind: 'flowchart', topic: 'steps of making tea' }],
+  ['put the planets in order of size on a timeline', '', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'size' }],
+  ['turn the stages of the water cycle into a cycle diagram', '', 'make/', { kind: 'cycle diagram', topic: 'stages of the water cycle' }],
+  ['arrange the kinds of animals in a venn diagram', '', 'make/', { kind: 'venn diagram', topic: 'kinds of animals' }],
+  ['put the seasons in a cycle', '', 'make/', { kind: 'cycle', topic: 'seasons' }],
+  ['draw the months of the year on a time line', '', 'make/', { kind: 'time line', topic: 'months of the year' }],
+  // not a diagram: a drawing in a tree, things already there laid out as a tree
+  ['draw a bird in a tree', '', 'make/', { kind: 'bird', 'place.marker': 'in', place: 'tree' }],
+  ['put the boxes in a tree', '', 'place/layout', { thing: 'boxes', direction: 'tree' }],
+  ['put the nest of the bird in a tree', '', 'place/layout', { thing: 'nest of the bird', direction: 'tree' }],
 ];
 // Arrangements PSys2 sent to its avatar world (dg02, dg03, dg06, dg08, dg10): w.lang.en's layout frame already reads them
 // (acts.place.layout takes the verbs of place); the cause is the host's routing, not a missing frame.
@@ -184,6 +202,18 @@ test('the criterion joins k.attributes: every word of order.criterion is an attr
   const byDistance = [...planets].sort((a, b) => Number(one(a, 'distance_about')) - Number(one(b, 'distance_about')));
   assert.deepEqual(byDistance.map((p) => Number(one(p, 'order'))), [1, 2, 3, 4, 5, 6, 7, 8]);
   assert.deepEqual(byDistance.map((p) => one(p, 'name')).slice(0, 4), ['Mercury', 'Venus', 'Earth', 'Mars']);
+});
+
+test('the kind after the topic: "draw the planets in order of distance from the sun on a timeline", "put the parts of a car in a tree" read make with kind and topic', () => {
+  assert.deepEqual(check(AFTER), []);
+  // diagram.kind.only is diagram.kind without the words that name a drawing of k.objects (tree)
+  const only = lex('diagram.kind.only');
+  assert.deepEqual(lex('diagram.kind').filter((k) => !only.includes(k)), ['tree']);
+  assert.ok(shardsOf('k.objects').some((t) => t.includes(' k.objects.object name=tree ')), 'tree is a drawing');
+  // every topic head names the facts of a fill of k.diagrams
+  const fillTypes = new Set(shardsOf('k.diagrams').flatMap((t) => parse(t)).filter((w) => w.type === 'k.diagrams.fill').map((w) => one(w, 'type')));
+  for (const [noun, type] of Object.entries(TOPIC_HEADS)) assert.ok(fillTypes.has(type), `${noun}: ${type} fills no kind`);
+  assert.deepEqual(lex('diagram.topic.head'), Object.keys(TOPIC_HEADS).sort());
 });
 
 test('the arrangements PSys2 sent to another world are read as place/layout by the existing layout frame', () => {

@@ -102,7 +102,7 @@ export function frameLines(name, { act, mode, set, priority, needs, roles, examp
     if (is === 'lead') e.push(['is', 'lead'], ['phrase', 'lead.polite'], ['optional', 'yes']);
     else if (is === 'det') e.push(['is', 'det'], ['optional', 'yes']);
     else if (is === 'verb') e.push(['is', 'verb'], ['act', /\s/.test(a) ? text(a) : a]);
-    else if (is === 'word') { e.push(['is', 'word'], ...a.map((w) => ['word', text(w)])); if (b) e.push(['optional', 'yes']); }
+    else if (is === 'word') { e.push(['is', 'word'], ...a.map((w) => ['word', text(w)])); if (c) e.push(['act', /\s/.test(c) ? text(c) : c]); if (b) e.push(['optional', 'yes']); }
     else if (is === 'role') { e.push(['is', 'role'], ['role', a], ['takes', b]); if (c.lexicon) e.push(['lexicon', c.lexicon]); if (c.max) e.push(['max_words', c.max]); if (c.optional) e.push(['optional', 'yes']); }
     lines.push(wire(`w.lang.en.part.${name}.${i + 1}`, 'w.lang.en.part', e, src));
   });

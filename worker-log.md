@@ -5259,3 +5259,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Templates (shard templates-acts, 37): make.topic.criterion ("Make a timeline of the planets by distance."),
   place.criterion ("Line up the planets in order of size."), group.criterion ("Sort the planets by size."), each read
   back by its frame; roles no template says: 27 (was 29; make.topic is said now too).
+
+## 2026-11-15 — third worker: the kind after the topic (block 07:45 item 2)
+
+- "draw the planets in order of distance from the sun on a timeline" read as make, kind "planets in order of distance"
+  with material "sun on a timeline"; "put the parts of a car in a tree" as a layout of the parts.
+- Four frames in the shard diagram-frames (140 wires, 32,294 bytes): acts.make.diagram.after (14: show/make verbs, on
+  or in, a kind that names no drawing), .after.as (14: as, in the form of, any kind), .after.of (14: show, make or
+  arrange verbs, a topic head that names the nodes of a fill, then any kind; role maps for "of" and the whole),
+  .after.order (15: with an order criterion, any kind). Word parts may now carry `act` (frameLines), so "draw" and
+  the other verbs of make come from k.actions.
+- Lexicons (derived or joined): diagram.kind.only (all 49 kind words but tree, which names a k.objects drawing),
+  diagram.topic.head (14 nouns, each joined to a k.diagrams.fill type: parts -> k.parts.usual, steps ->
+  k.procedures.step, stages/seasons -> k.time.ordered, kinds -> k.kinds.parent, cities -> k.geo.city ...),
+  diagram.topic.of.
+- Tests: 13 requests (10 read as make with topic and kind after it; "draw a bird in a tree" stays a bird in a tree,
+  "put the boxes in a tree" and "put the nest of the bird in a tree" stay layouts); every topic head's type fills a
+  kind of k.diagrams. Frames test: 403 frames, 387 best, 11 tie, 5 known.
