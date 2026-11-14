@@ -48,12 +48,15 @@ export function givenNames(text = readFileSync(RAW, 'utf8')) {
 //   - the name, in lower case, is the name of a thing of another world: a drawing, a thing of a scene, an animal, a
 //     food, a colour, a month, a unit, a shape (`name=` of a fact; Rose, Robin, Iris, Tea, Amber, May, Kelvin, Line).
 //     Not the places of k.geo (a river James, a city David or Charlotte: names of their own, a person's first) nor
-//     the worlds that only gather names (k.words, the generated k.kinds and k.attributes, k.people itself);
+//     the worlds that only gather names (k.words, the generated k.kinds, k.attributes and k.diagrams.topic, k.people itself);
 //   - or the name, in lower case, is a word of k.words with at least three senses that are no person (WordNet's
 //     senses as k.words has them: hope 6, mark 6, grace 5, frank 5, art 3, odd 3): a word that common is read as the
 //     word first. Tom (2 senses, a male cat or turkey), Ana (1), Leo (capitalised in WordNet: the constellation) are not.
 export const CONTEXT_SENSES = 3;
 const CONTEXT_SKIP = new Set(['k.people', 'k.words', 'k.kinds', 'k.attributes', 'k.geo']);
+// k.diagrams.topic is generated too: the names of other worlds' things a diagram can draw (a country Chad, a city
+// Georgia), gathered, not things of its own
+const CONTEXT_SKIP_TYPES = new Set(['k.diagrams.topic']);
 export function personContext(rows, worlds = scanWorlds()) {
   const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
   const low = new Set(rows.map((r) => r.name.toLowerCase()));
@@ -61,6 +64,7 @@ export function personContext(rows, worlds = scanWorlds()) {
   for (const w of worlds) {
     if (CONTEXT_SKIP.has(w.id)) continue;
     for (const s of w.shards) for (const m of s.text.matchAll(/^@\S+ (k\.[a-z_.]+) name=("[^"]*"|\S+)/gm)) {
+      if (CONTEXT_SKIP_TYPES.has(m[1])) continue;
       const v = tok(m[2]).toLowerCase();
       if (low.has(v) && !why.has(v)) why.set(v, m[1]);
     }

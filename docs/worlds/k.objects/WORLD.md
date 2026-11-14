@@ -21,7 +21,7 @@ No two objects have the same file (a test). The scenes of k.scenes use the same 
 - `k.objects.object` (shared, closed): `name` (identity, an English lemma; the same name in `k.commonsense.thing` is the
   same thing, joined by value).
 - `k.objects.part` (shared, closed), identity `of` + `name`:
-  - `of`: the object's name; `name`: unique within the object (`left_window`); `kind`: for a part that occurs several
+  - `of`: the object's name (a declared join to `k.objects.object` by `name`, Q69); `name`: unique within the object (`left_window`); `kind`: for a part that occurs several
     times, what each one is (`window`). A repeated part is one wire per instance, each with its own box.
   - `shape` (required): rectangle, square, circle, oval, triangle, line, arc, polygon; nothing else.
   - `x`, `y`, `w`, `h` (required): the box in the frame of the object: 0 to 100 on both axes, x to the right, y

@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **199** in 31 worlds; distinct values 7874, meeting a target 7816 (99.3 %), open 58
+- declared joins: **200** in 31 worlds; distinct values 10086, meeting a target 10028 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **115**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **115**; left undeclared on purpose: 5
 
 ## Declared joins
 
@@ -133,6 +133,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.music | `k.music.scale.note` | `k.music.note` | name | 24 | 24 |  |
 | k.music | `k.music.scale.tonic` | `k.music.note` | name | 18 | 18 |  |
 | k.objects | `k.objects.keyword.of` | `k.objects.object` | name | 1509 | 1509 |  |
+| k.objects | `k.objects.part.of` | `k.objects.object` | name | 2212 | 2212 |  |
 | k.objects | `k.objects.skeleton.of` | `k.objects.object` | name | 0 | 0 |  |
 | k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 164 | 164 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
@@ -216,6 +217,10 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | w.list | `w.list.item.object` | `k.objects.object` | name | 0 | 0 |  |
 | w.list | `w.list.item.unit` | `k.units.unit` | name | 0 | 0 |  |
 | w.list | `w.list.list.currency` | `k.units.currency` | code | 0 | 0 |  |
+
+## Measured cost of declared joins
+
+- `k.objects.part.of`: loading k.objects (27,904 parts joined to 2,212 objects; `fullWorld`, 7 pairs undeclared/declared run back to back in alternating order, the schema patched in memory, sopworld 0.113.0) takes CPU 16.6 s -> 17.0 s (medians; the mean difference of the pairs is -0.1 s, from -1.6 to +1.1 s: no cost above the noise) and wall 26.4 s -> 26.1 s (medians, under a load of 4.7 to 6.6 on 2 CPUs); 0 open values, `world.check()` issues unchanged (1,460). With the scan of 0.97 it was 16.4 s -> 22.8-25.0 s on a quiet machine, so it waited for the pin (Q69, 2026-11-15)
 
 ## Broken joins
 
@@ -346,7 +351,6 @@ exact (token for token) against the first candidate; the value share itself also
 
 ## Left undeclared on purpose
 
-- `k.objects.part.of` -> `k.objects.object` (2212 of 2212 values meet): the 27,902 parts would each scan the objects with the pinned sopworld 0.97 (a join is checked by a scan of the target type): loading k.objects 16 s -> 23 s on a quiet machine (+7 s, up to +18 s under load); the library indexes the check since 0.107 (Q66): 16.3 s -> 17.6 s with 0.113. Declared when the pin moves (Q69); checked by tests/k.objects.names.test.mjs meanwhile
 - `k.time.hour.next` -> `k.time.hour` (24 of 24 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.month.next` -> `k.time.month` (12 of 12 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.part_of_day.next` -> `k.time.part_of_day` (4 of 4 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent

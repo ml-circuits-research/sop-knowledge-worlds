@@ -24,8 +24,12 @@ import { byText } from './import/lib.mjs';
 export const REPORT = join(WORLDS_DIR, 'k.kinds', 'JOINS-REPORT.md');
 // Keys left undeclared on purpose, with the reason (the report lists them apart, not as gaps).
 export const NOT_DECLARED = [
-  ['k.objects.part', 'of', 'k.objects.object', 'the 27,902 parts would each scan the objects with the pinned sopworld 0.97 (a join is checked by a scan of the target type): loading k.objects 16 s -> 23 s on a quiet machine (+7 s, up to +18 s under load); the library indexes the check since 0.107 (Q66): 16.3 s -> 17.6 s with 0.113. Declared when the pin moves (Q69); checked by tests/k.objects.names.test.mjs meanwhile'],
   ['k.time.ordered', 'next', 'k.time.ordered', 'the next of a month is a month, of an hour an hour: a join to the fact\'s own type cannot be declared once on the shared parent'],
+];
+
+// What a declared join was measured to cost (the report prints it under the declared joins): type, key, measure.
+export const MEASURED = [
+  ['k.objects.part', 'of', 'loading k.objects (27,904 parts joined to 2,212 objects; `fullWorld`, 7 pairs undeclared/declared run back to back in alternating order, the schema patched in memory, sopworld 0.113.0) takes CPU 16.6 s -> 17.0 s (medians; the mean difference of the pairs is -0.1 s, from -1.6 to +1.1 s: no cost above the noise) and wall 26.4 s -> 26.1 s (medians, under a load of 4.7 to 6.6 on 2 CPUs); 0 open values, `world.check()` issues unchanged (1,460). With the scan of 0.97 it was 16.4 s -> 22.8-25.0 s on a quiet machine, so it waited for the pin (Q69, 2026-11-15)'],
 ];
 
 // The slots of every schema (own and inherited) with a declared join, and every slot's keys per type.
@@ -124,6 +128,10 @@ export function reportText({ declared, undeclared, kept }) {
     '| world | type.key | target | by | values | meet | open values |',
     '| --- | --- | --- | --- | ---: | ---: | --- |',
     ...declared.map((d) => `| ${d.world} | \`${d.type}.${d.key}\` | \`${d.target}\` | ${d.by}${d.match.length ? ` (match ${d.match.map((m) => m.join(':')).join(', ')})` : ''} | ${d.values} | ${d.meet} | ${d.malformed ? `**${d.malformed}**` : list(d.open)} |`),
+    '',
+    '## Measured cost of declared joins',
+    '',
+    ...MEASURED.map(([t, k, m]) => `- \`${t}.${k}\`: ${m}`),
     '',
     '## Broken joins',
     '',

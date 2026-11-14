@@ -5572,3 +5572,23 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - tests/w.lang.en.question-frames.test.mjs (2 tests, < 2 s): r0244 and the 10 kids.time sentences of K10 read with the
   right act, mode and roles, 11 of 11, the lexicon from k.attributes and k.time. Frames test: 441 frames, 425 best,
   11 tie, 5 known (all 7 new read best).
+
+## 2026-11-15 — second worker: `k.objects.part.of` declared (reviewer 08:00, Q69)
+
+- `k.objects.part.of` is a declared join: `type=k.objects.object by=name` (k.objects version 8). All 2,212 distinct
+  `of` values meet an object (0 open); `k.kinds.relation` for it now says `found=declared object_by=name` (was
+  `found=value` with three candidate types). Taken out of NOT_DECLARED; the schema comments and k.objects/WORLD.md say so.
+- Measured on the pin 0.113.0 (k.objects: 27,904 parts, 2,212 objects; `fullWorld`, the schema patched in memory,
+  7 pairs run back to back in alternating order): CPU 16.6 s undeclared -> 17.0 s declared (medians; mean pair
+  difference -0.1 s, range -1.6 to +1.1 s), wall 26.4 -> 26.1 s (medians) under a load of 4.7 to 6.6 on 2 CPUs:
+  no cost above the noise (the index of 0.107+). `world.check()` issues unchanged (1,460), 0 open joins. Written in
+  JOINS-REPORT.md under a new section "Measured cost of declared joins" (tools/joins-report.mjs `MEASURED`).
+- Declared joins: 192 in 30 worlds; 10,015 of 10,073 distinct values meet (99.4 %), 58 open, 0 broken; left undeclared
+  on purpose: 5 (the k.time `next` keys).
+- main was red on `tests/coverage-report.test.mjs` (COVERAGE.md stale since w.list version 3 / w.tasks: the row
+  `w.list` was missing); `npm run reports` regenerated it, carried in this commit.
+- main was red on `tests/k.people.given-names.test.mjs` too: since k.diagrams.topic (922a864) names countries and
+  cities as topics (`name=Chad`, `name=Georgia`), the person-context rule of `tools/import/given-names.mjs` would flag
+  5 more names (Chad, Georgia, India, Montserrat, Viola). k.diagrams.topic is a generated gathering of other worlds'
+  names, like k.kinds and k.attributes, so the rule skips that type (`CONTEXT_SKIP_TYPES`); the import gives the
+  published shards byte for byte again (context=person 49).

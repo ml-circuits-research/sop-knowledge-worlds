@@ -5,7 +5,7 @@
 
 @k.kinds.relation.k.objects.keyword.of k.kinds.relation type=k.objects.keyword key=of subject=keyword object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.objects.keyword.text k.kinds.relation type=k.objects.keyword key=text subject=keyword object=word object_type=k.words.sense found=value core.source="hand-core 1"
-@k.kinds.relation.k.objects.part.of k.kinds.relation type=k.objects.part key=of subject=part object=thing object_type=k.objects.object object_type=k.attributes.drawn object_type=k.scenes.thing found=value core.source="hand-core 1"
+@k.kinds.relation.k.objects.part.of k.kinds.relation type=k.objects.part key=of subject=part object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.objects.part.name k.kinds.relation type=k.objects.part key=name subject=part object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.objects.part.kind k.kinds.relation type=k.objects.part key=kind subject=part object=kind object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.objects.part.above k.kinds.relation type=k.objects.part key=above subject=part object=word object_type=k.words.sense found=value core.source="hand-core 1"
