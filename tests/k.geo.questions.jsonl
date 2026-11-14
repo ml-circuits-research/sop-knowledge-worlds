@@ -7,7 +7,7 @@
 {"id":"geo-07","ask":"through which countries does the Danube flow","query":{"type":"k.geo.river","where":{"name":"Danube"},"seek":"country"},"expect":{"status":"supported","values":["Austria","Bulgaria","Croatia","Germany","Hungary","Romania","Serbia","Slovakia","Ukraine"]}}
 {"id":"geo-08","ask":"how many people live in Brazil","query":{"type":"k.geo.country","where":{"name":"Brazil"},"seek":"population"},"expect":{"status":"supported","value":"211049527"}}
 {"id":"geo-09","ask":"is Switzerland landlocked","query":{"type":"k.geo.country","where":{"name":"Switzerland"},"seek":"landlocked"},"expect":{"status":"supported","value":"true"}}
-{"id":"geo-10","ask":"what are the largest cities of Italy","query":{"type":"k.geo.city","where":{"country":"Italy"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Florence","Milan","Naples","Rome","Turin","Genoa","Palermo"]}}
+{"id":"geo-10","ask":"what are the largest cities of Italy","query":{"type":"k.geo.city","where":{"country":"Italy"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Rome","Florence","Milan","Naples","Turin","Genoa","Palermo"]}}
 {"id":"geo-11","ask":"how large is Australia","query":{"type":"k.geo.country","where":{"name":"Australia"},"seek":"area"},"expect":{"status":"supported","value":"7692024"}}
 {"id":"geo-12","ask":"where are the Alps","query":{"type":"k.geo.range","where":{"name":"Alps"},"seek":"continent"},"expect":{"status":"supported","value":"Europe"}}
 {"id":"geo-13","ask":"what is Canberra the capital of","query":{"type":"k.geo.city","where":{"name":"Canberra"},"seek":"capital_of"},"expect":{"status":"supported","value":"Australia"}}

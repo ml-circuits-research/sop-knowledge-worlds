@@ -1,5 +1,6 @@
 # k.diagrams/shards/topics-public-domain: 219 topics a diagram can be drawn about, read from the fills of k.diagrams over facts under public-domain (block 07:30 item 9): each with the kinds of diagram it fills, the types it comes from and the nodes of its largest diagram. Derived; rebuilt by the build.
 # sources: natural-earth 5.1.2 (the facts the topics are read from)
+# sources: rule k.geo.capital_of (the facts the topics are read from)
 # sources: usgs-water 2026-11-15 (the facts the topics are read from)
 # license: public-domain
 # script: tools/diagram-topics.mjs
@@ -180,7 +181,7 @@
 @k.diagrams.topic.public_domain.Slovenia k.diagrams.topic name=Slovenia kind=tree from=k.geo.city nodes=3 core.source="natural-earth 5.1.2"
 @k.diagrams.topic.public_domain.Solomon_Islands k.diagrams.topic name="Solomon Islands" kind=tree from=k.geo.city nodes=4 core.source="natural-earth 5.1.2"
 @k.diagrams.topic.public_domain.Somalia k.diagrams.topic name=Somalia kind=tree from=k.geo.city nodes=6 core.source="natural-earth 5.1.2"
-@k.diagrams.topic.public_domain.Somaliland k.diagrams.topic name=Somaliland kind=tree from=k.geo.city nodes=6 core.source="natural-earth 5.1.2"
+@k.diagrams.topic.public_domain.Somaliland k.diagrams.topic name=Somaliland kind=tree from=k.geo.city nodes=6 core.source="natural-earth 5.1.2" core.source="rule k.geo.capital_of"
 @k.diagrams.topic.public_domain.South_Africa k.diagrams.topic name="South Africa" kind=tree from=k.geo.city nodes=7 core.source="natural-earth 5.1.2"
 @k.diagrams.topic.public_domain.South_Georgia_and_the_Islands k.diagrams.topic name="South Georgia and the Islands" kind=tree from=k.geo.city nodes=2 core.source="natural-earth 5.1.2"
 @k.diagrams.topic.public_domain.South_Korea k.diagrams.topic name="South Korea" kind=tree from=k.geo.city nodes=6 core.source="natural-earth 5.1.2"

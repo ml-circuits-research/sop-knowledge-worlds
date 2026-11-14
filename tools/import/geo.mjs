@@ -27,7 +27,7 @@ const shardName = (continent) => continent.toLowerCase().split(' ').join('-');
 // city was renamed (Nur-Sultan is Astana again since 2022; Natural Earth itself gives Astana as the city's other name,
 // `namepar`, so the city keeps its Natural Earth source). The data cannot tell a rename from a spelling (Ulaanbaatar,
 // Ulan Bator), so the countries are named here; the capital itself is taken from the list (the import checks it), and
-// what only the list says (the country's capital, the city's capital_of) goes into the shard of the list.
+// what only the list says (the country's capital) goes into the shard of the list.
 export const CAPITAL_FROM_LIST = { BDI: 'Gitega', KAZ: 'Astana', PLW: 'Ngerulmud' };
 export const CITY_RENAMED = { KAZ: { from: 'Nur-Sultan', to: 'Astana' } };
 // Reviewer 04:10 item 2: every capital is a city. Where Natural Earth marks no capital and the list's is no place of
@@ -39,9 +39,15 @@ export const CITY_RENAMED = { KAZ: { from: 'Nur-Sultan', to: 'Astana' } };
 export const CAPITAL_SAME_PLACE = { GUM: { list: 'Hagåtña', ne: 'Agana' }, PYF: { list: 'Papeetē', ne: 'Papeete' }, TCA: { list: 'Cockburn Town', ne: 'Grand Turk' } };
 // The other list capitals that Natural Earth has under no name (City of Victoria, Diego Garcia, Fakaofo, King Edward
 // Point, Ngerulmud, Saipan, El Aaiún: Natural Earth marks a neighbouring place, the island, or none, or counts the
-// city in another country) become cities of the list: a k.geo.city with its country and capital_of, without
-// coordinates or population, in the list's shard (ODbL). A list capital that is a city of Natural Earth gets its
-// capital_of there too, so that the city and the country say the same.
+// city in another country) become cities of the list: a k.geo.city with its country, without coordinates or
+// population, in the list's shard (ODbL).
+// KR1 item 2 (review 2026-11-15, finding 4): the capital has one home, `k.geo.country.capital`; `k.geo.city.capital_of`
+// is derived from it by the rule k.geo.capital_of (k.geo/schema.sop; written into shards/derived* by tools/derive.mjs),
+// so no city fact here says capital_of. One capital per country unless the source says otherwise: Natural Earth marks
+// several places of some countries as capitals ("Admin-0 capital" and "Admin-0 capital alt": former capitals, seats of
+// government or courts, claims: Lagos, Kyoto, Yangon, Johannesburg, Laayoune), and where the country list names some
+// of those, only the ones it names are the capitals (South Africa: Pretoria, Bloemfontein, Cape Town); where it names
+// none of them, Natural Earth's marks stay.
 // Q33: independent. Natural Earth's TYPE says `Country` for territories of another state (Aruba, Greenland, Hong Kong,
 // Jersey) and `Sovereignty` or `Disputed` for some states (Cuba, Kazakhstan, Israel); its SOVEREIGNT says who the
 // sovereign is, and agrees with the country list everywhere but for states that govern themselves without being
@@ -136,7 +142,7 @@ const inRing = (x, y, ring) => {
 
 // input: { countries (array of the country list), admin, places, rivers, elevations, regions (GeoJSON features) }
 export function importGeo({ countries, admin, places, rivers, elevations, regions, lakes = [], marine = [] }, { citiesPerCountry = CITIES_PER_COUNTRY } = {}) {
-  const stats = { countries: 0, borders: 0, cities: 0, rivers: 0, mountains: 0, ranges: 0, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, citiesFromList: 0, words: 0, dropped: { countries: 0, cities: 0, rivers: 0, mountains: 0 } };
+  const stats = { countries: 0, borders: 0, cities: 0, rivers: 0, mountains: 0, ranges: 0, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, capitalsNotListed: 0, citiesFromList: 0, words: 0, dropped: { countries: 0, cities: 0, rivers: 0, mountains: 0 } };
   // Natural Earth countries by their code: properties, polygons (for "which country is this point in"), bounds.
   const byCode = new Map();
   const shapes = [];
@@ -193,7 +199,10 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     const { p, b, name, continent } = byCode.get(code);
     if ((recognitionOf(p) === 'limited') !== (independentOf(p, listed.get(code)) === undefined)) throw new Error(`${code}: recognition and independent disagree`);
     const out = shards.get(continent);
-    const caps = (capitals.get(code) ?? []).map((c) => ({ ...c, name: clean(c.name) })).sort((x, y) => (x.featurecla === 'Admin-0 capital' ? 0 : 1) - (y.featurecla === 'Admin-0 capital' ? 0 : 1) || byText(x.name, y.name)).map((c) => c.name);
+    const marked = (capitals.get(code) ?? []).map((c) => ({ ...c, name: clean(c.name) })).sort((x, y) => (x.featurecla === 'Admin-0 capital' ? 0 : 1) - (y.featurecla === 'Admin-0 capital' ? 0 : 1) || byText(x.name, y.name)).map((c) => c.name);
+    const named = (listed.get(code)?.capital ?? []).filter(Boolean).map(clean);
+    const caps = marked.some((x) => named.includes(x)) ? marked.filter((x) => named.includes(x)) : marked;
+    stats.capitalsNotListed += marked.length - caps.length;
     if (!caps.length) noCapital.add(code);
     out.countries.push(w(`k.geo.country.${seg(code)}`, 'k.geo.country', [
       ['name', name], ['code', code], ['formal', p.FORMAL_EN ? text(p.FORMAL_EN) : undefined],
@@ -253,7 +262,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
       p.name = renamed.to;
     }
     // Q33: where the capital is the list's, Natural Earth's mark is not used; the place the list names keeps its
-    // place among the cities, and its capital_of is said in the shard of the list.
+    // place among the cities. A place Natural Earth marks as a capital stays a city even where it is not the capital.
     const listCapital = CAPITAL_FROM_LIST[code];
     const capital = (p) => (listCapital ? false : p.featurecla === 'Admin-0 capital' || p.featurecla === 'Admin-0 capital alt');
     const seen = new Set();
@@ -268,7 +277,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     keptNames.set(code, new Set(kept.map((p) => p.name)));
     for (const p of kept.sort((a, b) => byText(a.name, b.name))) {
       out.cities.push(w(`k.geo.city.${code}.${seg(p.name)}`, 'k.geo.city', [
-        ['name', p.name], ['country', country], ['capital_of', capital(p) ? country : undefined],
+        ['name', p.name], ['country', country],
         ['population', Math.round(p.pop_max)], ['lat', r2(p.latitude)], ['lon', r2(p.longitude)],
       ], sources(NE)));
       // block 07:40 item 3: the city's former or other name in Natural Earth (`namepar`: Bombay, Madras, Rangoon)
@@ -286,13 +295,14 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
     if ((code && byCode.has(code)) || c.cca3 === 'ALA' || !CONTINENTS.includes(listContinent(c)) || !c.capital?.length) continue;
     listCapitals.set(c.cca3, { country: clean(c.name.common), continent: listContinent(c), names: c.capital.filter(Boolean).map(clean) });
   }
-  // Every capital the list gives is a city with capital_of (in the list's shard): one of Natural Earth's (the facts
-  // merge) or, where Natural Earth has no place of that name, the list's own city, named and placed in its country.
+  // Every capital the list gives is a city: one of Natural Earth's or, where Natural Earth has no place of that name
+  // (kept), the list's own city, named and placed in its country (in the list's shard).
   for (const [code, x] of [...listCapitals].sort((a, b) => byText(a[0], b[0]))) {
     const { country, continent, names } = Array.isArray(x) ? { country: nameOf(code), continent: byCode.get(code).continent, names: x } : x;
     for (const capital of names) {
-      shards.get(continent).borders.push({ name: `${country} ${capital}`, line: w(`k.geo.borders.city.${code}.${seg(capital)}`, 'k.geo.city', [['name', capital], ['country', country], ['capital_of', country]], sources(MC)) });
-      if (!keptNames.get(code)?.has(capital)) stats.citiesFromList++;
+      if (keptNames.get(code)?.has(capital)) continue;
+      shards.get(continent).borders.push({ name: `${country} ${capital}`, line: w(`k.geo.borders.city.${code}.${seg(capital)}`, 'k.geo.city', [['name', capital], ['country', country]], sources(MC)) });
+      stats.citiesFromList++;
     }
   }
 

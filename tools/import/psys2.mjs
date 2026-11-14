@@ -152,7 +152,8 @@ export function importPsys2(from, commit) {
       seen.add(id);
       const cont = CONTINENT[one(pc.find((x) => one(x, 'cc') === one(c, 'cc')), 'cont')];
       if (!cityLines.has(cont)) cityLines.set(cont, []);
-      cityLines.get(cont).push(`${wire(id, 'k.geo.city', [['name', one(c, 'name')], ['country', country], ['capital_of', one(c, 'capital') === 'true' && !ours.has(one(c, 'cc')) ? country : undefined], ['population', one(c, 'pop')], ['lat', Math.round(lat * 100) / 100], ['lon', Math.round(lon * 100) / 100]], 'geonames all-the-cities-3.1.0')} core.source=${JSON.stringify(SRC)}`);
+      // KR1 item 2: no capital_of here (derived from k.geo.country.capital by the rule k.geo.capital_of)
+      cityLines.get(cont).push(`${wire(id, 'k.geo.city', [['name', one(c, 'name')], ['country', country], ['population', one(c, 'pop')], ['lat', Math.round(lat * 100) / 100], ['lon', Math.round(lon * 100) / 100]], 'geonames all-the-cities-3.1.0')} core.source=${JSON.stringify(SRC)}`);
       added++;
     }
     const wordLines = cityWords.sort((a, b) => byText(a.means, b.means) || byText(a.text, b.text)).map((w) => `${wire(`k.geo.psys2.cityword.${w.cc}.${seg(w.text)}`, 'core.word', [['text', w.text], ['means', w.means], ['of', 'k.geo.city.name']], 'geonames all-the-cities-3.1.0')} core.source=${JSON.stringify(SRC)}`);

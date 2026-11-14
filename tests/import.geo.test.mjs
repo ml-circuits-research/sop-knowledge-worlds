@@ -37,13 +37,13 @@ const input = {
 test('the geo importer writes a public-domain shard and a borders shard per continent', () => {
   const { files, stats } = importGeo(input, { citiesPerCountry: 1 });
   assert.deepEqual(Object.keys(files).sort(), ['africa.sop', 'antarctica.sop', 'asia.sop', 'europe-borders.sop', 'europe.sop', 'north-america.sop', 'oceania.sop', 'south-america.sop']);
-  assert.deepEqual(stats, { countries: 2, borders: 2, cities: 2, rivers: 1, mountains: 1, ranges: 1, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, citiesFromList: 0, words: 2, dropped: { countries: 1, cities: 1, rivers: 1, mountains: 0 } });
+  assert.deepEqual(stats, { countries: 2, borders: 2, cities: 2, rivers: 1, mountains: 1, ranges: 1, lakes: 0, deserts: 0, seas: 0, capitalsFromList: 0, capitalsNotListed: 0, citiesFromList: 0, words: 2, dropped: { countries: 1, cities: 1, rivers: 1, mountains: 0 } });
   const lines = (f) => files[f].split('\n').filter((l) => l.startsWith('@'));
   assert.deepEqual(lines('europe.sop'), [
     '@k.geo.continent.europe k.geo.continent name=Europe core.source="natural-earth 5.1.2"',
     '@k.geo.country.AAA k.geo.country name=Aland code=AAA formal="Republic of Aland" capital=Acity continent=Europe region="Western Europe" population=1000 independent=true lat=5 lon=5 west=0 south=0 east=10 north=10 core.source="natural-earth 5.1.2"',
     '@k.geo.country.BBB k.geo.country name=Bee code=BBB formal="Republic of Bee Land" continent=Europe region="Western Europe" population=1000 independent=true lat=5 lon=15 west=10 south=0 east=20 north=10 core.source="natural-earth 5.1.2"',
-    '@k.geo.city.AAA.Acity k.geo.city name=Acity country=Aland capital_of=Aland population=500 lat=5 lon=5 core.source="natural-earth 5.1.2"',
+    '@k.geo.city.AAA.Acity k.geo.city name=Acity country=Aland population=500 lat=5 lon=5 core.source="natural-earth 5.1.2"',
     '@k.geo.city.BBB.Big_Town k.geo.city name="Big Town" country=Bee population=900 lat=2 lon=12 core.source="natural-earth 5.1.2"',
     '@k.geo.river.Flow.europe k.geo.river name=Flow continent=Europe country=Aland country=Bee lat=3 lon=8.5 west=2 south=2 east=15 north=4 core.source="natural-earth 5.1.2"',
     '@k.geo.mountain.Mount_High.europe k.geo.mountain name="Mount High" continent=Europe country=Bee elevation=1234 lat=8 lon=12 core.source="natural-earth 5.1.2"',
@@ -76,9 +76,24 @@ test('the k.geo shards on disk are what the importer gives from the raw files', 
     lakes: features('ne_10m_lakes'), marine: features('ne_10m_geography_marine_polys'),
   });
   const dir = join(WORLDS_DIR, 'k.geo', 'shards');
-  // numbers.sop is hand-written (tools/geo-numbers.mjs; tests/k.geo.test.mjs); aliases.sop is written by tools/geo-aliases.mjs.
-  assert.deepEqual(readdirSync(dir).filter((f) => f !== 'numbers.sop' && f !== 'aliases.sop' && !f.startsWith('psys2-')).sort(), Object.keys(files).sort());
+  // numbers.sop is hand-written (tools/geo-numbers.mjs; tests/k.geo.test.mjs); aliases.sop is written by tools/geo-aliases.mjs;
+  // derived*.sop by tools/derive.mjs (capital_of, by the rule k.geo.capital_of).
+  assert.deepEqual(readdirSync(dir).filter((f) => f !== 'numbers.sop' && f !== 'aliases.sop' && !f.startsWith('psys2-') && !f.startsWith('derived')).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
+});
+
+// KR1 item 2 (review 2026-11-15, finding 4): one capital unless the source says otherwise; capital_of is never told
+test('KR1 item 2: where Natural Earth marks several capitals and the country list names some, only those are capitals; no city says capital_of', () => {
+  const alt = { properties: { name: 'Oldtown', adm0_a3: 'AAA', featurecla: 'Admin-0 capital alt', pop_max: 50, latitude: 4, longitude: 4 } };
+  const run = (capital) => importGeo({ ...input, places: [...input.places, alt], countries: input.countries.map((c) => (c.cca3 === 'AAA' ? { ...c, capital } : c)) }, { citiesPerCountry: 1 });
+  const capitalsOf = (files) => files['europe.sop'].split('\n').find((l) => l.startsWith('@k.geo.country.AAA ')).match(/capital=\S+/g);
+  const named = run(['Acity']);
+  assert.deepEqual(capitalsOf(named.files), ['capital=Acity']);
+  assert.equal(named.stats.capitalsNotListed, 1);
+  assert.ok(named.files['europe.sop'].includes('@k.geo.city.AAA.Oldtown k.geo.city name=Oldtown country=Aland '), 'a marked place stays a city');
+  // the list names none of the marked places: Natural Earth's marks stay
+  assert.deepEqual(capitalsOf(run(['Elsewhere']).files), ['capital=Acity', 'capital=Oldtown']);
+  for (const text of Object.values(named.files)) assert.ok(!text.includes('capital_of='));
 });
 
 test('the identity of a country is its common short name, written in full', () => {
@@ -112,7 +127,7 @@ test('Round 9: lakes with the area of their outline, deserts, seas; a capital fr
   assert.ok(!files['europe-borders.sop'].includes('Listed'));
   // Reviewer 04:10 item 2: every capital is a city; Beeville is no place of Natural Earth, so it is the list's city
   // (no coordinates), in the list's shard.
-  assert.ok(lines('europe-borders.sop').includes('@k.geo.borders.city.BBB.Beeville k.geo.city name=Beeville country=Bee capital_of=Bee core.source="countries 5.1.0"'));
+  assert.ok(lines('europe-borders.sop').includes('@k.geo.borders.city.BBB.Beeville k.geo.city name=Beeville country=Bee core.source="countries 5.1.0"'));
   assert.equal(stats.citiesFromList, 1);
   assert.ok(!files['europe.sop'].includes('Beeville'));
 });

@@ -1,10 +1,11 @@
-# k.kinds/shards/relations-geo: the keys of the types of k.geo read as relations: 78 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-geo: the keys of the types of k.geo read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
 @k.kinds.relation.k.geo.city.country k.kinds.relation type=k.geo.city key=country subject=city subject_sense=place object=place object_type=k.geo.country object_sense=place found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.geo.city.capital_of k.kinds.relation type=k.geo.city key=capital_of subject=city subject_sense=place object=place object_type=k.geo.country object_sense=place found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.geo.city.derived k.kinds.relation type=k.geo.city key=derived subject=city subject_sense=place object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.city.population k.kinds.relation type=k.geo.city key=population subject=city subject_sense=place object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.city.lat k.kinds.relation type=k.geo.city key=lat subject=city subject_sense=place object=amount found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.city.lon k.kinds.relation type=k.geo.city key=lon subject=city subject_sense=place object=amount found=schema core.source="hand-core 1"

@@ -15,6 +15,10 @@
   this licence. Everything else of `k.geo` comes from Natural Earth (the owner's rule: the more permissive source).
 - **Round 9 (2026-11-13):** also kept: `capital`, only for the 37 countries and territories for which Natural Earth
   marks no capital; in the `-borders` shards, under ODbL like the rest of the list.
-- **2026-11-15:** also kept: each of those capitals as a `k.geo.city` (name, country, `capital_of`) in the same
+- **2026-11-15:** also kept: each of those capitals as a `k.geo.city` (name, country; `capital_of` is derived since
+  KR1 item 2) in the same
   shards, and the capitals of the list's countries that Natural Earth lacks (Western Sahara, Tokelau …); where
   Natural Earth names the same place otherwise, the list's spelling as a `core.word` (Hagåtña, Papeetē, Cockburn Town).
+- **KR1 item 2 (2026-11-15):** the list's `capital` also decides between the places Natural Earth marks as capitals of
+  one country (16 countries: only those the list names stay, `tools/import/geo.mjs`). Its three capitals of
+  Caribbean Netherlands are not taken: Kralendijk is the capital, Oranjestad and The Bottom are cities only.

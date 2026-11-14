@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (277 of 1082 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (277 of 1083 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -406,6 +406,7 @@
 @k.attributes.narration.k.geo.city.name k.attributes.narration type=k.geo.city key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.geo.city.country k.attributes.narration type=k.geo.city key=country narrate=yes salience=1 form=relation basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.geo.city.capital_of k.attributes.narration type=k.geo.city key=capital_of narrate=yes salience=0.6 form=relation basis=typical core.source="hand-core 1"
+@k.attributes.narration.k.geo.city.derived k.attributes.narration type=k.geo.city key=derived narrate=no salience=0 why="metadata: where a fact comes from or how sure it is" core.source="hand-core 1"
 @k.attributes.narration.k.geo.city.population k.attributes.narration type=k.geo.city key=population narrate=yes salience=0.8 form=measure basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.geo.city.lat k.attributes.narration type=k.geo.city key=lat narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
 @k.attributes.narration.k.geo.city.lon k.attributes.narration type=k.geo.city key=lon narrate=no salience=0 why="a coordinate" core.source="hand-core 1"

@@ -12,7 +12,8 @@ ranges, lakes, deserts, oceans and seas, each with a number where a free source 
   `south`, `east`, `north` (its box, in degrees). The name is the common short name (`"United States"`, `Serbia`:
   Natural Earth's `NAME` or `NAME_LONG`, whichever is shorter and not abbreviated); `formal` is the formal name
   (`"Republic of Serbia"`); `core.word` facts give the other names (`"United States of America"`, `"Dem. Rep. Congo"`).
-- `k.geo.city` (identity `name` + `country`): `capital_of` (the country, for a national capital), `population`,
+- `k.geo.city` (identity `name` + `country`): `capital_of` (the country, for a national capital; never told: derived
+  from `k.geo.country.capital` by the rule `k.geo.capital_of`, written into `shards/derived*`), `population`,
   `lat`, `lon`. The national capitals and the 5 largest places of each country.
 - `k.geo.river` (identity `name` + `continent`): `country` (many: those it flows through), `lat`, `lon`, and its box;
   for 54 well-known rivers `length_about` (kilometres, the usual figure; `named=model`).
@@ -47,17 +48,24 @@ Two per continent:
   (Q33): Burundi (Gitega, not Bujumbura), Kazakhstan (Astana; Natural Earth's Nur-Sultan is the same city, renamed:
   the city is `Astana`, Natural Earth's own other name for it, with `Nur-Sultan` as a `core.word`), Palau (Ngerulmud,
   not Melekeok). The countries are named in `tools/import/geo.mjs` (a rename cannot be told from a spelling by the
-  data); the capitals are the list's, and so is the `capital_of` of Gitega and Astana (a `k.geo.city` wire in the
-  borders shard that merges with the city of the continent shard).
-- Every capital is a city (reviewer 04:10 item 2): each capital the list gives has a `k.geo.city` wire with
-  `capital_of` in the borders shard; it merges with Natural Earth's city of that name, or, where Natural Earth has
-  no place of that name, it is the list's own city, with its name and country and no coordinates or population
+  data); the capitals are the list's.
+- Every capital is a city (reviewer 04:10 item 2): each capital the list gives is Natural Earth's city of that name,
+  or, where Natural Earth has no place of that name, the list's own city (a `k.geo.city` wire in the borders shard), with its name and country and no coordinates or population
   (City of Victoria, Diego Garcia, King Edward Point, Ngerulmud, Saipan, and 30 more, many of which a PSys2 city
   shard places). Where Natural Earth has the very place under another name, the capital is Natural Earth's city and
   the list's spelling a `core.word` for it: Hagåtña for Agana, Papeetē for Papeete, Cockburn Town for Natural
   Earth's "Grand Turk" (the town, named after its island). The countries that only the list has (shard
   `psys2-countries`: Western Sahara, Tokelau, Réunion …) get their capital city the same way (El Aaiún, Fakaofo).
   Every `capital` of every country now meets a city (`k.geo.country.capital`: 0 open).
+- One home per capital (KR1 item 2, review 2026-11-15 finding 4): `k.geo.country.capital` is the home;
+  `k.geo.city.capital_of` is derived from it by the rule `k.geo.capital_of` (247 facts in `derived` and
+  `derived-public-domain`). Both used to be told and had drifted: Oranjestad and The Bottom (the seats of Sint
+  Eustatius and Saba) were `capital_of` Caribbean Netherlands, whose capital is Kralendijk; the country list names
+  all three, PSys2's city list marked them too. One capital per country unless the source says otherwise: Natural
+  Earth marks several places of 16 countries as capitals (`Admin-0 capital alt`: former capitals, seats of government
+  or of courts, claims); where the country list names some of them, only those stay (Benin: Porto-Novo, not
+  Cotonou; Bolivia: Sucre, not La Paz; Japan: Tokyo, not Kyoto; South Africa: Pretoria, Bloemfontein, Cape Town, not
+  Johannesburg). South Africa is the only country with several capitals.
 - Q33: `independent` follows Natural Earth's `SOVEREIGNT` (a country that is its own sovereign), not its `TYPE`,
   which called Cuba, Israel and Kazakhstan not independent and Aruba, Greenland, Hong Kong, Jersey independent; the
   country list agrees everywhere. `political_continent` (from the list's region): Cyprus, Europe.

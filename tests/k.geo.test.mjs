@@ -147,3 +147,32 @@ test('reviewer 04:10 item 2: every capital of a country is a k.geo city whose ca
     assert.ok(c && c.attrs.capital_of && !c.attrs.lat && !c.attrs.population, n);
   }
 });
+
+// KR1 item 2 (review 2026-11-15, finding 4): capitals were told in both directions (country.capital, city.capital_of)
+// and had drifted: Oranjestad and The Bottom were capital_of Caribbean Netherlands, whose capital is Kralendijk.
+test('KR1 item 2: a capital has one home (country.capital; capital_of only by the rule k.geo.capital_of), and a country has one capital unless the source says otherwise', async () => {
+  const { parse } = await import('../tools/sopworld/sopworld.mjs');
+  const entry = worlds.find((w) => w.id === 'k.geo');
+  const told = entry.shards.filter((s) => !s.id.split('/').pop().startsWith('derived')).flatMap((s) => parse(s.text));
+  assert.deepEqual(told.filter((w) => w.attrs.capital_of).map((w) => w.id), [], 'no told capital_of');
+  for (const s of entry.shards.filter((x) => x.id.split('/').pop().startsWith('derived'))) for (const w of parse(s.text)) if (w.attrs.capital_of) assert.deepEqual(w.attrs['core.source'], ['"rule k.geo.capital_of"'], w.id);
+  // every capital is a told city of its country (the rule only adds capital_of to a city that is there)
+  const toldCities = new Set(told.filter((w) => w.type === 'k.geo.city').map((w) => `${one(w, 'name')}|${one(w, 'country')}`));
+  const caps = new Map();
+  for (const w of told.filter((x) => x.type === 'k.geo.country')) for (const c of (w.attrs.capital ?? []).map(tok)) {
+    const n = one(w, 'name');
+    if (!caps.has(n)) caps.set(n, new Set());
+    caps.get(n).add(c);
+    assert.ok(toldCities.has(`${c}|${n}`), `${n}: ${c} is no told city of it`);
+  }
+  // the country list 5.1.0 names three capitals of South Africa, and Natural Earth marks the three; nowhere else
+  // does a source this world reads say a country has several (Natural Earth's other marks: tools/import/geo.mjs)
+  const several = [...caps].filter(([, s]) => s.size > 1).map(([c, s]) => `${c}: ${[...s].sort().join(', ')}`);
+  assert.deepEqual(several, ['South Africa: Bloemfontein, Cape Town, Pretoria']);
+  // loaded with the rule, capital_of reads country.capital backwards, and only that
+  const capitalOf = geo.ofType('k.geo.city').filter((c) => c.attrs.capital_of).map((c) => `${one(c, 'capital_of')}: ${one(c, 'name')}`).sort();
+  assert.deepEqual(capitalOf, [...caps].flatMap(([n, s]) => [...s].map((c) => `${n}: ${c}`)).sort());
+  assert.deepEqual(geo.query({ type: 'k.geo.country', where: { name: '"Caribbean Netherlands"' }, seek: 'capital', mode: 'list' }).values?.map(String).map(tok), ['Kralendijk']);
+  for (const n of ['Oranjestad', 'The Bottom']) for (const c of geo.ofType('k.geo.city').filter((x) => one(x, 'name') === n)) assert.notEqual(one(c, 'capital_of'), 'Caribbean Netherlands', n);
+  for (const [country, city] of [['Bolivia', 'Sucre'], ['Benin', 'Porto-Novo'], ['Nigeria', 'Abuja'], ['Japan', 'Tokyo']]) assert.deepEqual([...caps.get(country)], [city], country);
+});

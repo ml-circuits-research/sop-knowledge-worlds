@@ -5623,3 +5623,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   single words and amounts; mai is not part of a direction.
 - Taken next (assignment 12:10): K3 conversation frames (bound to w.person where it exists) and K7 clock and calendar
   words, in w.lang.en frame shards of my own.
+## 2026-11-15 — fifth worker: KR1 item 2, capitals have one home
+
+- **Home:** `k.geo.country.capital`. `k.geo.city.capital_of` is no longer told anywhere: the rule `k.geo.capital_of`
+  (k.geo/schema.sop, version 7; `when` a country's capital, `then` that city of that country has `capital_of`) makes
+  it, and tools/derive.mjs writes it for readers of shards: `derived` (246 facts, ODbL-1.0) and
+  `derived-public-domain` (1). New slot `k.geo.city.derived` (boolean), as k.time's derived types have.
+- **Before:** 263 country.capital pairs, 278 told capital_of wires (265 pairs; 13 PSys2 cities told it again), 2
+  capital_of with no capital (Oranjestad and The Bottom of Caribbean Netherlands, in north-america-borders and
+  psys2-cities-north-america), 16 countries with 2-4 capitals. **After:** 247 capital pairs, 0 told capital_of, 247
+  derived, every capital a told city of its country, 1 country with several capitals (South Africa: Pretoria,
+  Bloemfontein, Cape Town, as the country list says).
+- tools/import/geo.mjs: no `capital_of`; the list's city wire only where Natural Earth's city is not kept (citiesFromList
+  37, unchanged); of Natural Earth's capital marks, only those the country list names stay where it names some
+  (`capitalsNotListed` 16: Cotonou, Abidjan, Laayoune, Lagos, Johannesburg, Dar es Salaam, Mbabane, Tel Aviv, Kyoto,
+  Putrajaya, Yangon, Baguio, Sri Jayawardenepura Kotte, The Hague, La Paz, Valparaíso; they stay cities). Rerun on
+  the raw files: only these lines change. tools/import/psys2.mjs and its six city shards: no `capital_of`.
+  Q71 asks whether a seat of government should stay a second capital (meanwhile the list decides).
+- Tests: tests/k.geo.test.mjs (+1): no told capital_of, derived ones name the rule, every capital a told city, the
+  countries with several capitals are exactly South Africa's three, capital_of read with the rule equals
+  country.capital backwards, Caribbean Netherlands' capital is Kralendijk and Oranjestad / The Bottom are not
+  capitals of it. tests/import.geo.test.mjs (+1): the importer keeps the listed one of two marked capitals, keeps
+  both when the list names neither, keeps the other as a city, and writes no capital_of; the freshness test skips
+  derived shards.

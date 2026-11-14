@@ -1022,3 +1022,16 @@ meanwhile as said:
    reads as a task (acts.tasks.should, priority 12) and "how much is 7 plus 5" (K4, arithmetic) as a price
    (acts.shop.price.of, 14). Meanwhile nothing is done: the K3 and K4 frames should take a higher priority (or a needs
    the host checks first) when they are written. Agreed?
+## Q71 (KR1 item 2, fifth worker, 2026-11-15): which source decides between several capitals of one country?
+Question: Natural Earth marks two to four places of 16 countries as capitals (`Admin-0 capital` and `Admin-0 capital
+alt`). I keep only those the country list (5.1.0) names, where it names some: Benin Porto-Novo (not Cotonou), Côte
+d'Ivoire Yamoussoukro (not Abidjan), Tanzania Dodoma (not Dar es Salaam), eSwatini Lobamba (not Mbabane), Sri Lanka
+Colombo (not Sri Jayawardenepura Kotte), Bolivia Sucre (not La Paz), Netherlands Amsterdam (not The Hague), Malaysia
+Kuala Lumpur (not Putrajaya), and drops former capitals and claims (Lagos, Kyoto, Yangon, Baguio, Tel Aviv, Laayoune,
+Valparaíso, Johannesburg). Is that the rule, or should a seat of government with a constitutional role (La Paz, The
+Hague, Mbabane, Kotte, Putrajaya) stay a second capital, e.g. under its own key (`seat_of_government`)?
+Context: review 2026-11-15 finding 4; the test (tests/k.geo.test.mjs) wants one capital per country unless the source
+says otherwise; South Africa (three) is the only country the list gives several for. The list also names Oranjestad and
+The Bottom capitals of Caribbean Netherlands, which is wrong (they are the seats of Sint Eustatius and Saba); not taken.
+A `seat_of` key for those seats is not added (no real row asks).
+Blocking: no. Meanwhile: the country list decides, as above.
