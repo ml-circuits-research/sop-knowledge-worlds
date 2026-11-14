@@ -2859,3 +2859,11 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Q36: names of several words in `k.words` (about 170 names of the cores). Q37: a `sense` on the numbers and
   usage facts of the 70 names with two senses. Neither blocks; meanwhile nothing changes.
 - WORLD.md of `k.words` says which words have senses (the frequent words, the common things, the names of the cores).
+
+## Catalog freshness (2026-11-14, second worker): the catalog on main rebuilt
+
+- The reviewer's run at 5ae0fb1 had one failure, the catalog freshness test: the `version` of `index.json` (a
+  content hash of `docs/worlds`) was the hash of an earlier state, because two workers pushed generated files in
+  turn. `npm run build` gives `25e7964c3393` (was `cc8b68a74b53`); nothing else in `index.json` or `vocab.json`
+  differs. Numbers: 22 worlds, 918 shards, vocab 23,739 words; 0 errors, 0 warnings. npm test 2,761: 2,755 pass,
+  6 skipped, 0 fail.
