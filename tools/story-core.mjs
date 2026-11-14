@@ -54,16 +54,16 @@ export const ELEMENTS = [
     'What the goal is about: the place to reach, the thing to find, the one to rescue or visit.', ['propp1968']],
   ['obstacle', 5, [1, 1], 'complication', 'complicate', ['k.story.obstacle'], 'struggle (XVI) or difficult task (XXV)', 'initiating event; the complication of the episode', 'rising action',
     'What stands in the way of the goal: a thing of the setting as it blocks that kind of goal.', ['propp1968', 'labovWaletzky1967', 'freytag1863', 'steinGlenn1979']],
-  ['attempt', 6, [1, 3], 'complication', 'attempt', ['k.actions.action'], 'the hero\'s reaction to the test (XIII)', 'attempt and outcome (Mandler and Johnson; Stein and Glenn)', 'rising action',
-    'A try that fails: an act the protagonist can do that does not get past the obstacle. At most three, each a different act.', ['mandlerJohnson1977', 'steinGlenn1979', 'olrik1909'], 'At most three attempts, after Olrik\'s law of three; each a different act.'],
-  ['helper', 7, [1, 1], 'complication', 'introduce character', ['k.people.role'], 'the donor (XII) or the helper', 'a new character of the development', 'rising action',
-    'Who has what is missing: a person of a role who holds or uses the means. Brought in before the turning point.', ['propp1968']],
-  ['means', 8, [1, 1], 'climax', 'turning point', ['k.objects.object'], 'the magical agent (XIV)', 'the enabling condition of the outcome (Rumelhart)', 'climax',
+  ['attempt', 6, [0, 3], 'complication', 'attempt', ['k.actions.action'], 'the hero\'s reaction to the test (XIII)', 'attempt and outcome (Mandler and Johnson; Stein and Glenn)', 'rising action',
+    'A try that fails: an act the protagonist can do that does not get past the obstacle. At most three, each a different act; a story may have none.', ['mandlerJohnson1977', 'steinGlenn1979', 'olrik1909'], 'At most three attempts, after Olrik\'s law of three; each a different act. Optional: 23 of the 33 public-domain tales with a plot in sources/story-check have failed attempts (never more than three).'],
+  ['helper', 7, [0, 1], 'complication', 'introduce character', ['k.people.role'], 'the donor (XII) or the helper', 'a new character of the development', 'rising action',
+    'Who has what is missing: a person of a role who holds or uses the means. Brought in before the turning point. A story may have none (the protagonist then gets past the obstacle alone or fails).', ['propp1968'], 'Optional: a helper in 13 of the 33 public-domain tales with a plot in sources/story-check (12 of the 15 Grimm tales, 1 of the 19 Aesop fables); where there is one, it has what is missing in 12 of 13. The procedure "write a story" writes the helper tale.'],
+  ['means', 8, [0, 1], 'climax', 'turning point', ['k.objects.object'], 'the magical agent (XIV)', 'the enabling condition of the outcome (Rumelhart)', 'climax',
     'What is missing: the thing that lets the overcoming act be done (a tool of that act in k.actions). The helper has it; the protagonist lacks it.', ['propp1968', 'rumelhart1975']],
-  ['turning point', 9, [1, 1], 'climax', 'turning point', ['k.actions.action'], 'provision or receipt of the magical agent (XIV)', 'the outcome that changes the goal path', 'climax',
+  ['turning point', 9, [0, 1], 'climax', 'turning point', ['k.actions.action'], 'provision or receipt of the magical agent (XIV)', 'the outcome that changes the goal path', 'climax',
     'The moment the story turns: the helper gives the protagonist the means (the act give of k.actions).', ['propp1968', 'freytag1863', 'field1979', 'aristotle']],
-  ['resolution', 10, [1, 1], 'resolution', 'resolve', ['k.actions.action'], 'victory (XVIII), liquidation of the lack (XIX)', 'outcome (Mandler and Johnson), resolution (Thorndyke)', 'falling action',
-    'The obstacle overcome: the protagonist does an act that gets past it, with the means set up earlier.', ['propp1968', 'mandlerJohnson1977', 'thorndyke1977', 'labovWaletzky1967', 'chekhov1889', 'trabasso1985']],
+  ['resolution', 10, [0, 1], 'resolution', 'resolve', ['k.actions.action'], 'victory (XVIII), liquidation of the lack (XIX)', 'outcome (Mandler and Johnson), resolution (Thorndyke)', 'falling action',
+    'The obstacle overcome: the protagonist does an act that gets past it, with the means set up earlier. A story may end without one (a fable that warns).', ['propp1968', 'mandlerJohnson1977', 'thorndyke1977', 'labovWaletzky1967', 'chekhov1889', 'trabasso1985'], 'Optional: 19 of the 33 public-domain tales with a plot in sources/story-check overcome the obstacle; 13 of those 19 with something set up earlier.'],
   ['ending', 11, [1, 1], 'ending', 'end', ['k.story.goal'], 'return (XX); the wedding or reward (XXXI)', 'ending (Mandler and Johnson); reaction (Stein and Glenn)', 'outcome',
     'The goal reached: the protagonist at the target, with what it has found or saved; what it felt or learnt.', ['propp1968', 'mandlerJohnson1977', 'steinGlenn1979', 'labovWaletzky1967']],
 ];
@@ -117,7 +117,7 @@ export const CONSTRAINTS = [
   ['protagonist can overcome with the means', 'protagonist', 'can', 'resolution', 'hard', 'The resolution\'s act is one the protagonist can do (its `who`).', ['steinGlenn1979']],
   ['resolution uses the means', 'resolution', 'uses', 'means', 'hard', 'The resolution is an act of the obstacle\'s overcome_by that has the means as its tool: what was set up earlier is what solves the problem.', ['chekhov1889', 'trabasso1985', 'propp1968']],
   ['means comes before the resolution', 'means', 'before', 'resolution', 'hard', 'The means is told before the resolution uses it.', ['chekhov1889']],
-  ['ending reaches the goal', 'ending', 'reaches', 'goal', 'hard', 'The ending tells the goal reached: the protagonist at the target, with it, or with the one saved.', ['mandlerJohnson1977', 'labovWaletzky1967', 'propp1968']],
+  ['ending reaches the goal', 'ending', 'reaches', 'goal', 'soft', 'Preferred: the ending tells the goal reached: the protagonist at the target, with it, or with the one saved.', ['mandlerJohnson1977', 'labovWaletzky1967', 'propp1968'], 'Soft: the goal is reached in 17 of the 33 public-domain tales with a plot in sources/story-check (the fables end in failure); a composer prefers it.'],
   ['protagonist belongs in the setting', 'protagonist', 'belongs', 'setting', 'soft', 'Preferred: the protagonist works at the setting (k.people.role works_at) or is a thing the setting has (a fox in the forest).', ['labovWaletzky1967'], 'Soft: a person of no role belongs anywhere; a composer weights the others.'],
   ['helper belongs in the setting', 'helper', 'belongs', 'setting', 'soft', 'Preferred: the helper works at the setting or is a thing the setting has (a knight at the castle; a sailor at the harbour).', ['labovWaletzky1967'], 'Soft.'],
   ['target in the setting', 'target', 'in', 'setting', 'soft', 'Preferred, for a thing or a being: the setting has it (a treasure chest on the island).', ['chekhov1889'], 'Soft.'],
@@ -216,8 +216,7 @@ export function storyPlans(kb, each = () => {}) {
             const helpers = kb.roles.filter((r) => hasThing(r, means));
             for (const protagonist of characters) {
               if (!canDo(kb, protagonist, goal.act) || !canDo(kb, protagonist, resolution) || hasThing(protagonist, means)) continue;
-              const tries = ob.tried_by.filter((t) => canDo(kb, protagonist, t));
-              if (!tries.length) continue;
+              const tries = ob.tried_by.filter((t) => canDo(kb, protagonist, t)); // none: a story without attempts
               for (const helper of helpers) {
                 if (helper.name === protagonist.name) continue;
                 for (const target of targets) {
@@ -256,7 +255,7 @@ export function checkPlan(kb, constraints, p) {
     'helper differs from the protagonist': () => p.helper !== p.protagonist,
     'target differs from the characters': () => p.target !== p.protagonist && p.target !== p.helper,
     'protagonist can make the attempts': () => p.attempts.every((a) => canDo(kb, P, a)),
-    'attempts fail': () => p.attempts.length >= 1 && p.attempts.length <= 3 && new Set(p.attempts).size === p.attempts.length && p.attempts.every((a) => ob?.tried_by.includes(a) && !ob.overcome_by.includes(a)),
+    'attempts fail': () => p.attempts.length <= 3 && new Set(p.attempts).size === p.attempts.length && p.attempts.every((a) => ob?.tried_by.includes(a) && !ob.overcome_by.includes(a)),
     'helper comes before the turning point': () => at('helper') >= 0 && at('helper') < at('turning point'),
     'turning point gives the means': () => p.turning_point === 'give' && kb.actions.has('give'),
     'protagonist can overcome with the means': () => canDo(kb, P, p.resolution),

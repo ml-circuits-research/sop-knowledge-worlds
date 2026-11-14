@@ -82,10 +82,10 @@ export const TRACED = [
   // castle has a dragon (k.scenes); the dragon guards the one to rescue (k.story); a girl is a child is a person,
   // who can help (rescue), shout, hide and fight (k.actions who); a knight holds a sword (k.people), a girl holds
   // nothing; fight has the tool sword; friend is an object of help and a k.people role; the knight works at the castle.
-  { setting: 'castle', protagonist: 'girl', goal: 'rescue someone', target: 'friend', obstacle: 'dragon', attempts: ['shout', 'hide'], helper: 'knight', means: 'sword', turning_point: 'give', resolution: 'fight', ending: 'rescue someone', soft: ['helper belongs in the setting'] },
+  { setting: 'castle', protagonist: 'girl', goal: 'rescue someone', target: 'friend', obstacle: 'dragon', attempts: ['shout', 'hide'], helper: 'knight', means: 'sword', turning_point: 'give', resolution: 'fight', ending: 'rescue someone', soft: ['ending reaches the goal', 'helper belongs in the setting'] },
   // the river scene has a river; a river lies between, for a visit; a boy can visit, jump, wait, shout and sail; a
   // sailor uses a sailboat, the tool of sail; a grandmother is an object of visit.
-  { setting: 'river', protagonist: 'boy', goal: 'visit someone', target: 'grandmother', obstacle: 'river', attempts: ['jump', 'wait', 'shout'], helper: 'sailor', means: 'sailboat', turning_point: 'give', resolution: 'sail', ending: 'visit someone', soft: [] },
+  { setting: 'river', protagonist: 'boy', goal: 'visit someone', target: 'grandmother', obstacle: 'river', attempts: ['jump', 'wait', 'shout'], helper: 'sailor', means: 'sailboat', turning_point: 'give', resolution: 'sail', ending: 'visit someone', soft: ['ending reaches the goal'] },
   // the forest has a tree and a fox (k.scenes); a fox is a mammal, an animal: it can go, jump and climb (who=animal);
   // a firefighter uses a ladder, the tool of climb; the mountains are an outdoor scene.
   { setting: 'forest', protagonist: 'fox', goal: 'find a thing', target: 'key', obstacle: 'tree', attempts: ['jump'], helper: 'firefighter', means: 'ladder', turning_point: 'give', resolution: 'climb', ending: 'find a thing', soft: ['protagonist belongs in the setting'] },
@@ -116,7 +116,7 @@ test('k.story: the hand-traced plans hold every hard constraint (and the soft on
   broken({ target: 'museum' }, ['target fits the goal']);
   broken({ order: ['setting', 'protagonist', 'goal', 'target', 'obstacle', 'attempt', 'means', 'turning point', 'helper', 'resolution', 'ending'] }, ['helper comes before the turning point']);
   broken({ order: ['setting', 'protagonist', 'goal', 'target', 'obstacle', 'attempt', 'helper', 'turning point', 'resolution', 'means', 'ending'] }, ['means comes before the resolution']);
-  broken({ ending: 'find a thing' }, ['ending reaches the goal']);
+  assert.ok(!checkPlan(kb, facts.constraint, { ...castle, order: ORDER, ending: 'find a thing' }).soft.includes('ending reaches the goal')); // soft since the tales check
 });
 
 export const SAMPLES = 1000;
@@ -132,8 +132,8 @@ test(`k.story: all plans that hold the hard constraints, counted; ${SAMPLES} sam
   assert.equal(picked.length, SAMPLES);
   const soft = {}, goals = new Set(), obstacles = new Set(), protagonists = new Set();
   for (const p of picked) {
-    // The attempts: 1 to 3 different acts of the protagonist among the obstacle's tried_by.
-    const k = 1 + Math.floor(rnd() * Math.min(3, p.tries.length));
+    // The attempts: 0 to 3 different acts of the protagonist among the obstacle's tried_by.
+    const k = Math.floor(rnd() * (Math.min(3, p.tries.length) + 1));
     const pool = [...p.tries], attempts = [];
     while (attempts.length < k) attempts.push(pool.splice(Math.floor(rnd() * pool.length), 1)[0]);
     const r = checkPlan(kb, facts.constraint, { ...p, attempts, order: ORDER });

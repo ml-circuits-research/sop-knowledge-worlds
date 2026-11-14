@@ -29,7 +29,7 @@ solutions by the weights of `k.interest` and the soft constraints here. No langu
 | 3 | goal | k.story.goal | orientation, state goal | lack (VIIIa), villainy (VIII) | goal / theme | exposition |
 | 4 | target | k.scenes.scene, k.objects.object, people, animals | orientation, state goal | sought-for person or object | object of the goal | exposition |
 | 5 | obstacle | k.story.obstacle | complication, complicate | struggle (XVI), difficult task (XXV) | initiating event | rising action |
-| 6 | attempt (1-3) | k.actions.action | complication, attempt | reaction to the test (XIII) | attempt and outcome | rising action |
+| 6 | attempt (0-3) | k.actions.action | complication, attempt | reaction to the test (XIII) | attempt and outcome | rising action |
 | 7 | helper | k.people.role | complication, introduce character | donor (XII), helper | new character | rising action |
 | 8 | means | k.objects.object | climax, turning point | magical agent (XIV) | enabling condition | climax |
 | 9 | turning point | k.actions.action (give) | climax, turning point | receipt of the agent (XIV) | outcome that turns the goal path | climax |
@@ -48,7 +48,7 @@ cut with a saw when it lies across the way), a **dragon** (guards; fight with a 
 firefighter and a builder use a ladder, a builder and a carpenter a hammer, a carpenter holds a saw, a knight, a king,
 a prince and a pirate hold a sword.
 
-## Constraints (21: 18 hard, 3 soft)
+## Constraints (21: 17 hard, 4 soft)
 
 Hard: the protagonist can reach the goal (it is one of the `who` of the goal's act, up the chain of kinds: a girl is a
 child is a person); the target fits the goal (an object of its act, or a scene of its kind) and differs from the
@@ -57,9 +57,11 @@ overcomes the obstacle; **the protagonist lacks the means** (holds and uses of k
 means**; the helper differs from the protagonist; the protagonist can make the attempts, and **the attempts fail**
 (1 to 3 different acts of the obstacle's tried_by); the helper comes before the turning point; the turning point
 gives the means; the protagonist can do the resolution's act; **the resolution uses the means** (an overcoming act
-whose tool it is: what was set up earlier solves the problem); the means comes before the resolution; the ending
-reaches the goal. Soft (a composer prefers them): the protagonist and the helper belong in the setting (work there,
-or are things it has), the target is in the setting.
+whose tool it is: what was set up earlier solves the problem); the means comes before the resolution. Soft (a
+composer prefers them): the ending reaches the goal; the protagonist and the helper belong in the setting (work
+there, or are things it has); the target is in the setting. The attempts, the helper, the means, the turning point
+and the resolution are optional elements (min 0) since the tales check below; the constraints on them hold where
+they are there. The procedure "write a story" of k.procedures writes the helper tale (all of them present).
 
 The reference reading: `storyKb(worlds)` gathers the facts a plan reads (the wires of the types it needs, parsed
 alone), `storyPlans(kb, each)` enumerates every plan that holds the hard constraints, and `checkPlan(kb,
@@ -113,6 +115,41 @@ that cannot find); **all 642,752 plans** that hold the hard constraints counted 
 605,163; rescue someone 18,669; find a thing 15,314; visit someone 3,606), and **1,000 sampled** uniformly (seeded),
 given 1 to 3 attempts, and each checked again from the facts: none breaks a hard constraint. Uniform sampling holds
 the soft constraints rarely (about 1 to 2 in 100 each): a composer weights by them and by k.interest.
+
+## Checked against tales annotated by hand (block "19:45")
+
+`sources/story-check/` holds two samples annotated by hand by the third worker with k.story's elements and
+constraints (`SOURCE.md` there gives the fields and the rule): 40 human-written public-domain tales of PSys2's
+`tales-pd` (15 Grimm, 5 Andersen, 20 Aesop; the fables read whole, the long tales read in their opening and annotated
+from their well-known plot) and 40 TinyStories. `tests/k.story.check.test.mjs` prints the table:
+
+| Measure (over the stories it applies to) | Tales | TinyStories |
+| --- | --- | --- |
+| has a goal | 34/40 | 32/40 |
+| has an obstacle | 37/40 | 27/40 |
+| obstacle blocks the goal (goal and obstacle) | **33/33** | 25/26 |
+| attempts that fail | 23/33 | 14/26 |
+| at most three attempts | **23/23** | 14/14 |
+| a helper | 13/33 | 15/26 |
+| helper has what is missing | **12/13** | 15/17 |
+| the helper gives a thing | 6/13 | 6/17 |
+| protagonist lacks it | **13/13** | 16/17 |
+| resolution | 19/33 | 19/26 |
+| resolution uses a set-up | 13/20 | 3/21 |
+| goal reached | 17/33 | 19/26 |
+| goal told before the obstacle | 18/33 | 20/26 |
+
+**Decisions, by the tales column:** kept hard what holds in nine in ten of the tales where it applies (the obstacle
+blocks the goal; at most three attempts; the helper has what is missing; the protagonist lacks it). Made optional
+what many tales do without: attempts (23 of 33 have them), the helper with its means and turning point (13 of 33: 12
+of the 15 Grimm tales, 1 of the 19 fables), the resolution (19 of 33). Made soft "the ending reaches the goal" (17 of
+33: fables end in failure). Set-up and pay-off holds in 13 of the 20 tales that resolve (65%) and is kept where a
+helper brings the means. The goal comes before the obstacle in only 18 of 33 tales (the trouble often comes first and
+the goal answers it): `n` is the usual order of telling, not a constraint, and no constraint orders goal and
+obstacle. No new goals, obstacles or helpers were taken: those of the tales that map to existing kinds (a river, a
+glass mountain, a fox, a dwarf with a wand) are already of the kinds k.story uses.
+**TinyStories adds nothing the tales do not say** (its numbers are close on every constraint but set-up and pay-off,
+which it almost never uses: 3 of 21); it can be dropped; it was used for statistics only, never as a style reference.
 
 ## Checked against a corpus
 

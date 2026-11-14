@@ -3976,3 +3976,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   w.document.sentence and w.document.paragraph.
 - `npm test`: 2,939 tests, 2,937 pass, 1 skipped, 1 todo (Q51), 0 fail (one earlier run caught COVERAGE.md stale:
   `npm run reports` after adding a world).
+## 2026-11-14 — third worker: k.story checked against tales annotated by hand (block "19:45")
+
+- `sources/story-check/` (CC0 annotations, no story text): 40 public-domain tales of PSys2's `tales-pd` (every 4th
+  Grimm, every 4th Andersen, every 14th Aesop; fables read whole, long tales from their opening and well-known plot)
+  and 40 TinyStories (every 25th), annotated by hand with k.story's elements and constraints; `SOURCE.md` gives the
+  fields and the rule. `tests/k.story.check.test.mjs` prints both columns.
+- Tales / TinyStories: obstacle blocks the goal 33/33 / 25/26; failed attempts 23/33 / 14/26, never more than three;
+  a helper 13/33 (12 of 15 Grimm, 1 of 19 Aesop) / 15/26; the helper has what is missing 12/13 / 15/17; the
+  protagonist lacks it 13/13 / 16/17; resolution 19/33 / 19/26; set-up used by the resolution 13/20 / 3/21; goal
+  reached 17/33 / 19/26; goal told before the obstacle 18/33 / 20/26.
+- Decisions: kept hard what holds in nine in ten tales (blocks, at most three attempts, helper has it, protagonist
+  lacks it); attempts, helper, means, turning point and resolution made optional (min 0, the numbers in `own`);
+  "the ending reaches the goal" made soft (now 17 hard, 4 soft); goal and obstacle stay unordered by any constraint.
+  No new goals, obstacles or helpers (those of the tales map to kinds k.story already uses). TinyStories adds nothing
+  over the tales (close on every measure but set-up, 3/21): it can be dropped. Plans over the catalog: still
+  642,752; the reference reader allows stories without attempts.
