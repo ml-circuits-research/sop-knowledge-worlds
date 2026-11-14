@@ -4987,3 +4987,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   phrase and used by a k.diagrams kind). `npm run test:changed` 39 files, 255 tests, 253 pass, 2 skipped; after
   rebasing on 7855ca2 (29 general frames) and rebuilding: catalog, validate, repo, w.lang.en.arrangement 3, closed 3,
   morph 6, w.lang.en 22, frames 3, joins-report 3, coverage-report 4 pass.
+
+## 2026-11-15 — third worker: full suite at the end of the round
+
+- `npm run test:all` on 7c7738f: 79 files, 3,093 tests, 3,085 pass, 0 fail, 8 skipped, 430 s. Slowest (`npm run
+  test:slow`): questions 41.4 s, derived 39.3 s (2.9 GB), k.objects.render 30.7 s, k.objects.names 29.9 s,
+  k.attributes 28.2 s; no file of this round over 30 s (k.diagrams, w.lang.en.morph 3 s, w.lang.en.closed and
+  arrangement under 1 s).
