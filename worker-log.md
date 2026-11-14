@@ -4389,3 +4389,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   (and three non-variants); the asked skip words by class, skipped prepositions and copulas are of the grammar; the
   negation and removal words; together / apart. w.lang.en 21, templates 8, k.words.paraphrase 2, k.values 5,
   ask-real 4, questions 424, joins 3 pass; k.kinds relations unchanged by k.values (rerun gives no diff).
+- Full run of the round (items 1 to 5 at 89959a5, before the alternation facts were added), one file at a time:
+  64 files, 3,009 tests, 3,004 pass, 5 skipped, 0 fail (catalog killed once by the memory limit, passed on the rerun;
+  17 minutes). After the amend (w.lang.en.alternation): w.lang.en.abstraction 5, w.lang.en 21, templates 8, validate 5,
+  catalog 8 pass.
+
+## Questions and lessons (2026-11-14, second worker)
+
+- questions.md Q60 [LIB] (the facts the type-driven reader, the analogy and the alternations read), Q61 (relation
+  facts that depend on every world: generated or declared joins), Q62 [DATA] (English given names); numbered after
+  the third worker's Q58 and Q59, which landed meanwhile. docs/lessons.md:
+  a section for this round (seven lessons).
+- Rebased on w.lang.ro's dictionary (19ca312, 1af5ad8): generated files taken from upstream at each stop and rebuilt at
+  the tip (relations, structures and variants rerun with no diff; COVERAGE.md k.kinds 956 -> 958; catalog 32 worlds,
+  1,055 shards, vocab 25,951 words). After the rebase: catalog 8, validate 5, coverage-report 4, k.kinds.relations 5,
+  k.kinds.structures 4, k.kinds 6, w.lang.en.abstraction 5, w.lang.ro 10, k.words.paraphrase 2 pass.
+- Rebased on the third worker's alternations (a52dbec, 2f54678): my `w.lang.en.alternation` and wh_fronting dropped
+  (above), my questions renumbered Q60-Q62; `tools/measures-core.mjs` gives `w.lang.en.alternation.n` its measure (an
+  order: the new numeric slot had none, so measures-core and relations-core threw; k.units measures.sop +1 wire).
+  Generated files rebuilt at the tip (catalog 32 worlds, 1,056 shards, vocab 25,989 words; COVERAGE.md unchanged);
+  the intermediate commits of this push carry stale or conflicted generated files (index, vocab-kinds, LICENSES),
+  the tip none. Tests after the rebase: catalog 8, validate 5, coverage-report 4, k.kinds.relations 5,
+  k.kinds.structures 4, k.kinds 6, w.lang.en.abstraction 5, w.lang.en 21, w.lang.en.alternations 4, templates 8,
+  k.words.paraphrase 2, k.values 5, k.cores 6, w.schemas 14, k.procedures 15, ask-real 4, k.attributes 11, k.geo 7,
+  w.lang.ro 10, k.interest 5 pass.

@@ -447,3 +447,32 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   whose output matches another rule's input loops (have / does ... have), and a general rule placed before a specific
   one eats it (how {x} are before how many {y} there are). The canonical forms as fixpoints and the frame examples as
   a check (17 of 352 changed: exactly the variants) found both.
+## Block 21:20 and the abstraction round (second worker): w.chart, selectional restrictions, structures, variants
+
+- **A type for a relation's object is mostly already in the data; find it by value, then say how it was found.**
+  Of 919 keys, the schemas typed only those with `type=`, an enum or a number; joining the values of every other key
+  to the naming keys of every type (half the distinct values, regular plurals as singulars) typed capital -> city,
+  can -> action, colour -> colour without a word per key. Two cheap guards made it right: types keyed by the word
+  whatever it means (k.words, k.parts, word frequencies) only as the last resort (else every key of English words
+  "joins" the dictionary), and a second type only within nine tenths of the best share (rivers named Red and White
+  were the second type of every colour key).
+- **A generated fact that reads every world is a shared liability.** The relation shards change when any world's
+  values cross a threshold, so every worker's build must regenerate them; the cost is acceptable only because the tool
+  runs in 5 s and is in `npm run build` (Q59 asks whether declared joins should replace it).
+- **A tool that owns a directory must not own every file in it.** kinds-core and relations-core both write k.kinds
+  shards; the first wiped the second's on its run. `writeShards` takes a `keep` list now; a test that compares "the
+  shards on disk" with a tool's output must filter by the tool's own prefixes.
+- **Structure is a better join for analogy than names.** Writing six structures with ordered roles and casting each
+  world's types, keys and acts to them gave 96 aligned world pairs and 174 transfer candidates from 153 facts; no pair
+  of worlds is written by hand, and a new world is aligned with all others by casting its own roles once.
+- **A variant is a variant only where the alternation is required.** Most frames carry wrappers and datives as
+  optional parts ("[draw|make] [me|us?]"); those frames are already canonical. Marking only required parts found 45
+  variants of 352 and no dative at all, which is itself the measurement: the grammar already folds datives into its
+  canonical frames. And which form is canonical is one decision for the whole system: a fronted wh-word was a variant
+  in my first draft and the canonical form in the alternation rules that landed meanwhile; the variants now name the
+  rules' families, so there is one vocabulary of alternations.
+- **Coverage of the words of failures is cheap and tells the gap's kind.** 138 content words of 71 failing
+  paraphrases: one real dictionary gap (subhead), five closed-class words the grammar lacked, three names, one notation,
+  one misspelling. The failures are not lexical; reaching a sense is not reaching the meant one (Ana, Tom, lei).
+- **Resolve a rebase on a log by hand, then grep for markers.** Taking "ours" for generated files and rebuilding them is
+  safe; `git add -A` after a conflict on an appended log published six marker lines once.

@@ -848,3 +848,43 @@ Context: `k.kinds.parent` (8,389 edges, six dimensions: kind, place, feature, us
 3. **Names as nodes**: a name with two senses (bat the animal and the club) is one node with the parents of both;
    k.attributes.same knows the senses. Add `sense=` to the edges of such names?
 Blocking: no.
+## Q60 [LIB] (block "21:05" items 1 and 4, second worker, 2026-11-14): the facts the type-driven reader and the analogy read
+Question: does the library read these as published, or should a key change before it pins them?
+1. **Selectional restrictions** (`k.kinds.argument`, `k.kinds.relation`, docs/worlds/k.kinds/WORLD.md): a role of an act
+   joins its class by `k.actions.role holds` = `k.kinds.argument name`; the class lists the catalog `type`s that fill it,
+   `live=true` where a live thing fills it, and `sense`s (tools/joins.mjs: animal, food, place, person ...). A relation is
+   `type` + `key` of a knowledge type with `subject` (a word for the kind), `subject_sense`, `object` (a class),
+   `object_type` (the best first), `object_sense`, `scale`. "what sound does a cow make" = relation k.animals.animal
+   sound (subject animal, object a word of k.words); "cow sound?" reaches the same relation through the key's word and
+   the subject's type. Two choices to confirm: (a) the object types are found by joining values (at least half of the
+   distinct values name things of the type), so they say what the catalog holds today, not what could be said;
+   (b) the subject of a type keyed by the word (k.words.sense, k.parts) is `word`, of one keyed by a drawing `thing`.
+2. **Structures** (`k.kinds.structure`, `role`, `form`, `cast`): a world is one or more of six structures (assignment,
+   whole with parts, sequence, graph, placement, values by category) and casts each role to a type, a type.key or an
+   act. The test computes an analogy as the role-wise pairs of fillers of two worlds of one structure, and the roles one
+   world casts and the other does not as transfer candidates (96 pairs, 343 aligned fillers, 174 offered roles). Is
+   that the alignment the library's analogy wants, or does it need more (a cardinality per role, the direction of a
+   link, which constraint of one world maps to which of the other)?
+3. **Variants** (`w.lang.en.variant frame= alternation= canonical=`, `alternation` a family of the third worker's
+   alternation rules, Q58): 45 of 352 frames marked by rule; the library's alternations can be measured against them
+   (a variant normalised by the rules of its family and read by its canonical frame should give the same act and
+   roles) before the frames are retired.
+Blocking: no. Meanwhile the facts are published as said; a converter is a script if keys change.
+
+## Q61 (block "21:05" item 1, second worker, 2026-11-14): computed facts that depend on every world
+Question: may `k.kinds.relation` stay a generated shard set that changes whenever a join of another world changes, or
+should it hold only what the schemas say (no join by value), so that it changes only with the schemas?
+Context: `tools/relations-core.mjs` reads every shard of every knowledge world (5 s) to find the object types by value;
+a worker who adds facts that move a join past the half-share threshold makes `tests/k.kinds.relations.test.mjs` fail
+until `npm run build` is run (it is in the build, like derive, joins and kinds-core). Today the rerun after k.words'
+subhead and k.values' together/apart gave no diff. The alternative is declared joins on the slots (a `joins=<type>` of
+the schema) and the relation facts read from them.
+Blocking: no. Meanwhile: generated, in the build.
+
+## Q62 [DATA] (block "21:05" item 3, second worker, 2026-11-14): English given names, to tell a name from a miss
+What: a list of common given names with their frequency (for example the US Social Security baby names, public domain,
+about 100,000 names, 2 MB; or a CC0 list of international first names). Why: of the 10 content words of the failing
+paraphrases that reach no sense of k.words, 3 are names (Zoe, Zoe's, Anah) and the reached senses of Ana, Tom and Leo
+are not the names (a collection of anecdotes, a male animal, a constellation); a reader that fills a person slot or a
+`name` argument (k.kinds.argument) should know a word is a given name. Kept: name, sex where given, a frequency band;
+a shard of k.people or w.lang.en with the source's licence. Blocking: no.
