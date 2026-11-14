@@ -43,7 +43,7 @@
 @k.objects.lighthouse.stripe.p4 k.objects.point part=$k.objects.lighthouse.stripe n=4 x=39 y=55 core.source="hand-core 1"
 
 # words
-@k.objects.word.house core.word text=house text=houses text=home means=house of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.house core.word text=house text=home means=house of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.castle core.word text=castle text=castles means=castle of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.lighthouse core.word text=lighthouse text=lighthouses means=lighthouse of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.part.merlon core.word text=merlon text=merlons means=merlon of=k.objects.part.kind core.source="hand-core 1"

@@ -1,5 +1,5 @@
 {
- "version": "d91dba0a8e84",
+ "version": "ed35acd0c3af",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4369,11 +4369,12 @@
     {
      "id": "k.attributes/shards/drawn-openmoji",
      "path": "k.attributes/shards/drawn-openmoji.sop",
-     "wires": 114,
-     "bytes": 18752,
+     "wires": 115,
+     "bytes": 18878,
      "keys": [
       "3d printer",
       "armchair",
+      "arrow",
       "autonomous car",
       "bandage scissors",
       "barcode",
@@ -6264,8 +6265,8 @@
     {
      "id": "k.attributes/shards/same-a",
      "path": "k.attributes/shards/same-a.sop",
-     "wires": 115,
-     "bytes": 22747,
+     "wires": 116,
+     "bytes": 22939,
      "keys": [
       "aardvark",
       "abacus",
@@ -6404,7 +6405,7 @@
      "id": "k.attributes/shards/same-b",
      "path": "k.attributes/shards/same-b.sop",
      "wires": 339,
-     "bytes": 69008,
+     "bytes": 69052,
      "keys": [
       "animal",
       "ba",
@@ -6760,7 +6761,7 @@
      "id": "k.attributes/shards/same-c",
      "path": "k.attributes/shards/same-c.sop",
      "wires": 452,
-     "bytes": 91814,
+     "bytes": 91880,
      "keys": [
       "animal",
       "body in space",
@@ -7657,7 +7658,7 @@
      "id": "k.attributes/shards/same-g",
      "path": "k.attributes/shards/same-g.sop",
      "wires": 135,
-     "bytes": 27004,
+     "bytes": 27092,
      "keys": [
       "animal",
       "body in space",
@@ -7812,7 +7813,7 @@
      "id": "k.attributes/shards/same-h",
      "path": "k.attributes/shards/same-h.sop",
      "wires": 164,
-     "bytes": 33493,
+     "bytes": 33537,
      "keys": [
       "animal",
       "body part",
@@ -8356,7 +8357,7 @@
      "id": "k.attributes/shards/same-m",
      "path": "k.attributes/shards/same-m.sop",
      "wires": 267,
-     "bytes": 52034,
+     "bytes": 52056,
      "keys": [
       "animal",
       "body in space",
@@ -8805,7 +8806,7 @@
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
      "wires": 314,
-     "bytes": 63758,
+     "bytes": 63780,
      "keys": [
       "animal",
       "body in space",
@@ -9324,7 +9325,7 @@
      "id": "k.attributes/shards/same-s",
      "path": "k.attributes/shards/same-s.sop",
      "wires": 435,
-     "bytes": 89611,
+     "bytes": 89655,
      "keys": [
       "animal",
       "body in space",
@@ -35282,7 +35283,7 @@
      "id": "k.objects/shards/animals",
      "path": "k.objects/shards/animals.sop",
      "wires": 68,
-     "bytes": 10088,
+     "bytes": 10076,
      "keys": [
       "back_leg",
       "beak",
@@ -35325,7 +35326,7 @@
      "id": "k.objects/shards/buildings",
      "path": "k.objects/shards/buildings.sop",
      "wires": 39,
-     "bytes": 5858,
+     "bytes": 5846,
      "keys": [
       "base",
       "body",
@@ -35726,7 +35727,7 @@
      "id": "k.objects/shards/home",
      "path": "k.objects/shards/home.sop",
      "wires": 101,
-     "bytes": 14446,
+     "bytes": 14372,
      "keys": [
       "back",
       "bag",
@@ -36001,7 +36002,7 @@
      "id": "k.objects/shards/more",
      "path": "k.objects/shards/more.sop",
      "wires": 99,
-     "bytes": 13743,
+     "bytes": 13685,
      "keys": [
       "back_wheel",
       "ball",
@@ -39984,7 +39985,7 @@
      "id": "k.objects/shards/nature",
      "path": "k.objects/shards/nature.sop",
      "wires": 33,
-     "bytes": 4746,
+     "bytes": 4721,
      "keys": [
       "apple",
       "body",
@@ -44192,14 +44193,13 @@
     {
      "id": "k.objects/shards/openmoji-objects-01",
      "path": "k.objects/shards/openmoji-objects-01.sop",
-     "wires": 700,
-     "bytes": 86575,
+     "wires": 644,
+     "bytes": 79306,
      "keys": [
       "armchair",
+      "arrow",
       "body",
-      "clip",
       "eraser",
-      "european name badge",
       "first aid kit",
       "flame",
       "grass",
@@ -44228,16 +44228,17 @@
     {
      "id": "k.objects/shards/openmoji-objects-02",
      "path": "k.objects/shards/openmoji-objects-02.sop",
-     "wires": 1080,
-     "bytes": 131861,
+     "wires": 1027,
+     "bytes": 125773,
      "keys": [
       "3d printer",
       "base",
+      "clip",
       "coffee",
       "espresso machine",
+      "european name badge",
       "french press",
       "knob",
-      "milk jug",
       "moka pot",
       "motorbike helmet",
       "mouthpiece",
@@ -44255,20 +44256,18 @@
     {
      "id": "k.objects/shards/openmoji-objects-03",
      "path": "k.objects/shards/openmoji-objects-03.sop",
-     "wires": 1153,
-     "bytes": 141086,
+     "wires": 1196,
+     "bytes": 145813,
      "keys": [
-      "base",
       "bicycle helmet",
       "body",
       "button",
-      "charging station",
       "coffee grinder",
-      "display",
       "drip coffee maker",
       "electric coffee percolator",
       "eye",
       "knob",
+      "milk jug",
       "rubber duck",
       "ventilator",
       "vr headset"
@@ -44282,12 +44281,14 @@
     {
      "id": "k.objects/shards/openmoji-objects-04",
      "path": "k.objects/shards/openmoji-objects-04.sop",
-     "wires": 364,
-     "bytes": 44291,
+     "wires": 452,
+     "bytes": 55583,
      "keys": [
       "base",
       "bulb",
+      "charging station",
       "desk lamp",
+      "display",
       "trash bin"
      ],
      "sources": [
@@ -45219,6 +45220,47 @@
      "warnings": []
     },
     {
+     "id": "k.objects/shards/stand-ins-kinds-wordnet",
+     "path": "k.objects/shards/stand-ins-kinds-wordnet.sop",
+     "wires": 3,
+     "bytes": 1022,
+     "keys": [
+      "beret",
+      "headset",
+      "sauerkraut"
+     ],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.objects/shards/stand-ins-kinds",
+     "path": "k.objects/shards/stand-ins-kinds.sop",
+     "wires": 12,
+     "bytes": 2920,
+     "keys": [
+      "buzzard",
+      "cape",
+      "cloak",
+      "condor",
+      "gingerbread",
+      "goulash",
+      "gravy",
+      "guacamole",
+      "hummus",
+      "mall",
+      "pike",
+      "stork"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.objects/shards/stand-ins-wordnet",
      "path": "k.objects/shards/stand-ins-wordnet.sop",
      "wires": 181,
@@ -45416,7 +45458,7 @@
      "id": "k.objects/shards/structures",
      "path": "k.objects/shards/structures.sop",
      "wires": 153,
-     "bytes": 20942,
+     "bytes": 20929,
      "keys": [
       "arch",
       "barn",
@@ -46601,7 +46643,7 @@
      "id": "k.objects/shards/vehicles",
      "path": "k.objects/shards/vehicles.sop",
      "wires": 115,
-     "bytes": 15691,
+     "bytes": 15638,
      "keys": [
       "back_wheel",
       "bicycle",
@@ -53125,8 +53167,8 @@
     {
      "id": "k.scenes/shards/things-a",
      "path": "k.scenes/shards/things-a.sop",
-     "wires": 64,
-     "bytes": 8212,
+     "wires": 65,
+     "bytes": 8309,
      "keys": [
       "aardvark",
       "abacus",
@@ -53175,6 +53217,7 @@
       "armadillo",
       "armchair",
       "armor",
+      "arrow",
       "artichoke",
       "articulated lorry",
       "artillery shell",

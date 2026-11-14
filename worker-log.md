@@ -5117,3 +5117,30 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: 26 shards, 2,990 wires, 494,812 bytes (was 489,605). Docs: k.people/WORLD.md, docs/worlds/README.md,
   sources/given-names/SOURCE.md. Tests: tests/k.people.given-names.test.mjs new test (flags, sources, the reader's
   rule on the sentences above, the order in vocab.json).
+
+
+## 2026-11-15 — first worker: drawables for frequent catalog lemmas (block 03:20 item 4; PSys2 Q15, dice and live check)
+
+- What PSys2 saw, by cause: **"Add a ship" drew the red boat** although `ship` has a drawing (Noto u1f6a2): the
+  hand-written word `k.objects.word.boat` had `text=ship`. A test now refuses a hand-written word of a drawing that
+  names another drawing; **20 such words taken out** of the hand shards (ship and sailboat of boat, kitten of cat, hill
+  and mountains of mountain, laptop of computer, telephone of phone, lorry of truck, cooker and stove of oven,
+  luggage, books, houses, boots, socks, chicken, saturn, postbox, airplane, aeroplane). **"Add a thermometer"** was
+  not understood by PSys2's reader, but the drawing exists (Noto u1f321, since 2026-11-13): a host-side gap, nothing to
+  add here. **"Add a cottage"** gives the house "drawn as a house": the stand-in works as meant. **"Add an arrow"**
+  had no drawing (the word was only a CLDR keyword of "bow and arrow", "envelope with arrow", "mobile phone with
+  arrow"): OpenMoji's right arrow (27A1) is now the object `arrow` (`CHOSEN` in tools/import/openmoji.mjs; part
+  named; place-size row small; openmoji shards re-split, 115 objects). "Add a kitty" drew the money bag: `kitty` is a
+  CLDR keyword of it; keywords are search words, not names (WORLD.md says a host takes a name or stand-in first).
+- New `tools/stand-ins-kinds.mjs`: common things with no drawing at all get a `k.objects.stand_in` by their parent
+  one step up in k.kinds (dimension kind) that is an object, from the hand worlds' kind facts (shard
+  `stand-ins-kinds`, CC0, 10) or a WordNet edge of the sense kept for a drawable class (`stand-ins-kinds-wordnet`, 5):
+  beret -> cap, buzzard/condor/stork -> bird, cape/cloak -> coat, gingerbread -> sweet, goulash/hummus/sauerkraut ->
+  dish, gravy/guacamole -> sauce, headset -> telephone receiver, mall -> building, pike -> fish. Refused: two steps
+  (tuba -> bass -> the fish), hammock (sense kept: the hill), grill (sense kept: the restaurant). The other 318 common
+  things with no drawing have no drawable parent one step up; MISSING.md is unchanged (coverage.mjs counts its own links).
+- Tests: tests/k.objects.drawables.test.mjs (4: shards = tool output, skipped without the raw files; every stand-in
+  drawn by an object and none has a drawing of its own; no hand word names another drawing; ship, thermometer, arrow
+  drawn, cottage and stork by their kind).
+  coverage.test counts the stand-ins of its own shard by id (stand-ins-kinds-wordnet is the new tool's); drawn-colour
+  regenerated (the arrow is black).

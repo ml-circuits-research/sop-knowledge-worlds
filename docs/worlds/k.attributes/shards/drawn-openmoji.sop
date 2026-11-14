@@ -1,10 +1,11 @@
-# k.attributes/shards/drawn-openmoji: the main colours in which 114 things are drawn (OpenMoji drawings of k.objects), the largest first: how the thing is drawn, not its usual colour.
+# k.attributes/shards/drawn-openmoji: the main colours in which 115 things are drawn (OpenMoji drawings of k.objects), the largest first: how the thing is drawn, not its usual colour.
 # sources: openmoji 3e01de5 (computed from the parts of the drawings in k.objects)
 # license: CC-BY-SA-4.0
 # script: tools/drawn-colour.mjs
 
 @k.attributes.drawn.3d_printer k.attributes.drawn name="3d printer" drawn_colour=grey drawn_shade="light grey" core.source="openmoji 3e01de5"
 @k.attributes.drawn.armchair k.attributes.drawn name=armchair drawn_colour=blue drawn_shade="light sky blue" core.source="openmoji 3e01de5"
+@k.attributes.drawn.arrow k.attributes.drawn name=arrow drawn_colour=grey drawn_shade=charcoal core.source="openmoji 3e01de5"
 @k.attributes.drawn.autonomous_car k.attributes.drawn name="autonomous car" drawn_colour=red drawn_shade=tomato core.source="openmoji 3e01de5"
 @k.attributes.drawn.bandage_scissors k.attributes.drawn name="bandage scissors" drawn_colour=grey drawn_shade="dark grey" drawn_shade=charcoal core.source="openmoji 3e01de5"
 @k.attributes.drawn.barcode k.attributes.drawn name=barcode drawn_colour=white drawn_shade=white core.source="openmoji 3e01de5"

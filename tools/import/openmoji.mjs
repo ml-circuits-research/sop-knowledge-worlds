@@ -16,6 +16,9 @@ const EXTRAS = new Set(['animals-nature', 'food-drink', 'gardening', 'objects', 
 // Not things: signs, people, actions, complaints, ideas, and drawings only their makers' town knows.
 const NOT_THINGS = /o’clock|o'clock|-thirty$| suit$|^joker$|^mahjong red dragon$|^flower playing cards$|^sparkles$|^no |sign$|symbol|logo|icon|arrow|warning|hazard|\b(man|woman|person|male|female|doctor|nurse|worker|explorer|gardener|pain|sneezing|taking|change|eye|waves|hand|wireframes|editor|surveillance|reality|circled|triangle|pointing|jumping|hole|stencil|town|figure|content|low|high|red|under water|in water|ruin|broken|melting|ct scan|code|circuit|transmission|virtual)\b|ache$|schwäbisch|stuttgart|HfG|kehrwoche|hocker|adilette|maultasche|spaetzle|spätzle|HAL 9000|tardis|nessy|ibeacon|arduino|raspberry|crocs|guy fawkes|babylon|rhodes|alexandria|halicarnassus|olympia|ephesus/i;
 
+// Entries of other groups taken as a thing under a name of our own (block 03:20 item 4: "Add an arrow" found no
+// drawing; the arrow a drawing means is the sign, the weapon is the drawing "bow and arrow"): hexcode -> [name, group].
+export const CHOSEN = { '27A1': ['arrow', 'objects'] };
 // data: the parsed data/openmoji.json; svg: (hexcode) => text or null; taken: lower-case names that already exist.
 export function importOpenmoji({ data, svg, partNames = '', taken = new Set() }) {
   const skipped = { notThing: 0, taken: 0, noSvg: 0 };
@@ -23,10 +26,11 @@ export function importOpenmoji({ data, svg, partNames = '', taken = new Set() })
   const entries = [];
   for (const e of data) {
     const extra = e.group === 'extras-openmoji' || e.group === 'extras-unicode';
-    const group = extra ? e.subgroups : e.group;
-    if (!(extra ? EXTRAS.has(e.subgroups) || e.subgroups === 'transport-and-map-symbols' : GROUPS.has(e.group)) || e.skintone) continue;
-    const name = String(e.annotation ?? '').trim();
-    if (!name || NOT_THINGS.test(name)) { skipped.notThing++; continue; }
+    const chosen = CHOSEN[e.hexcode];
+    const group = chosen ? chosen[1] : extra ? e.subgroups : e.group;
+    if (!chosen && (!(extra ? EXTRAS.has(e.subgroups) || e.subgroups === 'transport-and-map-symbols' : GROUPS.has(e.group)) || e.skintone)) continue;
+    const name = chosen ? chosen[0] : String(e.annotation ?? '').trim();
+    if (!name || (!chosen && NOT_THINGS.test(name))) { skipped.notThing++; continue; }
     if (taken.has(name.toLowerCase()) || seen.has(name.toLowerCase())) { skipped.taken++; continue; }
     const source = svg(e.hexcode);
     if (!source) { skipped.noSvg++; continue; }

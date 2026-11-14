@@ -28,7 +28,7 @@
 @k.attributes.same.mainframe.thing k.attributes.same name=mainframe sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mains_socket.thing k.attributes.same name="mains socket" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.malaysia.place k.attributes.same name=malaysia sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.mall.thing k.attributes.same name=mall sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mall.thing k.attributes.same name=mall sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mallard.thing k.attributes.same name=mallard sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mallet.thing k.attributes.same name=mallet sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mamba.animal k.attributes.same name=mamba sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

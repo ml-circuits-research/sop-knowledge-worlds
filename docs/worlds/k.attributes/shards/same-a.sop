@@ -1,4 +1,4 @@
-# k.attributes/shards/same-a: one name, one thing: for 114 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-a: one name, one thing: for 114 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -88,7 +88,8 @@
 @k.attributes.same.armadillo.animal k.attributes.same name=armadillo sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.commonsense.thing in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.armchair.thing k.attributes.same name=armchair sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.armor.clothing k.attributes.same name=armor sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.arrow.shape k.attributes.same name=arrow sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.arrow.shape k.attributes.same name=arrow sense=shape only=false in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.arrow.thing k.attributes.same name=arrow sense=thing only=false in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.artery.body_part k.attributes.same name=artery sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.artichoke.food k.attributes.same name=artichoke sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.articulated_lorry.thing k.attributes.same name="articulated lorry" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

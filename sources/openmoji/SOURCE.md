@@ -19,3 +19,5 @@
   (shapes that are at least 30% hole) as closed lines.
 - **Counts (2026-11-13):** 1,059 candidates; 816 names already taken (hand-written or Noto), 129 not things; **114
   new objects**, 1,322 parts, 10,928 points, 18 shards.
+- **Block 03:20 item 4 (2026-11-15):** one entry of the symbols group is taken as a thing under a name of our own
+  (`CHOSEN` in tools/import/openmoji.mjs): `27A1` right arrow as `arrow` (115 objects now).

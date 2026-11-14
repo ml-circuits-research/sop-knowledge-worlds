@@ -73,7 +73,7 @@
 @k.objects.butterfly.right_antenna.p2 k.objects.point part=$k.objects.butterfly.right_antenna n=2 x=60 y=10 core.source="hand-core 1"
 
 # words
-@k.objects.word.cat core.word text=cat text=cats text=kitten means=cat of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.cat core.word text=cat text=cats means=cat of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.dog core.word text=dog text=dogs text=puppy means=dog of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.fish core.word text=fish text=fishes means=fish of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.bird core.word text=bird text=birds means=bird of=k.objects.object.name core.source="hand-core 1"

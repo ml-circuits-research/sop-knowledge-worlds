@@ -122,8 +122,8 @@
 
 # words
 @k.objects.word.car core.word text=car text=cars means=car of=k.objects.object.name core.source="hand-core 1"
-@k.objects.word.boat core.word text=boat text=boats text=ship text=sailboat means=boat of=k.objects.object.name core.source="hand-core 1"
-@k.objects.word.plane core.word text=plane text=planes text=airplane text=airplanes text=aeroplane means=plane of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.boat core.word text=boat text=boats means=boat of=k.objects.object.name core.source="hand-core 1"
+@k.objects.word.plane core.word text=plane text=planes text=airplanes means=plane of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.rocket core.word text=rocket text=rockets means=rocket of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.train core.word text=train text=trains means=train of=k.objects.object.name core.source="hand-core 1"
 @k.objects.word.bicycle core.word text=bicycle text=bicycles text=bike means=bicycle of=k.objects.object.name core.source="hand-core 1"

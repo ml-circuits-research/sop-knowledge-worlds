@@ -131,7 +131,7 @@ test('words-wordnet.sop on disk is what the tool gives; every word names an obje
   // The hypernyms: stand-in facts, never a word (Q21).
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${STAND_INS_SHARD}.sop`), 'utf8'), standInsShard(result));
   const allStandIns = factsOf('k.objects', 'k.objects.stand_in');
-  const standIns = allStandIns.filter((w) => w.attrs['core.source']?.includes('"wordnet 3.1"'));
+  const standIns = allStandIns.filter((w) => w.id.startsWith('k.objects.wordnet.kind.')); // the shard stand-ins-wordnet (stand-ins-kinds-wordnet is tools/stand-ins-kinds.mjs')
   assert.equal(standIns.length, result.stats.byHypernym);
   for (const w of allStandIns) {
     assert.ok(names.has(tok(w.attrs.drawing[0])), w.id);

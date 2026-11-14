@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **189** in 30 worlds; distinct values 6347, meeting a target 6289 (99.1 %), open 58
+- declared joins: **189** in 30 worlds; distinct values 6352, meeting a target 6294 (99.1 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **114**; left undeclared on purpose: 6
 
@@ -130,7 +130,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.music | `k.music.scale.key` | `k.music.key` | name | 30 | 30 |  |
 | k.music | `k.music.scale.note` | `k.music.note` | name | 24 | 24 |  |
 | k.music | `k.music.scale.tonic` | `k.music.note` | name | 18 | 18 |  |
-| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 159 | 159 |  |
+| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 164 | 164 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.people | `k.people.kind.face` | `k.faces.preset` | name | 8 | 8 |  |
 | k.people | `k.people.role.drawing` | `k.objects.object` | name | 1 | 1 |  |
@@ -229,7 +229,7 @@ exact (token for token) against the first candidate; the value share itself also
 | k.attributes | `k.attributes.narration.narrate` | value | `k.values.reply` | name | 2 | 2 |
 | k.attributes | `k.attributes.number.sense` | value | `k.attributes.kind` | name | 4 | 3 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3506 | 2344 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3506 | 2345 |
 | k.attributes | `k.attributes.same.sense` | value | `k.attributes.kind` | name | 12 | 6 |
 | k.attributes | `k.attributes.thing.colour` | value | `k.colours.colour`, `k.values.colour` | name | 12 | 11 |
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
@@ -275,8 +275,8 @@ exact (token for token) against the first candidate; the value share itself also
 | k.kinds | `k.kinds.parent.sense` | value | `k.attributes.kind` | name | 7 | 4 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
-| k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 80 |
-| k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 70 |
+| k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |
+| k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 71 |
 | k.layouts | `k.layouts.slot.holds` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 83 | 47 |
 | k.motion | `k.motion.layer.key` | value | `k.body.part` | name | 4 | 1 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
@@ -335,7 +335,7 @@ exact (token for token) against the first candidate; the value share itself also
 
 ## Left undeclared on purpose
 
-- `k.objects.part.of` -> `k.objects.object` (2211 of 2211 values meet): the 27,902 parts would each scan the objects (sopworld checks a join by a scan of the target type): +21 s to load k.objects; checked by tests/k.objects.names.test.mjs
+- `k.objects.part.of` -> `k.objects.object` (2212 of 2212 values meet): the 27,902 parts would each scan the objects (sopworld checks a join by a scan of the target type): +21 s to load k.objects; checked by tests/k.objects.names.test.mjs
 - `k.time.hour.next` -> `k.time.hour` (24 of 24 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.month.next` -> `k.time.month` (12 of 12 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.part_of_day.next` -> `k.time.part_of_day` (4 of 4 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent

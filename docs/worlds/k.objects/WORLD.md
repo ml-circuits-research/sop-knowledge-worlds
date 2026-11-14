@@ -121,6 +121,18 @@ help common things that have no drawing of their own:
   nothing (`tombstone` → `headstone`; `sparrow` → `bird`, `villa` → `house`, `puddle` → `pond`; ids
   `k.objects.hand.same.<word>`, `k.objects.hand.kind.<word>`; source `hand-core 1`). The table is
   `sources/coverage/hand-links.tsv`; every drawing was looked at next to the word.
+- `stand-ins-kinds` (CC0) and `stand-ins-kinds-wordnet` (block 03:20 item 4, `tools/stand-ins-kinds.mjs`): stand-ins
+  for common things with no drawing at all, by their parent one step up in `k.kinds` (dimension kind) that is an
+  object: the kind facts the hand-written worlds state of the thing by name (`stork` → `bird` by k.animals, `cape` →
+  `coat` by k.wearables, `gravy` → `sauce` by k.food, `mall` → `building` by k.attributes), or a WordNet edge of the
+  sense kept for a drawable class (`beret` → `cap`; not `hammock` → `hill`, whose sense kept is the hill; not `grill`
+  → `restaurant`, said why in the tool). 15 stand-ins; two steps up crossed senses (tuba → bass → the fish), so none.
+  **A name beats a word**: a hand-written `core.word` never names another drawing (a test): "ship" was a word of the
+  boat and made "Add a ship" draw a boat, though the ship has a drawing; 20 such words were taken out (kitten, hill,
+  laptop, lorry, telephone, sailboat ...). The CLDR and OpenMoji keywords are search words, not names ("kitty" is a
+  keyword of the money bag, "ship" of the anchor): a host takes an object or stand-in of the word's own name first.
+- `arrow` (OpenMoji `27A1`, the right arrow, taken as a thing by `CHOSEN` in tools/import/openmoji.mjs): the sign a
+  drawing means by "an arrow"; the weapon is the drawing `bow and arrow`.
 
 A link is made only when WordNet keeps both words in the same sense; the links refused after a look at the drawing
 are in `sources/coverage/not-links.tsv`.

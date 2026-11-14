@@ -16,8 +16,8 @@ and the meat).
 ## Numbers
 
 - names carried by facts of more than one world: 3506
-- one thing everywhere: 3436
-- clashes of sense: 70
+- one thing everywhere: 3435
+- clashes of sense: 71
 
 | sense of the one thing | names |
 |---|---:|
@@ -28,7 +28,7 @@ and the meat).
 | body part | 84 |
 | clothing | 164 |
 | colour | 35 |
-| shape | 31 |
+| shape | 30 |
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
@@ -39,6 +39,7 @@ and the meat).
 | name | senses and where |
 |---|---|
 | apricot | **food**: `k.attributes.number`, `k.food.food`; **colour**: `k.values.colour` |
+| arrow | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | back | **body part**: `k.body.part`; **place**: `k.geo.river` |
 | bear | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | beaver | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
@@ -115,28 +116,28 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2316 |
-| `k.objects` and `k.scenes` | 2192 |
+| `k.attributes` and `k.objects` | 2325 |
+| `k.objects` and `k.scenes` | 2196 |
 | `k.attributes` and `k.scenes` | 2143 |
 | `k.commonsense` and `k.scenes` | 318 |
 | `k.animals` and `k.commonsense` | 290 |
 | `k.animals` and `k.scenes` | 290 |
 | `k.attributes` and `k.commonsense` | 203 |
-| `k.commonsense` and `k.objects` | 188 |
+| `k.commonsense` and `k.objects` | 192 |
 | `k.animals` and `k.attributes` | 175 |
 | `k.attributes` and `k.layouts` | 167 |
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
-| `k.animals` and `k.objects` | 160 |
+| `k.animals` and `k.objects` | 164 |
 | `k.attributes` and `k.food` | 142 |
-| `k.food` and `k.objects` | 136 |
+| `k.food` and `k.objects` | 142 |
 | `k.food` and `k.scenes` | 131 |
 | `k.attributes` and `k.wearables` | 87 |
-| `k.objects` and `k.wearables` | 84 |
+| `k.objects` and `k.wearables` | 87 |
 | `k.scenes` and `k.wearables` | 83 |
 | `k.people` and `k.scenes` | 25 |
 | `k.objects` and `k.people` | 24 |
-| `k.shapes` and `k.values` | 24 |
+| `k.shapes` and `k.values` | 23 |
 | `k.colours` and `k.values` | 19 |
 | `k.attributes` and `k.space` | 16 |
 | `k.objects` and `k.space` | 16 |
