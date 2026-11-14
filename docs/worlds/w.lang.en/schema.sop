@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=onset core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=discourse exports=slot exports=onset core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -295,6 +295,25 @@
 @w.lang.en.template.needs core.slot of=w.lang.en.template key=needs kind=atom core.source="hand-core 1"
 @w.lang.en.template.text core.slot of=w.lang.en.template key=text required=true kind=string core.source="hand-core 1"
 @w.lang.en.template.example core.slot of=w.lang.en.template key=example kind=string core.source="hand-core 1"
+# A discourse template (blocks 14:45 item 2, 15:00 item 4, 17:05): one sentence that makes a rhetorical move
+# (`move`, a `k.genres.move name`) in a register (`register`, a `k.genres.register name`: scientific, presentation,
+# essay, narrative, report), for the library's std.compose. Several templates of one move and register are
+# alternatives (a composer picks among them). `text` is in the library's template notation (`{slot}`,
+# `{slot:num=pl}`; the article `a` takes its form from the next word); `slot` (many) lists its slots, each a
+# `w.lang.en.slot`. The words outside the slots follow the register of k.genres: its persons (I, we, you), no direct
+# question where it has none (an indirect one instead), no contraction where it has none, the past in a narrative.
+@w.lang.en.discourse core.type of=w.lang.en.discourse shared=true closed=true core.source="hand-core 1"
+@w.lang.en.discourse.name core.slot of=w.lang.en.discourse key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.discourse.move core.slot of=w.lang.en.discourse key=move required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.discourse.register core.slot of=w.lang.en.discourse key=register required=true enum=scientific enum=presentation enum=essay enum=narrative enum=report core.source="hand-core 1"
+@w.lang.en.discourse.slot core.slot of=w.lang.en.discourse key=slot many=true kind=atom core.source="hand-core 1"
+@w.lang.en.discourse.text core.slot of=w.lang.en.discourse key=text required=true kind=string core.source="hand-core 1"
+# A slot of the discourse templates: `about` says what fills it (a noun phrase with its determiner, a clause without
+# its stop, a verb phrase in the base form...); `element` the element of k.story it is, for the slots of a story.
+@w.lang.en.slot core.type of=w.lang.en.slot shared=true closed=true core.source="hand-core 1"
+@w.lang.en.slot.name core.slot of=w.lang.en.slot key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.slot.about core.slot of=w.lang.en.slot key=about required=true kind=string core.source="hand-core 1"
+@w.lang.en.slot.element core.slot of=w.lang.en.slot key=element kind=atom kind=string core.source="hand-core 1"
 # The sound a word begins with where its first letter misleads (an hour, a unicorn, a European): a word that begins
 # with `begins` (the longest that fits) begins with `sound`. Read for the article (a, an) in generation.
 @w.lang.en.onset core.type of=w.lang.en.onset shared=true closed=true core.source="hand-core 1"

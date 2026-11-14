@@ -145,3 +145,76 @@ test('templates: what the frames read and the templates cannot say yet (holes, c
   console.log(`templates: ${templates.length}; roles of k.actions no template says: ${unsaid.length}: ${unsaid.join(', ')}`);
 });
 
+// ---- discourse templates (blocks 14:45 item 2, 15:00 item 4, 17:05) ----
+const discourse = of('discourse');
+const slots = new Map(of('slot').map((s) => [one(s, 'name'), s]));
+const genres = worlds.find((w) => w.id === 'k.genres'), story = worlds.find((w) => w.id === 'k.story');
+const gwires = genres ? wiresOf('k.genres') : [];
+// The move names and registers of k.genres, read from its facts (the names below only if k.genres is not loaded).
+const MOVES = genres ? gwires.filter((w) => w.type === 'k.genres.move').map((m) => one(m, 'name')) : ['introduce topic', 'claim centrality', 'generalise', 'review previous work', 'indicate a gap',
+  'raise a question', 'counter-claim', 'state purpose', 'announce findings', 'outline structure', 'define', 'describe method', 'report result', 'compare', 'surprising fact', 'give example',
+  'interpret result', 'state limitation', 'recommend', 'summarize', 'conclude', 'transition', 'state thesis', 'state claim', 'give evidence', 'counterargument', 'rebut', 'restate thesis',
+  'state takeaway', 'thank audience', 'invite questions', 'report action', 'report problem', 'next step', 'set the scene', 'introduce character', 'state goal', 'complicate', 'attempt',
+  'turning point', 'resolve', 'evaluate', 'end'];
+const REG = genres ? Object.fromEntries(gwires.filter((w) => w.type === 'k.genres.register').map((r) => [one(r, 'name'), { person: [one(r, 'person'), ...v(r, 'person_also')], questions: one(r, 'questions'), contractions: one(r, 'contractions'), tense: one(r, 'tense'), max: Number(one(r, 'sentence_max')) }]))
+  : { scientific: { person: ['first plural', 'third'], questions: 'false', contractions: 'false', tense: 'present', max: 32 }, presentation: { person: ['first plural', 'second'], questions: 'true', contractions: 'true', tense: 'present', max: 16 },
+    essay: { person: ['first singular', 'third', 'first plural'], questions: 'true', contractions: 'false', tense: 'present', max: 28 }, narrative: { person: ['third', 'first singular'], questions: 'false', contractions: 'true', tense: 'past', max: 20 },
+    report: { person: ['first plural', 'third'], questions: 'false', contractions: 'false', tense: 'past', max: 24 } };
+const DISCOURSE_FILLERS = { topic: 'octopuses', thing: 'the octopus', other: 'the squid', kind: 'mollusc', attribute: 'weight', value: 'about 15 kg', other_value: 'about 2 kg', usual: 'one to three kg',
+  fact: 'an octopus has three hearts', example: 'the giant Pacific octopus', question: 'why an octopus has three hearts', part: 'its food', parts: 'its body, its food and its home', count: 'three',
+  thesis: 'zoos help wild animals', claim: 'octopuses solve problems', evidence: 'an octopus can open a jar', source: 'Mather (2008)', method: 'compared the weights of 314 animals',
+  action: 'counted the guests', time: 'on Monday', problem: 'the map did not load', next: 'add the missing cities', limitation: 'only drawn animals were counted', setting: 'forest',
+  protagonist: 'fox', trait: 'old', goal: 'cross the river', target: 'the island', obstacle: 'river', attempt: 'jump over it', helper: 'heron', means: 'branch', overcome: 'cross it', feeling: 'happy' };
+
+test('discourse: moves and registers are those of k.genres; every slot is declared and used, a story slot names an element of k.story', () => {
+  assert.ok(discourse.length >= 100, `${discourse.length}`);
+  for (const t of discourse) {
+    assert.ok(MOVES.includes(one(t, 'move')), `${one(t, 'name')}: move ${one(t, 'move')}`);
+    assert.ok(REG[one(t, 'register')], `${one(t, 'name')}: register ${one(t, 'register')}`);
+    const used = [...new Set([...one(t, 'text').matchAll(SLOT)].map((m) => m[1]))];
+    assert.deepEqual([...used].sort(), [...v(t, 'slot')].sort(), `${one(t, 'name')}: slot= lists the slots of the text`);
+    for (const s of used) assert.ok(slots.has(s), `${one(t, 'name')}: slot ${s} declared`);
+  }
+  const usedAll = new Set(discourse.flatMap((t) => v(t, 'slot')));
+  assert.deepEqual([...slots.keys()].filter((s) => !usedAll.has(s)), [], 'declared slots no template uses');
+  if (story) {
+    const elements = new Set(wiresOf('k.story').filter((w) => w.type === 'k.story.element').map((e) => one(e, 'name')));
+    for (const s of slots.values()) if (one(s, 'element')) assert.ok(elements.has(one(s, 'element')), `${one(s, 'name')}: element ${one(s, 'element')}`);
+  }
+});
+
+test('discourse: coverage: the moves the reviewer named in every register, the story moves in the narrative register, and (with k.genres) every move of every genre in its register', () => {
+  const have = new Set(discourse.map((t) => `${one(t, 'register')} ${one(t, 'move')}`));
+  const want = [];
+  for (const r of Object.keys(REG)) for (const m of ['introduce topic', 'compare', 'surprising fact', 'give example', 'raise a question', 'conclude', 'transition']) want.push(`${r} ${m}`);
+  for (const m of ['set the scene', 'introduce character', 'state goal', 'complicate', 'attempt', 'turning point', 'resolve', 'evaluate', 'end']) want.push(`narrative ${m}`);
+  if (genres) for (const g of gwires.filter((w) => w.type === 'k.genres.genre')) {
+    const moves = [...v(g, 'also_move'), ...gwires.filter((w) => w.type === 'k.genres.step' && one(w, 'genre') === one(g, 'name')).map((s) => one(s, 'move'))];
+    for (const m of moves) want.push(`${one(g, 'register')} ${m}`);
+  }
+  assert.deepEqual([...new Set(want)].filter((x) => !have.has(x)), []);
+  const per = {};
+  for (const t of discourse) per[one(t, 'register')] = (per[one(t, 'register')] ?? 0) + 1;
+  console.log(`discourse: ${discourse.length} templates, ${new Set(discourse.map((t) => one(t, 'move'))).size} moves, ${slots.size} slots; by register ${JSON.stringify(per)}`);
+});
+
+test('discourse: the words outside the slots keep the register (persons, questions, contractions, the past of a story) and a filled sentence is not longer than the register allows', () => {
+  const PERSON = (x) => (x.person === '1' ? (x.number === 'pl' ? 'first plural' : 'first singular') : x.person === '2' ? 'second' : 'third');
+  const persons = new Map();
+  for (const p of [...of('pron'), ...of('det').filter((d) => one(d, 'kind') === 'possessive')]) if (one(p, 'person')) persons.set(one(p, 'text'), PERSON({ person: one(p, 'person'), number: one(p, 'number') }));
+  const PRESENT = new Set(['is', 'are', 'am', 'has', 'does', 'do']);
+  const bad = [];
+  for (const t of discourse) {
+    const r = REG[one(t, 'register')], text = one(t, 'text'), name = one(t, 'name');
+    const words = text.replace(SLOT, ' ').toLowerCase().match(/[a-z']+/g) ?? [];
+    for (const w of words) if (persons.has(w) && !r.person.includes(persons.get(w))) bad.push(`${name}: "${w}" is ${persons.get(w)}`);
+    if (r.questions === 'false' && /\?/.test(text)) bad.push(`${name}: a direct question`);
+    if (r.contractions === 'false' && words.some((w) => /'(s|t|re|ve|ll|d|m)$/.test(w) && !/^(everyone|someone)'s$/.test(w))) bad.push(`${name}: a contraction`);
+    if (r.tense === 'past' && one(t, 'register') === 'narrative' && words.some((w) => PRESENT.has(w))) bad.push(`${name}: a present verb in a narrative`);
+    const s = realiseEn(all, text, DISCOURSE_FILLERS);
+    if (!s) bad.push(`${name}: not realised`);
+    else if (s.split(/\s+/).length > r.max) bad.push(`${name}: ${s.split(/\s+/).length} words > ${r.max}`);
+  }
+  assert.deepEqual(bad, []);
+  assert.equal(realiseEn(all, 'In the {setting} lived a {trait} {protagonist}.', DISCOURSE_FILLERS), 'In the forest lived an old fox.');
+});

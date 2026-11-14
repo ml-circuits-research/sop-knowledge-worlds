@@ -27,6 +27,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | hand-grammar, hand-joins | what this repository added: 4 constructions with 7 productions (and 4 helpers), the words of AUXNEG, HAVE, IF, THEN; 27 role maps (4 for the frames written after the import); 15 prepositions joined to k.layouts and 20 new ones |
 | phrases | 81 phrase groups (politeness, fillers, answers, degree, comparison, request and question shapes, undo, redo) and 4 lexicons the frames name |
 | templates-acts | generation (block 17:05): 34 templates of the 16 acts of k.actions, one per act and argument shape; the article forms (a, an) and 19 onsets |
+| templates-discourse | composition (blocks 14:45 item 2, 15:00 item 4, 17:05): 116 templates of 43 rhetorical moves of k.genres in its 5 registers, and the 35 slots they name |
 
 ## How a host reads it
 
@@ -104,6 +105,35 @@ its own frame (acts.change.add1 has no determiner before the attribute; the temp
 the tables apart" is read as a move apart where the direction frames apply (the template says "take apart the
 tables"); "red house" is also a compound of two nouns for the productions (red is a noun), so a host takes the
 reading with the most modifiers.
+
+## Composition: discourse templates per move and register (blocks 14:45 item 2, 15:00 item 4, 17:05)
+
+`w.lang.en.discourse` gives sentences that make a rhetorical move (`move`, a move of k.genres: "introduce topic",
+"compare", "surprising fact", "give example", "raise a question", "conclude", "transition"; for stories "set the
+scene", "introduce character", "state goal", "complicate", "attempt", "turning point", "resolve", "evaluate", "end";
+and the moves of each genre: "indicate a gap", "state thesis", "rebut", "state takeaway", "report problem", "next
+step"...) in a register of k.genres (`register`: scientific, presentation, essay, narrative, report). Several
+templates of one move and register are alternatives for a composer (std.compose) to choose among. `text` is in the
+library's notation; `slot` lists its slots, each a `w.lang.en.slot` that says what fills it: `fact` a clause without
+its stop, `question` an indirect question ("why an octopus has three hearts"), `value` and `usual` a value with its
+unit, `thing` and `other` noun phrases with their determiner, `goal`, `attempt`, `overcome` verb phrases in the
+base form; the story slots are elements of k.story (`element`: setting, protagonist, goal, target, obstacle,
+attempt, helper, means, resolution). Examples:
+
+| move | scientific | presentation | narrative |
+| --- | --- | --- | --- |
+| surprising fact | The {attribute} of {thing} is {value}, far outside the usual range for {kind:num=pl} ({usual}). | Did you know that {fact}? | And then, to everyone's surprise, it turned out that {fact}. |
+| raise a question | This raises the question of {question}. | Have you ever wondered {question}? | Nobody could say {question}. |
+| transition | The next section turns to {part}. | Now let us move on to {part}. | But that was not the end of it. |
+
+Counts: 116 templates (scientific 30, presentation 21, essay 23, narrative 26, report 16), 43 moves, 35 slots;
+written by `tools/lang-en-discourse.mjs` from one table (hand-written, CC0). Checked (`tests/w.lang.en.templates.test.mjs`):
+moves and registers are those of k.genres (read from its facts); every slot is declared and used, a story slot names an element of k.story; coverage:
+the seven moves the reviewer named in all five registers, the story moves in the narrative register, and, with
+k.genres, every move every genre uses (its steps and `also_move`) in that genre's register; the words outside the
+slots keep the register (its persons by the pronouns' person and number, no direct question where the register
+has none, no contraction where it has none, no present verb in a narrative), and a sentence filled with sample
+fillers is not longer than the register's `sentence_max`.
 
 ## Joins
 

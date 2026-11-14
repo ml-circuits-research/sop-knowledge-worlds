@@ -4017,3 +4017,24 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   as a noun compound (a host takes the reading with most modifiers). Q54 ([LIB]): how std.morph `realise` should give
   English plurals and the article.
 - The no-notation test of w.lang.en exempts `text` of templates (the library's notation, asked for by the reviewer).
+
+## Block 17:05 task 2 (2026-11-14, fourth worker): discourse templates per move and register in w.lang.en
+
+- **Format**: `w.lang.en.discourse` (`name`, `move` a k.genres move name, `register` scientific / presentation /
+  essay / narrative / report, `slot` many, `text` in the library's notation) and `w.lang.en.slot` (`name`, `about`
+  what fills it, `element` the k.story element for a story slot). Several templates of one move and register are
+  alternatives for std.compose.
+- **Shard** `templates-discourse` (written by `tools/lang-en-discourse.mjs` from one hand table, CC0): 116 templates
+  (scientific 30, presentation 21, essay 23, narrative 26, report 16) of 43 moves, 35 slots; 151 wires, 33.8 kB,
+  load 96 ms, 0 warnings. The seven moves of block 14:45 (introduce topic, compare, surprising fact, give example,
+  raise a question, conclude, transition) in all five registers; the story moves (set the scene, introduce
+  character, state goal, complicate, attempt, turning point, resolve, evaluate, end) in the narrative register;
+  every move of every k.genres genre in its register.
+- **Move names**: those of k.genres (third worker, published in 366975e while this was written, read from its
+  facts): "raise a question", "give example", "introduce character" + "state goal", "complicate", "resolve"; the test
+  also checks every genre's steps and also_move in its register.
+- **Tests** (3 new in tests/w.lang.en.templates.test.mjs): moves and registers known, slots declared and used, story
+  slots are k.story elements; coverage; register kept by the words outside the slots (persons by the pronouns'
+  person and number, no direct question where the register has none, no contraction where it has none, no present
+  verb in a narrative) and filled sentences no longer than the register's sentence_max. The no-notation test of
+  w.lang.en treats `about` as prose.

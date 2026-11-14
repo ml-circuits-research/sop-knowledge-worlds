@@ -36,7 +36,7 @@ test('w.lang.en: the import is reproducible from the cited PSys2 commit (skipped
 });
 
 test('w.lang.en: every wire has a source; no notation inside values', () => {
-  const PROSE = new Set(['doc', 'example', 'note', 'reading', 'core.source', 'gloss']);
+  const PROSE = new Set(['doc', 'example', 'note', 'reading', 'core.source', 'gloss', 'about']);
   const WORDS = new Set(['text', 'word', 'item', 'singular', 'plural', 'stem', 'expands']); // keys that hold English words: a "_" there stands for a space
   const bad = [];
   for (const w of [...all, ...parse(lang.schemaText)]) {

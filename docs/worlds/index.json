@@ -1,5 +1,5 @@
 {
- "version": "d87650f417a2",
+ "version": "7aaab2c5d874",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -55376,6 +55376,7 @@
     "w.lang.en.correction",
     "w.lang.en.correction.lead",
     "w.lang.en.det",
+    "w.lang.en.discourse",
     "w.lang.en.ellipsis.lead",
     "w.lang.en.ellipsis.param",
     "w.lang.en.ellipsis.repeat",
@@ -55408,6 +55409,7 @@
     "w.lang.en.relpron",
     "w.lang.en.role_map",
     "w.lang.en.rule",
+    "w.lang.en.slot",
     "w.lang.en.template",
     "w.lang.en.wh",
     "w.lang.en.word"
@@ -56266,6 +56268,18 @@
       "a",
       "an"
      ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/templates-discourse",
+     "path": "w.lang.en/shards/templates-discourse.sop",
+     "wires": 151,
+     "bytes": 33782,
+     "keys": [],
      "sources": [
       "hand-core-1"
      ],
