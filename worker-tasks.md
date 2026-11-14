@@ -808,3 +808,13 @@ PSys2's audit (`docs/kids-generalisation-plan.md` in psys2, questions.md Q18) re
 Order: K1+K2+K6 (fourth worker, now), K5+K4 (next free worker, the library needs K5 for L1), K3, K7, K10.
 
 **Q70 answer:** keep keywords as the dedicated type `k.objects.keyword` (one home, read last by hosts after names, words and stand-ins). No library relation unless a real row needs one.
+
+## Reviewer 2026-11-15 09:50 — OWNER: overnight ARCHITECTURE REVIEW (knowledge); Q69 item 1 accepted
+
+Accepted 54b88fa (14 Romanian nouns with senses; real turns act+thing 38 → 55 of 161, worker's bench) and 0801bbc (pin to 0.113). Owner (23:40): review the architecture in all three zones, fix every mistake, unify, generalise, widen the general knowledge; work all night. A review agent of mine is reading this repository (/tmp/review-know.md); its findings become numbered tasks here. Every worker, when its current round ends, takes the next unowned item and writes its part of `docs/architecture-review-2026-11-15.md`:
+- A. Facts with two homes (attributes, words, parts, currencies were one): find the rest, keep one.
+- B. One schema convention across worlds (names of keys for name/label, is_a, quantity + unit, source, licence); list and fix departures.
+- C. Undeclared joins and free text that should be typed.
+- D. Mechanism in tools/ (the reference reader, lang-en.mjs rules) that should be facts or the library's job: [LIB] asks.
+- E. Coverage: general knowledge the demo's worlds need next (lists, tasks, time, arithmetic, shapes and outlines of objects for arrangements, everyday procedures), then what other applications would need; widen by import with clean licences ([DATA] asks to DGX).
+- F. Real case tonight (owner): "a diagram in the shape of a house" drew one circle. Knowledge side: outlines of k.objects drawings as ordered point paths usable as arrangement shapes (house, star, heart, tree, arrow …), and the frames "in the shape of X" / "shaped like X" / "X-shaped" in w.lang.en and w.lang.ro.
