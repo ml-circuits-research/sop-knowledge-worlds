@@ -57,6 +57,17 @@ The parts of a thing come from two worlds of k.parts: `usual` (the parts a drawi
 things) and `whole` (the parts WordNet lists, 307 things: a car has 29, from accelerator to window); a tree or
 a mind map of "the parts of a car" is filled by `k.parts.whole has` (block 07:30 item 1, PSys2 Q17).
 
+## Topics (derived)
+
+`k.diagrams.topic` (shards `topics-<licence>`, tools/diagram-topics.mjs, rebuilt by the build; block 07:30 item 9):
+every topic a fill can draw with 2 nodes or more, read from the fills' `topic` keys over the catalog (about 3,000:
+the methods and everyday procedures, the things with parts, the kinds with kinds, the cycles, the planets, the
+countries with cities, the genres), each with the kinds of diagram it fills, the types it comes from and the nodes
+of its largest diagram. A topic keeps the licence and source of its facts (one shard per licence: CC0, WordNet,
+public domain, ODbL, CC BY, CC BY-SA, Apache/Unicode), so a car is two facts (CC0 kinds, WordNet parts). A host loads
+them to know the topic words of the diagram knowledge (PSys2 Q17 (9): its speller read "tea" as "sea" because no world
+it loads says "making tea") and to pick a topic for a random diagram.
+
 ## Limits
 
 - No world of the catalog says who reports to whom: the org chart has no fill.

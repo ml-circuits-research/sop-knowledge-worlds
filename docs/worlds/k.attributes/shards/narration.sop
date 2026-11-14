@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (274 of 1078 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (277 of 1082 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -218,6 +218,10 @@
 @k.attributes.narration.k.diagrams.fill.topic k.attributes.narration type=k.diagrams.fill key=topic narrate=yes salience=0.23 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.diagrams.fill.about k.attributes.narration type=k.diagrams.fill key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.diagrams.fill.by k.attributes.narration type=k.diagrams.fill key=by narrate=yes salience=0.02 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.diagrams.topic.name k.attributes.narration type=k.diagrams.topic key=name narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.diagrams.topic.kind k.attributes.narration type=k.diagrams.topic key=kind narrate=yes salience=0.3 form=kind basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.diagrams.topic.from k.attributes.narration type=k.diagrams.topic key=from narrate=no salience=0 why="its values are catalog ids or codes" core.source="hand-core 1"
+@k.attributes.narration.k.diagrams.topic.nodes k.attributes.narration type=k.diagrams.topic key=nodes narrate=yes salience=0.3 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.drawing.part.shape k.attributes.narration type=k.drawing.part key=shape narrate=no salience=0 why="machinery: the geometry of drawings" core.source="hand-core 1"
 @k.attributes.narration.k.drawing.part.x k.attributes.narration type=k.drawing.part key=x narrate=no salience=0 why="machinery: the geometry of drawings" core.source="hand-core 1"
 @k.attributes.narration.k.drawing.part.y k.attributes.narration type=k.drawing.part key=y narrate=no salience=0 why="machinery: the geometry of drawings" core.source="hand-core 1"

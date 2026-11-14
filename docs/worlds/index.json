@@ -1,5 +1,5 @@
 {
- "version": "50be8d5458bf",
+ "version": "c835994bd218",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4497,8 +4497,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1078,
-     "bytes": 207772,
+     "wires": 1082,
+     "bytes": 208499,
      "keys": [
       "a",
       "about",
@@ -4733,6 +4733,7 @@
       "k.diagrams.kind",
       "k.diagrams.shape",
       "k.diagrams.source",
+      "k.diagrams.topic",
       "k.drawing.part",
       "k.drawing.point",
       "k.faces.canon",
@@ -4922,6 +4923,7 @@
       "needs",
       "neighbour",
       "next",
+      "nodes",
       "north",
       "nose",
       "nose_line",
@@ -12386,13 +12388,14 @@
   },
   {
    "id": "k.diagrams",
-   "version": "2",
+   "version": "3",
    "schema": "k.diagrams/schema.sop",
    "exports": [
     "k.diagrams.fill",
     "k.diagrams.kind",
     "k.diagrams.shape",
-    "k.diagrams.source"
+    "k.diagrams.source",
+    "k.diagrams.topic"
    ],
    "depends": [],
    "shards": [
@@ -12474,13 +12477,118 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-apache-2-0-and-unicode-3-0",
+     "path": "k.diagrams/shards/topics-apache-2-0-and-unicode-3-0.sop",
+     "wires": 32,
+     "bytes": 7024,
+     "keys": [],
+     "sources": [
+      "cldr-48",
+      "noto-emoji-99701e0"
+     ],
+     "license": "Apache-2.0 AND Unicode-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-cc-by-4-0",
+     "path": "k.diagrams/shards/topics-cc-by-4-0.sop",
+     "wires": 69,
+     "bytes": 13533,
+     "keys": [],
+     "sources": [
+      "geonames-all-the-cities-3.1.0",
+      "psys2-worlds-6b63b2ba"
+     ],
+     "license": "CC-BY-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-cc-by-sa-4-0",
+     "path": "k.diagrams/shards/topics-cc-by-sa-4-0.sop",
+     "wires": 50,
+     "bytes": 8803,
+     "keys": [],
+     "sources": [
+      "mulberry-fa94a93",
+      "openmoji-3e01de5"
+     ],
+     "license": "CC-BY-SA-4.0",
+     "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-cc0-1-0",
+     "path": "k.diagrams/shards/topics-cc0-1-0.sop",
+     "wires": 1078,
+     "bytes": 183412,
+     "keys": [],
+     "sources": [
+      "hand-core-1",
+      "psys2-worlds-6b63b2ba"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-odbl-1-0",
+     "path": "k.diagrams/shards/topics-odbl-1-0.sop",
+     "wires": 53,
+     "bytes": 8025,
+     "keys": [],
+     "sources": [
+      "countries-5.1.0"
+     ],
+     "license": "ODbL-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-public-domain",
+     "path": "k.diagrams/shards/topics-public-domain.sop",
+     "wires": 219,
+     "bytes": 31689,
+     "keys": [],
+     "sources": [
+      "natural-earth-5.1.2",
+      "usgs-water-2026-11-15"
+     ],
+     "license": "public-domain",
+     "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/topics-wordnet-3-0",
+     "path": "k.diagrams/shards/topics-wordnet-3-0.sop",
+     "wires": 1544,
+     "bytes": 251586,
+     "keys": [],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
     }
    ],
    "sources": [
-    "hand-core-1"
+    "cldr-48",
+    "countries-5.1.0",
+    "geonames-all-the-cities-3.1.0",
+    "hand-core-1",
+    "mulberry-fa94a93",
+    "natural-earth-5.1.2",
+    "noto-emoji-99701e0",
+    "openmoji-3e01de5",
+    "psys2-worlds-6b63b2ba",
+    "usgs-water-2026-11-15",
+    "wordnet-3.1"
    ],
    "licenses": [
-    "CC0-1.0"
+    "Apache-2.0 AND Unicode-3.0",
+    "CC-BY-4.0",
+    "CC-BY-SA-4.0",
+    "CC0-1.0",
+    "ODbL-1.0",
+    "WordNet-3.0",
+    "public-domain"
    ],
    "warnings": []
   },
@@ -29017,8 +29125,8 @@
     {
      "id": "k.kinds/shards/relations-diagrams",
      "path": "k.kinds/shards/relations-diagrams.sop",
-     "wires": 24,
-     "bytes": 4653,
+     "wires": 28,
+     "bytes": 5338,
      "keys": [
       "about",
       "arranged",
@@ -29026,15 +29134,19 @@
       "cite",
       "edges",
       "form",
+      "from",
       "gives",
       "groups",
       "k.diagrams.fill",
       "k.diagrams.kind",
       "k.diagrams.shape",
       "k.diagrams.source",
+      "k.diagrams.topic",
       "key",
       "kind",
       "layout",
+      "name",
+      "nodes",
       "role",
       "shape",
       "source",
@@ -56921,8 +57033,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 252,
-     "bytes": 35683,
+     "wires": 253,
+     "bytes": 35853,
      "keys": [
       "after",
       "age_years_about",
@@ -57065,6 +57177,7 @@
       "mouth_line",
       "n",
       "narration",
+      "nodes",
       "north",
       "nose_line",
       "note",
@@ -57129,6 +57242,7 @@
       "steps",
       "temperature_about",
       "thing",
+      "topic",
       "typical",
       "unit",
       "usually_count",

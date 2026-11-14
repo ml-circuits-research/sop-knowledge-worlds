@@ -5461,3 +5461,23 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests (tests/w.schemas.test.mjs, 17): nine schemas; tasks/chores/things to do find w.tasks; a session (a to-do list,
   call grandma, water the plants with a reminder, homework due Friday; done set and picked, open again and undone;
   refused: status finished, a task on a task, a place in a picture; grouped as today).
+
+
+
+## 2026-11-15 — first worker: diagram topics as known words (block 07:30 item 9; PSys2 Q17 (9))
+
+- PSys2's speller (docs/webchat/lib/formalizer/spell.mjs, read on GitHub) takes its vocabulary from the worlds the
+  host loads (pattern literals, lexicons, names and short strings of knowledge wires): "tea" was read as "sea" because
+  no world the diagram host loads says "making tea". vocab.json has had "tea" all along; what a host lacked is a small
+  set of facts naming the topics of the diagram knowledge.
+- New derived type `k.diagrams.topic` (k.diagrams version 3): `name`, `kind` (many, join to k.diagrams.kind), `from`
+  (many), `nodes` (the largest diagram, 2 or more). tools/diagram-topics.mjs (in `npm run build`, after the
+  structures) reads every fill with a `topic` key over the catalog (subtypes included: the cycles of k.time.ordered)
+  and writes one fact per topic and licence of its facts: 7 shards, 3,045 topics: CC0 1,078 (184,944 bytes), WordNet
+  1,544 (253,964 bytes), public domain 219, CC BY 69, ODbL 53, CC BY-SA 50, Apache/Unicode 32. A topic in two
+  licences is two facts (car: CC0 kinds, WordNet parts); names written as the catalog writes them (atoms unquoted).
+- Test: tests/k.diagrams.test.mjs (10, +1): shards = tool output; making tea, washing hands, car, planet, frog life
+  cycle, set a table are topics; every kind a kind of k.diagrams, every `nodes` at least 2; the car of k.parts.whole
+  fills a tree. measures-core: `nodes` counts nodes.
+- For PSys2 (host): load the `k.diagrams/shards/topics-*` shards with the diagram knowledge (or vocab.json's words)
+  into the speller's vocabulary.

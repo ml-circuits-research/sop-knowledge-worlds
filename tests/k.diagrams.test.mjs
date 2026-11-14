@@ -161,3 +161,18 @@ test('a flowchart of making tea, washing hands, planting a seed: everyday proced
   assert.equal(shapeOf('flowchart', one(tea.find((s) => one(s, 'role') === 'decision'), 'role')), 'diamond');
   assert.equal(one(howtos.find((h) => one(h, 'name') === 'washing hands'), 'basis'), 'cited');
 });
+
+// Block 07:30 item 9 (PSys2 Q17: the speller read "tea" as "sea"): the topics of the diagram knowledge, derived.
+test('the topic shards are what tools/diagram-topics.mjs gives; every topic word of the fills is there ("making tea", car, planet)', async () => {
+  const { topicShards } = await import('../tools/diagram-topics.mjs');
+  const files = topicShards();
+  const dir = join(WORLDS_DIR, 'k.diagrams', 'shards');
+  assert.deepEqual((await import('node:fs')).readdirSync(dir).filter((f) => f.startsWith('topics-')).sort(), Object.keys(files).sort());
+  for (const [n, t] of Object.entries(files)) assert.equal(readFileSync(join(dir, n), 'utf8'), t, n);
+  const topics = factsOf('k.diagrams', 'k.diagrams.topic', worlds);
+  const names = new Set(topics.map((t) => one(t, 'name')));
+  for (const n of ['making tea', 'washing hands', 'car', 'planet', 'frog life cycle', 'set a table']) assert.ok(names.has(n), n);
+  const kindNames = new Set(kinds.map((k) => one(k, 'name')));
+  for (const t of topics) { assert.ok(Number(one(t, 'nodes')) >= 2, t.id); for (const k of all(t, 'kind')) assert.ok(kindNames.has(k), `${t.id}: ${k}`); }
+  assert.ok(all(topics.find((t) => one(t, 'name') === 'car' && all(t, 'from').includes('k.parts.whole')), 'kind').includes('tree'));
+});

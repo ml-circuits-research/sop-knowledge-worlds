@@ -39492,6 +39492,12 @@
  "diagram shape": [
   "k.diagrams/schema.sop"
  ],
+ "diagram topic": [
+  "k.diagrams/schema.sop"
+ ],
+ "diagram topics": [
+  "k.diagrams/schema.sop"
+ ],
  "diagram type": [
   "k.diagrams/schema.sop"
  ],
@@ -55444,7 +55450,9 @@
   "k.actions/shards/verbs-remove",
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
+  "k.diagrams/schema.sop",
   "k.kinds/schema.sop",
+  "k.kinds/shards/relations-diagrams",
   "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-parts",
   "k.kinds/shards/relations-procedures",
@@ -66314,15 +66322,21 @@
  ],
  "hierarchy": [
   "k.diagrams/shards/diagrams",
+  "k.diagrams/shards/topics-cc0-1-0",
+  "k.diagrams/shards/topics-wordnet-3-0",
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-h",
   "k.words/shards/hi"
  ],
  "hierarchy chart": [
-  "k.diagrams/shards/diagrams"
+  "k.diagrams/shards/diagrams",
+  "k.diagrams/shards/topics-cc0-1-0",
+  "k.diagrams/shards/topics-wordnet-3-0"
  ],
  "hierarchy diagram": [
-  "k.diagrams/shards/diagrams"
+  "k.diagrams/shards/diagrams",
+  "k.diagrams/shards/topics-cc0-1-0",
+  "k.diagrams/shards/topics-wordnet-3-0"
  ],
  "hieronim": [
   "k.people/shards/given-names-h"
@@ -74312,6 +74326,10 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-diagrams"
  ],
+ "k.diagrams.topic": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-diagrams"
+ ],
  "k.drawing": [
   "k.units/shards/measures"
  ],
@@ -76766,6 +76784,7 @@
   "k.attributes/shards/typical",
   "k.body/schema.sop",
   "k.colours/schema.sop",
+  "k.diagrams/schema.sop",
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.geo/schema.sop",
@@ -93782,6 +93801,7 @@
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
+  "k.diagrams/schema.sop",
   "k.diagrams/shards/diagrams",
   "k.faces/schema.sop",
   "k.genres/schema.sop",
@@ -93789,6 +93809,7 @@
   "k.kinds/shards/arguments",
   "k.kinds/shards/relations-actions",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-diagrams",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-genres",
   "k.kinds/shards/relations-kinds",
@@ -95747,6 +95768,10 @@
   "k.diagrams/shards/diagrams"
  ],
  "nodes": [
+  "k.attributes/shards/narration",
+  "k.diagrams/schema.sop",
+  "k.kinds/shards/relations-diagrams",
+  "k.units/shards/measures",
   "w.diagram/schema.sop"
  ],
  "noel": [
@@ -140484,6 +140509,7 @@
   "k.kinds/shards/relations-diagrams",
   "k.procedures/shards/compose",
   "k.procedures/shards/tasks",
+  "k.units/shards/measures",
   "k.words/shards/frequency-t",
   "k.words/shards/to",
   "w.diagram/schema.sop",
@@ -141711,10 +141737,14 @@
   "k.kinds/shards/origin"
  ],
  "tree chart": [
-  "k.diagrams/shards/diagrams"
+  "k.diagrams/shards/diagrams",
+  "k.diagrams/shards/topics-cc0-1-0",
+  "k.diagrams/shards/topics-wordnet-3-0"
  ],
  "tree diagram": [
   "k.diagrams/shards/diagrams",
+  "k.diagrams/shards/topics-cc0-1-0",
+  "k.diagrams/shards/topics-wordnet-3-0",
   "w.diagram/schema.sop"
  ],
  "tree frog": [

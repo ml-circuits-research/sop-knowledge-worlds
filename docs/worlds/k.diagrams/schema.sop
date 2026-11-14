@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/diagrams-core.mjs
 
-@k.diagrams core.module name=k.diagrams version=2 exports=kind exports=shape exports=fill exports=source core.source="hand-core 1"
+@k.diagrams core.module name=k.diagrams version=3 exports=kind exports=shape exports=fill exports=source exports=topic core.source="hand-core 1"
 
 # A published work a fact rests on: `name` a short id (author and year: venn1880), `cite` the reference, `year`.
 @k.diagrams.source core.type of=k.diagrams.source shared=true closed=true core.source="hand-core 1"
@@ -59,9 +59,21 @@
 @k.diagrams.fill.about core.slot of=k.diagrams.fill key=about required=true kind=string core.source="hand-core 1"
 @k.diagrams.fill.by core.slot of=k.diagrams.fill key=by kind=atom type=k.attributes.attribute by=name core.source="hand-core 1"
 
+# A topic a diagram can be drawn about (block 07:30 item 9): derived from the fills (tools/diagram-topics.mjs, rebuilt by
+# the build), one fact per topic name and licence of the facts it is read from (a car in two licences is two facts). `name` the topic as its facts say it
+# (making tea, car, planet, frog life cycle); `kind` (many) the kinds of diagram a fill draws of it; `from` (many) the
+# types it is read from; `nodes` the nodes of its largest diagram (2 or more). A host loads these to know every topic
+# word of the diagram knowledge (a speller's vocabulary: "tea" is not "sea") and to pick a topic for a random diagram.
+@k.diagrams.topic core.type of=k.diagrams.topic shared=true closed=true core.source="hand-core 1"
+@k.diagrams.topic.name core.slot of=k.diagrams.topic key=name required=true kind=atom kind=string core.source="hand-core 1"
+@k.diagrams.topic.kind core.slot of=k.diagrams.topic key=kind many=true required=true kind=atom kind=string type=k.diagrams.kind by=name core.source="hand-core 1"
+@k.diagrams.topic.from core.slot of=k.diagrams.topic key=from many=true required=true kind=atom core.source="hand-core 1"
+@k.diagrams.topic.nodes core.slot of=k.diagrams.topic key=nodes required=true kind=integer min=2 core.source="hand-core 1"
+
 # Words for the world, its kinds and its keys.
 @k.diagrams.word.kind core.word text="kind of diagram" text="kinds of diagram" text="diagram type" text="diagram kinds" means=k.diagrams.kind core.source="hand-core 1"
 @k.diagrams.word.shape core.word text="diagram shape" text="flowchart symbol" text="flowchart symbols" means=k.diagrams.shape core.source="hand-core 1"
+@k.diagrams.word.topic core.word text="diagram topic" text="diagram topics" means=k.diagrams.topic core.source="hand-core 1"
 @k.diagrams.word.fill core.word text="what fills a diagram" means=k.diagrams.fill core.source="hand-core 1"
 @k.diagrams.word.source core.word text=source text=reference means=k.diagrams.source core.source="hand-core 1"
 @k.diagrams.word.kind.layout core.word text=layout text=direction means=k.diagrams.kind.layout core.source="hand-core 1"
@@ -102,3 +114,7 @@
 @k.diagrams.word.key.fill.topic core.word text=topic means=k.diagrams.fill.topic core.source="hand-core 1"
 @k.diagrams.word.key.fill.about core.word text=about means=k.diagrams.fill.about core.source="hand-core 1"
 @k.diagrams.word.key.fill.by core.word text=by means=k.diagrams.fill.by core.source="hand-core 1"
+@k.diagrams.word.key.topic.name core.word text=name means=k.diagrams.topic.name core.source="hand-core 1"
+@k.diagrams.word.key.topic.kind core.word text=kind means=k.diagrams.topic.kind core.source="hand-core 1"
+@k.diagrams.word.key.topic.from core.word text=from means=k.diagrams.topic.from core.source="hand-core 1"
+@k.diagrams.word.key.topic.nodes core.word text=nodes means=k.diagrams.topic.nodes core.source="hand-core 1"
