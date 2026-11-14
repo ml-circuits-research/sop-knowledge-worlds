@@ -792,3 +792,19 @@ The library's `readFrames` (0.115) on 161 real glossed Romanian turns: 93 read b
 ## Reviewer 2026-11-15 09:15 — third worker's round accepted; Q69 assigned
 
 Accepted ca5d4aa (order criterion), c9864d6 (kind after topic), 009dc3f (single-letter names), a1d1d11 (full suite 3,110 pass, 0 fail) and 4719034 (Q68: k.geo.country.currency dropped; reviewer ran k.geo, import.psys2, k.units and questions tests: 463 pass, 0 fail). Open answers: keep the capital-letter rule; "link A with D" (tool outranks target) is noted, not changed now; layout vs diagram for "put the parts in a tree" is the host's choice. Q69 (block 09:00) goes to the third worker; measure with the library's bench-ro-frames.mjs before and after.
+
+## Reviewer 2026-11-15 09:20 — PSys2 Q18 [KNOW] (kids audit, real rows); Q70 answered
+
+PSys2's audit (`docs/kids-generalisation-plan.md` in psys2, questions.md Q18) replaces the 08:45 block's items (1)–(3) with exact asks. Real rows first (owner decision 22:10); every item names the real rows it must make right.
+- **K1 `w.list`** world schema: list (name, kind shopping / to-do / any); entry (item typed by k.food / k.objects / free text, quantity, unit from k.units, price as a k.units quantity with a currency, status, order, list). Real: r0598, r0599, r0622–r0627.
+- **K2 `w.tasks`** world schema: task (text, status open/done, due, owner, order, list, reminder); "done" a state that acts change. Real: r0590.
+- **K6 act frames for lists, tasks and the wallet** in w.lang.en, bound to K1/K2 acts ("add X to my list", "take X off my list", "is X on my list", "what is left to do", "I finished X", "set a reminder to X", "how much do N X cost", "can I buy N X", "what is the change", "I start with N lei", "how much money is left"). Real: r0590, r0598, r0599, r0622–r0627.
+- **K3 conversation frames** (greet, thank, bye, introduce "my name is X" / "you can call me X", ask own name, ask who the assistant is, how are you) in w.lang.en. Real: r0148, r0166, r0216, r0588–r0612 (thanks ×8), r0630.
+- **K4 arithmetic words and frames** in w.lang.en: operators to core.calc names (plus, minus, times, divided by, double, half, twice, "share N between M"), comparisons (N more / fewer than, N times as many as), aggregates (in total, altogether), "left", "at first"; frames "what is N op M", "how many X does O have", "who has the most X", "how many more X than". Real: r0194, r0195, r0201, r0543.
+- **K5 typed possession effects on k.actions**: `holds=add|remove|give|set` and `money=add|remove` for find, get, receive, buy, lose, eat, break, give, spend, pay, get back, fly away / leave, hold, have (the free-text `result` stays as the gloss). The library's storyState takes its verbs from these. Real: r0194, r0195, r0201, r0542.
+- **K7 clock and calendar words**: o'clock, half past, quarter past / to, half an hour, noon, midnight as values of k.time; frames that state the date ("today is X", "we are in X", "the clock says X"). Real: r0586.
+- **K10 question frames in other word orders** over existing facts ("how many legs has a cow", "April has how many days", "which months are in summer"). Real: r0244.
+- K8 (shapes / colours of things) and K9 (pets) are not real: later. The black + red colour conflict is the host's taught tier, no catalog change.
+Order: K1+K2+K6 (fourth worker, now), K5+K4 (next free worker, the library needs K5 for L1), K3, K7, K10.
+
+**Q70 answer:** keep keywords as the dedicated type `k.objects.keyword` (one home, read last by hosts after names, words and stand-ins). No library relation unless a real row needs one.
