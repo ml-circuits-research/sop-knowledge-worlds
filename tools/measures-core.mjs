@@ -45,7 +45,7 @@ export const MEASURES = {
   'k.scenes': { has: { count: { counts: 'thing of that name in the scene' } } },
   'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
   'k.time': { ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord },
-    part_of_day: { n: ord, starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, hour: { n: { counts: 'hour after midnight' }, hour12: { counts: 'hour after midnight or noon' } },
+    part_of_day: { n: ord, starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, span: { starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, hour: { n: { counts: 'hour after midnight' }, hour12: { counts: 'hour after midnight or noon' } },
     duration: { count: { counts: 'span that the key unit of the same fact names' }, count_about: { counts: 'span that the key unit of the same fact names' } } },
   'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } } },
   'k.values': { scale: { steps: { counts: 'step' } }, step: { rank: ord }, direction: { x: { counts: 'step to the right in a picture' }, y: { counts: 'step downwards in a picture' } }, number: { value: { plain: true }, value_about: { plain: true } },

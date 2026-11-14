@@ -1,9 +1,32 @@
-# k.time/shards/derived: generated, do not edit. What the rules of k.time (version 3) and of the modules it imports derive from the told facts
-# of k.time: 439 facts, each marked derived=true with its rule as source (k.time.during.hour, k.time.during.north, k.time.during.south, k.time.order, k.time.season_in.first_north, k.time.season_in.first_south, k.time.season_in.last_north, k.time.season_in.last_south).
+# k.time/shards/derived: generated, do not edit. What the rules of k.time (version 4) and of the modules it imports derive from the told facts
+# of k.time: 466 facts, each marked derived=true with its rule as source (k.time.during.cycle, k.time.during.hour, k.time.during.north, k.time.during.south, k.time.during.weekend, k.time.during.within, k.time.order, k.time.season_in.first_north, k.time.season_in.first_south, k.time.season_in.last_north, k.time.season_in.last_south).
 # sources: rule (a rule of a module of this repository, over the facts named above; sources/rule/SOURCE.md)
 # license: CC0-1.0
 # script: tools/derive.mjs
 
+@k.time.derived.during.cycle.April.year k.time.during time=April span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.August.year k.time.during time=August span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.December.year k.time.during time=December span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.February.year k.time.during time=February span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Friday.week k.time.during time=Friday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.January.year k.time.during time=January span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.July.year k.time.during time=July span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.June.year k.time.during time=June span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.March.year k.time.during time=March span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.May.year k.time.during time=May span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Monday.week k.time.during time=Monday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.November.year k.time.during time=November span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.October.year k.time.during time=October span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Saturday.week k.time.during time=Saturday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.September.year k.time.during time=September span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Sunday.week k.time.during time=Sunday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Thursday.week k.time.during time=Thursday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Tuesday.week k.time.during time=Tuesday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.Wednesday.week k.time.during time=Wednesday span=week derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.autumn.year k.time.during time=autumn span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.spring.year k.time.during time=spring span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.summer.year k.time.during time=summer span=year derived=true core.source="rule k.time.during.cycle"
+@k.time.derived.during.cycle.winter.year k.time.during time=winter span=year derived=true core.source="rule k.time.during.cycle"
 @k.time.derived.during.hour.10_am.morning k.time.during time="10 am" span=morning derived=true core.source="rule k.time.during.hour"
 @k.time.derived.during.hour.10_pm.night k.time.during time="10 pm" span=night derived=true core.source="rule k.time.during.hour"
 @k.time.derived.during.hour.11_am.morning k.time.during time="11 am" span=morning derived=true core.source="rule k.time.during.hour"
@@ -52,6 +75,10 @@
 @k.time.derived.during.south.November.spring.south k.time.during time=November span=spring hemisphere=south derived=true core.source="rule k.time.during.south"
 @k.time.derived.during.south.October.spring.south k.time.during time=October span=spring hemisphere=south derived=true core.source="rule k.time.during.south"
 @k.time.derived.during.south.September.spring.south k.time.during time=September span=spring hemisphere=south derived=true core.source="rule k.time.during.south"
+@k.time.derived.during.weekend.Saturday.weekend k.time.during time=Saturday span=weekend derived=true core.source="rule k.time.during.weekend"
+@k.time.derived.during.weekend.Sunday.weekend k.time.during time=Sunday span=weekend derived=true core.source="rule k.time.during.weekend"
+@k.time.derived.during.within.dawn.morning k.time.during time=dawn span=morning derived=true core.source="rule k.time.during.within"
+@k.time.derived.during.within.dusk.evening k.time.during time=dusk span=evening derived=true core.source="rule k.time.during.within"
 @k.time.derived.order.clock.10_am.10_pm k.time.before cycle=clock earlier="10 am" later="10 pm" derived=true core.source="rule k.time.order"
 @k.time.derived.order.clock.10_am.11_am k.time.before cycle=clock earlier="10 am" later="11 am" derived=true core.source="rule k.time.order"
 @k.time.derived.order.clock.10_am.11_pm k.time.before cycle=clock earlier="10 am" later="11 pm" derived=true core.source="rule k.time.order"

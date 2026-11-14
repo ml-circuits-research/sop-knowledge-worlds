@@ -1,5 +1,5 @@
 # k.time/shards/calendar: the 12 months, the 7 weekdays and the 4 seasons with their position and successor, the cycles
-# they repeat in, 14 spans of time told in 27 facts (several units for some), and words for their forms.
+# they repeat in, the week, the year and the weekend as spans that hold days, months and seasons, 14 spans of time told in 27 facts (several units for some), and words for their forms.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
@@ -35,6 +35,12 @@
 @k.time.cycle.seasons k.time.cycle name=seasons of=k.time.season first=spring last=winter length=4 lasts=year core.source="hand-core 1"
 @k.time.cycle.day k.time.cycle name=day of=k.time.part_of_day first=morning last=night length=4 lasts=day core.source="hand-core 1"
 @k.time.cycle.clock k.time.cycle name=clock of=k.time.hour first=midnight last="11 pm" length=24 lasts=day core.source="hand-core 1"
+
+# Spans that hold the times of a cycle (block 07:40): the week its days, the year its months and seasons; the weekend
+# holds Saturday and Sunday by their `weekend` (a rule).
+@k.time.span.week k.time.span name=week cycle=week core.source="hand-core 1"
+@k.time.span.year k.time.span name=year cycle=year cycle=seasons core.source="hand-core 1"
+@k.time.span.weekend k.time.span name=weekend core.source="hand-core 1"
 
 @k.time.duration.second k.time.duration name=second core.source="hand-core 1"
 @k.time.duration.minute k.time.duration name=minute count=60 unit=second core.source="hand-core 1"

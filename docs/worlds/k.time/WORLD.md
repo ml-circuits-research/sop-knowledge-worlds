@@ -27,7 +27,14 @@ The calendar: months, weekdays, seasons and spans of time.
 - `k.time.during` (complete, **derived**, version 3): a `time` within a `span`: an hour within its part of the day
   ("9 am" during the morning), a month within its season in a `hemisphere` (January during winter in the north,
   during summer in the south). Three rules from the hours' `part` and the months' `season_north` / `season_south`: 48
-  facts. It is what the preposition "during" of `w.lang.en` reads.
+  facts. It is what the preposition "during" of `w.lang.en` reads. Version 4 (block 07:40): three more rules over
+  `k.time.span`: every weekday is during the week, every month and season during the year, Saturday and Sunday during
+  the weekend (from `weekend`), dawn during the morning and dusk during the evening: 75 facts in all.
+- `k.time.span` (complete, version 4): a named span that holds the times of each `cycle` it names (`week`: the
+  weekdays; `year`: the months and the seasons), or lies `within` another (`dawn` within the morning, about 5 to 7;
+  `dusk` within the evening, about 18 to 20), and `weekend`. "The day" is not a span: English means by it both the 24
+  hours and the daytime, so "is midnight during the day" has no single answer here. Not here yet: a week that starts
+  on Sunday, holidays.
 - `k.time.part_of_day` (complete): morning, afternoon, evening, night, with `n`, `next`, and `starts_about` /
   `ends_about` in hours after midnight (5, 12, 17, 21: everyday usage, which varies, hence `_about`).
 - `k.time.hour` (complete): the 24 hours of the clock, named as said (`midnight`, `"1 am"` ... `noon`, `"1 pm"` ...

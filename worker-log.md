@@ -3467,3 +3467,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   worlds, 946 shards, vocab 24,307 words; COVERAGE lists w.face (7 common things by name) and w.map (3). npm test
   2,882: 2,878 pass, 3 skipped, 1 fail (COVERAGE.md stale before `npm run reports`); after the reports the six test
   files that read generated files: 39 pass, 2 skipped.
+## Block 07:40 item 2 (2026-11-14, second worker): spans of time on top of k.time.during
+
+- k.time version 4: `k.time.span` (name; `cycle`, many: every time of that cycle lies within the span; `within`:
+  the span lies within another; `starts_about`, `ends_about`), complete. Facts (hand-core): week (cycle week), year
+  (cycles year and seasons), weekend, dawn (within morning, about 5 to 7), dusk (within evening, about 18 to 20);
+  words daybreak, "first light", nightfall, span, during.
+- Three rules make `k.time.during` from them: a time of a cycle a span names; a span within another; a weekday whose
+  `weekend` is true is during the weekend (one home: the weekend is not listed twice). Derived shard (tools/derive.mjs)
+  439 -> 466 facts: 7 weekdays in the week, 12 months and 4 seasons in the year, Saturday and Sunday in the weekend,
+  dawn, dusk.
+- "The day" is left out on purpose: English "the day" is the 24 hours and the daytime, so a span holding every hour
+  would say midnight is during the day. "Is the evening during the night" is "no" (complete), as before.
+- The derived `before` facts were already shipped by the first worker's derived shard (block 02:45 item 3): nothing to do.
+- Tests: k.time (the during set is exactly the 75 expected pairs); w.lang.en ("Saturday during the weekend", not
+  Monday; Monday during the week; March and spring during the year; dawn during the morning, dusk during the
+  evening; not the evening during the night).
+- Not done: a week that starts on Sunday, holidays (PSys2 named them; not in the reviewer's item).
+- `tools/measures-core.mjs`: the hours of a span (`starts_about`, `ends_about`) count hours after midnight, as those of
+  a part of the day (the k.units.measure test asked for them); `k.units/shards/measures` 163 -> 165 wires.
+- Numbers: k.time schema version 4 (+25 wires), calendar +3 wires, clock +4 wires, derived 439 -> 466 facts; catalog
+  25 worlds, 946 shards, vocab 24,282 -> 24,284 words (daybreak, nightfall). npm test 2,875: 2,870 pass, 5 skipped,
+  0 fail (a first run was cut off by a session restart and rerun).
+- Rebased on the first worker's world schemas (2b5505e) and two reviewer blocks: index.json taken from main and rebuilt;
+  vocab 24,309 words. npm test 2,882: 2,875 pass, 7 skipped, 0 fail.

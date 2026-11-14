@@ -1,5 +1,5 @@
 {
- "version": "2c2357cf303f",
+ "version": "bd78936b7b70",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -36369,7 +36369,7 @@
   },
   {
    "id": "k.time",
-   "version": "3",
+   "version": "4",
    "schema": "k.time/schema.sop",
    "exports": [
     "k.time.before",
@@ -36382,6 +36382,7 @@
     "k.time.part_of_day",
     "k.time.season",
     "k.time.season_in",
+    "k.time.span",
     "k.time.weekday"
    ],
    "depends": [],
@@ -36389,8 +36390,8 @@
     {
      "id": "k.time/shards/calendar",
      "path": "k.time/shards/calendar.sop",
-     "wires": 88,
-     "bytes": 10475,
+     "wires": 91,
+     "bytes": 10971,
      "keys": [
       "april",
       "august",
@@ -36429,6 +36430,7 @@
       "tuesday",
       "wednesday",
       "week",
+      "weekend",
       "winter",
       "year"
      ],
@@ -36441,8 +36443,8 @@
     {
      "id": "k.time/shards/clock",
      "path": "k.time/shards/clock.sop",
-     "wires": 34,
-     "bytes": 4622,
+     "wires": 38,
+     "bytes": 5236,
      "keys": [
       "1 am",
       "1 pm",
@@ -36467,6 +36469,8 @@
       "9 am",
       "9 pm",
       "afternoon",
+      "dawn",
+      "dusk",
       "evening",
       "midnight",
       "morning",
@@ -36482,8 +36486,8 @@
     {
      "id": "k.time/shards/derived",
      "path": "k.time/shards/derived.sop",
-     "wires": 439,
-     "bytes": 62250,
+     "wires": 466,
+     "bytes": 65851,
      "keys": [
       "1 am",
       "1 pm",
@@ -36512,8 +36516,10 @@
       "august",
       "autumn",
       "clock",
+      "dawn",
       "day",
       "december",
+      "dusk",
       "evening",
       "february",
       "friday",
@@ -36541,13 +36547,17 @@
       "tuesday",
       "wednesday",
       "week",
+      "weekend",
       "winter",
       "year"
      ],
      "sources": [
+      "rule-k.time.during.cycle",
       "rule-k.time.during.hour",
       "rule-k.time.during.north",
       "rule-k.time.during.south",
+      "rule-k.time.during.weekend",
+      "rule-k.time.during.within",
       "rule-k.time.order",
       "rule-k.time.season_in.first_north",
       "rule-k.time.season_in.first_south",
@@ -36576,9 +36586,12 @@
    "sources": [
     "hand-core-1",
     "psys2-worlds-6b63b2ba",
+    "rule-k.time.during.cycle",
     "rule-k.time.during.hour",
     "rule-k.time.during.north",
     "rule-k.time.during.south",
+    "rule-k.time.during.weekend",
+    "rule-k.time.during.within",
     "rule-k.time.order",
     "rule-k.time.season_in.first_north",
     "rule-k.time.season_in.first_south",
@@ -36671,8 +36684,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 163,
-     "bytes": 22867,
+     "wires": 165,
+     "bytes": 23203,
      "keys": [
       "age_years_about",
       "amount_about",
@@ -36797,6 +36810,7 @@
       "skeleton",
       "slot",
       "south",
+      "span",
       "speed_about",
       "spread",
       "starts_about",

@@ -89,12 +89,15 @@ test('durations: several units for one span, each fact one count or one count_ab
   assert.equal(exact.get('fortnight|week') * 7, exact.get('fortnight|day'));
 });
 
-test('during (Round 12): every hour within its part of the day, every month within its season in each hemisphere, nothing else', () => {
+test('during (Round 12, block 07:40): every hour within its part of the day, every month within its season in each hemisphere, the times of the week and the year, the weekend, dawn and dusk, nothing else', () => {
   const during = w.ofType('k.time.during').map((w) => [one(w, 'time'), one(w, 'span'), one(w, 'hemisphere') ?? null].join('|'));
+  const names = (type) => w.ofType(type).map((x) => one(x, 'name'));
   const want = [
     ...w.ofType('k.time.hour').map((h) => [one(h, 'name'), one(h, 'part'), null].join('|')),
     ...w.ofType('k.time.month').flatMap((m) => [[one(m, 'name'), one(m, 'season_north'), 'north'].join('|'), [one(m, 'name'), one(m, 'season_south'), 'south'].join('|')]),
+    ...names('k.time.weekday').map((d) => `${d}|week|`), ...names('k.time.month').map((m) => `${m}|year|`), ...names('k.time.season').map((x) => `${x}|year|`),
+    'Saturday|weekend|', 'Sunday|weekend|', 'dawn|morning|', 'dusk|evening|',
   ];
-  assert.equal(want.length, 48);
+  assert.equal(want.length, 48 + 7 + 12 + 4 + 2 + 2);
   assert.deepEqual([...new Set(during)].sort(), [...new Set(want)].sort());
 });

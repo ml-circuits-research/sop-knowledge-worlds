@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.time core.module name=k.time version=3 exports=ordered exports=cycle exports=before exports=during exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration core.source="hand-core 1"
+@k.time core.module name=k.time version=4 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration core.source="hand-core 1"
 
 # Order in time. Every time that repeats in a cycle (a weekday in the week, a month in the year, a season, a part of
 # the day, an hour of the clock) is a `k.time.ordered`: `cycle` names its cycle, `n` is its position in it, `next`
@@ -132,6 +132,31 @@
 @k.time.during.south.then k.time.during time=?time span=?span hemisphere=south
 @k.time.during.south core.rule when=$k.time.during.south.when then=$k.time.during.south.then core.source="hand-core 1"
 
+# A named span of time that holds other times (block 07:40, on top of k.time.during): every time of each `cycle` it
+# names lies within it (the week holds the weekdays; the year the months and the seasons), and it lies itself
+# `within` another span (dawn within the morning, dusk within the evening), from about `starts_about` to about
+# `ends_about` (hours after midnight). The weekend holds the weekdays whose `weekend` is true (Saturday, Sunday).
+# "The day" is no span here: in English it is both the 24 hours of the clock and the daytime ("during the day" is
+# not at night), so a span "day" that held every hour would answer "is midnight during the day" with yes.
+@k.time.span core.type of=k.time.span shared=true closed=true complete=true core.source="hand-core 1"
+@k.time.span.name core.slot of=k.time.span key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.span.cycle core.slot of=k.time.span key=cycle many=true kind=atom core.source="hand-core 1"
+@k.time.span.within core.slot of=k.time.span key=within kind=atom kind=string core.source="hand-core 1"
+@k.time.span.starts_about core.slot of=k.time.span key=starts_about kind=integer min=0 max=23 core.source="hand-core 1"
+@k.time.span.ends_about core.slot of=k.time.span key=ends_about kind=integer min=0 max=23 core.source="hand-core 1"
+# Three rules make k.time.during from the spans: a time of a cycle a span names; a span within another; a weekday of
+# the weekend.
+@k.time.during.cycle.span k.time.span name=?span cycle=?cycle
+@k.time.during.cycle.time k.time.ordered cycle=?cycle name=?time
+@k.time.during.cycle.then k.time.during time=?time span=?span
+@k.time.during.cycle core.rule when=$k.time.during.cycle.span when=$k.time.during.cycle.time then=$k.time.during.cycle.then core.source="hand-core 1"
+@k.time.during.within.when k.time.span name=?time within=?span
+@k.time.during.within.then k.time.during time=?time span=?span
+@k.time.during.within core.rule when=$k.time.during.within.when then=$k.time.during.within.then core.source="hand-core 1"
+@k.time.during.weekend.when k.time.weekday name=?time weekend=true
+@k.time.during.weekend.then k.time.during time=?time span=weekend
+@k.time.during.weekend core.rule when=$k.time.during.weekend.when then=$k.time.during.weekend.then core.source="hand-core 1"
+
 # A span of time: it is `count` times the span `unit` names (a week is 7 days), or about `count_about` times
 # (a month is about 30 days). A span may be told in several units, one fact each (a week is 7 days, a week is 168
 # hours): `name` and `unit` together are its identity. The second has no smaller unit here.
@@ -148,6 +173,8 @@
 @k.time.word.duration core.word text=long text=lasts text=duration means=k.time.duration core.source="hand-core 1"
 @k.time.word.days core.word text=days means=k.time.month.days core.source="hand-core 1"
 @k.time.word.weekend core.word text=weekend means=k.time.weekday.weekend core.source="hand-core 1"
+@k.time.word.span core.word text=span text="span of time" means=k.time.span core.source="hand-core 1"
+@k.time.word.during core.word text=during means=k.time.during core.source="hand-core 1"
 @k.time.word.before core.word text=before text=after text=earlier text=later text=precedes text=follows means=k.time.before core.source="hand-core 1"
 @k.time.word.next core.word text=next text="comes after" text=follows text=following means=k.time.ordered.next core.source="hand-core 1"
 @k.time.word.cycle core.word text=cycle text=round means=k.time.cycle core.source="hand-core 1"
@@ -188,6 +215,10 @@
 @k.time.word.key.during.span core.word text=span means=k.time.during.span core.source="hand-core 1"
 @k.time.word.key.during.hemisphere core.word text=hemisphere means=k.time.during.hemisphere core.source="hand-core 1"
 @k.time.word.key.during.derived core.word text=derived means=k.time.during.derived core.source="hand-core 1"
+@k.time.word.key.span.cycle core.word text=cycle means=k.time.span.cycle core.source="hand-core 1"
+@k.time.word.key.span.within core.word text=within means=k.time.span.within core.source="hand-core 1"
+@k.time.word.key.span.starts_about core.word text=starts means=k.time.span.starts_about core.source="hand-core 1"
+@k.time.word.key.span.ends_about core.word text=ends means=k.time.span.ends_about core.source="hand-core 1"
 @k.time.word.key.duration.count core.word text=count text=many means=k.time.duration.count core.source="hand-core 1"
 @k.time.word.key.duration.count_about core.word text=count means=k.time.duration.count_about core.source="hand-core 1"
 @k.time.word.key.duration.unit core.word text=unit means=k.time.duration.unit core.source="hand-core 1"

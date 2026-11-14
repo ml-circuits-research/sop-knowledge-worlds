@@ -141,6 +141,15 @@ test('w.lang.en joins k.time: "Monday is before Friday", "December comes after N
   assert.equal(holds('January', 'during', 'summer', { hemisphere: 'north' }), false);
   assert.equal(holds('9 am', 'during', 'morning'), true);
   assert.equal(holds('3 pm', 'during', 'morning'), false);
+  // block 07:40: spans on top of during: the weekend, the week and the year, dawn and dusk
+  assert.equal(holds('Saturday', 'during', 'weekend'), true);
+  assert.equal(holds('Monday', 'during', 'weekend'), false);
+  assert.equal(holds('Monday', 'during', 'week'), true);
+  assert.equal(holds('March', 'during', 'year'), true);
+  assert.equal(holds('spring', 'during', 'year'), true);
+  assert.equal(holds('dawn', 'during', 'morning'), true);
+  assert.equal(holds('dusk', 'during', 'evening'), true);
+  assert.equal(holds('evening', 'during', 'night'), false);
   assert.equal(of('construction').find((c) => one(c, 'name') === 'pp.time').attrs.status, undefined, 'no longer a hole');
 });
 

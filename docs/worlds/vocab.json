@@ -22891,6 +22891,8 @@
   "k.words/shards/da"
  ],
  "dawn": [
+  "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/da"
  ],
  "dawson": [
@@ -22919,6 +22921,7 @@
   "k.units/shards/measures"
  ],
  "daybreak": [
+  "k.time/shards/clock",
   "k.words/shards/da"
  ],
  "daycare": [
@@ -26659,6 +26662,7 @@
   "k.geo/shards/north-america"
  ],
  "during": [
+  "k.time/schema.sop",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
  ],
@@ -26674,6 +26678,8 @@
  "dusk": [
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
+  "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/du"
  ],
  "dust": [
@@ -31114,6 +31120,9 @@
   "k.attributes/shards/same-f",
   "k.objects/shards/openmoji-objects-01",
   "k.scenes/shards/things-f"
+ ],
+ "first light": [
+  "k.time/shards/clock"
  ],
  "first quarter moon": [
   "k.attributes/shards/drawn-noto",
@@ -59496,6 +59505,7 @@
   "k.wearables/shards/wearables"
  ],
  "nightfall": [
+  "k.time/shards/clock",
   "k.words/shards/ni"
  ],
  "nightgown": [
@@ -82908,7 +82918,11 @@
  ],
  "span": [
   "k.time/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/sp"
+ ],
+ "span of time": [
+  "k.time/schema.sop"
  ],
  "spaniard": [
   "k.words/shards/sp"
@@ -97085,6 +97099,8 @@
   "k.attributes/shards/same-w",
   "k.objects/shards/noto-clothing-01",
   "k.time/schema.sop",
+  "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.time/shards/psys2",
   "k.words/shards/we"
  ],
@@ -98600,6 +98616,7 @@
   "k.words/shards/wi"
  ],
  "within": [
+  "k.time/schema.sop",
   "k.words/shards/wi"
  ],
  "withstand": [

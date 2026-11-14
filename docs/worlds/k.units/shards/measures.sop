@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 163 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 165 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -135,6 +135,8 @@
 @k.units.measure.k.time.part_of_day.ends_about k.units.measure world=k.time type=part_of_day key=ends_about counts="hour after midnight" approximate=true core.source="hand-core 1"
 @k.units.measure.k.time.hour.n k.units.measure world=k.time type=hour key=n counts="hour after midnight" core.source="hand-core 1"
 @k.units.measure.k.time.hour.hour12 k.units.measure world=k.time type=hour key=hour12 counts="hour after midnight or noon" core.source="hand-core 1"
+@k.units.measure.k.time.span.starts_about k.units.measure world=k.time type=span key=starts_about counts="hour after midnight" approximate=true core.source="hand-core 1"
+@k.units.measure.k.time.span.ends_about k.units.measure world=k.time type=span key=ends_about counts="hour after midnight" approximate=true core.source="hand-core 1"
 @k.units.measure.k.time.duration.count k.units.measure world=k.time type=duration key=count counts="span that the key unit of the same fact names" core.source="hand-core 1"
 @k.units.measure.k.time.duration.count_about k.units.measure world=k.time type=duration key=count_about counts="span that the key unit of the same fact names" approximate=true core.source="hand-core 1"
 @k.units.measure.k.units.unit.factor k.units.measure world=k.units type=unit key=factor counts="base unit of its quantity in one of the unit" core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.time/shards/clock: the 4 parts of the day and the 24 hours of the clock, each with its position and successor,
+# k.time/shards/clock: the 4 parts of the day, dawn and dusk within them, and the 24 hours of the clock, each with its position and successor,
 # and words for the hours.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
@@ -8,6 +8,13 @@
 @k.time.part_of_day.afternoon k.time.part_of_day name=afternoon cycle=day n=2 next=evening starts_about=12 ends_about=17 core.source="hand-core 1"
 @k.time.part_of_day.evening k.time.part_of_day name=evening cycle=day n=3 next=night starts_about=17 ends_about=21 core.source="hand-core 1"
 @k.time.part_of_day.night k.time.part_of_day name=night cycle=day n=4 next=morning starts_about=21 ends_about=5 core.source="hand-core 1"
+
+# Dawn and dusk (block 07:40): short spans within a part of the day; their hours differ with the season and the
+# place, hence `_about`.
+@k.time.span.dawn k.time.span name=dawn within=morning starts_about=5 ends_about=7 core.source="hand-core 1"
+@k.time.span.dusk k.time.span name=dusk within=evening starts_about=18 ends_about=20 core.source="hand-core 1"
+@k.time.word.span.dawn core.word text=daybreak text="first light" means=dawn of=k.time.span.name core.source="hand-core 1"
+@k.time.word.span.dusk core.word text=nightfall means=dusk of=k.time.span.name core.source="hand-core 1"
 
 @k.time.hour.h00 k.time.hour name=midnight cycle=clock n=0 next="1 am" hour12=12 am_pm=am part=night core.source="hand-core 1"
 @k.time.hour.h01 k.time.hour name="1 am" cycle=clock n=1 next="2 am" hour12=1 am_pm=am part=night core.source="hand-core 1"
