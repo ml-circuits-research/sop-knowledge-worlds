@@ -27,16 +27,17 @@ const kk = (k) => k.replace(/-/g, '_');
 // "what_s" -> "what's", "i_d_like" -> "i'd like", "off_the_list" -> "off the list": PSys2 writes a space as "_" and drops the apostrophe
 export const words = (s) => String(s).split('_').reduce((out, p, i) => (i > 0 && /^(s|d|ll|ve|re|m|t)$/.test(p) && /^[a-z]+$/.test(out[out.length - 1] ?? '') ? [...out.slice(0, -1), `${out[out.length - 1]}'${p}`] : [...out, p]), []).join(' ');
 
-export function importLangEn(read, commit) {
+export function importLangEn(read, commit, local) {
   const SRC = `psys2 ${commit}`;
   const shards = {};
   const notes = { left: [], changed: [] };
-  const put = (name, about, lines) => {
-    shards[`${name}.sop`] = `${header({ id: `${P}/shards/${name}`, about, sources: [`${SRC} (PSys2 handover/lang.en and worlds/*/lexicon.sop: the English grammar of the demo, the project's own data)`], license: 'CC0-1.0', script: 'tools/import/psys2-lang-en.mjs' })}\n${lines.join('\n')}\n`;
+  const put = (name, about, lines, source = `${SRC} (PSys2 handover/lang.en and worlds/*/lexicon.sop: the English grammar of the demo, the project's own data)`) => {
+    shards[`${name}.sop`] = `${header({ id: `${P}/shards/${name}`, about, sources: [source], license: 'CC0-1.0', script: 'tools/import/psys2-lang-en.mjs' })}\n${lines.join('\n')}\n`;
   };
   // a fact whose id would be that of a wire of the schema (the preposition "in" and the slot w.lang.en.prep.in) gets ".word"
   const taken = new Set(parse(read.schema ?? '').map((w) => w.id));
-  const W = (id, type, entries) => wire(taken.has(`${P}.${id}`) ? `${P}.${id}.word` : `${P}.${id}`, `${P}.${type}`, entries, SRC);
+  const Wof = (src) => (id, type, entries) => wire(taken.has(`${P}.${id}`) ? `${P}.${id}.word` : `${P}.${id}`, `${P}.${type}`, entries, src);
+  const W = Wof(SRC);
   const shard = (f) => parse(read(`handover/lang.en/shards/${f}.sop`));
   const copy = (w, skip = []) => Object.entries(w.attrs).filter(([k]) => !k.startsWith('core.') && !skip.includes(k)).flatMap(([k, vs]) => vs.map(tok).flatMap((v) => (/^[\w-]+(,[\w-]+)+$/.test(String(v)) && !['note', 'doc', 'example'].includes(k) ? v.split(',') : [v]).map((x) => [kk(k), x])));
   const idOf = (w, prefix) => w.id.slice(prefix.length);
@@ -76,7 +77,7 @@ export function importLangEn(read, commit) {
     else if (w.type === 'lang.en.contraction') morph.push(W(`contraction.${idOf(w, 'lang.en.contraction.')}`, 'contraction', copy(w).map(([k, v]) => [k, text(v)])));
     else if (w.type === 'lang.en.contraction.rule') { // "(.+)n't" -> "$1 not": a word that ends so is the word without the ending, then `word`
       const m = /^\(\.\+\)(.+)$/.exec(one(w, 'pattern')), x = /^\$1 (.+)$/.exec(one(w, 'expands'));
-      morph.push(W(`contraction.ending.${seg(m[1].replace("'", ''))}`, 'contraction.ending', [['ending', text(m[1])], ['word', x[1]]]));
+      morph.push(W(`contraction.ending.${seg(m[1].replace("'", ''))}`, 'contraction.ending', [['ending', text(m[1])], ['word', x[1]], ['documentation', 'yes']]));
     }
   }
   notes.changed.push('the contraction rules "(.+)n\'t" -> "$1 not" became `w.lang.en.contraction.ending ending="n\'t" word=not`; the plural rule "consonant+y" became `suffix=y after=consonant`; `pattern=us-plural` became `exception=us-plural` (the nouns of kind us-plural-suffix and us-plural-word)');
@@ -98,6 +99,7 @@ export function importLangEn(read, commit) {
   const np = shard('np');
   const cl = shard('clauses');
   const g = grammar(np, cl, W, notes);
+  notes.changed.push('the constructions of the question frames, joiner, correction, negation and imperative rules, and the contraction endings, carry `documentation=yes`: PSys2 wrote them to document its own readers and reads none of them as data (block 07:40 item 1); they stay, complete');
   put('grammar', 'the grammar as plain productions over categories (noun phrases, coordination, ellipsis, anaphora, questions), the English constructions they belong to, and the words of the categories that are words', g.lines);
 
   // ---- clauses ----
@@ -120,6 +122,27 @@ export function importLangEn(read, commit) {
   const frames = framesOf(fr, W, notes);
   for (const [set, lines] of Object.entries(frames)) put(`frames-${set.replace(/\./g, '-')}`, `the argument frames of the acts of the set ${set}: one frame per way of saying an act, its parts in order (\`w.lang.en.part\`) and its fixed arguments`, lines);
 
+  // ---- what PSys2 wrote after the import, in the same format (src/lang/en.local.mjs; reviewer, block 07:40 item 1) ----
+  let localFrames = 0;
+  if (local) {
+    const LSRC = `psys2 ${local.commit}`;
+    const WL = Wof(LSRC);
+    const lsource = `${LSRC} (PSys2 src/lang/en.local.mjs: frames and joiners written after the import of the hand-over, in the format of this world; the project's own data)`;
+    const lfr = parse(localPart(local.text, 'frames')).map((w) => ({ ...w, type: 'lang.en.frame', id: w.id.replace(/^w\.lang\.en\./, 'lang.en.') }));
+    const known = new Set(fr.filter((w) => one(w, 'act') !== 'own').map((w) => w.id));
+    for (const w of lfr) if (known.has(w.id)) throw new Error(`${w.id}: a frame of the hand-over again`);
+    const bySet = framesOf(lfr, WL, notes, { own: true });
+    for (const [set, lines] of Object.entries(bySet)) {
+      localFrames += lines.filter((l) => / w\.lang\.en\.frame /.test(l)).length;
+      put(set === 'acts' ? 'frames-acts-own' : `frames-${set.replace(/\./g, '-')}`, set === 'acts'
+        ? 'the frames of the act `own`: a sentence that a world reads with its own reader ("Make a diagram shaped like a house"); they name no act of k.actions, and `after` places them among the frames of the set acts'
+        : `the argument frames of the acts of the set ${set}, written after the import: one frame per way of saying an act, its parts in order (\`w.lang.en.part\`) and its fixed arguments`, lines, lsource);
+    }
+    const keep = parse(localPart(local.text, 'joiners')).filter((w) => w.type === 'w.lang.en.joiner.keep');
+    put('joiners-keep', 'words after "and" that continue the noun phrase before it ("Highlight Romania and its neighbours"): a reader does not cut a clause there', keep.map((w) => WL(`joiner.keep.${seg(one(w, 'text'))}`, 'joiner.keep', [['text', one(w, 'text')]])), lsource);
+    notes.changed.push(`the frames and the joiner \`keep\` of PSys2's src/lang/en.local.mjs (commit ${local.commit}), written after the import in this world's format, are imported the same way as the hand-over's frames; the frames of the act \`own\` are taken from there (they carry \`after\`), not from the hand-over`);
+  }
+
   // ---- phrase groups and the lexicons the frames name ----
   const ph = shard('phrases');
   const phr = ph.map((w) => W(`phrase.${idOf(w, 'lang.en.phrase.')}`, 'phrase', [['name', idOf(w, 'lang.en.phrase.')], ['group', text(one(w, 'group'))], ['doc', text(one(w, 'doc'))], ...vals(w, 'item').map((x) => ['item', text(words(x))])]));
@@ -136,7 +159,7 @@ export function importLangEn(read, commit) {
     lex.push(W(`lex.${id.slice(4)}`, 'lex', [['name', id.slice(4)], ['doc', text(one(w, 'doc'))], ...vals(w, 'word').map((x) => ['item', text(words(x))])]));
   }
   put('phrases', 'phrase groups that say how English builds a request, a question, an answer or a negation (politeness, fillers, answers, degree and comparison; undo and redo from worlds/lang.common), and the four small lexicons the frames name', [...phr, ...lex]);
-  return { shards, notes, stats: { frames: Object.values(frames).flat().length, rules: g.rules, constructions: g.constructions } };
+  return { shards, notes, stats: { frames: Object.values(frames).flat().length, localFrames, rules: g.rules, constructions: g.constructions } };
 }
 
 const NO_APOSTROPHE = ['dont', 'doesnt', 'didnt', 'isnt', 'arent', 'wasnt', 'werent', 'cant', 'couldnt', 'wont', 'wouldnt', 'shouldnt', 'hasnt', 'havent', 'hadnt', 'aint'];
@@ -249,6 +272,8 @@ function grammar(np, cl, W, notes) {
     if (one(w, 'status') === 'hole' && FILLED[name]) notes.changed.push(`${name}: no longer a hole: ${FILLED[name]}`);
     if (status) e.push(['status', 'hole']);
     if (FUNCTION[name]) e.push(['function', FUNCTION[name]]);
+    // block 07:40 item 1: the rules of the hand-over's readers (questions, joiners, corrections, negation, imperatives) document them
+    if (t !== 'rule') e.push(['documentation', 'yes']);
     if (one(w, 'doc')) e.push(['doc', text(one(w, 'doc'))]);
     for (const x of (one(w, 'example') ?? '').split(/;\s*/).filter((x) => x && !/^\(none/.test(x))) e.push(['example', text(x)]);
     // the rhs: a rule's rhs keys; a question frame's pattern (words split by spaces)
@@ -297,6 +322,12 @@ function grammar(np, cl, W, notes) {
 // PSys2 names two verb groups otherwise than k.actions names the act: V.set are the verbs of change, V.apart of take apart
 const VERB_ACT = { set: 'change', apart: 'take apart' };
 const LEXNAME = { ATTR: 'attribute', VALUE: 'value', KIND: 'kind', MORE: 'more', LESS: 'less', TURN: 'turn', FACTOR: 'factor', NOUN: 'noun' };
+// One string of PSys2's src/lang/en.local.mjs (`frames: "..."`): read as a JSON string, never run.
+export function localPart(src, key) {
+  const m = new RegExp(`\\b${key}:\\s*("(?:[^"\\\\]|\\\\.)*")`).exec(src);
+  if (!m) throw new Error(`en.local.mjs: no ${key}`);
+  return JSON.parse(m[1]);
+}
 export function patternParts(pattern) {
   const out = [];
   for (const t0 of pattern.trim().split(/\s+/)) {
@@ -309,9 +340,11 @@ export function patternParts(pattern) {
     else if (/^V\.\w+$/.test(t)) Object.assign(p, { is: 'verb', act: VERB_ACT[t.slice(2)] ?? t.slice(2) });
     else if (LEXNAME[t]) Object.assign(p, { is: 'lexicon', lexicon: LEXNAME[t] });
     else if (/^\{/.test(t)) {
-      const m = /^\{(\w+):([\w.]+?)(?:\((\d+)\))?(\?)?\}$/.exec(t);
+      const m = /^\{(\w+):([\w.]+?)(?:\((\d+|quotes)\))?(\?)?\}$/.exec(t);
       if (!m) throw new Error(`capture ${t}`);
-      const [, role, cls, max, opt] = m;
+      const [, role, cls, arg, opt] = m;
+      const max = arg === 'quotes' ? undefined : arg;
+      if (arg === 'quotes') p.quotes = 'yes';
       Object.assign(p, { is: 'role', role });
       if (['words', 'rest', 'number'].includes(cls)) p.takes = cls;
       else if (LEXNAME[cls]) Object.assign(p, { takes: 'lexicon', lexicon: LEXNAME[cls] });
@@ -324,26 +357,28 @@ export function patternParts(pattern) {
       const phrase = alts.filter((a) => a.startsWith('$')).map((a) => a.slice(1).replace(/^lang\./, ''));
       const ws = alts.filter((a) => !a.startsWith('$')).map(words);
       Object.assign(p, phrase.length && !ws.length ? { is: 'phrase', phrase } : { is: 'word', word: ws, ...(phrase.length ? { phrase } : {}) });
+      // "[have]": one word written as a set; the part says so, so that the pattern can be written again as it was
+      if (p.is === 'word' && alts.length === 1 && /^\[/.test(t)) p.listed = 'yes';
     }
     if (optional) p.optional = true;
     out.push(p);
   }
   return out;
 }
-function framesOf(fr, W, notes) {
+function framesOf(fr, W, notes, { own: takeOwn = false } = {}) {
   const bySet = {};
   let tab = 0;
-  const own = fr.filter((w) => one(w, 'act') === 'own');
-  if (own.length) notes.left.push(`the ${own.length} frames of the act \`own\` (${own.map((w) => w.id.slice('lang.en.frame.'.length)).join(', ')}): no act of k.actions; they hand a sentence to a world's own reader (routing in one application), they say nothing of English`);
-  for (const w of fr.filter((x) => one(x, 'act') !== 'own')) {
+  const own = takeOwn ? [] : fr.filter((w) => one(w, 'act') === 'own');
+  if (own.length) notes.changed.push(`the ${own.length} frames of the act \`own\` of the hand-over (${own.map((w) => w.id.slice('lang.en.frame.'.length)).join(', ')}) are not read from it: the same frames are taken from src/lang/en.local.mjs, where they carry \`after\` (block 07:40: published, though they name no act of k.actions)`);
+  for (const w of fr.filter((x) => takeOwn || one(x, 'act') !== 'own')) {
     const set = one(w, 'set'), name = w.id.slice('lang.en.frame.'.length);
-    const e = [['name', name], ['act', one(w, 'act')], ['mode', one(w, 'mode')], ['set', set], ['priority', one(w, 'priority')], ['needs', one(w, 'needs')], ...vals(w, 'role').map((r) => ['role', r]), ['example', text(one(w, 'example'))]];
+    const e = [['name', name], ['act', one(w, 'act')], ['mode', one(w, 'mode')], ['set', set], ['priority', one(w, 'priority')], ['needs', one(w, 'needs')], ...vals(w, 'role').map((r) => ['role', r]), ['after', one(w, 'after')], ['example', text(one(w, 'example'))]];
     if (one(w, 'tab-only') || one(w, 'tab-priority')) tab++;
     const lines = (bySet[set] ??= []);
     lines.push(W(`frame.${name}`, 'frame', e));
     patternParts(one(w, 'pattern')).forEach((p, i) => {
       const pe = [['frame', name], ['at', i + 1], ['is', p.is]];
-      for (const k of ['act', 'role', 'takes', 'lexicon', 'max_words']) if (p[k] !== undefined) pe.push([k, k === 'act' && /\s/.test(p[k]) ? text(p[k]) : p[k]]);
+      for (const k of ['act', 'role', 'takes', 'lexicon', 'max_words', 'quotes', 'listed']) if (p[k] !== undefined) pe.push([k, k === 'act' && /\s/.test(p[k]) ? text(p[k]) : p[k]]);
       for (const x of p.word ?? []) pe.push(['word', text(x)]);
       for (const x of p.phrase ?? []) pe.push(['phrase', x]);
       if (p.optional) pe.push(['optional', 'yes']);
@@ -351,8 +386,8 @@ function framesOf(fr, W, notes) {
     });
     for (const k of Object.keys(w.attrs).filter((x) => x.startsWith('lit.'))) lines.push(W(`fixed.${name}.${k.slice(4)}`, 'fixed', [['frame', name], ['role', k.slice(4)], ['value', text(one(w, k))]]));
   }
-  notes.left.push(`\`tab-only\` and \`tab-priority\` of ${tab} frames: they say how the demo's tabs claim a sentence (an interface of one application)`);
-  notes.changed.push('a frame `pattern` became one `w.lang.en.part` per part, in order (`at`): `is` lead, det, verb (with `act`), word (one of `word`), phrase (a phrase group), lexicon, or role (a capture: `role`, `takes` words, rest, number, prep or lexicon, `max_words`); `optional=yes` for `?`; the verb groups V.set and V.apart are the verbs of the acts change and take apart of k.actions; `lit.<role>=` became `w.lang.en.fixed frame= role= value=`');
+  if (tab) notes.left.push(`\`tab-only\` and \`tab-priority\` of ${tab} frames${takeOwn ? ' written after the import' : ''}: they say how the demo's tabs claim a sentence (an interface of one application)`);
+  notes.changed.push('a frame `pattern` became one `w.lang.en.part` per part, in order (`at`): `is` lead, det, verb (with `act`), word (one of `word`), phrase (a phrase group), lexicon, or role (a capture: `role`, `takes` words, rest, number, prep or lexicon, `max_words`); `optional=yes` for `?`; `quotes=yes` for `rest(quotes)`; `listed=yes` for one word written as a set (`[have]`), so that the pattern can be written again as it was; the verb groups V.set and V.apart are the verbs of the acts change and take apart of k.actions; `lit.<role>=` became `w.lang.en.fixed frame= role= value=`');
   return bySet;
 }
 
@@ -364,13 +399,17 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   // change the cited source silently
   const cited = existsSync(join(DIR, 'IMPORT.md')) ? /from PSys2 commit `([0-9a-f]+)`/.exec(readFileSync(join(DIR, 'IMPORT.md'), 'utf8'))?.[1] : null;
   const commit = arg('commit') ?? cited ?? execFileSync('git', ['-C', from, 'rev-parse', '--short=8', 'HEAD'], { encoding: 'utf8' }).trim();
-  const read = (path) => execFileSync('git', ['-C', from, 'show', `${commit}:${path}`], { encoding: 'utf8', maxBuffer: 1 << 26 });
+  const read = (path, at = commit) => execFileSync('git', ['-C', from, 'show', `${at}:${path}`], { encoding: 'utf8', maxBuffer: 1 << 26 });
   read.schema = readFileSync(join(DIR, 'schema.sop'), 'utf8');
-  const { shards, notes, stats } = importLangEn(read, commit);
+  // src/lang/en.local.mjs: at the commit cited by the last import, or --local-commit, or the last commit that changed it
+  const citedLocal = existsSync(join(DIR, 'IMPORT.md')) ? /src\/lang\/en\.local\.mjs` at commit `([0-9a-f]+)`/.exec(readFileSync(join(DIR, 'IMPORT.md'), 'utf8'))?.[1] : null;
+  const localCommit = arg('local-commit') ?? citedLocal ?? execFileSync('git', ['-C', from, 'log', '-1', '--format=%h', '--abbrev=8', '--', 'src/lang/en.local.mjs'], { encoding: 'utf8' }).trim();
+  const local = { commit: localCommit, text: read('src/lang/en.local.mjs', localCommit) };
+  const { shards, notes, stats } = importLangEn(read, commit, local);
   const dir = join(DIR, 'shards');
   mkdirSync(dir, { recursive: true });
   for (const f of readdirSync(dir)) if (f.endsWith('.sop') && !/^(hand|core)-/.test(f)) rmSync(join(dir, f));
   for (const [f, t] of Object.entries(shards)) writeFileSync(join(dir, f), t);
-  writeFileSync(join(DIR, 'IMPORT.md'), ['# What the import changed in the hand-over', '', `Generated by \`tools/import/psys2-lang-en.mjs\` from PSys2 commit \`${commit}\`; do not edit by hand.`, '', '## Changed (this repository\'s rules)', '', ...notes.changed.map((x) => `- ${x}`), '', '## Left out', '', ...notes.left.map((x) => `- ${x}`), ''].join('\n'));
-  console.log(`${Object.keys(shards).length} shards; ${stats.frames} frame wires; ${stats.rules} productions; ${stats.constructions} constructions`);
+  writeFileSync(join(DIR, 'IMPORT.md'), ['# What the import changed in the hand-over', '', `Generated by \`tools/import/psys2-lang-en.mjs\` from PSys2 commit \`${commit}\` and \`src/lang/en.local.mjs\` at commit \`${localCommit}\`; do not edit by hand.`, '', '## Changed (this repository\'s rules)', '', ...[...new Set(notes.changed)].map((x) => `- ${x}`), '', '## Left out', '', ...[...new Set(notes.left)].map((x) => `- ${x}`), ''].join('\n'));
+  console.log(`${Object.keys(shards).length} shards; ${stats.frames} frame wires; ${stats.localFrames} frames written after the import; ${stats.rules} productions; ${stats.constructions} constructions`);
 }

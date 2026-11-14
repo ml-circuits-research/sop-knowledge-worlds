@@ -31,6 +31,11 @@
 @w.lang.en.role_map.save.value.noun w.lang.en.role_map name=save.value.noun act=save role=value frame=acts.more.save.noun act_role=format doc="Save my picture as SVG" core.source="hand-core 1"
 @w.lang.en.role_map.save.value.download w.lang.en.role_map name=save.value.download act=save role=value frame=acts.more.save.download act_role=format doc="Download the drawing as a PNG" core.source="hand-core 1"
 @w.lang.en.role_map.send.place w.lang.en.role_map name=send.place act=send role=place act_role=recipient doc="Send table 1 to Ann" core.source="hand-core 1"
+# block 07:40: the roles of the frames written after the import (sets acts.text, acts.facts, acts.media)
+@w.lang.en.role_map.pick.kind w.lang.en.role_map name=pick.kind act=pick role=kind act_role=thing doc="A C major chord please: the kind of the thing picked" core.source="hand-core 1"
+@w.lang.en.role_map.pick.value w.lang.en.role_map name=pick.value act=pick role=value act_role=thing doc="A C major chord please: what is said of the thing after its kind" core.source="hand-core 1"
+@w.lang.en.role_map.place.value w.lang.en.role_map name=place.value act=place role=value act_role=place doc="Move the last list to the top: the place in the order" core.source="hand-core 1"
+@w.lang.en.role_map.undo.amount w.lang.en.role_map name=undo.amount act=undo role=amount act_role=number doc="Undo the last 2 changes: how many steps" core.source="hand-core 1"
 
 # ---- prepositions -> k.layouts relations (facts of the same preposition merge with those of shards/prepositions) ----
 @w.lang.en.prep.join.on w.lang.en.prep text=on rel=on layout=on core.source="hand-core 1"

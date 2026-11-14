@@ -148,6 +148,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: CC-BY-SA-4.0
 - Used by: `k.attributes` (1 shards), `k.objects` (18 shards)
 
+## psys2-447a5f9a
+
+- What: what the demo application PSys2 knows about English, collected by PSys2 from seven of its modules as facts: closed word classes (determiners, pronouns, prepositions, small numbers), morphology, clause structure, ellipsis markers, noun-phrase rules, the argument frames of its acts, phrase groups; and four small lexicons and two phrase groups its frames name, from its worlds (`worlds/space/lexicon.sop`, `worlds/acts/lexicon.sop`, `worlds/lang.common/lexicon.sop`). Imported as the reusable world `w.lang.en`.
+- Origin: the PSys2 repository of this project (github.com/ml-circuits-research, private), directory `handover/lang.en/` (README.md, schema.sop, std-grammar.md, shards/*.sop), read from a checkout with `git show <commit>:<path>` (the checkout is never changed).
+- License: CC0-1.0 (the project's own hand-written data; the reviewer's ruling in `worker-tasks.md`, blocks "2026-11-13 22:40" and "2026-11-14 01:20").
+- Attribution: none needed.
+- Shard terms: CC0-1.0
+- Used by: `w.lang.en` (5 shards)
+
 ## psys2-78f45863
 
 - What: what the demo application PSys2 knows about English, collected by PSys2 from seven of its modules as facts: closed word classes (determiners, pronouns, prepositions, small numbers), morphology, clause structure, ellipsis markers, noun-phrase rules, the argument frames of its acts, phrase groups; and four small lexicons and two phrase groups its frames name, from its worlds (`worlds/space/lexicon.sop`, `worlds/acts/lexicon.sop`, `worlds/lang.common/lexicon.sop`). Imported as the reusable world `w.lang.en`.

@@ -22,7 +22,9 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | grammar | 64 constructions (54 of English, 10 helpers) with 84 productions over 53 categories; the 28 words of 16 small categories; coordination words and limits |
 | clauses | joiners and how they cut, frame leads, 13 self-correction markers, bare answers, 11 question words, 14 auxiliaries, negation |
 | frames-acts, -more, -data | 233 argument frames of the acts of `k.actions` with their 1,244 parts and 30 fixed arguments |
-| hand-grammar, hand-joins | what this repository added: 4 constructions with 7 productions (and 4 helpers), the words of AUXNEG, HAVE, IF, THEN; 23 role maps; 15 prepositions joined to k.layouts and 20 new ones |
+| frames-acts-text, -facts, -media, -own | 118 frames PSys2 wrote after the import (`src/lang/en.local.mjs`): 27 of text (`acts.text`: headings, paragraphs, bold, undo the last 2 changes), 62 of facts by lookup (`acts.facts`: 38 questions over any attribute or relation of a place, 20 highlight / pin / line layers, 3 clear, 1 view), 24 of media (`acts.media`: play, loop, add a melody), and the 5 of the act `own`; 707 parts, 47 fixed arguments |
+| joiners-keep | `keep`: a word after "and" that continues the noun phrase before it (its: "Highlight Romania and its neighbours") |
+| hand-grammar, hand-joins | what this repository added: 4 constructions with 7 productions (and 4 helpers), the words of AUXNEG, HAVE, IF, THEN; 27 role maps (4 for the frames written after the import); 15 prepositions joined to k.layouts and 20 new ones |
 | phrases | 81 phrase groups (politeness, fillers, answers, degree, comparison, request and question shapes, undo, redo) and 4 lexicons the frames name |
 
 ## How a host reads it
@@ -44,7 +46,15 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 - **Frames.** One `w.lang.en.frame` per way of saying an act, with its parts in order (`w.lang.en.part frame= at=`):
   `is` lead, det, verb (the verbs of `act` in `k.actions`), word (one of `word`), phrase (a group of
   `w.lang.en.phrase`), lexicon, or role (a capture: `role`, `takes` words, rest, number, prep or lexicon). `needs`
-  is what a world's schema must have for the frame to apply.
+  is what a world's schema must have for the frame to apply. `optional=yes` for a part that may be left out,
+  `max_words`, `quotes=yes` (free text that keeps its quotes), `listed=yes` (one word written as a set, "[have]"), so
+  that a host that reads patterns writes each pattern again exactly as the source wrote it (a test does it for every
+  frame); `after` places a frame right after another of its set where a reader tries them in order. The frames of
+  the act `own` hand a sentence to the reader of a world of its own ("Make a diagram shaped like a house"); they name
+  no act of k.actions.
+- **Documentation.** The constructions of the question frames, joiners, corrections, negation and imperatives and the
+  contraction endings carry `documentation=yes`: the source wrote them to document its own readers, not as data it
+  reads. They stay complete, and the library's parser reads the question productions (a test).
 - **Views.** `in=` keeps the lists PSys2 had in its modules; `grammarView(world, type, view)` gives one,
   `viewDiff` says where two differ, so that unifying them is a measured decision of the application.
 
@@ -76,8 +86,8 @@ right construction and head, with the nouns and adjectives taken from `k.words`.
 
 ## Left out, holes
 
-- Left out (one application's): the tab flags of 5 frames, the 5 frames of the "act" `own` (they hand a sentence to
-  a world's own reader). See IMPORT.md.
+- Left out (one application's): the tab flags (`tab-only`, `tab-priority`) of 6 frames: how the demo's tabs claim a
+  sentence. See IMPORT.md. The 5 frames of the act `own`, left out at first, are published (block 07:40).
 - Filled here (`shards/hand-grammar.sop`): statements with be ("the table is red", construction `s.copula`); the tag
   question ("the table is red, isn't it": negated auxiliaries; it was a hole of the hand-over); relative clauses with
   have ("the table that has four seats"); conditions ("if the table is red then the chair is blue"); standing rules

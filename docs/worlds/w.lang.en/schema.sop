@@ -4,12 +4,13 @@
 # the acts of k.actions, and phrase groups. Open-class words are not here: nouns and adjectives are k.words, verbs
 # k.actions, number words and colours k.values. A parser that applies this world is the library's std.grammar
 # (soplang-words-lib); a category is read from the facts of the type its `w.lang.en.cat` names (`type=`).
-# sources: psys2 78f45863 (PSys2 handover/lang.en, the demo's English as facts; CC0); hand-core 1 (what this
+# sources: psys2 78f45863 (PSys2 handover/lang.en, the demo's English as facts; CC0); psys2 447a5f9a (PSys2
+#   src/lang/en.local.mjs: frames and joiners written after the import, in this world's format; CC0); hand-core 1 (what this
 #   repository added: the types of parts, constructions, categories and words, and the slot lines)
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=1 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -134,6 +135,7 @@
 @w.lang.en.contraction.ending core.type of=w.lang.en.contraction.ending shared=true closed=true core.source="hand-core 1"
 @w.lang.en.contraction.ending.ending core.slot of=w.lang.en.contraction.ending key=ending id=true required=true kind=string core.source="hand-core 1"
 @w.lang.en.contraction.ending.word core.slot of=w.lang.en.contraction.ending key=word required=true kind=atom core.source="hand-core 1"
+@w.lang.en.contraction.ending.documentation core.slot of=w.lang.en.contraction.ending key=documentation enum=yes core.source="hand-core 1"
 
 # ---- the grammar ----
 # A category. A closed class names the type whose `text` facts are its words (`type`); NUM also takes digits
@@ -176,6 +178,9 @@
 @w.lang.en.construction.function core.slot of=w.lang.en.construction key=function kind=atom core.source="hand-core 1"
 @w.lang.en.construction.status core.slot of=w.lang.en.construction key=status enum=hole core.source="hand-core 1"
 @w.lang.en.construction.doc core.slot of=w.lang.en.construction key=doc kind=string core.source="hand-core 1"
+# `documentation=yes`: the source wrote it to document how its own reader works (questions, joiners, corrections,
+# negation, imperatives), not as data it reads; its productions are complete, and a parser may read them.
+@w.lang.en.construction.documentation core.slot of=w.lang.en.construction key=documentation enum=yes core.source="hand-core 1"
 @w.lang.en.construction.example core.slot of=w.lang.en.construction key=example many=true kind=string core.source="hand-core 1"
 
 # An argument frame: one way of saying an act of k.actions (`act`, `mode`), its parts in order (`w.lang.en.part`),
@@ -186,16 +191,23 @@
 @w.lang.en.frame.name core.slot of=w.lang.en.frame key=name id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.frame.act core.slot of=w.lang.en.frame key=act required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.frame.mode core.slot of=w.lang.en.frame key=mode kind=atom core.source="psys2 78f45863"
-@w.lang.en.frame.set core.slot of=w.lang.en.frame key=set required=true enum=acts enum=acts.more enum=acts.data core.source="psys2 78f45863"
+@w.lang.en.frame.set core.slot of=w.lang.en.frame key=set required=true enum=acts enum=acts.more enum=acts.data enum=acts.text enum=acts.facts enum=acts.media core.source="psys2 78f45863"
 @w.lang.en.frame.priority core.slot of=w.lang.en.frame key=priority required=true kind=integer core.source="psys2 78f45863"
 @w.lang.en.frame.needs core.slot of=w.lang.en.frame key=needs kind=atom core.source="psys2 78f45863"
 @w.lang.en.frame.role core.slot of=w.lang.en.frame key=role many=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.frame.example core.slot of=w.lang.en.frame key=example kind=string core.source="psys2 78f45863"
+# `after`: the frame of the same set this one comes right after, where the order of the frames matters to a reader
+# that tries them in order. The frames of the act `own` hand a sentence to the reader of a world of its own ("Make a
+# diagram shaped like a house"): they name no act of k.actions.
+@w.lang.en.frame.after core.slot of=w.lang.en.frame key=after kind=atom core.source="psys2 447a5f9a"
 # A part of a frame, at place `at`. `is`: lead (an optional polite lead-in, the phrase group `phrase`), det (an
 # optional determiner), verb (a verb of the act `act`, from k.actions), word (one of the words `word`, or of the
 # phrase groups `phrase`), phrase (one phrase of the groups `phrase`), lexicon (a word of the world's lexicon
 # `lexicon`), role (a capture of the role `role`: `takes` words (a noun phrase), rest (the rest of the sentence),
 # number, prep (a preposition that is a relation) or lexicon; at most `max_words` words). `optional=yes`: may be left out.
+# `quotes=yes` on a role that takes the rest: the free text keeps the quotes and the closing punctuation around it
+# ("Hello there." said the fox). `listed=yes` on a word part: its words were written as a set of alternatives, even
+# when there is one ("[have]"), so that a host can write the pattern again as the source wrote it.
 @w.lang.en.part core.type of=w.lang.en.part shared=true closed=true core.source="hand-core 1"
 @w.lang.en.part.frame core.slot of=w.lang.en.part key=frame id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.part.at core.slot of=w.lang.en.part key=at id=true required=true kind=integer min=1 core.source="hand-core 1"
@@ -208,6 +220,8 @@
 @w.lang.en.part.word core.slot of=w.lang.en.part key=word many=true kind=string core.source="hand-core 1"
 @w.lang.en.part.phrase core.slot of=w.lang.en.part key=phrase many=true kind=atom core.source="hand-core 1"
 @w.lang.en.part.optional core.slot of=w.lang.en.part key=optional enum=yes core.source="hand-core 1"
+@w.lang.en.part.quotes core.slot of=w.lang.en.part key=quotes enum=yes core.source="hand-core 1"
+@w.lang.en.part.listed core.slot of=w.lang.en.part key=listed enum=yes core.source="hand-core 1"
 # The join from the roles of the frames to the roles of the acts of k.actions: in a frame of `act`, the role `role`
 # is the k.actions role `act_role`; `marker=yes` when it captures the preposition that marks that role (the rel of
 # "at table 1" marks the place). A map with `frame` holds for that frame only; one with `takes` for the parts that
@@ -247,6 +261,10 @@
 @w.lang.en.joiner.cut core.slot of=w.lang.en.joiner key=cut enum=yes enum=no core.source="psys2 78f45863"
 @w.lang.en.joiner.card_cut core.slot of=w.lang.en.joiner key=card_cut enum=yes enum=no core.source="psys2 78f45863"
 @w.lang.en.joiner.note core.slot of=w.lang.en.joiner key=note kind=string core.source="psys2 78f45863"
+# Words after "and" that continue the noun phrase before it ("Highlight Romania and its neighbours"): a splitter does
+# not cut a clause there, and "its" points back at the noun before "and".
+@w.lang.en.joiner.keep core.type of=w.lang.en.joiner.keep shared=true closed=true core.source="psys2 447a5f9a"
+@w.lang.en.joiner.keep.text core.slot of=w.lang.en.joiner.keep key=text id=true required=true kind=atom kind=string core.source="psys2 447a5f9a"
 # Words before a comma that open a standing rule ("From now on, squares are grey"): that comma ends no clause.
 @w.lang.en.frame_lead core.type of=w.lang.en.frame_lead shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.frame_lead.text core.slot of=w.lang.en.frame_lead key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"

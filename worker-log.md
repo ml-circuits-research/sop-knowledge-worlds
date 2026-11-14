@@ -3395,3 +3395,31 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - After the rebase on the first worker's drawings, preview names and lessons (bc16d37, ac676e5, 3045bdb): index.json
   taken from main, `npm run build` rerun; vocab 24,282 words (main 24,280 + the two words). npm test 2,873: 2,868
   pass, 5 skipped, 0 fail.
+
+## Block 07:40 item 1 (2026-11-14, second worker): the frames and the joiner PSys2 wrote after the import
+
+- Took block 07:40 items 1-4 (the reviewer's split of 08:00); this is item 1. Read in /tmp/wt2: questions.md "w.lang.en
+  vs the hand-over", "geo.map switch: frames and a joiner fact", the [KNOW] lines of "Q12 ... lessons to forward",
+  and `src/lang/en.local.mjs` (read as data: its strings are parsed as JSON, never run). Cited at the last commit that
+  changed it, `447a5f9a` (IMPORT.md); the hand-over stays at 78f45863 (it was deleted from PSys2 after that).
+- **118 frames, not 84:** the file has grown since the reviewer's count: 27 `acts.text`, 62 `acts.facts` (38 ask, 20
+  layer, 3 clear, 1 view; the reviewer counted 7 + 28 + 17), 24 `acts.media` (play, loop, add a melody: new since the
+  block) and the 5 of the act `own`. All are published, by the import, as the hand-over's frames are: shards
+  `frames-acts-text` (27 frames, 159 parts, 7 fixed), `frames-acts-facts` (62, 409, 34), `frames-acts-media` (24, 121,
+  6), `frames-acts-own` (5, 18), `joiners-keep` (`w.lang.en.joiner.keep text=its`, new type).
+- **The notation kept as facts, not as values:** a one-word set (`[have]`) is `listed=yes` on its part, and
+  `{value:rest(quotes)}` is `quotes=yes`; a test writes the pattern of each of the 118 frames back from its parts as
+  PSys2's `patternOf` does and gets the pattern as written (whitespace aside), and every part of every frame reads
+  back to the same parts. 16 parts of the hand-over's frames gained `listed=yes` (the `[have]` loss PSys2 reported).
+- `after` (new slot) on the 5 frames of `own` (a test: it names a frame of the same set); `own` frames name no act of
+  k.actions (tests changed: `own` needs `reader` and is of the set `acts`); `tab-only` / `tab-priority` of 6 frames
+  still left out (one application's interface; IMPORT.md).
+- 4 role maps (hand-joins) for the roles the new frames use that k.actions names otherwise: pick kind and value ->
+  thing ("A C major chord please"), place value -> place ("move the last list to the top"), undo amount -> number.
+- **Documentation:** the constructions of the hand-over's question frames, joiner, correction, negation and imperative
+  rules (13) and the 6 contraction endings carry `documentation=yes` (new slots); they stay complete, and the
+  library still parses the question shapes (test unchanged).
+- w.lang.en version 2: schema + `after`, `quotes`, `listed`, two `documentation` slots, `joiner.keep`, the three sets.
+- Numbers: w.lang.en 16 -> 21 shards (+898 lines of facts, 163,181 bytes; the largest new shard `frames-acts-facts`
+  510 wires, 91,099 bytes), schema version 2; frames 233 -> 351. Catalog 25 worlds, 941 -> 946 shards, vocab 24,282
+  words. npm test 2,875: 2,870 pass, 5 skipped, 0 fail.

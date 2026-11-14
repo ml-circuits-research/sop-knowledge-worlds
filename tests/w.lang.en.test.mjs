@@ -9,7 +9,7 @@ import { execFileSync } from 'node:child_process';
 import { parse } from '../tools/sopworld/sopworld.mjs';
 import { scanWorlds, fullWorld, REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { World, parseText, nounPhrase, grammarView, viewDiff } from '../tools/sopworld/sopworld.mjs';
-import { importLangEn, patternParts } from '../tools/import/psys2-lang-en.mjs';
+import { importLangEn, patternParts, localPart } from '../tools/import/psys2-lang-en.mjs';
 import { inflect, hostOptions, hostLexicon } from '../tools/lib/lang-en.mjs';
 
 const worlds = scanWorlds();
@@ -28,10 +28,10 @@ test('w.lang.en: std.grammar is read with the one pinned build, the same for eve
 });
 
 test('w.lang.en: the import is reproducible from the cited PSys2 commit (skipped without the checkout)', { skip: !existsSync('/tmp/wt2/.git') && 'no PSys2 checkout at /tmp/wt2' }, () => {
-  const commit = /# sources: psys2 ([0-9a-f]+)/.exec(lang.shards[0].text)[1];
-  const read = (path) => execFileSync('git', ['-C', '/tmp/wt2', 'show', `${commit}:${path}`], { encoding: 'utf8', maxBuffer: 1 << 26 });
+  const [, commit, localCommit] = /from PSys2 commit `([0-9a-f]+)` and `src\/lang\/en\.local\.mjs` at commit `([0-9a-f]+)`/.exec(readFileSync(join(WORLDS_DIR, 'w.lang.en/IMPORT.md'), 'utf8'));
+  const read = (path, at = commit) => execFileSync('git', ['-C', '/tmp/wt2', 'show', `${at}:${path}`], { encoding: 'utf8', maxBuffer: 1 << 26 });
   read.schema = lang.schemaText;
-  const { shards } = importLangEn(read, commit);
+  const { shards } = importLangEn(read, commit, { commit: localCommit, text: read('src/lang/en.local.mjs', localCommit) });
   for (const [f, text] of Object.entries(shards)) assert.equal(text, readFileSync(join(WORLDS_DIR, 'w.lang.en/shards', f), 'utf8'), f);
 });
 
@@ -76,7 +76,10 @@ test('w.lang.en: frames have their parts in order, name acts and roles of k.acti
   for (const p of of('part')) (parts.get(one(p, 'frame')) ?? parts.set(one(p, 'frame'), []).get(one(p, 'frame'))).push(Number(one(p, 'at')));
   for (const f of of('frame')) {
     const name = one(f, 'name');
-    assert.ok(acts.has(one(f, 'act')), `${name}: act ${one(f, 'act')} of k.actions`);
+    // block 07:40: the frames of the act `own` hand a sentence to a world's own reader and name no act of k.actions
+    if (one(f, 'act') === 'own') assert.ok(one(f, 'needs') === 'reader' && one(f, 'set') === 'acts', `${name}: own`);
+    else assert.ok(acts.has(one(f, 'act')), `${name}: act ${one(f, 'act')} of k.actions`);
+    if (one(f, 'after')) assert.ok(of('frame').some((g) => one(g, 'name') === one(f, 'after') && one(g, 'set') === one(f, 'set')), `${name}: after a frame of its set`);
     assert.deepEqual(parts.get(name).sort((a, b) => a - b), parts.get(name).map((_, i) => i + 1), `${name}: parts 1..n`);
   }
   for (const p of of('part')) {
@@ -91,7 +94,7 @@ test('w.lang.en joins k.actions: every role of every frame is a role of its act 
   const maps = of('role_map');
   const partOf = (frame, role) => of('part').find((p) => one(p, 'frame') === frame && one(p, 'role') === role);
   let mapped = 0, same = 0;
-  for (const f of of('frame')) for (const r of v(f, 'role')) {
+  for (const f of of('frame').filter((x) => one(x, 'act') !== 'own')) for (const r of v(f, 'role')) {
     const name = one(f, 'name'), act = one(f, 'act'), takes = one(partOf(name, r) ?? { attrs: {} }, 'takes');
     const m = maps.find((x) => one(x, 'frame') === name && one(x, 'role') === r)
       ?? maps.find((x) => !one(x, 'frame') && one(x, 'act') === act && one(x, 'role') === r && one(x, 'takes') === takes)
@@ -157,6 +160,59 @@ test('w.lang.en: a frame pattern of the hand-over and its parts', () => {
   assert.deepEqual(patternParts('[what_s|let_s_have|i_d_like]? {amount:lex.space.amounts?} {rest:words(14)}'), [
     { is: 'word', word: ["what's", "let's have", "i'd like"], optional: true }, { is: 'role', role: 'amount', takes: 'lexicon', lexicon: 'space.amounts', optional: true },
     { is: 'role', role: 'rest', takes: 'words', max_words: '14' }]);
+});
+
+// The pattern of a frame written again from its parts, as a host that reads patterns writes it (the inverse of
+// patternParts): `listed` keeps "[have]", `quotes` keeps "rest(quotes)".
+const LEXROLE = { attribute: 'ATTR', value: 'VALUE', kind: 'KIND', more: 'MORE', less: 'LESS', turn: 'TURN', factor: 'FACTOR', noun: 'NOUN' };
+const VERBS = { change: 'set', 'take apart': 'apart' };
+const patternOf = (parts) => parts.map((p) => {
+  const opt = one(p, 'optional') === 'yes' ? '?' : '';
+  const chunk = (x) => x.replace(/[ ']/g, '_');
+  const lex = (n) => LEXROLE[n] ?? `lex.${n}`;
+  switch (one(p, 'is')) {
+    case 'lead': return 'L';
+    case 'det': return 'D';
+    case 'verb': return `V.${VERBS[one(p, 'act')] ?? one(p, 'act')}`;
+    case 'phrase': return `[${v(p, 'phrase').map((x) => `$lang.${x}`).join('|')}]${opt}`;
+    case 'lexicon': return `${lex(one(p, 'lexicon'))}${opt}`;
+    case 'word': { const ws = [...v(p, 'word').map(chunk), ...v(p, 'phrase').map((x) => `$lang.${x}`)]; return ws.length === 1 && !opt && one(p, 'listed') !== 'yes' ? ws[0] : `[${ws.join('|')}]${opt}`; }
+    case 'role': {
+      if (one(p, 'takes') === 'prep' && one(p, 'role') === 'rel') return 'REL';
+      const arg = one(p, 'max_words') ?? (one(p, 'quotes') === 'yes' ? 'quotes' : null);
+      return `{${one(p, 'role')}:${one(p, 'takes') === 'lexicon' ? lex(one(p, 'lexicon')) : one(p, 'takes')}${arg ? `(${arg})` : ''}${opt}}`;
+    }
+    default: throw new Error(one(p, 'is'));
+  }
+}).join(' ');
+
+test('w.lang.en (block 07:40): every frame of src/lang/en.local.mjs is published, with parts that give its pattern back (skipped without the checkout)', { skip: !existsSync('/tmp/wt2/.git') && 'no PSys2 checkout at /tmp/wt2' }, () => {
+  const [, localCommit] = /src\/lang\/en\.local\.mjs` at commit `([0-9a-f]+)`/.exec(readFileSync(join(WORLDS_DIR, 'w.lang.en/IMPORT.md'), 'utf8'));
+  const src = execFileSync('git', ['-C', '/tmp/wt2', 'show', `${localCommit}:src/lang/en.local.mjs`], { encoding: 'utf8' });
+  const local = parse(localPart(src, 'frames'));
+  const partsOf = (name) => of('part').filter((p) => one(p, 'frame') === name).sort((a, b) => one(a, 'at') - one(b, 'at'));
+  for (const w of local) {
+    const name = one(w, 'name');
+    const f = of('frame').find((x) => one(x, 'name') === name);
+    assert.ok(f, name);
+    for (const k of ['act', 'mode', 'set', 'priority', 'needs', 'after', 'example']) assert.equal(one(f, k), one(w, k), `${name}: ${k}`);
+    assert.deepEqual(v(f, 'role'), v(w, 'role'), `${name}: roles`);
+    assert.equal(patternOf(partsOf(name)), one(w, 'pattern').trim().split(/\s+/).join(' '), `${name}: pattern`);
+    for (const k of Object.keys(w.attrs).filter((x) => x.startsWith('lit.'))) assert.equal(one(of('fixed').find((x) => one(x, 'frame') === name && one(x, 'role') === k.slice(4)), 'value'), one(w, k), `${name}: ${k}`);
+  }
+  assert.equal(local.length, 118);
+  assert.deepEqual(of('joiner.keep').map((j) => one(j, 'text')), parse(localPart(src, 'joiners')).map((j) => one(j, 'text')));
+});
+
+test('w.lang.en: the parts of every frame give a pattern that reads back to the same parts', () => {
+  const byFrame = new Map();
+  for (const p of of('part')) (byFrame.get(one(p, 'frame')) ?? byFrame.set(one(p, 'frame'), []).get(one(p, 'frame'))).push(p);
+  for (const [name, ps] of byFrame) {
+    ps.sort((a, b) => one(a, 'at') - one(b, 'at'));
+    const again = patternParts(patternOf(ps));
+    assert.deepEqual(again.map((p) => p.is), ps.map((p) => one(p, 'is')), name);
+    assert.deepEqual(again.map((p) => p.listed ?? null), ps.map((p) => one(p, 'listed') ?? null), `${name}: listed`);
+  }
 });
 
 test('w.lang.en joins k.values: the numerals and ordinals agree with k.values.number', () => {

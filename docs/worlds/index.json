@@ -1,5 +1,5 @@
 {
- "version": "709ac40e9154",
+ "version": "c79aa8389b05",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -54338,7 +54338,7 @@
   },
   {
    "id": "w.lang.en",
-   "version": "1",
+   "version": "2",
    "schema": "w.lang.en/schema.sop",
    "exports": [
     "w.lang.en.anaphor",
@@ -54367,6 +54367,7 @@
     "w.lang.en.inflect",
     "w.lang.en.irregular",
     "w.lang.en.joiner",
+    "w.lang.en.joiner.keep",
     "w.lang.en.lex",
     "w.lang.en.neg",
     "w.lang.en.neg.imperative",
@@ -54780,10 +54781,34 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/frames-acts-facts",
+     "path": "w.lang.en/shards/frames-acts-facts.sop",
+     "wires": 505,
+     "bytes": 91099,
+     "keys": [],
+     "sources": [
+      "psys2-447a5f9a"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/frames-acts-media",
+     "path": "w.lang.en/shards/frames-acts-media.sop",
+     "wires": 151,
+     "bytes": 32562,
+     "keys": [],
+     "sources": [
+      "psys2-447a5f9a"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/frames-acts-more",
      "path": "w.lang.en/shards/frames-acts-more.sop",
      "wires": 630,
-     "bytes": 115189,
+     "bytes": 115288,
      "keys": [],
      "sources": [
       "psys2-78f45863"
@@ -54792,10 +54817,34 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/frames-acts-own",
+     "path": "w.lang.en/shards/frames-acts-own.sop",
+     "wires": 23,
+     "bytes": 4241,
+     "keys": [],
+     "sources": [
+      "psys2-447a5f9a"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/frames-acts-text",
+     "path": "w.lang.en/shards/frames-acts-text.sop",
+     "wires": 193,
+     "bytes": 34790,
+     "keys": [],
+     "sources": [
+      "psys2-447a5f9a"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/frames-acts",
      "path": "w.lang.en/shards/frames-acts.sop",
      "wires": 486,
-     "bytes": 74614,
+     "bytes": 74691,
      "keys": [],
      "sources": [
       "psys2-78f45863"
@@ -54807,7 +54856,7 @@
      "id": "w.lang.en/shards/grammar",
      "path": "w.lang.en/shards/grammar.sop",
      "wires": 257,
-     "bytes": 41400,
+     "bytes": 41634,
      "keys": [
       "'s",
       "all",
@@ -54885,8 +54934,8 @@
     {
      "id": "w.lang.en/shards/hand-joins",
      "path": "w.lang.en/shards/hand-joins.sop",
-     "wires": 65,
-     "bytes": 10198,
+     "wires": 69,
+     "bytes": 11051,
      "keys": [
       "above",
       "according to",
@@ -54968,10 +55017,24 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/joiners-keep",
+     "path": "w.lang.en/shards/joiners-keep.sop",
+     "wires": 1,
+     "bytes": 489,
+     "keys": [
+      "its"
+     ],
+     "sources": [
+      "psys2-447a5f9a"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/morphology",
      "path": "w.lang.en/shards/morphology.sop",
      "wires": 73,
-     "bytes": 9192,
+     "bytes": 9300,
      "keys": [
       "'d",
       "'ll",
@@ -55157,6 +55220,7 @@
    ],
    "sources": [
     "hand-core-1",
+    "psys2-447a5f9a",
     "psys2-78f45863",
     "wordnet-3.1"
    ],
