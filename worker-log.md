@@ -5197,3 +5197,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Declared joins: 190 in 30 worlds, 6,294 of 6,352 values meet (99.1 %), 0 broken.
 - Full suite of the round (`npm run test:all` on 094c411, the tip of this round before the last rebase): 81 files,
   3,111 tests, 3,105 pass, 0 fail, 6 skipped, 490 s. Lessons of the round appended to docs/lessons.md.
+
+## 2026-11-15 — third worker: full suite at the end of the round
+
+- `npm run test:all` on c7333aa: 81 files, 3,111 tests, 3,103 pass, 0 fail, 8 skipped, 444 s. Slowest (`npm run
+  test:slow`): derived 42.0 s (2.9 GB), questions 41.7 s, k.attributes 32.3 s, k.cores 25.6 s, gallery 25.5 s; the
+  files of this round are under 1 s (w.lang.en.diagram-frames 0.5 s; w.lang.en.frames 2.6 s).
