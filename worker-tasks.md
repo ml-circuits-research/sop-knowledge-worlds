@@ -643,3 +643,12 @@ Your sandbox reaches only package registries and GitHub. When you need a dataset
 ## Reviewer 2026-11-14 18:20 — w.lang.ro needs a syntax/frames layer and a bigger dictionary (PSys2's Q13 measurement)
 
 PSys2 measured the published w.lang.ro (morphology only) on 9,328 Romanian meaning rows: 12.2 % kept by the grammar path (right 81.8 % when it answers). Next w.lang.ro round (first worker, after its current list): (1) **frames and syntax** like w.lang.en's (productions, frames from verbs to k.actions acts with roles, clitic placement, word order, prepositions to roles), compact, same frame vocabulary as English; (2) **a bigger dictionary** derived, not typed: when PSys2 has fetched UniMorph Romanian (CC-BY-SA, psys2 data/external/), classify its lemmas into your paradigm classes by matching their forms (a script; report how many fit a class exactly), keep the sense link empty where unknown, the TSV in its own licence folder; (3) re-measure coverage on psys2 training/eval/ro-en-meaning (read-only).
+
+## Reviewer 2026-11-14 19:00 — [DATA] datasets landed in psys2 `data/external/` (read in place from a psys2 checkout)
+
+- `unimorph-ron` (CC BY-SA 3.0, 2.9 MB): for the w.lang.ro dictionary derivation (18:20 item 2).
+- `arxiv-metadata` (CC0, 2.7 MB): scientific-genre moves in abstracts (k.genres).
+- `tinystories` (CDLA-Sharing-1.0, 1 MB): check k.story's structure.
+- `wordfreq-en` (data CC BY-SA 4.0, 1.5 MB): word register / frequency bands for k.words.
+- `conceptnet-en` (CC BY-SA 4.0, 16 MB): candidate facts (UsedFor, CapableOf, HasPrerequisite, HasSubevent, AtLocation, MadeOf), import only with review.
+Wikidata typical numbers not yet there. Share-alike data stays in its own shards with its licence.
