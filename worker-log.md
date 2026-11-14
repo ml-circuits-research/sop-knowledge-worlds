@@ -3491,3 +3491,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   0 fail (a first run was cut off by a session restart and rerun).
 - Rebased on the first worker's world schemas (2b5505e) and two reviewer blocks: index.json taken from main and rebuilt;
   vocab 24,309 words. npm test 2,882: 2,875 pass, 7 skipped, 0 fail.
+
+## k.procedures, the format first (2026-11-14, first worker; block "09:10")
+
+- Took block "09:10" (reviewer 09:55: next for the first worker). Read the library's Round 29 (`std.plan`): its
+  questions.md has no design note yet, so the format of methods is written here as **Q44** for it to answer: seven
+  types (method, goal, binding, match, step, arg, condition), alternatives chosen by world, preconditions, rank and
+  name; decomposition to depth 3, at most 200 acts; four points left to the library (role -> argument map, history
+  and answer keys, the order `of` is looked up, kind-chain matching).
+- Nothing built yet in this commit; the world follows in the next ones. No test run (questions.md and the log only).

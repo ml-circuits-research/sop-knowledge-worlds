@@ -118,6 +118,65 @@ Blocking: no. Meanwhile: the schemas are written for 0.30 and already carry what
 (`state=`, the slot a seat is placed through); the steps that need a later release are tests skipped with the
 release named, and they run as soon as the build moves.
 
+## Q44 (block "09:10", `k.procedures`, first worker, 2026-11-14): the format of methods, for the library's `std.plan`
+Question: is the format below the one `std.plan` (library Round 29) reads? The library has no design note yet (its
+questions.md and worker-tasks.md name only the round), so this is written for it to answer or amend.
+Context: a **method** says how a goal is reached, as facts only (no rule, no function): `k.procedures`, a knowledge
+world. Seven types, one home per fact, every value a plain name, number or binding name (no notation):
+1. `k.procedures.method name= about= act= world= rank= example=`: `act` (one of the 16 acts of `k.actions`) is the
+   goal's act; `world` (optional) a world schema the method acts in (`w.seating`): the method applies only when the
+   live world is of that schema; `rank` (default 1) orders methods of one goal when more than one applies.
+2. `k.procedures.goal method= role= from= by= value= kind= rel= anchor= needed= default=`: what the goal's role
+   (a `k.actions` role of `act`: make: kind, number, place, value, part, material; place: thing, place ...) must be
+   for the method to apply: `from` a knowledge type whose fact the filler names (by `name`, or the key `by`);
+   `value` the filler itself (a named task is a goal `role=kind value="family photo"`); `kind` the filler's kind;
+   `rel` the relation of a place (on, in, around); `anchor` an anchor kind of `k.layouts` the filler's kind has
+   (seat, surface). `default` is used when the goal does not say the role; `needed=true`: the planner asks for it.
+3. `k.procedures.binding method= name= goal= step= from= key= live= history= upto= value=`: a name the steps use,
+   bound to exactly one source: the filler of a goal role (`goal=<role>`, or its default); what step n made
+   (`step=n`; for an `ask` step, its answer rows); the facts of a knowledge type (`from=k.scenes.has`, as
+   `std.know.fill from=`) that pass the binding's matches; the things of the live world (`live=<kind>`, or
+   `live=any`); the acts done so far, oldest first (`history=true`: keys `act`, `thing`, `at`); the whole numbers
+   1..n of another binding (`upto=<binding>`); a literal (`value=`). `key=` takes that key's values (many keys
+   flattened) instead of the whole facts.
+4. `k.procedures.match method= binding= key= value= equals= equals_key= present=`: a filter on a `from` or `live`
+   binding: the key's value is `value`, or one of the values of the binding `equals` (of its key `equals_key`),
+   compared by name and up the kind chain (`k.kinds` `is_a`; a `k.people` kind's `age`); `present=false`: the key
+   is not said. Inside a step that repeats over a binding, that binding stands for its current value.
+5. `k.procedures.step method= n= act= each= after= expand= optional= about=`: one act; `each=<binding>` repeats it
+   for every value (none: the step is not done); `after` (many) the steps it comes after (none said: unordered);
+   `expand=false`: done as the act itself, never by another method (needed where a step has the method's own goal,
+   such as "make a doctor" inside the method for a person of a role); `optional=true`: the plan goes on without
+   it when it cannot be done.
+6. `k.procedures.arg method= step= role= attribute= binding= key= else_key= value= rel= of=`: one role of a step
+   (a `k.actions` role of its act; for `value`, `attribute` names the attribute it sets): from a binding (its value,
+   or its key `key`, or `else_key` where the fact does not say `key`) or a literal `value`; `rel` the relation of a
+   place; `of=<binding>`: the value is a part or an anchor of that thing ("the seat of the swing": `value=seat
+   of=swing rel=on`), found in `k.layouts.anchor`, `k.wearables.place` (for a person) or `k.objects.part`.
+7. `k.procedures.condition method= n= step= when= fact= thing= other= attribute= value=`: `when=before` is a
+   precondition (of the method: it applies only if; of a step: the step is done only if, else left out), `when=after`
+   an effect (checked after the plan). `fact`: `exists` / `absent` (a thing of the binding `thing` is in the live
+   world, or the binding has a value), `on`, `inside`, `grouped` (`thing` with `other`), `has` (`thing` says
+   `attribute`, with `value` if given).
+Kinds in args are plain names (`table`, `hat`); the live world's schema resolves them (`w.seating.table`,
+`w.face.hat`), as it resolves a kind word. **Alternatives** are the methods of one goal (same act, goal facts that
+all fit): the planner drops those whose `world` is another schema or whose preconditions fail, then takes the lowest
+`rank`, then the first by name (deterministic); when none applies, the refusal names each one with its failing
+condition, and a missing needed role becomes one question. **Decomposition**: a step is expanded when a method's goal
+fits it (unless `expand=false`), to a depth of 3; a plan has at most 200 acts (the budget); each `each` is bounded by
+its binding. The plan is applied as one `act([...])`, with `why` naming the method and the step. Things a plan makes
+are named as the library names them (`swing1`, `person1`), so a test's expected step list is the acts in order:
+`make kind=swing`, `make kind=person`, `place thing=person1 place=seat of=swing1 rel=on`.
+Four points for the library to decide: (a) the map from a `k.actions` role to a `std.acts` argument (make: number ->
+`amount`, value + attribute -> the attribute; place: place + rel + of -> `at` or `rel` and `ref`; connect: thing,
+target -> `a`, `b`; group: thing, group -> `things`, `name`; "take apart" a group -> `ungroup`): here, as facts, or in
+the library next to `w.lang.en.role_map`? (b) the keys of `history` and of an ask step's answer rows (`kind`,
+`count`); (c) the order in which `of` is looked up (anchor, wearable place, drawing part); (d) whether "compared up
+the kind chain" in matches is `std.know`'s job (here only a test oracle does it).
+Blocking: no. Meanwhile: the world is written in this format; its tests expand each test goal with a reference
+reader (`tools/lib/plan.mjs`, a test oracle that reads the facts, not a planner for hosts) and compare the act lists;
+the format changes when the library answers.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").
