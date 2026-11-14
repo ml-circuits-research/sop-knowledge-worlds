@@ -3612,3 +3612,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   identity keys a type declares itself, so the 62 roles (whose `name` is now inherited from k.kinds.kind) became one
   fact and every role wore everything; it now takes the identity keys of the type a type extends, as derive.mjs does
   (4 k.procedures tests failed, 15 pass now). Catalog 26 worlds, 950 shards, vocab 24,490 words. npm test 2,903: 2,896 pass, 7 skipped, 0 fail.
+
+## Block 06:55 item 2, first step (2026-11-14, second worker): the one build moved to sopworld 0.52.0 (b44d444)
+
+- The block asks for 0.34+; the library's current release is 0.52.0 (b44d444), and the reviewer's block "11:35" asks
+  for 0.52 (Q43). `tools/sopworld/sopworld.mjs` is that release's `docs/sopworld.mjs`; VERSION with commit, build
+  c1f4d8ca7c1f and sha256 349ad76a...; index.json `sopworld: b44d444`; README, docs/index.html, docs/worlds/README.md,
+  w.lang.en WORLD.md and the version test say 0.52.0. AGENTS.md still names 0.30.0 at 42b3456: an instruction file
+  for agents, left for the reviewer to change.
+- **What changed on 0.52:** validate 976 files, 0 errors, the same 4 `ambiguous-key` warnings as on 0.30 (k.kinds'
+  `name`; removed in the next step). No shard, generated file or test result changed but the two tests of
+  `tests/w.schemas.test.mjs` that were skipped as "needs sopworld 0.33 / 0.37 or later" (Q43): both now run and pass
+  (the guest placed into a seat through its slot; acts on the map view with no thing). The derived shards, catalog
+  and reports rebuild byte-identical (only the catalog's `sopworld` field changed).
+- Skips: 5 here (4 imports whose raw files this clone lacks: DiceBear, Noto, OpenMoji, Mulberry; the PSys2 page at its
+  commit). Without any raw file and without a PSys2 checkout, 20 tests skip: 17 that need raw files (coverage 4,
+  WordNet 3, act glosses 1, coverage report 2, k.geo 1, k.parts 1, DiceBear, Noto, OpenMoji, Mulberry 4, plus the
+  PSys2 page 1) and 2 that need /tmp/wt2 (w.lang.en import and local frames); none needs a newer sopworld.
+- npm test 2,903: 2,898 pass, 5 skipped, 0 fail (was 2,896 pass, 7 skipped on 0.30).

@@ -58,7 +58,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 - **Views.** `in=` keeps the lists PSys2 had in its modules; `grammarView(world, type, view)` gives one,
   `viewDiff` says where two differ, so that unifying them is a measured decision of the application.
 
-Checked by `tests/w.lang.en.test.mjs` with the one library build of this repository (`tools/sopworld/VERSION`, 0.30.0): the
+Checked by `tests/w.lang.en.test.mjs` with the one library build of this repository (`tools/sopworld/VERSION`, 0.52.0): the
 noun-phrase examples ("the big red house", "the legs of the crocodile", "the house's door", "table 1 or table 2",
 "some of the tables", "everything except the tree", "the other table") and four question shapes parse with the
 right construction and head, with the nouns and adjectives taken from `k.words`.
