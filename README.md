@@ -113,6 +113,11 @@ k.genres written as a `w.document`, whose choices are choice points solved toget
 sampled by k.interest (six optional keys proposed to the library in questions.md Q57: `choose`, `choose_min`, `about`,
 `differs`, `soft`, `n`); a story chosen this way holds every constraint of k.story.
 
+Block "15:15" item 2 (first worker): the register of words in `k.words` for lexical choice by genre: `usage` on a
+sense from WordNet's usage domains (informal, slang, archaic, formal, euphemism, disparaging) and
+`k.words.frequency` (the Zipf value of 11,278 words in wordfreq's English list and a band 1-5 computed from it), the
+latter in 26 shards of their own under CC BY-SA 4.0.
+
 Block "13:00" (first worker): `w.lang.ro`, a first draft of Romanian as a language world in the library's `std.morph`
 notation: 44 paradigm classes with inheritance, 341 cells, irregulars, folds, clitics, closed classes and three reply
 templates (936 wires), with an external dictionary of 255 lemmas (`dictionary/<letter>.tsv`, 14.8 kB) joined to k.words

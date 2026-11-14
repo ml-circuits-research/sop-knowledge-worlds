@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 234 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 236 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -115,6 +115,8 @@
 @k.units.measure.k.wearables.place.h k.units.measure world=k.wearables type=place key=h frame="person drawing" core.source="hand-core 1"
 @k.units.measure.k.actions.verb.sense k.units.measure world=k.actions type=verb key=sense ordinal=true core.source="hand-core 1"
 @k.units.measure.k.words.sense.n k.units.measure world=k.words type=sense key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.words.frequency.zipf k.units.measure world=k.words type=frequency key=zipf counts="log10 of the occurrences of the word per billion words of text" core.source="hand-core 1"
+@k.units.measure.k.words.frequency.band k.units.measure world=k.words type=frequency key=band ordinal=true core.source="hand-core 1"
 @k.units.measure.k.attributes.thing.wheels k.units.measure world=k.attributes type=thing key=wheels counts=wheel core.source="hand-core 1"
 @k.units.measure.k.attributes.number.size_about k.units.measure world=k.attributes type=number key=size_about unit=metre approximate=true core.source="hand-core 1"
 @k.units.measure.k.attributes.number.weight_about k.units.measure world=k.attributes type=number key=weight_about unit=kilogram approximate=true core.source="hand-core 1"

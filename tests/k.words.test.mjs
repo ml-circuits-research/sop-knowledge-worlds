@@ -74,3 +74,40 @@ test('senses asked by other worlds (block 16:10): the adjectives of text style a
   }
   assert.equal(gloss('numbered', 'adjective', 1).shard.text.match(/^# license: (.*)$/m)[1], 'CC0-1.0');
 });
+
+test('register of words (block 15:15 item 2): Zipf frequency and band for lexical choice by genre; usage marks from WordNet', () => {
+  const band = new Map(), licences = new Set();
+  for (const s of scanWorlds().find((w) => w.id === 'k.words').shards) {
+    if (!/frequency-/.test(s.text.split('\n')[0])) continue;
+    licences.add(s.text.match(/^# license: (.*)$/m)[1]);
+    for (const m of s.text.matchAll(/^@\S+ k\.words\.frequency word=(\S+) zipf=([\d.]+) band=(\d) core\.source="wordfreq 3\.1\.1"$/gm)) {
+      band.set(m[1], Number(m[3]));
+      // the band is computed from the Zipf value, never labelled apart from it
+      const z = Number(m[2]);
+      assert.equal(Number(m[3]), z >= 6 ? 1 : z >= 5 ? 2 : z >= 4 ? 3 : z >= 3 ? 4 : 5, m[1]);
+    }
+  }
+  assert.deepEqual([...licences], ['CC-BY-SA-4.0']);
+  assert.ok(band.size > 11000, `${band.size} words with a frequency`);
+  for (const [w, b] of [['dog', 2], ['animal', 3], ['planet', 3], ['penguin', 4], ['anterior', 4], ['thicken', 5]]) assert.equal(band.get(w), b, w);
+  // Every word with a frequency has a sense here.
+  const words = new Set(senses.map((s) => s.word.toLowerCase()));
+  for (const w of band.keys()) assert.ok(words.has(w), w);
+  // Usage marks from WordNet's usage domains.
+  const usage = (word, pos) => { for (const s of scanWorlds().find((w) => w.id === 'k.words').shards) { const all = s.text.match(new RegExp(`^@\\S+ k\\.words\\.sense word=${word} pos=${pos} .*$`, 'gm')); if (all) return all.flatMap((l) => [...l.matchAll(/ usage=(\S+)/g)].map((x) => x[1])); } return []; };
+  assert.ok(usage('baloney', 'noun').includes('slang'));
+  assert.ok(usage('abide', 'verb').includes('archaic'));
+});
+
+test('join: the vocabulary band of every k.genres register is a band k.words gives, and each register has words to choose from', () => {
+  const genres = scanWorlds().find((w) => w.id === 'k.genres');
+  if (!genres) return;
+  const counts = [0, 0, 0, 0, 0, 0];
+  for (const s of scanWorlds().find((w) => w.id === 'k.words').shards) for (const m of s.text.matchAll(/ k\.words\.frequency word=\S+ zipf=\S+ band=(\d) /g)) counts[Number(m[1])]++;
+  const regs = genres.shards.flatMap((s) => [...s.text.matchAll(/^@\S+ k\.genres\.register name=("[^"]*"|\S+).* vocabulary_band=(\d)/gm)].map((m) => [m[1], Number(m[2])]));
+  assert.ok(regs.length >= 5);
+  for (const [name, band] of regs) {
+    const upto = counts.slice(1, band + 1).reduce((a, b) => a + b, 0);
+    assert.ok(band >= 1 && band <= 5 && upto >= 800, `${name}: band ${band}, ${upto} words`);
+  }
+});

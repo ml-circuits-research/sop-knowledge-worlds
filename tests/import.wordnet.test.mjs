@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
-import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, HAND_SENSES } from '../tools/import/wordnet.mjs';
+import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, HAND_SENSES, USAGE, bandOf } from '../tools/import/wordnet.mjs';
 
 const fixture = {
   'data.noun': [
@@ -98,10 +98,11 @@ test('gloss and bucket helpers', () => {
 
 const dict = join(REPO, 'sources/wordnet/raw/wordnet31');
 const list = join(REPO, 'sources/frequency-words/raw/en_50k.txt');
-test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list)) && 'raw files not downloaded' }, async () => {
+const wordfreq = join(REPO, 'sources/wordfreq/raw/en-top50k.tsv');
+test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list) && existsSync(wordfreq)) && 'raw files not downloaded' }, async () => {
   const names = ['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'];
   const raw = Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
-  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR), asked: ASKED, hand: HAND_SENSES });
+  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR), asked: ASKED, hand: HAND_SENSES, register: readFileSync(wordfreq, 'utf8') });
   const dir = join(WORLDS_DIR, 'k.words', 'shards');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
@@ -152,4 +153,22 @@ test('asked words are kept whatever their place in the list; hand senses go to h
   assert.match(files['hand.sop'], /^@k\.words\.numbered\.adjective\.1 k\.words\.sense word=numbered pos=adjective n=1 gloss="marked with numbers" core\.source="hand-core 1"$/m);
   assert.throws(() => importWordnet(fixture, 'the 100\n', { hand: [{ word: 'dog', pos: 'noun', n: 9, gloss: 'x', synonym: [] }] }), /WordNet has this word/);
   assert.ok(HAND_SENSES.every((h) => h.why) && ASKED.includes('thicken'));
+});
+
+test('register: usage-domain pointers become usage on the sense; the frequency (Zipf and band) goes to frequency-<letter>.sop under CC BY-SA', () => {
+  const more = { ...fixture,
+    'data.noun': `${fixture['data.noun']}\n00000008 10 n 01 colloquialism 0 000 | a colloquial expression\n00000009 10 n 01 mutt 0 002 @ 00000002 n 0000 ;u 00000008 n 0000 | an inferior dog`,
+    'index.noun': `${fixture['index.noun']}\ncolloquialism n 1 0 1 0 00000008\nmutt n 1 2 @ ;u 1 0 00000009` };
+  const wf = 'rank\tword\tcentibel\tzipf\tband\n1\tthe\t127\t7.73\tvery-common\n837\tdog\t390\t5.1\tcommon\n40000\tmutt\t620\t2.8\trare\n';
+  const { files, stats } = importWordnet(more, 'the 100\ndog 90\nmutt 80\n', { commonLimit: 0, register: wf });
+  assert.match(files['mu.sop'], /word=mutt pos=noun n=1 gloss="an inferior dog" is_a=dog usage=informal core\.source/);
+  assert.match(files['frequency-d.sop'], /^@k\.words\.frequency\.dog k\.words\.frequency word=dog zipf=5\.1 band=2 core\.source="wordfreq 3\.1\.1"$/m);
+  assert.match(files['frequency-m.sop'], /word=mutt zipf=2\.8 band=5 /);
+  assert.match(files['frequency-d.sop'], /^# license: CC-BY-SA-4\.0$/m);
+  assert.equal(files['frequency-c.sop'], undefined, 'a word not in the list has no fact');
+  assert.equal(stats.usage, 1);
+  assert.equal(stats.banded, 2);
+  assert.doesNotMatch(importWordnet(more, 'mutt 1\n', { commonLimit: 0 }).files['mu.sop'], /usage=/);
+  assert.deepEqual([7, 6, 5.99, 5, 4.2, 3, 2.9].map(bandOf), [1, 1, 2, 2, 3, 4, 5]);
+  assert.equal(USAGE.colloquialism, 'informal');
 });

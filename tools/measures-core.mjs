@@ -40,7 +40,7 @@ export const MEASURES = {
   'k.layouts': { slot: box('arrangement'), anchor: box('object') },
   'k.wearables': { place: box('person drawing') },
   'k.actions': { verb: { sense: ord } },
-  'k.words': { sense: { n: ord } },
+  'k.words': { sense: { n: ord }, frequency: { band: ord, zipf: { counts: 'log10 of the occurrences of the word per billion words of text' } } },
   'k.attributes': { thing: { wheels: { counts: 'wheel' } }, number: { size_about: { unit: 'metre' }, weight_about: { unit: 'kilogram' }, speed_about: { unit: 'kilometre per hour' }, legs: { counts: 'leg' }, sides: { counts: 'side' } },
     // a range is in the unit of the numbers it describes (k.units.measure of its type and key); a typicality weight is a plain share
     range: { low: { counts: 'unit of the measure of the range\'s type and key' }, high: { counts: 'unit of the measure of the range\'s type and key' }, median: { counts: 'unit of the measure of the range\'s type and key' }, count: { counts: 'number of the kind in the catalog' } }, typical: { weight: { plain: true } } },

@@ -1,11 +1,11 @@
 # k.words: English words: the noun and verb senses of frequent words, and the adjective and adverb senses of the
 # 3,000 most frequent, each with a short gloss, its synonyms, its opposite, what it is a kind of (directly, and for
 # the common words the whole chain of kinds), what it is an instance of and what it is a part of. Irregular forms are core.word facts in the shards.
-# sources: wordnet 3.1 (Princeton WordNet 3.1); the schema itself is hand-core 1
+# sources: wordnet 3.1 (Princeton WordNet 3.1); wordfreq 3.1.1 (the frequency of words, in shards of their own under CC BY-SA 4.0); the schema itself is hand-core 1
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/wordnet.mjs
 
-@k.words core.module name=k.words version=2 exports=sense core.source="hand-core 1"
+@k.words core.module name=k.words version=3 exports=sense exports=frequency core.source="hand-core 1"
 
 # One sense of a word. `n` is the sense number in WordNet (1 is the most frequent sense of the word for that part of
 # speech). The values of synonym, is_a, instance_of and part_of are words (several words are a string).
@@ -27,6 +27,21 @@
 @k.words.sense.opposite core.slot of=k.words.sense key=opposite many=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.near_opposite core.slot of=k.words.sense key=near_opposite many=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.kind_of core.slot of=k.words.sense key=kind_of many=true kind=atom kind=string core.source="hand-core 1"
+# Version 3 (block "15:15" item 2, the register of words for lexical choice by genre): `usage` is WordNet's usage
+# domain of the sense, where it has one: informal (WordNet's colloquialism), slang, archaic, formal, euphemism,
+# disparaging. A sense without it is neutral as far as WordNet says.
+@k.words.sense.usage core.slot of=k.words.sense key=usage many=true enum=informal enum=slang enum=archaic enum=formal enum=euphemism enum=disparaging core.source="hand-core 1"
+
+# How frequent a word is (version 3): `word` in lower case (a capitalised word of k.words.sense is found by its
+# lower case, as its core.word spelling says); `zipf` its Zipf value in wordfreq's merged English list (log10 of its
+# frequency per billion words: 7 the commonest function words, 3 a word met about once in a million); `band` computed
+# from it: 1 very common (Zipf >= 6), 2 common (>= 5), 3 familiar (>= 4), 4 uncommon (>= 3), 5 rare (below 3, still
+# among wordfreq's first 50,000). A word with no fact is rarer than that, or not in the list. The facts are in shards
+# of their own under wordfreq's data terms (CC BY-SA 4.0).
+@k.words.frequency core.type of=k.words.frequency shared=true closed=true core.source="hand-core 1"
+@k.words.frequency.word core.slot of=k.words.frequency key=word id=true required=true kind=atom core.source="hand-core 1"
+@k.words.frequency.zipf core.slot of=k.words.frequency key=zipf required=true kind=number min=0 max=9 core.source="hand-core 1"
+@k.words.frequency.band core.slot of=k.words.frequency key=band required=true kind=integer min=1 max=5 core.source="hand-core 1"
 
 # Words for the type and keys of this world.
 @k.words.word.sense core.word text=word text=words text=sense text=meaning text=meanings means=k.words.sense core.source="hand-core 1"
@@ -34,6 +49,8 @@
 @k.words.word.synonym core.word text=synonym text=synonyms means=k.words.sense.synonym core.source="hand-core 1"
 @k.words.word.is_a core.word text=kind text=type means=k.words.sense.is_a core.source="hand-core 1"
 @k.words.word.part_of core.word text=part text=parts means=k.words.sense.part_of core.source="hand-core 1"
+@k.words.word.frequency core.word text=frequency text=frequent text=common text=rare text=band means=k.words.frequency core.source="hand-core 1"
+@k.words.word.usage core.word text=usage text=register text=informal text=formal text=slang means=k.words.sense.usage core.source="hand-core 1"
 @k.words.word.opposite core.word text=opposite text=opposites text=antonym text=antonyms means=k.words.sense.opposite core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -45,3 +62,5 @@
 @k.words.word.key.sense.part_of core.word text="part of" means=k.words.sense.part_of core.source="hand-core 1"
 @k.words.word.key.sense.near_opposite core.word text="near opposite" text=opposite means=k.words.sense.near_opposite core.source="hand-core 1"
 @k.words.word.key.sense.kind_of core.word text="kind of" text=kind text=type text="type of" means=k.words.sense.kind_of core.source="hand-core 1"
+@k.words.word.key.frequency.zipf core.word text=zipf means=k.words.frequency.zipf core.source="hand-core 1"
+@k.words.word.key.frequency.band core.word text=band means=k.words.frequency.band core.source="hand-core 1"

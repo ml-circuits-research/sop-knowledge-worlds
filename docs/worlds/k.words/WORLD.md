@@ -35,7 +35,21 @@ planet, manta ray an animal, light year a unit), and the adjective and adverb se
   îngroșa = thicken verb 1, anterior = anterior adjective 2 "earlier in time", nisipiu = sandy adjective 1).
   `numbered` is not an adjective in WordNet 3.1 (only a form of the verb *number*, sense 2 "give numbers to"): its one
   sense is written by hand (`HAND_SENSES`, `hand-core 1`, CC0) in the shard `hand.sop`, which holds no WordNet wire.
-- Exports: `k.words.sense`.
+- **Register of words** (version 3, block "15:15" item 2, for lexical choice by genre):
+  - `usage` on a sense: WordNet's usage domain where it gives one: `informal` (WordNet's colloquialism), `slang`,
+    `archaic`, `formal`, `euphemism`, `disparaging` (171 marks on 170 of the kept senses: 115 informal, 33 slang, 14 archaic, 7
+    euphemism, 1 formal, 1 disparaging). A sense without it is neutral as far as WordNet says.
+  - `k.words.frequency` (identity `word`, lower case): `zipf`, the word's Zipf value in wordfreq's merged English list
+    (wordfreq 3.1.1 `large_en`, top 50,000: subtitles, Wikipedia, books, news, web; Zipf = log10 of the frequency
+    per billion words, van Heuven et al. 2014), and `band` computed from it: 1 very common (Zipf >= 6), 2 common
+    (>= 5), 3 familiar (>= 4), 4 uncommon (>= 3), 5 rare (below 3). 11,278 words with senses here have one (62, 828,
+    3,800, 5,790, 798: dog 2, animal 3, penguin 4, thicken 5); a word with no fact is rarer, or not in the list. A
+    register of k.genres names the highest band its vocabulary mostly keeps to; k.interest's `word_band` and
+    `share_beyond_band` read it.
+  - Shards `frequency-<letter>.sop` (26, 11,278 facts, 1.18 MB), under wordfreq's data terms, **CC BY-SA 4.0**, with
+    the attributions it asks for (`sources/wordfreq/SOURCE.md`), so no WordNet shard changes its terms (Q9). A host
+    that wants no share-alike data leaves them out.
+- Exports: `k.words.sense`, `k.words.frequency`.
 
 The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain beyond the common words (which carry `kind_of`), look the value up as a
 `word` again (its first sense is the usual one). A value may be a word that has no sense in the shards (only words of
@@ -46,12 +60,12 @@ the frequency list, the common things and the names of the cores have senses).
 By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`; `ma.sop` holds `"manta ray"`); a one-letter word or a word whose second
 character is not a letter is in the shard of its first letter. A bucket that would pass the size limits is split into
 consecutive parts: `co` is now `co-1` and `co-2`. `vocab.json` maps every word (lower case) and every
-irregular form to its shard. 322 shards (321 from WordNet and `hand.sop`), 32,432 wires, 7,498,386 bytes; the largest is `re` (899 wires, 187,344
+irregular form to its shard. 348 shards (321 from WordNet, 26 of word frequency and `hand.sop`), 43,710 wires, 8,676,705 bytes; the largest is `re` (899 wires, 187,344
 bytes).
 
 ## Sources
 
-WordNet 3.1 (`core.source="wordnet 3.1"`, WordNet licence), words chosen with the FrequencyWords 2018 English list
+WordNet 3.1 (`core.source="wordnet 3.1"`, WordNet licence); the frequency of words from wordfreq 3.1.1 (`core.source="wordfreq 3.1.1"`, CC BY-SA 4.0, own shards); words chosen with the FrequencyWords 2018 English list
 (first 20,000 lines, and the 1,500 common things of `tools/coverage.mjs` wherever they stand in the list: 427 of
 them come later, sunflower, teapot, locomotive, chimpanzee; each with the sense that rule keeps). The licence text is `LICENSE` in this folder. See `sources/wordnet/SOURCE.md`, `sources/frequency-words/SOURCE.md` and `../LICENSES.md`.
 Import: `node tools/import/wordnet.mjs`.

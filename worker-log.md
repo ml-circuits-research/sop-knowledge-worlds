@@ -4139,3 +4139,23 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   Table 1"); "Place a guest named Ann." still reads by acts.make.name.p. 10 wires, 2.1 kB. Test in
   tests/w.lang.en.templates.test.mjs (two sentences and the one without a place). PSys2 can drop its local
   patterns.extra.sop copy.
+
+
+
+## 2026-11-14 — first worker: the register of words in k.words (block "15:15" item 2; data of block "19:00")
+
+- **usage** on a sense, from WordNet's usage-domain pointers (`;u` to colloquialism, slang, archaism, formality,
+  euphemism, disparagement): informal 115, slang 33, archaic 14, euphemism 7, formal 1, disparaging 1 (171 marks on 170 of the
+  kept senses; the other usage domains, trade name, plural, combining form, are not registers). WordNet's licence, in the
+  WordNet shards (93 shards changed).
+- **k.words.frequency** (new type, module version 3): `zipf` (the word's Zipf value in wordfreq 3.1.1's merged English
+  list, read from psys2 `data/external/wordfreq-en` at a7b34da3, copied to `sources/wordfreq/raw`) and `band` computed
+  from it (1 very common Zipf >= 6, 2 common >= 5, 3 familiar >= 4, 4 uncommon >= 3, 5 rare): 11,278 words with
+  senses here (62, 828, 3,800, 5,790, 798). 26 shards `frequency-<letter>.sop`, 1.18 MB, CC BY-SA 4.0 with wordfreq's
+  attributions (`sources/wordfreq/SOURCE.md`); no WordNet shard changes its terms. Rows read 50,000; facts written
+  11,278. A session that asks about a word loads its letter's shard (45 kB on average).
+- Joins: every k.genres register's `vocabulary_band` is a band k.words gives, with at least 800 words up to it;
+  k.interest's `word_band` and `share_beyond_band` now read k.words.frequency.
+- k.words: 348 shards, 43,710 wires, 8,676,705 bytes. Tests: tests/import.wordnet.test.mjs (usage and frequency on
+  the fixture; shards on disk equal the import), tests/k.words.test.mjs (bands computed from Zipf, CC BY-SA, every
+  banded word has a sense, the k.genres join).

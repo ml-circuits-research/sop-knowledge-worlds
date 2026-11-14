@@ -30,6 +30,19 @@ export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thic
 export const HAND_SENSES = [
   { word: 'numbered', pos: 'adjective', n: 1, gloss: 'marked with numbers that give an order', synonym: [], why: 'w.lang.ro numerotat; WordNet 3.1 has only the verb number, sense 2 "give numbers to"' },
 ];
+// The register of a sense (block "15:15" item 2): WordNet's usage-domain pointers (`;u`) to these synsets, by their
+// first word, become `usage` values (colloquialism 295 synsets, slang 88, archaism 72, disparagement 36, euphemism 7,
+// formality 6 in WordNet 3.1); the other usage domains (trade name, plural, combining form ...) are not registers.
+export const USAGE = { colloquialism: 'informal', slang: 'slang', archaism: 'archaic', formality: 'formal', euphemism: 'euphemism', disparagement: 'disparaging' };
+// Frequency (block "15:15" item 2; data landed by the reviewer, block 19:00): the Zipf value of each word with senses
+// here in wordfreq's merged English list (wordfreq 3.1.1 large_en, top 50,000: subtitles, Wikipedia, books, news,
+// web; Zipf = log10 of the frequency per billion words, van Heuven et al. 2014), and a band computed from it:
+// 1 very common (Zipf >= 6), 2 common (>= 5), 3 familiar (>= 4), 4 uncommon (>= 3), 5 rare (below 3, still within the
+// 50,000). Written to shards of their own, `frequency-<letter>.sop`, under wordfreq's data terms (CC BY-SA 4.0), so
+// that no WordNet shard changes its terms (Q9).
+export const ZIPF_BANDS = [6, 5, 4, 3];
+export const bandOf = (zipf) => { const i = ZIPF_BANDS.findIndex((z) => zipf >= z); return i < 0 ? 5 : i + 1; };
+export const FREQ_SOURCE = 'wordfreq 3.1.1';
 const keyOf = (name) => String(name).toLowerCase().trim().replace(/\s+/g, '_');
 const kept = (w) => LEMMA.test(w) || MULTI.test(w);
 
@@ -82,9 +95,11 @@ export const bucketOf = (lemma) => (/^[a-z]{2}/.test(lemma) ? lemma.slice(0, 2) 
 // Round 9: the common words are those of the first `commonLimit` lines of the list and the words of `extra`: they
 // also get their adjective and adverb senses (files 'index.adj', 'data.adj', 'index.adv', 'data.adv', where given)
 // and, on their noun and verb senses, the chain `kind_of`. Every sense gets its `opposite`.
+// register (block "15:15" item 2): the text of wordfreq's list (rank, word, centibel, zipf, band, tab-separated, a
+// header line): the usage of each sense (USAGE) and the frequency of the words (Zipf value and band).
 // asked: words kept as common words whatever their place in the list (ASKED). hand: senses written by hand (HAND_SENSES),
 // written to the shard `hand.sop` with their own header; a hand sense of a word and part of speech WordNet has is refused.
-export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map(), asked = [], hand = [] } = {}) {
+export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map(), asked = [], hand = [], register = null } = {}) {
   const wanted = new Set([...extra.keys(), ...asked].map(keyOf).filter(kept));
   extra = new Map([...extra].map(([k, v]) => [keyOf(k), v]));
   const common = new Set(commonLimit > 0 ? wanted : asked.map(keyOf));
@@ -97,6 +112,9 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
     if (w && LEMMA.test(w)) wanted.add(w);
   }
   const stats = { listed: wanted.size, words: 0, senses: 0, skipped: 0, forms: 0, spellings: 0, shards: 0, opposites: 0, nearOpposites: 0, chains: 0 };
+  if (register) Object.assign(stats, { usage: 0, banded: 0 });
+  // The usage domains are noun synsets: the noun data is read once for the pointers of every part of speech.
+  const nounData = register && files['data.noun'] ? readData(files['data.noun']) : null;
   const groups = new Map(); // lemma -> { lemma, senses, words }
   const group = (lemma) => {
     if (!groups.has(lemma)) groups.set(lemma, { lemma, senses: [], words: [] });
@@ -137,6 +155,8 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
         // Round 9. The opposite: WordNet's antonym of this word in this sense. Where an adjective has none of its own
         // but is filed as similar to one that has (huge is similar to large, the opposite of small), the opposite of
         // that one is its near opposite. The chain of kinds: for the noun and verb senses of the common words.
+        const usage = [...new Set(s.pointers.filter(([sym, off, tp, from]) => sym === ';u' && tp === 'n' && nounData?.has(off) && (from === 0 || s.words[from - 1]?.toLowerCase() === own.toLowerCase()))
+          .map(([, off]) => USAGE[nounData.get(off).words[0].toLowerCase()]).filter(Boolean))].sort(byText);
         const opposite = lexical(s, own, '!');
         const near = opposite.length || p !== 'a' ? [] : [...new Set(s.pointers.filter(([sym, off]) => sym === '&' && data.has(off)).flatMap(([, off]) => lexical(data.get(off), data.get(off).words[0], '!')))];
         const kinds = (p === 'n' || p === 'v') && common.has(lemma) ? chain(offset) : [];
@@ -149,7 +169,9 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
           ...opposite.map((w) => ['opposite', w]),
           ...near.map((w) => ['near_opposite', w]),
           ...kinds.map((w) => ['kind_of', w]),
+          ...usage.map((u) => ['usage', u]),
         ], SOURCE);
+        if (register) stats.usage += usage.length ? 1 : 0;
         stats.opposites += opposite.length ? 1 : 0;
         stats.nearOpposites += near.length ? 1 : 0;
         stats.chains += kinds.length ? 1 : 0;
@@ -202,6 +224,30 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
       })}\n${part.flatMap((g) => g.lines).join('\n')}\n`;
       stats.shards++;
     });
+  }
+  // Frequency bands: the first line of the list where each word with senses here stands.
+  if (register) {
+    const zipf = new Map();
+    for (const l of register.split('\n').slice(1)) { const [, w, , z] = l.split('\t'); if (w && z && !zipf.has(w)) zipf.set(w, Number(z)); }
+    const byLetter = new Map();
+    for (const lemma of [...groups.keys()].sort(byText)) {
+      if (!groups.get(lemma).senses.length || !LEMMA.test(lemma) || !zipf.has(lemma)) continue;
+      const z = zipf.get(lemma), band = bandOf(z);
+      const letter = lemma[0];
+      if (!byLetter.has(letter)) byLetter.set(letter, []);
+      byLetter.get(letter).push(wire(`k.words.frequency.${seg(lemma)}`, 'k.words.frequency', [['word', lemma], ['zipf', z], ['band', band]], FREQ_SOURCE));
+      stats.banded++;
+    }
+    for (const [letter, lines] of [...byLetter].sort(([a], [b]) => byText(a, b))) {
+      out[`frequency-${letter}.sop`] = `${header({
+        id: `k.words/shards/frequency-${letter}`,
+        about: `how frequent the ${lines.length} words with senses here that start with "${letter}" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).`,
+        sources: ['wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)'],
+        license: 'CC-BY-SA-4.0',
+        script: 'tools/import/wordnet.mjs',
+      })}\n${lines.join('\n')}\n`;
+      stats.shards++;
+    }
   }
   // Hand senses (HAND_SENSES): one shard of their own, CC0.
   const handLines = [];
@@ -281,7 +327,8 @@ async function main() {
   const dict = arg('dict', join(repo, 'sources/wordnet/raw/wordnet31'));
   const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(arg('freq', join(repo, 'sources/frequency-words/raw/en_50k.txt')), 'utf8');
-  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')), asked: ASKED, hand: HAND_SENSES });
+  const register = readFileSync(arg('wordfreq', join(repo, 'sources/wordfreq/raw/en-top50k.tsv')), 'utf8');
+  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')), asked: ASKED, hand: HAND_SENSES, register });
   writeShards(arg('out', join(repo, 'docs/worlds/k.words/shards')), out);
   console.log(JSON.stringify(stats));
 }
