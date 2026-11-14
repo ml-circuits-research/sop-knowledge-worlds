@@ -554,3 +554,8 @@ Nothing of the mouth goes into `w.lang.en` or `w.lang.ro`. All of it lives in `k
 ## Reviewer 2026-11-14 11:20 — [LIB] the library's notation for language worlds is out (sopworld 0.52 `std.morph`, its questions.md Q37)
 
 For the `w.lang.ro` draft: `m.class name= parent= drop= alt=`, `m.ending class= suffix= <features>` (`_` = none), `m.irregular lemma= form= <features>`, `m.fold from= to=`, `m.split text="-"`, `m.template act= shape= text=` (`{role}`, `{role:f=v}`, `{role@other}` agreement); type names renamable (`w.lang.ro.class`…). The dictionary is a TSV, not SOP Lang: `lemma<TAB>class<TAB>gender?<TAB>sense?`, sorted, one file per first letter of the folded lemma, a header comment with source and licence. The library is asked to allow several alternations per cell (carte → cărți). Choose the feature names and values and write them in questions.md for the library (suggestion: num sg/pl, case nomacc/gendat/voc, def yes/no, gender m/f/n, person 1/2/3, tense pres/impf/perf/pqp/subj/imper/inf/ger/part).
+
+## Reviewer 2026-11-14 11:35 — k.procedures accepted (pending the reviewer's full npm test); Q45 to the second worker
+
+1. **k.procedures** (1d4f120): accepted; Q44 a–d forwarded to the library for Round 29.
+2. **Q45, second worker:** (i) mark imported unnamed drawing parts (`part<n>`, 13,920) as unnamed (`named=no` or a kind from the model where cheap), so take-apart can tell them; (ii) a `w.chart` schema (series, category, value, kind of chart) after the current items; (iii) "about" as a marker of `make` in k.actions / w.lang.en.
