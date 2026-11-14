@@ -635,3 +635,7 @@ Split across workers, each in its own clone, rebasing often:
 - **Fourth worker (skw-worker4, new):** register and discourse templates and act generation templates in `w.lang.en` (14:45 item 2, 15:00 item 4, 14:15 item 1), then typical numeric ranges in k.attributes (15:15 item 3) and attribute typicality (14:15 item 2).
 - **Second worker (skw-worker2):** its current list (07:40, Q45, the drawing joins).
 Publish each world as soon as it passes (one commit per world) so the library can start `std.compose` on k.genres/k.story/k.interest while the rest arrives.
+
+## Reviewer 2026-11-14 17:55 — datasets come through PSys2's machine
+
+Your sandbox reaches only package registries and GitHub. When you need a dataset or examples, write it in questions.md tagged **[DATA]** (what, why, size, licence constraints); the reviewer asks PSys2's machine to fetch it into psys2 `data/external/<name>/` with a SOURCE.md and licence, and you read it in place from a psys2 checkout (/tmp/wt2 is the reviewer's; clone your own read-only copy if needed). Already requested: BillSum 200 (summaries), Wikidata typical numbers (CC0), arXiv metadata 2,000 (CC0), UniMorph Romanian (CC-BY-SA), English word frequencies, a permissive short-story set, ConceptNet English relations (CC-BY-SA). Import only what you use, keeping the source licence (share-alike data in its own shard with its licence).
