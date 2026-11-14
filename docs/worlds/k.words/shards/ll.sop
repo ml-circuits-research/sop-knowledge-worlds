@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.llama.noun.1 k.words.sense word=llama pos=noun n=1 gloss="wild or domesticated South American cud-chewing animal related to camels but smaller and lacking a hump" is_a="even-toed ungulate" kind_of="even-toed ungulate" kind_of=ungulate kind_of=placental kind_of=mammal kind_of=vertebrate kind_of=chordate kind_of=animal kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
-@k.words.lloyd.noun.1 k.words.sense word=Lloyd pos=noun n=1 gloss="United States comic actor in silent films; he used physical danger as a source of comedy (1893-1971)" synonym="Harold Lloyd" synonym="Harold Clayton Lloyd" instance_of=actor core.source="wordnet 3.1"
+@k.words.llama.noun.1 k.words.sense word=llama pos=noun n=1 supersense=noun.animal gloss="wild or domesticated South American cud-chewing animal related to camels but smaller and lacking a hump" is_a="even-toed ungulate" kind_of="even-toed ungulate" kind_of=ungulate kind_of=placental kind_of=mammal kind_of=vertebrate kind_of=chordate kind_of=animal kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.lloyd.noun.1 k.words.sense word=Lloyd pos=noun n=1 supersense=noun.person gloss="United States comic actor in silent films; he used physical danger as a source of comedy (1893-1971)" synonym="Harold Lloyd" synonym="Harold Clayton Lloyd" instance_of=actor core.source="wordnet 3.1"
 @k.words.lloyd.spelling.Lloyd core.word text=lloyd means=Lloyd of=k.words.sense.word core.source="wordnet 3.1"

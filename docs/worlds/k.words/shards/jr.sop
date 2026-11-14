@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.jr.noun.1 k.words.sense word=Jr pos=noun n=1 gloss="a son who has the same first name as his father" synonym=Junior synonym=Jnr is_a=son core.source="wordnet 3.1"
+@k.words.jr.noun.1 k.words.sense word=Jr pos=noun n=1 supersense=noun.person gloss="a son who has the same first name as his father" synonym=Junior synonym=Jnr is_a=son core.source="wordnet 3.1"
 @k.words.jr.spelling.Jr core.word text=jr means=Jr of=k.words.sense.word core.source="wordnet 3.1"

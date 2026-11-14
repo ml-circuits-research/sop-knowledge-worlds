@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-words: the keys of the types of k.words read as relations: 13 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-words: the keys of the types of k.words read as relations: 14 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -7,6 +7,7 @@
 @k.kinds.relation.k.words.frequency.band k.kinds.relation type=k.words.frequency key=band subject=frequency object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.words.sense.pos k.kinds.relation type=k.words.sense key=pos subject=word object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.words.sense.n k.kinds.relation type=k.words.sense key=n subject=word object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.words.sense.supersense k.kinds.relation type=k.words.sense key=supersense subject=word object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.words.sense.gloss k.kinds.relation type=k.words.sense key=gloss subject=word object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.words.sense.synonym k.kinds.relation type=k.words.sense key=synonym subject=word object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.words.sense.is_a k.kinds.relation type=k.words.sense key=is_a subject=word object=kind object_type=k.words.sense found=value core.source="hand-core 1"

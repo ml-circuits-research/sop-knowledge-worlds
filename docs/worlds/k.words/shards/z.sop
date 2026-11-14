@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.z.noun.1 k.words.sense word=Z pos=noun n=1 gloss="the ending of a series or sequence" synonym=omega is_a=ending core.source="wordnet 3.1"
-@k.words.z.noun.2 k.words.sense word=Z pos=noun n=2 gloss="the 26th letter of the Roman alphabet" synonym=z synonym=zee synonym=zed synonym=ezed synonym=izzard is_a=letter core.source="wordnet 3.1"
+@k.words.z.noun.1 k.words.sense word=Z pos=noun n=1 supersense=noun.event gloss="the ending of a series or sequence" synonym=omega is_a=ending core.source="wordnet 3.1"
+@k.words.z.noun.2 k.words.sense word=Z pos=noun n=2 supersense=noun.communication gloss="the 26th letter of the Roman alphabet" synonym=z synonym=zee synonym=zed synonym=ezed synonym=izzard is_a=letter core.source="wordnet 3.1"
 @k.words.z.spelling.Z core.word text=z means=Z of=k.words.sense.word core.source="wordnet 3.1"

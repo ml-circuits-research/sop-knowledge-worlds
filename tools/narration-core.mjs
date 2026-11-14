@@ -62,6 +62,7 @@ export const KEY_NO = [
   [/^reply$/, 'what a host says back, not a fact'],
   [/^(drawing|drawings|face|face_slot|stand_in|thing|css|in|sense)$/, 'a join to a drawing, a sense or another catalog entry'],
   [/^(n|rank|size_rank|steps|priority|offset|zipf|band|layer|order)$/, 'an internal number (a position, a rank, a step count)'],
+  [/^supersense$/, 'a class of the dictionary (the WordNet lexicographer file), for type signatures'],
   [/^(lat|lon|west|south|east|north|x|y|z|w|h)$/, 'a coordinate'],
   [/^(rgb|rgb_about|shade|lightness|saturation)$/, 'a colour code'],
 ];

@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.tsar.noun.1 k.words.sense word=tsar pos=noun n=1 gloss="a male monarch or emperor (especially of Russia prior to 1917)" synonym=czar synonym=tzar is_a=sovereign core.source="wordnet 3.1"
-@k.words.tsk.verb.1 k.words.sense word=tsk pos=verb n=1 gloss="utter `tsk,' `tut,' or `tut-tut,' as in disapproval" synonym=tut synonym=tut-tut is_a=utter core.source="wordnet 3.1"
-@k.words.tsunami.noun.1 k.words.sense word=tsunami pos=noun n=1 gloss="a cataclysm resulting from a destructive sea wave caused by an earthquake or volcanic eruption" is_a=calamity is_a=wave core.source="wordnet 3.1"
+@k.words.tsar.noun.1 k.words.sense word=tsar pos=noun n=1 supersense=noun.person gloss="a male monarch or emperor (especially of Russia prior to 1917)" synonym=czar synonym=tzar is_a=sovereign core.source="wordnet 3.1"
+@k.words.tsk.verb.1 k.words.sense word=tsk pos=verb n=1 supersense=verb.communication gloss="utter `tsk,' `tut,' or `tut-tut,' as in disapproval" synonym=tut synonym=tut-tut is_a=utter core.source="wordnet 3.1"
+@k.words.tsunami.noun.1 k.words.sense word=tsunami pos=noun n=1 supersense=noun.event gloss="a cataclysm resulting from a destructive sea wave caused by an earthquake or volcanic eruption" is_a=calamity is_a=wave core.source="wordnet 3.1"

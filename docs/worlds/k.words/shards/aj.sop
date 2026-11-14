@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.ajax.noun.1 k.words.sense word=Ajax pos=noun n=1 gloss="a mythical Greek hero; a warrior who fought against Troy in the Iliad" instance_of="mythical being" core.source="wordnet 3.1"
+@k.words.ajax.noun.1 k.words.sense word=Ajax pos=noun n=1 supersense=noun.person gloss="a mythical Greek hero; a warrior who fought against Troy in the Iliad" instance_of="mythical being" core.source="wordnet 3.1"
 @k.words.ajax.spelling.Ajax core.word text=ajax means=Ajax of=k.words.sense.word core.source="wordnet 3.1"

@@ -229,6 +229,19 @@ to the same thing, value and attribute ("A peanut is a legume.", "A star is made
 holds the brain.", "The elevation of Adrar Bou Nasser is 3340."). The defaults are plain ("The orbit years of Mars is
 1.88."): a key gets a template of its own when a composition shows one reads badly.
 
+## The class of each closed-class word (block "02:15")
+
+`w.lang.en.closed text= class= from=` (shard `closed-classes`, 274 facts for 260 words, CC0) gives every closed-class
+word of the word lists its class, for type signatures (a closed-class word stays literal; its class is the level a
+signature backs off to): determiner, pronoun, preposition, conjunction, auxiliary, numeral, ordinal, adverb, particle,
+interjection (the closed parts of speech of Universal Dependencies). A word of several classes has one fact per class
+(that: determiner and pronoun); `from` names the lists it is in, which stay the home of the words. Derived by
+`tools/lang-en-closed.mjs` (rerun by `npm run build`): a one-class list (det, pron, prep, aux, numeral, ...) gives its
+class with exceptions by word (the numeral determiners are numerals, the locative pronoun there an adverb, the
+question words by word); the marker lists (answers, corrections, leads, skipped words) class their single words from
+one table. Open-class words in the lists get no class (45: want, think, like, lose, new, the attribute nouns colour,
+size ...), and `tests/w.lang.en.closed.test.mjs` fails on a new word of a list that has neither.
+
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the

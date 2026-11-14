@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.fda.noun.1 k.words.sense word=FDA pos=noun n=1 gloss="a federal agency in the Department of Health and Human Services established to regulate the release of new foods and health-related products" synonym="Food and Drug Administration" is_a=agency part_of="Department of Health and Human Services" core.source="wordnet 3.1"
+@k.words.fda.noun.1 k.words.sense word=FDA pos=noun n=1 supersense=noun.group gloss="a federal agency in the Department of Health and Human Services established to regulate the release of new foods and health-related products" synonym="Food and Drug Administration" is_a=agency part_of="Department of Health and Human Services" core.source="wordnet 3.1"
 @k.words.fda.spelling.FDA core.word text=fda means=FDA of=k.words.sense.word core.source="wordnet 3.1"

@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.p.noun.1 k.words.sense word=P pos=noun n=1 gloss="a multivalent nonmetallic element of the nitrogen family that occurs commonly in inorganic phosphate rocks and as organic phosphates in all living cells; is highly reactive and occurs in several allotropic forms" synonym=phosphorus synonym="atomic number 15" is_a="chemical element" core.source="wordnet 3.1"
-@k.words.p.noun.2 k.words.sense word=P pos=noun n=2 gloss="the 16th letter of the Roman alphabet" synonym=p is_a=letter core.source="wordnet 3.1"
+@k.words.p.noun.1 k.words.sense word=P pos=noun n=1 supersense=noun.substance gloss="a multivalent nonmetallic element of the nitrogen family that occurs commonly in inorganic phosphate rocks and as organic phosphates in all living cells; is highly reactive and occurs in several allotropic forms" synonym=phosphorus synonym="atomic number 15" is_a="chemical element" core.source="wordnet 3.1"
+@k.words.p.noun.2 k.words.sense word=P pos=noun n=2 supersense=noun.communication gloss="the 16th letter of the Roman alphabet" synonym=p is_a=letter core.source="wordnet 3.1"
 @k.words.p.spelling.P core.word text=p means=P of=k.words.sense.word core.source="wordnet 3.1"

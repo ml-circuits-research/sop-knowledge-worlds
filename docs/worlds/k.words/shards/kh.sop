@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.khan.noun.1 k.words.sense word=khan pos=noun n=1 gloss="a title given to rulers or other important people in Asian countries" is_a=ruler core.source="wordnet 3.1"
-@k.words.khan.noun.2 k.words.sense word=khan pos=noun n=2 gloss="an inn in some eastern countries with a large courtyard that provides accommodation for caravans" synonym=caravansary synonym=caravanserai synonym="caravan inn" is_a=hostel core.source="wordnet 3.1"
+@k.words.khan.noun.1 k.words.sense word=khan pos=noun n=1 supersense=noun.person gloss="a title given to rulers or other important people in Asian countries" is_a=ruler core.source="wordnet 3.1"
+@k.words.khan.noun.2 k.words.sense word=khan pos=noun n=2 supersense=noun.artifact gloss="an inn in some eastern countries with a large courtyard that provides accommodation for caravans" synonym=caravansary synonym=caravanserai synonym="caravan inn" is_a=hostel core.source="wordnet 3.1"

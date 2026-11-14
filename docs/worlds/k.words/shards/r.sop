@@ -3,7 +3,7 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.r.noun.1 k.words.sense word=R pos=noun n=1 gloss="a unit of radiation exposure; the dose of ionizing radiation that will produce 1 electrostatic unit of electricity in 1 cc of dry air" synonym=roentgen is_a="radioactivity unit" core.source="wordnet 3.1"
-@k.words.r.noun.2 k.words.sense word=R pos=noun n=2 gloss="(physics) the universal constant in the gas equation: pressure times volume = R times temperature; equal to 8.3143 joules per kelvin per mole" synonym="gas constant" synonym="universal gas constant" is_a=constant core.source="wordnet 3.1"
-@k.words.r.noun.3 k.words.sense word=R pos=noun n=3 gloss="the 18th letter of the Roman alphabet" synonym=r is_a=letter core.source="wordnet 3.1"
+@k.words.r.noun.1 k.words.sense word=R pos=noun n=1 supersense=noun.quantity gloss="a unit of radiation exposure; the dose of ionizing radiation that will produce 1 electrostatic unit of electricity in 1 cc of dry air" synonym=roentgen is_a="radioactivity unit" core.source="wordnet 3.1"
+@k.words.r.noun.2 k.words.sense word=R pos=noun n=2 supersense=noun.quantity gloss="(physics) the universal constant in the gas equation: pressure times volume = R times temperature; equal to 8.3143 joules per kelvin per mole" synonym="gas constant" synonym="universal gas constant" is_a=constant core.source="wordnet 3.1"
+@k.words.r.noun.3 k.words.sense word=R pos=noun n=3 supersense=noun.communication gloss="the 18th letter of the Roman alphabet" synonym=r is_a=letter core.source="wordnet 3.1"
 @k.words.r.spelling.R core.word text=r means=R of=k.words.sense.word core.source="wordnet 3.1"

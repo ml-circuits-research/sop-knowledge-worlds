@@ -5,11 +5,12 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/wordnet.mjs
 
-@k.words core.module name=k.words version=3 exports=sense exports=frequency core.source="hand-core 1"
+@k.words core.module name=k.words version=4 exports=sense exports=frequency core.source="hand-core 1"
 
 # One sense of a word. `n` is the sense number in WordNet (1 is the most frequent sense of the word for that part of
 # speech). The values of synonym, is_a, instance_of and part_of are words (several words are a string).
 # Version 2 (Q36): `word` too may be several words, a string ("manta ray", "light year"), as WordNet has them.
+# Version 4 (block "02:15"): every sense carries its `supersense`.
 # Round 9: `opposite` is WordNet's antonym of the word in this sense (hot: cold); `near_opposite`, for an adjective
 # without one of its own, is the opposite of the adjective it is filed as similar to (huge is similar to large:
 # small); `kind_of` is the chain of kinds upward from the sense, nearest first, through the first kind at each step
@@ -19,6 +20,9 @@
 @k.words.sense.word core.slot of=k.words.sense key=word id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.pos core.slot of=k.words.sense key=pos id=true required=true enum=noun enum=verb enum=adjective enum=adverb core.source="hand-core 1"
 @k.words.sense.n core.slot of=k.words.sense key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
+# `supersense`: the WordNet lexicographer file of the sense (noun.animal, noun.artifact, verb.motion, adj.all, ...; the 45
+# names of WordNet 3.1's lexnames), a coarse semantic class for type signatures (reviewer block "02:15").
+@k.words.sense.supersense core.slot of=k.words.sense key=supersense enum=adj.all enum=adj.pert enum=adv.all enum=noun.Tops enum=noun.act enum=noun.animal enum=noun.artifact enum=noun.attribute enum=noun.body enum=noun.cognition enum=noun.communication enum=noun.event enum=noun.feeling enum=noun.food enum=noun.group enum=noun.location enum=noun.motive enum=noun.object enum=noun.person enum=noun.phenomenon enum=noun.plant enum=noun.possession enum=noun.process enum=noun.quantity enum=noun.relation enum=noun.shape enum=noun.state enum=noun.substance enum=noun.time enum=verb.body enum=verb.change enum=verb.cognition enum=verb.communication enum=verb.competition enum=verb.consumption enum=verb.contact enum=verb.creation enum=verb.emotion enum=verb.motion enum=verb.perception enum=verb.possession enum=verb.social enum=verb.stative enum=verb.weather enum=adj.ppl core.source="hand-core 1"
 @k.words.sense.gloss core.slot of=k.words.sense key=gloss kind=string core.source="hand-core 1"
 @k.words.sense.synonym core.slot of=k.words.sense key=synonym many=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.is_a core.slot of=k.words.sense key=is_a many=true kind=atom kind=string core.source="hand-core 1"
@@ -57,6 +61,7 @@
 @k.words.word.key.sense.pos core.word text=pos text="part of speech" means=k.words.sense.pos core.source="hand-core 1"
 @k.words.word.key.sense.n core.word text=n means=k.words.sense.n core.source="hand-core 1"
 @k.words.word.key.sense.gloss core.word text=define text=explain means=k.words.sense.gloss core.source="hand-core 1"
+@k.words.word.key.sense.supersense core.word text=supersense text=supersenses text="lexicographer file" text="semantic class" means=k.words.sense.supersense core.source="hand-core 1"
 @k.words.word.key.sense.is_a core.word text="is a" means=k.words.sense.is_a core.source="hand-core 1"
 @k.words.word.key.sense.instance_of core.word text="instance of" text=kind text="kind of" means=k.words.sense.instance_of core.source="hand-core 1"
 @k.words.word.key.sense.part_of core.word text="part of" means=k.words.sense.part_of core.source="hand-core 1"

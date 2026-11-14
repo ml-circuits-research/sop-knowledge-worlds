@@ -10,7 +10,7 @@
     "test:all": "node tools/test-run.mjs",
     "test:slow": "node tools/test-run.mjs --slow",
     "validate": "node tools/validate.mjs",
-    "build": "node tools/render-svg.mjs && node tools/render-scenes.mjs && node tools/check-preview-page.mjs && node tools/derive.mjs && node tools/geo-aliases.mjs && node tools/joins.mjs && node tools/kinds-core.mjs && node tools/relations-core.mjs && node tools/joins-report.mjs && node tools/structures-core.mjs && node tools/narration-core.mjs && node tools/lang-en-variants.mjs && node tools/build-catalog.mjs",
+    "build": "node tools/render-svg.mjs && node tools/render-scenes.mjs && node tools/check-preview-page.mjs && node tools/derive.mjs && node tools/geo-aliases.mjs && node tools/joins.mjs && node tools/kinds-core.mjs && node tools/relations-core.mjs && node tools/joins-report.mjs && node tools/structures-core.mjs && node tools/narration-core.mjs && node tools/lang-en-variants.mjs && node tools/lang-en-closed.mjs && node tools/build-catalog.mjs",
     "reports": "node tools/build-catalog.mjs && node tools/coverage-report.mjs && node tools/aspects-report.mjs && node tools/build-catalog.mjs"
   }
 }

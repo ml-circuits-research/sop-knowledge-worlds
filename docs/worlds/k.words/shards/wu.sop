@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.wu.noun.1 k.words.sense word=Wu pos=noun n=1 gloss="a dialect of Chinese spoken in the Yangtze delta" synonym="Wu dialect" synonym="Shanghai dialect" is_a=Chinese core.source="wordnet 3.1"
+@k.words.wu.noun.1 k.words.sense word=Wu pos=noun n=1 supersense=noun.communication gloss="a dialect of Chinese spoken in the Yangtze delta" synonym="Wu dialect" synonym="Shanghai dialect" is_a=Chinese core.source="wordnet 3.1"
 @k.words.wu.spelling.Wu core.word text=wu means=Wu of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.wuss.noun.1 k.words.sense word=wuss pos=noun n=1 gloss="a person who is physically weak and ineffectual" synonym=weakling synonym=doormat is_a=person core.source="wordnet 3.1"
+@k.words.wuss.noun.1 k.words.sense word=wuss pos=noun n=1 supersense=noun.person gloss="a person who is physically weak and ineffectual" synonym=weakling synonym=doormat is_a=person core.source="wordnet 3.1"

@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.ekg.noun.1 k.words.sense word=EKG pos=noun n=1 gloss="a graphical recording of the cardiac cycle produced by an electrocardiograph" synonym=electrocardiogram synonym=cardiogram synonym=ECG is_a=graph part_of=checkup core.source="wordnet 3.1"
+@k.words.ekg.noun.1 k.words.sense word=EKG pos=noun n=1 supersense=noun.communication gloss="a graphical recording of the cardiac cycle produced by an electrocardiograph" synonym=electrocardiogram synonym=cardiogram synonym=ECG is_a=graph part_of=checkup core.source="wordnet 3.1"
 @k.words.ekg.spelling.EKG core.word text=ekg means=EKG of=k.words.sense.word core.source="wordnet 3.1"

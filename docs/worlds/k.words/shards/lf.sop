@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.lf.noun.1 k.words.sense word=LF pos=noun n=1 gloss="30 to 300 kilohertz" synonym="low frequency" is_a="radio frequency" part_of="electromagnetic spectrum" kind_of="radio frequency" kind_of=frequency kind_of=rate kind_of="magnitude relation" kind_of=relation kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.lf.noun.1 k.words.sense word=LF pos=noun n=1 supersense=noun.attribute gloss="30 to 300 kilohertz" synonym="low frequency" is_a="radio frequency" part_of="electromagnetic spectrum" kind_of="radio frequency" kind_of=frequency kind_of=rate kind_of="magnitude relation" kind_of=relation kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
 @k.words.lf.spelling.LF core.word text=lf means=LF of=k.words.sense.word core.source="wordnet 3.1"

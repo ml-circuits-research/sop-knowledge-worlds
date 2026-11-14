@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.hq.noun.1 k.words.sense word=HQ pos=noun n=1 gloss="the military installation from which a commander performs the functions of command" synonym=headquarters synonym="military headquarters" is_a="military installation" core.source="wordnet 3.1"
+@k.words.hq.noun.1 k.words.sense word=HQ pos=noun n=1 supersense=noun.artifact gloss="the military installation from which a commander performs the functions of command" synonym=headquarters synonym="military headquarters" is_a="military installation" core.source="wordnet 3.1"
 @k.words.hq.spelling.HQ core.word text=hq means=HQ of=k.words.sense.word core.source="wordnet 3.1"

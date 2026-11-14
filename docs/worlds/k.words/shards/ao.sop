@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.aorta.noun.1 k.words.sense word=aorta pos=noun n=1 gloss="the large trunk artery that carries blood from the left ventricle of the heart to branch arteries" is_a=artery core.source="wordnet 3.1"
+@k.words.aorta.noun.1 k.words.sense word=aorta pos=noun n=1 supersense=noun.body gloss="the large trunk artery that carries blood from the left ventricle of the heart to branch arteries" is_a=artery core.source="wordnet 3.1"
 @k.words.aorta.forms core.word text=aortae means=aorta of=k.words.sense.word core.source="wordnet 3.1"

@@ -3,8 +3,8 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.wyatt.noun.1 k.words.sense word=Wyatt pos=noun n=1 gloss="English architect (1746-1813)" synonym="James Wyatt" instance_of=architect core.source="wordnet 3.1"
-@k.words.wyatt.noun.2 k.words.sense word=Wyatt pos=noun n=2 gloss="English poet who introduced the sonnet form to English literature (1503-1542)" synonym="Sir Thomas Wyatt" synonym=Wyat synonym="Sir Thomas Wyat" instance_of=poet core.source="wordnet 3.1"
+@k.words.wyatt.noun.1 k.words.sense word=Wyatt pos=noun n=1 supersense=noun.person gloss="English architect (1746-1813)" synonym="James Wyatt" instance_of=architect core.source="wordnet 3.1"
+@k.words.wyatt.noun.2 k.words.sense word=Wyatt pos=noun n=2 supersense=noun.person gloss="English poet who introduced the sonnet form to English literature (1503-1542)" synonym="Sir Thomas Wyatt" synonym=Wyat synonym="Sir Thomas Wyat" instance_of=poet core.source="wordnet 3.1"
 @k.words.wyatt.spelling.Wyatt core.word text=wyatt means=Wyatt of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.wyoming.noun.1 k.words.sense word=Wyoming pos=noun n=1 gloss="a state in the western United States; mountainous in the west and north with the Great Plains in the east" synonym="Equality State" synonym=WY synonym=Wyo. instance_of="American state" part_of="United States" core.source="wordnet 3.1"
+@k.words.wyoming.noun.1 k.words.sense word=Wyoming pos=noun n=1 supersense=noun.location gloss="a state in the western United States; mountainous in the west and north with the Great Plains in the east" synonym="Equality State" synonym=WY synonym=Wyo. instance_of="American state" part_of="United States" core.source="wordnet 3.1"
 @k.words.wyoming.spelling.Wyoming core.word text=wyoming means=Wyoming of=k.words.sense.word core.source="wordnet 3.1"

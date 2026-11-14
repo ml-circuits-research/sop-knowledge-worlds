@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.dj.noun.1 k.words.sense word=DJ pos=noun n=1 gloss="a person who announces and plays popular recorded music" synonym="disk jockey" synonym="disc jockey" synonym=d.j. is_a=broadcaster core.source="wordnet 3.1"
-@k.words.dj.verb.1 k.words.sense word=DJ pos=verb n=1 gloss="comment on music to be played" synonym=disk-jockey synonym=disc-jockey is_a=comment core.source="wordnet 3.1"
+@k.words.dj.noun.1 k.words.sense word=DJ pos=noun n=1 supersense=noun.person gloss="a person who announces and plays popular recorded music" synonym="disk jockey" synonym="disc jockey" synonym=d.j. is_a=broadcaster core.source="wordnet 3.1"
+@k.words.dj.verb.1 k.words.sense word=DJ pos=verb n=1 supersense=verb.communication gloss="comment on music to be played" synonym=disk-jockey synonym=disc-jockey is_a=comment core.source="wordnet 3.1"
 @k.words.dj.spelling.DJ core.word text=dj means=DJ of=k.words.sense.word core.source="wordnet 3.1"

@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
-import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, HAND_SENSES, USAGE, bandOf } from '../tools/import/wordnet.mjs';
+import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, HAND_SENSES, USAGE, bandOf, LEXNAMES } from '../tools/import/wordnet.mjs';
 
 const fixture = {
   'data.noun': [
@@ -40,14 +40,14 @@ test('the importer maps senses, synonyms, is-a, instance-of, part-of and irregul
   assert.deepEqual(stats, { listed: 6, words: 5, senses: 5, skipped: 1, forms: 2, spellings: 1, shards: 5, opposites: 0, nearOpposites: 0, chains: 0 });
   const lines = (f) => files[f].split('\n').filter((l) => l.startsWith('@'));
   assert.deepEqual(lines('do.sop'), [
-    '@k.words.dog.noun.1 k.words.sense word=dog pos=noun n=1 gloss="a pet that barks" synonym="domestic dog" is_a=animal part_of=pack core.source="wordnet 3.1"',
+    '@k.words.dog.noun.1 k.words.sense word=dog pos=noun n=1 supersense=noun.animal gloss="a pet that barks" synonym="domestic dog" is_a=animal part_of=pack core.source="wordnet 3.1"',
   ]);
   assert.deepEqual(lines('pa.sop'), [
-    '@k.words.paris.noun.1 k.words.sense word=Paris pos=noun n=1 gloss="the capital of France" instance_of=city core.source="wordnet 3.1"',
+    '@k.words.paris.noun.1 k.words.sense word=Paris pos=noun n=1 supersense=noun.location gloss="the capital of France" instance_of=city core.source="wordnet 3.1"',
     '@k.words.paris.spelling.Paris core.word text=paris means=Paris of=k.words.sense.word core.source="wordnet 3.1"',
   ]);
   assert.deepEqual(lines('ru.sop'), [
-    '@k.words.run.verb.1 k.words.sense word=run pos=verb n=1 gloss="move fast on foot" synonym=jog is_a=move core.source="wordnet 3.1"',
+    '@k.words.run.verb.1 k.words.sense word=run pos=verb n=1 supersense=verb.change gloss="move fast on foot" synonym=jog is_a=move core.source="wordnet 3.1"',
     '@k.words.run.forms core.word text=ran means=run of=k.words.sense.word core.source="wordnet 3.1"',
   ]);
   assert.equal(lines('ch.sop')[1], '@k.words.child.forms core.word text=children means=child of=k.words.sense.word core.source="wordnet 3.1"');
@@ -69,13 +69,13 @@ test('Round 9: opposites, near opposites of adjectives, adjectives and adverbs a
   const list = 'dog 90\nrun 80\nbig 70\nhuge 60\nfast 50\njog 40\nsmall 30\n';
   const { files, stats } = importWordnet(more, list, { commonLimit: 5 });
   const lines = (f) => files[f].split('\n').filter((l) => l.startsWith('@'));
-  assert.deepEqual(lines('do.sop'), ['@k.words.dog.noun.1 k.words.sense word=dog pos=noun n=1 gloss="a pet that barks" synonym="domestic dog" is_a=animal part_of=pack kind_of=animal core.source="wordnet 3.1"']);
-  assert.equal(lines('ru.sop')[0], '@k.words.run.verb.1 k.words.sense word=run pos=verb n=1 gloss="move fast on foot" synonym=jog is_a=move opposite=stand kind_of=move core.source="wordnet 3.1"');
+  assert.deepEqual(lines('do.sop'), ['@k.words.dog.noun.1 k.words.sense word=dog pos=noun n=1 supersense=noun.animal gloss="a pet that barks" synonym="domestic dog" is_a=animal part_of=pack kind_of=animal core.source="wordnet 3.1"']);
+  assert.equal(lines('ru.sop')[0], '@k.words.run.verb.1 k.words.sense word=run pos=verb n=1 supersense=verb.change gloss="move fast on foot" synonym=jog is_a=move opposite=stand kind_of=move core.source="wordnet 3.1"');
   // jog is not among the first five words: no chain; the opposite belongs to "run", not to "jog".
-  assert.equal(lines('jo.sop')[0], '@k.words.jog.verb.1 k.words.sense word=jog pos=verb n=1 gloss="move fast on foot" synonym=run is_a=move core.source="wordnet 3.1"');
-  assert.deepEqual(lines('bi.sop'), ['@k.words.big.adjective.1 k.words.sense word=big pos=adjective n=1 gloss="above average in size" opposite=small core.source="wordnet 3.1"']);
-  assert.deepEqual(lines('hu.sop'), ['@k.words.huge.adjective.1 k.words.sense word=huge pos=adjective n=1 gloss="unusually great in size" near_opposite=small core.source="wordnet 3.1"']);
-  assert.deepEqual(lines('fa.sop'), ['@k.words.fast.adverb.1 k.words.sense word=fast pos=adverb n=1 gloss="quickly" core.source="wordnet 3.1"']);
+  assert.equal(lines('jo.sop')[0], '@k.words.jog.verb.1 k.words.sense word=jog pos=verb n=1 supersense=verb.change gloss="move fast on foot" synonym=run is_a=move core.source="wordnet 3.1"');
+  assert.deepEqual(lines('bi.sop'), ['@k.words.big.adjective.1 k.words.sense word=big pos=adjective n=1 supersense=adj.all gloss="above average in size" opposite=small core.source="wordnet 3.1"']);
+  assert.deepEqual(lines('hu.sop'), ['@k.words.huge.adjective.1 k.words.sense word=huge pos=adjective n=1 supersense=adj.all gloss="unusually great in size" near_opposite=small core.source="wordnet 3.1"']);
+  assert.deepEqual(lines('fa.sop'), ['@k.words.fast.adverb.1 k.words.sense word=fast pos=adverb n=1 supersense=adv.all gloss="quickly" core.source="wordnet 3.1"']);
   // small is the seventh word: an adjective outside the common words is not kept.
   assert.equal(files['sm.sop'], undefined);
   assert.deepEqual({ opposites: stats.opposites, nearOpposites: stats.nearOpposites, chains: stats.chains }, { opposites: 2, nearOpposites: 1, chains: 2 });
@@ -146,11 +146,11 @@ test('the one-word names of the hand-written worlds have their sense in k.words'
 });
 
 test('asked words are kept whatever their place in the list; hand senses go to hand.sop, CC0, and never repeat a WordNet word', () => {
-  const { files, stats } = importWordnet(fixture, 'the 100\n', { commonLimit: 0, asked: ['pack'], hand: [{ word: 'numbered', pos: 'adjective', n: 1, gloss: 'marked with numbers', synonym: [] }] });
+  const { files, stats } = importWordnet(fixture, 'the 100\n', { commonLimit: 0, asked: ['pack'], hand: [{ word: 'numbered', pos: 'adjective', n: 1, supersense: 'adj.ppl', gloss: 'marked with numbers', synonym: [] }] });
   assert.deepEqual(Object.keys(files), ['pa.sop', 'hand.sop']);
   assert.equal(stats.hand, 1);
   assert.match(files['hand.sop'], /^# license: CC0-1\.0$/m);
-  assert.match(files['hand.sop'], /^@k\.words\.numbered\.adjective\.1 k\.words\.sense word=numbered pos=adjective n=1 gloss="marked with numbers" core\.source="hand-core 1"$/m);
+  assert.match(files['hand.sop'], /^@k\.words\.numbered\.adjective\.1 k\.words\.sense word=numbered pos=adjective n=1 supersense=adj\.ppl gloss="marked with numbers" core\.source="hand-core 1"$/m);
   assert.throws(() => importWordnet(fixture, 'the 100\n', { hand: [{ word: 'dog', pos: 'noun', n: 9, gloss: 'x', synonym: [] }] }), /WordNet has this word/);
   assert.ok(HAND_SENSES.every((h) => h.why) && ASKED.includes('thicken'));
 });
@@ -161,7 +161,7 @@ test('register: usage-domain pointers become usage on the sense; the frequency (
     'index.noun': `${fixture['index.noun']}\ncolloquialism n 1 0 1 0 00000008\nmutt n 1 2 @ ;u 1 0 00000009` };
   const wf = 'rank\tword\tcentibel\tzipf\tband\n1\tthe\t127\t7.73\tvery-common\n837\tdog\t390\t5.1\tcommon\n40000\tmutt\t620\t2.8\trare\n';
   const { files, stats } = importWordnet(more, 'the 100\ndog 90\nmutt 80\n', { commonLimit: 0, register: wf });
-  assert.match(files['mu.sop'], /word=mutt pos=noun n=1 gloss="an inferior dog" is_a=dog usage=informal core\.source/);
+  assert.match(files['mu.sop'], /word=mutt pos=noun n=1 supersense=noun\.communication gloss="an inferior dog" is_a=dog usage=informal core\.source/);
   assert.match(files['frequency-d.sop'], /^@k\.words\.frequency\.dog k\.words\.frequency word=dog zipf=5\.1 band=2 core\.source="wordfreq 3\.1\.1"$/m);
   assert.match(files['frequency-m.sop'], /word=mutt zipf=2\.8 band=5 /);
   assert.match(files['frequency-d.sop'], /^# license: CC-BY-SA-4\.0$/m);
@@ -171,4 +171,27 @@ test('register: usage-domain pointers become usage on the sense; the frequency (
   assert.doesNotMatch(importWordnet(more, 'mutt 1\n', { commonLimit: 0 }).files['mu.sop'], /usage=/);
   assert.deepEqual([7, 6, 5.99, 5, 4.2, 3, 2.9].map(bandOf), [1, 1, 2, 2, 3, 4, 5]);
   assert.equal(USAGE.colloquialism, 'informal');
+});
+
+// Reviewer block "02:15": every sense carries its WordNet supersense (the lexicographer file), of its own part of speech.
+test('supersenses: the 45 lexicographer files, one on every sense of the shards, of the sense\'s part of speech', () => {
+  assert.equal(LEXNAMES.length, 45);
+  if (existsSync(join(dict, 'lexnames'))) {
+    const file = readFileSync(join(dict, 'lexnames'), 'utf8').split('\n').filter((l) => l.trim()).map((l) => l.trim().split(/\s+/));
+    assert.deepEqual(file.map(([n, name]) => [Number(n), name]), LEXNAMES.map((name, i) => [i, name]));
+  }
+  const prefix = { noun: 'noun.', verb: 'verb.', adjective: 'adj.', adverb: 'adv.' };
+  const dir = join(WORLDS_DIR, 'k.words', 'shards');
+  const missing = [], wrong = [];
+  let senses = 0;
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.sop'))) for (const l of readFileSync(join(dir, f), 'utf8').split('\n')) {
+    const m = /^@(\S+) k\.words\.sense .* pos=(\w+) n=\d+(?: supersense=(\S+))?/.exec(l);
+    if (!m) continue;
+    senses++;
+    if (!m[3]) missing.push(m[1]);
+    else if (!m[3].startsWith(prefix[m[2]]) || !LEXNAMES.includes(m[3])) wrong.push(`${m[1]} ${m[3]}`);
+  }
+  assert.ok(senses > 29000, `${senses} senses`);
+  assert.deepEqual(missing, [], `senses without a supersense: ${missing.length}`);
+  assert.deepEqual(wrong, []);
 });

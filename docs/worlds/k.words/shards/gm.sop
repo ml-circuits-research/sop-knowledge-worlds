@@ -3,4 +3,4 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.gm.noun.1 k.words.sense word=gm pos=noun n=1 gloss="a metric unit of weight equal to one thousandth of a kilogram" synonym=gram synonym=gramme synonym=g is_a="metric weight unit" part_of=dekagram core.source="wordnet 3.1"
+@k.words.gm.noun.1 k.words.sense word=gm pos=noun n=1 supersense=noun.quantity gloss="a metric unit of weight equal to one thousandth of a kilogram" synonym=gram synonym=gramme synonym=g is_a="metric weight unit" part_of=dekagram core.source="wordnet 3.1"

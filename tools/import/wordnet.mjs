@@ -28,9 +28,10 @@ const MULTI = /^[a-z][a-z0-9-]*(_[a-z][a-z0-9-]*)+$/;
 export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thick', 'thicken', 'vertical', 'subhead'];
 // Senses WordNet 3.1 does not have, written by hand (hand-core 1, CC0-1.0) into a shard of their own, `hand.sop`, so
 // that no wire of another licence shares a shard with them. `n` counts on from WordNet's senses of that part of
-// speech (none for these). "numbered" is in WordNet only as a form of the verb number ("give numbers to").
+// speech (none for these). "numbered" is in WordNet only as a form of the verb number ("give numbers to"). Each names
+// the lexicographer file WordNet would file it in (`supersense`; "numbered" is a participial adjective: adj.ppl).
 export const HAND_SENSES = [
-  { word: 'numbered', pos: 'adjective', n: 1, gloss: 'marked with numbers that give an order', synonym: [], why: 'w.lang.ro numerotat; WordNet 3.1 has only the verb number, sense 2 "give numbers to"' },
+  { word: 'numbered', pos: 'adjective', n: 1, supersense: 'adj.ppl', gloss: 'marked with numbers that give an order', synonym: [], why: 'w.lang.ro numerotat; WordNet 3.1 has only the verb number, sense 2 "give numbers to"' },
 ];
 // The register of a sense (block "15:15" item 2): WordNet's usage-domain pointers (`;u`) to these synsets, by their
 // first word, become `usage` values (colloquialism 295 synsets, slang 88, archaism 72, disparagement 36, euphemism 7,
@@ -48,7 +49,17 @@ export const FREQ_SOURCE = 'wordfreq 3.1.1';
 const keyOf = (name) => String(name).toLowerCase().trim().replace(/\s+/g, '_');
 const kept = (w) => LEMMA.test(w) || MULTI.test(w);
 
-// A data.<pos> file: synset offset -> { words (as spelt), pointers [symbol, offset, pos], gloss }.
+// The supersense of a sense (reviewer block "02:15", for the library's type signatures): the lexicographer file
+// WordNet files its synset in (the second field of a data line), by name. The 45 names of WordNet 3.1's `lexnames`
+// file, in its order (tests/import.wordnet.test.mjs checks them against the file when the raw files are present).
+export const LEXNAMES = ['adj.all', 'adj.pert', 'adv.all', 'noun.Tops', 'noun.act', 'noun.animal', 'noun.artifact', 'noun.attribute',
+  'noun.body', 'noun.cognition', 'noun.communication', 'noun.event', 'noun.feeling', 'noun.food', 'noun.group', 'noun.location',
+  'noun.motive', 'noun.object', 'noun.person', 'noun.phenomenon', 'noun.plant', 'noun.possession', 'noun.process', 'noun.quantity',
+  'noun.relation', 'noun.shape', 'noun.state', 'noun.substance', 'noun.time', 'verb.body', 'verb.change', 'verb.cognition',
+  'verb.communication', 'verb.competition', 'verb.consumption', 'verb.contact', 'verb.creation', 'verb.emotion', 'verb.motion',
+  'verb.perception', 'verb.possession', 'verb.social', 'verb.stative', 'verb.weather', 'adj.ppl'];
+
+// A data.<pos> file: synset offset -> { words (as spelt), pointers [symbol, offset, pos], lexicographer file number, gloss }.
 export function readData(text) {
   const synsets = new Map();
   for (const line of text.split('\n')) {
@@ -63,7 +74,7 @@ export function readData(text) {
     const pointers = [];
     // A pointer: [symbol, offset, pos, source word number, target word number] (0 and 0: between the synsets).
     for (let i = 0; i < pointerCount; i++, at += 4) pointers.push([f[at], f[at + 1], f[at + 2], parseInt(f[at + 3].slice(0, 2), 16), parseInt(f[at + 3].slice(2), 16)]);
-    synsets.set(f[0], { words, pointers, kind: f[2], gloss: bar < 0 ? '' : line.slice(bar + 3).trim() });
+    synsets.set(f[0], { words, pointers, kind: f[2], lex: Number(f[1]), gloss: bar < 0 ? '' : line.slice(bar + 3).trim() });
   }
   return synsets;
 }
@@ -163,7 +174,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
         const near = opposite.length || p !== 'a' ? [] : [...new Set(s.pointers.filter(([sym, off]) => sym === '&' && data.has(off)).flatMap(([, off]) => lexical(data.get(off), data.get(off).words[0], '!')))];
         const kinds = (p === 'n' || p === 'v') && common.has(lemma) ? chain(offset) : [];
         const line = wire(`k.words.${seg(lemma)}.${pos}.${i + 1}`, 'k.words.sense', [
-          ['word', spelt(own)], ['pos', pos], ['n', i + 1], ['gloss', text(shortGloss(s.gloss))],
+          ['word', spelt(own)], ['pos', pos], ['n', i + 1], ['supersense', LEXNAMES[s.lex]], ['gloss', text(shortGloss(s.gloss))],
           ...[...new Set(others.map(spelt))].filter((w) => w !== spelt(own)).map((w) => ['synonym', w]),
           ...targets('@').map((w) => ['is_a', w]),
           ...targets('@i').map((w) => ['instance_of', w]),
@@ -174,6 +185,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
           ...usage.map((u) => ['usage', u]),
         ], SOURCE);
         if (register) stats.usage += usage.length ? 1 : 0;
+        if (LEXNAMES[s.lex] === undefined) stats.noSupersense = (stats.noSupersense ?? 0) + 1;
         stats.opposites += opposite.length ? 1 : 0;
         stats.nearOpposites += near.length ? 1 : 0;
         stats.chains += kinds.length ? 1 : 0;
@@ -256,7 +268,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
   for (const h of hand) {
     const p = Object.keys(POS).find((x) => POS[x] === h.pos);
     if (readIndex(files[`index.${FILE[p]}`] ?? '').has(keyOf(h.word))) throw new Error(`hand sense ${h.word} ${h.pos}: WordNet has this word as ${h.pos}`);
-    handLines.push(wire(`k.words.${seg(keyOf(h.word))}.${h.pos}.${h.n}`, 'k.words.sense', [['word', h.word], ['pos', h.pos], ['n', h.n], ['gloss', text(h.gloss)], ...h.synonym.map((w) => ['synonym', w])], 'hand-core 1'));
+    handLines.push(wire(`k.words.${seg(keyOf(h.word))}.${h.pos}.${h.n}`, 'k.words.sense', [['word', h.word], ['pos', h.pos], ['n', h.n], ['supersense', h.supersense], ['gloss', text(h.gloss)], ...h.synonym.map((w) => ['synonym', w])], 'hand-core 1'));
   }
   if (handLines.length) {
     out['hand.sop'] = `${header({

@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.dd.noun.1 k.words.sense word=DD pos=noun n=1 gloss="a doctor's degree in religion" synonym="Doctor of Divinity" is_a="doctor's degree" core.source="wordnet 3.1"
+@k.words.dd.noun.1 k.words.sense word=DD pos=noun n=1 supersense=noun.communication gloss="a doctor's degree in religion" synonym="Doctor of Divinity" is_a="doctor's degree" core.source="wordnet 3.1"
 @k.words.dd.spelling.DD core.word text=dd means=DD of=k.words.sense.word core.source="wordnet 3.1"

@@ -3,8 +3,8 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.ogden.noun.1 k.words.sense word=Ogden pos=noun n=1 gloss="English psychologist who collaborated with I. A. Richards in designing Basic English (1889-1957)" synonym="C. K. Ogden" synonym="Charles Kay Ogden" instance_of=psychologist instance_of=semanticist core.source="wordnet 3.1"
-@k.words.ogden.noun.2 k.words.sense word=Ogden pos=noun n=2 gloss="a town in northern Utah settled by Mormons" instance_of=town part_of=Utah core.source="wordnet 3.1"
+@k.words.ogden.noun.1 k.words.sense word=Ogden pos=noun n=1 supersense=noun.person gloss="English psychologist who collaborated with I. A. Richards in designing Basic English (1889-1957)" synonym="C. K. Ogden" synonym="Charles Kay Ogden" instance_of=psychologist instance_of=semanticist core.source="wordnet 3.1"
+@k.words.ogden.noun.2 k.words.sense word=Ogden pos=noun n=2 supersense=noun.location gloss="a town in northern Utah settled by Mormons" instance_of=town part_of=Utah core.source="wordnet 3.1"
 @k.words.ogden.spelling.Ogden core.word text=ogden means=Ogden of=k.words.sense.word core.source="wordnet 3.1"
-@k.words.ogre.noun.1 k.words.sense word=ogre pos=noun n=1 gloss="a cruel wicked and inhuman person" synonym=monster synonym=fiend synonym=devil synonym=demon is_a="unpleasant person" core.source="wordnet 3.1"
-@k.words.ogre.noun.2 k.words.sense word=ogre pos=noun n=2 gloss="(folklore) a giant who likes to eat human beings" is_a=giant core.source="wordnet 3.1"
+@k.words.ogre.noun.1 k.words.sense word=ogre pos=noun n=1 supersense=noun.person gloss="a cruel wicked and inhuman person" synonym=monster synonym=fiend synonym=devil synonym=demon is_a="unpleasant person" core.source="wordnet 3.1"
+@k.words.ogre.noun.2 k.words.sense word=ogre pos=noun n=2 supersense=noun.person gloss="(folklore) a giant who likes to eat human beings" is_a=giant core.source="wordnet 3.1"

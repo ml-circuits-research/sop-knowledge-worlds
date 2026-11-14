@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -99,6 +99,18 @@
 @w.lang.en.numeral.text core.slot of=w.lang.en.numeral key=text id=true required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.numeral.value core.slot of=w.lang.en.numeral key=value required=true kind=integer core.source="psys2 78f45863"
 @w.lang.en.numeral.in core.slot of=w.lang.en.numeral key=in many=true kind=atom core.source="psys2 78f45863"
+
+# The class of a closed-class word (reviewer block "02:15", for type signatures): one fact per word and class, derived
+# from the word lists above and below (`from`: the lists the word is in; the lists stay the home of the words) by the
+# tables of tools/lang-en-closed.mjs (shard closed-classes, rerun by the build). The classes are the closed parts of
+# speech of Universal Dependencies in English words: determiner DET, pronoun PRON, preposition ADP, conjunction
+# CCONJ/SCONJ, auxiliary AUX, numeral NUM, ordinal (ADJ, NumType=Ord), adverb ADV (the function adverbs of the
+# lists), particle PART, interjection INTJ. Multi-word entries of a one-class list are one word of it ("in front of",
+# "how many"); phrases of the marker lists ("scratch that") and open-class words in them (want, think) have none.
+@w.lang.en.closed core.type of=w.lang.en.closed shared=true closed=true core.source="hand-core 1"
+@w.lang.en.closed.text core.slot of=w.lang.en.closed key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.closed.class core.slot of=w.lang.en.closed key=class id=true required=true enum=determiner enum=pronoun enum=preposition enum=conjunction enum=auxiliary enum=numeral enum=ordinal enum=adverb enum=particle enum=interjection core.source="hand-core 1"
+@w.lang.en.closed.from core.slot of=w.lang.en.closed key=from many=true required=true kind=atom core.source="hand-core 1"
 
 # ---- morphology ----
 # A rule of inflection: `op` singular (from a plural) or plural (from a singular); the first rule of a `set` by
@@ -507,6 +519,7 @@
 @w.lang.en.skip.text core.slot of=w.lang.en.skip key=text many=true required=true kind=atom kind=string core.source="hand-core 1"
 @w.lang.en.skip.doc core.slot of=w.lang.en.skip key=doc kind=string core.source="hand-core 1"
 
+@w.lang.en.word.closed core.word text="word class" text="closed class" text="function word" text="function words" means=w.lang.en.closed core.source="hand-core 1"
 @w.lang.en.word.aux core.word text=auxiliary text="auxiliary verb" means=w.lang.en.aux core.source="hand-core 1"
 @w.lang.en.word.frame core.word text="argument frame" text=frame text=frames means=w.lang.en.frame core.source="hand-core 1"
 @w.lang.en.word.rule core.word text="grammar rule" text=production means=w.lang.en.rule core.source="hand-core 1"

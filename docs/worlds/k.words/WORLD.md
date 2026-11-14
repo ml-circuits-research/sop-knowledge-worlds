@@ -49,6 +49,12 @@ planet, manta ray an animal, light year a unit), and the adjective and adverb se
   - Shards `frequency-<letter>.sop` (26, 11,278 facts, 1.18 MB), under wordfreq's data terms, **CC BY-SA 4.0**, with
     the attributions it asks for (`sources/wordfreq/SOURCE.md`), so no WordNet shard changes its terms (Q9). A host
     that wants no share-alike data leaves them out.
+- **Supersense** (version 4, reviewer block "02:15", for the library's type signatures): every sense carries
+  `supersense`, the WordNet lexicographer file its synset is filed in (the 45 names of WordNet 3.1's `lexnames`:
+  `noun.animal`, `noun.artifact`, `verb.motion`, `adj.all`, ...), of its own part of speech. All 29,449 senses have
+  one (the hand sense `numbered` is `adj.ppl`, a participial adjective); the most frequent are noun.person 3,484,
+  noun.artifact 2,846, noun.act 2,173, noun.communication 1,733, adj.all 1,621, verb.contact 1,188.
+  `tests/import.wordnet.test.mjs` checks the list against the raw `lexnames` file and that no sense lacks one.
 - Exports: `k.words.sense`, `k.words.frequency`.
 
 The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain beyond the common words (which carry `kind_of`), look the value up as a

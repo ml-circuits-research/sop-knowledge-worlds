@@ -3,6 +3,6 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.xi.noun.1 k.words.sense word=XI pos=noun n=1 gloss="the cardinal number that is the sum of ten and one" synonym=eleven synonym=11 is_a="large integer" core.source="wordnet 3.1"
-@k.words.xi.noun.2 k.words.sense word=xi pos=noun n=2 gloss="the 14th letter of the Greek alphabet" is_a=letter core.source="wordnet 3.1"
+@k.words.xi.noun.1 k.words.sense word=XI pos=noun n=1 supersense=noun.quantity gloss="the cardinal number that is the sum of ten and one" synonym=eleven synonym=11 is_a="large integer" core.source="wordnet 3.1"
+@k.words.xi.noun.2 k.words.sense word=xi pos=noun n=2 supersense=noun.communication gloss="the 14th letter of the Greek alphabet" is_a=letter core.source="wordnet 3.1"
 @k.words.xi.spelling.XI core.word text=xi means=XI of=k.words.sense.word core.source="wordnet 3.1"

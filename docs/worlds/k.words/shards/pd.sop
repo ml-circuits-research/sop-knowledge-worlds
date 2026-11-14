@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.pd.noun.1 k.words.sense word=Pd pos=noun n=1 gloss="a silver-white metallic element of the platinum group that resembles platinum; occurs in some copper and nickel ores; does not tarnish at ordinary temperatures and is used (alloyed with gold) in jewelry" synonym=palladium synonym="atomic number 46" is_a="metallic element" core.source="wordnet 3.1"
+@k.words.pd.noun.1 k.words.sense word=Pd pos=noun n=1 supersense=noun.substance gloss="a silver-white metallic element of the platinum group that resembles platinum; occurs in some copper and nickel ores; does not tarnish at ordinary temperatures and is used (alloyed with gold) in jewelry" synonym=palladium synonym="atomic number 46" is_a="metallic element" core.source="wordnet 3.1"
 @k.words.pd.spelling.Pd core.word text=pd means=Pd of=k.words.sense.word core.source="wordnet 3.1"

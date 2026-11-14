@@ -3,8 +3,8 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.mt.noun.1 k.words.sense word=Mt pos=noun n=1 gloss="a radioactive transuranic element" synonym=meitnerium synonym="element 109" synonym="atomic number 109" is_a="chemical element" core.source="wordnet 3.1"
-@k.words.mt.noun.2 k.words.sense word=MT pos=noun n=2 gloss="a unit of weight equivalent to 1000 kilograms" synonym="metric ton" synonym=tonne synonym=t is_a="metric weight unit" core.source="wordnet 3.1"
-@k.words.mt.noun.3 k.words.sense word=MT pos=noun n=3 gloss="a state in northwestern United States on the Canadian border" synonym=Montana synonym="Treasure State" synonym=Mont. instance_of="American state" part_of="United States" core.source="wordnet 3.1"
+@k.words.mt.noun.1 k.words.sense word=Mt pos=noun n=1 supersense=noun.substance gloss="a radioactive transuranic element" synonym=meitnerium synonym="element 109" synonym="atomic number 109" is_a="chemical element" core.source="wordnet 3.1"
+@k.words.mt.noun.2 k.words.sense word=MT pos=noun n=2 supersense=noun.quantity gloss="a unit of weight equivalent to 1000 kilograms" synonym="metric ton" synonym=tonne synonym=t is_a="metric weight unit" core.source="wordnet 3.1"
+@k.words.mt.noun.3 k.words.sense word=MT pos=noun n=3 supersense=noun.location gloss="a state in northwestern United States on the Canadian border" synonym=Montana synonym="Treasure State" synonym=Mont. instance_of="American state" part_of="United States" core.source="wordnet 3.1"
 @k.words.mt.spelling.MT core.word text=mt means=MT of=k.words.sense.word core.source="wordnet 3.1"
 @k.words.mt.spelling.Mt core.word text=mt means=Mt of=k.words.sense.word core.source="wordnet 3.1"

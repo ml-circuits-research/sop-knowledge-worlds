@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.pc.noun.1 k.words.sense word=PC pos=noun n=1 gloss="a small digital computer based on a microprocessor and designed to be used by one person at a time" synonym="personal computer" synonym=microcomputer is_a="digital computer" core.source="wordnet 3.1"
+@k.words.pc.noun.1 k.words.sense word=PC pos=noun n=1 supersense=noun.artifact gloss="a small digital computer based on a microprocessor and designed to be used by one person at a time" synonym="personal computer" synonym=microcomputer is_a="digital computer" core.source="wordnet 3.1"
 @k.words.pc.spelling.PC core.word text=pc means=PC of=k.words.sense.word core.source="wordnet 3.1"

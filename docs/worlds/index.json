@@ -1,5 +1,5 @@
 {
- "version": "c5975e00c382",
+ "version": "d19664b17509",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4449,8 +4449,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 991,
-     "bytes": 190992,
+     "wires": 992,
+     "bytes": 191232,
      "keys": [
       "a",
       "about",
@@ -4967,6 +4967,7 @@
       "style",
       "subject",
       "subject_sense",
+      "supersense",
       "symbol",
       "symmetric",
       "synonym",
@@ -29651,8 +29652,8 @@
     {
      "id": "k.kinds/shards/relations-words",
      "path": "k.kinds/shards/relations-words.sop",
-     "wires": 13,
-     "bytes": 2560,
+     "wires": 14,
+     "bytes": 2719,
      "keys": [
       "band",
       "gloss",
@@ -29666,6 +29667,7 @@
       "opposite",
       "part_of",
       "pos",
+      "supersense",
       "synonym",
       "usage",
       "zipf"
@@ -56691,7 +56693,7 @@
   },
   {
    "id": "k.words",
-   "version": "3",
+   "version": "4",
    "schema": "k.words/schema.sop",
    "exports": [
     "k.words.frequency",
@@ -56703,7 +56705,7 @@
      "id": "k.words/shards/a",
      "path": "k.words/shards/a.sop",
      "wires": 4,
-     "bytes": 1772,
+     "bytes": 1849,
      "keys": [
       "a",
       "noun"
@@ -56718,7 +56720,7 @@
      "id": "k.words/shards/aa",
      "path": "k.words/shards/aa.sop",
      "wires": 9,
-     "bytes": 2263,
+     "bytes": 2440,
      "keys": [
       "aa",
       "aah",
@@ -56737,7 +56739,7 @@
      "id": "k.words/shards/ab",
      "path": "k.words/shards/ab.sop",
      "wires": 88,
-     "bytes": 17850,
+     "bytes": 19709,
      "keys": [
       "ab",
       "abandon",
@@ -56787,7 +56789,7 @@
      "id": "k.words/shards/ac",
      "path": "k.words/shards/ac.sop",
      "wires": 154,
-     "bytes": 34274,
+     "bytes": 37895,
      "keys": [
       "ac",
       "academic",
@@ -56864,7 +56866,7 @@
      "id": "k.words/shards/ad",
      "path": "k.words/shards/ad.sop",
      "wires": 131,
-     "bytes": 30273,
+     "bytes": 33214,
      "keys": [
       "ad",
       "ada",
@@ -56930,7 +56932,7 @@
      "id": "k.words/shards/ae",
      "path": "k.words/shards/ae.sop",
      "wires": 4,
-     "bytes": 1414,
+     "bytes": 1510,
      "keys": [
       "aerial",
       "aeroplane",
@@ -56947,7 +56949,7 @@
      "id": "k.words/shards/af",
      "path": "k.words/shards/af.sop",
      "wires": 39,
-     "bytes": 8508,
+     "bytes": 9305,
      "keys": [
       "adjective",
       "adverb",
@@ -56982,7 +56984,7 @@
      "id": "k.words/shards/ag",
      "path": "k.words/shards/ag.sop",
      "wires": 38,
-     "bytes": 9262,
+     "bytes": 10105,
      "keys": [
       "adjective",
       "adverb",
@@ -57014,7 +57016,7 @@
      "id": "k.words/shards/ah",
      "path": "k.words/shards/ah.sop",
      "wires": 5,
-     "bytes": 1313,
+     "bytes": 1419,
      "keys": [
       "adjective",
       "adverb",
@@ -57032,7 +57034,7 @@
      "id": "k.words/shards/ai",
      "path": "k.words/shards/ai.sop",
      "wires": 42,
-     "bytes": 10517,
+     "bytes": 11509,
      "keys": [
       "adjective",
       "ai",
@@ -57066,7 +57068,7 @@
      "id": "k.words/shards/aj",
      "path": "k.words/shards/aj.sop",
      "wires": 2,
-     "bytes": 600,
+     "bytes": 623,
      "keys": [
       "ajax",
       "noun"
@@ -57081,7 +57083,7 @@
      "id": "k.words/shards/al",
      "path": "k.words/shards/al.sop",
      "wires": 167,
-     "bytes": 39139,
+     "bytes": 42528,
      "keys": [
       "adjective",
       "adverb",
@@ -57167,7 +57169,7 @@
      "id": "k.words/shards/am",
      "path": "k.words/shards/am.sop",
      "wires": 82,
-     "bytes": 18145,
+     "bytes": 19832,
      "keys": [
       "adjective",
       "am",
@@ -57216,7 +57218,7 @@
      "id": "k.words/shards/an",
      "path": "k.words/shards/an.sop",
      "wires": 179,
-     "bytes": 43246,
+     "bytes": 46988,
      "keys": [
       "adjective",
       "adverb",
@@ -57309,7 +57311,7 @@
      "id": "k.words/shards/ao",
      "path": "k.words/shards/ao.sop",
      "wires": 2,
-     "bytes": 611,
+     "bytes": 632,
      "keys": [
       "aorta",
       "noun"
@@ -57324,7 +57326,7 @@
      "id": "k.words/shards/ap",
      "path": "k.words/shards/ap.sop",
      "wires": 110,
-     "bytes": 26376,
+     "bytes": 28893,
      "keys": [
       "adjective",
       "adverb",
@@ -57384,7 +57386,7 @@
      "id": "k.words/shards/aq",
      "path": "k.words/shards/aq.sop",
      "wires": 7,
-     "bytes": 1775,
+     "bytes": 1887,
      "keys": [
       "adjective",
       "aqua",
@@ -57402,7 +57404,7 @@
      "id": "k.words/shards/ar",
      "path": "k.words/shards/ar.sop",
      "wires": 196,
-     "bytes": 45887,
+     "bytes": 50097,
      "keys": [
       "adjective",
       "adverb",
@@ -57497,7 +57499,7 @@
      "id": "k.words/shards/as",
      "path": "k.words/shards/as.sop",
      "wires": 121,
-     "bytes": 27541,
+     "bytes": 30256,
      "keys": [
       "adjective",
       "adverb",
@@ -57560,7 +57562,7 @@
      "id": "k.words/shards/at",
      "path": "k.words/shards/at.sop",
      "wires": 89,
-     "bytes": 20629,
+     "bytes": 22494,
      "keys": [
       "at",
       "ate",
@@ -57608,7 +57610,7 @@
      "id": "k.words/shards/au",
      "path": "k.words/shards/au.sop",
      "wires": 87,
-     "bytes": 19634,
+     "bytes": 21368,
      "keys": [
       "au",
       "aubergine",
@@ -57662,7 +57664,7 @@
      "id": "k.words/shards/av",
      "path": "k.words/shards/av.sop",
      "wires": 35,
-     "bytes": 7069,
+     "bytes": 7869,
      "keys": [
       "adjective",
       "avail",
@@ -57690,7 +57692,7 @@
      "id": "k.words/shards/aw",
      "path": "k.words/shards/aw.sop",
      "wires": 34,
-     "bytes": 6617,
+     "bytes": 7315,
      "keys": [
       "adjective",
       "adverb",
@@ -57719,7 +57721,7 @@
      "id": "k.words/shards/ax",
      "path": "k.words/shards/ax.sop",
      "wires": 14,
-     "bytes": 3135,
+     "bytes": 3397,
      "keys": [
       "ax",
       "axe",
@@ -57739,7 +57741,7 @@
      "id": "k.words/shards/b",
      "path": "k.words/shards/b.sop",
      "wires": 4,
-     "bytes": 1617,
+     "bytes": 1692,
      "keys": [
       "b",
       "noun"
@@ -57754,7 +57756,7 @@
      "id": "k.words/shards/ba",
      "path": "k.words/shards/ba.sop",
      "wires": 453,
-     "bytes": 106426,
+     "bytes": 116295,
      "keys": [
       "adjective",
       "adverb",
@@ -57936,7 +57938,7 @@
      "id": "k.words/shards/bb",
      "path": "k.words/shards/bb.sop",
      "wires": 2,
-     "bytes": 562,
+     "bytes": 587,
      "keys": [
       "bb",
       "noun"
@@ -57951,7 +57953,7 @@
      "id": "k.words/shards/be",
      "path": "k.words/shards/be.sop",
      "wires": 369,
-     "bytes": 83119,
+     "bytes": 90667,
      "keys": [
       "adjective",
       "adverb",
@@ -58094,7 +58096,7 @@
      "id": "k.words/shards/bi",
      "path": "k.words/shards/bi.sop",
      "wires": 144,
-     "bytes": 33886,
+     "bytes": 37071,
      "keys": [
       "adjective",
       "adverb",
@@ -58164,7 +58166,7 @@
      "id": "k.words/shards/bl",
      "path": "k.words/shards/bl.sop",
      "wires": 221,
-     "bytes": 51316,
+     "bytes": 56258,
      "keys": [
       "adjective",
       "adverb",
@@ -58257,7 +58259,7 @@
      "id": "k.words/shards/bo",
      "path": "k.words/shards/bo.sop",
      "wires": 339,
-     "bytes": 80977,
+     "bytes": 88472,
      "keys": [
       "adjective",
       "boa",
@@ -58393,7 +58395,7 @@
      "id": "k.words/shards/br",
      "path": "k.words/shards/br.sop",
      "wires": 344,
-     "bytes": 75461,
+     "bytes": 82601,
      "keys": [
       "adjective",
       "adverb",
@@ -58537,7 +58539,7 @@
      "id": "k.words/shards/bu",
      "path": "k.words/shards/bu.sop",
      "wires": 355,
-     "bytes": 83332,
+     "bytes": 90790,
      "keys": [
       "adjective",
       "adverb",
@@ -58665,7 +58667,7 @@
      "id": "k.words/shards/by",
      "path": "k.words/shards/by.sop",
      "wires": 12,
-     "bytes": 3314,
+     "bytes": 3566,
      "keys": [
       "adverb",
       "by",
@@ -58686,7 +58688,7 @@
      "id": "k.words/shards/c",
      "path": "k.words/shards/c.sop",
      "wires": 5,
-     "bytes": 1792,
+     "bytes": 1883,
      "keys": [
       "adjective",
       "c",
@@ -58702,7 +58704,7 @@
      "id": "k.words/shards/ca",
      "path": "k.words/shards/ca.sop",
      "wires": 587,
-     "bytes": 146189,
+     "bytes": 158595,
      "keys": [
       "adjective",
       "adverb",
@@ -58929,7 +58931,7 @@
      "id": "k.words/shards/cc",
      "path": "k.words/shards/cc.sop",
      "wires": 1,
-     "bytes": 607,
+     "bytes": 632,
      "keys": [
       "cc",
       "noun"
@@ -58944,7 +58946,7 @@
      "id": "k.words/shards/cd",
      "path": "k.words/shards/cd.sop",
      "wires": 7,
-     "bytes": 1870,
+     "bytes": 1970,
      "keys": [
       "cd",
       "cdc",
@@ -58960,7 +58962,7 @@
      "id": "k.words/shards/ce",
      "path": "k.words/shards/ce.sop",
      "wires": 85,
-     "bytes": 21725,
+     "bytes": 23629,
      "keys": [
       "adjective",
       "adverb",
@@ -59010,7 +59012,7 @@
      "id": "k.words/shards/ch",
      "path": "k.words/shards/ch.sop",
      "wires": 530,
-     "bytes": 128524,
+     "bytes": 139801,
      "keys": [
       "adjective",
       "chad",
@@ -59209,7 +59211,7 @@
      "id": "k.words/shards/ci",
      "path": "k.words/shards/ci.sop",
      "wires": 79,
-     "bytes": 19374,
+     "bytes": 21074,
      "keys": [
       "adjective",
       "ci",
@@ -59258,7 +59260,7 @@
      "id": "k.words/shards/cl",
      "path": "k.words/shards/cl.sop",
      "wires": 267,
-     "bytes": 61397,
+     "bytes": 67338,
      "keys": [
       "adjective",
       "adverb",
@@ -59366,7 +59368,7 @@
      "id": "k.words/shards/cm",
      "path": "k.words/shards/cm.sop",
      "wires": 3,
-     "bytes": 875,
+     "bytes": 926,
      "keys": [
       "cm",
       "noun"
@@ -59381,7 +59383,7 @@
      "id": "k.words/shards/co-1",
      "path": "k.words/shards/co-1.sop",
      "wires": 635,
-     "bytes": 143085,
+     "bytes": 157555,
      "keys": [
       "adjective",
       "adverb",
@@ -59621,7 +59623,7 @@
      "id": "k.words/shards/co-2",
      "path": "k.words/shards/co-2.sop",
      "wires": 633,
-     "bytes": 142945,
+     "bytes": 157342,
      "keys": [
       "adjective",
       "adverb",
@@ -59871,7 +59873,7 @@
      "id": "k.words/shards/cp",
      "path": "k.words/shards/cp.sop",
      "wires": 2,
-     "bytes": 959,
+     "bytes": 979,
      "keys": [
       "cpr",
       "noun"
@@ -59886,7 +59888,7 @@
      "id": "k.words/shards/cr",
      "path": "k.words/shards/cr.sop",
      "wires": 353,
-     "bytes": 81700,
+     "bytes": 89404,
      "keys": [
       "adjective",
       "crab",
@@ -60009,7 +60011,7 @@
      "id": "k.words/shards/ct",
      "path": "k.words/shards/ct.sop",
      "wires": 3,
-     "bytes": 1102,
+     "bytes": 1147,
      "keys": [
       "ct",
       "noun"
@@ -60024,7 +60026,7 @@
      "id": "k.words/shards/cu",
      "path": "k.words/shards/cu.sop",
      "wires": 170,
-     "bytes": 40026,
+     "bytes": 43687,
      "keys": [
       "adjective",
       "cub",
@@ -60097,7 +60099,7 @@
      "id": "k.words/shards/cy",
      "path": "k.words/shards/cy.sop",
      "wires": 26,
-     "bytes": 5379,
+     "bytes": 5842,
      "keys": [
       "cyanide",
       "cyborg",
@@ -60122,7 +60124,7 @@
      "id": "k.words/shards/cz",
      "path": "k.words/shards/cz.sop",
      "wires": 6,
-     "bytes": 1322,
+     "bytes": 1423,
      "keys": [
       "czech",
       "czechoslovakia",
@@ -60138,7 +60140,7 @@
      "id": "k.words/shards/d",
      "path": "k.words/shards/d.sop",
      "wires": 5,
-     "bytes": 1637,
+     "bytes": 1737,
      "keys": [
       "adjective",
       "d",
@@ -60154,7 +60156,7 @@
      "id": "k.words/shards/da",
      "path": "k.words/shards/da.sop",
      "wires": 191,
-     "bytes": 45858,
+     "bytes": 49773,
      "keys": [
       "adjective",
       "adverb",
@@ -60247,7 +60249,7 @@
      "id": "k.words/shards/dc",
      "path": "k.words/shards/dc.sop",
      "wires": 5,
-     "bytes": 1351,
+     "bytes": 1426,
      "keys": [
       "dc",
       "dci",
@@ -60263,7 +60265,7 @@
      "id": "k.words/shards/dd",
      "path": "k.words/shards/dd.sop",
      "wires": 2,
-     "bytes": 567,
+     "bytes": 597,
      "keys": [
       "dd",
       "noun"
@@ -60278,7 +60280,7 @@
      "id": "k.words/shards/de",
      "path": "k.words/shards/de.sop",
      "wires": 541,
-     "bytes": 117443,
+     "bytes": 129876,
      "keys": [
       "adjective",
       "adverb",
@@ -60502,7 +60504,7 @@
      "id": "k.words/shards/dh",
      "path": "k.words/shards/dh.sop",
      "wires": 2,
-     "bytes": 650,
+     "bytes": 673,
      "keys": [
       "dharma",
       "noun"
@@ -60517,7 +60519,7 @@
      "id": "k.words/shards/di",
      "path": "k.words/shards/di.sop",
      "wires": 485,
-     "bytes": 102771,
+     "bytes": 114019,
      "keys": [
       "adjective",
       "adverb",
@@ -60707,7 +60709,7 @@
      "id": "k.words/shards/dj",
      "path": "k.words/shards/dj.sop",
      "wires": 3,
-     "bytes": 786,
+     "bytes": 839,
      "keys": [
       "dj",
       "noun",
@@ -60723,7 +60725,7 @@
      "id": "k.words/shards/dn",
      "path": "k.words/shards/dn.sop",
      "wires": 2,
-     "bytes": 896,
+     "bytes": 922,
      "keys": [
       "dna",
       "noun"
@@ -60738,7 +60740,7 @@
      "id": "k.words/shards/do",
      "path": "k.words/shards/do.sop",
      "wires": 246,
-     "bytes": 57750,
+     "bytes": 62900,
      "keys": [
       "adjective",
       "adverb",
@@ -60843,7 +60845,7 @@
      "id": "k.words/shards/dr",
      "path": "k.words/shards/dr.sop",
      "wires": 189,
-     "bytes": 44997,
+     "bytes": 49093,
      "keys": [
       "adjective",
       "dracula",
@@ -60912,7 +60914,7 @@
      "id": "k.words/shards/ds",
      "path": "k.words/shards/ds.sop",
      "wires": 5,
-     "bytes": 1172,
+     "bytes": 1250,
      "keys": [
       "ds",
       "noun"
@@ -60927,7 +60929,7 @@
      "id": "k.words/shards/du",
      "path": "k.words/shards/du.sop",
      "wires": 111,
-     "bytes": 24256,
+     "bytes": 26626,
      "keys": [
       "adjective",
       "adverb",
@@ -60984,7 +60986,7 @@
      "id": "k.words/shards/dv",
      "path": "k.words/shards/dv.sop",
      "wires": 2,
-     "bytes": 830,
+     "bytes": 855,
      "keys": [
       "dvd",
       "noun"
@@ -60999,7 +61001,7 @@
      "id": "k.words/shards/dw",
      "path": "k.words/shards/dw.sop",
      "wires": 11,
-     "bytes": 2107,
+     "bytes": 2320,
      "keys": [
       "dwarf",
       "dwell",
@@ -61017,7 +61019,7 @@
      "id": "k.words/shards/dy",
      "path": "k.words/shards/dy.sop",
      "wires": 16,
-     "bytes": 3419,
+     "bytes": 3766,
      "keys": [
       "adjective",
       "dye",
@@ -61042,7 +61044,7 @@
      "id": "k.words/shards/e",
      "path": "k.words/shards/e.sop",
      "wires": 6,
-     "bytes": 2171,
+     "bytes": 2308,
      "keys": [
       "e",
       "e-mail",
@@ -61059,7 +61061,7 @@
      "id": "k.words/shards/ea",
      "path": "k.words/shards/ea.sop",
      "wires": 75,
-     "bytes": 17171,
+     "bytes": 18713,
      "keys": [
       "adjective",
       "adverb",
@@ -61103,7 +61105,7 @@
      "id": "k.words/shards/ec",
      "path": "k.words/shards/ec.sop",
      "wires": 24,
-     "bytes": 5393,
+     "bytes": 5909,
      "keys": [
       "eccentric",
       "echidna",
@@ -61126,7 +61128,7 @@
      "id": "k.words/shards/ed",
      "path": "k.words/shards/ed.sop",
      "wires": 50,
-     "bytes": 11103,
+     "bytes": 12060,
      "keys": [
       "ed",
       "eddy",
@@ -61160,7 +61162,7 @@
      "id": "k.words/shards/ee",
      "path": "k.words/shards/ee.sop",
      "wires": 4,
-     "bytes": 1585,
+     "bytes": 1655,
      "keys": [
       "ee",
       "eel",
@@ -61176,7 +61178,7 @@
      "id": "k.words/shards/ef",
      "path": "k.words/shards/ef.sop",
      "wires": 11,
-     "bytes": 3130,
+     "bytes": 3395,
      "keys": [
       "effect",
       "effects",
@@ -61195,7 +61197,7 @@
      "id": "k.words/shards/eg",
      "path": "k.words/shards/eg.sop",
      "wires": 18,
-     "bytes": 5250,
+     "bytes": 5627,
      "keys": [
       "egg",
       "eggnog",
@@ -61217,7 +61219,7 @@
      "id": "k.words/shards/ei",
      "path": "k.words/shards/ei.sop",
      "wires": 17,
-     "bytes": 4309,
+     "bytes": 4611,
      "keys": [
       "adjective",
       "adverb",
@@ -61241,7 +61243,7 @@
      "id": "k.words/shards/ek",
      "path": "k.words/shards/ek.sop",
      "wires": 2,
-     "bytes": 654,
+     "bytes": 684,
      "keys": [
       "ekg",
       "noun"
@@ -61256,7 +61258,7 @@
      "id": "k.words/shards/el",
      "path": "k.words/shards/el.sop",
      "wires": 80,
-     "bytes": 20278,
+     "bytes": 21981,
      "keys": [
       "el",
       "elaborate",
@@ -61308,7 +61310,7 @@
      "id": "k.words/shards/em",
      "path": "k.words/shards/em.sop",
      "wires": 89,
-     "bytes": 19700,
+     "bytes": 21615,
      "keys": [
       "adjective",
       "em",
@@ -61362,7 +61364,7 @@
      "id": "k.words/shards/en",
      "path": "k.words/shards/en.sop",
      "wires": 171,
-     "bytes": 36968,
+     "bytes": 40903,
      "keys": [
       "adjective",
       "adverb",
@@ -61443,7 +61445,7 @@
      "id": "k.words/shards/ep",
      "path": "k.words/shards/ep.sop",
      "wires": 10,
-     "bytes": 2709,
+     "bytes": 2916,
      "keys": [
       "epi",
       "epic",
@@ -61462,7 +61464,7 @@
      "id": "k.words/shards/eq",
      "path": "k.words/shards/eq.sop",
      "wires": 18,
-     "bytes": 4007,
+     "bytes": 4425,
      "keys": [
       "equal",
       "equality",
@@ -61484,7 +61486,7 @@
      "id": "k.words/shards/er",
      "path": "k.words/shards/er.sop",
      "wires": 34,
-     "bytes": 6869,
+     "bytes": 7557,
      "keys": [
       "er",
       "era",
@@ -61514,7 +61516,7 @@
      "id": "k.words/shards/es",
      "path": "k.words/shards/es.sop",
      "wires": 57,
-     "bytes": 13214,
+     "bytes": 14437,
      "keys": [
       "adjective",
       "adverb",
@@ -61551,7 +61553,7 @@
      "id": "k.words/shards/et",
      "path": "k.words/shards/et.sop",
      "wires": 15,
-     "bytes": 3451,
+     "bytes": 3776,
      "keys": [
       "eta",
       "eternity",
@@ -61572,7 +61574,7 @@
      "id": "k.words/shards/eu",
      "path": "k.words/shards/eu.sop",
      "wires": 22,
-     "bytes": 5359,
+     "bytes": 5727,
      "keys": [
       "eu",
       "eugene",
@@ -61595,7 +61597,7 @@
      "id": "k.words/shards/ev",
      "path": "k.words/shards/ev.sop",
      "wires": 67,
-     "bytes": 15437,
+     "bytes": 16860,
      "keys": [
       "adjective",
       "adverb",
@@ -61634,7 +61636,7 @@
      "id": "k.words/shards/ew",
      "path": "k.words/shards/ew.sop",
      "wires": 2,
-     "bytes": 686,
+     "bytes": 706,
      "keys": [
       "ew",
       "noun"
@@ -61649,7 +61651,7 @@
      "id": "k.words/shards/ex",
      "path": "k.words/shards/ex.sop",
      "wires": 262,
-     "bytes": 55494,
+     "bytes": 61754,
      "keys": [
       "adjective",
       "adverb",
@@ -61758,7 +61760,7 @@
      "id": "k.words/shards/ey",
      "path": "k.words/shards/ey.sop",
      "wires": 12,
-     "bytes": 3040,
+     "bytes": 3332,
      "keys": [
       "eye",
       "eyeball",
@@ -61780,7 +61782,7 @@
      "id": "k.words/shards/ez",
      "path": "k.words/shards/ez.sop",
      "wires": 6,
-     "bytes": 1628,
+     "bytes": 1734,
      "keys": [
       "ezekiel",
       "ezra",
@@ -61796,7 +61798,7 @@
      "id": "k.words/shards/f",
      "path": "k.words/shards/f.sop",
      "wires": 4,
-     "bytes": 1635,
+     "bytes": 1711,
      "keys": [
       "f",
       "noun"
@@ -61811,7 +61813,7 @@
      "id": "k.words/shards/fa",
      "path": "k.words/shards/fa.sop",
      "wires": 285,
-     "bytes": 65330,
+     "bytes": 71424,
      "keys": [
       "adjective",
       "adverb",
@@ -61918,7 +61920,7 @@
      "id": "k.words/shards/fb",
      "path": "k.words/shards/fb.sop",
      "wires": 2,
-     "bytes": 883,
+     "bytes": 905,
      "keys": [
       "fbi",
       "noun"
@@ -61933,7 +61935,7 @@
      "id": "k.words/shards/fd",
      "path": "k.words/shards/fd.sop",
      "wires": 2,
-     "bytes": 735,
+     "bytes": 757,
      "keys": [
       "fda",
       "noun"
@@ -61948,7 +61950,7 @@
      "id": "k.words/shards/fe",
      "path": "k.words/shards/fe.sop",
      "wires": 155,
-     "bytes": 36555,
+     "bytes": 39923,
      "keys": [
       "adjective",
       "fe",
@@ -62015,7 +62017,7 @@
      "id": "k.words/shards/fi",
      "path": "k.words/shards/fi.sop",
      "wires": 294,
-     "bytes": 69198,
+     "bytes": 75689,
      "keys": [
       "adjective",
       "adverb",
@@ -62128,7 +62130,7 @@
      "id": "k.words/shards/fl",
      "path": "k.words/shards/fl.sop",
      "wires": 271,
-     "bytes": 58840,
+     "bytes": 64890,
      "keys": [
       "adjective",
       "adverb",
@@ -62219,7 +62221,7 @@
      "id": "k.words/shards/fm",
      "path": "k.words/shards/fm.sop",
      "wires": 4,
-     "bytes": 933,
+     "bytes": 989,
      "keys": [
       "fm",
       "noun"
@@ -62234,7 +62236,7 @@
      "id": "k.words/shards/fo",
      "path": "k.words/shards/fo.sop",
      "wires": 273,
-     "bytes": 61213,
+     "bytes": 67314,
      "keys": [
       "adjective",
       "adverb",
@@ -62338,7 +62340,7 @@
      "id": "k.words/shards/fr",
      "path": "k.words/shards/fr.sop",
      "wires": 219,
-     "bytes": 48621,
+     "bytes": 53156,
      "keys": [
       "adjective",
       "adverb",
@@ -74047,7 +74049,7 @@
      "id": "k.words/shards/fu",
      "path": "k.words/shards/fu.sop",
      "wires": 123,
-     "bytes": 27440,
+     "bytes": 30085,
      "keys": [
       "adjective",
       "adverb",
@@ -74102,7 +74104,7 @@
      "id": "k.words/shards/g",
      "path": "k.words/shards/g.sop",
      "wires": 4,
-     "bytes": 1548,
+     "bytes": 1625,
      "keys": [
       "g",
       "noun"
@@ -74117,7 +74119,7 @@
      "id": "k.words/shards/ga",
      "path": "k.words/shards/ga.sop",
      "wires": 202,
-     "bytes": 48708,
+     "bytes": 53010,
      "keys": [
       "adjective",
       "ga",
@@ -74207,7 +74209,7 @@
      "id": "k.words/shards/ge",
      "path": "k.words/shards/ge.sop",
      "wires": 121,
-     "bytes": 28784,
+     "bytes": 31279,
      "keys": [
       "adjective",
       "ge",
@@ -74272,7 +74274,7 @@
      "id": "k.words/shards/gh",
      "path": "k.words/shards/gh.sop",
      "wires": 10,
-     "bytes": 2637,
+     "bytes": 2853,
      "keys": [
       "ghetto",
       "ghost",
@@ -74289,7 +74291,7 @@
      "id": "k.words/shards/gi",
      "path": "k.words/shards/gi.sop",
      "wires": 72,
-     "bytes": 18486,
+     "bytes": 19972,
      "keys": [
       "adjective",
       "gi",
@@ -74329,7 +74331,7 @@
      "id": "k.words/shards/gl",
      "path": "k.words/shards/gl.sop",
      "wires": 82,
-     "bytes": 17523,
+     "bytes": 19442,
      "keys": [
       "adjective",
       "glacier",
@@ -74372,7 +74374,7 @@
      "id": "k.words/shards/gm",
      "path": "k.words/shards/gm.sop",
      "wires": 1,
-     "bytes": 529,
+     "bytes": 554,
      "keys": [
       "gm",
       "noun"
@@ -74387,7 +74389,7 @@
      "id": "k.words/shards/gn",
      "path": "k.words/shards/gn.sop",
      "wires": 4,
-     "bytes": 1441,
+     "bytes": 1540,
      "keys": [
       "gnat",
       "gnome",
@@ -74403,7 +74405,7 @@
      "id": "k.words/shards/go",
      "path": "k.words/shards/go.sop",
      "wires": 163,
-     "bytes": 41335,
+     "bytes": 44702,
      "keys": [
       "adjective",
       "adverb",
@@ -74481,7 +74483,7 @@
      "id": "k.words/shards/gp",
      "path": "k.words/shards/gp.sop",
      "wires": 2,
-     "bytes": 775,
+     "bytes": 800,
      "keys": [
       "gps",
       "noun"
@@ -74496,7 +74498,7 @@
      "id": "k.words/shards/gr",
      "path": "k.words/shards/gr.sop",
      "wires": 342,
-     "bytes": 81678,
+     "bytes": 89142,
      "keys": [
       "adjective",
       "grab",
@@ -74631,7 +74633,7 @@
      "id": "k.words/shards/gu",
      "path": "k.words/shards/gu.sop",
      "wires": 112,
-     "bytes": 28318,
+     "bytes": 30810,
      "keys": [
       "adjective",
       "gu",
@@ -74691,7 +74693,7 @@
      "id": "k.words/shards/gy",
      "path": "k.words/shards/gy.sop",
      "wires": 7,
-     "bytes": 2040,
+     "bytes": 2177,
      "keys": [
       "gym",
       "gymnastics",
@@ -74709,7 +74711,7 @@
      "id": "k.words/shards/h",
      "path": "k.words/shards/h.sop",
      "wires": 4,
-     "bytes": 1679,
+     "bytes": 1755,
      "keys": [
       "h",
       "noun"
@@ -74724,7 +74726,7 @@
      "id": "k.words/shards/ha",
      "path": "k.words/shards/ha.sop",
      "wires": 383,
-     "bytes": 86672,
+     "bytes": 94557,
      "keys": [
       "adjective",
       "adverb",
@@ -74878,7 +74880,7 @@
      "id": "k.words/shards/hand",
      "path": "k.words/shards/hand.sop",
      "wires": 1,
-     "bytes": 413,
+     "bytes": 432,
      "keys": [
       "adjective",
       "numbered"
@@ -74893,7 +74895,7 @@
      "id": "k.words/shards/he",
      "path": "k.words/shards/he.sop",
      "wires": 280,
-     "bytes": 66763,
+     "bytes": 72647,
      "keys": [
       "adjective",
       "adverb",
@@ -75022,7 +75024,7 @@
      "id": "k.words/shards/hi",
      "path": "k.words/shards/hi.sop",
      "wires": 151,
-     "bytes": 34134,
+     "bytes": 37146,
      "keys": [
       "adjective",
       "adverb",
@@ -75094,7 +75096,7 @@
      "id": "k.words/shards/hm",
      "path": "k.words/shards/hm.sop",
      "wires": 1,
-     "bytes": 672,
+     "bytes": 697,
      "keys": [
       "hm",
       "noun"
@@ -75109,7 +75111,7 @@
      "id": "k.words/shards/ho",
      "path": "k.words/shards/ho.sop",
      "wires": 343,
-     "bytes": 77377,
+     "bytes": 84776,
      "keys": [
       "adjective",
       "adverb",
@@ -75252,7 +75254,7 @@
      "id": "k.words/shards/hq",
      "path": "k.words/shards/hq.sop",
      "wires": 2,
-     "bytes": 650,
+     "bytes": 675,
      "keys": [
       "hq",
       "noun"
@@ -75267,7 +75269,7 @@
      "id": "k.words/shards/hr",
      "path": "k.words/shards/hr.sop",
      "wires": 1,
-     "bytes": 491,
+     "bytes": 512,
      "keys": [
       "hr",
       "noun"
@@ -75282,7 +75284,7 @@
      "id": "k.words/shards/hu",
      "path": "k.words/shards/hu.sop",
      "wires": 167,
-     "bytes": 38676,
+     "bytes": 42188,
      "keys": [
       "adjective",
       "hua",
@@ -75358,7 +75360,7 @@
      "id": "k.words/shards/hy",
      "path": "k.words/shards/hy.sop",
      "wires": 35,
-     "bytes": 7908,
+     "bytes": 8682,
      "keys": [
       "hybrid",
       "hyderabad",
@@ -75388,7 +75390,7 @@
      "id": "k.words/shards/i",
      "path": "k.words/shards/i.sop",
      "wires": 5,
-     "bytes": 1697,
+     "bytes": 1797,
      "keys": [
       "adjective",
       "i",
@@ -75404,7 +75406,7 @@
      "id": "k.words/shards/ia",
      "path": "k.words/shards/ia.sop",
      "wires": 2,
-     "bytes": 659,
+     "bytes": 684,
      "keys": [
       "ia",
       "noun"
@@ -75419,7 +75421,7 @@
      "id": "k.words/shards/ib",
      "path": "k.words/shards/ib.sop",
      "wires": 5,
-     "bytes": 1814,
+     "bytes": 1883,
      "keys": [
       "ibex",
       "ibis",
@@ -75436,7 +75438,7 @@
      "id": "k.words/shards/ic",
      "path": "k.words/shards/ic.sop",
      "wires": 22,
-     "bytes": 5691,
+     "bytes": 6165,
      "keys": [
       "ice",
       "ice cream",
@@ -75460,7 +75462,7 @@
      "id": "k.words/shards/id",
      "path": "k.words/shards/id.sop",
      "wires": 32,
-     "bytes": 7658,
+     "bytes": 8362,
      "keys": [
       "id",
       "ida",
@@ -75487,7 +75489,7 @@
      "id": "k.words/shards/ie",
      "path": "k.words/shards/ie.sop",
      "wires": 2,
-     "bytes": 762,
+     "bytes": 787,
      "keys": [
       "ied",
       "noun"
@@ -75502,7 +75504,7 @@
      "id": "k.words/shards/ig",
      "path": "k.words/shards/ig.sop",
      "wires": 11,
-     "bytes": 2926,
+     "bytes": 3203,
      "keys": [
       "ignite",
       "ignition",
@@ -75522,7 +75524,7 @@
      "id": "k.words/shards/ii",
      "path": "k.words/shards/ii.sop",
      "wires": 4,
-     "bytes": 1139,
+     "bytes": 1189,
      "keys": [
       "ii",
       "iii",
@@ -75538,7 +75540,7 @@
      "id": "k.words/shards/ik",
      "path": "k.words/shards/ik.sop",
      "wires": 2,
-     "bytes": 843,
+     "bytes": 866,
      "keys": [
       "ike",
       "noun"
@@ -75553,7 +75555,7 @@
      "id": "k.words/shards/il",
      "path": "k.words/shards/il.sop",
      "wires": 20,
-     "bytes": 4314,
+     "bytes": 4712,
      "keys": [
       "adjective",
       "adverb",
@@ -75577,7 +75579,7 @@
      "id": "k.words/shards/im",
      "path": "k.words/shards/im.sop",
      "wires": 108,
-     "bytes": 22642,
+     "bytes": 25177,
      "keys": [
       "adjective",
       "adverb",
@@ -75637,7 +75639,7 @@
      "id": "k.words/shards/in",
      "path": "k.words/shards/in.sop",
      "wires": 524,
-     "bytes": 109967,
+     "bytes": 122318,
      "keys": [
       "adjective",
       "adverb",
@@ -75862,7 +75864,7 @@
      "id": "k.words/shards/io",
      "path": "k.words/shards/io.sop",
      "wires": 8,
-     "bytes": 2135,
+     "bytes": 2282,
      "keys": [
       "io",
       "ion",
@@ -75879,7 +75881,7 @@
      "id": "k.words/shards/ip",
      "path": "k.words/shards/ip.sop",
      "wires": 4,
-     "bytes": 1181,
+     "bytes": 1232,
      "keys": [
       "ip",
       "ipod",
@@ -75895,7 +75897,7 @@
      "id": "k.words/shards/iq",
      "path": "k.words/shards/iq.sop",
      "wires": 2,
-     "bytes": 698,
+     "bytes": 723,
      "keys": [
       "iq",
       "noun"
@@ -75910,7 +75912,7 @@
      "id": "k.words/shards/ir",
      "path": "k.words/shards/ir.sop",
      "wires": 46,
-     "bytes": 10849,
+     "bytes": 11719,
      "keys": [
       "adjective",
       "ira",
@@ -75943,7 +75945,7 @@
      "id": "k.words/shards/is",
      "path": "k.words/shards/is.sop",
      "wires": 36,
-     "bytes": 8312,
+     "bytes": 8973,
      "keys": [
       "isaac",
       "isabella",
@@ -75972,7 +75974,7 @@
      "id": "k.words/shards/it",
      "path": "k.words/shards/it.sop",
      "wires": 27,
-     "bytes": 6158,
+     "bytes": 6752,
      "keys": [
       "adjective",
       "it",
@@ -75996,7 +75998,7 @@
      "id": "k.words/shards/iv",
      "path": "k.words/shards/iv.sop",
      "wires": 6,
-     "bytes": 1715,
+     "bytes": 1834,
      "keys": [
       "iv",
       "ivory",
@@ -76013,7 +76015,7 @@
      "id": "k.words/shards/j",
      "path": "k.words/shards/j.sop",
      "wires": 3,
-     "bytes": 808,
+     "bytes": 863,
      "keys": [
       "j",
       "noun"
@@ -76028,7 +76030,7 @@
      "id": "k.words/shards/ja",
      "path": "k.words/shards/ja.sop",
      "wires": 114,
-     "bytes": 29586,
+     "bytes": 31810,
      "keys": [
       "adjective",
       "jab",
@@ -76079,7 +76081,7 @@
      "id": "k.words/shards/je",
      "path": "k.words/shards/je.sop",
      "wires": 78,
-     "bytes": 19624,
+     "bytes": 21014,
      "keys": [
       "adjective",
       "jealous",
@@ -76125,7 +76127,7 @@
      "id": "k.words/shards/jf",
      "path": "k.words/shards/jf.sop",
      "wires": 2,
-     "bytes": 776,
+     "bytes": 799,
      "keys": [
       "jfk",
       "noun"
@@ -76140,7 +76142,7 @@
      "id": "k.words/shards/ji",
      "path": "k.words/shards/ji.sop",
      "wires": 27,
-     "bytes": 6390,
+     "bytes": 6969,
      "keys": [
       "ji",
       "jib",
@@ -76165,7 +76167,7 @@
      "id": "k.words/shards/jo",
      "path": "k.words/shards/jo.sop",
      "wires": 109,
-     "bytes": 25606,
+     "bytes": 27781,
      "keys": [
       "adjective",
       "job",
@@ -76215,7 +76217,7 @@
      "id": "k.words/shards/jr",
      "path": "k.words/shards/jr.sop",
      "wires": 2,
-     "bytes": 569,
+     "bytes": 592,
      "keys": [
       "jr",
       "noun"
@@ -76230,7 +76232,7 @@
      "id": "k.words/shards/ju",
      "path": "k.words/shards/ju.sop",
      "wires": 105,
-     "bytes": 24452,
+     "bytes": 26633,
      "keys": [
       "adjective",
       "adverb",
@@ -76286,7 +76288,7 @@
      "id": "k.words/shards/k",
      "path": "k.words/shards/k.sop",
      "wires": 4,
-     "bytes": 1284,
+     "bytes": 1360,
      "keys": [
       "k",
       "noun"
@@ -76301,7 +76303,7 @@
      "id": "k.words/shards/ka",
      "path": "k.words/shards/ka.sop",
      "wires": 30,
-     "bytes": 7136,
+     "bytes": 7634,
      "keys": [
       "ka",
       "kabul",
@@ -76331,7 +76333,7 @@
      "id": "k.words/shards/ke",
      "path": "k.words/shards/ke.sop",
      "wires": 68,
-     "bytes": 17549,
+     "bytes": 18915,
      "keys": [
       "adjective",
       "keaton",
@@ -76375,7 +76377,7 @@
      "id": "k.words/shards/kg",
      "path": "k.words/shards/kg.sop",
      "wires": 3,
-     "bytes": 899,
+     "bytes": 946,
      "keys": [
       "kg",
       "kgb",
@@ -76391,7 +76393,7 @@
      "id": "k.words/shards/kh",
      "path": "k.words/shards/kh.sop",
      "wires": 2,
-     "bytes": 738,
+     "bytes": 786,
      "keys": [
       "khan",
       "noun"
@@ -76406,7 +76408,7 @@
      "id": "k.words/shards/ki",
      "path": "k.words/shards/ki.sop",
      "wires": 101,
-     "bytes": 25660,
+     "bytes": 27826,
      "keys": [
       "adjective",
       "adverb",
@@ -76462,7 +76464,7 @@
      "id": "k.words/shards/kl",
      "path": "k.words/shards/kl.sop",
      "wires": 5,
-     "bytes": 1461,
+     "bytes": 1555,
      "keys": [
       "klaxon",
       "klein",
@@ -76478,7 +76480,7 @@
      "id": "k.words/shards/km",
      "path": "k.words/shards/km.sop",
      "wires": 1,
-     "bytes": 546,
+     "bytes": 571,
      "keys": [
       "km",
       "noun"
@@ -76493,7 +76495,7 @@
      "id": "k.words/shards/kn",
      "path": "k.words/shards/kn.sop",
      "wires": 63,
-     "bytes": 14717,
+     "bytes": 16056,
      "keys": [
       "adjective",
       "knack",
@@ -76530,7 +76532,7 @@
      "id": "k.words/shards/ko",
      "path": "k.words/shards/ko.sop",
      "wires": 17,
-     "bytes": 4390,
+     "bytes": 4660,
      "keys": [
       "ko",
       "koala",
@@ -76554,7 +76556,7 @@
      "id": "k.words/shards/kr",
      "path": "k.words/shards/kr.sop",
      "wires": 9,
-     "bytes": 2011,
+     "bytes": 2155,
      "keys": [
       "kremlin",
       "krill",
@@ -76573,7 +76575,7 @@
      "id": "k.words/shards/ky",
      "path": "k.words/shards/ky.sop",
      "wires": 3,
-     "bytes": 842,
+     "bytes": 892,
      "keys": [
       "kylie",
       "kyoto",
@@ -76589,7 +76591,7 @@
      "id": "k.words/shards/l",
      "path": "k.words/shards/l.sop",
      "wires": 5,
-     "bytes": 1891,
+     "bytes": 1985,
      "keys": [
       "adjective",
       "l",
@@ -76605,7 +76607,7 @@
      "id": "k.words/shards/la",
      "path": "k.words/shards/la.sop",
      "wires": 294,
-     "bytes": 66217,
+     "bytes": 72454,
      "keys": [
       "adjective",
       "adverb",
@@ -76726,7 +76728,7 @@
      "id": "k.words/shards/le",
      "path": "k.words/shards/le.sop",
      "wires": 261,
-     "bytes": 61727,
+     "bytes": 67140,
      "keys": [
       "adjective",
       "adverb",
@@ -76831,7 +76833,7 @@
      "id": "k.words/shards/lf",
      "path": "k.words/shards/lf.sop",
      "wires": 2,
-     "bytes": 725,
+     "bytes": 751,
      "keys": [
       "lf",
       "noun"
@@ -76846,7 +76848,7 @@
      "id": "k.words/shards/li",
      "path": "k.words/shards/li.sop",
      "wires": 295,
-     "bytes": 67409,
+     "bytes": 73872,
      "keys": [
       "adjective",
       "adverb",
@@ -76968,7 +76970,7 @@
      "id": "k.words/shards/ll",
      "path": "k.words/shards/ll.sop",
      "wires": 3,
-     "bytes": 1146,
+     "bytes": 1192,
      "keys": [
       "llama",
       "lloyd",
@@ -76984,7 +76986,7 @@
      "id": "k.words/shards/lm",
      "path": "k.words/shards/lm.sop",
      "wires": 1,
-     "bytes": 605,
+     "bytes": 630,
      "keys": [
       "lm",
       "noun"
@@ -76999,7 +77001,7 @@
      "id": "k.words/shards/lo",
      "path": "k.words/shards/lo.sop",
      "wires": 262,
-     "bytes": 62460,
+     "bytes": 68015,
      "keys": [
       "adjective",
       "adverb",
@@ -77102,7 +77104,7 @@
      "id": "k.words/shards/ls",
      "path": "k.words/shards/ls.sop",
      "wires": 2,
-     "bytes": 660,
+     "bytes": 685,
      "keys": [
       "lsd",
       "noun"
@@ -77117,7 +77119,7 @@
      "id": "k.words/shards/lu",
      "path": "k.words/shards/lu.sop",
      "wires": 76,
-     "bytes": 16113,
+     "bytes": 17642,
      "keys": [
       "adjective",
       "lu",
@@ -77162,7 +77164,7 @@
      "id": "k.words/shards/ly",
      "path": "k.words/shards/ly.sop",
      "wires": 15,
-     "bytes": 3673,
+     "bytes": 3973,
      "keys": [
       "lydia",
       "lying",
@@ -77184,7 +77186,7 @@
      "id": "k.words/shards/m",
      "path": "k.words/shards/m.sop",
      "wires": 5,
-     "bytes": 1791,
+     "bytes": 1886,
      "keys": [
       "adjective",
       "m",
@@ -77200,7 +77202,7 @@
      "id": "k.words/shards/ma",
      "path": "k.words/shards/ma.sop",
      "wires": 690,
-     "bytes": 162936,
+     "bytes": 176893,
      "keys": [
       "adjective",
       "adverb",
@@ -77485,7 +77487,7 @@
      "id": "k.words/shards/mc",
      "path": "k.words/shards/mc.sop",
      "wires": 8,
-     "bytes": 1979,
+     "bytes": 2092,
      "keys": [
       "mc",
       "mccarthy",
@@ -77502,7 +77504,7 @@
      "id": "k.words/shards/me",
      "path": "k.words/shards/me.sop",
      "wires": 264,
-     "bytes": 60254,
+     "bytes": 65926,
      "keys": [
       "adjective",
       "me",
@@ -77625,7 +77627,7 @@
      "id": "k.words/shards/mi",
      "path": "k.words/shards/mi.sop",
      "wires": 306,
-     "bytes": 75012,
+     "bytes": 81316,
      "keys": [
       "adjective",
       "adverb",
@@ -77768,7 +77770,7 @@
      "id": "k.words/shards/mm",
      "path": "k.words/shards/mm.sop",
      "wires": 1,
-     "bytes": 688,
+     "bytes": 713,
      "keys": [
       "mm",
       "noun"
@@ -77783,7 +77785,7 @@
      "id": "k.words/shards/mo",
      "path": "k.words/shards/mo.sop",
      "wires": 388,
-     "bytes": 91307,
+     "bytes": 99270,
      "keys": [
       "adjective",
       "adverb",
@@ -77942,7 +77944,7 @@
      "id": "k.words/shards/mp",
      "path": "k.words/shards/mp.sop",
      "wires": 5,
-     "bytes": 1185,
+     "bytes": 1251,
      "keys": [
       "mp",
       "mps",
@@ -77958,7 +77960,7 @@
      "id": "k.words/shards/mr",
      "path": "k.words/shards/mr.sop",
      "wires": 6,
-     "bytes": 1404,
+     "bytes": 1484,
      "keys": [
       "mr",
       "mri",
@@ -77975,7 +77977,7 @@
      "id": "k.words/shards/ms",
      "path": "k.words/shards/ms.sop",
      "wires": 4,
-     "bytes": 1315,
+     "bytes": 1392,
      "keys": [
       "ms",
       "noun"
@@ -77990,7 +77992,7 @@
      "id": "k.words/shards/mt",
      "path": "k.words/shards/mt.sop",
      "wires": 5,
-     "bytes": 1173,
+     "bytes": 1249,
      "keys": [
       "mt",
       "noun"
@@ -78005,7 +78007,7 @@
      "id": "k.words/shards/mu",
      "path": "k.words/shards/mu.sop",
      "wires": 154,
-     "bytes": 37094,
+     "bytes": 40366,
      "keys": [
       "adjective",
       "adverb",
@@ -78080,7 +78082,7 @@
      "id": "k.words/shards/my",
      "path": "k.words/shards/my.sop",
      "wires": 10,
-     "bytes": 3272,
+     "bytes": 3511,
      "keys": [
       "adjective",
       "myrtle",
@@ -78101,7 +78103,7 @@
      "id": "k.words/shards/n",
      "path": "k.words/shards/n.sop",
      "wires": 4,
-     "bytes": 1595,
+     "bytes": 1671,
      "keys": [
       "n",
       "noun"
@@ -78116,7 +78118,7 @@
      "id": "k.words/shards/na",
      "path": "k.words/shards/na.sop",
      "wires": 130,
-     "bytes": 29249,
+     "bytes": 31812,
      "keys": [
       "adjective",
       "adverb",
@@ -78180,7 +78182,7 @@
      "id": "k.words/shards/nd",
      "path": "k.words/shards/nd.sop",
      "wires": 4,
-     "bytes": 1086,
+     "bytes": 1137,
      "keys": [
       "nd",
       "noun"
@@ -78195,7 +78197,7 @@
      "id": "k.words/shards/ne",
      "path": "k.words/shards/ne.sop",
      "wires": 178,
-     "bytes": 39848,
+     "bytes": 43472,
      "keys": [
       "adjective",
       "adverb",
@@ -78278,7 +78280,7 @@
      "id": "k.words/shards/ng",
      "path": "k.words/shards/ng.sop",
      "wires": 1,
-     "bytes": 484,
+     "bytes": 509,
      "keys": [
       "ng",
       "noun"
@@ -78293,7 +78295,7 @@
      "id": "k.words/shards/ni",
      "path": "k.words/shards/ni.sop",
      "wires": 76,
-     "bytes": 17834,
+     "bytes": 19404,
      "keys": [
       "adjective",
       "ni",
@@ -78340,7 +78342,7 @@
      "id": "k.words/shards/no",
      "path": "k.words/shards/no.sop",
      "wires": 151,
-     "bytes": 32271,
+     "bytes": 35421,
      "keys": [
       "adjective",
       "adverb",
@@ -78413,7 +78415,7 @@
      "id": "k.words/shards/ns",
      "path": "k.words/shards/ns.sop",
      "wires": 2,
-     "bytes": 796,
+     "bytes": 818,
      "keys": [
       "noun",
       "nsa"
@@ -78428,7 +78430,7 @@
      "id": "k.words/shards/nu",
      "path": "k.words/shards/nu.sop",
      "wires": 67,
-     "bytes": 15626,
+     "bytes": 17142,
      "keys": [
       "adjective",
       "noun",
@@ -78469,7 +78471,7 @@
      "id": "k.words/shards/ny",
      "path": "k.words/shards/ny.sop",
      "wires": 5,
-     "bytes": 1654,
+     "bytes": 1774,
      "keys": [
       "noun",
       "nylon",
@@ -78485,7 +78487,7 @@
      "id": "k.words/shards/o",
      "path": "k.words/shards/o.sop",
      "wires": 4,
-     "bytes": 1520,
+     "bytes": 1597,
      "keys": [
       "noun",
       "o"
@@ -78500,7 +78502,7 @@
      "id": "k.words/shards/oa",
      "path": "k.words/shards/oa.sop",
      "wires": 13,
-     "bytes": 3074,
+     "bytes": 3343,
      "keys": [
       "noun",
       "oaf",
@@ -78521,7 +78523,7 @@
      "id": "k.words/shards/ob",
      "path": "k.words/shards/ob.sop",
      "wires": 52,
-     "bytes": 11230,
+     "bytes": 12489,
      "keys": [
       "adjective",
       "adverb",
@@ -78561,7 +78563,7 @@
      "id": "k.words/shards/oc",
      "path": "k.words/shards/oc.sop",
      "wires": 32,
-     "bytes": 6587,
+     "bytes": 7235,
      "keys": [
       "noun",
       "occasion",
@@ -78588,7 +78590,7 @@
      "id": "k.words/shards/od",
      "path": "k.words/shards/od.sop",
      "wires": 20,
-     "bytes": 3842,
+     "bytes": 4199,
      "keys": [
       "adjective",
       "noun",
@@ -78611,7 +78613,7 @@
      "id": "k.words/shards/of",
      "path": "k.words/shards/of.sop",
      "wires": 46,
-     "bytes": 10775,
+     "bytes": 11795,
      "keys": [
       "adjective",
       "adverb",
@@ -78641,7 +78643,7 @@
      "id": "k.words/shards/og",
      "path": "k.words/shards/og.sop",
      "wires": 5,
-     "bytes": 1232,
+     "bytes": 1326,
      "keys": [
       "noun",
       "ogden",
@@ -78657,7 +78659,7 @@
      "id": "k.words/shards/oh",
      "path": "k.words/shards/oh.sop",
      "wires": 5,
-     "bytes": 1494,
+     "bytes": 1567,
      "keys": [
       "noun",
       "oh",
@@ -78673,7 +78675,7 @@
      "id": "k.words/shards/oi",
      "path": "k.words/shards/oi.sop",
      "wires": 7,
-     "bytes": 2377,
+     "bytes": 2549,
      "keys": [
       "noun",
       "oil",
@@ -78690,7 +78692,7 @@
      "id": "k.words/shards/ok",
      "path": "k.words/shards/ok.sop",
      "wires": 16,
-     "bytes": 4385,
+     "bytes": 4699,
      "keys": [
       "adjective",
       "adverb",
@@ -78713,7 +78715,7 @@
      "id": "k.words/shards/ol",
      "path": "k.words/shards/ol.sop",
      "wires": 21,
-     "bytes": 5633,
+     "bytes": 5986,
      "keys": [
       "adjective",
       "noun",
@@ -78736,7 +78738,7 @@
      "id": "k.words/shards/om",
      "path": "k.words/shards/om.sop",
      "wires": 10,
-     "bytes": 2595,
+     "bytes": 2819,
      "keys": [
       "noun",
       "omaha",
@@ -78756,7 +78758,7 @@
      "id": "k.words/shards/on",
      "path": "k.words/shards/on.sop",
      "wires": 24,
-     "bytes": 5113,
+     "bytes": 5590,
      "keys": [
       "adjective",
       "adverb",
@@ -78778,7 +78780,7 @@
      "id": "k.words/shards/oo",
      "path": "k.words/shards/oo.sop",
      "wires": 1,
-     "bytes": 506,
+     "bytes": 536,
      "keys": [
       "ooh",
       "verb"
@@ -78793,7 +78795,7 @@
      "id": "k.words/shards/op",
      "path": "k.words/shards/op.sop",
      "wires": 68,
-     "bytes": 15981,
+     "bytes": 17504,
      "keys": [
       "adjective",
       "adverb",
@@ -78833,7 +78835,7 @@
      "id": "k.words/shards/or",
      "path": "k.words/shards/or.sop",
      "wires": 111,
-     "bytes": 25758,
+     "bytes": 28230,
      "keys": [
       "adjective",
       "noun",
@@ -78891,7 +78893,7 @@
      "id": "k.words/shards/os",
      "path": "k.words/shards/os.sop",
      "wires": 19,
-     "bytes": 4384,
+     "bytes": 4656,
      "keys": [
       "noun",
       "os",
@@ -78913,7 +78915,7 @@
      "id": "k.words/shards/ot",
      "path": "k.words/shards/ot.sop",
      "wires": 16,
-     "bytes": 3461,
+     "bytes": 3740,
      "keys": [
       "adjective",
       "adverb",
@@ -78934,7 +78936,7 @@
      "id": "k.words/shards/ou",
      "path": "k.words/shards/ou.sop",
      "wires": 70,
-     "bytes": 14911,
+     "bytes": 16486,
      "keys": [
       "adjective",
       "adverb",
@@ -78973,7 +78975,7 @@
      "id": "k.words/shards/ov",
      "path": "k.words/shards/ov.sop",
      "wires": 62,
-     "bytes": 12832,
+     "bytes": 14096,
      "keys": [
       "adjective",
       "adverb",
@@ -79011,7 +79013,7 @@
      "id": "k.words/shards/ow",
      "path": "k.words/shards/ow.sop",
      "wires": 16,
-     "bytes": 3822,
+     "bytes": 4153,
      "keys": [
       "adjective",
       "noun",
@@ -79034,7 +79036,7 @@
      "id": "k.words/shards/ox",
      "path": "k.words/shards/ox.sop",
      "wires": 8,
-     "bytes": 2426,
+     "bytes": 2573,
      "keys": [
       "noun",
       "ox",
@@ -79051,7 +79053,7 @@
      "id": "k.words/shards/oy",
      "path": "k.words/shards/oy.sop",
      "wires": 4,
-     "bytes": 1440,
+     "bytes": 1529,
      "keys": [
       "noun",
       "oyster",
@@ -79067,7 +79069,7 @@
      "id": "k.words/shards/oz",
      "path": "k.words/shards/oz.sop",
      "wires": 1,
-     "bytes": 663,
+     "bytes": 689,
      "keys": [
       "noun",
       "ozone"
@@ -79082,7 +79084,7 @@
      "id": "k.words/shards/p",
      "path": "k.words/shards/p.sop",
      "wires": 3,
-     "bytes": 903,
+     "bytes": 959,
      "keys": [
       "noun",
       "p"
@@ -79097,7 +79099,7 @@
      "id": "k.words/shards/pa",
      "path": "k.words/shards/pa.sop",
      "wires": 508,
-     "bytes": 120245,
+     "bytes": 131360,
      "keys": [
       "adjective",
       "adverb",
@@ -79294,7 +79296,7 @@
      "id": "k.words/shards/pc",
      "path": "k.words/shards/pc.sop",
      "wires": 2,
-     "bytes": 658,
+     "bytes": 683,
      "keys": [
       "noun",
       "pc"
@@ -79309,7 +79311,7 @@
      "id": "k.words/shards/pd",
      "path": "k.words/shards/pd.sop",
      "wires": 2,
-     "bytes": 757,
+     "bytes": 783,
      "keys": [
       "noun",
       "pd"
@@ -79324,7 +79326,7 @@
      "id": "k.words/shards/pe",
      "path": "k.words/shards/pe.sop",
      "wires": 301,
-     "bytes": 72314,
+     "bytes": 78812,
      "keys": [
       "adjective",
       "adverb",
@@ -79455,7 +79457,7 @@
      "id": "k.words/shards/ph",
      "path": "k.words/shards/ph.sop",
      "wires": 73,
-     "bytes": 18043,
+     "bytes": 19557,
      "keys": [
       "adjective",
       "noun",
@@ -79502,7 +79504,7 @@
      "id": "k.words/shards/pi",
      "path": "k.words/shards/pi.sop",
      "wires": 224,
-     "bytes": 55009,
+     "bytes": 59902,
      "keys": [
       "adjective",
       "adverb",
@@ -79589,7 +79591,7 @@
      "id": "k.words/shards/pl",
      "path": "k.words/shards/pl.sop",
      "wires": 208,
-     "bytes": 49807,
+     "bytes": 54578,
      "keys": [
       "adjective",
       "adverb",
@@ -79668,7 +79670,7 @@
      "id": "k.words/shards/pm",
      "path": "k.words/shards/pm.sop",
      "wires": 5,
-     "bytes": 1387,
+     "bytes": 1456,
      "keys": [
       "noun",
       "pm"
@@ -79683,7 +79685,7 @@
      "id": "k.words/shards/pn",
      "path": "k.words/shards/pn.sop",
      "wires": 1,
-     "bytes": 597,
+     "bytes": 619,
      "keys": [
       "noun",
       "pneumonia"
@@ -79698,7 +79700,7 @@
      "id": "k.words/shards/po",
      "path": "k.words/shards/po.sop",
      "wires": 316,
-     "bytes": 75539,
+     "bytes": 82509,
      "keys": [
       "adjective",
       "adverb",
@@ -79833,7 +79835,7 @@
      "id": "k.words/shards/pr",
      "path": "k.words/shards/pr.sop",
      "wires": 549,
-     "bytes": 121577,
+     "bytes": 134590,
      "keys": [
       "adjective",
       "adverb",
@@ -80050,7 +80052,7 @@
      "id": "k.words/shards/ps",
      "path": "k.words/shards/ps.sop",
      "wires": 18,
-     "bytes": 3773,
+     "bytes": 4142,
      "keys": [
       "noun",
       "ps",
@@ -80076,7 +80078,7 @@
      "id": "k.words/shards/pu",
      "path": "k.words/shards/pu.sop",
      "wires": 184,
-     "bytes": 42780,
+     "bytes": 46884,
      "keys": [
       "adjective",
       "noun",
@@ -80154,7 +80156,7 @@
      "id": "k.words/shards/py",
      "path": "k.words/shards/py.sop",
      "wires": 11,
-     "bytes": 3447,
+     "bytes": 3668,
      "keys": [
       "noun",
       "pyramid",
@@ -80171,7 +80173,7 @@
      "id": "k.words/shards/q",
      "path": "k.words/shards/q.sop",
      "wires": 2,
-     "bytes": 535,
+     "bytes": 565,
      "keys": [
       "noun",
       "q"
@@ -80186,7 +80188,7 @@
      "id": "k.words/shards/qi",
      "path": "k.words/shards/qi.sop",
      "wires": 5,
-     "bytes": 1530,
+     "bytes": 1596,
      "keys": [
       "noun",
       "qi",
@@ -80203,7 +80205,7 @@
      "id": "k.words/shards/qu",
      "path": "k.words/shards/qu.sop",
      "wires": 147,
-     "bytes": 32387,
+     "bytes": 35669,
      "keys": [
       "adjective",
       "adverb",
@@ -80264,7 +80266,7 @@
      "id": "k.words/shards/r",
      "path": "k.words/shards/r.sop",
      "wires": 4,
-     "bytes": 1096,
+     "bytes": 1176,
      "keys": [
       "noun",
       "r"
@@ -80279,7 +80281,7 @@
      "id": "k.words/shards/ra",
      "path": "k.words/shards/ra.sop",
      "wires": 293,
-     "bytes": 68195,
+     "bytes": 74730,
      "keys": [
       "adjective",
       "adverb",
@@ -80389,7 +80391,7 @@
      "id": "k.words/shards/re",
      "path": "k.words/shards/re.sop",
      "wires": 899,
-     "bytes": 187359,
+     "bytes": 208260,
      "keys": [
       "adjective",
       "adverb",
@@ -80714,7 +80716,7 @@
      "id": "k.words/shards/rh",
      "path": "k.words/shards/rh.sop",
      "wires": 16,
-     "bytes": 4820,
+     "bytes": 5165,
      "keys": [
       "noun",
       "rhino",
@@ -80736,7 +80738,7 @@
      "id": "k.words/shards/ri",
      "path": "k.words/shards/ri.sop",
      "wires": 191,
-     "bytes": 41578,
+     "bytes": 45527,
      "keys": [
       "adjective",
       "adverb",
@@ -80810,7 +80812,7 @@
      "id": "k.words/shards/ro",
      "path": "k.words/shards/ro.sop",
      "wires": 262,
-     "bytes": 61510,
+     "bytes": 66954,
      "keys": [
       "adjective",
       "adverb",
@@ -80918,7 +80920,7 @@
      "id": "k.words/shards/ru",
      "path": "k.words/shards/ru.sop",
      "wires": 143,
-     "bytes": 32724,
+     "bytes": 35840,
      "keys": [
       "adjective",
       "noun",
@@ -80979,7 +80981,7 @@
      "id": "k.words/shards/rv",
      "path": "k.words/shards/rv.sop",
      "wires": 2,
-     "bytes": 637,
+     "bytes": 662,
      "keys": [
       "noun",
       "rv"
@@ -80994,7 +80996,7 @@
      "id": "k.words/shards/ry",
      "path": "k.words/shards/ry.sop",
      "wires": 3,
-     "bytes": 1510,
+     "bytes": 1575,
      "keys": [
       "noun",
       "rye"
@@ -81009,7 +81011,7 @@
      "id": "k.words/shards/s",
      "path": "k.words/shards/s.sop",
      "wires": 4,
-     "bytes": 1524,
+     "bytes": 1596,
      "keys": [
       "noun",
       "s"
@@ -81024,7 +81026,7 @@
      "id": "k.words/shards/sa",
      "path": "k.words/shards/sa.sop",
      "wires": 324,
-     "bytes": 78208,
+     "bytes": 84918,
      "keys": [
       "adjective",
       "noun",
@@ -81158,7 +81160,7 @@
      "id": "k.words/shards/sc",
      "path": "k.words/shards/sc.sop",
      "wires": 292,
-     "bytes": 67581,
+     "bytes": 74178,
      "keys": [
       "adjective",
       "noun",
@@ -81273,7 +81275,7 @@
      "id": "k.words/shards/se",
      "path": "k.words/shards/se.sop",
      "wires": 378,
-     "bytes": 88130,
+     "bytes": 96306,
      "keys": [
       "adjective",
       "adverb",
@@ -81432,7 +81434,7 @@
      "id": "k.words/shards/sh",
      "path": "k.words/shards/sh.sop",
      "wires": 414,
-     "bytes": 93494,
+     "bytes": 102466,
      "keys": [
       "adjective",
       "adverb",
@@ -81583,7 +81585,7 @@
      "id": "k.words/shards/si",
      "path": "k.words/shards/si.sop",
      "wires": 267,
-     "bytes": 60571,
+     "bytes": 66101,
      "keys": [
       "adjective",
       "adverb",
@@ -81692,7 +81694,7 @@
      "id": "k.words/shards/sk",
      "path": "k.words/shards/sk.sop",
      "wires": 69,
-     "bytes": 16992,
+     "bytes": 18522,
      "keys": [
       "noun",
       "skank",
@@ -81729,7 +81731,7 @@
      "id": "k.words/shards/sl",
      "path": "k.words/shards/sl.sop",
      "wires": 184,
-     "bytes": 38101,
+     "bytes": 42090,
      "keys": [
       "adjective",
       "adverb",
@@ -81799,7 +81801,7 @@
      "id": "k.words/shards/sm",
      "path": "k.words/shards/sm.sop",
      "wires": 78,
-     "bytes": 17787,
+     "bytes": 19587,
      "keys": [
       "adjective",
       "adverb",
@@ -81841,7 +81843,7 @@
      "id": "k.words/shards/sn",
      "path": "k.words/shards/sn.sop",
      "wires": 92,
-     "bytes": 19548,
+     "bytes": 21570,
      "keys": [
       "noun",
       "snack",
@@ -81884,7 +81886,7 @@
      "id": "k.words/shards/so",
      "path": "k.words/shards/so.sop",
      "wires": 250,
-     "bytes": 54865,
+     "bytes": 60118,
      "keys": [
       "adjective",
       "adverb",
@@ -81991,7 +81993,7 @@
      "id": "k.words/shards/sp",
      "path": "k.words/shards/sp.sop",
      "wires": 377,
-     "bytes": 84065,
+     "bytes": 92332,
      "keys": [
       "adjective",
       "noun",
@@ -82118,7 +82120,7 @@
      "id": "k.words/shards/sq",
      "path": "k.words/shards/sq.sop",
      "wires": 60,
-     "bytes": 13011,
+     "bytes": 14353,
      "keys": [
       "adjective",
       "adverb",
@@ -82150,7 +82152,7 @@
      "id": "k.words/shards/ss",
      "path": "k.words/shards/ss.sop",
      "wires": 3,
-     "bytes": 1207,
+     "bytes": 1251,
      "keys": [
       "noun",
       "ss"
@@ -82165,7 +82167,7 @@
      "id": "k.words/shards/st",
      "path": "k.words/shards/st.sop",
      "wires": 695,
-     "bytes": 157185,
+     "bytes": 172547,
      "keys": [
       "adjective",
       "adverb",
@@ -82393,7 +82395,7 @@
      "id": "k.words/shards/su",
      "path": "k.words/shards/su.sop",
      "wires": 357,
-     "bytes": 81449,
+     "bytes": 89516,
      "keys": [
       "adjective",
       "adverb",
@@ -82542,7 +82544,7 @@
      "id": "k.words/shards/sw",
      "path": "k.words/shards/sw.sop",
      "wires": 159,
-     "bytes": 37665,
+     "bytes": 40953,
      "keys": [
       "adjective",
       "adverb",
@@ -82612,7 +82614,7 @@
      "id": "k.words/shards/sy",
      "path": "k.words/shards/sy.sop",
      "wires": 37,
-     "bytes": 8620,
+     "bytes": 9453,
      "keys": [
       "noun",
       "sydney",
@@ -82645,7 +82647,7 @@
      "id": "k.words/shards/t",
      "path": "k.words/shards/t.sop",
      "wires": 6,
-     "bytes": 2010,
+     "bytes": 2112,
      "keys": [
       "noun",
       "t",
@@ -82661,7 +82663,7 @@
      "id": "k.words/shards/ta",
      "path": "k.words/shards/ta.sop",
      "wires": 252,
-     "bytes": 57052,
+     "bytes": 62502,
      "keys": [
       "adjective",
       "noun",
@@ -82767,7 +82769,7 @@
      "id": "k.words/shards/te",
      "path": "k.words/shards/te.sop",
      "wires": 252,
-     "bytes": 59353,
+     "bytes": 65038,
      "keys": [
       "adjective",
       "adverb",
@@ -82883,7 +82885,7 @@
      "id": "k.words/shards/th",
      "path": "k.words/shards/th.sop",
      "wires": 247,
-     "bytes": 57551,
+     "bytes": 62874,
      "keys": [
       "adjective",
       "adverb",
@@ -82990,7 +82992,7 @@
      "id": "k.words/shards/ti",
      "path": "k.words/shards/ti.sop",
      "wires": 167,
-     "bytes": 38513,
+     "bytes": 42124,
      "keys": [
       "adjective",
       "adverb",
@@ -83062,7 +83064,7 @@
      "id": "k.words/shards/to",
      "path": "k.words/shards/to.sop",
      "wires": 243,
-     "bytes": 57500,
+     "bytes": 62755,
      "keys": [
       "adjective",
       "adverb",
@@ -83167,7 +83169,7 @@
      "id": "k.words/shards/tr",
      "path": "k.words/shards/tr.sop",
      "wires": 449,
-     "bytes": 104420,
+     "bytes": 114363,
      "keys": [
       "adjective",
       "adverb",
@@ -83328,7 +83330,7 @@
      "id": "k.words/shards/ts",
      "path": "k.words/shards/ts.sop",
      "wires": 3,
-     "bytes": 899,
+     "bytes": 974,
      "keys": [
       "noun",
       "tsar",
@@ -83346,7 +83348,7 @@
      "id": "k.words/shards/tu",
      "path": "k.words/shards/tu.sop",
      "wires": 125,
-     "bytes": 29293,
+     "bytes": 31882,
      "keys": [
       "adjective",
       "noun",
@@ -83408,7 +83410,7 @@
      "id": "k.words/shards/tv",
      "path": "k.words/shards/tv.sop",
      "wires": 3,
-     "bytes": 1348,
+     "bytes": 1403,
      "keys": [
       "noun",
       "tv"
@@ -83423,7 +83425,7 @@
      "id": "k.words/shards/tw",
      "path": "k.words/shards/tw.sop",
      "wires": 60,
-     "bytes": 12723,
+     "bytes": 14037,
      "keys": [
       "adjective",
       "adverb",
@@ -83462,7 +83464,7 @@
      "id": "k.words/shards/ty",
      "path": "k.words/shards/ty.sop",
      "wires": 23,
-     "bytes": 5834,
+     "bytes": 6320,
      "keys": [
       "noun",
       "tying",
@@ -83488,7 +83490,7 @@
      "id": "k.words/shards/u",
      "path": "k.words/shards/u.sop",
      "wires": 5,
-     "bytes": 1201,
+     "bytes": 1303,
      "keys": [
       "noun",
       "u",
@@ -83504,7 +83506,7 @@
      "id": "k.words/shards/uf",
      "path": "k.words/shards/uf.sop",
      "wires": 2,
-     "bytes": 686,
+     "bytes": 712,
      "keys": [
       "noun",
       "ufo"
@@ -83519,7 +83521,7 @@
      "id": "k.words/shards/ug",
      "path": "k.words/shards/ug.sop",
      "wires": 4,
-     "bytes": 1006,
+     "bytes": 1063,
      "keys": [
       "adjective",
       "ugly"
@@ -83534,7 +83536,7 @@
      "id": "k.words/shards/uk",
      "path": "k.words/shards/uk.sop",
      "wires": 6,
-     "bytes": 1586,
+     "bytes": 1666,
      "keys": [
       "noun",
       "uk",
@@ -83551,7 +83553,7 @@
      "id": "k.words/shards/ul",
      "path": "k.words/shards/ul.sop",
      "wires": 8,
-     "bytes": 1805,
+     "bytes": 1953,
      "keys": [
       "noun",
       "ulcer",
@@ -83570,7 +83572,7 @@
      "id": "k.words/shards/um",
      "path": "k.words/shards/um.sop",
      "wires": 7,
-     "bytes": 1963,
+     "bytes": 2093,
      "keys": [
       "adjective",
       "noun",
@@ -83587,7 +83589,7 @@
      "id": "k.words/shards/un",
      "path": "k.words/shards/un.sop",
      "wires": 141,
-     "bytes": 29968,
+     "bytes": 33011,
      "keys": [
       "adjective",
       "adverb",
@@ -83661,7 +83663,7 @@
      "id": "k.words/shards/up",
      "path": "k.words/shards/up.sop",
      "wires": 55,
-     "bytes": 11291,
+     "bytes": 12495,
      "keys": [
       "adjective",
       "adverb",
@@ -83695,7 +83697,7 @@
      "id": "k.words/shards/ur",
      "path": "k.words/shards/ur.sop",
      "wires": 16,
-     "bytes": 4032,
+     "bytes": 4406,
      "keys": [
       "adjective",
       "noun",
@@ -83718,7 +83720,7 @@
      "id": "k.words/shards/us",
      "path": "k.words/shards/us.sop",
      "wires": 29,
-     "bytes": 6897,
+     "bytes": 7477,
      "keys": [
       "adjective",
       "adverb",
@@ -83746,7 +83748,7 @@
      "id": "k.words/shards/ut",
      "path": "k.words/shards/ut.sop",
      "wires": 15,
-     "bytes": 3255,
+     "bytes": 3567,
      "keys": [
       "noun",
       "utah",
@@ -83767,7 +83769,7 @@
      "id": "k.words/shards/v",
      "path": "k.words/shards/v.sop",
      "wires": 4,
-     "bytes": 1428,
+     "bytes": 1504,
      "keys": [
       "noun",
       "v"
@@ -83782,7 +83784,7 @@
      "id": "k.words/shards/va",
      "path": "k.words/shards/va.sop",
      "wires": 103,
-     "bytes": 24015,
+     "bytes": 26183,
      "keys": [
       "adjective",
       "noun",
@@ -83838,7 +83840,7 @@
      "id": "k.words/shards/vc",
      "path": "k.words/shards/vc.sop",
      "wires": 2,
-     "bytes": 815,
+     "bytes": 840,
      "keys": [
       "noun",
       "vcr"
@@ -83853,7 +83855,7 @@
      "id": "k.words/shards/ve",
      "path": "k.words/shards/ve.sop",
      "wires": 131,
-     "bytes": 29856,
+     "bytes": 32691,
      "keys": [
       "adjective",
       "adverb",
@@ -83922,7 +83924,7 @@
      "id": "k.words/shards/vi",
      "path": "k.words/shards/vi.sop",
      "wires": 157,
-     "bytes": 37022,
+     "bytes": 40358,
      "keys": [
       "adjective",
       "noun",
@@ -84005,7 +84007,7 @@
      "id": "k.words/shards/vo",
      "path": "k.words/shards/vo.sop",
      "wires": 72,
-     "bytes": 15889,
+     "bytes": 17591,
      "keys": [
       "noun",
       "verb",
@@ -84047,7 +84049,7 @@
      "id": "k.words/shards/vu",
      "path": "k.words/shards/vu.sop",
      "wires": 6,
-     "bytes": 1794,
+     "bytes": 1911,
      "keys": [
       "noun",
       "vulcan",
@@ -84064,7 +84066,7 @@
      "id": "k.words/shards/w",
      "path": "k.words/shards/w.sop",
      "wires": 4,
-     "bytes": 1211,
+     "bytes": 1287,
      "keys": [
       "noun",
       "w"
@@ -84079,7 +84081,7 @@
      "id": "k.words/shards/wa",
      "path": "k.words/shards/wa.sop",
      "wires": 274,
-     "bytes": 64809,
+     "bytes": 70695,
      "keys": [
       "adjective",
       "adverb",
@@ -84196,7 +84198,7 @@
      "id": "k.words/shards/we",
      "path": "k.words/shards/we.sop",
      "wires": 180,
-     "bytes": 39263,
+     "bytes": 42828,
      "keys": [
       "adjective",
       "adverb",
@@ -84271,7 +84273,7 @@
      "id": "k.words/shards/wh",
      "path": "k.words/shards/wh.sop",
      "wires": 126,
-     "bytes": 29179,
+     "bytes": 31950,
      "keys": [
       "adjective",
       "adverb",
@@ -84332,7 +84334,7 @@
      "id": "k.words/shards/wi",
      "path": "k.words/shards/wi.sop",
      "wires": 220,
-     "bytes": 52427,
+     "bytes": 57103,
      "keys": [
       "adjective",
       "adverb",
@@ -84426,7 +84428,7 @@
      "id": "k.words/shards/wo",
      "path": "k.words/shards/wo.sop",
      "wires": 129,
-     "bytes": 31824,
+     "bytes": 34578,
      "keys": [
       "adjective",
       "adverb",
@@ -84486,7 +84488,7 @@
      "id": "k.words/shards/wr",
      "path": "k.words/shards/wr.sop",
      "wires": 79,
-     "bytes": 17504,
+     "bytes": 19226,
      "keys": [
       "adjective",
       "adverb",
@@ -84529,7 +84531,7 @@
      "id": "k.words/shards/wu",
      "path": "k.words/shards/wu.sop",
      "wires": 3,
-     "bytes": 782,
+     "bytes": 835,
      "keys": [
       "noun",
       "wu",
@@ -84545,7 +84547,7 @@
      "id": "k.words/shards/wy",
      "path": "k.words/shards/wy.sop",
      "wires": 5,
-     "bytes": 1265,
+     "bytes": 1336,
      "keys": [
       "noun",
       "wyatt",
@@ -84561,7 +84563,7 @@
      "id": "k.words/shards/x",
      "path": "k.words/shards/x.sop",
      "wires": 9,
-     "bytes": 2062,
+     "bytes": 2251,
      "keys": [
       "noun",
       "verb",
@@ -84578,7 +84580,7 @@
      "id": "k.words/shards/xa",
      "path": "k.words/shards/xa.sop",
      "wires": 2,
-     "bytes": 680,
+     "bytes": 703,
      "keys": [
       "noun",
       "xavier"
@@ -84593,7 +84595,7 @@
      "id": "k.words/shards/xi",
      "path": "k.words/shards/xi.sop",
      "wires": 3,
-     "bytes": 721,
+     "bytes": 776,
      "keys": [
       "noun",
       "xi"
@@ -84608,7 +84610,7 @@
      "id": "k.words/shards/y",
      "path": "k.words/shards/y.sop",
      "wires": 3,
-     "bytes": 1077,
+     "bytes": 1133,
      "keys": [
       "noun",
       "y"
@@ -84623,7 +84625,7 @@
      "id": "k.words/shards/ya",
      "path": "k.words/shards/ya.sop",
      "wires": 41,
-     "bytes": 9261,
+     "bytes": 10089,
      "keys": [
       "noun",
       "verb",
@@ -84653,7 +84655,7 @@
      "id": "k.words/shards/ye",
      "path": "k.words/shards/ye.sop",
      "wires": 40,
-     "bytes": 9104,
+     "bytes": 10002,
      "keys": [
       "adjective",
       "adverb",
@@ -84686,7 +84688,7 @@
      "id": "k.words/shards/yi",
      "path": "k.words/shards/yi.sop",
      "wires": 11,
-     "bytes": 2142,
+     "bytes": 2397,
      "keys": [
       "noun",
       "verb",
@@ -84705,7 +84707,7 @@
      "id": "k.words/shards/yo",
      "path": "k.words/shards/yo.sop",
      "wires": 34,
-     "bytes": 8716,
+     "bytes": 9344,
      "keys": [
       "adjective",
       "noun",
@@ -84734,7 +84736,7 @@
      "id": "k.words/shards/yu",
      "path": "k.words/shards/yu.sop",
      "wires": 8,
-     "bytes": 2185,
+     "bytes": 2312,
      "keys": [
       "noun",
       "yuan",
@@ -84751,7 +84753,7 @@
      "id": "k.words/shards/z",
      "path": "k.words/shards/z.sop",
      "wires": 3,
-     "bytes": 734,
+     "bytes": 786,
      "keys": [
       "noun",
       "z"
@@ -84766,7 +84768,7 @@
      "id": "k.words/shards/za",
      "path": "k.words/shards/za.sop",
      "wires": 5,
-     "bytes": 1110,
+     "bytes": 1208,
      "keys": [
       "noun",
       "verb",
@@ -84782,7 +84784,7 @@
      "id": "k.words/shards/ze",
      "path": "k.words/shards/ze.sop",
      "wires": 22,
-     "bytes": 5394,
+     "bytes": 5830,
      "keys": [
       "adjective",
       "noun",
@@ -84806,7 +84808,7 @@
      "id": "k.words/shards/zh",
      "path": "k.words/shards/zh.sop",
      "wires": 2,
-     "bytes": 708,
+     "bytes": 730,
      "keys": [
       "noun",
       "zhou"
@@ -84821,7 +84823,7 @@
      "id": "k.words/shards/zi",
      "path": "k.words/shards/zi.sop",
      "wires": 14,
-     "bytes": 3179,
+     "bytes": 3439,
      "keys": [
       "adjective",
       "adverb",
@@ -84841,7 +84843,7 @@
      "id": "k.words/shards/zo",
      "path": "k.words/shards/zo.sop",
      "wires": 16,
-     "bytes": 3824,
+     "bytes": 4200,
      "keys": [
       "noun",
       "verb",
@@ -84861,7 +84863,7 @@
      "id": "k.words/shards/zu",
      "path": "k.words/shards/zu.sop",
      "wires": 8,
-     "bytes": 2118,
+     "bytes": 2261,
      "keys": [
       "noun",
       "zucchini",
@@ -84900,6 +84902,7 @@
     "w.lang.en.aux",
     "w.lang.en.cat",
     "w.lang.en.choice",
+    "w.lang.en.closed",
     "w.lang.en.construction",
     "w.lang.en.contraction",
     "w.lang.en.contraction.ending",
@@ -85061,6 +85064,278 @@
      ],
      "sources": [
       "psys2-78f45863"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/closed-classes",
+     "path": "w.lang.en/shards/closed-classes.sop",
+     "wires": 274,
+     "bytes": 37976,
+     "keys": [
+      "'s",
+      "a",
+      "a few",
+      "about",
+      "above",
+      "according to",
+      "across",
+      "actually",
+      "after",
+      "again",
+      "ah",
+      "aint",
+      "all",
+      "along",
+      "also",
+      "always",
+      "am",
+      "among",
+      "an",
+      "and",
+      "another",
+      "any",
+      "apart from",
+      "are",
+      "aren't",
+      "arent",
+      "around",
+      "as",
+      "at",
+      "back to",
+      "be",
+      "been",
+      "before",
+      "behind",
+      "being",
+      "below",
+      "beneath",
+      "beside",
+      "between",
+      "both",
+      "but",
+      "by",
+      "by means of",
+      "can",
+      "can't",
+      "cannot",
+      "cant",
+      "close to",
+      "could",
+      "couldn't",
+      "couldnt",
+      "did",
+      "didn't",
+      "didnt",
+      "do",
+      "does",
+      "doesn't",
+      "doesnt",
+      "don't",
+      "dont",
+      "during",
+      "each",
+      "earlier than",
+      "eight",
+      "eighth",
+      "eleven",
+      "er",
+      "every",
+      "everything",
+      "except",
+      "few",
+      "fifth",
+      "first",
+      "five",
+      "for",
+      "four",
+      "fourth",
+      "from",
+      "hadnt",
+      "has",
+      "hasn't",
+      "hasnt",
+      "have",
+      "haven't",
+      "havent",
+      "he",
+      "her",
+      "here",
+      "hey",
+      "him",
+      "his",
+      "hm",
+      "hmm",
+      "how",
+      "how many",
+      "how much",
+      "i",
+      "idk",
+      "if",
+      "in",
+      "in front of",
+      "in the middle of",
+      "inside",
+      "instead",
+      "instead of",
+      "into",
+      "is",
+      "isn't",
+      "isnt",
+      "it",
+      "its",
+      "just",
+      "kinda",
+      "kindly",
+      "last",
+      "later than",
+      "left of",
+      "like",
+      "many",
+      "maybe",
+      "me",
+      "minus",
+      "my",
+      "myself",
+      "nah",
+      "near",
+      "neither",
+      "never",
+      "next",
+      "next to",
+      "nine",
+      "ninth",
+      "no",
+      "nobody",
+      "none",
+      "nope",
+      "nor",
+      "not",
+      "nothing",
+      "now",
+      "nowhere",
+      "of",
+      "off",
+      "oh",
+      "ok",
+      "okay",
+      "on",
+      "on top of",
+      "one",
+      "ones",
+      "onto",
+      "oops",
+      "or",
+      "other",
+      "others",
+      "our",
+      "ourselves",
+      "out of",
+      "outside",
+      "over",
+      "perhaps",
+      "please",
+      "pls",
+      "plz",
+      "probably",
+      "rather",
+      "rather than",
+      "really",
+      "resembling",
+      "right of",
+      "second",
+      "seven",
+      "seventh",
+      "several",
+      "she",
+      "should",
+      "shouldn't",
+      "shouldnt",
+      "since",
+      "six",
+      "sixth",
+      "so",
+      "some",
+      "sometimes",
+      "sorry",
+      "ten",
+      "tenth",
+      "thanks",
+      "that",
+      "the",
+      "the other",
+      "the others",
+      "their",
+      "them",
+      "then",
+      "there",
+      "these",
+      "they",
+      "third",
+      "this",
+      "those",
+      "three",
+      "through",
+      "to",
+      "to the left of",
+      "to the right of",
+      "too",
+      "toward",
+      "towards",
+      "twelve",
+      "two",
+      "ugh",
+      "uh",
+      "um",
+      "under",
+      "underneath",
+      "until",
+      "ur",
+      "urself",
+      "us",
+      "using",
+      "very",
+      "via",
+      "wait",
+      "was",
+      "wasn't",
+      "wasnt",
+      "we",
+      "well",
+      "were",
+      "weren't",
+      "werent",
+      "what",
+      "when",
+      "where",
+      "which",
+      "who",
+      "whom",
+      "whoops",
+      "whose",
+      "why",
+      "will",
+      "with",
+      "without",
+      "won't",
+      "wont",
+      "would",
+      "wouldn't",
+      "wouldnt",
+      "yea",
+      "yeah",
+      "yep",
+      "yes",
+      "you",
+      "your",
+      "yourself",
+      "yourselves",
+      "yup",
+      "zero"
+     ],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "CC0-1.0",
      "warnings": []

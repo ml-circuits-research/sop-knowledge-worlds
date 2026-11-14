@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.bb.noun.1 k.words.sense word=BB pos=noun n=1 gloss="a small pellet fired from an air rifle or BB gun" synonym="BB shot" is_a=shot core.source="wordnet 3.1"
+@k.words.bb.noun.1 k.words.sense word=BB pos=noun n=1 supersense=noun.artifact gloss="a small pellet fired from an air rifle or BB gun" synonym="BB shot" is_a=shot core.source="wordnet 3.1"
 @k.words.bb.spelling.BB core.word text=bb means=BB of=k.words.sense.word core.source="wordnet 3.1"

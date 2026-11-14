@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.lsd.noun.1 k.words.sense word=LSD pos=noun n=1 gloss="a powerful hallucinogenic drug manufactured from lysergic acid" synonym="lysergic acid diethylamide" is_a=hallucinogen is_a="drug of abuse" is_a="controlled substance" core.source="wordnet 3.1"
+@k.words.lsd.noun.1 k.words.sense word=LSD pos=noun n=1 supersense=noun.artifact gloss="a powerful hallucinogenic drug manufactured from lysergic acid" synonym="lysergic acid diethylamide" is_a=hallucinogen is_a="drug of abuse" is_a="controlled substance" core.source="wordnet 3.1"
 @k.words.lsd.spelling.LSD core.word text=lsd means=LSD of=k.words.sense.word core.source="wordnet 3.1"

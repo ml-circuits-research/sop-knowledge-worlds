@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (220 of 991 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (220 of 992 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -982,6 +982,7 @@
 @k.attributes.narration.k.words.sense.word k.attributes.narration type=k.words.sense key=word narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.pos k.attributes.narration type=k.words.sense key=pos narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.n k.attributes.narration type=k.words.sense key=n narrate=no salience=0 why="an internal number (a position, a rank, a step count)" core.source="hand-core 1"
+@k.attributes.narration.k.words.sense.supersense k.attributes.narration type=k.words.sense key=supersense narrate=no salience=0 why="a class of the dictionary (the WordNet lexicographer file), for type signatures" core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.gloss k.attributes.narration type=k.words.sense key=gloss narrate=yes salience=1 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.synonym k.attributes.narration type=k.words.sense key=synonym narrate=yes salience=0.7 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.words.sense.is_a k.attributes.narration type=k.words.sense key=is_a narrate=yes salience=0.95 form=kind basis=measured core.source="hand-core 1"

@@ -3,5 +3,5 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.ufo.noun.1 k.words.sense word=UFO pos=noun n=1 gloss="an (apparently) flying object whose nature is unknown; especially those considered to have extraterrestrial origins" synonym="unidentified flying object" synonym="flying saucer" is_a=apparition core.source="wordnet 3.1"
+@k.words.ufo.noun.1 k.words.sense word=UFO pos=noun n=1 supersense=noun.cognition gloss="an (apparently) flying object whose nature is unknown; especially those considered to have extraterrestrial origins" synonym="unidentified flying object" synonym="flying saucer" is_a=apparition core.source="wordnet 3.1"
 @k.words.ufo.spelling.UFO core.word text=ufo means=UFO of=k.words.sense.word core.source="wordnet 3.1"

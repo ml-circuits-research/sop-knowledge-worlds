@@ -4727,3 +4727,31 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   items, unique ids; shards = the import's output, under the size gate). `npm run test:changed` (build 140 s; 29
   files, 235 tests): 233 pass, 1 skipped, 1 fail (COVERAGE.md stale: `npm run reports` regenerated it), rerun
   coverage-report 4, catalog 8, k.people.given-names 3, k.people, repo pass.
+
+
+## 2026-11-15 — third worker: supersenses on k.words senses; the class of every closed-class word of w.lang.en (block 02:15)
+
+- `k.words.sense.supersense` (k.words version 4): the WordNet lexicographer file of the sense's synset (second field
+  of a data line, by the 45 names of WordNet 3.1's `lexnames`; `LEXNAMES` in tools/import/wordnet.mjs, checked
+  against the raw file). **Senses without a supersense: 0 of 29,449** (29,448 WordNet senses, and the hand sense
+  `numbered`, written `adj.ppl`). Most frequent: noun.person 3,484, noun.artifact 2,846, noun.act 2,173,
+  noun.communication 1,733, adj.all 1,621, verb.contact 1,188, verb.communication 929, noun.cognition 900;
+  rarest: adj.ppl 5, noun.motive 17, noun.Tops 47, verb.weather 48. Rerun: `node tools/import/wordnet.mjs` (raw
+  files copied from the first worker's clone; sha256 of wordnet31.zip, en_50k.txt, en-top50k.tsv equal SOURCE.md's).
+  k.words shards 8,676,956 -> 9,377,608 bytes (348 shards; largest re.sop 208,260 bytes, 899 wires); 0 warnings.
+  The key is narrate=no in k.attributes.narration (a class of the dictionary, for type signatures).
+- `w.lang.en.closed text= class= from=` (new type, exported; shard closed-classes, 274 facts, 37,976 bytes, CC0):
+  260 closed-class words of the word lists, each with its class (determiner 32, pronoun 39, preposition 64,
+  conjunction 8, auxiliary 49, numeral 13, ordinal 11, adverb 26, particle 3, interjection 29 facts: the closed
+  parts of speech of Universal Dependencies, in English words). Derived by `tools/lang-en-closed.mjs` (in `npm run
+  build`): one-class lists give their class with exceptions by word (numeral determiners, locative there, question
+  words, negation words); marker lists (answers, corrections, leads, skipped words) class their single words from one
+  table. 45 open-class words of the lists get none (want, think, like, lose, new, the 15 attribute nouns ...).
+- Tests: `npm run test:changed` (build + 42 files, 332 tests): 330 pass, 1 skipped, 1 fail (COVERAGE.md stale:
+  `npm run reports` rerun; k.kinds coverage 958 -> 1,238 of the common things was already stale on main). New:
+  import.wordnet "supersenses" (every sense of the shards, of its own part of speech; the list = lexnames),
+  w.lang.en.closed 3 tests (shard = tool output; every single word of the lists classed or named open; the usual
+  words get the usual classes).
+  After rebasing on 6c46b13 and rebuilding: `npm run test:changed` 43 files, 336 tests, 335 pass, 1 skipped, 0 fail;
+  rebased again on 20cdace (k.people.given_name), rebuilt (catalog 32 worlds, 1,091 shards, 29,129 words): catalog 8,
+  k.attributes.narration 3, w.lang.en.closed 3, repo 1, validate 5 pass.

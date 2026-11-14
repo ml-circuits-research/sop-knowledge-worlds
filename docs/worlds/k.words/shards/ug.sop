@@ -3,7 +3,7 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.ugly.adjective.1 k.words.sense word=ugly pos=adjective n=1 gloss="displeasing to the senses" opposite=beautiful core.source="wordnet 3.1"
-@k.words.ugly.adjective.2 k.words.sense word=ugly pos=adjective n=2 gloss="inclined to anger or bad feelings with overtones of menace" synonym=surly near_opposite=good-natured core.source="wordnet 3.1"
-@k.words.ugly.adjective.3 k.words.sense word=ugly pos=adjective n=3 gloss="morally reprehensible" synonym=despicable synonym=vile synonym=slimy synonym=unworthy synonym=worthless synonym=wretched near_opposite=good core.source="wordnet 3.1"
+@k.words.ugly.adjective.1 k.words.sense word=ugly pos=adjective n=1 supersense=adj.all gloss="displeasing to the senses" opposite=beautiful core.source="wordnet 3.1"
+@k.words.ugly.adjective.2 k.words.sense word=ugly pos=adjective n=2 supersense=adj.all gloss="inclined to anger or bad feelings with overtones of menace" synonym=surly near_opposite=good-natured core.source="wordnet 3.1"
+@k.words.ugly.adjective.3 k.words.sense word=ugly pos=adjective n=3 supersense=adj.all gloss="morally reprehensible" synonym=despicable synonym=vile synonym=slimy synonym=unworthy synonym=worthless synonym=wretched near_opposite=good core.source="wordnet 3.1"
 @k.words.ugly.forms core.word text=uglier text=ugliest means=ugly of=k.words.sense.word core.source="wordnet 3.1"
