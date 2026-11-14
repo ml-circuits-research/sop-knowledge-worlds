@@ -29,7 +29,7 @@ the object and the prepositions.
 
 ## Shards
 
-`acts` (16 acts, 57 roles; Q45: make has `topic`, marked by about) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
+`acts` (16 acts, 57 roles; Q45: make has `topic`, marked by about), `families` (act families, below) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
 `verbs-place`, `verbs-connect`, `verbs-group`, `verbs-take_apart`, `verbs-pick`, `verbs-ask`, `verbs-copy`,
 `verbs-send`, `verbs-undo`, `verbs-save`, `verbs-load`, `verbs-redo`, `verbs-deselect`: 314 verbs (272 from WordNet
 senses, 42 hand-written) and 89 markings. The hand-over added doodle, scribble, whip up, shove, nudge, scoot, wipe,
@@ -58,6 +58,22 @@ the sense (its three most frequent senses of a word); a test compares the glosse
 
 See `tests/k.actions.questions.jsonl`: which act erase means, the two acts of "put on", what enlarge changes and
 which way, what "with" marks after replace, the roles of remove and the words that mark its source.
+
+## Act families (reviewer 21:55: the up edges of acts)
+
+Shard `families` (tools/acts-core.mjs): the 16 acts grouped, for the library's cousins (lift an act to its family,
+then down to the other acts of it). A `k.actions.family` has a `dimension` and the families above it (`parent`); a
+`k.actions.member` says that an act is in a family and why.
+
+- **What it does** (`dimension=does`, three layers): creation (make, copy) and destruction (remove) under existence;
+  change of a value (change); change of place (place, send); joining (connect, group) and separating (take apart)
+  under structure (grouping); these four under *change of the world*. Question (ask) and view (pick, deselect) under
+  *no change of things*. History (undo, redo) and keeping (save, load, send) under *the work itself*. Send is in two
+  families (it changes where the thing is and it leaves the application). Opposites are siblings or cousins under one
+  parent (make / remove under existence, connect / take apart under structure).
+- **What it needs** (`dimension=takes`, read off the roles, not written by hand): acts on a kind (make), acts on a
+  thing (remove, change, place, copy, send, connect, group, take apart, pick, load), acts that need no filler (ask,
+  undo, redo, save, deselect); a cousin can change the act and keep its filler ("remove the cat" -> "copy the cat").
 
 ## Everyday actions (Round 7, R7.2)
 

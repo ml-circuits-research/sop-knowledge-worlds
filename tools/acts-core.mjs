@@ -115,6 +115,67 @@ export const ACTS = [
   ]],
 ];
 
+// Act families (reviewer 21:55, owner 15:03: the up edges of acts, for the library's cousins): the 16 acts grouped by
+// what they do, in layers (an act -> its family -> a wider family -> act), each membership with its reason. A second
+// dimension, `takes`, groups the acts by the role they need (read off the roles above, not written by hand), so a
+// cousin can change the act and keep its filler ("remove the cat" -> "copy the cat").
+// [name, about, parents]
+export const FAMILIES = [
+  ['change of the world', 'acts after which the things that are there are not the same: other things, other values, other places, other wholes', []],
+  ['no change of things', 'acts after which the things are as before: only an answer is given or what is picked differs', []],
+  ['the work itself', 'acts on the steps done or on the work as a whole, not on one thing in it', []],
+  ['existence', 'acts that make a thing be there or not be there (creation and destruction)', ['change of the world']],
+  ['structure', 'acts that change which things belong together (grouping): joined, grouped, or apart', ['change of the world']],
+  ['creation', 'a new thing is there after it', ['existence']],
+  ['destruction', 'a thing is no longer there after it', ['existence']],
+  ['change of a value', 'a thing has another value of one of its attributes after it', ['change of the world']],
+  ['change of place', 'a thing is somewhere else after it', ['change of the world']],
+  ['joining', 'things are together after it, as one group, in an order, or with a line between them', ['structure']],
+  ['separating', 'a thing is in parts, or apart from another, after it', ['structure']],
+  ['question', 'nothing changes; something about the things is told back', ['no change of things']],
+  ['view', 'only what is picked changes: the things the next acts are about', ['no change of things']],
+  ['history', 'the things come back as they were at an earlier or a later step', ['the work itself']],
+  ['keeping', 'the work goes out of the application or comes back into it (kept, brought back, given to someone)', ['the work itself']],
+];
+// [act, family, why]
+export const MEMBERS = [
+  ['make', 'creation', 'it brings a new thing into being'],
+  ['copy', 'creation', 'it makes another thing, the same as one that is there'],
+  ['remove', 'destruction', 'it takes a thing away so that it is no longer there'],
+  ['change', 'change of a value', 'it gives a thing another value of one of its attributes (or puts another thing in its place)'],
+  ['place', 'change of place', 'it puts a thing somewhere, or moves it to another place'],
+  ['send', 'change of place', 'the thing goes to someone else or out of the application'],
+  ['send', 'keeping', 'the work, or a thing of it, leaves the application'],
+  ['connect', 'joining', 'two things stay together, or a line runs between them'],
+  ['group', 'joining', 'several things become one group, or are put in an order'],
+  ['take apart', 'separating', 'a thing becomes its parts, or one thing is separated from another'],
+  ['ask', 'question', 'it wants to know something about the things that are there and changes nothing'],
+  ['pick', 'view', 'one or some things are picked, to act on them next'],
+  ['deselect', 'view', 'a thing is no longer picked'],
+  ['undo', 'history', 'what was done last is taken back'],
+  ['redo', 'history', 'what undo took back is done again'],
+  ['save', 'keeping', 'the work is kept so that it can be brought back later'],
+  ['load', 'keeping', 'work that was kept is brought back'],
+];
+// The second dimension: the role an act needs, read off the roles (holds of the needed role, or none needed).
+export const TAKES = { kind: 'acts on a kind', thing: 'acts on a thing', none: 'acts that need no filler' };
+export function familyShard() {
+  const fams = FAMILIES.map(([name, about, parents]) => wire(`k.actions.family.${seg(name)}`, 'k.actions.family', [['name', name], ['dimension', 'does'], ['about', text(about)], ...parents.map((p) => ['parent', p])], HAND));
+  fams.push(wire('k.actions.family.acts_by_what_they_need', 'k.actions.family', [['name', 'acts by what they need'], ['dimension', 'takes'], ['about', text('acts grouped by the one role they cannot do without')]], HAND));
+  for (const [k, name] of Object.entries(TAKES)) fams.push(wire(`k.actions.family.${seg(name)}`, 'k.actions.family', [['name', name], ['dimension', 'takes'], ['about', text(k === 'none' ? 'no role is needed: the act has a meaning with nothing named' : `the needed role holds a ${k}`)], ['parent', 'acts by what they need']], HAND));
+  const mems = MEMBERS.map(([act, family, why]) => wire(`k.actions.member.${seg(act)}.${seg(family)}`, 'k.actions.member', [['act', act], ['family', family], ['why', text(why)]], HAND));
+  for (const [name, , , rs] of ACTS) {
+    const needed = rs.filter((r) => r[2]);
+    const k = needed.length ? needed[0][1] : 'none';
+    mems.push(wire(`k.actions.member.${seg(name)}.${seg(TAKES[k])}`, 'k.actions.member', [['act', name], ['family', TAKES[k]], ['why', text(needed.length ? `its needed role ${needed[0][0]} holds a ${k}` : 'none of its roles is needed')]], HAND));
+  }
+  return `${header({
+    id: 'k.actions/shards/families',
+    about: `act families: the ${ACTS.length} acts grouped by what they do (${FAMILIES.length} families in three layers: creation and destruction under existence, joining and separating under structure, change of a value, change of place, question, view, history, keeping) and by the role they need (${Object.keys(TAKES).length} families), each membership with its reason; the up edges of acts for the library's cousins.`,
+    sources: ['hand-core 1 (hand-written in this repository: tools/acts-core.mjs; the "takes" families are read off the roles)'], license: 'CC0-1.0', script: 'tools/acts-core.mjs',
+  })}\n# Families: what they do (dimension does) and what they need (dimension takes), with the families above them.\n${fams.join('\n')}\n\n# Members: an act is in a family, and why.\n${mems.join('\n')}\n`;
+}
+
 const byName = new Map(ACTS.map((a) => [a[0], a]));
 const tsv = (path) => readFileSync(path, 'utf8').split('\n').filter((l) => l.trim()).slice(1).map((l) => l.split('\t'));
 
@@ -166,6 +227,8 @@ export function actShards() {
       about: `the ${ACTS.length} acts (${ACTS.map((a) => a[0]).join(', ')}), and the roles each act takes with the prepositions that usually mark them.`,
       sources: ['hand-core 1 (hand-written in this repository: tools/acts-core.mjs)'], license: 'CC0-1.0', script: 'tools/acts-core.mjs',
     })}\n${acts.join('\n')}\n\n# Roles: what an act can be told, what kind of filler each takes, and the words that mark it.\n${roles.join('\n')}\n`,
+
+    'families.sop': familyShard(),
   };
   for (const [act] of ACTS) {
     const mine = verbs.filter((v) => v.act === act);
@@ -213,7 +276,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const errors = checkVerbs();
   if (errors.length) { for (const e of errors) console.error(e); process.exit(1); }
   if (!existsSync(GLOSSES_TSV)) { console.error('no glosses: run with --glosses'); process.exit(1); }
-  writeShards(join(WORLDS_DIR, 'k.actions', 'shards'), actShards(), 'acts');
+  writeShards(join(WORLDS_DIR, 'k.actions', 'shards'), { 'acts.sop': actShards()['acts.sop'] }, 'acts');
+  writeShards(join(WORLDS_DIR, 'k.actions', 'shards'), { 'families.sop': familyShard() }, 'families');
   writeShards(join(WORLDS_DIR, 'k.actions', 'shards'), Object.fromEntries(Object.entries(actShards()).filter(([n]) => n.startsWith('verbs-'))), 'verbs-');
   console.log(`${ACTS.length} acts, ${readVerbs().length} verbs`);
 }

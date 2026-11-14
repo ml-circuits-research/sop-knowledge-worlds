@@ -789,6 +789,9 @@
   "k.words/shards/ac",
   "k.words/shards/frequency-a"
  ],
+ "act family": [
+  "k.actions/schema.sop"
+ ],
  "acting": [
   "k.words/shards/ac",
   "k.words/shards/frequency-a"
@@ -837,6 +840,18 @@
   "k.actions/schema.sop",
   "k.words/shards/ac",
   "k.words/shards/frequency-a"
+ ],
+ "acts by what they need": [
+  "k.actions/shards/families"
+ ],
+ "acts on a kind": [
+  "k.actions/shards/families"
+ ],
+ "acts on a thing": [
+  "k.actions/shards/families"
+ ],
+ "acts that need no filler": [
+  "k.actions/shards/families"
  ],
  "actual": [
   "k.words/shards/ac",
@@ -4970,6 +4985,7 @@
  "ask": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-ask",
   "k.words/shards/as",
   "k.words/shards/frequency-a"
@@ -18798,6 +18814,7 @@
  ],
  "change": [
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-change",
   "k.objects/shards/noto-animal-marine-02",
   "k.words/shards/ch",
@@ -18805,6 +18822,15 @@
  ],
  "change into": [
   "k.actions/shards/verbs-change"
+ ],
+ "change of a value": [
+  "k.actions/shards/families"
+ ],
+ "change of place": [
+  "k.actions/shards/families"
+ ],
+ "change of the world": [
+  "k.actions/shards/families"
  ],
  "changed": [
   "k.words/shards/ch",
@@ -24006,6 +24032,7 @@
  "connect": [
   "k.actions/shards/actions-make-change",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-connect",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
@@ -24794,6 +24821,7 @@
  ],
  "copy": [
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-copy",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
@@ -26158,6 +26186,7 @@
   "k.kinds/shards/wordnet-1"
  ],
  "creation": [
+  "k.actions/shards/families",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/cr",
@@ -29591,6 +29620,7 @@
  ],
  "deselect": [
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-deselect"
  ],
  "desert": [
@@ -29782,6 +29812,7 @@
   "k.actions/shards/actions-make-change"
  ],
  "destruction": [
+  "k.actions/shards/families",
   "k.words/shards/de",
   "k.words/shards/frequency-d"
  ],
@@ -30345,6 +30376,7 @@
   "k.words/shards/frequency-d"
  ],
  "dimension": [
+  "k.actions/schema.sop",
   "k.kinds/schema.sop",
   "k.words/shards/di",
   "k.words/shards/frequency-d"
@@ -36294,6 +36326,7 @@
   "k.words/shards/frequency-e"
  ],
  "existence": [
+  "k.actions/shards/families",
   "k.words/shards/ex",
   "k.words/shards/frequency-e"
  ],
@@ -37149,6 +37182,7 @@
   "k.words/shards/frequency-f"
  ],
  "family": [
+  "k.actions/schema.sop",
   "k.colours/schema.sop",
   "k.objects/shards/noto-clothing-05",
   "k.procedures/shards/tasks",
@@ -46076,6 +46110,7 @@
  "group": [
   "k.actions/schema.sop",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-group",
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
@@ -49917,6 +49952,7 @@
   "k.words/shards/hi"
  ],
  "history": [
+  "k.actions/shards/families",
   "k.procedures/schema.sop",
   "k.words/shards/frequency-h",
   "k.words/shards/hi",
@@ -55497,6 +55533,7 @@
  ],
  "joining": [
   "k.actions/shards/actions-make-change",
+  "k.actions/shards/families",
   "k.words/shards/frequency-j",
   "k.words/shards/jo"
  ],
@@ -56652,6 +56689,7 @@
   "k.words/shards/ke"
  ],
  "keeping": [
+  "k.actions/shards/families",
   "k.words/shards/frequency-k",
   "k.words/shards/ke"
  ],
@@ -57295,6 +57333,9 @@
   "k.food/schema.sop",
   "k.kinds/schema.sop",
   "k.words/schema.sop"
+ ],
+ "kind of act": [
+  "k.actions/schema.sop"
  ],
  "kind of person": [
   "k.attributes/shards/aspects"
@@ -62801,6 +62842,7 @@
  ],
  "load": [
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-load",
   "k.layouts/shards/anchors-points",
   "k.words/shards/frequency-l",
@@ -64736,6 +64778,7 @@
  "make": [
   "k.actions/shards/actions-make-change",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-make",
   "k.colours/schema.sop",
@@ -73838,6 +73881,9 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/core-plurals"
  ],
+ "no change of things": [
+  "k.actions/shards/families"
+ ],
  "no sorry": [
   "w.lang.en/shards/clauses"
  ],
@@ -78536,6 +78582,7 @@
   "k.actions/shards/actions-make-change"
  ],
  "parent": [
+  "k.actions/schema.sop",
   "k.kinds/schema.sop",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
@@ -81120,6 +81167,7 @@
  "pick": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-pick",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-p",
@@ -82459,6 +82507,7 @@
  "place": [
   "k.actions/shards/actions-hands",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-place",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
@@ -87075,6 +87124,7 @@
  ],
  "question": [
   "k.actions/shards/actions-mind-talk",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-ask",
   "k.words/shards/frequency-q",
   "k.words/shards/qu"
@@ -88880,6 +88930,7 @@
  ],
  "redo": [
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-redo",
   "k.words/shards/frequency-r",
   "k.words/shards/re"
@@ -89491,6 +89542,7 @@
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/actions-hands",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-remove",
   "k.words/shards/frequency-r",
   "k.words/shards/re"
@@ -95236,6 +95288,7 @@
  ],
  "save": [
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-save",
   "k.attributes/shards/same-s",
   "k.geo/shards/africa",
@@ -97014,6 +97067,7 @@
  "send": [
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-send",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/frequency-s",
@@ -97179,7 +97233,8 @@
   "k.actions/shards/actions-make-change"
  ],
  "separating": [
-  "k.actions/shards/actions-make-change"
+  "k.actions/shards/actions-make-change",
+  "k.actions/shards/families"
  ],
  "separation": [
   "k.words/shards/frequency-s",
@@ -106101,6 +106156,7 @@
   "k.words/shards/st"
  ],
  "structure": [
+  "k.actions/shards/families",
   "k.genres/schema.sop",
   "k.kinds/shards/group-hand",
   "k.kinds/shards/group-mulberry",
@@ -108583,6 +108639,7 @@
  "take apart": [
   "k.actions/shards/actions-make-change",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-take_apart"
  ],
  "take apart a drawn thing": [
@@ -110497,6 +110554,9 @@
  ],
  "the whole lot": [
   "k.values/shards/sets"
+ ],
+ "the work itself": [
+  "k.actions/shards/families"
  ],
  "thea": [
   "k.words/shards/frequency-t",
@@ -117080,6 +117140,7 @@
   "k.actions/schema.sop",
   "k.actions/shards/actions-hands",
   "k.actions/shards/acts",
+  "k.actions/shards/families",
   "k.actions/shards/verbs-undo",
   "k.words/shards/frequency-u",
   "k.words/shards/un"
@@ -119024,6 +119085,7 @@
   "k.words/shards/vi"
  ],
  "view": [
+  "k.actions/shards/families",
   "k.attributes/schema.sop",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-household-01",
@@ -122107,6 +122169,7 @@
   "k.values/shards/psys2"
  ],
  "why": [
+  "k.actions/schema.sop",
   "k.body/schema.sop",
   "k.feelings/schema.sop",
   "k.space/schema.sop",

@@ -4198,3 +4198,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Full run, one file at a time (61 files): 2,960 pass, 0 fail but catalog (index rebuilt after, rerun below) and
   k.wearables (SIGKILL, memory; rerun alone below).
 - Rerun alone: catalog 8/8, k.wearables 4/4, k.kinds 6/6.
+
+## 2026-11-14 — third worker: act families in k.actions (reviewer 21:55)
+
+- New types `k.actions.family name= dimension= about= parent=` and `k.actions.member act= family= why=` (exports family,
+  member); shard `k.actions/shards/families` (52 wires, 9,892 bytes), written by `tools/acts-core.mjs`.
+- What it does (`dimension=does`, 15 families in three layers): creation (make, copy) and destruction (remove) under
+  existence; change of a value (change); change of place (place, send); joining (connect, group) and separating (take
+  apart) under structure (the grouping acts); all four under change of the world. Question (ask) and view (pick,
+  deselect) under no change of things; history (undo, redo) and keeping (save, load, send) under the work itself.
+  17 memberships, each with its reason; send is in two families. Keeping is a family the reviewer's list does not
+  name (save and load are neither history nor a change of the things).
+- What it needs (`dimension=takes`, read off the needed roles, not by hand): acts on a kind (make), acts on a thing
+  (10 acts), acts that need no filler (ask, undo, redo, save, deselect): a cousin can swap the act and keep the filler.
+- Tests `tests/k.actions.families.test.mjs` (5): byte-identical shard; every act in a `does` family and one `takes`
+  family, every family and parent exists, each reason given; every family reaches a root in at most 3 layers, no
+  cycle; opposites are siblings or cousins under one parent; the `takes` families follow the roles.
+- Tests one file at a time: k.actions.families 5, k.actions.acts 8, k.actions 4, validate 5, w.lang.en 21,
+  templates 8, k.procedures 15, joins 3, questions 424, shared-modules 5, ask-real 4, catalog 8 (alone after a
+  SIGKILL); 0 fail. Catalog 32 worlds, 1,021 shards.

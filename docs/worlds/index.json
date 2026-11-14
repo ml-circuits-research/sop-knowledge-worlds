@@ -1,5 +1,5 @@
 {
- "version": "5c662ce6fe87",
+ "version": "807953f3fec1",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -9,7 +9,9 @@
    "exports": [
     "k.actions.act",
     "k.actions.action",
+    "k.actions.family",
     "k.actions.marking",
+    "k.actions.member",
     "k.actions.role",
     "k.actions.similar",
     "k.actions.verb"
@@ -745,6 +747,54 @@
       "topic",
       "undo",
       "value"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.actions/shards/families",
+     "path": "k.actions/shards/families.sop",
+     "wires": 52,
+     "bytes": 9892,
+     "keys": [
+      "acts by what they need",
+      "acts on a kind",
+      "acts on a thing",
+      "acts that need no filler",
+      "ask",
+      "change",
+      "change of a value",
+      "change of place",
+      "change of the world",
+      "connect",
+      "copy",
+      "creation",
+      "deselect",
+      "destruction",
+      "existence",
+      "group",
+      "history",
+      "joining",
+      "keeping",
+      "load",
+      "make",
+      "no change of things",
+      "pick",
+      "place",
+      "question",
+      "redo",
+      "remove",
+      "save",
+      "send",
+      "separating",
+      "structure",
+      "take apart",
+      "the work itself",
+      "undo",
+      "view"
      ],
      "sources": [
       "hand-core-1"

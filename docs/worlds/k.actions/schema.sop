@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/acts-core.mjs
 
-@k.actions core.module name=k.actions version=3 imports=k.named exports=act exports=role exports=verb exports=marking exports=action exports=similar core.source="hand-core 1"
+@k.actions core.module name=k.actions version=3 imports=k.named exports=act exports=role exports=verb exports=marking exports=action exports=similar exports=family exports=member core.source="hand-core 1"
 
 # An act: one of the few things a person can ask for, whatever the things are. `about` says it in plain words;
 # `opposite` names the act that does the contrary, where there is one; `role` names the roles the act takes (many).
@@ -89,6 +89,22 @@
 @k.actions.similar.name core.slot of=k.actions.similar key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.similar.action core.slot of=k.actions.similar key=action id=true required=true kind=atom kind=string core.source="hand-core 1"
 
+# Act families (reviewer 21:55: the up edges of acts, for the library's cousins): a family groups acts by what they do
+# (`dimension=does`: creation, destruction, change of a value, change of place, joining, separating, question, view,
+# history, keeping) or by the role they need (`dimension=takes`); `parent` is a family above it (a layered graph:
+# creation and destruction are existence, existence is a change of the world). A member says that an act is in a
+# family, and why. Shard `families` (tools/acts-core.mjs).
+@k.actions.family core.type of=k.actions.family shared=true closed=true core.source="hand-core 1"
+@k.actions.family.name core.slot of=k.actions.family key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.family.dimension core.slot of=k.actions.family key=dimension required=true enum=does enum=takes core.source="hand-core 1"
+@k.actions.family.about core.slot of=k.actions.family key=about required=true kind=string core.source="hand-core 1"
+@k.actions.family.parent core.slot of=k.actions.family key=parent many=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.member core.type of=k.actions.member shared=true closed=true core.source="hand-core 1"
+@k.actions.member.act core.slot of=k.actions.member key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.member.family core.slot of=k.actions.member key=family id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.member.why core.slot of=k.actions.member key=why required=true kind=string core.source="hand-core 1"
+@k.actions.word.family core.word text=family text="act family" text="kind of act" means=k.actions.family core.source="hand-core 1"
+
 # Words for the types and keys of this world.
 @k.actions.word.act core.word text=act text=acts text=command text=commands means=k.actions.act core.source="hand-core 1"
 @k.actions.word.verb core.word text=verb text=verbs text="phrasal verb" text="phrasal verbs" means=k.actions.verb core.source="hand-core 1"
@@ -128,3 +144,8 @@
 @k.actions.word.key.action.undone_by core.word text="undone by" means=k.actions.action.undone_by core.source="hand-core 1"
 @k.actions.word.key.action.example core.word text=example means=k.actions.action.example core.source="hand-core 1"
 @k.actions.word.key.similar.action core.word text=action means=k.actions.similar.action core.source="hand-core 1"
+@k.actions.word.key.family.dimension core.word text=dimension means=k.actions.family.dimension core.source="hand-core 1"
+@k.actions.word.key.family.about core.word text=about means=k.actions.family.about core.source="hand-core 1"
+@k.actions.word.key.family.parent core.word text=parent means=k.actions.family.parent core.source="hand-core 1"
+@k.actions.word.key.member.family core.word text=family means=k.actions.member.family core.source="hand-core 1"
+@k.actions.word.key.member.why core.word text=why means=k.actions.member.why core.source="hand-core 1"
