@@ -206,6 +206,9 @@ export const IRREGULAR = [
   ['pasăre', pick(nounCells(['pasăre', 'pasărea', 'păsări', 'păsării', 'păsări', 'păsările', 'păsări', 'păsărilor']), obl)],
   ['fereastră', pick(nounCells(['fereastră', 'fereastra', 'ferestre', 'ferestrei', 'ferestre', 'ferestrele', 'ferestre', 'ferestrelor']), obl)],
   ['zăpadă', pick(nounCells(['zăpadă', 'zăpada', 'zăpezi', 'zăpezii', 'zăpezi', 'zăpezile', 'zăpezi', 'zăpezilor']), obl)],
+  // real turns (Q69): iarbă, ierbii, ierburi; vițel, viței
+  ['iarbă', pick(nounCells(['iarbă', 'iarba', 'ierbi', 'ierbii', 'ierburi', 'ierburile', 'ierburi', 'ierburilor']), obl)],
+  ['vițel', pick(nounCells(['vițel', 'vițelul', 'vițel', 'vițelului', 'viței', 'vițeii', 'viței', 'vițeilor']), pl)],
   ['zi', nounCells(['zi', 'ziua', 'zile', 'zilei', 'zile', 'zilele', 'zile', 'zilelor'])],
   ['ou', pick(nounCells(['ou', 'oul', 'ou', 'oului', 'ouă', 'ouăle', 'ouă', 'ouălor']), pl)],
   ['om', pick(nounCells(['om', 'omul', 'om', 'omului', 'oameni', 'oamenii', 'oameni', 'oamenilor']), pl)],
@@ -333,7 +336,7 @@ floare f.e.alt f flower|pisică f.ăi f cat|câine m.e m dog|pătrat n.e n squar
 pom m.cons m tree|munte m.e m mountain|lună f.ăi f moon|pește m.e m fish|pasăre f.e.alt f bird|cal m.cons m horse|vacă f.ăi f cow|om m.cons m person
 copil m.cons m child|fată f.ă.e f girl|băiat m.cons m boy|bărbat m.cons m man|femeie f.ie f woman|dragon m.cons m dragon|elefant m.cons m elephant|păianjen m.cons m spider
 țestoasă f.ă f turtle|ușă f.ăi f door|fereastră f.ăi f window|acoperiș n.uri n roof|perete m.e m wall|drum n.uri n road|râu n.uri n river|lac n.uri n lake
-cer n.uri n sky|pământ n.uri n earth|nisip n.uri n sand|apă f.ă f water|zăpadă f.ă f snow|frunză f.ă f leaf|munte m.e m mountain
+cer n.uri n sky|pământ n.uri n ground|nisip n.uri n sand|apă f.ă f water|zăpadă f.ă f snow|frunză f.ă f leaf|munte m.e m mountain
 desen n.e n drawing|grafic n.e n chart|titlu n.u n title|paragraf n.e n paragraph|listă f.ă f list|document n.e n document|pagină f.ăi f page|text n.e n text
 hartă f.ăi.a f map|editor n.e.oa n editor|ecran n.e n screen|filă f.ă f tab|tablă f.ă f board|avatar n.uri n avatar|joc n.uri n game|șah n.uri n chess
 muzică f.ăi f music|cântec n.e n song|voce f.e f voice|limbă f.ăi f language|viteză f.ă f speed|culoare f.e.alt f colour|formă f.ă f shape|mărime f.e f size
@@ -359,6 +362,8 @@ vorbi v.i.esc - speak|juca v.a.u - play|cânta v.a - sing|asculta v.a - listen|d
 vrea v.ea - want|putea v.ea.u - can.verb.1|avea v.ea - have|fi v.i.esc - be|vedea v.ea - see|plăcea v.ea.ă - like|prefera v.a - prefer|dori v.i.esc - want
 amesteca v.a - mix|obține v.e.n - get|număra v.a - count|calcula v.a.ez - calculate|aduna v.a - add.verb.1|înmulți v.i.esc - multiply|împărți v.i.esc - divide|găti v.i.esc - cook
 spăla v.a.ă3 - wash|trece v.e - pass|întâlni v.i.esc - meet|îngroșa v.a.oa - thicken|înota v.a.oa - swim|numi v.i.esc - name|așeza v.a.ez - sit|scăpa v.a.ă - escape|ruga v.a.u - ask.verb.1
+crocodil m.cons m crocodile|minge f.e f ball|capră f.ă f goat|rață f.ă f duck|iarbă f.ă f grass|fetiță f.ă f girl|bunic m.cons m grandfather|vilă f.ă f villa.noun.2
+leagăn n.e n swing.noun.2|masă f.ă.e f table.noun.2|baltă f.ăi.a f pond|măgar m.cons m donkey.noun.2|maimuță f.ă f monkey|vițel m.cons m calf
 trage v.e.s.g - pull|schimb n.uri n exchange|sfârșit n.uri n end.noun.1|nisipiu a.iu - sandy|un det.art - -|radar n.e n radar|repeta v.a - repeat|alege v.e.s.g - choose|lipi v.i.esc - paste|construi v.i.iesc - build|purta v.a.u - wear|trimite v.e.s.t - send|construi v.i.iesc - build
 `.trim().split(/\n|\|/).map((r) => r.trim()).filter(Boolean).map((r) => r.split(' ')).filter((x, i, a) => a.findIndex((y) => y[0] === x[0]) === i);
 // The sense id of a row: `@act.verb` -> k.actions.verb.act.verb; `word` -> k.words.word.<pos>.1; `word.pos.n` as given.

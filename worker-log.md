@@ -5342,3 +5342,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   name in joins and matching; the joins report still compares token for token and says that sopworld does. It
   changes no number today (0 of the 58 open join values would meet once folded). Recorded as **Q70 [LIB]**, not
   patched.
+
+## 2026-11-15 — third worker: Q69 item 1, the nouns of PSys2's real Romanian turns (reviewer 09:00)
+
+- Measured with the library's tools/bench-ro-frames.mjs (0.117.0, read-only clone in /tmp; its repos.pin pointed at
+  this clone's commit): 161 real turns. Before (a1d1d11): read 93, act 74, act and thing 38. After: 93, 74, **55**.
+- tools/lang-ro-core.mjs: 14 nouns with senses (270 lemmas, was 256): crocodil, minge, capră, rață, iarbă, fetiță ->
+  girl, bunic, vilă -> villa.noun.2, leagăn -> swing.noun.2, masă -> table.noun.2 (class f.ă.e: mese), baltă -> pond,
+  măgar -> donkey.noun.2, maimuță, vițel; irregular plurals ierbii/ierburi and viței. pământ -> ground.noun.1 (was the
+  planet; the real turn is "muta casa pe pamint"). pește was there.
+- dictionary-unimorph regenerated from the raw file (copied from psys2 ea2b29e7, git-ignored): 3,458 lemmas (6 now
+  hand rows).
+- Test (tests/w.lang.ro.test.mjs): each real-turn noun has a k.words sense whose English word is a drawing, animal,
+  scene thing or kind of person (vocab.json), and 14 forms of the turns read to their lemma (crocodilii, iarba,
+  ierburi, rata, leagan, mesele, baltile, vitei ...).
+- Not reached by item 1: "muta crocodilii in lac" stays "act" only because the bench stems the gloss "crocodiles" to
+  "crocodil" (a library matter).

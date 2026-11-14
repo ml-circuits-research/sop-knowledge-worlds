@@ -68,6 +68,28 @@ test('w.lang.ro: the dictionary is sorted, split by the first folded letter, wit
   }
 });
 
+// Q69 item 1 (reviewer 09:00): the nouns of PSys2's real Romanian turns (psys2 real-ro.tsv at 23f283a6): each in the hand
+// dictionary with a sense of k.words whose English word names a drawing, an animal, a scene thing or a kind of person,
+// and read in the forms the turns use (crocodilii, iarba, rata, capra, leagan typed without diacritics).
+test('w.lang.ro: the nouns of the real turns (Q69): in the hand dictionary, with senses that reach a drawing, an animal or a person', () => {
+  const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
+  const rows = new Map(dictionaryRows().map((r) => [r[0], r]));
+  const glossOf = new Map();
+  for (const s of worlds.find((w) => w.id === 'k.words').shards) for (const x of s.text.matchAll(/^@(k\.words\.\S+) k\.words\.sense word=("[^"]*"|\S+)/gm)) glossOf.set(x[1], tok(x[2]));
+  const REAL = ['crocodil', 'minge', 'capră', 'rață', 'iarbă', 'fetiță', 'bunic', 'vilă', 'leagăn', 'masă', 'pește', 'pământ', 'baltă', 'măgar', 'maimuță', 'vițel'];
+  for (const l of REAL) {
+    const r = rows.get(l);
+    assert.ok(r && r[3], `${l}: not in the hand dictionary with a sense`);
+    const en = glossOf.get(r[3]);
+    assert.ok(en, `${l}: ${r[3]} is no sense of k.words`);
+    assert.ok((vocab[en.toLowerCase()] ?? []).some((x) => /^k\.(objects|animals|scenes|people)\//.test(x)), `${l} -> ${en}: no drawing, animal, scene thing or person`);
+  }
+  const lemmas = (form) => analyse(m, form, { dictionary: dict }).map((x) => x.lemma);
+  for (const [form, lemma] of [['crocodilii', 'crocodil'], ['iarba', 'iarbă'], ['ierburi', 'iarbă'], ['rata', 'rață'], ['capra', 'capră'], ['leagan', 'leagăn'], ['mingea', 'minge'], ['mesele', 'masă'], ['baltile', 'baltă'], ['magar', 'măgar'], ['vitei', 'vițel'], ['fetita', 'fetiță'], ['bunicul', 'bunic'], ['vila', 'vilă']]) {
+    assert.ok(lemmas(form).includes(lemma), `${form}: ${lemmas(form)} (want ${lemma})`);
+  }
+});
+
 test('w.lang.ro: forms the rules generate (nouns, adjectives, verbs, irregulars)', () => {
   const g = (lemma, cls, feat) => generate(m, lemma, cls, feat);
   const N = (num, kase, def) => ({ num, case: kase, def });
