@@ -6,6 +6,16 @@ a draw order and typical colours, so that a renderer that has never seen an obje
 [`../../gallery.html`](../../gallery.html) shows them all with a search box; it reads `preview/objects.json` (every
 object with the file of its picture, its shard, its source, the licence of its shard, and how many parts are named).
 
+**The file of a picture, one rule for every reader** (the gallery, the contact sheets, the scene previews and any
+host): take the name as a string (the SOP token `"crane bird"` is the name crane bird), replace every run of
+characters other than A-Z, a-z, 0-9 and "-" by one "_", drop "_" at either end, add `.svg`: crane bird ->
+`crane_bird.svg`, woman’s hat -> `woman_s_hat.svg`, piñata -> `pi_ata.svg`. In JavaScript (tools/render-svg.mjs
+`fileOf`, and a test checks this line against every object):
+
+    const fileOf = (name) => name.replace(/[^A-Za-z0-9-]+/g, '_').replace(/^_+|_+$/g, '');
+
+No two objects have the same file (a test). The scenes of k.scenes use the same rule (`preview/<scene>.svg`).
+
 ## Schema (`schema.sop`, module `k.objects`, imports `k.commonsense`, version 3)
 
 - `k.objects.object` (shared, closed): `name` (identity, an English lemma; the same name in `k.commonsense.thing` is the

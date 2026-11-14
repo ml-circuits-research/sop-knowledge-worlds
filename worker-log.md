@@ -3348,3 +3348,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   npm test 2,871 with item 4 and the preview rule together: 2,869 pass, 1 fail (`drawn-hand` stale: I had not rerun
   `tools/drawn-colour.mjs`), 1 skipped; after the rerun the failing file and the five others that read drawings
   pass (42 tests).
+
+## One rule for the file of a preview; README: shards hold facts, modules hold rules (2026-11-14, first worker; block "02:45")
+
+- **The preview file of a multiword name** (the reviewer's sheet missed "crane bird", whose preview is
+  `crane_bird.svg`): every reader already used `fileOf` of tools/render-svg.mjs (gallery through `objects.json`,
+  contact sheets, scene previews, anchor sheets), but a host had no rule to follow and a reader that kept the SOP
+  token (`"crane bird"`, with its quotes) got `_crane_bird_`. Now `fileOf` reads a quoted token as its string and
+  drops "_" at either end; no file name changed (no name begins or ends with another character). The rule is said
+  once, for hosts, in `k.objects/WORLD.md`, with its JavaScript line; a test (`tests/gallery.test.mjs`) evaluates
+  that line against all 2,211 objects, checks `objects.json`, the token form, the gallery's image for crane bird,
+  that no two objects share a file (case ignored), and that every scene's preview is found by the same rule.
+- **README:** a paragraph "Shards hold facts, modules hold rules" (Q38): rules in the module, a separate
+  `k.commonsense.rules` module when they grow, and the derived shards as facts written back, marked.
+- Looked at: nothing drawn changes here. Numbers: catalog 25 worlds, 941 shards, vocab 24,280 words; 0 errors.
+  npm test: the full run of the previous entry included this change; gallery and catalog tests after it: pass.

@@ -13,6 +13,15 @@ in a session (the tables a user made, their seats, the focus, the history and un
 This repository holds world schemas (`w.*`) and knowledge worlds (`k.*`, `w.lang.en`), never live worlds; the
 library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) are mechanisms, not worlds.
 
+**Shards hold facts, modules hold rules** (reviewer's answer to Q38). A rule (`core.rule`, a soft rule, a deny) is
+written in the world's module (`schema.sop`), never in a shard: `k.commonsense`'s rules (an animal that lives in the
+sea is at sea; a drink is a liquid) and `k.time`'s (of two months, the one with the smaller position is before) live
+in their schemas, so a host that loads a module gets its rules once, and a host that loads shards gets facts only.
+When a module's rules grow, they move to a module of their own that imports the fact worlds (`k.commonsense.rules`),
+so a host can take the facts without the rules. What the rules derive is written back as facts, marked: the
+generated shards `shards/derived*.sop` (`tools/derive.mjs`) carry `derived=true` and `core.source="rule <rule id>"`,
+for tools and hosts that read shards without running rules; they are facts, not rules.
+
 Applications (PSys2 first) do not copy this knowledge into their own worlds. They load a schema as a sopworld
 module and load only the instance shards that a conversation needs, when the words of a message point to them.
 

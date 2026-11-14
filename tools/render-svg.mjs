@@ -15,8 +15,11 @@ const one = (wire, key) => tok(wire.attrs[key]?.[0]);
 const num = (wire, key) => Number(one(wire, key));
 const f = (n) => String(Math.round(n * 100) / 100);
 const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;');
-// The file name of an object's picture: its name with every run of other characters as "_".
-export const fileOf = (name) => name.replace(/[^A-Za-z0-9-]+/g, '_');
+// The file name of the picture of a named thing (an object, a scene), the one rule for the previews, the gallery, the
+// contact sheets and the hosts (said in k.objects/WORLD.md, which a test reads): the name as a string (a quoted SOP
+// token such as "crane bird" is read as crane bird), every run of characters other than A-Z, a-z, 0-9 and "-" as one
+// "_", and no "_" at either end: crane bird -> crane_bird, woman’s hat -> woman_s_hat, piñata -> pi_ata.
+export const fileOf = (name) => tok(String(name)).replace(/[^A-Za-z0-9-]+/g, '_').replace(/^_+|_+$/g, '');
 
 // The parts of every object, read once per world.
 const indexes = new WeakMap();

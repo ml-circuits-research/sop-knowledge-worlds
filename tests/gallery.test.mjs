@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
-import { objectsOf } from '../tools/render-svg.mjs';
+import { objectsOf, fileOf } from '../tools/render-svg.mjs';
 
 const preview = join(WORLDS_DIR, 'k.objects', 'preview');
 const list = JSON.parse(readFileSync(join(preview, 'objects.json'), 'utf8'));
@@ -38,6 +38,33 @@ test('the gallery page loads that list, shows lazy images, and its search finds 
   const one = cell(list.find((o) => o.name === 'house'));
   assert.ok(one.includes('src="worlds/k.objects/preview/house.svg"') && one.includes('hand-core 1') && one.includes('CC0-1.0'));
   assert.ok(readFileSync(join(REPO, 'docs/index.html'), 'utf8').includes('href="gallery.html"'));
+});
+
+// Reviewer block "02:45": "crane bird" did not render on a sheet because its preview is crane_bird.svg. One rule finds
+// the picture of a name, said in k.objects/WORLD.md; the line there, fileOf, objects.json and the gallery agree.
+test('one rule gives the picture of every object and scene, from the name or from its quoted token', () => {
+  const doc = readFileSync(join(WORLDS_DIR, 'k.objects', 'WORLD.md'), 'utf8');
+  const line = /^ {4}const fileOf = (.+);$/m.exec(doc)[1];
+  const documented = new Function(`return ${line};`)();
+  const seen = new Map();
+  for (const o of list) {
+    const quoted = /[^A-Za-z0-9_-]/.test(o.name) ? JSON.stringify(o.name) : o.name;
+    assert.equal(o.file, `${fileOf(o.name)}.svg`, o.name);
+    assert.equal(`${documented(o.name)}.svg`, o.file, `${o.name}: the rule of WORLD.md`);
+    assert.equal(`${fileOf(quoted)}.svg`, o.file, `${quoted}: the token gives the same file`);
+    const key = o.file.toLowerCase();
+    assert.ok(!seen.has(key), `${o.name} and ${seen.get(key)} share ${o.file}`);
+    seen.set(key, o.name);
+  }
+  for (const [name, file] of [['crane bird', 'crane_bird.svg'], ['"crane bird"', 'crane_bird.svg'], ['woman’s hat', 'woman_s_hat.svg'], ['piñata', 'pi_ata.svg']]) {
+    assert.equal(`${fileOf(name)}.svg`, file);
+    assert.ok(existsSync(join(preview, file)), file);
+  }
+  const script = /<script>([\s\S]*?)<\/script>/.exec(html)[1];
+  const { cell } = new Function(`${script}\nreturn { cell };`)();
+  assert.ok(cell(list.find((o) => o.name === 'crane bird')).includes('src="worlds/k.objects/preview/crane_bird.svg"'));
+  const scenes = fullWorld('k.scenes').ofType('k.scenes.scene').map((s) => s.attrs.name[0]);
+  for (const s of scenes) assert.ok(existsSync(join(WORLDS_DIR, 'k.scenes', 'preview', `${fileOf(s)}.svg`)), s);
 });
 
 // docs/faces.html and the list it shows (docs/worlds/k.faces/preview/faces.json, written by tools/render-faces.mjs).
