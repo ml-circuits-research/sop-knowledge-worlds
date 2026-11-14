@@ -343,3 +343,34 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   the catalog's usual (11 mammals with a number make the mammal range 2-3 m). Marking `basis` (catalog, source, own)
   and the count on every range lets a host trust a sourced height and doubt a thin catalog range; the licence of the
   numbers follows the range into its own shard (country areas under ODbL).
+
+## Q41, block 07:40 and block 06:55 (second worker): joins, inheritance, and what the engine checks
+
+- **Neutral is a fact of its own, not a missing boolean** (Q41). `independent` unsaid told a host nothing; one key
+  more (`recognition=limited`), set by a rule over the source's own fields and checked against the rule that leaves
+  `independent` unsaid, says what is true and keeps both from drifting.
+- **A dictionary join gives aliases, and its errors have causes** (Peking). The synonyms of a place's WordNet sense
+  are its other names; the dry run found three wrong joins and each was a rule, not a row: "state" took US states,
+  a sense whose other name is another place is that place (Zaire), a sense about a former state is not the place.
+- **A vocabulary needs the kind of each word** (vocab-kinds.json): "back" is a river; a reader that cannot resolve
+  rivers needs to know that before it fetches a shard. And the values that name things of other worlds (the typical
+  things of a shape) are vocabulary too: "stop sign" reached no shape until they were.
+- **Every tool that reads schema text reimplements inheritance, and each forgets it once** (slot groups). Dropping
+  three redeclared `name` slots and sharing `named` broke four readers: derive, the plan reader (62 roles merged into
+  one fact), ask-real and a test's `slotsOf` (first `extends` only). A reader of types should ask the engine
+  (`world.schema(t)`), not the text.
+- **A checked join makes load order part of the contract** (Q48, Q49). `drawing=` declared as a join held when the
+  objects came first, but the module that owns the objects imports the worlds that point at them, and a lazy host
+  loads by message. 0.60 defers the check until a target exists, which still refuses a reference told after some
+  targets and before its own. Declare the join, and keep a test over all shards as the check that does not depend on
+  order.
+- **Priority is data only where parses really tie** (06:55 item 1). Parsing every construction's own examples found
+  three ties out of 64 constructions; adding a priority everywhere would have been guessing.
+- **A category can be a join** (`from_type`, `from_key`): the verbs of an imperative are the verbs of k.actions; but
+  joined blindly to k.attributes, "the legs of the crocodile" became an attribute (legs: how many). A join by value
+  inherits every sense the other world gives the value.
+- **Markers of "nobody named this" are worth a value** (`named=no`): "has `named`" had meant "has a name" in a
+  method of k.procedures; the explicit value made that reading wrong and visible at once.
+- **A shared machine changes what a test run proves.** Under a memory limit shared with other workers, files were
+  killed (SIGKILL) and full runs were overtaken by pushes; running files one at a time and rerunning killed files
+  alone kept the evidence honest, and the log says which numbers came from which run.

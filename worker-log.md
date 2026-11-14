@@ -4086,3 +4086,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   derived 4 pass, k.attributes 11 pass, catalog 8 pass (second try). No assertion failed.
 - Rebased on the first worker's k.attributes ranges and w.lang.en templates (4448b9e): catalog 32 worlds, 977 shards,
   vocab 24,837 words. npm test, one file at a time: 2,970 tests, 2,964 pass, 0 fail.
+
+## Lessons (2026-11-14, second worker)
+
+- docs/lessons.md: a section for Q41, block 07:40 and block 06:55 (nine lessons). Only docs/lessons.md and this log
+  change; no test reads them, and the full run (2,970 tests, 2,964 pass, 0 fail) was on the tree just before.
