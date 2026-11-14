@@ -88,3 +88,9 @@ test('block 07:40 item 3: vocab-kinds.json says what each word names, with the s
   assert.deepEqual(kinds.capital['k.geo.country.capital'], ['k.geo/schema.sop']);
   assert.ok(kinds['seating plan']['w.seating']);
 });
+
+test('block 07:40 item 4: a typical thing of a shape or a colour leads to the fact ("what shape is a stop sign")', () => {
+  const kinds = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab-kinds.json'), 'utf8'));
+  assert.deepEqual(kinds['stop sign']['k.shapes.shape.thing'], ['k.shapes/shards/shapes']);
+  assert.ok(kinds.banana['k.colours.colour.thing']);
+});

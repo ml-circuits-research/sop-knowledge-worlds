@@ -3577,3 +3577,38 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - On 1d4f120 (k.procedures rebased on the second worker's vocabulary kinds and aliases): npm test 2,899: 2,896 pass,
   3 skipped, 0 fail. The reviewer's block "11:05" says Q44 is forwarded to the library and to go on in this format
   (a script converts the facts if the library amends it). No file but this log changes here.
+## Block 07:40 item 4 (2026-11-14, second worker): relatives, friend, shapes by their things, drop, reset, switches
+
+- **Relatives as kinds of person:** k.people version 3: kinds `person` (above all) and `relative` (is a person);
+  baby, child, man, woman `is_a=person`; `age` and `height_about` no longer required (person and relative have no
+  one age). `k.people.role` now extends `k.kinds.kind` (its own `name` slot dropped: inherited, so no new
+  ambiguous-key warning): family roles `is_a=relative`, every other role `is_a=person` but the fairy; new group
+  `social`: friend, neighbour. The rules of k.kinds give the chain (derived shard 4 -> 78 facts): sister kind of
+  relative and person; friend, doctor, king a person. `tools/derive.mjs` now takes the identity keys of the type a
+  type extends when it declares none (k.people.role); it refused the role otherwise.
+- **`k.shapes.shape.thing` reachable:** build-catalog adds the values of the key `thing` of a knowledge world (the
+  typical things of a shape or a colour, the thing placed) to the vocabulary, with the key as kind: "stop sign" ->
+  `k.shapes.shape.thing` in `k.shapes/shards/shapes`, banana -> `k.colours.colour.thing`.
+- **k.actions:** `drop` is a verb of remove (WordNet senses 16 "get rid of" and 19 "leave out"), `reset` a verb of
+  change with `value=default` (senses 1 "set anew", 2 "set to zero"); glosses table regenerated from the raw files.
+  The act a sense means is my reading (`named=model`, as the other verbs); audit: both rows read against all 23
+  senses of drop and 3 of reset (listed with tools/import/wordnet.mjs).
+- **k.attributes version 3:** `k.attributes.switch` (9: visible, stacked, highlighted, selected, locked, pinned,
+  grouped, switched_on, bold; `on`, `off` verbs, `default`), and `default_type` / `default_key` on colour
+  (k.objects.part colour) and size (k.scenes.thing size): where "reset" goes back to. Hand-core.
+- Tests: k.people (ten kinds; every role but the fairy a person, family roles relatives); shared-modules (boy:
+  child, person; grandfather: man, person, relative); k.attributes (switch verbs are verbs of k.actions or k.words,
+  by base or head, but bold, embolden, unbold; defaults name a real type and key); k.actions.acts (drop, reset);
+  catalog (stop sign, banana).
+- Not done: verbs of text editing (bold, embolden, unbold) in k.actions or k.words; a switch per world schema (the
+  w.* schemas may take these by name later).
+- Generated again: k.words shard `ne` (the importer takes the names of the cores: neighbour's senses now carry their
+  chains), COVERAGE.md (common things reached by k.colours 8 -> 71 and k.shapes 8 -> 66: their typical things now
+  find them), JOINS.md, catalog. Numbers: k.people 5 -> 6 shards (kinds 16 -> 20 wires, roles-social 4, derived 4 ->
+  78 facts); k.attributes attributes shard +9 switches; k.actions verbs 314 -> 316; catalog 25 worlds, 948 shards,
+  vocab 24,427 -> 24,447 words. npm test 2,888: 2,881 pass, 7 skipped, 0 fail (a first run failed on the two stale
+  generated files above).
+- Rebased on k.procedures (first worker, 1d4f120): its reference reader `tools/lib/plan.mjs` merged facts by the
+  identity keys a type declares itself, so the 62 roles (whose `name` is now inherited from k.kinds.kind) became one
+  fact and every role wore everything; it now takes the identity keys of the type a type extends, as derive.mjs does
+  (4 k.procedures tests failed, 15 pass now). Catalog 26 worlds, 950 shards, vocab 24,490 words. npm test 2,903: 2,896 pass, 7 skipped, 0 fail.

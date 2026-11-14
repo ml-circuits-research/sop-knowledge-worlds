@@ -28,6 +28,17 @@ are found in the worlds, and the usual values of common things that no other wor
   host that needs a colour takes `k.attributes.thing.colour`, then `drawn_colour`. Five drawings made of lines only
   (water, conical flask, tripod, backstop, goal) have none.
 
+## Switches and defaults (block 07:40 item 4)
+
+- `k.attributes.switch`: 9 attributes of the things a user makes that are true or false, with the verbs that turn
+  them on (`on`) and off (`off`) and their value before any act (`default`): visible (show, unhide, reveal / hide;
+  true), stacked (stack / unstack), highlighted, selected (select / deselect, unselect), locked, pinned, grouped
+  (group / ungroup), switched on (switch on, turn on / switch off, turn off), bold (bold, embolden / unbold); all
+  false by default but visible. One home per pair: hidden is visible read backwards.
+- `default_type` and `default_key` on an attribute say where the value it goes back to on "reset" is found: the
+  colour of each part in the drawing (`k.objects.part colour`), the usual size of a drawable thing
+  (`k.scenes.thing size`). The verb `reset` of k.actions (act change) says `value=default`.
+
 ## Aspects
 
 - `k.attributes.aspect`: visual, spatial, relational, numeric, textual, geographic, temporal, social, with the

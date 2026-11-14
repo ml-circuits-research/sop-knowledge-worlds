@@ -47,6 +47,22 @@ export const ATTRIBUTES = [
   ['age', 'person', 'the age of the people who usually use it', 'social'],
   ['user', 'person', 'the role of the people who usually use it', 'social'],
 ];
+// Block 07:40 item 4: where the value an attribute goes back to when it is reset ("reset the colours") is found:
+// [attribute, type, key]: the colours of each part of the drawing, the usual size of a drawable thing.
+export const DEFAULTS = { colour: ['k.objects.part', 'colour'], size: ['k.scenes.thing', 'size'] };
+// Block 07:40 item 4: a switch attribute of a thing a user makes (true or false): the verbs that make it true (`on`)
+// and false (`off`), and its value before any act (`default`). [name, on, off, default, about].
+export const SWITCHES = [
+  ['visible', 'show, unhide, reveal', 'hide', true, 'whether a thing can be seen'],
+  ['stacked', 'stack', 'unstack', false, 'whether things lie one on top of another'],
+  ['highlighted', 'highlight', 'unhighlight', false, 'whether a thing is marked so that it stands out'],
+  ['selected', 'select', 'deselect, unselect', false, 'whether a thing is chosen for the next act'],
+  ['locked', 'lock', 'unlock', false, 'whether a thing may not be changed'],
+  ['pinned', 'pin', 'unpin', false, 'whether a thing is fixed in its place'],
+  ['grouped', 'group', 'ungroup', false, 'whether things are joined into one group'],
+  ['switched_on', 'switch on, turn on', 'switch off, turn off', false, 'whether a lamp or a machine works'],
+  ['bold', 'bold, embolden', 'unbold', false, 'whether a text is written in heavy letters'],
+];
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
   ['colour', 'k.attributes', 'k.attributes.thing', 'colour', 'common things'], ['colour', 'k.food', 'k.food.food', 'colour', 'foods'], ['colour', 'k.objects', 'k.objects.part', 'colour', 'each part of a drawing'], ['colour', 'k.attributes', 'k.attributes.drawn', 'drawn_colour', 'drawable things: the main colours of the drawing'],
@@ -225,11 +241,12 @@ const ABOUT = { living: 'animals and creatures', nature: 'plants, land, sky, mat
 export function attributeShards() {
   const things = readThings().sort((a, b) => byText(a.name, b.name));
   const files = {};
-  const attrs = ATTRIBUTES.map(([name, holds, about, aspect]) => wire(`k.attributes.attribute.${seg(name)}`, 'k.attributes.attribute', [['name', name], ['holds', holds], ['aspect', aspect], ['about', text(about)]], SRC));
+  const attrs = ATTRIBUTES.map(([name, holds, about, aspect]) => wire(`k.attributes.attribute.${seg(name)}`, 'k.attributes.attribute', [['name', name], ['holds', holds], ['aspect', aspect], ['about', text(about)], ['default_type', DEFAULTS[name]?.[0]], ['default_key', DEFAULTS[name]?.[1]]], SRC));
+  const switches = SWITCHES.map(([name, on, off, dflt, about]) => wire(`k.attributes.switch.${seg(name)}`, 'k.attributes.switch', [['name', name], ...list(on).map((v) => ['on', v]), ...list(off).map((v) => ['off', v]), ['default', dflt ? 'true' : 'false'], ['about', text(about)]], SRC));
   const found = FOUND.map(([attribute, world, type, key, of]) => wire(`k.attributes.found.${seg(attribute)}.${seg(type)}.${seg(key)}`, 'k.attributes.found', [['attribute', attribute], ['world', world], ['type', type], ['key', key], ['covers', text(of)]], SRC));
   const kinds = KINDS.map(([name, attributes]) => wire(`k.attributes.kind.${seg(name)}`, 'k.attributes.kind', [['name', name], ...list(attributes).map((a) => ['attribute', a])], SRC));
   files['attributes.sop'] = `${header({ id: 'k.attributes/shards/attributes', about: `${ATTRIBUTES.length} attributes of things (${ATTRIBUTES.map((a) => a[0]).join(', ')}), in which world, type and key the values of each are found, and which attributes ${KINDS.length} kinds of things usually have.`,
-    sources: ['hand-core 1 (hand-written in this repository: tools/attributes-core.mjs)'], license: 'CC0-1.0', script: 'tools/attributes-core.mjs' })}\n${attrs.join('\n')}\n\n# Where the values are found.\n${found.join('\n')}\n\n# Kinds of things and the attributes they usually have.\n${kinds.join('\n')}\n`;
+    sources: ['hand-core 1 (hand-written in this repository: tools/attributes-core.mjs)'], license: 'CC0-1.0', script: 'tools/attributes-core.mjs' })}\n${attrs.join('\n')}\n\n# Where the values are found.\n${found.join('\n')}\n\n# Kinds of things and the attributes they usually have.\n${kinds.join('\n')}\n\n# Switch attributes of the things a user makes: the verbs that turn them on and off, and their default.\n${switches.join('\n')}\n`;
   {
     const aspects = ASPECTS.map(([name, about, views]) => wire(`k.attributes.aspect.${seg(name)}`, 'k.attributes.aspect', [['name', name], ['about', text(about)], ...list(views).map((v) => ['shown_in', v])], SRC));
     const families = FAMILIES.map(([name, about, world, type, by]) => wire(`k.attributes.family.${seg(name)}`, 'k.attributes.family', [['name', name], ['about', text(about)], ['world', world], ['type', type], ['by', by]], SRC));

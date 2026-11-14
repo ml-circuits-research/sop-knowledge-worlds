@@ -33,8 +33,15 @@ Kinds of person, and 60 roles and jobs. Hand-written (`hand-core 1`, CC0-1.0).
 
 ## Shards
 
-`kinds` (8 kinds, 16 wires), `roles-jobs` (36 roles, 72 wires), `roles-family` (8, 16), `roles-story` (16, 32); the
-role shards are written by `tools/people-core.mjs`.
+`kinds` (10 kinds, 20 wires), `roles-jobs` (36 roles, 72 wires), `roles-family` (8, 16), `roles-story` (16, 32),
+`roles-social` (2, 4); the role shards are written by `tools/people-core.mjs`.
+
+**Kinds of person** (block 07:40 item 4): `person` is above every kind (a man, a woman, a child, a baby is a person)
+and `relative` is a person. A role is a kind of k.kinds too (`extends=k.kinds.kind`): a member of a family `is_a`
+relative, every other role a person (a fairy is a figure of stories, not a person), and the rules of k.kinds give the
+whole chain as `kind_of` (the shard `derived`): a sister is a relative and a person, a friend and a neighbour (the
+new group `social`) and a doctor are persons. A role and a kind of the same name (grandmother) are one thing to
+k.kinds: the grandmother is a woman, a relative and a person.
 
 ## Joins
 

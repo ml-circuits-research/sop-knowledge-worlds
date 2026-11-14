@@ -204,3 +204,31 @@ test('Q37: number and usage facts of a name with several senses say which (sense
   assert.equal(one(num('kiwi'), 'sense'), 'food');
   assert.equal(one(world.ofType('k.attributes.usage').find((u) => one(u, 'name') === 'star'), 'sense'), 'body in space');
 });
+
+// Block 07:40 item 4: switch attributes (show / hide, stack / unstack) and where a reset goes back to.
+test('block 07:40 item 4: every switch has verbs on and off that are verbs of English, its default, and no verb twice; reset defaults are found', () => {
+  const switches = world.ofType('k.attributes.switch');
+  assert.ok(switches.length >= 8);
+  const verbs = new Set([...fullWorld('k.actions', worlds).ofType('k.actions.verb').map((v) => one(v, 'text')),
+    ...worlds.find((w) => w.id === 'k.words').shards.flatMap((s) => [...s.text.matchAll(/ k\.words\.sense word=("[^"]*"|\S+) pos=verb /g)].map((m) => tok(m[1])))]);
+  const seen = new Set();
+  for (const s of switches) {
+    assert.ok(['true', 'false'].includes(one(s, 'default')), s.id);
+    for (const v of [...s.attrs.on, ...s.attrs.off].map(tok)) {
+      assert.ok(!seen.has(v), `${v} twice`);
+      seen.add(v);
+    }
+  }
+  // a verb is known when k.actions or k.words has it, or its base after un- (unstack), or the head of a phrasal verb (switch on)
+  const known = (v) => verbs.has(v) || (/^un./.test(v) && verbs.has(v.slice(2))) || (/\s/.test(v) && verbs.has(v.split(' ')[0]));
+  const unknown = [...seen].filter((v) => !known(v));
+  assert.deepEqual(unknown.sort(), ['bold', 'embolden', 'unbold'], 'verbs of text editing that neither world has yet');
+  const sw = (name) => switches.find((s) => one(s, 'name') === name);
+  assert.deepEqual([sw('visible').attrs.off.map(tok), one(sw('visible'), 'default')], [['hide'], 'true']);
+  assert.deepEqual([sw('stacked').attrs.on.map(tok), sw('stacked').attrs.off.map(tok), one(sw('stacked'), 'default')], [['stack'], ['unstack'], 'false']);
+  for (const a of world.ofType('k.attributes.attribute').filter((x) => x.attrs.default_type)) {
+    const type = one(a, 'default_type');
+    const w = worlds.find((x) => type.startsWith(`${x.id}.`));
+    assert.ok(schemaWorld(worlds, w.id).world.schema(type)?.keys[one(a, 'default_key')], `${one(a, 'name')}: ${type} ${one(a, 'default_key')}`);
+  }
+});

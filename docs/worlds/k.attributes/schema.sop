@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=2 exports=attribute exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=3 exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -14,6 +14,21 @@
 @k.attributes.attribute.holds core.slot of=k.attributes.attribute key=holds required=true enum=colour enum=material enum=size enum=place enum=kind enum=thing enum=number enum=verb enum=use enum=class enum=time enum=person core.source="hand-core 1"
 @k.attributes.attribute.aspect core.slot of=k.attributes.attribute key=aspect required=true kind=atom core.source="hand-core 1"
 @k.attributes.attribute.about core.slot of=k.attributes.attribute key=about required=true kind=string core.source="hand-core 1"
+# Block 07:40 item 4: `default_type` and `default_key` say where the value an attribute goes back to when it is reset
+# is found ("reset the colours": the colour of each part in the thing's drawing, k.objects.part colour).
+@k.attributes.attribute.default_type core.slot of=k.attributes.attribute key=default_type kind=atom core.source="hand-core 1"
+@k.attributes.attribute.default_key core.slot of=k.attributes.attribute key=default_key kind=atom core.source="hand-core 1"
+
+# A switch attribute of a thing a user makes: true or false. `on` names the verbs that make it true (show, stack),
+# `off` those that make it false (hide, unstack), `default` its value before any act (a thing is visible, not
+# stacked). One home per pair: hidden is visible read backwards, so there is no attribute hidden.
+@k.attributes.switch core.type of=k.attributes.switch shared=true closed=true complete=true core.source="hand-core 1"
+@k.attributes.switch.name core.slot of=k.attributes.switch key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.switch.on core.slot of=k.attributes.switch key=on many=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.switch.off core.slot of=k.attributes.switch key=off many=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.switch.default core.slot of=k.attributes.switch key=default required=true kind=boolean core.source="hand-core 1"
+@k.attributes.switch.about core.slot of=k.attributes.switch key=about required=true kind=string core.source="hand-core 1"
+@k.attributes.word.switch core.word text=switch text=toggle text="on or off" means=k.attributes.switch core.source="hand-core 1"
 
 # Where the values of an attribute are found: the facts of `type` (in the world `world`) carry them under `key`,
 # named by the thing. `covers` says for which things. An attribute is found in several places (the colour of a
@@ -156,6 +171,12 @@
 @k.attributes.word.key.attribute.holds core.word text=holds means=k.attributes.attribute.holds core.source="hand-core 1"
 @k.attributes.word.key.attribute.aspect core.word text=aspect means=k.attributes.attribute.aspect core.source="hand-core 1"
 @k.attributes.word.key.attribute.about core.word text=about means=k.attributes.attribute.about core.source="hand-core 1"
+@k.attributes.word.key.attribute.default_type core.word text="default type" means=k.attributes.attribute.default_type core.source="hand-core 1"
+@k.attributes.word.key.attribute.default_key core.word text="default key" means=k.attributes.attribute.default_key core.source="hand-core 1"
+@k.attributes.word.key.switch.on core.word text=on means=k.attributes.switch.on core.source="hand-core 1"
+@k.attributes.word.key.switch.off core.word text=off means=k.attributes.switch.off core.source="hand-core 1"
+@k.attributes.word.key.switch.default core.word text=default means=k.attributes.switch.default core.source="hand-core 1"
+@k.attributes.word.key.switch.about core.word text=about means=k.attributes.switch.about core.source="hand-core 1"
 @k.attributes.word.key.found.world core.word text=world means=k.attributes.found.world core.source="hand-core 1"
 @k.attributes.word.key.found.type core.word text=type means=k.attributes.found.type core.source="hand-core 1"
 @k.attributes.word.key.found.key core.word text=key means=k.attributes.found.key core.source="hand-core 1"

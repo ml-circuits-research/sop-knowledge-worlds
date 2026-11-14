@@ -1,5 +1,5 @@
 {
- "version": "ca488e4676aa",
+ "version": "43d943933623",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -788,8 +788,8 @@
     {
      "id": "k.actions/shards/verbs-change",
      "path": "k.actions/shards/verbs-change.sop",
-     "wires": 135,
-     "bytes": 22303,
+     "wires": 137,
+     "bytes": 22589,
      "keys": [
       "adjust",
       "alter",
@@ -837,6 +837,7 @@
       "recolour",
       "rename",
       "replace",
+      "reset",
       "resize",
       "reverse",
       "rotate",
@@ -1148,8 +1149,8 @@
     {
      "id": "k.actions/shards/verbs-remove",
      "path": "k.actions/shards/verbs-remove.sop",
-     "wires": 24,
-     "bytes": 4940,
+     "wires": 25,
+     "bytes": 5092,
      "keys": [
       "cancel",
       "clear",
@@ -1159,6 +1160,7 @@
       "destroy",
       "discard",
       "do away with",
+      "drop",
       "eliminate",
       "erase",
       "from",
@@ -1812,7 +1814,7 @@
   },
   {
    "id": "k.attributes",
-   "version": "2",
+   "version": "3",
    "schema": "k.attributes/schema.sop",
    "exports": [
     "k.attributes.aspect",
@@ -1824,6 +1826,7 @@
     "k.attributes.number",
     "k.attributes.same",
     "k.attributes.shows",
+    "k.attributes.switch",
     "k.attributes.thing",
     "k.attributes.usage"
    ],
@@ -2006,8 +2009,8 @@
     {
      "id": "k.attributes/shards/attributes",
      "path": "k.attributes/shards/attributes.sop",
-     "wires": 116,
-     "bytes": 21674,
+     "wires": 125,
+     "bytes": 23490,
      "keys": [
       "a",
       "age",
@@ -2016,6 +2019,7 @@
       "area",
       "area_about",
       "at",
+      "bold",
       "building",
       "can",
       "cannot",
@@ -2035,10 +2039,12 @@
       "elevation",
       "food",
       "furniture",
+      "grouped",
       "habitat",
       "has",
       "height",
       "height_about",
+      "highlighted",
       "instrument",
       "jewellery",
       "k.animals.animal",
@@ -2072,6 +2078,7 @@
       "length",
       "length_about",
       "lives",
+      "locked",
       "machine",
       "made_of",
       "material",
@@ -2080,11 +2087,13 @@
       "part",
       "parts",
       "person",
+      "pinned",
       "place",
       "plant",
       "price",
       "price_class",
       "season",
+      "selected",
       "sides",
       "size",
       "size_about",
@@ -2093,6 +2102,8 @@
       "speed",
       "speed_about",
       "speed_class",
+      "stacked",
+      "switched_on",
       "tableware",
       "temperature",
       "temperature_about",
@@ -2103,6 +2114,7 @@
       "used_for",
       "user",
       "vehicle",
+      "visible",
       "weapon",
       "weather",
       "weight",
@@ -6615,8 +6627,8 @@
     {
      "id": "k.attributes/shards/same-f",
      "path": "k.attributes/shards/same-f.sop",
-     "wires": 161,
-     "bytes": 32904,
+     "wires": 162,
+     "bytes": 33055,
      "keys": [
       "animal",
       "body part",
@@ -6760,6 +6772,7 @@
       "fried egg",
       "fried rice",
       "fried shrimp",
+      "friend",
       "frock",
       "frog",
       "fromage frais",
@@ -7770,8 +7783,8 @@
     {
      "id": "k.attributes/shards/same-n",
      "path": "k.attributes/shards/same-n.sop",
-     "wires": 57,
-     "bytes": 11312,
+     "wires": 58,
+     "bytes": 11469,
      "keys": [
       "animal",
       "body in space",
@@ -7798,6 +7811,7 @@
       "necktie",
       "needle",
       "negro",
+      "neighbour",
       "nelson",
       "neptune",
       "nerve",
@@ -7934,7 +7948,7 @@
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
      "wires": 308,
-     "bytes": 62575,
+     "bytes": 62594,
      "keys": [
       "animal",
       "body in space",
@@ -8287,14 +8301,15 @@
     {
      "id": "k.attributes/shards/same-r",
      "path": "k.attributes/shards/same-r.sop",
-     "wires": 135,
-     "bytes": 28271,
+     "wires": 136,
+     "bytes": 28426,
      "keys": [
       "animal",
       "body part",
       "clothing",
       "colour",
       "food",
+      "person",
       "place",
       "plant",
       "rabbit",
@@ -8345,6 +8360,7 @@
       "refuse lorry",
       "rein",
       "reindeer",
+      "relative",
       "reminder ribbon",
       "remote control",
       "republican",
@@ -32460,7 +32476,7 @@
   },
   {
    "id": "k.people",
-   "version": "2",
+   "version": "3",
    "schema": "k.people/schema.sop",
    "exports": [
     "k.people.kind",
@@ -32473,16 +32489,81 @@
     {
      "id": "k.people/shards/derived",
      "path": "k.people/shards/derived.sop",
-     "wires": 4,
-     "bytes": 945,
+     "wires": 78,
+     "bytes": 11037,
      "keys": [
+      "astronaut",
+      "aunt",
+      "baby",
+      "baker",
       "boy",
+      "brother",
+      "builder",
+      "bus driver",
+      "carpenter",
+      "child",
+      "cleaner",
+      "clown",
+      "cook",
+      "cowboy",
+      "dancer",
+      "dentist",
+      "detective",
+      "doctor",
+      "explorer",
+      "farmer",
+      "father",
+      "father christmas",
+      "firefighter",
+      "fisherman",
+      "footballer",
+      "friend",
+      "gardener",
       "girl",
       "grandfather",
-      "grandmother"
+      "grandmother",
+      "hairdresser",
+      "judge",
+      "king",
+      "knight",
+      "librarian",
+      "magician",
+      "man",
+      "mechanic",
+      "mother",
+      "musician",
+      "neighbour",
+      "nurse",
+      "painter",
+      "photographer",
+      "pilot",
+      "pirate",
+      "plumber",
+      "police officer",
+      "postman",
+      "prince",
+      "princess",
+      "queen",
+      "relative",
+      "sailor",
+      "scientist",
+      "shopkeeper",
+      "singer",
+      "sister",
+      "soldier",
+      "superhero",
+      "swimmer",
+      "teacher",
+      "uncle",
+      "vet",
+      "waiter",
+      "witch",
+      "wizard",
+      "woman"
      ],
      "sources": [
-      "rule-k.kinds.up.direct"
+      "rule-k.kinds.up.direct",
+      "rule-k.kinds.up.step"
      ],
      "license": "CC0-1.0",
      "warnings": []
@@ -32490,8 +32571,8 @@
     {
      "id": "k.people/shards/kinds",
      "path": "k.people/shards/kinds.sop",
-     "wires": 16,
-     "bytes": 2758,
+     "wires": 20,
+     "bytes": 3361,
      "keys": [
       "baby",
       "boy",
@@ -32500,6 +32581,8 @@
       "grandfather",
       "grandmother",
       "man",
+      "person",
+      "relative",
       "woman"
      ],
      "sources": [
@@ -32512,7 +32595,7 @@
      "id": "k.people/shards/roles-family",
      "path": "k.people/shards/roles-family.sop",
      "wires": 16,
-     "bytes": 2855,
+     "bytes": 2967,
      "keys": [
       "aunt",
       "brother",
@@ -32533,7 +32616,7 @@
      "id": "k.people/shards/roles-jobs",
      "path": "k.people/shards/roles-jobs.sop",
      "wires": 72,
-     "bytes": 15023,
+     "bytes": 15455,
      "keys": [
       "astronaut",
       "baker",
@@ -32579,10 +32662,25 @@
      "warnings": []
     },
     {
+     "id": "k.people/shards/roles-social",
+     "path": "k.people/shards/roles-social.sop",
+     "wires": 4,
+     "bytes": 992,
+     "keys": [
+      "friend",
+      "neighbour"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.people/shards/roles-story",
      "path": "k.people/shards/roles-story.sop",
      "wires": 32,
-     "bytes": 6628,
+     "bytes": 6808,
      "keys": [
       "clown",
       "cowboy",
@@ -32610,7 +32708,8 @@
    ],
    "sources": [
     "hand-core-1",
-    "rule-k.kinds.up.direct"
+    "rule-k.kinds.up.direct",
+    "rule-k.kinds.up.step"
    ],
    "licenses": [
     "CC0-1.0"
@@ -47836,7 +47935,7 @@
      "id": "k.words/shards/ne",
      "path": "k.words/shards/ne.sop",
      "wires": 178,
-     "bytes": 39596,
+     "bytes": 39834,
      "keys": [
       "adjective",
       "adverb",

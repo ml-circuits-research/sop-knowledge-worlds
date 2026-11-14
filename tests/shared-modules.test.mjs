@@ -49,8 +49,9 @@ test('Q34 item 6 and Q33: one kind-of relation, followed upwards by one rule; a 
   assert.deepEqual(kindsOf(shapes, 'square'), ['polygon', 'quadrilateral', 'rectangle', 'rhombus']);
   assert.ok(kindsOf(shapes, 'triangle').includes('polygon'));
   const people = fullWorld('k.people', worlds);
-  assert.deepEqual(kindsOf(people, 'boy'), ['child']);
-  assert.deepEqual(kindsOf(people, 'grandfather'), ['man']);
+  assert.deepEqual(kindsOf(people, 'boy'), ['child', 'person']);
+  // the kind grandfather is a man; the role grandfather a relative (block 07:40 item 4): one name, kinds from both
+  assert.deepEqual(kindsOf(people, 'grandfather'), ['man', 'person', 'relative']);
   const common = fullWorld('k.commonsense', worlds);
   assert.ok(kindsOf(common, 'milk').includes('liquid'), 'a drink of k.food is a liquid (the rule of k.commonsense), so a kind of liquid (the rule of k.kinds)');
 });

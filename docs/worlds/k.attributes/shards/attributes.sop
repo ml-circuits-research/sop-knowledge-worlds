@@ -3,9 +3,9 @@
 # license: CC0-1.0
 # script: tools/attributes-core.mjs
 
-@k.attributes.attribute.colour k.attributes.attribute name=colour holds=colour aspect=visual about="the colour a thing usually has" core.source="hand-core 1"
+@k.attributes.attribute.colour k.attributes.attribute name=colour holds=colour aspect=visual about="the colour a thing usually has" default_type=k.objects.part default_key=colour core.source="hand-core 1"
 @k.attributes.attribute.material k.attributes.attribute name=material holds=material aspect=visual about="what a thing is usually made of" core.source="hand-core 1"
-@k.attributes.attribute.size k.attributes.attribute name=size holds=size aspect=spatial about="how big a thing is next to other things" core.source="hand-core 1"
+@k.attributes.attribute.size k.attributes.attribute name=size holds=size aspect=spatial about="how big a thing is next to other things" default_type=k.scenes.thing default_key=size core.source="hand-core 1"
 @k.attributes.attribute.place k.attributes.attribute name=place holds=place aspect=spatial about="where a thing usually is" core.source="hand-core 1"
 @k.attributes.attribute.kind k.attributes.attribute name=kind holds=kind aspect=relational about="what kind of thing it is" core.source="hand-core 1"
 @k.attributes.attribute.parts k.attributes.attribute name=parts holds=thing aspect=relational about="the parts a thing usually has" core.source="hand-core 1"
@@ -123,3 +123,14 @@
 @k.attributes.kind.part k.attributes.kind name=part attribute=material attribute=can attribute=used_for core.source="hand-core 1"
 @k.attributes.kind.material k.attributes.kind name=material attribute=colour attribute=can attribute=used_for core.source="hand-core 1"
 @k.attributes.kind.natural_thing k.attributes.kind name="natural thing" attribute=colour attribute=size attribute=material core.source="hand-core 1"
+
+# Switch attributes of the things a user makes: the verbs that turn them on and off, and their default.
+@k.attributes.switch.visible k.attributes.switch name=visible on=show on=unhide on=reveal off=hide default=true about="whether a thing can be seen" core.source="hand-core 1"
+@k.attributes.switch.stacked k.attributes.switch name=stacked on=stack off=unstack default=false about="whether things lie one on top of another" core.source="hand-core 1"
+@k.attributes.switch.highlighted k.attributes.switch name=highlighted on=highlight off=unhighlight default=false about="whether a thing is marked so that it stands out" core.source="hand-core 1"
+@k.attributes.switch.selected k.attributes.switch name=selected on=select off=deselect off=unselect default=false about="whether a thing is chosen for the next act" core.source="hand-core 1"
+@k.attributes.switch.locked k.attributes.switch name=locked on=lock off=unlock default=false about="whether a thing may not be changed" core.source="hand-core 1"
+@k.attributes.switch.pinned k.attributes.switch name=pinned on=pin off=unpin default=false about="whether a thing is fixed in its place" core.source="hand-core 1"
+@k.attributes.switch.grouped k.attributes.switch name=grouped on=group off=ungroup default=false about="whether things are joined into one group" core.source="hand-core 1"
+@k.attributes.switch.switched_on k.attributes.switch name=switched_on on="switch on" on="turn on" off="switch off" off="turn off" default=false about="whether a lamp or a machine works" core.source="hand-core 1"
+@k.attributes.switch.bold k.attributes.switch name=bold on=bold on=embolden off=unbold default=false about="whether a text is written in heavy letters" core.source="hand-core 1"

@@ -35,7 +35,17 @@ export class Knowledge {
     const world = this.worlds.find((w) => w.id === wid);
     const out = [];
     if (world) {
-      const ids = parse(world.schemaText).filter((x) => x.type === 'core.slot' && x.attrs.of?.[0] === type && x.attrs.id?.[0] === 'true').map((x) => x.attrs.key[0]);
+      // the identity keys of the type, or, where it declares none, of the type it extends (k.people.role: k.kinds.kind)
+      const idsOf = (t, seen = new Set()) => {
+        if (seen.has(t)) return [];
+        seen.add(t);
+        const all = this.worlds.flatMap((w) => parse(w.schemaText));
+        const own = all.filter((x) => x.type === 'core.slot' && x.attrs.of?.[0] === t && x.attrs.id?.[0] === 'true').map((x) => x.attrs.key[0]);
+        if (own.length) return own;
+        const parents = all.find((x) => x.type === 'core.type' && (x.attrs.of?.[0] ?? x.id) === t)?.attrs.extends ?? [];
+        return parents.map((q) => idsOf(q, seen)).find((k) => k.length) ?? [];
+      };
+      const ids = idsOf(type);
       const merged = new Map();
       for (const s of world.shards) for (const x of parse(s.text)) {
         if (x.type !== type) continue;

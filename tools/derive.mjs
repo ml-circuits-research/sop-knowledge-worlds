@@ -41,6 +41,11 @@ function identityKeys(worlds) {
     if (!ids.has(t)) ids.set(t, []);
     ids.get(t).push(x.attrs.key[0]);
   }
+  // a type that declares no identity key of its own takes those of the type it extends (k.people.role: k.kinds.kind)
+  const parents = new Map();
+  for (const w of worlds) for (const x of parse(w.schemaText)) if (x.type === 'core.type' && x.attrs.extends) parents.set(x.attrs.of?.[0] ?? x.id, x.attrs.extends);
+  const up = (t, seen = new Set()) => ids.get(t) ?? (seen.has(t) ? undefined : (seen.add(t), (parents.get(t) ?? []).map((p) => up(p, seen)).find(Boolean)));
+  for (const t of parents.keys()) if (!ids.has(t)) { const k = up(t); if (k) ids.set(t, k); }
   return ids;
 }
 

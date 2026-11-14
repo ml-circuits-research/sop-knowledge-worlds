@@ -12,10 +12,12 @@ const kinds = people.ofType('k.people.kind');
 const objects = new Set(fullWorld('k.objects', worlds).ofType('k.objects.object').map((w) => tok(w.attrs.name[0])));
 const presets = new Set(fullWorld('k.faces', worlds).ofType('k.faces.preset').filter((w) => tok(w.attrs.style[0]) === 'plain').map((w) => tok(w.attrs.name[0])));
 
-test('the eight kinds of person are variants of the one person drawing, each with a k.faces preset', () => {
+test('the eight kinds of person are variants of the one person drawing, each with a k.faces preset (and person and relative above them)', () => {
   const names = kinds.map((w) => tok(w.attrs.name[0])).sort();
-  assert.deepEqual(names, ['baby', 'boy', 'child', 'girl', 'grandfather', 'grandmother', 'man', 'woman']);
-  for (const w of kinds) {
+  assert.deepEqual(names, ['baby', 'boy', 'child', 'girl', 'grandfather', 'grandmother', 'man', 'person', 'relative', 'woman']);
+  // block 07:40 item 4: person and relative have no one age, height or face
+  for (const w of kinds.filter((x) => ['person', 'relative'].includes(tok(x.attrs.name[0])))) assert.equal(w.attrs.age ?? w.attrs.face ?? w.attrs.height_about, undefined, w.id);
+  for (const w of kinds.filter((x) => x.attrs.age)) {
     assert.equal(tok(w.attrs.drawing[0]), 'person', w.id);
     assert.ok(objects.has('person'));
     assert.ok(presets.has(tok(w.attrs.face[0])), `${w.id}: no preset ${w.attrs.face[0]}`);
@@ -23,7 +25,7 @@ test('the eight kinds of person are variants of the one person drawing, each wit
     // besides the told source, a loaded wire may carry the rule that derived `kind_of` (shard derived)
     assert.deepEqual(w.attrs['core.source'].filter((x) => !x.startsWith('"rule ')), ['"hand-core 1"'], w.id);
   }
-  const height = Object.fromEntries(kinds.map((w) => [tok(w.attrs.name[0]), Number(w.attrs.height_about[0])]));
+  const height = Object.fromEntries(kinds.filter((w) => w.attrs.age).map((w) => [tok(w.attrs.name[0]), Number(w.attrs.height_about[0])]));
   assert.ok(height.baby < height.child && height.child < height.boy && height.boy < height.woman && height.woman < height.man);
   assert.ok(height.grandfather < height.man && height.grandmother < height.woman);
 });
@@ -87,4 +89,14 @@ test('what roles wear, hold and use has a drawing for at least 95%; where they w
   assert.ok(things >= 200, `${things} things`);
   assert.ok(drawn >= things * 0.95, `${drawn} of ${things} things have a drawing`);
   assert.ok(found >= places * 0.9, `${found} of ${places} places are scenes`);
+});
+
+test('block 07:40 item 4: relatives, friends and every job are kinds of person (k.kinds, derived kind_of); a fairy is not', () => {
+  const people = fullWorld('k.people', worlds);
+  const kindsOf = (name) => [...new Set(people.ofType('k.kinds.kind').filter((x) => [name, JSON.stringify(name)].includes(x.attrs.name?.[0])).flatMap((x) => (x.attrs.kind_of ?? []).map(tok)))].sort();
+  for (const r of ['sister', 'brother', 'uncle', 'aunt', 'mother']) assert.deepEqual(kindsOf(r), ['person', 'relative'], r);
+  for (const r of ['friend', 'neighbour', 'doctor', 'police officer', 'king']) assert.deepEqual(kindsOf(r), ['person'], r);
+  assert.deepEqual(kindsOf('fairy'), []);
+  assert.ok(kindsOf('boy').includes('person') && kindsOf('grandmother').includes('person'));
+  for (const r of people.ofType('k.people.role')) if (tok(r.attrs.name[0]) !== 'fairy') assert.ok(kindsOf(tok(r.attrs.name[0])).includes('person'), r.id);
 });

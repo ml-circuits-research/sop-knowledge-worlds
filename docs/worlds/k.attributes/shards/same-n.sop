@@ -1,4 +1,4 @@
-# k.attributes/shards/same-n: one name, one thing: for 57 names that start with "n" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-n: one name, one thing: for 58 names that start with "n" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -22,6 +22,7 @@
 @k.attributes.same.necktie.clothing k.attributes.same name=necktie sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.needle.thing k.attributes.same name=needle sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.negro.place k.attributes.same name=negro sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.neighbour.person k.attributes.same name=neighbour sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nelson.place k.attributes.same name=nelson sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.neptune.body_in_space k.attributes.same name=neptune sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nerve.body_part k.attributes.same name=nerve sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"

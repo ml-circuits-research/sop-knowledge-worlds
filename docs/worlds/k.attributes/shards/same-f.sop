@@ -1,4 +1,4 @@
-# k.attributes/shards/same-f: one name, one thing: for 158 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-f: one name, one thing: for 159 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -144,6 +144,7 @@
 @k.attributes.same.fried_egg.food k.attributes.same name="fried egg" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fried_rice.food k.attributes.same name="fried rice" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fried_shrimp.food k.attributes.same name="fried shrimp" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.friend.person k.attributes.same name=friend sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.frock.thing k.attributes.same name=frock sense=thing only=true in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.frog.animal k.attributes.same name=frog sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fromage_frais.food k.attributes.same name="fromage frais" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

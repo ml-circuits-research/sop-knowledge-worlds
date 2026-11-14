@@ -89,3 +89,11 @@ test('the PSys2 hand-over k.actions-missing.md: redo and deselect are acts with 
   for (const [a, vs] of [['make', ['doodle', 'scribble', 'whip up']], ['place', ['shove', 'nudge', 'scoot']], ['undo', ['step back']], ['redo', ['redo', 'do again', 'get back']],
     ['pick', ['click', 'tap', 'touch']], ['deselect', ['deselect', 'unselect', 'untick']], ['remove', ['wipe']], ['save', ['export']]]) for (const v of vs) assert.ok(actsOf(v).includes(a), `${a}: ${v}`);
 });
+
+test('block 07:40 item 4: drop is a verb of remove, reset a verb of change whose value is the default', async () => {
+  const { scanWorlds, fullWorld } = await import('../tools/lib/worlds.mjs');
+  const w = fullWorld('k.actions', scanWorlds());
+  const verb = (text, act) => w.ofType('k.actions.verb').find((v) => v.attrs.text?.[0] === text && v.attrs.act?.[0] === act);
+  assert.ok(verb('drop', 'remove'), 'drop: remove');
+  assert.equal(verb('reset', 'change')?.attrs.value?.[0], 'default');
+});

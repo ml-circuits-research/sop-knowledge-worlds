@@ -39,6 +39,7 @@ remove	cut out	1	thing				yes
 remove	cross out	1	thing				yes		from>source
 remove	take off	2	thing				yes	source	from>source
 remove	wipe		thing						
+remove	drop	16 19	thing						
 change	change	1	thing	value					
 change	modify	3	thing	value					
 change	alter	1	thing	value					
@@ -108,6 +109,7 @@ change	sharpen	1	thing		shape	sharp
 change	smooth	1	thing		shape	smooth			
 change	increase	2	attribute			more			of>thing; by>amount; to>value
 change	decrease	2	attribute			less			of>thing; by>amount; to>value
+change	reset	1 2	thing			default			to>value
 place	place	1	thing						
 place	put	1	thing						
 place	set	1	thing						

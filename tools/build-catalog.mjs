@@ -22,6 +22,10 @@ const text = (token) => (token.startsWith('"') ? str(token) : /^[$?]/.test(token
 // Names that stand for "not named yet" (part1, part2, ... of an imported drawing) are not words.
 const PLACEHOLDER = /^part\d+$/;
 const WORD_KEYS = new Set(['text', 'singular', 'ending']);
+// Block 07:40 item 4: keys of a knowledge world whose values name things of other worlds (the typical things of a
+// shape or a colour, the thing placed somewhere): a word for such a thing also leads to the fact ("what shape is a
+// stop sign" reaches the octagon). The kind is the key (k.shapes.shape.thing).
+const THING_KEYS = new Set(['thing']);
 const isWordy = (t) => t && /\p{L}/u.test(t);
 const lemma = (t) => t.toLowerCase();
 const sourceId = (s) => text(s).trim().split(/\s+/).join('-');
@@ -135,6 +139,10 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
         for (const k of identityKeys(w.type).filter((x) => !world.id.startsWith('w.') || WORD_KEYS.has(x))) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
           if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id, w.type); }
+        }
+        if (!world.id.startsWith('w.')) for (const k of THING_KEYS) if (!identityKeys(w.type).includes(k)) for (const t of w.attrs[k] ?? []) {
+          const x = text(t);
+          if (isWordy(x)) addWord(x, shard.id, `${w.type}.${k}`);
         }
       }
       const license = header.license?.[0] ?? null;

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-r: one name, one thing: for 132 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-r: one name, one thing: for 133 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -52,6 +52,7 @@
 @k.attributes.same.refuse_lorry.thing k.attributes.same name="refuse lorry" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.rein.thing k.attributes.same name=rein sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.reindeer.animal k.attributes.same name=reindeer sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.relative.person k.attributes.same name=relative sense=person only=true in=k.people.kind by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.reminder_ribbon.thing k.attributes.same name="reminder ribbon" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.remote_control.thing k.attributes.same name="remote control" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.republican.place k.attributes.same name=republican sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"

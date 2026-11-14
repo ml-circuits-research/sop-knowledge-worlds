@@ -108,7 +108,7 @@
 @k.attributes.same.performing_arts.thing k.attributes.same name="performing arts" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.perfume.thing k.attributes.same name=perfume sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.periscope.thing k.attributes.same name=periscope sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.person.thing k.attributes.same name=person sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.person.person k.attributes.same name=person sense=person only=true in=k.attributes.drawn in=k.attributes.number in=k.layouts.anchor in=k.objects.object in=k.people.kind in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.peru.colour k.attributes.same name=peru sense=colour only=false in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.peru.place k.attributes.same name=peru sense=place only=false in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pestle_and_mortar.thing k.attributes.same name="pestle and mortar" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

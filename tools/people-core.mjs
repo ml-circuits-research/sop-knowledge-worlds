@@ -8,7 +8,7 @@ import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards } from './import/lib.mjs';
 
 const SRC = 'hand-core 1';
-const J = 'job', F = 'family', S = 'story';
+const J = 'job', F = 'family', S = 'story', O = 'social';
 export const ROLES = [
   ['doctor', J, { wears: 'lab coat', holds: 'stethoscope', uses: 'syringe, medicine, clinical thermometer', at: 'hospital', does: 'examine, heal, give medicine', glasses: 'round', shoulders: 'lab coat', words: 'doctors, physician, dr' }],
   ['nurse', J, { wears: 'apron', holds: 'syringe', uses: 'clinical thermometer, plaster, medicine', at: 'hospital', does: 'care for patients, bandage, give medicine', shoulders: 'scrubs', hat: 'nurse cap', words: 'nurses' }],
@@ -55,6 +55,9 @@ export const ROLES = [
   ['brother', F, { is: 'boy', does: 'play', face: 'boy', words: 'brothers' }],
   ['aunt', F, { is: 'woman', does: 'visit', face: 'woman', words: 'aunts, auntie, aunty' }],
   ['uncle', F, { is: 'man', does: 'visit', face: 'bearded man', words: 'uncles' }],
+  // block 07:40 item 4: the people a child knows who are no relatives
+  ['friend', O, { does: 'play, talk', words: 'friends, pal, pals, buddy, buddies, mate, mates' }],
+  ['neighbour', O, { does: 'visit, say hello', words: 'neighbours, neighbor, neighbors' }],
   // figures of stories
   ['king', S, { is: 'man', wears: 'crown, robe', holds: 'sword', uses: 'throne', at: 'castle', does: 'rule, give orders', hat: 'crown', beard: 'full', shoulders: 'cloak', words: 'kings' }],
   ['queen', S, { is: 'woman', wears: 'crown, dress, necklace', uses: 'throne', at: 'castle', does: 'rule', hat: 'crown', face: 'queen', words: 'queens' }],
@@ -75,12 +78,16 @@ export const ROLES = [
 ];
 
 const list = (v) => (v ? v.split(',').map((x) => x.trim()).filter(Boolean) : []);
-const ABOUT = { job: 'jobs', family: 'members of a family', story: 'figures of stories' };
+const ABOUT = { job: 'jobs', family: 'members of a family', story: 'figures of stories', social: 'people one knows who are no relatives' };
+// Block 07:40 item 4: every role is a kind of person (k.kinds: is_a, and kind_of by its rules); a member of a family
+// is a relative, and a relative a person (k.people.kind). A fairy is a figure of stories but no person.
+const IS_A = { job: 'person', family: 'relative', story: 'person', social: 'person' };
+const NOT_A_PERSON = new Set(['fairy']);
 export function roleShards() {
   const files = {};
-  for (const group of ['job', 'family', 'story']) {
+  for (const group of ['job', 'family', 'story', 'social']) {
     const roles = ROLES.filter((r) => r[1] === group);
-    const lines = roles.map(([name, , r]) => wire(`k.people.role.${seg(name)}`, 'k.people.role', [['name', name], ['group', group], ['is', r.is],
+    const lines = roles.map(([name, , r]) => wire(`k.people.role.${seg(name)}`, 'k.people.role', [['name', name], ['group', group], ['is', r.is], ['is_a', NOT_A_PERSON.has(name) ? undefined : IS_A[group]],
       ...list(r.wears).map((v) => ['wears', v]), ...list(r.holds).map((v) => ['holds', v]), ...list(r.uses).map((v) => ['uses', v]), ...list(r.at).map((v) => ['works_at', v]), ...list(r.does).map((v) => ['does', v]),
       ['hat', r.hat], ['glasses', r.glasses], ['beard', r.beard], ['moustache', r.moustache], ['shoulders', r.shoulders], ['face', r.face], ['drawing', 'person']], SRC));
     const words = roles.filter(([, , r]) => r.words).map(([name, , r]) => wire(`k.people.word.role.${seg(name)}`, 'core.word', [...list(r.words).filter((w) => w !== name).map((w) => ['text', w]), ['means', name], ['of', 'k.people.role.name']], SRC));
