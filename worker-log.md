@@ -3363,3 +3363,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   `k.commonsense.rules` module when they grow, and the derived shards as facts written back, marked.
 - Looked at: nothing drawn changes here. Numbers: catalog 25 worlds, 941 shards, vocab 24,280 words; 0 errors.
   npm test: the full run of the previous entry included this change; gallery and catalog tests after it: pass.
+
+## Lessons of items 3 to 5; the state after the rebases (2026-11-14, first worker)
+
+- `docs/lessons.md`: three lessons (the cue a thing alone has; a documented rule a test reads; rebasing generated
+  files between two workers).
+- The two commits before this one (bc16d37 drawings, ac676e5 preview rule and README) were rebased on the second
+  worker's during / until / since: index.json taken from main and rebuilt; `k.time/shards/derived` (439 wires now,
+  with `k.time.during`) was already fresh. On the pushed state, the 30 test files that read drawings, the catalog,
+  coverage, attributes, derived facts, joins, k.time and w.lang.en: 2,398 tests, 2,397 pass, 0 fail, 1 skipped.
+  Catalog 25 worlds, 941 shards, vocab 24,280 words; 0 errors.
+- Next for the first worker (block 08:00): block 06:55 item 3 (w.seating acts, w.timeline range, w.face, w.map),
+  then the two open w.lang.en holes; not started here.

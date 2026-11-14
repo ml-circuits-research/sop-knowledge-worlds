@@ -190,3 +190,22 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **The sense of a derived fact is the sense of what it was derived from**: the joins table filed the animals of
   k.commonsense as "unsure" until a derived wire took the sense of the one typed thing its rule reads. A rule's
   patterns are metadata a tool can use.
+
+## Drawings redrawn, one file-name rule, rebasing generated files (first worker, block "02:45" items 4 and 5)
+
+- **A drawing is weak when its parts belong to another thing's template.** The cougar was the four-legged template
+  with round ears and a snout: a bear. What made each of the seven readable was one cue the thing alone has: the
+  dark-tipped hanging tail of a big cat, growth lines round a hinge (not the radial ribs of a scallop), a fin
+  along an eel's back, a stocking's lace top and seam, a cake slice's wedge and crust, a buggy's spoked wheels and
+  hood, a harness's carabiner. Look for the cue before drawing the outline.
+- **A rule every reader must follow is a rule a test reads from the documentation.** The picture of "crane bird"
+  was found by every tool of this repository and missed by the reviewer's sheet; the rule existed only as code. Now
+  `k.objects/WORLD.md` holds the one JavaScript line, and a test evaluates that line against every object, so the
+  documented rule and the code cannot drift; the rule also accepts the quoted SOP token, the form a reader of the
+  shards actually holds.
+- **Two workers pushing generated files: take either side, rerun, test only what reads generated files, push at
+  once.** The catalog's `version` is a hash of `docs/worlds`, so every commit of the other worker conflicts in
+  `index.json`; a ten-minute full test run let main move three times before a push. Rebuilding, then the test files
+  that read generated files (about 30 of 44), then pushing, and the full run afterwards on the pushed commit in a
+  separate worktree, got the work in without skipping the full check. Two full builds side by side on this machine
+  can kill a test process (SIGKILL): rerun before believing a failure.
