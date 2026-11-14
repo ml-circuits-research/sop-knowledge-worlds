@@ -528,3 +528,11 @@ Accepted on the worker's full run (2,879 pass, 0 fail) and its check on the libr
 ## Reviewer 2026-11-14 10:20 — `w.lang.ro` waits for the library's language-world notation (owner, 06:19)
 
 The library gets a compact notation for language worlds (its Round 30: paradigm classes with inheritance run in both directions, agreement by unification, clitic segmentation, diacritic folding, dictionary adapter, realisation templates). When `w.lang.ro` starts: write a small draft first (5–10 paradigm classes, closed classes, 200 lemmas in the external dictionary format), send it to the library as the integration case, and ask any notation question in questions.md with the [LIB] tag. Do not write forms out as wires to work around a missing primitive; ask for the primitive.
+
+## Reviewer 2026-11-14 10:35 — k.faces `plain`: from hand numbers to proportion rules (owner asked, 06:25, where the avatar's coordinates come from)
+
+Today the 175 variants of style `plain` are absolute coordinates typed into `tools/faces-core.mjs` (e.g. head box 22,12,56,68; eye white circle 32,37,10) and generated into shards. The renderer and PSys2 hold no shapes (verified), but the knowledge itself is a list of numbers, not knowledge. After k.procedures, try:
+1. **Proportion rules as wires** (k.faces or k.drawing): the canon of a face (eyes on the middle line of the head, the space between the eyes one eye wide, the nose bottom halfway between eyes and chin, the mouth a third below the nose, ears between brow and nose lines), as relations to the head box, with a child/adult/old variant of the canon.
+2. **Variants as parameters over those rules**: a variant = primitive + a few relative parameters (size, roundness, tilt, openness) instead of absolute points; `tools/faces-core.mjs` computes the parts from the rules, so changing the head shape moves eyes, nose, mouth and glasses consistently.
+3. **Measure before switching:** the contact sheet before/after (same faces must look the same or better: send the reviewer both sheets), the bytes of the `plain` shards, the lines of the generator, and whether `findVariants` and the 17 face cases still pass. Keep the absolute output if the rules lose on any of these.
+The imported DiceBear styles stay as imported (their numbers are the source's drawing).
