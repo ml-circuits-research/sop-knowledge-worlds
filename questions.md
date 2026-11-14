@@ -43,6 +43,26 @@ world that reads other worlds (`k.commonsense.rules` with imports), loaded on re
 shard named `rules` that holds rules and patterns only.
 Blocking: no. Meanwhile: (a).
 
+## Q39 (Round 12, second worker, 2026-11-14)
+Question: (a) is the structure below the "language-free structure" for tests of `w.lang.en` (sentence -> expected
+structure), until the library defines its own? (b) may the knowledge repository keep a third pinned library build
+(`tools/sopworld/grammar/`, 0.33.0) only to check that `w.lang.en` is what `std.grammar` reads?
+Context: the block "01:00" asks for tests "as sentences -> expected structure (a language-free structure the library
+will define with you: write it as a proposal in questions.md and in the library's format when it exists)". The library's
+format exists in part: `parseText` gives trees whose nodes carry `rule` (the id of a `w.lang.en.rule`), and `nounPhrase`
+reads a noun phrase as `{ det, num, ord, quant, mods, head, lemma, pp, parts }` with the categories named by the
+grammar. Proposal: an expected structure is `{ construction, head lemma }` for a noun phrase (construction = the
+`construction` of the rule at the root; lemma from `nounPhrase`), `{ construction }` for a question or a clause, and,
+once frames are read, `{ act, roles: { <k.actions role>: <lemma of the head> } }` through `w.lang.en.role_map`. No
+English word is in the structure except the lemmas, which come from `k.words`. `tests/w.lang.en.test.mjs` uses the first
+two forms now (23 noun phrases, 4 questions).
+For the library's session (seen while checking, not worked around here): its tokenizer drops commas, so the
+coordination separator "," of `w.lang.en.coord.sep` is never read ("a sun, a cloud and a man" does not parse as a
+list); and a production with a category twice cannot be a repeated `rhs` key (a fact keeps repeated values as a set),
+which `w.lang.en` now avoids with helper categories (NP -> NP OFNP).
+Blocking: no. Meanwhile: (a) the proposal above; (b) the third build is kept, used only by that test, until the one
+build of Q35 (0.30.0, which has `parseText`) is in; then the test moves to it and the third build goes.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

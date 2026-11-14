@@ -89,3 +89,23 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   told facts or also derived ones.
 - **A module that holds rules over other worlds pulls their schemas in** (k.commonsense now imports k.animals and
   k.food, and with it k.objects does). Where such rules live is a design question of its own (Q38).
+
+
+## Round 12 (second worker): `w.lang.en`, a grammar as a world
+
+- **A grammar's notation is a language inside a value; plain productions say the same with wires.** The hand-over's
+  rules (`rhs=DET? rhs=MOD* rhs="[all|every]"`) and frame patterns (`"L V.make D {thing:words}"`) carried EBNF and a
+  capture syntax inside strings. Written as plain productions (an optional part is a second production, a repeated
+  part a helper category, a set of words a category with word facts) and as one fact per frame part, they need no
+  reader of their own, and the library's parser read them unchanged: the notation was never needed.
+- **A repeated key is a set, so an order with repeats cannot be a repeated key.** `rhs=NP rhs=OF rhs=NP` loses its
+  second NP when told (the library parsed "the legs of the crocodile" only through another rule). Order of distinct
+  values survives; a repeat needs a helper (NP -> NP OFNP). A test now refuses a production that names a category twice.
+- **Say in the world how a host reads it.** `w.lang.en.cat name=DET type=w.lang.en.det` lets a host build the
+  library's options from facts instead of a hand-made map; the same world then serves the library's test and ours.
+- **Joins of a grammar are by value, and the gaps show at once**: numerals against `k.values.number` agree; `every`
+  is no `k.values` set word; 20 frame roles are PSys2's names, not `k.actions` role names. One test per join lists
+  what does not meet, so the next step is a table, not a search.
+- **What belongs to one application hides in a general hand-over**: tab flags, the "act" `own` (routing to a world's
+  own reader), PSys2 module names as views. The views stay (they make unifying measurable); the rest is left out
+  with its reason in a generated IMPORT.md, so the next import from the same source repeats the decision.

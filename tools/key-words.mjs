@@ -64,6 +64,6 @@ export const withBlock = (text) => { const base = withoutBlock(text); const bloc
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   let n = 0;
-  for (const w of scanWorlds()) { const path = join(w.dir, 'schema.sop'); const next = withBlock(readFileSync(path, 'utf8')); n += next.split('\n').filter((l) => l.includes('.word.key.')).length; writeFileSync(path, next); }
+  for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) { const path = join(w.dir, 'schema.sop'); const next = withBlock(readFileSync(path, 'utf8')); n += next.split('\n').filter((l) => l.includes('.word.key.')).length; writeFileSync(path, next); }
   console.log(`${n} word wires for keys`);
 }

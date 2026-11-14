@@ -20,6 +20,7 @@ const GENERATED = new Set(['index.json', 'vocab.json', 'LICENSES.md']);
 const text = (token) => (token.startsWith('"') ? str(token) : /^[$?]/.test(token) ? null : token);
 // Names that stand for "not named yet" (part1, part2, ... of an imported drawing) are not words.
 const PLACEHOLDER = /^part\d+$/;
+const WORD_KEYS = new Set(['text', 'singular', 'ending']);
 const isWordy = (t) => t && /\p{L}/u.test(t);
 const lemma = (t) => t.toLowerCase();
 const sourceId = (s) => text(s).trim().split(/\s+/).join('-');
@@ -116,7 +117,9 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
           for (const t of w.attrs.text ?? []) addWord(text(t), shard.id);
           continue;
         }
-        for (const k of identityKeys(w.type)) for (const t of w.attrs[k] ?? []) {
+        // a reusable world of facts (w.lang.en) names its own parts (frames, constructions, categories): only the
+        // keys that hold English words make vocabulary
+        for (const k of identityKeys(w.type).filter((x) => !world.id.startsWith('w.') || WORD_KEYS.has(x))) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
           if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id); }
         }

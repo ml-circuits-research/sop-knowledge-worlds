@@ -1,0 +1,333 @@
+# w.lang.en: what is known about English grammar, as facts, for any application that reads English. Closed word
+# classes (determiners, pronouns, prepositions, small numbers), morphology, clause structure, ellipsis markers, the
+# grammar as plain productions over categories with the English constructions they belong to, the argument frames of
+# the acts of k.actions, and phrase groups. Open-class words are not here: nouns and adjectives are k.words, verbs
+# k.actions, number words and colours k.values. A parser that applies this world is the library's std.grammar
+# (soplang-words-lib); a category is read from the facts of the type its `w.lang.en.cat` names (`type=`).
+# sources: psys2 78f45863 (PSys2 handover/lang.en, the demo's English as facts; CC0); hand-core 1 (what this
+#   repository added: the types of parts, constructions, categories and words, and the slot lines)
+# license: CC0-1.0
+# script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
+
+@w.lang.en core.module name=w.lang.en version=1 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice core.source="psys2 78f45863"
+
+# ---- closed word classes ----
+# A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
+# discourse, routing); the views differ by accident and are kept until an application unifies them.
+@w.lang.en.det core.type of=w.lang.en.det shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.det.text core.slot of=w.lang.en.det key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.det.kind core.slot of=w.lang.en.det key=kind required=true enum=article enum=demonstrative enum=possessive enum=quantifier enum=numeral enum=modifier core.source="psys2 78f45863"
+@w.lang.en.det.definite core.slot of=w.lang.en.det key=definite enum=yes enum=no core.source="psys2 78f45863"
+@w.lang.en.det.number core.slot of=w.lang.en.det key=number enum=sg enum=pl enum=any core.source="psys2 78f45863"
+@w.lang.en.det.person core.slot of=w.lang.en.det key=person kind=integer min=1 max=3 core.source="psys2 78f45863"
+@w.lang.en.det.gender core.slot of=w.lang.en.det key=gender enum=m enum=f enum=n core.source="psys2 78f45863"
+@w.lang.en.det.distance core.slot of=w.lang.en.det key=distance enum=near enum=far core.source="psys2 78f45863"
+@w.lang.en.det.value core.slot of=w.lang.en.det key=value kind=integer core.source="psys2 78f45863"
+@w.lang.en.det.variant_of core.slot of=w.lang.en.det key=variant_of kind=atom core.source="psys2 78f45863"
+@w.lang.en.det.register core.slot of=w.lang.en.det key=register enum=chat core.source="psys2 78f45863"
+@w.lang.en.det.meaning core.slot of=w.lang.en.det key=meaning kind=atom core.source="psys2 78f45863"
+@w.lang.en.det.note core.slot of=w.lang.en.det key=note kind=string core.source="psys2 78f45863"
+@w.lang.en.det.in core.slot of=w.lang.en.det key=in many=true kind=atom core.source="psys2 78f45863"
+
+# A pronoun. `refers`: thing (a thing of the scene or of the dialogue), place, an agent by gender (m, f, any), or
+# the user, or the assistant. `case` may repeat (it: subject and object).
+@w.lang.en.pron core.type of=w.lang.en.pron shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.pron.text core.slot of=w.lang.en.pron key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.pron.case core.slot of=w.lang.en.pron key=case many=true required=true enum=subject enum=object enum=possessive enum=demonstrative enum=locative core.source="psys2 78f45863"
+@w.lang.en.pron.person core.slot of=w.lang.en.pron key=person kind=integer min=1 max=3 core.source="psys2 78f45863"
+@w.lang.en.pron.number core.slot of=w.lang.en.pron key=number enum=sg enum=pl core.source="psys2 78f45863"
+@w.lang.en.pron.gender core.slot of=w.lang.en.pron key=gender enum=m enum=f enum=n core.source="psys2 78f45863"
+@w.lang.en.pron.refers core.slot of=w.lang.en.pron key=refers many=true required=true enum=thing enum=place enum=m enum=f enum=any enum=user enum=assistant core.source="psys2 78f45863"
+@w.lang.en.pron.distance core.slot of=w.lang.en.pron key=distance enum=near enum=far core.source="psys2 78f45863"
+@w.lang.en.pron.deictic core.slot of=w.lang.en.pron key=deictic kind=atom core.source="psys2 78f45863"
+@w.lang.en.pron.in core.slot of=w.lang.en.pron key=in many=true kind=atom core.source="psys2 78f45863"
+
+# An anaphoric noun phrase of a dialogue ("that one", "this animal"): `order` is the order they are tried (longest
+# first), `head` the word that is its noun (none for a bare pronoun).
+@w.lang.en.anaphor core.type of=w.lang.en.anaphor shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.anaphor.text core.slot of=w.lang.en.anaphor key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.anaphor.order core.slot of=w.lang.en.anaphor key=order required=true kind=integer min=1 core.source="psys2 78f45863"
+@w.lang.en.anaphor.head core.slot of=w.lang.en.anaphor key=head kind=atom core.source="psys2 78f45863"
+@w.lang.en.anaphor.in core.slot of=w.lang.en.anaphor key=in many=true kind=atom core.source="psys2 78f45863"
+
+# A preposition as a relation. `rel` the relation (the relation names of k.layouts where it is a place), `space`
+# whether it says a place (static), a goal (direction), a source or a way (path), `role` the roles that are no
+# places, `support` and `contain` what the place does, `arity` 2 when it takes two things (between).
+@w.lang.en.prep core.type of=w.lang.en.prep shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.prep.text core.slot of=w.lang.en.prep key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.prep.rel core.slot of=w.lang.en.prep key=rel required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.prep.space core.slot of=w.lang.en.prep key=space enum=static enum=direction enum=source enum=path core.source="psys2 78f45863"
+@w.lang.en.prep.role core.slot of=w.lang.en.prep key=role many=true enum=accompaniment enum=instrument enum=part enum=possession enum=beneficiary enum=purpose enum=topic enum=role enum=similarity core.source="psys2 78f45863"
+@w.lang.en.prep.support core.slot of=w.lang.en.prep key=support enum=yes core.source="psys2 78f45863"
+@w.lang.en.prep.contain core.slot of=w.lang.en.prep key=contain enum=yes core.source="psys2 78f45863"
+@w.lang.en.prep.arity core.slot of=w.lang.en.prep key=arity kind=integer min=1 core.source="psys2 78f45863"
+@w.lang.en.prep.note core.slot of=w.lang.en.prep key=note kind=string core.source="psys2 78f45863"
+@w.lang.en.prep.in core.slot of=w.lang.en.prep key=in many=true kind=atom core.source="psys2 78f45863"
+
+# A temporal preposition: `order` the place of the first thing against the second on a line of time (earlier, later,
+# within), `span` the end it names (until: the end; since: the start). What orders things in time is k.time's.
+@w.lang.en.prep.time core.type of=w.lang.en.prep.time shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.prep.time.text core.slot of=w.lang.en.prep.time key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.prep.time.rel core.slot of=w.lang.en.prep.time key=rel required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.prep.time.order core.slot of=w.lang.en.prep.time key=order required=true enum=earlier enum=later enum=within core.source="psys2 78f45863"
+@w.lang.en.prep.time.span core.slot of=w.lang.en.prep.time key=span enum=start enum=end core.source="psys2 78f45863"
+@w.lang.en.prep.time.in core.slot of=w.lang.en.prep.time key=in many=true kind=atom core.source="psys2 78f45863"
+
+# Ordinals and small cardinals a reader needs before the catalog is reachable. k.values.number holds every number
+# word; these agree with it (a test). `last` counts from the end (value -1).
+@w.lang.en.ordinal core.type of=w.lang.en.ordinal shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.ordinal.text core.slot of=w.lang.en.ordinal key=text id=true required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.ordinal.value core.slot of=w.lang.en.ordinal key=value required=true kind=integer core.source="psys2 78f45863"
+@w.lang.en.ordinal.in core.slot of=w.lang.en.ordinal key=in many=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.numeral core.type of=w.lang.en.numeral shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.numeral.text core.slot of=w.lang.en.numeral key=text id=true required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.numeral.value core.slot of=w.lang.en.numeral key=value required=true kind=integer core.source="psys2 78f45863"
+@w.lang.en.numeral.in core.slot of=w.lang.en.numeral key=in many=true kind=atom core.source="psys2 78f45863"
+
+# ---- morphology ----
+# A rule of inflection: `op` singular (from a plural) or plural (from a singular); the first rule of a `set` by
+# `order` that matches applies. It matches a word that ends in one of `suffix` (after a consonant when `after`
+# says so), not in one of `unless_suffix`, of at least `min_length` letters, which is a noun exception of the kind
+# `exception` when that is given, and not a singular that looks plural when `unless_is_singular=yes`. It then drops
+# `drop` letters (or the suffix, when `replace` is given) and adds `replace` or `add`.
+@w.lang.en.inflect core.type of=w.lang.en.inflect shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.inflect.op core.slot of=w.lang.en.inflect key=op required=true enum=singular enum=plural core.source="psys2 78f45863"
+@w.lang.en.inflect.set core.slot of=w.lang.en.inflect key=set enum=act enum=lemma core.source="psys2 78f45863"
+@w.lang.en.inflect.order core.slot of=w.lang.en.inflect key=order required=true kind=integer min=1 core.source="psys2 78f45863"
+@w.lang.en.inflect.suffix core.slot of=w.lang.en.inflect key=suffix many=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.inflect.after core.slot of=w.lang.en.inflect key=after enum=consonant core.source="hand-core 1"
+@w.lang.en.inflect.unless_suffix core.slot of=w.lang.en.inflect key=unless_suffix many=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.inflect.exception core.slot of=w.lang.en.inflect key=exception enum=us-plural core.source="hand-core 1"
+@w.lang.en.inflect.drop core.slot of=w.lang.en.inflect key=drop kind=integer min=0 core.source="psys2 78f45863"
+@w.lang.en.inflect.replace core.slot of=w.lang.en.inflect key=replace kind=atom core.source="psys2 78f45863"
+@w.lang.en.inflect.add core.slot of=w.lang.en.inflect key=add kind=atom core.source="psys2 78f45863"
+@w.lang.en.inflect.min_length core.slot of=w.lang.en.inflect key=min_length kind=integer min=1 core.source="psys2 78f45863"
+@w.lang.en.inflect.unless_is_singular core.slot of=w.lang.en.inflect key=unless_is_singular enum=yes core.source="psys2 78f45863"
+# An irregular plural (taken before any rule).
+@w.lang.en.irregular core.type of=w.lang.en.irregular shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.irregular.singular core.slot of=w.lang.en.irregular key=singular id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.irregular.plural core.slot of=w.lang.en.irregular key=plural required=true kind=atom kind=string core.source="psys2 78f45863"
+# A noun that the rules would read wrongly: is-plural (kiwis is kiwi + s, not kiwi + is), us-plural-suffix (a word
+# that ends in `stem` + es is a -us noun + es: octopuses), us-plural-word (the whole `word`).
+@w.lang.en.noun.exception core.type of=w.lang.en.noun.exception shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.noun.exception.kind core.slot of=w.lang.en.noun.exception key=kind required=true enum=is-plural enum=us-plural-suffix enum=us-plural-word core.source="psys2 78f45863"
+@w.lang.en.noun.exception.stem core.slot of=w.lang.en.noun.exception key=stem kind=atom core.source="psys2 78f45863"
+@w.lang.en.noun.exception.word core.slot of=w.lang.en.noun.exception key=word kind=atom core.source="psys2 78f45863"
+# A contraction and what it stands for; an ending that stands for a word after any word ("n't" for not).
+@w.lang.en.contraction core.type of=w.lang.en.contraction shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.contraction.text core.slot of=w.lang.en.contraction key=text id=true required=true kind=string core.source="psys2 78f45863"
+@w.lang.en.contraction.expands core.slot of=w.lang.en.contraction key=expands required=true kind=string core.source="psys2 78f45863"
+@w.lang.en.contraction.ending core.type of=w.lang.en.contraction.ending shared=true closed=true core.source="hand-core 1"
+@w.lang.en.contraction.ending.ending core.slot of=w.lang.en.contraction.ending key=ending id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.contraction.ending.word core.slot of=w.lang.en.contraction.ending key=word required=true kind=atom core.source="hand-core 1"
+
+# ---- the grammar ----
+# A category. A closed class names the type whose `text` facts are its words (`type`); NUM also takes digits
+# (`digits=yes`); a category of a few words names `w.lang.en.word`; the others are built by rules, or come from the
+# host's lexicon (N, MOD, NAME: the open classes of k.words and of the worlds in play).
+@w.lang.en.cat core.type of=w.lang.en.cat shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.cat.name core.slot of=w.lang.en.cat key=name id=true required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.cat.doc core.slot of=w.lang.en.cat key=doc kind=string core.source="psys2 78f45863"
+@w.lang.en.cat.type core.slot of=w.lang.en.cat key=type kind=atom core.source="hand-core 1"
+@w.lang.en.cat.digits core.slot of=w.lang.en.cat key=digits enum=yes core.source="hand-core 1"
+# A word of a small category that rules name (all, every, each, both are QALL).
+@w.lang.en.word core.type of=w.lang.en.word shared=true closed=true core.source="hand-core 1"
+@w.lang.en.word.text core.slot of=w.lang.en.word key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.word.cat core.slot of=w.lang.en.word key=cat id=true required=true kind=atom core.source="hand-core 1"
+# A production: `lhs` is built from the categories `rhs`, in the order the keys are written. Each rhs is one
+# category; an optional part is a second production without it, a repeated part a helper category (MODS: MOD, or
+# MOD MODS). `head` the category of the part the phrase is about (the first part of that category), `agree` a
+# feature its parts share, `construction` the English construction it belongs to; `status=hole` when no reader
+# applies it yet.
+@w.lang.en.rule core.type of=w.lang.en.rule shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.rule.lhs core.slot of=w.lang.en.rule key=lhs required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.rule.rhs core.slot of=w.lang.en.rule key=rhs many=true required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.rule.head core.slot of=w.lang.en.rule key=head kind=atom core.source="psys2 78f45863"
+@w.lang.en.rule.agree core.slot of=w.lang.en.rule key=agree many=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.rule.construction core.slot of=w.lang.en.rule key=construction required=true kind=atom core.source="hand-core 1"
+@w.lang.en.rule.status core.slot of=w.lang.en.rule key=status enum=hole core.source="psys2 78f45863"
+# An English construction ("the legs of the crocodile", "a white house and a green one"): `about` the category it
+# builds, `emit` the roles a reading carries to an act (with `set` and `thing` where it says them), `reading` what
+# it means in words when that is more than roles, `asks` what a question asks, `function` the std.grammar function
+# that applies it where productions alone cannot (a construction said only in words has no production),
+# `status=hole` when no reader applies it yet.
+@w.lang.en.construction core.type of=w.lang.en.construction shared=true closed=true core.source="hand-core 1"
+@w.lang.en.construction.name core.slot of=w.lang.en.construction key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.construction.about core.slot of=w.lang.en.construction key=about kind=atom core.source="hand-core 1"
+@w.lang.en.construction.emit core.slot of=w.lang.en.construction key=emit many=true kind=atom core.source="hand-core 1"
+@w.lang.en.construction.set core.slot of=w.lang.en.construction key=set enum=all core.source="hand-core 1"
+@w.lang.en.construction.thing core.slot of=w.lang.en.construction key=thing kind=atom core.source="hand-core 1"
+@w.lang.en.construction.reading core.slot of=w.lang.en.construction key=reading kind=string core.source="hand-core 1"
+@w.lang.en.construction.asks core.slot of=w.lang.en.construction key=asks kind=atom core.source="hand-core 1"
+@w.lang.en.construction.function core.slot of=w.lang.en.construction key=function kind=atom core.source="hand-core 1"
+@w.lang.en.construction.status core.slot of=w.lang.en.construction key=status enum=hole core.source="hand-core 1"
+@w.lang.en.construction.doc core.slot of=w.lang.en.construction key=doc kind=string core.source="hand-core 1"
+@w.lang.en.construction.example core.slot of=w.lang.en.construction key=example many=true kind=string core.source="hand-core 1"
+
+# An argument frame: one way of saying an act of k.actions (`act`, `mode`), its parts in order (`w.lang.en.part`),
+# the roles it fills (`role`), the fixed arguments it implies (`w.lang.en.fixed`), `priority` (the more specific,
+# the higher), `needs` what a world's schema must have for the frame to apply (attrs: attributes; in: things inside
+# things; named: names ...), `set` the group of frames it came in.
+@w.lang.en.frame core.type of=w.lang.en.frame shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.frame.name core.slot of=w.lang.en.frame key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.frame.act core.slot of=w.lang.en.frame key=act required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.frame.mode core.slot of=w.lang.en.frame key=mode kind=atom core.source="psys2 78f45863"
+@w.lang.en.frame.set core.slot of=w.lang.en.frame key=set required=true enum=acts enum=acts.more enum=acts.data core.source="psys2 78f45863"
+@w.lang.en.frame.priority core.slot of=w.lang.en.frame key=priority required=true kind=integer core.source="psys2 78f45863"
+@w.lang.en.frame.needs core.slot of=w.lang.en.frame key=needs kind=atom core.source="psys2 78f45863"
+@w.lang.en.frame.role core.slot of=w.lang.en.frame key=role many=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.frame.example core.slot of=w.lang.en.frame key=example kind=string core.source="psys2 78f45863"
+# A part of a frame, at place `at`. `is`: lead (an optional polite lead-in, the phrase group `phrase`), det (an
+# optional determiner), verb (a verb of the act `act`, from k.actions), word (one of the words `word`, or of the
+# phrase groups `phrase`), phrase (one phrase of the groups `phrase`), lexicon (a word of the world's lexicon
+# `lexicon`), role (a capture of the role `role`: `takes` words (a noun phrase), rest (the rest of the sentence),
+# number, prep (a preposition that is a relation) or lexicon; at most `max_words` words). `optional=yes`: may be left out.
+@w.lang.en.part core.type of=w.lang.en.part shared=true closed=true core.source="hand-core 1"
+@w.lang.en.part.frame core.slot of=w.lang.en.part key=frame id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.part.at core.slot of=w.lang.en.part key=at id=true required=true kind=integer min=1 core.source="hand-core 1"
+@w.lang.en.part.is core.slot of=w.lang.en.part key=is required=true enum=lead enum=det enum=verb enum=word enum=phrase enum=lexicon enum=role core.source="hand-core 1"
+@w.lang.en.part.act core.slot of=w.lang.en.part key=act kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.part.role core.slot of=w.lang.en.part key=role kind=atom core.source="hand-core 1"
+@w.lang.en.part.takes core.slot of=w.lang.en.part key=takes enum=words enum=rest enum=number enum=prep enum=lexicon core.source="hand-core 1"
+@w.lang.en.part.lexicon core.slot of=w.lang.en.part key=lexicon kind=atom core.source="hand-core 1"
+@w.lang.en.part.max_words core.slot of=w.lang.en.part key=max_words kind=integer min=1 core.source="hand-core 1"
+@w.lang.en.part.word core.slot of=w.lang.en.part key=word many=true kind=string core.source="hand-core 1"
+@w.lang.en.part.phrase core.slot of=w.lang.en.part key=phrase many=true kind=atom core.source="hand-core 1"
+@w.lang.en.part.optional core.slot of=w.lang.en.part key=optional enum=yes core.source="hand-core 1"
+# A fixed argument of a frame: "Call yourself Robi" sets the attribute name.
+@w.lang.en.fixed core.type of=w.lang.en.fixed shared=true closed=true core.source="hand-core 1"
+@w.lang.en.fixed.frame core.slot of=w.lang.en.fixed key=frame id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.fixed.role core.slot of=w.lang.en.fixed key=role id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.fixed.value core.slot of=w.lang.en.fixed key=value required=true kind=string core.source="hand-core 1"
+# A phrase group ("politeness and fillers"): its phrases are `item`. A small lexicon that frames name: `item`.
+@w.lang.en.phrase core.type of=w.lang.en.phrase shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.phrase.name core.slot of=w.lang.en.phrase key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.phrase.group core.slot of=w.lang.en.phrase key=group required=true kind=string core.source="psys2 78f45863"
+@w.lang.en.phrase.doc core.slot of=w.lang.en.phrase key=doc kind=string core.source="psys2 78f45863"
+@w.lang.en.phrase.item core.slot of=w.lang.en.phrase key=item many=true required=true kind=string core.source="psys2 78f45863"
+@w.lang.en.lex core.type of=w.lang.en.lex shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.lex.name core.slot of=w.lang.en.lex key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.lex.doc core.slot of=w.lang.en.lex key=doc kind=string core.source="psys2 78f45863"
+@w.lang.en.lex.item core.slot of=w.lang.en.lex key=item many=true required=true kind=string core.source="psys2 78f45863"
+
+# ---- clause structure ----
+# What joins two clauses: `cut` whether a splitter cuts there without other evidence, `card_cut` whether it cuts when
+# an act word or a question word follows.
+@w.lang.en.joiner core.type of=w.lang.en.joiner shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.joiner.text core.slot of=w.lang.en.joiner key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.joiner.kind core.slot of=w.lang.en.joiner key=kind required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.joiner.cut core.slot of=w.lang.en.joiner key=cut enum=yes enum=no core.source="psys2 78f45863"
+@w.lang.en.joiner.card_cut core.slot of=w.lang.en.joiner key=card_cut enum=yes enum=no core.source="psys2 78f45863"
+@w.lang.en.joiner.note core.slot of=w.lang.en.joiner key=note kind=string core.source="psys2 78f45863"
+# Words before a comma that open a standing rule ("From now on, squares are grey"): that comma ends no clause.
+@w.lang.en.frame_lead core.type of=w.lang.en.frame_lead shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.frame_lead.text core.slot of=w.lang.en.frame_lead key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+# A self-correction marker ("blue, no, green"): `comma` whether it needs a comma before it.
+@w.lang.en.correction core.type of=w.lang.en.correction shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.correction.text core.slot of=w.lang.en.correction key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.correction.comma core.slot of=w.lang.en.correction key=comma required=true enum=yes enum=no core.source="psys2 78f45863"
+# Words of an abandoned clause that make it only a lead ("wait, I meant yes").
+@w.lang.en.correction.lead core.type of=w.lang.en.correction.lead shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.correction.lead.text core.slot of=w.lang.en.correction.lead key=text many=true required=true kind=atom kind=string core.source="psys2 78f45863"
+# Bare answers to a yes/no question.
+@w.lang.en.answer core.type of=w.lang.en.answer shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.answer.polarity core.slot of=w.lang.en.answer key=polarity id=true required=true enum=yes enum=no enum=unsure core.source="psys2 78f45863"
+@w.lang.en.answer.text core.slot of=w.lang.en.answer key=text many=true required=true kind=atom kind=string core.source="psys2 78f45863"
+# A question word: `asks` what it asks for, `of` plural or mass (how many, how much), `case` object (whom).
+@w.lang.en.wh core.type of=w.lang.en.wh shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.wh.text core.slot of=w.lang.en.wh key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.wh.asks core.slot of=w.lang.en.wh key=asks required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.wh.of core.slot of=w.lang.en.wh key=of enum=plural enum=mass core.source="psys2 78f45863"
+@w.lang.en.wh.case core.slot of=w.lang.en.wh key=case enum=object core.source="psys2 78f45863"
+@w.lang.en.wh.in core.slot of=w.lang.en.wh key=in many=true kind=atom core.source="psys2 78f45863"
+# An auxiliary that opens a yes/no question: `support` do or have, `modal` what a modal says.
+@w.lang.en.aux core.type of=w.lang.en.aux shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.aux.text core.slot of=w.lang.en.aux key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.aux.tense core.slot of=w.lang.en.aux key=tense enum=present enum=past core.source="psys2 78f45863"
+@w.lang.en.aux.number core.slot of=w.lang.en.aux key=number enum=sg enum=pl core.source="psys2 78f45863"
+@w.lang.en.aux.support core.slot of=w.lang.en.aux key=support enum=do enum=have core.source="psys2 78f45863"
+@w.lang.en.aux.modal core.slot of=w.lang.en.aux key=modal many=true enum=ability enum=politeness enum=future enum=conditional enum=advice core.source="psys2 78f45863"
+@w.lang.en.aux.negated core.slot of=w.lang.en.aux key=negated enum=yes core.source="hand-core 1"
+@w.lang.en.aux.positive core.slot of=w.lang.en.aux key=positive kind=atom core.source="hand-core 1"
+@w.lang.en.aux.in core.slot of=w.lang.en.aux key=in many=true kind=atom core.source="psys2 78f45863"
+# Negation words; `ending` an ending that makes any word a negation.
+@w.lang.en.neg core.type of=w.lang.en.neg shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.neg.text core.slot of=w.lang.en.neg key=text many=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.neg.ending core.slot of=w.lang.en.neg key=ending many=true kind=string core.source="hand-core 1"
+@w.lang.en.neg.doc core.slot of=w.lang.en.neg key=doc kind=string core.source="psys2 78f45863"
+# The words that turn a request into "do not"; the words after "do not" that make it no negated request.
+@w.lang.en.neg.imperative core.type of=w.lang.en.neg.imperative shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.neg.imperative.text core.slot of=w.lang.en.neg.imperative key=text many=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.neg.imperative.doc core.slot of=w.lang.en.neg.imperative key=doc kind=string core.source="psys2 78f45863"
+@w.lang.en.neg.imperative.skip core.type of=w.lang.en.neg.imperative.skip shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.neg.imperative.skip.text core.slot of=w.lang.en.neg.imperative.skip key=text many=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.neg.imperative.skip.doc core.slot of=w.lang.en.neg.imperative.skip key=doc kind=string core.source="psys2 78f45863"
+# Words dropped from the front of a request before its verb is read (please, can, you).
+@w.lang.en.imperative.lead core.type of=w.lang.en.imperative.lead shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.imperative.lead.text core.slot of=w.lang.en.imperative.lead key=text many=true required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.imperative.lead.doc core.slot of=w.lang.en.imperative.lead key=doc kind=string core.source="psys2 78f45863"
+
+# ---- ellipsis ----
+# Fragment markers: a lead ("and what about"), a trail ("too"), a whole-sentence repeat ("again"), and the first
+# words that make a message a full sentence. `order` the order they are tried (longest first).
+@w.lang.en.ellipsis.lead core.type of=w.lang.en.ellipsis.lead shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.ellipsis.lead.text core.slot of=w.lang.en.ellipsis.lead key=text id=true required=true kind=string core.source="psys2 78f45863"
+@w.lang.en.ellipsis.lead.order core.slot of=w.lang.en.ellipsis.lead key=order required=true kind=integer min=1 core.source="psys2 78f45863"
+@w.lang.en.ellipsis.trail core.type of=w.lang.en.ellipsis.trail shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.ellipsis.trail.text core.slot of=w.lang.en.ellipsis.trail key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.ellipsis.trail.order core.slot of=w.lang.en.ellipsis.trail key=order required=true kind=integer min=1 core.source="hand-core 1"
+@w.lang.en.ellipsis.repeat core.type of=w.lang.en.ellipsis.repeat shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.ellipsis.repeat.text core.slot of=w.lang.en.ellipsis.repeat key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.ellipsis.starter core.type of=w.lang.en.ellipsis.starter shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.ellipsis.starter.text core.slot of=w.lang.en.ellipsis.starter key=text id=true required=true kind=string core.source="hand-core 1"
+# A limit of verb ellipsis, one-anaphora or shared arguments: `value`, or `min` and `max`.
+@w.lang.en.ellipsis.param core.type of=w.lang.en.ellipsis.param shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.ellipsis.param.name core.slot of=w.lang.en.ellipsis.param key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.ellipsis.param.value core.slot of=w.lang.en.ellipsis.param key=value kind=integer core.source="hand-core 1"
+@w.lang.en.ellipsis.param.min core.slot of=w.lang.en.ellipsis.param key=min kind=integer core.source="hand-core 1"
+@w.lang.en.ellipsis.param.max core.slot of=w.lang.en.ellipsis.param key=max kind=integer core.source="hand-core 1"
+@w.lang.en.ellipsis.param.doc core.slot of=w.lang.en.ellipsis.param key=doc kind=string core.source="hand-core 1"
+
+# ---- coordination and the small classes of noun-phrase readings ----
+@w.lang.en.coord.sep core.type of=w.lang.en.coord.sep shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.coord.sep.text core.slot of=w.lang.en.coord.sep key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.coord.sep.after_comma core.slot of=w.lang.en.coord.sep key=after_comma kind=atom core.source="hand-core 1"
+@w.lang.en.coord.sep.in core.slot of=w.lang.en.coord.sep key=in many=true kind=atom core.source="hand-core 1"
+# A limit of coordination: `value`; `digits=yes` and `word` for the parts that start like a determiner.
+@w.lang.en.coord.param core.type of=w.lang.en.coord.param shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.coord.param.name core.slot of=w.lang.en.coord.param key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.coord.param.value core.slot of=w.lang.en.coord.param key=value kind=integer core.source="hand-core 1"
+@w.lang.en.coord.param.digits core.slot of=w.lang.en.coord.param key=digits enum=yes core.source="hand-core 1"
+@w.lang.en.coord.param.word core.slot of=w.lang.en.coord.param key=word many=true kind=atom core.source="hand-core 1"
+@w.lang.en.coord.param.doc core.slot of=w.lang.en.coord.param key=doc kind=string core.source="hand-core 1"
+@w.lang.en.relpron core.type of=w.lang.en.relpron shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.relpron.text core.slot of=w.lang.en.relpron key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.copula core.type of=w.lang.en.copula shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.copula.text core.slot of=w.lang.en.copula key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.copula.number core.slot of=w.lang.en.copula key=number enum=sg enum=pl core.source="hand-core 1"
+# A word before "of" that takes a part of a set: `mode` ask (which part is asked), all (the whole set), count (a
+# number), bare ("of" alone, after a determiner), none.
+@w.lang.en.partitive core.type of=w.lang.en.partitive shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.partitive.text core.slot of=w.lang.en.partitive key=text kind=string core.source="hand-core 1"
+@w.lang.en.partitive.mode core.slot of=w.lang.en.partitive key=mode required=true enum=ask enum=all enum=count enum=bare enum=none core.source="hand-core 1"
+@w.lang.en.partitive.doc core.slot of=w.lang.en.partitive key=doc kind=string core.source="hand-core 1"
+@w.lang.en.other core.type of=w.lang.en.other shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.other.text core.slot of=w.lang.en.other key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.en.other.plural core.slot of=w.lang.en.other key=plural enum=yes enum=no core.source="hand-core 1"
+@w.lang.en.other.doc core.slot of=w.lang.en.other key=doc kind=string core.source="hand-core 1"
+@w.lang.en.choice core.type of=w.lang.en.choice shared=true closed=true core.source="psys2 78f45863"
+@w.lang.en.choice.text core.slot of=w.lang.en.choice key=text id=true required=true kind=string core.source="hand-core 1"
+
+# ---- words: for the world (how a host finds it by name) and its kinds ----
+@w.lang.en.word.world core.word text=grammar text="english grammar" text="grammar rules" text="parts of speech" means=w.lang.en.construction core.source="hand-core 1"
+@w.lang.en.word.det core.word text=determiner text=determiners text=article text=articles text=quantifier text=quantifiers means=w.lang.en.det core.source="psys2 78f45863"
+@w.lang.en.word.pron core.word text=pronoun text=pronouns means=w.lang.en.pron core.source="psys2 78f45863"
+@w.lang.en.word.prep core.word text=preposition text=prepositions means=w.lang.en.prep core.source="psys2 78f45863"
+@w.lang.en.word.prep.time core.word text=preposition text=prepositions means=w.lang.en.prep.time core.source="hand-core 1"
+@w.lang.en.word.irregular core.word text=plural text=plurals text=irregular means=w.lang.en.irregular core.source="hand-core 1"
+@w.lang.en.word.contraction core.word text=contraction text=contractions means=w.lang.en.contraction core.source="hand-core 1"
+@w.lang.en.word.wh core.word text="question word" text="question words" means=w.lang.en.wh core.source="hand-core 1"
+@w.lang.en.word.aux core.word text=auxiliary text="auxiliary verb" means=w.lang.en.aux core.source="hand-core 1"
+@w.lang.en.word.frame core.word text="argument frame" text=frame text=frames means=w.lang.en.frame core.source="hand-core 1"
+@w.lang.en.word.rule core.word text="grammar rule" text=production means=w.lang.en.rule core.source="hand-core 1"
+@w.lang.en.word.construction core.word text=construction text=constructions means=w.lang.en.construction core.source="hand-core 1"

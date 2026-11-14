@@ -47,6 +47,14 @@ export const MEASURES = {
   'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } } },
   'k.values': { scale: { steps: { counts: 'step' } }, step: { rank: ord }, direction: { x: { counts: 'step to the right in a picture' }, y: { counts: 'step downwards in a picture' } }, number: { value: { plain: true }, value_about: { plain: true } },
     shade: { lightness: { plain: true }, saturation: { plain: true } } },
+  // Round 12: the grammar world. Orders of trial and places in a frame are orders; the values of number words are plain.
+  'w.lang.en': {
+    det: { person: { plain: true }, value: { plain: true } }, pron: { person: { plain: true } }, anaphor: { order: ord }, prep: { arity: { counts: 'thing the preposition relates' } },
+    ordinal: { value: { plain: true } }, numeral: { value: { plain: true } },
+    inflect: { order: ord, drop: { counts: 'letter' }, min_length: { counts: 'letter' } }, frame: { priority: ord }, part: { at: ord, max_words: { counts: 'word' } },
+    'ellipsis.lead': { order: ord }, 'ellipsis.trail': { order: ord }, 'ellipsis.param': { value: { counts: 'word or part that the name of the limit says' }, min: { counts: 'word or part that the name of the limit says' }, max: { counts: 'word or part that the name of the limit says' } },
+    'coord.param': { value: { counts: 'word' } },
+  },
 };
 
 // The numeric slots of a world: [type, key] in the order of the schema.

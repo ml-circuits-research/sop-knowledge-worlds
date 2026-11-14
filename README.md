@@ -54,6 +54,11 @@ says the unit of every number of every world.
   translation, the things of a session, what a user taught, its own drawings and styles. If a second application
   would want it, it moves here.
 
+Round 12: `w.lang.en`, English grammar as facts (closed word classes, morphology, clause structure, ellipsis, 84
+plain productions of 64 constructions, 233 argument frames of the acts of `k.actions`, phrase groups), imported from
+PSys2's hand-over and read by the library's `std.grammar` (`docs/worlds/w.lang.en/WORLD.md`). It is a reusable world
+of facts (types and shards, validated like the knowledge worlds), not a `std.schema` world.
+
 Reusable worlds so far: `w.list`, `w.seating`, `w.timeline` (each with a `WORLD.md`; sessions in
 `tests/w.schemas.test.mjs`). They are validated with a newer sopworld build than the knowledge worlds
 (`tools/sopworld/w/VERSION`), because `std.schema` does not exist in the pinned 0.16.0.

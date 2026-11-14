@@ -4,7 +4,7 @@
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { World, parse } from '../sopworld/w/sopworld.mjs';
-import { WORLDS_DIR, REPO } from './worlds.mjs';
+import { WORLDS_DIR, REPO, isFactWorld } from './worlds.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -12,7 +12,7 @@ export const W_SOPWORLD = /commit: ([0-9a-f]{7})/.exec(readFileSync(join(REPO, '
 
 export function scanSchemas(root = WORLDS_DIR) {
   if (!existsSync(root)) return [];
-  return readdirSync(root).filter((d) => d.startsWith('w.') && statSync(join(root, d)).isDirectory() && existsSync(join(root, d, 'schema.sop'))).sort(byText)
+  return readdirSync(root).filter((d) => d.startsWith('w.') && statSync(join(root, d)).isDirectory() && existsSync(join(root, d, 'schema.sop')) && !isFactWorld(root, d)).sort(byText)
     .map((id) => ({ id, dir: join(root, id), schemaPath: `${id}/schema.sop`, schemaText: readFileSync(join(root, id, 'schema.sop'), 'utf8') }));
 }
 

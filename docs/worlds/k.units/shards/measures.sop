@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values): 144 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 163 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -147,3 +147,22 @@
 @k.units.measure.k.values.number.value_about k.units.measure world=k.values type=number key=value_about plain=true approximate=true core.source="hand-core 1"
 @k.units.measure.k.values.shade.lightness k.units.measure world=k.values type=shade key=lightness plain=true core.source="hand-core 1"
 @k.units.measure.k.values.shade.saturation k.units.measure world=k.values type=shade key=saturation plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.det.person k.units.measure world=w.lang.en type=det key=person plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.det.value k.units.measure world=w.lang.en type=det key=value plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.pron.person k.units.measure world=w.lang.en type=pron key=person plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.anaphor.order k.units.measure world=w.lang.en type=anaphor key=order ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.prep.arity k.units.measure world=w.lang.en type=prep key=arity counts="thing the preposition relates" core.source="hand-core 1"
+@k.units.measure.w.lang.en.ordinal.value k.units.measure world=w.lang.en type=ordinal key=value plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.numeral.value k.units.measure world=w.lang.en type=numeral key=value plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.inflect.order k.units.measure world=w.lang.en type=inflect key=order ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.inflect.drop k.units.measure world=w.lang.en type=inflect key=drop counts=letter core.source="hand-core 1"
+@k.units.measure.w.lang.en.inflect.min_length k.units.measure world=w.lang.en type=inflect key=min_length counts=letter core.source="hand-core 1"
+@k.units.measure.w.lang.en.frame.priority k.units.measure world=w.lang.en type=frame key=priority ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.part.at k.units.measure world=w.lang.en type=part key=at ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.part.max_words k.units.measure world=w.lang.en type=part key=max_words counts=word core.source="hand-core 1"
+@k.units.measure.w.lang.en.ellipsis.lead.order k.units.measure world=w.lang.en type=ellipsis.lead key=order ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.ellipsis.trail.order k.units.measure world=w.lang.en type=ellipsis.trail key=order ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.ellipsis.param.value k.units.measure world=w.lang.en type=ellipsis.param key=value counts="word or part that the name of the limit says" core.source="hand-core 1"
+@k.units.measure.w.lang.en.ellipsis.param.min k.units.measure world=w.lang.en type=ellipsis.param key=min counts="word or part that the name of the limit says" core.source="hand-core 1"
+@k.units.measure.w.lang.en.ellipsis.param.max k.units.measure world=w.lang.en type=ellipsis.param key=max counts="word or part that the name of the limit says" core.source="hand-core 1"
+@k.units.measure.w.lang.en.coord.param.value k.units.measure world=w.lang.en type=coord.param key=value counts=word core.source="hand-core 1"

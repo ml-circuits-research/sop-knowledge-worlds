@@ -56,11 +56,11 @@ test('the real questions: at least 113 of the 132 Talk failures, 34 of the 40 kn
 });
 
 test('a word for every key: each schema ends with the block of tools/key-words.mjs; every key of a named type has a word', () => {
-  for (const w of scanWorlds()) {
+  for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) { // a grammar world's keys (lhs, rhs) are not what people ask for
     const text = readFileSync(join(w.dir, 'schema.sop'), 'utf8');
     assert.equal(text, withBlock(text), `${w.id}: run node tools/key-words.mjs`);
     assert.ok(text.includes(START), w.id);
   }
   const have = new Set([...cat.keyWords.values()].flat().map((k) => `${k.type}.${k.key}`));
-  for (const [type, t] of cat.types) if (t.nameKey) for (const key of t.slots.keys()) if (key !== t.nameKey) assert.ok(have.has(`${type}.${key}`), `${type}.${key} has no word`);
+  for (const [type, t] of cat.types) if (t.nameKey && type.startsWith('k.')) for (const key of t.slots.keys()) if (key !== t.nameKey) assert.ok(have.has(`${type}.${key}`), `${type}.${key} has no word`);
 });

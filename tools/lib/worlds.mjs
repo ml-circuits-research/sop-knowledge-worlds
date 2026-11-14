@@ -11,11 +11,15 @@ export const MAX_BYTES = 300 * 1024;
 
 const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 
-// Every directory k.<world>/ with a schema.sop, and its shards/*.sop, sorted by name.
+// A reusable world written as facts (w.lang.en: types and shards, loaded like a knowledge world), not as a
+// std.schema world (w.list, w.seating: a schema a user fills, loaded with the newer build by tools/lib/schemas.mjs).
+export const isFactWorld = (root, d) => d.startsWith('w.') && !/\bstd\.schema\.world\b/.test(readFileSync(join(root, d, 'schema.sop'), 'utf8'));
+
+// Every directory k.<world>/ (and every w.<world>/ of facts) with a schema.sop, and its shards/*.sop, sorted by name.
 export function scanWorlds(root = WORLDS_DIR) {
   if (!existsSync(root)) return [];
   return readdirSync(root)
-    .filter((d) => d.startsWith('k.') && statSync(join(root, d)).isDirectory() && existsSync(join(root, d, 'schema.sop')))
+    .filter((d) => (d.startsWith('k.') || d.startsWith('w.')) && statSync(join(root, d)).isDirectory() && existsSync(join(root, d, 'schema.sop')) && (d.startsWith('k.') || isFactWorld(root, d)))
     .sort(byText)
     .map((id) => {
       const dir = join(root, id);

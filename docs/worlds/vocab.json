@@ -1,4 +1,22 @@
 {
+ "'d": [
+  "w.lang.en/shards/morphology"
+ ],
+ "'ll": [
+  "w.lang.en/shards/morphology"
+ ],
+ "'m": [
+  "w.lang.en/shards/morphology"
+ ],
+ "'re": [
+  "w.lang.en/shards/morphology"
+ ],
+ "'s": [
+  "w.lang.en/shards/grammar"
+ ],
+ "'ve": [
+  "w.lang.en/shards/morphology"
+ ],
  "1st": [
   "k.objects/shards/noto-award-medal-01"
  ],
@@ -45,7 +63,8 @@
   "k.attributes/shards/attributes",
   "k.layouts/schema.sop",
   "k.values/shards/numbers",
-  "k.words/shards/a"
+  "k.words/shards/a",
+  "w.lang.en/shards/determiners"
  ],
  "a bit": [
   "k.values/shards/scales"
@@ -231,13 +250,15 @@
   "k.values/schema.sop",
   "k.wearables/schema.sop",
   "k.words/shards/ab",
+  "w.lang.en/shards/prepositions",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
  "above": [
   "k.layouts/shards/layouts",
   "k.objects/schema.sop",
-  "k.words/shards/ab"
+  "k.words/shards/ab",
+  "w.lang.en/shards/prepositions"
  ],
  "abraham": [
   "k.words/shards/ab"
@@ -497,7 +518,8 @@
   "k.scenes/shards/scenes-town"
  ],
  "across": [
-  "k.words/shards/ac"
+  "k.words/shards/ac",
+  "w.lang.en/shards/prepositions"
  ],
  "act": [
   "k.actions/schema.sop",
@@ -543,7 +565,8 @@
   "k.words/shards/ac"
  ],
  "actually": [
-  "k.words/shards/ac"
+  "k.words/shards/ac",
+  "w.lang.en/shards/clauses"
  ],
  "acute": [
   "k.words/shards/ac"
@@ -1142,7 +1165,8 @@
  "after": [
   "k.attributes/shards/aspects",
   "k.time/schema.sop",
-  "k.words/shards/af"
+  "k.words/shards/af",
+  "w.lang.en/shards/prepositions"
  ],
  "after particle": [
   "k.actions/schema.sop"
@@ -1176,7 +1200,8 @@
   "k.geo/shards/africa"
  ],
  "again": [
-  "k.words/shards/ag"
+  "k.words/shards/ag",
+  "w.lang.en/shards/ellipsis"
  ],
  "agana": [
   "k.geo/shards/oceania"
@@ -1659,7 +1684,8 @@
  "all": [
   "k.values/shards/scales",
   "k.values/shards/sets",
-  "k.words/shards/al"
+  "k.words/shards/al",
+  "w.lang.en/shards/grammar"
  ],
  "all around": [
   "k.layouts/shards/layouts"
@@ -1773,7 +1799,8 @@
   "k.words/shards/al"
  ],
  "along": [
-  "k.words/shards/al"
+  "k.words/shards/al",
+  "w.lang.en/shards/prepositions"
  ],
  "along the edge": [
   "k.layouts/shards/layouts"
@@ -1815,7 +1842,9 @@
  ],
  "also": [
   "k.parts/schema.sop",
-  "k.words/shards/al"
+  "k.words/shards/al",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "altai mountains": [
   "k.geo/shards/asia"
@@ -1867,7 +1896,8 @@
   "k.words/shards/al"
  ],
  "always": [
-  "k.words/shards/al"
+  "k.words/shards/al",
+  "w.lang.en/shards/clauses"
  ],
  "alīgarh": [
   "k.geo/shards/psys2-cities-asia"
@@ -2095,7 +2125,8 @@
  ],
  "an": [
   "k.values/shards/numbers",
-  "k.words/shards/an"
+  "k.words/shards/an",
+  "w.lang.en/shards/determiners"
  ],
  "an additional": [
   "k.values/shards/sets"
@@ -2141,6 +2172,9 @@
  ],
  "anamudi": [
   "k.geo/shards/asia"
+ ],
+ "anaphor": [
+  "k.units/shards/measures"
  ],
  "anarchist": [
   "k.words/shards/an"
@@ -2191,6 +2225,29 @@
  ],
  "ancients": [
   "k.words/shards/an"
+ ],
+ "and": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
+ ],
+ "and again": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "and also": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "and how about": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "and now": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "and then": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "and what about": [
+  "w.lang.en/shards/ellipsis"
  ],
  "andaman sea": [
   "k.geo/shards/seas"
@@ -2469,7 +2526,9 @@
  ],
  "another": [
   "k.values/shards/sets",
-  "k.words/shards/an"
+  "k.words/shards/an",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar"
  ],
  "ansan-si": [
   "k.geo/shards/psys2-cities-asia"
@@ -2742,6 +2801,9 @@
  "apart": [
   "k.layouts/shards/layouts",
   "k.words/shards/ap"
+ ],
+ "apart from": [
+  "w.lang.en/shards/grammar"
  ],
  "apartment": [
   "k.words/shards/ap"
@@ -3170,7 +3232,10 @@
  ],
  "are": [
   "k.words/shards/ar",
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
  ],
  "area": [
   "k.attributes/shards/aspects",
@@ -3220,6 +3285,9 @@
  "argument": [
   "k.words/shards/ar"
  ],
+ "argument frame": [
+  "w.lang.en/schema.sop"
+ ],
  "argun": [
   "k.geo/shards/africa"
  ],
@@ -3243,6 +3311,9 @@
  ],
  "arithmetic": [
   "k.words/shards/ar"
+ ],
+ "arity": [
+  "k.units/shards/measures"
  ],
  "arizona": [
   "k.words/shards/ar"
@@ -3377,7 +3448,8 @@
   "k.layouts/shards/layouts",
   "k.layouts/shards/psys2",
   "k.space/schema.sop",
-  "k.words/shards/ar"
+  "k.words/shards/ar",
+  "w.lang.en/shards/prepositions"
  ],
  "around the neck": [
   "k.wearables/shards/places"
@@ -3504,7 +3576,11 @@
   "k.food/shards/vegetables"
  ],
  "article": [
-  "k.words/shards/ar"
+  "k.words/shards/ar",
+  "w.lang.en/schema.sop"
+ ],
+ "articles": [
+  "w.lang.en/schema.sop"
  ],
  "articulate": [
   "k.words/shards/ar"
@@ -3584,7 +3660,11 @@
  "as": [
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-save",
-  "k.words/shards/as"
+  "k.words/shards/as",
+  "w.lang.en/shards/prepositions"
+ ],
+ "as a rule": [
+  "w.lang.en/shards/clauses"
  ],
  "as of": [
   "k.geo/schema.sop"
@@ -3594,6 +3674,9 @@
  ],
  "as sulaymānīyah": [
   "k.geo/shards/psys2-cities-asia"
+ ],
+ "as well": [
+  "w.lang.en/shards/ellipsis"
  ],
  "as_of": [
   "k.units/shards/measures"
@@ -3859,7 +3942,9 @@
   "k.commonsense/schema.sop",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
+  "k.units/shards/measures",
   "k.words/shards/at",
+  "w.lang.en/shards/prepositions",
   "w.seating/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -4272,7 +4357,11 @@
   "k.scenes/shards/scenes-other"
  ],
  "auxiliary": [
-  "k.words/shards/au"
+  "k.words/shards/au",
+  "w.lang.en/schema.sop"
+ ],
+ "auxiliary verb": [
+  "w.lang.en/schema.sop"
  ],
  "avail": [
   "k.words/shards/av"
@@ -4629,6 +4718,9 @@
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-b"
+ ],
+ "back to": [
+  "w.lang.en/shards/grammar"
  ],
  "back up": [
   "k.actions/shards/verbs-save"
@@ -6894,7 +6986,8 @@
   "k.words/shards/be"
  ],
  "before": [
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/prepositions"
  ],
  "beg": [
   "k.words/shards/be"
@@ -6944,7 +7037,8 @@
  "behind": [
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-sky-weather-03",
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/prepositions"
  ],
  "behold": [
   "k.words/shards/be"
@@ -7149,7 +7243,8 @@
  ],
  "below": [
   "k.objects/schema.sop",
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/prepositions"
  ],
  "belt": [
   "k.attributes/shards/drawn-mulberry",
@@ -7417,7 +7512,8 @@
   "k.words/shards/be"
  ],
  "beside": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "w.lang.en/shards/prepositions"
  ],
  "besides": [
   "k.words/shards/be"
@@ -7485,7 +7581,8 @@
   "k.geo/shards/asia"
  ],
  "between": [
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/prepositions"
  ],
  "beverage": [
   "k.objects/shards/noto-drink-01",
@@ -9615,7 +9712,8 @@
  ],
  "both": [
   "k.values/shards/sets",
-  "k.words/shards/bo"
+  "k.words/shards/bo",
+  "w.lang.en/shards/grammar"
  ],
  "both of them": [
   "k.values/shards/sets"
@@ -11925,7 +12023,10 @@
   "k.words/shards/bu"
  ],
  "but": [
-  "k.words/shards/bu"
+  "k.words/shards/bu",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
  ],
  "butch": [
   "k.words/shards/bu"
@@ -12118,7 +12219,11 @@
  "by": [
   "k.actions/shards/verbs-change",
   "k.attributes/schema.sop",
-  "k.words/shards/by"
+  "k.words/shards/by",
+  "w.lang.en/shards/prepositions"
+ ],
+ "by default": [
+  "w.lang.en/shards/clauses"
  ],
  "by word": [
   "k.attributes/schema.sop"
@@ -12311,7 +12416,8 @@
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-c",
-  "k.words/shards/ca"
+  "k.words/shards/ca",
+  "w.lang.en/shards/morphology"
  ],
  "cactus_left_arm": [
   "k.objects/shards/food-2"
@@ -12771,7 +12877,9 @@
   "k.objects/shards/noto-food-prepared-05",
   "k.objects/shards/noto-office-03",
   "k.objects/shards/things-3",
-  "k.words/shards/ca"
+  "k.words/shards/ca",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "can not": [
   "k.animals/schema.sop"
@@ -12793,6 +12901,9 @@
  ],
  "can tho": [
   "k.geo/shards/asia"
+ ],
+ "can't": [
+  "w.lang.en/shards/morphology"
  ],
  "canada": [
   "k.attributes/shards/same-c",
@@ -12997,7 +13108,8 @@
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
-  "k.commonsense/schema.sop"
+  "k.commonsense/schema.sop",
+  "w.lang.en/shards/morphology"
  ],
  "canoe": [
   "k.attributes/shards/drawn-noto",
@@ -18959,13 +19071,17 @@
   "k.objects/shards/noto-place-building-01",
   "k.objects/shards/noto-transport-ground-06",
   "k.scenes/shards/things-c",
-  "k.words/shards/co-2"
+  "k.words/shards/co-2",
+  "w.lang.en/schema.sop"
  ],
  "construction site": [
   "k.scenes/shards/scenes-town"
  ],
  "construction worker": [
   "k.people/shards/roles-jobs"
+ ],
+ "constructions": [
+  "w.lang.en/schema.sop"
  ],
  "consuelo peak": [
   "k.geo/shards/oceania"
@@ -19105,6 +19221,12 @@
  ],
  "contract": [
   "k.words/shards/co-2"
+ ],
+ "contraction": [
+  "w.lang.en/schema.sop"
+ ],
+ "contractions": [
+  "w.lang.en/schema.sop"
  ],
  "contractor": [
   "k.words/shards/co-2"
@@ -19357,6 +19479,9 @@
  ],
  "coops": [
   "k.objects/shards/places-2"
+ ],
+ "coord.param": [
+  "k.units/shards/measures"
  ],
  "coordinate": [
   "k.words/shards/co-2"
@@ -19825,6 +19950,10 @@
  ],
  "coughing": [
   "k.words/shards/co-2"
+ ],
+ "could": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "council": [
   "k.words/shards/co-2"
@@ -23356,6 +23485,9 @@
  "destruction": [
   "k.words/shards/de"
  ],
+ "det": [
+  "k.units/shards/measures"
+ ],
  "detach": [
   "k.actions/shards/verbs-take_apart"
  ],
@@ -23399,6 +23531,12 @@
  ],
  "determine": [
   "k.words/shards/de"
+ ],
+ "determiner": [
+  "w.lang.en/schema.sop"
+ ],
+ "determiners": [
+  "w.lang.en/schema.sop"
  ],
  "detest": [
   "k.words/shards/de"
@@ -23637,7 +23775,9 @@
   "k.words/shards/di"
  ],
  "did": [
-  "k.words/shards/do"
+  "k.words/shards/do",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "die": [
   "k.objects/shards/noto-game-02",
@@ -24501,7 +24641,9 @@
   "k.objects/shards/noto-office-02",
   "k.people/schema.sop",
   "k.scenes/schema.sop",
-  "k.words/shards/do"
+  "k.words/shards/do",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "do a job": [
   "k.actions/shards/actions-body-social-nature"
@@ -24511,6 +24653,18 @@
  ],
  "do away with": [
   "k.actions/shards/verbs-remove"
+ ],
+ "do it again": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "do it for": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "do that again": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "do the same for": [
+  "w.lang.en/shards/ellipsis"
  ],
  "dobson": [
   "k.words/shards/do"
@@ -24610,7 +24764,9 @@
   "k.attributes/shards/aspects",
   "k.body/schema.sop",
   "k.people/schema.sop",
-  "k.space/schema.sop"
+  "k.space/schema.sop",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "dog": [
   "k.animals/shards/mammals",
@@ -25665,6 +25821,7 @@
   "k.objects/shards/noto-sky-weather-06",
   "k.objects/shards/noto-transport-ground-06",
   "k.shapes/shards/shapes",
+  "k.units/shards/measures",
   "k.words/shards/dr"
  ],
  "drop down": [
@@ -26074,6 +26231,9 @@
  "durham heights": [
   "k.geo/shards/north-america"
  ],
+ "during": [
+  "w.lang.en/shards/prepositions"
+ ],
  "durmitor": [
   "k.geo/shards/europe"
  ],
@@ -26208,7 +26368,8 @@
  ],
  "each": [
   "k.values/shards/sets",
-  "k.words/shards/ea"
+  "k.words/shards/ea",
+  "w.lang.en/shards/grammar"
  ],
  "each of them": [
   "k.values/shards/sets"
@@ -26303,6 +26464,9 @@
  ],
  "earlier": [
   "k.words/shards/ea"
+ ],
+ "earlier than": [
+  "w.lang.en/shards/prepositions"
  ],
  "earliest": [
   "k.words/shards/ea"
@@ -26826,7 +26990,9 @@
  "eight": [
   "k.objects/shards/noto-game-01",
   "k.values/shards/numbers",
-  "k.words/shards/ei"
+  "k.words/shards/ei",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "eight-sided": [
   "k.shapes/shards/shapes"
@@ -26840,7 +27006,8 @@
  ],
  "eighth": [
   "k.values/shards/numbers",
-  "k.words/shards/ei"
+  "k.words/shards/ei",
+  "w.lang.en/shards/numbers"
  ],
  "eightieth": [
   "k.values/shards/numbers"
@@ -27135,7 +27302,8 @@
  ],
  "eleven": [
   "k.values/shards/numbers",
-  "k.words/shards/el"
+  "k.words/shards/el",
+  "w.lang.en/shards/numbers"
  ],
  "eleventh": [
   "k.values/shards/numbers"
@@ -27190,6 +27358,15 @@
  ],
  "ellipses": [
   "k.values/shards/shapes"
+ ],
+ "ellipsis.lead": [
+  "k.units/shards/measures"
+ ],
+ "ellipsis.param": [
+  "k.units/shards/measures"
+ ],
+ "ellipsis.trail": [
+  "k.units/shards/measures"
  ],
  "elliptical": [
   "k.shapes/shards/shapes",
@@ -27567,6 +27744,9 @@
  ],
  "english channel": [
   "k.geo/shards/seas"
+ ],
+ "english grammar": [
+  "w.lang.en/schema.sop"
  ],
  "englishman": [
   "k.words/shards/en"
@@ -28178,7 +28358,8 @@
  ],
  "every": [
   "k.values/shards/sets",
-  "k.words/shards/ev"
+  "k.words/shards/ev",
+  "w.lang.en/shards/grammar"
  ],
  "every one": [
   "k.values/shards/sets"
@@ -28191,7 +28372,8 @@
  ],
  "everything": [
   "k.values/shards/scales",
-  "k.values/shards/sets"
+  "k.values/shards/sets",
+  "w.lang.en/shards/grammar"
  ],
  "everything else": [
   "k.values/shards/sets"
@@ -28286,7 +28468,8 @@
   "k.words/shards/ex"
  ],
  "except": [
-  "k.words/shards/ex"
+  "k.words/shards/ex",
+  "w.lang.en/shards/grammar"
  ],
  "exception": [
   "k.words/shards/ex"
@@ -29705,7 +29888,8 @@
   "k.words/shards/fe"
  ],
  "few": [
-  "k.words/shards/fe"
+  "k.words/shards/fe",
+  "w.lang.en/shards/determiners"
  ],
  "fewer": [
   "k.values/shards/scales"
@@ -29813,7 +29997,8 @@
  ],
  "fifth": [
   "k.values/shards/numbers",
-  "k.words/shards/fi"
+  "k.words/shards/fi",
+  "w.lang.en/shards/numbers"
  ],
  "fifth_post": [
   "k.objects/shards/structures"
@@ -30419,7 +30604,8 @@
   "k.objects/shards/noto-sky-weather-02",
   "k.values/shards/numbers",
   "k.values/shards/sets",
-  "k.words/shards/fi"
+  "k.words/shards/fi",
+  "w.lang.en/shards/numbers"
  ],
  "first aid bag": [
   "k.attributes/shards/drawn-openmoji",
@@ -30646,7 +30832,9 @@
  ],
  "five": [
   "k.values/shards/numbers",
-  "k.words/shards/fi"
+  "k.words/shards/fi",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "five-pointed star": [
   "k.shapes/shards/shapes"
@@ -31659,7 +31847,11 @@
   "k.attributes/schema.sop",
   "k.body/schema.sop",
   "k.wearables/schema.sop",
+  "w.lang.en/shards/prepositions",
   "w.list/schema.sop"
+ ],
+ "for now": [
+  "w.lang.en/shards/clauses"
  ],
  "for sure": [
   "k.values/shards/psys2"
@@ -32108,7 +32300,9 @@
  "four": [
   "k.objects/shards/noto-plant-other-02",
   "k.values/shards/numbers",
-  "k.words/shards/fo"
+  "k.words/shards/fo",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "four corners": [
   "k.layouts/shards/layouts"
@@ -32132,7 +32326,8 @@
  ],
  "fourth": [
   "k.values/shards/numbers",
-  "k.words/shards/fo"
+  "k.words/shards/fo",
+  "w.lang.en/shards/numbers"
  ],
  "fourth_knob": [
   "k.objects/shards/home"
@@ -32241,7 +32436,9 @@
   "k.parts/shards/f",
   "k.scenes/shards/things-f",
   "k.units/schema.sop",
-  "k.words/shards/fr"
+  "k.units/shards/measures",
+  "k.words/shards/fr",
+  "w.lang.en/schema.sop"
  ],
  "frame_1": [
   "k.objects/shards/places-3"
@@ -32266,7 +32463,8 @@
  ],
  "frames": [
   "k.objects/shards/noto-light-video-01",
-  "k.objects/shards/things"
+  "k.objects/shards/things",
+  "w.lang.en/schema.sop"
  ],
  "framing": [
   "k.words/shards/fr"
@@ -32677,7 +32875,20 @@
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-remove",
   "k.parts/schema.sop",
+  "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
+ ],
+ "from here on": [
+  "w.lang.en/shards/clauses"
+ ],
+ "from now on": [
+  "w.lang.en/shards/clauses"
+ ],
+ "from then on": [
+  "w.lang.en/shards/clauses"
+ ],
+ "from today on": [
+  "w.lang.en/shards/clauses"
  ],
  "fromage frais": [
   "k.attributes/shards/drawn-mulberry",
@@ -33086,7 +33297,8 @@
  "fungus": [
   "k.objects/shards/noto-food-vegetable-03",
   "k.objects/shards/noto-plant-other-02",
-  "k.words/shards/fu"
+  "k.words/shards/fu",
+  "w.lang.en/shards/morphology"
  ],
  "funk": [
   "k.words/shards/fu"
@@ -35192,7 +35404,14 @@
   "k.words/shards/gr"
  ],
  "grammar": [
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.lang.en/schema.sop"
+ ],
+ "grammar rule": [
+  "w.lang.en/schema.sop"
+ ],
+ "grammar rules": [
+  "w.lang.en/schema.sop"
  ],
  "gramme": [
   "k.units/shards/core"
@@ -37646,7 +37865,9 @@
   "k.scenes/schema.sop",
   "k.space/schema.sop",
   "k.units/shards/measures",
-  "k.words/shards/ha"
+  "k.words/shards/ha",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "hash": [
   "k.words/shards/ha"
@@ -37801,7 +38022,10 @@
  "have": [
   "k.parts/schema.sop",
   "k.scenes/schema.sop",
-  "k.words/shards/ha"
+  "k.words/shards/ha",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
  ],
  "have a chat": [
   "k.actions/shards/actions-mind-talk"
@@ -37903,7 +38127,11 @@
   "k.food/shards/grains-nuts-and-pulses"
  ],
  "he": [
-  "k.words/shards/he"
+  "k.words/shards/he",
+  "w.lang.en/shards/pronouns"
+ ],
+ "he's": [
+  "w.lang.en/shards/morphology"
  ],
  "head": [
   "k.actions/shards/actions-move",
@@ -38599,6 +38827,10 @@
  "hepatitis": [
   "k.words/shards/he"
  ],
+ "her": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/pronouns"
+ ],
  "hera": [
   "k.words/shards/he"
  ],
@@ -38631,10 +38863,14 @@
   "k.words/shards/he"
  ],
  "here": [
-  "k.words/shards/he"
+  "k.words/shards/he",
+  "w.lang.en/shards/grammar"
  ],
  "here and there": [
   "k.layouts/shards/layouts"
+ ],
+ "here's": [
+  "w.lang.en/shards/morphology"
  ],
  "hereafter": [
   "k.words/shards/he"
@@ -38957,6 +39193,9 @@
   "k.parts/shards/h",
   "k.words/shards/hi"
  ],
+ "him": [
+  "w.lang.en/shards/pronouns"
+ ],
  "himalayas": [
   "k.attributes/shards/same-h",
   "k.geo/shards/asia",
@@ -39083,6 +39322,10 @@
   "k.attributes/shards/same-h",
   "k.geo/shards/psys2-cities-asia",
   "k.words/shards/hi"
+ ],
+ "his": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/pronouns"
  ],
  "hispanic": [
   "k.words/shards/hi"
@@ -40197,6 +40440,13 @@
  "hoverla": [
   "k.geo/shards/europe"
  ],
+ "how": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
+ ],
+ "how about": [
+  "w.lang.en/shards/ellipsis"
+ ],
  "how big": [
   "k.attributes/schema.sop"
  ],
@@ -40208,13 +40458,19 @@
  ],
  "how many": [
   "k.scenes/schema.sop",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/grammar",
   "w.list/schema.sop"
  ],
  "how many seats": [
   "w.seating/schema.sop"
  ],
  "how much": [
+  "w.lang.en/shards/clauses",
   "w.list/schema.sop"
+ ],
+ "how's": [
+  "w.lang.en/shards/morphology"
  ],
  "howard": [
   "k.words/shards/ho"
@@ -40710,7 +40966,27 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "i": [
-  "k.words/shards/i"
+  "k.words/shards/i",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/pronouns"
+ ],
+ "i mean": [
+  "w.lang.en/shards/clauses"
+ ],
+ "i meant": [
+  "w.lang.en/shards/clauses"
+ ],
+ "i'd": [
+  "w.lang.en/shards/morphology"
+ ],
+ "i'll": [
+  "w.lang.en/shards/morphology"
+ ],
+ "i'm": [
+  "w.lang.en/shards/morphology"
+ ],
+ "i've": [
+  "w.lang.en/shards/morphology"
  ],
  "ia": [
   "k.words/shards/ia"
@@ -41188,6 +41464,7 @@
   "k.commonsense/schema.sop",
   "k.space/schema.sop",
   "k.words/shards/in",
+  "w.lang.en/shards/prepositions",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -41199,6 +41476,9 @@
  ],
  "in front": [
   "k.values/shards/directions"
+ ],
+ "in future": [
+  "w.lang.en/shards/clauses"
  ],
  "in the background": [
   "k.values/shards/directions"
@@ -41214,6 +41494,9 @@
  ],
  "in the foreground": [
   "k.values/shards/directions"
+ ],
+ "in the future": [
+  "w.lang.en/shards/clauses"
  ],
  "in the hair": [
   "k.wearables/shards/places"
@@ -41543,6 +41826,9 @@
  "inflation": [
   "k.words/shards/in"
  ],
+ "inflect": [
+  "k.units/shards/measures"
+ ],
  "inflict": [
   "k.words/shards/in"
  ],
@@ -41765,7 +42051,8 @@
   "k.objects/shards/places",
   "k.objects/shards/things",
   "k.parts/schema.sop",
-  "k.words/shards/in"
+  "k.words/shards/in",
+  "w.lang.en/shards/prepositions"
  ],
  "inside a house": [
   "k.layouts/shards/layouts"
@@ -41828,7 +42115,8 @@
   "k.words/shards/in"
  ],
  "instead": [
-  "k.words/shards/in"
+  "k.words/shards/in",
+  "w.lang.en/shards/ellipsis"
  ],
  "instinct": [
   "k.words/shards/in"
@@ -42042,7 +42330,8 @@
   "k.words/shards/in"
  ],
  "into": [
-  "k.actions/shards/verbs-change"
+  "k.actions/shards/verbs-change",
+  "w.lang.en/shards/prepositions"
  ],
  "intoxication": [
   "k.words/shards/in"
@@ -42293,7 +42582,8 @@
   "k.geo/shards/asia"
  ],
  "irregular": [
-  "k.words/shards/ir"
+  "k.words/shards/ir",
+  "w.lang.en/schema.sop"
  ],
  "irrigate": [
   "k.actions/shards/actions-make-change"
@@ -42317,7 +42607,10 @@
  "is": [
   "k.attributes/shards/aspects",
   "k.people/schema.sop",
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
  ],
  "is a": [
   "k.commonsense/schema.sop",
@@ -42442,7 +42735,11 @@
   "k.words/shards/is"
  ],
  "it": [
-  "k.words/shards/it"
+  "k.words/shards/it",
+  "w.lang.en/shards/pronouns"
+ ],
+ "it's": [
+  "w.lang.en/shards/morphology"
  ],
  "italian": [
   "k.words/shards/it"
@@ -42477,6 +42774,9 @@
  ],
  "itiquira": [
   "k.geo/shards/south-america"
+ ],
+ "its": [
+  "w.lang.en/shards/determiners"
  ],
  "ituri": [
   "k.geo/shards/africa"
@@ -46706,7 +47006,8 @@
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
   "k.values/shards/sets",
-  "k.words/shards/la"
+  "k.words/shards/la",
+  "w.lang.en/shards/numbers"
  ],
  "last quarter moon": [
   "k.attributes/shards/drawn-noto",
@@ -46754,6 +47055,9 @@
  ],
  "later": [
   "k.words/shards/la"
+ ],
+ "later than": [
+  "w.lang.en/shards/prepositions"
  ],
  "lateral": [
   "k.words/shards/la"
@@ -48405,6 +48709,9 @@
  "let know": [
   "k.actions/shards/actions-mind-talk"
  ],
+ "let's": [
+  "w.lang.en/shards/morphology"
+ ],
  "letter": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-l",
@@ -48994,7 +49301,8 @@
  ],
  "like": [
   "k.actions/schema.sop",
-  "k.words/shards/li"
+  "k.words/shards/li",
+  "w.lang.en/shards/prepositions"
  ],
  "liked": [
   "k.words/shards/li"
@@ -51131,6 +51439,9 @@
  "make straight": [
   "k.actions/shards/actions-make-change"
  ],
+ "make that": [
+  "w.lang.en/shards/clauses"
+ ],
  "make-believe": [
   "k.words/shards/ma"
  ],
@@ -51659,7 +51970,8 @@
   "k.shapes/schema.sop",
   "k.time/schema.sop",
   "k.values/shards/scales",
-  "k.words/shards/ma"
+  "k.words/shards/ma",
+  "w.lang.en/shards/determiners"
  ],
  "many-sided shape": [
   "k.shapes/shards/shapes"
@@ -52469,7 +52781,11 @@
   "k.geo/shards/asia"
  ],
  "max": [
+  "k.units/shards/measures",
   "k.words/shards/ma"
+ ],
+ "max_words": [
+  "k.units/shards/measures"
  ],
  "maxim": [
   "k.words/shards/ma"
@@ -52588,7 +52904,8 @@
   "k.words/shards/mc"
  ],
  "me": [
-  "k.words/shards/me"
+  "k.words/shards/me",
+  "w.lang.en/shards/pronouns"
  ],
  "mead": [
   "k.words/shards/me"
@@ -54068,7 +54385,11 @@
  "min": [
   "k.attributes/shards/same-m",
   "k.geo/shards/asia",
+  "k.units/shards/measures",
   "k.words/shards/mi"
+ ],
+ "min_length": [
+  "k.units/shards/measures"
  ],
  "mina": [
   "k.words/shards/mi"
@@ -56966,6 +57287,10 @@
  "mwanza": [
   "k.geo/shards/africa"
  ],
+ "my": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/pronouns"
+ ],
  "myanmar": [
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders",
@@ -57043,6 +57368,9 @@
  ],
  "n'djamena": [
   "k.geo/shards/africa"
+ ],
+ "n't": [
+  "w.lang.en/shards/morphology"
  ],
  "n. cyprus": [
   "k.geo/shards/asia"
@@ -57588,7 +57916,8 @@
  ],
  "near": [
   "k.values/shards/scales",
-  "k.words/shards/ne"
+  "k.words/shards/ne",
+  "w.lang.en/shards/prepositions"
  ],
  "near opposite": [
   "k.words/schema.sop"
@@ -57989,7 +58318,8 @@
   "k.objects/shards/noto-place-building-04",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
-  "k.words/shards/ne"
+  "k.words/shards/ne",
+  "w.lang.en/shards/determiners"
  ],
  "new amsterdam": [
   "k.geo/shards/south-america"
@@ -58104,7 +58434,11 @@
  ],
  "next": [
   "k.values/shards/sets",
-  "k.words/shards/ne"
+  "k.words/shards/ne",
+  "w.lang.en/shards/prepositions"
+ ],
+ "next to": [
+  "w.lang.en/shards/prepositions"
  ],
  "next to each other": [
   "k.layouts/shards/layouts"
@@ -58312,7 +58646,9 @@
  ],
  "nine": [
   "k.values/shards/numbers",
-  "k.words/shards/ni"
+  "k.words/shards/ni",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "nineteen": [
   "k.values/shards/numbers",
@@ -58390,7 +58726,8 @@
  ],
  "ninth": [
   "k.values/shards/numbers",
-  "k.words/shards/ni"
+  "k.words/shards/ni",
+  "w.lang.en/shards/numbers"
  ],
  "nip": [
   "k.actions/shards/actions-body-social-nature",
@@ -58441,13 +58778,20 @@
   "k.objects/shards/noto-sound-02",
   "k.values/shards/psys2",
   "k.values/shards/scales",
-  "k.words/shards/no"
+  "k.words/shards/no",
+  "w.lang.en/shards/clauses"
+ ],
+ "no sorry": [
+  "w.lang.en/shards/clauses"
  ],
  "no thank you": [
   "k.values/shards/psys2"
  ],
  "no thanks": [
   "k.values/shards/psys2"
+ ],
+ "no wait": [
+  "w.lang.en/shards/clauses"
  ],
  "no way": [
   "k.values/shards/psys2"
@@ -59216,7 +59560,8 @@
   "k.geo/shards/europe"
  ],
  "now": [
-  "k.words/shards/no"
+  "k.words/shards/no",
+  "w.lang.en/shards/ellipsis"
  ],
  "nowadays": [
   "k.words/shards/no"
@@ -59253,7 +59598,8 @@
  ],
  "nucleus": [
   "k.objects/shards/noto-animal-bug-02",
-  "k.words/shards/nu"
+  "k.words/shards/nu",
+  "w.lang.en/shards/morphology"
  ],
  "nude": [
   "k.words/shards/nu"
@@ -59303,6 +59649,9 @@
   "k.attributes/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/nu"
+ ],
+ "numeral": [
+  "k.units/shards/measures"
  ],
  "numeric": [
   "k.attributes/shards/aspects"
@@ -59691,7 +60040,8 @@
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-o",
-  "k.words/shards/oc"
+  "k.words/shards/oc",
+  "w.lang.en/shards/morphology"
  ],
  "octopuses": [
   "k.animals/shards/invertebrates"
@@ -59743,7 +60093,9 @@
  ],
  "of": [
   "k.actions/shards/verbs-change",
-  "k.faces/schema.sop"
+  "k.faces/schema.sop",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/prepositions"
  ],
  "of course": [
   "k.values/shards/psys2"
@@ -60100,6 +60452,7 @@
   "k.scenes/schema.sop",
   "k.wearables/schema.sop",
   "k.words/shards/on",
+  "w.lang.en/shards/prepositions",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -60140,6 +60493,9 @@
   "k.values/shards/numbers",
   "k.words/shards/on"
  ],
+ "once more": [
+  "w.lang.en/shards/ellipsis"
+ ],
  "oncoming": [
   "k.objects/shards/noto-transport-ground-02",
   "k.objects/shards/noto-transport-ground-03"
@@ -60177,7 +60533,10 @@
  "one": [
   "k.objects/shards/noto-animal-mammal-05",
   "k.values/shards/numbers",
-  "k.words/shards/on"
+  "k.words/shards/on",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/numbers"
  ],
  "one above the other": [
   "k.layouts/shards/layouts"
@@ -60199,6 +60558,9 @@
  ],
  "one more": [
   "k.values/shards/sets"
+ ],
+ "one more time": [
+  "w.lang.en/shards/ellipsis"
  ],
  "one quarter": [
   "k.values/shards/numbers"
@@ -60223,6 +60585,9 @@
  ],
  "onega": [
   "k.geo/shards/europe"
+ ],
+ "ones": [
+  "w.lang.en/shards/grammar"
  ],
  "ongarue": [
   "k.geo/shards/oceania"
@@ -60262,6 +60627,9 @@
  "onon": [
   "k.geo/shards/europe"
  ],
+ "onto": [
+  "w.lang.en/shards/prepositions"
+ ],
  "ooh": [
   "k.words/shards/oo"
  ],
@@ -60269,7 +60637,8 @@
   "k.objects/shards/noto-drink-01"
  ],
  "oops": [
-  "k.objects/shards/noto-drink-02"
+  "k.objects/shards/noto-drink-02",
+  "w.lang.en/shards/clauses"
  ],
  "open": [
   "k.actions/shards/actions-hands",
@@ -60446,7 +60815,11 @@
   "k.layouts/schema.sop"
  ],
  "or": [
-  "k.words/shards/or"
+  "k.words/shards/or",
+  "w.lang.en/shards/grammar"
+ ],
+ "or rather": [
+  "w.lang.en/shards/clauses"
  ],
  "ora": [
   "k.words/shards/os"
@@ -60609,6 +60982,7 @@
  ],
  "ordinal": [
   "k.units/schema.sop",
+  "k.units/shards/measures",
   "k.values/shards/numbers"
  ],
  "ordinance": [
@@ -60809,10 +61183,12 @@
  "other": [
   "k.actions/shards/acts",
   "k.values/shards/sets",
-  "k.words/shards/ot"
+  "k.words/shards/ot",
+  "w.lang.en/shards/grammar"
  ],
  "others": [
-  "k.values/shards/sets"
+  "k.values/shards/sets",
+  "w.lang.en/shards/grammar"
  ],
  "otherwise": [
   "k.words/shards/ot"
@@ -60878,6 +61254,9 @@
  ],
  "ounces": [
   "k.units/shards/core"
+ ],
+ "our": [
+  "w.lang.en/shards/determiners"
  ],
  "out": [
   "k.words/shards/ou"
@@ -61005,7 +61384,8 @@
   "k.words/shards/ou"
  ],
  "outside": [
-  "k.words/shards/ou"
+  "k.words/shards/ou",
+  "w.lang.en/shards/prepositions"
  ],
  "outsider": [
   "k.words/shards/ou"
@@ -61057,7 +61437,8 @@
   "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-food-prepared-04",
   "k.objects/shards/noto-place-other-01",
-  "k.words/shards/ov"
+  "k.words/shards/ov",
+  "w.lang.en/shards/prepositions"
  ],
  "over the eyes": [
   "k.wearables/shards/places"
@@ -62348,6 +62729,9 @@
   "k.words/schema.sop",
   "k.words/shards/pa"
  ],
+ "parts of speech": [
+  "w.lang.en/schema.sop"
+ ],
  "party": [
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/noto-drink-02",
@@ -63544,6 +63928,7 @@
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-p",
+  "k.units/shards/measures",
   "k.words/shards/pe",
   "w.seating/schema.sop"
  ],
@@ -65768,7 +66153,8 @@
  ],
  "please": [
   "k.values/shards/psys2",
-  "k.words/shards/pl"
+  "k.words/shards/pl",
+  "w.lang.en/shards/ellipsis"
  ],
  "pleased": [
   "k.feelings/shards/feelings",
@@ -65919,7 +66305,11 @@
   "k.scenes/shards/things-p"
  ],
  "plural": [
-  "k.words/shards/pl"
+  "k.words/shards/pl",
+  "w.lang.en/schema.sop"
+ ],
+ "plurals": [
+  "w.lang.en/schema.sop"
  ],
  "plurinational state of bolivia": [
   "k.geo/shards/south-america"
@@ -67238,6 +67628,7 @@
   "k.words/shards/pr"
  ],
  "prep": [
+  "k.units/shards/measures",
   "k.words/shards/pr"
  ],
  "preparation": [
@@ -67253,10 +67644,12 @@
   "k.words/shards/pr"
  ],
  "preposition": [
-  "k.actions/schema.sop"
+  "k.actions/schema.sop",
+  "w.lang.en/schema.sop"
  ],
  "prepositions": [
-  "k.actions/schema.sop"
+  "k.actions/schema.sop",
+  "w.lang.en/schema.sop"
  ],
  "preschool": [
   "k.words/shards/pr"
@@ -67518,6 +67911,7 @@
   "k.words/shards/pr"
  ],
  "priority": [
+  "k.units/shards/measures",
   "k.words/shards/pr"
  ],
  "pripyat": [
@@ -67652,7 +68046,8 @@
   "k.words/shards/pr"
  ],
  "production": [
-  "k.words/shards/pr"
+  "k.words/shards/pr",
+  "w.lang.en/schema.sop"
  ],
  "profession": [
   "k.words/shards/pr"
@@ -67740,14 +68135,23 @@
  "prompt": [
   "k.words/shards/pr"
  ],
+ "pron": [
+  "k.units/shards/measures"
+ ],
  "prong1": [
   "k.objects/shards/noto-computer-01"
  ],
  "prong2": [
   "k.objects/shards/noto-computer-01"
  ],
+ "pronoun": [
+  "w.lang.en/schema.sop"
+ ],
  "pronounce": [
   "k.words/shards/pr"
+ ],
+ "pronouns": [
+  "w.lang.en/schema.sop"
  ],
  "proof": [
   "k.objects/shards/noto-money-02",
@@ -68703,6 +69107,12 @@
  "quanta": [
   "k.words/shards/qu"
  ],
+ "quantifier": [
+  "w.lang.en/schema.sop"
+ ],
+ "quantifiers": [
+  "w.lang.en/schema.sop"
+ ],
  "quantity": [
   "k.units/schema.sop",
   "k.words/shards/qu",
@@ -68791,6 +69201,12 @@
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-ask",
   "k.words/shards/qu"
+ ],
+ "question word": [
+  "w.lang.en/schema.sop"
+ ],
+ "question words": [
+  "w.lang.en/schema.sop"
  ],
  "questioning": [
   "k.words/shards/qu"
@@ -69100,7 +69516,8 @@
   "k.food/shards/vegetables"
  ],
  "radius": [
-  "k.words/shards/ra"
+  "k.words/shards/ra",
+  "w.lang.en/shards/morphology"
  ],
  "raf": [
   "k.words/shards/ra"
@@ -69528,7 +69945,8 @@
  ],
  "rather": [
   "k.values/shards/scales",
-  "k.words/shards/ra"
+  "k.words/shards/ra",
+  "w.lang.en/shards/clauses"
  ],
  "rating": [
   "k.words/shards/ra"
@@ -71096,6 +71514,9 @@
  ],
  "resemble": [
   "k.words/shards/re"
+ ],
+ "resembling": [
+  "w.lang.en/shards/prepositions"
  ],
  "resent": [
   "k.words/shards/re"
@@ -74666,8 +75087,20 @@
   "k.values/shards/sets",
   "k.words/shards/sa"
  ],
+ "same again": [
+  "w.lang.en/shards/ellipsis"
+ ],
  "same face": [
   "k.feelings/schema.sop"
+ ],
+ "same for": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "same thing": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "same with": [
+  "w.lang.en/shards/ellipsis"
  ],
  "same_size": [
   "k.layouts/shards/layouts"
@@ -75932,6 +76365,9 @@
  "scratch": [
   "k.words/shards/sc"
  ],
+ "scratch that": [
+  "w.lang.en/shards/clauses"
+ ],
  "scratching": [
   "k.words/shards/sc"
  ],
@@ -76403,7 +76839,8 @@
   "k.time/shards/calendar",
   "k.units/shards/core",
   "k.values/shards/numbers",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.lang.en/shards/numbers"
  ],
  "second_book": [
   "k.objects/shards/home"
@@ -77064,7 +77501,9 @@
  ],
  "seven": [
   "k.values/shards/numbers",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "seven wonders of the ancient world": [
   "k.objects/shards/openmoji-travel-places-02"
@@ -77087,7 +77526,8 @@
  ],
  "seventh": [
   "k.values/shards/numbers",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.lang.en/shards/numbers"
  ],
  "seventieth": [
   "k.values/shards/numbers"
@@ -77156,7 +77596,8 @@
  ],
  "several": [
   "k.values/shards/scales",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.lang.en/shards/determiners"
  ],
  "several of them": [
   "k.values/shards/sets"
@@ -77601,6 +78042,12 @@
  ],
  "shay": [
   "k.words/shards/sh"
+ ],
+ "she": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "she's": [
+  "w.lang.en/shards/morphology"
  ],
  "sheaf": [
   "k.objects/shards/noto-plant-other-01"
@@ -78206,6 +78653,10 @@
  ],
  "shotguns": [
   "k.objects/shards/things-2"
+ ],
+ "should": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "shoulder": [
   "k.attributes/shards/same-s",
@@ -78900,6 +79351,9 @@
  "sinbad": [
   "k.words/shards/si"
  ],
+ "since": [
+  "w.lang.en/shards/prepositions"
+ ],
  "sincerity": [
   "k.words/shards/si"
  ],
@@ -79103,7 +79557,9 @@
  ],
  "six": [
   "k.values/shards/numbers",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "six-pack": [
   "k.words/shards/si"
@@ -79120,7 +79576,8 @@
  ],
  "sixth": [
   "k.values/shards/numbers",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.lang.en/shards/numbers"
  ],
  "sixth_window": [
   "k.objects/shards/vehicles"
@@ -80797,7 +81254,8 @@
  "some": [
   "k.values/shards/scales",
   "k.values/shards/sets",
-  "k.words/shards/so"
+  "k.words/shards/so",
+  "w.lang.en/shards/determiners"
  ],
  "some of them": [
   "k.values/shards/sets"
@@ -80901,7 +81359,8 @@
   "k.words/shards/so"
  ],
  "sorry": [
-  "k.words/shards/so"
+  "k.words/shards/so",
+  "w.lang.en/shards/clauses"
  ],
  "sort": [
   "k.actions/shards/verbs-group",
@@ -86966,7 +87425,9 @@
  ],
  "ten": [
   "k.values/shards/numbers",
-  "k.words/shards/te"
+  "k.words/shards/te",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "tenant": [
   "k.words/shards/te"
@@ -87041,7 +87502,8 @@
  ],
  "tenth": [
   "k.values/shards/numbers",
-  "k.words/shards/te"
+  "k.words/shards/te",
+  "w.lang.en/shards/numbers"
  ],
  "tenure": [
   "k.words/shards/te"
@@ -87295,11 +87757,31 @@
   "k.geo/shards/asia",
   "k.geo/shards/numbers"
  ],
+ "that": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/pronouns"
+ ],
+ "that animal": [
+  "w.lang.en/shards/pronouns"
+ ],
  "that is correct": [
   "k.values/shards/psys2"
  ],
  "that is right": [
   "k.values/shards/psys2"
+ ],
+ "that one": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "that shape": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "that thing": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "that's": [
+  "w.lang.en/shards/morphology"
  ],
  "thatcher": [
   "k.words/shards/th"
@@ -87307,6 +87789,10 @@
  "thaw": [
   "k.actions/shards/actions-make-change",
   "k.words/shards/th"
+ ],
+ "the": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar"
  ],
  "the bahamas": [
   "k.geo/shards/north-america"
@@ -87347,11 +87833,15 @@
  "the one before": [
   "k.values/shards/sets"
  ],
+ "the other": [
+  "w.lang.en/shards/grammar"
+ ],
  "the other ones": [
   "k.values/shards/sets"
  ],
  "the others": [
-  "k.values/shards/sets"
+  "k.values/shards/sets",
+  "w.lang.en/shards/grammar"
  ],
  "the previous one": [
   "k.values/shards/sets"
@@ -87363,7 +87853,20 @@
   "k.values/shards/sets"
  ],
  "the same": [
-  "k.values/shards/sets"
+  "k.values/shards/sets",
+  "w.lang.en/shards/ellipsis"
+ ],
+ "the same for": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "the same goes for": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "the same thing": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "the same with": [
+  "w.lang.en/shards/ellipsis"
  ],
  "the two": [
   "k.values/shards/sets"
@@ -87417,8 +87920,15 @@
  "theft": [
   "k.words/shards/th"
  ],
+ "their": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/pronouns"
+ ],
  "thelon": [
   "k.geo/shards/north-america"
+ ],
+ "them": [
+  "w.lang.en/shards/pronouns"
  ],
  "theme": [
   "k.objects/shards/noto-place-other-02",
@@ -87428,7 +87938,8 @@
   "k.scenes/shards/scenes-town"
  ],
  "then": [
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/clauses"
  ],
  "theory": [
   "k.words/shards/th"
@@ -87444,7 +87955,12 @@
  ],
  "there": [
   "k.scenes/schema.sop",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/pronouns"
+ ],
+ "there's": [
+  "w.lang.en/shards/morphology"
  ],
  "therefore": [
   "k.words/shards/th"
@@ -87477,6 +87993,11 @@
   "k.parts/shards/t",
   "k.words/shards/th"
  ],
+ "these": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/pronouns"
+ ],
  "theses": [
   "k.words/shards/th"
  ],
@@ -87491,6 +88012,9 @@
  ],
  "theta": [
   "k.words/shards/th"
+ ],
+ "they": [
+  "w.lang.en/shards/pronouns"
  ],
  "thick": [
   "k.faces/shards/plain-eyebrows",
@@ -87608,7 +88132,8 @@
  "third": [
   "k.objects/shards/noto-award-medal-01",
   "k.values/shards/numbers",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/numbers"
  ],
  "third_book": [
   "k.objects/shards/home"
@@ -87708,6 +88233,23 @@
  "thiruvananthapuram": [
   "k.geo/shards/psys2-cities-asia"
  ],
+ "this": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/pronouns"
+ ],
+ "this animal": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "this one": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "this shape": [
+  "w.lang.en/shards/pronouns"
+ ],
+ "this thing": [
+  "w.lang.en/shards/pronouns"
+ ],
  "thistle": [
   "k.values/shards/colours-css"
  ],
@@ -87758,6 +88300,11 @@
  "thorpe": [
   "k.words/shards/th"
  ],
+ "those": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/grammar",
+  "w.lang.en/shards/pronouns"
+ ],
  "thou": [
   "k.words/shards/th"
  ],
@@ -87802,7 +88349,9 @@
  ],
  "three": [
   "k.values/shards/numbers",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "three quarters": [
   "k.values/shards/numbers"
@@ -88614,6 +89163,7 @@
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-pick",
   "k.actions/shards/verbs-undo",
+  "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
  ],
  "to the back": [
@@ -89013,7 +89563,8 @@
   "k.words/shards/to"
  ],
  "too": [
-  "k.words/shards/to"
+  "k.words/shards/to",
+  "w.lang.en/shards/ellipsis"
  ],
  "took": [
   "k.actions/shards/actions-hands",
@@ -89671,6 +90222,12 @@
  "tow": [
   "k.actions/shards/actions-hands",
   "k.words/shards/to"
+ ],
+ "toward": [
+  "w.lang.en/shards/prepositions"
+ ],
+ "towards": [
+  "w.lang.en/shards/prepositions"
  ],
  "towards the middle": [
   "k.values/shards/directions"
@@ -91349,7 +91906,8 @@
  ],
  "twelve": [
   "k.values/shards/numbers",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/numbers"
  ],
  "twenties": [
   "k.words/shards/tw"
@@ -91500,7 +92058,9 @@
  "two": [
   "k.objects/shards/noto-animal-mammal-05",
   "k.values/shards/numbers",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/numbers"
  ],
  "two-hump": [
   "k.objects/shards/noto-animal-mammal-05"
@@ -91836,7 +92396,8 @@
  ],
  "under": [
   "k.objects/shards/noto-animal-mammal-08",
-  "k.words/shards/un"
+  "k.words/shards/un",
+  "w.lang.en/shards/prepositions"
  ],
  "under the sea": [
   "k.scenes/shards/scenes-other"
@@ -92202,6 +92763,7 @@
   "k.actions/shards/actions-hands"
  ],
  "until": [
+  "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
  ],
  "untouchable": [
@@ -92411,6 +92973,9 @@
  "upwards": [
   "k.values/shards/directions"
  ],
+ "ur": [
+  "w.lang.en/shards/determiners"
+ ],
  "ural": [
   "k.geo/shards/asia",
   "k.geo/shards/numbers"
@@ -92462,7 +93027,8 @@
   "k.geo/shards/south-america-borders"
  ],
  "us": [
-  "k.words/shards/us"
+  "k.words/shards/us",
+  "w.lang.en/shards/pronouns"
  ],
  "usa": [
   "k.attributes/shards/same-u",
@@ -94040,6 +94606,9 @@
  "w. branch susquehanna": [
   "k.geo/shards/north-america"
  ],
+ "w.lang.en": [
+  "k.units/shards/measures"
+ ],
  "wa": [
   "k.words/shards/wa"
  ],
@@ -94176,7 +94745,8 @@
  ],
  "wait": [
   "k.actions/shards/actions-body-social-nature",
-  "k.words/shards/wa"
+  "k.words/shards/wa",
+  "w.lang.en/shards/clauses"
  ],
  "wait for": [
   "k.actions/shards/actions-body-social-nature"
@@ -94637,7 +95207,9 @@
   "k.words/shards/wa"
  ],
  "was": [
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "wasatch range": [
   "k.geo/shards/north-america"
@@ -94972,6 +95544,10 @@
  ],
  "ways": [
   "k.words/shards/wa"
+ ],
+ "we": [
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/pronouns"
  ],
  "weak": [
   "k.words/shards/we"
@@ -95320,7 +95896,9 @@
   "k.words/shards/we"
  ],
  "were": [
-  "k.words/shards/be"
+  "k.words/shards/be",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "werewolf": [
   "k.words/shards/we"
@@ -95451,10 +96029,21 @@
   "k.words/shards/wh"
  ],
  "what": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
   "w.timeline/schema.sop"
+ ],
+ "what about": [
+  "w.lang.en/shards/ellipsis"
  ],
  "what for": [
   "k.body/schema.sop"
+ ],
+ "what of": [
+  "w.lang.en/shards/ellipsis"
+ ],
+ "what's": [
+  "w.lang.en/shards/morphology"
  ],
  "whatever": [
   "k.words/shards/wh"
@@ -95603,7 +96192,12 @@
  ],
  "when": [
   "k.attributes/schema.sop",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
   "w.timeline/schema.sop"
+ ],
+ "when's": [
+  "w.lang.en/shards/morphology"
  ],
  "where": [
   "k.actions/schema.sop",
@@ -95614,10 +96208,15 @@
   "k.objects/shards/openmoji-technology-01",
   "k.scenes/schema.sop",
   "k.wearables/schema.sop",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
   "w.seating/schema.sop"
  ],
  "where it lives": [
   "k.commonsense/schema.sop"
+ ],
+ "where's": [
+  "w.lang.en/shards/morphology"
  ],
  "whereabouts": [
   "k.words/shards/wh"
@@ -95627,6 +96226,11 @@
  ],
  "whet": [
   "k.actions/shards/actions-make-change"
+ ],
+ "which": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
  ],
  "whichever": [
   "k.values/shards/sets"
@@ -95863,7 +96467,10 @@
  ],
  "who": [
   "k.actions/schema.sop",
-  "k.words/shards/wh"
+  "k.words/shards/wh",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
  ],
  "who sits where": [
   "w.seating/schema.sop"
@@ -95871,11 +96478,18 @@
  "who uses": [
   "k.attributes/schema.sop"
  ],
+ "who's": [
+  "w.lang.en/shards/morphology"
+ ],
  "whole": [
   "k.words/shards/wh"
  ],
  "wholesale": [
   "k.words/shards/wh"
+ ],
+ "whom": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "whoop": [
   "k.words/shards/wh"
@@ -95892,6 +96506,10 @@
  "whorl": [
   "k.shapes/shards/shapes"
  ],
+ "whose": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
+ ],
  "wht": [
   "k.values/shards/psys2"
  ],
@@ -95899,7 +96517,13 @@
   "k.body/schema.sop",
   "k.feelings/schema.sop",
   "k.space/schema.sop",
-  "k.words/shards/wh"
+  "k.words/shards/wh",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/grammar"
+ ],
+ "why's": [
+  "w.lang.en/shards/morphology"
  ],
  "wi": [
   "k.words/shards/wi"
@@ -96024,7 +96648,9 @@
   "k.words/shards/wi"
  ],
  "will": [
-  "k.words/shards/wi"
+  "k.words/shards/wi",
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "willamette": [
   "k.geo/shards/north-america"
@@ -96582,6 +97208,7 @@
   "k.actions/shards/verbs-ask",
   "k.actions/shards/verbs-change",
   "k.parts/schema.sop",
+  "w.lang.en/shards/prepositions",
   "w.seating/schema.sop"
  ],
  "with dots": [
@@ -96741,6 +97368,9 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/wi",
   "k.words/shards/wo"
+ ],
+ "won't": [
+  "w.lang.en/shards/morphology"
  ],
  "wonder": [
   "k.actions/shards/actions-mind-talk",
@@ -97017,6 +97647,10 @@
  ],
  "worthy": [
   "k.words/shards/wo"
+ ],
+ "would": [
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/ellipsis"
  ],
  "wound": [
   "k.objects/shards/openmoji-healthcare-01",
@@ -97755,7 +98389,9 @@
   "k.scenes/shards/things-y"
  ],
  "you": [
-  "k.geo/shards/asia"
+  "k.geo/shards/asia",
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/pronouns"
  ],
  "you bet": [
   "k.values/shards/psys2"
@@ -97773,6 +98409,10 @@
  ],
  "youngster": [
   "k.words/shards/yo"
+ ],
+ "your": [
+  "w.lang.en/shards/determiners",
+  "w.lang.en/shards/pronouns"
  ],
  "youth": [
   "k.words/shards/yo"
@@ -97949,7 +98589,8 @@
   "k.objects/shards/noto-mail-01",
   "k.values/shards/numbers",
   "k.values/shards/scales",
-  "k.words/shards/ze"
+  "k.words/shards/ze",
+  "w.lang.en/shards/numbers"
  ],
  "zeroes": [
   "k.words/shards/ze"

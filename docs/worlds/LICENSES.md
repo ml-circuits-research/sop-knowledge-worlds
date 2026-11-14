@@ -148,6 +148,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: CC-BY-SA-4.0
 - Used by: `k.attributes` (1 shards), `k.objects` (18 shards)
 
+## psys2-a019aa1e
+
+- What: what the demo application PSys2 knows about English, collected by PSys2 from seven of its modules as facts: closed word classes (determiners, pronouns, prepositions, small numbers), morphology, clause structure, ellipsis markers, noun-phrase rules, the argument frames of its acts, phrase groups; and four small lexicons and two phrase groups its frames name, from its worlds (`worlds/space/lexicon.sop`, `worlds/acts/lexicon.sop`, `worlds/lang.common/lexicon.sop`). Imported as the reusable world `w.lang.en`.
+- Origin: the PSys2 repository of this project (github.com/ml-circuits-research, private), directory `handover/lang.en/` (README.md, schema.sop, std-grammar.md, shards/*.sop), read from a checkout with `git show <commit>:<path>` (the checkout is never changed).
+- License: CC0-1.0 (the project's own hand-written data; the reviewer's ruling in `worker-tasks.md`, blocks "2026-11-13 22:40" and "2026-11-14 01:20").
+- Attribution: none needed.
+- Shard terms: CC0-1.0
+- Used by: `w.lang.en` (12 shards)
+
 ## psys2-worlds-6b63b2ba
 
 - What: the general knowledge that the demo application PSys2 carried in its own tab worlds: animals, shapes and colours, time, common sense, colour and shade words, yes and no words, the names of the parts of the things it draws, groups of countries. Taken here so that the demo holds no general knowledge of its own.

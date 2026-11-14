@@ -2944,3 +2944,50 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: k.commonsense 4 shards (`lives` 33 wires, `liquids` 15); schema 7 rules more. COVERAGE: common things
   reached by k.commonsense words 17 to 35. Catalog 22 worlds, 920 shards, vocab 24,039 words; 0 errors, 0 warnings.
   npm test 2,821: 2,820 pass, 1 skipped, 0 fail.
+
+## Round 12, part 1 (2026-11-14, second worker): `w.lang.en`, PSys2's English hand-over imported as a reusable world
+
+- **Source:** PSys2 `handover/lang.en` read from /tmp/wt2 at `78f45863` (`git -C /tmp/wt2 log --oneline -1`:
+  "78f45863 worker-tasks: smoke green at 04d46cd9; LANG-EN slice 2, arbitration, bridge accepted; next"; the files of
+  the hand-over were last changed at `9b025e05`), with `git show` (nothing in /tmp/wt2 changed; its `git status` is
+  empty). Source `psys2 78f45863`, CC0 (`sources/psys2/SOURCE.md`). Tool `tools/import/psys2-lang-en.mjs`,
+  deterministic; a test regenerates the shards from the checkout and compares.
+- **This repository's rules, applied** (what changed is generated into `docs/worlds/w.lang.en/IMPORT.md`): types and ids
+  under `w.lang.en` (the hand-over used `lang.en.*`); keys with `_`; core.source on every wire (the hand-over had none on
+  its rules, categories, ellipsis and clause facts); a complete slot line for every key (the hand-over's schema lacked
+  `many=true`, the set `acts.data`, the types relpron, copula, partitive, other, choice, the keys `time`, `order`, `span`,
+  `read`, the params' `name`/`value`/`doc` ...). **No notation inside values:** lists in one value
+  (`case=subject,object`) -> repeated keys; ranges `2..5` -> min, max; regular expressions -> an ending and the words it
+  stands for (`n't`, and the 16 negations written without apostrophe); grammar rules with `? * + [a|b]` -> 84 plain
+  productions of 64 constructions (optional part: a second production; repeated part: a helper category; a set of
+  words: a category with `w.lang.en.word` facts); frame patterns -> one `w.lang.en.part` per part (1,244), `lit.<role>=`
+  -> `w.lang.en.fixed` (30); "_" for a space -> spaces and apostrophes ("i'd like to"). References to PSys2 code
+  (`from=`, `read=`) became comments. A production may not name a category twice (a repeated key is a set: the second
+  NP of `NP OF NP` was lost when told); five are written with a helper (NP -> NP OFNP).
+- **Left out** (one application's): `tab-only` / `tab-priority` (5 frames), the 5 frames of the "act" `own` (routing to a
+  world's own reader). **Taken in besides the hand-over** (named by its frames, missing from it): the lexicons
+  `space.amounts`, `acts.dir`, `acts.layout`, `lang.ordinal` and the phrase groups `undo`, `redo`, from PSys2's worlds at
+  the same commit. The verb groups `V.set` / `V.apart` are the acts change / take apart of k.actions.
+- **Catalog:** `w.lang.en` is a world of facts (types and 12 shards, validated with the pinned 0.16.0 like the k.*
+  worlds): `scanWorlds` now takes a `w.*` directory whose schema has no `std.schema.world`; `scanSchemas` the others.
+  Its vocabulary comes from the keys that hold English words (`text`, `singular`, `ending`), not from the names of
+  frames and constructions (538 such names would have entered vocab.json). Numbers have their measure (Q31, 20 slots).
+  The key-word test covers k.* only (a grammar's keys, lhs and rhs, are not asked about).
+- **What the library reads** (`tests/w.lang.en.test.mjs`, build 0.33.0 pinned in `tools/sopworld/grammar/` for this check
+  only): the options of `parseText` come from the world's own `w.lang.en.cat` facts (`tools/lib/lang-en.mjs`), nouns and
+  adjectives from k.words through vocab.json; 23 noun phrases (det-n, count, ordinal, all, possessive of and 's, PP,
+  pronoun, that one, some of, two of, relative, the other, or, except, and) and 4 question shapes parse with the expected
+  construction and head; `grammarView` / `viewDiff` on the views. Not read by the library: commas (its tokenizer drops
+  them), frames (not yet in std.grammar).
+- **Joins:** numerals, ordinals and numeral determiners = `k.values.number` values; QALL words are k.values set words
+  except `every`; irregular singulars and noun exceptions are k.words nouns; every frame act is a k.actions act; 20 frame
+  role names are not k.actions role names (listed in `tests/w.lang.en.roles.json`).
+- **Looked at:** every shard of the hand-over and every production, construction and category written; the 23 parses;
+  the first 30 frames with their parts. **Not looked at:** the other 203 frames part by part (converted by one parser,
+  checked by the test that parts are 1..n and name existing phrases, lexicons and acts), the 1,394 phrase items.
+- Question Q39 (the expected structure of the grammar tests; the third build). Lessons in docs/lessons.md.
+- Numbers: w.lang.en 12 shards, 2,180 wires, 392,128 bytes (largest frames-acts-more, 630 wires, 115 kB), schema 243
+  wires; 0 errors, 0 warnings. After the rebase on R11.3 part 2 and R11.4: catalog 23 worlds, 932 shards, vocab
+  24,184 words. npm test 2,833: 2,827 pass, 6 skipped, 0 fail. The type `time_line` I had declared for the order in
+  time of the temporal prepositions was taken out again: the reviewer's block "02:15" gives `k.time` an order in time
+  (first worker); the join from `w.lang.en.prep.time` to it comes after.

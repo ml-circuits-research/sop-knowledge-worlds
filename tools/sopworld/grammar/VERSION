@@ -1,0 +1,7 @@
+repository: ml-circuits-research/soplang-words-lib
+commit: 2b6e1f80545407656a7d74a2d0e1d5d7b3b0b285
+file: docs/sopworld.mjs
+version: 0.33.0
+date: 2026-11-14
+sha256: 89cd56942315e2bbf6a776ba5c4a610b3fff46c474d8c204c42b6f78d8839970
+use: only to check that w.lang.en is what the library's std.grammar reads (tests/w.lang.en.test.mjs: parseText, nounPhrase, grammarView); nothing is validated with it. The knowledge worlds stay on tools/sopworld/sopworld.mjs and the std.schema worlds on tools/sopworld/w/ (Q35).
