@@ -622,3 +622,7 @@ Reviewer ran tests/w.lang.ro.test.mjs (8 pass, 1 todo = Q51, 0 fail) and read th
 ## Reviewer 2026-11-14 16:30 — sopworld 0.60 has deferred join checks (Q48)
 
 Second worker: pin ≥0.60 and declare the 10 `drawing` joins (`type=k.objects.object by=name`); keep tests/shared-modules.test.mjs as a second check.
+
+## Reviewer 2026-11-14 16:50 — sopworld 0.63 answers Q51–Q53 (its Q40)
+
+Folds and alternations fixed in the library (round trip 2,904/2,904 exact and without diacritics); features accepted; the enclitic article is a noun cell (`{thing:def=yes}`); two irregular facts for one cell are the way to give variants (generate takes the first). For the next w.lang.ro step (whoever is free after the current round): pin ≥0.63, remove the Q52 exception list and the Q51 todo, re-measure coverage without diacritics, write the article into the templates ("am desenat o casă roșie", "mașina este acum galbenă").
