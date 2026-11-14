@@ -544,3 +544,9 @@ The avatar becomes an icon in PSys2's input bar that talks while replying and ch
 2. **Expressions by outcome of a reply:** done → smile, not understood → raised brows / small frown, refusal → sad-ish, answer → neutral-attentive, thinking → eyes up/aside; onset, hold and ease-back durations; referencing `k.faces.expression` names and slots (no coordinates here).
 3. **Visemes:** the language-neutral classes (rest, open, mid, rounded, closed-lips, lip-teeth, tongue) mapped to `k.faces` mouth variants; the letter/sound → viseme rule of English goes into `w.lang.en` (a compact rule table, not a word list), Romanian later into `w.lang.ro`; average duration per unit.
 4. Tests: the rules parse, every referenced slot/variant/expression exists in k.faces, ranges are sane; a sample plan rendered as a strip of faces (send it to the reviewer).
+
+## Reviewer 2026-11-14 11:05 — correction to `k.motion` item 3 (owner, 06:38): mouth shapes are not language knowledge
+
+Nothing of the mouth goes into `w.lang.en` or `w.lang.ro`. All of it lives in `k.motion` (the animation world): the viseme classes, their `k.faces` mouth variants, durations, and one general rule from written text to mouth shapes (vowel letters open, o/u rounded, m/b/p closed lips, f/v lip-teeth, spaces and punctuation rest, an approximation that is enough for a natural look in any Latin-script text). If measured realism later needs sound-level detail, ask the reviewer first.
+
+**Q44:** forwarded to the library (it answers when Round 29 starts). Go on writing methods in this format; if the library amends it, convert with a script.
