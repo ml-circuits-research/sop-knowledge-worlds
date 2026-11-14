@@ -453,3 +453,14 @@ Write them as agent skills under `skills/<name>/SKILL.md` (frontmatter `name`, `
 4. **`consolidate`**: the periodic cycle: ingest new failures, freeze held-out rows, run skills 2 and 3, rerun the landing measures and the learning curve, open the changes for review in each repository (knowledge, library, application) with the before / after table; stop if the held-out curve does not rise.
 5. **`audit-knowledge`**: sample model-labelled facts, check against sources, fix or flag, as done in the rounds so far.
 Each skill states what it may change and what it must never do (no restricted data, no phrase lists, no editing tests to pass). Use `docs/lessons.md` of the three repositories as the source of the steps: the skills are the lessons made executable.
+
+## Reviewer 2026-11-14 06:55 — from the library (its Q33, Q34, Q35): what to change here (whichever worker is free; before the skills stage)
+
+1. **`w.lang.en` schema**: `rhs` and `in` need `many=true` (the shards fail the cardinality check today, so the library cannot load the schema); add `priority=` on grammar rules where their order matters (the library honours it before its size ranking).
+2. **Use the library's new constructs (sopworld 0.34+)**: one shared slot group `k.named` (with `named`) that worlds take by a second `extends=`; `excludes=` on every `*_about` slot naming its exact twin (replaces the three `core.deny` copies); `drawing=` and similar joins declared as `type=k.objects.object by=name` (checked when k.objects is loaded, open otherwise). Move the build to the release that has them.
+3. **World schemas the library's corpus needs** (it carries inline copies until these are published):
+   - `w.seating`: acts `connect`, `group`, `place` on the table; `copy`, `place` on the guest (a guest is placed into a seat through the seat's slot);
+   - `w.timeline`: a range for `at` and a deny "an event is inside its timeline" (`from` / `to`);
+   - **`w.face`**: the acting schema of a face, its parts as kinds with colour, size (0.6..1.5, default 1, step 0.1) and place, the shapes read from `k.faces`;
+   - **a map view schema** (`w.map`): a view with state zoom 1..10 and layer (borders, rivers, none) over `k.geo` places.
+   Each with an example session as a test and a catalog entry. PSys2's avatar and map can then take these schemas instead of their own (THIN LIVE WORLDS).
