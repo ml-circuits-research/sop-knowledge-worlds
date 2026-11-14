@@ -101,8 +101,8 @@ explained by feature.
 
 ## Known limits
 
-- The measures are the library's to compute; until it does, `known_share`, `seen_in_session` and the passage measures
-  read the text being written (`w.document`) and the host's history, which this repository cannot hold.
+- The measures are the library's to compute. The sentence and passage measures read the text being written (a live
+  `w.document`: its sentences' moves and facts); `seen_in_session` reads the host's history, which no world here holds.
 - The typical range of a number is the interquartile range of its kind's numbers in k.attributes (published as facts
   with block "15:15" item 3); the numbers themselves are model-labelled (`named=model`), so a far number is far from
   the catalog's usual, not from a measured population.

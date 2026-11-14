@@ -55,6 +55,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.commonsense` | 189 (13%) |
 | `k.faces` | 46 (3%) |
 | `k.food` | 147 (10%) |
+| `k.genres` | 1 (0%) |
 | `k.geo` | 20 (1%) |
 | `k.layouts` | 210 (14%) |
 | `k.motion` | 1 (0%) |
@@ -65,11 +66,13 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.scenes` | 822 (55%) |
 | `k.shapes` | 66 (4%) |
 | `k.space` | 9 (1%) |
+| `k.story` | 4 (0%) |
 | `k.time` | 2 (0%) |
 | `k.units` | 5 (0%) |
 | `k.values` | 20 (1%) |
 | `k.wearables` | 62 (4%) |
 | `k.words` | 1500 (100%) |
+| `w.document` | 2 (0%) |
 | `w.face` | 7 (0%) |
 | `w.lang.en` | 52 (3%) |
 | `w.map` | 3 (0%) |

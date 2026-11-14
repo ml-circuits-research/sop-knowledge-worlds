@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('five world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
+test('six world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
@@ -33,7 +33,7 @@ test('five world schemas; each names no function, loads with std.acts, has words
     assert.deepEqual(index.schemas.find((x) => x.id === s.id), d.entry, s.id);
     assert.match(s.schemaText, /^# license: CC0-1\.0$/m);
   }
-  // All five together in one world: no name of one clashes with another.
+  // All six together in one world: no name of one clashes with another.
   assert.deepEqual(actsWorld().warnings ?? [], []);
 });
 

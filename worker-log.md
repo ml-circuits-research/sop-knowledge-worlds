@@ -3959,3 +3959,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   "our" in 1,732/2,000 (the register's first plural); mean sentence 23.7 words (register typical 22), 78% within its
   12-32. The test also checks that the abstract steps of k.genres are in the order measured. WORLD.md says it.
 - The move and register names of k.genres are final from this side (the fourth worker's Q55 asked).
+
+
+## 2026-11-14 — first worker: w.document, a written document as a world schema (block "15:15" item 1)
+
+- **Schema** (`docs/worlds/w.document/schema.sop`, std.schema format, `hand-core 1`, CC0): document (title, genre,
+  topic, register, language, seed, about), chapter, section, paragraph (in a section or straight in a chapter),
+  slide (headline, layout title/agenda/content/summary/closing, part, speaker note), sentence (text, in a paragraph
+  or on a slide, n, move, template, `fact` many: the wire ids of the facts it states, interest 0-1). Two denies (one
+  place for a paragraph and for a sentence), limits, words for the world, kinds and keys; no function. Loads with
+  std.acts with 0 errors and 0 warnings.
+- **Integration case** (`tests/w.document.test.mjs`, 3 tests): an essay on the penguin made by acts with three
+  sentences whose `fact` ids are checked against every wire of the catalog and read back in order; a presentation of
+  four slides with a bullet; the two denies refuse with their reasons; place 0, an unknown layout and interest 2 are
+  refused. `tests/w.schemas.test.mjs` now expects six schemas. k.interest's sentence and passage measures read
+  w.document.sentence and w.document.paragraph.
+- `npm test`: 2,939 tests, 2,937 pass, 1 skipped, 1 todo (Q51), 0 fail (one earlier run caught COVERAGE.md stale:
+  `npm run reports` after adding a world).

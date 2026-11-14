@@ -1,5 +1,5 @@
 {
- "version": "d8cc5d71ff7c",
+ "version": "06e65903ad1b",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -18986,7 +18986,7 @@
      "id": "k.interest/shards/features",
      "path": "k.interest/shards/features.sop",
      "wires": 45,
-     "bytes": 16500,
+     "bytes": 16762,
      "keys": [
       "animacy",
       "animate",
@@ -56346,6 +56346,178 @@
   }
  ],
  "schemas": [
+  {
+   "id": "w.document",
+   "version": "1",
+   "schema": "w.document/schema.sop",
+   "about": "written documents: chapters, sections, paragraphs, slides and sentences, each sentence with the facts it states",
+   "names": [
+    "document",
+    "documents",
+    "essay",
+    "article",
+    "presentation",
+    "slides",
+    "slide show",
+    "composition",
+    "story"
+   ],
+   "kinds": [
+    {
+     "type": "w.document.document",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy",
+      "save",
+      "load"
+     ],
+     "attributes": [
+      "title",
+      "genre",
+      "topic",
+      "register",
+      "language",
+      "seed",
+      "about"
+     ],
+     "words": [
+      "document",
+      "documents",
+      "text"
+     ]
+    },
+    {
+     "type": "w.document.chapter",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "title",
+      "document",
+      "n",
+      "part"
+     ],
+     "words": [
+      "chapter",
+      "chapters",
+      "part"
+     ]
+    },
+    {
+     "type": "w.document.section",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "title",
+      "chapter",
+      "n",
+      "part"
+     ],
+     "words": [
+      "section",
+      "sections",
+      "subchapter",
+      "subchapters",
+      "subsection"
+     ]
+    },
+    {
+     "type": "w.document.paragraph",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "section",
+      "chapter",
+      "n"
+     ],
+     "words": [
+      "paragraph",
+      "paragraphs"
+     ]
+    },
+    {
+     "type": "w.document.slide",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "connect",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "title",
+      "document",
+      "n",
+      "layout",
+      "part",
+      "note"
+     ],
+     "words": [
+      "slide",
+      "slides"
+     ]
+    },
+    {
+     "type": "w.document.sentence",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "text",
+      "paragraph",
+      "slide",
+      "n",
+      "move",
+      "template",
+      "fact",
+      "interest"
+     ],
+     "words": [
+      "sentence",
+      "sentences",
+      "bullet",
+      "bullets",
+      "line",
+      "lines"
+     ]
+    }
+   ],
+   "wires": 95,
+   "bytes": 15282,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
   {
    "id": "w.face",
    "version": "1",

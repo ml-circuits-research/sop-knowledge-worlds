@@ -9,6 +9,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { interestShards, share, score } from '../tools/interest-core.mjs';
+import { scanSchemas } from '../tools/lib/schemas.mjs';
 
 const worlds = scanWorlds();
 const world = fullWorld('k.interest', worlds);
@@ -58,7 +59,7 @@ test('k.interest: every source is cited in WORLD.md; every type a measure reads 
     assert.ok(md.includes(author) && md.includes(String(s.year)), `${s.name}: ${author} ${s.year} in WORLD.md`);
     if (s.doi) assert.match(s.doi, /^10\.\d{4,5}\//, s.name);
   }
-  const declared = new Set(worlds.flatMap((w) => [...w.schemaText.matchAll(/core\.type of=(\S+)/g)].map((m) => m[1])));
+  const declared = new Set([...worlds, ...scanSchemas()].flatMap((w) => [...w.schemaText.matchAll(/core\.type of=(\S+)/g)].map((m) => m[1])));
   for (const m of measures) for (const r of m.reads ?? []) assert.ok(declared.has(r), `${m.name} reads ${r}`);
 });
 
