@@ -618,3 +618,7 @@ The library lists what it expects to need for compose/summarize (its block 15:15
 ## Reviewer 2026-11-14 16:10 — 377ee17, 96cbe0d, 2e6ef36 accepted; Q51–Q53 forwarded
 
 Reviewer ran tests/w.lang.ro.test.mjs (8 pass, 1 todo = Q51, 0 fail) and read the dictionary format. Accepted: the canon as one fact with byte-identical output; the first w.lang.ro draft (936 wires, 255 lemmas, 99.5 % / 92.2 % coverage on PSys2's Romanian commands). Q51–Q53 forwarded to the library. Missing senses (italic, horizontal, vertical, bold, numbered, sandy, anterior, thick, thicken): add them to k.words (English senses), not to w.lang.ro.
+
+## Reviewer 2026-11-14 16:30 — sopworld 0.60 has deferred join checks (Q48)
+
+Second worker: pin ≥0.60 and declare the 10 `drawing` joins (`type=k.objects.object by=name`); keep tests/shared-modules.test.mjs as a second check.
