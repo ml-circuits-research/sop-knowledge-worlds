@@ -934,3 +934,26 @@ undeclared (docs/worlds/k.kinds/JOINS-REPORT.md says why); k.geo's 15 joins cost
 can quote a name one shard and not in another; the check treats them as two values (the importers here always quote
 the same way, so nothing is open for that reason today; the report compares token for token as the library does).
 Blocking: no. Meanwhile: the costly join is left out with its reason and checked by a test over the shards.
+
+## Q67 (block 03:20 item 4, first worker, 2026-11-15): imported keywords are published as words of drawings, and 1,266 of them are names of other drawings
+Question: should the CLDR, OpenMoji and Mulberry keywords of a drawing stay `core.word … of=k.objects.object.name`
+(the same relation as a synonym), or (a) be left out where the keyword is the name of another drawing, or (b) move to
+a relation of their own (a keyword is a search word: "ship" is a keyword of the anchor, "kitty" of the money bag,
+"arrow" of the envelope with arrow), so that a host never draws the anchor for "a ship"?
+Context: PSys2's dice drew "a kitty, drawn as a money bag" and the live check drew the red boat for "Add a ship".
+The boat case was a hand-written word (`text=ship` on the boat, written before the ship's drawing was imported):
+fixed, with 19 other hand words of that kind, and a test refuses a new one. The imported keywords are untouched:
+1,266 keyword texts name another drawing (CLDR 972, Mulberry 235, OpenMoji 59). (a) is one filter in the three
+importers (keep a keyword only if no drawing of the catalog has that name) and rewrites most k.objects shards; (b)
+is a schema change hosts must follow. Meanwhile k.objects/WORLD.md says a host takes an object or a stand-in of the
+word's own name before a keyword.
+Blocking: no.
+
+## Q68 (block 03:20 item 3, first worker, 2026-11-15): k.geo.country.currency names its currency by another name than k.units.currency
+Question: should `k.geo.country.currency` (the PSys2 country list's names: "United States dollar", "Euro", "krone")
+become a declared join to `k.units.currency` (by changing the values to CLDR's names or codes, or by adding the list's
+names as words), or be dropped now that `k.units.currency.country` says which countries use a currency?
+Context: `k.units.currency` (153 currencies of CLDR 48) names countries by k.geo's names through the two-letter
+code; the list's currency key is a second home for the same fact, with other names (36 countries say "Euro", CLDR
+"euro"; 16 "United States dollar", CLDR "US dollar"). Left undeclared meanwhile (k.units/WORLD.md says why).
+Blocking: no.

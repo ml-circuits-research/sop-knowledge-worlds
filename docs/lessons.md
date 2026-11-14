@@ -572,3 +572,38 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   from real facts) did. Low priority for verbless frames, and run every reader of the world on a frame change.
 - **A thing named by its parts can be one role.** "the arrow from A to B" is one reference; role maps that put the
   marker and the ends into `thing` keep the reading in k.actions' roles with no new role and no new syntax.
+
+## PSys2's knowledge gaps (first worker, block 03:20 and Q64): sounds, notation, currency, drawables, role frames
+
+- **A gap reported by a host is often a join or a wrong word, not missing knowledge.** Of the four gaps, the cow's
+  sound, the G major scale's tonic and the ship's drawing were there; what failed was the reading (the sound question
+  in a broken order), a value with no type to bind (the note letter), and one hand word that sent "ship" to the boat.
+  Before adding facts, look for the fact under the host's word, then for the word that leads elsewhere.
+- **A dictionary's glosses are a source of relations, if the rule says which glosses count.** WordNet names the
+  animal in the gloss of 51 sound pairs ("moo: the sound made by a cow or bull"); the rule had to leave out the
+  glosses that compare ("a laugh that sounds like a horse neighing"), a call made *to* animals, words for any sound
+  (cry) and words that end no noun phrase ("a sharp swift blow"). Each exclusion was found by reading the output, and
+  each became a clause of the rule, not a row of a list.
+- **A merging wire must not be read as the whole fact.** Writing WordNet's sounds as wires that merge with the
+  animal's showed that tools/ranges-core.mjs took the class of an animal from the last wire of its name: the PSys2
+  wires had already erased the class of 15 animals and halved the mammal ranges. A tool that reads shards must merge
+  by identity (or read only the wires that carry the key), as the engine does.
+- **A value that a reader must not change needs its parts as keys.** "G major scale" as a typed value with
+  `tonic=G type=major` (and "G major" the key, "G major chord" the chord, by words that never overlap) is what lets a
+  checker refuse "D major scale" for it. Music theory written by rule from a dozen textbook facts (letters, semitones,
+  orders of sharps and flats) is 745 facts that cannot disagree, and the test checks the rules, not the rows.
+- **A name beats a word, and a keyword is not a word.** A synonym written before a drawing of that name existed
+  ("ship" of the boat) silently hides the newer drawing; a search keyword ("kitty" of the money bag) published as a
+  synonym does the same at scale (1,266 such keywords; Q67). The cheap check: no word of a drawing names another drawing.
+- **A chain of kinds crosses senses at the second step.** The nearest drawable parent one step up is right when a
+  world of the catalog states the kind by name (a stork is a bird in k.animals); two steps up through WordNet made a
+  tuba a fish (tuba -> bass -> the fish bass). And the sense a frequency count keeps is not always the one a drawing
+  means (hammock: the hill; grill: the restaurant): a stand-in needs the sense check *and* a drawable class.
+- **A frame per role, built from the role's markers, closes a coverage list at once, and the competition test keeps
+  it honest** (Q64): 29 frames made every role of k.actions readable; three priorities had to be set below an older
+  frame (the chart's "swap for", "save it as", "undo that") so no frame lost its own example. Moving PSys2's nine
+  frames here with their fixes (one home, same names) needed the importer to leave them out by name, or the next
+  import from a commit without them would have deleted them.
+- **A change to a shared dictionary is a change to every world built from it.** The 57 senses added for the sound
+  words made another worker's dictionary test red after the push; the build now regenerates that dictionary. A tool
+  whose output depends on k.words belongs in `npm run build`.
