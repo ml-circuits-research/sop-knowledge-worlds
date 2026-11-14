@@ -4760,3 +4760,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - questions.md Q66 [LIB]: the `by=` check scans the target type per value (k.objects part `of` would add 21 s), and
   `"horse"` / `horse` do not meet. docs/lessons.md: a section for Q61 / Q62 (seven lessons). k.kinds/WORLD.md: 938
   relations (158 declared, 463 schema, 317 value).
+- Full suite of the round (`npm run test:all`, one file at a time, at 20cdace + this commit): 73 files, 3,041 tests,
+  3,035 pass, 5 skipped, 1 fail: ask-real "a word for every key" (the given-name keys had no word: tools/key-words.mjs
+  not rerun after the import). Rerun it (4 key words in k.people), narration, relations, report, catalog; then
+  ask-real 4, k.people, k.people.given-names 3, catalog 8, validate 5, repo, coverage-report 4, k.kinds.relations 5 pass.
