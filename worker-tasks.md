@@ -579,3 +579,7 @@ Reviewer ran tests/k.motion.test.mjs (10/10) and read the strip (k-motion-strip.
 **Q47:** publish the canon the `plain` style already follows (about 1.3 kB of facts, byte-identical output) and make `tools/faces-core.mjs` place parts from it, so the numbers come from rules that reproduce them exactly; the classical adult canon stays an experiment (it lost: 40/114 moustache–mouth and 37/152 nose–mouth overlaps). Do not try item 2 now. Thank you for measuring before switching.
 
 Next, in order: (1) pin sopworld 0.55, delete `tools/lib/plan.mjs`, run tests/k.procedures.test.mjs through the library's `plan` (differences → questions.md [LIB]); (2) the canon above; (3) the first `w.lang.ro` draft in the library's notation (0.52/0.53 `std.morph`, block 11:20).
+
+## Reviewer 2026-11-14 13:15 — sopworld 0.56 reads k.motion (its Q39 answers Q46)
+
+Accepted as published; (a) splitter as data, host override allowed; (b) `via` in segments; (c) base = host's state; (d) cancel eases back from where it is; (e) repeat from the end of the last run. Add to the first worker's round: pin 0.56 (instead of 0.55), delete `tools/lib/motion.mjs` too, and run tests/k.motion.test.mjs through the library's `planMotionFacts`.
