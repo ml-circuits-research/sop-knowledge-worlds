@@ -97,7 +97,14 @@ right construction and head, with the nouns and adjectives taken from `k.words`.
   "December after November" when December is the `later`; `pp.time` is no longer a hole. until and since name the
   same order (`second_is` the end or the start of a span, which itself counts: "Monday until Friday", "Friday since
   Monday"); during names `k.time.during` (k.time version 3: "January during winter" in the north, "9 am during the
-  morning"). Still open: imperative clauses as productions (the frames say them), a
-  possessive "of" beyond parts.
+  morning").
+- Filled after block 08:00 (`shards/hand-grammar.sop`): **imperative clauses** (`clause.imperative`: a verb V, after
+  lead words, with what it acts on and where: "please put the cat on the mat", "can you move the tree";
+  `clause.imperative-neg`: "do not move the tree"); **"of" beyond parts**: `np.attribute-of` ("the colour of the
+  table", ATTRN: 15 attribute nouns) and `np.position-of` ("the top of the box"), both with `priority` over
+  np.possessive-of, and the attribute question with ATTRN. A category may take its words from another world
+  (`from_type`, `from_key`): V from the verbs of k.actions, POSN from the positions of k.values (`hostLexicon` in
+  tools/lib/lang-en.mjs fills them). Not read: "the left of the table" (the multiword preposition "left of" takes the
+  words first); "a cup of tea" (a measure of a substance).
 - The library's tokenizer drops commas, so the coordination separator "," is not read ("a sun, a cloud and a man"
   parses only as "a sun and a cloud and a man"); questions.md Q39.

@@ -61,7 +61,9 @@ test('w.lang.en: every category of a production is declared, and says where its 
     const t = one(c, 'type');
     if (t && t !== 'w.lang.en.word') assert.ok(all.some((w) => w.type === t) , `${name}: facts of ${t}`);
     const holeOnly = of('rule').filter((r) => v(r, 'rhs').includes(name)).every((r) => one(r, 'status') === 'hole');
-    assert.ok(built.has(name) || t || words.has(name) || OPEN.has(name) || holeOnly, `${name}: built by a rule, a class, words, or open (or named only by a hole)`);
+    // a category may take its words from another world (from_type, from_key: the verbs of k.actions, the positions of k.values)
+    if (one(c, 'from_type')) { const w = worlds.find((x) => one(c, 'from_type').startsWith(`${x.id}.`)); assert.ok(w && w.shards.some((s) => s.text.includes(` ${one(c, 'from_type')} `) && s.text.includes(` ${one(c, 'from_key')}=`)), `${name}: ${one(c, 'from_type')} ${one(c, 'from_key')}`); }
+    assert.ok(built.has(name) || t || words.has(name) || OPEN.has(name) || one(c, 'from_type') || holeOnly, `${name}: built by a rule, a class, words, from another world, or open (or named only by a hole)`);
   }
   for (const r of of('rule')) assert.equal(new Set(v(r, 'rhs')).size, v(r, 'rhs').length, `${r.id}: a category twice in a production is lost (a repeated key is a set)`);
   const constructions = new Set(of('construction').map((c) => one(c, 'name')));
@@ -307,7 +309,7 @@ test('block 06:55 item 1: the schema loads with every shard (many on rhs and in)
   for (const s of lang.shards) { const r = w.tell(s.text); assert.ok(r.ok, `${s.id}: ${JSON.stringify(r.violations?.slice(0, 2))}`); }
   for (const t of ['rule', 'det', 'prep']) assert.equal(w.schema(`w.lang.en.${t}`).keys[t === 'rule' ? 'rhs' : 'in'].many, true, t);
   const pri = new Map(of('rule').filter((r) => one(r, 'priority')).map((r) => [r.id, Number(one(r, 'priority'))]));
-  assert.equal(pri.size, 4);
+  assert.equal(pri.size, 6); // and np.attribute-of, np.position-of (the holes), over np.possessive-of
   const name = (p) => p.tree.rule.replace(/^w\.lang\.en\.rule\./, '').replace(/\.\d+$/, '');
   // what a reader that honours priority before size picks (sopworld 0.52 ranks by size alone)
   const best = (ps) => [...ps].sort((a, b) => (pri.get(b.tree.rule) ?? 0) - (pri.get(a.tree.rule) ?? 0) || a.size - b.size)[0];
@@ -316,4 +318,17 @@ test('block 06:55 item 1: the schema loads with every shard (many on rhs and in)
     assert.ok(ps.length, s);
     assert.equal(name(best(ps)), c, `${s}: ${ps.map(name)}`);
   }
+});
+
+test('the two holes of Round 12: imperative clauses and "of" beyond parts parse (verbs from k.actions, positions from k.values)', () => {
+  const name = (p) => p.tree.rule.replace(/^w\.lang\.en\.rule\./, '').replace(/\.\d+$/, '');
+  for (const [s, start, c] of [['draw a house', 'S', 'clause.imperative'], ['put the cat on the mat', 'S', 'clause.imperative'], ['please draw a red house', 'S', 'clause.imperative'],
+    ['can you move the tree', 'S', 'clause.imperative'], ['do not move the tree', 'S', 'clause.imperative-neg'], ["don't draw a cat", 'S', 'clause.imperative-neg'],
+    ['the colour of the table', 'NP', 'np.attribute-of'], ['the height of the tree', 'NP', 'np.attribute-of'], ['the top of the box', 'NP', 'np.position-of'], ['the bottom of the box', 'NP', 'np.position-of'],
+    ['the legs of the crocodile', 'NP', 'np.possessive-of']]) {
+    const ps = read(s, start);
+    assert.ok(ps.length, `parses: ${s}`);
+    assert.equal(name(ps[0]), c, `${s}: ${ps.map(name)}`);
+  }
+  for (const c of ['clause.imperative', 'clause.imperative-neg', 'np.attribute-of', 'np.position-of']) assert.equal(of('construction').find((x) => one(x, 'name') === c).attrs.status, undefined, c);
 });

@@ -3776,3 +3776,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   worker's); generated files rebuilt (28 worlds, 953 shards, vocab 24,578 words); validate on 0.56: 981 files, 0
   errors. npm test 2,916: 2,910 pass, 5 skipped, tests/catalog.test.mjs killed (SIGKILL, under the load of other
   suites); that file alone: 8 pass.
+
+## The two w.lang.en holes (2026-11-14, second worker): imperative clauses and "of" beyond parts
+
+- Taken on the coordinator's word (the reviewer's 08:45 gave them to the second worker; the first brief had said not).
+- **Imperative clauses** (hand-grammar, hand-core): `clause.imperative` S -> IMP | LEADS IMP and
+  `clause.imperative-neg` S -> NEGIMP IMP, with IMP -> V NP | V NP PP | V PP and LEADS -> IMPLEAD | IMPLEAD LEADS;
+  IMPLEAD and NEGIMP are the hand-over's own imperative lead and negated-request words (`type=`).
+- **A category from another world:** new slots `w.lang.en.cat.from_type` / `from_key`: V takes the texts of
+  `k.actions.verb`, POSN the names of `k.values.position` (a join by value); `tools/lib/lang-en.mjs` `hostLexicon`
+  fills them from the catalog and still gives a word its k.words reading.
+- **"of" beyond parts:** `np.attribute-of` (NP -> ATTRNP OFNP, ATTRNP -> DET ATTRN) and `np.position-of` (POSNP), each
+  `priority=20` over np.possessive-of; ATTRN has 15 English attribute nouns of its own (colour, size, height ...):
+  joined to k.attributes first, it took "legs" (an attribute there: how many) and read "the legs of the crocodile"
+  as an attribute. The attribute question gets a production with ATTRN (q.wh-of).
+- Tests (w.lang.en): 11 sentences read with the expected construction first; the categories' sources exist.
+  Not read: "the left of the table" ("left of" is a preposition the tokenizer takes first), "a cup of tea".
+- Numbers: w.lang.en hand-grammar +40 wires (2 constructions of clauses, 2 of "of", 4 helpers, 9 categories, 15
+  ATTRN words, 1 question production); schema +2 slots. Catalog 28 worlds, 953 shards, vocab 24,578 words. npm test
+  2,920: 2,915 pass, 5 skipped, 0 fail.

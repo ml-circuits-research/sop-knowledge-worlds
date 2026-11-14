@@ -146,6 +146,11 @@
 @w.lang.en.cat.doc core.slot of=w.lang.en.cat key=doc kind=string core.source="psys2 78f45863"
 @w.lang.en.cat.type core.slot of=w.lang.en.cat key=type kind=atom core.source="hand-core 1"
 @w.lang.en.cat.digits core.slot of=w.lang.en.cat key=digits enum=yes core.source="hand-core 1"
+# `from_type` and `from_key`: the words of the category are the values of the key `from_key` of the facts of
+# `from_type`, a type of another world (a join by value: the verbs of k.actions, the attributes of k.attributes, the
+# positions of k.values); a host fills the category from the catalog, as it fills N from k.words.
+@w.lang.en.cat.from_type core.slot of=w.lang.en.cat key=from_type kind=atom core.source="hand-core 1"
+@w.lang.en.cat.from_key core.slot of=w.lang.en.cat key=from_key kind=atom core.source="hand-core 1"
 # A word of a small category that rules name (all, every, each, both are QALL).
 @w.lang.en.word core.type of=w.lang.en.word shared=true closed=true core.source="hand-core 1"
 @w.lang.en.word.text core.slot of=w.lang.en.word key=text id=true required=true kind=string core.source="hand-core 1"

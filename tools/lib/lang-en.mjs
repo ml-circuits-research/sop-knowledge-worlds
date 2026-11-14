@@ -47,6 +47,7 @@ export function hostOptions(world) {
 // The open classes for the words of one sentence, from k.words (found through vocab.json, as a host finds a
 // shard): a word that is no closed-class word gets N for a noun sense and MOD for an adjective sense of its singular.
 const shardCache = new Map();
+const fromCache = new Map();
 export function hostLexicon(world, sentence, worlds) {
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
   const closed = new Set();
@@ -55,10 +56,22 @@ export function hostLexicon(world, sentence, worlds) {
   const facts = { inflect: world.ofType('w.lang.en.inflect'), irregular: world.ofType('w.lang.en.irregular'), exceptions: world.ofType('w.lang.en.noun.exception') };
   const kwords = worlds.find((w) => w.id === 'k.words');
   const lex = {};
+  // categories whose words are the values of a key of another world's facts (from_type, from_key): a join by value
+  const low = String(sentence).toLowerCase();
+  for (const c of world.ofType('w.lang.en.cat').filter((x) => x.attrs.from_type)) {
+    const type = c.attrs.from_type[0], key = c.attrs.from_key[0], name = c.attrs.name[0];
+    const id = `${type} ${key}`;
+    if (!fromCache.has(id)) {
+      const owner = worlds.filter((w) => type.startsWith(`${w.id}.`)).sort((a, b) => b.id.length - a.id.length)[0];
+      const re = new RegExp(` ${type.replace(/\./g, '\\.')} (?:[^\\n]* )?${key}=("[^"]*"|\\S+)`, 'g');
+      fromCache.set(id, new Set(owner.shards.flatMap((s) => [...s.text.matchAll(re)].map((m) => tok(m[1]).toLowerCase()))));
+    }
+    for (const v of fromCache.get(id)) if (new RegExp(`(^|[^a-z])${v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}($|[^a-z])`).test(low)) lex[v] = [...(lex[v] ?? []), { cat: name, lemma: v }];
+  }
   for (const word of String(sentence).toLowerCase().match(/[a-z]+/g) ?? []) {
     if (closed.has(word)) continue;
     for (const lemma of [...new Set([inflect(facts, word, 'singular', 'lemma'), word])]) {
-      if (lex[word]) break;
+      if (lex[word]?.some((e) => e.cat === 'N' || e.cat === 'MOD')) break; // a word of a category from another world also keeps its k.words reading
       for (const id of (vocab[lemma] ?? []).filter((s) => s.startsWith('k.words/'))) {
         if (!shardCache.has(id)) shardCache.set(id, kwords.shards.find((s) => s.id === id).text);
         const text = shardCache.get(id);
