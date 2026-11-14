@@ -138,6 +138,7 @@ act is the gloss's, and when the thing read shares a word with the gloss).
 | --- | --- | --- | --- |
 | before (a1d1d11) | 93 | 74 | 38 |
 | (1) the nouns of the real turns | 93 | 74 | 55 |
+| (2) "și" as a focus word, and a place frame without a place | 100 | 83 | 63 |
 
 (1) The hand dictionary has the nouns of the real turns with senses of k.words whose English word names a drawing, an
 animal, a scene thing or a kind of person (a test checks it through vocab.json): crocodil, minge, capră, rață, iarbă
@@ -145,4 +146,11 @@ animal, a scene thing or a kind of person (a test checks it through vocab.json):
 table: the furniture), baltă (bălți; pond), and from the same turns măgar, maimuță, vițel (viței irregular); pește and
 pământ were there, pământ now means the ground ("mută casa pe pământ"; the planet is Pământul with a capital). The
 UniMorph-derived folder no longer repeats the six of them it had (crocodil, minge, capră, rață, bunic, baltă).
+
+(2) "și" after a verb means too, also or even, not and: the phrase group `focus` (și, de asemenea, tot) is an optional
+part between the verb and the object in the frames of make, place, remove, copy and the wish ("pune și un lac", "desenează
+și un măgar", "vreau și o casă" read as without it). The joined clitics and the avatar's frame no longer list și (an
+imperative speaks to you: dă-ți, pune-mi), so "pune și un lac" is not "give yourself a lake". `ro.place.bare` (priority 5,
+needs in) says English acts.place.bare: "pune un lac", "pune niște iarbă", "mută peștele" (English reads "put a lake" so).
+Between two things și stays and ("desenează o casă și un copac": the thing is the list).
 

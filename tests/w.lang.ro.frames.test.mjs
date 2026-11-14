@@ -57,6 +57,20 @@ test('frames: clitics, prepositions and order: joined clitics split, a prepositi
   assert.equal(r('Anulează.').act, 'undo');
 });
 
+// Q69 item 2: PSys2's real turns (psys2 real-ro.tsv at 23f283a6) with "și" meaning too before the object read as the
+// same turn without it; "și" between two things is still "and" (the thing is the list).
+test('frames: "și" as a focus word, too or also, before the object ("pune și un lac", "desenează și un măgar")', () => {
+  const r = (s) => { const x = reader.read(s)[0]; return x && `${x.act} ${JSON.stringify(x.args)}`; };
+  for (const [withSi, without] of [['pune si un lac', 'pune un lac'], ['deseneaza si un magar', 'deseneaza un magar'], ['muta si casa la stanga', 'muta casa la stanga'],
+    ['deseneaza si un magar pe iarba', 'deseneaza un magar pe iarba'], ['vreau și o casă', 'vreau o casă'], ['șterge și casa', 'șterge casa']]) {
+    assert.ok(r(without), `${without}: not read`);
+    assert.equal(r(withSi), r(without), withSi);
+  }
+  assert.equal(reader.read('pune si un lac')[0].act, 'place', 'put a lake too: the English reads "put a lake" as acts.place.bare');
+  assert.equal(reader.read('desenează o casă și un copac')[0].roles.thing, 'casa si un copac', 'two things: și is and');
+  assert.equal(reader.read('Dă-ți ochi de vizor.')[0].frame, 'ro.make.self', 'the joined clitic ți stays the avatar\'s self');
+});
+
 const ROWS = process.env.RO_EN_MEANING ?? '/tmp/wt2/training/eval/ro-en-meaning/rows.jsonl';
 test('frames: on PSys2\'s ro-en-meaning set, the share of requests whose act and roles the frames read (skipped without it)', { skip: !existsSync(ROWS) && 'no ro-en-meaning rows' }, () => {
   const rows = readFileSync(ROWS, 'utf8').trim().split('\n').map((l) => JSON.parse(l));

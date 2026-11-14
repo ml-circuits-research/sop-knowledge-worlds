@@ -5358,3 +5358,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   ierburi, rata, leagan, mesele, baltile, vitei ...).
 - Not reached by item 1: "muta crocodilii in lac" stays "act" only because the bench stems the gloss "crocodiles" to
   "crocodil" (a library matter).
+
+## 2026-11-15 — third worker: Q69 item 2, "și" as a focus word
+
+- Bench (161 real turns): 93 / 74 / 55 -> read **100**, act **83**, act and thing **63**.
+- tools/lang-ro-frames.mjs: phrase group `focus` (și, de asemenea, tot), an optional part after the verb (and the joined
+  clitic) in ro.make, .make.n, .make.place, .make.wish, ro.remove, ro.place, .place.dir, ro.copy; și taken out of
+  clitic.joined and of ro.make.self ("pune și un lac" was read as "give yourself a lake"); new ro.place.bare (5, needs
+  in, en acts.place.bare: "pune un lac", "pune niște iarbă", "mută peștele"). 40 frames, 292 wires, 44,328 bytes.
+- tests/w.lang.ro.frames.test.mjs: six turns with și read as without it; și between two things stays "and"; Dă-ți
+  stays the avatar. ro-en-meaning: hand 69.3/54.3/39.9 -> 70.6/55.3/40.8 %, machine 41.3/28.3/25.3 -> 43.1/28.7/25.6 %.
+- Not fixed: "fa si o fetita" reads ro.change.value with the thing "si" (a bench "act": it maps the gloss's "make" to
+  change); the frame cannot refuse a thing that is only a focus word.
