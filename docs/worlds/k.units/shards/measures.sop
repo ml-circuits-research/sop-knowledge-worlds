@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 247 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 248 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -161,6 +161,7 @@
 @k.units.measure.k.time.duration.count_about k.units.measure world=k.time type=duration key=count_about counts="span that the key unit of the same fact names" approximate=true core.source="hand-core 1"
 @k.units.measure.k.units.unit.factor k.units.measure world=k.units type=unit key=factor counts="base unit of its quantity in one of the unit" core.source="hand-core 1"
 @k.units.measure.k.units.unit.offset k.units.measure world=k.units type=unit key=offset counts="base unit of its quantity added after the factor" core.source="hand-core 1"
+@k.units.measure.k.units.currency.decimals k.units.measure world=k.units type=currency key=decimals counts="digit after the point" core.source="hand-core 1"
 @k.units.measure.k.values.scale.steps k.units.measure world=k.values type=scale key=steps counts=step core.source="hand-core 1"
 @k.units.measure.k.values.step.rank k.units.measure world=k.values type=step key=rank ordinal=true core.source="hand-core 1"
 @k.units.measure.k.values.direction.x k.units.measure world=k.values type=direction key=x counts="step to the right in a picture" core.source="hand-core 1"

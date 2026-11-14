@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **180** in 29 worlds; distinct values 5960, meeting a target 5800 (97.3 %), open 160
+- declared joins: **181** in 29 worlds; distinct values 6209, meeting a target 6049 (97.4 %), open 160
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **111**; left undeclared on purpose: 6
 
@@ -172,6 +172,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.time | `k.time.season_in.last` | `k.time.month` | name | 4 | 4 |  |
 | k.time | `k.time.span.cycle` | `k.time.cycle` | name | 3 | 3 |  |
 | k.time | `k.time.span.within` | `k.time.part_of_day` | name | 2 | 2 |  |
+| k.units | `k.units.currency.country` | `k.geo.country` | name | 249 | 249 |  |
 | k.units | `k.units.measure.unit` | `k.units.unit` | name | 13 | 13 |  |
 | k.units | `k.units.quantity.base` | `k.units.unit` | name | 8 | 8 |  |
 | k.units | `k.units.unit.quantity` | `k.units.quantity` | name | 8 | 8 |  |

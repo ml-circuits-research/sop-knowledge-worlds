@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (244 of 1021 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (254 of 1032 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -947,6 +947,17 @@
 @k.attributes.narration.k.units.measure.plain k.attributes.narration type=k.units.measure key=plain narrate=no salience=0 why="machinery: the units of the catalog's numbers" core.source="hand-core 1"
 @k.attributes.narration.k.units.measure.ordinal k.attributes.narration type=k.units.measure key=ordinal narrate=no salience=0 why="machinery: the units of the catalog's numbers" core.source="hand-core 1"
 @k.attributes.narration.k.units.measure.approximate k.attributes.narration type=k.units.measure key=approximate narrate=no salience=0 why="machinery: the units of the catalog's numbers" core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.code k.attributes.narration type=k.units.currency key=code narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.name k.attributes.narration type=k.units.currency key=name narrate=yes salience=0.44 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.name_plural k.attributes.narration type=k.units.currency key=name_plural narrate=yes salience=0.24 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.unit k.attributes.narration type=k.units.currency key=unit narrate=yes salience=0.24 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.unit_plural k.attributes.narration type=k.units.currency key=unit_plural narrate=yes salience=0.24 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.symbol k.attributes.narration type=k.units.currency key=symbol narrate=yes salience=0.23 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.narrow k.attributes.narration type=k.units.currency key=narrow narrate=yes salience=0.13 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.decimals k.attributes.narration type=k.units.currency key=decimals narrate=yes salience=0.44 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.minor k.attributes.narration type=k.units.currency key=minor narrate=yes salience=0.06 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.minor_plural k.attributes.narration type=k.units.currency key=minor_plural narrate=yes salience=0.26 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.units.currency.country k.attributes.narration type=k.units.currency key=country narrate=yes salience=0.24 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.values.colour.name k.attributes.narration type=k.values.colour key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.values.colour.css k.attributes.narration type=k.values.colour key=css narrate=no salience=0 why="a join to a drawing, a sense or another catalog entry" core.source="hand-core 1"
 @k.attributes.narration.k.values.colour.rgb k.attributes.narration type=k.values.colour key=rgb narrate=no salience=0 why="a colour code" core.source="hand-core 1"

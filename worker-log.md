@@ -4881,3 +4881,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   the repository) and failed with ENOENT. Split: the comparison with the tool's output is skipped without the raw
   files (as the importer tests do); the checks on the shards (no new animal, every sound a k.words word, the plain
   sounds) run everywhere. Checked with the frequency list moved away: 9 pass, 1 skipped.
+
+
+## 2026-11-15 — first worker: currencies as typed values in k.units (block 03:20 item 3; PSys2 Q15)
+
+- `k.units.currency` (k.units version 2; identity `code`, ISO 4217): name, name_plural, unit, unit_plural, symbol,
+  narrow, decimals, minor, minor_plural, country (declared join to k.geo.country by name). New importer
+  `tools/import/currencies.mjs`; raw files from Unicode CLDR 48.2.3 (currencies.json, currencyData.json; sha256 in
+  sources/cldr/SOURCE.md); `LICENSE.cldr` copied into k.units.
+- Shard `currencies` (cldr 48, Unicode-3.0): **153 currencies** legal tender somewhere today (153 wires, 31,835 bytes):
+  USD "$" dollar/dollars, EUR "€" euro/euros, GBP "£" pound/pounds, RON leu/lei (narrow "lei"), JPY "¥" 0
+  decimals; the everyday unit is the last word of CLDR's name (lower case: "Turkish Lira" -> lira).
+- Shard `currency-words` (hand-core, CC0; 62 wires, 8,265 bytes; merging): minor units of 41 currencies (cent, penny/
+  pence, ban/bani, centavo, kopek, paisa, grosz, öre, ...) and words for 22: slang (buck, greenback, quid, loonie),
+  symbols and codes as words ($, €, £, ₹, US$, C$, R$), and the usual reading of a unit word alone (dollar -> USD,
+  pound -> GBP, leu and lei -> RON, franc -> CHF, peso -> MXN, rupee -> INR, yen, yuan, euro ...). "pound" stays also
+  the k.units.unit of mass: a host decides by what the number counts (written in WORLD.md).
+- So "I have 14 lei" carries a typed value (unit_plural=lei of RON, minor bani) a checker can keep through a round
+  trip; a "she" or "rents" is no currency word.
+- Not joined: k.geo.country.currency (the PSys2 country list's names: "United States dollar", "Euro") uses other
+  names than CLDR; country -> currency goes through `country` here. Measures: decimals counts digits after the point.
+- Tests: tests/k.units.currencies.test.mjs (3: shards = importer output, skipped without the raw files; the common
+  currencies with symbols, units, plural units, minor units, every currency used by a country; slang, symbols and
+  the usual reading of unit words), 6 questions in tests/k.units.questions.jsonl. `npm run test:changed` on
+  a04b993: 31 files, 248 tests, 245 pass, 2 skipped, 1 fail (COVERAGE.md stale: `npm run reports` rerun, 4 pass).

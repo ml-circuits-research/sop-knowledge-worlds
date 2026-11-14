@@ -53,7 +53,7 @@ export const MEASURES = {
   'k.time': { ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord },
     part_of_day: { n: ord, starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, span: { starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, hour: { n: { counts: 'hour after midnight' }, hour12: { counts: 'hour after midnight or noon' } },
     duration: { count: { counts: 'span that the key unit of the same fact names' }, count_about: { counts: 'span that the key unit of the same fact names' } } },
-  'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } } },
+  'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } }, currency: { decimals: { counts: 'digit after the point' } } },
   'k.values': { scale: { steps: { counts: 'step' } }, step: { rank: ord }, direction: { x: { counts: 'step to the right in a picture' }, y: { counts: 'step downwards in a picture' } }, number: { value: { plain: true }, value_about: { plain: true } },
     shade: { lightness: { plain: true }, saturation: { plain: true } } },
   // Round 12: the grammar world. Orders of trial and places in a frame are orders; the values of number words are plain.

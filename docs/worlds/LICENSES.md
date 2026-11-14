@@ -10,8 +10,8 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Origin: https://github.com/unicode-org/cldr-json , tag `48.2.3`, `cldr-json/cldr-annotations-full/annotations/en/annotations.json` (sha256 `f22083cb86dffb63a643d5bacb5d9899f82d2fa5d388ad4f3aed72184acef505`); https://github.com/unicode-org/cldr , tag `release-48`, `tools/cldr-code/src/main/resources/org/unicode/cldr/util/data/emoji/emoji-test.txt` (emoji 17.0, sha256 `f10773f8aee18d5091ab7b3659b08c83eace3ece0bae1621b09de6a98e0ce7a9`).
 - License: Unicode-3.0 (Unicode License V3, permissive, with the copyright notice kept).
 - Attribution: Copyright © 1991-2025 Unicode, Inc. Unicode CLDR data, used under the Unicode License V3 (text: `docs/worlds/k.objects/LICENSE.cldr`).
-- Shard terms: Apache-2.0 AND Unicode-3.0
-- Used by: `k.attributes` (1 shards), `k.kinds` (1 shards), `k.objects` (124 shards)
+- Shard terms: Apache-2.0 AND Unicode-3.0, Unicode-3.0
+- Used by: `k.attributes` (1 shards), `k.kinds` (1 shards), `k.objects` (124 shards), `k.units` (1 shards)
 
 ## countries-5.1.0
 
@@ -110,7 +110,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (22 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (44 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.music` (3 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (5 shards), `k.procedures` (3 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (2 shards), `k.units` (2 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (14 shards), `w.lang.ro` (5 shards)
+- Used by: `k.actions` (22 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (44 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.music` (3 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (5 shards), `k.procedures` (3 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (2 shards), `k.units` (3 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (14 shards), `w.lang.ro` (5 shards)
 
 ## mulberry-fa94a93
 

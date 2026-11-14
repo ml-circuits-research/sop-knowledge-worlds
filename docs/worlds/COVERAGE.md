@@ -70,7 +70,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.space` | 9 (1%) |
 | `k.story` | 4 (0%) |
 | `k.time` | 2 (0%) |
-| `k.units` | 5 (0%) |
+| `k.units` | 7 (0%) |
 | `k.values` | 20 (1%) |
 | `k.wearables` | 62 (4%) |
 | `k.words` | 1500 (100%) |

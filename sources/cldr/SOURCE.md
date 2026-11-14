@@ -17,3 +17,12 @@
   && curl -L -O
   https://raw.githubusercontent.com/unicode-org/cldr/release-48/tools/cldr-code/src/main/resources/org/unicode/cldr/util/data/emoji/emoji-test.txt`
 - **What is kept:** per kept emoji its English short name (the object's name) and its keywords (`core.word` facts).
+- **Also kept (block 03:20 item 3, 2026-11-15), for `k.units.currency`:** `cldr-json/cldr-numbers-full/main/en/currencies.json`
+  (English names, plural names, symbols; sha256 `a6c41b28f4035f65ae698b53a66866982b4ff49bc0de7e840f91d2c6e6bdc23b`) and
+  `cldr-json/cldr-core/supplemental/currencyData.json` (digits after the point, which regions use which currency
+  since when; sha256 `e50315091b1f34428480f82970be64159ad207af0bdcebe7faa6260d3e34c8a6`), both of tag `48.2.3`. Fetch:
+  `cd sources/cldr/raw && curl -L -O https://raw.githubusercontent.com/unicode-org/cldr-json/48.2.3/cldr-json/cldr-numbers-full/main/en/currencies.json
+  && curl -L -O https://raw.githubusercontent.com/unicode-org/cldr-json/48.2.3/cldr-json/cldr-core/supplemental/currencyData.json`;
+  then `node tools/import/currencies.mjs`. Kept: the currencies that are legal tender in some region today (153):
+  code, English name and plural, the last word of each as the everyday unit, symbol and narrow symbol where they are
+  not the code, digits, the regions as k.geo country names (shard `k.units/shards/currencies`, licence Unicode-3.0).
