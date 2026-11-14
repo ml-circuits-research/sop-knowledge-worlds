@@ -4,7 +4,7 @@
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
-# needs: sopworld with std.schema and std.acts (tools/sopworld/w/VERSION)
+# needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
 @w.timeline core.module name=w.timeline version=1 exports=timeline exports=event core.source="hand-core 1"
 @w.timeline.world std.schema.world name=w.timeline doc="timelines: events in order of time" core.source="hand-core 1"

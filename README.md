@@ -60,7 +60,7 @@ PSys2's hand-over and read by the library's `std.grammar` (`docs/worlds/w.lang.e
 of facts (types and shards, validated like the knowledge worlds), not a `std.schema` world.
 
 Reusable worlds so far: `w.list`, `w.seating`, `w.timeline` (each with a `WORLD.md`; sessions in
-`tests/w.schemas.test.mjs`). They are validated with a newer sopworld build than the knowledge worlds
-(`tools/sopworld/w/VERSION`), because `std.schema` does not exist in the pinned 0.16.0.
+`tests/w.schemas.test.mjs`). Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.30.0 at
+commit 42b3456 (`tools/sopworld/VERSION`).
 
 Agents working here start with [AGENTS.md](AGENTS.md).

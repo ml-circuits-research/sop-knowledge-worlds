@@ -3002,3 +3002,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   keeps the shards `hand-*` and `core-*` that other tools write. npm test 2,833: 2,827 pass, 6 skipped, 0 fail.
 - (ce7e166 left out the regenerated `docs/worlds/LICENSES.md`, which names the source by its commit; committed next.
   `build-catalog --check` does not compare LICENSES.md, so nothing failed: worth a check of its own.)
+
+## Q35 applied (2026-11-14, first worker): one sopworld build, 0.30.0 at 42b3456, for every world
+
+- **One build:** `tools/sopworld/sopworld.mjs` is now sopworld **0.30.0** (build 52e26c40644d) at commit
+  `42b3456` of `soplang-words-lib` (was 0.16.0 at 1e18f1d for `k.*`); the second build `tools/sopworld/w/`
+  (0.26.0 at 4c33e81, used for `w.*`) is gone, `tools/lib/schemas.mjs` loads the reusable worlds with the one
+  build, `index.json` drops `sopworld_schemas` (its `sopworld` names the one commit). The third build that came
+  with `w.lang.en` while this was under way (`tools/sopworld/grammar/`, 0.33.0, used only by
+  `tests/w.lang.en.test.mjs` for std.grammar) is gone too: its 12 tests pass on 0.30.0 (parseText, nounPhrase,
+  grammarView, viewDiff are there), and `w.lang.en` was already validated with the main build. AGENTS.md, README,
+  `docs/worlds/README.md`, `docs/index.html` and the headers of the three `w.*` schemas say so. The library's main is
+  at 0.35.0 by now; the reviewer named 0.30.0, so that is the pin.
+- **What changed for the knowledge worlds: nothing.** `node tools/validate.mjs`: 942 files, 0 errors, 0 warnings
+  before and after, the same output line for line apart from load times (sum of load times 8,420 -> 9,083 ms).
+  `npm run build` and `npm run reports`: the 2,211 drawings, 61 scenes, JOINS (3,402 names, 70 clashes), COVERAGE,
+  ASPECTS and vocab.json byte-identical. `tools/ask-real.mjs`: identical (119 of 132 Talk failures found).
+- **What changed for the reusable worlds:** since 0.27.0 the act `make` reads `amount` as how many things to make,
+  so `w.list.item` with `amount="a litre"` was refused ("how many? (a litre)"). The key is now `quantity`
+  (`w.list` version 2; "amount", "how many", "how much" stay words for it); the session test makes two items at
+  once with the act's `amount` and undoes it. Of the two library defects of Q35, **undo right after remove is
+  fixed** in 0.30.0 (now asserted in the session); `make` still accepts an item without its required `text`.
+- Numbers (after the rebase on `w.lang.en`): catalog 23 worlds, 932 shards, vocab 24,184 words; validate 955 files,
+  0 errors, 0 warnings; vocab.json unchanged by this commit. npm test 2,833: 2,832
+  pass, 1 skipped, 0 fail.

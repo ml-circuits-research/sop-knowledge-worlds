@@ -3,7 +3,7 @@
 // an example session.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { WORLDS_DIR, REPO } from '../tools/lib/worlds.mjs';
@@ -27,10 +27,12 @@ test('three reusable worlds; each is data only, loads with std.acts, has words, 
   assert.deepEqual(actsWorld().warnings ?? [], []);
 });
 
-test('the build the reusable worlds are validated with is the one its VERSION names', () => {
-  const v = Object.fromEntries(readFileSync(join(REPO, 'tools/sopworld/w/VERSION'), 'utf8').trim().split('\n').map((l) => l.split(': ')));
-  assert.equal(createHash('sha256').update(readFileSync(join(REPO, 'tools/sopworld/w/sopworld.mjs'))).digest('hex'), v.sha256);
-  assert.equal(index.sopworld_schemas, v.commit.slice(0, 7));
+test('one sopworld build: the reusable worlds are validated with the build that validates the knowledge worlds (Q35)', () => {
+  assert.equal(existsSync(join(REPO, 'tools/sopworld/w')), false);
+  assert.equal(index.sopworld_schemas, undefined);
+  const v = Object.fromEntries(readFileSync(join(REPO, 'tools/sopworld/VERSION'), 'utf8').trim().split('\n').map((l) => l.split(': ')));
+  assert.equal(index.sopworld, v.commit.slice(0, 7));
+  assert.match(readFileSync(join(REPO, 'tools/lib/schemas.mjs'), 'utf8'), /from '\.\.\/sopworld\/sopworld\.mjs'/);
 });
 
 test('a host finds a schema by name: the words of the vocabulary lead to the schema', () => {
@@ -43,7 +45,7 @@ test('a host finds a schema by name: the words of the vocabulary lead to the sch
 test('a session with a list: items are made, ticked off, picked, copied and removed; a wrong act is refused', () => {
   const w = actsWorld(['w.list']), act = session(w);
   assert.equal(act('make', { kind: 'w.list.list', name: 'shopping' }).result.thing, 'w_list_list1');
-  assert.equal(act('make', { kind: 'w.list.item', text: 'milk', list: '$w_list_list1', n: 1, amount: 'a litre' }).ok, true);
+  assert.equal(act('make', { kind: 'w.list.item', text: 'milk', list: '$w_list_list1', n: 1, quantity: 'a litre' }).ok, true);
   assert.equal(act('make', { kind: 'w.list.item', text: 'bread', list: '$w_list_list1', n: 2 }).ok, true);
   assert.equal(act('ask', { thing: 'w.list.item', nth: 2, attr: 'done' }).result.value, 'false');
   assert.equal(act('change', { thing: 'w.list.item', nth: 1, attr: 'done', value: 'true' }).ok, true);
@@ -53,7 +55,13 @@ test('a session with a list: items are made, ticked off, picked, copied and remo
   assert.deepEqual(act('pick', { kind: 'w.list.item' }).result.things.length, 2);
   assert.equal(act('copy', { thing: 'w_list_item2' }).ok, true);
   assert.equal(act('remove', { thing: 'w_list_item2' }).ok, true);
-  // (undo after remove is not tested: see questions.md Q35, a note for the library.)
+  // Undo right after remove brings the removed item back (a defect of 0.26.0, Q35; fixed by 0.30.0).
+  assert.equal(act('undo', {}).ok, true);
+  assert.equal(act('pick', { kind: 'w.list.item' }).result.things.length, 3);
+  assert.equal(act('remove', { thing: 'w_list_item2' }).ok, true);
+  // `amount` is the act's own argument (how many to make), not a key of an item: two items are made at once.
+  assert.deepEqual(act('make', { kind: 'w.list.item', text: 'egg', list: '$w_list_list1', amount: 2 }).result.things.length, 2);
+  assert.equal(act('undo', {}).ok, true);
   // Refused: an item has no place in a picture; a list that does not exist.
   assert.equal(act('place', { thing: 'w_list_item1', x: 3 }).ok, false);
   assert.equal(act('make', { kind: 'w.list.item', text: 'x', list: '$w_seating_table1' }).ok, false);

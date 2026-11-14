@@ -4,9 +4,9 @@
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
-# needs: sopworld with std.schema and std.acts (tools/sopworld/w/VERSION)
+# needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
-@w.list core.module name=w.list version=1 exports=list exports=item core.source="hand-core 1"
+@w.list core.module name=w.list version=2 exports=list exports=item core.source="hand-core 1"
 @w.list.world std.schema.world name=w.list doc="lists of items in order, which can be ticked off" core.source="hand-core 1"
 
 # A list. `name` is what it is called (shopping); `about` says what it is for.
@@ -15,13 +15,14 @@
 @w.list.list.about core.slot of=w.list.list key=about kind=string core.source="hand-core 1"
 
 # An item of a list. `text` is what it says; `list` refers to its list; `n` is its place in the list, from 1;
-# `done` says whether it is ticked off; `amount` how many or how much (2, "a litre"); `note` anything else.
+# `done` says whether it is ticked off; `quantity` how many or how much (2, "a litre"); `note` anything else.
+# (Not `amount`: the act `make` reads `amount` as how many things to make, since sopworld 0.27.0.)
 @w.list.item core.type of=w.list.item extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.list.item.text core.slot of=w.list.item key=text required=true kind=atom kind=string core.source="hand-core 1"
 @w.list.item.list core.slot of=w.list.item key=list type=w.list.list core.source="hand-core 1"
 @w.list.item.n core.slot of=w.list.item key=n kind=integer min=1 step=1 core.source="hand-core 1"
 @w.list.item.done core.slot of=w.list.item key=done kind=boolean default=false core.source="hand-core 1"
-@w.list.item.amount core.slot of=w.list.item key=amount kind=atom kind=string core.source="hand-core 1"
+@w.list.item.quantity core.slot of=w.list.item key=quantity kind=atom kind=string core.source="hand-core 1"
 @w.list.item.note core.slot of=w.list.item key=note kind=string core.source="hand-core 1"
 
 # The kinds and the acts that apply to them. At most 20 lists and 500 items.
@@ -40,5 +41,5 @@
 @w.list.word.text core.word text=text text=says means=w.list.item.text core.source="hand-core 1"
 @w.list.word.n core.word text=place text=position text=number text=order means=w.list.item.n core.source="hand-core 1"
 @w.list.word.done core.word text=done text=ticked text=checked text=finished text=bought means=w.list.item.done core.source="hand-core 1"
-@w.list.word.amount core.word text=amount text="how many" text="how much" text=quantity means=w.list.item.amount core.source="hand-core 1"
+@w.list.word.quantity core.word text=quantity text=amount text="how many" text="how much" means=w.list.item.quantity core.source="hand-core 1"
 @w.list.word.note core.word text=note text=notes text=comment means=w.list.item.note core.source="hand-core 1"

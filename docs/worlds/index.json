@@ -1,6 +1,6 @@
 {
- "version": "b9f88828c85f",
- "sopworld": "1e18f1d",
+ "version": "5b7016c9b45c",
+ "sopworld": "42b3456",
  "worlds": [
   {
    "id": "k.actions",
@@ -54030,7 +54030,7 @@
  "schemas": [
   {
    "id": "w.list",
-   "version": "1",
+   "version": "2",
    "schema": "w.list/schema.sop",
    "about": "lists of items in order, which can be ticked off",
    "names": [
@@ -54078,7 +54078,7 @@
       "list",
       "n",
       "done",
-      "amount",
+      "quantity",
       "note"
      ],
      "words": [
@@ -54093,7 +54093,7 @@
     }
    ],
    "wires": 27,
-   "bytes": 4023,
+   "bytes": 4147,
    "sources": [
     "hand-core-1"
    ],
@@ -54183,7 +54183,7 @@
     }
    ],
    "wires": 35,
-   "bytes": 5513,
+   "bytes": 5528,
    "sources": [
     "hand-core-1"
    ],
@@ -54256,13 +54256,12 @@
     }
    ],
    "wires": 33,
-   "bytes": 5428,
+   "bytes": 5443,
    "sources": [
     "hand-core-1"
    ],
    "license": "CC0-1.0",
    "warnings": []
   }
- ],
- "sopworld_schemas": "4c33e81"
+ ]
 }

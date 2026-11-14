@@ -44,8 +44,9 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 
 ## sopworld version
 
-Validate with sopworld **0.16.0 at commit 1e18f1d** of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
-is the single-file build). Pin by commit in `tools/sopworld/VERSION`; no tags. Upgrade only when the reviewer says so.
+Validate with sopworld **0.30.0 at commit 42b3456** of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
+is the single-file build). Pin by commit in `tools/sopworld/VERSION`; no tags. **One build** for every world, `k.*` and
+`w.*`, and every tool and test (Q35: two builds side by side is a trap). Upgrade only when the reviewer says so.
 
 ## Layout
 

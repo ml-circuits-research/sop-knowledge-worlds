@@ -1,5 +1,5 @@
 // w.lang.en (Round 12): PSys2's English grammar hand-over, imported under this repository's rules, joined to
-// k.words / k.actions / k.values, and read by the library's std.grammar (the build pinned in tools/sopworld/grammar).
+// k.words / k.actions / k.values, and read by the library's std.grammar (the one pinned build, tools/sopworld/VERSION; Q35).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -8,7 +8,7 @@ import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { parse } from '../tools/sopworld/sopworld.mjs';
 import { scanWorlds, REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { World, parseText, nounPhrase, grammarView, viewDiff } from '../tools/sopworld/grammar/sopworld.mjs';
+import { World, parseText, nounPhrase, grammarView, viewDiff } from '../tools/sopworld/sopworld.mjs';
 import { importLangEn, patternParts } from '../tools/import/psys2-lang-en.mjs';
 import { inflect, hostOptions, hostLexicon } from '../tools/lib/lang-en.mjs';
 
@@ -22,10 +22,9 @@ const v = (w, k) => (w.attrs[k] ?? []).map(tok);
 const one = (w, k) => v(w, k)[0];
 const kw = (id, type) => wiresOf(worlds.find((w) => w.id === id)).filter((w) => w.type === type);
 
-test('w.lang.en: the build that checks what the library reads is the one its VERSION names', () => {
-  const ver = readFileSync(join(REPO, 'tools/sopworld/grammar/VERSION'), 'utf8');
-  const sha = createHash('sha256').update(readFileSync(join(REPO, 'tools/sopworld/grammar/sopworld.mjs'))).digest('hex');
-  assert.equal(sha, /sha256: (\w+)/.exec(ver)[1]);
+test('w.lang.en: std.grammar is read with the one pinned build, the same for every world (Q35)', () => {
+  assert.equal(existsSync(join(REPO, 'tools/sopworld/grammar')), false);
+  assert.equal(typeof parseText, 'function');
 });
 
 test('w.lang.en: the import is reproducible from the cited PSys2 commit (skipped without the checkout)', { skip: !existsSync('/tmp/wt2/.git') && 'no PSys2 checkout at /tmp/wt2' }, () => {

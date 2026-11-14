@@ -9,7 +9,7 @@ import { createHash } from 'node:crypto';
 import { parse, str } from './sopworld/sopworld.mjs';
 import { validateWorlds } from './validate.mjs';
 import { readHeader, moduleInfo, schemaWorld, WORLDS_DIR, REPO } from './lib/worlds.mjs';
-import { scanSchemas, describeSchema, W_SOPWORLD } from './lib/schemas.mjs';
+import { scanSchemas, describeSchema } from './lib/schemas.mjs';
 
 const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 const uniqSorted = (xs) => [...new Set(xs)].sort(byText);
@@ -168,7 +168,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
     schemas.push(d.entry);
   }
   const index = { version: contentVersion(root), sopworld: SOPWORLD, worlds: entries };
-  if (schemas.length) { index.schemas = schemas; index.sopworld_schemas = W_SOPWORLD; }
+  if (schemas.length) index.schemas = schemas;
   const vocabObj = Object.fromEntries([...vocab.keys()].sort(byText).map((k) => [k, [...vocab.get(k)].sort(byText)]));
   return { errors: [], index, vocab: vocabObj, licenses: licensesText(index, sourcesDir) };
 }

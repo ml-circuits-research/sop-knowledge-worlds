@@ -1,14 +1,13 @@
 // The reusable worlds (w.*): schemas in the library's std.schema format, under docs/worlds/w.<name>/schema.sop.
-// They need std.schema and std.acts, so they are loaded with the build pinned in tools/sopworld/w/ (see its
-// VERSION), not with the build that validates the knowledge worlds.
+// They need std.schema and std.acts; they are loaded with the one pinned build (tools/sopworld/VERSION), the same
+// that validates the knowledge worlds (Q35: one build).
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
-import { World, parse } from '../sopworld/w/sopworld.mjs';
+import { World, parse } from '../sopworld/sopworld.mjs';
 import { WORLDS_DIR, REPO, isFactWorld } from './worlds.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
-export const W_SOPWORLD = /commit: ([0-9a-f]{7})/.exec(readFileSync(join(REPO, 'tools/sopworld/w/VERSION'), 'utf8'))[1];
 
 export function scanSchemas(root = WORLDS_DIR) {
   if (!existsSync(root)) return [];

@@ -14,8 +14,8 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 - `k.<world>/WORLD.md`: what the world knows, its sources, and questions it helps with.
 - `w.<name>/schema.sop`: a **reusable world**: a schema in the library's `std.schema` format (kinds, attributes, the
   acts that apply, words), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`
-  (`names`: the words that find it; `kinds` with their `acts`, `attributes` and `words`); `sopworld_schemas` is the
-  commit of the sopworld build they are validated with.
+  (`names`: the words that find it; `kinds` with their `acts`, `attributes` and `words`). They are validated with
+  the same sopworld build as the knowledge worlds, the commit in `sopworld`.
 - `index.json`: the catalog.
 - `vocab.json`: lowercased English lemma → shard ids.
 - `LICENSES.md`: the terms and attribution text of every source, generated with the catalog.
@@ -23,7 +23,7 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 ## index.json
 
 ```json
-{ "version": "<content hash>", "sopworld": "1e18f1d",
+{ "version": "<content hash>", "sopworld": "42b3456",
   "worlds": [ { "id": "k.objects", "version": "1", "schema": "k.objects/schema.sop",
                 "exports": ["k.objects.object", "k.objects.part"], "depends": ["k.commonsense"],
                 "shards": [ { "id": "k.objects/shards/buildings", "path": "k.objects/shards/buildings.sop",

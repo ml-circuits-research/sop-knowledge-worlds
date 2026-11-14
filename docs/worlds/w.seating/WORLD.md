@@ -16,7 +16,7 @@ Tables, their seats, and the guests who sit on them: a wedding, a class, a dinne
 ## How to use it
 
 ```js
-const w = new World({ library: { 'w.seating': schemaText } });   // sopworld with std.schema (tools/sopworld/w/VERSION)
+const w = new World({ library: { 'w.seating': schemaText } });   // sopworld with std.schema (tools/sopworld/VERSION, 0.30.0 or later)
 w.load('@acts core.use world=std.acts');
 w.use('w.seating');
 w.act({ action: 'make', args: { kind: 'w.seating.table', name: 'my first' } });

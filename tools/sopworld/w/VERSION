@@ -1,8 +1,0 @@
-repository: ml-circuits-research/soplang-words-lib
-commit: 4c33e81147fb34fa8dd83f3a9c6637aa689f84fc
-file: docs/sopworld.mjs
-version: 0.26.0
-build: fca1403ce1d9
-date: 2026-11-13
-sha256: ce9a1869675c24d9c58641d03511542c97a6f5c0a8f3466e4c10dd9bc897f97e
-use: only for the reusable worlds docs/worlds/w.* (they need std.schema and std.acts, which 0.16.0 does not have); the knowledge worlds k.* stay on tools/sopworld/sopworld.mjs until the reviewer says otherwise (Q35).

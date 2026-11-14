@@ -4,7 +4,7 @@
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
-# needs: sopworld with std.schema and std.acts (tools/sopworld/w/VERSION)
+# needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
 @w.seating core.module name=w.seating version=1 exports=table exports=seat exports=guest core.source="hand-core 1"
 @w.seating.world std.schema.world name=w.seating doc="a seating plan: tables, seats and the guests on them" core.source="hand-core 1"

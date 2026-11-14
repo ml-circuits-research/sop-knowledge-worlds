@@ -15,7 +15,7 @@ Events in order of time: the life of a person, the history of a town, the plan o
 ## How to use it
 
 ```js
-const w = new World({ library: { 'w.timeline': schemaText } });   // sopworld with std.schema (tools/sopworld/w/VERSION)
+const w = new World({ library: { 'w.timeline': schemaText } });   // sopworld with std.schema (tools/sopworld/VERSION, 0.30.0 or later)
 w.load('@acts core.use world=std.acts');
 w.use('w.timeline');
 w.act({ action: 'make', args: { kind: 'w.timeline.timeline', name: 'my first' } });

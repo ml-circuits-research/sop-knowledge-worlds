@@ -7,14 +7,14 @@ has no rule and no function of its own. Source `hand-core 1`, CC0-1.0.
 Lists of items in order, which can be ticked off: a shopping list, a to-do list, a packing list.
 
 - `w.list.list`: `name` (required), `about`.
-- `w.list.item`: `text` (required), `list` (its list), `n` (its place, from 1), `done` (default false), `amount`, `note`.
+- `w.list.item`: `text` (required), `list` (its list), `n` (its place, from 1), `done` (default false), `quantity` (how many or how much; not `amount`, which the act `make` reads as how many things to make), `note`.
 - Acts: make, remove, change, pick, ask, copy on both kinds. At most 20 lists and 500 items.
 - Found by: list, shopping list, to-do list, checklist, packing list.
 
 ## How to use it
 
 ```js
-const w = new World({ library: { 'w.list': schemaText } });   // sopworld with std.schema (tools/sopworld/w/VERSION)
+const w = new World({ library: { 'w.list': schemaText } });   // sopworld with std.schema (tools/sopworld/VERSION, 0.30.0 or later)
 w.load('@acts core.use world=std.acts');
 w.use('w.list');
 w.act({ action: 'make', args: { kind: 'w.list.list', name: 'my first' } });
