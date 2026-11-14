@@ -103,3 +103,27 @@ the forms, the one with the fewest forms UniMorph lacks wins, then the first cla
   form a lemma's class generates): hand Romanian 28,752 words, 75.6% read with the hand dictionary, 81.7% with
   UniMorph added; machine Romanian 17,855 words, 51.8% and 59.8%. The meaning of a row needs the frames layer
   (block "18:20" item 1), not yet written.
+
+## Frames and order (block "18:20" item 1)
+
+`shards/frames.sop` (`tools/lang-ro-frames.mjs`, hand-written, CC0): 39 frames from Romanian requests to the acts of
+k.actions with their roles, in w.lang.en's frame vocabulary (`w.lang.ro.frame` name, act, mode, set, priority, needs,
+role, example; `w.lang.ro.part` frame, at, is, act, role, takes, lexicon, max_words, word, phrase, optional), each naming
+the English frame it says (`en`: same act, mode, needs; its roles among the English frame's roles), so one reader reads
+both: `tools/lib/lang-ro.mjs` gives w.lang.en's reference reader the Romanian words. Verbs: every form the class of a
+dictionary lemma generates (434 forms), for the lemmas whose sense reaches the act (a k.actions verb, or a k.words verb
+sense whose English word is a k.actions verb of the act: scoate -> remove, alege -> choose -> pick). Prepositions are
+w.lang.ro.prep (relation names of w.lang.en), so a role marked by one (`takes=prep`) is the place with its marker.
+Phrase groups: leads (te rog, poți să, vreau să, hai să...), the politeness words a reader skips anywhere ("..., te
+rog"), the clitics joined to an imperative (șterge-l, scoate-ți) and the bound ones (îl, o), wishes (vreau, aș vrea);
+lexicons: comparatives (mai mare / mai mic and their agreeing forms), directions (la stânga, în sus). Order facts
+(`w.lang.ro.syntax`, 6): an adjective follows its noun (the reader's kind phrase: the first noun is the head, the
+adjectives after it its values: "Desenează o casă roșie" -> kind casă, value roșie), the genitive possessor without a
+preposition (culoarea casei), the article as a suffix, joined and bound clitics, the conjunctive after a wish. A
+Romanian frame takes its English frame's fixed arguments and frame role maps ("Numește-te Pixel": attribute name).
+Measured on PSys2's ro-en-meaning set (read in place; a request counts when its reference reading is one request of a
+frame act): hand Romanian 2,294 requests, read by a frame 69.3 %, the same act and mode 54.3 %, the same act and roles
+39.9 %; machine Romanian 3,597 requests, 41.3 / 28.3 / 25.3 % (`tests/w.lang.ro.frames.test.mjs`; roles compared in the
+roles of k.actions through w.lang.en's role maps). Not yet: verbs with no sense in the dictionaries (conecta, încărca
+are words of their frames meanwhile), fragments without a verb ("Ochi fericiți, te rog"), arithmetic and the questions of
+other worlds (talk, maps), multi-request sentences.

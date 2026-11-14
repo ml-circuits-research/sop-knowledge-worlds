@@ -67,7 +67,7 @@ export const MEASURES = {
   'k.motion': { layer: { priority: ord }, rule: { repeat_min: ms, repeat_max: ms, chance: { plain: true } }, step: { n: ord, with: ord, onset_min: ms, onset_max: ms, hold_min: ms, hold_max: ms, back_min: ms, back_max: ms }, set: { step: ord }, letters: { min: ms, max: ms } },
   // k.procedures: step numbers and ranks are orders; a default or a literal filler is the number the role takes.
   // w.lang.ro: a person is the grammatical person; a numeral's or an ordinal's value is the number it says.
-  'w.lang.ro': { ending: { person: { plain: true } }, irregular: { person: { plain: true } }, det: { person: { plain: true }, value: { plain: true } }, pron: { person: { plain: true } }, numeral: { value: { plain: true } } },
+  'w.lang.ro': { frame: { priority: ord }, part: { at: ord, max_words: { counts: 'word' } }, ending: { person: { plain: true } }, irregular: { person: { plain: true } }, det: { person: { plain: true }, value: { plain: true } }, pron: { person: { plain: true } }, numeral: { value: { plain: true } } },
   // k.interest: weights, bases and the points of a shape are plain shares or values of the feature's measure; a year is an order.
   'k.interest': { source: { year: ord }, appraisal: { base: { plain: true } }, feature: { start_at: { counts: 'unit of the feature\'s measure' }, peak_at: { counts: 'unit of the feature\'s measure' }, full_at: { counts: 'unit of the feature\'s measure' }, weight_min: { plain: true }, weight_max: { plain: true } } },
   // k.genres: places in an order and years are orders; counts of parts, sentences and words say what they count; a band is a place in an order.

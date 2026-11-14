@@ -93,6 +93,9 @@ export function plan(paths, repo = REPO) {
     if (/^tests\/.*\.test\.mjs$/.test(p) && tests.includes(p)) { add(p, 'changed'); continue; }
     if (/^tests\/.*\.questions\.jsonl$/.test(p)) { add('tests/questions.test.mjs', p, basename(p).replace(/\.questions\.jsonl$/, '')); continue; }
     const wm = p.match(/^docs\/worlds\/([kw]\.[^/]+)\//);
+    // a page computed from every world (COVERAGE.md, ASPECTS.md, JOINS.md) goes stale with a change of any world: the
+    // tests that recompute such a page run for every world change
+    if (wm) for (const t of tests) if (/(COVERAGE|ASPECTS|JOINS[\w-]*)\.md/.test(text[t])) add(t, `${p} (a page of every world)`);
     if (wm) {
       touchWorld(wm[1], p);
       for (const o of importers(wm[1])) touchWorld(o, `${p} (imported by ${o})`);

@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 238 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 241 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -205,6 +205,9 @@
 @k.units.measure.w.lang.ro.det.value k.units.measure world=w.lang.ro type=det key=value plain=true core.source="hand-core 1"
 @k.units.measure.w.lang.ro.pron.person k.units.measure world=w.lang.ro type=pron key=person plain=true core.source="hand-core 1"
 @k.units.measure.w.lang.ro.numeral.value k.units.measure world=w.lang.ro type=numeral key=value plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.ro.frame.priority k.units.measure world=w.lang.ro type=frame key=priority ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.ro.part.at k.units.measure world=w.lang.ro type=part key=at ordinal=true core.source="hand-core 1"
+@k.units.measure.w.lang.ro.part.max_words k.units.measure world=w.lang.ro type=part key=max_words counts=word core.source="hand-core 1"
 @k.units.measure.k.interest.source.year k.units.measure world=k.interest type=source key=year ordinal=true core.source="hand-core 1"
 @k.units.measure.k.interest.appraisal.base k.units.measure world=k.interest type=appraisal key=base plain=true core.source="hand-core 1"
 @k.units.measure.k.interest.feature.start_at k.units.measure world=k.interest type=feature key=start_at counts="unit of the feature's measure" core.source="hand-core 1"

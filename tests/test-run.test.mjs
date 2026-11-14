@@ -22,6 +22,7 @@ test('a world touches the tests named after it or naming it, its questions (only
   assert.ok(p.has('tests/k.geo.test.mjs') && p.has('tests/questions.test.mjs'));
   assert.deepEqual([...p.scope.get('tests/questions.test.mjs')], ['k.geo']);
   assert.ok(!p.has('tests/w.lang.ro.test.mjs'));
+  assert.ok(p.has('tests/coverage-report.test.mjs'), 'a page computed from every world');
   // a questions file alone runs the questions of its world
   const q = plan(['tests/k.animals.questions.jsonl']);
   assert.deepEqual([...q.scope.get('tests/questions.test.mjs')], ['k.animals']);

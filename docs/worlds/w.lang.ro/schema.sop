@@ -13,7 +13,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards and the dictionary are written by tools/lang-ro-core.mjs
 
-@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle core.source="hand-core 1"
+@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax core.source="hand-core 1"
 
 # ---- morphology (std.morph) ----
 # A paradigm class: a class inherits every cell of its `parent` and overrides some. `drop`: what the lemma loses
@@ -126,6 +126,47 @@
 @w.lang.ro.particle.form core.slot of=w.lang.ro.particle key=form id=true required=true kind=atom kind=string core.source="hand-core 1"
 @w.lang.ro.particle.kind core.slot of=w.lang.ro.particle key=kind required=true enum=conjunction enum=adverb enum=particle enum=interjection core.source="hand-core 1"
 @w.lang.ro.particle.meaning core.slot of=w.lang.ro.particle key=meaning required=true kind=atom core.source="hand-core 1"
+
+
+# ---- frames and order (block "18:20" item 1): w.lang.en's frame vocabulary, the words Romanian ----
+# A frame says an act of k.actions with its roles (`en` the English frame it says: same act, mode and roles); its parts in
+# order: `is` lead (a phrase group), det, verb (any form of a lemma whose dictionary sense reaches `act`), word (one of
+# `word`; `act` adds the verbs of that act), phrase (a group of w.lang.ro.phrase), lexicon, role (a capture: `takes`).
+@w.lang.ro.frame core.type of=w.lang.ro.frame shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.frame.name core.slot of=w.lang.ro.frame key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.frame.en core.slot of=w.lang.ro.frame key=en required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.frame.act core.slot of=w.lang.ro.frame key=act required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.ro.frame.mode core.slot of=w.lang.ro.frame key=mode kind=atom core.source="hand-core 1"
+@w.lang.ro.frame.set core.slot of=w.lang.ro.frame key=set required=true enum=acts core.source="hand-core 1"
+@w.lang.ro.frame.priority core.slot of=w.lang.ro.frame key=priority required=true kind=integer core.source="hand-core 1"
+@w.lang.ro.frame.needs core.slot of=w.lang.ro.frame key=needs kind=atom core.source="hand-core 1"
+@w.lang.ro.frame.role core.slot of=w.lang.ro.frame key=role many=true kind=atom core.source="hand-core 1"
+@w.lang.ro.frame.example core.slot of=w.lang.ro.frame key=example required=true kind=string core.source="hand-core 1"
+@w.lang.ro.part core.type of=w.lang.ro.part shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.part.frame core.slot of=w.lang.ro.part key=frame id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.part.at core.slot of=w.lang.ro.part key=at id=true required=true kind=integer min=1 core.source="hand-core 1"
+@w.lang.ro.part.is core.slot of=w.lang.ro.part key=is required=true enum=lead enum=det enum=verb enum=word enum=phrase enum=lexicon enum=role core.source="hand-core 1"
+@w.lang.ro.part.act core.slot of=w.lang.ro.part key=act kind=atom kind=string core.source="hand-core 1"
+@w.lang.ro.part.role core.slot of=w.lang.ro.part key=role kind=atom core.source="hand-core 1"
+@w.lang.ro.part.takes core.slot of=w.lang.ro.part key=takes enum=words enum=rest enum=number enum=prep enum=lexicon core.source="hand-core 1"
+@w.lang.ro.part.lexicon core.slot of=w.lang.ro.part key=lexicon kind=atom core.source="hand-core 1"
+@w.lang.ro.part.max_words core.slot of=w.lang.ro.part key=max_words kind=integer min=1 core.source="hand-core 1"
+@w.lang.ro.part.word core.slot of=w.lang.ro.part key=word many=true kind=string core.source="hand-core 1"
+@w.lang.ro.part.phrase core.slot of=w.lang.ro.part key=phrase many=true kind=atom core.source="hand-core 1"
+@w.lang.ro.part.optional core.slot of=w.lang.ro.part key=optional enum=yes core.source="hand-core 1"
+# A phrase group (leads, politeness words a reader skips, joined and bound clitics, wishes) and a lexicon of a role.
+@w.lang.ro.phrase core.type of=w.lang.ro.phrase shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.phrase.name core.slot of=w.lang.ro.phrase key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.phrase.doc core.slot of=w.lang.ro.phrase key=doc kind=string core.source="hand-core 1"
+@w.lang.ro.phrase.item core.slot of=w.lang.ro.phrase key=item many=true required=true kind=string core.source="hand-core 1"
+@w.lang.ro.lex core.type of=w.lang.ro.lex shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.lex.name core.slot of=w.lang.ro.lex key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.lex.doc core.slot of=w.lang.ro.lex key=doc kind=string core.source="hand-core 1"
+@w.lang.ro.lex.item core.slot of=w.lang.ro.lex key=item many=true required=true kind=string core.source="hand-core 1"
+# An order fact a reader of the frames needs (adjective after its noun, genitive possessor, clitic placement).
+@w.lang.ro.syntax core.type of=w.lang.ro.syntax shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.syntax.name core.slot of=w.lang.ro.syntax key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.syntax.about core.slot of=w.lang.ro.syntax key=about required=true kind=string core.source="hand-core 1"
 
 # Words for the types of this world (English).
 @w.lang.ro.word.world core.word text="romanian grammar" text="romanian language" text=romanian means=w.lang.ro.class core.source="hand-core 1"

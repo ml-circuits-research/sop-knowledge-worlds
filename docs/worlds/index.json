@@ -1,5 +1,5 @@
 {
- "version": "97c85b2115ff",
+ "version": "585d37318cbe",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -52167,8 +52167,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 238,
-     "bytes": 33717,
+     "wires": 241,
+     "bytes": 34113,
      "keys": [
       "after",
       "age_years_about",
@@ -82607,12 +82607,17 @@
     "w.lang.ro.det",
     "w.lang.ro.ending",
     "w.lang.ro.fold",
+    "w.lang.ro.frame",
     "w.lang.ro.irregular",
+    "w.lang.ro.lex",
     "w.lang.ro.numeral",
+    "w.lang.ro.part",
     "w.lang.ro.particle",
+    "w.lang.ro.phrase",
     "w.lang.ro.prep",
     "w.lang.ro.pron",
     "w.lang.ro.split",
+    "w.lang.ro.syntax",
     "w.lang.ro.template",
     "w.lang.ro.vowel"
    ],
@@ -82623,6 +82628,18 @@
      "path": "w.lang.ro/shards/closed.sop",
      "wires": 240,
      "bytes": 32318,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/frames",
+     "path": "w.lang.ro/shards/frames.sop",
+     "wires": 276,
+     "bytes": 41950,
      "keys": [],
      "sources": [
       "hand-core-1"

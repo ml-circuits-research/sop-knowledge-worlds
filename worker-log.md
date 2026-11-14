@@ -4680,3 +4680,29 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   the first host's act of reading by a world's own reader, which k.actions does not have), 0 broken, 110 undeclared.
 - Tests: `npm run test:changed` (build 176 s; 35 files incl. w.schemas, w.document, the 8 w.lang.en files, k.compose,
   k.procedures, questions): 266 pass, 1 skipped, 0 fail; after the report fix k.kinds.joins-report 3, catalog 8 pass.
+
+
+## 2026-11-15 — first worker: w.lang.ro frames and order (block 18:20 item 1; round "00:20" item 4)
+
+- `shards/frames.sop` (`tools/lang-ro-frames.mjs`; schema: types frame, part, phrase, lex, syntax, exported): 39
+  frames (make 7, remove 3, change 8, place 2, connect 2, group 2, pick 2, copy, send, undo, redo, save, load, ask 7),
+  5 phrase groups, 3 lexicons, 6 order facts; 276 wires, 41,950 bytes. Each frame names its English frame (`en`) with
+  the same act, mode and needs, its roles among the English roles: w.lang.en's frame vocabulary, read by w.lang.en's
+  reference reader (`tools/lib/lang-ro.mjs` gives it the Romanian words: 434 verb forms of the lemmas whose sense
+  reaches an act, directly or through the k.words verb's English word; dets, prepositions, numerals, phrases folded;
+  joined clitics split; politeness words skipped; kind phrase by adjective.after.noun; the English frame's fixed
+  arguments and frame role maps inherited).
+- **Measured** on PSys2's ro-en-meaning (read in place at /tmp/wt2; a request counts when its reference reading is one
+  request whose action ends in a frame act; roles compared as roles of k.actions through w.lang.en's role maps):
+  hand Romanian 2,294 requests: read 69.3 %, act and mode 54.3 %, act and roles 39.9 %; machine Romanian 3,597:
+  41.3 / 28.3 / 25.3 %. Unread are mostly fragments without a verb, arithmetic and talk questions, verbs with no sense
+  (conecta, încărca: words of their frames meanwhile), multi-request sentences.
+- Tests: tests/w.lang.ro.frames.test.mjs 4 (shard = tool; every frame says an English frame; every frame reads its
+  example with and without diacritics; clitics, prepositions, adjective order; the corpus measure with floors 35 % /
+  20 %, skipped without the corpus), w.lang.ro 10. The frame keys priority, at and max_words are orders and word counts in
+  tools/measures-core.mjs. `npm run test:changed`: build 140 s, 12 files, 99 tests, 0 fail.
+- Full suite for the round (`npm run test:all`, after the rebase on sopworld 0.97): 72 files, 3,036 tests, 3,034 pass,
+  1 skipped, 1 fail: COVERAGE.md stale after the third worker's k.kinds part_of edges (k.kinds 958 -> 1,238 of the
+  common things); `npm run reports` rerun. `test:changed` had not run that test: a change of any world now also runs
+  the tests that recompute a page of every world (COVERAGE, ASPECTS, JOINS). Slowest: derived 53 s, questions 31,
+  k.attributes 29, gallery 25, k.objects.render 20, k.cores 18, k.objects.names 16; 362 s in all.
