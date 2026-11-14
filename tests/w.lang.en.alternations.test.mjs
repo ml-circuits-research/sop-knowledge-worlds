@@ -2,7 +2,7 @@
 // canonical form a frame is written in, by rules that are facts of the language world. Checks: the shard is what the
 // tool writes and loads in the schema; families form a layered graph; every test sentence comes back to its canonical
 // form with the rules named, read by the pinned build's `normalise` (src/alternate.mjs of the library; the test's
-// copy of it was deleted when the pin reached 0.90, reviewer 00:40).
+// copy of it was deleted when the pin reached 0.90, reviewer 00:40; on 0.97 since 2026-11-15).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
@@ -52,10 +52,8 @@ test('every test sentence comes back to its canonical form with the rules named,
     const r = normalise(R, textOf);
     assert.equal(r.text, bare(c.attrs.canonical[0]), textOf);
     assert.deepEqual(r.applied, (c.attrs.applied ?? []).map(bare), `${textOf}: rules`);
-    // The library keeps the first mode applied: a request wrapper before a question gives "request" (questions.md Q60).
-    const mode = c.attrs.mode ? bare(c.attrs.mode[0]) : undefined;
-    if (r.applied[0] === 'can_you' && mode === 'question') assert.equal(r.mode, 'request', textOf);
-    else assert.equal(r.mode, mode, `${textOf}: mode`);
+    // Since sopworld 0.91 the innermost rule's mode wins (questions.md Q58 item 1, Q65): every case's own mode.
+    assert.equal(r.mode, c.attrs.mode ? bare(c.attrs.mode[0]) : undefined, `${textOf}: mode`);
   }
 });
 

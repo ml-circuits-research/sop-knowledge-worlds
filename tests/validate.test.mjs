@@ -14,7 +14,7 @@ test('the pinned sopworld build is the one VERSION names', () => {
   assert.equal(sha, v.sha256);
   assert.equal(version, v.version);
   assert.equal(build.hash, v.build);
-  assert.ok(v.commit.startsWith('7f3c31a'));
+  assert.ok(v.commit.startsWith('04fc35e'));
 });
 
 // Every world under docs/worlds loads with zero errors: tests/catalog.test.mjs ("the catalog builds without

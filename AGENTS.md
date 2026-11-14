@@ -63,7 +63,7 @@ Several workers share one machine (8 GB, 2 CPUs): run test files one at a time, 
 
 ## sopworld version
 
-Validate with the sopworld build pinned in `tools/sopworld/VERSION` (0.90.0 at commit 7f3c31a as of 2026-11-15; the VERSION file is authoritative) of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
+Validate with the sopworld build pinned in `tools/sopworld/VERSION` (0.97.0 at commit 04fc35e as of 2026-11-15; the VERSION file is authoritative) of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
 is the single-file build). Pin by commit in `tools/sopworld/VERSION`; no tags. **One build** for every world, `k.*` and
 `w.*`, and every tool and test (Q35: two builds side by side is a trap). Upgrade only when the reviewer says so.
 

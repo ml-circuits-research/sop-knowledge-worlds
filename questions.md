@@ -912,3 +912,13 @@ example (tests/w.lang.en.frames.test.mjs KNOWN: acts.facts.ask.what.in.lead's ex
 acts.media.m.pick.play.bare lacks "play"; the media and text frames lose to a broader frame of their set): fix them
 here (and diverge from en.local.mjs, the 07:40 test then compares against a list of differences) or in PSys2?
 Blocking: no. Meanwhile they are listed with their reasons and the test fails if a new frame fails or a listed one passes.
+
+## Q65 [LIB] (pin 0.97, third worker, 2026-11-15): a test changed behaviour with the new build — the mode of a wrapped question
+Question: none to answer; a record of the one test that changed with the pin 0.90 → 0.97: is the new reading the one
+meant?
+Context: `tests/w.lang.en.alternations.test.mjs` kept an exception for Q58 item 1: "can you tell me where the cat is"
+came back as mode `request` (the first mode applied). With 0.97 (`normalise`: the innermost rule's mode wins, 0.91)
+it comes back as `question`, the mode the published test sentence says; the exception was taken out and every case
+is now checked against its own mode. Canonical texts and the rules applied (35 of 35) are unchanged under 0.93's
+rule order by specificity.
+Blocking: no.

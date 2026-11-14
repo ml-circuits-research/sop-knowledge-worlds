@@ -4575,3 +4575,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   not follow a declared join; WARNS (t.diagnostic) on broken, open, undeclared joins and a stale report.
   `tests/k.kinds.relations.test.mjs` test 1: declared and schema facts must be the tool's output; a value-share fact
   that differs is a warning, so another world growing no longer turns it red.
+
+## 2026-11-15 — third worker: the one build moved to sopworld 0.97.0 (04fc35e; coordinator: to the current release if newer than 0.90)
+
+- `tools/sopworld/sopworld.mjs` = the library's `docs/sopworld.mjs` at 04fc35e (release 0.97.0, build a7e78da88c45);
+  VERSION, validate test, AGENTS.md, README.md, docs/index.html, docs/worlds/README.md and w.lang.en/WORLD.md name it.
+  `npm run build`: nothing changed but the catalog's commit and content hash (32 worlds, 1,063 shards, 26,471 words).
+- One test changed behaviour: `normalise` gives "can you tell me where the cat is" the mode `question` (0.91: the
+  innermost rule's mode wins; our Q58 item 1), not `request`. The test's exception for the old reading is taken out
+  (every case checked against its own published mode); recorded as questions.md Q65 [LIB]. Canonical texts and rules
+  applied unchanged (35 / 35).
+- Full suite (`node tools/test-run.mjs`, 69 files one at a time): 3,009 pass, 0 fail, 17 skipped, 318 s. Slowest:
+  derived 34.6, questions 33.7, k.attributes 27.7, k.objects.render 26.9, k.objects.names 25.3, k.cores 17.5,
+  gallery 17.0, k.kinds.relations 12.5, k.procedures 10.1, w.lang.en.templates 9.6 s.
+- Rebased onto d7fa086 (frames read their examples, declared joins): build again (catalog hash only; 26,475 words);
+  on 0.97 k.kinds.joins-report 3, k.kinds.relations 5, w.lang.en.frames 2, phrasing 3, templates 8, w.lang.en 22,
+  alternations 4, abstraction 5, k.actions 4, k.kinds 8, questions 424, repo 1, validate 5, catalog 8 pass. My
+  question is Q65 (Q64 was taken by the first worker meanwhile).
