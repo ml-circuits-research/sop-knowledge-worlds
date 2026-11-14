@@ -1,4 +1,4 @@
-# k.attributes/shards/same-b: one name, one thing: for 329 names that start with "b" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-b: one name, one thing: for 332 names that start with "b" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -122,7 +122,7 @@
 @k.attributes.same.belgrade.place k.attributes.same name=belgrade sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bell.place k.attributes.same name=bell sense=place only=false in=k.geo.river unsure=k.attributes.number unsure=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bell.thing k.attributes.same name=bell sense=thing only=false in=k.attributes.drawn in=k.objects.object in=k.scenes.thing unsure=k.attributes.number unsure=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.bell_pepper.food k.attributes.same name="bell pepper" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.bell_pepper.food k.attributes.same name="bell pepper" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bell_with_slash.thing k.attributes.same name="bell with slash" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.bellhop_bell.thing k.attributes.same name="bellhop bell" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.bellows.thing k.attributes.same name=bellows sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -164,6 +164,7 @@
 @k.attributes.same.black.place k.attributes.same name=black sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.black_bird.animal k.attributes.same name="black bird" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.black_cat.animal k.attributes.same name="black cat" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.black_hole.body_in_space k.attributes.same name="black hole" sense="body in space" only=true in=k.space.kind by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.black_nib.thing k.attributes.same name="black nib" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.blackberry.food k.attributes.same name=blackberry sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.blackbird.animal k.attributes.same name=blackbird sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -185,7 +186,7 @@
 @k.attributes.same.blowfish.animal k.attributes.same name=blowfish sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.blue.colour k.attributes.same name=blue sense=colour only=true in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.blue_book.thing k.attributes.same name="blue book" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.blue_whale.animal k.attributes.same name="blue whale" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.blue_whale.animal k.attributes.same name="blue whale" sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bluebell.plant k.attributes.same name=bluebell sense=plant only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.blueberries.food k.attributes.same name=blueberries sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.blueberry.food k.attributes.same name=blueberry sense=food only=true in=k.attributes.number in=k.food.food by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -199,6 +200,7 @@
 @k.attributes.same.boccia_chute.thing k.attributes.same name="boccia chute" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.bodega.thing k.attributes.same name=bodega sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.body.body_part k.attributes.same name=body sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.boiled_egg.food k.attributes.same name="boiled egg" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.boiler.thing k.attributes.same name=boiler sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bolivia.place k.attributes.same name=bolivia sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bolt.thing k.attributes.same name=bolt sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -233,7 +235,7 @@
 @k.attributes.same.boutique.thing k.attributes.same name=boutique sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bow.clothing k.attributes.same name=bow sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bow_and_arrow.thing k.attributes.same name="bow and arrow" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.bow_tie.clothing k.attributes.same name="bow tie" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
+@k.attributes.same.bow_tie.clothing k.attributes.same name="bow tie" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bowl.thing k.attributes.same name=bowl sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bowl_with_spoon.food k.attributes.same name="bowl with spoon" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.bowling.thing k.attributes.same name=bowling sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -328,6 +330,7 @@
 @k.attributes.same.burrito.food k.attributes.same name=burrito sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bus.thing k.attributes.same name=bus sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bus_double_decker.thing k.attributes.same name="bus double decker" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.bus_driver.person k.attributes.same name="bus driver" sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bus_single_decker.thing k.attributes.same name="bus single decker" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.bus_stop.thing k.attributes.same name="bus stop" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.bush.plant k.attributes.same name=bush sense=plant only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-c: one name, one thing: for 430 names that start with "c" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (22 facts of such names here).
+# k.attributes/shards/same-c: one name, one thing: for 435 names that start with "c" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (22 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -188,6 +188,7 @@
 @k.attributes.same.chicken_live.animal k.attributes.same name="chicken live" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chicken_nuggets.food k.attributes.same name="chicken nuggets" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chicken_pieces.food k.attributes.same name="chicken pieces" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.chicken_soup.food k.attributes.same name="chicken soup" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.chickpea.food k.attributes.same name=chickpea sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.chico.place k.attributes.same name=chico sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.child.person k.attributes.same name=child sense=person only=true in=k.people.kind by_word=k.words.sense core.source="hand-core 1"
@@ -211,9 +212,11 @@
 @k.attributes.same.chocolate.colour k.attributes.same name=chocolate sense=colour only=false in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.chocolate_bar.food k.attributes.same name="chocolate bar" sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chocolate_box.food k.attributes.same name="chocolate box" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.chocolate_cake.food k.attributes.same name="chocolate cake" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.chocolate_chips.food k.attributes.same name="chocolate chips" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chocolate_egg.food k.attributes.same name="chocolate egg" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chocolate_log.food k.attributes.same name="chocolate log" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.chocolate_milk.food k.attributes.same name="chocolate milk" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.chopping_board.thing k.attributes.same name="chopping board" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chopsticks.thing k.attributes.same name=chopsticks sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.chowder.thing k.attributes.same name=chowder sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
@@ -314,6 +317,7 @@
 @k.attributes.same.comb.thing k.attributes.same name=comb sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.comet.body_in_space k.attributes.same name=comet sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.space.kind by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.commissary.thing k.attributes.same name=commissary sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.common_year.time k.attributes.same name="common year" sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.compass.thing k.attributes.same name=compass sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.computer.thing k.attributes.same name=computer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.computer_cable.thing k.attributes.same name="computer cable" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -373,6 +377,7 @@
 @k.attributes.same.cow.animal k.attributes.same name=cow sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.cow_face.animal k.attributes.same name="cow face" sense=animal only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.cowboy.person k.attributes.same name=cowboy sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.cowboy_hat.clothing k.attributes.same name="cowboy hat" sense=clothing only=true in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.coyote.animal k.attributes.same name=coyote sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.crab.animal k.attributes.same name=crab sense=animal only=false in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.crab.food k.attributes.same name=crab sense=food only=false in=k.food.food unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

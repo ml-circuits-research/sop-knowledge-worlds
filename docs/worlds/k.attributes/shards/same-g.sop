@@ -1,4 +1,4 @@
-# k.attributes/shards/same-g: one name, one thing: for 129 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-g: one name, one thing: for 130 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -17,7 +17,7 @@
 @k.attributes.same.gardening_gloves.clothing k.attributes.same name="gardening gloves" sense=clothing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.gargoyle.thing k.attributes.same name=gargoyle sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.garlic.food k.attributes.same name=garlic sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.garlic_bread.food k.attributes.same name="garlic bread" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.garlic_bread.food k.attributes.same name="garlic bread" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.garlic_crusher.thing k.attributes.same name="garlic crusher" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.garter.thing k.attributes.same name=garter sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gate.thing k.attributes.same name=gate sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -97,11 +97,12 @@
 @k.attributes.same.gravy.food k.attributes.same name=gravy sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gravy_boat.thing k.attributes.same name="gravy boat" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.great_pyramid_of_giza.thing k.attributes.same name="great pyramid of giza" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.great_white_shark.animal k.attributes.same name="great white shark" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.great_white_shark.animal k.attributes.same name="great white shark" sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.greece.place k.attributes.same name=greece sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.green.colour k.attributes.same name=green sense=colour only=false in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.green.place k.attributes.same name=green sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.green_apple.food k.attributes.same name="green apple" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.green_bean.food k.attributes.same name="green bean" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.green_beans.food k.attributes.same name="green beans" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.green_book.thing k.attributes.same name="green book" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.green_salad.food k.attributes.same name="green salad" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -115,7 +116,7 @@
 @k.attributes.same.grill_pan.thing k.attributes.same name="grill pan" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.grinder.food k.attributes.same name=grinder sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grizzly.thing k.attributes.same name=grizzly sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.grizzly_bear.animal k.attributes.same name="grizzly bear" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.grizzly_bear.animal k.attributes.same name="grizzly bear" sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grog.thing k.attributes.same name=grog sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grotto.thing k.attributes.same name=grotto sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.groundhog.animal k.attributes.same name=groundhog sense=animal only=false in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -125,7 +126,7 @@
 @k.attributes.same.guesthouse.thing k.attributes.same name=guesthouse sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guide_dog.animal k.attributes.same name="guide dog" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.guinea.place k.attributes.same name=guinea sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.guinea_pig.animal k.attributes.same name="guinea pig" sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.guinea_pig.animal k.attributes.same name="guinea pig" sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guitar.thing k.attributes.same name=guitar sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gullet.body_part k.attributes.same name=gullet sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gully.thing k.attributes.same name=gully sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

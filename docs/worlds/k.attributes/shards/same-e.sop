@@ -1,4 +1,4 @@
-# k.attributes/shards/same-e: one name, one thing: for 68 names that start with "e" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-e: one name, one thing: for 69 names that start with "e" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -6,6 +6,7 @@
 @k.attributes.same.e-mail.thing k.attributes.same name=e-mail sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.eagle.animal k.attributes.same name=eagle sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ear.body_part k.attributes.same name=ear sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.ear_canal.body_part k.attributes.same name="ear canal" sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ear_muffs.clothing k.attributes.same name="ear muffs" sense=clothing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.ear_of_corn.food k.attributes.same name="ear of corn" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.eardrum.body_part k.attributes.same name=eardrum sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"

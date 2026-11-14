@@ -137,4 +137,9 @@ test('the one-word names of the hand-written worlds have their sense in k.words'
   for (const w of ['kilogram', 'litre', 'emu', 'pancreas', 'falafel']) assert.ok(glossOf(w).length, w);
   assert.ok(glossOf('mars').some((g) => /planet/.test(g)), 'mars');
   assert.ok(glossOf('crane').some((g) => /bird/.test(g)), 'crane');
+  // Q36: names of several words too, with `word` written with spaces
+  for (const w of ['manta ray', 'light year', 'small intestine', 'top hat', 'police officer']) assert.ok(glossOf(w).length, w);
+  assert.ok(glossOf('light year').some((g) => /distance/.test(g)), 'light year');
+  // and under the roots added for them: edible fat, galaxy, black hole, operator
+  for (const w of ['olive oil', 'milky way', 'black hole', 'bus driver']) assert.ok(glossOf(w).length, w);
 });

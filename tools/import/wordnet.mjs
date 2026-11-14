@@ -18,6 +18,10 @@ export const COMMON_LIMIT = 3000;  // Round 9: the lines of the list whose words
 // Senses that WordNet itself marks as slurs or vulgar are left out (the worlds are also read by children's applications).
 const OFFENSIVE = /ethnic slur|\((?:[a-z]+ )?(?:offensive|vulgar|obscene|taboo|derogatory)(?: [a-z]+)?\)|\b(?:offensive|derogatory|disparaging|obscene|vulgar|insulting|contemptuous|pejorative) (?:terms?|names?|words?|slang|expression)\b/i;
 const LEMMA = /^[a-z][a-z0-9-]*$/; // what can be an atom and a segment of an id
+// Q36: a name of several words, as WordNet writes it (manta_ray); its `word` is written with spaces ("manta ray")
+const MULTI = /^[a-z][a-z0-9-]*(_[a-z][a-z0-9-]*)+$/;
+const keyOf = (name) => String(name).toLowerCase().trim().replace(/\s+/g, '_');
+const kept = (w) => LEMMA.test(w) || MULTI.test(w);
 
 // A data.<pos> file: synset offset -> { words (as spelt), pointers [symbol, offset, pos], gloss }.
 export function readData(text) {
@@ -69,7 +73,8 @@ export const bucketOf = (lemma) => (/^[a-z]{2}/.test(lemma) ? lemma.slice(0, 2) 
 // also get their adjective and adverb senses (files 'index.adj', 'data.adj', 'index.adv', 'data.adv', where given)
 // and, on their noun and verb senses, the chain `kind_of`. Every sense gets its `opposite`.
 export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map() } = {}) {
-  const wanted = new Set([...extra.keys()].filter((w) => LEMMA.test(w)));
+  const wanted = new Set([...extra.keys()].map(keyOf).filter(kept));
+  extra = new Map([...extra].map(([k, v]) => [keyOf(k), v]));
   const common = new Set(commonLimit > 0 ? wanted : []);
   for (const line of freq.split('\n').slice(0, commonLimit)) {
     const w = line.trim().split(/\s+/)[0]?.toLowerCase();
@@ -114,6 +119,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
         const s = data.get(offset);
         if (OFFENSIVE.test(s.gloss)) { stats.skipped++; return; }
         const own = s.words.find((w) => w.toLowerCase() === lemma) ?? lemma;
+        const others = s.words.filter((w) => w !== own);
         const targets = (symbol) => [...new Set(s.pointers.filter(([sym, , tp]) => sym === symbol && tp === p)
           .map(([, off]) => spelt(data.get(off).words[0])))];
         // Round 9. The opposite: WordNet's antonym of this word in this sense. Where an adjective has none of its own
@@ -123,8 +129,8 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
         const near = opposite.length || p !== 'a' ? [] : [...new Set(s.pointers.filter(([sym, off]) => sym === '&' && data.has(off)).flatMap(([, off]) => lexical(data.get(off), data.get(off).words[0], '!')))];
         const kinds = (p === 'n' || p === 'v') && common.has(lemma) ? chain(offset) : [];
         const line = wire(`k.words.${seg(lemma)}.${pos}.${i + 1}`, 'k.words.sense', [
-          ['word', own], ['pos', pos], ['n', i + 1], ['gloss', text(shortGloss(s.gloss))],
-          ...[...new Set(s.words.filter((w) => w !== own).map(spelt))].map((w) => ['synonym', w]),
+          ['word', spelt(own)], ['pos', pos], ['n', i + 1], ['gloss', text(shortGloss(s.gloss))],
+          ...[...new Set(others.map(spelt))].filter((w) => w !== spelt(own)).map((w) => ['synonym', w]),
           ...targets('@').map((w) => ['is_a', w]),
           ...targets('@i').map((w) => ['instance_of', w]),
           ...targets('#p').map((w) => ['part_of', w]),
@@ -162,8 +168,8 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
     stats.spellings += spellings.length;
     stats.forms += forms.length;
     // A spelling with a capital (China) is its own value of `word`; lower case text finds it.
-    for (const own of spellings) lines.push(wire(`k.words.${seg(lemma)}.spelling.${seg(own)}`, 'core.word', [['text', lemma], ['means', own], ['of', 'k.words.sense.word']], SOURCE));
-    if (forms.length) lines.push(wire(`k.words.${seg(lemma)}.forms`, 'core.word', [...forms.map((f) => ['text', f]), ['means', lemma], ['of', 'k.words.sense.word']], SOURCE));
+    for (const own of spellings) lines.push(wire(`k.words.${seg(lemma)}.spelling.${seg(own)}`, 'core.word', [['text', spelt(lemma)], ['means', spelt(own)], ['of', 'k.words.sense.word']], SOURCE));
+    if (forms.length) lines.push(wire(`k.words.${seg(lemma)}.forms`, 'core.word', [...forms.map((f) => ['text', spelt(f)]), ['means', spelt(lemma)], ['of', 'k.words.sense.word']], SOURCE));
     const b = bucketOf(lemma);
     if (!buckets.has(b)) buckets.set(b, []);
     buckets.get(b).push({ lemma, lines });
@@ -177,7 +183,7 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
       const first = part[0].lemma, last = part[part.length - 1].lemma;
       out[`${name}.sop`] = `${header({
         id: `k.words/shards/${name}`,
-        about: `senses of the words from "${first}" to "${last}" (first letters "${b}"${parts.length > 1 ? `, part ${i + 1} of ${parts.length}` : ''}).`,
+        about: `senses of the words from "${spelt(first)}" to "${spelt(last)}" (first letters "${b}"${parts.length > 1 ? `, part ${i + 1} of ${parts.length}` : ''}).`,
         sources: [`wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent${extra.size ? ', and the common things of tools/coverage.mjs' : ''})`],
         license: 'WordNet-3.0',
         script: 'tools/import/wordnet.mjs',
@@ -203,11 +209,15 @@ export async function commonThings() {
 // definition, since `k.words` kept only frequent words). For each type that names things, the WordNet synsets its
 // things fall under (ROOTS); a name that is one word and has no sense yet is kept with its first noun sense that
 // lies under one of them (through is-a or instance-of): `emu` under animal, `kilogram` under unit of measurement,
-// `Mars` the planet, not the god. Names of several words are not taken (k.words keeps single words).
+// `Mars` the planet, not the god. Names of several words are taken too (Q36: manta ray, light year), as WordNet
+// writes them (manta_ray), with `word` written with spaces.
 export const CORE_ROOTS = {
-  'k.animals.animal': ['00015568'], 'k.food.food': ['00021445', '07571428'], 'k.units.unit': ['13604927'], 'k.body.part': ['05227735'],
-  'k.space.body': ['09262646'], 'k.space.kind': ['09262646'], 'k.shapes.shape': ['05071206', '00028005'], 'k.colours.colour': ['04963771'],
-  'k.people.role': ['00007846'], 'k.wearables.wearable': ['03055525', '03602662', '03127399'], 'k.time.duration': ['15137796'],
+  // Q36: edible fat (olive oil) and topping (whipped cream) are food; a galaxy, the solar system and a black hole are
+  // things of space though WordNet files them as a collection, a system and a region; an operator (bus driver) is a person.
+  'k.animals.animal': ['00015568'], 'k.food.food': ['00021445', '07571428', '07687880', '07637385'], 'k.units.unit': ['13604927'], 'k.body.part': ['05227735'],
+  'k.space.body': ['09262646', '08287963', '09462337', '09246084'], 'k.space.kind': ['09262646', '08287963', '09462337', '09246084'],
+  'k.shapes.shape': ['05071206', '00028005'], 'k.colours.colour': ['04963771'],
+  'k.people.role': ['00007846', '10398111'], 'k.wearables.wearable': ['03055525', '03602662', '03127399'], 'k.time.duration': ['15137796'],
 };
 export function coreNames(files, worldsDir) {
   const data = readData(files['data.noun']), index = readIndex(files['index.noun']);
@@ -224,8 +234,8 @@ export function coreNames(files, worldsDir) {
     try { dir = readdirSync(join(worldsDir, world, 'shards')); } catch { continue; }
     for (const f of dir.filter((x) => x.endsWith('.sop')).sort()) {
       for (const m of readFileSync(join(worldsDir, world, 'shards', f), 'utf8').matchAll(new RegExp(`^@\\S+ ${type.replace(/\./g, '\\.')} name=("[^"]*"|\\S+)`, 'gm'))) {
-        const name = (m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]).toLowerCase();
-        if (!LEMMA.test(name) || out.has(name)) continue;
+        const name = keyOf(m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]);
+        if (!kept(name) || out.has(name)) continue;
         const sense = (index.get(name) ?? []).find((o) => under(o, roots));
         if (sense) out.set(name, sense);
       }

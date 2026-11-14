@@ -1,4 +1,4 @@
-# k.attributes/shards/same-f: one name, one thing: for 154 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-f: one name, one thing: for 158 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -15,7 +15,7 @@
 @k.attributes.same.farmer.person k.attributes.same name=farmer sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.farmhouse.thing k.attributes.same name=farmhouse sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.father.person k.attributes.same name=father sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.father_christmas.person k.attributes.same name="father christmas" sense=person only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.people.role in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.father_christmas.person k.attributes.same name="father christmas" sense=person only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.father_christmas_sack.thing k.attributes.same name="father christmas sack" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.faucet.thing k.attributes.same name=faucet sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fax.thing k.attributes.same name=fax sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
@@ -66,7 +66,7 @@
 @k.attributes.same.first_quarter_moon.thing k.attributes.same name="first quarter moon" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.first_quarter_moon_face.thing k.attributes.same name="first quarter moon face" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.fish.animal k.attributes.same name=fish sense=animal only=true in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.fish_and_chips.food k.attributes.same name="fish and chips" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.fish_and_chips.food k.attributes.same name="fish and chips" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fish_burger.food k.attributes.same name="fish burger" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.fish_cake_with_swirl.food k.attributes.same name="fish cake with swirl" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.fish_deep_fried.food k.attributes.same name="fish deep fried" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -98,7 +98,7 @@
 @k.attributes.same.fly.animal k.attributes.same name=fly sense=animal only=false in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fly.place k.attributes.same name=fly sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.flying_disc.thing k.attributes.same name="flying disc" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.flying_fish.animal k.attributes.same name="flying fish" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.flying_fish.animal k.attributes.same name="flying fish" sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.flying_saucer.thing k.attributes.same name="flying saucer" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.fog.thing k.attributes.same name=fog sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.foggy.thing k.attributes.same name=foggy sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
@@ -135,11 +135,14 @@
 @k.attributes.same.freezer.thing k.attributes.same name=freezer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.freighter.thing k.attributes.same name=freighter sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.french.place k.attributes.same name=french sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.french_fries.food k.attributes.same name="french fries" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.french_fries.food k.attributes.same name="french fries" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.french_press.thing k.attributes.same name="french press" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.french_stick.food k.attributes.same name="french stick" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.french_toast.food k.attributes.same name="french toast" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.friday.time k.attributes.same name=friday sense=time only=true in=k.time.weekday by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fridge.thing k.attributes.same name=fridge sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.fried_egg.food k.attributes.same name="fried egg" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.fried_rice.food k.attributes.same name="fried rice" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fried_shrimp.food k.attributes.same name="fried shrimp" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.frock.thing k.attributes.same name=frock sense=thing only=true in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.frog.animal k.attributes.same name=frog sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -150,6 +153,7 @@
 @k.attributes.same.frozen_fish_fingers.food k.attributes.same name="frozen fish fingers" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.frozen_food_box.food k.attributes.same name="frozen food box" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.frozen_pizza.food k.attributes.same name="frozen pizza" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.fruit_salad.food k.attributes.same name="fruit salad" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fruit_tree.plant k.attributes.same name="fruit tree" sense=plant only=true in=k.attributes.drawn in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.frying_pan.thing k.attributes.same name="frying pan" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.fudge.thing k.attributes.same name=fudge sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

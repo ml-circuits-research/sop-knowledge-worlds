@@ -1,4 +1,4 @@
-# k.attributes/shards/same-v: one name, one thing: for 47 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-v: one name, one thing: for 48 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -15,6 +15,7 @@
 @k.attributes.same.vcr.thing k.attributes.same name=vcr sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.veal.thing k.attributes.same name=veal sense=thing only=true in=k.objects.stand_in by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vega.body_in_space k.attributes.same name=vega sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.vegetable_soup.food k.attributes.same name="vegetable soup" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vein.body_part k.attributes.same name=vein sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.venezuela.place k.attributes.same name=venezuela sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ventilator.thing k.attributes.same name=ventilator sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"

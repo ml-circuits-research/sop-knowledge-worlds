@@ -1,9 +1,9 @@
-# k.attributes/shards/same-l: one name, one thing: for 125 names that start with "l" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (10 facts of such names here).
+# k.attributes/shards/same-l: one name, one thing: for 127 names that start with "l" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (10 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
 
-@k.attributes.same.lab_coat.clothing k.attributes.same name="lab coat" sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
+@k.attributes.same.lab_coat.clothing k.attributes.same name="lab coat" sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.label.thing k.attributes.same name=label sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.labels.thing k.attributes.same name=labels sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lacrosse.thing k.attributes.same name=lacrosse sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -23,7 +23,7 @@
 @k.attributes.same.lane.thing k.attributes.same name=lane sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lantern.thing k.attributes.same name=lantern sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.laptop.thing k.attributes.same name=laptop sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.large_intestine.body_part k.attributes.same name="large intestine" sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object core.source="hand-core 1"
+@k.attributes.same.large_intestine.body_part k.attributes.same name="large intestine" sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lark.animal k.attributes.same name=lark sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lasagna.thing k.attributes.same name=lasagna sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lasagne.food k.attributes.same name=lasagne sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -41,6 +41,7 @@
 @k.attributes.same.leaf_fluttering_in_wind.plant k.attributes.same name="leaf fluttering in wind" sense=plant only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.leafless_tree.plant k.attributes.same name="leafless tree" sense=plant only=true in=k.attributes.drawn in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.leafy_green.food k.attributes.same name="leafy green" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.leap_year.time k.attributes.same name="leap year" sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.leash.thing k.attributes.same name=leash sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.leaves.plant k.attributes.same name=leaves sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lebanon.place k.attributes.same name=lebanon sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
@@ -99,6 +100,7 @@
 @k.attributes.same.lipstick.clothing k.attributes.same name=lipstick sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.liquid_soap.thing k.attributes.same name="liquid soap" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lisbon.place k.attributes.same name=lisbon sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.little_finger.body_part k.attributes.same name="little finger" sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.live-shrimp.thing k.attributes.same name=live-shrimp sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.liver.body_part k.attributes.same name=liver sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.liverpool.place k.attributes.same name=liverpool sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"

@@ -5,17 +5,18 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/wordnet.mjs
 
-@k.words core.module name=k.words version=1 exports=sense core.source="hand-core 1"
+@k.words core.module name=k.words version=2 exports=sense core.source="hand-core 1"
 
 # One sense of a word. `n` is the sense number in WordNet (1 is the most frequent sense of the word for that part of
 # speech). The values of synonym, is_a, instance_of and part_of are words (several words are a string).
+# Version 2 (Q36): `word` too may be several words, a string ("manta ray", "light year"), as WordNet has them.
 # Round 9: `opposite` is WordNet's antonym of the word in this sense (hot: cold); `near_opposite`, for an adjective
 # without one of its own, is the opposite of the adjective it is filed as similar to (huge is similar to large:
 # small); `kind_of` is the chain of kinds upward from the sense, nearest first, through the first kind at each step
 # (dog: canine, carnivore, placental, mammal, vertebrate, chordate, animal, organism, "living thing" …), given for
 # the senses of the 3,000 most frequent words so that "is a dog an animal" is one lookup.
 @k.words.sense core.type of=k.words.sense shared=true closed=true core.source="hand-core 1"
-@k.words.sense.word core.slot of=k.words.sense key=word id=true required=true kind=atom core.source="hand-core 1"
+@k.words.sense.word core.slot of=k.words.sense key=word id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.words.sense.pos core.slot of=k.words.sense key=pos id=true required=true enum=noun enum=verb enum=adjective enum=adverb core.source="hand-core 1"
 @k.words.sense.n core.slot of=k.words.sense key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.words.sense.gloss core.slot of=k.words.sense key=gloss kind=string core.source="hand-core 1"

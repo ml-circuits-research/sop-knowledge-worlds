@@ -1,4 +1,4 @@
-# k.attributes/shards/same-w: one name, one thing: for 116 names that start with "w" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
+# k.attributes/shards/same-w: one name, one thing: for 118 names that start with "w" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -56,7 +56,7 @@
 @k.attributes.same.wellington.place k.attributes.same name=wellington sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wellington_boots.clothing k.attributes.same name="wellington boots" sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.whale.animal k.attributes.same name=whale sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.whale_shark.animal k.attributes.same name="whale shark" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.whale_shark.animal k.attributes.same name="whale shark" sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wheat.food k.attributes.same name=wheat sense=food only=false in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wheat.colour k.attributes.same name=wheat sense=colour only=false in=k.values.colour by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wheel.thing k.attributes.same name=wheel sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -64,6 +64,7 @@
 @k.attributes.same.wheelbarrow.thing k.attributes.same name=wheelbarrow sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wheelchair.thing k.attributes.same name=wheelchair sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wheelie_bin.thing k.attributes.same name="wheelie bin" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.whipped_cream.food k.attributes.same name="whipped cream" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.whisk.thing k.attributes.same name=whisk sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.whiskey.food k.attributes.same name=whiskey sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.whisky.food k.attributes.same name=whisky sense=food only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -93,6 +94,7 @@
 @k.attributes.same.winter.time k.attributes.same name=winter sense=time only=true in=k.time.season by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wire.thing k.attributes.same name=wire sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wisconsin.place k.attributes.same name=wisconsin sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.wisdom_tooth.body_part k.attributes.same name="wisdom tooth" sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wishbone.food k.attributes.same name=wishbone sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.witch.person k.attributes.same name=witch sense=person only=true in=k.attributes.drawn in=k.objects.object in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.witches_hat.clothing k.attributes.same name="witches hat" sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"

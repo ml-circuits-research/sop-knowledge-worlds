@@ -151,3 +151,13 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **A rule on a parent type writes onto the child's fact.** The `kind_of` that `k.kinds` derives for "square" lands
   on the `k.shapes.shape` wire of the square (the identity key is the same), so a host sees one thing with its chain,
   and one rule serves three worlds and the rules of k.commonsense (milk is a drink, so a liquid, so a kind of liquid).
+
+## Q36 and Q37 (second worker): names of several words, and which sense a fact is about
+
+- **An identity key that is only an atom quietly excludes a whole class of names.** `k.words.sense.word` was an
+  atom, so 150 names of the hand-written worlds (manta ray, light year, police officer) had no definition and 45 of
+  them were joined to no other world. Letting the key also be a string (as `name` already was in every core) cost
+  hosts nothing and added 45 joins in one step. The cheap check: count the names of a type that its joins cannot reach.
+- **A root per world is a good sense picker, but a dictionary files some things under abstract parents** (a galaxy is
+  a collection, the solar system a system, a black hole a region, olive oil a lipid). Widening the root would pull
+  in wrong senses; a few narrow roots, each read off the chain, fixed 8 of 10 misses without changing any other sense.

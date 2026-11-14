@@ -3137,3 +3137,31 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   "Monday is before Friday" (true), "Friday before Monday" (false), "December after November", "spring earlier than
   summer" from the facts of k.time. during, until, since: k.time has no fact for them yet (left).
 - npm test 2,863: 2,857 pass, 6 skipped, 0 fail.
+
+## Q36 (2026-11-14, second worker): names of several words in `k.words`
+
+- Finished the change a stopped worker had left in the tree (importer, schema, 59 shards; the rest of the tree was
+  clean). `k.words.sense.word` is `kind=atom kind=string` (k.words version 2): a name of several words is a string
+  with spaces (`word="manta ray"`), as WordNet writes it with underscores (manta_ray); its id keeps the underscore
+  (`k.words.manta_ray.noun.1`), its shard is that of its first two letters. Only the names of the hand-written worlds
+  are taken (Q36 option (a)); the frequent words of the list are single words, so the phrasal nouns of option (b)
+  would need another list (not done).
+- Fixed in the half-done importer: the header of a shard and the `means` of irregular forms still wrote the lemma
+  with underscores (`"flying_fish"`).
+- Of the 150 names of several words of the cores, 94 had a sense under their world's root; six roots more (edible
+  fat and topping for food; galaxy, solar system and black hole for space; operator for people roles, each with its
+  WordNet chain read) bring it to **102**. Two are in WordNet but not under the root, left so: `chilli pepper` (only
+  the plant), `right angle` (an angle shape, not a unit). 46 are not in WordNet (`tomato soup`, `light green`,
+  `bobble hat`, `square kilometre`, `Halley's comet`): their own world says what they are. `galaxy` became a name
+  of a core and got its chain of kinds.
+- Joins: with a sense in k.words, 45 more names are carried by more than one world (JOINS: 3,409 -> 3,454 names,
+  one thing everywhere 3,339 -> 3,384; food 497 -> 519, body part 72 -> 84); 70 clashes, unchanged. The textual
+  aspect of the animals 297 -> 313 of 314, of food 181 -> 212 of 229 (ASPECTS.md). The vocabulary keys are the same
+  24,256 (the names were keys already); they now also lead to their k.words shard.
+- Test: manta ray, light year, small intestine, top hat, police officer, olive oil, milky way, black hole, bus
+  driver have a noun sense; light year's is a distance.
+- Looked at: the WordNet chains of the 10 names outside a root, and the diff of every changed wire that is not a new
+  multiword sense (only galaxy's three senses). Not looked at: the glosses of the 102 senses one by one.
+- Numbers: k.words 321 shards, 32,282 -> 32,404 wires (115 senses and 10 spellings added; galaxy's 3 senses changed), 7,445,092 -> 7,491,718 bytes;
+  the largest shard `re` 899 wires, 187,344 bytes. Catalog 25 worlds, 937 shards, vocab 24,256 words.
+  `node tools/validate.mjs`: 962 files, 0 errors.

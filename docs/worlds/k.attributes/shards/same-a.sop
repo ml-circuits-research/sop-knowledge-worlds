@@ -1,4 +1,4 @@
-# k.attributes/shards/same-a: one name, one thing: for 107 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-a: one name, one thing: for 110 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -37,6 +37,7 @@
 @k.attributes.same.alligator.animal k.attributes.same name=alligator sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.almond.food k.attributes.same name=almond sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.alpaca.animal k.attributes.same name=alpaca sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.alpha_centauri.body_in_space k.attributes.same name="alpha centauri" sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.alps.place k.attributes.same name=alps sense=place only=true in=k.geo.range by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.altar.thing k.attributes.same name=altar sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.amber.colour k.attributes.same name=amber sense=colour only=true in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
@@ -50,6 +51,7 @@
 @k.attributes.same.anchovy.animal k.attributes.same name=anchovy sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.anderson.place k.attributes.same name=anderson sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.android.thing k.attributes.same name=android sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.andromeda_galaxy.body_in_space k.attributes.same name="andromeda galaxy" sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.angelfish.animal k.attributes.same name=angelfish sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.angelique.thing k.attributes.same name=angelique sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ankle.body_part k.attributes.same name=ankle sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
@@ -64,7 +66,8 @@
 @k.attributes.same.ape.thing k.attributes.same name=ape sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.aphid.animal k.attributes.same name=aphid sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.apple.food k.attributes.same name=apple sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.apple_juice.food k.attributes.same name="apple juice" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.apple_juice.food k.attributes.same name="apple juice" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.apple_pie.food k.attributes.same name="apple pie" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.applejack.thing k.attributes.same name=applejack sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.apricot.food k.attributes.same name=apricot sense=food only=false in=k.food.food unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.apricot.colour k.attributes.same name=apricot sense=colour only=false in=k.values.colour unsure=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

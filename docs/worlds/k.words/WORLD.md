@@ -1,13 +1,17 @@
 # k.words
 
 English words: the noun and verb senses of about 11,500 words (the frequent words, the 1,500 common things, and the
-one-word names of the hand-written worlds with the sense under the root of their world: kilogram a unit, Mars the
-planet), and the adjective and adverb senses of the common ones, with opposites and chains of kinds, from WordNet 3.1.
+names of the hand-written worlds with the sense under the root of their world: kilogram a unit, Mars the
+planet, manta ray an animal, light year a unit), and the adjective and adverb senses of the common ones, with opposites and chains of kinds, from WordNet 3.1.
 
 ## What it knows
 
 - `k.words.sense` (shared, closed), identity `word` + `pos` + `n`: one sense of a word.
-  - `word`: the word as WordNet spells it (`dog`, `Paris`). `pos`: `noun`, `verb`, `adjective` or `adverb` (the
+  - `word`: the word as WordNet spells it (`dog`, `Paris`); version 2 (Q36): a name of several words is a string
+    with spaces (`"manta ray"`, `"French toast"`; WordNet writes `manta_ray`), its id segment keeps the underscore
+    (`k.words.manta_ray.noun.1`). 102 of the 150 names of several words of the hand-written worlds have one; 46 are
+    not in WordNet (`"tomato soup"`, `"light green"`, `"bobble hat"`: their own world says what they are) and two
+    have no sense under their world's root (`"chilli pepper"` only the plant, `"right angle"` an angle, not a unit). `pos`: `noun`, `verb`, `adjective` or `adverb` (the
     last two only for the common words: those of the first 3,000 lines of the frequency list and the common things
     of `tools/coverage.mjs`; 803 adjectives, 287 adverbs).
   - `n`: the sense number in WordNet; 1 is the most frequent sense. At most the first 3 senses per part of speech
@@ -33,10 +37,10 @@ the frequency list, the common things and the names of the cores have senses).
 
 ## Shards
 
-By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`); a one-letter word or a word whose second
+By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`; `ma.sop` holds `"manta ray"`); a one-letter word or a word whose second
 character is not a letter is in the shard of its first letter. A bucket that would pass the size limits is split into
 consecutive parts: `co` is now `co-1` and `co-2`. `vocab.json` maps every word (lower case) and every
-irregular form to its shard. 321 shards, 31,926 wires, 7,258,687 bytes; the largest is `re` (895 wires, 185,968
+irregular form to its shard. 321 shards, 32,404 wires, 7,491,718 bytes; the largest is `re` (899 wires, 187,344
 bytes).
 
 ## Sources

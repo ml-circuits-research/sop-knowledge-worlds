@@ -1,4 +1,4 @@
-# k.attributes/shards/same-o: one name, one thing: for 57 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
+# k.attributes/shards/same-o: one name, one thing: for 59 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -21,7 +21,7 @@
 @k.attributes.same.old_key.thing k.attributes.same name="old key" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.olive.food k.attributes.same name=olive sense=food only=false in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.olive.colour k.attributes.same name=olive sense=colour only=false in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.olive_oil.food k.attributes.same name="olive oil" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.olive_oil.food k.attributes.same name="olive oil" sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.olives.food k.attributes.same name=olives sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.olympic_rings.thing k.attributes.same name="olympic rings" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.olympic_torch.thing k.attributes.same name="olympic torch" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -46,6 +46,7 @@
 @k.attributes.same.orange.colour k.attributes.same name=orange sense=colour only=false in=k.colours.colour in=k.values.colour unsure=k.attributes.number by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.orange.place k.attributes.same name=orange sense=place only=false in=k.geo.river unsure=k.attributes.number by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.orange_book.thing k.attributes.same name="orange book" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.orange_juice.food k.attributes.same name="orange juice" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.orangutan.animal k.attributes.same name=orangutan sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.orca.animal k.attributes.same name=orca sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.orchid.colour k.attributes.same name=orchid sense=colour only=true in=k.attributes.number in=k.objects.stand_in in=k.values.colour by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -54,6 +55,7 @@
 @k.attributes.same.ostrich.animal k.attributes.same name=ostrich sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.otter.animal k.attributes.same name=otter sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.outbox_tray.thing k.attributes.same name="outbox tray" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.outer_ear.body_part k.attributes.same name="outer ear" sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.outhouse.thing k.attributes.same name=outhouse sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.outlet.thing k.attributes.same name=outlet sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.oval.shape k.attributes.same name=oval sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"

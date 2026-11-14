@@ -1,4 +1,4 @@
-# k.attributes/shards/same-i: one name, one thing: for 44 names that start with "i" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-i: one name, one thing: for 46 names that start with "i" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -6,10 +6,10 @@
 @k.attributes.same.ibex.animal k.attributes.same name=ibex sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ibis.animal k.attributes.same name=ibis sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice.food k.attributes.same name=ice sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.ice_cream.food k.attributes.same name="ice cream" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.ice_cream.food k.attributes.same name="ice cream" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice_cream_tub.food k.attributes.same name="ice cream tub" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ice_hockey.thing k.attributes.same name="ice hockey" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.ice_lolly.food k.attributes.same name="ice lolly" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.ice_lolly.food k.attributes.same name="ice lolly" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice_skate.thing k.attributes.same name="ice skate" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.iceberg.thing k.attributes.same name=iceberg sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.iceland.place k.attributes.same name=iceland sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
@@ -23,11 +23,13 @@
 @k.attributes.same.incoming_envelope.thing k.attributes.same name="incoming envelope" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.incubator.thing k.attributes.same name=incubator sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.index_cards.thing k.attributes.same name="index cards" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.index_finger.body_part k.attributes.same name="index finger" sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.india.place k.attributes.same name=india sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.indonesia.place k.attributes.same name=indonesia sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.inhaler.thing k.attributes.same name=inhaler sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ink.thing k.attributes.same name=ink sense=thing only=true in=k.commonsense.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.inn.place k.attributes.same name=inn sense=place only=true in=k.attributes.number in=k.attributes.thing in=k.geo.river in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.inner_ear.body_part k.attributes.same name="inner ear" sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.insect.thing k.attributes.same name=insect sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.intercom.thing k.attributes.same name=intercom sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.intestine.body_part k.attributes.same name=intestine sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
