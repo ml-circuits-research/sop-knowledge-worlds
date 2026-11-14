@@ -728,3 +728,7 @@ The library will compute a type signature per word (its 02:15 block). From here,
 ## Reviewer 2026-11-15 02:55 — w.lang.en regular inflection rules (from PSys2's thinning audit)
 
 PSys2 keeps its own English `plural` because the regular rules (`w.lang.en.inflect`: -s, -es, -ies, and the verb -s/-ed/-ing) are not published as facts in the std.morph notation; only irregulars are. Publish them (paradigm classes for English nouns and verbs, like w.lang.ro's), with a round-trip test; then PSys2 deletes its plural. Whoever is free first (with the supersenses of 02:15).
+
+## Reviewer 2026-11-15 03:05 — third worker's round accepted
+
+Accepted 364c1a4, 0f0aa59 (part_of 5,156 and origin 148 edges; sense= on 287 edges; 13,698 edges in all), f8a9c5e (pin 0.97; Q65 recorded), 4cdbc09 (role facts and constraints for alignment), 193238c. The library is told the role/constraint facts live on `k.kinds.role` and `k.kinds.constraint`. Next third-worker round: supersenses on k.words senses (02:15) and the English regular inflection rules (02:55).
