@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -202,7 +202,7 @@
 @w.lang.en.frame.name core.slot of=w.lang.en.frame key=name id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.frame.act core.slot of=w.lang.en.frame key=act required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.frame.mode core.slot of=w.lang.en.frame key=mode kind=atom core.source="psys2 78f45863"
-@w.lang.en.frame.set core.slot of=w.lang.en.frame key=set required=true enum=acts enum=acts.more enum=acts.data enum=acts.text enum=acts.facts enum=acts.media core.source="psys2 78f45863"
+@w.lang.en.frame.set core.slot of=w.lang.en.frame key=set required=true enum=acts enum=acts.more enum=acts.data enum=acts.text enum=acts.facts enum=acts.media enum=acts.state core.source="psys2 78f45863"
 @w.lang.en.frame.priority core.slot of=w.lang.en.frame key=priority required=true kind=integer core.source="psys2 78f45863"
 @w.lang.en.frame.needs core.slot of=w.lang.en.frame key=needs kind=atom core.source="psys2 78f45863"
 @w.lang.en.frame.role core.slot of=w.lang.en.frame key=role many=true kind=atom core.source="psys2 78f45863"
@@ -302,6 +302,22 @@
 # `{slot:num=pl}`; the article `a` takes its form from the next word); `slot` (many) lists its slots, each a
 # `w.lang.en.slot`. The words outside the slots follow the register of k.genres: its persons (I, we, you), no direct
 # question where it has none (an indirect one instead), no contraction where it has none, the past in a narrative.
+# How an attribute of the catalog is said (block 00:05 item 2): a template per form of k.attributes.narration
+# (`form`: relation, measure, text, count, kind, state; `polarity` yes or no for a state), or per key (`key`, and
+# `of` the type when the key is said otherwise in other types); `text` in the library's template notation with the
+# slots `role` names ({thing} the thing with its determiner, {value} the value as said) and {key} the key's word;
+# `frame` the frame of the set acts.state that reads the sentence back (tests/w.lang.en.phrasing.test.mjs).
+@w.lang.en.phrasing core.type of=w.lang.en.phrasing shared=true closed=true core.source="hand-core 1"
+@w.lang.en.phrasing.name core.slot of=w.lang.en.phrasing key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.phrasing.form core.slot of=w.lang.en.phrasing key=form enum=relation enum=measure enum=text enum=count enum=kind enum=state core.source="hand-core 1"
+@w.lang.en.phrasing.key core.slot of=w.lang.en.phrasing key=key kind=atom core.source="hand-core 1"
+@w.lang.en.phrasing.of core.slot of=w.lang.en.phrasing key=of kind=atom core.source="hand-core 1"
+@w.lang.en.phrasing.polarity core.slot of=w.lang.en.phrasing key=polarity enum=yes enum=no core.source="hand-core 1"
+@w.lang.en.phrasing.role core.slot of=w.lang.en.phrasing key=role many=true kind=atom core.source="hand-core 1"
+@w.lang.en.phrasing.frame core.slot of=w.lang.en.phrasing key=frame required=true kind=atom core.source="hand-core 1"
+@w.lang.en.phrasing.text core.slot of=w.lang.en.phrasing key=text required=true kind=string core.source="hand-core 1"
+@w.lang.en.word.phrasing core.word text=phrasing text="attribute phrasing" means=w.lang.en.phrasing core.source="hand-core 1"
+
 @w.lang.en.discourse core.type of=w.lang.en.discourse shared=true closed=true core.source="hand-core 1"
 @w.lang.en.discourse.name core.slot of=w.lang.en.discourse key=name id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.discourse.move core.slot of=w.lang.en.discourse key=move required=true kind=atom kind=string core.source="hand-core 1"

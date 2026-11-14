@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-attributes: the keys of the types of k.attributes read as relations: 72 relations, each with the kind of its subject and the class, types and senses of its object (found by rule from the schemas and by value from the shards).
+# k.kinds/shards/relations-attributes: the keys of the types of k.attributes read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (found by rule from the schemas and by value from the shards).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -22,6 +22,13 @@
 @k.kinds.relation.k.attributes.found.key k.kinds.relation type=k.attributes.found key=key subject=found object=word object_type=k.words.sense core.source="hand-core 1"
 @k.kinds.relation.k.attributes.found.covers k.kinds.relation type=k.attributes.found key=covers subject=found object=text core.source="hand-core 1"
 @k.kinds.relation.k.attributes.kind.attribute k.kinds.relation type=k.attributes.kind key=attribute subject=kind object=thing object_type=k.attributes.attribute core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.type k.kinds.relation type=k.attributes.narration key=type subject=narration object=word core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.key k.kinds.relation type=k.attributes.narration key=key subject=narration object=word object_type=k.words.sense core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.narrate k.kinds.relation type=k.attributes.narration key=narrate subject=narration object=value object_type=k.values.reply core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.salience k.kinds.relation type=k.attributes.narration key=salience subject=narration object=number core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.form k.kinds.relation type=k.attributes.narration key=form subject=narration object=value core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.basis k.kinds.relation type=k.attributes.narration key=basis subject=narration object=value core.source="hand-core 1"
+@k.kinds.relation.k.attributes.narration.why k.kinds.relation type=k.attributes.narration key=why subject=narration object=text core.source="hand-core 1"
 @k.kinds.relation.k.attributes.number.sense k.kinds.relation type=k.attributes.number key=sense subject=thing object=value object_type=k.attributes.kind core.source="hand-core 1"
 @k.kinds.relation.k.attributes.number.size_about k.kinds.relation type=k.attributes.number key=size_about subject=thing object=amount core.source="hand-core 1"
 @k.kinds.relation.k.attributes.number.weight_about k.kinds.relation type=k.attributes.number key=weight_about subject=thing object=amount core.source="hand-core 1"

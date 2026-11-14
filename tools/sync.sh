@@ -2,7 +2,7 @@
 # Rebase the current branch on origin/main while other workers push to it.
 #   tools/sync.sh            git pull --rebase origin main; on a conflict: the logs and pages (*.md) keep both sides,
 #                            other files keep main's side (ours, during a rebase), the generated files are regenerated
-#                            (measures, key words, then the build); then the rebase continues.
+#                            (measures, key words, narration, then `npm run build`); then the rebase continues.
 # A conflict that the union leaves with markers stops the script (tests/repo.test.mjs also refuses markers).
 # Each build step waits for free memory (SKW_MIN_FREE_MB, default 3000) and is retried when killed.
 cd "$(dirname "$0")/.." || exit 1
@@ -37,8 +37,12 @@ for p in files:
     open(p, 'w').write(text)
 if left: print('markers left in', left); sys.exit(1)
 PY
-  for s in measures-core key-words; do step "$s" || exit 1; done
-  for s in render-svg render-scenes check-preview-page derive geo-aliases joins kinds-core build-catalog; do step "$s" || exit 1; done
+  for s in measures-core key-words narration-core; do step "$s" || exit 1; done
+  for i in 1 2 3 4; do # the build as package.json says it, retried when killed
+    until [ "$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)" -gt "$MIN" ]; do sleep 5; done
+    npm run --silent build >> "$LOG" 2>&1 && break
+    [ "$i" = 4 ] && { echo "build failed, see $LOG"; exit 1; }
+  done
   git add -A
   GIT_EDITOR=true git rebase --continue >> "$LOG" 2>&1
 done

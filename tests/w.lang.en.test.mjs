@@ -45,7 +45,7 @@ test('w.lang.en: every wire has a source; no notation inside values', () => {
     if (false) bad.push(`${w.id}: no core.source`);
     // a template's text is in the library's template notation (std.morph realise: {role}, {role:f=v}), the one
     // notation the reviewer asked for (block 17:05), read by the library, as in w.lang.ro
-    const TEMPLATE = /^w\.lang\.en\.(template|discourse)$/.test(w.type);
+    const TEMPLATE = /^w\.lang\.en\.(template|discourse|phrasing)$/.test(w.type);
     // an alternation's from and to are in the library's pattern notation ({x} spans; Q54 there, reviewer 21:55), without
     // its [a|b] alternatives (each alternative a fact): only the spans are allowed
     const PATTERN = (k) => w.type === 'w.lang.en.alternation' && (k === 'from' || k === 'to');

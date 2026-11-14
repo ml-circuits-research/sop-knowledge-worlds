@@ -188,6 +188,25 @@ canonical form ends in have and would match its own rule), would you mind + -ing
 - The named add with a place verb ("Put a guest named Maria at table 1.", block "20:15") is the fourth worker's
   `acts.make.name.place.p` in `hand-frames` (585afaf). Tests: `tests/w.lang.en.abstraction.test.mjs`.
 
+## How each attribute is said (block 00:05 item 2)
+
+`w.lang.en.phrasing` (shard `templates-phrasing`, `tools/lang-en-phrasing.mjs`): one sentence template per form of
+`k.attributes.narration` (relation, measure, text: "the {key} of {thing} is {value}."; count: "{thing} has {value}
+{key}."; kind: "{thing} is a {value}."; state: "{thing} is {key}." and "{thing} is not {key}.") and 53 templates for the
+keys English says with a verb or a phrase of their own ("{thing} eats {value}.", "{thing} is made of {value}.", "{thing}
+is the capital of {value}.", "{thing} says {value}.", "the young of {thing} is a {value}.", "{thing} has rings."); `of`
+names the type where a key is said otherwise in other types (k.food kind, k.people does). Slots: {thing} the thing with
+its determiner, {value} the value as said (with its unit), {key} the key's word.
+Read back by five frames of the set `acts.state` (needs=state: a world that takes statements of facts, so no host reads
+statements by them unless it asks): `acts.state.of`, `.count`, `.phrase`, `.verb`, `.is`, each reading a statement as the
+act change (set) with thing, attribute and value; the verbs and phrases that say a key are the lexicons
+`attribute.verb` and `attribute.phrase`, derived from the templates. Checked (`tests/w.lang.en.phrasing.test.mjs`): the
+reviewer's four ("The capital of Chad is N'Djamena.", "A cow eats grass.", "A banana is yellow.", "A hen has 2 legs.")
+and every narrated key that has a fact (190), said from its first fact in the catalog with its template and read back
+to the same thing, value and attribute ("A peanut is a legume.", "A star is made of gas.", "A head is the part that
+holds the brain.", "The elevation of Adrar Bou Nasser is 3340."). The defaults are plain ("The orbit years of Mars is
+1.88."): a key gets a template of its own when a composition shows one reads badly.
+
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the

@@ -888,3 +888,14 @@ paraphrases that reach no sense of k.words, 3 are names (Zoe, Zoe's, Anah) and t
 are not the names (a collection of anecdotes, a male animal, a constellation); a reader that fills a person slot or a
 `name` argument (k.kinds.argument) should know a word is a given name. Kept: name, sex where given, a frequency band;
 a shard of k.people or w.lang.en with the source's licence. Blocking: no.
+
+## Q63 [LIB] (block "00:05", first worker, 2026-11-15): narratable keys and attribute phrasing for std.compose
+Question: will std.compose (and summarize/sample, where they say facts) read (1) `k.attributes.narration` to skip the
+keys with `narrate=no` and order the narrated ones by `salience`, and (2) `w.lang.en.phrasing` to say a fact of a key
+(the key's own template, of the type if `of` is given, else the template of the key's `form`; for a state the
+template of its polarity), instead of "has a X of Y"?
+Context: published here (k.attributes version 5, w.lang.en): 972 slots, 218 narrated, forms state/count/measure/kind/
+text/relation; 7 form templates and 53 key templates in the library's template notation, each read back by the frames
+of the set `acts.state` (needs=state) to the act change with thing, attribute and value (190 keys said from a real
+fact). Slots: {thing} with its determiner, {value} as said, {key} the key's word (the k.* core.word of the key).
+Blocking: no. Meanwhile the facts are published; a key that reads badly gets a template here when a composition shows it.

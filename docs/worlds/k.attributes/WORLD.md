@@ -132,6 +132,24 @@ are found in the worlds, and the usual values of common things that no other wor
 - Computed by `tools/joins.mjs` by rule (the sense of a type; for a drawing, the group its source filed it in);
   shards `same-<letter>`; all clashes in [JOINS.md](../JOINS.md). Rerun with `npm run build` when a world changes.
 
+## Which keys a composition narrates (block 00:05 item 1)
+
+`k.attributes.narration type= key= narrate= salience= form= basis= why=` (shard `narration`, computed by
+`tools/narration-core.mjs` in `npm run build`): one fact per slot of every k.* type (972), so that a composer narrates
+"Its capital is N'Djamena" and never "it has a code of TCD". `narrate=no` (754), with `why`: the keys of machinery types
+(how to draw, move, plan, compose, read: k.faces, k.motion, k.procedures, k.genres, k.layouts, this world's own
+catalogue of attributes...), the naming key (the subject), identifiers and metadata by the key's name (codes, formal
+names, sources and citations, joins to drawings and senses, internal positions and ranks, coordinates, colour codes),
+numbers k.units.measure places in a drawing frame, keys named as a slot of the drawn face outside k.faces, keys whose
+values are catalog ids or codes. `narrate=yes` (218) with `form` (state 10: "Chad is landlocked"; count 11: "a hen has 2
+legs"; measure 41; kind 15: "a hen is a bird"; text 14; relation 127) and `salience` in [0, 1]: the typicality weight of
+`k.attributes.typical` where there is one (directly, or from a kind's attribute through `found`: `basis=typical`), else
+0.4 x asked (the key is asked in tests/*.questions.jsonl) + 0.3 x shown (`k.attributes.shows`) + 0.3 x coverage (share of
+the type's facts that have it) (`basis=measured`). English sentences for each form and for keys said with a verb are
+`w.lang.en.phrasing` (w.lang.en WORLD.md). Tests: `tests/k.attributes.narration.test.mjs` (the shard is the tool's
+output; one fact per slot; the reviewer's examples; no narrated key holds codes, colour codes, catalog ids or
+references, checked on the facts of 150+ keys).
+
 ## Shards
 
 `attributes` (67 wires), `aspects` (153 wires), `things-living` (animals and creatures), `things-nature` (plants, land, sky, materials,

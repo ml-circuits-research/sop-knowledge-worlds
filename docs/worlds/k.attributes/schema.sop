@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=4 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage exports=range exports=typical core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=5 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage exports=range exports=typical exports=narration core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -181,7 +181,24 @@
 @k.attributes.typical.attribute core.slot of=k.attributes.typical key=attribute id=true required=true kind=atom core.source="hand-core 1"
 @k.attributes.typical.weight core.slot of=k.attributes.typical key=weight required=true kind=number min=0.01 max=1 core.source="hand-core 1"
 
+# Which keys a composition may narrate (block 00:05 item 1), one fact per slot of every k.* type, computed by
+# tools/narration-core.mjs from the catalog's own facts: `narrate` no for identifiers and metadata (codes, formal
+# names, sources, joins to drawings and senses, internal numbers, coordinates, colour codes), the naming key, and every
+# key of a machinery type (how to draw, move, plan, compose), with `why`; `form` how a narrated key is said
+# (state, count, measure, kind, text, relation; w.lang.en.phrasing says each in English); `salience` in [0, 1]: the
+# typicality weight of k.attributes.typical where there is one (`basis` typical), else measured from the questions
+# that ask the key, k.attributes.shows and the share of facts that have it (`basis` measured).
+@k.attributes.narration core.type of=k.attributes.narration shared=true closed=true core.source="hand-core 1"
+@k.attributes.narration.type core.slot of=k.attributes.narration key=type id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.narration.key core.slot of=k.attributes.narration key=key id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.narration.narrate core.slot of=k.attributes.narration key=narrate required=true enum=yes enum=no core.source="hand-core 1"
+@k.attributes.narration.salience core.slot of=k.attributes.narration key=salience required=true kind=number min=0 max=1 core.source="hand-core 1"
+@k.attributes.narration.form core.slot of=k.attributes.narration key=form enum=state enum=count enum=measure enum=kind enum=text enum=relation core.source="hand-core 1"
+@k.attributes.narration.basis core.slot of=k.attributes.narration key=basis enum=typical enum=measured core.source="hand-core 1"
+@k.attributes.narration.why core.slot of=k.attributes.narration key=why kind=string core.source="hand-core 1"
+
 # Words for the types and keys of this world.
+@k.attributes.word.narration core.word text=narration text=narratable text=salience means=k.attributes.narration core.source="hand-core 1"
 @k.attributes.word.aspect core.word text=aspect text=aspects text=view text=views means=k.attributes.aspect core.source="hand-core 1"
 @k.attributes.word.attribute core.word text=attribute text=attributes text=property text=properties text=feature text=features means=k.attributes.attribute core.source="hand-core 1"
 @k.attributes.word.colour core.word text=colour text=color text=coloured text=colored means=k.attributes.thing.colour core.source="hand-core 1"
@@ -255,3 +272,9 @@
 @k.attributes.word.key.range.own core.word text=own means=k.attributes.range.own core.source="hand-core 1"
 @k.attributes.word.key.typical.attribute core.word text=attribute means=k.attributes.typical.attribute core.source="hand-core 1"
 @k.attributes.word.key.typical.weight core.word text=weight means=k.attributes.typical.weight core.source="hand-core 1"
+@k.attributes.word.key.narration.key core.word text=key means=k.attributes.narration.key core.source="hand-core 1"
+@k.attributes.word.key.narration.narrate core.word text=narrate means=k.attributes.narration.narrate core.source="hand-core 1"
+@k.attributes.word.key.narration.salience core.word text=salience means=k.attributes.narration.salience core.source="hand-core 1"
+@k.attributes.word.key.narration.form core.word text=form means=k.attributes.narration.form core.source="hand-core 1"
+@k.attributes.word.key.narration.basis core.word text=basis means=k.attributes.narration.basis core.source="hand-core 1"
+@k.attributes.word.key.narration.why core.word text=why means=k.attributes.narration.why core.source="hand-core 1"

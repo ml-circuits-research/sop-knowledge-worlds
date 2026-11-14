@@ -4477,3 +4477,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: tests/test-run.test.mjs 2 (plan by names, imports and worlds; questions scoped), validate 5, repo 1.
   `npm run test:changed` after the rebase on sopworld 0.90 (364c1a4): build, then 66 files (every file: the shared
   loader changed), 3,017 tests, 3,016 pass, 1 skipped, 0 fail, 394 s.
+
+## 2026-11-15 — first worker: narratable keys and attribute phrasing (block 00:05; round "00:20" item 2)
+
+- **k.attributes.narration** (k.attributes version 5; shard `narration`, 972 facts, computed by
+  `tools/narration-core.mjs`, now in `npm run build` and in tools/sync.sh): one fact per slot of every k.* type.
+  narrate=no 754 with `why` (machinery types 600+: k.faces, k.motion, k.procedures, k.genres, k.layouts, k.objects,
+  the catalogue types of k.attributes, k.actions' act words...; the naming key 43; coordinates 44; joins to drawings,
+  senses, catalog entries 22; internal numbers 11; face-drawing joins 9; codes, formal names, sources, colour codes,
+  catalog-id values). narrate=yes 218 with `form` (relation 127, measure 41, kind 15, text 14, count 11, state 10) and
+  `salience` (typicality weight where k.attributes.typical has one, else measured from asked questions, k.attributes.shows
+  and coverage). PSys2's examples: k.geo.country code, code2, formal, lat: no; capital 1, population 0.9, continent 0.8,
+  region 0.4, independent 0.1.
+- **w.lang.en.phrasing** (shard `templates-phrasing`, `tools/lang-en-phrasing.mjs`; w.lang.en schema: type phrasing,
+  frame set acts.state): 7 form templates, 53 key templates; 5 frames of the set acts.state (needs=state) read a statement
+  as change (set) with thing, attribute, value; the lexicons attribute.verb (22 verbs) and attribute.phrase (16 phrases)
+  are derived from the templates. 190 narrated keys said from their first fact and read back (thing, value, attribute).
+- `k.attributes.narration.salience` is a plain number in tools/measures-core.mjs (k.units measures 238 wires).
+- Tests: tests/k.attributes.narration.test.mjs 3, tests/w.lang.en.phrasing.test.mjs 3, w.lang.en 21 (templates may
+  be phrasings), templates 8, alternations 4. Q63 [LIB]: std.compose to read both.
+- `npm run test:changed` (build 133 s, 33 files, 273 tests) found the variants shard stale: the five acts.state frames
+  are canonical frames for 17 verb-ellipsis and wrapper variants of change (tools/lang-en-variants.mjs reads every
+  frame). Regenerated, and the tool is now in `npm run build` (0.3 s) so a frame change regenerates it; then catalog,
+  abstraction, repo pass; the other 30 files passed in that run.
