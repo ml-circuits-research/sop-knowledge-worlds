@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **153** in 25 worlds; distinct values 5451, meeting a target 5292 (97.1 %), open 159
+- declared joins: **166** in 28 worlds; distinct values 5564, meeting a target 5404 (97.1 %), open 160
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **110**; left undeclared on purpose: 6
 
@@ -170,6 +170,19 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.wearables | `k.wearables.wearable.drawing` | `k.objects.object` | name | 91 | 91 |  |
 | k.wearables | `k.wearables.wearable.face_slot` | `k.faces.slot` | name | 4 | 4 |  |
 | k.wearables | `k.wearables.wearable.worn_on` | `k.wearables.place` | name | 14 | 14 |  |
+| w.document | `w.document.document.genre` | `k.genres.genre` | name | 0 | 0 |  |
+| w.document | `w.document.document.register` | `k.genres.register` | name | 0 | 0 |  |
+| w.document | `w.document.sentence.move` | `k.genres.move` | name | 0 | 0 |  |
+| w.face | `w.face.face.expression` | `k.faces.expression` | name | 0 | 0 |  |
+| w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |
+| w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
+| w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
+| w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 15 | 14 | `own` |
+| w.lang.en | `w.lang.en.mode_map.act` | `k.actions.act` | name | 2 | 2 |  |
+| w.lang.en | `w.lang.en.part.act` | `k.actions.act` | name | 13 | 13 |  |
+| w.lang.en | `w.lang.en.role_map.act` | `k.actions.act` | name | 11 | 11 |  |
+| w.lang.en | `w.lang.en.role_map.act_role` | `k.actions.role` | name (match act:act) | 13 | 13 |  |
+| w.lang.en | `w.lang.en.template.act` | `k.actions.act` | name | 16 | 16 |  |
 
 ## Broken joins
 

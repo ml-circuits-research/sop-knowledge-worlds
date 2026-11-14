@@ -20,13 +20,13 @@
 # variants, so leaving the mode (removing `expression`, or undo) shows them again. No expression: the face is calm.
 @w.face.face core.type of=w.face.face extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.face.face.name core.slot of=w.face.face key=name kind=atom kind=string core.source="hand-core 1"
-@w.face.face.style core.slot of=w.face.face key=style kind=atom kind=string default=plain core.source="hand-core 1"
-@w.face.face.preset core.slot of=w.face.face key=preset kind=atom kind=string core.source="hand-core 1"
+@w.face.face.style core.slot of=w.face.face key=style kind=atom kind=string default=plain type=k.faces.canon by=style core.source="hand-core 1"
+@w.face.face.preset core.slot of=w.face.face key=preset kind=atom kind=string type=k.faces.preset by=name core.source="hand-core 1"
 @w.face.face.skin core.slot of=w.face.face key=skin kind=atom kind=string core.source="hand-core 1"
 @w.face.face.hair_colour core.slot of=w.face.face key=hair_colour kind=atom kind=string core.source="hand-core 1"
 @w.face.face.eye_colour core.slot of=w.face.face key=eye_colour kind=atom kind=string core.source="hand-core 1"
 @w.face.face.clothes core.slot of=w.face.face key=clothes kind=atom kind=string core.source="hand-core 1"
-@w.face.face.expression core.slot of=w.face.face key=expression kind=atom kind=string core.source="hand-core 1"
+@w.face.face.expression core.slot of=w.face.face key=expression kind=atom kind=string type=k.faces.expression by=name core.source="hand-core 1"
 
 # A part of a face, the parent of every kind of part. `face` refers to the face it belongs to (a host with one face
 # may leave it out); `variant` names a k.faces variant of the part's slot in the face's style (`k.faces.variant`,

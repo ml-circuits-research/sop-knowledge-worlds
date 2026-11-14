@@ -4664,3 +4664,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   (beach ball, cable car, control tower, fallen apple), "magnifying glass" is drawn only as "magnifying glass tilted
   left / right", a role works at a courthouse that is no scene, wears "hat Christmas" (a word-order slip).
 - Tests: `npm run test:changed` (build 120 s; 47 files, 2,629 tests): 2,625 pass, 4 skipped, 0 fail.
+
+## 2026-11-15 — second worker: Q61 step 2d: declared joins in the world schemas w.document, w.face, w.lang.en (slot lines only)
+
+- 13 joins: w.document 3 (document genre -> k.genres.genre, register -> k.genres.register, sentence move ->
+  k.genres.move), w.face 3 (style -> k.faces.canon by `style`, preset -> k.faces.preset, expression ->
+  k.faces.expression), w.lang.en 7 (frame / part / role_map / template / mode_map act -> k.actions.act, role_map
+  act_role -> k.actions.role `by=name match=act:act`, discourse move -> k.genres.move). In a world schema a `by`
+  slot is not a reference to a live thing: the library's acts take the value as said, report the join open while
+  the knowledge is not loaded, and its sampler fills the slot from the target type's names (src/sample.mjs).
+  Not declared: w.face part variant (k.faces.variant is slot + name and the slot is the part's kind, not a key: no
+  `match` can say it), w.map / w.chart colours (free names), w.map pin on (a country, a city or a sea).
+- tools/joins-report.mjs also reads the world schemas without facts (w.face, w.document: tools/lib/schemas.mjs).
+- JOINS-REPORT: 166 declared in 28 worlds, 5,564 values, 5,404 meet (97.1 %), 160 open (w.lang.en frame act `own`:
+  the first host's act of reading by a world's own reader, which k.actions does not have), 0 broken, 110 undeclared.
+- Tests: `npm run test:changed` (build 176 s; 35 files incl. w.schemas, w.document, the 8 w.lang.en files, k.compose,
+  k.procedures, questions): 266 pass, 1 skipped, 0 fail; after the report fix k.kinds.joins-report 3, catalog 8 pass.

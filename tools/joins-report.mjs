@@ -18,6 +18,7 @@ import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
 import { WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
 import { relationRows, readTypes } from './relations-core.mjs';
+import { scanSchemas } from './lib/schemas.mjs';
 import { byText } from './import/lib.mjs';
 
 export const REPORT = join(WORLDS_DIR, 'k.kinds', 'JOINS-REPORT.md');
@@ -31,7 +32,9 @@ export const NOT_DECLARED = [
 // The slots of every schema (own and inherited) with a declared join, and every slot's keys per type.
 export function declaredJoins(worlds) {
   const own = new Map(), parents = new Map();
-  for (const w of worlds) for (const x of parse(w.schemaText)) {
+  // the fact worlds and the world schemas without facts (w.face, w.document...: their joins are declared too)
+  const ids = new Set(worlds.map((w) => w.id));
+  for (const w of [...worlds, ...scanSchemas().filter((x) => !ids.has(x.id))]) for (const x of parse(w.schemaText)) {
     if (x.type === 'core.type') parents.set(x.attrs.of[0], { world: w.id, extends: x.attrs.extends ?? [] });
     if (x.type === 'core.slot') { const t = x.attrs.of[0]; if (!own.has(t)) own.set(t, []); own.get(t).push({ key: x.attrs.key[0], attrs: x.attrs, world: w.id }); }
   }

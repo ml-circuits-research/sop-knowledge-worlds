@@ -200,7 +200,7 @@
 # things; named: names ...), `set` the group of frames it came in.
 @w.lang.en.frame core.type of=w.lang.en.frame shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.frame.name core.slot of=w.lang.en.frame key=name id=true required=true kind=atom core.source="hand-core 1"
-@w.lang.en.frame.act core.slot of=w.lang.en.frame key=act required=true kind=atom core.source="psys2 78f45863"
+@w.lang.en.frame.act core.slot of=w.lang.en.frame key=act required=true kind=atom type=k.actions.act by=name core.source="psys2 78f45863"
 @w.lang.en.frame.mode core.slot of=w.lang.en.frame key=mode kind=atom core.source="psys2 78f45863"
 @w.lang.en.frame.set core.slot of=w.lang.en.frame key=set required=true enum=acts enum=acts.more enum=acts.data enum=acts.text enum=acts.facts enum=acts.media enum=acts.state core.source="psys2 78f45863"
 @w.lang.en.frame.priority core.slot of=w.lang.en.frame key=priority required=true kind=integer core.source="psys2 78f45863"
@@ -223,7 +223,7 @@
 @w.lang.en.part.frame core.slot of=w.lang.en.part key=frame id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.part.at core.slot of=w.lang.en.part key=at id=true required=true kind=integer min=1 core.source="hand-core 1"
 @w.lang.en.part.is core.slot of=w.lang.en.part key=is required=true enum=lead enum=det enum=verb enum=word enum=phrase enum=lexicon enum=role core.source="hand-core 1"
-@w.lang.en.part.act core.slot of=w.lang.en.part key=act kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.part.act core.slot of=w.lang.en.part key=act kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @w.lang.en.part.role core.slot of=w.lang.en.part key=role kind=atom core.source="hand-core 1"
 @w.lang.en.part.takes core.slot of=w.lang.en.part key=takes enum=words enum=rest enum=number enum=prep enum=lexicon core.source="hand-core 1"
 @w.lang.en.part.lexicon core.slot of=w.lang.en.part key=lexicon kind=atom core.source="hand-core 1"
@@ -240,9 +240,9 @@
 # A role of a frame with no map is the k.actions role of the same name.
 @w.lang.en.role_map core.type of=w.lang.en.role_map shared=true closed=true core.source="hand-core 1"
 @w.lang.en.role_map.name core.slot of=w.lang.en.role_map key=name id=true required=true kind=atom core.source="hand-core 1"
-@w.lang.en.role_map.act core.slot of=w.lang.en.role_map key=act required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.role_map.act core.slot of=w.lang.en.role_map key=act required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @w.lang.en.role_map.role core.slot of=w.lang.en.role_map key=role required=true kind=atom core.source="hand-core 1"
-@w.lang.en.role_map.act_role core.slot of=w.lang.en.role_map key=act_role required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.role_map.act_role core.slot of=w.lang.en.role_map key=act_role required=true kind=atom kind=string type=k.actions.role by=name match=act:act core.source="hand-core 1"
 @w.lang.en.role_map.marker core.slot of=w.lang.en.role_map key=marker enum=yes core.source="hand-core 1"
 @w.lang.en.role_map.takes core.slot of=w.lang.en.role_map key=takes enum=words enum=rest enum=number enum=prep enum=lexicon core.source="hand-core 1"
 @w.lang.en.role_map.frame core.slot of=w.lang.en.role_map key=frame kind=atom core.source="hand-core 1"
@@ -251,7 +251,7 @@
 # the act group in the mode apart, and "deselect everything" as pick in the mode none. A frame with no mode_map is the
 # k.actions act of its `act`.
 @w.lang.en.mode_map core.type of=w.lang.en.mode_map shared=true closed=true core.source="hand-core 1"
-@w.lang.en.mode_map.act core.slot of=w.lang.en.mode_map key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.mode_map.act core.slot of=w.lang.en.mode_map key=act id=true required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @w.lang.en.mode_map.mode core.slot of=w.lang.en.mode_map key=mode id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.mode_map.means core.slot of=w.lang.en.mode_map key=means required=true kind=atom kind=string core.source="hand-core 1"
 # A fixed argument of a frame: "Call yourself Robi" sets the attribute name.
@@ -286,7 +286,7 @@
 # is that frame's `needs` (the template is for worlds that meet it). A number 1 takes the shape without the number.
 @w.lang.en.template core.type of=w.lang.en.template shared=true closed=true core.source="hand-core 1"
 @w.lang.en.template.name core.slot of=w.lang.en.template key=name id=true required=true kind=atom core.source="hand-core 1"
-@w.lang.en.template.act core.slot of=w.lang.en.template key=act required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.template.act core.slot of=w.lang.en.template key=act required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @w.lang.en.template.shape core.slot of=w.lang.en.template key=shape required=true kind=atom core.source="hand-core 1"
 @w.lang.en.template.mode core.slot of=w.lang.en.template key=mode kind=atom core.source="hand-core 1"
 @w.lang.en.template.attribute core.slot of=w.lang.en.template key=attribute kind=atom core.source="hand-core 1"
@@ -320,7 +320,7 @@
 
 @w.lang.en.discourse core.type of=w.lang.en.discourse shared=true closed=true core.source="hand-core 1"
 @w.lang.en.discourse.name core.slot of=w.lang.en.discourse key=name id=true required=true kind=atom core.source="hand-core 1"
-@w.lang.en.discourse.move core.slot of=w.lang.en.discourse key=move required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.discourse.move core.slot of=w.lang.en.discourse key=move required=true kind=atom kind=string type=k.genres.move by=name core.source="hand-core 1"
 @w.lang.en.discourse.register core.slot of=w.lang.en.discourse key=register required=true enum=scientific enum=presentation enum=essay enum=narrative enum=report core.source="hand-core 1"
 @w.lang.en.discourse.slot core.slot of=w.lang.en.discourse key=slot many=true kind=atom core.source="hand-core 1"
 @w.lang.en.discourse.text core.slot of=w.lang.en.discourse key=text required=true kind=string core.source="hand-core 1"
