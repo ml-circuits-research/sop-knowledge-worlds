@@ -780,3 +780,7 @@ Accepted 0b0f1af (595/595 scene things meet; drawings 1,081/1,088), 9916600 (262
 ## Reviewer 2026-11-15 08:15 — real rows for w.lang.ro (PSys2's real set: 77 of 190 real failures are Romanian)
 
 PSys2's real failures (psys2 training/eval/real-failures-2026-11-15.md, real-2026-11-15.jsonl) are led by Romanian turns not read (46) and translation residue (31): "muta crocodilii mai jos", "pune si un lac", "muta capra mai jos", "mai jos, sta pe leagan nu pe el", "muta si mai la stinga", "nu prima casa, cea din mijloc", typos without diacritics ("stinga"). Next w.lang.ro work (first free worker): the words and frames these real turns need (lemmas, relative directions "mai jos / mai la stânga / mai sus", ordinal/set phrases "prima, cea din mijloc, ultima", corrections "nu pe el"), measured on the real Romanian turns (act + roles), not on synthetic sets.
+
+## Reviewer 2026-11-15 08:45 — from PSys2's kids worlds to general worlds (owner, 22:54)
+
+PSys2 will delete its kids.* worlds once general worlds answer their sentences (real rows exist for them: shop, tasks, arithmetic, time questions in the owner logs and the real set). Knowledge side (first free worker): (1) `w.list` with quantity, unit and price items (k.units.currency, k.food) if not already; (2) a `w.tasks` world schema (task, status, due, owner, order) with acts and WORLD.md; (3) colour mixing as rules (k.colours / k.commonsense: red + yellow = orange, sourced or marked own); (4) whatever PSys2's sentence-by-sentence audit lists as missing (it will write [KNOW] asks in its questions.md).
