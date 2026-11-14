@@ -1,5 +1,5 @@
 {
- "version": "73ca13883667",
+ "version": "de27629d68c5",
  "sopworld": "1d1c3c6",
  "worlds": [
   {
@@ -11392,6 +11392,7 @@
    "version": "2",
    "schema": "k.faces/schema.sop",
    "exports": [
+    "k.faces.canon",
     "k.faces.colour",
     "k.faces.expression",
     "k.faces.part",
@@ -12533,6 +12534,20 @@
       "sideburns",
       "soul patch",
       "stubble"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.faces/shards/plain-canon",
+     "path": "k.faces/shards/plain-canon.sop",
+     "wires": 1,
+     "bytes": 938,
+     "keys": [
+      "plain"
      ],
      "sources": [
       "hand-core-1"
@@ -37055,8 +37070,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 190,
-     "bytes": 26582,
+     "wires": 196,
+     "bytes": 27519,
      "keys": [
       "after",
       "age_years_about",
@@ -37074,6 +37089,8 @@
       "back_min",
       "binding",
       "body",
+      "brow_above",
+      "canon",
       "chance",
       "child_count",
       "city",
@@ -37105,6 +37122,9 @@
       "ellipsis.param",
       "ellipsis.trail",
       "ends_about",
+      "eye_gap",
+      "eye_line",
+      "eye_width",
       "faces",
       "factor",
       "frame",
@@ -37162,8 +37182,10 @@
       "moons",
       "moons_about",
       "mountain",
+      "mouth_line",
       "n",
       "north",
+      "nose_line",
       "number",
       "numeral",
       "offset",

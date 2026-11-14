@@ -365,6 +365,7 @@
   "k.actions/schema.sop",
   "k.attributes/schema.sop",
   "k.body/schema.sop",
+  "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.motion/schema.sop",
   "k.procedures/schema.sop",
@@ -11463,6 +11464,12 @@
   "k.objects/shards/things-2",
   "k.words/shards/br"
  ],
+ "brow above": [
+  "k.faces/schema.sop"
+ ],
+ "brow_above": [
+  "k.units/shards/measures"
+ ],
  "brown": [
   "k.attributes/shards/same-b",
   "k.colours/shards/colours",
@@ -13591,6 +13598,8 @@
   "k.words/shards/ca"
  ],
  "canon": [
+  "k.faces/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/ca"
  ],
  "canopied": [
@@ -29634,11 +29643,29 @@
   "k.objects/shards/mulberry-healthcare-medical-items-01",
   "k.scenes/shards/things-e"
  ],
+ "eye gap": [
+  "k.faces/schema.sop"
+ ],
+ "eye line": [
+  "k.faces/schema.sop"
+ ],
  "eye shadow": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-e",
   "k.objects/shards/mulberry-healthcare-grooming-items-02",
   "k.scenes/shards/things-e"
+ ],
+ "eye width": [
+  "k.faces/schema.sop"
+ ],
+ "eye_gap": [
+  "k.units/shards/measures"
+ ],
+ "eye_line": [
+  "k.units/shards/measures"
+ ],
+ "eye_width": [
+  "k.units/shards/measures"
  ],
  "eyeball": [
   "k.words/shards/ey"
@@ -58296,6 +58323,9 @@
  "mouth alt": [
   "k.faces/schema.sop"
  ],
+ "mouth line": [
+  "k.faces/schema.sop"
+ ],
  "mouth organ": [
   "k.objects/shards/things-3"
  ],
@@ -58304,6 +58334,9 @@
  ],
  "mouth shapes": [
   "k.motion/schema.sop"
+ ],
+ "mouth_line": [
+  "k.units/shards/measures"
  ],
  "mouthful": [
   "k.words/shards/mo"
@@ -60702,6 +60735,12 @@
   "k.parts/shards/psys2",
   "k.words/shards/no",
   "w.face/schema.sop"
+ ],
+ "nose line": [
+  "k.faces/schema.sop"
+ ],
+ "nose_line": [
+  "k.units/shards/measures"
  ],
  "nose_tip": [
   "k.objects/shards/animals-2"
@@ -67625,6 +67664,7 @@
   "k.words/shards/pl"
  ],
  "plain": [
+  "k.faces/shards/plain-canon",
   "k.faces/shards/slots",
   "k.motion/shards/mouth",
   "k.parts/schema.sop",
@@ -70137,6 +70177,12 @@
  ],
  "proportion": [
   "k.words/shards/pr"
+ ],
+ "proportion canon": [
+  "k.faces/schema.sop"
+ ],
+ "proportions": [
+  "k.faces/schema.sop"
  ],
  "proposal": [
   "k.words/shards/pr"

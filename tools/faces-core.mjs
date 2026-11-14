@@ -1,11 +1,16 @@
 // The hand-written core of k.faces (R6.2): the slots of the style `plain`, at least six variants per slot (ten for
 // hair, eyes and mouth) drawn with primitive shapes, the colour lists, the presets and the expressions.
-//   node tools/faces-core.mjs        writes docs/worlds/k.faces/shards/{slots,colours,presets,plain-<slot>}.sop
-// The coordinates are chosen by hand in the face frame (0 to 100, x right, y down); curved outlines (the top of a
-// head of hair, a ring of a pair of glasses) are sampled from an ellipse by `ell`. Deterministic.
+//   node tools/faces-core.mjs        writes docs/worlds/k.faces/shards/{slots,colours,presets,plain-<slot>,plain-canon}.sop
+// The drawings are chosen by hand in the face frame (0 to 100, x right, y down), each slot's around its anchor (the
+// eye centred on DRAWN.eye_x, eye_y, ...); curved outlines (the top of a head of hair, a ring of a pair of glasses)
+// are sampled from an ellipse by `ell`. The parts are then placed by the proportion canon of the style (Q47): the
+// canon is written as facts (plain-canon.sop, k.faces.canon), read back from that text, and each slot's drawings are
+// moved and scaled from their anchor to where the canon puts it. The canon of `plain` is the one the drawings
+// follow, so the parts land where the hand put them, byte for byte (tests/k.faces.canon.test.mjs). Deterministic.
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards } from './import/lib.mjs';
+import { parse } from './sopworld/sopworld.mjs';
 
 const SRC = 'hand-core 1';
 export const STYLE = 'plain';
@@ -377,7 +382,88 @@ function variantLines(slot, box, [name, f, parts]) {
   return [`# ${slot}: ${name}`, ...lines, ...points].join('\n');
 }
 
-export function coreShards({ slots = SLOTS, variants = VARIANTS } = {}) {
+// The proportion canon of a style (Q47): lines and sizes as fractions of the head box (0 at its top or left, 1 at its
+// bottom or right), and sizes in eye widths. `plain` is the canon its drawings follow (read off DRAWN, to four
+// decimals); the classical canons of a child, an adult and an old person are the experiment of tools/faces-canon.mjs.
+export const CANON = { style: STYLE, name: 'plain', eye_line: 0.4412, nose_line: 0.6324, mouth_line: 0.7941, eye_width: 0.1786, eye_gap: 1.6, brow_above: 1.1,
+  about: 'The canon of the style plain: big eyes high in the head (the eye line at 0.44 of the head\'s height), 1.6 eye widths between the eyes, the brows 1.1 eye widths above the eye line, the bottom of the nose at 0.63 and the mouth at 0.79 of the height, leaving a long space under the nose; the ears between the brow line and the nose line.' };
+const CANON_KEYS = ['eye_line', 'nose_line', 'mouth_line', 'eye_width', 'eye_gap', 'brow_above'];
+// Where the hand drew each slot's drawings: the anchors the canon moves (the eye centred on eye_x, eye_y and
+// eye_width wide; the brow line; the top and bottom of the nose; the mouth line; the inner rim of a lens; the ear's
+// side). The beard is drawn down to the chin, the bottom of the head box.
+export const DRAWN = { eye_x: 37, eye_y: 42, eye_width: 10, brow_y: 31, nose_top: 44, nose_y: 55, mouth_y: 66, rim_x: 37, ear_x: 28 };
+const headBox = (slots) => { const [, [x, y, w, h]] = slots.find(([n]) => n === 'head'); return { x, y, w, h }; };
+
+// The canon as facts (one k.faces.canon wire), and read back from such a text.
+export function canonShard(canon = CANON) {
+  return `${header({ id: `k.faces/shards/${STYLE}-canon`, about: `the proportion canon of the style \`${STYLE}\`: where its eyes, brows, nose, mouth and ears go, as fractions of the box of the slot head (0 at its top or left, 1 at its bottom or right) and sizes in eye widths. tools/faces-core.mjs places the parts of the style by these facts.`, sources: ['hand-core 1 (hand-written in this repository)'], license: 'CC0-1.0', script: 'tools/faces-core.mjs' })}\n${
+    wire(`k.faces.${STYLE}.canon.${seg(canon.name)}`, 'k.faces.canon', [['style', canon.style ?? STYLE], ['name', canon.name], ...CANON_KEYS.map((k) => [k, canon[k]]), ['about', { string: canon.about }]], SRC)}\n`;
+}
+export function readCanon(text, style = STYLE) {
+  const f = parse(text).find((x) => x.type === 'k.faces.canon' && x.attrs.style?.[0] === style);
+  if (!f) throw new Error(`no k.faces.canon of the style ${style}`);
+  return Object.fromEntries([['name', f.attrs.name[0]], ...CANON_KEYS.map((k) => [k, Number(f.attrs[k][0])])]);
+}
+
+// The map of each slot: x' = ax + (x - fx) * sx, y' = ay + (y - fy) * sy (fx, fy: the drawn anchor; ax, ay: the
+// canon's place for it).
+export function slotMaps(canon, head) {
+  const Y = (f) => head.y + f * head.h;
+  const ew = canon.eye_width * head.w;
+  const eyeX = head.x + head.w / 2 - (canon.eye_gap * ew) / 2 - ew / 2;
+  const eyeY = Y(canon.eye_line), noseY = Y(canon.nose_line), mouthY = Y(canon.mouth_line);
+  const browY = eyeY - canon.brow_above * ew;
+  const s = ew / DRAWN.eye_width, mx = head.x + head.w / 2;
+  const line = (f0, t0, f1, t1) => ({ fy: f0, ay: t0, sy: (t1 - t0) / (f1 - f0) });
+  const same = { fx: 0, ax: 0, sx: 1, fy: 0, ay: 0, sy: 1 };
+  const mid = (sx = 1) => ({ fx: mx, ax: mx, sx });
+  return {
+    head: same, hair_back: same, hair_front: same, hat: same, neck: same, shoulders: same,
+    eyes: { fx: DRAWN.eye_x, ax: eyeX, sx: s, fy: DRAWN.eye_y, ay: eyeY, sy: s },
+    eyebrows: { fx: DRAWN.eye_x, ax: eyeX, sx: s, fy: DRAWN.brow_y, ay: browY, sy: s },
+    glasses: { ...mid((mx - eyeX) / (mx - DRAWN.rim_x)), fy: DRAWN.eye_y, ay: eyeY, sy: s },
+    nose: { ...mid(), ...line(DRAWN.nose_top, eyeY + (DRAWN.nose_top - DRAWN.eye_y) * s, DRAWN.nose_y, noseY) },
+    mouth: { ...mid(), fy: DRAWN.mouth_y, ay: mouthY, sy: 1 },
+    moustache: { ...mid(), ...line(DRAWN.nose_y, noseY, DRAWN.mouth_y, mouthY) },
+    beard: { ...mid(), ...line(DRAWN.mouth_y, mouthY, head.y + head.h, Y(1)) },
+    cheeks: { fx: DRAWN.eye_x, ax: eyeX, sx: 1, ...line(DRAWN.eye_y, eyeY, DRAWN.mouth_y, mouthY) },
+    ears: { fx: DRAWN.ear_x, ax: DRAWN.ear_x, sx: 1, ...line(DRAWN.brow_y, browY, DRAWN.nose_y, noseY) },
+    earrings: { fx: DRAWN.ear_x, ax: DRAWN.ear_x, sx: 1, ...line(DRAWN.brow_y, browY, DRAWN.nose_y, noseY) },
+  };
+}
+
+// The slots and variants with every position moved by the map of its slot. Positions are rounded to a tenth (as the
+// shards write them); a slot's box is rounded outwards, to within 0.01 (as the parts are checked against it).
+export function placeByCanon(canon, slots = SLOTS, variants = VARIANTS) {
+  const maps = slotMaps(canon, headBox(slots));
+  const X = (m, x) => m.ax + (x - m.fx) * m.sx, Y = (m, y) => m.ay + (y - m.fy) * m.sy;
+  const fl = (n) => Math.floor(n * 10 + 0.1) / 10, ce = (n) => Math.ceil(n * 10 - 0.1) / 10;
+  const placedSlots = slots.map(([name, [x, y, w, h], ...rest]) => {
+    const m = maps[name];
+    const [x0, y0] = [fl(X(m, x)), fl(Y(m, y))];
+    return [name, [x0, y0, r1(ce(X(m, x + w)) - x0), r1(ce(Y(m, y + h)) - y0)], ...rest];
+  });
+  const placed = {};
+  for (const [slot, list] of Object.entries(variants)) {
+    const m = maps[slot];
+    placed[slot] = list.map(([name, f, parts]) => [name, f, parts.map(([pname, shape, g, ...rest]) => {
+      let g2;
+      if (shape === 'line' || shape === 'poly') g2 = g.map(([x, y]) => [r1(X(m, x)), r1(Y(m, y))]);
+      else if (shape === 'circle' || shape === 'square') {
+        const sc = Math.min(m.sx, m.sy), [x, y, d] = g;
+        g2 = [r1(X(m, x + d / 2) - (d * sc) / 2), r1(Y(m, y + d / 2) - (d * sc) / 2), r1(d * sc)];
+      } else g2 = [r1(X(m, g[0])), r1(Y(m, g[1])), r1(g[2] * m.sx), r1(g[3] * m.sy), ...g.slice(4)];
+      return [pname, shape, g2, ...rest];
+    })]);
+  }
+  return { slots: placedSlots, variants: placed };
+}
+
+// The shards of the style. `canon`: the canon to place the drawings by (written as plain-canon.sop and read back
+// from it); `canon: null` writes the drawings where they were drawn (for the test that the canon reproduces them).
+export function coreShards({ slots: drawnSlots = SLOTS, variants: drawnVariants = VARIANTS, canon = CANON } = {}) {
+  const canonText = canon ? canonShard(canon) : null;
+  const { slots, variants } = canon ? placeByCanon(readCanon(canonText), drawnSlots, drawnVariants) : { slots: drawnSlots, variants: drawnVariants };
   const head = (id, about) => header({ id: `k.faces/shards/${id}`, about, sources: ['hand-core 1 (hand-written in this repository)'], license: 'CC0-1.0', script: 'tools/faces-core.mjs' });
   const files = {};
   files['slots.sop'] = `${head('slots', `the slots of the style \`${STYLE}\`: where each part of a face goes (a box in the 0 to 100 frame of the face, x right, y down) and in which order the slots are drawn. A slot with mirror=true holds the side on the viewer's left.`)}\n${
@@ -391,6 +477,7 @@ export function coreShards({ slots = SLOTS, variants = VARIANTS } = {}) {
     files[`${STYLE}-${slot.replace(/_/g, '-')}.sop`] = `${head(`${STYLE}-${slot.replace(/_/g, '-')}`, `the variants of the slot \`${slot}\` in the style \`${STYLE}\`${mirror ? ' (the side on the viewer\'s left; the other side is its mirror image)' : ''}: features, and parts with a primitive shape, a box in the frame of the face, a draw order and colours; points for lines and polygons.`)}\n${
       variants[slot].map((v) => variantLines(slot, box, v)).join('\n\n')}\n`;
   }
+  if (canonText) files[`${STYLE}-canon.sop`] = canonText;
   return files;
 }
 

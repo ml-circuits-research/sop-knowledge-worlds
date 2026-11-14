@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, k.procedures): 190 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, k.procedures): 196 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -87,6 +87,12 @@
 @k.units.measure.k.faces.slot.w k.units.measure world=k.faces type=slot key=w frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.slot.h k.units.measure world=k.faces type=slot key=h frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.slot.z k.units.measure world=k.faces type=slot key=z ordinal=true core.source="hand-core 1"
+@k.units.measure.k.faces.canon.eye_line k.units.measure world=k.faces type=canon key=eye_line counts="height of the head box, from its top" core.source="hand-core 1"
+@k.units.measure.k.faces.canon.nose_line k.units.measure world=k.faces type=canon key=nose_line counts="height of the head box, from its top" core.source="hand-core 1"
+@k.units.measure.k.faces.canon.mouth_line k.units.measure world=k.faces type=canon key=mouth_line counts="height of the head box, from its top" core.source="hand-core 1"
+@k.units.measure.k.faces.canon.eye_width k.units.measure world=k.faces type=canon key=eye_width counts="width of the head box" core.source="hand-core 1"
+@k.units.measure.k.faces.canon.eye_gap k.units.measure world=k.faces type=canon key=eye_gap counts="eye width" core.source="hand-core 1"
+@k.units.measure.k.faces.canon.brow_above k.units.measure world=k.faces type=canon key=brow_above counts="eye width" core.source="hand-core 1"
 @k.units.measure.k.drawing.part.x k.units.measure world=k.drawing type=part key=x frame=drawing core.source="hand-core 1"
 @k.units.measure.k.drawing.part.y k.units.measure world=k.drawing type=part key=y frame=drawing core.source="hand-core 1"
 @k.units.measure.k.drawing.part.w k.units.measure world=k.drawing type=part key=w frame=drawing core.source="hand-core 1"

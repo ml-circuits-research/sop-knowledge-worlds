@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.faces core.module name=k.faces version=2 imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression core.source="hand-core 1"
+@k.faces core.module name=k.faces version=2 imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression exports=canon core.source="hand-core 1"
 
 # A place of a face in one style: its anchor box in the face frame and its draw order (lower first). The parts of a
 # variant lie inside the box of its slot. `mirror=true`: the slot is a pair (eyes, eyebrows, ears, cheeks, earrings);
@@ -102,11 +102,28 @@
 @k.faces.expression.eyes core.slot of=k.faces.expression key=eyes kind=atom kind=string core.source="hand-core 1"
 @k.faces.expression.one_eye core.slot of=k.faces.expression key=one_eye kind=atom kind=string core.source="hand-core 1"
 
+# The proportion canon of a style (Q47): where the eyes, brows, nose, mouth and ears of its faces go, as fractions of
+# the box of the style's slot `head` (0 at its top or left, 1 at its bottom or right). `eye_line`, `nose_line` (the
+# bottom of the nose), `mouth_line`: heights; `eye_width`: a fraction of the head's width; `eye_gap` (the space
+# between the eyes) and `brow_above` (the brow line above the eye line): in eye widths. The ears lie between the
+# brow line and the nose line. A host that draws a new part for the style places it by these lines.
+@k.faces.canon core.type of=k.faces.canon shared=true closed=true core.source="hand-core 1"
+@k.faces.canon.style core.slot of=k.faces.canon key=style id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.faces.canon.name core.slot of=k.faces.canon key=name required=true kind=atom kind=string core.source="hand-core 1"
+@k.faces.canon.eye_line core.slot of=k.faces.canon key=eye_line required=true kind=number min=0 max=1 core.source="hand-core 1"
+@k.faces.canon.nose_line core.slot of=k.faces.canon key=nose_line required=true kind=number min=0 max=1 core.source="hand-core 1"
+@k.faces.canon.mouth_line core.slot of=k.faces.canon key=mouth_line required=true kind=number min=0 max=1 core.source="hand-core 1"
+@k.faces.canon.eye_width core.slot of=k.faces.canon key=eye_width required=true kind=number min=0 max=1 core.source="hand-core 1"
+@k.faces.canon.eye_gap core.slot of=k.faces.canon key=eye_gap required=true kind=number min=0 core.source="hand-core 1"
+@k.faces.canon.brow_above core.slot of=k.faces.canon key=brow_above required=true kind=number min=0 core.source="hand-core 1"
+@k.faces.canon.about core.slot of=k.faces.canon key=about kind=string core.source="hand-core 1"
+
 # Words for the types and keys of this world.
 @k.faces.word.face core.word text=face text=faces text=avatar text=avatars means=k.faces.preset core.source="hand-core 1"
 @k.faces.word.slot core.word text=slot text=slots means=k.faces.slot core.source="hand-core 1"
 @k.faces.word.variant core.word text=variant text=variants means=k.faces.variant core.source="hand-core 1"
 @k.faces.word.expression core.word text=expression text=expressions means=k.faces.expression core.source="hand-core 1"
+@k.faces.word.canon core.word text=canon text=proportions text="proportion canon" means=k.faces.canon core.source="hand-core 1"
 @k.faces.word.colour core.word text=colour text=color text=colours text=colors means=k.faces.colour core.source="hand-core 1"
 @k.faces.word.shape core.word text=shape means=k.faces.variant.shape core.source="hand-core 1"
 @k.faces.word.size core.word text=size means=k.faces.variant.size core.source="hand-core 1"
@@ -162,3 +179,11 @@
 @k.faces.word.key.expression.eyebrows core.word text=eyebrows means=k.faces.expression.eyebrows core.source="hand-core 1"
 @k.faces.word.key.expression.eyes core.word text=eyes means=k.faces.expression.eyes core.source="hand-core 1"
 @k.faces.word.key.expression.one_eye core.word text="one eye" means=k.faces.expression.one_eye core.source="hand-core 1"
+@k.faces.word.key.canon.name core.word text=name means=k.faces.canon.name core.source="hand-core 1"
+@k.faces.word.key.canon.eye_line core.word text="eye line" means=k.faces.canon.eye_line core.source="hand-core 1"
+@k.faces.word.key.canon.nose_line core.word text="nose line" means=k.faces.canon.nose_line core.source="hand-core 1"
+@k.faces.word.key.canon.mouth_line core.word text="mouth line" means=k.faces.canon.mouth_line core.source="hand-core 1"
+@k.faces.word.key.canon.eye_width core.word text="eye width" means=k.faces.canon.eye_width core.source="hand-core 1"
+@k.faces.word.key.canon.eye_gap core.word text="eye gap" means=k.faces.canon.eye_gap core.source="hand-core 1"
+@k.faces.word.key.canon.brow_above core.word text="brow above" means=k.faces.canon.brow_above core.source="hand-core 1"
+@k.faces.word.key.canon.about core.word text=about means=k.faces.canon.about core.source="hand-core 1"

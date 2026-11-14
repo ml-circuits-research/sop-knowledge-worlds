@@ -33,7 +33,9 @@ export const MEASURES = {
     day_hours_about: { unit: 'hour' }, diameter_about: { unit: 'kilometre' }, distance_about: { unit: 'kilometre' }, temperature_about: { unit: 'degree Celsius' }, age_years_about: { unit: 'year' }, light_years_about: { unit: 'light year' } } },
   // Q31: the other worlds. Boxes and points of drawings are in the frame of the drawing; `z` and `n` are orders.
   'k.objects': { '*': { ...box('object'), z: ord, n: ord }, skeleton: { drawings: { counts: 'drawing' }, spread: { frame: 'object' } } },
-  'k.faces': { '*': { ...box('face'), z: ord, n: ord } },
+  'k.faces': { '*': { ...box('face'), z: ord, n: ord },
+    canon: { eye_line: { counts: 'height of the head box, from its top' }, nose_line: { counts: 'height of the head box, from its top' }, mouth_line: { counts: 'height of the head box, from its top' },
+      eye_width: { counts: 'width of the head box' }, eye_gap: { counts: 'eye width' }, brow_above: { counts: 'eye width' } } },
   'k.drawing': { '*': { ...box('drawing'), z: ord, n: ord } }, // Q34 item 1: the frame of the drawing that extends it (an object, a face)
   'k.layouts': { slot: box('arrangement'), anchor: box('object') },
   'k.wearables': { place: box('person drawing') },

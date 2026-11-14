@@ -3726,3 +3726,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   library's `readMotion` and `splitText`: 10/10 pass. A scratch comparison of the deleted reader and the library on
   252 plans (6 seeds, 7 outcomes, a cancelled reply, two base faces, 20 s each): 0 differ. No difference to report.
 - `npm test` (in a worktree of this commit): 2,917 tests, 2,916 pass, 1 skipped, 0 fail.
+
+## 2026-11-14 — first worker: k.faces plain placed by its published proportion canon (Q47, block 13:00 item 2)
+
+- **Facts:** `k.faces.canon` (new type, 9 slots, words for its keys; `k.units.measure` says what each number counts):
+  one fact, `plain-canon.sop` (938 bytes, 1 wire): eye line 0.4412 and nose line 0.6324 and mouth line 0.7941 of the
+  head box's height, eye width 0.1786 of its width, 1.6 eye widths between the eyes, the brow line 1.1 eye widths above
+  the eye line. Four decimals are enough: each anchor lands within 0.004 of where the hand drew it.
+- **Generator:** `tools/faces-core.mjs` writes the fact, reads it back from that text (sopworld `parse`) and places
+  every slot's drawings by it (`slotMaps`, `placeByCanon`, moved from the experiment): x' = anchor + (x - drawn anchor)
+  * scale per slot. A slot's box is rounded outwards to within 0.01 (the tolerance the parts were already checked
+  with; at 1e-6 one box, the earrings', came out 0.1 taller). Output: every shard byte-identical (test:
+  `coreShards()` against `coreShards({ canon: null })`, the drawings where drawn, and against the published files).
+  `tools/faces-canon.mjs` keeps only the classical canons and the sheet (121 -> 59 lines); faces-core 402 -> 489 lines.
+- Measured: plain shards +938 bytes (303,565 with the canon); validate 0 errors; k.faces, canon, catalog, questions,
+  joins, w.schemas tests pass; the adult canon still moves eyes and mouths (and still overlaps: the test kept).
+- `npm test` (in a worktree of this commit): 2,917 tests, 2,916 pass, 1 skipped, 0 fail.
