@@ -1,20 +1,20 @@
-# k.kinds/shards/relations-units: the keys of the types of k.units read as relations: 15 relations, each with the kind of its subject and the class, types and senses of its object (found by rule from the schemas and by value from the shards).
+# k.kinds/shards/relations-units: the keys of the types of k.units read as relations: 15 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
-@k.kinds.relation.k.units.measure.world k.kinds.relation type=k.units.measure key=world subject=measure object=word core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.type k.kinds.relation type=k.units.measure key=type subject=measure object=word object_type=k.words.sense core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.key k.kinds.relation type=k.units.measure key=key subject=measure object=word core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.unit k.kinds.relation type=k.units.measure key=unit subject=measure object=amount object_type=k.units.unit core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.counts k.kinds.relation type=k.units.measure key=counts subject=measure object=word core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.frame k.kinds.relation type=k.units.measure key=frame subject=measure object=word object_type=k.words.sense core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.plain k.kinds.relation type=k.units.measure key=plain subject=measure object=boolean core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.ordinal k.kinds.relation type=k.units.measure key=ordinal subject=measure object=boolean core.source="hand-core 1"
-@k.kinds.relation.k.units.measure.approximate k.kinds.relation type=k.units.measure key=approximate subject=measure object=boolean core.source="hand-core 1"
-@k.kinds.relation.k.units.quantity.base k.kinds.relation type=k.units.quantity key=base subject=quantity object=amount object_type=k.units.unit core.source="hand-core 1"
-@k.kinds.relation.k.units.unit.symbol k.kinds.relation type=k.units.unit key=symbol subject=unit object=word core.source="hand-core 1"
-@k.kinds.relation.k.units.unit.quantity k.kinds.relation type=k.units.unit key=quantity subject=unit object=thing object_type=k.units.quantity core.source="hand-core 1"
-@k.kinds.relation.k.units.unit.factor k.kinds.relation type=k.units.unit key=factor subject=unit object=number core.source="hand-core 1"
-@k.kinds.relation.k.units.unit.offset k.kinds.relation type=k.units.unit key=offset subject=unit object=number core.source="hand-core 1"
-@k.kinds.relation.k.units.unit.system k.kinds.relation type=k.units.unit key=system subject=unit object=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.world k.kinds.relation type=k.units.measure key=world subject=measure object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.type k.kinds.relation type=k.units.measure key=type subject=measure object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.key k.kinds.relation type=k.units.measure key=key subject=measure object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.unit k.kinds.relation type=k.units.measure key=unit subject=measure object=amount object_type=k.units.unit found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.counts k.kinds.relation type=k.units.measure key=counts subject=measure object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.frame k.kinds.relation type=k.units.measure key=frame subject=measure object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.plain k.kinds.relation type=k.units.measure key=plain subject=measure object=boolean found=schema core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.ordinal k.kinds.relation type=k.units.measure key=ordinal subject=measure object=boolean found=schema core.source="hand-core 1"
+@k.kinds.relation.k.units.measure.approximate k.kinds.relation type=k.units.measure key=approximate subject=measure object=boolean found=schema core.source="hand-core 1"
+@k.kinds.relation.k.units.quantity.base k.kinds.relation type=k.units.quantity key=base subject=quantity object=amount object_type=k.units.unit found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.unit.symbol k.kinds.relation type=k.units.unit key=symbol subject=unit object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.unit.quantity k.kinds.relation type=k.units.unit key=quantity subject=unit object=thing object_type=k.units.quantity found=value core.source="hand-core 1"
+@k.kinds.relation.k.units.unit.factor k.kinds.relation type=k.units.unit key=factor subject=unit object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.units.unit.offset k.kinds.relation type=k.units.unit key=offset subject=unit object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.units.unit.system k.kinds.relation type=k.units.unit key=system subject=unit object=value found=schema core.source="hand-core 1"

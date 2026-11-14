@@ -25,10 +25,25 @@ const declared = new Set(worlds.flatMap((w) => [...w.schemaText.matchAll(/core\.
 // A class whose things are named by a type: a relation with that object names its types.
 const NAMED_CLASSES = new Set(['thing', 'place', 'act', 'time', 'person', 'group']);
 
-test('the shards are what tools/relations-core.mjs gives, and they load with k.kinds', () => {
+// Q61: the facts found from the schemas (a declared join, a slot's type, kind or enum) must be the tool's output; a
+// fact found by the value share (`found=value`) changes when another world's values change, so a difference there is
+// a warning (rerun npm run build), not a failure.
+test('the shards are what tools/relations-core.mjs gives (value-share facts: a warning), and they load with k.kinds', (t) => {
   const files = relationShards(relationRows(worlds));
   assert.deepEqual(readdirSync(dir).filter((f) => /^(arguments|relations-).*\.sop$/.test(f)).sort(), Object.keys(files).sort());
-  for (const [name, t] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), t, `${name}: run node tools/relations-core.mjs`);
+  const lines = (text) => new Map(text.split('\n').filter((l) => l.startsWith('@')).map((l) => [l.split(' ')[0], l]));
+  const stale = [];
+  for (const [name, text] of Object.entries(files)) {
+    const want = lines(text), have = lines(readFileSync(join(dir, name), 'utf8'));
+    for (const [id, l] of want) {
+      if (have.get(id) === l) continue;
+      if (/ found=value /.test(l) && (!have.has(id) || / found=value /.test(have.get(id)))) stale.push(`${name} ${id}`);
+      else assert.equal(have.get(id), l, `${name}: run node tools/relations-core.mjs`);
+    }
+    for (const id of have.keys()) if (!want.has(id)) assert.fail(`${name}: ${id} is no longer a relation: run node tools/relations-core.mjs`);
+  }
+  for (const s of stale) t.diagnostic(`value-share relation changed (run npm run build): ${s}`);
+  if (stale.length) console.log(`warning: ${stale.length} value-share relations differ from the tool's output (another world changed; npm run build regenerates them)`);
   const w = fullWorld('k.kinds', worlds);
   assert.equal(w.ofType('k.kinds.argument').length, ARGUMENTS.length);
   assert.equal(w.ofType('k.kinds.relation').length, relations.size);

@@ -8,12 +8,15 @@
 //   - k.kinds.relation: a key of a type of a knowledge world read as a relation (the sound of an animal: type
 //     k.animals.animal, key sound), with its subject (the kind of the type, in a word, and its sense) and its
 //     object: the argument class, the types whose things the values name and their senses, a k.values scale.
-// The object is found by rule, never by hand: a slot `type=` names its type; a boolean, a number (with a unit in
+// The object is found by rule, never by hand. A join declared on the slot (`type=T by=k`, Q61) is the source of truth:
+// its type is the object type (`found=declared`, `object_by` k). Otherwise a slot `type=` names its type; a boolean, a number (with a unit in
 // k.units.measure: an amount), an enum (a value; a scale where the steps are those of a k.values scale) or a
 // free string (text) say their class; any other key is joined by value: the types whose naming key holds at least
 // half of the key's distinct values (and two of them, or its only one) are its object types (at most three, the
-// best first; another type whose share is below nine tenths of the best is left out). The facts of every shard of every knowledge world are read for that, so the facts are regenerated
-// when the worlds change (npm run build).
+// best first; another type whose share is below nine tenths of the best is left out; `found=value`: a suggestion,
+// listed in docs/worlds/k.kinds/JOINS-REPORT.md until the join is declared). The facts of every shard of every
+// knowledge world are read for that, so the `value` facts are regenerated when the worlds change (npm run build);
+// the `declared` and `schema` facts depend on the schemas alone.
 import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
 import { WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
@@ -137,7 +140,7 @@ export function relationRows(worlds = scanWorlds()) {
     for (const s of x.slots) {
       if (s.key === x.naming) continue;
       const a = s.attrs, kinds = a.kind ?? [], en = (a.enum ?? []).map((v) => String(tok(v)).toLowerCase());
-      const row = { world: x.world, type: t, key: s.key, subject: x.word, subject_sense: x.sense, object: null, object_type: [], scale: null };
+      const row = { world: x.world, type: t, key: s.key, subject: x.word, subject_sense: x.sense, object: null, object_type: [], scale: null, found: 'schema', object_by: null };
       const vals = [...(values.get(`${t} ${s.key}`) ?? [])];
       const join = (pool) => {
         const hits = [];
@@ -148,13 +151,17 @@ export function relationRows(worlds = scanWorlds()) {
         hits.sort((p, q) => q[1] - p[1] || byText(p[0], q[0]));
         return hits.filter((h) => h[1] >= 0.9 * hits[0][1]).slice(0, 3).map((h) => h[0]);
       };
-      if (a.type) { row.object = classOfType(a.type[0]) === 'thing' ? 'thing' : classOfType(a.type[0]); row.object_type = [a.type[0]]; }
+      if (a.type && a.by) { // a declared join: the source of truth (Q61)
+        row.found = 'declared'; row.object_by = a.by[0]; row.object_type = [a.type[0]];
+        row.object = KIND_KEYS.has(s.key) ? 'kind' : PLACE_KEYS.has(s.key) ? 'place' : classOfType(a.type[0]);
+      } else if (a.type) { row.object = classOfType(a.type[0]) === 'thing' ? 'thing' : classOfType(a.type[0]); row.object_type = [a.type[0]]; }
       else if (kinds.includes('boolean')) row.object = 'boolean';
       else if (kinds.includes('number') || kinds.includes('integer')) row.object = units.get(`${t} ${s.key}`)?.unit ? 'amount' : 'number';
       else if (en.length) {
         row.scale = scaleOf(en, scales);
         const saved = vals.splice(0, vals.length, ...en);
         row.object_type = join(targets);
+        if (row.object_type.length) row.found = 'value';
         vals.splice(0, vals.length, ...saved);
         const joined = row.object_type.length ? classOfType(row.object_type[0]) : 'value';
         row.object = KIND_KEYS.has(s.key) ? 'kind' : PLACE_KEYS.has(s.key) ? 'place' : joined === 'thing' ? 'value' : joined;
@@ -163,6 +170,7 @@ export function relationRows(worlds = scanWorlds()) {
         row.object_type = join(targets.filter((u) => u !== t));
         if (!row.object_type.length) row.object_type = join(targets);
         if (!row.object_type.length) row.object_type = join(['k.words.sense'].filter((u) => names.has(u)));
+        row.found = 'value';
         row.object = KIND_KEYS.has(s.key) ? 'kind' : PLACE_KEYS.has(s.key) ? 'place' : row.object_type.length ? classOfType(row.object_type[0]) : 'word';
       }
       row.object_sense = [...new Set(row.object_type.map((u) => types.get(u)?.sense).filter(Boolean))];
@@ -181,13 +189,13 @@ export function argumentsShard() {
 
 export function relationShards(rows = relationRows()) {
   const line = (r) => wire(`k.kinds.relation.${r.type}.${seg(r.key)}`, 'k.kinds.relation', [['type', r.type], ['key', r.key], ['subject', r.subject], ['subject_sense', r.subject_sense],
-    ['object', r.object], ...r.object_type.map((t) => ['object_type', t]), ...r.object_sense.map((s) => ['object_sense', s]), ['scale', r.scale]], SRC);
+    ['object', r.object], ...r.object_type.map((t) => ['object_type', t]), ...r.object_sense.map((s) => ['object_sense', s]), ['scale', r.scale], ['found', r.found], ['object_by', r.object_by]], SRC);
   // one shard per world (relations-animals: the relations of k.animals), so a host that loads a world's facts, or
   // meets the word of one of its keys, loads only that world's relations
   const files = { 'arguments.sop': argumentsShard() };
   for (const w of [...new Set(rows.map((r) => r.world))]) {
     const lines = rows.filter((r) => r.world === w).map(line), name = `relations-${w.slice(2)}`;
-    files[`${name}.sop`] = `${header({ id: `k.kinds/shards/${name}`, about: `the keys of the types of ${w} read as relations: ${lines.length} relations, each with the kind of its subject and the class, types and senses of its object (found by rule from the schemas and by value from the shards).`,
+    files[`${name}.sop`] = `${header({ id: `k.kinds/shards/${name}`, about: `the keys of the types of ${w} read as relations: ${lines.length} relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).`,
       sources: ['hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)'], license: 'CC0-1.0', script: 'tools/relations-core.mjs' })}\n${lines.join('\n')}\n`;
   }
   return files;

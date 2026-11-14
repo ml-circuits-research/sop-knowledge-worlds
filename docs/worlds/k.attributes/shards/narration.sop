@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (218 of 973 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (218 of 975 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -490,6 +490,8 @@
 @k.attributes.narration.k.kinds.relation.object_type k.attributes.narration type=k.kinds.relation key=object_type narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.relation.object_sense k.attributes.narration type=k.kinds.relation key=object_sense narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.relation.scale k.attributes.narration type=k.kinds.relation key=scale narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
+@k.attributes.narration.k.kinds.relation.found k.attributes.narration type=k.kinds.relation key=found narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
+@k.attributes.narration.k.kinds.relation.object_by k.attributes.narration type=k.kinds.relation key=object_by narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.structure.name k.attributes.narration type=k.kinds.structure key=name narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.structure.about k.attributes.narration type=k.kinds.structure key=about narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.structure.role k.attributes.narration type=k.kinds.structure key=role narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"

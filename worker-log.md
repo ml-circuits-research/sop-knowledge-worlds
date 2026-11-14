@@ -4552,3 +4552,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   right before a noun is its modifier ("red house" no longer a compound; "apple pie" still is); the templates test's
   "most modifiers" workaround removed. Variants shard regenerated.
 - Tests: w.lang.en 22 (red house), templates 8, phrasing 3, frames 2, alternations 4, abstraction 5.
+## 2026-11-15 — second worker: Q61 declared joins, step 1 of 3: k.kinds.relation reads declared joins first; the join report
+
+- Coordination: the declared joins go into the slot declarations of the k.* and w.* schemas in the next commits, one
+  small group of worlds per commit; nothing but `type=T by=k` is added to existing `core.slot` lines (owners: no fact,
+  no other key changes; a rebase conflict on a slot line is resolved by keeping both).
+- Form: the library's own join `type=T by=k` (sopworld 0.60+, deferred per value since 0.70; `match=own:target` for
+  a second key), not a new `joins=`: the library reads and checks it (open-join issues, refused only by a strict check
+  or `world.closeType`), and its sampler already fills a `by` slot from the target type. No [LIB] question needed.
+- `tools/relations-core.mjs`: a declared join is the object type (`found=declared`, `object_by` its key; a kind or
+  place key keeps its class); a slot's own type, kind or enum `found=schema`; the value share only where nothing is
+  declared (`found=value`, a suggestion). k.kinds schema: slots `found` (enum declared, schema, value) and `object_by`,
+  two words.
+- `tools/joins-report.mjs` (in `npm run build` after relations-core) writes `docs/worlds/k.kinds/JOINS-REPORT.md`: every
+  declared join checked over all shards of all worlds (distinct values, values meeting a target token for token as
+  sopworld compares, open values), broken joins (under half meet, or a target type / key no schema declares), the
+  undeclared keys the value share joins to a type, and the keys left undeclared on purpose with the reason (k.objects
+  part/skeleton `of`: a scan per value would add 21 s to loading k.objects, measured 28 s -> 49 s; k.time `next`: a
+  join to the fact's own type cannot be declared once on the shared parent). Now: 10 declared (the drawing joins),
+  978 values, 0 open, 0 broken; 256 undeclared; 6 kept.
+- Tests: new `tests/k.kinds.joins-report.test.mjs` (3): fails only on a malformed declaration or a relation that does
+  not follow a declared join; WARNS (t.diagnostic) on broken, open, undeclared joins and a stale report.
+  `tests/k.kinds.relations.test.mjs` test 1: declared and schema facts must be the tool's output; a value-share fact
+  that differs is a warning, so another world growing no longer turns it red.

@@ -66,6 +66,9 @@
 # sound): `subject` the kind of its subject in a word (animal), `subject_sense` its sense where the type has one;
 # `object` the class of its values (a k.kinds.argument), `object_type` (many, the best first) the types whose things
 # its values name, `object_sense` (many) their senses, `scale` the k.values scale whose steps its values are.
+# `found` says where the object types come from (Q61): `declared` a join declared on the slot (`type=T by=k`, the
+# source of truth; `object_by` is its key k), `schema` the slot itself (a reference type, a kind, an enum), `value` the
+# share of the values that name things of a type (a suggestion until the join is declared: docs/worlds/k.kinds/JOINS-REPORT.md).
 @k.kinds.relation core.type of=k.kinds.relation closed=true core.source="hand-core 1"
 @k.kinds.relation.type core.slot of=k.kinds.relation key=type id=true required=true kind=atom core.source="hand-core 1"
 @k.kinds.relation.key core.slot of=k.kinds.relation key=key id=true required=true kind=atom core.source="hand-core 1"
@@ -75,6 +78,8 @@
 @k.kinds.relation.object_type core.slot of=k.kinds.relation key=object_type many=true kind=atom core.source="hand-core 1"
 @k.kinds.relation.object_sense core.slot of=k.kinds.relation key=object_sense many=true kind=atom kind=string core.source="hand-core 1"
 @k.kinds.relation.scale core.slot of=k.kinds.relation key=scale kind=atom kind=string core.source="hand-core 1"
+@k.kinds.relation.found core.slot of=k.kinds.relation key=found required=true enum=declared enum=schema enum=value core.source="hand-core 1"
+@k.kinds.relation.object_by core.slot of=k.kinds.relation key=object_by kind=atom core.source="hand-core 1"
 
 # Structures of worlds, for alignment (block "21:05" item 4): what kind of structure a world is, and which of its types,
 # keys and acts plays each role. Written by tools/structures-core.mjs into the shard structures.
@@ -130,6 +135,8 @@
 @k.kinds.word.key.relation.object_type core.word text="object type" means=k.kinds.relation.object_type core.source="hand-core 1"
 @k.kinds.word.key.relation.object_sense core.word text="object sense" means=k.kinds.relation.object_sense core.source="hand-core 1"
 @k.kinds.word.key.relation.scale core.word text=scale means=k.kinds.relation.scale core.source="hand-core 1"
+@k.kinds.word.key.relation.found core.word text="found by" means=k.kinds.relation.found core.source="hand-core 1"
+@k.kinds.word.key.relation.object_by core.word text="object key" text="joined by" means=k.kinds.relation.object_by core.source="hand-core 1"
 @k.kinds.word.key.structure.about core.word text=about means=k.kinds.structure.about core.source="hand-core 1"
 @k.kinds.word.key.structure.role core.word text=role means=k.kinds.structure.role core.source="hand-core 1"
 @k.kinds.word.key.structure.needs core.word text=needs means=k.kinds.structure.needs core.source="hand-core 1"

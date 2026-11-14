@@ -1,5 +1,5 @@
 {
- "version": "a0758bbee401",
+ "version": "b92be6741d39",
  "sopworld": "7f3c31a",
  "worlds": [
   {
@@ -4449,8 +4449,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 973,
-     "bytes": 187325,
+     "wires": 975,
+     "bytes": 187745,
      "keys": [
       "a",
       "about",
@@ -4597,6 +4597,7 @@
       "form",
       "formal",
       "formality",
+      "found",
       "frame",
       "from",
       "full_at",
@@ -4847,6 +4848,7 @@
       "not",
       "not_during",
       "object",
+      "object_by",
       "object_sense",
       "object_type",
       "of",
@@ -28446,7 +28448,7 @@
      "id": "k.kinds/shards/relations-actions",
      "path": "k.kinds/shards/relations-actions.sop",
      "wires": 41,
-     "bytes": 7097,
+     "bytes": 7651,
      "keys": [
       "about",
       "act",
@@ -28498,7 +28500,7 @@
      "id": "k.kinds/shards/relations-animals",
      "path": "k.kinds/shards/relations-animals.sop",
      "wires": 17,
-     "bytes": 3541,
+     "bytes": 3818,
      "keys": [
       "baby",
       "can",
@@ -28527,7 +28529,7 @@
      "id": "k.kinds/shards/relations-attributes",
      "path": "k.kinds/shards/relations-attributes.sop",
      "wires": 79,
-     "bytes": 13653,
+     "bytes": 14682,
      "keys": [
       "about",
       "age",
@@ -28612,7 +28614,7 @@
      "id": "k.kinds/shards/relations-body",
      "path": "k.kinds/shards/relations-body.sop",
      "wires": 16,
-     "bytes": 3227,
+     "bytes": 3496,
      "keys": [
       "about",
       "amount_about",
@@ -28643,7 +28645,7 @@
      "id": "k.kinds/shards/relations-colours",
      "path": "k.kinds/shards/relations-colours.sop",
      "wires": 11,
-     "bytes": 2749,
+     "bytes": 2931,
      "keys": [
       "a",
       "b",
@@ -28669,7 +28671,7 @@
      "id": "k.kinds/shards/relations-commonsense",
      "path": "k.kinds/shards/relations-commonsense.sop",
      "wires": 17,
-     "bytes": 3291,
+     "bytes": 3545,
      "keys": [
       "at",
       "can",
@@ -28700,7 +28702,7 @@
      "id": "k.kinds/shards/relations-drawing",
      "path": "k.kinds/shards/relations-drawing.sop",
      "wires": 12,
-     "bytes": 2261,
+     "bytes": 2461,
      "keys": [
       "colour",
       "h",
@@ -28725,7 +28727,7 @@
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
      "wires": 78,
-     "bytes": 12760,
+     "bytes": 13776,
      "keys": [
       "about",
       "age",
@@ -28802,7 +28804,7 @@
      "id": "k.kinds/shards/relations-feelings",
      "path": "k.kinds/shards/relations-feelings.sop",
      "wires": 10,
-     "bytes": 2160,
+     "bytes": 2331,
      "keys": [
       "caused_by",
       "cheeks",
@@ -28826,7 +28828,7 @@
      "id": "k.kinds/shards/relations-food",
      "path": "k.kinds/shards/relations-food.sop",
      "wires": 9,
-     "bytes": 2274,
+     "bytes": 2451,
      "keys": [
       "botanically",
       "colour",
@@ -28849,7 +28851,7 @@
      "id": "k.kinds/shards/relations-genres",
      "path": "k.kinds/shards/relations-genres.sop",
      "wires": 56,
-     "bytes": 8868,
+     "bytes": 9630,
      "keys": [
       "about",
       "also_move",
@@ -28907,7 +28909,7 @@
      "id": "k.kinds/shards/relations-geo",
      "path": "k.kinds/shards/relations-geo.sop",
      "wires": 79,
-     "bytes": 13485,
+     "bytes": 14540,
      "keys": [
       "area",
       "area_about",
@@ -28960,7 +28962,7 @@
      "id": "k.kinds/shards/relations-interest",
      "path": "k.kinds/shards/relations-interest.sop",
      "wires": 24,
-     "bytes": 4190,
+     "bytes": 4545,
      "keys": [
       "about",
       "appraisal",
@@ -28997,7 +28999,7 @@
      "id": "k.kinds/shards/relations-kinds",
      "path": "k.kinds/shards/relations-kinds.sop",
      "wires": 11,
-     "bytes": 2059,
+     "bytes": 2241,
      "keys": [
       "derived",
       "dimension",
@@ -29022,7 +29024,7 @@
      "id": "k.kinds/shards/relations-layouts",
      "path": "k.kinds/shards/relations-layouts.sop",
      "wires": 35,
-     "bytes": 5977,
+     "bytes": 6467,
      "keys": [
       "a",
       "about",
@@ -29063,7 +29065,7 @@
      "id": "k.kinds/shards/relations-motion",
      "path": "k.kinds/shards/relations-motion.sop",
      "wires": 58,
-     "bytes": 9317,
+     "bytes": 10091,
      "keys": [
       "about",
       "back_max",
@@ -29128,7 +29130,7 @@
      "id": "k.kinds/shards/relations-named",
      "path": "k.kinds/shards/relations-named.sop",
      "wires": 1,
-     "bytes": 574,
+     "bytes": 635,
      "keys": [
       "k.named.labelled",
       "named"
@@ -29143,7 +29145,7 @@
      "id": "k.kinds/shards/relations-objects",
      "path": "k.kinds/shards/relations-objects.sop",
      "wires": 35,
-     "bytes": 5843,
+     "bytes": 6329,
      "keys": [
       "above",
       "below",
@@ -29186,7 +29188,7 @@
      "id": "k.kinds/shards/relations-parts",
      "path": "k.kinds/shards/relations-parts.sop",
      "wires": 11,
-     "bytes": 2091,
+     "bytes": 2274,
      "keys": [
       "also",
       "from",
@@ -29211,7 +29213,7 @@
      "id": "k.kinds/shards/relations-people",
      "path": "k.kinds/shards/relations-people.sop",
      "wires": 26,
-     "bytes": 5432,
+     "bytes": 5833,
      "keys": [
       "age",
       "beard",
@@ -29247,7 +29249,7 @@
      "id": "k.kinds/shards/relations-procedures",
      "path": "k.kinds/shards/relations-procedures.sop",
      "wires": 66,
-     "bytes": 11196,
+     "bytes": 12059,
      "keys": [
       "about",
       "act",
@@ -29310,7 +29312,7 @@
      "id": "k.kinds/shards/relations-scenes",
      "path": "k.kinds/shards/relations-scenes.sop",
      "wires": 19,
-     "bytes": 3557,
+     "bytes": 3876,
      "keys": [
       "count",
       "drawing",
@@ -29343,7 +29345,7 @@
      "id": "k.kinds/shards/relations-shapes",
      "path": "k.kinds/shards/relations-shapes.sop",
      "wires": 14,
-     "bytes": 2961,
+     "bytes": 3186,
      "keys": [
       "corners",
       "derived",
@@ -29371,7 +29373,7 @@
      "id": "k.kinds/shards/relations-space",
      "path": "k.kinds/shards/relations-space.sop",
      "wires": 29,
-     "bytes": 5974,
+     "bytes": 6425,
      "keys": [
       "about",
       "age_years_about",
@@ -29412,7 +29414,7 @@
      "id": "k.kinds/shards/relations-story",
      "path": "k.kinds/shards/relations-story.sop",
      "wires": 39,
-     "bytes": 6517,
+     "bytes": 7056,
      "keys": [
       "about",
       "act",
@@ -29459,7 +29461,7 @@
      "id": "k.kinds/shards/relations-time",
      "path": "k.kinds/shards/relations-time.sop",
      "wires": 54,
-     "bytes": 9963,
+     "bytes": 10680,
      "keys": [
       "am_pm",
       "count",
@@ -29514,7 +29516,7 @@
      "id": "k.kinds/shards/relations-units",
      "path": "k.kinds/shards/relations-units.sop",
      "wires": 15,
-     "bytes": 2689,
+     "bytes": 2923,
      "keys": [
       "approximate",
       "base",
@@ -29545,7 +29547,7 @@
      "id": "k.kinds/shards/relations-values",
      "path": "k.kinds/shards/relations-values.sop",
      "wires": 34,
-     "bytes": 5973,
+     "bytes": 6447,
      "keys": [
       "about",
       "axis",
@@ -29600,7 +29602,7 @@
      "id": "k.kinds/shards/relations-wearables",
      "path": "k.kinds/shards/relations-wearables.sop",
      "wires": 18,
-     "bytes": 3741,
+     "bytes": 4033,
      "keys": [
       "about",
       "body_part",
@@ -29631,7 +29633,7 @@
      "id": "k.kinds/shards/relations-words",
      "path": "k.kinds/shards/relations-words.sop",
      "wires": 13,
-     "bytes": 2350,
+     "bytes": 2560,
      "keys": [
       "band",
       "gloss",

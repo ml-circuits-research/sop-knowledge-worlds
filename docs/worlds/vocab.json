@@ -42907,11 +42907,15 @@
  ],
  "found": [
   "k.actions/shards/actions-mind-talk",
+  "k.attributes/shards/narration",
   "k.commonsense/schema.sop",
   "k.scenes/schema.sop",
   "k.words/shards/fi",
   "k.words/shards/fo",
   "k.words/shards/frequency-f"
+ ],
+ "found by": [
+  "k.kinds/schema.sop"
  ],
  "foundation": [
   "k.words/shards/fo",
@@ -58028,6 +58032,9 @@
   "k.layouts/schema.sop",
   "k.words/shards/frequency-j",
   "k.words/shards/jo"
+ ],
+ "joined by": [
+  "k.kinds/schema.sop"
  ],
  "joined_to": [
   "k.layouts/shards/layouts"
@@ -78973,11 +78980,17 @@
   "k.words/shards/frequency-o",
   "k.words/shards/ob"
  ],
+ "object key": [
+  "k.kinds/schema.sop"
+ ],
  "object sense": [
   "k.kinds/schema.sop"
  ],
  "object type": [
   "k.kinds/schema.sop"
+ ],
+ "object_by": [
+  "k.attributes/shards/narration"
  ],
  "object_sense": [
   "k.attributes/shards/narration"
