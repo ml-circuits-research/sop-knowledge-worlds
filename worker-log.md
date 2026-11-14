@@ -5144,3 +5144,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   drawn, cottage and stork by their kind).
   coverage.test counts the stand-ins of its own shard by id (stand-ins-kinds-wordnet is the new tool's); drawn-colour
   regenerated (the arrow is black).
+
+
+## 2026-11-15 — first worker: end of round (block 03:20 items 1-4, Q64)
+
+- Commits: e6d0cc9 (animal sounds), 2808dc0 (k.music), a04b993 (raw-file skip, reviewer's note), 06b4358 (currencies),
+  7855ca2 (Q64 frames), c9572dd (drawables), c387cc3 (Q67, Q68, lessons).
+- Full suite on c387cc3 (`npm run test:all`, files one at a time): 81 files, 3,111 tests, 3,109 pass, 0 fail, 2
+  skipped, 492 s. Slowest: derived 57 s, questions 39 s, k.cores 31 s, k.attributes 30 s, gallery 29 s (unchanged by
+  this round's work; derived and k.cores are over 30 s as before).
+- Order: item 4 (drawables) was done after Q64 because the second worker had the k.scenes stand-ins in flight in the
+  same files (stand-ins-hand, MISSING.md); its push came first, and the stand-ins here do not overlap its 59.
