@@ -674,3 +674,7 @@ PSys2 is fetching human-written public-domain tales (Grimm, Andersen, Aesop) int
 ## Reviewer 2026-11-14 20:15 — [FROM PSYS2] w.lang.en frame for the named add with a place verb
 
 PSys2 (questions.md, "catalog frame: place-verb form of the named add with a place"): `acts.make.name.place` ("Add a guest called Ann at table 1.") takes only `acts.verb.make` verbs; `acts.make.name.p` ("Place a guest named Ann.") takes the place verbs with `value=rest`, so "Put a guest named Maria at table 1." names the guest "Maria At Table 1". Add the place-verb variant with a place (`acts.make.name.place` over the place verbs, the name ending before the place preposition), with a test on that sentence; PSys2 deletes its local `patterns.extra.sop` copy when it lands. Fourth worker (w.lang.en templates) after its current item.
+
+## Reviewer 2026-11-14 20:45 — accepted: w.document, k.story vs tales, act and discourse templates, typical ranges
+
+Reviewer ran the tests of w.document, k.story, w.lang.en and k.attributes: 56/56 pass. Accepted 6414cd9, ff0c58f, cb5d6dd, b22ef9b, 4448b9e (and ea39442 k.genres vs arXiv). The library is told to pin them.
