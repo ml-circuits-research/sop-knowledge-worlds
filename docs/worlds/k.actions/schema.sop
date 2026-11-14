@@ -14,7 +14,7 @@
 @k.actions.act core.type of=k.actions.act shared=true closed=true core.source="hand-core 1"
 @k.actions.act.name core.slot of=k.actions.act key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.act.about core.slot of=k.actions.act key=about required=true kind=string core.source="hand-core 1"
-@k.actions.act.opposite core.slot of=k.actions.act key=opposite kind=atom kind=string core.source="hand-core 1"
+@k.actions.act.opposite core.slot of=k.actions.act key=opposite kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @k.actions.act.role core.slot of=k.actions.act key=role many=true required=true kind=atom kind=string core.source="hand-core 1"
 
 # A role of an act: something the act can be told (the thing, the place, the new value). `holds` says what kind of
@@ -23,7 +23,7 @@
 # marker is said without one (the object of the verb, a number before the noun). A verb may mark a role in its own
 # way: see k.actions.marking, which comes first.
 @k.actions.role core.type of=k.actions.role shared=true closed=true core.source="hand-core 1"
-@k.actions.role.act core.slot of=k.actions.role key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.role.act core.slot of=k.actions.role key=act id=true required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @k.actions.role.name core.slot of=k.actions.role key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.role.holds core.slot of=k.actions.role key=holds required=true enum=thing enum=kind enum=place enum=direction enum=value enum=attribute enum=amount enum=number enum=name enum=person enum=group enum=topic enum=means core.source="hand-core 1"
 @k.actions.role.needed core.slot of=k.actions.role key=needed kind=boolean core.source="hand-core 1"
@@ -42,7 +42,7 @@
 # `named=model`: that the sense means the act, and the roles, were read and judged by a language model.
 @k.actions.verb core.type of=k.actions.verb extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.actions.verb.text core.slot of=k.actions.verb key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.verb.act core.slot of=k.actions.verb key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.verb.act core.slot of=k.actions.verb key=act id=true required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @k.actions.verb.sense core.slot of=k.actions.verb key=sense many=true kind=integer min=1 core.source="hand-core 1"
 @k.actions.verb.gloss core.slot of=k.actions.verb key=gloss kind=string core.source="hand-core 1"
 @k.actions.verb.object core.slot of=k.actions.verb key=object kind=atom kind=string core.source="hand-core 1"
@@ -56,9 +56,9 @@
 # the replacement). It comes before the markers of the role itself.
 @k.actions.marking core.type of=k.actions.marking shared=true closed=true core.source="hand-core 1"
 @k.actions.marking.verb core.slot of=k.actions.marking key=verb id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.marking.act core.slot of=k.actions.marking key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.marking.act core.slot of=k.actions.marking key=act id=true required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @k.actions.marking.marker core.slot of=k.actions.marking key=marker id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.marking.role core.slot of=k.actions.marking key=role required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.marking.role core.slot of=k.actions.marking key=role required=true kind=atom kind=string type=k.actions.role by=name match=act:act core.source="hand-core 1"
 
 # An everyday action, named by its English verb in the base form (cut, fly, "pick up"): what people, animals and
 # things do, as against the acts above, which are what a person asks an application for. `group` sorts the actions: `move`
@@ -75,11 +75,11 @@
 @k.actions.action.group core.slot of=k.actions.action key=group required=true enum=move enum=hands enum=make enum=change enum=sense enum=mind enum=talk enum=body enum=social enum=nature core.source="hand-core 1"
 @k.actions.action.who core.slot of=k.actions.action key=who many=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.action.object core.slot of=k.actions.action key=object many=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.action.tool core.slot of=k.actions.action key=tool many=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.action.where core.slot of=k.actions.action key=where many=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.action.tool core.slot of=k.actions.action key=tool many=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.actions.action.where core.slot of=k.actions.action key=where many=true kind=atom kind=string type=k.scenes.scene by=name core.source="hand-core 1"
 @k.actions.action.result core.slot of=k.actions.action key=result required=true kind=string core.source="hand-core 1"
-@k.actions.action.opposite core.slot of=k.actions.action key=opposite kind=atom kind=string core.source="hand-core 1"
-@k.actions.action.undone_by core.slot of=k.actions.action key=undone_by kind=atom kind=string core.source="hand-core 1"
+@k.actions.action.opposite core.slot of=k.actions.action key=opposite kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
+@k.actions.action.undone_by core.slot of=k.actions.action key=undone_by kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
 @k.actions.action.example core.slot of=k.actions.action key=example required=true kind=string core.source="hand-core 1"
 
 # A verb or phrase that means nearly the same as an action, or a kind of it: `name` is the verb or phrase (stroll,
@@ -87,7 +87,7 @@
 # reads "stroll" as "walk" knows that it has widened the word. One verb can be close to several actions.
 @k.actions.similar core.type of=k.actions.similar shared=true closed=true core.source="hand-core 1"
 @k.actions.similar.name core.slot of=k.actions.similar key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.similar.action core.slot of=k.actions.similar key=action id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.similar.action core.slot of=k.actions.similar key=action id=true required=true kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
 
 # Act families (reviewer 21:55: the up edges of acts, for the library's cousins): a family groups acts by what they do
 # (`dimension=does`: creation, destruction, change of a value, change of place, joining, separating, question, view,
@@ -98,10 +98,10 @@
 @k.actions.family.name core.slot of=k.actions.family key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.actions.family.dimension core.slot of=k.actions.family key=dimension required=true enum=does enum=takes core.source="hand-core 1"
 @k.actions.family.about core.slot of=k.actions.family key=about required=true kind=string core.source="hand-core 1"
-@k.actions.family.parent core.slot of=k.actions.family key=parent many=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.family.parent core.slot of=k.actions.family key=parent many=true kind=atom kind=string type=k.actions.family by=name core.source="hand-core 1"
 @k.actions.member core.type of=k.actions.member shared=true closed=true core.source="hand-core 1"
-@k.actions.member.act core.slot of=k.actions.member key=act id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.member.family core.slot of=k.actions.member key=family id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.actions.member.act core.slot of=k.actions.member key=act id=true required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
+@k.actions.member.family core.slot of=k.actions.member key=family id=true required=true kind=atom kind=string type=k.actions.family by=name core.source="hand-core 1"
 @k.actions.member.why core.slot of=k.actions.member key=why required=true kind=string core.source="hand-core 1"
 @k.actions.word.family core.word text=family text="act family" text="kind of act" means=k.actions.family core.source="hand-core 1"
 

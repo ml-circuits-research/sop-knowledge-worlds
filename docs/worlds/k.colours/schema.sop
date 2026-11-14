@@ -20,18 +20,18 @@
 @k.colours.colour.family core.slot of=k.colours.colour key=family required=true enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown enum=black enum=white enum=grey core.source="hand-core 1"
 @k.colours.colour.tone core.slot of=k.colours.colour key=tone required=true enum=light enum=medium enum=dark core.source="hand-core 1"
 @k.colours.colour.temperature core.slot of=k.colours.colour key=temperature required=true enum=warm enum=cool enum=neutral core.source="hand-core 1"
-@k.colours.colour.lighter core.slot of=k.colours.colour key=lighter kind=atom kind=string core.source="hand-core 1"
-@k.colours.colour.darker core.slot of=k.colours.colour key=darker kind=atom kind=string core.source="hand-core 1"
-@k.colours.colour.complement core.slot of=k.colours.colour key=complement kind=atom kind=string core.source="hand-core 1"
+@k.colours.colour.lighter core.slot of=k.colours.colour key=lighter kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
+@k.colours.colour.darker core.slot of=k.colours.colour key=darker kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
+@k.colours.colour.complement core.slot of=k.colours.colour key=complement kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
 @k.colours.colour.kind core.slot of=k.colours.colour key=kind enum=metallic enum=primary enum=secondary enum=neutral core.source="hand-core 1"
-@k.colours.colour.thing core.slot of=k.colours.colour key=thing many=true kind=atom kind=string core.source="hand-core 1"
+@k.colours.colour.thing core.slot of=k.colours.colour key=thing many=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # What two colours of paint give when they are mixed: `a` and `b` (in the order of the alphabet, so that a pair is
 # said once) give `gives`. All three are names of colours of this world.
 @k.colours.mix core.type of=k.colours.mix shared=true closed=true core.source="hand-core 1"
-@k.colours.mix.a core.slot of=k.colours.mix key=a id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.colours.mix.b core.slot of=k.colours.mix key=b id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.colours.mix.gives core.slot of=k.colours.mix key=gives required=true kind=atom kind=string core.source="hand-core 1"
+@k.colours.mix.a core.slot of=k.colours.mix key=a id=true required=true kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
+@k.colours.mix.b core.slot of=k.colours.mix key=b id=true required=true kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
+@k.colours.mix.gives core.slot of=k.colours.mix key=gives required=true kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.colours.word.colour core.word text=colour text=colours text=color text=colors text=coloured text=colored means=k.colours.colour core.source="hand-core 1"

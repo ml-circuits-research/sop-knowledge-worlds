@@ -4630,3 +4630,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: k.kinds.structures 6 / 6 (two new: roles' direction, cardinality and required, the library's examples;
   constraints' kinds, roles, worlds, rules and the facts that hold them), k.kinds.relations 5, joins-report 3,
   k.kinds 8, narration 3, shared-modules 5, questions 424, repo 1, validate 5, catalog 8.
+## 2026-11-15 — second worker: Q61 step 2b: declared joins in k.actions, k.animals, k.attributes, k.body, k.colours, k.commonsense, k.faces, k.feelings, k.wearables (slot lines only)
+
+- 50 joins added to existing slot lines: k.actions 13 (act / action opposite, undone_by, where -> k.scenes.scene, tool
+  -> k.objects.object; family parent; marking / member / role / verb act; member family; similar action; marking role
+  -> k.actions.role `by=name match=act:act`, the library's two-key join), k.animals 4 (habitat -> k.commonsense.lives
+  by `in`, can / cannot -> k.actions.action, thing -> k.objects.object), k.attributes 8, k.body 3, k.colours 7
+  (lighter, darker, complement, mix a / b / gives -> k.colours.colour; thing -> k.objects.object), k.commonsense 2
+  (can, cannot), k.faces 5 (expression / preset style -> k.faces.canon by `style`; preset clothes; part / variant slot
+  -> k.faces.slot), k.feelings 2, k.wearables 5 (worn_on, covers -> k.wearables.place; body_part; face_slot ->
+  k.faces.slot). Left undeclared (under three quarters meet, or the target is not one type): eats, made_of, comes_from,
+  who, object, at, material, the face presets' skin / hair / eye colours (blond, pale, tan are no k.colours colour).
+- JOINS-REPORT: 89 declared in 17 worlds, 3,726 values, 3,666 meet (98.4 %), 60 open (tool: 30 body parts and
+  compound names without a drawing; k.attributes.thing can: 10 verbs k.actions lacks: bounce, erupt, explode...;
+  habitat hair, sky; colour things fire truck, traffic light, night, ocean), 0 broken, 174 undeclared.
+- tests/k.commonsense.rules.test.mjs: `world.check()` issues now include the open joins of a world loaded without
+  its targets (k.actions here); the test reads the soft rules' issues (kind other than `open-join`). Test only.
+- Tests: `npm run test:changed` (build 178 s; 53 files, 2,735 tests): 2,728 pass, 5 skipped, 2 fail (that rules
+  test), fixed and rerun 5 pass.

@@ -18,14 +18,14 @@
 @k.feelings.feeling core.type of=k.feelings.feeling shared=true closed=true core.source="hand-core 1"
 @k.feelings.feeling.name core.slot of=k.feelings.feeling key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.feelings.feeling.tone core.slot of=k.feelings.feeling key=tone required=true enum=pleasant enum=unpleasant enum=neutral core.source="hand-core 1"
-@k.feelings.feeling.expression core.slot of=k.feelings.feeling key=expression kind=atom kind=string core.source="hand-core 1"
+@k.feelings.feeling.expression core.slot of=k.feelings.feeling key=expression kind=atom kind=string type=k.faces.expression by=name core.source="hand-core 1"
 @k.feelings.feeling.mouth core.slot of=k.feelings.feeling key=mouth kind=atom kind=string core.source="hand-core 1"
 @k.feelings.feeling.eyebrows core.slot of=k.feelings.feeling key=eyebrows kind=atom kind=string core.source="hand-core 1"
 @k.feelings.feeling.eyes core.slot of=k.feelings.feeling key=eyes kind=atom kind=string core.source="hand-core 1"
 @k.feelings.feeling.cheeks core.slot of=k.feelings.feeling key=cheeks kind=atom kind=string core.source="hand-core 1"
 @k.feelings.feeling.looks_like core.slot of=k.feelings.feeling key=looks_like kind=atom kind=string core.source="hand-core 1"
 @k.feelings.feeling.caused_by core.slot of=k.feelings.feeling key=caused_by many=true required=true kind=string core.source="hand-core 1"
-@k.feelings.feeling.opposite core.slot of=k.feelings.feeling key=opposite kind=atom kind=string core.source="hand-core 1"
+@k.feelings.feeling.opposite core.slot of=k.feelings.feeling key=opposite kind=atom kind=string type=k.feelings.feeling by=name core.source="hand-core 1"
 @k.feelings.feeling.reply core.slot of=k.feelings.feeling key=reply required=true kind=string core.source="hand-core 1"
 
 # Words for the type and keys of this world.

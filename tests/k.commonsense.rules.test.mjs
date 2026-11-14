@@ -16,7 +16,10 @@ const small = (facts) => {
 };
 const val = (t) => (/^[a-z][a-z0-9_-]*$/.test(t) ? t : JSON.stringify(t));
 const at = (w, name) => w.ask(`k.commonsense.thing name=${val(name)} at=?a`).map((x) => x.a).sort();
-const issues = (w) => (w.check().issues ?? []).map((i) => i.rule).sort();
+// the issues of the soft rules; a join still open (a declared `type=T by=k` whose target world is not loaded here,
+// Q61) is a report of its own, not a rule's issue
+const ruleIssues = (w) => (w.check().issues ?? []).filter((i) => i.kind !== 'open-join');
+const issues = (w) => ruleIssues(w).map((i) => i.rule).sort();
 
 test('lives in gives the usual place: the habitat itself, and water or ground through k.commonsense.lives', () => {
   const w = small(`
@@ -38,7 +41,7 @@ test('the soft rules now reach every animal: a shark in the sky is an issue, a d
     @p2 k.commonsense.placed thing=duck at=sky scene=s core.source="t"
     @p3 k.commonsense.placed thing=duck at=grass scene=s core.source="t"`);
   assert.deepEqual(issues(w), ['k.commonsense.k.commonsense.nofly', 'k.commonsense.k.commonsense.water.sky']);
-  assert.ok(w.check().issues.every((i) => /shark/.test(i.why)));
+  assert.ok(ruleIssues(w).every((i) => /shark/.test(i.why)));
 });
 
 test('a thing on a carrier is where the carrier is, and moves with it; a rider in the sky is no issue', () => {
@@ -62,7 +65,7 @@ test('a liquid needs something to hold it; a drink of k.food is a liquid', () =>
     @p1 k.commonsense.placed thing=milk at=table scene=s core.source="t"
     @p2 k.commonsense.placed thing=milk in=cup at=table scene=s core.source="t"`);
   assert.deepEqual(w.ask('k.commonsense.thing name=milk is_a=?k').map((x) => x.k), ['liquid']);
-  const found = w.check().issues;
+  const found = ruleIssues(w);
   assert.equal(found.length, 1);
   assert.equal(found[0].rule, 'k.commonsense.k.commonsense.liquid');
 });

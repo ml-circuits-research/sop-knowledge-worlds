@@ -13,8 +13,8 @@
 @k.body.part core.type of=k.body.part extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.body.part.name core.slot of=k.body.part key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.body.part.kind core.slot of=k.body.part key=kind required=true enum=whole enum=part enum=organ enum=bone enum=tissue core.source="hand-core 1"
-@k.body.part.part_of core.slot of=k.body.part key=part_of kind=atom core.source="hand-core 1"
-@k.body.part.inside core.slot of=k.body.part key=inside kind=atom core.source="hand-core 1"
+@k.body.part.part_of core.slot of=k.body.part key=part_of kind=atom type=k.body.part by=name core.source="hand-core 1"
+@k.body.part.inside core.slot of=k.body.part key=inside kind=atom type=k.body.part by=name core.source="hand-core 1"
 @k.body.part.count core.slot of=k.body.part key=count kind=integer min=1 core.source="hand-core 1"
 @k.body.part.child_count core.slot of=k.body.part key=child_count kind=integer min=1 core.source="hand-core 1"
 @k.body.part.does core.slot of=k.body.part key=does many=true kind=atom kind=string core.source="hand-core 1"
@@ -35,7 +35,7 @@
 # One of the five senses and the part of the body it works with.
 @k.body.sense core.type of=k.body.sense shared=true closed=true complete=true core.source="hand-core 1"
 @k.body.sense.name core.slot of=k.body.sense key=name id=true required=true enum=sight enum=hearing enum=smell enum=taste enum=touch core.source="hand-core 1"
-@k.body.sense.organ core.slot of=k.body.sense key=organ required=true kind=atom core.source="hand-core 1"
+@k.body.sense.organ core.slot of=k.body.sense key=organ required=true kind=atom type=k.body.part by=name core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.body.word.part core.word text=body text=part text=parts means=k.body.part core.source="hand-core 1"

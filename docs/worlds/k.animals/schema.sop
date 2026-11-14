@@ -25,14 +25,14 @@
 @k.animals.animal.legs core.slot of=k.animals.animal key=legs kind=integer min=0 core.source="hand-core 1"
 @k.animals.animal.covering core.slot of=k.animals.animal key=covering many=true enum=fur enum=hair enum=wool enum=feathers enum=scales enum=skin enum=shell enum=spines core.source="hand-core 1"
 @k.animals.animal.sound core.slot of=k.animals.animal key=sound many=true kind=atom core.source="hand-core 1"
-@k.animals.animal.habitat core.slot of=k.animals.animal key=habitat many=true kind=atom kind=string core.source="hand-core 1"
+@k.animals.animal.habitat core.slot of=k.animals.animal key=habitat many=true kind=atom kind=string type=k.commonsense.lives by=in core.source="hand-core 1"
 @k.animals.animal.diet core.slot of=k.animals.animal key=diet enum=herbivore enum=carnivore enum=omnivore core.source="hand-core 1"
 @k.animals.animal.eats core.slot of=k.animals.animal key=eats many=true kind=atom kind=string core.source="hand-core 1"
 @k.animals.animal.baby core.slot of=k.animals.animal key=baby kind=atom core.source="hand-core 1"
-@k.animals.animal.can core.slot of=k.animals.animal key=can many=true kind=atom core.source="hand-core 1"
-@k.animals.animal.cannot core.slot of=k.animals.animal key=cannot many=true kind=atom core.source="hand-core 1"
+@k.animals.animal.can core.slot of=k.animals.animal key=can many=true kind=atom type=k.actions.action by=name core.source="hand-core 1"
+@k.animals.animal.cannot core.slot of=k.animals.animal key=cannot many=true kind=atom type=k.actions.action by=name core.source="hand-core 1"
 @k.animals.animal.drawing core.slot of=k.animals.animal key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
-@k.animals.animal.thing core.slot of=k.animals.animal key=thing kind=atom kind=string core.source="hand-core 1"
+@k.animals.animal.thing core.slot of=k.animals.animal key=thing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 @k.animals.animal.group core.slot of=k.animals.animal key=group kind=atom core.source="hand-core 1"
 
 # A class of animals and what every animal of the class has: the number of walking legs (an insect has 6, a
