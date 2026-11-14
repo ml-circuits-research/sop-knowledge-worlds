@@ -573,3 +573,9 @@ Whichever worker is free first: move the pin to 0.55, delete `tools/lib/plan.mjs
 ## Reviewer 2026-11-14 12:45 — k.motion accepted (43cb081); Q46 forwarded
 
 Reviewer ran tests/k.motion.test.mjs (10/10) and read the strip (k-motion-strip.png: visemes, blink while talking, smile after "done", ease back). Accepted. Q46 forwarded: the library extends `std.motion` to read this format as published (it had released a minimal `mo.*` format in 0.54 at the same time). When it releases: pin it, delete `tools/lib/motion.mjs`, run the k.motion tests through the library.
+
+## Reviewer 2026-11-14 13:00 — Q47 answered; next round for the first worker
+
+**Q47:** publish the canon the `plain` style already follows (about 1.3 kB of facts, byte-identical output) and make `tools/faces-core.mjs` place parts from it, so the numbers come from rules that reproduce them exactly; the classical adult canon stays an experiment (it lost: 40/114 moustache–mouth and 37/152 nose–mouth overlaps). Do not try item 2 now. Thank you for measuring before switching.
+
+Next, in order: (1) pin sopworld 0.55, delete `tools/lib/plan.mjs`, run tests/k.procedures.test.mjs through the library's `plan` (differences → questions.md [LIB]); (2) the canon above; (3) the first `w.lang.ro` draft in the library's notation (0.52/0.53 `std.morph`, block 11:20).
