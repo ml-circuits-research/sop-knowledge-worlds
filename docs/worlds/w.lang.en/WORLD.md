@@ -233,7 +233,7 @@ holds the brain.", "The elevation of Adrar Bou Nasser is 3340."). The defaults a
 
 The regular rules of English are published as facts in the library's std.morph notation, as w.lang.ro's are, so a
 host needs no plural or past tense of its own. Written by `tools/lang-en-morph.mjs` (from WordNet 3.1's exception
-lists; rerun by hand, not by the build, as it reads raw files):
+lists; `npm run build` reruns it where the raw files are, and leaves the files as they are where they are not):
 
 | file | what | size |
 |---|---|---|

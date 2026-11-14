@@ -15,7 +15,7 @@
 //   - ordered suffix rules (`w.lang.en.inflect`, the library's `inflectBy`) for the verb and adjective forms of words
 //     no dictionary has: op third, past, ing, comparative, superlative (the plural rules were already published).
 // Deterministic. Needs WordNet 3.1's exception lists (sources/wordnet/raw, see sources/wordnet/SOURCE.md).
-//   node tools/lang-en-morph.mjs
+//   node tools/lang-en-morph.mjs [--if-raw]     (the build runs it with --if-raw)
 import { readFileSync, readdirSync, rmSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, factsOf } from './lib/worlds.mjs';
@@ -423,7 +423,9 @@ export function write(f = files()) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  if (!existsSync(join(RAW, 'verb.exc'))) { console.error(`no WordNet exception lists in ${RAW}: see sources/wordnet/SOURCE.md`); process.exit(1); }
+  // --if-raw (npm run build): without WordNet's raw files, leave the files as they are (a fresh clone); with them,
+  // rewrite them, so a change of k.words or k.actions reaches the dictionary at the next build.
+  if (!existsSync(join(RAW, 'verb.exc'))) { console.error(`no WordNet exception lists in ${RAW}: see sources/wordnet/SOURCE.md`); process.exit(process.argv.includes('--if-raw') ? 0 : 1); }
   const b = build();
   write(files(b));
   const { unexplained, viaCompound, ...rest } = b.report;

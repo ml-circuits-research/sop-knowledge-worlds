@@ -4835,3 +4835,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   (catalog 32 worlds, 1,094 shards, 29,133 words): w.lang.en.morph 6, w.lang.en 22, w.lang.en.closed 3, w.lang.ro 10,
   catalog 8, validate 5, repo 1, ask-real 4 pass. (04b767d had left ask-real red: the supersense key words were
   written by hand into the block tools/key-words.mjs owns; fixed by the first worker in 55ff6ea.)
+
+## 2026-11-15 — third worker: fix: the w.lang.en dictionary follows k.words (e8c4f0b pushed red)
+
+- e8c4f0b was pushed with tests/w.lang.en.morph.test.mjs red (my command chain pushed after a failing test): e6d0cc9
+  had added 57 k.words senses (animal sounds) between my run of the tool and the push, so the dictionary was stale.
+  Fix: `npm run build` now runs `node tools/lang-en-morph.mjs --if-raw` (rewrites the shards and the dictionary
+  where WordNet's raw files are; leaves them as they are in a fresh clone), so a change of k.words reaches the
+  dictionary at the next build. Rerun: 13,100 lemmas (8,917 nouns, 3,364 verbs, 819 adjectives), round trip 36,059
+  of 36,059 cells; inflectBy agreement unchanged (plural 96.5 %, third 99.9 %, past 95.5 %, ing 95.7 %, comparative
+  and superlative 99.7 %). Tests: w.lang.en.morph 6, catalog 8, validate 5, repo 1 pass.
