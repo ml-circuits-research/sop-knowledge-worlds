@@ -8,7 +8,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds } from '../tools/lib/worlds.mjs';
-import { joinsReport, reportText, REPORT } from '../tools/joins-report.mjs';
+import { joinsReport, reportText, REPORT, declaredJoins } from '../tools/joins-report.mjs';
 import { parse } from '../tools/sopworld/sopworld.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -27,7 +27,10 @@ test('k.kinds.relation reads the declared joins first (found=declared, the targe
   const rel = new Map(readdirSync(dir).filter((f) => f.startsWith('relations-')).flatMap((f) => parse(readFileSync(join(dir, f), 'utf8')))
     .filter((w) => w.type === 'k.kinds.relation').map((w) => [`${tok(w.attrs.type[0])}.${tok(w.attrs.key[0])}`, w]));
   let n = 0;
-  for (const d of report.declared.filter((x) => x.world.startsWith('k.'))) {
+  // a join declared on a parent type holds for the types that extend it (k.time.ordered cycle: month, hour...)
+  const { children } = declaredJoins(worlds);
+  const each = report.declared.filter((x) => x.world.startsWith('k.')).flatMap((d) => children(d.type).filter((c) => rel.has(`${c}.${d.key}`)).map((c) => ({ ...d, type: c })));
+  for (const d of each) {
     const r = rel.get(`${d.type}.${d.key}`);
     assert.ok(r, `${d.type}.${d.key}: no relation (run node tools/relations-core.mjs)`);
     assert.equal(tok(r.attrs.found?.[0]), 'declared', `${d.type}.${d.key}`);
@@ -36,7 +39,7 @@ test('k.kinds.relation reads the declared joins first (found=declared, the targe
     n++;
   }
   // and no relation says declared where no join is declared
-  const declared = new Set(report.declared.map((d) => `${d.type}.${d.key}`));
+  const declared = new Set(each.map((d) => `${d.type}.${d.key}`));
   assert.deepEqual([...rel].filter(([k, w]) => tok(w.attrs.found?.[0]) === 'declared' && !declared.has(k)).map(([k]) => k), []);
   assert.ok(n >= 10);
 });

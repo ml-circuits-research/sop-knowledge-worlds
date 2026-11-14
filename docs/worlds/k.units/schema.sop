@@ -10,13 +10,13 @@
 # What is measured (length, mass, ...), and the unit every other unit of it converts to.
 @k.units.quantity core.type of=k.units.quantity shared=true closed=true core.source="hand-core 1"
 @k.units.quantity.name core.slot of=k.units.quantity key=name id=true required=true kind=atom core.source="hand-core 1"
-@k.units.quantity.base core.slot of=k.units.quantity key=base required=true kind=atom kind=string core.source="hand-core 1"
+@k.units.quantity.base core.slot of=k.units.quantity key=base required=true kind=atom kind=string type=k.units.unit by=name core.source="hand-core 1"
 
 # A unit. base value = value * factor + offset. `system` says where it is used.
 @k.units.unit core.type of=k.units.unit shared=true closed=true core.source="hand-core 1"
 @k.units.unit.name core.slot of=k.units.unit key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.units.unit.symbol core.slot of=k.units.unit key=symbol kind=atom kind=string core.source="hand-core 1"
-@k.units.unit.quantity core.slot of=k.units.unit key=quantity required=true kind=atom core.source="hand-core 1"
+@k.units.unit.quantity core.slot of=k.units.unit key=quantity required=true kind=atom type=k.units.quantity by=name core.source="hand-core 1"
 @k.units.unit.factor core.slot of=k.units.unit key=factor required=true kind=number core.source="hand-core 1"
 @k.units.unit.offset core.slot of=k.units.unit key=offset kind=number core.source="hand-core 1"
 @k.units.unit.system core.slot of=k.units.unit key=system enum=metric enum=imperial enum=other core.source="hand-core 1"
@@ -33,7 +33,7 @@
 @k.units.measure.world core.slot of=k.units.measure key=world id=true required=true kind=atom core.source="hand-core 1"
 @k.units.measure.type core.slot of=k.units.measure key=type id=true required=true kind=atom core.source="hand-core 1"
 @k.units.measure.key core.slot of=k.units.measure key=key id=true required=true kind=atom core.source="hand-core 1"
-@k.units.measure.unit core.slot of=k.units.measure key=unit kind=atom kind=string core.source="hand-core 1"
+@k.units.measure.unit core.slot of=k.units.measure key=unit kind=atom kind=string type=k.units.unit by=name core.source="hand-core 1"
 @k.units.measure.counts core.slot of=k.units.measure key=counts kind=atom kind=string core.source="hand-core 1"
 @k.units.measure.frame core.slot of=k.units.measure key=frame kind=atom kind=string core.source="hand-core 1"
 @k.units.measure.plain core.slot of=k.units.measure key=plain kind=boolean core.source="hand-core 1"

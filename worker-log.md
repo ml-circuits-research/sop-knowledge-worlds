@@ -4592,3 +4592,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   on 0.97 k.kinds.joins-report 3, k.kinds.relations 5, w.lang.en.frames 2, phrasing 3, templates 8, w.lang.en 22,
   alternations 4, abstraction 5, k.actions 4, k.kinds 8, questions 424, repo 1, validate 5, catalog 8 pass. My
   question is Q65 (Q64 was taken by the first worker meanwhile).
+## 2026-11-15 — second worker: Q61 step 2a: declared joins in k.geo, k.time, k.units, k.values (slot lines only)
+
+- 29 joins added as `type=T by=name` to existing slot lines (nothing else changed): k.geo 15 (city country,
+  capital_of; country capital, continent, political_continent, neighbour; group member; continent / country of
+  desert, lake, mountain, range, river), k.time 8 (before cycle, `k.time.ordered.cycle` once for its five children,
+  cycle lasts, duration unit, season_in first / last, span cycle / within), k.units 3 (measure unit, quantity base,
+  unit quantity), k.values 3 (comparative / step scale, direction opposite). Left: k.time `next` (own type on the
+  shared parent), `before` earlier / later (mixed cycles).
+- JOINS-REPORT: 39 declared in 11 worlds, 2,426 values, 2,413 meet (99.5 %), 13 open: 10 capitals that are no
+  k.geo city (City of Victoria, Cockburn Town, Diego Garcia, El Aaiún, King Edward Point, Fakaofo...: territories'
+  capitals below the city list's threshold) and 3 units k.units lacks (month, decade, century); 0 broken; 223
+  undeclared. Load: k.geo 0.79 -> 1.1 s with every shard together (the join scan); k.time, k.units, k.values unchanged.
+- Fix of step 1's test: a join declared on a parent type (k.time.ordered) holds for its children's relations.
+- Tests: `npm run test:changed` (build 123 s; 33 files, 376 tests): 374 pass, 1 skipped, 1 fail (the parent-type case
+  above), fixed and rerun: k.kinds.joins-report 3 pass.

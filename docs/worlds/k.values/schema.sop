@@ -34,7 +34,7 @@
 @k.values.scale.about core.slot of=k.values.scale key=about required=true kind=string core.source="hand-core 1"
 @k.values.scale.steps core.slot of=k.values.scale key=steps required=true kind=integer min=2 core.source="hand-core 1"
 @k.values.step core.type of=k.values.step shared=true closed=true core.source="hand-core 1"
-@k.values.step.scale core.slot of=k.values.step key=scale id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.values.step.scale core.slot of=k.values.step key=scale id=true required=true kind=atom kind=string type=k.values.scale by=name core.source="hand-core 1"
 @k.values.step.name core.slot of=k.values.step key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.values.step.rank core.slot of=k.values.step key=rank required=true kind=integer min=1 core.source="hand-core 1"
 
@@ -42,7 +42,7 @@
 # size), `way=down` towards the least. A word can belong to two scales (shorter: length and height).
 @k.values.comparative core.type of=k.values.comparative shared=true closed=true core.source="hand-core 1"
 @k.values.comparative.text core.slot of=k.values.comparative key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.values.comparative.scale core.slot of=k.values.comparative key=scale id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.values.comparative.scale core.slot of=k.values.comparative key=scale id=true required=true kind=atom kind=string type=k.values.scale by=name core.source="hand-core 1"
 @k.values.comparative.way core.slot of=k.values.comparative key=way required=true enum=up enum=down core.source="hand-core 1"
 @k.values.comparative.degree core.slot of=k.values.comparative key=degree required=true enum=comparative enum=superlative core.source="hand-core 1"
 
@@ -60,7 +60,7 @@
 @k.values.direction.axis core.slot of=k.values.direction key=axis required=true enum=horizontal enum=vertical enum=depth enum=turn enum=spread enum=compass core.source="hand-core 1"
 @k.values.direction.x core.slot of=k.values.direction key=x kind=integer min=-1 max=1 core.source="hand-core 1"
 @k.values.direction.y core.slot of=k.values.direction key=y kind=integer min=-1 max=1 core.source="hand-core 1"
-@k.values.direction.opposite core.slot of=k.values.direction key=opposite required=true kind=atom kind=string core.source="hand-core 1"
+@k.values.direction.opposite core.slot of=k.values.direction key=opposite required=true kind=atom kind=string type=k.values.direction by=name core.source="hand-core 1"
 
 # A position in a picture: its `column` (left, centre, right), its `row` (top, middle, bottom) and its `depth`
 # (front, back), each where the name says it ("top left": both; "top": the row only).

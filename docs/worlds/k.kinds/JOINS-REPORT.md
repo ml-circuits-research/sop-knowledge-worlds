@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **10** in 7 worlds; distinct values 978, meeting a target 978 (100 %), open 0
+- declared joins: **39** in 11 worlds; distinct values 2426, meeting a target 2413 (99.5 %), open 13
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **256**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **223**; left undeclared on purpose: 6
 
 ## Declared joins
 
@@ -20,12 +20,41 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.animals | `k.animals.animal.drawing` | `k.objects.object` | name | 151 | 151 |  |
 | k.body | `k.body.part.drawing` | `k.objects.object` | name | 5 | 5 |  |
 | k.food | `k.food.food.drawing` | `k.objects.object` | name | 155 | 155 |  |
+| k.geo | `k.geo.city.capital_of` | `k.geo.country` | name | 205 | 205 |  |
+| k.geo | `k.geo.city.country` | `k.geo.country` | name | 245 | 245 |  |
+| k.geo | `k.geo.country.capital` | `k.geo.city` | name | 262 | 252 | `"City of Victoria"`, `"Cockburn Town"`, `"Diego Garcia"`, `"El Aaiún"`, `"King Edward Point"`, `Fakaofo`, … (10) |
+| k.geo | `k.geo.country.continent` | `k.geo.continent` | name | 7 | 7 |  |
+| k.geo | `k.geo.country.neighbour` | `k.geo.country` | name | 160 | 160 |  |
+| k.geo | `k.geo.country.political_continent` | `k.geo.continent` | name | 1 | 1 |  |
+| k.geo | `k.geo.desert.continent` | `k.geo.continent` | name | 5 | 5 |  |
+| k.geo | `k.geo.group.member` | `k.geo.country` | name | 54 | 54 |  |
+| k.geo | `k.geo.lake.continent` | `k.geo.continent` | name | 6 | 6 |  |
+| k.geo | `k.geo.lake.country` | `k.geo.country` | name | 35 | 35 |  |
+| k.geo | `k.geo.mountain.continent` | `k.geo.continent` | name | 7 | 7 |  |
+| k.geo | `k.geo.mountain.country` | `k.geo.country` | name | 195 | 195 |  |
+| k.geo | `k.geo.range.continent` | `k.geo.continent` | name | 7 | 7 |  |
+| k.geo | `k.geo.river.continent` | `k.geo.continent` | name | 6 | 6 |  |
+| k.geo | `k.geo.river.country` | `k.geo.country` | name | 144 | 144 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.people | `k.people.role.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.scenes | `k.scenes.has.drawing` | `k.objects.object` | name | 528 | 528 |  |
 | k.scenes | `k.scenes.scene.drawing` | `k.objects.object` | name | 28 | 28 |  |
 | k.space | `k.space.body.drawing` | `k.objects.object` | name | 13 | 13 |  |
 | k.space | `k.space.kind.drawing` | `k.objects.object` | name | 5 | 5 |  |
+| k.time | `k.time.before.cycle` | `k.time.cycle` | name | 5 | 5 |  |
+| k.time | `k.time.cycle.lasts` | `k.time.duration` | name | 3 | 3 |  |
+| k.time | `k.time.duration.unit` | `k.units.unit` | name | 9 | 6 | `century`, `decade`, `month` |
+| k.time | `k.time.ordered.cycle` | `k.time.cycle` | name | 5 | 5 |  |
+| k.time | `k.time.season_in.first` | `k.time.month` | name | 4 | 4 |  |
+| k.time | `k.time.season_in.last` | `k.time.month` | name | 4 | 4 |  |
+| k.time | `k.time.span.cycle` | `k.time.cycle` | name | 3 | 3 |  |
+| k.time | `k.time.span.within` | `k.time.part_of_day` | name | 2 | 2 |  |
+| k.units | `k.units.measure.unit` | `k.units.unit` | name | 13 | 13 |  |
+| k.units | `k.units.quantity.base` | `k.units.unit` | name | 8 | 8 |  |
+| k.units | `k.units.unit.quantity` | `k.units.quantity` | name | 8 | 8 |  |
+| k.values | `k.values.comparative.scale` | `k.values.scale` | name | 13 | 13 |  |
+| k.values | `k.values.direction.opposite` | `k.values.direction` | name | 18 | 18 |  |
+| k.values | `k.values.step.scale` | `k.values.scale` | name | 14 | 14 |  |
 | k.wearables | `k.wearables.wearable.drawing` | `k.objects.object` | name | 91 | 91 |  |
 
 ## Broken joins
@@ -143,21 +172,6 @@ exact (token for token) against the first candidate; the value share itself also
 | k.genres | `k.genres.step.genre` | thing | `k.genres.genre` | name | 5 | 5 |
 | k.genres | `k.genres.step.move` | thing | `k.genres.move` | name | 41 | 41 |
 | k.genres | `k.genres.step.source` | thing | `k.genres.source` | name | 17 | 17 |
-| k.geo | `k.geo.city.country` | place | `k.geo.country` | name | 245 | 245 |
-| k.geo | `k.geo.city.capital_of` | place | `k.geo.country` | name | 205 | 205 |
-| k.geo | `k.geo.country.capital` | place | `k.geo.city` | name | 262 | 252 |
-| k.geo | `k.geo.country.continent` | place | `k.geo.continent` | name | 7 | 7 |
-| k.geo | `k.geo.country.political_continent` | place | `k.geo.continent` | name | 1 | 1 |
-| k.geo | `k.geo.country.neighbour` | place | `k.geo.country` | name | 160 | 160 |
-| k.geo | `k.geo.desert.continent` | place | `k.geo.continent` | name | 5 | 5 |
-| k.geo | `k.geo.group.member` | place | `k.geo.country` | name | 54 | 54 |
-| k.geo | `k.geo.lake.continent` | place | `k.geo.continent` | name | 6 | 6 |
-| k.geo | `k.geo.lake.country` | place | `k.geo.country` | name | 35 | 35 |
-| k.geo | `k.geo.mountain.continent` | place | `k.geo.continent` | name | 7 | 7 |
-| k.geo | `k.geo.mountain.country` | place | `k.geo.country` | name | 195 | 195 |
-| k.geo | `k.geo.range.continent` | place | `k.geo.continent` | name | 7 | 7 |
-| k.geo | `k.geo.river.continent` | place | `k.geo.continent` | name | 6 | 6 |
-| k.geo | `k.geo.river.country` | place | `k.geo.country` | name | 144 | 144 |
 | k.interest | `k.interest.appraisal.source` | thing | `k.interest.source` | name | 9 | 9 |
 | k.interest | `k.interest.feature.appraisal` | thing | `k.interest.appraisal` | name | 4 | 4 |
 | k.interest | `k.interest.feature.measure` | thing | `k.interest.measure` | name | 20 | 20 |
@@ -254,41 +268,23 @@ exact (token for token) against the first candidate; the value share itself also
 | k.story | `k.story.obstacle.overcome_by` | act | `k.actions.action` | name | 6 | 6 |
 | k.story | `k.story.obstacle.means` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 8 | 8 |
 | k.story | `k.story.obstacle.tried_by` | act | `k.actions.action` | name | 9 | 9 |
-| k.time | `k.time.before.cycle` | time | `k.time.cycle` | name | 5 | 5 |
 | k.time | `k.time.before.earlier` | time | `k.time.hour` | name | 46 | 23 |
 | k.time | `k.time.before.later` | time | `k.time.hour` | name | 46 | 23 |
-| k.time | `k.time.cycle.lasts` | time | `k.time.duration`, `k.units.unit` | name | 3 | 3 |
-| k.time | `k.time.duration.unit` | amount | `k.units.unit` | name | 9 | 6 |
 | k.time | `k.time.during.hemisphere` | value | `k.values.direction` | name | 2 | 2 |
 | k.time | `k.time.hour.part` | time | `k.time.part_of_day` | name | 4 | 4 |
-| k.time | `k.time.hour.cycle` | thing | `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing` | name | 1 | 1 |
 | k.time | `k.time.month.season_north` | time | `k.time.season` | name | 4 | 4 |
 | k.time | `k.time.month.season_south` | time | `k.time.season` | name | 4 | 4 |
-| k.time | `k.time.month.cycle` | time | `k.time.cycle`, `k.time.duration`, `k.time.span` | name | 1 | 1 |
-| k.time | `k.time.part_of_day.cycle` | time | `k.time.cycle`, `k.time.duration`, `k.units.unit` | name | 1 | 1 |
-| k.time | `k.time.season.cycle` | thing | `k.attributes.attribute`, `k.attributes.family`, `k.time.cycle` | name | 1 | 0 |
 | k.time | `k.time.season_in.season` | time | `k.time.season` | name | 4 | 4 |
 | k.time | `k.time.season_in.hemisphere` | value | `k.values.direction` | name | 2 | 2 |
-| k.time | `k.time.season_in.first` | time | `k.time.month` | name | 4 | 4 |
-| k.time | `k.time.season_in.last` | time | `k.time.month` | name | 4 | 4 |
-| k.time | `k.time.span.cycle` | time | `k.time.cycle` | name | 3 | 3 |
-| k.time | `k.time.span.within` | time | `k.time.part_of_day` | name | 2 | 2 |
-| k.time | `k.time.weekday.cycle` | time | `k.time.cycle`, `k.time.duration`, `k.time.span` | name | 1 | 1 |
-| k.units | `k.units.measure.unit` | amount | `k.units.unit` | name | 13 | 13 |
-| k.units | `k.units.quantity.base` | amount | `k.units.unit` | name | 8 | 8 |
-| k.units | `k.units.unit.quantity` | thing | `k.units.quantity` | name | 8 | 8 |
 | k.values | `k.values.colour.basic` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
 | k.values | `k.values.coloured.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.values | `k.values.comparative.scale` | value | `k.values.scale` | name | 13 | 13 |
 | k.values | `k.values.comparative.way` | value | `k.values.direction` | name | 2 | 2 |
-| k.values | `k.values.direction.opposite` | value | `k.values.direction` | name | 18 | 18 |
 | k.values | `k.values.position.column` | value | `k.values.position` | name | 3 | 3 |
 | k.values | `k.values.position.row` | value | `k.values.position` | name | 3 | 2 |
 | k.values | `k.values.position.depth` | value | `k.values.position` | name | 2 | 2 |
 | k.values | `k.values.reply.opposite` | value | `k.values.reply` | name | 2 | 2 |
 | k.values | `k.values.set_word.picks` | value | `k.values.set_word` | name | 8 | 5 |
 | k.values | `k.values.set_word.manner` | value | `k.values.set_word` | name | 6 | 4 |
-| k.values | `k.values.step.scale` | value | `k.values.scale` | name | 14 | 14 |
 | k.wearables | `k.wearables.place.face_slot` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 4 | 3 |
 | k.wearables | `k.wearables.place.body_part` | thing | `k.body.part` | name | 15 | 15 |
 | k.wearables | `k.wearables.wearable.worn_on` | thing | `k.wearables.place` | name | 14 | 14 |

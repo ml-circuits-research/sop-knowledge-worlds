@@ -12,7 +12,7 @@
 # January, winter by spring): `next` is the cyclic successor, and `k.time.cycle` says where a cycle starts.
 @k.time.ordered core.type of=k.time.ordered core.source="hand-core 1"
 @k.time.ordered.name core.slot of=k.time.ordered key=name required=true kind=atom kind=string core.source="hand-core 1"
-@k.time.ordered.cycle core.slot of=k.time.ordered key=cycle required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.ordered.cycle core.slot of=k.time.ordered key=cycle required=true kind=atom kind=string type=k.time.cycle by=name core.source="hand-core 1"
 @k.time.ordered.n core.slot of=k.time.ordered key=n required=true kind=integer min=0 core.source="hand-core 1"
 @k.time.ordered.next core.slot of=k.time.ordered key=next required=true kind=atom kind=string core.source="hand-core 1"
 
@@ -24,14 +24,14 @@
 @k.time.cycle.first core.slot of=k.time.cycle key=first required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.cycle.last core.slot of=k.time.cycle key=last required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.cycle.length core.slot of=k.time.cycle key=length required=true kind=integer min=1 core.source="hand-core 1"
-@k.time.cycle.lasts core.slot of=k.time.cycle key=lasts kind=atom kind=string core.source="hand-core 1"
+@k.time.cycle.lasts core.slot of=k.time.cycle key=lasts kind=atom kind=string type=k.time.duration by=name core.source="hand-core 1"
 
 # Which comes before which, inside one round of a cycle as `k.time.cycle` counts it (the week from Monday, the year
 # from January, the seasons from spring, the day from the morning, the clock from midnight). One fact says both
 # "earlier is before later" and "later is after earlier": "after" is this fact read backwards (one home).
 # Complete: every pair is derived from the complete types below, so a pair that is not there is "no".
 @k.time.before core.type of=k.time.before shared=true closed=true complete=true core.source="hand-core 1"
-@k.time.before.cycle core.slot of=k.time.before key=cycle id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.before.cycle core.slot of=k.time.before key=cycle id=true required=true kind=atom kind=string type=k.time.cycle by=name core.source="hand-core 1"
 @k.time.before.earlier core.slot of=k.time.before key=earlier id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.before.later core.slot of=k.time.before key=later id=true required=true kind=atom kind=string core.source="hand-core 1"
 # `derived=true`: a fact that a rule of this module made, written by tools/derive.mjs into the shard `derived`.
@@ -73,8 +73,8 @@
 @k.time.season_in core.type of=k.time.season_in shared=true closed=true core.source="hand-core 1"
 @k.time.season_in.season core.slot of=k.time.season_in key=season id=true required=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
 @k.time.season_in.hemisphere core.slot of=k.time.season_in key=hemisphere id=true required=true enum=north enum=south core.source="hand-core 1"
-@k.time.season_in.first core.slot of=k.time.season_in key=first kind=atom core.source="hand-core 1"
-@k.time.season_in.last core.slot of=k.time.season_in key=last kind=atom core.source="hand-core 1"
+@k.time.season_in.first core.slot of=k.time.season_in key=first kind=atom type=k.time.month by=name core.source="hand-core 1"
+@k.time.season_in.last core.slot of=k.time.season_in key=last kind=atom type=k.time.month by=name core.source="hand-core 1"
 @k.time.season_in.derived core.slot of=k.time.season_in key=derived kind=boolean core.source="hand-core 1"
 
 @k.time.season_in.differ core.check fn=neq args=?season args=?other
@@ -140,8 +140,8 @@
 # not at night), so a span "day" that held every hour would answer "is midnight during the day" with yes.
 @k.time.span core.type of=k.time.span shared=true closed=true complete=true core.source="hand-core 1"
 @k.time.span.name core.slot of=k.time.span key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.time.span.cycle core.slot of=k.time.span key=cycle many=true kind=atom core.source="hand-core 1"
-@k.time.span.within core.slot of=k.time.span key=within kind=atom kind=string core.source="hand-core 1"
+@k.time.span.cycle core.slot of=k.time.span key=cycle many=true kind=atom type=k.time.cycle by=name core.source="hand-core 1"
+@k.time.span.within core.slot of=k.time.span key=within kind=atom kind=string type=k.time.part_of_day by=name core.source="hand-core 1"
 @k.time.span.starts_about core.slot of=k.time.span key=starts_about kind=integer min=0 max=23 core.source="hand-core 1"
 @k.time.span.ends_about core.slot of=k.time.span key=ends_about kind=integer min=0 max=23 core.source="hand-core 1"
 # Three rules make k.time.during from the spans: a time of a cycle a span names; a span within another; a weekday of
@@ -164,7 +164,7 @@
 @k.time.duration.name core.slot of=k.time.duration key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.duration.count core.slot of=k.time.duration key=count kind=number min=0 core.source="hand-core 1"
 @k.time.duration.count_about core.slot of=k.time.duration key=count_about excludes=count kind=number min=0 core.source="hand-core 1"
-@k.time.duration.unit core.slot of=k.time.duration key=unit id=true kind=atom kind=string core.source="hand-core 1"
+@k.time.duration.unit core.slot of=k.time.duration key=unit id=true kind=atom kind=string type=k.units.unit by=name core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.time.word.month core.word text=month text=months means=k.time.month core.source="hand-core 1"

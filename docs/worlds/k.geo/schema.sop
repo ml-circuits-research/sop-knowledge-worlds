@@ -23,15 +23,15 @@
 @k.geo.country.currency core.slot of=k.geo.country key=currency kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.language core.slot of=k.geo.country key=language many=true kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.formal core.slot of=k.geo.country key=formal kind=string core.source="hand-core 1"
-@k.geo.country.capital core.slot of=k.geo.country key=capital many=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.country.continent core.slot of=k.geo.country key=continent kind=atom kind=string core.source="hand-core 1"
+@k.geo.country.capital core.slot of=k.geo.country key=capital many=true kind=atom kind=string type=k.geo.city by=name core.source="hand-core 1"
+@k.geo.country.continent core.slot of=k.geo.country key=continent kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
 # `political_continent`: the continent a country is counted in politically, where that is another than its
 # geographic `continent` (Cyprus: continent Asia, political_continent Europe). `independent` is not said for a state
 # that governs itself without being generally recognised (Taiwan, Kosovo, Somaliland, Northern Cyprus); for those
 # `recognition=limited` says so (from Natural Earth), and a host asked whether one is independent says that.
-@k.geo.country.political_continent core.slot of=k.geo.country key=political_continent kind=atom kind=string core.source="hand-core 1"
+@k.geo.country.political_continent core.slot of=k.geo.country key=political_continent kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
 @k.geo.country.region core.slot of=k.geo.country key=region kind=atom kind=string core.source="hand-core 1"
-@k.geo.country.neighbour core.slot of=k.geo.country key=neighbour many=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.country.neighbour core.slot of=k.geo.country key=neighbour many=true kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
 @k.geo.country.population core.slot of=k.geo.country key=population kind=integer min=0 core.source="hand-core 1"
 @k.geo.country.area core.slot of=k.geo.country key=area kind=number min=0 core.source="hand-core 1"
 @k.geo.country.landlocked core.slot of=k.geo.country key=landlocked kind=boolean core.source="hand-core 1"
@@ -47,8 +47,8 @@
 # A city: one of the largest of its country, or its capital (`capital_of` names the country).
 @k.geo.city core.type of=k.geo.city shared=true closed=true core.source="hand-core 1"
 @k.geo.city.name core.slot of=k.geo.city key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.city.country core.slot of=k.geo.city key=country id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.city.capital_of core.slot of=k.geo.city key=capital_of kind=atom kind=string core.source="hand-core 1"
+@k.geo.city.country core.slot of=k.geo.city key=country id=true required=true kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
+@k.geo.city.capital_of core.slot of=k.geo.city key=capital_of kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
 @k.geo.city.population core.slot of=k.geo.city key=population kind=integer min=0 core.source="hand-core 1"
 @k.geo.city.lat core.slot of=k.geo.city key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.city.lon core.slot of=k.geo.city key=lon kind=number min=-180 max=180 core.source="hand-core 1"
@@ -56,8 +56,8 @@
 # A river: the countries it flows through, the continent most of it is in, its middle and its box.
 @k.geo.river core.type of=k.geo.river extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.geo.river.name core.slot of=k.geo.river key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.river.continent core.slot of=k.geo.river key=continent id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.river.country core.slot of=k.geo.river key=country many=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.river.continent core.slot of=k.geo.river key=continent id=true required=true kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
+@k.geo.river.country core.slot of=k.geo.river key=country many=true kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
 @k.geo.river.lat core.slot of=k.geo.river key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.river.lon core.slot of=k.geo.river key=lon kind=number min=-180 max=180 core.source="hand-core 1"
 @k.geo.river.west core.slot of=k.geo.river key=west kind=number min=-180 max=180 core.source="hand-core 1"
@@ -68,8 +68,8 @@
 # A mountain: a named summit; `elevation` is its height in metres above the sea.
 @k.geo.mountain core.type of=k.geo.mountain shared=true closed=true core.source="hand-core 1"
 @k.geo.mountain.name core.slot of=k.geo.mountain key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.mountain.continent core.slot of=k.geo.mountain key=continent id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.mountain.country core.slot of=k.geo.mountain key=country kind=atom kind=string core.source="hand-core 1"
+@k.geo.mountain.continent core.slot of=k.geo.mountain key=continent id=true required=true kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
+@k.geo.mountain.country core.slot of=k.geo.mountain key=country kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
 @k.geo.mountain.elevation core.slot of=k.geo.mountain key=elevation kind=integer core.source="hand-core 1"
 @k.geo.mountain.lat core.slot of=k.geo.mountain key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.mountain.lon core.slot of=k.geo.mountain key=lon kind=number min=-180 max=180 core.source="hand-core 1"
@@ -77,7 +77,7 @@
 # A mountain range: a name, a middle and a box.
 @k.geo.range core.type of=k.geo.range shared=true closed=true core.source="hand-core 1"
 @k.geo.range.name core.slot of=k.geo.range key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.range.continent core.slot of=k.geo.range key=continent id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.range.continent core.slot of=k.geo.range key=continent id=true required=true kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
 @k.geo.range.lat core.slot of=k.geo.range key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.range.lon core.slot of=k.geo.range key=lon kind=number min=-180 max=180 core.source="hand-core 1"
 @k.geo.range.west core.slot of=k.geo.range key=west kind=number min=-180 max=180 core.source="hand-core 1"
@@ -89,8 +89,8 @@
 # kilometres (approximate: the water level changes); the countries on its shores; its middle and its box.
 @k.geo.lake core.type of=k.geo.lake shared=true closed=true core.source="hand-core 1"
 @k.geo.lake.name core.slot of=k.geo.lake key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.lake.continent core.slot of=k.geo.lake key=continent kind=atom kind=string core.source="hand-core 1"
-@k.geo.lake.country core.slot of=k.geo.lake key=country many=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.lake.continent core.slot of=k.geo.lake key=continent kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
+@k.geo.lake.country core.slot of=k.geo.lake key=country many=true kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
 @k.geo.lake.area_about core.slot of=k.geo.lake key=area_about kind=number min=0 core.source="hand-core 1"
 @k.geo.lake.lat core.slot of=k.geo.lake key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.lake.lon core.slot of=k.geo.lake key=lon kind=number min=-180 max=180 core.source="hand-core 1"
@@ -103,7 +103,7 @@
 # (the edge of a desert is not a line). `named=model`: that figure was written by a language model, only where sure.
 @k.geo.desert core.type of=k.geo.desert extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.geo.desert.name core.slot of=k.geo.desert key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.desert.continent core.slot of=k.geo.desert key=continent kind=atom kind=string core.source="hand-core 1"
+@k.geo.desert.continent core.slot of=k.geo.desert key=continent kind=atom kind=string type=k.geo.continent by=name core.source="hand-core 1"
 @k.geo.desert.area_about core.slot of=k.geo.desert key=area_about kind=number min=0 core.source="hand-core 1"
 @k.geo.desert.lat core.slot of=k.geo.desert key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.desert.lon core.slot of=k.geo.desert key=lon kind=number min=-180 max=180 core.source="hand-core 1"
@@ -151,7 +151,7 @@
 # (many) names its countries (values of k.geo.country.name), `as_of` the year the list was written.
 @k.geo.group core.type of=k.geo.group shared=true closed=true core.source="hand-core 1"
 @k.geo.group.name core.slot of=k.geo.group key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.geo.group.member core.slot of=k.geo.group key=member many=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.geo.group.member core.slot of=k.geo.group key=member many=true required=true kind=atom kind=string type=k.geo.country by=name core.source="hand-core 1"
 @k.geo.group.as_of core.slot of=k.geo.group key=as_of kind=integer core.source="hand-core 1"
 @k.geo.word.group core.word text=group text=union text=alliance text=member text=members means=k.geo.group core.source="hand-core 1"
 @k.geo.word.currency core.word text=currency text=money means=k.geo.country.currency core.source="hand-core 1"
