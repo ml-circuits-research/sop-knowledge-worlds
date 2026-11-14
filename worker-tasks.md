@@ -700,3 +700,7 @@ Accepted cb5d6dd, b22ef9b, 4448b9e, 585afaf (34 act templates read back 68/68; 1
 
 Reviewer ran tests of w.chart, k.actions, k.words: 23 pass, 1 skipped, 0 fail. Accepted f0254e1, a523fa4, fa8a629.
 **Test speed:** the full `npm test` (≈2,950 tests) with several workers is killed by memory and takes long. From now on, per push: `npm run build` + the tests of the worlds the commit touches + the catalog/validate tests (add an npm script `test:changed` that picks them from the changed paths); the full suite once per round (the last push of a worker's round), files run one at a time. Report the 10 slowest test files with seconds; split or shrink any over 30 s.
+
+## Reviewer 2026-11-15 00:05 — for compositions: which keys are narratable, and how each attribute is said
+
+PSys2's first compositions narrate metadata ("Chad has a code of TCD, a formal of Republic of Chad, a code2 of TD") and say every attribute as "has a X of Y". Needed (whoever is free next): (1) a mark on k.* keys that are identifiers or metadata (`narrate=no`: codes, ids, formal names, sources, internal numbers) and a salience per key for compositions; (2) **attribute phrasing templates** in w.lang.en per aspect/key family ("the capital of {country} is {city}", "{animal} eats {food}", "{thing} is {colour}", "{thing} has {n} legs"), checked to read back. Also accepted: 8741e52 (w.lang.ro on 0.63, round trip 2,916/2,916).
