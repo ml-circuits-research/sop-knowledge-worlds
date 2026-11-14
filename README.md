@@ -87,6 +87,12 @@ thinking) as k.faces brows, eyes and mouths with onset, hold and ease back, laye
 a reply is said: seven classes of mouth shapes joined to k.faces mouths and one rule from written text to them, for the
 library's `std.motion` (format: questions.md Q46; `docs/worlds/k.motion/WORLD.md`).
 
+Block "14:45" item 1 (first worker): `k.interest`, what makes a fact or a passage interesting: 21 features over 20
+measures a program computes (distance between the worlds a fact links, an exception to what most of its kind do, a
+number far from its kind's typical range, a question it opens, concreteness, relevance; and what lowers interest:
+repetition, the obvious, a list without a point), with weight ranges, combined as novelty x coping x relevance -
+penalty after Silvia's appraisal structure of interest; 23 published works in `docs/worlds/k.interest/WORLD.md`.
+
 Block "13:00" (first worker): `w.lang.ro`, a first draft of Romanian as a language world in the library's `std.morph`
 notation: 44 paradigm classes with inheritance, 341 cells, irregulars, folds, clitics, closed classes and three reply
 templates (936 wires), with an external dictionary of 255 lemmas (`dictionary/<letter>.tsv`, 14.8 kB) joined to k.words

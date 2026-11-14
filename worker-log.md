@@ -3840,3 +3840,24 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: `tests/k.words.test.mjs` (the asked glosses; hand senses CC0 and alone in their shard),
   `tests/import.wordnet.test.mjs` (asked words and hand senses on the fixture; the shards on disk equal the import),
   `tests/w.lang.ro.test.mjs` (no lemma without a sense). `npm test`: 2,931 tests, 2,929 pass, 1 skipped, 1 todo (Q51), 0 fail.
+
+## 2026-11-14 — first worker: k.interest, what makes a fact or a passage interesting (blocks "14:45" item 1, "15:00")
+
+- **World** (`docs/worlds/k.interest`, generator `tools/interest-core.mjs`, `hand-core 1`, CC0): schema (4 types, 61
+  wires with the key words) and two shards: `sources` (23 published works: reference, year, DOI where sure, the one
+  finding taken) and `features` (4 appraisals, 20 measures, 21 features; 45 wires). 68 shard wires, 26 kB; load 8 ms,
+  0 warnings.
+- **Format:** a feature = appraisal + measure + shape (rising, falling, peak, step with start_at/peak_at/full_at) +
+  weight range + sources + `own` (the numbers are always own choice). Score = novelty x coping x relevance - penalty
+  (Silvia 2005/2008: interest needs both a novelty-complexity and a coping appraisal; relevance after Sperber and
+  Wilson, Hidi and Renninger, Garner's seductive details; penalties after Grice, Berlyne, Labov). Measures say what
+  the library must compute and which types they read: world_distance (joins), sibling_contrast (what most of the
+  kind do), rule_exception (k.commonsense), range_distance (typical range), sibling_rank, word_band, known_share
+  (Loewenstein, Kang: peak at a half), concreteness, topic_distance, animacy, said_before, same_move_run,
+  obviousness, items_without_point, ends_without_point and others.
+- **Integration case** (`tests/k.interest.test.mjs`, 5 tests): measured from the catalog by hand and scored by the
+  reference arithmetic (`share`, `score`): "a penguin cannot fly" 0.462 (sibling_contrast: most birds that say it can
+  fly) > "an elephant weighs about 5,000 kg" 0.400 (far above the interquartile range of animal weights) > "a dog is
+  a mammal" -0.400 (obvious); a repeat <= 0; three joins off topic < a third; the order holds at both ends of every
+  weight range; each score explained by feature.
+- `npm test`: 2,936 tests, 2,934 pass, 1 skipped, 1 todo (Q51), 0 fail.

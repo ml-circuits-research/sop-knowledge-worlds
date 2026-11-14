@@ -1,5 +1,5 @@
 {
- "version": "e319ebe5f3a2",
+ "version": "877510aa0ca1",
  "sopworld": "1d1c3c6",
  "worlds": [
   {
@@ -18680,6 +18680,118 @@
    "warnings": []
   },
   {
+   "id": "k.interest",
+   "version": "1",
+   "schema": "k.interest/schema.sop",
+   "exports": [
+    "k.interest.appraisal",
+    "k.interest.feature",
+    "k.interest.measure",
+    "k.interest.source"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.interest/shards/features",
+     "path": "k.interest/shards/features.sop",
+     "wires": 45,
+     "bytes": 16500,
+     "keys": [
+      "animacy",
+      "animate",
+      "concrete_thing",
+      "concreteness",
+      "coping",
+      "distant_link",
+      "ends_without_point",
+      "example_after_claim",
+      "extreme",
+      "far_number",
+      "items_without_point",
+      "known_share",
+      "list_without_point",
+      "long_sentence",
+      "no_point_at_end",
+      "novelty",
+      "number_given",
+      "number_with_unit",
+      "obvious",
+      "obviousness",
+      "off_topic",
+      "on_topic",
+      "opens_question",
+      "penalty",
+      "personal",
+      "range_distance",
+      "rare_kind",
+      "relevance",
+      "repeated_fact",
+      "repeated_pattern",
+      "rule_exception",
+      "said_before",
+      "same_move_run",
+      "seen_in_session",
+      "share_beyond_band",
+      "sibling_contrast",
+      "sibling_rank",
+      "topic_distance",
+      "unknown_words",
+      "word_band",
+      "words_over_max",
+      "world_distance"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.interest/shards/sources",
+     "path": "k.interest/shards/sources.sop",
+     "wires": 23,
+     "bytes": 9631,
+     "keys": [
+      "berlyne1960",
+      "cowan2001",
+      "davis1971",
+      "garner1989",
+      "geng2006",
+      "grice1975",
+      "hidi1986",
+      "hidi2006",
+      "irannejad1987",
+      "itti2009",
+      "kang2009",
+      "kintsch1980",
+      "koestler1964",
+      "labov1972",
+      "loewenstein1994",
+      "mednick1962",
+      "new2007",
+      "sadoski1993",
+      "schank1979",
+      "schraw1995",
+      "silvia2005",
+      "silvia2008",
+      "sperber1986"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
    "id": "k.kinds",
    "version": "1",
    "schema": "k.kinds/schema.sop",
@@ -37093,8 +37205,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 202,
-     "bytes": 28316,
+     "wires": 209,
+     "bytes": 29391,
      "keys": [
       "after",
       "age_years_about",
@@ -37102,6 +37214,7 @@
       "anaphor",
       "anchor",
       "animal",
+      "appraisal",
       "area",
       "area_about",
       "arg",
@@ -37110,6 +37223,7 @@
       "at",
       "back_max",
       "back_min",
+      "base",
       "binding",
       "body",
       "brow_above",
@@ -37151,7 +37265,9 @@
       "eye_width",
       "faces",
       "factor",
+      "feature",
       "frame",
+      "full_at",
       "goal",
       "group",
       "h",
@@ -37172,6 +37288,7 @@
       "k.drawing",
       "k.faces",
       "k.geo",
+      "k.interest",
       "k.layouts",
       "k.motion",
       "k.objects",
@@ -37223,6 +37340,7 @@
       "ordinal",
       "part",
       "part_of_day",
+      "peak_at",
       "person",
       "place",
       "point",
@@ -37249,10 +37367,12 @@
       "size_rank",
       "skeleton",
       "slot",
+      "source",
       "south",
       "span",
       "speed_about",
       "spread",
+      "start_at",
       "starts_about",
       "step",
       "steps",
@@ -37268,11 +37388,14 @@
       "w.lang.ro",
       "weekday",
       "weight_about",
+      "weight_max",
+      "weight_min",
       "west",
       "wheels",
       "with",
       "x",
       "y",
+      "year",
       "z"
      ],
      "sources": [

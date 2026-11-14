@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.procedures): 202 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.procedures): 209 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -196,6 +196,13 @@
 @k.units.measure.w.lang.ro.det.value k.units.measure world=w.lang.ro type=det key=value plain=true core.source="hand-core 1"
 @k.units.measure.w.lang.ro.pron.person k.units.measure world=w.lang.ro type=pron key=person plain=true core.source="hand-core 1"
 @k.units.measure.w.lang.ro.numeral.value k.units.measure world=w.lang.ro type=numeral key=value plain=true core.source="hand-core 1"
+@k.units.measure.k.interest.source.year k.units.measure world=k.interest type=source key=year ordinal=true core.source="hand-core 1"
+@k.units.measure.k.interest.appraisal.base k.units.measure world=k.interest type=appraisal key=base plain=true core.source="hand-core 1"
+@k.units.measure.k.interest.feature.start_at k.units.measure world=k.interest type=feature key=start_at counts="unit of the feature's measure" core.source="hand-core 1"
+@k.units.measure.k.interest.feature.peak_at k.units.measure world=k.interest type=feature key=peak_at counts="unit of the feature's measure" core.source="hand-core 1"
+@k.units.measure.k.interest.feature.full_at k.units.measure world=k.interest type=feature key=full_at counts="unit of the feature's measure" core.source="hand-core 1"
+@k.units.measure.k.interest.feature.weight_min k.units.measure world=k.interest type=feature key=weight_min plain=true core.source="hand-core 1"
+@k.units.measure.k.interest.feature.weight_max k.units.measure world=k.interest type=feature key=weight_max plain=true core.source="hand-core 1"
 @k.units.measure.k.procedures.method.rank k.units.measure world=k.procedures type=method key=rank ordinal=true core.source="hand-core 1"
 @k.units.measure.k.procedures.goal.default k.units.measure world=k.procedures type=goal key=default plain=true core.source="hand-core 1"
 @k.units.measure.k.procedures.binding.step k.units.measure world=k.procedures type=binding key=step ordinal=true core.source="hand-core 1"

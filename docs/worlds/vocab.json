@@ -366,6 +366,7 @@
   "k.attributes/schema.sop",
   "k.body/schema.sop",
   "k.faces/schema.sop",
+  "k.interest/schema.sop",
   "k.layouts/schema.sop",
   "k.motion/schema.sop",
   "k.procedures/schema.sop",
@@ -2574,6 +2575,9 @@
  "aniakchak": [
   "k.geo/shards/north-america"
  ],
+ "animacy": [
+  "k.interest/shards/features"
+ ],
  "animal": [
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
@@ -2650,6 +2654,7 @@
   "k.objects/shards/noto-animal-mammal-06"
  ],
  "animate": [
+  "k.interest/shards/features",
   "k.motion/schema.sop"
  ],
  "animation": [
@@ -3183,6 +3188,13 @@
  ],
  "appointment": [
   "k.words/shards/ap"
+ ],
+ "appraisal": [
+  "k.interest/schema.sop",
+  "k.units/shards/measures"
+ ],
+ "appraisals": [
+  "k.interest/schema.sop"
  ],
  "appreciate": [
   "k.words/shards/ap"
@@ -6303,6 +6315,7 @@
   "k.geo/shards/north-america"
  ],
  "base": [
+  "k.interest/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/buildings",
   "k.objects/shards/food-3",
@@ -6346,6 +6359,7 @@
   "k.objects/shards/things-3",
   "k.procedures/shards/from-knowledge",
   "k.units/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/ba"
  ],
  "base1": [
@@ -7816,6 +7830,9 @@
   "k.attributes/shards/same-b",
   "k.geo/shards/europe",
   "k.words/shards/be"
+ ],
+ "berlyne1960": [
+  "k.interest/shards/sources"
  ],
  "bermejo": [
   "k.geo/shards/south-america"
@@ -10052,6 +10069,7 @@
   "k.words/shards/bo"
  ],
  "boring": [
+  "k.interest/schema.sop",
   "k.words/shards/bo"
  ],
  "borivli": [
@@ -17057,6 +17075,9 @@
   "k.parts/shards/usual",
   "k.words/shards/ci"
  ],
+ "cite": [
+  "k.interest/schema.sop"
+ ],
  "cities": [
   "k.geo/schema.sop",
   "w.map/schema.sop"
@@ -18739,6 +18760,7 @@
  ],
  "combine": [
   "k.actions/shards/verbs-group",
+  "k.interest/schema.sop",
   "k.words/shards/co-1"
  ],
  "combing": [
@@ -19309,6 +19331,12 @@
  ],
  "concrete slab": [
   "k.objects/shards/things-3"
+ ],
+ "concrete_thing": [
+  "k.interest/shards/features"
+ ],
+ "concreteness": [
+  "k.interest/shards/features"
  ],
  "concubine": [
   "k.words/shards/co-1"
@@ -20126,6 +20154,7 @@
   "k.words/shards/co-2"
  ],
  "coping": [
+  "k.interest/shards/features",
   "k.words/shards/co-2"
  ],
  "copped": [
@@ -20852,6 +20881,9 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-c",
   "k.objects/shards/noto-animal-mammal-04"
+ ],
+ "cowan2001": [
+  "k.interest/shards/sources"
  ],
  "coward": [
   "k.words/shards/co-2"
@@ -22110,6 +22142,7 @@
  ],
  "curiosity": [
   "k.feelings/shards/feelings",
+  "k.interest/schema.sop",
   "k.words/shards/cu"
  ],
  "curious": [
@@ -23167,6 +23200,9 @@
  ],
  "davis strait": [
   "k.geo/shards/seas"
+ ],
+ "davis1971": [
+  "k.interest/shards/sources"
  ],
  "davy": [
   "k.words/shards/da"
@@ -25139,6 +25175,9 @@
  "distant": [
   "k.values/shards/scales"
  ],
+ "distant_link": [
+  "k.interest/shards/features"
+ ],
  "distinct": [
   "k.values/shards/sets"
  ],
@@ -25544,6 +25583,9 @@
  ],
  "doha": [
   "k.geo/shards/asia"
+ ],
+ "doi": [
+  "k.interest/schema.sop"
  ],
  "doi inthanon": [
   "k.geo/shards/asia"
@@ -26842,6 +26884,7 @@
   "k.geo/shards/asia"
  ],
  "dull": [
+  "k.interest/schema.sop",
   "k.words/shards/du"
  ],
  "dumb": [
@@ -28485,6 +28528,9 @@
   "k.attributes/shards/aspects",
   "k.units/shards/measures"
  ],
+ "ends_without_point": [
+  "k.interest/shards/features"
+ ],
  "endurance": [
   "k.words/shards/en"
  ],
@@ -29286,6 +29332,9 @@
   "k.procedures/schema.sop",
   "k.words/shards/ex"
  ],
+ "example_after_claim": [
+  "k.interest/shards/features"
+ ],
  "exceed": [
   "k.words/shards/ex"
  ],
@@ -29599,6 +29648,7 @@
   "k.words/shards/ex"
  ],
  "extreme": [
+  "k.interest/shards/features",
   "k.words/shards/ex"
  ],
  "extremely": [
@@ -30191,6 +30241,9 @@
   "k.objects/shards/land",
   "k.objects/shards/scenery"
  ],
+ "far_number": [
+  "k.interest/shards/features"
+ ],
  "far_wing": [
   "k.objects/shards/vehicles"
  ],
@@ -30481,6 +30534,7 @@
  "feature": [
   "k.attributes/schema.sop",
   "k.motion/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/fe"
  ],
  "features": [
@@ -31228,6 +31282,7 @@
  ],
  "finding": [
   "k.actions/shards/actions-mind-talk",
+  "k.interest/schema.sop",
   "k.words/shards/fi"
  ],
  "findings": [
@@ -34210,6 +34265,9 @@
   "k.values/shards/fills",
   "k.words/shards/fu"
  ],
+ "full at": [
+  "k.interest/schema.sop"
+ ],
  "full lips": [
   "k.faces/shards/plain-mouth"
  ],
@@ -34232,6 +34290,9 @@
  ],
  "full turns": [
   "k.units/shards/core"
+ ],
+ "full_at": [
+  "k.units/shards/measures"
  ],
  "fuller": [
   "k.objects/shards/things",
@@ -34809,6 +34870,9 @@
  "garner": [
   "k.words/shards/ga"
  ],
+ "garner1989": [
+  "k.interest/shards/sources"
+ ],
  "garnish": [
   "k.objects/shards/noto-food-fruit-01"
  ],
@@ -35154,6 +35218,9 @@
  ],
  "genf": [
   "k.geo/shards/aliases"
+ ],
+ "geng2006": [
+  "k.interest/shards/sources"
  ],
  "genie": [
   "k.words/shards/ge"
@@ -35553,7 +35620,8 @@
  ],
  "gives": [
   "k.actions/shards/actions-hands",
-  "k.colours/schema.sop"
+  "k.colours/schema.sop",
+  "k.interest/schema.sop"
  ],
  "giving": [
   "k.actions/shards/actions-hands",
@@ -37065,6 +37133,9 @@
  ],
  "greys": [
   "k.colours/shards/colours"
+ ],
+ "grice1975": [
+  "k.interest/shards/sources"
  ],
  "grid": [
   "k.layouts/shards/layouts",
@@ -40210,6 +40281,12 @@
  ],
  "hides": [
   "k.actions/shards/actions-mind-talk"
+ ],
+ "hidi1986": [
+  "k.interest/shards/sources"
+ ],
+ "hidi2006": [
+  "k.interest/shards/sources"
  ],
  "hiding": [
   "k.actions/shards/actions-mind-talk",
@@ -43486,6 +43563,7 @@
   "k.words/shards/in"
  ],
  "interest": [
+  "k.interest/schema.sop",
   "k.words/shards/in"
  ],
  "interested": [
@@ -43493,7 +43571,11 @@
   "k.words/shards/in"
  ],
  "interesting": [
+  "k.interest/schema.sop",
   "k.words/shards/in"
+ ],
+ "interestingness": [
+  "k.interest/schema.sop"
  ],
  "interface": [
   "k.words/shards/in"
@@ -43766,6 +43848,9 @@
  ],
  "iranian": [
   "k.words/shards/ir"
+ ],
+ "irannejad1987": [
+  "k.interest/shards/sources"
  ],
  "iraq": [
   "k.attributes/shards/same-i",
@@ -44055,6 +44140,9 @@
  "items": [
   "w.list/schema.sop"
  ],
+ "items_without_point": [
+  "k.interest/shards/features"
+ ],
  "itinerary": [
   "k.words/shards/it"
  ],
@@ -44064,6 +44152,9 @@
  "its": [
   "w.lang.en/shards/determiners",
   "w.lang.en/shards/joiners-keep"
+ ],
+ "itti2009": [
+  "k.interest/shards/sources"
  ],
  "ituri": [
   "k.geo/shards/africa"
@@ -45510,6 +45601,9 @@
  "k.geo.sea": [
   "k.attributes/shards/attributes"
  ],
+ "k.interest": [
+  "k.units/shards/measures"
+ ],
  "k.layouts": [
   "k.units/shards/measures"
  ],
@@ -45751,6 +45845,9 @@
  ],
  "kandi": [
   "k.geo/shards/africa"
+ ],
+ "kang2009": [
+  "k.interest/shards/sources"
  ],
  "kangaroo": [
   "k.animals/shards/mammals",
@@ -46649,6 +46746,9 @@
  "kinshasa": [
   "k.geo/shards/africa"
  ],
+ "kintsch1980": [
+  "k.interest/shards/sources"
+ ],
  "kinyeti": [
   "k.geo/shards/africa"
  ],
@@ -47052,6 +47152,9 @@
  "known": [
   "k.words/shards/kn"
  ],
+ "known_share": [
+  "k.interest/shards/features"
+ ],
  "knows": [
   "k.actions/shards/actions-mind-talk"
  ],
@@ -47096,6 +47199,9 @@
  ],
  "kodachadri": [
   "k.geo/shards/asia"
+ ],
+ "koestler1964": [
+  "k.interest/shards/sources"
  ],
  "kohl": [
   "k.words/shards/ko"
@@ -47554,6 +47660,9 @@
  "labour": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/la"
+ ],
+ "labov1972": [
+  "k.interest/shards/sources"
  ],
  "labrador sea": [
   "k.geo/shards/seas"
@@ -51101,6 +51210,9 @@
   "k.words/shards/li",
   "w.list/schema.sop"
  ],
+ "list_without_point": [
+  "k.interest/shards/features"
+ ],
  "listen": [
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/li"
@@ -51484,6 +51596,9 @@
  "lodging": [
   "k.words/shards/lo"
  ],
+ "loewenstein1994": [
+  "k.interest/shards/sources"
+ ],
  "loft": [
   "k.words/shards/lo"
  ],
@@ -51646,6 +51761,9 @@
  ],
  "long wavy": [
   "k.faces/shards/plain-hair-back"
+ ],
+ "long_sentence": [
+  "k.interest/shards/features"
  ],
  "longer": [
   "k.values/shards/scales",
@@ -54504,6 +54622,7 @@
  ],
  "measure": [
   "k.actions/shards/actions-mind-talk",
+  "k.interest/schema.sop",
   "k.units/schema.sop",
   "k.words/shards/me"
  ],
@@ -54519,6 +54638,7 @@
  ],
  "measures": [
   "k.actions/shards/actions-mind-talk",
+  "k.interest/schema.sop",
   "k.units/schema.sop"
  ],
  "measuring": [
@@ -54793,6 +54913,9 @@
  ],
  "mediumvioletred": [
   "k.values/shards/colours-css"
+ ],
+ "mednick1962": [
+  "k.interest/shards/sources"
  ],
  "medusa": [
   "k.words/shards/me",
@@ -60036,6 +60159,9 @@
   "k.geo/shards/oceania-borders",
   "k.geo/shards/psys2-countries"
  ],
+ "new2007": [
+  "k.interest/shards/sources"
+ ],
  "newark": [
   "k.words/shards/ne"
  ],
@@ -60487,6 +60613,9 @@
  ],
  "no way": [
   "k.values/shards/psys2"
+ ],
+ "no_point_at_end": [
+  "k.interest/shards/features"
  ],
  "noah": [
   "k.words/shards/no"
@@ -61263,6 +61392,7 @@
   "k.objects/shards/noto-book-paper-01"
  ],
  "novelty": [
+  "k.interest/shards/features",
   "k.words/shards/no"
  ],
  "november": [
@@ -61370,6 +61500,12 @@
   "k.words/shards/nu",
   "w.list/schema.sop",
   "w.seating/schema.sop"
+ ],
+ "number_given": [
+  "k.interest/shards/features"
+ ],
+ "number_with_unit": [
+  "k.interest/shards/features"
  ],
  "numbered": [
   "k.words/shards/hand"
@@ -61658,10 +61794,14 @@
   "k.words/shards/ob"
  ],
  "obvious": [
+  "k.interest/shards/features",
   "k.words/shards/ob"
  ],
  "obviously": [
   "k.words/shards/ob"
+ ],
+ "obviousness": [
+  "k.interest/shards/features"
  ],
  "occasion": [
   "k.words/shards/oc"
@@ -61861,6 +62001,9 @@
   "k.attributes/schema.sop",
   "k.words/shards/of",
   "w.lang.en/shards/hand-joins"
+ ],
+ "off_topic": [
+  "k.interest/shards/features"
  ],
  "offence": [
   "k.words/shards/of"
@@ -62256,6 +62399,9 @@
  "on top of each other": [
   "k.layouts/shards/layouts"
  ],
+ "on_topic": [
+  "k.interest/shards/features"
+ ],
  "once": [
   "k.values/shards/numbers",
   "k.words/shards/on"
@@ -62496,6 +62642,9 @@
  "opens": [
   "k.actions/shards/actions-hands",
   "k.drawing/schema.sop"
+ ],
+ "opens_question": [
+  "k.interest/shards/features"
  ],
  "opera": [
   "k.scenes/shards/scenes-indoors",
@@ -63395,6 +63544,7 @@
   "k.animals/shards/birds"
  ],
  "own": [
+  "k.interest/schema.sop",
   "k.words/shards/ow"
  ],
  "owner": [
@@ -64155,6 +64305,7 @@
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-nature",
   "k.colours/shards/colours",
+  "k.interest/schema.sop",
   "k.objects/shards/mulberry-work-and-school-stationery-03",
   "k.objects/shards/noto-book-paper-02",
   "k.objects/shards/noto-computer-01",
@@ -64208,6 +64359,7 @@
   "k.objects/shards/noto-office-03"
  ],
  "papers": [
+  "k.interest/schema.sop",
   "k.words/shards/pa"
  ],
  "paperwork": [
@@ -65095,8 +65247,14 @@
   "k.objects/shards/openmoji-travel-places-02",
   "k.words/shards/pe"
  ],
+ "peak at": [
+  "k.interest/schema.sop"
+ ],
  "peak pobeda": [
   "k.geo/shards/asia"
+ ],
+ "peak_at": [
+  "k.units/shards/measures"
  ],
  "peanut": [
   "k.attributes/shards/drawn-mulberry",
@@ -65381,6 +65539,7 @@
   "k.scenes/shards/things-p"
  ],
  "penalty": [
+  "k.interest/shards/features",
   "k.words/shards/pe"
  ],
  "penance": [
@@ -65833,6 +65992,7 @@
   "k.words/shards/pe"
  ],
  "personal": [
+  "k.interest/shards/features",
   "k.objects/shards/noto-computer-01",
   "k.words/shards/pe"
  ],
@@ -71863,6 +72023,9 @@
   "k.units/shards/measures",
   "k.words/shards/ra"
  ],
+ "range_distance": [
+  "k.interest/shards/features"
+ ],
  "ranger": [
   "k.words/shards/ra"
  ],
@@ -71924,6 +72087,9 @@
  ],
  "rare": [
   "k.words/shards/ra"
+ ],
+ "rare_kind": [
+  "k.interest/shards/features"
  ],
  "rarity": [
   "k.words/shards/ra"
@@ -72193,7 +72359,8 @@
   "k.words/shards/re"
  ],
  "reads": [
-  "k.actions/shards/actions-mind-talk"
+  "k.actions/shards/actions-mind-talk",
+  "k.interest/schema.sop"
  ],
  "ready": [
   "k.words/shards/re"
@@ -72727,7 +72894,11 @@
   "k.words/shards/re"
  ],
  "reference": [
+  "k.interest/schema.sop",
   "k.words/shards/re"
+ ],
+ "references": [
+  "k.interest/schema.sop"
  ],
  "referred": [
   "k.words/shards/re"
@@ -73002,6 +73173,7 @@
   "k.words/shards/re"
  ],
  "relevance": [
+  "k.interest/shards/features",
   "k.words/shards/re"
  ],
  "relic": [
@@ -73200,6 +73372,12 @@
  ],
  "repeat_min": [
   "k.units/shards/measures"
+ ],
+ "repeated_fact": [
+  "k.interest/shards/features"
+ ],
+ "repeated_pattern": [
+  "k.interest/shards/features"
  ],
  "repeating": [
   "k.words/shards/re"
@@ -76408,6 +76586,9 @@
   "k.units/shards/measures",
   "k.words/shards/ru"
  ],
+ "rule_exception": [
+  "k.interest/shards/features"
+ ],
  "ruler": [
   "k.objects/shards/noto-office-03",
   "k.scenes/shards/scenes-indoors",
@@ -76758,6 +76939,9 @@
   "k.feelings/shards/feelings",
   "k.words/shards/sa"
  ],
+ "sadoski1993": [
+  "k.interest/shards/sources"
+ ],
  "safari": [
   "k.objects/shards/noto-animal-mammal-02",
   "k.scenes/shards/scenes-nature",
@@ -76842,6 +77026,9 @@
   "k.actions/shards/actions-mind-talk",
   "k.procedures/shards/from-knowledge",
   "k.words/shards/sa"
+ ],
+ "said_before": [
+  "k.interest/shards/features"
  ],
  "saida": [
   "k.geo/shards/asia"
@@ -77269,6 +77456,9 @@
  ],
  "same with": [
   "w.lang.en/shards/ellipsis"
+ ],
+ "same_move_run": [
+  "k.interest/shards/features"
  ],
  "same_size": [
   "k.layouts/shards/layouts"
@@ -78265,6 +78455,9 @@
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/sc"
  ],
+ "schank1979": [
+  "k.interest/shards/sources"
+ ],
  "schedule": [
   "k.words/shards/sc",
   "w.timeline/schema.sop"
@@ -78358,6 +78551,9 @@
   "k.people/shards/roles-jobs",
   "k.words/shards/sc"
  ],
+ "schraw1995": [
+  "k.interest/shards/sources"
+ ],
  "schweiz": [
   "k.geo/shards/aliases"
  ],
@@ -78435,6 +78631,7 @@
   "k.words/shards/sc"
  ],
  "scope": [
+  "k.interest/schema.sop",
   "k.objects/shards/things-2",
   "k.words/shards/sc"
  ],
@@ -79237,6 +79434,9 @@
  ],
  "seen": [
   "k.words/shards/se"
+ ],
+ "seen_in_session": [
+  "k.interest/shards/features"
  ],
  "sees": [
   "k.actions/shards/actions-mind-talk"
@@ -80129,6 +80329,7 @@
   "k.attributes/shards/same-z",
   "k.drawing/schema.sop",
   "k.faces/schema.sop",
+  "k.interest/schema.sop",
   "k.objects/schema.sop",
   "k.objects/shards/noto-tool-04",
   "k.shapes/schema.sop",
@@ -80168,6 +80369,9 @@
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/verbs-send",
   "k.words/shards/sh"
+ ],
+ "share_beyond_band": [
+  "k.interest/shards/features"
  ],
  "shared": [
   "k.actions/shards/actions-body-social-nature"
@@ -81239,6 +81443,12 @@
  "sibling": [
   "k.words/shards/si"
  ],
+ "sibling_contrast": [
+  "k.interest/shards/features"
+ ],
+ "sibling_rank": [
+  "k.interest/shards/features"
+ ],
  "sicilian": [
   "k.words/shards/si"
  ],
@@ -81583,6 +81793,12 @@
  ],
  "silvia": [
   "k.words/shards/si"
+ ],
+ "silvia2005": [
+  "k.interest/shards/sources"
+ ],
+ "silvia2008": [
+  "k.interest/shards/sources"
  ],
  "simav": [
   "k.geo/shards/asia"
@@ -83791,7 +84007,12 @@
  ],
  "source": [
   "k.actions/shards/acts",
+  "k.interest/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/so"
+ ],
+ "sources": [
+  "k.interest/schema.sop"
  ],
  "sous": [
   "k.geo/shards/africa"
@@ -84318,6 +84539,9 @@
  ],
  "spent": [
   "k.words/shards/sp"
+ ],
+ "sperber1986": [
+  "k.interest/shards/sources"
  ],
  "sperm": [
   "k.words/shards/sp"
@@ -85602,8 +85826,14 @@
   "k.words/shards/st",
   "w.timeline/schema.sop"
  ],
+ "start at": [
+  "k.interest/schema.sop"
+ ],
  "start from": [
   "w.face/schema.sop"
+ ],
+ "start_at": [
+  "k.units/shards/measures"
  ],
  "starter": [
   "k.words/shards/st"
@@ -92545,6 +92775,9 @@
   "k.procedures/shards/tasks",
   "k.words/shards/to"
  ],
+ "topic_distance": [
+  "k.interest/shards/features"
+ ],
  "topped": [
   "k.words/shards/to"
  ],
@@ -95281,6 +95514,9 @@
  ],
  "unknown": [
   "k.words/shards/un"
+ ],
+ "unknown_words": [
+  "k.interest/shards/features"
  ],
  "unleash": [
   "k.words/shards/un"
@@ -98469,6 +98705,12 @@
  "weight class": [
   "k.attributes/schema.sop"
  ],
+ "weight max": [
+  "k.interest/schema.sop"
+ ],
+ "weight min": [
+  "k.interest/schema.sop"
+ ],
  "weight_about": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
@@ -98477,6 +98719,12 @@
  "weight_class": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes"
+ ],
+ "weight_max": [
+  "k.units/shards/measures"
+ ],
+ "weight_min": [
+  "k.units/shards/measures"
  ],
  "weighty": [
   "k.values/shards/scales"
@@ -100203,9 +100451,15 @@
   "k.words/schema.sop",
   "k.words/shards/wo"
  ],
+ "word_band": [
+  "k.interest/shards/features"
+ ],
  "words": [
   "k.words/schema.sop",
   "k.words/shards/wo"
+ ],
+ "words_over_max": [
+  "k.interest/shards/features"
  ],
  "wore": [
   "k.actions/shards/actions-body-social-nature",
@@ -100286,6 +100540,9 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-w",
   "w.map/schema.sop"
+ ],
+ "world_distance": [
+  "k.interest/shards/features"
  ],
  "worldwide": [
   "k.objects/shards/noto-place-map-01"
@@ -100885,10 +101142,12 @@
  ],
  "year": [
   "k.attributes/shards/same-y",
+  "k.interest/schema.sop",
   "k.space/schema.sop",
   "k.time/shards/calendar",
   "k.time/shards/derived",
   "k.units/shards/core",
+  "k.units/shards/measures",
   "k.words/shards/ye",
   "w.timeline/schema.sop"
  ],
