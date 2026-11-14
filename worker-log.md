@@ -3571,3 +3571,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   COVERAGE: k.procedures 3 of the common things by word. npm test 2,897: 2,893 pass, 3 skipped, 1 fail (k.units.measure:
   no unit for the numbers of k.procedures); after tools/measures-core.mjs and the reports, the 7 test files that read
   generated files: 464 pass, 0 fail.
+
+## k.procedures: the full run on the pushed commit (2026-11-14, first worker)
+
+- On 1d4f120 (k.procedures rebased on the second worker's vocabulary kinds and aliases): npm test 2,899: 2,896 pass,
+  3 skipped, 0 fail. The reviewer's block "11:05" says Q44 is forwarded to the library and to go on in this format
+  (a script converts the facts if the library amends it). No file but this log changes here.
