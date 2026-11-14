@@ -464,3 +464,7 @@ Each skill states what it may change and what it must never do (no restricted da
    - **`w.face`**: the acting schema of a face, its parts as kinds with colour, size (0.6..1.5, default 1, step 0.1) and place, the shapes read from `k.faces`;
    - **a map view schema** (`w.map`): a view with state zoom 1..10 and layer (borders, rivers, none) over `k.geo` places.
    Each with an example session as a test and a catalog entry. PSys2's avatar and map can then take these schemas instead of their own (THIN LIVE WORLDS).
+
+## Reviewer 2026-11-14 07:05 — the agent-skills stage moves to the library (cancel the 06:45 block here)
+
+The skills are procedures over the library's tools (ledger, corpus, reuse detector, grid, catalog) for any application, versioned with that API; this repository is one of the places they write to. They are written in soplang-words-lib (`skills/`). Do not start the 06:45 block here; keep `docs/lessons.md` current, it is one of their sources.
