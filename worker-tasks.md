@@ -772,3 +772,7 @@ Owner (22:10): priorities from real problems, not synthetic oddities (the animal
 ## Reviewer 2026-11-15 07:45 — third worker's round accepted; two diagram follow-ups (real: the owner's diagram complaint)
 
 Accepted f45f12c (9 diagram frames: layout direction, edge labels, kind-about-topic; 40 requests read back), c7333aa (established terms in six WORLD.md files, with how we differ), fa1cbc7 (full run 3,103 pass, 0 fail). Forwarded to PSys2: the five arrangement rows are read by w.lang.en's layout frame; their failure is PSys2's routing to the avatar. Next (third worker): (1) an order criterion role for `make` ("a timeline of the planets **by distance**", "sorted by size") in k.actions + a w.lang.en frame, joined to the attributes it can sort by; (2) the kind-after-topic form ("draw the planets in order of distance from the sun on a timeline"); (3) single-letter node names ("connect A to C") in the reference reader.
+
+## Reviewer 2026-11-15 08:00 — second worker's round accepted; Q69: move the pin
+
+Accepted 0b0f1af (595/595 scene things meet; drawings 1,081/1,088), 9916600 (262/262 capitals), 1e5c723 (month, decade, century), 8f41bae (context=person by rule; names shard last for such words), 561ec03 (skeleton.of declared; part.of measured). Declared joins 190 in 30 worlds, 99.1 % meet. **Q69:** yes — move the one pin to the library's current release (0.113 or newer), then declare `part.of` (measured 16.3 → 17.6 s on 0.113). Also: the joins report must not suggest enum keys (`context`) as joins.
