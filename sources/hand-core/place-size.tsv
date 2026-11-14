@@ -67,9 +67,11 @@ anchor			medium
 ant	ground		tiny
 ant eater	ground		medium
 antelope	ground		medium
+antenna	on_thing	roof	medium
 apple	indoors	table	small
 apple juice	indoors	table	small
 apron	on_thing	person	small
+aquarium	indoors	table	medium
 arch lever file	indoors	table	small
 archery target	ground		medium
 arm chair	indoors		medium
@@ -79,6 +81,7 @@ artichoke	indoors	table	small
 articulated lorry	ground		huge
 artillery shell			small
 artist palette	indoors		small
+ashtray	indoors	table	small
 asparagus	indoors	table	small
 asteroid	sky		huge
 aubergine	indoors	table	small
@@ -113,6 +116,7 @@ balloon	sky		small
 ballot box with ballot	indoors		small
 banana	indoors	table	small
 banana bunch	indoors	table	small
+bandage	on_thing	person	tiny
 bandage scissors	indoors		small
 banjo	indoors		small
 bank	ground		huge
@@ -121,10 +125,12 @@ bap	indoors	table	small
 barbeque	ground		medium
 barber pole	ground		medium
 barn	ground		huge
+barricade	ground		large
 baseball	ground		small
 baseball base	ground		small
 baseball bat			small
 baseball glove	on_thing	hand	small
+basin	indoors		medium
 basket	indoors		small
 basketball	ground		small
 basketball ball	ground		small
@@ -133,6 +139,7 @@ bath	indoors		large
 bath mat	indoors		small
 bathtub	indoors		large
 battery	indoors		tiny
+battleship	water		huge
 beach	ground		huge
 beach bag	on_thing	hand	small
 beach towel	ground		medium
@@ -159,6 +166,7 @@ beetroot	indoors	table	small
 bell	indoors		small
 bell pepper	indoors	table	small
 bellhop bell	indoors		small
+bellows	indoors		small
 belt	on_thing	person	small
 beluga	water		large
 bench	ground		medium
@@ -170,11 +178,13 @@ bicycle	ground		medium
 bicycle helmet	on_thing	head	small
 big wheel	ground		huge
 bikini	on_thing	person	small
+billboard	ground		large
 billed cap	on_thing	head	small
 bin	indoors		small
 bin bag	indoors		small
 bin bags	indoors		small
 bingo marker	indoors	table	small
+binoculars	indoors	table	small
 bird	sky		small
 birthday cake	indoors	table	small
 birthday card	indoors	table	small
@@ -191,6 +201,7 @@ blackcurrants	indoors	table	tiny
 blanket	on_thing	bed	medium
 blanket chest	indoors		medium
 blender drinks	indoors		small
+blindfold	on_thing	head	small
 blinds	on_thing	window	medium
 blood transfusion	indoors		medium
 blossom	on_thing	tree	tiny
@@ -202,6 +213,7 @@ blusher	indoors		small
 boar	ground		medium
 boat	water		large
 bobble hat	on_thing	head	small
+boiler	indoors		large
 bolt	indoors		tiny
 bomb	ground		small
 bonfire	ground		medium
@@ -251,6 +263,7 @@ bridge	ground		huge
 bridge at night	ground		huge
 briefcase	indoors		small
 briefs	on_thing	person	small
+brig	water		huge
 broad beans	indoors	table	small
 broccoli	indoors	table	small
 broken chain	indoors		small
@@ -270,6 +283,8 @@ bud	on_thing	branch	tiny
 budgie	indoors		small
 buffalo	ground		large
 bug	ground		tiny
+buggy	ground		large
+bugle	indoors		small
 building	ground		huge
 building construction	ground		huge
 bulb holder	indoors		tiny
@@ -279,6 +294,7 @@ bullseye	on_thing	wall	medium
 bun - hot cross	indoors	table	small
 bun currant	indoors	table	small
 bunk beds	indoors		large
+burr	ground		tiny
 burrito	indoors	table	small
 bus	ground		large
 bus double decker	ground		large
@@ -294,6 +310,7 @@ cabinet	indoors		medium
 cable	indoors		small
 cable tv	indoors		small
 cactus	ground		medium
+caddy	indoors	table	small
 cafeteria	ground		huge
 cage	indoors		medium
 cake	indoors	table	small
@@ -323,8 +340,10 @@ candy hearts	indoors	table	tiny
 canned food	indoors	table	small
 cannon	ground		large
 canoe	water		large
+canteen	on_thing	person	small
 canyon	ground		huge
 cap	on_thing	head	small
+capitol	ground		huge
 car	ground		large
 car toy	indoors		small
 car transporter	ground		huge
@@ -351,10 +370,12 @@ cat	ground		small
 caterpillar	ground		tiny
 cauliflower	indoors	table	small
 cave	ground		huge
+caviar	indoors	table	small
 cctv	on_thing	wall	small
 ceiling light	on_thing	ceiling	small
 celeriac	indoors	table	small
 celery	indoors	table	small
+cello	indoors		large
 cement mixer	ground		medium
 centipede	ground		tiny
 cereal	indoors	table	small
@@ -364,6 +385,7 @@ cereal box museli	indoors	table	small
 cereal bran	indoors	table	small
 cereal museli	indoors	table	small
 chains	indoors		small
+chainsaw	indoors		medium
 chair	indoors		medium
 chair computer	indoors		medium
 chair dining	indoors		medium
@@ -379,12 +401,14 @@ chapatti	indoors	table	small
 chapel	ground		huge
 charger electric	indoors		small
 charging station	ground		large
+chariot	ground		large
 cheese	indoors	table	small
 cheese brie	indoors	table	small
 cheese grated	indoors	table	small
 cheese slices	indoors	table	small
 cheese stilton	indoors	table	small
 cheese wedge	indoors	table	small
+cheesecake	indoors	table	small
 cheetah	ground		medium
 cheque book	indoors		small
 cherries	indoors	table	tiny
@@ -404,6 +428,7 @@ chicken live	ground		small
 chicken nuggets	indoors	table	small
 chicken pieces	indoors	table	small
 chilli pepper	indoors	table	small
+chime	indoors		large
 chimney	on_thing	roof	medium
 chimpanzee	ground		medium
 chinese cabbage	indoors	table	small
@@ -422,7 +447,9 @@ chocolate log	indoors	table	small
 chopping board	indoors		small
 chopsticks	indoors	table	small
 church	ground		huge
+cider	indoors	table	small
 cigarette	indoors		tiny
+cinnamon	indoors	table	tiny
 circus tent	ground		huge
 cityscape	ground		huge
 cityscape at dusk	ground		huge
@@ -441,6 +468,7 @@ clinking glasses	indoors	table	small
 clipboard	indoors	table	small
 clock	on_thing	wall	small
 clock radio	indoors		small
+clockwork	indoors		small
 closed book	indoors	table	small
 closed mailbox with lowered flag	ground		medium
 closed mailbox with raised flag	ground		medium
@@ -485,6 +513,7 @@ computer keyboard	indoors	table	small
 computer monitor	indoors	table	small
 computer mouse	indoors	table	small
 computer speaker	indoors	table	small
+cone	ground		small
 confetti ball	indoors		small
 conical flask	indoors		small
 construction	ground		medium
@@ -517,6 +546,7 @@ cranberries	indoors	table	tiny
 cranberry juice	indoors	table	small
 crane	ground		huge
 crane fly	sky		tiny
+crater	ground		huge
 crayon	indoors	table	small
 cream ointment	indoors		small
 credit card	indoors		tiny
@@ -541,6 +571,7 @@ cup	indoors	table	small
 cup with straw	indoors	table	small
 cupboard	indoors		medium
 cupcake	indoors	table	small
+curb	ground		large
 curling stone	ground		small
 currants	indoors	table	tiny
 curry	indoors	table	small
@@ -573,6 +604,7 @@ desk	indoors		medium
 desk lamp	indoors	table	small
 desktop computer	indoors	table	small
 dessert menu	indoors	table	small
+destroyer	water		huge
 dice	indoors	table	tiny
 dictionary	indoors	table	small
 diesel locomotive	ground		huge
@@ -598,6 +630,7 @@ dolphin	water		large
 donkey	ground		large
 door	on_thing	wall	large
 doorbell	on_thing	wall	tiny
+doorknob	on_thing	door	tiny
 double bed	indoors		large
 dough	indoors	table	small
 doughnut	indoors	table	small
@@ -619,9 +652,11 @@ droplet			tiny
 dropper pipette	indoors		small
 drum	indoors		medium
 drumsticks	indoors		small
+dryer	indoors		medium
 duck	water		small
 dumper truck	ground		large
 dumpling	indoors	table	small
+dungeon	ground		huge
 dvd	indoors	table	small
 eagle	sky		medium
 ear muffs	on_thing	head	small
@@ -673,6 +708,7 @@ feather			tiny
 felt tips	indoors	table	small
 fence	ground		medium
 fennel	indoors	table	small
+fern	ground		small
 ferret	ground		small
 ferris wheel	ground		huge
 ferry	water		huge
@@ -750,6 +786,7 @@ fox	ground		medium
 frame	on_thing	wall	small
 framed picture	on_thing	wall	small
 freezer	indoors		medium
+freighter	water		huge
 french fries	indoors	table	small
 french press	indoors		small
 french stick	indoors	table	small
@@ -779,6 +816,7 @@ garlic	indoors	table	small
 garlic bread	indoors	table	small
 garlic crusher	indoors		small
 gate	ground		large
+gavel	indoors	table	small
 gear	indoors		small
 gem stone			tiny
 ghost			medium
@@ -786,6 +824,7 @@ gin	indoors	table	small
 ginger	indoors	table	small
 ginger root	indoors	table	small
 giraffe	ground		huge
+glacier	ground		huge
 glass bottle	indoors	table	small
 glass of milk	indoors	table	small
 glasses	on_thing	head	small
@@ -813,6 +852,7 @@ gooseberry	indoors	table	tiny
 gorilla	ground		large
 gps	indoors		small
 graduation cap	on_thing	head	small
+graffiti	on_thing	wall	large
 grape juice	indoors	table	small
 grapefruit	indoors	table	small
 grapefruit juice	indoors	table	small
@@ -826,7 +866,9 @@ green apple	indoors	table	small
 green beans	indoors	table	small
 green book	indoors	table	small
 green salad	indoors	table	small
+greenhouse	ground		large
 grill pan	indoors		small
+grinder	indoors	table	small
 guide dog	ground		medium
 guinea pig	indoors		small
 guitar	indoors		medium
@@ -862,6 +904,8 @@ hangar	ground		huge
 hankerchief	indoors		small
 hard hat	on_thing	head	small
 hare	ground		small
+harmonica	indoors	table	tiny
+harness	on_thing	person	small
 harp	indoors		large
 hat	on_thing	head	small
 hat - ladies	on_thing	head	small
@@ -876,10 +920,12 @@ headband	on_thing	head	small
 headphone	on_thing	head	small
 headphones	on_thing	head	small
 headstone	ground		medium
+heater	indoors		medium
 hedge	ground		large
 hedge cutters	ground		medium
 hedgehog	ground		small
 helicopter	sky		large
+helm	on_thing	ship	medium
 helmet	on_thing	head	small
 helmet pilot	on_thing	head	small
 hen	ground		small
@@ -893,6 +939,7 @@ hiking boot	on_thing	foot	small
 hill	ground		huge
 hindu temple	ground		huge
 hippopotamus	water		large
+hive	ground		small
 hoe	ground		medium
 hoist	indoors		large
 holdall			medium
@@ -933,11 +980,13 @@ ice cream tub	indoors	table	small
 ice hockey	ground		small
 ice lolly	indoors	table	small
 ice skate	on_thing	foot	small
+iceberg	water		huge
 identification card	indoors		tiny
 igloo	ground		large
 inbox tray	indoors		small
 index cards	indoors	table	small
 inhaler	indoors		small
+intercom	on_thing	wall	small
 iris	ground		small
 iron	indoors		small
 ironing board	indoors		medium
@@ -963,6 +1012,7 @@ jigsaw puzzle piece	indoors	table	small
 joystick	indoors		small
 judo belt	on_thing	person	small
 juice	indoors	table	small
+jukebox	indoors		large
 jumper	on_thing	person	small
 jungle gym	ground		large
 kaaba	ground		huge
@@ -984,6 +1034,7 @@ kiwi	indoors	table	small
 kiwi fruit	indoors	table	small
 knickers	on_thing	person	small
 knife	indoors	table	small
+knob	indoors		tiny
 koala	on_thing	tree	small
 koosh ball	indoors		small
 lab coat	on_thing	person	medium
@@ -1049,6 +1100,7 @@ lobster	water		small
 locked	on_thing	door	tiny
 locked with key	on_thing	door	tiny
 locker	indoors		medium
+locket	on_thing	person	tiny
 locomotive	ground		huge
 log	ground		medium
 lollipop	indoors	table	small
@@ -1066,17 +1118,20 @@ macadamias	indoors	table	tiny
 macaroni	indoors	table	small
 macaroni cheese	indoors	table	small
 macaw	sky		small
+machete	indoors		medium
 magic wand	indoors		small
 magnet	indoors		small
 magnifying glass tilted left	indoors		small
 magnifying glass tilted right	indoors		small
 mailbox	ground		medium
+mainframe	indoors		huge
 mains socket	on_thing	wall	tiny
 mammoth	ground		huge
 mange tout	indoors	table	small
 mango	indoors	table	small
 manor	ground		huge
 mantelpiece clock	indoors		small
+mantis	ground		tiny
 manual wheelchair	ground		medium
 man’s shoe	on_thing	foot	small
 map	indoors		small
@@ -1092,6 +1147,7 @@ masher	indoors		small
 mask	on_thing	head	small
 mask dustmask	on_thing	head	small
 masking tape	indoors	table	small
+mast	on_thing	ship	huge
 mat	indoors		medium
 mate	indoors	table	small
 mattress	on_thing	bed	large
@@ -1102,6 +1158,7 @@ measuring jug	indoors		small
 measuring spoons	indoors		small
 meat	indoors	table	small
 meat on bone	indoors	table	small
+meatball	indoors	table	tiny
 meatballs and spaghetti	indoors	table	small
 medal	on_thing	person	tiny
 medication	indoors		small
@@ -1161,6 +1218,7 @@ moon cake	indoors	table	small
 moose	ground		large
 mop	indoors		medium
 moped	ground		medium
+mortar	ground		medium
 mosque	ground		huge
 mosquito	sky		tiny
 motel	ground		huge
@@ -1175,8 +1233,8 @@ motorized wheelchair	ground		medium
 motorway	ground		huge
 mount fuji	ground		huge
 mountain	ground		huge
-mountain lake	ground		huge
 mountain cableway	sky		large
+mountain lake	ground		huge
 mountain railway	ground		huge
 mountains	ground		huge
 mouse	ground		tiny
@@ -1197,6 +1255,7 @@ nail clippers	indoors		tiny
 nail file	indoors		small
 nail polish	indoors		small
 nail polish remover	indoors		small
+napkin	indoors	table	small
 nappy	indoors		small
 narwhal	water		large
 national park	ground		huge
@@ -1220,6 +1279,7 @@ notepad	indoors	table	small
 nut	indoors	table	tiny
 nut and bolt	indoors		tiny
 oak leaf	ground		tiny
+observatory	ground		huge
 octopus	water		medium
 oden	indoors	table	small
 office building	ground		huge
@@ -1317,6 +1377,7 @@ pencil and paper	indoors	table	small
 pencil box	indoors	table	small
 pencil case	indoors	table	small
 pencil sharpener	indoors	table	tiny
+pendant	on_thing	person	tiny
 penguin	ground		medium
 pepper	indoors	table	small
 pepper mill	indoors	table	small
@@ -1371,6 +1432,7 @@ plastic bag	indoors		small
 plastic bottle	indoors	table	small
 plastic pocket	indoors	table	small
 plate	indoors	table	small
+plateau	ground		huge
 playdough	indoors	table	small
 playground slide	ground		large
 playing card picture	indoors	table	small
@@ -1410,7 +1472,9 @@ pork	indoors	table	small
 pork chop	indoors	table	small
 porpoise	water		medium
 porridge	indoors	table	small
+portfolio	indoors		medium
 portrait	on_thing	wall	small
+possum	ground		small
 post office	ground		huge
 post van	ground		large
 post-it	indoors	table	small
@@ -1454,6 +1518,7 @@ rabbit	ground		small
 raccoon	ground		small
 racing car	ground		large
 radar	ground		large
+radiator	indoors		medium
 radio	indoors		small
 radish	indoors	table	small
 raft	water		large
@@ -1468,6 +1533,7 @@ raisin currants	indoors	table	tiny
 rake	ground		medium
 ram	ground		medium
 ramp	ground		large
+raspberry	indoors	table	tiny
 rat	ground		small
 rattle snake	ground		small
 raven	sky		small
@@ -1482,6 +1548,7 @@ recycling bins	ground		medium
 red apple	indoors	table	small
 red envelope	indoors		small
 red paper lantern	indoors		small
+reel	indoors		small
 refrigerator	indoors		medium
 refuse lorry	ground		large
 reindeer	ground		medium
@@ -1503,6 +1570,7 @@ ring	on_thing	hand	tiny
 ring binder	indoors	table	small
 ring buoy	water		small
 ringed planet	sky		huge
+risotto	indoors	table	small
 river	ground		huge
 river bank	ground		huge
 road	ground		huge
@@ -1525,6 +1593,7 @@ roller skate	on_thing	foot	small
 rolling pin	indoors		small
 roman blind	on_thing	window	medium
 roof	on_thing	house	large
+rook	indoors	table	tiny
 rooster	ground		small
 root vegetable	indoors	table	small
 rope			small
@@ -1552,6 +1621,7 @@ salad plate	indoors	table	small
 salami sausage	indoors	table	small
 saline drip	indoors		medium
 salmon	water		small
+salsa	indoors	table	small
 salt	indoors	table	small
 salt mill	indoors	table	small
 sandals	on_thing	foot	small
@@ -1584,8 +1654,10 @@ sausages	indoors	table	small
 saw	indoors		small
 saxophone	indoors		small
 scales	indoors		small
+scalpel	indoors	table	tiny
 scarecrow	ground		large
 scarf	on_thing	person	small
+schnapps	indoors	table	small
 school	ground		huge
 school bag	on_thing	person	small
 scissors	indoors	table	small
@@ -1596,12 +1668,15 @@ screw	indoors		tiny
 screwdriver	indoors		small
 scroll	indoors	table	small
 scrubbing brush	indoors		small
+scuba	water		medium
 sculpture	indoors		medium
 sea	water		huge
 seagull	sky		small
 seahorse	water		tiny
 seal	water		medium
 seat	indoors		medium
+seatbelt	on_thing	car	medium
+seaweed	water		small
 see saw	ground		large
 seedling	ground		tiny
 seeds	ground		tiny
@@ -1616,6 +1691,7 @@ shapesorter	indoors		small
 shark	water		large
 shaved ice	indoors	table	small
 shaving cream	indoors		small
+shawl	on_thing	person	medium
 sheaf of rice	ground		small
 sheep	ground		medium
 shelf	on_thing	wall	medium
@@ -1653,6 +1729,7 @@ skateboard	ground		small
 skirt	on_thing	person	small
 skis	on_thing	foot	medium
 skunk	ground		small
+slab	ground		medium
 sled	ground		medium
 sledge	ground		medium
 sleep suit baby	on_thing	person	small
@@ -1700,6 +1777,7 @@ speaker high volume	indoors		small
 speaker low volume	indoors		small
 speaker medium volume	indoors		small
 speedboat	water		large
+sphere	indoors		small
 spider	ground		tiny
 spider web			small
 spinach	indoors	table	small
@@ -1739,6 +1817,7 @@ stirrups	on_thing	horse	small
 stoat	ground		small
 stock	indoors	table	small
 stock cubes	indoors	table	small
+stocking	on_thing	person	small
 stone	ground		small
 stool	indoors		medium
 stop sign	ground		large
@@ -1753,6 +1832,7 @@ stretcher	indoors		medium
 string	indoors		small
 studio microphone	indoors		small
 stuffed flatbread	indoors	table	small
+stump	ground		small
 stupa	ground		huge
 submarine	water		huge
 sugar	indoors	table	small
@@ -1814,6 +1894,7 @@ tampon	indoors		small
 tanabata tree	ground		large
 tangerine	indoors	table	small
 tank	ground		large
+tanker	water		huge
 tap	on_thing	sink	small
 tape	indoors		small
 tape measure	indoors		small
@@ -1828,6 +1909,7 @@ teacup without handle	indoors	table	small
 teapot	indoors	table	small
 tear-off calendar	indoors	table	small
 teddy bear	indoors		small
+telegraph	indoors	table	small
 telephone	indoors	table	small
 telephone handset	indoors		small
 telephone receiver	indoors	table	small
@@ -1849,6 +1931,7 @@ ticket	indoors		tiny
 tie	on_thing	person	small
 tiger	ground		large
 tights	on_thing	person	small
+tile	on_thing	wall	small
 timer	indoors		small
 timer clock	indoors		small
 tin	indoors		small
@@ -1871,12 +1954,14 @@ titanic	water		huge
 toad	ground		small
 toast	indoors	table	small
 toaster	indoors		small
+tofu	indoors	table	small
 toilet	indoors		medium
 toilet roll	indoors		small
 tomato	indoors	table	small
 tomato juice	indoors	table	small
 tomato slice	indoors	table	small
 tongs	indoors		small
+tonic	indoors	table	small
 toolbox	indoors		small
 toothbrush	indoors		small
 toothbrush electric	indoors		small
@@ -1909,6 +1994,7 @@ tree	ground		huge
 tree ornament chocolate	on_thing	tree	tiny
 tree trunk	ground		large
 triangular ruler	indoors	table	small
+trifle	indoors	table	small
 trolleybus	ground		large
 trombone	indoors		small
 trophy	indoors		small
@@ -1926,6 +2012,7 @@ turkey	ground		medium
 turnip	indoors	table	small
 turtle	water		small
 two-hump camel	ground		large
+typewriter	indoors	table	small
 umbrella	on_thing	hand	medium
 umbrella on ground	ground		medium
 umbrella with rain drops	on_thing	hand	medium
@@ -1943,6 +2030,7 @@ ventilator	indoors		medium
 vertical blinds	on_thing	window	medium
 vertical traffic light	ground		large
 vest	on_thing	person	small
+vial	indoors	table	tiny
 vice	indoors	table	small
 video camera	indoors		small
 video game	indoors		small
@@ -2014,6 +2102,7 @@ wilted flower	ground		small
 wind chime	indoors		small
 windmill	ground		huge
 window	on_thing	wall	medium
+windshield	on_thing	car	medium
 wine	indoors	table	small
 wine glass	indoors	table	small
 wire	indoors		small

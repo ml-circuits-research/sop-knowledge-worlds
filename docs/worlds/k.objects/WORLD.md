@@ -52,9 +52,16 @@ object with the file of its picture, its shard, its source, the licence of its s
 | `food-2` | vodka, dough, ginger, brandy, cocktail, gin, pudding, rum, pumpkin, nut, pod, wheat, hay, flour, sherry, tequila, syrup, muffin, ketchup |
 | `nature-2` | hawk, salmon, violet, iris, pine, finch, raven, mule, squirrel, kitten, calf |
 | `scenery` | lake, mountain lake, river, sea, sandcastle |
+| `animals-2` | crane bird, kiwi bird, tuna fish, eel, jaguar, cougar, dingo, jackal, possum, alligator, newt, flea, grasshopper, mantis, leech, clam |
+| `plants` | fern, seaweed, stump |
+| `land-3` | iceberg, glacier, crater, plateau |
+| `places-3` | dungeon, curb, capitol, greenhouse, observatory, billboard |
+| `food-3` | raspberry, caviar, tonic, salsa, cinnamon, tofu, risotto, trifle, meatball, cider, grinder, cheesecake, schnapps |
+| `vehicles-2` | destroyer, chariot, brig, buggy, freighter, tanker, battleship |
+| `things-3` | hive, intercom, dryer, harness, reel, typewriter, bandage, rook, canteen, napkin, boiler, cone, knob, sphere, scalpel, telegraph, heater, graffiti, windshield, antenna, gavel, helm, tile, ashtray, locket, aquarium, basin, portfolio, binoculars, cello, stocking, chime, blindfold, radiator, mortar, bugle, clockwork, bellows, barricade, chainsaw, slab, pendant, harmonica, vial, burr, machete, jukebox, doorknob, mainframe, scuba, mast, shawl, seatbelt, caddy |
 
-225 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
-things that had no drawing, see `MISSING.md`; 5 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0.
+328 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
+things that had no drawing, see `MISSING.md`; 5 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0. 103 of Round 11 (shards `animals-2` to `things-3`, written from the table `tools/objects-hand-data.mjs` by `tools/objects-hand.mjs`): the animals whose name is drawn as another thing (`"crane bird"`, `"kiwi bird"`, `"tuna fish"`) and 100 more of the most frequent common things with no drawing.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 
@@ -63,7 +70,7 @@ first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mul
 
 | Source | Objects | Shards | Licence | Names from |
 | --- | --- | --- | --- | --- |
-| hand-written | 220 | 19 | CC0-1.0 | this repository |
+| hand-written | 328 | 26 | CC0-1.0 | this repository |
 | Noto Emoji (`noto-<emoji subgroup>-<nn>`) | 811 | 124 | Apache-2.0 AND Unicode-3.0 | Unicode CLDR short names (`"dog face"`, `teapot`) |
 | OpenMoji (`openmoji-<group>-<nn>`) | 114 | 18 | CC-BY-SA-4.0 | OpenMoji annotations (`goldfish`, `"lawn mower"`) |
 | Mulberry Symbols (`mulberry-<category>-<nn>`) | 958 | 149 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |

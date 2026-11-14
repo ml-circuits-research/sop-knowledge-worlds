@@ -1,4 +1,4 @@
-# k.scenes/shards/things-j: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 29 things (the drawable things and the animals of k.animals) whose name starts with "j"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-j: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 30 things (the drawable things and the animals of k.animals) whose name starts with "j"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -30,5 +30,6 @@
 @k.scenes.thing.joystick k.scenes.thing name=joystick place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.judo_belt k.scenes.thing name="judo belt" place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.juice k.scenes.thing name=juice place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.jukebox k.scenes.thing name=jukebox place=indoors size=large named=model core.source="hand-core 1"
 @k.scenes.thing.jumper k.scenes.thing name=jumper place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.jungle_gym k.scenes.thing name="jungle gym" place=ground size=large named=model core.source="hand-core 1"

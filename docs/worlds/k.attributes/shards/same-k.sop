@@ -38,7 +38,7 @@
 @k.attributes.same.knickers.clothing k.attributes.same name=knickers sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knife.thing k.attributes.same name=knife sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knight.person k.attributes.same name=knight sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.knob.thing k.attributes.same name=knob sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.knob.thing k.attributes.same name=knob sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knot.thing k.attributes.same name=knot sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.knuckle.body_part k.attributes.same name=knuckle sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.koala.animal k.attributes.same name=koala sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

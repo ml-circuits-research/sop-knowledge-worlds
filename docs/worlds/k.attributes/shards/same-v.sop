@@ -26,7 +26,7 @@
 @k.attributes.same.vertical_traffic_light.thing k.attributes.same name="vertical traffic light" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.vest.clothing k.attributes.same name=vest sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vet.person k.attributes.same name=vet sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.vial.thing k.attributes.same name=vial sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.vial.thing k.attributes.same name=vial sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vice.thing k.attributes.same name=vice sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.victoria.place k.attributes.same name=victoria sense=place only=true in=k.geo.city in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.video_camera.thing k.attributes.same name="video camera" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

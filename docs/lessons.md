@@ -74,3 +74,9 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   thing alone; the scene gives the ground and the water.
 - **Hand drawing scales with a table and a checker, not with free SOP Lang:** one line per part, checked
   for the frame, the shape rules and the names of relations, made 50 drawings with no load error.
+- **Before drawing a missing thing, look for it under the other names of the catalog** (item 3, part 2): three of
+  the "missing" words had a drawing all along under a name that WordNet does not join (tram for trolley, nazar
+  amulet for amulet, blusher for rouge). The gap was a missing join, not a missing drawing, and a hand link closed
+  it in one line each. The cheap check is the tags and words of the imported drawings.
+- **A drawing also needs a place and a size to be usable in a scene**; the test that every drawing has them (5%
+  allowed) caught 159 new objects without. A new thing in one world is a row in two or three others.

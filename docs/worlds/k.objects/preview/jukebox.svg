@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>jukebox</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <ellipse cx="50" cy="40" rx="36" ry="28" fill="red" stroke="#333" stroke-width="0.8"><title>arch</title></ellipse>
+  <rect x="14" y="40" width="72" height="56" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <ellipse cx="50" cy="40" rx="30" ry="22" fill="yellow" stroke="#333" stroke-width="0.8"><title>light_band</title></ellipse>
+  <rect x="16" y="46" width="6" height="48" fill="orange" stroke="#333" stroke-width="0.8"><title>side_light_1</title></rect>
+  <rect x="78" y="46" width="6" height="48" fill="orange" stroke="#333" stroke-width="0.8"><title>side_light_2</title></rect>
+  <rect x="26" y="60" width="48" height="10" fill="white" stroke="#333" stroke-width="0.8"><title>panel</title></rect>
+  <rect x="26" y="74" width="48" height="18" fill="brown" stroke="#333" stroke-width="0.8"><title>grille</title></rect>
+  <ellipse cx="50" cy="41" rx="24" ry="17" fill="black" stroke="#333" stroke-width="0.8"><title>window</title></ellipse>
+  <rect x="30" y="63" width="5" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>button_1</title></rect>
+  <rect x="38" y="63" width="5" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>button_2</title></rect>
+  <rect x="46" y="63" width="5" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>button_3</title></rect>
+  <rect x="54" y="63" width="5" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>button_4</title></rect>
+  <rect x="62" y="63" width="5" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>button_5</title></rect>
+  <polyline points="38,76 38,90" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>grille_line_1</title></polyline>
+  <polyline points="50,76 50,90" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>grille_line_2</title></polyline>
+  <polyline points="62,76 62,90" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>grille_line_3</title></polyline>
+  <ellipse cx="50" cy="40" rx="10" ry="10" fill="grey" stroke="#333" stroke-width="0.8"><title>record</title></ellipse>
+  <ellipse cx="50" cy="40" rx="3" ry="3" fill="red" stroke="#333" stroke-width="0.8"><title>record_label</title></ellipse>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>slab</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="8" y="52" width="74" height="18" fill="grey" stroke="#333" stroke-width="0.8"><title>front</title></rect>
+  <polygon points="8,52 20,40 94,40 82,52" fill="white" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <polygon points="82,52 94,40 94,58 82,70" fill="grey" stroke="#333" stroke-width="0.8"><title>side</title></polygon>
+  <polyline points="30,52 34,60 32,70" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>crack_1</title></polyline>
+  <polyline points="60,44 66,48" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>crack_2</title></polyline>
+</svg>

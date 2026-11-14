@@ -2867,3 +2867,42 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   turn. `npm run build` gives `25e7964c3393` (was `cc8b68a74b53`); nothing else in `index.json` or `vocab.json`
   differs. Numbers: 22 worlds, 918 shards, vocab 23,739 words; 0 errors, 0 warnings. npm test 2,761: 2,755 pass,
   6 skipped, 0 fail.
+
+## Round 11, item 3, part 2 (2026-11-14, first worker): 53 more common things drawn (100 in all); three hand links
+
+- **Which** (MISSING.md, next by frequency after part 1, ranks 705 to 943): graffiti, windshield, antenna, gavel,
+  helm, tofu, greenhouse, tile, ashtray, locket, risotto, aquarium, basin, portfolio, buggy, trifle, binoculars,
+  cello, stocking, chime (as tubular bells, the sense kept), blindfold, radiator, mortar (the gun), bugle,
+  billboard, clockwork, bellows, meatball, cider, barricade, freighter, observatory, chainsaw, slab, tanker,
+  pendant, harmonica, vial, grinder (the sandwich), cheesecake, battleship, burr, machete, jukebox, doorknob,
+  mainframe, scuba, mast, shawl, caddy (the tea tin), schnapps, brig, seatbelt. Shards `places-3`, `food-3`,
+  `vehicles-2`, `things-3` grew.
+- **Found while drawing, a drawing already there under another name:** `tram` (Noto) for trolley, `"nazar
+  amulet"` for amulet (I had drawn the same eye), `blusher` (Mulberry) for rouge. They became hand links in
+  `hand-links.tsv` (`trolley` same tram, `rouge` same blusher, `amulet` kind `"nazar amulet"`), not drawings;
+  looked at all three. A test that would have found them before drawing: a word of the missing list that is a
+  tag of an imported drawing (the check script of this part, not in the repository).
+- **Passed over** (ranks 705 to 943): sonar, detonator, ledge, throttle, arcade, rye, rung, cockpit, archive, casing,
+  hub, sesame, wreckage, pollen, mound (of baseball), peninsula, myrtle, rink, bog, rudder (of an aircraft), hoop
+  (of a skirt), talisman (a word of the amulet), crypt, snowball (a plant), viola (a plant), wick, brewery, fender,
+  cowl, muzzle (parts or rooms or places with no one shape, or plants with no drawable form in the sense kept),
+  barley (a grain), trolley, amulet (above).
+- **Place and size** in `k.scenes.thing` for the 100 new drawings and the two animals drawn under another name
+  (`sources/hand-core/place-size.tsv`, 90 rows, named=model): without them 159 objects had no place or size (the
+  test allows 5%). Three `on` values were changed after the anchor test (no anchor for drawer, floor, leg). The
+  iceberg now stands in the water band of the arctic scene, not on the snow.
+- **The ships and the iceberg carry no water of their own** (destroyer redrawn): a drawing is the thing alone.
+- **Looked at:** the 53 new drawings and the three linked ones on two contact sheets (140 px, name underneath);
+  burr (its hooks made a face) and seatbelt (a grey tower) redrawn and looked at again; the arctic scene. Verdict
+  with the name: all recognisable; **weakest without it: stocking (a brown boot), cheesecake (a box), buggy (a
+  black hood), clockwork, harness, tile (a chequer).** Not looked at: the 90 place and size rows one by one after
+  writing them (written from the name, as the table's other rows).
+- New links by rule: `hoarding` = billboard, `windscreen` = windshield (WordNet synonyms; my hand words for them
+  were dropped).
+- **The 100 of Round 11 item 3:** 100 common things drawn (98 in the sense kept; eel and raspberry show another
+  physical sense), three linked, three animals drawn under their own name.
+- Numbers: k.objects 2,211 objects (328 hand-written); the four shards grown: `places-3` 116 wires / 16,109 bytes,
+  `food-3` 292 / 37,931, `vehicles-2` 204 / 26,831, `things-3` 1,175 / 151,156. Coverage of the 1,500 common
+  things, before item 3 and now: a drawing of its name 680 to 780 (52%), a link 343 to 352, neither 477 to 368
+  (25%); place 693 to 782 by name, size 710 to 799. Joins: 70 clashes (68 before item 3). Catalog 22 worlds, 918
+  shards, vocab 23,739 to 24,035 words; 0 errors, 0 warnings. npm test 2,814: 2,813 pass, 1 skipped, 0 fail.

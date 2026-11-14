@@ -1,4 +1,4 @@
-# k.scenes/shards/things-v: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 30 things (the drawable things and the animals of k.animals) whose name starts with "v"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-v: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 31 things (the drawable things and the animals of k.animals) whose name starts with "v"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -13,6 +13,7 @@
 @k.scenes.thing.vertical_blinds k.scenes.thing name="vertical blinds" place=on_thing on=window size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.vertical_traffic_light k.scenes.thing name="vertical traffic light" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.vest k.scenes.thing name=vest place=on_thing on=person size=small named=model core.source="hand-core 1"
+@k.scenes.thing.vial k.scenes.thing name=vial place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.vice k.scenes.thing name=vice place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.video_camera k.scenes.thing name="video camera" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.video_game k.scenes.thing name="video game" place=indoors size=small named=model core.source="hand-core 1"

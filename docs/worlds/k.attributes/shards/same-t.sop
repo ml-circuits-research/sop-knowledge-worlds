@@ -1,4 +1,4 @@
-# k.attributes/shards/same-t: one name, one thing: for 217 names that start with "t" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (11 facts of such names here).
+# k.attributes/shards/same-t: one name, one thing: for 218 names that start with "t" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (11 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -30,7 +30,7 @@
 @k.attributes.same.tanabata_tree.thing k.attributes.same name="tanabata tree" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tangerine.food k.attributes.same name=tangerine sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tank.thing k.attributes.same name=tank sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.tanker.thing k.attributes.same name=tanker sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.tanker.thing k.attributes.same name=tanker sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tap.thing k.attributes.same name=tap sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tape.thing k.attributes.same name=tape sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tape_measure.thing k.attributes.same name="tape measure" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -54,7 +54,7 @@
 @k.attributes.same.tear-off_calendar.thing k.attributes.same name="tear-off calendar" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.teddy.thing k.attributes.same name=teddy sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.teddy_bear.thing k.attributes.same name="teddy bear" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.telegraph.thing k.attributes.same name=telegraph sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.telegraph.thing k.attributes.same name=telegraph sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.telephone.thing k.attributes.same name=telephone sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.telephone_handset.thing k.attributes.same name="telephone handset" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.telephone_receiver.thing k.attributes.same name="telephone receiver" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -97,7 +97,7 @@
 @k.attributes.same.tights.clothing k.attributes.same name=tights sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tigress.thing k.attributes.same name=tigress sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tijuana.place k.attributes.same name=tijuana sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.tile.thing k.attributes.same name=tile sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.tile.thing k.attributes.same name=tile sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.timer.thing k.attributes.same name=timer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.timer_clock.thing k.attributes.same name="timer clock" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tin.thing k.attributes.same name=tin sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -124,7 +124,7 @@
 @k.attributes.same.toaster.thing k.attributes.same name=toaster sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.toe.body_part k.attributes.same name=toe sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.toffee.thing k.attributes.same name=toffee sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.tofu.food k.attributes.same name=tofu sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.tofu.food k.attributes.same name=tofu sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.toilet.thing k.attributes.same name=toilet sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.toilet_roll.thing k.attributes.same name="toilet roll" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tokyo.place k.attributes.same name=tokyo sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
@@ -138,7 +138,7 @@
 @k.attributes.same.tone.place k.attributes.same name=tone sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tongs.thing k.attributes.same name=tongs sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tongue.body_part k.attributes.same name=tongue sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.tonic.food k.attributes.same name=tonic sense=food only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.tonic.food k.attributes.same name=tonic sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.toolbox.thing k.attributes.same name=toolbox sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tooth.body_part k.attributes.same name=tooth sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.toothbrush.thing k.attributes.same name=toothbrush sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
@@ -186,6 +186,7 @@
 @k.attributes.same.triangle.shape k.attributes.same name=triangle sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.triangular_ruler.thing k.attributes.same name="triangular ruler" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.trident.thing k.attributes.same name=trident sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.trifle.food k.attributes.same name=trifle sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.trinity.place k.attributes.same name=trinity sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tripod.thing k.attributes.same name=tripod sense=thing only=true in=k.attributes.number in=k.objects.object by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.triton.body_in_space k.attributes.same name=triton sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
@@ -224,5 +225,5 @@
 @k.attributes.same.tuxedo.clothing k.attributes.same name=tuxedo sense=clothing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.twig.plant k.attributes.same name=twig sense=plant only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.two-hump_camel.animal k.attributes.same name="two-hump camel" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.typewriter.thing k.attributes.same name=typewriter sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.typewriter.thing k.attributes.same name=typewriter sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tyrannosaurus.thing k.attributes.same name=tyrannosaurus sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

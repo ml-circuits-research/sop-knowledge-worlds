@@ -8,35 +8,35 @@ the place of the dog).
 
 ## Drawings
 
-- a drawing of its own name: 727 (48%)
-- no drawing, but a synonym or a stand-in with one: 347 (23%)
-- neither: 426 (28%)
+- a drawing of its own name: 780 (52%)
+- no drawing, but a synonym or a stand-in with one: 352 (23%)
+- neither: 368 (25%)
 - the most frequent with neither: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail
 
 ## Attributes
 
 | attribute | by its name | through its drawing | none | where |
 |---|---:|---:|---:|---|
-| place | 693 (46%) | 318 (21%) | 489 (33%) | `k.scenes.thing` (place) |
-| size | 710 (47%) | 331 (22%) | 459 (31%) | `k.scenes.thing` (size) |
+| place | 782 (52%) | 325 (22%) | 393 (26%) | `k.scenes.thing` (place) |
+| size | 799 (53%) | 338 (23%) | 363 (24%) | `k.scenes.thing` (size) |
 | colour (usual colour of the thing) | 225 (15%) | 48 (3%) | 1227 (82%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour (the usual one, or said to be any colour) | 312 (21%) | 90 (6%) | 1098 (73%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour the thing is drawn in | 700 (47%) | 373 (25%) | 427 (28%) | `k.attributes.drawn` (drawn_colour) |
-| colour of the parts of a drawing | 701 (47%) | 373 (25%) | 426 (28%) | `k.objects.part` (colour) |
+| colour the thing is drawn in | 753 (50%) | 378 (25%) | 369 (25%) | `k.attributes.drawn` (drawn_colour) |
+| colour of the parts of a drawing | 754 (50%) | 378 (25%) | 368 (25%) | `k.objects.part` (colour) |
 | parts (WordNet, own or inherited) | 541 (36%) | 58 (4%) | 901 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
-| parts (WordNet, or usual parts in plain words) | 970 (65%) | 45 (3%) | 485 (32%) | `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has) |
-| parts (named parts of a drawing) | 592 (39%) | 316 (21%) | 592 (39%) | `k.objects.part` (name) |
+| parts (WordNet, or usual parts in plain words) | 970 (65%) | 46 (3%) | 484 (32%) | `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has) |
+| parts (named parts of a drawing) | 645 (43%) | 320 (21%) | 535 (36%) | `k.objects.part` (name) |
 | parts or joins between kinds | 64 (4%) | 78 (5%) | 1358 (91%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 102 (7%) | 1265 (84%) | `k.layouts.anchor` (kind) |
-| material | 303 (20%) | 104 (7%) | 1093 (73%) | `k.attributes.thing` (material), `k.commonsense.thing` (made_of) |
-| what it can do | 276 (18%) | 64 (4%) | 1160 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 336 (22%) | 142 (9%) | 1022 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
+| material | 303 (20%) | 105 (7%) | 1092 (73%) | `k.attributes.thing` (material), `k.commonsense.thing` (made_of) |
+| what it can do | 276 (18%) | 65 (4%) | 1159 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| what it is used for | 336 (22%) | 143 (10%) | 1021 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
 | wheels | 33 (2%) | 12 (1%) | 1455 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
-| size in metres (the longest side) | 975 (65%) | 66 (4%) | 459 (31%) | `k.attributes.number` (size_about) |
-| weight in kilograms | 855 (57%) | 38 (3%) | 607 (40%) | `k.attributes.number` (weight_about), `k.body.part` (weight_about) |
-| speed (top speed in km/h) | 232 (15%) | 18 (1%) | 1250 (83%) | `k.attributes.number` (speed_about) |
-| price class | 645 (43%) | 42 (3%) | 813 (54%) | `k.attributes.number` (price_class) |
+| size in metres (the longest side) | 975 (65%) | 68 (5%) | 457 (30%) | `k.attributes.number` (size_about) |
+| weight in kilograms | 855 (57%) | 40 (3%) | 605 (40%) | `k.attributes.number` (weight_about), `k.body.part` (weight_about) |
+| speed (top speed in km/h) | 232 (15%) | 19 (1%) | 1249 (83%) | `k.attributes.number` (speed_about) |
+| price class | 645 (43%) | 44 (3%) | 811 (54%) | `k.attributes.number` (price_class) |
 | kind (what it is a kind of) | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (is_a, instance_of) |
 | definition | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (gloss) |
 | where it is worn | 37 (2%) | 21 (1%) | 1442 (96%) | `k.wearables.wearable` (worn_on) |
@@ -49,7 +49,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 24 (2%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1239 (83%) |
+| `k.attributes` | 1252 (83%) |
 | `k.body` | 4 (0%) |
 | `k.colours` | 8 (1%) |
 | `k.commonsense` | 17 (1%) |
@@ -57,10 +57,10 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.food` | 147 (10%) |
 | `k.geo` | 20 (1%) |
 | `k.layouts` | 210 (14%) |
-| `k.objects` | 1143 (76%) |
+| `k.objects` | 1190 (79%) |
 | `k.parts` | 977 (65%) |
 | `k.people` | 2 (0%) |
-| `k.scenes` | 735 (49%) |
+| `k.scenes` | 822 (55%) |
 | `k.shapes` | 8 (1%) |
 | `k.space` | 9 (1%) |
 | `k.time` | 1 (0%) |

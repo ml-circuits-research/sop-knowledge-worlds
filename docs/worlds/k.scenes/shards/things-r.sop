@@ -1,4 +1,4 @@
-# k.scenes/shards/things-r: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 93 things (the drawable things and the animals of k.animals) whose name starts with "r"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-r: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 98 things (the drawable things and the animals of k.animals) whose name starts with "r"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -8,6 +8,7 @@
 @k.scenes.thing.raccoon k.scenes.thing name=raccoon place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.racing_car k.scenes.thing name="racing car" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.radar k.scenes.thing name=radar place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.radiator k.scenes.thing name=radiator place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.radio k.scenes.thing name=radio place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.radish k.scenes.thing name=radish place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.raft k.scenes.thing name=raft place=water size=large named=model core.source="hand-core 1"
@@ -22,6 +23,7 @@
 @k.scenes.thing.rake k.scenes.thing name=rake place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.ram k.scenes.thing name=ram place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.ramp k.scenes.thing name=ramp place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.raspberry k.scenes.thing name=raspberry place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.rat k.scenes.thing name=rat place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.rattle_snake k.scenes.thing name="rattle snake" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.rattlesnake k.scenes.thing name=rattlesnake place=ground size=small named=model core.source="hand-core 1"
@@ -38,6 +40,7 @@
 @k.scenes.thing.red_envelope k.scenes.thing name="red envelope" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.red_panda k.scenes.thing name="red panda" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.red_paper_lantern k.scenes.thing name="red paper lantern" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.reel k.scenes.thing name=reel place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.refrigerator k.scenes.thing name=refrigerator place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.refuse_lorry k.scenes.thing name="refuse lorry" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.reindeer k.scenes.thing name=reindeer place=ground size=medium named=model core.source="hand-core 1"
@@ -59,6 +62,7 @@
 @k.scenes.thing.ring_binder k.scenes.thing name="ring binder" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.ring_buoy k.scenes.thing name="ring buoy" place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.ringed_planet k.scenes.thing name="ringed planet" place=sky size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.risotto k.scenes.thing name=risotto place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.river k.scenes.thing name=river place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.river_bank k.scenes.thing name="river bank" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.road k.scenes.thing name=road place=ground size=huge named=model core.source="hand-core 1"
@@ -82,6 +86,7 @@
 @k.scenes.thing.rolling_pin k.scenes.thing name="rolling pin" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.roman_blind k.scenes.thing name="roman blind" place=on_thing on=window size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.roof k.scenes.thing name=roof place=on_thing on=house size=large named=model core.source="hand-core 1"
+@k.scenes.thing.rook k.scenes.thing name=rook place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.rooster k.scenes.thing name=rooster place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.root_vegetable k.scenes.thing name="root vegetable" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.rope k.scenes.thing name=rope size=small named=model core.source="hand-core 1"

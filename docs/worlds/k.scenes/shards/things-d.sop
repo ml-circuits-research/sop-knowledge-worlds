@@ -1,4 +1,4 @@
-# k.scenes/shards/things-d: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 77 things (the drawable things and the animals of k.animals) whose name starts with "d"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-d: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 81 things (the drawable things and the animals of k.animals) whose name starts with "d"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -28,6 +28,7 @@
 @k.scenes.thing.desk_lamp k.scenes.thing name="desk lamp" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.desktop_computer k.scenes.thing name="desktop computer" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.dessert_menu k.scenes.thing name="dessert menu" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.destroyer k.scenes.thing name=destroyer place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.dice k.scenes.thing name=dice place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.dictionary k.scenes.thing name=dictionary place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.diesel_locomotive k.scenes.thing name="diesel locomotive" place=ground size=huge named=model core.source="hand-core 1"
@@ -54,6 +55,7 @@
 @k.scenes.thing.donkey k.scenes.thing name=donkey place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.door k.scenes.thing name=door place=on_thing on=wall size=large named=model core.source="hand-core 1"
 @k.scenes.thing.doorbell k.scenes.thing name=doorbell place=on_thing on=wall size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.doorknob k.scenes.thing name=doorknob place=on_thing on=door size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.double_bed k.scenes.thing name="double bed" place=indoors size=large named=model core.source="hand-core 1"
 @k.scenes.thing.dough k.scenes.thing name=dough place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.doughnut k.scenes.thing name=doughnut place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -75,8 +77,10 @@
 @k.scenes.thing.dropper_pipette k.scenes.thing name="dropper pipette" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.drum k.scenes.thing name=drum place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.drumsticks k.scenes.thing name=drumsticks place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.dryer k.scenes.thing name=dryer place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.duck k.scenes.thing name=duck place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.dumper_truck k.scenes.thing name="dumper truck" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.dumpling k.scenes.thing name=dumpling place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.dung_beetle k.scenes.thing name="dung beetle" size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.dungeon k.scenes.thing name=dungeon place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.dvd k.scenes.thing name=dvd place=indoors on=table size=small named=model core.source="hand-core 1"

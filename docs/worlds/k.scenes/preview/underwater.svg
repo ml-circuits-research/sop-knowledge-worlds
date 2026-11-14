@@ -189,14 +189,6 @@
   <polygon points="82.5,82 81.3,82.3 77.3,86.9 71.1,90 70.8,91.1 72.4,91.8 74.2,91.6 79.1,89.1 83,84.8 83.3,82.7" fill="#FFFFFF"><title>part8</title></polygon>
   <polygon points="93.3,46.8 92.8,41.6 92,40.7 90.7,40.9 90.4,42 90.9,46 90.4,48.5 89.3,50.6 86,53.7 86,54.4 88,54.1 90.4,52.4 92.2,50" fill="#FFFFFF"><title>part9</title></polygon>
     </symbol>
-    <symbol id="o-seaweed" viewBox="0 0 100 100">
-  <ellipse cx="50" cy="91" rx="20" ry="7" fill="grey" stroke="#333" stroke-width="0.8"><title>rock</title></ellipse>
-  <polygon points="40,88 36,70 42,54 36,36 42,18 46,20 40,36 46,54 40,70 44,88" fill="green" stroke="#333" stroke-width="0.8"><title>frond_1</title></polygon>
-  <polygon points="50,88 56,66 50,46 58,26 54,8 58,8 62,26 54,46 60,66 54,88" fill="green" stroke="#333" stroke-width="0.8"><title>frond_2</title></polygon>
-  <polygon points="58,88 64,74 60,60 68,44 72,44 64,60 68,74 62,88" fill="brown" stroke="#333" stroke-width="0.8"><title>frond_3</title></polygon>
-  <ellipse cx="74" cy="22" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>bubble_1</title></ellipse>
-  <ellipse cx="79.5" cy="31.5" rx="1.5" ry="1.5" fill="blue" stroke="#333" stroke-width="0.8"><title>bubble_2</title></ellipse>
-    </symbol>
     <symbol id="o-rock" viewBox="0 0 100 100">
   <polygon points="7,70.9 4.7,63.6 5.5,57.3 8.8,49.2 16.4,35.1 18.9,33.1 32.6,24.6 47.6,9.4 60.9,6 63.6,5.9 65.4,6.7 71.8,15.8 88.2,42.6 88.8,53.6 92.1,64.6 92,73 91.1,78.4 85.9,86.5 84.5,87.9 79.8,89.8 62.6,95.7 55.7,95 19.8,89.3 16.6,88.2 14.9,86.7" fill="#8E8884"><title>part1</title></polygon>
   <polygon points="24.5,89.8 47.3,93.6 38.6,83.6 40.3,73.4 25.5,75.9 19.3,70.4 13.1,63.1 10.3,59.1 9.7,57.4 11.3,44.4 5.5,57.3 4.7,61.5 5.1,65.8 9.7,76.9 14.9,86.7 17.6,88.7" fill="#37474F"><title>part2</title></polygon>
@@ -249,6 +241,14 @@
   <polygon points="39.7,78.6 35.6,84.2 31.6,85.5 29.7,77 31.1,73.2 36.5,73.2" fill="#00DEC0"><title>part14</title></polygon>
   <polygon points="23.2,86.8 25.6,84.6 23.9,77 26.6,71.8 26.1,68.1 24.1,65.2 18,63.3 13.6,67.1 14.2,75.6 9.8,80 15.8,87.6 15.4,82.5" fill="#00DEC0"><title>part15</title></polygon>
   <polygon points="17.1,67.9 21.8,71.3 24.7,67.6 18.9,64.3" fill="#09B7A0"><title>part16</title></polygon>
+    </symbol>
+    <symbol id="o-seaweed" viewBox="0 0 100 100">
+  <ellipse cx="50" cy="91" rx="20" ry="7" fill="grey" stroke="#333" stroke-width="0.8"><title>rock</title></ellipse>
+  <polygon points="40,88 36,70 42,54 36,36 42,18 46,20 40,36 46,54 40,70 44,88" fill="green" stroke="#333" stroke-width="0.8"><title>frond_1</title></polygon>
+  <polygon points="50,88 56,66 50,46 58,26 54,8 58,8 62,26 54,46 60,66 54,88" fill="green" stroke="#333" stroke-width="0.8"><title>frond_2</title></polygon>
+  <polygon points="58,88 64,74 60,60 68,44 72,44 64,60 68,74 62,88" fill="brown" stroke="#333" stroke-width="0.8"><title>frond_3</title></polygon>
+  <ellipse cx="74" cy="22" rx="2" ry="2" fill="blue" stroke="#333" stroke-width="0.8"><title>bubble_1</title></ellipse>
+  <ellipse cx="79.5" cy="31.5" rx="1.5" ry="1.5" fill="blue" stroke="#333" stroke-width="0.8"><title>bubble_2</title></ellipse>
     </symbol>
     <symbol id="o-starfish" viewBox="0 0 100 100">
   <polygon points="90.6,41.8 93.5,44.5 91.2,47.3 65.4,57 72.7,81.4 71.9,85.3 69,86 64.7,83.3 53.3,68.1 49.7,64.6 45.9,66.8 30.9,83.1 27.6,84.5 24.8,83.6 24.1,81.5 24.8,77.7 33.4,55.9 9.7,45 7.4,43.5 6.3,41.3 8.4,39.2 12.6,38.6 40.5,41.2 47.2,16.7 49,13.8 51.1,13.3 53.6,14.6 54.9,18.3 58,35.3 56.6,35 55.9,36.2 57.1,37 58.2,36.2 58.8,39 57,38.7 56.9,40.3 59,39.8 59.6,41.9" fill="#F6CC4B"><title>part1</title></polygon>
@@ -339,24 +339,24 @@
   <use href="#o-bubbles" x="393.2" y="258.8" width="20" height="20"><title>bubbles</title></use>
   <use href="#o-bubbles" x="419.5" y="258.8" width="20" height="20"><title>bubbles</title></use>
   <use href="#o-bubbles" x="445.7" y="258.8" width="20" height="20"><title>bubbles</title></use>
-  <use href="#o-seaweed" x="14.6" y="284.8" width="46" height="46"><title>seaweed</title></use>
-  <use href="#o-seaweed" x="67.2" y="284.8" width="46" height="46"><title>seaweed</title></use>
-  <use href="#o-seaweed" x="119.8" y="284.8" width="46" height="46"><title>seaweed</title></use>
-  <use href="#o-rock" x="172.4" y="284.8" width="46" height="46"><title>rock</title></use>
-  <use href="#o-rock" x="225" y="284.8" width="46" height="46"><title>rock</title></use>
-  <use href="#o-rock" x="277.6" y="284.8" width="46" height="46"><title>rock</title></use>
-  <use href="#o-treasure_chest" x="330.2" y="284.8" width="46" height="46"><title>treasure chest</title></use>
-  <use href="#o-anchor" x="382.8" y="284.8" width="46" height="46"><title>anchor</title></use>
-  <use href="#o-coral" x="435.4" y="300.8" width="30" height="30"><title>coral</title></use>
-  <use href="#o-coral" x="21.7" y="336.8" width="30" height="30"><title>coral</title></use>
-  <use href="#o-coral" x="65.3" y="336.8" width="30" height="30"><title>coral</title></use>
-  <use href="#o-starfish" x="109" y="336.8" width="30" height="30"><title>starfish</title></use>
-  <use href="#o-starfish" x="152.7" y="336.8" width="30" height="30"><title>starfish</title></use>
-  <use href="#o-starfish" x="196.3" y="336.8" width="30" height="30"><title>starfish</title></use>
-  <use href="#o-crab" x="240" y="336.8" width="30" height="30"><title>crab</title></use>
-  <use href="#o-crab" x="283.7" y="336.8" width="30" height="30"><title>crab</title></use>
-  <use href="#o-lobster" x="327.3" y="336.8" width="30" height="30"><title>lobster</title></use>
-  <use href="#o-shell" x="371" y="346.8" width="20" height="20"><title>shell</title></use>
-  <use href="#o-shell" x="404.7" y="346.8" width="20" height="20"><title>shell</title></use>
-  <use href="#o-shell" x="438.3" y="346.8" width="20" height="20"><title>shell</title></use>
+  <use href="#o-rock" x="15.6" y="284.8" width="46" height="46"><title>rock</title></use>
+  <use href="#o-rock" x="69.3" y="284.8" width="46" height="46"><title>rock</title></use>
+  <use href="#o-rock" x="122.9" y="284.8" width="46" height="46"><title>rock</title></use>
+  <use href="#o-treasure_chest" x="176.5" y="284.8" width="46" height="46"><title>treasure chest</title></use>
+  <use href="#o-anchor" x="230.2" y="284.8" width="46" height="46"><title>anchor</title></use>
+  <use href="#o-coral" x="283.8" y="300.8" width="30" height="30"><title>coral</title></use>
+  <use href="#o-coral" x="321.5" y="300.8" width="30" height="30"><title>coral</title></use>
+  <use href="#o-coral" x="359.1" y="300.8" width="30" height="30"><title>coral</title></use>
+  <use href="#o-seaweed" x="396.7" y="300.8" width="30" height="30"><title>seaweed</title></use>
+  <use href="#o-seaweed" x="434.4" y="300.8" width="30" height="30"><title>seaweed</title></use>
+  <use href="#o-seaweed" x="25.6" y="336.8" width="30" height="30"><title>seaweed</title></use>
+  <use href="#o-starfish" x="73.3" y="336.8" width="30" height="30"><title>starfish</title></use>
+  <use href="#o-starfish" x="120.9" y="336.8" width="30" height="30"><title>starfish</title></use>
+  <use href="#o-starfish" x="168.5" y="336.8" width="30" height="30"><title>starfish</title></use>
+  <use href="#o-crab" x="216.2" y="336.8" width="30" height="30"><title>crab</title></use>
+  <use href="#o-crab" x="263.8" y="336.8" width="30" height="30"><title>crab</title></use>
+  <use href="#o-lobster" x="311.5" y="336.8" width="30" height="30"><title>lobster</title></use>
+  <use href="#o-shell" x="359.1" y="346.8" width="20" height="20"><title>shell</title></use>
+  <use href="#o-shell" x="396.7" y="346.8" width="20" height="20"><title>shell</title></use>
+  <use href="#o-shell" x="434.4" y="346.8" width="20" height="20"><title>shell</title></use>
 </svg>

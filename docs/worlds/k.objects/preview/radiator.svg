@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>radiator</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="16" y="80" width="4" height="10" fill="grey" stroke="#333" stroke-width="0.8"><title>foot_1</title></rect>
+  <rect x="80" y="80" width="4" height="10" fill="grey" stroke="#333" stroke-width="0.8"><title>foot_2</title></rect>
+  <polyline points="91,78 91,96" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>pipe</title></polyline>
+  <rect x="14" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_1</title></rect>
+  <rect x="23" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_2</title></rect>
+  <rect x="32" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_3</title></rect>
+  <rect x="41" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_4</title></rect>
+  <rect x="50" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_5</title></rect>
+  <rect x="59" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_6</title></rect>
+  <rect x="68" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_7</title></rect>
+  <rect x="77" y="28" width="7" height="52" fill="white" stroke="#333" stroke-width="0.8"><title>fin_8</title></rect>
+  <rect x="12" y="32" width="76" height="4" fill="white" stroke="#333" stroke-width="0.8"><title>top_pipe</title></rect>
+  <rect x="12" y="72" width="76" height="4" fill="white" stroke="#333" stroke-width="0.8"><title>bottom_pipe</title></rect>
+  <rect x="88" y="70" width="6" height="8" fill="grey" stroke="#333" stroke-width="0.8"><title>valve</title></rect>
+  <polyline points="36,22 40,16 36,10" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>heat_1</title></polyline>
+  <polyline points="50,22 54,16 50,10" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>heat_2</title></polyline>
+  <polyline points="64,22 68,16 64,10" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>heat_3</title></polyline>
+  <ellipse cx="91" cy="65" rx="3" ry="3" fill="red" stroke="#333" stroke-width="0.8"><title>knob</title></ellipse>
+</svg>

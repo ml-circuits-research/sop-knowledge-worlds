@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>battleship</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polyline points="50,18 50,4" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mast</title></polyline>
+  <rect x="46" y="18" width="8" height="16" fill="grey" stroke="#333" stroke-width="0.8"><title>tower</title></rect>
+  <rect x="38" y="34" width="24" height="22" fill="grey" stroke="#333" stroke-width="0.8"><title>superstructure</title></rect>
+  <rect x="63" y="38" width="7" height="18" fill="grey" stroke="#333" stroke-width="0.8"><title>funnel_1</title></rect>
+  <rect x="71" y="40" width="6" height="16" fill="grey" stroke="#333" stroke-width="0.8"><title>funnel_2</title></rect>
+  <rect x="12" y="50" width="10" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>turret_1</title></rect>
+  <rect x="24" y="50" width="10" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>turret_2</title></rect>
+  <rect x="82" y="50" width="10" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>turret_3</title></rect>
+  <polyline points="12,51 2,49" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>barrel_1</title></polyline>
+  <polyline points="12,54 2,52" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>barrel_2</title></polyline>
+  <polyline points="24,51 14,47" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>barrel_3</title></polyline>
+  <polyline points="92,51 98,49" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>barrel_4</title></polyline>
+  <polygon points="2,56 98,56 90,74 8,74" fill="grey" stroke="#333" stroke-width="0.8"><title>hull</title></polygon>
+  <polyline points="40,40 60,40" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>windows</title></polyline>
+  <polyline points="6,68 92,68" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>waterline</title></polyline>
+</svg>

@@ -1,4 +1,4 @@
-# k.scenes/shards/things-p: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 206 things (the drawable things and the animals of k.animals) whose name starts with "p"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-p: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 210 things (the drawable things and the animals of k.animals) whose name starts with "p"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -68,6 +68,7 @@
 @k.scenes.thing.pencil_box k.scenes.thing name="pencil box" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pencil_case k.scenes.thing name="pencil case" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pencil_sharpener k.scenes.thing name="pencil sharpener" place=indoors on=table size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.pendant k.scenes.thing name=pendant place=on_thing on=person size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.penguin k.scenes.thing name=penguin place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.pepper k.scenes.thing name=pepper place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pepper_mill k.scenes.thing name="pepper mill" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -126,6 +127,7 @@
 @k.scenes.thing.plastic_bottle k.scenes.thing name="plastic bottle" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.plastic_pocket k.scenes.thing name="plastic pocket" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.plate k.scenes.thing name=plate place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.plateau k.scenes.thing name=plateau place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.platypus k.scenes.thing name=platypus place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.playdough k.scenes.thing name=playdough place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.playground_slide k.scenes.thing name="playground slide" place=ground size=large named=model core.source="hand-core 1"
@@ -167,7 +169,9 @@
 @k.scenes.thing.pork_chop k.scenes.thing name="pork chop" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.porpoise k.scenes.thing name=porpoise place=water size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.porridge k.scenes.thing name=porridge place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.portfolio k.scenes.thing name=portfolio place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.portrait k.scenes.thing name=portrait place=on_thing on=wall size=small named=model core.source="hand-core 1"
+@k.scenes.thing.possum k.scenes.thing name=possum place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.post_office k.scenes.thing name="post office" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.post_van k.scenes.thing name="post van" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.post-it k.scenes.thing name=post-it place=indoors on=table size=small named=model core.source="hand-core 1"

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>barricade</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="12" y="26" width="6" height="68" fill="grey" stroke="#333" stroke-width="0.8"><title>leg_1</title></rect>
+  <rect x="82" y="26" width="6" height="68" fill="grey" stroke="#333" stroke-width="0.8"><title>leg_2</title></rect>
+  <rect x="6" y="90" width="18" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>foot_1</title></rect>
+  <rect x="76" y="90" width="18" height="6" fill="grey" stroke="#333" stroke-width="0.8"><title>foot_2</title></rect>
+  <rect x="6" y="30" width="88" height="12" fill="white" stroke="#333" stroke-width="0.8"><title>top_board</title></rect>
+  <rect x="6" y="52" width="88" height="12" fill="white" stroke="#333" stroke-width="0.8"><title>bottom_board</title></rect>
+  <polygon points="12,30 22,30 16,42 6,42" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_1</title></polygon>
+  <polygon points="12,52 22,52 16,64 6,64" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_5</title></polygon>
+  <polygon points="32,30 42,30 36,42 26,42" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_2</title></polygon>
+  <polygon points="32,52 42,52 36,64 26,64" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_6</title></polygon>
+  <polygon points="52,30 62,30 56,42 46,42" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_3</title></polygon>
+  <polygon points="52,52 62,52 56,64 46,64" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_7</title></polygon>
+  <polygon points="72,30 82,30 76,42 66,42" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_4</title></polygon>
+  <polygon points="72,52 82,52 76,64 66,64" fill="orange" stroke="#333" stroke-width="0.8"><title>stripe_8</title></polygon>
+  <ellipse cx="51" cy="25" rx="5" ry="5" fill="orange" stroke="#333" stroke-width="0.8"><title>light</title></ellipse>
+</svg>

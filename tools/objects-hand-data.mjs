@@ -5,6 +5,12 @@
 // Lines made by a rule: n lines from f(i), i = 0 .. n-1.
 const rep = (n, f) => Array.from({ length: n }, (_, i) => f(i)).join('\n');
 
+// A closed star of n points around cx, cy: radii r1 (inner) and r2 (outer), a gear or a burr.
+const star = (cx, cy, r1, r2, n) => Array.from({ length: 2 * n }, (_, i) => {
+  const a = (Math.PI * i) / n - Math.PI / 2, r = i % 2 ? r1 : r2;
+  return `${Math.round((cx + r * Math.cos(a)) * 10) / 10},${Math.round((cy + r * Math.sin(a)) * 10) / 10}`;
+}).join(' ');
+
 // A four-legged animal seen from the side, facing right; what differs is said by the options.
 function quad({ c, c2 = c, ears = 'pointed', tail = 'long', tailColour = c, leg = 34, extra = '' }) {
   const legY = 56, legH = Math.min(leg, 100 - legY);
@@ -277,6 +283,39 @@ export const objectsData = {
       base rectangle 14 56 72 28 | 2 white
 ${rep(6, (i) => `      column_${i + 1} rectangle ${18 + i * 12} 58 4 24 | 3 grey kind=column`)}
       steps rectangle 10 84 80 8 | 1 white`],
+    ['greenhouse', ['greenhouses', 'glasshouse', 'hothouse'], `
+      ground rectangle 0 86 100 14 | 0 green
+      house polygon 14,86 14,46 50,20 86,46 86,86 | 1 white
+      plant_1 oval 18 68 12 18 | 2 green kind=plant
+      plant_2 oval 36 72 10 14 | 2 green kind=plant
+      plant_3 oval 70 68 12 18 | 2 green kind=plant
+      door rectangle 44 64 12 22 | 2 white
+      frame_1 line 32,86 32,33 | 3 grey kind=frame
+      frame_2 line 50,86 50,20 | 3 grey kind=frame
+      frame_3 line 68,86 68,33 | 3 grey kind=frame
+      frame_4 line 14,60 86,60 | 3 grey kind=frame
+      roof line 14,46 50,20 86,46 | 3 grey`],
+    ['observatory', ['observatories'], `
+      ground rectangle 0 86 100 14 | 0 green
+      star_1 circle 10 10 3 3 | 0 yellow kind=star
+      star_2 circle 84 8 3 3 | 0 yellow kind=star
+      star_3 circle 90 30 3 3 | 0 yellow kind=star
+      dome oval 22 26 56 52 | 0 white
+      slit polygon 46,28 54,28 54,52 46,52 | 1 black
+      telescope polygon 50,40 70,18 74,22 54,44 | 1 grey
+      building rectangle 22 52 56 34 | 2 white
+      door rectangle 44 68 12 18 | 3 brown
+      window_1 circle 30 60 8 8 | 3 blue kind=window
+      window_2 circle 62 60 8 8 | 3 blue kind=window`],
+    ['billboard', ['billboards'], `
+      post_1 rectangle 26 60 6 36 | 0 grey kind=post
+      post_2 rectangle 68 60 6 36 | 0 grey kind=post
+      board rectangle 6 14 88 48 | 1 white
+      picture circle 12 22 24 24 | 2 red
+      text_1 line 42,26 86,26 | 2 black kind=text_line
+      text_2 line 42,36 80,36 | 2 black kind=text_line
+      text_3 line 42,46 84,46 | 2 black kind=text_line
+      walkway rectangle 6 62 88 3 | 1 grey`],
   ],
   'food-3': [
     ['raspberry', ['raspberries'], `
@@ -329,10 +368,83 @@ ${rep(4, (i) => `      bubble_${i + 1} circle ${38 + i * 6} ${80 - i * 7} 3 3 | 
       curl_2 arc 77 49 4 6 | 3 brown opens=left kind=curl
       curl_3 arc 85 61 4 6 | 3 brown opens=left kind=curl
       twine rectangle 42 30 6 44 | 4 red`],
+    ['tofu', ['bean curd'], `
+      plate oval 6 60 88 30 | 1 blue
+      front rectangle 26 46 40 30 | 2 white
+      top polygon 26,46 38,36 78,36 66,46 | 3 white
+      side polygon 66,46 78,36 78,66 66,76 | 3 grey
+      chopstick_1 line 50,20 94,52 | 4 brown kind=chopstick
+      chopstick_2 line 56,16 96,46 | 4 brown kind=chopstick`],
+    ['risotto', ['risottos'], `
+      plate oval 6 46 88 40 | 1 white
+      risotto oval 18 50 64 28 | 2 yellow
+${rep(6, (i) => `      grain_${i + 1} oval ${26 + (i % 3) * 16} ${56 + Math.floor(i / 3) * 10} 6 3 | 3 white kind=grain`)}
+      pea_1 circle 34 60 5 5 | 3 green kind=pea
+      pea_2 circle 58 54 5 5 | 3 green kind=pea
+      pea_3 circle 64 68 5 5 | 3 green kind=pea
+      mushroom_1 polygon 42,62 50,60 52,66 44,68 | 3 brown kind=mushroom
+      mushroom_2 polygon 26,64 32,62 34,68 28,70 | 3 brown kind=mushroom`],
+    ['trifle', ['trifles'], `
+      base rectangle 32 84 36 6 | 1 white
+      foot rectangle 42 80 16 4 | 1 white
+      bowl polygon 20,30 80,30 72,80 28,80 | 1 white
+      sponge polygon 25.8,66 74.2,66 72.3,78 27.7,78 | 2 brown
+      jelly polygon 23.8,54 76.2,54 74.2,66 25.8,66 | 2 red
+      custard polygon 21.9,42 78.1,42 76.2,54 23.8,54 | 2 yellow
+      cream polygon 20.6,34 79.4,34 78.1,42 21.9,42 | 2 white
+      cream_top oval 26 24 48 14 | 3 white
+      cherry circle 46 16 8 8 | 4 red`],
+    ['meatball', [], `
+      plate oval 6 50 88 36 | 1 white
+      sauce oval 18 54 64 26 | 2 red
+      meatball_3 circle 38 38 20 20 | 3 brown kind=meatball
+      meatball_1 circle 22 48 22 22 | 4 brown kind=meatball
+      meatball_2 circle 48 50 22 22 | 4 brown kind=meatball
+      parsley_1 circle 30 52 3 3 | 5 green kind=parsley
+      parsley_2 circle 58 54 3 3 | 5 green kind=parsley
+      parsley_3 circle 46 42 3 3 | 5 green kind=parsley`],
+    ['cider', ['ciders'], `
+      handle arc 56 40 16 30 | 0 grey opens=left
+      glass polygon 22,28 62,28 60,88 24,88 | 1 white
+      cider polygon 23,36 61,36 60,86 24,86 | 2 yellow
+${rep(3, (i) => `      bubble_${i + 1} circle ${32 + i * 10} ${74 - i * 12} 3 3 | 3 white kind=bubble`)}
+      apple circle 66 62 26 26 | 3 red
+      stem line 79,63 80,56 | 4 brown
+      leaf polygon 80,57 88,51 89,57 | 4 green`],
+    ['grinder', ['grinders', 'submarine sandwich', 'hoagie'], `
+      bottom_bun polygon 6,60 94,60 90,72 10,72 | 1 brown
+      lettuce polygon 6,58 14,54 22,60 30,54 38,60 46,54 54,60 62,54 70,60 78,54 86,60 94,56 94,62 6,62 | 2 green
+      tomato_1 oval 14 50 20 6 | 3 red kind=tomato
+      tomato_2 oval 40 50 20 6 | 3 red kind=tomato
+      tomato_3 oval 66 50 20 6 | 3 red kind=tomato
+      meat rectangle 8 46 84 6 | 3 pink
+      cheese_1 triangle 12 44 14 10 | 4 yellow pointing=down kind=cheese
+      cheese_2 triangle 46 44 14 10 | 4 yellow pointing=down kind=cheese
+      cheese_3 triangle 74 44 14 10 | 4 yellow pointing=down kind=cheese
+      top_bun polygon 4,46 10,30 30,24 70,24 90,30 96,46 | 5 brown
+      seed_1 oval 30 30 4 2 | 6 white kind=seed
+      seed_2 oval 50 28 4 2 | 6 white kind=seed
+      seed_3 oval 70 31 4 2 | 6 white kind=seed`],
+    ['cheesecake', ['cheesecakes'], `
+      crust polygon 14,74 70,74 70,82 14,82 | 1 brown
+      front polygon 14,50 70,50 70,74 14,74 | 1 yellow
+      side polygon 70,50 90,36 90,68 70,82 | 2 yellow
+      side_crust polygon 70,74 90,62 90,68 70,82 | 3 brown
+      top polygon 14,50 34,36 90,36 70,50 | 3 yellow
+      topping polygon 20,48 36,38 84,38 68,48 | 4 red`],
+    ['schnapps', ['schnaps'], `
+      bottle rectangle 20 40 24 52 | 1 white
+      shoulder polygon 20,40 26,28 38,28 44,40 | 1 white
+      neck rectangle 27 12 10 16 | 1 white
+      cap rectangle 26 6 12 8 | 2 red
+      liquid rectangle 21 50 22 41 | 2 yellow
+      label rectangle 22 58 20 16 | 3 red
+      label_line line 25,66 39,66 | 4 white
+      shot_glass polygon 58,70 80,70 78,92 60,92 | 1 white
+      shot polygon 59,76 79,76 78,91 60,91 | 2 yellow`],
   ],
   'vehicles-2': [
     ['destroyer', ['destroyers', 'warship'], `
-      sea rectangle 0 70 100 30 | 0 blue
       mast line 50,40 50,16 | 1 black
       yard line 44,24 56,24 | 1 black
       bridge rectangle 40 40 18 16 | 2 grey
@@ -357,6 +469,58 @@ ${rep(4, (i) => `      bubble_${i + 1} circle ${38 + i * 6} ${80 - i * 7} 3 3 | 
       front_spoke_2 line 71,60 71,82 | 4 brown kind=spoke
       back_hub circle 25 65 6 6 | 5 yellow kind=hub
       front_hub circle 68 68 6 6 | 5 yellow kind=hub`],
+    ['brig', ['brigs'], `
+      sail_1 polygon 22,18 48,18 50,40 20,40 | 1 white kind=sail
+      sail_2 polygon 20,44 50,44 52,66 18,66 | 1 white kind=sail
+      sail_3 polygon 54,14 78,14 80,36 52,36 | 1 white kind=sail
+      sail_4 polygon 52,40 80,40 82,66 50,66 | 1 white kind=sail
+      mast_1 rectangle 34 14 3 56 | 2 brown kind=mast
+      mast_2 rectangle 64 10 3 60 | 2 brown kind=mast
+      flag triangle 66 4 10 6 | 3 red pointing=right
+      bowsprit line 92,72 99,60 | 2 brown
+      hull polygon 6,70 94,70 84,86 14,86 | 3 brown
+      stripe line 10,76 90,76 | 4 yellow`],
+    ['buggy', ['buggies', 'horse buggy'], `
+      shafts line 66,58 98,50 | 1 brown
+      hood polygon 28,22 58,22 66,48 24,48 | 1 black
+      seat rectangle 24 48 46 16 | 2 black
+      back_wheel circle 18 52 36 36 | 3 brown kind=wheel
+      front_wheel circle 62 62 26 26 | 3 brown kind=wheel
+      back_spoke_1 line 20,70 52,70 | 4 brown kind=spoke
+      back_spoke_2 line 36,54 36,86 | 4 brown kind=spoke
+      front_spoke_1 line 64,75 86,75 | 4 brown kind=spoke
+      front_spoke_2 line 75,64 75,86 | 4 brown kind=spoke`],
+    ['freighter', ['freighters', 'cargo ship', 'container ship'], `
+      funnel rectangle 78 22 6 8 | 1 red
+      bridge rectangle 72 30 16 26 | 2 white
+      windows line 74,36 86,36 | 3 black
+${['red', 'blue', 'green', 'yellow', 'orange'].map((c, i) => `      container_${i + 1} rectangle ${14 + i * 11} 44 10 12 | 2 ${c} kind=container`).join('\n')}
+${['blue', 'yellow', 'red'].map((c, i) => `      container_${i + 6} rectangle ${19 + i * 11} 32 10 12 | 2 ${c} kind=container`).join('\n')}
+      hull polygon 4,56 96,56 92,66 8,66 | 3 black
+      lower_hull polygon 8,66 92,66 88,76 12,76 | 3 red`],
+    ['tanker', ['tankers', 'oil tanker'], `
+      bow_mast line 10,50 10,36 | 1 black
+      funnel rectangle 80 20 6 8 | 1 black
+      bridge rectangle 74 28 16 22 | 2 white
+      windows line 76,34 88,34 | 3 black
+      pipes line 12,48 70,48 | 2 grey
+      manifold rectangle 36 42 10 6 | 2 grey
+      hull polygon 4,50 96,50 92,62 8,62 | 3 black
+      lower_hull polygon 6,62 94,62 88,74 12,74 | 3 red`],
+    ['battleship', ['battleships'], `
+      mast line 50,18 50,4 | 1 black
+      tower rectangle 46 18 8 16 | 2 grey
+      superstructure rectangle 38 34 24 22 | 2 grey
+      funnel_1 rectangle 63 38 7 18 | 2 grey kind=funnel
+      funnel_2 rectangle 71 40 6 16 | 2 grey kind=funnel
+${[12, 24, 82].map((x, i) => `      turret_${i + 1} rectangle ${x} 50 10 6 | 2 grey kind=turret`).join('\n')}
+      barrel_1 line 12,51 2,49 | 2 black kind=barrel
+      barrel_2 line 12,54 2,52 | 2 black kind=barrel
+      barrel_3 line 24,51 14,47 | 2 black kind=barrel
+      barrel_4 line 92,51 98,49 | 2 black kind=barrel
+      hull polygon 2,56 98,56 90,74 8,74 | 3 grey
+      windows line 40,40 60,40 | 3 black
+      waterline line 6,68 92,68 | 4 red`],
   ],
   'things-3': [
     ['hive', ['hives', 'beehive', 'beehives'], `
@@ -500,5 +664,298 @@ ${rep(4, (i) => `      coil_${i + 1} line 30,${32 + i * 8} 70,${32 + i * 8} | 3 
       dial circle 30 68 8 8 | 2 black
       switch rectangle 60 70 10 6 | 2 red
 ${rep(3, (i) => `      heat_${i + 1} line ${40 + i * 10},16 ${44 + i * 10},11 ${40 + i * 10},6 | 2 red kind=heat`)}`],
+    ['graffiti', ['graffito'], `
+      wall rectangle 4 14 92 72 | 1 grey
+      course_1 line 4,32 96,32 | 2 black kind=course
+      course_2 line 4,50 96,50 | 2 black kind=course
+      course_3 line 4,68 96,68 | 2 black kind=course
+      tag_1 line 14,60 24,30 34,60 44,30 | 3 pink kind=tag
+      tag_2 line 50,40 60,28 70,40 80,28 88,44 | 3 green kind=tag
+      blob polygon 52,58 62,50 76,54 80,66 66,74 54,70 | 3 yellow
+      drip line 66,74 66,82 | 3 yellow
+      tag_3 line 14,78 36,72 58,80 86,72 | 3 blue kind=tag`],
+    ['windshield', ['windshields', 'windscreens'], `
+      hood polygon 6,70 94,70 98,90 2,90 | 0 red
+      frame polygon 10,70 22,24 78,24 90,70 | 1 black
+      glass polygon 14,66 25,28 75,28 86,66 | 2 blue
+      reflection_1 line 30,60 44,34 | 3 white kind=reflection
+      reflection_2 line 38,62 50,38 | 3 white kind=reflection
+      mirror rectangle 45 30 10 5 | 3 black
+      wiper_1 line 24,64 46,48 | 3 black kind=wiper
+      wiper_2 line 54,64 76,48 | 3 black kind=wiper`],
+    ['antenna', ['antennas'], `
+      cable line 52,40 60,60 54,92 | 0 black
+      mast rectangle 48 30 4 62 | 1 grey
+      base rectangle 40 92 20 4 | 1 black
+      boom rectangle 10 28 80 4 | 2 grey
+${rep(7, (i) => `      element_${i + 1} line ${16 + i * 11},${16 + i * 1.5} ${16 + i * 11},${44 - i * 1.5} | 3 grey kind=element`)}`],
+    ['gavel', ['gavels'], `
+      block oval 50 76 40 12 | 1 brown
+      handle polygon 10,74 54,40 58,44 14,78 | 2 brown
+      head polygon 44,26 64,14 80,40 60,52 | 3 brown
+      band_1 line 49,23 65,49 | 4 yellow kind=band
+      band_2 line 59,17 75,43 | 4 yellow kind=band`],
+    ['helm', ['helms', 'ship wheel', 'steering wheel of a ship'], `
+      rim circle 22 22 56 56 | 1 brown
+      inner circle 28 28 44 44 | 2 white
+      spoke_1 line 10,50 90,50 | 3 brown kind=spoke
+      spoke_2 line 50,10 50,90 | 3 brown kind=spoke
+      spoke_3 line 22,22 78,78 | 3 brown kind=spoke
+      spoke_4 line 78,22 22,78 | 3 brown kind=spoke
+${[[10, 50], [90, 50], [50, 10], [50, 90], [22, 22], [78, 78], [78, 22], [22, 78]].map(([x, y], i) => `      handle_${i + 1} circle ${x - 3} ${y - 3} 6 6 | 4 brown kind=handle`).join('\n')}
+      hub circle 42 42 16 16 | 4 brown
+      hub_centre circle 47 47 6 6 | 5 yellow inside=hub`],
+    ['tile', ['tiles', 'floor tile', 'wall tile'], `
+${rep(9, (i) => `      tile_${i + 1} square ${10 + (i % 3) * 28} ${10 + Math.floor(i / 3) * 28} 26 26 | 1 ${i % 2 ? 'white' : 'blue'} kind=tile`)}`],
+    ['ashtray', ['ashtrays'], `
+      tray oval 14 50 72 30 | 1 grey
+      well oval 24 54 52 18 | 2 black
+      ash_1 circle 34 60 4 4 | 3 grey kind=ash
+      ash_2 circle 60 62 4 4 | 3 grey kind=ash
+      cigarette polygon 50,58 86,44 88,48 52,62 | 3 white
+      filter polygon 78,47 86,44 88,48 80,51 | 4 orange
+      tip circle 47 56 5 5 | 4 red
+      smoke line 49,54 45,44 51,34 45,24 | 4 grey`],
+    ['locket', ['lockets'], `
+      chain line 30,4 50,30 70,4 | 1 yellow
+      bail circle 46 26 8 8 | 2 yellow
+      hinge rectangle 68 52 4 8 | 2 grey
+      locket oval 30 32 40 50 | 3 yellow
+      heart polygon 50,68 38,56 38,48 44,44 50,48 56,44 62,48 62,56 | 4 red inside=locket`],
+    ['aquarium', ['aquariums', 'aquaria', 'fish tank', 'fish tanks'], `
+      stand rectangle 6 84 88 6 | 0 brown
+      water rectangle 10 20 80 64 | 1 blue
+      air rectangle 10 20 80 8 | 2 white
+      lid rectangle 8 16 84 6 | 3 black
+      gravel rectangle 10 76 80 8 | 2 yellow
+      plant polygon 20,76 16,56 22,40 26,40 22,56 26,76 | 3 green
+      fish_1 oval 40 40 16 9 | 3 orange kind=fish
+      fish_1_tail triangle 34 40.5 7 8 | 3 orange pointing=right
+      fish_2 oval 62 56 12 7 | 3 yellow kind=fish
+      fish_2_tail triangle 57 56.5 6 6 | 3 yellow pointing=right
+${rep(3, (i) => `      bubble_${i + 1} circle ${74 + (i % 2) * 3} ${44 - i * 7} 3 3 | 4 white kind=bubble`)}`],
+    ['basin', ['basins', 'washbasin', 'wash basin'], `
+      rim oval 10 32 80 16 | 1 grey
+      water oval 16 35 68 10 | 2 blue
+      basin polygon 10,40 90,40 76,76 24,76 | 3 grey
+      foot rectangle 38 76 24 6 | 2 grey`],
+    ['portfolio', ['portfolios', 'art folder'], `
+      paper rectangle 16 16 40 12 | 0 white
+      handle arc 38 10 24 12 | 1 black opens=down
+      case rectangle 10 22 80 64 | 2 black
+      zip line 12,26 88,26 | 3 grey
+      corner_1 triangle 10 74 12 12 | 3 grey pointing=left kind=corner
+      corner_2 triangle 78 74 12 12 | 3 grey pointing=right kind=corner
+      tie_1 line 50,56 44,70 | 3 red kind=tie
+      tie_2 line 50,56 56,70 | 3 red kind=tie`],
+    ['binoculars', ['field glasses', 'binocular'], `
+      left_eyepiece rectangle 20 20 16 12 | 1 grey kind=eyepiece
+      right_eyepiece rectangle 64 20 16 12 | 1 grey kind=eyepiece
+      left_barrel rectangle 16 30 24 50 | 2 black kind=barrel
+      right_barrel rectangle 60 30 24 50 | 2 black kind=barrel
+      bridge rectangle 40 40 20 14 | 3 grey
+      focus_wheel rectangle 46 32 8 8 | 4 grey
+      left_lens oval 16 74 24 10 | 3 blue kind=lens
+      right_lens oval 60 74 24 10 | 3 blue kind=lens`],
+    ['cello', ['cellos', 'violoncello'], `
+      endpin line 50,86 50,98 | 0 grey
+      lower_bout oval 26 52 48 36 | 1 brown
+      upper_bout oval 30 28 40 30 | 1 brown
+      scroll circle 46 2 8 8 | 2 brown
+      fingerboard rectangle 47 8 6 58 | 2 black
+      bridge rectangle 42 66 16 3 | 3 yellow
+      tailpiece polygon 46,70 54,70 52,84 48,84 | 3 black
+      f_hole_1 line 38,58 36,64 38,70 | 3 black kind=f_hole
+      f_hole_2 line 62,58 64,64 62,70 | 3 black kind=f_hole
+      string_1 line 49,12 49,80 | 4 white kind=string
+      string_2 line 51,12 51,80 | 4 white kind=string`],
+    ['stocking', ['stockings', 'nylons'], `
+      leg polygon 40,6 60,6 60,60 64,78 80,84 82,94 44,94 40,80 | 1 brown
+      top_band rectangle 40 6 20 8 | 2 black
+      heel polygon 40,80 48,84 46,94 44,94 | 2 black
+      toe polygon 72,84 80,84 82,94 74,94 | 2 black`],
+    ['chime', ['chimes', 'tubular bells'], `
+      bar rectangle 14 8 72 4 | 1 brown
+      post_1 rectangle 14 10 4 82 | 1 brown kind=post
+      post_2 rectangle 82 10 4 82 | 1 brown kind=post
+      foot_1 rectangle 8 90 16 4 | 1 brown kind=foot
+      foot_2 rectangle 76 90 16 4 | 1 brown kind=foot
+${rep(6, (i) => `      tube_${i + 1} rectangle ${24 + i * 10} 14 5 ${70 - i * 8} | 2 yellow kind=tube`)}
+      mallet_handle line 62,94 92,72 | 3 brown
+      mallet_head oval 86 64 10 8 | 3 black`],
+    ['blindfold', ['blindfolds'], `
+      tail polygon 78,42 92,56 88,60 76,46 | 1 black
+      head oval 24 10 52 72 | 1 pink
+      hair polygon 24,40 26,20 50,8 74,20 76,40 70,26 50,16 30,26 | 2 brown
+      band polygon 22,34 78,34 78,48 22,48 | 3 black
+      knot circle 72 36 8 8 | 4 black
+      nose polygon 48,52 52,52 50,60 | 3 pink
+      mouth arc 40 64 20 8 | 3 red opens=up`],
+    ['radiator', ['radiators'], `
+      foot_1 rectangle 16 80 4 10 | 0 grey kind=foot
+      foot_2 rectangle 80 80 4 10 | 0 grey kind=foot
+      pipe line 91,78 91,96 | 0 grey
+${rep(8, (i) => `      fin_${i + 1} rectangle ${14 + i * 9} 28 7 52 | 1 white kind=fin`)}
+      top_pipe rectangle 12 32 76 4 | 2 white
+      bottom_pipe rectangle 12 72 76 4 | 2 white
+      valve rectangle 88 70 6 8 | 2 grey
+      knob circle 88 62 6 6 | 3 red
+${rep(3, (i) => `      heat_${i + 1} line ${36 + i * 14},22 ${40 + i * 14},16 ${36 + i * 14},10 | 2 red kind=heat`)}`],
+    ['mortar', ['mortars'], `
+      base_plate polygon 10,86 54,86 50,92 14,92 | 1 grey
+      leg_1 line 58,40 76,88 | 1 green kind=leg
+      leg_2 line 62,44 86,88 | 1 green kind=leg
+      barrel polygon 28,84 62,22 72,28 38,88 | 2 green
+      muzzle oval 61 19 12 8 | 3 black`],
+    ['bugle', ['bugles'], `
+      cord line 30,58 28,80 | 0 red
+      tassel triangle 24 78 8 10 | 0 red pointing=up
+      loop oval 24 30 48 28 | 1 yellow
+      loop_inside oval 30 35 36 18 | 2 white
+      tube rectangle 10 40 62 6 | 3 yellow
+      bell polygon 70,38 92,22 92,66 70,50 | 3 yellow
+      mouthpiece rectangle 4 39 8 8 | 4 grey`],
+    ['clockwork', ['clockworks', 'gears', 'cogs'], `
+      gear_1 polygon ${star(34, 42, 22, 28, 10)} | 1 yellow kind=gear
+      hole_1 circle 28 36 12 12 | 2 white kind=hole
+      gear_2 polygon ${star(70, 66, 15, 20, 8)} | 1 grey kind=gear
+      hole_2 circle 66 62 8 8 | 2 white kind=hole
+      gear_3 polygon ${star(72, 22, 9, 13, 7)} | 1 yellow kind=gear
+      hole_3 circle 69.5 19.5 5 5 | 2 white kind=hole`],
+    ['bellows', ['bellow'], `
+      leather polygon 12,32 70,42 70,52 12,70 | 1 red
+      top_board polygon 10,24 70,40 72,44 12,32 | 2 brown
+      bottom_board polygon 12,70 70,52 72,56 10,78 | 2 brown
+      pleat_1 line 24,35 24,67 | 2 black kind=pleat
+      pleat_2 line 36,38 36,63 | 2 black kind=pleat
+      pleat_3 line 48,40 48,59 | 2 black kind=pleat
+      nozzle polygon 70,44 94,47 94,49 70,52 | 3 grey
+      top_handle rectangle 2 22 10 6 | 3 brown kind=handle
+      bottom_handle rectangle 2 74 10 6 | 3 brown kind=handle`],
+    ['barricade', ['barricades', 'roadblock', 'roadblocks'], `
+      leg_1 rectangle 12 26 6 68 | 1 grey kind=leg
+      leg_2 rectangle 82 26 6 68 | 1 grey kind=leg
+      foot_1 rectangle 6 90 18 6 | 1 grey kind=foot
+      foot_2 rectangle 76 90 18 6 | 1 grey kind=foot
+      top_board rectangle 6 30 88 12 | 2 white
+      bottom_board rectangle 6 52 88 12 | 2 white
+${[12, 32, 52, 72].map((x, i) => `      stripe_${i + 1} polygon ${x},30 ${x + 10},30 ${x + 4},42 ${x - 6},42 | 3 orange kind=stripe
+      stripe_${i + 5} polygon ${x},52 ${x + 10},52 ${x + 4},64 ${x - 6},64 | 3 orange kind=stripe`).join('\n')}
+      light circle 46 20 10 10 | 4 orange`],
+    ['chainsaw', ['chainsaws', 'chain saw'], `
+      bar polygon 50,46 94,46 98,52 94,58 50,58 | 1 grey
+      chain line 50,45 94,45 99,52 94,59 50,59 | 2 black
+      rear_handle rectangle 6 48 12 16 | 2 black
+      body rectangle 16 36 38 30 | 2 orange
+      top_handle arc 18 22 30 16 | 3 black opens=down
+      guard rectangle 50 30 4 20 | 3 black
+${rep(3, (i) => `      vent_${i + 1} line ${24 + i * 8},44 ${24 + i * 8},58 | 3 black kind=vent`)}`],
+    ['slab', ['slabs', 'stone slab', 'concrete slab'], `
+      front rectangle 8 52 74 18 | 1 grey
+      top polygon 8,52 20,40 94,40 82,52 | 2 white
+      side polygon 82,52 94,40 94,58 82,70 | 2 grey
+      crack_1 line 30,52 34,60 32,70 | 3 black kind=crack
+      crack_2 line 60,44 66,48 | 3 black kind=crack`],
+    ['pendant', ['pendants', 'necklace pendant'], `
+      chain arc 20 6 60 46 | 1 yellow opens=up
+      bail circle 46 50 8 8 | 2 yellow
+      setting polygon 50,56 62,70 50,90 38,70 | 2 yellow
+      gem polygon 50,60 58,70 50,84 42,70 | 3 blue inside=setting
+      sparkle line 46,66 49,62 | 4 white`],
+    ['harmonica', ['harmonicas', 'mouth organ'], `
+      body rectangle 8 36 84 28 | 1 grey
+      engraving line 20,40 80,40 | 2 black
+      comb rectangle 8 46 84 10 | 2 white
+${rep(10, (i) => `      hole_${i + 1} square ${12 + i * 8} 48.5 5 5 | 3 black kind=hole`)}`],
+    ['vial', ['vials', 'phial', 'phials'], `
+      bottle rectangle 38 24 24 64 | 1 white
+      neck rectangle 42 14 16 10 | 1 white
+      liquid rectangle 39 50 22 37 | 2 green
+      bubble circle 48 54 3 3 | 3 white
+      label rectangle 40 60 20 14 | 3 white
+      label_line line 43,67 57,67 | 4 black
+      stopper rectangle 40 6 20 10 | 3 brown`],
+    ['burr', ['burrs', 'bur', 'burs'], `
+      stem line 50,30 60,6 | 0 brown
+      spines polygon ${star(50, 56, 22, 36, 14)} | 1 brown
+      burr circle 30 36 40 40 | 2 brown`],
+    ['machete', ['machetes'], `
+      blade polygon 30,52 88,30 96,34 92,42 34,62 | 1 grey
+      edge line 34,62 92,42 | 2 white
+      handle polygon 6,62 30,52 34,62 10,72 | 2 black
+      rivet_1 circle 14 63 3 3 | 3 grey kind=rivet
+      rivet_2 circle 22 60 3 3 | 3 grey kind=rivet`],
+    ['jukebox', ['jukeboxes'], `
+      arch oval 14 12 72 56 | 1 red
+      body rectangle 14 40 72 56 | 1 red
+      light_band oval 20 18 60 44 | 2 yellow
+      window oval 26 24 48 34 | 3 black
+      record circle 40 30 20 20 | 4 grey inside=window
+      record_label circle 47 37 6 6 | 5 red inside=record
+      side_light_1 rectangle 16 46 6 48 | 2 orange kind=light
+      side_light_2 rectangle 78 46 6 48 | 2 orange kind=light
+      panel rectangle 26 60 48 10 | 2 white
+${rep(5, (i) => `      button_${i + 1} rectangle ${30 + i * 8} 63 5 4 | 3 black kind=button`)}
+      grille rectangle 26 74 48 18 | 2 brown
+${rep(3, (i) => `      grille_line_${i + 1} line ${38 + i * 12},76 ${38 + i * 12},90 | 3 black kind=grille_line`)}`],
+    ['doorknob', ['doorknobs', 'door knob', 'door handle'], `
+      door_edge rectangle 6 0 14 100 | 0 brown
+      rose oval 20 34 6 32 | 1 yellow
+      neck rectangle 26 44 18 12 | 2 yellow
+      knob circle 42 30 40 40 | 3 yellow
+      highlight oval 52 38 12 8 | 4 white inside=knob`],
+    ['mainframe', ['mainframes', 'mainframe computer'], `
+      floor line 2,92 98,92 | 0 black
+      cabinet_1 rectangle 6 20 28 72 | 1 grey kind=cabinet
+      cabinet_2 rectangle 36 20 28 72 | 1 grey kind=cabinet
+      cabinet_3 rectangle 66 20 28 72 | 1 grey kind=cabinet
+      reel_1 circle 9 26 10 10 | 2 black kind=reel
+      reel_2 circle 21 26 10 10 | 2 black kind=reel
+      reel_3 circle 69 26 10 10 | 2 black kind=reel
+      reel_4 circle 81 26 10 10 | 2 black kind=reel
+${['red', 'green', 'yellow', 'green', 'red', 'yellow'].map((c, i) => `      light_${i + 1} circle ${40 + (i % 3) * 8} ${28 + Math.floor(i / 3) * 8} 4 4 | 2 ${c} kind=light`).join('\n')}
+${rep(4, (i) => `      vent_${i + 1} line 40,${54 + i * 8} 60,${54 + i * 8} | 2 black kind=vent`)}`],
+    ['scuba', ['aqualung', 'aqua-lung', 'scuba gear'], `
+      tank rectangle 18 20 22 66 | 1 yellow
+      tank_top oval 18 14 22 12 | 2 yellow
+      valve rectangle 25 6 8 10 | 3 grey
+      hose line 33,10 52,6 70,58 | 3 black
+      mask_frame oval 56 30 40 24 | 3 black
+      left_lens oval 59 33 16 18 | 4 blue kind=lens
+      right_lens oval 77 33 16 18 | 4 blue kind=lens
+      regulator circle 64 56 12 12 | 4 black`],
+    ['mast', ['masts'], `
+      sail_1 polygon 32,21 68,21 70,44 30,44 | 1 white kind=sail
+      sail_2 polygon 28,47 72,47 74,76 26,76 | 1 white kind=sail
+      hull polygon 10,80 90,80 80,92 20,92 | 1 brown
+      mast rectangle 48 6 4 74 | 2 brown
+      yard_1 line 30,20 70,20 | 3 brown kind=yard
+      yard_2 line 26,46 74,46 | 3 brown kind=yard
+      crows_nest rectangle 45 12 10 4 | 3 brown
+      flag triangle 52 2 10 6 | 3 red pointing=right`],
+    ['shawl', ['shawls', 'stole'], `
+      shawl polygon 6,20 94,20 50,86 | 1 purple
+      border line 14,26 86,26 | 2 yellow
+      pattern polygon 44,36 50,30 56,36 50,42 | 2 yellow
+${[[14.8, 33.2], [23.6, 46.4], [32.4, 59.6], [41.2, 72.8]].map(([x, y], i) => `      fringe_${i + 1} line ${x},${y} ${x - 4},${y + 4} | 0 purple kind=fringe
+      fringe_${i + 5} line ${100 - x},${y} ${104 - x},${y + 4} | 0 purple kind=fringe`).join('\n')}
+      fringe_9 line 50,86 50,92 | 0 purple kind=fringe`],
+    ['seatbelt', ['seatbelts', 'seat belt', 'seat belts', 'safety belt'], `
+      headrest rectangle 36 2 22 10 | 1 blue
+      back polygon 30,10 64,10 70,70 26,70 | 1 blue
+      cushion polygon 20,70 80,70 84,86 16,86 | 2 blue
+      shoulder_belt polygon 58,14 66,18 34,74 26,70 | 3 black
+      lap_belt rectangle 22 72 50 6 | 3 black
+      anchor circle 58 10 8 8 | 4 grey
+      tongue rectangle 64 72 8 6 | 4 grey
+      buckle rectangle 70 70 12 10 | 4 red`],
+    ['caddy', ['caddies', 'tea caddy', 'tea tin'], `
+      can rectangle 26 30 48 60 | 1 red
+      lid rectangle 24 20 52 12 | 2 black
+      knob rectangle 44 14 12 6 | 3 black
+      label rectangle 32 46 36 26 | 2 yellow
+      text_1 line 36,54 64,54 | 3 black kind=text_line
+      text_2 line 36,62 60,62 | 3 black kind=text_line
+      leaf polygon 56,64 64,58 66,66 | 3 green`],
   ],
 };

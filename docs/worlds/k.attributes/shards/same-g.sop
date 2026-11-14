@@ -1,4 +1,4 @@
-# k.attributes/shards/same-g: one name, one thing: for 127 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-g: one name, one thing: for 129 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -21,7 +21,7 @@
 @k.attributes.same.garlic_crusher.thing k.attributes.same name="garlic crusher" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.garter.thing k.attributes.same name=garter sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gate.thing k.attributes.same name=gate sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.gavel.thing k.attributes.same name=gavel sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.gavel.thing k.attributes.same name=gavel sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gazebo.thing k.attributes.same name=gazebo sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gazelle.animal k.attributes.same name=gazelle sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gear.thing k.attributes.same name=gear sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -43,7 +43,7 @@
 @k.attributes.same.ginseng.thing k.attributes.same name=ginseng sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.giraffe.animal k.attributes.same name=giraffe sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.girl.person k.attributes.same name=girl sense=person only=true in=k.people.kind by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.glacier.thing k.attributes.same name=glacier sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.glacier.thing k.attributes.same name=glacier sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glasgow.place k.attributes.same name=glasgow sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glass_bottle.food k.attributes.same name="glass bottle" sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.glass_of_milk.food k.attributes.same name="glass of milk" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -80,6 +80,7 @@
 @k.attributes.same.gown.clothing k.attributes.same name=gown sense=clothing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gps.thing k.attributes.same name=gps sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.graduation_cap.clothing k.attributes.same name="graduation cap" sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
+@k.attributes.same.graffiti.thing k.attributes.same name=graffiti sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gramophone.thing k.attributes.same name=gramophone sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grand.place k.attributes.same name=grand sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grandfather.person k.attributes.same name=grandfather sense=person only=true in=k.people.kind in=k.people.role by_word=k.words.sense core.source="hand-core 1"
@@ -104,7 +105,7 @@
 @k.attributes.same.green_beans.food k.attributes.same name="green beans" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.green_book.thing k.attributes.same name="green book" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.green_salad.food k.attributes.same name="green salad" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.greenhouse.thing k.attributes.same name=greenhouse sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.greenhouse.thing k.attributes.same name=greenhouse sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.greenland.place k.attributes.same name=greenland sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grenade.thing k.attributes.same name=grenade sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grey.colour k.attributes.same name=grey sense=colour only=false in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
@@ -112,6 +113,7 @@
 @k.attributes.same.greyhound.thing k.attributes.same name=greyhound sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grill.thing k.attributes.same name=grill sense=thing only=true in=k.attributes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grill_pan.thing k.attributes.same name="grill pan" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.grinder.food k.attributes.same name=grinder sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grizzly.thing k.attributes.same name=grizzly sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grizzly_bear.animal k.attributes.same name="grizzly bear" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.grog.thing k.attributes.same name=grog sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.scenes/shards/things-f: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 115 things (the drawable things and the animals of k.animals) whose name starts with "f"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-f: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 117 things (the drawable things and the animals of k.animals) whose name starts with "f"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -17,6 +17,7 @@
 @k.scenes.thing.felt_tips k.scenes.thing name="felt tips" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.fence k.scenes.thing name=fence place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.fennel k.scenes.thing name=fennel place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.fern k.scenes.thing name=fern place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.ferret k.scenes.thing name=ferret place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.ferris_wheel k.scenes.thing name="ferris wheel" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.ferry k.scenes.thing name=ferry place=water size=huge named=model core.source="hand-core 1"
@@ -98,6 +99,7 @@
 @k.scenes.thing.frame k.scenes.thing name=frame place=on_thing on=wall size=small named=model core.source="hand-core 1"
 @k.scenes.thing.framed_picture k.scenes.thing name="framed picture" place=on_thing on=wall size=small named=model core.source="hand-core 1"
 @k.scenes.thing.freezer k.scenes.thing name=freezer place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.freighter k.scenes.thing name=freighter place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.french_fries k.scenes.thing name="french fries" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.french_press k.scenes.thing name="french press" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.french_stick k.scenes.thing name="french stick" place=indoors on=table size=small named=model core.source="hand-core 1"

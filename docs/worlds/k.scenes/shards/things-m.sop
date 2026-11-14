@@ -1,4 +1,4 @@
-# k.scenes/shards/things-m: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 149 things (the drawable things and the animals of k.animals) whose name starts with "m"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-m: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 155 things (the drawable things and the animals of k.animals) whose name starts with "m"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -9,6 +9,7 @@
 @k.scenes.thing.macaroni k.scenes.thing name=macaroni place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.macaroni_cheese k.scenes.thing name="macaroni cheese" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.macaw k.scenes.thing name=macaw place=sky size=small named=model core.source="hand-core 1"
+@k.scenes.thing.machete k.scenes.thing name=machete place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.mackerel k.scenes.thing name=mackerel place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.magic_wand k.scenes.thing name="magic wand" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.magnet k.scenes.thing name=magnet place=indoors size=small named=model core.source="hand-core 1"
@@ -16,6 +17,7 @@
 @k.scenes.thing.magnifying_glass_tilted_right k.scenes.thing name="magnifying glass tilted right" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.magpie k.scenes.thing name=magpie place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mailbox k.scenes.thing name=mailbox place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.mainframe k.scenes.thing name=mainframe place=indoors size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mains_socket k.scenes.thing name="mains socket" place=on_thing on=wall size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.mamba k.scenes.thing name=mamba place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.mammoth k.scenes.thing name=mammoth place=ground size=huge named=model core.source="hand-core 1"
@@ -26,6 +28,7 @@
 @k.scenes.thing.manor k.scenes.thing name=manor place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.manta_ray k.scenes.thing name="manta ray" place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mantelpiece_clock k.scenes.thing name="mantelpiece clock" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.mantis k.scenes.thing name=mantis place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.manual_wheelchair k.scenes.thing name="manual wheelchair" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.man_s_shoe k.scenes.thing name="man’s shoe" place=on_thing on=foot size=small named=model core.source="hand-core 1"
 @k.scenes.thing.map k.scenes.thing name=map place=indoors size=small named=model core.source="hand-core 1"
@@ -42,6 +45,7 @@
 @k.scenes.thing.mask k.scenes.thing name=mask place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mask_dustmask k.scenes.thing name="mask dustmask" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.masking_tape k.scenes.thing name="masking tape" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.mast k.scenes.thing name=mast place=on_thing on=ship size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mat k.scenes.thing name=mat place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.mate k.scenes.thing name=mate place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mattress k.scenes.thing name=mattress place=on_thing on=bed size=large named=model core.source="hand-core 1"
@@ -52,6 +56,7 @@
 @k.scenes.thing.measuring_spoons k.scenes.thing name="measuring spoons" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.meat k.scenes.thing name=meat place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.meat_on_bone k.scenes.thing name="meat on bone" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.meatball k.scenes.thing name=meatball place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.meatballs_and_spaghetti k.scenes.thing name="meatballs and spaghetti" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.medal k.scenes.thing name=medal place=on_thing on=person size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.medication k.scenes.thing name=medication place=indoors size=small named=model core.source="hand-core 1"
@@ -120,6 +125,7 @@
 @k.scenes.thing.moose k.scenes.thing name=moose place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.mop k.scenes.thing name=mop place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.moped k.scenes.thing name=moped place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.mortar k.scenes.thing name=mortar place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.mosque k.scenes.thing name=mosque place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.mosquito k.scenes.thing name=mosquito place=sky size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.motel k.scenes.thing name=motel place=ground size=huge named=model core.source="hand-core 1"

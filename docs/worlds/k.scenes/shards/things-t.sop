@@ -1,4 +1,4 @@
-# k.scenes/shards/things-t: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 144 things (the drawable things and the animals of k.animals) whose name starts with "t"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-t: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 151 things (the drawable things and the animals of k.animals) whose name starts with "t"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -25,6 +25,7 @@
 @k.scenes.thing.tanabata_tree k.scenes.thing name="tanabata tree" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.tangerine k.scenes.thing name=tangerine place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tank k.scenes.thing name=tank place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.tanker k.scenes.thing name=tanker place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.tap k.scenes.thing name=tap place=on_thing on=sink size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tape k.scenes.thing name=tape place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tape_measure k.scenes.thing name="tape measure" place=indoors size=small named=model core.source="hand-core 1"
@@ -41,6 +42,7 @@
 @k.scenes.thing.teapot k.scenes.thing name=teapot place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tear-off_calendar k.scenes.thing name="tear-off calendar" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.teddy_bear k.scenes.thing name="teddy bear" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.telegraph k.scenes.thing name=telegraph place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.telephone k.scenes.thing name=telephone place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.telephone_handset k.scenes.thing name="telephone handset" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.telephone_receiver k.scenes.thing name="telephone receiver" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -66,6 +68,7 @@
 @k.scenes.thing.tie k.scenes.thing name=tie place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tiger k.scenes.thing name=tiger place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.tights k.scenes.thing name=tights place=on_thing on=person size=small named=model core.source="hand-core 1"
+@k.scenes.thing.tile k.scenes.thing name=tile place=on_thing on=wall size=small named=model core.source="hand-core 1"
 @k.scenes.thing.timer k.scenes.thing name=timer place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.timer_clock k.scenes.thing name="timer clock" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tin k.scenes.thing name=tin place=indoors size=small named=model core.source="hand-core 1"
@@ -88,12 +91,14 @@
 @k.scenes.thing.toad k.scenes.thing name=toad place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toast k.scenes.thing name=toast place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toaster k.scenes.thing name=toaster place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.tofu k.scenes.thing name=tofu place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toilet k.scenes.thing name=toilet place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.toilet_roll k.scenes.thing name="toilet roll" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tomato k.scenes.thing name=tomato place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tomato_juice k.scenes.thing name="tomato juice" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tomato_slice k.scenes.thing name="tomato slice" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tongs k.scenes.thing name=tongs place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.tonic k.scenes.thing name=tonic place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toolbox k.scenes.thing name=toolbox place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toothbrush k.scenes.thing name=toothbrush place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.toothbrush_electric k.scenes.thing name="toothbrush electric" place=indoors size=small named=model core.source="hand-core 1"
@@ -128,6 +133,7 @@
 @k.scenes.thing.tree_ornament_chocolate k.scenes.thing name="tree ornament chocolate" place=on_thing on=tree size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.tree_trunk k.scenes.thing name="tree trunk" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.triangular_ruler k.scenes.thing name="triangular ruler" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.trifle k.scenes.thing name=trifle place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.trolleybus k.scenes.thing name=trolleybus place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.trombone k.scenes.thing name=trombone place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.trophy k.scenes.thing name=trophy place=indoors size=small named=model core.source="hand-core 1"
@@ -147,3 +153,4 @@
 @k.scenes.thing.turnip k.scenes.thing name=turnip place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.turtle k.scenes.thing name=turtle place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.two-hump_camel k.scenes.thing name="two-hump camel" place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.typewriter k.scenes.thing name=typewriter place=indoors on=table size=small named=model core.source="hand-core 1"

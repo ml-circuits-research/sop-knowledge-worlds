@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>portfolio</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <rect x="16" y="16" width="40" height="12" fill="white" stroke="#333" stroke-width="0.8"><title>paper</title></rect>
+  <path d="M38 22 A12 12 0 0 1 62 22" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handle</title></path>
+  <rect x="10" y="22" width="80" height="64" fill="black" stroke="#333" stroke-width="0.8"><title>case</title></rect>
+  <polyline points="12,26 88,26" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>zip</title></polyline>
+  <polygon points="10,80 22,74 22,86" fill="grey" stroke="#333" stroke-width="0.8"><title>corner_1</title></polygon>
+  <polygon points="90,80 78,74 78,86" fill="grey" stroke="#333" stroke-width="0.8"><title>corner_2</title></polygon>
+  <polyline points="50,56 44,70" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tie_1</title></polyline>
+  <polyline points="50,56 56,70" fill="none" stroke="red" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tie_2</title></polyline>
+</svg>

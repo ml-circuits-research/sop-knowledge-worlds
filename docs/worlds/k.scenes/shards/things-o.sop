@@ -1,9 +1,10 @@
-# k.scenes/shards/things-o: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 42 things (the drawable things and the animals of k.animals) whose name starts with "o"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-o: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 43 things (the drawable things and the animals of k.animals) whose name starts with "o"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
 @k.scenes.thing.oak_leaf k.scenes.thing name="oak leaf" place=ground size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.observatory k.scenes.thing name=observatory place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.ocelot k.scenes.thing name=ocelot place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.octopus k.scenes.thing name=octopus place=water size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.oden k.scenes.thing name=oden place=indoors on=table size=small named=model core.source="hand-core 1"

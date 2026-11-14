@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
+  <title>chainsaw</title>
+  <rect width="100" height="100" fill="#fafafa"/>
+  <polygon points="50,46 94,46 98,52 94,58 50,58" fill="grey" stroke="#333" stroke-width="0.8"><title>bar</title></polygon>
+  <polyline points="50,45 94,45 99,52 94,59 50,59" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>chain</title></polyline>
+  <rect x="6" y="48" width="12" height="16" fill="black" stroke="#333" stroke-width="0.8"><title>rear_handle</title></rect>
+  <rect x="16" y="36" width="38" height="30" fill="orange" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <path d="M18 38 A15 16 0 0 1 48 38" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_handle</title></path>
+  <rect x="50" y="30" width="4" height="20" fill="black" stroke="#333" stroke-width="0.8"><title>guard</title></rect>
+  <polyline points="24,44 24,58" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>vent_1</title></polyline>
+  <polyline points="32,44 32,58" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>vent_2</title></polyline>
+  <polyline points="40,44 40,58" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>vent_3</title></polyline>
+</svg>

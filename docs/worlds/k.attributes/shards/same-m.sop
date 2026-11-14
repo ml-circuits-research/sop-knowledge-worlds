@@ -1,4 +1,4 @@
-# k.attributes/shards/same-m: one name, one thing: for 249 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-m: one name, one thing: for 250 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -8,7 +8,7 @@
 @k.attributes.same.macaroni_cheese.food k.attributes.same name="macaroni cheese" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.macau.place k.attributes.same name=macau sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.macaw.animal k.attributes.same name=macaw sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.machete.thing k.attributes.same name=machete sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.machete.thing k.attributes.same name=machete sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mackenzie.place k.attributes.same name=mackenzie sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mackerel.animal k.attributes.same name=mackerel sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.madagascar.place k.attributes.same name=madagascar sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
@@ -24,6 +24,7 @@
 @k.attributes.same.magpie.animal k.attributes.same name=magpie sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mailbox.thing k.attributes.same name=mailbox sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.main.place k.attributes.same name=main sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mainframe.thing k.attributes.same name=mainframe sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mains_socket.thing k.attributes.same name="mains socket" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.malaysia.place k.attributes.same name=malaysia sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mall.thing k.attributes.same name=mall sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -42,7 +43,7 @@
 @k.attributes.same.manor.thing k.attributes.same name=manor sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.manta_ray.animal k.attributes.same name="manta ray" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mantelpiece_clock.thing k.attributes.same name="mantelpiece clock" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.mantis.animal k.attributes.same name=mantis sense=animal only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mantis.animal k.attributes.same name=mantis sense=animal only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.manual_wheelchair.thing k.attributes.same name="manual wheelchair" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.man_s_shoe.clothing k.attributes.same name="man’s shoe" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.map.thing k.attributes.same name=map sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -75,7 +76,7 @@
 @k.attributes.same.mask.clothing k.attributes.same name=mask sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mask_dustmask.thing k.attributes.same name="mask dustmask" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.masking_tape.thing k.attributes.same name="masking tape" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.mast.thing k.attributes.same name=mast sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mast.thing k.attributes.same name=mast sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mat.thing k.attributes.same name=mat sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mate.food k.attributes.same name=mate sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mattress.thing k.attributes.same name=mattress sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -90,7 +91,7 @@
 @k.attributes.same.measuring_spoons.thing k.attributes.same name="measuring spoons" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.meat.food k.attributes.same name=meat sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.meat_on_bone.food k.attributes.same name="meat on bone" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.meatball.food k.attributes.same name=meatball sense=food only=true in=k.attributes.number in=k.food.food by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.meatball.food k.attributes.same name=meatball sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.meatballs_and_spaghetti.food k.attributes.same name="meatballs and spaghetti" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mechanic.person k.attributes.same name=mechanic sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.medal.thing k.attributes.same name=medal sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -199,7 +200,7 @@
 @k.attributes.same.moped.thing k.attributes.same name=moped sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.morgue.thing k.attributes.same name=morgue sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.morocco.place k.attributes.same name=morocco sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.mortar.thing k.attributes.same name=mortar sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mortar.thing k.attributes.same name=mortar sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mortuary.thing k.attributes.same name=mortuary sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.moscow.place k.attributes.same name=moscow sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mosque.thing k.attributes.same name=mosque sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

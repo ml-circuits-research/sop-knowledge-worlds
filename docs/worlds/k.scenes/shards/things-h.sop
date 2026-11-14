@@ -1,4 +1,4 @@
-# k.scenes/shards/things-h: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 103 things (the drawable things and the animals of k.animals) whose name starts with "h"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-h: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 108 things (the drawable things and the animals of k.animals) whose name starts with "h"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -36,6 +36,8 @@
 @k.scenes.thing.hankerchief k.scenes.thing name=hankerchief place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hard_hat k.scenes.thing name="hard hat" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hare k.scenes.thing name=hare place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.harmonica k.scenes.thing name=harmonica place=indoors on=table size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.harness k.scenes.thing name=harness place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.harp k.scenes.thing name=harp place=indoors size=large named=model core.source="hand-core 1"
 @k.scenes.thing.hat k.scenes.thing name=hat place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hat_-_ladies k.scenes.thing name="hat - ladies" place=on_thing on=head size=small named=model core.source="hand-core 1"
@@ -50,10 +52,12 @@
 @k.scenes.thing.headphone k.scenes.thing name=headphone place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.headphones k.scenes.thing name=headphones place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.headstone k.scenes.thing name=headstone place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.heater k.scenes.thing name=heater place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.hedge k.scenes.thing name=hedge place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.hedge_cutters k.scenes.thing name="hedge cutters" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.hedgehog k.scenes.thing name=hedgehog place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.helicopter k.scenes.thing name=helicopter place=sky size=large named=model core.source="hand-core 1"
+@k.scenes.thing.helm k.scenes.thing name=helm place=on_thing on=ship size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.helmet k.scenes.thing name=helmet place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.helmet_pilot k.scenes.thing name="helmet pilot" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hen k.scenes.thing name=hen place=ground size=small named=model core.source="hand-core 1"
@@ -69,6 +73,7 @@
 @k.scenes.thing.hill k.scenes.thing name=hill place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.hindu_temple k.scenes.thing name="hindu temple" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.hippopotamus k.scenes.thing name=hippopotamus place=water size=large named=model core.source="hand-core 1"
+@k.scenes.thing.hive k.scenes.thing name=hive place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hoe k.scenes.thing name=hoe place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.hoist k.scenes.thing name=hoist place=indoors size=large named=model core.source="hand-core 1"
 @k.scenes.thing.holdall k.scenes.thing name=holdall size=medium named=model core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-o: one name, one thing: for 55 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
+# k.attributes/shards/same-o: one name, one thing: for 56 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -6,6 +6,7 @@
 @k.attributes.same.oak_leaf.plant k.attributes.same name="oak leaf" sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.oar.thing k.attributes.same name=oar sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.oatmeal.thing k.attributes.same name=oatmeal sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.observatory.thing k.attributes.same name=observatory sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ocelot.animal k.attributes.same name=ocelot sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.octagon.shape k.attributes.same name=octagon sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.october.time k.attributes.same name=october sense=time only=true in=k.time.month by_word=k.words.sense core.source="hand-core 1"

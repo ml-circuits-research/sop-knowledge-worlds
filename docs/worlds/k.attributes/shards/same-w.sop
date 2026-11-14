@@ -85,7 +85,7 @@
 @k.attributes.same.windmill.thing k.attributes.same name=windmill sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.window.thing k.attributes.same name=window sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.windpipe.body_part k.attributes.same name=windpipe sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.windshield.thing k.attributes.same name=windshield sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.windshield.thing k.attributes.same name=windshield sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wine.food k.attributes.same name=wine sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wine_glass.food k.attributes.same name="wine glass" sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.winery.thing k.attributes.same name=winery sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

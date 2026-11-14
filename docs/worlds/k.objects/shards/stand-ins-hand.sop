@@ -3,6 +3,7 @@
 # license: CC0-1.0
 # script: tools/coverage.mjs
 
+@k.objects.hand.kind.amulet k.objects.stand_in name=amulet drawing="nazar amulet" core.source="hand-core 1"
 @k.objects.hand.kind.aspen k.objects.stand_in name=aspen drawing="deciduous tree" core.source="hand-core 1"
 @k.objects.hand.kind.baboon k.objects.stand_in name=baboon drawing=monkey core.source="hand-core 1"
 @k.objects.hand.kind.barracuda k.objects.stand_in name=barracuda drawing=fish core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.scenes/shards/things-l: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 85 things (the drawable things and the animals of k.animals) whose name starts with "l"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-l: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 86 things (the drawable things and the animals of k.animals) whose name starts with "l"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -71,6 +71,7 @@
 @k.scenes.thing.locked k.scenes.thing name=locked place=on_thing on=door size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.locked_with_key k.scenes.thing name="locked with key" place=on_thing on=door size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.locker k.scenes.thing name=locker place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.locket k.scenes.thing name=locket place=on_thing on=person size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.locomotive k.scenes.thing name=locomotive place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.locust k.scenes.thing name=locust size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.log k.scenes.thing name=log place=ground size=medium named=model core.source="hand-core 1"
