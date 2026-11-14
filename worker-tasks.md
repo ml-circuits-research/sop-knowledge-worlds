@@ -468,3 +468,13 @@ Each skill states what it may change and what it must never do (no restricted da
 ## Reviewer 2026-11-14 07:05 — the agent-skills stage moves to the library (cancel the 06:45 block here)
 
 The skills are procedures over the library's tools (ledger, corpus, reuse detector, grid, catalog) for any application, versioned with that API; this repository is one of the places they write to. They are written in soplang-words-lib (`skills/`). Do not start the 06:45 block here; keep `docs/lessons.md` current, it is one of their sources.
+
+## Reviewer 2026-11-14 07:40 — what PSys2 asks of this repository (read in /tmp/wt2/questions.md), by cause
+
+Sections to read: "Q12 … lessons to forward" (lines marked [KNOW]), "w.lang.en vs the hand-over", "k.time version 2 consumed", "geo.map switch: frames and a joiner fact for w.lang.en". Take them in this order:
+1. **`w.lang.en`**: publish the 34 frames written after the import (sets `acts.text`, `acts.facts`), the 5 frames of the act `own`, the 28 `acts.facts.ask.*` and 17 `acts.facts.layer.*` frames, and `joiner.keep text=its`, all from PSys2's `src/lang/en.local.mjs` (same format); keep a part's notation as written (the `[have]` loss); the reader-documentation rules (contraction, neg, imperative, correction, joiner, qframe) stay but are marked as documentation.
+2. **`k.time`**: dawn and dusk, parts of the day containing others, `weekend`, "the week" / "the year" as spans that contain days or months; ship the derived `before` facts in the derived shard (your new `tools/derive.mjs`).
+3. **The catalog vocabulary says the kind of each key** (so a reader can skip rivers and mountains it cannot resolve: "back" is a river) and **`core.word` aliases** (Peking).
+4. **Gaps from the experiments**: friend; sister / brother / uncle and other relatives as `is_a person`; `k.shapes.shape.thing` reachable through the vocabulary ("what shape is a stop sign"); `k.actions`: drop (remove), reset; `k.attributes`: a switch attribute's verb and un-verb (stack / unstack, show / hide) and the default of an attribute.
+5. `handover/knowledge-out/catalog-lacks.md` items still open.
+Then the library's follow-ups (block 06:55). Whichever worker is free takes the next item; say in worker-log which one you took.
