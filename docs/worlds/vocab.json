@@ -4934,6 +4934,7 @@
  "as": [
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-save",
+  "k.kinds/schema.sop",
   "k.words/shards/as",
   "k.words/shards/frequency-a",
   "w.lang.en/shards/prepositions"
@@ -5163,7 +5164,11 @@
   "k.words/shards/as",
   "k.words/shards/frequency-a"
  ],
+ "assigned": [
+  "k.kinds/shards/structures"
+ ],
  "assignment": [
+  "k.kinds/shards/structures",
   "k.words/shards/as",
   "k.words/shards/frequency-a"
  ],
@@ -16865,6 +16870,7 @@
   "k.words/shards/frequency-c"
  ],
  "capacity": [
+  "k.kinds/shards/structures",
   "k.words/shards/ca",
   "k.words/shards/frequency-c"
  ],
@@ -17876,6 +17882,7 @@
   "k.actions/shards/verbs-group"
  ],
  "category": [
+  "k.kinds/shards/structures",
   "k.procedures/shards/tasks",
   "k.words/shards/ca",
   "k.words/shards/frequency-c",
@@ -24200,6 +24207,7 @@
   "k.actions/shards/acts",
   "k.actions/shards/families",
   "k.actions/shards/verbs-connect",
+  "k.kinds/shards/structures",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
  ],
@@ -24372,6 +24380,7 @@
   "k.words/shards/frequency-c"
  ],
  "constraint": [
+  "k.kinds/shards/structures",
   "k.story/schema.sop"
  ],
  "constraints": [
@@ -24465,6 +24474,7 @@
   "k.attributes/shards/typical",
   "k.kinds/shards/classes",
   "k.kinds/shards/kind",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-transport-road-02",
@@ -34851,6 +34861,7 @@
  ],
  "element": [
   "k.kinds/shards/relations-story",
+  "k.kinds/shards/structures",
   "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/el",
@@ -34879,6 +34890,9 @@
  ],
  "element_7": [
   "k.objects/shards/things-3"
+ ],
+ "element_of": [
+  "k.kinds/shards/structures"
  ],
  "elements": [
   "k.words/shards/el",
@@ -35380,6 +35394,7 @@
  "end": [
   "k.genres/shards/moves",
   "k.genres/shards/story",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-food-breads-and-baking-04",
   "k.objects/shards/mulberry-plants-and-trees-03",
@@ -38715,6 +38730,9 @@
  "filled in": [
   "k.values/shards/fills"
  ],
+ "filler": [
+  "k.kinds/schema.sop"
+ ],
  "fillet": [
   "k.words/shards/fi",
   "k.words/shards/frequency-f"
@@ -38981,6 +38999,7 @@
   "k.objects/shards/things"
  ],
  "finish": [
+  "k.kinds/shards/structures",
   "k.words/shards/fi",
   "k.words/shards/frequency-f"
  ],
@@ -42125,6 +42144,7 @@
   "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-parts",
   "k.kinds/shards/relations-procedures",
+  "k.kinds/shards/structures",
   "k.parts/schema.sop",
   "k.procedures/schema.sop",
   "w.lang.en/shards/prepositions",
@@ -45653,6 +45673,7 @@
   "k.scenes/shards/things-g"
  ],
  "graph": [
+  "k.kinds/shards/structures",
   "k.objects/shards/noto-money-02",
   "k.objects/shards/noto-office-02",
   "w.chart/schema.sop"
@@ -54821,6 +54842,7 @@
   "k.words/shards/it"
  ],
  "item": [
+  "k.kinds/shards/structures",
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-i",
   "k.words/shards/it",
@@ -56615,6 +56637,7 @@
   "k.kinds/shards/relations-drawing"
  ],
  "k.faces": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.faces.canon": [
@@ -56633,13 +56656,31 @@
   "k.kinds/shards/relations-faces"
  ],
  "k.faces.preset": [
-  "k.kinds/shards/relations-faces"
+  "k.kinds/shards/relations-faces",
+  "k.kinds/shards/structures"
  ],
  "k.faces.slot": [
-  "k.kinds/shards/relations-faces"
+  "k.kinds/shards/relations-faces",
+  "k.kinds/shards/structures"
+ ],
+ "k.faces.slot.w": [
+  "k.kinds/shards/structures"
+ ],
+ "k.faces.slot.x": [
+  "k.kinds/shards/structures"
+ ],
+ "k.faces.slot.y": [
+  "k.kinds/shards/structures"
+ ],
+ "k.faces.slot.z": [
+  "k.kinds/shards/structures"
  ],
  "k.faces.variant": [
-  "k.kinds/shards/relations-faces"
+  "k.kinds/shards/relations-faces",
+  "k.kinds/shards/structures"
+ ],
+ "k.faces.variant.slot": [
+  "k.kinds/shards/structures"
  ],
  "k.feelings.feeling": [
   "k.kinds/shards/relations-feelings"
@@ -56650,16 +56691,25 @@
   "k.kinds/shards/relations-food"
  ],
  "k.genres": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.genres.genre": [
-  "k.kinds/shards/relations-genres"
+  "k.kinds/shards/relations-genres",
+  "k.kinds/shards/structures"
  ],
  "k.genres.move": [
   "k.kinds/shards/relations-genres"
  ],
  "k.genres.part": [
-  "k.kinds/shards/relations-genres"
+  "k.kinds/shards/relations-genres",
+  "k.kinds/shards/structures"
+ ],
+ "k.genres.part.genre": [
+  "k.kinds/shards/structures"
+ ],
+ "k.genres.part.n": [
+  "k.kinds/shards/structures"
  ],
  "k.genres.register": [
   "k.kinds/shards/relations-genres"
@@ -56671,13 +56721,18 @@
   "k.kinds/shards/relations-genres"
  ],
  "k.geo": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.geo.city": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/ranges",
   "k.attributes/shards/typical",
-  "k.kinds/shards/relations-geo"
+  "k.kinds/shards/relations-geo",
+  "k.kinds/shards/structures"
+ ],
+ "k.geo.city.country": [
+  "k.kinds/shards/structures"
  ],
  "k.geo.continent": [
   "k.attributes/shards/attributes",
@@ -56690,7 +56745,11 @@
   "k.attributes/shards/ranges-odbl",
   "k.attributes/shards/ranges-wikidata",
   "k.attributes/shards/typical",
-  "k.kinds/shards/relations-geo"
+  "k.kinds/shards/relations-geo",
+  "k.kinds/shards/structures"
+ ],
+ "k.geo.country.neighbour": [
+  "k.kinds/shards/structures"
  ],
  "k.geo.desert": [
   "k.attributes/shards/attributes",
@@ -56751,25 +56810,58 @@
   "k.kinds/shards/relations-kinds"
  ],
  "k.layouts": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.layouts.anchor": [
   "k.attributes/shards/aspects",
-  "k.kinds/shards/relations-layouts"
+  "k.kinds/shards/relations-layouts",
+  "k.kinds/shards/structures"
  ],
  "k.layouts.joins": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
-  "k.kinds/shards/relations-layouts"
+  "k.kinds/shards/relations-layouts",
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.joins.a": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.joins.b": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.joins.rel": [
+  "k.kinds/shards/structures"
  ],
  "k.layouts.layout": [
-  "k.kinds/shards/relations-layouts"
+  "k.kinds/shards/relations-layouts",
+  "k.kinds/shards/structures"
  ],
  "k.layouts.relation": [
-  "k.kinds/shards/relations-layouts"
+  "k.kinds/shards/relations-layouts",
+  "k.kinds/shards/structures"
  ],
  "k.layouts.slot": [
-  "k.kinds/shards/relations-layouts"
+  "k.kinds/shards/relations-layouts",
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.slot.count": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.slot.holds": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.slot.layout": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.slot.w": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.slot.x": [
+  "k.kinds/shards/structures"
+ ],
+ "k.layouts.slot.y": [
+  "k.kinds/shards/structures"
  ],
  "k.motion": [
   "k.units/shards/measures"
@@ -56808,15 +56900,33 @@
   "k.kinds/shards/relations-named"
  ],
  "k.objects": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.objects.object": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.kinds/shards/structures"
  ],
  "k.objects.part": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
-  "k.kinds/shards/relations-objects"
+  "k.kinds/shards/relations-objects",
+  "k.kinds/shards/structures"
+ ],
+ "k.objects.part.above": [
+  "k.kinds/shards/structures"
+ ],
+ "k.objects.part.inside": [
+  "k.kinds/shards/structures"
+ ],
+ "k.objects.part.kind": [
+  "k.kinds/shards/structures"
+ ],
+ "k.objects.part.of": [
+  "k.kinds/shards/structures"
+ ],
+ "k.objects.part.on": [
+  "k.kinds/shards/structures"
  ],
  "k.objects.point": [
   "k.kinds/shards/relations-objects"
@@ -56829,6 +56939,7 @@
   "k.kinds/shards/relations-objects"
  ],
  "k.parts": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.parts.called": [
@@ -56842,7 +56953,11 @@
  "k.parts.usual": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
-  "k.kinds/shards/relations-parts"
+  "k.kinds/shards/relations-parts",
+  "k.kinds/shards/structures"
+ ],
+ "k.parts.usual.has": [
+  "k.kinds/shards/structures"
  ],
  "k.parts.whole": [
   "k.attributes/shards/aspects",
@@ -56862,6 +56977,7 @@
   "k.kinds/shards/relations-people"
  ],
  "k.procedures": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.procedures.arg": [
@@ -56880,25 +56996,51 @@
   "k.kinds/shards/relations-procedures"
  ],
  "k.procedures.method": [
-  "k.kinds/shards/relations-procedures"
+  "k.kinds/shards/relations-procedures",
+  "k.kinds/shards/structures"
  ],
  "k.procedures.step": [
-  "k.kinds/shards/relations-procedures"
+  "k.kinds/shards/relations-procedures",
+  "k.kinds/shards/structures"
+ ],
+ "k.procedures.step.after": [
+  "k.kinds/shards/structures"
+ ],
+ "k.procedures.step.method": [
+  "k.kinds/shards/structures"
+ ],
+ "k.procedures.step.n": [
+  "k.kinds/shards/structures"
  ],
  "k.scenes": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.scenes.has": [
-  "k.kinds/shards/relations-scenes"
+  "k.kinds/shards/relations-scenes",
+  "k.kinds/shards/structures"
+ ],
+ "k.scenes.has.scene": [
+  "k.kinds/shards/structures"
+ ],
+ "k.scenes.has.thing": [
+  "k.kinds/shards/structures"
+ ],
+ "k.scenes.has.where": [
+  "k.kinds/shards/structures"
  ],
  "k.scenes.scene": [
   "k.attributes/shards/attributes",
-  "k.kinds/shards/relations-scenes"
+  "k.kinds/shards/relations-scenes",
+  "k.kinds/shards/structures"
  ],
  "k.scenes.thing": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.kinds/shards/relations-scenes"
+ ],
+ "k.scenes.thing.size": [
+  "k.kinds/shards/structures"
  ],
  "k.shapes": [
   "k.units/shards/measures"
@@ -56919,13 +57061,28 @@
   "k.kinds/shards/relations-space"
  ],
  "k.story": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.story.constraint": [
-  "k.kinds/shards/relations-story"
+  "k.kinds/shards/relations-story",
+  "k.kinds/shards/structures"
+ ],
+ "k.story.constraint.element": [
+  "k.kinds/shards/structures"
+ ],
+ "k.story.constraint.other": [
+  "k.kinds/shards/structures"
+ ],
+ "k.story.constraint.relation": [
+  "k.kinds/shards/structures"
  ],
  "k.story.element": [
-  "k.kinds/shards/relations-story"
+  "k.kinds/shards/relations-story",
+  "k.kinds/shards/structures"
+ ],
+ "k.story.element.n": [
+  "k.kinds/shards/structures"
  ],
  "k.story.goal": [
   "k.kinds/shards/relations-story"
@@ -56937,6 +57094,7 @@
   "k.kinds/shards/relations-story"
  ],
  "k.time": [
+  "k.kinds/shards/structures",
   "k.units/shards/measures"
  ],
  "k.time.before": [
@@ -56944,7 +57102,14 @@
   "k.kinds/shards/relations-time"
  ],
  "k.time.cycle": [
-  "k.kinds/shards/relations-time"
+  "k.kinds/shards/relations-time",
+  "k.kinds/shards/structures"
+ ],
+ "k.time.cycle.first": [
+  "k.kinds/shards/structures"
+ ],
+ "k.time.cycle.last": [
+  "k.kinds/shards/structures"
  ],
  "k.time.duration": [
   "k.attributes/shards/aspects",
@@ -56962,7 +57127,17 @@
   "k.kinds/shards/relations-time"
  ],
  "k.time.ordered": [
-  "k.kinds/shards/relations-time"
+  "k.kinds/shards/relations-time",
+  "k.kinds/shards/structures"
+ ],
+ "k.time.ordered.cycle": [
+  "k.kinds/shards/structures"
+ ],
+ "k.time.ordered.n": [
+  "k.kinds/shards/structures"
+ ],
+ "k.time.ordered.next": [
+  "k.kinds/shards/structures"
  ],
  "k.time.part_of_day": [
   "k.attributes/shards/aspects",
@@ -59228,6 +59403,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-l",
   "k.attributes/shards/typical",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/joins",
   "k.objects/shards/food",
@@ -60575,6 +60751,7 @@
   "k.attributes/shards/typical",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-wearables",
+  "k.kinds/shards/structures",
   "k.motion/schema.sop",
   "k.objects/shards/things-3",
   "k.units/shards/measures",
@@ -63213,6 +63390,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-l",
   "k.kinds/shards/group-noto",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-office-03",
   "k.objects/shards/noto-tool-03",
@@ -73170,6 +73348,7 @@
   "k.attributes/shards/typical",
   "k.faces/schema.sop",
   "k.genres/schema.sop",
+  "k.kinds/schema.sop",
   "k.kinds/shards/arguments",
   "k.kinds/shards/relations-actions",
   "k.kinds/shards/relations-attributes",
@@ -73885,6 +74064,7 @@
  ],
  "needs": [
   "k.attributes/shards/typical",
+  "k.kinds/schema.sop",
   "k.words/shards/frequency-n",
   "k.words/shards/ne",
   "w.seating/schema.sop"
@@ -74360,6 +74540,7 @@
  "next": [
   "k.attributes/shards/aspects",
   "k.kinds/shards/relations-time",
+  "k.kinds/shards/structures",
   "k.procedures/shards/compose",
   "k.time/schema.sop",
   "k.values/shards/sets",
@@ -74848,6 +75029,9 @@
  ],
  "nodding": [
   "k.words/shards/no"
+ ],
+ "node": [
+  "k.kinds/shards/structures"
  ],
  "noel": [
   "k.words/shards/frequency-n",
@@ -77546,6 +77730,7 @@
  "order": [
   "k.attributes/shards/aspects",
   "k.kinds/shards/relations-space",
+  "k.kinds/shards/structures",
   "k.objects/shards/noto-animal-mammal-02",
   "k.space/schema.sop",
   "k.time/schema.sop",
@@ -79752,6 +79937,7 @@
   "k.kinds/shards/relations-parts",
   "k.kinds/shards/relations-story",
   "k.kinds/shards/relations-time",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/schema.sop",
@@ -79783,11 +79969,15 @@
  "part of the face": [
   "w.face/schema.sop"
  ],
+ "part_kind": [
+  "k.kinds/shards/structures"
+ ],
  "part_of": [
   "k.attributes/shards/aspects",
   "k.kinds/shards/relations-body",
   "k.kinds/shards/relations-commonsense",
   "k.kinds/shards/relations-words",
+  "k.kinds/shards/structures",
   "k.layouts/shards/joins"
  ],
  "part_of_day": [
@@ -83594,6 +83784,7 @@
   "k.kinds/shards/relations-story"
  ],
  "placement": [
+  "k.kinds/shards/structures",
   "k.words/shards/frequency-p",
   "k.words/shards/pl"
  ],
@@ -85354,6 +85545,7 @@
  ],
  "position": [
   "k.actions/shards/verbs-place",
+  "k.kinds/shards/structures",
   "k.time/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/frequency-p",
@@ -93608,6 +93800,7 @@
  "role": [
   "k.actions/schema.sop",
   "k.attributes/shards/aspects",
+  "k.kinds/schema.sop",
   "k.kinds/shards/relations-actions",
   "k.kinds/shards/relations-procedures",
   "k.people/schema.sop",
@@ -98352,6 +98545,7 @@
   "k.words/shards/se"
  ],
  "sequence": [
+  "k.kinds/shards/structures",
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-s",
   "k.words/shards/se"
@@ -98392,6 +98586,7 @@
   "k.words/shards/se"
  ],
  "series": [
+  "k.kinds/shards/structures",
   "k.procedures/shards/tasks",
   "k.words/shards/frequency-s",
   "k.words/shards/se",
@@ -101264,6 +101459,7 @@
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-scenes",
   "k.kinds/shards/relations-space",
+  "k.kinds/shards/structures",
   "k.scenes/schema.sop",
   "k.space/schema.sop",
   "k.values/shards/scales",
@@ -102122,6 +102318,7 @@
  "slot": [
   "k.faces/schema.sop",
   "k.kinds/shards/relations-faces",
+  "k.kinds/shards/structures",
   "k.layouts/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/noto-game-02",
@@ -102155,6 +102352,9 @@
  ],
  "slot_4": [
   "k.faces/shards/plain-mouth"
+ ],
+ "slot_of": [
+  "k.kinds/shards/structures"
  ],
  "sloth": [
   "k.animals/shards/mammals",
@@ -103744,6 +103944,7 @@
   "k.words/shards/sp"
  ],
  "space": [
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
@@ -105760,6 +105961,7 @@
   "k.words/shards/st"
  ],
  "start": [
+  "k.kinds/shards/structures",
   "k.objects/shards/things-2",
   "k.words/shards/frequency-s",
   "k.words/shards/st",
@@ -107303,6 +107505,7 @@
  "structure": [
   "k.actions/shards/families",
   "k.genres/schema.sop",
+  "k.kinds/schema.sop",
   "k.kinds/shards/group-hand",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/wordnet-1",
@@ -112016,6 +112219,7 @@
   "k.kinds/shards/relations-scenes",
   "k.kinds/shards/relations-shapes",
   "k.kinds/shards/relations-story",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.procedures/schema.sop",
@@ -114219,6 +114423,7 @@
   "k.actions/shards/verbs-pick",
   "k.actions/shards/verbs-undo",
   "k.attributes/shards/typical",
+  "k.kinds/shards/structures",
   "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
  ],
@@ -118509,6 +118714,7 @@
   "k.kinds/shards/relations-genres",
   "k.kinds/shards/relations-time",
   "k.kinds/shards/relations-units",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-1",
   "k.time/schema.sop",
   "k.units/schema.sop",
@@ -119294,6 +119500,7 @@
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-procedures",
   "k.kinds/shards/relations-values",
+  "k.kinds/shards/structures",
   "k.motion/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/compose",
@@ -119309,10 +119516,16 @@
   "k.kinds/shards/relations-values",
   "k.units/shards/measures"
  ],
+ "value_of": [
+  "k.kinds/shards/structures"
+ ],
  "values": [
   "k.words/shards/frequency-v",
   "k.words/shards/va",
   "w.chart/schema.sop"
+ ],
+ "values by category": [
+  "k.kinds/shards/structures"
  ],
  "valve": [
   "k.objects/shards/things-3",
@@ -121008,11 +121221,106 @@
  "w. branch susquehanna": [
   "k.geo/shards/north-america"
  ],
+ "w.chart": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.chart": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.chart.unit": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.point": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.point.category": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.point.n": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.point.series": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.series": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.series.chart": [
+  "k.kinds/shards/structures"
+ ],
+ "w.chart.series.n": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.chapter": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.chapter.document": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.chapter.n": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.chapter.part": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.document": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.paragraph": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.paragraph.section": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.section": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.section.chapter": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.sentence": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.sentence.n": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.sentence.paragraph": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.slide": [
+  "k.kinds/shards/structures"
+ ],
+ "w.document.slide.document": [
+  "k.kinds/shards/structures"
+ ],
+ "w.face": [
+  "k.kinds/shards/structures"
+ ],
  "w.face.face": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
  ],
  "w.face.part": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.face.part.face": [
+  "k.kinds/shards/structures"
+ ],
+ "w.face.part.size": [
+  "k.kinds/shards/structures"
+ ],
+ "w.face.part.variant": [
+  "k.kinds/shards/structures"
+ ],
+ "w.face.part.x": [
+  "k.kinds/shards/structures"
+ ],
+ "w.face.part.y": [
+  "k.kinds/shards/structures"
  ],
  "w.lang.en": [
   "k.units/shards/measures"
@@ -121020,37 +121328,104 @@
  "w.lang.ro": [
   "k.units/shards/measures"
  ],
+ "w.list": [
+  "k.kinds/shards/structures"
+ ],
  "w.list.item": [
   "k.attributes/shards/ranges",
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.list.item.list": [
+  "k.kinds/shards/structures"
+ ],
+ "w.list.item.n": [
+  "k.kinds/shards/structures"
  ],
  "w.list.list": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.map": [
+  "k.kinds/shards/structures"
  ],
  "w.map.pin": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.map.pin.on": [
+  "k.kinds/shards/structures"
  ],
  "w.map.place": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
  ],
  "w.map.view": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.map.view.layer": [
+  "k.kinds/shards/structures"
+ ],
+ "w.seating": [
+  "k.kinds/shards/structures"
  ],
  "w.seating.guest": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.seating.guest.seat": [
+  "k.kinds/shards/structures"
  ],
  "w.seating.seat": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.seating.seat.n": [
+  "k.kinds/shards/structures"
+ ],
+ "w.seating.seat.table": [
+  "k.kinds/shards/structures"
  ],
  "w.seating.table": [
   "k.attributes/shards/ranges",
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.seating.table.seats": [
+  "k.kinds/shards/structures"
+ ],
+ "w.seating.table.x": [
+  "k.kinds/shards/structures"
+ ],
+ "w.seating.table.y": [
+  "k.kinds/shards/structures"
+ ],
+ "w.timeline": [
+  "k.kinds/shards/structures"
  ],
  "w.timeline.event": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.timeline.event.at": [
+  "k.kinds/shards/structures"
+ ],
+ "w.timeline.event.timeline": [
+  "k.kinds/shards/structures"
+ ],
+ "w.timeline.event.until": [
+  "k.kinds/shards/structures"
  ],
  "w.timeline.timeline": [
-  "k.attributes/shards/typical"
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.timeline.timeline.from": [
+  "k.kinds/shards/structures"
+ ],
+ "w.timeline.timeline.to": [
+  "k.kinds/shards/structures"
  ],
  "wa": [
   "k.words/shards/frequency-w",
@@ -123415,11 +123790,15 @@
  ],
  "whole": [
   "k.kinds/shards/kind",
+  "k.kinds/shards/structures",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.procedures/shards/from-knowledge",
   "k.words/shards/frequency-w",
   "k.words/shards/wh"
+ ],
+ "whole with parts": [
+  "k.kinds/shards/structures"
  ],
  "wholesale": [
   "k.words/shards/frequency-w",

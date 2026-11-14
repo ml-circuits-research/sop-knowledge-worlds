@@ -9,7 +9,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.kinds core.module name=k.kinds version=3 exports=kind exports=parent exports=argument exports=relation core.source="hand-core 1"
+@k.kinds core.module name=k.kinds version=4 exports=kind exports=parent exports=argument exports=relation exports=structure exports=role exports=form exports=cast core.source="hand-core 1"
 
 # A thing or kind with a name: `is_a` the kinds right above it, `kind_of` every kind above it (derived by the rules).
 @k.kinds.kind core.type of=k.kinds.kind shared=true core.source="hand-core 1"
@@ -71,6 +71,35 @@
 @k.kinds.relation.object_sense core.slot of=k.kinds.relation key=object_sense many=true kind=atom kind=string core.source="hand-core 1"
 @k.kinds.relation.scale core.slot of=k.kinds.relation key=scale kind=atom kind=string core.source="hand-core 1"
 
+# Structures of worlds, for alignment (block "21:05" item 4): what kind of structure a world is, and which of its types,
+# keys and acts plays each role. Written by tools/structures-core.mjs into the shard structures.
+# A structure: `name` (assignment, whole with parts, sequence, graph, placement, values by category), `about`, `role`
+# (many, in order), `needs` (many: the roles every world of the structure casts).
+@k.kinds.structure core.type of=k.kinds.structure closed=true core.source="hand-core 1"
+@k.kinds.structure.name core.slot of=k.kinds.structure key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.structure.about core.slot of=k.kinds.structure key=about required=true kind=string core.source="hand-core 1"
+@k.kinds.structure.role core.slot of=k.kinds.structure key=role many=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.structure.needs core.slot of=k.kinds.structure key=needs many=true kind=atom core.source="hand-core 1"
+# A role of a structure: `structure`, `name`, `about`.
+@k.kinds.role core.type of=k.kinds.role closed=true core.source="hand-core 1"
+@k.kinds.role.structure core.slot of=k.kinds.role key=structure id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.role.name core.slot of=k.kinds.role key=name id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.role.about core.slot of=k.kinds.role key=about required=true kind=string core.source="hand-core 1"
+# A world is a structure (`world`, `structure`, `about`: how); a world may be several (a seating plan is an
+# assignment, a graph of guests and a placement of tables).
+@k.kinds.form core.type of=k.kinds.form closed=true core.source="hand-core 1"
+@k.kinds.form.world core.slot of=k.kinds.form key=world id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.form.structure core.slot of=k.kinds.form key=structure id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.form.about core.slot of=k.kinds.form key=about required=true kind=string core.source="hand-core 1"
+# A role of a structure cast in a world: `filler` is a type of the world (`as=type`), a key written type.key
+# (`as=key`) or an act of k.actions (`as=act`). A role may have several fillers (the parts of a document).
+@k.kinds.cast core.type of=k.kinds.cast closed=true core.source="hand-core 1"
+@k.kinds.cast.world core.slot of=k.kinds.cast key=world id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.cast.structure core.slot of=k.kinds.cast key=structure id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.cast.role core.slot of=k.kinds.cast key=role id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.cast.filler core.slot of=k.kinds.cast key=filler id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.cast.as core.slot of=k.kinds.cast key=as required=true enum=type enum=key enum=act core.source="hand-core 1"
+
 @k.kinds.word.kind core.word text=kind text="kind of" text=type text="type of" means=k.kinds.kind core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -95,3 +124,14 @@
 @k.kinds.word.key.relation.object_type core.word text="object type" means=k.kinds.relation.object_type core.source="hand-core 1"
 @k.kinds.word.key.relation.object_sense core.word text="object sense" means=k.kinds.relation.object_sense core.source="hand-core 1"
 @k.kinds.word.key.relation.scale core.word text=scale means=k.kinds.relation.scale core.source="hand-core 1"
+@k.kinds.word.key.structure.about core.word text=about means=k.kinds.structure.about core.source="hand-core 1"
+@k.kinds.word.key.structure.role core.word text=role means=k.kinds.structure.role core.source="hand-core 1"
+@k.kinds.word.key.structure.needs core.word text=needs means=k.kinds.structure.needs core.source="hand-core 1"
+@k.kinds.word.key.role.name core.word text=name means=k.kinds.role.name core.source="hand-core 1"
+@k.kinds.word.key.role.about core.word text=about means=k.kinds.role.about core.source="hand-core 1"
+@k.kinds.word.key.form.structure core.word text=structure means=k.kinds.form.structure core.source="hand-core 1"
+@k.kinds.word.key.form.about core.word text=about means=k.kinds.form.about core.source="hand-core 1"
+@k.kinds.word.key.cast.structure core.word text=structure means=k.kinds.cast.structure core.source="hand-core 1"
+@k.kinds.word.key.cast.role core.word text=role means=k.kinds.cast.role core.source="hand-core 1"
+@k.kinds.word.key.cast.filler core.word text=filler means=k.kinds.cast.filler core.source="hand-core 1"
+@k.kinds.word.key.cast.as core.word text=as means=k.kinds.cast.as core.source="hand-core 1"

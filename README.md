@@ -140,7 +140,9 @@ area; series; values by category), with the second method of "a chart of the thi
 Block "21:05" item 1 (selectional restrictions): `k.kinds.argument` (18 classes of arguments: the `holds` of every role of
 `k.actions` and the objects of relations, with the types and senses that fill each) and `k.kinds.relation` (every key of
 every knowledge type as a relation with typed subject and object, computed by `tools/relations-core.mjs`), for the
-library's type-driven reader (`docs/worlds/k.kinds/WORLD.md`). A
+library's type-driven reader (`docs/worlds/k.kinds/WORLD.md`). Item 4: `k.kinds.structure`, `form` and `cast`: each world schema and
+the knowledge worlds with live use say which structures they are (assignment, whole with parts, sequence, graph,
+placement, values by category) and which types, keys and acts play each role, so analogies are computed. A
 world schema may hold denies (`w.timeline`: an event is inside its timeline; `w.face`: one part of each kind on a
 face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.63.0 at
 commit b89215e (`tools/sopworld/VERSION`).

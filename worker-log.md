@@ -4348,3 +4348,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   listed word reaches a sense, every listed word is a miss, at least 90 % reach. k.words 4 pass.
 - The w.chart commit (f0254e1) carried six conflict-marker lines in this log from its rebases (the markers only, no
   text lost); removed here. Lesson: grep for markers before `git add -A` after a rebase that stopped on this log.
+
+## Block 21:05 item 4 (2026-11-14, second worker): structures of worlds for alignment
+
+- k.kinds version 4: `k.kinds.structure` (6: assignment = items in slots under constraints, whole with parts, sequence,
+  graph, placement, values by category; roles in order, the first two needed), `k.kinds.role` (39), `k.kinds.form`
+  (33: world, structure, how) and `k.kinds.cast` (153: role -> a type, a type.key or an act of k.actions), for the 7
+  world schemas and 10 knowledge worlds a live world makes or reads (k.layouts, k.objects, k.faces, k.parts,
+  k.scenes, k.time, k.story, k.genres, k.procedures, k.geo). Shard `structures` (231 wires, 40.8 kB), hand-written
+  table in `tools/structures-core.mjs` (in `npm run build`); kinds-core keeps it (the `keep` list of item 1).
+- Tests (`tests/k.kinds.structures.test.mjs`, 4): the shard is the tool's output and loads; every world schema has a
+  structure; every form casts its structure's needed roles and only its roles; every filler is a type of its world,
+  a key of one (inherited keys too) or an act; analogies computed from the facts (guest ~ event ~ layout slot thing;
+  seat ~ layout slot; table ~ layout; drawing part ~ chapter; face ~ drawing; chart series ~ chapter; list item ~
+  event ~ method step), and transfer candidates (a timeline's end, start, finish missing from a list; nothing the
+  other way). Measured: 96 world pairs share a structure, 343 filler pairs aligned, 174 roles offered for transfer.

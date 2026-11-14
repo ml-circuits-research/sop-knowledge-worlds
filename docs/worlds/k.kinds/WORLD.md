@@ -91,3 +91,27 @@ the subject and object they must; the 74 keys that the readings of the 292 real 
 Known limits: a relation is typed by the values the catalog has today, so a key whose values join no world (the
 young of an animal: kit, cygnet; WordNet's common words lack most) is a `word`; the subject of a type keyed by a
 drawing is any thing of that name; the senses of `k.objects.object` depend on the shard (no fixed sense).
+
+## Structures of worlds, for alignment (block "21:05" item 4)
+
+For the library's transfer by analogy: each world schema, and each knowledge world whose things a live world makes
+or reads, says which **structures** it is and which of its types, keys and acts plays each **role** (shard
+`structures`, written by `tools/structures-core.mjs`, 231 wires).
+
+| structure | roles (the first two needed) | worlds |
+|---|---|---|
+| assignment (items in slots under constraints) | item, slot, assigned, container, slot_of, capacity, order, constraint | w.seating, w.timeline, k.layouts |
+| whole with parts | whole, part, part_of, part_kind, position, size, order | w.face, w.document, w.chart, k.objects, k.faces, k.parts, k.scenes, k.genres, k.geo |
+| sequence | element, position, sequence, element_of, end, start, finish, next | w.timeline, w.list, w.document, k.time, k.story, k.genres, k.procedures |
+| graph (nodes and links) | node, link, from, to, label | w.seating, w.timeline, k.layouts, k.objects, k.story, k.procedures, k.geo |
+| placement (things in a space) | thing, position, space, layer, size | w.seating, w.face, w.map, k.layouts, k.faces, k.scenes |
+| values by category | value, category, series, value_of, unit, order | w.chart |
+
+`k.kinds.structure` (name, about, role, needs), `k.kinds.role` (structure, name, about), `k.kinds.form` (world,
+structure, about: how the world is that structure) and `k.kinds.cast` (world, structure, role, filler, `as` type /
+key / act: `w.seating` assignment item = `w.seating.guest`, assigned = `w.seating.guest.seat`; graph link = the act
+`connect`). 17 worlds, 33 forms, 153 casts. Aligning two worlds of one structure role by role gives the analogy (a
+guest in a seat ~ an event at a time ~ a thing in a slot of a layout; a drawing's part ~ a document's chapter ~ a
+face's part); the roles one world casts and the other does not are what a transfer may offer (a timeline's event has
+an end, a start and a finish of its timeline; a list has none). Measured in `tests/k.kinds.structures.test.mjs`: 96
+pairs of worlds share a structure, 343 filler pairs aligned, 174 roles offered for transfer.
