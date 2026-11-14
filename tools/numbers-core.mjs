@@ -7,6 +7,7 @@
 // people (`speed_about`), the legs of a thing that is not an animal (`legs`; the legs of animals are k.animals), the
 // flat sides of a thing whose sides are counted (`sides`), and whether it is cheap, medium or expensive to buy
 // (`price_class`). The units are said in k.units.measure (tools/measures-core.mjs).
+// Q37: for a name with several senses (turkey), `sense` says which one the numbers are about (sources/hand-core/senses.tsv).
 // Two classes are not labelled but computed here from the number, so that they never disagree with it; their
 // values are steps of the k.values scales of the same name: weight_class light under 2 kg, heavy over 30 kg (what
 // one person lifts with one hand, and what one person cannot carry), medium between; speed_class slow under
@@ -15,6 +16,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, byText } from './import/lib.mjs';
+import { readSenses } from './lib/senses.mjs';
 
 const SRC = 'hand-core 1';
 export const NUMBERS_TSV = join(REPO, 'sources', 'hand-core', 'numbers.tsv');
@@ -45,11 +47,11 @@ export function readNumbers(text = readFileSync(NUMBERS_TSV, 'utf8')) {
 // Shards by the first letter of the name, so that none is large: a-f, g-o, p-z.
 const PARTS = [['a-f', /^[a-f]/], ['g-o', /^[g-o]/], ['p-z', /^[p-z]/]];
 
-export function numberShards(rows = readNumbers()) {
+export function numberShards(rows = readNumbers(), senses = readSenses().number) {
   const files = {};
   for (const [part, re] of PARTS) {
     const mine = rows.filter((r) => re.test(r.name)).sort((a, b) => byText(a.name, b.name));
-    const lines = mine.map((r) => wire(`k.attributes.number.${seg(r.name)}`, 'k.attributes.number', [['name', r.name], ['size_about', r.size_about], ['weight_about', r.weight_about],
+    const lines = mine.map((r) => wire(`k.attributes.number.${seg(r.name)}`, 'k.attributes.number', [['name', r.name], ['sense', senses.get(r.name)], ['size_about', r.size_about], ['weight_about', r.weight_about],
       ['weight_class', weightClass(r.weight_about === undefined ? undefined : Number(r.weight_about))], ['speed_about', r.speed_about],
       ['speed_class', speedClass(r.speed_about === undefined ? undefined : Number(r.speed_about))], ['legs', r.legs], ['sides', r.sides], ['price_class', r.price_class], ['named', 'model']], SRC));
     files[`numbers-${part}.sop`] = `${header({ id: `k.attributes/shards/numbers-${part}`, about: `the usual numbers of ${mine.length} common things whose name starts with ${part.replace('-', ' to ')}: the longest side in metres, the weight in kilograms and its class, the top speed in kilometres per hour and its class, legs of things that are not animals, flat sides, and the price class, each only where it is plain.`,

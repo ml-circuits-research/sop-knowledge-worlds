@@ -173,3 +173,34 @@ test('k.attributes.usage: the shard is what tools/usage-core.mjs gives; every th
   assert.ok(by('stethoscope').attrs.used_by.includes('doctor'));
   assert.equal(by('tractor').attrs.used_by, undefined, 'the farmer lists the tractor in k.people');
 });
+
+// Q37: a number or usage fact for a name with several senses says which one it is about, and the join files it there.
+import { readSenses } from '../tools/lib/senses.mjs';
+import { SENSES } from '../tools/joins.mjs';
+
+test('Q37: number and usage facts of a name with several senses say which (sense=), and k.attributes.same files them under it', () => {
+  const same = world.ofType('k.attributes.same');
+  const sensesOf = new Map();
+  for (const s of same) { const n = one(s, 'name'); if (!sensesOf.has(n)) sensesOf.set(n, []); sensesOf.get(n).push(s); }
+  const table = readSenses();
+  for (const [kind, type] of [['number', 'k.attributes.number'], ['usage', 'k.attributes.usage']]) {
+    const facts = world.ofType(type);
+    let said = 0;
+    for (const f of facts) {
+      const name = one(f, 'name'), sense = one(f, 'sense'), all = sensesOf.get(name) ?? [];
+      if (all.length < 2) { assert.equal(sense, undefined, `${f.id}: one sense only, no sense= needed`); continue; }
+      assert.ok(sense, `${f.id}: ${name} has the senses ${all.map((s) => one(s, 'sense')).join(', ')}; say which`);
+      assert.ok(SENSES.includes(sense), `${f.id}: ${sense}`);
+      const mine = all.find((s) => one(s, 'sense') === sense);
+      assert.ok(mine, `${f.id}: ${name} has no sense ${sense}`);
+      assert.ok((mine.attrs.in ?? []).includes(type), `${f.id}: not filed under ${sense}`);
+      for (const s of all) assert.ok(!(s.attrs.unsure ?? []).includes(type), `${f.id}: still unsure under ${one(s, 'sense')}`);
+      said++;
+    }
+    assert.equal(said, table[kind].size, `${kind}: every row of senses.tsv is used`);
+  }
+  const num = (name) => world.ofType('k.attributes.number').find((n) => one(n, 'name') === name);
+  assert.equal(one(num('turkey'), 'sense'), 'animal');
+  assert.equal(one(num('kiwi'), 'sense'), 'food');
+  assert.equal(one(world.ofType('k.attributes.usage').find((u) => one(u, 'name') === 'star'), 'sense'), 'body in space');
+});

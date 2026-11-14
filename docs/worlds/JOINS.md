@@ -38,73 +38,73 @@ and the meat).
 
 | name | senses and where |
 |---|---|
-| apricot | **food**: `k.food.food`; **colour**: `k.values.colour`; unsure: `k.attributes.number` |
+| apricot | **food**: `k.attributes.number`, `k.food.food`; **colour**: `k.values.colour` |
 | back | **body part**: `k.body.part`; **place**: `k.geo.river` |
 | bear | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | beaver | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
-| bell | **place**: `k.geo.river`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.number`, `k.attributes.thing` |
+| bell | **place**: `k.geo.river`; **thing**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.thing` |
 | black | **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |
-| bug | **animal**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| bug | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | cherry | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
 | chestnut | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour` |
-| chicken | **animal**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number` |
+| chicken | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | chocolate | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
-| cod | **animal**: `k.animals.animal`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number`, `k.objects.stand_in` |
-| cone | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.number` |
+| cod | **animal**: `k.animals.animal`, `k.attributes.number`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
+| cone | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing` |
 | copper | **colour**: `k.values.colour`; **place**: `k.geo.river` |
 | coral | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
-| crab | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number` |
+| crab | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | crane | **animal**: `k.animals.animal`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | cream | **food**: `k.food.food`; **colour**: `k.colours.colour`, `k.values.colour` |
-| eel | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
-| feather | **animal**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number`, `k.attributes.thing` |
+| eel | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
+| feather | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.thing` |
 | fly | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
-| fox | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| fox | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | green | **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |
 | grey | **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |
 | groundhog | **animal**: `k.animals.animal`, `k.scenes.thing`; **place**: `k.geo.river` |
 | hay | **food**: `k.attributes.drawn`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing`; **plant**: `k.attributes.thing` |
 | heart | **body part**: `k.body.part`; **shape**: `k.shapes.shape`, `k.values.shape`; unsure: `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` |
-| herring | **animal**: `k.animals.animal`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number`, `k.objects.stand_in` |
-| kiwi | **animal**: `k.animals.animal`; **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.number` |
+| herring | **animal**: `k.animals.animal`, `k.attributes.number`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
+| kiwi | **animal**: `k.animals.animal`; **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing` |
 | lavender | **plant**: `k.attributes.thing`; **colour**: `k.values.colour` |
-| lemon | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour`; unsure: `k.attributes.number` |
-| lilac | **plant**: `k.attributes.thing`; **colour**: `k.colours.colour`, `k.values.colour`; unsure: `k.attributes.number`, `k.objects.stand_in` |
+| lemon | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
+| lilac | **plant**: `k.attributes.number`, `k.attributes.thing`; **colour**: `k.colours.colour`, `k.values.colour`; unsure: `k.objects.stand_in` |
 | lime | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour` |
-| lobster | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number` |
+| lobster | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | mint | **food**: `k.food.food`; **colour**: `k.values.colour` |
-| moose | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| moose | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | mount fuji | **place**: `k.geo.mountain`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
-| mushroom | **food**: `k.food.food`; **plant**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.number` |
+| mushroom | **food**: `k.food.food`; **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing` |
 | mussel | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | mustard | **food**: `k.food.food`; **colour**: `k.colours.colour`, `k.values.colour` |
 | olive | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour` |
-| orange | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
-| oyster | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number` |
+| orange | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |
+| oyster | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | palm | **plant**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **body part**: `k.body.part` |
-| peach | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour`; unsure: `k.attributes.number` |
+| peach | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`, `k.values.colour` |
 | peru | **colour**: `k.values.colour`; **place**: `k.geo.country` |
 | phoenix | **animal**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.city` |
 | plum | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
-| porcupine | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| porcupine | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | pyramid | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.layouts.anchor`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.thing` |
 | red | **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |
 | ring | **clothing**: `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`, `k.wearables.wearable`; **shape**: `k.shapes.shape`, `k.values.shape` |
-| rose | **plant**: `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour`; unsure: `k.attributes.number` |
-| salmon | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.scenes.thing`; **food**: `k.food.food`; **colour**: `k.values.colour`; **place**: `k.geo.river`; unsure: `k.attributes.number`, `k.objects.object` |
-| sardine | **animal**: `k.animals.animal`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.number`, `k.objects.stand_in` |
+| rose | **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
+| salmon | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.scenes.thing`; **food**: `k.food.food`; **colour**: `k.values.colour`; **place**: `k.geo.river`; unsure: `k.objects.object` |
+| sardine | **animal**: `k.animals.animal`, `k.attributes.number`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
 | shrimp | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | skin | **body part**: `k.body.part`; **colour**: `k.values.colour` |
-| snake | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| snake | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | sphere | **shape**: `k.shapes.shape`, `k.values.shape`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
-| star | **shape**: `k.shapes.shape`, `k.values.shape`; **body in space**: `k.space.kind`; unsure: `k.attributes.drawn`, `k.attributes.thing`, `k.attributes.usage`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing` |
-| swan | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.number` |
+| star | **shape**: `k.shapes.shape`, `k.values.shape`; **body in space**: `k.attributes.usage`, `k.space.kind`; unsure: `k.attributes.drawn`, `k.attributes.thing`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing` |
+| swan | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | tamale | **food**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.city` |
 | toast | **food**: `k.food.food`; **thing**: `k.attributes.drawn`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing` |
-| tomato | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour`; unsure: `k.attributes.number` |
+| tomato | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
 | tuna | **animal**: `k.animals.animal`; **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing` |
-| turkey | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; **place**: `k.geo.country`; unsure: `k.attributes.number` |
-| violet | **plant**: `k.attributes.thing`; **colour**: `k.values.colour`; unsure: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing` |
+| turkey | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; **place**: `k.geo.country` |
+| violet | **plant**: `k.attributes.number`, `k.attributes.thing`; **colour**: `k.values.colour`; unsure: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | wheat | **food**: `k.attributes.drawn`, `k.attributes.usage`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.values.colour` |
 | white | **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |
 | yellow | **colour**: `k.colours.colour`, `k.values.colour`; **place**: `k.geo.river` |

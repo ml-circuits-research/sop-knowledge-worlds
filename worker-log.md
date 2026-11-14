@@ -3165,3 +3165,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: k.words 321 shards, 32,282 -> 32,404 wires (115 senses and 10 spellings added; galaxy's 3 senses changed), 7,445,092 -> 7,491,718 bytes;
   the largest shard `re` 899 wires, 187,344 bytes. Catalog 25 worlds, 937 shards, vocab 24,256 words.
   `node tools/validate.mjs`: 962 files, 0 errors.
+
+## Q37 (2026-11-14, second worker): number and usage facts say which sense, for names with several senses
+
+- Q37 option (a): `k.attributes.number.sense` and `k.attributes.usage.sense` (`id=true`, not required; the values of
+  `k.attributes.same.sense`), only on the facts of names that have several senses in `k.attributes.same`: 29 number
+  facts, 5 usage facts (k.attributes version 2; key words "sense" by tools/key-words.mjs).
+- Which sense: my judgement from the values, in `sources/hand-core/senses.tsv` (type, name, sense), read by
+  `tools/lib/senses.mjs` for `tools/numbers-core.mjs` and `tools/usage-core.mjs`. Animal: bug, chicken, cod, crab,
+  eel, feather (the joins file the drawn feather under animal), fox, herring, lobster, moose, oyster, porcupine,
+  salmon, sardine, snake, swan, turkey; food: apricot, kiwi, lemon, orange, peach, tomato; plant: lilac, mushroom,
+  rose, violet; thing: bell, cone. Usage: fox animal, hay and wheat food, toast thing, star body in space (at night).
+  Each is the sense of the drawing of the name (the numbers were labelled for the common things, which are drawings);
+  the numbers agree (turkey 9 kg and 40 km/h: the bird; kiwi 7 cm: the fruit; lilac 4 m: the shrub).
+- `tools/joins.mjs` reads `sense` on these two types: the 34 facts are filed under their sense (`in`) and no longer
+  `unsure` under every sense of the name (JOINS.md: 29 names lost "unsure: k.attributes.number").
+- Test (k.attributes): a fact of a name with one sense has no `sense`; a fact of a name with several has one, that
+  sense exists for the name, the fact's type is `in` it and `unsure` under none; every row of the table is used.
+- Not done: option (b), `sense` on every fact. Looked at: the 34 rows with their values. Not looked at: whether a
+  number of a one-sense name was labelled for another meaning (the joins see one sense there).
+- Numbers: k.attributes schema +4 wires (2 slots, 2 key words); numbers shards 975 facts, usage 338 facts (34 with
+  `sense`). Catalog 25 worlds, 937 shards, vocab 24,256 words; validate 962 files, 0 errors.
+  npm test 2,864: 2,859 pass, 5 skipped, 0 fail (the catalog test failed once on a stale index.json after a WORLD.md
+  edit; rebuilt and rerun).

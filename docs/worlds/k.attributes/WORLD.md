@@ -55,6 +55,12 @@ are found in the worlds, and the usual values of common things that no other wor
 - Left out on purpose: substances and drinks (honey, milk), places and landforms whose size is not one number
   (street, island, valley), bodies in space (`k.space` has them); the weight of buildings.
 - Table `sources/hand-core/numbers.tsv`; audit `sources/hand-core/numbers-audit.tsv`.
+- Q37: `sense` (identity with `name`, only where the name has several senses in `k.attributes.same`): which one the
+  numbers are about, a value of `k.attributes.same.sense` (29 facts: turkey, chicken, salmon the animal; kiwi, orange,
+  apricot the food; lilac, rose, violet, mushroom the plant; bell, cone the thing). Judged by the worker from the
+  values (a turkey of 9 kg that runs 40 km/h is the bird; a kiwi of 7 cm the fruit); in every case it is the sense of
+  the drawing of the name. Table `sources/hand-core/senses.tsv` (read by `tools/lib/senses.mjs`); `tools/joins.mjs`
+  files the fact under that sense instead of `unsure` under all of them.
 
 ## When and by whom
 
@@ -63,6 +69,8 @@ are found in the worlds, and the usual values of common things that no other wor
   winter scene with snow; an owl a night scene); `age` (107: baby, child, adult, old, the ages of `k.people.kind`);
   `used_by` (69 facts; a `k.people.role`, only where the role does not already list the thing in its `uses`).
   Written by `tools/usage-core.mjs` from `sources/hand-core/usage.tsv`; audit `usage-audit.tsv`.
+- Q37: `sense` as for the numbers, on 5 facts (fox the animal, hay and wheat the food, toast the thing, star the body
+  in space: at night).
 - The family `scene thing` (the 2,218 things of `k.scenes`) has its row in ASPECTS.md: temporal 257, social 256.
 
 ## One name, one thing

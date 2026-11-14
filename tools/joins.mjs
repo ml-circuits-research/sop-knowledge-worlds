@@ -6,7 +6,7 @@
 // drawings it was filed in by its source (the shard: animals, food, plants, clothes; any other group: a thing;
 // a mixed hand-written shard: unknown); a k.attributes.thing has the sense of its kind where the kind is an
 // animal, a food, a plant, clothing or a person; facts about a drawing (place, size, drawn colour, anchor) have the
-// sense of the drawing. Names are compared in lower case. A name whose facts have one sense (or one sense and
+// sense of the drawing; a number or usage fact that says its `sense` (Q37) has that one. Names are compared in lower case. A name whose facts have one sense (or one sense and
 // some of unknown sense) is one thing; a name with two or more senses is a clash (orange the colour and the
 // fruit; bat the animal and the thing), and each sense gets its own fact. Types that are keyed by the word,
 // whatever it means (k.words.sense, k.parts), are listed apart (`by_word`): their gloss says what is meant.
@@ -43,7 +43,7 @@ export const TYPES = [
   ['k.time.month', 'name', 'time'], ['k.time.weekday', 'name', 'time'], ['k.time.season', 'name', 'time'], ['k.time.duration', 'name', 'time'], ['k.time.part_of_day', 'name', 'time'], ['k.time.hour', 'name', 'time'],
   ['k.attributes.thing', 'name', (w) => KIND_SENSE[tok(w.attrs.kind?.[0])] ?? null],
   ['k.scenes.thing', 'name', 'drawing'], ['k.attributes.drawn', 'name', 'drawing'], ['k.layouts.anchor', 'of', 'drawing'],
-  ['k.commonsense.thing', 'name', null], ['k.attributes.number', 'name', null], ['k.attributes.usage', 'name', 'drawing'],
+  ['k.commonsense.thing', 'name', null], ['k.attributes.number', 'name', (w) => tok(w.attrs.sense?.[0]) ?? null], ['k.attributes.usage', 'name', (w) => tok(w.attrs.sense?.[0]) ?? 'drawing'],
   ['k.words.sense', 'word', 'word'], ['k.parts.whole', 'name', 'word'], ['k.parts.inherited', 'name', 'word'], ['k.parts.usual', 'name', 'word'], ['k.parts.called', 'of', 'word'],
 ];
 

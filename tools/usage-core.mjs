@@ -8,11 +8,13 @@
 // the same value; `age` the values of k.people.kind.age; `used_by` names a k.people.role. A role that already lists
 // the thing in its own `uses` (k.people.role) is not repeated here: one fact in one place, and a host that asks
 // who uses a thing reads both (`k.people.role` by `uses`, this type by `used_by`).
+// Q37: for a name with several senses (star), `sense` says which one is meant (sources/hand-core/senses.tsv).
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
 import { parse } from './sopworld/sopworld.mjs';
 import { wire, header, seg, writeShards, byText } from './import/lib.mjs';
+import { readSenses } from './lib/senses.mjs';
 
 const SRC = 'hand-core 1';
 export const USAGE_TSV = join(REPO, 'sources', 'hand-core', 'usage.tsv');
@@ -35,10 +37,10 @@ export function roleUses(worlds = scanWorlds()) {
   return out;
 }
 
-export function usageShards(rows = readUsage(), uses = roleUses()) {
+export function usageShards(rows = readUsage(), uses = roleUses(), senses = readSenses().usage) {
   const facts = rows.map((r) => ({ ...r, used_by: r.used_by.filter((role) => !uses.get(role)?.has(r.name)) }))
     .filter((r) => KEYS.some((k) => r[k].length)).sort((a, b) => byText(a.name, b.name));
-  const lines = facts.map((r) => wire(`k.attributes.usage.${seg(r.name)}`, 'k.attributes.usage', [['name', r.name], ...KEYS.flatMap((k) => r[k].map((v) => [k, v])), ['named', 'model']], SRC));
+  const lines = facts.map((r) => wire(`k.attributes.usage.${seg(r.name)}`, 'k.attributes.usage', [['name', r.name], ['sense', senses.get(r.name)], ...KEYS.flatMap((k) => r[k].map((v) => [k, v])), ['named', 'model']], SRC));
   return { 'usage.sop': `${header({ id: 'k.attributes/shards/usage', about: `when ${facts.length} things of k.scenes are usually used or seen (season, time of day, weather: the values of k.scenes.scene) and by whom (an age of k.people.kind, a role of k.people.role that does not already list the thing in its uses), each only where it is plain.`,
     sources: ['hand-core 1 (labelled by a language model, named=model: sources/hand-core/usage.tsv)'], license: 'CC0-1.0', script: 'tools/usage-core.mjs' })}\n${lines.join('\n')}\n` };
 }

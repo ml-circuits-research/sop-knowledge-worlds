@@ -1,5 +1,5 @@
 {
- "version": "7808cd180d7c",
+ "version": "3bdb3846875b",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -1812,7 +1812,7 @@
   },
   {
    "id": "k.attributes",
-   "version": "1",
+   "version": "2",
    "schema": "k.attributes/schema.sop",
    "exports": [
     "k.attributes.aspect",
@@ -4377,7 +4377,7 @@
      "id": "k.attributes/shards/numbers-a-f",
      "path": "k.attributes/shards/numbers-a-f.sop",
      "wires": 350,
-     "bytes": 58595,
+     "bytes": 58721,
      "keys": [
       "abbey",
       "accordion",
@@ -4393,6 +4393,7 @@
       "ambulance",
       "amulet",
       "android",
+      "animal",
       "anklet",
       "ant",
       "antelope",
@@ -4716,6 +4717,7 @@
       "flipper",
       "flower",
       "flute",
+      "food",
       "fork",
       "fort",
       "fortress",
@@ -4728,7 +4730,8 @@
       "frog",
       "fudge",
       "furnace",
-      "futon"
+      "futon",
+      "thing"
      ],
      "sources": [
       "hand-core-1"
@@ -4740,8 +4743,10 @@
      "id": "k.attributes/shards/numbers-g-o",
      "path": "k.attributes/shards/numbers-g-o.sop",
      "wires": 249,
-     "bytes": 41649,
+     "bytes": 41758,
      "keys": [
+      "animal",
+      "food",
       "galley",
       "gander",
       "garage",
@@ -4990,7 +4995,8 @@
       "oven",
       "overcoat",
       "owl",
-      "oyster"
+      "oyster",
+      "plant"
      ],
      "sources": [
       "hand-core-1"
@@ -5002,8 +5008,10 @@
      "id": "k.attributes/shards/numbers-p-z",
      "path": "k.attributes/shards/numbers-p-z.sop",
      "wires": 376,
-     "bytes": 63244,
+     "bytes": 63368,
      "keys": [
+      "animal",
+      "food",
       "package",
       "pager",
       "pail",
@@ -5061,6 +5069,7 @@
       "pistol",
       "pizza",
       "plane",
+      "plant",
       "plate",
       "platter",
       "platypus",
@@ -5409,7 +5418,7 @@
      "id": "k.attributes/shards/same-a",
      "path": "k.attributes/shards/same-a.sop",
      "wires": 111,
-     "bytes": 21768,
+     "bytes": 21737,
      "keys": [
       "aardvark",
       "abacus",
@@ -5544,7 +5553,7 @@
      "id": "k.attributes/shards/same-b",
      "path": "k.attributes/shards/same-b.sop",
      "wires": 338,
-     "bytes": 68286,
+     "bytes": 68224,
      "keys": [
       "animal",
       "ba",
@@ -5899,7 +5908,7 @@
      "id": "k.attributes/shards/same-c",
      "path": "k.attributes/shards/same-c.sop",
      "wires": 446,
-     "bytes": 89950,
+     "bytes": 89826,
      "keys": [
       "animal",
       "body in space",
@@ -6512,7 +6521,7 @@
      "id": "k.attributes/shards/same-e",
      "path": "k.attributes/shards/same-e.sop",
      "wires": 70,
-     "bytes": 13904,
+     "bytes": 13873,
      "keys": [
       "animal",
       "body in space",
@@ -6605,7 +6614,7 @@
      "id": "k.attributes/shards/same-f",
      "path": "k.attributes/shards/same-f.sop",
      "wires": 161,
-     "bytes": 32713,
+     "bytes": 32651,
      "keys": [
       "animal",
       "body part",
@@ -6938,7 +6947,7 @@
      "id": "k.attributes/shards/same-h",
      "path": "k.attributes/shards/same-h.sop",
      "wires": 163,
-     "bytes": 32962,
+     "bytes": 32931,
      "keys": [
       "animal",
       "body part",
@@ -7261,7 +7270,7 @@
      "id": "k.attributes/shards/same-k",
      "path": "k.attributes/shards/same-k.sop",
      "wires": 46,
-     "bytes": 9482,
+     "bytes": 9451,
      "keys": [
       "animal",
       "body part",
@@ -7326,7 +7335,7 @@
      "id": "k.attributes/shards/same-l",
      "path": "k.attributes/shards/same-l.sop",
      "wires": 132,
-     "bytes": 27038,
+     "bytes": 26945,
      "keys": [
       "animal",
       "body part",
@@ -7477,7 +7486,7 @@
      "id": "k.attributes/shards/same-m",
      "path": "k.attributes/shards/same-m.sop",
      "wires": 265,
-     "bytes": 51140,
+     "bytes": 51078,
      "keys": [
       "animal",
       "body in space",
@@ -7841,7 +7850,7 @@
      "id": "k.attributes/shards/same-o",
      "path": "k.attributes/shards/same-o.sop",
      "wires": 63,
-     "bytes": 12742,
+     "bytes": 12653,
      "keys": [
       "animal",
       "body part",
@@ -7923,7 +7932,7 @@
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
      "wires": 308,
-     "bytes": 62039,
+     "bytes": 61977,
      "keys": [
       "animal",
       "body in space",
@@ -8277,7 +8286,7 @@
      "id": "k.attributes/shards/same-r",
      "path": "k.attributes/shards/same-r.sop",
      "wires": 135,
-     "bytes": 28049,
+     "bytes": 28018,
      "keys": [
       "animal",
       "body part",
@@ -8431,7 +8440,7 @@
      "id": "k.attributes/shards/same-s",
      "path": "k.attributes/shards/same-s.sop",
      "wires": 426,
-     "bytes": 87269,
+     "bytes": 87061,
      "keys": [
       "animal",
       "body in space",
@@ -8872,7 +8881,7 @@
      "id": "k.attributes/shards/same-t",
      "path": "k.attributes/shards/same-t.sop",
      "wires": 225,
-     "bytes": 45524,
+     "bytes": 45435,
      "keys": [
       "animal",
       "body in space",
@@ -9149,7 +9158,7 @@
      "id": "k.attributes/shards/same-v",
      "path": "k.attributes/shards/same-v.sop",
      "wires": 49,
-     "bytes": 9981,
+     "bytes": 9950,
      "keys": [
       "animal",
       "body in space",
@@ -10262,10 +10271,11 @@
      "id": "k.attributes/shards/usage",
      "path": "k.attributes/shards/usage.sop",
      "wires": 338,
-     "bytes": 42911,
+     "bytes": 42980,
      "keys": [
       "aftershave",
       "alarm clock",
+      "animal",
       "apple juice",
       "baby bottle",
       "baby chick",
@@ -10290,6 +10300,7 @@
       "blackboard",
       "blossom",
       "bobble hat",
+      "body in space",
       "bonfire",
       "bootees",
       "brandy",
@@ -10379,6 +10390,7 @@
       "flashlight",
       "fog",
       "foggy mountain",
+      "food",
       "football",
       "football kit",
       "forceps",
@@ -10562,6 +10574,7 @@
       "tent",
       "tequila",
       "test tube",
+      "thing",
       "thong sandal",
       "toast",
       "toaster",

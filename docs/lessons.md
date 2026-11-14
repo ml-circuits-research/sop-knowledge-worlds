@@ -161,3 +161,7 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **A root per world is a good sense picker, but a dictionary files some things under abstract parents** (a galaxy is
   a collection, the solar system a system, a black hole a region, olive oil a lipid). Widening the root would pull
   in wrong senses; a few narrow roots, each read off the chain, fixed 8 of 10 misses without changing any other sense.
+- **A join that cannot decide should say "unsure", and the fix is one key on the fact, not a smarter join.** 29
+  numbers sat under `unsure` for every sense of their name (turkey: bird, food, country). The facts themselves knew
+  which they meant (a turkey running 40 km/h); writing `sense=` on the 34 facts of names with several senses, and
+  having the join read it, made the join exact without touching the 3,400 names that have one sense.
