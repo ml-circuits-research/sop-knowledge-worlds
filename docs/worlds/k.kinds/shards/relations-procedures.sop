@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-procedures: the keys of the types of k.procedures read as relations: 76 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-procedures: the keys of the types of k.procedures read as relations: 77 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -70,6 +70,7 @@
 @k.kinds.relation.k.procedures.method.act k.kinds.relation type=k.procedures.method key=act subject=method object=act object_type=k.actions.act found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.method.world k.kinds.relation type=k.procedures.method key=world subject=method object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.method.rank k.kinds.relation type=k.procedures.method key=rank subject=method object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.method.user_facing k.kinds.relation type=k.procedures.method key=user_facing subject=method object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.procedures.method.example k.kinds.relation type=k.procedures.method key=example subject=method object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.procedures.step.method k.kinds.relation type=k.procedures.step key=method subject=step object=thing object_type=k.procedures.method found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.procedures.step.n k.kinds.relation type=k.procedures.step key=n subject=step object=number found=schema core.source="hand-core 1"

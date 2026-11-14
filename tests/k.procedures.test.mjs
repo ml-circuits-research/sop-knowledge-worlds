@@ -7,8 +7,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
-import { procedureShards, METHODS } from '../tools/procedures-core.mjs';
+import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
+import { procedureShards, METHODS, USER_FACING } from '../tools/procedures-core.mjs';
 import { parse, factStore, planner as makePlanner, PlanLive, readMethods, PLAN_LIMITS } from '../tools/sopworld/sopworld.mjs';
 
 // Every published world, k.* and w.* (the world schemas too: the planner takes a schema's kinds from them).
@@ -317,4 +317,18 @@ test('coverage: every scene, role, wearable, layout, joined whole and labelled d
   const apart = run('labelled drawings taken apart', drawn.map((s) => [{ act: 'take apart', roles: { thing: 'x1' } }, () => new Live({ things: [thing('x1', s)] })]));
   assert.equal(apart.ok, apart.goals, apart.bad.join(' '));
   console.log(`coverage ${JSON.stringify(report)}`);
+});
+
+// Block 07:30 item 3 (PSys2 Q17: a random flowchart was "a face of a role"): every method says whether a person would
+// ask to see it as a procedure.
+test('every method says user_facing; the plain tasks are, the app\'s ways to a goal are not', () => {
+  const ms = factsOf('k.procedures', 'k.procedures.method', worlds);
+  const unq = (v) => String(v).replace(/^"|"$/g, '');
+  assert.equal(ms.length, METHODS.length);
+  for (const m of ms) assert.deepEqual(m.attrs.user_facing, [String(USER_FACING.has(unq(m.attrs.name[0])))], m.id);
+  const facing = ms.filter((m) => m.attrs.user_facing[0] === 'true').map((m) => unq(m.attrs.name[0]));
+  for (const n of ['set a table', 'write an essay about a topic', 'compose a scene']) assert.ok(facing.includes(n), n);
+  for (const n of ['a face of a role', 'show a feeling on a face', 'put a thing on the anchor of another']) assert.ok(!facing.includes(n), n);
+  // a user-facing method has steps enough to draw (a flowchart of one box says nothing)
+  for (const m of METHODS.filter((x) => USER_FACING.has(x.name))) assert.ok(m.steps.length >= 2, m.name);
 });

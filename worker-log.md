@@ -5393,3 +5393,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   through the fills; three procedures, none a method name, cited iff `cite`, one first step, `after` points back, a
   branch follows a decision and each decision has a yes and a no; the tea flowchart starts with "Boil water" and its
   decision is a diamond (k.diagrams.shape).
+
+
+## 2026-11-15 — first worker: user-facing methods (block 07:30 item 3; PSys2 Q17 (3))
+
+- `k.procedures.method.user_facing` (required boolean; k.procedures version 3): true when a person would ask to see the
+  method as a procedure (its goal a task named in plain words, its steps steps a person could follow), false when it
+  is one of the app's ways to a goal. 9 of 29 true: compose a scene, build from parts, set a table, a chart of the
+  things there (the bar chart), write a story / presentation / essay / scientific article / report. False: anchors,
+  wearables, faces of roles, feelings, take apart, map views, and the list or seating-plan rendering of a task that has
+  a plain method. A random flowchart of a method takes a user-facing one (or an everyday procedure, item 2).
+- `USER_FACING` in tools/procedures-core.mjs (one named list, with the rule); shards from-knowledge 54,023 bytes, tasks
+  27,327, compose 48,617; build: narration (1 slot, machinery), relations-procedures.
+- Test: tests/k.procedures.test.mjs (16, +1): every method says it, as the list says; set a table, an essay and a scene
+  are, a face of a role, a feeling on a face and an anchor are not; every user-facing method has 2 or more steps.

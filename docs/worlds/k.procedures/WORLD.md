@@ -19,7 +19,7 @@ bounded (depth 3, 200 acts, no method inside its own expansion).
 
 | Type | Identity | Says |
 | --- | --- | --- |
-| `k.procedures.method` | `name` | `about`; `act` (the goal's act); `world` (a world schema it acts in, if any); `rank` (order among methods of one goal; 1 when not said); `example` (goals in plain words) |
+| `k.procedures.method` | `name` | `about`; `act` (the goal's act); `world` (a world schema it acts in, if any); `rank` (order among methods of one goal; 1 when not said); `user_facing` (a person would ask to see it as a procedure); `example` (goals in plain words) |
 | `k.procedures.goal` | `method`, `role` | what the goal's role must be: `from` a knowledge type whose fact it names (by `by`, else `name`), `value`, `kind`, `rel`; `needed`; `default` |
 | `k.procedures.binding` | `method`, `name` | one source: `goal` (a role), `step` (what those steps made; an ask step's answer rows), `from` (facts of a type, filtered by matches), `live` (things of a kind, or `any`), `history` (acts done before the plan), `upto` (1..n), `together` (other bindings), `value`; `key` takes one key's values |
 | `k.procedures.match` | `method`, `binding`, `key` | a filter on a binding of facts or things: `value`, `not`, `equals` (another binding, of its key `equals_key`, compared up the chain of kinds), `present` |
@@ -29,6 +29,13 @@ bounded (depth 3, 200 acts, no method inside its own expansion).
 
 | `k.procedures.howto` | `name` | an everyday procedure (not a planner method): `about`; `basis` cited (with `cite`) or own |
 | `k.procedures.howto_step` | `howto`, `n` | `about` (a flowchart box); `role` process or decision; `after` (many); `branch` yes or no (the answer of the decision it follows); `detail` |
+
+**User-facing methods** (block 07:30 item 3; PSys2 Q17: a random flowchart was "a face of a role"): 9 of 29 methods
+are `user_facing=true`, their goal a task a person names and their steps steps a person could follow: compose a scene,
+build from parts, set a table, a chart of the things there (the bar chart), and the five compositions (story,
+presentation, essay, scientific article, report). The other 20 are the app's ways to a goal (an anchor, a wearable, a
+face's variant, a map view, the list or seating-plan rendering of a task that has a plain method); a host drawing a
+random flowchart of a method takes a user-facing one, or an everyday procedure.
 
 **Everyday procedures** (shard `everyday`, block 07:30 item 2; PSys2 Q17: "a flowchart of making tea" found only the
 drawing methods): **making tea** (own: 8 steps, the decision "Milk or sugar?"), **washing hands** (cited: the CDC's

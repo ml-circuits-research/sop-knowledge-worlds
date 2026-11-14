@@ -4,7 +4,7 @@
 # script: tools/procedures-core.mjs
 
 # a family photo of the people there
-@k.procedures.method.a_family_photo_of_the_people_there k.procedures.method name="a family photo of the people there" about="When there are people in the picture, a family photo is those people arranged in the layout \"family photo\"." act=make example="a family photo" example="arrange everyone for a family photo" core.source="hand-core 1"
+@k.procedures.method.a_family_photo_of_the_people_there k.procedures.method name="a family photo of the people there" about="When there are people in the picture, a family photo is those people arranged in the layout \"family photo\"." act=make user_facing=false example="a family photo" example="arrange everyone for a family photo" core.source="hand-core 1"
 @k.procedures.goal.a_family_photo_of_the_people_there.kind k.procedures.goal method="a family photo of the people there" role=kind value="family photo" core.source="hand-core 1"
 @k.procedures.binding.a_family_photo_of_the_people_there.kinds k.procedures.binding method="a family photo of the people there" name=kinds from=k.people.kind key=name core.source="hand-core 1"
 @k.procedures.binding.a_family_photo_of_the_people_there.people k.procedures.binding method="a family photo of the people there" name=people live=any core.source="hand-core 1"
@@ -15,7 +15,7 @@
 @k.procedures.condition.a_family_photo_of_the_people_there.1 k.procedures.condition method="a family photo of the people there" n=1 when=before fact=exists thing=people core.source="hand-core 1"
 
 # a family photo of a new family
-@k.procedures.method.a_family_photo_of_a_new_family k.procedures.method name="a family photo of a new family" about="When there is nobody yet, a family photo is a family (a man, a woman, a boy, a girl and their dog) arranged in the layout \"family photo\"." act=make rank=2 example="a family photo" core.source="hand-core 1"
+@k.procedures.method.a_family_photo_of_a_new_family k.procedures.method name="a family photo of a new family" about="When there is nobody yet, a family photo is a family (a man, a woman, a boy, a girl and their dog) arranged in the layout \"family photo\"." act=make rank=2 user_facing=false example="a family photo" core.source="hand-core 1"
 @k.procedures.goal.a_family_photo_of_a_new_family.kind k.procedures.goal method="a family photo of a new family" role=kind value="family photo" core.source="hand-core 1"
 @k.procedures.binding.a_family_photo_of_a_new_family.kinds k.procedures.binding method="a family photo of a new family" name=kinds from=k.people.kind key=name core.source="hand-core 1"
 @k.procedures.binding.a_family_photo_of_a_new_family.people k.procedures.binding method="a family photo of a new family" name=people live=any core.source="hand-core 1"
@@ -37,7 +37,7 @@
 @k.procedures.condition.a_family_photo_of_a_new_family.1 k.procedures.condition method="a family photo of a new family" n=1 when=before fact=absent thing=people core.source="hand-core 1"
 
 # set a table
-@k.procedures.method.set_a_table k.procedures.method name="set a table" about="A table set for a number of people (four if none is said): the table if there is none, a chair for each around it, and a plate and a cup for each on its top." act=make rank=2 example="set a table for four" example="lay the table for two" core.source="hand-core 1"
+@k.procedures.method.set_a_table k.procedures.method name="set a table" about="A table set for a number of people (four if none is said): the table if there is none, a chair for each around it, and a plate and a cup for each on its top." act=make rank=2 user_facing=true example="set a table for four" example="lay the table for two" core.source="hand-core 1"
 @k.procedures.goal.set_a_table.kind k.procedures.goal method="set a table" role=kind value="table setting" core.source="hand-core 1"
 @k.procedures.goal.set_a_table.number k.procedures.goal method="set a table" role=number default=4 core.source="hand-core 1"
 @k.procedures.binding.set_a_table.n k.procedures.binding method="set a table" name=n goal=number core.source="hand-core 1"
@@ -60,7 +60,7 @@
 @k.procedures.condition.set_a_table.2 k.procedures.condition method="set a table" n=2 when=after fact=exists thing=table core.source="hand-core 1"
 
 # set a table in a seating plan
-@k.procedures.method.set_a_table_in_a_seating_plan k.procedures.method name="set a table in a seating plan" about="In a seating plan (w.seating), a table set for a number of people is a table with that many seats, and the seats, numbered." act=make world=w.seating example="set a table for four" core.source="hand-core 1"
+@k.procedures.method.set_a_table_in_a_seating_plan k.procedures.method name="set a table in a seating plan" about="In a seating plan (w.seating), a table set for a number of people is a table with that many seats, and the seats, numbered." act=make world=w.seating user_facing=false example="set a table for four" core.source="hand-core 1"
 @k.procedures.goal.set_a_table_in_a_seating_plan.kind k.procedures.goal method="set a table in a seating plan" role=kind value="table setting" core.source="hand-core 1"
 @k.procedures.goal.set_a_table_in_a_seating_plan.number k.procedures.goal method="set a table in a seating plan" role=number default=4 core.source="hand-core 1"
 @k.procedures.binding.set_a_table_in_a_seating_plan.n k.procedures.binding method="set a table in a seating plan" name=n goal=number core.source="hand-core 1"
@@ -77,7 +77,7 @@
 @k.procedures.condition.set_a_table_in_a_seating_plan.1 k.procedures.condition method="set a table in a seating plan" n=1 when=after fact=exists thing=table core.source="hand-core 1"
 
 # a chart of the things there
-@k.procedures.method.a_chart_of_the_things_there k.procedures.method name="a chart of the things there" about="A chart of the things there, as a list (w.list): how many things of each kind there are, one item per kind with its count." act=make world=w.list example="a chart of the things in the picture" core.source="hand-core 1"
+@k.procedures.method.a_chart_of_the_things_there k.procedures.method name="a chart of the things there" about="A chart of the things there, as a list (w.list): how many things of each kind there are, one item per kind with its count." act=make world=w.list user_facing=false example="a chart of the things in the picture" core.source="hand-core 1"
 @k.procedures.goal.a_chart_of_the_things_there.kind k.procedures.goal method="a chart of the things there" role=kind value=chart core.source="hand-core 1"
 @k.procedures.binding.a_chart_of_the_things_there.things k.procedures.binding method="a chart of the things there" name=things live=any core.source="hand-core 1"
 @k.procedures.binding.a_chart_of_the_things_there.counted k.procedures.binding method="a chart of the things there" name=counted step=1 core.source="hand-core 1"
@@ -97,7 +97,7 @@
 @k.procedures.condition.a_chart_of_the_things_there.2 k.procedures.condition method="a chart of the things there" n=2 when=after fact=exists thing=list core.source="hand-core 1"
 
 # a chart of the things there in a chart
-@k.procedures.method.a_chart_of_the_things_there_in_a_chart k.procedures.method name="a chart of the things there in a chart" about="A chart of the things there, in a chart (w.chart): a bar chart with one series of counts, one value per kind with its count." act=make world=w.chart example="a chart of the things in the picture" core.source="hand-core 1"
+@k.procedures.method.a_chart_of_the_things_there_in_a_chart k.procedures.method name="a chart of the things there in a chart" about="A chart of the things there, in a chart (w.chart): a bar chart with one series of counts, one value per kind with its count." act=make world=w.chart user_facing=true example="a chart of the things in the picture" core.source="hand-core 1"
 @k.procedures.goal.a_chart_of_the_things_there_in_a_chart.kind k.procedures.goal method="a chart of the things there in a chart" role=kind value=chart core.source="hand-core 1"
 @k.procedures.binding.a_chart_of_the_things_there_in_a_chart.things k.procedures.binding method="a chart of the things there in a chart" name=things live=any core.source="hand-core 1"
 @k.procedures.binding.a_chart_of_the_things_there_in_a_chart.counted k.procedures.binding method="a chart of the things there in a chart" name=counted step=1 core.source="hand-core 1"
@@ -123,7 +123,7 @@
 @k.procedures.condition.a_chart_of_the_things_there_in_a_chart.2 k.procedures.condition method="a chart of the things there in a chart" n=2 when=after fact=exists thing=chart core.source="hand-core 1"
 
 # a report on a timeline
-@k.procedures.method.a_report_on_a_timeline k.procedures.method name="a report on a timeline" about="A report about what was done, on a timeline (w.timeline): one event per act done, in order, at its place in the history." act=make world=w.timeline example="a report about what we did" core.source="hand-core 1"
+@k.procedures.method.a_report_on_a_timeline k.procedures.method name="a report on a timeline" about="A report about what was done, on a timeline (w.timeline): one event per act done, in order, at its place in the history." act=make world=w.timeline user_facing=false example="a report about what we did" core.source="hand-core 1"
 @k.procedures.goal.a_report_on_a_timeline.kind k.procedures.goal method="a report on a timeline" role=kind value=report core.source="hand-core 1"
 @k.procedures.binding.a_report_on_a_timeline.done k.procedures.binding method="a report on a timeline" name=done history=true core.source="hand-core 1"
 @k.procedures.binding.a_report_on_a_timeline.timeline k.procedures.binding method="a report on a timeline" name=timeline step=1 core.source="hand-core 1"
@@ -140,7 +140,7 @@
 @k.procedures.condition.a_report_on_a_timeline.2 k.procedures.condition method="a report on a timeline" n=2 when=after fact=exists thing=timeline core.source="hand-core 1"
 
 # a report as a list
-@k.procedures.method.a_report_as_a_list k.procedures.method name="a report as a list" about="A report about what was done, as a list (w.list): one item per act done, numbered in order." act=make world=w.list example="a report about what we did" core.source="hand-core 1"
+@k.procedures.method.a_report_as_a_list k.procedures.method name="a report as a list" about="A report about what was done, as a list (w.list): one item per act done, numbered in order." act=make world=w.list user_facing=false example="a report about what we did" core.source="hand-core 1"
 @k.procedures.goal.a_report_as_a_list.kind k.procedures.goal method="a report as a list" role=kind value=report core.source="hand-core 1"
 @k.procedures.binding.a_report_as_a_list.done k.procedures.binding method="a report as a list" name=done history=true core.source="hand-core 1"
 @k.procedures.binding.a_report_as_a_list.list k.procedures.binding method="a report as a list" name=list step=1 core.source="hand-core 1"

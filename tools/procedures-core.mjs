@@ -468,10 +468,18 @@ function howtoLines(h) {
   return out;
 }
 
+// Block 07:30 item 3 (PSys2 Q17: a random flowchart was "a face of a role"): the methods a person would ask to see as a
+// procedure, whose goal is a task named in plain words and whose steps, read aloud, are steps a person could follow.
+// Every other method is one of the app's ways to reach a goal (an anchor, a wearable, a face's variant, a map view,
+// a world's rendering of a task that has a plain method: the list of the things there beside the bar chart, the
+// seating plan beside setting a table): `user_facing=false`.
+export const USER_FACING = new Set(['compose a scene', 'build from parts', 'set a table', 'a chart of the things there in a chart',
+  'write a story', 'write a presentation about a topic', 'write an essay about a topic', 'write a scientific article about a topic', 'write a report of what was done']);
+
 const id = (m) => seg(m);
 function methodLines(m) {
   const M = id(m.name), out = [];
-  out.push(wire(`k.procedures.method.${M}`, 'k.procedures.method', [['name', text(m.name)], ['about', text(m.about)], ['act', m.act], ['world', m.world], ['rank', m.rank], ...(m.example ?? []).map((e) => ['example', text(e)])], SRC));
+  out.push(wire(`k.procedures.method.${M}`, 'k.procedures.method', [['name', text(m.name)], ['about', text(m.about)], ['act', m.act], ['world', m.world], ['rank', m.rank], ['user_facing', USER_FACING.has(m.name)], ...(m.example ?? []).map((e) => ['example', text(e)])], SRC));
   for (const [role, g] of Object.entries(m.goal ?? {})) out.push(wire(`k.procedures.goal.${M}.${seg(role)}`, 'k.procedures.goal', [['method', text(m.name)], ['role', role], ['from', g.from], ['by', g.by], ['value', g.value], ['kind', g.kind], ['rel', g.rel], ['needed', g.needed], ['default', g.default]], SRC));
   for (const [name, x] of Object.entries(m.bind ?? {})) {
     out.push(wire(`k.procedures.binding.${M}.${name}`, 'k.procedures.binding', [['method', text(m.name)], ['name', name], ['goal', x.goal], ...(x.step ?? []).map((s) => ['step', s]), ['from', x.from], ['live', x.live], ['history', x.history], ['upto', x.upto], ...(x.together ?? []).map((t) => ['together', t]), ['value', x.value], ['about', x.about], ['key', x.key], ['choose', x.choose], ['choose_min', x.choose_min]], SRC));

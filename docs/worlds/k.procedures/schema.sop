@@ -9,18 +9,23 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/procedures-core.mjs
 
-@k.procedures core.module name=k.procedures version=2 exports=method exports=goal exports=binding exports=match exports=step exports=arg exports=condition exports=howto exports=howto_step core.source="hand-core 1"
+@k.procedures core.module name=k.procedures version=3 exports=method exports=goal exports=binding exports=match exports=step exports=arg exports=condition exports=howto exports=howto_step core.source="hand-core 1"
 
 # A method: `name` says it in plain words ("compose a scene"); `act` is the act of the goal it reaches (one of the
 # acts of k.actions); `world` names a world schema (w.seating, w.face, w.map, w.list, w.timeline) when the method
 # acts on its kinds: it applies only in a live world of that schema; `rank` orders the methods of one goal when
 # more than one applies (the lower first; none said: 1); `example` is a goal it reaches, said in plain words.
+# `user_facing` (block 07:30 item 3): true when a person would ask to see the method as a procedure (its goal a task
+# named in plain words, its steps steps a person could follow: set a table, write an essay); false when it is one of the
+# app's ways to reach a goal (put a thing on an anchor, a face of a role). A host drawing a random flowchart of a
+# method takes a user-facing one.
 @k.procedures.method core.type of=k.procedures.method shared=true closed=true core.source="hand-core 1"
 @k.procedures.method.name core.slot of=k.procedures.method key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.procedures.method.about core.slot of=k.procedures.method key=about required=true kind=string core.source="hand-core 1"
 @k.procedures.method.act core.slot of=k.procedures.method key=act required=true enum=make enum=remove enum=change enum=place enum=connect enum=group enum="take apart" enum=pick enum=ask enum=copy enum=send enum=undo enum=save enum=load enum=redo enum=deselect core.source="hand-core 1"
 @k.procedures.method.world core.slot of=k.procedures.method key=world kind=atom core.source="hand-core 1"
 @k.procedures.method.rank core.slot of=k.procedures.method key=rank kind=integer min=1 max=9 core.source="hand-core 1"
+@k.procedures.method.user_facing core.slot of=k.procedures.method key=user_facing required=true kind=boolean core.source="hand-core 1"
 @k.procedures.method.example core.slot of=k.procedures.method key=example many=true kind=string core.source="hand-core 1"
 
 # What a role of the goal must be for the method to apply. `role` is a role of the goal's act in k.actions (make:
@@ -181,6 +186,7 @@
 @k.procedures.word.key.method.act core.word text=act means=k.procedures.method.act core.source="hand-core 1"
 @k.procedures.word.key.method.world core.word text=world means=k.procedures.method.world core.source="hand-core 1"
 @k.procedures.word.key.method.rank core.word text=rank means=k.procedures.method.rank core.source="hand-core 1"
+@k.procedures.word.key.method.user_facing core.word text="user facing" means=k.procedures.method.user_facing core.source="hand-core 1"
 @k.procedures.word.key.method.example core.word text=example means=k.procedures.method.example core.source="hand-core 1"
 @k.procedures.word.key.goal.role core.word text=role means=k.procedures.goal.role core.source="hand-core 1"
 @k.procedures.word.key.goal.from core.word text=from means=k.procedures.goal.from core.source="hand-core 1"

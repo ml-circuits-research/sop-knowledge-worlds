@@ -1,5 +1,5 @@
 {
- "version": "de702bbe5322",
+ "version": "f8a76f63db72",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4497,8 +4497,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1077,
-     "bytes": 207544,
+     "wires": 1078,
+     "bytes": 207772,
      "keys": [
       "a",
       "about",
@@ -5084,6 +5084,7 @@
       "usage",
       "used_by",
       "used_for",
+      "user_facing",
       "uses",
       "usual_for",
       "usually_count",
@@ -29645,8 +29646,8 @@
     {
      "id": "k.kinds/shards/relations-procedures",
      "path": "k.kinds/shards/relations-procedures.sop",
-     "wires": 76,
-     "bytes": 13950,
+     "wires": 77,
+     "bytes": 14127,
      "keys": [
       "about",
       "act",
@@ -29702,6 +29703,7 @@
       "thing",
       "together",
       "upto",
+      "user_facing",
       "value",
       "when",
       "world"
@@ -52044,7 +52046,7 @@
   },
   {
    "id": "k.procedures",
-   "version": "2",
+   "version": "3",
    "schema": "k.procedures/schema.sop",
    "exports": [
     "k.procedures.arg",
@@ -52063,7 +52065,7 @@
      "id": "k.procedures/shards/compose",
      "path": "k.procedures/shards/compose.sop",
      "wires": 243,
-     "bytes": 48532,
+     "bytes": 48617,
      "keys": [
       "args_max",
       "args_min",
@@ -52172,7 +52174,7 @@
      "id": "k.procedures/shards/from-knowledge",
      "path": "k.procedures/shards/from-knowledge.sop",
      "wires": 299,
-     "bytes": 53737,
+     "bytes": 54023,
      "keys": [
       "a",
       "a face of a role",
@@ -52251,7 +52253,7 @@
      "id": "k.procedures/shards/tasks",
      "path": "k.procedures/shards/tasks.sop",
      "wires": 145,
-     "bytes": 27185,
+     "bytes": 27327,
      "keys": [
       "a chart of the things there",
       "a chart of the things there in a chart",
