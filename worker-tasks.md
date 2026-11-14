@@ -536,3 +536,11 @@ Today the 175 variants of style `plain` are absolute coordinates typed into `too
 2. **Variants as parameters over those rules**: a variant = primitive + a few relative parameters (size, roundness, tilt, openness) instead of absolute points; `tools/faces-core.mjs` computes the parts from the rules, so changing the head shape moves eyes, nose, mouth and glasses consistently.
 3. **Measure before switching:** the contact sheet before/after (same faces must look the same or better: send the reviewer both sheets), the bytes of the `plain` shards, the lines of the generator, and whether `findVariants` and the 17 face cases still pass. Keep the absolute output if the rules lose on any of these.
 The imported DiceBear styles stay as imported (their numbers are the source's drawing).
+
+## Reviewer 2026-11-14 10:50 — `k.motion`: rules of a natural face over time (owner, 06:32), next after k.procedures
+
+The avatar becomes an icon in PSys2's input bar that talks while replying and changes expression; its behaviour comes from rules here, read by sopworld `std.motion`:
+1. **Blinking and idle:** intervals and durations as ranges from published measurements (cite the source; e.g. blink rate and blink duration studies), small idle glances.
+2. **Expressions by outcome of a reply:** done → smile, not understood → raised brows / small frown, refusal → sad-ish, answer → neutral-attentive, thinking → eyes up/aside; onset, hold and ease-back durations; referencing `k.faces.expression` names and slots (no coordinates here).
+3. **Visemes:** the language-neutral classes (rest, open, mid, rounded, closed-lips, lip-teeth, tongue) mapped to `k.faces` mouth variants; the letter/sound → viseme rule of English goes into `w.lang.en` (a compact rule table, not a word list), Romanian later into `w.lang.ro`; average duration per unit.
+4. Tests: the rules parse, every referenced slot/variant/expression exists in k.faces, ranges are sane; a sample plan rendered as a strip of faces (send it to the reviewer).
