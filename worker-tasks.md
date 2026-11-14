@@ -704,3 +704,7 @@ Reviewer ran tests of w.chart, k.actions, k.words: 23 pass, 1 skipped, 0 fail. A
 ## Reviewer 2026-11-15 00:05 — for compositions: which keys are narratable, and how each attribute is said
 
 PSys2's first compositions narrate metadata ("Chad has a code of TCD, a formal of Republic of Chad, a code2 of TD") and say every attribute as "has a X of Y". Needed (whoever is free next): (1) a mark on k.* keys that are identifiers or metadata (`narrate=no`: codes, ids, formal names, sources, internal numbers) and a salience per key for compositions; (2) **attribute phrasing templates** in w.lang.en per aspect/key family ("the capital of {country} is {city}", "{animal} eats {food}", "{thing} is {colour}", "{thing} has {n} legs"), checked to read back. Also accepted: 8741e52 (w.lang.ro on 0.63, round trip 2,916/2,916).
+
+## Reviewer 2026-11-15 00:20 — first worker's round accepted
+
+Reviewer ran tests/w.lang.ro.test.mjs on main. Accepted 8d81a16, 5e39ba0, 6414cd9, fa8a629, 8741e52, 19ca312 (UniMorph-derived dictionary: 3,466 lemmas, class fit 82 %, words read on the ro-en-meaning set 75.6 → 81.7 % hand-written, 51.8 → 59.8 % machine; a reading count, not meaning kept). Next round (first worker): `test:changed` npm script + the 10 slowest test files; narratable keys + attribute phrasing (00:05); the general "every frame reads its own examples" test and its fixes (22:30); then the w.lang.ro frames/syntax layer (18:20 item 1). The helper scripts in /tmp/skwscripts belong in the repo's tools/ if they help everyone.
