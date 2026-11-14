@@ -44,9 +44,9 @@ shard named `rules` that holds rules and patterns only.
 Blocking: no. Meanwhile: (a).
 
 ## Q39 (Round 12, second worker, 2026-11-14)
-Question: (a) is the structure below the "language-free structure" for tests of `w.lang.en` (sentence -> expected
-structure), until the library defines its own? (b) may the knowledge repository keep a third pinned library build
-(`tools/sopworld/grammar/`, 0.33.0) only to check that `w.lang.en` is what `std.grammar` reads?
+Question: is the structure below the "language-free structure" for tests of `w.lang.en` (sentence -> expected
+structure), until the library defines its own? (A second part, about a third pinned build for the grammar check, is
+settled by Q35: the one build, 0.30.0, reads w.lang.en.)
 Context: the block "01:00" asks for tests "as sentences -> expected structure (a language-free structure the library
 will define with you: write it as a proposal in questions.md and in the library's format when it exists)". The library's
 format exists in part: `parseText` gives trees whose nodes carry `rule` (the id of a `w.lang.en.rule`), and `nounPhrase`
@@ -60,8 +60,7 @@ For the library's session (seen while checking, not worked around here): its tok
 coordination separator "," of `w.lang.en.coord.sep` is never read ("a sun, a cloud and a man" does not parse as a
 list); and a production with a category twice cannot be a repeated `rhs` key (a fact keeps repeated values as a set),
 which `w.lang.en` now avoids with helper categories (NP -> NP OFNP).
-Blocking: no. Meanwhile: (a) the proposal above; (b) the third build is kept, used only by that test, until the one
-build of Q35 (0.30.0, which has `parseText`) is in; then the test moves to it and the third build goes.
+Blocking: no. Meanwhile: the proposal above.
 
 # Closed
 

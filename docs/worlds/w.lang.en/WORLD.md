@@ -17,11 +17,12 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | pronouns | 21 pronouns (case, person, number, gender, what they refer to), 14 anaphoric noun phrases ("that one") in the order they are tried |
 | prepositions | 32 prepositions as relations (place, goal, source, way; roles), 7 temporal ones (`w.lang.en.prep.time`: earlier, later, within) |
 | numbers | 11 ordinals, 13 small cardinals (agree with `k.values.number`) |
-| morphology | 11 inflection rules in order, 5 irregular plurals, 31 noun exceptions, 20 contractions, 6 contraction endings |
+| morphology | 11 inflection rules in order, 5 irregular plurals, 31 noun exceptions, 20 contractions, 6 contraction endings (and core-plurals, hand-morphology: 201 irregular plurals more) |
 | ellipsis | 19 lead and 4 trail markers of a fragment, 10 repeats, 27 sentence starters, 6 limits |
 | grammar | 64 constructions (54 of English, 10 helpers) with 84 productions over 53 categories; the 28 words of 16 small categories; coordination words and limits |
 | clauses | joiners and how they cut, frame leads, 13 self-correction markers, bare answers, 11 question words, 14 auxiliaries, negation |
 | frames-acts, -more, -data | 233 argument frames of the acts of `k.actions` with their 1,244 parts and 30 fixed arguments |
+| hand-grammar, hand-joins | what this repository added: 4 constructions with 7 productions (and 4 helpers), the words of AUXNEG, HAVE, IF, THEN; 23 role maps; 15 prepositions joined to k.layouts and 20 new ones |
 | phrases | 81 phrase groups (politeness, fillers, answers, degree, comparison, request and question shapes, undo, redo) and 4 lexicons the frames name |
 
 ## How a host reads it
@@ -55,20 +56,34 @@ right construction and head, with the nouns and adjectives taken from `k.words`.
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the
-  quantifiers over a set are `k.values.set_word` names, except `every` (not a set word there yet).
+  quantifiers over a set (all, every, each, both) are `k.values.set_word` names or their words (every is a word of each).
 - **k.words:** the irregular singulars and the noun exceptions are words of `k.words`; plurals in a sentence are
-  read by the morphology rules to the word `k.words` holds (`hostLexicon`).
+  read by the morphology rules to the word `k.words` holds (`hostLexicon`). `shards/core-plurals.sop` (WordNet's noun
+  exceptions, `tools/lang-en-core.mjs`) adds 184 plurals of k.words nouns that the rules do not read (mice, feet,
+  children, vertebrae, potatoes); the classical and foreign ones are `read_only=yes` (antennae is read as antenna, a
+  writer writes antennas), and plurals that are words of their own are left out (cola, dive, soles).
+  `shards/hand-morphology.sop` adds people, the -man plurals WordNet makes by a rule of its own, and the plurals that
+  are the singular (sheep, deer, fish).
 - **k.actions:** every frame names an act of `k.actions` and its verb parts the verbs of an act (PSys2's verb
-  groups `set` and `apart` are the acts change and take apart). The frames' role names are PSys2's; 20 of them are
-  not role names of the act in `k.actions` (make.thing for kind, save.value for name or format ...): listed in
-  `tests/w.lang.en.roles.json`, the join still to write.
+  groups `set` and `apart` are the acts change and take apart). Every role of every frame is a role of its act:
+  by name, or through `w.lang.en.role_map` (23 maps in `shards/hand-joins.sop`: make.thing is the kind, a rel that
+  takes a preposition marks the place, save.value is the name, or the format in the two frames that say "as SVG").
+  Every marker of a role in `k.actions` is a preposition here, except "and" (connect a and b), a conjunction.
+- **k.layouts:** a preposition that says a place names the relation of `k.layouts.relation` it says (`layout`), and
+  `inverse=yes` when it says it the other way round (under: above inverse; to the right of: left_of inverse; in front
+  of: behind inverse). The prepositions of the hand-over lacked left of, right of, in front of, on top of,
+  underneath, beneath; they are in `shards/hand-joins.sop`.
 
 ## Left out, holes
 
 - Left out (one application's): the tab flags of 5 frames, the 5 frames of the "act" `own` (they hand a sentence to
   a world's own reader). See IMPORT.md.
-- Holes kept from the hand-over (`status=hole`): temporal prepositions (they need an order in time, which `k.time`
-  is getting: reviewer's block "02:15"), the tag question ("..., isn't it?": no negated auxiliaries). The hand-over also names as open: relative
-  clauses with another verb ("the table that has 4 seats"), a possessive "of" beyond parts.
+- Filled here (`shards/hand-grammar.sop`): statements with be ("the table is red", construction `s.copula`); the tag
+  question ("the table is red, isn't it": negated auxiliaries; it was a hole of the hand-over); relative clauses with
+  have ("the table that has four seats"); conditions ("if the table is red then the chair is blue"); standing rules
+  after a frame lead ("from now on the squares are grey"); was and were. Each parses with the library (a test).
+- Still a hole: temporal prepositions (`pp.time`, `status=hole`): they need an order in time, which `k.time` is
+  getting (reviewer's block "02:15", first worker); then `w.lang.en.prep.time order=` joins it. Imperative clauses as
+  productions (the frames say them, the productions do not), a possessive "of" beyond parts.
 - The library's tokenizer drops commas, so the coordination separator "," is not read ("a sun, a cloud and a man"
-  parses only as "a sun and a cloud and a man").
+  parses only as "a sun and a cloud and a man"); questions.md Q39.

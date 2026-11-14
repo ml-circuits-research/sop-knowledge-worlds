@@ -159,6 +159,8 @@ const CATDOC = {
 };
 // Prose "rules" of the hand-over (no rhs): constructions said in words, applied by a function of the library (std-grammar.md names them).
 const FUNCTION = { 'coord.part-start': 'grammar.split', 'coord.head-bound': 'grammar.split', 'coord.shared-suffix': 'grammar.shared', 'ellipsis.one-class': 'grammar.elide', 'ellipsis.one': 'grammar.elide', 'ellipsis.one-count': 'grammar.elide', 'ellipsis.one-bare': 'grammar.elide', 'ellipsis.verb': 'grammar.elide', 'ellipsis.fragment': 'grammar.fragment', 'ellipsis.repeat': 'grammar.fragment', 'ellipsis.number': 'grammar.fragment', 'ellipsis.answer': 'grammar.fragment', 'anaphora.focus': 'grammar.refer', 'anaphora.slot': 'grammar.refer', 'anaphora.back-to': 'grammar.refer', 'anaphora.agent': 'grammar.agent', 'anaphora.deictic': 'grammar.refer', 'joiner.run': 'grammar.clauses', 'coord.clause': 'grammar.clauses', 'correction.rule': 'grammar.clauses', 'neg.rule.same': null, 'neg.rule.aux': null, 'imperative.rule': 'grammar.read' };
+// Holes of the hand-over that this repository fills (the facts are in shards/hand-*.sop): the status is not copied.
+const FILLED = { 'q.tag': 'the negated auxiliaries (words of AUXNEG) and statements with be (construction s.copula) are in shards/hand-grammar.sop' };
 const ROLE_EMITS = new Set(['thing', 'amount', 'n', 'name', 'ord', 'rel', 'place', 'set', 'part-of', 'anaphor', 'steps', 'modifiers', 'set-minus']);
 
 function grammar(np, cl, W, notes) {
@@ -243,7 +245,8 @@ function grammar(np, cl, W, notes) {
       else e.push(['reading', text(emit)]);
     }
     if (one(w, 'asks')) e.push(['asks', one(w, 'asks')]);
-    const status = one(w, 'status') === 'hole' ? 'hole' : null;
+    const status = one(w, 'status') === 'hole' && !FILLED[name] ? 'hole' : null;
+    if (one(w, 'status') === 'hole' && FILLED[name]) notes.changed.push(`${name}: no longer a hole: ${FILLED[name]}`);
     if (status) e.push(['status', 'hole']);
     if (FUNCTION[name]) e.push(['function', FUNCTION[name]]);
     if (one(w, 'doc')) e.push(['doc', text(one(w, 'doc'))]);

@@ -14,7 +14,7 @@ const CONSONANT = /[bcdfghjklmnpqrstvwxz]$/;
 // the first rule of the set by order that matches (the semantics written in schema.sop).
 export function inflect({ inflect: rules, irregular = [], exceptions = [] }, word, op, set) {
   const w = String(word).toLowerCase();
-  const irr = new Map(irregular.map((x) => (op === 'singular' ? [one(x, 'plural'), one(x, 'singular')] : [one(x, 'singular'), one(x, 'plural')])));
+  const irr = new Map(irregular.filter((x) => op === 'singular' || one(x, 'read_only') !== 'yes').map((x) => (op === 'singular' ? [one(x, 'plural'), one(x, 'singular')] : [one(x, 'singular'), one(x, 'plural')])));
   if (irr.has(w)) return irr.get(w);
   const exc = (kind, key) => exceptions.filter((x) => one(x, 'kind') === kind).map((x) => one(x, key));
   const mine = rules.filter((r) => one(r, 'op') === op && (op === 'plural' || one(r, 'set') === set)).sort((a, b) => Number(one(a, 'order')) - Number(one(b, 'order')));

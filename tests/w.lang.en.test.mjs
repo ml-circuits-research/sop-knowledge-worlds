@@ -37,6 +37,7 @@ test('w.lang.en: the import is reproducible from the cited PSys2 commit (skipped
 
 test('w.lang.en: every wire has a source; no notation inside values', () => {
   const PROSE = new Set(['doc', 'example', 'note', 'reading', 'core.source', 'gloss']);
+  const WORDS = new Set(['text', 'word', 'item', 'singular', 'plural', 'stem', 'expands']); // keys that hold English words: a "_" there stands for a space
   const bad = [];
   for (const w of [...all, ...parse(lang.schemaText)]) {
     if (!w.attrs['core.source']) bad.push(`${w.id}: no core.source`);
@@ -44,7 +45,7 @@ test('w.lang.en: every wire has a source; no notation inside values', () => {
     if (false) bad.push(`${w.id}: no core.source`);
     for (const [k, vs] of Object.entries(w.attrs)) if (!PROSE.has(k)) for (const x of vs.map(tok)) {
       // a list in one value, a set of choices, an optional or repeated mark, a range, a pattern, a "_" for a space
-      if (/[|[\]{}*+]|\.\.|\$\d|^\^/.test(x) || (/,/.test(x) && x !== ',') || (/\?$/.test(x) && !/^\?/.test(x)) || (/_/.test(x) && k !== 'name' && k !== 'phrase' && !/^w\.lang\.en\./.test(x) && w.type !== 'core.slot')) bad.push(`${w.id} ${k}=${x}`);
+      if (/[|[\]{}*+]|\.\.|\$\d|^\^/.test(x) || (/,/.test(x) && x !== ',') || (/\?$/.test(x) && !/^\?/.test(x)) || (/_/.test(x) && WORDS.has(k))) bad.push(`${w.id} ${k}=${x}`);
     }
   }
   assert.deepEqual(bad, []);
@@ -73,23 +74,50 @@ test('w.lang.en: frames have their parts in order, name acts and roles of k.acti
   const lexicons = new Set([...of('lex').map((l) => one(l, 'name')), 'attribute', 'value', 'kind', 'more', 'less', 'turn', 'factor', 'noun']);
   const parts = new Map();
   for (const p of of('part')) (parts.get(one(p, 'frame')) ?? parts.set(one(p, 'frame'), []).get(one(p, 'frame'))).push(Number(one(p, 'at')));
-  const roleMiss = new Map();
   for (const f of of('frame')) {
     const name = one(f, 'name');
     assert.ok(acts.has(one(f, 'act')), `${name}: act ${one(f, 'act')} of k.actions`);
     assert.deepEqual(parts.get(name).sort((a, b) => a - b), parts.get(name).map((_, i) => i + 1), `${name}: parts 1..n`);
-    for (const r of v(f, 'role')) if (!acts.get(one(f, 'act')).has(r)) roleMiss.set(`${one(f, 'act')}.${r}`, (roleMiss.get(`${one(f, 'act')}.${r}`) ?? 0) + 1);
   }
   for (const p of of('part')) {
     if (one(p, 'is') === 'verb') assert.ok(acts.has(one(p, 'act')), `${p.id}: the verbs of ${one(p, 'act')}`);
     for (const x of v(p, 'phrase')) assert.ok(phrases.has(x), `${p.id}: phrase group ${x}`);
     if (one(p, 'lexicon')) assert.ok(lexicons.has(one(p, 'lexicon')), `${p.id}: lexicon ${one(p, 'lexicon')}`);
   }
-  // the roles the frames fill that k.actions does not list for the act: the join is open there (WORLD.md)
-  assert.deepEqual([...roleMiss.keys()].sort(), ROLES_NOT_IN_K_ACTIONS);
 });
-const SET_WORDS_NOT_IN_K_VALUES = ['every'];
-const ROLES_NOT_IN_K_ACTIONS = JSON.parse(readFileSync(new URL('./w.lang.en.roles.json', import.meta.url), 'utf8'));
+
+test('w.lang.en joins k.actions: every role of every frame is a role of its act in k.actions, by name or through a role_map', () => {
+  const acts = new Map(kw('k.actions', 'k.actions.act').map((a) => [one(a, 'name'), new Set(v(a, 'role'))]));
+  const maps = of('role_map');
+  const partOf = (frame, role) => of('part').find((p) => one(p, 'frame') === frame && one(p, 'role') === role);
+  let mapped = 0, same = 0;
+  for (const f of of('frame')) for (const r of v(f, 'role')) {
+    const name = one(f, 'name'), act = one(f, 'act'), takes = one(partOf(name, r) ?? { attrs: {} }, 'takes');
+    const m = maps.find((x) => one(x, 'frame') === name && one(x, 'role') === r)
+      ?? maps.find((x) => !one(x, 'frame') && one(x, 'act') === act && one(x, 'role') === r && one(x, 'takes') === takes)
+      ?? maps.find((x) => !one(x, 'frame') && !one(x, 'takes') && one(x, 'act') === act && one(x, 'role') === r);
+    const actRole = m ? one(m, 'act_role') : r;
+    if (m) mapped++; else same++;
+    assert.ok(acts.get(act).has(actRole), `${name}: ${r} -> ${act}.${actRole}`);
+  }
+  for (const m of maps) assert.ok(acts.get(one(m, 'act'))?.has(one(m, 'act_role')), m.id);
+  assert.ok(mapped > 50 && same > 200, `${mapped} mapped, ${same} by name`);
+});
+
+test('w.lang.en joins k.actions: every marker of a role of k.actions is a preposition of w.lang.en (and is the conjunction of connect)', () => {
+  const markers = new Set([...kw('k.actions', 'k.actions.role'), ...kw('k.actions', 'k.actions.marking')].flatMap((w) => v(w, 'marker')));
+  const preps = new Set([...of('prep'), ...of('prep.time')].map((p) => one(p, 'text')));
+  assert.deepEqual([...markers].filter((m) => !preps.has(m)), ['and']);
+});
+
+test('w.lang.en joins k.layouts: a preposition that says a place names a relation of k.layouts', () => {
+  const rels = kw('k.layouts', 'k.layouts.relation').map((r) => one(r, 'rel'));
+  const preps = new Map();
+  for (const p of of('prep')) preps.set(one(p, 'text'), { ...(preps.get(one(p, 'text')) ?? {}), ...Object.fromEntries(Object.entries(p.attrs).map(([k, x]) => [k, tok(x[0])])) });
+  for (const [t, p] of preps) if (p.layout) assert.ok(rels.includes(p.layout), `${t}: ${p.layout}`);
+  assert.deepEqual(['on', 'in', 'under', 'next to', 'to the right of', 'in front of'].map((t) => [preps.get(t).layout, preps.get(t).inverse ?? null]),
+    [['on', null], ['inside', null], ['above', 'yes'], ['beside', null], ['left_of', 'yes'], ['behind', 'yes']]);
+});
 
 test('w.lang.en: a frame pattern of the hand-over and its parts', () => {
   assert.deepEqual(patternParts('L V.make D {thing:words} [called|named] {value:rest}'), [
@@ -107,8 +135,11 @@ test('w.lang.en joins k.values: the numerals and ordinals agree with k.values.nu
   for (const n of of('ordinal').filter((x) => one(x, 'text') !== 'last')) assert.equal(value(one(n, 'text'), 'ordinal'), one(n, 'value'), one(n, 'text'));
   for (const d of of('det').filter((x) => one(x, 'kind') === 'numeral')) assert.equal(value(one(d, 'text'), 'cardinal'), one(d, 'value'), one(d, 'text'));
   // the quantifiers over a whole set are set words of k.values
-  const sets = new Set(kw('k.values', 'k.values.set_word').map((s) => one(s, 'name')));
-  assert.deepEqual(of('word').filter((x) => one(x, 'cat') === 'QALL').map((w) => one(w, 'text')).filter((x) => !sets.has(x)), SET_WORDS_NOT_IN_K_VALUES);
+  // the quantifiers over a whole set are set words of k.values, by name or by a word of one (every is a word of each)
+  const values = worlds.find((w) => w.id === 'k.values');
+  const setWords = new Set([...wiresOf(values).filter((w) => w.type === 'k.values.set_word').map((s) => one(s, 'name')),
+    ...[...wiresOf(values), ...parse(values.schemaText)].filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.values.set_word.name').flatMap((w) => v(w, 'text'))]);
+  for (const w of of('word').filter((x) => one(x, 'cat') === 'QALL')) assert.ok(setWords.has(one(w, 'text')), one(w, 'text'));
 });
 
 test('w.lang.en joins k.words: the irregular plurals and the noun exceptions are words with a noun sense', () => {
@@ -120,8 +151,9 @@ test('w.lang.en joins k.words: the irregular plurals and the noun exceptions are
 
 test('w.lang.en: the morphology rules read plurals the way the hand-over says', () => {
   const set = { inflect: of('inflect'), irregular: of('irregular'), exceptions: of('noun.exception') };
-  for (const [pl, sg] of Object.entries({ tables: 'table', boxes: 'box', cherries: 'cherry', wolves: 'wolf', cacti: 'cactus', kiwis: 'kiwi', octopuses: 'octopus', buses: 'bus', glass: 'glass', iris: 'iris' })) assert.equal(inflect(set, pl, 'singular', 'lemma'), sg, pl);
-  for (const [sg, pl] of Object.entries({ table: 'tables', box: 'boxes', cherry: 'cherries', day: 'days', cactus: 'cacti' })) assert.equal(inflect(set, sg, 'plural'), pl, sg);
+  for (const [pl, sg] of Object.entries({ tables: 'table', boxes: 'box', cherries: 'cherry', wolves: 'wolf', cacti: 'cactus', kiwis: 'kiwi', octopuses: 'octopus', buses: 'bus', glass: 'glass', iris: 'iris',
+    mice: 'mouse', feet: 'foot', children: 'child', people: 'person', women: 'woman', sheep: 'sheep', antennae: 'antenna', vertebrae: 'vertebra', potatoes: 'potato', cola: 'cola' })) assert.equal(inflect(set, pl, 'singular', 'lemma'), sg, pl);
+  for (const [sg, pl] of Object.entries({ table: 'tables', box: 'boxes', cherry: 'cherries', day: 'days', cactus: 'cacti', child: 'children', mouse: 'mice', sheep: 'sheep', antenna: 'antennas', tomato: 'tomatoes' })) assert.equal(inflect(set, sg, 'plural'), pl, sg);
 });
 
 // What the library reads: the facts of w.lang.en, the classes named by its categories, open classes from k.words.
@@ -153,6 +185,18 @@ test('w.lang.en is what the library reads: questions', () => {
     const p = read(s, 'Q');
     assert.ok(p.some((x) => x.tree.rule.includes(`.${c}`)), `${s}: ${p.map((x) => x.tree.rule)}`);
   }
+});
+
+test('w.lang.en is what the library reads: what this repository added (statements, the tag question, have, if, from now on, left of)', () => {
+  const C2 = { ...C };
+  for (const [s, start, c] of [['the table is red', 'S', 's.copula'], ['the cat is on the mat', 'S', 's.copula'], ['the table is red, isn\'t it', 'Q', 'q.tag'],
+    ['the table that has four seats', 'NP', 'np.relative-have'], ['if the table is red then the chair is blue', 'S', 'clause.if'], ['from now on the squares are grey', 'S', 'clause.standing'],
+    ['the star to the left of the house', 'NP', 'np.pp'], ['the mice', 'NP', 'np.det-n']]) {
+    const p = read(s, start);
+    assert.ok(p.some((x) => x.tree.rule.replace(/\.\d+$/, '').endsWith(`.${c}`)), `${s}: ${p.map((x) => x.tree.rule)} ${JSON.stringify(p.unknown ?? [])}`);
+  }
+  assert.equal(nounPhrase(read('the mice')[0].tree, C2).lemma, 'mouse');
+  assert.deepEqual(nounPhrase(read('the star to the left of the house')[0].tree, C2).pp[0].words[0], 'to the left of');
 });
 
 test('w.lang.en is what the library reads: the views of a closed class and where they differ', () => {

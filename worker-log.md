@@ -3026,3 +3026,36 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers (after the rebase on `w.lang.en`): catalog 23 worlds, 932 shards, vocab 24,184 words; validate 955 files,
   0 errors, 0 warnings; vocab.json unchanged by this commit. npm test 2,833: 2,832
   pass, 1 skipped, 0 fail.
+
+## Round 12, part 2 (2026-11-14, second worker): holes of `w.lang.en` and its joins to k.actions, k.layouts, k.words
+
+- **Frames joined to k.actions** (Round 12 item 4): new type `w.lang.en.role_map` (act, role, act_role, `marker=yes`, and
+  an exception by `frame` or by what the part `takes`); 23 maps in `shards/hand-joins.sop` (make.thing is the kind,
+  make.amount the number, rel that takes a preposition marks the place, rel that takes a direction word is the
+  direction, save.value the name or, in two frames, the format ...). A test: every role of every frame is a role of
+  its act in k.actions (64 through a map, 270 by name). The list of 20 unjoined roles is gone.
+- **Prepositions joined to k.layouts and to the markers of k.actions** (item 6): `layout` (a k.layouts.relation rel) and
+  `inverse=yes` on 15 prepositions of the hand-over (facts that merge with the imported ones); 8 spatial prepositions
+  the hand-over lacked (left of, to the left of, right of, to the right of, in front of, on top of, underneath, beneath)
+  and the 12 markers of k.actions roles that were no preposition here (close to, in the middle of, out of, off, among,
+  through, via, using, by means of, according to, instead of, rather than). Tests: every layout is a k.layouts
+  relation; every marker of a k.actions role is a preposition here, except "and".
+- **Holes filled** (items 1, 5, 7; `shards/hand-grammar.sop`): statements with be (`s.copula`), the tag question (the
+  hand-over's hole `q.tag`: 14 negated auxiliaries as words of AUXNEG; the import no longer copies its status, said
+  in IMPORT.md), relative clauses with have, conditions (`clause.if`: if ... then, and if ... with no then), standing
+  rules after a frame lead (`clause.standing`: from now on, by default), was and were. Each parses with the library
+  (a test of 8 sentences). Left as a hole: temporal prepositions (they wait for the order in time of k.time, the first
+  worker's next item; I took my `time_line` type out again for that reason).
+- **Plurals joined to k.words** (item 1): `tools/lang-en-core.mjs` writes `shards/core-plurals.sop` from WordNet 3.1
+  noun.exc: 184 plurals of k.words nouns that the rules of w.lang.en do not read (mice, feet, children, vertebrae,
+  potatoes); 138 of them classical or foreign and `read_only=yes` (a new key: read, not written: antennae -> antenna,
+  but antenna -> antennas); 6 left out because the plural is a word of its own (cola, crying, dive, gas, signore,
+  soles); `shards/hand-morphology.sop`: people, women and five -man plurals (WordNet makes them by a rule), and the
+  plurals that are the singular (sheep, deer, fish, moose, salmon, trout, bison, aircraft, series, species).
+- **every** is a word of the k.values set word `each`: the test now accepts a set word's words (no k.values change).
+- **Looked at:** the 184 WordNet plurals as one list (the six left out and the read-only split are from that reading),
+  the 23 role maps against the examples of their frames, the 8 parses. **Not looked at:** every frame's roles one by one
+  (the test checks that each lands on a k.actions role, not that the map is the best one).
+- Numbers: w.lang.en 16 shards, 2,484 wires, 432,807 bytes, schema 250 wires; 0 errors, 0 warnings. Catalog 23 worlds,
+  936 shards, vocab 24,210 words. npm test 2,837: 2,831 pass, 6 skipped, 0 fail; the same after the rebase on Q35 (one
+  build, 0.30.0: the w.lang.en tests run on it; Q39 loses its part about a third build).

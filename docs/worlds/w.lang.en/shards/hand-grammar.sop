@@ -1,0 +1,62 @@
+# w.lang.en/shards/hand-grammar: English the hand-over left open, as constructions and plain productions: statements
+# with be ("the table is red"), the tag question ("the table is red, isn't it": negated auxiliaries), relative clauses
+# with have ("the table that has 4 seats"), conditions ("if the table is red then the chair is blue") and standing
+# rules after a frame lead ("from now on squares are grey"); and the past forms of be.
+# sources: hand-core 1 (English grammar, written in this repository)
+# license: CC0-1.0
+# script: none (hand-written)
+
+# ---- statements with be ----
+@w.lang.en.construction.s.copula w.lang.en.construction name=s.copula about=S emit=thing doc="a statement with be: a thing, then what it is (modifiers, a place or another noun phrase)" example="the table is red" example="the cat is on the mat" example="the star is a shape" core.source="hand-core 1"
+@w.lang.en.rule.s.copula.1 w.lang.en.rule lhs=S rhs=NP rhs=COPULA rhs=MODS construction=s.copula head=NP core.source="hand-core 1"
+@w.lang.en.rule.s.copula.2 w.lang.en.rule lhs=S rhs=NP rhs=COPULA rhs=PP construction=s.copula head=NP core.source="hand-core 1"
+@w.lang.en.rule.s.copula.3 w.lang.en.rule lhs=S rhs=NP rhs=COPNP construction=s.copula head=NP core.source="hand-core 1"
+@w.lang.en.construction.helper.COPNP w.lang.en.construction name=helper.COPNP about=COPNP doc="the rest of a production that names a category twice: COPULA NP" core.source="hand-core 1"
+@w.lang.en.rule.helper.COPNP.1 w.lang.en.rule lhs=COPNP rhs=COPULA rhs=NP construction=helper.COPNP core.source="hand-core 1"
+@w.lang.en.copula.was w.lang.en.copula text="was" number=sg core.source="hand-core 1"
+@w.lang.en.copula.were w.lang.en.copula text="were" number=pl core.source="hand-core 1"
+
+# ---- the tag question: the words of AUXNEG (the production Q -> S AUXNEG PRON is the hand-over's) ----
+@w.lang.en.word.AUXNEG.isnt w.lang.en.word text="isn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.arent w.lang.en.word text="aren't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.wasnt w.lang.en.word text="wasn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.werent w.lang.en.word text="weren't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.dont w.lang.en.word text="don't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.doesnt w.lang.en.word text="doesn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.didnt w.lang.en.word text="didn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.cant w.lang.en.word text="can't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.wont w.lang.en.word text="won't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.couldnt w.lang.en.word text="couldn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.wouldnt w.lang.en.word text="wouldn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.shouldnt w.lang.en.word text="shouldn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.hasnt w.lang.en.word text="hasn't" cat=AUXNEG core.source="hand-core 1"
+@w.lang.en.word.AUXNEG.havent w.lang.en.word text="haven't" cat=AUXNEG core.source="hand-core 1"
+
+# ---- relative clauses with have ----
+@w.lang.en.construction.np.relative-have w.lang.en.construction name=np.relative-have about=NP emit=thing doc="a noun phrase with a relative clause of have: the things of the first noun phrase that have the second" example="the table that has 4 seats" example="the animals which have wings" core.source="hand-core 1"
+@w.lang.en.rule.np.relative-have w.lang.en.rule lhs=NP rhs=NP rhs=RELPRON rhs=HAVENP construction=np.relative-have head=NP core.source="hand-core 1"
+@w.lang.en.construction.helper.HAVENP w.lang.en.construction name=helper.HAVENP about=HAVENP doc="the rest of a production that names a category twice: HAVE NP" core.source="hand-core 1"
+@w.lang.en.rule.helper.HAVENP.1 w.lang.en.rule lhs=HAVENP rhs=HAVE rhs=NP construction=helper.HAVENP core.source="hand-core 1"
+@w.lang.en.word.HAVE.has w.lang.en.word text="has" cat=HAVE core.source="hand-core 1"
+
+# ---- conditions and standing rules ----
+@w.lang.en.construction.clause.if w.lang.en.construction name=clause.if about=S reading="the second clause holds or is done when the first holds" function=grammar.clauses example="if the table is red then the chair is blue" example="if the cat is hungry, the dog is sad" core.source="hand-core 1"
+@w.lang.en.rule.clause.if.1 w.lang.en.rule lhs=S rhs=IFS rhs=THENS construction=clause.if core.source="hand-core 1"
+@w.lang.en.rule.clause.if.2 w.lang.en.rule lhs=S rhs=IFS rhs=S construction=clause.if core.source="hand-core 1"
+@w.lang.en.construction.helper.IFS w.lang.en.construction name=helper.IFS about=IFS doc="a condition: if and a clause" core.source="hand-core 1"
+@w.lang.en.rule.helper.IFS.1 w.lang.en.rule lhs=IFS rhs=IF rhs=S construction=helper.IFS core.source="hand-core 1"
+@w.lang.en.construction.helper.THENS w.lang.en.construction name=helper.THENS about=THENS doc="then and a clause" core.source="hand-core 1"
+@w.lang.en.rule.helper.THENS.1 w.lang.en.rule lhs=THENS rhs=THEN rhs=S construction=helper.THENS core.source="hand-core 1"
+@w.lang.en.word.IF.if w.lang.en.word text="if" cat=IF core.source="hand-core 1"
+@w.lang.en.word.THEN.then w.lang.en.word text="then" cat=THEN core.source="hand-core 1"
+@w.lang.en.construction.clause.standing w.lang.en.construction name=clause.standing about=S reading="a standing rule or default: the clause holds from now on, not only once" function=grammar.clauses example="from now on squares are grey" example="by default the tables are round" core.source="hand-core 1"
+@w.lang.en.rule.clause.standing w.lang.en.rule lhs=S rhs=FRAMELEAD rhs=S construction=clause.standing core.source="hand-core 1"
+
+# ---- the categories these name ----
+@w.lang.en.cat.COPNP w.lang.en.cat name=COPNP doc="the rest of a production that names a category twice: COPULA NP" core.source="hand-core 1"
+@w.lang.en.cat.HAVENP w.lang.en.cat name=HAVENP doc="the rest of a production that names a category twice: HAVE NP" core.source="hand-core 1"
+@w.lang.en.cat.IFS w.lang.en.cat name=IFS doc="a condition: if and a clause" core.source="hand-core 1"
+@w.lang.en.cat.THENS w.lang.en.cat name=THENS doc="then and a clause" core.source="hand-core 1"
+@w.lang.en.cat.IF w.lang.en.cat name=IF doc="the word if" type=w.lang.en.word core.source="hand-core 1"
+@w.lang.en.cat.THEN w.lang.en.cat name=THEN doc="the word then" type=w.lang.en.word core.source="hand-core 1"
+@w.lang.en.cat.FRAMELEAD w.lang.en.cat name=FRAMELEAD doc="words that open a standing rule (frame_lead)" type=w.lang.en.frame_lead core.source="hand-core 1"

@@ -109,3 +109,12 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **What belongs to one application hides in a general hand-over**: tab flags, the "act" `own` (routing to a world's
   own reader), PSys2 module names as views. The views stay (they make unifying measurable); the rest is left out
   with its reason in a generated IMPORT.md, so the next import from the same source repeats the decision.
+- **Joins found the missing words** (holes): checking that every marker of a `k.actions` role is a preposition of the
+  grammar found 12 missing ones (close to, out of, using, instead of); checking that a spatial preposition names a
+  `k.layouts` relation found left of, right of, in front of missing. A join test is also a coverage test.
+- **A role name is not a role** (frames): PSys2's frames say `value` for a name ("save it as lunch") and for a format
+  ("save as SVG"). A role map keyed by act and role, with an exception by frame and by what the part takes, joins
+  the 233 frames to `k.actions` with 23 facts; the frames stay as written.
+- **A dictionary's exception list mixes reading and writing**: WordNet's noun.exc gives mice and feet, but also
+  antennae, bani (for ban) and cola (for colon). Kept for reading only where the plural is classical or foreign
+  (`read_only=yes`), left out where the plural is a word of its own: one list, two directions, two decisions.

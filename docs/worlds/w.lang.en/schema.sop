@@ -9,7 +9,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=1 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=1 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -57,12 +57,16 @@
 @w.lang.en.prep.text core.slot of=w.lang.en.prep key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
 @w.lang.en.prep.rel core.slot of=w.lang.en.prep key=rel required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.prep.space core.slot of=w.lang.en.prep key=space enum=static enum=direction enum=source enum=path core.source="psys2 78f45863"
-@w.lang.en.prep.role core.slot of=w.lang.en.prep key=role many=true enum=accompaniment enum=instrument enum=part enum=possession enum=beneficiary enum=purpose enum=topic enum=role enum=similarity core.source="psys2 78f45863"
+@w.lang.en.prep.role core.slot of=w.lang.en.prep key=role many=true enum=accompaniment enum=instrument enum=part enum=possession enum=beneficiary enum=purpose enum=topic enum=role enum=similarity enum=criterion enum=replacement core.source="psys2 78f45863"
 @w.lang.en.prep.support core.slot of=w.lang.en.prep key=support enum=yes core.source="psys2 78f45863"
 @w.lang.en.prep.contain core.slot of=w.lang.en.prep key=contain enum=yes core.source="psys2 78f45863"
 @w.lang.en.prep.arity core.slot of=w.lang.en.prep key=arity kind=integer min=1 core.source="psys2 78f45863"
 @w.lang.en.prep.note core.slot of=w.lang.en.prep key=note kind=string core.source="psys2 78f45863"
 @w.lang.en.prep.in core.slot of=w.lang.en.prep key=in many=true kind=atom core.source="psys2 78f45863"
+# The join to k.layouts: `layout` is the relation of k.layouts.relation the preposition says (on, inside, above,
+# left_of, behind, beside, around); `inverse=yes` when it says it the other way round (a under b = b above a).
+@w.lang.en.prep.layout core.slot of=w.lang.en.prep key=layout enum=left_of enum=above enum=inside enum=around enum=on enum=behind enum=beside core.source="hand-core 1"
+@w.lang.en.prep.inverse core.slot of=w.lang.en.prep key=inverse enum=yes core.source="hand-core 1"
 
 # A temporal preposition: `order` the place of the first thing against the second on a line of time (earlier, later,
 # within), `span` the end it names (until: the end; since: the start). What orders things in time is k.time's.
@@ -103,10 +107,12 @@
 @w.lang.en.inflect.add core.slot of=w.lang.en.inflect key=add kind=atom core.source="psys2 78f45863"
 @w.lang.en.inflect.min_length core.slot of=w.lang.en.inflect key=min_length kind=integer min=1 core.source="psys2 78f45863"
 @w.lang.en.inflect.unless_is_singular core.slot of=w.lang.en.inflect key=unless_is_singular enum=yes core.source="psys2 78f45863"
-# An irregular plural (taken before any rule).
+# An irregular plural (taken before any rule, both ways).
 @w.lang.en.irregular core.type of=w.lang.en.irregular shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.irregular.singular core.slot of=w.lang.en.irregular key=singular id=true required=true kind=atom kind=string core.source="psys2 78f45863"
 @w.lang.en.irregular.plural core.slot of=w.lang.en.irregular key=plural required=true kind=atom kind=string core.source="psys2 78f45863"
+# `read_only=yes`: the plural is read (antennae -> antenna), but a writer forms the plural by the rules (antennas).
+@w.lang.en.irregular.read_only core.slot of=w.lang.en.irregular key=read_only enum=yes core.source="hand-core 1"
 # A noun that the rules would read wrongly: is-plural (kiwis is kiwi + s, not kiwi + is), us-plural-suffix (a word
 # that ends in `stem` + es is a -us noun + es: octopuses), us-plural-word (the whole `word`).
 @w.lang.en.noun.exception core.type of=w.lang.en.noun.exception shared=true closed=true core.source="psys2 78f45863"
@@ -194,6 +200,20 @@
 @w.lang.en.part.word core.slot of=w.lang.en.part key=word many=true kind=string core.source="hand-core 1"
 @w.lang.en.part.phrase core.slot of=w.lang.en.part key=phrase many=true kind=atom core.source="hand-core 1"
 @w.lang.en.part.optional core.slot of=w.lang.en.part key=optional enum=yes core.source="hand-core 1"
+# The join from the roles of the frames to the roles of the acts of k.actions: in a frame of `act`, the role `role`
+# is the k.actions role `act_role`; `marker=yes` when it captures the preposition that marks that role (the rel of
+# "at table 1" marks the place). A map with `frame` holds for that frame only; one with `takes` for the parts that
+# take that (a rel that takes a preposition marks the place, one that takes a direction word is the direction).
+# A role of a frame with no map is the k.actions role of the same name.
+@w.lang.en.role_map core.type of=w.lang.en.role_map shared=true closed=true core.source="hand-core 1"
+@w.lang.en.role_map.name core.slot of=w.lang.en.role_map key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.role_map.act core.slot of=w.lang.en.role_map key=act required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.role_map.role core.slot of=w.lang.en.role_map key=role required=true kind=atom core.source="hand-core 1"
+@w.lang.en.role_map.act_role core.slot of=w.lang.en.role_map key=act_role required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.role_map.marker core.slot of=w.lang.en.role_map key=marker enum=yes core.source="hand-core 1"
+@w.lang.en.role_map.takes core.slot of=w.lang.en.role_map key=takes enum=words enum=rest enum=number enum=prep enum=lexicon core.source="hand-core 1"
+@w.lang.en.role_map.frame core.slot of=w.lang.en.role_map key=frame kind=atom core.source="hand-core 1"
+@w.lang.en.role_map.doc core.slot of=w.lang.en.role_map key=doc kind=string core.source="hand-core 1"
 # A fixed argument of a frame: "Call yourself Robi" sets the attribute name.
 @w.lang.en.fixed core.type of=w.lang.en.fixed shared=true closed=true core.source="hand-core 1"
 @w.lang.en.fixed.frame core.slot of=w.lang.en.fixed key=frame id=true required=true kind=atom core.source="hand-core 1"
