@@ -33,7 +33,7 @@
 @w.lang.en.rule.np.everything w.lang.en.rule lhs=NP rhs=EVERYTHING construction=np.everything core.source="psys2 78f45863"
 # np.possessive-of: in PSys2, act hooks (parts as kinds), Talk partsof frames
 @w.lang.en.construction.np.possessive-of w.lang.en.construction name=np.possessive-of about=NP emit=part-of example="the legs of the crocodile" core.source="psys2 78f45863"
-@w.lang.en.rule.np.possessive-of w.lang.en.rule lhs=NP rhs=NP rhs=OFNP construction=np.possessive-of head=NP core.source="psys2 78f45863"
+@w.lang.en.rule.np.possessive-of w.lang.en.rule lhs=NP rhs=NP rhs=OFNP construction=np.possessive-of head=NP priority=10 core.source="psys2 78f45863" core.source="hand-core 1"
 # np.possessive-s: in PSys2, formalizer index.mjs splits 's into its own token
 @w.lang.en.construction.np.possessive-s w.lang.en.construction name=np.possessive-s about=NP emit=part-of example="the house's door" core.source="psys2 78f45863"
 @w.lang.en.rule.np.possessive-s w.lang.en.rule lhs=NP rhs=NP rhs=POSS rhs=N construction=np.possessive-s head=N core.source="psys2 78f45863"
@@ -89,11 +89,11 @@
 @w.lang.en.rule.ellipsis.one.2 w.lang.en.rule lhs=S rhs=CONJ rhs=DET rhs=MODS rhs=ONE construction=ellipsis.one core.source="psys2 78f45863"
 # ellipsis.one-count: in PSys2, expand.mjs oneAnaphora
 @w.lang.en.construction.ellipsis.one-count w.lang.en.construction name=ellipsis.one-count about=S reading="the anchor clause with the count and the new modifiers" function=grammar.elide example="and two big ones" core.source="psys2 78f45863"
-@w.lang.en.rule.ellipsis.one-count.1 w.lang.en.rule lhs=S rhs=CONJ rhs=NUM rhs=ONES construction=ellipsis.one-count core.source="psys2 78f45863"
-@w.lang.en.rule.ellipsis.one-count.2 w.lang.en.rule lhs=S rhs=CONJ rhs=NUM rhs=MODS rhs=ONES construction=ellipsis.one-count core.source="psys2 78f45863"
+@w.lang.en.rule.ellipsis.one-count.1 w.lang.en.rule lhs=S rhs=CONJ rhs=NUM rhs=ONES construction=ellipsis.one-count priority=10 core.source="psys2 78f45863" core.source="hand-core 1"
+@w.lang.en.rule.ellipsis.one-count.2 w.lang.en.rule lhs=S rhs=CONJ rhs=NUM rhs=MODS rhs=ONES construction=ellipsis.one-count priority=10 core.source="psys2 78f45863" core.source="hand-core 1"
 # ellipsis.one-bare: in PSys2, expand.mjs oneAnaphora
 @w.lang.en.construction.ellipsis.one-bare w.lang.en.construction name=ellipsis.one-bare about=S reading="anchor with modifiers" function=grammar.elide example="and one yellow" core.source="psys2 78f45863"
-@w.lang.en.rule.ellipsis.one-bare w.lang.en.rule lhs=S rhs=CONJ rhs=ONE1 rhs=MODS construction=ellipsis.one-bare core.source="psys2 78f45863"
+@w.lang.en.rule.ellipsis.one-bare w.lang.en.rule lhs=S rhs=CONJ rhs=ONE1 rhs=MODS construction=ellipsis.one-bare priority=10 core.source="psys2 78f45863" core.source="hand-core 1"
 # ellipsis.one-class: in PSys2, expand.mjs oneAnaphora sameClass
 @w.lang.en.construction.ellipsis.one-class w.lang.en.construction name=ellipsis.one-class about=S function=grammar.elide doc="anchor modifiers of the same class as a new one are replaced, of another class are kept: 'a big green house and a yellow one' is a big yellow house; the class of a word is the smallest lexicon that holds it" core.source="psys2 78f45863"
 # ellipsis.verb: in PSys2, expand.mjs ellipsisPrefixes

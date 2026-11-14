@@ -1,5 +1,5 @@
 {
- "version": "90908d852949",
+ "version": "485a24ea20ca",
  "sopworld": "b44d444",
  "worlds": [
   {
@@ -37055,8 +37055,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 189,
-     "bytes": 26447,
+     "wires": 190,
+     "bytes": 26582,
      "keys": [
       "after",
       "age_years_about",
@@ -55264,7 +55264,7 @@
      "id": "w.lang.en/shards/grammar",
      "path": "w.lang.en/shards/grammar.sop",
      "wires": 257,
-     "bytes": 41634,
+     "bytes": 41786,
      "keys": [
       "'s",
       "all",
@@ -55302,6 +55302,7 @@
       "why"
      ],
      "sources": [
+      "hand-core-1",
       "psys2-78f45863"
      ],
      "license": "CC0-1.0",

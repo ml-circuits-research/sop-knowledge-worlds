@@ -162,6 +162,9 @@
 @w.lang.en.rule.agree core.slot of=w.lang.en.rule key=agree many=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.rule.construction core.slot of=w.lang.en.rule key=construction required=true kind=atom core.source="hand-core 1"
 @w.lang.en.rule.status core.slot of=w.lang.en.rule key=status enum=hole core.source="psys2 78f45863"
+# `priority`: where two productions read the same words, the one with the higher priority wins before the smaller
+# parse does (block 06:55 item 1; the library's Q33, "order is data"); a rule without one has none.
+@w.lang.en.rule.priority core.slot of=w.lang.en.rule key=priority kind=integer min=1 core.source="hand-core 1"
 # An English construction ("the legs of the crocodile", "a white house and a green one"): `about` the category it
 # builds, `emit` the roles a reading carries to an act (with `set` and `thing` where it says them), `reading` what
 # it means in words when that is more than roles, `asks` what a question asks, `function` the std.grammar function

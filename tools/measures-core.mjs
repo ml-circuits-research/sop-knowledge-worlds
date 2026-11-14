@@ -55,7 +55,7 @@ export const MEASURES = {
   'w.lang.en': {
     det: { person: { plain: true }, value: { plain: true } }, pron: { person: { plain: true } }, anaphor: { order: ord }, prep: { arity: { counts: 'thing the preposition relates' } },
     ordinal: { value: { plain: true } }, numeral: { value: { plain: true } },
-    inflect: { order: ord, drop: { counts: 'letter' }, min_length: { counts: 'letter' } }, frame: { priority: ord }, part: { at: ord, max_words: { counts: 'word' } },
+    inflect: { order: ord, drop: { counts: 'letter' }, min_length: { counts: 'letter' } }, frame: { priority: ord }, rule: { priority: ord }, part: { at: ord, max_words: { counts: 'word' } },
     'ellipsis.lead': { order: ord }, 'ellipsis.trail': { order: ord }, 'ellipsis.param': { value: { counts: 'word or part that the name of the limit says' }, min: { counts: 'word or part that the name of the limit says' }, max: { counts: 'word or part that the name of the limit says' } },
     'coord.param': { value: { counts: 'word' } },
   },

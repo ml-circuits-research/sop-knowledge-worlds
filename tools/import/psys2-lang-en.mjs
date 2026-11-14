@@ -99,6 +99,7 @@ export function importLangEn(read, commit, local) {
   const np = shard('np');
   const cl = shard('clauses');
   const g = grammar(np, cl, W, notes);
+  notes.changed.push(`\`priority\` (written here, hand-core) on the productions of ${Object.keys(PRIORITY).join(', ')}: each ties at the same size with another construction on its own examples, and should win`);
   notes.changed.push('the constructions of the question frames, joiner, correction, negation and imperative rules, and the contraction endings, carry `documentation=yes`: PSys2 wrote them to document its own readers and reads none of them as data (block 07:40 item 1); they stay, complete');
   put('grammar', 'the grammar as plain productions over categories (noun phrases, coordination, ellipsis, anaphora, questions), the English constructions they belong to, and the words of the categories that are words', g.lines);
 
@@ -251,7 +252,9 @@ function grammar(np, cl, W, notes) {
       notes.changed.push(`${name}: ${lhs} -> ${rhs.join(' ')} names a category twice; written ${lhs} -> ${[...rhs.slice(0, s), h].join(' ')} and ${h} -> ${tail.join(' ')} (a repeated key of a fact is a set)`);
       rhs = [...rhs.slice(0, s), h];
     }
-    rules++; lines.push(W(`rule.${name}${n ? `.${n}` : ''}`, 'rule', [['lhs', lhs], ...rhs.map((c) => ['rhs', c]), ['construction', name], ...extra]));
+    // block 06:55 item 1: where two constructions read the same words at the same size, `priority` says which wins
+    const pr = PRIORITY[name];
+    rules++; lines.push(W(`rule.${name}${n ? `.${n}` : ''}`, 'rule', [['lhs', lhs], ...rhs.map((c) => ['rhs', c]), ['construction', name], ...extra, ['priority', pr]]) + (pr ? ' core.source="hand-core 1"' : ''));
   };
   lines.push('# ---- constructions and their productions ----');
   const rulesOf = [...np.filter((x) => x.type === 'lang.en.rule'), ...cl.filter((x) => ['lang.en.qframe', 'lang.en.joiner.rule', 'lang.en.correction.rule', 'lang.en.neg.rule', 'lang.en.imperative.rule'].includes(x.type))];
@@ -317,6 +320,12 @@ function grammar(np, cl, W, notes) {
   // a negated auxiliary for the tag question (a hole in the hand-over: no words): the words, from English
   return { lines, rules, constructions };
 }
+
+// Block 06:55 item 1 (the library's Q33, "order is data"): the constructions that tie with another at the same size
+// on their own examples, found by parsing every construction's examples with the library: "the legs of the
+// crocodile" is a possessive, not a noun with a PP of; "and two big ones" counts, not a bare one-anaphor; "and one
+// yellow" is a one without its noun, not a fragment. The higher priority wins before the size ranking.
+export const PRIORITY = { 'np.possessive-of': 10, 'ellipsis.one-count': 10, 'ellipsis.one-bare': 10 };
 
 // ---- frames --------------------------------------------------------------------------------------------------------
 // PSys2 names two verb groups otherwise than k.actions names the act: V.set are the verbs of change, V.apart of take apart

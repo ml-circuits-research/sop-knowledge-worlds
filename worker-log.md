@@ -3664,3 +3664,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: k.motion schema 130 wires (18,988 bytes, with the key words of tools/key-words.mjs); shards rules 80 wires
   (15,971 bytes), mouth 19 wires (4,262 bytes); validate 0 errors, 0 warnings. k.faces plain-eyes 77 wires, plain-mouth
   131. Catalog 27 worlds, 951 shards, 24,542 words.
+
+## Block 06:55 item 1 (2026-11-14, second worker): w.lang.en `many` and `priority`
+
+- `many=true` on `rhs` and on every `in` was already in this repository's schema (the import of Round 12 wrote it;
+  the library's Q33 was about the hand-over's schema). New test: the schema loads with every shard on 0.52 with no
+  violation, and `rhs` / `in` are many.
+- **Where order matters, found by parsing:** every construction's own examples parsed with the library; three tie at
+  the same size with another construction: "the legs of the crocodile" (np.possessive-of vs np.pp), "and two big
+  ones" (ellipsis.one-count vs ellipsis.one), "and one yellow" (ellipsis.one-bare vs ellipsis.fragment, which won).
+  `w.lang.en.rule.priority` (new slot, integer) = 10 on their 4 productions (the import, `PRIORITY`, with a second
+  source hand-core 1; IMPORT.md says so). The questions and the statements of the tests all rank right already.
+- **For the library:** sopworld 0.52's `parseText` ranks by size and depth only and does not read `priority` (its
+  grammar.mjs has no such key), though its Q33 answer says it would be honoured first. The test ranks by priority
+  before size itself and checks the three ties; a library that honours it needs no change here.
+- Not found by the scan: 13 construction examples do not parse at all (commas, which the tokenizer drops, Q39;
+  "guest ann", "after tuesday", "is there a circle", "why is table 2 blue": known holes and the imperative
+  clauses); "all of the tables" reads as np.quant-of, as the noun-phrase test expects.
+- `tools/measures-core.mjs`: a rule's `priority` is a place in an order, as a frame's (`k.units/shards/measures`
+  175 wires).
+- npm test 2,904: 2,899 pass, 5 skipped, 0 fail.
+- Rebased on k.motion (first worker, 43cb081): measures regenerated (190 wires), catalog 27 worlds, 952 shards, vocab
+  24,562 words; npm test 2,914: 2,909 pass, 5 skipped, 0 fail.

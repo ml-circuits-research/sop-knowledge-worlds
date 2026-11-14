@@ -300,3 +300,20 @@ test('w.lang.en is what the library reads: the views of a closed class and where
   const d = viewDiff(gw, 'w.lang.en.det', 'acts', 'discourse');
   assert.ok(d.only.acts.includes('another') && d.only.discourse.includes('his'), JSON.stringify(d));
 });
+
+test('block 06:55 item 1: the schema loads with every shard (many on rhs and in); priority decides the three ties of the examples', () => {
+  const w = new World();
+  assert.ok(w.tell(lang.schemaText).ok, 'schema');
+  for (const s of lang.shards) { const r = w.tell(s.text); assert.ok(r.ok, `${s.id}: ${JSON.stringify(r.violations?.slice(0, 2))}`); }
+  for (const t of ['rule', 'det', 'prep']) assert.equal(w.schema(`w.lang.en.${t}`).keys[t === 'rule' ? 'rhs' : 'in'].many, true, t);
+  const pri = new Map(of('rule').filter((r) => one(r, 'priority')).map((r) => [r.id, Number(one(r, 'priority'))]));
+  assert.equal(pri.size, 4);
+  const name = (p) => p.tree.rule.replace(/^w\.lang\.en\.rule\./, '').replace(/\.\d+$/, '');
+  // what a reader that honours priority before size picks (sopworld 0.52 ranks by size alone)
+  const best = (ps) => [...ps].sort((a, b) => (pri.get(b.tree.rule) ?? 0) - (pri.get(a.tree.rule) ?? 0) || a.size - b.size)[0];
+  for (const [s, start, c] of [['the legs of the crocodile', 'NP', 'np.possessive-of'], ['and two big ones', 'S', 'ellipsis.one-count'], ['and one yellow', 'S', 'ellipsis.one-bare']]) {
+    const ps = read(s, start);
+    assert.ok(ps.length, s);
+    assert.equal(name(best(ps)), c, `${s}: ${ps.map(name)}`);
+  }
+});
