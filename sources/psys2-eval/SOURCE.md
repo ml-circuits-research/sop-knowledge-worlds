@@ -11,6 +11,9 @@
     `lookup set, knowledge`. Kept: the message, the id, for a row with an invented noun (`.inv`) the mark
     `invented` (the right outcome is "not found"), and for a knowledge row the demo's expected answer pattern
     (`expect`).
+- **Also** (block "21:05" item 3): `paraphrase-failures.jsonl`, the 71 rows of psys2 `training/eval/failures.jsonl`
+  (commit `c1175ee1`) whose `class` starts with `paraphrase:`; kept: the text, the class and the source. Read by
+  `tools/paraphrase-words.mjs` (the content words that reach no sense of k.words).
 - **Licence:** the project's own data (the reviewer's block "2026-11-13 22:30": PSys2's hand-written data can be
   published here as CC0); CC0-1.0.
 - **How to refresh:** read the two files again and keep the same fields; the script is in the worker log entry

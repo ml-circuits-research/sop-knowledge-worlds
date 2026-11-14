@@ -23,7 +23,9 @@ const MULTI = /^[a-z][a-z0-9-]*(_[a-z][a-z0-9-]*)+$/;
 // Words other worlds asked for, kept with every part of speech as common words whatever their place in the frequency
 // list (reviewer block "16:10": the 9 lemmas of w.lang.ro's dictionary that had no English sense; the adjectives of
 // text style and orientation that commands use).
-export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thick', 'thicken', 'vertical'];
+// Block "21:05" item 3: the content words of the first host's failing paraphrases that reached no sense
+// (tools/paraphrase-words.mjs): subhead.
+export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thick', 'thicken', 'vertical', 'subhead'];
 // Senses WordNet 3.1 does not have, written by hand (hand-core 1, CC0-1.0) into a shard of their own, `hand.sop`, so
 // that no wire of another licence shares a shard with them. `n` counts on from WordNet's senses of that part of
 // speech (none for these). "numbered" is in WordNet only as a form of the verb number ("give numbers to").

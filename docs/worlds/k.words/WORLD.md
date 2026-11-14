@@ -29,7 +29,7 @@ planet, manta ray an animal, light year a unit), and the adjective and adverb se
     (9,342 senses): "is a dog an animal" is one lookup, `where: { word: 'dog', pos: 'noun', n: 1, kind_of: 'animal' }`.
 - `core.word` facts in the shards: irregular forms (`text=children means=child`) and lower-case text for capitalised
   words (`text=paris means=Paris`), both `of=k.words.sense.word`.
-- Words asked for by other worlds (`ASKED` in the importer, block "16:10"): anterior, bold, horizontal, italic, sandy,
+- Words asked for by other worlds (`ASKED` in the importer, block "16:10"; subhead, block "21:05" item 3): anterior, bold, horizontal, italic, sandy,
   thick, thicken, vertical are kept with every part of speech whatever their place in the frequency list, for the
   lemmas of `w.lang.ro`'s dictionary (cursiv = italic adjective 1, îngroșat = bold adjective 2 "clear and distinct",
   îngroșa = thicken verb 1, anterior = anterior adjective 2 "earlier in time", nisipiu = sandy adjective 1).
@@ -54,6 +54,21 @@ planet, manta ray an animal, light year a unit), and the adjective and adverb se
 The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain beyond the common words (which carry `kind_of`), look the value up as a
 `word` again (its first sense is the usual one). A value may be a word that has no sense in the shards (only words of
 the frequency list, the common things and the names of the cores have senses).
+
+## Coverage of the words of failing paraphrases (block "21:05" item 3)
+
+A reader that replaces an unknown word in a slot by its nearest sense needs every content word to reach a sense.
+`node tools/paraphrase-words.mjs` reads the 71 failing paraphrases of the first host
+(`sources/psys2-eval/paraphrase-failures.jsonl`), drops the closed-class words of `w.lang.en` and numbers, and looks
+each of the 138 content words up in k.words: the word, a form k.words names (`core.word`), its stem by the regular
+endings (-s, -es, -ies, -ed, -ing, -er, -est; doubled consonant and dropped e restored), without a possessive 's or
+the ending of a contraction. Before this item 126 reached a sense; `subhead` ("Add a subhead details") was missing
+and is now kept as an asked word (WordNet noun 1, "a heading of a subdivision of a text", in its WordNet shard
+`su`). 128 of 138 reach a sense; the 10 that do not are not words of English or not content words: names (Zoe,
+Zoe's, Anah for Ana), a chess square (c3), a misspelling (wat), and closed-class words w.lang.en does not list yet
+(if, myself, yourself, hey, um: block "21:05" item 5). Reaching a sense is not reaching the meant one: Ana, Tom,
+Leo reach WordNet senses that are not the names (a collection of anecdotes, a male animal, a constellation), lei
+the garland (the money of Romania is `leu`), G a gram. Checked by `tests/k.words.paraphrase.test.mjs`.
 
 ## Shards
 

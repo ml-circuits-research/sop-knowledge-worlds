@@ -4329,3 +4329,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   the worlds table gains `k.kinds` with 958 of the 1,500 common things, nearly all through the first worker's
   k.kinds.parent shards (the page was stale on origin/main since bb61a21); 8 lead to a relation shard (world, person,
   key, hat, mirror, frame, continent, marker: names of keys).
+
+## Block 21:05 item 3 (2026-11-14, second worker): k.words coverage of the words of failing paraphrases
+
+- `sources/psys2-eval/paraphrase-failures.jsonl`: the 71 rows of psys2 failures.jsonl (c1175ee1) with class
+  `paraphrase:` (text, class, source). `tools/paraphrase-words.mjs` (`node tools/paraphrase-words.mjs`): content words
+  are the words that are no closed-class word of w.lang.en and no number; a word reaches a sense through itself, a
+  k.words form, its regular stems, or without a possessive / contraction ending.
+- Before: 138 content words, 126 reach a sense, 12 do not (anah, c3, g's, hey, if, myself, subhead, um, wat, yourself,
+  zoe, zoe's; g's and zoe's were tool gaps: the possessive). Added `subhead` to the WordNet importer's ASKED words:
+  `node tools/import/wordnet.mjs` (raw WordNet 3.1 and, since fa8a629, sources/wordfreq/raw/en-top50k.tsv copied from
+  psys2 data/external, sha256 cf894ee6... as its SOURCE.md says) rewrote one line of `k.words/shards/su.sop` (WordNet
+  shard, licence unchanged); the other 347 shards are byte-identical.
+- After: 128 of 138 reach a sense; the 10 misses have causes: names (zoe, zoe's, anah), notation (c3), misspelling
+  (wat), closed-class words w.lang.en lacks (if, myself, yourself, hey, um; item 5). Reached but not the meant sense:
+  Ana, Tom, Leo, lei, G (WORLD.md). k.kinds relations unchanged by the new sense (rerun gives no diff).
+- Tests: `tests/k.words.paraphrase.test.mjs` (2): the stems; every content word reaches a sense or has a cause, no
+  listed word reaches a sense, every listed word is a miss, at least 90 % reach. k.words 4 pass.
+- The w.chart commit (f0254e1) carried six conflict-marker lines in this log from its rebases (the markers only, no
+  text lost); removed here. Lesson: grep for markers before `git add -A` after a rebase that stopped on this log.
