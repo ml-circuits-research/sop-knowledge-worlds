@@ -43,7 +43,7 @@
 @k.attributes.same.judge.person k.attributes.same name=judge sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.judo_belt.clothing k.attributes.same name="judo belt" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jug.thing k.attributes.same name=jug sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.juice.food k.attributes.same name=juice sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.juice.food k.attributes.same name=juice sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jukebox.thing k.attributes.same name=jukebox sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.july.time k.attributes.same name=july sense=time only=true in=k.time.month by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jumper.clothing k.attributes.same name=jumper sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"

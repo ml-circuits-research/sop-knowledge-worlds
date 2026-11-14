@@ -5,8 +5,8 @@
 {"id":"cs-05","ask":"what is a house made of","query":{"type":"k.commonsense.thing","where":{"name":"house"},"seek":"made_of"},"expect":{"status":"supported","values":["brick","wood"]}}
 {"id":"cs-07","ask":"how many suns does a scene usually have","query":{"type":"k.commonsense.thing","where":{"name":"sun"},"seek":"usually_count"},"expect":{"status":"supported","value":"1"}}
 {"id":"cs-08","ask":"can a plane fly","query":{"type":"k.commonsense.thing","where":{"name":"plane","can":"fly"},"seek":"can","mode":"check"},"expect":{"status":"supported","value":"yes"}}
-{"id":"cs-09","ask":"which things are usually in the sky","query":{"type":"k.commonsense.thing","where":{"at":"sky"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["bird","sun","moon","cloud","plane","star"]}}
-{"id":"cs-10","ask":"how many things does the world know","query":{"type":"k.commonsense.thing","mode":"count"},"expect":{"status":"supported","value":"15"}}
+{"id":"cs-09","ask":"which things are usually in the sky","query":{"type":"k.commonsense.thing","where":{"at":"sky"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["swift","bird","sun","moon","cloud","plane","star"]},"note":"the swift lives in the sky (k.animals habitat, rule k.commonsense.habitat)"}
+{"id":"cs-10","ask":"how many things does the world know","query":{"type":"k.commonsense.thing","mode":"count"},"expect":{"status":"supported","value":"349"},"note":"15 hand-written things, 15 liquids, and a thing for every animal of k.animals and drink of k.food (Round 11 item 4 rules)"}
 {"id":"cs-11","ask":"a fish in the sky","tell":"@p1 k.commonsense.placed thing=fish at=sky scene=s1","ns":"scene","expect":{"ok":true,"issues":["A fish is usually in water, not in the sky.","A fish cannot fly, so it is not usually in the sky."]}}
 {"id":"cs-12","ask":"a fish on the grass","tell":"@p1 k.commonsense.placed thing=fish at=grass scene=s1","ns":"scene","expect":{"ok":true,"issues":["A fish is usually in water, not on the grass."]}}
 {"id":"cs-13","ask":"a boat on the grass","tell":"@p1 k.commonsense.placed thing=boat at=grass scene=s1","ns":"scene","expect":{"ok":true,"issues":["A boat is usually in water, not on the grass."]}}
@@ -17,3 +17,5 @@
 {"id":"cs-18","ask":"a fish in the water","tell":"@p1 k.commonsense.placed thing=fish at=water scene=s1","ns":"scene","expect":{"ok":true,"issues":[]}}
 {"id":"cs-19","ask":"a dog in the sky","tell":"@p1 k.commonsense.placed thing=dog at=sky scene=s1","ns":"scene","expect":{"ok":true,"issues":["A dog cannot fly, so it is not usually in the sky."]}}
 {"id":"cs-20","ask":"a thing the world does not know, in the sky","tell":"@p1 k.commonsense.placed thing=unicorn at=sky scene=s1","ns":"scene","expect":{"ok":true,"issues":[]}}
+{"id":"cs-20","ask":"where is a dolphin usually","query":{"type":"k.commonsense.thing","where":{"name":"dolphin"},"seek":"at"},"expect":{"status":"supported","values":["sea","water"]},"note":"from the habitat of k.animals by the rules k.commonsense.habitat and k.commonsense.habitat.place"}
+{"id":"cs-21","ask":"can a penguin fly","query":{"type":"k.commonsense.thing","where":{"name":"penguin"},"seek":"cannot"},"expect":{"status":"supported","value":"fly"},"note":"from k.animals by the rule k.commonsense.inability"}

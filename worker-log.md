@@ -2906,3 +2906,41 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   things, before item 3 and now: a drawing of its name 680 to 780 (52%), a link 343 to 352, neither 477 to 368
   (25%); place 693 to 782 by name, size 710 to 799. Joins: 70 clashes (68 before item 3). Catalog 22 worlds, 918
   shards, vocab 23,739 to 24,035 words; 0 errors, 0 warnings. npm test 2,814: 2,813 pass, 1 skipped, 0 fail.
+
+## Round 11, item 4 (2026-11-14, first worker): common-sense rules about kinds, as SOP Lang rules
+
+- **Six rules (`core.rule`) and one new soft rule** in `docs/worlds/k.commonsense/schema.sop` (version 3, now
+  importing `k.animals` and `k.food`), source `hand-core 1`:
+  - *lives in implies the usual place:* `k.commonsense.habitat` (an animal's habitat is where it usually is) and
+    `k.commonsense.habitat.place` (through the new type `k.commonsense.lives`, shard `lives`: 32 habitats give
+    water, ground, both for ponds and marshes, or indoors);
+  - `k.commonsense.ability`, `k.commonsense.inability`: what an animal can and cannot do, the thing can and cannot
+    (new key `cannot`), so the existing soft rules about flying reach every animal;
+  - *liquids need a container:* `k.commonsense.drink` (a drink of k.food is a liquid), shard `liquids` (15 everyday
+    liquids), and the soft rule `k.commonsense.liquid`: a liquid placed with nothing to hold it (new key
+    `placed.in`);
+  - *a thing on a carrier moves with it:* `k.commonsense.carried`: a placed thing `on` a carrier of the same scene
+    is where the carrier is, and when the carrier is placed elsewhere the derived place follows (the rule's
+    conclusion is withdrawn and made again);
+  - *things that cannot fly are not in the sky unless on something:* the soft rule `nofly` now reads only a placed
+    thing with no `on` (`core.absent=on`).
+- **Existing soft rules corrected** because the animals now reach them: a thing usually in water that can fly is
+  no issue in the sky (a duck); one that is also on land is no issue on grass.
+- **Need a function, left to the library** (said in WORLD.md): moving with a carrier when places are numbers (the
+  space solver), whether a container is big enough (amounts, volumes), that a flying carrier is in the sky only
+  while it flies (time).
+- **Where the rules are: Q38.** Asked for in "a rules shard"; shards hold facts only (the validator), and a host
+  imports modules. Meanwhile the rules are in the schema and the facts they read in two shards.
+- Tests: `tests/k.commonsense.rules.test.mjs` (5: each rule in a small world, and with the whole catalog: every
+  animal with a habitat has a usual place; 22 liquids); questions cs-20, cs-21; cs-09 and cs-10 changed with the
+  knowledge (the swift is in the sky; the world knows 349 things, not 15).
+- **Looked at:** the issues of the small worlds (texts read); the places of dolphin and penguin in the whole
+  catalog. **Not looked at:** the places of the other 330 animals one by one (a test requires one for each).
+- **Judgement that is mine:** which habitats are water, ground or both; the 15 liquids; that a pond animal is on
+  land too.
+- **What SOP Lang could not say:** "the carrier flies, so the rider is in the air" over time, and anything about
+  sizes of containers; the rule names in issues come prefixed with the module (`k.commonsense.k.commonsense.nofly`)
+  when the world is loaded with `use`.
+- Numbers: k.commonsense 4 shards (`lives` 33 wires, `liquids` 15); schema 7 rules more. COVERAGE: common things
+  reached by k.commonsense words 17 to 35. Catalog 22 worlds, 920 shards, vocab 24,039 words; 0 errors, 0 warnings.
+  npm test 2,821: 2,820 pass, 1 skipped, 0 fail.

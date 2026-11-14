@@ -80,3 +80,12 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   it in one line each. The cheap check is the tags and words of the imported drawings.
 - **A drawing also needs a place and a size to be usable in a scene**; the test that every drawing has them (5%
   allowed) caught 159 new objects without. A new thing in one world is a row in two or three others.
+- **Item 4: a rule over kinds turns one world's facts into another's** (an animal's habitat becomes its usual place,
+  a drink becomes a liquid): 330 animals reach the soft rules of k.commonsense with no fact written for each. But
+  the moment the rules reached real data, two old soft rules were wrong (a duck lives on a pond and flies; a frog
+  lives in it and sits on the bank): rules written for a toy core must be re-read when a join feeds them.
+- **What a rule derives is invisible to the tools that read shards** (the joins table, the coverage page): they see
+  15 liquids, not 22, and no animal in k.commonsense. A report of what the catalog knows must say whether it counts
+  told facts or also derived ones.
+- **A module that holds rules over other worlds pulls their schemas in** (k.commonsense now imports k.animals and
+  k.food, and with it k.objects does). Where such rules live is a design question of its own (Q38).

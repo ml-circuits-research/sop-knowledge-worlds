@@ -1,5 +1,5 @@
 {
- "version": "9be6442d8e80",
+ "version": "a56264d79808",
  "sopworld": "1e18f1d",
  "worlds": [
   {
@@ -5525,7 +5525,7 @@
      "id": "k.attributes/shards/same-b",
      "path": "k.attributes/shards/same-b.sop",
      "wires": 335,
-     "bytes": 67705,
+     "bytes": 67728,
      "keys": [
       "animal",
       "ba",
@@ -5877,7 +5877,7 @@
      "id": "k.attributes/shards/same-c",
      "path": "k.attributes/shards/same-c.sop",
      "wires": 441,
-     "bytes": 89109,
+     "bytes": 89132,
      "keys": [
       "animal",
       "body in space",
@@ -6903,7 +6903,7 @@
      "id": "k.attributes/shards/same-h",
      "path": "k.attributes/shards/same-h.sop",
      "wires": 163,
-     "bytes": 32807,
+     "bytes": 32830,
      "keys": [
       "animal",
       "body part",
@@ -7085,8 +7085,8 @@
     {
      "id": "k.attributes/shards/same-i",
      "path": "k.attributes/shards/same-i.sop",
-     "wires": 43,
-     "bytes": 8369,
+     "wires": 44,
+     "bytes": 8518,
      "keys": [
       "animal",
       "body in space",
@@ -7116,6 +7116,7 @@
       "india",
       "indonesia",
       "inhaler",
+      "ink",
       "inn",
       "insect",
       "intercom",
@@ -7150,7 +7151,7 @@
      "id": "k.attributes/shards/same-j",
      "path": "k.attributes/shards/same-j.sop",
      "wires": 50,
-     "bytes": 10195,
+     "bytes": 10218,
      "keys": [
       "animal",
       "body in space",
@@ -7436,7 +7437,7 @@
      "id": "k.attributes/shards/same-m",
      "path": "k.attributes/shards/same-m.sop",
      "wires": 256,
-     "bytes": 49581,
+     "bytes": 49604,
      "keys": [
       "animal",
       "body in space",
@@ -7788,8 +7789,8 @@
     {
      "id": "k.attributes/shards/same-o",
      "path": "k.attributes/shards/same-o.sop",
-     "wires": 60,
-     "bytes": 12247,
+     "wires": 61,
+     "bytes": 12396,
      "keys": [
       "animal",
       "clothing",
@@ -7807,6 +7808,7 @@
       "odessa",
       "office building",
       "ohio",
+      "oil",
       "oil drum",
       "okapi",
       "old key",
@@ -7866,8 +7868,8 @@
     {
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
-     "wires": 304,
-     "bytes": 61257,
+     "wires": 305,
+     "bytes": 61435,
      "keys": [
       "animal",
       "body in space",
@@ -7984,6 +7986,7 @@
       "pesto",
       "petal",
       "petri dish",
+      "petrol",
       "petrol tanker",
       "petticoat",
       "pew",
@@ -8370,7 +8373,7 @@
      "id": "k.attributes/shards/same-s",
      "path": "k.attributes/shards/same-s.sop",
      "wires": 418,
-     "bytes": 85611,
+     "bytes": 85657,
      "keys": [
       "animal",
       "body in space",
@@ -8803,7 +8806,7 @@
      "id": "k.attributes/shards/same-t",
      "path": "k.attributes/shards/same-t.sop",
      "wires": 224,
-     "bytes": 45276,
+     "bytes": 45299,
      "keys": [
       "animal",
       "body in space",
@@ -9079,7 +9082,7 @@
      "id": "k.attributes/shards/same-v",
      "path": "k.attributes/shards/same-v.sop",
      "wires": 48,
-     "bytes": 9795,
+     "bytes": 9818,
      "keys": [
       "animal",
       "body in space",
@@ -9149,7 +9152,7 @@
      "id": "k.attributes/shards/same-w",
      "path": "k.attributes/shards/same-w.sop",
      "wires": 118,
-     "bytes": 23894,
+     "bytes": 23940,
      "keys": [
       "animal",
       "body part",
@@ -10769,13 +10772,17 @@
   },
   {
    "id": "k.commonsense",
-   "version": "2",
+   "version": "3",
    "schema": "k.commonsense/schema.sop",
    "exports": [
+    "k.commonsense.lives",
     "k.commonsense.placed",
     "k.commonsense.thing"
    ],
-   "depends": [],
+   "depends": [
+    "k.animals",
+    "k.food"
+   ],
    "shards": [
     {
      "id": "k.commonsense/shards/core",
@@ -10798,6 +10805,79 @@
       "star",
       "sun",
       "tree"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.commonsense/shards/liquids",
+     "path": "k.commonsense/shards/liquids.sop",
+     "wires": 15,
+     "bytes": 1753,
+     "keys": [
+      "beer",
+      "coffee",
+      "honey",
+      "ink",
+      "juice",
+      "milk",
+      "oil",
+      "paint",
+      "petrol",
+      "shampoo",
+      "soup",
+      "tea",
+      "vinegar",
+      "water",
+      "wine"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.commonsense/shards/lives",
+     "path": "k.commonsense/shards/lives.sop",
+     "wires": 32,
+     "bytes": 3343,
+     "keys": [
+      "beach",
+      "cave",
+      "city",
+      "cliff",
+      "coral reef",
+      "desert",
+      "farm",
+      "field",
+      "forest",
+      "garden",
+      "grassland",
+      "house",
+      "ice",
+      "island",
+      "jungle",
+      "lake",
+      "marsh",
+      "meadow",
+      "mountain",
+      "park",
+      "pond",
+      "rainforest",
+      "river",
+      "rock",
+      "sand",
+      "savanna",
+      "sea",
+      "soil",
+      "swamp",
+      "town",
+      "tundra",
+      "wetland"
      ],
      "sources": [
       "hand-core-1"

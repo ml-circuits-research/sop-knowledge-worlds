@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3399
-- one thing everywhere: 3329
+- names carried by facts of more than one world: 3402
+- one thing everywhere: 3332
 - clashes of sense: 70
 
 | sense of the one thing | names |
@@ -32,7 +32,7 @@ and the meat).
 | place | 300 |
 | time | 35 |
 | body in space | 30 |
-| thing | 1679 |
+| thing | 1682 |
 
 ## Clashes of sense
 
@@ -130,16 +130,17 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.attributes` and `k.wearables` | 87 |
 | `k.objects` and `k.wearables` | 83 |
 | `k.scenes` and `k.wearables` | 82 |
+| `k.attributes` and `k.commonsense` | 26 |
+| `k.commonsense` and `k.objects` | 26 |
+| `k.commonsense` and `k.scenes` | 26 |
 | `k.shapes` and `k.values` | 24 |
 | `k.colours` and `k.values` | 19 |
 | `k.attributes` and `k.space` | 16 |
 | `k.objects` and `k.space` | 16 |
 | `k.scenes` and `k.space` | 16 |
-| `k.attributes` and `k.commonsense` | 14 |
-| `k.commonsense` and `k.objects` | 14 |
-| `k.commonsense` and `k.scenes` | 14 |
 | `k.attributes` and `k.body` | 13 |
 | `k.body` and `k.objects` | 9 |
+| `k.commonsense` and `k.food` | 7 |
 | `k.commonsense` and `k.layouts` | 6 |
 | `k.attributes` and `k.values` | 5 |
 | `k.geo` and `k.objects` | 5 |
@@ -154,4 +155,3 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.commonsense` and `k.space` | 2 |
 | `k.geo` and `k.scenes` | 2 |
 | `k.layouts` and `k.wearables` | 1 |
-| `k.objects` and `k.values` | 1 |

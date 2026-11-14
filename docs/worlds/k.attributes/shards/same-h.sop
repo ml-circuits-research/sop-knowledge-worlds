@@ -116,7 +116,7 @@
 @k.attributes.same.hole_punch.thing k.attributes.same name="hole punch" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.holly.plant k.attributes.same name=holly sense=plant only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.holster.thing k.attributes.same name=holster sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.honey.food k.attributes.same name=honey sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.honey.food k.attributes.same name=honey sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.honey_pot.food k.attributes.same name="honey pot" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.honeybee.animal k.attributes.same name=honeybee sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.hood.clothing k.attributes.same name=hood sense=clothing only=true in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"

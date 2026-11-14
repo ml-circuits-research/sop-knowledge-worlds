@@ -6339,6 +6339,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/mulberry-holiday-and-travel-01",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/noto-animal-marine-02",
@@ -6819,6 +6820,7 @@
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-nature",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-vegetable-02",
@@ -12994,7 +12996,8 @@
  "cannot": [
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
-  "k.attributes/shards/attributes"
+  "k.attributes/shards/attributes",
+  "k.commonsense/schema.sop"
  ],
  "canoe": [
   "k.attributes/shards/drawn-noto",
@@ -14058,6 +14061,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors",
   "k.objects/shards/land",
   "k.parts/shards/c",
@@ -16416,6 +16420,7 @@
  ],
  "city": [
   "k.attributes/shards/aspects",
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.objects/shards/noto-place-building-02",
   "k.objects/shards/noto-place-other-01",
@@ -16772,6 +16777,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors",
   "k.objects/shards/land",
   "k.scenes/shards/things-c",
@@ -17531,6 +17537,7 @@
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-nature",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/noto-drink-01",
@@ -19428,6 +19435,7 @@
   "k.words/shards/co-2"
  ],
  "coral reef": [
+  "k.commonsense/shards/lives",
   "k.scenes/shards/scenes-other"
  ],
  "coral sea": [
@@ -23204,6 +23212,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.objects/shards/noto-animal-mammal-05",
   "k.objects/shards/noto-place-geographic-01",
@@ -29143,6 +29152,7 @@
  "farm": [
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/noto-animal-mammal-04",
@@ -29755,6 +29765,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/land-2",
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.objects/shards/noto-sport-02",
@@ -31754,6 +31765,7 @@
  "forest": [
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/noto-plant-other-01",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/scenes-nature",
@@ -33472,6 +33484,7 @@
  "garden": [
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-clothing-05",
   "k.objects/shards/noto-food-vegetable-03",
@@ -35423,6 +35436,9 @@
   "k.animals/shards/invertebrates",
   "k.objects/shards/animals-2"
  ],
+ "grassland": [
+  "k.commonsense/shards/lives"
+ ],
  "grate": [
   "k.words/shards/gr"
  ],
@@ -36599,6 +36615,7 @@
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.commonsense/schema.sop",
   "k.objects/shards/noto-plant-other-01",
   "k.words/shards/ha"
  ],
@@ -39501,6 +39518,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-animal-bug-01",
@@ -40081,6 +40099,7 @@
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-big",
   "k.commonsense/shards/core",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors",
   "k.layouts/shards/joins",
   "k.objects/shards/buildings",
@@ -40736,6 +40755,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-i",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/food",
   "k.objects/shards/food-2",
   "k.objects/shards/land-3",
@@ -41165,6 +41185,7 @@
   "k.actions/shards/verbs-save",
   "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
+  "k.commonsense/schema.sop",
   "k.space/schema.sop",
   "k.words/shards/in",
   "w.list/schema.sop",
@@ -41631,6 +41652,8 @@
   "k.words/shards/in"
  ],
  "ink": [
+  "k.attributes/shards/same-i",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/noto-lock-01",
   "k.words/shards/in"
  ],
@@ -42355,6 +42378,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-i",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors",
   "k.objects/shards/land",
   "k.objects/shards/noto-place-geographic-01",
@@ -43617,6 +43641,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-j",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/food",
   "k.objects/shards/mulberry-drink-type-01",
@@ -43704,6 +43729,7 @@
  "jungle": [
   "k.attributes/shards/same-j",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/openmoji-animals-nature-02",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/ju"
@@ -46075,6 +46101,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-l",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/noto-transport-water-01",
@@ -49455,6 +49482,9 @@
   "k.commonsense/schema.sop",
   "k.words/shards/li"
  ],
+ "lives in": [
+  "k.commonsense/schema.sop"
+ ],
  "livestock": [
   "k.words/shards/li"
  ],
@@ -52008,6 +52038,7 @@
  "marsh": [
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/land-2",
   "k.words/shards/ma"
  ],
@@ -52568,6 +52599,7 @@
   "k.words/shards/me"
  ],
  "meadow": [
+  "k.commonsense/shards/lives",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/me"
  ],
@@ -53839,6 +53871,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/liquids",
   "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-animal-mammal-04",
@@ -56170,6 +56203,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/land-3",
@@ -59825,6 +59859,8 @@
   "k.geo/shards/europe"
  ],
  "oil": [
+  "k.attributes/shards/same-o",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-transport-ground-06",
@@ -60057,6 +60093,7 @@
  "on": [
   "k.actions/shards/verbs-pick",
   "k.attributes/shards/aspects",
+  "k.commonsense/schema.sop",
   "k.layouts/schema.sop",
   "k.layouts/shards/layouts",
   "k.objects/schema.sop",
@@ -61440,6 +61477,7 @@
   "k.actions/shards/verbs-make",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-tools-workshop-02",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-p",
@@ -62132,6 +62170,7 @@
  "park": [
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.objects/shards/noto-place-geographic-02",
   "k.objects/shards/noto-place-other-02",
   "k.scenes/shards/scenes-nature",
@@ -63796,6 +63835,8 @@
   "k.scenes/shards/things-p"
  ],
  "petrol": [
+  "k.attributes/shards/same-p",
+  "k.commonsense/shards/liquids",
   "k.words/shards/pe"
  ],
  "petrol station": [
@@ -66248,6 +66289,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors-points",
   "k.objects/shards/mulberry-building-garden-and-farm-01",
   "k.scenes/shards/scenes-nature",
@@ -69214,6 +69256,7 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "rainforest": [
+  "k.commonsense/shards/lives",
   "k.scenes/shards/scenes-nature",
   "k.words/shards/ra"
  ],
@@ -72718,6 +72761,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/land",
@@ -72964,6 +73008,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors-points",
   "k.objects/shards/land",
   "k.objects/shards/noto-household-02",
@@ -74737,6 +74782,7 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-nature",
   "k.colours/shards/colours",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors",
   "k.objects/shards/land",
   "k.objects/shards/mulberry-holiday-and-travel-01",
@@ -75303,6 +75349,7 @@
   "k.words/shards/sa"
  ],
  "savanna": [
+  "k.commonsense/shards/lives",
   "k.scenes/shards/scenes-nature"
  ],
  "savannah": [
@@ -76057,6 +76104,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/land",
@@ -77325,6 +77373,7 @@
  "shampoo": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-healthcare-grooming-items-06",
   "k.objects/shards/noto-household-02",
   "k.scenes/shards/scenes-indoors",
@@ -80624,6 +80673,7 @@
   "k.actions/shards/actions-make-change",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.words/shards/so"
  ],
  "sokodé": [
@@ -80895,6 +80945,7 @@
  "soup": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-food-meals-and-snacks-06",
   "k.objects/shards/mulberry-food-meals-and-snacks-07",
@@ -84943,6 +84994,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/lives",
   "k.layouts/shards/anchors",
   "k.objects/shards/land-2",
   "k.scenes/shards/things-s",
@@ -86502,6 +86554,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-drink-01",
@@ -89675,6 +89728,7 @@
   "k.objects/shards/structures"
  ],
  "town": [
+  "k.commonsense/shards/lives",
   "k.geo/schema.sop",
   "k.layouts/shards/joins",
   "k.scenes/shards/scenes-town",
@@ -91025,6 +91079,7 @@
   "k.scenes/shards/things-t"
  ],
  "tundra": [
+  "k.commonsense/shards/lives",
   "k.words/shards/tu"
  ],
  "tune": [
@@ -93566,6 +93621,7 @@
  "vinegar": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-v",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-food-ingredients-02",
   "k.scenes/shards/things-v",
   "k.words/shards/vi"
@@ -94708,6 +94764,7 @@
   "k.actions/shards/actions-make-change",
   "k.attributes/shards/same-w",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
@@ -95321,6 +95378,9 @@
  "wet day": [
   "k.scenes/shards/scenes-other"
  ],
+ "wetland": [
+  "k.commonsense/shards/lives"
+ ],
  "wets": [
   "k.actions/shards/actions-make-change"
  ],
@@ -95555,6 +95615,9 @@
   "k.scenes/schema.sop",
   "k.wearables/schema.sop",
   "w.seating/schema.sop"
+ ],
+ "where it lives": [
+  "k.commonsense/schema.sop"
  ],
  "whereabouts": [
   "k.words/shards/wh"
@@ -96282,6 +96345,7 @@
   "k.attributes/shards/same-w",
   "k.attributes/shards/things-nature",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-drink-type-03",
   "k.objects/shards/noto-drink-01",
   "k.scenes/shards/things-w",

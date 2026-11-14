@@ -43,7 +43,7 @@
 @k.attributes.same.tasmanian_devil.animal k.attributes.same name="tasmanian devil" sense=animal only=true in=k.animals.animal in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tavern.thing k.attributes.same name=tavern sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.taxi.thing k.attributes.same name=taxi sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.tea.food k.attributes.same name=tea sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.tea.food k.attributes.same name=tea sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tea_bag.food k.attributes.same name="tea bag" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tea_instant.food k.attributes.same name="tea instant" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tea_spoon.thing k.attributes.same name="tea spoon" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

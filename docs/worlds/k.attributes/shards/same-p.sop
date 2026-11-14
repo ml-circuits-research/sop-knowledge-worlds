@@ -1,4 +1,4 @@
-# k.attributes/shards/same-p: one name, one thing: for 297 names that start with "p" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (14 facts of such names here).
+# k.attributes/shards/same-p: one name, one thing: for 298 names that start with "p" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (14 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -12,7 +12,7 @@
 @k.attributes.same.pager.thing k.attributes.same name=pager sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pagoda.thing k.attributes.same name=pagoda sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.pail.thing k.attributes.same name=pail sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.paint.thing k.attributes.same name=paint sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.paint.thing k.attributes.same name=paint sense=thing only=true in=k.attributes.drawn in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.paint_box.thing k.attributes.same name="paint box" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.paint_brush.thing k.attributes.same name="paint brush" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.paint_childs.thing k.attributes.same name="paint childs" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -115,6 +115,7 @@
 @k.attributes.same.pesto.food k.attributes.same name=pesto sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.petal.thing k.attributes.same name=petal sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.petri_dish.thing k.attributes.same name="petri dish" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.petrol.thing k.attributes.same name=petrol sense=thing only=true in=k.commonsense.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.petrol_tanker.thing k.attributes.same name="petrol tanker" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.petticoat.clothing k.attributes.same name=petticoat sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.pew.thing k.attributes.same name=pew sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

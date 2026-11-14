@@ -30,6 +30,19 @@ not bring the removed thing back but undoes the step before it (make a, make b, 
 stays gone).
 Blocking: no. Meanwhile: (a).
 
+## Q38 (Round 11 item 4, first worker, 2026-11-14)
+Question: the rules about kinds were asked for "in a k.commonsense rules shard a host can import". Shards hold
+facts only (the validator refuses a matrix wire in a shard), and a host imports modules, not shards. May the rules
+stay in the schema of `k.commonsense`, which now imports `k.animals` and `k.food`, or should they be a module of
+their own (`k.commonsense.rules` or a world `k.rules`) that a host imports only when it wants them?
+Context: done meanwhile: six rules and one new soft rule in `docs/worlds/k.commonsense/schema.sop` (version 3),
+the facts they read in two shards (`lives`, `liquids`). The cost: a host that imports `k.commonsense` (and
+`k.objects`, which imports it) now loads the schemas of k.animals and k.food too (no shards), and the rules run
+on whatever animal and drink facts the host loads. Options: (a) keep them in the schema; (b) a module of rules per
+world that reads other worlds (`k.commonsense.rules` with imports), loaded on request; (c) let the validator accept a
+shard named `rules` that holds rules and patterns only.
+Blocking: no. Meanwhile: (a).
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

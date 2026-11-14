@@ -1,4 +1,4 @@
-# k.attributes/shards/same-o: one name, one thing: for 56 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
+# k.attributes/shards/same-o: one name, one thing: for 57 names that start with "o" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (7 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -15,6 +15,7 @@
 @k.attributes.same.odessa.place k.attributes.same name=odessa sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.office_building.thing k.attributes.same name="office building" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ohio.place k.attributes.same name=ohio sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.oil.thing k.attributes.same name=oil sense=thing only=true in=k.commonsense.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.oil_drum.thing k.attributes.same name="oil drum" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.okapi.animal k.attributes.same name=okapi sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.old_key.thing k.attributes.same name="old key" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

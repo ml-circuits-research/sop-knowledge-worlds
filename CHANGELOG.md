@@ -3,6 +3,15 @@
 Breaking schema changes, per world. The world's version is `version=` on the `core.module` wire of its `schema.sop`
 (sopworld 0.15.0; a `# version:` header line before) and the `version` of its catalog entry.
 
+## k.commonsense 3 (2026-11-14, Round 11 item 4)
+
+- The module imports `k.animals` and `k.food` (its rules read their facts); new type `k.commonsense.lives`, new keys
+  `k.commonsense.thing.cannot`, `k.commonsense.placed.on`, `k.commonsense.placed.in`.
+- Rules derive `k.commonsense.thing` facts (`at`, `can`, `cannot`, `is_a=liquid`) from every animal and drink, and the
+  place of a carried `placed` thing from its carrier. The soft rules change: a thing usually in water that can fly is
+  no issue in the sky; one that is also on land is no issue on grass; a thing that cannot fly is no issue in the sky
+  when it is on a carrier; a liquid with nothing to hold it is a new issue.
+
 ## k.animals 2, k.commonsense 2 (2026-11-13, Round 11, Q32)
 
 - `k.animals.animal.size` and `k.commonsense.thing.size` are gone: the size class and the usual place of every thing,

@@ -109,7 +109,7 @@
 @k.attributes.same.bee_honey.animal k.attributes.same name="bee honey" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.beef.food k.attributes.same name=beef sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.beeper.thing k.attributes.same name=beeper sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.beer.food k.attributes.same name=beer sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.beer.food k.attributes.same name=beer sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.beer_bottle.food k.attributes.same name="beer bottle" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.beer_mug.food k.attributes.same name="beer mug" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.beet.thing k.attributes.same name=beet sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

@@ -39,7 +39,7 @@
 @k.attributes.same.vietnam.place k.attributes.same name=vietnam sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.villa.thing k.attributes.same name=villa sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vine.plant k.attributes.same name=vine sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.vinegar.food k.attributes.same name=vinegar sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.vinegar.food k.attributes.same name=vinegar sense=food only=true in=k.attributes.drawn in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violet.plant k.attributes.same name=violet sense=plant only=false in=k.attributes.thing unsure=k.attributes.drawn unsure=k.attributes.number unsure=k.objects.object unsure=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violet.colour k.attributes.same name=violet sense=colour only=false in=k.values.colour unsure=k.attributes.drawn unsure=k.attributes.number unsure=k.objects.object unsure=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violin.thing k.attributes.same name=violin sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

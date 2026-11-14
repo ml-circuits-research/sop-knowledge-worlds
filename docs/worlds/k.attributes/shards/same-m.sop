@@ -128,7 +128,7 @@
 @k.attributes.same.milan.place k.attributes.same name=milan sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.military_helmet.clothing k.attributes.same name="military helmet" sense=clothing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.military_medal.thing k.attributes.same name="military medal" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.milk.food k.attributes.same name=milk sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.milk.food k.attributes.same name=milk sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.milk_2_litre.food k.attributes.same name="milk 2 litre" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.milk_bottle.food k.attributes.same name="milk bottle" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.milk_carton.food k.attributes.same name="milk carton" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

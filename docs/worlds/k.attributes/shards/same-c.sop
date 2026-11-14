@@ -294,7 +294,7 @@
 @k.attributes.same.cocoon.thing k.attributes.same name=cocoon sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.cod.animal k.attributes.same name=cod sense=animal only=false in=k.animals.animal in=k.scenes.thing unsure=k.attributes.number unsure=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.cod.food k.attributes.same name=cod sense=food only=false in=k.food.food unsure=k.attributes.number unsure=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.coffee.food k.attributes.same name=coffee sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.coffee.food k.attributes.same name=coffee sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.coffee_grinder.thing k.attributes.same name="coffee grinder" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.coffee_instant.food k.attributes.same name="coffee instant" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.coffee_maker.thing k.attributes.same name="coffee maker" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
