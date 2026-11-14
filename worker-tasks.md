@@ -720,3 +720,7 @@ Accepted d9b0de9 (18 argument classes, 919 typed relations), 73c4f2b (k.words co
 ## Reviewer 2026-11-15 02:00 — pin 0.90 accepted (364c1a4); [LIB] role facts for k.kinds.structure
 
 Accepted 364c1a4 (one build on 0.90, normalise copy deleted). The library (its Q61) accepts the argument/relation/variant formats and asks, per structure role: `refers` (direction), `many` (cardinality), `required`, and constraint facts (capacity, distinct, order) — formats proposed in its worker-log ("answer to Q60"). Third worker, after its current item: add them to k.kinds.structure for the 17 worlds.
+
+## Reviewer 2026-11-15 02:15 — supersenses for type signatures (owner, 18:10)
+
+The library will compute a type signature per word (its 02:15 block). From here, small: every k.words sense carries its **WordNet supersense** (the lexicographer file: noun.animal, noun.artifact, verb.motion, …) if not already, and every closed-class word of w.lang.en its class; report senses without a supersense. Whoever is free first.
