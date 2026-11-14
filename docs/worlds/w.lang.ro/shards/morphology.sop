@@ -46,6 +46,7 @@
 @w.lang.ro.class.a_iu w.lang.ro.class name=a.iu drop=u pos=adjective about="m -iu, f -ie, plural -ii (portocaliu, portocalie, portocalii)" core.source="hand-core 1"
 @w.lang.ro.class.a_ru w.lang.ro.class name=a.ru drop=u pos=adjective about="m -u after a consonant, f -ă, m pl -i, f pl -e (albastru, albastră, albaștri, albastre; negru, neagră)" core.source="hand-core 1"
 @w.lang.ro.class.a_inv w.lang.ro.class name=a.inv pos=adjective about="one form for every gender and number (mov, roz, maro)" core.source="hand-core 1"
+@w.lang.ro.class.det_art w.lang.ro.class name=det.art parent=a.inv pos=adjective about="the indefinite article, agreeing with its noun as an adjective does; every form irregular (un, o, niște; unui, unei, unor)" core.source="hand-core 1"
 @w.lang.ro.class.v_a w.lang.ro.class name=v.a drop=a pos=verb about="first conjugation, no suffix (muta: mut, muți, mută; mută!)" core.source="hand-core 1"
 @w.lang.ro.class.v_a_a23 w.lang.ro.class name=v.a.ă3 parent=v.a alt="ă>a" pos=verb about="as v.a, with ă > a where the stem is stressed in the 3rd person (arăta: arăt, arată)" core.source="hand-core 1"
 @w.lang.ro.class.v_a_a2 w.lang.ro.class name=v.a.ă parent=v.a alt="ă>a" pos=verb about="as v.a, with ă > a where the stem is stressed (adăuga: adaug, adaugi, adaugă)" core.source="hand-core 1"

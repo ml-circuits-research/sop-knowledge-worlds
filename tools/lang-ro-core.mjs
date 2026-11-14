@@ -54,6 +54,7 @@ export const CLASSES = [
   ['a.iu', null, 'u', [], 'adjective', 'm -iu, f -ie, plural -ii (portocaliu, portocalie, portocalii)'],
   ['a.ru', null, 'u', [], 'adjective', 'm -u after a consonant, f -ă, m pl -i, f pl -e (albastru, albastră, albaștri, albastre; negru, neagră)'],
   ['a.inv', null, null, [], 'adjective', 'one form for every gender and number (mov, roz, maro)'],
+  ['det.art', 'a.inv', null, [], 'adjective', 'the indefinite article, agreeing with its noun as an adjective does; every form irregular (un, o, niște; unui, unei, unor)'],
   ['v.a', null, 'a', [], 'verb', 'first conjugation, no suffix (muta: mut, muți, mută; mută!)'],
   ['v.a.ă3', 'v.a', null, ['ă>a'], 'verb', 'as v.a, with ă > a where the stem is stressed in the 3rd person (arăta: arăt, arată)'],
   ['v.a.ă', 'v.a', null, ['ă>a'], 'verb', 'as v.a, with ă > a where the stem is stressed (adăuga: adaug, adaugi, adaugă)'],
@@ -183,6 +184,10 @@ export const IRREGULAR = [
   vIrr('veni', 'veni', 'vino', 'veniți', ['vin', 'vii', 'vine', 'venim', 'veniți', 'vin'], ['vin', 'vii', 'vină', 'venim', 'veniți', 'vină'], 'venit'),
   vIrr('vedea', 'vedea', 'vezi', 'vedeți', ['văd', 'vezi', 'vede', 'vedem', 'vedeți', 'văd'], ['văd', 'vezi', 'vadă', 'vedem', 'vedeți', 'vadă'], 'văzut'),
   vIrr('împărți', 'împărți', 'împarte', 'împărțiți', ['împart', 'împarți', 'împarte', 'împărțim', 'împărțiți', 'împart'], ['împart', 'împarți', 'împartă', 'împărțim', 'împărțiți', 'împartă'], 'împărțit'),
+  // the indefinite article (class det.art): un casă -> o casă in a template that agrees with its noun
+  ['un', [['m', 'sg', 'nomacc', 'un'], ['n', 'sg', 'nomacc', 'un'], ['f', 'sg', 'nomacc', 'o'], ['m', 'pl', 'nomacc', 'niște'], ['n', 'pl', 'nomacc', 'niște'], ['f', 'pl', 'nomacc', 'niște'],
+    ['m', 'sg', 'gendat', 'unui'], ['n', 'sg', 'gendat', 'unui'], ['f', 'sg', 'gendat', 'unei'], ['m', 'pl', 'gendat', 'unor'], ['n', 'pl', 'gendat', 'unor'], ['f', 'pl', 'gendat', 'unor']]
+    .map(([gender, num, kase, form]) => [{ gender, num, case: kase }, form])],
   // imperatives that are not the 3rd person singular
   ['face', [[{ tense: 'imper', person: '2', num: 'sg' }, 'fă']]],
   ['duce', [[{ tense: 'imper', person: '2', num: 'sg' }, 'du']]],
@@ -311,7 +316,8 @@ export const PARTICLES = [
 ];
 // Realisation templates (std.morph `realise`): a reply in the cells the template names; `{x@y}` agrees with y.
 export const TEMPLATES = [
-  ['make', null, 'am desenat {kind:num=sg,case=nomacc,def=no} {colour@kind}'],
+  // `{art@kind}`: the indefinite article (the role art is the lemma un), agreeing with the noun: o casă, un copac
+  ['make', null, 'am desenat {art@kind} {kind:num=sg,case=nomacc,def=no} {colour@kind}'],
   ['remove', null, 'am șters {thing:num=sg,case=nomacc,def=yes}'],
   ['change', null, '{thing:num=sg,case=nomacc,def=yes} este acum {colour@thing}'],
 ];
@@ -353,7 +359,7 @@ vorbi v.i.esc - speak|juca v.a.u - play|cânta v.a - sing|asculta v.a - listen|d
 vrea v.ea - want|putea v.ea.u - can.verb.1|avea v.ea - have|fi v.i.esc - be|vedea v.ea - see|plăcea v.ea.ă - like|prefera v.a - prefer|dori v.i.esc - want
 amesteca v.a - mix|obține v.e.n - get|număra v.a - count|calcula v.a.ez - calculate|aduna v.a - add.verb.1|înmulți v.i.esc - multiply|împărți v.i.esc - divide|găti v.i.esc - cook
 spăla v.a.ă3 - wash|trece v.e - pass|întâlni v.i.esc - meet|îngroșa v.a.oa - thicken|înota v.a.oa - swim|numi v.i.esc - name|așeza v.a.ez - sit|scăpa v.a.ă - escape|ruga v.a.u - ask.verb.1
-trage v.e.s.g - pull|schimb n.uri n exchange|sfârșit n.uri n end.noun.1|nisipiu a.iu - sandy|radar n.e n radar|repeta v.a - repeat|alege v.e.s.g - choose|lipi v.i.esc - paste|construi v.i.iesc - build|purta v.a.u - wear|trimite v.e.s.t - send|construi v.i.iesc - build
+trage v.e.s.g - pull|schimb n.uri n exchange|sfârșit n.uri n end.noun.1|nisipiu a.iu - sandy|un det.art - -|radar n.e n radar|repeta v.a - repeat|alege v.e.s.g - choose|lipi v.i.esc - paste|construi v.i.iesc - build|purta v.a.u - wear|trimite v.e.s.t - send|construi v.i.iesc - build
 `.trim().split(/\n|\|/).map((r) => r.trim()).filter(Boolean).map((r) => r.split(' ')).filter((x, i, a) => a.findIndex((y) => y[0] === x[0]) === i);
 // The sense id of a row: `@act.verb` -> k.actions.verb.act.verb; `word` -> k.words.word.<pos>.1; `word.pos.n` as given.
 const POS = { n: 'noun', a: 'adjective', v: 'verb' };

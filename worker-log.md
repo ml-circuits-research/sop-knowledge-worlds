@@ -4140,7 +4140,6 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   tests/w.lang.en.templates.test.mjs (two sentences and the one without a place). PSys2 can drop its local
   patterns.extra.sop copy.
 
-<<<<<<< HEAD
 
 
 ## 2026-11-14 — first worker: the register of words in k.words (block "15:15" item 2; data of block "19:00")
@@ -4219,7 +4218,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests one file at a time: k.actions.families 5, k.actions.acts 8, k.actions 4, validate 5, w.lang.en 21,
   templates 8, k.procedures 15, joins 3, questions 424, shared-modules 5, ask-real 4, catalog 8 (alone after a
   SIGKILL); 0 fail. Catalog 32 worlds, 1,021 shards.
-=======
+<<<<<<< HEAD
+
 =======
 ## Block 21:20 task 1 (2026-11-14, second worker): `w.chart` published
 
@@ -4239,8 +4239,23 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   bar chart, a series and three values, change the form to line, refuse "donut", change and ask a value, pick by
   category, refuse a value "many", remove) 14 pass; `tests/k.procedures.test.mjs` (the chart in w.chart expanded by
   std.plan to the expected five acts) 15 pass; k.interest 5, page 2, catalog 8 pass.
->>>>>>> d4c29be (w.chart: charts of numbers as a world schema (chart with form, series, values by category; 41 wires, 6.2 kB, 0 warnings), and the w.chart method of a chart of the things there in k.procedures (24 methods))
 - Full run of this commit before the last rebase (one file at a time, `/home/claude/w2tools/runall.sh` in a worktree):
   2,979 tests, 2,974 pass, 5 skipped, 0 fail, no file killed (15 minutes). Rebased on k.words register (fa8a629): catalog 32 worlds, 1,005 shards,
   vocab 24,894 words; then on k.kinds up edges and k.actions families (a523fa4): 1,021 shards, vocab 25,713 words; catalog 8, w.schemas 14, k.procedures 15 pass after the rebase.
 >>>>>>> 4b59348 (w.chart: charts of numbers as a world schema (chart with form, series, values by category; 41 wires, 6.2 kB, 0 warnings), and the w.chart method of a chart of the things there in k.procedures (24 methods))
+=======
+
+
+## 2026-11-14 — first worker: w.lang.ro on sopworld 0.63: no exceptions left, the article in the templates (block "16:50")
+
+- The pin is already ≥0.63 (second worker, 7be89c8). The Q52 exception list (uriaș, englez, îngroșa) and the Q51 todo
+  are gone from tests/w.lang.ro.test.mjs: round trip 2,916 / 2,916 cells in exact spelling and 2,916 / 2,916 typed
+  without diacritics (were 2,898 / 2,904 and 2,249 / 2,904); every class and cell with its first lemma 556 / 556.
+- The indefinite article: a class `det.art` (extends a.inv, every form irregular: un, o, niște; unui, unei, unor) and
+  the lemma `un` in the dictionary (256 lemmas; the article needs no sense). The make template is
+  `am desenat {art@kind} {kind:...} {colour@kind}`: "am desenat o casă roșie", "am desenat un copac verde", "am desenat
+  un desen albastru"; "am șters steaua", "mașina este acum galbenă" as before (the definite article is a noun cell).
+- Re-measured on PSys2's 240 Romanian commands: exact spelling 99.5% (first reading 99.2%), through the folds 99.7%,
+  the casual variants typed without diacritics 99.7% (1,163 of 1,167; was 92.2%).
+- w.lang.ro: 949 wires (morphology 402, irregular 225, closed 240, templates 3, schema 79). Tests 9 / 9.
+>>>>>>> f864cba (w.lang.ro on sopworld 0.63: no exception left (round trip 2,916/2,916 exact and without diacritics), the indefinite article in the templates (am desenat o casă roșie))

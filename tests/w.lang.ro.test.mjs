@@ -2,7 +2,7 @@
 // with the one pinned build. The shards and the dictionary are what tools/lang-ro-core.mjs writes; they load with no
 // warning; the dictionary has the documented format and its senses exist in k.words and k.actions; the closed
 // classes join w.lang.en and k.layouts by relation name; the round trip analyse(generate(x)) holds for every class
-// and cell (but the cases of questions.md Q52); and the words of PSys2's Romanian commands are analysed (coverage).
+// and cell, in exact spelling and typed without diacritics (Q51, Q52 answered by sopworld 0.63); and the words of PSys2's Romanian commands are analysed (coverage).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
@@ -55,7 +55,7 @@ test('w.lang.ro: the dictionary is sorted, split by the first folded letter, wit
       assert.ok(m.classes.has(cls), `${lemma}: class ${cls}`);
       const pos = CLASSES.find((c) => c[0] === cls)[4];
       if (pos === 'noun') assert.match(gender, /^[mfn]$/, `${lemma}: a noun has a gender`); else assert.equal(gender, '', `${lemma}: no gender`);
-      if (sense) assert.ok(senses.has(sense), `${lemma}: sense ${sense} is no wire of k.words or k.actions`); else noSense.push(lemma);
+      if (sense) assert.ok(senses.has(sense), `${lemma}: sense ${sense} is no wire of k.words or k.actions`); else if (cls !== 'det.art') noSense.push(lemma); // the article is grammar, not a sense
     }
   }
   console.log(`dictionary: ${rows} lemmas, ${noSense.length} without a sense (k.words has none yet): ${noSense.join(' ')}`);
@@ -90,24 +90,22 @@ test('w.lang.ro: forms the rules generate (nouns, adjectives, verbs, irregulars)
   assert.deepEqual([g('fi', 'v.i.esc', p('3', 'sg')), g('avea', 'v.ea', p('3', 'sg')), g('zi', 'f.ă', N('sg', 'nomacc', 'yes'))], ['este', 'are', 'ziua'], 'irregulars first');
 });
 
-// The round trip over every lemma of the dictionary and every cell of its class. Cases the library cannot analyse
-// back yet (questions.md Q52): an alternation is always undone, so a stem that already had the alternation's
-// result (uriaș, englez, îngroșa) is not found.
-const Q52 = new Set(['uriaș', 'englez', 'îngroșa']);
-test('w.lang.ro: round trip, exact spelling: analyse(generate(x)) gives x back for every lemma, class and cell (but Q52)', () => {
+// The round trip over every lemma of the dictionary and every cell of its class (since sopworld 0.63, which answered
+// Q52, with no exception).
+test('w.lang.ro: round trip, exact spelling: analyse(generate(x)) gives x back for every lemma, class and cell', () => {
   let cells = 0, ok = 0;
   const bad = [];
   for (const [lemma, cls] of LEXICON) for (const cell of m.classes.get(cls).cells.values()) {
     const form = generate(exact, lemma, cls, cell.feat);
     cells++;
-    if (backTo(exact, dictExact, lemma, cls, cell.feat, form)) ok++; else if (!Q52.has(lemma)) bad.push(`${lemma} ${cls} ${JSON.stringify(cell.feat)} ${form}`);
+    if (backTo(exact, dictExact, lemma, cls, cell.feat, form)) ok++; else bad.push(`${lemma} ${cls} ${JSON.stringify(cell.feat)} ${form}`);
   }
   console.log(`round trip exact: ${ok} of ${cells} cells; not back: ${bad.join('; ')}`);
   assert.deepEqual(bad, []);
   // every class and cell once, with the first lemma of the class
   let classCells = 0, classOk = 0;
   for (const [name, c] of m.classes) {
-    const lemma = LEXICON.find((r) => r[1] === name && !Q52.has(r[0]))?.[0];
+    const lemma = LEXICON.find((r) => r[1] === name)?.[0];
     assert.ok(lemma, `a lemma for ${name}`);
     for (const cell of c.cells.values()) { classCells++; if (backTo(exact, dictExact, lemma, name, cell.feat, generate(exact, lemma, name, cell.feat))) classOk++; }
   }
@@ -115,7 +113,7 @@ test('w.lang.ro: round trip, exact spelling: analyse(generate(x)) gives x back f
   assert.equal(classOk, classCells);
 });
 
-test('w.lang.ro: round trip through the folds: a form typed without diacritics (questions.md Q51)', { todo: 'questions.md Q51: the suffix index is keyed by unfolded suffixes' }, () => {
+test('w.lang.ro: round trip through the folds: a form typed without diacritics (questions.md Q51, answered by sopworld 0.63)', () => {
   let cells = 0, ok = 0;
   for (const [lemma, cls] of LEXICON) for (const cell of m.classes.get(cls).cells.values()) {
     cells++;
@@ -142,9 +140,9 @@ test('w.lang.ro: closed classes join w.lang.en and k.layouts by relation; numera
 
 test('w.lang.ro: replies realised from the templates, with agreement (std.morph realise)', () => {
   const base = { num: 'sg', case: 'nomacc' };
-  assert.equal(realise(m, templateFor(m, 'make'), { kind: 'casă', colour: 'roșu' }, { dictionary: dict, base }), 'am desenat casă roșie');
-  assert.equal(realise(m, templateFor(m, 'make'), { kind: 'copac', colour: 'verde' }, { dictionary: dict, base }), 'am desenat copac verde');
-  assert.equal(realise(m, templateFor(m, 'make'), { kind: 'desen', colour: 'albastru' }, { dictionary: dict, base }), 'am desenat desen albastru');
+  assert.equal(realise(m, templateFor(m, 'make'), { art: 'un', kind: 'casă', colour: 'roșu' }, { dictionary: dict, base }), 'am desenat o casă roșie');
+  assert.equal(realise(m, templateFor(m, 'make'), { art: 'un', kind: 'copac', colour: 'verde' }, { dictionary: dict, base }), 'am desenat un copac verde');
+  assert.equal(realise(m, templateFor(m, 'make'), { art: 'un', kind: 'desen', colour: 'albastru' }, { dictionary: dict, base }), 'am desenat un desen albastru');
   assert.equal(realise(m, templateFor(m, 'remove'), { thing: 'stea' }, { dictionary: dict, base }), 'am șters steaua');
   assert.equal(realise(m, templateFor(m, 'change'), { thing: 'mașină', colour: 'galben' }, { dictionary: dict, base }), 'mașina este acum galbenă');
 });
@@ -198,3 +196,4 @@ test('w.lang.ro: Romanian stays in its world: no other world names it, and its w
   const bad = Object.entries(vocab).filter(([, ids]) => ids.some((id) => id.startsWith('w.lang.ro/shards'))).map(([k]) => k);
   assert.deepEqual(bad, []);
 });
+
