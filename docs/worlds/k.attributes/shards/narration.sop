@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (273 of 1065 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (274 of 1077 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -215,8 +215,9 @@
 @k.attributes.narration.k.diagrams.fill.type k.attributes.narration type=k.diagrams.fill key=type narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
 @k.attributes.narration.k.diagrams.fill.key k.attributes.narration type=k.diagrams.fill key=key narrate=no salience=0 why="part of the subject of a fact of several keys (red and yellow give orange)" core.source="hand-core 1"
 @k.attributes.narration.k.diagrams.fill.gives k.attributes.narration type=k.diagrams.fill key=gives narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.diagrams.fill.topic k.attributes.narration type=k.diagrams.fill key=topic narrate=yes salience=0.21 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.diagrams.fill.topic k.attributes.narration type=k.diagrams.fill key=topic narrate=yes salience=0.23 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.diagrams.fill.about k.attributes.narration type=k.diagrams.fill key=about narrate=yes salience=0.3 form=text basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.diagrams.fill.by k.attributes.narration type=k.diagrams.fill key=by narrate=yes salience=0.02 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.drawing.part.shape k.attributes.narration type=k.drawing.part key=shape narrate=no salience=0 why="machinery: the geometry of drawings" core.source="hand-core 1"
 @k.attributes.narration.k.drawing.part.x k.attributes.narration type=k.drawing.part key=x narrate=no salience=0 why="machinery: the geometry of drawings" core.source="hand-core 1"
 @k.attributes.narration.k.drawing.part.y k.attributes.narration type=k.drawing.part key=y narrate=no salience=0 why="machinery: the geometry of drawings" core.source="hand-core 1"
@@ -802,6 +803,17 @@
 @k.attributes.narration.k.procedures.condition.other k.attributes.narration type=k.procedures.condition key=other narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
 @k.attributes.narration.k.procedures.condition.attribute k.attributes.narration type=k.procedures.condition key=attribute narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
 @k.attributes.narration.k.procedures.condition.value k.attributes.narration type=k.procedures.condition key=value narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto.name k.attributes.narration type=k.procedures.howto key=name narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto.about k.attributes.narration type=k.procedures.howto key=about narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto.basis k.attributes.narration type=k.procedures.howto key=basis narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto.cite k.attributes.narration type=k.procedures.howto key=cite narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.howto k.attributes.narration type=k.procedures.howto_step key=howto narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.n k.attributes.narration type=k.procedures.howto_step key=n narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.about k.attributes.narration type=k.procedures.howto_step key=about narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.role k.attributes.narration type=k.procedures.howto_step key=role narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.after k.attributes.narration type=k.procedures.howto_step key=after narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.branch k.attributes.narration type=k.procedures.howto_step key=branch narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
+@k.attributes.narration.k.procedures.howto_step.detail k.attributes.narration type=k.procedures.howto_step key=detail narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
 @k.attributes.narration.k.scenes.thing.name k.attributes.narration type=k.scenes.thing key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.scenes.thing.place k.attributes.narration type=k.scenes.thing key=place narrate=yes salience=0.5 form=relation basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.scenes.thing.on k.attributes.narration type=k.scenes.thing key=on narrate=yes salience=0.61 form=relation basis=measured core.source="hand-core 1"

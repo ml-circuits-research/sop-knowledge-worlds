@@ -432,6 +432,42 @@ export const TASK_WORDS = [
   ['scientific article', ['scientific article', 'paper', 'research article', 'article']],
 ];
 
+// Everyday procedures (block 07:30 item 2, PSys2 Q17: "a flowchart of making tea" found only the planner's drawing
+// methods): k.procedures.howto facts, apart from the methods. A step is [about, { role, after, branch, detail }];
+// `after` defaults to the step before (none for the first). `words` name the procedure as people ask for it: gerunds,
+// nouns and "how to" forms only ("make a cup of tea" may ask for a drawing of one).
+const CDC = 'Centers for Disease Control and Prevention (CDC), "When and How to Wash Your Hands", Handwashing in Community Settings (2023)';
+export const HOWTOS = [
+  { name: 'making tea', basis: 'own', words: ['making a cup of tea', 'tea making', 'how to make tea'],
+    about: 'a cup of tea with a tea bag, as it is usually made',
+    steps: [['Boil water'], ['Put a tea bag in a cup'], ['Pour the hot water into the cup'], ['Let it steep for a few minutes'],
+      ['Take out the tea bag'], ['Milk or sugar?', { role: 'decision' }], ['Add milk or sugar', { branch: 'yes' }],
+      ['Drink the tea', { after: [6, 7], branch: 'no' }]] },
+  { name: 'washing hands', basis: 'cited', cite: CDC, words: ['washing your hands', 'handwashing', 'hand washing', 'how to wash your hands', 'how to wash hands'],
+    about: 'washing hands with soap and water, in the five steps of the CDC (wet, lather, scrub, rinse, dry)',
+    steps: [['Wet your hands', { detail: 'Wet your hands with clean, running water (warm or cold), turn off the tap, and apply soap.' }],
+      ['Lather with soap', { detail: 'Lather your hands by rubbing them together with the soap. Lather the backs of your hands, between your fingers, and under your nails.' }],
+      ['Scrub for 20 seconds', { detail: 'Scrub your hands for at least 20 seconds.' }],
+      ['Rinse your hands', { detail: 'Rinse your hands well under clean, running water.' }],
+      ['Dry your hands', { detail: 'Dry your hands using a clean towel or an air dryer.' }]] },
+  { name: 'planting a seed', basis: 'own', words: ['sowing a seed', 'planting seeds', 'sowing seeds', 'how to plant a seed', 'how to sow seeds'],
+    about: 'a seed sown in a pot, as it is usually done',
+    steps: [['Fill a pot with soil'], ['Make a small hole in the soil'], ['Put the seed in the hole'], ['Cover the seed with soil'],
+      ['Water the soil'], ['Put the pot in a warm, light place'], ['Is the soil dry?', { role: 'decision' }],
+      ['Water the soil again', { branch: 'yes' }], ['Wait for the seed to sprout', { after: [7, 8], branch: 'no' }]] },
+];
+
+function howtoLines(h) {
+  const H = seg(h.name), out = [];
+  out.push(wire(`k.procedures.howto.${H}`, 'k.procedures.howto', [['name', text(h.name)], ['about', text(h.about)], ['basis', h.basis], ['cite', h.cite && text(h.cite)]], SRC));
+  h.steps.forEach(([about, o = {}], i) => {
+    const n = i + 1, after = o.after ?? (n > 1 ? [n - 1] : []);
+    out.push(wire(`k.procedures.howto_step.${H}.${n}`, 'k.procedures.howto_step', [['howto', text(h.name)], ['n', n], ['about', text(about)], ['role', o.role ?? 'process'], ...after.map((a) => ['after', a]), ['branch', o.branch], ['detail', o.detail && text(o.detail)]], SRC));
+  });
+  out.push(wire(`k.procedures.word.howto.${H}`, 'core.word', [...h.words.map((w) => ['text', w]), ['means', h.name], ['of', 'k.procedures.howto.name']], SRC));
+  return out;
+}
+
 const id = (m) => seg(m);
 function methodLines(m) {
   const M = id(m.name), out = [];
@@ -467,6 +503,7 @@ export function procedureShards() {
     const words = shard === 'tasks' ? `\n\n# Words for the named tasks (the value of the goal role kind).\n${TASK_WORDS.map(([task, ws]) => wire(`k.procedures.word.task.${seg(task)}`, 'core.word', [...ws.map((w) => ['text', w]), ['means', task], ['of', 'k.procedures.goal.value']], SRC)).join('\n')}` : '';
     files[`${shard}.sop`] = `${header({ id: `k.procedures/shards/${shard}`, about: `${ms.length} ${about[shard]}`, sources: ['hand-core 1 (hand-written in this repository: tools/procedures-core.mjs)'], license: 'CC0-1.0', script: 'tools/procedures-core.mjs' })}\n${body}${words}\n`;
   }
+  files['everyday.sop'] = `${header({ id: 'k.procedures/shards/everyday', about: `${HOWTOS.length} everyday procedures a person may ask a flowchart of (${HOWTOS.map((h) => h.name).join(', ')}; block 07:30 item 2): their steps, decisions and order, each said to be cited or written here (own); not methods of the planner.`, sources: ['hand-core 1 (hand-written in this repository: tools/procedures-core.mjs; the instructions cited are named by `cite`)'], license: 'CC0-1.0', script: 'tools/procedures-core.mjs' })}\n${HOWTOS.map((h) => `# ${h.name}\n${howtoLines(h).join('\n')}`).join('\n\n')}\n`;
   return files;
 }
 

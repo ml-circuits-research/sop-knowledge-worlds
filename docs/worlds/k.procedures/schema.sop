@@ -9,7 +9,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/procedures-core.mjs
 
-@k.procedures core.module name=k.procedures version=1 exports=method exports=goal exports=binding exports=match exports=step exports=arg exports=condition core.source="hand-core 1"
+@k.procedures core.module name=k.procedures version=2 exports=method exports=goal exports=binding exports=match exports=step exports=arg exports=condition exports=howto exports=howto_step core.source="hand-core 1"
 
 # A method: `name` says it in plain words ("compose a scene"); `act` is the act of the goal it reaches (one of the
 # acts of k.actions); `world` names a world schema (w.seating, w.face, w.map, w.list, w.timeline) when the method
@@ -145,10 +145,35 @@
 @k.procedures.condition.attribute core.slot of=k.procedures.condition key=attribute kind=atom core.source="hand-core 1"
 @k.procedures.condition.value core.slot of=k.procedures.condition key=value kind=atom kind=string core.source="hand-core 1"
 
+# An everyday procedure, as a person does it and may ask a flowchart of (making tea, washing hands, planting a seed;
+# block 07:30 item 2): knowledge of how a task is done, not a method of the planner (its steps are not acts of
+# k.actions on a live world, and the planner never reads it). `name` says it as people ask for it ("a flowchart of
+# making tea"); `about` in words; `basis` says where its steps come from: `cited` (the published instructions `cite`
+# names) or `own` (written here from common practice, no source claimed).
+@k.procedures.howto core.type of=k.procedures.howto shared=true closed=true core.source="hand-core 1"
+@k.procedures.howto.name core.slot of=k.procedures.howto key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.howto.about core.slot of=k.procedures.howto key=about required=true kind=string core.source="hand-core 1"
+@k.procedures.howto.basis core.slot of=k.procedures.howto key=basis required=true enum=cited enum=own core.source="hand-core 1"
+@k.procedures.howto.cite core.slot of=k.procedures.howto key=cite kind=string core.source="hand-core 1"
+
+# A step of an everyday procedure: number `n`; `about` the step in a few words (the text of its box in a flowchart);
+# `role` process (something done) or decision (a question answered yes or no); `after` (many) the steps it comes
+# after (none: the first step); `branch` the answer, yes or no, of the decision among `after` that leads to it;
+# `detail` the step in full, as the source says it.
+@k.procedures.howto_step core.type of=k.procedures.howto_step shared=true closed=true core.source="hand-core 1"
+@k.procedures.howto_step.howto core.slot of=k.procedures.howto_step key=howto id=true required=true kind=atom kind=string type=k.procedures.howto by=name core.source="hand-core 1"
+@k.procedures.howto_step.n core.slot of=k.procedures.howto_step key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
+@k.procedures.howto_step.about core.slot of=k.procedures.howto_step key=about required=true kind=string core.source="hand-core 1"
+@k.procedures.howto_step.role core.slot of=k.procedures.howto_step key=role required=true enum=process enum=decision core.source="hand-core 1"
+@k.procedures.howto_step.after core.slot of=k.procedures.howto_step key=after many=true kind=integer min=1 core.source="hand-core 1"
+@k.procedures.howto_step.branch core.slot of=k.procedures.howto_step key=branch enum=yes enum=no core.source="hand-core 1"
+@k.procedures.howto_step.detail core.slot of=k.procedures.howto_step key=detail kind=string core.source="hand-core 1"
+
 # Words for the types of this world.
 @k.procedures.word.method core.word text=method text=methods text=procedure text=procedures text="how to" text=way text=ways text=plan means=k.procedures.method core.source="hand-core 1"
 @k.procedures.word.step core.word text=step text=steps means=k.procedures.step core.source="hand-core 1"
 @k.procedures.word.goal core.word text=goal text=goals text=task text=tasks means=k.procedures.goal core.source="hand-core 1"
+@k.procedures.word.howto core.word text="everyday procedure" text="everyday procedures" text=instructions text="how to do" means=k.procedures.howto core.source="hand-core 1"
 @k.procedures.word.condition core.word text=condition text=conditions text=precondition text=preconditions text=effect text=effects means=k.procedures.condition core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -212,3 +237,12 @@
 @k.procedures.word.key.condition.other core.word text=other means=k.procedures.condition.other core.source="hand-core 1"
 @k.procedures.word.key.condition.attribute core.word text=attribute means=k.procedures.condition.attribute core.source="hand-core 1"
 @k.procedures.word.key.condition.value core.word text=value means=k.procedures.condition.value core.source="hand-core 1"
+@k.procedures.word.key.howto.about core.word text=about means=k.procedures.howto.about core.source="hand-core 1"
+@k.procedures.word.key.howto.basis core.word text=basis means=k.procedures.howto.basis core.source="hand-core 1"
+@k.procedures.word.key.howto.cite core.word text=cite means=k.procedures.howto.cite core.source="hand-core 1"
+@k.procedures.word.key.howto_step.n core.word text=n means=k.procedures.howto_step.n core.source="hand-core 1"
+@k.procedures.word.key.howto_step.about core.word text=about means=k.procedures.howto_step.about core.source="hand-core 1"
+@k.procedures.word.key.howto_step.role core.word text=role means=k.procedures.howto_step.role core.source="hand-core 1"
+@k.procedures.word.key.howto_step.after core.word text=after means=k.procedures.howto_step.after core.source="hand-core 1"
+@k.procedures.word.key.howto_step.branch core.word text=branch means=k.procedures.howto_step.branch core.source="hand-core 1"
+@k.procedures.word.key.howto_step.detail core.word text=detail means=k.procedures.howto_step.detail core.source="hand-core 1"

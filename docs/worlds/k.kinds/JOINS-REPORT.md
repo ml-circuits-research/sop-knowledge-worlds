@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **191** in 30 worlds; distinct values 7861, meeting a target 7803 (99.3 %), open 58
+- declared joins: **193** in 30 worlds; distinct values 7866, meeting a target 7808 (99.3 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **114**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **115**; left undeclared on purpose: 6
 
 ## Declared joins
 
@@ -58,6 +58,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.colours | `k.colours.mix.gives` | `k.colours.colour` | name | 23 | 23 |  |
 | k.commonsense | `k.commonsense.thing.can` | `k.actions.action` | name | 14 | 14 |  |
 | k.commonsense | `k.commonsense.thing.cannot` | `k.actions.action` | name | 3 | 3 |  |
+| k.diagrams | `k.diagrams.fill.by` | `k.attributes.attribute` | name | 2 | 2 |  |
 | k.diagrams | `k.diagrams.fill.kind` | `k.diagrams.kind` | name | 9 | 9 |  |
 | k.diagrams | `k.diagrams.kind.arranged` | `k.layouts.layout` | name | 8 | 8 |  |
 | k.diagrams | `k.diagrams.kind.source` | `k.diagrams.source` | name | 10 | 10 |  |
@@ -146,6 +147,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.procedures | `k.procedures.binding.method` | `k.procedures.method` | name | 29 | 29 |  |
 | k.procedures | `k.procedures.condition.method` | `k.procedures.method` | name | 29 | 29 |  |
 | k.procedures | `k.procedures.goal.method` | `k.procedures.method` | name | 29 | 29 |  |
+| k.procedures | `k.procedures.howto_step.howto` | `k.procedures.howto` | name | 3 | 3 |  |
 | k.procedures | `k.procedures.match.method` | `k.procedures.method` | name | 22 | 22 |  |
 | k.procedures | `k.procedures.step.method` | `k.procedures.method` | name | 29 | 29 |  |
 | k.scenes | `k.scenes.has.drawing` | `k.objects.object` | name | 531 | 531 |  |
@@ -303,6 +305,7 @@ exact (token for token) against the first candidate; the value share itself also
 | k.procedures | `k.procedures.condition.attribute` | thing | `k.body.part` | name | 10 | 1 |
 | k.procedures | `k.procedures.goal.value` | thing | `k.genres.genre` | name | 9 | 5 |
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
+| k.procedures | `k.procedures.howto_step.branch` | value | `k.values.reply` | name | 2 | 2 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
 | k.procedures | `k.procedures.method.act` | act | `k.actions.act` | name | 6 | 6 |
 | k.procedures | `k.procedures.step.act` | act | `k.actions.act` | name | 8 | 8 |

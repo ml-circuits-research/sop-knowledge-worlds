@@ -27,6 +27,17 @@ bounded (depth 3, 200 acts, no method inside its own expansion).
 | `k.procedures.arg` | `method`, `step`, `role`, `attribute` | a role of the step's act (for `value`, the `attribute` it sets): from a `binding` (its `key`, else `else_key`) or a `value`; `rel` of a place; `of` (a part or anchor of that thing) |
 | `k.procedures.condition` | `method`, `n` | `when=before` (precondition of the method, or of step `step`: done only if) or `after` (effect); `fact` exists, absent, on, inside, grouped, has; `thing`, `other`, `attribute`, `value` |
 
+| `k.procedures.howto` | `name` | an everyday procedure (not a planner method): `about`; `basis` cited (with `cite`) or own |
+| `k.procedures.howto_step` | `howto`, `n` | `about` (a flowchart box); `role` process or decision; `after` (many); `branch` yes or no (the answer of the decision it follows); `detail` |
+
+**Everyday procedures** (shard `everyday`, block 07:30 item 2; PSys2 Q17: "a flowchart of making tea" found only the
+drawing methods): **making tea** (own: 8 steps, the decision "Milk or sugar?"), **washing hands** (cited: the CDC's
+five steps, "When and How to Wash Your Hands", each step's `detail` its sentence), **planting a seed** (own: 9 steps,
+the decision "Is the soil dry?"). They are knowledge of how a person does a task, for diagrams (`k.diagrams` fills:
+flowchart by `after` and `n`, pipeline by `n`) and answers; the planner never reads them (their steps are not acts of
+k.actions on a live world). Their words are gerunds, nouns and "how to" forms ("tea making", "how to wash your
+hands"), never "make a cup of tea", which may ask for a drawing.
+
 **Alternatives** are the methods of one goal: the planner keeps those whose goal facts fit, whose `world` is the live
 world's schema (or none), and whose preconditions hold, then takes the lowest `rank`, then the first by name.
 **Decomposition**: a step is expanded by a method whose goal fits it (unless `expand=false`), to a depth of 3, and no

@@ -84,7 +84,7 @@ export const SHAPES = [
   ['comparison table', 'cell', 'rectangle', 'the value of a feature for a thing', []],
 ];
 
-// kind, type, key, gives, topic, about
+// kind, type, key, gives, topic, about, by (the k.attributes attribute an order by a rank follows)
 export const FILLS = [
   ['flowchart', 'k.procedures.step', 'after', 'edges', 'method', 'the steps of a method of k.procedures, each joined to the steps it comes after'],
   ['flowchart', 'k.procedures.step', 'n', 'order', 'method', 'the steps of a method in their order'],
@@ -97,6 +97,11 @@ export const FILLS = [
   ['cycle', 'k.time.ordered', 'n', 'order', 'cycle', 'the stages of a cycle in their order from where it is said to start'],
   ['timeline', 'k.time.ordered', 'n', 'order', 'cycle', 'the times of a cycle in order (months, weekdays)'],
   ['timeline', 'k.story.element', 'n', 'order', null, 'the elements of a story in the order told'],
+  // block 07:30 item 2 (PSys2 Q17): ordered sets of k.space as timelines, and everyday procedures as flowcharts
+  ['timeline', 'k.space.body', 'order', 'order', 'kind', 'the planets in their order from the Sun, Mercury to Neptune', 'distance'],
+  ['timeline', 'k.space.body', 'size_rank', 'order', 'kind', 'the planets from the largest to the smallest, Jupiter to Mercury', 'size'],
+  ['flowchart', 'k.procedures.howto_step', 'after', 'edges', 'howto', 'the steps of an everyday procedure (making tea, washing hands, planting a seed), each joined to the steps it comes after; a decision is a question with the answers yes and no'],
+  ['flowchart', 'k.procedures.howto_step', 'n', 'order', 'howto', 'the steps of an everyday procedure in their order'],
   ['mind map', 'k.parts.usual', 'has', 'edges', 'name', 'a thing in the middle, its parts on branches'],
   ['mind map', 'k.parts.whole', 'has', 'edges', 'name', 'a thing in the middle, its own parts (as WordNet lists them) on branches'],
   ['mind map', 'k.attributes.aspect', 'name', 'values', null, 'the aspects of a thing (what it is, looks like, does, where it lives) as branches'],
@@ -106,6 +111,7 @@ export const FILLS = [
   ['network', 'k.kinds.relation', 'object', 'edges', null, 'the typed relations of the catalog: a key of a kind of thing joined to the kind of its values'],
   ['pipeline', 'k.genres.part', 'n', 'order', 'genre', 'the parts of a genre in order'],
   ['pipeline', 'k.procedures.step', 'n', 'order', 'method', 'the steps of a method, one after the other'],
+  ['pipeline', 'k.procedures.howto_step', 'n', 'order', 'howto', 'the steps of an everyday procedure, one after the other'],
   ['comparison table', 'k.attributes.number', 'name', 'values', null, 'things in rows, their numbers (legs, size, weight, speed) in columns'],
 ];
 
@@ -116,7 +122,7 @@ export function shardText() {
     ['name', name], ['form', form], ['about', text(about)], ...structures.map((s) => ['structure', s]), ...layouts.map((l) => ['layout', l]), ...arranged.map((a) => ['arranged', a]),
     ['edges', edges], ...roles.map((r) => ['role', r]), ['groups', groups], ...usual.map((u) => ['usual_for', text(u)]), ...sources.map((s) => ['source', s])], SRC));
   for (const [kind, role, shape, about, sources] of SHAPES) lines.push(wire(`k.diagrams.shape.${seg(kind)}.${role}`, 'k.diagrams.shape', [['kind', kind], ['role', role], ['shape', shape], ['about', text(about)], ...sources.map((s) => ['source', s])], SRC));
-  for (const [kind, type, key, gives, topic, about] of FILLS) lines.push(wire(`k.diagrams.fill.${seg(kind)}.${seg(type)}.${key}`, 'k.diagrams.fill', [['kind', kind], ['type', type], ['key', key], ['gives', gives], ['topic', topic], ['about', text(about)]], SRC));
+  for (const [kind, type, key, gives, topic, about, by] of FILLS) lines.push(wire(`k.diagrams.fill.${seg(kind)}.${seg(type)}.${key}`, 'k.diagrams.fill', [['kind', kind], ['type', type], ['key', key], ['gives', gives], ['topic', topic], ['about', text(about)], ['by', by]], SRC));
   return `${header({ id: 'k.diagrams/shards/diagrams', about: `${KINDS.length} kinds of diagram (structure, layout, arrangement, edges, roles, uses), ${SHAPES.length} shape conventions, ${FILLS.length} ways the catalog's knowledge fills them, and the ${SOURCES.length} works they rest on.`,
     sources: ['hand-core 1 (hand-written in this repository: tools/diagrams-core.mjs; the works cited are the k.diagrams.source facts)'], license: 'CC0-1.0', script: 'tools/diagrams-core.mjs' })}\n${lines.join('\n')}\n`;
 }

@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/diagrams-core.mjs
 
-@k.diagrams core.module name=k.diagrams version=1 exports=kind exports=shape exports=fill exports=source core.source="hand-core 1"
+@k.diagrams core.module name=k.diagrams version=2 exports=kind exports=shape exports=fill exports=source core.source="hand-core 1"
 
 # A published work a fact rests on: `name` a short id (author and year: venn1880), `cite` the reference, `year`.
 @k.diagrams.source core.type of=k.diagrams.source shared=true closed=true core.source="hand-core 1"
@@ -47,7 +47,9 @@
 # makes the structure: the parent, the next stage, the step after, the neighbour), each fact a node or an edge as
 # `gives` says (edges: the key names the other node; order: the key is the node's place; members: the key names a
 # set the node is in); `topic` the key that names what one diagram is about (the cycle, the method, the thing);
-# `about` in words.
+# `about` in words. `by` names the attribute of k.attributes an order fill follows when its key is a rank (the planets
+# by distance from the Sun: `key=order by=distance`; by size: `key=size_rank by=size`), so that a host reading "a
+# timeline of the planets by distance" takes the fill whose `by` is the request's criterion.
 @k.diagrams.fill core.type of=k.diagrams.fill shared=true closed=true core.source="hand-core 1"
 @k.diagrams.fill.kind core.slot of=k.diagrams.fill key=kind id=true required=true kind=atom kind=string type=k.diagrams.kind by=name core.source="hand-core 1"
 @k.diagrams.fill.type core.slot of=k.diagrams.fill key=type id=true required=true kind=atom core.source="hand-core 1"
@@ -55,6 +57,7 @@
 @k.diagrams.fill.gives core.slot of=k.diagrams.fill key=gives required=true enum=edges enum=order enum=members enum=values core.source="hand-core 1"
 @k.diagrams.fill.topic core.slot of=k.diagrams.fill key=topic kind=atom core.source="hand-core 1"
 @k.diagrams.fill.about core.slot of=k.diagrams.fill key=about required=true kind=string core.source="hand-core 1"
+@k.diagrams.fill.by core.slot of=k.diagrams.fill key=by kind=atom type=k.attributes.attribute by=name core.source="hand-core 1"
 
 # Words for the world, its kinds and its keys.
 @k.diagrams.word.kind core.word text="kind of diagram" text="kinds of diagram" text="diagram type" text="diagram kinds" means=k.diagrams.kind core.source="hand-core 1"
@@ -98,3 +101,4 @@
 @k.diagrams.word.key.fill.gives core.word text=gives means=k.diagrams.fill.gives core.source="hand-core 1"
 @k.diagrams.word.key.fill.topic core.word text=topic means=k.diagrams.fill.topic core.source="hand-core 1"
 @k.diagrams.word.key.fill.about core.word text=about means=k.diagrams.fill.about core.source="hand-core 1"
+@k.diagrams.word.key.fill.by core.word text=by means=k.diagrams.fill.by core.source="hand-core 1"

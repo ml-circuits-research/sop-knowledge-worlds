@@ -123,3 +123,41 @@ test('a tree and a mind map of the parts of a car are filled by k.parts.whole', 
     assert.ok(parts.length >= 20 && parts.includes('car door') && parts.includes('bumper'), parts.join(', '));
   }
 });
+
+// Block 07:30 item 2 (PSys2 Q17): the planets by distance and by size as timelines; everyday procedures as flowcharts.
+test('a timeline of the planets by distance (and by size): k.space.body order and size_rank, the fill saying its attribute', () => {
+  const attributes = new Set(factsOf('k.attributes', 'k.attributes.attribute', worlds).map((f) => one(f, 'name')));
+  for (const f of fills.filter((x) => x.attrs.by)) assert.ok(attributes.has(one(f, 'by')), `${f.id}: by ${one(f, 'by')}`);
+  const bodies = factsOf('k.space', 'k.space.body', worlds);
+  const line = (by) => {
+    const fill = fills.find((f) => one(f, 'kind') === 'timeline' && one(f, 'by') === by);
+    return bodies.filter((b) => one(b, one(fill, 'topic')) === 'planet' && b.attrs[one(fill, 'key')]).sort((a, b) => one(a, one(fill, 'key')) - one(b, one(fill, 'key'))).map((b) => one(b, 'name'));
+  };
+  assert.deepEqual(line('distance'), ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']);
+  assert.deepEqual(line('size'), ['Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Earth', 'Venus', 'Mars', 'Mercury']);
+});
+
+test('a flowchart of making tea, washing hands, planting a seed: everyday procedures, each cited or marked own, apart from the planner\'s methods', () => {
+  const howtos = factsOf('k.procedures', 'k.procedures.howto', worlds), steps = factsOf('k.procedures', 'k.procedures.howto_step', worlds);
+  const methods = new Set(factsOf('k.procedures', 'k.procedures.method', worlds).map((m) => one(m, 'name')));
+  assert.deepEqual(howtos.map((h) => one(h, 'name')).sort(), ['making tea', 'planting a seed', 'washing hands']);
+  for (const h of howtos) {
+    assert.ok(!methods.has(one(h, 'name')), `${one(h, 'name')} is not a method of the planner`);
+    assert.equal(Boolean(h.attrs.cite), one(h, 'basis') === 'cited', `${one(h, 'name')}: cited with a cite, own without`);
+    const own = steps.filter((s) => one(s, 'howto') === one(h, 'name'));
+    const ns = new Set(own.map((s) => one(s, 'n')));
+    assert.equal(own.filter((s) => !s.attrs.after).length, 1, `${one(h, 'name')}: one first step`);
+    for (const s of own) {
+      for (const a of all(s, 'after')) assert.ok(ns.has(a) && Number(a) < Number(one(s, 'n')), `${s.id} after ${a}`);
+      // a branch names the answer of a decision it comes after; a decision has a yes and a no
+      if (s.attrs.branch) assert.ok(all(s, 'after').some((a) => one(own.find((x) => one(x, 'n') === a), 'role') === 'decision'), s.id);
+      if (one(s, 'role') === 'decision') assert.deepEqual(own.filter((x) => all(x, 'after').includes(one(s, 'n'))).map((x) => one(x, 'branch')).sort(), ['no', 'yes'], s.id);
+    }
+  }
+  // the flowchart of making tea, by the fill: its steps in order, a diamond for the question
+  const fill = fills.find((f) => one(f, 'kind') === 'flowchart' && one(f, 'type') === 'k.procedures.howto_step' && one(f, 'key') === 'after');
+  const tea = steps.filter((s) => one(s, one(fill, 'topic')) === 'making tea').sort((a, b) => one(a, 'n') - one(b, 'n'));
+  assert.equal(one(tea[0], 'about'), 'Boil water');
+  assert.equal(shapeOf('flowchart', one(tea.find((s) => one(s, 'role') === 'decision'), 'role')), 'diamond');
+  assert.equal(one(howtos.find((h) => one(h, 'name') === 'washing hands'), 'basis'), 'cited');
+});

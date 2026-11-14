@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-procedures: the keys of the types of k.procedures read as relations: 66 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-procedures: the keys of the types of k.procedures read as relations: 76 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -45,6 +45,16 @@
 @k.kinds.relation.k.procedures.goal.rel k.kinds.relation type=k.procedures.goal key=rel subject=goal object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.goal.needed k.kinds.relation type=k.procedures.goal key=needed subject=goal object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.procedures.goal.default k.kinds.relation type=k.procedures.goal key=default subject=goal object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto.about k.kinds.relation type=k.procedures.howto key=about subject=howto object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto.basis k.kinds.relation type=k.procedures.howto key=basis subject=howto object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto.cite k.kinds.relation type=k.procedures.howto key=cite subject=howto object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.howto k.kinds.relation type=k.procedures.howto_step key=howto subject="howto step" object=thing object_type=k.procedures.howto found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.n k.kinds.relation type=k.procedures.howto_step key=n subject="howto step" object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.about k.kinds.relation type=k.procedures.howto_step key=about subject="howto step" object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.role k.kinds.relation type=k.procedures.howto_step key=role subject="howto step" object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.after k.kinds.relation type=k.procedures.howto_step key=after subject="howto step" object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.branch k.kinds.relation type=k.procedures.howto_step key=branch subject="howto step" object=value object_type=k.values.reply found=value core.source="hand-core 1"
+@k.kinds.relation.k.procedures.howto_step.detail k.kinds.relation type=k.procedures.howto_step key=detail subject="howto step" object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.procedures.match.method k.kinds.relation type=k.procedures.match key=method subject=match object=thing object_type=k.procedures.method found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.procedures.match.binding k.kinds.relation type=k.procedures.match key=binding subject=match object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.procedures.match.key k.kinds.relation type=k.procedures.match key=key subject=match object=word object_type=k.words.sense found=value core.source="hand-core 1"

@@ -12109,6 +12109,8 @@
   "k.attributes/schema.sop",
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-procedures",
+  "k.procedures/schema.sop",
   "k.words/shards/ba",
   "k.words/shards/frequency-b"
  ],
@@ -18117,12 +18119,14 @@
  ],
  "branch": [
   "k.attributes/shards/drawn-mulberry",
+  "k.attributes/shards/narration",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-nature",
   "k.diagrams/shards/diagrams",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/relations-procedures",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors-points",
@@ -18134,6 +18138,7 @@
   "k.objects/shards/noto-food-fruit-03",
   "k.objects/shards/things-2",
   "k.parts/shards/t",
+  "k.procedures/schema.sop",
   "k.scenes/shards/things-b",
   "k.words/shards/br",
   "k.words/shards/frequency-b",
@@ -20683,8 +20688,10 @@
   "k.actions/shards/verbs-change",
   "k.attributes/schema.sop",
   "k.attributes/shards/narration",
+  "k.diagrams/schema.sop",
   "k.kinds/schema.sop",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-diagrams",
   "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-procedures",
   "k.procedures/schema.sop",
@@ -27907,7 +27914,9 @@
   "k.kinds/shards/relations-diagrams",
   "k.kinds/shards/relations-genres",
   "k.kinds/shards/relations-interest",
+  "k.kinds/shards/relations-procedures",
   "k.kinds/shards/relations-story",
+  "k.procedures/schema.sop",
   "k.story/schema.sop"
  ],
  "cities": [
@@ -39249,6 +39258,9 @@
   "k.words/shards/frequency-d"
  ],
  "detail": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-procedures",
+  "k.procedures/schema.sop",
   "k.words/shards/de",
   "k.words/shards/frequency-d"
  ],
@@ -47855,6 +47867,12 @@
  ],
  "every second": [
   "k.values/shards/sets"
+ ],
+ "everyday procedure": [
+  "k.procedures/schema.sop"
+ ],
+ "everyday procedures": [
+  "k.procedures/schema.sop"
  ],
  "everything": [
   "k.values/shards/scales",
@@ -63872,6 +63890,9 @@
   "k.parts/shards/p",
   "k.parts/shards/s"
  ],
+ "hand washing": [
+  "k.procedures/shards/everyday"
+ ],
  "handan": [
   "k.geo/shards/psys2-cities-asia"
  ],
@@ -64090,6 +64111,9 @@
  "handsome": [
   "k.words/shards/frequency-h",
   "k.words/shards/ha"
+ ],
+ "handwashing": [
+  "k.procedures/shards/everyday"
  ],
  "handwear": [
   "k.kinds/shards/kind"
@@ -68316,6 +68340,24 @@
  "how to": [
   "k.procedures/schema.sop"
  ],
+ "how to do": [
+  "k.procedures/schema.sop"
+ ],
+ "how to make tea": [
+  "k.procedures/shards/everyday"
+ ],
+ "how to plant a seed": [
+  "k.procedures/shards/everyday"
+ ],
+ "how to sow seeds": [
+  "k.procedures/shards/everyday"
+ ],
+ "how to wash hands": [
+  "k.procedures/shards/everyday"
+ ],
+ "how to wash your hands": [
+  "k.procedures/shards/everyday"
+ ],
  "how's": [
   "w.lang.en/shards/morphology"
  ],
@@ -68346,6 +68388,13 @@
  ],
  "howson peak": [
   "k.geo/shards/north-america"
+ ],
+ "howto": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-procedures"
+ ],
+ "howto_step": [
+  "k.units/shards/measures"
  ],
  "hq": [
   "k.words/shards/frequency-h",
@@ -70808,6 +70857,7 @@
   "k.words/shards/in"
  ],
  "instructions": [
+  "k.procedures/schema.sop",
   "k.words/shards/frequency-i",
   "k.words/shards/in"
  ],
@@ -74715,6 +74765,15 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-procedures"
  ],
+ "k.procedures.howto": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-procedures"
+ ],
+ "k.procedures.howto_step": [
+  "k.attributes/shards/narration",
+  "k.diagrams/shards/diagrams",
+  "k.kinds/shards/relations-procedures"
+ ],
  "k.procedures.match": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-procedures"
@@ -74787,6 +74846,7 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
+  "k.diagrams/shards/diagrams",
   "k.kinds/shards/relations-space"
  ],
  "k.space.kind": [
@@ -85217,6 +85277,12 @@
   "k.actions/shards/actions-make-change",
   "k.words/shards/frequency-m",
   "k.words/shards/ma"
+ ],
+ "making a cup of tea": [
+  "k.procedures/shards/everyday"
+ ],
+ "making tea": [
+  "k.procedures/shards/everyday"
  ],
  "makkah": [
   "k.geo/shards/asia"
@@ -98592,6 +98658,7 @@
  "order": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/narration",
+  "k.diagrams/shards/diagrams",
   "k.kinds/shards/relations-space",
   "k.kinds/shards/structures",
   "k.space/schema.sop",
@@ -105456,6 +105523,12 @@
   "k.actions/shards/actions-make-change",
   "k.words/shards/frequency-p",
   "k.words/shards/pl"
+ ],
+ "planting a seed": [
+  "k.procedures/shards/everyday"
+ ],
+ "planting seeds": [
+  "k.procedures/shards/everyday"
  ],
  "plants": [
   "k.actions/shards/actions-make-change"
@@ -125274,6 +125347,7 @@
  "size_rank": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/narration",
+  "k.diagrams/shards/diagrams",
   "k.kinds/shards/relations-space",
   "k.units/shards/measures"
  ],
@@ -127822,6 +127896,12 @@
  ],
  "soweto": [
   "k.geo/shards/psys2-cities-africa"
+ ],
+ "sowing a seed": [
+  "k.procedures/shards/everyday"
+ ],
+ "sowing seeds": [
+  "k.procedures/shards/everyday"
  ],
  "sown": [
   "k.words/shards/so"
@@ -135374,6 +135454,9 @@
  ],
  "tea leaves": [
   "k.kinds/shards/origin"
+ ],
+ "tea making": [
+  "k.procedures/shards/everyday"
  ],
  "tea room": [
   "k.scenes/shards/scenes-indoors"
@@ -147891,6 +147974,9 @@
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
  ],
+ "washing hands": [
+  "k.procedures/shards/everyday"
+ ],
  "washing machine": [
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-w",
@@ -147923,6 +148009,9 @@
   "k.kinds/shards/group-mulberry",
   "k.objects/shards/mulberry-building-contents-05",
   "k.scenes/shards/things-w"
+ ],
+ "washing your hands": [
+  "k.procedures/shards/everyday"
  ],
  "washington": [
   "k.words/shards/frequency-w",

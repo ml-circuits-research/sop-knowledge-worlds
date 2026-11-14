@@ -1,5 +1,5 @@
 {
- "version": "45f04971689e",
+ "version": "de702bbe5322",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4497,8 +4497,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1065,
-     "bytes": 204955,
+     "wires": 1077,
+     "bytes": 207544,
      "keys": [
       "a",
       "about",
@@ -4541,6 +4541,7 @@
       "blocks",
       "body_part",
       "botanically",
+      "branch",
       "brow_above",
       "by",
       "by_word",
@@ -4592,6 +4593,7 @@
       "degree",
       "depth",
       "derived",
+      "detail",
       "diameter_about",
       "diet",
       "differs",
@@ -4687,6 +4689,7 @@
       "holds",
       "hour12",
       "how",
+      "howto",
       "ignore_case",
       "in",
       "independent",
@@ -4809,6 +4812,8 @@
       "k.procedures.binding",
       "k.procedures.condition",
       "k.procedures.goal",
+      "k.procedures.howto",
+      "k.procedures.howto_step",
       "k.procedures.match",
       "k.procedures.method",
       "k.procedures.step",
@@ -12375,7 +12380,7 @@
   },
   {
    "id": "k.diagrams",
-   "version": "1",
+   "version": "2",
    "schema": "k.diagrams/schema.sop",
    "exports": [
     "k.diagrams.fill",
@@ -12388,8 +12393,8 @@
     {
      "id": "k.diagrams/shards/diagrams",
      "path": "k.diagrams/shards/diagrams.sop",
-     "wires": 63,
-     "bytes": 15997,
+     "wires": 68,
+     "bytes": 17288,
      "keys": [
       "after",
       "b",
@@ -12424,7 +12429,9 @@
       "k.layouts.joins",
       "k.parts.usual",
       "k.parts.whole",
+      "k.procedures.howto_step",
       "k.procedures.step",
+      "k.space.body",
       "k.story.element",
       "k.time.ordered",
       "mccallum1855",
@@ -12437,6 +12444,7 @@
       "node",
       "novak1984",
       "object",
+      "order",
       "org chart",
       "pipeline",
       "post",
@@ -12445,6 +12453,7 @@
       "reingold1981",
       "root",
       "row",
+      "size_rank",
       "stage",
       "start",
       "subprocess",
@@ -29002,11 +29011,12 @@
     {
      "id": "k.kinds/shards/relations-diagrams",
      "path": "k.kinds/shards/relations-diagrams.sop",
-     "wires": 23,
-     "bytes": 4454,
+     "wires": 24,
+     "bytes": 4653,
      "keys": [
       "about",
       "arranged",
+      "by",
       "cite",
       "edges",
       "form",
@@ -29635,18 +29645,22 @@
     {
      "id": "k.kinds/shards/relations-procedures",
      "path": "k.kinds/shards/relations-procedures.sop",
-     "wires": 66,
-     "bytes": 12167,
+     "wires": 76,
+     "bytes": 13950,
      "keys": [
       "about",
       "act",
       "after",
       "attribute",
+      "basis",
       "binding",
+      "branch",
       "by",
       "choose",
       "choose_min",
+      "cite",
       "default",
+      "detail",
       "differs",
       "each",
       "else_key",
@@ -29658,10 +29672,13 @@
       "from",
       "goal",
       "history",
+      "howto",
       "k.procedures.arg",
       "k.procedures.binding",
       "k.procedures.condition",
       "k.procedures.goal",
+      "k.procedures.howto",
+      "k.procedures.howto_step",
       "k.procedures.match",
       "k.procedures.method",
       "k.procedures.step",
@@ -52027,13 +52044,15 @@
   },
   {
    "id": "k.procedures",
-   "version": "1",
+   "version": "2",
    "schema": "k.procedures/schema.sop",
    "exports": [
     "k.procedures.arg",
     "k.procedures.binding",
     "k.procedures.condition",
     "k.procedures.goal",
+    "k.procedures.howto",
+    "k.procedures.howto_step",
     "k.procedures.match",
     "k.procedures.method",
     "k.procedures.step"
@@ -52126,6 +52145,22 @@
       "write a scientific article about a topic",
       "write a story",
       "write an essay about a topic"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.procedures/shards/everyday",
+     "path": "k.procedures/shards/everyday.sop",
+     "wires": 28,
+     "bytes": 5960,
+     "keys": [
+      "making tea",
+      "planting a seed",
+      "washing hands"
      ],
      "sources": [
       "hand-core-1"
@@ -56875,8 +56910,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 250,
-     "bytes": 35397,
+     "wires": 252,
+     "bytes": 35683,
      "keys": [
       "after",
       "age_years_about",
@@ -56959,6 +56994,7 @@
       "holders",
       "hour",
       "hour12",
+      "howto_step",
       "inflect",
       "inherited",
       "interval",

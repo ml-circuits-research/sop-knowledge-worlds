@@ -5370,3 +5370,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   stays the avatar. ro-en-meaning: hand 69.3/54.3/39.9 -> 70.6/55.3/40.8 %, machine 41.3/28.3/25.3 -> 43.1/28.7/25.6 %.
 - Not fixed: "fa si o fetita" reads ro.change.value with the thing "si" (a bench "act": it maps the gloss's "make" to
   change); the frame cannot refuse a thing that is only a focus word.
+
+
+## 2026-11-15 — first worker: ordered sets as timelines, everyday procedures as flowcharts (block 07:30 item 2; PSys2 Q17 (2))
+
+- **Planets by distance and by size:** `k.diagrams.fill` timeline of `k.space.body` by `order` (topic `kind`: the
+  planets, Mercury to Neptune) and by `size_rank` (Jupiter to Mercury). New optional key `k.diagrams.fill.by` (k.diagrams
+  version 2), a declared join to `k.attributes.attribute`: the attribute an order by a rank follows (`distance`,
+  `size`), so a host reading "a timeline of the planets by distance" (the third worker's criterion role) takes the
+  fill whose `by` is the criterion.
+- **Everyday procedures** (k.procedures version 2): `k.procedures.howto` (`name`, `about`, `basis` cited or own,
+  `cite`) and `k.procedures.howto_step` (`howto`, `n`, `about`, `role` process or decision, `after`, `branch` yes or
+  no, `detail`), apart from the planner's methods (the planner never reads them). Shard `everyday` (CC0, 28 wires,
+  5,960 bytes, tools/procedures-core.mjs): **making tea** (own, 8 steps, decision "Milk or sugar?"), **washing hands**
+  (cited: CDC, "When and How to Wash Your Hands", the five steps, each `detail` the CDC's sentence; the CDC page itself
+  was not reachable from here, its text checked as quoted by an Air Force news article of 2022), **planting a seed**
+  (own, 9 steps, decision "Is the soil dry?"). Words: gerund, noun and "how to" forms only ("tea making", "how to wash
+  your hands"); not "make a cup of tea", which can ask for a drawing.
+- Fills: flowchart of `k.procedures.howto_step` by `after` (edges) and `n` (order), pipeline by `n`. k.diagrams: 25
+  fills, 68 wires, 17,288 bytes. measures-core: howto_step `n` and `after` are ordinals.
+- Tests: tests/k.diagrams.test.mjs (9, +2): every `by` is an attribute; the planets in order by distance and by size
+  through the fills; three procedures, none a method name, cited iff `cite`, one first step, `after` points back, a
+  branch follows a decision and each decision has a yes and a no; the tea flowchart starts with "Boil water" and its
+  decision is a diamond (k.diagrams.shape).

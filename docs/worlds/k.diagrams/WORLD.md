@@ -11,22 +11,22 @@ which kind to choose for a topic, how to lay it out, how to draw each node, and 
 | --- | --- | --- |
 | `k.diagrams.kind` | `name` | `form` (its value of `w.diagram.diagram.form`), `about`, `structure` (k.kinds structures, many), `layout` (values of `w.diagram.diagram.layout`), `arranged` (k.layouts layouts), `edges` (directed, undirected, none), `role` (the roles of its nodes: values of `w.diagram.node.role`), `groups`, `usual_for`, `source` |
 | `k.diagrams.shape` | `kind`, `role` | `shape` (a value of `w.diagram.node.shape`), `about`, `source` |
-| `k.diagrams.fill` | `kind`, `type`, `key` | `gives` (edges, order, members, values), `topic` (the key that names what one diagram is about), `about` |
+| `k.diagrams.fill` | `kind`, `type`, `key` | `gives` (edges, order, members, values), `topic` (the key that names what one diagram is about), `about`, `by` (the k.attributes attribute an order by a rank follows: distance, size) |
 | `k.diagrams.source` | `name` | `cite`, `year` |
 
 ## The kinds (10)
 
 | kind | structure | layout | arranged | edges | filled by |
 | --- | --- | --- | --- | --- | --- |
-| flowchart | graph, sequence | top_down, left_right | flow, column | directed | k.procedures.step after, n |
+| flowchart | graph, sequence | top_down, left_right | flow, column | directed | k.procedures.step after, n; k.procedures.howto_step after, n (making tea, washing hands, planting a seed) |
 | tree | whole with parts, graph | top_down | tree | undirected | k.kinds.parent is_a, k.parts.usual has, k.parts.whole has, k.geo.city country |
 | cycle | cycle | circular | ring, flow | directed | k.time.ordered next, n (seasons, months, life cycles, the water cycle) |
-| timeline | sequence | left_right, top_down | row, column | none | k.time.ordered n, k.story.element n |
+| timeline | sequence | left_right, top_down | row, column | none | k.time.ordered n, k.story.element n, k.space.body order (the planets by distance) and size_rank (by size) |
 | mind map | whole with parts | radial | radial | undirected | k.parts.usual has, k.parts.whole has, k.attributes.aspect |
 | Venn diagram | whole with parts | overlapping | | none | k.kinds.parent is_a (members of kinds) |
 | org chart | whole with parts, graph | top_down | tree | undirected | nothing in the catalog yet (who reports to whom) |
 | network | graph | free | scatter | undirected | k.geo.country neighbour, k.layouts.joins, k.kinds.relation |
-| pipeline | sequence | left_right | flow, row | directed | k.genres.part n, k.procedures.step n |
+| pipeline | sequence | left_right | flow, row | directed | k.genres.part n, k.procedures.step n, k.procedures.howto_step n |
 | comparison table | values by category | grid | grid | none | k.attributes.number |
 
 Shapes (23 conventions): a flowchart's start and end are ovals, a process a rectangle, a decision a diamond, data a
