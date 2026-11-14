@@ -656,3 +656,13 @@ Wikidata typical numbers not yet there. Share-alike data stays in its own shards
 ## Reviewer 2026-11-14 19:20 — Q49 answered (a); k.story accepted; Wikidata numbers landed
 
 **Q49:** (a): a join stays open until a target with *that value* arrives; forwarded to the library as a correction of 0.60 (it was meant so in Q48). Keep the README note and the second check meanwhile. **k.story** (d98a837): reviewer ran its tests (6/6), accepted; **k.genres** (366975e) 7/7, accepted. **[DATA]** `wikidata-typical-numbers` (CC0) is now in psys2 `data/external/` for the fourth worker's typical ranges.
+
+## Reviewer 2026-11-14 19:35 — where the fetched data goes: no new big world, no dozens of small ones (owner asked, 13:18)
+
+Rule: **one home per fact by topic; imported data becomes shards of the world that owns the topic**, with share-alike data in its own shards (own `core.source`, licence file), loaded lazily by the word index like every shard. Data that is an example set, not knowledge, stays a source/evaluation set and only its distilled patterns enter a world.
+- `wikidata-typical-numbers` (CC0, 416 KB, 10,878 rows) → typical ranges: per-kind values as shards of k.animals / k.geo (countries, cities) / k.objects or k.space (buildings, structures) / a planets home, and the derived ranges in k.attributes (fourth worker). Not a world "k.wikidata".
+- `unimorph-ron` (CC BY-SA, 84,679 forms) → the w.lang.ro dictionary TSV (lemma → class) in its own licence folder; forms are not stored, only lemma + class (first worker).
+- `wordfreq-en` (CC BY-SA) → a frequency-band shard of k.words (or w.lang.en) for register, share-alike shard.
+- `conceptnet-en` (CC BY-SA, 136,623 assertions) → candidate facts for k.commonsense / k.procedures, imported only after review, filtered to kinds the catalog already has, share-alike shards; expect a few thousand facts, not all.
+- `arxiv-metadata`, `tinystories`, BillSum → **evaluation and example sets** (genre moves, story structure checks, summary measurement); not imported as knowledge.
+Report per import: rows read, facts written, bytes of the shards, what a typical session loads.
