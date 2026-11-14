@@ -476,3 +476,18 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   one misspelling. The failures are not lexical; reaching a sense is not reaching the meant one (Ana, Tom, lei).
 - **Resolve a rebase on a log by hand, then grep for markers.** Taking "ours" for generated files and rebuilding them is
   safe; `git add -A` after a conflict on an appended log published six marker lines once.
+
+
+## Test speed, narration, frames, Romanian frames (first worker, blocks 23:45, 00:05, 22:30, 18:20)
+
+- **Measure before cutting** (test speed): the full suite one file at a time took 1,039 s on the shared machine; four
+  causes made most of it, none of them "too many tests": loading k.objects (44 s) in eight files that only read the
+  names of its drawings; validating every world twice per push (the catalog test and the validate test, and the
+  catalog test built it twice); a choice solver recomputing the same candidate sets for every candidate (k.compose
+  144 s); asking the questions of every world when one changed. Reading only the lines of the types a test needs,
+  validating each world once per set of inputs (a cache keyed by the engine, the schemas and the shards), memoising
+  per state of the choices and scoping the questions took it to about 400 s, and a per-push run to a few minutes,
+  with every check kept.
+- **Which tests a change touches is a graph, not a table**: test files import modules, modules import modules, shards
+  name the tool that writes them, schemas name the modules they import. Following those edges picks the tests of a
+  change without a list to keep up to date.

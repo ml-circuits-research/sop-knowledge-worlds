@@ -42,6 +42,25 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 11. **One commit per task**, with the numbers (wires, shards, bytes, load time, warnings) in the commit message and in
     `worker-log.md`. Never edit `questions.md` answers; the reviewer answers in `worker-tasks.md`.
 
+## Tests: per push and per round (owner, 16:35: do not lose the time in tests)
+
+Several workers share one machine (8 GB, 2 CPUs): run test files one at a time, never the whole suite in parallel.
+
+- **Per push:** `npm run test:changed`: the build, then only the test files the changed paths touch (against
+  origin/main: committed, staged, unstaged and new files) and the catalog, validate and repository tests.
+  `node tools/test-run.mjs --plan` prints the files it would run and why, without running them. Never push red.
+- **Once per round** (the last push of a worker's round): `npm run test:all`, every file one at a time.
+- `npm run test:slow`: the 10 slowest files of the last runs, with seconds and peak memory (from
+  `.test-timings.json`, git-ignored, written by every run of the runner). A file over 30 s is split or shrunk.
+- The runner (`tools/test-run.mjs`) starts a file when its last peak memory and a margin are free, and runs a file
+  killed by SIGKILL (the memory killer) again alone. `test:changed` asks only the questions of the touched worlds.
+- `tools/validate.mjs` (and so the build and the catalog test) does not load again a world whose inputs are unchanged
+  since it passed (same sopworld build and validator, same schemas, same shards: `.validate-cache.json`,
+  git-ignored); `SKW_NO_CACHE=1` validates everything, as a fresh clone does.
+- A test that only reads facts of a world uses `factsOf(world, types)` (tools/lib/worlds.mjs), not `fullWorld`:
+  loading k.objects takes 44 s. `tools/sync.sh` rebases on origin/main and regenerates the
+  generated files after a conflict (logs keep both sides; `tests/repo.test.mjs` refuses conflict markers).
+
 ## sopworld version
 
 Validate with the sopworld build pinned in `tools/sopworld/VERSION` (0.90.0 at commit 7f3c31a as of 2026-11-15; the VERSION file is authoritative) of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`

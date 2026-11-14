@@ -6,6 +6,8 @@ import { tmpdir } from 'node:os';
 import { buildCatalog, serialize, serializeCompact } from '../tools/build-catalog.mjs';
 import { scanWorlds, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 
+// buildCatalog validates every world first (tools/validate.mjs: every schema and shard loads with zero errors, alone
+// and with the other shards of its world) and returns its errors: the first test is the validation of the catalog.
 const built = buildCatalog();
 
 test('the catalog builds without errors', () => {
@@ -17,7 +19,8 @@ test('index.json and vocab.json on disk are what a build gives (a rerun gives no
   assert.equal(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'), serialize(built.vocab));
   assert.equal(readFileSync(join(WORLDS_DIR, 'LICENSES.md'), 'utf8'), built.licenses);
   assert.equal(readFileSync(join(WORLDS_DIR, 'vocab-kinds.json'), 'utf8'), serializeCompact(built.vocabKinds));
-  assert.equal(serialize(buildCatalog().index), serialize(built.index));
+  // (the files on disk are an earlier build's output: equal to this build, a rerun gives no diff; a second build here
+  // took 45 s and checked nothing more)
 });
 
 test('every shard listed exists and every shard file is listed', () => {

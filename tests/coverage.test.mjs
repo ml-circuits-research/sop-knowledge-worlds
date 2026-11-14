@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
+import { REPO, WORLDS_DIR, factsOf } from '../tools/lib/worlds.mjs';
 import { coverage, missingPage, wordsShard, standInsShard, WORDS_SHARD, STAND_INS_SHARD, HAND_WORDS_SHARD, HAND_STAND_INS_SHARD, handShards, handRows, objectWords, plurals, run, objectNames } from '../tools/coverage.mjs';
 
 const files = {
@@ -120,8 +120,7 @@ test('words-wordnet.sop on disk is what the tool gives; every word names an obje
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${WORDS_SHARD}.sop`), 'utf8'), wordsShard(result));
   const names = new Set(objectNames());
   const lower = new Set([...names].map((n) => n.toLowerCase()));
-  const world = fullWorld('k.objects');
-  const words = world.ofType('core.word').filter((w) => w.attrs['core.source']?.includes('"wordnet 3.1"'));
+  const words = factsOf('k.objects', 'core.word').filter((w) => w.attrs['core.source']?.includes('"wordnet 3.1"'));
   assert.equal(words.length, result.stats.bySynonym);
   const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
   for (const w of words) {
@@ -131,7 +130,7 @@ test('words-wordnet.sop on disk is what the tool gives; every word names an obje
   assert.equal(words.find((w) => w.attrs.text[0] === 'couch')?.attrs.means[0], 'sofa');
   // The hypernyms: stand-in facts, never a word (Q21).
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.objects', 'shards', `${STAND_INS_SHARD}.sop`), 'utf8'), standInsShard(result));
-  const allStandIns = world.ofType('k.objects.stand_in');
+  const allStandIns = factsOf('k.objects', 'k.objects.stand_in');
   const standIns = allStandIns.filter((w) => w.attrs['core.source']?.includes('"wordnet 3.1"'));
   assert.equal(standIns.length, result.stats.byHypernym);
   for (const w of allStandIns) {
@@ -170,8 +169,8 @@ test('the hand-link shards on disk are what the tool gives; no word is linked tw
   const result = run();
   const byRule = new Set(result.list.filter((e) => e.link && ['synonym', 'hypernym'].includes(e.link.kind)).map((e) => e.word));
   for (const [word] of handRows(text, objectNames())) assert.ok(!byRule.has(word), `${word} has a WordNet link already`);
-  const standIn = fullWorld('k.objects').query({ type: 'k.objects.stand_in', where: { name: 'villa' }, seek: 'drawing' });
-  assert.equal(standIn.value, 'house');
+  const standIn = factsOf('k.objects', 'k.objects.stand_in').filter((w) => w.attrs.name[0] === 'villa');
+  assert.deepEqual(standIn.map((w) => w.attrs.drawing[0]), ['house']);
 });
 
 test('sense-check.tsv has one verdict for every common thing with an object of its name, and no other row', { skip: !raw && 'raw files not downloaded' }, () => {

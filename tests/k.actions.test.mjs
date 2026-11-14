@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { actionShards, formsOf } from '../tools/actions-core.mjs';
 import { ACTIONS } from '../tools/actions-data.mjs';
 
@@ -45,8 +45,7 @@ test('every action says who does it, what comes of it and an example; opposites 
 
 test('joins: where is a k.scenes scene; most tools are a drawing or a part of the body; the verbs of "can" in the cores are actions', () => {
   const scenes = new Set(fullWorld('k.scenes', worlds).ofType('k.scenes.scene').map((w) => one(w, 'name')));
-  const objectsWorld = fullWorld('k.objects', worlds);
-  const drawn = new Set([...objectsWorld.ofType('k.objects.object'), ...objectsWorld.ofType('k.objects.stand_in')].map((w) => one(w, 'name')));
+  const drawn = new Set(factsOf('k.objects', ['k.objects.object', 'k.objects.stand_in'], worlds).map((w) => one(w, 'name')));
   const body = new Set(fullWorld('k.body', worlds).ofType('k.body.part').map((w) => one(w, 'name')));
   let tools = 0, known = 0;
   for (const w of actions) {

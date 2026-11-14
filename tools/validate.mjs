@@ -2,17 +2,33 @@
 // world with that schema, and all shards of the world together. Fails on any error; prints warnings,
 // wires, bytes and load time per shard.
 //   node tools/validate.mjs [worlds-dir]
+// A world whose inputs are unchanged since it last passed (the same sopworld build, the same schemas of every world,
+// the same shards of the world) is not loaded again: its results come from .validate-cache.json (git-ignored, next
+// to the repository; only for docs/worlds; SKW_NO_CACHE=1 turns it off). A fresh clone validates everything.
 import { performance } from 'node:perf_hooks';
+import { createHash } from 'node:crypto';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
-import { scanWorlds, schemaWorld, readHeader, isMatrix, fmtViolation, WORLDS_DIR, MAX_WIRES, MAX_BYTES } from './lib/worlds.mjs';
+import { scanWorlds, schemaWorld, readHeader, isMatrix, fmtViolation, WORLDS_DIR, MAX_WIRES, MAX_BYTES, REPO } from './lib/worlds.mjs';
+
+const CACHE = join(REPO, '.validate-cache.json');
+const sha = (...xs) => { const h = createHash('sha256'); for (const x of xs) h.update(x).update('\0'); return h.digest('hex'); };
 
 const warningText = (w) => `${w.kind}${w.id ? ` ${w.id}` : ''}: ${w.why ?? w.key ?? ''}`.trim();
 
-export function validateWorlds(root = WORLDS_DIR) {
+export function validateWorlds(root = WORLDS_DIR, { cache = root === WORLDS_DIR && !process.env.SKW_NO_CACHE, cacheFile = CACHE } = {}) {
   const worlds = scanWorlds(root);
   const errors = [];
   const results = [];
+  const old = cache && existsSync(cacheFile) ? JSON.parse(readFileSync(cacheFile, 'utf8')) : {};
+  const fresh = {};
+  const build = sha(...['tools/sopworld/sopworld.mjs', 'tools/validate.mjs', 'tools/lib/worlds.mjs'].map((f) => readFileSync(join(REPO, f))));
+  const schemas = sha(...worlds.map((w) => `${w.id}\n${w.schemaText}`));
   for (const world of worlds) {
+    const key = sha(build, schemas, world.id, ...world.shards.map((x) => `${x.id}\n${x.text}`));
+    if (old[world.id]?.key === key) { results.push(...old[world.id].results); fresh[world.id] = old[world.id]; continue; }
+    const errorsBefore = errors.length, resultsBefore = results.length;
     const t0 = performance.now();
     let base;
     try {
@@ -63,7 +79,9 @@ export function validateWorlds(root = WORLDS_DIR) {
       const together = all.tell(shard.text);
       if (r.ok && !together.ok) for (const v of together.violations) errors.push(`${shard.path} (with the other shards of ${world.id}): ${fmtViolation(v)}`);
     }
+    if (errors.length === errorsBefore) fresh[world.id] = { key, results: results.slice(resultsBefore) };
   }
+  if (cache) writeFileSync(cacheFile, JSON.stringify(fresh));
   return { ok: errors.length === 0, errors, results, worlds };
 }
 

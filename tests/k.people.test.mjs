@@ -3,13 +3,13 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const people = fullWorld('k.people', worlds);
 const kinds = people.ofType('k.people.kind');
-const objects = new Set(fullWorld('k.objects', worlds).ofType('k.objects.object').map((w) => tok(w.attrs.name[0])));
+const objects = new Set(factsOf('k.objects', 'k.objects.object', worlds).map((w) => tok(w.attrs.name[0])));
 const presets = new Set(fullWorld('k.faces', worlds).ofType('k.faces.preset').filter((w) => tok(w.attrs.style[0]) === 'plain').map((w) => tok(w.attrs.name[0])));
 
 test('the eight kinds of person are variants of the one person drawing, each with a k.faces preset (and person and relative above them)', () => {

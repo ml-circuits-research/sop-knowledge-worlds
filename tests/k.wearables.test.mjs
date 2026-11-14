@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { wearableShards, PLACES, WEARABLES } from '../tools/wearables-core.mjs';
 
 const worlds = scanWorlds();
@@ -20,7 +20,7 @@ test('the shards are what tools/wearables-core.mjs gives', () => {
 });
 
 test('places: the box lies on the person drawing near the part it names; face slots and body parts exist', () => {
-  const objects = fullWorld('k.objects', worlds);
+  const objects = { ofType: (t) => factsOf('k.objects', t, worlds) };
   const parts = new Map(objects.ofType('k.objects.part').filter((p) => one(p, 'of') === 'person').map((p) => [one(p, 'name'), ['x', 'y', 'w', 'h'].map((k) => Number(one(p, k)))]));
   assert.ok(parts.has('head') && parts.has('left_arm') && parts.has('left_leg'));
   const near = { head: 'head', hair: 'head', eyes: 'head', ears: 'head', face: 'head', arms: 'left_arm', wrist: 'left_arm', hands: 'left_arm', finger: 'left_arm', legs: 'left_leg', feet: 'left_leg' };
@@ -43,7 +43,7 @@ test('places: the box lies on the person drawing near the part it names; face sl
 
 test('wearables: worn on a place; drawings are k.objects objects; face variants exist in k.faces; what roles wear is here', () => {
   const names = new Set(places.map((p) => one(p, 'name')));
-  const objects = new Set(fullWorld('k.objects', worlds).ofType('k.objects.object').map((o) => one(o, 'name')));
+  const objects = new Set(factsOf('k.objects', 'k.objects.object', worlds).map((o) => one(o, 'name')));
   const variants = new Set(faces.ofType('k.faces.variant').filter((v) => one(v, 'style') === 'plain').map((v) => `${one(v, 'slot')} ${one(v, 'name')}`));
   for (const w of wearables) {
     assert.ok(names.has(one(w, 'worn_on')), w.id);

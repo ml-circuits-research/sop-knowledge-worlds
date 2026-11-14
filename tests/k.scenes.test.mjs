@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { REPO, WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { readPlaceSize, thingShards, allThings, letterOf } from '../tools/scenes-core.mjs';
 import { animalThings } from '../tools/animals-core.mjs';
 import { handSources } from '../tools/lib/worlds.mjs';
@@ -11,9 +11,8 @@ import { handSources } from '../tools/lib/worlds.mjs';
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const scenes = fullWorld('k.scenes', worlds);
-const objectsWorld = fullWorld('k.objects', worlds);
-const objects = new Set(objectsWorld.ofType('k.objects.object').map((w) => tok(w.attrs.name[0])));
-const standIns = new Set(objectsWorld.ofType('k.objects.stand_in').map((w) => tok(w.attrs.name[0])));
+const objects = new Set(factsOf('k.objects', 'k.objects.object', worlds).map((w) => tok(w.attrs.name[0])));
+const standIns = new Set(factsOf('k.objects', 'k.objects.stand_in', worlds).map((w) => tok(w.attrs.name[0])));
 const things = scenes.ofType('k.scenes.thing');
 
 test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv and, for the animals it lacks, from animals.tsv', () => {

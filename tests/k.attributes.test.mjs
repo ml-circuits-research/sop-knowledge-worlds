@@ -3,7 +3,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, WORLDS_DIR, scanWorlds, fullWorld, schemaWorld } from '../tools/lib/worlds.mjs';
+import { REPO, WORLDS_DIR, scanWorlds, fullWorld, schemaWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { attributeShards, readThings, ATTRIBUTES } from '../tools/attributes-core.mjs';
 
 const worlds = scanWorlds();
@@ -100,7 +100,7 @@ test('Q29: `any` never stands next to a colour; the drawn colours are what tools
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(WORLDS_DIR, 'k.attributes', 'shards', name), 'utf8'), text, name);
   const drawn = world.ofType('k.attributes.drawn');
   assert.equal(drawn.length, rows.length);
-  const objects = new Set(fullWorld('k.objects', worlds).ofType('k.objects.object').map((o) => one(o, 'name')));
+  const objects = new Set(factsOf('k.objects', 'k.objects.object', worlds).map((o) => one(o, 'name')));
   assert.ok(objects.size - drawn.length <= 5, 'only drawings made of lines have no drawn colour');
   const shades = new Set(fullWorld('k.values', worlds).ofType('k.values.colour').map((c) => one(c, 'name')));
   for (const d of drawn) {

@@ -7,7 +7,10 @@ import { join } from 'node:path';
 import { REPO, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 
 const worlds = scanWorlds();
-const files = readdirSync(join(REPO, 'tests')).filter((f) => f.endsWith('.questions.jsonl')).sort();
+// SKW_WORLDS=<world>,<world> asks only the questions of these worlds (tools/test-run.mjs --changed sets it when only
+// they changed); unset, every world's.
+const only = process.env.SKW_WORLDS ? new Set(process.env.SKW_WORLDS.split(',')) : null;
+const files = readdirSync(join(REPO, 'tests')).filter((f) => f.endsWith('.questions.jsonl') && (!only || only.has(f.replace(/\.questions\.jsonl$/, '')))).sort();
 
 for (const file of files) {
   const id = file.replace(/\.questions\.jsonl$/, '');

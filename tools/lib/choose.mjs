@@ -41,7 +41,12 @@ export function statementsAbout(store, types, thing) {
 export function solveChoices(bind, ctx) {
   const { store, isA, rnd = null } = ctx;
   const chooseNames = [...bind.values()].filter((b) => b.choose !== undefined).map((b) => b.name);
-  const asg = new Map();
+  // The choices made so far; every change bumps `ver`, so the values of a binding are computed once per state of the
+  // choices (a test of one candidate reads the same bindings again for every match and every other candidate).
+  const chosen = new Map();
+  let ver = 0;
+  const memo = new Map();
+  const asg = { get: (n) => chosen.get(n), has: (n) => chosen.has(n), set: (n, v) => { ver += 1; chosen.set(n, v); }, delete: (n) => { ver += 1; chosen.delete(n); } };
   // The name of a value: a fact's name (a k.scenes.has fact: its scene), a statement's key, a history entry's act, a
   // live thing's id.
   const nameOf = (x) => (x && typeof x === 'object' ? (x.attrs ? tok(one(x, 'name') ?? one(x, 'scene') ?? one(x, 'thing')) : x.type && x.key ? x.key : x.act ?? x.id) : x);
@@ -54,6 +59,13 @@ export function solveChoices(bind, ctx) {
   };
   // The values of a binding under the current choices (undefined while a choose binding it reads is not chosen).
   function values(name, own = false) {
+    const k = `${own ? 1 : 0} ${name}`, m = memo.get(k);
+    if (m && m.ver === ver) return m.val;
+    const val = valuesNow(name, own);
+    memo.set(k, { ver, val });
+    return val;
+  }
+  function valuesNow(name, own) {
     const b = bind.get(name);
     if (!b) throw new Error(`no binding ${name}`);
     if (b.choose !== undefined && !own) return asg.get(name);
@@ -138,7 +150,7 @@ export function solveChoices(bind, ctx) {
     return false;
   }
   if (!solve(0)) return null;
-  return { chosen: asg, values: (n) => values(n), nameOf };
+  return { chosen, values: (n) => values(n), nameOf };
 }
 
 // The method's facts with each choose binding replaced by what was chosen: one value binding per value (`together`

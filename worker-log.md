@@ -4159,6 +4159,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - k.words: 348 shards, 43,710 wires, 8,676,705 bytes. Tests: tests/import.wordnet.test.mjs (usage and frequency on
   the fixture; shards on disk equal the import), tests/k.words.test.mjs (bands computed from Zipf, CC BY-SA, every
   banded word has a sense, the k.genres join).
+
 ## 2026-11-14 — third worker: k.kinds, the up edges of the catalog with several parents (reviewer 21:55)
 
 - New type `k.kinds.parent name= is_a= dimension= from= key= value= group=` (k.kinds version 2, exports kind and
@@ -4436,3 +4437,43 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   tests on 0.90.0: k.kinds.relations 5, k.kinds.structures 4, k.kinds 6, k.words.paraphrase 2, w.lang.en.abstraction
   5, w.lang.en 21, w.lang.en.alternations 4, templates 8, k.values 5, k.words 6, k.geo 7, coverage-report 2, validate
   5, catalog 8 (killed once by memory, rerun alone) pass.
+
+
+## 2026-11-15 — first worker: test speed (block 23:45; round "00:20" item 1)
+
+- **Runner** `tools/test-run.mjs` (npm scripts): `test:changed` = the build, then the test files the changed paths
+  touch against origin/main (committed, staged, unstaged, new) + catalog, validate and repository tests;
+  `test:all` = every file one at a time; `test:slow` = the 10 slowest files of the last runs with seconds and peak
+  memory; `--plan` prints the files and why. A change touches: its own test file; every test importing a changed
+  module, directly or through other modules (an import graph); the tests of a world (named after it or naming it,
+  its questions only, the worlds importing it) for a path under docs/worlds/<world>/ or a tool its shard headers name
+  as their script. Each file runs as one process; it starts when its last peak memory + 600 MB are free; a file killed
+  by SIGKILL runs again alone (5 tries). Timings in `.test-timings.json` (git-ignored). AGENTS.md: per push
+  `test:changed`, full suite once per round.
+- **Measured** (one file at a time, other workers running): before 60 files, 2,995 tests, 1,039 s; after 62 files,
+  2,999 tests, about 410 s. The ten slowest before: k.compose 144 s, catalog 91, validate 80, k.wearables 73,
+  k.attributes 69, coverage 61, derived 46, questions 43, k.scenes 39, k.objects.names 39. After: catalog 5 s (with
+  the validation cache; 59 s when every world is validated), validate 0.3, k.compose 9, k.wearables 3, k.attributes
+  25, coverage 12, k.scenes/k.people/k.actions/k.colours-shapes no longer load k.objects. Still over 30 s: derived
+  (46–51 s: runs every rule of the catalog), questions (38–53 s in a full run; `test:changed` asks only the touched
+  worlds' questions).
+- **What made it slow, and the general fix for each** (no check dropped): (1) `factsOf(world, types)` in
+  tools/lib/worlds.mjs parses only the lines of the asked types: the names of k.objects' drawings in 0.08 s instead of
+  loading 46 MB into sopworld (44 s), used by k.actions, k.attributes, k.colours-shapes, k.people, k.scenes,
+  k.wearables and coverage; (2) `validateWorlds` keeps a world that passed with its inputs (sopworld build, validator,
+  every schema, the world's shards) in `.validate-cache.json` (git-ignored) and does not load it again; a fresh clone
+  or `SKW_NO_CACHE=1` validates everything; test: a changed shard is validated again and fails, a failing world is
+  not cached; (3) the catalog test built the catalog twice (the second build checked nothing the comparison with the
+  files on disk did not) and the validate test validated the whole catalog again (buildCatalog validates first):
+  one validation per run now; (4) `solveChoices` (tools/lib/choose.mjs) memoises the values of a binding per state of
+  the choices: same stories (hash of 8 seeded solutions equal), 1.8 s to 0.05 s a story after warm-up; (5)
+  questions.test.mjs takes `SKW_WORLDS` and test:changed sets it to the touched worlds.
+- **Helpers in tools/**: `tools/sync.sh` (rebase on origin/main; logs keep both sides of a conflict, other files
+  main's side; the generated files regenerated with memory waits and retries; stops if markers remain), the memory
+  waits and retries of my /tmp scripts folded into the runner. New `tests/repo.test.mjs`: no tracked file holds a
+  conflict marker; it found six in worker-log.md (a rebase of three workers' logs), removed.
+- Main was red for a while (`w.lang.en.alternation.n` had no unit in tools/measures-core.mjs, k.geo test 4); fixed
+  upstream meanwhile (an order), my copy of the fix dropped at the rebase.
+- Tests: tests/test-run.test.mjs 2 (plan by names, imports and worlds; questions scoped), validate 5, repo 1.
+  `npm run test:changed` after the rebase on sopworld 0.90 (364c1a4): build, then 66 files (every file: the shared
+  loader changed), 3,017 tests, 3,016 pass, 1 skipped, 0 fail, 394 s.

@@ -17,10 +17,8 @@ test('the pinned sopworld build is the one VERSION names', () => {
   assert.ok(v.commit.startsWith('7f3c31a'));
 });
 
-test('every world under docs/worlds loads with zero errors', () => {
-  const r = validateWorlds();
-  assert.deepEqual(r.errors, []);
-});
+// Every world under docs/worlds loads with zero errors: tests/catalog.test.mjs ("the catalog builds without
+// errors"), since buildCatalog runs validateWorlds over docs/worlds first; running it here too took 80 s for nothing.
 
 const fixture = (files) => {
   const root = mkdtempSync(join(tmpdir(), 'skw-'));
@@ -69,5 +67,21 @@ test('a schema that declares a type outside its prefix is an error', () => {
   try {
     const r = validateWorlds(root);
     assert.match(r.errors.join('\n'), /not under its own prefix/);
+  } finally { rmSync(root, { recursive: true }); }
+});
+
+test('a world unchanged since it passed is taken from the cache; a changed shard is validated again and fails', () => {
+  const root = fixture({ 'k.toy/schema.sop': schema, 'k.toy/shards/a.sop': `${head}@k.toy.a k.toy.item name=a core.source="test 1"\n` });
+  const cacheFile = join(root, 'cache.json');
+  try {
+    const first = validateWorlds(root, { cache: true, cacheFile });
+    assert.deepEqual(first.errors, []);
+    assert.ok(JSON.parse(readFileSync(cacheFile, 'utf8'))['k.toy'].key);
+    const again = validateWorlds(root, { cache: true, cacheFile });
+    assert.deepEqual(again.results.map((r) => r.path), first.results.map((r) => r.path));
+    writeFileSync(join(root, 'k.toy/shards/a.sop'), `${head}@k.toy.a k.toy.item name=a\n`);
+    const changed = validateWorlds(root, { cache: true, cacheFile });
+    assert.ok(changed.errors.some((e) => e.includes('no core.source')), JSON.stringify(changed.errors));
+    assert.equal(JSON.parse(readFileSync(cacheFile, 'utf8'))['k.toy'], undefined, 'a failing world is not cached');
   } finally { rmSync(root, { recursive: true }); }
 });

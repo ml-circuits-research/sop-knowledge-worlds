@@ -81,6 +81,22 @@ export function moduleInfo(schemaText) {
 export const fmtViolation = (v) => `${v.kind}${v.id ? ` ${v.id}` : ''}${v.key ? `.${v.key}` : ''}: ${v.why ?? ''}`.trim();
 
 // A world with the schema of `id` and every shard of it and of the worlds it depends on. Throws on a refusal.
+// The facts of some types of one world, as parsed wires, without loading the world into sopworld: only the lines of
+// those types are parsed (a test that needs the names of k.objects' drawings reads 1 MB of lines instead of loading
+// 46 MB with its rules: 44 s). Facts told in two shards stay two wires; use fullWorld to merge by identity or query.
+export function factsOf(id, types, worlds = scanWorlds()) {
+  const want = new Set([].concat(types));
+  const entry = worlds.find((w) => w.id === id);
+  if (!entry) throw new Error(`no world ${id}`);
+  const out = [];
+  for (const s of entry.shards) for (const line of s.text.split('\n')) {
+    if (!line.startsWith('@')) continue;
+    const sp = line.indexOf(' ');
+    if (want.has(line.slice(sp + 1, line.indexOf(' ', sp + 1) >>> 0))) out.push(...parse(line));
+  }
+  return out;
+}
+
 export function fullWorld(id, worlds = scanWorlds()) {
   const { world, result } = schemaWorld(worlds, id);
   if (!result.ok) throw new Error(`${id}: ${JSON.stringify(result.violations)}`);

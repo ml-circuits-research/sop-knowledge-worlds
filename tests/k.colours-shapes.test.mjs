@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { handSources } from '../tools/lib/worlds.mjs';
 import { colourShards, shapeShards, COLOURS, SHAPES } from '../tools/colours-shapes-core.mjs';
 
@@ -13,8 +13,7 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const coloursWorld = fullWorld('k.colours', worlds), shapesWorld = fullWorld('k.shapes', worlds);
 const colours = coloursWorld.ofType('k.colours.colour'), mixes = coloursWorld.ofType('k.colours.mix'), shapes = shapesWorld.ofType('k.shapes.shape');
-const objectsWorld = fullWorld('k.objects', worlds);
-const drawn = new Set([...objectsWorld.ofType('k.objects.object'), ...objectsWorld.ofType('k.objects.stand_in')].map((w) => one(w, 'name')));
+const drawn = new Set(factsOf('k.objects', ['k.objects.object', 'k.objects.stand_in'], worlds).map((w) => one(w, 'name')));
 const TONE = { light: 0, medium: 1, dark: 2 };
 
 test('the shards are what tools/colours-shapes-core.mjs gives', () => {
