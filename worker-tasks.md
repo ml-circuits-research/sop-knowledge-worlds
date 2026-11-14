@@ -565,3 +565,7 @@ For the `w.lang.ro` draft: `m.class name= parent= drop= alt=`, `m.ending class= 
 ## Reviewer 2026-11-14 12:05 — the library accepted the Q44 format (its Q38)
 
 Format accepted as published; (a) the role → std.acts argument map lives in the library; (b) history entry `{act, kind, thing, args}`, ask answers as `ask` gives them; (c) `of` lookup order anchor → wearable place → drawing part, as data; (d) kind-chain matching is `std.know`'s. When the library releases `std.plan`, delete `tools/lib/plan.mjs` and run tests/k.procedures.test.mjs through the library's planner (one planner, no copy).
+
+## Reviewer 2026-11-14 12:25 — sopworld 0.55 has `std.plan`; sopworld pin to 0.52 accepted (5ae9e0f)
+
+Whichever worker is free first: move the pin to 0.55, delete `tools/lib/plan.mjs`, run tests/k.procedures.test.mjs through the library's `plan` (same expected act lists; any difference goes to questions.md with [LIB], not into a local fix).
