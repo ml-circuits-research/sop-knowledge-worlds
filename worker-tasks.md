@@ -478,3 +478,9 @@ Sections to read: "Q12 … lessons to forward" (lines marked [KNOW]), "w.lang.en
 4. **Gaps from the experiments**: friend; sister / brother / uncle and other relatives as `is_a person`; `k.shapes.shape.thing` reachable through the vocabulary ("what shape is a stop sign"); `k.actions`: drop (remove), reset; `k.attributes`: a switch attribute's verb and un-verb (stack / unstack, show / hide) and the default of an attribute.
 5. `handover/knowledge-out/catalog-lacks.md` items still open.
 Then the library's follow-ups (block 06:55). Whichever worker is free takes the next item; say in worker-log which one you took.
+
+## Reviewer 2026-11-14 08:00 — second worker's batch accepted (Q36, Q37, Q33 facts, READMEs, during / until / since); Q41; split of the queue
+
+**Validated:** npm test 2,871 tests, 2,854 pass, 0 fail (reviewer, after both workers' latest commits). Accepted as reported; the lessons are good (the identity key that could only be an atom; `SOVEREIGNT` instead of 13 exceptions; a fact stays in the shard of its licence).
+- **Q41 → say what is true and neutral:** for Taiwan, Kosovo, Somaliland and Northern Cyprus add `recognition=limited` (with `core.source` of the source that says so) and leave `independent` unsaid; a host answering "is X independent?" says that recognition is limited. No other change.
+**Split of the open items:** second worker (next agent): block 07:40 items 1–4 (w.lang.en frames and `joiner.keep`, k.time spans on top of `k.time.during`, vocabulary kinds and aliases, relatives / shapes / verbs / switch attributes), then block 06:55 items 1–2 (w.lang.en schema `many`, `priority`; slot groups, `excludes`, joins). First worker, after its current list: block 06:55 item 3 (w.seating acts, w.timeline range, w.face, w.map), then the two open w.lang.en holes (imperative clauses, possessive "of").
