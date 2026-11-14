@@ -87,6 +87,37 @@ the library for provenance of told cells by source (a told value from a shard wh
 as derived by `why`).
 Blocking: no. Meanwhile: (a), said in k.commonsense/WORLD.md and sources/rule/SOURCE.md.
 
+## Q43 (block "06:55" item 3, first worker, 2026-11-14)
+Question: three things the world schemas of item 3 need are only in sopworld releases after the pinned 0.30.0
+(42b3456). May the build move to the library's current release (0.45.0, 80df521), or should these wait for the
+move to 0.34+ that block 06:55 item 2 gives the second worker?
+Context:
+1. **A guest placed on a seat through its slot** (`place thing=<guest> at=<seat>`, block 06:55: "a guest is placed
+   into a seat through the seat's slot") is 0.33.0. On 0.30 `place` sets only `x` or `at=<rel>:<ref>`, so the guest
+   is seated with `change attr=seat`. The schema already has what 0.33 reads (`w.seating.guest.seat type=w.seating.seat`).
+2. **Acts on the view itself** (`std.schema.view ... state=w.map.view`: "zoom in" with no thing; the state thing made
+   on first use) are 0.37.0. 0.30 reads `state=` and ignores it, so the kind `w.map.view` also allows `make`, with
+   at most one, and the acts name it (`thing=w.map.view`). On 0.37+ both forms work; `make` is then not needed and
+   could be dropped (a host that makes it first and then says "zoom in" is refused by the limit, since the view
+   makes `view_w_map` as a second one).
+3. **Joins by name** (`type=k.faces.variant by=name`, `type=k.geo.country by=name`) are 0.34.0. Today a face part's
+   `variant`, the face's colours and expression, and a map place's `name` are open names; the tests check the
+   names their sessions use against the k.faces and k.geo shards. Even on 0.34 two joins do not fit as they are:
+   a variant's identity is slot + name, so `by=name` would accept "round" of the ears for a head; and a map place
+   is a country or a city, while `type=` names one type. Options: a join on several keys (`by=slot by=name`, with
+   the slot taken from the kind), or a join to any of several types; both are library questions.
+Also for the library (seen, not worked around): `copy` copies the key that puts a thing into another, so a copy of
+a seated guest sits on the same seat; a deny "two guests are not on one seat" would then refuse every such copy, so
+w.seating does not say it.
+Checked meanwhile, in a scratch copy, not committed: every session of tests/w.schemas.test.mjs passes on 0.45.0,
+including the two skipped on 0.30 (a guest placed at a seat; "zoom in"); the library's case corpus (55 cases) passes
+on 0.45 with the new w.seating and w.timeline as it does with the published ones; and its 17 inline face and map
+cases (grid.face.*, view.zoom.implicit) pass when they name w.face and w.map instead (kinds `w.face.<part>`, view
+`view_w_map`), so the library can drop its inline copies.
+Blocking: no. Meanwhile: the schemas are written for 0.30 and already carry what the later releases read
+(`state=`, the slot a seat is placed through); the steps that need a later release are tests skipped with the
+release named, and they run as soon as the build moves.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

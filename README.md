@@ -77,8 +77,11 @@ plain productions of 64 constructions, 233 argument frames of the acts of `k.act
 PSys2's hand-over and read by the library's `std.grammar` (`docs/worlds/w.lang.en/WORLD.md`). It is a reusable world
 of facts (types and shards, validated like the knowledge worlds), not a `std.schema` world.
 
-Reusable worlds so far: `w.list`, `w.seating`, `w.timeline` (each with a `WORLD.md`; sessions in
-`tests/w.schemas.test.mjs`). Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.30.0 at
+World schemas so far: `w.list`, `w.seating`, `w.timeline`, and (block "06:55" item 3, for the library's case
+corpus and the demo) `w.face`, a drawn face whose kinds are the slots of `k.faces`, and `w.map`, a map view over the
+places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions in `tests/w.schemas.test.mjs`). A
+world schema may hold denies (`w.timeline`: an event is inside its timeline; `w.face`: one part of each kind on a
+face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.30.0 at
 commit 42b3456 (`tools/sopworld/VERSION`).
 
 Agents working here start with [AGENTS.md](AGENTS.md).

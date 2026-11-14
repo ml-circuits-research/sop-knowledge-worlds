@@ -1,5 +1,5 @@
 {
- "version": "c79aa8389b05",
+ "version": "2c2357cf303f",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -55233,6 +55233,483 @@
  ],
  "schemas": [
   {
+   "id": "w.face",
+   "version": "1",
+   "schema": "w.face/schema.sop",
+   "about": "a drawn face: parts with their variant, colour, size and place, and an expression",
+   "names": [
+    "face",
+    "avatar",
+    "face maker",
+    "avatar maker",
+    "drawn face"
+   ],
+   "kinds": [
+    {
+     "type": "w.face.face",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "copy",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "name",
+      "style",
+      "preset",
+      "skin",
+      "hair_colour",
+      "eye_colour",
+      "clothes",
+      "expression"
+     ],
+     "words": [
+      "face",
+      "faces",
+      "avatar",
+      "avatars"
+     ]
+    },
+    {
+     "type": "w.face.hair_back",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "back hair",
+      "long hair",
+      "ponytail",
+      "bun"
+     ]
+    },
+    {
+     "type": "w.face.shoulders",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "shoulders",
+      "clothes",
+      "shirt",
+      "top"
+     ]
+    },
+    {
+     "type": "w.face.clothes",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "clothes",
+      "outfit",
+      "shirt"
+     ]
+    },
+    {
+     "type": "w.face.neck",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "neck"
+     ]
+    },
+    {
+     "type": "w.face.ears",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "ear",
+      "ears"
+     ]
+    },
+    {
+     "type": "w.face.head",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "head",
+      "head shape",
+      "face shape"
+     ]
+    },
+    {
+     "type": "w.face.cheeks",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "cheek",
+      "cheeks",
+      "blush",
+      "freckles"
+     ]
+    },
+    {
+     "type": "w.face.beard",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "beard",
+      "beards"
+     ]
+    },
+    {
+     "type": "w.face.mouth",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "mouth",
+      "lips",
+      "smile"
+     ]
+    },
+    {
+     "type": "w.face.moustache",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "moustache",
+      "mustache"
+     ]
+    },
+    {
+     "type": "w.face.nose",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "nose"
+     ]
+    },
+    {
+     "type": "w.face.eyes",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "eye",
+      "eyes"
+     ]
+    },
+    {
+     "type": "w.face.eyebrows",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "eyebrow",
+      "eyebrows",
+      "brows"
+     ]
+    },
+    {
+     "type": "w.face.glasses",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "glasses",
+      "spectacles",
+      "sunglasses",
+      "specs"
+     ]
+    },
+    {
+     "type": "w.face.hair_front",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "hair",
+      "fringe",
+      "bangs",
+      "hairstyle"
+     ]
+    },
+    {
+     "type": "w.face.earrings",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "earring",
+      "earrings"
+     ]
+    },
+    {
+     "type": "w.face.hat",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "hat",
+      "cap",
+      "helmet",
+      "crown"
+     ]
+    },
+    {
+     "type": "w.face.accessories",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "face",
+      "variant",
+      "colour",
+      "size",
+      "x",
+      "y"
+     ],
+     "words": [
+      "accessory",
+      "accessories"
+     ]
+    }
+   ],
+   "wires": 113,
+   "bytes": 16303,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
    "id": "w.list",
    "version": "2",
    "schema": "w.list/schema.sop",
@@ -55305,8 +55782,96 @@
    "warnings": []
   },
   {
-   "id": "w.seating",
+   "id": "w.map",
    "version": "1",
+   "schema": "w.map/schema.sop",
+   "about": "a map of the world: places of k.geo shown, highlighted and pinned, and the view's zoom and layer",
+   "names": [
+    "map",
+    "maps",
+    "world map",
+    "atlas"
+   ],
+   "kinds": [
+    {
+     "type": "w.map.place",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "show"
+     ],
+     "attributes": [
+      "name",
+      "sort",
+      "highlight",
+      "colour"
+     ],
+     "words": [
+      "place",
+      "places",
+      "country",
+      "countries",
+      "city",
+      "cities"
+     ]
+    },
+    {
+     "type": "w.map.pin",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "show"
+     ],
+     "attributes": [
+      "on",
+      "sort",
+      "label",
+      "colour"
+     ],
+     "words": [
+      "pin",
+      "pins",
+      "marker",
+      "markers",
+      "flag",
+      "flags"
+     ]
+    },
+    {
+     "type": "w.map.view",
+     "acts": [
+      "make",
+      "change",
+      "ask"
+     ],
+     "attributes": [
+      "zoom",
+      "layer",
+      "centre"
+     ],
+     "words": [
+      "map",
+      "view"
+     ]
+    }
+   ],
+   "wires": 39,
+   "bytes": 6830,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.seating",
+   "version": "2",
    "schema": "w.seating/schema.sop",
    "about": "a seating plan: tables, seats and the guests on them",
    "names": [
@@ -55323,6 +55888,9 @@
       "make",
       "remove",
       "change",
+      "place",
+      "connect",
+      "group",
       "pick",
       "ask",
       "copy"
@@ -55330,7 +55898,9 @@
      "attributes": [
       "name",
       "shape",
-      "seats"
+      "seats",
+      "x",
+      "y"
      ],
      "words": [
       "table",
@@ -55366,10 +55936,12 @@
       "make",
       "remove",
       "change",
+      "place",
       "connect",
       "group",
       "pick",
-      "ask"
+      "ask",
+      "copy"
      ],
      "attributes": [
       "name",
@@ -55386,8 +55958,8 @@
      ]
     }
    ],
-   "wires": 35,
-   "bytes": 5528,
+   "wires": 40,
+   "bytes": 6606,
    "sources": [
     "hand-core-1"
    ],
@@ -55396,7 +55968,7 @@
   },
   {
    "id": "w.timeline",
-   "version": "1",
+   "version": "2",
    "schema": "w.timeline/schema.sop",
    "about": "timelines: events in order of time",
    "names": [
@@ -55459,8 +56031,8 @@
      ]
     }
    ],
-   "wires": 33,
-   "bytes": 5443,
+   "wires": 46,
+   "bytes": 7546,
    "sources": [
     "hand-core-1"
    ],

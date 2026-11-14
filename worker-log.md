@@ -3423,3 +3423,47 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: w.lang.en 16 -> 21 shards (+898 lines of facts, 163,181 bytes; the largest new shard `frames-acts-facts`
   510 wires, 91,099 bytes), schema version 2; frames 233 -> 351. Catalog 25 worlds, 941 -> 946 shards, vocab 24,282
   words. npm test 2,875: 2,870 pass, 5 skipped, 0 fail.
+
+## World schemas for the library's corpus and the demo (2026-11-14, first worker; block "06:55" item 3)
+
+- Took block "06:55" item 3 (reviewer 08:45: next for the first worker). All four parts, on the pinned build 0.30.0;
+  what needs a later release is a skipped test naming it and questions.md **Q43**.
+- **`w.seating` version 2:** tables take `place` (new `x`, `y`), `connect`, `group`; guests take `copy` and `place`
+  (a guest is placed on a seat through its slot `seat type=w.seating.seat`: `place at=<seat>` is sopworld 0.33; with
+  0.30 `change attr=seat`). A table holds at most its `seats` seats (`std.schema.capacity`; a table with no `seats`
+  takes any number), which WORLD.md had listed as needing the library. Not said: one guest per seat (a copied guest
+  keeps its seat, so the deny would refuse every copy: a question for the library, in Q43).
+- **`w.timeline` version 2:** every number (`from`, `to`, `at`, `until`) in -10000..10000; four denies: an event is
+  not before its timeline's `from`, not after its `to`, does not last past `to`, and does not end before it begins.
+  Refused from both sides (moving an end of the timeline past an event too), with the reason.
+- **`w.face` (new):** one kind per slot name of k.faces (18: the 16 of `plain`, `accessories`, `clothes`), all
+  extending `w.face.part` (`face`, `variant`, `colour`, `size` 0.6..1.5 default 1 step 0.1, `x`, `y` -50..50); the
+  face (`w.face.face`: `name`, `style`, `preset`, `skin`, `hair_colour`, `eye_colour`, `clothes` = the keys of
+  `k.faces.preset`, and `expression` as a mode drawn over the parts, which keep their variants); one deny: one part
+  of each kind on a face. No value list of k.faces is written again (variant, colours, expression, style are open
+  names); a test keeps the kinds equal to the k.faces slot names. Read PSys2's ui.avatar schema and face logic
+  (read-only) for what an application needs (per slot variant, colour, scale, dx/dy; an expression; presets).
+- **`w.map` (new):** a view schema over k.geo places: `w.map.place` (`name`, `sort` country or city, `highlight`,
+  `colour`), `w.map.pin` (`on`, `sort`, `label`, `colour`), the view's state `w.map.view` (`zoom` 1..10 default 3,
+  `layer` borders, rivers, none, `centre`), `std.schema.view name=w.map shows=w.map.shown state=w.map.view`. Acts:
+  show (make a place, centre the view), highlight, pin, remove the pins (`remove set=all`), zoom, layer, show. 0.30
+  ignores `state=`, so the view kind also allows `make` (at most one) and acts name it; on 0.37+ "zoom in" needs no
+  thing. Read PSys2's geo.map schema (read-only).
+- `tools/lib/schemas.mjs`: a world schema may hold denies and rules (the library's kinds-of-worlds), not a
+  function; the patterns and checks a deny names carry no `core.source` (it would be matched), the deny does; a
+  kind's catalog attributes follow `extends` inside the schema (the w.face parts had none).
+- Tests (`tests/w.schemas.test.mjs`, 13, 2 skipped on 0.30): five schemas in the catalog; found by face, avatar, map,
+  world map; sessions for w.seating (placed, linked, grouped tables; copied guests; the capacity refusal), w.timeline
+  (range and the four denies from both sides), w.face (the k.faces preset robot made into a face key for key, every
+  variant a k.faces variant of its slot, size and place refusals, a second hat refused, an expression set and undone),
+  w.map (France, Peru, Paris, Lima checked in k.geo; pins removed and undone; zoom and layer within their values; one
+  view); skipped: a guest placed `at` a seat (0.33), "zoom in" with no thing (0.37).
+- **Checked in a scratch copy, not committed:** with sopworld 0.45.0 all 13 tests pass, the two skipped ones too; the
+  library's case corpus (55 cases) passes on 0.45 with the new w.seating and w.timeline as with the published ones;
+  its 17 inline face and map cases pass when they name w.face and w.map.
+- Docs: WORLD.md for w.face and w.map, w.seating and w.timeline updated; README paragraph; lessons (seven).
+- Numbers: w.face 113 wires, 16,303 bytes, 19 kinds; w.map 39 wires, 6,830 bytes, 3 kinds; w.seating 35 -> 40 wires,
+  6,606 bytes; w.timeline 33 -> 46 wires, 7,546 bytes; 0 errors, 0 warnings, all five in one world. Catalog 25
+  worlds, 946 shards, vocab 24,307 words; COVERAGE lists w.face (7 common things by name) and w.map (3). npm test
+  2,882: 2,878 pass, 3 skipped, 1 fail (COVERAGE.md stale before `npm run reports`); after the reports the six test
+  files that read generated files: 39 pass, 2 skipped.

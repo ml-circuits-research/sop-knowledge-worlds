@@ -209,3 +209,31 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   that read generated files (about 30 of 44), then pushing, and the full run afterwards on the pushed commit in a
   separate worktree, got the work in without skipping the full check. Two full builds side by side on this machine
   can kill a test process (SIGKILL): rerun before believing a failure.
+
+## World schemas for the library's corpus and the demo (first worker, block "06:55" item 3)
+
+- **The acting half of a knowledge world takes its kinds from the knowledge, not its value lists.** `w.face` has one
+  kind per slot name of `k.faces`, and a part's variant, the face's colours and its expression are open names of
+  k.faces facts; a test keeps the kinds equal to the slot names of the shards. One list in one place; the price is
+  that a wrong variant is not refused until a join can check it, and a join by `name` alone is too weak where the
+  knowledge's identity is two keys (a variant is slot + name: "round" is an ear and a head).
+- **A mode is a key of the whole, not a change of its parts.** The expression is a key of the face drawn over the
+  parts' own variants; the parts keep theirs, so leaving the mode or undoing it costs nothing. Writing the
+  expression's variants into the parts (as an application's state did) loses what the user chose.
+- **Write for the pinned build, carry what the next release reads, and test the rest as skipped steps naming the
+  release.** `state=` on the view and the typed `seat` slot are read by 0.37 and 0.33 and ignored by 0.30; the steps
+  that need them are tests skipped with the release named, and one scratch run on 0.45 showed every one passes. A
+  schema is forward compatible when the newer construct is a key the older build ignores; the meanwhile (a `make` on
+  the view's state, limited to one) is said where a later build makes it unneeded.
+- **A deny over a reference holds from both sides.** "An event is inside its timeline" is written over the event's
+  `timeline` reference; moving an end of the timeline past an event is refused as well as moving the event. No
+  re-checking rule is needed: the engine evaluates a deny on every wire a change touches.
+- **The first join shows a name with two meanings.** `clothes` is a colour on a k.faces preset and a slot of the style
+  toon-head; copying a preset into a face key for key made a part of the colour. The face keeps the colour as its key
+  and the part as the kind `w.face.clothes`, and says so.
+- **A tool that describes kinds must follow inheritance.** The catalog listed no attributes for the parts of w.face
+  (they inherit from `w.face.part`) until `describeSchema` followed `extends`; a shared parent is invisible to a
+  reader that looks at a type's own slots.
+- **Decide what `copy` keeps before writing a constraint on a container.** A copied guest keeps its seat, so "one
+  guest per seat" would refuse every copy of a seated guest; the constraint waits for the library's answer on what a
+  copy of a thing inside another keeps.
