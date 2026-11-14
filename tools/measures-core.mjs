@@ -68,6 +68,9 @@ export const MEASURES = {
   'w.lang.ro': { ending: { person: { plain: true } }, irregular: { person: { plain: true } }, det: { person: { plain: true }, value: { plain: true } }, pron: { person: { plain: true } }, numeral: { value: { plain: true } } },
   // k.interest: weights, bases and the points of a shape are plain shares or values of the feature's measure; a year is an order.
   'k.interest': { source: { year: ord }, appraisal: { base: { plain: true } }, feature: { start_at: { counts: 'unit of the feature\'s measure' }, peak_at: { counts: 'unit of the feature\'s measure' }, full_at: { counts: 'unit of the feature\'s measure' }, weight_min: { plain: true }, weight_max: { plain: true } } },
+  // k.genres: places in an order and years are orders; counts of parts, sentences and words say what they count; a band is a place in an order.
+  'k.genres': { source: { year: ord }, register: { sentence_min: { counts: 'word' }, sentence_typical: { counts: 'word' }, sentence_max: { counts: 'word' }, paragraph_min: { counts: 'sentence' }, paragraph_max: { counts: 'sentence' }, vocabulary_band: ord },
+    part: { n: ord, min: { counts: 'time the part occurs in one document' }, max: { counts: 'time the part occurs in one document' } }, step: { n: ord, min: { counts: 'sentence' }, max: { counts: 'sentence' } } },
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord }, step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
 };
 

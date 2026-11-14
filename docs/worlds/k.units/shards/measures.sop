@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.procedures): 209 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.procedures): 222 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -203,6 +203,19 @@
 @k.units.measure.k.interest.feature.full_at k.units.measure world=k.interest type=feature key=full_at counts="unit of the feature's measure" core.source="hand-core 1"
 @k.units.measure.k.interest.feature.weight_min k.units.measure world=k.interest type=feature key=weight_min plain=true core.source="hand-core 1"
 @k.units.measure.k.interest.feature.weight_max k.units.measure world=k.interest type=feature key=weight_max plain=true core.source="hand-core 1"
+@k.units.measure.k.genres.source.year k.units.measure world=k.genres type=source key=year ordinal=true core.source="hand-core 1"
+@k.units.measure.k.genres.register.sentence_min k.units.measure world=k.genres type=register key=sentence_min counts=word core.source="hand-core 1"
+@k.units.measure.k.genres.register.sentence_typical k.units.measure world=k.genres type=register key=sentence_typical counts=word core.source="hand-core 1"
+@k.units.measure.k.genres.register.sentence_max k.units.measure world=k.genres type=register key=sentence_max counts=word core.source="hand-core 1"
+@k.units.measure.k.genres.register.paragraph_min k.units.measure world=k.genres type=register key=paragraph_min counts=sentence core.source="hand-core 1"
+@k.units.measure.k.genres.register.paragraph_max k.units.measure world=k.genres type=register key=paragraph_max counts=sentence core.source="hand-core 1"
+@k.units.measure.k.genres.register.vocabulary_band k.units.measure world=k.genres type=register key=vocabulary_band ordinal=true core.source="hand-core 1"
+@k.units.measure.k.genres.part.n k.units.measure world=k.genres type=part key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.genres.part.min k.units.measure world=k.genres type=part key=min counts="time the part occurs in one document" core.source="hand-core 1"
+@k.units.measure.k.genres.part.max k.units.measure world=k.genres type=part key=max counts="time the part occurs in one document" core.source="hand-core 1"
+@k.units.measure.k.genres.step.n k.units.measure world=k.genres type=step key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.genres.step.min k.units.measure world=k.genres type=step key=min counts=sentence core.source="hand-core 1"
+@k.units.measure.k.genres.step.max k.units.measure world=k.genres type=step key=max counts=sentence core.source="hand-core 1"
 @k.units.measure.k.procedures.method.rank k.units.measure world=k.procedures type=method key=rank ordinal=true core.source="hand-core 1"
 @k.units.measure.k.procedures.goal.default k.units.measure world=k.procedures type=goal key=default plain=true core.source="hand-core 1"
 @k.units.measure.k.procedures.binding.step k.units.measure world=k.procedures type=binding key=step ordinal=true core.source="hand-core 1"

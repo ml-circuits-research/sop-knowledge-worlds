@@ -366,6 +366,7 @@
   "k.attributes/schema.sop",
   "k.body/schema.sop",
   "k.faces/schema.sop",
+  "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.layouts/schema.sop",
   "k.motion/schema.sop",
@@ -415,6 +416,7 @@
   "k.objects/shards/noto-household-03"
  ],
  "abstract": [
+  "k.genres/shards/scientific-article",
   "k.words/shards/ab"
  ],
  "absurd": [
@@ -1378,6 +1380,7 @@
   "k.words/shards/ag"
  ],
  "agenda": [
+  "k.genres/shards/presentation",
   "k.words/shards/ag"
  ],
  "agent": [
@@ -1894,6 +1897,12 @@
   "k.scenes/shards/things-a",
   "k.words/shards/al"
  ],
+ "alley2013": [
+  "k.genres/shards/sources"
+ ],
+ "alleyneeley2005": [
+  "k.genres/shards/sources"
+ ],
  "alleys": [
   "k.objects/shards/places"
  ],
@@ -2024,6 +2033,9 @@
   "k.words/shards/al",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/ellipsis"
+ ],
+ "also move": [
+  "k.genres/schema.sop"
  ],
  "altai mountains": [
   "k.geo/shards/asia"
@@ -2709,6 +2721,10 @@
  "announce": [
   "k.words/shards/an"
  ],
+ "announce findings": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "announcement": [
   "k.words/shards/an"
  ],
@@ -3015,6 +3031,9 @@
  ],
  "aoukalé": [
   "k.geo/shards/africa"
+ ],
+ "apa2020": [
+  "k.genres/shards/sources"
  ],
  "apache": [
   "k.words/shards/ap"
@@ -3533,10 +3552,14 @@
   "k.words/shards/ar"
  ],
  "argument": [
+  "k.genres/shards/essay",
   "k.words/shards/ar"
  ],
  "argument frame": [
   "w.lang.en/schema.sop"
+ ],
+ "argumentative essay": [
+  "k.genres/shards/essay"
  ],
  "argun": [
   "k.geo/shards/africa"
@@ -3557,6 +3580,7 @@
   "k.words/shards/ar"
  ],
  "aristotle": [
+  "k.genres/shards/sources",
   "k.words/shards/ar"
  ],
  "arithmetic": [
@@ -3831,6 +3855,7 @@
   "k.food/shards/vegetables"
  ],
  "article": [
+  "k.genres/shards/scientific-article",
   "k.words/shards/ar",
   "w.lang.en/schema.sop"
  ],
@@ -4358,6 +4383,8 @@
   "k.words/shards/at"
  ],
  "attempt": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story",
   "k.words/shards/at"
  ],
  "attend": [
@@ -8035,6 +8062,9 @@
   "k.objects/shards/mulberry-clothes-general-01",
   "k.scenes/shards/things-b",
   "k.wearables/shards/wearables"
+ ],
+ "biberconrad2009": [
+  "k.genres/shards/sources"
  ],
  "bible": [
   "k.words/shards/bi"
@@ -17075,7 +17105,11 @@
   "k.parts/shards/usual",
   "k.words/shards/ci"
  ],
+ "citations": [
+  "k.genres/schema.sop"
+ ],
  "cite": [
+  "k.genres/schema.sop",
   "k.interest/schema.sop"
  ],
  "cities": [
@@ -17167,6 +17201,10 @@
  ],
  "claim": [
   "k.words/shards/cl"
+ ],
+ "claim centrality": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
  ],
  "clam": [
   "k.animals/shards/invertebrates",
@@ -17481,6 +17519,7 @@
   "k.words/shards/cl"
  ],
  "climax": [
+  "k.genres/shards/story",
   "k.words/shards/cl"
  ],
  "climb": [
@@ -17730,6 +17769,7 @@
  ],
  "closing": [
   "k.actions/shards/actions-hands",
+  "k.genres/shards/presentation",
   "k.words/shards/cl"
  ],
  "closure": [
@@ -19047,6 +19087,10 @@
  ],
  "compare": [
   "k.actions/shards/verbs-ask",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article",
   "k.words/shards/co-1"
  ],
  "comparing": [
@@ -19135,12 +19179,15 @@
   "k.words/shards/co-1"
  ],
  "complicate": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story",
   "k.words/shards/co-1"
  ],
  "complicated": [
   "k.words/shards/co-1"
  ],
  "complication": [
+  "k.genres/shards/story",
   "k.words/shards/co-1"
  ],
  "complied": [
@@ -19168,6 +19215,7 @@
   "k.words/shards/co-1"
  ],
  "composition": [
+  "k.genres/shards/essay",
   "k.words/shards/co-1"
  ],
  "compound": [
@@ -19321,9 +19369,15 @@
   "k.words/shards/co-1"
  ],
  "conclude": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation",
+  "k.genres/shards/scientific-article",
   "k.words/shards/co-1"
  ],
  "conclusion": [
+  "k.genres/shards/essay",
+  "k.genres/shards/scientific-article",
   "k.words/shards/co-1"
  ],
  "concrete": [
@@ -19869,6 +19923,7 @@
   "w.lang.en/schema.sop"
  ],
  "contractions": [
+  "k.genres/schema.sop",
   "w.lang.en/schema.sop"
  ],
  "contractor": [
@@ -20677,8 +20732,16 @@
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/co-2"
  ],
+ "counter-claim": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "counter-clockwise": [
   "k.values/shards/directions"
+ ],
+ "counterargument": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves"
  ],
  "counterclockwise": [
   "k.values/shards/directions"
@@ -20883,6 +20946,7 @@
   "k.objects/shards/noto-animal-mammal-04"
  ],
  "cowan2001": [
+  "k.genres/shards/sources",
   "k.interest/shards/sources"
  ],
  "coward": [
@@ -22506,6 +22570,9 @@
  "cuttlefishes": [
   "k.words/shards/cu"
  ],
+ "cutts2013": [
+  "k.genres/shards/sources"
+ ],
  "cuyuni": [
   "k.geo/shards/south-america"
  ],
@@ -23651,6 +23718,7 @@
   "k.words/shards/de"
  ],
  "define": [
+  "k.genres/shards/moves",
   "k.words/schema.sop",
   "k.words/shards/de"
  ],
@@ -23667,6 +23735,9 @@
  "definition": [
   "k.words/schema.sop",
   "k.words/shards/de"
+ ],
+ "definitions": [
+  "k.genres/schema.sop"
  ],
  "defy": [
   "k.words/shards/de"
@@ -24055,6 +24126,10 @@
  "describe": [
   "k.actions/shards/verbs-ask",
   "k.words/shards/de"
+ ],
+ "describe method": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
  ],
  "description": [
   "k.words/shards/de"
@@ -24811,6 +24886,9 @@
   "k.objects/shards/noto-game-01",
   "k.words/shards/di"
  ],
+ "direct speech": [
+  "k.genres/schema.sop"
+ ],
  "direction": [
   "k.actions/shards/acts",
   "k.objects/shards/noto-place-map-01",
@@ -25004,6 +25082,7 @@
   "k.words/shards/di"
  ],
  "discussion": [
+  "k.genres/shards/scientific-article",
   "k.words/shards/di"
  ],
  "disease": [
@@ -25463,6 +25542,9 @@
   "k.objects/shards/noto-other-object-02",
   "k.words/shards/do"
  ],
+ "document type": [
+  "k.genres/schema.sop"
+ ],
  "documentary": [
   "k.words/shards/do"
  ],
@@ -25585,6 +25667,7 @@
   "k.geo/shards/asia"
  ],
  "doi": [
+  "k.genres/schema.sop",
   "k.interest/schema.sop"
  ],
  "doi inthanon": [
@@ -28482,6 +28565,8 @@
   "k.words/shards/en"
  ],
  "end": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story",
   "k.objects/shards/mulberry-food-breads-and-baking-04",
   "k.objects/shards/mulberry-plants-and-trees-03",
   "k.objects/shards/mulberry-work-and-school-stationery-01",
@@ -28508,6 +28593,7 @@
   "w.timeline/schema.sop"
  ],
  "ending": [
+  "k.genres/shards/story",
   "k.units/shards/measures",
   "k.words/shards/en"
  ],
@@ -29018,7 +29104,12 @@
   "k.scenes/shards/things-e"
  ],
  "essay": [
+  "k.genres/shards/essay",
+  "k.genres/shards/registers",
   "k.words/shards/es"
+ ],
+ "essays": [
+  "k.genres/shards/essay"
  ],
  "essen": [
   "k.geo/shards/psys2-cities-europe"
@@ -29170,6 +29261,8 @@
   "k.words/shards/ev"
  ],
  "evaluate": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story",
   "k.words/shards/ev"
  ],
  "evaluation": [
@@ -30023,6 +30116,9 @@
   "k.people/shards/roles-story",
   "k.scenes/shards/things-f",
   "k.words/shards/fa"
+ ],
+ "fairy tale": [
+  "k.genres/shards/story"
  ],
  "fairy tale castle": [
   "k.scenes/shards/scenes-town"
@@ -31282,6 +31378,7 @@
  ],
  "finding": [
   "k.actions/shards/actions-mind-talk",
+  "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.words/shards/fi"
  ],
@@ -32105,6 +32202,9 @@
  ],
  "fleming": [
   "k.words/shards/fl"
+ ],
+ "flesch1948": [
+  "k.genres/shards/sources"
  ],
  "flesh": [
   "k.objects/shards/noto-food-fruit-03",
@@ -33074,6 +33174,7 @@
   "k.words/shards/fo"
  ],
  "formality": [
+  "k.genres/schema.sop",
   "k.words/shards/fo"
  ],
  "format": [
@@ -33744,6 +33845,9 @@
  ],
  "freya": [
   "k.words/shards/fr"
+ ],
+ "freytag1863": [
+  "k.genres/shards/sources"
  ],
  "frg": [
   "k.geo/shards/aliases"
@@ -35183,6 +35287,11 @@
  "general santos": [
   "k.geo/shards/asia"
  ],
+ "generalise": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "generate": [
   "k.actions/shards/verbs-make",
   "k.words/shards/ge"
@@ -35245,7 +35354,11 @@
   "k.words/shards/ge"
  ],
  "genre": [
+  "k.genres/schema.sop",
   "k.words/shards/ge"
+ ],
+ "genres": [
+  "k.genres/schema.sop"
  ],
  "gent": [
   "k.attributes/shards/same-g",
@@ -35608,6 +35721,16 @@
  ],
  "give a part of": [
   "k.actions/shards/actions-body-social-nature"
+ ],
+ "give evidence": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation"
+ ],
+ "give example": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation"
  ],
  "give food to": [
   "k.actions/shards/actions-body-social-nature"
@@ -39466,6 +39589,7 @@
   "k.objects/shards/noto-office-01"
  ],
  "heading": [
+  "k.genres/schema.sop",
   "k.words/shards/he"
  ],
  "headlight": [
@@ -39794,6 +39918,9 @@
  ],
  "hedges": [
   "k.objects/shards/places"
+ ],
+ "hedging": [
+  "k.genres/schema.sop"
  ],
  "heed": [
   "k.words/shards/he"
@@ -42240,6 +42367,18 @@
   "k.objects/shards/noto-household-03",
   "k.words/shards/hy"
  ],
+ "hyland1990": [
+  "k.genres/shards/sources"
+ ],
+ "hyland1998": [
+  "k.genres/shards/sources"
+ ],
+ "hyland2000": [
+  "k.genres/shards/sources"
+ ],
+ "hyland2005": [
+  "k.genres/shards/sources"
+ ],
  "hymn": [
   "k.words/shards/hy"
  ],
@@ -43048,6 +43187,10 @@
  "indicate": [
   "k.words/shards/in"
  ],
+ "indicate a gap": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "indication": [
   "k.words/shards/in"
  ],
@@ -43615,6 +43758,10 @@
  "interpret": [
   "k.words/shards/in"
  ],
+ "interpret result": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "interpretation": [
   "k.words/shards/in"
  ],
@@ -43697,7 +43844,21 @@
  "introduce": [
   "k.words/shards/in"
  ],
+ "introduce character": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story"
+ ],
+ "introduce topic": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article"
+ ],
  "introduction": [
+  "k.genres/shards/essay",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article",
   "k.words/shards/in"
  ],
  "intrude": [
@@ -43768,6 +43929,10 @@
  ],
  "invite": [
   "k.words/shards/in"
+ ],
+ "invite questions": [
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation"
  ],
  "invoice": [
   "k.objects/shards/noto-money-02",
@@ -45568,6 +45733,9 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes"
  ],
+ "k.genres": [
+  "k.units/shards/measures"
+ ],
  "k.geo": [
   "k.units/shards/measures"
  ],
@@ -46639,6 +46807,9 @@
  "kind of person": [
   "k.attributes/shards/aspects"
  ],
+ "kind of text": [
+  "k.genres/schema.sop"
+ ],
  "kinda": [
   "k.words/shards/ki"
  ],
@@ -47663,6 +47834,9 @@
  ],
  "labov1972": [
   "k.interest/shards/sources"
+ ],
+ "labovwaletzky1967": [
+  "k.genres/shards/sources"
  ],
  "labrador sea": [
   "k.geo/shards/seas"
@@ -48755,6 +48929,7 @@
   "k.words/shards/la"
  ],
  "layout": [
+  "k.genres/schema.sop",
   "k.layouts/schema.sop",
   "k.procedures/shards/from-knowledge",
   "k.words/shards/la"
@@ -53333,6 +53508,9 @@
  "mandatory": [
   "k.words/shards/ma"
  ],
+ "mandlerjohnson1977": [
+  "k.genres/shards/sources"
+ ],
  "mandrill": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
@@ -54433,6 +54611,7 @@
   "k.geo/shards/asia"
  ],
  "max": [
+  "k.genres/schema.sop",
   "k.motion/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/ma"
@@ -54484,6 +54663,9 @@
  ],
  "mayer": [
   "k.words/shards/ma"
+ ],
+ "mayer2009": [
+  "k.genres/shards/sources"
  ],
  "mayhem": [
   "k.words/shards/ma"
@@ -55351,6 +55533,7 @@
   "k.words/shards/me"
  ],
  "methods": [
+  "k.genres/shards/scientific-article",
   "k.procedures/schema.sop"
  ],
  "metre": [
@@ -56089,6 +56272,7 @@
  ],
  "min": [
   "k.attributes/shards/same-m",
+  "k.genres/schema.sop",
   "k.geo/shards/asia",
   "k.motion/schema.sop",
   "k.units/shards/measures",
@@ -58500,6 +58684,7 @@
  "move": [
   "k.actions/shards/actions-move",
   "k.actions/shards/verbs-place",
+  "k.genres/schema.sop",
   "k.motion/schema.sop",
   "k.objects/shards/noto-transport-ground-04",
   "k.words/shards/mo"
@@ -58511,6 +58696,7 @@
   "k.words/shards/mo"
  ],
  "moves": [
+  "k.genres/schema.sop",
   "k.motion/schema.sop"
  ],
  "movie": [
@@ -59131,6 +59317,7 @@
  ],
  "n": [
   "k.attributes/shards/aspects",
+  "k.genres/schema.sop",
   "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
@@ -59283,6 +59470,7 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.faces/schema.sop",
+  "k.genres/schema.sop",
   "k.layouts/schema.sop",
   "k.motion/schema.sop",
   "k.objects/schema.sop",
@@ -59473,6 +59661,8 @@
   "k.geo/shards/asia"
  ],
  "narrative": [
+  "k.genres/shards/registers",
+  "k.genres/shards/story",
   "k.words/shards/na"
  ],
  "narrator": [
@@ -60237,6 +60427,13 @@
   "k.words/shards/ne",
   "w.lang.en/shards/prepositions"
  ],
+ "next step": [
+  "k.genres/shards/moves",
+  "k.genres/shards/report"
+ ],
+ "next steps": [
+  "k.genres/shards/report"
+ ],
  "next to": [
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
@@ -60561,6 +60758,9 @@
  ],
  "nirvana": [
   "k.words/shards/ni"
+ ],
+ "niso2005": [
+  "k.genres/shards/sources"
  ],
  "nitrogen": [
   "k.words/shards/ni"
@@ -63006,6 +63206,7 @@
   "k.geo/shards/south-america"
  ],
  "orientation": [
+  "k.genres/shards/story",
   "k.words/shards/or"
  ],
  "orienteering": [
@@ -63305,6 +63506,12 @@
   "k.values/shards/fills",
   "k.words/shards/ou"
  ],
+ "outline structure": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation",
+  "k.genres/shards/scientific-article"
+ ],
  "outlined": [
   "k.values/shards/fills"
  ],
@@ -63544,6 +63751,7 @@
   "k.animals/shards/birds"
  ],
  "own": [
+  "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.words/shards/ow"
  ],
@@ -64305,6 +64513,7 @@
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-nature",
   "k.colours/shards/colours",
+  "k.genres/shards/scientific-article",
   "k.interest/schema.sop",
   "k.objects/shards/mulberry-work-and-school-stationery-03",
   "k.objects/shards/noto-book-paper-02",
@@ -64405,6 +64614,18 @@
  ],
  "paragraph": [
   "k.words/shards/pa"
+ ],
+ "paragraph max": [
+  "k.genres/schema.sop"
+ ],
+ "paragraph min": [
+  "k.genres/schema.sop"
+ ],
+ "paragraph_max": [
+  "k.units/shards/measures"
+ ],
+ "paragraph_min": [
+  "k.units/shards/measures"
  ],
  "paraguay": [
   "k.geo/shards/psys2-countries",
@@ -64636,6 +64857,7 @@
   "k.attributes/shards/attributes",
   "k.body/schema.sop",
   "k.drawing/schema.sop",
+  "k.genres/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
@@ -64718,6 +64940,7 @@
   "k.attributes/shards/attributes",
   "k.body/schema.sop",
   "k.drawing/schema.sop",
+  "k.genres/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
   "k.words/schema.sop",
@@ -64805,6 +65028,7 @@
   "k.scenes/shards/things-p"
  ],
  "passive": [
+  "k.genres/schema.sop",
   "k.words/shards/pa"
  ],
  "passport": [
@@ -65955,6 +66179,7 @@
   "k.attributes/shards/same-u",
   "k.attributes/shards/same-v",
   "k.attributes/shards/same-w",
+  "k.genres/schema.sop",
   "k.layouts/shards/anchors",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/psys2",
@@ -65974,6 +66199,9 @@
   "k.words/shards/pe",
   "w.lang.en/shards/hand-morphology",
   "w.seating/schema.sop"
+ ],
+ "person also": [
+  "k.genres/schema.sop"
  ],
  "person1": [
   "k.objects/shards/noto-household-01"
@@ -68519,6 +68747,7 @@
  "point": [
   "k.actions/shards/verbs-pick",
   "k.drawing/schema.sop",
+  "k.genres/shards/presentation",
   "k.layouts/shards/joins",
   "k.objects/shards/more",
   "k.objects/shards/noto-tool-03",
@@ -69819,7 +70048,12 @@
   "k.words/shards/pr"
  ],
  "presentation": [
+  "k.genres/shards/presentation",
+  "k.genres/shards/registers",
   "k.words/shards/pr"
+ ],
+ "presentations": [
+  "k.genres/shards/presentation"
  ],
  "preservation": [
   "k.words/shards/pr"
@@ -70146,6 +70380,9 @@
  "problem": [
   "k.words/shards/pr"
  ],
+ "problems": [
+  "k.genres/shards/report"
+ ],
  "procedure": [
   "k.procedures/schema.sop",
   "k.words/shards/pr"
@@ -70244,6 +70481,9 @@
  ],
  "progress": [
   "k.words/shards/pr"
+ ],
+ "progress report": [
+  "k.genres/shards/report"
  ],
  "progressive": [
   "k.words/shards/pr"
@@ -71398,6 +71638,9 @@
  "questioning": [
   "k.words/shards/qu"
  ],
+ "questions": [
+  "k.genres/schema.sop"
+ ],
  "quetta": [
   "k.geo/shards/psys2-cities-asia"
  ],
@@ -71888,6 +72131,11 @@
   "k.actions/shards/verbs-place",
   "k.words/shards/ra",
   "w.face/schema.sop"
+ ],
+ "raise a question": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
  ],
  "raised": [
   "k.faces/shards/plain-eyebrows",
@@ -72510,6 +72758,10 @@
  "rebuilt": [
   "k.words/shards/re"
  ],
+ "rebut": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves"
+ ],
  "recall": [
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/re"
@@ -72626,6 +72878,8 @@
   "k.actions/shards/verbs-change"
  ],
  "recommend": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article",
   "k.words/shards/re"
  ],
  "recommendation": [
@@ -72894,10 +73148,12 @@
   "k.words/shards/re"
  ],
  "reference": [
+  "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.words/shards/re"
  ],
  "references": [
+  "k.genres/schema.sop",
   "k.interest/schema.sop"
  ],
  "referred": [
@@ -73016,7 +73272,12 @@
   "k.geo/shards/asia"
  ],
  "register": [
+  "k.genres/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/re"
+ ],
+ "registers": [
+  "k.genres/schema.sop"
  ],
  "registration": [
   "k.words/shards/re"
@@ -73422,8 +73683,23 @@
   "k.words/shards/re"
  ],
  "report": [
+  "k.genres/shards/registers",
+  "k.genres/shards/report",
   "k.procedures/shards/tasks",
   "k.words/shards/re"
+ ],
+ "report action": [
+  "k.genres/shards/moves",
+  "k.genres/shards/report"
+ ],
+ "report problem": [
+  "k.genres/shards/moves",
+  "k.genres/shards/report"
+ ],
+ "report result": [
+  "k.genres/shards/moves",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article"
  ],
  "reported": [
   "k.words/shards/re"
@@ -73433,6 +73709,9 @@
  ],
  "reporting": [
   "k.words/shards/re"
+ ],
+ "reports": [
+  "k.genres/shards/report"
  ],
  "represent": [
   "k.words/shards/re"
@@ -73794,6 +74073,12 @@
  "research": [
   "k.words/shards/re"
  ],
+ "research article": [
+  "k.genres/shards/scientific-article"
+ ],
+ "research paper": [
+  "k.genres/shards/scientific-article"
+ ],
  "researcher": [
   "k.people/shards/roles-jobs",
   "k.words/shards/re"
@@ -73867,9 +74152,12 @@
   "k.actions/shards/verbs-change"
  ],
  "resolution": [
+  "k.genres/shards/story",
   "k.words/shards/re"
  ],
  "resolve": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story",
   "k.words/shards/re"
  ],
  "resort": [
@@ -73905,6 +74193,10 @@
  ],
  "restart": [
   "k.words/shards/re"
+ ],
+ "restate thesis": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves"
  ],
  "restaurant": [
   "k.attributes/shards/drawn-hand",
@@ -73956,7 +74248,9 @@
   "k.words/shards/re"
  ],
  "results": [
-  "k.actions/schema.sop"
+  "k.actions/schema.sop",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article"
  ],
  "resume": [
   "k.words/shards/re"
@@ -74079,6 +74373,10 @@
  "review": [
   "k.words/shards/re"
  ],
+ "review previous work": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "revival": [
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/re"
@@ -74157,6 +74455,12 @@
  ],
  "rhein": [
   "k.geo/shards/europe"
+ ],
+ "rhetorical move": [
+  "k.genres/schema.sop"
+ ],
+ "rhetorical moves": [
+  "k.genres/schema.sop"
  ],
  "rhine": [
   "k.geo/shards/europe",
@@ -78566,6 +78870,18 @@
  "science lab": [
   "k.scenes/shards/scenes-indoors"
  ],
+ "scientific": [
+  "k.genres/shards/registers"
+ ],
+ "scientific article": [
+  "k.genres/shards/scientific-article"
+ ],
+ "scientific articles": [
+  "k.genres/shards/scientific-article"
+ ],
+ "scientific paper": [
+  "k.genres/shards/scientific-article"
+ ],
  "scientist": [
   "k.attributes/shards/same-s",
   "k.objects/shards/noto-clothing-01",
@@ -79314,7 +79630,11 @@
   "k.words/shards/se"
  ],
  "section": [
+  "k.genres/schema.sop",
   "k.words/shards/se"
+ ],
+ "sections": [
+  "k.genres/schema.sop"
  ],
  "sector": [
   "k.words/shards/se"
@@ -79674,6 +79994,24 @@
  "sentence marks": [
   "k.motion/shards/mouth"
  ],
+ "sentence max": [
+  "k.genres/schema.sop"
+ ],
+ "sentence min": [
+  "k.genres/schema.sop"
+ ],
+ "sentence typical": [
+  "k.genres/schema.sop"
+ ],
+ "sentence_max": [
+  "k.units/shards/measures"
+ ],
+ "sentence_min": [
+  "k.units/shards/measures"
+ ],
+ "sentence_typical": [
+  "k.units/shards/measures"
+ ],
  "senti": [
   "k.words/shards/se"
  ],
@@ -79896,6 +80234,10 @@
  ],
  "set off": [
   "k.actions/shards/actions-move"
+ ],
+ "set the scene": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story"
  ],
  "set the table": [
   "k.procedures/shards/tasks"
@@ -82732,11 +83074,18 @@
  "slide mountain": [
   "k.geo/shards/north-america"
  ],
+ "slide show": [
+  "k.genres/shards/presentation"
+ ],
  "slider": [
   "k.objects/shards/noto-music-01"
  ],
  "slides": [
-  "k.actions/shards/actions-move"
+  "k.actions/shards/actions-move",
+  "k.genres/shards/presentation"
+ ],
+ "slideshow": [
+  "k.genres/shards/presentation"
  ],
  "sliding": [
   "k.actions/shards/actions-move",
@@ -83752,6 +84101,9 @@
  "solitude": [
   "k.words/shards/so"
  ],
+ "sollaci2004": [
+  "k.genres/shards/sources"
+ ],
  "solo": [
   "k.words/shards/so",
   "w.lang.en/shards/core-plurals"
@@ -84007,11 +84359,13 @@
  ],
  "source": [
   "k.actions/shards/acts",
+  "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/so"
  ],
  "sources": [
+  "k.genres/schema.sop",
   "k.interest/schema.sop"
  ],
  "sous": [
@@ -85463,6 +85817,7 @@
   "k.animals/shards/invertebrates"
  ],
  "stage": [
+  "k.genres/schema.sop",
   "k.layouts/shards/anchors",
   "k.objects/shards/places",
   "k.scenes/shards/scenes-indoors",
@@ -85875,6 +86230,19 @@
   "k.actions/shards/acts",
   "k.words/shards/st"
  ],
+ "state claim": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation"
+ ],
+ "state goal": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story"
+ ],
+ "state limitation": [
+  "k.genres/shards/moves",
+  "k.genres/shards/scientific-article"
+ ],
  "state of eritrea": [
   "k.geo/shards/africa"
  ],
@@ -85895,6 +86263,19 @@
  ],
  "state of the vatican city": [
   "k.geo/shards/europe"
+ ],
+ "state purpose": [
+  "k.genres/shards/moves",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article"
+ ],
+ "state takeaway": [
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation"
+ ],
+ "state thesis": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves"
  ],
  "statehouse": [
   "k.objects/shards/places-3"
@@ -85955,6 +86336,9 @@
  ],
  "status": [
   "k.words/shards/st"
+ ],
+ "status report": [
+  "k.genres/shards/report"
  ],
  "statute": [
   "k.words/shards/st"
@@ -86090,6 +86474,9 @@
  "steiner": [
   "k.words/shards/st"
  ],
+ "steinglenn1979": [
+  "k.genres/shards/sources"
+ ],
  "stella": [
   "k.words/shards/st"
  ],
@@ -86132,6 +86519,7 @@
   "k.words/shards/st"
  ],
  "step": [
+  "k.genres/schema.sop",
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
   "k.motion/schema.sop",
@@ -86181,6 +86569,7 @@
   "k.words/shards/st"
  ],
  "steps": [
+  "k.genres/schema.sop",
   "k.layouts/shards/layouts",
   "k.objects/shards/openmoji-travel-places-01",
   "k.objects/shards/places",
@@ -86576,6 +86965,9 @@
  "storeroom": [
   "k.words/shards/st"
  ],
+ "stories": [
+  "k.genres/shards/story"
+ ],
  "stork": [
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-p-z",
@@ -86594,6 +86986,7 @@
   "k.words/shards/st"
  ],
  "story": [
+  "k.genres/shards/story",
   "k.words/shards/st"
  ],
  "stout": [
@@ -87058,6 +87451,7 @@
   "k.words/shards/st"
  ],
  "structure": [
+  "k.genres/schema.sop",
   "k.words/shards/st"
  ],
  "struggle": [
@@ -87207,6 +87601,7 @@
  ],
  "style": [
   "k.faces/schema.sop",
+  "k.genres/schema.sop",
   "k.words/shards/st",
   "w.face/schema.sop"
  ],
@@ -87509,7 +87904,16 @@
  "sum": [
   "k.words/shards/su"
  ],
+ "summarize": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation",
+  "k.genres/shards/report",
+  "k.genres/shards/scientific-article"
+ ],
  "summary": [
+  "k.genres/shards/presentation",
+  "k.genres/shards/report",
   "k.procedures/shards/tasks",
   "k.words/shards/su"
  ],
@@ -87936,6 +88340,12 @@
   "k.feelings/shards/feelings",
   "k.words/shards/su"
  ],
+ "surprising fact": [
+  "k.genres/shards/essay",
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation",
+  "k.genres/shards/scientific-article"
+ ],
  "surrender": [
   "k.words/shards/su"
  ],
@@ -88086,6 +88496,15 @@
  ],
  "swakopmund": [
   "k.geo/shards/africa"
+ ],
+ "swales1990": [
+  "k.genres/shards/sources"
+ ],
+ "swales2004": [
+  "k.genres/shards/sources"
+ ],
+ "swalesfeak2012": [
+  "k.genres/shards/sources"
  ],
  "swallow": [
   "k.animals/shards/birds",
@@ -89125,7 +89544,8 @@
   "k.words/shards/ta"
  ],
  "takes": [
-  "k.actions/shards/actions-hands"
+  "k.actions/shards/actions-hands",
+  "k.genres/schema.sop"
  ],
  "takes off": [
   "k.actions/shards/actions-body-social-nature"
@@ -89151,6 +89571,7 @@
   "k.words/shards/ta"
  ],
  "tale": [
+  "k.genres/shards/story",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-game-01",
   "k.words/shards/ta"
@@ -89167,6 +89588,7 @@
  ],
  "talk": [
   "k.actions/shards/actions-mind-talk",
+  "k.genres/shards/presentation",
   "k.motion/shards/rules",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/ta"
@@ -90188,6 +90610,7 @@
  ],
  "tense": [
   "k.feelings/shards/feelings",
+  "k.genres/schema.sop",
   "k.words/shards/te"
  ],
  "tension": [
@@ -90453,6 +90876,10 @@
  "thank": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/th"
+ ],
+ "thank audience": [
+  "k.genres/shards/moves",
+  "k.genres/shards/presentation"
  ],
  "thanked": [
   "k.actions/shards/actions-body-social-nature"
@@ -91879,6 +92306,7 @@
   "k.words/shards/ti"
  ],
  "title": [
+  "k.genres/shards/presentation",
   "k.objects/shards/home",
   "k.procedures/shards/tasks",
   "k.words/shards/ti",
@@ -92248,6 +92676,7 @@
   "k.attributes/shards/same-t",
   "k.colours/schema.sop",
   "k.feelings/schema.sop",
+  "k.genres/schema.sop",
   "k.geo/shards/asia",
   "k.words/shards/to"
  ],
@@ -92971,6 +93400,9 @@
   "k.objects/shards/noto-place-building-01",
   "k.words/shards/to"
  ],
+ "toulmin1958": [
+  "k.genres/shards/sources"
+ ],
  "toupee": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-t",
@@ -93404,6 +93836,7 @@
   "k.words/shards/tr"
  ],
  "transition": [
+  "k.genres/shards/moves",
   "k.words/shards/tr"
  ],
  "translate": [
@@ -94583,6 +95016,10 @@
   "k.actions/shards/actions-move",
   "k.words/shards/tu"
  ],
+ "turning point": [
+  "k.genres/shards/moves",
+  "k.genres/shards/story"
+ ],
  "turnip": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
@@ -94899,6 +95336,9 @@
  "type of": [
   "k.kinds/schema.sop",
   "k.words/schema.sop"
+ ],
+ "type of text": [
+  "k.genres/schema.sop"
  ],
  "typewriter": [
   "k.attributes/shards/drawn-hand",
@@ -95443,6 +95883,7 @@
  ],
  "unit": [
   "k.attributes/shards/aspects",
+  "k.genres/schema.sop",
   "k.time/schema.sop",
   "k.units/schema.sop",
   "k.units/shards/measures",
@@ -95497,6 +95938,7 @@
   "k.geo/shards/psys2-countries"
  ],
  "units": [
+  "k.genres/schema.sop",
   "k.units/schema.sop"
  ],
  "unity": [
@@ -97257,6 +97699,12 @@
  ],
  "vocabulary": [
   "k.words/shards/vo"
+ ],
+ "vocabulary band": [
+  "k.genres/schema.sop"
+ ],
+ "vocabulary_band": [
+  "k.units/shards/measures"
  ],
  "vocal": [
   "k.words/shards/vo"
@@ -100470,6 +100918,9 @@
   "k.people/schema.sop",
   "k.words/shards/wo"
  ],
+ "work done": [
+  "k.genres/shards/report"
+ ],
  "work gloves": [
   "k.wearables/shards/wearables"
  ],
@@ -101036,6 +101487,9 @@
  "yang": [
   "k.words/shards/ya"
  ],
+ "yangallison2003": [
+  "k.genres/shards/sources"
+ ],
  "yangon": [
   "k.geo/shards/asia"
  ],
@@ -101142,6 +101596,7 @@
  ],
  "year": [
   "k.attributes/shards/same-y",
+  "k.genres/schema.sop",
   "k.interest/schema.sop",
   "k.space/schema.sop",
   "k.time/shards/calendar",

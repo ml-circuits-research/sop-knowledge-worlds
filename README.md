@@ -93,6 +93,12 @@ number far from its kind's typical range, a question it opens, concreteness, rel
 repetition, the obvious, a list without a point), with weight ranges, combined as novelty x coping x relevance -
 penalty after Silvia's appraisal structure of interest; 23 published works in `docs/worlds/k.interest/WORLD.md`.
 
+Block "15:00" item 1 (third worker): `k.genres`, document types as structure, moves and register: a scientific article
+(IMRaD, CARS moves of the introduction), a presentation, an essay (Hyland's stages, Toulmin's rebuttal), a story
+(Freytag, Labov and Waletzky) and a report (ANSI/NISO Z39.18) as 26 parts in order with counts and 72 steps over 43
+rhetorical moves, and 5 registers (person, tense, voice, sentence length, vocabulary band, what each allows), with 24
+published works in `docs/worlds/k.genres/WORLD.md`; read by the library's `std.compose`.
+
 Block "13:00" (first worker): `w.lang.ro`, a first draft of Romanian as a language world in the library's `std.morph`
 notation: 44 paradigm classes with inheritance, 341 cells, irregulars, folds, clitics, closed classes and three reply
 templates (936 wires), with an external dictionary of 255 lemmas (`dictionary/<letter>.tsv`, 14.8 kB) joined to k.words

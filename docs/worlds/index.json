@@ -1,5 +1,5 @@
 {
- "version": "5638001de784",
+ "version": "c6c81540d94f",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -13786,6 +13786,297 @@
       "sweet potato",
       "tomato",
       "turnip"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.genres",
+   "version": "1",
+   "schema": "k.genres/schema.sop",
+   "exports": [
+    "k.genres.genre",
+    "k.genres.move",
+    "k.genres.part",
+    "k.genres.register",
+    "k.genres.source",
+    "k.genres.step"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.genres/shards/essay",
+     "path": "k.genres/shards/essay.sop",
+     "wires": 20,
+     "bytes": 5248,
+     "keys": [
+      "argument",
+      "conclude",
+      "conclusion",
+      "counterargument",
+      "essay",
+      "generalise",
+      "give evidence",
+      "give example",
+      "introduce topic",
+      "introduction",
+      "outline structure",
+      "raise a question",
+      "rebut",
+      "restate thesis",
+      "state claim",
+      "state thesis",
+      "summarize",
+      "surprising fact"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/moves",
+     "path": "k.genres/shards/moves.sop",
+     "wires": 43,
+     "bytes": 9085,
+     "keys": [
+      "announce findings",
+      "attempt",
+      "claim centrality",
+      "compare",
+      "complicate",
+      "conclude",
+      "counter-claim",
+      "counterargument",
+      "define",
+      "describe method",
+      "end",
+      "evaluate",
+      "generalise",
+      "give evidence",
+      "give example",
+      "indicate a gap",
+      "interpret result",
+      "introduce character",
+      "introduce topic",
+      "invite questions",
+      "next step",
+      "outline structure",
+      "raise a question",
+      "rebut",
+      "recommend",
+      "report action",
+      "report problem",
+      "report result",
+      "resolve",
+      "restate thesis",
+      "review previous work",
+      "set the scene",
+      "state claim",
+      "state goal",
+      "state limitation",
+      "state purpose",
+      "state takeaway",
+      "state thesis",
+      "summarize",
+      "surprising fact",
+      "thank audience",
+      "transition",
+      "turning point"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/presentation",
+     "path": "k.genres/shards/presentation.sop",
+     "wires": 19,
+     "bytes": 4613,
+     "keys": [
+      "agenda",
+      "closing",
+      "compare",
+      "conclude",
+      "give evidence",
+      "give example",
+      "introduce topic",
+      "invite questions",
+      "outline structure",
+      "point",
+      "presentation",
+      "state claim",
+      "state takeaway",
+      "summarize",
+      "summary",
+      "surprising fact",
+      "thank audience",
+      "title"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/registers",
+     "path": "k.genres/shards/registers.sop",
+     "wires": 5,
+     "bytes": 4078,
+     "keys": [
+      "essay",
+      "narrative",
+      "presentation",
+      "report",
+      "scientific"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/report",
+     "path": "k.genres/shards/report.sop",
+     "wires": 16,
+     "bytes": 3871,
+     "keys": [
+      "compare",
+      "introduce topic",
+      "introduction",
+      "next step",
+      "next steps",
+      "problems",
+      "report",
+      "report action",
+      "report problem",
+      "report result",
+      "results",
+      "state purpose",
+      "summarize",
+      "summary",
+      "work done"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/scientific-article",
+     "path": "k.genres/shards/scientific-article.sop",
+     "wires": 35,
+     "bytes": 9049,
+     "keys": [
+      "abstract",
+      "announce findings",
+      "claim centrality",
+      "compare",
+      "conclude",
+      "conclusion",
+      "counter-claim",
+      "describe method",
+      "discussion",
+      "generalise",
+      "indicate a gap",
+      "interpret result",
+      "introduce topic",
+      "introduction",
+      "methods",
+      "outline structure",
+      "raise a question",
+      "recommend",
+      "report result",
+      "results",
+      "review previous work",
+      "scientific article",
+      "state limitation",
+      "state purpose",
+      "summarize",
+      "surprising fact"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/sources",
+     "path": "k.genres/shards/sources.sop",
+     "wires": 24,
+     "bytes": 10784,
+     "keys": [
+      "alley2013",
+      "alleyneeley2005",
+      "apa2020",
+      "aristotle",
+      "biberconrad2009",
+      "cowan2001",
+      "cutts2013",
+      "flesch1948",
+      "freytag1863",
+      "hyland1990",
+      "hyland1998",
+      "hyland2000",
+      "hyland2005",
+      "labovwaletzky1967",
+      "mandlerjohnson1977",
+      "mayer2009",
+      "niso2005",
+      "sollaci2004",
+      "steinglenn1979",
+      "swales1990",
+      "swales2004",
+      "swalesfeak2012",
+      "toulmin1958",
+      "yangallison2003"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/story",
+     "path": "k.genres/shards/story.sop",
+     "wires": 18,
+     "bytes": 4523,
+     "keys": [
+      "attempt",
+      "climax",
+      "complicate",
+      "complication",
+      "end",
+      "ending",
+      "evaluate",
+      "introduce character",
+      "orientation",
+      "resolution",
+      "resolve",
+      "set the scene",
+      "state goal",
+      "story",
+      "turning point"
      ],
      "sources": [
       "hand-core-1"
@@ -37205,8 +37496,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 209,
-     "bytes": 29391,
+     "wires": 222,
+     "bytes": 31247,
      "keys": [
       "after",
       "age_years_about",
@@ -37287,6 +37578,7 @@
       "k.commonsense",
       "k.drawing",
       "k.faces",
+      "k.genres",
       "k.geo",
       "k.interest",
       "k.layouts",
@@ -37338,6 +37630,8 @@
       "order",
       "ordered",
       "ordinal",
+      "paragraph_max",
+      "paragraph_min",
       "part",
       "part_of_day",
       "peak_at",
@@ -37350,6 +37644,7 @@
       "pron",
       "range",
       "rank",
+      "register",
       "repeat_max",
       "repeat_min",
       "river",
@@ -37359,6 +37654,9 @@
       "sea",
       "season",
       "sense",
+      "sentence_max",
+      "sentence_min",
+      "sentence_typical",
       "set",
       "shade",
       "shape",
@@ -37383,6 +37681,7 @@
       "value",
       "value_about",
       "verb",
+      "vocabulary_band",
       "w",
       "w.lang.en",
       "w.lang.ro",

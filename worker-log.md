@@ -3900,3 +3900,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Checked before the push: the 8 test files of the build, the catalog and the joining worlds pass (catalog and derived
   were killed for memory when run in parallel beside two other workers' suites; alone 8 and 4 pass). The full run
   follows the push.
+## 2026-11-14 — third worker: k.genres, document types as structure, moves and register (blocks "15:00" item 1, "17:05")
+
+- **World** (`docs/worlds/k.genres`, generator `tools/genres-core.mjs`, `hand-core 1`, CC0): schema (6 types: source,
+  move, register, genre, part, step) and eight shards: `sources` (24 works), `moves` (43 rhetorical moves with what a
+  composer fills each with: fact, facts, outline, question, story, topic, none), `registers` (5), and one per genre
+  (`scientific-article`, `presentation`, `essay`, `story`, `report`): 26 parts in order with counts, 72 steps.
+  160 shard wires, 51 kB; 0 warnings.
+- **Format:** a genre = parts in order (`n`, `min`..`max` times; `heading`, slide `layout`, `tense` override) and per
+  part steps in order (`n`, a `move`, `min`..`max` sentences; several steps at one `n` are alternatives: CARS Move 2
+  indicate a gap / raise a question / counter-claim); a register per genre: person (+ also), tense, passive, sentence
+  length min/typical/max in words, sentences per paragraph, vocabulary band 1-5, formality, and booleans for
+  contractions, hedging, citations, units, definitions, direct speech, questions. The names are those w.document
+  (first worker) uses for `genre`, `register`, `part` and sentence `move`.
+- **Sources:** IMRaD (Sollaci and Pereira 2004; APA 2020), Swales' CARS (1990, 2004), Hyland's abstract moves (2000),
+  hedging (1998), metadiscourse (2005) and essay stages (1990), Toulmin (1958), Yang and Allison (2003), Swales and
+  Feak (2012), Alley (2013), Alley and Neeley (2005), Mayer (2009), Cowan (2001), ANSI/NISO Z39.18, Labov and
+  Waletzky (1967), Freytag (1863), Aristotle, Mandler and Johnson (1977), Stein and Glenn (1979), Biber and Conrad
+  (2009), Flesch (1948), Cutts (2013). Every number is marked `own`.
+- **Integration case** (`tests/k.genres.test.mjs`, 7 tests): hand-traced shortest outline per genre; 1,000 seeded
+  outlines per genre all satisfy the structure (parts in order within counts, every required place made, sentences
+  within counts); distinct outlines of 1,000: scientific article 1,000, presentation 999, essay 981, story 589,
+  report 687. Reference reading `outline(facts, genre, rnd)` (twenty lines).
