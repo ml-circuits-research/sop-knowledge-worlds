@@ -4962,8 +4962,7 @@
   "k.values/shards/scales",
   "k.words/shards/am",
   "k.words/shards/frequency-a",
-  "w.chart/schema.sop",
-  "w.list/schema.sop"
+  "w.chart/schema.sop"
  ],
  "amount_about": [
   "k.attributes/shards/narration",
@@ -12133,7 +12132,8 @@
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-b",
   "k.words/shards/ba",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.list/schema.sop"
  ],
  "basketball": [
   "k.attributes/shards/drawn-noto",
@@ -19475,8 +19475,10 @@
   "k.animals/shards/birds"
  ],
  "budget": [
+  "k.attributes/shards/typical",
   "k.words/shards/bu",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.list/schema.sop"
  ],
  "budgie": [
   "k.animals/shards/birds",
@@ -24102,6 +24104,7 @@
  "cash": [
   "k.words/shards/ca",
   "k.words/shards/frequency-c",
+  "w.list/schema.sop",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-money-02"
  ],
@@ -32553,6 +32556,7 @@
   "k.attributes/schema.sop",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c",
+  "w.list/schema.sop",
   "k.objects/shards/noto-money-01"
  ],
  "costa": [
@@ -32578,7 +32582,8 @@
  "costs": [
   "k.attributes/schema.sop",
   "k.words/shards/co-2",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.list/schema.sop"
  ],
  "costume": [
   "k.objects/shards/mulberry-clothes-sport-01",
@@ -34872,6 +34877,7 @@
   "k.units/shards/measures",
   "k.words/shards/cu",
   "k.words/shards/frequency-c",
+  "w.list/schema.sop",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-money-02"
  ],
@@ -41376,7 +41382,6 @@
   "k.objects/shards/noto-medical-01"
  ],
  "done": [
-  "k.attributes/shards/typical",
   "k.procedures/shards/compose",
   "k.procedures/shards/tasks",
   "k.words/shards/do",
@@ -42392,6 +42397,7 @@
   "k.objects/shards/noto-drink-02",
   "k.words/shards/dr",
   "k.words/shards/frequency-d",
+  "w.list/schema.sop",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-drink-type-03",
@@ -44740,6 +44746,7 @@
   "k.animals/schema.sop",
   "k.words/shards/ea",
   "k.words/shards/frequency-e",
+  "w.list/schema.sop",
   "k.objects/shards/noto-dishware-01",
   "k.objects/shards/noto-food-prepared-02"
  ],
@@ -53716,6 +53723,7 @@
   "k.objects/shards/noto-food-prepared-04",
   "k.words/shards/fo",
   "k.words/shards/frequency-f",
+  "w.list/schema.sop",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/mulberry-celebration-item-01",
   "k.objects/shards/mulberry-celebration-item-03",
@@ -58289,7 +58297,8 @@
  ],
  "gave": [
   "k.actions/shards/actions-hands",
-  "k.words/shards/gi"
+  "k.words/shards/gi",
+  "w.list/schema.sop"
  ],
  "gavel": [
   "k.attributes/shards/drawn-hand",
@@ -59470,7 +59479,8 @@
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-send",
   "k.words/shards/frequency-g",
-  "k.words/shards/gi"
+  "k.words/shards/gi",
+  "w.list/schema.sop"
  ],
  "give a hand": [
   "k.actions/shards/actions-body-social-nature"
@@ -61746,6 +61756,9 @@
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
+ "grocery list": [
+  "w.list/schema.sop"
+ ],
  "grocery store": [
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
@@ -63873,7 +63886,8 @@
  ],
  "hand over": [
   "k.actions/shards/actions-hands",
-  "k.actions/shards/verbs-send"
+  "k.actions/shards/verbs-send",
+  "w.list/schema.sop"
  ],
  "hand over money": [
   "k.actions/shards/actions-body-social-nature"
@@ -64803,7 +64817,8 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
-  "w.lang.en/shards/grammar"
+  "w.lang.en/shards/grammar",
+  "w.list/schema.sop"
  ],
  "have a chat": [
   "k.actions/shards/actions-mind-talk"
@@ -76772,6 +76787,7 @@
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.face/schema.sop",
+  "w.list/schema.sop",
   "w.map/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -80068,6 +80084,7 @@
   "k.words/shards/frequency-l",
   "k.words/shards/le",
   "w.face/schema.sop",
+  "w.list/schema.sop",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/openmoji-technology-01"
  ],
@@ -90805,6 +90822,7 @@
   "k.units/schema.sop",
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
+  "w.list/schema.sop",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-event-02",
   "k.objects/shards/noto-money-01",
@@ -97022,7 +97040,8 @@
   "k.kinds/shards/wordnet-2",
   "k.objects/schema.sop",
   "k.words/shards/frequency-o",
-  "k.words/shards/ob"
+  "k.words/shards/ob",
+  "w.list/schema.sop"
  ],
  "object by": [
   "k.kinds/schema.sop"
@@ -98220,6 +98239,7 @@
   "k.motion/shards/mouth",
   "k.words/shards/frequency-o",
   "k.words/shards/op",
+  "w.list/schema.sop",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-mail-02",
@@ -99934,6 +99954,7 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-p",
   "k.words/shards/pa",
+  "w.list/schema.sop",
   "k.objects/shards/noto-money-01"
  ],
  "paige": [
@@ -101765,6 +101786,7 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-p",
   "k.words/shards/pa",
+  "w.list/schema.sop",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-money-02"
  ],
@@ -108137,7 +108159,8 @@
   "k.values/shards/scales",
   "k.words/shards/frequency-p",
   "k.words/shards/pr",
-  "w.lang.en/shards/hand-grammar"
+  "w.lang.en/shards/hand-grammar",
+  "w.list/schema.sop"
  ],
  "price class": [
   "k.attributes/schema.sop"
@@ -108147,6 +108170,9 @@
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-attributes"
+ ],
+ "priced": [
+  "w.list/schema.sop"
  ],
  "pricey": [
   "k.values/shards/scales"
@@ -123793,6 +123819,7 @@
  "shopping": [
   "k.words/shards/frequency-s",
   "k.words/shards/sh",
+  "w.list/schema.sop",
   "k.objects/shards/noto-clothing-01",
   "k.objects/shards/noto-clothing-02",
   "k.objects/shards/noto-clothing-03",
@@ -123809,6 +123836,9 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-s"
+ ],
+ "shopping basket": [
+  "w.list/schema.sop"
  ],
  "shopping cart": [
   "k.attributes/shards/drawn-noto",
@@ -127591,6 +127621,7 @@
   "k.procedures/shards/from-knowledge",
   "k.words/shards/frequency-s",
   "k.words/shards/so",
+  "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
  "sorting": [
@@ -130104,6 +130135,9 @@
  "start from": [
   "w.face/schema.sop"
  ],
+ "start with": [
+  "w.list/schema.sop"
+ ],
  "start_at": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-interest",
@@ -130288,8 +130322,10 @@
   "k.words/shards/st"
  ],
  "status": [
+  "k.attributes/shards/typical",
   "k.words/shards/frequency-s",
-  "k.words/shards/st"
+  "k.words/shards/st",
+  "w.list/schema.sop"
  ],
  "status report": [
   "k.genres/shards/report"
@@ -131848,7 +131884,8 @@
  ],
  "stuff": [
   "k.words/shards/frequency-s",
-  "k.words/shards/st"
+  "k.words/shards/st",
+  "w.list/schema.sop"
  ],
  "stuffed": [
   "k.objects/shards/noto-food-prepared-03",
@@ -135200,12 +135237,10 @@
  "task": [
   "k.procedures/schema.sop",
   "k.words/shards/frequency-t",
-  "k.words/shards/ta",
-  "w.list/schema.sop"
+  "k.words/shards/ta"
  ],
  "tasks": [
-  "k.procedures/schema.sop",
-  "w.list/schema.sop"
+  "k.procedures/schema.sop"
  ],
  "tasman sea": [
   "k.geo/shards/seas"
@@ -136008,6 +136043,9 @@
  "tender": [
   "k.words/shards/frequency-t",
   "k.words/shards/te"
+ ],
+ "tendered": [
+  "w.list/schema.sop"
  ],
  "tenderness": [
   "k.words/shards/frequency-t",
@@ -137874,7 +137912,8 @@
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.words/shards/frequency-t",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.list/schema.sop"
  ],
  "think": [
   "k.actions/shards/actions-mind-talk",
@@ -139299,6 +139338,9 @@
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-joins"
  ],
+ "to-do": [
+  "w.list/schema.sop"
+ ],
  "to-do list": [
   "w.list/schema.sop"
  ],
@@ -139408,6 +139450,9 @@
  ],
  "toddlers": [
   "k.people/shards/kinds"
+ ],
+ "todo": [
+  "w.list/schema.sop"
  ],
  "todo list": [
   "w.list/schema.sop"
@@ -143245,6 +143290,7 @@
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.face/schema.sop",
+  "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
  "type of": [
@@ -144021,6 +144067,7 @@
   "k.words/shards/frequency-u",
   "k.words/shards/un",
   "w.chart/schema.sop",
+  "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
  "unit plural": [
@@ -144084,7 +144131,8 @@
   "k.genres/schema.sop",
   "k.kinds/shards/relations-genres",
   "k.units/schema.sop",
-  "w.chart/schema.sop"
+  "w.chart/schema.sop",
+  "w.list/schema.sop"
  ],
  "unity": [
   "k.words/shards/frequency-u",
@@ -147565,7 +147613,8 @@
   "k.parts/shards/usual",
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
-  "k.words/shards/wa"
+  "k.words/shards/wa",
+  "w.list/schema.sop"
  ],
  "wallis and futuna": [
   "k.geo/shards/oceania"

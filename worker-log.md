@@ -5424,3 +5424,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Test (tests/test-run.test.mjs, +1): `verdict` on a killed, an empty, a failing and a passing record, and `runFiles`
   on three real files in a temp folder (one kills itself with SIGKILL, one has no test, one passes): the first two FAIL
   as "not run", the third is ok, and the summary names the files not run.
+
+## 2026-11-15 — fourth worker: w.list version 3, a shop list with prices and money (reviewer 09:20, PSys2 Q18 K1)
+
+- Real rows: r0598, r0599, r0622-r0627 (PSys2 real set 2026-11-15: "I want a puzzle and I pay 10 lei. What is the
+  change?", "how much does a pencil cost?"). PSys2's audit had missed that `w.list` exists; extended, not doubled.
+- **Schema change for hosts (w.list version 3):** a list has `sort` (shopping, to-do, any), `budget`, `tendered` (the
+  amount tendered at the till) and `currency`; an entry (`w.list.item`, schema.org's ListItem) has `food` (k.food by
+  name), `object` (k.objects by name), `quantity` (now a number), `unit` (k.units unit by name), `price` (of one, in
+  `currency`, a k.units currency by ISO 4217 code) and `status` (open, done) in place of the boolean `done`. Five
+  declared joins (`type= by=`; open while the target world is not loaded). The total, what is left and the change are
+  computed (PSys2 Q18 L3), never stored; prices stay an application's data. "task"/"tasks" left the entry's words
+  (they go to w.tasks, K2).
+- Schema: 45 wires, 8,180 bytes, loads with std.acts with no error and no warning. tools/ranges-core.mjs: typicality
+  of `status`, `price`, `unit`, `sort`, `budget` (typical.sop 146 wires). Build: index.json, vocab, JOINS-REPORT
+  (declared joins 196 in 31 worlds, 0 broken).
+- Tests (tests/w.schemas.test.mjs, 16 pass): the list session on status and a numeric quantity; a new shop session
+  (budget 30 RON, 2 pencils at 3 and a ball at 5, tendered 20: change 9, left 19; refusals: a sort that is not one, a
+  negative price, "a bag" as a quantity) and the joins' names checked against k.objects, k.food and k.units facts.

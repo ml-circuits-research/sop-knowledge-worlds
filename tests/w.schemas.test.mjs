@@ -54,12 +54,13 @@ test('a host finds a schema by name: the words of the vocabulary lead to the sch
 
 test('a session with a list: items are made, ticked off, picked, copied and removed; a wrong act is refused', () => {
   const w = actsWorld(['w.list']), act = session(w);
-  assert.equal(act('make', { kind: 'w.list.list', name: 'shopping' }).result.thing, 'w_list_list1');
-  assert.equal(act('make', { kind: 'w.list.item', text: 'milk', list: '$w_list_list1', n: 1, quantity: 'a litre' }).ok, true);
+  assert.equal(act('make', { kind: 'w.list.list', name: 'shopping', sort: 'shopping' }).result.thing, 'w_list_list1');
+  assert.equal(act('make', { kind: 'w.list.item', text: 'milk', food: 'milk', list: '$w_list_list1', n: 1, quantity: 1, unit: 'litre' }).ok, true);
   assert.equal(act('make', { kind: 'w.list.item', text: 'bread', list: '$w_list_list1', n: 2 }).ok, true);
-  assert.equal(act('ask', { thing: 'w.list.item', nth: 2, attr: 'done' }).result.value, 'false');
-  assert.equal(act('change', { thing: 'w.list.item', nth: 1, attr: 'done', value: 'true' }).ok, true);
-  assert.deepEqual(act('pick', { kind: 'w.list.item', done: 'false' }).result.things, ['w_list_item2']);
+  assert.equal(act('ask', { thing: 'w.list.item', nth: 2, attr: 'status' }).result.value, 'open');
+  assert.equal(act('change', { thing: 'w.list.item', nth: 1, attr: 'status', value: 'done' }).ok, true);
+  assert.deepEqual(act('pick', { kind: 'w.list.item', status: 'open' }).result.things, ['w_list_item2']);
+  assert.equal(act('change', { thing: 'w.list.item', nth: 1, attr: 'status', value: 'bought' }).ok, false, 'open or done');
   assert.equal(act('copy', { thing: 'w_list_item2' }).ok, true);
   assert.equal(act('undo', {}).ok, true);
   assert.deepEqual(act('pick', { kind: 'w.list.item' }).result.things.length, 2);
@@ -72,10 +73,37 @@ test('a session with a list: items are made, ticked off, picked, copied and remo
   // `amount` is the act's own argument (how many to make), not a key of an item: two items are made at once.
   assert.deepEqual(act('make', { kind: 'w.list.item', text: 'egg', list: '$w_list_list1', amount: 2 }).result.things.length, 2);
   assert.equal(act('undo', {}).ok, true);
-  // Refused: an item has no place in a picture; a list that does not exist.
+  // Refused: an item has no place in a picture; a list that does not exist; a quantity that is not a number.
   assert.equal(act('place', { thing: 'w_list_item1', x: 3 }).ok, false);
   assert.equal(act('make', { kind: 'w.list.item', text: 'x', list: '$w_seating_table1' }).ok, false);
+  assert.equal(act('make', { kind: 'w.list.item', text: 'rice', quantity: 'a bag' }).ok, false);
   assert.deepEqual(act('pick', { kind: 'w.list.item' }).result.things.length, 2);
+});
+
+test('w.list (PSys2 Q18 K1): a shop list with prices in lei, a budget and the money handed over; the joins to k.food, k.objects and k.units name real facts', () => {
+  const w = actsWorld(['w.list']), act = session(w);
+  // "I start with 30 lei": the budget of a shopping list in RON (lei is a word of k.units for RON)
+  assert.equal(act('make', { kind: 'w.list.list', name: 'shop', sort: 'shopping', budget: 30, currency: 'RON' }).ok, true);
+  assert.equal(act('make', { kind: 'w.list.list', name: 'chores', sort: 'chores' }).ok, false, 'shopping, to-do or any');
+  // "I want 2 pencils", "the pencil is 3 lei"; "a ball", 5 lei
+  assert.equal(act('make', { kind: 'w.list.item', text: 'pencil', object: 'pencil', quantity: 2, price: 3, currency: 'RON', list: '$w_list_list1', n: 1 }).ok, true);
+  assert.equal(act('make', { kind: 'w.list.item', text: 'ball', object: 'ball', quantity: 1, price: 5, currency: 'RON', list: '$w_list_list1', n: 2 }).ok, true);
+  assert.equal(act('ask', { thing: 'w_list_item1', attr: 'price' }).result.value, '3');
+  assert.equal(act('change', { thing: 'w_list_item1', attr: 'price', value: -1 }).ok, false, 'a price is not below 0');
+  // "I pay 20 lei": the money handed over; the change (20 - 2x3 - 5 = 9) is the library's sum, not a key
+  assert.equal(act('change', { thing: 'w_list_list1', attr: 'tendered', value: 20 }).ok, true);
+  const total = w.ofType('w.list.item').reduce((s, x) => s + Number(x.attrs.quantity[0]) * Number(x.attrs.price[0]), 0);
+  assert.equal(Number(w.get('w_list_list1').attrs.tendered[0]) - total, 9);
+  assert.equal(Number(w.get('w_list_list1').attrs.budget[0]) - total, 19);
+  // the joins: the names used are facts of k.objects, k.food and k.units (a host checks them when it loads those worlds)
+  const names = (world, type, key) => new Set(facts(world).filter((x) => x.type === type).map((x) => tok(x.attrs[key]?.[0])));
+  assert.ok(names('k.objects', 'k.objects.object', 'name').has('pencil') && names('k.objects', 'k.objects.object', 'name').has('ball'));
+  assert.ok(names('k.food', 'k.food.food', 'name').has('milk'));
+  assert.ok(names('k.units', 'k.units.currency', 'code').has('RON') && names('k.units', 'k.units.unit', 'name').has('litre'));
+  const s = parse(schemas.find((x) => x.id === 'w.list').schemaText).filter((x) => x.type === 'core.slot');
+  const joins = Object.fromEntries(s.filter((x) => x.attrs.by).map((x) => [`${x.attrs.of[0]}.${x.attrs.key[0]}`, `${x.attrs.type[0]} by ${x.attrs.by[0]}`]));
+  assert.deepEqual(joins, { 'w.list.list.currency': 'k.units.currency by code', 'w.list.item.food': 'k.food.food by name', 'w.list.item.object': 'k.objects.object by name',
+    'w.list.item.unit': 'k.units.unit by name', 'w.list.item.currency': 'k.units.currency by code' });
 });
 
 test('a session with a seating plan: a table, seats, guests on seats, a link between guests, a shape that is not allowed', () => {

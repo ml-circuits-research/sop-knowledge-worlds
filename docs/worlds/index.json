@@ -1,5 +1,5 @@
 {
- "version": "f8a76f63db72",
+ "version": "a31523a34446",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -11177,8 +11177,8 @@
     {
      "id": "k.attributes/shards/typical",
      "path": "k.attributes/shards/typical.sop",
-     "wires": 142,
-     "bytes": 18311,
+     "wires": 146,
+     "bytes": 18829,
      "keys": [
       "about",
       "age",
@@ -11187,6 +11187,7 @@
       "area",
       "area_about",
       "at",
+      "budget",
       "building",
       "can",
       "capital",
@@ -11201,7 +11202,6 @@
       "country",
       "covering",
       "device",
-      "done",
       "drink",
       "eats",
       "elevation",
@@ -11251,6 +11251,7 @@
       "sort",
       "sound",
       "speed",
+      "status",
       "style",
       "table",
       "text",
@@ -88816,17 +88817,20 @@
   },
   {
    "id": "w.list",
-   "version": "2",
+   "version": "3",
    "schema": "w.list/schema.sop",
-   "about": "lists of items in order, which can be ticked off",
+   "about": "lists of entries in order, which can be ticked off",
    "names": [
     "list",
     "lists",
     "shopping list",
     "to-do list",
     "todo list",
+    "grocery list",
     "checklist",
-    "packing list"
+    "packing list",
+    "basket",
+    "shopping basket"
    ],
    "kinds": [
     {
@@ -88841,12 +88845,17 @@
      ],
      "attributes": [
       "name",
-      "about"
+      "about",
+      "sort",
+      "budget",
+      "tendered",
+      "currency"
      ],
      "words": [
       "list",
       "lists",
-      "checklist"
+      "checklist",
+      "basket"
      ]
     },
     {
@@ -88861,10 +88870,15 @@
      ],
      "attributes": [
       "text",
+      "food",
+      "object",
       "list",
       "n",
-      "done",
       "quantity",
+      "unit",
+      "price",
+      "currency",
+      "status",
       "note"
      ],
      "words": [
@@ -88873,13 +88887,13 @@
       "entry",
       "entries",
       "thing",
-      "task",
-      "tasks"
+      "things",
+      "stuff"
      ]
     }
    ],
-   "wires": 27,
-   "bytes": 4147,
+   "wires": 45,
+   "bytes": 8180,
    "sources": [
     "hand-core-1"
    ],
