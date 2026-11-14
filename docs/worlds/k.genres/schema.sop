@@ -36,7 +36,7 @@
 @k.genres.move.name core.slot of=k.genres.move key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.genres.move.about core.slot of=k.genres.move key=about required=true kind=string core.source="hand-core 1"
 @k.genres.move.takes core.slot of=k.genres.move key=takes required=true enum=fact enum=facts enum=outline enum=question enum=story enum=topic enum=none core.source="hand-core 1"
-@k.genres.move.source core.slot of=k.genres.move key=source many=true kind=atom core.source="hand-core 1"
+@k.genres.move.source core.slot of=k.genres.move key=source many=true kind=atom type=k.genres.source by=name core.source="hand-core 1"
 @k.genres.move.own core.slot of=k.genres.move key=own kind=string core.source="hand-core 1"
 
 # A register: how a genre is written. `person` the grammatical person the writer takes by default ("first plural":
@@ -69,7 +69,7 @@
 @k.genres.register.definitions core.slot of=k.genres.register key=definitions required=true kind=boolean core.source="hand-core 1"
 @k.genres.register.direct_speech core.slot of=k.genres.register key=direct_speech required=true kind=boolean core.source="hand-core 1"
 @k.genres.register.questions core.slot of=k.genres.register key=questions required=true kind=boolean core.source="hand-core 1"
-@k.genres.register.source core.slot of=k.genres.register key=source many=true kind=atom core.source="hand-core 1"
+@k.genres.register.source core.slot of=k.genres.register key=source many=true kind=atom type=k.genres.source by=name core.source="hand-core 1"
 @k.genres.register.own core.slot of=k.genres.register key=own required=true kind=string core.source="hand-core 1"
 
 # A genre (a document type). `register` names its register; `unit` the w.document kind its parts are written as
@@ -78,10 +78,10 @@
 @k.genres.genre core.type of=k.genres.genre shared=true closed=true core.source="hand-core 1"
 @k.genres.genre.name core.slot of=k.genres.genre key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.genres.genre.about core.slot of=k.genres.genre key=about required=true kind=string core.source="hand-core 1"
-@k.genres.genre.register core.slot of=k.genres.genre key=register required=true kind=atom kind=string core.source="hand-core 1"
+@k.genres.genre.register core.slot of=k.genres.genre key=register required=true kind=atom kind=string type=k.genres.register by=name core.source="hand-core 1"
 @k.genres.genre.unit core.slot of=k.genres.genre key=unit required=true enum=chapter enum=slide core.source="hand-core 1"
-@k.genres.genre.also_move core.slot of=k.genres.genre key=also_move many=true kind=atom kind=string core.source="hand-core 1"
-@k.genres.genre.source core.slot of=k.genres.genre key=source many=true kind=atom core.source="hand-core 1"
+@k.genres.genre.also_move core.slot of=k.genres.genre key=also_move many=true kind=atom kind=string type=k.genres.move by=name core.source="hand-core 1"
+@k.genres.genre.source core.slot of=k.genres.genre key=source many=true kind=atom type=k.genres.source by=name core.source="hand-core 1"
 @k.genres.genre.own core.slot of=k.genres.genre key=own kind=string core.source="hand-core 1"
 
 # A part of a genre (a chapter: the introduction of an article, the complication of a story; or a slide). `n` its
@@ -90,7 +90,7 @@
 # `layout` for a slide, the w.document slide layout (title, agenda, content, summary, closing); `tense` when it is
 # not the register's; `about`; `source` (many); `own`.
 @k.genres.part core.type of=k.genres.part shared=true closed=true core.source="hand-core 1"
-@k.genres.part.genre core.slot of=k.genres.part key=genre id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.genres.part.genre core.slot of=k.genres.part key=genre id=true required=true kind=atom kind=string type=k.genres.genre by=name core.source="hand-core 1"
 @k.genres.part.name core.slot of=k.genres.part key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.genres.part.n core.slot of=k.genres.part key=n required=true kind=integer min=1 max=50 core.source="hand-core 1"
 @k.genres.part.min core.slot of=k.genres.part key=min required=true kind=integer min=0 max=50 core.source="hand-core 1"
@@ -99,7 +99,7 @@
 @k.genres.part.layout core.slot of=k.genres.part key=layout enum=title enum=agenda enum=content enum=summary enum=closing core.source="hand-core 1"
 @k.genres.part.tense core.slot of=k.genres.part key=tense enum=present enum=past enum=future core.source="hand-core 1"
 @k.genres.part.about core.slot of=k.genres.part key=about required=true kind=string core.source="hand-core 1"
-@k.genres.part.source core.slot of=k.genres.part key=source many=true kind=atom core.source="hand-core 1"
+@k.genres.part.source core.slot of=k.genres.part key=source many=true kind=atom type=k.genres.source by=name core.source="hand-core 1"
 @k.genres.part.own core.slot of=k.genres.part key=own kind=string core.source="hand-core 1"
 
 # A step of a part: at place `n` in the part (from 1), the move `move`, made by `min` to `max` sentences (0: it may
@@ -108,16 +108,16 @@
 # ("establishing a territory", Hyland's "thesis stage"); `tense` when it is not the part's or the register's;
 # `about`; `source` (many).
 @k.genres.step core.type of=k.genres.step shared=true closed=true core.source="hand-core 1"
-@k.genres.step.genre core.slot of=k.genres.step key=genre id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.genres.step.genre core.slot of=k.genres.step key=genre id=true required=true kind=atom kind=string type=k.genres.genre by=name core.source="hand-core 1"
 @k.genres.step.part core.slot of=k.genres.step key=part id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.genres.step.n core.slot of=k.genres.step key=n id=true required=true kind=integer min=1 max=50 core.source="hand-core 1"
-@k.genres.step.move core.slot of=k.genres.step key=move id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.genres.step.move core.slot of=k.genres.step key=move id=true required=true kind=atom kind=string type=k.genres.move by=name core.source="hand-core 1"
 @k.genres.step.min core.slot of=k.genres.step key=min required=true kind=integer min=0 max=50 core.source="hand-core 1"
 @k.genres.step.max core.slot of=k.genres.step key=max required=true kind=integer min=1 max=50 core.source="hand-core 1"
 @k.genres.step.stage core.slot of=k.genres.step key=stage kind=atom kind=string core.source="hand-core 1"
 @k.genres.step.tense core.slot of=k.genres.step key=tense enum=present enum=past enum=future core.source="hand-core 1"
 @k.genres.step.about core.slot of=k.genres.step key=about kind=string core.source="hand-core 1"
-@k.genres.step.source core.slot of=k.genres.step key=source many=true kind=atom core.source="hand-core 1"
+@k.genres.step.source core.slot of=k.genres.step key=source many=true kind=atom type=k.genres.source by=name core.source="hand-core 1"
 
 # Words for the types of this world.
 @k.genres.word.genre core.word text=genre text=genres text="document type" text="kind of text" text="type of text" means=k.genres.genre core.source="hand-core 1"

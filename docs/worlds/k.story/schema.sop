@@ -34,13 +34,13 @@
 @k.story.element.min core.slot of=k.story.element key=min required=true kind=integer min=0 max=10 core.source="hand-core 1"
 @k.story.element.max core.slot of=k.story.element key=max required=true kind=integer min=1 max=10 core.source="hand-core 1"
 @k.story.element.part core.slot of=k.story.element key=part required=true kind=atom kind=string core.source="hand-core 1"
-@k.story.element.move core.slot of=k.story.element key=move required=true kind=atom kind=string core.source="hand-core 1"
+@k.story.element.move core.slot of=k.story.element key=move required=true kind=atom kind=string type=k.genres.move by=name core.source="hand-core 1"
 @k.story.element.fills core.slot of=k.story.element key=fills many=true kind=atom core.source="hand-core 1"
 @k.story.element.propp core.slot of=k.story.element key=propp kind=string core.source="hand-core 1"
 @k.story.element.grammar core.slot of=k.story.element key=grammar kind=string core.source="hand-core 1"
 @k.story.element.arc core.slot of=k.story.element key=arc kind=string core.source="hand-core 1"
 @k.story.element.about core.slot of=k.story.element key=about required=true kind=string core.source="hand-core 1"
-@k.story.element.source core.slot of=k.story.element key=source many=true kind=atom core.source="hand-core 1"
+@k.story.element.source core.slot of=k.story.element key=source many=true kind=atom type=k.story.source by=name core.source="hand-core 1"
 @k.story.element.own core.slot of=k.story.element key=own kind=string core.source="hand-core 1"
 
 # A kind of goal a protagonist can have. `act` the act of k.actions (k.actions.action) the goal is reached by: the
@@ -49,12 +49,12 @@
 # (one of the act's objects); `propp` the functions it corresponds to; `about`; `source` (many); `own`.
 @k.story.goal core.type of=k.story.goal shared=true closed=true core.source="hand-core 1"
 @k.story.goal.name core.slot of=k.story.goal key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.story.goal.act core.slot of=k.story.goal key=act required=true kind=atom kind=string core.source="hand-core 1"
+@k.story.goal.act core.slot of=k.story.goal key=act required=true kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
 @k.story.goal.target core.slot of=k.story.goal key=target required=true enum=place enum=thing enum=being core.source="hand-core 1"
 @k.story.goal.place_kind core.slot of=k.story.goal key=place_kind kind=atom core.source="hand-core 1"
 @k.story.goal.propp core.slot of=k.story.goal key=propp kind=string core.source="hand-core 1"
 @k.story.goal.about core.slot of=k.story.goal key=about required=true kind=string core.source="hand-core 1"
-@k.story.goal.source core.slot of=k.story.goal key=source many=true kind=atom core.source="hand-core 1"
+@k.story.goal.source core.slot of=k.story.goal key=source many=true kind=atom type=k.story.source by=name core.source="hand-core 1"
 @k.story.goal.own core.slot of=k.story.goal key=own kind=string core.source="hand-core 1"
 
 # An obstacle: a thing of the catalog (`thing`, the name of a k.scenes thing with a k.objects drawing: a river, a
@@ -64,12 +64,12 @@
 # things that let those acts be done (each one a `tool` of one of those acts in k.actions): what the protagonist
 # lacks and the helper has; `tried_by` (many) acts that are tried and fail; `about`; `source` (many); `own`.
 @k.story.obstacle core.type of=k.story.obstacle shared=true closed=true core.source="hand-core 1"
-@k.story.obstacle.thing core.slot of=k.story.obstacle key=thing id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.story.obstacle.blocks core.slot of=k.story.obstacle key=blocks id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.story.obstacle.thing core.slot of=k.story.obstacle key=thing id=true required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.story.obstacle.blocks core.slot of=k.story.obstacle key=blocks id=true required=true kind=atom kind=string type=k.story.goal by=name core.source="hand-core 1"
 @k.story.obstacle.how core.slot of=k.story.obstacle key=how required=true enum=between enum=across enum=guards enum=holds core.source="hand-core 1"
-@k.story.obstacle.overcome_by core.slot of=k.story.obstacle key=overcome_by many=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.story.obstacle.means core.slot of=k.story.obstacle key=means many=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.story.obstacle.tried_by core.slot of=k.story.obstacle key=tried_by many=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.story.obstacle.overcome_by core.slot of=k.story.obstacle key=overcome_by many=true required=true kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
+@k.story.obstacle.means core.slot of=k.story.obstacle key=means many=true required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.story.obstacle.tried_by core.slot of=k.story.obstacle key=tried_by many=true required=true kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
 @k.story.obstacle.about core.slot of=k.story.obstacle key=about required=true kind=string core.source="hand-core 1"
 @k.story.obstacle.source core.slot of=k.story.obstacle key=source many=true kind=atom core.source="hand-core 1"
 @k.story.obstacle.own core.slot of=k.story.obstacle key=own kind=string core.source="hand-core 1"
@@ -86,12 +86,12 @@
 # (a composer weights candidates that hold it). `about`; `source` (many); `own`.
 @k.story.constraint core.type of=k.story.constraint shared=true closed=true core.source="hand-core 1"
 @k.story.constraint.name core.slot of=k.story.constraint key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.story.constraint.element core.slot of=k.story.constraint key=element required=true kind=atom kind=string core.source="hand-core 1"
+@k.story.constraint.element core.slot of=k.story.constraint key=element required=true kind=atom kind=string type=k.story.element by=name core.source="hand-core 1"
 @k.story.constraint.relation core.slot of=k.story.constraint key=relation required=true enum=can enum=blocks enum=in enum=overcomes enum=lacks enum=has enum=differs enum=fails enum=before enum=gives enum=uses enum=reaches enum=fits enum=belongs core.source="hand-core 1"
-@k.story.constraint.other core.slot of=k.story.constraint key=other required=true kind=atom kind=string core.source="hand-core 1"
+@k.story.constraint.other core.slot of=k.story.constraint key=other required=true kind=atom kind=string type=k.story.element by=name core.source="hand-core 1"
 @k.story.constraint.strength core.slot of=k.story.constraint key=strength required=true enum=hard enum=soft core.source="hand-core 1"
 @k.story.constraint.about core.slot of=k.story.constraint key=about required=true kind=string core.source="hand-core 1"
-@k.story.constraint.source core.slot of=k.story.constraint key=source many=true kind=atom core.source="hand-core 1"
+@k.story.constraint.source core.slot of=k.story.constraint key=source many=true kind=atom type=k.story.source by=name core.source="hand-core 1"
 @k.story.constraint.own core.slot of=k.story.constraint key=own kind=string core.source="hand-core 1"
 
 # Words for the types of this world.

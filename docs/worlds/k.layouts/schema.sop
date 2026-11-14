@@ -26,13 +26,13 @@
 # arrangement, 0 to 100, x to the right and y down, where the arrangement has usual places (the sky of a landscape
 # is its upper half). The box of a pair is that of its left one. The boxes may overlap.
 @k.layouts.slot core.type of=k.layouts.slot shared=true closed=true core.source="hand-core 1"
-@k.layouts.slot.layout core.slot of=k.layouts.slot key=layout id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.layouts.slot.layout core.slot of=k.layouts.slot key=layout id=true required=true kind=atom kind=string type=k.layouts.layout by=name core.source="hand-core 1"
 @k.layouts.slot.name core.slot of=k.layouts.slot key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.layouts.slot.count core.slot of=k.layouts.slot key=count required=true enum=one enum=many core.source="hand-core 1"
 @k.layouts.slot.pair core.slot of=k.layouts.slot key=pair kind=boolean core.source="hand-core 1"
 @k.layouts.slot.optional core.slot of=k.layouts.slot key=optional kind=boolean core.source="hand-core 1"
 @k.layouts.slot.holds core.slot of=k.layouts.slot key=holds many=true kind=atom kind=string core.source="hand-core 1"
-@k.layouts.slot.arranged core.slot of=k.layouts.slot key=arranged kind=atom kind=string core.source="hand-core 1"
+@k.layouts.slot.arranged core.slot of=k.layouts.slot key=arranged kind=atom kind=string type=k.layouts.layout by=name core.source="hand-core 1"
 @k.layouts.slot.x core.slot of=k.layouts.slot key=x kind=number min=0 max=100 core.source="hand-core 1"
 @k.layouts.slot.y core.slot of=k.layouts.slot key=y kind=number min=0 max=100 core.source="hand-core 1"
 @k.layouts.slot.w core.slot of=k.layouts.slot key=w kind=number min=0 max=100 core.source="hand-core 1"
@@ -46,7 +46,7 @@
 # b. When `a` and `b` are the same place with many things, `among` says between which of them the relation holds:
 # `neighbours` (from each thing to the next, in order) or `all` (between any two).
 @k.layouts.relation core.type of=k.layouts.relation shared=true closed=true core.source="hand-core 1"
-@k.layouts.relation.layout core.slot of=k.layouts.relation key=layout id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.layouts.relation.layout core.slot of=k.layouts.relation key=layout id=true required=true kind=atom kind=string type=k.layouts.layout by=name core.source="hand-core 1"
 @k.layouts.relation.a core.slot of=k.layouts.relation key=a id=true required=true kind=atom core.source="hand-core 1"
 @k.layouts.relation.rel core.slot of=k.layouts.relation key=rel id=true required=true enum=left_of enum=above enum=inside enum=around enum=on enum=behind enum=beside enum=aligned_row enum=aligned_column enum=same_size enum=smaller_than enum=evenly_spaced enum=apart enum=joined_to core.source="hand-core 1"
 @k.layouts.relation.b core.slot of=k.layouts.relation key=b id=true required=true kind=atom core.source="hand-core 1"

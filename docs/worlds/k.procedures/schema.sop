@@ -30,7 +30,7 @@
 # `rel`: the relation the goal gives with a place (on, in, around). `needed=true`: without it the planner asks.
 # `default`: the filler when the goal does not say it.
 @k.procedures.goal core.type of=k.procedures.goal shared=true closed=true core.source="hand-core 1"
-@k.procedures.goal.method core.slot of=k.procedures.goal key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.goal.method core.slot of=k.procedures.goal key=method id=true required=true kind=atom kind=string type=k.procedures.method by=name core.source="hand-core 1"
 @k.procedures.goal.role core.slot of=k.procedures.goal key=role id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.procedures.goal.from core.slot of=k.procedures.goal key=from kind=atom core.source="hand-core 1"
 @k.procedures.goal.by core.slot of=k.procedures.goal key=by kind=atom core.source="hand-core 1"
@@ -58,7 +58,7 @@
 # planner solves the choices as one finite-domain problem and draws one solution with its seed, weighted by k.interest
 # (and by the soft matches); without a seed, the first solution in the order of the facts.
 @k.procedures.binding core.type of=k.procedures.binding shared=true closed=true core.source="hand-core 1"
-@k.procedures.binding.method core.slot of=k.procedures.binding key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.binding.method core.slot of=k.procedures.binding key=method id=true required=true kind=atom kind=string type=k.procedures.method by=name core.source="hand-core 1"
 @k.procedures.binding.name core.slot of=k.procedures.binding key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.procedures.binding.goal core.slot of=k.procedures.binding key=goal kind=atom kind=string core.source="hand-core 1"
 @k.procedures.binding.step core.slot of=k.procedures.binding key=step many=true kind=integer min=1 core.source="hand-core 1"
@@ -82,7 +82,7 @@
 # `soft=true`: the match is a preference, not a filter (a candidate that holds it weighs more); `n` tells apart
 # several matches on one key of one binding.
 @k.procedures.match core.type of=k.procedures.match shared=true closed=true core.source="hand-core 1"
-@k.procedures.match.method core.slot of=k.procedures.match key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.match.method core.slot of=k.procedures.match key=method id=true required=true kind=atom kind=string type=k.procedures.method by=name core.source="hand-core 1"
 @k.procedures.match.binding core.slot of=k.procedures.match key=binding id=true required=true kind=atom core.source="hand-core 1"
 @k.procedures.match.key core.slot of=k.procedures.match key=key id=true required=true kind=atom core.source="hand-core 1"
 @k.procedures.match.n core.slot of=k.procedures.match key=n id=true kind=integer min=1 core.source="hand-core 1"
@@ -100,7 +100,7 @@
 # another method (needed where the step has the goal of its own method). `optional=true`: the plan goes on
 # without it when it cannot be done. `about` says the step in plain words.
 @k.procedures.step core.type of=k.procedures.step shared=true closed=true core.source="hand-core 1"
-@k.procedures.step.method core.slot of=k.procedures.step key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.step.method core.slot of=k.procedures.step key=method id=true required=true kind=atom kind=string type=k.procedures.method by=name core.source="hand-core 1"
 @k.procedures.step.n core.slot of=k.procedures.step key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.procedures.step.act core.slot of=k.procedures.step key=act required=true enum=make enum=remove enum=change enum=place enum=connect enum=group enum="take apart" enum=pick enum=ask enum=copy enum=send enum=undo enum=save enum=load enum=redo enum=deselect core.source="hand-core 1"
 @k.procedures.step.each core.slot of=k.procedures.step key=each kind=atom core.source="hand-core 1"
@@ -117,7 +117,7 @@
 # then a part or an anchor of that thing, named by its name or its kind (`value=seat of=swing`: the seat of the
 # swing), as k.layouts.anchor, k.wearables.place (on a person) or k.objects.part say.
 @k.procedures.arg core.type of=k.procedures.arg shared=true closed=true core.source="hand-core 1"
-@k.procedures.arg.method core.slot of=k.procedures.arg key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.arg.method core.slot of=k.procedures.arg key=method id=true required=true kind=atom kind=string type=k.procedures.method by=name core.source="hand-core 1"
 @k.procedures.arg.step core.slot of=k.procedures.arg key=step id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.procedures.arg.role core.slot of=k.procedures.arg key=role id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.procedures.arg.attribute core.slot of=k.procedures.arg key=attribute id=true kind=atom core.source="hand-core 1"
@@ -135,7 +135,7 @@
 # `grouped` (`thing` in a group, as `other` if said), `has` (the fact or thing `thing` says `attribute`, as `value` if
 # said).
 @k.procedures.condition core.type of=k.procedures.condition shared=true closed=true core.source="hand-core 1"
-@k.procedures.condition.method core.slot of=k.procedures.condition key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.procedures.condition.method core.slot of=k.procedures.condition key=method id=true required=true kind=atom kind=string type=k.procedures.method by=name core.source="hand-core 1"
 @k.procedures.condition.n core.slot of=k.procedures.condition key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.procedures.condition.step core.slot of=k.procedures.condition key=step kind=integer min=1 core.source="hand-core 1"
 @k.procedures.condition.when core.slot of=k.procedures.condition key=when required=true enum=before enum=after core.source="hand-core 1"

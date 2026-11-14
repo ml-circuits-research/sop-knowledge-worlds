@@ -22,12 +22,12 @@
 @k.shapes.shape.corners core.slot of=k.shapes.shape key=corners kind=integer min=0 core.source="hand-core 1"
 @k.shapes.shape.faces core.slot of=k.shapes.shape key=faces kind=integer min=1 core.source="hand-core 1"
 @k.shapes.shape.edges core.slot of=k.shapes.shape key=edges kind=integer min=0 core.source="hand-core 1"
-@k.shapes.shape.face core.slot of=k.shapes.shape key=face many=true kind=atom kind=string core.source="hand-core 1"
+@k.shapes.shape.face core.slot of=k.shapes.shape key=face many=true kind=atom kind=string type=k.values.shape by=name core.source="hand-core 1"
 @k.shapes.shape.round core.slot of=k.shapes.shape key=round required=true kind=boolean core.source="hand-core 1"
 @k.shapes.shape.equal_sides core.slot of=k.shapes.shape key=equal_sides kind=boolean core.source="hand-core 1"
 @k.shapes.shape.symmetric core.slot of=k.shapes.shape key=symmetric kind=boolean core.source="hand-core 1"
-@k.shapes.shape.flat core.slot of=k.shapes.shape key=flat kind=atom kind=string core.source="hand-core 1"
-@k.shapes.shape.thing core.slot of=k.shapes.shape key=thing many=true kind=atom kind=string core.source="hand-core 1"
+@k.shapes.shape.flat core.slot of=k.shapes.shape key=flat kind=atom kind=string type=k.values.shape by=name core.source="hand-core 1"
+@k.shapes.shape.thing core.slot of=k.shapes.shape key=thing many=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # A solid has no sides, a flat shape no faces.
 @k.shapes.solid_sides.fact k.shapes.shape name=?shape kind=solid sides=?n

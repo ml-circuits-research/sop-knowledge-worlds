@@ -13,8 +13,8 @@
 # years one trip around the Sun takes; `in` names the galaxy it is in; `drawing` names the k.objects object that draws it.
 @k.space.body core.type of=k.space.body extends=k.values.coloured extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.space.body.name core.slot of=k.space.body key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.space.body.kind core.slot of=k.space.body key=kind required=true kind=atom kind=string core.source="hand-core 1"
-@k.space.body.orbits core.slot of=k.space.body key=orbits kind=atom kind=string core.source="hand-core 1"
+@k.space.body.kind core.slot of=k.space.body key=kind required=true kind=atom kind=string type=k.space.kind by=name core.source="hand-core 1"
+@k.space.body.orbits core.slot of=k.space.body key=orbits kind=atom kind=string type=k.space.body by=name core.source="hand-core 1"
 @k.space.body.order core.slot of=k.space.body key=order kind=integer min=1 max=8 core.source="hand-core 1"
 @k.space.body.size core.slot of=k.space.body key=size enum=small enum=medium enum=large enum=huge core.source="hand-core 1"
 @k.space.body.size_rank core.slot of=k.space.body key=size_rank kind=integer min=1 max=8 core.source="hand-core 1"
@@ -23,7 +23,7 @@
 @k.space.body.moons_about core.slot of=k.space.body key=moons_about excludes=moons kind=integer min=0 core.source="hand-core 1"
 @k.space.body.rings core.slot of=k.space.body key=rings kind=boolean core.source="hand-core 1"
 @k.space.body.orbit_years core.slot of=k.space.body key=orbit_years kind=number min=0 core.source="hand-core 1"
-@k.space.body.in core.slot of=k.space.body key=in kind=atom kind=string core.source="hand-core 1"
+@k.space.body.in core.slot of=k.space.body key=in kind=atom kind=string type=k.space.body by=name core.source="hand-core 1"
 @k.space.body.drawing core.slot of=k.space.body key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 # Round 9. `colour_why` says in one plain sentence why it has its colour. Approximate numbers: `day_hours_about`, the
 # time of one turn around its own axis in Earth hours; `orbit_days_about`, the time of one trip around what it

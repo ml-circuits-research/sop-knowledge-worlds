@@ -3,8 +3,8 @@
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
-@k.kinds.relation.k.space.body.kind k.kinds.relation type=k.space.body key=kind subject=body subject_sense="body in space" object=kind object_type=k.space.kind object_sense="body in space" found=value core.source="hand-core 1"
-@k.kinds.relation.k.space.body.orbits k.kinds.relation type=k.space.body key=orbits subject=body subject_sense="body in space" object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
+@k.kinds.relation.k.space.body.kind k.kinds.relation type=k.space.body key=kind subject=body subject_sense="body in space" object=kind object_type=k.space.kind object_sense="body in space" found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.space.body.orbits k.kinds.relation type=k.space.body key=orbits subject=body subject_sense="body in space" object=thing object_type=k.space.body object_sense="body in space" found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.space.body.order k.kinds.relation type=k.space.body key=order subject=body subject_sense="body in space" object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.size k.kinds.relation type=k.space.body key=size subject=body subject_sense="body in space" object=value scale=size found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.size_rank k.kinds.relation type=k.space.body key=size_rank subject=body subject_sense="body in space" object=number found=schema core.source="hand-core 1"
@@ -13,7 +13,7 @@
 @k.kinds.relation.k.space.body.moons_about k.kinds.relation type=k.space.body key=moons_about subject=body subject_sense="body in space" object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.rings k.kinds.relation type=k.space.body key=rings subject=body subject_sense="body in space" object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.orbit_years k.kinds.relation type=k.space.body key=orbit_years subject=body subject_sense="body in space" object=amount found=schema core.source="hand-core 1"
-@k.kinds.relation.k.space.body.in k.kinds.relation type=k.space.body key=in subject=body subject_sense="body in space" object=thing object_type=k.attributes.drawn object_type=k.attributes.usage object_type=k.objects.object found=value core.source="hand-core 1"
+@k.kinds.relation.k.space.body.in k.kinds.relation type=k.space.body key=in subject=body subject_sense="body in space" object=thing object_type=k.space.body object_sense="body in space" found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.space.body.drawing k.kinds.relation type=k.space.body key=drawing subject=body subject_sense="body in space" object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.space.body.colour_why k.kinds.relation type=k.space.body key=colour_why subject=body subject_sense="body in space" object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.day_hours_about k.kinds.relation type=k.space.body key=day_hours_about subject=body subject_sense="body in space" object=amount found=schema core.source="hand-core 1"

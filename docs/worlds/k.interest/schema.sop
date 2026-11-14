@@ -35,7 +35,7 @@
 @k.interest.appraisal.about core.slot of=k.interest.appraisal key=about required=true kind=string core.source="hand-core 1"
 @k.interest.appraisal.combine core.slot of=k.interest.appraisal key=combine required=true enum=multiply enum=subtract core.source="hand-core 1"
 @k.interest.appraisal.base core.slot of=k.interest.appraisal key=base required=true kind=number min=0 max=1 core.source="hand-core 1"
-@k.interest.appraisal.source core.slot of=k.interest.appraisal key=source many=true kind=atom core.source="hand-core 1"
+@k.interest.appraisal.source core.slot of=k.interest.appraisal key=source many=true kind=atom type=k.interest.source by=name core.source="hand-core 1"
 @k.interest.appraisal.own core.slot of=k.interest.appraisal key=own kind=string core.source="hand-core 1"
 
 # A measure: a number a program computes for a fact, a link (a fact whose value names a thing of another world), a
@@ -58,8 +58,8 @@
 # (many) the works its direction rests on; `own` what is this repository's choice (always the numbers).
 @k.interest.feature core.type of=k.interest.feature shared=true closed=true core.source="hand-core 1"
 @k.interest.feature.name core.slot of=k.interest.feature key=name id=true required=true kind=atom core.source="hand-core 1"
-@k.interest.feature.appraisal core.slot of=k.interest.feature key=appraisal required=true kind=atom core.source="hand-core 1"
-@k.interest.feature.measure core.slot of=k.interest.feature key=measure required=true kind=atom core.source="hand-core 1"
+@k.interest.feature.appraisal core.slot of=k.interest.feature key=appraisal required=true kind=atom type=k.interest.appraisal by=name core.source="hand-core 1"
+@k.interest.feature.measure core.slot of=k.interest.feature key=measure required=true kind=atom type=k.interest.measure by=name core.source="hand-core 1"
 @k.interest.feature.shape core.slot of=k.interest.feature key=shape required=true enum=rising enum=falling enum=peak enum=step core.source="hand-core 1"
 @k.interest.feature.start_at core.slot of=k.interest.feature key=start_at kind=number core.source="hand-core 1"
 @k.interest.feature.peak_at core.slot of=k.interest.feature key=peak_at kind=number core.source="hand-core 1"
@@ -67,7 +67,7 @@
 @k.interest.feature.weight_min core.slot of=k.interest.feature key=weight_min required=true kind=number min=-1 max=1 core.source="hand-core 1"
 @k.interest.feature.weight_max core.slot of=k.interest.feature key=weight_max required=true kind=number min=-1 max=1 core.source="hand-core 1"
 @k.interest.feature.about core.slot of=k.interest.feature key=about required=true kind=string core.source="hand-core 1"
-@k.interest.feature.source core.slot of=k.interest.feature key=source many=true kind=atom core.source="hand-core 1"
+@k.interest.feature.source core.slot of=k.interest.feature key=source many=true kind=atom type=k.interest.source by=name core.source="hand-core 1"
 @k.interest.feature.own core.slot of=k.interest.feature key=own required=true kind=string core.source="hand-core 1"
 
 # Words for the types of this world.

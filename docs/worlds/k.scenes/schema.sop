@@ -50,8 +50,8 @@
 # sea); `fills=true` says that the thing fills its layer from side to side (the sea behind a beach, the road of a
 # street); `drawing` names the k.objects object that draws the thing, where one exists.
 @k.scenes.has core.type of=k.scenes.has shared=true closed=true core.source="hand-core 1"
-@k.scenes.has.scene core.slot of=k.scenes.has key=scene id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.scenes.has.thing core.slot of=k.scenes.has key=thing id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.scenes.has.scene core.slot of=k.scenes.has key=scene id=true required=true kind=atom kind=string type=k.scenes.scene by=name core.source="hand-core 1"
+@k.scenes.has.thing core.slot of=k.scenes.has key=thing id=true required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 @k.scenes.has.count core.slot of=k.scenes.has key=count required=true kind=integer min=1 core.source="hand-core 1"
 @k.scenes.has.where core.slot of=k.scenes.has key=where required=true enum=sky enum=ceiling enum=background enum=wall enum=ground enum=water enum=foreground core.source="hand-core 1"
 @k.scenes.has.side core.slot of=k.scenes.has key=side enum=left enum=centre enum=right core.source="hand-core 1"

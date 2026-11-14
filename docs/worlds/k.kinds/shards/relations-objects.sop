@@ -37,4 +37,4 @@
 @k.kinds.relation.k.objects.skeleton.part k.kinds.relation type=k.objects.skeleton key=part subject=skeleton object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.objects.skeleton.drawings k.kinds.relation type=k.objects.skeleton key=drawings subject=skeleton object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.objects.skeleton.spread k.kinds.relation type=k.objects.skeleton key=spread subject=skeleton object=number found=schema core.source="hand-core 1"
-@k.kinds.relation.k.objects.stand_in.drawing k.kinds.relation type=k.objects.stand_in key=drawing subject=thing object=thing object_type=k.attributes.drawn object_type=k.objects.object object_type=k.scenes.thing found=value core.source="hand-core 1"
+@k.kinds.relation.k.objects.stand_in.drawing k.kinds.relation type=k.objects.stand_in key=drawing subject=thing object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"

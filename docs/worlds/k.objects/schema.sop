@@ -50,9 +50,9 @@
 # kind, not the thing itself; a word for the same thing (couch, sofa) is a core.word instead.
 @k.objects.stand_in core.type of=k.objects.stand_in shared=true closed=true core.source="hand-core 1"
 @k.objects.stand_in.name core.slot of=k.objects.stand_in key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-# The join of a stand-in to its drawing is not declared with `type=` / `by=`: the objects are in other shards of this
-# world, and every shard must load alone (a host loads them lazily); tests/k.objects.names.test.mjs checks it.
-@k.objects.stand_in.drawing core.slot of=k.objects.stand_in key=drawing required=true kind=atom kind=string core.source="hand-core 1"
+# The join of a stand-in to its drawing is declared (`type=` / `by=`, Q61): since sopworld 0.70 a join stays open until
+# an object with that name is loaded, so a shard still loads alone; tests/k.objects.names.test.mjs checks it as well.
+@k.objects.stand_in.drawing core.slot of=k.objects.stand_in key=drawing required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.objects.word.object core.word text=object text=objects text=drawing text=picture means=k.objects.object core.source="hand-core 1"

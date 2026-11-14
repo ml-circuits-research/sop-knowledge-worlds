@@ -21,7 +21,7 @@
 
 # A field an event carries: `value` (many) the values it may take (none said: any text).
 @k.motion.field core.type of=k.motion.field shared=true closed=true core.source="hand-core 1"
-@k.motion.field.event core.slot of=k.motion.field key=event id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.motion.field.event core.slot of=k.motion.field key=event id=true required=true kind=atom kind=string type=k.motion.event by=name core.source="hand-core 1"
 @k.motion.field.name core.slot of=k.motion.field key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.motion.field.value core.slot of=k.motion.field key=value many=true kind=atom kind=string core.source="hand-core 1"
 @k.motion.field.about core.slot of=k.motion.field key=about required=true kind=string core.source="hand-core 1"
@@ -43,21 +43,21 @@
 @k.motion.rule core.type of=k.motion.rule shared=true closed=true core.source="hand-core 1"
 @k.motion.rule.name core.slot of=k.motion.rule key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.motion.rule.about core.slot of=k.motion.rule key=about required=true kind=string core.source="hand-core 1"
-@k.motion.rule.layer core.slot of=k.motion.rule key=layer required=true kind=atom core.source="hand-core 1"
-@k.motion.rule.on core.slot of=k.motion.rule key=on kind=atom kind=string core.source="hand-core 1"
+@k.motion.rule.layer core.slot of=k.motion.rule key=layer required=true kind=atom type=k.motion.layer by=name core.source="hand-core 1"
+@k.motion.rule.on core.slot of=k.motion.rule key=on kind=atom kind=string type=k.motion.event by=name core.source="hand-core 1"
 @k.motion.rule.repeat_min core.slot of=k.motion.rule key=repeat_min kind=integer min=0 core.source="hand-core 1"
 @k.motion.rule.repeat_max core.slot of=k.motion.rule key=repeat_max kind=integer min=0 core.source="hand-core 1"
 @k.motion.rule.chance core.slot of=k.motion.rule key=chance kind=number min=0 max=1 core.source="hand-core 1"
 @k.motion.rule.during core.slot of=k.motion.rule key=during many=true kind=atom core.source="hand-core 1"
 @k.motion.rule.not_during core.slot of=k.motion.rule key=not_during many=true kind=atom core.source="hand-core 1"
-@k.motion.rule.until core.slot of=k.motion.rule key=until many=true kind=atom kind=string core.source="hand-core 1"
-@k.motion.rule.emits core.slot of=k.motion.rule key=emits kind=atom kind=string core.source="hand-core 1"
+@k.motion.rule.until core.slot of=k.motion.rule key=until many=true kind=atom kind=string type=k.motion.event by=name core.source="hand-core 1"
+@k.motion.rule.emits core.slot of=k.motion.rule key=emits kind=atom kind=string type=k.motion.event by=name core.source="hand-core 1"
 
 # A condition of a rule: `of=event` reads a field of the event that starts it, `of=state` a key of the face as it
 # is shown when the rule would start. The value is one of `value` (many); `feature` compares that feature of the
 # k.faces variant shown (shape, size, feel ...) instead of its name; `not=true` turns the condition round.
 @k.motion.when core.type of=k.motion.when shared=true closed=true core.source="hand-core 1"
-@k.motion.when.rule core.slot of=k.motion.when key=rule id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.motion.when.rule core.slot of=k.motion.when key=rule id=true required=true kind=atom kind=string type=k.motion.rule by=name core.source="hand-core 1"
 @k.motion.when.key core.slot of=k.motion.when key=key id=true required=true kind=atom core.source="hand-core 1"
 @k.motion.when.of core.slot of=k.motion.when key=of required=true enum=event enum=state core.source="hand-core 1"
 @k.motion.when.value core.slot of=k.motion.when key=value many=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -70,7 +70,7 @@
 # with `per` says a stream instead: the units of that field of the event (split by the `splitter`), one after the
 # other, each setting `key` to the mouth of its class for the duration of its letters.
 @k.motion.step core.type of=k.motion.step shared=true closed=true core.source="hand-core 1"
-@k.motion.step.rule core.slot of=k.motion.step key=rule id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.motion.step.rule core.slot of=k.motion.step key=rule id=true required=true kind=atom kind=string type=k.motion.rule by=name core.source="hand-core 1"
 @k.motion.step.n core.slot of=k.motion.step key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.motion.step.about core.slot of=k.motion.step key=about required=true kind=string core.source="hand-core 1"
 @k.motion.step.with core.slot of=k.motion.step key=with kind=integer min=1 core.source="hand-core 1"
@@ -78,27 +78,27 @@
 @k.motion.step.onset_max core.slot of=k.motion.step key=onset_max kind=integer min=0 core.source="hand-core 1"
 @k.motion.step.hold_min core.slot of=k.motion.step key=hold_min kind=integer min=0 core.source="hand-core 1"
 @k.motion.step.hold_max core.slot of=k.motion.step key=hold_max kind=integer min=0 core.source="hand-core 1"
-@k.motion.step.hold_until core.slot of=k.motion.step key=hold_until kind=atom kind=string core.source="hand-core 1"
+@k.motion.step.hold_until core.slot of=k.motion.step key=hold_until kind=atom kind=string type=k.motion.event by=name core.source="hand-core 1"
 @k.motion.step.back_min core.slot of=k.motion.step key=back_min kind=integer min=0 core.source="hand-core 1"
 @k.motion.step.back_max core.slot of=k.motion.step key=back_max kind=integer min=0 core.source="hand-core 1"
 @k.motion.step.per core.slot of=k.motion.step key=per kind=atom core.source="hand-core 1"
-@k.motion.step.splitter core.slot of=k.motion.step key=splitter kind=atom kind=string core.source="hand-core 1"
+@k.motion.step.splitter core.slot of=k.motion.step key=splitter kind=atom kind=string type=k.motion.splitter by=name core.source="hand-core 1"
 @k.motion.step.key core.slot of=k.motion.step key=key enum=mouth enum=eyebrows enum=eyes enum=one_eye core.source="hand-core 1"
 
 # What a step sets: `key` (a key of k.faces.expression: mouth, eyebrows, eyes, one_eye) to `value`, the name of a
 # k.faces variant of that slot (one_eye: of eyes) in the style `plain`. `via`: a variant a host that only switches
 # (does not blend) shows during the onset and the ease back (a blink passes through half-closed eyes).
 @k.motion.set core.type of=k.motion.set shared=true closed=true core.source="hand-core 1"
-@k.motion.set.rule core.slot of=k.motion.set key=rule id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.motion.set.rule core.slot of=k.motion.set key=rule id=true required=true kind=atom kind=string type=k.motion.rule by=name core.source="hand-core 1"
 @k.motion.set.step core.slot of=k.motion.set key=step id=true required=true kind=integer min=1 core.source="hand-core 1"
 @k.motion.set.key core.slot of=k.motion.set key=key id=true required=true enum=mouth enum=eyebrows enum=eyes enum=one_eye core.source="hand-core 1"
 @k.motion.set.value core.slot of=k.motion.set key=value required=true kind=atom kind=string core.source="hand-core 1"
-@k.motion.set.via core.slot of=k.motion.set key=via kind=atom kind=string core.source="hand-core 1"
+@k.motion.set.via core.slot of=k.motion.set key=via kind=atom kind=string type=k.faces.expression by=name core.source="hand-core 1"
 
 # A class of mouth shapes (a viseme), the same for every language, and the k.faces mouth variant that shows it in
 # one style.
 @k.motion.viseme core.type of=k.motion.viseme shared=true closed=true core.source="hand-core 1"
-@k.motion.viseme.style core.slot of=k.motion.viseme key=style id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.motion.viseme.style core.slot of=k.motion.viseme key=style id=true required=true kind=atom kind=string type=k.faces.canon by=style core.source="hand-core 1"
 @k.motion.viseme.class core.slot of=k.motion.viseme key=class id=true required=true enum=rest enum=open enum=mid enum=rounded enum=closed enum=lip-teeth enum=tongue core.source="hand-core 1"
 @k.motion.viseme.mouth core.slot of=k.motion.viseme key=mouth required=true kind=atom kind=string core.source="hand-core 1"
 @k.motion.viseme.about core.slot of=k.motion.viseme key=about required=true kind=string core.source="hand-core 1"
@@ -117,7 +117,7 @@
 # milliseconds). `letter` (many) lists them; `kind` names a whole kind instead: space (any white space), digit,
 # symbol (any other character that is neither a letter nor a digit nor listed).
 @k.motion.letters core.type of=k.motion.letters shared=true closed=true core.source="hand-core 1"
-@k.motion.letters.splitter core.slot of=k.motion.letters key=splitter id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.motion.letters.splitter core.slot of=k.motion.letters key=splitter id=true required=true kind=atom kind=string type=k.motion.splitter by=name core.source="hand-core 1"
 @k.motion.letters.name core.slot of=k.motion.letters key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.motion.letters.class core.slot of=k.motion.letters key=class required=true enum=rest enum=open enum=mid enum=rounded enum=closed enum=lip-teeth enum=tongue core.source="hand-core 1"
 @k.motion.letters.letter core.slot of=k.motion.letters key=letter many=true kind=string core.source="hand-core 1"

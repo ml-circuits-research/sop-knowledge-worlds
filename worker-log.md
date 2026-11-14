@@ -4648,3 +4648,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   its targets (k.actions here); the test reads the soft rules' issues (kind other than `open-join`). Test only.
 - Tests: `npm run test:changed` (build 178 s; 53 files, 2,735 tests): 2,728 pass, 5 skipped, 2 fail (that rules
   test), fixed and rerun 5 pass.
+
+## 2026-11-15 — second worker: Q61 step 2c: declared joins in k.genres, k.interest, k.layouts, k.motion, k.objects, k.people, k.procedures, k.scenes, k.shapes, k.space, k.story (slot lines only)
+
+- 64 joins on existing slot lines: k.genres 10 (register, move, source, genre), k.interest 4, k.layouts 3 (layout,
+  arranged), k.motion 13 (event, splitter, layer, rule; set via -> k.faces.expression; viseme style -> k.faces.canon),
+  k.objects 1 (stand_in drawing: the old comment said every shard must load alone, which a deferred join allows since
+  0.70; the comment now says so), k.people 7 (kind / role face -> k.faces.preset, role is -> k.people.kind, wears ->
+  k.wearables.wearable, holds / uses -> k.objects.object, works_at -> k.scenes.scene), k.procedures 6 (method),
+  k.scenes 2 (has scene, has thing), k.shapes 3 (face, flat -> k.values.shape; thing), k.space 3 (kind, orbits, in),
+  k.story 12. Not declared: k.objects part / skeleton `of` (cost, in the report), k.people is_a / kind_of (inherited
+  from k.kinds.kind, shared by three worlds), the k.procedures and k.layouts keys that name keys or words.
+- JOINS-REPORT: 153 declared in 25 worlds, 5,451 values, 5,292 meet (97.1 %), 159 open, 0 broken, 110 undeclared.
+  The exact comparison finds what the folded value share hid: scenes hold 89 things without a drawing of that name
+  (beach ball, cable car, control tower, fallen apple), "magnifying glass" is drawn only as "magnifying glass tilted
+  left / right", a role works at a courthouse that is no scene, wears "hat Christmas" (a word-order slip).
+- Tests: `npm run test:changed` (build 120 s; 47 files, 2,629 tests): 2,625 pass, 4 skipped, 0 fail.

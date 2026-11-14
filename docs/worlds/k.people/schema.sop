@@ -19,7 +19,7 @@
 @k.people.kind.sex core.slot of=k.people.kind key=sex enum=male enum=female core.source="hand-core 1"
 @k.people.kind.height_about core.slot of=k.people.kind key=height_about kind=integer min=1 max=120 core.source="hand-core 1"
 @k.people.kind.hair core.slot of=k.people.kind key=hair many=true kind=atom kind=string core.source="hand-core 1"
-@k.people.kind.face core.slot of=k.people.kind key=face kind=atom kind=string core.source="hand-core 1"
+@k.people.kind.face core.slot of=k.people.kind key=face kind=atom kind=string type=k.faces.preset by=name core.source="hand-core 1"
 @k.people.kind.drawing core.slot of=k.people.kind key=drawing required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # A role or job. `group` says what kind of role it is: a `job`, a member of the `family`, a figure of a `story`, or
@@ -34,18 +34,18 @@
 # `kind_of` (derived) says that a sister is a relative and a person. A fairy is a figure of stories but no person.
 @k.people.role core.type of=k.people.role extends=k.kinds.kind shared=true closed=true core.source="hand-core 1"
 @k.people.role.group core.slot of=k.people.role key=group required=true enum=job enum=family enum=story enum=social core.source="hand-core 1"
-@k.people.role.is core.slot of=k.people.role key=is kind=atom kind=string core.source="hand-core 1"
-@k.people.role.wears core.slot of=k.people.role key=wears many=true kind=atom kind=string core.source="hand-core 1"
-@k.people.role.holds core.slot of=k.people.role key=holds many=true kind=atom kind=string core.source="hand-core 1"
-@k.people.role.uses core.slot of=k.people.role key=uses many=true kind=atom kind=string core.source="hand-core 1"
-@k.people.role.works_at core.slot of=k.people.role key=works_at many=true kind=atom kind=string core.source="hand-core 1"
+@k.people.role.is core.slot of=k.people.role key=is kind=atom kind=string type=k.people.kind by=name core.source="hand-core 1"
+@k.people.role.wears core.slot of=k.people.role key=wears many=true kind=atom kind=string type=k.wearables.wearable by=name core.source="hand-core 1"
+@k.people.role.holds core.slot of=k.people.role key=holds many=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.people.role.uses core.slot of=k.people.role key=uses many=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.people.role.works_at core.slot of=k.people.role key=works_at many=true kind=atom kind=string type=k.scenes.scene by=name core.source="hand-core 1"
 @k.people.role.does core.slot of=k.people.role key=does many=true kind=atom kind=string core.source="hand-core 1"
 @k.people.role.hat core.slot of=k.people.role key=hat kind=atom kind=string core.source="hand-core 1"
 @k.people.role.glasses core.slot of=k.people.role key=glasses kind=atom kind=string core.source="hand-core 1"
 @k.people.role.beard core.slot of=k.people.role key=beard kind=atom kind=string core.source="hand-core 1"
 @k.people.role.moustache core.slot of=k.people.role key=moustache kind=atom kind=string core.source="hand-core 1"
 @k.people.role.shoulders core.slot of=k.people.role key=shoulders kind=atom kind=string core.source="hand-core 1"
-@k.people.role.face core.slot of=k.people.role key=face kind=atom kind=string core.source="hand-core 1"
+@k.people.role.face core.slot of=k.people.role key=face kind=atom kind=string type=k.faces.preset by=name core.source="hand-core 1"
 @k.people.role.drawing core.slot of=k.people.role key=drawing required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # Words for the types and keys of this world.

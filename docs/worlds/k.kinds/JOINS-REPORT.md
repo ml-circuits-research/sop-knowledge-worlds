@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **89** in 17 worlds; distinct values 3726, meeting a target 3666 (98.4 %), open 60
+- declared joins: **153** in 25 worlds; distinct values 5451, meeting a target 5292 (97.1 %), open 159
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **174**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **110**; left undeclared on purpose: 6
 
 ## Declared joins
 
@@ -65,6 +65,16 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.feelings | `k.feelings.feeling.expression` | `k.faces.expression` | name | 5 | 5 |  |
 | k.feelings | `k.feelings.feeling.opposite` | `k.feelings.feeling` | name | 11 | 11 |  |
 | k.food | `k.food.food.drawing` | `k.objects.object` | name | 155 | 155 |  |
+| k.genres | `k.genres.genre.also_move` | `k.genres.move` | name | 6 | 6 |  |
+| k.genres | `k.genres.genre.register` | `k.genres.register` | name | 5 | 5 |  |
+| k.genres | `k.genres.genre.source` | `k.genres.source` | name | 16 | 16 |  |
+| k.genres | `k.genres.move.source` | `k.genres.source` | name | 18 | 18 |  |
+| k.genres | `k.genres.part.genre` | `k.genres.genre` | name | 5 | 5 |  |
+| k.genres | `k.genres.part.source` | `k.genres.source` | name | 18 | 18 |  |
+| k.genres | `k.genres.register.source` | `k.genres.source` | name | 14 | 14 |  |
+| k.genres | `k.genres.step.genre` | `k.genres.genre` | name | 5 | 5 |  |
+| k.genres | `k.genres.step.move` | `k.genres.move` | name | 41 | 41 |  |
+| k.genres | `k.genres.step.source` | `k.genres.source` | name | 17 | 17 |  |
 | k.geo | `k.geo.city.capital_of` | `k.geo.country` | name | 205 | 205 |  |
 | k.geo | `k.geo.city.country` | `k.geo.country` | name | 245 | 245 |  |
 | k.geo | `k.geo.country.capital` | `k.geo.city` | name | 262 | 252 | `"City of Victoria"`, `"Cockburn Town"`, `"Diego Garcia"`, `"El Aaiún"`, `"King Edward Point"`, `Fakaofo`, … (10) |
@@ -80,12 +90,66 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.geo | `k.geo.range.continent` | `k.geo.continent` | name | 7 | 7 |  |
 | k.geo | `k.geo.river.continent` | `k.geo.continent` | name | 6 | 6 |  |
 | k.geo | `k.geo.river.country` | `k.geo.country` | name | 144 | 144 |  |
+| k.interest | `k.interest.appraisal.source` | `k.interest.source` | name | 9 | 9 |  |
+| k.interest | `k.interest.feature.appraisal` | `k.interest.appraisal` | name | 4 | 4 |  |
+| k.interest | `k.interest.feature.measure` | `k.interest.measure` | name | 20 | 20 |  |
+| k.interest | `k.interest.feature.source` | `k.interest.source` | name | 23 | 23 |  |
+| k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 17 | 17 |  |
+| k.layouts | `k.layouts.slot.arranged` | `k.layouts.layout` | name | 2 | 2 |  |
+| k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 17 | 17 |  |
+| k.motion | `k.motion.field.event` | `k.motion.event` | name | 2 | 2 |  |
+| k.motion | `k.motion.letters.splitter` | `k.motion.splitter` | name | 1 | 1 |  |
+| k.motion | `k.motion.rule.emits` | `k.motion.event` | name | 1 | 1 |  |
+| k.motion | `k.motion.rule.layer` | `k.motion.layer` | name | 4 | 4 |  |
+| k.motion | `k.motion.rule.on` | `k.motion.event` | name | 2 | 2 |  |
+| k.motion | `k.motion.rule.until` | `k.motion.event` | name | 1 | 1 |  |
+| k.motion | `k.motion.set.rule` | `k.motion.rule` | name | 16 | 16 |  |
+| k.motion | `k.motion.set.via` | `k.faces.expression` | name | 1 | 1 |  |
+| k.motion | `k.motion.step.hold_until` | `k.motion.event` | name | 2 | 2 |  |
+| k.motion | `k.motion.step.rule` | `k.motion.rule` | name | 17 | 17 |  |
+| k.motion | `k.motion.step.splitter` | `k.motion.splitter` | name | 1 | 1 |  |
+| k.motion | `k.motion.viseme.style` | `k.faces.canon` | style | 1 | 1 |  |
+| k.motion | `k.motion.when.rule` | `k.motion.rule` | name | 12 | 12 |  |
+| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 144 | 144 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
+| k.people | `k.people.kind.face` | `k.faces.preset` | name | 8 | 8 |  |
 | k.people | `k.people.role.drawing` | `k.objects.object` | name | 1 | 1 |  |
+| k.people | `k.people.role.face` | `k.faces.preset` | name | 9 | 9 |  |
+| k.people | `k.people.role.holds` | `k.objects.object` | name | 47 | 47 |  |
+| k.people | `k.people.role.is` | `k.people.kind` | name | 6 | 6 |  |
+| k.people | `k.people.role.uses` | `k.objects.object` | name | 98 | 98 |  |
+| k.people | `k.people.role.wears` | `k.wearables.wearable` | name | 36 | 33 | `"hat Christmas"`, `"hiking boot"`, `"safety goggles"` |
+| k.people | `k.people.role.works_at` | `k.scenes.scene` | name | 41 | 40 | `courthouse` |
+| k.procedures | `k.procedures.arg.method` | `k.procedures.method` | name | 29 | 29 |  |
+| k.procedures | `k.procedures.binding.method` | `k.procedures.method` | name | 29 | 29 |  |
+| k.procedures | `k.procedures.condition.method` | `k.procedures.method` | name | 29 | 29 |  |
+| k.procedures | `k.procedures.goal.method` | `k.procedures.method` | name | 29 | 29 |  |
+| k.procedures | `k.procedures.match.method` | `k.procedures.method` | name | 22 | 22 |  |
+| k.procedures | `k.procedures.step.method` | `k.procedures.method` | name | 29 | 29 |  |
 | k.scenes | `k.scenes.has.drawing` | `k.objects.object` | name | 528 | 528 |  |
+| k.scenes | `k.scenes.has.scene` | `k.scenes.scene` | name | 61 | 61 |  |
+| k.scenes | `k.scenes.has.thing` | `k.objects.object` | name | 595 | 506 | `"beach ball"`, `"beach umbrella"`, `"cable car"`, `"control tower"`, `"diving board"`, `"fallen apple"`, … (89) |
 | k.scenes | `k.scenes.scene.drawing` | `k.objects.object` | name | 28 | 28 |  |
+| k.shapes | `k.shapes.shape.face` | `k.values.shape` | name | 4 | 4 |  |
+| k.shapes | `k.shapes.shape.flat` | `k.values.shape` | name | 7 | 7 |  |
+| k.shapes | `k.shapes.shape.thing` | `k.objects.object` | name | 104 | 98 | `"gift box"`, `"horseshoe magnet"`, `"pizza slice"`, `chessboard`, `honeycomb`, `tv` |
 | k.space | `k.space.body.drawing` | `k.objects.object` | name | 13 | 13 |  |
+| k.space | `k.space.body.in` | `k.space.body` | name | 1 | 1 |  |
+| k.space | `k.space.body.kind` | `k.space.kind` | name | 6 | 6 |  |
+| k.space | `k.space.body.orbits` | `k.space.body` | name | 6 | 6 |  |
 | k.space | `k.space.kind.drawing` | `k.objects.object` | name | 5 | 5 |  |
+| k.story | `k.story.constraint.element` | `k.story.element` | name | 9 | 9 |  |
+| k.story | `k.story.constraint.other` | `k.story.element` | name | 8 | 8 |  |
+| k.story | `k.story.constraint.source` | `k.story.source` | name | 10 | 10 |  |
+| k.story | `k.story.element.move` | `k.genres.move` | name | 8 | 8 |  |
+| k.story | `k.story.element.source` | `k.story.source` | name | 12 | 12 |  |
+| k.story | `k.story.goal.act` | `k.actions.action` | name | 4 | 4 |  |
+| k.story | `k.story.goal.source` | `k.story.source` | name | 2 | 2 |  |
+| k.story | `k.story.obstacle.blocks` | `k.story.goal` | name | 4 | 4 |  |
+| k.story | `k.story.obstacle.means` | `k.objects.object` | name | 8 | 8 |  |
+| k.story | `k.story.obstacle.overcome_by` | `k.actions.action` | name | 6 | 6 |  |
+| k.story | `k.story.obstacle.thing` | `k.objects.object` | name | 7 | 7 |  |
+| k.story | `k.story.obstacle.tried_by` | `k.actions.action` | name | 9 | 9 |  |
 | k.time | `k.time.before.cycle` | `k.time.cycle` | name | 5 | 5 |  |
 | k.time | `k.time.cycle.lasts` | `k.time.duration` | name | 3 | 3 |  |
 | k.time | `k.time.duration.unit` | `k.units.unit` | name | 9 | 6 | `century`, `decade`, `month` |
@@ -168,112 +232,48 @@ exact (token for token) against the first candidate; the value share itself also
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
 | k.food | `k.food.food.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.genres | `k.genres.genre.register` | thing | `k.genres.register` | name | 5 | 5 |
-| k.genres | `k.genres.genre.also_move` | thing | `k.genres.move` | name | 6 | 6 |
-| k.genres | `k.genres.genre.source` | thing | `k.genres.source` | name | 16 | 16 |
-| k.genres | `k.genres.move.source` | thing | `k.genres.source` | name | 18 | 18 |
-| k.genres | `k.genres.part.genre` | thing | `k.genres.genre` | name | 5 | 5 |
-| k.genres | `k.genres.part.source` | thing | `k.genres.source` | name | 18 | 18 |
-| k.genres | `k.genres.register.source` | thing | `k.genres.source` | name | 14 | 14 |
-| k.genres | `k.genres.step.genre` | thing | `k.genres.genre` | name | 5 | 5 |
-| k.genres | `k.genres.step.move` | thing | `k.genres.move` | name | 41 | 41 |
-| k.genres | `k.genres.step.source` | thing | `k.genres.source` | name | 17 | 17 |
-| k.interest | `k.interest.appraisal.source` | thing | `k.interest.source` | name | 9 | 9 |
-| k.interest | `k.interest.feature.appraisal` | thing | `k.interest.appraisal` | name | 4 | 4 |
-| k.interest | `k.interest.feature.measure` | thing | `k.interest.measure` | name | 20 | 20 |
-| k.interest | `k.interest.feature.source` | thing | `k.interest.source` | name | 23 | 23 |
 | k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4513 | 2252 |
 | k.kinds | `k.kinds.parent.sense` | value | `k.attributes.kind` | name | 7 | 4 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 173 | 116 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 15 | 8 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 80 |
 | k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 70 |
-| k.layouts | `k.layouts.relation.layout` | group | `k.layouts.layout` | name | 17 | 17 |
-| k.layouts | `k.layouts.slot.layout` | group | `k.layouts.layout` | name | 17 | 17 |
 | k.layouts | `k.layouts.slot.holds` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 83 | 46 |
-| k.layouts | `k.layouts.slot.arranged` | group | `k.layouts.layout` | name | 2 | 2 |
-| k.motion | `k.motion.field.event` | thing | `k.motion.event` | name | 2 | 2 |
 | k.motion | `k.motion.layer.key` | value | `k.body.part` | name | 4 | 1 |
-| k.motion | `k.motion.letters.splitter` | thing | `k.motion.splitter` | name | 1 | 1 |
-| k.motion | `k.motion.rule.layer` | thing | `k.motion.layer` | name | 4 | 4 |
-| k.motion | `k.motion.rule.on` | thing | `k.motion.event` | name | 2 | 2 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
-| k.motion | `k.motion.rule.until` | thing | `k.motion.event` | name | 1 | 1 |
-| k.motion | `k.motion.rule.emits` | thing | `k.motion.event` | name | 1 | 1 |
-| k.motion | `k.motion.set.rule` | thing | `k.motion.rule` | name | 16 | 16 |
 | k.motion | `k.motion.set.key` | value | `k.body.part` | name | 4 | 1 |
-| k.motion | `k.motion.set.via` | thing | `k.faces.expression` | name | 1 | 1 |
-| k.motion | `k.motion.step.rule` | thing | `k.motion.rule` | name | 17 | 17 |
-| k.motion | `k.motion.step.hold_until` | thing | `k.motion.event` | name | 2 | 2 |
-| k.motion | `k.motion.step.splitter` | thing | `k.motion.splitter` | name | 1 | 1 |
 | k.motion | `k.motion.step.key` | value | `k.body.part` | name | 1 | 1 |
-| k.motion | `k.motion.viseme.style` | thing | `k.faces.canon` | style | 1 | 1 |
-| k.motion | `k.motion.when.rule` | thing | `k.motion.rule` | name | 12 | 12 |
 | k.motion | `k.motion.when.feature` | value | `k.attributes.attribute` | name | 1 | 0 |
 | k.objects | `k.objects.part.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 8 | 8 |
 | k.objects | `k.objects.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
 | k.objects | `k.objects.part.pointing` | value | `k.values.direction` | name | 4 | 4 |
 | k.objects | `k.objects.part.opens` | value | `k.values.direction` | name | 4 | 4 |
-| k.objects | `k.objects.stand_in.drawing` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 144 | 144 |
 | k.people | `k.people.kind.age` | value | `k.faces.preset`, `k.people.kind` | name | 4 | 2 |
-| k.people | `k.people.kind.face` | thing | `k.faces.preset` | name | 8 | 8 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |
 | k.people | `k.people.kind.kind_of` | kind | `k.faces.preset` | name | 5 | 3 |
-| k.people | `k.people.role.is` | person | `k.people.kind` | name | 6 | 6 |
-| k.people | `k.people.role.wears` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 35 |
-| k.people | `k.people.role.holds` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 47 | 47 |
-| k.people | `k.people.role.uses` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 98 | 98 |
-| k.people | `k.people.role.works_at` | place | `k.scenes.scene` | name | 41 | 40 |
 | k.people | `k.people.role.moustache` | thing | `k.attributes.drawn`, `k.attributes.number`, `k.objects.object` | name | 4 | 2 |
 | k.people | `k.people.role.shoulders` | thing | `k.wearables.wearable` | name | 23 | 12 |
-| k.people | `k.people.role.face` | thing | `k.faces.preset` | name | 9 | 9 |
 | k.people | `k.people.role.is_a` | kind | `k.people.kind` | name | 2 | 2 |
 | k.people | `k.people.role.kind_of` | kind | `k.people.kind` | name | 2 | 2 |
-| k.procedures | `k.procedures.arg.method` | thing | `k.procedures.method` | name | 29 | 29 |
-| k.procedures | `k.procedures.binding.method` | thing | `k.procedures.method` | name | 29 | 29 |
 | k.procedures | `k.procedures.binding.value` | act | `k.actions.action` | name | 1 | 1 |
-| k.procedures | `k.procedures.condition.method` | thing | `k.procedures.method` | name | 29 | 29 |
 | k.procedures | `k.procedures.condition.attribute` | thing | `k.body.part` | name | 10 | 1 |
-| k.procedures | `k.procedures.goal.method` | thing | `k.procedures.method` | name | 29 | 29 |
 | k.procedures | `k.procedures.goal.value` | thing | `k.genres.genre` | name | 9 | 5 |
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
-| k.procedures | `k.procedures.match.method` | thing | `k.procedures.method` | name | 22 | 22 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
 | k.procedures | `k.procedures.method.act` | act | `k.actions.act` | name | 6 | 6 |
-| k.procedures | `k.procedures.step.method` | thing | `k.procedures.method` | name | 29 | 29 |
 | k.procedures | `k.procedures.step.act` | act | `k.actions.act` | name | 8 | 8 |
-| k.scenes | `k.scenes.has.scene` | place | `k.scenes.scene` | name | 61 | 61 |
-| k.scenes | `k.scenes.has.thing` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 595 | 509 |
 | k.scenes | `k.scenes.has.side` | value | `k.values.position` | name | 3 | 3 |
 | k.scenes | `k.scenes.has.on` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 43 | 31 |
 | k.scenes | `k.scenes.scene.kind` | kind | `k.scenes.scene` | name | 4 | 2 |
 | k.scenes | `k.scenes.scene.time` | time | `k.time.part_of_day` | name | 4 | 3 |
 | k.scenes | `k.scenes.scene.season` | time | `k.time.season` | name | 4 | 4 |
 | k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.objects.object`, `k.layouts.anchor` | name | 23 | 19 |
-| k.shapes | `k.shapes.shape.face` | value | `k.values.shape` | name | 4 | 4 |
-| k.shapes | `k.shapes.shape.flat` | value | `k.values.shape` | name | 7 | 7 |
-| k.shapes | `k.shapes.shape.thing` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 104 | 98 |
 | k.shapes | `k.shapes.shape.is_a` | kind | `k.values.shape` | name | 5 | 5 |
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.values.shape` | name | 5 | 5 |
-| k.space | `k.space.body.kind` | kind | `k.space.kind` | name | 6 | 6 |
-| k.space | `k.space.body.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 6 | 5 |
-| k.space | `k.space.body.in` | thing | `k.attributes.drawn`, `k.attributes.usage`, `k.objects.object` | name | 1 | 0 |
 | k.space | `k.space.body.colour` | value | `k.colours.colour`, `k.values.colour` | name | 7 | 7 |
 | k.space | `k.space.kind.made_of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
-| k.story | `k.story.constraint.element` | thing | `k.story.element` | name | 9 | 9 |
-| k.story | `k.story.constraint.other` | thing | `k.story.element` | name | 8 | 8 |
-| k.story | `k.story.constraint.source` | thing | `k.story.source` | name | 10 | 10 |
-| k.story | `k.story.element.move` | thing | `k.genres.move` | name | 8 | 8 |
-| k.story | `k.story.element.source` | thing | `k.story.source` | name | 12 | 12 |
-| k.story | `k.story.goal.act` | act | `k.actions.action` | name | 4 | 4 |
-| k.story | `k.story.goal.source` | thing | `k.story.source` | name | 2 | 2 |
-| k.story | `k.story.obstacle.thing` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 7 | 7 |
-| k.story | `k.story.obstacle.blocks` | thing | `k.story.goal` | name | 4 | 4 |
-| k.story | `k.story.obstacle.overcome_by` | act | `k.actions.action` | name | 6 | 6 |
-| k.story | `k.story.obstacle.means` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 8 | 8 |
-| k.story | `k.story.obstacle.tried_by` | act | `k.actions.action` | name | 9 | 9 |
 | k.time | `k.time.before.earlier` | time | `k.time.hour` | name | 46 | 23 |
 | k.time | `k.time.before.later` | time | `k.time.hour` | name | 46 | 23 |
 | k.time | `k.time.during.hemisphere` | value | `k.values.direction` | name | 2 | 2 |
