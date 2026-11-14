@@ -1,4 +1,4 @@
-# k.scenes/shards/things-g: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 75 things (the drawable things and the animals of k.animals) whose name starts with "g"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-g: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 78 things (the drawable things and the animals of k.animals) whose name starts with "g"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -29,6 +29,7 @@
 @k.scenes.thing.glass_of_milk k.scenes.thing name="glass of milk" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.glasses k.scenes.thing name=glasses place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.glitter k.scenes.thing name=glitter place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.globe k.scenes.thing name=globe place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.globe_showing_Americas k.scenes.thing name="globe showing Americas" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.globe_showing_Asia-Australia k.scenes.thing name="globe showing Asia-Australia" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.globe_showing_Europe-Africa k.scenes.thing name="globe showing Europe-Africa" place=indoors size=small named=model core.source="hand-core 1"
@@ -73,6 +74,8 @@
 @k.scenes.thing.grinder k.scenes.thing name=grinder place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.grizzly_bear k.scenes.thing name="grizzly bear" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.groundhog k.scenes.thing name=groundhog place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.guest k.scenes.thing name=guest place=indoors size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.guide k.scenes.thing name=guide place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.guide_dog k.scenes.thing name="guide dog" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.guinea_pig k.scenes.thing name="guinea pig" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.guitar k.scenes.thing name=guitar place=indoors size=medium named=model core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.scenes/shards/things-t: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 151 things (the drawable things and the animals of k.animals) whose name starts with "t"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-t: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 156 things (the drawable things and the animals of k.animals) whose name starts with "t"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -38,6 +38,7 @@
 @k.scenes.thing.tea_bag k.scenes.thing name="tea bag" place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.tea_instant k.scenes.thing name="tea instant" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tea_spoon k.scenes.thing name="tea spoon" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.teacher k.scenes.thing name=teacher place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.teacup_without_handle k.scenes.thing name="teacup without handle" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.teapot k.scenes.thing name=teapot place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tear-off_calendar k.scenes.thing name="tear-off calendar" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -58,6 +59,7 @@
 @k.scenes.thing.test_tube k.scenes.thing name="test tube" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.text_phone k.scenes.thing name="text phone" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.theater k.scenes.thing name=theater place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.theatre_masks k.scenes.thing name="theatre masks" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.thermometer k.scenes.thing name=thermometer place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.thong_sandal k.scenes.thing name="thong sandal" place=on_thing on=foot size=small named=model core.source="hand-core 1"
 @k.scenes.thing.thread k.scenes.thing name=thread place=indoors size=tiny named=model core.source="hand-core 1"
@@ -69,6 +71,7 @@
 @k.scenes.thing.tiger k.scenes.thing name=tiger place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.tights k.scenes.thing name=tights place=on_thing on=person size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tile k.scenes.thing name=tile place=on_thing on=wall size=small named=model core.source="hand-core 1"
+@k.scenes.thing.till k.scenes.thing name=till place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.timer k.scenes.thing name=timer place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.timer_clock k.scenes.thing name="timer clock" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tin k.scenes.thing name=tin place=indoors size=small named=model core.source="hand-core 1"
@@ -118,6 +121,7 @@
 @k.scenes.thing.trackball k.scenes.thing name=trackball place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.tracksuit k.scenes.thing name=tracksuit place=on_thing on=person size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.tractor k.scenes.thing name=tractor place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.traffic_light k.scenes.thing name="traffic light" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.traffic_lights k.scenes.thing name="traffic lights" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.train k.scenes.thing name=train place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.trainers k.scenes.thing name=trainers place=on_thing on=foot size=small named=model core.source="hand-core 1"
@@ -125,6 +129,7 @@
 @k.scenes.thing.tram_car k.scenes.thing name="tram car" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.trampoline k.scenes.thing name=trampoline place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.trap k.scenes.thing name=trap place=ground size=small named=model core.source="hand-core 1"
+@k.scenes.thing.trapeze k.scenes.thing name=trapeze place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.trash_bin k.scenes.thing name="trash bin" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.tray k.scenes.thing name=tray place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.treasure_chest k.scenes.thing name="treasure chest" place=ground size=medium named=model core.source="hand-core 1"

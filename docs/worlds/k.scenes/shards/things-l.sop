@@ -1,4 +1,4 @@
-# k.scenes/shards/things-l: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 86 things (the drawable things and the animals of k.animals) whose name starts with "l"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-l: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 90 things (the drawable things and the animals of k.animals) whose name starts with "l"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -14,6 +14,7 @@
 @k.scenes.thing.lake k.scenes.thing name=lake place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.lamb k.scenes.thing name=lamb place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lamp k.scenes.thing name=lamp place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.lamp_post k.scenes.thing name="lamp post" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.lampshade k.scenes.thing name=lampshade place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lance k.scenes.thing name=lance size=large named=model core.source="hand-core 1"
 @k.scenes.thing.lane k.scenes.thing name=lane place=ground size=huge named=model core.source="hand-core 1"
@@ -32,6 +33,7 @@
 @k.scenes.thing.leaf_fluttering_in_wind k.scenes.thing name="leaf fluttering in wind" place=sky size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.leafless_tree k.scenes.thing name="leafless tree" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.leafy_green k.scenes.thing name="leafy green" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.leafy_plant k.scenes.thing name="leafy plant" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.leash k.scenes.thing name=leash place=on_thing on=dog size=small named=model core.source="hand-core 1"
 @k.scenes.thing.leaves k.scenes.thing name=leaves place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.led k.scenes.thing name=led place=indoors size=tiny named=model core.source="hand-core 1"
@@ -50,7 +52,9 @@
 @k.scenes.thing.leopard k.scenes.thing name=leopard place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.letter k.scenes.thing name=letter place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.lettuce k.scenes.thing name=lettuce place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.librarian k.scenes.thing name=librarian place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.library k.scenes.thing name=library place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.lifeguard k.scenes.thing name=lifeguard place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.lift k.scenes.thing name=lift place=indoors size=large named=model core.source="hand-core 1"
 @k.scenes.thing.light_bulb k.scenes.thing name="light bulb" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.light_rail k.scenes.thing name="light rail" place=ground size=huge named=model core.source="hand-core 1"

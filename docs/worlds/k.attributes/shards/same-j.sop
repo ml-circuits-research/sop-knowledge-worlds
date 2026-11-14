@@ -1,4 +1,4 @@
-# k.attributes/shards/same-j: one name, one thing: for 50 names that start with "j" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-j: one name, one thing: for 51 names that start with "j" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -43,6 +43,7 @@
 @k.attributes.same.judge.person k.attributes.same name=judge sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.judo_belt.clothing k.attributes.same name="judo belt" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jug.thing k.attributes.same name=jug sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.juggler.thing k.attributes.same name=juggler sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.juice.food k.attributes.same name=juice sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jukebox.thing k.attributes.same name=jukebox sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.july.time k.attributes.same name=july sense=time only=true in=k.time.month by_word=k.words.sense core.source="hand-core 1"

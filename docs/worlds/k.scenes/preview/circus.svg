@@ -1,7 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 309" width="480" height="309">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 322" width="480" height="322">
   <title>circus</title>
-  <rect width="480" height="309" fill="#f3ead8"/><rect y="118.8" width="480" height="190.2" fill="#e3c98f"/>
+  <rect width="480" height="322" fill="#f3ead8"/><rect y="131.6" width="480" height="190.4" fill="#e3c98f"/>
   <defs>
+    <symbol id="o-swing" viewBox="0 0 100 100">
+  <polygon points="62.1,60.8 62.1,65.4 42.9,65.4 42.9,60.8" fill="#33A02C"><title>seat</title></polygon>
+  <polyline points="9.9,81.7 40.1,15.4 42.1,13.6 44.6,12.8 60.1,12.6 62.6,13.8 64.2,17.5 70.4,88.2" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part2</title></polyline>
+  <polyline points="61.6,13 63.3,13.8 64.7,15.2 67,19.4 80.7,54.8 89.8,80.1" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part3</title></polyline>
+  <polyline points="67.3,51.4 79.2,50.9" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part4</title></polyline>
+  <polyline points="41.2,14.3 38.7,77.4" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part5</title></polyline>
+  <polyline points="42.8,13.3 44.8,60.6" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part6</title></polyline>
+  <polyline points="61,12.8 60.2,60.4" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part7</title></polyline>
+  <polyline points="24.5,50.1 39.8,50.1" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part8</title></polyline>
+  <polyline points="60.2,60.8 62.1,60.8 62.1,65.4 42.9,65.4 42.9,60.8 44.8,60.8" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part9</title></polyline>
+    </symbol>
     <symbol id="o-spot_light" viewBox="0 0 100 100">
   <polygon points="79,16.9 60.9,16.9 60.9,12.3 79,12.3" fill="#C8C8C8"><title>part1</title></polygon>
   <polygon points="76.2,60.9 78,62 79.1,63.8 79.2,67.5 78.6,69.4 75.8,70.3 66.4,71.2 67.8,67.4 68.3,62 67.2,57.5 63.6,53.2 64,53.2 64,16.9 76.4,16.9" fill="#C8C8C8"><title>part2</title></polygon>
@@ -174,34 +185,36 @@
   <ellipse cx="49.55" cy="18.25" rx="28.25" ry="3.75" fill="#757575"><title>top</title></ellipse>
     </symbol>
   </defs>
-  <use href="#o-spot_light" x="81.6" y="6" width="24" height="24"><title>spotlight</title></use>
-  <use href="#o-spot_light" x="179.2" y="6" width="24" height="24"><title>spotlight</title></use>
-  <use href="#o-spot_light" x="276.8" y="6" width="24" height="24"><title>spotlight</title></use>
-  <use href="#o-rope" x="374.4" y="6" width="24" height="24"><title>rope</title></use>
-  <use href="#o-circus_tent" x="33.6" y="36" width="76.8" height="76.8"><title>circus tent</title></use>
-  <use href="#o-person" x="136" y="76" width="36.8" height="36.8"><title>audience</title></use>
-  <use href="#o-person" x="198.4" y="76" width="36.8" height="36.8"><title>audience</title></use>
-  <use href="#o-person" x="260.8" y="76" width="36.8" height="36.8"><title>audience</title></use>
-  <use href="#o-popcorn" x="323.2" y="88.8" width="24" height="24"><title>popcorn</title></use>
-  <use href="#o-popcorn" x="372.8" y="88.8" width="24" height="24"><title>popcorn</title></use>
-  <use href="#o-popcorn" x="422.4" y="88.8" width="24" height="24"><title>popcorn</title></use>
-  <use href="#o-elephant" x="19.1" y="118.8" width="96" height="96"><title>elephant</title></use>
-  <use href="#o-horse" x="126.3" y="148.8" width="66" height="66"><title>horse</title></use>
-  <use href="#o-horse" x="203.4" y="148.8" width="66" height="66"><title>horse</title></use>
-  <use href="#o-lion" x="280.6" y="148.8" width="66" height="66"><title>lion</title></use>
-  <use href="#o-person" x="357.7" y="168.8" width="46" height="46"><title>clown</title></use>
-  <use href="#o-person" x="414.9" y="168.8" width="46" height="46"><title>clown</title></use>
-  <use href="#o-person" x="15.6" y="220.8" width="46" height="46"><title>acrobat</title></use>
-  <use href="#o-person" x="69.3" y="220.8" width="46" height="46"><title>acrobat</title></use>
-  <use href="#o-person" x="122.9" y="220.8" width="46" height="46"><title>acrobat</title></use>
-  <use href="#o-person" x="176.5" y="220.8" width="46" height="46"><title>juggler</title></use>
-  <use href="#o-drum" x="230.2" y="220.8" width="46" height="46"><title>drum</title></use>
-  <use href="#o-ball" x="283.8" y="236.8" width="30" height="30"><title>ball</title></use>
-  <use href="#o-ball" x="321.5" y="236.8" width="30" height="30"><title>ball</title></use>
-  <use href="#o-ball" x="359.1" y="236.8" width="30" height="30"><title>ball</title></use>
-  <use href="#o-trumpet" x="396.7" y="236.8" width="30" height="30"><title>trumpet</title></use>
-  <use href="#o-balloon" x="434.4" y="236.8" width="30" height="30"><title>balloon</title></use>
-  <use href="#o-balloon" x="101.5" y="272.8" width="30" height="30"><title>balloon</title></use>
-  <use href="#o-balloon" x="225" y="272.8" width="30" height="30"><title>balloon</title></use>
-  <use href="#o-top_hat" x="348.5" y="272.8" width="30" height="30"><title>top hat</title></use>
+  <use href="#o-swing" x="50.1" y="6" width="36.8" height="36.8"><title>trapeze</title></use>
+  <use href="#o-swing" x="128.9" y="6" width="36.8" height="36.8"><title>trapeze</title></use>
+  <use href="#o-spot_light" x="207.8" y="6" width="24" height="24"><title>spotlight</title></use>
+  <use href="#o-spot_light" x="273.8" y="6" width="24" height="24"><title>spotlight</title></use>
+  <use href="#o-spot_light" x="339.9" y="6" width="24" height="24"><title>spotlight</title></use>
+  <use href="#o-rope" x="405.9" y="6" width="24" height="24"><title>rope</title></use>
+  <use href="#o-circus_tent" x="33.6" y="48.8" width="76.8" height="76.8"><title>circus tent</title></use>
+  <use href="#o-person" x="136" y="88.8" width="36.8" height="36.8"><title>audience</title></use>
+  <use href="#o-person" x="198.4" y="88.8" width="36.8" height="36.8"><title>audience</title></use>
+  <use href="#o-person" x="260.8" y="88.8" width="36.8" height="36.8"><title>audience</title></use>
+  <use href="#o-popcorn" x="323.2" y="101.6" width="24" height="24"><title>popcorn</title></use>
+  <use href="#o-popcorn" x="372.8" y="101.6" width="24" height="24"><title>popcorn</title></use>
+  <use href="#o-popcorn" x="422.4" y="101.6" width="24" height="24"><title>popcorn</title></use>
+  <use href="#o-elephant" x="19.1" y="131.6" width="96" height="96"><title>elephant</title></use>
+  <use href="#o-horse" x="126.3" y="161.6" width="66" height="66"><title>horse</title></use>
+  <use href="#o-horse" x="203.4" y="161.6" width="66" height="66"><title>horse</title></use>
+  <use href="#o-lion" x="280.6" y="161.6" width="66" height="66"><title>lion</title></use>
+  <use href="#o-person" x="357.7" y="181.6" width="46" height="46"><title>clown</title></use>
+  <use href="#o-person" x="414.9" y="181.6" width="46" height="46"><title>clown</title></use>
+  <use href="#o-person" x="15.6" y="233.6" width="46" height="46"><title>acrobat</title></use>
+  <use href="#o-person" x="69.3" y="233.6" width="46" height="46"><title>acrobat</title></use>
+  <use href="#o-person" x="122.9" y="233.6" width="46" height="46"><title>acrobat</title></use>
+  <use href="#o-person" x="176.5" y="233.6" width="46" height="46"><title>juggler</title></use>
+  <use href="#o-drum" x="230.2" y="233.6" width="46" height="46"><title>drum</title></use>
+  <use href="#o-ball" x="283.8" y="249.6" width="30" height="30"><title>ball</title></use>
+  <use href="#o-ball" x="321.5" y="249.6" width="30" height="30"><title>ball</title></use>
+  <use href="#o-ball" x="359.1" y="249.6" width="30" height="30"><title>ball</title></use>
+  <use href="#o-trumpet" x="396.7" y="249.6" width="30" height="30"><title>trumpet</title></use>
+  <use href="#o-balloon" x="434.4" y="249.6" width="30" height="30"><title>balloon</title></use>
+  <use href="#o-balloon" x="101.5" y="285.6" width="30" height="30"><title>balloon</title></use>
+  <use href="#o-balloon" x="225" y="285.6" width="30" height="30"><title>balloon</title></use>
+  <use href="#o-top_hat" x="348.5" y="285.6" width="30" height="30"><title>top hat</title></use>
 </svg>

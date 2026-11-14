@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 307" width="480" height="307">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 343" width="480" height="343">
   <title>playground</title>
-  <rect width="480" height="307" fill="#cfe8fa"/><rect y="132.8" width="480" height="174.2" fill="#f2dc9b"/>
+  <rect width="480" height="343" fill="#cfe8fa"/><rect y="132.8" width="480" height="210.2" fill="#f2dc9b"/>
   <defs>
     <symbol id="o-sun" viewBox="0 0 100 100">
   <polyline points="50,5 50,20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_ray</title></polyline>
@@ -124,6 +124,12 @@
   <polyline points="46,49.9 62.1,42 62.1,12.6" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="45.5,50.4 68.7,55.4 75.2,51.6" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
+    <symbol id="o-box" viewBox="0 0 100 100">
+  <rect x="15" y="40" width="55" height="50" fill="brown" stroke="#333" stroke-width="0.8"><title>front</title></rect>
+  <polygon points="70,40 90,22 90,72 70,90" fill="brown" stroke="#333" stroke-width="0.8"><title>side</title></polygon>
+  <polygon points="15,40 35,22 90,22 70,40" fill="brown" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <rect x="38" y="40" width="8" height="50" fill="yellow" stroke="#333" stroke-width="0.8"><title>tape</title></rect>
+    </symbol>
     <symbol id="o-spade" viewBox="0 0 100 100">
   <polygon points="56.4,15.9 56.5,11 43.9,11.1 43.9,15.8 46.3,19.3 46.7,21.2 46.6,59.6 53.1,59.6 53.5,21.4 54,19.3" fill="#A57939"><title>handle</title></polygon>
   <polygon points="50,60.4 50,88.2 45,87.2 39.8,84.6 39.4,60.4" fill="#D0CFCE"><title>blade</title></polygon>
@@ -233,16 +239,17 @@
   <use href="#o-see_saw" x="244.9" y="146.8" width="66" height="66"><title>see saw</title></use>
   <use href="#o-merry_go_round" x="320.6" y="146.8" width="66" height="66"><title>merry go round</title></use>
   <use href="#o-jungle_gym" x="396.3" y="146.8" width="66" height="66"><title>jungle gym</title></use>
-  <use href="#o-spade" x="13" y="218.8" width="46" height="46"><title>spade</title></use>
-  <use href="#o-bench" x="64" y="218.8" width="46" height="46"><title>bench</title></use>
-  <use href="#o-bench" x="115" y="218.8" width="46" height="46"><title>bench</title></use>
-  <use href="#o-person" x="166" y="218.8" width="46" height="46"><title>child</title></use>
-  <use href="#o-person" x="217" y="218.8" width="46" height="46"><title>child</title></use>
-  <use href="#o-person" x="268" y="218.8" width="46" height="46"><title>child</title></use>
-  <use href="#o-kick_scooter" x="319" y="218.8" width="46" height="46"><title>scooter</title></use>
-  <use href="#o-bicycle" x="370" y="218.8" width="46" height="46"><title>bicycle</title></use>
-  <use href="#o-dog" x="421" y="218.8" width="46" height="46"><title>dog</title></use>
-  <use href="#o-bucket" x="101.5" y="270.8" width="30" height="30"><title>bucket</title></use>
-  <use href="#o-ball" x="225" y="270.8" width="30" height="30"><title>ball</title></use>
-  <use href="#o-ball" x="348.5" y="270.8" width="30" height="30"><title>ball</title></use>
+  <use href="#o-box" x="16.4" y="218.8" width="66" height="66"><title>sandbox</title></use>
+  <use href="#o-spade" x="90.9" y="238.8" width="46" height="46"><title>spade</title></use>
+  <use href="#o-bench" x="145.3" y="238.8" width="46" height="46"><title>bench</title></use>
+  <use href="#o-bench" x="199.8" y="238.8" width="46" height="46"><title>bench</title></use>
+  <use href="#o-person" x="254.2" y="238.8" width="46" height="46"><title>child</title></use>
+  <use href="#o-person" x="308.7" y="238.8" width="46" height="46"><title>child</title></use>
+  <use href="#o-person" x="363.1" y="238.8" width="46" height="46"><title>child</title></use>
+  <use href="#o-kick_scooter" x="417.6" y="238.8" width="46" height="46"><title>scooter</title></use>
+  <use href="#o-bicycle" x="55" y="290.8" width="46" height="46"><title>bicycle</title></use>
+  <use href="#o-dog" x="148" y="290.8" width="46" height="46"><title>dog</title></use>
+  <use href="#o-bucket" x="241" y="306.8" width="30" height="30"><title>bucket</title></use>
+  <use href="#o-ball" x="318" y="306.8" width="30" height="30"><title>ball</title></use>
+  <use href="#o-ball" x="395" y="306.8" width="30" height="30"><title>ball</title></use>
 </svg>

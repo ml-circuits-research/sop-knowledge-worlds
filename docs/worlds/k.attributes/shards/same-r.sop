@@ -1,4 +1,4 @@
-# k.attributes/shards/same-r: one name, one thing: for 133 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-r: one name, one thing: for 136 names that start with "r" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -34,6 +34,7 @@
 @k.attributes.same.ravioli.food k.attributes.same name=ravioli sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.razor.thing k.attributes.same name=razor sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.razor_electric.thing k.attributes.same name="razor electric" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.reader.thing k.attributes.same name=reader sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ready_meal.food k.attributes.same name="ready meal" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ready_meal_lamb.food k.attributes.same name="ready meal lamb" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.receipt.thing k.attributes.same name=receipt sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -48,6 +49,7 @@
 @k.attributes.same.red_paper_lantern.thing k.attributes.same name="red paper lantern" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.reed.thing k.attributes.same name=reed sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.reel.thing k.attributes.same name=reel sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.referee.thing k.attributes.same name=referee sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.refrigerator.thing k.attributes.same name=refrigerator sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.refuse_lorry.thing k.attributes.same name="refuse lorry" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.rein.thing k.attributes.same name=rein sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
@@ -130,10 +132,11 @@
 @k.attributes.same.rug.thing k.attributes.same name=rug sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rugby_ball.thing k.attributes.same name="rugby ball" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.rugby_football.thing k.attributes.same name="rugby football" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.ruler.thing k.attributes.same name=ruler sense=thing only=true in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rum.food k.attributes.same name=rum sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.running_shirt.thing k.attributes.same name="running shirt" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.running_shoe.clothing k.attributes.same name="running shoe" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.runway.thing k.attributes.same name=runway sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.runway.thing k.attributes.same name=runway sense=thing only=true in=k.attributes.thing in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.rupert.place k.attributes.same name=rupert sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ruse.place k.attributes.same name=ruse sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.russia.place k.attributes.same name=russia sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"

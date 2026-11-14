@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3457
-- one thing everywhere: 3387
+- names carried by facts of more than one world: 3506
+- one thing everywhere: 3436
 - clashes of sense: 70
 
 | sense of the one thing | names |
@@ -26,13 +26,13 @@ and the meat).
 | plant | 70 |
 | person | 69 |
 | body part | 84 |
-| clothing | 163 |
+| clothing | 164 |
 | colour | 35 |
 | shape | 31 |
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
-| thing | 1681 |
+| thing | 1729 |
 
 ## Clashes of sense
 
@@ -115,25 +115,27 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2313 |
-| `k.attributes` and `k.scenes` | 2137 |
-| `k.objects` and `k.scenes` | 2123 |
+| `k.attributes` and `k.objects` | 2316 |
+| `k.objects` and `k.scenes` | 2192 |
+| `k.attributes` and `k.scenes` | 2143 |
 | `k.commonsense` and `k.scenes` | 318 |
 | `k.animals` and `k.commonsense` | 290 |
 | `k.animals` and `k.scenes` | 290 |
 | `k.attributes` and `k.commonsense` | 203 |
-| `k.commonsense` and `k.objects` | 186 |
+| `k.commonsense` and `k.objects` | 188 |
 | `k.animals` and `k.attributes` | 175 |
 | `k.attributes` and `k.layouts` | 167 |
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
-| `k.animals` and `k.objects` | 158 |
+| `k.animals` and `k.objects` | 160 |
 | `k.attributes` and `k.food` | 142 |
 | `k.food` and `k.objects` | 136 |
 | `k.food` and `k.scenes` | 131 |
 | `k.attributes` and `k.wearables` | 87 |
-| `k.objects` and `k.wearables` | 83 |
-| `k.scenes` and `k.wearables` | 82 |
+| `k.objects` and `k.wearables` | 84 |
+| `k.scenes` and `k.wearables` | 83 |
+| `k.people` and `k.scenes` | 25 |
+| `k.objects` and `k.people` | 24 |
 | `k.shapes` and `k.values` | 24 |
 | `k.colours` and `k.values` | 19 |
 | `k.attributes` and `k.space` | 16 |
@@ -141,16 +143,14 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.scenes` and `k.space` | 16 |
 | `k.commonsense` and `k.food` | 14 |
 | `k.attributes` and `k.body` | 13 |
-| `k.body` and `k.objects` | 9 |
+| `k.body` and `k.objects` | 10 |
 | `k.commonsense` and `k.layouts` | 9 |
 | `k.attributes` and `k.values` | 5 |
 | `k.geo` and `k.objects` | 5 |
 | `k.animals` and `k.layouts` | 4 |
 | `k.attributes` and `k.people` | 4 |
-| `k.objects` and `k.people` | 4 |
-| `k.people` and `k.scenes` | 4 |
+| `k.body` and `k.scenes` | 4 |
 | `k.attributes` and `k.geo` | 3 |
-| `k.body` and `k.scenes` | 3 |
 | `k.attributes` and `k.colours` | 2 |
 | `k.commonsense` and `k.space` | 2 |
 | `k.geo` and `k.scenes` | 2 |

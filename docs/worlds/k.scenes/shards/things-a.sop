@@ -1,4 +1,4 @@
-# k.scenes/shards/things-a: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 59 things (the drawable things and the animals of k.animals) whose name starts with "a"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-a: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 64 things (the drawable things and the animals of k.animals) whose name starts with "a"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -7,6 +7,8 @@
 @k.scenes.thing.abacus k.scenes.thing name=abacus place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.accordion k.scenes.thing name=accordion place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.acorn k.scenes.thing name=acorn place=ground size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.acrobat k.scenes.thing name=acrobat place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.actor k.scenes.thing name=actor place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.adhesive_bandage k.scenes.thing name="adhesive bandage" place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.admission_tickets k.scenes.thing name="admission tickets" place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.aerial_indoor k.scenes.thing name="aerial indoor" place=indoors size=small named=model core.source="hand-core 1"
@@ -31,6 +33,7 @@
 @k.scenes.thing.anchor k.scenes.thing name=anchor size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.anchovy k.scenes.thing name=anchovy place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.angelfish k.scenes.thing name=angelfish place=water size=tiny named=model core.source="hand-core 1"
+@k.scenes.thing.angler k.scenes.thing name=angler place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.ant k.scenes.thing name=ant place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.ant_eater k.scenes.thing name="ant eater" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.anteater k.scenes.thing name=anteater place=ground size=medium named=model core.source="hand-core 1"
@@ -54,7 +57,9 @@
 @k.scenes.thing.ashtray k.scenes.thing name=ashtray place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.asparagus k.scenes.thing name=asparagus place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.asteroid k.scenes.thing name=asteroid place=sky size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.astronaut k.scenes.thing name=astronaut size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.aubergine k.scenes.thing name=aubergine place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.audience k.scenes.thing name=audience place=indoors named=model core.source="hand-core 1"
 @k.scenes.thing.auroscope k.scenes.thing name=auroscope place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.auto_rickshaw k.scenes.thing name="auto rickshaw" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.automobile k.scenes.thing name=automobile place=ground size=large named=model core.source="hand-core 1"

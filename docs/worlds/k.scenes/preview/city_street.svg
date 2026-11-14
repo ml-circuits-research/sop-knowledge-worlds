@@ -162,6 +162,19 @@
   <polygon points="43.5,53 43,51.7 43.2,49.9 45.2,46.9 48.8,45.2 51.3,45.9 51.6,47 51.1,47.8 47.3,49.3 44.5,52.7" fill="#FFF59D"><title>part9</title></polygon>
   <polygon points="40,47.8 39.4,48.3 38.8,48 39.2,45.5 42.1,41.5 45.3,39.5 50,38.6 53.8,39.2 57.1,40.9 60,44 61.2,47.6 60.3,48.2 58.1,44.9 55,42.5 50,41.3 46.4,41.9 43.8,43.2 41.9,44.9" fill="#757575"><title>part10</title></polygon>
     </symbol>
+    <symbol id="o-lamp" viewBox="0 0 100 100">
+  <polygon points="66.8,4.8 80.2,45 22.8,45 36.2,4.8" fill="#FFF400"><title>shade</title></polygon>
+  <polygon points="67.6,92.3 67.9,93.5 67.6,94.6 66.5,91" fill="#FFFFFF"><title>part2</title></polygon>
+  <polygon points="52.6,45.1 63.7,81.9 62.5,85.5 62.6,87.6 66.5,91 67.5,94.3 35.9,94.4 36.8,91.2 40.7,87.8 40.8,85.7 39.6,82 50.7,45" fill="#F73900"><title>part3</title></polygon>
+  <polygon points="52.6,45.1 58.6,46.8 63.7,49.6 67.9,54.5 69.2,57.8 69.6,61.9 68.8,69 63.7,81.9" fill="#F73900"><title>part4</title></polygon>
+  <polygon points="39.6,82 36.6,75.4 34.6,69.2 33.7,62 34.1,58 35.4,54.6 39.7,49.8 44.7,46.9 50.7,45.3" fill="#F73900"><title>part5</title></polygon>
+  <polygon points="36.8,91.2 35.7,94.8 35.5,93" fill="#FFFFFF"><title>part6</title></polygon>
+  <polyline points="36.2,94.4 66.9,94.4" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part7</title></polyline>
+  <polyline points="50.7,45.3 44.7,46.9 39.7,49.8 35.4,54.6 34.1,58 33.7,62 34.6,69.2 40.9,86.5 40.4,88.4 35.8,92.4 35.4,93.8 35.7,94.8" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part8</title></polyline>
+  <polyline points="52.6,45.1 58.6,46.8 63.7,49.6 67.9,54.5 69.2,57.8 69.6,61.9 68.8,69 62.4,86.3 62.9,88.2 67.5,92.2 67.9,93.5 67.6,94.6" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part9</title></polyline>
+  <polyline points="27.4,45 80.2,45 66.8,4.8 36.2,4.8 22.8,45 27.4,45" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part10</title></polyline>
+  <polyline points="67.6,92.3 71.6,89.9 75.2,88.5 79.6,87.6 84.4,87.6 88.2,88.3 90.8,89.5 92.6,91.1 94,93.6" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part11</title></polyline>
+    </symbol>
     <symbol id="o-stop_sign" viewBox="0 0 100 100">
   <polygon points="69.4,3.1 30.6,3.1 3.1,30.6 3.1,69.4 30.6,96.9 69.4,96.9 96.9,69.4 96.9,30.6" fill="#F44336"><title>sign</title></polygon>
   <polygon points="93.8,68.1 68.1,93.8 32.8,93.8 30.6,96.9 69.4,96.9 96.9,69.4 96.9,30.6 93.8,32.8" fill="#CC3333"><title>part2</title></polygon>
@@ -264,16 +277,16 @@
   <use href="#o-shop" x="291.7" y="64" width="76.8" height="76.8"><title>shop</title></use>
   <use href="#o-shop" x="381.9" y="64" width="76.8" height="76.8"><title>shop</title></use>
   <use href="#o-shop" x="201.6" y="146.8" width="76.8" height="76.8"><title>shop</title></use>
-  <use href="#o-sidewalk" x="15.3" y="269.6" width="96" height="96"><title>sidewalk</title></use>
-  <use href="#o-tree" x="118.7" y="269.6" width="96" height="96"><title>tree</title></use>
-  <use href="#o-tree" x="222" y="269.6" width="96" height="96"><title>tree</title></use>
-  <use href="#o-car" x="325.3" y="299.6" width="66" height="66"><title>car</title></use>
-  <use href="#o-car" x="398.7" y="299.6" width="66" height="66"><title>car</title></use>
-  <use href="#o-bus" x="17.7" y="371.6" width="66" height="66"><title>bus</title></use>
-  <use href="#o-taxi" x="93.4" y="371.6" width="66" height="66"><title>taxi</title></use>
-  <use href="#o-truck" x="169.1" y="371.6" width="66" height="66"><title>truck</title></use>
-  <use href="#o-vertical_traffic_light" x="244.9" y="371.6" width="66" height="66"><title>traffic light</title></use>
-  <use href="#o-vertical_traffic_light" x="320.6" y="371.6" width="66" height="66"><title>traffic light</title></use>
+  <use href="#o-sidewalk" x="20.3" y="269.6" width="96" height="96"><title>sidewalk</title></use>
+  <use href="#o-tree" x="128.7" y="269.6" width="96" height="96"><title>tree</title></use>
+  <use href="#o-car" x="237" y="299.6" width="66" height="66"><title>car</title></use>
+  <use href="#o-bus" x="315.3" y="299.6" width="66" height="66"><title>bus</title></use>
+  <use href="#o-taxi" x="393.7" y="299.6" width="66" height="66"><title>taxi</title></use>
+  <use href="#o-truck" x="17.7" y="371.6" width="66" height="66"><title>truck</title></use>
+  <use href="#o-vertical_traffic_light" x="93.4" y="371.6" width="66" height="66"><title>traffic light</title></use>
+  <use href="#o-vertical_traffic_light" x="169.1" y="371.6" width="66" height="66"><title>traffic light</title></use>
+  <use href="#o-lamp" x="244.9" y="371.6" width="66" height="66"><title>street lamp</title></use>
+  <use href="#o-lamp" x="320.6" y="371.6" width="66" height="66"><title>street lamp</title></use>
   <use href="#o-stop_sign" x="396.3" y="371.6" width="66" height="66"><title>stop sign</title></use>
   <use href="#o-bicycle" x="18.7" y="443.6" width="46" height="46"><title>bicycle</title></use>
   <use href="#o-bus_stop" x="75.3" y="443.6" width="46" height="46"><title>bus stop</title></use>

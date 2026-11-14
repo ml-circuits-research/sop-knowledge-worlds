@@ -1,4 +1,4 @@
-# k.attributes/shards/same-d: one name, one thing: for 129 names that start with "d" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-d: one name, one thing: for 131 names that start with "d" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -71,11 +71,12 @@
 @k.attributes.same.dishwasher.thing k.attributes.same name=dishwasher sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dishwasher_powder.thing k.attributes.same name="dishwasher powder" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ditch.thing k.attributes.same name=ditch sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.diver.thing k.attributes.same name=diver sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.diving_mask.clothing k.attributes.same name="diving mask" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.diya_lamp.thing k.attributes.same name="diya lamp" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.dna.thing k.attributes.same name=dna sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dock.thing k.attributes.same name=dock sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.doctor.person k.attributes.same name=doctor sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.doctor.person k.attributes.same name=doctor sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dodo.animal k.attributes.same name=dodo sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.doe.thing k.attributes.same name=doe sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dog.animal k.attributes.same name=dog sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.parts.called by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -127,6 +128,7 @@
 @k.attributes.same.duffel.thing k.attributes.same name=duffel sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dumper_truck.thing k.attributes.same name="dumper truck" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.dumpling.food k.attributes.same name=dumpling sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.dune.thing k.attributes.same name=dune sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dung_beetle.animal k.attributes.same name="dung beetle" sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dungeon.thing k.attributes.same name=dungeon sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dvd.thing k.attributes.same name=dvd sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

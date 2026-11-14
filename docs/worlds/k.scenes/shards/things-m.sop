@@ -1,4 +1,4 @@
-# k.scenes/shards/things-m: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 155 things (the drawable things and the animals of k.animals) whose name starts with "m"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-m: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 158 things (the drawable things and the animals of k.animals) whose name starts with "m"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -58,6 +58,7 @@
 @k.scenes.thing.meat_on_bone k.scenes.thing name="meat on bone" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.meatball k.scenes.thing name=meatball place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.meatballs_and_spaghetti k.scenes.thing name="meatballs and spaghetti" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.mechanic k.scenes.thing name=mechanic place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.medal k.scenes.thing name=medal place=on_thing on=person size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.medication k.scenes.thing name=medication place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.medicine k.scenes.thing name=medicine place=indoors size=small named=model core.source="hand-core 1"
@@ -103,6 +104,8 @@
 @k.scenes.thing.mittens k.scenes.thing name=mittens place=on_thing on=hand size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mixer k.scenes.thing name=mixer place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.moai k.scenes.thing name=moai place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.moat k.scenes.thing name=moat place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.mobile k.scenes.thing name=mobile place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mobile_phone k.scenes.thing name="mobile phone" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mobile_phone_camera k.scenes.thing name="mobile phone camera" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.mobile_phone_case k.scenes.thing name="mobile phone case" place=indoors size=small named=model core.source="hand-core 1"

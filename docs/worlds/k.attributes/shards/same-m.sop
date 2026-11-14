@@ -1,4 +1,4 @@
-# k.attributes/shards/same-m: one name, one thing: for 259 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-m: one name, one thing: for 261 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -96,7 +96,7 @@
 @k.attributes.same.meat_on_bone.food k.attributes.same name="meat on bone" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.meatball.food k.attributes.same name=meatball sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.meatballs_and_spaghetti.food k.attributes.same name="meatballs and spaghetti" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.mechanic.person k.attributes.same name=mechanic sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mechanic.person k.attributes.same name=mechanic sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.medal.thing k.attributes.same name=medal sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.medication.thing k.attributes.same name=medication sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.medicine.thing k.attributes.same name=medicine sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -174,6 +174,8 @@
 @k.attributes.same.mittens.clothing k.attributes.same name=mittens sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.mixer.thing k.attributes.same name=mixer sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.moai.thing k.attributes.same name=moai sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.moat.thing k.attributes.same name=moat sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mobile.thing k.attributes.same name=mobile sense=thing only=true in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mobile_phone.thing k.attributes.same name="mobile phone" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mobile_phone_camera.thing k.attributes.same name="mobile phone camera" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mobile_phone_case.thing k.attributes.same name="mobile phone case" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

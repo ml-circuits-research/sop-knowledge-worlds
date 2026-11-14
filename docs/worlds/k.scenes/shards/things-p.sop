@@ -1,4 +1,4 @@
-# k.scenes/shards/things-p: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 210 things (the drawable things and the animals of k.animals) whose name starts with "p"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-p: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 219 things (the drawable things and the animals of k.animals) whose name starts with "p"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -35,7 +35,10 @@
 @k.scenes.thing.parrot k.scenes.thing name=parrot place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.parsnip k.scenes.thing name=parsnip place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.partridge k.scenes.thing name=partridge place=sky size=small named=model core.source="hand-core 1"
+@k.scenes.thing.party_hat k.scenes.thing name="party hat" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.party_popper k.scenes.thing name="party popper" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.party_streamers k.scenes.thing name="party streamers" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.passenger k.scenes.thing name=passenger place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.passenger_ship k.scenes.thing name="passenger ship" place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.passion_fruit k.scenes.thing name="passion fruit" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.passport k.scenes.thing name=passport place=indoors size=small named=model core.source="hand-core 1"
@@ -46,6 +49,7 @@
 @k.scenes.thing.patch_on_clothes k.scenes.thing name="patch on clothes" place=on_thing on=person size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.pate k.scenes.thing name=pate place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.path k.scenes.thing name=path place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.patient k.scenes.thing name=patient place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.patient_clipboard k.scenes.thing name="patient clipboard" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.patient_file k.scenes.thing name="patient file" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pea k.scenes.thing name=pea place=indoors on=table size=tiny named=model core.source="hand-core 1"
@@ -104,6 +108,7 @@
 @k.scenes.thing.pill k.scenes.thing name=pill place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.pillow k.scenes.thing name=pillow place=on_thing on=bed size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pills k.scenes.thing name=pills place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.pilot k.scenes.thing name=pilot place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.pine k.scenes.thing name=pine place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.pine_decoration k.scenes.thing name="pine decoration" place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.pine_nut k.scenes.thing name="pine nut" place=indoors on=table size=tiny named=model core.source="hand-core 1"
@@ -112,6 +117,8 @@
 @k.scenes.thing.ping_pong k.scenes.thing name="ping pong" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pipe k.scenes.thing name=pipe size=small named=model core.source="hand-core 1"
 @k.scenes.thing.piranha k.scenes.thing name=piranha place=water size=small named=model core.source="hand-core 1"
+@k.scenes.thing.pirate k.scenes.thing name=pirate place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.pirate_ship k.scenes.thing name="pirate ship" place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.pistachios k.scenes.thing name=pistachios place=indoors on=table size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.pit k.scenes.thing name=pit place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.pizza k.scenes.thing name=pizza place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -130,6 +137,7 @@
 @k.scenes.thing.plateau k.scenes.thing name=plateau place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.platypus k.scenes.thing name=platypus place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.playdough k.scenes.thing name=playdough place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.player k.scenes.thing name=player place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.playground_slide k.scenes.thing name="playground slide" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.playing_card_picture k.scenes.thing name="playing card picture" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.playing_cards k.scenes.thing name="playing cards" place=indoors on=table size=small named=model core.source="hand-core 1"
@@ -205,6 +213,7 @@
 @k.scenes.thing.pumpkin k.scenes.thing name=pumpkin place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pumpkin_lantern k.scenes.thing name="pumpkin lantern" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pumpkin_pie k.scenes.thing name="pumpkin pie" place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.pupil k.scenes.thing name=pupil place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.puppet k.scenes.thing name=puppet place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.pureed_food k.scenes.thing name="pureed food" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.purse k.scenes.thing name=purse place=on_thing on=hand size=small named=model core.source="hand-core 1"

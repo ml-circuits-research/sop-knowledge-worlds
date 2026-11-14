@@ -1,4 +1,4 @@
-# k.scenes/shards/things-d: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 81 things (the drawable things and the animals of k.animals) whose name starts with "d"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-d: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 85 things (the drawable things and the animals of k.animals) whose name starts with "d"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -44,8 +44,11 @@
 @k.scenes.thing.dishwasher k.scenes.thing name=dishwasher place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.dishwasher_powder k.scenes.thing name="dishwasher powder" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.ditch k.scenes.thing name=ditch place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.diver k.scenes.thing name=diver place=water size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.diving_board k.scenes.thing name="diving board" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.diving_mask k.scenes.thing name="diving mask" place=on_thing on=head size=small named=model core.source="hand-core 1"
 @k.scenes.thing.diya_lamp k.scenes.thing name="diya lamp" place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.doctor k.scenes.thing name=doctor place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.dodo k.scenes.thing name=dodo place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.doe k.scenes.thing name=doe place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.dog k.scenes.thing name=dog place=ground size=medium named=model core.source="hand-core 1"
@@ -81,6 +84,7 @@
 @k.scenes.thing.duck k.scenes.thing name=duck place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.dumper_truck k.scenes.thing name="dumper truck" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.dumpling k.scenes.thing name=dumpling place=indoors on=table size=small named=model core.source="hand-core 1"
+@k.scenes.thing.dune k.scenes.thing name=dune place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.dung_beetle k.scenes.thing name="dung beetle" size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.dungeon k.scenes.thing name=dungeon place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.dvd k.scenes.thing name=dvd place=indoors on=table size=small named=model core.source="hand-core 1"

@@ -207,6 +207,12 @@
   <polygon points="33.1,77.1 12.4,66.4 7.7,37.2 26.1,45.7 26.1,57 27.4,74.1" fill="#EEDCEB"><title>part15</title></polygon>
   <polyline points="7.7,37.2 12.4,66.4 56.2,89.1 89.6,57.9 91.2,30.8" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
+    <symbol id="o-hat" viewBox="0 0 100 100">
+  <ellipse cx="50" cy="72" rx="44" ry="10" fill="brown" stroke="#333" stroke-width="0.8"><title>brim</title></ellipse>
+  <polygon points="26,70 30,24 70,24 74,70" fill="brown" stroke="#333" stroke-width="0.8"><title>crown</title></polygon>
+  <rect x="27.5" y="56" width="45" height="8" fill="red" stroke="#333" stroke-width="0.8"><title>band</title></rect>
+  <ellipse cx="50" cy="24" rx="20" ry="5" fill="brown" stroke="#333" stroke-width="0.8"><title>top</title></ellipse>
+    </symbol>
     <symbol id="o-birthday_card" viewBox="0 0 100 100">
   <polygon points="46.2,47.3 47,48.6 48.9,49.4 47.5,51.8 44.6,53.7 40.9,54.1 38.4,53 36.5,51 35.6,46.1 37,46.3 38.1,45.5 38.4,47.2 39.9,48.2 42.2,46.5 42.6,48.1 43.9,49 45.3,48.6" fill="#FFFFFF"><title>part1</title></polygon>
   <polygon points="62.3,45.6 63.5,46.4 65,46 64.8,49.2 63.5,51.7 60.6,53.8 57.9,54 55.1,53.3 53.1,51.6 51.6,49.2 53.4,48.6 54.2,47.1 55.2,48.8 56.9,49 58.6,46.5 59.4,48 60.9,48.2 62.1,47.2" fill="#FFFFFF"><title>part2</title></polygon>
@@ -256,7 +262,10 @@
   <use href="#o-present" x="327.3" y="127" width="30" height="30"><title>present</title></use>
   <use href="#o-present" x="363.5" y="127" width="30" height="30"><title>present</title></use>
   <use href="#o-present" x="399.6" y="127" width="30" height="30"><title>present</title></use>
-  <use href="#o-birthday_card" x="435.8" y="127" width="30" height="30"><title>birthday card</title></use>
-  <use href="#o-birthday_card" x="142.7" y="163" width="30" height="30"><title>birthday card</title></use>
+  <use href="#o-hat" x="435.8" y="127" width="30" height="30"><title>party hat</title></use>
+  <use href="#o-hat" x="60.3" y="163" width="30" height="30"><title>party hat</title></use>
+  <use href="#o-hat" x="142.7" y="163" width="30" height="30"><title>party hat</title></use>
+  <use href="#o-birthday_card" x="225" y="163" width="30" height="30"><title>birthday card</title></use>
   <use href="#o-birthday_card" x="307.3" y="163" width="30" height="30"><title>birthday card</title></use>
+  <use href="#o-birthday_card" x="389.7" y="163" width="30" height="30"><title>birthday card</title></use>
 </svg>

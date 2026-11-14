@@ -1,4 +1,4 @@
-# k.attributes/shards/same-v: one name, one thing: for 48 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-v: one name, one thing: for 49 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -45,6 +45,7 @@
 @k.attributes.same.violet.colour k.attributes.same name=violet sense=colour only=false in=k.values.colour unsure=k.attributes.drawn unsure=k.objects.object unsure=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violin.thing k.attributes.same name=violin sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.viper.animal k.attributes.same name=viper sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.commonsense.thing in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.visitor.thing k.attributes.same name=visitor sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.visor.clothing k.attributes.same name=visor sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vodka.food k.attributes.same name=vodka sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.volcano.thing k.attributes.same name=volcano sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

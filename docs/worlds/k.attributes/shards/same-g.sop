@@ -1,4 +1,4 @@
-# k.attributes/shards/same-g: one name, one thing: for 130 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-g: one name, one thing: for 132 names that start with "g" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -50,7 +50,7 @@
 @k.attributes.same.glasses.clothing k.attributes.same name=glasses sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glider.thing k.attributes.same name=glider sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glitter.thing k.attributes.same name=glitter sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.globe.thing k.attributes.same name=globe sense=thing only=true in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.globe.thing k.attributes.same name=globe sense=thing only=true in=k.attributes.thing in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.globe_showing_americas.thing k.attributes.same name="globe showing americas" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.globe_showing_asia-australia.thing k.attributes.same name="globe showing asia-australia" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.globe_showing_europe-africa.thing k.attributes.same name="globe showing europe-africa" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -123,7 +123,9 @@
 @k.attributes.same.groundhog.place k.attributes.same name=groundhog sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guacamole.food k.attributes.same name=guacamole sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guatemala.place k.attributes.same name=guatemala sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.guest.thing k.attributes.same name=guest sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guesthouse.thing k.attributes.same name=guesthouse sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.guide.thing k.attributes.same name=guide sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guide_dog.animal k.attributes.same name="guide dog" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.guinea.place k.attributes.same name=guinea sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.guinea_pig.animal k.attributes.same name="guinea pig" sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

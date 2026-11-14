@@ -1,4 +1,4 @@
-# k.attributes/shards/same-t: one name, one thing: for 219 names that start with "t" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (11 facts of such names here).
+# k.attributes/shards/same-t: one name, one thing: for 220 names that start with "t" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (11 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -47,7 +47,7 @@
 @k.attributes.same.tea_bag.food k.attributes.same name="tea bag" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tea_instant.food k.attributes.same name="tea instant" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tea_spoon.thing k.attributes.same name="tea spoon" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.teacher.person k.attributes.same name=teacher sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.teacher.person k.attributes.same name=teacher sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.teacup_without_handle.food k.attributes.same name="teacup without handle" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.teal.colour k.attributes.same name=teal sense=colour only=true in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.teapot.food k.attributes.same name=teapot sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -98,6 +98,7 @@
 @k.attributes.same.tigress.thing k.attributes.same name=tigress sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tijuana.place k.attributes.same name=tijuana sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.tile.thing k.attributes.same name=tile sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.till.thing k.attributes.same name=till sense=thing only=true in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.timer.thing k.attributes.same name=timer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.timer_clock.thing k.attributes.same name="timer clock" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tin.thing k.attributes.same name=tin sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -172,7 +173,7 @@
 @k.attributes.same.tram_car.thing k.attributes.same name="tram car" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.trampoline.thing k.attributes.same name=trampoline sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.trap.thing k.attributes.same name=trap sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.trapeze.thing k.attributes.same name=trapeze sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.trapeze.thing k.attributes.same name=trapeze sense=thing only=true in=k.attributes.number in=k.objects.stand_in in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.trapezium.shape k.attributes.same name=trapezium sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.trash_bin.thing k.attributes.same name="trash bin" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.tray.thing k.attributes.same name=tray sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

@@ -7,7 +7,7 @@
 @k.kinds.relation.k.people.given_name.holders k.kinds.relation type=k.people.given_name key=holders subject="given name" object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.people.given_name.band k.kinds.relation type=k.people.given_name key=band subject="given name" object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.people.given_name.wikidata k.kinds.relation type=k.people.given_name key=wikidata subject="given name" object=word found=value core.source="hand-core 1"
-@k.kinds.relation.k.people.kind.age k.kinds.relation type=k.people.kind key=age subject=kind subject_sense=person object=value object_type=k.faces.preset object_type=k.people.kind object_sense=person found=value core.source="hand-core 1"
+@k.kinds.relation.k.people.kind.age k.kinds.relation type=k.people.kind key=age subject=kind subject_sense=person object=value object_type=k.faces.preset object_type=k.people.kind object_type=k.scenes.thing object_sense=person found=value core.source="hand-core 1"
 @k.kinds.relation.k.people.kind.sex k.kinds.relation type=k.people.kind key=sex subject=kind subject_sense=person object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.people.kind.height_about k.kinds.relation type=k.people.kind key=height_about subject=kind subject_sense=person object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.people.kind.hair k.kinds.relation type=k.people.kind key=hair subject=kind subject_sense=person object=word object_type=k.words.sense found=value core.source="hand-core 1"

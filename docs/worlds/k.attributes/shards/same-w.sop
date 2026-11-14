@@ -1,4 +1,4 @@
-# k.attributes/shards/same-w: one name, one thing: for 118 names that start with "w" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
+# k.attributes/shards/same-w: one name, one thing: for 123 names that start with "w" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -7,7 +7,7 @@
 @k.attributes.same.waffle.food k.attributes.same name=waffle sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wagon.thing k.attributes.same name=wagon sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.waistcoat.clothing k.attributes.same name=waistcoat sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.waiter.person k.attributes.same name=waiter sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.waiter.person k.attributes.same name=waiter sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.walking_frame.thing k.attributes.same name="walking frame" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.walking_stick.thing k.attributes.same name="walking stick" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.walkman.thing k.attributes.same name=walkman sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -35,6 +35,8 @@
 @k.attributes.same.watch.clothing k.attributes.same name=watch sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.water.food k.attributes.same name=water sense=food only=true in=k.attributes.thing in=k.commonsense.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.water_buffalo.animal k.attributes.same name="water buffalo" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.water_hole.thing k.attributes.same name="water hole" sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.water_lily.thing k.attributes.same name="water lily" sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.water_pistol.thing k.attributes.same name="water pistol" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.water_wave.thing k.attributes.same name="water wave" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.watering_can.thing k.attributes.same name="watering can" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -87,6 +89,7 @@
 @k.attributes.same.window.thing k.attributes.same name=window sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.windpipe.body_part k.attributes.same name=windpipe sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.windshield.thing k.attributes.same name=windshield sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.windsock.thing k.attributes.same name=windsock sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.wine.food k.attributes.same name=wine sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wine_glass.food k.attributes.same name="wine glass" sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.winery.thing k.attributes.same name=winery sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
@@ -112,6 +115,8 @@
 @k.attributes.same.woodlouse.animal k.attributes.same name=woodlouse sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.woodpecker.animal k.attributes.same name=woodpecker sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.woodstain.thing k.attributes.same name=woodstain sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.workbench.thing k.attributes.same name=workbench sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.worker.thing k.attributes.same name=worker sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.workshop.thing k.attributes.same name=workshop sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.world.thing k.attributes.same name=world sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.world_map.thing k.attributes.same name="world map" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

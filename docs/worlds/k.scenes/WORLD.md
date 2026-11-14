@@ -6,7 +6,8 @@ CC0-1.0); the place and size labels were given by a language model (`named=model
 
 ## What it knows
 
-- `k.scenes.thing` (identity `name`: the name of a `k.objects` object or stand-in): `place`, where one usually
+- `k.scenes.thing` (identity `name`: the name of a `k.objects` object, word or stand-in, or of a thing of a scene
+  that nothing draws): `place`, where one usually
   sees the thing: `sky` (also: in the air), `ground` (outdoors), `water` (on or in it), `indoors`, or `on_thing`
   (on another thing); `on` (many), what it is usually on (`hat` on `head`, `roof` on `house`, `cup` indoors on
   `table`); `size`, the size of the real thing among five classes:
@@ -38,7 +39,11 @@ CC0-1.0); the place and size labels were given by a language model (`named=model
   the table; a thing on water always says on which water, unless the whole scene is water), `fills=true` (the
   thing fills its layer from side to side: the sea behind a beach), `drawing` (the `k.objects` object that draws
   the thing). The thing is named as one says it in that scene (`farmhouse`, drawn by `house`; `farmer`, drawn by
-  `person`); a thing with no fitting drawing has no `drawing` (a stall, a street lamp, a pirate ship).
+  `person`): every thing of a scene is a `k.scenes.thing` (the join of `thing`), and one not drawn under its own
+  name is drawn by an object of which it is a word (a beach ball by `ball beach`) or by the nearest drawable kind,
+  a `k.objects.stand_in` (a stall by `shop`, a control tower by `tower`, the people by `person`). Four have no
+  drawable kind and no `drawing` (stage, till, diving board, mobile), and three things whose namesake object shows
+  another thing (`pipe`, `ring`, `seat`) have none either.
 
 ## The scenes, and how many of their things have a drawing
 
@@ -52,32 +57,32 @@ CC0-1.0); the place and size labels were given by a language model (`named=model
 | river | 19 | 19 |  |
 | lake | 16 | 16 |  |
 | pond | 14 | 14 |  |
-| desert | 12 | 11 | dune |
+| desert | 12 | 12 |  |
 | jungle | 16 | 16 |  |
 | savanna | 16 | 16 |  |
-| arctic | 15 | 14 | iceberg |
+| arctic | 15 | 15 |  |
 | island | 16 | 16 |  |
 | garden | 23 | 23 |  |
-| park | 20 | 19 | lamp post |
+| park | 20 | 20 |  |
 | orchard | 12 | 12 |  |
 | campsite | 16 | 16 |  |
 | field | 13 | 13 |  |
 | picnic | 17 | 17 |  |
-| city street | 21 | 20 | street lamp |
+| city street | 21 | 21 |  |
 | village | 18 | 18 |  |
-| playground | 19 | 18 | sandbox |
-| market | 17 | 16 | stall |
+| playground | 19 | 19 |  |
+| market | 17 | 17 |  |
 | harbour | 20 | 20 |  |
-| airport | 15 | 12 | control tower, runway, windsock |
+| airport | 15 | 15 |  |
 | railway station | 15 | 15 |  |
 | construction site | 18 | 17 | pipe |
 | petrol station | 12 | 12 |  |
 | zoo | 23 | 23 |  |
-| fairground | 16 | 15 | stall |
+| fairground | 16 | 16 |  |
 | football pitch | 13 | 13 |  |
 | swimming pool | 15 | 14 | diving board |
-| circus | 18 | 16 | trapeze, ring |
-| castle | 22 | 21 | moat |
+| circus | 18 | 17 | ring |
+| castle | 22 | 22 |  |
 | kitchen | 26 | 26 |  |
 | bedroom | 18 | 18 |  |
 | living room | 20 | 20 |  |
@@ -94,19 +99,19 @@ CC0-1.0); the place and size labels were given by a language model (`named=model
 | cafe | 18 | 18 |  |
 | nursery | 20 | 19 | mobile |
 | laboratory | 19 | 19 |  |
-| birthday party | 17 | 16 | party hat |
+| birthday party | 17 | 17 |  |
 | space | 17 | 17 |  |
-| underwater | 24 | 22 | seaweed, shipwreck |
-| night | 14 | 12 | street lamp, firefly |
-| winter | 19 | 18 | snowball |
+| underwater | 24 | 24 |  |
+| night | 14 | 14 |  |
+| winter | 19 | 19 |  |
 | autumn | 19 | 19 |  |
 | spring | 18 | 18 |  |
 | rainy day | 16 | 16 |  |
 | Christmas | 17 | 17 |  |
 | Halloween | 19 | 19 |  |
-| pirate ship | 19 | 18 | pirate ship |
+| pirate ship | 19 | 19 |  |
 
-61 scenes, 1088 things, 1062 with a drawing (97.6%). The pictures composed from these facts are in `preview/` (`preview/index.html`):
+61 scenes, 1088 things, 1081 with a drawing (99.4%). The pictures composed from these facts are in `preview/` (`preview/index.html`):
 `tools/render-scenes.mjs` gives every place a band (sky or ceiling, far ground or wall, a strip for what fills its
 layer, water, near ground or floor, foreground), packs each band in rows, sizes by the size class, and draws at most
 three of a thing; nothing overlaps but a thing and what it is on. Every picture is one file (the object drawings are
@@ -123,7 +128,9 @@ from `tools/scenes-data.mjs`.
 
 ## Joins
 
-By name, with no import: `name` is the `name` of a `k.objects.object` (its drawing) or of a `k.objects.stand_in`;
+Declared (`type=` / `by=`): `k.scenes.has.thing` names a `k.scenes.thing` (595 of 595 values meet), `has.drawing` and
+`scene.drawing` a `k.objects.object`, `has.scene` a `k.scenes.scene`. By name, with no import: `name` is the `name`
+of a `k.objects.object` (its drawing), a word of one, or a `k.objects.stand_in`;
 the same name in `k.commonsense.thing`, `k.animals.animal` and `k.food.food` gives more facts.
 
 ## Questions it helps with

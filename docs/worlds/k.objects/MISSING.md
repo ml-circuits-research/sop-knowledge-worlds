@@ -20,11 +20,11 @@ is made only in the sense kept.
 | --- | --- | --- |
 | Common things | 1,500 | |
 | with a drawing of that name | 780 | 52.0% |
-| without, but a WordNet synonym has a drawing | 72 | 4.8% |
+| without, but a WordNet synonym has a drawing | 71 | 4.7% |
 | without, but the direct hypernym has a drawing | 181 | 12.1% |
-| without, but it is another word of an object (hand-written) | 27 | 1.8% |
-| without, but a stand-in written by hand has a drawing | 72 | 4.8% |
-| with no drawing at all | 368 | 24.5% |
+| without, but it is another word of an object (hand-written) | 29 | 1.9% |
+| without, but a stand-in written by hand has a drawing | 79 | 5.3% |
+| with no drawing at all | 360 | 24.0% |
 
 ## The 720 words without a drawing of their name, most frequent first
 
@@ -70,7 +70,7 @@ gloss is WordNet's, for the sense kept.
 | 315 | carriage | hypernym railway car | a railcar where passengers ride |
 | 319 | mill | synonym factory | a plant consisting of one or more buildings with facilities for manufacturing |
 | 327 | dock |  | an enclosure in a court of law where the defendant sits during the trial |
-| 329 | runway |  | a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll |
+| 329 | runway | hand stand-in road | a bar or pair of parallel bars of rolled steel making the railway along which railroad cars or other vehicles can roll |
 | 336 | pony | hypernym horse | a range horse of the western United States |
 | 338 | cape |  | a strip of land projecting into a body of water |
 | 349 | morgue | hypernym building | a building (or room) where dead bodies are kept before burial or cremation |
@@ -84,7 +84,7 @@ gloss is WordNet's, for the sense kept.
 | 374 | marsh | word swamp | low-lying wet land with grassy vegetation |
 | 382 | shutter |  | a mechanical device on a camera that opens and closes to control the time of a photographic exposure |
 | 385 | whisky | synonym whiskey | a liquor made from fermented mash of grain |
-| 387 | globe | synonym earth (drawing "Earth") | the 3rd planet from the sun |
+| 387 | globe | hand synonym globe showing Europe-Africa | the 3rd planet from the sun |
 | 389 | delta |  | a low triangular area of alluvial deposits where a river divides before entering a larger body of water |
 | 394 | ridge |  | a long narrow natural elevation or striation |
 | 398 | rack |  | framework for holding objects |
@@ -112,7 +112,7 @@ gloss is WordNet's, for the sense kept.
 | 481 | bunk |  | a long trough for feeding cattle |
 | 487 | baggage | synonym luggage | cases used to carry belongings when traveling |
 | 489 | fax |  | duplicator that transmits the copy by wire or radio |
-| 500 | scooter |  | a motorboat resembling a motor scooter |
+| 500 | scooter | hand synonym kick scooter | a motorboat resembling a motor scooter |
 | 502 | sewer |  | a waste pipe that carries away sewage or surface water |
 | 503 | hull |  | dry outer covering of a fruit or seed or nut |
 | 506 | stitch |  | a link or loop or knot made by an implement in knitting, crocheting, embroidery, or sewing |
@@ -288,7 +288,7 @@ gloss is WordNet's, for the sense kept.
 | 899 | swimsuit | synonym swimming costume | tight fitting garment worn for swimming |
 | 901 | pepperoni | hypernym sausage (drawing "sausages") | a pork and beef sausage (or a thin slice of this sausage) |
 | 902 | cedar | hand stand-in evergreen tree | any of numerous trees of the family Cupressaceae that resemble cedars |
-| 908 | snowball |  | plant having heads of fragrant white trumpet-shaped flowers |
+| 908 | snowball | hand stand-in ball | plant having heads of fragrant white trumpet-shaped flowers |
 | 910 | quill | hypernym pen | pen made from a bird's feather |
 | 914 | floss | hypernym thread | a soft loosely twisted thread used in embroidery |
 | 918 | viola |  | any of the numerous plants of the genus Viola |
@@ -434,11 +434,11 @@ gloss is WordNet's, for the sense kept.
 | 1127 | bathrobe | hypernym robe | a loose-fitting robe of towelling |
 | 1128 | chalice | hypernym cup | a bowl-shaped drinking vessel |
 | 1129 | saffron |  | Old World crocus having purple or white flowers with aromatic pungent orange stigmas used in flavoring food |
-| 1130 | dune |  | a ridge of sand created by the wind |
+| 1130 | dune | hand stand-in hill | a ridge of sand created by the wind |
 | 1131 | cauldron |  | a very large pot that is used for boiling |
 | 1133 | cutlery |  | a cutting implement |
 | 1134 | bongo | hypernym drum | a small drum |
-| 1135 | firefly |  | tropical American click beetle having bright luminous spots |
+| 1135 | firefly | hand stand-in beetle | tropical American click beetle having bright luminous spots |
 | 1136 | ratchet |  | mechanical device consisting of a toothed wheel or rack engaged with a pawl that permits it to move in only one direction |
 | 1137 | bluebell | hand stand-in flower | sometimes placed in genus Scilla |
 | 1138 | burrow |  | a hole made by an animal, usually for shelter |
@@ -459,7 +459,7 @@ gloss is WordNet's, for the sense kept.
 | 1157 | emblem |  | special design or visual object representing a quality, type, group, etc. |
 | 1158 | thermos |  | vacuum flask that preserves temperature of hot or cold drinks |
 | 1159 | midge | hypernym gnat | minute two-winged mosquito-like fly lacking biting mouthparts |
-| 1160 | moat |  | ditch dug as a fortification and usually filled with water |
+| 1160 | moat | hand stand-in ditch | ditch dug as a fortification and usually filled with water |
 | 1161 | mausoleum |  | a large burial chamber, usually above ground |
 | 1162 | taffy | hypernym candy | chewy candy of sugar or syrup boiled until thick and pulled until glossy |
 | 1163 | sarcophagus | hypernym coffin | a stone coffin (usually bearing sculpture or inscriptions) |
@@ -470,7 +470,7 @@ gloss is WordNet's, for the sense kept.
 | 1171 | catheter | hypernym tube | a thin flexible tube inserted into the body to permit introduction or withdrawal of fluids or to keep the passageway open |
 | 1172 | dill | hypernym herb | aromatic Old World herb having aromatic threadlike foliage and seeds used as seasoning |
 | 1173 | bronco | hand stand-in horse | an unbroken or imperfectly broken mustang |
-| 1174 | shipwreck |  | a wrecked ship (or a part of one) |
+| 1174 | shipwreck | hand stand-in ship | a wrecked ship (or a part of one) |
 | 1175 | vagabond |  | anything that resembles a vagabond in having no fixed place |
 | 1176 | guesthouse | hypernym house | a house separate from the main house |
 | 1177 | yoghurt | synonym yogurt | a custard-like food made from curdled milk |
@@ -625,7 +625,7 @@ gloss is WordNet's, for the sense kept.
 | 1351 | koto |  | Japanese stringed instrument that resembles a zither |
 | 1352 | gully | hypernym valley | deep ditch cut by running water (especially after a prolonged downpour) |
 | 1353 | takeaway |  | prepared food that is intended to be eaten off of the premises |
-| 1354 | sandbox |  | mold consisting of a box with sand shaped to mold metal |
+| 1354 | sandbox | hand stand-in box | mold consisting of a box with sand shaped to mold metal |
 | 1355 | feeder |  | an animal being fattened or suitable for fattening |
 | 1357 | veg |  | edible seeds or roots or stems or leaves or bulbs or tubers or nonsweet fruits of any of numerous herbaceous plant |
 | 1358 | sustenance |  | a source of materials to nourish the body |

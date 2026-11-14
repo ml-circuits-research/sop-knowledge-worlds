@@ -89,6 +89,17 @@
   <rect x="5" y="55" width="90" height="8" fill="grey" stroke="#333" stroke-width="0.8"><title>deck</title></rect>
   <polyline points="5,45 95,45" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_rail</title></polyline>
     </symbol>
+    <symbol id="o-ditch" viewBox="0 0 100 100">
+  <rect x="4" y="12" width="92" height="82" fill="green" stroke="#333" stroke-width="0.8"><title>field</title></rect>
+  <polygon points="30,12 50,12 74,94 34,94" fill="brown" stroke="#333" stroke-width="0.8"><title>trench</title></polygon>
+  <polygon points="37,12 44,12 62,94 47,94" fill="blue" stroke="#333" stroke-width="0.8"><title>water</title></polygon>
+  <polyline points="16,40 18,32 20,40" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tuft_1</title></polyline>
+  <polyline points="76,34 78,26 80,34" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tuft_2</title></polyline>
+  <polyline points="14,76 16,68 18,76" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tuft_3</title></polyline>
+  <polyline points="84,70 86,62 88,70" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tuft_4</title></polyline>
+  <polyline points="70,60 84,44" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spade</title></polyline>
+  <polygon points="66,60 72,56 74,64 68,68" fill="grey" stroke="#333" stroke-width="0.8"><title>spade_blade</title></polygon>
+    </symbol>
     <symbol id="o-gate" viewBox="0 0 100 100">
   <rect x="18" y="35" width="64" height="6" fill="brown" stroke="#333" stroke-width="0.8"><title>top_bar</title></rect>
   <rect x="18" y="78" width="64" height="6" fill="brown" stroke="#333" stroke-width="0.8"><title>bottom_bar</title></rect>
@@ -232,27 +243,25 @@
   <use href="#o-tree" x="147.5" y="64" width="76.8" height="76.8"><title>tree</title></use>
   <use href="#o-tree" x="255.7" y="64" width="76.8" height="76.8"><title>tree</title></use>
   <use href="#o-tree" x="363.8" y="64" width="76.8" height="76.8"><title>tree</title></use>
-  <use href="#o-castle" x="15.3" y="157.6" width="96" height="96"><title>castle</title></use>
-  <use href="#o-tower" x="118.7" y="157.6" width="96" height="96"><title>tower</title></use>
-  <use href="#o-flag" x="135.2" y="146.8" width="30" height="30"><title>flag</title></use>
-  <use href="#o-flag" x="168.2" y="146.8" width="30" height="30"><title>flag</title></use>
-  <use href="#o-bridge" x="222" y="157.6" width="96" height="96"><title>bridge</title></use>
-  <use href="#o-gate" x="325.3" y="187.6" width="66" height="66"><title>gate</title></use>
-  <use href="#o-wall" x="398.7" y="187.6" width="66" height="66"><title>wall</title></use>
-  <use href="#o-wall" x="13.3" y="259.6" width="66" height="66"><title>wall</title></use>
-  <use href="#o-horse" x="84.5" y="259.6" width="66" height="66"><title>horse</title></use>
+  <use href="#o-castle" x="24" y="157.6" width="96" height="96"><title>castle</title></use>
+  <use href="#o-tower" x="136" y="157.6" width="96" height="96"><title>tower</title></use>
+  <use href="#o-flag" x="152.5" y="146.8" width="30" height="30"><title>flag</title></use>
+  <use href="#o-flag" x="185.5" y="146.8" width="30" height="30"><title>flag</title></use>
+  <use href="#o-bridge" x="248" y="157.6" width="96" height="96"><title>bridge</title></use>
+  <use href="#o-ditch" x="360" y="157.6" width="96" height="96"><title>moat</title></use>
+  <use href="#o-gate" x="13.3" y="259.6" width="66" height="66"><title>gate</title></use>
+  <use href="#o-wall" x="84.5" y="259.6" width="66" height="66"><title>wall</title></use>
   <use href="#o-horse" x="155.8" y="259.6" width="66" height="66"><title>horse</title></use>
   <use href="#o-cannon" x="227" y="259.6" width="66" height="66"><title>cannon</title></use>
   <use href="#o-throne" x="298.3" y="259.6" width="66" height="66"><title>throne</title></use>
   <use href="#o-person" x="369.5" y="279.6" width="46" height="46"><title>knight</title></use>
   <use href="#o-person" x="420.8" y="279.6" width="46" height="46"><title>knight</title></use>
-  <use href="#o-person" x="16.2" y="331.6" width="46" height="46"><title>king</title></use>
-  <use href="#o-person" x="70.4" y="331.6" width="46" height="46"><title>queen</title></use>
-  <use href="#o-sword" x="124.6" y="331.6" width="46" height="46"><title>sword</title></use>
-  <use href="#o-sword" x="178.8" y="331.6" width="46" height="46"><title>sword</title></use>
-  <use href="#o-shield" x="233" y="331.6" width="46" height="46"><title>shield</title></use>
-  <use href="#o-shield" x="287.2" y="331.6" width="46" height="46"><title>shield</title></use>
-  <use href="#o-shield" x="341.4" y="331.6" width="46" height="46"><title>shield</title></use>
-  <use href="#o-crown" x="395.6" y="347.6" width="30" height="30"><title>crown</title></use>
-  <use href="#o-crown" x="433.8" y="347.6" width="30" height="30"><title>crown</title></use>
+  <use href="#o-person" x="22.2" y="331.6" width="46" height="46"><title>king</title></use>
+  <use href="#o-person" x="82.4" y="331.6" width="46" height="46"><title>queen</title></use>
+  <use href="#o-sword" x="142.7" y="331.6" width="46" height="46"><title>sword</title></use>
+  <use href="#o-sword" x="202.9" y="331.6" width="46" height="46"><title>sword</title></use>
+  <use href="#o-shield" x="263.1" y="331.6" width="46" height="46"><title>shield</title></use>
+  <use href="#o-shield" x="323.3" y="331.6" width="46" height="46"><title>shield</title></use>
+  <use href="#o-crown" x="383.6" y="347.6" width="30" height="30"><title>crown</title></use>
+  <use href="#o-crown" x="427.8" y="347.6" width="30" height="30"><title>crown</title></use>
 </svg>

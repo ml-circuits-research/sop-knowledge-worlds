@@ -56,22 +56,6 @@
   <polyline points="52.3,76.6 63.6,67.5 78.9,65.8 84.2,71.3 84.6,72.9 83.3,75 64,88.9 61.9,88.3 53.9,78.5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part4</title></polyline>
   <polyline points="68.9,55.1 63.6,67.5 78.8,65.8 68.9,55.1" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part5</title></polyline>
     </symbol>
-    <symbol id="o-ladder" viewBox="0 0 100 100">
-  <rect x="25" y="3" width="6" height="94" fill="brown" stroke="#333" stroke-width="0.8"><title>left_rail</title></rect>
-  <rect x="69" y="3" width="6" height="94" fill="brown" stroke="#333" stroke-width="0.8"><title>right_rail</title></rect>
-  <rect x="31" y="15" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>first_rung</title></rect>
-  <rect x="31" y="35" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>second_rung</title></rect>
-  <rect x="31" y="55" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>third_rung</title></rect>
-  <rect x="31" y="75" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>fourth_rung</title></rect>
-    </symbol>
-    <symbol id="o-car" viewBox="0 0 100 100">
-  <rect x="5" y="45" width="90" height="25" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></rect>
-  <polygon points="25,45 32,25 68,25 78,45" fill="red" stroke="#333" stroke-width="0.8"><title>cabin</title></polygon>
-  <polygon points="30,43 35,29 48,29 48,43" fill="blue" stroke="#333" stroke-width="0.8"><title>left_window</title></polygon>
-  <polygon points="52,43 52,29 66,29 73,43" fill="blue" stroke="#333" stroke-width="0.8"><title>right_window</title></polygon>
-  <ellipse cx="26" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>left_wheel</title></ellipse>
-  <ellipse cx="74" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>right_wheel</title></ellipse>
-    </symbol>
     <symbol id="o-table" viewBox="0 0 100 100">
   <rect x="5" y="35" width="90" height="8" fill="brown" stroke="#333" stroke-width="0.8"><title>top</title></rect>
   <rect x="10" y="43" width="7" height="50" fill="brown" stroke="#333" stroke-width="0.8"><title>left_leg</title></rect>
@@ -182,6 +166,22 @@
   <polyline points="43.4,79.4 56.2,75.7" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="43.6,85.8 56.3,82" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
+    <symbol id="o-ladder" viewBox="0 0 100 100">
+  <rect x="25" y="3" width="6" height="94" fill="brown" stroke="#333" stroke-width="0.8"><title>left_rail</title></rect>
+  <rect x="69" y="3" width="6" height="94" fill="brown" stroke="#333" stroke-width="0.8"><title>right_rail</title></rect>
+  <rect x="31" y="15" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>first_rung</title></rect>
+  <rect x="31" y="35" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>second_rung</title></rect>
+  <rect x="31" y="55" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>third_rung</title></rect>
+  <rect x="31" y="75" width="38" height="4" fill="brown" stroke="#333" stroke-width="0.8"><title>fourth_rung</title></rect>
+    </symbol>
+    <symbol id="o-car" viewBox="0 0 100 100">
+  <rect x="5" y="45" width="90" height="25" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <polygon points="25,45 32,25 68,25 78,45" fill="red" stroke="#333" stroke-width="0.8"><title>cabin</title></polygon>
+  <polygon points="30,43 35,29 48,29 48,43" fill="blue" stroke="#333" stroke-width="0.8"><title>left_window</title></polygon>
+  <polygon points="52,43 52,29 66,29 73,43" fill="blue" stroke="#333" stroke-width="0.8"><title>right_window</title></polygon>
+  <ellipse cx="26" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>left_wheel</title></ellipse>
+  <ellipse cx="74" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>right_wheel</title></ellipse>
+    </symbol>
     <symbol id="o-wood" viewBox="0 0 100 100">
   <polygon points="29.1,88.5 22.6,92 22.6,76.2 30.8,85" fill="#633D35"><title>part1</title></polygon>
   <polygon points="78.1,15.6 78.8,33.2 80.4,34.4 84.7,32.3 86.6,33.2 88.8,36.5 89.7,41.9 89.4,43.9 82.7,53.3 78.7,61.4 77.7,66.5 77.9,84.4 76.7,87.9 75.3,89.5 71.1,92.4 61.8,95.5 54.1,96.7 46.5,94.6 37.7,96.2 36.1,95.9 30,94.4 24.2,78 22.6,92 19.1,87.4 18.2,84.4 16.5,15.6" fill="#AD7156"><title>part2</title></polygon>
@@ -279,31 +279,33 @@
   <use href="#o-shelf" x="176.6" y="36" width="36.8" height="36.8"><title>shelf</title></use>
   <use href="#o-shelf" x="279.4" y="36" width="36.8" height="36.8"><title>shelf</title></use>
   <use href="#o-saw" x="382.1" y="48.8" width="24" height="24"><title>saw</title></use>
-  <use href="#o-ladder" x="118.7" y="78.8" width="66" height="66"><title>ladder</title></use>
-  <use href="#o-car" x="295.3" y="78.8" width="66" height="66"><title>car</title></use>
-  <use href="#o-table" x="188.7" y="171.6" width="46" height="46"><title>workbench</title></use>
-  <use href="#o-vice" x="18.7" y="150.8" width="30" height="30"><title>vice</title></use>
-  <use href="#o-hammer" x="51.7" y="150.8" width="30" height="30"><title>hammer</title></use>
-  <use href="#o-hammer" x="84.7" y="150.8" width="30" height="30"><title>hammer</title></use>
-  <use href="#o-screwdriver" x="117.7" y="150.8" width="30" height="30"><title>screwdriver</title></use>
-  <use href="#o-screwdriver" x="150.7" y="150.8" width="30" height="30"><title>screwdriver</title></use>
-  <use href="#o-wrench" x="183.7" y="150.8" width="30" height="30"><title>wrench</title></use>
-  <use href="#o-wrench" x="216.7" y="150.8" width="30" height="30"><title>wrench</title></use>
-  <use href="#o-pliers" x="249.7" y="150.8" width="30" height="30"><title>pliers</title></use>
-  <use href="#o-drill_electric" x="282.7" y="150.8" width="30" height="30"><title>drill electric</title></use>
-  <use href="#o-nail" x="315.7" y="160.8" width="20" height="20"><title>nail</title></use>
-  <use href="#o-nail" x="338.7" y="160.8" width="20" height="20"><title>nail</title></use>
-  <use href="#o-screw" x="361.7" y="160.8" width="20" height="20"><title>screw</title></use>
-  <use href="#o-screw" x="384.7" y="160.8" width="20" height="20"><title>screw</title></use>
-  <use href="#o-wood" x="415.3" y="171.6" width="46" height="46"><title>wood</title></use>
-  <use href="#o-wood" x="15.6" y="223.6" width="46" height="46"><title>wood</title></use>
-  <use href="#o-bicycle" x="69.3" y="223.6" width="46" height="46"><title>bicycle</title></use>
-  <use href="#o-tire" x="122.9" y="223.6" width="46" height="46"><title>tire</title></use>
-  <use href="#o-tire" x="176.5" y="223.6" width="46" height="46"><title>tire</title></use>
-  <use href="#o-person" x="230.2" y="223.6" width="46" height="46"><title>mechanic</title></use>
-  <use href="#o-toolbox" x="283.8" y="239.6" width="30" height="30"><title>toolbox</title></use>
-  <use href="#o-paint" x="321.5" y="239.6" width="30" height="30"><title>paint</title></use>
-  <use href="#o-paint" x="359.1" y="239.6" width="30" height="30"><title>paint</title></use>
-  <use href="#o-paint_brush" x="396.7" y="239.6" width="30" height="30"><title>paint brush</title></use>
-  <use href="#o-paint_brush" x="434.4" y="239.6" width="30" height="30"><title>paint brush</title></use>
+  <use href="#o-table" x="172" y="95.6" width="66" height="66"><title>workbench</title></use>
+  <use href="#o-vice" x="12" y="78.8" width="30" height="30"><title>vice</title></use>
+  <use href="#o-hammer" x="45" y="78.8" width="30" height="30"><title>hammer</title></use>
+  <use href="#o-hammer" x="78" y="78.8" width="30" height="30"><title>hammer</title></use>
+  <use href="#o-screwdriver" x="111" y="78.8" width="30" height="30"><title>screwdriver</title></use>
+  <use href="#o-screwdriver" x="144" y="78.8" width="30" height="30"><title>screwdriver</title></use>
+  <use href="#o-wrench" x="177" y="78.8" width="30" height="30"><title>wrench</title></use>
+  <use href="#o-wrench" x="210" y="78.8" width="30" height="30"><title>wrench</title></use>
+  <use href="#o-pliers" x="243" y="78.8" width="30" height="30"><title>pliers</title></use>
+  <use href="#o-drill_electric" x="276" y="78.8" width="30" height="30"><title>drill electric</title></use>
+  <use href="#o-nail" x="309" y="88.8" width="20" height="20"><title>nail</title></use>
+  <use href="#o-nail" x="332" y="88.8" width="20" height="20"><title>nail</title></use>
+  <use href="#o-screw" x="355" y="88.8" width="20" height="20"><title>screw</title></use>
+  <use href="#o-screw" x="378" y="88.8" width="20" height="20"><title>screw</title></use>
+  <use href="#o-ladder" x="402" y="95.6" width="66" height="66"><title>ladder</title></use>
+  <use href="#o-car" x="16.4" y="167.6" width="66" height="66"><title>car</title></use>
+  <use href="#o-wood" x="90.9" y="187.6" width="46" height="46"><title>wood</title></use>
+  <use href="#o-wood" x="145.3" y="187.6" width="46" height="46"><title>wood</title></use>
+  <use href="#o-wood" x="199.8" y="187.6" width="46" height="46"><title>wood</title></use>
+  <use href="#o-bicycle" x="254.2" y="187.6" width="46" height="46"><title>bicycle</title></use>
+  <use href="#o-tire" x="308.7" y="187.6" width="46" height="46"><title>tire</title></use>
+  <use href="#o-tire" x="363.1" y="187.6" width="46" height="46"><title>tire</title></use>
+  <use href="#o-person" x="417.6" y="187.6" width="46" height="46"><title>mechanic</title></use>
+  <use href="#o-toolbox" x="48.6" y="239.6" width="30" height="30"><title>toolbox</title></use>
+  <use href="#o-paint" x="119.1" y="239.6" width="30" height="30"><title>paint</title></use>
+  <use href="#o-paint" x="189.7" y="239.6" width="30" height="30"><title>paint</title></use>
+  <use href="#o-paint" x="260.3" y="239.6" width="30" height="30"><title>paint</title></use>
+  <use href="#o-paint_brush" x="330.9" y="239.6" width="30" height="30"><title>paint brush</title></use>
+  <use href="#o-paint_brush" x="401.4" y="239.6" width="30" height="30"><title>paint brush</title></use>
 </svg>

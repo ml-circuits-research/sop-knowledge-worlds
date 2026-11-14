@@ -7,6 +7,9 @@
 # without a row is a symbol, a scene, a face or a part (heart, sunset, "dog face", liver). A seeded sample of 200
 # rows was checked against the drawings: sources/hand-core/place-size-audit.tsv. tools/scenes-core.mjs turns the
 # rows into the shards things-<letter> of k.scenes (named=model).
+# The rows after the last row of the letters (2026-11-15) are the things of the scenes with no drawing of that name
+# (people, a beach ball, a stall): drawn by a word or a stand-in of k.objects (sources/coverage/hand-links.tsv), or by
+# nothing (a stage, a till); with them every thing of a scene is a k.scenes.thing.
 1st place medal	indoors		tiny
 2nd place medal	indoors		tiny
 3d printer	indoors		small
@@ -2136,3 +2139,89 @@ yorkshire pudding	indoors	table	small
 yule log	indoors	table	small
 zebra	ground		large
 zip	on_thing	person	tiny
+beach ball	ground		small
+beach umbrella	ground		large
+cable car	sky		large
+control tower	ground		huge
+diving board	ground		large
+fallen apple	ground		small
+fishing net	ground		medium
+fuel truck	ground		large
+lamp post	ground		large
+leafy plant	ground		medium
+party hat	on_thing	head	small
+party streamers	indoors		small
+pirate ship	water		huge
+street lamp	ground		large
+traffic light	ground		large
+water hole	ground		huge
+water lily	water		small
+acrobat	ground		medium
+actor	indoors		medium
+angler	ground		medium
+astronaut			medium
+audience	indoors		
+baby	indoors		small
+barrier	ground		medium
+builder	ground		medium
+campfire	ground		medium
+carousel	ground		huge
+cashier	indoors		medium
+child	ground		medium
+clown	ground		medium
+conductor	ground		medium
+cook	indoors		medium
+cushion	indoors		small
+diver	water		medium
+doctor	indoors		medium
+dune	ground		huge
+farmer	ground		medium
+farmhouse	ground		huge
+fisherman	ground		medium
+flowers	ground		small
+globe	indoors	table	small
+guest	indoors		medium
+guide	ground		medium
+hiker	ground		medium
+juggler	ground		medium
+king	ground		medium
+knight	ground		medium
+librarian	indoors		medium
+lifeguard	ground		medium
+mechanic	ground		medium
+moat	ground		huge
+mobile	indoors		small
+nurse	indoors		medium
+passenger	ground		medium
+patient	indoors		medium
+pilot	ground		medium
+pirate	ground		medium
+player	ground		medium
+pupil	indoors		medium
+queen	ground		medium
+reader	indoors		medium
+referee	ground		medium
+ruler	indoors		small
+runway	ground		huge
+sandbox	ground		large
+scientist	indoors		medium
+scooter	ground		medium
+shipwreck	water		huge
+shopper	indoors		medium
+signal	ground		large
+snowball	ground		small
+spotlight	indoors		small
+stage	indoors		huge
+stall	ground		large
+sweets	indoors		tiny
+swimmer	water		medium
+teacher	indoors		medium
+till	indoors		small
+trapeze	indoors		medium
+visitor	indoors		medium
+waiter	indoors		medium
+windsock	ground		medium
+workbench	indoors		large
+worker	indoors		medium
+counter	indoors		large
+theatre masks	indoors		small

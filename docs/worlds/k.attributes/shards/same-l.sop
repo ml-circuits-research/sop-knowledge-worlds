@@ -1,4 +1,4 @@
-# k.attributes/shards/same-l: one name, one thing: for 127 names that start with "l" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (10 facts of such names here).
+# k.attributes/shards/same-l: one name, one thing: for 130 names that start with "l" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (10 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -16,6 +16,7 @@
 @k.attributes.same.lake.thing k.attributes.same name=lake sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lamb.food k.attributes.same name=lamb sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lamp.thing k.attributes.same name=lamp sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.lamp_post.thing k.attributes.same name="lamp post" sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lampshade.thing k.attributes.same name=lampshade sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.lance.thing k.attributes.same name=lance sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.landline.thing k.attributes.same name=landline sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
@@ -41,6 +42,7 @@
 @k.attributes.same.leaf_fluttering_in_wind.plant k.attributes.same name="leaf fluttering in wind" sense=plant only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.leafless_tree.plant k.attributes.same name="leafless tree" sense=plant only=true in=k.attributes.drawn in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.leafy_green.food k.attributes.same name="leafy green" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.leafy_plant.thing k.attributes.same name="leafy plant" sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.leap_year.time k.attributes.same name="leap year" sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.leash.thing k.attributes.same name=leash sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.leaves.plant k.attributes.same name=leaves sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -68,10 +70,11 @@
 @k.attributes.same.lettuce.food k.attributes.same name=lettuce sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.level_slider.thing k.attributes.same name="level slider" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.lever.thing k.attributes.same name=lever sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.librarian.person k.attributes.same name=librarian sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.librarian.person k.attributes.same name=librarian sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.library.thing k.attributes.same name=library sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.libya.place k.attributes.same name=libya sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lifeboat.thing k.attributes.same name=lifeboat sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.lifeguard.thing k.attributes.same name=lifeguard sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.lift.thing k.attributes.same name=lift sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.light_blue.colour k.attributes.same name="light blue" sense=colour only=true in=k.colours.colour in=k.values.colour core.source="hand-core 1"
 @k.attributes.same.light_bulb.thing k.attributes.same name="light bulb" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

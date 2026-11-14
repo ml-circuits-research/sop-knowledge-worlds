@@ -5,10 +5,10 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.scenes core.module name=k.scenes version=2 imports=k.named exports=thing exports=scene exports=has core.source="hand-core 1"
+@k.scenes core.module name=k.scenes version=3 imports=k.named exports=thing exports=scene exports=has core.source="hand-core 1"
 
-# The usual place and the relative size of a thing, named as its drawing in k.objects (the same name) or as a
-# stand-in there. `place` is where one usually sees it: in the `sky` (also: in the air), on the `ground` (outdoors),
+# The usual place and the relative size of a thing, named as its drawing in k.objects (the same name), as a word or a
+# stand-in there, or as a thing of a scene that nothing draws (a stage). `place` is where one usually sees it: in the `sky` (also: in the air), on the `ground` (outdoors),
 # on or in the `water`, `indoors`, or `on_thing`: on another thing, which `on` names (a hat on a head, a roof on a
 # house). A thing indoors may also name what it is usually on (`place=indoors on=table`). `size` is the size of the
 # real thing among five classes: `tiny` fits in a closed hand (a coin, a bee, a berry); `small` is held in one or
@@ -48,10 +48,14 @@
 # thing has a usual side; `on` names another thing of the same scene that it is on or in (a duck on the pond, a cup
 # on the table), and a thing on or in the water of a scene that is not all water says on which water (a boat on the
 # sea); `fills=true` says that the thing fills its layer from side to side (the sea behind a beach, the road of a
-# street); `drawing` names the k.objects object that draws the thing, where one exists.
+# street); `drawing` names the k.objects object that draws the thing, where one exists. `thing` names a thing of this
+# world (`k.scenes.thing`, with its place and size), not a drawing: an acrobat is a thing of the circus, drawn by the
+# person (a k.objects stand-in), a beach ball is drawn by "ball beach" (a word of that object); the join of `thing` is
+# to k.scenes.thing, that of `drawing` to k.objects.object, and both close for every fact (a stage, a till, a diving
+# board and a mobile have no drawable kind and so no drawing; tests/k.scenes.test.mjs lists them).
 @k.scenes.has core.type of=k.scenes.has shared=true closed=true core.source="hand-core 1"
 @k.scenes.has.scene core.slot of=k.scenes.has key=scene id=true required=true kind=atom kind=string type=k.scenes.scene by=name core.source="hand-core 1"
-@k.scenes.has.thing core.slot of=k.scenes.has key=thing id=true required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.scenes.has.thing core.slot of=k.scenes.has key=thing id=true required=true kind=atom kind=string type=k.scenes.thing by=name core.source="hand-core 1"
 @k.scenes.has.count core.slot of=k.scenes.has key=count required=true kind=integer min=1 core.source="hand-core 1"
 @k.scenes.has.where core.slot of=k.scenes.has key=where required=true enum=sky enum=ceiling enum=background enum=wall enum=ground enum=water enum=foreground core.source="hand-core 1"
 @k.scenes.has.side core.slot of=k.scenes.has key=side enum=left enum=centre enum=right core.source="hand-core 1"

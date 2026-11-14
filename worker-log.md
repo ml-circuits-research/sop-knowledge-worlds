@@ -4994,3 +4994,35 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   test:slow`): questions 41.4 s, derived 39.3 s (2.9 GB), k.objects.render 30.7 s, k.objects.names 29.9 s,
   k.attributes 28.2 s; no file of this round over 30 s (k.diagrams, w.lang.en.morph 3 s, w.lang.en.closed and
   arrangement under 1 s).
+
+## 2026-11-15 — second worker: the scene things with no drawing of that name (reviewer 04:10, item 1)
+
+- The 89 values of `k.scenes.has.thing` that named no k.objects object, each mapped and looked at next to its scene
+  (`sources/coverage/hand-links.tsv`, the one home of hand links, written to `k.objects/shards/words-hand` and
+  `stand-ins-hand` by `tools/coverage.mjs`): **21 the same thing under another name** (core.word: beach ball ->
+  "ball beach", cable car -> "mountain cableway", fuel truck -> "petrol tanker", carousel -> "merry go round",
+  barrier -> "construction", ladybird -> "lady beetle", globe -> "globe showing Europe-Africa" ...), **59 the
+  nearest drawable kind, marked as a `k.objects.stand_in`** (38 people by `person`; control tower by tower, lamp post
+  and street lamp by lamp, pirate ship and shipwreck by ship, dune by hill, moat by ditch, runway by road, stall by
+  shop, sandbox by box, snowball by ball, windsock by flag, firefly by beetle, crow by "black bird" ...), 5 already
+  linked (child, flowers as words; counter, farmhouse, puddle, trapeze as stand-ins), and **4 with no drawable kind,
+  left without a drawing** (stage, till, diving board, mobile: WordNet's kind of a mobile is a sculpture, which would
+  draw a statue on a nursery ceiling). WordNet's link globe -> Earth is refused in not-links.tsv (the thing is the
+  model). "performing arts" (theatre masks) is now the thing `theatre masks` drawn by "performing arts".
+- **Why the join is re-targeted, not only filled**: sopworld checks `type=T by=k` against the wires of exactly `T`
+  (`byType`, no subtypes), so a stand-in or a word can never close a join to `k.objects.object`. `has.thing` names a
+  thing of the scene, not a drawing; it now joins `k.scenes.thing` (`type=k.scenes.thing by=name`), and the 86 scene
+  things without a place and size got one (`sources/hand-core/place-size.tsv`, named=model). The drawing is the
+  declared join `has.drawing` -> k.objects.object, now on 1,081 of 1,088 facts (was 1,062; the 7 without: the 4 above
+  and the "=-" things pipe, ring, seat). k.scenes version 3.
+- Numbers: JOINS-REPORT `k.scenes.has.thing` 595 of 595 meet (was 506), all declared joins 5,568 of 5,639 values
+  meet (98.7 %, open 160 -> 71), 0 broken; k.objects stand-ins 159 drawings (was 144; stand-ins-hand 140 wires,
+  14,700 bytes; words-hand 33 wires, 4,484 bytes); k.scenes.thing 2,394 things (was 2,308); scenes 99.4 % drawn (was
+  97.6 %); k.scenes loads in 0.33 s with 0 open joins of `thing`. MISSING.md: hand stand-ins 72 -> 79, words 27 -> 28,
+  no drawing at all 368 -> 360 of the 1,500 most frequent nouns. 23 scene previews redrawn.
+- Tests: tests/k.scenes.test.mjs: a thing may also be a word of an object or one of the 4 listed things nothing
+  draws; new test that every `has.thing` is a k.scenes.thing, the things without a drawing are exactly the 4 (and the
+  "=-" objects), and the loaded world reports no open join of `thing`.
+  tests/k.layouts.test.mjs: the pirate ship is no longer a thing without a drawing (the stall is: its stand-in, the
+  shop, has no anchor). COVERAGE.md and ASPECTS.md regenerated (`npm run reports`). Note: "mobile" is a hand word of
+  the phone, so the vocabulary sends the nursery's mobile to the phone.

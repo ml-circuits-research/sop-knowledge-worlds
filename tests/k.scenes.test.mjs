@@ -13,6 +13,10 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const scenes = fullWorld('k.scenes', worlds);
 const objects = new Set(factsOf('k.objects', 'k.objects.object', worlds).map((w) => tok(w.attrs.name[0])));
 const standIns = new Set(factsOf('k.objects', 'k.objects.stand_in', worlds).map((w) => tok(w.attrs.name[0])));
+// the words of objects (core.word of=k.objects.object.name): a beach ball is drawn by "ball beach"
+const objectWords = new Set(factsOf('k.objects', 'core.word', worlds).filter((w) => w.attrs.of?.includes('k.objects.object.name')).flatMap((w) => w.attrs.text.map(tok)));
+// things of a scene that no drawable kind draws (reviewer 04:10 item 1): each is a k.scenes.thing and has no drawing
+const UNDRAWN = ['diving board', 'mobile', 'stage', 'till'];
 const things = scenes.ofType('k.scenes.thing');
 
 test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv and, for the animals it lacks, from animals.tsv', () => {
@@ -26,11 +30,11 @@ test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv
   assert.throws(() => readPlaceSize('hat\tupstairs\t\tsmall\n'), /place/);
 });
 
-test('every thing with a usual place or size is a k.objects object or stand-in, or an animal of k.animals; nearly every object has one', () => {
+test('every thing with a usual place or size is a k.objects object, word or stand-in, an animal of k.animals, or a listed thing of a scene that nothing draws; nearly every object has one', () => {
   const animalRows = new Set(animalThings().rows.map((r) => r.name));
   for (const w of things) {
     const name = tok(w.attrs.name[0]);
-    assert.ok(objects.has(name) || standIns.has(name) || animalRows.has(name), `${name} is neither an object nor a stand-in of k.objects, nor an animal`);
+    assert.ok(objects.has(name) || standIns.has(name) || objectWords.has(name) || animalRows.has(name) || UNDRAWN.includes(name), `${name} is neither an object, a word nor a stand-in of k.objects, nor an animal`);
     assert.deepEqual(w.attrs.named, ['model'], name);
     assert.ok(handSources(w.attrs['core.source']), name);
     assert.ok(w.attrs.place || w.attrs.size, name);
@@ -102,6 +106,22 @@ test('what a scene has: the scene exists, a drawing is an object, what a thing i
     for (const d of w.attrs.drawing ?? []) assert.ok(objects.has(tok(d)), `${w.id}: drawing ${d}`);
     assert.ok(w.attrs.happens?.length >= 2, `${w.id}: what happens there`);
   }
+});
+
+test('the joins of what a scene has close: every thing is a k.scenes.thing, every thing not drawn under its own name has a drawing (but the listed ones and "=-")', () => {
+  const named = new Set(things.map((w) => tok(w.attrs.name[0])));
+  const undrawn = new Set();
+  for (const w of has) {
+    const t = tok(w.attrs.thing[0]);
+    assert.ok(named.has(t), `${w.id}: ${t} is no k.scenes.thing`);
+    if (!w.attrs.drawing) undrawn.add(t);
+    // drawn by another object: that object is a word of it, a stand-in for it, or was chosen in the scene (=drawing)
+  }
+  // the things without a drawing: the four with no drawable kind, and the "=-" things whose namesake object shows another thing
+  assert.deepEqual([...undrawn].filter((t) => !objects.has(t)).sort(), UNDRAWN);
+  assert.ok(undrawn.size <= UNDRAWN.length + 3, [...undrawn].join(', '));
+  for (const t of UNDRAWN) assert.ok(!standIns.has(t), t); // ("mobile" is a word of the phone: another thing)
+  assert.equal(scenes.check().issues.filter((i) => i.kind === 'open-join' && i.key === 'thing').length, 0);
 });
 
 test('in every scene at least three quarters of the things have a drawing; over all scenes at least 95%', () => {

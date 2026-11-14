@@ -178,7 +178,7 @@
 @k.scenes.scene.desert k.scenes.scene name=desert kind=outdoors ground=sand time=day weather=sunny happens="ride a camel" happens="cross the dunes" drawing=desert core.source="hand-core 1"
 @k.scenes.has.desert.sun k.scenes.has scene=desert thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.desert.vulture k.scenes.has scene=desert thing=vulture count=1 where=sky drawing=vulture core.source="hand-core 1"
-@k.scenes.has.desert.dune k.scenes.has scene=desert thing=dune count=3 where=background core.source="hand-core 1"
+@k.scenes.has.desert.dune k.scenes.has scene=desert thing=dune count=3 where=background drawing=hill core.source="hand-core 1"
 @k.scenes.has.desert.pyramid k.scenes.has scene=desert thing=pyramid count=1 where=background drawing=pyramid core.source="hand-core 1"
 @k.scenes.has.desert.cactus k.scenes.has scene=desert thing=cactus count=4 where=ground drawing=cactus core.source="hand-core 1"
 @k.scenes.has.desert.camel k.scenes.has scene=desert thing=camel count=2 where=ground drawing=camel core.source="hand-core 1"
@@ -317,7 +317,7 @@
 @k.scenes.has.park.ball k.scenes.has scene=park thing=ball count=1 where=ground drawing=ball core.source="hand-core 1"
 @k.scenes.has.park.bicycle k.scenes.has scene=park thing=bicycle count=1 where=ground drawing=bicycle core.source="hand-core 1"
 @k.scenes.has.park.trash_bin k.scenes.has scene=park thing="trash bin" count=1 where=ground drawing="trash bin" core.source="hand-core 1"
-@k.scenes.has.park.lamp_post k.scenes.has scene=park thing="lamp post" count=2 where=ground core.source="hand-core 1"
+@k.scenes.has.park.lamp_post k.scenes.has scene=park thing="lamp post" count=2 where=ground drawing=lamp core.source="hand-core 1"
 @k.scenes.word.scene.park core.word text=parks text="city park" means=park of=k.scenes.scene.name core.source="hand-core 1"
 
 # orchard

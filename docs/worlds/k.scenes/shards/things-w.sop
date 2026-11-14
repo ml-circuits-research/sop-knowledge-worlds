@@ -1,4 +1,4 @@
-# k.scenes/shards/things-w: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 87 things (the drawable things and the animals of k.animals) whose name starts with "w"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-w: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 93 things (the drawable things and the animals of k.animals) whose name starts with "w"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -9,6 +9,7 @@
 @k.scenes.thing.waffle k.scenes.thing name=waffle place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.wagon k.scenes.thing name=wagon place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.waistcoat k.scenes.thing name=waistcoat place=on_thing on=person size=small named=model core.source="hand-core 1"
+@k.scenes.thing.waiter k.scenes.thing name=waiter place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.walking_frame k.scenes.thing name="walking frame" place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.walking_stick k.scenes.thing name="walking stick" place=on_thing on=hand size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.walkman k.scenes.thing name=walkman place=indoors size=small named=model core.source="hand-core 1"
@@ -33,6 +34,8 @@
 @k.scenes.thing.watch k.scenes.thing name=watch place=on_thing on=hand size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.water k.scenes.thing name=water place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.water_buffalo k.scenes.thing name="water buffalo" place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.water_hole k.scenes.thing name="water hole" place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.water_lily k.scenes.thing name="water lily" place=water size=small named=model core.source="hand-core 1"
 @k.scenes.thing.water_pistol k.scenes.thing name="water pistol" place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.water_wave k.scenes.thing name="water wave" place=water size=large named=model core.source="hand-core 1"
 @k.scenes.thing.watering_can k.scenes.thing name="watering can" place=ground size=small named=model core.source="hand-core 1"
@@ -65,6 +68,7 @@
 @k.scenes.thing.windmill k.scenes.thing name=windmill place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.window k.scenes.thing name=window place=on_thing on=wall size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.windshield k.scenes.thing name=windshield place=on_thing on=car size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.windsock k.scenes.thing name=windsock place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.wine k.scenes.thing name=wine place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.wine_glass k.scenes.thing name="wine glass" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.wire k.scenes.thing name=wire place=indoors size=small named=model core.source="hand-core 1"
@@ -83,6 +87,8 @@
 @k.scenes.thing.woodlouse k.scenes.thing name=woodlouse place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.woodpecker k.scenes.thing name=woodpecker place=sky size=small named=model core.source="hand-core 1"
 @k.scenes.thing.woodstain k.scenes.thing name=woodstain place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.workbench k.scenes.thing name=workbench place=indoors size=large named=model core.source="hand-core 1"
+@k.scenes.thing.worker k.scenes.thing name=worker place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.world k.scenes.thing name=world place=sky size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.world_map k.scenes.thing name="world map" place=on_thing on=wall size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.worm k.scenes.thing name=worm place=ground size=tiny named=model core.source="hand-core 1"

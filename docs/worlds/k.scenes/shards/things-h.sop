@@ -1,4 +1,4 @@
-# k.scenes/shards/things-h: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 108 things (the drawable things and the animals of k.animals) whose name starts with "h"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-h: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 109 things (the drawable things and the animals of k.animals) whose name starts with "h"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
@@ -69,6 +69,7 @@
 @k.scenes.thing.high_chair k.scenes.thing name="high chair" place=indoors size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.high-heeled_shoe k.scenes.thing name="high-heeled shoe" place=on_thing on=foot size=small named=model core.source="hand-core 1"
 @k.scenes.thing.high-speed_train k.scenes.thing name="high-speed train" place=ground size=huge named=model core.source="hand-core 1"
+@k.scenes.thing.hiker k.scenes.thing name=hiker place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.hiking_boot k.scenes.thing name="hiking boot" place=on_thing on=foot size=small named=model core.source="hand-core 1"
 @k.scenes.thing.hill k.scenes.thing name=hill place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.hindu_temple k.scenes.thing name="hindu temple" place=ground size=huge named=model core.source="hand-core 1"

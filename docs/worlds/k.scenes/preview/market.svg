@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 307" width="480" height="307">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 324" width="480" height="324">
   <title>market</title>
-  <rect width="480" height="307" fill="#cfe8fa"/><rect y="132.8" width="480" height="174.2" fill="#cfcabf"/>
+  <rect width="480" height="324" fill="#cfe8fa"/><rect y="132.8" width="480" height="191.2" fill="#cfcabf"/>
   <defs>
     <symbol id="o-sun" viewBox="0 0 100 100">
   <polyline points="50,5 50,20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_ray</title></polyline>
@@ -20,28 +20,23 @@
   <rect x="58" y="56" width="10" height="10" fill="blue" stroke="#333" stroke-width="0.8"><title>bottom_right_window</title></rect>
   <rect x="44" y="74" width="12" height="18" fill="brown" stroke="#333" stroke-width="0.8"><title>door</title></rect>
     </symbol>
-    <symbol id="o-person" viewBox="0 0 100 100">
-  <polyline points="50,29 50,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>body</title></polyline>
-  <polyline points="50,38 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_arm</title></polyline>
-  <polyline points="50,38 70,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_arm</title></polyline>
-  <polyline points="50,62 35,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_leg</title></polyline>
-  <polyline points="50,62 65,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_leg</title></polyline>
-  <ellipse cx="50" cy="17" rx="12" ry="12" fill="pink" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
-  <ellipse cx="45" cy="14" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>left_eye</title></ellipse>
-  <ellipse cx="55" cy="14" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>right_eye</title></ellipse>
-  <path d="M44 18 A6 6 0 0 0 56 18" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></path>
-    </symbol>
-    <symbol id="o-dog" viewBox="0 0 100 100">
-  <polyline points="84,54 95,38" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tail</title></polyline>
-  <rect x="38" y="68" width="7" height="27" fill="brown" stroke="#333" stroke-width="0.8"><title>front_leg</title></rect>
-  <rect x="72" y="68" width="7" height="27" fill="brown" stroke="#333" stroke-width="0.8"><title>back_leg</title></rect>
-  <ellipse cx="58.5" cy="59" rx="26.5" ry="14" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
-  <ellipse cx="25" cy="35" rx="15" ry="15" fill="brown" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
-  <ellipse cx="11" cy="40.5" rx="9" ry="6.5" fill="brown" stroke="#333" stroke-width="0.8"><title>snout</title></ellipse>
-  <ellipse cx="33" cy="30" rx="5" ry="12" fill="black" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
-  <ellipse cx="20" cy="29" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
-  <ellipse cx="4.5" cy="37.5" rx="2.5" ry="2.5" fill="black" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
-  <polyline points="6,44 15,45" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></polyline>
+    <symbol id="o-shop" viewBox="0 0 100 100">
+  <polygon points="63.5,46.8 63.5,69 18.7,69 18.7,46.8" fill="#FFF5B4"><title>part1</title></polygon>
+  <polygon points="18.5,12.2 81.4,12.2 81.4,23.8 18.5,23.8" fill="#FFFFFF"><title>sign</title></polygon>
+  <polygon points="81.4,46.8 81.4,87.9 65.9,87.9 66,46.8 64.5,46.8" fill="#34A047"><title>part3</title></polygon>
+  <polygon points="67.7,51.6 78.4,51.6 78.4,64.7 67.7,64.7" fill="#FFFFFF"><title>part4</title></polygon>
+  <polygon points="63.5,69 63.5,46.8 66,46.8 65.9,87.9 63.4,87.9" fill="#231F20"><title>part5</title></polygon>
+  <polygon points="63.5,69 63.4,87.9 18.7,87.9 18.7,69" fill="#9C5C25"><title>part6</title></polygon>
+  <polygon points="50,31.3 81.3,31.3 89.4,46.2 10.6,46.2 18.7,31.3" fill="#BD2025"><title>roof</title></polygon>
+  <polyline points="64.5,46.8 81.4,46.8 81.4,87.9 18.7,87.9 18.7,46.8 63.5,46.8" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part8</title></polyline>
+  <polyline points="18.7,69 64.9,69" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part9</title></polyline>
+  <polyline points="81.3,31.3 18.7,31.3 10.6,46.2 89.4,46.2" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part10</title></polyline>
+  <polyline points="18.5,12.2 81.4,12.2 81.4,23.8 18.5,23.8" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part11</title></polyline>
+  <ellipse cx="11.3" cy="47.4" rx="2.1" ry="2.1" fill="#444041"><title>part12</title></ellipse>
+  <ellipse cx="15.6" cy="47.4" rx="2.1" ry="2.1" fill="#444041"><title>part13</title></ellipse>
+  <ellipse cx="19.9" cy="47.4" rx="2.1" ry="2.1" fill="#444041"><title>part14</title></ellipse>
+  <ellipse cx="24.2" cy="47.4" rx="2.1" ry="2.1" fill="#444041"><title>part15</title></ellipse>
+  <ellipse cx="28.5" cy="47.4" rx="2.1" ry="2.1" fill="#444041"><title>part16</title></ellipse>
     </symbol>
     <symbol id="o-apple" viewBox="0 0 100 100">
   <ellipse cx="50" cy="55" rx="35" ry="35" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
@@ -124,24 +119,6 @@
   <polygon points="12.8,51 12.3,57.5 15.7,62 21.6,66.6 26.8,68.5 31.3,68.7 35.1,67.8 38.1,65.1 39.1,60.9 37.8,56.9 35.2,53.5 29.2,49.1 23.7,47.1 17.7,46.7 15.5,47.6" fill="#E84B8B"><title>part15</title></polygon>
   <polygon points="11.2,49.3 10.8,52.3 12,57 16.7,55.1 24.7,56.7 18.5,50.5 17.7,46.7 13.1,47.5" fill="#AF0C1B"><title>part16</title></polygon>
     </symbol>
-    <symbol id="o-basket" viewBox="0 0 100 100">
-  <polygon points="72.1,33.9 75.1,26.8 77.4,23 81.9,18.8 87.4,16.2 86.5,15.3 82.1,13.5 76.6,13.9 72.9,15.8 69.5,19.3 66.1,25.4 63.8,32.5" fill="#A15D38"><title>right_handle</title></polygon>
-  <polygon points="81.3,11.7 86.4,13 91.4,15.6 94,18.6 95.3,21.4 96.3,27.4 96.3,32.3 95.5,37.8 92.9,45.7 93.2,42.9 85.9,38.8 87.9,27.7 87.9,20 86.5,16.6 84.4,14.5 82.2,13.3 79.1,12.8" fill="#F7A54B"><title>part2</title></polygon>
-  <polygon points="15.6,27.7 15.6,22.3 16.3,18.8 17.4,16.8 20,14.6 17.5,13.6 13.8,13.5 10,14.8 8.2,16.7 7.2,21.3 7.6,29.9 8.6,36.3 16.5,33" fill="#A15D38"><title>left_handle</title></polygon>
-  <polygon points="12.4,40.1 5.2,39.2 13.5,85 14.9,87.2 20.1,91.1 28,94.1 38,96.1 49.6,96.9 55.5,96.7 66.4,95.3 75.4,92.7 82.1,89.2 84.3,87.2 85.7,85 93.2,39.5" fill="#894F36"><title>part4</title></polygon>
-  <polygon points="27.1,52.5 29.2,93.8 28.4,94.7 25.8,94 25.1,93.1 22,51.8" fill="#E39744"><title>part5</title></polygon>
-  <polygon points="46.1,54.5 47.6,96.6 48.3,97.3 51.5,97.3 52.2,96.5 52.1,54.5" fill="#E39744"><title>part6</title></polygon>
-  <polygon points="70.4,93.8 70.9,53.6 76.6,52.5 74.4,93.2 71.3,94.6" fill="#CE843A"><title>part7</title></polygon>
-  <polygon points="10.5,49.6 16.5,88.9 19.1,90.9 19.6,90.3 16,51" fill="#CE843A"><title>part8</title></polygon>
-  <polygon points="40.5,54.5 40.7,96.1 40.2,96.6 36.8,96.3 36.4,95.9 34.6,54.5" fill="#E39744"><title>part9</title></polygon>
-  <polygon points="58.9,53.6 59.9,96 60.6,96.6 63.9,96.2 64.4,95.6 64.8,52.5" fill="#CE843A"><title>part10</title></polygon>
-  <polygon points="4.6,47 2.7,38.6 96.5,38.6 94,48.7 92.3,50.3 89.5,51.9 81.4,54.5 63.8,57.1 42.3,57.5 23,55.6 13.3,53.3 9.6,51.9 5.2,48.7" fill="#F7A54B"><title>part11</title></polygon>
-  <ellipse cx="49.6" cy="38.6" rx="46.9" ry="9.3" fill="#FFCC80"><title>part12</title></ellipse>
-  <ellipse cx="49.55" cy="37.3" rx="38.65" ry="6" fill="#784D30"><title>part13</title></ellipse>
-  <polygon points="49.6,31.2 37.4,31.5 22.3,33 12.9,35.4 11.4,36.3 10.9,37.3 12.5,38.9 16.7,40.4 30.2,38.1 49.6,37.3 69,38.1 82.4,40.4 86.7,38.9 88.2,37.6 87.7,36.3 83.9,34.5 76.9,33 67.3,31.9" fill="#D68B52"><title>part14</title></polygon>
-  <polygon points="49.6,56.8 33.6,55.9 23.4,54.5 10.7,51 4.8,48 6.8,51 12.9,53.8 23.4,56.4 33.7,57.8 35.5,59.7 39,60.4 42.4,59.9 44.7,58.4 61,58.1 71,57.1 79.6,55.6 86.6,53.7 91.7,51.5 94,48.6 88.3,51.3 75.8,54.5 64,56.2" fill="#894F36"><title>part15</title></polygon>
-  <polygon points="45.3,56.9 43.8,58.1 39.4,58.7 34.6,58.5 32.5,57.2 30.1,51.5 21.4,25.1 19.4,20.9 18,18.9 14.8,16.3 11.8,14.9 8.7,14.4 12.9,12.6 18.7,12.1 22.9,12.6 27,14.6 29,16.9 33.2,25.5 37.3,36.8 43.1,55.9" fill="#FFCC80"><title>part16</title></polygon>
-    </symbol>
     <symbol id="o-balance_scale" viewBox="0 0 100 100">
   <rect x="47.3" y="22.4" width="5.5" height="55.1" fill="#4C889B"><title>post</title></rect>
   <polygon points="72.2,28 75.9,27.5 78.4,26.6 82,24.1 84.2,21.6 79.8,18.4 77,21.1 72.5,22.5 67.4,21.7 58.2,18.8 50,18 50,23.5 57,24.2 66.5,27.2" fill="#4C889B"><title>beam</title></polygon>
@@ -159,6 +136,47 @@
   <polygon points="97.5,72.3 65.3,72.2 66.2,74.4 70.5,77.7 76.8,80.1 81.4,80.7 86,80.1 92.3,77.7 96.5,74.4" fill="#81AFC1"><title>right_pan</title></polygon>
   <polygon points="81.4,69.9 92.8,70.6 96.9,71.7 97.5,72.4 96.9,73 92.7,74.1 81.4,74.8 73.3,74.4 67.5,73.5 65.3,72.3 65.9,71.6 70,70.6" fill="#335E68"><title>part15</title></polygon>
   <polygon points="80.5,19.2 81.6,18.1 82.6,19.2 82.4,74.8 81.4,75.9 80.3,74.8" fill="#4C889B"><title>part16</title></polygon>
+    </symbol>
+    <symbol id="o-person" viewBox="0 0 100 100">
+  <polyline points="50,29 50,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>body</title></polyline>
+  <polyline points="50,38 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_arm</title></polyline>
+  <polyline points="50,38 70,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_arm</title></polyline>
+  <polyline points="50,62 35,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_leg</title></polyline>
+  <polyline points="50,62 65,92" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>right_leg</title></polyline>
+  <ellipse cx="50" cy="17" rx="12" ry="12" fill="pink" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <ellipse cx="45" cy="14" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>left_eye</title></ellipse>
+  <ellipse cx="55" cy="14" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>right_eye</title></ellipse>
+  <path d="M44 18 A6 6 0 0 0 56 18" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></path>
+    </symbol>
+    <symbol id="o-dog" viewBox="0 0 100 100">
+  <polyline points="84,54 95,38" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tail</title></polyline>
+  <rect x="38" y="68" width="7" height="27" fill="brown" stroke="#333" stroke-width="0.8"><title>front_leg</title></rect>
+  <rect x="72" y="68" width="7" height="27" fill="brown" stroke="#333" stroke-width="0.8"><title>back_leg</title></rect>
+  <ellipse cx="58.5" cy="59" rx="26.5" ry="14" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <ellipse cx="25" cy="35" rx="15" ry="15" fill="brown" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <ellipse cx="11" cy="40.5" rx="9" ry="6.5" fill="brown" stroke="#333" stroke-width="0.8"><title>snout</title></ellipse>
+  <ellipse cx="33" cy="30" rx="5" ry="12" fill="black" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
+  <ellipse cx="20" cy="29" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+  <ellipse cx="4.5" cy="37.5" rx="2.5" ry="2.5" fill="black" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
+  <polyline points="6,44 15,45" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></polyline>
+    </symbol>
+    <symbol id="o-basket" viewBox="0 0 100 100">
+  <polygon points="72.1,33.9 75.1,26.8 77.4,23 81.9,18.8 87.4,16.2 86.5,15.3 82.1,13.5 76.6,13.9 72.9,15.8 69.5,19.3 66.1,25.4 63.8,32.5" fill="#A15D38"><title>right_handle</title></polygon>
+  <polygon points="81.3,11.7 86.4,13 91.4,15.6 94,18.6 95.3,21.4 96.3,27.4 96.3,32.3 95.5,37.8 92.9,45.7 93.2,42.9 85.9,38.8 87.9,27.7 87.9,20 86.5,16.6 84.4,14.5 82.2,13.3 79.1,12.8" fill="#F7A54B"><title>part2</title></polygon>
+  <polygon points="15.6,27.7 15.6,22.3 16.3,18.8 17.4,16.8 20,14.6 17.5,13.6 13.8,13.5 10,14.8 8.2,16.7 7.2,21.3 7.6,29.9 8.6,36.3 16.5,33" fill="#A15D38"><title>left_handle</title></polygon>
+  <polygon points="12.4,40.1 5.2,39.2 13.5,85 14.9,87.2 20.1,91.1 28,94.1 38,96.1 49.6,96.9 55.5,96.7 66.4,95.3 75.4,92.7 82.1,89.2 84.3,87.2 85.7,85 93.2,39.5" fill="#894F36"><title>part4</title></polygon>
+  <polygon points="27.1,52.5 29.2,93.8 28.4,94.7 25.8,94 25.1,93.1 22,51.8" fill="#E39744"><title>part5</title></polygon>
+  <polygon points="46.1,54.5 47.6,96.6 48.3,97.3 51.5,97.3 52.2,96.5 52.1,54.5" fill="#E39744"><title>part6</title></polygon>
+  <polygon points="70.4,93.8 70.9,53.6 76.6,52.5 74.4,93.2 71.3,94.6" fill="#CE843A"><title>part7</title></polygon>
+  <polygon points="10.5,49.6 16.5,88.9 19.1,90.9 19.6,90.3 16,51" fill="#CE843A"><title>part8</title></polygon>
+  <polygon points="40.5,54.5 40.7,96.1 40.2,96.6 36.8,96.3 36.4,95.9 34.6,54.5" fill="#E39744"><title>part9</title></polygon>
+  <polygon points="58.9,53.6 59.9,96 60.6,96.6 63.9,96.2 64.4,95.6 64.8,52.5" fill="#CE843A"><title>part10</title></polygon>
+  <polygon points="4.6,47 2.7,38.6 96.5,38.6 94,48.7 92.3,50.3 89.5,51.9 81.4,54.5 63.8,57.1 42.3,57.5 23,55.6 13.3,53.3 9.6,51.9 5.2,48.7" fill="#F7A54B"><title>part11</title></polygon>
+  <ellipse cx="49.6" cy="38.6" rx="46.9" ry="9.3" fill="#FFCC80"><title>part12</title></ellipse>
+  <ellipse cx="49.55" cy="37.3" rx="38.65" ry="6" fill="#784D30"><title>part13</title></ellipse>
+  <polygon points="49.6,31.2 37.4,31.5 22.3,33 12.9,35.4 11.4,36.3 10.9,37.3 12.5,38.9 16.7,40.4 30.2,38.1 49.6,37.3 69,38.1 82.4,40.4 86.7,38.9 88.2,37.6 87.7,36.3 83.9,34.5 76.9,33 67.3,31.9" fill="#D68B52"><title>part14</title></polygon>
+  <polygon points="49.6,56.8 33.6,55.9 23.4,54.5 10.7,51 4.8,48 6.8,51 12.9,53.8 23.4,56.4 33.7,57.8 35.5,59.7 39,60.4 42.4,59.9 44.7,58.4 61,58.1 71,57.1 79.6,55.6 86.6,53.7 91.7,51.5 94,48.6 88.3,51.3 75.8,54.5 64,56.2" fill="#894F36"><title>part15</title></polygon>
+  <polygon points="45.3,56.9 43.8,58.1 39.4,58.7 34.6,58.5 32.5,57.2 30.1,51.5 21.4,25.1 19.4,20.9 18,18.9 14.8,16.3 11.8,14.9 8.7,14.4 12.9,12.6 18.7,12.1 22.9,12.6 27,14.6 29,16.9 33.2,25.5 37.3,36.8 43.1,55.9" fill="#FFCC80"><title>part16</title></polygon>
     </symbol>
     <symbol id="o-shopping_bags" viewBox="0 0 100 100">
   <polyline points="21.1,30.8 19.9,18.9 20.7,11.7 23.4,6.4 25.1,5 28,3.9 30,4.1 32.9,5.4 36,9 38.2,15.7 40.5,28" fill="none" stroke="#00796B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handle</title></polyline>
@@ -193,43 +211,32 @@
   <use href="#o-building" x="66.4" y="64" width="76.8" height="76.8"><title>building</title></use>
   <use href="#o-building" x="201.6" y="64" width="76.8" height="76.8"><title>building</title></use>
   <use href="#o-building" x="336.8" y="64" width="76.8" height="76.8"><title>building</title></use>
-  <use href="#o-person" x="13.8" y="146.8" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="65.7" y="146.8" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="117.5" y="146.8" width="46" height="46"><title>person</title></use>
-  <use href="#o-dog" x="169.3" y="146.8" width="46" height="46"><title>dog</title></use>
-  <use href="#o-apple" x="221.2" y="162.8" width="30" height="30"><title>apple</title></use>
-  <use href="#o-apple" x="257" y="162.8" width="30" height="30"><title>apple</title></use>
-  <use href="#o-apple" x="292.8" y="162.8" width="30" height="30"><title>apple</title></use>
-  <use href="#o-banana" x="328.7" y="162.8" width="30" height="30"><title>banana</title></use>
-  <use href="#o-banana" x="364.5" y="162.8" width="30" height="30"><title>banana</title></use>
-  <use href="#o-banana" x="400.3" y="162.8" width="30" height="30"><title>banana</title></use>
-  <use href="#o-tomato" x="436.2" y="162.8" width="30" height="30"><title>tomato</title></use>
-  <use href="#o-tomato" x="13.3" y="198.8" width="30" height="30"><title>tomato</title></use>
-  <use href="#o-tomato" x="48.6" y="198.8" width="30" height="30"><title>tomato</title></use>
-  <use href="#o-carrot" x="83.9" y="198.8" width="30" height="30"><title>carrot</title></use>
-  <use href="#o-carrot" x="119.1" y="198.8" width="30" height="30"><title>carrot</title></use>
-  <use href="#o-carrot" x="154.4" y="198.8" width="30" height="30"><title>carrot</title></use>
-  <use href="#o-bread" x="189.7" y="198.8" width="30" height="30"><title>bread</title></use>
-  <use href="#o-bread" x="225" y="198.8" width="30" height="30"><title>bread</title></use>
-  <use href="#o-bread" x="260.3" y="198.8" width="30" height="30"><title>bread</title></use>
-  <use href="#o-cheese" x="295.6" y="198.8" width="30" height="30"><title>cheese</title></use>
-  <use href="#o-cheese" x="330.9" y="198.8" width="30" height="30"><title>cheese</title></use>
-  <use href="#o-cheese" x="366.1" y="198.8" width="30" height="30"><title>cheese</title></use>
-  <use href="#o-fish" x="401.4" y="198.8" width="30" height="30"><title>fish</title></use>
-  <use href="#o-fish" x="436.7" y="198.8" width="30" height="30"><title>fish</title></use>
-  <use href="#o-fish" x="16" y="234.8" width="30" height="30"><title>fish</title></use>
-  <use href="#o-bouquet" x="54" y="234.8" width="30" height="30"><title>flower</title></use>
-  <use href="#o-bouquet" x="92" y="234.8" width="30" height="30"><title>flower</title></use>
-  <use href="#o-bouquet" x="130" y="234.8" width="30" height="30"><title>flower</title></use>
-  <use href="#o-basket" x="168" y="234.8" width="30" height="30"><title>basket</title></use>
-  <use href="#o-basket" x="206" y="234.8" width="30" height="30"><title>basket</title></use>
-  <use href="#o-basket" x="244" y="234.8" width="30" height="30"><title>basket</title></use>
-  <use href="#o-balance_scale" x="282" y="234.8" width="30" height="30"><title>scales</title></use>
-  <use href="#o-balance_scale" x="320" y="234.8" width="30" height="30"><title>scales</title></use>
-  <use href="#o-shopping_bags" x="358" y="234.8" width="30" height="30"><title>shopping bags</title></use>
-  <use href="#o-shopping_bags" x="396" y="234.8" width="30" height="30"><title>shopping bags</title></use>
-  <use href="#o-shopping_bags" x="434" y="234.8" width="30" height="30"><title>shopping bags</title></use>
-  <use href="#o-pigeon" x="101.5" y="270.8" width="30" height="30"><title>pigeon</title></use>
-  <use href="#o-pigeon" x="225" y="270.8" width="30" height="30"><title>pigeon</title></use>
-  <use href="#o-pigeon" x="348.5" y="270.8" width="30" height="30"><title>pigeon</title></use>
+  <use href="#o-shop" x="207" y="163.6" width="66" height="66"><title>stall</title></use>
+  <use href="#o-apple" x="10.5" y="146.8" width="30" height="30"><title>apple</title></use>
+  <use href="#o-banana" x="43.5" y="146.8" width="30" height="30"><title>banana</title></use>
+  <use href="#o-tomato" x="76.5" y="146.8" width="30" height="30"><title>tomato</title></use>
+  <use href="#o-carrot" x="109.5" y="146.8" width="30" height="30"><title>carrot</title></use>
+  <use href="#o-bread" x="142.5" y="146.8" width="30" height="30"><title>bread</title></use>
+  <use href="#o-bread" x="175.5" y="146.8" width="30" height="30"><title>bread</title></use>
+  <use href="#o-cheese" x="208.5" y="146.8" width="30" height="30"><title>cheese</title></use>
+  <use href="#o-cheese" x="241.5" y="146.8" width="30" height="30"><title>cheese</title></use>
+  <use href="#o-fish" x="274.5" y="146.8" width="30" height="30"><title>fish</title></use>
+  <use href="#o-fish" x="307.5" y="146.8" width="30" height="30"><title>fish</title></use>
+  <use href="#o-bouquet" x="340.5" y="146.8" width="30" height="30"><title>flower</title></use>
+  <use href="#o-bouquet" x="373.5" y="146.8" width="30" height="30"><title>flower</title></use>
+  <use href="#o-balance_scale" x="406.5" y="146.8" width="30" height="30"><title>scales</title></use>
+  <use href="#o-balance_scale" x="439.5" y="146.8" width="30" height="30"><title>scales</title></use>
+  <use href="#o-person" x="17.1" y="235.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="72.2" y="235.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="127.3" y="235.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-dog" x="182.4" y="235.6" width="46" height="46"><title>dog</title></use>
+  <use href="#o-basket" x="237.5" y="251.6" width="30" height="30"><title>basket</title></use>
+  <use href="#o-basket" x="276.5" y="251.6" width="30" height="30"><title>basket</title></use>
+  <use href="#o-basket" x="315.6" y="251.6" width="30" height="30"><title>basket</title></use>
+  <use href="#o-shopping_bags" x="354.7" y="251.6" width="30" height="30"><title>shopping bags</title></use>
+  <use href="#o-shopping_bags" x="393.8" y="251.6" width="30" height="30"><title>shopping bags</title></use>
+  <use href="#o-shopping_bags" x="432.9" y="251.6" width="30" height="30"><title>shopping bags</title></use>
+  <use href="#o-pigeon" x="101.5" y="287.6" width="30" height="30"><title>pigeon</title></use>
+  <use href="#o-pigeon" x="225" y="287.6" width="30" height="30"><title>pigeon</title></use>
+  <use href="#o-pigeon" x="348.5" y="287.6" width="30" height="30"><title>pigeon</title></use>
 </svg>

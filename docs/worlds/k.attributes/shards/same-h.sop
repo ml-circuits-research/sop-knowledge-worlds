@@ -1,4 +1,4 @@
-# k.attributes/shards/same-h: one name, one thing: for 160 names that start with "h" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-h: one name, one thing: for 161 names that start with "h" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -99,6 +99,7 @@
 @k.attributes.same.high-heeled_shoe.clothing k.attributes.same name="high-heeled shoe" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.high-speed_train.thing k.attributes.same name="high-speed train" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.highway.thing k.attributes.same name=highway sense=thing only=true in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.hiker.thing k.attributes.same name=hiker sense=thing only=true in=k.objects.stand_in in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.hiking_boot.clothing k.attributes.same name="hiking boot" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.hill.thing k.attributes.same name=hill sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.himalayas.place k.attributes.same name=himalayas sense=place only=true in=k.geo.range by_word=k.words.sense core.source="hand-core 1"

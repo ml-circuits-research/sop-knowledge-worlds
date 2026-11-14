@@ -9,34 +9,34 @@ the place of the dog).
 ## Drawings
 
 - a drawing of its own name: 780 (52%)
-- no drawing, but a synonym or a stand-in with one: 352 (23%)
-- neither: 368 (25%)
-- the most frequent with neither: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail
+- no drawing, but a synonym or a stand-in with one: 360 (24%)
+- neither: 360 (24%)
+- the most frequent with neither: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
 
 ## Attributes
 
 | attribute | by its name | through its drawing | none | where |
 |---|---:|---:|---:|---|
-| place | 782 (52%) | 325 (22%) | 393 (26%) | `k.scenes.thing` (place) |
-| size | 799 (53%) | 338 (23%) | 363 (24%) | `k.scenes.thing` (size) |
-| colour (usual colour of the thing) | 225 (15%) | 48 (3%) | 1227 (82%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour (the usual one, or said to be any colour) | 312 (21%) | 90 (6%) | 1098 (73%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour the thing is drawn in | 753 (50%) | 378 (25%) | 369 (25%) | `k.attributes.drawn` (drawn_colour) |
-| colour of the parts of a drawing | 754 (50%) | 378 (25%) | 368 (25%) | `k.objects.part` (colour) |
-| parts (WordNet, own or inherited) | 541 (36%) | 58 (4%) | 901 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
-| parts (WordNet, or usual parts in plain words) | 970 (65%) | 46 (3%) | 484 (32%) | `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has) |
-| parts (named parts of a drawing) | 645 (43%) | 320 (21%) | 535 (36%) | `k.objects.part` (name) |
-| parts or joins between kinds | 64 (4%) | 78 (5%) | 1358 (91%) | `k.layouts.joins` (a) |
-| anchor (where another thing sits) | 133 (9%) | 102 (7%) | 1265 (84%) | `k.layouts.anchor` (kind) |
-| material | 303 (20%) | 105 (7%) | 1092 (73%) | `k.attributes.thing` (material), `k.commonsense.thing` (made_of) |
-| what it can do | 276 (18%) | 65 (4%) | 1159 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 336 (22%) | 143 (10%) | 1021 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
-| wheels | 33 (2%) | 12 (1%) | 1455 (97%) | `k.attributes.thing` (wheels) |
+| place | 793 (53%) | 322 (21%) | 385 (26%) | `k.scenes.thing` (place) |
+| size | 810 (54%) | 334 (22%) | 356 (24%) | `k.scenes.thing` (size) |
+| colour (usual colour of the thing) | 225 (15%) | 51 (3%) | 1224 (82%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (the usual one, or said to be any colour) | 312 (21%) | 94 (6%) | 1094 (73%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour the thing is drawn in | 753 (50%) | 386 (26%) | 361 (24%) | `k.attributes.drawn` (drawn_colour) |
+| colour of the parts of a drawing | 754 (50%) | 386 (26%) | 360 (24%) | `k.objects.part` (colour) |
+| parts (WordNet, own or inherited) | 541 (36%) | 62 (4%) | 897 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
+| parts (WordNet, or usual parts in plain words) | 970 (65%) | 49 (3%) | 481 (32%) | `k.parts.whole` (has), `k.parts.inherited` (has), `k.parts.usual` (has) |
+| parts (named parts of a drawing) | 645 (43%) | 326 (22%) | 529 (35%) | `k.objects.part` (name) |
+| parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
+| anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
+| material | 303 (20%) | 107 (7%) | 1090 (73%) | `k.attributes.thing` (material), `k.commonsense.thing` (made_of) |
+| what it can do | 276 (18%) | 67 (4%) | 1157 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| what it is used for | 336 (22%) | 147 (10%) | 1017 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
+| wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
-| size in metres (the longest side) | 975 (65%) | 68 (5%) | 457 (30%) | `k.attributes.number` (size_about) |
-| weight in kilograms | 855 (57%) | 40 (3%) | 605 (40%) | `k.attributes.number` (weight_about), `k.body.part` (weight_about) |
-| speed (top speed in km/h) | 232 (15%) | 19 (1%) | 1249 (83%) | `k.attributes.number` (speed_about) |
-| price class | 645 (43%) | 44 (3%) | 811 (54%) | `k.attributes.number` (price_class) |
+| size in metres (the longest side) | 975 (65%) | 71 (5%) | 454 (30%) | `k.attributes.number` (size_about) |
+| weight in kilograms | 855 (57%) | 43 (3%) | 602 (40%) | `k.attributes.number` (weight_about), `k.body.part` (weight_about) |
+| speed (top speed in km/h) | 232 (15%) | 20 (1%) | 1248 (83%) | `k.attributes.number` (speed_about) |
+| price class | 645 (43%) | 47 (3%) | 808 (54%) | `k.attributes.number` (price_class) |
 | kind (what it is a kind of) | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (is_a, instance_of) |
 | definition | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (gloss) |
 | where it is worn | 37 (2%) | 21 (1%) | 1442 (96%) | `k.wearables.wearable` (worn_on) |
@@ -49,7 +49,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 24 (2%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1253 (84%) |
+| `k.attributes` | 1258 (84%) |
 | `k.body` | 4 (0%) |
 | `k.colours` | 71 (5%) |
 | `k.commonsense` | 189 (13%) |
@@ -62,7 +62,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.layouts` | 210 (14%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
-| `k.objects` | 1191 (79%) |
+| `k.objects` | 1197 (80%) |
 | `k.parts` | 977 (65%) |
 | `k.people` | 17 (1%) |
 | `k.procedures` | 3 (0%) |
@@ -89,12 +89,12 @@ The 30 most frequent common things with no value, by their name or through a dra
 A missing value is not always a gap: many things have no usual colour (a car, a door), and wheels, legs and
 the place where a thing is worn belong to some kinds of things only (no list for those).
 
-- **place**: gun, engine, bullet, sword, rope, wing, pipe, motor, tube, mall, needle, root, lance, jewelry, shield, coffin, aircraft, vault, barrel, rod, pistol, reed, shotgun, dock, runway, cape, balcony, marina, sketch, clip
-- **size**: wing, grass, mall, needle, root, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel
+- **place**: gun, engine, bullet, sword, rope, wing, pipe, motor, tube, mall, needle, root, lance, jewelry, shield, coffin, aircraft, vault, barrel, rod, pistol, reed, shotgun, dock, cape, balcony, marina, sketch, clip, brake
+- **size**: wing, grass, mall, needle, root, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker
 - **colour (usual colour of the thing)**: house, world, car, door, phone, person, gun, bed, dog, hospital, picture, building, ship, hotel, bag, station, horse, ball, key, boat, fish, star, prison, stick, bank, camera, window, wall, store, jail
 - **colour (the usual one, or said to be any colour)**: house, world, phone, person, gun, bed, dog, hospital, picture, building, ship, hotel, station, horse, key, fish, star, prison, stick, bank, camera, window, wall, store, jail, cat, shop, wine, island, plane
-- **colour the thing is drawn in**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail
-- **colour of the parts of a drawing**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, runway, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail
+- **colour the thing is drawn in**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
+- **colour of the parts of a drawing**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
 - **parts (WordNet, own or inherited)**: honey, street, coffee, picture, bag, station, rock, ball, star, stick, bank, tea, jail, wine, island, beer, moon, suit, hole, stone, pants, beach, cup, tape, milk, cake, meat, photo, bullet, pool
 - **parts (WordNet, or usual parts in plain words)**: honey, coffee, rock, ball, star, stick, bank, tea, wine, beer, moon, hole, stone, tape, milk, meat, photo, bullet, path, sugar, horn, chocolate, soup, candy, champagne, rice, juice, valley, wire, dish
 - **parts (named parts of a drawing)**: honey, hotel, rock, window, engine, photo, coat, pocket, toilet, bath, chocolate, piano, candy, wheel, wire, belt, dish, sandwich, butter, grass, beef, chip, bug, photograph, necklace, motor, steak, brick, mall, weed

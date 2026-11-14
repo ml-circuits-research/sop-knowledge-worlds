@@ -57,7 +57,7 @@
 @k.attributes.same.november.time k.attributes.same name=november sense=time only=true in=k.time.month by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nozzle.thing k.attributes.same name=nozzle sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nu.place k.attributes.same name=nu sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.nurse.person k.attributes.same name=nurse sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.nurse.person k.attributes.same name=nurse sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nut.food k.attributes.same name=nut sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nut_and_bolt.thing k.attributes.same name="nut and bolt" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.nutcracker.thing k.attributes.same name=nutcracker sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

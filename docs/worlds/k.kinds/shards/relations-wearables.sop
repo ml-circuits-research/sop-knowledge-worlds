@@ -19,5 +19,5 @@
 @k.kinds.relation.k.wearables.wearable.pair k.kinds.relation type=k.wearables.wearable key=pair subject=wearable subject_sense=clothing object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.wearables.wearable.drawing k.kinds.relation type=k.wearables.wearable key=drawing subject=wearable subject_sense=clothing object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.wearables.wearable.face_slot k.kinds.relation type=k.wearables.wearable key=face_slot subject=wearable subject_sense=clothing object=thing object_type=k.faces.slot found=declared object_by=name core.source="hand-core 1"
-@k.kinds.relation.k.wearables.wearable.face k.kinds.relation type=k.wearables.wearable key=face subject=wearable subject_sense=clothing object=thing object_type=k.wearables.wearable object_sense=clothing found=value core.source="hand-core 1"
+@k.kinds.relation.k.wearables.wearable.face k.kinds.relation type=k.wearables.wearable key=face subject=wearable subject_sense=clothing object=thing object_type=k.scenes.thing found=value core.source="hand-core 1"
 @k.kinds.relation.k.wearables.wearable.worn_for k.kinds.relation type=k.wearables.wearable key=worn_for subject=wearable subject_sense=clothing object=word object_type=k.words.sense found=value core.source="hand-core 1"

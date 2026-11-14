@@ -156,9 +156,10 @@ test('Round 9: what another thing is usually on or in, in k.scenes, has an ancho
     facts++;
     if (anchored.has(d)) held++; else without.add(on);
   }
-  // No drawing: pirate ship, stall, ceiling. A drawing that shows no sure place: cot, witch.
+  // No drawing: ceiling. A drawing that shows no sure place: cot, witch, and the shop that stands in for a stall.
   // A road is a region of the picture (k.scenes psys2: a car is on the road), not a drawing with a place to sit.
-  assert.deepEqual([...without].sort(), ['ceiling', 'cot', 'pirate ship', 'road', 'stall', 'witch']);
+  // (The pirate ship is drawn by the ship since the scene things were mapped, reviewer 04:10 item 1.)
+  assert.deepEqual([...without].sort(), ['ceiling', 'cot', 'road', 'stall', 'witch']);
   assert.ok(held >= facts * 0.97, `${held} of ${facts}`);
 });
 

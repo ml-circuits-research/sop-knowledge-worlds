@@ -1,9 +1,10 @@
-# k.scenes/shards/things-b: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 227 things (the drawable things and the animals of k.animals) whose name starts with "b"; labelled by a language model from the names (named=model), a sample checked against the drawings.
+# k.scenes/shards/things-b: the usual place (sky, ground, water, indoors, on another thing) and the relative size (tiny to huge) of 232 things (the drawable things and the animals of k.animals) whose name starts with "b"; labelled by a language model from the names (named=model), a sample checked against the drawings.
 # sources: hand-core 1 (hand-written in this repository: sources/hand-core/place-size.tsv, and sources/hand-core/animals.tsv for the animals without a drawing)
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
 @k.scenes.thing.baboon k.scenes.thing name=baboon place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.baby k.scenes.thing name=baby place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baby_bottle k.scenes.thing name="baby bottle" place=indoors on=table size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baby_chick k.scenes.thing name="baby chick" place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.baby_oil k.scenes.thing name="baby oil" place=indoors size=small named=model core.source="hand-core 1"
@@ -41,6 +42,7 @@
 @k.scenes.thing.barnacle k.scenes.thing name=barnacle place=water size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.barracuda k.scenes.thing name=barracuda place=water size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.barricade k.scenes.thing name=barricade place=ground size=large named=model core.source="hand-core 1"
+@k.scenes.thing.barrier k.scenes.thing name=barrier place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.baseball k.scenes.thing name=baseball place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baseball_base k.scenes.thing name="baseball base" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.baseball_bat k.scenes.thing name="baseball bat" size=small named=model core.source="hand-core 1"
@@ -58,7 +60,9 @@
 @k.scenes.thing.battleship k.scenes.thing name=battleship place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.beach k.scenes.thing name=beach place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.beach_bag k.scenes.thing name="beach bag" place=on_thing on=hand size=small named=model core.source="hand-core 1"
+@k.scenes.thing.beach_ball k.scenes.thing name="beach ball" place=ground size=small named=model core.source="hand-core 1"
 @k.scenes.thing.beach_towel k.scenes.thing name="beach towel" place=ground size=medium named=model core.source="hand-core 1"
+@k.scenes.thing.beach_umbrella k.scenes.thing name="beach umbrella" place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.beach_with_umbrella k.scenes.thing name="beach with umbrella" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.beads k.scenes.thing name=beads place=indoors size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.beanbag k.scenes.thing name=beanbag place=indoors size=medium named=model core.source="hand-core 1"
@@ -206,6 +210,7 @@
 @k.scenes.thing.bug k.scenes.thing name=bug place=ground size=tiny named=model core.source="hand-core 1"
 @k.scenes.thing.buggy k.scenes.thing name=buggy place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.bugle k.scenes.thing name=bugle place=indoors size=small named=model core.source="hand-core 1"
+@k.scenes.thing.builder k.scenes.thing name=builder place=ground size=medium named=model core.source="hand-core 1"
 @k.scenes.thing.building k.scenes.thing name=building place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.building_construction k.scenes.thing name="building construction" place=ground size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.bulb_holder k.scenes.thing name="bulb holder" place=indoors size=tiny named=model core.source="hand-core 1"
