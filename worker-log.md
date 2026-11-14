@@ -5328,3 +5328,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   had no fill (only `k.parts.usual`, 432 animals and simple things, filled trees); `k.parts.whole` has 307 things
   with WordNet's parts (car: 29, accelerator to window). tools/diagrams-core.mjs: 20 fills (was 18), shard 63 wires,
   15,997 bytes, CC0. Test: tests/k.diagrams.test.mjs (7, +1: both fills, the car's parts through the fill).
+
+## 2026-11-15 — second worker: the one build moved to sopworld 0.113.0 (05d2f93; reviewer 08:00, Q69)
+
+- `tools/sopworld/sopworld.mjs` = the library's `docs/sopworld.mjs` at 05d2f93 (release 0.113.0, build
+  7bafaf2c0cdd, sha256 6b9e8ce4...; unchanged at the library's tip 176fefc); VERSION, the validate test, AGENTS.md,
+  README.md, docs/index.html, docs/worlds/README.md, w.lang.en/WORLD.md and the alternations test's comment name it.
+- `npm run build` (125 s): nothing changed but the catalog's sopworld commit and content hash (34 worlds, 1,112
+  shards, 33,312 words, 0 warnings, 0 errors).
+- `npm run test:changed` (the build touches every test that imports it: 79 files one at a time, catalog 8 and
+  validate 5 included): 3,108 tests, 3,102 pass, 0 fail, 6 skipped, 473 s. No test changed behaviour.
+- One behaviour change of the library that no test sees: since 0.107/0.109 a quoted atom and the bare atom are one
+  name in joins and matching; the joins report still compares token for token and says that sopworld does. It
+  changes no number today (0 of the 58 open join values would meet once folded). Recorded as **Q70 [LIB]**, not
+  patched.

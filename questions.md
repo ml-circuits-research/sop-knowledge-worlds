@@ -981,3 +981,17 @@ still read "ship" as the anchor. Meanwhile the CLDR, OpenMoji and Mulberry keywo
 facts (5,326 texts); `tools/objects-lookup.mjs` gives the order (name, word, stand-in, keyword), and in vocab.json a
 keyword's shard comes after the word's other shards, under the kind `k.objects.keyword` in vocab-kinds.json.
 Blocking: no. Meanwhile: the dedicated type.
+
+## Q70 [LIB] (pin 0.113, second worker, 2026-11-15): with the new build, quoted and bare names meet in joins; the joins report still compares token for token
+Question: none to answer now; a record of the behaviour change of the pin 0.97 → 0.113 (05d2f93): should
+`tools/joins-report.mjs` (and `tests/k.objects.names.test.mjs`) fold a quoted atom and the bare atom as the engine
+now does, or keep the stricter token-for-token count as a lint?
+Context: 0.107 (in a join) and 0.109 (in all matching: index, patterns, value comparisons) make `"Rain"` and `Rain`
+one name; strings with spaces stay strings. The report's text still says "`"horse"` and `horse` are two values, as
+sopworld compares them", which is no longer how sopworld compares them. Today it changes no number: of the 58 open
+values of the 190 declared joins, 0 would meet once quoted and bare are folded (scratch count over all shards), and
+the build changed nothing but the catalog's commit and hash. No test changed behaviour: `npm run test:changed`
+(79 files, every file that imports the build) 3,102 pass, 0 fail, 6 skipped. Not patched (coordinator: a behaviour
+change is recorded here, not patched). The names deprecated in 0.111 (`cousins`, `liftTokens`, `calibrate` ...) go
+in 0.114; nothing here calls them (only comments say "the library's cousins").
+Blocking: no.
