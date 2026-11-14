@@ -29,6 +29,8 @@ export const ACTS = [
     ['value', 'value', false, 'a value the new thing has, such as its colour', ['in']],
     ['part', 'thing', false, 'a part the new thing has', ['with']],
     ['material', 'thing', false, 'what it is made from', ['from', 'out of', 'of']],
+    // Q45 (iii): "write a story about a dragon", "make a chart about sales": what the new thing is about
+    ['topic', 'thing', false, 'what the new thing is about (a story about a dragon, a chart about sales)', ['about']],
   ]],
   ['remove', 'take a thing away so that it is no longer there', 'make', [
     ['thing', 'thing', true, 'what to remove', []],

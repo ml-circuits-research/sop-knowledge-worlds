@@ -97,3 +97,12 @@ test('block 07:40 item 4: drop is a verb of remove, reset a verb of change whose
   assert.ok(verb('drop', 'remove'), 'drop: remove');
   assert.equal(verb('reset', 'change')?.attrs.value?.[0], 'default');
 });
+
+test('Q45 (iii): about marks the topic of make ("a story about a dragon"), and w.lang.en says about is a preposition of topic', async () => {
+  const { scanWorlds, fullWorld } = await import('../tools/lib/worlds.mjs');
+  const ws = scanWorlds();
+  const role = fullWorld('k.actions', ws).ofType('k.actions.role').find((r) => r.attrs.act[0] === 'make' && r.attrs.name[0] === 'topic');
+  assert.deepEqual(role?.attrs.marker, ['about']);
+  const about = ws.find((w) => w.id === 'w.lang.en').shards.flatMap((s) => s.text.split('\n')).find((l) => / w\.lang\.en\.prep text=about /.test(l));
+  assert.match(about, / role=topic /);
+});

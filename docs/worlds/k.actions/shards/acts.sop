@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: tools/acts-core.mjs
 
-@k.actions.act.make k.actions.act name=make about="bring a new thing into being" opposite=remove role=kind role=number role=place role=value role=part role=material core.source="hand-core 1"
+@k.actions.act.make k.actions.act name=make about="bring a new thing into being" opposite=remove role=kind role=number role=place role=value role=part role=material role=topic core.source="hand-core 1"
 @k.actions.act.remove k.actions.act name=remove about="take a thing away so that it is no longer there" opposite=make role=thing role=source core.source="hand-core 1"
 @k.actions.act.change k.actions.act name=change about="give a thing another value of one of its attributes, or put another thing in its place" role=thing role=attribute role=value role="old value" role=amount role=replacement core.source="hand-core 1"
 @k.actions.act.place k.actions.act name=place about="put a thing somewhere, or move it to another place" role=thing role=place role=direction role=source role=amount core.source="hand-core 1"
@@ -27,6 +27,7 @@
 @k.actions.role.make.value k.actions.role act=make name=value holds=value about="a value the new thing has, such as its colour" marker=in core.source="hand-core 1"
 @k.actions.role.make.part k.actions.role act=make name=part holds=thing about="a part the new thing has" marker=with core.source="hand-core 1"
 @k.actions.role.make.material k.actions.role act=make name=material holds=thing about="what it is made from" marker=from marker="out of" marker=of core.source="hand-core 1"
+@k.actions.role.make.topic k.actions.role act=make name=topic holds=thing about="what the new thing is about (a story about a dragon, a chart about sales)" marker=about core.source="hand-core 1"
 @k.actions.role.remove.thing k.actions.role act=remove name=thing holds=thing needed=true about="what to remove" core.source="hand-core 1"
 @k.actions.role.remove.source k.actions.role act=remove name=source holds=thing about="what it is removed from" marker=from marker="out of" marker=off core.source="hand-core 1"
 @k.actions.role.change.thing k.actions.role act=change name=thing holds=thing needed=true about="what to change" marker=of core.source="hand-core 1"

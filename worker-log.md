@@ -4068,3 +4068,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   structures, city population/area/elevation (no keys; Natural Earth's populations kept), country population and
   elevation (23 and 7 items), exoplanets. No per-item values imported per block 19:35: 5 of 314 k.animals match.
   A session loads ranges (12.7 kB) and ranges-wikidata (2.1 kB) only when a number's interest is scored.
+- Full run after the push: 2,920 tests, 2,912 pass, 5 skipped; tests/catalog.test.mjs and tests/coverage.test.mjs
+  killed (SIGKILL). The shell of this session now runs in a memory cgroup of about 1.6 GB (dmesg: "Memory cgroup out
+  of memory"); coverage.test.mjs loads the k.objects world twice (1.3 GB each, the same on 0.56 and 0.63: measured)
+  and is killed even alone, on the commit before the move as well (a worktree at 633afae); catalog alone: 8 pass.
+
+## Q45 (iii) (2026-11-14, second worker): "about" marks the topic of make
+
+- `tools/acts-core.mjs`: the act make has a role `topic` (holds a thing, "what the new thing is about") marked by
+  `about` (a story about a dragon, a chart about sales); `k.actions/shards/acts` 56 -> 57 roles. In w.lang.en,
+  `about` was already a preposition with `role=topic`, so the existing join test (every marker of k.actions is a
+  preposition of w.lang.en) now covers it; a test says both.
+- Full run of this commit's tree before a restart: 2,908 tests, 2,898 pass, 5 skipped, 4 files killed by the shared
+  memory limit (catalog, coverage, derived, k.attributes; no assertion failed); rerun after the rebase below.
+- Rebased on k.genres, k.story and four reviewer blocks: catalog 32 worlds, 971 shards, vocab 24,811 words. Serial
+  run (one file at a time): 2,931 tests, 2,922 pass, 5 skipped, 3 files killed by the shared memory limit; alone:
+  derived 4 pass, k.attributes 11 pass, catalog 8 pass (second try). No assertion failed.
+- Rebased on the first worker's k.attributes ranges and w.lang.en templates (4448b9e): catalog 32 worlds, 977 shards,
+  vocab 24,837 words. npm test, one file at a time: 2,970 tests, 2,964 pass, 0 fail.
