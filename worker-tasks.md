@@ -431,3 +431,14 @@ The demo now reads temporal prepositions from `w.lang.en` facts (before, after, 
 - **Q35 → one build:** move every world (k.* and w.*) to the library's current release (0.30.0 at 42b3456) in one commit, rebuild, report what changed; two builds is a trap. The two library defects you saw (`make` accepts a thing without a required attribute; `undo` right after `remove` undoes the step before) are forwarded to the library.
 - **Q38 → rules live in a module, not in a shard:** keep them in the `k.commonsense` schema module now; if the module grows, a separate `k.commonsense.rules` module that imports the fact worlds (so a host can take the facts without the rules). Document the rule "shards hold facts, modules hold rules" in README.
 **Next, in order:** (1) one sopworld build (Q35); (2) order in time for `k.time` (block 02:15); (3) **derived facts visible to tools**: a build step that runs the rules of each module over its facts and writes what they derive into a generated shard (marked `derived=true`, with the rule as source), so JOINS, COVERAGE, ASPECTS and the demo's lookups see them; a test that the generated shard is fresh; (4) the weakest drawings you named (cougar, clam, eel, stocking, cheesecake, buggy, harness): redraw or replace by a better imported one.
+
+## Reviewer 2026-11-14 06:00 — names for the kinds of worlds (owner); README
+
+**Names for the three kinds of worlds (owner asked; reviewer proposal, to be used in every repository and in the library docs):**
+1. **world schema** — what a kind of world is: its kinds of things, attributes, value types, acts, limits, rules and the words for them; no particular things. Reusable; lives in sop-knowledge-worlds as `w.*` (seating plan, timeline, list, and the schemas of the demo tabs once general). In the library: `std.schema`.
+2. **knowledge world** — facts about the world at large (animals, places, colours, English grammar), true for everyone, no session state; lives in sop-knowledge-worlds as `k.*` (and `w.lang.en` is a knowledge world about a language).
+3. **live world** — one running instance of a world schema in a session: the things the user made, their current values, the focus, the history and undo, temporary and particular; it reads knowledge worlds and follows its schema. A tab shows a live world through a **view**.
+Plus **library modules** (`std.*`: acts, fill, focus, relations, turn, know, grammar): mechanisms, not worlds.
+In Romanian (for the owner): schema lumii, lume de cunoaștere, lume vie.
+
+Task (whichever worker finishes its current item first): README and docs/worlds/README.md use these names: this repository holds world schemas (`w.*`) and knowledge worlds (`k.*`, `w.lang.en`), never live worlds; say it in one paragraph with an example of each.
