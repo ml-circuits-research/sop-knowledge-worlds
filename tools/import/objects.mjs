@@ -43,11 +43,11 @@ export const detailByRule = (parts) => parts.map((p, i) => STROKES.has(p.shape)
 
 const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
-// entries: [{ uid (id segment), name, keywords, group (shard key), svg (text) }] in the order wanted.
+// entries: [{ uid (id segment), name, keywords (the source's tags), group (shard key), svg (text) }] in the order wanted.
 // source: { prefix, drawings: 'id version', names: 'id version' (may equal drawings), sources: [header lines], license, script, about }
 export function objectShards(entries, source, { partNames = '', convert = {}, details = false, perShard = 8, maxWires = 1900, maxBytes = 280000 } = {}) {
   const named = readPartNames(partNames);
-  const stats = { objects: 0, parts: 0, points: 0, words: 0, named: 0, detail: 0, shards: 0, noParts: 0 };
+  const stats = { objects: 0, parts: 0, points: 0, keywords: 0, named: 0, detail: 0, shards: 0, noParts: 0 };
   const objects = [];
   for (const e of entries) {
     const parts = svgToParts(e.svg, convert);
@@ -68,8 +68,9 @@ export function objectShards(entries, source, { partNames = '', convert = {}, de
       stats.points += p.points?.length ?? 0;
     });
     stats.parts += parts.length;
+    // The source's tags are search words, not names (Q67 b): a k.objects.keyword fact, never a core.word.
     const words = [...new Set(e.keywords.map((k) => k.trim()).filter((k) => k && k !== e.name))];
-    if (words.length) { lines.push(wire(`${uid}.word`, 'core.word', [...words.map((k) => ['text', k]), ['means', e.name], ['of', 'k.objects.object.name']], source.names)); stats.words++; }
+    if (words.length) { lines.push(wire(`${uid}.keyword`, 'k.objects.keyword', [['of', e.name], ...words.map((k) => ['text', k])], source.names)); stats.keywords++; }
     objects.push({ ...e, lines, bytes: lines.reduce((n, l) => n + Buffer.byteLength(l) + 1, 0) });
     stats.objects++;
   }

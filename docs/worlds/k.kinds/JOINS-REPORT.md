@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **190** in 30 worlds; distinct values 6352, meeting a target 6294 (99.1 %), open 58
+- declared joins: **191** in 30 worlds; distinct values 7861, meeting a target 7803 (99.3 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **114**; left undeclared on purpose: 6
 
@@ -130,6 +130,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.music | `k.music.scale.key` | `k.music.key` | name | 30 | 30 |  |
 | k.music | `k.music.scale.note` | `k.music.note` | name | 24 | 24 |  |
 | k.music | `k.music.scale.tonic` | `k.music.note` | name | 18 | 18 |  |
+| k.objects | `k.objects.keyword.of` | `k.objects.object` | name | 1509 | 1509 |  |
 | k.objects | `k.objects.skeleton.of` | `k.objects.object` | name | 0 | 0 |  |
 | k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 164 | 164 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |

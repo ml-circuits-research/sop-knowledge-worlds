@@ -179,7 +179,7 @@
 @k.objects.mb2599.p16.1 k.objects.point part=$k.objects.mb2599.p16 n=1 x=60.7 y=39 core.source="mulberry fa94a93"
 @k.objects.mb2599.p16.2 k.objects.point part=$k.objects.mb2599.p16 n=2 x=57.2 y=50.9 core.source="mulberry fa94a93"
 @k.objects.mb2599.p16.3 k.objects.point part=$k.objects.mb2599.p16 n=3 x=50 y=71.2 core.source="mulberry fa94a93"
-@k.objects.mb2599.word core.word text=clinic text=health text=hospital text=medical means=sling of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2599.keyword k.objects.keyword of=sling text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"
 
 # tablet blister pack
 @k.objects.mb2767 k.objects.object name="tablet blister pack" core.source="mulberry fa94a93"
@@ -345,7 +345,7 @@
 @k.objects.mb2767.p16.4 k.objects.point part=$k.objects.mb2767.p16 n=4 x=71.7 y=7.8 core.source="mulberry fa94a93"
 @k.objects.mb2767.p16.5 k.objects.point part=$k.objects.mb2767.p16 n=5 x=89.1 y=6.2 core.source="mulberry fa94a93"
 @k.objects.mb2767.p16.6 k.objects.point part=$k.objects.mb2767.p16 n=6 x=94.5 y=8.6 core.source="mulberry fa94a93"
-@k.objects.mb2767.word core.word text=clinic text=health text=hospital text=medical means="tablet blister pack" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2767.keyword k.objects.keyword of="tablet blister pack" text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"
 
 # tablets
 @k.objects.mb2768 k.objects.object name=tablets core.source="mulberry fa94a93"
@@ -525,7 +525,7 @@
 @k.objects.mb2768.p16.10 k.objects.point part=$k.objects.mb2768.p16 n=10 x=86.6 y=21 core.source="mulberry fa94a93"
 @k.objects.mb2768.p16.11 k.objects.point part=$k.objects.mb2768.p16 n=11 x=89.3 y=20.5 core.source="mulberry fa94a93"
 @k.objects.mb2768.p16.12 k.objects.point part=$k.objects.mb2768.p16 n=12 x=89.3 y=17.3 core.source="mulberry fa94a93"
-@k.objects.mb2768.word core.word text=clinic text=health text=hospital text=medical means=tablets of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2768.keyword k.objects.keyword of=tablets text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"
 
 # walking frame
 @k.objects.mb2999 k.objects.object name="walking frame" core.source="mulberry fa94a93"
@@ -649,7 +649,7 @@
 @k.objects.mb2999.p16.4 k.objects.point part=$k.objects.mb2999.p16 n=4 x=76.2 y=29.3 core.source="mulberry fa94a93"
 @k.objects.mb2999.p16.5 k.objects.point part=$k.objects.mb2999.p16 n=5 x=77.2 y=30.1 core.source="mulberry fa94a93"
 @k.objects.mb2999.p16.6 k.objects.point part=$k.objects.mb2999.p16 n=6 x=77.5 y=31.6 core.source="mulberry fa94a93"
-@k.objects.mb2999.word core.word text=clinic text=health text=hospital text=medical means="walking frame" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2999.keyword k.objects.keyword of="walking frame" text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"
 
 # walking stick
 @k.objects.mb3000 k.objects.object name="walking stick" core.source="mulberry fa94a93"
@@ -775,7 +775,7 @@
 @k.objects.mb3000.p16.4 k.objects.point part=$k.objects.mb3000.p16 n=4 x=74.2 y=30.2 core.source="mulberry fa94a93"
 @k.objects.mb3000.p16.5 k.objects.point part=$k.objects.mb3000.p16 n=5 x=75.2 y=31 core.source="mulberry fa94a93"
 @k.objects.mb3000.p16.6 k.objects.point part=$k.objects.mb3000.p16 n=6 x=75.5 y=32.5 core.source="mulberry fa94a93"
-@k.objects.mb3000.word core.word text=clinic text=health text=hospital text=medical means="walking stick" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3000.keyword k.objects.keyword of="walking stick" text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"
 
 # xray
 @k.objects.mb3101 k.objects.object name=xray core.source="mulberry fa94a93"
@@ -976,4 +976,4 @@
 @k.objects.mb3101.p16.7 k.objects.point part=$k.objects.mb3101.p16 n=7 x=96.3 y=9.9 core.source="mulberry fa94a93"
 @k.objects.mb3101.p16.8 k.objects.point part=$k.objects.mb3101.p16 n=8 x=76 y=12.1 core.source="mulberry fa94a93"
 @k.objects.mb3101.p16.9 k.objects.point part=$k.objects.mb3101.p16 n=9 x=72 y=9.2 core.source="mulberry fa94a93"
-@k.objects.mb3101.word core.word text=clinic text=health text=hospital text=medical means=xray of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3101.keyword k.objects.keyword of=xray text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"

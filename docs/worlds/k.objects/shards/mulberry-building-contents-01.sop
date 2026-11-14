@@ -134,7 +134,7 @@
 @k.objects.mb129.p16.5 k.objects.point part=$k.objects.mb129.p16 n=5 x=72.5 y=28.5 core.source="mulberry fa94a93"
 @k.objects.mb129.p16.6 k.objects.point part=$k.objects.mb129.p16 n=6 x=70.3 y=28.5 core.source="mulberry fa94a93"
 @k.objects.mb129.p16.7 k.objects.point part=$k.objects.mb129.p16 n=7 x=70.3 y=24.8 core.source="mulberry fa94a93"
-@k.objects.mb129.word core.word text=grooming means=bath of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb129.keyword k.objects.keyword of=bath text=grooming core.source="mulberry fa94a93"
 
 # bath mat
 @k.objects.mb131 k.objects.object name="bath mat" core.source="mulberry fa94a93"
@@ -260,7 +260,7 @@
 @k.objects.mb131.p16.19 k.objects.point part=$k.objects.mb131.p16 n=19 x=81.7 y=35 core.source="mulberry fa94a93"
 @k.objects.mb131.p16.20 k.objects.point part=$k.objects.mb131.p16 n=20 x=83.2 y=38.3 core.source="mulberry fa94a93"
 @k.objects.mb131.p16.21 k.objects.point part=$k.objects.mb131.p16 n=21 x=83.3 y=60.2 core.source="mulberry fa94a93"
-@k.objects.mb131.word core.word text=home text=house means="bath mat" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb131.keyword k.objects.keyword of="bath mat" text=home text=house core.source="mulberry fa94a93"
 
 # bin bag
 @k.objects.mb175 k.objects.object name="bin bag" core.source="mulberry fa94a93"
@@ -458,7 +458,7 @@
 @k.objects.mb175.p16.3 k.objects.point part=$k.objects.mb175.p16 n=3 x=33.2 y=27.9 core.source="mulberry fa94a93"
 @k.objects.mb175.p16.4 k.objects.point part=$k.objects.mb175.p16 n=4 x=30 y=28.7 core.source="mulberry fa94a93"
 @k.objects.mb175.p16.5 k.objects.point part=$k.objects.mb175.p16 n=5 x=26.2 y=32 core.source="mulberry fa94a93"
-@k.objects.mb175.word core.word text=home text=house means="bin bag" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb175.keyword k.objects.keyword of="bin bag" text=home text=house core.source="mulberry fa94a93"
 
 # bin bags
 @k.objects.mb176 k.objects.object name="bin bags" core.source="mulberry fa94a93"
@@ -915,7 +915,7 @@
 @k.objects.mb201.p16 k.objects.part of=blinds name=part16 kind=detail named=no shape=line x=73.8 y=18.8 w=0 h=67 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb201.p16.1 k.objects.point part=$k.objects.mb201.p16 n=1 x=73.8 y=18.8 core.source="mulberry fa94a93"
 @k.objects.mb201.p16.2 k.objects.point part=$k.objects.mb201.p16 n=2 x=73.8 y=85.8 core.source="mulberry fa94a93"
-@k.objects.mb201.word core.word text=home text=house means=blinds of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb201.keyword k.objects.keyword of=blinds text=home text=house core.source="mulberry fa94a93"
 
 # book end
 @k.objects.mb218 k.objects.object name="book end" core.source="mulberry fa94a93"

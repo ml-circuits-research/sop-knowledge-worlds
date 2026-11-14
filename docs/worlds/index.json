@@ -1,5 +1,5 @@
 {
- "version": "dc61265b4451",
+ "version": "4c900a1b2bd2",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4497,8 +4497,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1064,
-     "bytes": 204755,
+     "wires": 1066,
+     "bytes": 205135,
      "keys": [
       "a",
       "about",
@@ -4793,6 +4793,7 @@
       "k.music.note",
       "k.music.scale",
       "k.named.labelled",
+      "k.objects.keyword",
       "k.objects.object",
       "k.objects.part",
       "k.objects.point",
@@ -8806,7 +8807,7 @@
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
      "wires": 314,
-     "bytes": 63780,
+     "bytes": 63802,
      "keys": [
       "animal",
       "body in space",
@@ -29525,8 +29526,8 @@
     {
      "id": "k.kinds/shards/relations-objects",
      "path": "k.kinds/shards/relations-objects.sop",
-     "wires": 35,
-     "bytes": 6337,
+     "wires": 37,
+     "bytes": 6719,
      "keys": [
       "above",
       "below",
@@ -29536,6 +29537,7 @@
       "drawings",
       "h",
       "inside",
+      "k.objects.keyword",
       "k.objects.part",
       "k.objects.point",
       "k.objects.skeleton",
@@ -29554,6 +29556,7 @@
       "right_of",
       "shape",
       "spread",
+      "text",
       "w",
       "x",
       "y",
@@ -35143,9 +35146,10 @@
   },
   {
    "id": "k.objects",
-   "version": "6",
+   "version": "7",
    "schema": "k.objects/schema.sop",
    "exports": [
+    "k.objects.keyword",
     "k.objects.object",
     "k.objects.part",
     "k.objects.point",
@@ -36069,7 +36073,7 @@
      "id": "k.objects/shards/mulberry-animal-birds-01",
      "path": "k.objects/shards/mulberry-animal-birds-01.sop",
      "wires": 1455,
-     "bytes": 173755,
+     "bytes": 173619,
      "keys": [
       "beak",
       "body",
@@ -36101,7 +36105,7 @@
      "id": "k.objects/shards/mulberry-animal-birds-02",
      "path": "k.objects/shards/mulberry-animal-birds-02.sop",
      "wires": 1004,
-     "bytes": 120583,
+     "bytes": 120498,
      "keys": [
       "beak",
       "belly",
@@ -36126,7 +36130,7 @@
      "id": "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
      "path": "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01.sop",
      "wires": 555,
-     "bytes": 66568,
+     "bytes": 66517,
      "keys": [
       "head",
       "mussel",
@@ -36144,7 +36148,7 @@
      "id": "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
      "path": "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01.sop",
      "wires": 974,
-     "bytes": 117759,
+     "bytes": 117674,
      "keys": [
       "body",
       "fin",
@@ -36169,7 +36173,7 @@
      "id": "k.objects/shards/mulberry-animal-mammal-01",
      "path": "k.objects/shards/mulberry-animal-mammal-01.sop",
      "wires": 1576,
-     "bytes": 186680,
+     "bytes": 186544,
      "keys": [
       "ant eater",
       "antelope",
@@ -36198,7 +36202,7 @@
      "id": "k.objects/shards/mulberry-animal-mammal-02",
      "path": "k.objects/shards/mulberry-animal-mammal-02.sop",
      "wires": 1303,
-     "bytes": 156833,
+     "bytes": 156714,
      "keys": [
       "belly",
       "body",
@@ -36224,7 +36228,7 @@
      "id": "k.objects/shards/mulberry-animal-other-invertebrates-01",
      "path": "k.objects/shards/mulberry-animal-other-invertebrates-01.sop",
      "wires": 346,
-     "bytes": 42104,
+     "bytes": 42070,
      "keys": [
       "earthworm",
       "starfish"
@@ -36239,7 +36243,7 @@
      "id": "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
      "path": "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01.sop",
      "wires": 770,
-     "bytes": 92515,
+     "bytes": 92447,
      "keys": [
       "body",
       "chameleon",
@@ -36260,7 +36264,7 @@
      "id": "k.objects/shards/mulberry-animal-spiders-and-insects-01",
      "path": "k.objects/shards/mulberry-animal-spiders-and-insects-01.sop",
      "wires": 1366,
-     "bytes": 163291,
+     "bytes": 163155,
      "keys": [
       "bee bumble",
       "bee honey",
@@ -36290,7 +36294,7 @@
      "id": "k.objects/shards/mulberry-animal-spiders-and-insects-02",
      "path": "k.objects/shards/mulberry-animal-spiders-and-insects-02.sop",
      "wires": 348,
-     "bytes": 42223,
+     "bytes": 42189,
      "keys": [
       "body",
       "head",
@@ -36342,7 +36346,7 @@
      "id": "k.objects/shards/mulberry-building-contents-01",
      "path": "k.objects/shards/mulberry-building-contents-01.sop",
      "wires": 1096,
-     "bytes": 131971,
+     "bytes": 131903,
      "keys": [
       "bag",
       "bath",
@@ -36372,7 +36376,7 @@
      "id": "k.objects/shards/mulberry-building-contents-02",
      "path": "k.objects/shards/mulberry-building-contents-02.sop",
      "wires": 1074,
-     "bytes": 127917,
+     "bytes": 127815,
      "keys": [
       "body",
       "bottle",
@@ -36400,7 +36404,7 @@
      "id": "k.objects/shards/mulberry-building-contents-03",
      "path": "k.objects/shards/mulberry-building-contents-03.sop",
      "wires": 860,
-     "bytes": 106056,
+     "bytes": 105971,
      "keys": [
       "board",
       "bulb",
@@ -36431,7 +36435,7 @@
      "id": "k.objects/shards/mulberry-building-contents-04",
      "path": "k.objects/shards/mulberry-building-contents-04.sop",
      "wires": 1085,
-     "bytes": 131964,
+     "bytes": 131879,
      "keys": [
       "base",
       "body",
@@ -36457,7 +36461,7 @@
      "id": "k.objects/shards/mulberry-building-contents-05",
      "path": "k.objects/shards/mulberry-building-contents-05.sop",
      "wires": 366,
-     "bytes": 44525,
+     "bytes": 44491,
      "keys": [
       "bin",
       "lid",
@@ -36477,7 +36481,7 @@
      "id": "k.objects/shards/mulberry-building-equipment-and-devices-01",
      "path": "k.objects/shards/mulberry-building-equipment-and-devices-01.sop",
      "wires": 591,
-     "bytes": 71449,
+     "bytes": 71381,
      "keys": [
       "blackboard",
       "board",
@@ -36495,7 +36499,7 @@
      "id": "k.objects/shards/mulberry-building-furniture-01",
      "path": "k.objects/shards/mulberry-building-furniture-01.sop",
      "wires": 895,
-     "bytes": 108741,
+     "bytes": 108724,
      "keys": [
       "arm chair",
       "back",
@@ -36527,7 +36531,7 @@
      "id": "k.objects/shards/mulberry-building-furniture-02",
      "path": "k.objects/shards/mulberry-building-furniture-02.sop",
      "wires": 805,
-     "bytes": 97657,
+     "bytes": 97589,
      "keys": [
       "back",
       "bottom_drawer",
@@ -36559,7 +36563,7 @@
      "id": "k.objects/shards/mulberry-building-furniture-03",
      "path": "k.objects/shards/mulberry-building-furniture-03.sop",
      "wires": 732,
-     "bytes": 91015,
+     "bytes": 90930,
      "keys": [
       "back",
       "dining table",
@@ -36587,7 +36591,7 @@
      "id": "k.objects/shards/mulberry-building-furniture-04",
      "path": "k.objects/shards/mulberry-building-furniture-04.sop",
      "wires": 690,
-     "bytes": 86613,
+     "bytes": 86545,
      "keys": [
       "base",
       "headboard",
@@ -36635,7 +36639,7 @@
      "id": "k.objects/shards/mulberry-building-garden-and-farm-01",
      "path": "k.objects/shards/mulberry-building-garden-and-farm-01.sop",
      "wires": 987,
-     "bytes": 118065,
+     "bytes": 117963,
      "keys": [
       "back garden",
       "barbeque",
@@ -36659,7 +36663,7 @@
      "id": "k.objects/shards/mulberry-building-public-01",
      "path": "k.objects/shards/mulberry-building-public-01.sop",
      "wires": 679,
-     "bytes": 82650,
+     "bytes": 82582,
      "keys": [
       "cistern",
       "disabled toilet",
@@ -36698,7 +36702,7 @@
      "id": "k.objects/shards/mulberry-building-shop-01",
      "path": "k.objects/shards/mulberry-building-shop-01.sop",
      "wires": 219,
-     "bytes": 28225,
+     "bytes": 28208,
      "keys": [
       "closed shop",
       "door",
@@ -36717,7 +36721,7 @@
      "id": "k.objects/shards/mulberry-building-structure-01",
      "path": "k.objects/shards/mulberry-building-structure-01.sop",
      "wires": 813,
-     "bytes": 100055,
+     "bytes": 99953,
      "keys": [
       "bottom_left_panel",
       "bottom_right_panel",
@@ -36751,7 +36755,7 @@
      "id": "k.objects/shards/mulberry-celebration-item-01",
      "path": "k.objects/shards/mulberry-celebration-item-01.sop",
      "wires": 1353,
-     "bytes": 162472,
+     "bytes": 162336,
      "keys": [
       "ball",
       "bell",
@@ -36784,7 +36788,7 @@
      "id": "k.objects/shards/mulberry-celebration-item-02",
      "path": "k.objects/shards/mulberry-celebration-item-02.sop",
      "wires": 1184,
-     "bytes": 142395,
+     "bytes": 142259,
      "keys": [
       "birthday card",
       "body",
@@ -36817,7 +36821,7 @@
      "id": "k.objects/shards/mulberry-celebration-item-03",
      "path": "k.objects/shards/mulberry-celebration-item-03.sop",
      "wires": 1486,
-     "bytes": 178552,
+     "bytes": 178416,
      "keys": [
       "bobble",
       "body",
@@ -36851,7 +36855,7 @@
      "id": "k.objects/shards/mulberry-celebration-item-04",
      "path": "k.objects/shards/mulberry-celebration-item-04.sop",
      "wires": 905,
-     "bytes": 109198,
+     "bytes": 109096,
      "keys": [
       "brim",
       "cone",
@@ -36879,7 +36883,7 @@
      "id": "k.objects/shards/mulberry-clothes-accessories-01",
      "path": "k.objects/shards/mulberry-clothes-accessories-01.sop",
      "wires": 1274,
-     "bytes": 151558,
+     "bytes": 151456,
      "keys": [
       "bag",
       "beach bag",
@@ -36907,7 +36911,7 @@
      "id": "k.objects/shards/mulberry-clothes-accessories-02",
      "path": "k.objects/shards/mulberry-clothes-accessories-02.sop",
      "wires": 422,
-     "bytes": 51396,
+     "bytes": 51345,
      "keys": [
       "cover",
       "flap",
@@ -36926,7 +36930,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-01",
      "path": "k.objects/shards/mulberry-clothes-general-01.sop",
      "wires": 1190,
-     "bytes": 140580,
+     "bytes": 140444,
      "keys": [
       "belt",
       "bib",
@@ -36957,7 +36961,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-02",
      "path": "k.objects/shards/mulberry-clothes-general-02.sop",
      "wires": 1241,
-     "bytes": 147994,
+     "bytes": 147858,
      "keys": [
       "brim",
       "cap",
@@ -36985,7 +36989,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-03",
      "path": "k.objects/shards/mulberry-clothes-general-03.sop",
      "wires": 1175,
-     "bytes": 143385,
+     "bytes": 143266,
      "keys": [
       "body",
       "collar",
@@ -37015,7 +37019,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-04",
      "path": "k.objects/shards/mulberry-clothes-general-04.sop",
      "wires": 828,
-     "bytes": 101871,
+     "bytes": 101752,
      "keys": [
       "body",
       "brim",
@@ -37045,7 +37049,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-05",
      "path": "k.objects/shards/mulberry-clothes-general-05.sop",
      "wires": 1118,
-     "bytes": 136043,
+     "bytes": 135907,
      "keys": [
       "body",
       "left_cuff",
@@ -37076,7 +37080,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-06",
      "path": "k.objects/shards/mulberry-clothes-general-06.sop",
      "wires": 1070,
-     "bytes": 129974,
+     "bytes": 129838,
      "keys": [
       "body",
       "collar",
@@ -37107,7 +37111,7 @@
      "id": "k.objects/shards/mulberry-clothes-general-07",
      "path": "k.objects/shards/mulberry-clothes-general-07.sop",
      "wires": 569,
-     "bytes": 69133,
+     "bytes": 69065,
      "keys": [
       "bottom_button",
       "left_front",
@@ -37131,7 +37135,7 @@
      "id": "k.objects/shards/mulberry-clothes-jewellery-01",
      "path": "k.objects/shards/mulberry-clothes-jewellery-01.sop",
      "wires": 527,
-     "bytes": 63025,
+     "bytes": 62974,
      "keys": [
       "brooch",
       "earrings",
@@ -37150,7 +37154,7 @@
      "id": "k.objects/shards/mulberry-clothes-sport-01",
      "path": "k.objects/shards/mulberry-clothes-sport-01.sop",
      "wires": 1050,
-     "bytes": 126713,
+     "bytes": 126577,
      "keys": [
       "button",
       "cap",
@@ -37184,7 +37188,7 @@
      "id": "k.objects/shards/mulberry-clothes-sport-02",
      "path": "k.objects/shards/mulberry-clothes-sport-02.sop",
      "wires": 120,
-     "bytes": 15103,
+     "bytes": 15086,
      "keys": [
       "top",
       "tracksuit"
@@ -37199,7 +37203,7 @@
      "id": "k.objects/shards/mulberry-drink-type-01",
      "path": "k.objects/shards/mulberry-drink-type-01.sop",
      "wires": 1407,
-     "bytes": 166575,
+     "bytes": 166456,
      "keys": [
       "apple",
       "apple juice",
@@ -37229,7 +37233,7 @@
      "id": "k.objects/shards/mulberry-drink-type-02",
      "path": "k.objects/shards/mulberry-drink-type-02.sop",
      "wires": 1521,
-     "bytes": 183296,
+     "bytes": 183160,
      "keys": [
       "base",
       "bottle",
@@ -37260,7 +37264,7 @@
      "id": "k.objects/shards/mulberry-drink-type-03",
      "path": "k.objects/shards/mulberry-drink-type-03.sop",
      "wires": 757,
-     "bytes": 91153,
+     "bytes": 91102,
      "keys": [
       "cup",
       "jar",
@@ -37286,7 +37290,7 @@
      "id": "k.objects/shards/mulberry-electrical-computer-01",
      "path": "k.objects/shards/mulberry-electrical-computer-01.sop",
      "wires": 1063,
-     "bytes": 128228,
+     "bytes": 128211,
      "keys": [
       "body",
       "cap",
@@ -37313,7 +37317,7 @@
      "id": "k.objects/shards/mulberry-electrical-computer-02",
      "path": "k.objects/shards/mulberry-electrical-computer-02.sop",
      "wires": 218,
-     "bytes": 26505,
+     "bytes": 26488,
      "keys": [
       "base",
       "lens",
@@ -37329,7 +37333,7 @@
      "id": "k.objects/shards/mulberry-electrical-general-01",
      "path": "k.objects/shards/mulberry-electrical-general-01.sop",
      "wires": 1242,
-     "bytes": 149693,
+     "bytes": 149659,
      "keys": [
       "bulb",
       "bulb holder",
@@ -37355,7 +37359,7 @@
      "id": "k.objects/shards/mulberry-electrical-general-02",
      "path": "k.objects/shards/mulberry-electrical-general-02.sop",
      "wires": 610,
-     "bytes": 74508,
+     "bytes": 74491,
      "keys": [
       "mains socket",
       "plug",
@@ -37374,7 +37378,7 @@
      "id": "k.objects/shards/mulberry-electrical-media-01",
      "path": "k.objects/shards/mulberry-electrical-media-01.sop",
      "wires": 1437,
-     "bytes": 171844,
+     "bytes": 171793,
      "keys": [
       "camera compact",
       "camera slr",
@@ -37400,7 +37404,7 @@
      "id": "k.objects/shards/mulberry-electrical-media-02",
      "path": "k.objects/shards/mulberry-electrical-media-02.sop",
      "wires": 1173,
-     "bytes": 141654,
+     "bytes": 141552,
      "keys": [
       "blue_button",
       "camera",
@@ -37428,7 +37432,7 @@
      "id": "k.objects/shards/mulberry-electrical-media-03",
      "path": "k.objects/shards/mulberry-electrical-media-03.sop",
      "wires": 318,
-     "bytes": 38830,
+     "bytes": 38796,
      "keys": [
       "label",
       "video tape",
@@ -37444,7 +37448,7 @@
      "id": "k.objects/shards/mulberry-electrical-phone-01",
      "path": "k.objects/shards/mulberry-electrical-phone-01.sop",
      "wires": 1183,
-     "bytes": 144752,
+     "bytes": 144718,
      "keys": [
       "aerial",
       "body",
@@ -37470,7 +37474,7 @@
      "id": "k.objects/shards/mulberry-electrical-tv-01",
      "path": "k.objects/shards/mulberry-electrical-tv-01.sop",
      "wires": 487,
-     "bytes": 58338,
+     "bytes": 58321,
      "keys": [
       "aerial indoor",
       "base",
@@ -37488,7 +37492,7 @@
      "id": "k.objects/shards/mulberry-food-breads-and-baking-01",
      "path": "k.objects/shards/mulberry-food-breads-and-baking-01.sop",
      "wires": 1449,
-     "bytes": 171272,
+     "bytes": 171187,
      "keys": [
       "baking powder",
       "bap",
@@ -37517,7 +37521,7 @@
      "id": "k.objects/shards/mulberry-food-breads-and-baking-02",
      "path": "k.objects/shards/mulberry-food-breads-and-baking-02.sop",
      "wires": 1511,
-     "bytes": 179452,
+     "bytes": 179435,
      "keys": [
       "bread roll filled",
       "bread roll granary",
@@ -37540,7 +37544,7 @@
      "id": "k.objects/shards/mulberry-food-breads-and-baking-03",
      "path": "k.objects/shards/mulberry-food-breads-and-baking-03.sop",
      "wires": 1515,
-     "bytes": 179755,
+     "bytes": 179738,
      "keys": [
       "bowl",
       "cake mix",
@@ -37564,7 +37568,7 @@
      "id": "k.objects/shards/mulberry-food-breads-and-baking-04",
      "path": "k.objects/shards/mulberry-food-breads-and-baking-04.sop",
      "wires": 1503,
-     "bytes": 180214,
+     "bytes": 180146,
      "keys": [
       "chapatti",
       "chocolate log",
@@ -37587,7 +37591,7 @@
      "id": "k.objects/shards/mulberry-food-breads-and-baking-05",
      "path": "k.objects/shards/mulberry-food-breads-and-baking-05.sop",
      "wires": 1320,
-     "bytes": 157827,
+     "bytes": 157742,
      "keys": [
       "bowl",
       "case",
@@ -37613,7 +37617,7 @@
      "id": "k.objects/shards/mulberry-food-dairy-01",
      "path": "k.objects/shards/mulberry-food-dairy-01.sop",
      "wires": 1352,
-     "bytes": 161969,
+     "bytes": 161935,
      "keys": [
       "back_slice",
       "cheese",
@@ -37641,7 +37645,7 @@
      "id": "k.objects/shards/mulberry-food-dairy-02",
      "path": "k.objects/shards/mulberry-food-dairy-02.sop",
      "wires": 1116,
-     "bytes": 134169,
+     "bytes": 134067,
      "keys": [
       "blade",
       "bottle",
@@ -37668,7 +37672,7 @@
      "id": "k.objects/shards/mulberry-food-eggs-01",
      "path": "k.objects/shards/mulberry-food-eggs-01.sop",
      "wires": 1286,
-     "bytes": 153228,
+     "bytes": 153143,
      "keys": [
       "egg",
       "egg boiled",
@@ -37695,7 +37699,7 @@
      "id": "k.objects/shards/mulberry-food-fish-and-seafood-01",
      "path": "k.objects/shards/mulberry-food-fish-and-seafood-01.sop",
      "wires": 196,
-     "bytes": 23840,
+     "bytes": 23823,
      "keys": [
       "fish",
       "tuna"
@@ -37710,7 +37714,7 @@
      "id": "k.objects/shards/mulberry-food-fruit-01",
      "path": "k.objects/shards/mulberry-food-fruit-01.sop",
      "wires": 1272,
-     "bytes": 150648,
+     "bytes": 150631,
      "keys": [
       "banana bunch",
       "berry",
@@ -37734,7 +37738,7 @@
      "id": "k.objects/shards/mulberry-food-fruit-02",
      "path": "k.objects/shards/mulberry-food-fruit-02.sop",
      "wires": 1377,
-     "bytes": 165805,
+     "bytes": 165737,
      "keys": [
       "berry",
       "fig",
@@ -37785,7 +37789,7 @@
      "id": "k.objects/shards/mulberry-food-ingredients-01",
      "path": "k.objects/shards/mulberry-food-ingredients-01.sop",
      "wires": 1543,
-     "bytes": 184860,
+     "bytes": 184843,
      "keys": [
       "apple",
       "bowl",
@@ -37815,7 +37819,7 @@
      "id": "k.objects/shards/mulberry-food-ingredients-02",
      "path": "k.objects/shards/mulberry-food-ingredients-02.sop",
      "wires": 1081,
-     "bytes": 131033,
+     "bytes": 130999,
      "keys": [
       "bottle",
       "bowl",
@@ -37841,7 +37845,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-01",
      "path": "k.objects/shards/mulberry-food-kitchen-items-01.sop",
      "wires": 1238,
-     "bytes": 147342,
+     "bytes": 147223,
      "keys": [
       "baking tray",
       "base",
@@ -37872,7 +37876,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-02",
      "path": "k.objects/shards/mulberry-food-kitchen-items-02.sop",
      "wires": 1050,
-     "bytes": 125508,
+     "bytes": 125389,
      "keys": [
       "base",
       "blade",
@@ -37898,7 +37902,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-03",
      "path": "k.objects/shards/mulberry-food-kitchen-items-03.sop",
      "wires": 1223,
-     "bytes": 146257,
+     "bytes": 146138,
      "keys": [
       "cloth",
       "cup",
@@ -37923,7 +37927,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-04",
      "path": "k.objects/shards/mulberry-food-kitchen-items-04.sop",
      "wires": 996,
-     "bytes": 120532,
+     "bytes": 120413,
      "keys": [
       "boat",
       "bottle",
@@ -37953,7 +37957,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-05",
      "path": "k.objects/shards/mulberry-food-kitchen-items-05.sop",
      "wires": 1137,
-     "bytes": 137634,
+     "bytes": 137498,
      "keys": [
       "blade",
       "body",
@@ -37985,7 +37989,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-06",
      "path": "k.objects/shards/mulberry-food-kitchen-items-06.sop",
      "wires": 1144,
-     "bytes": 137524,
+     "bytes": 137388,
      "keys": [
       "blade",
       "fork",
@@ -38016,7 +38020,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-07",
      "path": "k.objects/shards/mulberry-food-kitchen-items-07.sop",
      "wires": 1178,
-     "bytes": 141469,
+     "bytes": 141350,
      "keys": [
       "bottle",
       "cap",
@@ -38042,7 +38046,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-08",
      "path": "k.objects/shards/mulberry-food-kitchen-items-08.sop",
      "wires": 956,
-     "bytes": 116474,
+     "bytes": 116355,
      "keys": [
       "base",
       "bowl",
@@ -38070,7 +38074,7 @@
      "id": "k.objects/shards/mulberry-food-kitchen-items-09",
      "path": "k.objects/shards/mulberry-food-kitchen-items-09.sop",
      "wires": 419,
-     "bytes": 51199,
+     "bytes": 51131,
      "keys": [
       "bowl",
       "handle",
@@ -38091,7 +38095,7 @@
      "id": "k.objects/shards/mulberry-food-meals-and-snacks-01",
      "path": "k.objects/shards/mulberry-food-meals-and-snacks-01.sop",
      "wires": 1381,
-     "bytes": 164991,
+     "bytes": 164940,
      "keys": [
       "beans on toast",
       "bowl",
@@ -38116,7 +38120,7 @@
      "id": "k.objects/shards/mulberry-food-meals-and-snacks-02",
      "path": "k.objects/shards/mulberry-food-meals-and-snacks-02.sop",
      "wires": 1351,
-     "bytes": 164298,
+     "bytes": 164281,
      "keys": [
       "bottom_bun",
       "dinner cold",
@@ -38198,7 +38202,7 @@
      "id": "k.objects/shards/mulberry-food-meals-and-snacks-05",
      "path": "k.objects/shards/mulberry-food-meals-and-snacks-05.sop",
      "wires": 1491,
-     "bytes": 180604,
+     "bytes": 180587,
      "keys": [
       "carrot",
       "left_sausage",
@@ -38298,7 +38302,7 @@
      "id": "k.objects/shards/mulberry-food-meat-01",
      "path": "k.objects/shards/mulberry-food-meat-01.sop",
      "wires": 1617,
-     "bytes": 193518,
+     "bytes": 193450,
      "keys": [
       "beef",
       "corned beef",
@@ -38322,7 +38326,7 @@
      "id": "k.objects/shards/mulberry-food-meat-02",
      "path": "k.objects/shards/mulberry-food-meat-02.sop",
      "wires": 731,
-     "bytes": 87308,
+     "bytes": 87291,
      "keys": [
       "bottom_sausage",
       "salami sausage",
@@ -38342,7 +38346,7 @@
      "id": "k.objects/shards/mulberry-food-nuts-01",
      "path": "k.objects/shards/mulberry-food-nuts-01.sop",
      "wires": 1349,
-     "bytes": 158453,
+     "bytes": 158419,
      "keys": [
       "almond",
       "brazil nut",
@@ -38383,7 +38387,7 @@
      "id": "k.objects/shards/mulberry-food-pastas-and-rice-01",
      "path": "k.objects/shards/mulberry-food-pastas-and-rice-01.sop",
      "wires": 1209,
-     "bytes": 145287,
+     "bytes": 145236,
      "keys": [
       "bowl",
       "noodles",
@@ -38403,7 +38407,7 @@
      "id": "k.objects/shards/mulberry-food-poultry-01",
      "path": "k.objects/shards/mulberry-food-poultry-01.sop",
      "wires": 1366,
-     "bytes": 162267,
+     "bytes": 162165,
      "keys": [
       "body",
       "bone",
@@ -38430,7 +38434,7 @@
      "id": "k.objects/shards/mulberry-food-sweets-and-desserts-01",
      "path": "k.objects/shards/mulberry-food-sweets-and-desserts-01.sop",
      "wires": 1227,
-     "bytes": 145908,
+     "bytes": 145840,
      "keys": [
       "candy floss",
       "candy hearts",
@@ -38460,7 +38464,7 @@
      "id": "k.objects/shards/mulberry-food-sweets-and-desserts-02",
      "path": "k.objects/shards/mulberry-food-sweets-and-desserts-02.sop",
      "wires": 1446,
-     "bytes": 173753,
+     "bytes": 173651,
      "keys": [
       "ice cream tub",
       "ice lolly",
@@ -38516,7 +38520,7 @@
      "id": "k.objects/shards/mulberry-food-sweets-and-desserts-04",
      "path": "k.objects/shards/mulberry-food-sweets-and-desserts-04.sop",
      "wires": 551,
-     "bytes": 66563,
+     "bytes": 66546,
      "keys": [
       "left_wrapper",
       "right_wrapper",
@@ -38553,7 +38557,7 @@
      "id": "k.objects/shards/mulberry-food-vegetables-and-salads-01",
      "path": "k.objects/shards/mulberry-food-vegetables-and-salads-01.sop",
      "wires": 1424,
-     "bytes": 166565,
+     "bytes": 166548,
      "keys": [
       "artichoke",
       "asparagus",
@@ -38582,7 +38586,7 @@
      "id": "k.objects/shards/mulberry-food-vegetables-and-salads-02",
      "path": "k.objects/shards/mulberry-food-vegetables-and-salads-02.sop",
      "wires": 1271,
-     "bytes": 150463,
+     "bytes": 150429,
      "keys": [
       "butternut squash",
       "cabbage",
@@ -38607,7 +38611,7 @@
      "id": "k.objects/shards/mulberry-food-vegetables-and-salads-03",
      "path": "k.objects/shards/mulberry-food-vegetables-and-salads-03.sop",
      "wires": 1154,
-     "bytes": 138389,
+     "bytes": 138321,
      "keys": [
       "chips packet",
       "courgette",
@@ -38634,7 +38638,7 @@
      "id": "k.objects/shards/mulberry-food-vegetables-and-salads-04",
      "path": "k.objects/shards/mulberry-food-vegetables-and-salads-04.sop",
      "wires": 1344,
-     "bytes": 161026,
+     "bytes": 161009,
      "keys": [
       "left_leaf",
       "left_olive",
@@ -38662,7 +38666,7 @@
      "id": "k.objects/shards/mulberry-food-vegetables-and-salads-05",
      "path": "k.objects/shards/mulberry-food-vegetables-and-salads-05.sop",
      "wires": 1360,
-     "bytes": 164646,
+     "bytes": 164612,
      "keys": [
       "left_bulb",
       "left_leaf",
@@ -38708,7 +38712,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-01",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-01.sop",
      "wires": 1252,
-     "bytes": 148320,
+     "bytes": 148201,
      "keys": [
       "aftershave",
       "baby oil",
@@ -38735,7 +38739,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-02",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-02.sop",
      "wires": 1506,
-     "bytes": 180813,
+     "bytes": 180677,
      "keys": [
       "board",
       "box",
@@ -38761,7 +38765,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-03",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-03.sop",
      "wires": 1504,
-     "bytes": 182160,
+     "bytes": 182024,
      "keys": [
       "body",
       "can",
@@ -38786,7 +38790,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-04",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-04.sop",
      "wires": 1100,
-     "bytes": 133534,
+     "bytes": 133415,
      "keys": [
       "bottle",
       "cap",
@@ -38813,7 +38817,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-05",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-05.sop",
      "wires": 1193,
-     "bytes": 145491,
+     "bytes": 145372,
      "keys": [
       "back",
       "bottle",
@@ -38839,7 +38843,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-06",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-06.sop",
      "wires": 1404,
-     "bytes": 168915,
+     "bytes": 168779,
      "keys": [
       "body",
       "bottle",
@@ -38866,7 +38870,7 @@
      "id": "k.objects/shards/mulberry-healthcare-grooming-items-07",
      "path": "k.objects/shards/mulberry-healthcare-grooming-items-07.sop",
      "wires": 975,
-     "bytes": 118021,
+     "bytes": 117885,
      "keys": [
       "body",
       "box",
@@ -38896,7 +38900,7 @@
      "id": "k.objects/shards/mulberry-healthcare-medical-items-01",
      "path": "k.objects/shards/mulberry-healthcare-medical-items-01.sop",
      "wires": 1207,
-     "bytes": 146212,
+     "bytes": 146076,
      "keys": [
       "auroscope",
       "body",
@@ -38927,7 +38931,7 @@
      "id": "k.objects/shards/mulberry-healthcare-medical-items-02",
      "path": "k.objects/shards/mulberry-healthcare-medical-items-02.sop",
      "wires": 963,
-     "bytes": 117318,
+     "bytes": 117216,
      "keys": [
       "bottle",
       "film",
@@ -38953,7 +38957,7 @@
      "id": "k.objects/shards/mulberry-holiday-and-travel-01",
      "path": "k.objects/shards/mulberry-holiday-and-travel-01.sop",
      "wires": 1299,
-     "bytes": 156895,
+     "bytes": 156759,
      "keys": [
       "back",
       "bag",
@@ -38983,7 +38987,7 @@
      "id": "k.objects/shards/mulberry-holiday-and-travel-02",
      "path": "k.objects/shards/mulberry-holiday-and-travel-02.sop",
      "wires": 295,
-     "bytes": 36134,
+     "bytes": 36100,
      "keys": [
       "back",
       "road",
@@ -39001,7 +39005,7 @@
      "id": "k.objects/shards/mulberry-leisure-games-01",
      "path": "k.objects/shards/mulberry-leisure-games-01.sop",
      "wires": 1257,
-     "bytes": 152011,
+     "bytes": 151994,
      "keys": [
       "bingo marker",
       "club",
@@ -39025,7 +39029,7 @@
      "id": "k.objects/shards/mulberry-leisure-games-02",
      "path": "k.objects/shards/mulberry-leisure-games-02.sop",
      "wires": 501,
-     "bytes": 61465,
+     "bytes": 61448,
      "keys": [
       "playing cards patience",
       "playing cards spades",
@@ -39043,7 +39047,7 @@
      "id": "k.objects/shards/mulberry-leisure-playground-01",
      "path": "k.objects/shards/mulberry-leisure-playground-01.sop",
      "wires": 513,
-     "bytes": 63495,
+     "bytes": 63410,
      "keys": [
       "board",
       "chute",
@@ -39065,7 +39069,7 @@
      "id": "k.objects/shards/mulberry-leisure-toys-01",
      "path": "k.objects/shards/mulberry-leisure-toys-01.sop",
      "wires": 1302,
-     "bytes": 153796,
+     "bytes": 153728,
      "keys": [
       "ball",
       "ball beach",
@@ -39092,7 +39096,7 @@
      "id": "k.objects/shards/mulberry-leisure-toys-02",
      "path": "k.objects/shards/mulberry-leisure-toys-02.sop",
      "wires": 1370,
-     "bytes": 164572,
+     "bytes": 164470,
      "keys": [
       "back_wheel",
       "back_window",
@@ -39126,7 +39130,7 @@
      "id": "k.objects/shards/mulberry-leisure-toys-03",
      "path": "k.objects/shards/mulberry-leisure-toys-03.sop",
      "wires": 1271,
-     "bytes": 153918,
+     "bytes": 153782,
      "keys": [
       "base",
       "body",
@@ -39154,7 +39158,7 @@
      "id": "k.objects/shards/mulberry-leisure-toys-04",
      "path": "k.objects/shards/mulberry-leisure-toys-04.sop",
      "wires": 519,
-     "bytes": 63157,
+     "bytes": 63140,
      "keys": [
       "ball",
       "face",
@@ -39173,7 +39177,7 @@
      "id": "k.objects/shards/mulberry-money-01",
      "path": "k.objects/shards/mulberry-money-01.sop",
      "wires": 901,
-     "bytes": 109197,
+     "bytes": 109095,
      "keys": [
       "bank card",
       "card",
@@ -39197,7 +39201,7 @@
      "id": "k.objects/shards/mulberry-music-instrument-01",
      "path": "k.objects/shards/mulberry-music-instrument-01.sop",
      "wires": 518,
-     "bytes": 63635,
+     "bytes": 63601,
      "keys": [
       "body",
       "cymbals hand",
@@ -39215,7 +39219,7 @@
      "id": "k.objects/shards/mulberry-plants-and-trees-01",
      "path": "k.objects/shards/mulberry-plants-and-trees-01.sop",
      "wires": 1446,
-     "bytes": 170491,
+     "bytes": 170355,
      "keys": [
       "acorn",
       "bottom_bud",
@@ -39251,7 +39255,7 @@
      "id": "k.objects/shards/mulberry-plants-and-trees-02",
      "path": "k.objects/shards/mulberry-plants-and-trees-02.sop",
      "wires": 1448,
-     "bytes": 174069,
+     "bytes": 173933,
      "keys": [
       "crown",
       "fruit",
@@ -39280,7 +39284,7 @@
      "id": "k.objects/shards/mulberry-plants-and-trees-03",
      "path": "k.objects/shards/mulberry-plants-and-trees-03.sop",
      "wires": 1376,
-     "bytes": 165480,
+     "bytes": 165344,
      "keys": [
       "end",
       "leaf1",
@@ -39306,7 +39310,7 @@
      "id": "k.objects/shards/mulberry-plants-and-trees-04",
      "path": "k.objects/shards/mulberry-plants-and-trees-04.sop",
      "wires": 711,
-     "bytes": 85193,
+     "bytes": 85125,
      "keys": [
       "left_grass",
       "right_grass",
@@ -39359,7 +39363,7 @@
      "id": "k.objects/shards/mulberry-science-astronomy-01",
      "path": "k.objects/shards/mulberry-science-astronomy-01.sop",
      "wires": 1485,
-     "bytes": 176071,
+     "bytes": 175935,
      "keys": [
       "band1",
       "band2",
@@ -39385,7 +39389,7 @@
      "id": "k.objects/shards/mulberry-science-astronomy-02",
      "path": "k.objects/shards/mulberry-science-astronomy-02.sop",
      "wires": 396,
-     "bytes": 46868,
+     "bytes": 46834,
      "keys": [
       "ice_cap",
       "land",
@@ -39402,7 +39406,7 @@
      "id": "k.objects/shards/mulberry-sport-accessories-01",
      "path": "k.objects/shards/mulberry-sport-accessories-01.sop",
      "wires": 1047,
-     "bytes": 125440,
+     "bytes": 125406,
      "keys": [
       "archery target",
       "backstop",
@@ -39430,7 +39434,7 @@
      "id": "k.objects/shards/mulberry-sport-accessories-02",
      "path": "k.objects/shards/mulberry-sport-accessories-02.sop",
      "wires": 1097,
-     "bytes": 131857,
+     "bytes": 131823,
      "keys": [
       "ball",
       "bowling ball",
@@ -39461,7 +39465,7 @@
      "id": "k.objects/shards/mulberry-sport-accessories-03",
      "path": "k.objects/shards/mulberry-sport-accessories-03.sop",
      "wires": 967,
-     "bytes": 116630,
+     "bytes": 116579,
      "keys": [
       "ball",
       "flame",
@@ -39485,7 +39489,7 @@
      "id": "k.objects/shards/mulberry-tools-garden-01",
      "path": "k.objects/shards/mulberry-tools-garden-01.sop",
      "wires": 1190,
-     "bytes": 143789,
+     "bytes": 143653,
      "keys": [
       "face",
       "garden clippers",
@@ -39510,7 +39514,7 @@
      "id": "k.objects/shards/mulberry-tools-garden-02",
      "path": "k.objects/shards/mulberry-tools-garden-02.sop",
      "wires": 267,
-     "bytes": 32990,
+     "bytes": 32956,
      "keys": [
       "can",
       "handle",
@@ -39530,7 +39534,7 @@
      "id": "k.objects/shards/mulberry-tools-workshop-01",
      "path": "k.objects/shards/mulberry-tools-workshop-01.sop",
      "wires": 1092,
-     "bytes": 131069,
+     "bytes": 130984,
      "keys": [
       "apron",
       "body",
@@ -39555,7 +39559,7 @@
      "id": "k.objects/shards/mulberry-tools-workshop-02",
      "path": "k.objects/shards/mulberry-tools-workshop-02.sop",
      "wires": 1122,
-     "bytes": 135451,
+     "bytes": 135315,
      "keys": [
       "file",
       "fire hose",
@@ -39582,7 +39586,7 @@
      "id": "k.objects/shards/mulberry-tools-workshop-03",
      "path": "k.objects/shards/mulberry-tools-workshop-03.sop",
      "wires": 1011,
-     "bytes": 123618,
+     "bytes": 123499,
      "keys": [
       "blade",
       "case",
@@ -39606,7 +39610,7 @@
      "id": "k.objects/shards/mulberry-transport-air-01",
      "path": "k.objects/shards/mulberry-transport-air-01.sop",
      "wires": 589,
-     "bytes": 71434,
+     "bytes": 71366,
      "keys": [
       "aeroplane",
       "basket",
@@ -39628,7 +39632,7 @@
      "id": "k.objects/shards/mulberry-transport-rail-01",
      "path": "k.objects/shards/mulberry-transport-rail-01.sop",
      "wires": 337,
-     "bytes": 41281,
+     "bytes": 41247,
      "keys": [
       "smoke",
       "steam train",
@@ -39644,7 +39648,7 @@
      "id": "k.objects/shards/mulberry-transport-road-01",
      "path": "k.objects/shards/mulberry-transport-road-01.sop",
      "wires": 1329,
-     "bytes": 159609,
+     "bytes": 159473,
      "keys": [
       "back_wheel",
       "body",
@@ -39675,7 +39679,7 @@
      "id": "k.objects/shards/mulberry-transport-road-02",
      "path": "k.objects/shards/mulberry-transport-road-02.sop",
      "wires": 1476,
-     "bytes": 178242,
+     "bytes": 178106,
      "keys": [
       "back_wheel",
       "container",
@@ -39705,7 +39709,7 @@
      "id": "k.objects/shards/mulberry-transport-road-03",
      "path": "k.objects/shards/mulberry-transport-road-03.sop",
      "wires": 997,
-     "bytes": 121017,
+     "bytes": 120898,
      "keys": [
       "amber_light",
       "body",
@@ -39734,7 +39738,7 @@
      "id": "k.objects/shards/mulberry-transport-space-01",
      "path": "k.objects/shards/mulberry-transport-space-01.sop",
      "wires": 118,
-     "bytes": 14939,
+     "bytes": 14922,
      "keys": [
       "body",
       "left_wing",
@@ -39751,7 +39755,7 @@
      "id": "k.objects/shards/mulberry-transport-water-01",
      "path": "k.objects/shards/mulberry-transport-water-01.sop",
      "wires": 457,
-     "bytes": 54905,
+     "bytes": 54854,
      "keys": [
       "cruiser",
       "hull",
@@ -39771,7 +39775,7 @@
      "id": "k.objects/shards/mulberry-work-and-school-stationery-01",
      "path": "k.objects/shards/mulberry-work-and-school-stationery-01.sop",
      "wires": 942,
-     "bytes": 113722,
+     "bytes": 113586,
      "keys": [
       "arch lever file",
       "bottle",
@@ -39799,7 +39803,7 @@
      "id": "k.objects/shards/mulberry-work-and-school-stationery-02",
      "path": "k.objects/shards/mulberry-work-and-school-stationery-02.sop",
      "wires": 1228,
-     "bytes": 148892,
+     "bytes": 148756,
      "keys": [
       "front_card",
       "glue stick",
@@ -39827,7 +39831,7 @@
      "id": "k.objects/shards/mulberry-work-and-school-stationery-03",
      "path": "k.objects/shards/mulberry-work-and-school-stationery-03.sop",
      "wires": 875,
-     "bytes": 107577,
+     "bytes": 107441,
      "keys": [
       "blade",
       "bottle",
@@ -39855,7 +39859,7 @@
      "id": "k.objects/shards/mulberry-work-and-school-stationery-04",
      "path": "k.objects/shards/mulberry-work-and-school-stationery-04.sop",
      "wires": 326,
-     "bytes": 40187,
+     "bytes": 40153,
      "keys": [
       "bottle",
       "front",
@@ -40013,7 +40017,7 @@
      "id": "k.objects/shards/noto-animal-amphibian-01",
      "path": "k.objects/shards/noto-animal-amphibian-01.sop",
      "wires": 130,
-     "bytes": 16136,
+     "bytes": 16119,
      "keys": [
       "frog",
       "head",
@@ -40034,7 +40038,7 @@
      "id": "k.objects/shards/noto-animal-bird-01",
      "path": "k.objects/shards/noto-animal-bird-01.sop",
      "wires": 1290,
-     "bytes": 156264,
+     "bytes": 156128,
      "keys": [
       "baby chick",
       "beak",
@@ -40076,7 +40080,7 @@
      "id": "k.objects/shards/noto-animal-bird-02",
      "path": "k.objects/shards/noto-animal-bird-02.sop",
      "wires": 1441,
-     "bytes": 173958,
+     "bytes": 173822,
      "keys": [
       "beak",
       "body",
@@ -40115,7 +40119,7 @@
      "id": "k.objects/shards/noto-animal-bird-03",
      "path": "k.objects/shards/noto-animal-bird-03.sop",
      "wires": 898,
-     "bytes": 115924,
+     "bytes": 115839,
      "keys": [
       "beak",
       "black bird",
@@ -40142,7 +40146,7 @@
      "id": "k.objects/shards/noto-animal-bug-01",
      "path": "k.objects/shards/noto-animal-bug-01.sop",
      "wires": 1638,
-     "bytes": 199267,
+     "bytes": 199131,
      "keys": [
       "ant",
       "back_leg",
@@ -40182,7 +40186,7 @@
      "id": "k.objects/shards/noto-animal-bug-02",
      "path": "k.objects/shards/noto-animal-bug-02.sop",
      "wires": 1192,
-     "bytes": 144825,
+     "bytes": 144706,
      "keys": [
       "body",
       "fly",
@@ -40215,7 +40219,7 @@
      "id": "k.objects/shards/noto-animal-mammal-01",
      "path": "k.objects/shards/noto-animal-mammal-01.sop",
      "wires": 1630,
-     "bytes": 201961,
+     "bytes": 201825,
      "keys": [
       "body",
       "collar",
@@ -40254,7 +40258,7 @@
      "id": "k.objects/shards/noto-animal-mammal-02",
      "path": "k.objects/shards/noto-animal-mammal-02.sop",
      "wires": 1549,
-     "bytes": 192028,
+     "bytes": 191892,
      "keys": [
       "black cat",
       "body",
@@ -40294,7 +40298,7 @@
      "id": "k.objects/shards/noto-animal-mammal-03",
      "path": "k.objects/shards/noto-animal-mammal-03.sop",
      "wires": 1577,
-     "bytes": 191699,
+     "bytes": 191563,
      "keys": [
       "back_leg",
       "body",
@@ -40341,7 +40345,7 @@
      "id": "k.objects/shards/noto-animal-mammal-04",
      "path": "k.objects/shards/noto-animal-mammal-04.sop",
      "wires": 1589,
-     "bytes": 193041,
+     "bytes": 192905,
      "keys": [
       "back_leg",
       "bison",
@@ -40398,7 +40402,7 @@
      "id": "k.objects/shards/noto-animal-mammal-05",
      "path": "k.objects/shards/noto-animal-mammal-05.sop",
      "wires": 1557,
-     "bytes": 188175,
+     "bytes": 188039,
      "keys": [
       "back_leg",
       "beard",
@@ -40436,7 +40440,7 @@
      "id": "k.objects/shards/noto-animal-mammal-06",
      "path": "k.objects/shards/noto-animal-mammal-06.sop",
      "wires": 1556,
-     "bytes": 189038,
+     "bytes": 188902,
      "keys": [
       "body",
       "ear",
@@ -40477,7 +40481,7 @@
      "id": "k.objects/shards/noto-animal-mammal-07",
      "path": "k.objects/shards/noto-animal-mammal-07.sop",
      "wires": 1500,
-     "bytes": 184873,
+     "bytes": 184737,
      "keys": [
       "bat",
       "bear",
@@ -40522,7 +40526,7 @@
      "id": "k.objects/shards/noto-animal-mammal-08",
      "path": "k.objects/shards/noto-animal-mammal-08.sop",
      "wires": 1465,
-     "bytes": 177181,
+     "bytes": 177045,
      "keys": [
       "badger",
       "body",
@@ -40566,7 +40570,7 @@
      "id": "k.objects/shards/noto-animal-marine-01",
      "path": "k.objects/shards/noto-animal-marine-01.sop",
      "wires": 1495,
-     "bytes": 182097,
+     "bytes": 181961,
      "keys": [
       "belly",
       "blowfish",
@@ -40611,7 +40615,7 @@
      "id": "k.objects/shards/noto-animal-marine-02",
      "path": "k.objects/shards/noto-animal-marine-02.sop",
      "wires": 1566,
-     "bytes": 190394,
+     "bytes": 190258,
      "keys": [
       "antenna1",
       "antenna2",
@@ -40656,7 +40660,7 @@
      "id": "k.objects/shards/noto-animal-marine-03",
      "path": "k.objects/shards/noto-animal-marine-03.sop",
      "wires": 200,
-     "bytes": 24622,
+     "bytes": 24605,
      "keys": [
       "oyster",
       "pearl"
@@ -40672,7 +40676,7 @@
      "id": "k.objects/shards/noto-animal-reptile-01",
      "path": "k.objects/shards/noto-animal-reptile-01.sop",
      "wires": 1572,
-     "bytes": 191200,
+     "bytes": 191064,
      "keys": [
       "arm",
       "belly",
@@ -40705,7 +40709,7 @@
      "id": "k.objects/shards/noto-arts-crafts-01",
      "path": "k.objects/shards/noto-arts-crafts-01.sop",
      "wires": 1259,
-     "bytes": 154377,
+     "bytes": 154258,
      "keys": [
       "artist palette",
       "ball",
@@ -40732,7 +40736,7 @@
      "id": "k.objects/shards/noto-award-medal-01",
      "path": "k.objects/shards/noto-award-medal-01.sop",
      "wires": 952,
-     "bytes": 115977,
+     "bytes": 115875,
      "keys": [
       "1st place medal",
       "2nd place medal",
@@ -40759,7 +40763,7 @@
      "id": "k.objects/shards/noto-book-paper-01",
      "path": "k.objects/shards/noto-book-paper-01.sop",
      "wires": 1081,
-     "bytes": 132493,
+     "bytes": 132374,
      "keys": [
       "blue book",
       "books",
@@ -40785,7 +40789,7 @@
      "id": "k.objects/shards/noto-book-paper-02",
      "path": "k.objects/shards/noto-book-paper-02.sop",
      "wires": 1047,
-     "bytes": 129413,
+     "bytes": 129277,
      "keys": [
       "bookmark",
       "bookmark tabs",
@@ -40814,7 +40818,7 @@
      "id": "k.objects/shards/noto-book-paper-03",
      "path": "k.objects/shards/noto-book-paper-03.sop",
      "wires": 107,
-     "bytes": 13230,
+     "bytes": 13213,
      "keys": [
       "label",
       "string",
@@ -40831,7 +40835,7 @@
      "id": "k.objects/shards/noto-clothing-01",
      "path": "k.objects/shards/noto-clothing-01.sop",
      "wires": 1203,
-     "bytes": 146314,
+     "bytes": 146178,
      "keys": [
       "frame",
       "glasses",
@@ -40868,7 +40872,7 @@
      "id": "k.objects/shards/noto-clothing-02",
      "path": "k.objects/shards/noto-clothing-02.sop",
      "wires": 1253,
-     "bytes": 152122,
+     "bytes": 151986,
      "keys": [
       "belt",
       "coat",
@@ -40900,7 +40904,7 @@
      "id": "k.objects/shards/noto-clothing-03",
      "path": "k.objects/shards/noto-clothing-03.sop",
      "wires": 1161,
-     "bytes": 141691,
+     "bytes": 141555,
      "keys": [
       "bikini",
       "blouse",
@@ -40928,7 +40932,7 @@
      "id": "k.objects/shards/noto-clothing-04",
      "path": "k.objects/shards/noto-clothing-04.sop",
      "wires": 1283,
-     "bytes": 156823,
+     "bytes": 156687,
      "keys": [
       "backpack",
       "bag",
@@ -40957,7 +40961,7 @@
      "id": "k.objects/shards/noto-clothing-05",
      "path": "k.objects/shards/noto-clothing-05.sop",
      "wires": 1353,
-     "bytes": 164834,
+     "bytes": 164698,
      "keys": [
       "ballet shoes",
       "band",
@@ -40993,7 +40997,7 @@
      "id": "k.objects/shards/noto-clothing-06",
      "path": "k.objects/shards/noto-clothing-06.sop",
      "wires": 912,
-     "bytes": 112840,
+     "bytes": 112721,
      "keys": [
       "band",
       "base",
@@ -41036,7 +41040,7 @@
      "id": "k.objects/shards/noto-computer-01",
      "path": "k.objects/shards/noto-computer-01.sop",
      "wires": 1084,
-     "bytes": 132349,
+     "bytes": 132230,
      "keys": [
       "battery",
       "body",
@@ -41083,7 +41087,7 @@
      "id": "k.objects/shards/noto-computer-02",
      "path": "k.objects/shards/noto-computer-02.sop",
      "wires": 863,
-     "bytes": 106319,
+     "bytes": 106217,
      "keys": [
       "abacus",
       "bead1",
@@ -41118,7 +41122,7 @@
      "id": "k.objects/shards/noto-dishware-01",
      "path": "k.objects/shards/noto-dishware-01.sop",
      "wires": 860,
-     "bytes": 105132,
+     "bytes": 105013,
      "keys": [
       "amphora",
       "blade",
@@ -41148,7 +41152,7 @@
      "id": "k.objects/shards/noto-drink-01",
      "path": "k.objects/shards/noto-drink-01.sop",
      "wires": 1466,
-     "bytes": 178008,
+     "bytes": 177872,
      "keys": [
       "baby bottle",
       "base",
@@ -41185,7 +41189,7 @@
      "id": "k.objects/shards/noto-drink-02",
      "path": "k.objects/shards/noto-drink-02.sop",
      "wires": 1471,
-     "bytes": 180752,
+     "bytes": 180616,
      "keys": [
       "base1",
       "base2",
@@ -41219,7 +41223,7 @@
      "id": "k.objects/shards/noto-drink-03",
      "path": "k.objects/shards/noto-drink-03.sop",
      "wires": 731,
-     "bytes": 89359,
+     "bytes": 89291,
      "keys": [
       "beverage box",
       "box",
@@ -41247,7 +41251,7 @@
      "id": "k.objects/shards/noto-event-01",
      "path": "k.objects/shards/noto-event-01.sop",
      "wires": 1453,
-     "bytes": 177581,
+     "bytes": 177445,
      "keys": [
       "ball1",
       "ball2",
@@ -41291,7 +41295,7 @@
      "id": "k.objects/shards/noto-event-02",
      "path": "k.objects/shards/noto-event-02.sop",
      "wires": 1527,
-     "bytes": 187411,
+     "bytes": 187275,
      "keys": [
       "bottom_fish",
       "carp streamer",
@@ -41334,7 +41338,7 @@
      "id": "k.objects/shards/noto-event-03",
      "path": "k.objects/shards/noto-event-03.sop",
      "wires": 426,
-     "bytes": 52270,
+     "bytes": 52202,
      "keys": [
       "admission tickets",
       "box",
@@ -41355,7 +41359,7 @@
      "id": "k.objects/shards/noto-food-asian-01",
      "path": "k.objects/shards/noto-food-asian-01.sop",
      "wires": 1553,
-     "bytes": 189050,
+     "bytes": 188914,
      "keys": [
       "base",
       "bento box",
@@ -41386,7 +41390,7 @@
      "id": "k.objects/shards/noto-food-asian-02",
      "path": "k.objects/shards/noto-food-asian-02.sop",
      "wires": 1398,
-     "bytes": 169091,
+     "bytes": 168955,
      "keys": [
       "ball1",
       "ball2",
@@ -41415,7 +41419,7 @@
      "id": "k.objects/shards/noto-food-asian-03",
      "path": "k.objects/shards/noto-food-asian-03.sop",
      "wires": 159,
-     "bytes": 19571,
+     "bytes": 19554,
      "keys": [
       "box",
       "takeout box"
@@ -41431,7 +41435,7 @@
      "id": "k.objects/shards/noto-food-fruit-01",
      "path": "k.objects/shards/noto-food-fruit-01.sop",
      "wires": 1428,
-     "bytes": 177028,
+     "bytes": 176892,
      "keys": [
       "banana",
       "fruit",
@@ -41469,7 +41473,7 @@
      "id": "k.objects/shards/noto-food-fruit-02",
      "path": "k.objects/shards/noto-food-fruit-02.sop",
      "wires": 1322,
-     "bytes": 159836,
+     "bytes": 159700,
      "keys": [
       "blueberries",
       "cherries",
@@ -41499,7 +41503,7 @@
      "id": "k.objects/shards/noto-food-fruit-03",
      "path": "k.objects/shards/noto-food-fruit-03.sop",
      "wires": 755,
-     "bytes": 91643,
+     "bytes": 91575,
      "keys": [
       "branch",
       "coconut",
@@ -41529,7 +41533,7 @@
      "id": "k.objects/shards/noto-food-prepared-01",
      "path": "k.objects/shards/noto-food-prepared-01.sop",
      "wires": 1441,
-     "bytes": 175003,
+     "bytes": 174867,
      "keys": [
       "bagel",
       "baguette bread",
@@ -41556,7 +41560,7 @@
      "id": "k.objects/shards/noto-food-prepared-02",
      "path": "k.objects/shards/noto-food-prepared-02.sop",
      "wires": 1555,
-     "bytes": 189070,
+     "bytes": 188934,
      "keys": [
       "bacon",
       "bone",
@@ -41598,7 +41602,7 @@
      "id": "k.objects/shards/noto-food-prepared-03",
      "path": "k.objects/shards/noto-food-prepared-03.sop",
      "wires": 1542,
-     "bytes": 187263,
+     "bytes": 187127,
      "keys": [
       "bread",
       "bun",
@@ -41626,7 +41630,7 @@
      "id": "k.objects/shards/noto-food-prepared-04",
      "path": "k.objects/shards/noto-food-prepared-04.sop",
      "wires": 1459,
-     "bytes": 177901,
+     "bytes": 177765,
      "keys": [
       "bowl",
       "bowl with spoon",
@@ -41656,7 +41660,7 @@
      "id": "k.objects/shards/noto-food-prepared-05",
      "path": "k.objects/shards/noto-food-prepared-05.sop",
      "wires": 364,
-     "bytes": 44520,
+     "bytes": 44486,
      "keys": [
       "canned food",
       "cap",
@@ -41674,7 +41678,7 @@
      "id": "k.objects/shards/noto-food-sweet-01",
      "path": "k.objects/shards/noto-food-sweet-01.sop",
      "wires": 1597,
-     "bytes": 195470,
+     "bytes": 195334,
      "keys": [
       "base",
       "birthday cake",
@@ -41719,7 +41723,7 @@
      "id": "k.objects/shards/noto-food-sweet-02",
      "path": "k.objects/shards/noto-food-sweet-02.sop",
      "wires": 1117,
-     "bytes": 135836,
+     "bytes": 135734,
      "keys": [
       "candy",
       "chocolate bar",
@@ -41743,7 +41747,7 @@
      "id": "k.objects/shards/noto-food-vegetable-01",
      "path": "k.objects/shards/noto-food-vegetable-01.sop",
      "wires": 1255,
-     "bytes": 151656,
+     "bytes": 151520,
      "keys": [
       "avocado",
       "bell pepper",
@@ -41771,7 +41775,7 @@
      "id": "k.objects/shards/noto-food-vegetable-02",
      "path": "k.objects/shards/noto-food-vegetable-02.sop",
      "wires": 1378,
-     "bytes": 166132,
+     "bytes": 165996,
      "keys": [
       "base",
       "bean1",
@@ -41804,7 +41808,7 @@
      "id": "k.objects/shards/noto-food-vegetable-03",
      "path": "k.objects/shards/noto-food-vegetable-03.sop",
      "wires": 465,
-     "bytes": 58513,
+     "bytes": 58462,
      "keys": [
       "brown mushroom",
       "cap",
@@ -41824,7 +41828,7 @@
      "id": "k.objects/shards/noto-game-01",
      "path": "k.objects/shards/noto-game-01.sop",
      "wires": 1312,
-     "bytes": 159795,
+     "bytes": 159659,
      "keys": [
       "ball",
       "body",
@@ -41864,7 +41868,7 @@
      "id": "k.objects/shards/noto-game-02",
      "path": "k.objects/shards/noto-game-02.sop",
      "wires": 1338,
-     "bytes": 163024,
+     "bytes": 162888,
      "keys": [
       "base",
       "body",
@@ -41906,7 +41910,7 @@
      "id": "k.objects/shards/noto-game-03",
      "path": "k.objects/shards/noto-game-03.sop",
      "wires": 195,
-     "bytes": 23678,
+     "bytes": 23661,
      "keys": [
       "chess pawn",
       "head"
@@ -41922,7 +41926,7 @@
      "id": "k.objects/shards/noto-hotel-01",
      "path": "k.objects/shards/noto-hotel-01.sop",
      "wires": 321,
-     "bytes": 39767,
+     "bytes": 39733,
      "keys": [
       "base",
       "bell",
@@ -41946,7 +41950,7 @@
      "id": "k.objects/shards/noto-household-01",
      "path": "k.objects/shards/noto-household-01.sop",
      "wires": 1031,
-     "bytes": 126547,
+     "bytes": 126411,
      "keys": [
       "bed",
       "blanket",
@@ -41987,7 +41991,7 @@
      "id": "k.objects/shards/noto-household-02",
      "path": "k.objects/shards/noto-household-02.sop",
      "wires": 1323,
-     "bytes": 161701,
+     "bytes": 161565,
      "keys": [
       "basket",
       "bathtub",
@@ -42031,7 +42035,7 @@
      "id": "k.objects/shards/noto-household-03",
      "path": "k.objects/shards/noto-household-03.sop",
      "wires": 1277,
-     "bytes": 156357,
+     "bytes": 156221,
      "keys": [
       "band",
       "bubble1",
@@ -42065,7 +42069,7 @@
      "id": "k.objects/shards/noto-light-video-01",
      "path": "k.objects/shards/noto-light-video-01.sop",
      "wires": 893,
-     "bytes": 111941,
+     "bytes": 111805,
      "keys": [
       "board",
       "body",
@@ -42099,7 +42103,7 @@
      "id": "k.objects/shards/noto-light-video-02",
      "path": "k.objects/shards/noto-light-video-02.sop",
      "wires": 1161,
-     "bytes": 142783,
+     "bytes": 142647,
      "keys": [
       "body",
       "bottom",
@@ -42130,7 +42134,7 @@
      "id": "k.objects/shards/noto-lock-01",
      "path": "k.objects/shards/noto-lock-01.sop",
      "wires": 957,
-     "bytes": 116213,
+     "bytes": 116111,
      "keys": [
       "body",
       "bow",
@@ -42154,7 +42158,7 @@
      "id": "k.objects/shards/noto-mail-01",
      "path": "k.objects/shards/noto-mail-01.sop",
      "wires": 739,
-     "bytes": 90631,
+     "bytes": 90495,
      "keys": [
       "arrow",
       "closed mailbox with raised flag",
@@ -42183,7 +42187,7 @@
      "id": "k.objects/shards/noto-mail-02",
      "path": "k.objects/shards/noto-mail-02.sop",
      "wires": 639,
-     "bytes": 80455,
+     "bytes": 80370,
      "keys": [
       "ballot",
       "ballot box with ballot",
@@ -42209,7 +42213,7 @@
      "id": "k.objects/shards/noto-medical-01",
      "path": "k.objects/shards/noto-medical-01.sop",
      "wires": 818,
-     "bytes": 100059,
+     "bytes": 99940,
      "keys": [
       "adhesive bandage",
       "bandage",
@@ -42236,7 +42240,7 @@
      "id": "k.objects/shards/noto-money-01",
      "path": "k.objects/shards/noto-money-01.sop",
      "wires": 1114,
-     "bytes": 136477,
+     "bytes": 136341,
      "keys": [
       "bag",
       "band",
@@ -42265,7 +42269,7 @@
      "id": "k.objects/shards/noto-money-02",
      "path": "k.objects/shards/noto-money-02.sop",
      "wires": 237,
-     "bytes": 29785,
+     "bytes": 29734,
      "keys": [
       "card",
       "chart increasing with yen",
@@ -42288,7 +42292,7 @@
      "id": "k.objects/shards/noto-music-01",
      "path": "k.objects/shards/noto-music-01.sop",
      "wires": 991,
-     "bytes": 121516,
+     "bytes": 121380,
      "keys": [
       "band",
       "clef",
@@ -42324,7 +42328,7 @@
      "id": "k.objects/shards/noto-music-02",
      "path": "k.objects/shards/noto-music-02.sop",
      "wires": 113,
-     "bytes": 14573,
+     "bytes": 14556,
      "keys": [
       "antenna",
       "radio"
@@ -42340,7 +42344,7 @@
      "id": "k.objects/shards/noto-musical-instrument-01",
      "path": "k.objects/shards/noto-musical-instrument-01.sop",
      "wires": 1337,
-     "bytes": 163041,
+     "bytes": 162905,
      "keys": [
       "accordion",
       "banjo",
@@ -42376,7 +42380,7 @@
      "id": "k.objects/shards/noto-musical-instrument-02",
      "path": "k.objects/shards/noto-musical-instrument-02.sop",
      "wires": 892,
-     "bytes": 109339,
+     "bytes": 109254,
      "keys": [
       "body",
       "drum",
@@ -42400,7 +42404,7 @@
      "id": "k.objects/shards/noto-office-01",
      "path": "k.objects/shards/noto-office-01.sop",
      "wires": 998,
-     "bytes": 122759,
+     "bytes": 122623,
      "keys": [
       "back",
       "briefcase",
@@ -42439,7 +42443,7 @@
      "id": "k.objects/shards/noto-office-02",
      "path": "k.objects/shards/noto-office-02.sop",
      "wires": 855,
-     "bytes": 106051,
+     "bytes": 105932,
      "keys": [
       "bar chart",
       "bar1",
@@ -42469,7 +42473,7 @@
      "id": "k.objects/shards/noto-office-03",
      "path": "k.objects/shards/noto-office-03.sop",
      "wires": 959,
-     "bytes": 119104,
+     "bytes": 118985,
      "keys": [
       "basket",
       "bottom_drawer",
@@ -42498,7 +42502,7 @@
      "id": "k.objects/shards/noto-other-object-01",
      "path": "k.objects/shards/noto-other-object-01.sop",
      "wires": 1169,
-     "bytes": 141817,
+     "bytes": 141681,
      "keys": [
       "amulet",
       "cigarette",
@@ -42526,7 +42530,7 @@
      "id": "k.objects/shards/noto-other-object-02",
      "path": "k.objects/shards/noto-other-object-02.sop",
      "wires": 119,
-     "bytes": 15055,
+     "bytes": 15038,
      "keys": [
       "card",
       "identification card",
@@ -42543,7 +42547,7 @@
      "id": "k.objects/shards/noto-phone-01",
      "path": "k.objects/shards/noto-phone-01.sop",
      "wires": 1057,
-     "bytes": 129695,
+     "bytes": 129593,
      "keys": [
       "arrow",
       "button1",
@@ -42575,7 +42579,7 @@
      "id": "k.objects/shards/noto-place-building-01",
      "path": "k.objects/shards/noto-place-building-01.sop",
      "wires": 1267,
-     "bytes": 154492,
+     "bytes": 154373,
      "keys": [
       "base",
       "brick",
@@ -42608,7 +42612,7 @@
      "id": "k.objects/shards/noto-place-building-02",
      "path": "k.objects/shards/noto-place-building-02.sop",
      "wires": 1097,
-     "bytes": 137432,
+     "bytes": 137296,
      "keys": [
       "bank",
       "building",
@@ -42652,7 +42656,7 @@
      "id": "k.objects/shards/noto-place-building-03",
      "path": "k.objects/shards/noto-place-building-03.sop",
      "wires": 1047,
-     "bytes": 131143,
+     "bytes": 131007,
      "keys": [
       "base",
       "building",
@@ -42694,7 +42698,7 @@
      "id": "k.objects/shards/noto-place-building-04",
      "path": "k.objects/shards/noto-place-building-04.sop",
      "wires": 209,
-     "bytes": 26161,
+     "bytes": 26144,
      "keys": [
       "statue of liberty"
      ],
@@ -42709,7 +42713,7 @@
      "id": "k.objects/shards/noto-place-geographic-01",
      "path": "k.objects/shards/noto-place-geographic-01.sop",
      "wires": 1696,
-     "bytes": 206358,
+     "bytes": 206256,
      "keys": [
       "beach with umbrella",
       "camping",
@@ -42741,7 +42745,7 @@
      "id": "k.objects/shards/noto-place-geographic-02",
      "path": "k.objects/shards/noto-place-geographic-02.sop",
      "wires": 207,
-     "bytes": 25677,
+     "bytes": 25660,
      "keys": [
       "national park",
       "sky"
@@ -42757,7 +42761,7 @@
      "id": "k.objects/shards/noto-place-map-01",
      "path": "k.objects/shards/noto-place-map-01.sop",
      "wires": 1338,
-     "bytes": 164183,
+     "bytes": 164064,
      "keys": [
       "compass",
       "dial",
@@ -42786,7 +42790,7 @@
      "id": "k.objects/shards/noto-place-other-01",
      "path": "k.objects/shards/noto-place-other-01.sop",
      "wires": 1004,
-     "bytes": 124631,
+     "bytes": 124512,
      "keys": [
       "cityscape",
       "cityscape at dusk",
@@ -42818,7 +42822,7 @@
      "id": "k.objects/shards/noto-place-other-02",
      "path": "k.objects/shards/noto-place-other-02.sop",
      "wires": 1365,
-     "bytes": 168072,
+     "bytes": 167936,
      "keys": [
       "barber pole",
       "base",
@@ -42862,7 +42866,7 @@
      "id": "k.objects/shards/noto-place-other-03",
      "path": "k.objects/shards/noto-place-other-03.sop",
      "wires": 201,
-     "bytes": 25065,
+     "bytes": 25048,
      "keys": [
       "circus tent",
       "door",
@@ -42880,7 +42884,7 @@
      "id": "k.objects/shards/noto-place-religious-01",
      "path": "k.objects/shards/noto-place-religious-01.sop",
      "wires": 853,
-     "bytes": 105608,
+     "bytes": 105506,
      "keys": [
       "band",
       "church",
@@ -42922,7 +42926,7 @@
      "id": "k.objects/shards/noto-plant-flower-01",
      "path": "k.objects/shards/noto-plant-flower-01.sop",
      "wires": 1606,
-     "bytes": 194675,
+     "bytes": 194539,
      "keys": [
       "bouquet",
       "centre",
@@ -42956,7 +42960,7 @@
      "id": "k.objects/shards/noto-plant-flower-02",
      "path": "k.objects/shards/noto-plant-flower-02.sop",
      "wires": 754,
-     "bytes": 91389,
+     "bytes": 91321,
      "keys": [
       "blossom",
       "centre",
@@ -42978,7 +42982,7 @@
      "id": "k.objects/shards/noto-plant-other-01",
      "path": "k.objects/shards/noto-plant-other-01.sop",
      "wires": 1408,
-     "bytes": 171206,
+     "bytes": 171070,
      "keys": [
       "cactus",
       "crown",
@@ -43011,7 +43015,7 @@
      "id": "k.objects/shards/noto-plant-other-02",
      "path": "k.objects/shards/noto-plant-other-02.sop",
      "wires": 1445,
-     "bytes": 174893,
+     "bytes": 174757,
      "keys": [
       "cap",
       "empty nest",
@@ -43044,7 +43048,7 @@
      "id": "k.objects/shards/noto-plant-other-03",
      "path": "k.objects/shards/noto-plant-other-03.sop",
      "wires": 95,
-     "bytes": 11944,
+     "bytes": 11927,
      "keys": [
       "leafless tree",
       "trunk"
@@ -43060,7 +43064,7 @@
      "id": "k.objects/shards/noto-science-01",
      "path": "k.objects/shards/noto-science-01.sop",
      "wires": 1144,
-     "bytes": 139873,
+     "bytes": 139754,
      "keys": [
       "alembic",
       "base",
@@ -43096,7 +43100,7 @@
      "id": "k.objects/shards/noto-sky-weather-01",
      "path": "k.objects/shards/noto-sky-weather-01.sop",
      "wires": 1445,
-     "bytes": 176239,
+     "bytes": 176103,
      "keys": [
       "dark_half",
       "first quarter moon",
@@ -43121,7 +43125,7 @@
      "id": "k.objects/shards/noto-sky-weather-02",
      "path": "k.objects/shards/noto-sky-weather-02.sop",
      "wires": 1178,
-     "bytes": 143033,
+     "bytes": 142897,
      "keys": [
       "bulb",
       "cheek",
@@ -43155,7 +43159,7 @@
      "id": "k.objects/shards/noto-sky-weather-03",
      "path": "k.objects/shards/noto-sky-weather-03.sop",
      "wires": 1307,
-     "bytes": 160059,
+     "bytes": 159923,
      "keys": [
       "cloud",
       "cloud with lightning and rain",
@@ -43195,7 +43199,7 @@
      "id": "k.objects/shards/noto-sky-weather-04",
      "path": "k.objects/shards/noto-sky-weather-04.sop",
      "wires": 1183,
-     "bytes": 142800,
+     "bytes": 142664,
      "keys": [
       "band1",
       "band2",
@@ -43233,7 +43237,7 @@
      "id": "k.objects/shards/noto-sky-weather-05",
      "path": "k.objects/shards/noto-sky-weather-05.sop",
      "wires": 997,
-     "bytes": 121345,
+     "bytes": 121209,
      "keys": [
       "bolt",
       "button1",
@@ -43269,7 +43273,7 @@
      "id": "k.objects/shards/noto-sky-weather-06",
      "path": "k.objects/shards/noto-sky-weather-06.sop",
      "wires": 154,
-     "bytes": 18929,
+     "bytes": 18895,
      "keys": [
       "drop",
       "droplet",
@@ -43287,7 +43291,7 @@
      "id": "k.objects/shards/noto-sound-01",
      "path": "k.objects/shards/noto-sound-01.sop",
      "wires": 1540,
-     "bytes": 187855,
+     "bytes": 187719,
      "keys": [
       "bell",
       "cone",
@@ -43310,7 +43314,7 @@
      "id": "k.objects/shards/noto-sound-02",
      "path": "k.objects/shards/noto-sound-02.sop",
      "wires": 212,
-     "bytes": 26391,
+     "bytes": 26374,
      "keys": [
       "bell with slash"
      ],
@@ -43325,7 +43329,7 @@
      "id": "k.objects/shards/noto-sport-01",
      "path": "k.objects/shards/noto-sport-01.sop",
      "wires": 1552,
-     "bytes": 188164,
+     "bytes": 188028,
      "keys": [
       "american football",
       "ball",
@@ -43354,7 +43358,7 @@
      "id": "k.objects/shards/noto-sport-02",
      "path": "k.objects/shards/noto-sport-02.sop",
      "wires": 1301,
-     "bytes": 158631,
+     "bytes": 158495,
      "keys": [
       "badminton",
       "ball",
@@ -43383,7 +43387,7 @@
      "id": "k.objects/shards/noto-sport-03",
      "path": "k.objects/shards/noto-sport-03.sop",
      "wires": 1398,
-     "bytes": 169416,
+     "bytes": 169280,
      "keys": [
       "belt",
       "blade",
@@ -43419,7 +43423,7 @@
      "id": "k.objects/shards/noto-sport-04",
      "path": "k.objects/shards/noto-sport-04.sop",
      "wires": 578,
-     "bytes": 70731,
+     "bytes": 70680,
      "keys": [
       "curling stone",
       "handle",
@@ -43438,7 +43442,7 @@
      "id": "k.objects/shards/noto-time-01",
      "path": "k.objects/shards/noto-time-01.sop",
      "wires": 873,
-     "bytes": 107363,
+     "bytes": 107244,
      "keys": [
       "alarm clock",
       "bottom",
@@ -43472,7 +43476,7 @@
      "id": "k.objects/shards/noto-tool-01",
      "path": "k.objects/shards/noto-tool-01.sop",
      "wires": 1143,
-     "bytes": 138644,
+     "bytes": 138508,
      "keys": [
       "axe",
       "blade",
@@ -43505,7 +43509,7 @@
      "id": "k.objects/shards/noto-tool-02",
      "path": "k.objects/shards/noto-tool-02.sop",
      "wires": 1009,
-     "bytes": 122284,
+     "bytes": 122148,
      "keys": [
       "arrow",
       "blade",
@@ -43532,7 +43536,7 @@
      "id": "k.objects/shards/noto-tool-03",
      "path": "k.objects/shards/noto-tool-03.sop",
      "wires": 1263,
-     "bytes": 157323,
+     "bytes": 157187,
      "keys": [
       "balance scale",
       "base",
@@ -43568,7 +43572,7 @@
      "id": "k.objects/shards/noto-tool-04",
      "path": "k.objects/shards/noto-tool-04.sop",
      "wires": 246,
-     "bytes": 30134,
+     "bytes": 30100,
      "keys": [
       "blade",
       "handle",
@@ -43588,7 +43592,7 @@
      "id": "k.objects/shards/noto-transport-air-01",
      "path": "k.objects/shards/noto-transport-air-01.sop",
      "wires": 1426,
-     "bytes": 175417,
+     "bytes": 175281,
      "keys": [
       "airplane",
       "airplane arrival",
@@ -43622,7 +43626,7 @@
      "id": "k.objects/shards/noto-transport-air-02",
      "path": "k.objects/shards/noto-transport-air-02.sop",
      "wires": 709,
-     "bytes": 87770,
+     "bytes": 87702,
      "keys": [
       "aerial tramway",
       "beam",
@@ -43650,7 +43654,7 @@
      "id": "k.objects/shards/noto-transport-ground-01",
      "path": "k.objects/shards/noto-transport-ground-01.sop",
      "wires": 1194,
-     "bytes": 148163,
+     "bytes": 148027,
      "keys": [
       "body",
       "bullet train",
@@ -43695,7 +43699,7 @@
      "id": "k.objects/shards/noto-transport-ground-02",
      "path": "k.objects/shards/noto-transport-ground-02.sop",
      "wires": 1297,
-     "bytes": 160034,
+     "bytes": 159898,
      "keys": [
       "ambulance",
       "body",
@@ -43737,7 +43741,7 @@
      "id": "k.objects/shards/noto-transport-ground-03",
      "path": "k.objects/shards/noto-transport-ground-03.sop",
      "wires": 1584,
-     "bytes": 195254,
+     "bytes": 195118,
      "keys": [
       "automobile",
       "back_window",
@@ -43780,7 +43784,7 @@
      "id": "k.objects/shards/noto-transport-ground-04",
      "path": "k.objects/shards/noto-transport-ground-04.sop",
      "wires": 1588,
-     "bytes": 195054,
+     "bytes": 194918,
      "keys": [
       "articulated lorry",
       "body",
@@ -43815,7 +43819,7 @@
      "id": "k.objects/shards/noto-transport-ground-05",
      "path": "k.objects/shards/noto-transport-ground-05.sop",
      "wires": 1458,
-     "bytes": 179339,
+     "bytes": 179203,
      "keys": [
       "auto rickshaw",
       "boot",
@@ -43854,7 +43858,7 @@
      "id": "k.objects/shards/noto-transport-ground-06",
      "path": "k.objects/shards/noto-transport-ground-06.sop",
      "wires": 1111,
-     "bytes": 136394,
+     "bytes": 136258,
      "keys": [
       "base",
       "box",
@@ -43889,7 +43893,7 @@
      "id": "k.objects/shards/noto-transport-water-01",
      "path": "k.objects/shards/noto-transport-water-01.sop",
      "wires": 1086,
-     "bytes": 133136,
+     "bytes": 133000,
      "keys": [
       "anchor",
       "boat",
@@ -43918,7 +43922,7 @@
      "id": "k.objects/shards/noto-transport-water-02",
      "path": "k.objects/shards/noto-transport-water-02.sop",
      "wires": 213,
-     "bytes": 26429,
+     "bytes": 26412,
      "keys": [
       "hull",
       "left_funnel",
@@ -43936,7 +43940,7 @@
      "id": "k.objects/shards/noto-writing-01",
      "path": "k.objects/shards/noto-writing-01.sop",
      "wires": 966,
-     "bytes": 117377,
+     "bytes": 117292,
      "keys": [
       "band1",
       "band2",
@@ -43969,7 +43973,7 @@
      "id": "k.objects/shards/openmoji-animals-nature-01",
      "path": "k.objects/shards/openmoji-animals-nature-01.sop",
      "wires": 1019,
-     "bytes": 121907,
+     "bytes": 121788,
      "keys": [
       "beluga",
       "body",
@@ -43999,7 +44003,7 @@
      "id": "k.objects/shards/openmoji-animals-nature-02",
      "path": "k.objects/shards/openmoji-animals-nature-02.sop",
      "wires": 539,
-     "bytes": 64725,
+     "bytes": 64674,
      "keys": [
       "body",
       "face",
@@ -44020,7 +44024,7 @@
      "id": "k.objects/shards/openmoji-food-drink-01",
      "path": "k.objects/shards/openmoji-food-drink-01.sop",
      "wires": 1063,
-     "bytes": 129107,
+     "bytes": 129005,
      "keys": [
       "bean",
       "cake",
@@ -44049,7 +44053,7 @@
      "id": "k.objects/shards/openmoji-food-drink-02",
      "path": "k.objects/shards/openmoji-food-drink-02.sop",
      "wires": 744,
-     "bytes": 90562,
+     "bytes": 90511,
      "keys": [
       "beer bottle",
       "bottle",
@@ -44073,7 +44077,7 @@
      "id": "k.objects/shards/openmoji-gardening-01",
      "path": "k.objects/shards/openmoji-gardening-01.sop",
      "wires": 427,
-     "bytes": 52078,
+     "bytes": 52027,
      "keys": [
       "back_glove",
       "big_wheel",
@@ -44099,7 +44103,7 @@
      "id": "k.objects/shards/openmoji-healthcare-01",
      "path": "k.objects/shards/openmoji-healthcare-01.sop",
      "wires": 667,
-     "bytes": 83300,
+     "bytes": 83164,
      "keys": [
       "bag",
       "blood transfusion",
@@ -44129,7 +44133,7 @@
      "id": "k.objects/shards/openmoji-healthcare-02",
      "path": "k.objects/shards/openmoji-healthcare-02.sop",
      "wires": 761,
-     "bytes": 91431,
+     "bytes": 91295,
      "keys": [
       "forceps",
       "hot-water bottle",
@@ -44153,7 +44157,7 @@
      "id": "k.objects/shards/openmoji-healthcare-03",
      "path": "k.objects/shards/openmoji-healthcare-03.sop",
      "wires": 821,
-     "bytes": 101037,
+     "bytes": 100901,
      "keys": [
       "bandage scissors",
       "bed",
@@ -44179,7 +44183,7 @@
      "id": "k.objects/shards/openmoji-healthcare-04",
      "path": "k.objects/shards/openmoji-healthcare-04.sop",
      "wires": 75,
-     "bytes": 9329,
+     "bytes": 9312,
      "keys": [
       "body",
       "scales"
@@ -44194,7 +44198,7 @@
      "id": "k.objects/shards/openmoji-objects-01",
      "path": "k.objects/shards/openmoji-objects-01.sop",
      "wires": 644,
-     "bytes": 79306,
+     "bytes": 79255,
      "keys": [
       "armchair",
       "arrow",
@@ -44229,7 +44233,7 @@
      "id": "k.objects/shards/openmoji-objects-02",
      "path": "k.objects/shards/openmoji-objects-02.sop",
      "wires": 1027,
-     "bytes": 125773,
+     "bytes": 125705,
      "keys": [
       "3d printer",
       "base",
@@ -44257,7 +44261,7 @@
      "id": "k.objects/shards/openmoji-objects-03",
      "path": "k.objects/shards/openmoji-objects-03.sop",
      "wires": 1196,
-     "bytes": 145813,
+     "bytes": 145779,
      "keys": [
       "bicycle helmet",
       "body",
@@ -44301,7 +44305,7 @@
      "id": "k.objects/shards/openmoji-technology-01",
      "path": "k.objects/shards/openmoji-technology-01.sop",
      "wires": 689,
-     "bytes": 85340,
+     "bytes": 85272,
      "keys": [
       "autonomous car",
       "back_wheel",
@@ -44337,7 +44341,7 @@
      "id": "k.objects/shards/openmoji-technology-02",
      "path": "k.objects/shards/openmoji-technology-02.sop",
      "wires": 641,
-     "bytes": 79698,
+     "bytes": 79613,
      "keys": [
       "barcode",
       "body",
@@ -44401,7 +44405,7 @@
      "id": "k.objects/shards/openmoji-travel-places-01",
      "path": "k.objects/shards/openmoji-travel-places-01.sop",
      "wires": 769,
-     "bytes": 96299,
+     "bytes": 96197,
      "keys": [
       "cafeteria",
       "cup",
@@ -44432,7 +44436,7 @@
      "id": "k.objects/shards/openmoji-travel-places-02",
      "path": "k.objects/shards/openmoji-travel-places-02.sop",
      "wires": 601,
-     "bytes": 74310,
+     "bytes": 74276,
      "keys": [
       "back_wheel",
       "box",
@@ -45238,8 +45242,8 @@
     {
      "id": "k.objects/shards/stand-ins-kinds",
      "path": "k.objects/shards/stand-ins-kinds.sop",
-     "wires": 12,
-     "bytes": 2920,
+     "wires": 13,
+     "bytes": 3119,
      "keys": [
       "buzzard",
       "cape",
@@ -45251,6 +45255,7 @@
       "guacamole",
       "hummus",
       "mall",
+      "paella",
       "pike",
       "stork"
      ],

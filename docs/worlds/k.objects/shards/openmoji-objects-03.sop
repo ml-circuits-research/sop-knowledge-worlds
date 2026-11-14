@@ -134,7 +134,7 @@
 @k.objects.ome153.p16.9 k.objects.point part=$k.objects.ome153.p16 n=9 x=79.7 y=67.2 core.source="openmoji 3e01de5"
 @k.objects.ome153.p16.10 k.objects.point part=$k.objects.ome153.p16 n=10 x=77.9 y=65.5 core.source="openmoji 3e01de5"
 @k.objects.ome153.p16.11 k.objects.point part=$k.objects.ome153.p16 n=11 x=77.8 y=62.4 core.source="openmoji 3e01de5"
-@k.objects.ome153.word core.word text=coffee text=latte means="milk jug" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome153.keyword k.objects.keyword of="milk jug" text=coffee text=latte core.source="openmoji 3e01de5"
 
 # electric coffee percolator
 @k.objects.ome154 k.objects.object name="electric coffee percolator" core.source="openmoji 3e01de5"
@@ -253,7 +253,7 @@
 @k.objects.ome154.p16.2 k.objects.point part=$k.objects.ome154.p16 n=2 x=61.1 y=23.4 core.source="openmoji 3e01de5"
 @k.objects.ome154.p16.3 k.objects.point part=$k.objects.ome154.p16 n=3 x=58.3 y=23.8 core.source="openmoji 3e01de5"
 @k.objects.ome154.p16.4 k.objects.point part=$k.objects.ome154.p16 n=4 x=65.3 y=70.3 core.source="openmoji 3e01de5"
-@k.objects.ome154.word core.word text="burned coffee" means="electric coffee percolator" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome154.keyword k.objects.keyword of="electric coffee percolator" text="burned coffee" core.source="openmoji 3e01de5"
 
 # drip coffee maker
 @k.objects.ome155 k.objects.object name="drip coffee maker" core.source="openmoji 3e01de5"

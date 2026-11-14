@@ -215,7 +215,7 @@
 @k.objects.u1f406.p16.10 k.objects.point part=$k.objects.u1f406.p16 n=10 x=27.5 y=59.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f406.p16.11 k.objects.point part=$k.objects.u1f406.p16 n=11 x=27.7 y=56.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f406.p16.12 k.objects.point part=$k.objects.u1f406.p16 n=12 x=30.7 y=56.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f406.word core.word text=animal text=big text=cat text=predator text=zoo means=leopard of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f406.keyword k.objects.keyword of=leopard text=animal text=big text=cat text=predator text=zoo core.source="cldr 48"
 
 # horse face
 @k.objects.u1f434 k.objects.object name="horse face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -369,7 +369,7 @@
 @k.objects.u1f434.p9.6 k.objects.point part=$k.objects.u1f434.p9 n=6 x=18 y=64.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f434.p9.7 k.objects.point part=$k.objects.u1f434.p9 n=7 x=18.5 y=62.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f434.p9.8 k.objects.point part=$k.objects.u1f434.p9 n=8 x=19.5 y=61.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f434.word core.word text=animal text=dressage text=equine text=face text=farm text=horse text=horses means="horse face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f434.keyword k.objects.keyword of="horse face" text=animal text=dressage text=equine text=face text=farm text=horse text=horses core.source="cldr 48"
 
 # moose
 @k.objects.u1face k.objects.object name=moose core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -584,7 +584,7 @@
 @k.objects.u1face.p16.6 k.objects.point part=$k.objects.u1face.p16 n=6 x=62.5 y=56.3 core.source="noto-emoji 99701e0"
 @k.objects.u1face.p16.7 k.objects.point part=$k.objects.u1face.p16 n=7 x=64 y=53.1 core.source="noto-emoji 99701e0"
 @k.objects.u1face.p16.8 k.objects.point part=$k.objects.u1face.p16 n=8 x=64.1 y=49 core.source="noto-emoji 99701e0"
-@k.objects.u1face.word core.word text=alces text=animal text=antlers text=elk text=mammal means=moose of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1face.keyword k.objects.keyword of=moose text=alces text=animal text=antlers text=elk text=mammal core.source="cldr 48"
 
 # donkey
 @k.objects.u1facf k.objects.object name=donkey core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -795,7 +795,7 @@
 @k.objects.u1facf.p16.4 k.objects.point part=$k.objects.u1facf.p16 n=4 x=24.8 y=69.7 core.source="noto-emoji 99701e0"
 @k.objects.u1facf.p16.5 k.objects.point part=$k.objects.u1facf.p16 n=5 x=26.2 y=69.7 core.source="noto-emoji 99701e0"
 @k.objects.u1facf.p16.6 k.objects.point part=$k.objects.u1facf.p16 n=6 x=26.6 y=69 core.source="noto-emoji 99701e0"
-@k.objects.u1facf.word core.word text=animal text=ass text=burro text=hinny text=mammal text=mule text=stubborn means=donkey of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1facf.keyword k.objects.keyword of=donkey text=animal text=ass text=burro text=hinny text=mammal text=mule text=stubborn core.source="cldr 48"
 
 # horse
 @k.objects.u1f40e k.objects.object name=horse core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1012,7 +1012,7 @@
 @k.objects.u1f40e.p16.4 k.objects.point part=$k.objects.u1f40e.p16 n=4 x=26 y=55.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f40e.p16.5 k.objects.point part=$k.objects.u1f40e.p16 n=5 x=25.1 y=58.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f40e.p16.6 k.objects.point part=$k.objects.u1f40e.p16 n=6 x=26.4 y=63 core.source="noto-emoji 99701e0"
-@k.objects.u1f40e.word core.word text=animal text=equestrian text=farm text=racehorse text=racing means=horse of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f40e.keyword k.objects.keyword of=horse text=animal text=equestrian text=farm text=racehorse text=racing core.source="cldr 48"
 
 # unicorn
 @k.objects.u1f984 k.objects.object name=unicorn core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1219,7 +1219,7 @@
 @k.objects.u1f984.p16.22 k.objects.point part=$k.objects.u1f984.p16 n=22 x=8.4 y=64.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f984.p16.23 k.objects.point part=$k.objects.u1f984.p16 n=23 x=10.9 y=60.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f984.p16.24 k.objects.point part=$k.objects.u1f984.p16 n=24 x=15.9 y=56.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f984.word core.word text=face means=unicorn of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f984.keyword k.objects.keyword of=unicorn text=face core.source="cldr 48"
 
 # zebra
 @k.objects.u1f993 k.objects.object name=zebra core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1425,7 +1425,7 @@
 @k.objects.u1f993.p16.5 k.objects.point part=$k.objects.u1f993.p16 n=5 x=93.4 y=51.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f993.p16.6 k.objects.point part=$k.objects.u1f993.p16 n=6 x=91.9 y=53 core.source="noto-emoji 99701e0"
 @k.objects.u1f993.p16.7 k.objects.point part=$k.objects.u1f993.p16 n=7 x=90.2 y=52.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f993.word core.word text=animal text=stripe means=zebra of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f993.keyword k.objects.keyword of=zebra text=animal text=stripe core.source="cldr 48"
 
 # deer
 @k.objects.u1f98c k.objects.object name=deer core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1595,4 +1595,4 @@
 @k.objects.u1f98c.p10.24 k.objects.point part=$k.objects.u1f98c.p10 n=24 x=18.7 y=3.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f98c.p10.25 k.objects.point part=$k.objects.u1f98c.p10 n=25 x=17.2 y=4.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f98c.p10.26 k.objects.point part=$k.objects.u1f98c.p10 n=26 x=17.1 y=6.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f98c.word core.word text=animal means=deer of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f98c.keyword k.objects.keyword of=deer text=animal core.source="cldr 48"

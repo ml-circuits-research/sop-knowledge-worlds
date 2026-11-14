@@ -391,7 +391,7 @@
 @k.objects.mb486.p16.8 k.objects.point part=$k.objects.mb486.p16 n=8 x=42.5 y=88 core.source="mulberry fa94a93"
 @k.objects.mb486.p16.9 k.objects.point part=$k.objects.mb486.p16 n=9 x=44.4 y=91.3 core.source="mulberry fa94a93"
 @k.objects.mb486.p16.10 k.objects.point part=$k.objects.mb486.p16 n=10 x=46.9 y=93.1 core.source="mulberry fa94a93"
-@k.objects.mb486.word core.word text=celebration text=Christian text=food means="chocolate log" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb486.keyword k.objects.keyword of="chocolate log" text=celebration text=Christian text=food core.source="mulberry fa94a93"
 
 # cornflakes
 @k.objects.mb609 k.objects.object name=cornflakes core.source="mulberry fa94a93"
@@ -595,7 +595,7 @@
 @k.objects.mb609.p16.10 k.objects.point part=$k.objects.mb609.p16 n=10 x=41 y=70 core.source="mulberry fa94a93"
 @k.objects.mb609.p16.11 k.objects.point part=$k.objects.mb609.p16 n=11 x=36.8 y=67.8 core.source="mulberry fa94a93"
 @k.objects.mb609.p16.12 k.objects.point part=$k.objects.mb609.p16 n=12 x=36 y=65.3 core.source="mulberry fa94a93"
-@k.objects.mb609.word core.word text=breakfast text=food text=meal means=cornflakes of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb609.keyword k.objects.keyword of=cornflakes text=breakfast text=food text=meal core.source="mulberry fa94a93"
 
 # danish pastry
 @k.objects.mb862 k.objects.object name="danish pastry" core.source="mulberry fa94a93"
@@ -991,7 +991,7 @@
 @k.objects.mb1408.p16.3 k.objects.point part=$k.objects.mb1408.p16 n=3 x=33.5 y=75.6 core.source="mulberry fa94a93"
 @k.objects.mb1408.p16.4 k.objects.point part=$k.objects.mb1408.p16 n=4 x=34.3 y=87 core.source="mulberry fa94a93"
 @k.objects.mb1408.p16.5 k.objects.point part=$k.objects.mb1408.p16 n=5 x=35.5 y=91.3 core.source="mulberry fa94a93"
-@k.objects.mb1408.word core.word text=food text=ingredient means="flour plain" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1408.keyword k.objects.keyword of="flour plain" text=food text=ingredient core.source="mulberry fa94a93"
 
 # flour self raising
 @k.objects.mb1409 k.objects.object name="flour self raising" core.source="mulberry fa94a93"
@@ -1209,7 +1209,7 @@
 @k.objects.mb1409.p16.11 k.objects.point part=$k.objects.mb1409.p16 n=11 x=79.4 y=21.8 core.source="mulberry fa94a93"
 @k.objects.mb1409.p16.12 k.objects.point part=$k.objects.mb1409.p16 n=12 x=88.4 y=19.3 core.source="mulberry fa94a93"
 @k.objects.mb1409.p16.13 k.objects.point part=$k.objects.mb1409.p16 n=13 x=91.8 y=15.6 core.source="mulberry fa94a93"
-@k.objects.mb1409.word core.word text=food text=ingredient means="flour self raising" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1409.keyword k.objects.keyword of="flour self raising" text=food text=ingredient core.source="mulberry fa94a93"
 
 # french stick
 @k.objects.mb1482 k.objects.object name="french stick" core.source="mulberry fa94a93"

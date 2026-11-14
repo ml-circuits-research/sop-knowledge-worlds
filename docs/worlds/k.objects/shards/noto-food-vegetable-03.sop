@@ -218,7 +218,7 @@
 @k.objects.u1fadb.p14.17 k.objects.point part=$k.objects.u1fadb.p14 n=17 x=62.6 y=17.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fadb.p14.18 k.objects.point part=$k.objects.u1fadb.p14 n=18 x=66.7 y=18.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fadb.p14.19 k.objects.point part=$k.objects.u1fadb.p14 n=19 x=73.6 y=16.9 core.source="noto-emoji 99701e0"
-@k.objects.u1fadb.word core.word text=beans text=beanstalk text=edamame text=legume text=pea text=pod text=soybean text=vegetable text=veggie means="pea pod" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fadb.keyword k.objects.keyword of="pea pod" text=beans text=beanstalk text=edamame text=legume text=pea text=pod text=soybean text=vegetable text=veggie core.source="cldr 48"
 
 # brown mushroom
 @k.objects.u1f344_200d_1f7eb k.objects.object name="brown mushroom" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -297,7 +297,7 @@
 @k.objects.u1f344_200d_1f7eb.p4.10 k.objects.point part=$k.objects.u1f344_200d_1f7eb.p4 n=10 x=31.9 y=16.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f344_200d_1f7eb.p4.11 k.objects.point part=$k.objects.u1f344_200d_1f7eb.p4 n=11 x=28.6 y=14.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f344_200d_1f7eb.p4.12 k.objects.point part=$k.objects.u1f344_200d_1f7eb.p4 n=12 x=24.4 y=15.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f344_200d_1f7eb.word core.word text=food text=fungi text=fungus text=mushroom text=nature text=pizza text=portobello text=shiitake text=shroom text=spore text=sprout text=toppings text=truffle text=vegetable text=vegetarian text=veggie means="brown mushroom" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f344_200d_1f7eb.keyword k.objects.keyword of="brown mushroom" text=food text=fungi text=fungus text=mushroom text=nature text=pizza text=portobello text=shiitake text=shroom text=spore text=sprout text=toppings text=truffle text=vegetable text=vegetarian text=veggie core.source="cldr 48"
 
 # root vegetable
 @k.objects.u1fadc k.objects.object name="root vegetable" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -473,4 +473,4 @@
 @k.objects.u1fadc.p8.3 k.objects.point part=$k.objects.u1fadc.p8 n=3 x=65.9 y=42.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fadc.p8.4 k.objects.point part=$k.objects.u1fadc.p8 n=4 x=63.3 y=40 core.source="noto-emoji 99701e0"
 @k.objects.u1fadc.p8.5 k.objects.point part=$k.objects.u1fadc.p8 n=5 x=54.3 y=48 core.source="noto-emoji 99701e0"
-@k.objects.u1fadc.word core.word text=beet text=food text=garden text=radish text=root text=salad text=turnip text=vegetable text=vegetarian means="root vegetable" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fadc.keyword k.objects.keyword of="root vegetable" text=beet text=food text=garden text=radish text=root text=salad text=turnip text=vegetable text=vegetarian core.source="cldr 48"

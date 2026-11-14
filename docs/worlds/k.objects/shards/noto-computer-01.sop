@@ -246,7 +246,7 @@
 @k.objects.u1faab.p9.11 k.objects.point part=$k.objects.u1faab.p9 n=11 x=60.1 y=86 core.source="noto-emoji 99701e0"
 @k.objects.u1faab.p9.12 k.objects.point part=$k.objects.u1faab.p9 n=12 x=60.1 y=81.7 core.source="noto-emoji 99701e0"
 @k.objects.u1faab.p9.13 k.objects.point part=$k.objects.u1faab.p9 n=13 x=59.7 y=80.9 core.source="noto-emoji 99701e0"
-@k.objects.u1faab.word core.word text=battery text=drained text=electronic text=energy text=low text=power means="low battery" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faab.keyword k.objects.keyword of="low battery" text=battery text=drained text=electronic text=energy text=low text=power core.source="cldr 48"
 
 # electric plug
 @k.objects.u1f50c k.objects.object name="electric plug" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -427,7 +427,7 @@
 @k.objects.u1f50c.p16.6 k.objects.point part=$k.objects.u1f50c.p16 n=6 x=81.5 y=64.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f50c.p16.7 k.objects.point part=$k.objects.u1f50c.p16 n=7 x=79.8 y=66.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f50c.p16.8 k.objects.point part=$k.objects.u1f50c.p16 n=8 x=78.7 y=71.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f50c.word core.word text=electric text=electricity text=plug means="electric plug" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f50c.keyword k.objects.keyword of="electric plug" text=electric text=electricity text=plug core.source="cldr 48"
 
 # laptop
 @k.objects.u1f4bb k.objects.object name=laptop core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -569,7 +569,7 @@
 @k.objects.u1f4bb.p10.17 k.objects.point part=$k.objects.u1f4bb.p10 n=17 x=87 y=56.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bb.p10.18 k.objects.point part=$k.objects.u1f4bb.p10 n=18 x=87.4 y=55.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bb.p10.19 k.objects.point part=$k.objects.u1f4bb.p10 n=19 x=87.7 y=11.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f4bb.word core.word text=computer text=office text=pc text=personal means=laptop of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4bb.keyword k.objects.keyword of=laptop text=computer text=office text=pc text=personal core.source="cldr 48"
 
 # desktop computer
 @k.objects.u1f5a5 k.objects.object name="desktop computer" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -673,7 +673,7 @@
 @k.objects.u1f5a5.p12 k.objects.part of="desktop computer" name=part12 named=no shape=line x=12.8 y=5.5 w=8.7 h=0 z=12 colour=white rgb="#EEEEEE" core.source="noto-emoji 99701e0"
 @k.objects.u1f5a5.p12.1 k.objects.point part=$k.objects.u1f5a5.p12 n=1 x=12.8 y=5.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f5a5.p12.2 k.objects.point part=$k.objects.u1f5a5.p12 n=2 x=21.5 y=5.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f5a5.word core.word text=computer text=desktop text=monitor means="desktop computer" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5a5.keyword k.objects.keyword of="desktop computer" text=computer text=desktop text=monitor core.source="cldr 48"
 
 # printer
 @k.objects.u1f5a8 k.objects.object name=printer core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -836,7 +836,7 @@
 @k.objects.u1f5a8.p16.4 k.objects.point part=$k.objects.u1f5a8.p16 n=4 x=22.5 y=74.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f5a8.p16.5 k.objects.point part=$k.objects.u1f5a8.p16 n=5 x=77.5 y=74.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f5a8.p16.6 k.objects.point part=$k.objects.u1f5a8.p16 n=6 x=76.3 y=71.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f5a8.word core.word text=computer means=printer of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5a8.keyword k.objects.keyword of=printer text=computer core.source="cldr 48"
 
 # keyboard
 @k.objects.u2328 k.objects.object name=keyboard core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -982,7 +982,7 @@
 @k.objects.u2328.p16.5 k.objects.point part=$k.objects.u2328.p16 n=5 x=14.5 y=59.3 core.source="noto-emoji 99701e0"
 @k.objects.u2328.p16.6 k.objects.point part=$k.objects.u2328.p16 n=6 x=9 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u2328.p16.7 k.objects.point part=$k.objects.u2328.p16 n=7 x=8.3 y=64.2 core.source="noto-emoji 99701e0"
-@k.objects.u2328.word core.word text=computer means=keyboard of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2328.keyword k.objects.keyword of=keyboard text=computer core.source="cldr 48"
 
 # computer mouse
 @k.objects.u1f5b1 k.objects.object name="computer mouse" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1102,4 +1102,4 @@
 @k.objects.u1f5b1.p5.12 k.objects.point part=$k.objects.u1f5b1.p5 n=12 x=48.5 y=21.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f5b1.p5.13 k.objects.point part=$k.objects.u1f5b1.p5 n=13 x=51.5 y=21.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f5b1.p5.14 k.objects.point part=$k.objects.u1f5b1.p5 n=14 x=53.2 y=23 core.source="noto-emoji 99701e0"
-@k.objects.u1f5b1.word core.word text=computer text=mouse means="computer mouse" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5b1.keyword k.objects.keyword of="computer mouse" text=computer text=mouse core.source="cldr 48"

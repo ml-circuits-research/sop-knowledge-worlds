@@ -856,7 +856,7 @@
 @k.objects.mb2724.p16.12 k.objects.point part=$k.objects.mb2724.p16 n=12 x=15.7 y=41.5 core.source="mulberry fa94a93"
 @k.objects.mb2724.p16.13 k.objects.point part=$k.objects.mb2724.p16 n=13 x=19.2 y=39.8 core.source="mulberry fa94a93"
 @k.objects.mb2724.p16.14 k.objects.point part=$k.objects.mb2724.p16 n=14 x=24.9 y=38.3 core.source="mulberry fa94a93"
-@k.objects.mb2724.word core.word text=ingredient means="sugar brown" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2724.keyword k.objects.keyword of="sugar brown" text=ingredient core.source="mulberry fa94a93"
 
 # sugar white
 @k.objects.mb2725 k.objects.object name="sugar white" core.source="mulberry fa94a93"
@@ -1045,7 +1045,7 @@
 @k.objects.mb2725.p16.12 k.objects.point part=$k.objects.mb2725.p16 n=12 x=15.7 y=41.5 core.source="mulberry fa94a93"
 @k.objects.mb2725.p16.13 k.objects.point part=$k.objects.mb2725.p16 n=13 x=19.2 y=39.8 core.source="mulberry fa94a93"
 @k.objects.mb2725.p16.14 k.objects.point part=$k.objects.mb2725.p16 n=14 x=24.9 y=38.3 core.source="mulberry fa94a93"
-@k.objects.mb2725.word core.word text=ingredient means="sugar white" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2725.keyword k.objects.keyword of="sugar white" text=ingredient core.source="mulberry fa94a93"
 
 # vinegar
 @k.objects.mb2984 k.objects.object name=vinegar core.source="mulberry fa94a93"

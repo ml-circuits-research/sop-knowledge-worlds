@@ -122,7 +122,7 @@
 @k.objects.mb2426.p16 k.objects.part of=rug name=part16 kind=detail named=no shape=line x=64.1 y=33.3 w=10.5 h=2.4 z=16 colour=black rgb="#141212" core.source="mulberry fa94a93"
 @k.objects.mb2426.p16.1 k.objects.point part=$k.objects.mb2426.p16 n=1 x=64.1 y=33.3 core.source="mulberry fa94a93"
 @k.objects.mb2426.p16.2 k.objects.point part=$k.objects.mb2426.p16 n=2 x=74.6 y=35.7 core.source="mulberry fa94a93"
-@k.objects.mb2426.word core.word text=home text=house means=rug of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2426.keyword k.objects.keyword of=rug text=home text=house core.source="mulberry fa94a93"
 
 # scrubbing brush
 @k.objects.mb2495 k.objects.object name="scrubbing brush" core.source="mulberry fa94a93"
@@ -276,7 +276,7 @@
 @k.objects.mb2495.p16.1 k.objects.point part=$k.objects.mb2495.p16 n=1 x=35.3 y=52.7 core.source="mulberry fa94a93"
 @k.objects.mb2495.p16.2 k.objects.point part=$k.objects.mb2495.p16 n=2 x=34.5 y=63.6 core.source="mulberry fa94a93"
 @k.objects.mb2495.p16.3 k.objects.point part=$k.objects.mb2495.p16 n=3 x=35.1 y=70.3 core.source="mulberry fa94a93"
-@k.objects.mb2495.word core.word text=home text=house means="scrubbing brush" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2495.keyword k.objects.keyword of="scrubbing brush" text=home text=house core.source="mulberry fa94a93"
 
 # spot light
 @k.objects.mb2654 k.objects.object name="spot light" core.source="mulberry fa94a93"
@@ -649,7 +649,7 @@
 @k.objects.mb2970.p14.1 k.objects.point part=$k.objects.mb2970.p14 n=1 x=53.8 y=42.8 core.source="mulberry fa94a93"
 @k.objects.mb2970.p14.2 k.objects.point part=$k.objects.mb2970.p14 n=2 x=52.5 y=38.8 core.source="mulberry fa94a93"
 @k.objects.mb2970.p14.3 k.objects.point part=$k.objects.mb2970.p14 n=3 x=48.5 y=34.4 core.source="mulberry fa94a93"
-@k.objects.mb2970.word core.word text=home text=house means="vacuum cleaner hand held" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2970.keyword k.objects.keyword of="vacuum cleaner hand held" text=home text=house core.source="mulberry fa94a93"
 
 # vase
 @k.objects.mb2974 k.objects.object name=vase core.source="mulberry fa94a93"
@@ -969,7 +969,7 @@
 @k.objects.mb3016.p12.10 k.objects.point part=$k.objects.mb3016.p12 n=10 x=38.5 y=49.5 core.source="mulberry fa94a93"
 @k.objects.mb3016.p12.11 k.objects.point part=$k.objects.mb3016.p12 n=11 x=43 y=39.9 core.source="mulberry fa94a93"
 @k.objects.mb3016.p12.12 k.objects.point part=$k.objects.mb3016.p12 n=12 x=49.9 y=37.1 core.source="mulberry fa94a93"
-@k.objects.mb3016.word core.word text=home text=house means="washing powder" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3016.keyword k.objects.keyword of="washing powder" text=home text=house core.source="mulberry fa94a93"
 
 # washing up bowl
 @k.objects.mb3017 k.objects.object name="washing up bowl" core.source="mulberry fa94a93"
@@ -1102,4 +1102,4 @@
 @k.objects.mb3017.p8.2 k.objects.point part=$k.objects.mb3017.p8 n=2 x=60.4 y=46.2 core.source="mulberry fa94a93"
 @k.objects.mb3017.p8.3 k.objects.point part=$k.objects.mb3017.p8 n=3 x=63.5 y=46.5 core.source="mulberry fa94a93"
 @k.objects.mb3017.p8.4 k.objects.point part=$k.objects.mb3017.p8 n=4 x=66.1 y=48.4 core.source="mulberry fa94a93"
-@k.objects.mb3017.word core.word text=home text=house means="washing up bowl" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3017.keyword k.objects.keyword of="washing up bowl" text=home text=house core.source="mulberry fa94a93"

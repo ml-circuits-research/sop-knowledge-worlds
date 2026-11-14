@@ -386,7 +386,7 @@
 @k.objects.ome201.p13 k.objects.part of="emergency exit" name=part13 kind=detail named=no shape=line x=42.1 y=33.6 w=5.2 h=5.2 z=13 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome201.p13.1 k.objects.point part=$k.objects.ome201.p13 n=1 x=42.1 y=38.8 core.source="openmoji 3e01de5"
 @k.objects.ome201.p13.2 k.objects.point part=$k.objects.ome201.p13 n=2 x=47.3 y=33.6 core.source="openmoji 3e01de5"
-@k.objects.ome201.word core.word text=alarm text=fire text=escape text=way text=route text=guidance text=signage text=run text=person text=people text=humans means="emergency exit" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome201.keyword k.objects.keyword of="emergency exit" text=alarm text=fire text=escape text=way text=route text=guidance text=signage text=run text=person text=people text=humans core.source="openmoji 3e01de5"
 
 # stairway
 @k.objects.ome202 k.objects.object name=stairway core.source="openmoji 3e01de5"
@@ -443,7 +443,7 @@
 @k.objects.ome202.p15 k.objects.part of=stairway name=part15 kind=detail named=no shape=line x=22.8 y=55 w=11.8 h=0 z=15 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome202.p15.1 k.objects.point part=$k.objects.ome202.p15 n=1 x=34.6 y=55 core.source="openmoji 3e01de5"
 @k.objects.ome202.p15.2 k.objects.point part=$k.objects.ome202.p15 n=2 x=22.8 y=55 core.source="openmoji 3e01de5"
-@k.objects.ome202.word core.word text=steps text=up text=down text=ascend text=descend text=walk means=stairway of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome202.keyword k.objects.keyword of=stairway text=steps text=up text=down text=ascend text=descend text=walk core.source="openmoji 3e01de5"
 
 # eiffel tower
 @k.objects.ome205 k.objects.object name="eiffel tower" core.source="openmoji 3e01de5"
@@ -542,7 +542,7 @@
 @k.objects.ome205.p16.2 k.objects.point part=$k.objects.ome205.p16 n=2 x=54.5 y=48.5 core.source="openmoji 3e01de5"
 @k.objects.ome205.p16.3 k.objects.point part=$k.objects.ome205.p16 n=3 x=52 y=34.2 core.source="openmoji 3e01de5"
 @k.objects.ome205.p16.4 k.objects.point part=$k.objects.ome205.p16 n=4 x=50.1 y=12.4 core.source="openmoji 3e01de5"
-@k.objects.ome205.word core.word text=paris text=tower text=france means="eiffel tower" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome205.keyword k.objects.keyword of="eiffel tower" text=paris text=tower text=france core.source="openmoji 3e01de5"
 
 # parking garage
 @k.objects.ome206 k.objects.object name="parking garage" core.source="openmoji 3e01de5"
@@ -580,7 +580,7 @@
 @k.objects.ome206.p5.10 k.objects.point part=$k.objects.ome206.p5 n=10 x=57.8 y=56.8 core.source="openmoji 3e01de5"
 @k.objects.ome206.p5.11 k.objects.point part=$k.objects.ome206.p5 n=11 x=55.8 y=57.9 core.source="openmoji 3e01de5"
 @k.objects.ome206.p5.12 k.objects.point part=$k.objects.ome206.p5 n=12 x=41.7 y=58.3 core.source="openmoji 3e01de5"
-@k.objects.ome206.word core.word text="parking lot" text=car text=automobile text=vehicle text=sign text="traffic sign" text=p means="parking garage" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome206.keyword k.objects.keyword of="parking garage" text="parking lot" text=car text=automobile text=vehicle text=sign text="traffic sign" text=p core.source="openmoji 3e01de5"
 
 # space shuttle
 @k.objects.ome20b k.objects.object name="space shuttle" core.source="openmoji 3e01de5"
@@ -702,7 +702,7 @@
 @k.objects.ome20b.p13.12 k.objects.point part=$k.objects.ome20b.p13 n=12 x=54.9 y=83.2 core.source="openmoji 3e01de5"
 @k.objects.ome20b.p13.13 k.objects.point part=$k.objects.ome20b.p13 n=13 x=55.6 y=86.8 core.source="openmoji 3e01de5"
 @k.objects.ome20b.p13.14 k.objects.point part=$k.objects.ome20b.p13 n=14 x=55.6 y=91.4 core.source="openmoji 3e01de5"
-@k.objects.ome20b.word core.word text=nasa text=shuttle text=rocket text=space text=galaxy text=adventure text=alien text=transportation means="space shuttle" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome20b.keyword k.objects.keyword of="space shuttle" text=nasa text=shuttle text=rocket text=space text=galaxy text=adventure text=alien text=transportation core.source="openmoji 3e01de5"
 
 # viennese coffee house
 @k.objects.ome20c k.objects.object name="viennese coffee house" core.source="openmoji 3e01de5"
@@ -786,4 +786,4 @@
 @k.objects.ome20c.p16.2 k.objects.point part=$k.objects.ome20c.p16 n=2 x=83.3 y=18.1 core.source="openmoji 3e01de5"
 @k.objects.ome20c.p16.3 k.objects.point part=$k.objects.ome20c.p16 n=3 x=83.3 y=83.3 core.source="openmoji 3e01de5"
 @k.objects.ome20c.p16.4 k.objects.point part=$k.objects.ome20c.p16 n=4 x=16.7 y=83.3 core.source="openmoji 3e01de5"
-@k.objects.ome20c.word core.word text="viennese coffee culture" means="viennese coffee house" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome20c.keyword k.objects.keyword of="viennese coffee house" text="viennese coffee culture" core.source="openmoji 3e01de5"

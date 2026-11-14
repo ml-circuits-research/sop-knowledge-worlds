@@ -187,7 +187,7 @@
 @k.objects.u1f3da.p16.3 k.objects.point part=$k.objects.u1f3da.p16 n=3 x=48.7 y=92.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3da.p16.4 k.objects.point part=$k.objects.u1f3da.p16 n=4 x=63.2 y=92.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3da.p16.5 k.objects.point part=$k.objects.u1f3da.p16 n=5 x=62.1 y=97.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f3da.word core.word text=derelict text=home text=house means="derelict house" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3da.keyword k.objects.keyword of="derelict house" text=derelict text=home text=house core.source="cldr 48"
 
 # house with garden
 @k.objects.u1f3e1 k.objects.object name="house with garden" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -367,7 +367,7 @@
 @k.objects.u1f3e1.p16.2 k.objects.point part=$k.objects.u1f3e1.p16 n=2 x=39.7 y=82.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e1.p16.3 k.objects.point part=$k.objects.u1f3e1.p16 n=3 x=60.8 y=82.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e1.p16.4 k.objects.point part=$k.objects.u1f3e1.p16 n=4 x=61.2 y=94.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3e1.word core.word text=building text=country text=garden text=heart text=home text=house text=ranch text=settle text=simple text=suburban text=suburbia text=where means="house with garden" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e1.keyword k.objects.keyword of="house with garden" text=building text=country text=garden text=heart text=home text=house text=ranch text=settle text=simple text=suburban text=suburbia text=where core.source="cldr 48"
 
 # office building
 @k.objects.u1f3e2 k.objects.object name="office building" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -454,7 +454,7 @@
 @k.objects.u1f3e2.p14.4 k.objects.point part=$k.objects.u1f3e2.p14 n=4 x=58.6 y=92.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e2.p15 k.objects.part of="office building" name=left_door kind=door named=model shape=rectangle x=42.1 y=78.1 w=6.6 h=13 z=15 colour=grey rgb="#536F7B" core.source="noto-emoji 99701e0"
 @k.objects.u1f3e2.p16 k.objects.part of="office building" name=right_door kind=door named=model shape=rectangle x=50.4 y=78.1 w=6.8 h=13 z=16 colour=grey rgb="#536F7B" core.source="noto-emoji 99701e0"
-@k.objects.u1f3e2.word core.word text=building text=city text=cubical text=job text=office means="office building" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e2.keyword k.objects.keyword of="office building" text=building text=city text=cubical text=job text=office core.source="cldr 48"
 
 # Japanese post office
 @k.objects.u1f3e3 k.objects.object name="Japanese post office" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -517,7 +517,7 @@
 @k.objects.u1f3e3.p16.4 k.objects.point part=$k.objects.u1f3e3.p16 n=4 x=63.7 y=92.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e3.p16.5 k.objects.point part=$k.objects.u1f3e3.p16 n=5 x=76.6 y=92.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e3.p16.6 k.objects.point part=$k.objects.u1f3e3.p16 n=6 x=76.5 y=80.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f3e3.word core.word text=building text=Japanese text=office text=post means="Japanese post office" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e3.keyword k.objects.keyword of="Japanese post office" text=building text=Japanese text=office text=post core.source="cldr 48"
 
 # post office
 @k.objects.u1f3e4 k.objects.object name="post office" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -672,7 +672,7 @@
 @k.objects.u1f3e4.p16.31 k.objects.point part=$k.objects.u1f3e4.p16 n=31 x=54.8 y=38.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e4.p16.32 k.objects.point part=$k.objects.u1f3e4.p16 n=32 x=57 y=40.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e4.p16.33 k.objects.point part=$k.objects.u1f3e4.p16 n=33 x=58.5 y=43.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f3e4.word core.word text=building text=European text=office text=post means="post office" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e4.keyword k.objects.keyword of="post office" text=building text=European text=office text=post core.source="cldr 48"
 
 # hospital
 @k.objects.u1f3e5 k.objects.object name=hospital core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -783,7 +783,7 @@
 @k.objects.u1f3e5.p16.14 k.objects.point part=$k.objects.u1f3e5.p16 n=14 x=44.5 y=27.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e5.p16.15 k.objects.point part=$k.objects.u1f3e5.p16 n=15 x=33.6 y=27.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e5.p16.16 k.objects.point part=$k.objects.u1f3e5.p16 n=16 x=33.8 y=16.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3e5.word core.word text=building text=doctor text=medicine means=hospital of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e5.keyword k.objects.keyword of=hospital text=building text=doctor text=medicine core.source="cldr 48"
 
 # bank
 @k.objects.u1f3e6 k.objects.object name=bank core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -982,7 +982,7 @@
 @k.objects.u1f3e6.p16.32 k.objects.point part=$k.objects.u1f3e6.p16 n=32 x=40.8 y=23.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e6.p16.33 k.objects.point part=$k.objects.u1f3e6.p16 n=33 x=41.6 y=20.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3e6.p16.34 k.objects.point part=$k.objects.u1f3e6.p16 n=34 x=44.3 y=17.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f3e6.word core.word text=building means=bank of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e6.keyword k.objects.keyword of=bank text=building core.source="cldr 48"
 
 # hotel
 @k.objects.u1f3e8 k.objects.object name=hotel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1115,4 +1115,4 @@
 @k.objects.u1f3e8.p14 k.objects.part of=hotel name=part14 named=no shape=rectangle x=36.1 y=28.9 w=7.3 h=36.4 z=14 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
 @k.objects.u1f3e8.p15 k.objects.part of=hotel name=part15 named=no shape=rectangle x=56.6 y=28.9 w=7.3 h=36.4 z=15 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
 @k.objects.u1f3e8.p16 k.objects.part of=hotel name=part16 named=no shape=rectangle x=41.5 y=43.8 w=16.8 h=7.2 z=16 colour=red rgb="#FF2A23" core.source="noto-emoji 99701e0"
-@k.objects.u1f3e8.word core.word text=building means=hotel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3e8.keyword k.objects.keyword of=hotel text=building core.source="cldr 48"

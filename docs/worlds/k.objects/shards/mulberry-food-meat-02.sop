@@ -526,7 +526,7 @@
 @k.objects.mb2471.p15.2 k.objects.point part=$k.objects.mb2471.p15 n=2 x=67.4 y=27.7 core.source="mulberry fa94a93"
 @k.objects.mb2471.p15.3 k.objects.point part=$k.objects.mb2471.p15 n=3 x=67.4 y=26.4 core.source="mulberry fa94a93"
 @k.objects.mb2471.p15.4 k.objects.point part=$k.objects.mb2471.p15 n=4 x=67 y=26.2 core.source="mulberry fa94a93"
-@k.objects.mb2471.word core.word text=food text=meat text=pork means=sausages of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2471.keyword k.objects.keyword of=sausages text=food text=meat text=pork core.source="mulberry fa94a93"
 
 # steak
 @k.objects.mb2680 k.objects.object name=steak core.source="mulberry fa94a93"

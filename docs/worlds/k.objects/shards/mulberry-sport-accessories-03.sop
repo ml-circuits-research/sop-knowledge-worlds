@@ -652,7 +652,7 @@
 @k.objects.mb2563.p16.1 k.objects.point part=$k.objects.mb2563.p16 n=1 x=52.9 y=29.4 core.source="mulberry fa94a93"
 @k.objects.mb2563.p16.2 k.objects.point part=$k.objects.mb2563.p16 n=2 x=54.8 y=56.1 core.source="mulberry fa94a93"
 @k.objects.mb2563.p16.3 k.objects.point part=$k.objects.mb2563.p16 n=3 x=61.9 y=87.4 core.source="mulberry fa94a93"
-@k.objects.mb2563.word core.word text=games text=sport means=shuttlecock of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2563.keyword k.objects.keyword of=shuttlecock text=games text=sport core.source="mulberry fa94a93"
 
 # stirrups
 @k.objects.mb2701 k.objects.object name=stirrups core.source="mulberry fa94a93"
@@ -794,7 +794,7 @@
 @k.objects.mb2701.p16 k.objects.part of=stirrups name=part16 kind=detail named=no shape=line x=70.7 y=8.3 w=0 h=28.4 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2701.p16.1 k.objects.point part=$k.objects.mb2701.p16 n=1 x=70.7 y=8.3 core.source="mulberry fa94a93"
 @k.objects.mb2701.p16.2 k.objects.point part=$k.objects.mb2701.p16 n=2 x=70.7 y=36.7 core.source="mulberry fa94a93"
-@k.objects.mb2701.word core.word text=sport means=stirrups of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2701.keyword k.objects.keyword of=stirrups text=sport core.source="mulberry fa94a93"
 
 # trampoline
 @k.objects.mb2908 k.objects.object name=trampoline core.source="mulberry fa94a93"
@@ -980,4 +980,4 @@
 @k.objects.mb2908.p13 k.objects.part of=trampoline name=part13 kind=detail named=no shape=line x=31.2 y=67.5 w=37 h=0.3 z=13 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2908.p13.1 k.objects.point part=$k.objects.mb2908.p13 n=1 x=31.2 y=67.8 core.source="mulberry fa94a93"
 @k.objects.mb2908.p13.2 k.objects.point part=$k.objects.mb2908.p13 n=2 x=68.2 y=67.5 core.source="mulberry fa94a93"
-@k.objects.mb2908.word core.word text=games text=sport means=trampoline of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2908.keyword k.objects.keyword of=trampoline text=games text=sport core.source="mulberry fa94a93"

@@ -173,7 +173,7 @@
 @k.objects.ome009.p8.9 k.objects.point part=$k.objects.ome009.p8 n=9 x=37 y=30.5 core.source="openmoji 3e01de5"
 @k.objects.ome009.p8.10 k.objects.point part=$k.objects.ome009.p8 n=10 x=31.1 y=37.2 core.source="openmoji 3e01de5"
 @k.objects.ome009.p8.11 k.objects.point part=$k.objects.ome009.p8 n=11 x=27.6 y=43.8 core.source="openmoji 3e01de5"
-@k.objects.ome009.word core.word text=vermin text="rock dove" text=bird text=city means=pigeon of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome009.keyword k.objects.keyword of=pigeon text=vermin text="rock dove" text=bird text=city core.source="openmoji 3e01de5"
 
 # macaw
 @k.objects.ome010 k.objects.object name=macaw core.source="openmoji 3e01de5"
@@ -347,7 +347,7 @@
 @k.objects.ome010.p16 k.objects.part of=macaw name=part16 kind=detail named=no shape=line x=56.5 y=66.7 w=0 h=5.5 z=16 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome010.p16.1 k.objects.point part=$k.objects.ome010.p16 n=1 x=56.5 y=66.7 core.source="openmoji 3e01de5"
 @k.objects.ome010.p16.2 k.objects.point part=$k.objects.ome010.p16 n=2 x=56.5 y=72.2 core.source="openmoji 3e01de5"
-@k.objects.ome010.word core.word text=tropical text=jungle text=exotic text=parrots means=macaw of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome010.keyword k.objects.keyword of=macaw text=tropical text=jungle text=exotic text=parrots core.source="openmoji 3e01de5"
 
 # live-shrimp
 @k.objects.ome012 k.objects.object name=live-shrimp core.source="openmoji 3e01de5"
@@ -546,4 +546,4 @@
 @k.objects.ome012.p13.13 k.objects.point part=$k.objects.ome012.p13 n=13 x=63.2 y=24 core.source="openmoji 3e01de5"
 @k.objects.ome012.p13.14 k.objects.point part=$k.objects.ome012.p13 n=14 x=68.6 y=24.7 core.source="openmoji 3e01de5"
 @k.objects.ome012.p13.15 k.objects.point part=$k.objects.ome012.p13 n=15 x=75.8 y=24.6 core.source="openmoji 3e01de5"
-@k.objects.ome012.word core.word text=shrimp text="live shrimp" text=prawn text=crustacean text=animal text=water means=live-shrimp of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome012.keyword k.objects.keyword of=live-shrimp text=shrimp text="live shrimp" text=prawn text=crustacean text=animal text=water core.source="openmoji 3e01de5"

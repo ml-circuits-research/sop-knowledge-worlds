@@ -199,7 +199,7 @@
 @k.objects.mb1701.p16.17 k.objects.point part=$k.objects.mb1701.p16 n=17 x=59.3 y=9.1 core.source="mulberry fa94a93"
 @k.objects.mb1701.p16.18 k.objects.point part=$k.objects.mb1701.p16 n=18 x=63.1 y=10.8 core.source="mulberry fa94a93"
 @k.objects.mb1701.p16.19 k.objects.point part=$k.objects.mb1701.p16 n=19 x=48.8 y=42.6 core.source="mulberry fa94a93"
-@k.objects.mb1701.word core.word text=dessert text=diary text=food means="ice cream tub" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1701.keyword k.objects.keyword of="ice cream tub" text=dessert text=diary text=food core.source="mulberry fa94a93"
 
 # ice lolly
 @k.objects.mb1702 k.objects.object name="ice lolly" core.source="mulberry fa94a93"
@@ -269,7 +269,7 @@
 @k.objects.mb1702.p4.23 k.objects.point part=$k.objects.mb1702.p4 n=23 x=36.8 y=61.3 core.source="mulberry fa94a93"
 @k.objects.mb1702.p4.24 k.objects.point part=$k.objects.mb1702.p4 n=24 x=39.8 y=62.5 core.source="mulberry fa94a93"
 @k.objects.mb1702.p4.25 k.objects.point part=$k.objects.mb1702.p4 n=25 x=46.3 y=62.7 core.source="mulberry fa94a93"
-@k.objects.mb1702.word core.word text=food means="ice lolly" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1702.keyword k.objects.keyword of="ice lolly" text=food core.source="mulberry fa94a93"
 
 # jam
 @k.objects.mb1737 k.objects.object name=jam core.source="mulberry fa94a93"
@@ -684,7 +684,7 @@
 @k.objects.mb1738.p16.16 k.objects.point part=$k.objects.mb1738.p16 n=16 x=89.7 y=50.5 core.source="mulberry fa94a93"
 @k.objects.mb1738.p16.17 k.objects.point part=$k.objects.mb1738.p16 n=17 x=86.4 y=57.3 core.source="mulberry fa94a93"
 @k.objects.mb1738.p16.18 k.objects.point part=$k.objects.mb1738.p16 n=18 x=80.4 y=63 core.source="mulberry fa94a93"
-@k.objects.mb1738.word core.word text=cake text=dessert text=food means="jam tart" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1738.keyword k.objects.keyword of="jam tart" text=cake text=dessert text=food core.source="mulberry fa94a93"
 
 # jelly
 @k.objects.mb1744 k.objects.object name=jelly core.source="mulberry fa94a93"
@@ -904,7 +904,7 @@
 @k.objects.mb1744.p16.3 k.objects.point part=$k.objects.mb1744.p16 n=3 x=64.2 y=23 core.source="mulberry fa94a93"
 @k.objects.mb1744.p16.4 k.objects.point part=$k.objects.mb1744.p16 n=4 x=59.8 y=24.2 core.source="mulberry fa94a93"
 @k.objects.mb1744.p16.5 k.objects.point part=$k.objects.mb1744.p16 n=5 x=57.7 y=27.4 core.source="mulberry fa94a93"
-@k.objects.mb1744.word core.word text=dessert text=food means=jelly of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1744.keyword k.objects.keyword of=jelly text=dessert text=food core.source="mulberry fa94a93"
 
 # jelly beans
 @k.objects.mb1745 k.objects.object name="jelly beans" core.source="mulberry fa94a93"
@@ -1075,7 +1075,7 @@
 @k.objects.mb1745.p16.20 k.objects.point part=$k.objects.mb1745.p16 n=20 x=76.5 y=56.2 core.source="mulberry fa94a93"
 @k.objects.mb1745.p16.21 k.objects.point part=$k.objects.mb1745.p16 n=21 x=77 y=71.7 core.source="mulberry fa94a93"
 @k.objects.mb1745.p16.22 k.objects.point part=$k.objects.mb1745.p16 n=22 x=78.1 y=80 core.source="mulberry fa94a93"
-@k.objects.mb1745.word core.word text=food text=sweet means="jelly beans" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1745.keyword k.objects.keyword of="jelly beans" text=food text=sweet core.source="mulberry fa94a93"
 
 # marshmallows
 @k.objects.mb1895 k.objects.object name=marshmallows core.source="mulberry fa94a93"
@@ -1247,7 +1247,7 @@
 @k.objects.mb1895.p16.2 k.objects.point part=$k.objects.mb1895.p16 n=2 x=72.7 y=29.1 core.source="mulberry fa94a93"
 @k.objects.mb1895.p16.3 k.objects.point part=$k.objects.mb1895.p16 n=3 x=72.7 y=73.1 core.source="mulberry fa94a93"
 @k.objects.mb1895.p16.4 k.objects.point part=$k.objects.mb1895.p16 n=4 x=29.1 y=73.1 core.source="mulberry fa94a93"
-@k.objects.mb1895.word core.word text=food text=sweet means=marshmallows of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1895.keyword k.objects.keyword of=marshmallows text=food text=sweet core.source="mulberry fa94a93"
 
 # meringues
 @k.objects.mb1927 k.objects.object name=meringues core.source="mulberry fa94a93"

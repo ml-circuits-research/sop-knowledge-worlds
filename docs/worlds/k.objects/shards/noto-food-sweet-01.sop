@@ -187,7 +187,7 @@
 @k.objects.u1f366.p14.5 k.objects.point part=$k.objects.u1f366.p14 n=5 x=40.2 y=24.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f366.p14.6 k.objects.point part=$k.objects.u1f366.p14 n=6 x=39.9 y=22.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f366.p14.7 k.objects.point part=$k.objects.u1f366.p14 n=7 x=41.1 y=20.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f366.word core.word text=cream text=dessert text=food text=ice text=icecream text=restaurant text=serve text=soft text=sweet means="soft ice cream" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f366.keyword k.objects.keyword of="soft ice cream" text=cream text=dessert text=food text=ice text=icecream text=restaurant text=serve text=soft text=sweet core.source="cldr 48"
 
 # shaved ice
 @k.objects.u1f367 k.objects.object name="shaved ice" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -346,7 +346,7 @@
 @k.objects.u1f367.p16.8 k.objects.point part=$k.objects.u1f367.p16 n=8 x=40.4 y=58.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f367.p16.9 k.objects.point part=$k.objects.u1f367.p16 n=9 x=39.3 y=59.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f367.p16.10 k.objects.point part=$k.objects.u1f367.p16 n=10 x=37 y=59.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f367.word core.word text=dessert text=ice text=restaurant text=shaved text=sweet means="shaved ice" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f367.keyword k.objects.keyword of="shaved ice" text=dessert text=ice text=restaurant text=shaved text=sweet core.source="cldr 48"
 
 # ice cream
 @k.objects.u1f368 k.objects.object name="ice cream" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -562,7 +562,7 @@
 @k.objects.u1f368.p16.6 k.objects.point part=$k.objects.u1f368.p16 n=6 x=51.2 y=19.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f368.p16.7 k.objects.point part=$k.objects.u1f368.p16 n=7 x=57.1 y=17.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f368.p16.8 k.objects.point part=$k.objects.u1f368.p16 n=8 x=57.5 y=12.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f368.word core.word text=cream text=dessert text=food text=ice text=restaurant text=sweet means="ice cream" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f368.keyword k.objects.keyword of="ice cream" text=cream text=dessert text=food text=ice text=restaurant text=sweet core.source="cldr 48"
 
 # doughnut
 @k.objects.u1f369 k.objects.object name=doughnut core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -776,7 +776,7 @@
 @k.objects.u1f369.p16.6 k.objects.point part=$k.objects.u1f369.p16 n=6 x=54.6 y=67.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f369.p16.7 k.objects.point part=$k.objects.u1f369.p16 n=7 x=55.8 y=65.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f369.p16.8 k.objects.point part=$k.objects.u1f369.p16 n=8 x=55.5 y=64.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f369.word core.word text=breakfast text=dessert text=donut text=food text=sweet means=doughnut of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f369.keyword k.objects.keyword of=doughnut text=breakfast text=dessert text=donut text=food text=sweet core.source="cldr 48"
 
 # cookie
 @k.objects.u1f36a k.objects.object name=cookie core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -981,7 +981,7 @@
 @k.objects.u1f36a.p16.5 k.objects.point part=$k.objects.u1f36a.p16 n=5 x=84.6 y=51.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f36a.p16.6 k.objects.point part=$k.objects.u1f36a.p16 n=6 x=79.2 y=52.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f36a.p16.7 k.objects.point part=$k.objects.u1f36a.p16 n=7 x=76.7 y=51.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f36a.word core.word text=chip text=chocolate text=dessert text=sweet means=cookie of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f36a.keyword k.objects.keyword of=cookie text=chip text=chocolate text=dessert text=sweet core.source="cldr 48"
 
 # birthday cake
 @k.objects.u1f382 k.objects.object name="birthday cake" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1195,7 +1195,7 @@
 @k.objects.u1f382.p16.5 k.objects.point part=$k.objects.u1f382.p16 n=5 x=62.5 y=22 core.source="noto-emoji 99701e0"
 @k.objects.u1f382.p16.6 k.objects.point part=$k.objects.u1f382.p16 n=6 x=63.9 y=18.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f382.p16.7 k.objects.point part=$k.objects.u1f382.p16 n=7 x=63.4 y=15.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f382.word core.word text=bday text=birthday text=cake text=celebration text=dessert text=happy text=pastry text=sweet means="birthday cake" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f382.keyword k.objects.keyword of="birthday cake" text=bday text=birthday text=cake text=celebration text=dessert text=happy text=pastry text=sweet core.source="cldr 48"
 
 # shortcake
 @k.objects.u1f370 k.objects.object name=shortcake core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1397,7 +1397,7 @@
 @k.objects.u1f370.p14.6 k.objects.point part=$k.objects.u1f370.p14 n=6 x=60.1 y=18.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f370.p14.7 k.objects.point part=$k.objects.u1f370.p14 n=7 x=60.1 y=16.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f370.p14.8 k.objects.point part=$k.objects.u1f370.p14 n=8 x=58.5 y=14.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f370.word core.word text=cake text=dessert text=pastry text=slice text=sweet means=shortcake of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f370.keyword k.objects.keyword of=shortcake text=cake text=dessert text=pastry text=slice text=sweet core.source="cldr 48"
 
 # cupcake
 @k.objects.u1f9c1 k.objects.object name=cupcake core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1615,4 +1615,4 @@
 @k.objects.u1f9c1.p16.5 k.objects.point part=$k.objects.u1f9c1.p16 n=5 x=44 y=18.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c1.p16.6 k.objects.point part=$k.objects.u1f9c1.p16 n=6 x=39.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c1.p16.7 k.objects.point part=$k.objects.u1f9c1.p16 n=7 x=40.3 y=23.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f9c1.word core.word text=bakery text=dessert text=sprinkles text=sugar text=sweet text=treat means=cupcake of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9c1.keyword k.objects.keyword of=cupcake text=bakery text=dessert text=sprinkles text=sugar text=sweet text=treat core.source="cldr 48"

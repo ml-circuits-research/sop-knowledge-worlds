@@ -202,7 +202,7 @@
 @k.objects.mb2425.p16.5 k.objects.point part=$k.objects.mb2425.p16 n=5 x=87.8 y=24.2 core.source="mulberry fa94a93"
 @k.objects.mb2425.p16.6 k.objects.point part=$k.objects.mb2425.p16 n=6 x=87.3 y=19 core.source="mulberry fa94a93"
 @k.objects.mb2425.p16.7 k.objects.point part=$k.objects.mb2425.p16 n=7 x=86.2 y=20 core.source="mulberry fa94a93"
-@k.objects.mb2425.word core.word text=celebration text=Christian means=Rudolph of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2425.keyword k.objects.keyword of=Rudolph text=celebration text=Christian core.source="mulberry fa94a93"
 
 # birthday card
 @k.objects.mb185 k.objects.object name="birthday card" core.source="mulberry fa94a93"
@@ -419,7 +419,7 @@
 @k.objects.mb185.p16.9 k.objects.point part=$k.objects.mb185.p16 n=9 x=36.8 y=62.8 core.source="mulberry fa94a93"
 @k.objects.mb185.p16.10 k.objects.point part=$k.objects.mb185.p16 n=10 x=36.5 y=61.5 core.source="mulberry fa94a93"
 @k.objects.mb185.p16.11 k.objects.point part=$k.objects.mb185.p16 n=11 x=37.1 y=60.5 core.source="mulberry fa94a93"
-@k.objects.mb185.word core.word text=celebration means="birthday card" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb185.keyword k.objects.keyword of="birthday card" text=celebration core.source="mulberry fa94a93"
 
 # broomstick
 @k.objects.mb284 k.objects.object name=broomstick core.source="mulberry fa94a93"
@@ -513,7 +513,7 @@
 @k.objects.mb284.p16 k.objects.part of=broomstick name=part16 kind=detail named=no shape=line x=51.9 y=62.4 w=3.2 h=28.5 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb284.p16.1 k.objects.point part=$k.objects.mb284.p16 n=1 x=51.9 y=62.4 core.source="mulberry fa94a93"
 @k.objects.mb284.p16.2 k.objects.point part=$k.objects.mb284.p16 n=2 x=55.1 y=90.9 core.source="mulberry fa94a93"
-@k.objects.mb284.word core.word text=celebration means=broomstick of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb284.keyword k.objects.keyword of=broomstick text=celebration core.source="mulberry fa94a93"
 
 # card
 @k.objects.mb364 k.objects.object name=card core.source="mulberry fa94a93"
@@ -539,7 +539,7 @@
 @k.objects.mb364.p4.3 k.objects.point part=$k.objects.mb364.p4 n=3 x=74.1 y=92.4 core.source="mulberry fa94a93"
 @k.objects.mb364.p4.4 k.objects.point part=$k.objects.mb364.p4 n=4 x=23.8 y=83.8 core.source="mulberry fa94a93"
 @k.objects.mb364.p4.5 k.objects.point part=$k.objects.mb364.p4 n=5 x=23.8 y=8.9 core.source="mulberry fa94a93"
-@k.objects.mb364.word core.word text=celebration means=card of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb364.keyword k.objects.keyword of=card text=celebration core.source="mulberry fa94a93"
 
 # catherine wheel
 @k.objects.mb404 k.objects.object name="catherine wheel" core.source="mulberry fa94a93"
@@ -703,7 +703,7 @@
 @k.objects.mb404.p16.6 k.objects.point part=$k.objects.mb404.p16 n=6 x=40.8 y=18.4 core.source="mulberry fa94a93"
 @k.objects.mb404.p16.7 k.objects.point part=$k.objects.mb404.p16 n=7 x=42.2 y=12.7 core.source="mulberry fa94a93"
 @k.objects.mb404.p16.8 k.objects.point part=$k.objects.mb404.p16 n=8 x=45 y=6.4 core.source="mulberry fa94a93"
-@k.objects.mb404.word core.word text=celebration means="catherine wheel" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb404.keyword k.objects.keyword of="catherine wheel" text=celebration core.source="mulberry fa94a93"
 
 # cracker
 @k.objects.mb809 k.objects.object name=cracker core.source="mulberry fa94a93"
@@ -803,7 +803,7 @@
 @k.objects.mb809.p16.5 k.objects.point part=$k.objects.mb809.p16 n=5 x=15.9 y=46.5 core.source="mulberry fa94a93"
 @k.objects.mb809.p16.6 k.objects.point part=$k.objects.mb809.p16 n=6 x=13.4 y=44.3 core.source="mulberry fa94a93"
 @k.objects.mb809.p16.7 k.objects.point part=$k.objects.mb809.p16 n=7 x=15.9 y=41 core.source="mulberry fa94a93"
-@k.objects.mb809.word core.word text=celebration text=Christian means=cracker of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb809.keyword k.objects.keyword of=cracker text=celebration text=Christian core.source="mulberry fa94a93"
 
 # elf
 @k.objects.mb1024 k.objects.object name=elf core.source="mulberry fa94a93"
@@ -990,7 +990,7 @@
 @k.objects.mb1024.p16.4 k.objects.point part=$k.objects.mb1024.p16 n=4 x=62.7 y=36.1 core.source="mulberry fa94a93"
 @k.objects.mb1024.p16.5 k.objects.point part=$k.objects.mb1024.p16 n=5 x=61.2 y=33.8 core.source="mulberry fa94a93"
 @k.objects.mb1024.p16.6 k.objects.point part=$k.objects.mb1024.p16 n=6 x=53.2 y=28.4 core.source="mulberry fa94a93"
-@k.objects.mb1024.word core.word text=celebration means=elf of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1024.keyword k.objects.keyword of=elf text=celebration core.source="mulberry fa94a93"
 
 # fairy
 @k.objects.mb1068 k.objects.object name=fairy core.source="mulberry fa94a93"
@@ -1201,4 +1201,4 @@
 @k.objects.mb1068.p16.7 k.objects.point part=$k.objects.mb1068.p16 n=7 x=36.3 y=91.4 core.source="mulberry fa94a93"
 @k.objects.mb1068.p16.8 k.objects.point part=$k.objects.mb1068.p16 n=8 x=39.4 y=85.6 core.source="mulberry fa94a93"
 @k.objects.mb1068.p16.9 k.objects.point part=$k.objects.mb1068.p16 n=9 x=40.1 y=66.7 core.source="mulberry fa94a93"
-@k.objects.mb1068.word core.word text=celebration means=fairy of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1068.keyword k.objects.keyword of=fairy text=celebration core.source="mulberry fa94a93"

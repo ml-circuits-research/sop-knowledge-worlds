@@ -190,7 +190,7 @@
 @k.objects.mb2407.p16.11 k.objects.point part=$k.objects.mb2407.p16 n=11 x=45.2 y=69 core.source="mulberry fa94a93"
 @k.objects.mb2407.p16.12 k.objects.point part=$k.objects.mb2407.p16 n=12 x=40.6 y=69.4 core.source="mulberry fa94a93"
 @k.objects.mb2407.p16.13 k.objects.point part=$k.objects.mb2407.p16 n=13 x=40.1 y=73.6 core.source="mulberry fa94a93"
-@k.objects.mb2407.word core.word text=holiday text=travel means=road of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2407.keyword k.objects.keyword of=road text=holiday text=travel core.source="mulberry fa94a93"
 
 # sun lounger
 @k.objects.mb2733 k.objects.object name="sun lounger" core.source="mulberry fa94a93"
@@ -300,4 +300,4 @@
 @k.objects.mb2733.p15 k.objects.part of="sun lounger" name=part15 kind=detail named=no shape=line x=53.3 y=74.6 w=33.3 h=6.9 z=15 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2733.p15.1 k.objects.point part=$k.objects.mb2733.p15 n=1 x=53.3 y=81.5 core.source="mulberry fa94a93"
 @k.objects.mb2733.p15.2 k.objects.point part=$k.objects.mb2733.p15 n=2 x=86.6 y=74.6 core.source="mulberry fa94a93"
-@k.objects.mb2733.word core.word text=holiday means="sun lounger" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2733.keyword k.objects.keyword of="sun lounger" text=holiday core.source="mulberry fa94a93"

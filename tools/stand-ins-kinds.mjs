@@ -18,7 +18,10 @@ export const SHARDS = ['stand-ins-kinds.sop', 'stand-ins-kinds-wordnet.sop'];
 // A WordNet edge only for a sense of a drawable class (hammock, "a small natural hill", is noun.object: no stand-in),
 // and not where the sense kept is not what a drawing means by the word (with the reason).
 const DRAWABLE = new Set(['noun.artifact', 'noun.food', 'noun.animal', 'noun.plant']);
-export const NOT_MEANT = { grill: 'the sense kept is the restaurant; a drawing of a grill means the grate, which the restaurant would not show' };
+export const NOT_MEANT = {
+  grill: 'the sense kept is the restaurant; a drawing of a grill means the grate, which the restaurant would not show',
+  barrel: 'the sense kept is the tube of a gun; a drawing of a barrel means the cask',
+};
 const tok = (t) => (t.startsWith('"') ? JSON.parse(t) : t);
 const lines = (world, skip = []) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && !skip.includes(f)).sort()
   .flatMap((f) => readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8').split('\n'));
@@ -30,6 +33,7 @@ export async function standIns() {
     let m;
     if ((m = l.match(/^@\S+ k\.objects\.object name=("[^"]*"|\S+)/))) { objects.add(tok(m[1]).toLowerCase()); drawn.add(tok(m[1]).toLowerCase()); }
     else if ((m = l.match(/^@\S+ k\.objects\.stand_in name=("[^"]*"|\S+)/))) drawn.add(tok(m[1]).toLowerCase());
+    // a word of an object counts, a keyword (k.objects.keyword, a search word) does not (Q67 b): honey pot's "barrel"
     else if (l.includes(' core.word ') && l.includes('of=k.objects.object.name')) for (const t of l.matchAll(/ text=("[^"]*"|\S+)/g)) drawn.add(tok(t[1]).toLowerCase());
   }
   // the glosses of the k.words senses, to tell an edge of the sense kept

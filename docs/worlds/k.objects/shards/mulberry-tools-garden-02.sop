@@ -152,7 +152,7 @@
 @k.objects.mb3028.p15.8 k.objects.point part=$k.objects.mb3028.p15 n=8 x=38.8 y=15.2 core.source="mulberry fa94a93"
 @k.objects.mb3028.p15.9 k.objects.point part=$k.objects.mb3028.p15 n=9 x=37.6 y=17.2 core.source="mulberry fa94a93"
 @k.objects.mb3028.p15.10 k.objects.point part=$k.objects.mb3028.p15 n=10 x=36.2 y=45.1 core.source="mulberry fa94a93"
-@k.objects.mb3028.word core.word text=gardening means="watering can" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3028.keyword k.objects.keyword of="watering can" text=gardening core.source="mulberry fa94a93"
 
 # wheelbarrow
 @k.objects.mb3046 k.objects.object name=wheelbarrow core.source="mulberry fa94a93"
@@ -272,4 +272,4 @@
 @k.objects.mb3046.p14.15 k.objects.point part=$k.objects.mb3046.p14 n=15 x=82 y=57.3 core.source="mulberry fa94a93"
 @k.objects.mb3046.p14.16 k.objects.point part=$k.objects.mb3046.p14 n=16 x=83.8 y=60.1 core.source="mulberry fa94a93"
 @k.objects.mb3046.p14.17 k.objects.point part=$k.objects.mb3046.p14 n=17 x=84.7 y=63.6 core.source="mulberry fa94a93"
-@k.objects.mb3046.word core.word text=gardening means=wheelbarrow of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3046.keyword k.objects.keyword of=wheelbarrow text=gardening core.source="mulberry fa94a93"

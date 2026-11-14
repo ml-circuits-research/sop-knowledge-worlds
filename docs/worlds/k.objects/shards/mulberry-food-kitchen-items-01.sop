@@ -154,7 +154,7 @@
 @k.objects.mb104.p16.1 k.objects.point part=$k.objects.mb104.p16 n=1 x=60.4 y=18.8 core.source="mulberry fa94a93"
 @k.objects.mb104.p16.2 k.objects.point part=$k.objects.mb104.p16 n=2 x=70.6 y=24.7 core.source="mulberry fa94a93"
 @k.objects.mb104.p16.3 k.objects.point part=$k.objects.mb104.p16 n=3 x=70.6 y=42 core.source="mulberry fa94a93"
-@k.objects.mb104.word core.word text=cooking text=kitchen means="baking tray" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb104.keyword k.objects.keyword of="baking tray" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # blender drinks
 @k.objects.mb197 k.objects.object name="blender drinks" core.source="mulberry fa94a93"
@@ -445,7 +445,7 @@
 @k.objects.mb231.p9.11 k.objects.point part=$k.objects.mb231.p9 n=11 x=25 y=71.9 core.source="mulberry fa94a93"
 @k.objects.mb231.p9.12 k.objects.point part=$k.objects.mb231.p9 n=12 x=24.7 y=70.2 core.source="mulberry fa94a93"
 @k.objects.mb231.p9.13 k.objects.point part=$k.objects.mb231.p9 n=13 x=25.3 y=68.7 core.source="mulberry fa94a93"
-@k.objects.mb231.word core.word text=cooking text=feeding text=kitchen means=bowl of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb231.keyword k.objects.keyword of=bowl text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # cake case
 @k.objects.mb329 k.objects.object name="cake case" core.source="mulberry fa94a93"
@@ -586,7 +586,7 @@
 @k.objects.mb329.p16 k.objects.part of="cake case" name=part16 kind=detail named=no shape=line x=57.3 y=37 w=7.2 h=49.4 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb329.p16.1 k.objects.point part=$k.objects.mb329.p16 n=1 x=64.5 y=37 core.source="mulberry fa94a93"
 @k.objects.mb329.p16.2 k.objects.point part=$k.objects.mb329.p16 n=2 x=57.3 y=86.4 core.source="mulberry fa94a93"
-@k.objects.mb329.word core.word text=cooking means="cake case" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb329.keyword k.objects.keyword of="cake case" text=cooking core.source="mulberry fa94a93"
 
 # cake tin
 @k.objects.mb335 k.objects.object name="cake tin" core.source="mulberry fa94a93"
@@ -715,7 +715,7 @@
 @k.objects.mb335.p5.9 k.objects.point part=$k.objects.mb335.p5 n=9 x=77.3 y=43.5 core.source="mulberry fa94a93"
 @k.objects.mb335.p5.10 k.objects.point part=$k.objects.mb335.p5 n=10 x=79.8 y=45.4 core.source="mulberry fa94a93"
 @k.objects.mb335.p5.11 k.objects.point part=$k.objects.mb335.p5 n=11 x=83.1 y=49.9 core.source="mulberry fa94a93"
-@k.objects.mb335.word core.word text=cooking text=kitchen means="cake tin" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb335.keyword k.objects.keyword of="cake tin" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # can opener
 @k.objects.mb344 k.objects.object name="can opener" core.source="mulberry fa94a93"
@@ -878,7 +878,7 @@
 @k.objects.mb344.p16.16 k.objects.point part=$k.objects.mb344.p16 n=16 x=41.8 y=17.2 core.source="mulberry fa94a93"
 @k.objects.mb344.p16.17 k.objects.point part=$k.objects.mb344.p16 n=17 x=48.7 y=16.1 core.source="mulberry fa94a93"
 @k.objects.mb344.p16.18 k.objects.point part=$k.objects.mb344.p16 n=18 x=56.8 y=16.2 core.source="mulberry fa94a93"
-@k.objects.mb344.word core.word text=cooking text=kitchen means="can opener" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb344.keyword k.objects.keyword of="can opener" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # can opener electric
 @k.objects.mb345 k.objects.object name="can opener electric" core.source="mulberry fa94a93"
@@ -1040,7 +1040,7 @@
 @k.objects.mb345.p13.10 k.objects.point part=$k.objects.mb345.p13 n=10 x=30.6 y=83.4 core.source="mulberry fa94a93"
 @k.objects.mb345.p13.11 k.objects.point part=$k.objects.mb345.p13 n=11 x=29.9 y=81.5 core.source="mulberry fa94a93"
 @k.objects.mb345.p13.12 k.objects.point part=$k.objects.mb345.p13 n=12 x=30.1 y=53.2 core.source="mulberry fa94a93"
-@k.objects.mb345.word core.word text=cooking text=electric means="can opener electric" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb345.keyword k.objects.keyword of="can opener electric" text=cooking text=electric core.source="mulberry fa94a93"
 
 # casserole
 @k.objects.mb393 k.objects.object name=casserole core.source="mulberry fa94a93"
@@ -1255,4 +1255,4 @@
 @k.objects.mb393.p16.5 k.objects.point part=$k.objects.mb393.p16 n=5 x=48.1 y=33 core.source="mulberry fa94a93"
 @k.objects.mb393.p16.6 k.objects.point part=$k.objects.mb393.p16 n=6 x=47.4 y=28.7 core.source="mulberry fa94a93"
 @k.objects.mb393.p16.7 k.objects.point part=$k.objects.mb393.p16 n=7 x=44.1 y=24.3 core.source="mulberry fa94a93"
-@k.objects.mb393.word core.word text=cooking means=casserole of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb393.keyword k.objects.keyword of=casserole text=cooking core.source="mulberry fa94a93"

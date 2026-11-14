@@ -133,7 +133,7 @@
 @k.objects.u1f579.p8.7 k.objects.point part=$k.objects.u1f579.p8 n=7 x=29.8 y=56.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f579.p8.8 k.objects.point part=$k.objects.u1f579.p8 n=8 x=26 y=55.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f579.p8.9 k.objects.point part=$k.objects.u1f579.p8 n=9 x=22.5 y=56.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f579.word core.word text=game text=video text=videogame means=joystick of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f579.keyword k.objects.keyword of=joystick text=game text=video text=videogame core.source="cldr 48"
 
 # slot machine
 @k.objects.u1f3b0 k.objects.object name="slot machine" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -342,7 +342,7 @@
 @k.objects.u1f3b0.p16.16 k.objects.point part=$k.objects.u1f3b0.p16 n=16 x=72.2 y=50.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b0.p16.17 k.objects.point part=$k.objects.u1f3b0.p16 n=17 x=68.9 y=51.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b0.p16.18 k.objects.point part=$k.objects.u1f3b0.p16 n=18 x=65 y=49.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b0.word core.word text=casino text=gamble text=gambling text=game text=machine text=slot text=slots means="slot machine" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b0.keyword k.objects.keyword of="slot machine" text=casino text=gamble text=gambling text=game text=machine text=slot text=slots core.source="cldr 48"
 
 # game die
 @k.objects.u1f3b2 k.objects.object name="game die" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -541,7 +541,7 @@
 @k.objects.u1f3b2.p13.11 k.objects.point part=$k.objects.u1f3b2.p13 n=11 x=59 y=77.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b2.p13.12 k.objects.point part=$k.objects.u1f3b2.p13 n=12 x=57.5 y=82.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b2.p13.13 k.objects.point part=$k.objects.u1f3b2.p13 n=13 x=58.3 y=85.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b2.word core.word text=dice text=die text=entertainment text=game means="game die" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b2.keyword k.objects.keyword of="game die" text=dice text=die text=entertainment text=game core.source="cldr 48"
 
 # puzzle piece
 @k.objects.u1f9e9 k.objects.object name="puzzle piece" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -650,7 +650,7 @@
 @k.objects.u1f9e9.p3.35 k.objects.point part=$k.objects.u1f9e9.p3 n=35 x=30.3 y=17.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e9.p3.36 k.objects.point part=$k.objects.u1f9e9.p3 n=36 x=44.7 y=3.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e9.p3.37 k.objects.point part=$k.objects.u1f9e9.p3 n=37 x=63.7 y=21.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e9.word core.word text=clue text=interlocking text=jigsaw text=piece text=puzzle means="puzzle piece" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e9.keyword k.objects.keyword of="puzzle piece" text=clue text=interlocking text=jigsaw text=piece text=puzzle core.source="cldr 48"
 
 # teddy bear
 @k.objects.u1f9f8 k.objects.object name="teddy bear" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -837,7 +837,7 @@
 @k.objects.u1f9f8.p9.6 k.objects.point part=$k.objects.u1f9f8.p9 n=6 x=67.6 y=14.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f8.p9.7 k.objects.point part=$k.objects.u1f9f8.p9 n=7 x=71.7 y=21.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f8.p9.8 k.objects.point part=$k.objects.u1f9f8.p9 n=8 x=73.3 y=20.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f9f8.word core.word text=bear text=plaything text=plush text=stuffed text=teddy text=toy means="teddy bear" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f8.keyword k.objects.keyword of="teddy bear" text=bear text=plaything text=plush text=stuffed text=teddy text=toy core.source="cldr 48"
 
 # piñata
 @k.objects.u1fa85 k.objects.object name=piñata core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1035,7 +1035,7 @@
 @k.objects.u1fa85.p16.18 k.objects.point part=$k.objects.u1fa85.p16 n=18 x=35.3 y=57 core.source="noto-emoji 99701e0"
 @k.objects.u1fa85.p16.19 k.objects.point part=$k.objects.u1fa85.p16 n=19 x=33.4 y=54.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa85.p16.20 k.objects.point part=$k.objects.u1fa85.p16 n=20 x=31.3 y=53.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fa85.word core.word text=candy text=celebrate text=celebration text=cinco text=de text=festive text=mayo text=party text=pinada text=pinata means=piñata of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa85.keyword k.objects.keyword of=piñata text=candy text=celebrate text=celebration text=cinco text=de text=festive text=mayo text=party text=pinada text=pinata core.source="cldr 48"
 
 # mirror ball
 @k.objects.u1faa9 k.objects.object name="mirror ball" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1146,7 +1146,7 @@
 @k.objects.u1faa9.p10.15 k.objects.point part=$k.objects.u1faa9.p10 n=15 x=65 y=38.7 core.source="noto-emoji 99701e0"
 @k.objects.u1faa9.p10.16 k.objects.point part=$k.objects.u1faa9.p10 n=16 x=65.9 y=41 core.source="noto-emoji 99701e0"
 @k.objects.u1faa9.p10.17 k.objects.point part=$k.objects.u1faa9.p10 n=17 x=67.7 y=43.4 core.source="noto-emoji 99701e0"
-@k.objects.u1faa9.word core.word text=ball text=dance text=disco text=glitter text=mirror text=party means="mirror ball" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa9.keyword k.objects.keyword of="mirror ball" text=ball text=dance text=disco text=glitter text=mirror text=party core.source="cldr 48"
 
 # nesting dolls
 @k.objects.u1fa86 k.objects.object name="nesting dolls" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1356,4 +1356,4 @@
 @k.objects.u1fa86.p16.23 k.objects.point part=$k.objects.u1fa86.p16 n=23 x=75.9 y=53 core.source="noto-emoji 99701e0"
 @k.objects.u1fa86.p16.24 k.objects.point part=$k.objects.u1fa86.p16 n=24 x=79.1 y=47.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fa86.p16.25 k.objects.point part=$k.objects.u1fa86.p16 n=25 x=75.6 y=40.9 core.source="noto-emoji 99701e0"
-@k.objects.u1fa86.word core.word text=babooshka text=baboushka text=babushka text=doll text=dolls text=matryoshka text=nesting text=russia means="nesting dolls" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa86.keyword k.objects.keyword of="nesting dolls" text=babooshka text=baboushka text=babushka text=doll text=dolls text=matryoshka text=nesting text=russia core.source="cldr 48"

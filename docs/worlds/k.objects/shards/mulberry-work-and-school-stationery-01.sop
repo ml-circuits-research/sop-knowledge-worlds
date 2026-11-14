@@ -71,7 +71,7 @@
 @k.objects.mb49.p10.9 k.objects.point part=$k.objects.mb49.p10 n=9 x=33.4 y=71.5 core.source="mulberry fa94a93"
 @k.objects.mb49.p10.10 k.objects.point part=$k.objects.mb49.p10 n=10 x=35.6 y=73.3 core.source="mulberry fa94a93"
 @k.objects.mb49.p10.11 k.objects.point part=$k.objects.mb49.p10 n=11 x=36.5 y=76.2 core.source="mulberry fa94a93"
-@k.objects.mb49.word core.word text=class text=office text=school text=stationery means="arch lever file" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb49.keyword k.objects.keyword of="arch lever file" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # cardboard
 @k.objects.mb365 k.objects.object name=cardboard core.source="mulberry fa94a93"
@@ -206,7 +206,7 @@
 @k.objects.mb365.p16.5 k.objects.point part=$k.objects.mb365.p16 n=5 x=43.3 y=26.3 core.source="mulberry fa94a93"
 @k.objects.mb365.p16.6 k.objects.point part=$k.objects.mb365.p16 n=6 x=74.1 y=65.3 core.source="mulberry fa94a93"
 @k.objects.mb365.p16.7 k.objects.point part=$k.objects.mb365.p16 n=7 x=43.3 y=26.3 core.source="mulberry fa94a93"
-@k.objects.mb365.word core.word text=class text=school means=cardboard of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb365.keyword k.objects.keyword of=cardboard text=class text=school core.source="mulberry fa94a93"
 
 # chalk
 @k.objects.mb430 k.objects.object name=chalk core.source="mulberry fa94a93"
@@ -378,7 +378,7 @@
 @k.objects.mb430.p16.4 k.objects.point part=$k.objects.mb430.p16 n=4 x=52.7 y=32.3 core.source="mulberry fa94a93"
 @k.objects.mb430.p16.5 k.objects.point part=$k.objects.mb430.p16 n=5 x=53.3 y=33.2 core.source="mulberry fa94a93"
 @k.objects.mb430.p16.6 k.objects.point part=$k.objects.mb430.p16 n=6 x=66 y=39.4 core.source="mulberry fa94a93"
-@k.objects.mb430.word core.word text=class text=school means=chalk of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb430.keyword k.objects.keyword of=chalk text=class text=school core.source="mulberry fa94a93"
 
 # dictionary
 @k.objects.mb896 k.objects.object name=dictionary core.source="mulberry fa94a93"
@@ -491,7 +491,7 @@
 @k.objects.mb896.p16 k.objects.part of=dictionary name=part16 kind=detail named=no shape=line x=32.2 y=7.8 w=44.2 h=7.6 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb896.p16.1 k.objects.point part=$k.objects.mb896.p16 n=1 x=32.2 y=15.4 core.source="mulberry fa94a93"
 @k.objects.mb896.p16.2 k.objects.point part=$k.objects.mb896.p16 n=2 x=76.4 y=7.8 core.source="mulberry fa94a93"
-@k.objects.mb896.word core.word text=class text=office text=school text=stationery means=dictionary of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb896.keyword k.objects.keyword of=dictionary text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # drawing pin
 @k.objects.mb951 k.objects.object name="drawing pin" core.source="mulberry fa94a93"
@@ -563,7 +563,7 @@
 @k.objects.mb951.p4.4 k.objects.point part=$k.objects.mb951.p4 n=4 x=49.8 y=90.5 core.source="mulberry fa94a93"
 @k.objects.mb951.p4.5 k.objects.point part=$k.objects.mb951.p4 n=5 x=44.9 y=81.3 core.source="mulberry fa94a93"
 @k.objects.mb951.p4.6 k.objects.point part=$k.objects.mb951.p4 n=6 x=44.9 y=38.7 core.source="mulberry fa94a93"
-@k.objects.mb951.word core.word text=class text=office text=school text=stationery means="drawing pin" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb951.keyword k.objects.keyword of="drawing pin" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # felt tips
 @k.objects.mb1091 k.objects.object name="felt tips" core.source="mulberry fa94a93"
@@ -683,7 +683,7 @@
 @k.objects.mb1091.p16 k.objects.part of="felt tips" name=part16 kind=detail named=no shape=line x=25.4 y=45.5 w=53 h=8.1 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1091.p16.1 k.objects.point part=$k.objects.mb1091.p16 n=1 x=25.4 y=53.6 core.source="mulberry fa94a93"
 @k.objects.mb1091.p16.2 k.objects.point part=$k.objects.mb1091.p16 n=2 x=78.4 y=45.5 core.source="mulberry fa94a93"
-@k.objects.mb1091.word core.word text=class text=office text=school text=stationery means="felt tips" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1091.keyword k.objects.keyword of="felt tips" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # glitter
 @k.objects.mb1523 k.objects.object name=glitter core.source="mulberry fa94a93"
@@ -853,7 +853,7 @@
 @k.objects.mb1523.p16 k.objects.part of=glitter name=part16 kind=detail named=no shape=line x=10.8 y=18.3 w=58.7 h=31.7 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1523.p16.1 k.objects.point part=$k.objects.mb1523.p16 n=1 x=69.5 y=50 core.source="mulberry fa94a93"
 @k.objects.mb1523.p16.2 k.objects.point part=$k.objects.mb1523.p16 n=2 x=10.8 y=18.3 core.source="mulberry fa94a93"
-@k.objects.mb1523.word core.word text=class text=school means=glitter of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1523.keyword k.objects.keyword of=glitter text=class text=school core.source="mulberry fa94a93"
 
 # glue
 @k.objects.mb1526 k.objects.object name=glue core.source="mulberry fa94a93"
@@ -959,4 +959,4 @@
 @k.objects.mb1526.p10 k.objects.part of=glue name=part10 kind=detail named=no shape=line x=67 y=41.7 w=13.1 h=0 z=10 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1526.p10.1 k.objects.point part=$k.objects.mb1526.p10 n=1 x=67 y=41.7 core.source="mulberry fa94a93"
 @k.objects.mb1526.p10.2 k.objects.point part=$k.objects.mb1526.p10 n=2 x=80.1 y=41.7 core.source="mulberry fa94a93"
-@k.objects.mb1526.word core.word text=class text=office text=school text=stationery means=glue of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1526.keyword k.objects.keyword of=glue text=class text=office text=school text=stationery core.source="mulberry fa94a93"

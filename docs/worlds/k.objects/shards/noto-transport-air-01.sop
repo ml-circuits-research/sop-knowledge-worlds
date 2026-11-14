@@ -149,7 +149,7 @@
 @k.objects.u2708.p16.11 k.objects.point part=$k.objects.u2708.p16 n=11 x=71.4 y=16.8 core.source="noto-emoji 99701e0"
 @k.objects.u2708.p16.12 k.objects.point part=$k.objects.u2708.p16 n=12 x=61.5 y=26.2 core.source="noto-emoji 99701e0"
 @k.objects.u2708.p16.13 k.objects.point part=$k.objects.u2708.p16 n=13 x=51 y=36.8 core.source="noto-emoji 99701e0"
-@k.objects.u2708.word core.word text=aeroplane text=fly text=flying text=jet text=plane text=travel means=airplane of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2708.keyword k.objects.keyword of=airplane text=aeroplane text=fly text=flying text=jet text=plane text=travel core.source="cldr 48"
 
 # small airplane
 @k.objects.u1f6e9 k.objects.object name="small airplane" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -352,7 +352,7 @@
 @k.objects.u1f6e9.p16.13 k.objects.point part=$k.objects.u1f6e9.p16 n=13 x=80 y=70.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e9.p16.14 k.objects.point part=$k.objects.u1f6e9.p16 n=14 x=85 y=65 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e9.p16.15 k.objects.point part=$k.objects.u1f6e9.p16 n=15 x=84.2 y=62.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f6e9.word core.word text=aeroplane text=airplane text=plane text=small means="small airplane" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6e9.keyword k.objects.keyword of="small airplane" text=aeroplane text=airplane text=plane text=small core.source="cldr 48"
 
 # airplane departure
 @k.objects.u1f6eb k.objects.object name="airplane departure" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -509,7 +509,7 @@
 @k.objects.u1f6eb.p16.4 k.objects.point part=$k.objects.u1f6eb.p16 n=4 x=50.6 y=40.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6eb.p16.5 k.objects.point part=$k.objects.u1f6eb.p16 n=5 x=76.2 y=26.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6eb.p16.6 k.objects.point part=$k.objects.u1f6eb.p16 n=6 x=76.7 y=25.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6eb.word core.word text=aeroplane text=airplane text=check-in text=departure text=departures text=plane means="airplane departure" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6eb.keyword k.objects.keyword of="airplane departure" text=aeroplane text=airplane text=check-in text=departure text=departures text=plane core.source="cldr 48"
 
 # airplane arrival
 @k.objects.u1f6ec k.objects.object name="airplane arrival" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -674,7 +674,7 @@
 @k.objects.u1f6ec.p16.7 k.objects.point part=$k.objects.u1f6ec.p16 n=7 x=74.3 y=40.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ec.p16.8 k.objects.point part=$k.objects.u1f6ec.p16 n=8 x=64 y=38.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ec.p16.9 k.objects.point part=$k.objects.u1f6ec.p16 n=9 x=43.8 y=34.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6ec.word core.word text=aeroplane text=airplane text=arrival text=arrivals text=arriving text=landing text=plane means="airplane arrival" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6ec.keyword k.objects.keyword of="airplane arrival" text=aeroplane text=airplane text=arrival text=arrivals text=arriving text=landing text=plane core.source="cldr 48"
 
 # parachute
 @k.objects.u1fa82 k.objects.object name=parachute core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -880,7 +880,7 @@
 @k.objects.u1fa82.p16.10 k.objects.point part=$k.objects.u1fa82.p16 n=10 x=54.6 y=13.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa82.p16.11 k.objects.point part=$k.objects.u1fa82.p16 n=11 x=53.4 y=11 core.source="noto-emoji 99701e0"
 @k.objects.u1fa82.p16.12 k.objects.point part=$k.objects.u1fa82.p16 n=12 x=51.3 y=10.9 core.source="noto-emoji 99701e0"
-@k.objects.u1fa82.word core.word text=hang-glide text=parasail text=skydive means=parachute of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa82.keyword k.objects.keyword of=parachute text=hang-glide text=parasail text=skydive core.source="cldr 48"
 
 # seat
 @k.objects.u1f4ba k.objects.object name=seat core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1079,7 +1079,7 @@
 @k.objects.u1f4ba.p16.12 k.objects.point part=$k.objects.u1f4ba.p16 n=12 x=46.9 y=54.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ba.p16.13 k.objects.point part=$k.objects.u1f4ba.p16 n=13 x=44.2 y=52.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ba.p16.14 k.objects.point part=$k.objects.u1f4ba.p16 n=14 x=38.4 y=50.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ba.word core.word text=chair means=seat of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ba.keyword k.objects.keyword of=seat text=chair core.source="cldr 48"
 
 # helicopter
 @k.objects.u1f681 k.objects.object name=helicopter core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1282,7 +1282,7 @@
 @k.objects.u1f681.p16.6 k.objects.point part=$k.objects.u1f681.p16 n=6 x=89.3 y=62.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f681.p16.7 k.objects.point part=$k.objects.u1f681.p16 n=7 x=89.6 y=60.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f681.p16.8 k.objects.point part=$k.objects.u1f681.p16 n=8 x=88.5 y=58.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f681.word core.word text=copter text=roflcopter text=travel text=vehicle means=helicopter of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f681.keyword k.objects.keyword of=helicopter text=copter text=roflcopter text=travel text=vehicle core.source="cldr 48"
 
 # suspension railway
 @k.objects.u1f69f k.objects.object name="suspension railway" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1444,4 +1444,4 @@
 @k.objects.u1f69f.p16.10 k.objects.point part=$k.objects.u1f69f.p16 n=10 x=19.6 y=73 core.source="noto-emoji 99701e0"
 @k.objects.u1f69f.p16.11 k.objects.point part=$k.objects.u1f69f.p16 n=11 x=19.5 y=61 core.source="noto-emoji 99701e0"
 @k.objects.u1f69f.p16.12 k.objects.point part=$k.objects.u1f69f.p16 n=12 x=18.7 y=59.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f69f.word core.word text=railway text=suspension means="suspension railway" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f69f.keyword k.objects.keyword of="suspension railway" text=railway text=suspension core.source="cldr 48"

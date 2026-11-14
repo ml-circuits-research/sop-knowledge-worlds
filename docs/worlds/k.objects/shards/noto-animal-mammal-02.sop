@@ -177,7 +177,7 @@
 @k.objects.u1f43a.p8.17 k.objects.point part=$k.objects.u1f43a.p8 n=17 x=41.6 y=86.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f43a.p8.18 k.objects.point part=$k.objects.u1f43a.p8 n=18 x=44.9 y=88 core.source="noto-emoji 99701e0"
 @k.objects.u1f43a.p8.19 k.objects.point part=$k.objects.u1f43a.p8 n=19 x=47.4 y=87.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f43a.word core.word text=animal text=face means=wolf of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f43a.keyword k.objects.keyword of=wolf text=animal text=face core.source="cldr 48"
 
 # fox
 @k.objects.u1f98a k.objects.object name=fox core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -381,7 +381,7 @@
 @k.objects.u1f98a.p16.5 k.objects.point part=$k.objects.u1f98a.p16 n=5 x=59.7 y=55.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f98a.p16.6 k.objects.point part=$k.objects.u1f98a.p16 n=6 x=60.2 y=53.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f98a.p16.7 k.objects.point part=$k.objects.u1f98a.p16 n=7 x=61.3 y=52.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f98a.word core.word text=animal text=face means=fox of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f98a.keyword k.objects.keyword of=fox text=animal text=face core.source="cldr 48"
 
 # raccoon
 @k.objects.u1f99d k.objects.object name=raccoon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -587,7 +587,7 @@
 @k.objects.u1f99d.p16.3 k.objects.point part=$k.objects.u1f99d.p16 n=3 x=85.6 y=61.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f99d.p16.4 k.objects.point part=$k.objects.u1f99d.p16 n=4 x=87.2 y=63.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f99d.p16.5 k.objects.point part=$k.objects.u1f99d.p16 n=5 x=84 y=73 core.source="noto-emoji 99701e0"
-@k.objects.u1f99d.word core.word text=animal text=curious text=sly means=raccoon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f99d.keyword k.objects.keyword of=raccoon text=animal text=curious text=sly core.source="cldr 48"
 
 # cat face
 @k.objects.u1f431 k.objects.object name="cat face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -789,7 +789,7 @@
 @k.objects.u1f431.p16.25 k.objects.point part=$k.objects.u1f431.p16 n=25 x=42.4 y=70.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f431.p16.26 k.objects.point part=$k.objects.u1f431.p16 n=26 x=39.9 y=69.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f431.p16.27 k.objects.point part=$k.objects.u1f431.p16 n=27 x=36.9 y=66.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f431.word core.word text=animal text=cat text=face text=kitten text=kitty text=pet means="cat face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f431.keyword k.objects.keyword of="cat face" text=animal text=cat text=face text=kitten text=kitty text=pet core.source="cldr 48"
 
 # black cat
 @k.objects.u1f408_200d_2b1b k.objects.object name="black cat" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -966,7 +966,7 @@
 @k.objects.u1f408_200d_2b1b.p14.4 k.objects.point part=$k.objects.u1f408_200d_2b1b.p14 n=4 x=30.7 y=28.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f408_200d_2b1b.p14.5 k.objects.point part=$k.objects.u1f408_200d_2b1b.p14 n=5 x=31.8 y=27.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f408_200d_2b1b.p14.6 k.objects.point part=$k.objects.u1f408_200d_2b1b.p14 n=6 x=32.7 y=28.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f408_200d_2b1b.word core.word text=animal text=black text=cat text=feline text=halloween text=meow text=unlucky means="black cat" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f408_200d_2b1b.keyword k.objects.keyword of="black cat" text=animal text=black text=cat text=feline text=halloween text=meow text=unlucky core.source="cldr 48"
 
 # lion
 @k.objects.u1f981 k.objects.object name=lion core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1144,7 +1144,7 @@
 @k.objects.u1f981.p11.12 k.objects.point part=$k.objects.u1f981.p11 n=12 x=58.7 y=65.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f981.p11.13 k.objects.point part=$k.objects.u1f981.p11 n=13 x=58.5 y=64.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f981.p11.14 k.objects.point part=$k.objects.u1f981.p11 n=14 x=53.5 y=62.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f981.word core.word text=alpha text=animal text=face text=Leo text=mane text=order text=rawr text=roar text=safari text=strong text=zodiac means=lion of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f981.keyword k.objects.keyword of=lion text=alpha text=animal text=face text=Leo text=mane text=order text=rawr text=roar text=safari text=strong text=zodiac core.source="cldr 48"
 
 # tiger face
 @k.objects.u1f42f k.objects.object name="tiger face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1351,7 +1351,7 @@
 @k.objects.u1f42f.p16.8 k.objects.point part=$k.objects.u1f42f.p16 n=8 x=59.5 y=25.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f42f.p16.9 k.objects.point part=$k.objects.u1f42f.p16 n=9 x=61.3 y=24.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f42f.p16.10 k.objects.point part=$k.objects.u1f42f.p16 n=10 x=60.7 y=21.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f42f.word core.word text=animal text=big text=cat text=face text=predator text=tiger means="tiger face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f42f.keyword k.objects.keyword of="tiger face" text=animal text=big text=cat text=face text=predator text=tiger core.source="cldr 48"
 
 # tiger
 @k.objects.u1f405 k.objects.object name=tiger core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1567,4 +1567,4 @@
 @k.objects.u1f405.p16.3 k.objects.point part=$k.objects.u1f405.p16 n=3 x=53 y=60.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f405.p16.4 k.objects.point part=$k.objects.u1f405.p16 n=4 x=53.2 y=64.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f405.p16.5 k.objects.point part=$k.objects.u1f405.p16 n=5 x=50.5 y=73 core.source="noto-emoji 99701e0"
-@k.objects.u1f405.word core.word text=animal text=big text=cat text=predator text=zoo means=tiger of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f405.keyword k.objects.keyword of=tiger text=animal text=big text=cat text=predator text=zoo core.source="cldr 48"

@@ -219,7 +219,7 @@
 @k.objects.u1f6e2.p15.1 k.objects.point part=$k.objects.u1f6e2.p15 n=1 x=27.5 y=23.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e2.p15.2 k.objects.point part=$k.objects.u1f6e2.p15 n=2 x=32.6 y=25.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e2.p15.3 k.objects.point part=$k.objects.u1f6e2.p15 n=3 x=37.7 y=26.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6e2.word core.word text=drum text=oil means="oil drum" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6e2.keyword k.objects.keyword of="oil drum" text=drum text=oil core.source="cldr 48"
 
 # fuel pump
 @k.objects.u26fd k.objects.object name="fuel pump" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -377,7 +377,7 @@
 @k.objects.u26fd.p16 k.objects.part of="fuel pump" name=part16 named=no shape=line x=79.7 y=21 w=3.7 h=1.9 z=16 colour=red rgb="#FF7555" core.source="noto-emoji 99701e0"
 @k.objects.u26fd.p16.1 k.objects.point part=$k.objects.u26fd.p16 n=1 x=83.4 y=22.9 core.source="noto-emoji 99701e0"
 @k.objects.u26fd.p16.2 k.objects.point part=$k.objects.u26fd.p16 n=2 x=79.7 y=21 core.source="noto-emoji 99701e0"
-@k.objects.u26fd.word core.word text=diesel text=fuel text=fuelpump text=gas text=gasoline text=pump text=station means="fuel pump" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26fd.keyword k.objects.keyword of="fuel pump" text=diesel text=fuel text=fuelpump text=gas text=gasoline text=pump text=station core.source="cldr 48"
 
 # wheel
 @k.objects.u1f6de k.objects.object name=wheel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -572,7 +572,7 @@
 @k.objects.u1f6de.p16.25 k.objects.point part=$k.objects.u1f6de.p16 n=25 x=66.4 y=18.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6de.p16.26 k.objects.point part=$k.objects.u1f6de.p16 n=26 x=56.7 y=14.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6de.p16.27 k.objects.point part=$k.objects.u1f6de.p16 n=27 x=46.8 y=14.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f6de.word core.word text=car text=circle text=tire text=turn text=vehicle means=wheel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6de.keyword k.objects.keyword of=wheel text=car text=circle text=tire text=turn text=vehicle core.source="cldr 48"
 
 # police car light
 @k.objects.u1f6a8 k.objects.object name="police car light" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -730,7 +730,7 @@
 @k.objects.u1f6a8.p6.37 k.objects.point part=$k.objects.u1f6a8.p6 n=37 x=39 y=13.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a8.p6.38 k.objects.point part=$k.objects.u1f6a8.p6 n=38 x=47.8 y=27.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a8.p6.39 k.objects.point part=$k.objects.u1f6a8.p6 n=39 x=49.9 y=28 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a8.word core.word text=alarm text=alert text=beacon text=car text=emergency text=light text=police text=revolving text=siren means="police car light" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a8.keyword k.objects.keyword of="police car light" text=alarm text=alert text=beacon text=car text=emergency text=light text=police text=revolving text=siren core.source="cldr 48"
 
 # horizontal traffic light
 @k.objects.u1f6a5 k.objects.object name="horizontal traffic light" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -854,7 +854,7 @@
 @k.objects.u1f6a5.p10.16 k.objects.point part=$k.objects.u1f6a5.p10 n=16 x=46.4 y=41.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a5.p10.17 k.objects.point part=$k.objects.u1f6a5.p10 n=17 x=43.8 y=43.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a5.p10.18 k.objects.point part=$k.objects.u1f6a5.p10 n=18 x=41.9 y=44.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a5.word core.word text=horizontal text=intersection text=light text=signal text=stop text=stoplight text=traffic means="horizontal traffic light" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a5.keyword k.objects.keyword of="horizontal traffic light" text=horizontal text=intersection text=light text=signal text=stop text=stoplight text=traffic core.source="cldr 48"
 
 # vertical traffic light
 @k.objects.u1f6a6 k.objects.object name="vertical traffic light" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -977,7 +977,7 @@
 @k.objects.u1f6a6.p10.16 k.objects.point part=$k.objects.u1f6a6.p10 n=16 x=46.4 y=41.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a6.p10.17 k.objects.point part=$k.objects.u1f6a6.p10 n=17 x=43.8 y=43.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a6.p10.18 k.objects.point part=$k.objects.u1f6a6.p10 n=18 x=41.9 y=44.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a6.word core.word text=drove text=intersection text=light text=signal text=stop text=stoplight text=traffic text=vertical means="vertical traffic light" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a6.keyword k.objects.keyword of="vertical traffic light" text=drove text=intersection text=light text=signal text=stop text=stoplight text=traffic text=vertical core.source="cldr 48"
 
 # stop sign
 @k.objects.u1f6d1 k.objects.object name="stop sign" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1011,7 +1011,7 @@
 @k.objects.u1f6d1.p3.9 k.objects.point part=$k.objects.u1f6d1.p3 n=9 x=7.9 y=31.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p3.10 k.objects.point part=$k.objects.u1f6d1.p3 n=10 x=11.7 y=31 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d1.p3.11 k.objects.point part=$k.objects.u1f6d1.p3 n=11 x=14.4 y=29.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d1.word core.word text=octagonal text=sign text=stop means="stop sign" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6d1.keyword k.objects.keyword of="stop sign" text=octagonal text=sign text=stop core.source="cldr 48"
 
 # construction
 @k.objects.u1f6a7 k.objects.object name=construction core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1129,4 +1129,4 @@
 @k.objects.u1f6a7.p16.1 k.objects.point part=$k.objects.u1f6a7.p16 n=1 x=100 y=52.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a7.p16.2 k.objects.point part=$k.objects.u1f6a7.p16 n=2 x=86.2 y=81.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a7.p16.3 k.objects.point part=$k.objects.u1f6a7.p16 n=3 x=96.8 y=81.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a7.word core.word text=barrier means=construction of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a7.keyword k.objects.keyword of=construction text=barrier core.source="cldr 48"

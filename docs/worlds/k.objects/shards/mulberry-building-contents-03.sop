@@ -46,7 +46,7 @@
 @k.objects.mb1719.p6 k.objects.part of="ironing board" name=part6 kind=detail named=no shape=line x=31 y=73.2 w=11.7 h=10.3 z=6 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1719.p6.1 k.objects.point part=$k.objects.mb1719.p6 n=1 x=31 y=73.2 core.source="mulberry fa94a93"
 @k.objects.mb1719.p6.2 k.objects.point part=$k.objects.mb1719.p6 n=2 x=42.7 y=83.5 core.source="mulberry fa94a93"
-@k.objects.mb1719.word core.word text=home text=house means="ironing board" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1719.keyword k.objects.keyword of="ironing board" text=home text=house core.source="mulberry fa94a93"
 
 # lampshade
 @k.objects.mb1792 k.objects.object name=lampshade core.source="mulberry fa94a93"
@@ -268,7 +268,7 @@
 @k.objects.mb1805.p16 k.objects.part of="laundry basket" name=part16 kind=detail named=no shape=line x=9.2 y=32.9 w=81.6 h=0.3 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1805.p16.1 k.objects.point part=$k.objects.mb1805.p16 n=1 x=9.2 y=32.9 core.source="mulberry fa94a93"
 @k.objects.mb1805.p16.2 k.objects.point part=$k.objects.mb1805.p16 n=2 x=90.8 y=33.2 core.source="mulberry fa94a93"
-@k.objects.mb1805.word core.word text=home text=house means="laundry basket" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1805.keyword k.objects.keyword of="laundry basket" text=home text=house core.source="mulberry fa94a93"
 
 # mop
 @k.objects.mb1975 k.objects.object name=mop core.source="mulberry fa94a93"
@@ -410,7 +410,7 @@
 @k.objects.mb1975.p14.4 k.objects.point part=$k.objects.mb1975.p14 n=4 x=51.9 y=88.1 core.source="mulberry fa94a93"
 @k.objects.mb1975.p14.5 k.objects.point part=$k.objects.mb1975.p14 n=5 x=53.1 y=91.4 core.source="mulberry fa94a93"
 @k.objects.mb1975.p14.6 k.objects.point part=$k.objects.mb1975.p14 n=6 x=54.8 y=93.5 core.source="mulberry fa94a93"
-@k.objects.mb1975.word core.word text=home text=house means=mop of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1975.keyword k.objects.keyword of=mop text=home text=house core.source="mulberry fa94a93"
 
 # recycling bins
 @k.objects.mb2378 k.objects.object name="recycling bins" core.source="mulberry fa94a93"
@@ -580,7 +580,7 @@
 @k.objects.mb2378.p16.9 k.objects.point part=$k.objects.mb2378.p16 n=9 x=90.5 y=33.1 core.source="mulberry fa94a93"
 @k.objects.mb2378.p16.10 k.objects.point part=$k.objects.mb2378.p16 n=10 x=89.4 y=33.6 core.source="mulberry fa94a93"
 @k.objects.mb2378.p16.11 k.objects.point part=$k.objects.mb2378.p16 n=11 x=66.9 y=33.6 core.source="mulberry fa94a93"
-@k.objects.mb2378.word core.word text=cooking text=kitchen means="recycling bins" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2378.keyword k.objects.keyword of="recycling bins" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # roller blind
 @k.objects.mb2415 k.objects.object name="roller blind" core.source="mulberry fa94a93"
@@ -877,4 +877,4 @@
 @k.objects.mb2423.p16.1 k.objects.point part=$k.objects.mb2423.p16 n=1 x=83 y=52.4 core.source="mulberry fa94a93"
 @k.objects.mb2423.p16.2 k.objects.point part=$k.objects.mb2423.p16 n=2 x=77.3 y=52.9 core.source="mulberry fa94a93"
 @k.objects.mb2423.p16.3 k.objects.point part=$k.objects.mb2423.p16 n=3 x=67 y=56 core.source="mulberry fa94a93"
-@k.objects.mb2423.word core.word text=home text=house means="rotary washing line" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2423.keyword k.objects.keyword of="rotary washing line" text=home text=house core.source="mulberry fa94a93"

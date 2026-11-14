@@ -210,7 +210,7 @@
 @k.objects.mb407.p16.2 k.objects.point part=$k.objects.mb407.p16 n=2 x=81.8 y=79 core.source="mulberry fa94a93"
 @k.objects.mb407.p16.3 k.objects.point part=$k.objects.mb407.p16 n=3 x=86 y=67.6 core.source="mulberry fa94a93"
 @k.objects.mb407.p16.4 k.objects.point part=$k.objects.mb407.p16 n=4 x=88.7 y=63.9 core.source="mulberry fa94a93"
-@k.objects.mb407.word core.word text=electric means="CD player personal" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb407.keyword k.objects.keyword of="CD player personal" text=electric core.source="mulberry fa94a93"
 
 # DVD player
 @k.objects.mb984 k.objects.object name="DVD player" core.source="mulberry fa94a93"
@@ -345,7 +345,7 @@
 @k.objects.mb984.p16.5 k.objects.point part=$k.objects.mb984.p16 n=5 x=30.1 y=64.7 core.source="mulberry fa94a93"
 @k.objects.mb984.p16.6 k.objects.point part=$k.objects.mb984.p16 n=6 x=31.2 y=65 core.source="mulberry fa94a93"
 @k.objects.mb984.p16.7 k.objects.point part=$k.objects.mb984.p16 n=7 x=47.3 y=60.2 core.source="mulberry fa94a93"
-@k.objects.mb984.word core.word text=electric means="DVD player" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb984.keyword k.objects.keyword of="DVD player" text=electric core.source="mulberry fa94a93"
 
 # DVD player portable
 @k.objects.mb985 k.objects.object name="DVD player portable" core.source="mulberry fa94a93"
@@ -557,7 +557,7 @@
 @k.objects.mb985.p16.2 k.objects.point part=$k.objects.mb985.p16 n=2 x=85.3 y=61.9 core.source="mulberry fa94a93"
 @k.objects.mb985.p16.3 k.objects.point part=$k.objects.mb985.p16 n=3 x=85 y=65.3 core.source="mulberry fa94a93"
 @k.objects.mb985.p16.4 k.objects.point part=$k.objects.mb985.p16 n=4 x=71.1 y=93.7 core.source="mulberry fa94a93"
-@k.objects.mb985.word core.word text=electric means="DVD player portable" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb985.keyword k.objects.keyword of="DVD player portable" text=electric core.source="mulberry fa94a93"
 
 # Wii
 @k.objects.mb3068 k.objects.object name=Wii core.source="mulberry fa94a93"

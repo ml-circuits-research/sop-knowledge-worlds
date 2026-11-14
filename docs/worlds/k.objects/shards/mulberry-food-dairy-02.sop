@@ -203,7 +203,7 @@
 @k.objects.mb1890.p14.16 k.objects.point part=$k.objects.mb1890.p14 n=16 x=18 y=49 core.source="mulberry fa94a93"
 @k.objects.mb1890.p14.17 k.objects.point part=$k.objects.mb1890.p14 n=17 x=32.5 y=51.6 core.source="mulberry fa94a93"
 @k.objects.mb1890.p14.18 k.objects.point part=$k.objects.mb1890.p14 n=18 x=51.4 y=52.3 core.source="mulberry fa94a93"
-@k.objects.mb1890.word core.word text=diary text=food means=margarine of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1890.keyword k.objects.keyword of=margarine text=diary text=food core.source="mulberry fa94a93"
 
 # mayonnaise
 @k.objects.mb1910 k.objects.object name=mayonnaise core.source="mulberry fa94a93"
@@ -336,7 +336,7 @@
 @k.objects.mb1910.p8.9 k.objects.point part=$k.objects.mb1910.p8 n=9 x=37.3 y=81.4 core.source="mulberry fa94a93"
 @k.objects.mb1910.p8.10 k.objects.point part=$k.objects.mb1910.p8 n=10 x=32.2 y=79.3 core.source="mulberry fa94a93"
 @k.objects.mb1910.p8.11 k.objects.point part=$k.objects.mb1910.p8 n=11 x=32 y=37.4 core.source="mulberry fa94a93"
-@k.objects.mb1910.word core.word text=diary text=food means=mayonnaise of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1910.keyword k.objects.keyword of=mayonnaise text=diary text=food core.source="mulberry fa94a93"
 
 # milk 2 litre
 @k.objects.mb1936 k.objects.object name="milk 2 litre" core.source="mulberry fa94a93"
@@ -551,7 +551,7 @@
 @k.objects.mb1936.p16.11 k.objects.point part=$k.objects.mb1936.p16 n=11 x=41.5 y=27.4 core.source="mulberry fa94a93"
 @k.objects.mb1936.p16.12 k.objects.point part=$k.objects.mb1936.p16 n=12 x=41.6 y=36.4 core.source="mulberry fa94a93"
 @k.objects.mb1936.p16.13 k.objects.point part=$k.objects.mb1936.p16 n=13 x=42.7 y=42.4 core.source="mulberry fa94a93"
-@k.objects.mb1936.word core.word text=diary text=drink means="milk 2 litre" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1936.keyword k.objects.keyword of="milk 2 litre" text=diary text=drink core.source="mulberry fa94a93"
 
 # milk bottle
 @k.objects.mb1937 k.objects.object name="milk bottle" core.source="mulberry fa94a93"
@@ -756,7 +756,7 @@
 @k.objects.mb1937.p16.27 k.objects.point part=$k.objects.mb1937.p16 n=27 x=72.7 y=27.2 core.source="mulberry fa94a93"
 @k.objects.mb1937.p16.28 k.objects.point part=$k.objects.mb1937.p16 n=28 x=76.6 y=27.5 core.source="mulberry fa94a93"
 @k.objects.mb1937.p16.29 k.objects.point part=$k.objects.mb1937.p16 n=29 x=78.9 y=26.9 core.source="mulberry fa94a93"
-@k.objects.mb1937.word core.word text=dairy text=food means="milk bottle" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1937.keyword k.objects.keyword of="milk bottle" text=dairy text=food core.source="mulberry fa94a93"
 
 # milk carton
 @k.objects.mb1938 k.objects.object name="milk carton" core.source="mulberry fa94a93"
@@ -924,7 +924,7 @@
 @k.objects.mb1938.p16.10 k.objects.point part=$k.objects.mb1938.p16 n=10 x=51.3 y=84 core.source="mulberry fa94a93"
 @k.objects.mb1938.p16.11 k.objects.point part=$k.objects.mb1938.p16 n=11 x=51.3 y=25.3 core.source="mulberry fa94a93"
 @k.objects.mb1938.p16.12 k.objects.point part=$k.objects.mb1938.p16 n=12 x=41.8 y=14.9 core.source="mulberry fa94a93"
-@k.objects.mb1938.word core.word text=diary text=drink means="milk carton" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1938.keyword k.objects.keyword of="milk carton" text=diary text=drink core.source="mulberry fa94a93"
 
 # yogurt
 @k.objects.mb3107 k.objects.object name=yogurt core.source="mulberry fa94a93"
@@ -1129,4 +1129,4 @@
 @k.objects.mb3107.p16.27 k.objects.point part=$k.objects.mb3107.p16 n=27 x=69 y=31.1 core.source="mulberry fa94a93"
 @k.objects.mb3107.p16.28 k.objects.point part=$k.objects.mb3107.p16 n=28 x=73.1 y=31.4 core.source="mulberry fa94a93"
 @k.objects.mb3107.p16.29 k.objects.point part=$k.objects.mb3107.p16 n=29 x=75.5 y=30.7 core.source="mulberry fa94a93"
-@k.objects.mb3107.word core.word text=diary text=food means=yogurt of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3107.keyword k.objects.keyword of=yogurt text=diary text=food core.source="mulberry fa94a93"

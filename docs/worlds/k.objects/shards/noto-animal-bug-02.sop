@@ -158,7 +158,7 @@
 @k.objects.u1f577.p12.6 k.objects.point part=$k.objects.u1f577.p12 n=6 x=34.8 y=57.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f577.p12.7 k.objects.point part=$k.objects.u1f577.p12 n=7 x=34.6 y=55.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f577.p12.8 k.objects.point part=$k.objects.u1f577.p12 n=8 x=35.6 y=54.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f577.word core.word text=animal text=insect means=spider of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f577.keyword k.objects.keyword of=spider text=animal text=insect core.source="cldr 48"
 
 # spider web
 @k.objects.u1f578 k.objects.object name="spider web" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -203,7 +203,7 @@
 @k.objects.u1f578.p1.38 k.objects.point part=$k.objects.u1f578.p1 n=38 x=96.8 y=50.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f578.p1.39 k.objects.point part=$k.objects.u1f578.p1 n=39 x=96.2 y=47.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f578.p2 k.objects.part of="spider web" name=part2 named=no shape=circle x=46.5 y=46.5 w=7 h=7 z=2 colour=grey rgb="#5E6367" core.source="noto-emoji 99701e0"
-@k.objects.u1f578.word core.word text=spider text=web means="spider web" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f578.keyword k.objects.keyword of="spider web" text=spider text=web core.source="cldr 48"
 
 # scorpion
 @k.objects.u1f982 k.objects.object name=scorpion core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -408,7 +408,7 @@
 @k.objects.u1f982.p16.5 k.objects.point part=$k.objects.u1f982.p16 n=5 x=40.2 y=10.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f982.p16.6 k.objects.point part=$k.objects.u1f982.p16 n=6 x=44.7 y=10.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f982.p16.7 k.objects.point part=$k.objects.u1f982.p16 n=7 x=47.7 y=14.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f982.word core.word text=Scorpio text=Scorpius text=zodiac means=scorpion of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f982.keyword k.objects.keyword of=scorpion text=Scorpio text=Scorpius text=zodiac core.source="cldr 48"
 
 # mosquito
 @k.objects.u1f99f k.objects.object name=mosquito core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -575,7 +575,7 @@
 @k.objects.u1f99f.p7.34 k.objects.point part=$k.objects.u1f99f.p7 n=34 x=43.9 y=52.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f99f.p7.35 k.objects.point part=$k.objects.u1f99f.p7 n=35 x=42.2 y=52.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f99f.p7.36 k.objects.point part=$k.objects.u1f99f.p7 n=36 x=40.9 y=53.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f99f.word core.word text=bite text=disease text=fever text=insect text=malaria text=pest text=virus means=mosquito of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f99f.keyword k.objects.keyword of=mosquito text=bite text=disease text=fever text=insect text=malaria text=pest text=virus core.source="cldr 48"
 
 # fly
 @k.objects.u1fab0 k.objects.object name=fly core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -789,7 +789,7 @@
 @k.objects.u1fab0.p16.14 k.objects.point part=$k.objects.u1fab0.p16 n=14 x=91.2 y=31.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fab0.p16.15 k.objects.point part=$k.objects.u1fab0.p16 n=15 x=92.5 y=28.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fab0.p16.16 k.objects.point part=$k.objects.u1fab0.p16 n=16 x=92.5 y=25.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fab0.word core.word text=animal text=disease text=insect text=maggot text=pest text=rotting means=fly of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab0.keyword k.objects.keyword of=fly text=animal text=disease text=insect text=maggot text=pest text=rotting core.source="cldr 48"
 
 # worm
 @k.objects.u1fab1 k.objects.object name=worm core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1005,7 +1005,7 @@
 @k.objects.u1fab1.p16.12 k.objects.point part=$k.objects.u1fab1.p16 n=12 x=58 y=63 core.source="noto-emoji 99701e0"
 @k.objects.u1fab1.p16.13 k.objects.point part=$k.objects.u1fab1.p16 n=13 x=43.4 y=52.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fab1.p16.14 k.objects.point part=$k.objects.u1fab1.p16 n=14 x=42.3 y=53.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fab1.word core.word text=animal text=annelid text=earthworm text=parasite means=worm of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab1.keyword k.objects.keyword of=worm text=animal text=annelid text=earthworm text=parasite core.source="cldr 48"
 
 # microbe
 @k.objects.u1f9a0 k.objects.object name=microbe core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1208,4 +1208,4 @@
 @k.objects.u1f9a0.p16.14 k.objects.point part=$k.objects.u1f9a0.p16 n=14 x=31.4 y=25.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a0.p16.15 k.objects.point part=$k.objects.u1f9a0.p16 n=15 x=35.4 y=25.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a0.p16.16 k.objects.point part=$k.objects.u1f9a0.p16 n=16 x=38.2 y=26.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a0.word core.word text=amoeba text=bacteria text=science text=virus means=microbe of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a0.keyword k.objects.keyword of=microbe text=amoeba text=bacteria text=science text=virus core.source="cldr 48"

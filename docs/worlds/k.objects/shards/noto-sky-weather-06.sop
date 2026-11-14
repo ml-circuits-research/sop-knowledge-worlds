@@ -51,7 +51,7 @@
 @k.objects.u1f4a7.p2.14 k.objects.point part=$k.objects.u1f4a7.p2 n=14 x=39.1 y=60.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4a7.p2.15 k.objects.point part=$k.objects.u1f4a7.p2 n=15 x=38.6 y=52.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4a7.p2.16 k.objects.point part=$k.objects.u1f4a7.p2 n=16 x=38.1 y=50.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f4a7.word core.word text=cold text=comic text=drop text=nature text=sad text=sweat text=tear text=water text=weather means=droplet of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4a7.keyword k.objects.keyword of=droplet text=cold text=comic text=drop text=nature text=sad text=sweat text=tear text=water text=weather core.source="cldr 48"
 
 # water wave
 @k.objects.u1f30a k.objects.object name="water wave" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -160,4 +160,4 @@
 @k.objects.u1f30a.p3.34 k.objects.point part=$k.objects.u1f30a.p3 n=34 x=43.5 y=33.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f30a.p3.35 k.objects.point part=$k.objects.u1f30a.p3 n=35 x=44 y=29.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f30a.p3.36 k.objects.point part=$k.objects.u1f30a.p3 n=36 x=41.9 y=27.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f30a.word core.word text=nature text=ocean text=surf text=surfer text=surfing text=water text=wave means="water wave" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f30a.keyword k.objects.keyword of="water wave" text=nature text=ocean text=surf text=surfer text=surfing text=water text=wave core.source="cldr 48"

@@ -202,7 +202,7 @@
 @k.objects.u1f5b2.p14.12 k.objects.point part=$k.objects.u1f5b2.p14 n=12 x=64.2 y=77.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f5b2.p14.13 k.objects.point part=$k.objects.u1f5b2.p14 n=13 x=75.4 y=75.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f5b2.p14.14 k.objects.point part=$k.objects.u1f5b2.p14 n=14 x=84.3 y=71.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f5b2.word core.word text=computer means=trackball of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5b2.keyword k.objects.keyword of=trackball text=computer core.source="cldr 48"
 
 # computer disk
 @k.objects.u1f4bd k.objects.object name="computer disk" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -379,7 +379,7 @@
 @k.objects.u1f4bd.p16.4 k.objects.point part=$k.objects.u1f4bd.p16 n=4 x=66 y=40.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bd.p16.5 k.objects.point part=$k.objects.u1f4bd.p16 n=5 x=96.9 y=40.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bd.p16.6 k.objects.point part=$k.objects.u1f4bd.p16 n=6 x=96.9 y=59.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f4bd.word core.word text=computer text=disk text=minidisk text=optical means="computer disk" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4bd.keyword k.objects.keyword of="computer disk" text=computer text=disk text=minidisk text=optical core.source="cldr 48"
 
 # floppy disk
 @k.objects.u1f4be k.objects.object name="floppy disk" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -430,7 +430,7 @@
 @k.objects.u1f4be.p5.6 k.objects.point part=$k.objects.u1f4be.p5 n=6 x=76.1 y=39.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4be.p5.7 k.objects.point part=$k.objects.u1f4be.p5 n=7 x=76.5 y=38.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4be.p5.8 k.objects.point part=$k.objects.u1f4be.p5 n=8 x=76.5 y=3 core.source="noto-emoji 99701e0"
-@k.objects.u1f4be.word core.word text=computer text=disk text=floppy means="floppy disk" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4be.keyword k.objects.keyword of="floppy disk" text=computer text=disk text=floppy core.source="cldr 48"
 
 # optical disk
 @k.objects.u1f4bf k.objects.object name="optical disk" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -599,7 +599,7 @@
 @k.objects.u1f4bf.p16.23 k.objects.point part=$k.objects.u1f4bf.p16 n=23 x=70.4 y=10.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bf.p16.24 k.objects.point part=$k.objects.u1f4bf.p16 n=24 x=64.1 y=7.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bf.p16.25 k.objects.point part=$k.objects.u1f4bf.p16 n=25 x=50 y=5.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4bf.word core.word text=blu-ray text=CD text=computer text=disk text=dvd text=optical means="optical disk" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4bf.keyword k.objects.keyword of="optical disk" text=blu-ray text=CD text=computer text=disk text=dvd text=optical core.source="cldr 48"
 
 # dvd
 @k.objects.u1f4c0 k.objects.object name=dvd core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -768,7 +768,7 @@
 @k.objects.u1f4c0.p16.23 k.objects.point part=$k.objects.u1f4c0.p16 n=23 x=70.4 y=10.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c0.p16.24 k.objects.point part=$k.objects.u1f4c0.p16 n=24 x=64.1 y=7.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c0.p16.25 k.objects.point part=$k.objects.u1f4c0.p16 n=25 x=50 y=5.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c0.word core.word text=Blu-ray text=cd text=computer text=disk text=DVD text=optical means=dvd of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c0.keyword k.objects.keyword of=dvd text=Blu-ray text=cd text=computer text=disk text=DVD text=optical core.source="cldr 48"
 
 # abacus
 @k.objects.u1f9ee k.objects.object name=abacus core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -877,4 +877,4 @@
 @k.objects.u1f9ee.p16.8 k.objects.point part=$k.objects.u1f9ee.p16 n=8 x=85.3 y=36 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ee.p16.9 k.objects.point part=$k.objects.u1f9ee.p16 n=9 x=14.7 y=36 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ee.p16.10 k.objects.point part=$k.objects.u1f9ee.p16 n=10 x=12.9 y=35.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ee.word core.word text=calculation text=calculator means=abacus of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ee.keyword k.objects.keyword of=abacus text=calculation text=calculator core.source="cldr 48"

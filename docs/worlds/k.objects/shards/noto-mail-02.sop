@@ -155,7 +155,7 @@
 @k.objects.u1f4ea.p15.8 k.objects.point part=$k.objects.u1f4ea.p15 n=8 x=24.8 y=30.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ea.p15.9 k.objects.point part=$k.objects.u1f4ea.p15 n=9 x=27.5 y=30.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ea.p15.10 k.objects.point part=$k.objects.u1f4ea.p15 n=10 x=27.6 y=28.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ea.word core.word text=closed text=flag text=lowered text=mail text=mailbox text=postbox means="closed mailbox with lowered flag" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ea.keyword k.objects.keyword of="closed mailbox with lowered flag" text=closed text=flag text=lowered text=mail text=mailbox text=postbox core.source="cldr 48"
 
 # open mailbox with raised flag
 @k.objects.u1f4ec k.objects.object name="open mailbox with raised flag" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -312,7 +312,7 @@
 @k.objects.u1f4ec.p16.8 k.objects.point part=$k.objects.u1f4ec.p16 n=8 x=38.9 y=50.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ec.p16.9 k.objects.point part=$k.objects.u1f4ec.p16 n=9 x=33.4 y=58.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ec.p16.10 k.objects.point part=$k.objects.u1f4ec.p16 n=10 x=32.2 y=58.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ec.word core.word text=flag text=mail text=mailbox text=open text=postbox text=raised means="open mailbox with raised flag" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ec.keyword k.objects.keyword of="open mailbox with raised flag" text=flag text=mail text=mailbox text=open text=postbox text=raised core.source="cldr 48"
 
 # open mailbox with lowered flag
 @k.objects.u1f4ed k.objects.object name="open mailbox with lowered flag" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -447,7 +447,7 @@
 @k.objects.u1f4ed.p13.14 k.objects.point part=$k.objects.u1f4ed.p13 n=14 x=35.3 y=23 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ed.p13.15 k.objects.point part=$k.objects.u1f4ed.p13 n=15 x=29.4 y=20.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ed.p13.16 k.objects.point part=$k.objects.u1f4ed.p13 n=16 x=22.6 y=19.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ed.word core.word text=flag text=lowered text=mail text=mailbox text=open text=postbox means="open mailbox with lowered flag" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ed.keyword k.objects.keyword of="open mailbox with lowered flag" text=flag text=lowered text=mail text=mailbox text=open text=postbox core.source="cldr 48"
 
 # postbox
 @k.objects.u1f4ee k.objects.object name=postbox core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -575,7 +575,7 @@
 @k.objects.u1f4ee.p13.2 k.objects.point part=$k.objects.u1f4ee.p13 n=2 x=33.2 y=21.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ee.p13.3 k.objects.point part=$k.objects.u1f4ee.p13 n=3 x=31.8 y=26 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ee.p13.4 k.objects.point part=$k.objects.u1f4ee.p13 n=4 x=28.6 y=25.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ee.word core.word text=mail text=mailbox means=postbox of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ee.keyword k.objects.keyword of=postbox text=mail text=mailbox core.source="cldr 48"
 
 # ballot box with ballot
 @k.objects.u1f5f3 k.objects.object name="ballot box with ballot" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -651,4 +651,4 @@
 @k.objects.u1f5f3.p9.7 k.objects.point part=$k.objects.u1f5f3.p9 n=7 x=34.3 y=39.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f5f3.p9.8 k.objects.point part=$k.objects.u1f5f3.p9 n=8 x=31.7 y=39.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f5f3.p10 k.objects.part of="ballot box with ballot" name=part10 named=no shape=oval x=30.8 y=34.3 w=6.9 h=4.3 z=10 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
-@k.objects.u1f5f3.word core.word text=ballot text=box means="ballot box with ballot" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5f3.keyword k.objects.keyword of="ballot box with ballot" text=ballot text=box core.source="cldr 48"

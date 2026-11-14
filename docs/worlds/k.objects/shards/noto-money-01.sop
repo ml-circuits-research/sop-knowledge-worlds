@@ -162,7 +162,7 @@
 @k.objects.u1fa99.p16.6 k.objects.point part=$k.objects.u1fa99.p16 n=6 x=58 y=44.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa99.p16.7 k.objects.point part=$k.objects.u1fa99.p16 n=7 x=58.7 y=45.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa99.p16.8 k.objects.point part=$k.objects.u1fa99.p16 n=8 x=58.7 y=58.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fa99.word core.word text=dollar text=euro text=gold text=metal text=money text=rich text=silver text=treasure means=coin of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa99.keyword k.objects.keyword of=coin text=dollar text=euro text=gold text=metal text=money text=rich text=silver text=treasure core.source="cldr 48"
 
 # money bag
 @k.objects.u1f4b0 k.objects.object name="money bag" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -332,7 +332,7 @@
 @k.objects.u1f4b0.p9.6 k.objects.point part=$k.objects.u1f4b0.p9 n=6 x=77.3 y=54.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b0.p9.7 k.objects.point part=$k.objects.u1f4b0.p9 n=7 x=75.5 y=51.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b0.p9.8 k.objects.point part=$k.objects.u1f4b0.p9 n=8 x=74.6 y=47.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f4b0.word core.word text=bag text=bank text=bet text=billion text=cash text=cost text=dollar text=gold text=million text=money text=moneybag text=paid text=paying text=pot text=rich text=win means="money bag" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b0.keyword k.objects.keyword of="money bag" text=bag text=bank text=bet text=billion text=cash text=cost text=dollar text=gold text=million text=money text=moneybag text=paid text=paying text=pot text=rich text=win core.source="cldr 48"
 
 # treasure chest
 @k.objects.u1fa8e k.objects.object name="treasure chest" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -523,7 +523,7 @@
 @k.objects.u1fa8e.p16.17 k.objects.point part=$k.objects.u1fa8e.p16 n=17 x=75.2 y=59.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa8e.p16.18 k.objects.point part=$k.objects.u1fa8e.p16 n=18 x=76.8 y=58.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa8e.p16.19 k.objects.point part=$k.objects.u1fa8e.p16 n=19 x=77.7 y=52 core.source="noto-emoji 99701e0"
-@k.objects.u1fa8e.word core.word text=gem text=gold text=jewels text=loot text=money text=prize text=silver text=valuables text=wealth means="treasure chest" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa8e.keyword k.objects.keyword of="treasure chest" text=gem text=gold text=jewels text=loot text=money text=prize text=silver text=valuables text=wealth core.source="cldr 48"
 
 # yen banknote
 @k.objects.u1f4b4 k.objects.object name="yen banknote" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -615,7 +615,7 @@
 @k.objects.u1f4b4.p5.30 k.objects.point part=$k.objects.u1f4b4.p5 n=30 x=22.8 y=32.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b4.p5.31 k.objects.point part=$k.objects.u1f4b4.p5 n=31 x=27.8 y=43.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b4.p6 k.objects.part of="yen banknote" name=part6 named=no shape=rectangle x=41.4 y=70.2 w=17.2 h=9.6 z=6 colour=orange rgb="#FFC06C" core.source="noto-emoji 99701e0"
-@k.objects.u1f4b4.word core.word text=bank text=banknote text=bill text=currency text=money text=note text=yen means="yen banknote" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b4.keyword k.objects.keyword of="yen banknote" text=bank text=banknote text=bill text=currency text=money text=note text=yen core.source="cldr 48"
 
 # dollar banknote
 @k.objects.u1f4b5 k.objects.object name="dollar banknote" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -717,7 +717,7 @@
 @k.objects.u1f4b5.p5.21 k.objects.point part=$k.objects.u1f4b5.p5 n=21 x=84.6 y=24.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b5.p6 k.objects.part of="dollar banknote" name=band named=model shape=rectangle x=41.4 y=20.2 w=17.2 h=59.6 z=6 colour=white rgb="#FFECB3" core.source="noto-emoji 99701e0"
 @k.objects.u1f4b5.p7 k.objects.part of="dollar banknote" name=part7 named=no shape=rectangle x=41.4 y=70.2 w=17.2 h=9.6 z=7 colour=orange rgb="#FFC06C" core.source="noto-emoji 99701e0"
-@k.objects.u1f4b5.word core.word text=bank text=banknote text=bill text=currency text=dollar text=money text=note means="dollar banknote" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b5.keyword k.objects.keyword of="dollar banknote" text=bank text=banknote text=bill text=currency text=dollar text=money text=note core.source="cldr 48"
 
 # euro banknote
 @k.objects.u1f4b6 k.objects.object name="euro banknote" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -817,7 +817,7 @@
 @k.objects.u1f4b6.p6.37 k.objects.point part=$k.objects.u1f4b6.p6 n=37 x=26.6 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b6.p6.38 k.objects.point part=$k.objects.u1f4b6.p6 n=38 x=33 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b6.p6.39 k.objects.point part=$k.objects.u1f4b6.p6 n=39 x=33.3 y=48.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f4b6.word core.word text=100 text=bank text=banknote text=bill text=currency text=euro text=money text=note text=rich means="euro banknote" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b6.keyword k.objects.keyword of="euro banknote" text=100 text=bank text=banknote text=bill text=currency text=euro text=money text=note text=rich core.source="cldr 48"
 
 # pound banknote
 @k.objects.u1f4b7 k.objects.object name="pound banknote" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -915,7 +915,7 @@
 @k.objects.u1f4b7.p6.35 k.objects.point part=$k.objects.u1f4b7.p6 n=35 x=30.4 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b7.p6.36 k.objects.point part=$k.objects.u1f4b7.p6 n=36 x=30.7 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b7.p6.37 k.objects.point part=$k.objects.u1f4b7.p6 n=37 x=30.2 y=47.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4b7.word core.word text=bank text=banknote text=bill text=billion text=cash text=currency text=money text=note text=pound text=pounds means="pound banknote" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b7.keyword k.objects.keyword of="pound banknote" text=bank text=banknote text=bill text=billion text=cash text=currency text=money text=note text=pound text=pounds core.source="cldr 48"
 
 # money with wings
 @k.objects.u1f4b8 k.objects.object name="money with wings" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1132,4 +1132,4 @@
 @k.objects.u1f4b8.p14.3 k.objects.point part=$k.objects.u1f4b8.p14 n=3 x=38.9 y=89.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b8.p14.4 k.objects.point part=$k.objects.u1f4b8.p14 n=4 x=38.4 y=84.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b8.p14.5 k.objects.point part=$k.objects.u1f4b8.p14 n=5 x=13.3 y=55.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4b8.word core.word text=bank text=banknote text=bill text=billion text=cash text=dollar text=fly text=million text=money text=note text=pay text=wings means="money with wings" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b8.keyword k.objects.keyword of="money with wings" text=bank text=banknote text=bill text=billion text=cash text=dollar text=fly text=million text=money text=note text=pay text=wings core.source="cldr 48"

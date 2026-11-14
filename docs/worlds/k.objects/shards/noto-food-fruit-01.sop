@@ -193,7 +193,7 @@
 @k.objects.u1f347.p16.6 k.objects.point part=$k.objects.u1f347.p16 n=6 x=42.5 y=40.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f347.p16.7 k.objects.point part=$k.objects.u1f347.p16 n=7 x=43.7 y=38.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f347.p16.8 k.objects.point part=$k.objects.u1f347.p16 n=8 x=45.5 y=29.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f347.word core.word text=Dionysus text=fruit text=grape means=grapes of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f347.keyword k.objects.keyword of=grapes text=Dionysus text=fruit text=grape core.source="cldr 48"
 
 # melon
 @k.objects.u1f348 k.objects.object name=melon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -402,7 +402,7 @@
 @k.objects.u1f348.p16.16 k.objects.point part=$k.objects.u1f348.p16 n=16 x=30.3 y=4.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f348.p16.17 k.objects.point part=$k.objects.u1f348.p16 n=17 x=29.2 y=8.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f348.p16.18 k.objects.point part=$k.objects.u1f348.p16 n=18 x=30.9 y=10.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f348.word core.word text=cantaloupe text=fruit means=melon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f348.keyword k.objects.keyword of=melon text=cantaloupe text=fruit core.source="cldr 48"
 
 # watermelon
 @k.objects.u1f349 k.objects.object name=watermelon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -581,7 +581,7 @@
 @k.objects.u1f349.p10.5 k.objects.point part=$k.objects.u1f349.p10 n=5 x=41.2 y=87 core.source="noto-emoji 99701e0"
 @k.objects.u1f349.p10.6 k.objects.point part=$k.objects.u1f349.p10 n=6 x=39.9 y=87.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f349.p10.7 k.objects.point part=$k.objects.u1f349.p10 n=7 x=34.7 y=86.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f349.word core.word text=fruit means=watermelon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f349.keyword k.objects.keyword of=watermelon text=fruit core.source="cldr 48"
 
 # tangerine
 @k.objects.u1f34a k.objects.object name=tangerine core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -740,7 +740,7 @@
 @k.objects.u1f34a.p11.6 k.objects.point part=$k.objects.u1f34a.p11 n=6 x=52.1 y=83.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f34a.p11.7 k.objects.point part=$k.objects.u1f34a.p11 n=7 x=53.9 y=82 core.source="noto-emoji 99701e0"
 @k.objects.u1f34a.p11.8 k.objects.point part=$k.objects.u1f34a.p11 n=8 x=56.5 y=81.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f34a.word core.word text=c text=citrus text=fruit text=nectarine text=orange text=vitamin means=tangerine of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34a.keyword k.objects.keyword of=tangerine text=c text=citrus text=fruit text=nectarine text=orange text=vitamin core.source="cldr 48"
 
 # lemon
 @k.objects.u1f34b k.objects.object name=lemon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -852,7 +852,7 @@
 @k.objects.u1f34b.p6.9 k.objects.point part=$k.objects.u1f34b.p6 n=9 x=25.1 y=29.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f34b.p6.10 k.objects.point part=$k.objects.u1f34b.p6 n=10 x=27.1 y=26.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f34b.p6.11 k.objects.point part=$k.objects.u1f34b.p6 n=11 x=27.1 y=25.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f34b.word core.word text=citrus text=fruit text=sour means=lemon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34b.keyword k.objects.keyword of=lemon text=citrus text=fruit text=sour core.source="cldr 48"
 
 # lime
 @k.objects.u1f34b_200d_1f7e9 k.objects.object name=lime core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1042,7 +1042,7 @@
 @k.objects.u1f34b_200d_1f7e9.p13.8 k.objects.point part=$k.objects.u1f34b_200d_1f7e9.p13 n=8 x=17.3 y=33.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f34b_200d_1f7e9.p13.9 k.objects.point part=$k.objects.u1f34b_200d_1f7e9.p13 n=9 x=44.8 y=26.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f34b_200d_1f7e9.p13.10 k.objects.point part=$k.objects.u1f34b_200d_1f7e9.p13 n=10 x=45.9 y=25.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f34b_200d_1f7e9.word core.word text=acidity text=citrus text=cocktail text=fruit text=garnish text=key text=margarita text=mojito text=refreshing text=salsa text=sour text=tangy text=tequila text=tropical text=zest means=lime of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34b_200d_1f7e9.keyword k.objects.keyword of=lime text=acidity text=citrus text=cocktail text=fruit text=garnish text=key text=margarita text=mojito text=refreshing text=salsa text=sour text=tangy text=tequila text=tropical text=zest core.source="cldr 48"
 
 # banana
 @k.objects.u1f34c k.objects.object name=banana core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1231,7 +1231,7 @@
 @k.objects.u1f34c.p9.16 k.objects.point part=$k.objects.u1f34c.p9 n=16 x=64.8 y=49.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f34c.p9.17 k.objects.point part=$k.objects.u1f34c.p9 n=17 x=70.7 y=49.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f34c.p9.18 k.objects.point part=$k.objects.u1f34c.p9 n=18 x=75 y=50.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f34c.word core.word text=fruit text=potassium means=banana of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34c.keyword k.objects.keyword of=banana text=fruit text=potassium core.source="cldr 48"
 
 # pineapple
 @k.objects.u1f34d k.objects.object name=pineapple core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1446,4 +1446,4 @@
 @k.objects.u1f34d.p11.11 k.objects.point part=$k.objects.u1f34d.p11 n=11 x=57.4 y=37.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f34d.p11.12 k.objects.point part=$k.objects.u1f34d.p11 n=12 x=55.5 y=34.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f34d.p11.13 k.objects.point part=$k.objects.u1f34d.p11 n=13 x=52.5 y=31.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f34d.word core.word text=colada text=fruit text=pina text=tropical means=pineapple of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34d.keyword k.objects.keyword of=pineapple text=colada text=fruit text=pina text=tropical core.source="cldr 48"

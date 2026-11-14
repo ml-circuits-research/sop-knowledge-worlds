@@ -106,7 +106,7 @@
 @k.objects.u1f528.p7.6 k.objects.point part=$k.objects.u1f528.p7 n=6 x=16.6 y=32.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f528.p7.7 k.objects.point part=$k.objects.u1f528.p7 n=7 x=13.8 y=30 core.source="noto-emoji 99701e0"
 @k.objects.u1f528.p7.8 k.objects.point part=$k.objects.u1f528.p7 n=8 x=11.4 y=29.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f528.word core.word text=home text=improvement text=repairs text=tool means=hammer of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f528.keyword k.objects.keyword of=hammer text=home text=improvement text=repairs text=tool core.source="cldr 48"
 
 # axe
 @k.objects.u1fa93 k.objects.object name=axe core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -238,7 +238,7 @@
 @k.objects.u1fa93.p8.9 k.objects.point part=$k.objects.u1fa93.p8 n=9 x=34.6 y=17.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa93.p8.10 k.objects.point part=$k.objects.u1fa93.p8 n=10 x=34.4 y=16.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fa93.p8.11 k.objects.point part=$k.objects.u1fa93.p8 n=11 x=35.5 y=14.7 core.source="noto-emoji 99701e0"
-@k.objects.u1fa93.word core.word text=ax text=chop text=hatchet text=split text=wood means=axe of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa93.keyword k.objects.keyword of=axe text=ax text=chop text=hatchet text=split text=wood core.source="cldr 48"
 
 # pick
 @k.objects.u26cf k.objects.object name=pick core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -313,7 +313,7 @@
 @k.objects.u26cf.p5.16 k.objects.point part=$k.objects.u26cf.p5 n=16 x=57.6 y=7.7 core.source="noto-emoji 99701e0"
 @k.objects.u26cf.p5.17 k.objects.point part=$k.objects.u26cf.p5 n=17 x=48.3 y=11.9 core.source="noto-emoji 99701e0"
 @k.objects.u26cf.p5.18 k.objects.point part=$k.objects.u26cf.p5 n=18 x=37.2 y=19.1 core.source="noto-emoji 99701e0"
-@k.objects.u26cf.word core.word text=hammer text=mining text=tool means=pick of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26cf.keyword k.objects.keyword of=pick text=hammer text=mining text=tool core.source="cldr 48"
 
 # hammer and pick
 @k.objects.u2692 k.objects.object name="hammer and pick" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -492,7 +492,7 @@
 @k.objects.u2692.p15.3 k.objects.point part=$k.objects.u2692.p15 n=3 x=57.4 y=4.4 core.source="noto-emoji 99701e0"
 @k.objects.u2692.p15.4 k.objects.point part=$k.objects.u2692.p15 n=4 x=50 y=9 core.source="noto-emoji 99701e0"
 @k.objects.u2692.p15.5 k.objects.point part=$k.objects.u2692.p15 n=5 x=49.7 y=12.8 core.source="noto-emoji 99701e0"
-@k.objects.u2692.word core.word text=hammer text=pick text=tool means="hammer and pick" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2692.keyword k.objects.keyword of="hammer and pick" text=hammer text=pick text=tool core.source="cldr 48"
 
 # hammer and wrench
 @k.objects.u1f6e0 k.objects.object name="hammer and wrench" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -697,7 +697,7 @@
 @k.objects.u1f6e0.p13.7 k.objects.point part=$k.objects.u1f6e0.p13 n=7 x=16.3 y=32.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e0.p13.8 k.objects.point part=$k.objects.u1f6e0.p13 n=8 x=13.5 y=30.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e0.p13.9 k.objects.point part=$k.objects.u1f6e0.p13 n=9 x=11 y=29.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f6e0.word core.word text=hammer text=spanner text=tool text=wrench means="hammer and wrench" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6e0.keyword k.objects.keyword of="hammer and wrench" text=hammer text=spanner text=tool text=wrench core.source="cldr 48"
 
 # dagger
 @k.objects.u1f5e1 k.objects.object name=dagger core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -854,7 +854,7 @@
 @k.objects.u1f5e1.p16.6 k.objects.point part=$k.objects.u1f5e1.p16 n=6 x=33.1 y=89.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f5e1.p16.7 k.objects.point part=$k.objects.u1f5e1.p16 n=7 x=33.9 y=91.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f5e1.p16.8 k.objects.point part=$k.objects.u1f5e1.p16 n=8 x=34.7 y=89.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f5e1.word core.word text=knife text=weapon means=dagger of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5e1.keyword k.objects.keyword of=dagger text=knife text=weapon core.source="cldr 48"
 
 # crossed swords
 @k.objects.u2694 k.objects.object name="crossed swords" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -977,7 +977,7 @@
 @k.objects.u2694.p16.6 k.objects.point part=$k.objects.u2694.p16 n=6 x=100 y=86.8 core.source="noto-emoji 99701e0"
 @k.objects.u2694.p16.7 k.objects.point part=$k.objects.u2694.p16 n=7 x=100 y=86.7 core.source="noto-emoji 99701e0"
 @k.objects.u2694.p16.8 k.objects.point part=$k.objects.u2694.p16 n=8 x=100 y=75 core.source="noto-emoji 99701e0"
-@k.objects.u2694.word core.word text=crossed text=swords text=weapon means="crossed swords" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2694.keyword k.objects.keyword of="crossed swords" text=crossed text=swords text=weapon core.source="cldr 48"
 
 # bomb
 @k.objects.u1f4a3 k.objects.object name=bomb core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1161,4 +1161,4 @@
 @k.objects.u1f4a3.p11.7 k.objects.point part=$k.objects.u1f4a3.p11 n=7 x=73.1 y=23.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4a3.p11.8 k.objects.point part=$k.objects.u1f4a3.p11 n=8 x=76 y=22 core.source="noto-emoji 99701e0"
 @k.objects.u1f4a3.p11.9 k.objects.point part=$k.objects.u1f4a3.p11 n=9 x=72.5 y=20.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4a3.word core.word text=boom text=comic text=dangerous text=explosion text=hot means=bomb of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4a3.keyword k.objects.keyword of=bomb text=boom text=comic text=dangerous text=explosion text=hot core.source="cldr 48"

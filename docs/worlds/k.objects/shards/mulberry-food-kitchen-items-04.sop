@@ -136,7 +136,7 @@
 @k.objects.mb1484.p16 k.objects.part of=fridge name=part16 kind=detail named=no shape=line x=84.5 y=11.8 w=0 h=77 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1484.p16.1 k.objects.point part=$k.objects.mb1484.p16 n=1 x=84.5 y=11.8 core.source="mulberry fa94a93"
 @k.objects.mb1484.p16.2 k.objects.point part=$k.objects.mb1484.p16 n=2 x=84.5 y=88.8 core.source="mulberry fa94a93"
-@k.objects.mb1484.word core.word text=cooking text=feeding text=kitchen means=fridge of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1484.keyword k.objects.keyword of=fridge text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # frying pan
 @k.objects.mb1496 k.objects.object name="frying pan" core.source="mulberry fa94a93"
@@ -258,7 +258,7 @@
 @k.objects.mb1496.p8.8 k.objects.point part=$k.objects.mb1496.p8 n=8 x=90.3 y=23.6 core.source="mulberry fa94a93"
 @k.objects.mb1496.p8.9 k.objects.point part=$k.objects.mb1496.p8 n=9 x=91.9 y=24.3 core.source="mulberry fa94a93"
 @k.objects.mb1496.p8.10 k.objects.point part=$k.objects.mb1496.p8 n=10 x=92.6 y=25.5 core.source="mulberry fa94a93"
-@k.objects.mb1496.word core.word text=cooking text=kitchen means="frying pan" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1496.keyword k.objects.keyword of="frying pan" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # funnel
 @k.objects.mb1498 k.objects.object name=funnel core.source="mulberry fa94a93"
@@ -375,7 +375,7 @@
 @k.objects.mb1498.p11.5 k.objects.point part=$k.objects.mb1498.p11 n=5 x=51.6 y=53.1 core.source="mulberry fa94a93"
 @k.objects.mb1498.p11.6 k.objects.point part=$k.objects.mb1498.p11 n=6 x=53.1 y=54.2 core.source="mulberry fa94a93"
 @k.objects.mb1498.p11.7 k.objects.point part=$k.objects.mb1498.p11 n=7 x=53.4 y=55.1 core.source="mulberry fa94a93"
-@k.objects.mb1498.word core.word text=cooking means=funnel of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1498.keyword k.objects.keyword of=funnel text=cooking core.source="mulberry fa94a93"
 
 # garlic crusher
 @k.objects.mb1514 k.objects.object name="garlic crusher" core.source="mulberry fa94a93"
@@ -473,7 +473,7 @@
 @k.objects.mb1514.p9.7 k.objects.point part=$k.objects.mb1514.p9 n=7 x=9.9 y=54 core.source="mulberry fa94a93"
 @k.objects.mb1514.p9.8 k.objects.point part=$k.objects.mb1514.p9 n=8 x=10.9 y=54.4 core.source="mulberry fa94a93"
 @k.objects.mb1514.p9.9 k.objects.point part=$k.objects.mb1514.p9 n=9 x=11.3 y=55.4 core.source="mulberry fa94a93"
-@k.objects.mb1514.word core.word text=cooking text=kitchen means="garlic crusher" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1514.keyword k.objects.keyword of="garlic crusher" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # grater
 @k.objects.mb1556 k.objects.object name=grater core.source="mulberry fa94a93"
@@ -590,7 +590,7 @@
 @k.objects.mb1556.p16 k.objects.part of=grater name=part16 kind=detail named=no shape=line x=25.4 y=69.5 w=11 h=5 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1556.p16.1 k.objects.point part=$k.objects.mb1556.p16 n=1 x=25.4 y=69.5 core.source="mulberry fa94a93"
 @k.objects.mb1556.p16.2 k.objects.point part=$k.objects.mb1556.p16 n=2 x=36.4 y=74.5 core.source="mulberry fa94a93"
-@k.objects.mb1556.word core.word text=cooking text=feeding text=kitchen means=grater of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1556.keyword k.objects.keyword of=grater text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # gravy boat
 @k.objects.mb1558 k.objects.object name="gravy boat" core.source="mulberry fa94a93"
@@ -843,7 +843,7 @@
 @k.objects.mb1572.p16 k.objects.part of="grill pan" name=part16 kind=detail named=no shape=line x=12.7 y=51.3 w=75 h=0.1 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1572.p16.1 k.objects.point part=$k.objects.mb1572.p16 n=1 x=12.7 y=51.3 core.source="mulberry fa94a93"
 @k.objects.mb1572.p16.2 k.objects.point part=$k.objects.mb1572.p16 n=2 x=87.7 y=51.4 core.source="mulberry fa94a93"
-@k.objects.mb1572.word core.word text=cooking text=kitchen means="grill pan" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1572.keyword k.objects.keyword of="grill pan" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # hand mixer
 @k.objects.mb1608 k.objects.object name="hand mixer" core.source="mulberry fa94a93"
@@ -1013,4 +1013,4 @@
 @k.objects.mb1608.p16.10 k.objects.point part=$k.objects.mb1608.p16 n=10 x=46.6 y=91.4 core.source="mulberry fa94a93"
 @k.objects.mb1608.p16.11 k.objects.point part=$k.objects.mb1608.p16 n=11 x=44.3 y=92.3 core.source="mulberry fa94a93"
 @k.objects.mb1608.p16.12 k.objects.point part=$k.objects.mb1608.p16 n=12 x=43.8 y=91.4 core.source="mulberry fa94a93"
-@k.objects.mb1608.word core.word text=cooking means="hand mixer" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1608.keyword k.objects.keyword of="hand mixer" text=cooking core.source="mulberry fa94a93"

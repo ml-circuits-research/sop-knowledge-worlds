@@ -156,7 +156,7 @@
 @k.objects.u1f33b.p8.17 k.objects.point part=$k.objects.u1f33b.p8 n=17 x=64.4 y=32 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p8.18 k.objects.point part=$k.objects.u1f33b.p8 n=18 x=61.1 y=28.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f33b.p8.19 k.objects.point part=$k.objects.u1f33b.p8 n=19 x=56.4 y=25.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f33b.word core.word text=flower text=outdoors text=plant text=sun means=sunflower of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f33b.keyword k.objects.keyword of=sunflower text=flower text=outdoors text=plant text=sun core.source="cldr 48"
 
 # blossom
 @k.objects.u1f33c k.objects.object name=blossom core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -359,7 +359,7 @@
 @k.objects.u1f33c.p14.4 k.objects.point part=$k.objects.u1f33c.p14 n=4 x=48.4 y=59.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f33c.p14.5 k.objects.point part=$k.objects.u1f33c.p14 n=5 x=45.9 y=57.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f33c.p14.6 k.objects.point part=$k.objects.u1f33c.p14 n=6 x=44.5 y=58.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f33c.word core.word text=buttercup text=dandelion text=flower text=plant means=blossom of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f33c.keyword k.objects.keyword of=blossom text=buttercup text=dandelion text=flower text=plant core.source="cldr 48"
 
 # tulip
 @k.objects.u1f337 k.objects.object name=tulip core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -549,7 +549,7 @@
 @k.objects.u1f337.p10.15 k.objects.point part=$k.objects.u1f337.p10 n=15 x=26.2 y=17.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p10.16 k.objects.point part=$k.objects.u1f337.p10 n=16 x=28.2 y=14.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f337.p10.17 k.objects.point part=$k.objects.u1f337.p10 n=17 x=30.1 y=13.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f337.word core.word text=blossom text=flower text=growth text=plant means=tulip of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f337.keyword k.objects.keyword of=tulip text=blossom text=flower text=growth text=plant core.source="cldr 48"
 
 # hyacinth
 @k.objects.u1fabb k.objects.object name=hyacinth core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -764,4 +764,4 @@
 @k.objects.u1fabb.p15.6 k.objects.point part=$k.objects.u1fabb.p15 n=6 x=62 y=45.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fabb.p15.7 k.objects.point part=$k.objects.u1fabb.p15 n=7 x=63.5 y=44.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fabb.p15.8 k.objects.point part=$k.objects.u1fabb.p15 n=8 x=65 y=45.1 core.source="noto-emoji 99701e0"
-@k.objects.u1fabb.word core.word text=bloom text=bluebonnet text=flower text=indigo text=lavender text=lilac text=lupine text=plant text=purple text=shrub text=snapdragon text=spring text=violet means=hyacinth of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fabb.keyword k.objects.keyword of=hyacinth text=bloom text=bluebonnet text=flower text=indigo text=lavender text=lilac text=lupine text=plant text=purple text=shrub text=snapdragon text=spring text=violet core.source="cldr 48"

@@ -197,7 +197,7 @@
 @k.objects.mb3018.p16.4 k.objects.point part=$k.objects.mb3018.p16 n=4 x=48.2 y=20.6 core.source="mulberry fa94a93"
 @k.objects.mb3018.p16.5 k.objects.point part=$k.objects.mb3018.p16 n=5 x=45.7 y=20.1 core.source="mulberry fa94a93"
 @k.objects.mb3018.p16.6 k.objects.point part=$k.objects.mb3018.p16 n=6 x=44.5 y=19.2 core.source="mulberry fa94a93"
-@k.objects.mb3018.word core.word text=home text=house means="washing up liquid" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3018.keyword k.objects.keyword of="washing up liquid" text=home text=house core.source="mulberry fa94a93"
 
 # waste paper bin
 @k.objects.mb3020 k.objects.object name="waste paper bin" core.source="mulberry fa94a93"
@@ -373,4 +373,4 @@
 @k.objects.mb3050.p9.2 k.objects.point part=$k.objects.mb3050.p9 n=2 x=70.7 y=11 core.source="mulberry fa94a93"
 @k.objects.mb3050.p9.3 k.objects.point part=$k.objects.mb3050.p9 n=3 x=50.1 y=9 core.source="mulberry fa94a93"
 @k.objects.mb3050.p9.4 k.objects.point part=$k.objects.mb3050.p9 n=4 x=50.1 y=30 core.source="mulberry fa94a93"
-@k.objects.mb3050.word core.word text=home text=house means="wheelie bin" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3050.keyword k.objects.keyword of="wheelie bin" text=home text=house core.source="mulberry fa94a93"

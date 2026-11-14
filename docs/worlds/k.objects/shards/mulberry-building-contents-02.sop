@@ -270,7 +270,7 @@
 @k.objects.mb520.p7.22 k.objects.point part=$k.objects.mb520.p7 n=22 x=43.3 y=32.1 core.source="mulberry fa94a93"
 @k.objects.mb520.p7.23 k.objects.point part=$k.objects.mb520.p7 n=23 x=45.9 y=27.9 core.source="mulberry fa94a93"
 @k.objects.mb520.p7.24 k.objects.point part=$k.objects.mb520.p7 n=24 x=46.1 y=22.9 core.source="mulberry fa94a93"
-@k.objects.mb520.word core.word text=home text=house means="cleaner spray" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb520.keyword k.objects.keyword of="cleaner spray" text=home text=house core.source="mulberry fa94a93"
 
 # cleaning box
 @k.objects.mb521 k.objects.object name="cleaning box" core.source="mulberry fa94a93"
@@ -495,7 +495,7 @@
 @k.objects.mb535.p6 k.objects.part of="clothes hanger" name=part6 kind=detail named=no shape=line x=9.3 y=70.3 w=81.7 h=0 z=6 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb535.p6.1 k.objects.point part=$k.objects.mb535.p6 n=1 x=9.3 y=70.3 core.source="mulberry fa94a93"
 @k.objects.mb535.p6.2 k.objects.point part=$k.objects.mb535.p6 n=2 x=91 y=70.3 core.source="mulberry fa94a93"
-@k.objects.mb535.word core.word text=home text=house means="clothes hanger" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb535.keyword k.objects.keyword of="clothes hanger" text=home text=house core.source="mulberry fa94a93"
 
 # clothes peg
 @k.objects.mb540 k.objects.object name="clothes peg" core.source="mulberry fa94a93"
@@ -619,7 +619,7 @@
 @k.objects.mb540.p9.9 k.objects.point part=$k.objects.mb540.p9 n=9 x=52.3 y=36.9 core.source="mulberry fa94a93"
 @k.objects.mb540.p9.10 k.objects.point part=$k.objects.mb540.p9 n=10 x=51.9 y=39.2 core.source="mulberry fa94a93"
 @k.objects.mb540.p9.11 k.objects.point part=$k.objects.mb540.p9 n=11 x=49.9 y=40.9 core.source="mulberry fa94a93"
-@k.objects.mb540.word core.word text=home text=house means="clothes peg" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb540.keyword k.objects.keyword of="clothes peg" text=home text=house core.source="mulberry fa94a93"
 
 # curtains
 @k.objects.mb849 k.objects.object name=curtains core.source="mulberry fa94a93"
@@ -743,7 +743,7 @@
 @k.objects.mb849.p16.5 k.objects.point part=$k.objects.mb849.p16 n=5 x=63.3 y=62.8 core.source="mulberry fa94a93"
 @k.objects.mb849.p16.6 k.objects.point part=$k.objects.mb849.p16 n=6 x=63.8 y=56.6 core.source="mulberry fa94a93"
 @k.objects.mb849.p16.7 k.objects.point part=$k.objects.mb849.p16 n=7 x=69.4 y=54.8 core.source="mulberry fa94a93"
-@k.objects.mb849.word core.word text=home text=house means=curtains of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb849.keyword k.objects.keyword of=curtains text=home text=house core.source="mulberry fa94a93"
 
 # dishwasher powder
 @k.objects.mb920 k.objects.object name="dishwasher powder" core.source="mulberry fa94a93"
@@ -948,7 +948,7 @@
 @k.objects.mb920.p16.13 k.objects.point part=$k.objects.mb920.p16 n=13 x=37.9 y=67.7 core.source="mulberry fa94a93"
 @k.objects.mb920.p16.14 k.objects.point part=$k.objects.mb920.p16 n=14 x=39.8 y=65.8 core.source="mulberry fa94a93"
 @k.objects.mb920.p16.15 k.objects.point part=$k.objects.mb920.p16 n=15 x=44 y=63.9 core.source="mulberry fa94a93"
-@k.objects.mb920.word core.word text=home text=house means="dishwasher powder" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb920.keyword k.objects.keyword of="dishwasher powder" text=home text=house core.source="mulberry fa94a93"
 
 # iron
 @k.objects.mb1717 k.objects.object name=iron core.source="mulberry fa94a93"
@@ -1091,4 +1091,4 @@
 @k.objects.mb1717.p9.3 k.objects.point part=$k.objects.mb1717.p9 n=3 x=71.5 y=47.8 core.source="mulberry fa94a93"
 @k.objects.mb1717.p9.4 k.objects.point part=$k.objects.mb1717.p9 n=4 x=75.7 y=47.9 core.source="mulberry fa94a93"
 @k.objects.mb1717.p9.5 k.objects.point part=$k.objects.mb1717.p9 n=5 x=78.6 y=46.9 core.source="mulberry fa94a93"
-@k.objects.mb1717.word core.word text=home text=house means=iron of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1717.keyword k.objects.keyword of=iron text=home text=house core.source="mulberry fa94a93"

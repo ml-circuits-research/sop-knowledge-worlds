@@ -201,7 +201,7 @@
 @k.objects.u1f682.p15.5 k.objects.point part=$k.objects.u1f682.p15 n=5 x=95.5 y=65.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f682.p15.6 k.objects.point part=$k.objects.u1f682.p15 n=6 x=95.2 y=68.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f682.p16 k.objects.part of=locomotive name=part16 named=no shape=rectangle x=25.9 y=72.2 w=12 h=10.3 z=16 colour=grey rgb="#606060" core.source="noto-emoji 99701e0"
-@k.objects.u1f682.word core.word text=caboose text=engine text=railway text=steam text=train text=trains text=travel means=locomotive of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f682.keyword k.objects.keyword of=locomotive text=caboose text=engine text=railway text=steam text=train text=trains text=travel core.source="cldr 48"
 
 # railway car
 @k.objects.u1f683 k.objects.object name="railway car" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -264,7 +264,7 @@
 @k.objects.u1f683.p16.3 k.objects.point part=$k.objects.u1f683.p16 n=3 x=79.7 y=50.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f683.p16.4 k.objects.point part=$k.objects.u1f683.p16 n=4 x=90.6 y=50.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f683.p16.5 k.objects.point part=$k.objects.u1f683.p16 n=5 x=90.8 y=62.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f683.word core.word text=car text=electric text=railway text=train text=tram text=travel text=trolleybus means="railway car" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f683.keyword k.objects.keyword of="railway car" text=car text=electric text=railway text=train text=tram text=travel text=trolleybus core.source="cldr 48"
 
 # high-speed train
 @k.objects.u1f684 k.objects.object name="high-speed train" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -388,7 +388,7 @@
 @k.objects.u1f684.p13.15 k.objects.point part=$k.objects.u1f684.p13 n=15 x=72.5 y=61.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f684.p13.16 k.objects.point part=$k.objects.u1f684.p13 n=16 x=96.9 y=61.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f684.p13.17 k.objects.point part=$k.objects.u1f684.p13 n=17 x=96.9 y=53.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f684.word core.word text=high-speed text=railway text=shinkansen text=speed text=train means="high-speed train" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f684.keyword k.objects.keyword of="high-speed train" text=high-speed text=railway text=shinkansen text=speed text=train core.source="cldr 48"
 
 # bullet train
 @k.objects.u1f685 k.objects.object name="bullet train" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -532,7 +532,7 @@
 @k.objects.u1f685.p16.2 k.objects.point part=$k.objects.u1f685.p16 n=2 x=12.5 y=69.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f685.p16.3 k.objects.point part=$k.objects.u1f685.p16 n=3 x=12.5 y=38.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f685.p16.4 k.objects.point part=$k.objects.u1f685.p16 n=4 x=10.1 y=40.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f685.word core.word text=bullet text=high-speed text=nose text=railway text=shinkansen text=speed text=train text=travel means="bullet train" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f685.keyword k.objects.keyword of="bullet train" text=bullet text=high-speed text=nose text=railway text=shinkansen text=speed text=train text=travel core.source="cldr 48"
 
 # metro
 @k.objects.u1f687 k.objects.object name=metro core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -752,7 +752,7 @@
 @k.objects.u1f687.p16.7 k.objects.point part=$k.objects.u1f687.p16 n=7 x=67.5 y=86.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f687.p16.8 k.objects.point part=$k.objects.u1f687.p16 n=8 x=68.9 y=89.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f687.p16.9 k.objects.point part=$k.objects.u1f687.p16 n=9 x=68.9 y=90.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f687.word core.word text=subway text=travel means=metro of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f687.keyword k.objects.keyword of=metro text=subway text=travel core.source="cldr 48"
 
 # light rail
 @k.objects.u1f688 k.objects.object name="light rail" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -889,7 +889,7 @@
 @k.objects.u1f688.p16.3 k.objects.point part=$k.objects.u1f688.p16 n=3 x=10.3 y=85.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f688.p16.4 k.objects.point part=$k.objects.u1f688.p16 n=4 x=96.9 y=85.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f688.p16.5 k.objects.point part=$k.objects.u1f688.p16 n=5 x=96.9 y=79.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f688.word core.word text=arrived text=light text=monorail text=rail text=railway means="light rail" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f688.keyword k.objects.keyword of="light rail" text=arrived text=light text=monorail text=rail text=railway core.source="cldr 48"
 
 # station
 @k.objects.u1f689 k.objects.object name=station core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1046,7 +1046,7 @@
 @k.objects.u1f689.p16.14 k.objects.point part=$k.objects.u1f689.p16 n=14 x=54.4 y=55.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f689.p16.15 k.objects.point part=$k.objects.u1f689.p16 n=15 x=52.3 y=56.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f689.p16.16 k.objects.point part=$k.objects.u1f689.p16 n=16 x=33.9 y=57.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f689.word core.word text=railway text=train means=station of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f689.keyword k.objects.keyword of=station text=railway text=train core.source="cldr 48"
 
 # tram
 @k.objects.u1f68a k.objects.object name=tram core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1212,4 +1212,4 @@
 @k.objects.u1f68a.p16.14 k.objects.point part=$k.objects.u1f68a.p16 n=14 x=70.5 y=55.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f68a.p16.15 k.objects.point part=$k.objects.u1f68a.p16 n=15 x=68.5 y=56.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f68a.p16.16 k.objects.point part=$k.objects.u1f68a.p16 n=16 x=50 y=57.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f68a.word core.word text=trolleybus means=tram of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f68a.keyword k.objects.keyword of=tram text=trolleybus core.source="cldr 48"

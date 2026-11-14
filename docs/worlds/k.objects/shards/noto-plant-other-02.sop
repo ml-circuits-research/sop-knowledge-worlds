@@ -206,7 +206,7 @@
 @k.objects.u2618.p8.27 k.objects.point part=$k.objects.u2618.p8 n=27 x=37.1 y=46 core.source="noto-emoji 99701e0"
 @k.objects.u2618.p8.28 k.objects.point part=$k.objects.u2618.p8 n=28 x=36.5 y=44.4 core.source="noto-emoji 99701e0"
 @k.objects.u2618.p8.29 k.objects.point part=$k.objects.u2618.p8 n=29 x=38.7 y=44.4 core.source="noto-emoji 99701e0"
-@k.objects.u2618.word core.word text=irish text=plant means=shamrock of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2618.keyword k.objects.keyword of=shamrock text=irish text=plant core.source="cldr 48"
 
 # four leaf clover
 @k.objects.u1f340 k.objects.object name="four leaf clover" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -410,7 +410,7 @@
 @k.objects.u1f340.p10.23 k.objects.point part=$k.objects.u1f340.p10 n=23 x=42 y=19.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f340.p10.24 k.objects.point part=$k.objects.u1f340.p10 n=24 x=40.7 y=21.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f340.p10.25 k.objects.point part=$k.objects.u1f340.p10 n=25 x=38 y=19.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f340.word core.word text=4 text=clover text=four text=four-leaf text=irish text=leaf text=lucky text=plant means="four leaf clover" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f340.keyword k.objects.keyword of="four leaf clover" text=4 text=clover text=four text=four-leaf text=irish text=leaf text=lucky text=plant core.source="cldr 48"
 
 # maple leaf
 @k.objects.u1f341 k.objects.object name="maple leaf" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -496,7 +496,7 @@
 @k.objects.u1f341.p3.29 k.objects.point part=$k.objects.u1f341.p3 n=29 x=20.6 y=71.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f341.p3.30 k.objects.point part=$k.objects.u1f341.p3 n=30 x=43.7 y=70 core.source="noto-emoji 99701e0"
 @k.objects.u1f341.p3.31 k.objects.point part=$k.objects.u1f341.p3 n=31 x=47.6 y=70.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f341.word core.word text=falling text=leaf text=maple means="maple leaf" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f341.keyword k.objects.keyword of="maple leaf" text=falling text=leaf text=maple core.source="cldr 48"
 
 # fallen leaf
 @k.objects.u1f342 k.objects.object name="fallen leaf" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -699,7 +699,7 @@
 @k.objects.u1f342.p12.13 k.objects.point part=$k.objects.u1f342.p12 n=13 x=46.2 y=28.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f342.p12.14 k.objects.point part=$k.objects.u1f342.p12 n=14 x=38.7 y=33.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f342.p12.15 k.objects.point part=$k.objects.u1f342.p12 n=15 x=23.1 y=39.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f342.word core.word text=autumn text=fall text=fallen text=falling text=leaf means="fallen leaf" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f342.keyword k.objects.keyword of="fallen leaf" text=autumn text=fall text=fallen text=falling text=leaf core.source="cldr 48"
 
 # leaf fluttering in wind
 @k.objects.u1f343 k.objects.object name="leaf fluttering in wind" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -884,7 +884,7 @@
 @k.objects.u1f343.p10.12 k.objects.point part=$k.objects.u1f343.p10 n=12 x=14.3 y=65.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f343.p10.13 k.objects.point part=$k.objects.u1f343.p10 n=13 x=11.2 y=59.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f343.p10.14 k.objects.point part=$k.objects.u1f343.p10 n=14 x=10.3 y=53 core.source="noto-emoji 99701e0"
-@k.objects.u1f343.word core.word text=blow text=flutter text=fluttering text=leaf text=wind means="leaf fluttering in wind" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f343.keyword k.objects.keyword of="leaf fluttering in wind" text=blow text=flutter text=fluttering text=leaf text=wind core.source="cldr 48"
 
 # empty nest
 @k.objects.u1fab9 k.objects.object name="empty nest" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1098,7 +1098,7 @@
 @k.objects.u1fab9.p16.32 k.objects.point part=$k.objects.u1fab9.p16 n=32 x=73 y=51.4 core.source="noto-emoji 99701e0"
 @k.objects.u1fab9.p16.33 k.objects.point part=$k.objects.u1fab9.p16 n=33 x=88.3 y=41.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fab9.p16.34 k.objects.point part=$k.objects.u1fab9.p16 n=34 x=90 y=36 core.source="noto-emoji 99701e0"
-@k.objects.u1fab9.word core.word text=branch text=empty text=home text=nest text=nesting means="empty nest" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab9.keyword k.objects.keyword of="empty nest" text=branch text=empty text=home text=nest text=nesting core.source="cldr 48"
 
 # nest with eggs
 @k.objects.u1faba k.objects.object name="nest with eggs" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1303,7 +1303,7 @@
 @k.objects.u1faba.p16.33 k.objects.point part=$k.objects.u1faba.p16 n=33 x=73 y=51.4 core.source="noto-emoji 99701e0"
 @k.objects.u1faba.p16.34 k.objects.point part=$k.objects.u1faba.p16 n=34 x=88.3 y=41.5 core.source="noto-emoji 99701e0"
 @k.objects.u1faba.p16.35 k.objects.point part=$k.objects.u1faba.p16 n=35 x=90 y=36 core.source="noto-emoji 99701e0"
-@k.objects.u1faba.word core.word text=bird text=branch text=egg text=eggs text=nest text=nesting means="nest with eggs" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faba.keyword k.objects.keyword of="nest with eggs" text=bird text=branch text=egg text=eggs text=nest text=nesting core.source="cldr 48"
 
 # mushroom
 @k.objects.u1f344 k.objects.object name=mushroom core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1463,4 +1463,4 @@
 @k.objects.u1f344.p9.8 k.objects.point part=$k.objects.u1f344.p9 n=8 x=86.6 y=45.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f344.p9.9 k.objects.point part=$k.objects.u1f344.p9 n=9 x=85.8 y=43.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f344.p9.10 k.objects.point part=$k.objects.u1f344.p9 n=10 x=83.7 y=41.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f344.word core.word text=fungus text=toadstool means=mushroom of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f344.keyword k.objects.keyword of=mushroom text=fungus text=toadstool core.source="cldr 48"

@@ -117,7 +117,7 @@
 @k.objects.mb2431.p11.3 k.objects.point part=$k.objects.mb2431.p11 n=3 x=44.2 y=37.7 core.source="mulberry fa94a93"
 @k.objects.mb2431.p11.4 k.objects.point part=$k.objects.mb2431.p11 n=4 x=41.7 y=41.7 core.source="mulberry fa94a93"
 @k.objects.mb2431.p11.5 k.objects.point part=$k.objects.mb2431.p11 n=5 x=37.5 y=46.2 core.source="mulberry fa94a93"
-@k.objects.mb2431.word core.word text=celebration means=sack of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2431.keyword k.objects.keyword of=sack text=celebration core.source="mulberry fa94a93"
 
 # tree ornament chocolate
 @k.objects.mb2916 k.objects.object name="tree ornament chocolate" core.source="mulberry fa94a93"
@@ -282,7 +282,7 @@
 @k.objects.mb2916.p11.14 k.objects.point part=$k.objects.mb2916.p11 n=14 x=41.2 y=65.3 core.source="mulberry fa94a93"
 @k.objects.mb2916.p11.15 k.objects.point part=$k.objects.mb2916.p11 n=15 x=44.1 y=65.6 core.source="mulberry fa94a93"
 @k.objects.mb2916.p11.16 k.objects.point part=$k.objects.mb2916.p11 n=16 x=42.5 y=67.9 core.source="mulberry fa94a93"
-@k.objects.mb2916.word core.word text=celebration text=Christian means="tree ornament chocolate" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2916.keyword k.objects.keyword of="tree ornament chocolate" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # witch
 @k.objects.mb3079 k.objects.object name=witch core.source="mulberry fa94a93"
@@ -458,7 +458,7 @@
 @k.objects.mb3079.p16.21 k.objects.point part=$k.objects.mb3079.p16 n=21 x=44.4 y=78.2 core.source="mulberry fa94a93"
 @k.objects.mb3079.p16.22 k.objects.point part=$k.objects.mb3079.p16 n=22 x=50.5 y=75.4 core.source="mulberry fa94a93"
 @k.objects.mb3079.p16.23 k.objects.point part=$k.objects.mb3079.p16 n=23 x=56.1 y=71.1 core.source="mulberry fa94a93"
-@k.objects.mb3079.word core.word text=celebration means=witch of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3079.keyword k.objects.keyword of=witch text=celebration core.source="mulberry fa94a93"
 
 # witches hat
 @k.objects.mb3080 k.objects.object name="witches hat" core.source="mulberry fa94a93"
@@ -551,7 +551,7 @@
 @k.objects.mb3080.p4.12 k.objects.point part=$k.objects.mb3080.p4 n=12 x=25.8 y=76 core.source="mulberry fa94a93"
 @k.objects.mb3080.p4.13 k.objects.point part=$k.objects.mb3080.p4 n=13 x=50.1 y=7 core.source="mulberry fa94a93"
 @k.objects.mb3080.p4.14 k.objects.point part=$k.objects.mb3080.p4 n=14 x=71 y=66.3 core.source="mulberry fa94a93"
-@k.objects.mb3080.word core.word text=celebration means="witches hat" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3080.keyword k.objects.keyword of="witches hat" text=celebration core.source="mulberry fa94a93"
 
 # wrapping paper
 @k.objects.mb3094 k.objects.object name="wrapping paper" core.source="mulberry fa94a93"
@@ -708,7 +708,7 @@
 @k.objects.mb3094.p16.4 k.objects.point part=$k.objects.mb3094.p16 n=4 x=79.2 y=21.4 core.source="mulberry fa94a93"
 @k.objects.mb3094.p16.5 k.objects.point part=$k.objects.mb3094.p16 n=5 x=78.8 y=20.3 core.source="mulberry fa94a93"
 @k.objects.mb3094.p16.6 k.objects.point part=$k.objects.mb3094.p16 n=6 x=79.5 y=20.2 core.source="mulberry fa94a93"
-@k.objects.mb3094.word core.word text=celebration means="wrapping paper" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3094.keyword k.objects.keyword of="wrapping paper" text=celebration core.source="mulberry fa94a93"
 
 # yule log
 @k.objects.mb3112 k.objects.object name="yule log" core.source="mulberry fa94a93"
@@ -918,4 +918,4 @@
 @k.objects.mb3112.p16.5 k.objects.point part=$k.objects.mb3112.p16 n=5 x=29.6 y=59.4 core.source="mulberry fa94a93"
 @k.objects.mb3112.p16.6 k.objects.point part=$k.objects.mb3112.p16 n=6 x=21.2 y=57.1 core.source="mulberry fa94a93"
 @k.objects.mb3112.p16.7 k.objects.point part=$k.objects.mb3112.p16 n=7 x=13.4 y=53.9 core.source="mulberry fa94a93"
-@k.objects.mb3112.word core.word text=celebration text=Christian text=food means="yule log" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3112.keyword k.objects.keyword of="yule log" text=celebration text=Christian text=food core.source="mulberry fa94a93"

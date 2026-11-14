@@ -51,7 +51,7 @@
 @k.objects.u1f6aa.p8.4 k.objects.point part=$k.objects.u1f6aa.p8 n=4 x=61.4 y=49.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6aa.p8.5 k.objects.point part=$k.objects.u1f6aa.p8 n=5 x=62.2 y=48 core.source="noto-emoji 99701e0"
 @k.objects.u1f6aa.p8.6 k.objects.point part=$k.objects.u1f6aa.p8 n=6 x=64.1 y=47 core.source="noto-emoji 99701e0"
-@k.objects.u1f6aa.word core.word text=back text=closet text=front means=door of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6aa.keyword k.objects.keyword of=door text=back text=closet text=front core.source="cldr 48"
 
 # elevator
 @k.objects.u1f6d7 k.objects.object name=elevator core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -263,7 +263,7 @@
 @k.objects.u1f6d7.p12.14 k.objects.point part=$k.objects.u1f6d7.p12 n=14 x=17.7 y=18.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d7.p12.15 k.objects.point part=$k.objects.u1f6d7.p12 n=15 x=21.3 y=15.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d7.p12.16 k.objects.point part=$k.objects.u1f6d7.p12 n=16 x=29.9 y=11.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d7.word core.word text=accessibility text=hoist text=lift means=elevator of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6d7.keyword k.objects.keyword of=elevator text=accessibility text=hoist text=lift core.source="cldr 48"
 
 # mirror
 @k.objects.u1fa9e k.objects.object name=mirror core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -292,7 +292,7 @@
 @k.objects.u1fa9e.p9.2 k.objects.point part=$k.objects.u1fa9e.p9 n=2 x=21.6 y=38.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9e.p9.3 k.objects.point part=$k.objects.u1fa9e.p9 n=3 x=20.9 y=42.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9e.p9.4 k.objects.point part=$k.objects.u1fa9e.p9 n=4 x=66.2 y=82.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fa9e.word core.word text=makeup text=reflection text=reflector text=speculum means=mirror of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa9e.keyword k.objects.keyword of=mirror text=makeup text=reflection text=reflector text=speculum core.source="cldr 48"
 
 # window
 @k.objects.u1fa9f k.objects.object name=window core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -409,7 +409,7 @@
 @k.objects.u1fa9f.p16.2 k.objects.point part=$k.objects.u1fa9f.p16 n=2 x=10.9 y=79 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9f.p16.3 k.objects.point part=$k.objects.u1fa9f.p16 n=3 x=14.1 y=76.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9f.p16.4 k.objects.point part=$k.objects.u1fa9f.p16 n=4 x=14.1 y=64.5 core.source="noto-emoji 99701e0"
-@k.objects.u1fa9f.word core.word text=air text=frame text=fresh text=opening text=transparent text=view means=window of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa9f.keyword k.objects.keyword of=window text=air text=frame text=fresh text=opening text=transparent text=view core.source="cldr 48"
 
 # bed
 @k.objects.u1f6cf k.objects.object name=bed core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -551,7 +551,7 @@
 @k.objects.u1f6cf.p13.6 k.objects.point part=$k.objects.u1f6cf.p13 n=6 x=25.5 y=76.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6cf.p13.7 k.objects.point part=$k.objects.u1f6cf.p13 n=7 x=25 y=83.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6cf.p13.8 k.objects.point part=$k.objects.u1f6cf.p13 n=8 x=26.2 y=84 core.source="noto-emoji 99701e0"
-@k.objects.u1f6cf.word core.word text=hotel text=sleep means=bed of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6cf.keyword k.objects.keyword of=bed text=hotel text=sleep core.source="cldr 48"
 
 # couch and lamp
 @k.objects.u1f6cb k.objects.object name="couch and lamp" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -721,7 +721,7 @@
 @k.objects.u1f6cb.p16.15 k.objects.point part=$k.objects.u1f6cb.p16 n=15 x=85 y=87.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6cb.p16.16 k.objects.point part=$k.objects.u1f6cb.p16 n=16 x=87.8 y=86.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6cb.p16.17 k.objects.point part=$k.objects.u1f6cb.p16 n=17 x=89.4 y=84 core.source="noto-emoji 99701e0"
-@k.objects.u1f6cb.word core.word text=couch text=hotel text=lamp means="couch and lamp" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6cb.keyword k.objects.keyword of="couch and lamp" text=couch text=hotel text=lamp core.source="cldr 48"
 
 # toilet
 @k.objects.u1f6bd k.objects.object name=toilet core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -927,7 +927,7 @@
 @k.objects.u1f6bd.p16.9 k.objects.point part=$k.objects.u1f6bd.p16 n=9 x=39.5 y=78.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6bd.p16.10 k.objects.point part=$k.objects.u1f6bd.p16 n=10 x=36.7 y=85.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6bd.p16.11 k.objects.point part=$k.objects.u1f6bd.p16 n=11 x=35.3 y=90.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f6bd.word core.word text=bathroom means=toilet of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6bd.keyword k.objects.keyword of=toilet text=bathroom core.source="cldr 48"
 
 # plunger
 @k.objects.u1faa0 k.objects.object name=plunger core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1049,4 +1049,4 @@
 @k.objects.u1faa0.p6.9 k.objects.point part=$k.objects.u1faa0.p6 n=9 x=41.3 y=62.4 core.source="noto-emoji 99701e0"
 @k.objects.u1faa0.p6.10 k.objects.point part=$k.objects.u1faa0.p6 n=10 x=43.6 y=62.4 core.source="noto-emoji 99701e0"
 @k.objects.u1faa0.p6.11 k.objects.point part=$k.objects.u1faa0.p6 n=11 x=45.5 y=61.5 core.source="noto-emoji 99701e0"
-@k.objects.u1faa0.word core.word text=cup text=force text=plumber text=poop text=suction text=toilet means=plunger of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa0.keyword k.objects.keyword of=plunger text=cup text=force text=plumber text=poop text=suction text=toilet core.source="cldr 48"

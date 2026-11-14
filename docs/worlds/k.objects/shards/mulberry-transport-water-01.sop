@@ -212,7 +212,7 @@
 @k.objects.mb836.p16.24 k.objects.point part=$k.objects.mb836.p16 n=24 x=82.4 y=69.3 core.source="mulberry fa94a93"
 @k.objects.mb836.p16.25 k.objects.point part=$k.objects.mb836.p16 n=25 x=85.1 y=68 core.source="mulberry fa94a93"
 @k.objects.mb836.p16.26 k.objects.point part=$k.objects.mb836.p16 n=26 x=90 y=63.7 core.source="mulberry fa94a93"
-@k.objects.mb836.word core.word text=holiday text=travel means=cruiser of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb836.keyword k.objects.keyword of=cruiser text=holiday text=travel core.source="mulberry fa94a93"
 
 # paddles
 @k.objects.mb2116 k.objects.object name=paddles core.source="mulberry fa94a93"
@@ -311,7 +311,7 @@
 @k.objects.mb2116.p6 k.objects.part of=paddles name=part6 kind=detail named=no shape=line x=35.4 y=64.7 w=14.6 h=18 z=6 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2116.p6.1 k.objects.point part=$k.objects.mb2116.p6 n=1 x=35.4 y=82.7 core.source="mulberry fa94a93"
 @k.objects.mb2116.p6.2 k.objects.point part=$k.objects.mb2116.p6 n=2 x=50 y=64.7 core.source="mulberry fa94a93"
-@k.objects.mb2116.word core.word text=transport text=travel means=paddles of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2116.keyword k.objects.keyword of=paddles text=transport text=travel core.source="mulberry fa94a93"
 
 # rowing boat
 @k.objects.mb2424 k.objects.object name="rowing boat" core.source="mulberry fa94a93"
@@ -464,4 +464,4 @@
 @k.objects.mb2424.p15.5 k.objects.point part=$k.objects.mb2424.p15 n=5 x=53.9 y=30.5 core.source="mulberry fa94a93"
 @k.objects.mb2424.p15.6 k.objects.point part=$k.objects.mb2424.p15 n=6 x=51 y=31 core.source="mulberry fa94a93"
 @k.objects.mb2424.p15.7 k.objects.point part=$k.objects.mb2424.p15 n=7 x=36.9 y=38 core.source="mulberry fa94a93"
-@k.objects.mb2424.word core.word text=transport text=travel means="rowing boat" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2424.keyword k.objects.keyword of="rowing boat" text=transport text=travel core.source="mulberry fa94a93"

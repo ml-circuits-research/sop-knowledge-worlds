@@ -5203,3 +5203,35 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - `npm run test:all` on c7333aa: 81 files, 3,111 tests, 3,103 pass, 0 fail, 8 skipped, 444 s. Slowest (`npm run
   test:slow`): derived 42.0 s (2.9 GB), questions 41.7 s, k.attributes 32.3 s, k.cores 25.6 s, gallery 25.5 s; the
   files of this round are under 1 s (w.lang.en.diagram-frames 0.5 s; w.lang.en.frames 2.6 s).
+
+
+## 2026-11-15 — first worker: keywords as their own relation (Q67 b; block 07:15 item 1)
+
+- **Schema change for hosts (k.objects version 7):** the CLDR, OpenMoji and Mulberry keywords of a drawing are no
+  longer `core.word … means=<object> of=k.objects.object.name` but
+  `@<id>.keyword k.objects.keyword of=<object name> text=<keyword> text=…` (new type, exported; `of` a declared join
+  to `k.objects.object` by name, `text` repeated). A keyword is a search word, not a name: the engine's word reading
+  never resolves it. Hosts (PSys2, the library) take, in order: the object of the word's name, an object the word is
+  a `core.word` of, a stand-in of that name, and only then an object the word is a keyword of (`tools/objects-lookup.mjs`,
+  `drawingFor`). In `vocab.json` a shard reached only through a keyword comes after the word's other shards ("ship":
+  the ship's shard before the anchor's); `vocab-kinds.json` files it under `k.objects.keyword` (was `k.objects.object`).
+  The `core.word` facts of k.objects (hand-written, WordNet synonyms) are unchanged: those are words for the object.
+- Library form: the pinned 0.97 reads every `core.word` as a synonym and ignores extra keys (src/resolve.mjs,
+  readtypes.mjs, knowledge.mjs, interpret.mjs), so `core.word … role=keyword` would still draw the anchor for "a ship";
+  the dedicated type is used meanwhile and asked as Q70 [LIB].
+- Importers: tools/import/objects.mjs (OpenMoji, Mulberry) and tools/import/noto-emoji.mjs (CLDR) write the keyword
+  facts. Rerun before the change: no diff. After: 278 shards, 1,509 wires replaced one for one (CLDR 802, Mulberry
+  634, OpenMoji 73), 5,326 keyword texts, 2,088 distinct; no other line changed.
+- Counts (tests/k.objects.keywords.test.mjs, 3 tests): of the 5,326 keyword texts, 1,499 now resolve before any
+  keyword: 1,270 to a drawing's own name (Q67 counted 1,266 before the arrow and others were drawn), 160 to a word of a
+  drawing (kitty -> kitten), 69 to a stand-in; 3,827 resolve only as keywords (gobble -> turkey). No `core.word` of an
+  object comes from an image library; every keyword's `of` names an object; the engine's `world.words()` over a shard
+  has no keyword text.
+- Stand-ins by kind (tools/stand-ins-kinds.mjs) counted keywords as "drawn"; no longer: paella -> dish is new (it was
+  hidden behind a keyword); barrel -> tube (the gun's barrel, the sense kept) is refused in `NOT_MEANT` (a drawn
+  barrel is a cask). 16 stand-ins (CC0 13, WordNet 3). No scene thing relied on a keyword (k.scenes test unchanged).
+- Load of k.objects (fullWorld): 31.0 s with the `of` join declared, 28.9 s without (+2.1 s for 1,509 values, the
+  Q66 scan); kept declared as the stand-in's is.
+- Build: k.attributes narration (2 slots, machinery), same-p (paella in k.objects.stand_in), relations-objects and
+  JOINS.md (k.food–k.objects 143), vocab files regenerated. Key words: `keyword`, `keywords` for the type; `of`, `text`
+  by rule. Docs: k.objects/WORLD.md, worlds/README.md (vocab order and kind).

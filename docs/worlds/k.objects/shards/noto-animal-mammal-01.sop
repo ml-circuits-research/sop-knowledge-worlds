@@ -204,7 +204,7 @@
 @k.objects.u1f435.p14.5 k.objects.point part=$k.objects.u1f435.p14 n=5 x=87.3 y=59 core.source="noto-emoji 99701e0"
 @k.objects.u1f435.p14.6 k.objects.point part=$k.objects.u1f435.p14 n=6 x=87.6 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f435.p14.7 k.objects.point part=$k.objects.u1f435.p14 n=7 x=87.3 y=46.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f435.word core.word text=animal text=banana text=face text=monkey means="monkey face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f435.keyword k.objects.keyword of="monkey face" text=animal text=banana text=face text=monkey core.source="cldr 48"
 
 # monkey
 @k.objects.u1f412 k.objects.object name=monkey core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -406,7 +406,7 @@
 @k.objects.u1f412.p13.11 k.objects.point part=$k.objects.u1f412.p13 n=11 x=36.1 y=44.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f412.p13.12 k.objects.point part=$k.objects.u1f412.p13 n=12 x=29.7 y=46.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f412.p13.13 k.objects.point part=$k.objects.u1f412.p13 n=13 x=27.5 y=48.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f412.word core.word text=animal text=banana means=monkey of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f412.keyword k.objects.keyword of=monkey text=animal text=banana core.source="cldr 48"
 
 # gorilla
 @k.objects.u1f98d k.objects.object name=gorilla core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -605,7 +605,7 @@
 @k.objects.u1f98d.p16.7 k.objects.point part=$k.objects.u1f98d.p16 n=7 x=38.6 y=94.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f98d.p16.8 k.objects.point part=$k.objects.u1f98d.p16 n=8 x=40.8 y=86 core.source="noto-emoji 99701e0"
 @k.objects.u1f98d.p16.9 k.objects.point part=$k.objects.u1f98d.p16 n=9 x=37 y=64.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f98d.word core.word text=animal means=gorilla of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f98d.keyword k.objects.keyword of=gorilla text=animal core.source="cldr 48"
 
 # orangutan
 @k.objects.u1f9a7 k.objects.object name=orangutan core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -815,7 +815,7 @@
 @k.objects.u1f9a7.p16.14 k.objects.point part=$k.objects.u1f9a7.p16 n=14 x=58.1 y=80.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a7.p16.15 k.objects.point part=$k.objects.u1f9a7.p16 n=15 x=62.9 y=85.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a7.p16.16 k.objects.point part=$k.objects.u1f9a7.p16 n=16 x=63.4 y=89.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a7.word core.word text=animal text=ape text=monkey means=orangutan of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a7.keyword k.objects.keyword of=orangutan text=animal text=ape text=monkey core.source="cldr 48"
 
 # dog face
 @k.objects.u1f436 k.objects.object name="dog face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1023,7 +1023,7 @@
 @k.objects.u1f436.p12.17 k.objects.point part=$k.objects.u1f436.p12 n=17 x=40 y=16.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f436.p12.18 k.objects.point part=$k.objects.u1f436.p12 n=18 x=34.6 y=13.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f436.p12.19 k.objects.point part=$k.objects.u1f436.p12 n=19 x=29.8 y=12.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f436.word core.word text=adorbs text=animal text=dog text=face text=pet text=puppies text=puppy means="dog face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f436.keyword k.objects.keyword of="dog face" text=adorbs text=animal text=dog text=face text=pet text=puppies text=puppy core.source="cldr 48"
 
 # guide dog
 @k.objects.u1f9ae k.objects.object name="guide dog" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1234,7 +1234,7 @@
 @k.objects.u1f9ae.p13.24 k.objects.point part=$k.objects.u1f9ae.p13 n=24 x=43.6 y=30.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ae.p13.25 k.objects.point part=$k.objects.u1f9ae.p13 n=25 x=42.4 y=30.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ae.p13.26 k.objects.point part=$k.objects.u1f9ae.p13 n=26 x=42.2 y=31.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ae.word core.word text=accessibility text=animal text=blind text=dog text=guide means="guide dog" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ae.keyword k.objects.keyword of="guide dog" text=accessibility text=animal text=blind text=dog text=guide core.source="cldr 48"
 
 # service dog
 @k.objects.u1f415_200d_1f9ba k.objects.object name="service dog" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1436,7 +1436,7 @@
 @k.objects.u1f415_200d_1f9ba.p16.8 k.objects.point part=$k.objects.u1f415_200d_1f9ba.p16 n=8 x=46.6 y=32.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f415_200d_1f9ba.p16.9 k.objects.point part=$k.objects.u1f415_200d_1f9ba.p16 n=9 x=45.1 y=32 core.source="noto-emoji 99701e0"
 @k.objects.u1f415_200d_1f9ba.p16.10 k.objects.point part=$k.objects.u1f415_200d_1f9ba.p16 n=10 x=46.5 y=28.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f415_200d_1f9ba.word core.word text=accessibility text=animal text=assistance text=dog text=service means="service dog" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f415_200d_1f9ba.keyword k.objects.keyword of="service dog" text=accessibility text=animal text=assistance text=dog text=service core.source="cldr 48"
 
 # poodle
 @k.objects.u1f429 k.objects.object name=poodle core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1648,4 +1648,4 @@
 @k.objects.u1f429.p16.11 k.objects.point part=$k.objects.u1f429.p16 n=11 x=52.3 y=13 core.source="noto-emoji 99701e0"
 @k.objects.u1f429.p16.12 k.objects.point part=$k.objects.u1f429.p16 n=12 x=51.9 y=7 core.source="noto-emoji 99701e0"
 @k.objects.u1f429.p16.13 k.objects.point part=$k.objects.u1f429.p16 n=13 x=48.1 y=3.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f429.word core.word text=animal text=dog text=fluffy means=poodle of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f429.keyword k.objects.keyword of=poodle text=animal text=dog text=fluffy core.source="cldr 48"

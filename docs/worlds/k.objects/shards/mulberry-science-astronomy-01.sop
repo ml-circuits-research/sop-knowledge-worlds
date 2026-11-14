@@ -209,7 +209,7 @@
 @k.objects.mb994.p11.7 k.objects.point part=$k.objects.mb994.p11 n=7 x=79.1 y=49.4 core.source="mulberry fa94a93"
 @k.objects.mb994.p11.8 k.objects.point part=$k.objects.mb994.p11 n=8 x=80.8 y=47 core.source="mulberry fa94a93"
 @k.objects.mb994.p11.9 k.objects.point part=$k.objects.mb994.p11 n=9 x=79.3 y=44.7 core.source="mulberry fa94a93"
-@k.objects.mb994.word core.word text=astronomy text=planets means=Earth of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb994.keyword k.objects.keyword of=Earth text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Jupiter
 @k.objects.mb1759 k.objects.object name=Jupiter core.source="mulberry fa94a93"
@@ -402,7 +402,7 @@
 @k.objects.mb1759.p12.11 k.objects.point part=$k.objects.mb1759.p12 n=11 x=76.9 y=60.4 core.source="mulberry fa94a93"
 @k.objects.mb1759.p12.12 k.objects.point part=$k.objects.mb1759.p12 n=12 x=86.4 y=49.7 core.source="mulberry fa94a93"
 @k.objects.mb1759.p12.13 k.objects.point part=$k.objects.mb1759.p12 n=13 x=90.8 y=47.8 core.source="mulberry fa94a93"
-@k.objects.mb1759.word core.word text=astronomy text=planets means=Jupiter of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1759.keyword k.objects.keyword of=Jupiter text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Mars
 @k.objects.mb1894 k.objects.object name=Mars core.source="mulberry fa94a93"
@@ -609,7 +609,7 @@
 @k.objects.mb1894.p11.8 k.objects.point part=$k.objects.mb1894.p11 n=8 x=86.1 y=63.8 core.source="mulberry fa94a93"
 @k.objects.mb1894.p11.9 k.objects.point part=$k.objects.mb1894.p11 n=9 x=88.1 y=61.7 core.source="mulberry fa94a93"
 @k.objects.mb1894.p11.10 k.objects.point part=$k.objects.mb1894.p11 n=10 x=90.9 y=56.5 core.source="mulberry fa94a93"
-@k.objects.mb1894.word core.word text=astronomy text=planets means=Mars of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1894.keyword k.objects.keyword of=Mars text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Mercury
 @k.objects.mb1926 k.objects.object name=Mercury core.source="mulberry fa94a93"
@@ -822,7 +822,7 @@
 @k.objects.mb1926.p16.5 k.objects.point part=$k.objects.mb1926.p16 n=5 x=29 y=47.5 core.source="mulberry fa94a93"
 @k.objects.mb1926.p16.6 k.objects.point part=$k.objects.mb1926.p16 n=6 x=33 y=46 core.source="mulberry fa94a93"
 @k.objects.mb1926.p16.7 k.objects.point part=$k.objects.mb1926.p16 n=7 x=35.2 y=43.8 core.source="mulberry fa94a93"
-@k.objects.mb1926.word core.word text=astronomy text=planets means=Mercury of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1926.keyword k.objects.keyword of=Mercury text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Neptune
 @k.objects.mb2022 k.objects.object name=Neptune core.source="mulberry fa94a93"
@@ -975,7 +975,7 @@
 @k.objects.mb2022.p7.11 k.objects.point part=$k.objects.mb2022.p7 n=11 x=71.3 y=45.6 core.source="mulberry fa94a93"
 @k.objects.mb2022.p7.12 k.objects.point part=$k.objects.mb2022.p7 n=12 x=80.5 y=51.9 core.source="mulberry fa94a93"
 @k.objects.mb2022.p7.13 k.objects.point part=$k.objects.mb2022.p7 n=13 x=85 y=55.7 core.source="mulberry fa94a93"
-@k.objects.mb2022.word core.word text=astronomy text=planets means=Neptune of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2022.keyword k.objects.keyword of=Neptune text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Pluto
 @k.objects.mb2268 k.objects.object name=Pluto core.source="mulberry fa94a93"
@@ -1137,7 +1137,7 @@
 @k.objects.mb2268.p12 k.objects.part of=Pluto name=part12 kind=detail named=no shape=line x=25.6 y=27.4 w=3.1 h=3.1 z=12 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2268.p12.1 k.objects.point part=$k.objects.mb2268.p12 n=1 x=28.7 y=27.4 core.source="mulberry fa94a93"
 @k.objects.mb2268.p12.2 k.objects.point part=$k.objects.mb2268.p12 n=2 x=25.6 y=30.5 core.source="mulberry fa94a93"
-@k.objects.mb2268.word core.word text=astronomy text=planets means=Pluto of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2268.keyword k.objects.keyword of=Pluto text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Saturn
 @k.objects.mb2460 k.objects.object name=Saturn core.source="mulberry fa94a93"
@@ -1341,7 +1341,7 @@
 @k.objects.mb2460.p16.3 k.objects.point part=$k.objects.mb2460.p16 n=3 x=47.7 y=47.3 core.source="mulberry fa94a93"
 @k.objects.mb2460.p16.4 k.objects.point part=$k.objects.mb2460.p16 n=4 x=59.7 y=41.4 core.source="mulberry fa94a93"
 @k.objects.mb2460.p16.5 k.objects.point part=$k.objects.mb2460.p16 n=5 x=71 y=32.2 core.source="mulberry fa94a93"
-@k.objects.mb2460.word core.word text=astronomy text=planets means=Saturn of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2460.keyword k.objects.keyword of=Saturn text=astronomy text=planets core.source="mulberry fa94a93"
 
 # Uranus
 @k.objects.mb2963 k.objects.object name=Uranus core.source="mulberry fa94a93"
@@ -1502,4 +1502,4 @@
 @k.objects.mb2963.p9.17 k.objects.point part=$k.objects.mb2963.p9 n=17 x=7.7 y=48.4 core.source="mulberry fa94a93"
 @k.objects.mb2963.p9.18 k.objects.point part=$k.objects.mb2963.p9 n=18 x=15.1 y=45.2 core.source="mulberry fa94a93"
 @k.objects.mb2963.p9.19 k.objects.point part=$k.objects.mb2963.p9 n=19 x=23.8 y=43.3 core.source="mulberry fa94a93"
-@k.objects.mb2963.word core.word text=astronomy text=planets means=Uranus of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2963.keyword k.objects.keyword of=Uranus text=astronomy text=planets core.source="mulberry fa94a93"

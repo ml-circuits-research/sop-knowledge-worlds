@@ -174,7 +174,7 @@
 @k.objects.mb45.p10.9 k.objects.point part=$k.objects.mb45.p10 n=9 x=40.3 y=88.1 core.source="mulberry fa94a93"
 @k.objects.mb45.p10.10 k.objects.point part=$k.objects.mb45.p10 n=10 x=41.6 y=85.7 core.source="mulberry fa94a93"
 @k.objects.mb45.p10.11 k.objects.point part=$k.objects.mb45.p10 n=11 x=47 y=35.6 core.source="mulberry fa94a93"
-@k.objects.mb45.word core.word text=drink text=juice means="apple juice" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb45.keyword k.objects.keyword of="apple juice" text=drink text=juice core.source="mulberry fa94a93"
 
 # beer
 @k.objects.mb154 k.objects.object name=beer core.source="mulberry fa94a93"
@@ -260,7 +260,7 @@
 @k.objects.mb154.p8.3 k.objects.point part=$k.objects.mb154.p8 n=3 x=68.5 y=11.2 core.source="mulberry fa94a93"
 @k.objects.mb154.p8.4 k.objects.point part=$k.objects.mb154.p8 n=4 x=62.9 y=9.5 core.source="mulberry fa94a93"
 @k.objects.mb154.p8.5 k.objects.point part=$k.objects.mb154.p8 n=5 x=50.2 y=8.5 core.source="mulberry fa94a93"
-@k.objects.mb154.word core.word text=alcohol text=drink means=beer of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb154.keyword k.objects.keyword of=beer text=alcohol text=drink core.source="mulberry fa94a93"
 
 # blackcurrant juice
 @k.objects.mb191 k.objects.object name="blackcurrant juice" core.source="mulberry fa94a93"
@@ -459,7 +459,7 @@
 @k.objects.mb191.p16.6 k.objects.point part=$k.objects.mb191.p16 n=6 x=49 y=70.8 core.source="mulberry fa94a93"
 @k.objects.mb191.p16.7 k.objects.point part=$k.objects.mb191.p16 n=7 x=48.2 y=69.8 core.source="mulberry fa94a93"
 @k.objects.mb191.p16.8 k.objects.point part=$k.objects.mb191.p16 n=8 x=48.8 y=67.6 core.source="mulberry fa94a93"
-@k.objects.mb191.word core.word text=drink text=juice means="blackcurrant juice" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb191.keyword k.objects.keyword of="blackcurrant juice" text=drink text=juice core.source="mulberry fa94a93"
 
 # champagne
 @k.objects.mb432 k.objects.object name=champagne core.source="mulberry fa94a93"
@@ -621,7 +621,7 @@
 @k.objects.mb432.p16.9 k.objects.point part=$k.objects.mb432.p16 n=9 x=44.5 y=9.8 core.source="mulberry fa94a93"
 @k.objects.mb432.p16.10 k.objects.point part=$k.objects.mb432.p16 n=10 x=44.5 y=17.2 core.source="mulberry fa94a93"
 @k.objects.mb432.p16.11 k.objects.point part=$k.objects.mb432.p16 n=11 x=54.5 y=17.2 core.source="mulberry fa94a93"
-@k.objects.mb432.word core.word text=celebration means=champagne of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb432.keyword k.objects.keyword of=champagne text=celebration core.source="mulberry fa94a93"
 
 # coffee
 @k.objects.mb550 k.objects.object name=coffee core.source="mulberry fa94a93"
@@ -832,7 +832,7 @@
 @k.objects.mb550.p13.8 k.objects.point part=$k.objects.mb550.p13 n=8 x=71.6 y=29.3 core.source="mulberry fa94a93"
 @k.objects.mb550.p13.9 k.objects.point part=$k.objects.mb550.p13 n=9 x=71.8 y=30.6 core.source="mulberry fa94a93"
 @k.objects.mb550.p13.10 k.objects.point part=$k.objects.mb550.p13 n=10 x=70.5 y=32.1 core.source="mulberry fa94a93"
-@k.objects.mb550.word core.word text=drink means=coffee of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb550.keyword k.objects.keyword of=coffee text=drink core.source="mulberry fa94a93"
 
 # coffee instant
 @k.objects.mb551 k.objects.object name="coffee instant" core.source="mulberry fa94a93"
@@ -1041,7 +1041,7 @@
 @k.objects.mb551.p16.15 k.objects.point part=$k.objects.mb551.p16 n=15 x=10 y=56.9 core.source="mulberry fa94a93"
 @k.objects.mb551.p16.16 k.objects.point part=$k.objects.mb551.p16 n=16 x=15.3 y=36.3 core.source="mulberry fa94a93"
 @k.objects.mb551.p16.17 k.objects.point part=$k.objects.mb551.p16 n=17 x=13.4 y=25 core.source="mulberry fa94a93"
-@k.objects.mb551.word core.word text=drink means="coffee instant" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb551.keyword k.objects.keyword of="coffee instant" text=drink core.source="mulberry fa94a93"
 
 # cranberry juice
 @k.objects.mb812 k.objects.object name="cranberry juice" core.source="mulberry fa94a93"
@@ -1424,4 +1424,4 @@
 @k.objects.mb1549.p16.9 k.objects.point part=$k.objects.mb1549.p16 n=9 x=41.4 y=87.5 core.source="mulberry fa94a93"
 @k.objects.mb1549.p16.10 k.objects.point part=$k.objects.mb1549.p16 n=10 x=42.7 y=85.1 core.source="mulberry fa94a93"
 @k.objects.mb1549.p16.11 k.objects.point part=$k.objects.mb1549.p16 n=11 x=47.9 y=36.2 core.source="mulberry fa94a93"
-@k.objects.mb1549.word core.word text=drink text=juice means="grape juice" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1549.keyword k.objects.keyword of="grape juice" text=drink text=juice core.source="mulberry fa94a93"

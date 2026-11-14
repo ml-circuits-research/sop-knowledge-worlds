@@ -96,7 +96,7 @@
 @k.objects.u1f331.p5.13 k.objects.point part=$k.objects.u1f331.p5 n=13 x=51.8 y=44.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p5.14 k.objects.point part=$k.objects.u1f331.p5 n=14 x=46.2 y=39.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f331.p5.15 k.objects.point part=$k.objects.u1f331.p5 n=15 x=38.8 y=34.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f331.word core.word text=plant text=sapling text=sprout text=young means=seedling of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f331.keyword k.objects.keyword of=seedling text=plant text=sapling text=sprout text=young core.source="cldr 48"
 
 # potted plant
 @k.objects.u1fab4 k.objects.object name="potted plant" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -310,7 +310,7 @@
 @k.objects.u1fab4.p13.27 k.objects.point part=$k.objects.u1fab4.p13 n=27 x=11.5 y=85.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fab4.p13.28 k.objects.point part=$k.objects.u1fab4.p13 n=28 x=15.7 y=85.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fab4.p13.29 k.objects.point part=$k.objects.u1fab4.p13 n=29 x=16.2 y=91.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fab4.word core.word text=decor text=grow text=house text=nurturing text=plant text=pot text=potted means="potted plant" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab4.keyword k.objects.keyword of="potted plant" text=decor text=grow text=house text=nurturing text=plant text=pot text=potted core.source="cldr 48"
 
 # evergreen tree
 @k.objects.u1f332 k.objects.object name="evergreen tree" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -530,7 +530,7 @@
 @k.objects.u1f332.p16.3 k.objects.point part=$k.objects.u1f332.p16 n=3 x=57.9 y=21.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f332.p16.4 k.objects.point part=$k.objects.u1f332.p16 n=4 x=54.9 y=16.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f332.p16.5 k.objects.point part=$k.objects.u1f332.p16 n=5 x=53.5 y=17.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f332.word core.word text=christmas text=evergreen text=forest text=pine text=tree means="evergreen tree" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f332.keyword k.objects.keyword of="evergreen tree" text=christmas text=evergreen text=forest text=pine text=tree core.source="cldr 48"
 
 # deciduous tree
 @k.objects.u1f333 k.objects.object name="deciduous tree" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -646,7 +646,7 @@
 @k.objects.u1f333.p5.11 k.objects.point part=$k.objects.u1f333.p5 n=11 x=57.6 y=94.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f333.p5.12 k.objects.point part=$k.objects.u1f333.p5 n=12 x=56.6 y=70 core.source="noto-emoji 99701e0"
 @k.objects.u1f333.p5.13 k.objects.point part=$k.objects.u1f333.p5 n=13 x=54.1 y=68.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f333.word core.word text=deciduous text=forest text=green text=habitat text=shedding text=tree means="deciduous tree" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f333.keyword k.objects.keyword of="deciduous tree" text=deciduous text=forest text=green text=habitat text=shedding text=tree core.source="cldr 48"
 
 # palm tree
 @k.objects.u1f334 k.objects.object name="palm tree" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -805,7 +805,7 @@
 @k.objects.u1f334.p11.8 k.objects.point part=$k.objects.u1f334.p11 n=8 x=39 y=70.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f334.p11.9 k.objects.point part=$k.objects.u1f334.p11 n=9 x=36.8 y=63.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f334.p11.10 k.objects.point part=$k.objects.u1f334.p11 n=10 x=37.4 y=55 core.source="noto-emoji 99701e0"
-@k.objects.u1f334.word core.word text=beach text=palm text=plant text=tree text=tropical means="palm tree" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f334.keyword k.objects.keyword of="palm tree" text=beach text=palm text=plant text=tree text=tropical core.source="cldr 48"
 
 # cactus
 @k.objects.u1f335 k.objects.object name=cactus core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1011,7 +1011,7 @@
 @k.objects.u1f335.p16.5 k.objects.point part=$k.objects.u1f335.p16 n=5 x=60.1 y=85 core.source="noto-emoji 99701e0"
 @k.objects.u1f335.p16.6 k.objects.point part=$k.objects.u1f335.p16 n=6 x=59.1 y=83.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f335.p16.7 k.objects.point part=$k.objects.u1f335.p16 n=7 x=60.1 y=81.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f335.word core.word text=desert text=drought text=nature text=plant means=cactus of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f335.keyword k.objects.keyword of=cactus text=desert text=drought text=nature text=plant core.source="cldr 48"
 
 # sheaf of rice
 @k.objects.u1f33e k.objects.object name="sheaf of rice" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1229,7 +1229,7 @@
 @k.objects.u1f33e.p16.6 k.objects.point part=$k.objects.u1f33e.p16 n=6 x=89.2 y=61.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f33e.p16.7 k.objects.point part=$k.objects.u1f33e.p16 n=7 x=87 y=57.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f33e.p16.8 k.objects.point part=$k.objects.u1f33e.p16 n=8 x=83.6 y=55.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f33e.word core.word text=ear text=grain text=grains text=plant text=rice text=sheaf means="sheaf of rice" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f33e.keyword k.objects.keyword of="sheaf of rice" text=ear text=grain text=grains text=plant text=rice text=sheaf core.source="cldr 48"
 
 # herb
 @k.objects.u1f33f k.objects.object name=herb core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1426,4 +1426,4 @@
 @k.objects.u1f33f.p11.10 k.objects.point part=$k.objects.u1f33f.p11 n=10 x=59.9 y=68 core.source="noto-emoji 99701e0"
 @k.objects.u1f33f.p11.11 k.objects.point part=$k.objects.u1f33f.p11 n=11 x=54.4 y=69.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f33f.p11.12 k.objects.point part=$k.objects.u1f33f.p11 n=12 x=53.1 y=70.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f33f.word core.word text=leaf text=plant means=herb of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f33f.keyword k.objects.keyword of=herb text=leaf text=plant core.source="cldr 48"

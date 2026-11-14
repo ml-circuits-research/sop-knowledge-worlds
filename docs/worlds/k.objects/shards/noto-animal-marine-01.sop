@@ -214,7 +214,7 @@
 @k.objects.u1f433.p16.8 k.objects.point part=$k.objects.u1f433.p16 n=8 x=11.6 y=43.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f433.p16.9 k.objects.point part=$k.objects.u1f433.p16 n=9 x=4.8 y=42.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f433.p16.10 k.objects.point part=$k.objects.u1f433.p16 n=10 x=3.4 y=44.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f433.word core.word text=animal text=beach text=face text=ocean text=spouting text=whale means="spouting whale" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f433.keyword k.objects.keyword of="spouting whale" text=animal text=beach text=face text=ocean text=spouting text=whale core.source="cldr 48"
 
 # whale
 @k.objects.u1f40b k.objects.object name=whale core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -412,7 +412,7 @@
 @k.objects.u1f40b.p13.10 k.objects.point part=$k.objects.u1f40b.p13 n=10 x=8.2 y=41.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f40b.p13.11 k.objects.point part=$k.objects.u1f40b.p13 n=11 x=4.8 y=41.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f40b.p13.12 k.objects.point part=$k.objects.u1f40b.p13 n=12 x=3.4 y=43.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f40b.word core.word text=animal text=beach text=ocean means=whale of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f40b.keyword k.objects.keyword of=whale text=animal text=beach text=ocean core.source="cldr 48"
 
 # dolphin
 @k.objects.u1f42c k.objects.object name=dolphin core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -532,7 +532,7 @@
 @k.objects.u1f42c.p6.22 k.objects.point part=$k.objects.u1f42c.p6 n=22 x=57.1 y=16.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f42c.p6.23 k.objects.point part=$k.objects.u1f42c.p6 n=23 x=52.7 y=18.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f42c.p6.24 k.objects.point part=$k.objects.u1f42c.p6 n=24 x=48.1 y=21.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f42c.word core.word text=animal text=beach text=flipper text=ocean means=dolphin of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f42c.keyword k.objects.keyword of=dolphin text=animal text=beach text=flipper text=ocean core.source="cldr 48"
 
 # orca
 @k.objects.u1facd k.objects.object name=orca core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -737,7 +737,7 @@
 @k.objects.u1facd.p11.24 k.objects.point part=$k.objects.u1facd.p11 n=24 x=62.4 y=21.9 core.source="noto-emoji 99701e0"
 @k.objects.u1facd.p11.25 k.objects.point part=$k.objects.u1facd.p11 n=25 x=56.2 y=27.3 core.source="noto-emoji 99701e0"
 @k.objects.u1facd.p11.26 k.objects.point part=$k.objects.u1facd.p11 n=26 x=52.1 y=29.8 core.source="noto-emoji 99701e0"
-@k.objects.u1facd.word core.word text=marine text=ocean text=whale means=orca of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1facd.keyword k.objects.keyword of=orca text=marine text=ocean text=whale core.source="cldr 48"
 
 # seal
 @k.objects.u1f9ad k.objects.object name=seal core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -953,7 +953,7 @@
 @k.objects.u1f9ad.p16.21 k.objects.point part=$k.objects.u1f9ad.p16 n=21 x=16.8 y=56.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ad.p16.22 k.objects.point part=$k.objects.u1f9ad.p16 n=22 x=14.3 y=52.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ad.p16.23 k.objects.point part=$k.objects.u1f9ad.p16 n=23 x=14.4 y=52 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ad.word core.word text=animal text=lion text=ocean text=sea means=seal of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ad.keyword k.objects.keyword of=seal text=animal text=lion text=ocean text=sea core.source="cldr 48"
 
 # tropical fish
 @k.objects.u1f420 k.objects.object name="tropical fish" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1172,7 +1172,7 @@
 @k.objects.u1f420.p16.5 k.objects.point part=$k.objects.u1f420.p16 n=5 x=60.3 y=47.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f420.p16.6 k.objects.point part=$k.objects.u1f420.p16 n=6 x=62.5 y=46.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f420.p16.7 k.objects.point part=$k.objects.u1f420.p16 n=7 x=65.8 y=44.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f420.word core.word text=animal text=fish text=fishes text=tropical means="tropical fish" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f420.keyword k.objects.keyword of="tropical fish" text=animal text=fish text=fishes text=tropical core.source="cldr 48"
 
 # blowfish
 @k.objects.u1f421 k.objects.object name=blowfish core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1343,7 +1343,7 @@
 @k.objects.u1f421.p16.8 k.objects.point part=$k.objects.u1f421.p16 n=8 x=51 y=33 core.source="noto-emoji 99701e0"
 @k.objects.u1f421.p16.9 k.objects.point part=$k.objects.u1f421.p16 n=9 x=44.5 y=34.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f421.p16.10 k.objects.point part=$k.objects.u1f421.p16 n=10 x=39.7 y=38.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f421.word core.word text=animal text=fish means=blowfish of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f421.keyword k.objects.keyword of=blowfish text=animal text=fish core.source="cldr 48"
 
 # shark
 @k.objects.u1f988 k.objects.object name=shark core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1513,4 +1513,4 @@
 @k.objects.u1f988.p13.3 k.objects.point part=$k.objects.u1f988.p13 n=3 x=29.9 y=34.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f988.p13.4 k.objects.point part=$k.objects.u1f988.p13 n=4 x=28.3 y=35.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f988.p13.5 k.objects.point part=$k.objects.u1f988.p13 n=5 x=29.4 y=36.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f988.word core.word text=animal text=fish means=shark of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f988.keyword k.objects.keyword of=shark text=animal text=fish core.source="cldr 48"

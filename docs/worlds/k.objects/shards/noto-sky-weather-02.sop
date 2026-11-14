@@ -75,7 +75,7 @@
 @k.objects.u1f319.p2.33 k.objects.point part=$k.objects.u1f319.p2 n=33 x=33.8 y=75.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f319.p2.34 k.objects.point part=$k.objects.u1f319.p2 n=34 x=40.1 y=75 core.source="noto-emoji 99701e0"
 @k.objects.u1f319.p2.35 k.objects.point part=$k.objects.u1f319.p2 n=35 x=47.7 y=73.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f319.word core.word text=crescent text=moon text=ramadan text=space means="crescent moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f319.keyword k.objects.keyword of="crescent moon" text=crescent text=moon text=ramadan text=space core.source="cldr 48"
 
 # new moon face
 @k.objects.u1f31a k.objects.object name="new moon face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -169,7 +169,7 @@
 @k.objects.u1f31a.p7.19 k.objects.point part=$k.objects.u1f31a.p7 n=19 x=54.4 y=57.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f31a.p7.20 k.objects.point part=$k.objects.u1f31a.p7 n=20 x=51 y=58.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f31a.p7.21 k.objects.point part=$k.objects.u1f31a.p7 n=21 x=47.9 y=58 core.source="noto-emoji 99701e0"
-@k.objects.u1f31a.word core.word text=face text=moon text=new text=space means="new moon face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f31a.keyword k.objects.keyword of="new moon face" text=face text=moon text=new text=space core.source="cldr 48"
 
 # first quarter moon face
 @k.objects.u1f31b k.objects.object name="first quarter moon face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -378,7 +378,7 @@
 @k.objects.u1f31b.p8.14 k.objects.point part=$k.objects.u1f31b.p8 n=14 x=68.4 y=57.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f31b.p8.15 k.objects.point part=$k.objects.u1f31b.p8 n=15 x=65.6 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f31b.p8.16 k.objects.point part=$k.objects.u1f31b.p8 n=16 x=64.4 y=62.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f31b.word core.word text=face text=first text=moon text=quarter text=space means="first quarter moon face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f31b.keyword k.objects.keyword of="first quarter moon face" text=face text=first text=moon text=quarter text=space core.source="cldr 48"
 
 # last quarter moon face
 @k.objects.u1f31c k.objects.object name="last quarter moon face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -587,7 +587,7 @@
 @k.objects.u1f31c.p8.14 k.objects.point part=$k.objects.u1f31c.p8 n=14 x=31.6 y=57.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f31c.p8.15 k.objects.point part=$k.objects.u1f31c.p8 n=15 x=34.4 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f31c.p8.16 k.objects.point part=$k.objects.u1f31c.p8 n=16 x=35.6 y=62.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f31c.word core.word text=dreams text=face text=last text=moon text=quarter means="last quarter moon face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f31c.keyword k.objects.keyword of="last quarter moon face" text=dreams text=face text=last text=moon text=quarter core.source="cldr 48"
 
 # thermometer
 @k.objects.u1f321 k.objects.object name=thermometer core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -725,7 +725,7 @@
 @k.objects.u1f321.p10.6 k.objects.point part=$k.objects.u1f321.p10 n=6 x=49.4 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f321.p10.7 k.objects.point part=$k.objects.u1f321.p10 n=7 x=49.8 y=58.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f321.p10.8 k.objects.point part=$k.objects.u1f321.p10 n=8 x=49.4 y=57 core.source="noto-emoji 99701e0"
-@k.objects.u1f321.word core.word text=weather means=thermometer of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f321.keyword k.objects.keyword of=thermometer text=weather core.source="cldr 48"
 
 # full moon face
 @k.objects.u1f31d k.objects.object name="full moon face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -852,7 +852,7 @@
 @k.objects.u1f31d.p8.14 k.objects.point part=$k.objects.u1f31d.p8 n=14 x=31.7 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f31d.p8.15 k.objects.point part=$k.objects.u1f31d.p8 n=15 x=34.5 y=52.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f31d.p8.16 k.objects.point part=$k.objects.u1f31d.p8 n=16 x=35.7 y=55.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f31d.word core.word text=bright text=face text=full text=moon means="full moon face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f31d.keyword k.objects.keyword of="full moon face" text=bright text=face text=full text=moon core.source="cldr 48"
 
 # sun with face
 @k.objects.u1f31e k.objects.object name="sun with face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -986,7 +986,7 @@
 @k.objects.u1f31e.p11.13 k.objects.point part=$k.objects.u1f31e.p11 n=13 x=55.1 y=64.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f31e.p11.14 k.objects.point part=$k.objects.u1f31e.p11 n=14 x=58.8 y=63.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f31e.p11.15 k.objects.point part=$k.objects.u1f31e.p11 n=15 x=61.9 y=60.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f31e.word core.word text=beach text=bright text=day text=face text=heat text=shine text=sun text=sunny text=sunshine text=weather means="sun with face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f31e.keyword k.objects.keyword of="sun with face" text=beach text=bright text=day text=face text=heat text=shine text=sun text=sunny text=sunshine text=weather core.source="cldr 48"
 
 # ringed planet
 @k.objects.u1fa90 k.objects.object name="ringed planet" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1196,4 +1196,4 @@
 @k.objects.u1fa90.p12.24 k.objects.point part=$k.objects.u1fa90.p12 n=24 x=19.1 y=30.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa90.p12.25 k.objects.point part=$k.objects.u1fa90.p12 n=25 x=27 y=32.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa90.p12.26 k.objects.point part=$k.objects.u1fa90.p12 n=26 x=29.9 y=33.5 core.source="noto-emoji 99701e0"
-@k.objects.u1fa90.word core.word text=planet text=ringed text=saturn text=saturnine means="ringed planet" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa90.keyword k.objects.keyword of="ringed planet" text=planet text=ringed text=saturn text=saturnine core.source="cldr 48"

@@ -173,7 +173,7 @@
 @k.objects.u1fa83.p10.5 k.objects.point part=$k.objects.u1fa83.p10 n=5 x=16.4 y=27.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fa83.p10.6 k.objects.point part=$k.objects.u1fa83.p10 n=6 x=16.7 y=28.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fa83.p10.7 k.objects.point part=$k.objects.u1fa83.p10 n=7 x=18.2 y=29.4 core.source="noto-emoji 99701e0"
-@k.objects.u1fa83.word core.word text=rebound text=repercussion text=weapon means=boomerang of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa83.keyword k.objects.keyword of=boomerang text=rebound text=repercussion text=weapon core.source="cldr 48"
 
 # bow and arrow
 @k.objects.u1f3f9 k.objects.object name="bow and arrow" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -276,7 +276,7 @@
 @k.objects.u1f3f9.p9.5 k.objects.point part=$k.objects.u1f3f9.p9 n=5 x=42.6 y=67.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3f9.p9.6 k.objects.point part=$k.objects.u1f3f9.p9 n=6 x=44.1 y=63.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3f9.p9.7 k.objects.point part=$k.objects.u1f3f9.p9 n=7 x=43.9 y=62 core.source="noto-emoji 99701e0"
-@k.objects.u1f3f9.word core.word text=archer text=archery text=arrow text=bow text=Sagittarius text=tool text=weapon text=zodiac means="bow and arrow" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3f9.keyword k.objects.keyword of="bow and arrow" text=archer text=archery text=arrow text=bow text=Sagittarius text=tool text=weapon text=zodiac core.source="cldr 48"
 
 # shield
 @k.objects.u1f6e1 k.objects.object name=shield core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -406,7 +406,7 @@
 @k.objects.u1f6e1.p14 k.objects.part of=shield name=part14 named=no shape=circle x=65.5 y=78.7 w=3 h=3 z=14 colour=grey rgb="#37474F" core.source="noto-emoji 99701e0"
 @k.objects.u1f6e1.p15 k.objects.part of=shield name=part15 named=no shape=circle x=71.8 y=69.8 w=3 h=3 z=15 colour=grey rgb="#37474F" core.source="noto-emoji 99701e0"
 @k.objects.u1f6e1.p16 k.objects.part of=shield name=part16 named=no shape=circle x=76.4 y=60.2 w=3 h=3 z=16 colour=grey rgb="#37474F" core.source="noto-emoji 99701e0"
-@k.objects.u1f6e1.word core.word text=weapon means=shield of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6e1.keyword k.objects.keyword of=shield text=weapon core.source="cldr 48"
 
 # carpentry saw
 @k.objects.u1fa9a k.objects.object name="carpentry saw" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -554,7 +554,7 @@
 @k.objects.u1fa9a.p7.37 k.objects.point part=$k.objects.u1fa9a.p7 n=37 x=71.7 y=49.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9a.p7.38 k.objects.point part=$k.objects.u1fa9a.p7 n=38 x=73 y=48.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9a.p7.39 k.objects.point part=$k.objects.u1fa9a.p7 n=39 x=75.8 y=49.6 core.source="noto-emoji 99701e0"
-@k.objects.u1fa9a.word core.word text=carpenter text=carpentry text=cut text=lumber text=saw text=tool text=trim means="carpentry saw" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa9a.keyword k.objects.keyword of="carpentry saw" text=carpenter text=carpentry text=cut text=lumber text=saw text=tool text=trim core.source="cldr 48"
 
 # wrench
 @k.objects.u1f527 k.objects.object name=wrench core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -649,7 +649,7 @@
 @k.objects.u1f527.p5.4 k.objects.point part=$k.objects.u1f527.p5 n=4 x=11.4 y=22.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f527.p5.5 k.objects.point part=$k.objects.u1f527.p5 n=5 x=5.2 y=23.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f527.p5.6 k.objects.point part=$k.objects.u1f527.p5 n=6 x=5.6 y=24.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f527.word core.word text=home text=improvement text=spanner text=tool means=wrench of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f527.keyword k.objects.keyword of=wrench text=home text=improvement text=spanner text=tool core.source="cldr 48"
 
 # screwdriver
 @k.objects.u1fa9b k.objects.object name=screwdriver core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -752,7 +752,7 @@
 @k.objects.u1fa9b.p9.6 k.objects.point part=$k.objects.u1fa9b.p9 n=6 x=17 y=20.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9b.p9.7 k.objects.point part=$k.objects.u1fa9b.p9 n=7 x=11.8 y=19.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9b.p9.8 k.objects.point part=$k.objects.u1fa9b.p9 n=8 x=5.5 y=9 core.source="noto-emoji 99701e0"
-@k.objects.u1fa9b.word core.word text=flathead text=handy text=screw text=tool means=screwdriver of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa9b.keyword k.objects.keyword of=screwdriver text=flathead text=handy text=screw text=tool core.source="cldr 48"
 
 # nut and bolt
 @k.objects.u1f529 k.objects.object name="nut and bolt" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -917,7 +917,7 @@
 @k.objects.u1f529.p12.5 k.objects.point part=$k.objects.u1f529.p12 n=5 x=86.2 y=65.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f529.p12.6 k.objects.point part=$k.objects.u1f529.p12 n=6 x=88.4 y=51.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f529.p12.7 k.objects.point part=$k.objects.u1f529.p12 n=7 x=87.5 y=49.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f529.word core.word text=bolt text=home text=improvement text=nut text=tool means="nut and bolt" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f529.keyword k.objects.keyword of="nut and bolt" text=bolt text=home text=improvement text=nut text=tool core.source="cldr 48"
 
 # gear
 @k.objects.u2699 k.objects.object name=gear core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1027,4 +1027,4 @@
 @k.objects.u2699.p4.21 k.objects.point part=$k.objects.u2699.p4 n=21 x=23.1 y=52.6 core.source="noto-emoji 99701e0"
 @k.objects.u2699.p4.22 k.objects.point part=$k.objects.u2699.p4 n=22 x=22.1 y=53.3 core.source="noto-emoji 99701e0"
 @k.objects.u2699.p4.23 k.objects.point part=$k.objects.u2699.p4 n=23 x=20.9 y=53.2 core.source="noto-emoji 99701e0"
-@k.objects.u2699.word core.word text=cog text=cogwheel text=tool means=gear of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2699.keyword k.objects.keyword of=gear text=cog text=cogwheel text=tool core.source="cldr 48"

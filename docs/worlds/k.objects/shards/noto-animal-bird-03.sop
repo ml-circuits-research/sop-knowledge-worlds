@@ -175,7 +175,7 @@
 @k.objects.u1f99c.p12.19 k.objects.point part=$k.objects.u1f99c.p12 n=19 x=70.9 y=73.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f99c.p12.20 k.objects.point part=$k.objects.u1f99c.p12 n=20 x=66.2 y=58.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f99c.p12.21 k.objects.point part=$k.objects.u1f99c.p12 n=21 x=60 y=45.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f99c.word core.word text=animal text=bird text=ornithology text=pirate text=talk means=parrot of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f99c.keyword k.objects.keyword of=parrot text=animal text=bird text=ornithology text=pirate text=talk core.source="cldr 48"
 
 # wing
 @k.objects.u1fabd k.objects.object name=wing core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -388,7 +388,7 @@
 @k.objects.u1fabd.p16.6 k.objects.point part=$k.objects.u1fabd.p16 n=6 x=6.3 y=73 core.source="noto-emoji 99701e0"
 @k.objects.u1fabd.p16.7 k.objects.point part=$k.objects.u1fabd.p16 n=7 x=10.3 y=57.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fabd.p16.8 k.objects.point part=$k.objects.u1fabd.p16 n=8 x=19.5 y=49.1 core.source="noto-emoji 99701e0"
-@k.objects.u1fabd.word core.word text=angelic text=ascend text=aviation text=bird text=fly text=flying text=heavenly text=mythology text=soar means=wing of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fabd.keyword k.objects.keyword of=wing text=angelic text=ascend text=aviation text=bird text=fly text=flying text=heavenly text=mythology text=soar core.source="cldr 48"
 
 # black bird
 @k.objects.u1f426_200d_2b1b k.objects.object name="black bird" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -508,7 +508,7 @@
 @k.objects.u1f426_200d_2b1b.p6.25 k.objects.point part=$k.objects.u1f426_200d_2b1b.p6 n=25 x=45.9 y=67.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f426_200d_2b1b.p6.26 k.objects.point part=$k.objects.u1f426_200d_2b1b.p6 n=26 x=42.6 y=64.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f426_200d_2b1b.p6.27 k.objects.point part=$k.objects.u1f426_200d_2b1b.p6 n=27 x=37.7 y=58.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f426_200d_2b1b.word core.word text=animal text=beak text=bird text=black text=caw text=corvid text=crow text=ornithology text=raven text=rook means="black bird" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f426_200d_2b1b.keyword k.objects.keyword of="black bird" text=animal text=beak text=bird text=black text=caw text=corvid text=crow text=ornithology text=raven text=rook core.source="cldr 48"
 
 # goose
 @k.objects.u1fabf k.objects.object name=goose core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -695,7 +695,7 @@
 @k.objects.u1fabf.p9.11 k.objects.point part=$k.objects.u1fabf.p9 n=11 x=24.5 y=17.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fabf.p9.12 k.objects.point part=$k.objects.u1fabf.p9 n=12 x=26.4 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fabf.p9.13 k.objects.point part=$k.objects.u1fabf.p9 n=13 x=27.3 y=14.9 core.source="noto-emoji 99701e0"
-@k.objects.u1fabf.word core.word text=animal text=bird text=duck text=flock text=fowl text=gaggle text=gander text=geese text=honk text=ornithology text=silly means=goose of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fabf.keyword k.objects.keyword of=goose text=animal text=bird text=duck text=flock text=fowl text=gaggle text=gander text=geese text=honk text=ornithology text=silly core.source="cldr 48"
 
 # phoenix
 @k.objects.u1f426_200d_1f525 k.objects.object name=phoenix core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -910,4 +910,4 @@
 @k.objects.u1f426_200d_1f525.p16.6 k.objects.point part=$k.objects.u1f426_200d_1f525.p16 n=6 x=37.7 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f426_200d_1f525.p16.7 k.objects.point part=$k.objects.u1f426_200d_1f525.p16 n=7 x=35.2 y=52.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f426_200d_1f525.p16.8 k.objects.point part=$k.objects.u1f426_200d_1f525.p16 n=8 x=37.4 y=59 core.source="noto-emoji 99701e0"
-@k.objects.u1f426_200d_1f525.word core.word text=ascend text=ascension text=emerge text=fantasy text=firebird text=glory text=immortal text=rebirth text=reincarnation text=reinvent text=renewal text=revival text=revive text=rise text=transform means=phoenix of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f426_200d_1f525.keyword k.objects.keyword of=phoenix text=ascend text=ascension text=emerge text=fantasy text=firebird text=glory text=immortal text=rebirth text=reincarnation text=reinvent text=renewal text=revival text=revive text=rise text=transform core.source="cldr 48"

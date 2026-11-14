@@ -202,7 +202,7 @@
 @k.objects.u1f381.p14.9 k.objects.point part=$k.objects.u1f381.p14 n=9 x=28.3 y=6.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f381.p14.10 k.objects.point part=$k.objects.u1f381.p14 n=10 x=26.8 y=5.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f381.p14.11 k.objects.point part=$k.objects.u1f381.p14 n=11 x=24.4 y=5.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f381.word core.word text=birthday text=bow text=box text=celebration text=christmas text=gift text=present text=surprise text=wrapped means="wrapped gift" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f381.keyword k.objects.keyword of="wrapped gift" text=birthday text=bow text=box text=celebration text=christmas text=gift text=present text=surprise text=wrapped core.source="cldr 48"
 
 # reminder ribbon
 @k.objects.u1f397 k.objects.object name="reminder ribbon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -277,7 +277,7 @@
 @k.objects.u1f397.p3.24 k.objects.point part=$k.objects.u1f397.p3 n=24 x=38.5 y=20.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f397.p3.25 k.objects.point part=$k.objects.u1f397.p3 n=25 x=38.3 y=14.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f397.p3.26 k.objects.point part=$k.objects.u1f397.p3 n=26 x=38.7 y=9.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f397.word core.word text=celebration text=reminder text=ribbon means="reminder ribbon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f397.keyword k.objects.keyword of="reminder ribbon" text=celebration text=reminder text=ribbon core.source="cldr 48"
 
 # admission tickets
 @k.objects.u1f39f k.objects.object name="admission tickets" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -381,7 +381,7 @@
 @k.objects.u1f39f.p4.2 k.objects.point part=$k.objects.u1f39f.p4 n=2 x=72 y=30.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f39f.p4.3 k.objects.point part=$k.objects.u1f39f.p4 n=3 x=72 y=69.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f39f.p4.4 k.objects.point part=$k.objects.u1f39f.p4 n=4 x=28 y=69.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f39f.word core.word text=admission text=ticket text=tickets means="admission tickets" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f39f.keyword k.objects.keyword of="admission tickets" text=admission text=ticket text=tickets core.source="cldr 48"
 
 # ticket
 @k.objects.u1f3ab k.objects.object name=ticket core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -436,4 +436,4 @@
 @k.objects.u1f3ab.p8 k.objects.part of=ticket name=part8 kind=detail named=no shape=line x=77.3 y=62.9 w=11.2 h=0 z=8 colour=black rgb="#4E342E" core.source="noto-emoji 99701e0"
 @k.objects.u1f3ab.p8.1 k.objects.point part=$k.objects.u1f3ab.p8 n=1 x=77.3 y=62.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ab.p8.2 k.objects.point part=$k.objects.u1f3ab.p8 n=2 x=88.5 y=62.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f3ab.word core.word text=admission text=stub means=ticket of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ab.keyword k.objects.keyword of=ticket text=admission text=stub core.source="cldr 48"

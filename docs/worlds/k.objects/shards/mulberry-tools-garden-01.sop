@@ -182,7 +182,7 @@
 @k.objects.mb1507.p16 k.objects.part of="garden clippers" name=part16 kind=detail named=no shape=line x=41.6 y=56 w=6.2 h=0.4 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1507.p16.1 k.objects.point part=$k.objects.mb1507.p16 n=1 x=41.6 y=56 core.source="mulberry fa94a93"
 @k.objects.mb1507.p16.2 k.objects.point part=$k.objects.mb1507.p16 n=2 x=47.8 y=56.4 core.source="mulberry fa94a93"
-@k.objects.mb1507.word core.word text=gardening means="garden clippers" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1507.keyword k.objects.keyword of="garden clippers" text=gardening core.source="mulberry fa94a93"
 
 # hedge cutters
 @k.objects.mb1649 k.objects.object name="hedge cutters" core.source="mulberry fa94a93"
@@ -348,7 +348,7 @@
 @k.objects.mb1649.p16.2 k.objects.point part=$k.objects.mb1649.p16 n=2 x=59.5 y=57.3 core.source="mulberry fa94a93"
 @k.objects.mb1649.p16.3 k.objects.point part=$k.objects.mb1649.p16 n=3 x=57.8 y=59 core.source="mulberry fa94a93"
 @k.objects.mb1649.p16.4 k.objects.point part=$k.objects.mb1649.p16 n=4 x=57.1 y=60.7 core.source="mulberry fa94a93"
-@k.objects.mb1649.word core.word text=gardening means="hedge cutters" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1649.keyword k.objects.keyword of="hedge cutters" text=gardening core.source="mulberry fa94a93"
 
 # hoe
 @k.objects.mb1668 k.objects.object name=hoe core.source="mulberry fa94a93"
@@ -431,7 +431,7 @@
 @k.objects.mb1668.p10.3 k.objects.point part=$k.objects.mb1668.p10 n=3 x=93.5 y=17.9 core.source="mulberry fa94a93"
 @k.objects.mb1668.p10.4 k.objects.point part=$k.objects.mb1668.p10 n=4 x=26.4 y=51.5 core.source="mulberry fa94a93"
 @k.objects.mb1668.p10.5 k.objects.point part=$k.objects.mb1668.p10 n=5 x=26.1 y=50.9 core.source="mulberry fa94a93"
-@k.objects.mb1668.word core.word text=gardening means=hoe of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1668.keyword k.objects.keyword of=hoe text=gardening core.source="mulberry fa94a93"
 
 # hose
 @k.objects.mb1683 k.objects.object name=hose core.source="mulberry fa94a93"
@@ -650,7 +650,7 @@
 @k.objects.mb1683.p16.3 k.objects.point part=$k.objects.mb1683.p16 n=3 x=81.6 y=32.8 core.source="mulberry fa94a93"
 @k.objects.mb1683.p16.4 k.objects.point part=$k.objects.mb1683.p16 n=4 x=81.6 y=34.8 core.source="mulberry fa94a93"
 @k.objects.mb1683.p16.5 k.objects.point part=$k.objects.mb1683.p16 n=5 x=82.6 y=35.8 core.source="mulberry fa94a93"
-@k.objects.mb1683.word core.word text=gardening means=hose of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1683.keyword k.objects.keyword of=hose text=gardening core.source="mulberry fa94a93"
 
 # lawnmower
 @k.objects.mb1807 k.objects.object name=lawnmower core.source="mulberry fa94a93"
@@ -823,7 +823,7 @@
 @k.objects.mb1807.p15.5 k.objects.point part=$k.objects.mb1807.p15 n=5 x=32.4 y=82.6 core.source="mulberry fa94a93"
 @k.objects.mb1807.p15.6 k.objects.point part=$k.objects.mb1807.p15 n=6 x=32.1 y=81.9 core.source="mulberry fa94a93"
 @k.objects.mb1807.p15.7 k.objects.point part=$k.objects.mb1807.p15 n=7 x=36 y=76.6 core.source="mulberry fa94a93"
-@k.objects.mb1807.word core.word text=electric text=gardening means=lawnmower of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1807.keyword k.objects.keyword of=lawnmower text=electric text=gardening core.source="mulberry fa94a93"
 
 # pot
 @k.objects.mb2298 k.objects.object name=pot core.source="mulberry fa94a93"
@@ -948,7 +948,7 @@
 @k.objects.mb2298.p8.21 k.objects.point part=$k.objects.mb2298.p8 n=21 x=21.1 y=27.4 core.source="mulberry fa94a93"
 @k.objects.mb2298.p8.22 k.objects.point part=$k.objects.mb2298.p8 n=22 x=17.2 y=24.5 core.source="mulberry fa94a93"
 @k.objects.mb2298.p8.23 k.objects.point part=$k.objects.mb2298.p8 n=23 x=16.3 y=22.9 core.source="mulberry fa94a93"
-@k.objects.mb2298.word core.word text=gardening means=pot of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2298.keyword k.objects.keyword of=pot text=gardening core.source="mulberry fa94a93"
 
 # rake
 @k.objects.mb2360 k.objects.object name=rake core.source="mulberry fa94a93"
@@ -995,7 +995,7 @@
 @k.objects.mb2360.p13 k.objects.part of=rake name=part13 kind=detail named=no shape=line x=45.5 y=86.9 w=0 h=6.2 z=13 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2360.p13.1 k.objects.point part=$k.objects.mb2360.p13 n=1 x=45.5 y=86.9 core.source="mulberry fa94a93"
 @k.objects.mb2360.p13.2 k.objects.point part=$k.objects.mb2360.p13 n=2 x=45.5 y=93.1 core.source="mulberry fa94a93"
-@k.objects.mb2360.word core.word text=gardening means=rake of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2360.keyword k.objects.keyword of=rake text=gardening core.source="mulberry fa94a93"
 
 # scarecrow
 @k.objects.mb2480 k.objects.object name=scarecrow core.source="mulberry fa94a93"
@@ -1207,4 +1207,4 @@
 @k.objects.mb2480.p16.14 k.objects.point part=$k.objects.mb2480.p16 n=14 x=43.9 y=83.1 core.source="mulberry fa94a93"
 @k.objects.mb2480.p16.15 k.objects.point part=$k.objects.mb2480.p16 n=15 x=48.7 y=62.8 core.source="mulberry fa94a93"
 @k.objects.mb2480.p16.16 k.objects.point part=$k.objects.mb2480.p16 n=16 x=49.9 y=62.8 core.source="mulberry fa94a93"
-@k.objects.mb2480.word core.word text=gardening means=scarecrow of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2480.keyword k.objects.keyword of=scarecrow text=gardening core.source="mulberry fa94a93"

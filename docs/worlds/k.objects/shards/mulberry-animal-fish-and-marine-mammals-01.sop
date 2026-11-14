@@ -179,7 +179,7 @@
 @k.objects.mb1134.p16.2 k.objects.point part=$k.objects.mb1134.p16 n=2 x=40.9 y=64.5 core.source="mulberry fa94a93"
 @k.objects.mb1134.p16.3 k.objects.point part=$k.objects.mb1134.p16 n=3 x=43.3 y=63.5 core.source="mulberry fa94a93"
 @k.objects.mb1134.p16.4 k.objects.point part=$k.objects.mb1134.p16 n=4 x=44.8 y=60.6 core.source="mulberry fa94a93"
-@k.objects.mb1134.word core.word text=animal text=pet means="fish koi carp" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1134.keyword k.objects.keyword of="fish koi carp" text=animal text=pet core.source="mulberry fa94a93"
 
 # fish tropical
 @k.objects.mb1136 k.objects.object name="fish tropical" core.source="mulberry fa94a93"
@@ -393,7 +393,7 @@
 @k.objects.mb1136.p16.3 k.objects.point part=$k.objects.mb1136.p16 n=3 x=67.6 y=29.3 core.source="mulberry fa94a93"
 @k.objects.mb1136.p16.4 k.objects.point part=$k.objects.mb1136.p16 n=4 x=70.5 y=28.9 core.source="mulberry fa94a93"
 @k.objects.mb1136.p16.5 k.objects.point part=$k.objects.mb1136.p16 n=5 x=74 y=31.7 core.source="mulberry fa94a93"
-@k.objects.mb1136.word core.word text=animal text=pet means="fish tropical" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1136.keyword k.objects.keyword of="fish tropical" text=animal text=pet core.source="mulberry fa94a93"
 
 # killer whale
 @k.objects.mb1772 k.objects.object name="killer whale" core.source="mulberry fa94a93"
@@ -612,7 +612,7 @@
 @k.objects.mb1772.p15.5 k.objects.point part=$k.objects.mb1772.p15 n=5 x=54.4 y=40.3 core.source="mulberry fa94a93"
 @k.objects.mb1772.p15.6 k.objects.point part=$k.objects.mb1772.p15 n=6 x=54.2 y=37 core.source="mulberry fa94a93"
 @k.objects.mb1772.p15.7 k.objects.point part=$k.objects.mb1772.p15 n=7 x=57 y=26.6 core.source="mulberry fa94a93"
-@k.objects.mb1772.word core.word text=animal text=mammal text=wild means="killer whale" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1772.keyword k.objects.keyword of="killer whale" text=animal text=mammal text=wild core.source="mulberry fa94a93"
 
 # seahorse
 @k.objects.mb2497 k.objects.object name=seahorse core.source="mulberry fa94a93"
@@ -816,7 +816,7 @@
 @k.objects.mb2497.p16.38 k.objects.point part=$k.objects.mb2497.p16 n=38 x=56.7 y=88.5 core.source="mulberry fa94a93"
 @k.objects.mb2497.p16.39 k.objects.point part=$k.objects.mb2497.p16 n=39 x=59.3 y=85.7 core.source="mulberry fa94a93"
 @k.objects.mb2497.p16.40 k.objects.point part=$k.objects.mb2497.p16 n=40 x=61.8 y=81 core.source="mulberry fa94a93"
-@k.objects.mb2497.word core.word text=animal text=fish means=seahorse of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2497.keyword k.objects.keyword of=seahorse text=animal text=fish core.source="mulberry fa94a93"
 
 # walrus
 @k.objects.mb3005 k.objects.object name=walrus core.source="mulberry fa94a93"
@@ -985,4 +985,4 @@
 @k.objects.mb3005.p16.3 k.objects.point part=$k.objects.mb3005.p16 n=3 x=43.4 y=58.3 core.source="mulberry fa94a93"
 @k.objects.mb3005.p16.4 k.objects.point part=$k.objects.mb3005.p16 n=4 x=49.2 y=60.4 core.source="mulberry fa94a93"
 @k.objects.mb3005.p16.5 k.objects.point part=$k.objects.mb3005.p16 n=5 x=56.5 y=60.9 core.source="mulberry fa94a93"
-@k.objects.mb3005.word core.word text=animal text=mammal means=walrus of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3005.keyword k.objects.keyword of=walrus text=animal text=mammal core.source="mulberry fa94a93"

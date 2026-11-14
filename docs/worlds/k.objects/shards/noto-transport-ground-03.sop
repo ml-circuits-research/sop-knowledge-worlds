@@ -183,7 +183,7 @@
 @k.objects.u1f692.p16.2 k.objects.point part=$k.objects.u1f692.p16 n=2 x=30.6 y=44.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f692.p16.3 k.objects.point part=$k.objects.u1f692.p16 n=3 x=30.6 y=55.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f692.p16.4 k.objects.point part=$k.objects.u1f692.p16 n=4 x=20.9 y=55.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f692.word core.word text=engine text=fire text=truck means="fire engine" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f692.keyword k.objects.keyword of="fire engine" text=engine text=fire text=truck core.source="cldr 48"
 
 # police car
 @k.objects.u1f693 k.objects.object name="police car" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -399,7 +399,7 @@
 @k.objects.u1f693.p16.13 k.objects.point part=$k.objects.u1f693.p16 n=13 x=56.9 y=70.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f693.p16.14 k.objects.point part=$k.objects.u1f693.p16 n=14 x=53.6 y=68.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f693.p16.15 k.objects.point part=$k.objects.u1f693.p16 n=15 x=49.8 y=70.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f693.word core.word text=5–0 text=car text=cops text=patrol text=police means="police car" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f693.keyword k.objects.keyword of="police car" text=5–0 text=car text=cops text=patrol text=police core.source="cldr 48"
 
 # oncoming police car
 @k.objects.u1f694 k.objects.object name="oncoming police car" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -610,7 +610,7 @@
 @k.objects.u1f694.p16.21 k.objects.point part=$k.objects.u1f694.p16 n=21 x=31.8 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f694.p16.22 k.objects.point part=$k.objects.u1f694.p16 n=22 x=31 y=33.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f694.p16.23 k.objects.point part=$k.objects.u1f694.p16 n=23 x=30.3 y=38.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f694.word core.word text=car text=oncoming text=police means="oncoming police car" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f694.keyword k.objects.keyword of="oncoming police car" text=car text=oncoming text=police core.source="cldr 48"
 
 # taxi
 @k.objects.u1f695 k.objects.object name=taxi core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -790,7 +790,7 @@
 @k.objects.u1f695.p16.14 k.objects.point part=$k.objects.u1f695.p16 n=14 x=77.8 y=80.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f695.p16.15 k.objects.point part=$k.objects.u1f695.p16 n=15 x=75.6 y=82.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f695.p16.16 k.objects.point part=$k.objects.u1f695.p16 n=16 x=74.3 y=84.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f695.word core.word text=cab text=cabbie text=car text=drive text=vehicle text=yellow means=taxi of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f695.keyword k.objects.keyword of=taxi text=cab text=cabbie text=car text=drive text=vehicle text=yellow core.source="cldr 48"
 
 # oncoming taxi
 @k.objects.u1f696 k.objects.object name="oncoming taxi" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -997,7 +997,7 @@
 @k.objects.u1f696.p16.4 k.objects.point part=$k.objects.u1f696.p16 n=4 x=61.3 y=23.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f696.p16.5 k.objects.point part=$k.objects.u1f696.p16 n=5 x=61.4 y=16.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f696.p16.6 k.objects.point part=$k.objects.u1f696.p16 n=6 x=57 y=11.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f696.word core.word text=cab text=cabbie text=cars text=drove text=hail text=oncoming text=taxi text=yellow means="oncoming taxi" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f696.keyword k.objects.keyword of="oncoming taxi" text=cab text=cabbie text=cars text=drove text=hail text=oncoming text=taxi text=yellow core.source="cldr 48"
 
 # automobile
 @k.objects.u1f697 k.objects.object name=automobile core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1191,7 +1191,7 @@
 @k.objects.u1f697.p15.4 k.objects.point part=$k.objects.u1f697.p15 n=4 x=94.7 y=59.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f697.p15.5 k.objects.point part=$k.objects.u1f697.p15 n=5 x=95.3 y=64 core.source="noto-emoji 99701e0"
 @k.objects.u1f697.p15.6 k.objects.point part=$k.objects.u1f697.p15 n=6 x=95.1 y=70.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f697.word core.word text=car text=driving text=vehicle means=automobile of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f697.keyword k.objects.keyword of=automobile text=car text=driving text=vehicle core.source="cldr 48"
 
 # oncoming automobile
 @k.objects.u1f698 k.objects.object name="oncoming automobile" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1407,7 +1407,7 @@
 @k.objects.u1f698.p16.20 k.objects.point part=$k.objects.u1f698.p16 n=20 x=22.1 y=42.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f698.p16.21 k.objects.point part=$k.objects.u1f698.p16 n=21 x=20.9 y=41.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f698.p16.22 k.objects.point part=$k.objects.u1f698.p16 n=22 x=21.3 y=38.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f698.word core.word text=automobile text=car text=cars text=drove text=oncoming text=vehicle means="oncoming automobile" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f698.keyword k.objects.keyword of="oncoming automobile" text=automobile text=car text=cars text=drove text=oncoming text=vehicle core.source="cldr 48"
 
 # sport utility vehicle
 @k.objects.u1f699 k.objects.object name="sport utility vehicle" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1602,4 +1602,4 @@
 @k.objects.u1f699.p16.2 k.objects.point part=$k.objects.u1f699.p16 n=2 x=68.8 y=56.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f699.p16.3 k.objects.point part=$k.objects.u1f699.p16 n=3 x=83 y=56.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f699.p16.4 k.objects.point part=$k.objects.u1f699.p16 n=4 x=81 y=41.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f699.word core.word text=car text=drive text=recreational text=sport text=sportutility text=utility text=vehicle means="sport utility vehicle" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f699.keyword k.objects.keyword of="sport utility vehicle" text=car text=drive text=recreational text=sport text=sportutility text=utility text=vehicle core.source="cldr 48"

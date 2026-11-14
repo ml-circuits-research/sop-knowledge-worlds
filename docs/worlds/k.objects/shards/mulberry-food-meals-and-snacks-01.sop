@@ -626,7 +626,7 @@
 @k.objects.mb473.p16.2 k.objects.point part=$k.objects.mb473.p16 n=2 x=8.2 y=70.2 core.source="mulberry fa94a93"
 @k.objects.mb473.p16.3 k.objects.point part=$k.objects.mb473.p16 n=3 x=8.5 y=69.2 core.source="mulberry fa94a93"
 @k.objects.mb473.p16.4 k.objects.point part=$k.objects.mb473.p16 n=4 x=66.1 y=82.6 core.source="mulberry fa94a93"
-@k.objects.mb473.word core.word text=food text=meal means="chinese food" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb473.keyword k.objects.keyword of="chinese food" text=food text=meal core.source="mulberry fa94a93"
 
 # crisp bread
 @k.objects.mb824 k.objects.object name="crisp bread" core.source="mulberry fa94a93"
@@ -888,7 +888,7 @@
 @k.objects.mb825.p16.2 k.objects.point part=$k.objects.mb825.p16 n=2 x=71.6 y=29.3 core.source="mulberry fa94a93"
 @k.objects.mb825.p16.3 k.objects.point part=$k.objects.mb825.p16 n=3 x=71.6 y=72.1 core.source="mulberry fa94a93"
 @k.objects.mb825.p16.4 k.objects.point part=$k.objects.mb825.p16 n=4 x=29.3 y=72.1 core.source="mulberry fa94a93"
-@k.objects.mb825.word core.word text=food text=snack means=crisps of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb825.keyword k.objects.keyword of=crisps text=food text=snack core.source="mulberry fa94a93"
 
 # crisps cheese puffs
 @k.objects.mb826 k.objects.object name="crisps cheese puffs" core.source="mulberry fa94a93"
@@ -1266,7 +1266,7 @@
 @k.objects.mb848.p16.18 k.objects.point part=$k.objects.mb848.p16 n=18 x=45.9 y=22.7 core.source="mulberry fa94a93"
 @k.objects.mb848.p16.19 k.objects.point part=$k.objects.mb848.p16 n=19 x=39.5 y=26.8 core.source="mulberry fa94a93"
 @k.objects.mb848.p16.20 k.objects.point part=$k.objects.mb848.p16 n=20 x=31.2 y=29.3 core.source="mulberry fa94a93"
-@k.objects.mb848.word core.word text=food text=meal means=curry of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb848.keyword k.objects.keyword of=curry text=food text=meal core.source="mulberry fa94a93"
 
 # dessert menu
 @k.objects.mb893 k.objects.object name="dessert menu" core.source="mulberry fa94a93"

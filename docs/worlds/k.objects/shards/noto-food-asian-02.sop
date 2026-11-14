@@ -218,7 +218,7 @@
 @k.objects.u1f362.p16.11 k.objects.point part=$k.objects.u1f362.p16 n=11 x=92.4 y=57.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f362.p16.12 k.objects.point part=$k.objects.u1f362.p16 n=12 x=76.6 y=69.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f362.p16.13 k.objects.point part=$k.objects.u1f362.p16 n=13 x=65 y=80.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f362.word core.word text=food text=kebab text=restaurant text=seafood text=skewer text=stick means=oden of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f362.keyword k.objects.keyword of=oden text=food text=kebab text=restaurant text=seafood text=skewer text=stick core.source="cldr 48"
 
 # sushi
 @k.objects.u1f363 k.objects.object name=sushi core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -438,7 +438,7 @@
 @k.objects.u1f363.p16.11 k.objects.point part=$k.objects.u1f363.p16 n=11 x=19.6 y=49 core.source="noto-emoji 99701e0"
 @k.objects.u1f363.p16.12 k.objects.point part=$k.objects.u1f363.p16 n=12 x=13.8 y=46.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f363.p16.13 k.objects.point part=$k.objects.u1f363.p16 n=13 x=14.3 y=43.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f363.word core.word text=food means=sushi of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f363.keyword k.objects.keyword of=sushi text=food core.source="cldr 48"
 
 # fried shrimp
 @k.objects.u1f364 k.objects.object name="fried shrimp" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -613,7 +613,7 @@
 @k.objects.u1f364.p10.6 k.objects.point part=$k.objects.u1f364.p10 n=6 x=43 y=80.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f364.p10.7 k.objects.point part=$k.objects.u1f364.p10 n=7 x=41.1 y=79 core.source="noto-emoji 99701e0"
 @k.objects.u1f364.p10.8 k.objects.point part=$k.objects.u1f364.p10 n=8 x=38.2 y=78.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f364.word core.word text=fried text=prawn text=shrimp text=tempura means="fried shrimp" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f364.keyword k.objects.keyword of="fried shrimp" text=fried text=prawn text=shrimp text=tempura core.source="cldr 48"
 
 # fish cake with swirl
 @k.objects.u1f365 k.objects.object name="fish cake with swirl" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -750,7 +750,7 @@
 @k.objects.u1f365.p4.36 k.objects.point part=$k.objects.u1f365.p4 n=36 x=27.3 y=35.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f365.p4.37 k.objects.point part=$k.objects.u1f365.p4 n=37 x=33.7 y=27.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f365.p4.38 k.objects.point part=$k.objects.u1f365.p4 n=38 x=44.1 y=22.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f365.word core.word text=cake text=fish text=food text=pastry text=restaurant text=swirl means="fish cake with swirl" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f365.keyword k.objects.keyword of="fish cake with swirl" text=cake text=fish text=food text=pastry text=restaurant text=swirl core.source="cldr 48"
 
 # moon cake
 @k.objects.u1f96e k.objects.object name="moon cake" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -964,7 +964,7 @@
 @k.objects.u1f96e.p16.7 k.objects.point part=$k.objects.u1f96e.p16 n=7 x=40.2 y=20.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f96e.p16.8 k.objects.point part=$k.objects.u1f96e.p16 n=8 x=33.2 y=25.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f96e.p16.9 k.objects.point part=$k.objects.u1f96e.p16 n=9 x=30.4 y=35 core.source="noto-emoji 99701e0"
-@k.objects.u1f96e.word core.word text=autumn text=cake text=festival text=moon text=yuèbǐng means="moon cake" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f96e.keyword k.objects.keyword of="moon cake" text=autumn text=cake text=festival text=moon text=yuèbǐng core.source="cldr 48"
 
 # dango
 @k.objects.u1f361 k.objects.object name=dango core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1079,7 +1079,7 @@
 @k.objects.u1f361.p7.9 k.objects.point part=$k.objects.u1f361.p7 n=9 x=14.2 y=27 core.source="noto-emoji 99701e0"
 @k.objects.u1f361.p7.10 k.objects.point part=$k.objects.u1f361.p7 n=10 x=13.6 y=18.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f361.p7.11 k.objects.point part=$k.objects.u1f361.p7 n=11 x=12.9 y=17 core.source="noto-emoji 99701e0"
-@k.objects.u1f361.word core.word text=dessert text=Japanese text=skewer text=stick text=sweet means=dango of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f361.keyword k.objects.keyword of=dango text=dessert text=Japanese text=skewer text=stick text=sweet core.source="cldr 48"
 
 # dumpling
 @k.objects.u1f95f k.objects.object name=dumpling core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1236,7 +1236,7 @@
 @k.objects.u1f95f.p9.15 k.objects.point part=$k.objects.u1f95f.p9 n=15 x=36.7 y=35.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f95f.p9.16 k.objects.point part=$k.objects.u1f95f.p9 n=16 x=42.5 y=33.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f95f.p9.17 k.objects.point part=$k.objects.u1f95f.p9 n=17 x=44.1 y=33.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f95f.word core.word text=empanada text=gyōza text=jiaozi text=pierogi text=potsticker means=dumpling of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f95f.keyword k.objects.keyword of=dumpling text=empanada text=gyōza text=jiaozi text=pierogi text=potsticker core.source="cldr 48"
 
 # fortune cookie
 @k.objects.u1f960 k.objects.object name="fortune cookie" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1416,4 +1416,4 @@
 @k.objects.u1f960.p8.4 k.objects.point part=$k.objects.u1f960.p8 n=4 x=91.7 y=32.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f960.p8.5 k.objects.point part=$k.objects.u1f960.p8 n=5 x=89.9 y=28.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f960.p8.6 k.objects.point part=$k.objects.u1f960.p8 n=6 x=85.4 y=23.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f960.word core.word text=cookie text=fortune text=prophecy means="fortune cookie" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f960.keyword k.objects.keyword of="fortune cookie" text=cookie text=fortune text=prophecy core.source="cldr 48"

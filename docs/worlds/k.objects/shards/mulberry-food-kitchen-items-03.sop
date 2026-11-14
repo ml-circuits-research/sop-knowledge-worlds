@@ -207,7 +207,7 @@
 @k.objects.mb910.p16.2 k.objects.point part=$k.objects.mb910.p16 n=2 x=70.4 y=23.8 core.source="mulberry fa94a93"
 @k.objects.mb910.p16.3 k.objects.point part=$k.objects.mb910.p16 n=3 x=73.7 y=26.3 core.source="mulberry fa94a93"
 @k.objects.mb910.p16.4 k.objects.point part=$k.objects.mb910.p16 n=4 x=76.9 y=39 core.source="mulberry fa94a93"
-@k.objects.mb910.word core.word text=cooking means="dirty dishes" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb910.keyword k.objects.keyword of="dirty dishes" text=cooking core.source="mulberry fa94a93"
 
 # dish
 @k.objects.mb915 k.objects.object name=dish core.source="mulberry fa94a93"
@@ -325,7 +325,7 @@
 @k.objects.mb915.p12.14 k.objects.point part=$k.objects.mb915.p12 n=14 x=33.3 y=60 core.source="mulberry fa94a93"
 @k.objects.mb915.p12.15 k.objects.point part=$k.objects.mb915.p12 n=15 x=29.4 y=60.3 core.source="mulberry fa94a93"
 @k.objects.mb915.p12.16 k.objects.point part=$k.objects.mb915.p12 n=16 x=27.3 y=58.8 core.source="mulberry fa94a93"
-@k.objects.mb915.word core.word text=cooking text=kitchen means=dish of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb915.keyword k.objects.keyword of=dish text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # dish cloth
 @k.objects.mb916 k.objects.object name="dish cloth" core.source="mulberry fa94a93"
@@ -492,7 +492,7 @@
 @k.objects.mb916.p15.5 k.objects.point part=$k.objects.mb916.p15 n=5 x=57 y=68.8 core.source="mulberry fa94a93"
 @k.objects.mb916.p15.6 k.objects.point part=$k.objects.mb916.p15 n=6 x=51.9 y=72.4 core.source="mulberry fa94a93"
 @k.objects.mb916.p15.7 k.objects.point part=$k.objects.mb916.p15 n=7 x=44.4 y=75.9 core.source="mulberry fa94a93"
-@k.objects.mb916.word core.word text=cooking text=feeding text=kitchen means="dish cloth" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb916.keyword k.objects.keyword of="dish cloth" text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # dishes
 @k.objects.mb918 k.objects.object name=dishes core.source="mulberry fa94a93"
@@ -701,7 +701,7 @@
 @k.objects.mb918.p16.15 k.objects.point part=$k.objects.mb918.p16 n=15 x=52.3 y=51 core.source="mulberry fa94a93"
 @k.objects.mb918.p16.16 k.objects.point part=$k.objects.mb918.p16 n=16 x=49.1 y=53.6 core.source="mulberry fa94a93"
 @k.objects.mb918.p16.17 k.objects.point part=$k.objects.mb918.p16 n=17 x=45.3 y=55.2 core.source="mulberry fa94a93"
-@k.objects.mb918.word core.word text=cooking means=dishes of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb918.keyword k.objects.keyword of=dishes text=cooking core.source="mulberry fa94a93"
 
 # egg cup
 @k.objects.mb1007 k.objects.object name="egg cup" core.source="mulberry fa94a93"
@@ -906,7 +906,7 @@
 @k.objects.mb1007.p12.17 k.objects.point part=$k.objects.mb1007.p12 n=17 x=87.2 y=14.6 core.source="mulberry fa94a93"
 @k.objects.mb1007.p12.18 k.objects.point part=$k.objects.mb1007.p12 n=18 x=90.8 y=23.3 core.source="mulberry fa94a93"
 @k.objects.mb1007.p12.19 k.objects.point part=$k.objects.mb1007.p12 n=19 x=91.6 y=29.2 core.source="mulberry fa94a93"
-@k.objects.mb1007.word core.word text=cooking text=feeding text=kitchen means="egg cup" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1007.keyword k.objects.keyword of="egg cup" text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # food blender
 @k.objects.mb1416 k.objects.object name="food blender" core.source="mulberry fa94a93"
@@ -1112,7 +1112,7 @@
 @k.objects.mb1416.p16.7 k.objects.point part=$k.objects.mb1416.p16 n=7 x=44.4 y=57 core.source="mulberry fa94a93"
 @k.objects.mb1416.p16.8 k.objects.point part=$k.objects.mb1416.p16 n=8 x=39.5 y=54.8 core.source="mulberry fa94a93"
 @k.objects.mb1416.p16.9 k.objects.point part=$k.objects.mb1416.p16 n=9 x=38.4 y=53 core.source="mulberry fa94a93"
-@k.objects.mb1416.word core.word text=cooking text=kitchen means="food blender" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1416.keyword k.objects.keyword of="food blender" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # fork
 @k.objects.mb1469 k.objects.object name=fork core.source="mulberry fa94a93"
@@ -1155,7 +1155,7 @@
 @k.objects.mb1469.p4 k.objects.part of=fork name=part4 kind=detail named=no shape=line x=51.6 y=7.3 w=0 h=16.3 z=4 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1469.p4.1 k.objects.point part=$k.objects.mb1469.p4 n=1 x=51.6 y=7.3 core.source="mulberry fa94a93"
 @k.objects.mb1469.p4.2 k.objects.point part=$k.objects.mb1469.p4 n=2 x=51.6 y=23.6 core.source="mulberry fa94a93"
-@k.objects.mb1469.word core.word text=cooking text=feeding text=kitchen text=utensil means=fork of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1469.keyword k.objects.keyword of=fork text=cooking text=feeding text=kitchen text=utensil core.source="mulberry fa94a93"
 
 # freezer
 @k.objects.mb1481 k.objects.object name=freezer core.source="mulberry fa94a93"

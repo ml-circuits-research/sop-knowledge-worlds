@@ -154,7 +154,7 @@
 @k.objects.ome319.p16.1 k.objects.point part=$k.objects.ome319.p16 n=1 x=30.5 y=68.5 core.source="openmoji 3e01de5"
 @k.objects.ome319.p16.2 k.objects.point part=$k.objects.ome319.p16 n=2 x=34.2 y=69.6 core.source="openmoji 3e01de5"
 @k.objects.ome319.p16.3 k.objects.point part=$k.objects.ome319.p16 n=3 x=38.3 y=69.3 core.source="openmoji 3e01de5"
-@k.objects.ome319.word core.word text=cortex text="grey matter" text=intelligence text=IQ means=brain of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome319.keyword k.objects.keyword of=brain text=cortex text="grey matter" text=intelligence text=IQ core.source="openmoji 3e01de5"
 
 # bed linen
 @k.objects.ome31a k.objects.object name="bed linen" core.source="openmoji 3e01de5"
@@ -226,7 +226,7 @@
 @k.objects.ome31a.p6.13 k.objects.point part=$k.objects.ome31a.p6 n=13 x=69.9 y=42.4 core.source="openmoji 3e01de5"
 @k.objects.ome31a.p6.14 k.objects.point part=$k.objects.ome31a.p6 n=14 x=68.6 y=63.9 core.source="openmoji 3e01de5"
 @k.objects.ome31a.p6.15 k.objects.point part=$k.objects.ome31a.p6 n=15 x=69.9 y=85.5 core.source="openmoji 3e01de5"
-@k.objects.ome31a.word core.word text=hospital text=bedding text=sheets means="bed linen" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome31a.keyword k.objects.keyword of="bed linen" text=hospital text=bedding text=sheets core.source="openmoji 3e01de5"
 
 # fracture leg
 @k.objects.ome31f k.objects.object name="fracture leg" core.source="openmoji 3e01de5"
@@ -399,7 +399,7 @@
 @k.objects.ome31f.p16.2 k.objects.point part=$k.objects.ome31f.p16 n=2 x=20.8 y=71.5 core.source="openmoji 3e01de5"
 @k.objects.ome31f.p16.3 k.objects.point part=$k.objects.ome31f.p16 n=3 x=21.1 y=75.6 core.source="openmoji 3e01de5"
 @k.objects.ome31f.p16.4 k.objects.point part=$k.objects.ome31f.p16 n=4 x=13.6 y=73.5 core.source="openmoji 3e01de5"
-@k.objects.ome31f.word core.word text=broken text=cast text=bone means="fracture leg" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome31f.keyword k.objects.keyword of="fracture leg" text=broken text=cast text=bone core.source="openmoji 3e01de5"
 
 # clinical thermometer
 @k.objects.ome324 k.objects.object name="clinical thermometer" core.source="openmoji 3e01de5"
@@ -468,7 +468,7 @@
 @k.objects.ome324.p8.2 k.objects.point part=$k.objects.ome324.p8 n=2 x=59.2 y=38.1 core.source="openmoji 3e01de5"
 @k.objects.ome324.p8.3 k.objects.point part=$k.objects.ome324.p8 n=3 x=57.7 y=39.7 core.source="openmoji 3e01de5"
 @k.objects.ome324.p8.4 k.objects.point part=$k.objects.ome324.p8 n=4 x=55 y=37 core.source="openmoji 3e01de5"
-@k.objects.ome324.word core.word text=temperature text=fever text=mercury text=heat means="clinical thermometer" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome324.keyword k.objects.keyword of="clinical thermometer" text=temperature text=fever text=mercury text=heat core.source="openmoji 3e01de5"
 
 # bandage scissors
 @k.objects.ome325 k.objects.object name="bandage scissors" core.source="openmoji 3e01de5"
@@ -556,7 +556,7 @@
 @k.objects.ome325.p8.11 k.objects.point part=$k.objects.ome325.p8 n=11 x=33.8 y=68.5 core.source="openmoji 3e01de5"
 @k.objects.ome325.p8.12 k.objects.point part=$k.objects.ome325.p8 n=12 x=33.3 y=67.3 core.source="openmoji 3e01de5"
 @k.objects.ome325.p8.13 k.objects.point part=$k.objects.ome325.p8 n=13 x=33.7 y=65.4 core.source="openmoji 3e01de5"
-@k.objects.ome325.word core.word text=hospital text=gauze text=dressing means="bandage scissors" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome325.keyword k.objects.keyword of="bandage scissors" text=hospital text=gauze text=dressing core.source="openmoji 3e01de5"
 
 # crutches
 @k.objects.ome326 k.objects.object name=crutches core.source="openmoji 3e01de5"
@@ -666,7 +666,7 @@
 @k.objects.ome326.p16 k.objects.part of=crutches name=part16 kind=detail named=no shape=line x=29.9 y=31.2 w=14 h=9.8 z=16 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome326.p16.1 k.objects.point part=$k.objects.ome326.p16 n=1 x=29.9 y=41 core.source="openmoji 3e01de5"
 @k.objects.ome326.p16.2 k.objects.point part=$k.objects.ome326.p16 n=2 x=43.9 y=31.2 core.source="openmoji 3e01de5"
-@k.objects.ome326.word core.word text=walk text="broken leg" text=accessibility means=crutches of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome326.keyword k.objects.keyword of=crutches text=walk text="broken leg" text=accessibility core.source="openmoji 3e01de5"
 
 # wheel chair
 @k.objects.ome327 k.objects.object name="wheel chair" core.source="openmoji 3e01de5"
@@ -784,7 +784,7 @@
 @k.objects.ome327.p16.5 k.objects.point part=$k.objects.ome327.p16 n=5 x=77.2 y=65.4 core.source="openmoji 3e01de5"
 @k.objects.ome327.p16.6 k.objects.point part=$k.objects.ome327.p16 n=6 x=72 y=65.4 core.source="openmoji 3e01de5"
 @k.objects.ome327.p16.7 k.objects.point part=$k.objects.ome327.p16 n=7 x=71.3 y=63.7 core.source="openmoji 3e01de5"
-@k.objects.ome327.word core.word text=accessibility text=DACA text=disability text=mobility means="wheel chair" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome327.keyword k.objects.keyword of="wheel chair" text=accessibility text=DACA text=disability text=mobility core.source="openmoji 3e01de5"
 
 # stretcher
 @k.objects.ome328 k.objects.object name=stretcher core.source="openmoji 3e01de5"
@@ -838,4 +838,4 @@
 @k.objects.ome328.p8 k.objects.part of=stretcher name=part8 kind=detail named=no shape=line x=37.9 y=73.7 w=24.9 h=0 z=8 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome328.p8.1 k.objects.point part=$k.objects.ome328.p8 n=1 x=37.9 y=73.7 core.source="openmoji 3e01de5"
 @k.objects.ome328.p8.2 k.objects.point part=$k.objects.ome328.p8 n=2 x=62.8 y=73.7 core.source="openmoji 3e01de5"
-@k.objects.ome328.word core.word text=hospital text=ambulance text=patient text=gurney means=stretcher of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome328.keyword k.objects.keyword of=stretcher text=hospital text=ambulance text=patient text=gurney core.source="openmoji 3e01de5"

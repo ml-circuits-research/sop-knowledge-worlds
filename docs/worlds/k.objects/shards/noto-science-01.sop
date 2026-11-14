@@ -170,7 +170,7 @@
 @k.objects.u2697.p11.8 k.objects.point part=$k.objects.u2697.p11 n=8 x=38.8 y=53.4 core.source="noto-emoji 99701e0"
 @k.objects.u2697.p11.9 k.objects.point part=$k.objects.u2697.p11 n=9 x=36.9 y=52.7 core.source="noto-emoji 99701e0"
 @k.objects.u2697.p11.10 k.objects.point part=$k.objects.u2697.p11 n=10 x=23.6 y=51.6 core.source="noto-emoji 99701e0"
-@k.objects.u2697.word core.word text=chemistry text=tool means=alembic of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2697.keyword k.objects.keyword of=alembic text=chemistry text=tool core.source="cldr 48"
 
 # test tube
 @k.objects.u1f9ea k.objects.object name="test tube" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -230,7 +230,7 @@
 @k.objects.u1f9ea.p9.7 k.objects.point part=$k.objects.u1f9ea.p9 n=7 x=45.4 y=36.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ea.p9.8 k.objects.point part=$k.objects.u1f9ea.p9 n=8 x=53 y=35.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ea.p9.9 k.objects.point part=$k.objects.u1f9ea.p9 n=9 x=72.3 y=35.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ea.word core.word text=chemist text=chemistry text=experiment text=lab text=science text=test text=tube means="test tube" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ea.keyword k.objects.keyword of="test tube" text=chemist text=chemistry text=experiment text=lab text=science text=test text=tube core.source="cldr 48"
 
 # petri dish
 @k.objects.u1f9eb k.objects.object name="petri dish" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -339,7 +339,7 @@
 @k.objects.u1f9eb.p10 k.objects.part of="petri dish" name=part10 named=no shape=oval x=34.5 y=73.2 w=6.7 h=2.1 z=10 colour=white rgb="#FFEBEE" core.source="noto-emoji 99701e0"
 @k.objects.u1f9eb.p11 k.objects.part of="petri dish" name=part11 named=no shape=oval x=37.1 y=80.8 w=5.7 h=1.9 z=11 colour=white rgb="#FFEBEE" core.source="noto-emoji 99701e0"
 @k.objects.u1f9eb.p12 k.objects.part of="petri dish" name=part12 named=no shape=oval x=42.2 y=77.5 w=10.4 h=3.3 z=12 colour=white rgb="#FFEBEE" core.source="noto-emoji 99701e0"
-@k.objects.u1f9eb.word core.word text=bacteria text=biologist text=biology text=culture text=dish text=lab text=petri means="petri dish" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9eb.keyword k.objects.keyword of="petri dish" text=bacteria text=biologist text=biology text=culture text=dish text=lab text=petri core.source="cldr 48"
 
 # dna
 @k.objects.u1f9ec k.objects.object name=dna core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -539,7 +539,7 @@
 @k.objects.u1f9ec.p16.27 k.objects.point part=$k.objects.u1f9ec.p16 n=27 x=94.9 y=37.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ec.p16.28 k.objects.point part=$k.objects.u1f9ec.p16 n=28 x=93.6 y=43.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ec.p16.29 k.objects.point part=$k.objects.u1f9ec.p16 n=29 x=90.2 y=49.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ec.word core.word text=biologist text=evolution text=gene text=genetics text=life means=dna of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ec.keyword k.objects.keyword of=dna text=biologist text=evolution text=gene text=genetics text=life core.source="cldr 48"
 
 # microscope
 @k.objects.u1f52c k.objects.object name=microscope core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -745,7 +745,7 @@
 @k.objects.u1f52c.p15.30 k.objects.point part=$k.objects.u1f52c.p15 n=30 x=69.1 y=76.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f52c.p15.31 k.objects.point part=$k.objects.u1f52c.p15 n=31 x=67.6 y=74.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f52c.p16 k.objects.part of=microscope name=part16 named=no shape=circle x=54.8 y=31.4 w=11.2 h=11.2 z=16 colour=grey rgb="#424242" core.source="noto-emoji 99701e0"
-@k.objects.u1f52c.word core.word text=experiment text=lab text=science text=tool means=microscope of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f52c.keyword k.objects.keyword of=microscope text=experiment text=lab text=science text=tool core.source="cldr 48"
 
 # telescope
 @k.objects.u1f52d k.objects.object name=telescope core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -947,7 +947,7 @@
 @k.objects.u1f52d.p15.16 k.objects.point part=$k.objects.u1f52d.p15 n=16 x=50.8 y=37.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f52d.p15.17 k.objects.point part=$k.objects.u1f52d.p15 n=17 x=47.6 y=38.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f52d.p16 k.objects.part of=telescope name=part16 named=no shape=oval x=48.6 y=38.9 w=8.9 h=9.8 z=16 colour=white rgb="#B9E4EA" core.source="noto-emoji 99701e0"
-@k.objects.u1f52d.word core.word text=contact text=extraterrestrial text=science text=tool means=telescope of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f52d.keyword k.objects.keyword of=telescope text=contact text=extraterrestrial text=science text=tool core.source="cldr 48"
 
 # satellite antenna
 @k.objects.u1f4e1 k.objects.object name="satellite antenna" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1160,4 +1160,4 @@
 @k.objects.u1f4e1.p16.19 k.objects.point part=$k.objects.u1f4e1.p16 n=19 x=11.1 y=17 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p16.20 k.objects.point part=$k.objects.u1f4e1.p16 n=20 x=10.1 y=13.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e1.p16.21 k.objects.point part=$k.objects.u1f4e1.p16 n=21 x=10 y=10.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e1.word core.word text=aliens text=antenna text=contact text=dish text=satellite text=science means="satellite antenna" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e1.keyword k.objects.keyword of="satellite antenna" text=aliens text=antenna text=contact text=dish text=satellite text=science core.source="cldr 48"

@@ -70,7 +70,8 @@ path (`k.<world>/schema.sop`): it says the world is relevant, and the other word
 host translates a message to English, lemmatises it, looks each lemma up, and fetches only those shards.
 The shards of a word are sorted, except that a shard the word reaches only through a reading that needs a context
 comes after the others: a given name with `context=person` (Rose, Hope, May) puts its names shard last for that word,
-so a host that fetches the first shards of "rose" fetches the flower's.
+so a host that fetches the first shards of "rose" fetches the flower's. A keyword (`k.objects.keyword`, the tags an
+image library files a drawing under, Q67) also comes last: "ship" reaches the ship's shard before the anchor's.
 
 ## vocab-kinds.json
 
@@ -78,7 +79,8 @@ The same words and shards, grouped by what the word names there: `{ "back": { "k
 "k.geo.river": ["k.geo/shards/north-america"], ... }, "peking": { "k.geo.city": ["k.geo/shards/aliases"] },
 "capital": { "k.geo.country.capital": ["k.geo/schema.sop"] } }`. The kind is the type of the wire whose identity
 value the word is, the type of the key a `core.word` gives another word for (`of=`), the type or key a word of a
-schema means, or the reusable world (`w.seating`) its words name. A reader that cannot resolve rivers or mountains
+schema means, the type that holds it as a search word (`k.objects.keyword`: a drawing the word is only a keyword of),
+or the reusable world (`w.seating`) its words name. A reader that cannot resolve rivers or mountains
 skips those kinds before it fetches anything. One line per word; a host that does not need it never loads it.
 
 ## Using them

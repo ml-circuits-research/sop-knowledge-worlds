@@ -168,7 +168,7 @@
 @k.objects.mb459.p11.31 k.objects.point part=$k.objects.mb459.p11 n=31 x=84.1 y=15.4 core.source="mulberry fa94a93"
 @k.objects.mb459.p11.32 k.objects.point part=$k.objects.mb459.p11 n=32 x=87 y=22.3 core.source="mulberry fa94a93"
 @k.objects.mb459.p11.33 k.objects.point part=$k.objects.mb459.p11 n=33 x=87.8 y=29 core.source="mulberry fa94a93"
-@k.objects.mb459.word core.word text=food text=meat means="chicken breast" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb459.keyword k.objects.keyword of="chicken breast" text=food text=meat core.source="mulberry fa94a93"
 
 # chicken deep fried
 @k.objects.mb460 k.objects.object name="chicken deep fried" core.source="mulberry fa94a93"
@@ -498,7 +498,7 @@
 @k.objects.mb462.p9.31 k.objects.point part=$k.objects.mb462.p9 n=31 x=84.1 y=15.5 core.source="mulberry fa94a93"
 @k.objects.mb462.p9.32 k.objects.point part=$k.objects.mb462.p9 n=32 x=87 y=22.4 core.source="mulberry fa94a93"
 @k.objects.mb462.p9.33 k.objects.point part=$k.objects.mb462.p9 n=33 x=87.8 y=29.1 core.source="mulberry fa94a93"
-@k.objects.mb462.word core.word text=food text=meat means="chicken leg" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb462.keyword k.objects.keyword of="chicken leg" text=food text=meat core.source="mulberry fa94a93"
 
 # chicken nuggets
 @k.objects.mb464 k.objects.object name="chicken nuggets" core.source="mulberry fa94a93"
@@ -694,7 +694,7 @@
 @k.objects.mb464.p16.21 k.objects.point part=$k.objects.mb464.p16 n=21 x=84.1 y=15.5 core.source="mulberry fa94a93"
 @k.objects.mb464.p16.22 k.objects.point part=$k.objects.mb464.p16 n=22 x=87 y=22.4 core.source="mulberry fa94a93"
 @k.objects.mb464.p16.23 k.objects.point part=$k.objects.mb464.p16 n=23 x=87.8 y=29.1 core.source="mulberry fa94a93"
-@k.objects.mb464.word core.word text=food text=meat means="chicken nuggets" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb464.keyword k.objects.keyword of="chicken nuggets" text=food text=meat core.source="mulberry fa94a93"
 
 # chicken pieces
 @k.objects.mb465 k.objects.object name="chicken pieces" core.source="mulberry fa94a93"
@@ -906,7 +906,7 @@
 @k.objects.mb465.p14.25 k.objects.point part=$k.objects.mb465.p14 n=25 x=84.1 y=15.5 core.source="mulberry fa94a93"
 @k.objects.mb465.p14.26 k.objects.point part=$k.objects.mb465.p14 n=26 x=87 y=22.4 core.source="mulberry fa94a93"
 @k.objects.mb465.p14.27 k.objects.point part=$k.objects.mb465.p14 n=27 x=87.8 y=29.1 core.source="mulberry fa94a93"
-@k.objects.mb465.word core.word text=food text=meat means="chicken pieces" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb465.keyword k.objects.keyword of="chicken pieces" text=food text=meat core.source="mulberry fa94a93"
 
 # goose roast
 @k.objects.mb1542 k.objects.object name="goose roast" core.source="mulberry fa94a93"
@@ -1114,7 +1114,7 @@
 @k.objects.mb1542.p14.4 k.objects.point part=$k.objects.mb1542.p14 n=4 x=82.8 y=18.7 core.source="mulberry fa94a93"
 @k.objects.mb1542.p14.5 k.objects.point part=$k.objects.mb1542.p14 n=5 x=82.9 y=21.8 core.source="mulberry fa94a93"
 @k.objects.mb1542.p14.6 k.objects.point part=$k.objects.mb1542.p14 n=6 x=81.5 y=27.3 core.source="mulberry fa94a93"
-@k.objects.mb1542.word core.word text=bird text=celebration text=food means="goose roast" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1542.keyword k.objects.keyword of="goose roast" text=bird text=celebration text=food core.source="mulberry fa94a93"
 
 # poultry
 @k.objects.mb2304 k.objects.object name=poultry core.source="mulberry fa94a93"
@@ -1383,4 +1383,4 @@
 @k.objects.mb3078.p2.35 k.objects.point part=$k.objects.mb3078.p2 n=35 x=69 y=39.2 core.source="mulberry fa94a93"
 @k.objects.mb3078.p2.36 k.objects.point part=$k.objects.mb3078.p2 n=36 x=46.8 y=48.6 core.source="mulberry fa94a93"
 @k.objects.mb3078.p2.37 k.objects.point part=$k.objects.mb3078.p2 n=37 x=20.1 y=56 core.source="mulberry fa94a93"
-@k.objects.mb3078.word core.word text=bird text=celebration text=food means=wishbone of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3078.keyword k.objects.keyword of=wishbone text=bird text=celebration text=food core.source="mulberry fa94a93"

@@ -686,7 +686,7 @@
 @k.objects.mb308.p16.1 k.objects.point part=$k.objects.mb308.p16 n=1 x=12.3 y=58.9 core.source="mulberry fa94a93"
 @k.objects.mb308.p16.2 k.objects.point part=$k.objects.mb308.p16 n=2 x=33.7 y=54.3 core.source="mulberry fa94a93"
 @k.objects.mb308.p16.3 k.objects.point part=$k.objects.mb308.p16 n=3 x=68.4 y=58.3 core.source="mulberry fa94a93"
-@k.objects.mb308.word core.word text=home text=house means="bunk beds" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb308.keyword k.objects.keyword of="bunk beds" text=home text=house core.source="mulberry fa94a93"
 
 # chair computer
 @k.objects.mb426 k.objects.object name="chair computer" core.source="mulberry fa94a93"

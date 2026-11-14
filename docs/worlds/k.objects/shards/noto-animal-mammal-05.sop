@@ -144,7 +144,7 @@
 @k.objects.u1f43d.p6.14 k.objects.point part=$k.objects.u1f43d.p6 n=14 x=37.8 y=42.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f43d.p6.15 k.objects.point part=$k.objects.u1f43d.p6 n=15 x=40.4 y=45.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f43d.p6.16 k.objects.point part=$k.objects.u1f43d.p6 n=16 x=42.1 y=48.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f43d.word core.word text=animal text=face text=farm text=nose text=pig text=smell text=snout means="pig nose" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f43d.keyword k.objects.keyword of="pig nose" text=animal text=face text=farm text=nose text=pig text=smell text=snout core.source="cldr 48"
 
 # ram
 @k.objects.u1f40f k.objects.object name=ram core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -361,7 +361,7 @@
 @k.objects.u1f40f.p16.29 k.objects.point part=$k.objects.u1f40f.p16 n=29 x=61 y=15.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f40f.p16.30 k.objects.point part=$k.objects.u1f40f.p16 n=30 x=53.2 y=16.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f40f.p16.31 k.objects.point part=$k.objects.u1f40f.p16 n=31 x=48.8 y=20.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f40f.word core.word text=animal text=Aries text=horns text=male text=sheep text=zodiac text=zoo means=ram of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f40f.keyword k.objects.keyword of=ram text=animal text=Aries text=horns text=male text=sheep text=zodiac text=zoo core.source="cldr 48"
 
 # ewe
 @k.objects.u1f411 k.objects.object name=ewe core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -572,7 +572,7 @@
 @k.objects.u1f411.p8.21 k.objects.point part=$k.objects.u1f411.p8 n=21 x=19.8 y=46.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f411.p8.22 k.objects.point part=$k.objects.u1f411.p8 n=22 x=19.9 y=45.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f411.p8.23 k.objects.point part=$k.objects.u1f411.p8 n=23 x=21.5 y=45.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f411.word core.word text=animal text=baa text=farm text=female text=fluffy text=lamb text=sheep text=wool means=ewe of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f411.keyword k.objects.keyword of=ewe text=animal text=baa text=farm text=female text=fluffy text=lamb text=sheep text=wool core.source="cldr 48"
 
 # goat
 @k.objects.u1f410 k.objects.object name=goat core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -789,7 +789,7 @@
 @k.objects.u1f410.p14.19 k.objects.point part=$k.objects.u1f410.p14 n=19 x=16.6 y=40.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f410.p14.20 k.objects.point part=$k.objects.u1f410.p14 n=20 x=16.6 y=39.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f410.p14.21 k.objects.point part=$k.objects.u1f410.p14 n=21 x=17.8 y=39.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f410.word core.word text=animal text=Capricorn text=farm text=milk text=zodiac means=goat of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f410.keyword k.objects.keyword of=goat text=animal text=Capricorn text=farm text=milk text=zodiac core.source="cldr 48"
 
 # camel
 @k.objects.u1f42a k.objects.object name=camel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -984,7 +984,7 @@
 @k.objects.u1f42a.p9.25 k.objects.point part=$k.objects.u1f42a.p9 n=25 x=78.5 y=18 core.source="noto-emoji 99701e0"
 @k.objects.u1f42a.p9.26 k.objects.point part=$k.objects.u1f42a.p9 n=26 x=75.2 y=13.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f42a.p9.27 k.objects.point part=$k.objects.u1f42a.p9 n=27 x=72.1 y=11.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f42a.word core.word text=animal text=desert text=dromedary text=hump text=one means=camel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f42a.keyword k.objects.keyword of=camel text=animal text=desert text=dromedary text=hump text=one core.source="cldr 48"
 
 # two-hump camel
 @k.objects.u1f42b k.objects.object name="two-hump camel" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1191,7 +1191,7 @@
 @k.objects.u1f42b.p11.28 k.objects.point part=$k.objects.u1f42b.p11 n=28 x=68.9 y=14.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f42b.p11.29 k.objects.point part=$k.objects.u1f42b.p11 n=29 x=67.3 y=19.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f42b.p11.30 k.objects.point part=$k.objects.u1f42b.p11 n=30 x=63.6 y=11.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f42b.word core.word text=animal text=bactrian text=camel text=desert text=hump text=two text=two-hump means="two-hump camel" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f42b.keyword k.objects.keyword of="two-hump camel" text=animal text=bactrian text=camel text=desert text=hump text=two text=two-hump core.source="cldr 48"
 
 # llama
 @k.objects.u1f999 k.objects.object name=llama core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1379,7 +1379,7 @@
 @k.objects.u1f999.p12.35 k.objects.point part=$k.objects.u1f999.p12 n=35 x=61 y=57.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f999.p12.36 k.objects.point part=$k.objects.u1f999.p12 n=36 x=63.2 y=51 core.source="noto-emoji 99701e0"
 @k.objects.u1f999.p12.37 k.objects.point part=$k.objects.u1f999.p12 n=37 x=65.7 y=67.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f999.word core.word text=alpaca text=animal text=guanaco text=vicuña text=wool means=llama of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f999.keyword k.objects.keyword of=llama text=alpaca text=animal text=guanaco text=vicuña text=wool core.source="cldr 48"
 
 # giraffe
 @k.objects.u1f992 k.objects.object name=giraffe core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1575,4 +1575,4 @@
 @k.objects.u1f992.p16.6 k.objects.point part=$k.objects.u1f992.p16 n=6 x=66.5 y=62.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f992.p16.7 k.objects.point part=$k.objects.u1f992.p16 n=7 x=68.7 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f992.p16.8 k.objects.point part=$k.objects.u1f992.p16 n=8 x=68.2 y=55 core.source="noto-emoji 99701e0"
-@k.objects.u1f992.word core.word text=animal text=spots means=giraffe of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f992.keyword k.objects.keyword of=giraffe text=animal text=spots core.source="cldr 48"

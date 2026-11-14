@@ -168,7 +168,7 @@
 @k.objects.u1f4f1.p16.6 k.objects.point part=$k.objects.u1f4f1.p16 n=6 x=47.6 y=49.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f1.p16.7 k.objects.point part=$k.objects.u1f4f1.p16 n=7 x=48.4 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f1.p16.8 k.objects.point part=$k.objects.u1f4f1.p16 n=8 x=48.6 y=55.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f4f1.word core.word text=cell text=communication text=mobile text=phone text=telephone means="mobile phone" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4f1.keyword k.objects.keyword of="mobile phone" text=cell text=communication text=mobile text=phone text=telephone core.source="cldr 48"
 
 # mobile phone with arrow
 @k.objects.u1f4f2 k.objects.object name="mobile phone with arrow" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -347,7 +347,7 @@
 @k.objects.u1f4f2.p16.6 k.objects.point part=$k.objects.u1f4f2.p16 n=6 x=87.8 y=82.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f2.p16.7 k.objects.point part=$k.objects.u1f4f2.p16 n=7 x=88.6 y=83.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f2.p16.8 k.objects.point part=$k.objects.u1f4f2.p16 n=8 x=88.8 y=88.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4f2.word core.word text=arrow text=build text=call text=cell text=communication text=mobile text=phone text=receive text=telephone means="mobile phone with arrow" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4f2.keyword k.objects.keyword of="mobile phone with arrow" text=arrow text=build text=call text=cell text=communication text=mobile text=phone text=receive text=telephone core.source="cldr 48"
 
 # telephone
 @k.objects.u260e k.objects.object name=telephone core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -543,7 +543,7 @@
 @k.objects.u260e.p16.4 k.objects.point part=$k.objects.u260e.p16 n=4 x=72.5 y=66 core.source="noto-emoji 99701e0"
 @k.objects.u260e.p16.5 k.objects.point part=$k.objects.u260e.p16 n=5 x=71.1 y=60.2 core.source="noto-emoji 99701e0"
 @k.objects.u260e.p16.6 k.objects.point part=$k.objects.u260e.p16 n=6 x=62 y=60.2 core.source="noto-emoji 99701e0"
-@k.objects.u260e.word core.word text=phone means=telephone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u260e.keyword k.objects.keyword of=telephone text=phone core.source="cldr 48"
 
 # telephone receiver
 @k.objects.u1f4de k.objects.object name="telephone receiver" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -739,7 +739,7 @@
 @k.objects.u1f4de.p16.13 k.objects.point part=$k.objects.u1f4de.p16 n=13 x=28.8 y=49 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p16.14 k.objects.point part=$k.objects.u1f4de.p16 n=14 x=25.2 y=43 core.source="noto-emoji 99701e0"
 @k.objects.u1f4de.p16.15 k.objects.point part=$k.objects.u1f4de.p16 n=15 x=23.9 y=39 core.source="noto-emoji 99701e0"
-@k.objects.u1f4de.word core.word text=communication text=phone text=receiver text=telephone text=voip means="telephone receiver" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4de.keyword k.objects.keyword of="telephone receiver" text=communication text=phone text=receiver text=telephone text=voip core.source="cldr 48"
 
 # pager
 @k.objects.u1f4df k.objects.object name=pager core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -872,7 +872,7 @@
 @k.objects.u1f4df.p11.13 k.objects.point part=$k.objects.u1f4df.p11 n=13 x=87.6 y=27.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4df.p11.14 k.objects.point part=$k.objects.u1f4df.p11 n=14 x=84.8 y=26.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4df.p11.15 k.objects.point part=$k.objects.u1f4df.p11 n=15 x=82.6 y=25.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f4df.word core.word text=communication means=pager of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4df.keyword k.objects.keyword of=pager text=communication core.source="cldr 48"
 
 # fax machine
 @k.objects.u1f4e0 k.objects.object name="fax machine" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1071,4 +1071,4 @@
 @k.objects.u1f4e0.p16.33 k.objects.point part=$k.objects.u1f4e0.p16 n=33 x=16.4 y=96.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e0.p16.34 k.objects.point part=$k.objects.u1f4e0.p16 n=34 x=18.3 y=93.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e0.p16.35 k.objects.point part=$k.objects.u1f4e0.p16 n=35 x=21.5 y=91.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e0.word core.word text=communication text=fax text=machine means="fax machine" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e0.keyword k.objects.keyword of="fax machine" text=communication text=fax text=machine core.source="cldr 48"

@@ -158,7 +158,7 @@
 @k.objects.ome0ca.p11.33 k.objects.point part=$k.objects.ome0ca.p11 n=33 x=85.7 y=43.3 core.source="openmoji 3e01de5"
 @k.objects.ome0ca.p11.34 k.objects.point part=$k.objects.ome0ca.p11 n=34 x=87.5 y=47.9 core.source="openmoji 3e01de5"
 @k.objects.ome0ca.p11.35 k.objects.point part=$k.objects.ome0ca.p11 n=35 x=88.9 y=56.9 core.source="openmoji 3e01de5"
-@k.objects.ome0ca.word core.word text="french bread" text="traditional bread" text="round bread" means="boule bread" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0ca.keyword k.objects.keyword of="boule bread" text="french bread" text="traditional bread" text="round bread" core.source="openmoji 3e01de5"
 
 # glass bottle
 @k.objects.ome0cb k.objects.object name="glass bottle" core.source="openmoji 3e01de5"
@@ -228,7 +228,7 @@
 @k.objects.ome0cb.p15.12 k.objects.point part=$k.objects.ome0cb.p15 n=12 x=40.4 y=40.4 core.source="openmoji 3e01de5"
 @k.objects.ome0cb.p15.13 k.objects.point part=$k.objects.ome0cb.p15 n=13 x=46.4 y=22.1 core.source="openmoji 3e01de5"
 @k.objects.ome0cb.p15.14 k.objects.point part=$k.objects.ome0cb.p15 n=14 x=47.2 y=15.3 core.source="openmoji 3e01de5"
-@k.objects.ome0cb.word core.word text="water bottle" means="glass bottle" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0cb.keyword k.objects.keyword of="glass bottle" text="water bottle" core.source="openmoji 3e01de5"
 
 # plastic bottle
 @k.objects.ome0cc k.objects.object name="plastic bottle" core.source="openmoji 3e01de5"
@@ -378,7 +378,7 @@
 @k.objects.ome0cc.p14 k.objects.part of="plastic bottle" name=part14 kind=detail named=no shape=line x=43.8 y=86.1 w=12.5 h=0 z=14 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome0cc.p14.1 k.objects.point part=$k.objects.ome0cc.p14 n=1 x=43.8 y=86.1 core.source="openmoji 3e01de5"
 @k.objects.ome0cc.p14.2 k.objects.point part=$k.objects.ome0cc.p14 n=2 x=56.3 y=86.1 core.source="openmoji 3e01de5"
-@k.objects.ome0cc.word core.word text="water bottle" means="plastic bottle" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0cc.keyword k.objects.keyword of="plastic bottle" text="water bottle" core.source="openmoji 3e01de5"
 
 # beer bottle
 @k.objects.ome0cd k.objects.object name="beer bottle" core.source="openmoji 3e01de5"

@@ -326,7 +326,7 @@
 @k.objects.mb947.p16 k.objects.part of="draining board" name=part16 kind=detail named=no shape=line x=24.6 y=60.3 w=29.2 h=11 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb947.p16.1 k.objects.point part=$k.objects.mb947.p16 n=1 x=24.6 y=71.3 core.source="mulberry fa94a93"
 @k.objects.mb947.p16.2 k.objects.point part=$k.objects.mb947.p16 n=2 x=53.8 y=60.3 core.source="mulberry fa94a93"
-@k.objects.mb947.word core.word text=home text=house means="draining board" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb947.keyword k.objects.keyword of="draining board" text=home text=house core.source="mulberry fa94a93"
 
 # drawer
 @k.objects.mb950 k.objects.object name=drawer core.source="mulberry fa94a93"
@@ -391,7 +391,7 @@
 @k.objects.mb950.p11.7 k.objects.point part=$k.objects.mb950.p11 n=7 x=26.4 y=62.1 core.source="mulberry fa94a93"
 @k.objects.mb950.p11.8 k.objects.point part=$k.objects.mb950.p11 n=8 x=28.9 y=61.8 core.source="mulberry fa94a93"
 @k.objects.mb950.p11.9 k.objects.point part=$k.objects.mb950.p11 n=9 x=31.1 y=63.5 core.source="mulberry fa94a93"
-@k.objects.mb950.word core.word text=home text=house means=drawer of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb950.keyword k.objects.keyword of=drawer text=home text=house core.source="mulberry fa94a93"
 
 # dresser
 @k.objects.mb953 k.objects.object name=dresser core.source="mulberry fa94a93"
@@ -472,7 +472,7 @@
 @k.objects.mb953.p16 k.objects.part of=dresser name=part16 kind=detail named=no shape=line x=24.9 y=30.8 w=61.9 h=2.4 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb953.p16.1 k.objects.point part=$k.objects.mb953.p16 n=1 x=24.9 y=30.8 core.source="mulberry fa94a93"
 @k.objects.mb953.p16.2 k.objects.point part=$k.objects.mb953.p16 n=2 x=86.8 y=33.2 core.source="mulberry fa94a93"
-@k.objects.mb953.word core.word text=home text=house means=dresser of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb953.keyword k.objects.keyword of=dresser text=home text=house core.source="mulberry fa94a93"
 
 # dressing table
 @k.objects.mb955 k.objects.object name="dressing table" core.source="mulberry fa94a93"
@@ -558,7 +558,7 @@
 @k.objects.mb955.p16.2 k.objects.point part=$k.objects.mb955.p16 n=2 x=69.9 y=91.1 core.source="mulberry fa94a93"
 @k.objects.mb955.p16.3 k.objects.point part=$k.objects.mb955.p16 n=3 x=69.9 y=86.5 core.source="mulberry fa94a93"
 @k.objects.mb955.p16.4 k.objects.point part=$k.objects.mb955.p16 n=4 x=72.9 y=87.3 core.source="mulberry fa94a93"
-@k.objects.mb955.word core.word text=home text=house means="dressing table" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb955.keyword k.objects.keyword of="dressing table" text=home text=house core.source="mulberry fa94a93"
 
 # filing cabinet
 @k.objects.mb1105 k.objects.object name="filing cabinet" core.source="mulberry fa94a93"
@@ -749,4 +749,4 @@
 @k.objects.mb1661.p13 k.objects.part of="high chair" name=part13 kind=detail named=no shape=line x=34.6 y=77.8 w=30.6 h=0 z=13 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1661.p13.1 k.objects.point part=$k.objects.mb1661.p13 n=1 x=34.6 y=77.8 core.source="mulberry fa94a93"
 @k.objects.mb1661.p13.2 k.objects.point part=$k.objects.mb1661.p13 n=2 x=65.2 y=77.8 core.source="mulberry fa94a93"
-@k.objects.mb1661.word core.word text=home text=house means="high chair" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1661.keyword k.objects.keyword of="high chair" text=home text=house core.source="mulberry fa94a93"

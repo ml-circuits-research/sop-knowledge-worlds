@@ -59,7 +59,7 @@
 @k.objects.u2709.p3.11 k.objects.point part=$k.objects.u2709.p3 n=11 x=94.9 y=76.9 core.source="noto-emoji 99701e0"
 @k.objects.u2709.p3.12 k.objects.point part=$k.objects.u2709.p3 n=12 x=94 y=79.1 core.source="noto-emoji 99701e0"
 @k.objects.u2709.p3.13 k.objects.point part=$k.objects.u2709.p3 n=13 x=91.9 y=79.9 core.source="noto-emoji 99701e0"
-@k.objects.u2709.word core.word text=e-mail text=email text=letter means=envelope of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2709.keyword k.objects.keyword of=envelope text=e-mail text=email text=letter core.source="cldr 48"
 
 # e-mail
 @k.objects.u1f4e7 k.objects.object name=e-mail core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -147,7 +147,7 @@
 @k.objects.u1f4e7.p6.13 k.objects.point part=$k.objects.u1f4e7.p6 n=13 x=61.4 y=67.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e7.p6.14 k.objects.point part=$k.objects.u1f4e7.p6 n=14 x=38.7 y=67.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e7.p6.15 k.objects.point part=$k.objects.u1f4e7.p6 n=15 x=38.6 y=31.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e7.word core.word text=email text=letter text=mail means=e-mail of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e7.keyword k.objects.keyword of=e-mail text=email text=letter text=mail core.source="cldr 48"
 
 # incoming envelope
 @k.objects.u1f4e8 k.objects.object name="incoming envelope" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -211,7 +211,7 @@
 @k.objects.u1f4e8.p7 k.objects.part of="incoming envelope" name=part7 kind=detail named=no shape=line x=4 y=44.9 w=4.9 h=0 z=7 colour=grey rgb="#B0BEC5" core.source="noto-emoji 99701e0"
 @k.objects.u1f4e8.p7.1 k.objects.point part=$k.objects.u1f4e8.p7 n=1 x=4 y=44.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e8.p7.2 k.objects.point part=$k.objects.u1f4e8.p7 n=2 x=8.9 y=44.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e8.word core.word text=delivering text=e-mail text=email text=envelope text=incoming text=letter text=mail text=receive text=sent means="incoming envelope" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e8.keyword k.objects.keyword of="incoming envelope" text=delivering text=e-mail text=email text=envelope text=incoming text=letter text=mail text=receive text=sent core.source="cldr 48"
 
 # envelope with arrow
 @k.objects.u1f4e9 k.objects.object name="envelope with arrow" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -281,7 +281,7 @@
 @k.objects.u1f4e9.p4.23 k.objects.point part=$k.objects.u1f4e9.p4 n=23 x=90.4 y=94.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e9.p4.24 k.objects.point part=$k.objects.u1f4e9.p4 n=24 x=91.3 y=94.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e9.p4.25 k.objects.point part=$k.objects.u1f4e9.p4 n=25 x=91.6 y=93.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e9.word core.word text=arrow text=communication text=down text=e-mail text=email text=envelope text=letter text=mail text=outgoing text=send text=sent means="envelope with arrow" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e9.keyword k.objects.keyword of="envelope with arrow" text=arrow text=communication text=down text=e-mail text=email text=envelope text=letter text=mail text=outgoing text=send text=sent core.source="cldr 48"
 
 # outbox tray
 @k.objects.u1f4e4 k.objects.object name="outbox tray" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -353,7 +353,7 @@
 @k.objects.u1f4e4.p5.10 k.objects.point part=$k.objects.u1f4e4.p5 n=10 x=29.3 y=20.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e4.p5.11 k.objects.point part=$k.objects.u1f4e4.p5 n=11 x=29.8 y=21.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e4.p5.12 k.objects.point part=$k.objects.u1f4e4.p5 n=12 x=39.4 y=21.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e4.word core.word text=box text=email text=letter text=mail text=outbox text=sent text=tray means="outbox tray" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e4.keyword k.objects.keyword of="outbox tray" text=box text=email text=letter text=mail text=outbox text=sent text=tray core.source="cldr 48"
 
 # inbox tray
 @k.objects.u1f4e5 k.objects.object name="inbox tray" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -425,7 +425,7 @@
 @k.objects.u1f4e5.p5.10 k.objects.point part=$k.objects.u1f4e5.p5 n=10 x=70.7 y=15.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e5.p5.11 k.objects.point part=$k.objects.u1f4e5.p5 n=11 x=70.2 y=14.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e5.p5.12 k.objects.point part=$k.objects.u1f4e5.p5 n=12 x=60.6 y=14.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e5.word core.word text=box text=email text=inbox text=letter text=mail text=receive text=tray text=zero means="inbox tray" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e5.keyword k.objects.keyword of="inbox tray" text=box text=email text=inbox text=letter text=mail text=receive text=tray text=zero core.source="cldr 48"
 
 # package
 @k.objects.u1f4e6 k.objects.object name=package core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -608,7 +608,7 @@
 @k.objects.u1f4e6.p15.16 k.objects.point part=$k.objects.u1f4e6.p15 n=16 x=100 y=0 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e6.p15.17 k.objects.point part=$k.objects.u1f4e6.p15 n=17 x=76.7 y=0 core.source="noto-emoji 99701e0"
 @k.objects.u1f4e6.p15.18 k.objects.point part=$k.objects.u1f4e6.p15 n=18 x=72.4 y=0 core.source="noto-emoji 99701e0"
-@k.objects.u1f4e6.word core.word text=box text=communication text=delivery text=parcel text=shipping means=package of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4e6.keyword k.objects.keyword of=package text=box text=communication text=delivery text=parcel text=shipping core.source="cldr 48"
 
 # closed mailbox with raised flag
 @k.objects.u1f4eb k.objects.object name="closed mailbox with raised flag" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -757,4 +757,4 @@
 @k.objects.u1f4eb.p15.8 k.objects.point part=$k.objects.u1f4eb.p15 n=8 x=24.8 y=30.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4eb.p15.9 k.objects.point part=$k.objects.u1f4eb.p15 n=9 x=27.5 y=30.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4eb.p15.10 k.objects.point part=$k.objects.u1f4eb.p15 n=10 x=27.6 y=28.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4eb.word core.word text=closed text=communication text=flag text=mail text=mailbox text=postbox text=raised means="closed mailbox with raised flag" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4eb.keyword k.objects.keyword of="closed mailbox with raised flag" text=closed text=communication text=flag text=mail text=mailbox text=postbox text=raised core.source="cldr 48"

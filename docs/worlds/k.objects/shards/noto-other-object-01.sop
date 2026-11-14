@@ -174,7 +174,7 @@
 @k.objects.u1f6ac.p16.11 k.objects.point part=$k.objects.u1f6ac.p16 n=11 x=96.4 y=88.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ac.p16.12 k.objects.point part=$k.objects.u1f6ac.p16 n=12 x=96.8 y=82.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ac.p16.13 k.objects.point part=$k.objects.u1f6ac.p16 n=13 x=95.4 y=78.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f6ac.word core.word text=smoking means=cigarette of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6ac.keyword k.objects.keyword of=cigarette text=smoking core.source="cldr 48"
 
 # coffin
 @k.objects.u26b0 k.objects.object name=coffin core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -315,7 +315,7 @@
 @k.objects.u26b0.p16.5 k.objects.point part=$k.objects.u26b0.p16 n=5 x=75.1 y=80 core.source="noto-emoji 99701e0"
 @k.objects.u26b0.p16.6 k.objects.point part=$k.objects.u26b0.p16 n=6 x=95.5 y=65.2 core.source="noto-emoji 99701e0"
 @k.objects.u26b0.p16.7 k.objects.point part=$k.objects.u26b0.p16 n=7 x=96.3 y=63.8 core.source="noto-emoji 99701e0"
-@k.objects.u26b0.word core.word text=dead text=death text=vampire means=coffin of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26b0.keyword k.objects.keyword of=coffin text=dead text=death text=vampire core.source="cldr 48"
 
 # headstone
 @k.objects.u1faa6 k.objects.object name=headstone core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -471,7 +471,7 @@
 @k.objects.u1faa6.p12.9 k.objects.point part=$k.objects.u1faa6.p12 n=9 x=56.3 y=84.2 core.source="noto-emoji 99701e0"
 @k.objects.u1faa6.p12.10 k.objects.point part=$k.objects.u1faa6.p12 n=10 x=27.1 y=83.5 core.source="noto-emoji 99701e0"
 @k.objects.u1faa6.p12.11 k.objects.point part=$k.objects.u1faa6.p12 n=11 x=26 y=83.9 core.source="noto-emoji 99701e0"
-@k.objects.u1faa6.word core.word text=cemetery text=dead text=grave text=graveyard text=memorial text=rip text=tomb text=tombstone means=headstone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa6.keyword k.objects.keyword of=headstone text=cemetery text=dead text=grave text=graveyard text=memorial text=rip text=tomb text=tombstone core.source="cldr 48"
 
 # funeral urn
 @k.objects.u26b1 k.objects.object name="funeral urn" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -605,7 +605,7 @@
 @k.objects.u26b1.p7.16 k.objects.point part=$k.objects.u26b1.p7 n=16 x=64 y=15.6 core.source="noto-emoji 99701e0"
 @k.objects.u26b1.p7.17 k.objects.point part=$k.objects.u26b1.p7 n=17 x=67.9 y=14.2 core.source="noto-emoji 99701e0"
 @k.objects.u26b1.p7.18 k.objects.point part=$k.objects.u26b1.p7 n=18 x=68.8 y=12.6 core.source="noto-emoji 99701e0"
-@k.objects.u26b1.word core.word text=ashes text=death text=funeral text=urn means="funeral urn" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26b1.keyword k.objects.keyword of="funeral urn" text=ashes text=death text=funeral text=urn core.source="cldr 48"
 
 # nazar amulet
 @k.objects.u1f9ff k.objects.object name="nazar amulet" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -739,7 +739,7 @@
 @k.objects.u1f9ff.p5.14 k.objects.point part=$k.objects.u1f9ff.p5 n=14 x=45 y=45.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ff.p5.15 k.objects.point part=$k.objects.u1f9ff.p5 n=15 x=48 y=43.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ff.p5.16 k.objects.point part=$k.objects.u1f9ff.p5 n=16 x=51.5 y=43 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ff.word core.word text=amulet text=bead text=blue text=charm text=evil-eye text=nazar text=talisman means="nazar amulet" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ff.keyword k.objects.keyword of="nazar amulet" text=amulet text=bead text=blue text=charm text=evil-eye text=nazar text=talisman core.source="cldr 48"
 
 # hamsa
 @k.objects.u1faac k.objects.object name=hamsa core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -914,7 +914,7 @@
 @k.objects.u1faac.p9.16 k.objects.point part=$k.objects.u1faac.p9 n=16 x=62 y=74.1 core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p9.17 k.objects.point part=$k.objects.u1faac.p9 n=17 x=58.2 y=77 core.source="noto-emoji 99701e0"
 @k.objects.u1faac.p9.18 k.objects.point part=$k.objects.u1faac.p9 n=18 x=53.1 y=78.9 core.source="noto-emoji 99701e0"
-@k.objects.u1faac.word core.word text=amulet text=Fatima text=fortune text=guide text=hand text=Mary text=Miriam text=palm text=protect text=protection means=hamsa of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faac.keyword k.objects.keyword of=hamsa text=amulet text=Fatima text=fortune text=guide text=hand text=Mary text=Miriam text=palm text=protect text=protection core.source="cldr 48"
 
 # moai
 @k.objects.u1f5ff k.objects.object name=moai core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1125,7 +1125,7 @@
 @k.objects.u1f5ff.p16.10 k.objects.point part=$k.objects.u1f5ff.p16 n=10 x=36.7 y=8 core.source="noto-emoji 99701e0"
 @k.objects.u1f5ff.p16.11 k.objects.point part=$k.objects.u1f5ff.p16 n=11 x=32.5 y=11 core.source="noto-emoji 99701e0"
 @k.objects.u1f5ff.p16.12 k.objects.point part=$k.objects.u1f5ff.p16 n=12 x=30.4 y=10.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f5ff.word core.word text=face text=moyai text=statue text=stoneface text=travel means=moai of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5ff.keyword k.objects.keyword of=moai text=face text=moyai text=statue text=stoneface text=travel core.source="cldr 48"
 
 # placard
 @k.objects.u1faa7 k.objects.object name=placard core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1187,4 +1187,4 @@
 @k.objects.u1faa7.p8.6 k.objects.point part=$k.objects.u1faa7.p8 n=6 x=12.9 y=10.8 core.source="noto-emoji 99701e0"
 @k.objects.u1faa7.p8.7 k.objects.point part=$k.objects.u1faa7.p8 n=7 x=13.6 y=10.2 core.source="noto-emoji 99701e0"
 @k.objects.u1faa7.p8.8 k.objects.point part=$k.objects.u1faa7.p8 n=8 x=22.7 y=10.2 core.source="noto-emoji 99701e0"
-@k.objects.u1faa7.word core.word text=card text=demonstration text=notice text=picket text=plaque text=protest text=sign means=placard of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa7.keyword k.objects.keyword of=placard text=card text=demonstration text=notice text=picket text=plaque text=protest text=sign core.source="cldr 48"

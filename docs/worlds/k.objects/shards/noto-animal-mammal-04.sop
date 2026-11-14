@@ -205,7 +205,7 @@
 @k.objects.u1f9ac.p16.11 k.objects.point part=$k.objects.u1f9ac.p16 n=11 x=54 y=42.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ac.p16.12 k.objects.point part=$k.objects.u1f9ac.p16 n=12 x=54 y=40.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ac.p16.13 k.objects.point part=$k.objects.u1f9ac.p16 n=13 x=49 y=41.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ac.word core.word text=animal text=buffalo text=herd text=wisent means=bison of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ac.keyword k.objects.keyword of=bison text=animal text=buffalo text=herd text=wisent core.source="cldr 48"
 
 # cow face
 @k.objects.u1f42e k.objects.object name="cow face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -380,7 +380,7 @@
 @k.objects.u1f42e.p11.12 k.objects.point part=$k.objects.u1f42e.p11 n=12 x=36.8 y=74.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f42e.p11.13 k.objects.point part=$k.objects.u1f42e.p11 n=13 x=32.3 y=71.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f42e.p11.14 k.objects.point part=$k.objects.u1f42e.p11 n=14 x=31.6 y=70.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f42e.word core.word text=animal text=cow text=face text=farm text=milk text=moo means="cow face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f42e.keyword k.objects.keyword of="cow face" text=animal text=cow text=face text=farm text=milk text=moo core.source="cldr 48"
 
 # ox
 @k.objects.u1f402 k.objects.object name=ox core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -590,7 +590,7 @@
 @k.objects.u1f402.p14.4 k.objects.point part=$k.objects.u1f402.p14 n=4 x=9.2 y=42 core.source="noto-emoji 99701e0"
 @k.objects.u1f402.p14.5 k.objects.point part=$k.objects.u1f402.p14 n=5 x=10.6 y=41.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f402.p14.6 k.objects.point part=$k.objects.u1f402.p14 n=6 x=9.9 y=40.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f402.word core.word text=animal text=animals text=bull text=farm text=Taurus text=zodiac means=ox of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f402.keyword k.objects.keyword of=ox text=animal text=animals text=bull text=farm text=Taurus text=zodiac core.source="cldr 48"
 
 # water buffalo
 @k.objects.u1f403 k.objects.object name="water buffalo" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -803,7 +803,7 @@
 @k.objects.u1f403.p15.23 k.objects.point part=$k.objects.u1f403.p15 n=23 x=41.2 y=31.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f403.p15.24 k.objects.point part=$k.objects.u1f403.p15 n=24 x=36.7 y=25.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f403.p15.25 k.objects.point part=$k.objects.u1f403.p15 n=25 x=36.4 y=22.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f403.word core.word text=animal text=buffalo text=water text=zoo means="water buffalo" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f403.keyword k.objects.keyword of="water buffalo" text=animal text=buffalo text=water text=zoo core.source="cldr 48"
 
 # cow
 @k.objects.u1f404 k.objects.object name=cow core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1009,7 +1009,7 @@
 @k.objects.u1f404.p16.6 k.objects.point part=$k.objects.u1f404.p16 n=6 x=51.2 y=68.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f404.p16.7 k.objects.point part=$k.objects.u1f404.p16 n=7 x=46.1 y=57.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f404.p16.8 k.objects.point part=$k.objects.u1f404.p16 n=8 x=40.9 y=54.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f404.word core.word text=animal text=animals text=farm text=milk text=moo means=cow of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f404.keyword k.objects.keyword of=cow text=animal text=animals text=farm text=milk text=moo core.source="cldr 48"
 
 # pig face
 @k.objects.u1f437 k.objects.object name="pig face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1203,7 +1203,7 @@
 @k.objects.u1f437.p11.9 k.objects.point part=$k.objects.u1f437.p11 n=9 x=43.3 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f437.p11.10 k.objects.point part=$k.objects.u1f437.p11 n=10 x=45.4 y=60.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f437.p11.11 k.objects.point part=$k.objects.u1f437.p11 n=11 x=46.2 y=61.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f437.word core.word text=animal text=bacon text=face text=farm text=pig text=pork means="pig face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f437.keyword k.objects.keyword of="pig face" text=animal text=bacon text=face text=farm text=pig text=pork core.source="cldr 48"
 
 # pig
 @k.objects.u1f416 k.objects.object name=pig core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1393,7 +1393,7 @@
 @k.objects.u1f416.p12.6 k.objects.point part=$k.objects.u1f416.p12 n=6 x=15.3 y=49.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f416.p12.7 k.objects.point part=$k.objects.u1f416.p12 n=7 x=14.6 y=46.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f416.p12.8 k.objects.point part=$k.objects.u1f416.p12 n=8 x=15.8 y=44.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f416.word core.word text=animal text=bacon text=farm text=pork text=sow means=pig of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f416.keyword k.objects.keyword of=pig text=animal text=bacon text=farm text=pork text=sow core.source="cldr 48"
 
 # boar
 @k.objects.u1f417 k.objects.object name=boar core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1607,4 +1607,4 @@
 @k.objects.u1f417.p16.6 k.objects.point part=$k.objects.u1f417.p16 n=6 x=62.2 y=73.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f417.p16.7 k.objects.point part=$k.objects.u1f417.p16 n=7 x=63.2 y=75.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f417.p16.8 k.objects.point part=$k.objects.u1f417.p16 n=8 x=66 y=77.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f417.word core.word text=animal text=pig means=boar of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f417.keyword k.objects.keyword of=boar text=animal text=pig core.source="cldr 48"

@@ -58,7 +58,7 @@
 @k.objects.mb2978.p2.24 k.objects.point part=$k.objects.mb2978.p2 n=24 x=76.8 y=35.5 core.source="mulberry fa94a93"
 @k.objects.mb2978.p2.25 k.objects.point part=$k.objects.mb2978.p2 n=25 x=76.8 y=91.9 core.source="mulberry fa94a93"
 @k.objects.mb2978.p2.26 k.objects.point part=$k.objects.mb2978.p2 n=26 x=22.1 y=91.9 core.source="mulberry fa94a93"
-@k.objects.mb2978.word core.word text=clothes text=underwear means=vest of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2978.keyword k.objects.keyword of=vest text=clothes text=underwear core.source="mulberry fa94a93"
 
 # visor
 @k.objects.mb2987 k.objects.object name=visor core.source="mulberry fa94a93"
@@ -239,7 +239,7 @@
 @k.objects.mb2987.p16.7 k.objects.point part=$k.objects.mb2987.p16 n=7 x=69.1 y=60.9 core.source="mulberry fa94a93"
 @k.objects.mb2987.p16.8 k.objects.point part=$k.objects.mb2987.p16 n=8 x=63.5 y=62.5 core.source="mulberry fa94a93"
 @k.objects.mb2987.p16.9 k.objects.point part=$k.objects.mb2987.p16 n=9 x=50.4 y=63.6 core.source="mulberry fa94a93"
-@k.objects.mb2987.word core.word text=equipment text=uniform means=visor of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2987.keyword k.objects.keyword of=visor text=equipment text=uniform core.source="mulberry fa94a93"
 
 # waistcoat
 @k.objects.mb2997 k.objects.object name=waistcoat core.source="mulberry fa94a93"
@@ -384,7 +384,7 @@
 @k.objects.mb2997.p16.4 k.objects.point part=$k.objects.mb2997.p16 n=4 x=42.9 y=10.2 core.source="mulberry fa94a93"
 @k.objects.mb2997.p16.5 k.objects.point part=$k.objects.mb2997.p16 n=5 x=41.2 y=9.4 core.source="mulberry fa94a93"
 @k.objects.mb2997.p16.6 k.objects.point part=$k.objects.mb2997.p16 n=6 x=39.6 y=7.5 core.source="mulberry fa94a93"
-@k.objects.mb2997.word core.word text=clothes means=waistcoat of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2997.keyword k.objects.keyword of=waistcoat text=clothes core.source="mulberry fa94a93"
 
 # wellington boots
 @k.objects.mb3041 k.objects.object name="wellington boots" core.source="mulberry fa94a93"
@@ -578,4 +578,4 @@
 @k.objects.mb3041.p16 k.objects.part of="wellington boots" name=part16 kind=detail named=no shape=line x=70.9 y=81.4 w=5.9 h=2.7 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb3041.p16.1 k.objects.point part=$k.objects.mb3041.p16 n=1 x=70.9 y=84.1 core.source="mulberry fa94a93"
 @k.objects.mb3041.p16.2 k.objects.point part=$k.objects.mb3041.p16 n=2 x=76.8 y=81.4 core.source="mulberry fa94a93"
-@k.objects.mb3041.word core.word text=clothes text=footwear means="wellington boots" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3041.keyword k.objects.keyword of="wellington boots" text=clothes text=footwear core.source="mulberry fa94a93"

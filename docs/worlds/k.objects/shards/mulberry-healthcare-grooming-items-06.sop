@@ -198,7 +198,7 @@
 @k.objects.mb2324.p16.9 k.objects.point part=$k.objects.mb2324.p16 n=9 x=71.6 y=37.1 core.source="mulberry fa94a93"
 @k.objects.mb2324.p16.10 k.objects.point part=$k.objects.mb2324.p16 n=10 x=76.1 y=40 core.source="mulberry fa94a93"
 @k.objects.mb2324.p16.11 k.objects.point part=$k.objects.mb2324.p16 n=11 x=74.7 y=45.7 core.source="mulberry fa94a93"
-@k.objects.mb2324.word core.word text=grooming means="pumice stone" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2324.keyword k.objects.keyword of="pumice stone" text=grooming core.source="mulberry fa94a93"
 
 # razor electric
 @k.objects.mb2368 k.objects.object name="razor electric" core.source="mulberry fa94a93"
@@ -409,7 +409,7 @@
 @k.objects.mb2368.p16.6 k.objects.point part=$k.objects.mb2368.p16 n=6 x=38 y=10.4 core.source="mulberry fa94a93"
 @k.objects.mb2368.p16.7 k.objects.point part=$k.objects.mb2368.p16 n=7 x=42 y=10.3 core.source="mulberry fa94a93"
 @k.objects.mb2368.p16.8 k.objects.point part=$k.objects.mb2368.p16 n=8 x=43.8 y=12.5 core.source="mulberry fa94a93"
-@k.objects.mb2368.word core.word text=electric text=grooming means="razor electric" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2368.keyword k.objects.keyword of="razor electric" text=electric text=grooming core.source="mulberry fa94a93"
 
 # roll on deodorant
 @k.objects.mb2413 k.objects.object name="roll on deodorant" core.source="mulberry fa94a93"
@@ -562,7 +562,7 @@
 @k.objects.mb2413.p15.17 k.objects.point part=$k.objects.mb2413.p15 n=17 x=77.5 y=64.1 core.source="mulberry fa94a93"
 @k.objects.mb2413.p15.18 k.objects.point part=$k.objects.mb2413.p15 n=18 x=78.9 y=70 core.source="mulberry fa94a93"
 @k.objects.mb2413.p15.19 k.objects.point part=$k.objects.mb2413.p15 n=19 x=78.9 y=84.7 core.source="mulberry fa94a93"
-@k.objects.mb2413.word core.word text=grooming means="roll on deodorant" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2413.keyword k.objects.keyword of="roll on deodorant" text=grooming core.source="mulberry fa94a93"
 
 # sanitary towel
 @k.objects.mb2457 k.objects.object name="sanitary towel" core.source="mulberry fa94a93"
@@ -733,7 +733,7 @@
 @k.objects.mb2457.p6.20 k.objects.point part=$k.objects.mb2457.p6 n=20 x=46.5 y=77.3 core.source="mulberry fa94a93"
 @k.objects.mb2457.p6.21 k.objects.point part=$k.objects.mb2457.p6 n=21 x=47.4 y=78.2 core.source="mulberry fa94a93"
 @k.objects.mb2457.p6.22 k.objects.point part=$k.objects.mb2457.p6 n=22 x=50.6 y=79 core.source="mulberry fa94a93"
-@k.objects.mb2457.word core.word text=grooming means="sanitary towel" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2457.keyword k.objects.keyword of="sanitary towel" text=grooming core.source="mulberry fa94a93"
 
 # shampoo
 @k.objects.mb2527 k.objects.object name=shampoo core.source="mulberry fa94a93"
@@ -949,7 +949,7 @@
 @k.objects.mb2527.p16.12 k.objects.point part=$k.objects.mb2527.p16 n=12 x=61.3 y=39.1 core.source="mulberry fa94a93"
 @k.objects.mb2527.p16.13 k.objects.point part=$k.objects.mb2527.p16 n=13 x=62.5 y=40.8 core.source="mulberry fa94a93"
 @k.objects.mb2527.p16.14 k.objects.point part=$k.objects.mb2527.p16 n=14 x=62 y=44.6 core.source="mulberry fa94a93"
-@k.objects.mb2527.word core.word text=grooming means=shampoo of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2527.keyword k.objects.keyword of=shampoo text=grooming core.source="mulberry fa94a93"
 
 # shaving cream
 @k.objects.mb2537 k.objects.object name="shaving cream" core.source="mulberry fa94a93"
@@ -1111,7 +1111,7 @@
 @k.objects.mb2537.p16.7 k.objects.point part=$k.objects.mb2537.p16 n=7 x=31.3 y=53.2 core.source="mulberry fa94a93"
 @k.objects.mb2537.p16.8 k.objects.point part=$k.objects.mb2537.p16 n=8 x=31.6 y=52.7 core.source="mulberry fa94a93"
 @k.objects.mb2537.p16.9 k.objects.point part=$k.objects.mb2537.p16 n=9 x=33.1 y=52.6 core.source="mulberry fa94a93"
-@k.objects.mb2537.word core.word text=grooming means="shaving cream" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2537.keyword k.objects.keyword of="shaving cream" text=grooming core.source="mulberry fa94a93"
 
 # shower cap
 @k.objects.mb2558 k.objects.object name="shower cap" core.source="mulberry fa94a93"
@@ -1318,7 +1318,7 @@
 @k.objects.mb2558.p16.1 k.objects.point part=$k.objects.mb2558.p16 n=1 x=26.9 y=65.9 core.source="mulberry fa94a93"
 @k.objects.mb2558.p16.2 k.objects.point part=$k.objects.mb2558.p16 n=2 x=31.4 y=77.1 core.source="mulberry fa94a93"
 @k.objects.mb2558.p16.3 k.objects.point part=$k.objects.mb2558.p16 n=3 x=39.7 y=84.8 core.source="mulberry fa94a93"
-@k.objects.mb2558.word core.word text=grooming means="shower cap" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2558.keyword k.objects.keyword of="shower cap" text=grooming core.source="mulberry fa94a93"
 
 # shower gel
 @k.objects.mb2559 k.objects.object name="shower gel" core.source="mulberry fa94a93"
@@ -1421,4 +1421,4 @@
 @k.objects.mb2559.p5.4 k.objects.point part=$k.objects.mb2559.p5 n=4 x=36.5 y=78.8 core.source="mulberry fa94a93"
 @k.objects.mb2559.p5.5 k.objects.point part=$k.objects.mb2559.p5 n=5 x=34.7 y=77.8 core.source="mulberry fa94a93"
 @k.objects.mb2559.p5.6 k.objects.point part=$k.objects.mb2559.p5 n=6 x=34.1 y=76 core.source="mulberry fa94a93"
-@k.objects.mb2559.word core.word text=grooming means="shower gel" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2559.keyword k.objects.keyword of="shower gel" text=grooming core.source="mulberry fa94a93"

@@ -198,7 +198,7 @@
 @k.objects.mb1781.p16.6 k.objects.point part=$k.objects.mb1781.p16 n=6 x=24.1 y=60 core.source="mulberry fa94a93"
 @k.objects.mb1781.p16.7 k.objects.point part=$k.objects.mb1781.p16 n=7 x=25.5 y=60.2 core.source="mulberry fa94a93"
 @k.objects.mb1781.p16.8 k.objects.point part=$k.objects.mb1781.p16 n=8 x=36.5 y=65.4 core.source="mulberry fa94a93"
-@k.objects.mb1781.word core.word text=play text=toys means="koosh ball" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1781.keyword k.objects.keyword of="koosh ball" text=play text=toys core.source="mulberry fa94a93"
 
 # lava lamp
 @k.objects.mb1806 k.objects.object name="lava lamp" core.source="mulberry fa94a93"
@@ -361,7 +361,7 @@
 @k.objects.mb1806.p16.4 k.objects.point part=$k.objects.mb1806.p16 n=4 x=48.4 y=31.1 core.source="mulberry fa94a93"
 @k.objects.mb1806.p16.5 k.objects.point part=$k.objects.mb1806.p16 n=5 x=48 y=28.7 core.source="mulberry fa94a93"
 @k.objects.mb1806.p16.6 k.objects.point part=$k.objects.mb1806.p16 n=6 x=46 y=28.7 core.source="mulberry fa94a93"
-@k.objects.mb1806.word core.word text=play text=toys means="lava lamp" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1806.keyword k.objects.keyword of="lava lamp" text=play text=toys core.source="mulberry fa94a93"
 
 # lego
 @k.objects.mb1817 k.objects.object name=lego core.source="mulberry fa94a93"
@@ -475,7 +475,7 @@
 @k.objects.mb1817.p16.1 k.objects.point part=$k.objects.mb1817.p16 n=1 x=51 y=61.4 core.source="mulberry fa94a93"
 @k.objects.mb1817.p16.2 k.objects.point part=$k.objects.mb1817.p16 n=2 x=76.7 y=76.7 core.source="mulberry fa94a93"
 @k.objects.mb1817.p16.3 k.objects.point part=$k.objects.mb1817.p16 n=3 x=94.4 y=61.6 core.source="mulberry fa94a93"
-@k.objects.mb1817.word core.word text=play text=toys means=lego of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1817.keyword k.objects.keyword of=lego text=play text=toys core.source="mulberry fa94a93"
 
 # puppet
 @k.objects.mb2329 k.objects.object name=puppet core.source="mulberry fa94a93"
@@ -652,7 +652,7 @@
 @k.objects.mb2329.p14.7 k.objects.point part=$k.objects.mb2329.p14 n=7 x=63.5 y=9 core.source="mulberry fa94a93"
 @k.objects.mb2329.p14.8 k.objects.point part=$k.objects.mb2329.p14 n=8 x=61.5 y=9.4 core.source="mulberry fa94a93"
 @k.objects.mb2329.p14.9 k.objects.point part=$k.objects.mb2329.p14 n=9 x=59.9 y=10.8 core.source="mulberry fa94a93"
-@k.objects.mb2329.word core.word text=play text=toys means=puppet of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2329.keyword k.objects.keyword of=puppet text=play text=toys core.source="mulberry fa94a93"
 
 # shape puzzle
 @k.objects.mb2530 k.objects.object name="shape puzzle" core.source="mulberry fa94a93"
@@ -827,7 +827,7 @@
 @k.objects.mb2530.p16.10 k.objects.point part=$k.objects.mb2530.p16 n=10 x=27.8 y=52.4 core.source="mulberry fa94a93"
 @k.objects.mb2530.p16.11 k.objects.point part=$k.objects.mb2530.p16 n=11 x=28.9 y=53.9 core.source="mulberry fa94a93"
 @k.objects.mb2530.p16.12 k.objects.point part=$k.objects.mb2530.p16 n=12 x=29 y=73.9 core.source="mulberry fa94a93"
-@k.objects.mb2530.word core.word text=play text=toys means="shape puzzle" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2530.keyword k.objects.keyword of="shape puzzle" text=play text=toys core.source="mulberry fa94a93"
 
 # shapesorter
 @k.objects.mb2532 k.objects.object name=shapesorter core.source="mulberry fa94a93"
@@ -905,7 +905,7 @@
 @k.objects.mb2532.p12.1 k.objects.point part=$k.objects.mb2532.p12 n=1 x=79 y=45 core.source="mulberry fa94a93"
 @k.objects.mb2532.p12.2 k.objects.point part=$k.objects.mb2532.p12 n=2 x=62.3 y=52.4 core.source="mulberry fa94a93"
 @k.objects.mb2532.p12.3 k.objects.point part=$k.objects.mb2532.p12 n=3 x=78.1 y=65.7 core.source="mulberry fa94a93"
-@k.objects.mb2532.word core.word text=play text=toys means=shapesorter of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2532.keyword k.objects.keyword of=shapesorter text=play text=toys core.source="mulberry fa94a93"
 
 # star stacker
 @k.objects.mb2678 k.objects.object name="star stacker" core.source="mulberry fa94a93"
@@ -1115,7 +1115,7 @@
 @k.objects.mb2678.p16.9 k.objects.point part=$k.objects.mb2678.p16 n=9 x=28.4 y=77.8 core.source="mulberry fa94a93"
 @k.objects.mb2678.p16.10 k.objects.point part=$k.objects.mb2678.p16 n=10 x=27.3 y=75.9 core.source="mulberry fa94a93"
 @k.objects.mb2678.p16.11 k.objects.point part=$k.objects.mb2678.p16 n=11 x=29.9 y=73.1 core.source="mulberry fa94a93"
-@k.objects.mb2678.word core.word text=play text=toys means="star stacker" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2678.keyword k.objects.keyword of="star stacker" text=play text=toys core.source="mulberry fa94a93"
 
 # telephone toy
 @k.objects.mb2811 k.objects.object name="telephone toy" core.source="mulberry fa94a93"
@@ -1288,4 +1288,4 @@
 @k.objects.mb2811.p16.34 k.objects.point part=$k.objects.mb2811.p16 n=34 x=8.7 y=41.6 core.source="mulberry fa94a93"
 @k.objects.mb2811.p16.35 k.objects.point part=$k.objects.mb2811.p16 n=35 x=11.3 y=42.5 core.source="mulberry fa94a93"
 @k.objects.mb2811.p16.36 k.objects.point part=$k.objects.mb2811.p16 n=36 x=19 y=42.9 core.source="mulberry fa94a93"
-@k.objects.mb2811.word core.word text=play text=toys means="telephone toy" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2811.keyword k.objects.keyword of="telephone toy" text=play text=toys core.source="mulberry fa94a93"

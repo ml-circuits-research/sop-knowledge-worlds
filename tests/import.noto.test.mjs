@@ -68,7 +68,7 @@ test('the importer keeps things, leaves hand-written names alone, and names part
     '@k.objects.u1f3e1.p2.1 k.objects.point part=$k.objects.u1f3e1.p2 n=1 x=10 y=50 core.source="noto-emoji 99701e0"',
   ]);
   assert.ok(lines.includes('@k.objects.u1f3e1.p4 k.objects.part of="house with garden" name=part4 kind=detail named=no shape=line x=10 y=95 w=80 h=3 z=4 colour=black rgb="#000000" core.source="noto-emoji 99701e0"'));
-  assert.equal(lines.at(-1), '@k.objects.u1f3e1.word core.word text=garden text=home means="house with garden" of=k.objects.object.name core.source="cldr 48"');
+  assert.equal(lines.at(-1), '@k.objects.u1f3e1.keyword k.objects.keyword of="house with garden" text=garden text=home core.source="cldr 48"');
   assert.deepEqual(run().files, files);
 });
 

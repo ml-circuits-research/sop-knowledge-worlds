@@ -208,7 +208,7 @@
 @k.objects.u1f4c7.p16.8 k.objects.point part=$k.objects.u1f4c7.p16 n=8 x=29.3 y=89.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c7.p16.9 k.objects.point part=$k.objects.u1f4c7.p16 n=9 x=69.2 y=89.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c7.p16.10 k.objects.point part=$k.objects.u1f4c7.p16 n=10 x=73.5 y=89.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c7.word core.word text=card text=index text=old text=rolodex text=school means="card index" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c7.keyword k.objects.keyword of="card index" text=card text=index text=old text=rolodex text=school core.source="cldr 48"
 
 # chart increasing
 @k.objects.u1f4c8 k.objects.object name="chart increasing" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -260,7 +260,7 @@
 @k.objects.u1f4c8.p13.3 k.objects.point part=$k.objects.u1f4c8.p13 n=3 x=3.1 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c8.p13.4 k.objects.point part=$k.objects.u1f4c8.p13 n=4 x=96.9 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c8.p13.5 k.objects.point part=$k.objects.u1f4c8.p13 n=5 x=96.9 y=3.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c8.word core.word text=chart text=data text=graph text=growth text=increasing text=right text=trend text=up text=upward means="chart increasing" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c8.keyword k.objects.keyword of="chart increasing" text=chart text=data text=graph text=growth text=increasing text=right text=trend text=up text=upward core.source="cldr 48"
 
 # chart decreasing
 @k.objects.u1f4c9 k.objects.object name="chart decreasing" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -312,7 +312,7 @@
 @k.objects.u1f4c9.p13.3 k.objects.point part=$k.objects.u1f4c9.p13 n=3 x=3.1 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c9.p13.4 k.objects.point part=$k.objects.u1f4c9.p13 n=4 x=96.9 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c9.p13.5 k.objects.point part=$k.objects.u1f4c9.p13 n=5 x=96.9 y=3.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c9.word core.word text=chart text=data text=decreasing text=down text=downward text=graph text=negative text=trend means="chart decreasing" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c9.keyword k.objects.keyword of="chart decreasing" text=chart text=data text=decreasing text=down text=downward text=graph text=negative text=trend core.source="cldr 48"
 
 # bar chart
 @k.objects.u1f4ca k.objects.object name="bar chart" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -375,7 +375,7 @@
 @k.objects.u1f4ca.p11.3 k.objects.point part=$k.objects.u1f4ca.p11 n=3 x=3.1 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ca.p11.4 k.objects.point part=$k.objects.u1f4ca.p11 n=4 x=96.9 y=96.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ca.p11.5 k.objects.point part=$k.objects.u1f4ca.p11 n=5 x=96.9 y=3.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ca.word core.word text=bar text=chart text=data text=graph means="bar chart" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ca.keyword k.objects.keyword of="bar chart" text=bar text=chart text=data text=graph core.source="cldr 48"
 
 # clipboard
 @k.objects.u1f4cb k.objects.object name=clipboard core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -493,7 +493,7 @@
 @k.objects.u1f4cb.p13.1 k.objects.point part=$k.objects.u1f4cb.p13 n=1 x=44.5 y=7.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4cb.p13.2 k.objects.point part=$k.objects.u1f4cb.p13 n=2 x=45.2 y=6.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4cb.p13.3 k.objects.point part=$k.objects.u1f4cb.p13 n=3 x=46.6 y=5.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4cb.word core.word text=do text=list text=notes means=clipboard of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4cb.keyword k.objects.keyword of=clipboard text=do text=list text=notes core.source="cldr 48"
 
 # pushpin
 @k.objects.u1f4cc k.objects.object name=pushpin core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -646,7 +646,7 @@
 @k.objects.u1f4cc.p11.7 k.objects.point part=$k.objects.u1f4cc.p11 n=7 x=73.8 y=9.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4cc.p11.8 k.objects.point part=$k.objects.u1f4cc.p11 n=8 x=69.6 y=8.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4cc.p11.9 k.objects.point part=$k.objects.u1f4cc.p11 n=9 x=68.5 y=9.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f4cc.word core.word text=collage text=pin means=pushpin of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4cc.keyword k.objects.keyword of=pushpin text=collage text=pin core.source="cldr 48"
 
 # round pushpin
 @k.objects.u1f4cd k.objects.object name="round pushpin" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -708,7 +708,7 @@
 @k.objects.u1f4cd.p4.12 k.objects.point part=$k.objects.u1f4cd.p4 n=12 x=40.4 y=7.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4cd.p4.13 k.objects.point part=$k.objects.u1f4cd.p4 n=13 x=44.8 y=5.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4cd.p4.14 k.objects.point part=$k.objects.u1f4cd.p4 n=14 x=48.6 y=5.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4cd.word core.word text=location text=map text=pin text=pushpin text=round means="round pushpin" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4cd.keyword k.objects.keyword of="round pushpin" text=location text=map text=pin text=pushpin text=round core.source="cldr 48"
 
 # paperclip
 @k.objects.u1f4ce k.objects.object name=paperclip core.source="noto-emoji 99701e0" core.source="cldr 48"

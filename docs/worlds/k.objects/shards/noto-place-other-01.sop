@@ -300,7 +300,7 @@
 @k.objects.u26fa.p7.4 k.objects.point part=$k.objects.u26fa.p7 n=4 x=96.4 y=92.7 core.source="noto-emoji 99701e0"
 @k.objects.u26fa.p7.5 k.objects.point part=$k.objects.u26fa.p7 n=5 x=95.4 y=93.3 core.source="noto-emoji 99701e0"
 @k.objects.u26fa.p7.6 k.objects.point part=$k.objects.u26fa.p7 n=6 x=92.6 y=92.9 core.source="noto-emoji 99701e0"
-@k.objects.u26fa.word core.word text=camping means=tent of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26fa.keyword k.objects.keyword of=tent text=camping core.source="cldr 48"
 
 # foggy
 @k.objects.u1f301 k.objects.object name=foggy core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -501,7 +501,7 @@
 @k.objects.u1f301.p16.17 k.objects.point part=$k.objects.u1f301.p16 n=17 x=79.5 y=56.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f301.p16.18 k.objects.point part=$k.objects.u1f301.p16 n=18 x=88.3 y=55.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f301.p16.19 k.objects.point part=$k.objects.u1f301.p16 n=19 x=92.5 y=55.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f301.word core.word text=fog means=foggy of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f301.keyword k.objects.keyword of=foggy text=fog core.source="cldr 48"
 
 # night with stars
 @k.objects.u1f303 k.objects.object name="night with stars" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -621,7 +621,7 @@
 @k.objects.u1f303.p16.2 k.objects.point part=$k.objects.u1f303.p16 n=2 x=85.6 y=98.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f303.p16.3 k.objects.point part=$k.objects.u1f303.p16 n=3 x=85.6 y=29.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f303.p16.4 k.objects.point part=$k.objects.u1f303.p16 n=4 x=90.2 y=26.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f303.word core.word text=night text=star text=stars means="night with stars" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f303.keyword k.objects.keyword of="night with stars" text=night text=star text=stars core.source="cldr 48"
 
 # cityscape
 @k.objects.u1f3d9 k.objects.object name=cityscape core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -669,7 +669,7 @@
 @k.objects.u1f3d9.p16.2 k.objects.point part=$k.objects.u1f3d9.p16 n=2 x=85.6 y=98.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d9.p16.3 k.objects.point part=$k.objects.u1f3d9.p16 n=3 x=85.6 y=29.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d9.p16.4 k.objects.point part=$k.objects.u1f3d9.p16 n=4 x=90.2 y=26.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3d9.word core.word text=city means=cityscape of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3d9.keyword k.objects.keyword of=cityscape text=city core.source="cldr 48"
 
 # sunrise over mountains
 @k.objects.u1f304 k.objects.object name="sunrise over mountains" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -831,7 +831,7 @@
 @k.objects.u1f304.p16.9 k.objects.point part=$k.objects.u1f304.p16 n=9 x=14.5 y=63 core.source="noto-emoji 99701e0"
 @k.objects.u1f304.p16.10 k.objects.point part=$k.objects.u1f304.p16 n=10 x=12.8 y=70.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f304.p16.11 k.objects.point part=$k.objects.u1f304.p16 n=11 x=10.8 y=86.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f304.word core.word text=morning text=mountains text=over text=sun text=sunrise means="sunrise over mountains" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f304.keyword k.objects.keyword of="sunrise over mountains" text=morning text=mountains text=over text=sun text=sunrise core.source="cldr 48"
 
 # sunrise
 @k.objects.u1f305 k.objects.object name=sunrise core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -974,7 +974,7 @@
 @k.objects.u1f305.p16.10 k.objects.point part=$k.objects.u1f305.p16 n=10 x=38 y=71.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f305.p16.11 k.objects.point part=$k.objects.u1f305.p16 n=11 x=33.1 y=71.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f305.p16.12 k.objects.point part=$k.objects.u1f305.p16 n=12 x=31.8 y=72.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f305.word core.word text=morning text=nature text=sun means=sunrise of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f305.keyword k.objects.keyword of=sunrise text=morning text=nature text=sun core.source="cldr 48"
 
 # cityscape at dusk
 @k.objects.u1f306 k.objects.object name="cityscape at dusk" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1022,4 +1022,4 @@
 @k.objects.u1f306.p14.4 k.objects.point part=$k.objects.u1f306.p14 n=4 x=90.2 y=26.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f306.p15 k.objects.part of="cityscape at dusk" name=part15 named=no shape=rectangle x=49.9 y=23.3 w=1.3 h=73.7 z=15 colour=white rgb="#FFF6B2" core.source="noto-emoji 99701e0"
 @k.objects.u1f306.p16 k.objects.part of="cityscape at dusk" name=part16 named=no shape=rectangle x=46.2 y=14.8 w=2.1 h=8.5 z=16 colour=white rgb="#FFF6B2" core.source="noto-emoji 99701e0"
-@k.objects.u1f306.word core.word text=at text=building text=city text=cityscape text=dusk text=evening text=landscape text=sun text=sunset means="cityscape at dusk" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f306.keyword k.objects.keyword of="cityscape at dusk" text=at text=building text=city text=cityscape text=dusk text=evening text=landscape text=sun text=sunset core.source="cldr 48"

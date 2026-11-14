@@ -111,7 +111,7 @@
 @k.objects.mb491.p7 k.objects.part of="Christmas bauble" name=part7 kind=detail named=no shape=line x=49.9 y=18.7 w=0.2 h=5.6 z=7 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb491.p7.1 k.objects.point part=$k.objects.mb491.p7 n=1 x=50.1 y=18.7 core.source="mulberry fa94a93"
 @k.objects.mb491.p7.2 k.objects.point part=$k.objects.mb491.p7 n=2 x=49.9 y=24.3 core.source="mulberry fa94a93"
-@k.objects.mb491.word core.word text=celebration text=Christian means="Christmas bauble" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb491.keyword k.objects.keyword of="Christmas bauble" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # Christmas bell
 @k.objects.mb492 k.objects.object name="Christmas bell" core.source="mulberry fa94a93"
@@ -314,7 +314,7 @@
 @k.objects.mb492.p16.7 k.objects.point part=$k.objects.mb492.p16 n=7 x=52.6 y=39.7 core.source="mulberry fa94a93"
 @k.objects.mb492.p16.8 k.objects.point part=$k.objects.mb492.p16 n=8 x=50.3 y=32.5 core.source="mulberry fa94a93"
 @k.objects.mb492.p16.9 k.objects.point part=$k.objects.mb492.p16 n=9 x=49.7 y=26.6 core.source="mulberry fa94a93"
-@k.objects.mb492.word core.word text=celebration text=Christian means="Christmas bell" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb492.keyword k.objects.keyword of="Christmas bell" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # Christmas decorations
 @k.objects.mb495 k.objects.object name="Christmas decorations" core.source="mulberry fa94a93"
@@ -521,7 +521,7 @@
 @k.objects.mb495.p16.7 k.objects.point part=$k.objects.mb495.p16 n=7 x=36.1 y=73.2 core.source="mulberry fa94a93"
 @k.objects.mb495.p16.8 k.objects.point part=$k.objects.mb495.p16 n=8 x=36.9 y=70.9 core.source="mulberry fa94a93"
 @k.objects.mb495.p16.9 k.objects.point part=$k.objects.mb495.p16 n=9 x=39 y=69.3 core.source="mulberry fa94a93"
-@k.objects.mb495.word core.word text=celebration text=Christian means="Christmas decorations" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb495.keyword k.objects.keyword of="Christmas decorations" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # Christmas lights
 @k.objects.mb497 k.objects.object name="Christmas lights" core.source="mulberry fa94a93"
@@ -682,7 +682,7 @@
 @k.objects.mb497.p16.13 k.objects.point part=$k.objects.mb497.p16 n=13 x=17 y=30.9 core.source="mulberry fa94a93"
 @k.objects.mb497.p16.14 k.objects.point part=$k.objects.mb497.p16 n=14 x=12.1 y=29.6 core.source="mulberry fa94a93"
 @k.objects.mb497.p16.15 k.objects.point part=$k.objects.mb497.p16 n=15 x=7.8 y=29.9 core.source="mulberry fa94a93"
-@k.objects.mb497.word core.word text=celebration text=Christian means="Christmas lights" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb497.keyword k.objects.keyword of="Christmas lights" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # Christmas sock
 @k.objects.mb499 k.objects.object name="Christmas sock" core.source="mulberry fa94a93"
@@ -788,7 +788,7 @@
 @k.objects.mb499.p5.5 k.objects.point part=$k.objects.mb499.p5 n=5 x=56.8 y=7.5 core.source="mulberry fa94a93"
 @k.objects.mb499.p5.6 k.objects.point part=$k.objects.mb499.p5 n=6 x=56.9 y=8.7 core.source="mulberry fa94a93"
 @k.objects.mb499.p5.7 k.objects.point part=$k.objects.mb499.p5 n=7 x=53.2 y=16.9 core.source="mulberry fa94a93"
-@k.objects.mb499.word core.word text=celebration text=Christian means="Christmas sock" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb499.keyword k.objects.keyword of="Christmas sock" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # Easter egg
 @k.objects.mb1003 k.objects.object name="Easter egg" core.source="mulberry fa94a93"
@@ -993,7 +993,7 @@
 @k.objects.mb1003.p16.26 k.objects.point part=$k.objects.mb1003.p16 n=26 x=23.1 y=44.2 core.source="mulberry fa94a93"
 @k.objects.mb1003.p16.27 k.objects.point part=$k.objects.mb1003.p16 n=27 x=21.6 y=56.8 core.source="mulberry fa94a93"
 @k.objects.mb1003.p16.28 k.objects.point part=$k.objects.mb1003.p16 n=28 x=22.3 y=67.5 core.source="mulberry fa94a93"
-@k.objects.mb1003.word core.word text=celebration text=Christian text=Easter text=food means="Easter egg" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1003.keyword k.objects.keyword of="Easter egg" text=celebration text=Christian text=Easter text=food core.source="mulberry fa94a93"
 
 # Father Christmas
 @k.objects.mb1079 k.objects.object name="Father Christmas" core.source="mulberry fa94a93"
@@ -1174,7 +1174,7 @@
 @k.objects.mb1079.p16.5 k.objects.point part=$k.objects.mb1079.p16 n=5 x=32.1 y=41.3 core.source="mulberry fa94a93"
 @k.objects.mb1079.p16.6 k.objects.point part=$k.objects.mb1079.p16 n=6 x=34.7 y=38.9 core.source="mulberry fa94a93"
 @k.objects.mb1079.p16.7 k.objects.point part=$k.objects.mb1079.p16 n=7 x=39.2 y=37.1 core.source="mulberry fa94a93"
-@k.objects.mb1079.word core.word text=celebration text=Christian means="Father Christmas" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1079.keyword k.objects.keyword of="Father Christmas" text=celebration text=Christian core.source="mulberry fa94a93"
 
 # Father Christmas sack
 @k.objects.mb1080 k.objects.object name="Father Christmas sack" core.source="mulberry fa94a93"
@@ -1370,4 +1370,4 @@
 @k.objects.mb1080.p16.7 k.objects.point part=$k.objects.mb1080.p16 n=7 x=37.4 y=38.1 core.source="mulberry fa94a93"
 @k.objects.mb1080.p16.8 k.objects.point part=$k.objects.mb1080.p16 n=8 x=41.1 y=36.1 core.source="mulberry fa94a93"
 @k.objects.mb1080.p16.9 k.objects.point part=$k.objects.mb1080.p16 n=9 x=44.5 y=39.6 core.source="mulberry fa94a93"
-@k.objects.mb1080.word core.word text=celebration text=Christian means="Father Christmas sack" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1080.keyword k.objects.keyword of="Father Christmas sack" text=celebration text=Christian core.source="mulberry fa94a93"

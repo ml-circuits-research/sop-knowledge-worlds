@@ -609,7 +609,7 @@
 @k.objects.mb1131.p16.10 k.objects.point part=$k.objects.mb1131.p16 n=10 x=10.9 y=69.5 core.source="mulberry fa94a93"
 @k.objects.mb1131.p16.11 k.objects.point part=$k.objects.mb1131.p16 n=11 x=10.8 y=66.9 core.source="mulberry fa94a93"
 @k.objects.mb1131.p16.12 k.objects.point part=$k.objects.mb1131.p16 n=12 x=12.9 y=64.1 core.source="mulberry fa94a93"
-@k.objects.mb1131.word core.word text=food text=meal means="fish burger" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1131.keyword k.objects.keyword of="fish burger" text=food text=meal core.source="mulberry fa94a93"
 
 # fish deep fried
 @k.objects.mb1132 k.objects.object name="fish deep fried" core.source="mulberry fa94a93"

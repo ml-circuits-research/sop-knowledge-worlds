@@ -81,7 +81,7 @@
 @k.objects.u1f453.p3.35 k.objects.point part=$k.objects.u1f453.p3 n=35 x=94.3 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f453.p3.36 k.objects.point part=$k.objects.u1f453.p3 n=36 x=96.9 y=42.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f453.p3.37 k.objects.point part=$k.objects.u1f453.p3 n=37 x=96.7 y=37.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f453.word core.word text=clothing text=eye text=eyeglasses text=eyewear means=glasses of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f453.keyword k.objects.keyword of=glasses text=clothing text=eye text=eyeglasses text=eyewear core.source="cldr 48"
 
 # sunglasses
 @k.objects.u1f576 k.objects.object name=sunglasses core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -184,7 +184,7 @@
 @k.objects.u1f576.p5.9 k.objects.point part=$k.objects.u1f576.p5 n=9 x=61.9 y=47.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f576.p5.10 k.objects.point part=$k.objects.u1f576.p5 n=10 x=62.5 y=44.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f576.p5.11 k.objects.point part=$k.objects.u1f576.p5 n=11 x=63.5 y=43 core.source="noto-emoji 99701e0"
-@k.objects.u1f576.word core.word text=dark text=eye text=eyewear text=glasses means=sunglasses of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f576.keyword k.objects.keyword of=sunglasses text=dark text=eye text=eyewear text=glasses core.source="cldr 48"
 
 # goggles
 @k.objects.u1f97d k.objects.object name=goggles core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -387,7 +387,7 @@
 @k.objects.u1f97d.p12.20 k.objects.point part=$k.objects.u1f97d.p12 n=20 x=90.9 y=60.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f97d.p12.21 k.objects.point part=$k.objects.u1f97d.p12 n=21 x=85.2 y=50.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f97d.p12.22 k.objects.point part=$k.objects.u1f97d.p12 n=22 x=76.6 y=48 core.source="noto-emoji 99701e0"
-@k.objects.u1f97d.word core.word text=dive text=eye text=protection text=scuba text=swimming text=welding means=goggles of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f97d.keyword k.objects.keyword of=goggles text=dive text=eye text=protection text=scuba text=swimming text=welding core.source="cldr 48"
 
 # lab coat
 @k.objects.u1f97c k.objects.object name="lab coat" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -599,7 +599,7 @@
 @k.objects.u1f97c.p16.5 k.objects.point part=$k.objects.u1f97c.p16 n=5 x=17.1 y=80.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f97c.p16.6 k.objects.point part=$k.objects.u1f97c.p16 n=6 x=19 y=81.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f97c.p16.7 k.objects.point part=$k.objects.u1f97c.p16 n=7 x=15 y=81.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f97c.word core.word text=clothes text=coat text=doctor text=dr text=experiment text=jacket text=lab text=scientist text=white means="lab coat" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f97c.keyword k.objects.keyword of="lab coat" text=clothes text=coat text=doctor text=dr text=experiment text=jacket text=lab text=scientist text=white core.source="cldr 48"
 
 # safety vest
 @k.objects.u1f9ba k.objects.object name="safety vest" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -766,7 +766,7 @@
 @k.objects.u1f9ba.p10.38 k.objects.point part=$k.objects.u1f9ba.p10 n=38 x=64.6 y=96.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ba.p10.39 k.objects.point part=$k.objects.u1f9ba.p10 n=39 x=88.6 y=92.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ba.p10.40 k.objects.point part=$k.objects.u1f9ba.p10 n=40 x=90.4 y=91.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ba.word core.word text=emergency text=safety text=vest means="safety vest" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ba.keyword k.objects.keyword of="safety vest" text=emergency text=safety text=vest core.source="cldr 48"
 
 # necktie
 @k.objects.u1f454 k.objects.object name=necktie core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -930,7 +930,7 @@
 @k.objects.u1f454.p12.8 k.objects.point part=$k.objects.u1f454.p12 n=8 x=58.6 y=93.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f454.p12.9 k.objects.point part=$k.objects.u1f454.p12 n=9 x=50 y=93.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f454.p12.10 k.objects.point part=$k.objects.u1f454.p12 n=10 x=41.7 y=93.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f454.word core.word text=clothing text=employed text=serious text=shirt text=tie means=necktie of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f454.keyword k.objects.keyword of=necktie text=clothing text=employed text=serious text=shirt text=tie core.source="cldr 48"
 
 # t-shirt
 @k.objects.u1f455 k.objects.object name=t-shirt core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1041,7 +1041,7 @@
 @k.objects.u1f455.p8.7 k.objects.point part=$k.objects.u1f455.p8 n=7 x=10.9 y=40.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f455.p8.8 k.objects.point part=$k.objects.u1f455.p8 n=8 x=5.6 y=33.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f455.p8.9 k.objects.point part=$k.objects.u1f455.p8 n=9 x=3.4 y=27.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f455.word core.word text=blue text=casual text=clothes text=clothing text=collar text=dressed text=shirt text=shopping text=tshirt text=weekend means=t-shirt of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f455.keyword k.objects.keyword of=t-shirt text=blue text=casual text=clothes text=clothing text=collar text=dressed text=shirt text=shopping text=tshirt text=weekend core.source="cldr 48"
 
 # jeans
 @k.objects.u1f456 k.objects.object name=jeans core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1221,4 +1221,4 @@
 @k.objects.u1f456.p16.8 k.objects.point part=$k.objects.u1f456.p16 n=8 x=68.9 y=90.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f456.p16.9 k.objects.point part=$k.objects.u1f456.p16 n=9 x=63.9 y=90.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f456.p16.10 k.objects.point part=$k.objects.u1f456.p16 n=10 x=55 y=89.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f456.word core.word text=blue text=casual text=clothes text=clothing text=denim text=dressed text=pants text=shopping text=trousers text=weekend means=jeans of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f456.keyword k.objects.keyword of=jeans text=blue text=casual text=clothes text=clothing text=denim text=dressed text=pants text=shopping text=trousers text=weekend core.source="cldr 48"

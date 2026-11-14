@@ -191,7 +191,7 @@
 @k.objects.u1f327.p12.6 k.objects.point part=$k.objects.u1f327.p12 n=6 x=60.6 y=92.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f327.p12.7 k.objects.point part=$k.objects.u1f327.p12 n=7 x=61.3 y=89.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f327.p12.8 k.objects.point part=$k.objects.u1f327.p12 n=8 x=61 y=87.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f327.word core.word text=cloud text=rain text=weather means="cloud with rain" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f327.keyword k.objects.keyword of="cloud with rain" text=cloud text=rain text=weather core.source="cldr 48"
 
 # cloud with snow
 @k.objects.u1f328 k.objects.object name="cloud with snow" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -394,7 +394,7 @@
 @k.objects.u1f328.p7.25 k.objects.point part=$k.objects.u1f328.p7 n=25 x=62.7 y=78.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f328.p7.26 k.objects.point part=$k.objects.u1f328.p7 n=26 x=63.6 y=78 core.source="noto-emoji 99701e0"
 @k.objects.u1f328.p7.27 k.objects.point part=$k.objects.u1f328.p7 n=27 x=65.2 y=78.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f328.word core.word text=cloud text=cold text=snow text=weather means="cloud with snow" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f328.keyword k.objects.keyword of="cloud with snow" text=cloud text=cold text=snow text=weather core.source="cldr 48"
 
 # cloud with lightning
 @k.objects.u1f329 k.objects.object name="cloud with lightning" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -518,7 +518,7 @@
 @k.objects.u1f329.p8.28 k.objects.point part=$k.objects.u1f329.p8 n=28 x=26.6 y=49 core.source="noto-emoji 99701e0"
 @k.objects.u1f329.p8.29 k.objects.point part=$k.objects.u1f329.p8 n=29 x=32.4 y=49 core.source="noto-emoji 99701e0"
 @k.objects.u1f329.p8.30 k.objects.point part=$k.objects.u1f329.p8 n=30 x=38.5 y=47.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f329.word core.word text=cloud text=lightning text=weather means="cloud with lightning" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f329.keyword k.objects.keyword of="cloud with lightning" text=cloud text=lightning text=weather core.source="cldr 48"
 
 # tornado
 @k.objects.u1f32a k.objects.object name=tornado core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -733,7 +733,7 @@
 @k.objects.u1f32a.p12.26 k.objects.point part=$k.objects.u1f32a.p12 n=26 x=32.6 y=98.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f32a.p12.27 k.objects.point part=$k.objects.u1f32a.p12 n=27 x=33.9 y=100 core.source="noto-emoji 99701e0"
 @k.objects.u1f32a.p12.28 k.objects.point part=$k.objects.u1f32a.p12 n=28 x=36.3 y=100 core.source="noto-emoji 99701e0"
-@k.objects.u1f32a.word core.word text=cloud text=weather text=whirlwind means=tornado of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f32a.keyword k.objects.keyword of=tornado text=cloud text=weather text=whirlwind core.source="cldr 48"
 
 # fog
 @k.objects.u1f32b k.objects.object name=fog core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -840,7 +840,7 @@
 @k.objects.u1f32b.p6.11 k.objects.point part=$k.objects.u1f32b.p6 n=11 x=66.2 y=73.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f32b.p6.12 k.objects.point part=$k.objects.u1f32b.p6 n=12 x=74.8 y=69.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f32b.p6.13 k.objects.point part=$k.objects.u1f32b.p6 n=13 x=84.4 y=66.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f32b.word core.word text=cloud text=weather means=fog of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f32b.keyword k.objects.keyword of=fog text=cloud text=weather core.source="cldr 48"
 
 # wind face
 @k.objects.u1f32c k.objects.object name="wind face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1050,7 +1050,7 @@
 @k.objects.u1f32c.p8.33 k.objects.point part=$k.objects.u1f32c.p8 n=33 x=15.4 y=37.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f32c.p8.34 k.objects.point part=$k.objects.u1f32c.p8 n=34 x=15.1 y=50.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f32c.p8.35 k.objects.point part=$k.objects.u1f32c.p8 n=35 x=12.7 y=58.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f32c.word core.word text=blow text=cloud text=face text=wind means="wind face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f32c.keyword k.objects.keyword of="wind face" text=blow text=cloud text=face text=wind core.source="cldr 48"
 
 # cyclone
 @k.objects.u1f300 k.objects.object name=cyclone core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1091,7 +1091,7 @@
 @k.objects.u1f300.p1.34 k.objects.point part=$k.objects.u1f300.p1 n=34 x=59.8 y=70.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f300.p1.35 k.objects.point part=$k.objects.u1f300.p1 n=35 x=67.3 y=60.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f300.p1.36 k.objects.point part=$k.objects.u1f300.p1 n=36 x=63.4 y=47.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f300.word core.word text=dizzy text=hurricane text=twister text=typhoon text=weather means=cyclone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f300.keyword k.objects.keyword of=cyclone text=dizzy text=hurricane text=twister text=typhoon text=weather core.source="cldr 48"
 
 # rainbow
 @k.objects.u1f308 k.objects.object name=rainbow core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1201,4 +1201,4 @@
 @k.objects.u1f308.p6.17 k.objects.point part=$k.objects.u1f308.p6 n=17 x=74.4 y=65.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f308.p6.18 k.objects.point part=$k.objects.u1f308.p6 n=18 x=80.1 y=61.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f308.p6.19 k.objects.point part=$k.objects.u1f308.p6 n=19 x=85.1 y=59.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f308.word core.word text=gay text=genderqueer text=glbt text=glbtq text=lesbian text=lgbt text=lgbtq text=lgbtqia text=nature text=pride text=queer text=rain text=trans text=transgender text=weather means=rainbow of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f308.keyword k.objects.keyword of=rainbow text=gay text=genderqueer text=glbt text=glbtq text=lesbian text=lgbt text=lgbtq text=lgbtqia text=nature text=pride text=queer text=rain text=trans text=transgender text=weather core.source="cldr 48"

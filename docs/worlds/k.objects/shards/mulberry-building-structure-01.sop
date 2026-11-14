@@ -107,7 +107,7 @@
 @k.objects.mb409.p16 k.objects.part of="ceiling light" name=part16 kind=detail named=no shape=line x=25 y=16.9 w=16.3 h=5.8 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb409.p16.1 k.objects.point part=$k.objects.mb409.p16 n=1 x=25 y=16.9 core.source="mulberry fa94a93"
 @k.objects.mb409.p16.2 k.objects.point part=$k.objects.mb409.p16 n=2 x=41.3 y=22.7 core.source="mulberry fa94a93"
-@k.objects.mb409.word core.word text=home text=house means="ceiling light" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb409.keyword k.objects.keyword of="ceiling light" text=home text=house core.source="mulberry fa94a93"
 
 # chimney
 @k.objects.mb469 k.objects.object name=chimney core.source="mulberry fa94a93"
@@ -242,7 +242,7 @@
 @k.objects.mb469.p16.12 k.objects.point part=$k.objects.mb469.p16 n=12 x=23.4 y=28.2 core.source="mulberry fa94a93"
 @k.objects.mb469.p16.13 k.objects.point part=$k.objects.mb469.p16 n=13 x=25 y=27.1 core.source="mulberry fa94a93"
 @k.objects.mb469.p16.14 k.objects.point part=$k.objects.mb469.p16 n=14 x=67.6 y=27.1 core.source="mulberry fa94a93"
-@k.objects.mb469.word core.word text=celebration means=chimney of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb469.keyword k.objects.keyword of=chimney text=celebration core.source="mulberry fa94a93"
 
 # escalator
 @k.objects.mb1039 k.objects.object name=escalator core.source="mulberry fa94a93"
@@ -381,7 +381,7 @@
 @k.objects.mb1039.p16.5 k.objects.point part=$k.objects.mb1039.p16 n=5 x=52.7 y=73.1 core.source="mulberry fa94a93"
 @k.objects.mb1039.p16.6 k.objects.point part=$k.objects.mb1039.p16 n=6 x=55.5 y=75.1 core.source="mulberry fa94a93"
 @k.objects.mb1039.p16.7 k.objects.point part=$k.objects.mb1039.p16 n=7 x=60 y=76.2 core.source="mulberry fa94a93"
-@k.objects.mb1039.word core.word text=home text=house means=escalator of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1039.keyword k.objects.keyword of=escalator text=home text=house core.source="mulberry fa94a93"
 
 # fireplace
 @k.objects.mb1120 k.objects.object name=fireplace core.source="mulberry fa94a93"
@@ -553,7 +553,7 @@
 @k.objects.mb1120.p16.1 k.objects.point part=$k.objects.mb1120.p16 n=1 x=82.9 y=79 core.source="mulberry fa94a93"
 @k.objects.mb1120.p16.2 k.objects.point part=$k.objects.mb1120.p16 n=2 x=87.4 y=84.2 core.source="mulberry fa94a93"
 @k.objects.mb1120.p16.3 k.objects.point part=$k.objects.mb1120.p16 n=3 x=50.1 y=84.2 core.source="mulberry fa94a93"
-@k.objects.mb1120.word core.word text=home text=house means=fireplace of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1120.keyword k.objects.keyword of=fireplace text=home text=house core.source="mulberry fa94a93"
 
 # front door
 @k.objects.mb1488 k.objects.object name="front door" core.source="mulberry fa94a93"
@@ -644,7 +644,7 @@
 @k.objects.mb1488.p16 k.objects.part of="front door" name=part16 kind=detail named=no shape=line x=26.6 y=91.1 w=47.2 h=0 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1488.p16.1 k.objects.point part=$k.objects.mb1488.p16 n=1 x=26.6 y=91.1 core.source="mulberry fa94a93"
 @k.objects.mb1488.p16.2 k.objects.point part=$k.objects.mb1488.p16 n=2 x=73.8 y=91.1 core.source="mulberry fa94a93"
-@k.objects.mb1488.word core.word text=home text=house means="front door" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1488.keyword k.objects.keyword of="front door" text=home text=house core.source="mulberry fa94a93"
 
 # lift
 @k.objects.mb1831 k.objects.object name=lift core.source="mulberry fa94a93"
@@ -715,7 +715,7 @@
 @k.objects.mb1831.p14 k.objects.part of=lift name=part14 kind=detail named=no shape=line x=11.3 y=51.5 w=7.7 h=0 z=14 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1831.p14.1 k.objects.point part=$k.objects.mb1831.p14 n=1 x=11.3 y=51.5 core.source="mulberry fa94a93"
 @k.objects.mb1831.p14.2 k.objects.point part=$k.objects.mb1831.p14 n=2 x=19 y=51.5 core.source="mulberry fa94a93"
-@k.objects.mb1831.word core.word text=home text=house means=lift of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1831.keyword k.objects.keyword of=lift text=home text=house core.source="mulberry fa94a93"
 
 # stairs
 @k.objects.mb2672 k.objects.object name=stairs core.source="mulberry fa94a93"

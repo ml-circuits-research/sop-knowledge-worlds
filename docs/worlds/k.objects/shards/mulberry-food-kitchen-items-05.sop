@@ -211,7 +211,7 @@
 @k.objects.mb1765.p14.3 k.objects.point part=$k.objects.mb1765.p14 n=3 x=86.2 y=82.1 core.source="mulberry fa94a93"
 @k.objects.mb1765.p14.4 k.objects.point part=$k.objects.mb1765.p14 n=4 x=91.9 y=86 core.source="mulberry fa94a93"
 @k.objects.mb1765.p14.5 k.objects.point part=$k.objects.mb1765.p14 n=5 x=93.8 y=89.3 core.source="mulberry fa94a93"
-@k.objects.mb1765.word core.word text=electric means=kettle of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1765.keyword k.objects.keyword of=kettle text=electric core.source="mulberry fa94a93"
 
 # knife
 @k.objects.mb1777 k.objects.object name=knife core.source="mulberry fa94a93"
@@ -246,7 +246,7 @@
 @k.objects.mb1777.p4 k.objects.part of=knife name=part4 kind=detail named=no shape=line x=47.7 y=42.1 w=5.9 h=0 z=4 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1777.p4.1 k.objects.point part=$k.objects.mb1777.p4 n=1 x=47.7 y=42.1 core.source="mulberry fa94a93"
 @k.objects.mb1777.p4.2 k.objects.point part=$k.objects.mb1777.p4 n=2 x=53.6 y=42.1 core.source="mulberry fa94a93"
-@k.objects.mb1777.word core.word text=cooking text=feeding text=kitchen text=utensil means=knife of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1777.keyword k.objects.keyword of=knife text=cooking text=feeding text=kitchen text=utensil core.source="mulberry fa94a93"
 
 # ladle
 @k.objects.mb1786 k.objects.object name=ladle core.source="mulberry fa94a93"
@@ -346,7 +346,7 @@
 @k.objects.mb1786.p8.3 k.objects.point part=$k.objects.mb1786.p8 n=3 x=69.7 y=9.9 core.source="mulberry fa94a93"
 @k.objects.mb1786.p8.4 k.objects.point part=$k.objects.mb1786.p8 n=4 x=72.5 y=8.3 core.source="mulberry fa94a93"
 @k.objects.mb1786.p8.5 k.objects.point part=$k.objects.mb1786.p8 n=5 x=74.3 y=8.1 core.source="mulberry fa94a93"
-@k.objects.mb1786.word core.word text=cooking means=ladle of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1786.keyword k.objects.keyword of=ladle text=cooking core.source="mulberry fa94a93"
 
 # masher
 @k.objects.mb1902 k.objects.object name=masher core.source="mulberry fa94a93"
@@ -491,7 +491,7 @@
 @k.objects.mb1902.p16.16 k.objects.point part=$k.objects.mb1902.p16 n=16 x=46.2 y=44.2 core.source="mulberry fa94a93"
 @k.objects.mb1902.p16.17 k.objects.point part=$k.objects.mb1902.p16 n=17 x=47.6 y=45.4 core.source="mulberry fa94a93"
 @k.objects.mb1902.p16.18 k.objects.point part=$k.objects.mb1902.p16 n=18 x=49.7 y=45.9 core.source="mulberry fa94a93"
-@k.objects.mb1902.word core.word text=cooking text=feeding text=kitchen means=masher of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1902.keyword k.objects.keyword of=masher text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # measuring cups
 @k.objects.mb1911 k.objects.object name="measuring cups" core.source="mulberry fa94a93"
@@ -706,7 +706,7 @@
 @k.objects.mb1911.p13.5 k.objects.point part=$k.objects.mb1911.p13 n=5 x=75.5 y=21.8 core.source="mulberry fa94a93"
 @k.objects.mb1911.p13.6 k.objects.point part=$k.objects.mb1911.p13 n=6 x=79.2 y=21.2 core.source="mulberry fa94a93"
 @k.objects.mb1911.p13.7 k.objects.point part=$k.objects.mb1911.p13 n=7 x=81.6 y=22.2 core.source="mulberry fa94a93"
-@k.objects.mb1911.word core.word text=cooking means="measuring cups" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1911.keyword k.objects.keyword of="measuring cups" text=cooking core.source="mulberry fa94a93"
 
 # measuring jug
 @k.objects.mb1912 k.objects.object name="measuring jug" core.source="mulberry fa94a93"
@@ -823,7 +823,7 @@
 @k.objects.mb1912.p16 k.objects.part of="measuring jug" name=part16 kind=detail named=no shape=line x=44.2 y=81.2 w=8 h=0 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1912.p16.1 k.objects.point part=$k.objects.mb1912.p16 n=1 x=52.2 y=81.2 core.source="mulberry fa94a93"
 @k.objects.mb1912.p16.2 k.objects.point part=$k.objects.mb1912.p16 n=2 x=44.2 y=81.2 core.source="mulberry fa94a93"
-@k.objects.mb1912.word core.word text=cooking text=kitchen means="measuring jug" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1912.keyword k.objects.keyword of="measuring jug" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # measuring spoons
 @k.objects.mb1913 k.objects.object name="measuring spoons" core.source="mulberry fa94a93"
@@ -1026,7 +1026,7 @@
 @k.objects.mb1913.p16.5 k.objects.point part=$k.objects.mb1913.p16 n=5 x=89.7 y=23.8 core.source="mulberry fa94a93"
 @k.objects.mb1913.p16.6 k.objects.point part=$k.objects.mb1913.p16 n=6 x=90.4 y=26.1 core.source="mulberry fa94a93"
 @k.objects.mb1913.p16.7 k.objects.point part=$k.objects.mb1913.p16 n=7 x=81 y=57.3 core.source="mulberry fa94a93"
-@k.objects.mb1913.word core.word text=cooking text=kitchen means="measuring spoons" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1913.keyword k.objects.keyword of="measuring spoons" text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # microwave
 @k.objects.mb1933 k.objects.object name=microwave core.source="mulberry fa94a93"
@@ -1154,4 +1154,4 @@
 @k.objects.mb1933.p16.2 k.objects.point part=$k.objects.mb1933.p16 n=2 x=88.2 y=31.3 core.source="mulberry fa94a93"
 @k.objects.mb1933.p16.3 k.objects.point part=$k.objects.mb1933.p16 n=3 x=88.2 y=37.5 core.source="mulberry fa94a93"
 @k.objects.mb1933.p16.4 k.objects.point part=$k.objects.mb1933.p16 n=4 x=77.3 y=37.5 core.source="mulberry fa94a93"
-@k.objects.mb1933.word core.word text=cooking text=electric text=kitchen means=microwave of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1933.keyword k.objects.keyword of=microwave text=cooking text=electric text=kitchen core.source="mulberry fa94a93"

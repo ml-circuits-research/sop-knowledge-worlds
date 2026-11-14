@@ -94,7 +94,7 @@
 @k.objects.mb1758.p16.1 k.objects.point part=$k.objects.mb1758.p16 n=1 x=45.5 y=50.4 core.source="mulberry fa94a93"
 @k.objects.mb1758.p16.2 k.objects.point part=$k.objects.mb1758.p16 n=2 x=68.7 y=55.4 core.source="mulberry fa94a93"
 @k.objects.mb1758.p16.3 k.objects.point part=$k.objects.mb1758.p16 n=3 x=75.2 y=51.6 core.source="mulberry fa94a93"
-@k.objects.mb1758.word core.word text=equipment text=playground means="jungle gym" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1758.keyword k.objects.keyword of="jungle gym" text=equipment text=playground core.source="mulberry fa94a93"
 
 # merry go round
 @k.objects.mb1928 k.objects.object name="merry go round" core.source="mulberry fa94a93"
@@ -253,7 +253,7 @@
 @k.objects.mb1928.p10.15 k.objects.point part=$k.objects.mb1928.p10 n=15 x=13 y=74.1 core.source="mulberry fa94a93"
 @k.objects.mb1928.p10.16 k.objects.point part=$k.objects.mb1928.p10 n=16 x=11.6 y=70.5 core.source="mulberry fa94a93"
 @k.objects.mb1928.p10.17 k.objects.point part=$k.objects.mb1928.p10 n=17 x=11.1 y=66.7 core.source="mulberry fa94a93"
-@k.objects.mb1928.word core.word text=equipment text=playground means="merry go round" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1928.keyword k.objects.keyword of="merry go round" text=equipment text=playground core.source="mulberry fa94a93"
 
 # see saw
 @k.objects.mb2506 k.objects.object name="see saw" core.source="mulberry fa94a93"
@@ -359,7 +359,7 @@
 @k.objects.mb2506.p16.3 k.objects.point part=$k.objects.mb2506.p16 n=3 x=89.3 y=32.3 core.source="mulberry fa94a93"
 @k.objects.mb2506.p16.4 k.objects.point part=$k.objects.mb2506.p16 n=4 x=90.6 y=30.8 core.source="mulberry fa94a93"
 @k.objects.mb2506.p16.5 k.objects.point part=$k.objects.mb2506.p16 n=5 x=90.7 y=25.9 core.source="mulberry fa94a93"
-@k.objects.mb2506.word core.word text=equipment text=playground means="see saw" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2506.keyword k.objects.keyword of="see saw" text=equipment text=playground core.source="mulberry fa94a93"
 
 # slide
 @k.objects.mb2598 k.objects.object name=slide core.source="mulberry fa94a93"
@@ -477,7 +477,7 @@
 @k.objects.mb2598.p15 k.objects.part of=slide name=part15 kind=detail named=no shape=line x=35.2 y=46.1 w=2.4 h=27.4 z=15 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2598.p15.1 k.objects.point part=$k.objects.mb2598.p15 n=1 x=37.6 y=46.1 core.source="mulberry fa94a93"
 @k.objects.mb2598.p15.2 k.objects.point part=$k.objects.mb2598.p15 n=2 x=35.2 y=73.5 core.source="mulberry fa94a93"
-@k.objects.mb2598.word core.word text=equipment text=playground means=slide of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2598.keyword k.objects.keyword of=slide text=equipment text=playground core.source="mulberry fa94a93"
 
 # swing
 @k.objects.mb2751 k.objects.object name=swing core.source="mulberry fa94a93"
@@ -524,4 +524,4 @@
 @k.objects.mb2751.p9.4 k.objects.point part=$k.objects.mb2751.p9 n=4 x=42.9 y=65.4 core.source="mulberry fa94a93"
 @k.objects.mb2751.p9.5 k.objects.point part=$k.objects.mb2751.p9 n=5 x=42.9 y=60.8 core.source="mulberry fa94a93"
 @k.objects.mb2751.p9.6 k.objects.point part=$k.objects.mb2751.p9 n=6 x=44.8 y=60.8 core.source="mulberry fa94a93"
-@k.objects.mb2751.word core.word text=equipment text=playground means=swing of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2751.keyword k.objects.keyword of=swing text=equipment text=playground core.source="mulberry fa94a93"

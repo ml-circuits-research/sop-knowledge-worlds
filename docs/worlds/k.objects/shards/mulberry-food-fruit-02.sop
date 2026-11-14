@@ -571,7 +571,7 @@
 @k.objects.mb1550.p16.7 k.objects.point part=$k.objects.mb1550.p16 n=7 x=37.6 y=84.6 core.source="mulberry fa94a93"
 @k.objects.mb1550.p16.8 k.objects.point part=$k.objects.mb1550.p16 n=8 x=47.1 y=81.4 core.source="mulberry fa94a93"
 @k.objects.mb1550.p16.9 k.objects.point part=$k.objects.mb1550.p16 n=9 x=53.7 y=75.6 core.source="mulberry fa94a93"
-@k.objects.mb1550.word core.word text=food text=fruit means=grapefruit of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1550.keyword k.objects.keyword of=grapefruit text=food text=fruit core.source="mulberry fa94a93"
 
 # kiwi
 @k.objects.mb1774 k.objects.object name=kiwi core.source="mulberry fa94a93"
@@ -744,7 +744,7 @@
 @k.objects.mb1774.p16.5 k.objects.point part=$k.objects.mb1774.p16 n=5 x=68.3 y=31.9 core.source="mulberry fa94a93"
 @k.objects.mb1774.p16.6 k.objects.point part=$k.objects.mb1774.p16 n=6 x=69.7 y=31.9 core.source="mulberry fa94a93"
 @k.objects.mb1774.p16.7 k.objects.point part=$k.objects.mb1774.p16 n=7 x=70.5 y=34.2 core.source="mulberry fa94a93"
-@k.objects.mb1774.word core.word text=food text=fruit means=kiwi of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1774.keyword k.objects.keyword of=kiwi text=food text=fruit core.source="mulberry fa94a93"
 
 # passion fruit
 @k.objects.mb2150 k.objects.object name="passion fruit" core.source="mulberry fa94a93"
@@ -1057,7 +1057,7 @@
 @k.objects.mb2266.p6.3 k.objects.point part=$k.objects.mb2266.p6 n=3 x=51.6 y=15 core.source="mulberry fa94a93"
 @k.objects.mb2266.p6.4 k.objects.point part=$k.objects.mb2266.p6 n=4 x=53.4 y=14.8 core.source="mulberry fa94a93"
 @k.objects.mb2266.p6.5 k.objects.point part=$k.objects.mb2266.p6 n=5 x=53.9 y=13.4 core.source="mulberry fa94a93"
-@k.objects.mb2266.word core.word text=food text=fruit means=plum of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2266.keyword k.objects.keyword of=plum text=food text=fruit core.source="mulberry fa94a93"
 
 # raisin
 @k.objects.mb2358 k.objects.object name=raisin core.source="mulberry fa94a93"
@@ -1394,4 +1394,4 @@
 @k.objects.mb2359.p16.4 k.objects.point part=$k.objects.mb2359.p16 n=4 x=72.1 y=38.2 core.source="mulberry fa94a93"
 @k.objects.mb2359.p16.5 k.objects.point part=$k.objects.mb2359.p16 n=5 x=68 y=43 core.source="mulberry fa94a93"
 @k.objects.mb2359.p16.6 k.objects.point part=$k.objects.mb2359.p16 n=6 x=51.4 y=33.7 core.source="mulberry fa94a93"
-@k.objects.mb2359.word core.word text=food text=fruit means="raisin currants" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2359.keyword k.objects.keyword of="raisin currants" text=food text=fruit core.source="mulberry fa94a93"

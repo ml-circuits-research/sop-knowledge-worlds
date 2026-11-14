@@ -216,7 +216,7 @@
 @k.objects.ome1c3.p5.2 k.objects.point part=$k.objects.ome1c3.p5 n=2 x=80.5 y=47.8 core.source="openmoji 3e01de5"
 @k.objects.ome1c3.p5.3 k.objects.point part=$k.objects.ome1c3.p5 n=3 x=88.3 y=55.6 core.source="openmoji 3e01de5"
 @k.objects.ome1c3.p5.4 k.objects.point part=$k.objects.ome1c3.p5 n=4 x=71 y=80.6 core.source="openmoji 3e01de5"
-@k.objects.ome1c3.word core.word text=toggling text="changeover switch" text="exchange counter" text=left text=right means=switch of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome1c3.keyword k.objects.keyword of=switch text=toggling text="changeover switch" text="exchange counter" text=left text=right core.source="openmoji 3e01de5"
 
 # led
 @k.objects.ome1c7 k.objects.object name=led core.source="openmoji 3e01de5"
@@ -510,7 +510,7 @@
 @k.objects.ome1cc.p7.1 k.objects.point part=$k.objects.ome1cc.p7 n=1 x=47.1 y=22.9 core.source="openmoji 3e01de5"
 @k.objects.ome1cc.p7.2 k.objects.point part=$k.objects.ome1cc.p7 n=2 x=53 y=22.9 core.source="openmoji 3e01de5"
 @k.objects.ome1cc.p7.3 k.objects.point part=$k.objects.ome1cc.p7 n=3 x=47.1 y=22.9 core.source="openmoji 3e01de5"
-@k.objects.ome1cc.word core.word text=technology text=device text=portable text=screen text=phablet text=ipad means=tablet of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome1cc.keyword k.objects.keyword of=tablet text=technology text=device text=portable text=screen text=phablet text=ipad core.source="openmoji 3e01de5"
 
 # gps
 @k.objects.ome1cd k.objects.object name=gps core.source="openmoji 3e01de5"
@@ -627,7 +627,7 @@
 @k.objects.ome1cd.p16 k.objects.part of=gps name=part16 kind=detail named=no shape=line x=12.1 y=56.1 w=6.1 h=0 z=16 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome1cd.p16.1 k.objects.point part=$k.objects.ome1cd.p16 n=1 x=12.1 y=56.1 core.source="openmoji 3e01de5"
 @k.objects.ome1cd.p16.2 k.objects.point part=$k.objects.ome1cd.p16 n=2 x=18.2 y=56.1 core.source="openmoji 3e01de5"
-@k.objects.ome1cd.word core.word text=navigation text=localization text=location text=reception text=signal text=wireless text=crosshair text=where means=gps of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome1cd.keyword k.objects.keyword of=gps text=navigation text=localization text=location text=reception text=signal text=wireless text=crosshair text=where core.source="openmoji 3e01de5"
 
 # smartwatch
 @k.objects.ome1ce k.objects.object name=smartwatch core.source="openmoji 3e01de5"
@@ -706,4 +706,4 @@
 @k.objects.ome1ce.p15.8 k.objects.point part=$k.objects.ome1ce.p15 n=8 x=47.2 y=59.9 core.source="openmoji 3e01de5"
 @k.objects.ome1ce.p15.9 k.objects.point part=$k.objects.ome1ce.p15 n=9 x=45.8 y=61.1 core.source="openmoji 3e01de5"
 @k.objects.ome1ce.p16 k.objects.part of=smartwatch name=part16 named=no shape=circle x=47.2 y=88.9 w=5.5 h=5.5 z=16 colour=black rgb="#000000" core.source="openmoji 3e01de5"
-@k.objects.ome1ce.word core.word text=clock text=apps text=monitor text=intelligent text=device text=armlet means=smartwatch of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome1ce.keyword k.objects.keyword of=smartwatch text=clock text=apps text=monitor text=intelligent text=device text=armlet core.source="openmoji 3e01de5"

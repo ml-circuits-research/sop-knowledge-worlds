@@ -174,7 +174,7 @@
 @k.objects.mb2982.p16 k.objects.part of="video tape" name=part16 kind=detail named=no shape=line x=90.5 y=25.9 w=0 h=13.6 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2982.p16.1 k.objects.point part=$k.objects.mb2982.p16 n=1 x=90.5 y=25.9 core.source="mulberry fa94a93"
 @k.objects.mb2982.p16.2 k.objects.point part=$k.objects.mb2982.p16 n=2 x=90.5 y=39.5 core.source="mulberry fa94a93"
-@k.objects.mb2982.word core.word text=electric means="video tape" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2982.keyword k.objects.keyword of="video tape" text=electric core.source="mulberry fa94a93"
 
 # walkman
 @k.objects.mb3001 k.objects.object name=walkman core.source="mulberry fa94a93"
@@ -323,4 +323,4 @@
 @k.objects.mb3001.p16.4 k.objects.point part=$k.objects.mb3001.p16 n=4 x=85.1 y=58.2 core.source="mulberry fa94a93"
 @k.objects.mb3001.p16.5 k.objects.point part=$k.objects.mb3001.p16 n=5 x=87.4 y=50.9 core.source="mulberry fa94a93"
 @k.objects.mb3001.p16.6 k.objects.point part=$k.objects.mb3001.p16 n=6 x=89.7 y=47.7 core.source="mulberry fa94a93"
-@k.objects.mb3001.word core.word text=electric means=walkman of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3001.keyword k.objects.keyword of=walkman text=electric core.source="mulberry fa94a93"

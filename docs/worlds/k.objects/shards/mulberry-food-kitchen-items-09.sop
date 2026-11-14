@@ -123,7 +123,7 @@
 @k.objects.mb2880.p16.2 k.objects.point part=$k.objects.mb2880.p16 n=2 x=77.2 y=11.9 core.source="mulberry fa94a93"
 @k.objects.mb2880.p16.3 k.objects.point part=$k.objects.mb2880.p16 n=3 x=79.4 y=10.7 core.source="mulberry fa94a93"
 @k.objects.mb2880.p16.4 k.objects.point part=$k.objects.mb2880.p16 n=4 x=88.4 y=13.6 core.source="mulberry fa94a93"
-@k.objects.mb2880.word core.word text=cooking text=kitchen means=tongs of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2880.keyword k.objects.keyword of=tongs text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # tray
 @k.objects.mb2914 k.objects.object name=tray core.source="mulberry fa94a93"
@@ -226,7 +226,7 @@
 @k.objects.mb2914.p10.2 k.objects.point part=$k.objects.mb2914.p10 n=2 x=75.1 y=35.6 core.source="mulberry fa94a93"
 @k.objects.mb2914.p10.3 k.objects.point part=$k.objects.mb2914.p10 n=3 x=26 y=35.6 core.source="mulberry fa94a93"
 @k.objects.mb2914.p10.4 k.objects.point part=$k.objects.mb2914.p10 n=4 x=15.4 y=64.6 core.source="mulberry fa94a93"
-@k.objects.mb2914.word core.word text=cooking text=feeding text=kitchen means=tray of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2914.keyword k.objects.keyword of=tray text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"
 
 # whisk
 @k.objects.mb3057 k.objects.object name=whisk core.source="mulberry fa94a93"
@@ -334,7 +334,7 @@
 @k.objects.mb3057.p15 k.objects.part of=whisk name=part15 kind=detail named=no shape=line x=50.4 y=53.4 w=0 h=10 z=15 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb3057.p15.1 k.objects.point part=$k.objects.mb3057.p15 n=1 x=50.4 y=53.4 core.source="mulberry fa94a93"
 @k.objects.mb3057.p15.2 k.objects.point part=$k.objects.mb3057.p15 n=2 x=50.4 y=63.4 core.source="mulberry fa94a93"
-@k.objects.mb3057.word core.word text=cooking text=kitchen means=whisk of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3057.keyword k.objects.keyword of=whisk text=cooking text=kitchen core.source="mulberry fa94a93"
 
 # wooden spoon
 @k.objects.mb3084 k.objects.object name="wooden spoon" core.source="mulberry fa94a93"
@@ -428,4 +428,4 @@
 @k.objects.mb3084.p5.15 k.objects.point part=$k.objects.mb3084.p5 n=15 x=54.8 y=13.1 core.source="mulberry fa94a93"
 @k.objects.mb3084.p5.16 k.objects.point part=$k.objects.mb3084.p5 n=16 x=57.2 y=17.2 core.source="mulberry fa94a93"
 @k.objects.mb3084.p5.17 k.objects.point part=$k.objects.mb3084.p5 n=17 x=58.1 y=22.5 core.source="mulberry fa94a93"
-@k.objects.mb3084.word core.word text=cooking text=feeding text=kitchen means="wooden spoon" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3084.keyword k.objects.keyword of="wooden spoon" text=cooking text=feeding text=kitchen core.source="mulberry fa94a93"

@@ -148,7 +148,7 @@
 @k.objects.mb138.p13.7 k.objects.point part=$k.objects.mb138.p13 n=7 x=51.2 y=55.4 core.source="mulberry fa94a93"
 @k.objects.mb138.p13.8 k.objects.point part=$k.objects.mb138.p13 n=8 x=53 y=56.1 core.source="mulberry fa94a93"
 @k.objects.mb138.p13.9 k.objects.point part=$k.objects.mb138.p13 n=9 x=53.8 y=57.9 core.source="mulberry fa94a93"
-@k.objects.mb138.word core.word text=clothes means="beach bag" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb138.keyword k.objects.keyword of="beach bag" text=clothes core.source="mulberry fa94a93"
 
 # bow
 @k.objects.mb228 k.objects.object name=bow core.source="mulberry fa94a93"
@@ -659,7 +659,7 @@
 @k.objects.mb299.p12.6 k.objects.point part=$k.objects.mb299.p12 n=6 x=81.4 y=48 core.source="mulberry fa94a93"
 @k.objects.mb299.p12.7 k.objects.point part=$k.objects.mb299.p12 n=7 x=80.7 y=49.6 core.source="mulberry fa94a93"
 @k.objects.mb299.p12.8 k.objects.point part=$k.objects.mb299.p12 n=8 x=81.4 y=51.3 core.source="mulberry fa94a93"
-@k.objects.mb299.word core.word text=grooming means=buckle of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb299.keyword k.objects.keyword of=buckle text=grooming core.source="mulberry fa94a93"
 
 # button
 @k.objects.mb318 k.objects.object name=button core.source="mulberry fa94a93"
@@ -832,7 +832,7 @@
 @k.objects.mb318.p6.10 k.objects.point part=$k.objects.mb318.p6 n=10 x=51.3 y=54.5 core.source="mulberry fa94a93"
 @k.objects.mb318.p6.11 k.objects.point part=$k.objects.mb318.p6 n=11 x=53.4 y=57 core.source="mulberry fa94a93"
 @k.objects.mb318.p6.12 k.objects.point part=$k.objects.mb318.p6 n=12 x=54.3 y=61.2 core.source="mulberry fa94a93"
-@k.objects.mb318.word core.word text=clothes means=button of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb318.keyword k.objects.keyword of=button text=clothes core.source="mulberry fa94a93"
 
 # hand bag
 @k.objects.mb1606 k.objects.object name="hand bag" core.source="mulberry fa94a93"
@@ -1009,7 +1009,7 @@
 @k.objects.mb1606.p11.5 k.objects.point part=$k.objects.mb1606.p11 n=5 x=47.8 y=79.7 core.source="mulberry fa94a93"
 @k.objects.mb1606.p11.6 k.objects.point part=$k.objects.mb1606.p11 n=6 x=52.5 y=79.7 core.source="mulberry fa94a93"
 @k.objects.mb1606.p11.7 k.objects.point part=$k.objects.mb1606.p11 n=7 x=53.1 y=80.4 core.source="mulberry fa94a93"
-@k.objects.mb1606.word core.word text=clothes means="hand bag" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1606.keyword k.objects.keyword of="hand bag" text=clothes core.source="mulberry fa94a93"
 
 # handcuffs
 @k.objects.mb1610 k.objects.object name=handcuffs core.source="mulberry fa94a93"
@@ -1223,7 +1223,7 @@
 @k.objects.mb1610.p16.1 k.objects.point part=$k.objects.mb1610.p16 n=1 x=83.5 y=32.5 core.source="mulberry fa94a93"
 @k.objects.mb1610.p16.2 k.objects.point part=$k.objects.mb1610.p16 n=2 x=83.5 y=16 core.source="mulberry fa94a93"
 @k.objects.mb1610.p16.3 k.objects.point part=$k.objects.mb1610.p16 n=3 x=88.6 y=16 core.source="mulberry fa94a93"
-@k.objects.mb1610.word core.word text=equipment means=handcuffs of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1610.keyword k.objects.keyword of=handcuffs text=equipment core.source="mulberry fa94a93"
 
 # hankerchief
 @k.objects.mb1614 k.objects.object name=hankerchief core.source="mulberry fa94a93"
@@ -1291,4 +1291,4 @@
 @k.objects.mb1614.p14 k.objects.part of=hankerchief name=part14 kind=detail named=no shape=line x=11.4 y=64 w=59.6 h=20.9 z=14 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1614.p14.1 k.objects.point part=$k.objects.mb1614.p14 n=1 x=11.4 y=64 core.source="mulberry fa94a93"
 @k.objects.mb1614.p14.2 k.objects.point part=$k.objects.mb1614.p14 n=2 x=71 y=84.9 core.source="mulberry fa94a93"
-@k.objects.mb1614.word core.word text=clothes means=hankerchief of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1614.keyword k.objects.keyword of=hankerchief text=clothes core.source="mulberry fa94a93"

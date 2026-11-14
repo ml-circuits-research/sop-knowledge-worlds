@@ -306,7 +306,7 @@
 @k.objects.ome000.p3.38 k.objects.point part=$k.objects.ome000.p3 n=38 x=14.5 y=34.6 core.source="openmoji 3e01de5"
 @k.objects.ome000.p3.39 k.objects.point part=$k.objects.ome000.p3 n=39 x=10 y=33.3 core.source="openmoji 3e01de5"
 @k.objects.ome000.p4 k.objects.part of=goldfish name=eye named=model shape=circle x=70.8 y=44.4 w=5.6 h=5.6 z=4 colour=black rgb="#000000" core.source="openmoji 3e01de5"
-@k.objects.ome000.word core.word text=fish text=water means=goldfish of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome000.keyword k.objects.keyword of=goldfish text=fish text=water core.source="openmoji 3e01de5"
 
 # poppy
 @k.objects.ome002 k.objects.object name=poppy core.source="openmoji 3e01de5"
@@ -412,7 +412,7 @@
 @k.objects.ome002.p6.13 k.objects.point part=$k.objects.ome002.p6 n=13 x=62.1 y=67.1 core.source="openmoji 3e01de5"
 @k.objects.ome002.p6.14 k.objects.point part=$k.objects.ome002.p6 n=14 x=58.2 y=67.3 core.source="openmoji 3e01de5"
 @k.objects.ome002.p6.15 k.objects.point part=$k.objects.ome002.p6 n=15 x=55.1 y=66.7 core.source="openmoji 3e01de5"
-@k.objects.ome002.word core.word text=remembrance text=veterans means=poppy of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome002.keyword k.objects.keyword of=poppy text=remembrance text=veterans core.source="openmoji 3e01de5"
 
 # doe
 @k.objects.ome003 k.objects.object name=doe core.source="openmoji 3e01de5"
@@ -536,7 +536,7 @@
 @k.objects.ome003.p10.1 k.objects.point part=$k.objects.ome003.p10 n=1 x=53.2 y=67.9 core.source="openmoji 3e01de5"
 @k.objects.ome003.p10.2 k.objects.point part=$k.objects.ome003.p10 n=2 x=63.8 y=68.6 core.source="openmoji 3e01de5"
 @k.objects.ome003.p10.3 k.objects.point part=$k.objects.ome003.p10 n=3 x=69.2 y=67.6 core.source="openmoji 3e01de5"
-@k.objects.ome003.word core.word text=forest text=hunt text=antler text=deer means=doe of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome003.keyword k.objects.keyword of=doe text=forest text=hunt text=antler text=deer core.source="openmoji 3e01de5"
 
 # spouting-orca
 @k.objects.ome004 k.objects.object name=spouting-orca core.source="openmoji 3e01de5"
@@ -645,7 +645,7 @@
 @k.objects.ome004.p8.35 k.objects.point part=$k.objects.ome004.p8 n=35 x=34.2 y=71.9 core.source="openmoji 3e01de5"
 @k.objects.ome004.p8.36 k.objects.point part=$k.objects.ome004.p8 n=36 x=40.7 y=74.1 core.source="openmoji 3e01de5"
 @k.objects.ome004.p8.37 k.objects.point part=$k.objects.ome004.p8 n=37 x=42.3 y=75.9 core.source="openmoji 3e01de5"
-@k.objects.ome004.word core.word text=cetacean text=whale text=spouting text=orca text="killer whale" text=blackfish text=swim text=animal text=water means=spouting-orca of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome004.keyword k.objects.keyword of=spouting-orca text=cetacean text=whale text=spouting text=orca text="killer whale" text=blackfish text=swim text=animal text=water core.source="openmoji 3e01de5"
 
 # narwhal
 @k.objects.ome006 k.objects.object name=narwhal core.source="openmoji 3e01de5"
@@ -755,7 +755,7 @@
 @k.objects.ome006.p6.9 k.objects.point part=$k.objects.ome006.p6 n=9 x=51 y=50.5 core.source="openmoji 3e01de5"
 @k.objects.ome006.p6.10 k.objects.point part=$k.objects.ome006.p6 n=10 x=48.3 y=51.2 core.source="openmoji 3e01de5"
 @k.objects.ome006.p6.11 k.objects.point part=$k.objects.ome006.p6 n=11 x=44.8 y=50.3 core.source="openmoji 3e01de5"
-@k.objects.ome006.word core.word text=cetacean text=whale text=swim text=animal text=water means=narwhal of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome006.keyword k.objects.keyword of=narwhal text=cetacean text=whale text=swim text=animal text=water core.source="openmoji 3e01de5"
 
 # beluga
 @k.objects.ome007 k.objects.object name=beluga core.source="openmoji 3e01de5"
@@ -884,7 +884,7 @@
 @k.objects.ome007.p7.4 k.objects.point part=$k.objects.ome007.p7 n=4 x=21.9 y=74.3 core.source="openmoji 3e01de5"
 @k.objects.ome007.p7.5 k.objects.point part=$k.objects.ome007.p7 n=5 x=23.6 y=74.6 core.source="openmoji 3e01de5"
 @k.objects.ome007.p7.6 k.objects.point part=$k.objects.ome007.p7 n=6 x=29 y=73.4 core.source="openmoji 3e01de5"
-@k.objects.ome007.word core.word text=cetacean text=whale text=swim text=animal text=water means=beluga of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome007.keyword k.objects.keyword of=beluga text=cetacean text=whale text=swim text=animal text=water core.source="openmoji 3e01de5"
 
 # porpoise
 @k.objects.ome008 k.objects.object name=porpoise core.source="openmoji 3e01de5"
@@ -1036,4 +1036,4 @@
 @k.objects.ome008.p7.9 k.objects.point part=$k.objects.ome008.p7 n=9 x=48.7 y=53.9 core.source="openmoji 3e01de5"
 @k.objects.ome008.p7.10 k.objects.point part=$k.objects.ome008.p7 n=10 x=49.7 y=50.4 core.source="openmoji 3e01de5"
 @k.objects.ome008.p7.11 k.objects.point part=$k.objects.ome008.p7 n=11 x=50 y=46.2 core.source="openmoji 3e01de5"
-@k.objects.ome008.word core.word text=cetacean text=swim text=animal text=water means=porpoise of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome008.keyword k.objects.keyword of=porpoise text=cetacean text=swim text=animal text=water core.source="openmoji 3e01de5"

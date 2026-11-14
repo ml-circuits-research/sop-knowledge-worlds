@@ -1,4 +1,4 @@
-# k.objects/shards/stand-ins-kinds: 12 common things with no drawing at all, drawn by the drawing of their kind (a stand-in: the host says "drawn as a ..."), the parent one step up in k.kinds that a world of the catalog states by name (k.attributes kind, k.animals, k.food, k.wearables). Written by tools/stand-ins-kinds.mjs.
+# k.objects/shards/stand-ins-kinds: 13 common things with no drawing at all, drawn by the drawing of their kind (a stand-in: the host says "drawn as a ..."), the parent one step up in k.kinds that a world of the catalog states by name (k.attributes kind, k.animals, k.food, k.wearables). Written by tools/stand-ins-kinds.mjs.
 # sources: hand-core 1 (the kind facts of the hand-written worlds, read through k.kinds.parent)
 # license: CC0-1.0
 # script: tools/stand-ins-kinds.mjs
@@ -23,6 +23,8 @@
 @k.objects.kinds.hummus k.objects.stand_in name=hummus drawing=dish core.source="hand-core 1"
 # mall (a public area set aside as a pedestrian walk): a kind of building, by k.attributes.thing
 @k.objects.kinds.mall k.objects.stand_in name=mall drawing=building core.source="hand-core 1"
+# paella (saffron-flavored dish made of rice with shellfish and chicken): a kind of dish, by k.food.food
+@k.objects.kinds.paella k.objects.stand_in name=paella drawing=dish core.source="hand-core 1"
 # pike (a broad highway designed for high-speed traffic): a kind of fish, by k.animals.animal
 @k.objects.kinds.pike k.objects.stand_in name=pike drawing=fish core.source="hand-core 1"
 # stork (large mostly Old World wading birds typically having white-and-black plumage): a kind of bird, by k.animals.animal

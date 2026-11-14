@@ -84,7 +84,7 @@
 @k.objects.u1f3b7.p8.14 k.objects.point part=$k.objects.u1f3b7.p8 n=14 x=13.5 y=55 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b7.p8.15 k.objects.point part=$k.objects.u1f3b7.p8 n=15 x=12.1 y=48.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b7.p8.16 k.objects.point part=$k.objects.u1f3b7.p8 n=16 x=13.2 y=47.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b7.word core.word text=instrument text=music text=sax means=saxophone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b7.keyword k.objects.keyword of=saxophone text=instrument text=music text=sax core.source="cldr 48"
 
 # trumpet
 @k.objects.u1f3ba k.objects.object name=trumpet core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -271,7 +271,7 @@
 @k.objects.u1f3ba.p16.13 k.objects.point part=$k.objects.u1f3ba.p16 n=13 x=96.5 y=14 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ba.p16.14 k.objects.point part=$k.objects.u1f3ba.p16 n=14 x=96.9 y=12.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ba.p16.15 k.objects.point part=$k.objects.u1f3ba.p16 n=15 x=96.5 y=11 core.source="noto-emoji 99701e0"
-@k.objects.u1f3ba.word core.word text=instrument text=music means=trumpet of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ba.keyword k.objects.keyword of=trumpet text=instrument text=music core.source="cldr 48"
 
 # trombone
 @k.objects.u1fa8a k.objects.object name=trombone core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -410,7 +410,7 @@
 @k.objects.u1fa8a.p9.11 k.objects.point part=$k.objects.u1fa8a.p9 n=11 x=34.3 y=45.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fa8a.p9.12 k.objects.point part=$k.objects.u1fa8a.p9 n=12 x=24.6 y=35.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa8a.p9.13 k.objects.point part=$k.objects.u1fa8a.p9 n=13 x=20.3 y=32.6 core.source="noto-emoji 99701e0"
-@k.objects.u1fa8a.word core.word text=brass text=instrument text=jazz text=music text=sad text=slide means=trombone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa8a.keyword k.objects.keyword of=trombone text=brass text=instrument text=jazz text=music text=sad text=slide core.source="cldr 48"
 
 # accordion
 @k.objects.u1fa97 k.objects.object name=accordion core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -624,7 +624,7 @@
 @k.objects.u1fa97.p16.10 k.objects.point part=$k.objects.u1fa97.p16 n=10 x=92.8 y=18.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa97.p16.11 k.objects.point part=$k.objects.u1fa97.p16 n=11 x=91.8 y=63.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa97.p16.12 k.objects.point part=$k.objects.u1fa97.p16 n=12 x=89.8 y=67 core.source="noto-emoji 99701e0"
-@k.objects.u1fa97.word core.word text=box text=concertina text=instrument text=music text=squeeze text=squeezebox means=accordion of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa97.keyword k.objects.keyword of=accordion text=box text=concertina text=instrument text=music text=squeeze text=squeezebox core.source="cldr 48"
 
 # guitar
 @k.objects.u1f3b8 k.objects.object name=guitar core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -840,7 +840,7 @@
 @k.objects.u1f3b8.p16.8 k.objects.point part=$k.objects.u1f3b8.p16 n=8 x=40.7 y=30.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b8.p16.9 k.objects.point part=$k.objects.u1f3b8.p16 n=9 x=35.6 y=34.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b8.p16.10 k.objects.point part=$k.objects.u1f3b8.p16 n=10 x=32.9 y=39.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b8.word core.word text=instrument text=music text=strat means=guitar of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b8.keyword k.objects.keyword of=guitar text=instrument text=music text=strat core.source="cldr 48"
 
 # musical keyboard
 @k.objects.u1f3b9 k.objects.object name="musical keyboard" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -942,7 +942,7 @@
 @k.objects.u1f3b9.p10.3 k.objects.point part=$k.objects.u1f3b9.p10 n=3 x=23.1 y=55 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b9.p10.4 k.objects.point part=$k.objects.u1f3b9.p10 n=4 x=31.4 y=55 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b9.p10.5 k.objects.point part=$k.objects.u1f3b9.p10 n=5 x=31.7 y=61.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b9.word core.word text=instrument text=keyboard text=music text=musical text=piano means="musical keyboard" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b9.keyword k.objects.keyword of="musical keyboard" text=instrument text=keyboard text=music text=musical text=piano core.source="cldr 48"
 
 # violin
 @k.objects.u1f3bb k.objects.object name=violin core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1157,7 +1157,7 @@
 @k.objects.u1f3bb.p16.12 k.objects.point part=$k.objects.u1f3bb.p16 n=12 x=86.7 y=80.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3bb.p16.13 k.objects.point part=$k.objects.u1f3bb.p16 n=13 x=88.9 y=79.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3bb.p16.14 k.objects.point part=$k.objects.u1f3bb.p16 n=14 x=88.9 y=78 core.source="noto-emoji 99701e0"
-@k.objects.u1f3bb.word core.word text=instrument text=music means=violin of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3bb.keyword k.objects.keyword of=violin text=instrument text=music core.source="cldr 48"
 
 # banjo
 @k.objects.u1fa95 k.objects.object name=banjo core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1355,4 +1355,4 @@
 @k.objects.u1fa95.p16.1 k.objects.point part=$k.objects.u1fa95.p16 n=1 x=22.1 y=71.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa95.p16.2 k.objects.point part=$k.objects.u1fa95.p16 n=2 x=81.7 y=17.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa95.p16.3 k.objects.point part=$k.objects.u1fa95.p16 n=3 x=83.7 y=16.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fa95.word core.word text=music text=stringed means=banjo of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa95.keyword k.objects.keyword of=banjo text=music text=stringed core.source="cldr 48"

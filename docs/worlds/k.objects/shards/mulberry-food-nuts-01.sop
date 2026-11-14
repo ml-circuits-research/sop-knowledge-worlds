@@ -578,7 +578,7 @@
 @k.objects.mb347.p16.3 k.objects.point part=$k.objects.mb347.p16 n=3 x=35 y=74.1 core.source="mulberry fa94a93"
 @k.objects.mb347.p16.4 k.objects.point part=$k.objects.mb347.p16 n=4 x=38.2 y=72.6 core.source="mulberry fa94a93"
 @k.objects.mb347.p16.5 k.objects.point part=$k.objects.mb347.p16 n=5 x=40.2 y=72.2 core.source="mulberry fa94a93"
-@k.objects.mb347.word core.word text=celebration text=food means="candy cane" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb347.keyword k.objects.keyword of="candy cane" text=celebration text=food core.source="mulberry fa94a93"
 
 # cashew
 @k.objects.mb392 k.objects.object name=cashew core.source="mulberry fa94a93"
@@ -1366,4 +1366,4 @@
 @k.objects.mb2167.p16.6 k.objects.point part=$k.objects.mb2167.p16 n=6 x=57.3 y=14.2 core.source="mulberry fa94a93"
 @k.objects.mb2167.p16.7 k.objects.point part=$k.objects.mb2167.p16 n=7 x=51.3 y=13.4 core.source="mulberry fa94a93"
 @k.objects.mb2167.p16.8 k.objects.point part=$k.objects.mb2167.p16 n=8 x=46 y=16.8 core.source="mulberry fa94a93"
-@k.objects.mb2167.word core.word text=food means=peanut of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2167.keyword k.objects.keyword of=peanut text=food core.source="mulberry fa94a93"

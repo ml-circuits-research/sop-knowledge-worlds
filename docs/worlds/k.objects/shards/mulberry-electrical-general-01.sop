@@ -573,7 +573,7 @@
 @k.objects.mb528.p16 k.objects.part of="clock radio" name=part16 kind=detail named=no shape=line x=27.6 y=38.4 w=52.9 h=0 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb528.p16.1 k.objects.point part=$k.objects.mb528.p16 n=1 x=27.6 y=38.4 core.source="mulberry fa94a93"
 @k.objects.mb528.p16.2 k.objects.point part=$k.objects.mb528.p16 n=2 x=80.5 y=38.4 core.source="mulberry fa94a93"
-@k.objects.mb528.word core.word text=electric means="clock radio" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb528.keyword k.objects.keyword of="clock radio" text=electric core.source="mulberry fa94a93"
 
 # energy monitor
 @k.objects.mb1031 k.objects.object name="energy monitor" core.source="mulberry fa94a93"
@@ -974,7 +974,7 @@
 @k.objects.mb1791.p11.7 k.objects.point part=$k.objects.mb1791.p11 n=7 x=90.8 y=89.5 core.source="mulberry fa94a93"
 @k.objects.mb1791.p11.8 k.objects.point part=$k.objects.mb1791.p11 n=8 x=92.6 y=91.1 core.source="mulberry fa94a93"
 @k.objects.mb1791.p11.9 k.objects.point part=$k.objects.mb1791.p11 n=9 x=94 y=93.6 core.source="mulberry fa94a93"
-@k.objects.mb1791.word core.word text=electric means=lamp of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1791.keyword k.objects.keyword of=lamp text=electric core.source="mulberry fa94a93"
 
 # lantern
 @k.objects.mb1794 k.objects.object name=lantern core.source="mulberry fa94a93"

@@ -188,7 +188,7 @@
 @k.objects.u1f6fb.p16.6 k.objects.point part=$k.objects.u1f6fb.p16 n=6 x=37.6 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f6fb.p16.7 k.objects.point part=$k.objects.u1f6fb.p16 n=7 x=36.4 y=48.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6fb.p16.8 k.objects.point part=$k.objects.u1f6fb.p16 n=8 x=30.6 y=51.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f6fb.word core.word text=automobile text=car text=flatbed text=pick-up text=pickup text=transportation text=truck means="pickup truck" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6fb.keyword k.objects.keyword of="pickup truck" text=automobile text=car text=flatbed text=pick-up text=pickup text=transportation text=truck core.source="cldr 48"
 
 # delivery truck
 @k.objects.u1f69a k.objects.object name="delivery truck" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -381,7 +381,7 @@
 @k.objects.u1f69a.p14.4 k.objects.point part=$k.objects.u1f69a.p14 n=4 x=60.5 y=69.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f69a.p15 k.objects.part of="delivery truck" name=part15 named=no shape=rectangle x=70.1 y=20.7 w=2.4 h=48.9 z=15 colour=orange rgb="#D16E1D" core.source="noto-emoji 99701e0"
 @k.objects.u1f69a.p16 k.objects.part of="delivery truck" name=part16 named=no shape=rectangle x=81.9 y=20.8 w=2.4 h=48.6 z=16 colour=orange rgb="#D16E1D" core.source="noto-emoji 99701e0"
-@k.objects.u1f69a.word core.word text=car text=delivery text=drive text=truck text=vehicle means="delivery truck" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f69a.keyword k.objects.keyword of="delivery truck" text=car text=delivery text=drive text=truck text=vehicle core.source="cldr 48"
 
 # articulated lorry
 @k.objects.u1f69b k.objects.object name="articulated lorry" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -560,7 +560,7 @@
 @k.objects.u1f69b.p16.14 k.objects.point part=$k.objects.u1f69b.p16 n=14 x=80.1 y=90.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f69b.p16.15 k.objects.point part=$k.objects.u1f69b.p16 n=15 x=81.5 y=93.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f69b.p16.16 k.objects.point part=$k.objects.u1f69b.p16 n=16 x=84.4 y=96.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f69b.word core.word text=articulated text=car text=drive text=lorry text=move text=semi text=truck text=vehicle means="articulated lorry" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f69b.keyword k.objects.keyword of="articulated lorry" text=articulated text=car text=drive text=lorry text=move text=semi text=truck text=vehicle core.source="cldr 48"
 
 # tractor
 @k.objects.u1f69c k.objects.object name=tractor core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -766,7 +766,7 @@
 @k.objects.u1f69c.p16.14 k.objects.point part=$k.objects.u1f69c.p16 n=14 x=80.1 y=70.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f69c.p16.15 k.objects.point part=$k.objects.u1f69c.p16 n=15 x=83.3 y=72.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f69c.p16.16 k.objects.point part=$k.objects.u1f69c.p16 n=16 x=85.3 y=75.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f69c.word core.word text=vehicle means=tractor of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f69c.keyword k.objects.keyword of=tractor text=vehicle core.source="cldr 48"
 
 # racing car
 @k.objects.u1f3ce k.objects.object name="racing car" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -971,7 +971,7 @@
 @k.objects.u1f3ce.p16.14 k.objects.point part=$k.objects.u1f3ce.p16 n=14 x=85.8 y=82.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ce.p16.15 k.objects.point part=$k.objects.u1f3ce.p16 n=15 x=84.3 y=80.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ce.p16.16 k.objects.point part=$k.objects.u1f3ce.p16 n=16 x=81.7 y=78.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f3ce.word core.word text=car text=racing text=zoom means="racing car" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ce.keyword k.objects.keyword of="racing car" text=car text=racing text=zoom core.source="cldr 48"
 
 # motorcycle
 @k.objects.u1f3cd k.objects.object name=motorcycle core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1182,7 +1182,7 @@
 @k.objects.u1f3cd.p16.10 k.objects.point part=$k.objects.u1f3cd.p16 n=10 x=43.2 y=80.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3cd.p16.11 k.objects.point part=$k.objects.u1f3cd.p16 n=11 x=42.1 y=78.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3cd.p16.12 k.objects.point part=$k.objects.u1f3cd.p16 n=12 x=43.5 y=76.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f3cd.word core.word text=racing means=motorcycle of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3cd.keyword k.objects.keyword of=motorcycle text=racing core.source="cldr 48"
 
 # motor scooter
 @k.objects.u1f6f5 k.objects.object name="motor scooter" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1393,7 +1393,7 @@
 @k.objects.u1f6f5.p16.9 k.objects.point part=$k.objects.u1f6f5.p16 n=9 x=66.7 y=46.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f5.p16.10 k.objects.point part=$k.objects.u1f6f5.p16 n=10 x=53.7 y=46.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f5.p16.11 k.objects.point part=$k.objects.u1f6f5.p16 n=11 x=52.5 y=47.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f5.word core.word text=motor text=scooter means="motor scooter" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6f5.keyword k.objects.keyword of="motor scooter" text=motor text=scooter core.source="cldr 48"
 
 # manual wheelchair
 @k.objects.u1f9bd k.objects.object name="manual wheelchair" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1606,4 +1606,4 @@
 @k.objects.u1f9bd.p15.24 k.objects.point part=$k.objects.u1f9bd.p15 n=24 x=74.7 y=48 core.source="noto-emoji 99701e0"
 @k.objects.u1f9bd.p15.25 k.objects.point part=$k.objects.u1f9bd.p15 n=25 x=68.1 y=47 core.source="noto-emoji 99701e0"
 @k.objects.u1f9bd.p16 k.objects.part of="manual wheelchair" name=part16 named=no shape=circle x=63.2 y=63.1 w=9.7 h=9.7 z=16 colour=grey rgb="#757575" core.source="noto-emoji 99701e0"
-@k.objects.u1f9bd.word core.word text=accessibility text=manual text=wheelchair means="manual wheelchair" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9bd.keyword k.objects.keyword of="manual wheelchair" text=accessibility text=manual text=wheelchair core.source="cldr 48"

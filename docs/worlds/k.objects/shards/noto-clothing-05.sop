@@ -152,7 +152,7 @@
 @k.objects.u1f461.p8.11 k.objects.point part=$k.objects.u1f461.p8 n=11 x=55.7 y=81.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f461.p8.12 k.objects.point part=$k.objects.u1f461.p8 n=12 x=54.6 y=81 core.source="noto-emoji 99701e0"
 @k.objects.u1f461.p8.13 k.objects.point part=$k.objects.u1f461.p8 n=13 x=54.5 y=79.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f461.word core.word text=clothing text=sandal text=shoe text=woman text=woman’s means="woman’s sandal" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f461.keyword k.objects.keyword of="woman’s sandal" text=clothing text=sandal text=shoe text=woman text=woman’s core.source="cldr 48"
 
 # ballet shoes
 @k.objects.u1fa70 k.objects.object name="ballet shoes" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -368,7 +368,7 @@
 @k.objects.u1fa70.p16.2 k.objects.point part=$k.objects.u1fa70.p16 n=2 x=85.6 y=53 core.source="noto-emoji 99701e0"
 @k.objects.u1fa70.p16.3 k.objects.point part=$k.objects.u1fa70.p16 n=3 x=83.1 y=62.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa70.p16.4 k.objects.point part=$k.objects.u1fa70.p16 n=4 x=73.8 y=65.5 core.source="noto-emoji 99701e0"
-@k.objects.u1fa70.word core.word text=ballet text=dance text=shoes means="ballet shoes" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa70.keyword k.objects.keyword of="ballet shoes" text=ballet text=dance text=shoes core.source="cldr 48"
 
 # woman’s boot
 @k.objects.u1f462 k.objects.object name="woman’s boot" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -525,7 +525,7 @@
 @k.objects.u1f462.p11.5 k.objects.point part=$k.objects.u1f462.p11 n=5 x=33 y=14.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f462.p11.6 k.objects.point part=$k.objects.u1f462.p11 n=6 x=37.9 y=14.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f462.p11.7 k.objects.point part=$k.objects.u1f462.p11 n=7 x=39 y=15 core.source="noto-emoji 99701e0"
-@k.objects.u1f462.word core.word text=boot text=clothes text=clothing text=dress text=shoe text=shoes text=shopping text=woman text=woman’s means="woman’s boot" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f462.keyword k.objects.keyword of="woman’s boot" text=boot text=clothes text=clothing text=dress text=shoe text=shoes text=shopping text=woman text=woman’s core.source="cldr 48"
 
 # hair pick
 @k.objects.u1faae k.objects.object name="hair pick" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -621,7 +621,7 @@
 @k.objects.u1faae.p5.17 k.objects.point part=$k.objects.u1faae.p5 n=17 x=11 y=94.2 core.source="noto-emoji 99701e0"
 @k.objects.u1faae.p5.18 k.objects.point part=$k.objects.u1faae.p5 n=18 x=11.8 y=93.7 core.source="noto-emoji 99701e0"
 @k.objects.u1faae.p5.19 k.objects.point part=$k.objects.u1faae.p5 n=19 x=11.9 y=92.9 core.source="noto-emoji 99701e0"
-@k.objects.u1faae.word core.word text=Afro text=comb text=groom text=hair text=pick means="hair pick" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faae.keyword k.objects.keyword of="hair pick" text=Afro text=comb text=groom text=hair text=pick core.source="cldr 48"
 
 # crown
 @k.objects.u1f451 k.objects.object name=crown core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -832,7 +832,7 @@
 @k.objects.u1f451.p16.8 k.objects.point part=$k.objects.u1f451.p16 n=8 x=80.2 y=49.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f451.p16.9 k.objects.point part=$k.objects.u1f451.p16 n=9 x=72.8 y=54.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f451.p16.10 k.objects.point part=$k.objects.u1f451.p16 n=10 x=73.3 y=56 core.source="noto-emoji 99701e0"
-@k.objects.u1f451.word core.word text=clothing text=family text=king text=medieval text=queen text=royal text=royalty text=win means=crown of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f451.keyword k.objects.keyword of=crown text=clothing text=family text=king text=medieval text=queen text=royal text=royalty text=win core.source="cldr 48"
 
 # woman’s hat
 @k.objects.u1f452 k.objects.object name="woman’s hat" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1045,7 +1045,7 @@
 @k.objects.u1f452.p16.8 k.objects.point part=$k.objects.u1f452.p16 n=8 x=56.5 y=49.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f452.p16.9 k.objects.point part=$k.objects.u1f452.p16 n=9 x=59.2 y=50 core.source="noto-emoji 99701e0"
 @k.objects.u1f452.p16.10 k.objects.point part=$k.objects.u1f452.p16 n=10 x=60.5 y=51.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f452.word core.word text=clothes text=clothing text=garden text=hat text=hats text=party text=woman text=woman’s means="woman’s hat" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f452.keyword k.objects.keyword of="woman’s hat" text=clothes text=clothing text=garden text=hat text=hats text=party text=woman text=woman’s core.source="cldr 48"
 
 # top hat
 @k.objects.u1f3a9 k.objects.object name="top hat" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1208,7 +1208,7 @@
 @k.objects.u1f3a9.p8.5 k.objects.point part=$k.objects.u1f3a9.p8 n=5 x=29.3 y=59.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a9.p8.6 k.objects.point part=$k.objects.u1f3a9.p8 n=6 x=28.9 y=70.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a9.p9 k.objects.part of="top hat" name=top named=model shape=oval x=21.3 y=14.5 w=56.5 h=7.5 z=9 colour=grey rgb="#757575" core.source="noto-emoji 99701e0"
-@k.objects.u1f3a9.word core.word text=clothes text=clothing text=fancy text=formal text=hat text=magic text=top text=tophat means="top hat" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a9.keyword k.objects.keyword of="top hat" text=clothes text=clothing text=fancy text=formal text=hat text=magic text=top text=tophat core.source="cldr 48"
 
 # graduation cap
 @k.objects.u1f393 k.objects.object name="graduation cap" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1371,4 +1371,4 @@
 @k.objects.u1f393.p11.6 k.objects.point part=$k.objects.u1f393.p11 n=6 x=46 y=31.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f393.p11.7 k.objects.point part=$k.objects.u1f393.p11 n=7 x=47.1 y=29.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f393.p11.8 k.objects.point part=$k.objects.u1f393.p11 n=8 x=49.1 y=28.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f393.word core.word text=cap text=celebration text=clothing text=education text=graduation text=hat text=scholar means="graduation cap" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f393.keyword k.objects.keyword of="graduation cap" text=cap text=celebration text=clothing text=education text=graduation text=hat text=scholar core.source="cldr 48"

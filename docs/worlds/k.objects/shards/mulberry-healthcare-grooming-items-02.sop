@@ -209,7 +209,7 @@
 @k.objects.mb882.p16.2 k.objects.point part=$k.objects.mb882.p16 n=2 x=49.1 y=57.5 core.source="mulberry fa94a93"
 @k.objects.mb882.p16.3 k.objects.point part=$k.objects.mb882.p16 n=3 x=49.1 y=87.6 core.source="mulberry fa94a93"
 @k.objects.mb882.p16.4 k.objects.point part=$k.objects.mb882.p16 n=4 x=17 y=87.6 core.source="mulberry fa94a93"
-@k.objects.mb882.word core.word text=grooming means="dental floss" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb882.keyword k.objects.keyword of="dental floss" text=grooming core.source="mulberry fa94a93"
 
 # deodorant
 @k.objects.mb887 k.objects.object name=deodorant core.source="mulberry fa94a93"
@@ -373,7 +373,7 @@
 @k.objects.mb887.p16.5 k.objects.point part=$k.objects.mb887.p16 n=5 x=82.8 y=31 core.source="mulberry fa94a93"
 @k.objects.mb887.p16.6 k.objects.point part=$k.objects.mb887.p16 n=6 x=84.5 y=37.5 core.source="mulberry fa94a93"
 @k.objects.mb887.p16.7 k.objects.point part=$k.objects.mb887.p16 n=7 x=85.2 y=44.7 core.source="mulberry fa94a93"
-@k.objects.mb887.word core.word text=grooming means=deodorant of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb887.keyword k.objects.keyword of=deodorant text=grooming core.source="mulberry fa94a93"
 
 # deodorant spray
 @k.objects.mb888 k.objects.object name="deodorant spray" core.source="mulberry fa94a93"
@@ -512,7 +512,7 @@
 @k.objects.mb888.p13.7 k.objects.point part=$k.objects.mb888.p13 n=7 x=79.1 y=86.4 core.source="mulberry fa94a93"
 @k.objects.mb888.p13.8 k.objects.point part=$k.objects.mb888.p13 n=8 x=80.4 y=85.1 core.source="mulberry fa94a93"
 @k.objects.mb888.p13.9 k.objects.point part=$k.objects.mb888.p13 n=9 x=80.6 y=68.2 core.source="mulberry fa94a93"
-@k.objects.mb888.word core.word text=grooming means="deodorant spray" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb888.keyword k.objects.keyword of="deodorant spray" text=grooming core.source="mulberry fa94a93"
 
 # emery board
 @k.objects.mb1029 k.objects.object name="emery board" core.source="mulberry fa94a93"
@@ -708,7 +708,7 @@
 @k.objects.mb1029.p16.14 k.objects.point part=$k.objects.mb1029.p16 n=14 x=14.2 y=27.7 core.source="mulberry fa94a93"
 @k.objects.mb1029.p16.15 k.objects.point part=$k.objects.mb1029.p16 n=15 x=16.3 y=28.6 core.source="mulberry fa94a93"
 @k.objects.mb1029.p16.16 k.objects.point part=$k.objects.mb1029.p16 n=16 x=72.3 y=84.9 core.source="mulberry fa94a93"
-@k.objects.mb1029.word core.word text=grooming means="emery board" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1029.keyword k.objects.keyword of="emery board" text=grooming core.source="mulberry fa94a93"
 
 # eye shadow
 @k.objects.mb1053 k.objects.object name="eye shadow" core.source="mulberry fa94a93"
@@ -928,7 +928,7 @@
 @k.objects.mb1053.p16.5 k.objects.point part=$k.objects.mb1053.p16 n=5 x=10.3 y=51.8 core.source="mulberry fa94a93"
 @k.objects.mb1053.p16.6 k.objects.point part=$k.objects.mb1053.p16 n=6 x=10.5 y=39.6 core.source="mulberry fa94a93"
 @k.objects.mb1053.p16.7 k.objects.point part=$k.objects.mb1053.p16 n=7 x=16.2 y=28.5 core.source="mulberry fa94a93"
-@k.objects.mb1053.word core.word text=grooming means="eye shadow" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1053.keyword k.objects.keyword of="eye shadow" text=grooming core.source="mulberry fa94a93"
 
 # eyebrow pencil
 @k.objects.mb1056 k.objects.object name="eyebrow pencil" core.source="mulberry fa94a93"
@@ -1116,7 +1116,7 @@
 @k.objects.mb1056.p16.8 k.objects.point part=$k.objects.mb1056.p16 n=8 x=76.4 y=44.1 core.source="mulberry fa94a93"
 @k.objects.mb1056.p16.9 k.objects.point part=$k.objects.mb1056.p16 n=9 x=77.2 y=40.3 core.source="mulberry fa94a93"
 @k.objects.mb1056.p16.10 k.objects.point part=$k.objects.mb1056.p16 n=10 x=75.7 y=37.2 core.source="mulberry fa94a93"
-@k.objects.mb1056.word core.word text=grooming means="eyebrow pencil" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1056.keyword k.objects.keyword of="eyebrow pencil" text=grooming core.source="mulberry fa94a93"
 
 # eyelash curler
 @k.objects.mb1058 k.objects.object name="eyelash curler" core.source="mulberry fa94a93"
@@ -1308,7 +1308,7 @@
 @k.objects.mb1058.p16.2 k.objects.point part=$k.objects.mb1058.p16 n=2 x=42 y=32.9 core.source="mulberry fa94a93"
 @k.objects.mb1058.p16.3 k.objects.point part=$k.objects.mb1058.p16 n=3 x=58 y=21.6 core.source="mulberry fa94a93"
 @k.objects.mb1058.p16.4 k.objects.point part=$k.objects.mb1058.p16 n=4 x=63 y=16.5 core.source="mulberry fa94a93"
-@k.objects.mb1058.word core.word text=grooming means="eyelash curler" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1058.keyword k.objects.keyword of="eyelash curler" text=grooming core.source="mulberry fa94a93"
 
 # flannel
 @k.objects.mb1396 k.objects.object name=flannel core.source="mulberry fa94a93"
@@ -1523,4 +1523,4 @@
 @k.objects.mb1396.p16.2 k.objects.point part=$k.objects.mb1396.p16 n=2 x=80.7 y=24.9 core.source="mulberry fa94a93"
 @k.objects.mb1396.p16.3 k.objects.point part=$k.objects.mb1396.p16 n=3 x=80.7 y=23.2 core.source="mulberry fa94a93"
 @k.objects.mb1396.p16.4 k.objects.point part=$k.objects.mb1396.p16 n=4 x=81.6 y=23.6 core.source="mulberry fa94a93"
-@k.objects.mb1396.word core.word text=grooming means=flannel of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1396.keyword k.objects.keyword of=flannel text=grooming core.source="mulberry fa94a93"

@@ -197,7 +197,7 @@
 @k.objects.u1f3bf.p16.6 k.objects.point part=$k.objects.u1f3bf.p16 n=6 x=59.1 y=26.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3bf.p16.7 k.objects.point part=$k.objects.u1f3bf.p16 n=7 x=63 y=29.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3bf.p16.8 k.objects.point part=$k.objects.u1f3bf.p16 n=8 x=55.2 y=37.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3bf.word core.word text=ski text=snow text=sport means=skis of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3bf.keyword k.objects.keyword of=skis text=ski text=snow text=sport core.source="cldr 48"
 
 # sled
 @k.objects.u1f6f7 k.objects.object name=sled core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -375,7 +375,7 @@
 @k.objects.u1f6f7.p16.14 k.objects.point part=$k.objects.u1f6f7.p16 n=14 x=32.9 y=67.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f7.p16.15 k.objects.point part=$k.objects.u1f6f7.p16 n=15 x=34.3 y=66 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f7.p16.16 k.objects.point part=$k.objects.u1f6f7.p16 n=16 x=36.1 y=65.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f7.word core.word text=luge text=sledge text=sleigh text=snow text=toboggan means=sled of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6f7.keyword k.objects.keyword of=sled text=luge text=sledge text=sleigh text=snow text=toboggan core.source="cldr 48"
 
 # curling stone
 @k.objects.u1f94c k.objects.object name="curling stone" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -586,4 +586,4 @@
 @k.objects.u1f94c.p16.2 k.objects.point part=$k.objects.u1f94c.p16 n=2 x=88.7 y=43 core.source="noto-emoji 99701e0"
 @k.objects.u1f94c.p16.3 k.objects.point part=$k.objects.u1f94c.p16 n=3 x=90 y=44.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f94c.p16.4 k.objects.point part=$k.objects.u1f94c.p16 n=4 x=91.4 y=43.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f94c.word core.word text=curling text=game text=rock text=stone means="curling stone" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f94c.keyword k.objects.keyword of="curling stone" text=curling text=game text=rock text=stone core.source="cldr 48"

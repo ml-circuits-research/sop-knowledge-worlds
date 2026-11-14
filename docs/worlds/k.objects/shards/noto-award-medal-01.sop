@@ -154,7 +154,7 @@
 @k.objects.u1f396.p14.8 k.objects.point part=$k.objects.u1f396.p14 n=8 x=66.6 y=93.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f396.p14.9 k.objects.point part=$k.objects.u1f396.p14 n=9 x=57.2 y=80.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f396.p14.10 k.objects.point part=$k.objects.u1f396.p14 n=10 x=55.6 y=78.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f396.word core.word text=award text=celebration text=medal text=military means="military medal" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f396.keyword k.objects.keyword of="military medal" text=award text=celebration text=medal text=military core.source="cldr 48"
 
 # trophy
 @k.objects.u1f3c6 k.objects.object name=trophy core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -358,7 +358,7 @@
 @k.objects.u1f3c6.p13.7 k.objects.point part=$k.objects.u1f3c6.p13 n=7 x=57.9 y=89.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c6.p13.8 k.objects.point part=$k.objects.u1f3c6.p13 n=8 x=58 y=83.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c6.p13.9 k.objects.point part=$k.objects.u1f3c6.p13 n=9 x=57.3 y=83 core.source="noto-emoji 99701e0"
-@k.objects.u1f3c6.word core.word text=champion text=champs text=prize text=slay text=sport text=victory text=win text=winning means=trophy of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3c6.keyword k.objects.keyword of=trophy text=champion text=champs text=prize text=slay text=sport text=victory text=win text=winning core.source="cldr 48"
 
 # sports medal
 @k.objects.u1f3c5 k.objects.object name="sports medal" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -498,7 +498,7 @@
 @k.objects.u1f3c5.p8.22 k.objects.point part=$k.objects.u1f3c5.p8 n=22 x=57.6 y=64.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c5.p8.23 k.objects.point part=$k.objects.u1f3c5.p8 n=23 x=55.7 y=63.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c5.p8.24 k.objects.point part=$k.objects.u1f3c5.p8 n=24 x=51.3 y=53.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3c5.word core.word text=award text=gold text=medal text=sports text=winner means="sports medal" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3c5.keyword k.objects.keyword of="sports medal" text=award text=gold text=medal text=sports text=winner core.source="cldr 48"
 
 # 1st place medal
 @k.objects.u1f947 k.objects.object name="1st place medal" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -644,7 +644,7 @@
 @k.objects.u1f947.p9.3 k.objects.point part=$k.objects.u1f947.p9 n=3 x=48.5 y=37.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f947.p9.4 k.objects.point part=$k.objects.u1f947.p9 n=4 x=59 y=36.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f947.p9.5 k.objects.point part=$k.objects.u1f947.p9 n=5 x=43.5 y=2.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f947.word core.word text=1st text=first text=gold text=medal text=place means="1st place medal" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f947.keyword k.objects.keyword of="1st place medal" text=1st text=first text=gold text=medal text=place core.source="cldr 48"
 
 # 2nd place medal
 @k.objects.u1f948 k.objects.object name="2nd place medal" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -799,7 +799,7 @@
 @k.objects.u1f948.p9.21 k.objects.point part=$k.objects.u1f948.p9 n=21 x=43.7 y=60.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f948.p9.22 k.objects.point part=$k.objects.u1f948.p9 n=22 x=42.2 y=63.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f948.p9.23 k.objects.point part=$k.objects.u1f948.p9 n=23 x=42.6 y=66.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f948.word core.word text=2nd text=medal text=place text=second text=silver means="2nd place medal" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f948.keyword k.objects.keyword of="2nd place medal" text=2nd text=medal text=place text=second text=silver core.source="cldr 48"
 
 # 3rd place medal
 @k.objects.u1f949 k.objects.object name="3rd place medal" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -966,4 +966,4 @@
 @k.objects.u1f949.p9.33 k.objects.point part=$k.objects.u1f949.p9 n=33 x=59.6 y=76.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f949.p9.34 k.objects.point part=$k.objects.u1f949.p9 n=34 x=57.1 y=72.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f949.p9.35 k.objects.point part=$k.objects.u1f949.p9 n=35 x=58.5 y=68.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f949.word core.word text=3rd text=bronze text=medal text=place text=third means="3rd place medal" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f949.keyword k.objects.keyword of="3rd place medal" text=3rd text=bronze text=medal text=place text=third core.source="cldr 48"

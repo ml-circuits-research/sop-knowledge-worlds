@@ -217,7 +217,7 @@
 @k.objects.mb51.p16.2 k.objects.point part=$k.objects.mb51.p16 n=2 x=63.4 y=76.7 core.source="mulberry fa94a93"
 @k.objects.mb51.p16.3 k.objects.point part=$k.objects.mb51.p16 n=3 x=36.3 y=76.7 core.source="mulberry fa94a93"
 @k.objects.mb51.p16.4 k.objects.point part=$k.objects.mb51.p16 n=4 x=29.2 y=80 core.source="mulberry fa94a93"
-@k.objects.mb51.word core.word text=games text=sport means="archery target" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb51.keyword k.objects.keyword of="archery target" text=games text=sport core.source="mulberry fa94a93"
 
 # backstop
 @k.objects.mb86 k.objects.object name=backstop core.source="mulberry fa94a93"
@@ -352,7 +352,7 @@
 @k.objects.mb93.p16 k.objects.part of="badminton racket" name=part16 kind=detail named=no shape=line x=40.1 y=10.2 w=0 h=23.6 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb93.p16.1 k.objects.point part=$k.objects.mb93.p16 n=1 x=40.1 y=33.8 core.source="mulberry fa94a93"
 @k.objects.mb93.p16.2 k.objects.point part=$k.objects.mb93.p16 n=2 x=40.1 y=10.2 core.source="mulberry fa94a93"
-@k.objects.mb93.word core.word text=games text=sport means="badminton racket" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb93.keyword k.objects.keyword of="badminton racket" text=games text=sport core.source="mulberry fa94a93"
 
 # baseball base
 @k.objects.mb118 k.objects.object name="baseball base" core.source="mulberry fa94a93"

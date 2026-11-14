@@ -80,7 +80,7 @@
 @k.objects.u1f4fc.p16.11 k.objects.point part=$k.objects.u1f4fc.p16 n=11 x=96.8 y=24.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4fc.p16.12 k.objects.point part=$k.objects.u1f4fc.p16 n=12 x=96.3 y=23.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4fc.p16.13 k.objects.point part=$k.objects.u1f4fc.p16 n=13 x=94.8 y=22 core.source="noto-emoji 99701e0"
-@k.objects.u1f4fc.word core.word text=old text=school text=tape text=vcr text=vhs text=video means=videocassette of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4fc.keyword k.objects.keyword of=videocassette text=old text=school text=tape text=vcr text=vhs text=video core.source="cldr 48"
 
 # magnifying glass tilted left
 @k.objects.u1f50d k.objects.object name="magnifying glass tilted left" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -211,7 +211,7 @@
 @k.objects.u1f50d.p7.8 k.objects.point part=$k.objects.u1f50d.p7 n=8 x=56.7 y=47 core.source="noto-emoji 99701e0"
 @k.objects.u1f50d.p7.9 k.objects.point part=$k.objects.u1f50d.p7 n=9 x=53.6 y=51.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f50d.p7.10 k.objects.point part=$k.objects.u1f50d.p7 n=10 x=49.1 y=55.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f50d.word core.word text=glass text=lab text=left text=left-pointing text=magnifying text=science text=search text=tilted text=tool means="magnifying glass tilted left" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f50d.keyword k.objects.keyword of="magnifying glass tilted left" text=glass text=lab text=left text=left-pointing text=magnifying text=science text=search text=tilted text=tool core.source="cldr 48"
 
 # magnifying glass tilted right
 @k.objects.u1f50e k.objects.object name="magnifying glass tilted right" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -342,7 +342,7 @@
 @k.objects.u1f50e.p7.8 k.objects.point part=$k.objects.u1f50e.p7 n=8 x=82.2 y=51.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f50e.p7.9 k.objects.point part=$k.objects.u1f50e.p7 n=9 x=78.2 y=55.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f50e.p7.10 k.objects.point part=$k.objects.u1f50e.p7 n=10 x=73 y=58.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f50e.word core.word text=contact text=glass text=lab text=magnifying text=right text=right-pointing text=science text=search text=tilted text=tool means="magnifying glass tilted right" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f50e.keyword k.objects.keyword of="magnifying glass tilted right" text=contact text=glass text=lab text=magnifying text=right text=right-pointing text=science text=search text=tilted text=tool core.source="cldr 48"
 
 # candle
 @k.objects.u1f56f k.objects.object name=candle core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -504,7 +504,7 @@
 @k.objects.u1f56f.p11.4 k.objects.point part=$k.objects.u1f56f.p11 n=4 x=36.8 y=52.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f56f.p11.5 k.objects.point part=$k.objects.u1f56f.p11 n=5 x=37.4 y=55.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f56f.p11.6 k.objects.point part=$k.objects.u1f56f.p11 n=6 x=37 y=56.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f56f.word core.word text=light means=candle of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f56f.keyword k.objects.keyword of=candle text=light core.source="cldr 48"
 
 # light bulb
 @k.objects.u1f4a1 k.objects.object name="light bulb" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -688,7 +688,7 @@
 @k.objects.u1f4a1.p16.8 k.objects.point part=$k.objects.u1f4a1.p16 n=8 x=32.3 y=60.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4a1.p16.9 k.objects.point part=$k.objects.u1f4a1.p16 n=9 x=33.9 y=62.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4a1.p16.10 k.objects.point part=$k.objects.u1f4a1.p16 n=10 x=36.7 y=65 core.source="noto-emoji 99701e0"
-@k.objects.u1f4a1.word core.word text=bulb text=comic text=electric text=idea text=light means="light bulb" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4a1.keyword k.objects.keyword of="light bulb" text=bulb text=comic text=electric text=idea text=light core.source="cldr 48"
 
 # flashlight
 @k.objects.u1f526 k.objects.object name=flashlight core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -855,7 +855,7 @@
 @k.objects.u1f526.p11.12 k.objects.point part=$k.objects.u1f526.p11 n=12 x=42.7 y=50.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f526.p11.13 k.objects.point part=$k.objects.u1f526.p11 n=13 x=38.4 y=52.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f526.p11.14 k.objects.point part=$k.objects.u1f526.p11 n=14 x=32.3 y=54.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f526.word core.word text=electric text=light text=tool text=torch means=flashlight of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f526.keyword k.objects.keyword of=flashlight text=electric text=light text=tool text=torch core.source="cldr 48"
 
 # red paper lantern
 @k.objects.u1f3ee k.objects.object name="red paper lantern" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -965,7 +965,7 @@
 @k.objects.u1f3ee.p12.4 k.objects.point part=$k.objects.u1f3ee.p12 n=4 x=40.4 y=11.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ee.p12.5 k.objects.point part=$k.objects.u1f3ee.p12 n=5 x=38.1 y=10.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ee.p12.6 k.objects.point part=$k.objects.u1f3ee.p12 n=6 x=38 y=5 core.source="noto-emoji 99701e0"
-@k.objects.u1f3ee.word core.word text=bar text=lantern text=light text=paper text=red text=restaurant means="red paper lantern" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ee.keyword k.objects.keyword of="red paper lantern" text=bar text=lantern text=light text=paper text=red text=restaurant core.source="cldr 48"
 
 # diya lamp
 @k.objects.u1fa94 k.objects.object name="diya lamp" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1179,4 +1179,4 @@
 @k.objects.u1fa94.p16.4 k.objects.point part=$k.objects.u1fa94.p16 n=4 x=74 y=57 core.source="noto-emoji 99701e0"
 @k.objects.u1fa94.p16.5 k.objects.point part=$k.objects.u1fa94.p16 n=5 x=70.7 y=54.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa94.p16.6 k.objects.point part=$k.objects.u1fa94.p16 n=6 x=68.5 y=55.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fa94.word core.word text=diya text=lamp text=light text=oil means="diya lamp" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa94.keyword k.objects.keyword of="diya lamp" text=diya text=lamp text=light text=oil core.source="cldr 48"

@@ -968,3 +968,16 @@ undeclared 16.3 s, declared 17.6 s on a quiet machine (+1.3 s; under load the pa
 26.7-28.4 s both ways). Declared with 0.97, every test that loads k.objects would pay the scan (k.objects.names is at
 31 s already). `k.objects.skeleton.of` is declared now (no skeleton is published, so it costs nothing).
 Blocking: no. Meanwhile: `part.of` stays in NOT_DECLARED with the numbers, checked by tests/k.objects.names.test.mjs.
+
+## Q70 [LIB] (Q67 b, first worker, 2026-11-15): a search keyword beside core.word
+Question: could the library read search keywords as a relation of their own, for example `core.word … role=keyword`
+(or a `core.keyword` type) that `world.words()`, `interpret` and the resolvers never take as a synonym, but that a
+host can ask for last ("the things this word is a keyword of"); or should keywords stay a type of the world
+(`k.objects.keyword of=<object> text=…`) that hosts read themselves after names, words and stand-ins?
+Context: the reviewer's Q67 answer asks for keywords as their own relation, "as the library's word reading supports".
+The pinned 0.97 has neither: every `core.word` is a synonym and extra keys are ignored (src/resolve.mjs,
+src/readtypes.mjs, src/knowledge.mjs, src/interpret.mjs read `text`, `means`, `of` only), so `role=keyword` would
+still read "ship" as the anchor. Meanwhile the CLDR, OpenMoji and Mulberry keywords are 1,509 `k.objects.keyword`
+facts (5,326 texts); `tools/objects-lookup.mjs` gives the order (name, word, stand-in, keyword), and in vocab.json a
+keyword's shard comes after the word's other shards, under the kind `k.objects.keyword` in vocab-kinds.json.
+Blocking: no. Meanwhile: the dedicated type.

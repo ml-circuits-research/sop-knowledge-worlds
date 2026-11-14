@@ -173,7 +173,7 @@
 @k.objects.u1f5dc.p16.8 k.objects.point part=$k.objects.u1f5dc.p16 n=8 x=68 y=36.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f5dc.p16.9 k.objects.point part=$k.objects.u1f5dc.p16 n=9 x=70 y=31.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f5dc.p16.10 k.objects.point part=$k.objects.u1f5dc.p16 n=10 x=70.8 y=28 core.source="noto-emoji 99701e0"
-@k.objects.u1f5dc.word core.word text=compress text=tool text=vice means=clamp of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5dc.keyword k.objects.keyword of=clamp text=compress text=tool text=vice core.source="cldr 48"
 
 # balance scale
 @k.objects.u2696 k.objects.object name="balance scale" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -328,7 +328,7 @@
 @k.objects.u2696.p16.4 k.objects.point part=$k.objects.u2696.p16 n=4 x=82.4 y=74.8 core.source="noto-emoji 99701e0"
 @k.objects.u2696.p16.5 k.objects.point part=$k.objects.u2696.p16 n=5 x=81.4 y=75.9 core.source="noto-emoji 99701e0"
 @k.objects.u2696.p16.6 k.objects.point part=$k.objects.u2696.p16 n=6 x=80.3 y=74.8 core.source="noto-emoji 99701e0"
-@k.objects.u2696.word core.word text=balance text=justice text=Libra text=scale text=scales text=tool text=weight text=zodiac means="balance scale" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2696.keyword k.objects.keyword of="balance scale" text=balance text=justice text=Libra text=scale text=scales text=tool text=weight text=zodiac core.source="cldr 48"
 
 # white cane
 @k.objects.u1f9af k.objects.object name="white cane" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -393,7 +393,7 @@
 @k.objects.u1f9af.p6.22 k.objects.point part=$k.objects.u1f9af.p6 n=22 x=87 y=36.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9af.p6.23 k.objects.point part=$k.objects.u1f9af.p6 n=23 x=88.5 y=37.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f9af.p6.24 k.objects.point part=$k.objects.u1f9af.p6 n=24 x=90.1 y=37.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f9af.word core.word text=accessibility text=blind text=cane text=probing text=white means="white cane" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9af.keyword k.objects.keyword of="white cane" text=accessibility text=blind text=cane text=probing text=white core.source="cldr 48"
 
 # link
 @k.objects.u1f517 k.objects.object name=link core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -532,7 +532,7 @@
 @k.objects.u1f517.p9.14 k.objects.point part=$k.objects.u1f517.p9 n=14 x=27.6 y=87.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f517.p9.15 k.objects.point part=$k.objects.u1f517.p9 n=15 x=32.3 y=87.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f517.p9.16 k.objects.point part=$k.objects.u1f517.p9 n=16 x=35.4 y=86.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f517.word core.word text=links means=link of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f517.keyword k.objects.keyword of=link text=links core.source="cldr 48"
 
 # broken chain
 @k.objects.u26d3_200d_1f4a5 k.objects.object name="broken chain" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -741,7 +741,7 @@
 @k.objects.u26d3_200d_1f4a5.p16 k.objects.part of="broken chain" name=part16 kind=detail named=no shape=line x=55.4 y=65.1 w=1.9 h=15.1 z=16 colour=grey rgb="#BDBDBD" core.source="noto-emoji 99701e0"
 @k.objects.u26d3_200d_1f4a5.p16.1 k.objects.point part=$k.objects.u26d3_200d_1f4a5.p16 n=1 x=57.3 y=80.2 core.source="noto-emoji 99701e0"
 @k.objects.u26d3_200d_1f4a5.p16.2 k.objects.point part=$k.objects.u26d3_200d_1f4a5.p16 n=2 x=55.4 y=65.1 core.source="noto-emoji 99701e0"
-@k.objects.u26d3_200d_1f4a5.word core.word text=break text=breaking text=broken text=chain text=cuffs text=freedom means="broken chain" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26d3_200d_1f4a5.keyword k.objects.keyword of="broken chain" text=break text=breaking text=broken text=chain text=cuffs text=freedom core.source="cldr 48"
 
 # chains
 @k.objects.u26d3 k.objects.object name=chains core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -955,7 +955,7 @@
 @k.objects.u26d3.p16.8 k.objects.point part=$k.objects.u26d3.p16 n=8 x=32.6 y=40.6 core.source="noto-emoji 99701e0"
 @k.objects.u26d3.p16.9 k.objects.point part=$k.objects.u26d3.p16 n=9 x=32.5 y=12.6 core.source="noto-emoji 99701e0"
 @k.objects.u26d3.p16.10 k.objects.point part=$k.objects.u26d3.p16 n=10 x=30.9 y=9.9 core.source="noto-emoji 99701e0"
-@k.objects.u26d3.word core.word text=chain means=chains of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26d3.keyword k.objects.keyword of=chains text=chain core.source="cldr 48"
 
 # hook
 @k.objects.u1fa9d k.objects.object name=hook core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1130,7 +1130,7 @@
 @k.objects.u1fa9d.p7.10 k.objects.point part=$k.objects.u1fa9d.p7 n=10 x=48 y=23.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9d.p7.11 k.objects.point part=$k.objects.u1fa9d.p7 n=11 x=50.6 y=23.4 core.source="noto-emoji 99701e0"
 @k.objects.u1fa9d.p7.12 k.objects.point part=$k.objects.u1fa9d.p7 n=12 x=48 y=21.1 core.source="noto-emoji 99701e0"
-@k.objects.u1fa9d.word core.word text=catch text=crook text=curve text=ensnare text=point text=selling means=hook of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa9d.keyword k.objects.keyword of=hook text=catch text=crook text=curve text=ensnare text=point text=selling core.source="cldr 48"
 
 # toolbox
 @k.objects.u1f9f0 k.objects.object name=toolbox core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1281,4 +1281,4 @@
 @k.objects.u1f9f0.p16.8 k.objects.point part=$k.objects.u1f9f0.p16 n=8 x=37.2 y=16.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f0.p16.9 k.objects.point part=$k.objects.u1f9f0.p16 n=9 x=37 y=15.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f0.p16.10 k.objects.point part=$k.objects.u1f9f0.p16 n=10 x=38.1 y=12.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f9f0.word core.word text=box text=chest text=mechanic text=red text=tool means=toolbox of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f0.keyword k.objects.keyword of=toolbox text=box text=chest text=mechanic text=red text=tool core.source="cldr 48"

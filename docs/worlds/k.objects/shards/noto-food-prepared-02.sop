@@ -208,7 +208,7 @@
 @k.objects.u1f9c0.p15.11 k.objects.point part=$k.objects.u1f9c0.p15 n=11 x=91.3 y=59.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c0.p15.12 k.objects.point part=$k.objects.u1f9c0.p15 n=12 x=90.2 y=58.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c0.p15.13 k.objects.point part=$k.objects.u1f9c0.p15 n=13 x=86.3 y=58.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f9c0.word core.word text=cheese text=wedge means="cheese wedge" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9c0.keyword k.objects.keyword of="cheese wedge" text=cheese text=wedge core.source="cldr 48"
 
 # meat on bone
 @k.objects.u1f356 k.objects.object name="meat on bone" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -413,7 +413,7 @@
 @k.objects.u1f356.p11.13 k.objects.point part=$k.objects.u1f356.p11 n=13 x=91 y=80.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f356.p11.14 k.objects.point part=$k.objects.u1f356.p11 n=14 x=88.6 y=78.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f356.p11.15 k.objects.point part=$k.objects.u1f356.p11 n=15 x=81.9 y=78.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f356.word core.word text=bone text=meat means="meat on bone" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f356.keyword k.objects.keyword of="meat on bone" text=bone text=meat core.source="cldr 48"
 
 # poultry leg
 @k.objects.u1f357 k.objects.object name="poultry leg" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -541,7 +541,7 @@
 @k.objects.u1f357.p7.8 k.objects.point part=$k.objects.u1f357.p7 n=8 x=64.5 y=80.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f357.p7.9 k.objects.point part=$k.objects.u1f357.p7 n=9 x=60 y=78.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f357.p7.10 k.objects.point part=$k.objects.u1f357.p7 n=10 x=58.6 y=78.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f357.word core.word text=bone text=chicken text=drumstick text=hungry text=leg text=poultry text=turkey means="poultry leg" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f357.keyword k.objects.keyword of="poultry leg" text=bone text=chicken text=drumstick text=hungry text=leg text=poultry text=turkey core.source="cldr 48"
 
 # cut of meat
 @k.objects.u1f969 k.objects.object name="cut of meat" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -746,7 +746,7 @@
 @k.objects.u1f969.p10.14 k.objects.point part=$k.objects.u1f969.p10 n=14 x=79.5 y=33.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f969.p10.15 k.objects.point part=$k.objects.u1f969.p10 n=15 x=79.9 y=30.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f969.p10.16 k.objects.point part=$k.objects.u1f969.p10 n=16 x=78.8 y=27.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f969.word core.word text=chop text=cut text=lambchop text=meat text=porkchop text=red text=steak means="cut of meat" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f969.keyword k.objects.keyword of="cut of meat" text=chop text=cut text=lambchop text=meat text=porkchop text=red text=steak core.source="cldr 48"
 
 # bacon
 @k.objects.u1f953 k.objects.object name=bacon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -954,7 +954,7 @@
 @k.objects.u1f953.p16.3 k.objects.point part=$k.objects.u1f953.p16 n=3 x=29.5 y=34.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f953.p16.4 k.objects.point part=$k.objects.u1f953.p16 n=4 x=32.1 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f953.p16.5 k.objects.point part=$k.objects.u1f953.p16 n=5 x=28.2 y=26.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f953.word core.word text=breakfast text=food text=meat means=bacon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f953.keyword k.objects.keyword of=bacon text=breakfast text=food text=meat core.source="cldr 48"
 
 # hamburger
 @k.objects.u1f354 k.objects.object name=hamburger core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1159,7 +1159,7 @@
 @k.objects.u1f354.p16.4 k.objects.point part=$k.objects.u1f354.p16 n=4 x=26.5 y=22.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f354.p16.5 k.objects.point part=$k.objects.u1f354.p16 n=5 x=26.9 y=21.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f354.p16.6 k.objects.point part=$k.objects.u1f354.p16 n=6 x=28.3 y=20.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f354.word core.word text=burger text=eat text=fast text=food text=hungry means=hamburger of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f354.keyword k.objects.keyword of=hamburger text=burger text=eat text=fast text=food text=hungry core.source="cldr 48"
 
 # french fries
 @k.objects.u1f35f k.objects.object name="french fries" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1363,7 +1363,7 @@
 @k.objects.u1f35f.p16.5 k.objects.point part=$k.objects.u1f35f.p16 n=5 x=79.7 y=46.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f35f.p16.6 k.objects.point part=$k.objects.u1f35f.p16 n=6 x=79.4 y=50.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f35f.p16.7 k.objects.point part=$k.objects.u1f35f.p16 n=7 x=72.5 y=84.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f35f.word core.word text=fast text=food text=french text=fries means="french fries" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f35f.keyword k.objects.keyword of="french fries" text=fast text=food text=french text=fries core.source="cldr 48"
 
 # pizza
 @k.objects.u1f355 k.objects.object name=pizza core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1573,4 +1573,4 @@
 @k.objects.u1f355.p16.6 k.objects.point part=$k.objects.u1f355.p16 n=6 x=82.1 y=88.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f355.p16.7 k.objects.point part=$k.objects.u1f355.p16 n=7 x=84.2 y=85.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f355.p16.8 k.objects.point part=$k.objects.u1f355.p16 n=8 x=83 y=80 core.source="noto-emoji 99701e0"
-@k.objects.u1f355.word core.word text=cheese text=food text=hungry text=pepperoni text=slice means=pizza of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f355.keyword k.objects.keyword of=pizza text=cheese text=food text=hungry text=pepperoni text=slice core.source="cldr 48"

@@ -86,7 +86,9 @@ first source that has it: hand-written, then Noto Emoji, then OpenMoji, then Mul
 | Mulberry Symbols (`mulberry-<category>-<nn>`) | 958 | 149 | CC-BY-SA-4.0 | Mulberry symbol names (`kettle`, `"arm chair"`) |
 
 2,003 objects in all (193 Mulberry symbols are left out: 149 that are not a recognisable thing and 44 club football kits, see
-`sources/mulberry/excluded.tsv`). A name of several words is a string. The keywords or tags of a source are `core.word` facts.
+`sources/mulberry/excluded.tsv`). A name of several words is a string. The keywords or tags of a source are `k.objects.keyword` facts
+(`@k.objects.u1f983.keyword k.objects.keyword of=turkey text=bird text=gobble text=thanksgiving`), not `core.word`
+facts: a keyword is a search word, not a name (Q67 b, below).
 Differences from the hand-written objects:
 
 - every visible element of the drawing is one part, in draw order (`z` = 1, 2, …); at most 16 parts an object (the
@@ -126,11 +128,16 @@ help common things that have no drawing of their own:
   object: the kind facts the hand-written worlds state of the thing by name (`stork` → `bird` by k.animals, `cape` →
   `coat` by k.wearables, `gravy` → `sauce` by k.food, `mall` → `building` by k.attributes), or a WordNet edge of the
   sense kept for a drawable class (`beret` → `cap`; not `hammock` → `hill`, whose sense kept is the hill; not `grill`
-  → `restaurant`, said why in the tool). 15 stand-ins; two steps up crossed senses (tuba → bass → the fish), so none.
+  → `restaurant`, nor `barrel` → `tube`, the gun's barrel; said why in the tool). 16 stand-ins; two steps up crossed senses (tuba → bass → the fish), so none.
   **A name beats a word**: a hand-written `core.word` never names another drawing (a test): "ship" was a word of the
   boat and made "Add a ship" draw a boat, though the ship has a drawing; 20 such words were taken out (kitten, hill,
-  laptop, lorry, telephone, sailboat ...). The CLDR and OpenMoji keywords are search words, not names ("kitty" is a
-  keyword of the money bag, "ship" of the anchor): a host takes an object or stand-in of the word's own name first.
+  laptop, lorry, telephone, sailboat ...). **A keyword is not a word** (Q67 b): the CLDR, OpenMoji and Mulberry
+  keywords ("ship" of the anchor, "kitty" of the money bag, "bird" of the turkey) are 1,509 `k.objects.keyword` facts
+  with 5,326 texts, which the engine's word reading never resolves. A host takes, in this order, the object of the
+  word's name, an object the word is a `core.word` of, a stand-in of that name, and only then an object the word is a
+  keyword of (`tools/objects-lookup.mjs`, tested by `tests/k.objects.keywords.test.mjs`): 1,499 keyword texts lose so
+  to a name (1,270), a word (160) or a stand-in (69). In `vocab.json` a keyword's shard comes after the word's other
+  shards, and `vocab-kinds.json` files it under `k.objects.keyword`.
 - `arrow` (OpenMoji `27A1`, the right arrow, taken as a thing by `CHOSEN` in tools/import/openmoji.mjs): the sign a
   drawing means by "an arrow"; the weapon is the drawing `bow and arrow`.
 

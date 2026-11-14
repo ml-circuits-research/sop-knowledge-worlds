@@ -129,8 +129,8 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
 | `k.animals` and `k.objects` | 164 |
+| `k.food` and `k.objects` | 143 |
 | `k.attributes` and `k.food` | 142 |
-| `k.food` and `k.objects` | 142 |
 | `k.food` and `k.scenes` | 131 |
 | `k.attributes` and `k.wearables` | 87 |
 | `k.objects` and `k.wearables` | 87 |

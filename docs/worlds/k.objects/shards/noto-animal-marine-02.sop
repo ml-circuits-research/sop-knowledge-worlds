@@ -199,7 +199,7 @@
 @k.objects.u1f419.p14.8 k.objects.point part=$k.objects.u1f419.p14 n=8 x=31.9 y=78.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f419.p15 k.objects.part of=octopus name=part15 named=no shape=oval x=20.1 y=82.7 w=4 h=3.7 z=15 colour=white rgb="#FCD4B0" core.source="noto-emoji 99701e0"
 @k.objects.u1f419.p16 k.objects.part of=octopus name=part16 named=no shape=oval x=18 y=38.4 w=3.4 h=3.6 z=16 colour=white rgb="#FCD4B0" core.source="noto-emoji 99701e0"
-@k.objects.u1f419.word core.word text=animal text=creature text=ocean means=octopus of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f419.keyword k.objects.keyword of=octopus text=animal text=creature text=ocean core.source="cldr 48"
 
 # spiral shell
 @k.objects.u1f41a k.objects.object name="spiral shell" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -370,7 +370,7 @@
 @k.objects.u1f41a.p10.6 k.objects.point part=$k.objects.u1f41a.p10 n=6 x=13.2 y=9.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f41a.p10.7 k.objects.point part=$k.objects.u1f41a.p10 n=7 x=10.9 y=9.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f41a.p10.8 k.objects.point part=$k.objects.u1f41a.p10 n=8 x=8.3 y=11.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f41a.word core.word text=animal text=beach text=conch text=sea text=shell text=spiral means="spiral shell" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f41a.keyword k.objects.keyword of="spiral shell" text=animal text=beach text=conch text=sea text=shell text=spiral core.source="cldr 48"
 
 # coral
 @k.objects.u1fab8 k.objects.object name=coral core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -579,7 +579,7 @@
 @k.objects.u1fab8.p16.2 k.objects.point part=$k.objects.u1fab8.p16 n=2 x=21.8 y=71.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fab8.p16.3 k.objects.point part=$k.objects.u1fab8.p16 n=3 x=24.7 y=67.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fab8.p16.4 k.objects.point part=$k.objects.u1fab8.p16 n=4 x=18.9 y=64.3 core.source="noto-emoji 99701e0"
-@k.objects.u1fab8.word core.word text=change text=climate text=ocean text=reef text=sea means=coral of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab8.keyword k.objects.keyword of=coral text=change text=climate text=ocean text=reef text=sea core.source="cldr 48"
 
 # jellyfish
 @k.objects.u1fabc k.objects.object name=jellyfish core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -784,7 +784,7 @@
 @k.objects.u1fabc.p16.16 k.objects.point part=$k.objects.u1fabc.p16 n=16 x=94.9 y=74.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fabc.p16.17 k.objects.point part=$k.objects.u1fabc.p16 n=17 x=84.2 y=74.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fabc.p16.18 k.objects.point part=$k.objects.u1fabc.p16 n=18 x=69 y=83.7 core.source="noto-emoji 99701e0"
-@k.objects.u1fabc.word core.word text=animal text=aquarium text=burn text=invertebrate text=jelly text=life text=marine text=ocean text=ouch text=plankton text=sea text=sting text=stinger text=tentacles means=jellyfish of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fabc.keyword k.objects.keyword of=jellyfish text=animal text=aquarium text=burn text=invertebrate text=jelly text=life text=marine text=ocean text=ouch text=plankton text=sea text=sting text=stinger text=tentacles core.source="cldr 48"
 
 # crab
 @k.objects.u1f980 k.objects.object name=crab core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -993,7 +993,7 @@
 @k.objects.u1f980.p16.16 k.objects.point part=$k.objects.u1f980.p16 n=16 x=26.3 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f980.p16.17 k.objects.point part=$k.objects.u1f980.p16 n=17 x=27.9 y=54.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f980.p16.18 k.objects.point part=$k.objects.u1f980.p16 n=18 x=35.9 y=51.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f980.word core.word text=Cancer text=zodiac means=crab of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f980.keyword k.objects.keyword of=crab text=Cancer text=zodiac core.source="cldr 48"
 
 # lobster
 @k.objects.u1f99e k.objects.object name=lobster core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1204,7 +1204,7 @@
 @k.objects.u1f99e.p16.4 k.objects.point part=$k.objects.u1f99e.p16 n=4 x=26.9 y=28.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f99e.p16.5 k.objects.point part=$k.objects.u1f99e.p16 n=5 x=24 y=29.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f99e.p16.6 k.objects.point part=$k.objects.u1f99e.p16 n=6 x=23.5 y=30.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f99e.word core.word text=animal text=bisque text=claws text=seafood means=lobster of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f99e.keyword k.objects.keyword of=lobster text=animal text=bisque text=claws text=seafood core.source="cldr 48"
 
 # shrimp
 @k.objects.u1f990 k.objects.object name=shrimp core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1373,7 +1373,7 @@
 @k.objects.u1f990.p9.6 k.objects.point part=$k.objects.u1f990.p9 n=6 x=26.5 y=36 core.source="noto-emoji 99701e0"
 @k.objects.u1f990.p9.7 k.objects.point part=$k.objects.u1f990.p9 n=7 x=29 y=36.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f990.p9.8 k.objects.point part=$k.objects.u1f990.p9 n=8 x=30.3 y=38.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f990.word core.word text=food text=shellfish text=small means=shrimp of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f990.keyword k.objects.keyword of=shrimp text=food text=shellfish text=small core.source="cldr 48"
 
 # squid
 @k.objects.u1f991 k.objects.object name=squid core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1584,4 +1584,4 @@
 @k.objects.u1f991.p16.14 k.objects.point part=$k.objects.u1f991.p16 n=14 x=85.9 y=61.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f991.p16.15 k.objects.point part=$k.objects.u1f991.p16 n=15 x=86.3 y=60.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f991.p16.16 k.objects.point part=$k.objects.u1f991.p16 n=16 x=87.8 y=59.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f991.word core.word text=animal text=food text=mollusk means=squid of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f991.keyword k.objects.keyword of=squid text=animal text=food text=mollusk core.source="cldr 48"

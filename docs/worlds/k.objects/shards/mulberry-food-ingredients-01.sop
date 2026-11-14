@@ -196,7 +196,7 @@
 @k.objects.mb398.p16.7 k.objects.point part=$k.objects.mb398.p16 n=7 x=39.1 y=62.9 core.source="mulberry fa94a93"
 @k.objects.mb398.p16.8 k.objects.point part=$k.objects.mb398.p16 n=8 x=36.1 y=57.6 core.source="mulberry fa94a93"
 @k.objects.mb398.p16.9 k.objects.point part=$k.objects.mb398.p16 n=9 x=34.1 y=50 core.source="mulberry fa94a93"
-@k.objects.mb398.word core.word text=food text=ingredient means="castor sugar" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb398.keyword k.objects.keyword of="castor sugar" text=food text=ingredient core.source="mulberry fa94a93"
 
 # cooking oil
 @k.objects.mb603 k.objects.object name="cooking oil" core.source="mulberry fa94a93"

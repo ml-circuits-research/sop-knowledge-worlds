@@ -207,7 +207,7 @@
 @k.objects.u1f371.p16.8 k.objects.point part=$k.objects.u1f371.p16 n=8 x=89 y=56.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f371.p16.9 k.objects.point part=$k.objects.u1f371.p16 n=9 x=91.3 y=58.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f371.p16.10 k.objects.point part=$k.objects.u1f371.p16 n=10 x=91.6 y=64 core.source="noto-emoji 99701e0"
-@k.objects.u1f371.word core.word text=bento text=box text=food means="bento box" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f371.keyword k.objects.keyword of="bento box" text=bento text=box text=food core.source="cldr 48"
 
 # rice cracker
 @k.objects.u1f358 k.objects.object name="rice cracker" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -393,7 +393,7 @@
 @k.objects.u1f358.p12.9 k.objects.point part=$k.objects.u1f358.p12 n=9 x=36.6 y=71.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f358.p12.10 k.objects.point part=$k.objects.u1f358.p12 n=10 x=37 y=68.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f358.p12.11 k.objects.point part=$k.objects.u1f358.p12 n=11 x=36.3 y=65.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f358.word core.word text=cracker text=food text=rice means="rice cracker" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f358.keyword k.objects.keyword of="rice cracker" text=cracker text=food text=rice core.source="cldr 48"
 
 # rice ball
 @k.objects.u1f359 k.objects.object name="rice ball" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -588,7 +588,7 @@
 @k.objects.u1f359.p13.16 k.objects.point part=$k.objects.u1f359.p13 n=16 x=34.9 y=49.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f359.p13.17 k.objects.point part=$k.objects.u1f359.p13 n=17 x=29.9 y=49.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f359.p13.18 k.objects.point part=$k.objects.u1f359.p13 n=18 x=28.8 y=49.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f359.word core.word text=ball text=food text=Japanese text=rice means="rice ball" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f359.keyword k.objects.keyword of="rice ball" text=ball text=food text=Japanese text=rice core.source="cldr 48"
 
 # cooked rice
 @k.objects.u1f35a k.objects.object name="cooked rice" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -797,7 +797,7 @@
 @k.objects.u1f35a.p10.8 k.objects.point part=$k.objects.u1f35a.p10 n=8 x=64.3 y=20.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f35a.p10.9 k.objects.point part=$k.objects.u1f35a.p10 n=9 x=64.1 y=23.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f35a.p10.10 k.objects.point part=$k.objects.u1f35a.p10 n=10 x=61.5 y=26.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f35a.word core.word text=cooked text=food text=rice means="cooked rice" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f35a.keyword k.objects.keyword of="cooked rice" text=cooked text=food text=rice core.source="cldr 48"
 
 # curry rice
 @k.objects.u1f35b k.objects.object name="curry rice" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1009,7 +1009,7 @@
 @k.objects.u1f35b.p16.6 k.objects.point part=$k.objects.u1f35b.p16 n=6 x=85.7 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f35b.p16.7 k.objects.point part=$k.objects.u1f35b.p16 n=7 x=83.8 y=42.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f35b.p16.8 k.objects.point part=$k.objects.u1f35b.p16 n=8 x=81.5 y=41.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f35b.word core.word text=curry text=food text=rice means="curry rice" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f35b.keyword k.objects.keyword of="curry rice" text=curry text=food text=rice core.source="cldr 48"
 
 # steaming bowl
 @k.objects.u1f35c k.objects.object name="steaming bowl" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1216,7 +1216,7 @@
 @k.objects.u1f35c.p16.4 k.objects.point part=$k.objects.u1f35c.p16 n=4 x=27.3 y=78.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f35c.p16.5 k.objects.point part=$k.objects.u1f35c.p16 n=5 x=30.5 y=77.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f35c.p16.6 k.objects.point part=$k.objects.u1f35c.p16 n=6 x=20 y=68.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f35c.word core.word text=bowl text=chopsticks text=food text=noodle text=pho text=ramen text=soup text=steaming means="steaming bowl" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f35c.keyword k.objects.keyword of="steaming bowl" text=bowl text=chopsticks text=food text=noodle text=pho text=ramen text=soup text=steaming core.source="cldr 48"
 
 # spaghetti
 @k.objects.u1f35d k.objects.object name=spaghetti core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1428,7 +1428,7 @@
 @k.objects.u1f35d.p16.7 k.objects.point part=$k.objects.u1f35d.p16 n=7 x=55.4 y=21.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f35d.p16.8 k.objects.point part=$k.objects.u1f35d.p16 n=8 x=56.2 y=20.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f35d.p16.9 k.objects.point part=$k.objects.u1f35d.p16 n=9 x=52.3 y=16 core.source="noto-emoji 99701e0"
-@k.objects.u1f35d.word core.word text=food text=meatballs text=pasta text=restaurant means=spaghetti of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f35d.keyword k.objects.keyword of=spaghetti text=food text=meatballs text=pasta text=restaurant core.source="cldr 48"
 
 # roasted sweet potato
 @k.objects.u1f360 k.objects.object name="roasted sweet potato" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1571,4 +1571,4 @@
 @k.objects.u1f360.p8.8 k.objects.point part=$k.objects.u1f360.p8 n=8 x=64.7 y=58.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f360.p8.9 k.objects.point part=$k.objects.u1f360.p8 n=9 x=62.8 y=56.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f360.p8.10 k.objects.point part=$k.objects.u1f360.p8 n=10 x=62.8 y=53.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f360.word core.word text=food text=potato text=roasted text=sweet means="roasted sweet potato" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f360.keyword k.objects.keyword of="roasted sweet potato" text=food text=potato text=roasted text=sweet core.source="cldr 48"

@@ -36,7 +36,7 @@
 @k.objects.u1f962.p4.5 k.objects.point part=$k.objects.u1f962.p4 n=5 x=80.4 y=39.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f962.p4.6 k.objects.point part=$k.objects.u1f962.p4 n=6 x=96.3 y=26.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f962.p4.7 k.objects.point part=$k.objects.u1f962.p4 n=7 x=96.6 y=24.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f962.word core.word text=hashi text=jeotgarak text=kuaizi means=chopsticks of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f962.keyword k.objects.keyword of=chopsticks text=hashi text=jeotgarak text=kuaizi core.source="cldr 48"
 
 # fork and knife with plate
 @k.objects.u1f37d k.objects.object name="fork and knife with plate" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -227,7 +227,7 @@
 @k.objects.u1f37d.p14.4 k.objects.point part=$k.objects.u1f37d.p14 n=4 x=95.2 y=48.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f37d.p14.5 k.objects.point part=$k.objects.u1f37d.p14 n=5 x=95.2 y=46.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f37d.p14.6 k.objects.point part=$k.objects.u1f37d.p14 n=6 x=92.5 y=47.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f37d.word core.word text=cooking text=dinner text=eat text=fork text=knife text=plate means="fork and knife with plate" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f37d.keyword k.objects.keyword of="fork and knife with plate" text=cooking text=dinner text=eat text=fork text=knife text=plate core.source="cldr 48"
 
 # fork and knife
 @k.objects.u1f374 k.objects.object name="fork and knife" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -375,7 +375,7 @@
 @k.objects.u1f374.p10.6 k.objects.point part=$k.objects.u1f374.p10 n=6 x=70.9 y=48.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f374.p10.7 k.objects.point part=$k.objects.u1f374.p10 n=7 x=70.4 y=47.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f374.p10.8 k.objects.point part=$k.objects.u1f374.p10 n=8 x=67.2 y=48.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f374.word core.word text=breakfast text=breaky text=cooking text=cutlery text=delicious text=dinner text=eat text=feed text=food text=fork text=hungry text=knife text=lunch text=restaurant text=yum text=yummy means="fork and knife" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f374.keyword k.objects.keyword of="fork and knife" text=breakfast text=breaky text=cooking text=cutlery text=delicious text=dinner text=eat text=feed text=food text=fork text=hungry text=knife text=lunch text=restaurant text=yum text=yummy core.source="cldr 48"
 
 # spoon
 @k.objects.u1f944 k.objects.object name=spoon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -500,7 +500,7 @@
 @k.objects.u1f944.p5.7 k.objects.point part=$k.objects.u1f944.p5 n=7 x=92.6 y=89.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f944.p5.8 k.objects.point part=$k.objects.u1f944.p5 n=8 x=88.4 y=89.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f944.p5.9 k.objects.point part=$k.objects.u1f944.p5 n=9 x=83.9 y=87.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f944.word core.word text=eat text=tableware means=spoon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f944.keyword k.objects.keyword of=spoon text=eat text=tableware core.source="cldr 48"
 
 # kitchen knife
 @k.objects.u1f52a k.objects.object name="kitchen knife" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -584,7 +584,7 @@
 @k.objects.u1f52a.p7.6 k.objects.point part=$k.objects.u1f52a.p7 n=6 x=35.4 y=34.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f52a.p7.7 k.objects.point part=$k.objects.u1f52a.p7 n=7 x=36.6 y=33.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f52a.p7.8 k.objects.point part=$k.objects.u1f52a.p7 n=8 x=37.1 y=32 core.source="noto-emoji 99701e0"
-@k.objects.u1f52a.word core.word text=chef text=cooking text=hocho text=kitchen text=knife text=tool text=weapon means="kitchen knife" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f52a.keyword k.objects.keyword of="kitchen knife" text=chef text=cooking text=hocho text=kitchen text=knife text=tool text=weapon core.source="cldr 48"
 
 # jar
 @k.objects.u1fad9 k.objects.object name=jar core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -657,7 +657,7 @@
 @k.objects.u1fad9.p5.8 k.objects.point part=$k.objects.u1fad9.p5 n=8 x=26.3 y=17.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fad9.p5.9 k.objects.point part=$k.objects.u1fad9.p5 n=9 x=26.7 y=16 core.source="noto-emoji 99701e0"
 @k.objects.u1fad9.p5.10 k.objects.point part=$k.objects.u1fad9.p5 n=10 x=28 y=15.6 core.source="noto-emoji 99701e0"
-@k.objects.u1fad9.word core.word text=condiment text=container text=empty text=nothing text=sauce text=store means=jar of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad9.keyword k.objects.keyword of=jar text=condiment text=container text=empty text=nothing text=sauce text=store core.source="cldr 48"
 
 # amphora
 @k.objects.u1f3fa k.objects.object name=amphora core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -876,4 +876,4 @@
 @k.objects.u1f3fa.p15.10 k.objects.point part=$k.objects.u1f3fa.p15 n=10 x=52.8 y=36.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3fa.p15.11 k.objects.point part=$k.objects.u1f3fa.p15 n=11 x=66.9 y=34.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3fa.p15.12 k.objects.point part=$k.objects.u1f3fa.p15 n=12 x=70.1 y=33.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3fa.word core.word text=Aquarius text=cooking text=drink text=jug text=tool text=weapon text=zodiac means=amphora of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3fa.keyword k.objects.keyword of=amphora text=Aquarius text=cooking text=drink text=jug text=tool text=weapon text=zodiac core.source="cldr 48"

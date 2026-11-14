@@ -206,7 +206,7 @@
 @k.objects.mb2222.p16.3 k.objects.point part=$k.objects.mb2222.p16 n=3 x=37.4 y=39.7 core.source="mulberry fa94a93"
 @k.objects.mb2222.p16.4 k.objects.point part=$k.objects.mb2222.p16 n=4 x=39.2 y=43 core.source="mulberry fa94a93"
 @k.objects.mb2222.p16.5 k.objects.point part=$k.objects.mb2222.p16 n=5 x=41.5 y=43.6 core.source="mulberry fa94a93"
-@k.objects.mb2222.word core.word text=animal text=farm text=mammal means=piglet of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2222.keyword k.objects.keyword of=piglet text=animal text=farm text=mammal core.source="mulberry fa94a93"
 
 # porcupine
 @k.objects.mb2285 k.objects.object name=porcupine core.source="mulberry fa94a93"
@@ -375,7 +375,7 @@
 @k.objects.mb2285.p16.3 k.objects.point part=$k.objects.mb2285.p16 n=3 x=65.6 y=59.1 core.source="mulberry fa94a93"
 @k.objects.mb2285.p16.4 k.objects.point part=$k.objects.mb2285.p16 n=4 x=75 y=57.9 core.source="mulberry fa94a93"
 @k.objects.mb2285.p16.5 k.objects.point part=$k.objects.mb2285.p16 n=5 x=85.5 y=57.5 core.source="mulberry fa94a93"
-@k.objects.mb2285.word core.word text=animal text=mammal text=wild text=zoo means=porcupine of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2285.keyword k.objects.keyword of=porcupine text=animal text=mammal text=wild text=zoo core.source="mulberry fa94a93"
 
 # reindeer
 @k.objects.mb2386 k.objects.object name=reindeer core.source="mulberry fa94a93"
@@ -557,7 +557,7 @@
 @k.objects.mb2386.p16.2 k.objects.point part=$k.objects.mb2386.p16 n=2 x=12.7 y=8.1 core.source="mulberry fa94a93"
 @k.objects.mb2386.p16.3 k.objects.point part=$k.objects.mb2386.p16 n=3 x=11.9 y=11 core.source="mulberry fa94a93"
 @k.objects.mb2386.p16.4 k.objects.point part=$k.objects.mb2386.p16 n=4 x=12 y=18.9 core.source="mulberry fa94a93"
-@k.objects.mb2386.word core.word text=animal text=celebration text=farm text=food means=reindeer of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2386.keyword k.objects.keyword of=reindeer text=animal text=celebration text=farm text=food core.source="mulberry fa94a93"
 
 # sheep
 @k.objects.mb2538 k.objects.object name=sheep core.source="mulberry fa94a93"
@@ -747,7 +747,7 @@
 @k.objects.mb2538.p16.8 k.objects.point part=$k.objects.mb2538.p16 n=8 x=24.4 y=30 core.source="mulberry fa94a93"
 @k.objects.mb2538.p16.9 k.objects.point part=$k.objects.mb2538.p16 n=9 x=24.5 y=28.1 core.source="mulberry fa94a93"
 @k.objects.mb2538.p16.10 k.objects.point part=$k.objects.mb2538.p16 n=10 x=25.3 y=27.2 core.source="mulberry fa94a93"
-@k.objects.mb2538.word core.word text=animal text=farm text=mammal means=sheep of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2538.keyword k.objects.keyword of=sheep text=animal text=farm text=mammal core.source="mulberry fa94a93"
 
 # shrew
 @k.objects.mb2560 k.objects.object name=shrew core.source="mulberry fa94a93"
@@ -921,7 +921,7 @@
 @k.objects.mb2560.p13.2 k.objects.point part=$k.objects.mb2560.p13 n=2 x=13.3 y=47 core.source="mulberry fa94a93"
 @k.objects.mb2560.p13.3 k.objects.point part=$k.objects.mb2560.p13 n=3 x=13.6 y=48.5 core.source="mulberry fa94a93"
 @k.objects.mb2560.p13.4 k.objects.point part=$k.objects.mb2560.p13 n=4 x=12.7 y=50 core.source="mulberry fa94a93"
-@k.objects.mb2560.word core.word text=animal text=wild means=shrew of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2560.keyword k.objects.keyword of=shrew text=animal text=wild core.source="mulberry fa94a93"
 
 # stag
 @k.objects.mb2671 k.objects.object name=stag core.source="mulberry fa94a93"
@@ -1103,7 +1103,7 @@
 @k.objects.mb2671.p16.2 k.objects.point part=$k.objects.mb2671.p16 n=2 x=38.6 y=22.3 core.source="mulberry fa94a93"
 @k.objects.mb2671.p16.3 k.objects.point part=$k.objects.mb2671.p16 n=3 x=38 y=24 core.source="mulberry fa94a93"
 @k.objects.mb2671.p16.4 k.objects.point part=$k.objects.mb2671.p16 n=4 x=38.1 y=29.5 core.source="mulberry fa94a93"
-@k.objects.mb2671.word core.word text=animal text=wild means=stag of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2671.keyword k.objects.keyword of=stag text=animal text=wild core.source="mulberry fa94a93"
 
 # stoat
 @k.objects.mb2702 k.objects.object name=stoat core.source="mulberry fa94a93"
@@ -1318,4 +1318,4 @@
 @k.objects.mb2702.p16.4 k.objects.point part=$k.objects.mb2702.p16 n=4 x=81.4 y=35.4 core.source="mulberry fa94a93"
 @k.objects.mb2702.p16.5 k.objects.point part=$k.objects.mb2702.p16 n=5 x=85.5 y=35.2 core.source="mulberry fa94a93"
 @k.objects.mb2702.p16.6 k.objects.point part=$k.objects.mb2702.p16 n=6 x=89.1 y=32 core.source="mulberry fa94a93"
-@k.objects.mb2702.word core.word text=animal text=wild means=stoat of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2702.keyword k.objects.keyword of=stoat text=animal text=wild core.source="mulberry fa94a93"

@@ -140,7 +140,7 @@
 @k.objects.u1f6ce.p11.10 k.objects.point part=$k.objects.u1f6ce.p11 n=10 x=40.7 y=36.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ce.p11.11 k.objects.point part=$k.objects.u1f6ce.p11 n=11 x=34.1 y=39.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6ce.p11.12 k.objects.point part=$k.objects.u1f6ce.p11 n=12 x=29.3 y=43.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f6ce.word core.word text=bell text=bellhop text=hotel means="bellhop bell" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6ce.keyword k.objects.keyword of="bellhop bell" text=bell text=bellhop text=hotel core.source="cldr 48"
 
 # luggage
 @k.objects.u1f9f3 k.objects.object name=luggage core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -327,4 +327,4 @@
 @k.objects.u1f9f3.p16.8 k.objects.point part=$k.objects.u1f9f3.p16 n=8 x=12.2 y=63.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f3.p16.9 k.objects.point part=$k.objects.u1f9f3.p16 n=9 x=12.4 y=61.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f3.p16.10 k.objects.point part=$k.objects.u1f9f3.p16 n=10 x=13.7 y=59.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9f3.word core.word text=bag text=packing text=roller text=suitcase text=travel means=luggage of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f3.keyword k.objects.keyword of=luggage text=bag text=packing text=roller text=suitcase text=travel core.source="cldr 48"

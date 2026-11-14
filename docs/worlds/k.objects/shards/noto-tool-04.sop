@@ -87,7 +87,7 @@
 @k.objects.u1f9f2.p4.37 k.objects.point part=$k.objects.u1f9f2.p4 n=37 x=73.5 y=62.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f2.p5 k.objects.part of=magnet name=tip2 kind=tip named=model shape=rectangle x=73.5 y=62.7 w=22.9 h=24 z=5 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
 @k.objects.u1f9f2.p6 k.objects.part of=magnet name=tip1 kind=tip named=model shape=rectangle x=73.5 y=3.1 w=22.9 h=24.1 z=6 colour=white rgb="#E0E0E0" core.source="noto-emoji 99701e0"
-@k.objects.u1f9f2.word core.word text=attraction text=horseshoe text=magnetic text=negative text=positive text=shape text=u means=magnet of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f2.keyword k.objects.keyword of=magnet text=attraction text=horseshoe text=magnetic text=negative text=positive text=shape text=u core.source="cldr 48"
 
 # shovel
 @k.objects.u1fa8f k.objects.object name=shovel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -252,4 +252,4 @@
 @k.objects.u1fa8f.p10.6 k.objects.point part=$k.objects.u1fa8f.p10 n=6 x=72.2 y=13.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fa8f.p10.7 k.objects.point part=$k.objects.u1fa8f.p10 n=7 x=69.3 y=10.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa8f.p10.8 k.objects.point part=$k.objects.u1fa8f.p10 n=8 x=78 y=2 core.source="noto-emoji 99701e0"
-@k.objects.u1fa8f.word core.word text=bury text=dig text=garden text=hole text=plant text=scoop text=snow text=spade means=shovel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa8f.keyword k.objects.keyword of=shovel text=bury text=dig text=garden text=hole text=plant text=scoop text=snow text=spade core.source="cldr 48"

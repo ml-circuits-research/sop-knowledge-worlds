@@ -6,7 +6,7 @@
 @k.attributes.same.package.thing k.attributes.same name=package sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.packed_lunch.food k.attributes.same name="packed lunch" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.paddles.thing k.attributes.same name=paddles sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.paella.food k.attributes.same name=paella sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.paella.food k.attributes.same name=paella sense=food only=true in=k.food.food in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.page_facing_up.thing k.attributes.same name="page facing up" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.page_with_curl.thing k.attributes.same name="page with curl" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.pager.thing k.attributes.same name=pager sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

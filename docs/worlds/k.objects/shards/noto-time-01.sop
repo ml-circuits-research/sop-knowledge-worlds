@@ -104,7 +104,7 @@
 @k.objects.u231b.p8.11 k.objects.point part=$k.objects.u231b.p8 n=11 x=53.6 y=56.5 core.source="noto-emoji 99701e0"
 @k.objects.u231b.p8.12 k.objects.point part=$k.objects.u231b.p8 n=12 x=51.2 y=54.7 core.source="noto-emoji 99701e0"
 @k.objects.u231b.p8.13 k.objects.point part=$k.objects.u231b.p8 n=13 x=50.1 y=55.1 core.source="noto-emoji 99701e0"
-@k.objects.u231b.word core.word text=done text=hourglass text=sand text=time text=timer means="hourglass done" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u231b.keyword k.objects.keyword of="hourglass done" text=done text=hourglass text=sand text=time text=timer core.source="cldr 48"
 
 # hourglass not done
 @k.objects.u23f3 k.objects.object name="hourglass not done" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -225,7 +225,7 @@
 @k.objects.u23f3.p8.12 k.objects.point part=$k.objects.u23f3.p8 n=12 x=29.2 y=29.9 core.source="noto-emoji 99701e0"
 @k.objects.u23f3.p8.13 k.objects.point part=$k.objects.u23f3.p8 n=13 x=28.4 y=30.3 core.source="noto-emoji 99701e0"
 @k.objects.u23f3.p8.14 k.objects.point part=$k.objects.u23f3.p8 n=14 x=28.9 y=31.3 core.source="noto-emoji 99701e0"
-@k.objects.u23f3.word core.word text=done text=flowing text=hourglass text=hours text=not text=sand text=timer text=waiting text=yolo means="hourglass not done" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u23f3.keyword k.objects.keyword of="hourglass not done" text=done text=flowing text=hourglass text=hours text=not text=sand text=timer text=waiting text=yolo core.source="cldr 48"
 
 # watch
 @k.objects.u231a k.objects.object name=watch core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -362,7 +362,7 @@
 @k.objects.u231a.p16.8 k.objects.point part=$k.objects.u231a.p16 n=8 x=31.8 y=5.8 core.source="noto-emoji 99701e0"
 @k.objects.u231a.p16.9 k.objects.point part=$k.objects.u231a.p16 n=9 x=31.7 y=7.8 core.source="noto-emoji 99701e0"
 @k.objects.u231a.p16.10 k.objects.point part=$k.objects.u231a.p16 n=10 x=33.5 y=9 core.source="noto-emoji 99701e0"
-@k.objects.u231a.word core.word text=clock text=time means=watch of=k.objects.object.name core.source="cldr 48"
+@k.objects.u231a.keyword k.objects.keyword of=watch text=clock text=time core.source="cldr 48"
 
 # alarm clock
 @k.objects.u23f0 k.objects.object name="alarm clock" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -476,7 +476,7 @@
 @k.objects.u23f0.p16.11 k.objects.point part=$k.objects.u23f0.p16 n=11 x=15.9 y=9.9 core.source="noto-emoji 99701e0"
 @k.objects.u23f0.p16.12 k.objects.point part=$k.objects.u23f0.p16 n=12 x=17.9 y=9.8 core.source="noto-emoji 99701e0"
 @k.objects.u23f0.p16.13 k.objects.point part=$k.objects.u23f0.p16 n=13 x=19.1 y=10.6 core.source="noto-emoji 99701e0"
-@k.objects.u23f0.word core.word text=alarm text=clock text=hours text=hrs text=late text=time text=waiting means="alarm clock" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u23f0.keyword k.objects.keyword of="alarm clock" text=alarm text=clock text=hours text=hrs text=late text=time text=waiting core.source="cldr 48"
 
 # stopwatch
 @k.objects.u23f1 k.objects.object name=stopwatch core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -571,7 +571,7 @@
 @k.objects.u23f1.p15.5 k.objects.point part=$k.objects.u23f1.p15 n=5 x=47.9 y=57.2 core.source="noto-emoji 99701e0"
 @k.objects.u23f1.p15.6 k.objects.point part=$k.objects.u23f1.p15 n=6 x=52.2 y=57.2 core.source="noto-emoji 99701e0"
 @k.objects.u23f1.p16 k.objects.part of=stopwatch name=part16 named=no shape=circle x=46.8 y=53.9 w=6.4 h=6.4 z=16 colour=brown rgb="#563428" core.source="noto-emoji 99701e0"
-@k.objects.u23f1.word core.word text=clock text=time means=stopwatch of=k.objects.object.name core.source="cldr 48"
+@k.objects.u23f1.keyword k.objects.keyword of=stopwatch text=clock text=time core.source="cldr 48"
 
 # timer clock
 @k.objects.u23f2 k.objects.object name="timer clock" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -700,7 +700,7 @@
 @k.objects.u23f2.p16.1 k.objects.point part=$k.objects.u23f2.p16 n=1 x=49.6 y=12.9 core.source="noto-emoji 99701e0"
 @k.objects.u23f2.p16.2 k.objects.point part=$k.objects.u23f2.p16 n=2 x=45.7 y=5.1 core.source="noto-emoji 99701e0"
 @k.objects.u23f2.p16.3 k.objects.point part=$k.objects.u23f2.p16 n=3 x=54.3 y=5.1 core.source="noto-emoji 99701e0"
-@k.objects.u23f2.word core.word text=clock text=timer means="timer clock" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u23f2.keyword k.objects.keyword of="timer clock" text=clock text=timer core.source="cldr 48"
 
 # mantelpiece clock
 @k.objects.u1f570 k.objects.object name="mantelpiece clock" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -889,4 +889,4 @@
 @k.objects.u1f570.p15.8 k.objects.point part=$k.objects.u1f570.p15 n=8 x=43 y=42.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f570.p15.9 k.objects.point part=$k.objects.u1f570.p15 n=9 x=48.7 y=46.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f570.p15.10 k.objects.point part=$k.objects.u1f570.p15 n=10 x=50.3 y=44.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f570.word core.word text=clock text=mantelpiece text=time means="mantelpiece clock" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f570.keyword k.objects.keyword of="mantelpiece clock" text=clock text=mantelpiece text=time core.source="cldr 48"

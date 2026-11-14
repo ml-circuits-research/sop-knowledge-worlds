@@ -198,7 +198,7 @@
 @k.objects.mb912.p16.9 k.objects.point part=$k.objects.mb912.p16 n=9 x=59.1 y=31.2 core.source="mulberry fa94a93"
 @k.objects.mb912.p16.10 k.objects.point part=$k.objects.mb912.p16 n=10 x=60.5 y=29.1 core.source="mulberry fa94a93"
 @k.objects.mb912.p16.11 k.objects.point part=$k.objects.mb912.p16 n=11 x=63.3 y=26.6 core.source="mulberry fa94a93"
-@k.objects.mb912.word core.word text=communication means="disabled toilet" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb912.keyword k.objects.keyword of="disabled toilet" text=communication core.source="mulberry fa94a93"
 
 # ladies toilet
 @k.objects.mb1785 k.objects.object name="ladies toilet" core.source="mulberry fa94a93"
@@ -391,7 +391,7 @@
 @k.objects.mb1785.p16.11 k.objects.point part=$k.objects.mb1785.p16 n=11 x=28.9 y=84.9 core.source="mulberry fa94a93"
 @k.objects.mb1785.p16.12 k.objects.point part=$k.objects.mb1785.p16 n=12 x=28.8 y=81.5 core.source="mulberry fa94a93"
 @k.objects.mb1785.p16.13 k.objects.point part=$k.objects.mb1785.p16 n=13 x=26.4 y=70.4 core.source="mulberry fa94a93"
-@k.objects.mb1785.word core.word text=communication means="ladies toilet" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1785.keyword k.objects.keyword of="ladies toilet" text=communication core.source="mulberry fa94a93"
 
 # mens toilet
 @k.objects.mb1924 k.objects.object name="mens toilet" core.source="mulberry fa94a93"
@@ -591,7 +591,7 @@
 @k.objects.mb1924.p16.3 k.objects.point part=$k.objects.mb1924.p16 n=3 x=72.4 y=52.8 core.source="mulberry fa94a93"
 @k.objects.mb1924.p16.4 k.objects.point part=$k.objects.mb1924.p16 n=4 x=71.5 y=52.5 core.source="mulberry fa94a93"
 @k.objects.mb1924.p16.5 k.objects.point part=$k.objects.mb1924.p16 n=5 x=71.2 y=34 core.source="mulberry fa94a93"
-@k.objects.mb1924.word core.word text=communication means="mens toilet" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1924.keyword k.objects.keyword of="mens toilet" text=communication core.source="mulberry fa94a93"
 
 # surgery health centre
 @k.objects.mb2736 k.objects.object name="surgery health centre" core.source="mulberry fa94a93"
@@ -688,4 +688,4 @@
 @k.objects.mb2736.p16.5 k.objects.point part=$k.objects.mb2736.p16 n=5 x=75 y=33.1 core.source="mulberry fa94a93"
 @k.objects.mb2736.p16.6 k.objects.point part=$k.objects.mb2736.p16 n=6 x=70.5 y=27.8 core.source="mulberry fa94a93"
 @k.objects.mb2736.p16.7 k.objects.point part=$k.objects.mb2736.p16 n=7 x=70.5 y=8.5 core.source="mulberry fa94a93"
-@k.objects.mb2736.word core.word text=clinic text=health text=hospital text=medical means="surgery health centre" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2736.keyword k.objects.keyword of="surgery health centre" text=clinic text=health text=hospital text=medical core.source="mulberry fa94a93"

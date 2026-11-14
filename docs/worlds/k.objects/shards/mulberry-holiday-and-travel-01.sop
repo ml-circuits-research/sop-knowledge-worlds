@@ -206,7 +206,7 @@
 @k.objects.mb137.p16.3 k.objects.point part=$k.objects.mb137.p16 n=3 x=62.2 y=72.2 core.source="mulberry fa94a93"
 @k.objects.mb137.p16.4 k.objects.point part=$k.objects.mb137.p16 n=4 x=75.9 y=74.2 core.source="mulberry fa94a93"
 @k.objects.mb137.p16.5 k.objects.point part=$k.objects.mb137.p16 n=5 x=89.6 y=79.4 core.source="mulberry fa94a93"
-@k.objects.mb137.word core.word text=holiday means=beach of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb137.keyword k.objects.keyword of=beach text=holiday core.source="mulberry fa94a93"
 
 # beach towel
 @k.objects.mb139 k.objects.object name="beach towel" core.source="mulberry fa94a93"
@@ -339,7 +339,7 @@
 @k.objects.mb139.p16.19 k.objects.point part=$k.objects.mb139.p16 n=19 x=91.9 y=20.7 core.source="mulberry fa94a93"
 @k.objects.mb139.p16.20 k.objects.point part=$k.objects.mb139.p16 n=20 x=92.9 y=21.2 core.source="mulberry fa94a93"
 @k.objects.mb139.p16.21 k.objects.point part=$k.objects.mb139.p16 n=21 x=95.1 y=20.1 core.source="mulberry fa94a93"
-@k.objects.mb139.word core.word text=holiday means="beach towel" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb139.keyword k.objects.keyword of="beach towel" text=holiday core.source="mulberry fa94a93"
 
 # big wheel
 @k.objects.mb173 k.objects.object name="big wheel" core.source="mulberry fa94a93"
@@ -481,7 +481,7 @@
 @k.objects.mb173.p16.4 k.objects.point part=$k.objects.mb173.p16 n=4 x=18 y=90.5 core.source="mulberry fa94a93"
 @k.objects.mb173.p16.5 k.objects.point part=$k.objects.mb173.p16 n=5 x=18 y=82 core.source="mulberry fa94a93"
 @k.objects.mb173.p16.6 k.objects.point part=$k.objects.mb173.p16 n=6 x=22.2 y=82 core.source="mulberry fa94a93"
-@k.objects.mb173.word core.word text=holiday means="big wheel" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb173.keyword k.objects.keyword of="big wheel" text=holiday core.source="mulberry fa94a93"
 
 # garden chair folding
 @k.objects.mb1506 k.objects.object name="garden chair folding" core.source="mulberry fa94a93"
@@ -554,7 +554,7 @@
 @k.objects.mb1506.p16 k.objects.part of="garden chair folding" name=part16 kind=detail named=no shape=line x=55.8 y=50.4 w=24.6 h=11.6 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1506.p16.1 k.objects.point part=$k.objects.mb1506.p16 n=1 x=55.8 y=62 core.source="mulberry fa94a93"
 @k.objects.mb1506.p16.2 k.objects.point part=$k.objects.mb1506.p16 n=2 x=80.4 y=50.4 core.source="mulberry fa94a93"
-@k.objects.mb1506.word core.word text=holiday means="garden chair folding" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1506.keyword k.objects.keyword of="garden chair folding" text=holiday core.source="mulberry fa94a93"
 
 # holdall
 @k.objects.mb1670 k.objects.object name=holdall core.source="mulberry fa94a93"
@@ -747,7 +747,7 @@
 @k.objects.mb1670.p16.1 k.objects.point part=$k.objects.mb1670.p16 n=1 x=71.8 y=59.9 core.source="mulberry fa94a93"
 @k.objects.mb1670.p16.2 k.objects.point part=$k.objects.mb1670.p16 n=2 x=82.7 y=57.6 core.source="mulberry fa94a93"
 @k.objects.mb1670.p16.3 k.objects.point part=$k.objects.mb1670.p16 n=3 x=87.8 y=55.9 core.source="mulberry fa94a93"
-@k.objects.mb1670.word core.word text=holiday means=holdall of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1670.keyword k.objects.keyword of=holdall text=holiday core.source="mulberry fa94a93"
 
 # mountains
 @k.objects.mb1983 k.objects.object name=mountains core.source="mulberry fa94a93"
@@ -956,7 +956,7 @@
 @k.objects.mb1983.p16.1 k.objects.point part=$k.objects.mb1983.p16 n=1 x=55.1 y=59.8 core.source="mulberry fa94a93"
 @k.objects.mb1983.p16.2 k.objects.point part=$k.objects.mb1983.p16 n=2 x=35.9 y=71 core.source="mulberry fa94a93"
 @k.objects.mb1983.p16.3 k.objects.point part=$k.objects.mb1983.p16 n=3 x=24.4 y=76.8 core.source="mulberry fa94a93"
-@k.objects.mb1983.word core.word text=holiday text=travel means=mountains of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1983.keyword k.objects.keyword of=mountains text=holiday text=travel core.source="mulberry fa94a93"
 
 # passport
 @k.objects.mb2151 k.objects.object name=passport core.source="mulberry fa94a93"
@@ -1124,7 +1124,7 @@
 @k.objects.mb2151.p16.15 k.objects.point part=$k.objects.mb2151.p16 n=15 x=55.3 y=52.7 core.source="mulberry fa94a93"
 @k.objects.mb2151.p16.16 k.objects.point part=$k.objects.mb2151.p16 n=16 x=57.4 y=55.8 core.source="mulberry fa94a93"
 @k.objects.mb2151.p16.17 k.objects.point part=$k.objects.mb2151.p16 n=17 x=58.1 y=58.6 core.source="mulberry fa94a93"
-@k.objects.mb2151.word core.word text=holiday text=travel means=passport of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2151.keyword k.objects.keyword of=passport text=holiday text=travel core.source="mulberry fa94a93"
 
 # photographs
 @k.objects.mb2207 k.objects.object name=photographs core.source="mulberry fa94a93"
@@ -1316,4 +1316,4 @@
 @k.objects.mb2207.p16.2 k.objects.point part=$k.objects.mb2207.p16 n=2 x=20.7 y=77.6 core.source="mulberry fa94a93"
 @k.objects.mb2207.p16.3 k.objects.point part=$k.objects.mb2207.p16 n=3 x=12.4 y=53.7 core.source="mulberry fa94a93"
 @k.objects.mb2207.p16.4 k.objects.point part=$k.objects.mb2207.p16 n=4 x=36.2 y=49.2 core.source="mulberry fa94a93"
-@k.objects.mb2207.word core.word text=holiday means=photographs of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2207.keyword k.objects.keyword of=photographs text=holiday core.source="mulberry fa94a93"

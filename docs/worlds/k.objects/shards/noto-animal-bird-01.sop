@@ -207,7 +207,7 @@
 @k.objects.u1f983.p16.2 k.objects.point part=$k.objects.u1f983.p16 n=2 x=73.2 y=54.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f983.p16.3 k.objects.point part=$k.objects.u1f983.p16 n=3 x=65.6 y=54.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f983.p16.4 k.objects.point part=$k.objects.u1f983.p16 n=4 x=63.3 y=56.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f983.word core.word text=bird text=gobble text=thanksgiving means=turkey of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f983.keyword k.objects.keyword of=turkey text=bird text=gobble text=thanksgiving core.source="cldr 48"
 
 # chicken
 @k.objects.u1f414 k.objects.object name=chicken core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -380,7 +380,7 @@
 @k.objects.u1f414.p12.10 k.objects.point part=$k.objects.u1f414.p12 n=10 x=39.8 y=36.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f414.p12.11 k.objects.point part=$k.objects.u1f414.p12 n=11 x=41.9 y=36.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f414.p12.12 k.objects.point part=$k.objects.u1f414.p12 n=12 x=43.7 y=38.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f414.word core.word text=animal text=bird text=ornithology means=chicken of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f414.keyword k.objects.keyword of=chicken text=animal text=bird text=ornithology core.source="cldr 48"
 
 # rooster
 @k.objects.u1f413 k.objects.object name=rooster core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -564,7 +564,7 @@
 @k.objects.u1f413.p8.22 k.objects.point part=$k.objects.u1f413.p8 n=22 x=64.4 y=46.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f413.p8.23 k.objects.point part=$k.objects.u1f413.p8 n=23 x=62 y=45.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f413.p8.24 k.objects.point part=$k.objects.u1f413.p8 n=24 x=53.5 y=42.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f413.word core.word text=animal text=bird text=ornithology means=rooster of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f413.keyword k.objects.keyword of=rooster text=animal text=bird text=ornithology core.source="cldr 48"
 
 # hatching chick
 @k.objects.u1f423 k.objects.object name="hatching chick" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -736,7 +736,7 @@
 @k.objects.u1f423.p12.15 k.objects.point part=$k.objects.u1f423.p12 n=15 x=53.2 y=31.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f423.p12.16 k.objects.point part=$k.objects.u1f423.p12 n=16 x=51.1 y=33.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f423.p12.17 k.objects.point part=$k.objects.u1f423.p12 n=17 x=47 y=32.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f423.word core.word text=animal text=baby text=bird text=chick text=egg text=hatching means="hatching chick" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f423.keyword k.objects.keyword of="hatching chick" text=animal text=baby text=bird text=chick text=egg text=hatching core.source="cldr 48"
 
 # baby chick
 @k.objects.u1f424 k.objects.object name="baby chick" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -848,7 +848,7 @@
 @k.objects.u1f424.p6.28 k.objects.point part=$k.objects.u1f424.p6 n=28 x=51.3 y=62.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f424.p6.29 k.objects.point part=$k.objects.u1f424.p6 n=29 x=47 y=60.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f424.p6.30 k.objects.point part=$k.objects.u1f424.p6 n=30 x=42.2 y=56.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f424.word core.word text=animal text=baby text=bird text=chick text=ornithology means="baby chick" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f424.keyword k.objects.keyword of="baby chick" text=animal text=baby text=bird text=chick text=ornithology core.source="cldr 48"
 
 # front-facing baby chick
 @k.objects.u1f425 k.objects.object name="front-facing baby chick" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -977,7 +977,7 @@
 @k.objects.u1f425.p8.9 k.objects.point part=$k.objects.u1f425.p8 n=9 x=5.6 y=65.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f425.p8.10 k.objects.point part=$k.objects.u1f425.p8 n=10 x=3.6 y=62.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f425.p8.11 k.objects.point part=$k.objects.u1f425.p8 n=11 x=9.5 y=63.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f425.word core.word text=animal text=baby text=bird text=chick text=front-facing text=newborn text=ornithology means="front-facing baby chick" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f425.keyword k.objects.keyword of="front-facing baby chick" text=animal text=baby text=bird text=chick text=front-facing text=newborn text=ornithology core.source="cldr 48"
 
 # penguin
 @k.objects.u1f427 k.objects.object name=penguin core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1115,7 +1115,7 @@
 @k.objects.u1f427.p7.7 k.objects.point part=$k.objects.u1f427.p7 n=7 x=45.8 y=14 core.source="noto-emoji 99701e0"
 @k.objects.u1f427.p7.8 k.objects.point part=$k.objects.u1f427.p7 n=8 x=47.9 y=13.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f427.p7.9 k.objects.point part=$k.objects.u1f427.p7 n=9 x=49.2 y=14.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f427.word core.word text=animal text=antarctica text=bird text=ornithology means=penguin of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f427.keyword k.objects.keyword of=penguin text=animal text=antarctica text=bird text=ornithology core.source="cldr 48"
 
 # dove
 @k.objects.u1f54a k.objects.object name=dove core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1308,4 +1308,4 @@
 @k.objects.u1f54a.p10.6 k.objects.point part=$k.objects.u1f54a.p10 n=6 x=14.5 y=51.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f54a.p10.7 k.objects.point part=$k.objects.u1f54a.p10 n=7 x=17.7 y=52 core.source="noto-emoji 99701e0"
 @k.objects.u1f54a.p10.8 k.objects.point part=$k.objects.u1f54a.p10 n=8 x=17.8 y=47.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f54a.word core.word text=bird text=fly text=ornithology text=peace means=dove of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f54a.keyword k.objects.keyword of=dove text=bird text=fly text=ornithology text=peace core.source="cldr 48"

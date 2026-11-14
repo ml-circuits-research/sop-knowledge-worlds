@@ -180,7 +180,7 @@
 @k.objects.u1f6a0.p16.7 k.objects.point part=$k.objects.u1f6a0.p16 n=7 x=34.3 y=80.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a0.p16.8 k.objects.point part=$k.objects.u1f6a0.p16 n=8 x=34.2 y=63.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a0.p16.9 k.objects.point part=$k.objects.u1f6a0.p16 n=9 x=34.7 y=62.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a0.word core.word text=cable text=cableway text=gondola text=lift text=mountain text=ski means="mountain cableway" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a0.keyword k.objects.keyword of="mountain cableway" text=cable text=cableway text=gondola text=lift text=mountain text=ski core.source="cldr 48"
 
 # aerial tramway
 @k.objects.u1f6a1 k.objects.object name="aerial tramway" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -351,7 +351,7 @@
 @k.objects.u1f6a1.p16.7 k.objects.point part=$k.objects.u1f6a1.p16 n=7 x=47.5 y=80.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a1.p16.8 k.objects.point part=$k.objects.u1f6a1.p16 n=8 x=47.4 y=63.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a1.p16.9 k.objects.point part=$k.objects.u1f6a1.p16 n=9 x=47.9 y=62.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a1.word core.word text=aerial text=cable text=car text=gondola text=ropeway text=tramway means="aerial tramway" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a1.keyword k.objects.keyword of="aerial tramway" text=aerial text=cable text=car text=gondola text=ropeway text=tramway core.source="cldr 48"
 
 # satellite
 @k.objects.u1f6f0 k.objects.object name=satellite core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -529,7 +529,7 @@
 @k.objects.u1f6f0.p16.18 k.objects.point part=$k.objects.u1f6f0.p16 n=18 x=23.5 y=44.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f0.p16.19 k.objects.point part=$k.objects.u1f6f0.p16 n=19 x=23.2 y=49.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f0.p16.20 k.objects.point part=$k.objects.u1f6f0.p16 n=20 x=25.1 y=58.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f0.word core.word text=space means=satellite of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6f0.keyword k.objects.keyword of=satellite text=space core.source="cldr 48"
 
 # flying saucer
 @k.objects.u1f6f8 k.objects.object name="flying saucer" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -719,4 +719,4 @@
 @k.objects.u1f6f8.p16.14 k.objects.point part=$k.objects.u1f6f8.p16 n=14 x=10.9 y=36.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f8.p16.15 k.objects.point part=$k.objects.u1f6f8.p16 n=15 x=14.1 y=35.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f8.p16.16 k.objects.point part=$k.objects.u1f6f8.p16 n=16 x=17.6 y=35.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f8.word core.word text=aliens text=extra text=flying text=saucer text=terrestrial text=UFO means="flying saucer" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6f8.keyword k.objects.keyword of="flying saucer" text=aliens text=extra text=flying text=saucer text=terrestrial text=UFO core.source="cldr 48"

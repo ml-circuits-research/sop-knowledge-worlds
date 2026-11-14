@@ -111,7 +111,7 @@
 @k.objects.mb1103.p16 k.objects.part of=file name=part16 kind=detail named=no shape=line x=45.2 y=8.2 w=9.7 h=4.8 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1103.p16.1 k.objects.point part=$k.objects.mb1103.p16 n=1 x=54.9 y=8.2 core.source="mulberry fa94a93"
 @k.objects.mb1103.p16.2 k.objects.point part=$k.objects.mb1103.p16 n=2 x=45.2 y=13 core.source="mulberry fa94a93"
-@k.objects.mb1103.word core.word text=DIY text=tools text=workshop means=file of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1103.keyword k.objects.keyword of=file text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # fire hose
 @k.objects.mb1119 k.objects.object name="fire hose" core.source="mulberry fa94a93"
@@ -320,7 +320,7 @@
 @k.objects.mb1119.p16.7 k.objects.point part=$k.objects.mb1119.p16 n=7 x=60.9 y=17.7 core.source="mulberry fa94a93"
 @k.objects.mb1119.p16.8 k.objects.point part=$k.objects.mb1119.p16 n=8 x=70.6 y=25.7 core.source="mulberry fa94a93"
 @k.objects.mb1119.p16.9 k.objects.point part=$k.objects.mb1119.p16 n=9 x=76.7 y=36.6 core.source="mulberry fa94a93"
-@k.objects.mb1119.word core.word text=equipment means="fire hose" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1119.keyword k.objects.keyword of="fire hose" text=equipment core.source="mulberry fa94a93"
 
 # mask dustmask
 @k.objects.mb1903 k.objects.object name="mask dustmask" core.source="mulberry fa94a93"
@@ -535,7 +535,7 @@
 @k.objects.mb1903.p16.10 k.objects.point part=$k.objects.mb1903.p16 n=10 x=91.6 y=60.4 core.source="mulberry fa94a93"
 @k.objects.mb1903.p16.11 k.objects.point part=$k.objects.mb1903.p16 n=11 x=87.7 y=57.8 core.source="mulberry fa94a93"
 @k.objects.mb1903.p16.12 k.objects.point part=$k.objects.mb1903.p16 n=12 x=80 y=56.9 core.source="mulberry fa94a93"
-@k.objects.mb1903.word core.word text=DIY text=tools text=workshop means="mask dustmask" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1903.keyword k.objects.keyword of="mask dustmask" text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # nail
 @k.objects.mb2008 k.objects.object name=nail core.source="mulberry fa94a93"
@@ -582,7 +582,7 @@
 @k.objects.mb2008.p4.3 k.objects.point part=$k.objects.mb2008.p4 n=3 x=50.1 y=91.8 core.source="mulberry fa94a93"
 @k.objects.mb2008.p4.4 k.objects.point part=$k.objects.mb2008.p4 n=4 x=44.9 y=80.2 core.source="mulberry fa94a93"
 @k.objects.mb2008.p4.5 k.objects.point part=$k.objects.mb2008.p4 n=5 x=44.9 y=18.1 core.source="mulberry fa94a93"
-@k.objects.mb2008.word core.word text=DIY text=tools text=workshop means=nail of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2008.keyword k.objects.keyword of=nail text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # paint
 @k.objects.mb2117 k.objects.object name=paint core.source="mulberry fa94a93"
@@ -722,7 +722,7 @@
 @k.objects.mb2117.p7.15 k.objects.point part=$k.objects.mb2117.p7 n=15 x=21.5 y=30.5 core.source="mulberry fa94a93"
 @k.objects.mb2117.p7.16 k.objects.point part=$k.objects.mb2117.p7 n=16 x=21.1 y=40.3 core.source="mulberry fa94a93"
 @k.objects.mb2117.p7.17 k.objects.point part=$k.objects.mb2117.p7 n=17 x=23.9 y=40.3 core.source="mulberry fa94a93"
-@k.objects.mb2117.word core.word text=DIY text=tools text=workshop means=paint of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2117.keyword k.objects.keyword of=paint text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # pliers
 @k.objects.mb2264 k.objects.object name=pliers core.source="mulberry fa94a93"
@@ -869,7 +869,7 @@
 @k.objects.mb2264.p16 k.objects.part of=pliers name=part16 kind=detail named=no shape=line x=38.8 y=49.7 w=9.4 h=0 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2264.p16.1 k.objects.point part=$k.objects.mb2264.p16 n=1 x=38.8 y=49.7 core.source="mulberry fa94a93"
 @k.objects.mb2264.p16.2 k.objects.point part=$k.objects.mb2264.p16 n=2 x=48.2 y=49.7 core.source="mulberry fa94a93"
-@k.objects.mb2264.word core.word text=DIY text=tools text=workshop means=pliers of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2264.keyword k.objects.keyword of=pliers text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # safety goggles
 @k.objects.mb2436 k.objects.object name="safety goggles" core.source="mulberry fa94a93"
@@ -1052,7 +1052,7 @@
 @k.objects.mb2436.p9.18 k.objects.point part=$k.objects.mb2436.p9 n=18 x=9.1 y=48.5 core.source="mulberry fa94a93"
 @k.objects.mb2436.p9.19 k.objects.point part=$k.objects.mb2436.p9 n=19 x=10.7 y=50.9 core.source="mulberry fa94a93"
 @k.objects.mb2436.p9.20 k.objects.point part=$k.objects.mb2436.p9 n=20 x=16.8 y=55.3 core.source="mulberry fa94a93"
-@k.objects.mb2436.word core.word text=DIY text=tools text=workshop means="safety goggles" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2436.keyword k.objects.keyword of="safety goggles" text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # sandpaper
 @k.objects.mb2450 k.objects.object name=sandpaper core.source="mulberry fa94a93"
@@ -1139,4 +1139,4 @@
 @k.objects.mb2450.p16.2 k.objects.point part=$k.objects.mb2450.p16 n=2 x=8.3 y=79.5 core.source="mulberry fa94a93"
 @k.objects.mb2450.p16.3 k.objects.point part=$k.objects.mb2450.p16 n=3 x=12.4 y=28.9 core.source="mulberry fa94a93"
 @k.objects.mb2450.p16.4 k.objects.point part=$k.objects.mb2450.p16 n=4 x=20.2 y=28.7 core.source="mulberry fa94a93"
-@k.objects.mb2450.word core.word text=DIY text=tools text=workshop means=sandpaper of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2450.keyword k.objects.keyword of=sandpaper text=DIY text=tools text=workshop core.source="mulberry fa94a93"

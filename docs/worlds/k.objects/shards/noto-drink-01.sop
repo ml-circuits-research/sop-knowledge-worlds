@@ -204,7 +204,7 @@
 @k.objects.u1f37c.p13.6 k.objects.point part=$k.objects.u1f37c.p13 n=6 x=77.8 y=14.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f37c.p13.7 k.objects.point part=$k.objects.u1f37c.p13 n=7 x=74.8 y=13.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f37c.p13.8 k.objects.point part=$k.objects.u1f37c.p13 n=8 x=72.1 y=13.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f37c.word core.word text=babies text=baby text=birth text=born text=bottle text=drink text=infant text=milk text=newborn means="baby bottle" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f37c.keyword k.objects.keyword of="baby bottle" text=babies text=baby text=birth text=born text=bottle text=drink text=infant text=milk text=newborn core.source="cldr 48"
 
 # glass of milk
 @k.objects.u1f95b k.objects.object name="glass of milk" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -357,7 +357,7 @@
 @k.objects.u1f95b.p9.24 k.objects.point part=$k.objects.u1f95b.p9 n=24 x=29.5 y=18.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f95b.p9.25 k.objects.point part=$k.objects.u1f95b.p9 n=25 x=26.9 y=16.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f95b.p9.26 k.objects.point part=$k.objects.u1f95b.p9 n=26 x=26.2 y=15.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f95b.word core.word text=drink text=glass text=milk means="glass of milk" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f95b.keyword k.objects.keyword of="glass of milk" text=drink text=glass text=milk core.source="cldr 48"
 
 # hot beverage
 @k.objects.u2615 k.objects.object name="hot beverage" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -555,7 +555,7 @@
 @k.objects.u2615.p12.12 k.objects.point part=$k.objects.u2615.p12 n=12 x=58.1 y=38.5 core.source="noto-emoji 99701e0"
 @k.objects.u2615.p12.13 k.objects.point part=$k.objects.u2615.p12 n=13 x=56.6 y=39 core.source="noto-emoji 99701e0"
 @k.objects.u2615.p12.14 k.objects.point part=$k.objects.u2615.p12 n=14 x=56.2 y=41.9 core.source="noto-emoji 99701e0"
-@k.objects.u2615.word core.word text=beverage text=cafe text=caffeine text=chai text=coffee text=drink text=hot text=morning text=steaming text=tea means="hot beverage" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2615.keyword k.objects.keyword of="hot beverage" text=beverage text=cafe text=caffeine text=chai text=coffee text=drink text=hot text=morning text=steaming text=tea core.source="cldr 48"
 
 # teapot
 @k.objects.u1fad6 k.objects.object name=teapot core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -748,7 +748,7 @@
 @k.objects.u1fad6.p13.11 k.objects.point part=$k.objects.u1fad6.p13 n=11 x=73.4 y=69 core.source="noto-emoji 99701e0"
 @k.objects.u1fad6.p13.12 k.objects.point part=$k.objects.u1fad6.p13 n=12 x=74.8 y=64.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fad6.p13.13 k.objects.point part=$k.objects.u1fad6.p13 n=13 x=74.9 y=58.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fad6.word core.word text=brew text=drink text=food text=pot text=tea means=teapot of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad6.keyword k.objects.keyword of=teapot text=brew text=drink text=food text=pot text=tea core.source="cldr 48"
 
 # teacup without handle
 @k.objects.u1f375 k.objects.object name="teacup without handle" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -860,7 +860,7 @@
 @k.objects.u1f375.p6.10 k.objects.point part=$k.objects.u1f375.p6 n=10 x=47.9 y=42.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f375.p6.11 k.objects.point part=$k.objects.u1f375.p6 n=11 x=55.9 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f375.p6.12 k.objects.point part=$k.objects.u1f375.p6 n=12 x=59.4 y=46.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f375.word core.word text=beverage text=cup text=drink text=handle text=oolong text=tea text=teacup means="teacup without handle" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f375.keyword k.objects.keyword of="teacup without handle" text=beverage text=cup text=drink text=handle text=oolong text=tea text=teacup core.source="cldr 48"
 
 # sake
 @k.objects.u1f376 k.objects.object name=sake core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1069,7 +1069,7 @@
 @k.objects.u1f376.p13.10 k.objects.point part=$k.objects.u1f376.p13 n=10 x=31.3 y=66.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f376.p13.11 k.objects.point part=$k.objects.u1f376.p13 n=11 x=21.9 y=67.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f376.p13.12 k.objects.point part=$k.objects.u1f376.p13 n=12 x=18.4 y=68.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f376.word core.word text=bar text=beverage text=bottle text=cup text=drink text=restaurant means=sake of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f376.keyword k.objects.keyword of=sake text=bar text=beverage text=bottle text=cup text=drink text=restaurant core.source="cldr 48"
 
 # bottle with popping cork
 @k.objects.u1f37e k.objects.object name="bottle with popping cork" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1272,7 +1272,7 @@
 @k.objects.u1f37e.p15.12 k.objects.point part=$k.objects.u1f37e.p15 n=12 x=21.7 y=14.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f37e.p15.13 k.objects.point part=$k.objects.u1f37e.p15 n=13 x=20.8 y=12.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f37e.p15.14 k.objects.point part=$k.objects.u1f37e.p15 n=14 x=19.3 y=15.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f37e.word core.word text=bar text=bottle text=cork text=drink text=popping means="bottle with popping cork" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f37e.keyword k.objects.keyword of="bottle with popping cork" text=bar text=bottle text=cork text=drink text=popping core.source="cldr 48"
 
 # wine glass
 @k.objects.u1f377 k.objects.object name="wine glass" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1484,4 +1484,4 @@
 @k.objects.u1f377.p14.5 k.objects.point part=$k.objects.u1f377.p14 n=5 x=41.3 y=25.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f377.p14.6 k.objects.point part=$k.objects.u1f377.p14 n=6 x=42.2 y=18.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f377.p14.7 k.objects.point part=$k.objects.u1f377.p14 n=7 x=38.7 y=17.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f377.word core.word text=alcohol text=bar text=beverage text=booze text=club text=drink text=drinking text=drinks text=glass text=restaurant text=wine means="wine glass" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f377.keyword k.objects.keyword of="wine glass" text=alcohol text=bar text=beverage text=booze text=club text=drink text=drinking text=drinks text=glass text=restaurant text=wine core.source="cldr 48"

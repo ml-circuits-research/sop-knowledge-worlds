@@ -109,7 +109,7 @@
 @k.objects.mb1006.p5.25 k.objects.point part=$k.objects.mb1006.p5 n=25 x=31.4 y=57.8 core.source="mulberry fa94a93"
 @k.objects.mb1006.p5.26 k.objects.point part=$k.objects.mb1006.p5 n=26 x=30.2 y=52.1 core.source="mulberry fa94a93"
 @k.objects.mb1006.p5.27 k.objects.point part=$k.objects.mb1006.p5 n=27 x=29.3 y=40.1 core.source="mulberry fa94a93"
-@k.objects.mb1006.word core.word text=diary text=food text=meal means="egg boiled" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1006.keyword k.objects.keyword of="egg boiled" text=diary text=food text=meal core.source="mulberry fa94a93"
 
 # egg fried
 @k.objects.mb1008 k.objects.object name="egg fried" core.source="mulberry fa94a93"
@@ -232,7 +232,7 @@
 @k.objects.mb1008.p4.35 k.objects.point part=$k.objects.mb1008.p4 n=35 x=23.1 y=30.1 core.source="mulberry fa94a93"
 @k.objects.mb1008.p4.36 k.objects.point part=$k.objects.mb1008.p4 n=36 x=28 y=26.9 core.source="mulberry fa94a93"
 @k.objects.mb1008.p4.37 k.objects.point part=$k.objects.mb1008.p4 n=37 x=40.4 y=23.6 core.source="mulberry fa94a93"
-@k.objects.mb1008.word core.word text=diary text=food text=meal means="egg fried" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1008.keyword k.objects.keyword of="egg fried" text=diary text=food text=meal core.source="mulberry fa94a93"
 
 # egg on toast
 @k.objects.mb1009 k.objects.object name="egg on toast" core.source="mulberry fa94a93"
@@ -439,7 +439,7 @@
 @k.objects.mb1009.p10.13 k.objects.point part=$k.objects.mb1009.p10 n=13 x=66.7 y=34.4 core.source="mulberry fa94a93"
 @k.objects.mb1009.p10.14 k.objects.point part=$k.objects.mb1009.p10 n=14 x=68.7 y=38.4 core.source="mulberry fa94a93"
 @k.objects.mb1009.p10.15 k.objects.point part=$k.objects.mb1009.p10 n=15 x=68.7 y=41.7 core.source="mulberry fa94a93"
-@k.objects.mb1009.word core.word text=diary text=food text=meal means="egg on toast" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1009.keyword k.objects.keyword of="egg on toast" text=diary text=food text=meal core.source="mulberry fa94a93"
 
 # egg white
 @k.objects.mb1010 k.objects.object name="egg white" core.source="mulberry fa94a93"
@@ -911,7 +911,7 @@
 @k.objects.mb1012.p16.27 k.objects.point part=$k.objects.mb1012.p16 n=27 x=76 y=24.8 core.source="mulberry fa94a93"
 @k.objects.mb1012.p16.28 k.objects.point part=$k.objects.mb1012.p16 n=28 x=73.5 y=25.7 core.source="mulberry fa94a93"
 @k.objects.mb1012.p16.29 k.objects.point part=$k.objects.mb1012.p16 n=29 x=72.1 y=23.8 core.source="mulberry fa94a93"
-@k.objects.mb1012.word core.word text=diary text=food means=eggs of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1012.keyword k.objects.keyword of=eggs text=diary text=food core.source="mulberry fa94a93"
 
 # eggs scrambled
 @k.objects.mb1013 k.objects.object name="eggs scrambled" core.source="mulberry fa94a93"
@@ -1112,7 +1112,7 @@
 @k.objects.mb1013.p16.15 k.objects.point part=$k.objects.mb1013.p16 n=15 x=87.1 y=15.2 core.source="mulberry fa94a93"
 @k.objects.mb1013.p16.16 k.objects.point part=$k.objects.mb1013.p16 n=16 x=84.2 y=20.5 core.source="mulberry fa94a93"
 @k.objects.mb1013.p16.17 k.objects.point part=$k.objects.mb1013.p16 n=17 x=87.9 y=33.9 core.source="mulberry fa94a93"
-@k.objects.mb1013.word core.word text=diary text=food text=meal means="eggs scrambled" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1013.keyword k.objects.keyword of="eggs scrambled" text=diary text=food text=meal core.source="mulberry fa94a93"
 
 # omelette
 @k.objects.mb2080 k.objects.object name=omelette core.source="mulberry fa94a93"

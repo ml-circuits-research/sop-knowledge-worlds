@@ -217,7 +217,7 @@
 @k.objects.ome0c0.p15.24 k.objects.point part=$k.objects.ome0c0.p15 n=24 x=73.6 y=36.4 core.source="openmoji 3e01de5"
 @k.objects.ome0c0.p15.25 k.objects.point part=$k.objects.ome0c0.p15 n=25 x=76.3 y=42.9 core.source="openmoji 3e01de5"
 @k.objects.ome0c0.p15.26 k.objects.point part=$k.objects.ome0c0.p15 n=26 x=77.3 y=50 core.source="openmoji 3e01de5"
-@k.objects.ome0c0.word core.word text="citrus fruits" text=half means="half orange fruit" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0c0.keyword k.objects.keyword of="half orange fruit" text="citrus fruits" text=half core.source="openmoji 3e01de5"
 
 # pomegranate
 @k.objects.ome0c4 k.objects.object name=pomegranate core.source="openmoji 3e01de5"
@@ -382,7 +382,7 @@
 @k.objects.ome0c4.p16.34 k.objects.point part=$k.objects.ome0c4.p16 n=34 x=80.1 y=68.7 core.source="openmoji 3e01de5"
 @k.objects.ome0c4.p16.35 k.objects.point part=$k.objects.ome0c4.p16 n=35 x=77.4 y=73 core.source="openmoji 3e01de5"
 @k.objects.ome0c4.p16.36 k.objects.point part=$k.objects.ome0c4.p16 n=36 x=74 y=76.9 core.source="openmoji 3e01de5"
-@k.objects.ome0c4.word core.word text=fruit text=seeds means=pomegranate of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0c4.keyword k.objects.keyword of=pomegranate text=fruit text=seeds core.source="openmoji 3e01de5"
 
 # latte macchiato
 @k.objects.ome0c5 k.objects.object name="latte macchiato" core.source="openmoji 3e01de5"
@@ -468,7 +468,7 @@
 @k.objects.ome0c5.p14.2 k.objects.point part=$k.objects.ome0c5.p14 n=2 x=60.5 y=79.2 core.source="openmoji 3e01de5"
 @k.objects.ome0c5.p14.3 k.objects.point part=$k.objects.ome0c5.p14 n=3 x=61.8 y=78.3 core.source="openmoji 3e01de5"
 @k.objects.ome0c5.p14.4 k.objects.point part=$k.objects.ome0c5.p14 n=4 x=63.9 y=20.8 core.source="openmoji 3e01de5"
-@k.objects.ome0c5.word core.word text=coffee means="latte macchiato" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0c5.keyword k.objects.keyword of="latte macchiato" text=coffee core.source="openmoji 3e01de5"
 
 # roasted coffee bean
 @k.objects.ome0c6 k.objects.object name="roasted coffee bean" core.source="openmoji 3e01de5"
@@ -781,7 +781,7 @@
 @k.objects.ome0c7.p13.35 k.objects.point part=$k.objects.ome0c7.p13 n=35 x=72.1 y=47.4 core.source="openmoji 3e01de5"
 @k.objects.ome0c7.p13.36 k.objects.point part=$k.objects.ome0c7.p13 n=36 x=75 y=48.6 core.source="openmoji 3e01de5"
 @k.objects.ome0c7.p13.37 k.objects.point part=$k.objects.ome0c7.p13 n=37 x=77.5 y=47.8 core.source="openmoji 3e01de5"
-@k.objects.ome0c7.word core.word text=custard text=cherry means=cake of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0c7.keyword k.objects.keyword of=cake text=custard text=cherry core.source="openmoji 3e01de5"
 
 # champignon brown
 @k.objects.ome0c8 k.objects.object name="champignon brown" core.source="openmoji 3e01de5"
@@ -944,7 +944,7 @@
 @k.objects.ome0c8.p7.29 k.objects.point part=$k.objects.ome0c8.p7 n=29 x=80.8 y=41.5 core.source="openmoji 3e01de5"
 @k.objects.ome0c8.p7.30 k.objects.point part=$k.objects.ome0c8.p7 n=30 x=84.3 y=50 core.source="openmoji 3e01de5"
 @k.objects.ome0c8.p7.31 k.objects.point part=$k.objects.ome0c8.p7 n=31 x=84.7 y=53.8 core.source="openmoji 3e01de5"
-@k.objects.ome0c8.word core.word text="mushroom fungi" means="champignon brown" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0c8.keyword k.objects.keyword of="champignon brown" text="mushroom fungi" core.source="openmoji 3e01de5"
 
 # champignon white
 @k.objects.ome0c9 k.objects.object name="champignon white" core.source="openmoji 3e01de5"
@@ -1080,4 +1080,4 @@
 @k.objects.ome0c9.p6.26 k.objects.point part=$k.objects.ome0c9.p6 n=26 x=78 y=62.2 core.source="openmoji 3e01de5"
 @k.objects.ome0c9.p6.27 k.objects.point part=$k.objects.ome0c9.p6 n=27 x=72.1 y=63.9 core.source="openmoji 3e01de5"
 @k.objects.ome0c9.p6.28 k.objects.point part=$k.objects.ome0c9.p6 n=28 x=60.7 y=64.9 core.source="openmoji 3e01de5"
-@k.objects.ome0c9.word core.word text="mushroom fungi" means="champignon white" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome0c9.keyword k.objects.keyword of="champignon white" text="mushroom fungi" core.source="openmoji 3e01de5"

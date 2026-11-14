@@ -127,7 +127,7 @@
 @k.objects.u1f302.p12.10 k.objects.point part=$k.objects.u1f302.p12 n=10 x=40.3 y=28.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f302.p12.11 k.objects.point part=$k.objects.u1f302.p12 n=11 x=42.5 y=18 core.source="noto-emoji 99701e0"
 @k.objects.u1f302.p12.12 k.objects.point part=$k.objects.u1f302.p12 n=12 x=44.3 y=13.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f302.word core.word text=closed text=clothing text=rain text=umbrella means="closed umbrella" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f302.keyword k.objects.keyword of="closed umbrella" text=closed text=clothing text=rain text=umbrella core.source="cldr 48"
 
 # umbrella with rain drops
 @k.objects.u2614 k.objects.object name="umbrella with rain drops" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -338,7 +338,7 @@
 @k.objects.u2614.p16.7 k.objects.point part=$k.objects.u2614.p16 n=7 x=54.9 y=42.2 core.source="noto-emoji 99701e0"
 @k.objects.u2614.p16.8 k.objects.point part=$k.objects.u2614.p16 n=8 x=55.3 y=40.1 core.source="noto-emoji 99701e0"
 @k.objects.u2614.p16.9 k.objects.point part=$k.objects.u2614.p16 n=9 x=54.1 y=35.6 core.source="noto-emoji 99701e0"
-@k.objects.u2614.word core.word text=clothing text=drop text=drops text=rain text=umbrella text=weather means="umbrella with rain drops" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2614.keyword k.objects.keyword of="umbrella with rain drops" text=clothing text=drop text=drops text=rain text=umbrella text=weather core.source="cldr 48"
 
 # umbrella on ground
 @k.objects.u26f1 k.objects.object name="umbrella on ground" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -463,7 +463,7 @@
 @k.objects.u26f1.p6.8 k.objects.point part=$k.objects.u26f1.p6 n=8 x=57.3 y=13 core.source="noto-emoji 99701e0"
 @k.objects.u26f1.p6.9 k.objects.point part=$k.objects.u26f1.p6 n=9 x=59 y=8.2 core.source="noto-emoji 99701e0"
 @k.objects.u26f1.p6.10 k.objects.point part=$k.objects.u26f1.p6 n=10 x=59.1 y=5.4 core.source="noto-emoji 99701e0"
-@k.objects.u26f1.word core.word text=ground text=rain text=sun text=umbrella means="umbrella on ground" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26f1.keyword k.objects.keyword of="umbrella on ground" text=ground text=rain text=sun text=umbrella core.source="cldr 48"
 
 # high voltage
 @k.objects.u26a1 k.objects.object name="high voltage" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -527,7 +527,7 @@
 @k.objects.u26a1.p4.7 k.objects.point part=$k.objects.u26a1.p4 n=7 x=58.9 y=19.1 core.source="noto-emoji 99701e0"
 @k.objects.u26a1.p4.8 k.objects.point part=$k.objects.u26a1.p4 n=8 x=58.8 y=20.5 core.source="noto-emoji 99701e0"
 @k.objects.u26a1.p4.9 k.objects.point part=$k.objects.u26a1.p4 n=9 x=54.3 y=25.2 core.source="noto-emoji 99701e0"
-@k.objects.u26a1.word core.word text=danger text=electric text=electricity text=high text=lightning text=nature text=thunder text=thunderbolt text=voltage text=zap means="high voltage" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26a1.keyword k.objects.keyword of="high voltage" text=danger text=electric text=electricity text=high text=lightning text=nature text=thunder text=thunderbolt text=voltage text=zap core.source="cldr 48"
 
 # snowflake
 @k.objects.u2744 k.objects.object name=snowflake core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -708,7 +708,7 @@
 @k.objects.u2744.p16.9 k.objects.point part=$k.objects.u2744.p16 n=9 x=54.2 y=42.6 core.source="noto-emoji 99701e0"
 @k.objects.u2744.p16.10 k.objects.point part=$k.objects.u2744.p16 n=10 x=52.7 y=43.1 core.source="noto-emoji 99701e0"
 @k.objects.u2744.p16.11 k.objects.point part=$k.objects.u2744.p16 n=11 x=52.5 y=44.5 core.source="noto-emoji 99701e0"
-@k.objects.u2744.word core.word text=cold text=snow text=weather means=snowflake of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2744.keyword k.objects.keyword of=snowflake text=cold text=snow text=weather core.source="cldr 48"
 
 # snowman without snow
 @k.objects.u26c4 k.objects.object name="snowman without snow" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -867,7 +867,7 @@
 @k.objects.u26c4.p13.6 k.objects.point part=$k.objects.u26c4.p13 n=6 x=51.7 y=73.8 core.source="noto-emoji 99701e0"
 @k.objects.u26c4.p13.7 k.objects.point part=$k.objects.u26c4.p13 n=7 x=49.3 y=73.6 core.source="noto-emoji 99701e0"
 @k.objects.u26c4.p13.8 k.objects.point part=$k.objects.u26c4.p13 n=8 x=47.4 y=74.9 core.source="noto-emoji 99701e0"
-@k.objects.u26c4.word core.word text=cold text=man text=snow text=snowman means="snowman without snow" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26c4.keyword k.objects.keyword of="snowman without snow" text=cold text=man text=snow text=snowman core.source="cldr 48"
 
 # comet
 @k.objects.u2604 k.objects.object name=comet core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -935,7 +935,7 @@
 @k.objects.u2604.p14 k.objects.part of=comet name=part14 named=no shape=circle x=70.1 y=27 w=1.9 h=1.9 z=14 colour=white rgb="#FFFFFF" core.source="noto-emoji 99701e0"
 @k.objects.u2604.p15 k.objects.part of=comet name=part15 named=no shape=circle x=69.9 y=36.5 w=2 h=2 z=15 colour=white rgb="#FFFFFF" core.source="noto-emoji 99701e0"
 @k.objects.u2604.p16 k.objects.part of=comet name=part16 named=no shape=circle x=48.4 y=43.6 w=1.9 h=1.9 z=16 colour=white rgb="#FFFFFF" core.source="noto-emoji 99701e0"
-@k.objects.u2604.word core.word text=space means=comet of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2604.keyword k.objects.keyword of=comet text=space core.source="cldr 48"
 
 # fire
 @k.objects.u1f525 k.objects.object name=fire core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1015,4 +1015,4 @@
 @k.objects.u1f525.p2.35 k.objects.point part=$k.objects.u1f525.p2 n=35 x=69 y=77.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f525.p2.36 k.objects.point part=$k.objects.u1f525.p2 n=36 x=68.2 y=73.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f525.p2.37 k.objects.point part=$k.objects.u1f525.p2 n=37 x=65.7 y=68.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f525.word core.word text=af text=burn text=flame text=hot text=lit text=litaf text=tool means=fire of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f525.keyword k.objects.keyword of=fire text=af text=burn text=flame text=hot text=lit text=litaf text=tool core.source="cldr 48"

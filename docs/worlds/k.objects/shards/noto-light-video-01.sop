@@ -127,7 +127,7 @@
 @k.objects.u1f3a5.p14.17 k.objects.point part=$k.objects.u1f3a5.p14 n=17 x=21.1 y=25 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a5.p15 k.objects.part of="movie camera" name=part15 named=no shape=circle x=56.3 y=21.9 w=12.5 h=12.5 z=15 colour=grey rgb="#636262" core.source="noto-emoji 99701e0"
 @k.objects.u1f3a5.p16 k.objects.part of="movie camera" name=part16 named=no shape=circle x=14.8 y=29.7 w=12.5 h=12.5 z=16 colour=grey rgb="#636262" core.source="noto-emoji 99701e0"
-@k.objects.u1f3a5.word core.word text=bollywood text=camera text=cinema text=film text=hollywood text=movie text=record means="movie camera" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a5.keyword k.objects.keyword of="movie camera" text=bollywood text=camera text=cinema text=film text=hollywood text=movie text=record core.source="cldr 48"
 
 # film frames
 @k.objects.u1f39e k.objects.object name="film frames" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -150,7 +150,7 @@
 @k.objects.u1f39e.p3.1 k.objects.point part=$k.objects.u1f39e.p3 n=1 x=3.6 y=14.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f39e.p3.2 k.objects.point part=$k.objects.u1f39e.p3 n=2 x=96.9 y=14.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f39e.p4 k.objects.part of="film frames" name=frame named=model shape=rectangle x=15.9 y=27.5 w=68.8 h=46.6 z=4 colour=black rgb="#000000" core.source="noto-emoji 99701e0"
-@k.objects.u1f39e.word core.word text=cinema text=film text=frames text=movie means="film frames" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f39e.keyword k.objects.keyword of="film frames" text=cinema text=film text=frames text=movie core.source="cldr 48"
 
 # film projector
 @k.objects.u1f4fd k.objects.object name="film projector" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -344,7 +344,7 @@
 @k.objects.u1f4fd.p16.12 k.objects.point part=$k.objects.u1f4fd.p16 n=12 x=33.3 y=81.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4fd.p16.13 k.objects.point part=$k.objects.u1f4fd.p16 n=13 x=33.4 y=56.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4fd.p16.14 k.objects.point part=$k.objects.u1f4fd.p16 n=14 x=35.8 y=52.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4fd.word core.word text=cinema text=film text=movie text=projector text=video means="film projector" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4fd.keyword k.objects.keyword of="film projector" text=cinema text=film text=movie text=projector text=video core.source="cldr 48"
 
 # clapper board
 @k.objects.u1f3ac k.objects.object name="clapper board" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -441,7 +441,7 @@
 @k.objects.u1f3ac.p16.11 k.objects.point part=$k.objects.u1f3ac.p16 n=11 x=32 y=38 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ac.p16.12 k.objects.point part=$k.objects.u1f3ac.p16 n=12 x=31.3 y=40.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ac.p16.13 k.objects.point part=$k.objects.u1f3ac.p16 n=13 x=30.1 y=41.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3ac.word core.word text=action text=board text=clapper text=movie means="clapper board" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ac.keyword k.objects.keyword of="clapper board" text=action text=board text=clapper text=movie core.source="cldr 48"
 
 # television
 @k.objects.u1f4fa k.objects.object name=television core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -581,7 +581,7 @@
 @k.objects.u1f4fa.p13.6 k.objects.point part=$k.objects.u1f4fa.p13 n=6 x=89.4 y=55.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4fa.p13.7 k.objects.point part=$k.objects.u1f4fa.p13 n=7 x=86.3 y=52.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4fa.p13.8 k.objects.point part=$k.objects.u1f4fa.p13 n=8 x=82 y=49.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f4fa.word core.word text=tv text=video means=television of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4fa.keyword k.objects.keyword of=television text=tv text=video core.source="cldr 48"
 
 # camera
 @k.objects.u1f4f7 k.objects.object name=camera core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -678,7 +678,7 @@
 @k.objects.u1f4f7.p14 k.objects.part of=camera name=part14 named=no shape=circle x=40.7 y=53.1 w=31.7 h=31.7 z=14 colour=grey rgb="#2F7889" core.source="noto-emoji 99701e0"
 @k.objects.u1f4f7.p15 k.objects.part of=camera name=part15 named=no shape=circle x=36.1 y=48.6 w=40.8 h=40.8 z=15 colour=black rgb="#000000" core.source="noto-emoji 99701e0"
 @k.objects.u1f4f7.p16 k.objects.part of=camera name=lens named=model shape=circle x=41 y=53.4 w=31.1 h=31.1 z=16 colour=grey rgb="#2F7889" core.source="noto-emoji 99701e0"
-@k.objects.u1f4f7.word core.word text=photo text=selfie text=snap text=tbt text=trip text=video means=camera of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4f7.keyword k.objects.keyword of=camera text=photo text=selfie text=snap text=tbt text=trip text=video core.source="cldr 48"
 
 # camera with flash
 @k.objects.u1f4f8 k.objects.object name="camera with flash" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -793,7 +793,7 @@
 @k.objects.u1f4f8.p16.10 k.objects.point part=$k.objects.u1f4f8.p16 n=10 x=58.2 y=37 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f8.p16.11 k.objects.point part=$k.objects.u1f4f8.p16 n=11 x=53 y=46.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f8.p16.12 k.objects.point part=$k.objects.u1f4f8.p16 n=12 x=51.4 y=36.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f4f8.word core.word text=camera text=flash text=video means="camera with flash" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4f8.keyword k.objects.keyword of="camera with flash" text=camera text=flash text=video core.source="cldr 48"
 
 # video camera
 @k.objects.u1f4f9 k.objects.object name="video camera" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -911,4 +911,4 @@
 @k.objects.u1f4f9.p12.2 k.objects.point part=$k.objects.u1f4f9.p12 n=2 x=7.1 y=49.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f9.p12.3 k.objects.point part=$k.objects.u1f4f9.p12 n=3 x=8.6 y=49.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f9.p12.4 k.objects.point part=$k.objects.u1f4f9.p12 n=4 x=10 y=36.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4f9.word core.word text=camcorder text=camera text=tbt text=video means="video camera" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4f9.keyword k.objects.keyword of="video camera" text=camcorder text=camera text=tbt text=video core.source="cldr 48"

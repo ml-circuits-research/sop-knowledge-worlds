@@ -106,7 +106,7 @@
 @k.objects.u1f9e2.p7.22 k.objects.point part=$k.objects.u1f9e2.p7 n=22 x=62.3 y=80.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e2.p7.23 k.objects.point part=$k.objects.u1f9e2.p7 n=23 x=57.6 y=83.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e2.p7.24 k.objects.point part=$k.objects.u1f9e2.p7 n=24 x=53.6 y=84.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e2.word core.word text=baseball text=bent text=billed text=cap text=dad text=hat means="billed cap" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e2.keyword k.objects.keyword of="billed cap" text=baseball text=bent text=billed text=cap text=dad text=hat core.source="cldr 48"
 
 # military helmet
 @k.objects.u1fa96 k.objects.object name="military helmet" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -300,7 +300,7 @@
 @k.objects.u1fa96.p16.2 k.objects.point part=$k.objects.u1fa96.p16 n=2 x=63 y=60.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fa96.p16.3 k.objects.point part=$k.objects.u1fa96.p16 n=3 x=62 y=57.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fa96.p16.4 k.objects.point part=$k.objects.u1fa96.p16 n=4 x=53.9 y=60.5 core.source="noto-emoji 99701e0"
-@k.objects.u1fa96.word core.word text=army text=helmet text=military text=soldier text=war text=warrior means="military helmet" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa96.keyword k.objects.keyword of="military helmet" text=army text=helmet text=military text=soldier text=war text=warrior core.source="cldr 48"
 
 # rescue worker’s helmet
 @k.objects.u26d1 k.objects.object name="rescue worker’s helmet" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -494,7 +494,7 @@
 @k.objects.u26d1.p11.18 k.objects.point part=$k.objects.u26d1.p11 n=18 x=62.9 y=39.2 core.source="noto-emoji 99701e0"
 @k.objects.u26d1.p11.19 k.objects.point part=$k.objects.u26d1.p11 n=19 x=63.8 y=38.5 core.source="noto-emoji 99701e0"
 @k.objects.u26d1.p11.20 k.objects.point part=$k.objects.u26d1.p11 n=20 x=63.9 y=31 core.source="noto-emoji 99701e0"
-@k.objects.u26d1.word core.word text=aid text=cross text=face text=hat text=helmet text=rescue text=worker’s means="rescue worker’s helmet" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26d1.keyword k.objects.keyword of="rescue worker’s helmet" text=aid text=cross text=face text=hat text=helmet text=rescue text=worker’s core.source="cldr 48"
 
 # prayer beads
 @k.objects.u1f4ff k.objects.object name="prayer beads" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -550,7 +550,7 @@
 @k.objects.u1f4ff.p16.18 k.objects.point part=$k.objects.u1f4ff.p16 n=18 x=79.7 y=83 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ff.p16.19 k.objects.point part=$k.objects.u1f4ff.p16 n=19 x=76.1 y=80.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ff.p16.20 k.objects.point part=$k.objects.u1f4ff.p16 n=20 x=73.8 y=76.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ff.word core.word text=beads text=clothing text=necklace text=prayer text=religion means="prayer beads" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ff.keyword k.objects.keyword of="prayer beads" text=beads text=clothing text=necklace text=prayer text=religion core.source="cldr 48"
 
 # lipstick
 @k.objects.u1f484 k.objects.object name=lipstick core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -708,7 +708,7 @@
 @k.objects.u1f484.p12.7 k.objects.point part=$k.objects.u1f484.p12 n=7 x=48.3 y=76.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f484.p12.8 k.objects.point part=$k.objects.u1f484.p12 n=8 x=49.5 y=77.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f484.p12.9 k.objects.point part=$k.objects.u1f484.p12 n=9 x=49 y=78.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f484.word core.word text=cosmetics text=date text=makeup means=lipstick of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f484.keyword k.objects.keyword of=lipstick text=cosmetics text=date text=makeup core.source="cldr 48"
 
 # ring
 @k.objects.u1f48d k.objects.object name=ring core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -876,7 +876,7 @@
 @k.objects.u1f48d.p16.11 k.objects.point part=$k.objects.u1f48d.p16 n=11 x=62 y=29.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f48d.p16.12 k.objects.point part=$k.objects.u1f48d.p16 n=12 x=65.3 y=25.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f48d.p16.13 k.objects.point part=$k.objects.u1f48d.p16 n=13 x=65.2 y=24.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f48d.word core.word text=diamond text=engaged text=engagement text=married text=romance text=shiny text=sparkling text=wedding means=ring of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f48d.keyword k.objects.keyword of=ring text=diamond text=engaged text=engagement text=married text=romance text=shiny text=sparkling text=wedding core.source="cldr 48"
 
 # gem stone
 @k.objects.u1f48e k.objects.object name="gem stone" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -928,4 +928,4 @@
 @k.objects.u1f48e.p11.1 k.objects.point part=$k.objects.u1f48e.p11 n=1 x=65.4 y=53.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f48e.p11.2 k.objects.point part=$k.objects.u1f48e.p11 n=2 x=50 y=91.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f48e.p11.3 k.objects.point part=$k.objects.u1f48e.p11 n=3 x=34.5 y=53.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f48e.word core.word text=diamond text=engagement text=gem text=jewel text=money text=romance text=stone text=wedding means="gem stone" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f48e.keyword k.objects.keyword of="gem stone" text=diamond text=engagement text=gem text=jewel text=money text=romance text=stone text=wedding core.source="cldr 48"

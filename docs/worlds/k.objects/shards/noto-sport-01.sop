@@ -191,7 +191,7 @@
 @k.objects.u26bd.p16.5 k.objects.point part=$k.objects.u26bd.p16 n=5 x=71.2 y=8.1 core.source="noto-emoji 99701e0"
 @k.objects.u26bd.p16.6 k.objects.point part=$k.objects.u26bd.p16 n=6 x=66.3 y=6 core.source="noto-emoji 99701e0"
 @k.objects.u26bd.p16.7 k.objects.point part=$k.objects.u26bd.p16 n=7 x=60.3 y=4.3 core.source="noto-emoji 99701e0"
-@k.objects.u26bd.word core.word text=ball text=football text=futbol text=soccer text=sport means="soccer ball" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26bd.keyword k.objects.keyword of="soccer ball" text=ball text=football text=futbol text=soccer text=sport core.source="cldr 48"
 
 # baseball
 @k.objects.u26be k.objects.object name=baseball core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -399,7 +399,7 @@
 @k.objects.u26be.p16.8 k.objects.point part=$k.objects.u26be.p16 n=8 x=14.2 y=37.3 core.source="noto-emoji 99701e0"
 @k.objects.u26be.p16.9 k.objects.point part=$k.objects.u26be.p16 n=9 x=11.9 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u26be.p16.10 k.objects.point part=$k.objects.u26be.p16 n=10 x=10.4 y=31.8 core.source="noto-emoji 99701e0"
-@k.objects.u26be.word core.word text=ball text=sport means=baseball of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26be.keyword k.objects.keyword of=baseball text=ball text=sport core.source="cldr 48"
 
 # softball
 @k.objects.u1f94e k.objects.object name=softball core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -608,7 +608,7 @@
 @k.objects.u1f94e.p16.8 k.objects.point part=$k.objects.u1f94e.p16 n=8 x=14.2 y=37.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f94e.p16.9 k.objects.point part=$k.objects.u1f94e.p16 n=9 x=11.9 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f94e.p16.10 k.objects.point part=$k.objects.u1f94e.p16 n=10 x=10.4 y=31.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f94e.word core.word text=ball text=glove text=sports text=underarm means=softball of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f94e.keyword k.objects.keyword of=softball text=ball text=glove text=sports text=underarm core.source="cldr 48"
 
 # basketball
 @k.objects.u1f3c0 k.objects.object name=basketball core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -765,7 +765,7 @@
 @k.objects.u1f3c0.p6.30 k.objects.point part=$k.objects.u1f3c0.p6 n=30 x=39 y=83 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c0.p6.31 k.objects.point part=$k.objects.u1f3c0.p6 n=31 x=45.3 y=92.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c0.p6.32 k.objects.point part=$k.objects.u1f3c0.p6 n=32 x=49.3 y=97 core.source="noto-emoji 99701e0"
-@k.objects.u1f3c0.word core.word text=ball text=hoop text=sport means=basketball of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3c0.keyword k.objects.keyword of=basketball text=ball text=hoop text=sport core.source="cldr 48"
 
 # volleyball
 @k.objects.u1f3d0 k.objects.object name=volleyball core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -964,7 +964,7 @@
 @k.objects.u1f3d0.p15.27 k.objects.point part=$k.objects.u1f3d0.p15 n=27 x=80.5 y=21.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d0.p15.28 k.objects.point part=$k.objects.u1f3d0.p15 n=28 x=87.1 y=21.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d0.p15.29 k.objects.point part=$k.objects.u1f3d0.p15 n=29 x=83 y=18 core.source="noto-emoji 99701e0"
-@k.objects.u1f3d0.word core.word text=ball text=game means=volleyball of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3d0.keyword k.objects.keyword of=volleyball text=ball text=game core.source="cldr 48"
 
 # american football
 @k.objects.u1f3c8 k.objects.object name="american football" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1173,7 +1173,7 @@
 @k.objects.u1f3c8.p13.9 k.objects.point part=$k.objects.u1f3c8.p13 n=9 x=27.5 y=45.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c8.p13.10 k.objects.point part=$k.objects.u1f3c8.p13 n=10 x=21.6 y=42.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c8.p13.11 k.objects.point part=$k.objects.u1f3c8.p13 n=11 x=20.3 y=42.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f3c8.word core.word text=american text=ball text=bowl text=football text=sport text=super means="american football" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3c8.keyword k.objects.keyword of="american football" text=american text=ball text=bowl text=football text=sport text=super core.source="cldr 48"
 
 # rugby football
 @k.objects.u1f3c9 k.objects.object name="rugby football" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1360,7 +1360,7 @@
 @k.objects.u1f3c9.p10.9 k.objects.point part=$k.objects.u1f3c9.p10 n=9 x=28.9 y=50.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c9.p10.10 k.objects.point part=$k.objects.u1f3c9.p10 n=10 x=22.7 y=45.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3c9.p10.11 k.objects.point part=$k.objects.u1f3c9.p10 n=11 x=21.3 y=45.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3c9.word core.word text=ball text=football text=rugby text=sport means="rugby football" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3c9.keyword k.objects.keyword of="rugby football" text=ball text=football text=rugby text=sport core.source="cldr 48"
 
 # tennis
 @k.objects.u1f3be k.objects.object name=tennis core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1570,4 +1570,4 @@
 @k.objects.u1f3be.p16.17 k.objects.point part=$k.objects.u1f3be.p16 n=17 x=25.8 y=3.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3be.p16.18 k.objects.point part=$k.objects.u1f3be.p16 n=18 x=21.7 y=1.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3be.p16.19 k.objects.point part=$k.objects.u1f3be.p16 n=19 x=16.2 y=1.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3be.word core.word text=ball text=racquet text=sport means=tennis of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3be.keyword k.objects.keyword of=tennis text=ball text=racquet text=sport core.source="cldr 48"

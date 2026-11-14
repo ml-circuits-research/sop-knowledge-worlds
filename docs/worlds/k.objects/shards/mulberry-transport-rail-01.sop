@@ -199,7 +199,7 @@
 @k.objects.mb2681.p16.9 k.objects.point part=$k.objects.mb2681.p16 n=9 x=20.8 y=71 core.source="mulberry fa94a93"
 @k.objects.mb2681.p16.10 k.objects.point part=$k.objects.mb2681.p16 n=10 x=22.3 y=69.9 core.source="mulberry fa94a93"
 @k.objects.mb2681.p16.11 k.objects.point part=$k.objects.mb2681.p16 n=11 x=22.4 y=68.2 core.source="mulberry fa94a93"
-@k.objects.mb2681.word core.word text=transport text=travel means="steam train" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2681.keyword k.objects.keyword of="steam train" text=transport text=travel core.source="mulberry fa94a93"
 
 # underground train
 @k.objects.mb2958 k.objects.object name="underground train" core.source="mulberry fa94a93"
@@ -342,4 +342,4 @@
 @k.objects.mb2958.p16 k.objects.part of="underground train" name=part16 kind=detail named=no shape=line x=24.5 y=52.3 w=65.6 h=28.2 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2958.p16.1 k.objects.point part=$k.objects.mb2958.p16 n=1 x=24.5 y=80.5 core.source="mulberry fa94a93"
 @k.objects.mb2958.p16.2 k.objects.point part=$k.objects.mb2958.p16 n=2 x=90.1 y=52.3 core.source="mulberry fa94a93"
-@k.objects.mb2958.word core.word text=transport text=travel means="underground train" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2958.keyword k.objects.keyword of="underground train" text=transport text=travel core.source="mulberry fa94a93"

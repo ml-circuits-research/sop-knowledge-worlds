@@ -142,7 +142,7 @@
 @k.objects.mb351.p10.3 k.objects.point part=$k.objects.mb351.p10 n=3 x=69.2 y=32.5 core.source="mulberry fa94a93"
 @k.objects.mb351.p10.4 k.objects.point part=$k.objects.mb351.p10 n=4 x=70.4 y=43.3 core.source="mulberry fa94a93"
 @k.objects.mb351.p10.5 k.objects.point part=$k.objects.mb351.p10 n=5 x=69.9 y=62.3 core.source="mulberry fa94a93"
-@k.objects.mb351.word core.word text=clothes text=hat means=cap of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb351.keyword k.objects.keyword of=cap text=clothes text=hat core.source="mulberry fa94a93"
 
 # dressing gown
 @k.objects.mb954 k.objects.object name="dressing gown" core.source="mulberry fa94a93"
@@ -319,7 +319,7 @@
 @k.objects.mb954.p16.1 k.objects.point part=$k.objects.mb954.p16 n=1 x=44.7 y=91.7 core.source="mulberry fa94a93"
 @k.objects.mb954.p16.2 k.objects.point part=$k.objects.mb954.p16 n=2 x=65.5 y=91.7 core.source="mulberry fa94a93"
 @k.objects.mb954.p16.3 k.objects.point part=$k.objects.mb954.p16 n=3 x=65.5 y=48 core.source="mulberry fa94a93"
-@k.objects.mb954.word core.word text=clothes text=sleepwear means="dressing gown" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb954.keyword k.objects.keyword of="dressing gown" text=clothes text=sleepwear core.source="mulberry fa94a93"
 
 # ear muffs
 @k.objects.mb992 k.objects.object name="ear muffs" core.source="mulberry fa94a93"
@@ -419,7 +419,7 @@
 @k.objects.mb992.p5.17 k.objects.point part=$k.objects.mb992.p5 n=17 x=87.2 y=71.6 core.source="mulberry fa94a93"
 @k.objects.mb992.p5.18 k.objects.point part=$k.objects.mb992.p5 n=18 x=88.6 y=66.2 core.source="mulberry fa94a93"
 @k.objects.mb992.p5.19 k.objects.point part=$k.objects.mb992.p5 n=19 x=88.7 y=61.3 core.source="mulberry fa94a93"
-@k.objects.mb992.word core.word text=clothes means="ear muffs" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb992.keyword k.objects.keyword of="ear muffs" text=clothes core.source="mulberry fa94a93"
 
 # fire helmet
 @k.objects.mb1118 k.objects.object name="fire helmet" core.source="mulberry fa94a93"
@@ -547,7 +547,7 @@
 @k.objects.mb1118.p12.2 k.objects.point part=$k.objects.mb1118.p12 n=2 x=78.7 y=52.7 core.source="mulberry fa94a93"
 @k.objects.mb1118.p12.3 k.objects.point part=$k.objects.mb1118.p12 n=3 x=82.7 y=52.8 core.source="mulberry fa94a93"
 @k.objects.mb1118.p12.4 k.objects.point part=$k.objects.mb1118.p12 n=4 x=66.3 y=57.9 core.source="mulberry fa94a93"
-@k.objects.mb1118.word core.word text=equipment text=uniform means="fire helmet" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1118.keyword k.objects.keyword of="fire helmet" text=equipment text=uniform core.source="mulberry fa94a93"
 
 # hard hat
 @k.objects.mb1618 k.objects.object name="hard hat" core.source="mulberry fa94a93"
@@ -672,7 +672,7 @@
 @k.objects.mb1618.p8.8 k.objects.point part=$k.objects.mb1618.p8 n=8 x=63.3 y=35.2 core.source="mulberry fa94a93"
 @k.objects.mb1618.p8.9 k.objects.point part=$k.objects.mb1618.p8 n=9 x=66.2 y=40.2 core.source="mulberry fa94a93"
 @k.objects.mb1618.p8.10 k.objects.point part=$k.objects.mb1618.p8 n=10 x=69.2 y=47.2 core.source="mulberry fa94a93"
-@k.objects.mb1618.word core.word text=clothes text=hat means="hard hat" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1618.keyword k.objects.keyword of="hard hat" text=clothes text=hat core.source="mulberry fa94a93"
 
 # hat - ladies
 @k.objects.mb1622 k.objects.object name="hat - ladies" core.source="mulberry fa94a93"
@@ -870,7 +870,7 @@
 @k.objects.mb1622.p16.15 k.objects.point part=$k.objects.mb1622.p16 n=15 x=10.3 y=65.1 core.source="mulberry fa94a93"
 @k.objects.mb1622.p16.16 k.objects.point part=$k.objects.mb1622.p16 n=16 x=16.4 y=58.7 core.source="mulberry fa94a93"
 @k.objects.mb1622.p16.17 k.objects.point part=$k.objects.mb1622.p16 n=17 x=22.9 y=56.4 core.source="mulberry fa94a93"
-@k.objects.mb1622.word core.word text=clothes text=hat means="hat - ladies" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1622.keyword k.objects.keyword of="hat - ladies" text=clothes text=hat core.source="mulberry fa94a93"
 
 # hat - mans
 @k.objects.mb1623 k.objects.object name="hat - mans" core.source="mulberry fa94a93"
@@ -1047,7 +1047,7 @@
 @k.objects.mb1623.p8.8 k.objects.point part=$k.objects.mb1623.p8 n=8 x=56.3 y=25.3 core.source="mulberry fa94a93"
 @k.objects.mb1623.p8.9 k.objects.point part=$k.objects.mb1623.p8 n=9 x=62.9 y=23.6 core.source="mulberry fa94a93"
 @k.objects.mb1623.p8.10 k.objects.point part=$k.objects.mb1623.p8 n=10 x=69.2 y=24 core.source="mulberry fa94a93"
-@k.objects.mb1623.word core.word text=clothes text=hat means="hat - mans" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1623.keyword k.objects.keyword of="hat - mans" text=clothes text=hat core.source="mulberry fa94a93"
 
 # helmet pilot
 @k.objects.mb1656 k.objects.object name="helmet pilot" core.source="mulberry fa94a93"
@@ -1258,4 +1258,4 @@
 @k.objects.mb1656.p16.1 k.objects.point part=$k.objects.mb1656.p16 n=1 x=34 y=61.9 core.source="mulberry fa94a93"
 @k.objects.mb1656.p16.2 k.objects.point part=$k.objects.mb1656.p16 n=2 x=49.8 y=53.1 core.source="mulberry fa94a93"
 @k.objects.mb1656.p16.3 k.objects.point part=$k.objects.mb1656.p16 n=3 x=64.9 y=62 core.source="mulberry fa94a93"
-@k.objects.mb1656.word core.word text=equipment text=uniform means="helmet pilot" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1656.keyword k.objects.keyword of="helmet pilot" text=equipment text=uniform core.source="mulberry fa94a93"

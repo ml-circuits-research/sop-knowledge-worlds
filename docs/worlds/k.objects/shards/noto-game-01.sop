@@ -214,7 +214,7 @@
 @k.objects.u1f3af.p13.16 k.objects.point part=$k.objects.u1f3af.p13 n=16 x=88.9 y=22.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3af.p13.17 k.objects.point part=$k.objects.u1f3af.p13 n=17 x=83.5 y=24.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3af.p13.18 k.objects.point part=$k.objects.u1f3af.p13 n=18 x=80.2 y=28.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f3af.word core.word text=bull text=dart text=direct text=entertainment text=game text=hit text=target means=bullseye of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3af.keyword k.objects.keyword of=bullseye text=bull text=dart text=direct text=entertainment text=game text=hit text=target core.source="cldr 48"
 
 # yo-yo
 @k.objects.u1fa80 k.objects.object name=yo-yo core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -420,7 +420,7 @@
 @k.objects.u1fa80.p11.6 k.objects.point part=$k.objects.u1fa80.p11 n=6 x=68 y=19.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fa80.p11.7 k.objects.point part=$k.objects.u1fa80.p11 n=7 x=66.5 y=17.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa80.p11.8 k.objects.point part=$k.objects.u1fa80.p11 n=8 x=64.4 y=16.4 core.source="noto-emoji 99701e0"
-@k.objects.u1fa80.word core.word text=fluctuate text=toy means=yo-yo of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa80.keyword k.objects.keyword of=yo-yo text=fluctuate text=toy core.source="cldr 48"
 
 # kite
 @k.objects.u1fa81 k.objects.object name=kite core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -582,7 +582,7 @@
 @k.objects.u1fa81.p13.5 k.objects.point part=$k.objects.u1fa81.p13 n=5 x=95 y=30.4 core.source="noto-emoji 99701e0"
 @k.objects.u1fa81.p13.6 k.objects.point part=$k.objects.u1fa81.p13 n=6 x=91.7 y=27.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fa81.p13.7 k.objects.point part=$k.objects.u1fa81.p13 n=7 x=88.4 y=31.5 core.source="noto-emoji 99701e0"
-@k.objects.u1fa81.word core.word text=fly text=soar means=kite of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa81.keyword k.objects.keyword of=kite text=fly text=soar core.source="cldr 48"
 
 # water pistol
 @k.objects.u1f52b k.objects.object name="water pistol" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -773,7 +773,7 @@
 @k.objects.u1f52b.p14.5 k.objects.point part=$k.objects.u1f52b.p14 n=5 x=72.4 y=80.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f52b.p14.6 k.objects.point part=$k.objects.u1f52b.p14 n=6 x=73.5 y=80.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f52b.p14.7 k.objects.point part=$k.objects.u1f52b.p14 n=7 x=84.1 y=80.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f52b.word core.word text=gun text=handgun text=pistol text=revolver text=tool text=water text=weapon means="water pistol" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f52b.keyword k.objects.keyword of="water pistol" text=gun text=handgun text=pistol text=revolver text=tool text=water text=weapon core.source="cldr 48"
 
 # pool 8 ball
 @k.objects.u1f3b1 k.objects.object name="pool 8 ball" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -918,7 +918,7 @@
 @k.objects.u1f3b1.p6.8 k.objects.point part=$k.objects.u1f3b1.p6 n=8 x=39.9 y=36.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b1.p6.9 k.objects.point part=$k.objects.u1f3b1.p6 n=9 x=39.8 y=33.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b1.p6.10 k.objects.point part=$k.objects.u1f3b1.p6 n=10 x=38.8 y=32.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b1.word core.word text=8 text=8ball text=ball text=billiard text=eight text=game text=pool means="pool 8 ball" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b1.keyword k.objects.keyword of="pool 8 ball" text=8 text=8ball text=ball text=billiard text=eight text=game text=pool core.source="cldr 48"
 
 # crystal ball
 @k.objects.u1f52e k.objects.object name="crystal ball" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1055,7 +1055,7 @@
 @k.objects.u1f52e.p13.8 k.objects.point part=$k.objects.u1f52e.p13 n=8 x=78.9 y=52.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f52e.p13.9 k.objects.point part=$k.objects.u1f52e.p13 n=9 x=81.3 y=45.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f52e.p13.10 k.objects.point part=$k.objects.u1f52e.p13 n=10 x=85.9 y=43.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f52e.word core.word text=ball text=crystal text=fairy text=fairytale text=fantasy text=fortune text=future text=magic text=tale text=tool means="crystal ball" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f52e.keyword k.objects.keyword of="crystal ball" text=ball text=crystal text=fairy text=fairytale text=fantasy text=fortune text=future text=magic text=tale text=tool core.source="cldr 48"
 
 # magic wand
 @k.objects.u1fa84 k.objects.object name="magic wand" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1205,7 +1205,7 @@
 @k.objects.u1fa84.p10.22 k.objects.point part=$k.objects.u1fa84.p10 n=22 x=23.7 y=19.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa84.p10.23 k.objects.point part=$k.objects.u1fa84.p10 n=23 x=31.7 y=21.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa84.p10.24 k.objects.point part=$k.objects.u1fa84.p10 n=24 x=44.4 y=25.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fa84.word core.word text=magic text=magician text=wand text=witch text=wizard means="magic wand" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa84.keyword k.objects.keyword of="magic wand" text=magic text=magician text=wand text=witch text=wizard core.source="cldr 48"
 
 # video game
 @k.objects.u1f3ae k.objects.object name="video game" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1330,4 +1330,4 @@
 @k.objects.u1f3ae.p12 k.objects.part of="video game" name=button2 kind=button named=model shape=circle x=70.6 y=39 w=7.2 h=7.2 z=12 colour=green rgb="#06AC48" core.source="noto-emoji 99701e0"
 @k.objects.u1f3ae.p13 k.objects.part of="video game" name=button3 kind=button named=model shape=circle x=77.8 y=32.7 w=7.1 h=7.1 z=13 colour=red rgb="#F72E26" core.source="noto-emoji 99701e0"
 @k.objects.u1f3ae.p14 k.objects.part of="video game" name=button4 kind=button named=model shape=circle x=70.6 y=25.3 w=7.2 h=7.2 z=14 colour=yellow rgb="#FDB700" core.source="noto-emoji 99701e0"
-@k.objects.u1f3ae.word core.word text=controller text=entertainment text=game text=video means="video game" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ae.keyword k.objects.keyword of="video game" text=controller text=entertainment text=game text=video core.source="cldr 48"

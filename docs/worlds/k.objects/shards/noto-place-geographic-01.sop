@@ -220,7 +220,7 @@
 @k.objects.u1f3d4.p16.11 k.objects.point part=$k.objects.u1f3d4.p16 n=11 x=73.4 y=68.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d4.p16.12 k.objects.point part=$k.objects.u1f3d4.p16 n=12 x=54 y=77.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d4.p16.13 k.objects.point part=$k.objects.u1f3d4.p16 n=13 x=45.8 y=77.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f3d4.word core.word text=cold text=mountain text=snow text=snow-capped means="snow-capped mountain" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3d4.keyword k.objects.keyword of="snow-capped mountain" text=cold text=mountain text=snow text=snow-capped core.source="cldr 48"
 
 # landslide
 @k.objects.u1f6d8 k.objects.object name=landslide core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -431,7 +431,7 @@
 @k.objects.u1f6d8.p16.6 k.objects.point part=$k.objects.u1f6d8.p16 n=6 x=36.3 y=64.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d8.p16.7 k.objects.point part=$k.objects.u1f6d8.p16 n=7 x=35.4 y=65.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d8.p16.8 k.objects.point part=$k.objects.u1f6d8.p16 n=8 x=33.1 y=66.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d8.word core.word text=avalanche text=danger text=disaster text=earthquake text=mountain text=mudslide text=rocks means=landslide of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6d8.keyword k.objects.keyword of=landslide text=avalanche text=danger text=disaster text=earthquake text=mountain text=mudslide text=rocks core.source="cldr 48"
 
 # volcano
 @k.objects.u1f30b k.objects.object name=volcano core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -638,7 +638,7 @@
 @k.objects.u1f30b.p15.14 k.objects.point part=$k.objects.u1f30b.p15 n=14 x=40.8 y=22.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f30b.p15.15 k.objects.point part=$k.objects.u1f30b.p15 n=15 x=44.3 y=28.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f30b.p15.16 k.objects.point part=$k.objects.u1f30b.p15 n=16 x=48.4 y=41.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f30b.word core.word text=eruption text=mountain text=nature means=volcano of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f30b.keyword k.objects.keyword of=volcano text=eruption text=mountain text=nature core.source="cldr 48"
 
 # mount fuji
 @k.objects.u1f5fb k.objects.object name="mount fuji" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -857,7 +857,7 @@
 @k.objects.u1f5fb.p16.6 k.objects.point part=$k.objects.u1f5fb.p16 n=6 x=70.4 y=14.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f5fb.p16.7 k.objects.point part=$k.objects.u1f5fb.p16 n=7 x=71.4 y=13.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f5fb.p16.8 k.objects.point part=$k.objects.u1f5fb.p16 n=8 x=71.3 y=12 core.source="noto-emoji 99701e0"
-@k.objects.u1f5fb.word core.word text=fuji text=mount text=mountain text=nature means="mount fuji" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5fb.keyword k.objects.keyword of="mount fuji" text=fuji text=mount text=mountain text=nature core.source="cldr 48"
 
 # camping
 @k.objects.u1f3d5 k.objects.object name=camping core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1284,7 +1284,7 @@
 @k.objects.u1f3d6.p10.8 k.objects.point part=$k.objects.u1f3d6.p10 n=8 x=47.6 y=11 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d6.p10.9 k.objects.point part=$k.objects.u1f3d6.p10 n=9 x=47.3 y=6.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d6.p10.10 k.objects.point part=$k.objects.u1f3d6.p10 n=10 x=46.5 y=3.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f3d6.word core.word text=beach text=umbrella means="beach with umbrella" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3d6.keyword k.objects.keyword of="beach with umbrella" text=beach text=umbrella core.source="cldr 48"
 
 # desert
 @k.objects.u1f3dc k.objects.object name=desert core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1714,4 +1714,4 @@
 @k.objects.u1f3dd.p14.32 k.objects.point part=$k.objects.u1f3dd.p14 n=32 x=15.7 y=78.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3dd.p14.33 k.objects.point part=$k.objects.u1f3dd.p14 n=33 x=16 y=75 core.source="noto-emoji 99701e0"
 @k.objects.u1f3dd.p14.34 k.objects.point part=$k.objects.u1f3dd.p14 n=34 x=17.6 y=73.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3dd.word core.word text=desert text=island means="desert island" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3dd.keyword k.objects.keyword of="desert island" text=desert text=island core.source="cldr 48"

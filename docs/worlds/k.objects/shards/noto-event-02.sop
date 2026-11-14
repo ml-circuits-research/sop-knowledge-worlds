@@ -214,7 +214,7 @@
 @k.objects.u1f38b.p16.6 k.objects.point part=$k.objects.u1f38b.p16 n=6 x=33.4 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f38b.p16.7 k.objects.point part=$k.objects.u1f38b.p16 n=7 x=36 y=23 core.source="noto-emoji 99701e0"
 @k.objects.u1f38b.p16.8 k.objects.point part=$k.objects.u1f38b.p16 n=8 x=35.3 y=21.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f38b.word core.word text=banner text=celebration text=Japanese text=tanabata text=tree means="tanabata tree" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f38b.keyword k.objects.keyword of="tanabata tree" text=banner text=celebration text=Japanese text=tanabata text=tree core.source="cldr 48"
 
 # pine decoration
 @k.objects.u1f38d k.objects.object name="pine decoration" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -430,7 +430,7 @@
 @k.objects.u1f38d.p16.6 k.objects.point part=$k.objects.u1f38d.p16 n=6 x=48.1 y=41.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f38d.p16.7 k.objects.point part=$k.objects.u1f38d.p16 n=7 x=49.7 y=36.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f38d.p16.8 k.objects.point part=$k.objects.u1f38d.p16 n=8 x=48.7 y=31.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f38d.word core.word text=bamboo text=celebration text=decoration text=Japanese text=pine text=plant means="pine decoration" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f38d.keyword k.objects.keyword of="pine decoration" text=bamboo text=celebration text=decoration text=Japanese text=pine text=plant core.source="cldr 48"
 
 # Japanese dolls
 @k.objects.u1f38e k.objects.object name="Japanese dolls" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -645,7 +645,7 @@
 @k.objects.u1f38e.p16.13 k.objects.point part=$k.objects.u1f38e.p16 n=13 x=20 y=35.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f38e.p16.14 k.objects.point part=$k.objects.u1f38e.p16 n=14 x=20.1 y=33 core.source="noto-emoji 99701e0"
 @k.objects.u1f38e.p16.15 k.objects.point part=$k.objects.u1f38e.p16 n=15 x=21.8 y=30.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f38e.word core.word text=celebration text=doll text=dolls text=festival text=Japanese means="Japanese dolls" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f38e.keyword k.objects.keyword of="Japanese dolls" text=celebration text=doll text=dolls text=festival text=Japanese core.source="cldr 48"
 
 # carp streamer
 @k.objects.u1f38f k.objects.object name="carp streamer" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -856,7 +856,7 @@
 @k.objects.u1f38f.p16.5 k.objects.point part=$k.objects.u1f38f.p16 n=5 x=59.9 y=38 core.source="noto-emoji 99701e0"
 @k.objects.u1f38f.p16.6 k.objects.point part=$k.objects.u1f38f.p16 n=6 x=60 y=31 core.source="noto-emoji 99701e0"
 @k.objects.u1f38f.p16.7 k.objects.point part=$k.objects.u1f38f.p16 n=7 x=58.6 y=27.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f38f.word core.word text=carp text=celebration text=streamer means="carp streamer" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f38f.keyword k.objects.keyword of="carp streamer" text=carp text=celebration text=streamer core.source="cldr 48"
 
 # wind chime
 @k.objects.u1f390 k.objects.object name="wind chime" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1054,7 +1054,7 @@
 @k.objects.u1f390.p12.21 k.objects.point part=$k.objects.u1f390.p12 n=21 x=47 y=47.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f390.p12.22 k.objects.point part=$k.objects.u1f390.p12 n=22 x=49.6 y=47 core.source="noto-emoji 99701e0"
 @k.objects.u1f390.p12.23 k.objects.point part=$k.objects.u1f390.p12 n=23 x=50.4 y=45.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f390.word core.word text=bell text=celebration text=chime text=wind means="wind chime" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f390.keyword k.objects.keyword of="wind chime" text=bell text=celebration text=chime text=wind core.source="cldr 48"
 
 # moon viewing ceremony
 @k.objects.u1f391 k.objects.object name="moon viewing ceremony" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1192,7 +1192,7 @@
 @k.objects.u1f391.p16.29 k.objects.point part=$k.objects.u1f391.p16 n=29 x=31.8 y=57.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f391.p16.30 k.objects.point part=$k.objects.u1f391.p16 n=30 x=32.5 y=58.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f391.p16.31 k.objects.point part=$k.objects.u1f391.p16 n=31 x=32.1 y=59.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f391.word core.word text=celebration text=ceremony text=moon text=viewing means="moon viewing ceremony" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f391.keyword k.objects.keyword of="moon viewing ceremony" text=celebration text=ceremony text=moon text=viewing core.source="cldr 48"
 
 # red envelope
 @k.objects.u1f9e7 k.objects.object name="red envelope" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1341,7 +1341,7 @@
 @k.objects.u1f9e7.p12.2 k.objects.point part=$k.objects.u1f9e7.p12 n=2 x=60.9 y=53.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e7.p12.3 k.objects.point part=$k.objects.u1f9e7.p12 n=3 x=60.6 y=54.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e7.p12.4 k.objects.point part=$k.objects.u1f9e7.p12 n=4 x=48.9 y=54.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e7.word core.word text=envelope text=gift text=good text=hóngbāo text=lai text=luck text=money text=red text=see means="red envelope" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e7.keyword k.objects.keyword of="red envelope" text=envelope text=gift text=good text=hóngbāo text=lai text=luck text=money text=red text=see core.source="cldr 48"
 
 # ribbon
 @k.objects.u1f380 k.objects.object name=ribbon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1545,4 +1545,4 @@
 @k.objects.u1f380.p11.34 k.objects.point part=$k.objects.u1f380.p11 n=34 x=25.3 y=25.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f380.p11.35 k.objects.point part=$k.objects.u1f380.p11 n=35 x=29.3 y=26 core.source="noto-emoji 99701e0"
 @k.objects.u1f380.p11.36 k.objects.point part=$k.objects.u1f380.p11 n=36 x=33.5 y=27.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f380.word core.word text=celebration means=ribbon of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f380.keyword k.objects.keyword of=ribbon text=celebration core.source="cldr 48"

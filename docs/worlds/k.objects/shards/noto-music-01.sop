@@ -92,7 +92,7 @@
 @k.objects.u1f3bc.p7.35 k.objects.point part=$k.objects.u1f3bc.p7 n=35 x=66.3 y=71.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3bc.p7.36 k.objects.point part=$k.objects.u1f3bc.p7 n=36 x=70 y=64.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3bc.p7.37 k.objects.point part=$k.objects.u1f3bc.p7 n=37 x=70.3 y=58.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f3bc.word core.word text=music text=musical text=note text=score means="musical score" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3bc.keyword k.objects.keyword of="musical score" text=music text=musical text=note text=score core.source="cldr 48"
 
 # musical note
 @k.objects.u1f3b5 k.objects.object name="musical note" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -136,7 +136,7 @@
 @k.objects.u1f3b5.p1.37 k.objects.point part=$k.objects.u1f3b5.p1 n=37 x=84.1 y=72.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b5.p1.38 k.objects.point part=$k.objects.u1f3b5.p1 n=38 x=84.1 y=8.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b5.p1.39 k.objects.point part=$k.objects.u1f3b5.p1 n=39 x=83.5 y=7 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b5.word core.word text=music text=musical text=note text=sound means="musical note" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b5.keyword k.objects.keyword of="musical note" text=music text=musical text=note text=sound core.source="cldr 48"
 
 # musical notes
 @k.objects.u1f3b6 k.objects.object name="musical notes" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -230,7 +230,7 @@
 @k.objects.u1f3b6.p3.27 k.objects.point part=$k.objects.u1f3b6.p3 n=27 x=57.1 y=49.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b6.p3.28 k.objects.point part=$k.objects.u1f3b6.p3 n=28 x=58.5 y=55.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3b6.p3.29 k.objects.point part=$k.objects.u1f3b6.p3 n=29 x=59.7 y=55.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f3b6.word core.word text=music text=musical text=note text=notes text=sound means="musical notes" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3b6.keyword k.objects.keyword of="musical notes" text=music text=musical text=note text=notes text=sound core.source="cldr 48"
 
 # studio microphone
 @k.objects.u1f399 k.objects.object name="studio microphone" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -448,7 +448,7 @@
 @k.objects.u1f399.p16.6 k.objects.point part=$k.objects.u1f399.p16 n=6 x=49.3 y=45.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f399.p16.7 k.objects.point part=$k.objects.u1f399.p16 n=7 x=53.2 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f399.p16.8 k.objects.point part=$k.objects.u1f399.p16 n=8 x=52.3 y=40.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f399.word core.word text=mic text=microphone text=music text=studio means="studio microphone" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f399.keyword k.objects.keyword of="studio microphone" text=mic text=microphone text=music text=studio core.source="cldr 48"
 
 # level slider
 @k.objects.u1f39a k.objects.object name="level slider" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -566,7 +566,7 @@
 @k.objects.u1f39a.p16.6 k.objects.point part=$k.objects.u1f39a.p16 n=6 x=50.9 y=30.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f39a.p16.7 k.objects.point part=$k.objects.u1f39a.p16 n=7 x=51.1 y=31.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f39a.p16.8 k.objects.point part=$k.objects.u1f39a.p16 n=8 x=48.7 y=33.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f39a.word core.word text=level text=music text=slider means="level slider" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f39a.keyword k.objects.keyword of="level slider" text=level text=music text=slider core.source="cldr 48"
 
 # control knobs
 @k.objects.u1f39b k.objects.object name="control knobs" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -670,7 +670,7 @@
 @k.objects.u1f39b.p13.7 k.objects.point part=$k.objects.u1f39b.p13 n=7 x=68.1 y=23.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f39b.p13.8 k.objects.point part=$k.objects.u1f39b.p13 n=8 x=65.4 y=27.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f39b.p13.9 k.objects.point part=$k.objects.u1f39b.p13 n=9 x=63.7 y=27.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f39b.word core.word text=control text=knobs text=music means="control knobs" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f39b.keyword k.objects.keyword of="control knobs" text=control text=knobs text=music core.source="cldr 48"
 
 # microphone
 @k.objects.u1f3a4 k.objects.object name=microphone core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -799,7 +799,7 @@
 @k.objects.u1f3a4.p9.8 k.objects.point part=$k.objects.u1f3a4.p9 n=8 x=51.5 y=40.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a4.p9.9 k.objects.point part=$k.objects.u1f3a4.p9 n=9 x=49.5 y=38.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a4.p9.10 k.objects.point part=$k.objects.u1f3a4.p9 n=10 x=48.5 y=36.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f3a4.word core.word text=karaoke text=mic text=music text=sing text=sound means=microphone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a4.keyword k.objects.keyword of=microphone text=karaoke text=mic text=music text=sing text=sound core.source="cldr 48"
 
 # headphone
 @k.objects.u1f3a7 k.objects.object name=headphone core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1009,4 +1009,4 @@
 @k.objects.u1f3a7.p13.13 k.objects.point part=$k.objects.u1f3a7.p13 n=13 x=23.4 y=18.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a7.p13.14 k.objects.point part=$k.objects.u1f3a7.p13 n=14 x=18.1 y=24.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a7.p13.15 k.objects.point part=$k.objects.u1f3a7.p13 n=15 x=13.1 y=32.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f3a7.word core.word text=earbud text=sound means=headphone of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a7.keyword k.objects.keyword of=headphone text=earbud text=sound core.source="cldr 48"

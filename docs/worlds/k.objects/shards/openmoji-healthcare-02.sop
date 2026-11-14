@@ -75,7 +75,7 @@
 @k.objects.ome30e.p10.3 k.objects.point part=$k.objects.ome30e.p10 n=3 x=58.3 y=39.7 core.source="openmoji 3e01de5"
 @k.objects.ome30e.p10.4 k.objects.point part=$k.objects.ome30e.p10 n=4 x=54.3 y=46.5 core.source="openmoji 3e01de5"
 @k.objects.ome30e.p11 k.objects.part of="swab pliers" name=part11 named=no shape=circle x=53.3 y=41 w=1.7 h=1.7 z=11 colour=white rgb="#FFFFFF" core.source="openmoji 3e01de5"
-@k.objects.ome30e.word core.word text=surgery text=scissors means="swab pliers" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome30e.keyword k.objects.keyword of="swab pliers" text=surgery text=scissors core.source="openmoji 3e01de5"
 
 # hot-water bottle
 @k.objects.ome30f k.objects.object name="hot-water bottle" core.source="openmoji 3e01de5"
@@ -181,7 +181,7 @@
 @k.objects.ome30f.p8.15 k.objects.point part=$k.objects.ome30f.p8 n=15 x=33.2 y=25.7 core.source="openmoji 3e01de5"
 @k.objects.ome30f.p8.16 k.objects.point part=$k.objects.ome30f.p8 n=16 x=37.1 y=24.6 core.source="openmoji 3e01de5"
 @k.objects.ome30f.p8.17 k.objects.point part=$k.objects.ome30f.p8 n=17 x=42.5 y=24.6 core.source="openmoji 3e01de5"
-@k.objects.ome30f.word core.word text=cramps text=comfort text=warm text=period means="hot-water bottle" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome30f.keyword k.objects.keyword of="hot-water bottle" text=cramps text=comfort text=warm text=period core.source="openmoji 3e01de5"
 
 # liver
 @k.objects.ome312 k.objects.object name=liver core.source="openmoji 3e01de5"
@@ -239,7 +239,7 @@
 @k.objects.ome312.p4.9 k.objects.point part=$k.objects.ome312.p4 n=9 x=71.7 y=40.2 core.source="openmoji 3e01de5"
 @k.objects.ome312.p4.10 k.objects.point part=$k.objects.ome312.p4 n=10 x=63.7 y=38.4 core.source="openmoji 3e01de5"
 @k.objects.ome312.p4.11 k.objects.point part=$k.objects.ome312.p4 n=11 x=55.6 y=38.1 core.source="openmoji 3e01de5"
-@k.objects.ome312.word core.word text=organ text=toxins text=bile means=liver of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome312.keyword k.objects.keyword of=liver text=organ text=toxins text=bile core.source="openmoji 3e01de5"
 
 # stomach
 @k.objects.ome313 k.objects.object name=stomach core.source="openmoji 3e01de5"
@@ -346,7 +346,7 @@
 @k.objects.ome313.p5.13 k.objects.point part=$k.objects.ome313.p5 n=13 x=51.4 y=59.2 core.source="openmoji 3e01de5"
 @k.objects.ome313.p5.14 k.objects.point part=$k.objects.ome313.p5 n=14 x=45 y=63.1 core.source="openmoji 3e01de5"
 @k.objects.ome313.p5.15 k.objects.point part=$k.objects.ome313.p5 n=15 x=37.6 y=64.8 core.source="openmoji 3e01de5"
-@k.objects.ome313.word core.word text=gut text=digestion text=bile text=acid means=stomach of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome313.keyword k.objects.keyword of=stomach text=gut text=digestion text=bile text=acid core.source="openmoji 3e01de5"
 
 # large intestine
 @k.objects.ome314 k.objects.object name="large intestine" core.source="openmoji 3e01de5"
@@ -425,7 +425,7 @@
 @k.objects.ome314.p2.35 k.objects.point part=$k.objects.ome314.p2 n=35 x=24.2 y=43 core.source="openmoji 3e01de5"
 @k.objects.ome314.p2.36 k.objects.point part=$k.objects.ome314.p2 n=36 x=30.4 y=32.2 core.source="openmoji 3e01de5"
 @k.objects.ome314.p2.37 k.objects.point part=$k.objects.ome314.p2 n=37 x=39.9 y=29.4 core.source="openmoji 3e01de5"
-@k.objects.ome314.word core.word text=organ text=colon text=gut means="large intestine" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome314.keyword k.objects.keyword of="large intestine" text=organ text=colon text=gut core.source="openmoji 3e01de5"
 
 # intestine
 @k.objects.ome315 k.objects.object name=intestine core.source="openmoji 3e01de5"
@@ -626,7 +626,7 @@
 @k.objects.ome315.p16.3 k.objects.point part=$k.objects.ome315.p16 n=3 x=31.7 y=41.5 core.source="openmoji 3e01de5"
 @k.objects.ome315.p16.4 k.objects.point part=$k.objects.ome315.p16 n=4 x=40.4 y=40.4 core.source="openmoji 3e01de5"
 @k.objects.ome315.p16.5 k.objects.point part=$k.objects.ome315.p16 n=5 x=27 y=36.1 core.source="openmoji 3e01de5"
-@k.objects.ome315.word core.word text=organ text=digestion text=colon text=gut means=intestine of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome315.keyword k.objects.keyword of=intestine text=organ text=digestion text=colon text=gut core.source="openmoji 3e01de5"
 
 # kidney
 @k.objects.ome316 k.objects.object name=kidney core.source="openmoji 3e01de5"
@@ -741,7 +741,7 @@
 @k.objects.ome316.p7.4 k.objects.point part=$k.objects.ome316.p7 n=4 x=37.5 y=48.6 core.source="openmoji 3e01de5"
 @k.objects.ome316.p7.5 k.objects.point part=$k.objects.ome316.p7 n=5 x=38.8 y=40 core.source="openmoji 3e01de5"
 @k.objects.ome316.p7.6 k.objects.point part=$k.objects.ome316.p7 n=6 x=40.9 y=37 core.source="openmoji 3e01de5"
-@k.objects.ome316.word core.word text=urine text=toxins text=blood text=organ means=kidney of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome316.keyword k.objects.keyword of=kidney text=urine text=toxins text=blood text=organ core.source="openmoji 3e01de5"
 
 # forceps
 @k.objects.ome318 k.objects.object name=forceps core.source="openmoji 3e01de5"
@@ -778,4 +778,4 @@
 @k.objects.ome318.p4.5 k.objects.point part=$k.objects.ome318.p4 n=5 x=62.1 y=23.6 core.source="openmoji 3e01de5"
 @k.objects.ome318.p4.6 k.objects.point part=$k.objects.ome318.p4 n=6 x=69.6 y=10.3 core.source="openmoji 3e01de5"
 @k.objects.ome318.p4.7 k.objects.point part=$k.objects.ome318.p4 n=7 x=70.3 y=9.7 core.source="openmoji 3e01de5"
-@k.objects.ome318.word core.word text=surgery text=tweezers text=tongs means=forceps of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome318.keyword k.objects.keyword of=forceps text=surgery text=tweezers text=tongs core.source="openmoji 3e01de5"

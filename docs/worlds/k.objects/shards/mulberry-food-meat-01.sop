@@ -200,7 +200,7 @@
 @k.objects.mb152.p16.15 k.objects.point part=$k.objects.mb152.p16 n=15 x=67.6 y=28.2 core.source="mulberry fa94a93"
 @k.objects.mb152.p16.16 k.objects.point part=$k.objects.mb152.p16 n=16 x=69 y=31.1 core.source="mulberry fa94a93"
 @k.objects.mb152.p16.17 k.objects.point part=$k.objects.mb152.p16 n=17 x=75.5 y=30.7 core.source="mulberry fa94a93"
-@k.objects.mb152.word core.word text=food text=meat means=beef of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb152.keyword k.objects.keyword of=beef text=food text=meat core.source="mulberry fa94a93"
 
 # corned beef
 @k.objects.mb605 k.objects.object name="corned beef" core.source="mulberry fa94a93"
@@ -608,7 +608,7 @@
 @k.objects.mb1598.p16.1 k.objects.point part=$k.objects.mb1598.p16 n=1 x=73.7 y=13.4 core.source="mulberry fa94a93"
 @k.objects.mb1598.p16.2 k.objects.point part=$k.objects.mb1598.p16 n=2 x=73.3 y=7.9 core.source="mulberry fa94a93"
 @k.objects.mb1598.p16.3 k.objects.point part=$k.objects.mb1598.p16 n=3 x=76.2 y=11.8 core.source="mulberry fa94a93"
-@k.objects.mb1598.word core.word text=food text=meat text=pork means=ham of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1598.keyword k.objects.keyword of=ham text=food text=meat text=pork core.source="mulberry fa94a93"
 
 # ham packet
 @k.objects.mb1599 k.objects.object name="ham packet" core.source="mulberry fa94a93"
@@ -1024,7 +1024,7 @@
 @k.objects.mb1789.p16.2 k.objects.point part=$k.objects.mb1789.p16 n=2 x=88.7 y=16.7 core.source="mulberry fa94a93"
 @k.objects.mb1789.p16.3 k.objects.point part=$k.objects.mb1789.p16 n=3 x=90.4 y=19.5 core.source="mulberry fa94a93"
 @k.objects.mb1789.p16.4 k.objects.point part=$k.objects.mb1789.p16 n=4 x=86.2 y=19.5 core.source="mulberry fa94a93"
-@k.objects.mb1789.word core.word text=food text=meat means=lamb of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1789.keyword k.objects.keyword of=lamb text=food text=meat core.source="mulberry fa94a93"
 
 # minced meat
 @k.objects.mb1949 k.objects.object name="minced meat" core.source="mulberry fa94a93"
@@ -1634,4 +1634,4 @@
 @k.objects.mb2286.p16.7 k.objects.point part=$k.objects.mb2286.p16 n=7 x=67.6 y=55.9 core.source="mulberry fa94a93"
 @k.objects.mb2286.p16.8 k.objects.point part=$k.objects.mb2286.p16 n=8 x=75.3 y=63.3 core.source="mulberry fa94a93"
 @k.objects.mb2286.p16.9 k.objects.point part=$k.objects.mb2286.p16 n=9 x=91 y=74.4 core.source="mulberry fa94a93"
-@k.objects.mb2286.word core.word text=food text=meat means="pork chop" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2286.keyword k.objects.keyword of="pork chop" text=food text=meat core.source="mulberry fa94a93"

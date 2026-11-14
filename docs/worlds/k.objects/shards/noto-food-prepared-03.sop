@@ -161,7 +161,7 @@
 @k.objects.u1f32d.p5.30 k.objects.point part=$k.objects.u1f32d.p5 n=30 x=35.5 y=37.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f32d.p5.31 k.objects.point part=$k.objects.u1f32d.p5 n=31 x=33.7 y=24.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f32d.p5.32 k.objects.point part=$k.objects.u1f32d.p5 n=32 x=22.2 y=17 core.source="noto-emoji 99701e0"
-@k.objects.u1f32d.word core.word text=dog text=frankfurter text=hot text=hotdog text=sausage means="hot dog" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f32d.keyword k.objects.keyword of="hot dog" text=dog text=frankfurter text=hot text=hotdog text=sausage core.source="cldr 48"
 
 # sandwich
 @k.objects.u1f96a k.objects.object name=sandwich core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -381,7 +381,7 @@
 @k.objects.u1f96a.p16.17 k.objects.point part=$k.objects.u1f96a.p16 n=17 x=87.6 y=21 core.source="noto-emoji 99701e0"
 @k.objects.u1f96a.p16.18 k.objects.point part=$k.objects.u1f96a.p16 n=18 x=76.8 y=17.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f96a.p16.19 k.objects.point part=$k.objects.u1f96a.p16 n=19 x=51.9 y=12.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f96a.word core.word text=bread means=sandwich of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f96a.keyword k.objects.keyword of=sandwich text=bread core.source="cldr 48"
 
 # taco
 @k.objects.u1f32e k.objects.object name=taco core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -595,7 +595,7 @@
 @k.objects.u1f32e.p16.16 k.objects.point part=$k.objects.u1f32e.p16 n=16 x=35.9 y=86.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f32e.p16.17 k.objects.point part=$k.objects.u1f32e.p16 n=17 x=60.2 y=62.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f32e.p16.18 k.objects.point part=$k.objects.u1f32e.p16 n=18 x=81.6 y=51 core.source="noto-emoji 99701e0"
-@k.objects.u1f32e.word core.word text=mexican means=taco of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f32e.keyword k.objects.keyword of=taco text=mexican core.source="cldr 48"
 
 # burrito
 @k.objects.u1f32f k.objects.object name=burrito core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -805,7 +805,7 @@
 @k.objects.u1f32f.p16.7 k.objects.point part=$k.objects.u1f32f.p16 n=7 x=50.3 y=8.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f32f.p16.8 k.objects.point part=$k.objects.u1f32f.p16 n=8 x=52.2 y=12.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f32f.p16.9 k.objects.point part=$k.objects.u1f32f.p16 n=9 x=50.1 y=33.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f32f.word core.word text=mexican text=wrap means=burrito of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f32f.keyword k.objects.keyword of=burrito text=mexican text=wrap core.source="cldr 48"
 
 # tamale
 @k.objects.u1fad4 k.objects.object name=tamale core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1025,7 +1025,7 @@
 @k.objects.u1fad4.p16.5 k.objects.point part=$k.objects.u1fad4.p16 n=5 x=76.9 y=54.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fad4.p16.6 k.objects.point part=$k.objects.u1fad4.p16 n=6 x=75.7 y=46.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fad4.p16.7 k.objects.point part=$k.objects.u1fad4.p16 n=7 x=71.1 y=40 core.source="noto-emoji 99701e0"
-@k.objects.u1fad4.word core.word text=food text=mexican text=pamonha text=wrapped means=tamale of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad4.keyword k.objects.keyword of=tamale text=food text=mexican text=pamonha text=wrapped core.source="cldr 48"
 
 # stuffed flatbread
 @k.objects.u1f959 k.objects.object name="stuffed flatbread" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1245,7 +1245,7 @@
 @k.objects.u1f959.p16.18 k.objects.point part=$k.objects.u1f959.p16 n=18 x=24.8 y=58.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f959.p16.19 k.objects.point part=$k.objects.u1f959.p16 n=19 x=17.1 y=61 core.source="noto-emoji 99701e0"
 @k.objects.u1f959.p16.20 k.objects.point part=$k.objects.u1f959.p16 n=20 x=5.9 y=62 core.source="noto-emoji 99701e0"
-@k.objects.u1f959.word core.word text=falafel text=flatbread text=food text=gyro text=kebab text=stuffed means="stuffed flatbread" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f959.keyword k.objects.keyword of="stuffed flatbread" text=falafel text=flatbread text=food text=gyro text=kebab text=stuffed core.source="cldr 48"
 
 # falafel
 @k.objects.u1f9c6 k.objects.object name=falafel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1447,7 +1447,7 @@
 @k.objects.u1f9c6.p16.2 k.objects.point part=$k.objects.u1f9c6.p16 n=2 x=34.7 y=59 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c6.p16.3 k.objects.point part=$k.objects.u1f9c6.p16 n=3 x=37.5 y=54.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c6.p16.4 k.objects.point part=$k.objects.u1f9c6.p16 n=4 x=32.9 y=54.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9c6.word core.word text=chickpea text=meatball means=falafel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9c6.keyword k.objects.keyword of=falafel text=chickpea text=meatball core.source="cldr 48"
 
 # egg
 @k.objects.u1f95a k.objects.object name=egg core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1560,4 +1560,4 @@
 @k.objects.u1f95a.p9.6 k.objects.point part=$k.objects.u1f95a.p9 n=6 x=38.2 y=83.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f95a.p9.7 k.objects.point part=$k.objects.u1f95a.p9 n=7 x=38.9 y=81.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f95a.p9.8 k.objects.point part=$k.objects.u1f95a.p9 n=8 x=40.8 y=80.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f95a.word core.word text=breakfast text=food means=egg of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f95a.keyword k.objects.keyword of=egg text=breakfast text=food core.source="cldr 48"

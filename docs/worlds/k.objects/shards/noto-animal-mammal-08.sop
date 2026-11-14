@@ -208,7 +208,7 @@
 @k.objects.u1f428.p14.4 k.objects.point part=$k.objects.u1f428.p14 n=4 x=46.4 y=67.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f428.p14.5 k.objects.point part=$k.objects.u1f428.p14 n=5 x=48.4 y=67.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f428.p14.6 k.objects.point part=$k.objects.u1f428.p14 n=6 x=48.5 y=66.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f428.word core.word text=animal text=australia text=bear text=down text=face text=marsupial text=under means=koala of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f428.keyword k.objects.keyword of=koala text=animal text=australia text=bear text=down text=face text=marsupial text=under core.source="cldr 48"
 
 # panda
 @k.objects.u1f43c k.objects.object name=panda core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -422,7 +422,7 @@
 @k.objects.u1f43c.p10.38 k.objects.point part=$k.objects.u1f43c.p10 n=38 x=96.9 y=54.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f43c.p10.39 k.objects.point part=$k.objects.u1f43c.p10 n=39 x=94.9 y=45.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f43c.p10.40 k.objects.point part=$k.objects.u1f43c.p10 n=40 x=92.3 y=39.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f43c.word core.word text=animal text=bamboo text=face means=panda of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f43c.keyword k.objects.keyword of=panda text=animal text=bamboo text=face core.source="cldr 48"
 
 # sloth
 @k.objects.u1f9a5 k.objects.object name=sloth core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -622,7 +622,7 @@
 @k.objects.u1f9a5.p16.5 k.objects.point part=$k.objects.u1f9a5.p16 n=5 x=66.7 y=84.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a5.p16.6 k.objects.point part=$k.objects.u1f9a5.p16 n=6 x=59 y=87.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a5.p16.7 k.objects.point part=$k.objects.u1f9a5.p16 n=7 x=52.4 y=88.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a5.word core.word text=lazy text=slow means=sloth of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a5.keyword k.objects.keyword of=sloth text=lazy text=slow core.source="cldr 48"
 
 # otter
 @k.objects.u1f9a6 k.objects.object name=otter core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -831,7 +831,7 @@
 @k.objects.u1f9a6.p15.20 k.objects.point part=$k.objects.u1f9a6.p15 n=20 x=85.8 y=62.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a6.p15.21 k.objects.point part=$k.objects.u1f9a6.p15 n=21 x=78.3 y=68.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a6.p15.22 k.objects.point part=$k.objects.u1f9a6.p15 n=22 x=69.2 y=71.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a6.word core.word text=animal text=fishing text=playful means=otter of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a6.keyword k.objects.keyword of=otter text=animal text=fishing text=playful core.source="cldr 48"
 
 # skunk
 @k.objects.u1f9a8 k.objects.object name=skunk core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -977,7 +977,7 @@
 @k.objects.u1f9a8.p8.4 k.objects.point part=$k.objects.u1f9a8.p8 n=4 x=34.7 y=66.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a8.p8.5 k.objects.point part=$k.objects.u1f9a8.p8 n=5 x=33.5 y=68.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a8.p8.6 k.objects.point part=$k.objects.u1f9a8.p8 n=6 x=32.7 y=69.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a8.word core.word text=animal text=stink means=skunk of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a8.keyword k.objects.keyword of=skunk text=animal text=stink core.source="cldr 48"
 
 # kangaroo
 @k.objects.u1f998 k.objects.object name=kangaroo core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1093,7 +1093,7 @@
 @k.objects.u1f998.p6.4 k.objects.point part=$k.objects.u1f998.p6 n=4 x=8.6 y=39.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f998.p6.5 k.objects.point part=$k.objects.u1f998.p6 n=5 x=6.5 y=40.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f998.p6.6 k.objects.point part=$k.objects.u1f998.p6 n=6 x=5.2 y=40 core.source="noto-emoji 99701e0"
-@k.objects.u1f998.word core.word text=animal text=joey text=jump text=marsupial means=kangaroo of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f998.keyword k.objects.keyword of=kangaroo text=animal text=joey text=jump text=marsupial core.source="cldr 48"
 
 # badger
 @k.objects.u1f9a1 k.objects.object name=badger core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1298,7 +1298,7 @@
 @k.objects.u1f9a1.p16.4 k.objects.point part=$k.objects.u1f9a1.p16 n=4 x=80.1 y=56.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a1.p16.5 k.objects.point part=$k.objects.u1f9a1.p16 n=5 x=82.7 y=58.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a1.p16.6 k.objects.point part=$k.objects.u1f9a1.p16 n=6 x=82.9 y=59.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a1.word core.word text=animal text=honey text=pester means=badger of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a1.keyword k.objects.keyword of=badger text=animal text=honey text=pester core.source="cldr 48"
 
 # paw prints
 @k.objects.u1f43e k.objects.object name="paw prints" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1483,4 +1483,4 @@
 @k.objects.u1f43e.p10.14 k.objects.point part=$k.objects.u1f43e.p10 n=14 x=92.4 y=54.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f43e.p10.15 k.objects.point part=$k.objects.u1f43e.p10 n=15 x=93.7 y=55.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f43e.p10.16 k.objects.point part=$k.objects.u1f43e.p10 n=16 x=95.4 y=58.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f43e.word core.word text=feet text=paw text=paws text=print text=prints means="paw prints" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f43e.keyword k.objects.keyword of="paw prints" text=feet text=paw text=paws text=print text=prints core.source="cldr 48"

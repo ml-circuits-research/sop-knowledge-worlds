@@ -179,7 +179,7 @@
 @k.objects.mb301.p16.3 k.objects.point part=$k.objects.mb301.p16 n=3 x=30.1 y=58.8 core.source="mulberry fa94a93"
 @k.objects.mb301.p16.4 k.objects.point part=$k.objects.mb301.p16 n=4 x=31.5 y=58 core.source="mulberry fa94a93"
 @k.objects.mb301.p16.5 k.objects.point part=$k.objects.mb301.p16 n=5 x=34 y=59.9 core.source="mulberry fa94a93"
-@k.objects.mb301.word core.word text=animal text=bird text=pet means=budgie of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb301.keyword k.objects.keyword of=budgie text=animal text=bird text=pet core.source="mulberry fa94a93"
 
 # chick
 @k.objects.mb457 k.objects.object name=chick core.source="mulberry fa94a93"
@@ -352,7 +352,7 @@
 @k.objects.mb457.p16.1 k.objects.point part=$k.objects.mb457.p16 n=1 x=17.7 y=21.3 core.source="mulberry fa94a93"
 @k.objects.mb457.p16.2 k.objects.point part=$k.objects.mb457.p16 n=2 x=18.8 y=22.6 core.source="mulberry fa94a93"
 @k.objects.mb457.p16.3 k.objects.point part=$k.objects.mb457.p16 n=3 x=18.4 y=24.7 core.source="mulberry fa94a93"
-@k.objects.mb457.word core.word text=bird text=celebration means=chick of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb457.keyword k.objects.keyword of=chick text=bird text=celebration core.source="mulberry fa94a93"
 
 # chicken live
 @k.objects.mb463 k.objects.object name="chicken live" core.source="mulberry fa94a93"
@@ -544,7 +544,7 @@
 @k.objects.mb463.p16.12 k.objects.point part=$k.objects.mb463.p16 n=12 x=34.4 y=11.5 core.source="mulberry fa94a93"
 @k.objects.mb463.p16.13 k.objects.point part=$k.objects.mb463.p16 n=13 x=34.5 y=14.8 core.source="mulberry fa94a93"
 @k.objects.mb463.p16.14 k.objects.point part=$k.objects.mb463.p16 n=14 x=32.3 y=16.8 core.source="mulberry fa94a93"
-@k.objects.mb463.word core.word text=animal text=bird text=pet means="chicken live" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb463.keyword k.objects.keyword of="chicken live" text=animal text=bird text=pet core.source="mulberry fa94a93"
 
 # cockatiel
 @k.objects.mb547 k.objects.object name=cockatiel core.source="mulberry fa94a93"
@@ -704,7 +704,7 @@
 @k.objects.mb547.p16.1 k.objects.point part=$k.objects.mb547.p16 n=1 x=74.4 y=76.2 core.source="mulberry fa94a93"
 @k.objects.mb547.p16.2 k.objects.point part=$k.objects.mb547.p16 n=2 x=69.3 y=73.6 core.source="mulberry fa94a93"
 @k.objects.mb547.p16.3 k.objects.point part=$k.objects.mb547.p16 n=3 x=67.7 y=70.2 core.source="mulberry fa94a93"
-@k.objects.mb547.word core.word text=animal text=bird text=pet means=cockatiel of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb547.keyword k.objects.keyword of=cockatiel text=animal text=bird text=pet core.source="mulberry fa94a93"
 
 # cockerel
 @k.objects.mb548 k.objects.object name=cockerel core.source="mulberry fa94a93"
@@ -917,7 +917,7 @@
 @k.objects.mb548.p16.5 k.objects.point part=$k.objects.mb548.p16 n=5 x=69.5 y=54.1 core.source="mulberry fa94a93"
 @k.objects.mb548.p16.6 k.objects.point part=$k.objects.mb548.p16 n=6 x=72.5 y=54.3 core.source="mulberry fa94a93"
 @k.objects.mb548.p16.7 k.objects.point part=$k.objects.mb548.p16 n=7 x=75.1 y=51.4 core.source="mulberry fa94a93"
-@k.objects.mb548.word core.word text=animal text=bird means=cockerel of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb548.keyword k.objects.keyword of=cockerel text=animal text=bird core.source="mulberry fa94a93"
 
 # heron
 @k.objects.mb1658 k.objects.object name=heron core.source="mulberry fa94a93"
@@ -1086,7 +1086,7 @@
 @k.objects.mb1658.p16 k.objects.part of=heron name=part16 kind=detail named=no shape=line x=29.6 y=11 w=2.7 h=3.2 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1658.p16.1 k.objects.point part=$k.objects.mb1658.p16 n=1 x=29.6 y=11 core.source="mulberry fa94a93"
 @k.objects.mb1658.p16.2 k.objects.point part=$k.objects.mb1658.p16 n=2 x=32.3 y=14.2 core.source="mulberry fa94a93"
-@k.objects.mb1658.word core.word text=animal text=bird means=heron of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1658.keyword k.objects.keyword of=heron text=animal text=bird core.source="mulberry fa94a93"
 
 # ostrich
 @k.objects.mb2101 k.objects.object name=ostrich core.source="mulberry fa94a93"
@@ -1303,7 +1303,7 @@
 @k.objects.mb2101.p16.3 k.objects.point part=$k.objects.mb2101.p16 n=3 x=39.8 y=88.4 core.source="mulberry fa94a93"
 @k.objects.mb2101.p16.4 k.objects.point part=$k.objects.mb2101.p16 n=4 x=41.3 y=89.7 core.source="mulberry fa94a93"
 @k.objects.mb2101.p16.5 k.objects.point part=$k.objects.mb2101.p16 n=5 x=49.6 y=90.6 core.source="mulberry fa94a93"
-@k.objects.mb2101.word core.word text=animal text=bird text=wild text=zoo means=ostrich of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2101.keyword k.objects.keyword of=ostrich text=animal text=bird text=wild text=zoo core.source="mulberry fa94a93"
 
 # pelican
 @k.objects.mb2175 k.objects.object name=pelican core.source="mulberry fa94a93"
@@ -1472,4 +1472,4 @@
 @k.objects.mb2175.p14.3 k.objects.point part=$k.objects.mb2175.p14 n=3 x=49.5 y=12.4 core.source="mulberry fa94a93"
 @k.objects.mb2175.p14.4 k.objects.point part=$k.objects.mb2175.p14 n=4 x=50 y=12 core.source="mulberry fa94a93"
 @k.objects.mb2175.p14.5 k.objects.point part=$k.objects.mb2175.p14 n=5 x=50.5 y=12.4 core.source="mulberry fa94a93"
-@k.objects.mb2175.word core.word text=animal text=bird means=pelican of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2175.keyword k.objects.keyword of=pelican text=animal text=bird core.source="mulberry fa94a93"

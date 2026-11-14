@@ -152,7 +152,7 @@
 @k.objects.mb1611.p16 k.objects.part of="handle bars" name=part16 kind=detail named=no shape=line x=36.5 y=36.3 w=27.4 h=0.7 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1611.p16.1 k.objects.point part=$k.objects.mb1611.p16 n=1 x=36.5 y=36.3 core.source="mulberry fa94a93"
 @k.objects.mb1611.p16.2 k.objects.point part=$k.objects.mb1611.p16 n=2 x=63.9 y=37 core.source="mulberry fa94a93"
-@k.objects.mb1611.word core.word text=transport text=travel means="handle bars" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1611.keyword k.objects.keyword of="handle bars" text=transport text=travel core.source="mulberry fa94a93"
 
 # jeep
 @k.objects.mb1743 k.objects.object name=jeep core.source="mulberry fa94a93"
@@ -353,7 +353,7 @@
 @k.objects.mb1743.p16 k.objects.part of=jeep name=part16 kind=detail named=no shape=line x=32.4 y=59.4 w=29.9 h=0.3 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1743.p16.1 k.objects.point part=$k.objects.mb1743.p16 n=1 x=32.4 y=59.7 core.source="mulberry fa94a93"
 @k.objects.mb1743.p16.2 k.objects.point part=$k.objects.mb1743.p16 n=2 x=62.3 y=59.4 core.source="mulberry fa94a93"
-@k.objects.mb1743.word core.word text=transport text=travel text=vehicle means=jeep of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1743.keyword k.objects.keyword of=jeep text=transport text=travel text=vehicle core.source="mulberry fa94a93"
 
 # lorry
 @k.objects.mb1857 k.objects.object name=lorry core.source="mulberry fa94a93"
@@ -496,7 +496,7 @@
 @k.objects.mb1857.p16.1 k.objects.point part=$k.objects.mb1857.p16 n=1 x=64.2 y=59.7 core.source="mulberry fa94a93"
 @k.objects.mb1857.p16.2 k.objects.point part=$k.objects.mb1857.p16 n=2 x=64.2 y=62.4 core.source="mulberry fa94a93"
 @k.objects.mb1857.p16.3 k.objects.point part=$k.objects.mb1857.p16 n=3 x=29.4 y=61.1 core.source="mulberry fa94a93"
-@k.objects.mb1857.word core.word text=transport text=travel text=vehicle means=lorry of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1857.keyword k.objects.keyword of=lorry text=transport text=travel text=vehicle core.source="mulberry fa94a93"
 
 # mini bus
 @k.objects.mb1950 k.objects.object name="mini bus" core.source="mulberry fa94a93"
@@ -697,7 +697,7 @@
 @k.objects.mb1950.p16 k.objects.part of="mini bus" name=part16 kind=detail named=no shape=line x=42.8 y=47.1 w=48.6 h=2.9 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1950.p16.1 k.objects.point part=$k.objects.mb1950.p16 n=1 x=42.8 y=50 core.source="mulberry fa94a93"
 @k.objects.mb1950.p16.2 k.objects.point part=$k.objects.mb1950.p16 n=2 x=91.4 y=47.1 core.source="mulberry fa94a93"
-@k.objects.mb1950.word core.word text=transport text=travel text=vehicle means="mini bus" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1950.keyword k.objects.keyword of="mini bus" text=transport text=travel text=vehicle core.source="mulberry fa94a93"
 
 # moped
 @k.objects.mb1976 k.objects.object name=moped core.source="mulberry fa94a93"
@@ -908,7 +908,7 @@
 @k.objects.mb1976.p16 k.objects.part of=moped name=part16 kind=detail named=no shape=line x=26.3 y=66.2 w=29.8 h=1.2 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1976.p16.1 k.objects.point part=$k.objects.mb1976.p16 n=1 x=26.3 y=66.2 core.source="mulberry fa94a93"
 @k.objects.mb1976.p16.2 k.objects.point part=$k.objects.mb1976.p16 n=2 x=56.1 y=67.4 core.source="mulberry fa94a93"
-@k.objects.mb1976.word core.word text=transport text=travel text=vehicle means=moped of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1976.keyword k.objects.keyword of=moped text=transport text=travel text=vehicle core.source="mulberry fa94a93"
 
 # motor home
 @k.objects.mb1981 k.objects.object name="motor home" core.source="mulberry fa94a93"
@@ -1097,7 +1097,7 @@
 @k.objects.mb1981.p16.6 k.objects.point part=$k.objects.mb1981.p16 n=6 x=60.6 y=64 core.source="mulberry fa94a93"
 @k.objects.mb1981.p16.7 k.objects.point part=$k.objects.mb1981.p16 n=7 x=58.3 y=69.4 core.source="mulberry fa94a93"
 @k.objects.mb1981.p16.8 k.objects.point part=$k.objects.mb1981.p16 n=8 x=46.5 y=68.9 core.source="mulberry fa94a93"
-@k.objects.mb1981.word core.word text=transport text=travel text=vehicle means="motor home" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1981.keyword k.objects.keyword of="motor home" text=transport text=travel text=vehicle core.source="mulberry fa94a93"
 
 # petrol tanker
 @k.objects.mb2203 k.objects.object name="petrol tanker" core.source="mulberry fa94a93"
@@ -1277,7 +1277,7 @@
 @k.objects.mb2203.p16.6 k.objects.point part=$k.objects.mb2203.p16 n=6 x=90.2 y=52 core.source="mulberry fa94a93"
 @k.objects.mb2203.p16.7 k.objects.point part=$k.objects.mb2203.p16 n=7 x=89.3 y=53.7 core.source="mulberry fa94a93"
 @k.objects.mb2203.p16.8 k.objects.point part=$k.objects.mb2203.p16 n=8 x=87.8 y=54.9 core.source="mulberry fa94a93"
-@k.objects.mb2203.word core.word text=transport text=travel text=vehicle means="petrol tanker" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2203.keyword k.objects.keyword of="petrol tanker" text=transport text=travel text=vehicle core.source="mulberry fa94a93"
 
 # post van
 @k.objects.mb2296 k.objects.object name="post van" core.source="mulberry fa94a93"
@@ -1493,4 +1493,4 @@
 @k.objects.mb2296.p16.7 k.objects.point part=$k.objects.mb2296.p16 n=7 x=58.4 y=40.9 core.source="mulberry fa94a93"
 @k.objects.mb2296.p16.8 k.objects.point part=$k.objects.mb2296.p16 n=8 x=62.9 y=44 core.source="mulberry fa94a93"
 @k.objects.mb2296.p16.9 k.objects.point part=$k.objects.mb2296.p16 n=9 x=66.9 y=48 core.source="mulberry fa94a93"
-@k.objects.mb2296.word core.word text=transport text=travel text=vehicle means="post van" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2296.keyword k.objects.keyword of="post van" text=transport text=travel text=vehicle core.source="mulberry fa94a93"

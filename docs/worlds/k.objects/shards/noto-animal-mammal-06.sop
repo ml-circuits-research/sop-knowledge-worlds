@@ -164,7 +164,7 @@
 @k.objects.u1f418.p7.5 k.objects.point part=$k.objects.u1f418.p7 n=5 x=11.5 y=52.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f418.p7.6 k.objects.point part=$k.objects.u1f418.p7 n=6 x=10.9 y=46.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f418.p7.7 k.objects.point part=$k.objects.u1f418.p7 n=7 x=4.8 y=43.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f418.word core.word text=animal means=elephant of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f418.keyword k.objects.keyword of=elephant text=animal core.source="cldr 48"
 
 # mammoth
 @k.objects.u1f9a3 k.objects.object name=mammoth core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -376,7 +376,7 @@
 @k.objects.u1f9a3.p16.8 k.objects.point part=$k.objects.u1f9a3.p16 n=8 x=84 y=42.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a3.p16.9 k.objects.point part=$k.objects.u1f9a3.p16 n=9 x=85.9 y=35.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a3.p16.10 k.objects.point part=$k.objects.u1f9a3.p16 n=10 x=89 y=42.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a3.word core.word text=animal text=extinction text=large text=tusk text=wooly means=mammoth of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a3.keyword k.objects.keyword of=mammoth text=animal text=extinction text=large text=tusk text=wooly core.source="cldr 48"
 
 # rhinoceros
 @k.objects.u1f98f k.objects.object name=rhinoceros core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -534,7 +534,7 @@
 @k.objects.u1f98f.p9.10 k.objects.point part=$k.objects.u1f98f.p9 n=10 x=82.9 y=87.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f98f.p9.11 k.objects.point part=$k.objects.u1f98f.p9 n=11 x=86.2 y=87.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f98f.p9.12 k.objects.point part=$k.objects.u1f98f.p9 n=12 x=91.4 y=87.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f98f.word core.word text=animal means=rhinoceros of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f98f.keyword k.objects.keyword of=rhinoceros text=animal core.source="cldr 48"
 
 # hippopotamus
 @k.objects.u1f99b k.objects.object name=hippopotamus core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -753,7 +753,7 @@
 @k.objects.u1f99b.p16.5 k.objects.point part=$k.objects.u1f99b.p16 n=5 x=13.2 y=47.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f99b.p16.6 k.objects.point part=$k.objects.u1f99b.p16 n=6 x=14.4 y=45.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f99b.p16.7 k.objects.point part=$k.objects.u1f99b.p16 n=7 x=16.1 y=45.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f99b.word core.word text=animal text=hippo means=hippopotamus of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f99b.keyword k.objects.keyword of=hippopotamus text=animal text=hippo core.source="cldr 48"
 
 # mouse face
 @k.objects.u1f42d k.objects.object name="mouse face" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -964,7 +964,7 @@
 @k.objects.u1f42d.p15.12 k.objects.point part=$k.objects.u1f42d.p15 n=12 x=63.4 y=27.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f42d.p15.13 k.objects.point part=$k.objects.u1f42d.p15 n=13 x=62.8 y=31.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f42d.p15.14 k.objects.point part=$k.objects.u1f42d.p15 n=14 x=63.2 y=35 core.source="noto-emoji 99701e0"
-@k.objects.u1f42d.word core.word text=animal text=face text=mouse means="mouse face" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f42d.keyword k.objects.keyword of="mouse face" text=animal text=face text=mouse core.source="cldr 48"
 
 # mouse
 @k.objects.u1f401 k.objects.object name=mouse core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1176,7 +1176,7 @@
 @k.objects.u1f401.p16.5 k.objects.point part=$k.objects.u1f401.p16 n=5 x=28.3 y=54.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f401.p16.6 k.objects.point part=$k.objects.u1f401.p16 n=6 x=27 y=53.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f401.p16.7 k.objects.point part=$k.objects.u1f401.p16 n=7 x=23.4 y=55 core.source="noto-emoji 99701e0"
-@k.objects.u1f401.word core.word text=animal text=animals means=mouse of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f401.keyword k.objects.keyword of=mouse text=animal text=animals core.source="cldr 48"
 
 # rat
 @k.objects.u1f400 k.objects.object name=rat core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1377,7 +1377,7 @@
 @k.objects.u1f400.p15.4 k.objects.point part=$k.objects.u1f400.p15 n=4 x=7.4 y=46 core.source="noto-emoji 99701e0"
 @k.objects.u1f400.p15.5 k.objects.point part=$k.objects.u1f400.p15 n=5 x=8 y=45.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f400.p15.6 k.objects.point part=$k.objects.u1f400.p15 n=6 x=10.2 y=43.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f400.word core.word text=animal means=rat of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f400.keyword k.objects.keyword of=rat text=animal core.source="cldr 48"
 
 # hamster
 @k.objects.u1f439 k.objects.object name=hamster core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1574,4 +1574,4 @@
 @k.objects.u1f439.p14.4 k.objects.point part=$k.objects.u1f439.p14 n=4 x=66.4 y=78.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f439.p14.5 k.objects.point part=$k.objects.u1f439.p14 n=5 x=73.2 y=83.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f439.p14.6 k.objects.point part=$k.objects.u1f439.p14 n=6 x=76.2 y=86.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f439.word core.word text=animal text=face text=pet means=hamster of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f439.keyword k.objects.keyword of=hamster text=animal text=face text=pet core.source="cldr 48"

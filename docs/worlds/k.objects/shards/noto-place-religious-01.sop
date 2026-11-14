@@ -145,7 +145,7 @@
 @k.objects.u26ea.p16.14 k.objects.point part=$k.objects.u26ea.p16 n=14 x=56.7 y=49.2 core.source="noto-emoji 99701e0"
 @k.objects.u26ea.p16.15 k.objects.point part=$k.objects.u26ea.p16 n=15 x=54.8 y=46.2 core.source="noto-emoji 99701e0"
 @k.objects.u26ea.p16.16 k.objects.point part=$k.objects.u26ea.p16 n=16 x=52.9 y=45 core.source="noto-emoji 99701e0"
-@k.objects.u26ea.word core.word text=bless text=chapel text=Christian text=cross text=religion means=church of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26ea.keyword k.objects.keyword of=church text=bless text=chapel text=Christian text=cross text=religion core.source="cldr 48"
 
 # mosque
 @k.objects.u1f54c k.objects.object name=mosque core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -315,7 +315,7 @@
 @k.objects.u1f54c.p16.21 k.objects.point part=$k.objects.u1f54c.p16 n=21 x=45.6 y=6.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f54c.p16.22 k.objects.point part=$k.objects.u1f54c.p16 n=22 x=49.8 y=5.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f54c.p16.23 k.objects.point part=$k.objects.u1f54c.p16 n=23 x=51.7 y=6 core.source="noto-emoji 99701e0"
-@k.objects.u1f54c.word core.word text=islam text=masjid text=Muslim text=religion means=mosque of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f54c.keyword k.objects.keyword of=mosque text=islam text=masjid text=Muslim text=religion core.source="cldr 48"
 
 # hindu temple
 @k.objects.u1f6d5 k.objects.object name="hindu temple" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -452,7 +452,7 @@
 @k.objects.u1f6d5.p16.6 k.objects.point part=$k.objects.u1f6d5.p16 n=6 x=58.9 y=94 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d5.p16.7 k.objects.point part=$k.objects.u1f6d5.p16 n=7 x=58.1 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d5.p16.8 k.objects.point part=$k.objects.u1f6d5.p16 n=8 x=58 y=90.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d5.word core.word text=hindu text=temple means="hindu temple" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6d5.keyword k.objects.keyword of="hindu temple" text=hindu text=temple core.source="cldr 48"
 
 # synagogue
 @k.objects.u1f54d k.objects.object name=synagogue core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -614,7 +614,7 @@
 @k.objects.u1f54d.p16.4 k.objects.point part=$k.objects.u1f54d.p16 n=4 x=61.1 y=59.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f54d.p16.5 k.objects.point part=$k.objects.u1f54d.p16 n=5 x=38.7 y=59.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f54d.p16.6 k.objects.point part=$k.objects.u1f54d.p16 n=6 x=38.4 y=59.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f54d.word core.word text=Jew text=Jewish text=judaism text=religion text=temple means=synagogue of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f54d.keyword k.objects.keyword of=synagogue text=Jew text=Jewish text=judaism text=religion text=temple core.source="cldr 48"
 
 # shinto shrine
 @k.objects.u26e9 k.objects.object name="shinto shrine" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -727,7 +727,7 @@
 @k.objects.u26e9.p12.2 k.objects.point part=$k.objects.u26e9.p12 n=2 x=68.8 y=94.4 core.source="noto-emoji 99701e0"
 @k.objects.u26e9.p12.3 k.objects.point part=$k.objects.u26e9.p12 n=3 x=80.5 y=94.4 core.source="noto-emoji 99701e0"
 @k.objects.u26e9.p12.4 k.objects.point part=$k.objects.u26e9.p12 n=4 x=80.5 y=85.8 core.source="noto-emoji 99701e0"
-@k.objects.u26e9.word core.word text=religion text=shinto text=shrine means="shinto shrine" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26e9.keyword k.objects.keyword of="shinto shrine" text=religion text=shinto text=shrine core.source="cldr 48"
 
 # kaaba
 @k.objects.u1f54b k.objects.object name=kaaba core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -867,4 +867,4 @@
 @k.objects.u1f54b.p16.23 k.objects.point part=$k.objects.u1f54b.p16 n=23 x=85.1 y=40 core.source="noto-emoji 99701e0"
 @k.objects.u1f54b.p16.24 k.objects.point part=$k.objects.u1f54b.p16 n=24 x=87 y=38.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f54b.p16.25 k.objects.point part=$k.objects.u1f54b.p16 n=25 x=88.5 y=40.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f54b.word core.word text=hajj text=islam text=Muslim text=religion text=umrah means=kaaba of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f54b.keyword k.objects.keyword of=kaaba text=hajj text=islam text=Muslim text=religion text=umrah core.source="cldr 48"

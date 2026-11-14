@@ -308,7 +308,7 @@
 @k.objects.mb1638.p13.1 k.objects.point part=$k.objects.mb1638.p13 n=1 x=16.4 y=91.2 core.source="mulberry fa94a93"
 @k.objects.mb1638.p13.2 k.objects.point part=$k.objects.mb1638.p13 n=2 x=18.9 y=94.7 core.source="mulberry fa94a93"
 @k.objects.mb1638.p13.3 k.objects.point part=$k.objects.mb1638.p13 n=3 x=20.8 y=93.6 core.source="mulberry fa94a93"
-@k.objects.mb1638.word core.word text=electric means=headphones of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1638.keyword k.objects.keyword of=headphones text=electric core.source="mulberry fa94a93"
 
 # iPod
 @k.objects.mb1716 k.objects.object name=iPod core.source="mulberry fa94a93"
@@ -511,7 +511,7 @@
 @k.objects.mb1716.p16.7 k.objects.point part=$k.objects.mb1716.p16 n=7 x=33.4 y=50.7 core.source="mulberry fa94a93"
 @k.objects.mb1716.p16.8 k.objects.point part=$k.objects.mb1716.p16 n=8 x=36.6 y=52 core.source="mulberry fa94a93"
 @k.objects.mb1716.p16.9 k.objects.point part=$k.objects.mb1716.p16 n=9 x=37.9 y=55.2 core.source="mulberry fa94a93"
-@k.objects.mb1716.word core.word text=electric means=iPod of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1716.keyword k.objects.keyword of=iPod text=electric core.source="mulberry fa94a93"
 
 # memory card
 @k.objects.mb1921 k.objects.object name="memory card" core.source="mulberry fa94a93"
@@ -756,7 +756,7 @@
 @k.objects.mb2263.p16.6 k.objects.point part=$k.objects.mb2263.p16 n=6 x=40 y=68.7 core.source="mulberry fa94a93"
 @k.objects.mb2263.p16.7 k.objects.point part=$k.objects.mb2263.p16 n=7 x=35.1 y=60.9 core.source="mulberry fa94a93"
 @k.objects.mb2263.p16.8 k.objects.point part=$k.objects.mb2263.p16 n=8 x=19.9 y=60.9 core.source="mulberry fa94a93"
-@k.objects.mb2263.word core.word text=electric means=playstation of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2263.keyword k.objects.keyword of=playstation text=electric core.source="mulberry fa94a93"
 
 # remote control
 @k.objects.mb2388 k.objects.object name="remote control" core.source="mulberry fa94a93"
@@ -900,7 +900,7 @@
 @k.objects.mb2388.p16.7 k.objects.point part=$k.objects.mb2388.p16 n=7 x=91.1 y=32.6 core.source="mulberry fa94a93"
 @k.objects.mb2388.p16.8 k.objects.point part=$k.objects.mb2388.p16 n=8 x=92.8 y=29.4 core.source="mulberry fa94a93"
 @k.objects.mb2388.p16.9 k.objects.point part=$k.objects.mb2388.p16 n=9 x=92.9 y=20.9 core.source="mulberry fa94a93"
-@k.objects.mb2388.word core.word text=electric means="remote control" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2388.keyword k.objects.keyword of="remote control" text=electric core.source="mulberry fa94a93"
 
 # stereo
 @k.objects.mb2692 k.objects.object name=stereo core.source="mulberry fa94a93"
@@ -1051,7 +1051,7 @@
 @k.objects.mb2692.p16.9 k.objects.point part=$k.objects.mb2692.p16 n=9 x=27.3 y=30.4 core.source="mulberry fa94a93"
 @k.objects.mb2692.p16.10 k.objects.point part=$k.objects.mb2692.p16 n=10 x=29.4 y=31.6 core.source="mulberry fa94a93"
 @k.objects.mb2692.p16.11 k.objects.point part=$k.objects.mb2692.p16 n=11 x=29.6 y=66.6 core.source="mulberry fa94a93"
-@k.objects.mb2692.word core.word text=electric means=stereo of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2692.keyword k.objects.keyword of=stereo text=electric core.source="mulberry fa94a93"
 
 # video player
 @k.objects.mb2981 k.objects.object name="video player" core.source="mulberry fa94a93"
@@ -1190,4 +1190,4 @@
 @k.objects.mb2981.p16.6 k.objects.point part=$k.objects.mb2981.p16 n=6 x=21.6 y=66.2 core.source="mulberry fa94a93"
 @k.objects.mb2981.p16.7 k.objects.point part=$k.objects.mb2981.p16 n=7 x=20.2 y=65.5 core.source="mulberry fa94a93"
 @k.objects.mb2981.p16.8 k.objects.point part=$k.objects.mb2981.p16 n=8 x=19.5 y=64.4 core.source="mulberry fa94a93"
-@k.objects.mb2981.word core.word text=electric means="video player" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2981.keyword k.objects.keyword of="video player" text=electric core.source="mulberry fa94a93"

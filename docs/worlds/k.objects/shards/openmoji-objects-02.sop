@@ -211,7 +211,7 @@
 @k.objects.ome14a.p9.14 k.objects.point part=$k.objects.ome14a.p9 n=14 x=80.8 y=52.6 core.source="openmoji 3e01de5"
 @k.objects.ome14a.p9.15 k.objects.point part=$k.objects.ome14a.p9 n=15 x=80.9 y=46 core.source="openmoji 3e01de5"
 @k.objects.ome14a.p9.16 k.objects.point part=$k.objects.ome14a.p9 n=16 x=79.9 y=38.5 core.source="openmoji 3e01de5"
-@k.objects.ome14a.word core.word text=helmet text=motorbike text=motorcycle text=motor means="motorbike helmet" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome14a.keyword k.objects.keyword of="motorbike helmet" text=helmet text=motorbike text=motorcycle text=motor core.source="openmoji 3e01de5"
 
 # sneaker
 @k.objects.ome14b k.objects.object name=sneaker core.source="openmoji 3e01de5"
@@ -759,7 +759,7 @@
 @k.objects.ome150.p16.3 k.objects.point part=$k.objects.ome150.p16 n=3 x=59.7 y=76.4 core.source="openmoji 3e01de5"
 @k.objects.ome150.p16.4 k.objects.point part=$k.objects.ome150.p16 n=4 x=37.5 y=76.4 core.source="openmoji 3e01de5"
 @k.objects.ome150.p16.5 k.objects.point part=$k.objects.ome150.p16 n=5 x=34.7 y=72.2 core.source="openmoji 3e01de5"
-@k.objects.ome150.word core.word text=coffee means="espresso machine" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome150.keyword k.objects.keyword of="espresso machine" text=coffee core.source="openmoji 3e01de5"
 
 # french press
 @k.objects.ome151 k.objects.object name="french press" core.source="openmoji 3e01de5"
@@ -932,7 +932,7 @@
 @k.objects.ome151.p16 k.objects.part of="french press" name=part16 kind=detail named=no shape=line x=51.9 y=35.2 w=12.9 h=0 z=16 colour=black rgb="#000000" core.source="openmoji 3e01de5"
 @k.objects.ome151.p16.1 k.objects.point part=$k.objects.ome151.p16 n=1 x=51.9 y=35.2 core.source="openmoji 3e01de5"
 @k.objects.ome151.p16.2 k.objects.point part=$k.objects.ome151.p16 n=2 x=64.8 y=35.2 core.source="openmoji 3e01de5"
-@k.objects.ome151.word core.word text=coffee means="french press" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome151.keyword k.objects.keyword of="french press" text=coffee core.source="openmoji 3e01de5"
 
 # moka pot
 @k.objects.ome152 k.objects.object name="moka pot" core.source="openmoji 3e01de5"
@@ -1044,4 +1044,4 @@
 @k.objects.ome152.p16.10 k.objects.point part=$k.objects.ome152.p16 n=10 x=22.7 y=25.7 core.source="openmoji 3e01de5"
 @k.objects.ome152.p16.11 k.objects.point part=$k.objects.ome152.p16 n=11 x=22.7 y=24.8 core.source="openmoji 3e01de5"
 @k.objects.ome152.p16.12 k.objects.point part=$k.objects.ome152.p16 n=12 x=23.4 y=24.3 core.source="openmoji 3e01de5"
-@k.objects.ome152.word core.word text=coffee means="moka pot" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome152.keyword k.objects.keyword of="moka pot" text=coffee core.source="openmoji 3e01de5"

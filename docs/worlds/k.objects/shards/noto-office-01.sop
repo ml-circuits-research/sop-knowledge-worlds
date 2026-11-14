@@ -209,7 +209,7 @@
 @k.objects.u1f4bc.p16.3 k.objects.point part=$k.objects.u1f4bc.p16 n=3 x=44.6 y=66.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bc.p16.4 k.objects.point part=$k.objects.u1f4bc.p16 n=4 x=55.2 y=66 core.source="noto-emoji 99701e0"
 @k.objects.u1f4bc.p16.5 k.objects.point part=$k.objects.u1f4bc.p16 n=5 x=55.5 y=71.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4bc.word core.word text=office means=briefcase of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4bc.keyword k.objects.keyword of=briefcase text=office core.source="cldr 48"
 
 # file folder
 @k.objects.u1f4c1 k.objects.object name="file folder" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -254,7 +254,7 @@
 @k.objects.u1f4c1.p3.5 k.objects.point part=$k.objects.u1f4c1.p3 n=5 x=40.6 y=33 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c1.p3.6 k.objects.point part=$k.objects.u1f4c1.p3 n=6 x=43.2 y=31.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c1.p3.7 k.objects.point part=$k.objects.u1f4c1.p3 n=7 x=87.4 y=23.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c1.word core.word text=file text=folder means="file folder" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c1.keyword k.objects.keyword of="file folder" text=file text=folder core.source="cldr 48"
 
 # open file folder
 @k.objects.u1f4c2 k.objects.object name="open file folder" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -297,7 +297,7 @@
 @k.objects.u1f4c2.p3.4 k.objects.point part=$k.objects.u1f4c2.p3 n=4 x=45.7 y=51.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c2.p3.5 k.objects.point part=$k.objects.u1f4c2.p3 n=5 x=43.6 y=54.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c2.p3.6 k.objects.point part=$k.objects.u1f4c2.p3 n=6 x=25.7 y=57.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c2.word core.word text=file text=folder text=open means="open file folder" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c2.keyword k.objects.keyword of="open file folder" text=file text=folder text=open core.source="cldr 48"
 
 # card index dividers
 @k.objects.u1f5c2 k.objects.object name="card index dividers" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -407,7 +407,7 @@
 @k.objects.u1f5c2.p8.6 k.objects.point part=$k.objects.u1f5c2.p8 n=6 x=69.1 y=4.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f5c2.p8.7 k.objects.point part=$k.objects.u1f5c2.p8 n=7 x=68.4 y=9.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f5c2.p8.8 k.objects.point part=$k.objects.u1f5c2.p8 n=8 x=66.2 y=11.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f5c2.word core.word text=card text=dividers text=index means="card index dividers" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5c2.keyword k.objects.keyword of="card index dividers" text=card text=dividers text=index core.source="cldr 48"
 
 # calendar
 @k.objects.u1f4c5 k.objects.object name=calendar core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -530,7 +530,7 @@
 @k.objects.u1f4c5.p8.5 k.objects.point part=$k.objects.u1f4c5.p8 n=5 x=49.3 y=51.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c5.p8.6 k.objects.point part=$k.objects.u1f4c5.p8 n=6 x=49.3 y=46.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c5.p8.7 k.objects.point part=$k.objects.u1f4c5.p8 n=7 x=73.1 y=46.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c5.word core.word text=date means=calendar of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c5.keyword k.objects.keyword of=calendar text=date core.source="cldr 48"
 
 # tear-off calendar
 @k.objects.u1f4c6 k.objects.object name="tear-off calendar" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -667,7 +667,7 @@
 @k.objects.u1f4c6.p16.12 k.objects.point part=$k.objects.u1f4c6.p16 n=12 x=72.3 y=88 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c6.p16.13 k.objects.point part=$k.objects.u1f4c6.p16 n=13 x=76.9 y=86.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c6.p16.14 k.objects.point part=$k.objects.u1f4c6.p16 n=14 x=81.6 y=83.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c6.word core.word text=calendar text=tear-off means="tear-off calendar" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c6.keyword k.objects.keyword of="tear-off calendar" text=calendar text=tear-off core.source="cldr 48"
 
 # spiral notepad
 @k.objects.u1f5d2 k.objects.object name="spiral notepad" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -834,7 +834,7 @@
 @k.objects.u1f5d2.p16 k.objects.part of="spiral notepad" name=part16 kind=detail named=no shape=line x=12.1 y=25.1 w=69 h=0 z=16 colour=grey rgb="#4FC3F7" core.source="noto-emoji 99701e0"
 @k.objects.u1f5d2.p16.1 k.objects.point part=$k.objects.u1f5d2.p16 n=1 x=81.1 y=25.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f5d2.p16.2 k.objects.point part=$k.objects.u1f5d2.p16 n=2 x=12.1 y=25.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f5d2.word core.word text=note text=notepad text=pad text=spiral means="spiral notepad" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5d2.keyword k.objects.keyword of="spiral notepad" text=note text=notepad text=pad text=spiral core.source="cldr 48"
 
 # spiral calendar
 @k.objects.u1f5d3 k.objects.object name="spiral calendar" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1016,4 +1016,4 @@
 @k.objects.u1f5d3.p16 k.objects.part of="spiral calendar" name=part16 kind=detail named=no shape=line x=13 y=44.8 w=70.6 h=0 z=16 colour=blue rgb="#1E88E5" core.source="noto-emoji 99701e0"
 @k.objects.u1f5d3.p16.1 k.objects.point part=$k.objects.u1f5d3.p16 n=1 x=13 y=44.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f5d3.p16.2 k.objects.point part=$k.objects.u1f5d3.p16 n=2 x=83.6 y=44.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f5d3.word core.word text=calendar text=pad text=spiral means="spiral calendar" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5d3.keyword k.objects.keyword of="spiral calendar" text=calendar text=pad text=spiral core.source="cldr 48"

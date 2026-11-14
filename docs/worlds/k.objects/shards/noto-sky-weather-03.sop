@@ -124,7 +124,7 @@
 @k.objects.u1f31f.p8.10 k.objects.point part=$k.objects.u1f31f.p8 n=10 x=67.9 y=55.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f31f.p8.11 k.objects.point part=$k.objects.u1f31f.p8 n=11 x=69.1 y=56.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f31f.p8.12 k.objects.point part=$k.objects.u1f31f.p8 n=12 x=70.9 y=57.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f31f.word core.word text=glittery text=glow text=glowing text=night text=shining text=sparkle text=star text=win means="glowing star" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f31f.keyword k.objects.keyword of="glowing star" text=glittery text=glow text=glowing text=night text=shining text=sparkle text=star text=win core.source="cldr 48"
 
 # shooting star
 @k.objects.u1f320 k.objects.object name="shooting star" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -286,7 +286,7 @@
 @k.objects.u1f320.p13 k.objects.part of="shooting star" name=part13 named=no shape=circle x=75.4 y=61 w=3.7 h=3.7 z=13 colour=yellow rgb="#FFF176" core.source="noto-emoji 99701e0"
 @k.objects.u1f320.p14 k.objects.part of="shooting star" name=part14 named=no shape=circle x=13.5 y=11.8 w=3.7 h=3.7 z=14 colour=yellow rgb="#FFF176" core.source="noto-emoji 99701e0"
 @k.objects.u1f320.p15 k.objects.part of="shooting star" name=part15 named=no shape=circle x=52.5 y=86.8 w=3.7 h=3.7 z=15 colour=blue rgb="#7BAAF7" core.source="noto-emoji 99701e0"
-@k.objects.u1f320.word core.word text=falling text=night text=shooting text=space text=star means="shooting star" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f320.keyword k.objects.keyword of="shooting star" text=falling text=night text=shooting text=space text=star core.source="cldr 48"
 
 # milky way
 @k.objects.u1f30c k.objects.object name="milky way" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -504,7 +504,7 @@
 @k.objects.u1f30c.p16.8 k.objects.point part=$k.objects.u1f30c.p16 n=8 x=14 y=54.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f30c.p16.9 k.objects.point part=$k.objects.u1f30c.p16 n=9 x=12 y=51.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f30c.p16.10 k.objects.point part=$k.objects.u1f30c.p16 n=10 x=12.4 y=47.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f30c.word core.word text=milky text=space text=way means="milky way" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f30c.keyword k.objects.keyword of="milky way" text=milky text=space text=way core.source="cldr 48"
 
 # sun behind cloud
 @k.objects.u26c5 k.objects.object name="sun behind cloud" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -646,7 +646,7 @@
 @k.objects.u26c5.p9.21 k.objects.point part=$k.objects.u26c5.p9 n=21 x=19 y=74.7 core.source="noto-emoji 99701e0"
 @k.objects.u26c5.p9.22 k.objects.point part=$k.objects.u26c5.p9 n=22 x=22.6 y=75.1 core.source="noto-emoji 99701e0"
 @k.objects.u26c5.p9.23 k.objects.point part=$k.objects.u26c5.p9 n=23 x=27.2 y=74.3 core.source="noto-emoji 99701e0"
-@k.objects.u26c5.word core.word text=behind text=cloud text=cloudy text=sun text=weather means="sun behind cloud" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26c5.keyword k.objects.keyword of="sun behind cloud" text=behind text=cloud text=cloudy text=sun text=weather core.source="cldr 48"
 
 # cloud with lightning and rain
 @k.objects.u26c8 k.objects.object name="cloud with lightning and rain" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -842,7 +842,7 @@
 @k.objects.u26c8.p14.6 k.objects.point part=$k.objects.u26c8.p14 n=6 x=19 y=73.8 core.source="noto-emoji 99701e0"
 @k.objects.u26c8.p14.7 k.objects.point part=$k.objects.u26c8.p14 n=7 x=20.1 y=72.1 core.source="noto-emoji 99701e0"
 @k.objects.u26c8.p14.8 k.objects.point part=$k.objects.u26c8.p14 n=8 x=20 y=69.9 core.source="noto-emoji 99701e0"
-@k.objects.u26c8.word core.word text=cloud text=lightning text=rain text=thunder text=thunderstorm means="cloud with lightning and rain" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26c8.keyword k.objects.keyword of="cloud with lightning and rain" text=cloud text=lightning text=rain text=thunder text=thunderstorm core.source="cldr 48"
 
 # sun behind small cloud
 @k.objects.u1f324 k.objects.object name="sun behind small cloud" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1004,7 +1004,7 @@
 @k.objects.u1f324.p11.18 k.objects.point part=$k.objects.u1f324.p11 n=18 x=78 y=62.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f324.p11.19 k.objects.point part=$k.objects.u1f324.p11 n=19 x=64.2 y=63.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f324.p11.20 k.objects.point part=$k.objects.u1f324.p11 n=20 x=54.8 y=62.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f324.word core.word text=behind text=cloud text=sun text=weather means="sun behind small cloud" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f324.keyword k.objects.keyword of="sun behind small cloud" text=behind text=cloud text=sun text=weather core.source="cldr 48"
 
 # sun behind large cloud
 @k.objects.u1f325 k.objects.object name="sun behind large cloud" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1130,7 +1130,7 @@
 @k.objects.u1f325.p9.26 k.objects.point part=$k.objects.u1f325.p9 n=26 x=41.5 y=71.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f325.p9.27 k.objects.point part=$k.objects.u1f325.p9 n=27 x=35.9 y=72.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f325.p9.28 k.objects.point part=$k.objects.u1f325.p9 n=28 x=27.7 y=72 core.source="noto-emoji 99701e0"
-@k.objects.u1f325.word core.word text=behind text=cloud text=sun text=weather means="sun behind large cloud" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f325.keyword k.objects.keyword of="sun behind large cloud" text=behind text=cloud text=sun text=weather core.source="cldr 48"
 
 # sun behind rain cloud
 @k.objects.u1f326 k.objects.object name="sun behind rain cloud" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1325,4 +1325,4 @@
 @k.objects.u1f326.p15.6 k.objects.point part=$k.objects.u1f326.p15 n=6 x=66.6 y=86 core.source="noto-emoji 99701e0"
 @k.objects.u1f326.p15.7 k.objects.point part=$k.objects.u1f326.p15 n=7 x=67.2 y=84.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f326.p15.8 k.objects.point part=$k.objects.u1f326.p15 n=8 x=67.1 y=82.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f326.word core.word text=behind text=cloud text=rain text=sun text=weather means="sun behind rain cloud" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f326.keyword k.objects.keyword of="sun behind rain cloud" text=behind text=cloud text=rain text=sun text=weather core.source="cldr 48"

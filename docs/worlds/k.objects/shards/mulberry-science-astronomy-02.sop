@@ -189,7 +189,7 @@
 @k.objects.mb2976.p10.8 k.objects.point part=$k.objects.mb2976.p10 n=8 x=77.6 y=47.7 core.source="mulberry fa94a93"
 @k.objects.mb2976.p10.9 k.objects.point part=$k.objects.mb2976.p10 n=9 x=84.9 y=49.8 core.source="mulberry fa94a93"
 @k.objects.mb2976.p10.10 k.objects.point part=$k.objects.mb2976.p10 n=10 x=91.7 y=53.5 core.source="mulberry fa94a93"
-@k.objects.mb2976.word core.word text=astronomy text=planets means=Venus of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2976.keyword k.objects.keyword of=Venus text=astronomy text=planets core.source="mulberry fa94a93"
 
 # world
 @k.objects.mb3090 k.objects.object name=world core.source="mulberry fa94a93"
@@ -401,4 +401,4 @@
 @k.objects.mb3090.p8.14 k.objects.point part=$k.objects.mb3090.p8 n=14 x=80.2 y=52.5 core.source="mulberry fa94a93"
 @k.objects.mb3090.p8.15 k.objects.point part=$k.objects.mb3090.p8 n=15 x=75.6 y=54.6 core.source="mulberry fa94a93"
 @k.objects.mb3090.p8.16 k.objects.point part=$k.objects.mb3090.p8 n=16 x=72.7 y=58.3 core.source="mulberry fa94a93"
-@k.objects.mb3090.word core.word text=class text=school means=world of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3090.keyword k.objects.keyword of=world text=class text=school core.source="mulberry fa94a93"

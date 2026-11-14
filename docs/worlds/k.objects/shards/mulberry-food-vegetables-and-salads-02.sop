@@ -292,7 +292,7 @@
 @k.objects.mb321.p16.11 k.objects.point part=$k.objects.mb321.p16 n=11 x=54.1 y=28 core.source="mulberry fa94a93"
 @k.objects.mb321.p16.12 k.objects.point part=$k.objects.mb321.p16 n=12 x=46.9 y=27.6 core.source="mulberry fa94a93"
 @k.objects.mb321.p16.13 k.objects.point part=$k.objects.mb321.p16 n=13 x=41.2 y=30 core.source="mulberry fa94a93"
-@k.objects.mb321.word core.word text=food text=vegetable means=cabbage of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb321.keyword k.objects.keyword of=cabbage text=food text=vegetable core.source="mulberry fa94a93"
 
 # cauliflower
 @k.objects.mb405 k.objects.object name=cauliflower core.source="mulberry fa94a93"
@@ -482,7 +482,7 @@
 @k.objects.mb405.p16.6 k.objects.point part=$k.objects.mb405.p16 n=6 x=73.4 y=77.2 core.source="mulberry fa94a93"
 @k.objects.mb405.p16.7 k.objects.point part=$k.objects.mb405.p16 n=7 x=63.3 y=81.3 core.source="mulberry fa94a93"
 @k.objects.mb405.p16.8 k.objects.point part=$k.objects.mb405.p16 n=8 x=50.7 y=79.7 core.source="mulberry fa94a93"
-@k.objects.mb405.word core.word text=food text=vegetable means=cauliflower of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb405.keyword k.objects.keyword of=cauliflower text=food text=vegetable core.source="mulberry fa94a93"
 
 # celeriac
 @k.objects.mb414 k.objects.object name=celeriac core.source="mulberry fa94a93"

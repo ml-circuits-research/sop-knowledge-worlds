@@ -162,7 +162,7 @@
 @k.objects.mb282.p16.13 k.objects.point part=$k.objects.mb282.p16 n=13 x=39.4 y=48.2 core.source="mulberry fa94a93"
 @k.objects.mb282.p16.14 k.objects.point part=$k.objects.mb282.p16 n=14 x=40.6 y=45.7 core.source="mulberry fa94a93"
 @k.objects.mb282.p16.15 k.objects.point part=$k.objects.mb282.p16 n=15 x=44.1 y=42.8 core.source="mulberry fa94a93"
-@k.objects.mb282.word core.word text=clothes text=jewellery means=brooch of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb282.keyword k.objects.keyword of=brooch text=clothes text=jewellery core.source="mulberry fa94a93"
 
 # earrings
 @k.objects.mb993 k.objects.object name=earrings core.source="mulberry fa94a93"
@@ -350,7 +350,7 @@
 @k.objects.mb993.p16.12 k.objects.point part=$k.objects.mb993.p16 n=12 x=79 y=64 core.source="mulberry fa94a93"
 @k.objects.mb993.p16.13 k.objects.point part=$k.objects.mb993.p16 n=13 x=75.9 y=55.6 core.source="mulberry fa94a93"
 @k.objects.mb993.p16.14 k.objects.point part=$k.objects.mb993.p16 n=14 x=69 y=55.7 core.source="mulberry fa94a93"
-@k.objects.mb993.word core.word text=clothes text=jewellery means=earrings of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb993.keyword k.objects.keyword of=earrings text=clothes text=jewellery core.source="mulberry fa94a93"
 
 # necklace
 @k.objects.mb2018 k.objects.object name=necklace core.source="mulberry fa94a93"
@@ -534,4 +534,4 @@
 @k.objects.mb2018.p16.9 k.objects.point part=$k.objects.mb2018.p16 n=9 x=31.9 y=18.8 core.source="mulberry fa94a93"
 @k.objects.mb2018.p16.10 k.objects.point part=$k.objects.mb2018.p16 n=10 x=34.8 y=20.1 core.source="mulberry fa94a93"
 @k.objects.mb2018.p16.11 k.objects.point part=$k.objects.mb2018.p16 n=11 x=36.6 y=19.9 core.source="mulberry fa94a93"
-@k.objects.mb2018.word core.word text=clothes text=jewellery means=necklace of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2018.keyword k.objects.keyword of=necklace text=clothes text=jewellery core.source="mulberry fa94a93"

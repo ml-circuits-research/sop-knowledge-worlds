@@ -919,7 +919,7 @@
 @k.objects.mb2277.p16 k.objects.part of="police radio" name=part16 kind=detail named=no shape=line x=38.5 y=83.2 w=23.2 h=0 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2277.p16.1 k.objects.point part=$k.objects.mb2277.p16 n=1 x=38.5 y=83.2 core.source="mulberry fa94a93"
 @k.objects.mb2277.p16.2 k.objects.point part=$k.objects.mb2277.p16 n=2 x=61.7 y=83.2 core.source="mulberry fa94a93"
-@k.objects.mb2277.word core.word text=equipment means="police radio" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2277.keyword k.objects.keyword of="police radio" text=equipment core.source="mulberry fa94a93"
 
 # telephone handset
 @k.objects.mb2810 k.objects.object name="telephone handset" core.source="mulberry fa94a93"
@@ -1075,7 +1075,7 @@
 @k.objects.mb2810.p16.8 k.objects.point part=$k.objects.mb2810.p16 n=8 x=71.9 y=79.8 core.source="mulberry fa94a93"
 @k.objects.mb2810.p16.9 k.objects.point part=$k.objects.mb2810.p16 n=9 x=69.4 y=75.2 core.source="mulberry fa94a93"
 @k.objects.mb2810.p16.10 k.objects.point part=$k.objects.mb2810.p16 n=10 x=64.5 y=69.5 core.source="mulberry fa94a93"
-@k.objects.mb2810.word core.word text=electric text=office means="telephone handset" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2810.keyword k.objects.keyword of="telephone handset" text=electric text=office core.source="mulberry fa94a93"
 
 # text phone
 @k.objects.mb2819 k.objects.object name="text phone" core.source="mulberry fa94a93"

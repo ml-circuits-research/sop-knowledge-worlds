@@ -171,7 +171,7 @@
 @k.objects.mb2119.p16.3 k.objects.point part=$k.objects.mb2119.p16 n=3 x=72.9 y=82.3 core.source="mulberry fa94a93"
 @k.objects.mb2119.p16.4 k.objects.point part=$k.objects.mb2119.p16 n=4 x=70.7 y=79.7 core.source="mulberry fa94a93"
 @k.objects.mb2119.p16.5 k.objects.point part=$k.objects.mb2119.p16 n=5 x=68.2 y=78.5 core.source="mulberry fa94a93"
-@k.objects.mb2119.word core.word text=class text=school means="paint brush" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2119.keyword k.objects.keyword of="paint brush" text=class text=school core.source="mulberry fa94a93"
 
 # paint childs
 @k.objects.mb2121 k.objects.object name="paint childs" core.source="mulberry fa94a93"
@@ -315,7 +315,7 @@
 @k.objects.mb2121.p16.14 k.objects.point part=$k.objects.mb2121.p16 n=14 x=88.2 y=71 core.source="mulberry fa94a93"
 @k.objects.mb2121.p16.15 k.objects.point part=$k.objects.mb2121.p16 n=15 x=83.1 y=82.7 core.source="mulberry fa94a93"
 @k.objects.mb2121.p16.16 k.objects.point part=$k.objects.mb2121.p16 n=16 x=79.2 y=86.8 core.source="mulberry fa94a93"
-@k.objects.mb2121.word core.word text=class text=school means="paint childs" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2121.keyword k.objects.keyword of="paint childs" text=class text=school core.source="mulberry fa94a93"
 
 # paper
 @k.objects.mb2129 k.objects.object name=paper core.source="mulberry fa94a93"
@@ -366,7 +366,7 @@
 @k.objects.mb2129.p9.3 k.objects.point part=$k.objects.mb2129.p9 n=3 x=83.6 y=90.9 core.source="mulberry fa94a93"
 @k.objects.mb2129.p9.4 k.objects.point part=$k.objects.mb2129.p9 n=4 x=29.3 y=90.9 core.source="mulberry fa94a93"
 @k.objects.mb2129.p9.5 k.objects.point part=$k.objects.mb2129.p9 n=5 x=29.3 y=83.3 core.source="mulberry fa94a93"
-@k.objects.mb2129.word core.word text=class text=office text=school text=stationery means=paper of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2129.keyword k.objects.keyword of=paper text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # pencil box
 @k.objects.mb2182 k.objects.object name="pencil box" core.source="mulberry fa94a93"
@@ -494,7 +494,7 @@
 @k.objects.mb2182.p16 k.objects.part of="pencil box" name=part16 kind=detail named=no shape=line x=25.8 y=49.4 w=49.3 h=24.5 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2182.p16.1 k.objects.point part=$k.objects.mb2182.p16 n=1 x=25.8 y=73.9 core.source="mulberry fa94a93"
 @k.objects.mb2182.p16.2 k.objects.point part=$k.objects.mb2182.p16 n=2 x=75.1 y=49.4 core.source="mulberry fa94a93"
-@k.objects.mb2182.word core.word text=class text=office text=school text=stationery means="pencil box" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2182.keyword k.objects.keyword of="pencil box" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # pencil case
 @k.objects.mb2183 k.objects.object name="pencil case" core.source="mulberry fa94a93"
@@ -616,7 +616,7 @@
 @k.objects.mb2183.p16 k.objects.part of="pencil case" name=part16 kind=detail named=no shape=line x=14.5 y=32.2 w=71.1 h=0 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2183.p16.1 k.objects.point part=$k.objects.mb2183.p16 n=1 x=14.5 y=32.2 core.source="mulberry fa94a93"
 @k.objects.mb2183.p16.2 k.objects.point part=$k.objects.mb2183.p16 n=2 x=85.6 y=32.2 core.source="mulberry fa94a93"
-@k.objects.mb2183.word core.word text=class text=office text=school text=stationery means="pencil case" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2183.keyword k.objects.keyword of="pencil case" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # pencil sharpener
 @k.objects.mb2184 k.objects.object name="pencil sharpener" core.source="mulberry fa94a93"
@@ -782,7 +782,7 @@
 @k.objects.mb2184.p13.11 k.objects.point part=$k.objects.mb2184.p13 n=11 x=57.5 y=32.4 core.source="mulberry fa94a93"
 @k.objects.mb2184.p13.12 k.objects.point part=$k.objects.mb2184.p13 n=12 x=58.9 y=33.9 core.source="mulberry fa94a93"
 @k.objects.mb2184.p13.13 k.objects.point part=$k.objects.mb2184.p13 n=13 x=59.2 y=35 core.source="mulberry fa94a93"
-@k.objects.mb2184.word core.word text=class text=office text=school text=stationery means="pencil sharpener" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2184.keyword k.objects.keyword of="pencil sharpener" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # plastic pocket
 @k.objects.mb2250 k.objects.object name="plastic pocket" core.source="mulberry fa94a93"
@@ -840,7 +840,7 @@
 @k.objects.mb2250.p7.7 k.objects.point part=$k.objects.mb2250.p7 n=7 x=20.8 y=80.9 core.source="mulberry fa94a93"
 @k.objects.mb2250.p7.8 k.objects.point part=$k.objects.mb2250.p7 n=8 x=21.8 y=81.3 core.source="mulberry fa94a93"
 @k.objects.mb2250.p7.9 k.objects.point part=$k.objects.mb2250.p7 n=9 x=22.2 y=82.3 core.source="mulberry fa94a93"
-@k.objects.mb2250.word core.word text=class text=office text=school text=stationery means="plastic pocket" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2250.keyword k.objects.keyword of="plastic pocket" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # post-it
 @k.objects.mb2297 k.objects.object name=post-it core.source="mulberry fa94a93"
@@ -892,4 +892,4 @@
 @k.objects.mb2297.p7 k.objects.part of=post-it name=part7 kind=detail named=no shape=line x=57.9 y=80.9 w=1.1 h=8.7 z=7 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2297.p7.1 k.objects.point part=$k.objects.mb2297.p7 n=1 x=57.9 y=80.9 core.source="mulberry fa94a93"
 @k.objects.mb2297.p7.2 k.objects.point part=$k.objects.mb2297.p7 n=2 x=59 y=89.6 core.source="mulberry fa94a93"
-@k.objects.mb2297.word core.word text=class text=office text=school text=stationery means=post-it of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2297.keyword k.objects.keyword of=post-it text=class text=office text=school text=stationery core.source="mulberry fa94a93"

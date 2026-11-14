@@ -334,7 +334,7 @@
 @k.objects.mb1750.p16.1 k.objects.point part=$k.objects.mb1750.p16 n=1 x=9.8 y=33.1 core.source="mulberry fa94a93"
 @k.objects.mb1750.p16.2 k.objects.point part=$k.objects.mb1750.p16 n=2 x=9.8 y=11.8 core.source="mulberry fa94a93"
 @k.objects.mb1750.p16.3 k.objects.point part=$k.objects.mb1750.p16 n=3 x=31.7 y=11.8 core.source="mulberry fa94a93"
-@k.objects.mb1750.word core.word text=play text=toys means="jigsaw puzzle" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1750.keyword k.objects.keyword of="jigsaw puzzle" text=play text=toys core.source="mulberry fa94a93"
 
 # jigsaw puzzle piece
 @k.objects.mb1751 k.objects.object name="jigsaw puzzle piece" core.source="mulberry fa94a93"

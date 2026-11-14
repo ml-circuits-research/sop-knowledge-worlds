@@ -198,7 +198,7 @@
 @k.objects.u1f985.p12.6 k.objects.point part=$k.objects.u1f985.p12 n=6 x=45.1 y=93.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f985.p12.7 k.objects.point part=$k.objects.u1f985.p12 n=7 x=42.9 y=90.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f985.p12.8 k.objects.point part=$k.objects.u1f985.p12 n=8 x=40.1 y=90.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f985.word core.word text=animal text=bird text=ornithology means=eagle of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f985.keyword k.objects.keyword of=eagle text=animal text=bird text=ornithology core.source="cldr 48"
 
 # duck
 @k.objects.u1f986 k.objects.object name=duck core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -383,7 +383,7 @@
 @k.objects.u1f986.p11.19 k.objects.point part=$k.objects.u1f986.p11 n=19 x=44.5 y=42 core.source="noto-emoji 99701e0"
 @k.objects.u1f986.p11.20 k.objects.point part=$k.objects.u1f986.p11 n=20 x=41.2 y=46.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f986.p11.21 k.objects.point part=$k.objects.u1f986.p11 n=21 x=40 y=51 core.source="noto-emoji 99701e0"
-@k.objects.u1f986.word core.word text=animal text=bird text=ornithology means=duck of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f986.keyword k.objects.keyword of=duck text=animal text=bird text=ornithology core.source="cldr 48"
 
 # swan
 @k.objects.u1f9a2 k.objects.object name=swan core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -529,7 +529,7 @@
 @k.objects.u1f9a2.p5.37 k.objects.point part=$k.objects.u1f9a2.p5 n=37 x=68.6 y=76.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a2.p5.38 k.objects.point part=$k.objects.u1f9a2.p5 n=38 x=64.4 y=79.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a2.p5.39 k.objects.point part=$k.objects.u1f9a2.p5 n=39 x=57.4 y=81.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a2.word core.word text=animal text=bird text=cygnet text=duckling text=ornithology text=ugly means=swan of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a2.keyword k.objects.keyword of=swan text=animal text=bird text=cygnet text=duckling text=ornithology text=ugly core.source="cldr 48"
 
 # owl
 @k.objects.u1f989 k.objects.object name=owl core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -742,7 +742,7 @@
 @k.objects.u1f989.p16.4 k.objects.point part=$k.objects.u1f989.p16 n=4 x=49.9 y=38 core.source="noto-emoji 99701e0"
 @k.objects.u1f989.p16.5 k.objects.point part=$k.objects.u1f989.p16 n=5 x=45.9 y=37.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f989.p16.6 k.objects.point part=$k.objects.u1f989.p16 n=6 x=47.3 y=33.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f989.word core.word text=animal text=bird text=ornithology text=wise means=owl of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f989.keyword k.objects.keyword of=owl text=animal text=bird text=ornithology text=wise core.source="cldr 48"
 
 # dodo
 @k.objects.u1f9a4 k.objects.object name=dodo core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -955,7 +955,7 @@
 @k.objects.u1f9a4.p10.5 k.objects.point part=$k.objects.u1f9a4.p10 n=5 x=14.6 y=13.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a4.p10.6 k.objects.point part=$k.objects.u1f9a4.p10 n=6 x=26.7 y=15.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a4.p10.7 k.objects.point part=$k.objects.u1f9a4.p10 n=7 x=26.4 y=15.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a4.word core.word text=animal text=bird text=extinction text=large text=ornithology means=dodo of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a4.keyword k.objects.keyword of=dodo text=animal text=bird text=extinction text=large text=ornithology core.source="cldr 48"
 
 # feather
 @k.objects.u1fab6 k.objects.object name=feather core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1099,7 +1099,7 @@
 @k.objects.u1fab6.p7.20 k.objects.point part=$k.objects.u1fab6.p7 n=20 x=16.4 y=73.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fab6.p7.21 k.objects.point part=$k.objects.u1fab6.p7 n=21 x=8.1 y=92.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fab6.p7.22 k.objects.point part=$k.objects.u1fab6.p7 n=22 x=6 y=94.6 core.source="noto-emoji 99701e0"
-@k.objects.u1fab6.word core.word text=bird text=flight text=light text=plumage means=feather of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab6.keyword k.objects.keyword of=feather text=bird text=flight text=light text=plumage core.source="cldr 48"
 
 # flamingo
 @k.objects.u1f9a9 k.objects.object name=flamingo core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1259,7 +1259,7 @@
 @k.objects.u1f9a9.p10.23 k.objects.point part=$k.objects.u1f9a9.p10 n=23 x=42.5 y=37.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a9.p10.24 k.objects.point part=$k.objects.u1f9a9.p10 n=24 x=45.4 y=32.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f9a9.p10.25 k.objects.point part=$k.objects.u1f9a9.p10 n=25 x=49.1 y=30.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f9a9.word core.word text=animal text=bird text=flamboyant text=ornithology text=tropical means=flamingo of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9a9.keyword k.objects.keyword of=flamingo text=animal text=bird text=flamboyant text=ornithology text=tropical core.source="cldr 48"
 
 # peacock
 @k.objects.u1f99a k.objects.object name=peacock core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1459,4 +1459,4 @@
 @k.objects.u1f99a.p16.29 k.objects.point part=$k.objects.u1f99a.p16 n=29 x=43.5 y=30.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f99a.p16.30 k.objects.point part=$k.objects.u1f99a.p16 n=30 x=45.6 y=29.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f99a.p16.31 k.objects.point part=$k.objects.u1f99a.p16 n=31 x=47.9 y=29.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f99a.word core.word text=animal text=bird text=colorful text=ornithology text=ostentatious text=peahen text=pretty text=proud means=peacock of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f99a.keyword k.objects.keyword of=peacock text=animal text=bird text=colorful text=ornithology text=ostentatious text=peahen text=pretty text=proud core.source="cldr 48"

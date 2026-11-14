@@ -39,7 +39,7 @@
 @k.objects.mb2405.p6.1 k.objects.point part=$k.objects.mb2405.p6 n=1 x=25.3 y=16.2 core.source="mulberry fa94a93"
 @k.objects.mb2405.p6.2 k.objects.point part=$k.objects.mb2405.p6 n=2 x=25.3 y=11.4 core.source="mulberry fa94a93"
 @k.objects.mb2405.p6.3 k.objects.point part=$k.objects.mb2405.p6 n=3 x=34.2 y=10.4 core.source="mulberry fa94a93"
-@k.objects.mb2405.word core.word text=class text=office text=school text=stationery means="ring binder" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2405.keyword k.objects.keyword of="ring binder" text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # stapler
 @k.objects.mb2675 k.objects.object name=stapler core.source="mulberry fa94a93"
@@ -333,4 +333,4 @@
 @k.objects.mb2863.p16.12 k.objects.point part=$k.objects.mb2863.p16 n=12 x=26.2 y=13.5 core.source="mulberry fa94a93"
 @k.objects.mb2863.p16.13 k.objects.point part=$k.objects.mb2863.p16 n=13 x=30.4 y=13.5 core.source="mulberry fa94a93"
 @k.objects.mb2863.p16.14 k.objects.point part=$k.objects.mb2863.p16 n=14 x=32.2 y=14.5 core.source="mulberry fa94a93"
-@k.objects.mb2863.word core.word text=class text=office text=school text=stationery means=tippex of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2863.keyword k.objects.keyword of=tippex text=class text=office text=school text=stationery core.source="mulberry fa94a93"

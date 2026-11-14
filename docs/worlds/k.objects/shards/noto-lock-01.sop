@@ -147,7 +147,7 @@
 @k.objects.u1f512.p8.10 k.objects.point part=$k.objects.u1f512.p8 n=10 x=50.4 y=11.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f512.p8.11 k.objects.point part=$k.objects.u1f512.p8 n=11 x=50.3 y=12.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f512.p8.12 k.objects.point part=$k.objects.u1f512.p8 n=12 x=49 y=13.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f512.word core.word text=closed text=lock text=private means=locked of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f512.keyword k.objects.keyword of=locked text=closed text=lock text=private core.source="cldr 48"
 
 # unlocked
 @k.objects.u1f513 k.objects.object name=unlocked core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -294,7 +294,7 @@
 @k.objects.u1f513.p8.12 k.objects.point part=$k.objects.u1f513.p8 n=12 x=38.6 y=12.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f513.p8.13 k.objects.point part=$k.objects.u1f513.p8 n=13 x=34.3 y=19.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f513.p9 k.objects.part of=unlocked name=part9 named=no shape=oval x=62 y=45.7 w=10 h=5.1 z=9 colour=brown rgb="#9E740B" core.source="noto-emoji 99701e0"
-@k.objects.u1f513.word core.word text=cracked text=lock text=open text=unlock means=unlocked of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f513.keyword k.objects.keyword of=unlocked text=cracked text=lock text=open text=unlock core.source="cldr 48"
 
 # locked with pen
 @k.objects.u1f50f k.objects.object name="locked with pen" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -503,7 +503,7 @@
 @k.objects.u1f50f.p16.15 k.objects.point part=$k.objects.u1f50f.p16 n=15 x=75.3 y=15.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f50f.p16.16 k.objects.point part=$k.objects.u1f50f.p16 n=16 x=70.3 y=11.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f50f.p16.17 k.objects.point part=$k.objects.u1f50f.p16 n=17 x=64.3 y=9.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f50f.word core.word text=ink text=lock text=locked text=nib text=pen text=privacy means="locked with pen" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f50f.keyword k.objects.keyword of="locked with pen" text=ink text=lock text=locked text=nib text=pen text=privacy core.source="cldr 48"
 
 # locked with key
 @k.objects.u1f510 k.objects.object name="locked with key" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -720,7 +720,7 @@
 @k.objects.u1f510.p15.7 k.objects.point part=$k.objects.u1f510.p15 n=7 x=62.2 y=26.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f510.p15.8 k.objects.point part=$k.objects.u1f510.p15 n=8 x=59.5 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f510.p15.9 k.objects.point part=$k.objects.u1f510.p15 n=9 x=58.3 y=32.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f510.word core.word text=bike text=closed text=key text=lock text=locked text=secure means="locked with key" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f510.keyword k.objects.keyword of="locked with key" text=bike text=closed text=key text=lock text=locked text=secure core.source="cldr 48"
 
 # key
 @k.objects.u1f511 k.objects.object name=key core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -836,7 +836,7 @@
 @k.objects.u1f511.p5.7 k.objects.point part=$k.objects.u1f511.p5 n=7 x=36.7 y=47.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f511.p5.8 k.objects.point part=$k.objects.u1f511.p5 n=8 x=37.1 y=49.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f511.p5.9 k.objects.point part=$k.objects.u1f511.p5 n=9 x=36.8 y=51.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f511.word core.word text=keys text=lock text=major text=password text=unlock means=key of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f511.keyword k.objects.keyword of=key text=keys text=lock text=major text=password text=unlock core.source="cldr 48"
 
 # old key
 @k.objects.u1f5dd k.objects.object name="old key" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -971,4 +971,4 @@
 @k.objects.u1f5dd.p9.6 k.objects.point part=$k.objects.u1f5dd.p9 n=6 x=36.6 y=59 core.source="noto-emoji 99701e0"
 @k.objects.u1f5dd.p9.7 k.objects.point part=$k.objects.u1f5dd.p9 n=7 x=8.7 y=83.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f5dd.p9.8 k.objects.point part=$k.objects.u1f5dd.p9 n=8 x=7.6 y=83.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f5dd.word core.word text=clue text=key text=lock text=old means="old key" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5dd.keyword k.objects.keyword of="old key" text=clue text=key text=lock text=old core.source="cldr 48"

@@ -524,7 +524,7 @@
 @k.objects.mb523.p16 k.objects.part of="climbing wall" name=part16 kind=detail named=no shape=line x=89.8 y=8.2 w=0 h=82.6 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb523.p16.1 k.objects.point part=$k.objects.mb523.p16 n=1 x=89.8 y=8.2 core.source="mulberry fa94a93"
 @k.objects.mb523.p16.2 k.objects.point part=$k.objects.mb523.p16 n=2 x=89.8 y=90.8 core.source="mulberry fa94a93"
-@k.objects.mb523.word core.word text=sport means="climbing wall" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb523.keyword k.objects.keyword of="climbing wall" text=sport core.source="mulberry fa94a93"
 
 # cricket ball
 @k.objects.mb822 k.objects.object name="cricket ball" core.source="mulberry fa94a93"
@@ -1114,4 +1114,4 @@
 @k.objects.mb1916.p11 k.objects.part of=medal name=part11 kind=detail named=no shape=line x=42.4 y=8.5 w=6.4 h=27.4 z=11 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1916.p11.1 k.objects.point part=$k.objects.mb1916.p11 n=1 x=42.4 y=8.5 core.source="mulberry fa94a93"
 @k.objects.mb1916.p11.2 k.objects.point part=$k.objects.mb1916.p11 n=2 x=48.8 y=35.9 core.source="mulberry fa94a93"
-@k.objects.mb1916.word core.word text=games text=sport means=medal of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1916.keyword k.objects.keyword of=medal text=games text=sport core.source="mulberry fa94a93"

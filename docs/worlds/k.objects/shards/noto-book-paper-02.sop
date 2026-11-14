@@ -206,7 +206,7 @@
 @k.objects.u1f4d2.p16.18 k.objects.point part=$k.objects.u1f4d2.p16 n=18 x=17.5 y=89.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d2.p16.19 k.objects.point part=$k.objects.u1f4d2.p16 n=19 x=22.7 y=90.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d2.p16.20 k.objects.point part=$k.objects.u1f4d2.p16 n=20 x=22.7 y=88.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d2.word core.word text=notebook means=ledger of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d2.keyword k.objects.keyword of=ledger text=notebook core.source="cldr 48"
 
 # page with curl
 @k.objects.u1f4c3 k.objects.object name="page with curl" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -259,7 +259,7 @@
 @k.objects.u1f4c3.p7.18 k.objects.point part=$k.objects.u1f4c3.p7 n=18 x=95.9 y=83.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c3.p7.19 k.objects.point part=$k.objects.u1f4c3.p7 n=19 x=95.5 y=82.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c3.p7.20 k.objects.point part=$k.objects.u1f4c3.p7 n=20 x=94.5 y=82 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c3.word core.word text=curl text=document text=page text=paper means="page with curl" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c3.keyword k.objects.keyword of="page with curl" text=curl text=document text=page text=paper core.source="cldr 48"
 
 # scroll
 @k.objects.u1f4dc k.objects.object name=scroll core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -387,7 +387,7 @@
 @k.objects.u1f4dc.p16.13 k.objects.point part=$k.objects.u1f4dc.p16 n=13 x=11.2 y=9.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4dc.p16.14 k.objects.point part=$k.objects.u1f4dc.p16 n=14 x=9.8 y=11.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4dc.p16.15 k.objects.point part=$k.objects.u1f4dc.p16 n=15 x=10.3 y=12.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f4dc.word core.word text=paper means=scroll of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4dc.keyword k.objects.keyword of=scroll text=paper core.source="cldr 48"
 
 # page facing up
 @k.objects.u1f4c4 k.objects.object name="page facing up" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -428,7 +428,7 @@
 @k.objects.u1f4c4.p7.13 k.objects.point part=$k.objects.u1f4c4.p7 n=13 x=88.9 y=24.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c4.p7.14 k.objects.point part=$k.objects.u1f4c4.p7 n=14 x=88.2 y=21.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4c4.p7.15 k.objects.point part=$k.objects.u1f4c4.p7 n=15 x=85.5 y=18.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f4c4.word core.word text=document text=facing text=page text=paper text=up means="page facing up" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4c4.keyword k.objects.keyword of="page facing up" text=document text=facing text=page text=paper text=up core.source="cldr 48"
 
 # newspaper
 @k.objects.u1f4f0 k.objects.object name=newspaper core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -528,7 +528,7 @@
 @k.objects.u1f4f0.p16.3 k.objects.point part=$k.objects.u1f4f0.p16 n=3 x=51.2 y=29.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f0.p16.4 k.objects.point part=$k.objects.u1f4f0.p16 n=4 x=50.3 y=33.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4f0.p16.5 k.objects.point part=$k.objects.u1f4f0.p16 n=5 x=47.3 y=37.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f4f0.word core.word text=communication text=news text=paper means=newspaper of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4f0.keyword k.objects.keyword of=newspaper text=communication text=news text=paper core.source="cldr 48"
 
 # rolled-up newspaper
 @k.objects.u1f5de k.objects.object name="rolled-up newspaper" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -730,7 +730,7 @@
 @k.objects.u1f5de.p16.14 k.objects.point part=$k.objects.u1f5de.p16 n=14 x=46.7 y=36.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f5de.p16.15 k.objects.point part=$k.objects.u1f5de.p16 n=15 x=51.4 y=34.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f5de.p16.16 k.objects.point part=$k.objects.u1f5de.p16 n=16 x=56.4 y=33 core.source="noto-emoji 99701e0"
-@k.objects.u1f5de.word core.word text=news text=newspaper text=paper text=rolled text=rolled-up means="rolled-up newspaper" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5de.keyword k.objects.keyword of="rolled-up newspaper" text=news text=newspaper text=paper text=rolled text=rolled-up core.source="cldr 48"
 
 # bookmark tabs
 @k.objects.u1f4d1 k.objects.object name="bookmark tabs" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -905,7 +905,7 @@
 @k.objects.u1f4d1.p16.10 k.objects.point part=$k.objects.u1f4d1.p16 n=10 x=90 y=60.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d1.p16.11 k.objects.point part=$k.objects.u1f4d1.p16 n=11 x=90.7 y=59.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d1.p16.12 k.objects.point part=$k.objects.u1f4d1.p16 n=12 x=90.7 y=52 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d1.word core.word text=bookmark text=mark text=marker text=tabs means="bookmark tabs" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d1.keyword k.objects.keyword of="bookmark tabs" text=bookmark text=mark text=marker text=tabs core.source="cldr 48"
 
 # bookmark
 @k.objects.u1f516 k.objects.object name=bookmark core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1065,4 +1065,4 @@
 @k.objects.u1f516.p12.8 k.objects.point part=$k.objects.u1f516.p12 n=8 x=38 y=52.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f516.p12.9 k.objects.point part=$k.objects.u1f516.p12 n=9 x=43.3 y=56 core.source="noto-emoji 99701e0"
 @k.objects.u1f516.p12.10 k.objects.point part=$k.objects.u1f516.p12 n=10 x=48.8 y=53.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f516.word core.word text=mark means=bookmark of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f516.keyword k.objects.keyword of=bookmark text=mark core.source="cldr 48"

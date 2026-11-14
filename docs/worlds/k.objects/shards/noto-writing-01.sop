@@ -243,7 +243,7 @@
 @k.objects.u2712.p9.10 k.objects.point part=$k.objects.u2712.p9 n=10 x=47 y=28.1 core.source="noto-emoji 99701e0"
 @k.objects.u2712.p9.11 k.objects.point part=$k.objects.u2712.p9 n=11 x=46 y=30.2 core.source="noto-emoji 99701e0"
 @k.objects.u2712.p9.12 k.objects.point part=$k.objects.u2712.p9 n=12 x=43.6 y=31.3 core.source="noto-emoji 99701e0"
-@k.objects.u2712.word core.word text=black text=nib text=pen means="black nib" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2712.keyword k.objects.keyword of="black nib" text=black text=nib text=pen core.source="cldr 48"
 
 # fountain pen
 @k.objects.u1f58b k.objects.object name="fountain pen" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -426,7 +426,7 @@
 @k.objects.u1f58b.p16.8 k.objects.point part=$k.objects.u1f58b.p16 n=8 x=82 y=12.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f58b.p16.9 k.objects.point part=$k.objects.u1f58b.p16 n=9 x=82 y=13.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f58b.p16.10 k.objects.point part=$k.objects.u1f58b.p16 n=10 x=80.5 y=15.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f58b.word core.word text=fountain text=pen means="fountain pen" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f58b.keyword k.objects.keyword of="fountain pen" text=fountain text=pen core.source="cldr 48"
 
 # pen
 @k.objects.u1f58a k.objects.object name=pen core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -606,7 +606,7 @@
 @k.objects.u1f58a.p15.6 k.objects.point part=$k.objects.u1f58a.p15 n=6 x=87.6 y=9.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f58a.p15.7 k.objects.point part=$k.objects.u1f58a.p15 n=7 x=86.6 y=8 core.source="noto-emoji 99701e0"
 @k.objects.u1f58a.p15.8 k.objects.point part=$k.objects.u1f58a.p15 n=8 x=85.2 y=7 core.source="noto-emoji 99701e0"
-@k.objects.u1f58a.word core.word text=ballpoint means=pen of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f58a.keyword k.objects.keyword of=pen text=ballpoint core.source="cldr 48"
 
 # paintbrush
 @k.objects.u1f58c k.objects.object name=paintbrush core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -743,7 +743,7 @@
 @k.objects.u1f58c.p9.24 k.objects.point part=$k.objects.u1f58c.p9 n=24 x=19 y=94.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f58c.p9.25 k.objects.point part=$k.objects.u1f58c.p9 n=25 x=23 y=93.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f58c.p9.26 k.objects.point part=$k.objects.u1f58c.p9 n=26 x=26.8 y=91.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f58c.word core.word text=painting means=paintbrush of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f58c.keyword k.objects.keyword of=paintbrush text=painting core.source="cldr 48"
 
 # crayon
 @k.objects.u1f58d k.objects.object name=crayon core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -982,4 +982,4 @@
 @k.objects.u1f4dd.p16.7 k.objects.point part=$k.objects.u1f4dd.p16 n=7 x=77.6 y=21.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4dd.p16.8 k.objects.point part=$k.objects.u1f4dd.p16 n=8 x=72.6 y=16.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f4dd.p16.9 k.objects.point part=$k.objects.u1f4dd.p16 n=9 x=72.3 y=17 core.source="noto-emoji 99701e0"
-@k.objects.u1f4dd.word core.word text=communication text=media text=notes text=pencil means=memo of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4dd.keyword k.objects.keyword of=memo text=communication text=media text=notes text=pencil core.source="cldr 48"

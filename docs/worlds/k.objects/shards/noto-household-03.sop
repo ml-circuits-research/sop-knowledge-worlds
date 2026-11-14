@@ -129,7 +129,7 @@
 @k.objects.u1f9fb.p10.11 k.objects.point part=$k.objects.u1f9fb.p10 n=11 x=84.8 y=83 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fb.p10.12 k.objects.point part=$k.objects.u1f9fb.p10 n=12 x=85.1 y=13.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fb.p10.13 k.objects.point part=$k.objects.u1f9fb.p10 n=13 x=83.8 y=17.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f9fb.word core.word text=paper text=roll text=toilet text=towels means="roll of paper" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9fb.keyword k.objects.keyword of="roll of paper" text=paper text=roll text=toilet text=towels core.source="cldr 48"
 
 # bucket
 @k.objects.u1faa3 k.objects.object name=bucket core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -318,7 +318,7 @@
 @k.objects.u1faa3.p10.32 k.objects.point part=$k.objects.u1faa3.p10 n=32 x=68.9 y=41.4 core.source="noto-emoji 99701e0"
 @k.objects.u1faa3.p10.33 k.objects.point part=$k.objects.u1faa3.p10 n=33 x=69 y=43 core.source="noto-emoji 99701e0"
 @k.objects.u1faa3.p10.34 k.objects.point part=$k.objects.u1faa3.p10 n=34 x=68.9 y=39.8 core.source="noto-emoji 99701e0"
-@k.objects.u1faa3.word core.word text=cask text=pail text=vat means=bucket of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa3.keyword k.objects.keyword of=bucket text=cask text=pail text=vat core.source="cldr 48"
 
 # soap
 @k.objects.u1f9fc k.objects.object name=soap core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -530,7 +530,7 @@
 @k.objects.u1f9fc.p16.6 k.objects.point part=$k.objects.u1f9fc.p16 n=6 x=71.8 y=64.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fc.p16.7 k.objects.point part=$k.objects.u1f9fc.p16 n=7 x=74.2 y=61.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fc.p16.8 k.objects.point part=$k.objects.u1f9fc.p16 n=8 x=77 y=60.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f9fc.word core.word text=bar text=bathing text=clean text=cleaning text=lather text=soapdish means=soap of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9fc.keyword k.objects.keyword of=soap text=bar text=bathing text=clean text=cleaning text=lather text=soapdish core.source="cldr 48"
 
 # bubbles
 @k.objects.u1fae7 k.objects.object name=bubbles core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -681,7 +681,7 @@
 @k.objects.u1fae7.p9.11 k.objects.point part=$k.objects.u1fae7.p9 n=11 x=88 y=54.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fae7.p9.12 k.objects.point part=$k.objects.u1fae7.p9 n=12 x=90.4 y=52.4 core.source="noto-emoji 99701e0"
 @k.objects.u1fae7.p9.13 k.objects.point part=$k.objects.u1fae7.p9 n=13 x=92.2 y=50 core.source="noto-emoji 99701e0"
-@k.objects.u1fae7.word core.word text=bubble text=burp text=clean text=floating text=pearl text=soap text=underwater means=bubbles of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fae7.keyword k.objects.keyword of=bubbles text=bubble text=burp text=clean text=floating text=pearl text=soap text=underwater core.source="cldr 48"
 
 # toothbrush
 @k.objects.u1faa5 k.objects.object name=toothbrush core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -835,7 +835,7 @@
 @k.objects.u1faa5.p13.13 k.objects.point part=$k.objects.u1faa5.p13 n=13 x=6.9 y=83.3 core.source="noto-emoji 99701e0"
 @k.objects.u1faa5.p13.14 k.objects.point part=$k.objects.u1faa5.p13 n=14 x=4.5 y=87.6 core.source="noto-emoji 99701e0"
 @k.objects.u1faa5.p13.15 k.objects.point part=$k.objects.u1faa5.p13 n=15 x=4.5 y=89.4 core.source="noto-emoji 99701e0"
-@k.objects.u1faa5.word core.word text=bathroom text=brush text=clean text=dental text=hygiene text=teeth text=toiletry means=toothbrush of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa5.keyword k.objects.keyword of=toothbrush text=bathroom text=brush text=clean text=dental text=hygiene text=teeth text=toiletry core.source="cldr 48"
 
 # sponge
 @k.objects.u1f9fd k.objects.object name=sponge core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1044,7 +1044,7 @@
 @k.objects.u1f9fd.p16.5 k.objects.point part=$k.objects.u1f9fd.p16 n=5 x=62.8 y=56.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fd.p16.6 k.objects.point part=$k.objects.u1f9fd.p16 n=6 x=61.2 y=54.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fd.p16.7 k.objects.point part=$k.objects.u1f9fd.p16 n=7 x=62 y=53.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f9fd.word core.word text=absorbing text=cleaning text=porous text=soak means=sponge of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9fd.keyword k.objects.keyword of=sponge text=absorbing text=cleaning text=porous text=soak core.source="cldr 48"
 
 # fire extinguisher
 @k.objects.u1f9ef k.objects.object name="fire extinguisher" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1218,7 +1218,7 @@
 @k.objects.u1f9ef.p16.3 k.objects.point part=$k.objects.u1f9ef.p16 n=3 x=33.3 y=71.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ef.p16.4 k.objects.point part=$k.objects.u1f9ef.p16 n=4 x=33.7 y=77.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ef.p16.5 k.objects.point part=$k.objects.u1f9ef.p16 n=5 x=30.5 y=78 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ef.word core.word text=extinguish text=extinguisher text=fire text=quench means="fire extinguisher" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ef.keyword k.objects.keyword of="fire extinguisher" text=extinguish text=extinguisher text=fire text=quench core.source="cldr 48"
 
 # shopping cart
 @k.objects.u1f6d2 k.objects.object name="shopping cart" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1295,4 +1295,4 @@
 @k.objects.u1f6d2.p16.4 k.objects.point part=$k.objects.u1f6d2.p16 n=4 x=15.9 y=92.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d2.p16.5 k.objects.point part=$k.objects.u1f6d2.p16 n=5 x=14.5 y=92.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d2.p16.6 k.objects.point part=$k.objects.u1f6d2.p16 n=6 x=13.5 y=91.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d2.word core.word text=cart text=shopping text=trolley means="shopping cart" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6d2.keyword k.objects.keyword of="shopping cart" text=cart text=shopping text=trolley core.source="cldr 48"

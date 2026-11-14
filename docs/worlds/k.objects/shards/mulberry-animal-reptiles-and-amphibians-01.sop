@@ -213,7 +213,7 @@
 @k.objects.mb431.p16.1 k.objects.point part=$k.objects.mb431.p16 n=1 x=75.4 y=48.7 core.source="mulberry fa94a93"
 @k.objects.mb431.p16.2 k.objects.point part=$k.objects.mb431.p16 n=2 x=84.2 y=47.9 core.source="mulberry fa94a93"
 @k.objects.mb431.p16.3 k.objects.point part=$k.objects.mb431.p16 n=3 x=92.2 y=48.8 core.source="mulberry fa94a93"
-@k.objects.mb431.word core.word text=animal text=reptile means=chameleon of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb431.keyword k.objects.keyword of=chameleon text=animal text=reptile core.source="mulberry fa94a93"
 
 # rattle snake
 @k.objects.mb2365 k.objects.object name="rattle snake" core.source="mulberry fa94a93"
@@ -366,7 +366,7 @@
 @k.objects.mb2365.p16.37 k.objects.point part=$k.objects.mb2365.p16 n=37 x=24 y=60.4 core.source="mulberry fa94a93"
 @k.objects.mb2365.p16.38 k.objects.point part=$k.objects.mb2365.p16 n=38 x=19.8 y=59 core.source="mulberry fa94a93"
 @k.objects.mb2365.p16.39 k.objects.point part=$k.objects.mb2365.p16 n=39 x=12.4 y=50.9 core.source="mulberry fa94a93"
-@k.objects.mb2365.word core.word text=animal text=reptile means="rattle snake" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2365.keyword k.objects.keyword of="rattle snake" text=animal text=reptile core.source="mulberry fa94a93"
 
 # toad
 @k.objects.mb2865 k.objects.object name=toad core.source="mulberry fa94a93"
@@ -567,7 +567,7 @@
 @k.objects.mb2865.p16.3 k.objects.point part=$k.objects.mb2865.p16 n=3 x=41.7 y=33.9 core.source="mulberry fa94a93"
 @k.objects.mb2865.p16.4 k.objects.point part=$k.objects.mb2865.p16 n=4 x=45.5 y=33.7 core.source="mulberry fa94a93"
 @k.objects.mb2865.p16.5 k.objects.point part=$k.objects.mb2865.p16 n=5 x=50.3 y=35.7 core.source="mulberry fa94a93"
-@k.objects.mb2865.word core.word text=animal text=wild means=toad of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2865.keyword k.objects.keyword of=toad text=animal text=wild core.source="mulberry fa94a93"
 
 # tortoise
 @k.objects.mb2893 k.objects.object name=tortoise core.source="mulberry fa94a93"
@@ -779,4 +779,4 @@
 @k.objects.mb2893.p16.24 k.objects.point part=$k.objects.mb2893.p16 n=24 x=77.7 y=34.4 core.source="mulberry fa94a93"
 @k.objects.mb2893.p16.25 k.objects.point part=$k.objects.mb2893.p16 n=25 x=77.2 y=32.5 core.source="mulberry fa94a93"
 @k.objects.mb2893.p16.26 k.objects.point part=$k.objects.mb2893.p16 n=26 x=69.2 y=27.4 core.source="mulberry fa94a93"
-@k.objects.mb2893.word core.word text=animal text=pet text=reptile means=tortoise of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2893.keyword k.objects.keyword of=tortoise text=animal text=pet text=reptile core.source="mulberry fa94a93"

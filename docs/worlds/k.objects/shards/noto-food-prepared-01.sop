@@ -97,7 +97,7 @@
 @k.objects.u1f35e.p4.19 k.objects.point part=$k.objects.u1f35e.p4 n=19 x=41.1 y=24.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f35e.p4.20 k.objects.point part=$k.objects.u1f35e.p4 n=20 x=48.7 y=28.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f35e.p4.21 k.objects.point part=$k.objects.u1f35e.p4 n=21 x=54.1 y=32.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f35e.word core.word text=carbs text=food text=grain text=loaf text=restaurant text=toast text=wheat means=bread of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f35e.keyword k.objects.keyword of=bread text=carbs text=food text=grain text=loaf text=restaurant text=toast text=wheat core.source="cldr 48"
 
 # croissant
 @k.objects.u1f950 k.objects.object name=croissant core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -314,7 +314,7 @@
 @k.objects.u1f950.p16.6 k.objects.point part=$k.objects.u1f950.p16 n=6 x=81.7 y=30 core.source="noto-emoji 99701e0"
 @k.objects.u1f950.p16.7 k.objects.point part=$k.objects.u1f950.p16 n=7 x=79.2 y=19.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f950.p16.8 k.objects.point part=$k.objects.u1f950.p16 n=8 x=76.8 y=16.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f950.word core.word text=bread text=breakfast text=crescent text=food text=french text=roll means=croissant of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f950.keyword k.objects.keyword of=croissant text=bread text=breakfast text=crescent text=food text=french text=roll core.source="cldr 48"
 
 # baguette bread
 @k.objects.u1f956 k.objects.object name="baguette bread" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -508,7 +508,7 @@
 @k.objects.u1f956.p12.8 k.objects.point part=$k.objects.u1f956.p12 n=8 x=32 y=71.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f956.p12.9 k.objects.point part=$k.objects.u1f956.p12 n=9 x=13.8 y=75.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f956.p12.10 k.objects.point part=$k.objects.u1f956.p12 n=10 x=17.2 y=71.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f956.word core.word text=baguette text=bread text=food text=french means="baguette bread" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f956.keyword k.objects.keyword of="baguette bread" text=baguette text=bread text=food text=french core.source="cldr 48"
 
 # flatbread
 @k.objects.u1fad3 k.objects.object name=flatbread core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -625,7 +625,7 @@
 @k.objects.u1fad3.p7.10 k.objects.point part=$k.objects.u1fad3.p7 n=10 x=54.9 y=75.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fad3.p7.11 k.objects.point part=$k.objects.u1fad3.p7 n=11 x=55.3 y=74.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fad3.p7.12 k.objects.point part=$k.objects.u1fad3.p7 n=12 x=59.7 y=68.6 core.source="noto-emoji 99701e0"
-@k.objects.u1fad3.word core.word text=arepa text=bread text=food text=gordita text=lavash text=naan text=pita means=flatbread of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad3.keyword k.objects.keyword of=flatbread text=arepa text=bread text=food text=gordita text=lavash text=naan text=pita core.source="cldr 48"
 
 # pretzel
 @k.objects.u1f968 k.objects.object name=pretzel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -824,7 +824,7 @@
 @k.objects.u1f968.p16.2 k.objects.point part=$k.objects.u1f968.p16 n=2 x=85.3 y=32.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f968.p16.3 k.objects.point part=$k.objects.u1f968.p16 n=3 x=87.9 y=31.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f968.p16.4 k.objects.point part=$k.objects.u1f968.p16 n=4 x=85.8 y=28 core.source="noto-emoji 99701e0"
-@k.objects.u1f968.word core.word text=convoluted text=twisted means=pretzel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f968.keyword k.objects.keyword of=pretzel text=convoluted text=twisted core.source="cldr 48"
 
 # bagel
 @k.objects.u1f96f k.objects.object name=bagel core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1037,7 +1037,7 @@
 @k.objects.u1f96f.p16.6 k.objects.point part=$k.objects.u1f96f.p16 n=6 x=68.4 y=19.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f96f.p16.7 k.objects.point part=$k.objects.u1f96f.p16 n=7 x=66.4 y=19.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f96f.p16.8 k.objects.point part=$k.objects.u1f96f.p16 n=8 x=63.4 y=22 core.source="noto-emoji 99701e0"
-@k.objects.u1f96f.word core.word text=bakery text=bread text=breakfast text=schmear means=bagel of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f96f.keyword k.objects.keyword of=bagel text=bakery text=bread text=breakfast text=schmear core.source="cldr 48"
 
 # pancakes
 @k.objects.u1f95e k.objects.object name=pancakes core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1243,7 +1243,7 @@
 @k.objects.u1f95e.p16.4 k.objects.point part=$k.objects.u1f95e.p16 n=4 x=46.8 y=27.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f95e.p16.5 k.objects.point part=$k.objects.u1f95e.p16 n=5 x=63.2 y=23.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f95e.p16.6 k.objects.point part=$k.objects.u1f95e.p16 n=6 x=63.7 y=20.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f95e.word core.word text=breakfast text=crêpe text=food text=hotcake text=pancake means=pancakes of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f95e.keyword k.objects.keyword of=pancakes text=breakfast text=crêpe text=food text=hotcake text=pancake core.source="cldr 48"
 
 # waffle
 @k.objects.u1f9c7 k.objects.object name=waffle core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1459,4 +1459,4 @@
 @k.objects.u1f9c7.p16.12 k.objects.point part=$k.objects.u1f9c7.p16 n=12 x=16.7 y=58.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c7.p16.13 k.objects.point part=$k.objects.u1f9c7.p16 n=13 x=9.4 y=53.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c7.p16.14 k.objects.point part=$k.objects.u1f9c7.p16 n=14 x=3.4 y=47.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f9c7.word core.word text=breakfast text=indecisive text=iron means=waffle of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9c7.keyword k.objects.keyword of=waffle text=breakfast text=indecisive text=iron core.source="cldr 48"

@@ -70,7 +70,7 @@
 @k.objects.u1f307.p14.4 k.objects.point part=$k.objects.u1f307.p14 n=4 x=90.2 y=26.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f307.p15 k.objects.part of=sunset name=part15 named=no shape=rectangle x=49.9 y=23.3 w=1.3 h=73.7 z=15 colour=white rgb="#FFF6B2" core.source="noto-emoji 99701e0"
 @k.objects.u1f307.p16 k.objects.part of=sunset name=part16 named=no shape=rectangle x=46.2 y=14.8 w=2.1 h=8.5 z=16 colour=white rgb="#FFF6B2" core.source="noto-emoji 99701e0"
-@k.objects.u1f307.word core.word text=building text=dusk text=sun means=sunset of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f307.keyword k.objects.keyword of=sunset text=building text=dusk text=sun core.source="cldr 48"
 
 # bridge at night
 @k.objects.u1f309 k.objects.object name="bridge at night" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -260,7 +260,7 @@
 @k.objects.u1f309.p16.14 k.objects.point part=$k.objects.u1f309.p16 n=14 x=60.6 y=80.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f309.p16.15 k.objects.point part=$k.objects.u1f309.p16 n=15 x=58.1 y=79.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f309.p16.16 k.objects.point part=$k.objects.u1f309.p16 n=16 x=40.6 y=79.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f309.word core.word text=at text=bridge text=night means="bridge at night" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f309.keyword k.objects.keyword of="bridge at night" text=at text=bridge text=night core.source="cldr 48"
 
 # hot springs
 @k.objects.u2668 k.objects.object name="hot springs" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -473,7 +473,7 @@
 @k.objects.u2668.p12.11 k.objects.point part=$k.objects.u2668.p12 n=11 x=41 y=89.4 core.source="noto-emoji 99701e0"
 @k.objects.u2668.p12.12 k.objects.point part=$k.objects.u2668.p12 n=12 x=25.2 y=84.9 core.source="noto-emoji 99701e0"
 @k.objects.u2668.p12.13 k.objects.point part=$k.objects.u2668.p12 n=13 x=14.1 y=78.5 core.source="noto-emoji 99701e0"
-@k.objects.u2668.word core.word text=hot text=hotsprings text=springs text=steaming means="hot springs" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2668.keyword k.objects.keyword of="hot springs" text=hot text=hotsprings text=springs text=steaming core.source="cldr 48"
 
 # carousel horse
 @k.objects.u1f3a0 k.objects.object name="carousel horse" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -674,7 +674,7 @@
 @k.objects.u1f3a0.p16.7 k.objects.point part=$k.objects.u1f3a0.p16 n=7 x=36.2 y=34.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a0.p16.8 k.objects.point part=$k.objects.u1f3a0.p16 n=8 x=38.1 y=33.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a0.p16.9 k.objects.point part=$k.objects.u1f3a0.p16 n=9 x=48.6 y=37.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f3a0.word core.word text=carousel text=entertainment text=horse means="carousel horse" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a0.keyword k.objects.keyword of="carousel horse" text=carousel text=entertainment text=horse core.source="cldr 48"
 
 # playground slide
 @k.objects.u1f6dd k.objects.object name="playground slide" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -875,7 +875,7 @@
 @k.objects.u1f6dd.p16.14 k.objects.point part=$k.objects.u1f6dd.p16 n=14 x=26.8 y=15.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6dd.p16.15 k.objects.point part=$k.objects.u1f6dd.p16 n=15 x=24.7 y=13.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f6dd.p16.16 k.objects.point part=$k.objects.u1f6dd.p16 n=16 x=21.9 y=14.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f6dd.word core.word text=amusement text=park text=play text=playground text=playing text=slide text=sliding text=theme means="playground slide" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6dd.keyword k.objects.keyword of="playground slide" text=amusement text=park text=play text=playground text=playing text=slide text=sliding text=theme core.source="cldr 48"
 
 # ferris wheel
 @k.objects.u1f3a1 k.objects.object name="ferris wheel" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1092,7 +1092,7 @@
 @k.objects.u1f3a1.p16.14 k.objects.point part=$k.objects.u1f3a1.p16 n=14 x=47.3 y=38.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a1.p16.15 k.objects.point part=$k.objects.u1f3a1.p16 n=15 x=43.5 y=37.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a1.p16.16 k.objects.point part=$k.objects.u1f3a1.p16 n=16 x=43.6 y=41.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f3a1.word core.word text=amusement text=ferris text=park text=theme text=wheel means="ferris wheel" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a1.keyword k.objects.keyword of="ferris wheel" text=amusement text=ferris text=park text=theme text=wheel core.source="cldr 48"
 
 # roller coaster
 @k.objects.u1f3a2 k.objects.object name="roller coaster" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1243,7 +1243,7 @@
 @k.objects.u1f3a2.p16.2 k.objects.point part=$k.objects.u1f3a2.p16 n=2 x=81.4 y=22.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a2.p16.3 k.objects.point part=$k.objects.u1f3a2.p16 n=3 x=96.6 y=22.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a2.p16.4 k.objects.point part=$k.objects.u1f3a2.p16 n=4 x=96.7 y=13.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f3a2.word core.word text=amusement text=coaster text=park text=roller text=theme means="roller coaster" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a2.keyword k.objects.keyword of="roller coaster" text=amusement text=coaster text=park text=roller text=theme core.source="cldr 48"
 
 # barber pole
 @k.objects.u1f488 k.objects.object name="barber pole" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1383,4 +1383,4 @@
 @k.objects.u1f488.p15.7 k.objects.point part=$k.objects.u1f488.p15 n=7 x=38.5 y=6 core.source="noto-emoji 99701e0"
 @k.objects.u1f488.p15.8 k.objects.point part=$k.objects.u1f488.p15 n=8 x=43.3 y=4.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f488.p15.9 k.objects.point part=$k.objects.u1f488.p15 n=9 x=46.3 y=4.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f488.word core.word text=barber text=cut text=fresh text=haircut text=pole text=shave means="barber pole" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f488.keyword k.objects.keyword of="barber pole" text=barber text=cut text=fresh text=haircut text=pole text=shave core.source="cldr 48"

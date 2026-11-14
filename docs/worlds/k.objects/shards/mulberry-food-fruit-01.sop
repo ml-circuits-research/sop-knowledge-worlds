@@ -761,7 +761,7 @@
 @k.objects.mb450.p5.4 k.objects.point part=$k.objects.mb450.p5 n=4 x=57.9 y=24 core.source="mulberry fa94a93"
 @k.objects.mb450.p5.5 k.objects.point part=$k.objects.mb450.p5 n=5 x=55.2 y=26.6 core.source="mulberry fa94a93"
 @k.objects.mb450.p5.6 k.objects.point part=$k.objects.mb450.p5 n=6 x=52.6 y=27.1 core.source="mulberry fa94a93"
-@k.objects.mb450.word core.word text=food text=fruit means=cherry of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb450.keyword k.objects.keyword of=cherry text=food text=fruit core.source="mulberry fa94a93"
 
 # cranberries
 @k.objects.mb811 k.objects.object name=cranberries core.source="mulberry fa94a93"

@@ -140,7 +140,7 @@
 @k.objects.mb105.p4.16 k.objects.point part=$k.objects.mb105.p4 n=16 x=17 y=45.7 core.source="mulberry fa94a93"
 @k.objects.mb105.p4.17 k.objects.point part=$k.objects.mb105.p4 n=17 x=16.2 y=41.8 core.source="mulberry fa94a93"
 @k.objects.mb105.p4.18 k.objects.point part=$k.objects.mb105.p4 n=18 x=16.6 y=36.5 core.source="mulberry fa94a93"
-@k.objects.mb105.word core.word text=play text=toys means=ball of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb105.keyword k.objects.keyword of=ball text=play text=toys core.source="mulberry fa94a93"
 
 # ball beach
 @k.objects.mb106 k.objects.object name="ball beach" core.source="mulberry fa94a93"
@@ -679,7 +679,7 @@
 @k.objects.mb140.p10.3 k.objects.point part=$k.objects.mb140.p10 n=3 x=23 y=54.6 core.source="mulberry fa94a93"
 @k.objects.mb140.p10.4 k.objects.point part=$k.objects.mb140.p10 n=4 x=26.6 y=56.4 core.source="mulberry fa94a93"
 @k.objects.mb140.p10.5 k.objects.point part=$k.objects.mb140.p10 n=5 x=28.7 y=56.8 core.source="mulberry fa94a93"
-@k.objects.mb140.word core.word text=play text=toys means=beads of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb140.keyword k.objects.keyword of=beads text=play text=toys core.source="mulberry fa94a93"
 
 # beanbag
 @k.objects.mb144 k.objects.object name=beanbag core.source="mulberry fa94a93"
@@ -894,7 +894,7 @@
 @k.objects.mb144.p16.5 k.objects.point part=$k.objects.mb144.p16 n=5 x=83.5 y=78.5 core.source="mulberry fa94a93"
 @k.objects.mb144.p16.6 k.objects.point part=$k.objects.mb144.p16 n=6 x=82.7 y=80.9 core.source="mulberry fa94a93"
 @k.objects.mb144.p16.7 k.objects.point part=$k.objects.mb144.p16 n=7 x=78.5 y=84.7 core.source="mulberry fa94a93"
-@k.objects.mb144.word core.word text=play text=toys means=beanbag of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb144.keyword k.objects.keyword of=beanbag text=play text=toys core.source="mulberry fa94a93"
 
 # bricks
 @k.objects.mb272 k.objects.object name=bricks core.source="mulberry fa94a93"
@@ -992,7 +992,7 @@
 @k.objects.mb272.p16.5 k.objects.point part=$k.objects.mb272.p16 n=5 x=79.2 y=78.3 core.source="mulberry fa94a93"
 @k.objects.mb272.p16.6 k.objects.point part=$k.objects.mb272.p16 n=6 x=79.2 y=57.4 core.source="mulberry fa94a93"
 @k.objects.mb272.p16.7 k.objects.point part=$k.objects.mb272.p16 n=7 x=68.1 y=51.8 core.source="mulberry fa94a93"
-@k.objects.mb272.word core.word text=play text=toys means=bricks of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb272.keyword k.objects.keyword of=bricks text=play text=toys core.source="mulberry fa94a93"
 
 # bubble mixture
 @k.objects.mb293 k.objects.object name="bubble mixture" core.source="mulberry fa94a93"

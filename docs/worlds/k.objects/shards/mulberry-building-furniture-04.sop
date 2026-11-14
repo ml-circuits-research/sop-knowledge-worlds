@@ -86,7 +86,7 @@
 @k.objects.mb1850.p16 k.objects.part of=locker name=part16 kind=detail named=no shape=line x=64.2 y=17.5 w=0 h=65.3 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1850.p16.1 k.objects.point part=$k.objects.mb1850.p16 n=1 x=64.2 y=82.8 core.source="mulberry fa94a93"
 @k.objects.mb1850.p16.2 k.objects.point part=$k.objects.mb1850.p16 n=2 x=64.2 y=17.5 core.source="mulberry fa94a93"
-@k.objects.mb1850.word core.word text=class text=office text=school means=locker of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1850.keyword k.objects.keyword of=locker text=class text=office text=school core.source="mulberry fa94a93"
 
 # medicine cabinet
 @k.objects.mb1918 k.objects.object name="medicine cabinet" core.source="mulberry fa94a93"
@@ -363,7 +363,7 @@
 @k.objects.mb2216.p8.2 k.objects.point part=$k.objects.mb2216.p8 n=2 x=18 y=72.6 core.source="mulberry fa94a93"
 @k.objects.mb2216.p8.3 k.objects.point part=$k.objects.mb2216.p8 n=3 x=18 y=86.7 core.source="mulberry fa94a93"
 @k.objects.mb2216.p8.4 k.objects.point part=$k.objects.mb2216.p8 n=4 x=29.7 y=85.6 core.source="mulberry fa94a93"
-@k.objects.mb2216.word core.word text=home text=house means="picture frame" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2216.keyword k.objects.keyword of="picture frame" text=home text=house core.source="mulberry fa94a93"
 
 # rocking chair
 @k.objects.mb2412 k.objects.object name="rocking chair" core.source="mulberry fa94a93"
@@ -429,7 +429,7 @@
 @k.objects.mb2412.p16 k.objects.part of="rocking chair" name=part16 kind=detail named=no shape=line x=66.3 y=13.9 w=10.2 h=46.2 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2412.p16.1 k.objects.point part=$k.objects.mb2412.p16 n=1 x=76.5 y=13.9 core.source="mulberry fa94a93"
 @k.objects.mb2412.p16.2 k.objects.point part=$k.objects.mb2412.p16 n=2 x=66.3 y=60.1 core.source="mulberry fa94a93"
-@k.objects.mb2412.word core.word text=home text=house means="rocking chair" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2412.keyword k.objects.keyword of="rocking chair" text=home text=house core.source="mulberry fa94a93"
 
 # single bed
 @k.objects.mb2575 k.objects.object name="single bed" core.source="mulberry fa94a93"
@@ -707,4 +707,4 @@
 @k.objects.mb2709.p16 k.objects.part of=stool name=part16 kind=detail named=no shape=line x=25.8 y=42.1 w=14.6 h=3.5 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2709.p16.1 k.objects.point part=$k.objects.mb2709.p16 n=1 x=25.8 y=45.6 core.source="mulberry fa94a93"
 @k.objects.mb2709.p16.2 k.objects.point part=$k.objects.mb2709.p16 n=2 x=40.4 y=42.1 core.source="mulberry fa94a93"
-@k.objects.mb2709.word core.word text=home text=house means=stool of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2709.keyword k.objects.keyword of=stool text=home text=house core.source="mulberry fa94a93"

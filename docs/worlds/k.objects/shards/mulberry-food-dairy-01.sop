@@ -264,7 +264,7 @@
 @k.objects.mb442.p16.1 k.objects.point part=$k.objects.mb442.p16 n=1 x=57.2 y=11.6 core.source="mulberry fa94a93"
 @k.objects.mb442.p16.2 k.objects.point part=$k.objects.mb442.p16 n=2 x=57.2 y=22.9 core.source="mulberry fa94a93"
 @k.objects.mb442.p16.3 k.objects.point part=$k.objects.mb442.p16 n=3 x=83.1 y=33.8 core.source="mulberry fa94a93"
-@k.objects.mb442.word core.word text=diary text=food means="cheese brie" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb442.keyword k.objects.keyword of="cheese brie" text=diary text=food core.source="mulberry fa94a93"
 
 # cheese grated
 @k.objects.mb444 k.objects.object name="cheese grated" core.source="mulberry fa94a93"
@@ -957,7 +957,7 @@
 @k.objects.mb613.p16.6 k.objects.point part=$k.objects.mb613.p16 n=6 x=83.8 y=30.4 core.source="mulberry fa94a93"
 @k.objects.mb613.p16.7 k.objects.point part=$k.objects.mb613.p16 n=7 x=84.9 y=31.4 core.source="mulberry fa94a93"
 @k.objects.mb613.p16.8 k.objects.point part=$k.objects.mb613.p16 n=8 x=85.2 y=32.4 core.source="mulberry fa94a93"
-@k.objects.mb613.word core.word text=diary text=food means="cottage cheese" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb613.keyword k.objects.keyword of="cottage cheese" text=diary text=food core.source="mulberry fa94a93"
 
 # creme fraiche
 @k.objects.mb819 k.objects.object name="creme fraiche" core.source="mulberry fa94a93"

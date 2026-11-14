@@ -205,7 +205,7 @@
 @k.objects.u1f941.p16.10 k.objects.point part=$k.objects.u1f941.p16 n=10 x=27.6 y=60.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f941.p16.11 k.objects.point part=$k.objects.u1f941.p16 n=11 x=23.2 y=59.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f941.p16.12 k.objects.point part=$k.objects.u1f941.p16 n=12 x=18.4 y=58.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f941.word core.word text=drumsticks text=music means=drum of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f941.keyword k.objects.keyword of=drum text=drumsticks text=music core.source="cldr 48"
 
 # long drum
 @k.objects.u1fa98 k.objects.object name="long drum" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -378,7 +378,7 @@
 @k.objects.u1fa98.p16.12 k.objects.point part=$k.objects.u1fa98.p16 n=12 x=62.9 y=63.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa98.p16.13 k.objects.point part=$k.objects.u1fa98.p16 n=13 x=59.6 y=64.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fa98.p16.14 k.objects.point part=$k.objects.u1fa98.p16 n=14 x=54.7 y=65.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fa98.word core.word text=beat text=conga text=drum text=instrument text=long text=rhythm means="long drum" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa98.keyword k.objects.keyword of="long drum" text=beat text=conga text=drum text=instrument text=long text=rhythm core.source="cldr 48"
 
 # maracas
 @k.objects.u1fa87 k.objects.object name=maracas core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -575,7 +575,7 @@
 @k.objects.u1fa87.p16.5 k.objects.point part=$k.objects.u1fa87.p16 n=5 x=60.4 y=28.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p16.6 k.objects.point part=$k.objects.u1fa87.p16 n=6 x=59.4 y=39.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa87.p16.7 k.objects.point part=$k.objects.u1fa87.p16 n=7 x=57.2 y=34.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fa87.word core.word text=cha text=dance text=instrument text=music text=party text=percussion text=rattle text=shake text=shaker means=maracas of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa87.keyword k.objects.keyword of=maracas text=cha text=dance text=instrument text=music text=party text=percussion text=rattle text=shake text=shaker core.source="cldr 48"
 
 # flute
 @k.objects.u1fa88 k.objects.object name=flute core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -753,7 +753,7 @@
 @k.objects.u1fa88.p16.8 k.objects.point part=$k.objects.u1fa88.p16 n=8 x=78.2 y=22.4 core.source="noto-emoji 99701e0"
 @k.objects.u1fa88.p16.9 k.objects.point part=$k.objects.u1fa88.p16 n=9 x=74.9 y=20.2 core.source="noto-emoji 99701e0"
 @k.objects.u1fa88.p16.10 k.objects.point part=$k.objects.u1fa88.p16 n=10 x=72.1 y=19 core.source="noto-emoji 99701e0"
-@k.objects.u1fa88.word core.word text=band text=fife text=flautist text=instrument text=marching text=music text=orchestra text=piccolo text=pipe text=recorder text=woodwind means=flute of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa88.keyword k.objects.keyword of=flute text=band text=fife text=flautist text=instrument text=marching text=music text=orchestra text=piccolo text=pipe text=recorder text=woodwind core.source="cldr 48"
 
 # harp
 @k.objects.u1fa89 k.objects.object name=harp core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -904,4 +904,4 @@
 @k.objects.u1fa89.p14 k.objects.part of=harp name=part14 named=no shape=circle x=55.7 y=21.8 w=3.4 h=3.4 z=14 colour=grey rgb="#464C50" core.source="noto-emoji 99701e0"
 @k.objects.u1fa89.p15 k.objects.part of=harp name=part15 named=no shape=circle x=62.2 y=23.5 w=3.3 h=3.3 z=15 colour=grey rgb="#464C50" core.source="noto-emoji 99701e0"
 @k.objects.u1fa89.p16 k.objects.part of=harp name=part16 named=no shape=circle x=68.4 y=22.3 w=3.2 h=3.2 z=16 colour=grey rgb="#464C50" core.source="noto-emoji 99701e0"
-@k.objects.u1fa89.word core.word text=cupid text=instrument text=love text=music text=orchestra means=harp of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa89.keyword k.objects.keyword of=harp text=cupid text=instrument text=love text=music text=orchestra core.source="cldr 48"

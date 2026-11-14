@@ -302,7 +302,7 @@
 @k.objects.mb559.p16 k.objects.part of="colouring book" name=part16 kind=detail named=no shape=line x=40.3 y=25.4 w=10.1 h=41.8 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb559.p16.1 k.objects.point part=$k.objects.mb559.p16 n=1 x=40.3 y=25.4 core.source="mulberry fa94a93"
 @k.objects.mb559.p16.2 k.objects.point part=$k.objects.mb559.p16 n=2 x=50.4 y=67.2 core.source="mulberry fa94a93"
-@k.objects.mb559.word core.word text=play text=toys means="colouring book" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb559.keyword k.objects.keyword of="colouring book" text=play text=toys core.source="mulberry fa94a93"
 
 # dinosaur
 @k.objects.mb907 k.objects.object name=dinosaur core.source="mulberry fa94a93"
@@ -507,7 +507,7 @@
 @k.objects.mb907.p16.3 k.objects.point part=$k.objects.mb907.p16 n=3 x=91.4 y=35.7 core.source="mulberry fa94a93"
 @k.objects.mb907.p16.4 k.objects.point part=$k.objects.mb907.p16 n=4 x=76.6 y=35.4 core.source="mulberry fa94a93"
 @k.objects.mb907.p16.5 k.objects.point part=$k.objects.mb907.p16 n=5 x=73.9 y=49.3 core.source="mulberry fa94a93"
-@k.objects.mb907.word core.word text=play text=toys means=dinosaur of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb907.keyword k.objects.keyword of=dinosaur text=play text=toys core.source="mulberry fa94a93"
 
 # doll
 @k.objects.mb936 k.objects.object name=doll core.source="mulberry fa94a93"
@@ -706,7 +706,7 @@
 @k.objects.mb936.p16.19 k.objects.point part=$k.objects.mb936.p16 n=19 x=73.9 y=25.7 core.source="mulberry fa94a93"
 @k.objects.mb936.p16.20 k.objects.point part=$k.objects.mb936.p16 n=20 x=71.3 y=29.6 core.source="mulberry fa94a93"
 @k.objects.mb936.p16.21 k.objects.point part=$k.objects.mb936.p16 n=21 x=66.6 y=29.4 core.source="mulberry fa94a93"
-@k.objects.mb936.word core.word text=play text=toys means=doll of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb936.keyword k.objects.keyword of=doll text=play text=toys core.source="mulberry fa94a93"
 
 # drumsticks
 @k.objects.mb974 k.objects.object name=drumsticks core.source="mulberry fa94a93"
@@ -1025,7 +1025,7 @@
 @k.objects.mb1097.p16.8 k.objects.point part=$k.objects.mb1097.p16 n=8 x=42.4 y=87.7 core.source="mulberry fa94a93"
 @k.objects.mb1097.p16.9 k.objects.point part=$k.objects.mb1097.p16 n=9 x=44.6 y=88.7 core.source="mulberry fa94a93"
 @k.objects.mb1097.p16.10 k.objects.point part=$k.objects.mb1097.p16 n=10 x=50.2 y=89.5 core.source="mulberry fa94a93"
-@k.objects.mb1097.word core.word text=communication means="fibre optic lamp" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1097.keyword k.objects.keyword of="fibre optic lamp" text=communication core.source="mulberry fa94a93"
 
 # finger puppet
 @k.objects.mb1110 k.objects.object name="finger puppet" core.source="mulberry fa94a93"
@@ -1238,7 +1238,7 @@
 @k.objects.mb1110.p16.7 k.objects.point part=$k.objects.mb1110.p16 n=7 x=70.9 y=7.8 core.source="mulberry fa94a93"
 @k.objects.mb1110.p16.8 k.objects.point part=$k.objects.mb1110.p16 n=8 x=69.4 y=8.1 core.source="mulberry fa94a93"
 @k.objects.mb1110.p16.9 k.objects.point part=$k.objects.mb1110.p16 n=9 x=68.2 y=9.1 core.source="mulberry fa94a93"
-@k.objects.mb1110.word core.word text=play text=toys means="finger puppet" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1110.keyword k.objects.keyword of="finger puppet" text=play text=toys core.source="mulberry fa94a93"
 
 # jack in box
 @k.objects.mb1732 k.objects.object name="jack in box" core.source="mulberry fa94a93"
@@ -1387,4 +1387,4 @@
 @k.objects.mb1732.p16.7 k.objects.point part=$k.objects.mb1732.p16 n=7 x=52.8 y=37.9 core.source="mulberry fa94a93"
 @k.objects.mb1732.p16.8 k.objects.point part=$k.objects.mb1732.p16 n=8 x=52.6 y=52.5 core.source="mulberry fa94a93"
 @k.objects.mb1732.p16.9 k.objects.point part=$k.objects.mb1732.p16 n=9 x=47 y=52.5 core.source="mulberry fa94a93"
-@k.objects.mb1732.word core.word text=play text=toys means="jack in box" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1732.keyword k.objects.keyword of="jack in box" text=play text=toys core.source="mulberry fa94a93"

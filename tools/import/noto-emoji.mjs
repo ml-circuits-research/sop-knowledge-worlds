@@ -55,7 +55,7 @@ const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g
 export function importNoto({ list, annotations, svg, partNames, taken = new Set() }, { limit = 0, perShard = 8, maxWires = 1900, maxBytes = 280000 } = {}) {
   const ann = annotations.annotations.annotations;
   const named = readPartNames(partNames);
-  const stats = { listed: 0, objects: 0, parts: 0, points: 0, words: 0, named: 0, shards: 0, skipped: { notThing: 0, noName: 0, noSvg: 0, noParts: 0, handWritten: [] } };
+  const stats = { listed: 0, objects: 0, parts: 0, points: 0, keywords: 0, named: 0, shards: 0, skipped: { notThing: 0, noName: 0, noSvg: 0, noParts: 0, handWritten: [] } };
   let entries = [];
   const seen = new Set();
   for (const e of readEmojiList(list)) {
@@ -93,8 +93,9 @@ export function importNoto({ list, annotations, svg, partNames, taken = new Set(
       stats.points += p.points?.length ?? 0;
     });
     stats.parts += parts.length;
+    // CLDR's keywords are search words, not names (Q67 b): a k.objects.keyword fact, never a core.word.
     const words = [...new Set(e.keywords)];
-    if (words.length) { lines.push(wire(`${uid}.word`, 'core.word', [...words.map((k) => ['text', k]), ['means', e.name], ['of', 'k.objects.object.name']], CLDR)); stats.words++; }
+    if (words.length) { lines.push(wire(`${uid}.keyword`, 'k.objects.keyword', [['of', e.name], ...words.map((k) => ['text', k])], CLDR)); stats.keywords++; }
     objects.push({ ...e, lines, bytes: lines.reduce((n, l) => n + Buffer.byteLength(l) + 1, 0) });
     stats.objects++;
   }

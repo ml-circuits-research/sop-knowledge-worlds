@@ -293,7 +293,7 @@
 @k.objects.ome345.p6.3 k.objects.point part=$k.objects.ome345.p6 n=3 x=49.9 y=69.9 core.source="openmoji 3e01de5"
 @k.objects.ome345.p6.4 k.objects.point part=$k.objects.ome345.p6 n=4 x=51.9 y=68.9 core.source="openmoji 3e01de5"
 @k.objects.ome345.p6.5 k.objects.point part=$k.objects.ome345.p6 n=5 x=55.8 y=60.4 core.source="openmoji 3e01de5"
-@k.objects.ome345.word core.word text=shovel means=spade of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome345.keyword k.objects.keyword of=spade text=shovel core.source="openmoji 3e01de5"
 
 # trowel
 @k.objects.ome346 k.objects.object name=trowel core.source="openmoji 3e01de5"
@@ -359,7 +359,7 @@
 @k.objects.ome346.p7.4 k.objects.point part=$k.objects.ome346.p7 n=4 x=51.8 y=57.7 core.source="openmoji 3e01de5"
 @k.objects.ome346.p7.5 k.objects.point part=$k.objects.ome346.p7 n=5 x=55 y=50.2 core.source="openmoji 3e01de5"
 @k.objects.ome346.p8 k.objects.part of=trowel name=part8 named=no shape=circle x=47.1 y=22 w=5.3 h=5.3 z=8 colour=black rgb="#000000" core.source="openmoji 3e01de5"
-@k.objects.ome346.word core.word text=shovel means=trowel of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome346.keyword k.objects.keyword of=trowel text=shovel core.source="openmoji 3e01de5"
 
 # saw
 @k.objects.ome348 k.objects.object name=saw core.source="openmoji 3e01de5"
@@ -438,4 +438,4 @@
 @k.objects.ome348.p5.2 k.objects.point part=$k.objects.ome348.p5 n=2 x=63.6 y=67.5 core.source="openmoji 3e01de5"
 @k.objects.ome348.p5.3 k.objects.point part=$k.objects.ome348.p5 n=3 x=78.8 y=65.8 core.source="openmoji 3e01de5"
 @k.objects.ome348.p5.4 k.objects.point part=$k.objects.ome348.p5 n=4 x=68.9 y=55.1 core.source="openmoji 3e01de5"
-@k.objects.ome348.word core.word text=foxtail text=carpentry text=wood text=branch text="rip saw" means=saw of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome348.keyword k.objects.keyword of=saw text=foxtail text=carpentry text=wood text=branch text="rip saw" core.source="openmoji 3e01de5"

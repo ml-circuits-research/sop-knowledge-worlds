@@ -192,7 +192,7 @@
 @k.objects.mb85.p16.36 k.objects.point part=$k.objects.mb85.p16 n=36 x=39 y=44.8 core.source="mulberry fa94a93"
 @k.objects.mb85.p16.37 k.objects.point part=$k.objects.mb85.p16 n=37 x=34.7 y=45.7 core.source="mulberry fa94a93"
 @k.objects.mb85.p16.38 k.objects.point part=$k.objects.mb85.p16 n=38 x=32.6 y=43.7 core.source="mulberry fa94a93"
-@k.objects.mb85.word core.word text=animal text=gardening means="back garden" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb85.keyword k.objects.keyword of="back garden" text=animal text=gardening core.source="mulberry fa94a93"
 
 # barbeque
 @k.objects.mb115 k.objects.object name=barbeque core.source="mulberry fa94a93"
@@ -351,7 +351,7 @@
 @k.objects.mb115.p16 k.objects.part of=barbeque name=part16 kind=detail named=no shape=line x=30.8 y=60.8 w=37.9 h=0.7 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb115.p16.1 k.objects.point part=$k.objects.mb115.p16 n=1 x=30.8 y=61.5 core.source="mulberry fa94a93"
 @k.objects.mb115.p16.2 k.objects.point part=$k.objects.mb115.p16 n=2 x=68.7 y=60.8 core.source="mulberry fa94a93"
-@k.objects.mb115.word core.word text=home text=house means=barbeque of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb115.keyword k.objects.keyword of=barbeque text=home text=house core.source="mulberry fa94a93"
 
 # bench
 @k.objects.mb164 k.objects.object name=bench core.source="mulberry fa94a93"
@@ -430,7 +430,7 @@
 @k.objects.mb164.p16 k.objects.part of=bench name=part16 kind=detail named=no shape=line x=28.8 y=24.3 w=3.2 h=22 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb164.p16.1 k.objects.point part=$k.objects.mb164.p16 n=1 x=28.8 y=24.3 core.source="mulberry fa94a93"
 @k.objects.mb164.p16.2 k.objects.point part=$k.objects.mb164.p16 n=2 x=32 y=46.3 core.source="mulberry fa94a93"
-@k.objects.mb164.word core.word text=gardening means=bench of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb164.keyword k.objects.keyword of=bench text=gardening core.source="mulberry fa94a93"
 
 # bonfire
 @k.objects.mb216 k.objects.object name=bonfire core.source="mulberry fa94a93"
@@ -638,7 +638,7 @@
 @k.objects.mb216.p16.25 k.objects.point part=$k.objects.mb216.p16 n=25 x=62.6 y=54 core.source="mulberry fa94a93"
 @k.objects.mb216.p16.26 k.objects.point part=$k.objects.mb216.p16 n=26 x=62.9 y=57.1 core.source="mulberry fa94a93"
 @k.objects.mb216.p16.27 k.objects.point part=$k.objects.mb216.p16 n=27 x=61.5 y=62.6 core.source="mulberry fa94a93"
-@k.objects.mb216.word core.word text=celebration means=bonfire of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb216.keyword k.objects.keyword of=bonfire text=celebration core.source="mulberry fa94a93"
 
 # field
 @k.objects.mb1098 k.objects.object name=field core.source="mulberry fa94a93"
@@ -813,7 +813,7 @@
 @k.objects.mb1098.p16.4 k.objects.point part=$k.objects.mb1098.p16 n=4 x=49.5 y=15.9 core.source="mulberry fa94a93"
 @k.objects.mb1098.p16.5 k.objects.point part=$k.objects.mb1098.p16 n=5 x=54.2 y=18 core.source="mulberry fa94a93"
 @k.objects.mb1098.p16.6 k.objects.point part=$k.objects.mb1098.p16 n=6 x=58.8 y=21.1 core.source="mulberry fa94a93"
-@k.objects.mb1098.word core.word text=animal means=field of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1098.keyword k.objects.keyword of=field text=animal core.source="mulberry fa94a93"
 
 # pond
 @k.objects.mb2279 k.objects.object name=pond core.source="mulberry fa94a93"
@@ -1000,4 +1000,4 @@
 @k.objects.mb2279.p16.6 k.objects.point part=$k.objects.mb2279.p16 n=6 x=73.4 y=27.2 core.source="mulberry fa94a93"
 @k.objects.mb2279.p16.7 k.objects.point part=$k.objects.mb2279.p16 n=7 x=75.9 y=32.2 core.source="mulberry fa94a93"
 @k.objects.mb2279.p16.8 k.objects.point part=$k.objects.mb2279.p16 n=8 x=79.8 y=50.9 core.source="mulberry fa94a93"
-@k.objects.mb2279.word core.word text=animal means=pond of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2279.keyword k.objects.keyword of=pond text=animal core.source="mulberry fa94a93"

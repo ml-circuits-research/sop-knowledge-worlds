@@ -180,7 +180,7 @@
 @k.objects.mb42.p16.3 k.objects.point part=$k.objects.mb42.p16 n=3 x=24.3 y=43.4 core.source="mulberry fa94a93"
 @k.objects.mb42.p16.4 k.objects.point part=$k.objects.mb42.p16 n=4 x=23.9 y=44.8 core.source="mulberry fa94a93"
 @k.objects.mb42.p16.5 k.objects.point part=$k.objects.mb42.p16 n=5 x=22.6 y=46.2 core.source="mulberry fa94a93"
-@k.objects.mb42.word core.word text=animal text=mammal text=wild text=zoo means="ant eater" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb42.keyword k.objects.keyword of="ant eater" text=animal text=mammal text=wild text=zoo core.source="mulberry fa94a93"
 
 # antelope
 @k.objects.mb43 k.objects.object name=antelope core.source="mulberry fa94a93"
@@ -360,7 +360,7 @@
 @k.objects.mb43.p16.1 k.objects.point part=$k.objects.mb43.p16 n=1 x=78.9 y=71.5 core.source="mulberry fa94a93"
 @k.objects.mb43.p16.2 k.objects.point part=$k.objects.mb43.p16 n=2 x=78.5 y=91.6 core.source="mulberry fa94a93"
 @k.objects.mb43.p16.3 k.objects.point part=$k.objects.mb43.p16 n=3 x=75 y=91.5 core.source="mulberry fa94a93"
-@k.objects.mb43.word core.word text=animal text=mammal text=wild text=zoo means=antelope of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb43.keyword k.objects.keyword of=antelope text=animal text=mammal text=wild text=zoo core.source="mulberry fa94a93"
 
 # buffalo
 @k.objects.mb302 k.objects.object name=buffalo core.source="mulberry fa94a93"
@@ -572,7 +572,7 @@
 @k.objects.mb302.p16.12 k.objects.point part=$k.objects.mb302.p16 n=12 x=52.8 y=32.8 core.source="mulberry fa94a93"
 @k.objects.mb302.p16.13 k.objects.point part=$k.objects.mb302.p16 n=13 x=54.3 y=36.4 core.source="mulberry fa94a93"
 @k.objects.mb302.p16.14 k.objects.point part=$k.objects.mb302.p16 n=14 x=56.7 y=37.6 core.source="mulberry fa94a93"
-@k.objects.mb302.word core.word text=animal text=mammal means=buffalo of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb302.keyword k.objects.keyword of=buffalo text=animal text=mammal core.source="mulberry fa94a93"
 
 # cheetah
 @k.objects.mb448 k.objects.object name=cheetah core.source="mulberry fa94a93"
@@ -784,7 +784,7 @@
 @k.objects.mb448.p16.13 k.objects.point part=$k.objects.mb448.p16 n=13 x=88.4 y=26.9 core.source="mulberry fa94a93"
 @k.objects.mb448.p16.14 k.objects.point part=$k.objects.mb448.p16 n=14 x=86.9 y=26.2 core.source="mulberry fa94a93"
 @k.objects.mb448.p16.15 k.objects.point part=$k.objects.mb448.p16 n=15 x=82.4 y=28.7 core.source="mulberry fa94a93"
-@k.objects.mb448.word core.word text=animal text=mammal text=wild text=zoo means=cheetah of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb448.keyword k.objects.keyword of=cheetah text=animal text=mammal text=wild text=zoo core.source="mulberry fa94a93"
 
 # chimpanzee
 @k.objects.mb470 k.objects.object name=chimpanzee core.source="mulberry fa94a93"
@@ -993,7 +993,7 @@
 @k.objects.mb470.p16.2 k.objects.point part=$k.objects.mb470.p16 n=2 x=47.4 y=74.9 core.source="mulberry fa94a93"
 @k.objects.mb470.p16.3 k.objects.point part=$k.objects.mb470.p16 n=3 x=54.1 y=76.9 core.source="mulberry fa94a93"
 @k.objects.mb470.p16.4 k.objects.point part=$k.objects.mb470.p16 n=4 x=63.2 y=73.1 core.source="mulberry fa94a93"
-@k.objects.mb470.word core.word text=animal text=mammal text=wild text=zoo means=chimpanzee of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb470.keyword k.objects.keyword of=chimpanzee text=animal text=mammal text=wild text=zoo core.source="mulberry fa94a93"
 
 # ferret
 @k.objects.mb1095 k.objects.object name=ferret core.source="mulberry fa94a93"
@@ -1195,7 +1195,7 @@
 @k.objects.mb1095.p14.1 k.objects.point part=$k.objects.mb1095.p14 n=1 x=15.8 y=38.7 core.source="mulberry fa94a93"
 @k.objects.mb1095.p14.2 k.objects.point part=$k.objects.mb1095.p14 n=2 x=17.7 y=36.8 core.source="mulberry fa94a93"
 @k.objects.mb1095.p14.3 k.objects.point part=$k.objects.mb1095.p14 n=3 x=20.3 y=36.5 core.source="mulberry fa94a93"
-@k.objects.mb1095.word core.word text=animal text=pet means=ferret of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1095.keyword k.objects.keyword of=ferret text=animal text=pet core.source="mulberry fa94a93"
 
 # guinea pig
 @k.objects.mb1575 k.objects.object name="guinea pig" core.source="mulberry fa94a93"
@@ -1386,7 +1386,7 @@
 @k.objects.mb1575.p14.4 k.objects.point part=$k.objects.mb1575.p14 n=4 x=62.8 y=30.6 core.source="mulberry fa94a93"
 @k.objects.mb1575.p14.5 k.objects.point part=$k.objects.mb1575.p14 n=5 x=63.6 y=28.7 core.source="mulberry fa94a93"
 @k.objects.mb1575.p14.6 k.objects.point part=$k.objects.mb1575.p14 n=6 x=64.9 y=27.6 core.source="mulberry fa94a93"
-@k.objects.mb1575.word core.word text=animal text=pet means="guinea pig" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1575.keyword k.objects.keyword of="guinea pig" text=animal text=pet core.source="mulberry fa94a93"
 
 # hare
 @k.objects.mb1619 k.objects.object name=hare core.source="mulberry fa94a93"
@@ -1593,4 +1593,4 @@
 @k.objects.mb1619.p16.5 k.objects.point part=$k.objects.mb1619.p16 n=5 x=18.2 y=89.6 core.source="mulberry fa94a93"
 @k.objects.mb1619.p16.6 k.objects.point part=$k.objects.mb1619.p16 n=6 x=19.8 y=89.9 core.source="mulberry fa94a93"
 @k.objects.mb1619.p16.7 k.objects.point part=$k.objects.mb1619.p16 n=7 x=22.7 y=89.2 core.source="mulberry fa94a93"
-@k.objects.mb1619.word core.word text=animal text=wild means=hare of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1619.keyword k.objects.keyword of=hare text=animal text=wild core.source="mulberry fa94a93"

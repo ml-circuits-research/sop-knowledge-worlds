@@ -194,7 +194,7 @@
 @k.objects.mb2004.p11.1 k.objects.point part=$k.objects.mb2004.p11 n=1 x=13.9 y=66.5 core.source="mulberry fa94a93"
 @k.objects.mb2004.p11.2 k.objects.point part=$k.objects.mb2004.p11 n=2 x=19.9 y=63 core.source="mulberry fa94a93"
 @k.objects.mb2004.p11.3 k.objects.point part=$k.objects.mb2004.p11 n=3 x=28.3 y=60.8 core.source="mulberry fa94a93"
-@k.objects.mb2004.word core.word text=animal text=shellfish means=mussel of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2004.keyword k.objects.keyword of=mussel text=animal text=shellfish core.source="mulberry fa94a93"
 
 # prawn
 @k.objects.mb2309 k.objects.object name=prawn core.source="mulberry fa94a93"
@@ -358,7 +358,7 @@
 @k.objects.mb2309.p16.8 k.objects.point part=$k.objects.mb2309.p16 n=8 x=52 y=69.3 core.source="mulberry fa94a93"
 @k.objects.mb2309.p16.9 k.objects.point part=$k.objects.mb2309.p16 n=9 x=61.1 y=69.3 core.source="mulberry fa94a93"
 @k.objects.mb2309.p16.10 k.objects.point part=$k.objects.mb2309.p16 n=10 x=71.6 y=67.7 core.source="mulberry fa94a93"
-@k.objects.mb2309.word core.word text=animal text=fish text=shellfish means=prawn of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2309.keyword k.objects.keyword of=prawn text=animal text=fish text=shellfish core.source="mulberry fa94a93"
 
 # slug
 @k.objects.mb2602 k.objects.object name=slug core.source="mulberry fa94a93"
@@ -562,4 +562,4 @@
 @k.objects.mb2602.p16.3 k.objects.point part=$k.objects.mb2602.p16 n=3 x=46.5 y=65.5 core.source="mulberry fa94a93"
 @k.objects.mb2602.p16.4 k.objects.point part=$k.objects.mb2602.p16 n=4 x=58.7 y=68.9 core.source="mulberry fa94a93"
 @k.objects.mb2602.p16.5 k.objects.point part=$k.objects.mb2602.p16 n=5 x=61 y=71 core.source="mulberry fa94a93"
-@k.objects.mb2602.word core.word text=insect means=slug of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2602.keyword k.objects.keyword of=slug text=insect core.source="mulberry fa94a93"

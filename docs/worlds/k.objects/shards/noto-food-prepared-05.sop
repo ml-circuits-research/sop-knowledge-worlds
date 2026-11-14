@@ -211,7 +211,7 @@
 @k.objects.u1f9c2.p16.6 k.objects.point part=$k.objects.u1f9c2.p16 n=6 x=59.3 y=10.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c2.p16.7 k.objects.point part=$k.objects.u1f9c2.p16 n=7 x=56.7 y=9.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c2.p16.8 k.objects.point part=$k.objects.u1f9c2.p16 n=8 x=54.7 y=10.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f9c2.word core.word text=condiment text=flavor text=mad text=salty text=shaker text=taste text=upset means=salt of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9c2.keyword k.objects.keyword of=salt text=condiment text=flavor text=mad text=salty text=shaker text=taste text=upset core.source="cldr 48"
 
 # canned food
 @k.objects.u1f96b k.objects.object name="canned food" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -370,4 +370,4 @@
 @k.objects.u1f96b.p10.14 k.objects.point part=$k.objects.u1f96b.p10 n=14 x=46.1 y=54.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f96b.p10.15 k.objects.point part=$k.objects.u1f96b.p10 n=15 x=43 y=56.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f96b.p10.16 k.objects.point part=$k.objects.u1f96b.p10 n=16 x=40.2 y=60.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f96b.word core.word text=can text=canned text=food means="canned food" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f96b.keyword k.objects.keyword of="canned food" text=can text=canned text=food core.source="cldr 48"

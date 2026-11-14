@@ -172,7 +172,7 @@
 @k.objects.mb190.p15.6 k.objects.point part=$k.objects.mb190.p15 n=6 x=21.9 y=72.2 core.source="mulberry fa94a93"
 @k.objects.mb190.p15.7 k.objects.point part=$k.objects.mb190.p15 n=7 x=23 y=73 core.source="mulberry fa94a93"
 @k.objects.mb190.p15.8 k.objects.point part=$k.objects.mb190.p15 n=8 x=31.9 y=72.8 core.source="mulberry fa94a93"
-@k.objects.mb190.word core.word text=class text=school means=blackboard of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb190.keyword k.objects.keyword of=blackboard text=class text=school core.source="mulberry fa94a93"
 
 # dishwasher
 @k.objects.mb919 k.objects.object name=dishwasher core.source="mulberry fa94a93"
@@ -352,7 +352,7 @@
 @k.objects.mb919.p16.6 k.objects.point part=$k.objects.mb919.p16 n=6 x=22 y=91.6 core.source="mulberry fa94a93"
 @k.objects.mb919.p16.7 k.objects.point part=$k.objects.mb919.p16 n=7 x=71.9 y=86 core.source="mulberry fa94a93"
 @k.objects.mb919.p16.8 k.objects.point part=$k.objects.mb919.p16 n=8 x=71.9 y=71.9 core.source="mulberry fa94a93"
-@k.objects.mb919.word core.word text=home text=house means=dishwasher of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb919.keyword k.objects.keyword of=dishwasher text=home text=house core.source="mulberry fa94a93"
 
 # photocopier
 @k.objects.mb2206 k.objects.object name=photocopier core.source="mulberry fa94a93"
@@ -457,7 +457,7 @@
 @k.objects.mb2206.p16.2 k.objects.point part=$k.objects.mb2206.p16 n=2 x=41.3 y=16 core.source="mulberry fa94a93"
 @k.objects.mb2206.p16.3 k.objects.point part=$k.objects.mb2206.p16 n=3 x=51.8 y=10.4 core.source="mulberry fa94a93"
 @k.objects.mb2206.p16.4 k.objects.point part=$k.objects.mb2206.p16 n=4 x=83 y=12 core.source="mulberry fa94a93"
-@k.objects.mb2206.word core.word text=class text=office text=school text=stationery means=photocopier of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2206.keyword k.objects.keyword of=photocopier text=class text=office text=school text=stationery core.source="mulberry fa94a93"
 
 # whiteboard
 @k.objects.mb3061 k.objects.object name=whiteboard core.source="mulberry fa94a93"
@@ -600,4 +600,4 @@
 @k.objects.mb3061.p16.4 k.objects.point part=$k.objects.mb3061.p16 n=4 x=79.8 y=84.3 core.source="mulberry fa94a93"
 @k.objects.mb3061.p16.5 k.objects.point part=$k.objects.mb3061.p16 n=5 x=77.3 y=86.7 core.source="mulberry fa94a93"
 @k.objects.mb3061.p16.6 k.objects.point part=$k.objects.mb3061.p16 n=6 x=74.8 y=87.7 core.source="mulberry fa94a93"
-@k.objects.mb3061.word core.word text=class text=school means=whiteboard of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3061.keyword k.objects.keyword of=whiteboard text=class text=school core.source="mulberry fa94a93"

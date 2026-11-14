@@ -158,7 +158,7 @@
 @k.objects.mb47.p16.1 k.objects.point part=$k.objects.mb47.p16 n=1 x=60.4 y=18.8 core.source="mulberry fa94a93"
 @k.objects.mb47.p16.2 k.objects.point part=$k.objects.mb47.p16 n=2 x=70.6 y=24.7 core.source="mulberry fa94a93"
 @k.objects.mb47.p16.3 k.objects.point part=$k.objects.mb47.p16 n=3 x=70.6 y=42 core.source="mulberry fa94a93"
-@k.objects.mb47.word core.word text=DIY text=tools text=workshop means=apron of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb47.keyword k.objects.keyword of=apron text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # bolt
 @k.objects.mb213 k.objects.object name=bolt core.source="mulberry fa94a93"
@@ -359,7 +359,7 @@
 @k.objects.mb213.p16.7 k.objects.point part=$k.objects.mb213.p16 n=7 x=44.1 y=85.2 core.source="mulberry fa94a93"
 @k.objects.mb213.p16.8 k.objects.point part=$k.objects.mb213.p16 n=8 x=41.9 y=83.3 core.source="mulberry fa94a93"
 @k.objects.mb213.p16.9 k.objects.point part=$k.objects.mb213.p16 n=9 x=41.5 y=81.7 core.source="mulberry fa94a93"
-@k.objects.mb213.word core.word text=DIY text=tools text=workshop means=bolt of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb213.keyword k.objects.keyword of=bolt text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # cement mixer
 @k.objects.mb416 k.objects.object name="cement mixer" core.source="mulberry fa94a93"
@@ -666,7 +666,7 @@
 @k.objects.mb480.p12 k.objects.part of=chisel name=part12 kind=detail named=no shape=line x=50.1 y=13.2 w=0 h=28.2 z=12 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb480.p12.1 k.objects.point part=$k.objects.mb480.p12 n=1 x=50.1 y=41.4 core.source="mulberry fa94a93"
 @k.objects.mb480.p12.2 k.objects.point part=$k.objects.mb480.p12 n=2 x=50.1 y=13.2 core.source="mulberry fa94a93"
-@k.objects.mb480.word core.word text=DIY text=tools text=workshop means=chisel of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb480.keyword k.objects.keyword of=chisel text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # crane
 @k.objects.mb813 k.objects.object name=crane core.source="mulberry fa94a93"
@@ -965,7 +965,7 @@
 @k.objects.mb957.p14 k.objects.part of="drill bit" name=part14 kind=detail named=no shape=line x=47.8 y=51.4 w=4.7 h=5.9 z=14 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb957.p14.1 k.objects.point part=$k.objects.mb957.p14 n=1 x=47.8 y=57.3 core.source="mulberry fa94a93"
 @k.objects.mb957.p14.2 k.objects.point part=$k.objects.mb957.p14 n=2 x=52.5 y=51.4 core.source="mulberry fa94a93"
-@k.objects.mb957.word core.word text=DIY text=tools text=workshop means="drill bit" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb957.keyword k.objects.keyword of="drill bit" text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # drill electric
 @k.objects.mb958 k.objects.object name="drill electric" core.source="mulberry fa94a93"
@@ -1109,4 +1109,4 @@
 @k.objects.mb958.p16.1 k.objects.point part=$k.objects.mb958.p16 n=1 x=83.2 y=66.8 core.source="mulberry fa94a93"
 @k.objects.mb958.p16.2 k.objects.point part=$k.objects.mb958.p16 n=2 x=82.5 y=73.9 core.source="mulberry fa94a93"
 @k.objects.mb958.p16.3 k.objects.point part=$k.objects.mb958.p16 n=3 x=81 y=79.2 core.source="mulberry fa94a93"
-@k.objects.mb958.word core.word text=DIY text=tools text=workshop means="drill electric" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb958.keyword k.objects.keyword of="drill electric" text=DIY text=tools text=workshop core.source="mulberry fa94a93"

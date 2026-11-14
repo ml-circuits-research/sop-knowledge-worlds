@@ -145,7 +145,7 @@
 @k.objects.u1f4d4.p11.15 k.objects.point part=$k.objects.u1f4d4.p11 n=15 x=42.6 y=22.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d4.p11.16 k.objects.point part=$k.objects.u1f4d4.p11 n=16 x=37.9 y=23.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d4.p11.17 k.objects.point part=$k.objects.u1f4d4.p11 n=17 x=37.2 y=24.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d4.word core.word text=book text=cover text=decorated text=decorative text=education text=notebook text=school text=writing means="notebook with decorative cover" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d4.keyword k.objects.keyword of="notebook with decorative cover" text=book text=cover text=decorated text=decorative text=education text=notebook text=school text=writing core.source="cldr 48"
 
 # closed book
 @k.objects.u1f4d5 k.objects.object name="closed book" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -236,7 +236,7 @@
 @k.objects.u1f4d5.p8.5 k.objects.point part=$k.objects.u1f4d5.p8 n=5 x=15.6 y=92.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d5.p8.6 k.objects.point part=$k.objects.u1f4d5.p8 n=6 x=18 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d5.p8.7 k.objects.point part=$k.objects.u1f4d5.p8 n=7 x=28.5 y=93.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d5.word core.word text=book text=closed text=education means="closed book" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d5.keyword k.objects.keyword of="closed book" text=book text=closed text=education core.source="cldr 48"
 
 # open book
 @k.objects.u1f4d6 k.objects.object name="open book" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -416,7 +416,7 @@
 @k.objects.u1f4d6.p16.12 k.objects.point part=$k.objects.u1f4d6.p16 n=12 x=51.9 y=82.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d6.p16.13 k.objects.point part=$k.objects.u1f4d6.p16 n=13 x=54.2 y=81.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d6.p16.14 k.objects.point part=$k.objects.u1f4d6.p16 n=14 x=55.6 y=79.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d6.word core.word text=book text=education text=fantasy text=knowledge text=library text=novels text=open text=reading means="open book" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d6.keyword k.objects.keyword of="open book" text=book text=education text=fantasy text=knowledge text=library text=novels text=open text=reading core.source="cldr 48"
 
 # green book
 @k.objects.u1f4d7 k.objects.object name="green book" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -507,7 +507,7 @@
 @k.objects.u1f4d7.p8.5 k.objects.point part=$k.objects.u1f4d7.p8 n=5 x=15.6 y=92.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d7.p8.6 k.objects.point part=$k.objects.u1f4d7.p8 n=6 x=18 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d7.p8.7 k.objects.point part=$k.objects.u1f4d7.p8 n=7 x=28.5 y=93.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d7.word core.word text=book text=education text=fantasy text=green text=library text=reading means="green book" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d7.keyword k.objects.keyword of="green book" text=book text=education text=fantasy text=green text=library text=reading core.source="cldr 48"
 
 # blue book
 @k.objects.u1f4d8 k.objects.object name="blue book" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -598,7 +598,7 @@
 @k.objects.u1f4d8.p8.5 k.objects.point part=$k.objects.u1f4d8.p8 n=5 x=15.6 y=92.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d8.p8.6 k.objects.point part=$k.objects.u1f4d8.p8 n=6 x=18 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d8.p8.7 k.objects.point part=$k.objects.u1f4d8.p8 n=7 x=28.5 y=93.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d8.word core.word text=blue text=book text=education text=fantasy text=library text=reading means="blue book" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d8.keyword k.objects.keyword of="blue book" text=blue text=book text=education text=fantasy text=library text=reading core.source="cldr 48"
 
 # orange book
 @k.objects.u1f4d9 k.objects.object name="orange book" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -689,7 +689,7 @@
 @k.objects.u1f4d9.p8.5 k.objects.point part=$k.objects.u1f4d9.p8 n=5 x=15.6 y=92.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d9.p8.6 k.objects.point part=$k.objects.u1f4d9.p8 n=6 x=18 y=93.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4d9.p8.7 k.objects.point part=$k.objects.u1f4d9.p8 n=7 x=28.5 y=93.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f4d9.word core.word text=book text=education text=fantasy text=library text=orange text=reading means="orange book" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4d9.keyword k.objects.keyword of="orange book" text=book text=education text=fantasy text=library text=orange text=reading core.source="cldr 48"
 
 # books
 @k.objects.u1f4da k.objects.object name=books core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -886,7 +886,7 @@
 @k.objects.u1f4da.p16.7 k.objects.point part=$k.objects.u1f4da.p16 n=7 x=41.4 y=4.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4da.p16.8 k.objects.point part=$k.objects.u1f4da.p16 n=8 x=38.4 y=5.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4da.p16.9 k.objects.point part=$k.objects.u1f4da.p16 n=9 x=30.9 y=8.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f4da.word core.word text=book text=education text=fantasy text=knowledge text=library text=novels text=reading text=school text=study means=books of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4da.keyword k.objects.keyword of=books text=book text=education text=fantasy text=knowledge text=library text=novels text=reading text=school text=study core.source="cldr 48"
 
 # notebook
 @k.objects.u1f4d3 k.objects.object name=notebook core.source="noto-emoji 99701e0" core.source="cldr 48"

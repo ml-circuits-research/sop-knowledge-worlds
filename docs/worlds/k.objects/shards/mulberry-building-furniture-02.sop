@@ -425,7 +425,7 @@
 @k.objects.mb453.p16 k.objects.part of="chest of drawers" name=part16 kind=detail named=no shape=line x=16.7 y=56.7 w=53.3 h=7.7 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb453.p16.1 k.objects.point part=$k.objects.mb453.p16 n=1 x=16.7 y=56.7 core.source="mulberry fa94a93"
 @k.objects.mb453.p16.2 k.objects.point part=$k.objects.mb453.p16 n=2 x=70 y=64.4 core.source="mulberry fa94a93"
-@k.objects.mb453.word core.word text=home text=house means="chest of drawers" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb453.keyword k.objects.keyword of="chest of drawers" text=home text=house core.source="mulberry fa94a93"
 
 # coffee table
 @k.objects.mb553 k.objects.object name="coffee table" core.source="mulberry fa94a93"
@@ -726,7 +726,7 @@
 @k.objects.mb612.p16.1 k.objects.point part=$k.objects.mb612.p16 n=1 x=86.8 y=53.8 core.source="mulberry fa94a93"
 @k.objects.mb612.p16.2 k.objects.point part=$k.objects.mb612.p16 n=2 x=43.5 y=77.6 core.source="mulberry fa94a93"
 @k.objects.mb612.p16.3 k.objects.point part=$k.objects.mb612.p16 n=3 x=12.4 y=66.4 core.source="mulberry fa94a93"
-@k.objects.mb612.word core.word text=home text=house means=cot of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb612.keyword k.objects.keyword of=cot text=home text=house core.source="mulberry fa94a93"
 
 # cupboard
 @k.objects.mb844 k.objects.object name=cupboard core.source="mulberry fa94a93"
@@ -770,7 +770,7 @@
 @k.objects.mb844.p8 k.objects.part of=cupboard name=part8 kind=detail named=no shape=line x=37.3 y=32.4 w=0 h=11.7 z=8 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb844.p8.1 k.objects.point part=$k.objects.mb844.p8 n=1 x=37.3 y=32.4 core.source="mulberry fa94a93"
 @k.objects.mb844.p8.2 k.objects.point part=$k.objects.mb844.p8 n=2 x=37.3 y=44.1 core.source="mulberry fa94a93"
-@k.objects.mb844.word core.word text=home text=house means=cupboard of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb844.keyword k.objects.keyword of=cupboard text=home text=house core.source="mulberry fa94a93"
 
 # desk
 @k.objects.mb891 k.objects.object name=desk core.source="mulberry fa94a93"
@@ -822,4 +822,4 @@
 @k.objects.mb891.p9.1 k.objects.point part=$k.objects.mb891.p9 n=1 x=70.3 y=30.8 core.source="mulberry fa94a93"
 @k.objects.mb891.p9.2 k.objects.point part=$k.objects.mb891.p9 n=2 x=70.3 y=47.9 core.source="mulberry fa94a93"
 @k.objects.mb891.p9.3 k.objects.point part=$k.objects.mb891.p9 n=3 x=67.5 y=48.2 core.source="mulberry fa94a93"
-@k.objects.mb891.word core.word text=home text=house means=desk of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb891.keyword k.objects.keyword of=desk text=home text=house core.source="mulberry fa94a93"

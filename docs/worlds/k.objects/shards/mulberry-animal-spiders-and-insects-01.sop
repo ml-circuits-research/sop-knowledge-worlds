@@ -220,7 +220,7 @@
 @k.objects.mb150.p16.14 k.objects.point part=$k.objects.mb150.p16 n=14 x=13.1 y=37.5 core.source="mulberry fa94a93"
 @k.objects.mb150.p16.15 k.objects.point part=$k.objects.mb150.p16 n=15 x=20.1 y=42.7 core.source="mulberry fa94a93"
 @k.objects.mb150.p16.16 k.objects.point part=$k.objects.mb150.p16 n=16 x=34.2 y=49 core.source="mulberry fa94a93"
-@k.objects.mb150.word core.word text=insect means="bee bumble" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb150.keyword k.objects.keyword of="bee bumble" text=insect core.source="mulberry fa94a93"
 
 # bee honey
 @k.objects.mb151 k.objects.object name="bee honey" core.source="mulberry fa94a93"
@@ -396,7 +396,7 @@
 @k.objects.mb151.p16.9 k.objects.point part=$k.objects.mb151.p16 n=9 x=43.6 y=43.5 core.source="mulberry fa94a93"
 @k.objects.mb151.p16.10 k.objects.point part=$k.objects.mb151.p16 n=10 x=44.2 y=46.1 core.source="mulberry fa94a93"
 @k.objects.mb151.p16.11 k.objects.point part=$k.objects.mb151.p16 n=11 x=45.4 y=47.9 core.source="mulberry fa94a93"
-@k.objects.mb151.word core.word text=insect means="bee honey" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb151.keyword k.objects.keyword of="bee honey" text=insect core.source="mulberry fa94a93"
 
 # caterpillar
 @k.objects.mb403 k.objects.object name=caterpillar core.source="mulberry fa94a93"
@@ -610,7 +610,7 @@
 @k.objects.mb403.p16.3 k.objects.point part=$k.objects.mb403.p16 n=3 x=83.4 y=60.2 core.source="mulberry fa94a93"
 @k.objects.mb403.p16.4 k.objects.point part=$k.objects.mb403.p16 n=4 x=78.8 y=62.3 core.source="mulberry fa94a93"
 @k.objects.mb403.p16.5 k.objects.point part=$k.objects.mb403.p16 n=5 x=74.8 y=62.9 core.source="mulberry fa94a93"
-@k.objects.mb403.word core.word text=insect means=caterpillar of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb403.keyword k.objects.keyword of=caterpillar text=insect core.source="mulberry fa94a93"
 
 # centipede
 @k.objects.mb417 k.objects.object name=centipede core.source="mulberry fa94a93"
@@ -752,7 +752,7 @@
 @k.objects.mb417.p16.1 k.objects.point part=$k.objects.mb417.p16 n=1 x=79.9 y=83.7 core.source="mulberry fa94a93"
 @k.objects.mb417.p16.2 k.objects.point part=$k.objects.mb417.p16 n=2 x=76.2 y=81.4 core.source="mulberry fa94a93"
 @k.objects.mb417.p16.3 k.objects.point part=$k.objects.mb417.p16 n=3 x=66.4 y=79.6 core.source="mulberry fa94a93"
-@k.objects.mb417.word core.word text=insect means=centipede of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb417.keyword k.objects.keyword of=centipede text=insect core.source="mulberry fa94a93"
 
 # crane fly
 @k.objects.mb814 k.objects.object name="crane fly" core.source="mulberry fa94a93"
@@ -881,7 +881,7 @@
 @k.objects.mb814.p16.7 k.objects.point part=$k.objects.mb814.p16 n=7 x=49.7 y=37.5 core.source="mulberry fa94a93"
 @k.objects.mb814.p16.8 k.objects.point part=$k.objects.mb814.p16 n=8 x=50.7 y=37.9 core.source="mulberry fa94a93"
 @k.objects.mb814.p16.9 k.objects.point part=$k.objects.mb814.p16 n=9 x=51.1 y=38.9 core.source="mulberry fa94a93"
-@k.objects.mb814.word core.word text=insect means="crane fly" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb814.keyword k.objects.keyword of="crane fly" text=insect core.source="mulberry fa94a93"
 
 # dragonfly
 @k.objects.mb946 k.objects.object name=dragonfly core.source="mulberry fa94a93"
@@ -1082,7 +1082,7 @@
 @k.objects.mb946.p16.5 k.objects.point part=$k.objects.mb946.p16 n=5 x=50 y=43.1 core.source="mulberry fa94a93"
 @k.objects.mb946.p16.6 k.objects.point part=$k.objects.mb946.p16 n=6 x=50.6 y=44.3 core.source="mulberry fa94a93"
 @k.objects.mb946.p16.7 k.objects.point part=$k.objects.mb946.p16 n=7 x=50.6 y=76.2 core.source="mulberry fa94a93"
-@k.objects.mb946.word core.word text=insect means=dragonfly of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb946.keyword k.objects.keyword of=dragonfly text=insect core.source="mulberry fa94a93"
 
 # earwig
 @k.objects.mb1001 k.objects.object name=earwig core.source="mulberry fa94a93"
@@ -1210,7 +1210,7 @@
 @k.objects.mb1001.p16 k.objects.part of=earwig name=part16 kind=detail named=no shape=line x=43 y=59.4 w=14.3 h=0 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1001.p16.1 k.objects.point part=$k.objects.mb1001.p16 n=1 x=43 y=59.4 core.source="mulberry fa94a93"
 @k.objects.mb1001.p16.2 k.objects.point part=$k.objects.mb1001.p16 n=2 x=57.3 y=59.4 core.source="mulberry fa94a93"
-@k.objects.mb1001.word core.word text=insect means=earwig of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1001.keyword k.objects.keyword of=earwig text=insect core.source="mulberry fa94a93"
 
 # gnat
 @k.objects.mb1528 k.objects.object name=gnat core.source="mulberry fa94a93"
@@ -1383,4 +1383,4 @@
 @k.objects.mb1528.p16.3 k.objects.point part=$k.objects.mb1528.p16 n=3 x=59.7 y=61 core.source="mulberry fa94a93"
 @k.objects.mb1528.p16.4 k.objects.point part=$k.objects.mb1528.p16 n=4 x=56.9 y=73.5 core.source="mulberry fa94a93"
 @k.objects.mb1528.p16.5 k.objects.point part=$k.objects.mb1528.p16 n=5 x=65.8 y=90.6 core.source="mulberry fa94a93"
-@k.objects.mb1528.word core.word text=insect means=gnat of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1528.keyword k.objects.keyword of=gnat text=insect core.source="mulberry fa94a93"

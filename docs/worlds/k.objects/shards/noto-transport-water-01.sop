@@ -107,7 +107,7 @@
 @k.objects.u2693.p6.4 k.objects.point part=$k.objects.u2693.p6 n=4 x=55.4 y=46.1 core.source="noto-emoji 99701e0"
 @k.objects.u2693.p6.5 k.objects.point part=$k.objects.u2693.p6 n=5 x=65.8 y=44.4 core.source="noto-emoji 99701e0"
 @k.objects.u2693.p6.6 k.objects.point part=$k.objects.u2693.p6 n=6 x=67 y=43.6 core.source="noto-emoji 99701e0"
-@k.objects.u2693.word core.word text=ship text=tool means=anchor of=k.objects.object.name core.source="cldr 48"
+@k.objects.u2693.keyword k.objects.keyword of=anchor text=ship text=tool core.source="cldr 48"
 
 # ring buoy
 @k.objects.u1f6df k.objects.object name="ring buoy" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -321,7 +321,7 @@
 @k.objects.u1f6df.p16.9 k.objects.point part=$k.objects.u1f6df.p16 n=9 x=89.1 y=60 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p16.10 k.objects.point part=$k.objects.u1f6df.p16 n=10 x=87.7 y=59.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6df.p16.11 k.objects.point part=$k.objects.u1f6df.p16 n=11 x=79.7 y=57.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f6df.word core.word text=buoy text=float text=life text=lifesaver text=preserver text=rescue text=ring text=safety text=save text=saver text=swim means="ring buoy" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6df.keyword k.objects.keyword of="ring buoy" text=buoy text=float text=life text=lifesaver text=preserver text=rescue text=ring text=safety text=save text=saver text=swim core.source="cldr 48"
 
 # sailboat
 @k.objects.u26f5 k.objects.object name=sailboat core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -433,7 +433,7 @@
 @k.objects.u26f5.p16 k.objects.part of=sailboat name=part16 named=no shape=line x=55.5 y=71.7 w=28.8 h=0 z=16 colour=grey rgb="#82AEC0" core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p16.1 k.objects.point part=$k.objects.u26f5.p16 n=1 x=55.5 y=71.7 core.source="noto-emoji 99701e0"
 @k.objects.u26f5.p16.2 k.objects.point part=$k.objects.u26f5.p16 n=2 x=84.3 y=71.7 core.source="noto-emoji 99701e0"
-@k.objects.u26f5.word core.word text=boat text=resort text=sailing text=sea text=yacht means=sailboat of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26f5.keyword k.objects.keyword of=sailboat text=boat text=resort text=sailing text=sea text=yacht core.source="cldr 48"
 
 # canoe
 @k.objects.u1f6f6 k.objects.object name=canoe core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -584,7 +584,7 @@
 @k.objects.u1f6f6.p12.2 k.objects.point part=$k.objects.u1f6f6.p12 n=2 x=76.2 y=60.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f6.p12.3 k.objects.point part=$k.objects.u1f6f6.p12 n=3 x=72.9 y=56.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f6.p12.4 k.objects.point part=$k.objects.u1f6f6.p12 n=4 x=65.2 y=57.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f6.word core.word text=boat means=canoe of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6f6.keyword k.objects.keyword of=canoe text=boat core.source="cldr 48"
 
 # speedboat
 @k.objects.u1f6a4 k.objects.object name=speedboat core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -694,7 +694,7 @@
 @k.objects.u1f6a4.p11.2 k.objects.point part=$k.objects.u1f6a4.p11 n=2 x=47.7 y=60.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p11.3 k.objects.point part=$k.objects.u1f6a4.p11 n=3 x=51.2 y=62.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f6a4.p11.4 k.objects.point part=$k.objects.u1f6a4.p11 n=4 x=43.7 y=66.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f6a4.word core.word text=billionaire text=boat text=lake text=luxury text=millionaire text=summer text=travel means=speedboat of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6a4.keyword k.objects.keyword of=speedboat text=billionaire text=boat text=lake text=luxury text=millionaire text=summer text=travel core.source="cldr 48"
 
 # passenger ship
 @k.objects.u1f6f3 k.objects.object name="passenger ship" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -861,7 +861,7 @@
 @k.objects.u1f6f3.p16.2 k.objects.point part=$k.objects.u1f6f3.p16 n=2 x=42 y=55.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p16.3 k.objects.point part=$k.objects.u1f6f3.p16 n=3 x=41.1 y=49.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f6f3.p16.4 k.objects.point part=$k.objects.u1f6f3.p16 n=4 x=22.5 y=49 core.source="noto-emoji 99701e0"
-@k.objects.u1f6f3.word core.word text=passenger text=ship means="passenger ship" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6f3.keyword k.objects.keyword of="passenger ship" text=passenger text=ship core.source="cldr 48"
 
 # ferry
 @k.objects.u26f4 k.objects.object name=ferry core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -977,7 +977,7 @@
 @k.objects.u26f4.p16.3 k.objects.point part=$k.objects.u26f4.p16 n=3 x=92 y=53.3 core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p16.4 k.objects.point part=$k.objects.u26f4.p16 n=4 x=95.1 y=52.8 core.source="noto-emoji 99701e0"
 @k.objects.u26f4.p16.5 k.objects.point part=$k.objects.u26f4.p16 n=5 x=96.6 y=50 core.source="noto-emoji 99701e0"
-@k.objects.u26f4.word core.word text=boat text=passenger means=ferry of=k.objects.object.name core.source="cldr 48"
+@k.objects.u26f4.keyword k.objects.keyword of=ferry text=boat text=passenger core.source="cldr 48"
 
 # motor boat
 @k.objects.u1f6e5 k.objects.object name="motor boat" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1104,4 +1104,4 @@
 @k.objects.u1f6e5.p16.4 k.objects.point part=$k.objects.u1f6e5.p16 n=4 x=8.3 y=73.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e5.p16.5 k.objects.point part=$k.objects.u1f6e5.p16 n=5 x=49.6 y=75.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6e5.p16.6 k.objects.point part=$k.objects.u1f6e5.p16 n=6 x=86.7 y=78.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f6e5.word core.word text=boat text=motor text=motorboat means="motor boat" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6e5.keyword k.objects.keyword of="motor boat" text=boat text=motor text=motorboat core.source="cldr 48"

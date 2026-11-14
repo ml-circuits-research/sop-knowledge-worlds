@@ -26,6 +26,9 @@ const WORD_KEYS = new Set(['text', 'singular', 'ending']);
 // shape or a colour, the thing placed somewhere): a word for such a thing also leads to the fact ("what shape is a
 // stop sign" reaches the octagon). The kind is the key (k.shapes.shape.thing).
 const THING_KEYS = new Set(['thing']);
+// Q67 (b): the key of a type that holds search words (k.objects.keyword: the tags of an image library). A keyword
+// still leads to its shard, with the type as its kind, but after the shards that have the word as a name or a word.
+const SEARCH_KEYS = new Map([['k.objects.keyword', 'text']]);
 const isWordy = (t) => t && /\p{L}/u.test(t);
 const lemma = (t) => t.toLowerCase();
 const sourceId = (s) => text(s).trim().split(/\s+/).join('-');
@@ -98,7 +101,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   // means (capital: k.geo.country.capital); a reusable world's words name the world (w.seating).
   const kinds = new Map();
   // Reviewer 04:10 item 4: a shard reached by a word only through facts whose reading needs a context (a given name
-  // with `context=person`: Rose, Hope) is listed after the word's other shards, so a host that fetches the first
+  // with `context=person`: Rose, Hope; a keyword, Q67) is listed after the word's other shards, so a host that fetches the first
   // shards of a word fetches the common word's first; the rest of each list stays sorted.
   const plain = new Map();
   const addWord = (word, shardId, kind, needsContext = false) => {
@@ -139,6 +142,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
           for (const t of w.attrs.text ?? []) addWord(text(t), shard.id, kindOfWord(w));
           continue;
         }
+        if (SEARCH_KEYS.has(w.type)) for (const t of w.attrs[SEARCH_KEYS.get(w.type)] ?? []) addWord(text(t), shard.id, w.type, true);
         // a reusable world of facts (w.lang.en) names its own parts (frames, constructions, categories): only the
         // keys that hold English words make vocabulary
         for (const k of identityKeys(w.type).filter((x) => !world.id.startsWith('w.') || WORD_KEYS.has(x))) for (const t of w.attrs[k] ?? []) {

@@ -142,7 +142,7 @@
 @k.objects.u1f311.p10.35 k.objects.point part=$k.objects.u1f311.p10 n=35 x=45.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p10.36 k.objects.point part=$k.objects.u1f311.p10 n=36 x=49 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f311.p10.37 k.objects.point part=$k.objects.u1f311.p10 n=37 x=48 y=13.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f311.word core.word text=dark text=moon text=new text=space means="new moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f311.keyword k.objects.keyword of="new moon" text=dark text=moon text=new text=space core.source="cldr 48"
 
 # waxing crescent moon
 @k.objects.u1f312 k.objects.object name="waxing crescent moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -353,7 +353,7 @@
 @k.objects.u1f312.p12.36 k.objects.point part=$k.objects.u1f312.p12 n=36 x=45.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f312.p12.37 k.objects.point part=$k.objects.u1f312.p12 n=37 x=49 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f312.p12.38 k.objects.point part=$k.objects.u1f312.p12 n=38 x=48 y=13.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f312.word core.word text=crescent text=dreams text=moon text=space text=waxing means="waxing crescent moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f312.keyword k.objects.keyword of="waxing crescent moon" text=crescent text=dreams text=moon text=space text=waxing core.source="cldr 48"
 
 # first quarter moon
 @k.objects.u1f313 k.objects.object name="first quarter moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -539,7 +539,7 @@
 @k.objects.u1f313.p11.35 k.objects.point part=$k.objects.u1f313.p11 n=35 x=45.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p11.36 k.objects.point part=$k.objects.u1f313.p11 n=36 x=49 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f313.p11.37 k.objects.point part=$k.objects.u1f313.p11 n=37 x=48 y=13.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f313.word core.word text=first text=moon text=quarter text=space means="first quarter moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f313.keyword k.objects.keyword of="first quarter moon" text=first text=moon text=quarter text=space core.source="cldr 48"
 
 # waxing gibbous moon
 @k.objects.u1f314 k.objects.object name="waxing gibbous moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -733,7 +733,7 @@
 @k.objects.u1f314.p13.25 k.objects.point part=$k.objects.u1f314.p13 n=25 x=29.5 y=23.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f314.p13.26 k.objects.point part=$k.objects.u1f314.p13 n=26 x=37 y=12.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f314.p13.27 k.objects.point part=$k.objects.u1f314.p13 n=27 x=31.8 y=16.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f314.word core.word text=gibbous text=moon text=space text=waxing means="waxing gibbous moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f314.keyword k.objects.keyword of="waxing gibbous moon" text=gibbous text=moon text=space text=waxing core.source="cldr 48"
 
 # full moon
 @k.objects.u1f315 k.objects.object name="full moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -873,7 +873,7 @@
 @k.objects.u1f315.p10.35 k.objects.point part=$k.objects.u1f315.p10 n=35 x=45.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p10.36 k.objects.point part=$k.objects.u1f315.p10 n=36 x=49 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f315.p10.37 k.objects.point part=$k.objects.u1f315.p10 n=37 x=48 y=13.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f315.word core.word text=full text=moon text=space means="full moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f315.keyword k.objects.keyword of="full moon" text=full text=moon text=space core.source="cldr 48"
 
 # waning gibbous moon
 @k.objects.u1f316 k.objects.object name="waning gibbous moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1083,7 +1083,7 @@
 @k.objects.u1f316.p12.36 k.objects.point part=$k.objects.u1f316.p12 n=36 x=45.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f316.p12.37 k.objects.point part=$k.objects.u1f316.p12 n=37 x=49 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f316.p12.38 k.objects.point part=$k.objects.u1f316.p12 n=38 x=48 y=13.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f316.word core.word text=gibbous text=moon text=space text=waning means="waning gibbous moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f316.keyword k.objects.keyword of="waning gibbous moon" text=gibbous text=moon text=space text=waning core.source="cldr 48"
 
 # last quarter moon
 @k.objects.u1f317 k.objects.object name="last quarter moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1269,7 +1269,7 @@
 @k.objects.u1f317.p11.35 k.objects.point part=$k.objects.u1f317.p11 n=35 x=45.9 y=20.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p11.36 k.objects.point part=$k.objects.u1f317.p11 n=36 x=49 y=16.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f317.p11.37 k.objects.point part=$k.objects.u1f317.p11 n=37 x=48 y=13.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f317.word core.word text=last text=moon text=quarter text=space means="last quarter moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f317.keyword k.objects.keyword of="last quarter moon" text=last text=moon text=quarter text=space core.source="cldr 48"
 
 # waning crescent moon
 @k.objects.u1f318 k.objects.object name="waning crescent moon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1463,4 +1463,4 @@
 @k.objects.u1f318.p13.25 k.objects.point part=$k.objects.u1f318.p13 n=25 x=29.5 y=23.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f318.p13.26 k.objects.point part=$k.objects.u1f318.p13 n=26 x=37 y=12.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f318.p13.27 k.objects.point part=$k.objects.u1f318.p13 n=27 x=31.8 y=16.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f318.word core.word text=crescent text=moon text=space text=waning means="waning crescent moon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f318.keyword k.objects.keyword of="waning crescent moon" text=crescent text=moon text=space text=waning core.source="cldr 48"

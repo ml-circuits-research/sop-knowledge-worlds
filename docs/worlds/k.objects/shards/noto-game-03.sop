@@ -199,4 +199,4 @@
 @k.objects.u265f.p13.2 k.objects.point part=$k.objects.u265f.p13 n=2 x=32.1 y=74 core.source="noto-emoji 99701e0"
 @k.objects.u265f.p13.3 k.objects.point part=$k.objects.u265f.p13 n=3 x=30.9 y=72.9 core.source="noto-emoji 99701e0"
 @k.objects.u265f.p13.4 k.objects.point part=$k.objects.u265f.p13 n=4 x=29.8 y=74 core.source="noto-emoji 99701e0"
-@k.objects.u265f.word core.word text=chess text=dupe text=expendable text=pawn means="chess pawn" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u265f.keyword k.objects.keyword of="chess pawn" text=chess text=dupe text=expendable text=pawn core.source="cldr 48"

@@ -204,7 +204,7 @@
 @k.objects.u1f373.p9.6 k.objects.point part=$k.objects.u1f373.p9 n=6 x=44.7 y=29.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f373.p9.7 k.objects.point part=$k.objects.u1f373.p9 n=7 x=40.8 y=33.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f373.p9.8 k.objects.point part=$k.objects.u1f373.p9 n=8 x=39.2 y=38.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f373.word core.word text=breakfast text=easy text=egg text=fry text=frying text=over text=pan text=restaurant text=side text=sunny text=up means=cooking of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f373.keyword k.objects.keyword of=cooking text=breakfast text=easy text=egg text=fry text=frying text=over text=pan text=restaurant text=side text=sunny text=up core.source="cldr 48"
 
 # shallow pan of food
 @k.objects.u1f958 k.objects.object name="shallow pan of food" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -396,7 +396,7 @@
 @k.objects.u1f958.p16.4 k.objects.point part=$k.objects.u1f958.p16 n=4 x=18.8 y=53.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f958.p16.5 k.objects.point part=$k.objects.u1f958.p16 n=5 x=21.4 y=56.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f958.p16.6 k.objects.point part=$k.objects.u1f958.p16 n=6 x=22.1 y=54.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f958.word core.word text=casserole text=food text=paella text=pan text=shallow means="shallow pan of food" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f958.keyword k.objects.keyword of="shallow pan of food" text=casserole text=food text=paella text=pan text=shallow core.source="cldr 48"
 
 # pot of food
 @k.objects.u1f372 k.objects.object name="pot of food" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -596,7 +596,7 @@
 @k.objects.u1f372.p16.35 k.objects.point part=$k.objects.u1f372.p16 n=35 x=95.5 y=53.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f372.p16.36 k.objects.point part=$k.objects.u1f372.p16 n=36 x=96.7 y=52.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f372.p16.37 k.objects.point part=$k.objects.u1f372.p16 n=37 x=96.9 y=48.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f372.word core.word text=food text=pot text=soup text=stew means="pot of food" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f372.keyword k.objects.keyword of="pot of food" text=food text=pot text=soup text=stew core.source="cldr 48"
 
 # fondue
 @k.objects.u1fad5 k.objects.object name=fondue core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -798,7 +798,7 @@
 @k.objects.u1fad5.p16.2 k.objects.point part=$k.objects.u1fad5.p16 n=2 x=40 y=32.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fad5.p16.3 k.objects.point part=$k.objects.u1fad5.p16 n=3 x=44.8 y=32.7 core.source="noto-emoji 99701e0"
 @k.objects.u1fad5.p16.4 k.objects.point part=$k.objects.u1fad5.p16 n=4 x=10.8 y=9.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fad5.word core.word text=cheese text=chocolate text=food text=melted text=pot text=ski means=fondue of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad5.keyword k.objects.keyword of=fondue text=cheese text=chocolate text=food text=melted text=pot text=ski core.source="cldr 48"
 
 # bowl with spoon
 @k.objects.u1f963 k.objects.object name="bowl with spoon" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -917,7 +917,7 @@
 @k.objects.u1f963.p9.7 k.objects.point part=$k.objects.u1f963.p9 n=7 x=90.8 y=14.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f963.p9.8 k.objects.point part=$k.objects.u1f963.p9 n=8 x=90.7 y=14 core.source="noto-emoji 99701e0"
 @k.objects.u1f963.p9.9 k.objects.point part=$k.objects.u1f963.p9 n=9 x=89.4 y=13.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f963.word core.word text=bowl text=breakfast text=cereal text=congee text=oatmeal text=porridge text=spoon means="bowl with spoon" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f963.keyword k.objects.keyword of="bowl with spoon" text=bowl text=breakfast text=cereal text=congee text=oatmeal text=porridge text=spoon core.source="cldr 48"
 
 # green salad
 @k.objects.u1f957 k.objects.object name="green salad" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1131,7 +1131,7 @@
 @k.objects.u1f957.p16.14 k.objects.point part=$k.objects.u1f957.p16 n=14 x=10.1 y=51.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f957.p16.15 k.objects.point part=$k.objects.u1f957.p16 n=15 x=20.1 y=57.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f957.p16.16 k.objects.point part=$k.objects.u1f957.p16 n=16 x=31.4 y=61 core.source="noto-emoji 99701e0"
-@k.objects.u1f957.word core.word text=food text=green text=salad means="green salad" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f957.keyword k.objects.keyword of="green salad" text=food text=green text=salad core.source="cldr 48"
 
 # popcorn
 @k.objects.u1f37f k.objects.object name=popcorn core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1340,7 +1340,7 @@
 @k.objects.u1f37f.p16.3 k.objects.point part=$k.objects.u1f37f.p16 n=3 x=73.7 y=87.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f37f.p16.4 k.objects.point part=$k.objects.u1f37f.p16 n=4 x=77.9 y=85.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f37f.p16.5 k.objects.point part=$k.objects.u1f37f.p16 n=5 x=88.4 y=30.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f37f.word core.word text=corn text=movie text=pop means=popcorn of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f37f.keyword k.objects.keyword of=popcorn text=corn text=movie text=pop core.source="cldr 48"
 
 # butter
 @k.objects.u1f9c8 k.objects.object name=butter core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1477,4 +1477,4 @@
 @k.objects.u1f9c8.p12.5 k.objects.point part=$k.objects.u1f9c8.p12 n=5 x=24.3 y=55 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c8.p12.6 k.objects.point part=$k.objects.u1f9c8.p12 n=6 x=6.2 y=60.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9c8.p12.7 k.objects.point part=$k.objects.u1f9c8.p12 n=7 x=5.8 y=60.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f9c8.word core.word text=dairy means=butter of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9c8.keyword k.objects.keyword of=butter text=dairy core.source="cldr 48"

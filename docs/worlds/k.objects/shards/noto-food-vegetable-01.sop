@@ -151,7 +151,7 @@
 @k.objects.u1f951.p5.12 k.objects.point part=$k.objects.u1f951.p5 n=12 x=39.9 y=38.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f951.p5.13 k.objects.point part=$k.objects.u1f951.p5 n=13 x=41.1 y=40.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f951.p5.14 k.objects.point part=$k.objects.u1f951.p5 n=14 x=41.2 y=41.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f951.word core.word text=food text=fruit means=avocado of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f951.keyword k.objects.keyword of=avocado text=food text=fruit core.source="cldr 48"
 
 # eggplant
 @k.objects.u1f346 k.objects.object name=eggplant core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -261,7 +261,7 @@
 @k.objects.u1f346.p5.29 k.objects.point part=$k.objects.u1f346.p5 n=29 x=4.1 y=33.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f346.p5.30 k.objects.point part=$k.objects.u1f346.p5 n=30 x=4.5 y=21.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f346.p5.31 k.objects.point part=$k.objects.u1f346.p5 n=31 x=5.9 y=18.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f346.word core.word text=aubergine text=vegetable means=eggplant of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f346.keyword k.objects.keyword of=eggplant text=aubergine text=vegetable core.source="cldr 48"
 
 # potato
 @k.objects.u1f954 k.objects.object name=potato core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -437,7 +437,7 @@
 @k.objects.u1f954.p11.6 k.objects.point part=$k.objects.u1f954.p11 n=6 x=72.8 y=26.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f954.p11.7 k.objects.point part=$k.objects.u1f954.p11 n=7 x=67.1 y=23.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f954.p11.8 k.objects.point part=$k.objects.u1f954.p11 n=8 x=65.1 y=24.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f954.word core.word text=food text=vegetable means=potato of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f954.keyword k.objects.keyword of=potato text=food text=vegetable core.source="cldr 48"
 
 # carrot
 @k.objects.u1f955 k.objects.object name=carrot core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -586,7 +586,7 @@
 @k.objects.u1f955.p10.25 k.objects.point part=$k.objects.u1f955.p10 n=25 x=58.7 y=15.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f955.p10.26 k.objects.point part=$k.objects.u1f955.p10 n=26 x=61.1 y=13.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f955.p10.27 k.objects.point part=$k.objects.u1f955.p10 n=27 x=65 y=11.9 core.source="noto-emoji 99701e0"
-@k.objects.u1f955.word core.word text=food text=vegetable means=carrot of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f955.keyword k.objects.keyword of=carrot text=food text=vegetable core.source="cldr 48"
 
 # ear of corn
 @k.objects.u1f33d k.objects.object name="ear of corn" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -798,7 +798,7 @@
 @k.objects.u1f33d.p16.2 k.objects.point part=$k.objects.u1f33d.p16 n=2 x=64.8 y=25 core.source="noto-emoji 99701e0"
 @k.objects.u1f33d.p16.3 k.objects.point part=$k.objects.u1f33d.p16 n=3 x=67.7 y=25.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f33d.p16.4 k.objects.point part=$k.objects.u1f33d.p16 n=4 x=69.2 y=22.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f33d.word core.word text=corn text=crops text=ear text=farm text=maize text=maze means="ear of corn" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f33d.keyword k.objects.keyword of="ear of corn" text=corn text=crops text=ear text=farm text=maize text=maze core.source="cldr 48"
 
 # hot pepper
 @k.objects.u1f336 k.objects.object name="hot pepper" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -924,7 +924,7 @@
 @k.objects.u1f336.p5.38 k.objects.point part=$k.objects.u1f336.p5 n=38 x=63.2 y=26.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f336.p5.39 k.objects.point part=$k.objects.u1f336.p5 n=39 x=62.2 y=27.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f336.p5.40 k.objects.point part=$k.objects.u1f336.p5 n=40 x=62.2 y=29.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f336.word core.word text=hot text=pepper means="hot pepper" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f336.keyword k.objects.keyword of="hot pepper" text=hot text=pepper core.source="cldr 48"
 
 # bell pepper
 @k.objects.u1fad1 k.objects.object name="bell pepper" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1069,7 +1069,7 @@
 @k.objects.u1fad1.p6.13 k.objects.point part=$k.objects.u1fad1.p6 n=13 x=52.4 y=49.1 core.source="noto-emoji 99701e0"
 @k.objects.u1fad1.p6.14 k.objects.point part=$k.objects.u1fad1.p6 n=14 x=52.9 y=46.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fad1.p6.15 k.objects.point part=$k.objects.u1fad1.p6 n=15 x=54.9 y=43.8 core.source="noto-emoji 99701e0"
-@k.objects.u1fad1.word core.word text=bell text=capsicum text=food text=pepper text=vegetable means="bell pepper" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad1.keyword k.objects.keyword of="bell pepper" text=bell text=capsicum text=food text=pepper text=vegetable core.source="cldr 48"
 
 # cucumber
 @k.objects.u1f952 k.objects.object name=cucumber core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1273,4 +1273,4 @@
 @k.objects.u1f952.p16.7 k.objects.point part=$k.objects.u1f952.p16 n=7 x=90 y=16.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f952.p16.8 k.objects.point part=$k.objects.u1f952.p16 n=8 x=87.1 y=15.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f952.p16.9 k.objects.point part=$k.objects.u1f952.p16 n=9 x=82.8 y=16.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f952.word core.word text=food text=pickle text=vegetable means=cucumber of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f952.keyword k.objects.keyword of=cucumber text=food text=pickle text=vegetable core.source="cldr 48"

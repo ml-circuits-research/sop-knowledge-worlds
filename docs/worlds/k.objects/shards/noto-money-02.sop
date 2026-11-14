@@ -55,7 +55,7 @@
 @k.objects.u1f4b3.p4.17 k.objects.point part=$k.objects.u1f4b3.p4 n=17 x=49.7 y=55.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b3.p4.18 k.objects.point part=$k.objects.u1f4b3.p4 n=18 x=56.5 y=53.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b3.p4.19 k.objects.point part=$k.objects.u1f4b3.p4 n=19 x=60.7 y=54.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f4b3.word core.word text=bank text=card text=cash text=charge text=credit text=money text=pay means="credit card" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b3.keyword k.objects.keyword of="credit card" text=bank text=card text=cash text=charge text=credit text=money text=pay core.source="cldr 48"
 
 # receipt
 @k.objects.u1f9fe k.objects.object name=receipt core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -152,7 +152,7 @@
 @k.objects.u1f9fe.p14.32 k.objects.point part=$k.objects.u1f9fe.p14 n=32 x=88.7 y=85.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fe.p14.33 k.objects.point part=$k.objects.u1f9fe.p14 n=33 x=89.8 y=76.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f9fe.p14.34 k.objects.point part=$k.objects.u1f9fe.p14 n=34 x=89.9 y=2.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9fe.word core.word text=accounting text=bookkeeping text=evidence text=invoice text=proof means=receipt of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9fe.keyword k.objects.keyword of=receipt text=accounting text=bookkeeping text=evidence text=invoice text=proof core.source="cldr 48"
 
 # chart increasing with yen
 @k.objects.u1f4b9 k.objects.object name="chart increasing with yen" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -245,4 +245,4 @@
 @k.objects.u1f4b9.p4.33 k.objects.point part=$k.objects.u1f4b9.p4 n=33 x=17.6 y=12.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b9.p4.34 k.objects.point part=$k.objects.u1f4b9.p4 n=34 x=22.9 y=13.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4b9.p4.35 k.objects.point part=$k.objects.u1f4b9.p4 n=35 x=31.1 y=30.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f4b9.word core.word text=bank text=chart text=currency text=graph text=growth text=increasing text=market text=money text=rise text=trend text=upward text=yen means="chart increasing with yen" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4b9.keyword k.objects.keyword of="chart increasing with yen" text=bank text=chart text=currency text=graph text=growth text=increasing text=market text=money text=rise text=trend text=upward text=yen core.source="cldr 48"

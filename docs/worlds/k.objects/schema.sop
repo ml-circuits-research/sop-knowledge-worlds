@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.objects core.module name=k.objects version=6 imports=k.named imports=k.commonsense imports=k.drawing exports=object exports=part exports=point exports=skeleton exports=stand_in core.source="hand-core 1"
+@k.objects core.module name=k.objects version=7 imports=k.named imports=k.commonsense imports=k.drawing exports=object exports=part exports=point exports=skeleton exports=stand_in exports=keyword core.source="hand-core 1"
 
 # An object that can be drawn. Its name is an English lemma; the same name in k.commonsense.thing is the same thing.
 @k.objects.object core.type of=k.objects.object shared=true closed=true core.source="hand-core 1"
@@ -56,12 +56,22 @@
 # an object with that name is loaded, so a shard still loads alone; tests/k.objects.names.test.mjs checks it as well.
 @k.objects.stand_in.drawing core.slot of=k.objects.stand_in key=drawing required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
+# A keyword of an object: a search word an image library files the drawing under (CLDR's emoji keywords, OpenMoji's and
+# Mulberry's tags), not a name of the object nor a word for it: "ship" is a keyword of the anchor, "kitty" of the money
+# bag, "bird" of the turkey (Q67 b). It is not a core.word, so the library's word reading never resolves it: a host
+# reads keywords only when no object name, no core.word of an object and no stand-in matched the word. `of` names
+# the object (the join is declared, as the stand-in's); `text` repeats, one value per keyword.
+@k.objects.keyword core.type of=k.objects.keyword shared=true closed=true core.source="hand-core 1"
+@k.objects.keyword.of core.slot of=k.objects.keyword key=of required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.objects.keyword.text core.slot of=k.objects.keyword key=text many=true required=true kind=atom kind=string core.source="hand-core 1"
+
 # Words for the types and keys of this world.
 @k.objects.word.object core.word text=object text=objects text=drawing text=picture means=k.objects.object core.source="hand-core 1"
 @k.objects.word.part core.word text=part text=parts means=k.objects.part core.source="hand-core 1"
 @k.objects.word.colour core.word text=colour text=color means=k.objects.part.colour core.source="hand-core 1"
 @k.objects.word.shape core.word text=shape means=k.objects.part.shape core.source="hand-core 1"
 @k.objects.word.stand_in core.word text="stand-in" text="stand-ins" means=k.objects.stand_in core.source="hand-core 1"
+@k.objects.word.keyword core.word text=keyword text=keywords means=k.objects.keyword core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.objects.word.key.object core.word text=draw text=sketch text=show text="shaped like" text="looks like" means=k.objects.object core.source="hand-core 1"
@@ -83,3 +93,5 @@
 @k.objects.word.key.skeleton.drawings core.word text=drawings means=k.objects.skeleton.drawings core.source="hand-core 1"
 @k.objects.word.key.skeleton.spread core.word text=spread means=k.objects.skeleton.spread core.source="hand-core 1"
 @k.objects.word.key.stand_in.drawing core.word text=drawing means=k.objects.stand_in.drawing core.source="hand-core 1"
+@k.objects.word.key.keyword.of core.word text=of means=k.objects.keyword.of core.source="hand-core 1"
+@k.objects.word.key.keyword.text core.word text=text means=k.objects.keyword.text core.source="hand-core 1"

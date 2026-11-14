@@ -82,7 +82,7 @@
 @k.objects.mb2493.p16 k.objects.part of=screw name=part16 kind=detail named=no shape=line x=43.6 y=82 w=12.7 h=3.8 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2493.p16.1 k.objects.point part=$k.objects.mb2493.p16 n=1 x=43.6 y=85.8 core.source="mulberry fa94a93"
 @k.objects.mb2493.p16.2 k.objects.point part=$k.objects.mb2493.p16 n=2 x=56.3 y=82 core.source="mulberry fa94a93"
-@k.objects.mb2493.word core.word text=DIY text=tools text=workshop means=screw of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2493.keyword k.objects.keyword of=screw text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # square setsquare
 @k.objects.mb2662 k.objects.object name="square setsquare" core.source="mulberry fa94a93"
@@ -179,7 +179,7 @@
 @k.objects.mb2662.p16 k.objects.part of="square setsquare" name=part16 kind=detail named=no shape=line x=81.9 y=29.3 w=0 h=3.8 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2662.p16.1 k.objects.point part=$k.objects.mb2662.p16 n=1 x=81.9 y=29.3 core.source="mulberry fa94a93"
 @k.objects.mb2662.p16.2 k.objects.point part=$k.objects.mb2662.p16 n=2 x=81.9 y=33.1 core.source="mulberry fa94a93"
-@k.objects.mb2662.word core.word text=DIY text=tools text=workshop means="square setsquare" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2662.keyword k.objects.keyword of="square setsquare" text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # tape measure
 @k.objects.mb2780 k.objects.object name="tape measure" core.source="mulberry fa94a93"
@@ -344,7 +344,7 @@
 @k.objects.mb2780.p16.3 k.objects.point part=$k.objects.mb2780.p16 n=3 x=90.8 y=75.1 core.source="mulberry fa94a93"
 @k.objects.mb2780.p16.4 k.objects.point part=$k.objects.mb2780.p16 n=4 x=91.4 y=72.4 core.source="mulberry fa94a93"
 @k.objects.mb2780.p16.5 k.objects.point part=$k.objects.mb2780.p16 n=5 x=91.3 y=65.8 core.source="mulberry fa94a93"
-@k.objects.mb2780.word core.word text=DIY text=tools text=workshop means="tape measure" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2780.keyword k.objects.keyword of="tape measure" text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # varnish
 @k.objects.mb2973 k.objects.object name=varnish core.source="mulberry fa94a93"
@@ -551,7 +551,7 @@
 @k.objects.mb2973.p16.13 k.objects.point part=$k.objects.mb2973.p16 n=13 x=64.4 y=52.2 core.source="mulberry fa94a93"
 @k.objects.mb2973.p16.14 k.objects.point part=$k.objects.mb2973.p16 n=14 x=64 y=55.5 core.source="mulberry fa94a93"
 @k.objects.mb2973.p16.15 k.objects.point part=$k.objects.mb2973.p16 n=15 x=59.6 y=60.1 core.source="mulberry fa94a93"
-@k.objects.mb2973.word core.word text=DIY text=tools text=workshop means=varnish of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2973.keyword k.objects.keyword of=varnish text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # vice
 @k.objects.mb2979 k.objects.object name=vice core.source="mulberry fa94a93"
@@ -705,7 +705,7 @@
 @k.objects.mb2979.p16.2 k.objects.point part=$k.objects.mb2979.p16 n=2 x=46.1 y=50.9 core.source="mulberry fa94a93"
 @k.objects.mb2979.p16.3 k.objects.point part=$k.objects.mb2979.p16 n=3 x=48.6 y=60.1 core.source="mulberry fa94a93"
 @k.objects.mb2979.p16.4 k.objects.point part=$k.objects.mb2979.p16 n=4 x=49.1 y=66.2 core.source="mulberry fa94a93"
-@k.objects.mb2979.word core.word text=DIY text=tools text=workshop means=vice of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2979.keyword k.objects.keyword of=vice text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # wood lathe
 @k.objects.mb3083 k.objects.object name="wood lathe" core.source="mulberry fa94a93"
@@ -826,7 +826,7 @@
 @k.objects.mb3083.p16 k.objects.part of="wood lathe" name=part16 kind=detail named=no shape=line x=17.2 y=56.8 w=50.8 h=12 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb3083.p16.1 k.objects.point part=$k.objects.mb3083.p16 n=1 x=17.2 y=56.8 core.source="mulberry fa94a93"
 @k.objects.mb3083.p16.2 k.objects.point part=$k.objects.mb3083.p16 n=2 x=68 y=68.8 core.source="mulberry fa94a93"
-@k.objects.mb3083.word core.word text=DIY text=tools text=workshop means="wood lathe" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3083.keyword k.objects.keyword of="wood lathe" text=DIY text=tools text=workshop core.source="mulberry fa94a93"
 
 # woodstain
 @k.objects.mb3085 k.objects.object name=woodstain core.source="mulberry fa94a93"
@@ -1026,4 +1026,4 @@
 @k.objects.mb3085.p16.4 k.objects.point part=$k.objects.mb3085.p16 n=4 x=19.9 y=74 core.source="mulberry fa94a93"
 @k.objects.mb3085.p16.5 k.objects.point part=$k.objects.mb3085.p16 n=5 x=22.6 y=55.9 core.source="mulberry fa94a93"
 @k.objects.mb3085.p16.6 k.objects.point part=$k.objects.mb3085.p16 n=6 x=42.8 y=58.9 core.source="mulberry fa94a93"
-@k.objects.mb3085.word core.word text=DIY text=tools text=workshop means=woodstain of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb3085.keyword k.objects.keyword of=woodstain text=DIY text=tools text=workshop core.source="mulberry fa94a93"

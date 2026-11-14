@@ -219,7 +219,7 @@
 @k.objects.mb1851.p16.5 k.objects.point part=$k.objects.mb1851.p16 n=5 x=30.4 y=33.7 core.source="mulberry fa94a93"
 @k.objects.mb1851.p16.6 k.objects.point part=$k.objects.mb1851.p16 n=6 x=22 y=31.6 core.source="mulberry fa94a93"
 @k.objects.mb1851.p16.7 k.objects.point part=$k.objects.mb1851.p16 n=7 x=14.8 y=29 core.source="mulberry fa94a93"
-@k.objects.mb1851.word core.word text=gardening means=log of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1851.keyword k.objects.keyword of=log text=gardening core.source="mulberry fa94a93"
 
 # mistletoe
 @k.objects.mb1958 k.objects.object name=mistletoe core.source="mulberry fa94a93"
@@ -381,7 +381,7 @@
 @k.objects.mb1958.p16 k.objects.part of=mistletoe name=part16 kind=detail named=no shape=line x=41.5 y=6.5 w=18.8 h=75.1 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb1958.p16.1 k.objects.point part=$k.objects.mb1958.p16 n=1 x=60.3 y=6.5 core.source="mulberry fa94a93"
 @k.objects.mb1958.p16.2 k.objects.point part=$k.objects.mb1958.p16 n=2 x=41.5 y=81.6 core.source="mulberry fa94a93"
-@k.objects.mb1958.word core.word text=celebration means=mistletoe of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1958.keyword k.objects.keyword of=mistletoe text=celebration core.source="mulberry fa94a93"
 
 # oak leaf
 @k.objects.mb2062 k.objects.object name="oak leaf" core.source="mulberry fa94a93"
@@ -589,7 +589,7 @@
 @k.objects.mb2062.p16 k.objects.part of="oak leaf" name=part16 kind=detail named=no shape=line x=42.4 y=14.2 w=3.5 h=8.9 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb2062.p16.1 k.objects.point part=$k.objects.mb2062.p16 n=1 x=42.4 y=14.2 core.source="mulberry fa94a93"
 @k.objects.mb2062.p16.2 k.objects.point part=$k.objects.mb2062.p16 n=2 x=45.9 y=23.1 core.source="mulberry fa94a93"
-@k.objects.mb2062.word core.word text=gardening text=plant means="oak leaf" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2062.keyword k.objects.keyword of="oak leaf" text=gardening text=plant core.source="mulberry fa94a93"
 
 # palm
 @k.objects.mb2122 k.objects.object name=palm core.source="mulberry fa94a93"
@@ -777,7 +777,7 @@
 @k.objects.mb2122.p16.3 k.objects.point part=$k.objects.mb2122.p16 n=3 x=48.9 y=52.8 core.source="mulberry fa94a93"
 @k.objects.mb2122.p16.4 k.objects.point part=$k.objects.mb2122.p16 n=4 x=53 y=70 core.source="mulberry fa94a93"
 @k.objects.mb2122.p16.5 k.objects.point part=$k.objects.mb2122.p16 n=5 x=59.6 y=92.4 core.source="mulberry fa94a93"
-@k.objects.mb2122.word core.word text=celebration text=Christian text=Easter means=palm of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2122.keyword k.objects.keyword of=palm text=celebration text=Christian text=Easter core.source="mulberry fa94a93"
 
 # plant
 @k.objects.mb2246 k.objects.object name=plant core.source="mulberry fa94a93"
@@ -978,7 +978,7 @@
 @k.objects.mb2246.p16.12 k.objects.point part=$k.objects.mb2246.p16 n=12 x=51.1 y=57.1 core.source="mulberry fa94a93"
 @k.objects.mb2246.p16.13 k.objects.point part=$k.objects.mb2246.p16 n=13 x=49.2 y=59.5 core.source="mulberry fa94a93"
 @k.objects.mb2246.p16.14 k.objects.point part=$k.objects.mb2246.p16 n=14 x=47.9 y=66.3 core.source="mulberry fa94a93"
-@k.objects.mb2246.word core.word text=gardening means=plant of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2246.keyword k.objects.keyword of=plant text=gardening core.source="mulberry fa94a93"
 
 # roots
 @k.objects.mb2420 k.objects.object name=roots core.source="mulberry fa94a93"
@@ -1129,7 +1129,7 @@
 @k.objects.mb2420.p16 k.objects.part of=roots name=part16 kind=detail named=no shape=line x=7.2 y=76.7 w=14.8 h=1.7 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb2420.p16.1 k.objects.point part=$k.objects.mb2420.p16 n=1 x=22 y=78.4 core.source="mulberry fa94a93"
 @k.objects.mb2420.p16.2 k.objects.point part=$k.objects.mb2420.p16 n=2 x=7.2 y=76.7 core.source="mulberry fa94a93"
-@k.objects.mb2420.word core.word text=gardening text=plant means=roots of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2420.keyword k.objects.keyword of=roots text=gardening text=plant core.source="mulberry fa94a93"
 
 # seeds
 @k.objects.mb2508 k.objects.object name=seeds core.source="mulberry fa94a93"
@@ -1274,7 +1274,7 @@
 @k.objects.mb2508.p16.1 k.objects.point part=$k.objects.mb2508.p16 n=1 x=56.7 y=28.1 core.source="mulberry fa94a93"
 @k.objects.mb2508.p16.2 k.objects.point part=$k.objects.mb2508.p16 n=2 x=62.6 y=50.4 core.source="mulberry fa94a93"
 @k.objects.mb2508.p16.3 k.objects.point part=$k.objects.mb2508.p16 n=3 x=71.1 y=40.6 core.source="mulberry fa94a93"
-@k.objects.mb2508.word core.word text=gardening text=plant means=seeds of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2508.keyword k.objects.keyword of=seeds text=gardening text=plant core.source="mulberry fa94a93"
 
 # stick
 @k.objects.mb2694 k.objects.object name=stick core.source="mulberry fa94a93"
@@ -1393,4 +1393,4 @@
 @k.objects.mb2694.p10.5 k.objects.point part=$k.objects.mb2694.p10 n=5 x=37.3 y=35 core.source="mulberry fa94a93"
 @k.objects.mb2694.p10.6 k.objects.point part=$k.objects.mb2694.p10 n=6 x=34.2 y=33 core.source="mulberry fa94a93"
 @k.objects.mb2694.p10.7 k.objects.point part=$k.objects.mb2694.p10 n=7 x=27.2 y=30.8 core.source="mulberry fa94a93"
-@k.objects.mb2694.word core.word text=gardening means=stick of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2694.keyword k.objects.keyword of=stick text=gardening core.source="mulberry fa94a93"

@@ -212,7 +212,7 @@
 @k.objects.mb1584.p16.15 k.objects.point part=$k.objects.mb1584.p16 n=15 x=60.7 y=33.4 core.source="mulberry fa94a93"
 @k.objects.mb1584.p16.16 k.objects.point part=$k.objects.mb1584.p16 n=16 x=62.5 y=36.3 core.source="mulberry fa94a93"
 @k.objects.mb1584.p16.17 k.objects.point part=$k.objects.mb1584.p16 n=17 x=62.9 y=38.7 core.source="mulberry fa94a93"
-@k.objects.mb1584.word core.word text=grooming means="hair conditioner" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1584.keyword k.objects.keyword of="hair conditioner" text=grooming core.source="mulberry fa94a93"
 
 # hair curler
 @k.objects.mb1585 k.objects.object name="hair curler" core.source="mulberry fa94a93"
@@ -428,7 +428,7 @@
 @k.objects.mb1585.p16 k.objects.part of="hair curler" name=part16 kind=detail named=no shape=line x=14.8 y=34.5 w=0 h=50.8 z=16 colour=black rgb="#000000" core.source="mulberry fa94a93"
 @k.objects.mb1585.p16.1 k.objects.point part=$k.objects.mb1585.p16 n=1 x=14.8 y=85.3 core.source="mulberry fa94a93"
 @k.objects.mb1585.p16.2 k.objects.point part=$k.objects.mb1585.p16 n=2 x=14.8 y=34.5 core.source="mulberry fa94a93"
-@k.objects.mb1585.word core.word text=grooming means="hair curler" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1585.keyword k.objects.keyword of="hair curler" text=grooming core.source="mulberry fa94a93"
 
 # hair curlers electric
 @k.objects.mb1586 k.objects.object name="hair curlers electric" core.source="mulberry fa94a93"
@@ -630,7 +630,7 @@
 @k.objects.mb1586.p16.7 k.objects.point part=$k.objects.mb1586.p16 n=7 x=12 y=85.3 core.source="mulberry fa94a93"
 @k.objects.mb1586.p16.8 k.objects.point part=$k.objects.mb1586.p16 n=8 x=14.8 y=89.3 core.source="mulberry fa94a93"
 @k.objects.mb1586.p16.9 k.objects.point part=$k.objects.mb1586.p16 n=9 x=19.4 y=92.2 core.source="mulberry fa94a93"
-@k.objects.mb1586.word core.word text=electric text=grooming means="hair curlers electric" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1586.keyword k.objects.keyword of="hair curlers electric" text=electric text=grooming core.source="mulberry fa94a93"
 
 # hair curling tongs
 @k.objects.mb1587 k.objects.object name="hair curling tongs" core.source="mulberry fa94a93"
@@ -849,7 +849,7 @@
 @k.objects.mb1587.p16.3 k.objects.point part=$k.objects.mb1587.p16 n=3 x=8.3 y=30.4 core.source="mulberry fa94a93"
 @k.objects.mb1587.p16.4 k.objects.point part=$k.objects.mb1587.p16 n=4 x=8.6 y=32.1 core.source="mulberry fa94a93"
 @k.objects.mb1587.p16.5 k.objects.point part=$k.objects.mb1587.p16 n=5 x=36.7 y=50.8 core.source="mulberry fa94a93"
-@k.objects.mb1587.word core.word text=electric text=grooming means="hair curling tongs" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1587.keyword k.objects.keyword of="hair curling tongs" text=electric text=grooming core.source="mulberry fa94a93"
 
 # hair dye
 @k.objects.mb1588 k.objects.object name="hair dye" core.source="mulberry fa94a93"
@@ -1042,7 +1042,7 @@
 @k.objects.mb1588.p16.24 k.objects.point part=$k.objects.mb1588.p16 n=24 x=26.5 y=68.8 core.source="mulberry fa94a93"
 @k.objects.mb1588.p16.25 k.objects.point part=$k.objects.mb1588.p16 n=25 x=34.3 y=62.6 core.source="mulberry fa94a93"
 @k.objects.mb1588.p16.26 k.objects.point part=$k.objects.mb1588.p16 n=26 x=35 y=60.8 core.source="mulberry fa94a93"
-@k.objects.mb1588.word core.word text=grooming means="hair dye" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1588.keyword k.objects.keyword of="hair dye" text=grooming core.source="mulberry fa94a93"
 
 # hairbrush
 @k.objects.mb1592 k.objects.object name=hairbrush core.source="mulberry fa94a93"
@@ -1173,7 +1173,7 @@
 @k.objects.mb1592.p16.7 k.objects.point part=$k.objects.mb1592.p16 n=7 x=83.4 y=45.6 core.source="mulberry fa94a93"
 @k.objects.mb1592.p16.8 k.objects.point part=$k.objects.mb1592.p16 n=8 x=86 y=48.2 core.source="mulberry fa94a93"
 @k.objects.mb1592.p16.9 k.objects.point part=$k.objects.mb1592.p16 n=9 x=87.1 y=51.1 core.source="mulberry fa94a93"
-@k.objects.mb1592.word core.word text=grooming means=hairbrush of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1592.keyword k.objects.keyword of=hairbrush text=grooming core.source="mulberry fa94a93"
 
 # hairdryer
 @k.objects.mb1594 k.objects.object name=hairdryer core.source="mulberry fa94a93"
@@ -1358,7 +1358,7 @@
 @k.objects.mb1594.p15.2 k.objects.point part=$k.objects.mb1594.p15 n=2 x=68.1 y=48 core.source="mulberry fa94a93"
 @k.objects.mb1594.p15.3 k.objects.point part=$k.objects.mb1594.p15 n=3 x=65.6 y=56.8 core.source="mulberry fa94a93"
 @k.objects.mb1594.p15.4 k.objects.point part=$k.objects.mb1594.p15 n=4 x=63.7 y=56.3 core.source="mulberry fa94a93"
-@k.objects.mb1594.word core.word text=electric text=grooming means=hairdryer of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1594.keyword k.objects.keyword of=hairdryer text=electric text=grooming core.source="mulberry fa94a93"
 
 # hairspray
 @k.objects.mb1595 k.objects.object name=hairspray core.source="mulberry fa94a93"
@@ -1521,4 +1521,4 @@
 @k.objects.mb1595.p16.13 k.objects.point part=$k.objects.mb1595.p16 n=13 x=42.4 y=48.8 core.source="mulberry fa94a93"
 @k.objects.mb1595.p16.14 k.objects.point part=$k.objects.mb1595.p16 n=14 x=40.4 y=53.5 core.source="mulberry fa94a93"
 @k.objects.mb1595.p16.15 k.objects.point part=$k.objects.mb1595.p16 n=15 x=40.4 y=58.4 core.source="mulberry fa94a93"
-@k.objects.mb1595.word core.word text=grooming means=hairspray of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1595.keyword k.objects.keyword of=hairspray text=grooming core.source="mulberry fa94a93"

@@ -427,7 +427,7 @@
 @k.objects.mb2153.p15.13 k.objects.point part=$k.objects.mb2153.p15 n=13 x=73.8 y=35.2 core.source="mulberry fa94a93"
 @k.objects.mb2153.p15.14 k.objects.point part=$k.objects.mb2153.p15 n=14 x=72.8 y=29.5 core.source="mulberry fa94a93"
 @k.objects.mb2153.p15.15 k.objects.point part=$k.objects.mb2153.p15 n=15 x=68.2 y=23.1 core.source="mulberry fa94a93"
-@k.objects.mb2153.word core.word text=food text=meal means=pasta of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2153.keyword k.objects.keyword of=pasta text=food text=meal core.source="mulberry fa94a93"
 
 # ravioli
 @k.objects.mb2366 k.objects.object name=ravioli core.source="mulberry fa94a93"
@@ -841,7 +841,7 @@
 @k.objects.mb2395.p16.8 k.objects.point part=$k.objects.mb2395.p16 n=8 x=21.8 y=46 core.source="mulberry fa94a93"
 @k.objects.mb2395.p16.9 k.objects.point part=$k.objects.mb2395.p16 n=9 x=11.4 y=41.2 core.source="mulberry fa94a93"
 @k.objects.mb2395.p16.10 k.objects.point part=$k.objects.mb2395.p16 n=10 x=8.1 y=37.3 core.source="mulberry fa94a93"
-@k.objects.mb2395.word core.word text=food text=meal means=rice of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2395.keyword k.objects.keyword of=rice text=food text=meal core.source="mulberry fa94a93"
 
 # rice cake
 @k.objects.mb2396 k.objects.object name="rice cake" core.source="mulberry fa94a93"
@@ -1055,7 +1055,7 @@
 @k.objects.mb2396.p16.13 k.objects.point part=$k.objects.mb2396.p16 n=13 x=87.2 y=62.9 core.source="mulberry fa94a93"
 @k.objects.mb2396.p16.14 k.objects.point part=$k.objects.mb2396.p16 n=14 x=88.9 y=58.7 core.source="mulberry fa94a93"
 @k.objects.mb2396.p16.15 k.objects.point part=$k.objects.mb2396.p16 n=15 x=89.2 y=42.8 core.source="mulberry fa94a93"
-@k.objects.mb2396.word core.word text=food text=snack means="rice cake" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2396.keyword k.objects.keyword of="rice cake" text=food text=snack core.source="mulberry fa94a93"
 
 # rice packet
 @k.objects.mb2397 k.objects.object name="rice packet" core.source="mulberry fa94a93"

@@ -293,7 +293,7 @@
 @k.objects.mb804.p7.8 k.objects.point part=$k.objects.mb804.p7 n=8 x=27.4 y=66.5 core.source="mulberry fa94a93"
 @k.objects.mb804.p7.9 k.objects.point part=$k.objects.mb804.p7 n=9 x=19.6 y=74.6 core.source="mulberry fa94a93"
 @k.objects.mb804.p7.10 k.objects.point part=$k.objects.mb804.p7 n=10 x=13.7 y=83.8 core.source="mulberry fa94a93"
-@k.objects.mb804.word core.word text=food text=vegetable means=courgette of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb804.keyword k.objects.keyword of=courgette text=food text=vegetable core.source="mulberry fa94a93"
 
 # fennel
 @k.objects.mb1094 k.objects.object name=fennel core.source="mulberry fa94a93"
@@ -607,7 +607,7 @@
 @k.objects.mb1562.p9.1 k.objects.point part=$k.objects.mb1562.p9 n=1 x=41 y=20.2 core.source="mulberry fa94a93"
 @k.objects.mb1562.p9.2 k.objects.point part=$k.objects.mb1562.p9 n=2 x=40.6 y=16 core.source="mulberry fa94a93"
 @k.objects.mb1562.p9.3 k.objects.point part=$k.objects.mb1562.p9 n=3 x=39.5 y=13.6 core.source="mulberry fa94a93"
-@k.objects.mb1562.word core.word text=food text=vegetable means="green beans" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1562.keyword k.objects.keyword of="green beans" text=food text=vegetable core.source="mulberry fa94a93"
 
 # leek
 @k.objects.mb1811 k.objects.object name=leek core.source="mulberry fa94a93"
@@ -708,7 +708,7 @@
 @k.objects.mb1811.p11.3 k.objects.point part=$k.objects.mb1811.p11 n=3 x=58.1 y=8.1 core.source="mulberry fa94a93"
 @k.objects.mb1811.p11.4 k.objects.point part=$k.objects.mb1811.p11 n=4 x=56 y=14.8 core.source="mulberry fa94a93"
 @k.objects.mb1811.p11.5 k.objects.point part=$k.objects.mb1811.p11 n=5 x=50.3 y=26.2 core.source="mulberry fa94a93"
-@k.objects.mb1811.word core.word text=food text=vegetable means=leek of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1811.keyword k.objects.keyword of=leek text=food text=vegetable core.source="mulberry fa94a93"
 
 # lentils
 @k.objects.mb1825 k.objects.object name=lentils core.source="mulberry fa94a93"
@@ -1069,7 +1069,7 @@
 @k.objects.mb1828.p16.4 k.objects.point part=$k.objects.mb1828.p16 n=4 x=73.9 y=16.4 core.source="mulberry fa94a93"
 @k.objects.mb1828.p16.5 k.objects.point part=$k.objects.mb1828.p16 n=5 x=81.3 y=17.8 core.source="mulberry fa94a93"
 @k.objects.mb1828.p16.6 k.objects.point part=$k.objects.mb1828.p16 n=6 x=81.6 y=20.6 core.source="mulberry fa94a93"
-@k.objects.mb1828.word core.word text=food text=salad text=vegetable means=lettuce of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1828.keyword k.objects.keyword of=lettuce text=food text=salad text=vegetable core.source="mulberry fa94a93"
 
 # mange tout
 @k.objects.mb1886 k.objects.object name="mange tout" core.source="mulberry fa94a93"

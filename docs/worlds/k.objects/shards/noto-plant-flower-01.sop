@@ -211,7 +211,7 @@
 @k.objects.u1f490.p16.6 k.objects.point part=$k.objects.u1f490.p16 n=6 x=18.5 y=50.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f490.p16.7 k.objects.point part=$k.objects.u1f490.p16 n=7 x=17.7 y=46.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f490.p16.8 k.objects.point part=$k.objects.u1f490.p16 n=8 x=13.1 y=47.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f490.word core.word text=anniversary text=birthday text=date text=flower text=love text=plant text=romance means=bouquet of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f490.keyword k.objects.keyword of=bouquet text=anniversary text=birthday text=date text=flower text=love text=plant text=romance core.source="cldr 48"
 
 # cherry blossom
 @k.objects.u1f338 k.objects.object name="cherry blossom" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -388,7 +388,7 @@
 @k.objects.u1f338.p13.6 k.objects.point part=$k.objects.u1f338.p13 n=6 x=47.9 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f338.p13.7 k.objects.point part=$k.objects.u1f338.p13 n=7 x=46.9 y=42 core.source="noto-emoji 99701e0"
 @k.objects.u1f338.p13.8 k.objects.point part=$k.objects.u1f338.p13 n=8 x=44.9 y=41 core.source="noto-emoji 99701e0"
-@k.objects.u1f338.word core.word text=blossom text=cherry text=flower text=plant text=spring text=springtime means="cherry blossom" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f338.keyword k.objects.keyword of="cherry blossom" text=blossom text=cherry text=flower text=plant text=spring text=springtime core.source="cldr 48"
 
 # white flower
 @k.objects.u1f4ae k.objects.object name="white flower" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -595,7 +595,7 @@
 @k.objects.u1f4ae.p14.35 k.objects.point part=$k.objects.u1f4ae.p14 n=35 x=96.9 y=44.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ae.p14.36 k.objects.point part=$k.objects.u1f4ae.p14 n=36 x=95.1 y=41.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f4ae.p14.37 k.objects.point part=$k.objects.u1f4ae.p14 n=37 x=88.4 y=38.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f4ae.word core.word text=flower text=white means="white flower" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f4ae.keyword k.objects.keyword of="white flower" text=flower text=white core.source="cldr 48"
 
 # lotus
 @k.objects.u1fab7 k.objects.object name=lotus core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -812,7 +812,7 @@
 @k.objects.u1fab7.p16.9 k.objects.point part=$k.objects.u1fab7.p16 n=9 x=26.3 y=54.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fab7.p16.10 k.objects.point part=$k.objects.u1fab7.p16 n=10 x=25.6 y=50.6 core.source="noto-emoji 99701e0"
 @k.objects.u1fab7.p16.11 k.objects.point part=$k.objects.u1fab7.p16 n=11 x=27.1 y=47.1 core.source="noto-emoji 99701e0"
-@k.objects.u1fab7.word core.word text=beauty text=Buddhism text=calm text=flower text=Hinduism text=peace text=purity text=serenity means=lotus of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab7.keyword k.objects.keyword of=lotus text=beauty text=Buddhism text=calm text=flower text=Hinduism text=peace text=purity text=serenity core.source="cldr 48"
 
 # rosette
 @k.objects.u1f3f5 k.objects.object name=rosette core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1031,7 +1031,7 @@
 @k.objects.u1f3f5.p16.12 k.objects.point part=$k.objects.u1f3f5.p16 n=12 x=55.2 y=43 core.source="noto-emoji 99701e0"
 @k.objects.u1f3f5.p16.13 k.objects.point part=$k.objects.u1f3f5.p16 n=13 x=52.9 y=41.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f3f5.p16.14 k.objects.point part=$k.objects.u1f3f5.p16 n=14 x=48.7 y=40.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f3f5.word core.word text=plant means=rosette of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3f5.keyword k.objects.keyword of=rosette text=plant core.source="cldr 48"
 
 # rose
 @k.objects.u1f339 k.objects.object name=rose core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1213,7 +1213,7 @@
 @k.objects.u1f339.p8.22 k.objects.point part=$k.objects.u1f339.p8 n=22 x=17.4 y=22.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f339.p8.23 k.objects.point part=$k.objects.u1f339.p8 n=23 x=18.4 y=26.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f339.p8.24 k.objects.point part=$k.objects.u1f339.p8 n=24 x=23.8 y=34.2 core.source="noto-emoji 99701e0"
-@k.objects.u1f339.word core.word text=beauty text=elegant text=flower text=love text=plant text=red text=valentine means=rose of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f339.keyword k.objects.keyword of=rose text=beauty text=elegant text=flower text=love text=plant text=red text=valentine core.source="cldr 48"
 
 # wilted flower
 @k.objects.u1f940 k.objects.object name="wilted flower" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1425,7 +1425,7 @@
 @k.objects.u1f940.p11.8 k.objects.point part=$k.objects.u1f940.p11 n=8 x=27.8 y=38.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f940.p11.9 k.objects.point part=$k.objects.u1f940.p11 n=9 x=23.7 y=41.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f940.p11.10 k.objects.point part=$k.objects.u1f940.p11 n=10 x=22.2 y=45.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f940.word core.word text=dying text=flower text=wilted means="wilted flower" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f940.keyword k.objects.keyword of="wilted flower" text=dying text=flower text=wilted core.source="cldr 48"
 
 # hibiscus
 @k.objects.u1f33a k.objects.object name=hibiscus core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1624,4 +1624,4 @@
 @k.objects.u1f33a.p11.6 k.objects.point part=$k.objects.u1f33a.p11 n=6 x=33.2 y=15.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f33a.p11.7 k.objects.point part=$k.objects.u1f33a.p11 n=7 x=32.9 y=13.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f33a.p11.8 k.objects.point part=$k.objects.u1f33a.p11 n=8 x=31.8 y=12.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f33a.word core.word text=flower text=plant means=hibiscus of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f33a.keyword k.objects.keyword of=hibiscus text=flower text=plant core.source="cldr 48"

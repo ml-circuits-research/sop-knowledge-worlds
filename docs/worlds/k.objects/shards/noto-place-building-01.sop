@@ -351,7 +351,7 @@
 @k.objects.u1f3db.p16.10 k.objects.point part=$k.objects.u1f3db.p16 n=10 x=65.7 y=79.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3db.p16.11 k.objects.point part=$k.objects.u1f3db.p16 n=11 x=65.8 y=49.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f3db.p16.12 k.objects.point part=$k.objects.u1f3db.p16 n=12 x=67.1 y=47 core.source="noto-emoji 99701e0"
-@k.objects.u1f3db.word core.word text=building text=classical means="classical building" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3db.keyword k.objects.keyword of="classical building" text=building text=classical core.source="cldr 48"
 
 # building construction
 @k.objects.u1f3d7 k.objects.object name="building construction" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -476,7 +476,7 @@
 @k.objects.u1f3d7.p12.3 k.objects.point part=$k.objects.u1f3d7.p12 n=3 x=49.6 y=48.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d7.p12.4 k.objects.point part=$k.objects.u1f3d7.p12 n=4 x=51.4 y=44.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d7.p12.5 k.objects.point part=$k.objects.u1f3d7.p12 n=5 x=51.6 y=39.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f3d7.word core.word text=building text=construction text=crane means="building construction" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3d7.keyword k.objects.keyword of="building construction" text=building text=construction text=crane core.source="cldr 48"
 
 # brick
 @k.objects.u1f9f1 k.objects.object name=brick core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -643,7 +643,7 @@
 @k.objects.u1f9f1.p16.7 k.objects.point part=$k.objects.u1f9f1.p16 n=7 x=96.9 y=87.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f1.p16.8 k.objects.point part=$k.objects.u1f9f1.p16 n=8 x=96.9 y=94.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f1.p16.9 k.objects.point part=$k.objects.u1f9f1.p16 n=9 x=96.4 y=95.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9f1.word core.word text=bricks text=clay text=mortar text=wall means=brick of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f1.keyword k.objects.keyword of=brick text=bricks text=clay text=mortar text=wall core.source="cldr 48"
 
 # rock
 @k.objects.u1faa8 k.objects.object name=rock core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -759,7 +759,7 @@
 @k.objects.u1faa8.p7.12 k.objects.point part=$k.objects.u1faa8.p7 n=12 x=85.9 y=86.5 core.source="noto-emoji 99701e0"
 @k.objects.u1faa8.p7.13 k.objects.point part=$k.objects.u1faa8.p7 n=13 x=89.6 y=81.2 core.source="noto-emoji 99701e0"
 @k.objects.u1faa8.p7.14 k.objects.point part=$k.objects.u1faa8.p7 n=14 x=91.5 y=77.3 core.source="noto-emoji 99701e0"
-@k.objects.u1faa8.word core.word text=boulder text=heavy text=solid text=stone text=tough means=rock of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa8.keyword k.objects.keyword of=rock text=boulder text=heavy text=solid text=stone text=tough core.source="cldr 48"
 
 # wood
 @k.objects.u1fab5 k.objects.object name=wood core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -939,7 +939,7 @@
 @k.objects.u1fab5.p11.15 k.objects.point part=$k.objects.u1fab5.p11 n=15 x=34.5 y=10 core.source="noto-emoji 99701e0"
 @k.objects.u1fab5.p11.16 k.objects.point part=$k.objects.u1fab5.p11 n=16 x=30.4 y=12 core.source="noto-emoji 99701e0"
 @k.objects.u1fab5.p11.17 k.objects.point part=$k.objects.u1fab5.p11 n=17 x=29.5 y=13.7 core.source="noto-emoji 99701e0"
-@k.objects.u1fab5.word core.word text=log text=lumber text=timber means=wood of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fab5.keyword k.objects.keyword of=wood text=log text=lumber text=timber core.source="cldr 48"
 
 # hut
 @k.objects.u1f6d6 k.objects.object name=hut core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1140,7 +1140,7 @@
 @k.objects.u1f6d6.p8.27 k.objects.point part=$k.objects.u1f6d6.p8 n=27 x=47.1 y=9.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d6.p8.28 k.objects.point part=$k.objects.u1f6d6.p8 n=28 x=41.5 y=12.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f6d6.p8.29 k.objects.point part=$k.objects.u1f6d6.p8 n=29 x=36.1 y=16.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f6d6.word core.word text=home text=house text=roundhouse text=shelter text=yurt means=hut of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f6d6.keyword k.objects.keyword of=hut text=home text=house text=roundhouse text=shelter text=yurt core.source="cldr 48"
 
 # houses
 @k.objects.u1f3d8 k.objects.object name=houses core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1285,4 +1285,4 @@
 @k.objects.u1f3d8.p16.11 k.objects.point part=$k.objects.u1f3d8.p16 n=11 x=63.6 y=29.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d8.p16.12 k.objects.point part=$k.objects.u1f3d8.p16 n=12 x=62.2 y=30 core.source="noto-emoji 99701e0"
 @k.objects.u1f3d8.p16.13 k.objects.point part=$k.objects.u1f3d8.p16 n=13 x=60.2 y=31.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f3d8.word core.word text=house means=houses of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3d8.keyword k.objects.keyword of=houses text=house core.source="cldr 48"

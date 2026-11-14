@@ -207,7 +207,7 @@
 @k.objects.u1f9e3.p9.38 k.objects.point part=$k.objects.u1f9e3.p9 n=38 x=43.4 y=87.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e3.p9.39 k.objects.point part=$k.objects.u1f9e3.p9 n=39 x=45.6 y=84.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e3.p9.40 k.objects.point part=$k.objects.u1f9e3.p9 n=40 x=49.9 y=69.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e3.word core.word text=bundle text=cold text=neck text=up means=scarf of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e3.keyword k.objects.keyword of=scarf text=bundle text=cold text=neck text=up core.source="cldr 48"
 
 # gloves
 @k.objects.u1f9e4 k.objects.object name=gloves core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -373,7 +373,7 @@
 @k.objects.u1f9e4.p14.4 k.objects.point part=$k.objects.u1f9e4.p14 n=4 x=75.6 y=81 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e4.p14.5 k.objects.point part=$k.objects.u1f9e4.p14 n=5 x=75.2 y=79.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e4.p14.6 k.objects.point part=$k.objects.u1f9e4.p14 n=6 x=74.3 y=81.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e4.word core.word text=hand means=gloves of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e4.keyword k.objects.keyword of=gloves text=hand core.source="cldr 48"
 
 # coat
 @k.objects.u1f9e5 k.objects.object name=coat core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -585,7 +585,7 @@
 @k.objects.u1f9e5.p16.2 k.objects.point part=$k.objects.u1f9e5.p16 n=2 x=51.3 y=54.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e5.p16.3 k.objects.point part=$k.objects.u1f9e5.p16 n=3 x=53.2 y=76.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e5.p16.4 k.objects.point part=$k.objects.u1f9e5.p16 n=4 x=59.8 y=72.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e5.word core.word text=brr text=bundle text=cold text=jacket text=up means=coat of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e5.keyword k.objects.keyword of=coat text=brr text=bundle text=cold text=jacket text=up core.source="cldr 48"
 
 # socks
 @k.objects.u1f9e6 k.objects.object name=socks core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -705,7 +705,7 @@
 @k.objects.u1f9e6.p10.4 k.objects.point part=$k.objects.u1f9e6.p10 n=4 x=39.8 y=18 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e6.p10.5 k.objects.point part=$k.objects.u1f9e6.p10 n=5 x=52.6 y=16.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9e6.p10.6 k.objects.point part=$k.objects.u1f9e6.p10 n=6 x=52.6 y=20.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f9e6.word core.word text=stocking means=socks of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9e6.keyword k.objects.keyword of=socks text=stocking core.source="cldr 48"
 
 # dress
 @k.objects.u1f457 k.objects.object name=dress core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -787,7 +787,7 @@
 @k.objects.u1f457.p6.4 k.objects.point part=$k.objects.u1f457.p6 n=4 x=63.5 y=79.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f457.p6.5 k.objects.point part=$k.objects.u1f457.p6 n=5 x=68.6 y=91.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f457.p6.6 k.objects.point part=$k.objects.u1f457.p6 n=6 x=64.4 y=92.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f457.word core.word text=clothes text=clothing text=dressed text=fancy text=shopping means=dress of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f457.keyword k.objects.keyword of=dress text=clothes text=clothing text=dressed text=fancy text=shopping core.source="cldr 48"
 
 # kimono
 @k.objects.u1f458 k.objects.object name=kimono core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -982,7 +982,7 @@
 @k.objects.u1f458.p16.6 k.objects.point part=$k.objects.u1f458.p16 n=6 x=38.5 y=82.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f458.p16.7 k.objects.point part=$k.objects.u1f458.p16 n=7 x=33.2 y=83.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f458.p16.8 k.objects.point part=$k.objects.u1f458.p16 n=8 x=32.2 y=94.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f458.word core.word text=clothing text=comfortable means=kimono of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f458.keyword k.objects.keyword of=kimono text=clothing text=comfortable core.source="cldr 48"
 
 # sari
 @k.objects.u1f97b k.objects.object name=sari core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1183,7 +1183,7 @@
 @k.objects.u1f97b.p16.2 k.objects.point part=$k.objects.u1f97b.p16 n=2 x=36.5 y=89.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f97b.p16.3 k.objects.point part=$k.objects.u1f97b.p16 n=3 x=36.1 y=93.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f97b.p16.4 k.objects.point part=$k.objects.u1f97b.p16 n=4 x=42.8 y=95.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f97b.word core.word text=clothing text=dress means=sari of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f97b.keyword k.objects.keyword of=sari text=clothing text=dress core.source="cldr 48"
 
 # one-piece swimsuit
 @k.objects.u1fa71 k.objects.object name="one-piece swimsuit" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1271,4 +1271,4 @@
 @k.objects.u1fa71.p4.16 k.objects.point part=$k.objects.u1fa71.p4 n=16 x=70.5 y=56.9 core.source="noto-emoji 99701e0"
 @k.objects.u1fa71.p4.17 k.objects.point part=$k.objects.u1fa71.p4 n=17 x=70.1 y=50.8 core.source="noto-emoji 99701e0"
 @k.objects.u1fa71.p4.18 k.objects.point part=$k.objects.u1fa71.p4 n=18 x=72.7 y=35.2 core.source="noto-emoji 99701e0"
-@k.objects.u1fa71.word core.word text=bathing text=one-piece text=suit text=swimsuit means="one-piece swimsuit" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fa71.keyword k.objects.keyword of="one-piece swimsuit" text=bathing text=one-piece text=suit text=swimsuit core.source="cldr 48"

@@ -216,7 +216,7 @@
 @k.objects.ome20e.p15.7 k.objects.point part=$k.objects.ome20e.p15 n=7 x=68.3 y=37.2 core.source="openmoji 3e01de5"
 @k.objects.ome20e.p15.8 k.objects.point part=$k.objects.ome20e.p15 n=8 x=64.5 y=38 core.source="openmoji 3e01de5"
 @k.objects.ome20e.p15.9 k.objects.point part=$k.objects.ome20e.p15 n=9 x=61.1 y=39.9 core.source="openmoji 3e01de5"
-@k.objects.ome20e.word core.word text=fog text=weather text=berg text=peak text=elevation text=hiking means="foggy mountain" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome20e.keyword k.objects.keyword of="foggy mountain" text=fog text=weather text=berg text=peak text=elevation text=hiking core.source="openmoji 3e01de5"
 
 # great pyramid of giza
 @k.objects.ome20f k.objects.object name="great pyramid of giza" core.source="openmoji 3e01de5"
@@ -267,7 +267,7 @@
 @k.objects.ome20f.p10.1 k.objects.point part=$k.objects.ome20f.p10 n=1 x=54.8 y=76.4 core.source="openmoji 3e01de5"
 @k.objects.ome20f.p10.2 k.objects.point part=$k.objects.ome20f.p10 n=2 x=72.2 y=76.4 core.source="openmoji 3e01de5"
 @k.objects.ome20f.p10.3 k.objects.point part=$k.objects.ome20f.p10 n=3 x=36.1 y=37.4 core.source="openmoji 3e01de5"
-@k.objects.ome20f.word core.word text="seven wonders of the ancient world" text=egypt means="great pyramid of giza" of=k.objects.object.name core.source="openmoji 3e01de5"
+@k.objects.ome20f.keyword k.objects.keyword of="great pyramid of giza" text="seven wonders of the ancient world" text=egypt core.source="openmoji 3e01de5"
 
 # cargo bike
 @k.objects.ome218 k.objects.object name="cargo bike" core.source="openmoji 3e01de5"

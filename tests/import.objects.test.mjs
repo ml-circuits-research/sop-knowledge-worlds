@@ -34,7 +34,7 @@ test('openmoji: things with a new name become objects; outlines are closed lines
     '@k.objects.ome000.p2.3 k.objects.point part=$k.objects.ome000.p2 n=3 x=100 y=100 core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.4 k.objects.point part=$k.objects.ome000.p2 n=4 x=0 y=100 core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.5 k.objects.point part=$k.objects.ome000.p2 n=5 x=0 y=0 core.source="openmoji 3e01de5"',
-    '@k.objects.ome000.word core.word text=fish text=water means=goldfish of=k.objects.object.name core.source="openmoji 3e01de5"',
+    '@k.objects.ome000.keyword k.objects.keyword of=goldfish text=fish text=water core.source="openmoji 3e01de5"',
   ]);
   assert.ok(files['openmoji-animals-nature-01.sop'].includes('# license: CC-BY-SA-4.0'));
   assert.deepEqual(run().files, files);
@@ -49,7 +49,7 @@ test('mulberry: nouns of thing categories, first drawing only, new names only', 
   assert.deepEqual(stats.skipped, { notThing: 2, variant: 1, taken: 1, noSvg: 0, excluded: 0 });
   const lines = files['mulberry-building-furniture-01.sop'].split('\n').filter((l) => l.startsWith('@'));
   assert.equal(lines[0], '@k.objects.mb10 k.objects.object name="arm chair" core.source="mulberry fa94a93"');
-  assert.equal(lines.at(-1), '@k.objects.mb10.word core.word text=seat text=chair means="arm chair" of=k.objects.object.name core.source="mulberry fa94a93"');
+  assert.equal(lines.at(-1), '@k.objects.mb10.keyword k.objects.keyword of="arm chair" text=seat text=chair core.source="mulberry fa94a93"');
   // sources/mulberry/excluded.tsv: a name with a reason is skipped.
   const without = importMulberry({ info, svg: () => svg, taken: new Set(['dog']), excluded: '# name\treason\narm chair\tnot a thing\n' });
   assert.deepEqual(Object.keys(without.files), []);

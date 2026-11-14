@@ -218,7 +218,7 @@
 @k.objects.u1f30d.p12.2 k.objects.point part=$k.objects.u1f30d.p12 n=2 x=55 y=65.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f30d.p12.3 k.objects.point part=$k.objects.u1f30d.p12 n=3 x=54.2 y=67.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f30d.p12.4 k.objects.point part=$k.objects.u1f30d.p12 n=4 x=55.9 y=67.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f30d.word core.word text=Africa text=earth text=Europe text=Europe-Africa text=globe text=showing text=world means="globe showing Europe-Africa" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f30d.keyword k.objects.keyword of="globe showing Europe-Africa" text=Africa text=earth text=Europe text=Europe-Africa text=globe text=showing text=world core.source="cldr 48"
 
 # globe showing Americas
 @k.objects.u1f30e k.objects.object name="globe showing Americas" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -427,7 +427,7 @@
 @k.objects.u1f30e.p8.12 k.objects.point part=$k.objects.u1f30e.p8 n=12 x=44.2 y=18.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f30e.p8.13 k.objects.point part=$k.objects.u1f30e.p8 n=13 x=40.1 y=16.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f30e.p8.14 k.objects.point part=$k.objects.u1f30e.p8 n=14 x=38.1 y=16.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f30e.word core.word text=Americas text=earth text=globe text=showing text=world means="globe showing Americas" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f30e.keyword k.objects.keyword of="globe showing Americas" text=Americas text=earth text=globe text=showing text=world core.source="cldr 48"
 
 # globe showing Asia-Australia
 @k.objects.u1f30f k.objects.object name="globe showing Asia-Australia" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -640,7 +640,7 @@
 @k.objects.u1f30f.p16.13 k.objects.point part=$k.objects.u1f30f.p16 n=13 x=45 y=85.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f30f.p16.14 k.objects.point part=$k.objects.u1f30f.p16 n=14 x=55.3 y=84.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f30f.p16.15 k.objects.point part=$k.objects.u1f30f.p16 n=15 x=58.8 y=85.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f30f.word core.word text=Asia text=Asia-Australia text=Australia text=earth text=globe text=showing text=world means="globe showing Asia-Australia" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f30f.keyword k.objects.keyword of="globe showing Asia-Australia" text=Asia text=Asia-Australia text=Australia text=earth text=globe text=showing text=world core.source="cldr 48"
 
 # globe with meridians
 @k.objects.u1f310 k.objects.object name="globe with meridians" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -789,7 +789,7 @@
 @k.objects.u1f310.p16.26 k.objects.point part=$k.objects.u1f310.p16 n=26 x=73.9 y=91.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f310.p16.27 k.objects.point part=$k.objects.u1f310.p16 n=27 x=67.3 y=94.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f310.p16.28 k.objects.point part=$k.objects.u1f310.p16 n=28 x=59.4 y=96.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f310.word core.word text=earth text=globe text=internet text=meridians text=web text=world text=worldwide means="globe with meridians" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f310.keyword k.objects.keyword of="globe with meridians" text=earth text=globe text=internet text=meridians text=web text=world text=worldwide core.source="cldr 48"
 
 # world map
 @k.objects.u1f5fa k.objects.object name="world map" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1000,7 +1000,7 @@
 @k.objects.u1f5fa.p16.22 k.objects.point part=$k.objects.u1f5fa.p16 n=22 x=59.9 y=49.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f5fa.p16.23 k.objects.point part=$k.objects.u1f5fa.p16 n=23 x=60 y=47.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f5fa.p16.24 k.objects.point part=$k.objects.u1f5fa.p16 n=24 x=64.4 y=48.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f5fa.word core.word text=map text=world means="world map" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5fa.keyword k.objects.keyword of="world map" text=map text=world core.source="cldr 48"
 
 # map of Japan
 @k.objects.u1f5fe k.objects.object name="map of Japan" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1201,7 +1201,7 @@
 @k.objects.u1f5fe.p10.35 k.objects.point part=$k.objects.u1f5fe.p10 n=35 x=40.8 y=68 core.source="noto-emoji 99701e0"
 @k.objects.u1f5fe.p10.36 k.objects.point part=$k.objects.u1f5fe.p10 n=36 x=38.1 y=66.6 core.source="noto-emoji 99701e0"
 @k.objects.u1f5fe.p10.37 k.objects.point part=$k.objects.u1f5fe.p10 n=37 x=28.7 y=67.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f5fe.word core.word text=Japan text=map means="map of Japan" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5fe.keyword k.objects.keyword of="map of Japan" text=Japan text=map core.source="cldr 48"
 
 # compass
 @k.objects.u1f9ed k.objects.object name=compass core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1354,4 +1354,4 @@
 @k.objects.u1f9ed.p16.18 k.objects.point part=$k.objects.u1f9ed.p16 n=18 x=19 y=23.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ed.p16.19 k.objects.point part=$k.objects.u1f9ed.p16 n=19 x=12.6 y=32.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9ed.p16.20 k.objects.point part=$k.objects.u1f9ed.p16 n=20 x=9 y=41.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f9ed.word core.word text=direction text=magnetic text=navigation text=orienteering means=compass of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9ed.keyword k.objects.keyword of=compass text=direction text=magnetic text=navigation text=orienteering core.source="cldr 48"

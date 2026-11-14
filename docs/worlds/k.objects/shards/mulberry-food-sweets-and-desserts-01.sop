@@ -399,7 +399,7 @@
 @k.objects.mb455.p13.10 k.objects.point part=$k.objects.mb455.p13 n=10 x=86.8 y=76 core.source="mulberry fa94a93"
 @k.objects.mb455.p13.11 k.objects.point part=$k.objects.mb455.p13 n=11 x=85.3 y=76 core.source="mulberry fa94a93"
 @k.objects.mb455.p13.12 k.objects.point part=$k.objects.mb455.p13 n=12 x=72.6 y=71.8 core.source="mulberry fa94a93"
-@k.objects.mb455.word core.word text=sweet means="chewing gum" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb455.keyword k.objects.keyword of="chewing gum" text=sweet core.source="mulberry fa94a93"
 
 # chocolate
 @k.objects.mb481 k.objects.object name=chocolate core.source="mulberry fa94a93"
@@ -540,7 +540,7 @@
 @k.objects.mb481.p16.11 k.objects.point part=$k.objects.mb481.p16 n=11 x=30.7 y=8.9 core.source="mulberry fa94a93"
 @k.objects.mb481.p16.12 k.objects.point part=$k.objects.mb481.p16 n=12 x=69.4 y=8.9 core.source="mulberry fa94a93"
 @k.objects.mb481.p16.13 k.objects.point part=$k.objects.mb481.p16 n=13 x=71.1 y=9.6 core.source="mulberry fa94a93"
-@k.objects.mb481.word core.word text=diary text=food text=sweet means=chocolate of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb481.keyword k.objects.keyword of=chocolate text=diary text=food text=sweet core.source="mulberry fa94a93"
 
 # chocolate box
 @k.objects.mb483 k.objects.object name="chocolate box" core.source="mulberry fa94a93"
@@ -1053,7 +1053,7 @@
 @k.objects.mb485.p16.5 k.objects.point part=$k.objects.mb485.p16 n=5 x=37.4 y=22.8 core.source="mulberry fa94a93"
 @k.objects.mb485.p16.6 k.objects.point part=$k.objects.mb485.p16 n=6 x=33.4 y=20.6 core.source="mulberry fa94a93"
 @k.objects.mb485.p16.7 k.objects.point part=$k.objects.mb485.p16 n=7 x=32.1 y=18.3 core.source="mulberry fa94a93"
-@k.objects.mb485.word core.word text=dairy text=food text=sweet means="chocolate egg" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb485.keyword k.objects.keyword of="chocolate egg" text=dairy text=food text=sweet core.source="mulberry fa94a93"
 
 # cornet
 @k.objects.mb608 k.objects.object name=cornet core.source="mulberry fa94a93"
@@ -1244,4 +1244,4 @@
 @k.objects.mb608.p13.5 k.objects.point part=$k.objects.mb608.p13 n=5 x=44.9 y=55.3 core.source="mulberry fa94a93"
 @k.objects.mb608.p13.6 k.objects.point part=$k.objects.mb608.p13 n=6 x=41.1 y=53.1 core.source="mulberry fa94a93"
 @k.objects.mb608.p13.7 k.objects.point part=$k.objects.mb608.p13 n=7 x=36.2 y=38.6 core.source="mulberry fa94a93"
-@k.objects.mb608.word core.word text=diary text=food means=cornet of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb608.keyword k.objects.keyword of=cornet text=diary text=food core.source="mulberry fa94a93"

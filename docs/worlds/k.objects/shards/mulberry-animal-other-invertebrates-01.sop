@@ -200,7 +200,7 @@
 @k.objects.mb1000.p16.38 k.objects.point part=$k.objects.mb1000.p16 n=38 x=90.3 y=57.3 core.source="mulberry fa94a93"
 @k.objects.mb1000.p16.39 k.objects.point part=$k.objects.mb1000.p16 n=39 x=86.8 y=64.6 core.source="mulberry fa94a93"
 @k.objects.mb1000.p16.40 k.objects.point part=$k.objects.mb1000.p16 n=40 x=81.2 y=70.5 core.source="mulberry fa94a93"
-@k.objects.mb1000.word core.word text=insect means=earthworm of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1000.keyword k.objects.keyword of=earthworm text=insect core.source="mulberry fa94a93"
 
 # starfish
 @k.objects.mb2679 k.objects.object name=starfish core.source="mulberry fa94a93"
@@ -351,4 +351,4 @@
 @k.objects.mb2679.p16.35 k.objects.point part=$k.objects.mb2679.p16 n=35 x=52.9 y=13.9 core.source="mulberry fa94a93"
 @k.objects.mb2679.p16.36 k.objects.point part=$k.objects.mb2679.p16 n=36 x=54.6 y=16.9 core.source="mulberry fa94a93"
 @k.objects.mb2679.p16.37 k.objects.point part=$k.objects.mb2679.p16 n=37 x=59 y=39.8 core.source="mulberry fa94a93"
-@k.objects.mb2679.word core.word text=animal text=shellfish means=starfish of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb2679.keyword k.objects.keyword of=starfish text=animal text=shellfish core.source="mulberry fa94a93"

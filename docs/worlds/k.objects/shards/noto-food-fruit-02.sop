@@ -121,7 +121,7 @@
 @k.objects.u1f96d.p6.6 k.objects.point part=$k.objects.u1f96d.p6 n=6 x=72.9 y=12.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f96d.p6.7 k.objects.point part=$k.objects.u1f96d.p6 n=7 x=63 y=12.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f96d.p6.8 k.objects.point part=$k.objects.u1f96d.p6 n=8 x=56.4 y=13.6 core.source="noto-emoji 99701e0"
-@k.objects.u1f96d.word core.word text=food text=fruit text=tropical means=mango of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f96d.keyword k.objects.keyword of=mango text=food text=fruit text=tropical core.source="cldr 48"
 
 # red apple
 @k.objects.u1f34e k.objects.object name="red apple" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -270,7 +270,7 @@
 @k.objects.u1f34e.p7.13 k.objects.point part=$k.objects.u1f34e.p7 n=13 x=20.9 y=45.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f34e.p7.14 k.objects.point part=$k.objects.u1f34e.p7 n=14 x=30 y=34.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f34e.p7.15 k.objects.point part=$k.objects.u1f34e.p7 n=15 x=30 y=32.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f34e.word core.word text=apple text=diet text=food text=fruit text=health text=red text=ripe means="red apple" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34e.keyword k.objects.keyword of="red apple" text=apple text=diet text=food text=fruit text=health text=red text=ripe core.source="cldr 48"
 
 # green apple
 @k.objects.u1f34f k.objects.object name="green apple" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -412,7 +412,7 @@
 @k.objects.u1f34f.p7.8 k.objects.point part=$k.objects.u1f34f.p7 n=8 x=58.3 y=27.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f34f.p7.9 k.objects.point part=$k.objects.u1f34f.p7 n=9 x=53.3 y=28.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f34f.p7.10 k.objects.point part=$k.objects.u1f34f.p7 n=10 x=50.1 y=27.8 core.source="noto-emoji 99701e0"
-@k.objects.u1f34f.word core.word text=apple text=fruit text=green means="green apple" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f34f.keyword k.objects.keyword of="green apple" text=apple text=fruit text=green core.source="cldr 48"
 
 # pear
 @k.objects.u1f350 k.objects.object name=pear core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -533,7 +533,7 @@
 @k.objects.u1f350.p9.6 k.objects.point part=$k.objects.u1f350.p9 n=6 x=58.5 y=41.4 core.source="noto-emoji 99701e0"
 @k.objects.u1f350.p9.7 k.objects.point part=$k.objects.u1f350.p9 n=7 x=59.7 y=40.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f350.p9.8 k.objects.point part=$k.objects.u1f350.p9 n=8 x=59.9 y=39.4 core.source="noto-emoji 99701e0"
-@k.objects.u1f350.word core.word text=fruit means=pear of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f350.keyword k.objects.keyword of=pear text=fruit core.source="cldr 48"
 
 # peach
 @k.objects.u1f351 k.objects.object name=peach core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -739,7 +739,7 @@
 @k.objects.u1f351.p12.16 k.objects.point part=$k.objects.u1f351.p12 n=16 x=34.9 y=29.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f351.p12.17 k.objects.point part=$k.objects.u1f351.p12 n=17 x=29.8 y=31.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f351.p12.18 k.objects.point part=$k.objects.u1f351.p12 n=18 x=24.8 y=35.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f351.word core.word text=fruit means=peach of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f351.keyword k.objects.keyword of=peach text=fruit core.source="cldr 48"
 
 # cherries
 @k.objects.u1f352 k.objects.object name=cherries core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -924,7 +924,7 @@
 @k.objects.u1f352.p10.8 k.objects.point part=$k.objects.u1f352.p10 n=8 x=29.7 y=21.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p10.9 k.objects.point part=$k.objects.u1f352.p10 n=9 x=37.2 y=23.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f352.p10.10 k.objects.point part=$k.objects.u1f352.p10 n=10 x=46.7 y=23.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f352.word core.word text=berries text=cherry text=fruit text=red means=cherries of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f352.keyword k.objects.keyword of=cherries text=berries text=cherry text=fruit text=red core.source="cldr 48"
 
 # strawberry
 @k.objects.u1f353 k.objects.object name=strawberry core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1142,7 +1142,7 @@
 @k.objects.u1f353.p16.2 k.objects.point part=$k.objects.u1f353.p16 n=2 x=43.7 y=59.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p16.3 k.objects.point part=$k.objects.u1f353.p16 n=3 x=44.7 y=61.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f353.p16.4 k.objects.point part=$k.objects.u1f353.p16 n=4 x=46.2 y=59.5 core.source="noto-emoji 99701e0"
-@k.objects.u1f353.word core.word text=berry text=fruit means=strawberry of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f353.keyword k.objects.keyword of=strawberry text=berry text=fruit core.source="cldr 48"
 
 # blueberries
 @k.objects.u1fad0 k.objects.object name=blueberries core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1340,4 +1340,4 @@
 @k.objects.u1fad0.p13.6 k.objects.point part=$k.objects.u1fad0.p13 n=6 x=20.3 y=56.5 core.source="noto-emoji 99701e0"
 @k.objects.u1fad0.p13.7 k.objects.point part=$k.objects.u1fad0.p13 n=7 x=23.5 y=54.3 core.source="noto-emoji 99701e0"
 @k.objects.u1fad0.p13.8 k.objects.point part=$k.objects.u1fad0.p13 n=8 x=27.4 y=55 core.source="noto-emoji 99701e0"
-@k.objects.u1fad0.word core.word text=berries text=berry text=bilberry text=blue text=blueberry text=food text=fruit means=blueberries of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1fad0.keyword k.objects.keyword of=blueberries text=berries text=berry text=bilberry text=blue text=blueberry text=food text=fruit core.source="cldr 48"

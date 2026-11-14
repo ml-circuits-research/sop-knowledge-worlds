@@ -215,7 +215,7 @@
 @k.objects.u1f3ad.p16.6 k.objects.point part=$k.objects.u1f3ad.p16 n=6 x=78.4 y=11.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ad.p16.7 k.objects.point part=$k.objects.u1f3ad.p16 n=7 x=82 y=20.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f3ad.p16.8 k.objects.point part=$k.objects.u1f3ad.p16 n=8 x=83.5 y=27 core.source="noto-emoji 99701e0"
-@k.objects.u1f3ad.word core.word text=actor text=actress text=art text=arts text=entertainment text=mask text=performing text=theater text=theatre text=thespian means="performing arts" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3ad.keyword k.objects.keyword of="performing arts" text=actor text=actress text=art text=arts text=entertainment text=mask text=performing text=theater text=theatre text=thespian core.source="cldr 48"
 
 # framed picture
 @k.objects.u1f5bc k.objects.object name="framed picture" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -361,7 +361,7 @@
 @k.objects.u1f5bc.p16.12 k.objects.point part=$k.objects.u1f5bc.p16 n=12 x=30.3 y=48.2 core.source="noto-emoji 99701e0"
 @k.objects.u1f5bc.p16.13 k.objects.point part=$k.objects.u1f5bc.p16 n=13 x=31.1 y=54.7 core.source="noto-emoji 99701e0"
 @k.objects.u1f5bc.p16.14 k.objects.point part=$k.objects.u1f5bc.p16 n=14 x=30.3 y=58.3 core.source="noto-emoji 99701e0"
-@k.objects.u1f5bc.word core.word text=art text=frame text=framed text=museum text=painting text=picture means="framed picture" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f5bc.keyword k.objects.keyword of="framed picture" text=art text=frame text=framed text=museum text=painting text=picture core.source="cldr 48"
 
 # artist palette
 @k.objects.u1f3a8 k.objects.object name="artist palette" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -560,7 +560,7 @@
 @k.objects.u1f3a8.p16.3 k.objects.point part=$k.objects.u1f3a8.p16 n=3 x=39.7 y=68.3 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a8.p16.4 k.objects.point part=$k.objects.u1f3a8.p16 n=4 x=40.7 y=70.1 core.source="noto-emoji 99701e0"
 @k.objects.u1f3a8.p16.5 k.objects.point part=$k.objects.u1f3a8.p16 n=5 x=42.3 y=70.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f3a8.word core.word text=art text=artist text=artsy text=arty text=colorful text=creative text=entertainment text=museum text=painter text=painting text=palette means="artist palette" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f3a8.keyword k.objects.keyword of="artist palette" text=art text=artist text=artsy text=arty text=colorful text=creative text=entertainment text=museum text=painter text=painting text=palette core.source="cldr 48"
 
 # thread
 @k.objects.u1f9f5 k.objects.object name=thread core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -746,7 +746,7 @@
 @k.objects.u1f9f5.p16.5 k.objects.point part=$k.objects.u1f9f5.p16 n=5 x=52.9 y=72.8 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f5.p16.6 k.objects.point part=$k.objects.u1f9f5.p16 n=6 x=61.4 y=72.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f5.p16.7 k.objects.point part=$k.objects.u1f9f5.p16 n=7 x=66.3 y=71.1 core.source="noto-emoji 99701e0"
-@k.objects.u1f9f5.word core.word text=needle text=sewing text=spool text=string means=thread of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f5.keyword k.objects.keyword of=thread text=needle text=sewing text=spool text=string core.source="cldr 48"
 
 # sewing needle
 @k.objects.u1faa1 k.objects.object name="sewing needle" core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -866,7 +866,7 @@
 @k.objects.u1faa1.p5.33 k.objects.point part=$k.objects.u1faa1.p5 n=33 x=77.1 y=20.7 core.source="noto-emoji 99701e0"
 @k.objects.u1faa1.p5.34 k.objects.point part=$k.objects.u1faa1.p5 n=34 x=85.1 y=28.4 core.source="noto-emoji 99701e0"
 @k.objects.u1faa1.p5.35 k.objects.point part=$k.objects.u1faa1.p5 n=35 x=87.8 y=34.6 core.source="noto-emoji 99701e0"
-@k.objects.u1faa1.word core.word text=embroidery text=needle text=sew text=sewing text=stitches text=sutures text=tailoring text=thread means="sewing needle" of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa1.keyword k.objects.keyword of="sewing needle" text=embroidery text=needle text=sew text=sewing text=stitches text=sutures text=tailoring text=thread core.source="cldr 48"
 
 # yarn
 @k.objects.u1f9f6 k.objects.object name=yarn core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1069,7 +1069,7 @@
 @k.objects.u1f9f6.p16.32 k.objects.point part=$k.objects.u1f9f6.p16 n=32 x=92.2 y=87.9 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f6.p16.33 k.objects.point part=$k.objects.u1f9f6.p16 n=33 x=84.7 y=92.5 core.source="noto-emoji 99701e0"
 @k.objects.u1f9f6.p16.34 k.objects.point part=$k.objects.u1f9f6.p16 n=34 x=71.7 y=95.7 core.source="noto-emoji 99701e0"
-@k.objects.u1f9f6.word core.word text=ball text=crochet text=knit means=yarn of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1f9f6.keyword k.objects.keyword of=yarn text=ball text=crochet text=knit core.source="cldr 48"
 
 # knot
 @k.objects.u1faa2 k.objects.object name=knot core.source="noto-emoji 99701e0" core.source="cldr 48"
@@ -1275,4 +1275,4 @@
 @k.objects.u1faa2.p16.6 k.objects.point part=$k.objects.u1faa2.p16 n=6 x=39.1 y=25.1 core.source="noto-emoji 99701e0"
 @k.objects.u1faa2.p16.7 k.objects.point part=$k.objects.u1faa2.p16 n=7 x=38.3 y=20.5 core.source="noto-emoji 99701e0"
 @k.objects.u1faa2.p16.8 k.objects.point part=$k.objects.u1faa2.p16 n=8 x=32.4 y=24.1 core.source="noto-emoji 99701e0"
-@k.objects.u1faa2.word core.word text=cord text=rope text=tangled text=tie text=twine text=twist means=knot of=k.objects.object.name core.source="cldr 48"
+@k.objects.u1faa2.keyword k.objects.keyword of=knot text=cord text=rope text=tangled text=tie text=twine text=twist core.source="cldr 48"

@@ -142,7 +142,7 @@
 @k.objects.mb112.p16 k.objects.part of="bank card" name=part16 kind=detail named=no shape=line x=71.4 y=66.8 w=10.8 h=0 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb112.p16.1 k.objects.point part=$k.objects.mb112.p16 n=1 x=71.4 y=66.8 core.source="mulberry fa94a93"
 @k.objects.mb112.p16.2 k.objects.point part=$k.objects.mb112.p16 n=2 x=82.2 y=66.8 core.source="mulberry fa94a93"
-@k.objects.mb112.word core.word text=finance text=money means="bank card" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb112.keyword k.objects.keyword of="bank card" text=finance text=money core.source="mulberry fa94a93"
 
 # cash point
 @k.objects.mb391 k.objects.object name="cash point" core.source="mulberry fa94a93"
@@ -232,7 +232,7 @@
 @k.objects.mb391.p16 k.objects.part of="cash point" name=part16 kind=detail named=no shape=line x=56.4 y=67.5 w=6.5 h=23.3 z=16 colour=black rgb="#231F20" core.source="mulberry fa94a93"
 @k.objects.mb391.p16.1 k.objects.point part=$k.objects.mb391.p16 n=1 x=56.4 y=67.5 core.source="mulberry fa94a93"
 @k.objects.mb391.p16.2 k.objects.point part=$k.objects.mb391.p16 n=2 x=62.9 y=90.8 core.source="mulberry fa94a93"
-@k.objects.mb391.word core.word text=finance text=money means="cash point" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb391.keyword k.objects.keyword of="cash point" text=finance text=money core.source="mulberry fa94a93"
 
 # cheque book
 @k.objects.mb449 k.objects.object name="cheque book" core.source="mulberry fa94a93"
@@ -337,7 +337,7 @@
 @k.objects.mb449.p16.2 k.objects.point part=$k.objects.mb449.p16 n=2 x=80.1 y=69.7 core.source="mulberry fa94a93"
 @k.objects.mb449.p16.3 k.objects.point part=$k.objects.mb449.p16 n=3 x=78.4 y=70.7 core.source="mulberry fa94a93"
 @k.objects.mb449.p16.4 k.objects.point part=$k.objects.mb449.p16 n=4 x=66.2 y=72.2 core.source="mulberry fa94a93"
-@k.objects.mb449.word core.word text=finance text=money means="cheque book" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb449.keyword k.objects.keyword of="cheque book" text=finance text=money core.source="mulberry fa94a93"
 
 # chip and pin device
 @k.objects.mb474 k.objects.object name="chip and pin device" core.source="mulberry fa94a93"
@@ -536,7 +536,7 @@
 @k.objects.mb474.p16.3 k.objects.point part=$k.objects.mb474.p16 n=3 x=23.9 y=40.8 core.source="mulberry fa94a93"
 @k.objects.mb474.p16.4 k.objects.point part=$k.objects.mb474.p16 n=4 x=18.7 y=41.2 core.source="mulberry fa94a93"
 @k.objects.mb474.p16.5 k.objects.point part=$k.objects.mb474.p16 n=5 x=12.4 y=42.9 core.source="mulberry fa94a93"
-@k.objects.mb474.word core.word text=finance text=money means="chip and pin device" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb474.keyword k.objects.keyword of="chip and pin device" text=finance text=money core.source="mulberry fa94a93"
 
 # gold bar
 @k.objects.mb1531 k.objects.object name="gold bar" core.source="mulberry fa94a93"
@@ -701,7 +701,7 @@
 @k.objects.mb1531.p16.12 k.objects.point part=$k.objects.mb1531.p16 n=12 x=28 y=26 core.source="mulberry fa94a93"
 @k.objects.mb1531.p16.13 k.objects.point part=$k.objects.mb1531.p16 n=13 x=32.6 y=24.2 core.source="mulberry fa94a93"
 @k.objects.mb1531.p16.14 k.objects.point part=$k.objects.mb1531.p16 n=14 x=36.7 y=24.6 core.source="mulberry fa94a93"
-@k.objects.mb1531.word core.word text=celebration means="gold bar" of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1531.keyword k.objects.keyword of="gold bar" text=celebration core.source="mulberry fa94a93"
 
 # money
 @k.objects.mb1972 k.objects.object name=money core.source="mulberry fa94a93"
@@ -914,4 +914,4 @@
 @k.objects.mb1972.p16.15 k.objects.point part=$k.objects.mb1972.p16 n=15 x=66.7 y=32.5 core.source="mulberry fa94a93"
 @k.objects.mb1972.p16.16 k.objects.point part=$k.objects.mb1972.p16 n=16 x=69.1 y=36.4 core.source="mulberry fa94a93"
 @k.objects.mb1972.p16.17 k.objects.point part=$k.objects.mb1972.p16 n=17 x=69.6 y=39.5 core.source="mulberry fa94a93"
-@k.objects.mb1972.word core.word text=finance means=money of=k.objects.object.name core.source="mulberry fa94a93"
+@k.objects.mb1972.keyword k.objects.keyword of=money text=finance core.source="mulberry fa94a93"
