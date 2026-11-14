@@ -1,4 +1,4 @@
-# k.diagrams/shards/diagrams: 10 kinds of diagram (structure, layout, arrangement, edges, roles, uses), 23 shape conventions, 18 ways the catalog's knowledge fills them, and the 10 works they rest on.
+# k.diagrams/shards/diagrams: 10 kinds of diagram (structure, layout, arrangement, edges, roles, uses), 23 shape conventions, 20 ways the catalog's knowledge fills them, and the 10 works they rest on.
 # sources: hand-core 1 (hand-written in this repository: tools/diagrams-core.mjs; the works cited are the k.diagrams.source facts)
 # license: CC0-1.0
 # script: tools/diagrams-core.mjs
@@ -50,12 +50,14 @@
 @k.diagrams.fill.flowchart.k_procedures_step.n k.diagrams.fill kind=flowchart type=k.procedures.step key=n gives=order topic=method about="the steps of a method in their order" core.source="hand-core 1"
 @k.diagrams.fill.tree.k_kinds_parent.is_a k.diagrams.fill kind=tree type=k.kinds.parent key=is_a gives=edges topic=is_a about="kinds under their kinds (the up edges of k.kinds: a cow under farm animal and under mammal)" core.source="hand-core 1"
 @k.diagrams.fill.tree.k_parts_usual.has k.diagrams.fill kind=tree type=k.parts.usual key=has gives=edges topic=name about="a thing and its usual parts" core.source="hand-core 1"
+@k.diagrams.fill.tree.k_parts_whole.has k.diagrams.fill kind=tree type=k.parts.whole key=has gives=edges topic=name about="a thing and its own parts as WordNet lists them (a car: accelerator, air bag, bumper, car door ...)" core.source="hand-core 1"
 @k.diagrams.fill.tree.k_geo_city.country k.diagrams.fill kind=tree type=k.geo.city key=country gives=edges topic=country about="a country and its cities" core.source="hand-core 1"
 @k.diagrams.fill.cycle.k_time_ordered.next k.diagrams.fill kind=cycle type=k.time.ordered key=next gives=edges topic=cycle about="the stages of a cycle of k.time, each joined to the next: the seasons, the months, the life cycle of a frog, the water cycle" core.source="hand-core 1"
 @k.diagrams.fill.cycle.k_time_ordered.n k.diagrams.fill kind=cycle type=k.time.ordered key=n gives=order topic=cycle about="the stages of a cycle in their order from where it is said to start" core.source="hand-core 1"
 @k.diagrams.fill.timeline.k_time_ordered.n k.diagrams.fill kind=timeline type=k.time.ordered key=n gives=order topic=cycle about="the times of a cycle in order (months, weekdays)" core.source="hand-core 1"
 @k.diagrams.fill.timeline.k_story_element.n k.diagrams.fill kind=timeline type=k.story.element key=n gives=order about="the elements of a story in the order told" core.source="hand-core 1"
 @k.diagrams.fill.mind_map.k_parts_usual.has k.diagrams.fill kind="mind map" type=k.parts.usual key=has gives=edges topic=name about="a thing in the middle, its parts on branches" core.source="hand-core 1"
+@k.diagrams.fill.mind_map.k_parts_whole.has k.diagrams.fill kind="mind map" type=k.parts.whole key=has gives=edges topic=name about="a thing in the middle, its own parts (as WordNet lists them) on branches" core.source="hand-core 1"
 @k.diagrams.fill.mind_map.k_attributes_aspect.name k.diagrams.fill kind="mind map" type=k.attributes.aspect key=name gives=values about="the aspects of a thing (what it is, looks like, does, where it lives) as branches" core.source="hand-core 1"
 @k.diagrams.fill.Venn_diagram.k_kinds_parent.is_a k.diagrams.fill kind="Venn diagram" type=k.kinds.parent key=is_a gives=members topic=is_a about="things in the sets of their kinds; a thing of two kinds lies in the overlap" core.source="hand-core 1"
 @k.diagrams.fill.network.k_geo_country.neighbour k.diagrams.fill kind=network type=k.geo.country key=neighbour gives=edges about="countries joined to their neighbours" core.source="hand-core 1"

@@ -19,10 +19,10 @@ which kind to choose for a topic, how to lay it out, how to draw each node, and 
 | kind | structure | layout | arranged | edges | filled by |
 | --- | --- | --- | --- | --- | --- |
 | flowchart | graph, sequence | top_down, left_right | flow, column | directed | k.procedures.step after, n |
-| tree | whole with parts, graph | top_down | tree | undirected | k.kinds.parent is_a, k.parts.usual has, k.geo.city country |
+| tree | whole with parts, graph | top_down | tree | undirected | k.kinds.parent is_a, k.parts.usual has, k.parts.whole has, k.geo.city country |
 | cycle | cycle | circular | ring, flow | directed | k.time.ordered next, n (seasons, months, life cycles, the water cycle) |
 | timeline | sequence | left_right, top_down | row, column | none | k.time.ordered n, k.story.element n |
-| mind map | whole with parts | radial | radial | undirected | k.parts.usual has, k.attributes.aspect |
+| mind map | whole with parts | radial | radial | undirected | k.parts.usual has, k.parts.whole has, k.attributes.aspect |
 | Venn diagram | whole with parts | overlapping | | none | k.kinds.parent is_a (members of kinds) |
 | org chart | whole with parts, graph | top_down | tree | undirected | nothing in the catalog yet (who reports to whom) |
 | network | graph | free | scatter | undirected | k.geo.country neighbour, k.layouts.joins, k.kinds.relation |
@@ -53,6 +53,9 @@ kind gives the diagram's `form`, its first `layout`, each node's `role`, and `k.
 role; `arranged` names the k.layouts layout whose relations place the nodes (ring: around a centre, evenly spaced).
 `tests/k.diagrams.test.mjs` builds both diagrams in a `w.diagram` session from these facts alone. The cycles of
 nature (life cycles of a frog, a butterfly and a plant; the water cycle) are `k.time.stage` facts (k.time version 5).
+The parts of a thing come from two worlds of k.parts: `usual` (the parts a drawing shows, 432 animals and simple
+things) and `whole` (the parts WordNet lists, 307 things: a car has 29, from accelerator to window); a tree or
+a mind map of "the parts of a car" is filled by `k.parts.whole has` (block 07:30 item 1, PSys2 Q17).
 
 ## Limits
 

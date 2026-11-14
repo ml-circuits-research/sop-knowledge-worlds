@@ -5318,3 +5318,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Open: "connect a to c" in lower case still reads "a" as the article; "link A with D" reads D as the tool (an older
   frame, acts.connect.tool, outranks acts.connect for "with"); "put the parts in a tree" is read as a diagram of
   parts, a host with parts already drawn should take the layout reading that comes next.
+
+
+## 2026-11-15 — first worker: the parts of a thing as a diagram fill (block 07:30 item 1; PSys2 Q17 (1))
+
+- Coordinator relay of the owner decision (07:30): the "more animal sounds" item (07:15 item 3) is dropped (no real
+  row asks for it); the 07:30 diagram items follow items 1 and 2.
+- `k.diagrams.fill` for `k.parts.whole has` (topic `name`) as a tree and as a mind map: "a tree of the parts of a car"
+  had no fill (only `k.parts.usual`, 432 animals and simple things, filled trees); `k.parts.whole` has 307 things
+  with WordNet's parts (car: 29, accelerator to window). tools/diagrams-core.mjs: 20 fills (was 18), shard 63 wires,
+  15,997 bytes, CC0. Test: tests/k.diagrams.test.mjs (7, +1: both fills, the car's parts through the fill).

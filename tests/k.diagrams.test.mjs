@@ -111,3 +111,15 @@ test('a flowchart of a method of k.procedures: its steps as process nodes, an ar
   assert.equal(act('ask', { thing: node.start, attr: 'shape' }).result.value, 'oval');
   assert.equal(act('ask', { thing: node[1], attr: 'shape' }).result.value, 'rectangle');
 });
+
+// Block 07:30 item 1 (PSys2 Q17): "a tree of the parts of a car" had no fill; k.parts.whole has its WordNet parts.
+test('a tree and a mind map of the parts of a car are filled by k.parts.whole', () => {
+  for (const kind of ['tree', 'mind map']) {
+    const fill = fills.find((f) => one(f, 'kind') === kind && one(f, 'type') === 'k.parts.whole');
+    assert.ok(fill, kind);
+    assert.deepEqual([one(fill, 'key'), one(fill, 'gives'), one(fill, 'topic')], ['has', 'edges', 'name']);
+    const car = factsOf('k.parts', 'k.parts.whole', worlds).find((f) => one(f, one(fill, 'topic')) === 'car');
+    const parts = all(car, one(fill, 'key'));
+    assert.ok(parts.length >= 20 && parts.includes('car door') && parts.includes('bumper'), parts.join(', '));
+  }
+});

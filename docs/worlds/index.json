@@ -1,5 +1,5 @@
 {
- "version": "857b0b7b5e4a",
+ "version": "3be14fe412af",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4498,7 +4498,7 @@
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
      "wires": 1065,
-     "bytes": 204954,
+     "bytes": 204955,
      "keys": [
       "a",
       "about",
@@ -12388,8 +12388,8 @@
     {
      "id": "k.diagrams/shards/diagrams",
      "path": "k.diagrams/shards/diagrams.sop",
-     "wires": 61,
-     "bytes": 15514,
+     "wires": 63,
+     "bytes": 15997,
      "keys": [
       "after",
       "b",
@@ -12423,6 +12423,7 @@
       "k.kinds.relation",
       "k.layouts.joins",
       "k.parts.usual",
+      "k.parts.whole",
       "k.procedures.step",
       "k.story.element",
       "k.time.ordered",
