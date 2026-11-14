@@ -296,3 +296,27 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Rules that only generate the same output cost bytes and lines.** Shards for renderers must stay absolute; the rules
   would be added, not substituted, so they win only if they make the drawings better or let new parts be drawn in
   proportion. That is the question to ask before the experiment, not after.
+
+## One planner, published canon, a language world (first worker, block "13:00")
+
+- **A reference reader that is the same code as the library's is the best hand-over.** Swapping the 384-line oracle for
+  std.plan changed no act list and no coverage number; the 252 motion plans compared equal. What remained local was
+  the host's part: the chain of kinds as data, the keys a face shows, and checks of the facts themselves (a world's
+  slots, a circle in the steps). A test of knowledge needs those, never a second planner.
+- **Four decimals are knowledge, sixteen are a fit.** The canon read off the drawing came out as 30/68 of the head; the
+  published fact is 0.4412, and the generator's own tolerance (parts within 0.01 of their box) absorbs the rest. Choose
+  the precision by the output's rounding, then test byte-identity: a rounding rule that was tighter than the check it
+  serves (1e-6 against 0.01) was the only thing that moved.
+- **A language world's paradigm classes are found by the alternations, not the genders.** Most of the 44 classes are a
+  parent plus one alternation (oa > o, a > ă, t > ț) on the cells it touches; inheritance with per-cell overrides kept
+  each a few wires. Ordered, anchored alternations (0.53) covered carte > cărți and noapte > nopți with one list.
+- **Measure the rules in both directions before writing data around a gap.** Generating looked right everywhere; the
+  round trip through the library found two library limits at once (a folded form against unfolded suffixes: 22% of
+  cells; alternations always undone: 6 cells), and one data error (oa > o in the common verb class undid every o).
+  The gaps are questions with cases (Q51, Q52), the draft reads exact spelling meanwhile.
+- **Gold by word type is cheap and good enough for coverage.** 335 forms annotated once (several lemmas where the set
+  has several readings) measure 1,191 tokens and their casual variants by folding alignment; the tokenizer, not the
+  morphology, was the first bug (\w in JavaScript is ASCII even with the u flag: diacritics split words).
+- **Keep a language out of the vocabulary by its keys.** The catalog indexes w.* identity keys named text or ending;
+  naming the closed classes' key `form` kept every Romanian word out of the English vocab.json with no special case.
+

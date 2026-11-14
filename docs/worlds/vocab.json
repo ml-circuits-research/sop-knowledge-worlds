@@ -28461,6 +28461,7 @@
   "w.timeline/schema.sop"
  ],
  "ending": [
+  "k.units/shards/measures",
   "k.words/shards/en"
  ],
  "endorse": [
@@ -43855,6 +43856,7 @@
   "k.geo/shards/asia"
  ],
  "irregular": [
+  "k.units/shards/measures",
   "k.words/shards/ir",
   "w.lang.en/schema.sop"
  ],
@@ -75816,7 +75818,14 @@
   "k.words/shards/ro"
  ],
  "romanian": [
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "w.lang.ro/schema.sop"
+ ],
+ "romanian grammar": [
+  "w.lang.ro/schema.sop"
+ ],
+ "romanian language": [
+  "w.lang.ro/schema.sop"
  ],
  "romans": [
   "k.words/shards/ro"
@@ -97218,6 +97227,9 @@
   "k.geo/shards/north-america"
  ],
  "w.lang.en": [
+  "k.units/shards/measures"
+ ],
+ "w.lang.ro": [
   "k.units/shards/measures"
  ],
  "wa": [

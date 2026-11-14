@@ -270,6 +270,50 @@ imports: a cycle in practice).
 Blocking: no. Meanwhile: the joins are not declared; `tests/shared-modules.test.mjs` checks that every `drawing=` of
 every world names an object (1,000+ joins, none missing), and docs/worlds/README.md says why.
 
+## Q51 [LIB] (block "13:00" item 3, `w.lang.ro`, first worker, 2026-11-14): `analyse` misses every suffix with a diacritic when the world has folds
+Question: may `analyse` look a form up in a suffix index keyed by the folded suffixes (fold(m, cell.suffix)), so that a
+suffix with a diacritic is found, typed with or without it?
+Context: `analyse` folds the form, then looks its endings up in `m.index`, whose keys are the cells' suffixes as
+written. With the folds of `w.lang.ro` (ă > a, ș > s, ...) a form ending in -ă, -ează, -ește, -ăm, -ați is never
+found: "desenează" is read only as the noun-like lemma "deseneaza". Case: round trip of the 2,904 cells of the 255
+lemmas of `w.lang.ro` through the folds, 2,249 come back (exact spelling with folds switched off: 2,898); coverage of
+PSys2's Romanian commands 92.4% through the folds against 99.5% in exact spelling; casual messages typed without
+diacritics 92.2%. The library's own test language has no diacritic in a suffix, so its round-trip test did not see
+it. The test `w.lang.ro: round trip through the folds` is marked todo with this number; the rest of the tests read
+the world in exact spelling (`morphOf(world, { types: { ...types, fold: '<no such type>' } })`).
+Blocking: no for the draft; yes for reading Romanian typed without diacritics. Meanwhile: as above.
+
+## Q52 [LIB] (block "13:00" item 3, `w.lang.ro`, first worker, 2026-11-14): three things analysis cannot undo
+Question: (a) may `analyse` also try the stem without undoing an alternation (an alternation that did not fire when
+the form was made: the lemma already had its result)? (b) may an anchored alternation whose target has two letters
+(o>oa@vowel, e>ea@vowel) be undone at the place the target starts (today the reverse looks at the stem's last
+vowel, the a of "oa", and fails)? (c) may an alternation to nothing (d>@end) be refused at load, or undone only where
+the dictionary has the lemma (today the reverse adds the letter to every stem)?
+Context: `w.lang.ro` cases, all in exact spelling. (a) The class's list is applied only where it matches, but undone
+everywhere: uriaș and englez (a.1, s>ș@end and d>z@end in
+the masculine plural: the stem of "uriași" undone to "urias", of "englezi" to "engled"), îngroșa (v.a, s>ș@end in the 2nd person):
+6 of 2,904 cells, listed in the test as known (Q52). The same made the oa>o of scoate unusable in the common verb class
+(every verb with an o was undone to oa): it now lives only in the classes of such verbs. (b) and (c) are written
+around: unanchored o>oa, e>ea and u>oa (undone at their last occurrence) and substitutions (d>s@end for the
+participle deschis, n>i@end for pui) instead of deletions; they work for the lemmas of the draft, but a lemma with two
+o's or e's would need the anchor.
+Blocking: no. Meanwhile: the 6 cells are listed as known in the round-trip test.
+
+## Q53 [LIB] (block "13:00" item 3, `w.lang.ro`, first worker, 2026-11-14): feature names, articles in templates, two forms of one cell
+Question: (a) are the feature names of `w.lang.ro` the ones the library will use for every language (below)? (b) how
+should a template realise an article or determiner that agrees with its noun ("am desenat o casă roșie": o, not un)?
+(c) is a second irregular fact for one cell (este and e; the first is generated, both are analysed) the intended way
+to give variants?
+Context: (a) `num` sg pl; `case` nomacc gendat (pronouns, where Romanian tells them apart: nom acc gendat); `def` yes no;
+`gender` m f n; `person` 1 2 3; `tense` inf imper pres subj part, plus cond and perf for the auxiliary avea (aș vrea,
+am desenat); the conjunctive "să ..." is subj; the negative imperative is "nu" + inf. Close to the block 11:20
+suggestion; voc, impf, perf (simple), pqp and ger are not used by the app's commands and are left out. (b) `realise`
+takes a role's class from the dictionary; the articles are closed-class facts (`w.lang.ro.det`, form, lemma, gender,
+num, case) with no dictionary row, so `{art@kind}` returns the lemma "un". Options: realise also reads closed-class
+facts (a type and its keys named in the call), or a template part names a closed class ("{det:article@kind}"). The
+draft's templates leave the article out ("am desenat casă roșie"). (c) Without it, "e" (is) could not be read.
+Blocking: no. Meanwhile: the names above; no article in templates; variants as second irregular facts.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

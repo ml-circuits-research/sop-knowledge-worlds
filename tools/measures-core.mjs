@@ -64,6 +64,8 @@ export const MEASURES = {
   // k.motion: durations in milliseconds; layer priorities and step numbers are orders; a chance is a plain number.
   'k.motion': { layer: { priority: ord }, rule: { repeat_min: ms, repeat_max: ms, chance: { plain: true } }, step: { n: ord, with: ord, onset_min: ms, onset_max: ms, hold_min: ms, hold_max: ms, back_min: ms, back_max: ms }, set: { step: ord }, letters: { min: ms, max: ms } },
   // k.procedures: step numbers and ranks are orders; a default or a literal filler is the number the role takes.
+  // w.lang.ro: a person is the grammatical person; a numeral's or an ordinal's value is the number it says.
+  'w.lang.ro': { ending: { person: { plain: true } }, irregular: { person: { plain: true } }, det: { person: { plain: true }, value: { plain: true } }, pron: { person: { plain: true } }, numeral: { value: { plain: true } } },
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord }, step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
 };
 

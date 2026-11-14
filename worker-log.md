@@ -3795,3 +3795,30 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: w.lang.en hand-grammar +40 wires (2 constructions of clauses, 2 of "of", 4 helpers, 9 categories, 15
   ATTRN words, 1 question production); schema +2 slots. Catalog 28 worlds, 953 shards, vocab 24,578 words. npm test
   2,920: 2,915 pass, 5 skipped, 0 fail.
+
+## 2026-11-14 — first worker: w.lang.ro, a first draft in the library's std.morph notation (block "13:00" item 3)
+
+- **World** (`docs/worlds/w.lang.ro`, generator `tools/lang-ro-core.mjs`, all hand-written, `hand-core 1`, CC0): schema
+  (13 types renamed from the library's m.* plus det, pron, prep, numeral, particle; 79 wires) and four shards:
+  morphology 401 wires (44 classes: 15 noun, 8 adjective, 21 verb; 341 cells; vowels, 14 folds, the hyphen), irregular
+  213 (fi, avea with its conditional and perfect auxiliaries, vrea, da, lua, veni, vedea, împărți; fă, refă, du, mergi,
+  treci; the plurals of zi, ou, om, pește, cal, copil, băiat, femeie, pasăre, fereastră, zăpadă; nou), closed 240 (69
+  det, 65 pron, 30 prep, 32 numerals, 44 particles), templates 3. 936 wires, 138 kB (14.3 kB gzip), load and morphOf
+  80 ms, 0 errors, 0 warnings. A reading of every paradigm found 9 lemmas whose plural stem no class gives (made
+  irregular) and 4 with no fitting class (vechi, iarbă, cuvânt, centru: left out).
+- **Dictionary:** 255 lemmas in 21 files `dictionary/<folded first letter>.tsv` (lemma, class, gender, sense), sorted by
+  folded lemma, header with source and licence; 14.8 kB (36 bytes a lemma). Senses: 41 joined to k.actions verbs (among them
+  the app's commands: make.draw, make.add, place.put, place.move, remove.remove, make.make, change.show, change.change,
+  change.colour, remove.delete, load.open, change.close, undo.undo), 205 to k.words senses; 9 have none (k.words lacks
+  the adjectives italic, horizontal, vertical, bold, numbered, sandy, anterior, thick and the verb thicken).
+- **Measured** (`tests/w.lang.ro.test.mjs`): round trip in exact spelling 2,898 / 2,904 cells (every class and cell
+  with its first lemma 544 / 544; the 6 others are Q52); through the folds 2,249 / 2,904 (Q51, test marked todo).
+  Coverage on PSys2's Romanian commands (`sources/psys2-eval-ro`: 240 messages of art.draw, docs.editor, ui.shell,
+  data.charts at dccd3239, 1,191 words, gold lemmas by hand): 99.5% in exact spelling (first reading 99.2%), 92.4%
+  through the folds, casual variants 92.2%. A Romanian session loads the 138 kB world once and 4.6 dictionary files
+  (3.8 kB) a message. Templates realise "am desenat casă roșie", "mașina este acum galbenă" (no article: Q53).
+- **Questions:** Q51 [LIB] (folded suffix index), Q52 [LIB] (optional undo of alternations; two-letter anchored targets;
+  deletions), Q53 [LIB] (feature names chosen; articles in templates; variant forms). No external source used, so no
+  licence question.
+- Also: `k.units.measure` entries for its numbers; README and lessons.
+- `npm test` (in a worktree of this commit, after the rebase): 2,929 tests, 2,927 pass, 1 skipped, 1 todo (Q51), 0 fail.

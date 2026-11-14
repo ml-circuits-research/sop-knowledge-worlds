@@ -87,6 +87,11 @@ thinking) as k.faces brows, eyes and mouths with onset, hold and ease back, laye
 a reply is said: seven classes of mouth shapes joined to k.faces mouths and one rule from written text to them, for the
 library's `std.motion` (format: questions.md Q46; `docs/worlds/k.motion/WORLD.md`).
 
+Block "13:00" (first worker): `w.lang.ro`, a first draft of Romanian as a language world in the library's `std.morph`
+notation: 44 paradigm classes with inheritance, 341 cells, irregulars, folds, clitics, closed classes and three reply
+templates (936 wires), with an external dictionary of 255 lemmas (`dictionary/<letter>.tsv`, 14.8 kB) joined to k.words
+and k.actions senses (`docs/worlds/w.lang.ro/WORLD.md`). Romanian words are data of that world only.
+
 World schemas so far: `w.list`, `w.seating`, `w.timeline`, and (block "06:55" item 3, for the library's case
 corpus and the demo) `w.face`, a drawn face whose kinds are the slots of `k.faces`, and `w.map`, a map view over the
 places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions in `tests/w.schemas.test.mjs`). A

@@ -1,5 +1,5 @@
 {
- "version": "5f822fc95549",
+ "version": "1a1145bb003f",
  "sopworld": "1d1c3c6",
  "worlds": [
   {
@@ -37093,8 +37093,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 196,
-     "bytes": 27519,
+     "wires": 202,
+     "bytes": 28316,
      "keys": [
       "after",
       "age_years_about",
@@ -37144,6 +37144,7 @@
       "ellipsis.lead",
       "ellipsis.param",
       "ellipsis.trail",
+      "ending",
       "ends_about",
       "eye_gap",
       "eye_line",
@@ -37162,6 +37163,7 @@
       "hour12",
       "inflect",
       "inherited",
+      "irregular",
       "k.actions",
       "k.animals",
       "k.attributes",
@@ -37263,6 +37265,7 @@
       "verb",
       "w",
       "w.lang.en",
+      "w.lang.ro",
       "weekday",
       "weight_about",
       "west",
@@ -55700,6 +55703,83 @@
    "licenses": [
     "CC0-1.0",
     "WordNet-3.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "w.lang.ro",
+   "version": "1",
+   "schema": "w.lang.ro/schema.sop",
+   "exports": [
+    "w.lang.ro.class",
+    "w.lang.ro.det",
+    "w.lang.ro.ending",
+    "w.lang.ro.fold",
+    "w.lang.ro.irregular",
+    "w.lang.ro.numeral",
+    "w.lang.ro.particle",
+    "w.lang.ro.prep",
+    "w.lang.ro.pron",
+    "w.lang.ro.split",
+    "w.lang.ro.template",
+    "w.lang.ro.vowel"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "w.lang.ro/shards/closed",
+     "path": "w.lang.ro/shards/closed.sop",
+     "wires": 240,
+     "bytes": 32318,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/irregular",
+     "path": "w.lang.ro/shards/irregular.sop",
+     "wires": 213,
+     "bytes": 31606,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/morphology",
+     "path": "w.lang.ro/shards/morphology.sop",
+     "wires": 401,
+     "bytes": 59834,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/templates",
+     "path": "w.lang.ro/shards/templates.sop",
+     "wires": 3,
+     "bytes": 702,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
    ],
    "warnings": []
   }
