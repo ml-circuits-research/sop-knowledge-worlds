@@ -138,3 +138,16 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Identity decides what can be said**: with `name` alone as the identity of a duration, "a year is 52 weeks"
   could not stand next to "a year is 12 months". Making `name` and `unit` the identity let a span be told in
   several units, and the two PSys2 facts left out in Round 10 now match ours.
+
+## Q34 (a) and Q33 (second worker): shared modules by inheritance
+
+- **`extends` shares slots without touching a fact.** `k.objects.part` and `k.faces.part` extend `k.drawing.part`,
+  three worlds extend `k.kinds.kind`, two extend `k.values.coloured`: the 100,000 facts of the drawings keep their
+  types, a pattern on the parent type matches them all, and the slots are declared once. Before, "share a module"
+  sounded like renaming types across every shard and tool; the language already had the cheap way.
+- **Inheritance shares a whole slot, not a list.** A slot that must be required, or allows one value more, or has
+  another key, cannot take the parent's enum; the basic colours are still written five times (were eight), kept
+  equal by a test (Q40). The unit of sharing in SOP Lang is the slot; the thing worth sharing was often the value list.
+- **A rule on a parent type writes onto the child's fact.** The `kind_of` that `k.kinds` derives for "square" lands
+  on the `k.shapes.shape` wire of the square (the identity key is the same), so a host sees one thing with its chain,
+  and one rule serves three worlds and the rules of k.commonsense (milk is a drink, so a liquid, so a kind of liquid).

@@ -1,0 +1,34 @@
+# k.kinds: one kind-of relation and the rule that follows it upwards (Q34 item 6), shared by the worlds whose things
+# name their kind by name: k.commonsense.thing, k.people.kind, k.shapes.shape extend `k.kinds.kind` and take its
+# `is_a` (the next kind up, many: a square is a rectangle and a rhombus, Q33); the rules give every kind above as
+# `kind_of` (a square is a kind of rectangle, rhombus, parallelogram, quadrilateral, polygon, shape). Before, each of
+# these worlds had its own `is_a` and each host or test walked it with its own code. k.words keeps its own `is_a` and
+# `kind_of` (WordNet's chains, computed by its import: the words of a dictionary are keyed by word, part of speech and
+# sense, not by name), and k.parts its `from` (a table of where a part was inherited from).
+# sources: hand-core 1 (hand-written in this repository)
+# license: CC0-1.0
+# script: none (hand-written)
+
+@k.kinds core.module name=k.kinds version=1 exports=kind core.source="hand-core 1"
+
+# A thing or kind with a name: `is_a` the kinds right above it, `kind_of` every kind above it (derived by the rules).
+@k.kinds.kind core.type of=k.kinds.kind shared=true core.source="hand-core 1"
+@k.kinds.kind.name core.slot of=k.kinds.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.kind.is_a core.slot of=k.kinds.kind key=is_a many=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.kind.kind_of core.slot of=k.kinds.kind key=kind_of many=true kind=atom kind=string core.source="hand-core 1"
+
+# Rule: what a thing is, it is a kind of.
+@k.kinds.up.direct.is k.kinds.kind name=?thing is_a=?kind
+@k.kinds.up.direct.kind_of k.kinds.kind name=?thing kind_of=?kind
+@k.kinds.up.direct core.rule when=$k.kinds.up.direct.is then=$k.kinds.up.direct.kind_of core.source="hand-core 1"
+# Rule: a kind of a kind of something is a kind of it (the chain followed upwards, to the top).
+@k.kinds.up.step.below k.kinds.kind name=?thing kind_of=?kind
+@k.kinds.up.step.above k.kinds.kind name=?kind is_a=?above
+@k.kinds.up.step.kind_of k.kinds.kind name=?thing kind_of=?above
+@k.kinds.up.step core.rule when=$k.kinds.up.step.below when=$k.kinds.up.step.above then=$k.kinds.up.step.kind_of core.source="hand-core 1"
+
+@k.kinds.word.kind core.word text=kind text="kind of" text=type text="type of" means=k.kinds.kind core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.kinds.word.key.kind.is_a core.word text="is a" means=k.kinds.kind.is_a core.source="hand-core 1"
+@k.kinds.word.key.kind.kind_of core.word text="kind of" means=k.kinds.kind.kind_of core.source="hand-core 1"

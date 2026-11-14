@@ -63,7 +63,7 @@ export const SHAPES = [
   ['oval', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'egg, rugby ball, mirror, lemon, balloon, pond', 'ovals, ellipse, egg-shaped, elliptical'],
   ['semicircle', 'flat', { sides: 1, corners: 2, round: T, symmetric: T }, 'rainbow, igloo, bridge, croissant', 'semicircles, half circle, half-circle, half moon'],
   ['triangle', 'flat', { sides: 3, corners: 3, round: false, symmetric: T }, 'roof, tent, mountain, pyramid, cheese wedge', 'triangles, triangular, three-sided'],
-  ['square', 'flat', { sides: 4, corners: 4, round: false, equal: T, symmetric: T, is_a: 'rectangle' }, 'window, dice, picture frame, gift box', 'squares, box shape'],
+  ['square', 'flat', { sides: 4, corners: 4, round: false, equal: T, symmetric: T, is_a: 'rectangle, rhombus' }, 'window, dice, picture frame, gift box', 'squares, box shape'],
   ['rectangle', 'flat', { sides: 4, corners: 4, round: false, symmetric: T }, 'door, book, brick, envelope, flag, phone, television, chocolate bar', 'rectangles, rectangular, oblong'],
   ['diamond', 'flat', { sides: 4, corners: 4, round: false, equal: T, symmetric: T }, 'kite, playing cards', 'diamonds, rhombus, lozenge'],
   ['parallelogram', 'flat', { sides: 4, corners: 4, round: false }, '', 'parallelograms, slanted rectangle'],
@@ -116,11 +116,13 @@ export function colourShards() {
 }
 
 export function shapeShards() {
+  // the shapes the PSys2 import adds (k.shapes/shards/psys2) may be named as a kind: Q33, a square is a rectangle and a rhombus
   const names = new Set(SHAPES.map((s) => s[0]));
+  const kinds = new Set([...names, 'rhombus', 'quadrilateral', 'polygon']);
   const lines = SHAPES.map(([name, kind, o, things]) => {
-    for (const v of [o.flat, o.is_a, ...list(o.face)]) if (v && (!names.has(v) || v === name)) throw new Error(`${name}: ${v} is not another shape`);
+    for (const v of [o.flat, ...list(o.is_a), ...list(o.face)]) if (v && (!kinds.has(v) || v === name)) throw new Error(`${name}: ${v} is not another shape`);
     return wire(`k.shapes.shape.${seg(name)}`, 'k.shapes.shape', [['name', name], ['kind', kind], ['sides', o.sides], ['corners', o.corners], ['faces', o.faces], ['edges', o.edges], ...list(o.face).map((f) => ['face', f]),
-      ['round', String(Boolean(o.round))], ['equal_sides', o.equal ? 'true' : undefined], ['symmetric', o.symmetric ? 'true' : undefined], ['flat', o.flat], ['is_a', o.is_a], ...list(things).map((t) => ['thing', t])], SRC);
+      ['round', String(Boolean(o.round))], ['equal_sides', o.equal ? 'true' : undefined], ['symmetric', o.symmetric ? 'true' : undefined], ['flat', o.flat], ...list(o.is_a).map((k) => ['is_a', k]), ...list(things).map((t) => ['thing', t])], SRC);
   });
   const words = SHAPES.map(([name, , , , w]) => wire(`k.shapes.word.shape.${seg(name)}`, 'core.word', [...list(w).filter((x) => !names.has(x)).map((x) => ['text', x]), ['means', name], ['of', 'k.shapes.shape.name']], SRC));
   return { 'shapes.sop': `${header({ id: 'k.shapes/shards/shapes', about: `${SHAPES.length} shapes (${SHAPES.map((s) => s[0]).join(', ')}): flat, solid or a line; sides and corners, or faces, edges and corners; round or not; things that typically have the shape; and other names of the shapes.`, sources: ['hand-core 1 (hand-written in this repository: tools/colours-shapes-core.mjs)'], license: 'CC0-1.0', script: 'tools/colours-shapes-core.mjs' })}\n${lines.join('\n')}\n\n# Words: other names of the shapes.\n${words.join('\n')}\n` };

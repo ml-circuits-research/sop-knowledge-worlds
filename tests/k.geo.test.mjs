@@ -78,7 +78,7 @@ test('k.units.measure: every number of every world has its unit, what it counts,
   // The refusal holds for every world: a world that is not in the table at all, with a number, is an error.
   const extra = { id: 'k.new', schemaText: '@k.new.t core.type of=k.new.t\n@k.new.t.n core.slot of=k.new.t key=n kind=number\n', shards: [] };
   assert.throws(() => measureRows([...worlds, extra]), /k\.new\.t\.n has no unit/);
-  assert.equal(units.query({ type: 'k.units.measure', where: { world: 'k.objects', type: 'part', key: 'x' }, seek: 'frame' }).value, 'object');
+  assert.equal(units.query({ type: 'k.units.measure', where: { world: 'k.drawing', type: 'part', key: 'x' }, seek: 'frame' }).value, 'drawing');
   assert.equal(units.query({ type: 'k.units.measure', where: { world: 'k.values', type: 'step', key: 'rank' }, seek: 'ordinal' }).value, 'true');
 });
 

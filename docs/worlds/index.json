@@ -1,5 +1,5 @@
 {
- "version": "0dd6ba73552b",
+ "version": "da5daf7a88ab",
  "sopworld": "42b3456",
  "worlds": [
   {
@@ -10795,7 +10795,7 @@
   },
   {
    "id": "k.commonsense",
-   "version": "3",
+   "version": "4",
    "schema": "k.commonsense/schema.sop",
    "exports": [
     "k.commonsense.lives",
@@ -10804,7 +10804,8 @@
    ],
    "depends": [
     "k.animals",
-    "k.food"
+    "k.food",
+    "k.kinds"
    ],
    "shards": [
     {
@@ -10930,11 +10931,27 @@
    "licenses": [
     "CC0-1.0"
    ],
+   "warnings": [
+    "ambiguous-key: on k.commonsense.thing, the key name is declared by modules k.commonsense and k.kinds: k.commonsense.thing.name and k.kinds.kind.name"
+   ]
+  },
+  {
+   "id": "k.drawing",
+   "version": "1",
+   "schema": "k.drawing/schema.sop",
+   "exports": [
+    "k.drawing.part",
+    "k.drawing.point"
+   ],
+   "depends": [],
+   "shards": [],
+   "sources": [],
+   "licenses": [],
    "warnings": []
   },
   {
    "id": "k.faces",
-   "version": "1",
+   "version": "2",
    "schema": "k.faces/schema.sop",
    "exports": [
     "k.faces.colour",
@@ -10945,7 +10962,9 @@
     "k.faces.slot",
     "k.faces.variant"
    ],
-   "depends": [],
+   "depends": [
+    "k.drawing"
+   ],
    "shards": [
     {
      "id": "k.faces/shards/big-smile-accessories",
@@ -12991,12 +13010,14 @@
   },
   {
    "id": "k.food",
-   "version": "1",
+   "version": "2",
    "schema": "k.food/schema.sop",
    "exports": [
     "k.food.food"
    ],
-   "depends": [],
+   "depends": [
+    "k.values"
+   ],
    "shards": [
     {
      "id": "k.food/shards/animal-foods",
@@ -18174,6 +18195,19 @@
    "warnings": []
   },
   {
+   "id": "k.kinds",
+   "version": "1",
+   "schema": "k.kinds/schema.sop",
+   "exports": [
+    "k.kinds.kind"
+   ],
+   "depends": [],
+   "shards": [],
+   "sources": [],
+   "licenses": [],
+   "warnings": []
+  },
+  {
    "id": "k.layouts",
    "version": "1",
    "schema": "k.layouts/schema.sop",
@@ -18803,7 +18837,7 @@
   },
   {
    "id": "k.objects",
-   "version": "3",
+   "version": "4",
    "schema": "k.objects/schema.sop",
    "exports": [
     "k.objects.object",
@@ -18813,7 +18847,8 @@
     "k.objects.stand_in"
    ],
    "depends": [
-    "k.commonsense"
+    "k.commonsense",
+    "k.drawing"
    ],
    "shards": [
     {
@@ -30252,7 +30287,9 @@
     "CC0-1.0",
     "WordNet-3.0"
    ],
-   "warnings": []
+   "warnings": [
+    "ambiguous-key: on k.commonsense.thing, the key name is declared by modules k.commonsense and k.kinds: k.commonsense.thing.name and k.kinds.kind.name"
+   ]
   },
   {
    "id": "k.parts",
@@ -31950,13 +31987,15 @@
   },
   {
    "id": "k.people",
-   "version": "1",
+   "version": "2",
    "schema": "k.people/schema.sop",
    "exports": [
     "k.people.kind",
     "k.people.role"
    ],
-   "depends": [],
+   "depends": [
+    "k.kinds"
+   ],
    "shards": [
     {
      "id": "k.people/shards/kinds",
@@ -32085,7 +32124,9 @@
    "licenses": [
     "CC0-1.0"
    ],
-   "warnings": []
+   "warnings": [
+    "ambiguous-key: on k.people.kind, the key name is declared by modules k.people and k.kinds: k.people.kind.name and k.kinds.kind.name"
+   ]
   },
   {
    "id": "k.scenes",
@@ -35634,12 +35675,14 @@
   },
   {
    "id": "k.shapes",
-   "version": "1",
+   "version": "2",
    "schema": "k.shapes/schema.sop",
    "exports": [
     "k.shapes.shape"
    ],
-   "depends": [],
+   "depends": [
+    "k.kinds"
+   ],
    "shards": [
     {
      "id": "k.shapes/shards/psys2",
@@ -35666,7 +35709,7 @@
      "id": "k.shapes/shards/shapes",
      "path": "k.shapes/shards/shapes.sop",
      "wires": 72,
-     "bytes": 12813,
+     "bytes": 12826,
      "keys": [
       "arc",
       "arrow",
@@ -35719,17 +35762,21 @@
    "licenses": [
     "CC0-1.0"
    ],
-   "warnings": []
+   "warnings": [
+    "ambiguous-key: on k.shapes.shape, the key name is declared by modules k.shapes and k.kinds: k.shapes.shape.name and k.kinds.kind.name"
+   ]
   },
   {
    "id": "k.space",
-   "version": "1",
+   "version": "2",
    "schema": "k.space/schema.sop",
    "exports": [
     "k.space.body",
     "k.space.kind"
    ],
-   "depends": [],
+   "depends": [
+    "k.values"
+   ],
    "shards": [
     {
      "id": "k.space/shards/kinds",
@@ -36035,8 +36082,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 171,
-     "bytes": 23780,
+     "wires": 163,
+     "bytes": 22867,
      "keys": [
       "age_years_about",
       "amount_about",
@@ -36093,6 +36140,7 @@
       "k.attributes",
       "k.body",
       "k.commonsense",
+      "k.drawing",
       "k.faces",
       "k.geo",
       "k.layouts",
@@ -36203,6 +36251,7 @@
    "schema": "k.values/schema.sop",
    "exports": [
     "k.values.colour",
+    "k.values.coloured",
     "k.values.comparative",
     "k.values.direction",
     "k.values.fill",

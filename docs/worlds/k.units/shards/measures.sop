@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 171 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 163 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -75,14 +75,6 @@
 @k.units.measure.k.space.body.temperature_about k.units.measure world=k.space type=body key=temperature_about unit="degree Celsius" approximate=true core.source="hand-core 1"
 @k.units.measure.k.space.body.age_years_about k.units.measure world=k.space type=body key=age_years_about unit=year approximate=true core.source="hand-core 1"
 @k.units.measure.k.space.body.light_years_about k.units.measure world=k.space type=body key=light_years_about unit="light year" approximate=true core.source="hand-core 1"
-@k.units.measure.k.objects.part.x k.units.measure world=k.objects type=part key=x frame=object core.source="hand-core 1"
-@k.units.measure.k.objects.part.y k.units.measure world=k.objects type=part key=y frame=object core.source="hand-core 1"
-@k.units.measure.k.objects.part.w k.units.measure world=k.objects type=part key=w frame=object core.source="hand-core 1"
-@k.units.measure.k.objects.part.h k.units.measure world=k.objects type=part key=h frame=object core.source="hand-core 1"
-@k.units.measure.k.objects.part.z k.units.measure world=k.objects type=part key=z ordinal=true core.source="hand-core 1"
-@k.units.measure.k.objects.point.n k.units.measure world=k.objects type=point key=n ordinal=true core.source="hand-core 1"
-@k.units.measure.k.objects.point.x k.units.measure world=k.objects type=point key=x frame=object core.source="hand-core 1"
-@k.units.measure.k.objects.point.y k.units.measure world=k.objects type=point key=y frame=object core.source="hand-core 1"
 @k.units.measure.k.objects.skeleton.n k.units.measure world=k.objects type=skeleton key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.objects.skeleton.x k.units.measure world=k.objects type=skeleton key=x frame=object core.source="hand-core 1"
 @k.units.measure.k.objects.skeleton.y k.units.measure world=k.objects type=skeleton key=y frame=object core.source="hand-core 1"
@@ -95,14 +87,14 @@
 @k.units.measure.k.faces.slot.w k.units.measure world=k.faces type=slot key=w frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.slot.h k.units.measure world=k.faces type=slot key=h frame=face core.source="hand-core 1"
 @k.units.measure.k.faces.slot.z k.units.measure world=k.faces type=slot key=z ordinal=true core.source="hand-core 1"
-@k.units.measure.k.faces.part.x k.units.measure world=k.faces type=part key=x frame=face core.source="hand-core 1"
-@k.units.measure.k.faces.part.y k.units.measure world=k.faces type=part key=y frame=face core.source="hand-core 1"
-@k.units.measure.k.faces.part.w k.units.measure world=k.faces type=part key=w frame=face core.source="hand-core 1"
-@k.units.measure.k.faces.part.h k.units.measure world=k.faces type=part key=h frame=face core.source="hand-core 1"
-@k.units.measure.k.faces.part.z k.units.measure world=k.faces type=part key=z ordinal=true core.source="hand-core 1"
-@k.units.measure.k.faces.point.n k.units.measure world=k.faces type=point key=n ordinal=true core.source="hand-core 1"
-@k.units.measure.k.faces.point.x k.units.measure world=k.faces type=point key=x frame=face core.source="hand-core 1"
-@k.units.measure.k.faces.point.y k.units.measure world=k.faces type=point key=y frame=face core.source="hand-core 1"
+@k.units.measure.k.drawing.part.x k.units.measure world=k.drawing type=part key=x frame=drawing core.source="hand-core 1"
+@k.units.measure.k.drawing.part.y k.units.measure world=k.drawing type=part key=y frame=drawing core.source="hand-core 1"
+@k.units.measure.k.drawing.part.w k.units.measure world=k.drawing type=part key=w frame=drawing core.source="hand-core 1"
+@k.units.measure.k.drawing.part.h k.units.measure world=k.drawing type=part key=h frame=drawing core.source="hand-core 1"
+@k.units.measure.k.drawing.part.z k.units.measure world=k.drawing type=part key=z ordinal=true core.source="hand-core 1"
+@k.units.measure.k.drawing.point.n k.units.measure world=k.drawing type=point key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.drawing.point.x k.units.measure world=k.drawing type=point key=x frame=drawing core.source="hand-core 1"
+@k.units.measure.k.drawing.point.y k.units.measure world=k.drawing type=point key=y frame=drawing core.source="hand-core 1"
 @k.units.measure.k.layouts.slot.x k.units.measure world=k.layouts type=slot key=x frame=arrangement core.source="hand-core 1"
 @k.units.measure.k.layouts.slot.y k.units.measure world=k.layouts type=slot key=y frame=arrangement core.source="hand-core 1"
 @k.units.measure.k.layouts.slot.w k.units.measure world=k.layouts type=slot key=w frame=arrangement core.source="hand-core 1"

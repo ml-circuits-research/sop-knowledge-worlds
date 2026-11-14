@@ -51,7 +51,7 @@ test('the facts taken answer: currency, languages, code, groups, cities, sounds,
   for (const a of animals) assert.ok(!(a.attrs.can ?? []).some((v) => (a.attrs.cannot ?? []).includes(v)), a.id);
   const shapes = fullWorld('k.shapes', worlds).ofType('k.shapes.shape');
   const isA = (n) => shapes.find((s) => tok(s.attrs.name[0]) === n).attrs.is_a?.map(tok);
-  assert.deepEqual(isA('rhombus'), ['quadrilateral']); assert.deepEqual(isA('rectangle'), ['quadrilateral']); assert.deepEqual(isA('quadrilateral'), ['polygon']); assert.deepEqual(isA('square'), ['rectangle']);
+  assert.deepEqual(isA('rhombus'), ['quadrilateral']); assert.deepEqual(isA('rectangle'), ['quadrilateral']); assert.deepEqual(isA('quadrilateral'), ['polygon']); assert.deepEqual(isA('square').sort(), ['rectangle', 'rhombus'], 'Q33: a shape is a kind of several');
   const values = fullWorld('k.values', worlds);
   assert.deepEqual(values.ofType('k.values.shade').map((s) => s.attrs.name[0]).sort(), ['bright', 'dark', 'deep', 'light', 'pale', 'soft']);
   assert.deepEqual(values.ofType('k.values.reply').map((s) => s.attrs.name[0]).sort(), ['no', 'yes']);

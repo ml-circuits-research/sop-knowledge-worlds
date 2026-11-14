@@ -62,6 +62,19 @@ list); and a production with a category twice cannot be a repeated `rhs` key (a 
 which `w.lang.en` now avoids with helper categories (NP -> NP OFNP).
 Blocking: no. Meanwhile: the proposal above.
 
+## Q40 (Q34 item 4, second worker, 2026-11-14)
+Question: may a slot take the enum of another slot by name (for example `enum_of=k.values.coloured.colour`), so that
+the eleven basic colours are written once although the slots that hold them differ in key or flags?
+Context: done meanwhile with what the language has: `k.values.coloured` declares the list once and the types whose
+slot is the same (`colour`, many, optional: `k.food.food`, `k.space.body`) extend it, as `k.objects.part` and
+`k.faces.part` now extend `k.drawing.part` (Q34 item 1) and three worlds extend `k.kinds.kind` (item 6). Inheritance
+shares a whole slot: a slot that must be required (`k.drawing.part.colour`), take one value more (`any` in
+`k.attributes.thing.colour`) or have another key (`k.values.colour.basic`, `k.attributes.drawn.drawn_colour`,
+`k.colours.colour.family`) has to write the list again, so it is written five times instead of eight, and
+`tests/shared-modules.test.mjs` keeps the five equal. A reference to a slot's enum is new syntax (a library question,
+like the slot groups of Q34 item 2).
+Blocking: no. Meanwhile: inheritance where the slot is the same, a test for the rest.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

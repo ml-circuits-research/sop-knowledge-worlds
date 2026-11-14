@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/values-core.mjs
 
-@k.values core.module name=k.values version=1 exports=colour exports=scale exports=step exports=comparative exports=shape exports=direction exports=position exports=set_word exports=number exports=shade exports=reply exports=fill core.source="hand-core 1"
+@k.values core.module name=k.values version=1 exports=colour exports=scale exports=step exports=comparative exports=shape exports=direction exports=position exports=set_word exports=number exports=shade exports=reply exports=fill exports=coloured core.source="hand-core 1"
 
 # A colour name. `rgb` is its value as a string of the form "#RRGGBB" (the form k.objects and k.faces use), exact
 # for a CSS colour, whose keyword is `css`; a common name that has no fixed value has `rgb_about` instead, a usual
@@ -23,6 +23,13 @@
 @k.values.both.exact k.values.colour name=?colour rgb=?exact
 @k.values.both.about k.values.colour name=?colour rgb_about=?about
 @k.values.both core.deny when=$k.values.both.exact when=$k.values.both.about why="?colour has both an exact and a usual RGB value." core.source="hand-core 1"
+
+# The basic colours, declared once (Q34 item 4): a type of the worlds whose things have a usual colour by name
+# extends `k.values.coloured` and takes its slot `colour` (k.food.food, k.space.body). A slot that must differ (required
+# in k.drawing.part, `any` more in k.attributes.thing, another key: `basic` here, `drawn_colour`, `family`) says the
+# list again, and a test keeps every such list equal to this one.
+@k.values.coloured core.type of=k.values.coloured shared=true core.source="hand-core 1"
+@k.values.coloured.colour core.slot of=k.values.coloured key=colour many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
 
 # An ordered scale (size, length, amount, degree) and its steps. `steps` is how many steps it has. A step has a
 # `rank`, 1 for the least. Step names repeat across scales (medium; light is a weight and a brightness).
@@ -119,6 +126,7 @@
 @k.values.word.key.colour.rgb_about core.word text=rgb means=k.values.colour.rgb_about core.source="hand-core 1"
 @k.values.word.key.colour.basic core.word text=basic means=k.values.colour.basic core.source="hand-core 1"
 @k.values.word.key.colour.named core.word text=named means=k.values.colour.named core.source="hand-core 1"
+@k.values.word.key.coloured.colour core.word text=colour means=k.values.coloured.colour core.source="hand-core 1"
 @k.values.word.key.scale.about core.word text=about means=k.values.scale.about core.source="hand-core 1"
 @k.values.word.key.scale.steps core.word text=steps means=k.values.scale.steps core.source="hand-core 1"
 @k.values.word.key.step.name core.word text=name means=k.values.step.name core.source="hand-core 1"

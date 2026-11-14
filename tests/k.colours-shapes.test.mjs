@@ -89,8 +89,8 @@ test('joins: most typical things have a drawing; every shape of a k.objects part
     assert.ok(have.length >= things.length * min, `${have.length} of ${things.length} things have a drawing`);
   }
   const names = new Set(shapes.map((w) => one(w, 'name')));
-  const schema = worlds.find((w) => w.id === 'k.objects').schemaText;
-  const line = schema.split('\n').find((l) => l.startsWith('@k.objects.part.shape '));
+  const schema = worlds.find((w) => w.id === 'k.drawing').schemaText; // the parts of k.objects take their shape from k.drawing (Q34 item 1)
+  const line = schema.split('\n').find((l) => l.startsWith('@k.drawing.part.shape '));
   const partShapes = [...line.matchAll(/ enum=(\S+)/g)].map((m) => m[1]);
   assert.ok(partShapes.length >= 6);
   for (const s of partShapes) assert.ok(names.has(s), `the part shape ${s} is not a k.shapes shape`);

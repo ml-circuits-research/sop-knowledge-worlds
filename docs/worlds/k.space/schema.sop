@@ -4,14 +4,14 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.space core.module name=k.space version=1 exports=body exports=kind core.source="hand-core 1"
+@k.space core.module name=k.space version=2 imports=k.values exports=body exports=kind core.source="hand-core 1"
 
 # A named thing in space. `orbits` names what it goes around; `order` is a planet's place counted from the Sun;
 # `size` is a planet's size class and `size_rank` its place by size (1 is the largest planet); `group` says whether
 # a planet is rocky, a gas giant (gas) or an ice giant (ice); `moons` is an exact count, `moons_about` a count that
 # grows as more small moons are found; `rings` says whether it has rings; `orbit_years` is about how many Earth
 # years one trip around the Sun takes; `in` names the galaxy it is in; `drawing` names the k.objects object that draws it.
-@k.space.body core.type of=k.space.body shared=true closed=true core.source="hand-core 1"
+@k.space.body core.type of=k.space.body extends=k.values.coloured shared=true closed=true core.source="hand-core 1"
 @k.space.body.name core.slot of=k.space.body key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.space.body.kind core.slot of=k.space.body key=kind required=true kind=atom kind=string core.source="hand-core 1"
 @k.space.body.orbits core.slot of=k.space.body key=orbits kind=atom kind=string core.source="hand-core 1"
@@ -23,7 +23,6 @@
 @k.space.body.moons_about core.slot of=k.space.body key=moons_about kind=integer min=0 core.source="hand-core 1"
 @k.space.body.rings core.slot of=k.space.body key=rings kind=boolean core.source="hand-core 1"
 @k.space.body.orbit_years core.slot of=k.space.body key=orbit_years kind=number min=0 core.source="hand-core 1"
-@k.space.body.colour core.slot of=k.space.body key=colour many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
 @k.space.body.in core.slot of=k.space.body key=in kind=atom kind=string core.source="hand-core 1"
 @k.space.body.drawing core.slot of=k.space.body key=drawing kind=atom kind=string core.source="hand-core 1"
 # Round 9. `colour_why` says in one plain sentence why it has its colour. Approximate numbers: `day_hours_about`, the
@@ -78,7 +77,6 @@
 @k.space.word.key.body.group core.word text=group means=k.space.body.group core.source="hand-core 1"
 @k.space.word.key.body.moons_about core.word text=moons means=k.space.body.moons_about core.source="hand-core 1"
 @k.space.word.key.body.orbit_years core.word text="orbit years" text=year means=k.space.body.orbit_years core.source="hand-core 1"
-@k.space.word.key.body.colour core.word text=colour text=color means=k.space.body.colour core.source="hand-core 1"
 @k.space.word.key.body.in core.word text=in means=k.space.body.in core.source="hand-core 1"
 @k.space.word.key.body.drawing core.word text=drawing means=k.space.body.drawing core.source="hand-core 1"
 @k.space.word.key.body.colour_why core.word text="colour why" means=k.space.body.colour_why core.source="hand-core 1"

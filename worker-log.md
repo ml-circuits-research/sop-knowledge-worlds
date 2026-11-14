@@ -3101,3 +3101,29 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   derived when loaded: 375 before facts, 8 season spans. Catalog 23 worlds, 933 shards, vocab 24,184 -> 24,229
   words; 0 errors, 0 warnings. After the rebase on the w.lang.en holes: catalog 937 shards, vocab 24,255
   words; npm test 2,859: 2,858 pass, 1 skipped, 0 fail.
+
+## Q34 (a) items 1, 4, 6 and the Q33 schema change of shapes (2026-11-14, second worker)
+
+- **Item 1, `k.drawing`** (new module, schema only, WORLD.md): `k.drawing.part` (shape, x, y, w, h, z, colour, rgb,
+  pointing, opens) and `k.drawing.point` (n, x, y). `k.objects.part` / `k.faces.part` extend `k.drawing.part`,
+  `k.objects.point` / `k.faces.point` extend `k.drawing.point`; the 13 slots each world wrote again are gone from its
+  schema (k.objects version 4, k.faces version 2, both `imports=k.drawing`). No fact changed type. The measures of
+  k.units name the frame of k.drawing (`drawing`: that of the object or face that extends it).
+- **Item 4, the basic colours:** `k.values.coloured` declares the eleven once; `k.food.food` and `k.space.body` extend it
+  (their own `colour` slots removed; both import k.values). The five slots that differ (required in k.drawing, `any`
+  more in k.attributes.thing, other keys: `basic`, `drawn_colour`, `family`) keep the list; a test keeps all equal.
+  Eight lists became five; Q40 asks for an enum taken by name.
+- **Item 6, `k.kinds`** (new module, schema only, WORLD.md): `k.kinds.kind` (name, is_a many, kind_of) and two rules
+  (is_a gives kind_of; a kind_of of a kind_of is a kind_of). `k.commonsense.thing`, `k.people.kind`, `k.shapes.shape`
+  extend it and lose their own `is_a`. The derived `kind_of` lands on the world's own fact: square -> polygon,
+  quadrilateral, rectangle, rhombus; grandfather -> man; milk -> liquid (through the drink rule of k.commonsense).
+  k.words keeps WordNet's own is_a and kind_of; k.parts its `from`.
+- **Q33, schema of shapes:** `is_a` of a shape holds many (from k.kinds); the square is a rectangle and a rhombus
+  (`tools/colours-shapes-core.mjs`, which may now name the shapes of the PSys2 shard as kinds). Questions sh-08 and the
+  PSys2 import test say both. **The duration in several units** is in the first worker's k.time item (block 02:15)
+  and was left to it; the fact changes of Q33 (capitals, independence, Cyprus, kit) were not done by me.
+- Tests: `tests/shared-modules.test.mjs` (3), and four tests that read the old places (the shape enum now in k.drawing,
+  the frame of k.drawing in k.units, square is_a twice). Q40. Lessons.
+- Numbers: catalog 25 worlds (k.drawing, k.kinds: schemas, no shards), 936 shards, vocab 24,211 words; 0 errors, 0
+  warnings. npm test 2,840: 2,834 pass, 6 skipped, 0 fail. After the rebase on k.time version 2 (first worker): 25
+  worlds, 937 shards, vocab 24,256 words; npm test 2,862: 2,856 pass, 6 skipped, 0 fail.

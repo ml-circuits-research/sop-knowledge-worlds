@@ -18078,7 +18078,6 @@
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
-  "k.space/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/co-1"
  ],
@@ -18138,10 +18137,10 @@
   "k.attributes/shards/same-w",
   "k.attributes/shards/same-y",
   "k.colours/schema.sop",
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.objects/schema.sop",
-  "k.space/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/co-1"
  ],
@@ -19819,6 +19818,7 @@
   "k.words/shards/co-2"
  ],
  "corner": [
+  "k.drawing/schema.sop",
   "k.layouts/shards/layouts",
   "k.shapes/schema.sop",
   "k.words/shards/co-2"
@@ -37039,6 +37039,7 @@
   "k.geo/shards/europe"
  ],
  "h": [
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
@@ -42883,9 +42884,7 @@
   "w.lang.en/shards/grammar"
  ],
  "is a": [
-  "k.commonsense/schema.sop",
-  "k.people/schema.sop",
-  "k.shapes/schema.sop",
+  "k.kinds/schema.sop",
   "k.words/schema.sop"
  ],
  "is_a": [
@@ -44435,6 +44434,9 @@
  "k.commonsense.thing": [
   "k.attributes/shards/attributes"
  ],
+ "k.drawing": [
+  "k.units/shards/measures"
+ ],
  "k.faces": [
   "k.units/shards/measures"
  ],
@@ -45466,9 +45468,9 @@
   "k.faces/schema.sop",
   "k.food/schema.sop",
   "k.geo/schema.sop",
+  "k.kinds/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
-  "k.people/schema.sop",
   "k.scenes/schema.sop",
   "k.shapes/schema.sop",
   "k.space/schema.sop",
@@ -45483,6 +45485,7 @@
  "kind of": [
   "k.colours/schema.sop",
   "k.food/schema.sop",
+  "k.kinds/schema.sop",
   "k.words/schema.sop"
  ],
  "kind of person": [
@@ -57695,7 +57698,6 @@
  ],
  "n": [
   "k.attributes/shards/aspects",
-  "k.faces/schema.sop",
   "k.objects/schema.sop",
   "k.time/schema.sop",
   "k.units/shards/measures",
@@ -61076,8 +61078,7 @@
  ],
  "opens": [
   "k.actions/shards/actions-hands",
-  "k.faces/schema.sop",
-  "k.objects/schema.sop"
+  "k.drawing/schema.sop"
  ],
  "opera": [
   "k.scenes/shards/scenes-indoors",
@@ -63030,6 +63031,7 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.body/schema.sop",
+  "k.drawing/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
@@ -63105,6 +63107,7 @@
   "k.actions/shards/acts",
   "k.attributes/shards/attributes",
   "k.body/schema.sop",
+  "k.drawing/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
   "k.words/schema.sop",
@@ -66821,6 +66824,7 @@
  ],
  "point": [
   "k.actions/shards/verbs-pick",
+  "k.drawing/schema.sop",
   "k.layouts/shards/joins",
   "k.objects/shards/more",
   "k.objects/shards/noto-tool-03",
@@ -66847,10 +66851,10 @@
   "k.shapes/shards/shapes"
  ],
  "pointing": [
-  "k.faces/schema.sop",
-  "k.objects/schema.sop"
+  "k.drawing/schema.sop"
  ],
  "points": [
+  "k.drawing/schema.sop",
   "k.shapes/schema.sop",
   "k.values/shards/shapes"
  ],
@@ -72264,8 +72268,8 @@
   "k.geo/shards/psys2-cities-europe"
  ],
  "rgb": [
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
-  "k.objects/schema.sop",
   "k.values/schema.sop"
  ],
  "rhein": [
@@ -78305,6 +78309,7 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/same-t",
   "k.attributes/shards/same-z",
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
   "k.objects/schema.sop",
   "k.objects/shards/noto-tool-04",
@@ -92550,12 +92555,14 @@
  ],
  "type": [
   "k.attributes/schema.sop",
+  "k.kinds/schema.sop",
   "k.units/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/ty",
   "w.timeline/schema.sop"
  ],
  "type of": [
+  "k.kinds/schema.sop",
   "k.words/schema.sop"
  ],
  "typewriter": [
@@ -95082,6 +95089,7 @@
   "k.geo/shards/europe"
  ],
  "w": [
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
@@ -98374,6 +98382,7 @@
   "k.words/shards/wy"
  ],
  "x": [
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
@@ -98460,6 +98469,7 @@
   "k.scenes/shards/things-x"
  ],
  "y": [
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
@@ -98978,8 +98988,8 @@
   "k.objects/shards/noto-food-asian-02"
  ],
  "z": [
+  "k.drawing/schema.sop",
   "k.faces/schema.sop",
-  "k.objects/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/z"
  ],

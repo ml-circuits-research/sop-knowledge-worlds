@@ -33,6 +33,7 @@ export const MEASURES = {
   // Q31: the other worlds. Boxes and points of drawings are in the frame of the drawing; `z` and `n` are orders.
   'k.objects': { '*': { ...box('object'), z: ord, n: ord }, skeleton: { drawings: { counts: 'drawing' }, spread: { frame: 'object' } } },
   'k.faces': { '*': { ...box('face'), z: ord, n: ord } },
+  'k.drawing': { '*': { ...box('drawing'), z: ord, n: ord } }, // Q34 item 1: the frame of the drawing that extends it (an object, a face)
   'k.layouts': { slot: box('arrangement'), anchor: box('object') },
   'k.wearables': { place: box('person drawing') },
   'k.actions': { verb: { sense: ord } },

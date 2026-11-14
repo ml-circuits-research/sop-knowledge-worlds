@@ -5,7 +5,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.shapes core.module name=k.shapes version=1 exports=shape core.source="hand-core 1"
+@k.shapes core.module name=k.shapes version=2 imports=k.kinds exports=shape core.source="hand-core 1"
 
 # A shape, named by its common English name. `kind` is `flat` (drawn on paper), `solid` (it takes up room) or `line`
 # (a stroke with no inside). For a flat shape `sides` and `corners` are how many straight sides and corners it has
@@ -14,9 +14,9 @@
 # the flat shape of its faces (many: a cylinder has circles). `round=true` says that the outline is curved
 # all round or in part; `equal_sides=true` that all sides are the same length; `symmetric=true` that one half
 # mirrors the other. `flat` names the flat shape one sees when the solid is drawn from the front (a sphere: a
-# circle). `is_a` names a more general shape (a square is a rectangle). `thing` names things that typically have
+# circle). `is_a` names the more general shapes (from k.kinds, many: a square is a rectangle and a rhombus; `kind_of`, derived, every one above). `thing` names things that typically have
 # the shape (many; the name of a k.objects object where there is one).
-@k.shapes.shape core.type of=k.shapes.shape shared=true closed=true core.source="hand-core 1"
+@k.shapes.shape core.type of=k.shapes.shape extends=k.kinds.kind shared=true closed=true core.source="hand-core 1"
 @k.shapes.shape.name core.slot of=k.shapes.shape key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.shapes.shape.kind core.slot of=k.shapes.shape key=kind required=true enum=flat enum=solid enum=line core.source="hand-core 1"
 @k.shapes.shape.sides core.slot of=k.shapes.shape key=sides kind=integer min=0 core.source="hand-core 1"
@@ -28,7 +28,6 @@
 @k.shapes.shape.equal_sides core.slot of=k.shapes.shape key=equal_sides kind=boolean core.source="hand-core 1"
 @k.shapes.shape.symmetric core.slot of=k.shapes.shape key=symmetric kind=boolean core.source="hand-core 1"
 @k.shapes.shape.flat core.slot of=k.shapes.shape key=flat kind=atom kind=string core.source="hand-core 1"
-@k.shapes.shape.is_a core.slot of=k.shapes.shape key=is_a kind=atom kind=string core.source="hand-core 1"
 @k.shapes.shape.thing core.slot of=k.shapes.shape key=thing many=true kind=atom kind=string core.source="hand-core 1"
 
 # A solid has no sides, a flat shape no faces.
@@ -53,5 +52,4 @@
 @k.shapes.word.key.shape.equal_sides core.word text="equal sides" means=k.shapes.shape.equal_sides core.source="hand-core 1"
 @k.shapes.word.key.shape.symmetric core.word text=symmetric means=k.shapes.shape.symmetric core.source="hand-core 1"
 @k.shapes.word.key.shape.flat core.word text=flat means=k.shapes.shape.flat core.source="hand-core 1"
-@k.shapes.word.key.shape.is_a core.word text="is a" means=k.shapes.shape.is_a core.source="hand-core 1"
 @k.shapes.word.key.shape.thing core.word text=thing means=k.shapes.shape.thing core.source="hand-core 1"

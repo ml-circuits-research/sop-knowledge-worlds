@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.faces core.module name=k.faces version=1 exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression core.source="hand-core 1"
+@k.faces core.module name=k.faces version=2 imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression core.source="hand-core 1"
 
 # A place of a face in one style: its anchor box in the face frame and its draw order (lower first). The parts of a
 # variant lie inside the box of its slot. `mirror=true`: the slot is a pair (eyes, eyebrows, ears, cheeks, earrings);
@@ -40,33 +40,20 @@
 @k.faces.variant.kind core.slot of=k.faces.variant key=kind kind=atom kind=string core.source="hand-core 1"
 @k.faces.variant.named core.slot of=k.faces.variant key=named enum=model core.source="hand-core 1"
 
-# A part of a variant, as a k.objects part: a primitive shape with a box in the face frame, a draw order inside the
+# A part of a variant, a part of k.drawing (as the parts of k.objects): a primitive shape with a box in the face frame, a draw order inside the
 # variant and typical colours. `slot` and `of` name the variant. `tint` says which colour of the face fills the part
 # (skin, hair, eyes, clothes; `skin_shade`, `hair_shade`, `clothes_shade`: the darker tone of that colour, for lines
 # and folds on it); a part without `tint` keeps its own colour (`rgb`, or the colour name).
-@k.faces.part core.type of=k.faces.part shared=true closed=true core.source="hand-core 1"
+@k.faces.part core.type of=k.faces.part extends=k.drawing.part shared=true closed=true core.source="hand-core 1"
 @k.faces.part.slot core.slot of=k.faces.part key=slot id=true required=true kind=atom core.source="hand-core 1"
 @k.faces.part.of core.slot of=k.faces.part key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.faces.part.name core.slot of=k.faces.part key=name id=true required=true kind=atom core.source="hand-core 1"
 @k.faces.part.kind core.slot of=k.faces.part key=kind kind=atom core.source="hand-core 1"
-@k.faces.part.shape core.slot of=k.faces.part key=shape required=true enum=rectangle enum=square enum=circle enum=oval enum=triangle enum=line enum=arc enum=polygon core.source="hand-core 1"
-@k.faces.part.x core.slot of=k.faces.part key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
-@k.faces.part.y core.slot of=k.faces.part key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
-@k.faces.part.w core.slot of=k.faces.part key=w required=true kind=number min=0 max=100 core.source="hand-core 1"
-@k.faces.part.h core.slot of=k.faces.part key=h required=true kind=number min=0 max=100 core.source="hand-core 1"
-@k.faces.part.z core.slot of=k.faces.part key=z required=true kind=integer core.source="hand-core 1"
-@k.faces.part.colour core.slot of=k.faces.part key=colour required=true many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
-@k.faces.part.rgb core.slot of=k.faces.part key=rgb kind=string core.source="hand-core 1"
 @k.faces.part.tint core.slot of=k.faces.part key=tint enum=skin enum=skin_shade enum=hair enum=hair_shade enum=eyes enum=clothes enum=clothes_shade core.source="hand-core 1"
-@k.faces.part.pointing core.slot of=k.faces.part key=pointing enum=up enum=down enum=left enum=right core.source="hand-core 1"
-@k.faces.part.opens core.slot of=k.faces.part key=opens enum=up enum=down enum=left enum=right core.source="hand-core 1"
 
 # A point of a line or polygon part, in the face frame, in drawing order.
-@k.faces.point core.type of=k.faces.point shared=true closed=true core.source="hand-core 1"
+@k.faces.point core.type of=k.faces.point extends=k.drawing.point shared=true closed=true core.source="hand-core 1"
 @k.faces.point.part core.slot of=k.faces.point key=part id=true required=true kind=ref to=k.faces.part core.source="hand-core 1"
-@k.faces.point.n core.slot of=k.faces.point key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
-@k.faces.point.x core.slot of=k.faces.point key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
-@k.faces.point.y core.slot of=k.faces.point key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
 
 # A named colour for skin, hair, eyes or clothes: `rgb` as a string of the form "#RRGGBB", `shade` the darker tone
 # used for lines on it. `natural=true`: a colour people have; `natural=false`: for robots and cartoon faces.
@@ -144,20 +131,7 @@
 @k.faces.word.key.part.of core.word text=of means=k.faces.part.of core.source="hand-core 1"
 @k.faces.word.key.part.name core.word text=name means=k.faces.part.name core.source="hand-core 1"
 @k.faces.word.key.part.kind core.word text=kind means=k.faces.part.kind core.source="hand-core 1"
-@k.faces.word.key.part.shape core.word text=shape means=k.faces.part.shape core.source="hand-core 1"
-@k.faces.word.key.part.x core.word text=x means=k.faces.part.x core.source="hand-core 1"
-@k.faces.word.key.part.y core.word text=y means=k.faces.part.y core.source="hand-core 1"
-@k.faces.word.key.part.w core.word text=w means=k.faces.part.w core.source="hand-core 1"
-@k.faces.word.key.part.h core.word text=h means=k.faces.part.h core.source="hand-core 1"
-@k.faces.word.key.part.z core.word text=z means=k.faces.part.z core.source="hand-core 1"
-@k.faces.word.key.part.colour core.word text=colour means=k.faces.part.colour core.source="hand-core 1"
-@k.faces.word.key.part.rgb core.word text=rgb means=k.faces.part.rgb core.source="hand-core 1"
 @k.faces.word.key.part.tint core.word text=tint means=k.faces.part.tint core.source="hand-core 1"
-@k.faces.word.key.part.pointing core.word text=pointing means=k.faces.part.pointing core.source="hand-core 1"
-@k.faces.word.key.part.opens core.word text=opens means=k.faces.part.opens core.source="hand-core 1"
-@k.faces.word.key.point.n core.word text=n means=k.faces.point.n core.source="hand-core 1"
-@k.faces.word.key.point.x core.word text=x means=k.faces.point.x core.source="hand-core 1"
-@k.faces.word.key.point.y core.word text=y means=k.faces.point.y core.source="hand-core 1"
 @k.faces.word.key.colour.name core.word text=name means=k.faces.colour.name core.source="hand-core 1"
 @k.faces.word.key.colour.rgb core.word text=rgb means=k.faces.colour.rgb core.source="hand-core 1"
 @k.faces.word.key.colour.shade core.word text=shade means=k.faces.colour.shade core.source="hand-core 1"
