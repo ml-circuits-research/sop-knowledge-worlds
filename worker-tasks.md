@@ -652,3 +652,7 @@ PSys2 measured the published w.lang.ro (morphology only) on 9,328 Romanian meani
 - `wordfreq-en` (data CC BY-SA 4.0, 1.5 MB): word register / frequency bands for k.words.
 - `conceptnet-en` (CC BY-SA 4.0, 16 MB): candidate facts (UsedFor, CapableOf, HasPrerequisite, HasSubevent, AtLocation, MadeOf), import only with review.
 Wikidata typical numbers not yet there. Share-alike data stays in its own shards with its licence.
+
+## Reviewer 2026-11-14 19:20 — Q49 answered (a); k.story accepted; Wikidata numbers landed
+
+**Q49:** (a): a join stays open until a target with *that value* arrives; forwarded to the library as a correction of 0.60 (it was meant so in Q48). Keep the README note and the second check meanwhile. **k.story** (d98a837): reviewer ran its tests (6/6), accepted; **k.genres** (366975e) 7/7, accepted. **[DATA]** `wikidata-typical-numbers` (CC0) is now in psys2 `data/external/` for the fourth worker's typical ranges.
