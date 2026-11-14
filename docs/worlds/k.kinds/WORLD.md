@@ -54,3 +54,40 @@ had 6 wrong.
 
 The report `PARENTS.md` (generated) gives the numbers, the things with no parent, and the things with one parent by
 the worlds that name them, with where a plain second parent would come from. Checked by `tests/k.kinds.test.mjs`.
+## Selectional restrictions: what roles and relations take (block "21:05" item 1)
+
+For a reader that assembles a frame from the content words by the types of the roles (the library's type-driven
+reading), two kinds of facts, written by `tools/relations-core.mjs` (part of `npm run build`):
+
+- **`k.kinds.argument`** (shard `arguments`, 18 classes): thing, kind, place, direction, value, attribute, amount,
+  number, name, person, group, topic, means (the values of `k.actions.role holds`: every role of every act names
+  one), and act, time, word, text, boolean (classes of the objects of relations). Each names the catalog `type`s
+  whose things fill it, `live=true` where a thing of the live world fills it too, the `sense`s it takes (those of
+  `tools/joins.mjs`: animal, food, plant, person, body part, clothing, colour, shape, place, time, body in space,
+  thing) and examples. "Send it to Ann": the recipient holds `person`, so k.people kinds and roles and the people
+  of the live world fill it, a colour does not.
+- **`k.kinds.relation`** (shards `relations-<world>`, one per knowledge world, 919): every key of every type of every knowledge world, read as a
+  relation, with its `subject` (the kind of the type in a word: animal, country; `word` for types keyed by the word,
+  `thing` for types keyed by a drawing), `subject_sense`, and its `object`: the class, `object_type` (the types
+  whose things the values name, the best first), `object_sense`, and `scale` (the k.values scale of an enum).
+  "What sound does a cow make": `k.animals.animal` `sound`, subject animal, object a word (k.words); "the capital of
+  Peru": `k.geo.country` `capital`, subject country (place), object a place, `k.geo.city`; "how many legs":
+  `legs`, a number (its unit in `k.units.measure`); "what colour is a banana": `k.attributes.thing` `colour`, a
+  value, k.colours / k.values colours; "can a penguin fly": `can`, an act, `k.actions.action`.
+
+The object is found by rule: a slot `type=` names it; a boolean, a number (an amount where `k.units.measure` gives a
+unit), an enum (a value, with a scale if its steps are a k.values scale) or a free string (text) say their class;
+keys of a kind (`is_a`, `kind`, `class`) and of a place (`place`, `at`, `habitat`) say theirs; every other key is
+joined by value: the types whose naming key holds at least half of its distinct values (regular plurals read as
+singulars), at most three, within nine tenths of the best share; types keyed by the word whatever it means (k.words,
+k.parts) only when no other joins, so a key of English words is a `word`. A key that joins nothing is a `word` too.
+
+Measured (`tests/k.kinds.relations.test.mjs`): every role of k.actions holds a class; every key of every
+knowledge type has a relation (919: 182 word, 151 number, 142 value, 120 thing, 84 text, 77 amount, 50 boolean,
+38 kind, 24 place, 24 time, 22 act, 3 group, 2 person); 28 relations of the first host's question frames take
+the subject and object they must; the 74 keys that the readings of the 292 real questions reach
+(`tools/ask-real.mjs`) all have a relation, and none of a named class lacks its object type.
+
+Known limits: a relation is typed by the values the catalog has today, so a key whose values join no world (the
+young of an animal: kit, cygnet; WordNet's common words lack most) is a `word`; the subject of a type keyed by a
+drawing is any thing of that name; the senses of `k.objects.object` depend on the shard (no fixed sense).

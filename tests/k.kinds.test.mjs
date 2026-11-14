@@ -12,13 +12,16 @@ import { kindsGraph, kindsShards, parentsReport, readFacts, PARENTS_PAGE, GROUPS
 const worlds = scanWorlds();
 const g = kindsGraph(worlds);
 const dir = join(WORLDS_DIR, 'k.kinds', 'shards');
+// the shards of tools/kinds-core.mjs (arguments, relations-* and structures are tools/relations-core.mjs' and
+// tools/structures-core.mjs', tested in tests/k.kinds.relations.test.mjs)
+const ownShard = (f) => f.endsWith('.sop') && !/^(arguments|relations-|structures)/.test(f);
 const up = new Map();
 for (const e of [...g.edges, ...g.told]) (up.get(e.name) ?? up.set(e.name, []).get(e.name)).push(e);
 const parents = (n) => (up.get(n) ?? []).map((e) => e.is_a).sort();
 
 test('the shards and PARENTS.md are what tools/kinds-core.mjs writes (byte-identical)', () => {
   const files = kindsShards(g, worlds);
-  assert.deepEqual(readdirSync(dir).filter((f) => f.endsWith('.sop')).sort(), Object.keys(files).sort());
+  assert.deepEqual(readdirSync(dir).filter(ownShard).sort(), Object.keys(files).sort());
   for (const [n, t] of Object.entries(files)) assert.equal(readFileSync(join(dir, n), 'utf8'), t, n);
   assert.equal(readFileSync(PARENTS_PAGE, 'utf8'), parentsReport(g).text);
 });
@@ -62,7 +65,7 @@ test('every edge names the fact it is read from', () => {
 });
 
 test('licences follow the facts: WordNet edges in WordNet shards, share-alike drawing groups in their own shards, hand facts in CC0 shards', () => {
-  for (const f of readdirSync(dir).filter((x) => x.endsWith('.sop'))) {
+  for (const f of readdirSync(dir).filter(ownShard)) {
     const text = readFileSync(join(dir, f), 'utf8'), h = readHeader(text);
     const sources = new Set([...text.matchAll(/core\.source="([^"]+)"/g)].map((m) => m[1].split(' ')[0]));
     if (h.license[0] === 'CC0-1.0') assert.ok([...sources].every((x) => x === 'hand-core' || x === 'psys2-worlds'), `${f}: ${[...sources]}`); // psys2-worlds: CC0, the project's own data

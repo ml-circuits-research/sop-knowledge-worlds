@@ -9,7 +9,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.kinds core.module name=k.kinds version=2 exports=kind exports=parent core.source="hand-core 1"
+@k.kinds core.module name=k.kinds version=3 exports=kind exports=parent exports=argument exports=relation core.source="hand-core 1"
 
 # A thing or kind with a name: `is_a` the kinds right above it, `kind_of` every kind above it (derived by the rules).
 @k.kinds.kind core.type of=k.kinds.kind shared=true core.source="hand-core 1"
@@ -44,6 +44,33 @@
 @k.kinds.up.step.kind_of k.kinds.kind name=?thing kind_of=?above
 @k.kinds.up.step core.rule when=$k.kinds.up.step.below when=$k.kinds.up.step.above then=$k.kinds.up.step.kind_of core.source="hand-core 1"
 
+# Selectional restrictions (block "21:05" item 1): what a role of an act and a relation of the catalog take, as facts a
+# type-driven reader checks. Written by tools/relations-core.mjs into the shards arguments and relations-<world>.
+# A class of arguments: `name` (thing, kind, place, person, value, amount, ...), `about`; `type` (many) the catalog
+# types whose things fill it; `live=true`: a thing of the live world fills it too; `sense` (many) the senses of the
+# things it takes (the senses of tools/joins.mjs: animal, food, place, person...); `example` (many) plain words.
+# k.actions.role `holds` names a class; so does the `object` of a relation.
+@k.kinds.argument core.type of=k.kinds.argument closed=true core.source="hand-core 1"
+@k.kinds.argument.name core.slot of=k.kinds.argument key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.argument.about core.slot of=k.kinds.argument key=about required=true kind=string core.source="hand-core 1"
+@k.kinds.argument.live core.slot of=k.kinds.argument key=live kind=boolean core.source="hand-core 1"
+@k.kinds.argument.type core.slot of=k.kinds.argument key=type many=true kind=atom core.source="hand-core 1"
+@k.kinds.argument.sense core.slot of=k.kinds.argument key=sense many=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.argument.example core.slot of=k.kinds.argument key=example many=true kind=string core.source="hand-core 1"
+# A key of a type of a knowledge world read as a relation (the sound of an animal: `type` k.animals.animal, `key`
+# sound): `subject` the kind of its subject in a word (animal), `subject_sense` its sense where the type has one;
+# `object` the class of its values (a k.kinds.argument), `object_type` (many, the best first) the types whose things
+# its values name, `object_sense` (many) their senses, `scale` the k.values scale whose steps its values are.
+@k.kinds.relation core.type of=k.kinds.relation closed=true core.source="hand-core 1"
+@k.kinds.relation.type core.slot of=k.kinds.relation key=type id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.relation.key core.slot of=k.kinds.relation key=key id=true required=true kind=atom core.source="hand-core 1"
+@k.kinds.relation.subject core.slot of=k.kinds.relation key=subject required=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.relation.subject_sense core.slot of=k.kinds.relation key=subject_sense kind=atom kind=string core.source="hand-core 1"
+@k.kinds.relation.object core.slot of=k.kinds.relation key=object required=true kind=atom core.source="hand-core 1"
+@k.kinds.relation.object_type core.slot of=k.kinds.relation key=object_type many=true kind=atom core.source="hand-core 1"
+@k.kinds.relation.object_sense core.slot of=k.kinds.relation key=object_sense many=true kind=atom kind=string core.source="hand-core 1"
+@k.kinds.relation.scale core.slot of=k.kinds.relation key=scale kind=atom kind=string core.source="hand-core 1"
+
 @k.kinds.word.kind core.word text=kind text="kind of" text=type text="type of" means=k.kinds.kind core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -56,3 +83,15 @@
 @k.kinds.word.key.parent.key core.word text=key means=k.kinds.parent.key core.source="hand-core 1"
 @k.kinds.word.key.parent.value core.word text=value means=k.kinds.parent.value core.source="hand-core 1"
 @k.kinds.word.key.parent.group core.word text=group means=k.kinds.parent.group core.source="hand-core 1"
+@k.kinds.word.key.argument.about core.word text=about means=k.kinds.argument.about core.source="hand-core 1"
+@k.kinds.word.key.argument.live core.word text=live means=k.kinds.argument.live core.source="hand-core 1"
+@k.kinds.word.key.argument.type core.word text=type means=k.kinds.argument.type core.source="hand-core 1"
+@k.kinds.word.key.argument.sense core.word text=sense means=k.kinds.argument.sense core.source="hand-core 1"
+@k.kinds.word.key.argument.example core.word text=example means=k.kinds.argument.example core.source="hand-core 1"
+@k.kinds.word.key.relation.key core.word text=key means=k.kinds.relation.key core.source="hand-core 1"
+@k.kinds.word.key.relation.subject core.word text=subject means=k.kinds.relation.subject core.source="hand-core 1"
+@k.kinds.word.key.relation.subject_sense core.word text="subject sense" means=k.kinds.relation.subject_sense core.source="hand-core 1"
+@k.kinds.word.key.relation.object core.word text=object means=k.kinds.relation.object core.source="hand-core 1"
+@k.kinds.word.key.relation.object_type core.word text="object type" means=k.kinds.relation.object_type core.source="hand-core 1"
+@k.kinds.word.key.relation.object_sense core.word text="object sense" means=k.kinds.relation.object_sense core.source="hand-core 1"
+@k.kinds.word.key.relation.scale core.word text=scale means=k.kinds.relation.scale core.source="hand-core 1"

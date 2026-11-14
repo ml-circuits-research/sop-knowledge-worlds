@@ -1,0 +1,15 @@
+# k.kinds/shards/relations-kinds: the keys of the types of k.kinds read as relations: 10 relations, each with the kind of its subject and the class, types and senses of its object (found by rule from the schemas and by value from the shards).
+# sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
+# license: CC0-1.0
+# script: tools/relations-core.mjs
+
+@k.kinds.relation.k.kinds.kind.is_a k.kinds.relation type=k.kinds.kind key=is_a subject=kind object=kind core.source="hand-core 1"
+@k.kinds.relation.k.kinds.kind.kind_of k.kinds.relation type=k.kinds.kind key=kind_of subject=kind object=kind core.source="hand-core 1"
+@k.kinds.relation.k.kinds.kind.derived k.kinds.relation type=k.kinds.kind key=derived subject=kind object=boolean core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.name k.kinds.relation type=k.kinds.parent key=name subject=parent object=thing object_type=k.scenes.thing object_type=k.objects.object object_type=k.attributes.drawn core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.is_a k.kinds.relation type=k.kinds.parent key=is_a subject=parent object=kind core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.dimension k.kinds.relation type=k.kinds.parent key=dimension subject=parent object=value object_type=k.attributes.attribute core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.from k.kinds.relation type=k.kinds.parent key=from subject=parent object=word core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.key k.kinds.relation type=k.kinds.parent key=key subject=parent object=word object_type=k.words.sense core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.value k.kinds.relation type=k.kinds.parent key=value subject=parent object=word core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.group k.kinds.relation type=k.kinds.parent key=group subject=parent object=word core.source="hand-core 1"

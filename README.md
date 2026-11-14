@@ -135,7 +135,12 @@ places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions 
 (block "15:15" item 1) `w.document`, a written document for the library's composition and summary: chapters,
 sections, paragraphs, slides and sentences, each sentence with its rhetorical move and the wires of the facts it
 states (`tests/w.document.test.mjs`). Block "21:20": `w.chart`, charts of numbers (a chart with its `form`: bar, line, pie, scatter,
-area; series; values by category), with the second method of "a chart of the things there" in `k.procedures`. A
+area; series; values by category), with the second method of "a chart of the things there" in `k.procedures`.
+
+Block "21:05" item 1 (selectional restrictions): `k.kinds.argument` (18 classes of arguments: the `holds` of every role of
+`k.actions` and the objects of relations, with the types and senses that fill each) and `k.kinds.relation` (every key of
+every knowledge type as a relation with typed subject and object, computed by `tools/relations-core.mjs`), for the
+library's type-driven reader (`docs/worlds/k.kinds/WORLD.md`). A
 world schema may hold denies (`w.timeline`: an event is inside its timeline; `w.face`: one part of each kind on a
 face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.63.0 at
 commit b89215e (`tools/sopworld/VERSION`).

@@ -4296,3 +4296,36 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   [a|b], typed spans for double objects), Q59 (part-of and origin edges, one home for told is_a, senses of names).
 - Tests one file at a time: w.lang.en.alternations 4, w.lang.en 21, templates 8, validate 5, questions 424, ask-real
   4, catalog 8; 0 fail. Catalog 32 worlds, 1,022 shards, vocab 25,736 words.
+## Block 21:05 item 1 (2026-11-14, second worker): selectional restrictions in k.kinds
+
+- `k.kinds.argument` (shard `arguments`, 18 wires, 4.9 kB, hand-written in `tools/relations-core.mjs`): the classes of
+  arguments (thing, kind, place, direction, value, attribute, amount, number, name, person, group, topic, means: every
+  value of `k.actions.role holds`; and act, time, word, text, boolean for the objects of relations), each with the
+  catalog types that fill it, `live=true` where a live thing fills it, its senses (those of tools/joins.mjs) and examples.
+- `k.kinds.relation` (31 shards `relations-<world>`, one per knowledge world, 919 wires, about 170 kB in all, the
+  largest 13.5 kB; computed by `tools/relations-core.mjs`, now in `npm run build` after kinds-core): every key of every
+  type of every knowledge world as a relation: subject (the type's kind in a word, `word` / `thing` for types keyed by a
+  word / a drawing), subject_sense, object class (by rule from the slot: type=, boolean, number / amount by
+  k.units.measure, enum value with its k.values scale, free string text, kind and place keys; else joined by value to
+  the types whose naming key holds half the key's distinct values, regular plurals read as singulars, at most 3 within
+  nine tenths of the best), object_type, object_sense. By class: 182 word, 151 number, 142 value, 120 thing, 84 text,
+  77 amount, 50 boolean, 38 kind, 24 place, 24 time, 22 act, 3 group, 2 person. Examples: sound of an animal (a word,
+  k.words), capital of a country (a place, k.geo.city), legs (a number), colour of a thing (a value, k.colours /
+  k.values colours), can (an act, k.actions.action), size of a scene thing (a value on the scale size).
+- k.kinds schema version 3 (two types, words by tools/key-words.mjs). The first worker's `tools/kinds-core.mjs`
+  (k.kinds.parent, landed during this item) wrote every shard of k.kinds and removed the others: `writeShards` takes a
+  `keep` list of prefixes now, kinds-core keeps arguments / relations- / structures, and tests/k.kinds.test.mjs checks
+  only its own shards.
+- Tests (`tests/k.kinds.relations.test.mjs`, 5): the shards are the tool's output and load; every role of k.actions
+  holds a class, every value of `holds` is a class, every class names declared types and known senses; every key of
+  every knowledge type has a relation with a known object class and declared object types; 28 relations of the first
+  host's question frames (sound, capital, capital_of, legs, colour, made_of, habitat, at, place, can, cannot, baby,
+  covering, eats, used_for, parts has, neighbour, continent, size, next month, colour mix, sides, class, kind_of,
+  part_of, worn_on) take the subject and object they must; the 74 keys the readings of the 292 real questions reach
+  (tools/ask-real.mjs) all have a relation and none of a named class lacks its object type. ask-real's counts are the
+  same with and without the new shards. Catalog: 32 worlds, 1,052 shards, vocab 25,851 words (the keys' names lead
+  to their world's relation shard, as for k.units.measure). k.kinds 6, shared-modules 5, validate 5 pass.
+- COVERAGE.md regenerated (`node tools/coverage-report.mjs`, `node tools/aspects-report.mjs`; ASPECTS.md unchanged):
+  the worlds table gains `k.kinds` with 958 of the 1,500 common things, nearly all through the first worker's
+  k.kinds.parent shards (the page was stale on origin/main since bb61a21); 8 lead to a relation shard (world, person,
+  key, hat, mirror, frame, continent, marker: names of keys).

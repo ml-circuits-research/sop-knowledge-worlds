@@ -345,7 +345,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const worlds = scanWorlds();
   const g = kindsGraph(worlds);
   const files = kindsShards(g, worlds);
-  writeShards(join(WORLDS_DIR, 'k.kinds', 'shards'), files);
+  writeShards(join(WORLDS_DIR, 'k.kinds', 'shards'), files, '', ['arguments', 'relations-', 'structures']);
   const r = parentsReport(g);
   writeFileSync(PARENTS_PAGE, r.text);
   for (const [n, t] of Object.entries(files)) console.log(n, t.split('\n').filter((l) => l.startsWith('@')).length, 'wires', Buffer.byteLength(t), 'bytes');
