@@ -1,20 +1,57 @@
 // k.procedures (block "09:10"): methods as facts (format: questions.md Q44). The facts are checked against the
 // worlds they name (acts and roles of k.actions, knowledge types and their keys, world schemas and their kinds), and
-// each test goal is expanded by the reference reader (tools/lib/plan.mjs) into the expected list of acts.
+// each test goal is expanded by the library's planner (sopworld 0.55 std.plan, the one pinned build) into the
+// expected list of acts. The reference reader that wrote these lists first (tools/lib/plan.mjs) is gone (one planner,
+// no copy; reviewer 12:05).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { procedureShards, METHODS } from '../tools/procedures-core.mjs';
-import { Planner, Live, Knowledge, readMethods, schemaKinds, MAX_ACTS } from '../tools/lib/plan.mjs';
+import { parse, factStore, planner as makePlanner, PlanLive, readMethods, PLAN_LIMITS } from '../tools/sopworld/sopworld.mjs';
 
+// Every published world, k.* and w.* (the world schemas too: the planner takes a schema's kinds from them).
+const published = readdirSync(WORLDS_DIR).filter((d) => /^[kw]\./.test(d) && existsSync(join(WORLDS_DIR, d, 'schema.sop'))).sort().map((id) => ({
+  id, schemaText: readFileSync(join(WORLDS_DIR, id, 'schema.sop'), 'utf8'),
+  shards: existsSync(join(WORLDS_DIR, id, 'shards')) ? readdirSync(join(WORLDS_DIR, id, 'shards')).filter((f) => f.endsWith('.sop')).sort().map((f) => ({ id: `${id}/shards/${f.slice(0, -4)}`, text: readFileSync(join(WORLDS_DIR, id, 'shards', f), 'utf8') })) : [],
+}));
 const worlds = scanWorlds();
-const knowledge = new Knowledge(worlds);
-const methods = readMethods(worlds);
-const planner = new Planner({ worlds, knowledge, methods });
+const knowledge = factStore(published);
+// The chain of kinds the methods compare by (what std.know follows for a host): is_a, kind_of, the `is` of a role,
+// the age of a kind of person, and the drawing of a person.
+const KIND_KEYS = ['is_a', 'kind_of', 'is', 'age'];
+const chain = [{ type: 'k.people.kind', keys: [...KIND_KEYS, 'drawing'] }, { type: 'k.people.role', keys: [...KIND_KEYS, 'drawing'] }, { type: 'k.commonsense.thing', keys: KIND_KEYS }, { type: 'k.shapes.shape', keys: KIND_KEYS }];
+const planner = makePlanner(knowledge, { chain });
+const methods = readMethods(knowledge);
+const MAX_ACTS = PLAN_LIMITS.acts;
+
+// The kinds of a world schema by their plain name (table -> w.seating.table), and the slots of each (for the checks).
+function schemaKinds(id) {
+  const file = join(WORLDS_DIR, id, 'schema.sop');
+  if (!existsSync(file)) return null;
+  const wires = parse(readFileSync(file, 'utf8'));
+  const types = wires.filter((x) => x.type === 'core.type').map((x) => x.attrs.of[0]);
+  const parent = Object.fromEntries(wires.filter((x) => x.type === 'core.type').map((x) => [x.attrs.of[0], x.attrs.extends ?? []]));
+  const own = (t) => wires.filter((x) => x.type === 'core.slot' && x.attrs.of[0] === t).map((x) => x.attrs.key[0]);
+  const slots = (t) => [...own(t), ...(parent[t] ?? []).flatMap(slots)];
+  return { kinds: Object.fromEntries(types.map((t) => [t.slice(id.length + 1), t])), slots: Object.fromEntries(types.map((t) => [t, slots(t)])) };
+}
+// A live world for planning (std.plan's PlanLive), with the schema of its world for the checks.
+class Live extends PlanLive {
+  constructor(o = {}) { super({ store: knowledge, ...o }); this.schema = o.world?.startsWith('w.') ? schemaKinds(o.world) : null; }
+}
 const plan = (goal, live = new Live()) => planner.plan(goal, live);
 const thing = (id, kind) => ({ id, kind });
+// The steps of a method in an order their `after` allows (a circle is an error).
+const order = (m) => {
+  const done = new Set(), left = [...m.steps];
+  while (left.length) {
+    const i = left.findIndex((s) => s.after.every((a) => done.has(a)));
+    assert.ok(i >= 0, `${m.name}: steps in a circle`);
+    done.add(left.splice(i, 1)[0].n);
+  }
+};
 
 test('the shards are what tools/procedures-core.mjs gives, and they load', () => {
   for (const [name, t] of Object.entries(procedureShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.procedures', 'shards', name), 'utf8'), t, name);
@@ -79,7 +116,7 @@ test('bindings: one source each; every name used is bound; knowledge types and k
     }
     if (m.world) assert.ok(schemaKinds(m.world), `${m.name}: world ${m.world} is no schema here`);
     assert.ok(m.example.length > 0, `${m.name}: an example`);
-    planner.order(m); // no circle
+    order(m); // no circle
   }
 });
 
@@ -243,7 +280,7 @@ test('coverage: every scene, role, wearable, layout, joined whole and labelled d
     const bad = [];
     for (const [g, live] of goals) {
       const r = plan(g, live());
-      if (r.refused || r.asks.length || !r.lines.length || r.effects.some((e) => !e.ok)) { bad.push(JSON.stringify(g.roles)); continue; }
+      if (r.refused || r.truncated || r.asks.length || !r.lines.length || r.effects.some((e) => !e.ok)) { bad.push(JSON.stringify(g.roles)); continue; }
       ok++; acts += r.lines.length; max = Math.max(max, r.lines.length); skipped += r.skipped.length;
       checkWorld(r, live());
     }

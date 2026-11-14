@@ -35,7 +35,7 @@ Durations are milliseconds (`k.units.measure`); a range is a pair of keys `<name
   classes: one unit per character; `fold` (a letter with a mark counts as the letter), `ignore_case`, `default` (the
   group of a letter no group lists); each group: `class`, `letter` (many) or `kind` (space, digit, symbol), `min`, `max`.
 
-How a host reads it (and `tools/lib/motion.mjs` does, as a test oracle): events come in; a repeated rule fires after
+How a host reads it (the library's `std.motion` does: sopworld 0.56 `readMotion`, `planMotionFacts`, `splitText`): events come in; a repeated rule fires after
 its pause when its layers and conditions allow; an event ends the holds waiting for it, cancels the rules it ends,
 then starts the rules `on` it. Each key shows, at each moment, the value of the highest layer that sets it (the later
 rule in one layer), else the face's own. A host that only switches variants shows a value from the middle of its onset
@@ -104,8 +104,8 @@ reply is said (0.4-1.6 s), and the split of each mode's glances into a left and 
 ## Known limits
 
 - The rules name variants of the style `plain` only; another style needs its own `k.motion.viseme` facts and sets.
-- A switching host shows a ramp as one change (or the `via` variant); `tools/lib/motion.mjs` is a test oracle, not
-  `std.motion`. The format may change when the library answers Q46 (a script converts the facts).
+- A switching host shows a ramp as one change (or the `via` variant). The library read the format as published
+  (its Q39, answering Q46); the tests run through it, and the reference reader that first planned these rules is gone.
 - No sound-level lip sync: the text rule is by letters (owner, 11:05).
 
 ## Previews

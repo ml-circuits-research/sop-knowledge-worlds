@@ -1,16 +1,17 @@
 // k.motion (blocks "10:50" and "11:05"): the rules of a face over time. The facts load; every name they give of
 // k.faces (slot, variant, expression key) exists there; the ranges are sane and agree with the measurements named in
-// WORLD.md; the rule from text to mouth shapes does what the owner said; and the reference reader (tools/lib/motion.mjs)
-// plans the sample reply as expected (priorities, blinking always, cancel, seed).
+// WORLD.md; the rule from text to mouth shapes does what the owner said; and the library's std.motion (sopworld 0.56
+// readMotion, planMotionFacts, splitText; the reference reader that first wrote these checks is gone) plans the sample
+// reply as expected (priorities, blinking always, cancel, seed).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { motionShards, RULES, OUTCOMES } from '../tools/motion-core.mjs';
-import { readMotion, planMotion, splitText, KEYS } from '../tools/lib/motion.mjs';
+import { readMotion, splitText } from '../tools/sopworld/sopworld.mjs';
 import { indexOf, renderFace } from '../tools/render-faces.mjs';
-import { motionSetup, stripFrames, outcomeFrames, SAMPLE } from '../tools/motion-strip.mjs';
+import { motionSetup, stripFrames, outcomeFrames, SAMPLE, KEYS, planMotion } from '../tools/motion-strip.mjs';
 
 const worlds = scanWorlds();
 const world = fullWorld('k.motion', worlds);

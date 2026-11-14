@@ -53,10 +53,10 @@ the table), a family photo (both alternatives), set a table for four (picture, a
 apart a car (drawing parts), a piano (k.parts), a group, a refusal (an idea), build a house from parts, a chart of the
 things in the picture, a report about what we did (w.timeline, w.list; refused with nothing done), a doctor (picture),
 a pirate face (w.face), a shy and a hurt face, a hat on a man, a scarf on a girl, a cap on a face, Peru and Lima on the
-map, a row, a missing needed role asked. The expansion is done by `tools/lib/plan.mjs`, a reference reader (a test
-oracle, not a planner for hosts).
+map, a row, a missing needed role asked. The expansion is done by the library's planner (sopworld 0.55 `std.plan`, pinned 0.56:
+`factStore`, `planner`, `PlanLive`), the one pinned build; the reference reader that first wrote these lists is gone.
 Coverage (every goal of the knowledge each general method reads, all within the budget, effects true): 61 of 61
-scenes (1,261 acts, at most 35), 60 of 60 roles in a picture and 60 on a face, 105 of 105 wearables on a person, 30 of
+scenes (1,261 acts, at most 35), 62 of 62 roles in a picture and 62 on a face, 105 of 105 wearables on a person, 30 of
 30 feelings on a face, 17 of 17 layouts, 50 of 50 joined wholes built from parts, 1,643 of 1,643 drawings with named
 parts taken apart.
 

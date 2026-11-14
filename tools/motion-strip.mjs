@@ -7,11 +7,16 @@ import { mkdirSync, writeFileSync, rmSync, renameSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { scanWorlds, fullWorld } from './lib/worlds.mjs';
-import { readMotion, planMotion } from './lib/motion.mjs';
+import { readMotion, planMotionFacts } from './sopworld/sopworld.mjs';
 import { indexOf, presetFace, renderFace } from './render-faces.mjs';
 import { contactSheets } from './contact-sheet.mjs';
 
 export const SAMPLE = { outcome: 'done', text: 'Done, I moved it.' };
+
+// What this host tells the library's std.motion (sopworld 0.56 planMotionFacts) about a k.faces face: the keys it
+// shows, in the order changes at one time are listed, and that `one_eye` shows the eyes' variant when nothing sets it.
+export const KEYS = ['mouth', 'eyebrows', 'eyes', 'one_eye'];
+export const planMotion = (motion, opts) => planMotionFacts(motion, { aliases: { one_eye: 'eyes' }, keys: KEYS, ...opts });
 
 export function motionSetup(worlds = scanWorlds()) {
   const motion = readMotion(fullWorld('k.motion', worlds));

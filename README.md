@@ -91,7 +91,7 @@ World schemas so far: `w.list`, `w.seating`, `w.timeline`, and (block "06:55" it
 corpus and the demo) `w.face`, a drawn face whose kinds are the slots of `k.faces`, and `w.map`, a map view over the
 places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions in `tests/w.schemas.test.mjs`). A
 world schema may hold denies (`w.timeline`: an event is inside its timeline; `w.face`: one part of each kind on a
-face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.52.0 at
-commit b44d444 (`tools/sopworld/VERSION`).
+face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.56.0 at
+commit 1d1c3c6 (`tools/sopworld/VERSION`).
 
 Agents working here start with [AGENTS.md](AGENTS.md).

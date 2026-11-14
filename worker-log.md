@@ -3708,3 +3708,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   changes; **Q47** asks whether to publish the fitted canon, draw a style for the classical one, or stop.
 - Tests: `tests/k.faces.canon.test.mjs` (3: exact maps; the adult canon keeps every part in its slot and follows its
   rules; the overlap measure that decided).
+
+## 2026-11-14 — first worker: one build moved to sopworld 0.56.0 (1d1c3c6); plans and motion through the library (blocks 12:25, 13:00 item 1, 13:15)
+
+- **Pin:** `tools/sopworld/sopworld.mjs` is the library's `docs/sopworld.mjs` at 1d1c3c6 (0.56.0, build dd893aeaf6c0;
+  0.55 asked first, 0.56 by block 13:15), VERSION and the validate test follow; README, docs/index.html,
+  docs/worlds/README.md and w.lang.en WORLD.md name it. `npm run build`: every generated file byte-identical but the
+  catalog's `sopworld` field and content hash.
+- **std.plan:** `tools/lib/plan.mjs` (384 lines) deleted. `tests/k.procedures.test.mjs` plans through the library's
+  `factStore` (every published world, k.* and w.*), `planner` (the chain of kinds as data: is_a, kind_of, is, age,
+  and drawing for people), `PlanLive` and `readMethods`; the checks of the facts keep a 12-line `schemaKinds` and a
+  circle check of their own. All 15 tests pass with the same expected act lists; the coverage report is identical
+  (61/61 scenes, 1,261 acts; 62/62 roles; 105/105 wearables; 30/30 feelings; 17/17 layouts; 50/50 wholes; 1,643/1,643
+  drawings taken apart). No difference to report to the library.
+- **std.motion:** `tools/lib/motion.mjs` (188 lines) deleted. `tools/motion-strip.mjs` gives the host's two settings
+  (keys in listing order; `one_eye` shows the eyes) to `planMotionFacts`; `tests/k.motion.test.mjs` reads with the
+  library's `readMotion` and `splitText`: 10/10 pass. A scratch comparison of the deleted reader and the library on
+  252 plans (6 seeds, 7 outcomes, a cancelled reply, two base faces, 20 s each): 0 differ. No difference to report.
+- `npm test` (in a worktree of this commit): 2,917 tests, 2,916 pass, 1 skipped, 0 fail.
