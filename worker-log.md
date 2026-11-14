@@ -4128,3 +4128,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   presentation), and the dragon is an element of 10 of 40 seeded stories with the topic, 7 without (x2 weight only).
 - Catalog 32 worlds, 978 shards, vocab 24,876 words. Tests run one file at a time: k.compose 8/8, k.procedures 15/15,
   k.genres 7, k.interest 5, k.story 5, w.document 3, catalog 8, validate 5; 0 fail.
+
+
+
+## Block 20:15 (2026-11-14, fourth worker): w.lang.en frame for the named add with a place verb (from PSys2)
+
+- `shards/hand-frames.sop` (new, hand-written, CC0): `acts.make.name.place.p` (act make, priority 15, needs in): a
+  place verb, the thing, called/named, the name as words, a preposition, the place. "Put a guest named Maria at table
+  1." now reads kind guest, value Maria, place at table 1 (acts.make.name.p, priority 14, read the name as "Maria At
+  Table 1"); "Place a guest named Ann." still reads by acts.make.name.p. 10 wires, 2.1 kB. Test in
+  tests/w.lang.en.templates.test.mjs (two sentences and the one without a place). PSys2 can drop its local
+  patterns.extra.sop copy.

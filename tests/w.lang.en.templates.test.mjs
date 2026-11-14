@@ -218,3 +218,14 @@ test('discourse: the words outside the slots keep the register (persons, questio
   assert.deepEqual(bad, []);
   assert.equal(realiseEn(all, 'In the {setting} lived a {trait} {protagonist}.', DISCOURSE_FILLERS), 'In the forest lived an old fox.');
 });
+
+test('block 20:15 (from PSys2): "Put a guest named Maria at table 1." is a named add with a place: the name ends before the place preposition', () => {
+  const read = frameReader(all, actions, { lexicons: LEXICONS, needs: (n) => GENERAL.has(n) || n === 'named' });
+  for (const [s, value, marker, place] of [['Put a guest named Maria at table 1.', 'maria', 'at', 'table 1'], ['Place a guest called Ann Lee next to table 2.', 'ann lee', 'next to', 'table 2']]) {
+    const best = read(s)[0];
+    assert.equal(best.frame, 'acts.make.name.place.p', `${s}: ${best.frame}`);
+    assert.deepEqual([best.act, best.args.kind, best.args.value, best.args['place.marker'], best.args.place], ['make', 'guest', value, marker, place], s);
+  }
+  // without a place the place-verb frame of the hand-over still reads the name to the end
+  assert.deepEqual([read('Place a guest named Ann.')[0].frame, read('Place a guest named Ann.')[0].args.value], ['acts.make.name.p', 'ann']);
+});

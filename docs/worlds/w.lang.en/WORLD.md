@@ -26,6 +26,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | joiners-keep | `keep`: a word after "and" that continues the noun phrase before it (its: "Highlight Romania and its neighbours") |
 | hand-grammar, hand-joins | what this repository added: 4 constructions with 7 productions (and 4 helpers), the words of AUXNEG, HAVE, IF, THEN; 27 role maps (4 for the frames written after the import); 15 prepositions joined to k.layouts and 20 new ones |
 | phrases | 81 phrase groups (politeness, fillers, answers, degree, comparison, request and question shapes, undo, redo) and 4 lexicons the frames name |
+| hand-frames | frames written here where a host found a sentence no frame reads right: `acts.make.name.place.p`, the named add with a place verb and a place ("Put a guest named Maria at table 1.", block 20:15 from PSys2; acts.make.name.p took the rest as the name) |
 | templates-acts | generation (block 17:05): 34 templates of the 16 acts of k.actions, one per act and argument shape; the article forms (a, an) and 19 onsets |
 | templates-discourse | composition (blocks 14:45 item 2, 15:00 item 4, 17:05): 116 templates of 43 rhetorical moves of k.genres in its 5 registers, and the 35 slots they name |
 

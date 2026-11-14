@@ -1,0 +1,18 @@
+# w.lang.en/shards/hand-frames: argument frames written in this repository where a host found a sentence no frame of
+# the hand-over reads right (block 20:15, from PSys2): the named add with a place verb and a place ("Put a guest
+# named Maria at table 1."): acts.make.name.p takes the rest as the name ("Maria At Table 1"); this frame ends the name
+# before the place preposition, as acts.make.name.place does for the verbs of make.
+# sources: hand-core 1 (written in this repository after PSys2's question; same parts as acts.make.name.place)
+# license: CC0-1.0
+# script: none (hand-written)
+
+@w.lang.en.frame.acts.make.name.place.p w.lang.en.frame name=acts.make.name.place.p act=make set=acts priority=15 needs=in role=thing role=value role=rel role=place example="Put a guest named Maria at table 1." core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.1 w.lang.en.part frame=acts.make.name.place.p at=1 is=lead phrase=lead.polite optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.2 w.lang.en.part frame=acts.make.name.place.p at=2 is=verb act=place core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.3 w.lang.en.part frame=acts.make.name.place.p at=3 is=det optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.4 w.lang.en.part frame=acts.make.name.place.p at=4 is=role role=thing takes=words core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.5 w.lang.en.part frame=acts.make.name.place.p at=5 is=word word="called" word="named" core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.6 w.lang.en.part frame=acts.make.name.place.p at=6 is=role role=value takes=words core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.7 w.lang.en.part frame=acts.make.name.place.p at=7 is=role role=rel takes=prep core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.8 w.lang.en.part frame=acts.make.name.place.p at=8 is=det optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.make.name.place.p.9 w.lang.en.part frame=acts.make.name.place.p at=9 is=role role=place takes=words core.source="hand-core 1"
