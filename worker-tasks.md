@@ -686,3 +686,8 @@ The library builds type-driven reading, alternations once, lexical generalisatio
 ## Reviewer 2026-11-14 21:20 — second worker's round accepted; AGENTS.md pin line fixed
 
 Accepted af4b6c4, 4c35443, 3e07002, d6c7984, 204d32f, 0a22936, 1dc48e2, d05fd61, 633afae, 7be89c8, 53b002b, 4995e46 (full run 2,964 pass, 0 fail; memory kills rerun alone). AGENTS.md now points at tools/sopworld/VERSION instead of the stale 0.30 line. Library told: `priority` on grammar rules is not read yet. Next for a second worker: publish the drafted `w.chart` (draft in /tmp/w2s/w.chart, key `form`), then the knowledge side of the ABSTRACTION ROUND (21:05 block).
+
+## Reviewer 2026-11-14 21:55 — compositions accepted; the abstraction graph for cousins (owner, 15:03)
+
+Accepted (third worker): 8f51548 five composition methods (28 methods in all; 100 seeded stories hold every hard constraint), ea39442, ff0c58f (tales check: 17 hard / 4 soft; TinyStories adds nothing over the tales — keep it out of imports). Q57 forwarded to the library. Follow-up: switch the four topical methods to the `make` role `about` (53b002b).
+**For the library's cousins (layered graph, not a tree):** the knowledge must expose every "up" edge it has, as facts: k.kinds with **several parents** where true (a cow: farm animal, mammal, animal with legs), act families in k.actions, aspects of values, alternation families in w.lang.en (as facts `w.lang.en.alternation`), structure kinds of world schemas (second worker's item 4), argument types of relations (its item 2). Report kinds with a single parent where a second is plain, and kinds with none.
