@@ -1,7 +1,8 @@
 # w.lang.en/shards/hand-joins: the joins of w.lang.en to k.actions and k.layouts. The roles of the frames (PSys2's
 # names) mapped to the roles of the acts of k.actions; the prepositions that say a relation of k.layouts, with the
 # spatial prepositions the hand-over lacked (left of, right of, in front of, on top of, underneath, beneath), and the
-# prepositions that mark roles in k.actions (close to, out of, using, instead of ...).
+# prepositions that mark roles in k.actions (close to, out of, using, instead of ...); the temporal prepositions
+# joined to the order in time of k.time.
 # sources: hand-core 1 (written in this repository, from the frames' examples and the roles of k.actions)
 # license: CC0-1.0
 # script: none (hand-written)
@@ -69,3 +70,9 @@
 @w.lang.en.prep.according_to w.lang.en.prep text="according to" rel=by role=criterion core.source="hand-core 1"
 @w.lang.en.prep.instead_of w.lang.en.prep text="instead of" rel=instead_of role=replacement core.source="hand-core 1"
 @w.lang.en.prep.rather_than w.lang.en.prep text="rather than" rel=instead_of role=replacement core.source="hand-core 1"
+
+# ---- temporal prepositions -> the order in time of k.time (k.time.before: earlier, later) ----
+@w.lang.en.prep.time.join.before w.lang.en.prep.time text=before rel=before order=earlier relation=k.time.before first_is=earlier core.source="hand-core 1"
+@w.lang.en.prep.time.join.after w.lang.en.prep.time text=after rel=after order=later relation=k.time.before first_is=later core.source="hand-core 1"
+@w.lang.en.prep.time.join.earlier_than w.lang.en.prep.time text="earlier than" rel=before order=earlier relation=k.time.before first_is=earlier core.source="hand-core 1"
+@w.lang.en.prep.time.join.later_than w.lang.en.prep.time text="later than" rel=after order=later relation=k.time.before first_is=later core.source="hand-core 1"

@@ -7,7 +7,7 @@ import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { parse } from '../tools/sopworld/sopworld.mjs';
-import { scanWorlds, REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
+import { scanWorlds, fullWorld, REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { World, parseText, nounPhrase, grammarView, viewDiff } from '../tools/sopworld/sopworld.mjs';
 import { importLangEn, patternParts } from '../tools/import/psys2-lang-en.mjs';
 import { inflect, hostOptions, hostLexicon } from '../tools/lib/lang-en.mjs';
@@ -108,6 +108,18 @@ test('w.lang.en joins k.actions: every marker of a role of k.actions is a prepos
   const markers = new Set([...kw('k.actions', 'k.actions.role'), ...kw('k.actions', 'k.actions.marking')].flatMap((w) => v(w, 'marker')));
   const preps = new Set([...of('prep'), ...of('prep.time')].map((p) => one(p, 'text')));
   assert.deepEqual([...markers].filter((m) => !preps.has(m)), ['and']);
+});
+
+test('w.lang.en joins k.time: "Monday is before Friday", "December comes after November" by the order of k.time', () => {
+  const time = fullWorld('k.time', worlds);
+  const prep = (t) => { const ps = of('prep.time').filter((p) => one(p, 'text') === t); return Object.assign({}, ...ps.map((p) => Object.fromEntries(Object.entries(p.attrs).map(([k, x]) => [k, tok(x[0])])))); };
+  const holds = (a, t, b) => { const p = prep(t); const [earlier, later] = p.first_is === 'earlier' ? [a, b] : [b, a];
+    return time.ofType(p.relation).some((w) => tok(w.attrs.earlier[0]) === earlier && tok(w.attrs.later[0]) === later); };
+  assert.equal(holds('Monday', 'before', 'Friday'), true);
+  assert.equal(holds('Friday', 'before', 'Monday'), false);
+  assert.equal(holds('December', 'after', 'November'), true);
+  assert.equal(holds('spring', 'earlier than', 'summer'), true);
+  assert.equal(of('construction').find((c) => one(c, 'name') === 'pp.time').attrs.status, undefined, 'no longer a hole');
 });
 
 test('w.lang.en joins k.layouts: a preposition that says a place names a relation of k.layouts', () => {

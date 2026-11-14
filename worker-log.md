@@ -3127,3 +3127,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: catalog 25 worlds (k.drawing, k.kinds: schemas, no shards), 936 shards, vocab 24,211 words; 0 errors, 0
   warnings. npm test 2,840: 2,834 pass, 6 skipped, 0 fail. After the rebase on k.time version 2 (first worker): 25
   worlds, 937 shards, vocab 24,256 words; npm test 2,862: 2,856 pass, 6 skipped, 0 fail.
+
+## Round 12, part 3 (2026-11-14, second worker): the temporal prepositions joined to the order in time of k.time
+
+- k.time version 2 (first worker) has `k.time.before` (cycle, earlier, later) derived by one rule. `w.lang.en.prep.time`
+  gets `relation` (the fact type) and `first_is` (earlier or later: which key the first thing of "X before Y" is);
+  before, after, earlier than, later than say them (`shards/hand-joins.sop`, facts that merge with the imported ones).
+  The hand-over's hole `pp.time` is filled (the import no longer copies its status; IMPORT.md says why). A test reads
+  "Monday is before Friday" (true), "Friday before Monday" (false), "December after November", "spring earlier than
+  summer" from the facts of k.time. during, until, since: k.time has no fact for them yet (left).
+- npm test 2,863: 2,857 pass, 6 skipped, 0 fail.

@@ -15,7 +15,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | --- | --- |
 | determiners | 31 determiners and quantifiers, with kind, number, definiteness, person; `in` = the PSys2 list (view) a word was in |
 | pronouns | 21 pronouns (case, person, number, gender, what they refer to), 14 anaphoric noun phrases ("that one") in the order they are tried |
-| prepositions | 32 prepositions as relations (place, goal, source, way; roles), 7 temporal ones (`w.lang.en.prep.time`: earlier, later, within) |
+| prepositions | 32 prepositions as relations (place, goal, source, way; roles), 7 temporal ones (`w.lang.en.prep.time`: earlier, later, within; joined to `k.time.before`) |
 | numbers | 11 ordinals, 13 small cardinals (agree with `k.values.number`) |
 | morphology | 11 inflection rules in order, 5 irregular plurals, 31 noun exceptions, 20 contractions, 6 contraction endings (and core-plurals, hand-morphology: 201 irregular plurals more) |
 | ellipsis | 19 lead and 4 trail markers of a fragment, 10 repeats, 27 sentence starters, 6 limits |
@@ -82,8 +82,10 @@ right construction and head, with the nouns and adjectives taken from `k.words`.
   question ("the table is red, isn't it": negated auxiliaries; it was a hole of the hand-over); relative clauses with
   have ("the table that has four seats"); conditions ("if the table is red then the chair is blue"); standing rules
   after a frame lead ("from now on the squares are grey"); was and were. Each parses with the library (a test).
-- Still a hole: temporal prepositions (`pp.time`, `status=hole`): they need an order in time, which `k.time` is
-  getting (reviewer's block "02:15", first worker); then `w.lang.en.prep.time order=` joins it. Imperative clauses as
-  productions (the frames say them, the productions do not), a possessive "of" beyond parts.
+- Filled after k.time got its order (version 2): the temporal prepositions name `k.time.before` (`relation`) and
+  which of its keys the first thing is (`first_is`): "Monday before Friday" holds when Monday is the `earlier`;
+  "December after November" when December is the `later`; `pp.time` is no longer a hole. during, until and since
+  have no fact of k.time to read yet. Still open: imperative clauses as productions (the frames say them), a
+  possessive "of" beyond parts.
 - The library's tokenizer drops commas, so the coordination separator "," is not read ("a sun, a cloud and a man"
   parses only as "a sun and a cloud and a man"); questions.md Q39.
