@@ -1,17 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>cougar</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polyline points="22,46 10,54 6,40" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>tail</title></polyline>
-  <rect x="26" y="56" width="6" height="34" fill="brown" stroke="#333" stroke-width="0.8"><title>back_leg_1</title></rect>
-  <rect x="34" y="56" width="6" height="34" fill="brown" stroke="#333" stroke-width="0.8"><title>back_leg_2</title></rect>
-  <rect x="62" y="56" width="6" height="34" fill="brown" stroke="#333" stroke-width="0.8"><title>front_leg_1</title></rect>
-  <rect x="70" y="56" width="6" height="34" fill="brown" stroke="#333" stroke-width="0.8"><title>front_leg_2</title></rect>
-  <ellipse cx="49" cy="51" rx="29" ry="13" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
-  <ellipse cx="76" cy="24" rx="4" ry="4" fill="brown" stroke="#333" stroke-width="0.8"><title>ear</title></ellipse>
-  <ellipse cx="6" cy="40" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>tail_tip</title></ellipse>
-  <ellipse cx="78" cy="34" rx="10" ry="10" fill="brown" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
-  <ellipse cx="88.5" cy="37" rx="6.5" ry="5" fill="brown" stroke="#333" stroke-width="0.8"><title>snout</title></ellipse>
-  <ellipse cx="94" cy="35" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
-  <ellipse cx="77.5" cy="30.5" rx="1.5" ry="1.5" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
-  <ellipse cx="90" cy="40" rx="4" ry="3" fill="white" stroke="#333" stroke-width="0.8"><title>muzzle</title></ellipse>
+  <polygon points="20.2,43.6 11.7,50.1 6.6,61.3 5.5,74.1 7.8,83.1 12.2,87.8 15.8,84.2 12.2,80.9 10.5,73.9 11.4,62.7 16.3,53.9 23.8,48.4" fill="orange" stroke="#333" stroke-width="0.8"><title>tail</title></polygon>
+  <polygon points="64,44 74,28 88,32 80,56" fill="orange" stroke="#333" stroke-width="0.8"><title>neck</title></polygon>
+  <rect x="24" y="54" width="7" height="34" fill="orange" stroke="#333" stroke-width="0.8"><title>back_leg_1</title></rect>
+  <rect x="33" y="56" width="7" height="32" fill="orange" stroke="#333" stroke-width="0.8"><title>back_leg_2</title></rect>
+  <rect x="62" y="56" width="7" height="32" fill="orange" stroke="#333" stroke-width="0.8"><title>front_leg_1</title></rect>
+  <rect x="70" y="54" width="7" height="34" fill="orange" stroke="#333" stroke-width="0.8"><title>front_leg_2</title></rect>
+  <ellipse cx="14.5" cy="85.5" rx="4.5" ry="3.5" fill="black" stroke="#333" stroke-width="0.8"><title>tail_tip</title></ellipse>
+  <ellipse cx="28" cy="88.5" rx="5" ry="2.5" fill="orange" stroke="#333" stroke-width="0.8"><title>paw_1</title></ellipse>
+  <ellipse cx="37" cy="88.5" rx="5" ry="2.5" fill="orange" stroke="#333" stroke-width="0.8"><title>paw_2</title></ellipse>
+  <ellipse cx="66" cy="88.5" rx="5" ry="2.5" fill="orange" stroke="#333" stroke-width="0.8"><title>paw_3</title></ellipse>
+  <ellipse cx="74" cy="88.5" rx="5" ry="2.5" fill="orange" stroke="#333" stroke-width="0.8"><title>paw_4</title></ellipse>
+  <ellipse cx="48" cy="50" rx="32" ry="12" fill="orange" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <polygon points="77.5,15 81,24 74,24" fill="orange" stroke="#333" stroke-width="0.8"><title>left_ear</title></polygon>
+  <polygon points="86.5,14 90,23 83,23" fill="orange" stroke="#333" stroke-width="0.8"><title>right_ear</title></polygon>
+  <ellipse cx="83" cy="28.5" rx="11" ry="9.5" fill="orange" stroke="#333" stroke-width="0.8"><title>head</title></ellipse>
+  <ellipse cx="90" cy="33" rx="6" ry="5" fill="white" stroke="#333" stroke-width="0.8"><title>muzzle</title></ellipse>
+  <polygon points="92,28 97,28 94.5,32" fill="pink" stroke="#333" stroke-width="0.8"><title>nose</title></polygon>
+  <ellipse cx="83" cy="24.5" rx="2" ry="1.5" fill="black" stroke="#333" stroke-width="0.8"><title>eye</title></ellipse>
+  <polyline points="90,35 95,34" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></polyline>
 </svg>

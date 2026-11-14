@@ -11,6 +11,23 @@ const star = (cx, cy, r1, r2, n) => Array.from({ length: 2 * n }, (_, i) => {
   return `${Math.round((cx + r * Math.cos(a)) * 10) / 10},${Math.round((cy + r * Math.sin(a)) * 10) / 10}`;
 }).join(' ');
 
+// A band along a centre line (points [x, y], a width at each point): the closed polygon of its two edges. Round 12:
+// the eel's body and its fin.
+const r1 = (n) => Math.round(n * 10) / 10;
+const ribbon = (line, widths) => {
+  const left = [], right = [];
+  line.forEach(([x, y], i) => {
+    const [px, py] = line[Math.max(0, i - 1)], [nx, ny] = line[Math.min(line.length - 1, i + 1)];
+    const len = Math.hypot(nx - px, ny - py) || 1, ox = (-(ny - py) / len) * widths[i] / 2, oy = ((nx - px) / len) * widths[i] / 2;
+    left.push(`${r1(x + ox)},${r1(y + oy)}`); right.unshift(`${r1(x - ox)},${r1(y - oy)}`);
+  });
+  return [...left, ...right].join(' ');
+};
+const EEL = [[90, 36], [80, 40], [70, 48], [58, 58], [46, 62], [34, 58], [24, 50], [14, 48], [6, 54]];
+
+// The spokes of a wheel at cx, cy of radius r: four lines through the hub (eight spokes).
+const spokes = (cx, cy, r, name) => rep(4, (i) => { const a = (Math.PI * i) / 4; return `${name}_${i + 1} line ${r1(cx + r * Math.cos(a))},${r1(cy + r * Math.sin(a))} ${r1(cx - r * Math.cos(a))},${r1(cy - r * Math.sin(a))} | 5 black kind=spoke`; });
+
 // A four-legged animal seen from the side, facing right; what differs is said by the options.
 function quad({ c, c2 = c, ears = 'pointed', tail = 'long', tailColour = c, leg = 34, extra = '' }) {
   const legY = 56, legH = Math.min(leg, 100 - legY);
@@ -78,10 +95,13 @@ export const objectsData = {
       pupil circle 17.5 45.5 2 2 | 5 black inside=eye
       mouth line 8,52 14,52 | 4 black`],
     ['eel', ['eels'], `
-      body polygon 6,50 20,40 36,38 50,48 64,56 80,52 94,44 96,48 82,60 64,64 48,56 36,46 20,50 8,56 | 2 green grey
-      fin line 22,39 36,36 50,45 64,53 80,49 92,43 | 3 brown
-      eye circle 10 46 3 3 | 4 black
-      mouth line 6,51 11,52 | 4 black`],
+      fin polygon ${ribbon(EEL.slice(1).map(([x, y]) => [x, y - 5]), [3, 7, 7, 7, 7, 7, 6, 3])} | 1 green
+      body polygon ${ribbon(EEL, [14, 13, 12, 11, 10, 9, 7, 5, 2])} | 2 green
+      head oval 78 29 18 14 | 3 green
+      side_fin oval 69 43 6 10 | 4 green
+      eye circle 86 31 4 4 | 4 white
+      pupil circle 87 32 2 2 | 5 black inside=eye
+      mouth line 95,38 88,39 82,37 | 5 black`],
     ['jaguar', ['jaguars'], quad({ c: 'yellow', c2: 'yellow', ears: 'round', extra: `
       spot_1 circle 30 44 4 4 | 3 black kind=spot inside=body
       spot_2 circle 40 41 4 4 | 3 black kind=spot inside=body
@@ -90,9 +110,26 @@ export const objectsData = {
       spot_5 circle 35 52 4 4 | 3 black kind=spot inside=body
       spot_6 circle 46 54 4 4 | 3 black kind=spot inside=body
       spot_7 circle 57 51 4 4 | 3 black kind=spot inside=body` })],
-    ['cougar', ['cougars', 'mountain lion', 'mountain lions'], quad({ c: 'brown', c2: 'brown', ears: 'round', extra: `
-      muzzle oval 86 37 8 6 | 5 white inside=snout
-      tail_tip circle 4 38 4 4 | 2 black` })],
+    ['cougar', ['cougars', 'mountain lion', 'mountain lions'], `
+      tail polygon ${ribbon([[22, 46], [14, 52], [9, 62], [8, 74], [10, 82], [14, 86]], [6, 6, 5, 5, 5, 5])} | 1 orange
+      tail_tip oval 10 82 9 7 | 2 black
+      neck polygon 64,44 74,28 88,32 80,56 | 1 orange
+      back_leg_1 rectangle 24 54 7 34 | 1 orange kind=leg
+      back_leg_2 rectangle 33 56 7 32 | 1 orange kind=leg
+      front_leg_1 rectangle 62 56 7 32 | 1 orange kind=leg
+      front_leg_2 rectangle 70 54 7 34 | 1 orange kind=leg
+      paw_1 oval 23 86 10 5 | 2 orange kind=paw
+      paw_2 oval 32 86 10 5 | 2 orange kind=paw
+      paw_3 oval 61 86 10 5 | 2 orange kind=paw
+      paw_4 oval 69 86 10 5 | 2 orange kind=paw
+      body oval 16 38 64 24 | 2 orange
+      left_ear triangle 74 15 7 9 | 3 orange pointing=up above=head kind=ear
+      right_ear triangle 83 14 7 9 | 3 orange pointing=up above=head kind=ear
+      head oval 72 19 22 19 | 4 orange
+      muzzle oval 84 28 12 10 | 5 white right_of=head
+      nose triangle 92 28 5 4 | 6 pink pointing=down
+      eye oval 81 23 4 3 | 6 black inside=head
+      mouth line 90,35 95,34 | 6 black`],
     ['dingo', ['dingoes', 'dingos'], quad({ c: 'orange', c2: 'white', ears: 'pointed', tail: 'bushy', extra: `
       chest oval 70 44 10 14 | 3 white` })],
     ['jackal', ['jackals'], quad({ c: 'brown', c2: 'brown', ears: 'pointed', tail: 'bushy', extra: `
@@ -175,13 +212,14 @@ export const objectsData = {
       band_5 line 74,42 74,60 | 3 black kind=band
       front_sucker circle 80 46 10 10 | 3 brown`],
     ['clam', ['clams'], `
-      lower_shell polygon 14,60 86,60 80,70 50,74 20,70 | 1 white
-      upper_shell polygon 14,60 20,36 36,22 50,18 64,22 80,36 86,60 | 2 white
-      ridge_1 line 50,64 26,36 | 3 brown kind=ridge
-      ridge_2 line 50,64 40,22 | 3 brown kind=ridge
-      ridge_3 line 50,64 60,22 | 3 brown kind=ridge
-      ridge_4 line 50,64 74,36 | 3 brown kind=ridge
-      edge line 14,60 86,60 | 3 brown`],
+      hinge oval 44 16 12 8 | 0 brown
+      shell polygon 8,64 12,48 22,34 36,24 50,20 64,24 78,34 88,48 92,64 84,76 68,82 50,84 32,82 16,76 | 1 white
+      growth_1 arc 12 60 76 14 | 2 brown opens=up kind=growth_line
+      growth_2 arc 18 50 64 13 | 2 brown opens=up kind=growth_line
+      growth_3 arc 25 40 50 12 | 2 brown opens=up kind=growth_line
+      growth_4 arc 33 31 34 10 | 2 brown opens=up kind=growth_line
+      growth_5 arc 41 24 18 7 | 2 brown opens=up kind=growth_line
+      gap line 10,68 30,74 50,76 70,74 90,68 | 3 grey`],
   ],
   plants: [
     ['fern', ['ferns'], `
@@ -426,12 +464,12 @@ ${rep(3, (i) => `      bubble_${i + 1} circle ${32 + i * 10} ${74 - i * 12} 3 3 
       seed_2 oval 50 28 4 2 | 6 white kind=seed
       seed_3 oval 70 31 4 2 | 6 white kind=seed`],
     ['cheesecake', ['cheesecakes'], `
-      crust polygon 14,74 70,74 70,82 14,82 | 1 brown
-      front polygon 14,50 70,50 70,74 14,74 | 1 yellow
-      side polygon 70,50 90,36 90,68 70,82 | 2 yellow
-      side_crust polygon 70,74 90,62 90,68 70,82 | 3 brown
-      top polygon 14,50 34,36 90,36 70,50 | 3 yellow
-      topping polygon 20,48 36,38 84,38 68,48 | 4 red`],
+      crust polygon 12,72 90,64 90,72 12,80 | 1 brown
+      filling polygon 12,52 90,42 90,64 12,72 | 1 white
+      top polygon 12,52 66,28 90,42 | 2 white
+      sauce polygon 44,40 66,28 90,42 90,50 86,48 84,56 80,46 72,48 70,54 66,46 56,48 | 3 red
+      strawberry oval 64 22 14 12 | 4 red on=top
+      leaf triangle 67 18 8 6 | 5 green pointing=up above=strawberry`],
     ['schnapps', ['schnaps'], `
       bottle rectangle 20 40 24 52 | 1 white
       shoulder polygon 20,40 26,28 38,28 44,40 | 1 white
@@ -481,15 +519,19 @@ ${rep(3, (i) => `      bubble_${i + 1} circle ${32 + i * 10} ${74 - i * 12} 3 3 
       hull polygon 6,70 94,70 84,86 14,86 | 3 brown
       stripe line 10,76 90,76 | 4 yellow`],
     ['buggy', ['buggies', 'horse buggy'], `
-      shafts line 66,58 98,50 | 1 brown
-      hood polygon 28,22 58,22 66,48 24,48 | 1 black
-      seat rectangle 24 48 46 16 | 2 black
-      back_wheel circle 18 52 36 36 | 3 brown kind=wheel
-      front_wheel circle 62 62 26 26 | 3 brown kind=wheel
-      back_spoke_1 line 20,70 52,70 | 4 brown kind=spoke
-      back_spoke_2 line 36,54 36,86 | 4 brown kind=spoke
-      front_spoke_1 line 64,75 86,75 | 4 brown kind=spoke
-      front_spoke_2 line 75,64 75,86 | 4 brown kind=spoke`],
+      shafts line 64,56 98,44 | 1 brown
+      rear_tyre circle 10 52 40 40 | 2 black kind=wheel
+      rear_rim circle 13 55 34 34 | 3 white inside=rear_tyre
+      ${spokes(30, 72, 17, 'rear_spoke')}
+      rear_hub circle 27 69 6 6 | 6 black inside=rear_rim
+      front_tyre circle 56 64 28 28 | 2 black kind=wheel
+      front_rim circle 59 67 22 22 | 3 white inside=front_tyre
+      ${spokes(70, 78, 11, 'front_spoke')}
+      front_hub circle 67.5 75.5 5 5 | 6 black inside=front_rim
+      box polygon 20,46 70,46 68,60 24,60 | 7 black
+      dashboard polygon 66,46 70,46 78,32 76,30 | 7 black
+      hood polygon 18,48 16,26 22,14 36,10 50,12 54,18 40,20 32,26 30,48 | 8 black above=box
+      seat rectangle 30 38 22 8 | 8 red on=box`],
     ['freighter', ['freighters', 'cargo ship', 'container ship'], `
       funnel rectangle 78 22 6 8 | 1 red
       bridge rectangle 72 30 16 26 | 2 white
@@ -554,15 +596,20 @@ ${[12, 24, 82].map((x, i) => `      turret_${i + 1} rectangle ${x} 50 10 6 | 2 g
       window circle 36 40 28 28 | 4 black
       clothes polygon 40,58 48,50 58,54 60,62 46,64 | 5 red inside=window`],
     ['harness', ['harnesses', 'climbing harness'], `
-      left_strap polygon 30,38 38,38 36,54 28,54 | 1 red kind=strap
-      right_strap polygon 62,38 70,38 72,54 64,54 | 1 red kind=strap
-      waist_belt oval 14 18 72 24 | 2 red
-      waist_hole oval 20 23 60 14 | 3 white
-      left_loop oval 14 50 32 28 | 2 red kind=leg_loop
-      left_hole oval 20 55 20 18 | 3 white kind=hole
-      right_loop oval 54 50 32 28 | 2 red kind=leg_loop
-      right_hole oval 60 55 20 18 | 3 white kind=hole
-      buckle rectangle 43 36 14 8 | 4 grey`],
+      left_strap polygon 30,40 36,40 38,56 32,56 | 1 blue kind=strap
+      right_strap polygon 64,40 70,40 68,56 62,56 | 1 blue kind=strap
+      waist_belt polygon 8,22 50,30 92,22 92,34 50,42 8,34 | 2 blue
+      left_loop oval 14 52 30 26 | 2 blue kind=leg_loop
+      right_loop oval 56 52 30 26 | 2 blue kind=leg_loop
+      buckle rectangle 44 30 12 10 | 3 grey inside=waist_belt
+      left_hole oval 19 57 20 16 | 3 white kind=hole inside=left_loop
+      right_hole oval 61 57 20 16 | 3 white kind=hole inside=right_loop
+      gear_loop_1 arc 14 34 12 8 | 3 grey opens=up kind=gear_loop below=waist_belt
+      gear_loop_2 arc 74 34 12 8 | 3 grey opens=up kind=gear_loop below=waist_belt
+      belay_loop oval 44 40 12 20 | 4 orange below=buckle
+      belay_hole oval 47 43 6 14 | 5 white inside=belay_loop
+      carabiner polygon 46,56 54,56 57,62 56,84 50,90 44,84 43,62 | 6 grey below=belay_loop
+      carabiner_hole polygon 48,61 52,61 53,64 52,81 50,84 48,81 47,64 | 7 white inside=carabiner`],
     ['reel', ['reels', 'film reel', 'film reels'], `
       film polygon 74,72 98,90 92,98 68,78 | 0 black
       reel circle 14 14 72 72 | 1 grey
@@ -770,10 +817,12 @@ ${rep(3, (i) => `      bubble_${i + 1} circle ${74 + (i % 2) * 3} ${44 - i * 7} 
       string_1 line 49,12 49,80 | 4 white kind=string
       string_2 line 51,12 51,80 | 4 white kind=string`],
     ['stocking', ['stockings', 'nylons'], `
-      leg polygon 40,6 60,6 60,60 64,78 80,84 82,94 44,94 40,80 | 1 brown
-      top_band rectangle 40 6 20 8 | 2 black
-      heel polygon 40,80 48,84 46,94 44,94 | 2 black
-      toe polygon 72,84 80,84 82,94 74,94 | 2 black`],
+      leg polygon 34,4 60,4 59,22 57,40 56,54 55,66 53,78 58,82 72,84 80,87 83,92 79,95 50,95 44,93 42,86 44,78 40,64 37,54 37,40 35,22 | 1 pink
+      top_band rectangle 34 4 26 10 | 2 white
+      ${rep(5, (i) => `lace_${i + 1} circle ${35 + i * 5} 12 4 4 | 2 white kind=lace below=top_band`)}
+      seam line 37,16 38,40 40,60 44,76 44,90 | 3 brown
+      heel polygon 42,84 50,86 50,95 44,93 | 3 brown
+      toe polygon 76,86 80,87 83,92 79,95 74,95 | 3 brown`],
     ['chime', ['chimes', 'tubular bells'], `
       bar rectangle 14 8 72 4 | 1 brown
       post_1 rectangle 14 10 4 82 | 1 brown kind=post

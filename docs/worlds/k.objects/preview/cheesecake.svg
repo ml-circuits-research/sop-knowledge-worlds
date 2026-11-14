@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>cheesecake</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="14,74 70,74 70,82 14,82" fill="brown" stroke="#333" stroke-width="0.8"><title>crust</title></polygon>
-  <polygon points="14,50 70,50 70,74 14,74" fill="yellow" stroke="#333" stroke-width="0.8"><title>front</title></polygon>
-  <polygon points="70,50 90,36 90,68 70,82" fill="yellow" stroke="#333" stroke-width="0.8"><title>side</title></polygon>
-  <polygon points="70,74 90,62 90,68 70,82" fill="brown" stroke="#333" stroke-width="0.8"><title>side_crust</title></polygon>
-  <polygon points="14,50 34,36 90,36 70,50" fill="yellow" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
-  <polygon points="20,48 36,38 84,38 68,48" fill="red" stroke="#333" stroke-width="0.8"><title>topping</title></polygon>
+  <polygon points="12,72 90,64 90,72 12,80" fill="brown" stroke="#333" stroke-width="0.8"><title>crust</title></polygon>
+  <polygon points="12,52 90,42 90,64 12,72" fill="white" stroke="#333" stroke-width="0.8"><title>filling</title></polygon>
+  <polygon points="12,52 66,28 90,42" fill="white" stroke="#333" stroke-width="0.8"><title>top</title></polygon>
+  <polygon points="44,40 66,28 90,42 90,50 86,48 84,56 80,46 72,48 70,54 66,46 56,48" fill="red" stroke="#333" stroke-width="0.8"><title>sauce</title></polygon>
+  <ellipse cx="71" cy="28" rx="7" ry="6" fill="red" stroke="#333" stroke-width="0.8"><title>strawberry</title></ellipse>
+  <polygon points="71,18 75,24 67,24" fill="green" stroke="#333" stroke-width="0.8"><title>leaf</title></polygon>
 </svg>

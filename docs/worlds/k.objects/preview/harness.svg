@@ -1,13 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>harness</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="30,38 38,38 36,54 28,54" fill="red" stroke="#333" stroke-width="0.8"><title>left_strap</title></polygon>
-  <polygon points="62,38 70,38 72,54 64,54" fill="red" stroke="#333" stroke-width="0.8"><title>right_strap</title></polygon>
-  <ellipse cx="50" cy="30" rx="36" ry="12" fill="red" stroke="#333" stroke-width="0.8"><title>waist_belt</title></ellipse>
-  <ellipse cx="30" cy="64" rx="16" ry="14" fill="red" stroke="#333" stroke-width="0.8"><title>left_loop</title></ellipse>
-  <ellipse cx="70" cy="64" rx="16" ry="14" fill="red" stroke="#333" stroke-width="0.8"><title>right_loop</title></ellipse>
-  <ellipse cx="50" cy="30" rx="30" ry="7" fill="white" stroke="#333" stroke-width="0.8"><title>waist_hole</title></ellipse>
-  <ellipse cx="30" cy="64" rx="10" ry="9" fill="white" stroke="#333" stroke-width="0.8"><title>left_hole</title></ellipse>
-  <ellipse cx="70" cy="64" rx="10" ry="9" fill="white" stroke="#333" stroke-width="0.8"><title>right_hole</title></ellipse>
-  <rect x="43" y="36" width="14" height="8" fill="grey" stroke="#333" stroke-width="0.8"><title>buckle</title></rect>
+  <polygon points="30,40 36,40 38,56 32,56" fill="blue" stroke="#333" stroke-width="0.8"><title>left_strap</title></polygon>
+  <polygon points="64,40 70,40 68,56 62,56" fill="blue" stroke="#333" stroke-width="0.8"><title>right_strap</title></polygon>
+  <polygon points="8,22 50,30 92,22 92,34 50,42 8,34" fill="blue" stroke="#333" stroke-width="0.8"><title>waist_belt</title></polygon>
+  <ellipse cx="29" cy="65" rx="15" ry="13" fill="blue" stroke="#333" stroke-width="0.8"><title>left_loop</title></ellipse>
+  <ellipse cx="71" cy="65" rx="15" ry="13" fill="blue" stroke="#333" stroke-width="0.8"><title>right_loop</title></ellipse>
+  <rect x="44" y="30" width="12" height="10" fill="grey" stroke="#333" stroke-width="0.8"><title>buckle</title></rect>
+  <ellipse cx="29" cy="65" rx="10" ry="8" fill="white" stroke="#333" stroke-width="0.8"><title>left_hole</title></ellipse>
+  <ellipse cx="71" cy="65" rx="10" ry="8" fill="white" stroke="#333" stroke-width="0.8"><title>right_hole</title></ellipse>
+  <path d="M14 34 A6 8 0 0 0 26 34" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gear_loop_1</title></path>
+  <path d="M74 34 A6 8 0 0 0 86 34" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gear_loop_2</title></path>
+  <ellipse cx="50" cy="50" rx="6" ry="10" fill="orange" stroke="#333" stroke-width="0.8"><title>belay_loop</title></ellipse>
+  <ellipse cx="50" cy="50" rx="3" ry="7" fill="white" stroke="#333" stroke-width="0.8"><title>belay_hole</title></ellipse>
+  <polygon points="46,56 54,56 57,62 56,84 50,90 44,84 43,62" fill="grey" stroke="#333" stroke-width="0.8"><title>carabiner</title></polygon>
+  <polygon points="48,61 52,61 53,64 52,81 50,84 48,81 47,64" fill="white" stroke="#333" stroke-width="0.8"><title>carabiner_hole</title></polygon>
 </svg>

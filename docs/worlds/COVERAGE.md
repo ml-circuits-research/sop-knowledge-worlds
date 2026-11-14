@@ -57,7 +57,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.food` | 147 (10%) |
 | `k.geo` | 20 (1%) |
 | `k.layouts` | 210 (14%) |
-| `k.objects` | 1190 (79%) |
+| `k.objects` | 1191 (79%) |
 | `k.parts` | 977 (65%) |
 | `k.people` | 2 (0%) |
 | `k.scenes` | 822 (55%) |

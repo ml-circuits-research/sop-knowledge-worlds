@@ -3315,3 +3315,36 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   main 121 -> 138 wires; catalog 25 worlds, 941 shards, vocab 24,259 words; validate 966 files, 0 errors. npm test
   after the rebase: 2,860 pass, 5 skipped, and tests/catalog.test.mjs killed (SIGKILL, not an assertion); that file
   alone: 6 pass.
+
+
+## The seven weakest drawings redrawn (2026-11-14, first worker; reviewer block "02:45", item 4)
+
+- **Redrawn by hand** (`tools/objects-hand-data.mjs`; no imported drawing of these exists in our sources: Noto has a
+  lion, a leopard, an oyster, socks and a shortcake, none of them these things): **cougar** (was a bear's head: now a
+  sleek tawny cat, small head with pointed ears and a white muzzle, long tail hanging down with a dark tip, paws; 13 ->
+  19 parts), **clam** (was white on white with radial ribs, a scallop: now an outlined shell with five growth lines
+  round the hinge and the closed edge; 7 -> 8), **eel** (was a green ribbon: now a thick S body tapering to a point,
+  a fin along the back, a blunt head, a side fin, an eye and a mouth; 4 -> 7), **stocking** (was a brown boot: now a
+  long pink stocking with a white lace top, a back seam and darker heel and toe; 4 -> 10), **cheesecake** (was a
+  yellow box: now a slice, white filling on a brown crust, red sauce dripping over the top, a strawberry; 6 parts),
+  **buggy** (was a black hood on brown discs: now spoked wheels with black tyres, a box body, a folding hood, a
+  red seat, a dashboard and shafts; 9 -> 19), **harness** (was read as scissors: now a climbing harness, a blue waist
+  belt with a buckle, two leg loops, an orange belay loop, a carabiner hanging from it and two gear loops; 9 -> 14).
+  Two helpers in the data file: `ribbon` (a band along a centre line: the eel's body and fin, the cougar's tail)
+  and `spokes`.
+- Rerun: `tools/objects-hand.mjs`, `tools/drawn-colour.mjs` (the drawn colours of buggy, cheesecake, cougar, harness,
+  stocking changed with the drawings), `tools/attributes-core.mjs` (no change), build and reports.
+- **Looked at:** the seven before (one sheet, 200 px) and after, at each step of drawing (scratch sheets) and on the
+  final sheet made by `tools/contact-sheet.mjs` from the previews (180 px, name underneath). Verdict, mine: with the
+  name all seven are recognisable; without it the buggy, the cheesecake (a cake slice), the clam and the stocking
+  read as what they are; the cougar reads as a big cat (could be taken for a lynx or a lioness); the eel as an eel
+  or a sea snake; the harness as climbing gear, the leg loops still a little like goggles. **Not looked at:** the
+  seven in the scenes (none of them is drawn in a scene preview: no scene file changed) and the labelled pictures.
+- Numbers: k.objects 2,211 objects (unchanged); shards animals-2 443 -> 480 wires (57,518 -> 61,928 bytes), food-3
+  292 -> 290 (37,931 -> 37,695), things-3 1,175 -> 1,224 (151,156 -> 157,626), vehicles-2 204 -> 235 (26,831 ->
+  30,848). Catalog 25 worlds, 941 shards, vocab 24,259 -> 24,280 words (part names: carabiner, belay loop, tyre,
+  rim ...); validate 0 errors. COVERAGE: k.objects carries 1,190 -> 1,191 of the common things (a new part name;
+  which one not checked).
+  npm test 2,871 with item 4 and the preview rule together: 2,869 pass, 1 fail (`drawn-hand` stale: I had not rerun
+  `tools/drawn-colour.mjs`), 1 skipped; after the rerun the failing file and the five others that read drawings
+  pass (42 tests).

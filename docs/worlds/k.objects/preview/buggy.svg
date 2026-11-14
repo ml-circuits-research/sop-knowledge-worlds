@@ -1,13 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>buggy</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polyline points="66,58 98,50" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>shafts</title></polyline>
-  <polygon points="28,22 58,22 66,48 24,48" fill="black" stroke="#333" stroke-width="0.8"><title>hood</title></polygon>
-  <rect x="24" y="48" width="46" height="16" fill="black" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
-  <ellipse cx="36" cy="70" rx="18" ry="18" fill="brown" stroke="#333" stroke-width="0.8"><title>back_wheel</title></ellipse>
-  <ellipse cx="75" cy="75" rx="13" ry="13" fill="brown" stroke="#333" stroke-width="0.8"><title>front_wheel</title></ellipse>
-  <polyline points="20,70 52,70" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>back_spoke_1</title></polyline>
-  <polyline points="36,54 36,86" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>back_spoke_2</title></polyline>
-  <polyline points="64,75 86,75" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_1</title></polyline>
-  <polyline points="75,64 75,86" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_2</title></polyline>
+  <polyline points="64,56 98,44" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>shafts</title></polyline>
+  <ellipse cx="30" cy="72" rx="20" ry="20" fill="black" stroke="#333" stroke-width="0.8"><title>rear_tyre</title></ellipse>
+  <ellipse cx="70" cy="78" rx="14" ry="14" fill="black" stroke="#333" stroke-width="0.8"><title>front_tyre</title></ellipse>
+  <ellipse cx="30" cy="72" rx="17" ry="17" fill="white" stroke="#333" stroke-width="0.8"><title>rear_rim</title></ellipse>
+  <ellipse cx="70" cy="78" rx="11" ry="11" fill="white" stroke="#333" stroke-width="0.8"><title>front_rim</title></ellipse>
+  <polyline points="47,72 13,72" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rear_spoke_1</title></polyline>
+  <polyline points="42,84 18,60" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rear_spoke_2</title></polyline>
+  <polyline points="30,89 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rear_spoke_3</title></polyline>
+  <polyline points="18,84 42,60" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>rear_spoke_4</title></polyline>
+  <polyline points="81,78 59,78" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_1</title></polyline>
+  <polyline points="77.8,85.8 62.2,70.2" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_2</title></polyline>
+  <polyline points="70,89 70,67" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_3</title></polyline>
+  <polyline points="62.2,85.8 77.8,70.2" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>front_spoke_4</title></polyline>
+  <ellipse cx="30" cy="72" rx="3" ry="3" fill="black" stroke="#333" stroke-width="0.8"><title>rear_hub</title></ellipse>
+  <ellipse cx="70" cy="78" rx="2.5" ry="2.5" fill="black" stroke="#333" stroke-width="0.8"><title>front_hub</title></ellipse>
+  <polygon points="20,46 70,46 68,60 24,60" fill="black" stroke="#333" stroke-width="0.8"><title>box</title></polygon>
+  <polygon points="66,46 70,46 78,32 76,30" fill="black" stroke="#333" stroke-width="0.8"><title>dashboard</title></polygon>
+  <polygon points="18,48 16,26 22,14 36,10 50,12 54,18 40,20 32,26 30,48" fill="black" stroke="#333" stroke-width="0.8"><title>hood</title></polygon>
+  <rect x="30" y="38" width="22" height="8" fill="red" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
 </svg>

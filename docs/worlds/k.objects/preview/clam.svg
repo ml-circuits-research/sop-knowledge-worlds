@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="200" height="200">
   <title>clam</title>
   <rect width="100" height="100" fill="#fafafa"/>
-  <polygon points="14,60 86,60 80,70 50,74 20,70" fill="white" stroke="#333" stroke-width="0.8"><title>lower_shell</title></polygon>
-  <polygon points="14,60 20,36 36,22 50,18 64,22 80,36 86,60" fill="white" stroke="#333" stroke-width="0.8"><title>upper_shell</title></polygon>
-  <polyline points="50,64 26,36" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ridge_1</title></polyline>
-  <polyline points="50,64 40,22" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ridge_2</title></polyline>
-  <polyline points="50,64 60,22" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ridge_3</title></polyline>
-  <polyline points="50,64 74,36" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>ridge_4</title></polyline>
-  <polyline points="14,60 86,60" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>edge</title></polyline>
+  <ellipse cx="50" cy="20" rx="6" ry="4" fill="brown" stroke="#333" stroke-width="0.8"><title>hinge</title></ellipse>
+  <polygon points="8,64 12,48 22,34 36,24 50,20 64,24 78,34 88,48 92,64 84,76 68,82 50,84 32,82 16,76" fill="white" stroke="#333" stroke-width="0.8"><title>shell</title></polygon>
+  <path d="M12 60 A38 14 0 0 0 88 60" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>growth_1</title></path>
+  <path d="M18 50 A32 13 0 0 0 82 50" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>growth_2</title></path>
+  <path d="M25 40 A25 12 0 0 0 75 40" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>growth_3</title></path>
+  <path d="M33 31 A17 10 0 0 0 67 31" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>growth_4</title></path>
+  <path d="M41 24 A9 7 0 0 0 59 24" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>growth_5</title></path>
+  <polyline points="10,68 30,74 50,76 70,74 90,68" fill="none" stroke="grey" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap</title></polyline>
 </svg>
