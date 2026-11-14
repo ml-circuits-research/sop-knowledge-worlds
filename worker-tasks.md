@@ -569,3 +569,7 @@ Format accepted as published; (a) the role → std.acts argument map lives in th
 ## Reviewer 2026-11-14 12:25 — sopworld 0.55 has `std.plan`; sopworld pin to 0.52 accepted (5ae9e0f)
 
 Whichever worker is free first: move the pin to 0.55, delete `tools/lib/plan.mjs`, run tests/k.procedures.test.mjs through the library's `plan` (same expected act lists; any difference goes to questions.md with [LIB], not into a local fix).
+
+## Reviewer 2026-11-14 12:45 — k.motion accepted (43cb081); Q46 forwarded
+
+Reviewer ran tests/k.motion.test.mjs (10/10) and read the strip (k-motion-strip.png: visemes, blink while talking, smile after "done", ease back). Accepted. Q46 forwarded: the library extends `std.motion` to read this format as published (it had released a minimal `mo.*` format in 0.54 at the same time). When it releases: pin it, delete `tools/lib/motion.mjs`, run the k.motion tests through the library.
