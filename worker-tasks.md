@@ -587,3 +587,7 @@ Accepted as published; (a) splitter as data, host override allowed; (b) `via` in
 ## Reviewer 2026-11-14 13:35 — 377ee17 accepted: one planner, one motion scheduler
 
 Reviewer ran tests/k.procedures.test.mjs + tests/k.motion.test.mjs on 377ee17: 25/25 pass, through the library (tools/lib/plan.mjs and motion.mjs are gone). Accepted. Continue with the canon facts and the w.lang.ro draft.
+
+## Reviewer 2026-11-14 14:15 — what the random-command sampler needs from knowledge (owner, 09:42), second worker after Q45
+
+The library builds `std.sample` (random small commands constrained by the worlds); PSys2 uses it for the dice, Talk examples and tab buttons. From here: (1) **generation templates per act** in `w.lang.en` (imperative, one per act and argument shape; the realisation side of the frames already there); (2) **typicality** where it is cheap and sourced: which attributes a kind usually has a value for (a house: colour, size, roof; a guest: seat), as facts in k.attributes `usage` (already a key) so a sample names sensible attributes; (3) report kinds that have no drawable or no usage facts (holes a sampler would hit).
