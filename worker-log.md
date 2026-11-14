@@ -4877,3 +4877,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   scale, the key with 5 sharps, the relative minor of C major, sharps in E major, C7, triads of F major, ...).
   `npm run test:changed` on 6b50041: 31 files, 256 tests, 253 pass, 2 skipped, 1 fail (COVERAGE.md stale with the new
   world: `npm run reports` rerun, coverage-report 4 pass).
+- Reviewer's note (clean clone): the k.animals sounds test read sources/*/raw (WordNet and the frequency lists, not in
+  the repository) and failed with ENOENT. Split: the comparison with the tool's output is skipped without the raw
+  files (as the importer tests do); the checks on the shards (no new animal, every sound a k.words word, the plain
+  sounds) run everywhere. Checked with the frequency list moved away: 9 pass, 1 skipped.

@@ -1,7 +1,7 @@
 // k.animals (Round 9 item 2): the table of animals, its shards, the size classes, the drawings, the audit.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { readAnimals, animalShards, animalThings, usualPlace, SIZES } from '../tools/animals-core.mjs';
@@ -105,10 +105,15 @@ test('Q33: the young of a rabbit is a kit, and "bunny" is a word for it', () => 
   assert.deepEqual(rabbit.attrs.baby, ['kit']);
 });
 
-test('block 03:20 item 1: the sounds WordNet names are tools/animal-sounds.mjs\' shard, every sound is a word of k.words, the plain sounds are there', () => {
+// The tool reads the raw WordNet files and the frequency lists (sources/*/raw, not in the repository): skipped without them.
+const RAW = ['sources/wordnet/raw/wordnet31/data.noun', 'sources/frequency-words/raw/en_50k.txt', 'sources/wordfreq/raw/en-top50k.tsv'].every((f) => existsSync(join(REPO, f)));
+test('block 03:20 item 1: the shard of sounds is what tools/animal-sounds.mjs gives from the raw files', { skip: !RAW && 'raw files not downloaded' }, () => {
   const r = animalSounds();
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', SHARD), 'utf8'), soundShard(r));
   assert.ok(r.animals >= 30 && r.confirmed.length >= 25, `${r.animals} animals, ${r.confirmed.length} confirmed`);
+});
+
+test('block 03:20 item 1: the WordNet sounds add to animals of the table, every sound is a word of k.words, the plain sounds are there', () => {
   // the WordNet wires add sounds to animals of the table, never a new animal
   const told = new Set(animals.filter((a) => a.attrs.class).map((a) => one(a, 'name')));
   for (const w of parse(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', SHARD), 'utf8'))) assert.ok(told.has(tok(w.attrs.name[0])), w.id);
