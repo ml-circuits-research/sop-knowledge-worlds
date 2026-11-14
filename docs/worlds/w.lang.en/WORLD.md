@@ -332,6 +332,7 @@ CC0) reads the diagram wording PSys2 measured (psys2 training/eval/diagram-gap-2
 | "Make the arrows go left to right.", "Lay the flow out left to right.", "The arrows should go from top to bottom.", "Flow from left to right." | acts.place.layout.go, .dir, .should, .flow | place/layout, thing (the arrows; "everything" when none is said), direction (an arrangement phrase) |
 | "Call the arrow yes.", "Label the arrow from A to B no.", "Write yes on the arrow." | acts.change.label.edge, .edge.ends, .edge.on | change/set, attribute `label` (fixed), thing the edge ("arrow from a to b"), value |
 | "Make a flowchart of making tea.", "A hierarchy of the parts of a car." | acts.make.diagram, .diagram.bare | make, kind (a kind of diagram), topic |
+| "Make a timeline of the planets by distance.", "A timeline of the planets by distance from the sun." (block 07:45 item 1) | acts.make.diagram.order, .order.bare | make, kind, topic, criterion (an attribute that can order things) |
 
 The lexicons are derived from their homes: `diagram.direction` is the arrangement phrases of a row or column in one
 direction whose diagram layout is left_right or top_down (left to right, from top to bottom, downwards, across the page
@@ -345,7 +346,18 @@ name. The verbless acts.make.diagram.bare has priority 4, under the statement fr
 week." from acts.state.of until then). Checked by `tests/w.lang.en.diagram-frames.test.mjs`: 40 requests (26 of the gap set: its failing edits and kinds
 with their neighbours, and the 5 arrangements PSys2 sent to another world, which w.lang.en's layout frame already
 reads: a routing matter of the host; and 14 paraphrases) read back to the intended act and roles in a diagram world;
-the frames test reads the 9 new examples best (395 frames: 379 best, 11 tie, 5 known). Not covered: "draw the planets in order of distance from the sun on a timeline" (the
+the frames test reads the 9 new examples best (395 frames: 379 best, 11 tie, 5 known).
+
+**Order criterion** (block 07:45 item 1): k.actions gives make, place and group a role `criterion` (holds an
+attribute; make: by, in order of, according to; place: in order of, according to, not "by", which says how far; group
+also takes in order of). The lexicon `order.criterion` is derived from k.attributes: the names of the attributes that
+hold a number, a size or a step of a scale (distance, size, weight, speed, temperature, price, legs ...) and their words
+(`core.word ... of=k.attributes.attribute.name`: "distance from the sun", "how far", "how big", "number of legs"), so
+a criterion read is an attribute, and `k.attributes.found` says where its values are (distance: k.space.body
+distance_about; the planets by distance are k.space's `order` 1 to 8, a test checks it). Besides the two diagram frames,
+the general frames acts.make.by ("Make a list of the planets by size.") and acts.place.order ("Line up the planets in
+order of size.") in the shard role-frames; "sorted by", "ordered by", "ranked by" are words of the frames before the
+marker by. The preposition "in order of" (rel by, role criterion) is in the shard hand-joins. Not covered: "draw the planets in order of distance from the sun on a timeline" (the
 kind after the topic); a single-letter name A is the determiner "a" to the reference reader ("connect A to C").
 
 ## Joins

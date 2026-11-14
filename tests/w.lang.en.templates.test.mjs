@@ -62,6 +62,10 @@ const OVERRIDE = { // by template: what its roles take
   'change.less.one': [{ attribute: 'seat' }, { attribute: 'window' }], 'ask.count': [{ thing: 'table' }, { thing: 'star' }], 'ask.where': [{ thing: 'Ann' }, { thing: 'the cat' }],
   'group.thing': [{ thing: 'the tables' }, { thing: 'the stars' }], 'take_apart.thing': [{ thing: 'the tables' }, { thing: 'the house' }],
   'load.thing': [{ thing: 'lunch' }, { thing: 'garden' }], 'undo.number': [{ number: '2' }, { number: '5' }],
+  // block 07:45: the order criterion, an attribute that can order things (lexicon order.criterion)
+  'make.topic.criterion': [{ kind: 'timeline', topic: 'planets', criterion: 'distance' }, { kind: 'tree', topic: 'animals', criterion: 'size' }],
+  'place.criterion': [{ thing: 'the planets', criterion: 'size' }, { thing: 'the tables', criterion: 'height' }],
+  'group.criterion': [{ thing: 'the planets', criterion: 'weight' }, { thing: 'the stars', criterion: 'distance' }],
 };
 const fillersOf = (t, i) => ({ ...FILLERS[i], ...(OVERRIDE[one(t, 'name')]?.[i] ?? {}) });
 const sayOf = (f) => Object.fromEntries(Object.entries(f).map(([k, x]) => [k, Array.isArray(x) ? x.join(' ') : x]));
@@ -139,7 +143,7 @@ test('templates: what the frames read and the templates cannot say yet (holes, c
   // roles no general frame reads: make.part, make.material, change.old value, change.replacement (only the avatar's
   // and a chart's frames), place.source, connect.tool, group.target/group/criterion, take apart.parts/source/tool,
   // pick.source/other, ask.other, copy.number/place, send.means/format, undo.thing/state, save.thing/place/format,
-  // load.source, redo.thing/number, deselect.thing
+  // load.source, redo.thing/number, deselect.thing (the criterion of make, place and group has templates: block 07:45)
   assert.ok(unsaid.length <= 30, unsaid.join(', '));
   assert.ok(templates.length >= 34, `${templates.length} templates`);
   console.log(`templates: ${templates.length}; roles of k.actions no template says: ${unsaid.length}: ${unsaid.join(', ')}`);

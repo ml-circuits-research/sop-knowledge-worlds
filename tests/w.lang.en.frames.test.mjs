@@ -99,6 +99,6 @@ test('frames: the roles of k.actions that no general frame reads (asks for frame
 test('frames (Q64): the shard role-frames is what tools/lang-en-role-frames.mjs gives; one frame per role it asks for', async () => {
   const { roleFrameShard, ROLE_FRAMES, MOVED_HERE } = await import('../tools/lang-en-role-frames.mjs');
   assert.equal(readFileSync(join(WORLDS_DIR, 'w.lang.en', 'shards', 'role-frames.sop'), 'utf8'), roleFrameShard());
-  assert.equal(new Set(ROLE_FRAMES.map((f) => f[4])).size, 29);
+  assert.equal(new Set(ROLE_FRAMES.map((f) => f[4])).size, 31); // 29 of Q64, the criterion of make and place (block 07:45)
   assert.equal(MOVED_HERE.length, 9);
 });

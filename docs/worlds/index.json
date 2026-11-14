@@ -1,5 +1,5 @@
 {
- "version": "4c900a1b2bd2",
+ "version": "157086e22326",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -705,8 +705,8 @@
     {
      "id": "k.actions/shards/acts",
      "path": "k.actions/shards/acts.sop",
-     "wires": 73,
-     "bytes": 13574,
+     "wires": 75,
+     "bytes": 14160,
      "keys": [
       "amount",
       "ask",
@@ -86506,8 +86506,8 @@
     {
      "id": "w.lang.en/shards/closed-classes",
      "path": "w.lang.en/shards/closed-classes.sop",
-     "wires": 274,
-     "bytes": 37976,
+     "wires": 275,
+     "bytes": 38118,
      "keys": [
       "'s",
       "a",
@@ -86610,6 +86610,7 @@
       "if",
       "in",
       "in front of",
+      "in order of",
       "in the middle of",
       "inside",
       "instead",
@@ -87019,8 +87020,8 @@
     {
      "id": "w.lang.en/shards/diagram-frames",
      "path": "w.lang.en/shards/diagram-frames.sop",
-     "wires": 73,
-     "bytes": 16062,
+     "wires": 97,
+     "bytes": 21902,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -87369,8 +87370,8 @@
     {
      "id": "w.lang.en/shards/hand-joins",
      "path": "w.lang.en/shards/hand-joins.sop",
-     "wires": 71,
-     "bytes": 11346,
+     "wires": 72,
+     "bytes": 11456,
      "keys": [
       "above",
       "according to",
@@ -87389,6 +87390,7 @@
       "earlier than",
       "in",
       "in front of",
+      "in order of",
       "in the middle of",
       "inside",
       "instead of",
@@ -87710,8 +87712,8 @@
     {
      "id": "w.lang.en/shards/role-frames",
      "path": "w.lang.en/shards/role-frames.sop",
-     "wires": 278,
-     "bytes": 44298,
+     "wires": 294,
+     "bytes": 46780,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -87722,8 +87724,8 @@
     {
      "id": "w.lang.en/shards/templates-acts",
      "path": "w.lang.en/shards/templates-acts.sop",
-     "wires": 55,
-     "bytes": 11030,
+     "wires": 58,
+     "bytes": 11894,
      "keys": [
       "a",
       "an"
@@ -87762,7 +87764,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 50,
-     "bytes": 31703,
+     "bytes": 31799,
      "keys": [],
      "sources": [
       "hand-core-1"

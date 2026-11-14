@@ -214,6 +214,23 @@
 @k.attributes.word.usage core.word text=when text="who uses" text="used by" text=season text="time of day" means=k.attributes.usage core.source="hand-core 1"
 @k.attributes.word.used_for core.word text=use text=used text="used for" text=for means=k.attributes.thing.used_for core.source="hand-core 1"
 
+# Words for the attributes that can put things in order (the criterion of make, place and group in k.actions: "a timeline
+# of the planets by distance from the sun", "sorted by how big they are"): the phrases a request names an attribute
+# with, besides its name. "distance from the sun": k.space keeps the distance of a body from what it orbits, the Sun for
+# the planets. w.lang.en's lexicon order.criterion is these words and the names of the attributes that hold a number,
+# a size or a step of a scale (tools/lang-en-diagram-frames.mjs).
+@k.attributes.word.name.distance core.word text="distance from the sun" text="how far" text="how far away" text="how far from the sun" text="closeness to the sun" means=distance of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.size core.word text="how big" text="how large" means=size of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.length core.word text="how long" means=length of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.height core.word text="how tall" text="how high" means=height of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.weight core.word text="how heavy" means=weight of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.speed core.word text="how fast" means=speed of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.temperature core.word text="how hot" text="how cold" means=temperature of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.price core.word text="how much it costs" text="how expensive" means=price of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.legs core.word text="number of legs" means=legs of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.wheels core.word text="number of wheels" means=wheels of=k.attributes.attribute.name core.source="hand-core 1"
+@k.attributes.word.name.sides core.word text="number of sides" means=sides of=k.attributes.attribute.name core.source="hand-core 1"
+
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.attributes.word.key.attribute.holds core.word text=holds means=k.attributes.attribute.holds core.source="hand-core 1"
 @k.attributes.word.key.attribute.aspect core.word text=aspect means=k.attributes.attribute.aspect core.source="hand-core 1"

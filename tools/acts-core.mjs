@@ -31,6 +31,9 @@ export const ACTS = [
     ['material', 'thing', false, 'what it is made from', ['from', 'out of', 'of']],
     // Q45 (iii): "write a story about a dragon", "make a chart about sales": what the new thing is about
     ['topic', 'thing', false, 'what the new thing is about (a story about a dragon, a chart about sales)', ['about']],
+    // Reviewer block 07:45 item 1 (the owner's diagram complaint): "a timeline of the planets by distance", "a list
+    // sorted by size": the attribute whose values put the things the new thing shows in order (k.attributes)
+    ['criterion', 'attribute', false, 'what puts the things the new thing shows in order (a timeline of the planets by distance, a list sorted by size)', ['by', 'in order of', 'according to']],
   ]],
   ['remove', 'take a thing away so that it is no longer there', 'make', [
     ['thing', 'thing', true, 'what to remove', []],
@@ -50,6 +53,8 @@ export const ACTS = [
     ['direction', 'direction', false, 'which way it moves', ['towards']],
     ['source', 'place', false, 'where it was', ['from', 'off', 'out of']],
     ['amount', 'amount', false, 'how far', ['by']],
+    // block 07:45: "line up the planets in order of size"; not "by", which marks how far ("move it by 2 cm")
+    ['criterion', 'attribute', false, 'what decides the order the things are put in (line up the planets in order of size)', ['in order of', 'according to']],
   ]],
   ['connect', 'join two things so that they stay together or a line runs between them', 'take apart', [
     ['thing', 'thing', true, 'the first thing', []],
@@ -60,7 +65,7 @@ export const ACTS = [
     ['thing', 'thing', true, 'the things to group', []],
     ['target', 'thing', false, 'what they are grouped with', ['with', 'and']],
     ['group', 'group', false, 'the group or groups they go into', ['into', 'in', 'as']],
-    ['criterion', 'attribute', false, 'what decides the group or the order', ['by', 'according to']],
+    ['criterion', 'attribute', false, 'what decides the group or the order', ['by', 'according to', 'in order of']],
   ]],
   ['take apart', 'separate a thing into its parts, or one thing from another', 'connect', [
     ['thing', 'thing', true, 'what to take apart', []],

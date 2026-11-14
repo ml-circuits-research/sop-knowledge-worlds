@@ -1,4 +1,4 @@
-# w.lang.en/shards/closed-classes: the class of each of the 260 closed-class words of this world's word lists (274 facts: a word of several classes has one fact per class; `from` names the lists it is in), derived from those lists by the tables of the script
+# w.lang.en/shards/closed-classes: the class of each of the 261 closed-class words of this world's word lists (275 facts: a word of several classes has one fact per class; `from` names the lists it is in), derived from those lists by the tables of the script
 # sources: hand-core 1 (the classes, written in this repository; the words are those of the lists named in `from`)
 # license: CC0-1.0
 # script: tools/lang-en-closed.mjs
@@ -107,6 +107,7 @@
 @w.lang.en.closed.if.conjunction w.lang.en.closed text=if class=conjunction from=w.lang.en.joiner from=w.lang.en.word core.source="hand-core 1"
 @w.lang.en.closed.in.preposition w.lang.en.closed text=in class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.in_front_of.preposition w.lang.en.closed text="in front of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
+@w.lang.en.closed.in_order_of.preposition w.lang.en.closed text="in order of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.in_the_middle_of.preposition w.lang.en.closed text="in the middle of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.inside.preposition w.lang.en.closed text=inside class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.instead.adverb w.lang.en.closed text=instead class=adverb from=w.lang.en.ellipsis.trail core.source="hand-core 1"

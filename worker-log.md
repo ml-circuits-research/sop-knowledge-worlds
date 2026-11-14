@@ -5235,3 +5235,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Build: k.attributes narration (2 slots, machinery), same-p (paella in k.objects.stand_in), relations-objects and
   JOINS.md (k.food–k.objects 143), vocab files regenerated. Key words: `keyword`, `keywords` for the type; `of`, `text`
   by rule. Docs: k.objects/WORLD.md, worlds/README.md (vocab order and kind).
+
+## 2026-11-15 — third worker: the order criterion of make, place and group (block 07:45 item 1)
+
+- Real row: the owner's diagram complaint; PSys2's DIAG-GAP dg30, dg31 ("a timeline of the planets by distance (from
+  the sun)") were read with the criterion inside the topic ("planets by distance").
+- k.actions: make has a role `criterion` (holds attribute; markers by, in order of, according to), place too (in order
+  of, according to; not "by", which marks how far: "move it by 2"), group's criterion also takes in order of. 59 roles
+  (was 57). w.lang.en hand-joins: the preposition "in order of" (rel by, role criterion).
+- The join to the attributes: k.attributes has words for 11 attributes (`core.word ... of=k.attributes.attribute.name`:
+  "distance from the sun", "how far", "how big", "how heavy", "number of legs" ...); w.lang.en's lexicon
+  `order.criterion` (30 items) is derived from them and the names of the attributes that hold a number, a size or a
+  step of a scale (tools/lang-en-diagram-frames.mjs, in npm run build). `k.attributes.found` then says where each is
+  found (distance: k.space.body.distance_about).
+- Frames: acts.make.diagram.order (14) and .order.bare (5) in the shard diagram-frames (97 wires, 21,902 bytes);
+  acts.make.by (13, "Make a list of the planets by size.") and acts.place.order (13, "Line up the planets in order of
+  size.") in role-frames (31 role frames, 46,780 bytes). "sorted by", "ordered by", "ranked by" ... are frame words.
+- Tests (tests/w.lang.en.diagram-frames.test.mjs): 10 requests read with their criterion (dg30, dg31 now topic
+  "planets", criterion "distance" / "distance from the sun"); "make a picture by the window" and "move it by 2" have no
+  criterion; every lexicon word is an orderable attribute found in a world; the 8 planets sorted by distance_about
+  are k.space's `order` 1 to 8. Frames test: 399 frames, 383 best, 11 tie, 5 known; 0 of 59 roles without a general
+  frame.
+- Templates (shard templates-acts, 37): make.topic.criterion ("Make a timeline of the planets by distance."),
+  place.criterion ("Line up the planets in order of size."), group.criterion ("Sort the planets by size."), each read
+  back by its frame; roles no template says: 27 (was 29; make.topic is said now too).

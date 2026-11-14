@@ -71,13 +71,24 @@ const KINDS = [
   ['make a cycle of the seasons', 'dg27', 'make/', { kind: 'cycle', topic: 'seasons' }],
   ['draw a cycle of the seasons', 'dg28', 'make/', { kind: 'cycle', topic: 'seasons' }],
   ['a cycle diagram of the four seasons', 'dg29', 'make/', { kind: 'cycle diagram', topic: 'four seasons' }],
-  ['make a timeline of the planets by distance', 'dg30', 'make/', { kind: 'timeline', topic: 'planets by distance' }],
-  ['a timeline of the planets by distance from the sun', 'dg31', 'make/', { kind: 'timeline', topic: 'planets by distance from the sun' }],
   ['make a mind map about bees', 'dg33', 'make/', { kind: 'mind map', topic: 'bees' }],
   ['draw a mind map of bees', 'dg34', 'make/', { kind: 'mind map', topic: 'bees' }],
   ['a mind map about honey bees', 'dg35', 'make/', { kind: 'mind map', topic: 'honey bees' }],
   ['make a Venn diagram of birds and animals that fly', 'dg36', 'make/', { kind: 'venn diagram', topic: 'birds and animals that fly' }],
   ['draw an org chart of the school', '', 'make/', { kind: 'org chart', topic: 'school' }],
+];
+// The order criterion (block 07:45 item 1): an attribute that can order things, said after by, in order of, sorted by.
+const ORDER = [
+  ['make a timeline of the planets by distance', 'dg30', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'distance' }],
+  ['a timeline of the planets by distance from the sun', 'dg31', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'distance from the sun' }],
+  ['make a timeline of the planets sorted by size', '', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'size' }],
+  ['draw a timeline of the planets in order of distance from the sun', '', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'distance from the sun' }],
+  ['make a timeline of the planets sorted by how far they are', '', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'how far' }],
+  ['a flowchart of the planets ranked by temperature', '', 'make/', { kind: 'flowchart', topic: 'planets', criterion: 'temperature' }],
+  ['make a list of the planets by size', '', 'make/', { kind: 'list of the planets', criterion: 'size' }],
+  ['line up the planets in order of size', '', 'place/', { thing: 'planets', criterion: 'size' }],
+  ['sort the planets by size', '', 'group/group', { thing: 'planets', criterion: 'size' }],
+  ['sort the animals in order of how heavy they are', '', 'group/group', { thing: 'animals', criterion: 'how heavy they are' }],
 ];
 // Arrangements PSys2 sent to its avatar world (dg02, dg03, dg06, dg08, dg10): w.lang.en's layout frame already reads them
 // (acts.place.layout takes the verbs of place); the cause is the host's routing, not a missing frame.
@@ -133,6 +144,46 @@ test('a diagram of a kind about a topic: the kind is a k.diagrams kind or one of
   assert.equal(kindOf('venn diagram'), 'Venn diagram');
   // "make a chart about sales" stays the general topic frame (chart is no kind of diagram here)
   assert.equal(read('Make a chart about sales.')[0].frame, 'acts.make.topic');
+});
+
+test('the order criterion: "a timeline of the planets by distance" reads make with the kind, the topic and the criterion; place and group take it too', () => {
+  assert.deepEqual(check(ORDER), []);
+  // by marks a place, and how far, where no attribute follows
+  assert.equal(read('make a picture by the window')[0].args.criterion, undefined);
+  assert.equal(read('move it by 2')[0].args.criterion, undefined);
+  // the roles are k.actions roles that hold an attribute, marked by prepositions of w.lang.en
+  const roles = actions.filter((w) => w.type === 'k.actions.role' && one(w, 'name') === 'criterion');
+  assert.deepEqual(roles.map((r) => one(r, 'act')).sort(), ['group', 'make', 'place']);
+  for (const r of roles) assert.equal(one(r, 'holds'), 'attribute', one(r, 'act'));
+  assert.deepEqual(vals(roles.find((r) => one(r, 'act') === 'make'), 'marker'), ['by', 'in order of', 'according to']);
+  assert.ok(!vals(roles.find((r) => one(r, 'act') === 'place'), 'marker').includes('by'), 'by marks how far a thing is moved');
+});
+
+test('the criterion joins k.attributes: every word of order.criterion is an attribute that holds a number, a size or a step of a scale, found in a world; by distance the planets are in their order of k.space', () => {
+  const attrs = shardsOf('k.attributes').flatMap((t) => parse(t));
+  const attribute = new Map(attrs.filter((w) => w.type === 'k.attributes.attribute').map((w) => [one(w, 'name'), w]));
+  const found = attrs.filter((w) => w.type === 'k.attributes.found');
+  const words = schema('k.attributes').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name');
+  const attributeOf = (c) => (attribute.has(c) ? c : one(words.find((w) => vals(w, 'text').includes(c)) ?? { attrs: {} }, 'means'));
+  const L = lex('order.criterion');
+  assert.deepEqual(L, lexicons()['order.criterion'].items);
+  for (const c of L) {
+    const a = attributeOf(c);
+    assert.ok(a && attribute.has(a), `${c}: no attribute`);
+    assert.ok(['number', 'size', 'class'].includes(one(attribute.get(a), 'holds')), `${c}: ${a} holds ${one(attribute.get(a), 'holds')}`);
+    assert.ok(found.some((f) => one(f, 'attribute') === a), `${c}: ${a} is found in no world`);
+  }
+  for (const [, , , { criterion }] of ORDER) assert.ok(attributeOf(toks(criterion).filter((t) => !['they', 'are'].includes(t)).join(' ')), criterion);
+  assert.equal(attributeOf('distance from the sun'), 'distance');
+  // distance is found in k.space; the planets (they orbit the Sun) sorted by distance_about are in their `order`
+  const f = found.find((x) => one(x, 'attribute') === 'distance' && one(x, 'world') === 'k.space');
+  assert.equal(`${one(f, 'type')}.${one(f, 'key')}`, 'k.space.body.distance_about');
+  const planets = shardsOf('k.space').flatMap((t) => parse(t)).filter((w) => w.type === 'k.space.body' && one(w, 'kind') === 'planet');
+  assert.equal(planets.length, 8);
+  for (const p of planets) assert.equal(one(p, 'orbits'), 'Sun', one(p, 'name'));
+  const byDistance = [...planets].sort((a, b) => Number(one(a, 'distance_about')) - Number(one(b, 'distance_about')));
+  assert.deepEqual(byDistance.map((p) => Number(one(p, 'order'))), [1, 2, 3, 4, 5, 6, 7, 8]);
+  assert.deepEqual(byDistance.map((p) => one(p, 'name')).slice(0, 4), ['Mercury', 'Venus', 'Earth', 'Mars']);
 });
 
 test('the arrangements PSys2 sent to another world are read as place/layout by the existing layout frame', () => {

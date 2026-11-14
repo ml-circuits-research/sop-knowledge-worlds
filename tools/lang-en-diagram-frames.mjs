@@ -19,6 +19,13 @@ import { wire, header, text } from './import/lib.mjs';
 import { frameLines, rolesOf } from './lang-en-role-frames.mjs';
 
 const SRC = 'hand-core 1';
+// the values of k.attributes.attribute holds whose attributes can order things: a number, a size, a step of a scale
+export const ORDERABLE = ['number', 'size', 'class'];
+// the words that mark the criterion (block 07:45 item 1): the markers of the criterion of make in k.actions, and the
+// participles a request puts before "by" ("sorted by size")
+const actRoles = () => read('k.actions', 'shards', 'acts.sop').filter((w) => w.type === 'k.actions.role');
+export const orderBy = () => [...vals(actRoles().find((w) => one(w, 'act') === 'make' && one(w, 'name') === 'criterion'), 'marker'),
+  ...['sorted', 'ordered', 'arranged', 'ranked', 'listed', 'lined up'].flatMap((p) => [`${p} by`, `${p} according to`])];
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
@@ -34,11 +41,16 @@ export function lexicons() {
     && ['left_right', 'top_down'].includes(one(w, 'diagram_layout'))
     && ((LINEAR.has(one(w, 'direction')) && ['left_of', 'above'].includes(one(w, 'relation'))) || ['aligned_row', 'aligned_column'].includes(one(w, 'relation'))))
     .map((w) => one(w, 'text'));
+  // the attributes that can put things in order (block 07:45 item 1): those that hold a number, a size or a step of a
+  // scale (k.attributes.attribute holds), by their names and their words (core.word of=k.attributes.attribute.name)
+  const attrs = read('k.attributes', 'shards', 'attributes.sop').filter((w) => w.type === 'k.attributes.attribute' && ORDERABLE.includes(one(w, 'holds'))).map((w) => one(w, 'name'));
+  const attrWords = read('k.attributes', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name' && attrs.includes(one(w, 'means'))).flatMap((w) => vals(w, 'text'));
   const sorted = (xs) => [...new Set(xs.map((x) => x.toLowerCase()))].sort();
   return {
     'diagram.kind': { doc: 'Kinds of diagram: the names of k.diagrams.kind and their words (core.word of=k.diagrams.kind.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...kinds, ...kindWords]) },
     'diagram.edge': { doc: "Words for an edge of a diagram: w.diagram's words for w.diagram.edge, singular (a reader takes the plural too); derived by tools/lang-en-diagram-frames.mjs.", items: sorted(edgeWords) },
     'diagram.edge.from': { doc: 'Words that begin the two ends of an edge after its noun ("the arrow from A to B", "the line between A and B").', items: ['between', 'from', 'going from', 'leading from', 'that goes from', 'which goes from'] },
+    'order.criterion': { doc: 'Attributes that can put things in order, the criterion of make, place and group (k.actions): the names of the k.attributes attributes that hold a number, a size or a step of a scale, and their words (core.word of=k.attributes.attribute.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...attrs, ...attrWords]) },
     'diagram.direction': { doc: 'Directions of a layout: the arrangement phrases (w.lang.en.arrangement) of a row or column in one direction whose diagram layout is left_right or top_down; derived by tools/lang-en-diagram-frames.mjs.', items: sorted(directions) },
   };
 }
@@ -47,6 +59,9 @@ const lead = ['lead'], det = ['det'];
 const verb = (act) => ['verb', act];
 const role = (r, takes = 'words', more = {}) => ['role', r, takes, more];
 const word = (words, optional = false) => ['word', words, optional];
+const OF = ['of', 'about', 'for', 'on', 'showing', 'that shows', 'to show', 'explaining'];
+// what may follow the criterion: "sorted by how far they are"
+const ORDER_TAIL = ['they are', 'it is', 'each one is', 'they are from the sun', 'first', 'order'];
 const LABEL = ['label', 'call', 'name', 'mark', 'title', 'caption', 'tag'];
 // [name, act, mode, priority, needs, example, parts, fixed, about]
 export const FRAMES = [
@@ -74,6 +89,13 @@ export const FRAMES = [
   ['acts.make.diagram', 'make', undefined, 13, undefined, 'Make a flowchart of making tea.',
     [lead, verb('make'), det, role('thing', 'lexicon', { lexicon: 'diagram.kind' }), word(['of', 'about', 'for', 'on', 'showing', 'that shows', 'to show', 'explaining']), det, role('topic')],
     null, 'a diagram of a kind about a topic'],
+  // block 07:45 item 1: the order criterion ("a timeline of the planets by distance"): an attribute that can order things
+  ['acts.make.diagram.order', 'make', undefined, 14, undefined, 'Make a timeline of the planets by distance.',
+    [lead, verb('make'), det, role('thing', 'lexicon', { lexicon: 'diagram.kind' }), word(OF), det, role('topic'), word(orderBy()), det, role('criterion', 'lexicon', { lexicon: 'order.criterion' }), word(ORDER_TAIL, true)],
+    null, 'a diagram of a kind about a topic, in the order of an attribute'],
+  ['acts.make.diagram.order.bare', 'make', undefined, 5, undefined, 'A timeline of the planets by distance from the sun.',
+    [lead, det, role('thing', 'lexicon', { lexicon: 'diagram.kind' }), word(OF), det, role('topic'), word(orderBy()), det, role('criterion', 'lexicon', { lexicon: 'order.criterion' }), word(ORDER_TAIL, true)],
+    null, 'a diagram of a kind about a topic in the order of an attribute, without a verb (priority 5, over the bare kind-about-topic frame)'],
   ['acts.make.diagram.bare', 'make', undefined, 4, undefined, 'A cycle diagram of the four seasons.',
     [lead, det, role('thing', 'lexicon', { lexicon: 'diagram.kind' }), word(['of', 'about', 'for', 'on', 'showing', 'that shows', 'to show', 'explaining']), det, role('topic')],
     null, 'a diagram of a kind about a topic, without a verb (priority 4, under the statement frames of acts.state: "The cycle of a week is week." is a statement)'],

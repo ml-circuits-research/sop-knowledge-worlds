@@ -28748,6 +28748,9 @@
   "k.objects/shards/noto-sky-weather-05",
   "k.scenes/shards/things-c"
  ],
+ "closeness to the sun": [
+  "k.attributes/shards/attributes"
+ ],
  "closer": [
   "k.values/shards/scales",
   "k.words/shards/cl",
@@ -40568,6 +40571,9 @@
   "k.values/shards/scales",
   "k.words/shards/di",
   "k.words/shards/frequency-d"
+ ],
+ "distance from the sun": [
+  "k.attributes/shards/attributes"
  ],
  "distance_about": [
   "k.attributes/shards/attributes",
@@ -68251,13 +68257,43 @@
   "w.lang.en/shards/ellipsis"
  ],
  "how big": [
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.attributes/shards/attributes"
+ ],
+ "how cold": [
+  "k.attributes/shards/attributes"
+ ],
+ "how expensive": [
+  "k.attributes/shards/attributes"
+ ],
+ "how far": [
+  "k.attributes/shards/attributes"
+ ],
+ "how far away": [
+  "k.attributes/shards/attributes"
+ ],
+ "how far from the sun": [
+  "k.attributes/shards/attributes"
  ],
  "how fast": [
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.attributes/shards/attributes"
  ],
  "how heavy": [
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.attributes/shards/attributes"
+ ],
+ "how high": [
+  "k.attributes/shards/attributes"
+ ],
+ "how hot": [
+  "k.attributes/shards/attributes"
+ ],
+ "how large": [
+  "k.attributes/shards/attributes"
+ ],
+ "how long": [
+  "k.attributes/shards/attributes"
  ],
  "how many": [
   "k.scenes/schema.sop",
@@ -68274,6 +68310,12 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.list/schema.sop"
+ ],
+ "how much it costs": [
+  "k.attributes/shards/attributes"
+ ],
+ "how tall": [
+  "k.attributes/shards/attributes"
  ],
  "how to": [
   "k.procedures/schema.sop"
@@ -69825,6 +69867,10 @@
  ],
  "in future": [
   "w.lang.en/shards/clauses"
+ ],
+ "in order of": [
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/hand-joins"
  ],
  "in rows and columns": [
   "w.lang.en/shards/hand-arrangements"
@@ -96604,6 +96650,15 @@
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.seating/schema.sop"
+ ],
+ "number of legs": [
+  "k.attributes/shards/attributes"
+ ],
+ "number of sides": [
+  "k.attributes/shards/attributes"
+ ],
+ "number of wheels": [
+  "k.attributes/shards/attributes"
  ],
  "number_given": [
   "k.interest/shards/features"

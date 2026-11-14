@@ -1,5 +1,6 @@
 // Q64 (reviewer block 2026-11-15 03:45): frames written in this repository, in w.lang.en's frame format.
-//  1. one general frame for each role of k.actions that no general frame read (29 roles: make.part, make.material,
+//  1. one general frame for each role of k.actions that no general frame read (29 roles, and the criterion of make and
+//     place of block 07:45, 31: make.part, make.material,
 //     make.topic, change.old value, change.replacement, place.direction, place.source, connect.tool, group.target,
 //     group.group, group.criterion, take apart.parts / source / tool, pick.source, pick.other, ask.other, copy.place,
 //     send.means, send.format, undo.thing / number / state, save.thing, save.place, load.source, redo.thing / number,
@@ -26,14 +27,18 @@ export const ROLE_FRAMES = [
   ['acts.make.part', 'make', undefined, P, 'make.part', 'Draw a house with a red door.', [lead, verb('make'), det, role('thing'), word(['with', 'that has', 'which has']), det, role('part')]],
   ['acts.make.material', 'make', undefined, P, 'make.material', 'Make a boat out of paper.', [lead, verb('make'), det, role('thing'), word(['out of', 'from', 'made of', 'made from']), det, role('material')]],
   ['acts.make.topic', 'make', undefined, P, 'make.topic', 'Make a chart about sales.', [lead, verb('make'), det, role('thing'), word(['about', 'on the topic of']), det, role('topic')]],
+  // block 07:45 item 1: the order criterion of make and place, an attribute that can order things (lexicon
+  // order.criterion, from k.attributes, in the shard diagram-frames); priority 13, over "of" read as the material
+  ['acts.make.by', 'make', undefined, 13, 'make.criterion', 'Make a list of the planets by size.', [lead, verb('make'), det, role('thing'), word(['by', 'in order of', 'according to', 'sorted by', 'ordered by', 'arranged by', 'ranked by', 'listed by', 'sorted according to']), det, role('criterion', 'lexicon', { lexicon: 'order.criterion' })]],
   ['acts.change.from', 'change', undefined, P, 'change.old value', 'Change the car from red to blue.', [lead, verb('change'), det, role('thing'), word(['from']), role('old'), word(['to', 'into']), role('value')]],
   ['acts.change.replace', 'change', 'replace', 11, 'change.replacement', 'Replace the hat with a crown.', [lead, word(['replace', 'swap', 'substitute', 'exchange', 'switch']), det, role('thing'), word(['with', 'by', 'for']), det, role('replacement')]],
   ['acts.place.towards', 'place', undefined, 13, 'place.direction', 'Move the car towards the house.', [lead, verb('place'), det, role('thing'), word(['towards', 'toward', 'in the direction of']), det, role('direction')]],
+  ['acts.place.order', 'place', undefined, 13, 'place.criterion', 'Line up the planets in order of size.', [lead, verb('place'), det, role('thing'), word(['in order of', 'according to', 'sorted by', 'ordered by']), det, role('criterion', 'lexicon', { lexicon: 'order.criterion' })]],
   ['acts.place.from', 'place', undefined, 13, 'place.source', 'Move the cat from the sofa to the bed.', [lead, verb('place'), det, role('thing'), word(['from', 'off', 'out of']), det, role('source'), role('rel', 'prep'), det, role('place')]],
   ['acts.connect.tool', 'connect', undefined, P, 'connect.tool', 'Connect the boxes using a line.', [lead, verb('connect'), det, role('thing'), word(['using', 'by means of', 'by', 'with']), det, role('tool')]],
   ['acts.group.with', 'group', 'group', P, 'group.target', 'Group the cat with the dog.', [lead, verb('group'), det, role('thing'), word(['with', 'and']), det, role('target')]],
   ['acts.group.into', 'group', 'group', P, 'group.group', 'Group the guests into teams.', [lead, verb('group'), det, role('thing'), word(['into', 'in', 'as']), det, role('group')]],
-  ['acts.group.by', 'group', 'group', P, 'group.criterion', 'Sort the guests by colour.', [lead, verb('group'), det, role('thing'), word(['by', 'according to']), det, role('criterion')]],
+  ['acts.group.by', 'group', 'group', P, 'group.criterion', 'Sort the guests by colour.', [lead, verb('group'), det, role('thing'), word(['by', 'according to', 'in order of']), det, role('criterion')]],
   ['acts.apart.into', 'group', 'apart', 14, 'take apart.parts', 'Cut the cake into slices.', [lead, verb('take apart'), det, role('thing'), word(['into', 'in']), det, role('parts')]],
   ['acts.apart.from', 'group', 'apart', 14, 'take apart.source', 'Detach the wheel from the car.', [lead, verb('take apart'), det, role('thing'), word(['from', 'off']), det, role('source')]],
   ['acts.apart.with', 'group', 'apart', 14, 'take apart.tool', 'Cut the paper with scissors.', [lead, verb('take apart'), det, role('thing'), word(['with', 'using']), det, role('tool')]],

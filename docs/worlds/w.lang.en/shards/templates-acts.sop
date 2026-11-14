@@ -38,6 +38,7 @@
 @w.lang.en.template.make.place w.lang.en.template name=make.place act=make shape=kind.place role=kind role=place frame=acts.make.place needs=in text="add a {kind} {place}." example="Add a star next to the tree." core.source="hand-core 1"
 @w.lang.en.template.make.name w.lang.en.template name=make.name act=make shape=kind.value.name role=kind role=value attribute=name frame=acts.make.name needs=named text="add a {kind} called {value}." example="Add a guest called Ann." core.source="hand-core 1"
 @w.lang.en.template.make.name.place w.lang.en.template name=make.name.place act=make shape=kind.place.value.name role=kind role=value role=place attribute=name frame=acts.make.name.place needs=in text="add a {kind} called {value} {place}." example="Add a guest called Ann at table 1." core.source="hand-core 1"
+@w.lang.en.template.make.topic.criterion w.lang.en.template name=make.topic.criterion act=make shape=kind.topic.criterion role=kind role=topic role=criterion frame=acts.make.diagram.order text="make a {kind} of {topic} by {criterion}." example="Make a timeline of the planets by distance." core.source="hand-core 1"
 
 # ---- remove ----
 @w.lang.en.template.remove.thing w.lang.en.template name=remove.thing act=remove shape=thing role=thing frame=acts.remove text="remove {thing}." example="Remove the house." core.source="hand-core 1"
@@ -54,10 +55,12 @@
 @w.lang.en.template.place.place w.lang.en.template name=place.place act=place shape=thing.place role=thing role=place frame=acts.place needs=in text="put {thing} {place}." example="Put the house next to the tree." core.source="hand-core 1"
 @w.lang.en.template.place.direction w.lang.en.template name=place.direction act=place shape=thing.direction role=thing role=direction frame=acts.place.dir needs=dir text="move {thing} {direction}." example="Move the house up." core.source="hand-core 1"
 @w.lang.en.template.place.direction.amount w.lang.en.template name=place.direction.amount act=place shape=thing.direction.amount role=thing role=direction role=amount frame=acts.more.place.dir.amt needs=scale text="move {thing} {direction} {amount}." example="Move the house up a bit." core.source="hand-core 1"
+@w.lang.en.template.place.criterion w.lang.en.template name=place.criterion act=place shape=thing.criterion role=thing role=criterion frame=acts.place.order text="line up {thing} in order of {criterion}." example="Line up the planets in order of size." core.source="hand-core 1"
 
 # ---- connect, group, take apart ----
 @w.lang.en.template.connect.target w.lang.en.template name=connect.target act=connect shape=thing.target role=thing role=target frame=acts.connect text="connect {thing} to {target}." example="Connect table 1 to table 2." core.source="hand-core 1"
 @w.lang.en.template.group.thing w.lang.en.template name=group.thing act=group shape=thing.group role=thing mode=group frame=acts.group text="group {thing}." example="Group the tables." core.source="hand-core 1"
+@w.lang.en.template.group.criterion w.lang.en.template name=group.criterion act=group shape=thing.criterion.group role=thing role=criterion mode=group frame=acts.group.by text="sort {thing} by {criterion}." example="Sort the planets by size." core.source="hand-core 1"
 @w.lang.en.template.take_apart.thing w.lang.en.template name=take_apart.thing act="take apart" shape=thing role=thing frame=acts.apart frame=acts.apart.2 text="take {thing} apart." example="Take the tables apart." core.source="hand-core 1"
 
 # ---- pick, deselect ----

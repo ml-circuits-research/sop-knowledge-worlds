@@ -1,4 +1,4 @@
-# w.lang.en/shards/role-frames: frames written in this repository (Q64): 29 general frames, one for each role of k.actions that no general frame read, built from the role's markers in k.actions ("make a boat out of paper": material by "out of"); and the 9 frames of PSys2's src/lang/en.local.mjs that did not read their own example, fixed and kept here (same names; the import leaves them out, PSys2 deletes its copies). Each frame follows a comment with the role it asks for or what was fixed.
+# w.lang.en/shards/role-frames: frames written in this repository (Q64): 31 general frames, one for each role of k.actions that no general frame read, built from the role's markers in k.actions ("make a boat out of paper": material by "out of"); and the 9 frames of PSys2's src/lang/en.local.mjs that did not read their own example, fixed and kept here (same names; the import leaves them out, PSys2 deletes its copies). Each frame follows a comment with the role it asks for or what was fixed.
 # sources: hand-core 1 (written in this repository: tools/lang-en-role-frames.mjs; the nine moved frames after PSys2 src/lang/en.local.mjs at commit 447a5f9a)
 # license: CC0-1.0
 # script: tools/lang-en-role-frames.mjs
@@ -30,6 +30,15 @@
 @w.lang.en.part.acts.make.topic.5 w.lang.en.part frame=acts.make.topic at=5 is=word word="about" word="on the topic of" core.source="hand-core 1"
 @w.lang.en.part.acts.make.topic.6 w.lang.en.part frame=acts.make.topic at=6 is=det optional=yes core.source="hand-core 1"
 @w.lang.en.part.acts.make.topic.7 w.lang.en.part frame=acts.make.topic at=7 is=role role=topic takes=words core.source="hand-core 1"
+# make.criterion
+@w.lang.en.frame.acts.make.by w.lang.en.frame name=acts.make.by act=make set=acts priority=13 role=thing role=criterion example="Make a list of the planets by size." core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.1 w.lang.en.part frame=acts.make.by at=1 is=lead phrase=lead.polite optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.2 w.lang.en.part frame=acts.make.by at=2 is=verb act=make core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.3 w.lang.en.part frame=acts.make.by at=3 is=det optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.4 w.lang.en.part frame=acts.make.by at=4 is=role role=thing takes=words core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.5 w.lang.en.part frame=acts.make.by at=5 is=word word="by" word="in order of" word="according to" word="sorted by" word="ordered by" word="arranged by" word="ranked by" word="listed by" word="sorted according to" core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.6 w.lang.en.part frame=acts.make.by at=6 is=det optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.make.by.7 w.lang.en.part frame=acts.make.by at=7 is=role role=criterion takes=lexicon lexicon=order.criterion core.source="hand-core 1"
 # change.old value
 @w.lang.en.frame.acts.change.from w.lang.en.frame name=acts.change.from act=change set=acts priority=12 role=thing role=old role=value example="Change the car from red to blue." core.source="hand-core 1"
 @w.lang.en.part.acts.change.from.1 w.lang.en.part frame=acts.change.from at=1 is=lead phrase=lead.polite optional=yes core.source="hand-core 1"
@@ -58,6 +67,15 @@
 @w.lang.en.part.acts.place.towards.5 w.lang.en.part frame=acts.place.towards at=5 is=word word="towards" word="toward" word="in the direction of" core.source="hand-core 1"
 @w.lang.en.part.acts.place.towards.6 w.lang.en.part frame=acts.place.towards at=6 is=det optional=yes core.source="hand-core 1"
 @w.lang.en.part.acts.place.towards.7 w.lang.en.part frame=acts.place.towards at=7 is=role role=direction takes=words core.source="hand-core 1"
+# place.criterion
+@w.lang.en.frame.acts.place.order w.lang.en.frame name=acts.place.order act=place set=acts priority=13 role=thing role=criterion example="Line up the planets in order of size." core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.1 w.lang.en.part frame=acts.place.order at=1 is=lead phrase=lead.polite optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.2 w.lang.en.part frame=acts.place.order at=2 is=verb act=place core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.3 w.lang.en.part frame=acts.place.order at=3 is=det optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.4 w.lang.en.part frame=acts.place.order at=4 is=role role=thing takes=words core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.5 w.lang.en.part frame=acts.place.order at=5 is=word word="in order of" word="according to" word="sorted by" word="ordered by" core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.6 w.lang.en.part frame=acts.place.order at=6 is=det optional=yes core.source="hand-core 1"
+@w.lang.en.part.acts.place.order.7 w.lang.en.part frame=acts.place.order at=7 is=role role=criterion takes=lexicon lexicon=order.criterion core.source="hand-core 1"
 # place.source
 @w.lang.en.frame.acts.place.from w.lang.en.frame name=acts.place.from act=place set=acts priority=13 role=thing role=source role=rel role=place example="Move the cat from the sofa to the bed." core.source="hand-core 1"
 @w.lang.en.part.acts.place.from.1 w.lang.en.part frame=acts.place.from at=1 is=lead phrase=lead.polite optional=yes core.source="hand-core 1"
@@ -103,7 +121,7 @@
 @w.lang.en.part.acts.group.by.2 w.lang.en.part frame=acts.group.by at=2 is=verb act=group core.source="hand-core 1"
 @w.lang.en.part.acts.group.by.3 w.lang.en.part frame=acts.group.by at=3 is=det optional=yes core.source="hand-core 1"
 @w.lang.en.part.acts.group.by.4 w.lang.en.part frame=acts.group.by at=4 is=role role=thing takes=words core.source="hand-core 1"
-@w.lang.en.part.acts.group.by.5 w.lang.en.part frame=acts.group.by at=5 is=word word="by" word="according to" core.source="hand-core 1"
+@w.lang.en.part.acts.group.by.5 w.lang.en.part frame=acts.group.by at=5 is=word word="by" word="according to" word="in order of" core.source="hand-core 1"
 @w.lang.en.part.acts.group.by.6 w.lang.en.part frame=acts.group.by at=6 is=det optional=yes core.source="hand-core 1"
 @w.lang.en.part.acts.group.by.7 w.lang.en.part frame=acts.group.by at=7 is=role role=criterion takes=words core.source="hand-core 1"
 # take apart.parts
