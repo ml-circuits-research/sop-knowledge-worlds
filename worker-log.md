@@ -3949,3 +3949,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - **Corpus check** (`tests/k.story.corpus.test.mjs`, TinyStories 1,000 stories, CDLA-Sharing-1.0, read in place from
   PSys2's data/external, not copied): setting before complication in 571/605 stories, complication before resolution
   in 130/139 (94% each).
+
+## 2026-11-14 — third worker: k.genres checked against 2,000 arXiv abstracts (reviewer 19:00 [DATA])
+
+- `tests/k.genres.corpus.test.mjs` reads `arxiv-metadata/abstracts-2000.jsonl` (CC0) in place from PSys2's
+  data/external (nothing copied; skipped where absent) and finds the abstract's moves by surface cues per sentence:
+  purpose in 1,353, method 804, result 1,050, introduction 590, conclusion 174 abstracts; purpose before result
+  674/756 (89%), result before conclusion 95/109 (87%), introduction before purpose 281/395 (71%, weak cue); "we" or
+  "our" in 1,732/2,000 (the register's first plural); mean sentence 23.7 words (register typical 22), 78% within its
+  12-32. The test also checks that the abstract steps of k.genres are in the order measured. WORLD.md says it.
+- The move and register names of k.genres are final from this side (the fourth worker's Q55 asked).

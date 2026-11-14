@@ -115,6 +115,16 @@ and well formed. **Integration case for std.compose:** the hand-traced shortest 
 seeded outlines per genre that all satisfy the structure (parts in order and within their counts, every required
 place made, sentences within the step's counts), with how many are distinct.
 
+## Checked against a corpus
+
+`tests/k.genres.corpus.test.mjs` reads 2,000 arXiv abstracts (CC0 metadata, 2024, eight subject sets; fetched by
+PSys2's machine into its data/external, read in place, nothing copied; skipped where absent) and finds the
+abstract's moves by surface cues per sentence (own choice: "in this paper", "we propose", "we show", "results
+indicate", "these results suggest"...). Result: purpose in 1,353 abstracts, method 804, result 1,050, introduction
+590, conclusion 174; **purpose before result in 674 of 756 (89%), result before conclusion in 95 of 109 (87%)**,
+introduction before purpose in 281 of 395 (71%; the cue is weak); "we" or "our" in 1,732 of 2,000 (the register's
+first plural); sentences average **23.7 words** (the register's typical 22) and 78% of them fall in its 12-32.
+
 ## Known limits
 
 - The vocabulary band needs the word frequency bands of `k.words` (the word register mark of block "15:15" item 2);
