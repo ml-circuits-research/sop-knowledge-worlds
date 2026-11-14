@@ -128,7 +128,8 @@ corpus and the demo) `w.face`, a drawn face whose kinds are the slots of `k.face
 places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions in `tests/w.schemas.test.mjs`), and
 (block "15:15" item 1) `w.document`, a written document for the library's composition and summary: chapters,
 sections, paragraphs, slides and sentences, each sentence with its rhetorical move and the wires of the facts it
-states (`tests/w.document.test.mjs`). A
+states (`tests/w.document.test.mjs`). Block "21:20": `w.chart`, charts of numbers (a chart with its `form`: bar, line, pie, scatter,
+area; series; values by category), with the second method of "a chart of the things there" in `k.procedures`. A
 world schema may hold denies (`w.timeline`: an event is inside its timeline; `w.face`: one part of each kind on a
 face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.63.0 at
 commit b89215e (`tools/sopworld/VERSION`).

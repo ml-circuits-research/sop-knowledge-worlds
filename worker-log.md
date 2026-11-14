@@ -4140,6 +4140,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   tests/w.lang.en.templates.test.mjs (two sentences and the one without a place). PSys2 can drop its local
   patterns.extra.sop copy.
 
+<<<<<<< HEAD
 
 
 ## 2026-11-14 — first worker: the register of words in k.words (block "15:15" item 2; data of block "19:00")
@@ -4159,6 +4160,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - k.words: 348 shards, 43,710 wires, 8,676,705 bytes. Tests: tests/import.wordnet.test.mjs (usage and frequency on
   the fixture; shards on disk equal the import), tests/k.words.test.mjs (bands computed from Zipf, CC BY-SA, every
   banded word has a sense, the k.genres join).
+<<<<<<< HEAD
 ## 2026-11-14 — third worker: k.kinds, the up edges of the catalog with several parents (reviewer 21:55)
 
 - New type `k.kinds.parent name= is_a= dimension= from= key= value= group=` (k.kinds version 2, exports kind and
@@ -4217,3 +4219,28 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests one file at a time: k.actions.families 5, k.actions.acts 8, k.actions 4, validate 5, w.lang.en 21,
   templates 8, k.procedures 15, joins 3, questions 424, shared-modules 5, ask-real 4, catalog 8 (alone after a
   SIGKILL); 0 fail. Catalog 32 worlds, 1,021 shards.
+=======
+=======
+## Block 21:20 task 1 (2026-11-14, second worker): `w.chart` published
+
+- `docs/worlds/w.chart/` (schema.sop 41 wires, 6.2 kB, WORLD.md): a world schema in the `std.schema` format, no rule
+  and no function: `w.chart.chart` (title, `form` = bar / line / pie / scatter / area, default bar; x_label, y_label,
+  unit), `w.chart.series` (name, chart, colour, n), `w.chart.point` (category, value required number, series, n);
+  acts make, remove, change, pick, ask, copy (no copy on values); limits 20 charts, 100 series, 2,000 values; words
+  for the world, its kinds and every key (three key words added to the draft: the build refused `series.chart`,
+  `series.n`, `point.series` without a word). The chart's type key is `form`, not `kind` (an argument of `make`).
+- Catalog: `index.json` lists 7 schemas (w.chart added); vocab 24,852 words ("bar chart", "pie chart", "line graph"
+  lead to w.chart/schema.sop). 0 of the 1,500 common things lead to it, so COVERAGE.md is unchanged (checked with
+  the coverage list alone; `npm run reports` is killed by the memory limit, as the fourth worker logged).
+- `k.procedures`: the second method of "a chart of the things there" (Q45 item 2), `world=w.chart`: count the things of
+  each kind, make a bar chart titled chart, a series named count, one value per kind with its count. 24 methods
+  (29 with the five compositions of the third worker; tasks shard 145 wires, 27.2 kB); WORLD.md's known limit "no w.chart" removed.
+- Tests: `tests/w.schemas.test.mjs` (seven schemas; found by "bar chart", "pie chart", "line graph"; a session: make a
+  bar chart, a series and three values, change the form to line, refuse "donut", change and ask a value, pick by
+  category, refuse a value "many", remove) 14 pass; `tests/k.procedures.test.mjs` (the chart in w.chart expanded by
+  std.plan to the expected five acts) 15 pass; k.interest 5, page 2, catalog 8 pass.
+>>>>>>> d4c29be (w.chart: charts of numbers as a world schema (chart with form, series, values by category; 41 wires, 6.2 kB, 0 warnings), and the w.chart method of a chart of the things there in k.procedures (24 methods))
+- Full run of this commit before the last rebase (one file at a time, `/home/claude/w2tools/runall.sh` in a worktree):
+  2,979 tests, 2,974 pass, 5 skipped, 0 fail, no file killed (15 minutes). Rebased on k.words register (fa8a629): catalog 32 worlds, 1,005 shards,
+  vocab 24,894 words; then on k.kinds up edges and k.actions families (a523fa4): 1,021 shards, vocab 25,713 words; catalog 8, w.schemas 14, k.procedures 15 pass after the rebase.
+>>>>>>> 4b59348 (w.chart: charts of numbers as a world schema (chart with form, series, values by category; 41 wires, 6.2 kB, 0 warnings), and the w.chart method of a chart of the things there in k.procedures (24 methods))

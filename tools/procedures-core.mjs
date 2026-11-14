@@ -265,6 +265,18 @@ export const METHODS = [
     ],
     conditions: [{ when: 'before', fact: 'exists', thing: 'things' }, { when: 'after', fact: 'exists', thing: 'list' }] },
 
+  { shard: 'tasks', name: 'a chart of the things there in a chart', act: 'make', world: 'w.chart', example: ['a chart of the things in the picture'],
+    about: 'A chart of the things there, in a chart (w.chart): a bar chart with one series of counts, one value per kind with its count.',
+    goal: { kind: { value: 'chart' } },
+    bind: { things: { live: 'any' }, counted: { step: [1] }, chart: { step: [2] }, series: { step: [3] } },
+    steps: [
+      { act: 'ask', expand: false, about: 'count the things of each kind', args: [['topic', v('count')], ['thing', b('things')]] },
+      { act: 'make', expand: false, about: 'make the bar chart', args: [['kind', v('chart')], ['value', v('chart', { attribute: 'title' })], ['value', v('bar', { attribute: 'form' })]] },
+      { act: 'make', after: [2], expand: false, about: 'make its series of counts', args: [['kind', v('series')], ['value', v('count', { attribute: 'name' })], ['value', b('chart', undefined, { attribute: 'chart' })]] },
+      { act: 'make', each: 'counted', after: [1, 3], expand: false, about: 'one value per kind, with its count', args: [['kind', v('point')], ['value', b('counted', 'kind', { attribute: 'category' })], ['value', b('counted', 'count', { attribute: 'value' })], ['value', b('series', undefined, { attribute: 'series' })]] },
+    ],
+    conditions: [{ when: 'before', fact: 'exists', thing: 'things' }, { when: 'after', fact: 'exists', thing: 'chart' }] },
+
   { shard: 'tasks', name: 'a report on a timeline', act: 'make', world: 'w.timeline', example: ['a report about what we did'],
     about: 'A report about what was done, on a timeline (w.timeline): one event per act done, in order, at its place in the history.',
     goal: { kind: { value: 'report' } },
@@ -446,7 +458,7 @@ export function procedureShards() {
   const files = {};
   const about = {
     'from-knowledge': 'methods whose steps are read off other knowledge worlds: compose a scene (k.scenes), arrange in a layout and put on an anchor (k.layouts), take apart (k.objects, k.parts), build from parts (k.layouts joins), dress (k.wearables), a person or a face of a role (k.people), a feeling on a face (k.feelings, w.face), a place on the map (k.geo, w.map).',
-    tasks: 'methods of named tasks: a family photo, setting a table (a picture or w.seating), a chart of the things there (w.list), a report about what was done (w.timeline or w.list); and the words that name the tasks.',
+    tasks: 'methods of named tasks: a family photo, setting a table (a picture or w.seating), a chart of the things there (w.list or w.chart), a report about what was done (w.timeline or w.list); and the words that name the tasks.',
     compose: 'compositions by the book (block "15:00" item 3): a story (k.story), a presentation, an essay, a scientific article about a topic and a report of what was done, each a genre of k.genres written as a w.document; their choices are `choose` bindings solved jointly under their matches and sampled by k.interest (the format addition proposed in questions.md Q57).',
   };
   for (const shard of ['from-knowledge', 'tasks', 'compose']) {

@@ -1,4 +1,4 @@
-# k.procedures/shards/tasks: 7 methods of named tasks: a family photo, setting a table (a picture or w.seating), a chart of the things there (w.list), a report about what was done (w.timeline or w.list); and the words that name the tasks.
+# k.procedures/shards/tasks: 8 methods of named tasks: a family photo, setting a table (a picture or w.seating), a chart of the things there (w.list or w.chart), a report about what was done (w.timeline or w.list); and the words that name the tasks.
 # sources: hand-core 1 (hand-written in this repository: tools/procedures-core.mjs)
 # license: CC0-1.0
 # script: tools/procedures-core.mjs
@@ -95,6 +95,32 @@
 @k.procedures.arg.a_chart_of_the_things_there.3.value.list k.procedures.arg method="a chart of the things there" step=3 role=value attribute=list binding=list core.source="hand-core 1"
 @k.procedures.condition.a_chart_of_the_things_there.1 k.procedures.condition method="a chart of the things there" n=1 when=before fact=exists thing=things core.source="hand-core 1"
 @k.procedures.condition.a_chart_of_the_things_there.2 k.procedures.condition method="a chart of the things there" n=2 when=after fact=exists thing=list core.source="hand-core 1"
+
+# a chart of the things there in a chart
+@k.procedures.method.a_chart_of_the_things_there_in_a_chart k.procedures.method name="a chart of the things there in a chart" about="A chart of the things there, in a chart (w.chart): a bar chart with one series of counts, one value per kind with its count." act=make world=w.chart example="a chart of the things in the picture" core.source="hand-core 1"
+@k.procedures.goal.a_chart_of_the_things_there_in_a_chart.kind k.procedures.goal method="a chart of the things there in a chart" role=kind value=chart core.source="hand-core 1"
+@k.procedures.binding.a_chart_of_the_things_there_in_a_chart.things k.procedures.binding method="a chart of the things there in a chart" name=things live=any core.source="hand-core 1"
+@k.procedures.binding.a_chart_of_the_things_there_in_a_chart.counted k.procedures.binding method="a chart of the things there in a chart" name=counted step=1 core.source="hand-core 1"
+@k.procedures.binding.a_chart_of_the_things_there_in_a_chart.chart k.procedures.binding method="a chart of the things there in a chart" name=chart step=2 core.source="hand-core 1"
+@k.procedures.binding.a_chart_of_the_things_there_in_a_chart.series k.procedures.binding method="a chart of the things there in a chart" name=series step=3 core.source="hand-core 1"
+@k.procedures.step.a_chart_of_the_things_there_in_a_chart.1 k.procedures.step method="a chart of the things there in a chart" n=1 act=ask expand=false about="count the things of each kind" core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.1.topic k.procedures.arg method="a chart of the things there in a chart" step=1 role=topic value=count core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.1.thing k.procedures.arg method="a chart of the things there in a chart" step=1 role=thing binding=things core.source="hand-core 1"
+@k.procedures.step.a_chart_of_the_things_there_in_a_chart.2 k.procedures.step method="a chart of the things there in a chart" n=2 act=make expand=false about="make the bar chart" core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.2.kind k.procedures.arg method="a chart of the things there in a chart" step=2 role=kind value=chart core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.2.value.title k.procedures.arg method="a chart of the things there in a chart" step=2 role=value attribute=title value=chart core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.2.value.form k.procedures.arg method="a chart of the things there in a chart" step=2 role=value attribute=form value=bar core.source="hand-core 1"
+@k.procedures.step.a_chart_of_the_things_there_in_a_chart.3 k.procedures.step method="a chart of the things there in a chart" n=3 act=make after=2 expand=false about="make its series of counts" core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.3.kind k.procedures.arg method="a chart of the things there in a chart" step=3 role=kind value=series core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.3.value.name k.procedures.arg method="a chart of the things there in a chart" step=3 role=value attribute=name value=count core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.3.value.chart k.procedures.arg method="a chart of the things there in a chart" step=3 role=value attribute=chart binding=chart core.source="hand-core 1"
+@k.procedures.step.a_chart_of_the_things_there_in_a_chart.4 k.procedures.step method="a chart of the things there in a chart" n=4 act=make each=counted after=1 after=3 expand=false about="one value per kind, with its count" core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.4.kind k.procedures.arg method="a chart of the things there in a chart" step=4 role=kind value=point core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.4.value.category k.procedures.arg method="a chart of the things there in a chart" step=4 role=value attribute=category binding=counted key=kind core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.4.value.value k.procedures.arg method="a chart of the things there in a chart" step=4 role=value attribute=value binding=counted key=count core.source="hand-core 1"
+@k.procedures.arg.a_chart_of_the_things_there_in_a_chart.4.value.series k.procedures.arg method="a chart of the things there in a chart" step=4 role=value attribute=series binding=series core.source="hand-core 1"
+@k.procedures.condition.a_chart_of_the_things_there_in_a_chart.1 k.procedures.condition method="a chart of the things there in a chart" n=1 when=before fact=exists thing=things core.source="hand-core 1"
+@k.procedures.condition.a_chart_of_the_things_there_in_a_chart.2 k.procedures.condition method="a chart of the things there in a chart" n=2 when=after fact=exists thing=chart core.source="hand-core 1"
 
 # a report on a timeline
 @k.procedures.method.a_report_on_a_timeline k.procedures.method name="a report on a timeline" about="A report about what was done, on a timeline (w.timeline): one event per act done, in order, at its place in the history." act=make world=w.timeline example="a report about what we did" core.source="hand-core 1"

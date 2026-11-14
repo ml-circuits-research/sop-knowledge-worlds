@@ -221,10 +221,14 @@ test('build a house from parts: make the parts k.layouts joins name, join those 
   ]);
 });
 
-test('a chart of the things in the picture (w.list); a report about what we did (w.timeline, or w.list)', () => {
+test('a chart of the things in the picture (w.list, or w.chart); a report about what we did (w.timeline, or w.list)', () => {
   expect({ act: 'make', roles: { kind: 'chart' } }, new Live({ world: 'w.list', things: [thing('tree1', 'tree'), thing('tree2', 'tree'), thing('sun1', 'sun')] }), 'a chart of the things there', [
     'ask topic=count thing=tree1,tree2,sun1', 'make kind=w.list.list name=chart',
     'make kind=w.list.item text=sun quantity=1 list=list1', 'make kind=w.list.item text=tree quantity=2 list=list1',
+  ]);
+  expect({ act: 'make', roles: { kind: 'chart' } }, new Live({ world: 'w.chart', things: [thing('tree1', 'tree'), thing('tree2', 'tree'), thing('sun1', 'sun')] }), 'a chart of the things there in a chart', [
+    'ask topic=count thing=tree1,tree2,sun1', 'make kind=w.chart.chart title=chart form=bar', 'make kind=w.chart.series name=count chart=chart1',
+    'make kind=w.chart.point category=sun value=1 series=series1', 'make kind=w.chart.point category=tree value=2 series=series1',
   ]);
   const history = [{ act: 'make', thing: 'tree1' }, { act: 'change', thing: 'tree1' }, { act: 'remove', thing: 'sun1' }];
   expect({ act: 'make', roles: { kind: 'report' } }, new Live({ world: 'w.timeline', history }), 'a report on a timeline', [

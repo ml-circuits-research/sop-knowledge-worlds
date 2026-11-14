@@ -1,5 +1,5 @@
 {
- "version": "807953f3fec1",
+ "version": "9eff7cdc11ec",
  "sopworld": "b89215e",
  "worlds": [
   {
@@ -43039,19 +43039,23 @@
     {
      "id": "k.procedures/shards/tasks",
      "path": "k.procedures/shards/tasks.sop",
-     "wires": 121,
-     "bytes": 22158,
+     "wires": 145,
+     "bytes": 27185,
      "keys": [
       "a chart of the things there",
+      "a chart of the things there in a chart",
       "a family photo of a new family",
       "a family photo of the people there",
       "a report as a list",
       "a report on a timeline",
       "about",
       "at",
+      "category",
+      "chart",
       "counted",
       "done",
       "family",
+      "form",
       "group",
       "kind",
       "kinds",
@@ -43065,6 +43069,7 @@
       "quantity",
       "seat",
       "seats",
+      "series",
       "set a table",
       "set a table in a seating plan",
       "table",
@@ -77696,6 +77701,109 @@
   }
  ],
  "schemas": [
+  {
+   "id": "w.chart",
+   "version": "1",
+   "schema": "w.chart/schema.sop",
+   "about": "charts of numbers: series of values by category",
+   "names": [
+    "chart",
+    "charts",
+    "graph",
+    "graphs",
+    "bar chart",
+    "pie chart",
+    "line chart",
+    "line graph",
+    "bar graph",
+    "plot"
+   ],
+   "kinds": [
+    {
+     "type": "w.chart.chart",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "title",
+      "form",
+      "x_label",
+      "y_label",
+      "unit"
+     ],
+     "words": [
+      "chart",
+      "charts",
+      "graph",
+      "graphs",
+      "plot"
+     ]
+    },
+    {
+     "type": "w.chart.series",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "chart",
+      "colour",
+      "n"
+     ],
+     "words": [
+      "series",
+      "line",
+      "lines",
+      "dataset",
+      "data set"
+     ]
+    },
+    {
+     "type": "w.chart.point",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "category",
+      "value",
+      "series",
+      "n"
+     ],
+     "words": [
+      "point",
+      "points",
+      "value",
+      "values",
+      "bar",
+      "bars",
+      "slice",
+      "slices",
+      "data point"
+     ]
+    }
+   ],
+   "wires": 41,
+   "bytes": 6227,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
   {
    "id": "w.document",
    "version": "1",

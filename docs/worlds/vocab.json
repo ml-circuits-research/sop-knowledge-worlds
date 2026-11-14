@@ -179,6 +179,9 @@
  "a chart of the things there": [
   "k.procedures/shards/tasks"
  ],
+ "a chart of the things there in a chart": [
+  "k.procedures/shards/tasks"
+ ],
  "a couple": [
   "k.values/shards/numbers"
  ],
@@ -2715,6 +2718,7 @@
   "k.values/shards/scales",
   "k.words/shards/am",
   "k.words/shards/frequency-a",
+  "w.chart/schema.sop",
   "w.list/schema.sop"
  ],
  "amount_about": [
@@ -7388,7 +7392,8 @@
   "k.objects/shards/structures",
   "k.objects/shards/things-3",
   "k.words/shards/ba",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.chart/schema.sop"
  ],
  "bar chart": [
   "k.attributes/shards/drawn-noto",
@@ -7396,7 +7401,11 @@
   "k.kinds/shards/group-noto",
   "k.kinds/shards/head",
   "k.objects/shards/noto-office-02",
-  "k.procedures/shards/tasks"
+  "k.procedures/shards/tasks",
+  "w.chart/schema.sop"
+ ],
+ "bar graph": [
+  "w.chart/schema.sop"
  ],
  "bar1": [
   "k.objects/shards/noto-office-02"
@@ -7733,7 +7742,8 @@
  "bars": [
   "k.objects/shards/structures",
   "k.words/shards/ba",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.chart/schema.sop"
  ],
  "bart": [
   "k.words/shards/ba",
@@ -9305,6 +9315,7 @@
  ],
  "belongs": [
   "k.body/schema.sop",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
@@ -16041,6 +16052,7 @@
  "called": [
   "k.actions/shards/actions-mind-talk",
   "k.animals/schema.sop",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.face/schema.sop",
   "w.list/schema.sop",
@@ -17753,8 +17765,10 @@
   "k.actions/shards/verbs-group"
  ],
  "category": [
+  "k.procedures/shards/tasks",
   "k.words/shards/ca",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.chart/schema.sop"
  ],
  "caterer": [
   "k.words/shards/ca",
@@ -19103,7 +19117,8 @@
   "k.objects/shards/noto-office-02",
   "k.procedures/shards/tasks",
   "k.words/shards/ch",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.chart/schema.sop"
  ],
  "chart decreasing": [
   "k.attributes/shards/drawn-noto",
@@ -19129,6 +19144,9 @@
  ],
  "chartreuse": [
   "k.values/shards/colours-css"
+ ],
+ "charts": [
+  "w.chart/schema.sop"
  ],
  "chase": [
   "k.actions/shards/actions-move",
@@ -22729,6 +22747,7 @@
   "k.values/schema.sop",
   "k.words/shards/co-1",
   "k.words/shards/frequency-c",
+  "w.chart/schema.sop",
   "w.face/schema.sop",
   "w.lang.en/shards/hand-grammar",
   "w.map/schema.sop"
@@ -22804,6 +22823,7 @@
   "k.values/schema.sop",
   "k.words/shards/co-1",
   "k.words/shards/frequency-c",
+  "w.chart/schema.sop",
   "w.face/schema.sop",
   "w.lang.en/shards/hand-grammar",
   "w.map/schema.sop"
@@ -28474,9 +28494,18 @@
   "k.words/shards/da",
   "k.words/shards/frequency-d"
  ],
+ "data point": [
+  "w.chart/schema.sop"
+ ],
+ "data set": [
+  "w.chart/schema.sop"
+ ],
  "database": [
   "k.words/shards/da",
   "k.words/shards/frequency-d"
+ ],
+ "dataset": [
+  "w.chart/schema.sop"
  ],
  "date": [
   "k.attributes/shards/same-d",
@@ -40770,9 +40799,11 @@
  ],
  "form": [
   "k.actions/shards/actions-make-change",
+  "k.procedures/shards/tasks",
   "k.shapes/schema.sop",
   "k.words/shards/fo",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "w.chart/schema.sop"
  ],
  "formal": [
   "k.attributes/shards/aspects",
@@ -45320,7 +45351,8 @@
  ],
  "graph": [
   "k.objects/shards/noto-money-02",
-  "k.objects/shards/noto-office-02"
+  "k.objects/shards/noto-office-02",
+  "w.chart/schema.sop"
  ],
  "graphic": [
   "k.words/shards/frequency-g",
@@ -45333,6 +45365,9 @@
  "graphics": [
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
+ ],
+ "graphs": [
+  "w.chart/schema.sop"
  ],
  "grasp": [
   "k.actions/shards/actions-hands",
@@ -46124,7 +46159,8 @@
   "k.units/shards/measures",
   "k.values/shards/numbers",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.chart/schema.sop"
  ],
  "group photo": [
   "k.layouts/shards/layouts",
@@ -50777,6 +50813,9 @@
   "k.words/shards/frequency-h",
   "k.words/shards/ho"
  ],
+ "horizontal axis": [
+  "w.chart/schema.sop"
+ ],
  "horizontal surface": [
   "k.kinds/shards/wordnet-2"
  ],
@@ -51393,6 +51432,7 @@
   "w.seating/schema.sop"
  ],
  "how much": [
+  "w.chart/schema.sop",
   "w.lang.en/shards/clauses",
   "w.list/schema.sop"
  ],
@@ -52693,6 +52733,7 @@
   "k.space/schema.sop",
   "k.words/shards/frequency-i",
   "k.words/shards/in",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions",
@@ -57323,6 +57364,7 @@
   "k.words/schema.sop",
   "k.words/shards/frequency-k",
   "k.words/shards/ki",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.face/schema.sop",
   "w.map/schema.sop",
@@ -58461,6 +58503,7 @@
   "k.scenes/shards/things-l",
   "k.words/shards/frequency-l",
   "k.words/shards/la",
+  "w.chart/schema.sop",
   "w.map/schema.sop"
  ],
  "label_band": [
@@ -62307,7 +62350,14 @@
   "k.values/shards/shapes",
   "k.words/shards/frequency-l",
   "k.words/shards/li",
+  "w.chart/schema.sop",
   "w.document/schema.sop"
+ ],
+ "line chart": [
+  "w.chart/schema.sop"
+ ],
+ "line graph": [
+  "w.chart/schema.sop"
  ],
  "line only": [
   "k.values/shards/fills"
@@ -62353,6 +62403,7 @@
   "k.objects/shards/home",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
+  "w.chart/schema.sop",
   "w.document/schema.sop"
  ],
  "lines only": [
@@ -69867,7 +69918,8 @@
   "k.time/shards/calendar",
   "k.units/shards/measures",
   "k.words/shards/frequency-m",
-  "k.words/shards/mo"
+  "k.words/shards/mo",
+  "w.chart/schema.sop"
  ],
  "monthly": [
   "k.words/shards/frequency-m",
@@ -72309,6 +72361,7 @@
   "k.values/schema.sop",
   "k.words/shards/frequency-n",
   "k.words/shards/na",
+  "w.chart/schema.sop",
   "w.face/schema.sop",
   "w.lang.en/shards/hand-grammar",
   "w.list/schema.sop",
@@ -74873,6 +74926,7 @@
   "k.values/schema.sop",
   "k.words/shards/frequency-n",
   "k.words/shards/nu",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.seating/schema.sop"
@@ -75940,6 +75994,7 @@
   "k.wearables/schema.sop",
   "k.words/shards/frequency-o",
   "k.words/shards/on",
+  "w.chart/schema.sop",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions",
   "w.list/schema.sop",
@@ -76583,6 +76638,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-o",
   "k.words/shards/or",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop"
  ],
@@ -81379,6 +81435,9 @@
   "k.objects/shards/mulberry-food-sweets-and-desserts-03",
   "k.scenes/shards/things-p"
  ],
+ "pie chart": [
+  "w.chart/schema.sop"
+ ],
  "pie cherry": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
@@ -82548,6 +82607,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-p",
   "k.words/shards/pl",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.map/schema.sop",
@@ -83195,7 +83255,8 @@
   "k.kinds/shards/wordnet-2",
   "k.story/schema.sop",
   "k.words/shards/frequency-p",
-  "k.words/shards/pl"
+  "k.words/shards/pl",
+  "w.chart/schema.sop"
  ],
  "plotted": [
   "k.words/shards/pl"
@@ -83485,7 +83546,8 @@
   "k.units/shards/measures",
   "k.values/shards/shapes",
   "k.words/shards/frequency-p",
-  "k.words/shards/po"
+  "k.words/shards/po",
+  "w.chart/schema.sop"
  ],
  "point out": [
   "k.actions/shards/actions-mind-talk"
@@ -83514,7 +83576,8 @@
   "k.drawing/schema.sop",
   "k.procedures/shards/compose",
   "k.shapes/schema.sop",
-  "k.values/shards/shapes"
+  "k.values/shards/shapes",
+  "w.chart/schema.sop"
  ],
  "points_max": [
   "k.procedures/shards/compose"
@@ -84318,6 +84381,7 @@
   "k.values/schema.sop",
   "k.words/shards/frequency-p",
   "k.words/shards/po",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.seating/schema.sop"
@@ -97295,8 +97359,10 @@
   "k.words/shards/se"
  ],
  "series": [
+  "k.procedures/shards/tasks",
   "k.words/shards/frequency-s",
   "k.words/shards/se",
+  "w.chart/schema.sop",
   "w.lang.en/shards/hand-morphology"
  ],
  "serious": [
@@ -100813,7 +100879,11 @@
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-food-sweet-02",
   "k.words/shards/frequency-s",
-  "k.words/shards/sl"
+  "k.words/shards/sl",
+  "w.chart/schema.sop"
+ ],
+ "slices": [
+  "w.chart/schema.sop"
  ],
  "slicing": [
   "k.words/shards/frequency-s",
@@ -112976,6 +113046,7 @@
   "k.procedures/shards/tasks",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
@@ -116629,6 +116700,7 @@
   "k.words/schema.sop",
   "k.words/shards/frequency-t",
   "k.words/shards/ty",
+  "w.chart/schema.sop",
   "w.document/schema.sop",
   "w.face/schema.sop",
   "w.timeline/schema.sop"
@@ -117287,6 +117359,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-u",
   "k.words/shards/un",
+  "w.chart/schema.sop",
   "w.timeline/schema.sop"
  ],
  "unite": [
@@ -117340,7 +117413,8 @@
  ],
  "units": [
   "k.genres/schema.sop",
-  "k.units/schema.sop"
+  "k.units/schema.sop",
+  "w.chart/schema.sop"
  ],
  "unity": [
   "k.words/shards/frequency-u",
@@ -118053,14 +118127,16 @@
   "k.units/shards/measures",
   "k.values/schema.sop",
   "k.words/shards/frequency-v",
-  "k.words/shards/va"
+  "k.words/shards/va",
+  "w.chart/schema.sop"
  ],
  "value_about": [
   "k.units/shards/measures"
  ],
  "values": [
   "k.words/shards/frequency-v",
-  "k.words/shards/va"
+  "k.words/shards/va",
+  "w.chart/schema.sop"
  ],
  "valve": [
   "k.objects/shards/things-3",
@@ -118775,6 +118851,9 @@
   "k.objects/shards/noto-transport-ground-06",
   "k.words/shards/frequency-v",
   "k.words/shards/ve"
+ ],
+ "vertical axis": [
+  "w.chart/schema.sop"
  ],
  "vertical blinds": [
   "k.attributes/shards/drawn-mulberry",
@@ -123943,6 +124022,9 @@
   "k.words/shards/frequency-x",
   "k.words/shards/x"
  ],
+ "x axis": [
+  "w.chart/schema.sop"
+ ],
  "x-ray": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-x",
@@ -124038,6 +124120,9 @@
   "k.wearables/schema.sop",
   "k.words/shards/frequency-y",
   "k.words/shards/y"
+ ],
+ "y axis": [
+  "w.chart/schema.sop"
  ],
  "ya": [
   "k.values/shards/psys2"
@@ -124275,6 +124360,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-y",
   "k.words/shards/ye",
+  "w.chart/schema.sop",
   "w.timeline/schema.sop"
  ],
  "yearbook": [

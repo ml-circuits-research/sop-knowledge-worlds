@@ -26,7 +26,7 @@ most 200 acts. Kinds in steps are plain names; the live world's schema resolves 
 A role of the goal that the goal does not say is left out of a step; any other filler with no value leaves the step
 out for that value.
 
-## The methods (28)
+## The methods (29)
 
 From knowledge (shard `from-knowledge`, 16): **compose a scene** (`k.scenes`: the ground, each thing it has, as many
 as it has, where it usually is; things that rest on another after it, on it), **arrange in a layout** (`k.layouts`:
@@ -39,10 +39,10 @@ what it holds in the hand), **a face of a role** (`w.face`: hat, glasses, beard,
 drawn thing** (`k.objects`: the parts of its drawing that have a name), **take apart into named parts** (`k.parts`, when
 the drawing has none), **take apart a group**, **build from parts** (`k.layouts` joins: make the parts, connect those
 that attach, group them), **show a country / a city on the map** (`k.geo` on `w.map`).
-Named tasks (shard `tasks`, 7, with `core.word` facts for the task names): **a family photo** of the people there, or
+Named tasks (shard `tasks`, 8, with `core.word` facts for the task names): **a family photo** of the people there, or
 of a new family when there is nobody; **set a table** in a picture (chairs around, plates and cups on top) or in a
 seating plan (`w.seating`: a table with that many seats, and the seats); **a chart of the things there** (`w.list`: one
-item per kind with its count); **a report about what was done** on a timeline (`w.timeline`) or as a list (`w.list`).
+item per kind with its count; or `w.chart`: a bar chart with one series of counts, one value per kind); **a report about what was done** on a timeline (`w.timeline`) or as a list (`w.list`).
 
 Compositions (shard `compose`, 5, block "15:00" item 3; all in `w.document`): **write a story** (k.story: a goal, an
 obstacle that blocks it, a setting that has it, the means that overcomes it, the act that uses the means, a helper who
@@ -76,7 +76,7 @@ used is bound; knowledge types and keys exist; a plan in a world schema makes on
 goal -> expected acts for: draw a farm, a person sitting on a swing (new or existing swing; a man on a bench; a cup on
 the table), a family photo (both alternatives), set a table for four (picture, an existing table, w.seating), take
 apart a car (drawing parts), a piano (k.parts), a group, a refusal (an idea), build a house from parts, a chart of the
-things in the picture, a report about what we did (w.timeline, w.list; refused with nothing done), a doctor (picture),
+things in the picture (w.list, w.chart), a report about what we did (w.timeline, w.list; refused with nothing done), a doctor (picture),
 a pirate face (w.face), a shy and a hurt face, a hat on a man, a scarf on a girl, a cap on a face, Peru and Lima on the
 map, a row, a missing needed role asked. The expansion is done by the library's planner (sopworld 0.55 `std.plan`, pinned 0.56:
 `factStore`, `planner`, `PlanLive`), the one pinned build; the reference reader that first wrote these lists is gone.
@@ -99,11 +99,6 @@ steps are acts not yet done, and no report without a history.
 - An imported drawing's unnamed part is called `part<n>`, with no key saying it has no name; take apart uses only
   parts with a kind (not `detail`) or named by the model, so the body of a drawing (`body`, `cabin` of the car) stays
   as the thing, and the whole is not removed (questions.md Q45).
-- No `w.chart` schema: a chart is a list of counts (`w.list`) for now (Q45).
-- A slide or a chapter of a repeated part (the points of a presentation, the arguments of an essay) takes the part's
-  place `n` in the genre; the composer numbers them in order.
-- "About a topic" is the role `topic` of `make` (marked by about, Q45 (iii), 53b002b): needed by the presentation, the
-  essay and the scientific article; optional for the story, where it is only preferred (soft) as the obstacle, setting,
-  helper, protagonist or target, because "one of them is the topic" is a disjunction the format cannot say.
+## The methods (29)
 - The role -> argument map of `std.acts` (`number` -> `amount`, a place with `rel` and `of` -> `at` or `rel` and `ref`)
   is the library's (Q44 a).

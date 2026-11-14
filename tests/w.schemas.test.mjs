@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('six world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
+test('seven world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.chart', 'w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
@@ -33,7 +33,7 @@ test('six world schemas; each names no function, loads with std.acts, has words,
     assert.deepEqual(index.schemas.find((x) => x.id === s.id), d.entry, s.id);
     assert.match(s.schemaText, /^# license: CC0-1\.0$/m);
   }
-  // All six together in one world: no name of one clashes with another.
+  // All seven together in one world: no name of one clashes with another.
   assert.deepEqual(actsWorld().warnings ?? [], []);
 });
 
@@ -46,7 +46,7 @@ test('one sopworld build: the reusable worlds are validated with the build that 
 });
 
 test('a host finds a schema by name: the words of the vocabulary lead to the schema', () => {
-  for (const [word, id] of [['seating plan', 'w.seating'], ['table plan', 'w.seating'], ['shopping list', 'w.list'], ['checklist', 'w.list'], ['timeline', 'w.timeline'], ['chronology', 'w.timeline'], ['face', 'w.face'], ['avatar', 'w.face'], ['map', 'w.map'], ['world map', 'w.map']]) {
+  for (const [word, id] of [['seating plan', 'w.seating'], ['table plan', 'w.seating'], ['shopping list', 'w.list'], ['checklist', 'w.list'], ['timeline', 'w.timeline'], ['chronology', 'w.timeline'], ['face', 'w.face'], ['avatar', 'w.face'], ['map', 'w.map'], ['world map', 'w.map'], ['bar chart', 'w.chart'], ['pie chart', 'w.chart'], ['line graph', 'w.chart']]) {
     assert.ok(vocab[word]?.includes(`${id}/schema.sop`), word);
     assert.ok(index.schemas.find((x) => x.id === id).names.includes(word), word);
   }
@@ -92,6 +92,23 @@ test('a session with a seating plan: a table, seats, guests on seats, a link bet
   assert.equal(no.ok, false);
   assert.deepEqual(no.violations[0].allowed, ['round', 'square', 'long']);
   assert.equal(act('make', { kind: 'w.seating.seat', table: '$w_seating_guest1' }).ok, false);
+});
+
+test('a session with a chart (Q45 (ii)): a bar chart with a series of values is made, changed, asked and picked; a wrong value is refused', () => {
+  const w = actsWorld(['w.chart']), act = session(w);
+  assert.equal(act('make', { kind: 'w.chart.chart', title: 'sales', form: 'bar', unit: 'euro' }).result.thing, 'w_chart_chart1');
+  assert.equal(act('make', { kind: 'w.chart.series', name: '2025', chart: '$w_chart_chart1', n: 1 }).ok, true);
+  for (const [i, [category, value]] of [['January', 10], ['February', 12], ['March', 9]].entries()) assert.equal(act('make', { kind: 'w.chart.point', category, value, series: '$w_chart_series1', n: i + 1 }).ok, true, category);
+  assert.equal(act('ask', { thing: 'w.chart.chart', nth: 1, attr: 'form' }).result.value, 'bar');
+  assert.equal(act('change', { thing: 'w.chart.chart', nth: 1, attr: 'form', value: 'line' }).ok, true);
+  assert.equal(act('ask', { thing: 'w.chart.chart', nth: 1, attr: 'form' }).result.value, 'line');
+  assert.equal(act('change', { thing: 'w.chart.chart', nth: 1, attr: 'form', value: 'donut' }).ok, false, 'not a form of chart');
+  assert.equal(act('change', { thing: 'w.chart.point', nth: 2, attr: 'value', value: 15 }).ok, true);
+  assert.equal(act('ask', { thing: 'w.chart.point', nth: 2, attr: 'value' }).result.value, '15');
+  assert.deepEqual(act('pick', { kind: 'w.chart.point', category: 'March' }).result.things, ['w_chart_point3']);
+  assert.equal(act('make', { kind: 'w.chart.point', category: 'April', value: 'many', series: '$w_chart_series1' }).ok, false, 'a value is a number');
+  assert.equal(act('remove', { thing: 'w_chart_point1' }).ok, true);
+  assert.equal(act('pick', { kind: 'w.chart.point' }).result.things.length, 2);
 });
 
 test('a session with a timeline: events with their time, moved later and back, picked by time', () => {
