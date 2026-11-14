@@ -25111,11 +25111,13 @@
   "k.units/schema.sop"
  ],
  "centuries": [
-  "k.time/shards/calendar"
+  "k.time/shards/calendar",
+  "k.units/shards/core"
  ],
  "century": [
   "k.attributes/shards/same-c",
   "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/ce",
   "k.words/shards/frequency-c"
  ],
@@ -38045,11 +38047,13 @@
  "decade": [
   "k.attributes/shards/same-d",
   "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.words/shards/de",
   "k.words/shards/frequency-d"
  ],
  "decades": [
-  "k.time/shards/calendar"
+  "k.time/shards/calendar",
+  "k.units/shards/core"
  ],
  "decaf": [
   "k.attributes/shards/same-d",
@@ -90915,6 +90919,7 @@
   "k.attributes/shards/same-m",
   "k.time/schema.sop",
   "k.time/shards/calendar",
+  "k.units/shards/core",
   "k.units/shards/measures",
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
@@ -90926,7 +90931,8 @@
  ],
  "months": [
   "k.time/schema.sop",
-  "k.time/shards/calendar"
+  "k.time/shards/calendar",
+  "k.units/shards/core"
  ],
  "montreal": [
   "k.words/shards/frequency-m",

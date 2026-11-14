@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **189** in 30 worlds; distinct values 6347, meeting a target 6286 (99 %), open 61
+- declared joins: **189** in 30 worlds; distinct values 6347, meeting a target 6289 (99.1 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **113**; left undeclared on purpose: 6
 
@@ -172,7 +172,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.story | `k.story.obstacle.tried_by` | `k.actions.action` | name | 9 | 9 |  |
 | k.time | `k.time.before.cycle` | `k.time.cycle` | name | 9 | 9 |  |
 | k.time | `k.time.cycle.lasts` | `k.time.duration` | name | 3 | 3 |  |
-| k.time | `k.time.duration.unit` | `k.units.unit` | name | 9 | 6 | `century`, `decade`, `month` |
+| k.time | `k.time.duration.unit` | `k.units.unit` | name | 9 | 9 |  |
 | k.time | `k.time.ordered.cycle` | `k.time.cycle` | name | 9 | 9 |  |
 | k.time | `k.time.season_in.first` | `k.time.month` | name | 4 | 4 |  |
 | k.time | `k.time.season_in.last` | `k.time.month` | name | 4 | 4 |  |

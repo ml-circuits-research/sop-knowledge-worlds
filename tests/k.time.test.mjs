@@ -3,7 +3,7 @@
 // cycle; the seasons by hemisphere agree with the months; durations are told in several units.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
+import { scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 
 const w = fullWorld('k.time', scanWorlds());
 const v = (f, k) => (f.attrs[k] ?? []).map((x) => (x.startsWith('"') ? JSON.parse(x) : x));
@@ -117,4 +117,20 @@ test('the cycles of nature (block "04:40"): stages in order, each a word of k.wo
   const words = new Set(scanWorlds().find((x) => x.id === 'k.words').shards.flatMap((s) => [...s.text.matchAll(/ k\.words\.sense word=("[^"]*"|\S+) /g)].map((m) => m[1].replace(/"/g, '').toLowerCase())));
   for (const x of stages) assert.ok(words.has(one(x, 'is')), one(x, 'is'));
   for (const x of stages) assert.ok(one(x, 'about'), one(x, 'name'));
+});
+
+test('reviewer 04:10 item 3: every unit a duration is told in is a k.units unit, and where its name is one too, the counts agree with the factors', () => {
+  const factor = new Map(factsOf('k.units', ['k.units.unit']).map((u) => [one(u, 'name'), Number(one(u, 'factor'))]));
+  for (const n of ['month', 'decade', 'century']) assert.ok(factor.has(n), n);
+  let checked = 0;
+  for (const f of w.ofType('k.time.duration')) {
+    const name = one(f, 'name'), unit = one(f, 'unit');
+    if (unit) assert.ok(factor.has(unit), `${name}: ${unit} is no k.units unit`);
+    if (!unit || !factor.has(name)) continue;
+    const n = Number(one(f, 'count') ?? one(f, 'count_about'));
+    const ratio = (n * factor.get(unit)) / factor.get(name);
+    if (f.attrs.count) assert.ok(Math.abs(ratio - 1) < 1e-9, `${name} = ${n} ${unit}`); else assert.ok(Math.abs(ratio - 1) < 0.1, `${name} = about ${n} ${unit}`); // a month is about 4 weeks: 8 % short
+    checked++;
+  }
+  assert.ok(checked >= 12, `${checked}`); // a year is 12 months, a decade 10 years, a century 100 years, a month about 30 days ...
 });

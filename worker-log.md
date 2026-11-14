@@ -5051,3 +5051,16 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   the list's city in the borders shard and not in the public-domain one); tests/k.geo.test.mjs new test: every
   capital of every country is a city whose `capital_of` is that country, no open join of `capital`, the three words,
   the seven list cities have no coordinates. Docs: k.geo/WORLD.md, sources/countries/SOURCE.md.
+
+## 2026-11-15 — second worker: k.units month, decade, century (reviewer 04:10, item 3)
+
+- `k.units/shards/core`: three time units with their factor to the second as the year here is (the Julian year,
+  365.25 days): **month** 2,629,800 (a twelfth of the year, the mean month of 30.44 days), **decade** 315,576,000,
+  **century** 3,155,760,000; no symbols (none is standard); words for the plurals (months, decades, centuries).
+  50 units, 108 wires, 14,244 bytes.
+- The join `k.time.duration.unit` -> `k.units.unit` closes: 9 of 9 values (was 6); all declared joins 6,289 of 6,347
+  values meet (99.1 %, open 58), 0 broken.
+- Tests: tests/k.time.test.mjs new test: every unit a duration is told in is a k.units unit, and where the duration's
+  name is a unit too, count x factor equals its factor (exact counts to 1e-9: a year is 12 months, a decade 10 years,
+  a century 100 years, a week 168 hours ...; `count_about` within 10 %: a month is about 30 days, about 4 weeks, the
+  latter 8 % short); 3 questions (un-t1 to un-t3: a century in seconds, what a month measures, a decade in seconds).
