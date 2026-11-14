@@ -3221,3 +3221,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: k.geo 15 shards (Natural Earth and list), 3,858 -> 3,861 wires, 695,907 -> 696,264 bytes; geo import
   stats: capitals from the list 37 -> 40. Catalog 25 worlds, 937 shards, vocab 24,256 -> 24,258 words (astana,
   political continent). validate 962 files, 0 errors. npm test 2,866: 2,861 pass, 5 skipped, 0 fail.
+
+## Reviewer 06:00 (2026-11-14, second worker): the names of the three kinds of worlds in the READMEs
+
+- README.md and docs/worlds/README.md: one paragraph each (the same text) with the owner's names: world schema
+  (`w.seating`), knowledge world (`k.animals`; `w.lang.en` a knowledge world about English), live world (one running
+  instance in a session, shown through a view), and the library's `std.*` modules as mechanisms, not worlds; this
+  repository holds world schemas and knowledge worlds, never live worlds. The first sentence of README no longer uses
+  "world schemas" for the schema file of a knowledge world.
+- Only docs and the regenerated index.json (its content hash covers docs/worlds/README.md). tests/catalog.test.mjs:
+  6 pass; the full suite was 2,866 / 2,861 pass / 0 fail on the commit before, and no test reads the READMEs.

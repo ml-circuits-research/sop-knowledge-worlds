@@ -3,6 +3,15 @@
 This folder is served by GitHub Pages. Everything in it is generated or validated by the tools of the repository
 (`npm test` checks it); do not edit `index.json`, `vocab.json` or `LICENSES.md` by hand: run `node tools/build-catalog.mjs`.
 
+**Three kinds of worlds** (names used in every repository and in the library's docs): a **world schema** says what
+a kind of world is (its kinds of things, attributes, value types, acts, limits, rules and the words for them) and
+holds no particular things: `w.seating` (a seating plan: tables, seats, guests). A **knowledge world** holds facts
+about the world at large, true for everyone, with no session state: `k.animals` (a rabbit is a mammal; its young is
+a kit), and `w.lang.en`, a knowledge world about English. A **live world** is one running instance of a world schema
+in a session (the tables a user made, their seats, the focus, the history and undo); a tab shows it through a view.
+This repository holds world schemas (`w.*`) and knowledge worlds (`k.*`, `w.lang.en`), never live worlds; the
+library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) are mechanisms, not worlds.
+
 ## Files
 
 - `k.<world>/schema.sop`: the world as a sopworld module (`core.module name=k.<world>`): types, slots, rules, soft

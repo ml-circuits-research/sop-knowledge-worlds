@@ -1,8 +1,17 @@
 # sop-knowledge-worlds
 
-Reusable **knowledge worlds** for [sopworld](https://github.com/ml-circuits-research/soplang-words-lib): world
-**schemas** (types, slots, rules, soft rules) and world **instances** (facts), written in SOP Lang only, split into
-small shards, and served as static files through GitHub Pages.
+Reusable **knowledge worlds** and **world schemas** for [sopworld](https://github.com/ml-circuits-research/soplang-words-lib):
+each a module (types, slots, rules, soft rules) and, for a knowledge world, its facts, written in SOP Lang only,
+split into small shards, and served as static files through GitHub Pages.
+
+**Three kinds of worlds** (names used in every repository and in the library's docs): a **world schema** says what
+a kind of world is (its kinds of things, attributes, value types, acts, limits, rules and the words for them) and
+holds no particular things: `w.seating` (a seating plan: tables, seats, guests). A **knowledge world** holds facts
+about the world at large, true for everyone, with no session state: `k.animals` (a rabbit is a mammal; its young is
+a kit), and `w.lang.en`, a knowledge world about English. A **live world** is one running instance of a world schema
+in a session (the tables a user made, their seats, the focus, the history and undo); a tab shows it through a view.
+This repository holds world schemas (`w.*`) and knowledge worlds (`k.*`, `w.lang.en`), never live worlds; the
+library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) are mechanisms, not worlds.
 
 Applications (PSys2 first) do not copy this knowledge into their own worlds. They load a schema as a sopworld
 module and load only the instance shards that a conversation needs, when the words of a message point to them.
