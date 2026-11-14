@@ -732,3 +732,7 @@ PSys2 keeps its own English `plural` because the regular rules (`w.lang.en.infle
 ## Reviewer 2026-11-15 03:05 — third worker's round accepted
 
 Accepted 364c1a4, 0f0aa59 (part_of 5,156 and origin 148 edges; sense= on 287 edges; 13,698 edges in all), f8a9c5e (pin 0.97; Q65 recorded), 4cdbc09 (role facts and constraints for alignment), 193238c. The library is told the role/constraint facts live on `k.kinds.role` and `k.kinds.constraint`. Next third-worker round: supersenses on k.words senses (02:15) and the English regular inflection rules (02:55).
+
+## Reviewer 2026-11-15 03:20 — knowledge gaps from PSys2's Q15 (≈38 % of the failing paraphrases)
+
+Accepted 27e3ee5 (every frame reads its own example: 333 best, 10 tie, 14 listed), d7fa086 and aba40b2 (declared joins, step 1–2a). Next knowledge items (first free worker): (1) **animal sounds as a typed relation for every k.animals kind** (13/13 sound questions fail even in the original wording) — sourced, with the sound word in k.words; (2) **music notation as typed values** (note names, accidentals, chord and scale names) so "G's major scale" cannot become D; (3) **currency words** as typed values with synonyms (dollar/buck, euro, pound…); (4) drawable shapes for frequent catalog lemmas that have none (ship, cottage, thermometer, arrow: a k.objects drawing or the nearest drawable by k.kinds parent, said as such).
