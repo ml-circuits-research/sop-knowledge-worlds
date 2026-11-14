@@ -194,6 +194,47 @@ Context: writing the methods as joins to other worlds showed three holes; none b
    frame in `w.lang.en` (the second worker's world).
 Blocking: no. Meanwhile: as said above for each; `k.procedures/WORLD.md` lists them under Known limits.
 
+## Q46 (blocks "10:50" and "11:05", `k.motion`, first worker, 2026-11-14): the format of motion rules, for the library's `std.motion`
+Question: is the format below the one `std.motion` reads (`[LIB]`, for the library's block "10:50 — std.motion")? The
+library has no design note or release of `std.motion` yet (its worker-tasks.md names the block only), so this follows
+the block's words (rules as data, `on <event> [when …]`, steps that set keys for a duration range, `repeat every`,
+priorities, ease back, `per unit of <stream>` with a class table, the splitter a parameter) and is written for it to
+accept or amend.
+Context: `k.motion` (knowledge world, facts only) uses ten types, one home per fact, durations in milliseconds as pairs
+`<name>_min`/`<name>_max` (k.units.measure says `millisecond`; the unit was added to k.units):
+1. `k.motion.event name= about=` and `k.motion.field event= name= value=(many) about=`: what a host tells the face
+   (`reply` with `outcome` and `text`) and what a rule makes (`spoken`).
+2. `k.motion.layer name= priority= key=(many) about=`: the keys a layer may set; at each moment a key shows the value
+   of the highest layer that sets it, the later rule within one layer, else the host's own value (the face itself).
+3. `k.motion.rule name= layer= on= repeat_min= repeat_max= chance= during=(many) not_during=(many) until=(many) emits=`:
+   exactly one of `on` and `repeat`; `repeat`: fires after a pause drawn from the range, counted from the end of its
+   last run; `during`/`not_during`: layers that must or must not be running; `until`: events that cancel it (its keys
+   ease back at once, its pending `emits` is dropped); `emits`: an event made when its steps are done (`spoken`).
+4. `k.motion.when rule= key= of=event|state value=(many) feature= not=`: a field of the starting event, or a key of the
+   state as shown when the rule would start; `feature` compares a feature of the knowledge fact the shown value names
+   (here a k.faces variant's `feel`; "do not blink when the eyes are closed").
+5. `k.motion.step rule= n= with= onset_min/max hold_min/max hold_until back_min/max per= splitter= key=`: steps in
+   order of `n`, each after the previous has eased back, or together with step `with`; `hold_until=<event>`: the hold
+   lasts until that event, then the hold range. `per=<field>`: a stream step: the field's text is split by the
+   `splitter`, each unit sets `key` to the value its class has in the viseme table for its duration (no ramps), and
+   the key is released after the last unit.
+6. `k.motion.set rule= step= key= value= via=`: the values a step sets; `via`: what a host that only switches shows
+   during the onset and the ease back.
+7. `k.motion.viseme style= class= mouth=`, `k.motion.splitter name= fold= ignore_case= default=`, `k.motion.letters
+   splitter= name= class= letter=(many) kind=space|digit|symbol min= max=`: the class table and the splitter.
+Reading for a host that only switches: a value shows from the middle of its onset to the middle of its ease back (or
+`via` during both). Order at one moment: an event first ends the holds waiting for it, then cancels what it cancels,
+then starts the rules `on` it. The reference reader `tools/lib/motion.mjs` (a test oracle, `planMotion(motion,
+{ events, seed, end, base, features }) -> { segments, changes, stateAt }`) does exactly this; its `changes` are the
+block's `[{t, key, value}]`.
+Points for the library to decide: (a) a stream step's unit splitter: here a fact (`k.motion.splitter` and groups by
+letters and Unicode kinds); does `std.motion` take it as data, or as a named host function that the fact names?
+(b) is `via` the library's business (a host that blends ignores it) or the host's? (c) the base under every layer:
+the host's current face (here) or a value the rules give? (d) whether a cancelled step eases back from where it is
+(here) or jumps; (e) timers of repeated rules: from the end of the last run (here) or from its start.
+Blocking: no. Meanwhile: the world is written in this format, tested with the oracle; a script converts the facts if
+the library amends it.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

@@ -13,15 +13,11 @@
   <path d="M77 45 A5 3.5 0 0 1 77 52" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></path>
   <ellipse cx="50" cy="46" rx="25" ry="33" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <polygon points="75,56 72,66 64,75 50,79 36,75 28,66 25,56 32,58 36,60 50,57 64,60 68,58" fill="#75492A" stroke="#333" stroke-width="0.8"><title>shadow</title></polygon>
-  <polygon points="41,66 46,62.5 50,64 54,62.5 59,66" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>upper_lip</title></polygon>
-  <polygon points="41,66 59,66 55,70.5 50,71.5 45,70.5" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>lower_lip</title></polygon>
+  <ellipse cx="51" cy="70" rx="4" ry="4" fill="#E8788A" stroke="#333" stroke-width="0.8"><title>tongue</title></ellipse>
+  <path d="M41 63 A9 5 0 0 0 59 63" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
   <ellipse cx="50" cy="52" rx="6" ry="5" fill="#75492A" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
-  <polygon points="30,42 34,40 40,40 44,42 40,44 34,44" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></polygon>
-  <ellipse cx="37" cy="42" rx="2" ry="2" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
-  <ellipse cx="37" cy="42" rx="0.8" ry="0.8" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
-  <polygon points="70,42 66,40 60,40 56,42 60,44 66,44" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white (mirrored)</title></polygon>
-  <ellipse cx="63" cy="42" rx="2" ry="2" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>iris (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="42" rx="0.8" ry="0.8" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil (mirrored)</title></ellipse>
+  <path d="M31 41 A6 3 0 0 0 43 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
+  <path d="M57 41 A6 3 0 0 0 69 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
   <polygon points="28,33 29,29 31,30 33,27.5 35,29.5 38,27 40,29.5 43,27.5 44,30 46,29.5 45.5,34 42,33 38,34.5 33,33.5" fill="#F0F0F0" stroke="#333" stroke-width="0.8"><title>brow</title></polygon>
   <polygon points="72,33 71,29 69,30 67,27.5 65,29.5 62,27 60,29.5 57,27.5 56,30 54,29.5 54.5,34 58,33 62,34.5 67,33.5" fill="#F0F0F0" stroke="#333" stroke-width="0.8"><title>brow (mirrored)</title></polygon>
   <polygon points="20,42 21,34.2 24,27 28.8,20.8 35,16 42.2,13 50,12 57.8,13 65,16 71.2,20.8 76,27 79,34.2 80,42 82,52 76,50 73,32 62,24 50,22 38,24 27,32 24,50 18,52" fill="#F0F0F0" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>

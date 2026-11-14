@@ -15,20 +15,13 @@
   <ellipse cx="50" cy="46" rx="23" ry="34" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <ellipse cx="31" cy="57" rx="5" ry="3" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush</title></ellipse>
   <ellipse cx="69" cy="57" rx="5" ry="3" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush (mirrored)</title></ellipse>
-  <polygon points="40,71 60,71 59.2,67.9 57.1,65.3 53.8,63.6 50,63 46.2,63.6 42.9,65.3 40.8,67.9" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></polygon>
+  <ellipse cx="50" cy="66" rx="7" ry="2.5" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></ellipse>
+  <rect x="45" y="63.5" width="10" height="1.5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>teeth</title></rect>
   <polyline points="50,42 45.5,59 53,59" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></polyline>
-  <ellipse cx="37" cy="43" rx="5" ry="5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></ellipse>
-  <ellipse cx="37" cy="43" rx="2.5" ry="2.5" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
-  <ellipse cx="37" cy="43" rx="1" ry="1" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
-  <polyline points="32,39.5 30,36.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_1</title></polyline>
-  <polyline points="35,38 34,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_2</title></polyline>
-  <polyline points="39,38 40,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_3</title></polyline>
-  <ellipse cx="63" cy="43" rx="5" ry="5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="43" rx="2.5" ry="2.5" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>iris (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="43" rx="1" ry="1" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil (mirrored)</title></ellipse>
-  <polyline points="68,39.5 70,36.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_1 (mirrored)</title></polyline>
-  <polyline points="65,38 66,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_2 (mirrored)</title></polyline>
-  <polyline points="61,38 60,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_3 (mirrored)</title></polyline>
+  <rect x="31.5" y="36.5" width="11" height="11" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>socket</title></rect>
+  <rect x="33.5" y="38.5" width="7" height="7" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>light</title></rect>
+  <rect x="57.5" y="36.5" width="11" height="11" fill="#3A3A3A" stroke="#333" stroke-width="0.8"><title>socket (mirrored)</title></rect>
+  <rect x="59.5" y="38.5" width="7" height="7" fill="#7D8A96" stroke="#333" stroke-width="0.8"><title>light (mirrored)</title></rect>
   <polyline points="30,34 45,28.5" fill="none" stroke="#7A4B2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>brow</title></polyline>
   <polyline points="70,34 55,28.5" fill="none" stroke="#7A4B2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>brow (mirrored)</title></polyline>
   <polygon points="20,42 21,34.2 24,27 28.8,20.8 35,16 42.2,13 50,12 57.8,13 65,16 71.2,20.8 76,27 79,34.2 80,42 79,38 74,29 62,24 50,23 38,24 26,29 21,38" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>

@@ -3630,3 +3630,37 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   WordNet 3, act glosses 1, coverage report 2, k.geo 1, k.parts 1, DiceBear, Noto, OpenMoji, Mulberry 4, plus the
   PSys2 page 1) and 2 that need /tmp/wt2 (w.lang.en import and local frames); none needs a newer sopworld.
 - npm test 2,903: 2,898 pass, 5 skipped, 0 fail (was 2,896 pass, 7 skipped on 0.30).
+## k.motion: rules of a natural face over time (2026-11-14, first worker; blocks "10:50" and "11:05")
+
+- **The world** (`docs/worlds/k.motion`, hand-core, CC0; ranges from published measurements cited in WORLD.md): ten
+  types (event, field, layer, rule, when, step, set, viseme, splitter, letters), facts only, for the library's
+  `std.motion` (not released yet: format proposed as **Q46**, following its block "10:50"). 2 events (`reply` with
+  outcome and text, `spoken`), 4 layers (blink 4, talk 3, expression 2, glance 1), 17 rules: blink at rest / while
+  talking (Bentivoglio 1997: 17 and 26 a minute; closing faster than opening, Sforza 2008, Kwon 2013), glances left
+  and right while listening / talking (Lee, Badler and Badler 2002), say the reply (one mouth per letter, emits
+  `spoken`), and the seven outcomes (done, already, refused, not understood, answer, question, thinking) as k.faces
+  brows / eyes / mouths with onset, hold (or hold until spoken) and ease back (smile onset and offset from Schmidt
+  2006, eyebrow flash about 1/5 s); 7 classes of mouth shapes joined to k.faces mouths; one rule from written text to
+  them (`latin letters`: vowels open, o/u rounded, m/b/p closed, f/v lip-teeth, t/d/n/l tongue, spaces and punctuation
+  rest; marks folded, case ignored; durations give 184 words a minute against 164-214 measured in conversation,
+  Yuan, Liberman and Cieri 2006). Nothing in w.lang.en or w.lang.ro (a test checks it).
+- **k.faces**: 6 variants added to the style plain for this world (mouths `half open`, `pressed`, `lip bite`,
+  `tongue tip`; eyes `looking out`, `looking in`, since the eyes are a mirrored slot): 175 -> 181 variants; previews
+  regenerated. **k.units**: the unit `millisecond` (47 units); k.units.measure says the 15 numeric keys of k.motion.
+- **Reference reader** `tools/lib/motion.mjs` (a test oracle, ~190 lines): `planMotion(motion, { events, seed, end,
+  base, features })` -> segments, changes `[{t, key, value}]`, `stateAt(t)`; seeded, priorities, `via`, holds until an
+  event, cancel, emitted events, repeated rules with during / not_during and state conditions.
+- **Tests** (`tests/k.motion.test.mjs`, 10): shards fresh and load with no warning; every k.faces name exists (set
+  values and `via` in the slot of their key, viseme mouths, layer keys are k.faces.expression keys; a step that sets the
+  eyes sets `one_eye`); layers, events, fields and features exist; ranges sane and checked against their sources; the
+  owner's text rule (with capitals, marks, digits, symbols, French and German samples, 120-220 words a minute); the
+  sample plan "Done, I moved it." (letters in order, spoken at the end, smile after it, back to the face; seed
+  determinism); priorities (talking mouth over the expression's, sad brows while talking, blinks over a thinking face,
+  no blink on closed eyes); rates over time (16.4 blinks a minute at rest in 10 min, 24.4 while talking, 7 glances a
+  minute listening); a new reply cancels the last; the strip frames render; no mouth knowledge in w.lang.*.
+- **Strip**: `node tools/motion-strip.mjs /home/claude/shot/k-motion-strip.png` (27 faces of the sample reply over
+  5.7 s, preset man, seed 3: each letter's mouth, a blink while talking, the smile after "spoken", its ease back, a
+  blink at rest) and `--outcomes` (`/home/claude/shot/k-motion-outcomes.png`, one face per outcome). Not published.
+- Numbers: k.motion schema 130 wires (18,988 bytes, with the key words of tools/key-words.mjs); shards rules 80 wires
+  (15,971 bytes), mouth 19 wires (4,262 bytes); validate 0 errors, 0 warnings. k.faces plain-eyes 77 wires, plain-mouth
+  131. Catalog 27 worlds, 951 shards, 24,542 words.

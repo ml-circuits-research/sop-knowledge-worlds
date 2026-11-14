@@ -5077,6 +5077,38 @@
   {
    "style": "plain",
    "slot": "eyes",
+   "name": "looking in",
+   "file": "variant-plain-eyes-looking_in.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "looking aside"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "eyes",
+   "name": "looking out",
+   "file": "variant-plain-eyes-looking_out.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "looking aside"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "eyes",
    "name": "looking up",
    "file": "variant-plain-eyes-looking_up.svg",
    "source": "hand-core 1",
@@ -6388,6 +6420,38 @@
   {
    "style": "plain",
    "slot": "mouth",
+   "name": "half open",
+   "file": "variant-plain-mouth-half_open.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "half open"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "mouth",
+   "name": "lip bite",
+   "file": "variant-plain-mouth-lip_bite.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "closed"
+    ],
+    "kind": [
+     "teeth on lip"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "mouth",
    "name": "neutral",
    "file": "variant-plain-mouth-neutral.svg",
    "source": "hand-core 1",
@@ -6416,6 +6480,23 @@
     "feel": [
      "open",
      "surprised"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "mouth",
+   "name": "pressed",
+   "file": "variant-plain-mouth-pressed.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "closed",
+     "thick"
+    ],
+    "kind": [
+     "pressed lips"
     ]
    }
   },
@@ -6505,6 +6586,22 @@
     ],
     "kind": [
      "tongue out"
+    ]
+   }
+  },
+  {
+   "style": "plain",
+   "slot": "mouth",
+   "name": "tongue tip",
+   "file": "variant-plain-mouth-tongue_tip.svg",
+   "source": "hand-core 1",
+   "license": "CC0-1.0",
+   "features": {
+    "feel": [
+     "open"
+    ],
+    "kind": [
+     "tongue tip"
     ]
    }
   },

@@ -16,7 +16,7 @@
   <ellipse cx="50" cy="46" rx="23" ry="34" fill="#6B452B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <polygon points="31,51 33.5,56.5 31,60 28.5,56.5" fill="#6EC1FF" stroke="#333" stroke-width="0.8"><title>tear</title></polygon>
   <polygon points="69,51 66.5,56.5 69,60 71.5,56.5" fill="#6EC1FF" stroke="#333" stroke-width="0.8"><title>tear (mirrored)</title></polygon>
-  <polyline points="43,66 57,66" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>
+  <path d="M42 70 A8 5 0 0 1 58 70" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
   <path d="M44 52 A6 5 0 0 0 56 52" fill="none" stroke="#472A17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></path>
   <ellipse cx="46.8" cy="53.8" rx="0.8" ry="0.8" fill="#472A17" stroke="#333" stroke-width="0.8"><title>left_nostril</title></ellipse>
   <ellipse cx="53.2" cy="53.8" rx="0.8" ry="0.8" fill="#472A17" stroke="#333" stroke-width="0.8"><title>right_nostril</title></ellipse>

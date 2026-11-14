@@ -14,14 +14,10 @@
   <rect x="24" y="14" width="52" height="62" fill="#FBE3D0" stroke="#333" stroke-width="0.8"><title>face</title></rect>
   <ellipse cx="28" cy="18" rx="2" ry="2" fill="#DDB59B" stroke="#333" stroke-width="0.8"><title>left_bolt</title></ellipse>
   <ellipse cx="72" cy="18" rx="2" ry="2" fill="#DDB59B" stroke="#333" stroke-width="0.8"><title>right_bolt</title></ellipse>
-  <polyline points="47,66 53,66" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>
+  <polyline points="43,67 53,67 59,63" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>
   <polyline points="50,44 46.5,55 52,55" fill="none" stroke="#DDB59B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></polyline>
-  <polygon points="30,42 34,40 40,40 44,42 40,44 34,44" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></polygon>
-  <ellipse cx="37" cy="42" rx="2" ry="2" fill="#6B4226" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
-  <ellipse cx="37" cy="42" rx="0.8" ry="0.8" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
-  <polygon points="70,42 66,40 60,40 56,42 60,44 66,44" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white (mirrored)</title></polygon>
-  <ellipse cx="63" cy="42" rx="2" ry="2" fill="#6B4226" stroke="#333" stroke-width="0.8"><title>iris (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="42" rx="0.8" ry="0.8" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil (mirrored)</title></ellipse>
+  <path d="M31 41 A6 3 0 0 0 43 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
+  <path d="M57 41 A6 3 0 0 0 69 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
   <polyline points="30,34 45,28.5" fill="none" stroke="#9A4A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>brow</title></polyline>
   <polyline points="70,34 55,28.5" fill="none" stroke="#9A4A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>brow (mirrored)</title></polyline>
   <polygon points="43,24 41,12 45,5 50,4 55,5 59,12 57,24" fill="#9A4A2A" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>

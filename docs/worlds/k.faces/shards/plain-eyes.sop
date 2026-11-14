@@ -97,3 +97,15 @@
 @k.faces.plain.eyes.looking_up.white k.faces.part slot=eyes of="looking up" name=white shape=oval x=30 y=37 w=14 h=9 z=1 colour=white rgb="#FFFFFF" core.source="hand-core 1"
 @k.faces.plain.eyes.looking_up.iris k.faces.part slot=eyes of="looking up" name=iris shape=circle x=34.5 y=37.5 w=5 h=5 z=2 colour=blue colour=brown tint=eyes core.source="hand-core 1"
 @k.faces.plain.eyes.looking_up.pupil k.faces.part slot=eyes of="looking up" name=pupil shape=circle x=36 y=38.5 w=2 h=2 z=3 colour=black rgb="#1A1A1A" core.source="hand-core 1"
+
+# eyes: looking out
+@k.faces.plain.eyes.looking_out k.faces.variant slot=eyes name="looking out" style=plain feel=open kind="looking aside" core.source="hand-core 1"
+@k.faces.plain.eyes.looking_out.white k.faces.part slot=eyes of="looking out" name=white shape=oval x=30 y=38 w=14 h=8 z=1 colour=white rgb="#FFFFFF" core.source="hand-core 1"
+@k.faces.plain.eyes.looking_out.iris k.faces.part slot=eyes of="looking out" name=iris shape=circle x=31.5 y=39.5 w=5 h=5 z=2 colour=blue colour=brown tint=eyes core.source="hand-core 1"
+@k.faces.plain.eyes.looking_out.pupil k.faces.part slot=eyes of="looking out" name=pupil shape=circle x=32.5 y=41 w=2 h=2 z=3 colour=black rgb="#1A1A1A" core.source="hand-core 1"
+
+# eyes: looking in
+@k.faces.plain.eyes.looking_in k.faces.variant slot=eyes name="looking in" style=plain feel=open kind="looking aside" core.source="hand-core 1"
+@k.faces.plain.eyes.looking_in.white k.faces.part slot=eyes of="looking in" name=white shape=oval x=30 y=38 w=14 h=8 z=1 colour=white rgb="#FFFFFF" core.source="hand-core 1"
+@k.faces.plain.eyes.looking_in.iris k.faces.part slot=eyes of="looking in" name=iris shape=circle x=37.5 y=39.5 w=5 h=5 z=2 colour=blue colour=brown tint=eyes core.source="hand-core 1"
+@k.faces.plain.eyes.looking_in.pupil k.faces.part slot=eyes of="looking in" name=pupil shape=circle x=39.5 y=41 w=2 h=2 z=3 colour=black rgb="#1A1A1A" core.source="hand-core 1"

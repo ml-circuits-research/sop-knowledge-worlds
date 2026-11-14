@@ -10,8 +10,11 @@
   <ellipse cx="78.5" cy="48.5" rx="6.5" ry="6.5" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
   <path d="M77 45 A5 3.5 0 0 1 77 52" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></path>
   <ellipse cx="50" cy="48" rx="28" ry="29" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
-  <ellipse cx="51" cy="70" rx="4" ry="4" fill="#E8788A" stroke="#333" stroke-width="0.8"><title>tongue</title></ellipse>
-  <path d="M41 63 A9 5 0 0 0 59 63" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
+  <rect x="40" y="63" width="20" height="7" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>teeth</title></rect>
+  <polyline points="40,66.5 60,66.5" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>bite</title></polyline>
+  <polyline points="45,63 45,70" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_1</title></polyline>
+  <polyline points="50,63 50,70" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_2</title></polyline>
+  <polyline points="55,63 55,70" fill="none" stroke="#9AA4AE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>gap_3</title></polyline>
   <ellipse cx="50" cy="52" rx="6" ry="5" fill="#75492A" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
   <ellipse cx="37" cy="42" rx="7" ry="4" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></ellipse>
   <ellipse cx="37" cy="42" rx="2.5" ry="2.5" fill="#4E8B4A" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>

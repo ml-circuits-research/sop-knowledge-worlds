@@ -81,6 +81,12 @@ Block "09:10" (first worker): `k.procedures`, how goals are reached: 23 methods 
 with roles read off the goal, earlier steps, the live world and other knowledge worlds, preconditions, effects, order,
 alternatives by world and rank) for the library's planner `std.plan` (format: questions.md Q44; `docs/worlds/k.procedures/WORLD.md`).
 
+Blocks "10:50" and "11:05" (first worker): `k.motion`, how a drawn face moves over time: blinking and glances (ranges from
+published measurements), how a reply came out (done, already, refused, not understood, answer, question back,
+thinking) as k.faces brows, eyes and mouths with onset, hold and ease back, layers with priorities, and the mouth while
+a reply is said: seven classes of mouth shapes joined to k.faces mouths and one rule from written text to them, for the
+library's `std.motion` (format: questions.md Q46; `docs/worlds/k.motion/WORLD.md`).
+
 World schemas so far: `w.list`, `w.seating`, `w.timeline`, and (block "06:55" item 3, for the library's case
 corpus and the demo) `w.face`, a drawn face whose kinds are the slots of `k.faces`, and `w.map`, a map view over the
 places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions in `tests/w.schemas.test.mjs`). A

@@ -12,10 +12,11 @@
   <ellipse cx="50" cy="46" rx="25" ry="33" fill="#C99A6B" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
   <ellipse cx="31" cy="57" rx="5" ry="3" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush</title></ellipse>
   <ellipse cx="69" cy="57" rx="5" ry="3" fill="#F2A0A0" stroke="#333" stroke-width="0.8"><title>blush (mirrored)</title></ellipse>
-  <polyline points="39,66 61,66" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></polyline>
+  <polygon points="41,66 46,62.5 50,64 54,62.5 59,66" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>upper_lip</title></polygon>
+  <polygon points="41,66 59,66 55,70.5 50,71.5 45,70.5" fill="#B5483F" stroke="#333" stroke-width="0.8"><title>lower_lip</title></polygon>
   <ellipse cx="50" cy="53" rx="3" ry="3" fill="#A2764B" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
-  <path d="M31 41 A6 3 0 0 0 43 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
-  <path d="M57 41 A6 3 0 0 0 69 41" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
+  <path d="M31 43 A6 4 0 0 1 43 43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid</title></path>
+  <path d="M57 43 A6 4 0 0 1 69 43" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lid (mirrored)</title></path>
   <polygon points="29,33 32,29 38,27.5 44,29 45.5,32 44,33 38,31 32,32.5" fill="#9A4A2A" stroke="#333" stroke-width="0.8"><title>brow</title></polygon>
   <polygon points="71,33 68,29 62,27.5 56,29 54.5,32 56,33 62,31 68,32.5" fill="#9A4A2A" stroke="#333" stroke-width="0.8"><title>brow (mirrored)</title></polygon>
   <polyline points="45,42 44.4,45.1 42.7,47.7 40.1,49.4 37,50 33.9,49.4 31.3,47.7 29.6,45.1 29,42 29.6,38.9 31.3,36.3 33.9,34.6 37,34 40.1,34.6 42.7,36.3 44.4,38.9 45,42" fill="none" stroke="#2A2A2A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_rim</title></polyline>

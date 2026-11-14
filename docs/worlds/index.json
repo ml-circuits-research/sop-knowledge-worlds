@@ -1,5 +1,5 @@
 {
- "version": "e00632c28bf6",
+ "version": "90908d852949",
  "sopworld": "b44d444",
  "worlds": [
   {
@@ -12644,8 +12644,8 @@
     {
      "id": "k.faces/shards/plain-eyes",
      "path": "k.faces/shards/plain-eyes.sop",
-     "wires": 69,
-     "bytes": 11276,
+     "wires": 77,
+     "bytes": 12685,
      "keys": [
       "closed",
       "dot",
@@ -12662,6 +12662,8 @@
       "lid",
       "lid_edge",
       "light",
+      "looking in",
+      "looking out",
       "looking up",
       "narrow",
       "oval",
@@ -12934,8 +12936,8 @@
     {
      "id": "k.faces/shards/plain-mouth",
      "path": "k.faces/shards/plain-mouth.sop",
-     "wires": 109,
-     "bytes": 16345,
+     "wires": 131,
+     "bytes": 19810,
      "keys": [
       "big smile",
       "bite",
@@ -12947,13 +12949,16 @@
       "grille",
       "grin",
       "gritted",
+      "half open",
       "inside",
+      "lip bite",
       "lips",
       "lower_lip",
       "mouth",
       "neutral",
       "open",
       "plate",
+      "pressed",
       "sad",
       "slot_1",
       "slot_2",
@@ -12966,6 +12971,7 @@
       "teeth",
       "tongue",
       "tongue out",
+      "tongue tip",
       "upper_lip",
       "wide"
      ],
@@ -19283,6 +19289,108 @@
    "sources": [
     "hand-core-1",
     "psys2-worlds-6b63b2ba"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.motion",
+   "version": "1",
+   "schema": "k.motion/schema.sop",
+   "exports": [
+    "k.motion.event",
+    "k.motion.field",
+    "k.motion.layer",
+    "k.motion.letters",
+    "k.motion.rule",
+    "k.motion.set",
+    "k.motion.splitter",
+    "k.motion.step",
+    "k.motion.viseme",
+    "k.motion.when"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.motion/shards/mouth",
+     "path": "k.motion/shards/mouth.sop",
+     "wires": 19,
+     "bytes": 4262,
+     "keys": [
+      "clause marks",
+      "closed",
+      "digits",
+      "latin letters",
+      "lip closers",
+      "lip-teeth",
+      "lip-teeth letters",
+      "mid",
+      "open",
+      "other letters",
+      "plain",
+      "rest",
+      "rounded",
+      "rounded vowels",
+      "sentence marks",
+      "spaces",
+      "symbols",
+      "tongue",
+      "tongue letters",
+      "vowels"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.motion/shards/rules",
+     "path": "k.motion/shards/rules.sop",
+     "wires": 80,
+     "bytes": 15971,
+     "keys": [
+      "already: eyebrow flash",
+      "already: small smile",
+      "answer: eyebrow flash",
+      "blink",
+      "blink at rest",
+      "blink while talking",
+      "done: smile",
+      "expression",
+      "eyebrows",
+      "eyes",
+      "glance",
+      "glance left while listening",
+      "glance left while talking",
+      "glance right while listening",
+      "glance right while talking",
+      "mouth",
+      "not understood: raised brows",
+      "not understood: small mouth",
+      "one_eye",
+      "outcome",
+      "question: raised brows",
+      "refused: sad brows",
+      "refused: sad mouth",
+      "reply",
+      "say the reply",
+      "spoken",
+      "talk",
+      "text",
+      "thinking: look up"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
    ],
    "licenses": [
     "CC0-1.0"
@@ -36879,8 +36987,8 @@
     {
      "id": "k.units/shards/core",
      "path": "k.units/shards/core.sop",
-     "wires": 100,
-     "bytes": 13101,
+     "wires": 102,
+     "bytes": 13367,
      "keys": [
       "acre",
       "angle",
@@ -36917,6 +37025,7 @@
       "milligram",
       "millilitre",
       "millimetre",
+      "millisecond",
       "minute",
       "ounce",
       "pint",
@@ -36946,8 +37055,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 174,
-     "bytes": 24434,
+     "wires": 189,
+     "bytes": 26447,
      "keys": [
       "after",
       "age_years_about",
@@ -36961,8 +37070,11 @@
       "arity",
       "as_of",
       "at",
+      "back_max",
+      "back_min",
       "binding",
       "body",
+      "chance",
       "child_count",
       "city",
       "class",
@@ -37001,6 +37113,8 @@
       "h",
       "has",
       "height_about",
+      "hold_max",
+      "hold_min",
       "hour",
       "hour12",
       "inflect",
@@ -37014,6 +37128,7 @@
       "k.faces",
       "k.geo",
       "k.layouts",
+      "k.motion",
       "k.objects",
       "k.parts",
       "k.people",
@@ -37029,10 +37144,12 @@
       "kind",
       "lake",
       "lat",
+      "layer",
       "leap_days",
       "legs",
       "length",
       "length_about",
+      "letters",
       "light_years_about",
       "lightness",
       "lon",
@@ -37050,6 +37167,8 @@
       "number",
       "numeral",
       "offset",
+      "onset_max",
+      "onset_min",
       "orbit_days_about",
       "orbit_years",
       "order",
@@ -37066,12 +37185,16 @@
       "pron",
       "range",
       "rank",
+      "repeat_max",
+      "repeat_min",
       "river",
+      "rule",
       "saturation",
       "scale",
       "sea",
       "season",
       "sense",
+      "set",
       "shade",
       "shape",
       "sides",
@@ -37099,6 +37222,7 @@
       "weight_about",
       "west",
       "wheels",
+      "with",
       "x",
       "y",
       "z"

@@ -14,6 +14,7 @@ import { parse } from './sopworld/sopworld.mjs';
 const SRC = 'hand-core 1';
 const deg = { unit: 'degree' }, km2 = { unit: 'square kilometre' };
 const ord = { ordinal: true };
+const ms = { unit: 'millisecond' };
 const box = (frame) => ({ x: { frame }, y: { frame }, w: { frame }, h: { frame } });
 const BOX = { lat: deg, lon: deg, west: deg, south: deg, east: deg, north: deg };
 export const MEASURES = {
@@ -58,6 +59,8 @@ export const MEASURES = {
     'ellipsis.lead': { order: ord }, 'ellipsis.trail': { order: ord }, 'ellipsis.param': { value: { counts: 'word or part that the name of the limit says' }, min: { counts: 'word or part that the name of the limit says' }, max: { counts: 'word or part that the name of the limit says' } },
     'coord.param': { value: { counts: 'word' } },
   },
+  // k.motion: durations in milliseconds; layer priorities and step numbers are orders; a chance is a plain number.
+  'k.motion': { layer: { priority: ord }, rule: { repeat_min: ms, repeat_max: ms, chance: { plain: true } }, step: { n: ord, with: ord, onset_min: ms, onset_max: ms, hold_min: ms, hold_max: ms, back_min: ms, back_max: ms }, set: { step: ord }, letters: { min: ms, max: ms } },
   // k.procedures: step numbers and ranks are orders; a default or a literal filler is the number the role takes.
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord }, step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
 };

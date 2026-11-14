@@ -366,6 +366,7 @@
   "k.attributes/schema.sop",
   "k.body/schema.sop",
   "k.layouts/schema.sop",
+  "k.motion/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/tasks",
   "k.space/schema.sop",
@@ -2005,6 +2006,12 @@
  "already": [
   "k.words/shards/al"
  ],
+ "already: eyebrow flash": [
+  "k.motion/shards/rules"
+ ],
+ "already: small smile": [
+  "k.motion/shards/rules"
+ ],
  "alright": [
   "k.words/shards/al"
  ],
@@ -2639,7 +2646,11 @@
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-06"
  ],
+ "animate": [
+  "k.motion/schema.sop"
+ ],
  "animation": [
+  "k.motion/schema.sop",
   "k.words/shards/an"
  ],
  "ankara": [
@@ -2733,6 +2744,9 @@
   "k.actions/shards/actions-mind-talk",
   "k.feelings/schema.sop",
   "k.words/shards/an"
+ ],
+ "answer: eyebrow flash": [
+  "k.motion/shards/rules"
  ],
  "answered": [
   "k.actions/shards/actions-mind-talk"
@@ -4980,6 +4994,12 @@
  "back hair": [
   "w.face/schema.sop"
  ],
+ "back max": [
+  "k.motion/schema.sop"
+ ],
+ "back min": [
+  "k.motion/schema.sop"
+ ],
  "back to": [
   "w.lang.en/shards/grammar"
  ],
@@ -5012,6 +5032,12 @@
  ],
  "back_leg_2": [
   "k.objects/shards/animals-2"
+ ],
+ "back_max": [
+  "k.units/shards/measures"
+ ],
+ "back_min": [
+  "k.units/shards/measures"
  ],
  "back_row": [
   "k.layouts/shards/layouts"
@@ -8931,10 +8957,22 @@
   "k.words/shards/bl"
  ],
  "blink": [
+  "k.motion/schema.sop",
+  "k.motion/shards/rules",
   "k.words/shards/bl"
  ],
+ "blink at rest": [
+  "k.motion/shards/rules"
+ ],
+ "blink while talking": [
+  "k.motion/shards/rules"
+ ],
  "blinking": [
+  "k.motion/schema.sop",
   "k.words/shards/bl"
+ ],
+ "blinks": [
+  "k.motion/schema.sop"
  ],
  "bliss": [
   "k.words/shards/bl"
@@ -15289,6 +15327,8 @@
   "k.objects/shards/noto-award-medal-01"
  ],
  "chance": [
+  "k.motion/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/ch"
  ],
  "chancellor": [
@@ -17198,6 +17238,7 @@
   "k.animals/schema.sop",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
+  "k.motion/schema.sop",
   "k.objects/shards/mulberry-building-equipment-and-devices-01",
   "k.objects/shards/mulberry-building-furniture-04",
   "k.objects/shards/mulberry-clothes-accessories-02",
@@ -17253,6 +17294,9 @@
  ],
  "clause": [
   "k.words/shards/cl"
+ ],
+ "clause marks": [
+  "k.motion/shards/mouth"
  ],
  "claw": [
   "k.words/shards/cl"
@@ -17589,6 +17633,7 @@
  "closed": [
   "k.actions/shards/actions-hands",
   "k.faces/shards/plain-eyes",
+  "k.motion/shards/mouth",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-mail-01",
@@ -23501,6 +23546,7 @@
  ],
  "default": [
   "k.attributes/schema.sop",
+  "k.motion/schema.sop",
   "k.procedures/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/de"
@@ -24504,6 +24550,9 @@
  "digit2": [
   "k.objects/shards/noto-office-01",
   "k.objects/shards/noto-place-building-03"
+ ],
+ "digits": [
+  "k.motion/shards/mouth"
  ],
  "dignity": [
   "k.words/shards/di"
@@ -25638,6 +25687,9 @@
   "k.procedures/shards/tasks",
   "k.words/shards/do",
   "w.list/schema.sop"
+ ],
+ "done: smile": [
+  "k.motion/shards/rules"
  ],
  "donets": [
   "k.geo/shards/europe"
@@ -26914,6 +26966,7 @@
   "k.geo/shards/north-america"
  ],
  "during": [
+  "k.motion/schema.sop",
   "k.time/schema.sop",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
@@ -28233,6 +28286,9 @@
  "emissary": [
   "k.words/shards/em"
  ],
+ "emits": [
+  "k.motion/schema.sop"
+ ],
  "emlembe": [
   "k.geo/shards/africa"
  ],
@@ -29078,10 +29134,12 @@
   "k.layouts/shards/layouts"
  ],
  "event": [
+  "k.motion/schema.sop",
   "k.words/shards/ev",
   "w.timeline/schema.sop"
  ],
  "events": [
+  "k.motion/schema.sop",
   "w.timeline/schema.sop"
  ],
  "eventually": [
@@ -29451,6 +29509,7 @@
  "expression": [
   "k.faces/schema.sop",
   "k.feelings/schema.sop",
+  "k.motion/shards/rules",
   "k.words/shards/ex",
   "w.face/schema.sop"
  ],
@@ -29609,6 +29668,7 @@
   "k.faces/shards/toon-head-slots",
   "k.feelings/schema.sop",
   "k.layouts/shards/layouts",
+  "k.motion/shards/rules",
   "w.face/schema.sop"
  ],
  "eyeglasses": [
@@ -29657,6 +29717,7 @@
   "k.faces/shards/toon-head-slots",
   "k.feelings/schema.sop",
   "k.layouts/shards/layouts",
+  "k.motion/shards/rules",
   "k.objects/shards/animals",
   "k.objects/shards/figures",
   "k.parts/shards/psys2",
@@ -30383,6 +30444,7 @@
  ],
  "feature": [
   "k.attributes/schema.sop",
+  "k.motion/schema.sop",
   "k.words/shards/fe"
  ],
  "features": [
@@ -32411,6 +32473,7 @@
  "fold": [
   "k.actions/shards/actions-make-change",
   "k.faces/shards/plain-ears",
+  "k.motion/schema.sop",
   "k.objects/shards/food-2",
   "k.objects/shards/things-3",
   "k.words/shards/fo"
@@ -35494,7 +35557,20 @@
   "k.words/shards/gl"
  ],
  "glance": [
+  "k.motion/shards/rules",
   "k.words/shards/gl"
+ ],
+ "glance left while listening": [
+  "k.motion/shards/rules"
+ ],
+ "glance left while talking": [
+  "k.motion/shards/rules"
+ ],
+ "glance right while listening": [
+  "k.motion/shards/rules"
+ ],
+ "glance right while talking": [
+  "k.motion/shards/rules"
  ],
  "gland": [
   "k.words/shards/gl"
@@ -38083,6 +38159,9 @@
  "half of them": [
   "k.values/shards/sets"
  ],
+ "half open": [
+  "k.faces/shards/plain-mouth"
+ ],
  "half orange fruit": [
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-h",
@@ -40545,11 +40624,26 @@
   "k.people/schema.sop",
   "k.words/shards/ho"
  ],
+ "hold max": [
+  "k.motion/schema.sop"
+ ],
+ "hold min": [
+  "k.motion/schema.sop"
+ ],
  "hold on to": [
   "k.actions/shards/verbs-save"
  ],
  "hold tight": [
   "k.actions/shards/actions-body-social-nature"
+ ],
+ "hold until": [
+  "k.motion/schema.sop"
+ ],
+ "hold_max": [
+  "k.units/shards/measures"
+ ],
+ "hold_min": [
+  "k.units/shards/measures"
  ],
  "holdall": [
   "k.attributes/shards/drawn-mulberry",
@@ -42350,6 +42444,9 @@
  ],
  "ignore": [
   "k.words/shards/ig"
+ ],
+ "ignore case": [
+  "k.motion/schema.sop"
  ],
  "igombe": [
   "k.geo/shards/africa"
@@ -45382,6 +45479,9 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes"
  ],
+ "k.motion": [
+  "k.units/shards/measures"
+ ],
  "k.objects": [
   "k.units/shards/measures"
  ],
@@ -45998,6 +46098,7 @@
   "k.attributes/shards/same-k",
   "k.attributes/shards/things-objects",
   "k.layouts/shards/joins",
+  "k.motion/schema.sop",
   "k.objects/shards/noto-food-fruit-01",
   "k.objects/shards/noto-lock-01",
   "k.parts/shards/k",
@@ -46373,6 +46474,7 @@
   "k.geo/schema.sop",
   "k.kinds/schema.sop",
   "k.layouts/schema.sop",
+  "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/from-knowledge",
@@ -48320,6 +48422,9 @@
  "latin": [
   "k.words/shards/la"
  ],
+ "latin letters": [
+  "k.motion/shards/mouth"
+ ],
  "latino": [
   "k.words/shards/la"
  ],
@@ -48483,10 +48588,15 @@
   "k.procedures/shards/tasks"
  ],
  "layer": [
+  "k.motion/schema.sop",
   "k.objects/shards/things-3",
+  "k.units/shards/measures",
   "k.wearables/schema.sop",
   "k.words/shards/la",
   "w.map/schema.sop"
+ ],
+ "layers": [
+  "k.motion/schema.sop"
  ],
  "laying": [
   "k.words/shards/la"
@@ -49981,6 +50091,7 @@
   "k.attributes/shards/things-objects",
   "k.attributes/shards/usage",
   "k.layouts/shards/joins",
+  "k.motion/schema.sop",
   "k.objects/shards/mulberry-work-and-school-stationery-02",
   "k.objects/shards/noto-mail-01",
   "k.objects/shards/noto-mail-02",
@@ -49992,6 +50103,7 @@
   "k.objects/shards/structures"
  ],
  "letters": [
+  "k.units/shards/measures",
   "k.words/shards/le"
  ],
  "letting": [
@@ -50865,6 +50977,21 @@
   "k.objects/shards/mulberry-healthcare-grooming-items-04",
   "k.scenes/shards/things-l"
  ],
+ "lip bite": [
+  "k.faces/shards/plain-mouth"
+ ],
+ "lip closers": [
+  "k.motion/shards/mouth"
+ ],
+ "lip sync": [
+  "k.motion/schema.sop"
+ ],
+ "lip-teeth": [
+  "k.motion/shards/mouth"
+ ],
+ "lip-teeth letters": [
+  "k.motion/shards/mouth"
+ ],
  "lipetsk": [
   "k.geo/shards/psys2-cities-europe"
  ],
@@ -51518,6 +51645,12 @@
  "looking": [
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/lo"
+ ],
+ "looking in": [
+  "k.faces/shards/plain-eyes"
+ ],
+ "looking out": [
+  "k.faces/shards/plain-eyes"
  ],
  "looking up": [
   "k.faces/shards/plain-eyes"
@@ -54136,6 +54269,7 @@
   "k.geo/shards/asia"
  ],
  "max": [
+  "k.motion/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/ma"
  ],
@@ -55303,6 +55437,9 @@
   "k.scenes/shards/things-m",
   "k.words/shards/mi"
  ],
+ "mid": [
+  "k.motion/shards/mouth"
+ ],
  "midday": [
   "k.time/shards/clock",
   "k.words/shards/mi"
@@ -55740,6 +55877,15 @@
  "millipedes": [
   "k.animals/shards/invertebrates"
  ],
+ "millisec": [
+  "k.units/shards/core"
+ ],
+ "millisecond": [
+  "k.units/shards/core"
+ ],
+ "milliseconds": [
+  "k.units/shards/core"
+ ],
  "mills": [
   "k.words/shards/mi"
  ],
@@ -55775,6 +55921,7 @@
  "min": [
   "k.attributes/shards/same-m",
   "k.geo/shards/asia",
+  "k.motion/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/mi"
  ],
@@ -57325,6 +57472,7 @@
   "k.words/shards/mo"
  ],
  "motion": [
+  "k.motion/schema.sop",
   "k.words/shards/mo"
  ],
  "motivate": [
@@ -58121,6 +58269,8 @@
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
+  "k.motion/schema.sop",
+  "k.motion/shards/rules",
   "k.objects/shards/animals",
   "k.objects/shards/animals-2",
   "k.objects/shards/figures",
@@ -58149,6 +58299,12 @@
  "mouth organ": [
   "k.objects/shards/things-3"
  ],
+ "mouth shape": [
+  "k.motion/schema.sop"
+ ],
+ "mouth shapes": [
+  "k.motion/schema.sop"
+ ],
  "mouthful": [
   "k.words/shards/mo"
  ],
@@ -58169,6 +58325,7 @@
  "move": [
   "k.actions/shards/actions-move",
   "k.actions/shards/verbs-place",
+  "k.motion/schema.sop",
   "k.objects/shards/noto-transport-ground-04",
   "k.words/shards/mo"
  ],
@@ -58177,6 +58334,9 @@
  ],
  "movement": [
   "k.words/shards/mo"
+ ],
+ "moves": [
+  "k.motion/schema.sop"
  ],
  "movie": [
   "k.objects/shards/noto-food-prepared-04",
@@ -58796,6 +58956,7 @@
  ],
  "n": [
   "k.attributes/shards/aspects",
+  "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/tasks",
@@ -58948,6 +59109,7 @@
   "k.attributes/shards/attributes",
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
+  "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/from-knowledge",
@@ -60557,6 +60719,7 @@
   "k.feelings/shards/feelings"
  ],
  "not": [
+  "k.motion/schema.sop",
   "k.objects/shards/noto-sound-02",
   "k.objects/shards/noto-time-01",
   "k.procedures/schema.sop",
@@ -60567,6 +60730,9 @@
  ],
  "not at all": [
   "k.values/shards/psys2"
+ ],
+ "not during": [
+  "k.motion/schema.sop"
  ],
  "not filled": [
   "k.values/shards/fills"
@@ -60579,6 +60745,12 @@
  ],
  "not really": [
   "k.values/shards/psys2"
+ ],
+ "not understood: raised brows": [
+  "k.motion/shards/rules"
+ ],
+ "not understood: small mouth": [
+  "k.motion/shards/rules"
  ],
  "notary": [
   "k.words/shards/no"
@@ -61615,6 +61787,7 @@
  "of": [
   "k.actions/shards/verbs-change",
   "k.faces/schema.sop",
+  "k.motion/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/from-knowledge",
   "k.time/schema.sop",
@@ -61979,6 +62152,7 @@
   "k.commonsense/schema.sop",
   "k.layouts/schema.sop",
   "k.layouts/shards/layouts",
+  "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
@@ -62123,6 +62297,9 @@
   "k.scenes/shards/things-o",
   "k.wearables/shards/wearables"
  ],
+ "one_eye": [
+  "k.motion/shards/rules"
+ ],
  "onega": [
   "k.geo/shards/europe"
  ],
@@ -62167,6 +62344,18 @@
  "onon": [
   "k.geo/shards/europe"
  ],
+ "onset max": [
+  "k.motion/schema.sop"
+ ],
+ "onset min": [
+  "k.motion/schema.sop"
+ ],
+ "onset_max": [
+  "k.units/shards/measures"
+ ],
+ "onset_min": [
+  "k.units/shards/measures"
+ ],
  "onto": [
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
@@ -62186,6 +62375,7 @@
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-load",
   "k.faces/shards/plain-mouth",
+  "k.motion/shards/mouth",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-mail-02",
@@ -62740,6 +62930,9 @@
   "k.words/shards/ot",
   "w.lang.en/shards/grammar"
  ],
+ "other letters": [
+  "k.motion/shards/mouth"
+ ],
  "others": [
   "k.values/shards/sets",
   "w.lang.en/shards/grammar"
@@ -62840,6 +63033,7 @@
  ],
  "outcome": [
   "k.actions/schema.sop",
+  "k.motion/shards/rules",
   "k.words/shards/ou"
  ],
  "outdoor scene": [
@@ -65380,6 +65574,9 @@
  "pepsi": [
   "k.words/shards/pe"
  ],
+ "per": [
+  "k.motion/schema.sop"
+ ],
  "perceive": [
   "k.words/shards/pe"
  ],
@@ -67429,6 +67626,7 @@
  ],
  "plain": [
   "k.faces/shards/slots",
+  "k.motion/shards/mouth",
   "k.parts/schema.sop",
   "k.units/schema.sop",
   "k.words/shards/pl"
@@ -69442,7 +69640,8 @@
   "k.actions/shards/actions-hands"
  ],
  "pressed": [
-  "k.actions/shards/actions-hands"
+  "k.actions/shards/actions-hands",
+  "k.faces/shards/plain-mouth"
  ],
  "presses": [
   "k.actions/shards/actions-hands"
@@ -69645,6 +69844,7 @@
   "k.words/shards/pr"
  ],
  "priority": [
+  "k.motion/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/pr"
  ],
@@ -70970,6 +71170,9 @@
  ],
  "question words": [
   "w.lang.en/schema.sop"
+ ],
+ "question: raised brows": [
+  "k.motion/shards/rules"
  ],
  "questioning": [
   "k.words/shards/qu"
@@ -72545,6 +72748,12 @@
   "k.objects/shards/mulberry-transport-road-03",
   "k.scenes/shards/things-r"
  ],
+ "refused: sad brows": [
+  "k.motion/shards/rules"
+ ],
+ "refused: sad mouth": [
+  "k.motion/shards/rules"
+ ],
  "regain": [
   "k.words/shards/re"
  ],
@@ -72919,6 +73128,18 @@
   "k.actions/shards/verbs-copy",
   "k.words/shards/re"
  ],
+ "repeat max": [
+  "k.motion/schema.sop"
+ ],
+ "repeat min": [
+  "k.motion/schema.sop"
+ ],
+ "repeat_max": [
+  "k.units/shards/measures"
+ ],
+ "repeat_min": [
+  "k.units/shards/measures"
+ ],
  "repeating": [
   "k.words/shards/re"
  ],
@@ -72958,6 +73179,7 @@
  "reply": [
   "k.actions/shards/actions-mind-talk",
   "k.feelings/schema.sop",
+  "k.motion/shards/rules",
   "k.words/shards/re"
  ],
  "report": [
@@ -73439,6 +73661,7 @@
  ],
  "rest": [
   "k.actions/shards/actions-body-social-nature",
+  "k.motion/shards/mouth",
   "k.words/shards/re"
  ],
  "restart": [
@@ -75887,7 +76110,11 @@
   "k.scenes/shards/things-r"
  ],
  "rounded": [
+  "k.motion/shards/mouth",
   "k.shapes/schema.sop"
+ ],
+ "rounded vowels": [
+  "k.motion/shards/mouth"
  ],
  "roundhouse": [
   "k.objects/shards/noto-place-building-01"
@@ -76110,6 +76337,7 @@
  ],
  "rule": [
   "k.objects/shards/noto-office-03",
+  "k.units/shards/measures",
   "k.words/shards/ru"
  ],
  "ruler": [
@@ -77754,6 +77982,9 @@
  "say thank you": [
   "k.actions/shards/actions-body-social-nature"
  ],
+ "say the reply": [
+  "k.motion/shards/rules"
+ ],
  "saying": [
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/sa"
@@ -79165,6 +79396,9 @@
  "sentence": [
   "k.words/shards/se"
  ],
+ "sentence marks": [
+  "k.motion/shards/mouth"
+ ],
  "senti": [
   "k.words/shards/se"
  ],
@@ -79370,6 +79604,7 @@
   "k.actions/shards/verbs-change",
   "k.actions/shards/verbs-place",
   "k.objects/shards/noto-office-03",
+  "k.units/shards/measures",
   "k.words/shards/se"
  ],
  "set a table": [
@@ -83678,6 +83913,9 @@
  "spaceman": [
   "k.people/shards/roles-jobs"
  ],
+ "spaces": [
+  "k.motion/shards/mouth"
+ ],
  "spaceship": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
@@ -84241,6 +84479,9 @@
  "split up": [
   "k.actions/shards/verbs-take_apart"
  ],
+ "splitter": [
+  "k.motion/schema.sop"
+ ],
  "splitting": [
   "k.words/shards/sp"
  ],
@@ -84277,6 +84518,7 @@
  ],
  "spoken": [
   "k.geo/schema.sop",
+  "k.motion/shards/rules",
   "k.words/shards/sp"
  ],
  "spokes": [
@@ -85584,6 +85826,7 @@
  "step": [
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
+  "k.motion/schema.sop",
   "k.objects/shards/places-2",
   "k.procedures/schema.sop",
   "k.units/shards/measures",
@@ -87997,6 +88240,9 @@
   "k.units/schema.sop",
   "k.words/shards/sy"
  ],
+ "symbols": [
+  "k.motion/shards/mouth"
+ ],
  "symmetric": [
   "k.shapes/schema.sop"
  ],
@@ -88613,6 +88859,7 @@
  ],
  "talk": [
   "k.actions/shards/actions-mind-talk",
+  "k.motion/shards/rules",
   "k.objects/shards/noto-animal-bird-03",
   "k.words/shards/ta"
  ],
@@ -89837,6 +90084,7 @@
   "k.words/shards/te"
  ],
  "text": [
+  "k.motion/shards/rules",
   "k.procedures/shards/tasks",
   "k.words/shards/te",
   "w.list/schema.sop"
@@ -90284,6 +90532,9 @@
  "thinking": [
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/th"
+ ],
+ "thinking: look up": [
+  "k.motion/shards/rules"
  ],
  "thinks": [
   "k.actions/shards/actions-mind-talk"
@@ -91722,13 +91973,20 @@
   "k.attributes/shards/same-t",
   "k.body/shards/core",
   "k.faces/shards/plain-mouth",
+  "k.motion/shards/mouth",
   "k.objects/shards/noto-animal-mammal-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/things-3",
   "k.parts/shards/psys2",
   "k.words/shards/to"
  ],
+ "tongue letters": [
+  "k.motion/shards/mouth"
+ ],
  "tongue out": [
+  "k.faces/shards/plain-mouth"
+ ],
+ "tongue tip": [
   "k.faces/shards/plain-mouth"
  ],
  "tongues": [
@@ -95016,6 +95274,7 @@
   "k.actions/shards/actions-hands"
  ],
  "until": [
+  "k.motion/schema.sop",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
@@ -95523,6 +95782,7 @@
  "value": [
   "k.actions/schema.sop",
   "k.actions/shards/acts",
+  "k.motion/schema.sop",
   "k.procedures/schema.sop",
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
@@ -96230,6 +96490,7 @@
   "k.words/shards/vi"
  ],
  "via": [
+  "k.motion/schema.sop",
   "w.lang.en/shards/hand-joins"
  ],
  "viagra": [
@@ -96580,6 +96841,12 @@
  "visakhapatnam": [
   "k.geo/shards/psys2-cities-asia"
  ],
+ "viseme": [
+  "k.motion/schema.sop"
+ ],
+ "visemes": [
+  "k.motion/schema.sop"
+ ],
  "vishera": [
   "k.geo/shards/europe"
  ],
@@ -96824,6 +97091,9 @@
  ],
  "vow": [
   "k.words/shards/vo"
+ ],
+ "vowels": [
+  "k.motion/shards/mouth"
  ],
  "voyage": [
   "k.words/shards/vo"
@@ -99554,7 +99824,9 @@
   "k.actions/schema.sop",
   "k.actions/shards/verbs-ask",
   "k.actions/shards/verbs-change",
+  "k.motion/schema.sop",
   "k.parts/schema.sop",
+  "k.units/shards/measures",
   "w.lang.en/shards/prepositions",
   "w.seating/schema.sop"
  ],

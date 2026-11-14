@@ -51,9 +51,9 @@ Sixteen slots, in draw order: `hair_back`, `shoulders`, `neck`, `ears`, `head`, 
 | hair_back | long straight, long wavy, long curly, bob, ponytail, pigtails, bun, afro |
 | hair_front | short, fringe, side parting, curly, spikes, bald on top, receding, centre parting, long sides, wavy, mohawk, tuft |
 | eyebrows | straight, thick, arched, thick arched, angry, sad, bushy, raised, short |
-| eyes | round, dot, large, oval, narrow, closed, happy, surprised, sleepy, lashes, square |
+| eyes | round, dot, large, oval, narrow, closed, happy, surprised, sleepy, lashes, square, downcast, looking up, looking out, looking in |
 | nose | small, medium, long, wide, button, pointed, round, bolt |
-| mouth | smile, big smile, neutral, sad, open, talking, small, wide, smirk, full lips, grin, tongue out, frown, grille |
+| mouth | smile, big smile, neutral, sad, open, talking, small, wide, smirk, full lips, grin, tongue out, frown, grille, gritted, half open, pressed, lip bite, tongue tip |
 | cheeks | blush, round blush, freckles, dimple, wrinkles, scar, mole |
 | beard | full, short, chinstrap, goatee, long, soul patch, sideburns, stubble |
 | moustache | thin, thick, handlebar, walrus, pencil, chevron |
@@ -61,7 +61,7 @@ Sixteen slots, in draw order: `hair_back`, `shoulders`, `neck`, `ears`, `head`, 
 | hat | cap, beanie, top hat, crown, cowboy hat, party hat, bow, antenna, sun hat; work hats and hats of stories: chef hat, hard hat, fire helmet, police cap, pilot cap, nurse cap, sailor cap, military helmet, space helmet, knight helmet, pirate hat, witch hat, wizard hat, Santa hat, beret, fedora, swimming cap, judge wig, headscarf, flower wreath |
 | earrings | stud, hoop, drop, pearl, large hoop, star, bolt |
 
-175 variants (Round 7 added 20 hats and 17 kinds of clothes so that a job shows on the face, and for the feelings the eyes `downcast` and `looking up`, the mouth `gritted` and the cheeks `tear`). Colours: 11 skin (6 natural), 13 hair (8 natural), 10 eyes (7 natural), 11 clothes. Presets: child,
+181 variants (Round 7 added 20 hats and 17 kinds of clothes so that a job shows on the face, and for the feelings the eyes `downcast` and `looking up`, the mouth `gritted` and the cheeks `tear`; `k.motion` added the mouths `half open`, `pressed`, `lip bite` and `tongue tip` for its classes of mouth shapes, and the eyes `looking out` and `looking in`: the slot is mirrored, so a glance to one side is one of them for the eye on the viewer's left and the other as `one_eye`). Colours: 11 skin (6 natural), 13 hair (8 natural), 10 eyes (7 natural), 11 clothes. Presets: child,
 girl, boy, woman, man, old woman, old man, bearded man, woman with curly hair, robot, alien, clown, queen.
 Expressions: happy, sad, angry, surprised, sleepy, wink, talking.
 

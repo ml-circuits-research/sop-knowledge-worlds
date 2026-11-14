@@ -263,3 +263,23 @@ learnt about making worlds that other worlds and hosts can combine, not what was
   labelled drawing (2,000 goals in 7 s) with a 330-line oracle found what the proposal had left open (is the history
   read before the plan or during it; "this or that" as a binding; "not this value") before the library writes the
   planner; those points went into Q44 instead of into the library's code.
+
+## k.motion (first worker, blocks "10:50" and "11:05"): a face over time as knowledge
+
+- **The drawing's conventions leak into the rules that use it.** The eyes of k.faces are one mirrored variant, so a
+  glance to one side cannot be one variant: it is "looking out" for the eye on the viewer's left and "looking in" as
+  `one_eye`. And every step that sets the eyes must also set the other eye, or a lower layer (a glance) shows through on
+  it. A world that names another world's parts must know how those parts are drawn; a test now says it.
+- **Priorities replace sequencing, but a hidden onset is a wasted measurement.** With the talking mouth above the
+  expression's mouth, one rule held "until spoken" would show a sad mouth only after the text; but its measured onset
+  would run invisibly under the talking. So the mouths start on the event `spoken`, the brows on `reply`: write a
+  measured duration only where it can be seen.
+- **A cited number belongs in a test that recomputes it.** The blink ranges are checked back to the source's means
+  (17 a minute at rest, 26 in conversation, from the pause and the blink length), and a ten-minute seeded run gives
+  16.4 and 24.4. Without that the range and the citation drift apart at the first retune.
+- **A rule over text is a class table plus Unicode kinds, not lists per language**: eleven groups (letters by class,
+  then space, digit, symbol, the rest as one default) with marks folded and case ignored cover any Latin-script text,
+  and the speaking rate comes out at 184 words a minute against 164-214 measured in conversation.
+- **Join by value, not by import**: k.motion names k.faces variants as values and does not import k.faces, so a host
+  can animate a face of another source with the same rules; the names are checked by a test, and a missing unit
+  (milliseconds) was caught by the measures test, not by reading.

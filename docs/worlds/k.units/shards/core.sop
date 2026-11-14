@@ -1,4 +1,4 @@
-# k.units/shards/core: 8 quantities and 46 units with their factor to the base unit (length, mass, time, volume, area,
+# k.units/shards/core: 8 quantities and 47 units with their factor to the base unit (length, mass, time, volume, area,
 # temperature, speed, angle), and words for their plural and other spellings.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
@@ -29,6 +29,7 @@
 @k.units.unit.tonne k.units.unit name=tonne symbol=t quantity=mass factor=1000 system=metric core.source="hand-core 1"
 @k.units.unit.ounce k.units.unit name=ounce symbol=oz quantity=mass factor=0.028349523125 system=imperial core.source="hand-core 1"
 @k.units.unit.pound k.units.unit name=pound symbol=lb quantity=mass factor=0.45359237 system=imperial core.source="hand-core 1"
+@k.units.unit.millisecond k.units.unit name=millisecond symbol=ms quantity=time factor=0.001 system=metric core.source="hand-core 1"
 @k.units.unit.second k.units.unit name=second symbol=s quantity=time factor=1 system=metric core.source="hand-core 1"
 @k.units.unit.minute k.units.unit name=minute symbol=min quantity=time factor=60 system=other core.source="hand-core 1"
 @k.units.unit.hour k.units.unit name=hour symbol=h quantity=time factor=3600 system=other core.source="hand-core 1"
@@ -75,6 +76,7 @@
 @k.units.word.tonne core.word text=tonnes means=tonne of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.ounce core.word text=ounces text=oz means=ounce of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.pound core.word text=pounds text=lb means=pound of=k.units.unit.name core.source="hand-core 1"
+@k.units.word.millisecond core.word text=milliseconds text=millisec means=millisecond of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.second core.word text=seconds means=second of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.minute core.word text=minutes means=minute of=k.units.unit.name core.source="hand-core 1"
 @k.units.word.hour core.word text=hours means=hour of=k.units.unit.name core.source="hand-core 1"

@@ -12,15 +12,21 @@
   <ellipse cx="80" cy="50" rx="8" ry="11" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>ear (mirrored)</title></ellipse>
   <path d="M79 44 A6 6 0 0 1 79 56" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fold (mirrored)</title></path>
   <ellipse cx="50" cy="46" rx="23" ry="34" fill="#9A6A44" stroke="#333" stroke-width="0.8"><title>face</title></ellipse>
-  <path d="M42 70 A8 5 0 0 1 58 70" fill="none" stroke="#B5483F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lips</title></path>
+  <ellipse cx="50" cy="67" rx="4" ry="5" fill="#6E1F24" stroke="#333" stroke-width="0.8"><title>inside</title></ellipse>
   <polygon points="40,54.5 50,53.5 60,54.5 64.5,62.5 56,60.5 50,59.5 44,60.5 35.5,62.5" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>moustache</title></polygon>
   <path d="M47 52 A3 3 0 0 0 53 52" fill="none" stroke="#75492A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>nose</title></path>
-  <ellipse cx="37" cy="42" rx="6.5" ry="6.5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></ellipse>
-  <ellipse cx="37" cy="42" rx="2" ry="2" fill="#4E8B4A" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
-  <ellipse cx="37" cy="42" rx="0.8" ry="0.8" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
-  <ellipse cx="63" cy="42" rx="6.5" ry="6.5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="42" rx="2" ry="2" fill="#4E8B4A" stroke="#333" stroke-width="0.8"><title>iris (mirrored)</title></ellipse>
-  <ellipse cx="63" cy="42" rx="0.8" ry="0.8" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil (mirrored)</title></ellipse>
+  <ellipse cx="37" cy="43" rx="5" ry="5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white</title></ellipse>
+  <ellipse cx="37" cy="43" rx="2.5" ry="2.5" fill="#4E8B4A" stroke="#333" stroke-width="0.8"><title>iris</title></ellipse>
+  <ellipse cx="37" cy="43" rx="1" ry="1" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil</title></ellipse>
+  <polyline points="32,39.5 30,36.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_1</title></polyline>
+  <polyline points="35,38 34,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_2</title></polyline>
+  <polyline points="39,38 40,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_3</title></polyline>
+  <ellipse cx="63" cy="43" rx="5" ry="5" fill="#FFFFFF" stroke="#333" stroke-width="0.8"><title>white (mirrored)</title></ellipse>
+  <ellipse cx="63" cy="43" rx="2.5" ry="2.5" fill="#4E8B4A" stroke="#333" stroke-width="0.8"><title>iris (mirrored)</title></ellipse>
+  <ellipse cx="63" cy="43" rx="1" ry="1" fill="#1A1A1A" stroke="#333" stroke-width="0.8"><title>pupil (mirrored)</title></ellipse>
+  <polyline points="68,39.5 70,36.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_1 (mirrored)</title></polyline>
+  <polyline points="65,38 66,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_2 (mirrored)</title></polyline>
+  <polyline points="61,38 60,35.5" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>lash_3 (mirrored)</title></polyline>
   <polygon points="28,33 29,29 31,30 33,27.5 35,29.5 38,27 40,29.5 43,27.5 44,30 46,29.5 45.5,34 42,33 38,34.5 33,33.5" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>brow</title></polygon>
   <polygon points="72,33 71,29 69,30 67,27.5 65,29.5 62,27 60,29.5 57,27.5 56,30 54,29.5 54.5,34 58,33 62,34.5 67,33.5" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>brow (mirrored)</title></polygon>
   <polygon points="20,42 21,34.2 24,27 28.8,20.8 35,16 42.2,13 50,12 57.8,13 65,16 71.2,20.8 76,27 79,34.2 80,42 82,52 76,50 73,32 62,24 50,22 38,24 27,32 24,50 18,52" fill="#7A4B2A" stroke="#333" stroke-width="0.8"><title>hair</title></polygon>

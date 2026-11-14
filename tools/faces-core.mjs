@@ -192,6 +192,10 @@ export const VARIANTS = {
     ['square', { shape: 'square', kind: 'robot' }, [['socket', 'square', [31.5, 36.5, 11], 1, 'black', DARK], ['light', 'square', [33.5, 38.5, 7], 2, 'yellow blue', eyes]]],
     ['downcast', { feel: ['open'], kind: 'looking down' }, [['white', 'oval', [30, 38, 14, 8], 1, 'white', WHITE], ['iris', 'circle', [34.5, 41, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [36, 43, 2], 3, 'black', PUPIL], ['lid', 'rect', [29.5, 36.5, 15, 3.5], 4, 'pink brown', skin], ['lid_edge', 'line', [[30, 40], [44, 40]], 5, 'black', PUPIL]]],
     ['looking up', { feel: ['open'], kind: 'looking up' }, [['white', 'oval', [30, 37, 14, 9], 1, 'white', WHITE], ['iris', 'circle', [34.5, 37.5, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [36, 38.5, 2], 3, 'black', PUPIL]]],
+    // k.motion (glances): the iris toward the outer side of its eye, or toward the nose. The slot is mirrored, so a
+    // glance to one side is one of them for the eye on the viewer's left and the other as `one_eye`.
+    ['looking out', { feel: ['open'], kind: 'looking aside' }, [['white', 'oval', [30, 38, 14, 8], 1, 'white', WHITE], ['iris', 'circle', [31.5, 39.5, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [32.5, 41, 2], 3, 'black', PUPIL]]],
+    ['looking in', { feel: ['open'], kind: 'looking aside' }, [['white', 'oval', [30, 38, 14, 8], 1, 'white', WHITE], ['iris', 'circle', [37.5, 39.5, 5], 2, 'blue brown', eyes], ['pupil', 'circle', [39.5, 41, 2], 3, 'black', PUPIL]]],
   ],
   nose: [
     ['small', { size: 'small' }, [['nose', 'arc', [47, 52, 6, 3, 'up'], 1, 'brown', skinShade]]],
@@ -219,6 +223,12 @@ export const VARIANTS = {
     ['frown', { feel: ['sad', 'open'] }, [['inside', 'poly', [[40, 71], [60, 71], ...ell(50, 71, 10, 8, 180, 360, 8).slice(1, -1).reverse()], 1, 'red', INSIDE]]],
     ['grille', { shape: 'square', kind: 'robot' }, [['plate', 'rect', [40, 62, 20, 9], 1, 'grey', METAL], ['slot_1', 'line', [[44, 63.5], [44, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }], ['slot_2', 'line', [[48, 63.5], [48, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }], ['slot_3', 'line', [[52, 63.5], [52, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }], ['slot_4', 'line', [[56, 63.5], [56, 69.5]], 2, 'black', { ...DARK, kind: 'slot' }]]],
     ['gritted', { feel: ['open', 'wide'], kind: 'gritted teeth' }, [['teeth', 'rect', [40, 63, 20, 7], 1, 'white', WHITE], ['bite', 'line', [[40, 66.5], [60, 66.5]], 2, 'grey', METAL], ['gap_1', 'line', [[45, 63], [45, 70]], 2, 'grey', { ...METAL, kind: 'gap' }], ['gap_2', 'line', [[50, 63], [50, 70]], 2, 'grey', { ...METAL, kind: 'gap' }], ['gap_3', 'line', [[55, 63], [55, 70]], 2, 'grey', { ...METAL, kind: 'gap' }]]],
+    // k.motion (visemes): the mouth while a sound is made: half open (e, i), lips pressed (m, b, p), the upper teeth
+    // on the lower lip (f, v), the tip of the tongue behind the upper teeth (t, d, n, l).
+    ['half open', { feel: ['open'], kind: 'half open' }, [['inside', 'oval', [43, 63.5, 14, 5], 1, 'red', INSIDE], ['teeth', 'rect', [45, 63.5, 10, 1.5], 2, 'white', WHITE]]],
+    ['pressed', { feel: ['closed', 'thick'], kind: 'pressed lips' }, [['lips', 'poly', [[42, 65.4], [50, 64.8], [58, 65.4], [58, 66.6], [50, 67.2], [42, 66.6]], 1, 'red', LIP]]],
+    ['lip bite', { feel: ['closed'], kind: 'teeth on lip' }, [['lower_lip', 'poly', [[43, 66], [57, 66], [55, 68.5], [45, 68.5]], 1, 'red', { ...LIP, kind: 'lip' }], ['teeth', 'rect', [44.5, 63.5, 11, 3], 2, 'white', WHITE]]],
+    ['tongue tip', { feel: ['open'], kind: 'tongue tip' }, [['inside', 'oval', [44, 62.5, 12, 7], 1, 'red', INSIDE], ['teeth', 'rect', [45.5, 62.5, 9, 1.8], 2, 'white', WHITE], ['tongue', 'oval', [46, 64.5, 8, 3.5], 3, 'pink', TONGUE]]],
   ],
   cheeks: [
     ['blush', { kind: 'blush', shape: 'oval' }, [['blush', 'oval', [26, 54, 10, 6], 1, 'pink', BLUSH]]],

@@ -13,7 +13,7 @@ Units of measure and how to convert them.
 - `core.word` facts: plurals, American spellings and symbols (`kilometers`, `km` → `kilometre`).
 - Imperial volume units are the British ones (pint 0.568 l, gallon 4.546 l).
 
-`core`: 8 quantities, 46 units (Round 9: `year`, `"light year"`), 46 word wires. Hand-written (`hand-core 1`, CC0-1.0).
+`core`: 8 quantities, 47 units (Round 9: `year`, `"light year"`; for k.motion: `millisecond`), 47 word wires. Hand-written (`hand-core 1`, CC0-1.0).
 
 `measures` (Round 9): `k.units.measure` (identity `world`, `type`, `key`): in which unit a number of another world
 is given (`unit`, a unit of this world), what it counts (`counts=person`, `counts=leg`), or that it is a place in an
