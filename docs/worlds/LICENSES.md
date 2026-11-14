@@ -110,7 +110,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (22 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (43 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (5 shards), `k.procedures` (3 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (2 shards), `k.units` (2 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (12 shards), `w.lang.ro` (5 shards)
+- Used by: `k.actions` (22 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (43 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (5 shards), `k.procedures` (3 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (2 shards), `k.units` (2 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (14 shards), `w.lang.ro` (5 shards)
 
 ## mulberry-fa94a93
 
@@ -164,7 +164,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the project's own hand-written data; the reviewer's ruling in `worker-tasks.md`, blocks "2026-11-13 22:40" and "2026-11-14 01:20").
 - Attribution: none needed.
 - Shard terms: CC0-1.0
-- Used by: `w.lang.en` (12 shards)
+- Used by: `w.lang.en` (13 shards)
 
 ## psys2-worlds-6b63b2ba
 
@@ -368,4 +368,4 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: the WordNet licence (permissive: use, copy, modify and distribute for any purpose, with the copyright notice kept); written `WordNet-3.0` in shard headers and the catalog, the name of the licence text.
 - Attribution: WordNet 3.1 Copyright 2011 by Princeton University. All rights reserved. THIS SOFTWARE AND DATABASE IS PROVIDED "AS IS" AND PRINCETON UNIVERSITY MAKES NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED. The full licence text is `LICENSE` in the archive and at https://wordnet.princeton.edu/license-and-commercial-use . Which words are kept was chosen with the FrequencyWords list (see `sources/frequency-words/SOURCE.md`).
 - Shard terms: WordNet-3.0
-- Used by: `k.actions` (14 shards), `k.animals` (1 shards), `k.geo` (1 shards), `k.kinds` (6 shards), `k.objects` (2 shards), `k.parts` (24 shards), `k.words` (321 shards), `w.lang.en` (1 shards)
+- Used by: `k.actions` (14 shards), `k.animals` (1 shards), `k.geo` (1 shards), `k.kinds` (6 shards), `k.objects` (2 shards), `k.parts` (24 shards), `k.words` (321 shards), `w.lang.en` (2 shards)

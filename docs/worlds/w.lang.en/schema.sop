@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -113,13 +113,14 @@
 @w.lang.en.closed.from core.slot of=w.lang.en.closed key=from many=true required=true kind=atom core.source="hand-core 1"
 
 # ---- morphology ----
-# A rule of inflection: `op` singular (from a plural) or plural (from a singular); the first rule of a `set` by
+# A rule of inflection: `op` singular (from a plural) or plural (from a singular), or (block "02:55", shard
+# morphology-classes) third (the present third person), past, ing, comparative, superlative from the lemma; the first rule of a `set` by
 # `order` that matches applies. It matches a word that ends in one of `suffix` (after a consonant when `after`
 # says so), not in one of `unless_suffix`, of at least `min_length` letters, which is a noun exception of the kind
 # `exception` when that is given, and not a singular that looks plural when `unless_is_singular=yes`. It then drops
 # `drop` letters (or the suffix, when `replace` is given) and adds `replace` or `add`.
 @w.lang.en.inflect core.type of=w.lang.en.inflect shared=true closed=true core.source="psys2 78f45863"
-@w.lang.en.inflect.op core.slot of=w.lang.en.inflect key=op required=true enum=singular enum=plural core.source="psys2 78f45863"
+@w.lang.en.inflect.op core.slot of=w.lang.en.inflect key=op required=true enum=singular enum=plural enum=third enum=past enum=ing enum=comparative enum=superlative core.source="psys2 78f45863"
 @w.lang.en.inflect.set core.slot of=w.lang.en.inflect key=set enum=act enum=lemma core.source="psys2 78f45863"
 @w.lang.en.inflect.order core.slot of=w.lang.en.inflect key=order required=true kind=integer min=1 core.source="psys2 78f45863"
 @w.lang.en.inflect.suffix core.slot of=w.lang.en.inflect key=suffix many=true kind=atom core.source="psys2 78f45863"
@@ -131,6 +132,38 @@
 @w.lang.en.inflect.add core.slot of=w.lang.en.inflect key=add kind=atom core.source="psys2 78f45863"
 @w.lang.en.inflect.min_length core.slot of=w.lang.en.inflect key=min_length kind=integer min=1 core.source="psys2 78f45863"
 @w.lang.en.inflect.unless_is_singular core.slot of=w.lang.en.inflect key=unless_is_singular enum=yes core.source="psys2 78f45863"
+# ---- English inflection in std.morph notation (block "02:55"; shards morphology-classes, irregular-forms*, and the
+# dictionary; written by tools/lang-en-morph.mjs). Read with morphOf(world, { types: { cls: 'w.lang.en.class',
+# ending: 'w.lang.en.ending', irregular: 'w.lang.en.irregular_form' } }), as any language world in that notation.
+# A paradigm class: it inherits every cell of its `parent` and overrides some; `drop` what the lemma loses before an
+# ending (y of berry); `alt` the alternations of the stem used by the cells marked alt=yes (p>pp@end: stop, stopped).
+@w.lang.en.class core.type of=w.lang.en.class shared=true closed=true core.source="hand-core 1"
+@w.lang.en.class.name core.slot of=w.lang.en.class key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.class.parent core.slot of=w.lang.en.class key=parent kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.class.drop core.slot of=w.lang.en.class key=drop kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.class.alt core.slot of=w.lang.en.class key=alt many=true kind=string core.source="hand-core 1"
+@w.lang.en.class.pos core.slot of=w.lang.en.class key=pos required=true enum=noun enum=adjective enum=verb core.source="hand-core 1"
+@w.lang.en.class.about core.slot of=w.lang.en.class key=about kind=string core.source="hand-core 1"
+# A cell of a class: its features and the suffix that makes the form from the stem (`_`: none). Nouns `num`, verbs
+# `vform` (base, third: walks, past, past_participle, ing), adjectives `degree` (positive, comparative, superlative).
+@w.lang.en.ending core.type of=w.lang.en.ending shared=true closed=true core.source="hand-core 1"
+@w.lang.en.ending.class core.slot of=w.lang.en.ending key=class required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.ending.suffix core.slot of=w.lang.en.ending key=suffix required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.ending.alt core.slot of=w.lang.en.ending key=alt many=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.ending.num core.slot of=w.lang.en.ending key=num enum=sg enum=pl core.source="hand-core 1"
+@w.lang.en.ending.vform core.slot of=w.lang.en.ending key=vform enum=base enum=third enum=past enum=past_participle enum=ing core.source="hand-core 1"
+@w.lang.en.ending.degree core.slot of=w.lang.en.ending key=degree enum=positive enum=comparative enum=superlative core.source="hand-core 1"
+# A form no class gives for its lemma in that cell (consulted first by std.morph). `variant=yes`: a form for reading
+# only (burnt beside burned, antennae beside antennas): generation asks for the cell without it. `from`: the
+# w.lang.en.irregular fact an irregular plural is derived from (that type stays the home of the irregular plurals).
+@w.lang.en.irregular_form core.type of=w.lang.en.irregular_form shared=true closed=true core.source="hand-core 1"
+@w.lang.en.irregular_form.lemma core.slot of=w.lang.en.irregular_form key=lemma required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.irregular_form.form core.slot of=w.lang.en.irregular_form key=form required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.irregular_form.num core.slot of=w.lang.en.irregular_form key=num enum=sg enum=pl core.source="hand-core 1"
+@w.lang.en.irregular_form.vform core.slot of=w.lang.en.irregular_form key=vform enum=base enum=third enum=past enum=past_participle enum=ing core.source="hand-core 1"
+@w.lang.en.irregular_form.degree core.slot of=w.lang.en.irregular_form key=degree enum=positive enum=comparative enum=superlative core.source="hand-core 1"
+@w.lang.en.irregular_form.variant core.slot of=w.lang.en.irregular_form key=variant enum=yes core.source="hand-core 1"
+@w.lang.en.irregular_form.from core.slot of=w.lang.en.irregular_form key=from kind=atom core.source="hand-core 1"
 # An irregular plural (taken before any rule, both ways).
 @w.lang.en.irregular core.type of=w.lang.en.irregular shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.irregular.singular core.slot of=w.lang.en.irregular key=singular id=true required=true kind=atom kind=string core.source="psys2 78f45863"
@@ -520,6 +553,7 @@
 @w.lang.en.skip.doc core.slot of=w.lang.en.skip key=doc kind=string core.source="hand-core 1"
 
 @w.lang.en.word.closed core.word text="word class" text="closed class" text="function word" text="function words" means=w.lang.en.closed core.source="hand-core 1"
+@w.lang.en.word.class core.word text="paradigm class" text="inflection class" text=inflection text=conjugation means=w.lang.en.class core.source="hand-core 1"
 @w.lang.en.word.aux core.word text=auxiliary text="auxiliary verb" means=w.lang.en.aux core.source="hand-core 1"
 @w.lang.en.word.frame core.word text="argument frame" text=frame text=frames means=w.lang.en.frame core.source="hand-core 1"
 @w.lang.en.word.rule core.word text="grammar rule" text=production means=w.lang.en.rule core.source="hand-core 1"

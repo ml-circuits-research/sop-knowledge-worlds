@@ -530,3 +530,22 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Names that are words cost vocabulary noise.** 2,990 given names made 15 common things (Rose, Cliff) also lead to
   a k.people shard: a host that loads by word now fetches a names shard for "rose". A frequency band on the fact
   lets a reader weigh "a name" against the thing; the vocabulary itself cannot.
+
+## Supersenses and English inflection (third worker, blocks 02:15 and 02:55)
+
+- **A class a source already files is one field away.** WordNet files every synset in a lexicographer file; the
+  importer had read past it for months. Keeping it cost one key and a list of 45 names checked against the raw file,
+  and gave every one of 29,449 senses a coarse type for signatures with no judgement per word.
+- **A word list is the home; a class table over it is a derived index.** The closed-class words live in a dozen
+  lists of w.lang.en with different keys (texts, enders, markers); one fact per word and class with `from` naming the
+  lists, rebuilt by the build, answers "what is this word" without moving a word, and a test catches a new word no
+  table classes.
+- **Stress is invisible to spelling, so doubling needs evidence or a lexicon.** The general rule (double after one
+  vowel) is right for 95 % of the catalog's verbs; the other 5 % (audit, credit, cancel) are why the classes come
+  from WordNet's exception lists, where its lexicographers wrote the doubled forms. The rules stay for words no
+  dictionary has, with their agreement measured, not assumed.
+- **Reading and writing want different irregulars.** One feature more on a std.morph irregular (`variant=yes`) keeps a
+  form readable without letting generation choose it (burnt, antennae): the generator asks for the cell without
+  that feature. The direction a form serves is data, as `read_only` already was for the plurals.
+- **A key word written by hand into a generated block is lost at the next run** (task 1 left ask-real red): add the
+  words to the tool's table, and run the tests of the key-word tool when a schema gains a slot.

@@ -1,5 +1,5 @@
 {
- "version": "96bca825f0b5",
+ "version": "28588d989862",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -84982,6 +84982,7 @@
     "w.lang.en.aux",
     "w.lang.en.cat",
     "w.lang.en.choice",
+    "w.lang.en.class",
     "w.lang.en.closed",
     "w.lang.en.construction",
     "w.lang.en.contraction",
@@ -84998,12 +84999,14 @@
     "w.lang.en.ellipsis.repeat",
     "w.lang.en.ellipsis.starter",
     "w.lang.en.ellipsis.trail",
+    "w.lang.en.ending",
     "w.lang.en.fixed",
     "w.lang.en.frame",
     "w.lang.en.frame_lead",
     "w.lang.en.imperative.lead",
     "w.lang.en.inflect",
     "w.lang.en.irregular",
+    "w.lang.en.irregular_form",
     "w.lang.en.joiner",
     "w.lang.en.joiner.keep",
     "w.lang.en.lex",
@@ -86028,6 +86031,31 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/irregular-forms-wordnet",
+     "path": "w.lang.en/shards/irregular-forms-wordnet.sop",
+     "wires": 303,
+     "bytes": 50869,
+     "keys": [],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/irregular-forms",
+     "path": "w.lang.en/shards/irregular-forms.sop",
+     "wires": 453,
+     "bytes": 62194,
+     "keys": [],
+     "sources": [
+      "hand-core-1",
+      "psys2-78f45863"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/joiners-keep",
      "path": "w.lang.en/shards/joiners-keep.sop",
      "wires": 1,
@@ -86037,6 +86065,18 @@
      ],
      "sources": [
       "psys2-447a5f9a"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/morphology-classes",
+     "path": "w.lang.en/shards/morphology-classes.sop",
+     "wires": 137,
+     "bytes": 20729,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "CC0-1.0",
      "warnings": []

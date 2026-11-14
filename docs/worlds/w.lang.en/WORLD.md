@@ -229,6 +229,51 @@ to the same thing, value and attribute ("A peanut is a legume.", "A star is made
 holds the brain.", "The elevation of Adrar Bou Nasser is 3340."). The defaults are plain ("The orbit years of Mars is
 1.88."): a key gets a template of its own when a composition shows one reads badly.
 
+## Inflection in std.morph notation (block "02:55")
+
+The regular rules of English are published as facts in the library's std.morph notation, as w.lang.ro's are, so a
+host needs no plural or past tense of its own. Written by `tools/lang-en-morph.mjs` (from WordNet 3.1's exception
+lists; rerun by hand, not by the build, as it reads raw files):
+
+| file | what | size |
+|---|---|---|
+| `shards/morphology-classes.sop` | 40 paradigm classes and their 51 cells (`w.lang.en.class`, `w.lang.en.ending`), and 44 suffix rules for inflectBy (`w.lang.en.inflect` op third, past, ing, comparative, superlative) | 137 wires, 20.7 kB, CC0 |
+| `shards/irregular-forms.sop` | 453 irregular forms in std.morph's shape (`w.lang.en.irregular_form lemma= form= <cell>`): the irregular verbs and adjectives of the catalog, the non-WordNet irregular plurals | 62.2 kB, CC0 |
+| `shards/irregular-forms-wordnet.sop` | 303 irregular plurals and adjective variants from WordNet | 50.9 kB, WordNet-3.0 |
+| `dictionary/<letter>.tsv` | 13,058 rows `lemma<TAB>class`: every noun (8,897), verb (3,343) and adjective (818) of k.words that is one lower-case word, and the one-word verbs of k.actions | 26 files, 203.5 kB, WordNet-3.0 |
+
+- **Classes.** Nouns (`num` sg, pl): noun.s (cats), noun.es (boxes; potatoes where WordNet lists -oes), noun.ies
+  (berries), noun.ves and noun.fe (leaves, knives: where WordNet lists the -ves plural; roofs stay noun.s),
+  noun.same (nouns of plural form: arms, clothes, physics). Verbs (`vform` base, third, past, past_participle, ing):
+  verb.s, verb.es (pushes, goes), verb.e (making, baked), verb.ee (agreed, agreeing; dyeing), verb.ie (dying),
+  verb.ies (carried), verb.double.<letter> (stopped, stopping: one class per doubled letter, an alternation
+  `p>pp@end` on the cells marked alt=yes), verb.ck (panicked). Adjectives (`degree` positive, comparative,
+  superlative): adj.er, adj.e (larger), adj.ier (happier), adj.double.<letter> (bigger), and adj.more, compared with
+  more and most, which has only the positive cell (526 of 818: a realiser says "more beautiful").
+- **Which class.** By spelling, then by WordNet's exception lists where spelling cannot tell: a verb doubles when
+  WordNet lists its doubled forms (prefer, preferred; visit is not listed: visited), or when it is one syllable of
+  the shape stop, blog (WordNet lists nothing for some); a noun takes -ves or -oes when WordNet lists that plural
+  and w.lang.en.irregular does not mark it for reading only (banjos are written, banjoes read). An adjective is
+  compared with -er when it has one syllable, or two ending in -y, -le, -er, -ow, and is not a participle (cut,
+  shut), a relational or participial adjective in WordNet (adj.pert, adj.ppl), or in the table of ungradable words.
+- **Irregulars stay irregular facts.** `w.lang.en.irregular` (singular, plural) stays the home of the irregular
+  plurals; their std.morph copies are derived (`from` names the fact). The irregular verbs (167 written in the
+  tool, with variants: burned and burnt) and 30 compounds that inflect like them where WordNet has their forms
+  (understand, overcome, misunderstand), be and have's third person, and nine adjectives (good, bad, far, ...).
+  `variant=yes` marks a form for reading only: generation asks for the cell without it and gets the regular form
+  (burned, antennas), analysis reads it (burnt: burn, past, variant). A verb that doubles a final -l in a longer
+  word (travel, travelled: WordNet's doubled forms) has the undoubled forms as variants (traveled).
+- **Round trip** (`tests/w.lang.en.morph.test.mjs`): every cell of every dictionary lemma generated and analysed back
+  to its lemma and cell with the dictionary: 35,911 of 35,911 cells. `inflectBy` gives cats, boxes, berries, stopped,
+  making, bigger; its suffix rules (the guess for a word the dictionary lacks) agree with the dictionary on the
+  regular cells for plural 96.5 % (the misses are the 287 nouns of plural form and -ves, -oes), third 99.9 %, past
+  95.5 % and ing 95.7 % (stress: audit, audited; British -ll-), comparative and superlative 99.6 %.
+- Read with `morphOf(world, { types: { cls: 'w.lang.en.class', ending: 'w.lang.en.ending', irregular:
+  'w.lang.en.irregular_form' } })` and `dictionary({ read: (letter) => fetchText(`w.lang.en/dictionary/${letter}.tsv`) })`.
+- **Not covered.** be's am, are (no cell for the other persons); forms WordNet lists that are archaic or other
+  spellings (dwelt is in, curst, gript, swopped are not: 36 reported by the tool); multi-word lemmas (the head is
+  inflected by a host: manta rays); capitalised names.
+
 ## The class of each closed-class word (block "02:15")
 
 `w.lang.en.closed text= class= from=` (shard `closed-classes`, 274 facts for 260 words, CC0) gives every closed-class

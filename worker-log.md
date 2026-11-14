@@ -4804,3 +4804,34 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   questions (magpie, seagull), an-p1 list grown; k.cores and k.animals accept `wordnet 3.1` on the merged animal
   wires; import.wordnet uses `askedWords`. `npm run test:changed` on the rebased tip (55ff6ea): 40 files, 352 tests,
   350 pass, 2 skipped, 0 fail.
+
+## 2026-11-15 — third worker: English regular inflection in std.morph notation (block 02:55)
+
+- `tools/lang-en-morph.mjs` (new; reads WordNet 3.1's noun.exc, verb.exc, adj.exc and the catalog) writes:
+  shards `morphology-classes` (137 wires, 20,729 bytes, CC0: 40 paradigm classes `w.lang.en.class`, 51 cells
+  `w.lang.en.ending`, 44 suffix rules `w.lang.en.inflect` op third / past / ing / comparative / superlative),
+  `irregular-forms` (453 wires, 62,194 bytes, CC0) and `irregular-forms-wordnet` (303 wires, 50,869 bytes,
+  WordNet-3.0): 756 forms in std.morph's shape `w.lang.en.irregular_form lemma= form= num|vform|degree= variant=
+  from=`, 295 of them `variant=yes` (read, never written: burnt, antennae, traveled); and `dictionary/<letter>.tsv`
+  (26 files, 203,542 bytes, WordNet-3.0): 13,058 rows `lemma<TAB>class` for the 8,897 nouns, 3,343 verbs and 818
+  adjectives of k.words and k.actions (one lower-case word each). 0 warnings.
+- Classes (rows): noun.s 7,566, noun.es 440, noun.ies 583, noun.ves 16, noun.fe 5, noun.same 287; verb.s 1,635,
+  verb.e 981, verb.es 232, verb.ies 90, verb.ee 24, verb.ie 7, verb.double.<13 letters> 375, verb.ck 5; adj.more
+  526, adj.er 178, adj.e 60, adj.ier 42, adj.double.<letter> 12. Spelling first; WordNet's exception lists decide
+  doubling, -ves, -oes and an adjective's doubling and -ier; one-syllable CVC verbs double by default (blog, bog);
+  adjectives that are participles or WordNet adj.pert / adj.ppl (15) are compared with more.
+- Irregulars stay irregular facts: `w.lang.en.irregular` stays the home of the plurals (206 derived copies name it in
+  `from`); 167 irregular verbs written in the tool (with variants), 30 compounds where WordNet has their forms
+  (understand, overcome, misunderstand, upset), be / have third person, 9 irregular adjectives. 36 WordNet forms are
+  left out and reported (archaic or other spellings: curst, gript, swopped; am, are; cola for colon).
+- `tests/w.lang.en.morph.test.mjs` (6 tests): files = tool output; dictionary format; **round trip 35,911 of 35,911
+  cells** of the 13,058 lemmas (generate, then analyse with the dictionary back to lemma and cell); inflectBy and
+  std.morph give cats, boxes, berries, stopped, making, bigger (and leaves, knives, roofs, mice, went, understood,
+  happiest, better; burnt read as a variant, burned written); inflectBy's rules agree with the dictionary on regular
+  cells: plural 8,514/8,819 (96.5 %: the misses are the nouns of plural form and -ves/-oes), third 3,337/3,341,
+  past 3,021/3,164 (95.5 %), ing 3,199/3,343 (95.7 %: stress and British -ll-), comparative and superlative 284/285.
+- Fixed on the way: the schema comment named w.lang.ro (its test keeps Romanian out of other worlds).
+- Tests: `npm run test:changed` 20 files, 116 tests: 115 pass, 1 fail (that comment), fixed; after the rebuild
+  (catalog 32 worlds, 1,094 shards, 29,133 words): w.lang.en.morph 6, w.lang.en 22, w.lang.en.closed 3, w.lang.ro 10,
+  catalog 8, validate 5, repo 1, ask-real 4 pass. (04b767d had left ask-real red: the supersense key words were
+  written by hand into the block tools/key-words.mjs owns; fixed by the first worker in 55ff6ea.)
