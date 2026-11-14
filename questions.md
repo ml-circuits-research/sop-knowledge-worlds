@@ -235,6 +235,24 @@ the host's current face (here) or a value the rules give? (d) whether a cancelle
 Blocking: no. Meanwhile: the world is written in this format, tested with the oracle; a script converts the facts if
 the library amends it.
 
+## Q47 (block "10:35", k.faces proportion rules, first worker, 2026-11-14): the canon lost; what next, if anything?
+Question: the experiment kept the hand-placed output (it lost on the overlaps, the bytes and the lines). Should the
+canon go further in one of the ways below, or stop here?
+Context: `tools/faces-canon.mjs` moves and scales each slot's drawings from where the hand put them to where a canon
+puts them (maps checked exact: the canon the drawing follows gives the shards byte for byte). The adult canon of the
+block (eyes on the middle line, one eye apart, brows one eye above, nose halfway to the chin, mouth a third below the
+nose) puts 40 of 114 moustache/mouth pairs and 37 of 152 nose/mouth pairs on top of each other (0 now): this cartoon
+has big eyes high in the head and a long space under the nose, which the classical canon does not have. Sheets:
+`faces-before.png` and `faces-after.png` (41 faces: presets, expressions on the woman, 20 random faces). findVariants,
+the w.face sessions, k.feelings, k.wearables, k.people and the 424 catalog questions pass on both. Options: (a) stop:
+the absolute output stays and the experiment tool stays for later (done); (b) publish the canon the style follows
+(`k.faces.canon` facts read off the drawing, `plain as drawn`), useful to a host that draws new parts in proportion,
+at +1.3 kB and no visible change; (c) a style drawn for the classical canon (child, adult and old faces as three
+styles, or one style with per-age slot boxes), a drawing task of its own; (d) variants as parameters (primitive +
+size, roundness, tilt, openness), item 2 of the block, which this experiment did not try: the anchors-and-scale maps
+were enough to measure the canon, and redrawing 181 variants as parameters only pays if (c) is wanted.
+Blocking: no. Meanwhile: (a).
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

@@ -3686,3 +3686,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - npm test 2,904: 2,899 pass, 5 skipped, 0 fail.
 - Rebased on k.motion (first worker, 43cb081): measures regenerated (190 wires), catalog 27 worlds, 952 shards, vocab
   24,562 words; npm test 2,914: 2,909 pass, 5 skipped, 0 fail.
+## k.faces proportion rules: an experiment, measured, not switched (2026-11-14, first worker; block "10:35")
+
+- **Tool** `tools/faces-canon.mjs` (121 lines): canons as lines and sizes of the head box (child, adult, old; the
+  block's rules: eyes on the middle line, one eye apart, brows one eye above, nose bottom halfway between eyes and chin,
+  mouth a third from nose to chin, ears between brow and nose lines); each slot's hand drawings are moved and scaled
+  from the anchor the hand used to the canon's (glasses with the eyes, moustache between nose and mouth, beard from the
+  mouth to the chin, ears and earrings between brow and nose lines; hair, hat, head, neck, shoulders unchanged). Writes
+  the plain shards placed by a canon to a directory, and the contact sheet of the same 41 faces for a tree of worlds.
+  `tools/faces-core.mjs`: `coreShards` takes the slot and variant tables (no change to its output, same 402 lines).
+- **Exact maps:** the canon read off the drawing ("plain as drawn": eyes 0.44, nose 0.63, mouth 0.79 of the head box,
+  1.6 eye widths apart, brows 1.1 eye widths above) gives every shard byte for byte (test).
+- **Measures, adult canon vs hand placement:** sheets `/home/claude/shot/faces-before.png` and
+  `/home/claude/shot/faces-after.png` (presets, the expressions on the woman, random faces 1-20): eyes larger and
+  closer, longer noses; moustaches and noses on the mouth, brows close to lashes. Overlapping pairs of variants:
+  moustache/mouth 0 -> 40 of 114, nose/mouth 0 -> 37 of 152 (eyebrows/eyes 0 -> 0). Bytes of the plain shards and
+  slots 304,984 -> 307,575 (+2,591 with the canon facts). Generator 402 -> 523 lines. findVariants and the face cases
+  pass on both (with the canon output swapped in: k.faces 9/11, the 2 failures only the freshness checks of shards
+  and previews; w.schemas 13/13, k.feelings, k.wearables, k.people, questions 424, validate, k.motion all pass).
+- **Decision (block rule "keep the absolute output if the rules lose on any of these"): kept.** Nothing published
+  changes; **Q47** asks whether to publish the fitted canon, draw a style for the classical one, or stop.
+- Tests: `tests/k.faces.canon.test.mjs` (3: exact maps; the adult canon keeps every part in its slot and follows its
+  rules; the overlap measure that decided).

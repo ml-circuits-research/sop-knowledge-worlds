@@ -283,3 +283,16 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Join by value, not by import**: k.motion names k.faces variants as values and does not import k.faces, so a host
   can animate a face of another source with the same rules; the names are checked by a test, and a missing unit
   (milliseconds) was caught by the measures test, not by reading.
+
+## k.faces proportion canon (first worker, block "10:35"): measured, not switched
+
+- **Before replacing hand numbers by rules, prove the rules can say the hand numbers.** The canon maps (anchor and
+  scale per slot) first reproduced the existing shards byte for byte with the canon the drawing already follows; only
+  then was a different canon a test of the canon and not of the maps.
+- **A style is a canon of its own.** The cartoon's big eyes high in the head and long space under the nose are what
+  makes it read as this style; the classical canon put moustaches and noses on the mouth in 40 and 37 pairs. A cheap
+  mechanical check (does any pair of variants of two neighbouring slots overlap?) said it before anyone looked at the
+  sheets, as the weight-over-size check did for the weights.
+- **Rules that only generate the same output cost bytes and lines.** Shards for renderers must stay absolute; the rules
+  would be added, not substituted, so they win only if they make the drawings better or let new parts be drawn in
+  proportion. That is the question to ask before the experiment, not after.

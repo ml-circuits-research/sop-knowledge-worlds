@@ -65,6 +65,16 @@ Sixteen slots, in draw order: `hair_back`, `shoulders`, `neck`, `ears`, `head`, 
 girl, boy, woman, man, old woman, old man, bearded man, woman with curly hair, robot, alien, clown, queen.
 Expressions: happy, sad, angry, surprised, sleepy, wink, talking.
 
+**Proportion canon (block "10:35", an experiment, not switched).** `tools/faces-canon.mjs` places the parts of the
+style plain by a canon of the face (the eyes on the middle line of the head box and one eye width apart, the brows
+one eye width above them, the bottom of the nose halfway between the eyes and the chin, the mouth a third of the way
+from the nose to the chin, the ears between the brow and nose lines; child, adult and old variants): each slot's
+drawings are moved and scaled from where the hand put them to where the canon puts them. With the canon the drawing
+already follows (eyes at 0.44 of the head box, nose 0.63, mouth 0.79, 1.6 eye widths between the eyes, brows 1.1 eye
+widths above them) the shards come out byte for byte. With the adult canon, 40 of the 114 moustache and mouth pairs
+and 37 of the 152 nose and mouth pairs overlap (none do now), the shards grow by 0.8% and the generator by 121
+lines, so the hand-placed output is kept (worker-log.md; `tests/k.faces.canon.test.mjs`).
+
 ## Imported styles (DiceBear)
 
 Seven styles converted from the JSON definitions of https://github.com/dicebear/styles by `tools/import/dicebear.mjs`

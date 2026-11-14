@@ -377,19 +377,19 @@ function variantLines(slot, box, [name, f, parts]) {
   return [`# ${slot}: ${name}`, ...lines, ...points].join('\n');
 }
 
-export function coreShards() {
+export function coreShards({ slots = SLOTS, variants = VARIANTS } = {}) {
   const head = (id, about) => header({ id: `k.faces/shards/${id}`, about, sources: ['hand-core 1 (hand-written in this repository)'], license: 'CC0-1.0', script: 'tools/faces-core.mjs' });
   const files = {};
   files['slots.sop'] = `${head('slots', `the slots of the style \`${STYLE}\`: where each part of a face goes (a box in the 0 to 100 frame of the face, x right, y down) and in which order the slots are drawn. A slot with mirror=true holds the side on the viewer's left.`)}\n${
-    SLOTS.map(([name, [x, y, w, h], z, mirror, optional]) => wire(`k.faces.${STYLE}.slot.${name}`, 'k.faces.slot', [['style', STYLE], ['name', name], ['x', x], ['y', y], ['w', w], ['h', h], ['z', z], ['mirror', mirror ? 'true' : undefined], ['optional', optional ? 'true' : undefined]], SRC)).join('\n')}\n`;
+    slots.map(([name, [x, y, w, h], z, mirror, optional]) => wire(`k.faces.${STYLE}.slot.${name}`, 'k.faces.slot', [['style', STYLE], ['name', name], ['x', x], ['y', y], ['w', w], ['h', h], ['z', z], ['mirror', mirror ? 'true' : undefined], ['optional', optional ? 'true' : undefined]], SRC)).join('\n')}\n`;
   files['colours.sop'] = `${head('colours', 'named colours for skin, hair, eyes and clothes, each with a darker shade for lines; natural=true for the colours people have.')}\n${
     COLOURS.map(([of, name, rgb, shade, natural]) => wire(`k.faces.colours.${of}.${seg(name)}`, 'k.faces.colour', [['of', of], ['name', name], ['rgb', { string: rgb }], ['shade', { string: shade }], ['natural', String(natural)]], SRC)).join('\n')}\n`;
   files['presets.sop'] = `${head('presets', `named faces of the style \`${STYLE}\` (one variant per slot, and the four colours) and the expressions (the variants of mouth, eyebrows and eyes a face switches to).`)}\n${
     PRESETS.map(([name, slots, [skinName, hairName, eyesName, clothesName]]) => wire(`k.faces.${STYLE}.preset.${seg(name)}`, 'k.faces.preset', [['name', name], ['style', STYLE], ...SLOTS.map(([s]) => [s, slots[s]]), ['skin', skinName], ['hair_colour', hairName], ['eye_colour', eyesName], ['clothes', clothesName]], SRC)).join('\n')}\n\n${
     EXPRESSIONS.map(([name, keys]) => wire(`k.faces.${STYLE}.expression.${seg(name)}`, 'k.faces.expression', [['name', name], ['style', STYLE], ...Object.entries(keys)], SRC)).join('\n')}\n`;
-  for (const [slot, box, , mirror] of SLOTS) {
+  for (const [slot, box, , mirror] of slots) {
     files[`${STYLE}-${slot.replace(/_/g, '-')}.sop`] = `${head(`${STYLE}-${slot.replace(/_/g, '-')}`, `the variants of the slot \`${slot}\` in the style \`${STYLE}\`${mirror ? ' (the side on the viewer\'s left; the other side is its mirror image)' : ''}: features, and parts with a primitive shape, a box in the frame of the face, a draw order and colours; points for lines and polygons.`)}\n${
-      VARIANTS[slot].map((v) => variantLines(slot, box, v)).join('\n\n')}\n`;
+      variants[slot].map((v) => variantLines(slot, box, v)).join('\n\n')}\n`;
   }
   return files;
 }
