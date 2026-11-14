@@ -84,6 +84,42 @@ are found in the worlds, and the usual values of common things that no other wor
   in space: at night).
 - The family `scene thing` (the 2,218 things of `k.scenes`) has its row in ASPECTS.md: temporal 257, social 256.
 
+## Typical ranges and typicality (blocks 15:15 item 3, 14:15 item 2, 17:05)
+
+- `k.attributes.range` (identity `type`, `key`, `kind`): the typical range of a number for things of a kind, so that
+  "a number far from the usual" can be computed (k.interest `range_distance`: the distance to the nearer end in
+  widths of the range). 56 ranges over 34 kinds: **41 from the catalog** (`basis=catalog`: the interquartile range
+  and median of at least 8 numbers; the quartile rule of k.interest's test): the size of 13 kinds of common things,
+  the weight of 11 and the speed of 2 (k.attributes.number by k.attributes.thing kind), each also for mammals and
+  birds (k.animals class); the length
+  of body parts, and in k.geo the population of countries and cities, the elevation of mountains, the length of
+  rivers, the area of lakes, seas and deserts, and the area of countries (ODbL numbers, shard `ranges-odbl`); **7
+  sourced** (`basis=source`, `cite`): the height of men, women and persons (NCD Risk Factor Collaboration 2016,
+  eLife 5:e13410: the lowest and highest national means), of babies and children (WHO Child Growth Standards 2006;
+  de Onis et al. 2007); **4 own choice** (`basis=own`): a house 5-12 m (from CTBUH's 3.1 m residential storey), a
+  skyscraper 150-350 m (CTBUH's classes), the seats of a table 4-10 (`w.seating.table`), the quantity of a list item
+  1-6 (`w.list.item`). The unit is the unit k.units.measure gives for the type and key.
+- **4 from Wikidata** (CC0, shard `ranges-wikidata`, `basis=source`, source `wikidata-typical 2026-11-14`, fetched
+  through PSys2's machine, blocks 17:55 and 19:35): the mass (1,405 taxa) and length (288) of species, the height of
+  buildings (1,435), the area of countries (210); one value per item (the median of its statements), units converted.
+  They stand beside the catalog's ranges of the same kind (the basis is part of the identity): a catalog range is the
+  usual of everyday things (model-labelled numbers; only 11 mammals have one, so the mammal range, 2-3 m, says the
+  catalog's mammals are large ones), a Wikidata range the usual of the items that carry the number (most described
+  species are small: median 24 g, under the catalog's lower quartile of animals; buildings with a height: 13.5-45 m,
+  median 22 m). The rest of the fetched files is not used, with the reasons, in `sources/wikidata-typical/SOURCE.md`;
+  no per-item value was imported (5 of the 314 animals of k.animals have a Wikidata mass in the sample).
+- `k.attributes.typical` (identity `of`, `attribute`): how usual it is that a thing of a kind has, and a request names,
+  a value for an attribute: `weight` in (0, 1], own choice. 143 facts over 35 kinds and types: 18 kinds of common
+  things (drawings: a house is a building, size 1, parts 0.8, material 0.5; a person: age 0.8, colour 0.7, size 0.6),
+  every kind of the world schemas (`w.seating.guest`: seat 1, name 0.9, party 0.4; `w.map.place`: highlight 1, colour
+  0.8; `w.list.item`: text 1, done 0.8, quantity 0.7; the parts of a face through `w.face.part`), and the places of
+  the map (`k.geo.country`: capital 1, population 0.9, continent 0.8). Kinds without typicality: creature, machine,
+  jewellery, weapon, tableware, part, material, natural thing (few things, few attributes).
+- Written by `tools/ranges-core.mjs` (shards `ranges`, `ranges-odbl`, `ranges-wikidata`, `typical`); checked by
+  `tests/k.attributes.ranges.test.mjs` (the shards are the tool's output; every range names numbers that exist with
+  their unit, a known kind, low < median < high; the elephant is far above the animals' range and a dog inside;
+  every typicality names a kind and attribute or a type and its key; coverage of the kinds std.sample hits).
+
 ## One name, one thing
 
 - `k.attributes.same` (identity `name`, `sense`): for the 3,330 names that facts of more than one world carry,
@@ -104,6 +140,7 @@ places, food and drink), `things-big` (vehicles, machines, buildings), `things-w
 `drawn-hand`, `drawn-mulberry`, `drawn-noto`, `drawn-openmoji` (one per source of drawings, with the licence of
 that source), written by `tools/drawn-colour.mjs`. `numbers-a-f`, `numbers-g-o`, `numbers-p-z` (the numbers of
 common things), written by `tools/numbers-core.mjs`. `usage` (when and by whom), written by `tools/usage-core.mjs`.
+`ranges`, `ranges-odbl` (ODbL-1.0), `ranges-wikidata` and `typical`, written by `tools/ranges-core.mjs`.
 
 ## Audit
 

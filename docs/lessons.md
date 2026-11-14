@@ -320,3 +320,26 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Keep a language out of the vocabulary by its keys.** The catalog indexes w.* identity keys named text or ending;
   naming the closed classes' key `form` kept every Romanian word out of the English vocab.json with no special case.
 
+
+## Block 17:05 (fourth worker): generation templates, discourse templates, typical ranges
+
+- **A template is proven by reading it back, and the reading finds the grammar's own holes.** Writing 34 act
+  templates against w.lang.en's frames showed two frames that do not read their own examples ("Add a seat to table
+  1": no determiner before the attribute), a frame that steals another's sentence where both apply ("take the tables
+  apart" read as moving them apart), and a noun compound that ties with an adjective reading ("red house"). Each
+  became a template that avoids it plus a line in WORLD.md; none was found by the 351 frames' own tests.
+- **Name a template's slots by the roles of the acts, not by the words.** With `{kind}`, `{thing}`, `{place}` the
+  slots are k.actions roles, so the frame read back and the template compare role by role, and a sampler's frame
+  fills the template with no table in between. What a filler looks like (a thing with its determiner, a place as
+  relation and thing) is the one convention left to write down.
+- **A rule of the language that is not a paradigm cell needs facts of its own**: the article a/an depends on the
+  sound of the next word, whatever it is. Writing it as two facts (`before=vowel`) and a short onset list keeps it out
+  of templates, and the question to the library is how a realiser applies such a rule in general (Q54).
+- **Join by value to a world that is not published yet, and let the test switch.** The discourse templates name the
+  moves of k.genres; the test read the draft's names until k.genres landed, then its facts and its genres' steps,
+  with no change to the templates. Register rules (persons, questions, contractions, sentence length) are checked
+  from k.genres's own register facts, so a new register is a fact there and a few templates here.
+- **A typical range is a statistic of a population; say which population.** The catalog's interquartile ranges are
+  the catalog's usual (11 mammals with a number make the mammal range 2-3 m). Marking `basis` (catalog, source, own)
+  and the count on every range lets a host trust a sourced height and doubt a thin catalog range; the licence of the
+  numbers follows the range into its own shard (country areas under ODbL).

@@ -4038,3 +4038,33 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   person and number, no direct question where the register has none, no contraction where it has none, no present
   verb in a narrative) and filled sentences no longer than the register's sentence_max. The no-notation test of
   w.lang.en treats `about` as prose.
+
+## Block 17:05 task 3 (2026-11-14, fourth worker): typical ranges and typicality in k.attributes
+
+- **`k.attributes.range`** (identity type, key, kind; low, high, median, count, basis catalog / source / own, cite,
+  own): 56 ranges over 34 kinds. 41 computed from the catalog by `tools/ranges-core.mjs` (interquartile range and
+  median of at least 8 numbers, the quartile rule of k.interest's test): size of 13 kinds of common things, weight of
+  11, speed of 2, each also for mammals and birds (k.animals class); length of body parts; k.geo population of
+  countries and cities (Natural Earth, public domain; the GeoNames populations, CC BY, left out), elevation of
+  mountains, length of rivers, area of lakes, seas, deserts; the area of countries from ODbL numbers in a shard of
+  its own (`ranges-odbl`, ODbL-1.0). 7 sourced: heights of men, women, persons (NCD-RisC 2016, eLife 5:e13410),
+  babies, children, boys, girls (WHO Child Growth Standards 2006; de Onis et al. 2007). 4 own: house 5-12 m, skyscraper
+  150-350 m (from CTBUH's storey height and classes), table seats 4-10, list item quantity 1-6.
+- **`k.attributes.typical`** (identity of, attribute; weight in (0, 1], own choice): 143 facts over 35 kinds and types:
+  18 kinds of common things (drawings), all 12 kinds of the world schemas w.seating, w.map, w.list, w.timeline, w.face
+  (face parts through w.face.part), 5 types of k.geo (country, city, river, mountain, lake). Not in `usage`: Q56.
+- Shards: ranges 51 wires 12.7 kB, ranges-odbl 1 wire, typical 143 wires 18.5 kB; load 21 / 8 / 17 ms, 0 warnings.
+  k.units.measure: the range's low, high, median are in the unit of its type and key, count counts numbers, weight is
+  a plain share (tools/measures-core.mjs). Schema +2 types, key words by tools/key-words.mjs.
+- Tests (`tests/k.attributes.ranges.test.mjs`, 5): the shards are the tool's output; every range names numbers that
+  exist with a unit, a known kind, low < median < high, a basis with cite / own; the animal weight range is the
+  quartiles of the animals' weights, an elephant (5,000 kg) is more than 10 widths above it, a dog inside, a man of
+  2.72 m far from the men's range; every typicality names a kind and attribute or a type and key; coverage of the
+  kinds std.sample hits (schema kinds all; 18 of 26 k.attributes kinds; ranges for geo, people, tables, list items).
+- **Wikidata** (landed at 19:20, CC0, read from psys2 data/external/wikidata-typical-numbers, copied to the git-ignored
+  sources/wikidata-typical/raw, SOURCE.md written): 10,878 rows read; 4 ranges written (shard ranges-wikidata, 4
+  wires, 2.1 kB, basis=source, identity now includes `basis`): species mass (1,405 items) and length (288), building
+  height (1,435), country area (210). Not used, with reasons in SOURCE.md: heights, lifespans and speeds of taxa,
+  structures, city population/area/elevation (no keys; Natural Earth's populations kept), country population and
+  elevation (23 and 7 items), exoplanets. No per-item values imported per block 19:35: 5 of 314 k.animals match.
+  A session loads ranges (12.7 kB) and ranges-wikidata (2.1 kB) only when a number's interest is scored.

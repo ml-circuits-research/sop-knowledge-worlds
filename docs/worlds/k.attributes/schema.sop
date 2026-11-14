@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=4 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=4 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage exports=range exports=typical core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -148,6 +148,39 @@
 @k.attributes.shows.key core.slot of=k.attributes.shows key=key id=true required=true kind=atom core.source="hand-core 1"
 @k.attributes.shows.by core.slot of=k.attributes.shows key=by required=true kind=atom core.source="hand-core 1"
 
+# The typical range of a number for things of a kind (block 15:15 item 3), so that "a number far from the usual" can
+# be computed (k.interest: range_distance): the numbers are those of `type` under `key` (their unit is in
+# k.units.measure); `kind` the kind the range is for (a k.attributes.kind, a class of k.animals, a kind of k.people,
+# or a k.attributes.thing name; none: every fact of the type). `low` and `high` the range, `median` its middle;
+# `basis` catalog: the interquartile range and median of the `count` numbers of the kind in the catalog
+# (tools/ranges-core.mjs; the quartile is the number at floor(p * (count - 1)) of the sorted numbers), source: a
+# published work (`cite`), own: own choice (`own` says what, and `cite` what it rests on, if anything). A range of a
+# catalog's numbers is the catalog's usual, not a measured population (the model-labelled numbers of
+# k.attributes.number). A kind may have a catalog range and a sourced one (the basis is part of the identity): the
+# catalog's is the usual of everyday things, a sourced one the usual of the population its `cite` names (Wikidata's
+# taxa with a mass are mostly small species).
+@k.attributes.range core.type of=k.attributes.range shared=true closed=true core.source="hand-core 1"
+@k.attributes.range.type core.slot of=k.attributes.range key=type id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.range.key core.slot of=k.attributes.range key=key id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.range.kind core.slot of=k.attributes.range key=kind id=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.range.low core.slot of=k.attributes.range key=low required=true kind=number core.source="hand-core 1"
+@k.attributes.range.high core.slot of=k.attributes.range key=high required=true kind=number core.source="hand-core 1"
+@k.attributes.range.median core.slot of=k.attributes.range key=median kind=number core.source="hand-core 1"
+@k.attributes.range.count core.slot of=k.attributes.range key=count kind=integer min=1 core.source="hand-core 1"
+@k.attributes.range.basis core.slot of=k.attributes.range key=basis id=true required=true enum=catalog enum=source enum=own core.source="hand-core 1"
+@k.attributes.range.cite core.slot of=k.attributes.range key=cite kind=string core.source="hand-core 1"
+@k.attributes.range.own core.slot of=k.attributes.range key=own kind=string core.source="hand-core 1"
+
+# How usual it is that a thing of a kind has, and a request names, a value for an attribute (block 14:15 item 2):
+# `of` a k.attributes.kind name (its `attribute` a k.attributes.attribute) or a type of a world (a world schema's
+# kind, w.seating.guest; a knowledge type, k.geo.country: its `attribute` a key of that type); `weight` in (0, 1],
+# own choice (1: nearly always named; 0.1: seldom). A sampler weighs the attributes it names by it; an attribute a
+# kind has with no fact here is not unusual, only not weighed.
+@k.attributes.typical core.type of=k.attributes.typical shared=true closed=true core.source="hand-core 1"
+@k.attributes.typical.of core.slot of=k.attributes.typical key=of id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.attributes.typical.attribute core.slot of=k.attributes.typical key=attribute id=true required=true kind=atom core.source="hand-core 1"
+@k.attributes.typical.weight core.slot of=k.attributes.typical key=weight required=true kind=number min=0.01 max=1 core.source="hand-core 1"
+
 # Words for the types and keys of this world.
 @k.attributes.word.aspect core.word text=aspect text=aspects text=view text=views means=k.attributes.aspect core.source="hand-core 1"
 @k.attributes.word.attribute core.word text=attribute text=attributes text=property text=properties text=feature text=features means=k.attributes.attribute core.source="hand-core 1"
@@ -211,3 +244,14 @@
 @k.attributes.word.key.shows.type core.word text=type means=k.attributes.shows.type core.source="hand-core 1"
 @k.attributes.word.key.shows.key core.word text=key means=k.attributes.shows.key core.source="hand-core 1"
 @k.attributes.word.key.shows.by core.word text=by means=k.attributes.shows.by core.source="hand-core 1"
+@k.attributes.word.key.range.key core.word text=key means=k.attributes.range.key core.source="hand-core 1"
+@k.attributes.word.key.range.kind core.word text=kind means=k.attributes.range.kind core.source="hand-core 1"
+@k.attributes.word.key.range.low core.word text=low means=k.attributes.range.low core.source="hand-core 1"
+@k.attributes.word.key.range.high core.word text=high means=k.attributes.range.high core.source="hand-core 1"
+@k.attributes.word.key.range.median core.word text=median means=k.attributes.range.median core.source="hand-core 1"
+@k.attributes.word.key.range.count core.word text=count means=k.attributes.range.count core.source="hand-core 1"
+@k.attributes.word.key.range.basis core.word text=basis means=k.attributes.range.basis core.source="hand-core 1"
+@k.attributes.word.key.range.cite core.word text=cite means=k.attributes.range.cite core.source="hand-core 1"
+@k.attributes.word.key.range.own core.word text=own means=k.attributes.range.own core.source="hand-core 1"
+@k.attributes.word.key.typical.attribute core.word text=attribute means=k.attributes.typical.attribute core.source="hand-core 1"
+@k.attributes.word.key.typical.weight core.word text=weight means=k.attributes.typical.weight core.source="hand-core 1"

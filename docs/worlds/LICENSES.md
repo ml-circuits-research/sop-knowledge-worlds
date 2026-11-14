@@ -20,7 +20,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: ODbL-1.0 (Open Database License: attribution, share-alike for the database).
 - Attribution: Contains information from mledoze/countries (https://github.com/mledoze/countries), which is made available under the Open Database License (ODbL) 1.0, https://opendatacommons.org/licenses/odbl/1-0/ .
 - Shard terms: ODbL-1.0
-- Used by: `k.geo` (7 shards)
+- Used by: `k.attributes` (1 shards), `k.geo` (7 shards)
 
 ## css-colors-2.1.1
 
@@ -110,7 +110,7 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (21 shards), `k.animals` (6 shards), `k.attributes` (39 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (5 shards), `k.procedures` (2 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (2 shards), `k.units` (2 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (6 shards), `w.lang.ro` (4 shards)
+- Used by: `k.actions` (21 shards), `k.animals` (6 shards), `k.attributes` (41 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.objects` (29 shards), `k.parts` (1 shards), `k.people` (5 shards), `k.procedures` (2 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (2 shards), `k.units` (2 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (6 shards), `w.lang.ro` (4 shards)
 
 ## mulberry-fa94a93
 
@@ -127,8 +127,8 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Origin: https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`, `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`, `ne_10m_geography_regions_polys`, `ne_10m_lakes`, `ne_10m_geography_marine_polys` (`.geojson`).
 - License: public domain (`LICENSE.md` of the repository: "All versions of Natural Earth raster + vector map data found on this website are in the public domain"); written `public-domain` in shard headers and the catalog.
 - Attribution: none required. Made with Natural Earth, free vector and raster map data at naturalearthdata.com.
-- Shard terms: public-domain
-- Used by: `k.geo` (8 shards)
+- Shard terms: CC0-1.0, public-domain
+- Used by: `k.attributes` (1 shards), `k.geo` (8 shards)
 
 ## noto-emoji-99701e0
 
@@ -336,6 +336,15 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Attribution: that of the facts read (none for CC0-1.0).
 - Shard terms: CC0-1.0
 - Used by: `k.time` (1 shards)
+
+## wikidata-typical-2026-11-14
+
+- What: numbers of Wikidata items by property, for typical ranges of k.attributes: the mass and length of taxa, the height of buildings, the area of countries (and, read but not used, heights and lifespans of taxa, heights of structures, populations, areas and elevations of cities, populations and elevations of countries, planets).
+- Origin: Wikidata Query Service (https://query.wikidata.org/sparql), fetched by PSys2's machine on 2026-11-14 into psys2 `data/external/wikidata-typical-numbers/` (one CSV per property: `item, label, value, unit`; each query capped at 1,500 rows, so a file is a sample, not complete). Reviewer blocks 17:55, 19:20, 19:35 of worker-tasks.md.
+- License: CC0-1.0 (Wikidata structured data, https://www.wikidata.org/wiki/Wikidata:Licensing).
+- Attribution: none required. Data from Wikidata.
+- Shard terms: CC0-1.0
+- Used by: `k.attributes` (1 shards)
 
 ## wordnet-3.1
 

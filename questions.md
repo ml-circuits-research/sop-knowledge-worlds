@@ -771,3 +771,15 @@ is a post-step the language world declares (a form of a word chosen by the next 
 declares English nouns as `m.class` (s, es, y>ies, f>ves) with the class chosen by the ending, so `realise` needs no
 dictionary row for a regular noun; (c) the host realises English itself.
 Blocking: no. Meanwhile: (c) through `realiseEn`; the facts are written so (a) or (b) can read them.
+
+## Q56 (block 17:05 task 3, fourth worker, 2026-11-14): typicality as its own type, not in `k.attributes.usage`
+Question: is `k.attributes.typical` (of, attribute, weight) the right home for "which attributes a kind usually has a
+value for", instead of a key on `k.attributes.usage` as block 14:15 item 2 suggested?
+Context: `k.attributes.usage` says when and by whom a thing is used (season, time, weather, age, used_by), one fact
+per thing; typicality is per kind (a k.attributes.kind, a world schema's kind such as w.seating.guest, or a type such
+as k.geo.country) and per attribute, with a weight a sampler multiplies by. A repeated key on usage could not carry
+a weight per attribute, and usage has no facts for kinds or schema kinds. `k.attributes.kind` already lists the
+attributes of a kind without weights; typicality names two more for a person (age, colour of clothes).
+Options: (a) keep `k.attributes.typical`; (b) move the weights onto `k.attributes.kind` as one fact per kind and
+attribute; (c) a key on usage.
+Blocking: no. Meanwhile: (a).
