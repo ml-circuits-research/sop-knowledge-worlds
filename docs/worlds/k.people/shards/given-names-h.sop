@@ -1,5 +1,6 @@
 # k.people/shards/given-names-h: 113 given names starting with H (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -42,7 +43,7 @@
 @k.people.given_name.Hassan k.people.given_name name=Hassan sex=male holders=1059 band=common wikidata=Q16276444 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Hatice k.people.given_name name=Hatice sex=female holders=253 band=frequent wikidata=Q1588917 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Hauke k.people.given_name name=Hauke sex=male holders=149 band=frequent wikidata=Q1589288 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Hazel k.people.given_name name=Hazel sex=female holders=417 band=frequent wikidata=Q3783818 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Hazel k.people.given_name name=Hazel sex=female holders=417 band=frequent wikidata=Q3783818 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Heather k.people.given_name name=Heather sex=female holders=1641 band=common wikidata=Q7498915 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Hector k.people.given_name name=Hector sex=male holders=1652 band=common wikidata=Q1811874 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Hedda k.people.given_name name=Hedda sex=female holders=138 band=frequent wikidata=Q15106926 core.source="wikidata-given-names 2026-11-14"
@@ -99,7 +100,7 @@
 @k.people.given_name.Hitomi k.people.given_name name=Hitomi sex=female holders=262 band=frequent wikidata=Q7780235 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Hitoshi k.people.given_name name=Hitoshi sex=male holders=368 band=frequent wikidata=Q11709963 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Holger k.people.given_name name=Holger sex=male holders=2212 band=common wikidata=Q1624466 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Hope k.people.given_name name=Hope sex=female holders=553 band=frequent wikidata=Q3786711 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Hope k.people.given_name name=Hope sex=female holders=553 band=frequent wikidata=Q3786711 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Horst k.people.given_name name=Horst sex=male holders=4216 band=common wikidata=Q381702 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Hortense k.people.given_name name=Hortense sex=female holders=161 band=frequent wikidata=Q11863640 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Howard k.people.given_name name=Howard sex=male holders=4416 band=common wikidata=Q3595959 core.source="wikidata-given-names 2026-11-14"

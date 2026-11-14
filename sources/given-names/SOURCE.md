@@ -14,10 +14,12 @@
 - **What is kept:** one fact per English label (`k.people.given_name`): the name as spelled, its sexes (female, male;
   both for a unisex item), the holders (added over the items of one label: Anna is Q666578 and Q22713652), a band
   computed from the holders (very common >= 10,000; common >= 1,000; frequent >= 100; rare below), and the Wikidata
-  items. Left out: a label with no Latin letter (one: ג'וי, Q4539731).
+  items. Left out: a label with no Latin letter (one: ג'וי, Q4539731). Added by this repository's rule, not from
+  Wikidata (`core.source="hand-core 1"` as a second source on the wire): `context=person` on the 49 names that are
+  also a common word or a common thing of the catalog (see k.people/WORLD.md).
 - **Counts (2026-11-15):** 3,000 items, 2,990 names (9 labels of two items merged, 1 left out): 123 very common,
   934 common, 1,441 frequent, 492 rare; 184 of both sexes; 26 shards (`k.people/shards/given-names-<letter>`),
-  489,605 bytes.
+  494,812 bytes (with `context=person` on 49 names, 2026-11-15).
 - **Not used:** the SSA national baby names (public domain; ssa.gov refuses automated fetches). A CC0 copy exists in
   the R package babynames (github.com/hadley/babynames, data/babynames.rda, 1880-2017, 1,924,665 rows); it was read
   once (10,570 names with at least 1,000 births) and set aside when the reviewer chose the Wikidata set.

@@ -64,3 +64,10 @@ from the holders (very common 123, common 934, frequent 1,441, rare 492) and its
 "Zoe", "Ana", "Tom" or "Leo" learns that the word is a given name (the vocabulary leads the word to its letter's
 shard), so it can fill a `name` argument or a person instead of a dictionary sense. It says nothing of a person who
 bears the name; the holder counts lean to notable people. Checked by `tests/k.people.given-names.test.mjs`.
+49 names are also a common word or the name of a common thing of the catalog and carry `context=person` (by rule:
+the lower-case name names a thing of another world, not a place of k.geo, as Rose, Robin, Iris, Tea, Amber, May,
+Kelvin, Line; or it is a word of k.words with at least three senses that are no person, as Hope, Mark, Grace, Frank,
+Art, Odd). A reader takes the word ("a rose", "in May") and the name only in a person context ("Rose is my friend",
+"my friend Rose", "Rose said", a capital inside the sentence); `readsAsName` in the import is that rule as a
+reference, tested on those sentences. The vocabulary lists the names shard last for such a word. Tom (two senses,
+both a male animal), Ana, Leo and the names of rivers and cities (James, David, Charlotte) carry no flag.

@@ -1,5 +1,6 @@
 # k.people/shards/given-names-v: 77 given names starting with V (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -53,7 +54,7 @@
 @k.people.given_name.Vilem k.people.given_name name=Vilém sex=male holders=1519 band=common wikidata=Q2625084 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Vincent k.people.given_name name=Vincent sex=male holders=7434 band=common wikidata=Q4928254 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Viola k.people.given_name name=Viola sex=female holders=777 band=frequent wikidata=Q301657 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Violet k.people.given_name name=Violet sex=female holders=1463 band=common wikidata=Q1454272 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Violet k.people.given_name name=Violet sex=female holders=1463 band=common wikidata=Q1454272 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Violeta k.people.given_name name=Violeta sex=female holders=278 band=frequent wikidata=Q2527460 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Violetta k.people.given_name name=Violetta sex=female holders=137 band=frequent wikidata=Q16282508 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Viorica k.people.given_name name=Viorica sex=female holders=46 band=rare wikidata=Q19860415 core.source="wikidata-given-names 2026-11-14"

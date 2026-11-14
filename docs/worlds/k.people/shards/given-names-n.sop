@@ -1,5 +1,6 @@
 # k.people/shards/given-names-n: 80 given names starting with N (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 

@@ -1,5 +1,6 @@
 # k.people/shards/given-names-f: 104 given names starting with F (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -10,7 +11,7 @@
 @k.people.given_name.Fabrice k.people.given_name name=Fabrice sex=male holders=969 band=frequent wikidata=Q906035 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Facundo k.people.given_name name=Facundo sex=male holders=273 band=frequent wikidata=Q267401 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Faina k.people.given_name name=Faina sex=female holders=29 band=rare wikidata=Q4480548 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Faith k.people.given_name name=Faith sex=female sex=male holders=335 band=frequent wikidata=Q3740805 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Faith k.people.given_name name=Faith sex=female sex=male holders=335 band=frequent wikidata=Q3740805 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Fanni k.people.given_name name=Fanni sex=female holders=161 band=frequent wikidata=Q20000156 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Fanny k.people.given_name name=Fanny sex=female holders=2946 band=common wikidata=Q1250282 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Farah k.people.given_name name=Faraḥ sex=female sex=male holders=150 band=frequent wikidata=Q5258847 core.source="wikidata-given-names 2026-11-14"
@@ -74,7 +75,7 @@
 @k.people.given_name.Franciszek k.people.given_name name=Franciszek sex=male holders=2786 band=common wikidata=Q15207702 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Franco k.people.given_name name=Franco sex=male holders=2625 band=common wikidata=Q15303969 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Franjo k.people.given_name name=Franjo sex=male holders=345 band=frequent wikidata=Q1091889 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Frank k.people.given_name name=Frank sex=male holders=21402 band="very common" wikidata=Q220546 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Frank k.people.given_name name=Frank sex=male holders=21402 band="very common" wikidata=Q220546 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Franklin k.people.given_name name=Franklin sex=male holders=1541 band=common wikidata=Q14647745 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Frans k.people.given_name name=Frans sex=male holders=2881 band=common wikidata=Q3480175 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Frantisek k.people.given_name name=František sex=male holders=12922 band="very common" wikidata=Q2648973 core.source="wikidata-given-names 2026-11-14"

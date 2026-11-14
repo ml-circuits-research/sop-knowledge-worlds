@@ -1,5 +1,6 @@
 # k.people/shards/given-names-e: 173 given names starting with E (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -15,7 +16,7 @@
 @k.people.given_name.Edi k.people.given_name name=Edi sex=female sex=male holders=119 band=frequent wikidata=Q1284444 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Edie k.people.given_name name=Edie sex=female holders=45 band=rare wikidata=Q1284506 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Edina k.people.given_name name=Edina sex=female holders=103 band=frequent wikidata=Q512920 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Edit k.people.given_name name=Edit sex=female holders=274 band=frequent wikidata=Q12788170 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Edit k.people.given_name name=Edit sex=female holders=274 band=frequent wikidata=Q12788170 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Edita k.people.given_name name=Edita sex=female holders=641 band=frequent wikidata=Q786989 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Edith k.people.given_name name=Edith sex=female holders=5244 band=common wikidata=Q987673 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Edmond k.people.given_name name=Edmond sex=male holders=2722 band=common wikidata=Q12788174 core.source="wikidata-given-names 2026-11-14"

@@ -1,5 +1,6 @@
 # k.people/shards/given-names-a: 394 given names starting with A (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -193,7 +194,7 @@
 @k.people.given_name.Amalie k.people.given_name name=Amalie sex=female holders=1288 band=common wikidata=Q18171848 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Amanda k.people.given_name name=Amanda sex=female holders=4757 band=common wikidata=Q453722 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Amaya k.people.given_name name=Amaya sex=female holders=74 band=rare wikidata=Q3613727 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Amber k.people.given_name name=Amber sex=female holders=1019 band=common wikidata=Q456808 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Amber k.people.given_name name=Amber sex=female holders=1019 band=common wikidata=Q456808 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Amelia k.people.given_name name=Amelia sex=female holders=2017 band=common wikidata=Q461718 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Amelie k.people.given_name name=Amelie sex=female holders=455 band=frequent wikidata=Q18171830 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Amina k.people.given_name name=Amina sex=female holders=311 band=frequent wikidata=Q837521 core.source="wikidata-given-names 2026-11-14"
@@ -241,7 +242,7 @@
 @k.people.given_name.Angela k.people.given_name name=Angela sex=female holders=5468 band=common wikidata=Q4851436 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Angelika k.people.given_name name=Angelika sex=female holders=1477 band=common wikidata=Q12898721 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Angelina k.people.given_name name=Angelina sex=female holders=603 band=frequent wikidata=Q1097621 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Angelique k.people.given_name name=Angelique sex=female holders=270 band=frequent wikidata=Q6299671 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Angelique k.people.given_name name=Angelique sex=female holders=270 band=frequent wikidata=Q6299671 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Angelo k.people.given_name name=Angelo sex=male holders=3698 band=common wikidata=Q18814789 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Angus k.people.given_name name=Angus sex=male holders=1372 band=common wikidata=Q591929 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Ani k.people.given_name name=Ani sex=female holders=58 band=rare wikidata=Q4764403 core.source="wikidata-given-names 2026-11-14"
@@ -293,7 +294,7 @@
 @k.people.given_name.Anya k.people.given_name name=Anya sex=female holders=105 band=frequent wikidata=Q511390 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.An_elko k.people.given_name name=Anđelko sex=male holders=26 band=rare wikidata=Q615329 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Aodh k.people.given_name name=Aodh sex=male holders=24 band=rare wikidata=Q2857956 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.April k.people.given_name name=April sex=female holders=564 band=frequent wikidata=Q621915 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.April k.people.given_name name=April sex=female holders=564 band=frequent wikidata=Q621915 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Arabella k.people.given_name name=Arabella sex=female holders=388 band=frequent wikidata=Q714907 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Araceli k.people.given_name name=Araceli sex=female holders=112 band=frequent wikidata=Q3621194 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Aram k.people.given_name name=Aram sex=male holders=192 band=frequent wikidata=Q4068496 core.source="wikidata-given-names 2026-11-14"
@@ -321,7 +322,7 @@
 @k.people.given_name.Arnulf k.people.given_name name=Arnulf sex=male holders=149 band=frequent wikidata=Q18978276 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Arslan k.people.given_name name=Arslan sex=male holders=38 band=rare wikidata=Q20817473 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Arsene k.people.given_name name=Arsène sex=male holders=180 band=frequent wikidata=Q16274715 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Art k.people.given_name name=Art sex=male holders=807 band=frequent wikidata=Q8227356 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Art k.people.given_name name=Art sex=male holders=807 band=frequent wikidata=Q8227356 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Artem k.people.given_name name=Artem sex=male holders=384 band=frequent wikidata=Q120408 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Arthur k.people.given_name name=Arthur sex=male holders=21442 band="very common" wikidata=Q1778168 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Artur k.people.given_name name=Artur sex=male holders=3274 band=common wikidata=Q4801582 core.source="wikidata-given-names 2026-11-14"
@@ -354,14 +355,14 @@
 @k.people.given_name.Aud k.people.given_name name=Aud sex=female holders=61 band=rare wikidata=Q3481060 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Audrey k.people.given_name name=Audrey sex=female sex=male holders=3946 band=common wikidata=Q2639295 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Audun k.people.given_name name=Audun sex=male holders=112 band=frequent wikidata=Q759056 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.August k.people.given_name name=August sex=male holders=10569 band="very common" wikidata=Q370731 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.August k.people.given_name name=August sex=male holders=10569 band="very common" wikidata=Q370731 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Augusta k.people.given_name name=Augusta sex=female holders=1768 band=common wikidata=Q1370330 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Augustina k.people.given_name name=Augustina sex=female holders=60 band=rare wikidata=Q768241 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Augusto k.people.given_name name=Augusto sex=male holders=2098 band=common wikidata=Q769032 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Augustus k.people.given_name name=Augustus sex=male holders=1935 band=common wikidata=Q770041 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Auke k.people.given_name name=Auke sex=male holders=88 band=rare wikidata=Q771150 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Aulis k.people.given_name name=Aulis sex=male holders=88 band=rare wikidata=Q771948 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Aura k.people.given_name name=Aura sex=female holders=87 band=rare wikidata=Q3629777 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Aura k.people.given_name name=Aura sex=female holders=87 band=rare wikidata=Q3629777 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Aurel k.people.given_name name=Aurel sex=male holders=353 band=frequent wikidata=Q778658 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Aurelia k.people.given_name name=Aurelia sex=female holders=345 band=frequent wikidata=Q21034949 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Aurora k.people.given_name name=Aurora sex=female holders=733 band=frequent wikidata=Q1066178 core.source="wikidata-given-names 2026-11-14"

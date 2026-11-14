@@ -1,5 +1,6 @@
 # k.people/shards/given-names-b: 152 given names starting with B (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -22,7 +23,7 @@
 @k.people.given_name.Baruch k.people.given_name name=Baruch sex=male holders=257 band=frequent wikidata=Q9166352 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Bar_s k.people.given_name name=Barış sex=male holders=211 band=frequent wikidata=Q809708 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Bashir k.people.given_name name=Bashir sex=male holders=139 band=frequent wikidata=Q2929674 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Basil k.people.given_name name=Basil sex=male holders=1034 band=common wikidata=Q4926514 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Basil k.people.given_name name=Basil sex=male holders=1034 band=common wikidata=Q4926514 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Bastian k.people.given_name name=Bastian sex=male holders=487 band=frequent wikidata=Q810611 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Bea k.people.given_name name=Bea sex=female holders=164 band=frequent wikidata=Q18194760 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Beata k.people.given_name name=Beata sex=female holders=1322 band=common wikidata=Q338015 core.source="wikidata-given-names 2026-11-14"
@@ -51,7 +52,7 @@
 @k.people.given_name.Benjamin_Q19830690 k.people.given_name name=Benjamín sex=male holders=550 band=frequent wikidata=Q19830690 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Benno k.people.given_name name=Benno sex=male holders=865 band=frequent wikidata=Q381098 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Beno k.people.given_name name=Beno sex=male holders=70 band=rare wikidata=Q818081 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Bent k.people.given_name name=Bent sex=male holders=332 band=frequent wikidata=Q818202 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Bent k.people.given_name name=Bent sex=male holders=332 band=frequent wikidata=Q818202 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Bente k.people.given_name name=Bente sex=female sex=male holders=298 band=frequent wikidata=Q4579004 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Berengar k.people.given_name name=Berengar sex=male holders=24 band=rare wikidata=Q819028 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Berenice k.people.given_name name=Berenice sex=female holders=145 band=frequent wikidata=Q737848 core.source="wikidata-given-names 2026-11-14"
@@ -99,7 +100,7 @@
 @k.people.given_name.Blanka k.people.given_name name=Blanka sex=female holders=662 band=frequent wikidata=Q804338 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Blas k.people.given_name name=Blas sex=male holders=272 band=frequent wikidata=Q840496 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Blasius k.people.given_name name=Blasius sex=male holders=75 band=rare wikidata=Q18220743 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Bob k.people.given_name name=Bob sex=male holders=7286 band=common wikidata=Q18105736 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Bob k.people.given_name name=Bob sex=male holders=7286 band=common wikidata=Q18105736 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Bobby k.people.given_name name=Bobby sex=male holders=2258 band=common wikidata=Q4564223 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Bodil k.people.given_name name=Bodil sex=female holders=167 band=frequent wikidata=Q889848 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Bodo k.people.given_name name=Bodo sex=male holders=431 band=frequent wikidata=Q16275051 core.source="wikidata-given-names 2026-11-14"

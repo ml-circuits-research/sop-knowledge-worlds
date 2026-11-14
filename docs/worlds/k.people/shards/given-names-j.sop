@@ -1,5 +1,6 @@
 # k.people/shards/given-names-j: 183 given names starting with J (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -9,11 +10,11 @@
 @k.people.given_name.Jaan k.people.given_name name=Jaan sex=male holders=792 band=frequent wikidata=Q1676756 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jacek k.people.given_name name=Jacek sex=male holders=2400 band=common wikidata=Q187837 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jacinta k.people.given_name name=Jacinta sex=female holders=93 band=rare wikidata=Q1036095 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Jack k.people.given_name name=Jack sex=male holders=10548 band="very common" wikidata=Q1159009 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Jack k.people.given_name name=Jack sex=male holders=10548 band="very common" wikidata=Q1159009 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Jacob k.people.given_name name=Jacob sex=male holders=10465 band="very common" wikidata=Q25999604 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jacqueline k.people.given_name name=Jacqueline sex=female holders=3893 band=common wikidata=Q391321 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jacques k.people.given_name name=Jacques sex=male holders=12517 band="very common" wikidata=Q941049 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Jade k.people.given_name name=Jade sex=female sex=male holders=734 band=frequent wikidata=Q761570 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Jade k.people.given_name name=Jade sex=female sex=male holders=734 band=frequent wikidata=Q761570 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Jadranka k.people.given_name name=Jadranka sex=female holders=47 band=rare wikidata=Q1678199 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jadwiga k.people.given_name name=Jadwiga sex=female holders=1238 band=common wikidata=Q4962685 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jaime k.people.given_name name=Jaime sex=female sex=male holders=3008 band=common wikidata=Q2605834 core.source="wikidata-given-names 2026-11-14"
@@ -47,12 +48,12 @@
 @k.people.given_name.Jaros_aw k.people.given_name name=Jarosław sex=male holders=1085 band=common wikidata=Q16257268 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jasmin k.people.given_name name=Jasmin sex=female sex=male holders=705 band=frequent wikidata=Q18113540 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jasmina k.people.given_name name=Jasmina sex=female holders=130 band=frequent wikidata=Q17071403 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Jasmine k.people.given_name name=Jasmine sex=female holders=879 band=frequent wikidata=Q4963071 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Jasmine k.people.given_name name=Jasmine sex=female holders=879 band=frequent wikidata=Q4963071 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Jasna k.people.given_name name=Jasna sex=female holders=176 band=frequent wikidata=Q3487834 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jason k.people.given_name name=Jason sex=male holders=6997 band=common wikidata=Q2630093 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jasper k.people.given_name name=Jasper sex=male holders=980 band=frequent wikidata=Q1665973 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Javier k.people.given_name name=Javier sex=male holders=5106 band=common wikidata=Q1142232 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Jay k.people.given_name name=Jay sex=male holders=2475 band=common wikidata=Q19817029 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Jay k.people.given_name name=Jay sex=male holders=2475 band=common wikidata=Q19817029 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Jean k.people.given_name name=Jean sex=male holders=24337 band="very common" wikidata=Q7521081 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jean-Baptiste k.people.given_name name=Jean-Baptiste sex=male holders=4003 band=common wikidata=Q1499767 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jean-Claude k.people.given_name name=Jean-Claude sex=male holders=2951 band=common wikidata=Q3164791 core.source="wikidata-given-names 2026-11-14"
@@ -99,7 +100,7 @@
 @k.people.given_name.Joanna k.people.given_name name=Joanna sex=female holders=5139 band=common wikidata=Q4248351 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Joanne k.people.given_name name=Joanne sex=female holders=1696 band=common wikidata=Q14968419 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Joaquin k.people.given_name name=Joaquín sex=male holders=2185 band=common wikidata=Q6204496 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Job k.people.given_name name=Job sex=male holders=372 band=frequent wikidata=Q2569062 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Job k.people.given_name name=Job sex=male holders=372 band=frequent wikidata=Q2569062 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Jocelyn k.people.given_name name=Jocelyn sex=female sex=male holders=500 band=frequent wikidata=Q3808609 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jochen k.people.given_name name=Jochen sex=male holders=1681 band=common wikidata=Q18121213 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Joel k.people.given_name name=Joel sex=male holders=4001 band=common wikidata=Q588700 core.source="wikidata-given-names 2026-11-14"
@@ -163,7 +164,7 @@
 @k.people.given_name.Julio k.people.given_name name=Julio sex=male holders=3409 band=common wikidata=Q2367525 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Julius k.people.given_name name=Julius sex=male holders=9061 band=common wikidata=Q1102114 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Juliusz k.people.given_name name=Juliusz sex=male holders=426 band=frequent wikidata=Q17596178 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.June k.people.given_name name=June sex=female sex=male holders=1013 band=common wikidata=Q1152453 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.June k.people.given_name name=June sex=female sex=male holders=1013 band=common wikidata=Q1152453 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Junko k.people.given_name name=Junko sex=female holders=234 band=frequent wikidata=Q10312977 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Juraj k.people.given_name name=Juraj sex=male holders=1084 band=common wikidata=Q3513270 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Jurij k.people.given_name name=Jurij sex=male holders=324 band=frequent wikidata=Q10944157 core.source="wikidata-given-names 2026-11-14"

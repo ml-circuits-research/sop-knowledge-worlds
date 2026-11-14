@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.people core.module name=k.people version=4 imports=k.kinds exports=kind exports=role exports=given_name core.source="hand-core 1"
+@k.people core.module name=k.people version=5 imports=k.kinds exports=kind exports=role exports=given_name core.source="hand-core 1"
 
 # A kind of person by age and sex. All kinds are drawn by the one person drawing of k.objects (`drawing`), varied by
 # what the fact says: `age` (baby, child, adult, old), `sex` where the word says it, `height_about`: the usual
@@ -61,6 +61,12 @@
 @k.people.given_name.holders core.slot of=k.people.given_name key=holders required=true kind=integer min=1 core.source="hand-core 1"
 @k.people.given_name.band core.slot of=k.people.given_name key=band required=true enum=rare enum=frequent enum=common enum="very common" core.source="hand-core 1"
 @k.people.given_name.wikidata core.slot of=k.people.given_name key=wikidata many=true required=true kind=atom core.source="hand-core 1"
+# `context=person` (reviewer 04:10 item 4): the name is also a common word or the name of a common thing of the catalog
+# (Rose, Hope, Mark, Robin, May, Kelvin; 49 names, by the rule of tools/import/given-names.mjs). A reader takes the word
+# (a rose, hope, in May) and the name only where a person context applies: no determiner before it, and a capital
+# inside the sentence, a person noun next to it (my friend Rose; Rose is my friend) or a verb a person does (Rose
+# said). The vocabulary (vocab.json) lists the names shard last for such a word.
+@k.people.given_name.context core.slot of=k.people.given_name key=context enum=person core.source="hand-core 1"
 
 @k.people.word.given_name core.word text="given name" text="given names" text="first name" text="first names" means=k.people.given_name core.source="hand-core 1"
 @k.people.word.kind core.word text=person text=people text=persons means=k.people.kind core.source="hand-core 1"
@@ -92,3 +98,4 @@
 @k.people.word.key.given_name.holders core.word text=holders means=k.people.given_name.holders core.source="hand-core 1"
 @k.people.word.key.given_name.band core.word text=band means=k.people.given_name.band core.source="hand-core 1"
 @k.people.word.key.given_name.wikidata core.word text=wikidata means=k.people.given_name.wikidata core.source="hand-core 1"
+@k.people.word.key.given_name.context core.word text=context means=k.people.given_name.context core.source="hand-core 1"

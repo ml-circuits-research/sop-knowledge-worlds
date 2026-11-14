@@ -5092,3 +5092,28 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   world, not a missing frame. "make the arrows go left to right" (dg19), "call the arrow yes" (dg49) and the 15 kind
   requests (dg21-35) now have frames here.
 - `npm run test:changed` on the rebased tip (0b0f1af): 24 files, 147 tests, 147 pass.
+
+## 2026-11-15 — second worker: given names that are also common words need a person context (reviewer 04:10, item 4)
+
+- `k.people.given_name.context=person` (k.people version 5): on **49 of the 2,990 names**, by a rule of
+  tools/import/given-names.mjs over the published catalog (no list by hand): the lower-case name is the name of a
+  thing of another world (25: Robin, Jay, Iris, Tea, Basil, Guy, Daisy, Lily, Violet, Rose, Jasmine, Margarita, Tuba,
+  Marina, Line, April, May, June, August, Dawn, Kelvin, Amber, Ruby, Jade, Angelique), not counting the places of
+  k.geo (a river James, a city David or Charlotte: there the person's name comes first), or a word of k.words with at
+  least three senses that are no person (24: Hope, Mark, Job, Roar, Bob, Grace, Frank, Rein, Rut, Rick, Art, Faith,
+  Odd, Jack, Gay, Carol, Crystal, Hazel, Aura, Bent, Dolly, Edit, Kitty, Sally). Tom (2 senses, a male cat or turkey),
+  Ana (1), Leo (the constellation, capitalised in WordNet), Zoe carry no flag. "Cliff" is none of the 2,990 names.
+  The flag's wires carry `core.source="hand-core 1"` after Wikidata's (the rule is ours); shard headers name both.
+- **The vocabulary index supported no priority, so it got the least one**: tools/build-catalog.mjs lists, for each
+  word, the shards it reaches only through a reading that needs a context (a fact with `context=person`) after its
+  other shards; the rest stays sorted (README.md says so). `vocab.json` "rose": 19 shards of the flower, the colour,
+  the dictionary, then `k.people/shards/given-names-r`; "hope", "may" likewise. Nothing else moved.
+- A reader's rule as a reference (`readsAsName` in the import): a flagged name is the name only with no determiner
+  before it (w.lang.en's closed-class determiners) and a person context: a capital inside the sentence, a person noun
+  before it, a form of "be" and a person noun after it (k.words: first noun sense under noun.person), or a verb a
+  person does after it. Tested: "a rose" -> the word; "Rose is my friend" -> the name; "I gave Rose a rose" -> name,
+  word; "my friend Rose likes tea" -> name; "Hope is good" -> the word; "Hope said yes" -> the name; "Tom is here" ->
+  the name (no flag).
+- Numbers: 26 shards, 2,990 wires, 494,812 bytes (was 489,605). Docs: k.people/WORLD.md, docs/worlds/README.md,
+  sources/given-names/SOURCE.md. Tests: tests/k.people.given-names.test.mjs new test (flags, sources, the reader's
+  rule on the sentences above, the order in vocab.json).

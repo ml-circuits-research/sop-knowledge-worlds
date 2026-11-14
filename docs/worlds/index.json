@@ -1,5 +1,5 @@
 {
- "version": "a1ea48df1ac1",
+ "version": "d91dba0a8e84",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4496,8 +4496,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1063,
-     "bytes": 204565,
+     "wires": 1064,
+     "bytes": 204755,
      "keys": [
       "a",
       "about",
@@ -4567,6 +4567,7 @@
       "combine",
       "comes_from",
       "complement",
+      "context",
       "continent",
       "contractions",
       "corners",
@@ -29591,12 +29592,13 @@
     {
      "id": "k.kinds/shards/relations-people",
      "path": "k.kinds/shards/relations-people.sop",
-     "wires": 30,
-     "bytes": 6517,
+     "wires": 31,
+     "bytes": 6782,
      "keys": [
       "age",
       "band",
       "beard",
+      "context",
       "derived",
       "does",
       "drawing",
@@ -48390,7 +48392,7 @@
   },
   {
    "id": "k.people",
-   "version": "4",
+   "version": "5",
    "schema": "k.people/schema.sop",
    "exports": [
     "k.people.given_name",
@@ -48487,7 +48489,7 @@
      "id": "k.people/shards/given-names-a",
      "path": "k.people/shards/given-names-a.sop",
      "wires": 394,
-     "bytes": 63447,
+     "bytes": 63816,
      "keys": [
       "'abd al-hamid",
       "'abd al-majid",
@@ -48885,6 +48887,7 @@
       "ʿabd al-ṣamad"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -48894,7 +48897,7 @@
      "id": "k.people/shards/given-names-b",
      "path": "k.people/shards/given-names-b.sop",
      "wires": 152,
-     "bytes": 24823,
+     "bytes": 25069,
      "keys": [
       "babak",
       "badr",
@@ -49050,6 +49053,7 @@
       "bülent"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49059,7 +49063,7 @@
      "id": "k.people/shards/given-names-c",
      "path": "k.people/shards/given-names-c.sop",
      "wires": 103,
-     "bytes": 17185,
+     "bytes": 17390,
      "keys": [
       "caitlin",
       "calum",
@@ -49166,6 +49170,7 @@
       "çağla"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49175,7 +49180,7 @@
      "id": "k.people/shards/given-names-d",
      "path": "k.people/shards/given-names-d.sop",
      "wires": 116,
-     "bytes": 18980,
+     "bytes": 19226,
      "keys": [
       "dag",
       "dagfinn",
@@ -49295,6 +49300,7 @@
       "désirée"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49304,7 +49310,7 @@
      "id": "k.people/shards/given-names-e",
      "path": "k.people/shards/given-names-e.sop",
      "wires": 173,
-     "bytes": 27925,
+     "bytes": 28089,
      "keys": [
       "ebba",
       "ebenezer",
@@ -49481,6 +49487,7 @@
       "étienne"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49490,7 +49497,7 @@
      "id": "k.people/shards/given-names-f",
      "path": "k.people/shards/given-names-f.sop",
      "wires": 104,
-     "bytes": 17261,
+     "bytes": 17466,
      "keys": [
       "fabian",
       "fabio",
@@ -49598,6 +49605,7 @@
       "félix"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49607,7 +49615,7 @@
      "id": "k.people/shards/given-names-g",
      "path": "k.people/shards/given-names-g.sop",
      "wires": 128,
-     "bytes": 20934,
+     "bytes": 21180,
      "keys": [
       "gabriel",
       "gabriela",
@@ -49739,6 +49747,7 @@
       "gülşen"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49748,7 +49757,7 @@
      "id": "k.people/shards/given-names-h",
      "path": "k.people/shards/given-names-h.sop",
      "wires": 113,
-     "bytes": 18505,
+     "bytes": 18710,
      "keys": [
       "haakon",
       "hadrian",
@@ -49865,6 +49874,7 @@
       "ḥassān"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49874,7 +49884,7 @@
      "id": "k.people/shards/given-names-i",
      "path": "k.people/shards/given-names-i.sop",
      "wires": 94,
-     "bytes": 15300,
+     "bytes": 15464,
      "keys": [
       "iain",
       "ian",
@@ -49972,6 +49982,7 @@
       "i̇mran"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -49981,7 +49992,7 @@
      "id": "k.people/shards/given-names-j",
      "path": "k.people/shards/given-names-j.sop",
      "wires": 183,
-     "bytes": 29766,
+     "bytes": 30135,
      "keys": [
       "ja'far",
       "jaak",
@@ -50168,6 +50179,7 @@
       "jürgen"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -50177,7 +50189,7 @@
      "id": "k.people/shards/given-names-k",
      "path": "k.people/shards/given-names-k.sop",
      "wires": 140,
-     "bytes": 22905,
+     "bytes": 23110,
      "keys": [
       "kaare",
       "kaarle",
@@ -50321,6 +50333,7 @@
       "kōtarō"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -50330,7 +50343,7 @@
      "id": "k.people/shards/given-names-l",
      "path": "k.people/shards/given-names-l.sop",
      "wires": 143,
-     "bytes": 23252,
+     "bytes": 23457,
      "keys": [
       "ladislav",
       "laetitia",
@@ -50477,6 +50490,7 @@
       "ľudovít"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -50486,7 +50500,7 @@
      "id": "k.people/shards/given-names-m",
      "path": "k.people/shards/given-names-m.sop",
      "wires": 266,
-     "bytes": 43257,
+     "bytes": 43544,
      "keys": [
       "maaike",
       "maarit",
@@ -50756,6 +50770,7 @@
       "móric"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -50765,7 +50780,7 @@
      "id": "k.people/shards/given-names-n",
      "path": "k.people/shards/given-names-n.sop",
      "wires": 80,
-     "bytes": 13275,
+     "bytes": 13398,
      "keys": [
       "nabil",
       "nada",
@@ -50858,7 +50873,7 @@
      "id": "k.people/shards/given-names-o",
      "path": "k.people/shards/given-names-o.sop",
      "wires": 58,
-     "bytes": 9572,
+     "bytes": 9736,
      "keys": [
       "octavio",
       "odd",
@@ -50920,6 +50935,7 @@
       "đorđe"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -50929,7 +50945,7 @@
      "id": "k.people/shards/given-names-p",
      "path": "k.people/shards/given-names-p.sop",
      "wires": 81,
-     "bytes": 13450,
+     "bytes": 13573,
      "keys": [
       "paavo",
       "pablo",
@@ -51023,7 +51039,7 @@
      "id": "k.people/shards/given-names-q",
      "path": "k.people/shards/given-names-q.sop",
      "wires": 1,
-     "bytes": 586,
+     "bytes": 709,
      "keys": [
       "quentin"
      ],
@@ -51037,7 +51053,7 @@
      "id": "k.people/shards/given-names-r",
      "path": "k.people/shards/given-names-r.sop",
      "wires": 136,
-     "bytes": 22039,
+     "bytes": 22449,
      "keys": [
       "rachel",
       "radka",
@@ -51177,6 +51193,7 @@
       "ørjan"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -51186,7 +51203,7 @@
      "id": "k.people/shards/given-names-s",
      "path": "k.people/shards/given-names-s.sop",
      "wires": 177,
-     "bytes": 28745,
+     "bytes": 28909,
      "keys": [
       "sabina",
       "sabine",
@@ -51367,6 +51384,7 @@
       "šime"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -51376,7 +51394,7 @@
      "id": "k.people/shards/given-names-t",
      "path": "k.people/shards/given-names-t.sop",
      "wires": 137,
-     "bytes": 22154,
+     "bytes": 22359,
      "keys": [
       "taavi",
       "tadej",
@@ -51517,6 +51535,7 @@
       "tōru"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -51526,7 +51545,7 @@
      "id": "k.people/shards/given-names-u",
      "path": "k.people/shards/given-names-u.sop",
      "wires": 26,
-     "bytes": 4486,
+     "bytes": 4609,
      "keys": [
       "ubaldo",
       "udo",
@@ -51565,7 +51584,7 @@
      "id": "k.people/shards/given-names-v",
      "path": "k.people/shards/given-names-v.sop",
      "wires": 77,
-     "bytes": 12805,
+     "bytes": 12969,
      "keys": [
       "vadim",
       "vagn",
@@ -51646,6 +51665,7 @@
       "véronique"
      ],
      "sources": [
+      "hand-core-1",
       "wikidata-given-names-2026-11-14"
      ],
      "license": "CC0-1.0",
@@ -51655,7 +51675,7 @@
      "id": "k.people/shards/given-names-w",
      "path": "k.people/shards/given-names-w.sop",
      "wires": 30,
-     "bytes": 5283,
+     "bytes": 5406,
      "keys": [
       "wacław",
       "waldemar",
@@ -51698,7 +51718,7 @@
      "id": "k.people/shards/given-names-x",
      "path": "k.people/shards/given-names-x.sop",
      "wires": 5,
-     "bytes": 1221,
+     "bytes": 1344,
      "keys": [
       "xabier",
       "xaver",
@@ -51716,7 +51736,7 @@
      "id": "k.people/shards/given-names-y",
      "path": "k.people/shards/given-names-y.sop",
      "wires": 34,
-     "bytes": 5845,
+     "bytes": 5968,
      "keys": [
       "yael",
       "yair",
@@ -51763,7 +51783,7 @@
      "id": "k.people/shards/given-names-z",
      "path": "k.people/shards/given-names-z.sop",
      "wires": 39,
-     "bytes": 6604,
+     "bytes": 6727,
      "keys": [
       "zacharie",
       "zahra",

@@ -1,5 +1,6 @@
 # k.people/shards/given-names-l: 143 given names starting with L (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -66,11 +67,11 @@
 @k.people.given_name.Lilja k.people.given_name name=Lilja sex=female holders=31 band=rare wikidata=Q13434809 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Lillian k.people.given_name name=Lillian sex=female holders=686 band=frequent wikidata=Q16420442 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Lilly k.people.given_name name=Lilly sex=female holders=663 band=frequent wikidata=Q16290534 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Lily k.people.given_name name=Lily sex=female holders=1360 band=common wikidata=Q11264166 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Lily k.people.given_name name=Lily sex=female holders=1360 band=common wikidata=Q11264166 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Lina k.people.given_name name=Lina sex=female holders=2236 band=common wikidata=Q1873288 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Linda k.people.given_name name=Linda sex=female holders=5698 band=common wikidata=Q1136594 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Lindsay k.people.given_name name=Lindsay sex=female sex=male holders=1580 band=common wikidata=Q13403801 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Line k.people.given_name name=Line sex=female holders=385 band=frequent wikidata=Q5965663 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Line k.people.given_name name=Line sex=female holders=385 band=frequent wikidata=Q5965663 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Linn k.people.given_name name=Linn sex=female sex=male holders=156 band=frequent wikidata=Q4583654 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Linnea k.people.given_name name=Linnea sex=female holders=168 band=frequent wikidata=Q1427016 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Linnea_Q108295840 k.people.given_name name=Linnéa sex=female holders=52 band=rare wikidata=Q108295840 core.source="wikidata-given-names 2026-11-14"

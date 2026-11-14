@@ -11,7 +11,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 
 - declared joins: **189** in 30 worlds; distinct values 6347, meeting a target 6289 (99.1 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **113**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **114**; left undeclared on purpose: 6
 
 ## Declared joins
 
@@ -289,6 +289,7 @@ exact (token for token) against the first candidate; the value share itself also
 | k.objects | `k.objects.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
 | k.objects | `k.objects.part.pointing` | value | `k.values.direction` | name | 4 | 4 |
 | k.objects | `k.objects.part.opens` | value | `k.values.direction` | name | 4 | 4 |
+| k.people | `k.people.given_name.context` | value | `k.attributes.drawn`, `k.attributes.kind`, `k.attributes.number` | name | 1 | 1 |
 | k.people | `k.people.kind.age` | value | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` | name | 4 | 2 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |
 | k.people | `k.people.kind.kind_of` | kind | `k.faces.preset` | name | 5 | 3 |

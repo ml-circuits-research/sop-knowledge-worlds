@@ -1,5 +1,6 @@
 # k.people/shards/given-names-c: 103 given names starting with C (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -21,7 +22,7 @@
 @k.people.given_name.Carman k.people.given_name name=Carman sex=female holders=23 band=rare wikidata=Q1855504 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Carmelo k.people.given_name name=Carmelo sex=male holders=645 band=frequent wikidata=Q1043555 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Carmen k.people.given_name name=Carmen sex=female holders=4246 band=common wikidata=Q1043619 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Carol k.people.given_name name=Carol sex=female holders=2869 band=common wikidata=Q18201469 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Carol k.people.given_name name=Carol sex=female holders=2869 band=common wikidata=Q18201469 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Carola k.people.given_name name=Carola sex=female holders=835 band=frequent wikidata=Q229227 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Carolina k.people.given_name name=Carolina sex=female holders=2893 band=common wikidata=Q5044762 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Caroline k.people.given_name name=Caroline sex=female holders=10402 band="very common" wikidata=Q16275172 core.source="wikidata-given-names 2026-11-14"
@@ -96,7 +97,7 @@
 @k.people.given_name.Cristiano k.people.given_name name=Cristiano sex=male holders=567 band=frequent wikidata=Q12899500 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Cristina k.people.given_name name=Cristina sex=female holders=4361 band=common wikidata=Q12899499 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Cristobal k.people.given_name name=Cristóbal sex=male holders=535 band=frequent wikidata=Q18220000 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Crystal k.people.given_name name=Crystal sex=female holders=331 band=frequent wikidata=Q13582300 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Crystal k.people.given_name name=Crystal sex=female holders=331 band=frequent wikidata=Q13582300 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Csaba k.people.given_name name=Csaba sex=male holders=826 band=frequent wikidata=Q853609 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Csilla k.people.given_name name=Csilla sex=female holders=147 band=frequent wikidata=Q512586 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Cynthia k.people.given_name name=Cynthia sex=female holders=2309 band=common wikidata=Q944767 core.source="wikidata-given-names 2026-11-14"

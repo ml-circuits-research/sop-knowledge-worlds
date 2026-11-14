@@ -97,11 +97,16 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   // type whose name a `core.word` gives another word for (Peking: k.geo.city), or the type or key a word of a schema
   // means (capital: k.geo.country.capital); a reusable world's words name the world (w.seating).
   const kinds = new Map();
-  const addWord = (word, shardId, kind) => {
+  // Reviewer 04:10 item 4: a shard reached by a word only through facts whose reading needs a context (a given name
+  // with `context=person`: Rose, Hope) is listed after the word's other shards, so a host that fetches the first
+  // shards of a word fetches the common word's first; the rest of each list stays sorted.
+  const plain = new Map();
+  const addWord = (word, shardId, kind, needsContext = false) => {
     if (!isWordy(word)) return;
     const k = lemma(word);
     if (!vocab.has(k)) vocab.set(k, new Set());
     vocab.get(k).add(shardId);
+    if (!needsContext) { if (!plain.has(k)) plain.set(k, new Set()); plain.get(k).add(shardId); }
     if (!kind) return;
     if (!kinds.has(k)) kinds.set(k, new Map());
     const byKind = kinds.get(k);
@@ -138,7 +143,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
         // keys that hold English words make vocabulary
         for (const k of identityKeys(w.type).filter((x) => !world.id.startsWith('w.') || WORD_KEYS.has(x))) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
-          if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id, w.type); }
+          if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id, w.type, Boolean(w.attrs.context?.includes('person'))); }
         }
         if (!world.id.startsWith('w.')) for (const k of THING_KEYS) if (!identityKeys(w.type).includes(k)) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
@@ -190,7 +195,8 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   }
   const index = { version: contentVersion(root), sopworld: SOPWORLD, worlds: entries };
   if (schemas.length) index.schemas = schemas;
-  const vocabObj = Object.fromEntries([...vocab.keys()].sort(byText).map((k) => [k, [...vocab.get(k)].sort(byText)]));
+  const last = (k) => (id) => (plain.get(k)?.has(id) ? 0 : 1); // shards reached only through a reading that needs a context
+  const vocabObj = Object.fromEntries([...vocab.keys()].sort(byText).map((k) => [k, [...vocab.get(k)].sort((a, b) => last(k)(a) - last(k)(b) || byText(a, b))]));
   const kindsObj = Object.fromEntries([...kinds.keys()].sort(byText).map((k) => [k, Object.fromEntries([...kinds.get(k).keys()].sort(byText).map((t) => [t, [...kinds.get(k).get(t)].sort(byText)]))]));
   return { errors: [], index, vocab: vocabObj, vocabKinds: kindsObj, licenses: licensesText(index, sourcesDir) };
 }

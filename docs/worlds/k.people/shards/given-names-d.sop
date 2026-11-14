@@ -1,5 +1,6 @@
 # k.people/shards/given-names-d: 116 given names starting with D (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -10,7 +11,7 @@
 @k.people.given_name.Daichi k.people.given_name name=Daichi sex=male holders=87 band=rare wikidata=Q10956733 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Daiki k.people.given_name name=Daiki sex=male holders=134 band=frequent wikidata=Q3012072 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Daisuke k.people.given_name name=Daisuke sex=male holders=442 band=frequent wikidata=Q1157667 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Daisy k.people.given_name name=Daisy sex=female holders=920 band=frequent wikidata=Q4472145 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Daisy k.people.given_name name=Daisy sex=female holders=920 band=frequent wikidata=Q4472145 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Dakota k.people.given_name name=Dakota sex=female sex=male holders=106 band=frequent wikidata=Q3012245 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Dalia k.people.given_name name=Dalia sex=female holders=376 band=frequent wikidata=Q901293 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Dalibor k.people.given_name name=Dalibor sex=male holders=455 band=frequent wikidata=Q855839 core.source="wikidata-given-names 2026-11-14"
@@ -45,7 +46,7 @@
 @k.people.given_name.Davor k.people.given_name name=Davor sex=male holders=163 band=frequent wikidata=Q16275327 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Davorin k.people.given_name name=Davorin sex=male holders=62 band=rare wikidata=Q16275329 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Dawid k.people.given_name name=Dawid sex=male holders=363 band=frequent wikidata=Q19830589 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Dawn k.people.given_name name=Dawn sex=female holders=986 band=frequent wikidata=Q7375129 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Dawn k.people.given_name name=Dawn sex=female holders=986 band=frequent wikidata=Q7375129 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Dean k.people.given_name name=Dean sex=male holders=2248 band=common wikidata=Q1796595 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Debbie k.people.given_name name=Debbie sex=female holders=724 band=frequent wikidata=Q1181414 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Debora k.people.given_name name=Debora sex=female holders=437 band=frequent wikidata=Q505908 core.source="wikidata-given-names 2026-11-14"
@@ -77,7 +78,7 @@
 @k.people.given_name.Dino k.people.given_name name=Dino sex=male holders=730 band=frequent wikidata=Q1226597 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Dirk k.people.given_name name=Dirk sex=male holders=5058 band=common wikidata=Q1605531 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Dmitry k.people.given_name name=Dmitry sex=male holders=3974 band=common wikidata=Q19002866 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Dolly k.people.given_name name=Dolly sex=female holders=129 band=frequent wikidata=Q1235797 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Dolly k.people.given_name name=Dolly sex=female holders=129 band=frequent wikidata=Q1235797 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Dolores k.people.given_name name=Dolores sex=female holders=818 band=frequent wikidata=Q7038725 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Domenico k.people.given_name name=Domenico sex=male holders=3143 band=common wikidata=Q1765453 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Dominic k.people.given_name name=Dominic sex=male holders=2009 band=common wikidata=Q18147196 core.source="wikidata-given-names 2026-11-14"

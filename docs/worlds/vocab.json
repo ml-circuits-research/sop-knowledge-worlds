@@ -4774,10 +4774,10 @@
   "k.attributes/shards/same-a",
   "k.colours/shards/colours",
   "k.faces/shards/colours",
-  "k.people/shards/given-names-a",
   "k.values/shards/colours-common",
   "k.words/shards/am",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "k.people/shards/given-names-a"
  ],
  "amber_light": [
   "k.objects/shards/mulberry-transport-road-03"
@@ -5432,9 +5432,9 @@
  "angelique": [
   "k.attributes/shards/same-a",
   "k.objects/shards/stand-ins-wordnet",
-  "k.people/shards/given-names-a",
   "k.words/shards/an",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "k.people/shards/given-names-a"
  ],
  "angelo": [
   "k.people/shards/given-names-a"
@@ -6564,11 +6564,11 @@
  ],
  "april": [
   "k.attributes/shards/same-a",
-  "k.people/shards/given-names-a",
   "k.time/shards/calendar",
   "k.time/shards/derived",
   "k.words/shards/ap",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "k.people/shards/given-names-a"
  ],
  "apron": [
   "k.attributes/shards/drawn-mulberry",
@@ -7406,9 +7406,9 @@
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-arts-crafts-01",
-  "k.people/shards/given-names-a",
   "k.words/shards/ar",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "k.people/shards/given-names-a"
  ],
  "art folder": [
   "k.objects/shards/things-3"
@@ -8404,11 +8404,11 @@
  ],
  "august": [
   "k.attributes/shards/same-a",
-  "k.people/shards/given-names-a",
   "k.time/shards/calendar",
   "k.time/shards/derived",
   "k.words/shards/au",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "k.people/shards/given-names-a"
  ],
  "augusta": [
   "k.people/shards/given-names-a"
@@ -8460,10 +8460,10 @@
   "k.geo/shards/africa"
  ],
  "aura": [
-  "k.people/shards/given-names-a",
   "k.words/shards/au",
   "k.words/shards/frequency-a",
-  "w.lang.en/shards/core-plurals"
+  "w.lang.en/shards/core-plurals",
+  "k.people/shards/given-names-a"
  ],
  "aurae": [
   "k.words/shards/au"
@@ -12084,9 +12084,9 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.objects/shards/stand-ins-wordnet",
-  "k.people/shards/given-names-b",
   "k.words/shards/ba",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "k.people/shards/given-names-b"
  ],
  "basin": [
   "k.attributes/shards/drawn-hand",
@@ -14095,9 +14095,9 @@
  "bent": [
   "k.actions/shards/actions-make-change",
   "k.objects/shards/noto-clothing-06",
-  "k.people/shards/given-names-b",
   "k.words/shards/be",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "k.people/shards/given-names-b"
  ],
  "bente": [
   "k.people/shards/given-names-b"
@@ -16349,10 +16349,10 @@
  "bob": [
   "k.faces/shards/plain-hair-back",
   "k.kinds/shards/part_of-wordnet-1",
-  "k.people/shards/given-names-b",
   "k.units/shards/currencies",
   "k.words/shards/bo",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "k.people/shards/given-names-b"
  ],
  "boba": [
   "k.objects/shards/noto-drink-03"
@@ -23773,9 +23773,9 @@
   "k.kinds/shards/wordnet-2"
  ],
  "carol": [
-  "k.people/shards/given-names-c",
   "k.words/shards/ca",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "k.people/shards/given-names-c"
  ],
  "carola": [
   "k.people/shards/given-names-c"
@@ -31629,6 +31629,9 @@
   "k.words/shards/frequency-c"
  ],
  "context": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-people",
+  "k.people/schema.sop",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
  ],
@@ -34349,9 +34352,9 @@
  "crystal": [
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-game-01",
-  "k.people/shards/given-names-c",
   "k.words/shards/cr",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "k.people/shards/given-names-c"
  ],
  "crystal ball": [
   "k.attributes/shards/drawn-noto",
@@ -36940,11 +36943,11 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-plants-and-trees-01",
-  "k.people/shards/given-names-d",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-d",
   "k.words/shards/da",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "k.people/shards/given-names-d"
  ],
  "daiyun shan": [
   "k.geo/shards/asia"
@@ -37630,11 +37633,11 @@
   "k.people/shards/given-names-d"
  ],
  "dawn": [
-  "k.people/shards/given-names-d",
   "k.time/shards/clock",
   "k.time/shards/derived",
   "k.words/shards/da",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "k.people/shards/given-names-d"
  ],
  "dawson": [
   "k.words/shards/da",
@@ -41192,9 +41195,9 @@
   "k.objects/shards/noto-game-02"
  ],
  "dolly": [
-  "k.people/shards/given-names-d",
   "k.words/shards/do",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "k.people/shards/given-names-d"
  ],
  "dolores": [
   "k.people/shards/given-names-d"
@@ -45195,9 +45198,9 @@
  ],
  "edit": [
   "k.actions/shards/verbs-change",
-  "k.people/shards/given-names-e",
   "k.words/shards/ed",
-  "k.words/shards/frequency-e"
+  "k.words/shards/frequency-e",
+  "k.people/shards/given-names-e"
  ],
  "edita": [
   "k.people/shards/given-names-e"
@@ -50074,9 +50077,9 @@
   "k.geo/shards/asia"
  ],
  "faith": [
-  "k.people/shards/given-names-f",
   "k.words/shards/fa",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "k.people/shards/given-names-f"
  ],
  "faithful": [
   "k.words/shards/fa",
@@ -54771,9 +54774,9 @@
   "k.people/shards/given-names-f"
  ],
  "frank": [
-  "k.people/shards/given-names-f",
   "k.words/shards/fr",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "k.people/shards/given-names-f"
  ],
  "frankenstein": [
   "k.words/shards/fr",
@@ -58286,9 +58289,9 @@
  ],
  "gay": [
   "k.objects/shards/noto-sky-weather-04",
-  "k.people/shards/given-names-g",
   "k.words/shards/frequency-g",
-  "k.words/shards/ga"
+  "k.words/shards/ga",
+  "k.people/shards/given-names-g"
  ],
  "gaze": [
   "k.actions/shards/actions-mind-talk",
@@ -60611,9 +60614,9 @@
   "k.words/shards/gr"
  ],
  "grace": [
-  "k.people/shards/given-names-g",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "k.people/shards/given-names-g"
  ],
  "gracie": [
   "k.words/shards/frequency-g",
@@ -62591,9 +62594,9 @@
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-celebration-item-03",
-  "k.people/shards/given-names-g",
   "k.words/shards/frequency-g",
-  "k.words/shards/gu"
+  "k.words/shards/gu",
+  "k.people/shards/given-names-g"
  ],
  "guyana": [
   "k.geo/shards/psys2-countries",
@@ -64892,9 +64895,9 @@
  ],
  "hazel": [
   "k.faces/shards/colours",
-  "k.people/shards/given-names-h",
   "k.words/shards/frequency-h",
-  "k.words/shards/ha"
+  "k.words/shards/ha",
+  "k.people/shards/given-names-h"
  ],
  "hazelnut": [
   "k.attributes/shards/drawn-mulberry",
@@ -67538,9 +67541,9 @@
  ],
  "hope": [
   "k.feelings/shards/feelings",
-  "k.people/shards/given-names-h",
   "k.words/shards/frequency-h",
-  "k.words/shards/ho"
+  "k.words/shards/ho",
+  "k.people/shards/given-names-h"
  ],
  "hopeful": [
   "k.feelings/shards/feelings",
@@ -71364,11 +71367,11 @@
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-other-object-01",
-  "k.people/shards/given-names-i",
   "k.scenes/shards/things-i",
   "k.words/shards/frequency-i",
   "k.words/shards/ir",
-  "w.lang.en/shards/core-plurals"
+  "w.lang.en/shards/core-plurals",
+  "k.people/shards/given-names-i"
  ],
  "irises": [
   "k.body/shards/core",
@@ -71944,9 +71947,9 @@
  ],
  "jack": [
   "k.objects/shards/noto-event-01",
-  "k.people/shards/given-names-j",
   "k.words/shards/frequency-j",
-  "k.words/shards/ja"
+  "k.words/shards/ja",
+  "k.people/shards/given-names-j"
  ],
  "jack in box": [
   "k.attributes/shards/drawn-mulberry",
@@ -72057,10 +72060,10 @@
  ],
  "jade": [
   "k.attributes/shards/same-j",
-  "k.people/shards/given-names-j",
   "k.values/shards/colours-common",
   "k.words/shards/frequency-j",
-  "k.words/shards/ja"
+  "k.words/shards/ja",
+  "k.people/shards/given-names-j"
  ],
  "jade green": [
   "k.values/shards/colours-common"
@@ -72413,9 +72416,9 @@
  "jasmine": [
   "k.attributes/shards/same-j",
   "k.objects/shards/stand-ins-wordnet",
-  "k.people/shards/given-names-j",
   "k.words/shards/frequency-j",
-  "k.words/shards/ja"
+  "k.words/shards/ja",
+  "k.people/shards/given-names-j"
  ],
  "jasna": [
   "k.people/shards/given-names-j"
@@ -72470,10 +72473,10 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/place",
   "k.kinds/shards/wordnet-1",
-  "k.people/shards/given-names-j",
   "k.scenes/shards/things-j",
   "k.words/shards/frequency-j",
-  "k.words/shards/ja"
+  "k.words/shards/ja",
+  "k.people/shards/given-names-j"
  ],
  "jays": [
   "k.animals/shards/birds"
@@ -73113,9 +73116,9 @@
  "job": [
   "k.objects/shards/noto-place-building-02",
   "k.people/schema.sop",
-  "k.people/shards/given-names-j",
   "k.words/shards/frequency-j",
-  "k.words/shards/jo"
+  "k.words/shards/jo",
+  "k.people/shards/given-names-j"
  ],
  "jobbed": [
   "k.words/shards/jo"
@@ -73790,11 +73793,11 @@
  ],
  "june": [
   "k.attributes/shards/same-j",
-  "k.people/shards/given-names-j",
   "k.time/shards/calendar",
   "k.time/shards/derived",
   "k.words/shards/frequency-j",
-  "k.words/shards/ju"
+  "k.words/shards/ju",
+  "k.people/shards/given-names-j"
  ],
  "jung": [
   "k.words/shards/frequency-j",
@@ -75582,10 +75585,10 @@
   "k.words/shards/ke"
  ],
  "kelvin": [
-  "k.people/shards/given-names-k",
   "k.units/shards/core",
   "k.words/shards/frequency-k",
-  "k.words/shards/ke"
+  "k.words/shards/ke",
+  "k.people/shards/given-names-k"
  ],
  "kelvins": [
   "k.units/shards/core"
@@ -76995,9 +76998,9 @@
  "kitty": [
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-mammal-02",
-  "k.people/shards/given-names-k",
   "k.words/shards/frequency-k",
-  "k.words/shards/ki"
+  "k.words/shards/ki",
+  "k.people/shards/given-names-k"
  ],
  "kitwe": [
   "k.geo/shards/africa"
@@ -82081,10 +82084,10 @@
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-plants-and-trees-02",
   "k.parts/shards/usual",
-  "k.people/shards/given-names-l",
   "k.scenes/shards/things-l",
   "k.words/shards/frequency-l",
-  "k.words/shards/li"
+  "k.words/shards/li",
+  "k.people/shards/given-names-l"
  ],
  "lily pad": [
   "k.kinds/shards/part_of-wordnet-2"
@@ -82220,14 +82223,14 @@
   "k.objects/shards/noto-money-02",
   "k.objects/shards/noto-office-02",
   "k.parts/shards/r",
-  "k.people/shards/given-names-l",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
   "k.words/shards/frequency-l",
   "k.words/shards/li",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
-  "w.document/schema.sop"
+  "w.document/schema.sop",
+  "k.people/shards/given-names-l"
  ],
  "line chart": [
   "w.chart/schema.sop"
@@ -86109,9 +86112,9 @@
   "k.attributes/shards/same-m",
   "k.objects/shards/noto-food-fruit-01",
   "k.objects/shards/stand-ins-wordnet",
-  "k.people/shards/given-names-m",
   "k.words/shards/frequency-m",
-  "k.words/shards/ma"
+  "k.words/shards/ma",
+  "k.people/shards/given-names-m"
  ],
  "marge": [
   "k.words/shards/frequency-m",
@@ -86244,10 +86247,10 @@
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-1",
   "k.parts/shards/usual",
-  "k.people/shards/given-names-m",
   "k.scenes/shards/scenes-town",
   "k.words/shards/frequency-m",
-  "k.words/shards/ma"
+  "k.words/shards/ma",
+  "k.people/shards/given-names-m"
  ],
  "marine": [
   "k.objects/shards/noto-animal-marine-01",
@@ -86299,10 +86302,10 @@
  "mark": [
   "k.actions/shards/verbs-pick",
   "k.objects/shards/noto-book-paper-02",
-  "k.people/shards/given-names-m",
   "k.words/shards/frequency-m",
   "k.words/shards/ma",
-  "w.map/schema.sop"
+  "w.map/schema.sop",
+  "k.people/shards/given-names-m"
  ],
  "mark_1": [
   "k.objects/shards/places-3"
@@ -87251,11 +87254,11 @@
  ],
  "may": [
   "k.attributes/shards/same-m",
-  "k.people/shards/given-names-m",
   "k.time/shards/calendar",
   "k.time/shards/derived",
   "k.words/shards/frequency-m",
-  "k.words/shards/ma"
+  "k.words/shards/ma",
+  "k.people/shards/given-names-m"
  ],
  "may pen": [
   "k.geo/shards/north-america"
@@ -97180,9 +97183,9 @@
   "k.words/shards/od"
  ],
  "odd": [
-  "k.people/shards/given-names-o",
   "k.words/shards/frequency-o",
-  "k.words/shards/od"
+  "k.words/shards/od",
+  "k.people/shards/given-names-o"
  ],
  "odd-toed ungulate": [
   "k.kinds/shards/wordnet-1",
@@ -112359,9 +112362,9 @@
  "rein": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
-  "k.people/shards/given-names-r",
   "k.words/shards/frequency-r",
-  "k.words/shards/re"
+  "k.words/shards/re",
+  "k.people/shards/given-names-r"
  ],
  "reinaldo": [
   "k.people/shards/given-names-r"
@@ -114074,9 +114077,9 @@
   "k.words/shards/ri"
  ],
  "rick": [
-  "k.people/shards/given-names-r",
   "k.words/shards/frequency-r",
-  "k.words/shards/ri"
+  "k.words/shards/ri",
+  "k.people/shards/given-names-r"
  ],
  "rickshaw": [
   "k.attributes/shards/numbers-p-z",
@@ -115528,9 +115531,9 @@
  ],
  "roar": [
   "k.objects/shards/noto-animal-mammal-02",
-  "k.people/shards/given-names-r",
   "k.words/shards/frequency-r",
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "k.people/shards/given-names-r"
  ],
  "roar with laughter": [
   "k.actions/shards/actions-mind-talk"
@@ -115654,11 +115657,11 @@
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.parts/shards/usual",
-  "k.people/shards/given-names-r",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-r",
   "k.words/shards/frequency-r",
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "k.people/shards/given-names-r"
  ],
  "robins": [
   "k.animals/shards/birds"
@@ -116417,13 +116420,13 @@
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/things-3",
   "k.parts/shards/r",
-  "k.people/shards/given-names-r",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-r",
   "k.values/shards/colours-common",
   "k.words/shards/frequency-r",
   "k.words/shards/ri",
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "k.people/shards/given-names-r"
  ],
  "rose pink": [
   "k.colours/shards/colours",
@@ -116783,10 +116786,10 @@
  ],
  "ruby": [
   "k.attributes/shards/same-r",
-  "k.people/shards/given-names-r",
   "k.values/shards/colours-common",
   "k.words/shards/frequency-r",
-  "k.words/shards/ru"
+  "k.words/shards/ru",
+  "k.people/shards/given-names-r"
  ],
  "ruby red": [
   "k.colours/shards/colours",
@@ -117180,9 +117183,9 @@
   "k.values/shards/colours-common"
  ],
  "rut": [
-  "k.people/shards/given-names-r",
   "k.words/shards/frequency-r",
-  "k.words/shards/ru"
+  "k.words/shards/ru",
+  "k.people/shards/given-names-r"
  ],
  "ruth": [
   "k.people/shards/given-names-r",
@@ -117894,9 +117897,9 @@
   "k.words/shards/sa"
  ],
  "sally": [
-  "k.people/shards/given-names-s",
   "k.words/shards/frequency-s",
-  "k.words/shards/sa"
+  "k.words/shards/sa",
+  "k.people/shards/given-names-s"
  ],
  "salma": [
   "k.people/shards/given-names-s"
@@ -135278,11 +135281,11 @@
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-drink-03",
-  "k.people/shards/given-names-t",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-t",
   "k.words/shards/frequency-t",
-  "k.words/shards/te"
+  "k.words/shards/te",
+  "k.people/shards/given-names-t"
  ],
  "tea bag": [
   "k.attributes/shards/drawn-mulberry",
@@ -142221,10 +142224,10 @@
   "k.kinds/shards/use",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/t",
-  "k.people/shards/given-names-t",
   "k.words/shards/frequency-t",
   "k.words/shards/tu",
-  "w.lang.en/shards/core-plurals"
+  "w.lang.en/shards/core-plurals",
+  "k.people/shards/given-names-t"
  ],
  "tubae": [
   "k.words/shards/tu"
@@ -146136,11 +146139,11 @@
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-plant-flower-02",
-  "k.people/shards/given-names-v",
   "k.scenes/shards/things-v",
   "k.values/shards/colours-css",
   "k.words/shards/frequency-v",
-  "k.words/shards/vi"
+  "k.words/shards/vi",
+  "k.people/shards/given-names-v"
  ],
  "violeta": [
   "k.people/shards/given-names-v"

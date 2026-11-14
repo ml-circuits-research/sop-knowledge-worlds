@@ -1,5 +1,6 @@
 # k.people/shards/given-names-s: 177 given names starting with S (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -11,7 +12,7 @@
 @k.people.given_name.Salah_ad-Din k.people.given_name name="Salah ad-Din" sex=male holders=50 band=rare wikidata=Q22948670 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Saleh k.people.given_name name=Saleh sex=male holders=110 band=frequent wikidata=Q28657224 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Salim k.people.given_name name=Salim sex=male holders=311 band=frequent wikidata=Q18918119 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Sally k.people.given_name name=Sally sex=female holders=2560 band=common wikidata=Q19816532 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Sally k.people.given_name name=Sally sex=female holders=2560 band=common wikidata=Q19816532 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Salma k.people.given_name name=Salma sex=female holders=129 band=frequent wikidata=Q2066617 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Salome k.people.given_name name=Salome sex=female holders=157 band=frequent wikidata=Q379029 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Salvador k.people.given_name name=Salvador sex=male holders=1839 band=common wikidata=Q1255283 core.source="wikidata-given-names 2026-11-14"

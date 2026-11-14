@@ -68,6 +68,9 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
 without `.sop`); a word for a type or a key of a world ("capital", "synonym", "colour") points to the world's schema
 path (`k.<world>/schema.sop`): it says the world is relevant, and the other words of the message pick the shards. A
 host translates a message to English, lemmatises it, looks each lemma up, and fetches only those shards.
+The shards of a word are sorted, except that a shard the word reaches only through a reading that needs a context
+comes after the others: a given name with `context=person` (Rose, Hope, May) puts its names shard last for that word,
+so a host that fetches the first shards of "rose" fetches the flower's.
 
 ## vocab-kinds.json
 

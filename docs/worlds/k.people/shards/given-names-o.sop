@@ -1,10 +1,11 @@
 # k.people/shards/given-names-o: 58 given names starting with O (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
 @k.people.given_name.Octavio k.people.given_name name=Octavio sex=male holders=468 band=frequent wikidata=Q1125977 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Odd k.people.given_name name=Odd sex=male holders=400 band=frequent wikidata=Q1757370 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Odd k.people.given_name name=Odd sex=male holders=400 band=frequent wikidata=Q1757370 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Oddvar k.people.given_name name=Oddvar sex=male holders=91 band=rare wikidata=Q3481023 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Odette k.people.given_name name=Odette sex=female holders=484 band=frequent wikidata=Q2014474 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Oksana k.people.given_name name=Oksana sex=female holders=60 band=rare wikidata=Q63793691 core.source="wikidata-given-names 2026-11-14"

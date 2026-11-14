@@ -1,5 +1,6 @@
 # k.people/shards/given-names-i: 94 given names starting with I (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -61,7 +62,7 @@
 @k.people.given_name.Irena k.people.given_name name=Irena sex=female holders=2673 band=common wikidata=Q11977502 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Irene k.people.given_name name=Irene sex=female holders=4522 band=common wikidata=Q389528 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Irina k.people.given_name name=Irina sex=female holders=395 band=frequent wikidata=Q35004028 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Iris k.people.given_name name=Iris sex=female holders=1981 band=common wikidata=Q378867 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Iris k.people.given_name name=Iris sex=female holders=1981 band=common wikidata=Q378867 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Irja k.people.given_name name=Irja sex=female holders=78 band=rare wikidata=Q3480958 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Irma k.people.given_name name=Irma sex=female holders=2327 band=common wikidata=Q647872 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Irmgard k.people.given_name name=Irmgard sex=female holders=806 band=frequent wikidata=Q348680 core.source="wikidata-given-names 2026-11-14"

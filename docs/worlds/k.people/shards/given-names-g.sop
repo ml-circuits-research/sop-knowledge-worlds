@@ -1,5 +1,6 @@
 # k.people/shards/given-names-g: 128 given names starting with G (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -16,7 +17,7 @@
 @k.people.given_name.Garrett k.people.given_name name=Garrett sex=male holders=399 band=frequent wikidata=Q19830601 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gary k.people.given_name name=Gary sex=male holders=6332 band=common wikidata=Q1820274 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gavin k.people.given_name name=Gavin sex=male holders=1304 band=common wikidata=Q508553 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Gay k.people.given_name name=Gay sex=female sex=male holders=99 band=rare wikidata=Q1496534 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Gay k.people.given_name name=Gay sex=female sex=male holders=99 band=rare wikidata=Q1496534 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Gedeon k.people.given_name name=Gedeon sex=male holders=85 band=rare wikidata=Q11682058 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Geert k.people.given_name name=Geert sex=male holders=708 band=frequent wikidata=Q1497736 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Geir k.people.given_name name=Geir sex=male holders=360 band=frequent wikidata=Q1498800 core.source="wikidata-given-names 2026-11-14"
@@ -84,7 +85,7 @@
 @k.people.given_name.Gorazd k.people.given_name name=Gorazd sex=male holders=144 band=frequent wikidata=Q4143455 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gordon k.people.given_name name=Gordon sex=male holders=4795 band=common wikidata=Q18402571 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gottfried k.people.given_name name=Gottfried sex=male holders=3583 band=common wikidata=Q16746939 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Grace k.people.given_name name=Grace sex=female holders=3917 band=common wikidata=Q1541047 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Grace k.people.given_name name=Grace sex=female holders=3917 band=common wikidata=Q1541047 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Graham k.people.given_name name=Graham sex=male holders=3323 band=common wikidata=Q642254 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Grazyna k.people.given_name name=Grażyna sex=female holders=589 band=frequent wikidata=Q746517 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gregor k.people.given_name name=Gregor sex=male holders=1681 band=common wikidata=Q18156264 core.source="wikidata-given-names 2026-11-14"
@@ -115,7 +116,7 @@
 @k.people.given_name.Gurli k.people.given_name name=Gurli sex=female holders=34 band=rare wikidata=Q4569937 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gustav k.people.given_name name=Gustav sex=male holders=8882 band=common wikidata=Q746076 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gustavo k.people.given_name name=Gustavo sex=male holders=3003 band=common wikidata=Q15646190 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Guy k.people.given_name name=Guy sex=male holders=6447 band=common wikidata=Q1159023 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Guy k.people.given_name name=Guy sex=male holders=6447 band=common wikidata=Q1159023 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Gu_mundur k.people.given_name name=Guðmundur sex=male holders=104 band=frequent wikidata=Q19805751 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gu_run k.people.given_name name=Guðrún sex=female holders=39 band=rare wikidata=Q2709132 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Gwen k.people.given_name name=Gwen sex=female holders=412 band=frequent wikidata=Q11075327 core.source="wikidata-given-names 2026-11-14"

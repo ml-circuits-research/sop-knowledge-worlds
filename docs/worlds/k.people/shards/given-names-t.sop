@@ -1,5 +1,6 @@
 # k.people/shards/given-names-t: 137 given names starting with T (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -34,7 +35,7 @@
 @k.people.given_name.Tauno k.people.given_name name=Tauno sex=male holders=219 band=frequent wikidata=Q798566 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Tawfik k.people.given_name name=Tawfik sex=male holders=120 band=frequent wikidata=Q3111698 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Taylor k.people.given_name name=Taylor sex=female sex=male holders=1305 band=common wikidata=Q3981665 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Tea k.people.given_name name=Tea sex=female holders=169 band=frequent wikidata=Q15885810 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Tea k.people.given_name name=Tea sex=female holders=169 band=frequent wikidata=Q15885810 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Teemu k.people.given_name name=Teemu sex=male holders=313 band=frequent wikidata=Q2643676 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Teimuraz k.people.given_name name=Teimuraz sex=male holders=119 band=frequent wikidata=Q7695055 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Tekla k.people.given_name name=Tekla sex=female holders=97 band=rare wikidata=Q1317613 core.source="wikidata-given-names 2026-11-14"
@@ -128,7 +129,7 @@
 @k.people.given_name.Tryggve k.people.given_name name=Tryggve sex=male holders=35 band=rare wikidata=Q21296021 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Trygve k.people.given_name name=Trygve sex=male holders=264 band=frequent wikidata=Q660206 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Tsukasa k.people.given_name name=Tsukasa sex=female sex=male holders=129 band=frequent wikidata=Q975963 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Tuba k.people.given_name name=Tuba sex=female holders=52 band=rare wikidata=Q2458828 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Tuba k.people.given_name name=Tuba sex=female holders=52 band=rare wikidata=Q2458828 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Tuomo k.people.given_name name=Tuomo sex=male holders=176 band=frequent wikidata=Q3277063 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Tuukka k.people.given_name name=Tuukka sex=male holders=54 band=rare wikidata=Q7857080 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Tuuli k.people.given_name name=Tuuli sex=female holders=79 band=rare wikidata=Q2461903 core.source="wikidata-given-names 2026-11-14"

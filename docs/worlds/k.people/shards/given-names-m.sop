@@ -1,5 +1,6 @@
 # k.people/shards/given-names-m: 266 given names starting with M (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -55,7 +56,7 @@
 @k.people.given_name.Margaret k.people.given_name name=Margaret sex=female holders=19229 band="very common" wikidata=Q4963612 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Margareta k.people.given_name name=Margareta sex=female holders=1966 band=common wikidata=Q8274988 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Margaretha k.people.given_name name=Margaretha sex=female holders=1280 band=common wikidata=Q17459100 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Margarita k.people.given_name name=Margarita sex=female holders=1159 band=common wikidata=Q6760124 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Margarita k.people.given_name name=Margarita sex=female holders=1159 band=common wikidata=Q6760124 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Margherita k.people.given_name name=Margherita sex=female holders=691 band=frequent wikidata=Q12900937 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Margit k.people.given_name name=Margit sex=female holders=1221 band=common wikidata=Q3354086 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Margita k.people.given_name name=Margita sex=female holders=201 band=frequent wikidata=Q17453068 core.source="wikidata-given-names 2026-11-14"
@@ -82,7 +83,7 @@
 @k.people.given_name.Marika k.people.given_name name=Marika sex=female holders=564 band=frequent wikidata=Q3293081 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Marilyn k.people.given_name name=Marilyn sex=female holders=953 band=frequent wikidata=Q14920707 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Marin k.people.given_name name=Marin sex=female sex=male holders=378 band=frequent wikidata=Q18402116 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Marina k.people.given_name name=Marina sex=female holders=4673 band=common wikidata=Q1120708 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Marina k.people.given_name name=Marina sex=female holders=4673 band=common wikidata=Q1120708 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Marinus k.people.given_name name=Marinus sex=male holders=620 band=frequent wikidata=Q16278998 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Mario k.people.given_name name=Mario sex=male holders=10315 band="very common" wikidata=Q3362622 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Marisa k.people.given_name name=Marisa sex=female holders=915 band=frequent wikidata=Q1653948 core.source="wikidata-given-names 2026-11-14"
@@ -93,7 +94,7 @@
 @k.people.given_name.Marjatta k.people.given_name name=Marjatta sex=female holders=143 band=frequent wikidata=Q9029268 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Marjo k.people.given_name name=Marjo sex=female sex=male holders=100 band=frequent wikidata=Q46493 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Marjorie k.people.given_name name=Marjorie sex=female holders=1953 band=common wikidata=Q1899812 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Mark k.people.given_name name=Mark sex=male holders=19166 band="very common" wikidata=Q13610143 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Mark k.people.given_name name=Mark sex=male holders=19166 band="very common" wikidata=Q13610143 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Markku k.people.given_name name=Markku sex=male holders=546 band=frequent wikidata=Q1522689 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Marko k.people.given_name name=Marko sex=male holders=2808 band=common wikidata=Q17520952 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Markus k.people.given_name name=Markus sex=male holders=7836 band=common wikidata=Q17520949 core.source="wikidata-given-names 2026-11-14"
@@ -152,7 +153,7 @@
 @k.people.given_name.Max k.people.given_name name=Max sex=female sex=male holders=14150 band="very common" wikidata=Q16422172 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Maxim k.people.given_name name=Maxim sex=male holders=748 band=frequent wikidata=Q396447 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Maximilian k.people.given_name name=Maximilian sex=male holders=4065 band=common wikidata=Q18133228 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.May k.people.given_name name=May sex=female holders=970 band=frequent wikidata=Q1746523 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.May k.people.given_name name=May sex=female holders=970 band=frequent wikidata=Q1746523 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Maya k.people.given_name name=Maya sex=female holders=1144 band=common wikidata=Q935522 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Medard k.people.given_name name=Medard sex=male holders=61 band=rare wikidata=Q607721 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Medea k.people.given_name name=Medea sex=female holders=34 band=rare wikidata=Q1212740 core.source="wikidata-given-names 2026-11-14"

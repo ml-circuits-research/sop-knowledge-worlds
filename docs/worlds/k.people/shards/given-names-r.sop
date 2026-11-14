@@ -1,5 +1,6 @@
 # k.people/shards/given-names-r: 136 given names starting with R (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -56,7 +57,7 @@
 @k.people.given_name.Regine k.people.given_name name=Regine sex=female holders=670 band=frequent wikidata=Q18179222 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Reidar k.people.given_name name=Reidar sex=male holders=254 band=frequent wikidata=Q1537661 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Reijo k.people.given_name name=Reijo sex=male holders=241 band=frequent wikidata=Q16280875 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Rein k.people.given_name name=Rein sex=male holders=526 band=frequent wikidata=Q11997479 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Rein k.people.given_name name=Rein sex=male holders=526 band=frequent wikidata=Q11997479 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Reinaldo k.people.given_name name=Reinaldo sex=male holders=210 band=frequent wikidata=Q2140291 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Reinhard k.people.given_name name=Reinhard sex=male holders=2849 band=common wikidata=Q18177338 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Renat k.people.given_name name=Renat sex=male holders=42 band=rare wikidata=Q12800072 core.source="wikidata-given-names 2026-11-14"
@@ -73,7 +74,7 @@
 @k.people.given_name.Riccardo k.people.given_name name=Riccardo sex=male holders=2083 band=common wikidata=Q15720880 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Richa k.people.given_name name=Richa sex=female holders=42 band=rare wikidata=Q7323495 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Richard k.people.given_name name=Richard sex=male holders=51418 band="very common" wikidata=Q1249148 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Rick k.people.given_name name=Rick sex=male holders=2338 band=common wikidata=Q18073734 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Rick k.people.given_name name=Rick sex=male holders=2338 band=common wikidata=Q18073734 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Rifat k.people.given_name name=Rifat sex=male holders=86 band=rare wikidata=Q23049788 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rigmor k.people.given_name name=Rigmor sex=female holders=71 band=rare wikidata=Q4569413 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Riina k.people.given_name name=Riina sex=female holders=120 band=frequent wikidata=Q18760950 core.source="wikidata-given-names 2026-11-14"
@@ -86,10 +87,10 @@
 @k.people.given_name.Risto k.people.given_name name=Risto sex=male holders=461 band=frequent wikidata=Q8095613 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rita k.people.given_name name=Rita sex=female holders=3327 band=common wikidata=Q1094218 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Roald k.people.given_name name=Roald sex=male holders=123 band=frequent wikidata=Q1646751 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Roar k.people.given_name name=Roar sex=male holders=92 band=rare wikidata=Q668036 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Roar k.people.given_name name=Roar sex=male holders=92 band=rare wikidata=Q668036 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Roberta k.people.given_name name=Roberta sex=female holders=1787 band=common wikidata=Q18194774 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Roberto k.people.given_name name=Roberto sex=male holders=8364 band=common wikidata=Q15905580 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Robin k.people.given_name name=Robin sex=female sex=male holders=5018 band=common wikidata=Q1158139 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Robin k.people.given_name name=Robin sex=female sex=male holders=5018 band=common wikidata=Q1158139 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Roch k.people.given_name name=Roch sex=male holders=134 band=frequent wikidata=Q11057790 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rocio k.people.given_name name=Rocío sex=female holders=609 band=frequent wikidata=Q7220104 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rodion k.people.given_name name=Rodion sex=male holders=43 band=rare wikidata=Q21127485 core.source="wikidata-given-names 2026-11-14"
@@ -117,13 +118,13 @@
 @k.people.given_name.Rosalind k.people.given_name name=Rosalind sex=female holders=648 band=frequent wikidata=Q20165788 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rosalinda k.people.given_name name=Rosalinda sex=female holders=65 band=rare wikidata=Q1315204 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rosario k.people.given_name name=Rosario sex=female sex=male holders=901 band=frequent wikidata=Q1069827 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Rose k.people.given_name name=Rose sex=female holders=3318 band=common wikidata=Q3585338 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Rose k.people.given_name name=Rose sex=female holders=3318 band=common wikidata=Q3585338 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Rosita k.people.given_name name=Rosita sex=female holders=184 band=frequent wikidata=Q4353945 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Ross k.people.given_name name=Ross sex=male holders=2531 band=common wikidata=Q2043428 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rostislav k.people.given_name name=Rostislav sex=male holders=389 band=frequent wikidata=Q2167906 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Roy k.people.given_name name=Roy sex=male holders=4175 band=common wikidata=Q2170752 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Ruben k.people.given_name name=Ruben sex=male holders=1403 band=common wikidata=Q18114894 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Ruby k.people.given_name name=Ruby sex=female holders=688 band=frequent wikidata=Q1061262 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Ruby k.people.given_name name=Ruby sex=female holders=688 band=frequent wikidata=Q1061262 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Rudi k.people.given_name name=Rudi sex=male holders=995 band=frequent wikidata=Q6949699 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rudolf k.people.given_name name=Rudolf sex=male holders=15533 band="very common" wikidata=Q18028491 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Rufina k.people.given_name name=Rufina sex=female holders=26 band=rare wikidata=Q1251660 core.source="wikidata-given-names 2026-11-14"
@@ -132,7 +133,7 @@
 @k.people.given_name.Rune k.people.given_name name=Rune sex=male holders=605 band=frequent wikidata=Q2097234 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Ruslan k.people.given_name name=Ruslan sex=male holders=509 band=frequent wikidata=Q2031009 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Russell k.people.given_name name=Russell sex=male holders=2945 band=common wikidata=Q14816494 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Rut k.people.given_name name=Rut sex=female holders=128 band=frequent wikidata=Q663072 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Rut k.people.given_name name=Rut sex=female holders=128 band=frequent wikidata=Q663072 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Ruth k.people.given_name name=Ruth sex=female holders=7418 band=common wikidata=Q18014868 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Ryan k.people.given_name name=Ryan sex=female sex=male holders=6065 band=common wikidata=Q3943046 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Ryszard k.people.given_name name=Ryszard sex=male holders=1906 band=common wikidata=Q15720963 core.source="wikidata-given-names 2026-11-14"

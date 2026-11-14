@@ -1,5 +1,6 @@
 # k.people/shards/given-names-k: 140 given names starting with K (of 2990 from 3000 Wikidata items), each with its sexes, the Wikidata humans who bear it, a band and its Wikidata items.
 # sources: wikidata-given-names 2026-11-14 (Wikidata given-name items with a sex class and their P735 holders, CC0; fetched by PSys2 into data/external/given-names, commit 0a24284f)
+# sources: hand-core 1 (context=person: by the rule of the import over the names of the catalog and the senses of k.words)
 # license: CC0-1.0
 # script: tools/import/given-names.mjs
 
@@ -70,7 +71,7 @@
 @k.people.given_name.Keisuke k.people.given_name name=Keisuke sex=male holders=323 band=frequent wikidata=Q6383879 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Keith k.people.given_name name=Keith sex=male holders=5209 band=common wikidata=Q1159033 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Kelly k.people.given_name name=Kelly sex=female sex=male holders=1792 band=common wikidata=Q3664058 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Kelvin k.people.given_name name=Kelvin sex=male holders=627 band=frequent wikidata=Q15211012 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Kelvin k.people.given_name name=Kelvin sex=male holders=627 band=frequent wikidata=Q15211012 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Ken k.people.given_name name=Ken sex=male holders=3869 band=common wikidata=Q2645657 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Kendra k.people.given_name name=Kendra sex=female holders=192 band=frequent wikidata=Q636461 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Kenji k.people.given_name name=Kenji sex=male holders=795 band=frequent wikidata=Q1738757 core.source="wikidata-given-names 2026-11-14"
@@ -92,7 +93,7 @@
 @k.people.given_name.Kirsi k.people.given_name name=Kirsi sex=female holders=220 band=frequent wikidata=Q26858635 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Kirsten k.people.given_name name=Kirsten sex=female sex=male holders=1826 band=common wikidata=Q256744 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Kirsti k.people.given_name name=Kirsti sex=female holders=259 band=frequent wikidata=Q4349920 core.source="wikidata-given-names 2026-11-14"
-@k.people.given_name.Kitty k.people.given_name name=Kitty sex=female holders=489 band=frequent wikidata=Q16278018 core.source="wikidata-given-names 2026-11-14"
+@k.people.given_name.Kitty k.people.given_name name=Kitty sex=female holders=489 band=frequent wikidata=Q16278018 context=person core.source="wikidata-given-names 2026-11-14" core.source="hand-core 1"
 @k.people.given_name.Kjell k.people.given_name name=Kjell sex=male holders=880 band=frequent wikidata=Q1785936 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Kjetil k.people.given_name name=Kjetil sex=male holders=244 band=frequent wikidata=Q1744078 core.source="wikidata-given-names 2026-11-14"
 @k.people.given_name.Klara k.people.given_name name=Klara sex=female holders=1515 band=common wikidata=Q18199028 core.source="wikidata-given-names 2026-11-14"
