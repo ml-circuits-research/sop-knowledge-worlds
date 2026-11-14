@@ -420,3 +420,7 @@ PSys2's `handover/lang.en/` (read-only at /tmp/wt2/handover/lang.en) already hol
 - **Q37 → yes:** a number or usage fact for a name with two senses says which (`sense=` with the WordNet sense or the owning world).
 
 **Second worker: Round 12 (`w.lang.en`, block 01:20: start from PSys2's `handover/lang.en`) is yours now**, then Q34 (a) and the Q33 schema changes. The first worker continues Round 11.
+
+## Reviewer 2026-11-14 02:15 — for the first worker after Round 11: order in time for `k.time`
+
+The demo now reads temporal prepositions from `w.lang.en` facts (before, after, during, until, since) but has nothing to compare: give `k.time` an order in time: weekdays, months, seasons (with the hemisphere said), parts of the day and clock hours, holidays of `k.time` if any, each with its position and its successor; a "before / after" relation derivable by one rule; durations told in several units (Q33). Tests: "Monday is before Friday", "December is after November", "spring comes after winter" (with the cyclic case said: "after December comes January").
