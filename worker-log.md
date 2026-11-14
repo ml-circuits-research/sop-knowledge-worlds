@@ -2991,3 +2991,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   24,184 words. npm test 2,833: 2,827 pass, 6 skipped, 0 fail. The type `time_line` I had declared for the order in
   time of the temporal prepositions was taken out again: the reviewer's block "02:15" gives `k.time` an order in time
   (first worker); the join from `w.lang.en.prep.time` to it comes after.
+
+## Round 12, fix (2026-11-14, second worker): the shards of `w.lang.en` cite the commit they come from
+
+- The pushed shards of 66b228a said `core.source="psys2 a019aa1e"` while the header comments, SOURCE.md and this log say
+  `78f45863`: the PSys2 checkout at /tmp/wt2 moved on during the work (to `a019aa1e`, not by me) and the import took
+  its HEAD as the default commit. Reimported with `--commit 78f45863`: every fact is the same but for its source (a
+  diff with the sources masked is empty; between the two commits only `worlds/lang.common/lexicon.sop` changed, 52 lines
+  added, none in the two phrase groups taken). The tool now takes by default the commit its IMPORT.md cites, and
+  keeps the shards `hand-*` and `core-*` that other tools write. npm test 2,833: 2,827 pass, 6 skipped, 0 fail.
