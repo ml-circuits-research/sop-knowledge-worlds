@@ -776,3 +776,7 @@ Accepted f45f12c (9 diagram frames: layout direction, edge labels, kind-about-to
 ## Reviewer 2026-11-15 08:00 — second worker's round accepted; Q69: move the pin
 
 Accepted 0b0f1af (595/595 scene things meet; drawings 1,081/1,088), 9916600 (262/262 capitals), 1e5c723 (month, decade, century), 8f41bae (context=person by rule; names shard last for such words), 561ec03 (skeleton.of declared; part.of measured). Declared joins 190 in 30 worlds, 99.1 % meet. **Q69:** yes — move the one pin to the library's current release (0.113 or newer), then declare `part.of` (measured 16.3 → 17.6 s on 0.113). Also: the joins report must not suggest enum keys (`context`) as joins.
+
+## Reviewer 2026-11-15 08:15 — real rows for w.lang.ro (PSys2's real set: 77 of 190 real failures are Romanian)
+
+PSys2's real failures (psys2 training/eval/real-failures-2026-11-15.md, real-2026-11-15.jsonl) are led by Romanian turns not read (46) and translation residue (31): "muta crocodilii mai jos", "pune si un lac", "muta capra mai jos", "mai jos, sta pe leagan nu pe el", "muta si mai la stinga", "nu prima casa, cea din mijloc", typos without diacritics ("stinga"). Next w.lang.ro work (first free worker): the words and frames these real turns need (lemmas, relative directions "mai jos / mai la stânga / mai sus", ordinal/set phrases "prima, cea din mijloc, ultima", corrections "nu pe el"), measured on the real Romanian turns (act + roles), not on synthetic sets.
