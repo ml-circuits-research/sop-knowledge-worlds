@@ -10,7 +10,8 @@
 // Each file runs as one process (`node --test-reporter=tap <file>`); its wall seconds and peak memory (VmHWM) are kept
 // in .test-timings.json (git-ignored; a file's last run replaces its entry). Several workers share the machine's
 // memory: a file starts when its last peak + 600 MB (at least SKW_MIN_FREE_MB, default 2500) are free, and a file
-// killed by SIGKILL (the memory killer) is run again alone, up to 4 times.
+// killed by SIGKILL (the memory killer) is run again alone, up to 4 times. A file killed on every try, or one that ran
+// no test, FAILS ("not run"): a file that never ran is not a pass (review 2026-11-15, finding 1).
 import { spawn, execFileSync } from 'node:child_process';
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname, basename } from 'node:path';
@@ -125,7 +126,7 @@ const peakOf = (pid) => { try { return Number((readFileSync(`/proc/${pid}/status
 function runOnce(file, env = {}) {
   return new Promise((resolve) => {
     const t0 = Date.now();
-    const child = spawn(process.execPath, ['--test-reporter=tap', file], { cwd: REPO, stdio: ['ignore', 'pipe', 'pipe'], env: { ...process.env, ...env } });
+    const child = spawn(process.execPath, ['--test-reporter=tap', file], { cwd: REPO, stdio: ['ignore', 'pipe', 'pipe'], env: { ...Object.fromEntries(Object.entries(process.env).filter(([k]) => k !== 'NODE_TEST_CONTEXT')), ...env } }); // under node --test the child would report to the parent and print no counts
     let out = '', mb = 0;
     const poll = setInterval(() => { mb = Math.max(mb, peakOf(child.pid)); }, 200);
     child.stdout.on('data', (d) => { out += d; });
@@ -133,32 +134,46 @@ function runOnce(file, env = {}) {
     child.on('close', (code, signal) => {
       clearInterval(poll);
       const n = (k) => Number((out.match(new RegExp(`^# ${k} (\\d+)`, 'm')) ?? [0, 0])[1]);
-      resolve({ file, seconds: (Date.now() - t0) / 1000, mb: Math.round(mb), code, killed: signal === 'SIGKILL' || /SIGKILL/.test(out), tests: n('tests'), pass: n('pass'), fail: n('fail'), skipped: n('skipped'), out });
+      resolve({ file, seconds: (Date.now() - t0) / 1000, mb: Math.round(mb), code, signal, killed: signal === 'SIGKILL' || /SIGKILL/.test(out), tests: n('tests'), pass: n('pass'), fail: n('fail'), skipped: n('skipped'), out });
     });
   });
 }
 
-export async function runFiles(files, { log = console.log, envOf = () => ({}) } = {}) {
+// The verdict of one run: null when it passed, else why it failed. A run killed by a signal has code null and fail 0,
+// and a file that ran no test has fail 0 too: both are "not run", never a pass.
+export function verdict(r) {
+  if (r.killed || r.signal) return `not run (killed by ${r.signal ?? 'SIGKILL'}${r.tries > 1 ? ` on all ${r.tries} tries` : ''})`;
+  if (r.fail) return `${r.fail} failing`;
+  if (r.code) return `exit code ${r.code}`;
+  if (!r.tests) return 'not run (0 tests)';
+  return null;
+}
+
+export async function runFiles(files, { log = console.log, envOf = () => ({}), tries = 5, keep = true, pause = 5000 } = {}) {
   const timings = existsSync(TIMINGS) ? JSON.parse(readFileSync(TIMINGS, 'utf8')) : {};
   const results = [];
   for (const f of files) {
     let r;
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < tries; i++) {
       await waitForMemory(timings[f]?.mb ?? 0);
       r = await runOnce(f, envOf(f));
-      if (!r.killed) break;
-      log(`  ${f} killed (SIGKILL), run again alone`);
-      await sleep(5000);
+      r.tries = i + 1;
+      if (!r.killed && !r.signal) break;
+      log(`  ${f} killed (${r.signal ?? 'SIGKILL'})${i + 1 < tries ? ', run again alone' : ''}`);
+      if (i + 1 < tries) await sleep(pause);
     }
+    r.why = verdict(r);
     results.push(r);
-    if (!r.killed && !Object.keys(envOf(f)).length) timings[f] = { seconds: r.seconds, mb: r.mb, tests: r.tests, at: new Date().toISOString() };
-    writeFileSync(TIMINGS, `${JSON.stringify(timings, null, 1)}\n`);
-    log(`${r.fail || r.code ? 'FAIL' : 'ok  '} ${r.seconds.toFixed(1).padStart(6)} s ${String(r.mb).padStart(5)} MB ${String(r.pass).padStart(4)} pass ${r.fail} fail ${r.skipped} skipped  ${f}`);
-    if (r.fail || r.code) log(r.out.split('\n').filter((l) => /^not ok|^\s+(error|expected|actual|message):|AssertionError/.test(l)).slice(0, 30).join('\n'));
+    if (keep && !r.killed && !r.signal && !Object.keys(envOf(f)).length) timings[f] = { seconds: r.seconds, mb: r.mb, tests: r.tests, at: new Date().toISOString() };
+    if (keep) writeFileSync(TIMINGS, `${JSON.stringify(timings, null, 1)}\n`);
+    log(`${r.why ? 'FAIL' : 'ok  '} ${r.seconds.toFixed(1).padStart(6)} s ${String(r.mb).padStart(5)} MB ${String(r.pass).padStart(4)} pass ${r.fail} fail ${r.skipped} skipped  ${f}${r.why ? `  (${r.why})` : ''}`);
+    if (r.why) log(r.out.split('\n').filter((l) => /^not ok|^\s+(error|expected|actual|message):|AssertionError/.test(l)).slice(0, 30).join('\n'));
   }
-  const bad = results.filter((r) => r.fail || r.code);
+  const bad = results.filter((r) => r.why);
+  const notRun = bad.filter((r) => r.why.startsWith('not run'));
   const sum = (k) => results.reduce((a, r) => a + r[k], 0);
-  log(`# files ${results.length}, tests ${sum('tests')}, pass ${sum('pass')}, fail ${sum('fail')}, skipped ${sum('skipped')}, ${sum('seconds').toFixed(0)} s; failing files ${bad.length}`);
+  log(`# files ${results.length}, tests ${sum('tests')}, pass ${sum('pass')}, fail ${sum('fail')}, skipped ${sum('skipped')}, ${sum('seconds').toFixed(0)} s; failing files ${bad.length}${notRun.length ? ` (not run: ${notRun.map((r) => r.file).join(', ')})` : ''}`);
+  runFiles.results = results;
   return bad.length === 0;
 }
 

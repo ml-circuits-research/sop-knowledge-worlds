@@ -1,7 +1,10 @@
 // tools/test-run.mjs: which test files a change touches (npm run test:changed), by names and imports.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { plan, allTests } from '../tools/test-run.mjs';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
+import { plan, allTests, verdict, runFiles } from '../tools/test-run.mjs';
 
 const files = (paths) => [...plan(paths).keys()];
 const ALWAYS = ['tests/catalog.test.mjs', 'tests/validate.test.mjs', 'tests/repo.test.mjs'];
@@ -28,4 +31,29 @@ test('a world touches the tests named after it or naming it, its questions (only
   assert.deepEqual([...q.scope.get('tests/questions.test.mjs')], ['k.animals']);
   // a shard written by a tool: the tool's change touches that world's tests
   assert.ok(files(['tools/wearables-core.mjs']).includes('tests/k.wearables.test.mjs'));
+});
+
+// review 2026-11-15, finding 1: tests/derived.test.mjs was killed (SIGKILL) on all five tries and logged `ok`, 0 pass
+test('a file killed on every try, or one that ran no test, fails as "not run"; a file that ran and passed is ok', async () => {
+  assert.equal(verdict({ killed: true, signal: 'SIGKILL', code: null, tests: 0, fail: 0, tries: 5 }), 'not run (killed by SIGKILL on all 5 tries)');
+  assert.equal(verdict({ killed: false, signal: null, code: 0, tests: 0, fail: 0 }), 'not run (0 tests)');
+  assert.equal(verdict({ killed: false, signal: null, code: 1, tests: 3, fail: 1 }), '1 failing');
+  assert.equal(verdict({ killed: false, signal: null, code: 0, tests: 3, fail: 0 }), null);
+  const dir = mkdtempSync(join(tmpdir(), 'skw-runner-'));
+  try {
+    const f = (name, body) => { const p = join(dir, name); writeFileSync(p, `import { test } from 'node:test';\n${body}\n`); return p; };
+    const killed = f('killed.test.mjs', "process.kill(process.pid, 'SIGKILL');");
+    const empty = f('empty.test.mjs', '');
+    const good = f('good.test.mjs', "test('one', () => {});");
+    const lines = [];
+    const ok = await runFiles([killed, empty, good], { log: (l) => lines.push(l), tries: 2, keep: false, pause: 0 });
+    assert.equal(ok, false);
+    const byFile = Object.fromEntries(runFiles.results.map((r) => [r.file, r]));
+    assert.match(byFile[killed].why, /^not run \(killed by SIGKILL on all 2 tries\)/);
+    assert.equal(byFile[killed].tries, 2);
+    assert.equal(byFile[empty].why, 'not run (0 tests)');
+    assert.equal(byFile[good].why, null);
+    assert.ok(lines.some((l) => l.startsWith('FAIL') && l.includes(killed)) && lines.some((l) => l.startsWith('ok') && l.includes(good)));
+    assert.match(lines.at(-1), /failing files 2 \(not run: /);
+  } finally { rmSync(dir, { recursive: true, force: true }); }
 });

@@ -28,7 +28,37 @@ const importsOf = (worlds, id, seen = new Set()) => {
 const hasRules = (w) => parse(w.schemaText).some((x) => x.type === 'core.rule');
 // The modules whose world runs rules: those with rules of their own and those that import one (k.shapes imports
 // k.kinds, whose rules give every shape its kinds above).
-export const ruleWorlds = (worlds) => worlds.filter((w) => hasRules(w) || [...importsOf(worlds, w.id)].some((d) => hasRules(worlds.find((x) => x.id === d))));
+// A module writes the derived values of its own types only, so a world whose types no rule makes (and none extends a
+// type a rule makes) has nothing to derive: k.objects imports k.commonsense, but no rule makes a k.objects type, and
+// loading its 36 MB of shards to find nothing killed tests/derived.test.mjs (review 2026-11-15, finding 1).
+const ruleTypes = (worlds, ids) => {
+  const out = new Set();
+  for (const id of ids) {
+    const wires = parse(worlds.find((w) => w.id === id).schemaText);
+    for (const r of wires.filter((x) => x.type === 'core.rule')) for (const t of r.attrs.then ?? []) {
+      const tpl = wires.find((x) => x.id === t.slice(1));
+      if (tpl && !tpl.attrs['core.on']) out.add(tpl.type);
+    }
+  }
+  return out;
+};
+const ownTypes = (w) => {
+  const out = new Map(); // own type -> the types it extends
+  for (const x of parse(w.schemaText)) if (x.type === 'core.type') {
+    const t = x.attrs.of?.[0] ?? x.id;
+    if (t.startsWith(`${w.id}.`)) out.set(t, x.attrs.extends ?? []);
+  }
+  return out;
+};
+const makesOwnType = (worlds, w) => {
+  const made = ruleTypes(worlds, [w.id, ...importsOf(worlds, w.id)]);
+  if (!made.size) return false;
+  const parents = new Map();
+  for (const o of worlds) for (const [t, ex] of ownTypes(o)) parents.set(t, ex);
+  const up = (t, seen = new Set()) => made.has(t) || (!seen.has(t) && (seen.add(t), (parents.get(t) ?? []).some((p) => up(p, seen))));
+  return [...ownTypes(w).keys()].some((t) => up(t));
+};
+export const ruleWorlds = (worlds) => worlds.filter((w) => (hasRules(w) || [...importsOf(worlds, w.id)].some((d) => hasRules(worlds.find((x) => x.id === d)))) && makesOwnType(worlds, w));
 
 // The rule ids of a schema (as written: `k.time.order`).
 const rulesOf = (schemaText) => parse(schemaText).filter((x) => x.type === 'core.rule').map((x) => x.id);

@@ -80,6 +80,9 @@ export function validateWorlds(root = WORLDS_DIR, { cache = root === WORLDS_DIR 
       if (r.ok && !together.ok) for (const v of together.violations) errors.push(`${shard.path} (with the other shards of ${world.id}): ${fmtViolation(v)}`);
     }
     if (errors.length === errorsBefore) fresh[world.id] = { key, results: results.slice(resultsBefore) };
+    // kept after each world, so a run killed by memory on a shared machine resumes where it stopped (the key still
+    // decides whether an entry is used)
+    if (cache && fresh[world.id]) writeFileSync(cacheFile, JSON.stringify({ ...old, ...fresh }));
   }
   if (cache) writeFileSync(cacheFile, JSON.stringify(fresh));
   return { ok: errors.length === 0, errors, results, worlds };

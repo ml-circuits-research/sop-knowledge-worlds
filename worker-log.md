@@ -5407,3 +5407,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   27,327, compose 48,617; build: narration (1 slot, machinery), relations-procedures.
 - Test: tests/k.procedures.test.mjs (16, +1): every method says it, as the list says; set a table, an essay and a scene
   are, a face of a role, a feeling on a face and an anchor are not; every user-facing method has 2 or more steps.
+## 2026-11-15 — fifth worker: KR1 item 1, the runner fails a file that never ran; derived.test.mjs runs
+
+- **tools/test-run.mjs:** `verdict(r)` decides a run: killed by a signal on every try -> FAIL "not run (killed by
+  SIGKILL on all N tries)"; 0 tests -> FAIL "not run (0 tests)"; failing tests or a non-zero exit -> FAIL; else ok.
+  The summary line lists the files not run. Before: `r.fail || r.code`, so a run killed by a signal (code null, fail 0)
+  and a file with no test were `ok`. Also: the child no longer inherits `NODE_TEST_CONTEXT` (under `node --test` a
+  child reported to its parent and printed no counts, which the new rule would read as 0 tests).
+- **tests/derived.test.mjs** (killed five times and logged `ok 89.5 s 2648 MB 0 pass` in the review run): the cause
+  was `tools/derive.mjs` loading k.objects (36 MB of shards) with its rules because it imports k.commonsense, though no
+  rule makes a k.objects type. `ruleWorlds` now takes only the worlds whose own types (or a type they extend) a rule
+  makes: k.commonsense, k.kinds, k.people, k.shapes, k.time (k.objects out). Derived shards byte-identical.
+  The file is split: tests/derived.test.mjs (fresh, marked: 2 tests, 18.2 s, 584 MB) and tests/derived.load.test.mjs
+  (nothing made twice, told values not derived, tools see them; reads the shards from disk: 2 tests, 26.1 s, 466 MB),
+  both at load average about 9. Before: killed at 2,648 MB, 0 pass.
+- Test (tests/test-run.test.mjs, +1): `verdict` on a killed, an empty, a failing and a passing record, and `runFiles`
+  on three real files in a temp folder (one kills itself with SIGKILL, one has no test, one passes): the first two FAIL
+  as "not run", the third is ok, and the summary names the files not run.

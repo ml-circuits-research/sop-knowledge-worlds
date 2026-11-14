@@ -1,15 +1,14 @@
 // Derived facts visible to tools (reviewer block 2026-11-14 02:45, item 3): tools/derive.mjs runs the rules of each
 // module over its told facts and writes what they make into the generated shards `derived*`. The shards on disk
 // must be what the tool gives now (fresh); every wire is marked and names a rule of its own module; loaded with the
-// rules, they make nothing twice; and the tools that read shards see them.
+// rules, they make nothing twice (tests/derived.load.test.mjs); and the tools that read shards see them (same file).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from '../tools/sopworld/sopworld.mjs';
-import { scanWorlds, fullWorld, readHeader, moduleInfo, WORLDS_DIR } from '../tools/lib/worlds.mjs';
+import { scanWorlds, readHeader, moduleInfo, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { deriveAll, ruleWorlds } from '../tools/derive.mjs';
-import { joins } from '../tools/joins.mjs';
 
 const worlds = scanWorlds();
 const all = deriveAll(worlds);
@@ -39,25 +38,4 @@ test('every derived wire is marked derived=true, is of a type of its own world, 
       }
     }
   }
-});
-
-test('loaded with the rules, the derived shards make nothing twice and change no value', () => {
-  const strip = worlds.map((w) => ({ ...w, shards: w.shards.filter((s) => !s.id.split('/').pop().startsWith('derived')) }));
-  const values = (world, type) => world.ofType(type).map((w) => JSON.stringify(Object.entries(w.attrs).filter(([k]) => !k.startsWith('core.') && k !== 'derived').map(([k, v]) => [k, [...v].sort()]).sort())).sort();
-  for (const [id, types] of [['k.commonsense', ['k.commonsense.thing']], ['k.time', ['k.time.before', 'k.time.season_in']], ['k.shapes', ['k.shapes.shape']], ['k.people', ['k.people.kind']]]) {
-    const a = fullWorld(id, worlds), b = fullWorld(id, strip);
-    for (const t of types) assert.deepEqual(values(a, t), values(b, t), `${id} ${t}`);
-  }
-});
-
-test('a told value is never written as derived; the tools that read shards see the derived facts', () => {
-  const told = new Set();
-  for (const w of worlds) for (const s of w.shards) if (!s.id.split('/').pop().startsWith('derived')) for (const x of parse(s.text)) if (x.type === 'k.commonsense.thing') for (const v of x.attrs.at ?? []) told.add(`${x.attrs.name[0]} ${v}`);
-  for (const x of parse(all['k.commonsense']['derived.sop'])) for (const v of x.attrs.at ?? []) assert.ok(!told.has(`${x.attrs.name[0]} ${v}`), `${x.id} at=${v}`);
-  // the dolphin's place, the swift's flying, lemonade a liquid (tea is told), Monday before Friday: now in shards
-  const text = Object.values(all).flatMap((f) => Object.values(f)).join('\n');
-  for (const re of [/k\.commonsense\.thing name=dolphin at=sea /, /name=swift can=fly/, /name=lemonade is_a=liquid/, /k\.time\.before cycle=week earlier=Monday later=Friday /, /season=winter hemisphere=north first=December /, /k\.shapes\.shape name=square kind_of=polygon kind_of=quadrilateral derived=true core\.source="rule k\.kinds\.up\.step"/]) assert.match(text, re);
-  // the joins table files a derived k.commonsense.thing under the sense of the type its rule reads
-  const dolphin = joins(worlds).rows.find((r) => r.name === 'dolphin');
-  assert.ok(dolphin.in.includes('k.commonsense.thing') && dolphin.sense === 'animal');
 });
