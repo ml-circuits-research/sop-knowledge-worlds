@@ -3861,3 +3861,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   a mammal" -0.400 (obvious); a repeat <= 0; three joins off topic < a third; the order holds at both ends of every
   weight range; each score explained by feature.
 - `npm test`: 2,936 tests, 2,934 pass, 1 skipped, 1 todo (Q51), 0 fail.
+## Q45 (i) (2026-11-14, second worker): unnamed imported parts say named=no
+
+- The reviewer's block "11:35" item 2 (i). `k.named.labelled.named` takes `enum=no` beside `model` (nobody named it:
+  the name is a placeholder). The importers (tools/import/objects.mjs for OpenMoji and Mulberry, noto-emoji.mjs)
+  write `named=no` on a part with no name from part-names.tsv; the 21,654 such parts of 291 k.objects shards (the
+  reviewer counted 13,920 earlier; the drawings grew) were given it in the importers' key order (after `kind` where
+  the model gave one: 7,734), since the raw files of three sources are not in this clone; the import fixtures say so.
+- Tests: k.objects.names (every placeholder part and only those say named=no; the TSV test reads `no` for unnamed
+  parts); import fixtures (objects, noto).
+- k.procedures (first worker's world) read "has `named`" as "has a name": the take-apart method's binding now matches
+  `named=model` (tools/procedures-core.mjs, shard from-knowledge regenerated) and its coverage test picks labelled
+  drawings by `named=model`; 15 pass, labelled drawings taken apart as before.
+- Numbers: 21,654 part wires + ` named=no` in 291 k.objects shards (about +195 kB in all; the size gate holds);
+  k.named schema +1 enum value. Catalog 28 worlds, 953 shards, vocab 24,578 words. npm test 2,921: 2,916 pass,
+  5 skipped, 0 fail.
+- Rebased on w.lang.ro (first worker, 2e6ef36): catalog 29 worlds, 957 shards, vocab 24,581 words; npm test 2,930:
+  2,924 pass, 5 skipped, 0 fail (1 todo of w.lang.ro, Q51).
+- Rebased again on k.words for w.lang.ro (8d81a16): catalog 29 worlds, 958 shards, vocab 24,586 words; npm test
+  2,932: 2,926 pass, 5 skipped, 0 fail.
+- Rebased on k.interest (first worker, 5e39ba0): 30 worlds, 960 shards, vocab 24,661 words. Pushed after the build
+  and the 10 test files that read generated files or k.objects / k.procedures (57 pass, 0 fail): three full runs
+  in a row were overtaken by pushes of the other worker; the full run follows the push.

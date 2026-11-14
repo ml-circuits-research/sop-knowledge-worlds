@@ -63,11 +63,11 @@ test('the importer keeps things, leaves hand-written names alone, and names part
   const lines = files['noto-place-building-01.sop'].split('\n').filter((l) => l.startsWith('@'));
   assert.deepEqual(lines.slice(0, 4), [
     '@k.objects.u1f3e1 k.objects.object name="house with garden" core.source="noto-emoji 99701e0" core.source="cldr 48"',
-    '@k.objects.u1f3e1.p1 k.objects.part of="house with garden" name=part1 shape=rectangle x=10 y=50 w=80 h=40 z=1 colour=brown rgb="#8C552D" core.source="noto-emoji 99701e0"',
+    '@k.objects.u1f3e1.p1 k.objects.part of="house with garden" name=part1 named=no shape=rectangle x=10 y=50 w=80 h=40 z=1 colour=brown rgb="#8C552D" core.source="noto-emoji 99701e0"',
     '@k.objects.u1f3e1.p2 k.objects.part of="house with garden" name=roof named=model shape=polygon x=10 y=10 w=80 h=40 z=2 colour=red rgb="#DC1E1E" core.source="noto-emoji 99701e0"',
     '@k.objects.u1f3e1.p2.1 k.objects.point part=$k.objects.u1f3e1.p2 n=1 x=10 y=50 core.source="noto-emoji 99701e0"',
   ]);
-  assert.ok(lines.includes('@k.objects.u1f3e1.p4 k.objects.part of="house with garden" name=part4 kind=detail shape=line x=10 y=95 w=80 h=3 z=4 colour=black rgb="#000000" core.source="noto-emoji 99701e0"'));
+  assert.ok(lines.includes('@k.objects.u1f3e1.p4 k.objects.part of="house with garden" name=part4 kind=detail named=no shape=line x=10 y=95 w=80 h=3 z=4 colour=black rgb="#000000" core.source="noto-emoji 99701e0"'));
   assert.equal(lines.at(-1), '@k.objects.u1f3e1.word core.word text=garden text=home means="house with garden" of=k.objects.object.name core.source="cldr 48"');
   assert.deepEqual(run().files, files);
 });

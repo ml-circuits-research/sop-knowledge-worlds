@@ -101,6 +101,9 @@ Differences from the hand-written objects:
   box of a filled part, is a detail by rule unless the names file says otherwise. No relative positions (`above`,
   `inside`, …) are given. Named so far: Noto 1,999 of 10,152 parts, OpenMoji 153 of 1,322, Mulberry 1,166 of 13,498
   (and 748, 652 and 6,334 details). The names were audited once (`sources/part-names-audit.tsv`, `tools/audit-part-names.mjs`);
+- Q45 (i): a part whose name is a placeholder (`part1…partN`, 21,654 parts) carries `named=no` (the slot `named` of
+  `k.named`), so a host that takes a thing apart tells a named part (`named=model`) from an unnamed one; the importers
+  write it, and a test keeps every placeholder part and only those marked.
 - shards hold up to 8 objects of one group. The licence notices are `LICENSE.noto-emoji`, `LICENSE.cldr`,
   `LICENSE.openmoji` and `LICENSE.mulberry` in this folder; see `../LICENSES.md`.
 

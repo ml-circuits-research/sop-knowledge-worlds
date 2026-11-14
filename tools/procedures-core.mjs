@@ -150,7 +150,7 @@ export const METHODS = [
     bind: {
       thing: { goal: 'thing' }, made: { step: [1, 2] },
       kinded: { from: 'k.objects.part', match: { of: { equals: 'thing', equals_key: 'kind' }, kind: { present: true, not: 'detail' } } },
-      named: { from: 'k.objects.part', match: { of: { equals: 'thing', equals_key: 'kind' }, named: { present: true }, kind: { present: false } } },
+      named: { from: 'k.objects.part', match: { of: { equals: 'thing', equals_key: 'kind' }, named: { value: 'model' }, kind: { present: false } } },
       labelled: { together: ['kinded', 'named'] },
     },
     steps: [

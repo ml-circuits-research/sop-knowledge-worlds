@@ -305,7 +305,7 @@ test('coverage: every scene, role, wearable, layout, joined whole and labelled d
   assert.equal(layouts.ok, layouts.goals);
   const wholes = run('built from parts', [...new Set(knowledge.facts('k.layouts.joins').filter((f) => f.attrs.rel[0] === 'part_of').map((f) => f.attrs.b[0]))].map((s) => [{ act: 'make', roles: { kind: s, material: 'parts' } }, pic]));
   assert.equal(wholes.ok, wholes.goals);
-  const drawn = [...new Set(knowledge.facts('k.objects.part').filter((f) => (f.attrs.kind && f.attrs.kind[0] !== 'detail') || f.attrs.named).map((f) => f.attrs.of[0]))];
+  const drawn = [...new Set(knowledge.facts('k.objects.part').filter((f) => (f.attrs.kind && f.attrs.kind[0] !== 'detail') || f.attrs.named?.[0] === 'model').map((f) => f.attrs.of[0]))];
   const apart = run('labelled drawings taken apart', drawn.map((s) => [{ act: 'take apart', roles: { thing: 'x1' } }, () => new Live({ things: [thing('x1', s)] })]));
   assert.equal(apart.ok, apart.goals, apart.bad.join(' '));
   console.log(`coverage ${JSON.stringify(report)}`);

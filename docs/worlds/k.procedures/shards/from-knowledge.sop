@@ -239,7 +239,7 @@
 @k.procedures.match.take_apart_a_drawn_thing.kinded.kind k.procedures.match method="take apart a drawn thing" binding=kinded key=kind not=detail present=true core.source="hand-core 1"
 @k.procedures.binding.take_apart_a_drawn_thing.named k.procedures.binding method="take apart a drawn thing" name=named from=k.objects.part core.source="hand-core 1"
 @k.procedures.match.take_apart_a_drawn_thing.named.of k.procedures.match method="take apart a drawn thing" binding=named key=of equals=thing equals_key=kind core.source="hand-core 1"
-@k.procedures.match.take_apart_a_drawn_thing.named.named k.procedures.match method="take apart a drawn thing" binding=named key=named present=true core.source="hand-core 1"
+@k.procedures.match.take_apart_a_drawn_thing.named.named k.procedures.match method="take apart a drawn thing" binding=named key=named value=model core.source="hand-core 1"
 @k.procedures.match.take_apart_a_drawn_thing.named.kind k.procedures.match method="take apart a drawn thing" binding=named key=kind present=false core.source="hand-core 1"
 @k.procedures.binding.take_apart_a_drawn_thing.labelled k.procedures.binding method="take apart a drawn thing" name=labelled together=kinded together=named core.source="hand-core 1"
 @k.procedures.step.take_apart_a_drawn_thing.1 k.procedures.step method="take apart a drawn thing" n=1 act=make each=kinded about="make each part of a kind where it is on the thing" core.source="hand-core 1"

@@ -10,7 +10,9 @@
 
 # A fact whose values may have been given by a language model.
 @k.named.labelled core.type of=k.named.labelled shared=true core.source="hand-core 1"
-@k.named.labelled.named core.slot of=k.named.labelled key=named enum=model core.source="hand-core 1"
+# `named=no` (Q45): nobody named it: the name is a placeholder (part1, part2 of an imported drawing whose parts were not
+# labelled), so a host that takes a thing apart can tell a named part from an unnamed one.
+@k.named.labelled.named core.slot of=k.named.labelled key=named enum=model enum=no core.source="hand-core 1"
 @k.named.word.named core.word text="labelled by a model" text="named by a model" means=k.named.labelled.named core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).

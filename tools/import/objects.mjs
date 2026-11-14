@@ -60,7 +60,7 @@ export function objectShards(entries, source, { partNames = '', convert = {}, de
       const given = names.get(i + 1) ?? (byRule[i] ? { kind: 'detail' } : {});
       if (given.kind === 'detail') stats.detail++;
       lines.push(wire(`${uid}.p${i + 1}`, 'k.objects.part', [
-        ['of', e.name], ['name', given.name ?? `part${i + 1}`], ['kind', given.kind], ['named', given.name ? 'model' : undefined],
+        ['of', e.name], ['name', given.name ?? `part${i + 1}`], ['kind', given.kind], ['named', given.name ? 'model' : 'no'],
         ['shape', p.shape], ['x', p.x], ['y', p.y], ['w', p.w], ['h', p.h], ['z', i + 1], ['colour', p.colour], ['rgb', text(p.rgb)],
       ], source.drawings));
       if (given.name) stats.named++;

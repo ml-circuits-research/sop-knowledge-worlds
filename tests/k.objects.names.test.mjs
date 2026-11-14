@@ -24,7 +24,7 @@ test('every row of part-names.tsv names a part that exists, as the row says', ()
       assert.equal(tok(p.attrs.z[0]), String(n));
       assert.equal(p.name, name ?? `part${n}`, `${object} part ${n}`);
       assert.equal(tok(p.attrs.kind?.[0]), kind, `${object} part ${n} kind`);
-      assert.equal(tok(p.attrs.named?.[0]), name ? 'model' : undefined, `${object} part ${n} named`);
+      assert.equal(tok(p.attrs.named?.[0]), name ? 'model' : 'no', `${object} part ${n} named`); // Q45 (i): an unnamed part says named=no
       if (name) assert.match(name, /^[a-z][a-z0-9_]*$/);
     }
   }
@@ -35,7 +35,7 @@ test('part names are unique inside an object; only parts named in the TSV carry 
   for (const object of objects) {
     const parts = partsOf(world, object);
     assert.equal(new Set(parts.map((p) => p.name)).size, parts.length, object);
-    for (const [i, p] of parts.entries()) if (p.attrs.named) { named++; assert.ok(names.get(object)?.get(i + 1)?.name, `${object} ${p.name}`); }
+    for (const [i, p] of parts.entries()) if (tok(p.attrs.named?.[0]) === 'model') { named++; assert.ok(names.get(object)?.get(i + 1)?.name, `${object} ${p.name}`); }
   }
   assert.ok(named > 0);
 });
@@ -71,4 +71,16 @@ test('the audit sample of named parts is seeded: 200 parts over the three source
   assert.notDeepEqual(a, sample(rows, { seed: 5 }));
   for (const s of SOURCES) assert.ok(a.filter((r) => r.source === s).length >= 30, s);
   for (const r of a) assert.equal(partsOf(world, r.object)[r.n - 1]?.name, r.name);
+});
+
+test('Q45 (i): every imported part with a placeholder name (part1, part2) says named=no; no other part does', async () => {
+  const { scanWorlds } = await import('../tools/lib/worlds.mjs');
+  let placeholders = 0;
+  for (const s of scanWorlds().find((w) => w.id === 'k.objects').shards) for (const line of s.text.split('\n')) {
+    if (!line.includes(' k.objects.part ')) continue;
+    const placeholder = / name=part\d+ /.test(line);
+    if (placeholder) placeholders++;
+    assert.equal(/ named=no /.test(line), placeholder, line.slice(0, 120));
+  }
+  assert.ok(placeholders > 20000, `${placeholders}`);
 });

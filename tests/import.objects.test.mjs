@@ -28,7 +28,7 @@ test('openmoji: things with a new name become objects; outlines are closed lines
   assert.deepEqual(files['openmoji-animals-nature-01.sop'].split('\n').filter((l) => l.startsWith('@')), [
     '@k.objects.ome000 k.objects.object name=goldfish core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p1 k.objects.part of=goldfish name=body named=model shape=rectangle x=10 y=20 w=60 h=30 z=1 colour=red rgb="#DC1E1E" core.source="openmoji 3e01de5"',
-    '@k.objects.ome000.p2 k.objects.part of=goldfish name=part2 kind=detail shape=line x=0 y=0 w=100 h=100 z=2 colour=black rgb="#000000" core.source="openmoji 3e01de5"',
+    '@k.objects.ome000.p2 k.objects.part of=goldfish name=part2 kind=detail named=no shape=line x=0 y=0 w=100 h=100 z=2 colour=black rgb="#000000" core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.1 k.objects.point part=$k.objects.ome000.p2 n=1 x=0 y=0 core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.2 k.objects.point part=$k.objects.ome000.p2 n=2 x=100 y=0 core.source="openmoji 3e01de5"',
     '@k.objects.ome000.p2.3 k.objects.point part=$k.objects.ome000.p2 n=3 x=100 y=100 core.source="openmoji 3e01de5"',

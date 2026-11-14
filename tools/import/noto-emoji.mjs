@@ -85,7 +85,7 @@ export function importNoto({ list, annotations, svg, partNames, taken = new Set(
     parts.forEach((p, i) => {
       const given = names.get(i + 1) ?? {};
       lines.push(wire(`${uid}.p${i + 1}`, 'k.objects.part', [
-        ['of', e.name], ['name', given.name ?? `part${i + 1}`], ['kind', given.kind], ['named', given.name ? 'model' : undefined],
+        ['of', e.name], ['name', given.name ?? `part${i + 1}`], ['kind', given.kind], ['named', given.name ? 'model' : 'no'],
         ['shape', p.shape], ['x', p.x], ['y', p.y], ['w', p.w], ['h', p.h], ['z', i + 1], ['colour', p.colour], ['rgb', text(p.rgb)],
       ], NOTO));
       if (given.name) stats.named++;
