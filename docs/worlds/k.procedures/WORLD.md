@@ -26,7 +26,7 @@ most 200 acts. Kinds in steps are plain names; the live world's schema resolves 
 A role of the goal that the goal does not say is left out of a step; any other filler with no value leaves the step
 out for that value.
 
-## The methods (23)
+## The methods (28)
 
 From knowledge (shard `from-knowledge`, 16): **compose a scene** (`k.scenes`: the ground, each thing it has, as many
 as it has, where it usually is; things that rest on another after it, on it), **arrange in a layout** (`k.layouts`:
@@ -44,6 +44,31 @@ of a new family when there is nobody; **set a table** in a picture (chairs aroun
 seating plan (`w.seating`: a table with that many seats, and the seats); **a chart of the things there** (`w.list`: one
 item per kind with its count); **a report about what was done** on a timeline (`w.timeline`) or as a list (`w.list`).
 
+Compositions (shard `compose`, 5, block "15:00" item 3; all in `w.document`): **write a story** (k.story: a goal, an
+obstacle that blocks it, a setting that has it, the means that overcomes it, the act that uses the means, a helper who
+has it, a protagonist who can have the goal and lacks the means, one to three attempts that fail, the target; then
+the document and one chapter per part of the story genre of k.genres; every element of k.story is the binding of
+its name, which std.compose tells in the element's part with its move), **write a presentation about a topic**
+(three to five points, statements about the topic on different keys; title, agenda, summary and closing slides, one
+content slide per point), **write an essay about a topic** (two to four arguments and a counterargument on another
+key), **write a scientific article about a topic** (two to five results; the methods are the types they come from;
+one chapter per required IMRaD part), **write a report of what was done** (one to six acts of the history, one to
+four things there, one to three acts not yet done as next steps). The counts are read from k.genres and k.story, not
+written here. Their choices use six optional keys proposed to the library (questions.md Q57):
+
+| Key | Says |
+| --- | --- |
+| `binding.choose` | a whole number or a binding that gives one: the binding stands for that many different values, chosen together with the method's other choose bindings; matches that name a choose binding are constraints between the choices |
+| `binding.choose_min` | the fewest values to choose |
+| `binding.about` | the statements of the catalog about the thing(s) of another binding (`thing`, `type`, `key`, `value`) |
+| `match.differs` | none of the key's values is one of that binding's values (a binding naming itself: its chosen values differ) |
+| `match.soft` | a preference, not a filter |
+| `match.n` | tells apart several matches on one key |
+
+The choices are drawn by the planner with a seed, weighted by k.interest; until std.plan reads `choose`,
+`tools/lib/choose.mjs` (a reference reader) solves them in the tests and hands the chosen values to std.plan as value
+bindings, so the acts still come from the one planner.
+
 ## Tests and coverage
 
 `tests/k.procedures.test.mjs`: every act and role is one of `k.actions`; every binding has one source and every name
@@ -60,11 +85,23 @@ scenes (1,261 acts, at most 35), 62 of 62 roles in a picture and 62 on a face, 1
 30 feelings on a face, 17 of 17 layouts, 50 of 50 joined wholes built from parts, 1,643 of 1,643 drawings with named
 parts taken apart.
 
+Compositions (`tests/k.compose.test.mjs`): every genre, part, count and binding the five methods name exists; the
+hand-traced story (a girl rescues a friend from the dragon of the castle with the knight's sword after shouting and
+hiding) is a solution of the method, holds every constraint of k.story and expands to the document and its five
+chapters; a knight (who already has a sword) as the protagonist or a beach as the setting has no solution; 100 seeded
+stories each hold every hard constraint of k.story, checked by k.story's `checkPlan`; the presentation about
+penguins (first solution: class, legs, covering, habitat, diet) and its ten slides; 20 seeded presentations, essays
+and articles with points, arguments and results on different keys, the counterargument on another; a report's next
+steps are acts not yet done, and no report without a history.
+
 ## Known limits
 
 - An imported drawing's unnamed part is called `part<n>`, with no key saying it has no name; take apart uses only
   parts with a kind (not `detail`) or named by the model, so the body of a drawing (`body`, `cabin` of the car) stays
   as the thing, and the whole is not removed (questions.md Q45).
 - No `w.chart` schema: a chart is a list of counts (`w.list`) for now (Q45).
+- A slide or a chapter of a repeated part (the points of a presentation, the arguments of an essay) takes the part's
+  place `n` in the genre; the composer numbers them in order.
+- "About a topic" is the goal's role `value` until k.actions gives `make` an `about` role (Q45 (iii)).
 - The role -> argument map of `std.acts` (`number` -> `amount`, a place with `rel` and `of` -> `at` or `rel` and `ref`)
   is the library's (Q44 a).

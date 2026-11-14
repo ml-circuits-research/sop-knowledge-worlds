@@ -783,3 +783,39 @@ attributes of a kind without weights; typicality names two more for a person (ag
 Options: (a) keep `k.attributes.typical`; (b) move the weights onto `k.attributes.kind` as one fact per kind and
 attribute; (c) a key on usage.
 Blocking: no. Meanwhile: (a).
+## Q57 ([LIB] block 17:05 / 15:00 item 3, third worker, 2026-11-14): choice points in k.procedures (the 15:15 item 1 `choose` binding)
+Question: may k.procedures say a joint choice with six optional keys, and will std.plan read them as below?
+Context: the five compositions ("write a story", "write a presentation / an essay / a scientific article about a
+topic", "write a report of what was done"; shard `k.procedures/shards/compose`) need choices, not "all the facts
+that match": one goal, one obstacle that blocks it, one setting that has it, the helper who has what the protagonist
+lacks... The Q44 format cannot say it: a `from` binding is every fact that passes its matches, a match can only
+compare against a binding's values one way (`equals`) or a literal (`not`), and one key of one binding takes one match
+(identity method, binding, key). Proposed, all optional (existing facts unchanged; std.plan 0.63 ignores them):
+1. `binding.choose` (a whole number, or the name of a binding that gives one: `choose=attempts_max`): the binding
+   stands for that many different values chosen among its candidates; `binding.choose_min` (same kinds): between
+   `choose_min` and `choose`. All choose bindings of a method are chosen together: a match whose `equals` or `differs`
+   names a choose binding is a constraint between the two choices, read against the chosen values only. The planner
+   solves them as one finite-domain problem (std.solve) and draws one solution with its seed, candidates weighted by
+   k.interest (std.compose's scores) and by soft matches; with no seed, the first solution in the order of the facts.
+   Plain bindings that read a choose binding (`helper_holds`: the roles whose holds has the chosen means) are
+   recomputed under the choice.
+2. `binding.about` (a binding): the statements of the loaded catalog about that thing: one row per fact named by it
+   and per key the fact says (`thing`, `type`, `key`, `value`). The candidates of a presentation's points, an essay's
+   arguments, an article's results. Which types count as "about a thing" (not drawings, not words) is the library's
+   choice (the reference reader reads ten: animals, attributes, numbers, commonsense, food, countries, cities, space
+   bodies, body parts, roles).
+3. `match.differs` (a binding): none of the key's values is one of that binding's values (of its `equals_key`),
+   compared by name; a binding that names itself: its chosen values differ in the key (points on different keys).
+4. `match.soft=true`: a preference, not a filter (the reference reader doubles the weight of a candidate that holds it).
+5. `match.n` (identity, optional, like `arg.attribute`): several matches on one key of one binding
+   (`target name differs protagonist`, `target name differs helper`).
+Two readings to confirm: (a) a match is checked as written, the fact's value taking a binding value that is it or a
+kind below it, so a constraint "the protagonist is one of the who of the act" is written on the act's binding
+(`resolution who equals protagonist`), not on the protagonist; (b) `together` of bindings that take a key's values,
+with a match (`target_being: together being_names, match name equals beings`), compares the names themselves.
+Integration case: `tests/k.compose.test.mjs` with the reference reader `tools/lib/choose.mjs` (160 lines: depth-first,
+a seeded weighted order, every match checked as soon as its bindings are known); the chosen values are handed to
+std.plan as value bindings (`fixChoices`, a script that rewrites the method's facts), so the steps are expanded by the
+one planner. 100 seeded stories each hold every hard constraint of k.story (checked by k.story's own `checkPlan` from
+the facts). When std.plan reads `choose`, the reader is deleted and the test runs through std.plan alone.
+Blocking: no (the facts are published in this form; a script converts them if the library amends the keys).

@@ -284,6 +284,125 @@ export const METHODS = [
       { act: 'make', each: 'done', after: [1], expand: false, about: 'one item per act done', args: [['kind', v('item')], ['value', b('done', 'act', { attribute: 'text' })], ['value', b('done', 'thing', { attribute: 'note' })], ['value', b('done', 'at', { attribute: 'n' })], ['value', b('list', undefined, { attribute: 'list' })]] },
     ],
     conditions: [{ when: 'before', fact: 'exists', thing: 'done' }, { when: 'after', fact: 'exists', thing: 'list' }] },
+
+  // ---- compositions (block "15:00" item 3): a genre of k.genres written as a w.document, its choice points as
+  // `choose` bindings solved jointly under their matches and sampled by k.interest (questions.md Q57) ----
+  { shard: 'compose', name: 'write a story', act: 'make', world: 'w.document', example: ['write a story', 'tell me a story'],
+    about: 'A story by the book (k.story, the genre "story" of k.genres): choose together a goal, an obstacle that blocks it, a setting that has the obstacle, the means that overcomes it, the act that uses the means, a helper who has the means, a protagonist who can have the goal and lacks the means, one to three attempts that fail, and the target of the goal; then make the document and one chapter per part of the genre. Each element of k.story is the binding of its name (turning point: turning_point); std.compose tells it in its part with its move.',
+    goal: { kind: { value: 'story' } },
+    bind: {
+      doc: { step: [1] },
+      parts: { from: 'k.genres.part', match: { genre: { value: 'story' } } },
+      goal: { from: 'k.story.goal', choose: 1 },
+      goal_act: { from: 'k.actions.action', choose: 1, match: { name: { equals: 'goal', equals_key: 'act' }, who: { equals: 'protagonist', equals_key: 'name' } } },
+      obstacle: { from: 'k.story.obstacle', choose: 1, match: { blocks: { equals: 'goal', equals_key: 'name' } } },
+      setting: { from: 'k.scenes.has', choose: 1, match: { thing: { equals: 'obstacle', equals_key: 'thing' } } },
+      means: { from: 'k.story.obstacle', key: 'means', choose: 1, match: { thing: { equals: 'obstacle', equals_key: 'thing' }, blocks: { equals: 'obstacle', equals_key: 'blocks' } } },
+      resolution: { from: 'k.actions.action', choose: 1, match: { name: { equals: 'obstacle', equals_key: 'overcome_by' }, tool: { equals: 'means' }, who: { equals: 'protagonist', equals_key: 'name' } } },
+      helper_holds: { from: 'k.people.role', match: { holds: { equals: 'means' } } },
+      helper_uses: { from: 'k.people.role', match: { uses: { equals: 'means' } } },
+      helper: { together: ['helper_holds', 'helper_uses'], choose: 1, match: { works_at: { equals: 'setting', equals_key: 'scene', soft: true } } },
+      protagonist_kind: { from: 'k.people.kind' },
+      protagonist_role: { from: 'k.people.role', match: { group: { present: true } } },
+      protagonist_animal: { from: 'k.animals.animal' },
+      protagonist: { together: ['protagonist_kind', 'protagonist_role', 'protagonist_animal'], choose: 1, match: { holds: { differs: 'means' }, uses: { differs: 'means' }, name: { differs: 'helper', equals_key: 'name' }, works_at: { equals: 'setting', equals_key: 'scene', soft: true } } },
+      attempts_min: { from: 'k.story.element', key: 'min', match: { name: { value: 'attempt' } } },
+      attempts_max: { from: 'k.story.element', key: 'max', match: { name: { value: 'attempt' } } },
+      attempt: { from: 'k.actions.action', choose: 'attempts_max', choose_min: 'attempts_min', match: { name: { equals: 'obstacle', equals_key: 'tried_by' }, who: { equals: 'protagonist', equals_key: 'name' } } },
+      goal_place: { from: 'k.story.goal', match: { target: { value: 'place' }, name: { equals: 'goal', equals_key: 'name' } } },
+      goal_thing: { from: 'k.story.goal', match: { target: { value: 'thing' }, name: { equals: 'goal', equals_key: 'name' } } },
+      goal_being: { from: 'k.story.goal', match: { target: { value: 'being' }, name: { equals: 'goal', equals_key: 'name' } } },
+      thing_names: { from: 'k.actions.action', key: 'object', match: { name: { equals: 'goal_thing', equals_key: 'act' } } },
+      being_names: { from: 'k.actions.action', key: 'object', match: { name: { equals: 'goal_being', equals_key: 'act' } } },
+      beings: { together: ['protagonist_kind', 'protagonist_role', 'protagonist_animal'], key: 'name' },
+      target_place: { from: 'k.scenes.scene', match: { kind: { equals: 'goal_place', equals_key: 'place_kind' }, name: { differs: 'setting', equals_key: 'scene' } } },
+      target_thing: { from: 'k.objects.object', match: { name: { equals: 'thing_names' } } },
+      target_being: { together: ['being_names'], match: { name: { equals: 'beings' } } },
+      target: { together: ['target_place', 'target_thing', 'target_being'], choose: 1, match: { name: [{ differs: 'protagonist', equals_key: 'name' }, { differs: 'helper', equals_key: 'name' }] } },
+      turning_point: { value: 'give' },
+      ending: { together: ['goal'] },
+    },
+    steps: [
+      { act: 'make', expand: false, about: 'make the document of the story, titled by its target', args: [['kind', v('document')], ['value', b('target', undefined, { attribute: 'title' })], ['value', v('story', { attribute: 'genre' })], ['value', v('narrative', { attribute: 'register' })], ['value', b('target', undefined, { attribute: 'topic' })]] },
+      { act: 'make', each: 'parts', after: [1], expand: false, about: 'one chapter for each part of the story genre (orientation, complication, climax, resolution, ending)', args: [['kind', v('chapter')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('parts', 'n', { attribute: 'n' })], ['value', b('parts', 'name', { attribute: 'part' })]] },
+    ],
+    conditions: [{ when: 'after', fact: 'exists', thing: 'doc' }] },
+
+  { shard: 'compose', name: 'write a presentation about a topic', act: 'make', world: 'w.document', example: ['write a presentation about penguins', 'make slides about Peru'],
+    about: 'A presentation (the genre "presentation" of k.genres) about a topic: choose three to five points, statements of the catalog about the topic on different keys, sampled by k.interest; then make the document, the title, agenda, summary and closing slides, and one content slide per point.',
+    goal: { kind: { value: 'presentation' }, value: { needed: true } },
+    bind: {
+      topic: { goal: 'value' }, doc: { step: [1] },
+      single: { from: 'k.genres.part', match: { genre: { value: 'presentation' }, max: { value: 1 } } },
+      points_min: { from: 'k.genres.part', key: 'min', match: { genre: { value: 'presentation' }, name: { value: 'point' } } },
+      points_max: { from: 'k.genres.part', key: 'max', match: { genre: { value: 'presentation' }, name: { value: 'point' } } },
+      point_part: { from: 'k.genres.part', match: { genre: { value: 'presentation' }, name: { value: 'point' } } },
+      points: { about: 'topic', choose: 'points_max', choose_min: 'points_min', match: { key: { differs: 'points' } } },
+    },
+    steps: [
+      { act: 'make', expand: false, about: 'make the document of the presentation', args: [['kind', v('document')], ['value', b('topic', undefined, { attribute: 'title' })], ['value', v('presentation', { attribute: 'genre' })], ['value', v('presentation', { attribute: 'register' })], ['value', b('topic', undefined, { attribute: 'topic' })]] },
+      { act: 'make', each: 'single', after: [1], expand: false, about: 'the slides of the parts that occur once (title, agenda, summary, closing)', args: [['kind', v('slide')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('single', 'n', { attribute: 'n' })], ['value', b('single', 'name', { attribute: 'part' })], ['value', b('single', 'layout', { attribute: 'layout' })], ['value', b('single', 'heading', { attribute: 'title', else_key: 'name' })]] },
+      { act: 'make', each: 'points', after: [1], expand: false, about: 'one content slide per point', args: [['kind', v('slide')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('point_part', 'n', { attribute: 'n' })], ['value', v('point', { attribute: 'part' })], ['value', v('content', { attribute: 'layout' })], ['value', b('points', undefined, { attribute: 'title' })]] },
+    ],
+    conditions: [{ when: 'after', fact: 'exists', thing: 'doc' }] },
+
+  { shard: 'compose', name: 'write an essay about a topic', act: 'make', world: 'w.document', example: ['write an essay about penguins'],
+    about: 'An essay (the genre "essay" of k.genres) about a topic: choose two to four arguments, statements about the topic on different keys, and a counterargument on another key, sampled by k.interest (arguments that surprise, a counterargument that is what a reader assumes); then make the document, the introduction, counterargument and conclusion chapters and one chapter per argument.',
+    goal: { kind: { value: 'essay' }, value: { needed: true } },
+    bind: {
+      topic: { goal: 'value' }, doc: { step: [1] },
+      single: { from: 'k.genres.part', match: { genre: { value: 'essay' }, max: { value: 1 } } },
+      args_min: { from: 'k.genres.part', key: 'min', match: { genre: { value: 'essay' }, name: { value: 'argument' } } },
+      args_max: { from: 'k.genres.part', key: 'max', match: { genre: { value: 'essay' }, name: { value: 'argument' } } },
+      argument_part: { from: 'k.genres.part', match: { genre: { value: 'essay' }, name: { value: 'argument' } } },
+      arguments: { about: 'topic', choose: 'args_max', choose_min: 'args_min', match: { key: { differs: 'arguments' } } },
+      counterargument: { about: 'topic', choose: 1, match: { key: { differs: 'arguments', equals_key: 'key' } } },
+    },
+    steps: [
+      { act: 'make', expand: false, about: 'make the document of the essay', args: [['kind', v('document')], ['value', b('topic', undefined, { attribute: 'title' })], ['value', v('essay', { attribute: 'genre' })], ['value', v('essay', { attribute: 'register' })], ['value', b('topic', undefined, { attribute: 'topic' })]] },
+      { act: 'make', each: 'single', after: [1], expand: false, about: 'the chapters of the parts that occur once (introduction, counterargument, conclusion)', args: [['kind', v('chapter')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('single', 'n', { attribute: 'n' })], ['value', b('single', 'name', { attribute: 'part' })], ['value', b('single', 'heading', { attribute: 'title', else_key: 'name' })]] },
+      { act: 'make', each: 'arguments', after: [1], expand: false, about: 'one chapter per argument', args: [['kind', v('chapter')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('argument_part', 'n', { attribute: 'n' })], ['value', v('argument', { attribute: 'part' })], ['value', b('arguments', undefined, { attribute: 'title' })]] },
+    ],
+    conditions: [{ when: 'after', fact: 'exists', thing: 'doc' }] },
+
+  { shard: 'compose', name: 'write a scientific article about a topic', act: 'make', world: 'w.document', example: ['write a scientific article about penguins', 'a paper about Peru'],
+    about: 'A scientific article (the genre "scientific article" of k.genres, IMRaD) about a topic: choose two to five results, statements about the topic on different keys, sampled by k.interest (numbers with units first); the methods are the types of the catalog those statements come from; then make the document and one chapter per required part (abstract, introduction, methods, results, discussion).',
+    goal: { kind: { value: 'scientific article' }, value: { needed: true } },
+    bind: {
+      topic: { goal: 'value' }, doc: { step: [1] },
+      parts: { from: 'k.genres.part', match: { genre: { value: 'scientific article' }, min: { not: 0 } } },
+      results_min: { from: 'k.genres.step', key: 'min', match: { genre: { value: 'scientific article' }, part: { value: 'results' }, move: { value: 'report result' } } },
+      results_max: { from: 'k.genres.step', key: 'max', match: { genre: { value: 'scientific article' }, part: { value: 'results' }, move: { value: 'report result' } } },
+      results: { about: 'topic', choose: 'results_max', choose_min: 'results_min', match: { key: { differs: 'results' } } },
+      methods: { together: ['results'], key: 'type' },
+    },
+    steps: [
+      { act: 'make', expand: false, about: 'make the document of the article', args: [['kind', v('document')], ['value', b('topic', undefined, { attribute: 'title' })], ['value', v('scientific article', { attribute: 'genre' })], ['value', v('scientific', { attribute: 'register' })], ['value', b('topic', undefined, { attribute: 'topic' })]] },
+      { act: 'make', each: 'parts', after: [1], expand: false, about: 'one chapter per required part, under its heading', args: [['kind', v('chapter')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('parts', 'n', { attribute: 'n' })], ['value', b('parts', 'name', { attribute: 'part' })], ['value', b('parts', 'heading', { attribute: 'title', else_key: 'name' })]] },
+    ],
+    conditions: [{ when: 'after', fact: 'exists', thing: 'doc' }] },
+
+  { shard: 'compose', name: 'write a report of what was done', act: 'make', world: 'w.document', example: ['write a report', 'a report about what we did'],
+    about: 'A report (the genre "report" of k.genres) of what was done in the session: choose one to six of the acts done (the history), one to four things there now as results, and one to three acts not yet done as next steps, sampled by k.interest; then make the document and one chapter per required part (summary, introduction, work done, results, next steps).',
+    goal: { kind: { value: 'report' } },
+    bind: {
+      doc: { step: [1] }, done: { history: true },
+      parts: { from: 'k.genres.part', match: { genre: { value: 'report' }, min: { not: 0 } } },
+      work_min: { from: 'k.genres.step', key: 'min', match: { genre: { value: 'report' }, part: { value: 'work done' } } },
+      work_max: { from: 'k.genres.step', key: 'max', match: { genre: { value: 'report' }, part: { value: 'work done' } } },
+      work: { together: ['done'], choose: 'work_max', choose_min: 'work_min' },
+      results_min: { from: 'k.genres.step', key: 'min', match: { genre: { value: 'report' }, part: { value: 'results' }, move: { value: 'report result' } } },
+      results_max: { from: 'k.genres.step', key: 'max', match: { genre: { value: 'report' }, part: { value: 'results' }, move: { value: 'report result' } } },
+      results: { live: 'any', choose: 'results_max', choose_min: 'results_min' },
+      next_min: { from: 'k.genres.step', key: 'min', match: { genre: { value: 'report' }, part: { value: 'next steps' } } },
+      next_max: { from: 'k.genres.step', key: 'max', match: { genre: { value: 'report' }, part: { value: 'next steps' } } },
+      next: { from: 'k.actions.act', choose: 'next_max', choose_min: 'next_min', match: { name: { differs: 'done', equals_key: 'act' } } },
+    },
+    steps: [
+      { act: 'make', expand: false, about: 'make the document of the report', args: [['kind', v('document')], ['value', v('report', { attribute: 'title' })], ['value', v('report', { attribute: 'genre' })], ['value', v('report', { attribute: 'register' })]] },
+      { act: 'make', each: 'parts', after: [1], expand: false, about: 'one chapter per required part, under its heading', args: [['kind', v('chapter')], ['value', b('doc', undefined, { attribute: 'document' })], ['value', b('parts', 'n', { attribute: 'n' })], ['value', b('parts', 'name', { attribute: 'part' })], ['value', b('parts', 'heading', { attribute: 'title', else_key: 'name' })]] },
+    ],
+    conditions: [{ when: 'before', fact: 'exists', thing: 'done' }, { when: 'after', fact: 'exists', thing: 'doc' }] },
 ];
 
 // Words that name the named tasks, for the vocabulary (a host finds the methods of a task by these words).
@@ -292,6 +411,10 @@ export const TASK_WORDS = [
   ['table setting', ['set a table', 'set the table', 'lay the table', 'table setting', 'place setting']],
   ['chart', ['chart', 'bar chart', 'tally']],
   ['report', ['report', 'summary', 'what we did']],
+  ['story', ['story', 'tale', 'fairy tale']],
+  ['presentation', ['presentation', 'slides', 'talk', 'slide show']],
+  ['essay', ['essay', 'composition']],
+  ['scientific article', ['scientific article', 'paper', 'research article', 'article']],
 ];
 
 const id = (m) => seg(m);
@@ -300,8 +423,12 @@ function methodLines(m) {
   out.push(wire(`k.procedures.method.${M}`, 'k.procedures.method', [['name', text(m.name)], ['about', text(m.about)], ['act', m.act], ['world', m.world], ['rank', m.rank], ...(m.example ?? []).map((e) => ['example', text(e)])], SRC));
   for (const [role, g] of Object.entries(m.goal ?? {})) out.push(wire(`k.procedures.goal.${M}.${seg(role)}`, 'k.procedures.goal', [['method', text(m.name)], ['role', role], ['from', g.from], ['by', g.by], ['value', g.value], ['kind', g.kind], ['rel', g.rel], ['needed', g.needed], ['default', g.default]], SRC));
   for (const [name, x] of Object.entries(m.bind ?? {})) {
-    out.push(wire(`k.procedures.binding.${M}.${name}`, 'k.procedures.binding', [['method', text(m.name)], ['name', name], ['goal', x.goal], ...(x.step ?? []).map((s) => ['step', s]), ['from', x.from], ['live', x.live], ['history', x.history], ['upto', x.upto], ...(x.together ?? []).map((t) => ['together', t]), ['value', x.value], ['key', x.key]], SRC));
-    for (const [key, t] of Object.entries(x.match ?? {})) out.push(wire(`k.procedures.match.${M}.${name}.${key}`, 'k.procedures.match', [['method', text(m.name)], ['binding', name], ['key', key], ['value', t.value], ['not', t.not], ['equals', t.equals], ['equals_key', t.equals_key], ['present', t.present]], SRC));
+    out.push(wire(`k.procedures.binding.${M}.${name}`, 'k.procedures.binding', [['method', text(m.name)], ['name', name], ['goal', x.goal], ...(x.step ?? []).map((s) => ['step', s]), ['from', x.from], ['live', x.live], ['history', x.history], ['upto', x.upto], ...(x.together ?? []).map((t) => ['together', t]), ['value', x.value], ['about', x.about], ['key', x.key], ['choose', x.choose], ['choose_min', x.choose_min]], SRC));
+    // A match is one spec, or a list of specs on the same key (told apart by n: questions.md Q57).
+    for (const [key, spec] of Object.entries(x.match ?? {})) for (const [i, t] of [].concat(spec).entries()) {
+      const n = Array.isArray(spec) ? i + 1 : undefined;
+      out.push(wire(`k.procedures.match.${M}.${name}.${key}${n ? `.${n}` : ''}`, 'k.procedures.match', [['method', text(m.name)], ['binding', name], ['key', key], ['n', n], ['value', t.value], ['not', t.not], ['equals', t.equals], ['equals_key', t.equals_key], ['differs', t.differs], ['present', t.present], ['soft', t.soft]], SRC));
+    }
   }
   m.steps.forEach((s, i) => {
     const n = i + 1;
@@ -317,8 +444,9 @@ export function procedureShards() {
   const about = {
     'from-knowledge': 'methods whose steps are read off other knowledge worlds: compose a scene (k.scenes), arrange in a layout and put on an anchor (k.layouts), take apart (k.objects, k.parts), build from parts (k.layouts joins), dress (k.wearables), a person or a face of a role (k.people), a feeling on a face (k.feelings, w.face), a place on the map (k.geo, w.map).',
     tasks: 'methods of named tasks: a family photo, setting a table (a picture or w.seating), a chart of the things there (w.list), a report about what was done (w.timeline or w.list); and the words that name the tasks.',
+    compose: 'compositions by the book (block "15:00" item 3): a story (k.story), a presentation, an essay, a scientific article about a topic and a report of what was done, each a genre of k.genres written as a w.document; their choices are `choose` bindings solved jointly under their matches and sampled by k.interest (the format addition proposed in questions.md Q57).',
   };
-  for (const shard of ['from-knowledge', 'tasks']) {
+  for (const shard of ['from-knowledge', 'tasks', 'compose']) {
     const ms = METHODS.filter((m) => m.shard === shard);
     const body = ms.map((m) => `# ${m.name}\n${methodLines(m).join('\n')}`).join('\n\n');
     const words = shard === 'tasks' ? `\n\n# Words for the named tasks (the value of the goal role kind).\n${TASK_WORDS.map(([task, ws]) => wire(`k.procedures.word.task.${seg(task)}`, 'core.word', [...ws.map((w) => ['text', w]), ['means', task], ['of', 'k.procedures.goal.value']], SRC)).join('\n')}` : '';

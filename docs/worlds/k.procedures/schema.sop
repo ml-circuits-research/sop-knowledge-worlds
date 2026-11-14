@@ -47,8 +47,16 @@
 # made by earlier steps included; `history` the acts done before the plan began, oldest first (each with `act`,
 # `thing`, `at`);
 # `upto` the whole numbers from 1 to the value of another binding; `together` (many) the values of those bindings
-# together; `value` a name. `key` takes the values of that
-# key of the facts (a many key gives all its values) instead of the facts themselves.
+# together; `value` a name; `about` (proposed, questions.md Q57) the statements of the loaded catalog about the
+# thing(s) of another binding: one row per fact named by it (or by a kind of it) and per key the fact says, with
+# `thing`, `type`, `key` and `value`. `key` takes the values of that key of the facts (a many key gives all its
+# values) instead of the facts themselves.
+# A choice point (proposed, questions.md Q57): `choose` (a whole number, or a binding that gives one) makes the binding
+# stand for that many different values chosen among its candidates (between `choose_min` and `choose` when
+# `choose_min` is said), chosen together with the other choose bindings of the method: a match whose `equals` or
+# `differs` names a choose binding is a constraint between the two choices, read against the chosen values only. The
+# planner solves the choices as one finite-domain problem and draws one solution with its seed, weighted by k.interest
+# (and by the soft matches); without a seed, the first solution in the order of the facts.
 @k.procedures.binding core.type of=k.procedures.binding shared=true closed=true core.source="hand-core 1"
 @k.procedures.binding.method core.slot of=k.procedures.binding key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.procedures.binding.name core.slot of=k.procedures.binding key=name id=true required=true kind=atom core.source="hand-core 1"
@@ -60,21 +68,31 @@
 @k.procedures.binding.upto core.slot of=k.procedures.binding key=upto kind=atom core.source="hand-core 1"
 @k.procedures.binding.together core.slot of=k.procedures.binding key=together many=true kind=atom core.source="hand-core 1"
 @k.procedures.binding.value core.slot of=k.procedures.binding key=value kind=atom kind=string core.source="hand-core 1"
+@k.procedures.binding.about core.slot of=k.procedures.binding key=about kind=atom core.source="hand-core 1"
 @k.procedures.binding.key core.slot of=k.procedures.binding key=key kind=atom core.source="hand-core 1"
+@k.procedures.binding.choose core.slot of=k.procedures.binding key=choose kind=integer kind=atom core.source="hand-core 1"
+@k.procedures.binding.choose_min core.slot of=k.procedures.binding key=choose_min kind=integer kind=atom core.source="hand-core 1"
 
 # A filter on a binding of facts or of live things: the key `key` of a fact is `value`, or is one of the values of
 # the binding `equals` (of its key `equals_key`), compared by name and up the chain of kinds (is_a; the age of a
 # kind of person); `not`: the key's value is not this; `present=false`: the fact does not say the key,
 # `present=true`: it does. Inside a step that repeats over a binding, that binding stands for its current value.
+# Proposed (questions.md Q57): `differs` names a binding: none of the key's values is one of that binding's values (of
+# its key `equals_key`), compared by name (a binding that names itself: its chosen values differ in the key);
+# `soft=true`: the match is a preference, not a filter (a candidate that holds it weighs more); `n` tells apart
+# several matches on one key of one binding.
 @k.procedures.match core.type of=k.procedures.match shared=true closed=true core.source="hand-core 1"
 @k.procedures.match.method core.slot of=k.procedures.match key=method id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.procedures.match.binding core.slot of=k.procedures.match key=binding id=true required=true kind=atom core.source="hand-core 1"
 @k.procedures.match.key core.slot of=k.procedures.match key=key id=true required=true kind=atom core.source="hand-core 1"
+@k.procedures.match.n core.slot of=k.procedures.match key=n id=true kind=integer min=1 core.source="hand-core 1"
 @k.procedures.match.value core.slot of=k.procedures.match key=value kind=atom kind=string core.source="hand-core 1"
 @k.procedures.match.equals core.slot of=k.procedures.match key=equals kind=atom core.source="hand-core 1"
 @k.procedures.match.equals_key core.slot of=k.procedures.match key=equals_key kind=atom core.source="hand-core 1"
 @k.procedures.match.not core.slot of=k.procedures.match key=not kind=atom kind=string core.source="hand-core 1"
+@k.procedures.match.differs core.slot of=k.procedures.match key=differs kind=atom core.source="hand-core 1"
 @k.procedures.match.present core.slot of=k.procedures.match key=present kind=boolean core.source="hand-core 1"
+@k.procedures.match.soft core.slot of=k.procedures.match key=soft kind=boolean core.source="hand-core 1"
 
 # A step: one act (`act`, an act of k.actions), number `n` in the method. `each` repeats it for every value of a
 # binding (a binding with no value: the step is not done). `after` (many) names the steps it comes after; steps with
@@ -156,14 +174,20 @@
 @k.procedures.word.key.binding.upto core.word text=upto means=k.procedures.binding.upto core.source="hand-core 1"
 @k.procedures.word.key.binding.together core.word text=together means=k.procedures.binding.together core.source="hand-core 1"
 @k.procedures.word.key.binding.value core.word text=value means=k.procedures.binding.value core.source="hand-core 1"
+@k.procedures.word.key.binding.about core.word text=about means=k.procedures.binding.about core.source="hand-core 1"
 @k.procedures.word.key.binding.key core.word text=key means=k.procedures.binding.key core.source="hand-core 1"
+@k.procedures.word.key.binding.choose core.word text=choose means=k.procedures.binding.choose core.source="hand-core 1"
+@k.procedures.word.key.binding.choose_min core.word text="choose min" means=k.procedures.binding.choose_min core.source="hand-core 1"
 @k.procedures.word.key.match.binding core.word text=binding means=k.procedures.match.binding core.source="hand-core 1"
 @k.procedures.word.key.match.key core.word text=key means=k.procedures.match.key core.source="hand-core 1"
+@k.procedures.word.key.match.n core.word text=n means=k.procedures.match.n core.source="hand-core 1"
 @k.procedures.word.key.match.value core.word text=value means=k.procedures.match.value core.source="hand-core 1"
 @k.procedures.word.key.match.equals core.word text=equals means=k.procedures.match.equals core.source="hand-core 1"
 @k.procedures.word.key.match.equals_key core.word text="equals key" means=k.procedures.match.equals_key core.source="hand-core 1"
 @k.procedures.word.key.match.not core.word text=not means=k.procedures.match.not core.source="hand-core 1"
+@k.procedures.word.key.match.differs core.word text=differs means=k.procedures.match.differs core.source="hand-core 1"
 @k.procedures.word.key.match.present core.word text=present means=k.procedures.match.present core.source="hand-core 1"
+@k.procedures.word.key.match.soft core.word text=soft means=k.procedures.match.soft core.source="hand-core 1"
 @k.procedures.word.key.step.n core.word text=n means=k.procedures.step.n core.source="hand-core 1"
 @k.procedures.word.key.step.act core.word text=act means=k.procedures.step.act core.source="hand-core 1"
 @k.procedures.word.key.step.each core.word text=each means=k.procedures.step.each core.source="hand-core 1"

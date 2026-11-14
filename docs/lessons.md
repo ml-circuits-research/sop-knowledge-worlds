@@ -374,3 +374,36 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **A shared machine changes what a test run proves.** Under a memory limit shared with other workers, files were
   killed (SIGKILL) and full runs were overtaken by pushes; running files one at a time and rerunning killed files
   alone kept the evidence honest, and the log says which numbers came from which run.
+## k.genres, k.story and the compositions (third worker, blocks "15:00" and "17:05")
+
+- **Writing a procedure's facts finds the format's limit before any code does.** A story's protagonist is constrained
+  four ways on one key (`name`: it can do the goal's act, the resolution's act, the attempts; it is not the helper),
+  but a match was one per key of a binding, and a binding was "every fact that matches", never "one of them". The
+  proposal (Q57) is six optional keys, and the reference reader that checks them is 160 lines; the facts were
+  written in the proposed form and a script hands the choices to the one planner.
+- **The direction of kind matching decides where a constraint is written.** "A fact's value takes a name that is it or
+  a kind below it" made "the target is one of the act's objects" accept *person* for *grandmother* (a grandmother is
+  a person). The constraint had to be read from the act's object names themselves; "the protagonist is one of the
+  act's who" is written on the act's binding, not on the protagonist.
+- **Count every solution before sampling, and look at the shares.** 642,752 story plans hold every hard constraint,
+  94% of them "reach a place" (every outdoor scene is a target): a sampler uniform over plans would almost never
+  tell a rescue. Choosing the goal first (each choice point drawn in turn, weighted) keeps the four goals equal.
+- **The soft constraints are where "intelligent" lives.** Uniform samples hold "the helper belongs in the setting" in
+  2 of 100; the hard constraints make a story valid, the weights make it sensible. `who=animal` in k.actions lets a
+  porpoise climb a castle wall with a sailor's rope: valid by the knowledge, absurd to a reader; the soft
+  constraints and k.interest must carry it, or `who` must get narrower.
+- **Nothing new but the structure is a strong rule, and it pays.** Obstacles, means and helpers as joins (a river is
+  rowed or sailed; the tool of sail is a sailboat; a sailor uses a sailboat) gave 9 helpers and 16 obstacles without a
+  single new name, and every join is checked; the price is that obstacles that are not things (the dark, being lost)
+  wait for a world that says them.
+- **A cheap corpus check says something.** Surface cues in 1,000 machine-written children's stories put the setting
+  before the complication and the complication before the resolution in 94% of the stories that have both: k.story's
+  order. Read in place, nothing copied (a share-alike source stays where it is).
+- **Under shared memory, check what a killed test asserts by other means.** The catalog test builds the catalog twice
+  and was killed even alone while four workers ran suites; rebuilding in the clean worktree and finding no diff is
+  the same assertion.
+- **A structure from the literature is a shape, not a law: check it on real tales and decide by the numbers.** Forty
+  public-domain tales annotated by hand kept four constraints (the obstacle blocks the goal 33/33, the helper has
+  what is missing 12/13) and overturned three requirements: a helper (13 of 33; the Grimm tales have one, the fables
+  not), attempts (23 of 33) and a happy ending (17 of 33). The synthetic stories agreed with the tales on everything
+  but set-up and pay-off (3 of 21 against 13 of 20): what they lack is exactly what makes a tale feel made.

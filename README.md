@@ -107,6 +107,12 @@ k.scenes as they block a goal, the acts that get past them with their tools, the
 and things are names of k.people, k.animals, k.scenes and k.objects; 642,752 story plans over the catalog hold every
 hard constraint.
 
+Block "15:00" item 3 (third worker): compositions in `k.procedures` (shard `compose`): "write a story", "write a
+presentation / an essay / a scientific article about a topic", "write a report of what was done", each a genre of
+k.genres written as a `w.document`, whose choices are choice points solved together under their constraints and
+sampled by k.interest (six optional keys proposed to the library in questions.md Q57: `choose`, `choose_min`, `about`,
+`differs`, `soft`, `n`); a story chosen this way holds every constraint of k.story.
+
 Block "13:00" (first worker): `w.lang.ro`, a first draft of Romanian as a language world in the library's `std.morph`
 notation: 44 paradigm classes with inheritance, 341 cells, irregulars, folds, clitics, closed classes and three reply
 templates (936 wires), with an external dictionary of 255 lemmas (`dictionary/<letter>.tsv`, 14.8 kB) joined to k.words

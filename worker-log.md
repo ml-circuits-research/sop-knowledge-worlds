@@ -4091,3 +4091,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 
 - docs/lessons.md: a section for Q41, block 07:40 and block 06:55 (nine lessons). Only docs/lessons.md and this log
   change; no test reads them, and the full run (2,970 tests, 2,964 pass, 0 fail) was on the tree just before.
+## 2026-11-14 — third worker: compositions in k.procedures, choice points as data (blocks "15:00" item 3, "17:05")
+
+- **Methods** (shard `k.procedures/shards/compose`, 5 methods, 236 wires, 47 kB, all in `w.document`): write a story
+  (every element of k.story a binding of its name, chosen together under k.story's constraints: goal, goal_act,
+  obstacle, setting, means, resolution, helper, protagonist, attempt 0-3 (counts read from k.story), target; then
+  the document and one chapter per part of the story genre); write a presentation (3-5 points read from k.genres:
+  statements about the topic on different keys; title, agenda, summary, closing and one content slide per point); an
+  essay (2-4 arguments, a counterargument on another key); a scientific article (2-5 results; methods = their
+  types; the required IMRaD chapters); a report (1-6 acts of the history, 1-4 things there, 1-3 acts not yet done).
+  Plus words for the four new task names. 28 methods in all.
+- **Format addition proposed** (questions.md Q57 [LIB], six optional keys, schema of k.procedures updated, 0 warnings):
+  `binding.choose`, `binding.choose_min` (number or binding), `binding.about` (statements about a thing),
+  `match.differs`, `match.soft`, `match.n`. Existing facts unchanged.
+- **Reference reader** `tools/lib/choose.mjs` (160 lines, to delete when std.plan reads `choose`): joint
+  depth-first solving in a seeded weighted order; the chosen values go to std.plan as value bindings (`fixChoices`),
+  so the acts come from the one planner. `tests/k.procedures.test.mjs` counts `about` as a source and finds the
+  compose methods' goals in `tests/k.compose.test.mjs`.
+- **Tests** (`tests/k.compose.test.mjs`, 6): every genre, part, count and binding named exists; the hand-traced story
+  (girl, castle, dragon, knight, sword, shout and hide, friend) is a solution, holds k.story's constraints and expands
+  to `make document title=friend genre=story register=narrative` and five chapters; a knight protagonist or a beach
+  setting has no solution; 100 seeded stories each hold every hard constraint of k.story (4 goals, 7 obstacles, 63
+  protagonists, 8 helpers); the presentation about penguins (class, legs, covering, habitat, diet) and its ten slides;
+  20 seeded presentations, essays and articles keep keys apart; a report's next steps are acts not yet done, and no
+  report without a history.

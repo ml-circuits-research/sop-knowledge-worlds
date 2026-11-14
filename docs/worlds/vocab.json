@@ -3563,6 +3563,12 @@
  "argentine republic": [
   "k.geo/shards/south-america"
  ],
+ "args_max": [
+  "k.procedures/shards/compose"
+ ],
+ "args_min": [
+  "k.procedures/shards/compose"
+ ],
  "argue": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/ar"
@@ -3577,8 +3583,14 @@
  "argument frame": [
   "w.lang.en/schema.sop"
  ],
+ "argument_part": [
+  "k.procedures/shards/compose"
+ ],
  "argumentative essay": [
   "k.genres/shards/essay"
+ ],
+ "arguments": [
+  "k.procedures/shards/compose"
  ],
  "argun": [
   "k.geo/shards/africa"
@@ -3876,6 +3888,7 @@
  ],
  "article": [
   "k.genres/shards/scientific-article",
+  "k.procedures/shards/tasks",
   "k.words/shards/ar",
   "w.document/schema.sop",
   "w.lang.en/schema.sop"
@@ -4407,11 +4420,18 @@
  "attempt": [
   "k.genres/shards/moves",
   "k.genres/shards/story",
+  "k.procedures/shards/compose",
   "k.story/shards/structure",
   "k.words/shards/at"
  ],
  "attempts fail": [
   "k.story/shards/structure"
+ ],
+ "attempts_max": [
+  "k.procedures/shards/compose"
+ ],
+ "attempts_min": [
+  "k.procedures/shards/compose"
  ],
  "attend": [
   "k.words/shards/at"
@@ -7475,6 +7495,12 @@
  "being": [
   "k.words/shards/be"
  ],
+ "being_names": [
+  "k.procedures/shards/compose"
+ ],
+ "beings": [
+  "k.procedures/shards/compose"
+ ],
  "beira": [
   "k.geo/shards/africa"
  ],
@@ -9092,6 +9118,7 @@
   "k.words/shards/bl"
  ],
  "blocks": [
+  "k.procedures/shards/compose",
   "k.story/schema.sop"
  ],
  "bloemfontein": [
@@ -16723,7 +16750,15 @@
  "choose": [
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/verbs-pick",
+  "k.procedures/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/ch"
+ ],
+ "choose min": [
+  "k.procedures/schema.sop"
+ ],
+ "choose_min": [
+  "k.units/shards/measures"
  ],
  "chooses": [
   "k.actions/shards/actions-mind-talk"
@@ -19277,6 +19312,7 @@
  ],
  "composition": [
   "k.genres/shards/essay",
+  "k.procedures/shards/tasks",
   "k.words/shards/co-1",
   "w.document/schema.sop"
  ],
@@ -20813,7 +20849,8 @@
  ],
  "counterargument": [
   "k.genres/shards/essay",
-  "k.genres/shards/moves"
+  "k.genres/shards/moves",
+  "k.procedures/shards/compose"
  ],
  "counterclockwise": [
   "k.values/shards/directions"
@@ -24718,6 +24755,9 @@
  "differing": [
   "k.values/shards/sets"
  ],
+ "differs": [
+  "k.procedures/schema.sop"
+ ],
  "difficult": [
   "k.words/shards/di"
  ],
@@ -25580,6 +25620,7 @@
   "k.words/shards/do"
  ],
  "doc": [
+  "k.procedures/shards/compose",
   "k.words/shards/do"
  ],
  "doce": [
@@ -25618,6 +25659,7 @@
  "document": [
   "k.objects/shards/noto-book-paper-02",
   "k.objects/shards/noto-other-object-02",
+  "k.procedures/shards/compose",
   "k.words/shards/do",
   "w.document/schema.sop"
  ],
@@ -25910,6 +25952,7 @@
  "done": [
   "k.attributes/shards/typical",
   "k.objects/shards/noto-time-01",
+  "k.procedures/shards/compose",
   "k.procedures/shards/tasks",
   "k.words/shards/do",
   "w.list/schema.sop"
@@ -28688,6 +28731,7 @@
  ],
  "ending": [
   "k.genres/shards/story",
+  "k.procedures/shards/compose",
   "k.story/shards/structure",
   "k.units/shards/measures",
   "k.words/shards/en"
@@ -29204,6 +29248,7 @@
  "essay": [
   "k.genres/shards/essay",
   "k.genres/shards/registers",
+  "k.procedures/shards/tasks",
   "k.words/shards/es",
   "w.document/schema.sop"
  ],
@@ -30226,7 +30271,8 @@
   "k.words/shards/fa"
  ],
  "fairy tale": [
-  "k.genres/shards/story"
+  "k.genres/shards/story",
+  "k.procedures/shards/tasks"
  ],
  "fairy tale castle": [
   "k.scenes/shards/scenes-town"
@@ -35477,6 +35523,7 @@
  ],
  "genre": [
   "k.genres/schema.sop",
+  "k.procedures/shards/compose",
   "k.words/shards/ge",
   "w.document/schema.sop"
  ],
@@ -36249,6 +36296,7 @@
   "k.objects/shards/noto-sport-03",
   "k.objects/shards/things-2",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-g",
   "k.story/schema.sop",
@@ -36261,6 +36309,18 @@
   "k.attributes/shards/same-g",
   "k.objects/shards/noto-sport-03",
   "k.scenes/shards/things-g"
+ ],
+ "goal_act": [
+  "k.procedures/shards/compose"
+ ],
+ "goal_being": [
+  "k.procedures/shards/compose"
+ ],
+ "goal_place": [
+  "k.procedures/shards/compose"
+ ],
+ "goal_thing": [
+  "k.procedures/shards/compose"
  ],
  "goalie": [
   "k.words/shards/go"
@@ -37672,6 +37732,7 @@
   "k.attributes/shards/aspects",
   "k.geo/schema.sop",
   "k.people/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.space/schema.sop",
@@ -40211,6 +40272,7 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "helper": [
+  "k.procedures/shards/compose",
   "k.story/shards/structure",
   "k.words/shards/he"
  ],
@@ -40225,6 +40287,12 @@
  ],
  "helper has the means": [
   "k.story/shards/structure"
+ ],
+ "helper_holds": [
+  "k.procedures/shards/compose"
+ ],
+ "helper_uses": [
+  "k.procedures/shards/compose"
  ],
  "helping": [
   "k.actions/shards/actions-body-social-nature",
@@ -41055,6 +41123,7 @@
   "k.attributes/shards/aspects",
   "k.layouts/schema.sop",
   "k.people/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge"
  ],
  "holdup": [
@@ -46588,6 +46657,7 @@
   "k.objects/shards/noto-lock-01",
   "k.parts/shards/k",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.scenes/shards/things-k",
   "k.units/schema.sop",
   "k.words/shards/ke"
@@ -46963,6 +47033,7 @@
   "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.scenes/schema.sop",
@@ -49119,6 +49190,7 @@
  "layout": [
   "k.genres/schema.sop",
   "k.layouts/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.words/shards/la",
   "w.document/schema.sop"
@@ -54651,6 +54723,7 @@
   "k.geo/shards/oceania"
  ],
  "match": [
+  "k.units/shards/measures",
   "k.words/shards/ma"
  ],
  "matching": [
@@ -54814,6 +54887,7 @@
  "max": [
   "k.genres/schema.sop",
   "k.motion/schema.sop",
+  "k.procedures/shards/compose",
   "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/ma"
@@ -54986,6 +55060,7 @@
  "means": [
   "k.actions/schema.sop",
   "k.actions/shards/acts",
+  "k.procedures/shards/compose",
   "k.story/schema.sop",
   "k.story/shards/structure",
   "k.words/schema.sop",
@@ -55748,7 +55823,8 @@
  ],
  "methods": [
   "k.genres/shards/scientific-article",
-  "k.procedures/schema.sop"
+  "k.procedures/schema.sop",
+  "k.procedures/shards/compose"
  ],
  "metre": [
   "k.units/shards/core",
@@ -56489,6 +56565,7 @@
   "k.genres/schema.sop",
   "k.geo/shards/asia",
   "k.motion/schema.sop",
+  "k.procedures/shards/compose",
   "k.story/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/mi"
@@ -58904,6 +58981,7 @@
   "k.genres/schema.sop",
   "k.motion/schema.sop",
   "k.objects/shards/noto-transport-ground-04",
+  "k.procedures/shards/compose",
   "k.story/schema.sop",
   "k.words/shards/mo",
   "w.document/schema.sop"
@@ -59541,6 +59619,7 @@
   "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/tasks",
   "k.story/schema.sop",
   "k.time/schema.sop",
@@ -59697,6 +59776,7 @@
   "k.motion/schema.sop",
   "k.objects/schema.sop",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.time/schema.sop",
@@ -60646,6 +60726,7 @@
  ],
  "next": [
   "k.attributes/shards/aspects",
+  "k.procedures/shards/compose",
   "k.time/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/ne",
@@ -60664,6 +60745,12 @@
  ],
  "next to each other": [
   "k.layouts/shards/layouts"
+ ],
+ "next_max": [
+  "k.procedures/shards/compose"
+ ],
+ "next_min": [
+  "k.procedures/shards/compose"
  ],
  "ng": [
   "k.words/shards/ng"
@@ -62210,6 +62297,7 @@
   "k.words/shards/ob"
  ],
  "obstacle": [
+  "k.procedures/shards/compose",
   "k.story/schema.sop",
   "k.story/shards/structure",
   "k.words/shards/ob"
@@ -64773,6 +64861,7 @@
   "k.objects/shards/noto-office-03",
   "k.objects/shards/noto-writing-01",
   "k.objects/shards/things-3",
+  "k.procedures/shards/tasks",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-p",
   "k.words/shards/pa"
@@ -65114,6 +65203,7 @@
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.story/schema.sop",
   "k.time/schema.sop",
@@ -65199,6 +65289,7 @@
   "k.genres/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
+  "k.procedures/shards/compose",
   "k.words/schema.sop",
   "k.words/shards/pa",
   "w.face/schema.sop"
@@ -69026,6 +69117,9 @@
  "point out": [
   "k.actions/shards/actions-mind-talk"
  ],
+ "point_part": [
+  "k.procedures/shards/compose"
+ ],
  "pointe-noire": [
   "k.geo/shards/africa"
  ],
@@ -69045,8 +69139,15 @@
  ],
  "points": [
   "k.drawing/schema.sop",
+  "k.procedures/shards/compose",
   "k.shapes/schema.sop",
   "k.values/shards/shapes"
+ ],
+ "points_max": [
+  "k.procedures/shards/compose"
+ ],
+ "points_min": [
+  "k.procedures/shards/compose"
  ],
  "poison": [
   "k.words/shards/po"
@@ -70320,6 +70421,7 @@
  "presentation": [
   "k.genres/shards/presentation",
   "k.genres/shards/registers",
+  "k.procedures/shards/tasks",
   "k.words/shards/pr",
   "w.document/schema.sop"
  ],
@@ -70927,6 +71029,7 @@
   "k.words/shards/pr"
  ],
  "protagonist": [
+  "k.procedures/shards/compose",
   "k.story/shards/structure"
  ],
  "protagonist belongs in the setting": [
@@ -70943,6 +71046,15 @@
  ],
  "protagonist lacks the means": [
   "k.story/shards/structure"
+ ],
+ "protagonist_animal": [
+  "k.procedures/shards/compose"
+ ],
+ "protagonist_kind": [
+  "k.procedures/shards/compose"
+ ],
+ "protagonist_role": [
+  "k.procedures/shards/compose"
  ],
  "protect": [
   "k.objects/shards/noto-other-object-01",
@@ -73578,6 +73690,7 @@
  ],
  "register": [
   "k.genres/schema.sop",
+  "k.procedures/shards/compose",
   "k.units/shards/measures",
   "k.words/shards/re",
   "w.document/schema.sop"
@@ -74384,7 +74497,8 @@
   "k.words/shards/re"
  ],
  "research article": [
-  "k.genres/shards/scientific-article"
+  "k.genres/shards/scientific-article",
+  "k.procedures/shards/tasks"
  ],
  "research paper": [
   "k.genres/shards/scientific-article"
@@ -74463,6 +74577,7 @@
  ],
  "resolution": [
   "k.genres/shards/story",
+  "k.procedures/shards/compose",
   "k.story/shards/structure",
   "k.words/shards/re"
  ],
@@ -74564,7 +74679,14 @@
  "results": [
   "k.actions/schema.sop",
   "k.genres/shards/report",
-  "k.genres/shards/scientific-article"
+  "k.genres/shards/scientific-article",
+  "k.procedures/shards/compose"
+ ],
+ "results_max": [
+  "k.procedures/shards/compose"
+ ],
+ "results_min": [
+  "k.procedures/shards/compose"
  ],
  "resume": [
   "k.words/shards/re"
@@ -79199,7 +79321,8 @@
   "k.genres/shards/registers"
  ],
  "scientific article": [
-  "k.genres/shards/scientific-article"
+  "k.genres/shards/scientific-article",
+  "k.procedures/shards/tasks"
  ],
  "scientific articles": [
   "k.genres/shards/scientific-article"
@@ -80592,6 +80715,7 @@
  ],
  "setting": [
   "k.objects/shards/things-3",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.story/shards/structure",
@@ -82564,6 +82688,7 @@
   "k.words/shards/si"
  ],
  "single": [
+  "k.procedures/shards/compose",
   "k.values/shards/numbers",
   "k.words/shards/si"
  ],
@@ -83424,6 +83549,7 @@
  ],
  "slide show": [
   "k.genres/shards/presentation",
+  "k.procedures/shards/tasks",
   "w.document/schema.sop"
  ],
  "slider": [
@@ -83432,6 +83558,7 @@
  "slides": [
   "k.actions/shards/actions-move",
   "k.genres/shards/presentation",
+  "k.procedures/shards/tasks",
   "w.document/schema.sop"
  ],
  "slideshow": [
@@ -84323,6 +84450,7 @@
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-food-sweet-01",
   "k.objects/shards/noto-sound-01",
+  "k.procedures/schema.sop",
   "k.values/shards/psys2",
   "k.values/shards/scales",
   "k.words/shards/so"
@@ -87351,6 +87479,7 @@
  ],
  "story": [
   "k.genres/shards/story",
+  "k.procedures/shards/tasks",
   "k.words/shards/st",
   "w.document/schema.sop"
  ],
@@ -89962,6 +90091,7 @@
   "k.genres/shards/story",
   "k.objects/shards/noto-animal-reptile-01",
   "k.objects/shards/noto-game-01",
+  "k.procedures/shards/tasks",
   "k.words/shards/ta"
  ],
  "talent": [
@@ -89979,6 +90109,7 @@
   "k.genres/shards/presentation",
   "k.motion/shards/rules",
   "k.objects/shards/noto-animal-bird-03",
+  "k.procedures/shards/tasks",
   "k.words/shards/ta"
  ],
  "talked": [
@@ -90315,6 +90446,7 @@
   "k.actions/shards/acts",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-game-01",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.story/schema.sop",
   "k.story/shards/structure",
@@ -90331,6 +90463,15 @@
  ],
  "target in the setting": [
   "k.story/shards/structure"
+ ],
+ "target_being": [
+  "k.procedures/shards/compose"
+ ],
+ "target_place": [
+  "k.procedures/shards/compose"
+ ],
+ "target_thing": [
+  "k.procedures/shards/compose"
  ],
  "tarim": [
   "k.geo/shards/asia"
@@ -91652,6 +91793,7 @@
   "k.colours/schema.sop",
   "k.commonsense/schema.sop",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.scenes/schema.sop",
@@ -91659,6 +91801,9 @@
   "k.units/shards/measures",
   "k.words/shards/th",
   "w.list/schema.sop"
+ ],
+ "thing_names": [
+  "k.procedures/shards/compose"
  ],
  "things": [
   "k.commonsense/schema.sop",
@@ -92719,6 +92864,7 @@
   "k.attributes/shards/typical",
   "k.genres/shards/presentation",
   "k.objects/shards/home",
+  "k.procedures/shards/compose",
   "k.procedures/shards/tasks",
   "k.words/shards/ti",
   "w.document/schema.sop",
@@ -93205,6 +93351,7 @@
   "k.objects/shards/noto-tool-02",
   "k.objects/shards/noto-tool-03",
   "k.objects/shards/noto-transport-water-01",
+  "k.procedures/shards/compose",
   "k.words/shards/to"
  ],
  "tool shed": [
@@ -93617,6 +93764,7 @@
  ],
  "topic": [
   "k.actions/shards/acts",
+  "k.procedures/shards/compose",
   "k.procedures/shards/tasks",
   "k.words/shards/to",
   "w.document/schema.sop"
@@ -95449,6 +95597,9 @@
  "turning point gives the means": [
   "k.story/shards/structure"
  ],
+ "turning_point": [
+  "k.procedures/shards/compose"
+ ],
  "turnip": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
@@ -96786,7 +96937,8 @@
  ],
  "uses": [
   "k.attributes/shards/aspects",
-  "k.people/schema.sop"
+  "k.people/schema.sop",
+  "k.procedures/shards/compose"
  ],
  "usher": [
   "k.words/shards/us"
@@ -96976,6 +97128,7 @@
   "k.actions/shards/acts",
   "k.motion/schema.sop",
   "k.procedures/schema.sop",
+  "k.procedures/shards/compose",
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.units/shards/measures",
@@ -100334,6 +100487,7 @@
  ],
  "who": [
   "k.actions/schema.sop",
+  "k.procedures/shards/compose",
   "k.words/shards/wh",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/ellipsis",
@@ -101405,6 +101559,7 @@
  "work": [
   "k.actions/shards/actions-body-social-nature",
   "k.people/schema.sop",
+  "k.procedures/shards/compose",
   "k.words/shards/wo"
  ],
  "work done": [
@@ -101412,6 +101567,12 @@
  ],
  "work gloves": [
   "k.wearables/shards/wearables"
+ ],
+ "work_max": [
+  "k.procedures/shards/compose"
+ ],
+ "work_min": [
+  "k.procedures/shards/compose"
  ],
  "workbench": [
   "k.scenes/shards/scenes-indoors"
@@ -101447,7 +101608,8 @@
   "k.people/schema.sop"
  ],
  "works_at": [
-  "k.attributes/shards/aspects"
+  "k.attributes/shards/aspects",
+  "k.procedures/shards/compose"
  ],
  "workshop": [
   "k.attributes/shards/numbers-p-z",
@@ -101717,6 +101879,21 @@
   "k.actions/shards/actions-make-change",
   "k.actions/shards/verbs-save",
   "k.words/shards/wr"
+ ],
+ "write a presentation about a topic": [
+  "k.procedures/shards/compose"
+ ],
+ "write a report of what was done": [
+  "k.procedures/shards/compose"
+ ],
+ "write a scientific article about a topic": [
+  "k.procedures/shards/compose"
+ ],
+ "write a story": [
+  "k.procedures/shards/compose"
+ ],
+ "write an essay about a topic": [
+  "k.procedures/shards/compose"
  ],
  "write down": [
   "k.actions/shards/verbs-save"

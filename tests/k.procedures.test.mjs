@@ -86,7 +86,10 @@ test('bindings: one source each; every name used is bound; knowledge types and k
   for (const m of methods) {
     const has = (n, what) => assert.ok(m.bind[n], `${m.name}: ${what} names no binding: ${n}`);
     for (const [n, bd] of Object.entries(m.bind)) {
-      const sources = [bd.goal, bd.step.length ? 1 : undefined, bd.from, bd.live, bd.history || undefined, bd.upto, bd.together.length ? 1 : undefined, bd.value].filter((x) => x !== undefined);
+      // `about` (questions.md Q57) is a source the pinned planner does not read yet: taken from the facts.
+      const about = knowledge.facts('k.procedures.binding').find((f) => f.attrs.method[0].replace(/^"|"$/g, '') === m.name && f.attrs.name[0] === n)?.attrs.about?.[0];
+      if (about) has(about, 'about');
+      const sources = [bd.goal, bd.step.length ? 1 : undefined, bd.from, bd.live, bd.history || undefined, bd.upto, bd.together.length ? 1 : undefined, bd.value, about].filter((x) => x !== undefined);
       assert.equal(sources.length, 1, `${m.name}: binding ${n} has ${sources.length} sources`);
       if (bd.goal) assert.ok(m.goal[bd.goal], `${m.name}: ${n} reads goal role ${bd.goal}, which the goal does not name`);
       for (const s of bd.step) assert.ok(m.steps.some((x) => x.n === s), `${m.name}: ${n} reads step ${s}`);
@@ -269,7 +272,8 @@ test('arrange things in a layout: a row, and refusal reasons; a needed role miss
 });
 
 test('every method is reached by a test goal above (the test file names each method)', () => {
-  const text = readFileSync(new URL(import.meta.url), 'utf8');
+  // The compositions (choice points, questions.md Q57) are reached in tests/k.compose.test.mjs.
+  const text = readFileSync(new URL(import.meta.url), 'utf8') + readFileSync(new URL('./k.compose.test.mjs', import.meta.url), 'utf8');
   for (const m of methods) assert.ok(text.includes(`'${m.name}'`), m.name);
 });
 

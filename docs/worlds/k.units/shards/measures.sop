@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 231 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.story, k.procedures): 234 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -228,6 +228,9 @@
 @k.units.measure.k.procedures.method.rank k.units.measure world=k.procedures type=method key=rank ordinal=true core.source="hand-core 1"
 @k.units.measure.k.procedures.goal.default k.units.measure world=k.procedures type=goal key=default plain=true core.source="hand-core 1"
 @k.units.measure.k.procedures.binding.step k.units.measure world=k.procedures type=binding key=step ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.binding.choose k.units.measure world=k.procedures type=binding key=choose counts="value chosen" core.source="hand-core 1"
+@k.units.measure.k.procedures.binding.choose_min k.units.measure world=k.procedures type=binding key=choose_min counts="value chosen" core.source="hand-core 1"
+@k.units.measure.k.procedures.match.n k.units.measure world=k.procedures type=match key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.procedures.step.n k.units.measure world=k.procedures type=step key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.procedures.step.after k.units.measure world=k.procedures type=step key=after ordinal=true core.source="hand-core 1"
 @k.units.measure.k.procedures.arg.step k.units.measure world=k.procedures type=arg key=step ordinal=true core.source="hand-core 1"
