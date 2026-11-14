@@ -1,5 +1,5 @@
 {
- "version": "f0351a7356e8",
+ "version": "a1ea48df1ac1",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -86949,6 +86949,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/diagram-frames",
+     "path": "w.lang.en/shards/diagram-frames.sop",
+     "wires": 73,
+     "bytes": 16062,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/ellipsis",
      "path": "w.lang.en/shards/ellipsis.sop",
      "wires": 66,
@@ -87155,9 +87167,10 @@
     {
      "id": "w.lang.en/shards/hand-arrangements",
      "path": "w.lang.en/shards/hand-arrangements.sop",
-     "wires": 58,
-     "bytes": 9529,
+     "wires": 62,
+     "bytes": 10254,
      "keys": [
+      "across the page",
       "all over",
       "along the edge",
       "anticlockwise",
@@ -87172,6 +87185,8 @@
       "clockwise",
       "counter-clockwise",
       "counterclockwise",
+      "down the page",
+      "downwards",
       "equally spaced",
       "evenly",
       "evenly spaced",
@@ -87215,6 +87230,7 @@
       "stacked",
       "step by step",
       "top to bottom",
+      "upwards",
       "vertically"
      ],
      "sources": [
@@ -87678,7 +87694,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 50,
-     "bytes": 30358,
+     "bytes": 31703,
      "keys": [],
      "sources": [
       "hand-core-1"

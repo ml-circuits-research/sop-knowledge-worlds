@@ -90,21 +90,21 @@ export const MOVED_HERE = [
     { what: 'pin' }, 'priority 15, over acts.facts.layer.on.pin.verb (14), which took "on Berlin" as the thing'],
 ];
 
-function frameLines(name, { act, mode, set, priority, needs, roles, example }, parts, fixed = {}) {
-  const lines = [wire(`w.lang.en.frame.${name}`, 'w.lang.en.frame', [['name', name], ['act', act], ['mode', mode], ['set', set], ['priority', priority], ['needs', needs], ...roles.map((r) => ['role', r]), ['example', text(example)]], SRC)];
+export function frameLines(name, { act, mode, set, priority, needs, roles, example }, parts, fixed = {}, src = SRC) {
+  const lines = [wire(`w.lang.en.frame.${name}`, 'w.lang.en.frame', [['name', name], ['act', act], ['mode', mode], ['set', set], ['priority', priority], ['needs', needs], ...roles.map((r) => ['role', r]), ['example', text(example)]], src)];
   parts.forEach(([is, a, b, c], i) => {
     const e = [['frame', name], ['at', i + 1]];
     if (is === 'lead') e.push(['is', 'lead'], ['phrase', 'lead.polite'], ['optional', 'yes']);
     else if (is === 'det') e.push(['is', 'det'], ['optional', 'yes']);
     else if (is === 'verb') e.push(['is', 'verb'], ['act', /\s/.test(a) ? text(a) : a]);
     else if (is === 'word') { e.push(['is', 'word'], ...a.map((w) => ['word', text(w)])); if (b) e.push(['optional', 'yes']); }
-    else if (is === 'role') { e.push(['is', 'role'], ['role', a], ['takes', b]); if (c.lexicon) e.push(['lexicon', c.lexicon]); if (c.optional) e.push(['optional', 'yes']); }
-    lines.push(wire(`w.lang.en.part.${name}.${i + 1}`, 'w.lang.en.part', e, SRC));
+    else if (is === 'role') { e.push(['is', 'role'], ['role', a], ['takes', b]); if (c.lexicon) e.push(['lexicon', c.lexicon]); if (c.max) e.push(['max_words', c.max]); if (c.optional) e.push(['optional', 'yes']); }
+    lines.push(wire(`w.lang.en.part.${name}.${i + 1}`, 'w.lang.en.part', e, src));
   });
-  for (const [r, v] of Object.entries(fixed ?? {})) lines.push(wire(`w.lang.en.fixed.${name}.${r}`, 'w.lang.en.fixed', [['frame', name], ['role', r], ['value', text(v)]], SRC));
+  for (const [r, v] of Object.entries(fixed ?? {})) lines.push(wire(`w.lang.en.fixed.${name}.${r}`, 'w.lang.en.fixed', [['frame', name], ['role', r], ['value', text(v)]], src));
   return lines;
 }
-const rolesOf = (parts) => [...new Set(parts.filter((p) => p[0] === 'role').map((p) => p[1]))];
+export const rolesOf = (parts) => [...new Set(parts.filter((p) => p[0] === 'role').map((p) => p[1]))];
 
 export function roleFrameShard() {
   const a = ROLE_FRAMES.flatMap(([name, act, mode, priority, asks, example, parts]) => [`# ${asks}`, ...frameLines(name, { act, mode, set: 'acts', priority, roles: rolesOf(parts), example }, parts)]);

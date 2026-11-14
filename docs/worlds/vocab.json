@@ -2392,6 +2392,9 @@
   "w.lang.en/shards/prepositions",
   "w.seating/schema.sop"
  ],
+ "across the page": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "act": [
   "k.actions/schema.sop",
   "k.attributes/shards/narration",
@@ -27808,6 +27811,9 @@
   "k.words/shards/frequency-c",
   "w.diagram/schema.sop"
  ],
+ "circle diagram": [
+  "k.diagrams/shards/diagrams"
+ ],
  "circles": [
   "k.shapes/shards/shapes",
   "k.values/shards/shapes"
@@ -27826,6 +27832,9 @@
   "k.values/shards/shapes",
   "k.words/shards/ci",
   "k.words/shards/frequency-c"
+ ],
+ "circular diagram": [
+  "k.diagrams/shards/diagrams"
  ],
  "circulation": [
   "k.words/shards/ci",
@@ -30524,6 +30533,15 @@
   "k.words/shards/co-1",
   "k.words/shards/frequency-c"
  ],
+ "comparison chart": [
+  "k.diagrams/shards/diagrams"
+ ],
+ "comparison grid": [
+  "k.diagrams/shards/diagrams"
+ ],
+ "comparison matrix": [
+  "k.diagrams/shards/diagrams"
+ ],
  "comparison table": [
   "k.diagrams/shards/diagrams"
  ],
@@ -30860,6 +30878,7 @@
   "k.words/shards/frequency-c"
  ],
  "concept map": [
+  "k.diagrams/shards/diagrams",
   "w.diagram/schema.sop"
  ],
  "conception": [
@@ -35221,7 +35240,11 @@
   "k.words/shards/cy",
   "k.words/shards/frequency-c"
  ],
+ "cycle chart": [
+  "k.diagrams/shards/diagrams"
+ ],
  "cycle diagram": [
+  "k.diagrams/shards/diagrams",
   "w.diagram/schema.sop"
  ],
  "cycle helmet": [
@@ -41832,6 +41855,9 @@
   "k.words/shards/frequency-d",
   "w.face/schema.sop"
  ],
+ "down the page": [
+  "w.lang.en/shards/hand-arrangements"
+ ],
  "down_arrow": [
   "k.objects/shards/noto-household-01"
  ],
@@ -41873,7 +41899,8 @@
   "k.values/shards/directions"
  ],
  "downwards": [
-  "k.values/shards/directions"
+  "k.values/shards/directions",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "dowry": [
   "k.words/shards/do",
@@ -53180,8 +53207,12 @@
   "k.words/shards/frequency-f"
  ],
  "flow chart": [
+  "k.diagrams/shards/diagrams",
   "k.layouts/shards/layouts",
   "w.diagram/schema.sop"
+ ],
+ "flow diagram": [
+  "k.diagrams/shards/diagrams"
  ],
  "flowchart": [
   "k.diagrams/shards/diagrams",
@@ -66206,9 +66237,16 @@
   "k.words/shards/hi"
  ],
  "hierarchy": [
+  "k.diagrams/shards/diagrams",
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-h",
   "k.words/shards/hi"
+ ],
+ "hierarchy chart": [
+  "k.diagrams/shards/diagrams"
+ ],
+ "hierarchy diagram": [
+  "k.diagrams/shards/diagrams"
  ],
  "hieronim": [
   "k.people/shards/given-names-h"
@@ -69211,6 +69249,9 @@
   "k.objects/shards/noto-light-video-02",
   "k.words/shards/frequency-i",
   "k.words/shards/id"
+ ],
+ "idea map": [
+  "k.diagrams/shards/diagrams"
  ],
  "ideal": [
   "k.words/shards/frequency-i",
@@ -89477,11 +89518,17 @@
   "k.layouts/shards/layouts",
   "w.diagram/schema.sop"
  ],
+ "mind-map": [
+  "k.diagrams/shards/diagrams"
+ ],
  "mindaugas": [
   "k.people/shards/given-names-m"
  ],
  "mindelo": [
   "k.geo/shards/africa"
+ ],
+ "mindmap": [
+  "k.diagrams/shards/diagrams"
  ],
  "mine": [
   "k.words/shards/frequency-m",
@@ -94707,7 +94754,11 @@
   "k.words/shards/ne"
  ],
  "network diagram": [
+  "k.diagrams/shards/diagrams",
   "w.diagram/schema.sop"
+ ],
+ "network graph": [
+  "k.diagrams/shards/diagrams"
  ],
  "neuquén": [
   "k.geo/shards/south-america"
@@ -95520,6 +95571,9 @@
   "k.diagrams/shards/diagrams",
   "k.kinds/shards/structures",
   "w.diagram/schema.sop"
+ ],
+ "node diagram": [
+  "k.diagrams/shards/diagrams"
  ],
  "nodes": [
   "w.diagram/schema.sop"
@@ -98560,13 +98614,20 @@
   "k.words/shards/frequency-o",
   "k.words/shards/or"
  ],
+ "organigram": [
+  "k.diagrams/shards/diagrams"
+ ],
  "organisation": [
   "k.words/shards/frequency-o",
   "k.words/shards/or"
  ],
  "organisation chart": [
+  "k.diagrams/shards/diagrams",
   "k.layouts/shards/layouts",
   "w.diagram/schema.sop"
+ ],
+ "organisational chart": [
+  "k.diagrams/shards/diagrams"
  ],
  "organise": [
   "k.words/shards/frequency-o",
@@ -98583,7 +98644,11 @@
   "k.words/shards/or"
  ],
  "organization chart": [
+  "k.diagrams/shards/diagrams",
   "w.diagram/schema.sop"
+ ],
+ "organizational chart": [
+  "k.diagrams/shards/diagrams"
  ],
  "organize": [
   "k.actions/shards/verbs-group",
@@ -104373,6 +104438,9 @@
   "k.words/shards/frequency-p",
   "k.words/shards/pi"
  ],
+ "pipeline diagram": [
+  "k.diagrams/shards/diagrams"
+ ],
  "piper": [
   "k.words/shards/frequency-p",
   "k.words/shards/pi"
@@ -108251,8 +108319,15 @@
   "k.words/shards/pr",
   "w.diagram/schema.sop"
  ],
+ "process chart": [
+  "k.diagrams/shards/diagrams"
+ ],
  "process diagram": [
+  "k.diagrams/shards/diagrams",
   "w.diagram/schema.sop"
+ ],
+ "process flow": [
+  "k.diagrams/shards/diagrams"
  ],
  "processing": [
   "k.words/shards/frequency-p",
@@ -122083,6 +122158,9 @@
  "set a table in a seating plan": [
   "k.procedures/shards/tasks"
  ],
+ "set diagram": [
+  "k.diagrams/shards/diagrams"
+ ],
  "set down": [
   "k.actions/shards/verbs-place"
  ],
@@ -128301,6 +128379,7 @@
   "k.words/shards/sp"
  ],
  "spider diagram": [
+  "k.diagrams/shards/diagrams",
   "k.layouts/shards/layouts"
  ],
  "spider web": [
@@ -129380,6 +129459,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/st",
   "w.diagram/schema.sop"
+ ],
+ "stage diagram": [
+  "k.diagrams/shards/diagrams"
  ],
  "stagecoach": [
   "k.attributes/shards/numbers-p-z",
@@ -138564,6 +138646,7 @@
   "w.timeline/schema.sop"
  ],
  "time line": [
+  "k.diagrams/shards/diagrams",
   "w.timeline/schema.sop"
  ],
  "time of day": [
@@ -138586,6 +138669,12 @@
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
   "w.timeline/schema.sop"
+ ],
+ "timeline chart": [
+  "k.diagrams/shards/diagrams"
+ ],
+ "timeline diagram": [
+  "k.diagrams/shards/diagrams"
  ],
  "timelines": [
   "w.timeline/schema.sop"
@@ -141360,7 +141449,11 @@
  "tree bark": [
   "k.kinds/shards/origin"
  ],
+ "tree chart": [
+  "k.diagrams/shards/diagrams"
+ ],
  "tree diagram": [
+  "k.diagrams/shards/diagrams",
   "w.diagram/schema.sop"
  ],
  "tree frog": [
@@ -144197,7 +144290,8 @@
   "k.values/shards/directions"
  ],
  "upwards": [
-  "k.values/shards/directions"
+  "k.values/shards/directions",
+  "w.lang.en/shards/hand-arrangements"
  ],
  "ur": [
   "w.lang.en/shards/closed-classes",
@@ -145094,6 +145188,12 @@
  ],
  "venla": [
   "k.people/shards/given-names-v"
+ ],
+ "venn": [
+  "k.diagrams/shards/diagrams"
+ ],
+ "venn chart": [
+  "k.diagrams/shards/diagrams"
  ],
  "venn diagram": [
   "k.diagrams/shards/diagrams",

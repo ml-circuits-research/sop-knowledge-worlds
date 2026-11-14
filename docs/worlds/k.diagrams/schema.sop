@@ -66,6 +66,19 @@
 @k.diagrams.word.kind.structure core.word text=structure means=k.diagrams.kind.structure core.source="hand-core 1"
 @k.diagrams.word.kind.usual_for core.word text="used for" text="good for" means=k.diagrams.kind.usual_for core.source="hand-core 1"
 
+# Words for each kind of diagram (the other names a request uses for it: "a hierarchy of the parts of a car" is a tree).
+# w.lang.en's lexicon diagram.kind is these words and the kinds' names (tools/lang-en-diagram-frames.mjs).
+@k.diagrams.word.name.flowchart core.word text="flow chart" text="flow diagram" text="process flow" text="process chart" means=flowchart of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.tree core.word text="tree diagram" text="tree chart" text=hierarchy text="hierarchy diagram" text="hierarchy chart" means=tree of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.cycle core.word text="cycle diagram" text="cycle chart" text="circular diagram" text="circle diagram" means=cycle of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.timeline core.word text="time line" text="timeline diagram" text="timeline chart" means=timeline of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.mind_map core.word text=mindmap text="mind-map" text="concept map" text="spider diagram" text="idea map" means="mind map" of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.venn_diagram core.word text=venn text="venn chart" text="set diagram" means="Venn diagram" of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.org_chart core.word text="organisation chart" text="organization chart" text="organisational chart" text="organizational chart" text=organigram means="org chart" of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.network core.word text="network diagram" text="network graph" text="node diagram" means=network of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.pipeline core.word text="pipeline diagram" text="stage diagram" text="process diagram" means=pipeline of=k.diagrams.kind.name core.source="hand-core 1"
+@k.diagrams.word.name.comparison_table core.word text="comparison chart" text="comparison grid" text="comparison matrix" means="comparison table" of=k.diagrams.kind.name core.source="hand-core 1"
+
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.diagrams.word.key.source.cite core.word text=cite means=k.diagrams.source.cite core.source="hand-core 1"
 @k.diagrams.word.key.source.year core.word text=year means=k.diagrams.source.year core.source="hand-core 1"

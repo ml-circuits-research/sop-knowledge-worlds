@@ -1,4 +1,4 @@
-# w.lang.en/shards/hand-arrangements: 58 phrases that say how things are arranged (in a circle, in a grid, evenly, left to right, top to bottom), each joined to the arrangement and relation of k.layouts it names and to the layout of a w.diagram it asks for (block "04:40" item 4).
+# w.lang.en/shards/hand-arrangements: 62 phrases that say how things are arranged (in a circle, in a grid, evenly, left to right, top to bottom), each joined to the arrangement and relation of k.layouts it names and to the layout of a w.diagram it asks for (block "04:40" item 4).
 # sources: hand-core 1 (English, written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
@@ -31,6 +31,10 @@
 @w.lang.en.arrangement.from_top_to_bottom w.lang.en.arrangement text="from top to bottom" layout=column relation=above direction=top_to_bottom diagram_layout=top_down core.source="hand-core 1"
 @w.lang.en.arrangement.bottom_to_top w.lang.en.arrangement text="bottom to top" layout=column relation=above inverse=yes direction=bottom_to_top diagram_layout=top_down core.source="hand-core 1"
 @w.lang.en.arrangement.from_bottom_to_top w.lang.en.arrangement text="from bottom to top" layout=column relation=above inverse=yes direction=bottom_to_top diagram_layout=top_down core.source="hand-core 1"
+@w.lang.en.arrangement.downwards w.lang.en.arrangement text=downwards layout=column relation=above direction=top_to_bottom diagram_layout=top_down core.source="hand-core 1"
+@w.lang.en.arrangement.down_the_page w.lang.en.arrangement text="down the page" layout=column relation=above direction=top_to_bottom diagram_layout=top_down core.source="hand-core 1"
+@w.lang.en.arrangement.upwards w.lang.en.arrangement text=upwards layout=column relation=above inverse=yes direction=bottom_to_top diagram_layout=top_down core.source="hand-core 1"
+@w.lang.en.arrangement.across_the_page w.lang.en.arrangement text="across the page" layout=row relation=left_of direction=left_to_right diagram_layout=left_right core.source="hand-core 1"
 @w.lang.en.arrangement.vertically w.lang.en.arrangement text=vertically layout=column relation=aligned_column diagram_layout=top_down core.source="hand-core 1"
 @w.lang.en.arrangement.in_a_stack w.lang.en.arrangement text="in a stack" layout=stack relation=on direction=bottom_to_top core.source="hand-core 1"
 @w.lang.en.arrangement.stacked w.lang.en.arrangement text=stacked layout=stack relation=on direction=bottom_to_top core.source="hand-core 1"

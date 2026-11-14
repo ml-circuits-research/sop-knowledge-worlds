@@ -5064,3 +5064,31 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   name is a unit too, count x factor equals its factor (exact counts to 1e-9: a year is 12 months, a decade 10 years,
   a century 100 years, a week 168 hours ...; `count_about` within 10 %: a month is about 30 days, about 4 weeks, the
   latter 8 % short); 3 questions (un-t1 to un-t3: a century in seconds, what a month measures, a decade in seconds).
+
+## 2026-11-15 — third worker: diagram edit frames in w.lang.en (block 06:00 item 1; PSys2's DIAG-GAP)
+
+- New shard `w.lang.en/shards/diagram-frames.sop` (73 wires, 16,062 bytes, CC0; `tools/lang-en-diagram-frames.mjs`, now
+  a step of `npm run build`): 9 frames, 4 lexicons, 2 role maps.
+  - Layout direction (place/layout, thing, direction): acts.place.layout.go "Make the arrows go left to right." (15),
+    .should "The arrows should go from top to bottom." (14), .dir "Lay the flow out left to right." (14), .flow "Flow
+    from left to right." (13, thing fixed "everything"). Direction = lexicon `diagram.direction`, derived from the
+    arrangement phrases of a row/column in one direction with diagram layout left_right/top_down (14 phrases); 4 new
+    arrangement phrases (downwards, upwards, down the page, across the page; 62 in all).
+  - Edge labels (change/set, attribute=label fixed): acts.change.label.edge "Call the arrow yes." (15; label, call,
+    name, mark, title, caption, tag + an edge word of w.diagram), .edge.ends "Label the arrow from A to B no." (16; the
+    thing is "arrow from a to b": two role maps put the ends into the thing), .edge.on "Write yes on the arrow." (15).
+  - A diagram of a kind about a topic (make, kind, topic): acts.make.diagram "Make a flowchart of making tea." (13),
+    .diagram.bare "A cycle diagram of the four seasons." (4: under the statement frames; at 12 it took "The cycle of
+    a week is week." from acts.state.of, found by the phrasing test). Kind = lexicon `diagram.kind`: the 10 kind names
+    of k.diagrams and 38 new words for them in k.diagrams' schema (`core.word ... of=k.diagrams.kind.name`: hierarchy
+    and tree diagram -> tree, concept map -> mind map, organigram -> org chart ...).
+- New tests/w.lang.en.diagram-frames.test.mjs (6): 40 requests (26 of the gap set, 14 paraphrases) read back to the
+  intended act and roles in a diagram world; directions map to k.diagrams layouts, kinds to k.diagrams kinds, the edge
+  label to w.diagram.edge `label`; "Call yourself Robi" stays acts.change.call; the lexicons are the tool's output.
+  Frames test: 395 frames, 379 best (was 370 of 386), 11 tie, 5 known. Variants regenerated (none of the new frames is
+  a variant).
+- **For PSys2:** the gap set's arrangements dg02/03/06/08/10 ("put them in a circle/grid/row/column") are already read
+  by w.lang.en's acts.place.layout (it takes the verbs of place); their failure is the host's routing to the avatar
+  world, not a missing frame. "make the arrows go left to right" (dg19), "call the arrow yes" (dg49) and the 15 kind
+  requests (dg21-35) now have frames here.
+- `npm run test:changed` on the rebased tip (0b0f1af): 24 files, 147 tests, 147 pass.

@@ -299,7 +299,7 @@ size ...), and `tests/w.lang.en.closed.test.mjs` fails on a new word of a list t
 
 ## Arrangement phrases (block "04:40" item 4)
 
-`w.lang.en.arrangement text= layout= relation= inverse= direction= diagram_layout=` (shard `hand-arrangements`, 58
+`w.lang.en.arrangement text= layout= relation= inverse= direction= diagram_layout=` (shard `hand-arrangements`, 62
 phrases, CC0): how a request says things are to be arranged, joined to what can carry it out. "in a circle", "in a
 ring", "clockwise" are the k.layouts arrangement `ring` and a w.diagram's `circular` layout; "in a grid", "in rows
 and columns" `grid`; "in a row", "side by side" `row`; "in a column", "one above the other" `column`; "evenly",
@@ -308,7 +308,33 @@ left_to_right ("right to left": the same relation, `inverse=yes`); "top to botto
 "in a pyramid", "scattered", "at random", "in the corners", "around the centre", "one inside the other", "step by
 step", "along the edge", "overlapping". A relation named with an arrangement is one that arrangement has in k.layouts;
 every repeating arrangement and every diagram layout has a phrase (`tests/w.lang.en.arrangement.test.mjs`). The
-library reads them as acts over a layout (its block 04:40); no frame here uses them yet.
+library reads them as acts over a layout (its block 04:40); the diagram frames below take their directions.
+
+## Diagram frames (block "06:00" item 1, PSys2's DIAG-GAP set)
+
+Shard `diagram-frames` (`tools/lang-en-diagram-frames.mjs`, rerun by `npm run build`; 9 frames, 4 lexicons, 2 role maps,
+CC0) reads the diagram wording PSys2 measured (psys2 training/eval/diagram-gap-2026-11-15.jsonl):
+
+| wording | frame | reading |
+|---|---|---|
+| "Make the arrows go left to right.", "Lay the flow out left to right.", "The arrows should go from top to bottom.", "Flow from left to right." | acts.place.layout.go, .dir, .should, .flow | place/layout, thing (the arrows; "everything" when none is said), direction (an arrangement phrase) |
+| "Call the arrow yes.", "Label the arrow from A to B no.", "Write yes on the arrow." | acts.change.label.edge, .edge.ends, .edge.on | change/set, attribute `label` (fixed), thing the edge ("arrow from a to b"), value |
+| "Make a flowchart of making tea.", "A hierarchy of the parts of a car." | acts.make.diagram, .diagram.bare | make, kind (a kind of diagram), topic |
+
+The lexicons are derived from their homes: `diagram.direction` is the arrangement phrases of a row or column in one
+direction whose diagram layout is left_right or top_down (left to right, from top to bottom, downwards, across the page
+...: a host maps the direction read to `diagram_layout`, a layout of k.diagrams' kinds); `diagram.edge` is w.diagram's
+words for an edge (arrow, edge, line, link, connector); `diagram.kind` the names of k.diagrams' kinds and their words
+(`core.word ... of=k.diagrams.kind.name` in k.diagrams: hierarchy and tree diagram are a tree, concept map a mind map,
+organigram an org chart); `diagram.edge.from` the words before the ends of an edge (from, between). An edge named by
+its ends is one thing: the frame's `link` and `ends` parts map to the thing (role maps), so the reading is "arrow from
+a to b". A label said with "call" or "name" is a label only of an edge word: "Call yourself Robi" stays the avatar's
+name. The verbless acts.make.diagram.bare has priority 4, under the statement frames (it took "The cycle of a week is
+week." from acts.state.of until then). Checked by `tests/w.lang.en.diagram-frames.test.mjs`: 40 requests (26 of the gap set: its failing edits and kinds
+with their neighbours, and the 5 arrangements PSys2 sent to another world, which w.lang.en's layout frame already
+reads: a routing matter of the host; and 14 paraphrases) read back to the intended act and roles in a diagram world;
+the frames test reads the 9 new examples best (395 frames: 379 best, 11 tie, 5 known). Not covered: "draw the planets in order of distance from the sun on a timeline" (the
+kind after the topic); a single-letter name A is the determiner "a" to the reference reader ("connect A to C").
 
 ## Joins
 

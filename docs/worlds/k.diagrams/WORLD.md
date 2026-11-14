@@ -40,6 +40,11 @@ Sources: Gilbreth and Gilbreth 1921 (process charts), ISO 5807:1985 (flowchart s
 (mind maps), Novak and Gowin 1984 (concept maps), Priestley 1765 (the timeline), McCallum 1855 (the first org chart),
 Fruchterman and Reingold 1991 (force-directed network drawing).
 
+Words for the kinds (schema, `core.word ... of=k.diagrams.kind.name`, 38 words): the other names a request uses for a
+kind ("a hierarchy of the parts of a car" is a tree; flow chart, cycle diagram, concept map, organigram, comparison
+chart). w.lang.en's lexicon `diagram.kind`, which its diagram frames name ("make a flowchart of making tea"), is these
+words and the kinds' names, derived by tools/lang-en-diagram-frames.mjs.
+
 ## How a host uses it
 
 A topic and a kind: the kind's fills say which facts make its nodes and edges (the frog's stages of
