@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { importGeo, continentOf, commonName } from '../tools/import/geo.mjs';
+import { importGeo, continentOf, commonName, independentOf, recognitionOf } from '../tools/import/geo.mjs';
 
 const square = (x, y, s) => ({ type: 'Polygon', coordinates: [[[x, y], [x + s, y], [x + s, y + s], [x, y + s], [x, y]]] });
 const country = (code, name, x, extra = {}) => ({ properties: { TYPE: 'Sovereign country', ADMIN: name, ADM0_A3: code, NAME: name, NAME_LONG: name, NAME_EN: name, FORMAL_EN: `Republic of ${name}`, CONTINENT: 'Europe', REGION_UN: 'Europe', SUBREGION: 'Western Europe', POP_EST: 1000.4, LABEL_X: x + 5, LABEL_Y: 5, ...extra }, geometry: square(x, 0, 10) });
@@ -110,4 +110,18 @@ test('Round 9: lakes with the area of their outline, deserts, seas; a capital fr
   // Aland has a capital in Natural Earth (Acity): the list's is not taken. Bee Land has none: the list's is.
   assert.ok(lines('europe-borders.sop').some((l) => l.startsWith('@k.geo.borders.BBB k.geo.country name=Bee capital=Beeville ')));
   assert.ok(!files['europe-borders.sop'].includes('Listed'));
+});
+
+test('Q41: recognition is limited where a self-governing state is claimed or disputed without an ISO code, and independent is then unsaid', () => {
+  const rows = [
+    [{ ADMIN: 'Taiwan', SOVEREIGNT: 'Taiwan', TYPE: 'Sovereign country', NOTE_BRK: 'Self admin.; Claimed by China', FCLASS_ISO: 'Admin-1 states provinces' }, 'limited', undefined],
+    [{ ADMIN: 'Kosovo', SOVEREIGNT: 'Kosovo', TYPE: 'Disputed', FCLASS_ISO: 'Unrecognized' }, 'limited', undefined, { independent: null }],
+    [{ ADMIN: 'Israel', SOVEREIGNT: 'Israel', TYPE: 'Disputed', FCLASS_ISO: 'Admin-0 country' }, undefined, true],
+    [{ ADMIN: 'Norway', SOVEREIGNT: 'Norway', TYPE: 'Sovereign country', FCLASS_ISO: 'Unrecognized' }, undefined, true],
+    [{ ADMIN: 'Falkland Islands', SOVEREIGNT: 'United Kingdom', TYPE: 'Disputed', NOTE_BRK: 'Admin. by U.K.; Claimed by Argentina' }, undefined, false],
+  ];
+  for (const [p, recognition, independent, listed] of rows) {
+    assert.equal(recognitionOf(p), recognition, p.ADMIN);
+    assert.equal(independentOf(p, listed), independent, p.ADMIN);
+  }
 });

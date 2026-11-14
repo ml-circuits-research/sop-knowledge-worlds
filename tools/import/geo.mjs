@@ -41,6 +41,18 @@ export const independentOf = (p, listed) => {
   if (/Claimed by/.test(p.NOTE_BRK ?? '') || (listed && listed.independent !== undefined && listed.independent !== true)) return undefined;
   return true;
 };
+// Q41 (reviewer's answer): for those four, what is true and neutral: their recognition is limited. Said from Natural
+// Earth alone (the shard of its licence): a country that is its own sovereign and that Natural Earth marks as
+// administering itself while another state claims it (`NOTE_BRK` "Self admin.; Claimed by ...": Taiwan, Somaliland,
+// Northern Cyprus), or as disputed with no code of its own in ISO 3166 (`TYPE` Disputed, `FCLASS_ISO` Unrecognized:
+// Kosovo; Israel is Disputed with a code and is not marked). The import checks that this is exactly where
+// `independent` is not said.
+export const recognitionOf = (p) => {
+  const own = p.SOVEREIGNT ? p.SOVEREIGNT === p.ADMIN : false;
+  if (!own) return undefined;
+  if (/^Self admin\.; Claimed by/.test(p.NOTE_BRK ?? '') || (p.TYPE === 'Disputed' && p.FCLASS_ISO === 'Unrecognized')) return 'limited';
+  return undefined;
+};
 // Q33: the continent a country is counted in politically, from the region of the country list, where that is another
 // continent than the geographic one of Natural Earth (Cyprus: Asia, politically Europe). Not for islands in the open
 // ocean, whose continent is already that of their UN region.
@@ -162,6 +174,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
   const codes = [...byCode.keys()].sort((a, b) => byText(nameOf(a), nameOf(b)) || byText(a, b));
   for (const code of codes) {
     const { p, b, name, continent } = byCode.get(code);
+    if ((recognitionOf(p) === 'limited') !== (independentOf(p, listed.get(code)) === undefined)) throw new Error(`${code}: recognition and independent disagree`);
     const out = shards.get(continent);
     const caps = (capitals.get(code) ?? []).map((c) => ({ ...c, name: clean(c.name) })).sort((x, y) => (x.featurecla === 'Admin-0 capital' ? 0 : 1) - (y.featurecla === 'Admin-0 capital' ? 0 : 1) || byText(x.name, y.name)).map((c) => c.name);
     if (!caps.length) noCapital.add(code);
@@ -170,7 +183,7 @@ export function importGeo({ countries, admin, places, rivers, elevations, region
       ...[...new Set(caps)].map((x) => ['capital', x]),
       ['continent', continent], ['region', p.SUBREGION && !/^Seven seas/.test(p.SUBREGION) ? p.SUBREGION : undefined],
       ['population', p.POP_EST > 0 ? Math.round(p.POP_EST) : undefined],
-      ['independent', independentOf(p, listed.get(code))],
+      ['independent', independentOf(p, listed.get(code))], ['recognition', recognitionOf(p)],
       ['lat', Number.isFinite(p.LABEL_Y) ? r2(p.LABEL_Y) : r2((b.s + b.n) / 2)], ['lon', Number.isFinite(p.LABEL_X) ? r2(p.LABEL_X) : r2((b.w + b.e) / 2)],
       ...box(b),
     ], sources(NE)));

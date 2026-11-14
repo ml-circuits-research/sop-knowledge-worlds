@@ -102,6 +102,10 @@ test('Q33: capitals of today (Gitega, Astana, Ngerulmud), independence by sovere
   for (const n of ['Cuba', 'Israel', 'Kazakhstan', 'Cyprus', 'France']) assert.equal(one(country(n), 'independent'), 'true', n);
   for (const n of ['Aruba', 'Curaçao', '"Sint Maarten"', 'Guernsey', 'Jersey', '"Isle of Man"', 'Greenland', '"Hong Kong"', 'Macao', 'Åland']) assert.equal(one(country(tok(n)), 'independent'), 'false', n);
   for (const n of ['Taiwan', 'Kosovo', 'Somaliland', 'Northern Cyprus']) assert.equal(country(n), undefined, `${n}: independent is not said`);
+  // Q41: recognition=limited for those four and no other, on the wire of Natural Earth.
+  const limited = geo.ofType('k.geo.country').filter((c) => c.attrs.recognition);
+  assert.deepEqual(limited.map((c) => one(c, 'name').replace(/"/g, '')).sort(), ['Kosovo', 'Northern Cyprus', 'Somaliland', 'Taiwan']);
+  for (const c of limited) assert.equal(one(c, 'recognition'), 'limited');
   const cyprus = geo.ofType('k.geo.country').filter((c) => one(c, 'name') === 'Cyprus');
   assert.deepEqual(cyprus.map((c) => one(c, 'continent')).filter(Boolean), ['Asia']);
   assert.deepEqual(cyprus.map((c) => one(c, 'political_continent')).filter(Boolean), ['Europe']);

@@ -8,7 +8,7 @@ ranges, lakes, deserts, oceans and seas, each with a number where a free source 
 - `k.geo.continent`: `name` (Africa, Antarctica, Asia, Europe, North America, Oceania, South America), `area_about`
   (square kilometres, the usual figure; `named=model`).
 - `k.geo.country` (identity `name`): `code`, `formal`, `capital` (many), `continent`, `region`, `neighbour` (many),
-  `population`, `area` (square kilometres), `landlocked`, `independent`, `political_continent`, `lat`, `lon` (a point inside it), `west`,
+  `population`, `area` (square kilometres), `landlocked`, `independent`, `recognition`, `political_continent`, `lat`, `lon` (a point inside it), `west`,
   `south`, `east`, `north` (its box, in degrees). The name is the common short name (`"United States"`, `Serbia`:
   Natural Earth's `NAME` or `NAME_LONG`, whichever is shorter and not abbreviated); `formal` is the formal name
   (`"Republic of Serbia"`); `core.word` facts give the other names (`"United States of America"`, `"Dem. Rep. Congo"`).
@@ -73,7 +73,10 @@ Italy; whether Switzerland is landlocked.
 - Two rivers or mountains of one name on one continent: only the larger is kept.
 - Dependent territories are listed as Natural Earth lists them, with `independent=false`. For the four that govern
   themselves without being generally recognised (Taiwan, Kosovo, Somaliland, Northern Cyprus) `independent` is not
-  said: Natural Earth notes another state's claim, or the country list does not call them independent.
+  said: Natural Earth notes another state's claim, or the country list does not call them independent. Instead
+  `recognition=limited` says what is true and neutral (Q41), from Natural Earth: it marks them as administering
+  themselves while another state claims them (Taiwan, Somaliland, Northern Cyprus) or as disputed with no ISO code
+  of their own (Kosovo). A host asked "is Taiwan independent?" says that its recognition is limited.
 - No capital is known for Macao, Northern Cyprus, Åland and three territories without inhabitants.
 - Natural Earth's rivers are named piece by piece, so no length is worked out from them (the Nile's line is 2,760
   km long there); the outlines of deserts and seas are for labels, so no area is worked out from them either.

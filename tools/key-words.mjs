@@ -27,7 +27,7 @@ export const EXTRA = {
   'k.space.body.age_years_about': ['old'], 'k.space.kind': ['kind'], 'k.space.kind.made_of': ['made', 'made of'],
   'k.body.part.part_of': ['part of', 'belongs'], 'k.body.part.count_per_part': ['many'], 'k.body.part.count_about': ['many'], 'k.body.part.about': ['for'], 'k.body.part.does': ['for'],
   'k.food.food.made_of': ['made', 'made from', 'make', 'recipe'], 'k.food.food.kind': ['kind of'],
-  'k.geo.country.continent': ['where'], 'k.geo.city.country': ['where'], 'k.geo.city.capital_of': ['capital'], 'k.geo.river.country': ['where', 'flows'], 'k.geo.mountain.country': ['where'],
+  'k.geo.country.continent': ['where'], 'k.geo.country.recognition': ['recognised', 'recognized'], 'k.geo.city.country': ['where'], 'k.geo.city.capital_of': ['capital'], 'k.geo.river.country': ['where', 'flows'], 'k.geo.mountain.country': ['where'],
   'k.geo.country.area': ['size'], 'k.geo.lake.area_about': ['size'], 'k.geo.desert.area_about': ['size'], 'k.geo.sea.area_about': ['size'], 'k.geo.continent.area_about': ['size'],
   'k.units.unit.quantity': ['measure', 'kind'], 'k.units.quantity': ['quantity'], 'k.time.month.days': ['long'], 'k.time.duration.count': ['many'], 'k.time.hour.am_pm': ['am', 'pm'], 'k.time.hour.hour12': ['12-hour clock'], 'k.time.ordered.n': ['position', 'order'],
   'k.people.role.does': ['do', 'job'], 'k.people.kind.is_a': ['kind'], 'k.shapes.shape.sides': ['many'], 'k.attributes.thing.kind': ['kind'], 'k.attributes.thing.wheels': ['many'],

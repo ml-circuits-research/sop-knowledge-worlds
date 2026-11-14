@@ -3375,3 +3375,23 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   Catalog 25 worlds, 941 shards, vocab 24,280 words; 0 errors.
 - Next for the first worker (block 08:00): block 06:55 item 3 (w.seating acts, w.timeline range, w.face, w.map),
   then the two open w.lang.en holes; not started here.
+## Q41 (2026-11-14, second worker): recognition=limited for Taiwan, Kosovo, Somaliland, Northern Cyprus
+
+- The reviewer's answer (block "08:00"): say what is true and neutral. New key `k.geo.country.recognition`
+  (`enum=limited`; k.geo version 4; key words "recognition", "recognised", "recognized" by tools/key-words.mjs).
+  `independent` stays unsaid for the four.
+- Said from Natural Earth alone, so it stays in the public-domain continent shards (`core.source="natural-earth
+  5.1.2"`): `recognitionOf` in `tools/import/geo.mjs` is `limited` for a country that is its own sovereign and that
+  Natural Earth marks "Self admin.; Claimed by ..." (Taiwan by China, Somaliland by Somalia, Northern Cyprus by Cyprus)
+  or as `TYPE` Disputed with `FCLASS_ISO` Unrecognized (Kosovo). Israel (Disputed, with an ISO class) and Norway (ISO
+  class Unrecognized, a quirk of the data) are not marked. The import throws if `recognition` and an unsaid
+  `independent` ever disagree (they come from two rules over two fields; today they mark the same four).
+- Raw data: `ne_50m_admin_0_countries.geojson` was missing in this clone's `sources/natural-earth/raw` and was fetched
+  as SOURCE.md says; before the change the import gave the committed shards byte for byte.
+- Tests: k.geo (the four and no other carry `recognition=limited`); import.geo (`recognitionOf` and `independentOf` on
+  Taiwan, Kosovo, Israel, Norway, Falkland Islands). Q41 moved to Closed in questions.md.
+- Numbers: k.geo 4 wires changed (africa, asia 2, europe), schema +2 wires; catalog 25 worlds, 941 shards, vocab
+  24,259 -> 24,261 words.
+- After the rebase on the first worker's drawings, preview names and lessons (bc16d37, ac676e5, 3045bdb): index.json
+  taken from main, `npm run build` rerun; vocab 24,282 words (main 24,280 + the two words). npm test 2,873: 2,868
+  pass, 5 skipped, 0 fail.

@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/geo.mjs
 
-@k.geo core.module name=k.geo version=3 exports=continent exports=country exports=city exports=river exports=mountain exports=range exports=lake exports=desert exports=sea exports=group core.source="hand-core 1"
+@k.geo core.module name=k.geo version=4 exports=continent exports=country exports=city exports=river exports=mountain exports=range exports=lake exports=desert exports=sea exports=group core.source="hand-core 1"
 
 @k.geo.continent core.type of=k.geo.continent shared=true closed=true core.source="hand-core 1"
 @k.geo.continent.name core.slot of=k.geo.continent key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -27,7 +27,8 @@
 @k.geo.country.continent core.slot of=k.geo.country key=continent kind=atom kind=string core.source="hand-core 1"
 # `political_continent`: the continent a country is counted in politically, where that is another than its
 # geographic `continent` (Cyprus: continent Asia, political_continent Europe). `independent` is not said for a state
-# that governs itself without being generally recognised (Taiwan, Kosovo, Somaliland, Northern Cyprus).
+# that governs itself without being generally recognised (Taiwan, Kosovo, Somaliland, Northern Cyprus); for those
+# `recognition=limited` says so (from Natural Earth), and a host asked whether one is independent says that.
 @k.geo.country.political_continent core.slot of=k.geo.country key=political_continent kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.region core.slot of=k.geo.country key=region kind=atom kind=string core.source="hand-core 1"
 @k.geo.country.neighbour core.slot of=k.geo.country key=neighbour many=true kind=atom kind=string core.source="hand-core 1"
@@ -35,6 +36,7 @@
 @k.geo.country.area core.slot of=k.geo.country key=area kind=number min=0 core.source="hand-core 1"
 @k.geo.country.landlocked core.slot of=k.geo.country key=landlocked kind=boolean core.source="hand-core 1"
 @k.geo.country.independent core.slot of=k.geo.country key=independent kind=boolean core.source="hand-core 1"
+@k.geo.country.recognition core.slot of=k.geo.country key=recognition kind=atom enum=limited core.source="hand-core 1"
 @k.geo.country.lat core.slot of=k.geo.country key=lat kind=number min=-90 max=90 core.source="hand-core 1"
 @k.geo.country.lon core.slot of=k.geo.country key=lon kind=number min=-180 max=180 core.source="hand-core 1"
 @k.geo.country.west core.slot of=k.geo.country key=west kind=number min=-180 max=180 core.source="hand-core 1"
@@ -169,6 +171,7 @@
 @k.geo.word.key.country.area core.word text=size means=k.geo.country.area core.source="hand-core 1"
 @k.geo.word.key.country.landlocked core.word text=landlocked means=k.geo.country.landlocked core.source="hand-core 1"
 @k.geo.word.key.country.independent core.word text=independent means=k.geo.country.independent core.source="hand-core 1"
+@k.geo.word.key.country.recognition core.word text=recognition text=recognised text=recognized means=k.geo.country.recognition core.source="hand-core 1"
 @k.geo.word.key.country.lat core.word text=lat means=k.geo.country.lat core.source="hand-core 1"
 @k.geo.word.key.country.lon core.word text=lon means=k.geo.country.lon core.source="hand-core 1"
 @k.geo.word.key.country.west core.word text=west means=k.geo.country.west core.source="hand-core 1"
