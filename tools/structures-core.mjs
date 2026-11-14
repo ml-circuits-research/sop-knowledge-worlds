@@ -28,6 +28,8 @@ export const ROLE_FACTS = {
     end: { of: 'element', many: false }, start: { of: 'sequence', many: false }, finish: { of: 'sequence', many: false }, next: { of: 'element', refers: 'element', many: false } },
   graph: { node: { many: true }, link: { refers: 'node', many: true }, from: { of: 'link', refers: 'node', many: false }, to: { of: 'link', refers: 'node', many: false }, label: { of: 'link', many: false } },
   placement: { thing: { refers: 'space', many: true }, position: { of: 'thing', many: false }, space: { many: true }, layer: { of: 'thing', many: false }, size: { of: 'thing', many: false } },
+  cycle: { element: { refers: 'cycle', many: true }, next: { of: 'element', refers: 'element', many: false }, cycle: { many: true }, element_of: { of: 'element', refers: 'cycle', many: false },
+    position: { of: 'element', many: false }, start: { of: 'cycle', many: false } },
   'values by category': { value: { refers: 'series', many: true }, category: { of: 'value', many: false }, series: { many: true }, value_of: { of: 'value', refers: 'series', many: false },
     unit: { of: 'series', many: false }, order: { of: 'value', many: false } },
 };
@@ -55,6 +57,11 @@ export const STRUCTURES = [
   { name: 'sequence', about: 'elements in an order (of time, of reading, of steps): each element has a position in its sequence; some have a start and an end', roles: [
     ['element', 'an element'], ['position', 'its place or time in the sequence'], ['sequence', 'what holds the elements'], ['element_of', 'the key of an element that names its sequence'],
     ['end', 'where an element that lasts ends'], ['start', 'where the sequence starts'], ['finish', 'where the sequence ends'], ['next', 'the element that comes after']] },
+  // Block "04:40": a cycle is not a sequence with an end: after the last element comes the first again (seasons, the
+  // water cycle, a life cycle); its needed roles are the element and the next one.
+  { name: 'cycle', about: 'elements that follow each other and come round: after the last comes the first again', roles: [
+    ['element', 'a stage of the cycle'], ['next', 'the stage that comes after (after the last: the first)'], ['cycle', 'what holds the stages'], ['element_of', 'the key of a stage that names its cycle'],
+    ['position', 'its place counted from where the cycle is said to start'], ['start', 'the stage the cycle is said to start at']] },
   { name: 'graph', about: 'nodes and the links between them, each link from one node to another with a label', roles: [
     ['node', 'a node'], ['link', 'a link (a type, a key that names another node, or the act that makes one)'], ['from', 'the node a link starts at'], ['to', 'the node a link goes to'], ['label', 'what kind of link it is']] },
   { name: 'placement', about: 'things placed in a space: each thing has a position, and may have a layer and a size', roles: [
@@ -91,6 +98,12 @@ export const FORMS = [
   ['w.chart', 'values by category', 'values of series by category in a chart', [
     ['value', 'w.chart.point', T], ['category', 'w.chart.point.category', K], ['series', 'w.chart.series', T], ['value_of', 'w.chart.point.series', K], ['unit', 'w.chart.chart.unit', K], ['order', 'w.chart.point.n', K]]],
   ['w.chart', 'whole with parts', 'a chart made of series', [['whole', 'w.chart.chart', T], ['part', 'w.chart.series', T], ['part_of', 'w.chart.series.chart', K], ['order', 'w.chart.series.n', K]]],
+  // block "04:40": a diagram is several structures, by its kind (k.diagrams.kind structure=)
+  ['w.diagram', 'graph', 'nodes joined by edges (a flowchart, a network)', [['node', 'w.diagram.node', T], ['link', 'w.diagram.edge', T], ['from', 'w.diagram.edge.from', K], ['to', 'w.diagram.edge.to', K], ['label', 'w.diagram.edge.label', K]]],
+  ['w.diagram', 'whole with parts', 'a node under its parent (a tree, an org chart, a mind map); a diagram made of nodes', [['whole', 'w.diagram.diagram', T], ['part', 'w.diagram.node', T], ['part_of', 'w.diagram.node.diagram', K], ['part_of', 'w.diagram.node.parent', K], ['part_kind', 'w.diagram.node.role', K], ['order', 'w.diagram.node.n', K]]],
+  ['w.diagram', 'sequence', 'nodes in order (a timeline, a pipeline)', [['element', 'w.diagram.node', T], ['position', 'w.diagram.node.n', K], ['sequence', 'w.diagram.diagram', T], ['element_of', 'w.diagram.node.diagram', K]]],
+  ['w.diagram', 'cycle', 'the stages of a cycle diagram, the edge from the last back to the first', [['element', 'w.diagram.node', T], ['next', 'w.diagram.edge', T], ['cycle', 'w.diagram.diagram', T], ['element_of', 'w.diagram.node.diagram', K], ['position', 'w.diagram.node.n', K]]],
+  ['w.diagram', 'placement', 'nodes and groups placed in the diagram by its layout', [['thing', 'w.diagram.node', T], ['thing', 'w.diagram.group', T], ['position', 'w.diagram.node.x', K], ['position', 'w.diagram.node.y', K], ['space', 'w.diagram.diagram', T]]],
   // knowledge worlds whose things a live world makes or reads
   ['k.layouts', 'assignment', 'things go in the slots of a named arrangement', [
     ['item', 'k.layouts.slot.holds', K], ['slot', 'k.layouts.slot', T], ['assigned', 'k.layouts.slot.holds', K], ['container', 'k.layouts.layout', T], ['slot_of', 'k.layouts.slot.layout', K],
@@ -105,6 +118,7 @@ export const FORMS = [
   ['k.scenes', 'placement', 'the things of a scene, each at its usual place', [['thing', 'k.scenes.has', T], ['position', 'k.scenes.has.where', K], ['space', 'k.scenes.scene', T], ['size', 'k.scenes.thing.size', K]]],
   ['k.scenes', 'whole with parts', 'a scene has things, as many as it has', [['whole', 'k.scenes.scene', T], ['part', 'k.scenes.has', T], ['part_of', 'k.scenes.has.scene', K], ['part_kind', 'k.scenes.has.thing', K]]],
   ['k.time', 'sequence', 'the times of a cycle in order (months, weekdays, seasons, hours)', [['element', 'k.time.ordered', T], ['position', 'k.time.ordered.n', K], ['sequence', 'k.time.cycle', T], ['element_of', 'k.time.ordered.cycle', K], ['next', 'k.time.ordered.next', K], ['start', 'k.time.cycle.first', K], ['finish', 'k.time.cycle.last', K]]],
+  ['k.time', 'cycle', 'the times and stages of a cycle come round (December, then January; the frog lays eggs again)', [['element', 'k.time.ordered', T], ['next', 'k.time.ordered.next', K], ['cycle', 'k.time.cycle', T], ['element_of', 'k.time.ordered.cycle', K], ['position', 'k.time.ordered.n', K], ['start', 'k.time.cycle.first', K]]],
   ['k.story', 'sequence', 'the elements of a story in the order told', [['element', 'k.story.element', T], ['position', 'k.story.element.n', K]]],
   ['k.story', 'graph', 'constraints between the elements of a story', [['node', 'k.story.element', T], ['link', 'k.story.constraint', T], ['from', 'k.story.constraint.element', K], ['to', 'k.story.constraint.other', K], ['label', 'k.story.constraint.relation', K]]],
   ['k.genres', 'sequence', 'the parts of a genre in order, and the steps of each part', [['element', 'k.genres.part', T], ['position', 'k.genres.part.n', K], ['sequence', 'k.genres.genre', T], ['element_of', 'k.genres.part.genre', K]]],

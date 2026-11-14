@@ -145,3 +145,7 @@ name= kind=capacity|distinct|order on=<role> about= world= by=`: a container's c
 std.schema.capacity), an item's slot within its container and an element not ending before it starts (w.timeline,
 by its denies), one part of each kind (w.face, by its deny), distinct positions in a sequence (k.genres, k.procedures,
 k.story) and no link from a node to itself (k.geo), these two held by the facts and checked by the test.
+
+Block "04:40": a seventh structure, **cycle** (element, next, cycle, element_of, position, start: after the last comes
+the first again), cast for `k.time` (its cycles and stages) and `w.diagram`; `w.diagram` is also a graph, a whole with
+parts (a node under its parent), a sequence and a placement.

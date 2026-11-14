@@ -1,4 +1,4 @@
-# k.kinds/shards/wordnet-2: 1117 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
+# k.kinds/shards/wordnet-2: 1118 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
 # sources: wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)
 # license: WordNet-3.0
 # script: tools/kinds-core.mjs
@@ -370,6 +370,7 @@
 @k.kinds.parent.seat.space k.kinds.parent name=seat is_a=space dimension=kind from=k.words.sense key=is_a value="seat noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.seatbelt.safety_belt k.kinds.parent name=seatbelt is_a="safety belt" dimension=kind from=k.words.sense key=is_a value="seatbelt noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.seed.fruit k.kinds.parent name=seed is_a=fruit dimension=kind from=k.words.sense key=is_a value="seed noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.seedling.spermatophyte k.kinds.parent name=seedling is_a=spermatophyte dimension=kind from=k.words.sense key=is_a value="seedling noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.self-propelled_vehicle.wheeled_vehicle k.kinds.parent name="self-propelled vehicle" is_a="wheeled vehicle" dimension=kind from=k.words.sense key=kind_of value="ambulance noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.semicircle.plane_figure k.kinds.parent name=semicircle is_a="plane figure" dimension=kind from=k.words.sense key=is_a value="semicircle noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.sense_organ.organ k.kinds.parent name="sense organ" is_a=organ dimension=kind from=k.words.sense key=kind_of value="ear noun 1" core.source="wordnet 3.1"

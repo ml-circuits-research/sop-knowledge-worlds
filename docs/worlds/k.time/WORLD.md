@@ -53,6 +53,16 @@ The derived facts (`k.time.before`, `k.time.season_in`, `k.time.during`) are mad
 loaded, and written into the generated shard `derived` (439 wires, `derived=true`, `core.source="rule <rule id>"`,
 by `tools/derive.mjs`) for tools and hosts that read shards without the rules. Hand-written (`hand-core 1`, CC0-1.0).
 
+## Cycles of nature (version 5, block "04:40")
+
+`k.time.stage` (extends `k.time.ordered`; identity `name` and `cycle`; `n`, `next`, `is` the k.words word, `about`):
+the life cycle of a frog (egg, tadpole, frog), of a butterfly (egg, caterpillar, chrysalis, butterfly) and of a
+flowering plant (seed, seedling, plant, flower, fruit), read from WordNet's glosses (shard `cycles-wordnet`,
+WordNet-3.0), and the water cycle (evaporation, condensation, precipitation, runoff) from the USGS Water Science
+School (shard `cycles-usgs`, public domain). Each is a `k.time.cycle`, so `next` goes round (the frog lays eggs) and
+the one rule makes "before" inside a round (25 facts, in `derived-wordnet-3-0` and `derived-public-domain`: a derived
+fact keeps the licence of the facts it comes from). They fill cycle diagrams (`k.diagrams`).
+
 ## Questions it helps with
 
 See `tests/k.time.questions.jsonl`: how many days April has, which month is the 9th, which months are summer in the

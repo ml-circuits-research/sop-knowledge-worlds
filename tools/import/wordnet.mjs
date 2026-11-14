@@ -25,7 +25,10 @@ const MULTI = /^[a-z][a-z0-9-]*(_[a-z][a-z0-9-]*)+$/;
 // text style and orientation that commands use).
 // Block "21:05" item 3: the content words of the first host's failing paraphrases that reached no sense
 // (tools/paraphrase-words.mjs): subhead.
-export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thick', 'thicken', 'vertical', 'subhead'];
+// Block "04:40": the stages of k.time's cycles of nature that the list does not reach (tadpole, chrysalis, seedling, and
+// the water cycle's evaporation, condensation, precipitation, runoff).
+export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thick', 'thicken', 'vertical', 'subhead',
+  'tadpole', 'chrysalis', 'seedling', 'evaporation', 'condensation', 'precipitation', 'runoff'];
 // Senses WordNet 3.1 does not have, written by hand (hand-core 1, CC0-1.0) into a shard of their own, `hand.sop`, so
 // that no wire of another licence shares a shard with them. `n` counts on from WordNet's senses of that part of
 // speech (none for these). "numbered" is in WordNet only as a form of the verb number ("give numbers to"). Each names

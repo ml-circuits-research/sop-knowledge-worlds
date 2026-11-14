@@ -1,11 +1,11 @@
-# k.kinds/shards/relations-time: the keys of the types of k.time read as relations: 54 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-time: the keys of the types of k.time read as relations: 60 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
 @k.kinds.relation.k.time.before.cycle k.kinds.relation type=k.time.before key=cycle subject=before object=time object_type=k.time.cycle found=declared object_by=name core.source="hand-core 1"
-@k.kinds.relation.k.time.before.earlier k.kinds.relation type=k.time.before key=earlier subject=before object=time object_type=k.time.hour object_sense=time found=value core.source="hand-core 1"
-@k.kinds.relation.k.time.before.later k.kinds.relation type=k.time.before key=later subject=before object=time object_type=k.time.hour object_sense=time found=value core.source="hand-core 1"
+@k.kinds.relation.k.time.before.earlier k.kinds.relation type=k.time.before key=earlier subject=before object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.time.before.later k.kinds.relation type=k.time.before key=later subject=before object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.time.before.derived k.kinds.relation type=k.time.before key=derived subject=before object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.time.cycle.of k.kinds.relation type=k.time.cycle key=of subject=cycle object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.time.cycle.first k.kinds.relation type=k.time.cycle key=first subject=cycle object=word object_type=k.words.sense found=value core.source="hand-core 1"
@@ -53,6 +53,12 @@
 @k.kinds.relation.k.time.span.within k.kinds.relation type=k.time.span key=within subject=span object=time object_type=k.time.part_of_day object_sense=time found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.time.span.starts_about k.kinds.relation type=k.time.span key=starts_about subject=span object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.time.span.ends_about k.kinds.relation type=k.time.span key=ends_about subject=span object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.time.stage.name k.kinds.relation type=k.time.stage key=name subject=stage object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.time.stage.cycle k.kinds.relation type=k.time.stage key=cycle subject=stage object=time object_type=k.time.cycle found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.time.stage.n k.kinds.relation type=k.time.stage key=n subject=stage object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.time.stage.next k.kinds.relation type=k.time.stage key=next subject=stage object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.time.stage.is k.kinds.relation type=k.time.stage key=is subject=stage object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.time.stage.about k.kinds.relation type=k.time.stage key=about subject=stage object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.time.weekday.n k.kinds.relation type=k.time.weekday key=n subject=weekday subject_sense=time object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.time.weekday.weekend k.kinds.relation type=k.time.weekday key=weekend subject=weekday subject_sense=time object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.time.weekday.cycle k.kinds.relation type=k.time.weekday key=cycle subject=weekday subject_sense=time object=time object_type=k.time.cycle found=declared object_by=name core.source="hand-core 1"

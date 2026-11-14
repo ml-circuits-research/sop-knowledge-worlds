@@ -1,4 +1,4 @@
-# k.words/shards/frequency-p: how frequent the 837 words with senses here that start with "p" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-p: how frequent the 838 words with senses here that start with "p" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -587,6 +587,7 @@
 @k.words.frequency.precinct k.words.frequency word=precinct zipf=3.61 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.precious k.words.frequency word=precious zipf=4.33 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.precipice k.words.frequency word=precipice zipf=2.76 band=5 core.source="wordfreq 3.1.1"
+@k.words.frequency.precipitation k.words.frequency word=precipitation zipf=3.64 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.precision k.words.frequency word=precision zipf=4.01 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.predator k.words.frequency word=predator zipf=3.71 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.predecessor k.words.frequency word=predecessor zipf=3.82 band=4 core.source="wordfreq 3.1.1"

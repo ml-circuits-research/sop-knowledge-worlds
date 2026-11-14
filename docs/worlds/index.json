@@ -1,5 +1,5 @@
 {
- "version": "2efee4a099ff",
+ "version": "0ad395c463db",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4496,8 +4496,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1032,
-     "bytes": 198602,
+     "wires": 1063,
+     "bytes": 204565,
      "keys": [
       "a",
       "about",
@@ -4661,6 +4661,7 @@
       "grammar",
       "ground",
       "group",
+      "groups",
       "grows_on",
       "h",
       "habitat",
@@ -4724,6 +4725,10 @@
       "k.commonsense.lives",
       "k.commonsense.placed",
       "k.commonsense.thing",
+      "k.diagrams.fill",
+      "k.diagrams.kind",
+      "k.diagrams.shape",
+      "k.diagrams.source",
       "k.drawing.part",
       "k.drawing.point",
       "k.faces.canon",
@@ -4827,6 +4832,7 @@
       "k.time.season",
       "k.time.season_in",
       "k.time.span",
+      "k.time.stage",
       "k.time.weekday",
       "k.units.currency",
       "k.units.measure",
@@ -5058,6 +5064,7 @@
       "tone",
       "tonic",
       "tool",
+      "topic",
       "tried_by",
       "type",
       "undone_by",
@@ -9283,7 +9290,7 @@
      "id": "k.attributes/shards/same-s",
      "path": "k.attributes/shards/same-s.sop",
      "wires": 426,
-     "bytes": 87981,
+     "bytes": 88003,
      "keys": [
       "animal",
       "body in space",
@@ -12310,6 +12317,101 @@
     "rule-k.commonsense.habitat.place",
     "rule-k.commonsense.inability",
     "rule-k.kinds.up.direct"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "k.diagrams",
+   "version": "1",
+   "schema": "k.diagrams/schema.sop",
+   "exports": [
+    "k.diagrams.fill",
+    "k.diagrams.kind",
+    "k.diagrams.shape",
+    "k.diagrams.source"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "k.diagrams/shards/diagrams",
+     "path": "k.diagrams/shards/diagrams.sop",
+     "wires": 61,
+     "bytes": 15514,
+     "keys": [
+      "after",
+      "b",
+      "branch",
+      "buzan1974",
+      "cell",
+      "centre",
+      "column",
+      "comparison table",
+      "connector",
+      "country",
+      "cycle",
+      "data",
+      "decision",
+      "document",
+      "end",
+      "event",
+      "flowchart",
+      "fruchterman1991",
+      "gilbreth1921",
+      "has",
+      "is_a",
+      "iso5807",
+      "item",
+      "k.attributes.aspect",
+      "k.attributes.number",
+      "k.genres.part",
+      "k.geo.city",
+      "k.geo.country",
+      "k.kinds.parent",
+      "k.kinds.relation",
+      "k.layouts.joins",
+      "k.parts.usual",
+      "k.procedures.step",
+      "k.story.element",
+      "k.time.ordered",
+      "mccallum1855",
+      "mind map",
+      "n",
+      "name",
+      "neighbour",
+      "network",
+      "next",
+      "node",
+      "novak1984",
+      "object",
+      "org chart",
+      "pipeline",
+      "post",
+      "priestley1765",
+      "process",
+      "reingold1981",
+      "root",
+      "row",
+      "stage",
+      "start",
+      "subprocess",
+      "sugiyama1981",
+      "timeline",
+      "tree",
+      "venn diagram",
+      "venn1880"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
    ],
    "licenses": [
     "CC0-1.0"
@@ -28783,6 +28885,41 @@
      "warnings": []
     },
     {
+     "id": "k.kinds/shards/relations-diagrams",
+     "path": "k.kinds/shards/relations-diagrams.sop",
+     "wires": 23,
+     "bytes": 4454,
+     "keys": [
+      "about",
+      "arranged",
+      "cite",
+      "edges",
+      "form",
+      "gives",
+      "groups",
+      "k.diagrams.fill",
+      "k.diagrams.kind",
+      "k.diagrams.shape",
+      "k.diagrams.source",
+      "key",
+      "kind",
+      "layout",
+      "role",
+      "shape",
+      "source",
+      "structure",
+      "topic",
+      "type",
+      "usual_for",
+      "year"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.kinds/shards/relations-drawing",
      "path": "k.kinds/shards/relations-drawing.sop",
      "wires": 12,
@@ -29593,9 +29730,10 @@
     {
      "id": "k.kinds/shards/relations-time",
      "path": "k.kinds/shards/relations-time.sop",
-     "wires": 54,
-     "bytes": 10565,
+     "wires": 60,
+     "bytes": 11516,
      "keys": [
+      "about",
       "am_pm",
       "count",
       "count_about",
@@ -29607,6 +29745,7 @@
       "first",
       "hemisphere",
       "hour12",
+      "is",
       "k.time.before",
       "k.time.cycle",
       "k.time.duration",
@@ -29618,6 +29757,7 @@
       "k.time.season",
       "k.time.season_in",
       "k.time.span",
+      "k.time.stage",
       "k.time.weekday",
       "last",
       "lasts",
@@ -29803,8 +29943,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 237,
-     "bytes": 43824,
+     "wires": 281,
+     "bytes": 51720,
      "keys": [
       "assigned",
       "assignment",
@@ -29813,6 +29953,7 @@
       "connect",
       "constraint",
       "container",
+      "cycle",
       "distinct_positions",
       "element",
       "element_of",
@@ -29931,6 +30072,20 @@
       "w.chart.series",
       "w.chart.series.chart",
       "w.chart.series.n",
+      "w.diagram",
+      "w.diagram.diagram",
+      "w.diagram.edge",
+      "w.diagram.edge.from",
+      "w.diagram.edge.label",
+      "w.diagram.edge.to",
+      "w.diagram.group",
+      "w.diagram.node",
+      "w.diagram.node.diagram",
+      "w.diagram.node.n",
+      "w.diagram.node.parent",
+      "w.diagram.node.role",
+      "w.diagram.node.x",
+      "w.diagram.node.y",
       "w.document",
       "w.document.chapter",
       "w.document.chapter.document",
@@ -32194,8 +32349,8 @@
     {
      "id": "k.kinds/shards/wordnet-2",
      "path": "k.kinds/shards/wordnet-2.sop",
-     "wires": 1117,
-     "bytes": 193314,
+     "wires": 1118,
+     "bytes": 193494,
      "keys": [
       "absorbent material",
       "acarine",
@@ -33185,6 +33340,7 @@
       "seat",
       "seatbelt",
       "seed",
+      "seedling",
       "self-propelled vehicle",
       "semicircle",
       "sense organ",
@@ -55753,7 +55909,7 @@
   },
   {
    "id": "k.time",
-   "version": "4",
+   "version": "5",
    "schema": "k.time/schema.sop",
    "exports": [
     "k.time.before",
@@ -55767,6 +55923,7 @@
     "k.time.season",
     "k.time.season_in",
     "k.time.span",
+    "k.time.stage",
     "k.time.weekday"
    ],
    "depends": [],
@@ -55865,6 +56022,96 @@
       "hand-core-1"
      ],
      "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.time/shards/cycles-usgs",
+     "path": "k.time/shards/cycles-usgs.sop",
+     "wires": 5,
+     "bytes": 1448,
+     "keys": [
+      "condensation",
+      "evaporation",
+      "precipitation",
+      "runoff",
+      "water cycle"
+     ],
+     "sources": [
+      "usgs-water-2026-11-15"
+     ],
+     "license": "public-domain",
+     "warnings": []
+    },
+    {
+     "id": "k.time/shards/cycles-wordnet",
+     "path": "k.time/shards/cycles-wordnet.sop",
+     "wires": 15,
+     "bytes": 3536,
+     "keys": [
+      "butterfly",
+      "butterfly life cycle",
+      "caterpillar",
+      "chrysalis",
+      "egg",
+      "flower",
+      "frog",
+      "frog life cycle",
+      "fruit",
+      "plant",
+      "plant life cycle",
+      "seed",
+      "seedling",
+      "tadpole"
+     ],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.time/shards/derived-public-domain",
+     "path": "k.time/shards/derived-public-domain.sop",
+     "wires": 6,
+     "bytes": 1443,
+     "keys": [
+      "condensation",
+      "evaporation",
+      "precipitation",
+      "runoff",
+      "water cycle"
+     ],
+     "sources": [
+      "rule-k.time.order"
+     ],
+     "license": "public-domain",
+     "warnings": []
+    },
+    {
+     "id": "k.time/shards/derived-wordnet-3-0",
+     "path": "k.time/shards/derived-wordnet-3-0.sop",
+     "wires": 19,
+     "bytes": 3595,
+     "keys": [
+      "butterfly",
+      "butterfly life cycle",
+      "caterpillar",
+      "chrysalis",
+      "egg",
+      "flower",
+      "frog",
+      "frog life cycle",
+      "fruit",
+      "plant",
+      "plant life cycle",
+      "seed",
+      "seedling",
+      "tadpole"
+     ],
+     "sources": [
+      "rule-k.time.order"
+     ],
+     "license": "WordNet-3.0",
      "warnings": []
     },
     {
@@ -55980,10 +56227,14 @@
     "rule-k.time.season_in.first_north",
     "rule-k.time.season_in.first_south",
     "rule-k.time.season_in.last_north",
-    "rule-k.time.season_in.last_south"
+    "rule-k.time.season_in.last_south",
+    "usgs-water-2026-11-15",
+    "wordnet-3.1"
    ],
    "licenses": [
-    "CC0-1.0"
+    "CC0-1.0",
+    "WordNet-3.0",
+    "public-domain"
    ],
    "warnings": []
   },
@@ -56290,8 +56541,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 248,
-     "bytes": 35135,
+     "wires": 250,
+     "bytes": 35397,
      "keys": [
       "after",
       "age_years_about",
@@ -56383,6 +56634,7 @@
       "k.attributes",
       "k.body",
       "k.commonsense",
+      "k.diagrams",
       "k.drawing",
       "k.faces",
       "k.genres",
@@ -56489,6 +56741,7 @@
       "span",
       "speed_about",
       "spread",
+      "stage",
       "start_at",
       "starts_about",
       "step",
@@ -59814,8 +60067,8 @@
     {
      "id": "k.words/shards/ch",
      "path": "k.words/shards/ch.sop",
-     "wires": 532,
-     "bytes": 140442,
+     "wires": 534,
+     "bytes": 140934,
      "keys": [
       "adjective",
       "chad",
@@ -59993,6 +60246,7 @@
       "christmas",
       "christopher",
       "chronicle",
+      "chrysalis",
       "chuck",
       "chuckle",
       "chug",
@@ -60188,8 +60442,8 @@
     {
      "id": "k.words/shards/co-1",
      "path": "k.words/shards/co-1.sop",
-     "wires": 640,
-     "bytes": 158640,
+     "wires": 637,
+     "bytes": 158369,
      "keys": [
       "adjective",
       "adverb",
@@ -60388,6 +60642,7 @@
       "concubine",
       "concussion",
       "condemn",
+      "condensation",
       "condition",
       "conditioner",
       "conditioning",
@@ -60415,8 +60670,6 @@
       "confinement",
       "confirm",
       "confirmation",
-      "confiscate",
-      "conflict",
       "noun",
       "verb"
      ],
@@ -60429,11 +60682,13 @@
     {
      "id": "k.words/shards/co-2",
      "path": "k.words/shards/co-2.sop",
-     "wires": 628,
-     "bytes": 156471,
+     "wires": 634,
+     "bytes": 157827,
      "keys": [
       "adjective",
       "adverb",
+      "confiscate",
+      "conflict",
       "confront",
       "confrontation",
       "confuse",
@@ -62402,8 +62657,8 @@
     {
      "id": "k.words/shards/ev",
      "path": "k.words/shards/ev.sop",
-     "wires": 67,
-     "bytes": 16860,
+     "wires": 69,
+     "bytes": 17583,
      "keys": [
       "adjective",
       "adverb",
@@ -62414,6 +62669,7 @@
       "evaluate",
       "evaluation",
       "evans",
+      "evaporation",
       "eve",
       "even",
       "evening",
@@ -64672,8 +64928,8 @@
     {
      "id": "k.words/shards/frequency-c",
      "path": "k.words/shards/frequency-c.sop",
-     "wires": 1159,
-     "bytes": 121435,
+     "wires": 1161,
+     "bytes": 121656,
      "keys": [
       "c",
       "ca",
@@ -65083,6 +65339,7 @@
       "christmas",
       "christopher",
       "chronicle",
+      "chrysalis",
       "chuck",
       "chuckle",
       "chug",
@@ -65407,6 +65664,7 @@
       "concubine",
       "concussion",
       "condemn",
+      "condensation",
       "condition",
       "conditioner",
       "conditioning",
@@ -66505,8 +66763,8 @@
     {
      "id": "k.words/shards/frequency-e",
      "path": "k.words/shards/frequency-e.sop",
-     "wires": 391,
-     "bytes": 41199,
+     "wires": 392,
+     "bytes": 41311,
      "keys": [
       "e",
       "each",
@@ -66785,6 +67043,7 @@
       "evaluate",
       "evaluation",
       "evans",
+      "evaporation",
       "eve",
       "even",
       "evening",
@@ -70592,8 +70851,8 @@
     {
      "id": "k.words/shards/frequency-p",
      "path": "k.words/shards/frequency-p.sop",
-     "wires": 837,
-     "bytes": 87152,
+     "wires": 838,
+     "bytes": 87268,
      "keys": [
       "p",
       "pa",
@@ -71179,6 +71438,7 @@
       "precinct",
       "precious",
       "precipice",
+      "precipitation",
       "precision",
       "predator",
       "predecessor",
@@ -71502,8 +71762,8 @@
     {
      "id": "k.words/shards/frequency-r",
      "path": "k.words/shards/frequency-r.sop",
-     "wires": 600,
-     "bytes": 62444,
+     "wires": 601,
+     "bytes": 62546,
      "keys": [
       "r",
       "ra",
@@ -72088,6 +72348,7 @@
       "rung",
       "runner",
       "running",
+      "runoff",
       "runway",
       "rupert",
       "rupture",
@@ -72115,8 +72376,8 @@
     {
      "id": "k.words/shards/frequency-s",
      "path": "k.words/shards/frequency-s.sop",
-     "wires": 1296,
-     "bytes": 133985,
+     "wires": 1297,
+     "bytes": 134091,
      "keys": [
       "s",
       "sa",
@@ -72367,6 +72628,7 @@
       "seduction",
       "see",
       "seed",
+      "seedling",
       "seeing",
       "seek",
       "seeker",
@@ -80657,8 +80919,8 @@
     {
      "id": "k.words/shards/pr",
      "path": "k.words/shards/pr.sop",
-     "wires": 549,
-     "bytes": 134590,
+     "wires": 552,
+     "bytes": 135673,
      "keys": [
       "adjective",
       "adverb",
@@ -80684,6 +80946,7 @@
       "precinct",
       "precious",
       "precipice",
+      "precipitation",
       "precision",
       "predator",
       "predecessor",
@@ -81743,8 +82006,8 @@
     {
      "id": "k.words/shards/ru",
      "path": "k.words/shards/ru.sop",
-     "wires": 143,
-     "bytes": 35840,
+     "wires": 145,
+     "bytes": 36591,
      "keys": [
       "adjective",
       "noun",
@@ -81778,6 +82041,7 @@
       "rung",
       "runner",
       "running",
+      "runoff",
       "runway",
       "rupert",
       "rupture",
@@ -82098,8 +82362,8 @@
     {
      "id": "k.words/shards/se",
      "path": "k.words/shards/se.sop",
-     "wires": 378,
-     "bytes": 96306,
+     "wires": 379,
+     "bytes": 96656,
      "keys": [
       "adjective",
       "adverb",
@@ -82144,6 +82408,7 @@
       "seduction",
       "see",
       "seed",
+      "seedling",
       "seeing",
       "seek",
       "seeker",
@@ -83487,8 +83752,8 @@
     {
      "id": "k.words/shards/ta",
      "path": "k.words/shards/ta.sop",
-     "wires": 252,
-     "bytes": 62502,
+     "wires": 253,
+     "bytes": 62829,
      "keys": [
       "adjective",
       "noun",
@@ -83505,6 +83770,7 @@
       "tactic",
       "tactics",
       "tad",
+      "tadpole",
       "taffy",
       "tag",
       "tahiti",
@@ -87274,6 +87540,151 @@
    ],
    "wires": 41,
    "bytes": 6227,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.diagram",
+   "version": "1",
+   "schema": "w.diagram/schema.sop",
+   "about": "diagrams of nodes joined by edges, in groups, laid out by the diagram's kind",
+   "names": [
+    "diagram",
+    "diagrams",
+    "flowchart",
+    "flow chart",
+    "cycle diagram",
+    "tree diagram",
+    "mind map",
+    "venn diagram",
+    "org chart",
+    "organisation chart",
+    "organization chart",
+    "network diagram",
+    "process diagram",
+    "concept map"
+   ],
+   "kinds": [
+    {
+     "type": "w.diagram.diagram",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "title",
+      "form",
+      "layout",
+      "topic"
+     ],
+     "words": [
+      "diagram",
+      "diagrams",
+      "flowchart",
+      "scheme"
+     ]
+    },
+    {
+     "type": "w.diagram.node",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "place",
+      "connect",
+      "group",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "label",
+      "diagram",
+      "role",
+      "shape",
+      "parent",
+      "group",
+      "n",
+      "x",
+      "y",
+      "colour"
+     ],
+     "words": [
+      "node",
+      "nodes",
+      "box",
+      "boxes",
+      "step",
+      "steps",
+      "stage",
+      "stages",
+      "bubble",
+      "bubbles"
+     ]
+    },
+    {
+     "type": "w.diagram.edge",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "from",
+      "to",
+      "label",
+      "direction",
+      "diagram"
+     ],
+     "words": [
+      "edge",
+      "edges",
+      "arrow",
+      "arrows",
+      "link",
+      "links",
+      "line",
+      "lines",
+      "connector"
+     ]
+    },
+    {
+     "type": "w.diagram.group",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "label",
+      "diagram",
+      "shape",
+      "parent"
+     ],
+     "words": [
+      "group",
+      "groups",
+      "set",
+      "sets",
+      "cluster",
+      "lane"
+     ]
+    }
+   ],
+   "wires": 65,
+   "bytes": 11160,
    "sources": [
     "hand-core-1"
    ],

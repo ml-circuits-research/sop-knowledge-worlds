@@ -50,7 +50,7 @@ export const MEASURES = {
   'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } }, given_name: { holders: { counts: 'human in Wikidata whose given name it is' } } },
   'k.scenes': { has: { count: { counts: 'thing of that name in the scene' } } },
   'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
-  'k.time': { ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord },
+  'k.time': { ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord }, stage: { n: ord },
     part_of_day: { n: ord, starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, span: { starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, hour: { n: { counts: 'hour after midnight' }, hour12: { counts: 'hour after midnight or noon' } },
     duration: { count: { counts: 'span that the key unit of the same fact names' }, count_about: { counts: 'span that the key unit of the same fact names' } } },
   'k.units': { unit: { factor: { counts: 'base unit of its quantity in one of the unit' }, offset: { counts: 'base unit of its quantity added after the factor' } }, currency: { decimals: { counts: 'digit after the point' } } },
@@ -75,6 +75,8 @@ export const MEASURES = {
   'k.genres': { source: { year: ord }, register: { sentence_min: { counts: 'word' }, sentence_typical: { counts: 'word' }, sentence_max: { counts: 'word' }, paragraph_min: { counts: 'sentence' }, paragraph_max: { counts: 'sentence' }, vocabulary_band: ord },
     part: { n: ord, min: { counts: 'time the part occurs in one document' }, max: { counts: 'time the part occurs in one document' } }, step: { n: ord, min: { counts: 'sentence' }, max: { counts: 'sentence' } } },
   // k.story: places in an order and years are orders; how many of an element a story has.
+  // k.diagrams: a year is an order.
+  'k.diagrams': { source: { year: ord } },
   'k.story': { source: { year: ord }, element: { n: ord, min: { counts: 'element of that name in one story' }, max: { counts: 'element of that name in one story' } } },
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord, choose: { counts: 'value chosen' }, choose_min: { counts: 'value chosen' } }, match: { n: ord }, step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
 };

@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('seven world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.chart', 'w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
+test('eight world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
@@ -33,7 +33,7 @@ test('seven world schemas; each names no function, loads with std.acts, has word
     assert.deepEqual(index.schemas.find((x) => x.id === s.id), d.entry, s.id);
     assert.match(s.schemaText, /^# license: CC0-1\.0$/m);
   }
-  // All seven together in one world: no name of one clashes with another.
+  // All eight together in one world: no name of one clashes with another.
   assert.deepEqual(actsWorld().warnings ?? [], []);
 });
 
@@ -46,7 +46,7 @@ test('one sopworld build: the reusable worlds are validated with the build that 
 });
 
 test('a host finds a schema by name: the words of the vocabulary lead to the schema', () => {
-  for (const [word, id] of [['seating plan', 'w.seating'], ['table plan', 'w.seating'], ['shopping list', 'w.list'], ['checklist', 'w.list'], ['timeline', 'w.timeline'], ['chronology', 'w.timeline'], ['face', 'w.face'], ['avatar', 'w.face'], ['map', 'w.map'], ['world map', 'w.map'], ['bar chart', 'w.chart'], ['pie chart', 'w.chart'], ['line graph', 'w.chart']]) {
+  for (const [word, id] of [['seating plan', 'w.seating'], ['table plan', 'w.seating'], ['shopping list', 'w.list'], ['checklist', 'w.list'], ['timeline', 'w.timeline'], ['chronology', 'w.timeline'], ['face', 'w.face'], ['avatar', 'w.face'], ['map', 'w.map'], ['world map', 'w.map'], ['bar chart', 'w.chart'], ['pie chart', 'w.chart'], ['line graph', 'w.chart'], ['flowchart', 'w.diagram'], ['mind map', 'w.diagram'], ['venn diagram', 'w.diagram']]) {
     assert.ok(vocab[word]?.includes(`${id}/schema.sop`), word);
     assert.ok(index.schemas.find((x) => x.id === id).names.includes(word), word);
   }
@@ -283,4 +283,25 @@ test('w.map: "zoom in" names no thing: the view makes its state on first use and
   assert.deepEqual([r.ok, r.result.thing, r.result.value], [true, 'view_w_map', '4']);
   assert.equal(act('change', { attr: 'layer', value: 'rivers' }).ok, true);
   assert.equal(act('ask', { thing: 'w.map', attr: 'layer' }).result.value, 'rivers');
+});
+
+// Block "04:40": a diagram of nodes, edges and groups; what each kind of diagram is lives in k.diagrams
+// (tests/k.diagrams.test.mjs builds diagrams from the catalog's knowledge).
+test('w.diagram: a session: a flowchart with a decision, its edges labelled; a Venn diagram\'s item in two sets; a wrong role refused (an edge without its `to` is not refused by make: the pinned build does not check `required` there)', () => {
+  const w = actsWorld(['w.diagram']), act = session(w);
+  assert.equal(act('make', { kind: 'w.diagram.diagram', title: 'make tea', form: 'flowchart', layout: 'top_down' }).result.thing, 'w_diagram_diagram1');
+  for (const [label, role, shape, n] of [['start', 'start', 'oval', 1], ['is the kettle full?', 'decision', 'diamond', 2], ['fill the kettle', 'process', 'rectangle', 3], ['boil the water', 'process', 'rectangle', 4], ['end', 'end', 'oval', 5]]) {
+    assert.equal(act('make', { kind: 'w.diagram.node', label, role, shape, n, diagram: '$w_diagram_diagram1' }).ok, true, label);
+  }
+  for (const [from, to, label] of [[1, 2, null], [2, 3, 'no'], [2, 4, 'yes'], [3, 4, null], [4, 5, null]]) {
+    assert.equal(act('make', { kind: 'w.diagram.edge', from: `$w_diagram_node${from}`, to: `$w_diagram_node${to}`, ...(label ? { label } : {}), diagram: '$w_diagram_diagram1' }).ok, true);
+  }
+  assert.equal(act('ask', { thing: 'w_diagram_edge3', attr: 'label' }).result.value, 'yes');
+  assert.equal(act('ask', { thing: 'w_diagram_edge1', attr: 'direction' }).result.value, 'forward');
+  assert.equal(act('make', { kind: 'w.diagram.diagram', title: 'cats and dogs', form: 'venn', layout: 'overlapping' }).ok, true);
+  assert.equal(act('make', { kind: 'w.diagram.group', label: 'cats', diagram: '$w_diagram_diagram2' }).ok, true);
+  assert.equal(act('make', { kind: 'w.diagram.group', label: 'dogs', diagram: '$w_diagram_diagram2' }).ok, true);
+  assert.equal(act('make', { kind: 'w.diagram.node', label: 'four legs', role: 'item', shape: 'dot', group: ['$w_diagram_group1', '$w_diagram_group2'], diagram: '$w_diagram_diagram2' }).ok, true);
+  assert.equal(act('pick', { kind: 'w.diagram.node' }).result.things.length, 6);
+  assert.deepEqual(act('make', { kind: 'w.diagram.node', label: 'x', role: 'banana' }).violations[0].key, 'role');
 });

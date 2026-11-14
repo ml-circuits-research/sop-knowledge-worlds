@@ -1,4 +1,4 @@
-# k.words/shards/frequency-s: how frequent the 1296 words with senses here that start with "s" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-s: how frequent the 1297 words with senses here that start with "s" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -252,6 +252,7 @@
 @k.words.frequency.seduction k.words.frequency word=seduction zipf=3.22 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.see k.words.frequency word=see zipf=6.1 band=1 core.source="wordfreq 3.1.1"
 @k.words.frequency.seed k.words.frequency word=seed zipf=4.37 band=3 core.source="wordfreq 3.1.1"
+@k.words.frequency.seedling k.words.frequency word=seedling zipf=2.75 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.seeing k.words.frequency word=seeing zipf=5.04 band=2 core.source="wordfreq 3.1.1"
 @k.words.frequency.seek k.words.frequency word=seek zipf=4.61 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.seeker k.words.frequency word=seeker zipf=3.41 band=4 core.source="wordfreq 3.1.1"

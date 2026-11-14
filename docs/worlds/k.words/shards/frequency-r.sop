@@ -1,4 +1,4 @@
-# k.words/shards/frequency-r: how frequent the 600 words with senses here that start with "r" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-r: how frequent the 601 words with senses here that start with "r" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -586,6 +586,7 @@
 @k.words.frequency.rung k.words.frequency word=rung zipf=3.2 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.runner k.words.frequency word=runner zipf=4.18 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.running k.words.frequency word=running zipf=5.23 band=2 core.source="wordfreq 3.1.1"
+@k.words.frequency.runoff k.words.frequency word=runoff zipf=3.53 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.runway k.words.frequency word=runway zipf=3.92 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.rupert k.words.frequency word=rupert zipf=3.61 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.rupture k.words.frequency word=rupture zipf=3.28 band=4 core.source="wordfreq 3.1.1"

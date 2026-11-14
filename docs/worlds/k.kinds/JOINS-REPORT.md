@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **181** in 29 worlds; distinct values 6209, meeting a target 6049 (97.4 %), open 160
+- declared joins: **188** in 30 worlds; distinct values 6269, meeting a target 6109 (97.4 %), open 160
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **111**; left undeclared on purpose: 6
+- undeclared keys whose values the value share joins to a type: **112**; left undeclared on purpose: 6
 
 ## Declared joins
 
@@ -58,6 +58,12 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.colours | `k.colours.mix.gives` | `k.colours.colour` | name | 23 | 23 |  |
 | k.commonsense | `k.commonsense.thing.can` | `k.actions.action` | name | 14 | 14 |  |
 | k.commonsense | `k.commonsense.thing.cannot` | `k.actions.action` | name | 3 | 3 |  |
+| k.diagrams | `k.diagrams.fill.kind` | `k.diagrams.kind` | name | 9 | 9 |  |
+| k.diagrams | `k.diagrams.kind.arranged` | `k.layouts.layout` | name | 8 | 8 |  |
+| k.diagrams | `k.diagrams.kind.source` | `k.diagrams.source` | name | 10 | 10 |  |
+| k.diagrams | `k.diagrams.kind.structure` | `k.kinds.structure` | name | 5 | 5 |  |
+| k.diagrams | `k.diagrams.shape.kind` | `k.diagrams.kind` | name | 10 | 10 |  |
+| k.diagrams | `k.diagrams.shape.source` | `k.diagrams.source` | name | 6 | 6 |  |
 | k.faces | `k.faces.expression.style` | `k.faces.canon` | style | 1 | 1 |  |
 | k.faces | `k.faces.part.slot` | `k.faces.slot` | name | 18 | 18 |  |
 | k.faces | `k.faces.preset.clothes` | `k.colours.colour` | name | 10 | 10 |  |
@@ -164,14 +170,15 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.story | `k.story.obstacle.overcome_by` | `k.actions.action` | name | 6 | 6 |  |
 | k.story | `k.story.obstacle.thing` | `k.objects.object` | name | 7 | 7 |  |
 | k.story | `k.story.obstacle.tried_by` | `k.actions.action` | name | 9 | 9 |  |
-| k.time | `k.time.before.cycle` | `k.time.cycle` | name | 5 | 5 |  |
+| k.time | `k.time.before.cycle` | `k.time.cycle` | name | 9 | 9 |  |
 | k.time | `k.time.cycle.lasts` | `k.time.duration` | name | 3 | 3 |  |
 | k.time | `k.time.duration.unit` | `k.units.unit` | name | 9 | 6 | `century`, `decade`, `month` |
-| k.time | `k.time.ordered.cycle` | `k.time.cycle` | name | 5 | 5 |  |
+| k.time | `k.time.ordered.cycle` | `k.time.cycle` | name | 9 | 9 |  |
 | k.time | `k.time.season_in.first` | `k.time.month` | name | 4 | 4 |  |
 | k.time | `k.time.season_in.last` | `k.time.month` | name | 4 | 4 |  |
 | k.time | `k.time.span.cycle` | `k.time.cycle` | name | 3 | 3 |  |
 | k.time | `k.time.span.within` | `k.time.part_of_day` | name | 2 | 2 |  |
+| k.time | `k.time.stage.cycle` | `k.time.cycle` | name | 4 | 4 |  |
 | k.units | `k.units.currency.country` | `k.geo.country` | name | 249 | 249 |  |
 | k.units | `k.units.measure.unit` | `k.units.unit` | name | 13 | 13 |  |
 | k.units | `k.units.quantity.base` | `k.units.unit` | name | 8 | 8 |  |
@@ -234,6 +241,9 @@ exact (token for token) against the first candidate; the value share itself also
 | k.colours | `k.colours.colour.tone` | value | `k.values.shade` | name | 3 | 2 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.commonsense | `k.commonsense.thing.made_of` | thing | `k.attributes.thing`, `k.objects.object`, `k.scenes.thing` | name | 6 | 4 |
+| k.diagrams | `k.diagrams.kind.form` | value | `k.diagrams.kind` | name | 10 | 6 |
+| k.diagrams | `k.diagrams.kind.groups` | value | `k.values.reply` | name | 2 | 2 |
+| k.diagrams | `k.diagrams.shape.shape` | value | `k.values.shape` | name | 11 | 6 |
 | k.drawing | `k.drawing.part.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 8 | 8 |
 | k.drawing | `k.drawing.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
 | k.drawing | `k.drawing.part.pointing` | value | `k.values.direction` | name | 4 | 4 |
@@ -303,8 +313,6 @@ exact (token for token) against the first candidate; the value share itself also
 | k.space | `k.space.body.colour` | value | `k.colours.colour`, `k.values.colour` | name | 7 | 7 |
 | k.space | `k.space.kind.made_of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
-| k.time | `k.time.before.earlier` | time | `k.time.hour` | name | 46 | 23 |
-| k.time | `k.time.before.later` | time | `k.time.hour` | name | 46 | 23 |
 | k.time | `k.time.during.hemisphere` | value | `k.values.direction` | name | 2 | 2 |
 | k.time | `k.time.hour.part` | time | `k.time.part_of_day` | name | 4 | 4 |
 | k.time | `k.time.month.season_north` | time | `k.time.season` | name | 4 | 4 |

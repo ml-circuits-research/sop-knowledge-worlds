@@ -1,4 +1,4 @@
-# k.words/shards/frequency-e: how frequent the 391 words with senses here that start with "e" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-e: how frequent the 392 words with senses here that start with "e" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -280,6 +280,7 @@
 @k.words.frequency.evaluate k.words.frequency word=evaluate zipf=4.01 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.evaluation k.words.frequency word=evaluation zipf=4.21 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.evans k.words.frequency word=evans zipf=4.22 band=3 core.source="wordfreq 3.1.1"
+@k.words.frequency.evaporation k.words.frequency word=evaporation zipf=3.08 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.eve k.words.frequency word=eve zipf=4.32 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.even k.words.frequency word=even zipf=5.99 band=2 core.source="wordfreq 3.1.1"
 @k.words.frequency.evening k.words.frequency word=evening zipf=4.86 band=3 core.source="wordfreq 3.1.1"

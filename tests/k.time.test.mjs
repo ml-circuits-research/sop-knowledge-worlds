@@ -11,9 +11,10 @@ const one = (f, k) => v(f, k)[0];
 
 test('every cycle: its members have distinct positions, `next` goes round once through all of them, from first to last', () => {
   const cycles = w.ofType('k.time.cycle');
-  assert.deepEqual(cycles.map((c) => one(c, 'name')).sort(), ['clock', 'day', 'seasons', 'week', 'year']);
+  // version 5 (block "04:40"): the cycles of nature are stages of one type, so a cycle's members are those that name it
+  assert.deepEqual(cycles.map((c) => one(c, 'name')).sort(), ['butterfly life cycle', 'clock', 'day', 'frog life cycle', 'plant life cycle', 'seasons', 'water cycle', 'week', 'year']);
   for (const c of cycles) {
-    const members = w.ofType(one(c, 'of'));
+    const members = w.ofType(one(c, 'of')).filter((m) => one(m, 'cycle') === one(c, 'name'));
     assert.equal(members.length, Number(one(c, 'length')), one(c, 'name'));
     for (const m of members) assert.equal(one(m, 'cycle'), one(c, 'name'));
     const byName = new Map(members.map((m) => [one(m, 'name'), m]));
@@ -37,7 +38,7 @@ test('one rule makes "before" for every pair of a cycle: n(n-1)/2 facts per cycl
   const before = w.ofType('k.time.before');
   const count = {};
   for (const b of before) count[one(b, 'cycle')] = (count[one(b, 'cycle')] ?? 0) + 1;
-  assert.deepEqual(count, { week: 21, year: 66, seasons: 6, day: 6, clock: 276 });
+  assert.deepEqual(count, { week: 21, year: 66, seasons: 6, day: 6, clock: 276, 'frog life cycle': 3, 'butterfly life cycle': 6, 'plant life cycle': 10, 'water cycle': 6 });
   const is = (a, b) => before.some((f) => one(f, 'earlier') === a && one(f, 'later') === b);
   assert.ok(is('Monday', 'Friday'));          // Monday is before Friday
   assert.ok(!is('Friday', 'Monday'));
@@ -100,4 +101,20 @@ test('during (Round 12, block 07:40): every hour within its part of the day, eve
   ];
   assert.equal(want.length, 48 + 7 + 12 + 4 + 2 + 2);
   assert.deepEqual([...new Set(during)].sort(), [...new Set(want)].sort());
+});
+
+test('the cycles of nature (block "04:40"): stages in order, each a word of k.words, the last followed by the first', () => {
+  const stages = w.ofType('k.time.stage');
+  const of = (cycle) => stages.filter((x) => one(x, 'cycle') === cycle).sort((a, b) => one(a, 'n') - one(b, 'n')).map((x) => one(x, 'name'));
+  assert.deepEqual(of('frog life cycle'), ['egg', 'tadpole', 'frog']);
+  assert.deepEqual(of('butterfly life cycle'), ['egg', 'caterpillar', 'chrysalis', 'butterfly']);
+  assert.deepEqual(of('plant life cycle'), ['seed', 'seedling', 'plant', 'flower', 'fruit']);
+  assert.deepEqual(of('water cycle'), ['evaporation', 'condensation', 'precipitation', 'runoff']);
+  assert.equal(one(stages.find((x) => one(x, 'name') === 'butterfly' && one(x, 'cycle') === 'butterfly life cycle'), 'next'), 'egg');
+  assert.equal(w.query({ type: 'k.time.stage', where: { name: 'tadpole' }, seek: 'next' }).value, 'frog');
+  const before = w.ofType('k.time.before');
+  assert.ok(before.some((f) => one(f, 'cycle') === 'frog life cycle' && one(f, 'earlier') === 'egg' && one(f, 'later') === 'frog'));
+  const words = new Set(scanWorlds().find((x) => x.id === 'k.words').shards.flatMap((s) => [...s.text.matchAll(/ k\.words\.sense word=("[^"]*"|\S+) /g)].map((m) => m[1].replace(/"/g, '').toLowerCase())));
+  for (const x of stages) assert.ok(words.has(one(x, 'is')), one(x, 'is'));
+  for (const x of stages) assert.ok(one(x, 'about'), one(x, 'name'));
 });

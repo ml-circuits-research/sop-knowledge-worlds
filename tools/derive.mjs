@@ -120,8 +120,11 @@ export function derivedOf(worlds, id) {
   }
   const records = [...out.values()].filter((r) => r.entries.length || r.made);
   const licenses = new Set();
-  for (const r of records) for (const f of r.from) { const s = shardOf.get(f); if (s) licenses.add(readHeader(s.text).license?.[0]); }
-  return { records, licenses: [...licenses].filter(Boolean).sort(byText) };
+  for (const r of records) {
+    r.licenses = [...new Set([...r.from].map((f) => shardOf.get(f)).filter(Boolean).map((s) => readHeader(s.text).license?.[0]).filter(Boolean))].sort(byText);
+    for (const l of r.licenses) licenses.add(l);
+  }
+  return { records, licenses: [...licenses].sort(byText) };
 }
 
 const line = (world, r) => {
@@ -133,11 +136,25 @@ const line = (world, r) => {
 };
 
 // The files of the derived shards of one module: name -> text.
+// A derived fact keeps the licence of the facts it is derived from (block "04:40": k.time's cycles of nature come
+// from WordNet and the USGS): one shard set per licence, `derived` for the module's own (CC0, or the only one), and
+// `derived-<licence>` for each other; a fact derived from facts of two licences is refused.
 export function derivedShards(worlds, id) {
   const { records, licenses } = derivedOf(worlds, id);
   if (!records.length) return {};
-  if (licenses.length > 1) throw new Error(`${id}: the rules read facts under ${licenses.join(', ')}; one licence per shard`);
-  const license = licenses[0] ?? 'CC0-1.0';
+  const mixed = records.filter((r) => r.licenses.length > 1);
+  if (mixed.length) throw new Error(`${id}: a rule reads facts under ${mixed[0].licenses.join(', ')} for one fact; one licence per shard`);
+  const main = licenses.length <= 1 ? licenses[0] ?? 'CC0-1.0' : licenses.includes('CC0-1.0') ? 'CC0-1.0' : licenses[0];
+  const files = {};
+  for (const license of licenses.length ? licenses : [main]) {
+    const mine = records.filter((r) => (r.licenses[0] ?? main) === license);
+    if (!mine.length) continue;
+    Object.assign(files, derivedFiles(worlds, id, mine, license, license === main ? DERIVED : `${DERIVED}-${license.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')}`));
+  }
+  return files;
+}
+
+function derivedFiles(worlds, id, records, license, base) {
   const entry = worlds.find((w) => w.id === id);
   const version = moduleInfo(entry.schemaText).version;
   const rules = [...new Set(records.map((r) => r.rule))].sort(byText);
@@ -149,7 +166,7 @@ export function derivedShards(worlds, id) {
   const parts = splitParts(groups);
   const files = {};
   parts.forEach((part, i) => {
-    const name = parts.length === 1 ? `${DERIVED}.sop` : `${DERIVED}-${i + 1}.sop`;
+    const name = parts.length === 1 ? `${base}.sop` : `${base}-${i + 1}.sop`;
     const lines = part.flatMap((g) => g.lines);
     const used = [...new Set(lines.map((l) => /core\.source="rule ([^"]+)"/.exec(l)[1]))];
     const head = [`# ${id}/shards/${name.slice(0, -4)}: generated, do not edit. What the rules of ${id} (version ${version}) and of the modules it imports derive from the told facts`,

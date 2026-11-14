@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.time core.module name=k.time version=4 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration core.source="hand-core 1"
+@k.time core.module name=k.time version=5 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration exports=stage core.source="hand-core 1"
 
 # Order in time. Every time that repeats in a cycle (a weekday in the week, a month in the year, a season, a part of
 # the day, an hour of the clock) is a `k.time.ordered`: `cycle` names its cycle, `n` is its position in it, `next`
@@ -76,6 +76,19 @@
 @k.time.season_in.first core.slot of=k.time.season_in key=first kind=atom type=k.time.month by=name core.source="hand-core 1"
 @k.time.season_in.last core.slot of=k.time.season_in key=last kind=atom type=k.time.month by=name core.source="hand-core 1"
 @k.time.season_in.derived core.slot of=k.time.season_in key=derived kind=boolean core.source="hand-core 1"
+
+# A stage of a cycle of nature (version 5, block "04:40", for cycle diagrams): the life cycle of a frog (egg, tadpole,
+# frog), of a butterfly, of a flowering plant, the water cycle. Like every k.time.ordered: `cycle`, `n` from where the
+# cycle is said to start, `next` (after the last comes the first: the frog lays eggs). `name` and `cycle` are its
+# identity (an egg is a stage of two cycles); `is` the k.words word the stage is (tadpole, chrysalis), `about` what
+# happens at it. Shards cycles-wordnet (the life cycles, from WordNet's glosses) and cycles-usgs (the water cycle).
+@k.time.stage core.type of=k.time.stage extends=k.time.ordered shared=true closed=true core.source="hand-core 1"
+@k.time.stage.name core.slot of=k.time.stage key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.stage.cycle core.slot of=k.time.stage key=cycle id=true required=true kind=atom kind=string type=k.time.cycle by=name core.source="hand-core 1"
+@k.time.stage.n core.slot of=k.time.stage key=n required=true kind=integer min=1 max=20 core.source="hand-core 1"
+@k.time.stage.next core.slot of=k.time.stage key=next required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.stage.is core.slot of=k.time.stage key=is kind=atom kind=string core.source="hand-core 1"
+@k.time.stage.about core.slot of=k.time.stage key=about kind=string core.source="hand-core 1"
 
 @k.time.season_in.differ core.check fn=neq args=?season args=?other
 @k.time.season_in.first_north.before k.time.month name=?before season_north=?other next=?month
@@ -205,6 +218,11 @@
 @k.time.word.key.season_in.first core.word text=first means=k.time.season_in.first core.source="hand-core 1"
 @k.time.word.key.season_in.last core.word text=last means=k.time.season_in.last core.source="hand-core 1"
 @k.time.word.key.season_in.derived core.word text=derived means=k.time.season_in.derived core.source="hand-core 1"
+@k.time.word.key.stage.cycle core.word text=cycle means=k.time.stage.cycle core.source="hand-core 1"
+@k.time.word.key.stage.n core.word text=n means=k.time.stage.n core.source="hand-core 1"
+@k.time.word.key.stage.next core.word text=next means=k.time.stage.next core.source="hand-core 1"
+@k.time.word.key.stage.is core.word text=is means=k.time.stage.is core.source="hand-core 1"
+@k.time.word.key.stage.about core.word text=about means=k.time.stage.about core.source="hand-core 1"
 @k.time.word.key.part_of_day.n core.word text=n means=k.time.part_of_day.n core.source="hand-core 1"
 @k.time.word.key.part_of_day.starts_about core.word text=starts means=k.time.part_of_day.starts_about core.source="hand-core 1"
 @k.time.word.key.part_of_day.ends_about core.word text=ends means=k.time.part_of_day.ends_about core.source="hand-core 1"

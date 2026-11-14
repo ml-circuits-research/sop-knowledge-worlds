@@ -4905,3 +4905,42 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   currencies with symbols, units, plural units, minor units, every currency used by a country; slang, symbols and
   the usual reading of unit words), 6 questions in tests/k.units.questions.jsonl. `npm run test:changed` on
   a04b993: 31 files, 248 tests, 245 pass, 2 skipped, 1 fail (COVERAGE.md stale: `npm run reports` rerun, 4 pass).
+
+## 2026-11-15 — third worker: diagram kinds as knowledge (block 04:40, items 1-3): w.diagram, k.diagrams, cycles of nature
+
+- **`w.diagram`** (new world schema, std.schema, 65 wires, 11,160 bytes, CC0): diagram (title, form: 10 kinds, layout:
+  top_down / left_right / radial / circular / grid / overlapping / free, topic), node (label, role: 19 values, shape:
+  11 values, parent, group many, n, x, y, colour), edge (from, to, label, direction forward / both / none), group
+  (label, shape, parent). Acts of std.acts; limits 20 / 500 / 1,000 / 100. Found by diagram, flowchart, mind map,
+  venn diagram, org chart, cycle diagram ... Session in tests/w.schemas.test.mjs (a flowchart with a decision, a Venn
+  item in two sets, a wrong role refused; the pinned build does not refuse an edge without `to`: required is not
+  checked by make).
+- **`k.diagrams`** (new world, `tools/diagrams-core.mjs`, shard diagrams 61 wires, 15,514 bytes, CC0): 10 kinds
+  (flowchart, tree, cycle, timeline, mind map, Venn diagram, org chart, network, pipeline, comparison table) with
+  structure (k.kinds), layout, arranged (k.layouts: flow, tree, ring, row, radial, scatter, grid ...), edges, roles,
+  uses and sources; 23 shape conventions (ISO 5807 for the flowchart: oval, rectangle, diamond, parallelogram ...);
+  18 fills naming the catalog's types and keys (k.procedures.step after / n, k.kinds.parent is_a, k.parts.usual has,
+  k.time.ordered next / n, k.geo.country neighbour, k.attributes.number ...); 10 works cited (Gilbreth 1921, ISO 5807,
+  Venn 1880, Buzan 1974, Priestley 1765, McCallum 1855, Reingold and Tilford 1981, Sugiyama et al. 1981, Fruchterman
+  and Reingold 1991, Novak and Gowin 1984). The org chart has no fill: no world says who reports to whom.
+- **k.kinds**: a seventh structure `cycle` (element, next, cycle, element_of, position, start), cast for k.time and
+  w.diagram (w.diagram is also graph, whole with parts, sequence, placement): structures 281 wires, 51,720 bytes.
+- **Cycles of nature in k.time** (version 5): `k.time.stage` (extends k.time.ordered; identity name + cycle; is,
+  about): frog (egg, tadpole, frog), butterfly (egg, caterpillar, chrysalis, butterfly), flowering plant (seed,
+  seedling, plant, flower, fruit) from WordNet's glosses (cycles-wordnet, 15 wires, WordNet-3.0), the water cycle
+  (evaporation, condensation, precipitation, runoff) from the USGS Water Science School (cycles-usgs, 5 wires,
+  public domain; sources/usgs-water/SOURCE.md). The order rule derives 25 "before" facts; `tools/derive.mjs` now
+  writes one derived shard per licence (derived-wordnet-3-0 19 facts, derived-public-domain 6; derived stays CC0)
+  instead of refusing. The stage words tadpole, chrysalis, seedling, evaporation, condensation, precipitation,
+  runoff were asked of the WordNet importer (ASKED): k.words 29,518 senses.
+- Units: k.time.stage.n and k.diagrams.source.year are orders (tools/measures-core.mjs). Catalog 33 worlds, 1,101
+  shards, 29,223 words; 0 warnings.
+- Tests: new tests/k.diagrams.test.mjs (6: shard = tool output; joins to w.diagram, k.layouts, k.kinds; a shape for
+  every role, ISO's for the flowchart; every fill a declared type and key with facts; **a cycle diagram of the frog's
+  life cycle and a flowchart of "compose a scene" built in a w.diagram session from the facts alone**); k.time 7
+  (the cycles of nature; 9 cycles; before counts); w.schemas 15 (eight schemas). `npm run test:changed` 50 files,
+  434 tests: 431 pass, 2 skipped, 1 fail (COVERAGE.md stale: `npm run reports`, then 4 pass); after rebasing on
+  30fd9ab (k.music) and rebuilding (34 worlds, 1,105 shards, 33,040 words): 50 files, 435 tests, 433 pass, 2 skipped;
+  again on 06b4358 (currencies; 34 worlds, 1,107 shards, 33,236 words): catalog 8, validate 5, repo 1, coverage-report 4,
+  k.diagrams 6, k.time 7, w.schemas 15, k.kinds.structures 6, narration 3 pass; ask-real 4,
+  questions 426 pass.

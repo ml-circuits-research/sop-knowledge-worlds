@@ -119,7 +119,7 @@
 @k.attributes.same.sedan.thing k.attributes.same name=sedan sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.see_saw.thing k.attributes.same name="see saw" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.seed.plant k.attributes.same name=seed sense=plant only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.seedling.plant k.attributes.same name=seedling sense=plant only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.seedling.plant k.attributes.same name=seedling sense=plant only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.seeds.plant k.attributes.same name=seeds sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.semicircle.shape k.attributes.same name=semicircle sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.seoul.place k.attributes.same name=seoul sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
