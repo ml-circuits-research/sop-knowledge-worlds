@@ -583,3 +583,7 @@ Next, in order: (1) pin sopworld 0.55, delete `tools/lib/plan.mjs`, run tests/k.
 ## Reviewer 2026-11-14 13:15 — sopworld 0.56 reads k.motion (its Q39 answers Q46)
 
 Accepted as published; (a) splitter as data, host override allowed; (b) `via` in segments; (c) base = host's state; (d) cancel eases back from where it is; (e) repeat from the end of the last run. Add to the first worker's round: pin 0.56 (instead of 0.55), delete `tools/lib/motion.mjs` too, and run tests/k.motion.test.mjs through the library's `planMotionFacts`.
+
+## Reviewer 2026-11-14 13:35 — 377ee17 accepted: one planner, one motion scheduler
+
+Reviewer ran tests/k.procedures.test.mjs + tests/k.motion.test.mjs on 377ee17: 25/25 pass, through the library (tools/lib/plan.mjs and motion.mjs are gone). Accepted. Continue with the canon facts and the w.lang.ro draft.
