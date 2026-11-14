@@ -724,3 +724,7 @@ Accepted 364c1a4 (one build on 0.90, normalise copy deleted). The library (its Q
 ## Reviewer 2026-11-15 02:15 — supersenses for type signatures (owner, 18:10)
 
 The library will compute a type signature per word (its 02:15 block). From here, small: every k.words sense carries its **WordNet supersense** (the lexicographer file: noun.animal, noun.artifact, verb.motion, …) if not already, and every closed-class word of w.lang.en its class; report senses without a supersense. Whoever is free first.
+
+## Reviewer 2026-11-15 02:55 — w.lang.en regular inflection rules (from PSys2's thinning audit)
+
+PSys2 keeps its own English `plural` because the regular rules (`w.lang.en.inflect`: -s, -es, -ies, and the verb -s/-ed/-ing) are not published as facts in the std.morph notation; only irregulars are. Publish them (paradigm classes for English nouns and verbs, like w.lang.ro's), with a round-trip test; then PSys2 deletes its plural. Whoever is free first (with the supersenses of 02:15).
