@@ -4617,7 +4617,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   `needs`). A key role that refers is single-valued (tested). The 153 casts stay the map from a world's types to roles
   (the library's proposed `structure_of`); 71 cast keys are keys of the type the world casts to their `of` role.
 - New type `k.kinds.constraint structure= name= kind=capacity|distinct|order on=<role> about= world= by=` (k.kinds
-  version 6, exported): capacity of a container (w.seating, by w.seating.room), within (w.timeline, by its three
+  version 5, exported; the commit message of 4cdbc09 says 6 by mistake): capacity of a container (w.seating, by w.seating.room), within (w.timeline, by its three
   inside denies), one_of_each_kind (w.face, by w.face.one), ends_after_start (w.timeline, by w.timeline.order.ends),
   distinct_positions (k.genres, k.procedures, k.story) and no_self_link (k.geo), the last two held by the facts and
   checked by the test. Not given: a constraint no world holds by a rule or by its facts (one guest per seat is not a
