@@ -5179,3 +5179,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   - k.diagrams already cites its sources (Gilbreth, ISO 5807, Sugiyama et al., Reingold and Tilford ...): unchanged.
 - Two pages could not be opened (permission not answered in time): the SHOP2 PDF at jair.org (read instead at
   artlab.unist.ac.kr) and the CL review of Reiter & Dale at aclanthology.org (the LINGUIST List review was read).
+
+## 2026-11-15 — second worker: the k.objects `of` joins and the library's indexed check (reviewer 04:10, item 5)
+
+- The library indexes the `type= by=` check since **0.107.0** (its CHANGELOG: "From the reviewer's 04:05 entry
+  ([KNOW] Q66) ... checked by a lookup in the index per (type, key, value)"; 0.109 makes quoted and bare one name).
+  Our pin is still **0.97.0** (AGENTS.md: the pin moves only when the reviewer says so).
+- Measured (k.objects, 27,902 parts, 2,211 objects; `fullWorld` with the schema patched in memory; the 0.113 build
+  of the library at e9940e4 in a scratch folder, nothing of it committed): pinned 0.97 undeclared 16.4 s, declared
+  22.8 / 25.0 s on a quiet machine (+7 to +9 s), 38-40 s against 20-31 s under a load of 4.5; 0.113 undeclared
+  16.3 s, declared 17.6 s on a quiet machine (+1.3 s, +8 %), under load within the noise (26.7-29.4 s both ways).
+  Every one of the 2,212 `of` values meets an object (0 open) in both builds.
+- So: **`k.objects.skeleton.of` is declared** (`type=k.objects.object by=name`; no skeleton is published, 0 values,
+  no cost; k.objects version 6); **`k.objects.part.of` stays undeclared** until the pin moves, its reason in
+  tools/joins-report.mjs now carries these numbers; **Q69 [PIN]** asks the reviewer to move the one build to 0.113
+  (or at least 0.107), after which the declaration is one `type=k.objects.object by=name` on the slot.
+- Declared joins: 190 in 30 worlds, 6,294 of 6,352 values meet (99.1 %), 0 broken.
+- Full suite of the round (`npm run test:all` on 094c411, the tip of this round before the last rebase): 81 files,
+  3,111 tests, 3,105 pass, 0 fail, 6 skipped, 490 s. Lessons of the round appended to docs/lessons.md.

@@ -607,3 +607,24 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **A change to a shared dictionary is a change to every world built from it.** The 57 senses added for the sound
   words made another worker's dictionary test red after the push; the build now regenerates that dictionary. A tool
   whose output depends on k.words belongs in `npm run build`.
+
+## Reviewer 04:10 round (second worker): closing the gaps the exact join check found
+
+- **A join names exactly one type, so it must name what the value is, not what draws it.** The engine checks
+  `type=T by=k` against the wires of exactly `T` (no subtypes), so 59 stand-ins and 21 words could never close
+  `k.scenes.has.thing` -> `k.objects.object`. The value was a thing of the scene (an acrobat), drawn by something
+  else (the person): re-targeting `thing` to `k.scenes.thing` and keeping the drawing as its own declared join
+  (`has.drawing`) closed both. A join that cannot close is often a join to the wrong type.
+- **"Add it from source X" can be impossible, and the reason is a finding.** Natural Earth had none of the 10
+  capitals under that name. Three were the very place under another name, which the coordinates showed (its point
+  "Grand Turk" is Cockburn Town): a word, not a new city. The rest became the list's own cities, in the list's
+  shard, without coordinates. A name match would have missed the first and invented the second.
+- **A priority the index cannot say can be an order.** vocab.json lists shards per word; listing the shards reached
+  only through a reading that needs a context last ("rose": the flower first, the names shard last) is a priority
+  with no new format, and a host that ignores it loses nothing.
+- **Frequency could not tell a name from a word; polysemy could.** wordfreq folds case, so "tom" and "rose" are
+  equally frequent; WordNet's senses are not: three or more senses that are no person flag Hope, Mark, Grace, and
+  leave Tom (a male cat or turkey), Ana and Leo alone. Places were left out of the rule on purpose: a river called
+  James does not make James a common word.
+- **Benchmark in interleaved pairs and say the load.** The same declared join cost +1.3 s on a quiet machine and
+  looked like +10 s or nothing under a load of 4.5; only pairs run back to back, with the load noted, said which.

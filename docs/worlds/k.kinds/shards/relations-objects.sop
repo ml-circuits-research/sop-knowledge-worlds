@@ -28,7 +28,7 @@
 @k.kinds.relation.k.objects.point.n k.kinds.relation type=k.objects.point key=n subject=point object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.objects.point.x k.kinds.relation type=k.objects.point key=x subject=point object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.objects.point.y k.kinds.relation type=k.objects.point key=y subject=point object=number found=schema core.source="hand-core 1"
-@k.kinds.relation.k.objects.skeleton.of k.kinds.relation type=k.objects.skeleton key=of subject=skeleton object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.objects.skeleton.of k.kinds.relation type=k.objects.skeleton key=of subject=skeleton object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.objects.skeleton.n k.kinds.relation type=k.objects.skeleton key=n subject=skeleton object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.objects.skeleton.x k.kinds.relation type=k.objects.skeleton key=x subject=skeleton object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.objects.skeleton.y k.kinds.relation type=k.objects.skeleton key=y subject=skeleton object=number found=schema core.source="hand-core 1"

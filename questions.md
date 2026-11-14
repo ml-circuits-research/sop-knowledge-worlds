@@ -957,3 +957,14 @@ Context: `k.units.currency` (153 currencies of CLDR 48) names countries by k.geo
 code; the list's currency key is a second home for the same fact, with other names (36 countries say "Euro", CLDR
 "euro"; 16 "United States dollar", CLDR "US dollar"). Left undeclared meanwhile (k.units/WORLD.md says why).
 Blocking: no.
+
+## Q69 [PIN] (reviewer 04:10 item 5, second worker, 2026-11-15): move the pin to a build that indexes the join check?
+Question: may the one build move from 0.97.0 to the library's current release (0.113.0 at e9940e4, or at least
+0.107.0), so that `k.objects.part.of` -> `k.objects.object` can be declared?
+Context: the library indexes the `type= by=` check since 0.107.0 (its CHANGELOG, Q66). Measured here on k.objects
+(27,902 parts, 2,211 objects; tools/lib/worlds.mjs fullWorld, the schema patched in memory): pinned 0.97 undeclared
+16.4 s, declared 22.8-25.0 s on a quiet machine (+7 to +9 s; 38-40 s against 20-31 s under a load of 4.5); 0.113
+undeclared 16.3 s, declared 17.6 s on a quiet machine (+1.3 s; under load the pairs differ by less than the noise,
+26.7-28.4 s both ways). Declared with 0.97, every test that loads k.objects would pay the scan (k.objects.names is at
+31 s already). `k.objects.skeleton.of` is declared now (no skeleton is published, so it costs nothing).
+Blocking: no. Meanwhile: `part.of` stays in NOT_DECLARED with the numbers, checked by tests/k.objects.names.test.mjs.
