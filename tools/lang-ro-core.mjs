@@ -21,7 +21,31 @@ export const TYPES = { cls: `${W}.class`, ending: `${W}.ending`, irregular: `${W
 
 // Spelling: the folded form of a word (what a user types without diacritics; the cedilla letters of old encodings).
 export const FOLDS = [['ă', 'a'], ['â', 'a'], ['î', 'i'], ['ș', 's'], ['ț', 't'], ['ş', 's'], ['ţ', 't'], ['Ă', 'A'], ['Â', 'A'], ['Î', 'I'], ['Ș', 'S'], ['Ț', 'T'], ['Ş', 'S'], ['Ţ', 'T']];
-export const foldText = (s) => FOLDS.reduce((t, [a, b]) => t.split(a).join(b), String(s));
+const baseFold = (s) => FOLDS.reduce((t, [a, b]) => t.split(a).join(b), String(s));
+export const foldText = (s) => OLD_FOLDS().reduce((t, [a, b]) => t.split(a).join(b), baseFold(s));
+// Q69 item 3, the old spelling: before 1993 Romanian wrote î inside a word where â is written now (stînga, lîngă, pîine,
+// pămînt, cînd), and PSys2's real turns type it so without diacritics (stinga, linga, pamint). A fold maps one letter to
+// one letter, and a typed i cannot fold to a, so the old spelling is folded by stem: for each word of this world with â
+// inside it (the hand lemmas and the closed classes), its beginning up to two letters after the â (trailing vowels
+// left out, so a fold never reaches into an ending; four letters at least), written the old way and folded, folds to the same beginning
+// written the new way and folded ("sting" -> "stang"). The folds come after the letter folds, and apply to the data and
+// the input alike; tests/w.lang.ro.test.mjs checks that no two lemmas of the dictionaries fold together that did not.
+let oldFolds = null;
+export function OLD_FOLDS() {
+  if (oldFolds) return oldFolds;
+  const words = [...LEXICON.map((r) => r[0]), ...[DETERMINERS, PRONOUNS, PREPOSITIONS, NUMERALS, PARTICLES].flatMap((list) => list.map((r) => r[0]))]
+    .flatMap((x) => String(x).split(/\s+/)).filter((w) => w.indexOf('â') > 0);
+  const out = new Map();
+  for (const w of words) {
+    const i = w.indexOf('â');
+    const stem = w.slice(0, i + 3).replace(/[aeiouăâî]+$/, '') || w.slice(0, i + 1);
+    const from = baseFold(stem.replace(/â/g, 'î')), to = baseFold(stem);
+    // at least four letters: "cit" (cât) would fold citi (read) and câți together, "pin" (până) spin and spân
+    if (from.length >= 4 && from !== to && !out.has(from)) out.set(from, to);
+  }
+  oldFolds = [...out].sort((a, b) => b[0].length - a[0].length || (a[0] < b[0] ? -1 : 1));
+  return oldFolds;
+}
 export const VOWELS = 'aeiouăâî';
 export const SPLITS = ['-'];
 
@@ -409,6 +433,8 @@ export function langRoShards() {
     '# vowels (for alternations at the last vowel), folds (a word written without diacritics), the clitic joiner',
     wire(`${W}.vowel.all`, `${W}.vowel`, [['text', { string: VOWELS }]], SRC),
     ...FOLDS.map(([a, b]) => wire(`${W}.fold.u${a.codePointAt(0).toString(16)}`, `${W}.fold`, [['from', { string: a }], ['to', { string: b }]], SRC)),
+    '# the old spelling (î inside a word for â), folded by stem after the letter folds (Q69 item 3)',
+    ...OLD_FOLDS().map(([a, b]) => wire(`${W}.fold.old.${a}`, `${W}.fold`, [['from', { string: a }], ['to', { string: b }]], SRC)),
     ...SPLITS.map((s, i) => wire(`${W}.split.${i + 1}`, `${W}.split`, [['text', { string: s }]], SRC)),
     '', '# paradigm classes', ...classLines, '', '# cells', ...endingLines].join('\n')}\n`;
   const irr = [];

@@ -5542,3 +5542,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Taken now, in this order: **K10** (question frames in other word orders over existing facts; real row r0244 "how
   many legs has a cow"), then **KR2** (one home per idea: colours, shapes, number words, verb forms; enums joined, not
   copied; declare the undeclared joins that meet 100 %).
+
+## 2026-11-15 — third worker: Q69 item 3, the old spelling î for â as folds
+
+- Bench: 100 / 83 / 63 -> 100 / 82 / 62. The one fewer is "fa un bunic linga rata", now read as make, grandfather,
+  near (rel) the duck: right, but the bench takes the gloss's "make" as the act change. Readings improved where the
+  bench does not look: "muta fetita linga baiat", "muta capra linga rata" get the place and relation near (they had the
+  thing "girl linga boy"); "in stinga", "la stinga" read the direction left.
+- tools/lang-ro-core.mjs: OLD_FOLDS, 13 stem folds derived from the words of the world with â inside them (stem up to
+  two letters after the â, no trailing vowel, at least four letters, old spelling folded -> new spelling folded:
+  sting -> stang, ling -> lang, pamint -> pamant, piin -> pain, cind -> cand, rind -> rand, cint -> cant, ciin -> cain,
+  decit -> decat, sfirs -> sfars, spinz -> spanz, intiln -> intaln, saptamin -> saptaman), written after the letter
+  folds in morphology.sop and used by foldText (the dictionaries re-sorted; dictionary-unimorph regenerated, 3,458).
+- tests/w.lang.ro.test.mjs: 14 old spellings fold to the new; stinga, pamint(ul), piine, cintec, cinta read to their
+  lemmas, stanga, pamant, linie as before; no new collision among the 3,728 lemmas of both dictionaries and the closed
+  forms (săptămînă, UniMorph's old spelling of săptămână, is the one join, and it is the same word). Shorter stems
+  refused: cit (câți = citi), pin (spin = spân). Round trips 3,028 / 3,028 exact and folded.

@@ -12,7 +12,7 @@ treebank or word list was imported.
 
 | part | what | size |
 | --- | --- | --- |
-| `shards/morphology.sop` | 45 paradigm classes (23 noun, adjective and article, 22 verb) with inheritance, 341 cells (features -> suffix with the stem's ordered alternations), the vowels, 14 spelling folds, the clitic joiner | 402 wires, 60.1 kB |
+| `shards/morphology.sop` | 45 paradigm classes (23 noun, adjective and article, 22 verb) with inheritance, 341 cells (features -> suffix with the stem's ordered alternations), the vowels, 14 spelling folds and 13 stem folds of the old spelling, the clitic joiner | 402 wires, 60.1 kB |
 | `shards/irregular.sop` | the forms no class covers: fi, avea (with its conditional and perfect auxiliaries), vrea, da, lua, veni, vedea, împărți; the imperatives fă, refă, du, mergi, treci; speli, numeri, umplut; the plurals of zi, ou, om, pește, cal, copil, băiat, femeie, pasăre, fereastră, zăpadă; nou; the indefinite article un, o, niște, unui, unei, unor | 225 wires, 33.3 kB |
 | `shards/closed.sop` | 69 determiners and articles, 65 pronouns (free, bound and joined clitics), 30 prepositions as relations, 32 numerals with value and gender, 44 conjunctions, adverbs, particles and interjections | 240 wires, 32.3 kB |
 | `shards/templates.sop` | 3 reply templates (make, remove, change) with agreement, the article included ("am desenat o casă roșie", "mașina este acum galbenă") | 3 wires |
@@ -139,6 +139,7 @@ act is the gloss's, and when the thing read shares a word with the gloss).
 | before (a1d1d11) | 93 | 74 | 38 |
 | (1) the nouns of the real turns | 93 | 74 | 55 |
 | (2) "și" as a focus word, and a place frame without a place | 100 | 83 | 63 |
+| (3) the old spelling, î for â (stinga, linga, pamint) | 100 | 82 | 62 |
 
 (1) The hand dictionary has the nouns of the real turns with senses of k.words whose English word names a drawing, an
 animal, a scene thing or a kind of person (a test checks it through vocab.json): crocodil, minge, capră, rață, iarbă
@@ -153,4 +154,17 @@ part between the verb and the object in the frames of make, place, remove, copy 
 imperative speaks to you: dă-ți, pune-mi), so "pune și un lac" is not "give yourself a lake". `ro.place.bare` (priority 5,
 needs in) says English acts.place.bare: "pune un lac", "pune niște iarbă", "mută peștele" (English reads "put a lake" so).
 Between two things și stays and ("desenează o casă și un copac": the thing is the list).
+
+(3) The old spelling (before 1993: î inside a word where â is written now) is how the real user types, without
+diacritics: "stinga", "linga", "pamint". A letter fold cannot say it (a typed i cannot fold to a without joining every
+i and a), so the old spelling is folded by stem, after the letter folds: for each word of the world with â inside it
+(the hand lemmas and the closed classes), its beginning up to two letters after the â, without trailing vowels and of
+four letters at least, written the old way folds to it written the new way ("sting" -> "stang", "ling" -> "lang",
+"pamint" -> "pamant", "piin" -> "pain", "cind" -> "cand": 13 folds, `tools/lang-ro-core.mjs` OLD_FOLDS). Folds apply
+to the data and the input alike; a test checks that no two words of the two dictionaries and the closed classes fold
+together that the letter folds kept apart (only săptămînă, UniMorph's old spelling of săptămână, joins its new one).
+Shorter stems were refused: "cit" (cât) would join citi and câți, "pin" (până) spin and spân. The bench counts one turn
+fewer: "fa un bunic linga rata" now reads make, grandfather, near the duck (lîngă is the preposition), which the bench
+marks wrong because it takes the act of the gloss's "make" as change; "muta fetita linga baiat" and "muta capra linga
+rata" now have the place and its relation instead of a thing "girl linga boy".
 

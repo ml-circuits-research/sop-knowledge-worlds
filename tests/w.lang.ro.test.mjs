@@ -9,7 +9,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, REPO, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { parse, morphOf, generate, analyse, fold, splitClitics, dictionary, realise, templateFor } from '../tools/sopworld/sopworld.mjs';
-import { langRoShards, dictionaryFiles, dictionaryRows, TYPES, CLASSES, LEXICON, foldText } from '../tools/lang-ro-core.mjs';
+import { langRoShards, dictionaryFiles, dictionaryRows, TYPES, CLASSES, LEXICON, foldText, FOLDS, OLD_FOLDS, DETERMINERS, PRONOUNS, PREPOSITIONS, NUMERALS, PARTICLES } from '../tools/lang-ro-core.mjs';
 
 const DIR = join(WORLDS_DIR, 'w.lang.ro');
 const worlds = scanWorlds();
@@ -88,6 +88,27 @@ test('w.lang.ro: the nouns of the real turns (Q69): in the hand dictionary, with
   for (const [form, lemma] of [['crocodilii', 'crocodil'], ['iarba', 'iarbă'], ['ierburi', 'iarbă'], ['rata', 'rață'], ['capra', 'capră'], ['leagan', 'leagăn'], ['mingea', 'minge'], ['mesele', 'masă'], ['baltile', 'baltă'], ['magar', 'măgar'], ['vitei', 'vițel'], ['fetita', 'fetiță'], ['bunicul', 'bunic'], ['vila', 'vilă']]) {
     assert.ok(lemmas(form).includes(lemma), `${form}: ${lemmas(form)} (want ${lemma})`);
   }
+});
+
+// Q69 item 3: the old spelling, î inside a word for â, typed with or without diacritics (PSys2's real turns: stinga,
+// linga, pamint), folds to the new; and the stem folds join no two words that the letter folds kept apart.
+test('w.lang.ro: the old spelling (î for â) folds to the new: stînga, stinga, lîngă, linga, pămînt, pamint, pîine, cînd', () => {
+  for (const [old, now] of [['stînga', 'stânga'], ['stinga', 'stânga'], ['lîngă', 'lângă'], ['linga', 'lângă'], ['pămînt', 'pământ'], ['pamint', 'pământ'], ['pîine', 'pâine'], ['piinea', 'pâinea'], ['cînd', 'când'], ['cind', 'când'], ['rînd', 'rând'], ['cîinele', 'câinele'], ['sfîrșit', 'sfârșit'], ['întîlni', 'întâlni']]) {
+    assert.equal(fold(m, old), fold(m, now), `${old} / ${now}`);
+  }
+  const lemmas = (form) => analyse(m, form, { dictionary: dict }).map((x) => x.lemma);
+  for (const [form, lemma] of [['stinga', 'stângă'], ['pamint', 'pământ'], ['pamintul', 'pământ'], ['piine', 'pâine'], ['cintec', 'cântec'], ['cinta', 'cânta']]) assert.ok(lemmas(form).includes(lemma), `${form}: ${lemmas(form)}`);
+  // the new spelling typed without diacritics reads as before, and so do words that only look like an old stem
+  for (const [form, lemma] of [['stanga', 'stângă'], ['pamant', 'pământ'], ['linie', 'linie']]) assert.ok(lemmas(form).includes(lemma), `${form}: ${lemmas(form)}`);
+  assert.ok(OLD_FOLDS().length >= 10 && OLD_FOLDS().every(([a]) => a.length >= 4));
+  // no new collisions: the lemmas of both dictionaries and the closed forms
+  const base = (x) => FOLDS.reduce((t, [a, b]) => t.split(a).join(b), x);
+  const words = new Set([...dictionaryRows().map((r) => r[0]), ...[DETERMINERS, PRONOUNS, PREPOSITIONS, NUMERALS, PARTICLES].flatMap((l) => l.map((r) => String(r[0])))]);
+  for (const f of readdirSync(join(DIR, 'dictionary-unimorph'))) for (const l of readFileSync(join(DIR, 'dictionary-unimorph', f), 'utf8').split('\n')) if (l && !l.startsWith('#')) words.add(l.split('\t')[0]);
+  const by = new Map();
+  for (const w of words) { const k = foldText(w); (by.get(k) ?? by.set(k, []).get(k)).push(w); }
+  const fresh = [...by.values()].filter((ws) => new Set(ws.map(base)).size > 1).filter((ws) => new Set(ws.map((x) => x.replace(/(?<=.)î(?=.)/g, 'â'))).size > 1);
+  assert.deepEqual(fresh, [], 'words joined by the stem folds');
 });
 
 test('w.lang.ro: forms the rules generate (nouns, adjectives, verbs, irregulars)', () => {

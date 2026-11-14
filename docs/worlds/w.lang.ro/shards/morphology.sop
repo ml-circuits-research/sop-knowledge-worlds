@@ -19,6 +19,20 @@
 @w.lang.ro.fold.u21a w.lang.ro.fold from="Ț" to="T" core.source="hand-core 1"
 @w.lang.ro.fold.u15e w.lang.ro.fold from="Ş" to="S" core.source="hand-core 1"
 @w.lang.ro.fold.u162 w.lang.ro.fold from="Ţ" to="T" core.source="hand-core 1"
+# the old spelling (î inside a word for â), folded by stem after the letter folds (Q69 item 3)
+@w.lang.ro.fold.old.saptamin w.lang.ro.fold from="saptamin" to="saptaman" core.source="hand-core 1"
+@w.lang.ro.fold.old.intiln w.lang.ro.fold from="intiln" to="intaln" core.source="hand-core 1"
+@w.lang.ro.fold.old.pamint w.lang.ro.fold from="pamint" to="pamant" core.source="hand-core 1"
+@w.lang.ro.fold.old.decit w.lang.ro.fold from="decit" to="decat" core.source="hand-core 1"
+@w.lang.ro.fold.old.sfirs w.lang.ro.fold from="sfirs" to="sfars" core.source="hand-core 1"
+@w.lang.ro.fold.old.spinz w.lang.ro.fold from="spinz" to="spanz" core.source="hand-core 1"
+@w.lang.ro.fold.old.sting w.lang.ro.fold from="sting" to="stang" core.source="hand-core 1"
+@w.lang.ro.fold.old.ciin w.lang.ro.fold from="ciin" to="cain" core.source="hand-core 1"
+@w.lang.ro.fold.old.cind w.lang.ro.fold from="cind" to="cand" core.source="hand-core 1"
+@w.lang.ro.fold.old.cint w.lang.ro.fold from="cint" to="cant" core.source="hand-core 1"
+@w.lang.ro.fold.old.ling w.lang.ro.fold from="ling" to="lang" core.source="hand-core 1"
+@w.lang.ro.fold.old.piin w.lang.ro.fold from="piin" to="pain" core.source="hand-core 1"
+@w.lang.ro.fold.old.rind w.lang.ro.fold from="rind" to="rand" core.source="hand-core 1"
 @w.lang.ro.split.1 w.lang.ro.split text="-" core.source="hand-core 1"
 
 # paradigm classes
