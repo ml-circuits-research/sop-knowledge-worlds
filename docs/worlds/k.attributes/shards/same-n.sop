@@ -1,4 +1,4 @@
-# k.attributes/shards/same-n: one name, one thing: for 55 names that start with "n" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-n: one name, one thing: for 57 names that start with "n" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -39,6 +39,7 @@
 @k.attributes.same.newt.animal k.attributes.same name=newt sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.niagara.place k.attributes.same name=niagara sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nice.place k.attributes.same name=nice sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.night.time k.attributes.same name=night sense=time only=true in=k.time.part_of_day by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.night_with_stars.thing k.attributes.same name="night with stars" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.nightclub.thing k.attributes.same name=nightclub sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nightgown.clothing k.attributes.same name=nightgown sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -46,6 +47,7 @@
 @k.attributes.same.nile.place k.attributes.same name=nile sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.noodle.thing k.attributes.same name=noodle sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.noodles.food k.attributes.same name=noodles sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.noon.time k.attributes.same name=noon sense=time only=true in=k.time.hour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.norway.place k.attributes.same name=norway sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.nose.body_part k.attributes.same name=nose sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.notebook.thing k.attributes.same name=notebook sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

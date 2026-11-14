@@ -1,4 +1,4 @@
-# k.attributes/shards/aspects: the 8 aspects of things (visual, spatial, relational, numeric, textual, geographic, temporal, social), 17 families of things, and for each family and aspect the world, type and key where the values are found.
+# k.attributes/shards/aspects: the 8 aspects of things (visual, spatial, relational, numeric, textual, geographic, temporal, social), 19 families of things, and for each family and aspect the world, type and key where the values are found.
 # sources: hand-core 1 (hand-written in this repository: tools/attributes-core.mjs)
 # license: CC0-1.0
 # script: tools/attributes-core.mjs
@@ -28,6 +28,8 @@
 @k.attributes.family.weekday k.attributes.family name=weekday about="a day of the week" world=k.time type=k.time.weekday by=name core.source="hand-core 1"
 @k.attributes.family.season k.attributes.family name=season about="a season" world=k.time type=k.time.season by=name core.source="hand-core 1"
 @k.attributes.family.duration k.attributes.family name=duration about="a length of time" world=k.time type=k.time.duration by=name core.source="hand-core 1"
+@k.attributes.family.part_of_the_day k.attributes.family name="part of the day" about="a part of the day (morning, afternoon, evening, night)" world=k.time type=k.time.part_of_day by=name core.source="hand-core 1"
+@k.attributes.family.hour k.attributes.family name=hour about="an hour of the clock" world=k.time type=k.time.hour by=name core.source="hand-core 1"
 @k.attributes.family.body_in_space k.attributes.family name="body in space" about="a planet, moon, star or other body" world=k.space type=k.space.body by=name core.source="hand-core 1"
 @k.attributes.family.scene_thing k.attributes.family name="scene thing" about="a thing that has a usual place and size for scenes (the things of k.scenes)" world=k.scenes type=k.scenes.thing by=name core.source="hand-core 1"
 
@@ -165,14 +167,32 @@
 @k.attributes.shows.month.numeric.k_time_month.days k.attributes.shows family=month aspect=numeric world=k.time type=k.time.month key=days by=name core.source="hand-core 1"
 @k.attributes.shows.month.numeric.k_time_month.leap_days k.attributes.shows family=month aspect=numeric world=k.time type=k.time.month key=leap_days by=name core.source="hand-core 1"
 @k.attributes.shows.month.temporal.k_time_month.n k.attributes.shows family=month aspect=temporal world=k.time type=k.time.month key=n by=name core.source="hand-core 1"
+@k.attributes.shows.month.temporal.k_time_month.next k.attributes.shows family=month aspect=temporal world=k.time type=k.time.month key=next by=name core.source="hand-core 1"
 @k.attributes.shows.month.temporal.k_time_month.season_north k.attributes.shows family=month aspect=temporal world=k.time type=k.time.month key=season_north by=name core.source="hand-core 1"
 @k.attributes.shows.month.temporal.k_time_month.season_south k.attributes.shows family=month aspect=temporal world=k.time type=k.time.month key=season_south by=name core.source="hand-core 1"
+@k.attributes.shows.month.temporal.k_time_before.later k.attributes.shows family=month aspect=temporal world=k.time type=k.time.before key=later by=earlier core.source="hand-core 1"
 @k.attributes.shows.weekday.temporal.k_time_weekday.n k.attributes.shows family=weekday aspect=temporal world=k.time type=k.time.weekday key=n by=name core.source="hand-core 1"
+@k.attributes.shows.weekday.temporal.k_time_weekday.next k.attributes.shows family=weekday aspect=temporal world=k.time type=k.time.weekday key=next by=name core.source="hand-core 1"
 @k.attributes.shows.weekday.temporal.k_time_weekday.weekend k.attributes.shows family=weekday aspect=temporal world=k.time type=k.time.weekday key=weekend by=name core.source="hand-core 1"
+@k.attributes.shows.weekday.temporal.k_time_before.later k.attributes.shows family=weekday aspect=temporal world=k.time type=k.time.before key=later by=earlier core.source="hand-core 1"
 @k.attributes.shows.season.temporal.k_time_season.n k.attributes.shows family=season aspect=temporal world=k.time type=k.time.season key=n by=name core.source="hand-core 1"
-@k.attributes.shows.season.temporal.k_time_season.after k.attributes.shows family=season aspect=temporal world=k.time type=k.time.season key=after by=name core.source="hand-core 1"
+@k.attributes.shows.season.temporal.k_time_season.next k.attributes.shows family=season aspect=temporal world=k.time type=k.time.season key=next by=name core.source="hand-core 1"
+@k.attributes.shows.season.temporal.k_time_season_in.first k.attributes.shows family=season aspect=temporal world=k.time type=k.time.season_in key=first by=season core.source="hand-core 1"
+@k.attributes.shows.season.temporal.k_time_season_in.last k.attributes.shows family=season aspect=temporal world=k.time type=k.time.season_in key=last by=season core.source="hand-core 1"
 @k.attributes.shows.season.relational.k_time_month.name k.attributes.shows family=season aspect=relational world=k.time type=k.time.month key=name by=season_north core.source="hand-core 1"
+@k.attributes.shows.part_of_the_day.temporal.k_time_part_of_day.n k.attributes.shows family="part of the day" aspect=temporal world=k.time type=k.time.part_of_day key=n by=name core.source="hand-core 1"
+@k.attributes.shows.part_of_the_day.temporal.k_time_part_of_day.next k.attributes.shows family="part of the day" aspect=temporal world=k.time type=k.time.part_of_day key=next by=name core.source="hand-core 1"
+@k.attributes.shows.part_of_the_day.temporal.k_time_part_of_day.starts_about k.attributes.shows family="part of the day" aspect=temporal world=k.time type=k.time.part_of_day key=starts_about by=name core.source="hand-core 1"
+@k.attributes.shows.part_of_the_day.temporal.k_time_part_of_day.ends_about k.attributes.shows family="part of the day" aspect=temporal world=k.time type=k.time.part_of_day key=ends_about by=name core.source="hand-core 1"
+@k.attributes.shows.part_of_the_day.relational.k_time_hour.name k.attributes.shows family="part of the day" aspect=relational world=k.time type=k.time.hour key=name by=part core.source="hand-core 1"
+@k.attributes.shows.hour.temporal.k_time_hour.n k.attributes.shows family=hour aspect=temporal world=k.time type=k.time.hour key=n by=name core.source="hand-core 1"
+@k.attributes.shows.hour.temporal.k_time_hour.next k.attributes.shows family=hour aspect=temporal world=k.time type=k.time.hour key=next by=name core.source="hand-core 1"
+@k.attributes.shows.hour.temporal.k_time_hour.hour12 k.attributes.shows family=hour aspect=temporal world=k.time type=k.time.hour key=hour12 by=name core.source="hand-core 1"
+@k.attributes.shows.hour.temporal.k_time_hour.am_pm k.attributes.shows family=hour aspect=temporal world=k.time type=k.time.hour key=am_pm by=name core.source="hand-core 1"
+@k.attributes.shows.hour.temporal.k_time_hour.part k.attributes.shows family=hour aspect=temporal world=k.time type=k.time.hour key=part by=name core.source="hand-core 1"
+@k.attributes.shows.hour.temporal.k_time_before.later k.attributes.shows family=hour aspect=temporal world=k.time type=k.time.before key=later by=earlier core.source="hand-core 1"
 @k.attributes.shows.duration.numeric.k_time_duration.count k.attributes.shows family=duration aspect=numeric world=k.time type=k.time.duration key=count by=name core.source="hand-core 1"
+@k.attributes.shows.duration.numeric.k_time_duration.count_about k.attributes.shows family=duration aspect=numeric world=k.time type=k.time.duration key=count_about by=name core.source="hand-core 1"
 @k.attributes.shows.duration.relational.k_time_duration.unit k.attributes.shows family=duration aspect=relational world=k.time type=k.time.duration key=unit by=name core.source="hand-core 1"
 @k.attributes.shows.body_in_space.visual.k_space_body.colour k.attributes.shows family="body in space" aspect=visual world=k.space type=k.space.body key=colour by=name core.source="hand-core 1"
 @k.attributes.shows.body_in_space.visual.k_space_body.drawing k.attributes.shows family="body in space" aspect=visual world=k.space type=k.space.body key=drawing by=name core.source="hand-core 1"

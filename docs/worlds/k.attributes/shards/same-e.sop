@@ -1,4 +1,4 @@
-# k.attributes/shards/same-e: one name, one thing: for 67 names that start with "e" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-e: one name, one thing: for 68 names that start with "e" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -59,6 +59,7 @@
 @k.attributes.same.europa.body_in_space k.attributes.same name=europa sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.europe.place k.attributes.same name=europe sense=place only=true in=k.geo.continent by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.european_name_badge.thing k.attributes.same name="european name badge" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.evening.time k.attributes.same name=evening sense=time only=true in=k.time.part_of_day by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.evergreen_tree.plant k.attributes.same name="evergreen tree" sense=plant only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ewe.animal k.attributes.same name=ewe sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.explorer.person k.attributes.same name=explorer sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"

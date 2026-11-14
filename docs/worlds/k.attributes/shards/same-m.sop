@@ -1,4 +1,4 @@
-# k.attributes/shards/same-m: one name, one thing: for 250 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-m: one name, one thing: for 253 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -125,6 +125,7 @@
 @k.attributes.same.microscope.thing k.attributes.same name=microscope sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.microwave.thing k.attributes.same name=microwave sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.midge.thing k.attributes.same name=midge sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.midnight.time k.attributes.same name=midnight sense=time only=true in=k.time.hour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.milan.place k.attributes.same name=milan sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.military_helmet.clothing k.attributes.same name="military helmet" sense=clothing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.military_medal.thing k.attributes.same name="military medal" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -190,6 +191,7 @@
 @k.attributes.same.monkey_face.animal k.attributes.same name="monkey face" sense=animal only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.monorail.thing k.attributes.same name=monorail sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.monster.thing k.attributes.same name=monster sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.month.time k.attributes.same name=month sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.monument.thing k.attributes.same name=monument sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.moon.body_in_space k.attributes.same name=moon sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.commonsense.thing in=k.objects.object in=k.scenes.thing in=k.space.body in=k.space.kind by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.moon_cake.food k.attributes.same name="moon cake" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -199,6 +201,7 @@
 @k.attributes.same.mop.thing k.attributes.same name=mop sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.moped.thing k.attributes.same name=moped sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.morgue.thing k.attributes.same name=morgue sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.morning.time k.attributes.same name=morning sense=time only=true in=k.time.part_of_day by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.morocco.place k.attributes.same name=morocco sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mortar.thing k.attributes.same name=mortar sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mortuary.thing k.attributes.same name=mortuary sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

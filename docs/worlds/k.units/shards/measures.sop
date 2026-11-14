@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 163 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 171 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -131,12 +131,20 @@
 @k.units.measure.k.shapes.shape.corners k.units.measure world=k.shapes type=shape key=corners counts=corner core.source="hand-core 1"
 @k.units.measure.k.shapes.shape.faces k.units.measure world=k.shapes type=shape key=faces counts=face core.source="hand-core 1"
 @k.units.measure.k.shapes.shape.edges k.units.measure world=k.shapes type=shape key=edges counts=edge core.source="hand-core 1"
+@k.units.measure.k.time.ordered.n k.units.measure world=k.time type=ordered key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.time.cycle.length k.units.measure world=k.time type=cycle key=length counts="time of the cycle" core.source="hand-core 1"
 @k.units.measure.k.time.month.n k.units.measure world=k.time type=month key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.time.month.days k.units.measure world=k.time type=month key=days unit=day core.source="hand-core 1"
 @k.units.measure.k.time.month.leap_days k.units.measure world=k.time type=month key=leap_days unit=day core.source="hand-core 1"
 @k.units.measure.k.time.weekday.n k.units.measure world=k.time type=weekday key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.time.season.n k.units.measure world=k.time type=season key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.time.part_of_day.n k.units.measure world=k.time type=part_of_day key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.time.part_of_day.starts_about k.units.measure world=k.time type=part_of_day key=starts_about counts="hour after midnight" approximate=true core.source="hand-core 1"
+@k.units.measure.k.time.part_of_day.ends_about k.units.measure world=k.time type=part_of_day key=ends_about counts="hour after midnight" approximate=true core.source="hand-core 1"
+@k.units.measure.k.time.hour.n k.units.measure world=k.time type=hour key=n counts="hour after midnight" core.source="hand-core 1"
+@k.units.measure.k.time.hour.hour12 k.units.measure world=k.time type=hour key=hour12 counts="hour after midnight or noon" core.source="hand-core 1"
 @k.units.measure.k.time.duration.count k.units.measure world=k.time type=duration key=count counts="span that the key unit of the same fact names" core.source="hand-core 1"
+@k.units.measure.k.time.duration.count_about k.units.measure world=k.time type=duration key=count_about counts="span that the key unit of the same fact names" approximate=true core.source="hand-core 1"
 @k.units.measure.k.units.unit.factor k.units.measure world=k.units type=unit key=factor counts="base unit of its quantity in one of the unit" core.source="hand-core 1"
 @k.units.measure.k.units.unit.offset k.units.measure world=k.units type=unit key=offset counts="base unit of its quantity added after the factor" core.source="hand-core 1"
 @k.units.measure.k.values.scale.steps k.units.measure world=k.values type=scale key=steps counts=step core.source="hand-core 1"

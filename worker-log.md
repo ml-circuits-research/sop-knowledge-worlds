@@ -3059,3 +3059,45 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Numbers: w.lang.en 16 shards, 2,484 wires, 432,807 bytes, schema 250 wires; 0 errors, 0 warnings. Catalog 23 worlds,
   936 shards, vocab 24,210 words. npm test 2,837: 2,831 pass, 6 skipped, 0 fail; the same after the rebase on Q35 (one
   build, 0.30.0: the w.lang.en tests run on it; Q39 loses its part about a third build).
+
+## Order in time for `k.time` (2026-11-14, first worker; reviewer block "02:15")
+
+- **k.time version 2.** A parent type `k.time.ordered` (`cycle`, `n` the position, `next` the successor, cyclic)
+  that month, weekday, season and two new types extend: `k.time.part_of_day` (morning, afternoon, evening, night;
+  `starts_about` / `ends_about` 5, 12, 17, 21 hours after midnight) and `k.time.hour` (the 24 hours of the clock,
+  `midnight`, `"1 am"` ... `noon` ... `"11 pm"`; `n` 0 to 23, `hour12`, `am_pm`, `part`). `k.time.cycle` (week,
+  year, seasons, day, clock) says where each round starts and ends, its length and what one round lasts.
+- **Before / after by one rule** (`k.time.order`): of two times of one cycle, the smaller `n` is earlier; the facts
+  `k.time.before cycle earlier later` (complete: a pair that is not there is "no"): 375 (week 21, year 66, seasons
+  6, day 6, clock 276). "After" is the same fact read backwards. The cyclic case is `next`: after December comes
+  January, after Sunday Monday, after winter spring, after 11 pm midnight.
+- **Seasons with the hemisphere said:** `k.time.season_in season hemisphere first last`, 8 facts made by four rules
+  from the months' `season_north` / `season_south` and `next` (winter in the north December to February, spring in
+  the south September to November). The season's `after` (the season before it) is dropped: it was `next` read
+  backwards (one home). The order of the seasons is the same in both hemispheres.
+- **Durations in several units (Q33, the part in this block):** `name` and `unit` are the identity of a
+  `k.time.duration`, new key `count_about`; 14 more facts (a week 168 hours; a day 1,440 minutes and 86,400 seconds;
+  an hour 3,600 seconds; a fortnight 2 weeks; a month about 30 days, about 4 weeks; a year about 52 weeks, about 365
+  days; a common year 12 months, about 52 weeks; a leap year 12 months; a century 10 decades; a millennium 10
+  centuries). The PSys2 import pairs name and unit per fact now: FROM-PSYS2.md says 9 lengths of time we had and
+  **0 left** (were 2: "a year has 52 weeks", "a leap year has 12 months"); rerun from the cited commit 6b63b2ba,
+  extracted with `git archive` into /tmp (nothing in /tmp/wt2 changed). The second worker's Q33 work (is_a many,
+  capitals, continents) is not touched.
+- **Holidays:** k.time has none, so none has a place in time (said in WORLD.md).
+- Tools: units of the new numbers (`tools/measures-core.mjs`, 171 measures), families "part of the day" and "hour"
+  and the temporal keys in `tools/attributes-core.mjs` (aspects), the new names in the joins table (time 35 -> 42
+  names), key words (`am`, `pm`, `position`, `order`).
+- Tests: `tests/k.time.test.mjs` (5: cycles go round once with positions in order; one rule, n(n-1)/2 facts per cycle,
+  none across cycles, every one by the rule; seasons by hemisphere agree with the months; every hour in its part
+  of the day; durations agree across units), questions tm-13 to tm-29 ("Monday is before Friday", "December is
+  after November", "spring comes after winter", "after December comes January", "Friday is not before Monday in
+  one week"); tm-07, tm-08, tm-12 name the unit or ask `next`.
+- **Looked at:** the 8 season spans and the counts of the before facts printed; the 24 hour rows. **Judgement that
+  is mine:** the hours of the parts of the day, the hour names.
+- **What SOP Lang could not say:** that `next` of the last member is the first is said by the data, not by a rule
+  (no modular arithmetic in a rule without a function); "before" across rounds (next Monday) needs a date, which is
+  the library's time functions.
+- Numbers: k.time schema 117 wires (version 2); shards calendar 88 wires / 10,475 bytes, clock 34 / 4,598, psys2 1;
+  derived when loaded: 375 before facts, 8 season spans. Catalog 23 worlds, 933 shards, vocab 24,184 -> 24,229
+  words; 0 errors, 0 warnings. After the rebase on the w.lang.en holes: catalog 937 shards, vocab 24,255
+  words; npm test 2,859: 2,858 pass, 1 skipped, 0 fail.

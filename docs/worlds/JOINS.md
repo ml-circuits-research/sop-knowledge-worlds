@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3402
-- one thing everywhere: 3332
+- names carried by facts of more than one world: 3409
+- one thing everywhere: 3339
 - clashes of sense: 70
 
 | sense of the one thing | names |
@@ -30,7 +30,7 @@ and the meat).
 | colour | 35 |
 | shape | 31 |
 | place | 300 |
-| time | 35 |
+| time | 42 |
 | body in space | 30 |
 | thing | 1682 |
 

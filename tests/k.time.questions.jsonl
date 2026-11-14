@@ -4,9 +4,26 @@
 {"id":"tm-04","ask":"how many days does February have in a leap year","query":{"type":"k.time.month","where":{"name":"February"},"seek":"leap_days"},"expect":{"status":"supported","value":"29"}}
 {"id":"tm-05","ask":"which days are the weekend","query":{"type":"k.time.weekday","where":{"weekend":"true"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["Saturday","Sunday"]}}
 {"id":"tm-06","ask":"which weekday is the third","query":{"type":"k.time.weekday","where":{"n":3},"seek":"name"},"expect":{"status":"supported","value":"Wednesday"}}
-{"id":"tm-07","ask":"how many days is a week","query":{"type":"k.time.duration","where":{"name":"week"},"seek":"count"},"expect":{"status":"supported","value":"7"}}
-{"id":"tm-08","ask":"what comes after spring","query":{"type":"k.time.season","where":{"after":"spring"},"seek":"name"},"expect":{"status":"supported","value":"summer"}}
+{"id":"tm-07","ask":"how many days is a week","query":{"type":"k.time.duration","where":{"name":"week","unit":"day"},"seek":"count"},"expect":{"status":"supported","value":"7"}}
+{"id":"tm-08","ask":"what comes after spring","query":{"type":"k.time.season","where":{"name":"spring"},"seek":"next"},"expect":{"status":"supported","value":"summer"}}
 {"id":"tm-09","ask":"how many months have 31 days","query":{"type":"k.time.month","where":{"days":31},"mode":"count"},"expect":{"status":"supported","value":"7"}}
 {"id":"tm-10","ask":"what season is July in the north","query":{"type":"k.time.month","where":{"name":"July"},"seek":"season_north"},"expect":{"status":"supported","value":"summer"}}
 {"id":"tm-11","ask":"is there a thirteenth month","query":{"type":"k.time.month","where":{"n":13},"mode":"exists"},"expect":{"status":"no"}}
-{"id":"tm-12","ask":"how many years is a century","query":{"type":"k.time.duration","where":{"name":"century"},"seek":"count"},"expect":{"status":"supported","value":"100"}}
+{"id":"tm-12","ask":"how many years is a century","query":{"type":"k.time.duration","where":{"name":"century","unit":"year"},"seek":"count"},"expect":{"status":"supported","value":"100"}}
+{"id":"tm-13","ask":"is Monday before Friday","query":{"type":"k.time.before","where":{"earlier":"Monday","later":"Friday"},"mode":"exists"},"expect":{"status":"supported"}}
+{"id":"tm-14","ask":"is Friday before Monday (in one week from Monday)","query":{"type":"k.time.before","where":{"earlier":"Friday","later":"Monday"},"mode":"exists"},"expect":{"status":"no"}}
+{"id":"tm-15","ask":"is December after November","query":{"type":"k.time.before","where":{"earlier":"November","later":"December"},"mode":"exists"},"expect":{"status":"supported"}}
+{"id":"tm-16","ask":"what comes after December","query":{"type":"k.time.month","where":{"name":"December"},"seek":"next"},"expect":{"status":"supported","value":"January"}}
+{"id":"tm-17","ask":"what comes after winter","query":{"type":"k.time.season","where":{"name":"winter"},"seek":"next"},"expect":{"status":"supported","value":"spring"}}
+{"id":"tm-18","ask":"which day comes after Sunday","query":{"type":"k.time.weekday","where":{"name":"Sunday"},"seek":"next"},"expect":{"status":"supported","value":"Monday"}}
+{"id":"tm-19","ask":"which months come before April","query":{"type":"k.time.before","where":{"cycle":"year","later":"April"},"seek":"earlier","mode":"list"},"expect":{"status":"supported","values":["January","February","March"]}}
+{"id":"tm-20","ask":"which month does spring start with in the south","query":{"type":"k.time.season_in","where":{"season":"spring","hemisphere":"south"},"seek":"first"},"expect":{"status":"supported","value":"September"}}
+{"id":"tm-21","ask":"which month ends winter in the north","query":{"type":"k.time.season_in","where":{"season":"winter","hemisphere":"north"},"seek":"last"},"expect":{"status":"supported","value":"February"}}
+{"id":"tm-22","ask":"what part of the day is 3 pm","query":{"type":"k.time.hour","where":{"name":"\"3 pm\""},"seek":"part"},"expect":{"status":"supported","value":"afternoon"}}
+{"id":"tm-23","ask":"what comes after the evening","query":{"type":"k.time.part_of_day","where":{"name":"evening"},"seek":"next"},"expect":{"status":"supported","value":"night"}}
+{"id":"tm-24","ask":"what hour comes after 11 pm","query":{"type":"k.time.hour","where":{"name":"\"11 pm\""},"seek":"next"},"expect":{"status":"supported","value":"midnight"}}
+{"id":"tm-25","ask":"is noon before 3 pm","query":{"type":"k.time.before","where":{"earlier":"noon","later":"\"3 pm\""},"mode":"exists"},"expect":{"status":"supported"}}
+{"id":"tm-26","ask":"how many hours is a week","query":{"type":"k.time.duration","where":{"name":"week","unit":"hour"},"seek":"count"},"expect":{"status":"supported","value":"168"}}
+{"id":"tm-27","ask":"about how many weeks is a year","query":{"type":"k.time.duration","where":{"name":"year","unit":"week"},"seek":"count_about"},"expect":{"status":"supported","value":"52"}}
+{"id":"tm-28","ask":"in which units is a day told","query":{"type":"k.time.duration","where":{"name":"day"},"seek":"unit","mode":"list"},"expect":{"status":"supported","values":["hour","minute","second"]}}
+{"id":"tm-29","ask":"which weekday is first in the week","query":{"type":"k.time.cycle","where":{"name":"week"},"seek":"first"},"expect":{"status":"supported","value":"Monday"}}

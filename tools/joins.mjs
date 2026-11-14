@@ -40,7 +40,7 @@ export const TYPES = [
   ['k.body.part', 'name', 'body part'], ['k.wearables.wearable', 'name', 'clothing'], ['k.people.kind', 'name', 'person'], ['k.people.role', 'name', 'person'],
   ['k.space.body', 'name', 'body in space'], ['k.space.kind', 'name', 'body in space'],
   ['k.geo.continent', 'name', 'place'], ['k.geo.country', 'name', 'place'], ['k.geo.city', 'name', 'place'], ['k.geo.river', 'name', 'place'], ['k.geo.mountain', 'name', 'place'], ['k.geo.range', 'name', 'place'], ['k.geo.lake', 'name', 'place'], ['k.geo.desert', 'name', 'place'], ['k.geo.sea', 'name', 'place'],
-  ['k.time.month', 'name', 'time'], ['k.time.weekday', 'name', 'time'], ['k.time.season', 'name', 'time'], ['k.time.duration', 'name', 'time'],
+  ['k.time.month', 'name', 'time'], ['k.time.weekday', 'name', 'time'], ['k.time.season', 'name', 'time'], ['k.time.duration', 'name', 'time'], ['k.time.part_of_day', 'name', 'time'], ['k.time.hour', 'name', 'time'],
   ['k.attributes.thing', 'name', (w) => KIND_SENSE[tok(w.attrs.kind?.[0])] ?? null],
   ['k.scenes.thing', 'name', 'drawing'], ['k.attributes.drawn', 'name', 'drawing'], ['k.layouts.anchor', 'of', 'drawing'],
   ['k.commonsense.thing', 'name', null], ['k.attributes.number', 'name', null], ['k.attributes.usage', 'name', 'drawing'],

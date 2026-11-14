@@ -280,10 +280,12 @@ export function importPsys2(from, commit) {
     for (const w of t.filter((x) => x.type === 'kids.time.length')) {
       const whole = spaced(one(w, 'whole')), part = one(w, 'part'), count = one(w, 'count');
       const cands = [whole, whole === 'year' && part === 'day' ? 'common year' : null].filter(Boolean);
-      const hit = cands.map((c) => dur.get(c)).find((d) => d && d.unit?.[0] === part);
-      if (hit) { if (String(hit.count[0]) === count) have.push(`${whole}: ${count} ${part}s`); else dis.push(`${whole}: PSys2 ${count} ${part}s, ours ${hit.count[0]}`); }
+      // A span may be told in several units (Q33): the fact of that name and that unit, one fact each.
+      const hit = (facts.get('k.time.duration') ?? []).find((d) => cands.includes(tok(d.attrs.name?.[0])) && tok(d.attrs.unit?.[0]) === part);
+      const ours = hit && tok((hit.attrs.count ?? hit.attrs.count_about)[0]);
+      if (hit) { if (String(ours) === count) have.push(`${whole}: ${count} ${part}s`); else dis.push(`${whole}: PSys2 ${count} ${part}s, ours ${ours}`); }
       else if (!dur.has(whole)) lines.push(wire(`k.time.psys2.${seg(whole)}`, 'k.time.duration', [['name', whole], ['count', count], ['unit', part]], SRC));
-      else left.push(`${whole}: ${count} ${part}s (ours says a ${whole} in ${dur.get(whole).unit?.[0]}s; a duration has one count and one unit)`);
+      else left.push(`${whole}: ${count} ${part}s (ours says a ${whole} in ${dur.get(whole).unit?.join(', ')}s)`);
     }
     for (const w of t.filter((x) => x.type === 'kids.time.monthinfo')) { const m = months.get(cap(one(w, 'name'))); if (!m || m.days[0] !== one(w, 'days') || m.n[0] !== one(w, 'index') || m.season_north[0] !== one(w, 'season')) dis.push(`month ${one(w, 'name')}`); }
     for (const w of t.filter((x) => x.type === 'kids.time.dayinfo')) { const d = days.get(cap(one(w, 'name'))); if (!d || d.n[0] !== one(w, 'index') || (d.weekend[0] === 'true') !== (one(w, 'kind') === 'weekend')) dis.push(`day ${one(w, 'name')}`); }

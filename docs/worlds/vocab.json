@@ -17,6 +17,33 @@
  "'ve": [
   "w.lang.en/shards/morphology"
  ],
+ "1 am": [
+  "k.time/shards/clock"
+ ],
+ "1 pm": [
+  "k.time/shards/clock"
+ ],
+ "10 am": [
+  "k.time/shards/clock"
+ ],
+ "10 pm": [
+  "k.time/shards/clock"
+ ],
+ "11 am": [
+  "k.time/shards/clock"
+ ],
+ "11 pm": [
+  "k.time/shards/clock"
+ ],
+ "12 am": [
+  "k.time/shards/clock"
+ ],
+ "12 pm": [
+  "k.time/shards/clock"
+ ],
+ "12-hour clock": [
+  "k.time/schema.sop"
+ ],
  "1st": [
   "k.objects/shards/noto-award-medal-01"
  ],
@@ -25,6 +52,12 @@
   "k.attributes/shards/same-0",
   "k.objects/shards/noto-award-medal-01",
   "k.scenes/shards/things-0"
+ ],
+ "2 am": [
+  "k.time/shards/clock"
+ ],
+ "2 pm": [
+  "k.time/shards/clock"
  ],
  "2d": [
   "k.shapes/schema.sop"
@@ -37,6 +70,12 @@
   "k.attributes/shards/same-0",
   "k.objects/shards/noto-award-medal-01",
   "k.scenes/shards/things-0"
+ ],
+ "3 am": [
+  "k.time/shards/clock"
+ ],
+ "3 pm": [
+  "k.time/shards/clock"
  ],
  "3d": [
   "k.shapes/schema.sop"
@@ -56,8 +95,44 @@
   "k.objects/shards/noto-award-medal-01",
   "k.scenes/shards/things-0"
  ],
+ "4 am": [
+  "k.time/shards/clock"
+ ],
+ "4 pm": [
+  "k.time/shards/clock"
+ ],
+ "5 am": [
+  "k.time/shards/clock"
+ ],
+ "5 pm": [
+  "k.time/shards/clock"
+ ],
+ "6 am": [
+  "k.time/shards/clock"
+ ],
+ "6 pm": [
+  "k.time/shards/clock"
+ ],
+ "7 am": [
+  "k.time/shards/clock"
+ ],
+ "7 pm": [
+  "k.time/shards/clock"
+ ],
+ "8 am": [
+  "k.time/shards/clock"
+ ],
+ "8 pm": [
+  "k.time/shards/clock"
+ ],
  "8ball": [
   "k.objects/shards/noto-game-01"
+ ],
+ "9 am": [
+  "k.time/shards/clock"
+ ],
+ "9 pm": [
+  "k.time/shards/clock"
  ],
  "a": [
   "k.attributes/shards/attributes",
@@ -1168,7 +1243,6 @@
   "k.objects/shards/noto-clothing-05"
  ],
  "after": [
-  "k.attributes/shards/aspects",
   "k.time/schema.sop",
   "k.words/shards/af",
   "w.lang.en/shards/prepositions"
@@ -1183,7 +1257,12 @@
   "k.words/shards/af"
  ],
  "afternoon": [
+  "k.attributes/shards/same-a",
+  "k.time/shards/clock",
   "k.words/shards/af"
+ ],
+ "afternoons": [
+  "k.time/shards/clock"
  ],
  "aftershave": [
   "k.attributes/shards/drawn-mulberry",
@@ -1909,8 +1988,15 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "am": [
+  "k.time/schema.sop",
   "k.words/shards/am",
   "k.words/shards/be"
+ ],
+ "am pm": [
+  "k.time/schema.sop"
+ ],
+ "am_pm": [
+  "k.attributes/shards/aspects"
  ],
  "amadjuak lake": [
   "k.geo/shards/north-america"
@@ -7011,6 +7097,7 @@
   "k.words/shards/be"
  ],
  "before": [
+  "k.time/schema.sop",
   "k.words/shards/be",
   "w.lang.en/shards/prepositions"
  ],
@@ -17089,6 +17176,8 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-c",
+  "k.time/schema.sop",
+  "k.time/shards/calendar",
   "k.words/shards/cl"
  ],
  "clock radio": [
@@ -18250,6 +18339,9 @@
  "comes": [
   "k.actions/shards/actions-move",
   "k.food/schema.sop"
+ ],
+ "comes after": [
+  "k.time/schema.sop"
  ],
  "comes from": [
   "k.food/schema.sop"
@@ -20064,6 +20156,7 @@
   "k.body/schema.sop"
  ],
  "count_about": [
+  "k.attributes/shards/aspects",
   "k.units/shards/measures"
  ],
  "count_per_part": [
@@ -21900,6 +21993,8 @@
  ],
  "cycle": [
   "k.actions/shards/actions-move",
+  "k.time/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/cy"
  ],
  "cycle helmet": [
@@ -22590,6 +22685,7 @@
   "k.objects/shards/noto-sky-weather-02",
   "k.space/schema.sop",
   "k.time/shards/calendar",
+  "k.time/shards/psys2",
   "k.units/shards/core",
   "k.words/shards/da"
  ],
@@ -26551,6 +26647,7 @@
   "k.words/shards/ea"
  ],
  "earlier": [
+  "k.time/schema.sop",
   "k.words/shards/ea"
  ],
  "earlier than": [
@@ -27766,7 +27863,12 @@
   "k.objects/shards/things-3"
  ],
  "ends": [
+  "k.time/schema.sop",
   "w.timeline/schema.sop"
+ ],
+ "ends_about": [
+  "k.attributes/shards/aspects",
+  "k.units/shards/measures"
  ],
  "endurance": [
   "k.words/shards/en"
@@ -28409,8 +28511,13 @@
   "k.words/shards/ev"
  ],
  "evening": [
+  "k.attributes/shards/same-e",
   "k.objects/shards/noto-place-other-01",
+  "k.time/shards/clock",
   "k.words/shards/ev"
+ ],
+ "evenings": [
+  "k.time/shards/clock"
  ],
  "evenly_spaced": [
   "k.layouts/shards/layouts"
@@ -30694,9 +30801,11 @@
   "k.words/shards/fi"
  ],
  "first": [
+  "k.attributes/shards/aspects",
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.time/schema.sop",
   "k.values/shards/numbers",
   "k.values/shards/sets",
   "k.words/shards/fi",
@@ -31734,11 +31843,13 @@
  ],
  "following": [
   "k.actions/shards/actions-move",
+  "k.time/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/fo"
  ],
  "follows": [
-  "k.actions/shards/actions-move"
+  "k.actions/shards/actions-move",
+  "k.time/schema.sop"
  ],
  "folly": [
   "k.words/shards/fo"
@@ -38877,10 +38988,12 @@
  "hemisphere": [
   "k.attributes/shards/same-h",
   "k.shapes/shards/shapes",
+  "k.time/schema.sop",
   "k.words/shards/he"
  ],
  "hemispheres": [
-  "k.shapes/shards/shapes"
+  "k.shapes/shards/shapes",
+  "k.time/schema.sop"
  ],
  "hemmed": [
   "k.words/shards/he"
@@ -40427,10 +40540,18 @@
   "k.words/shards/ho"
  ],
  "hour": [
+  "k.attributes/shards/aspects",
   "k.attributes/shards/same-h",
+  "k.time/schema.sop",
   "k.time/shards/calendar",
   "k.units/shards/core",
+  "k.units/shards/measures",
   "k.words/shards/ho"
+ ],
+ "hour12": [
+  "k.attributes/shards/aspects",
+  "k.time/schema.sop",
+  "k.units/shards/measures"
  ],
  "hour_hand": [
   "k.objects/shards/noto-time-01"
@@ -44428,13 +44549,25 @@
  "k.time": [
   "k.units/shards/measures"
  ],
+ "k.time.before": [
+  "k.attributes/shards/aspects"
+ ],
  "k.time.duration": [
+  "k.attributes/shards/aspects"
+ ],
+ "k.time.hour": [
   "k.attributes/shards/aspects"
  ],
  "k.time.month": [
   "k.attributes/shards/aspects"
  ],
+ "k.time.part_of_day": [
+  "k.attributes/shards/aspects"
+ ],
  "k.time.season": [
+  "k.attributes/shards/aspects"
+ ],
+ "k.time.season_in": [
   "k.attributes/shards/aspects"
  ],
  "k.time.weekday": [
@@ -47156,8 +47289,10 @@
   "k.words/shards/la"
  ],
  "last": [
+  "k.attributes/shards/aspects",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.time/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/la",
   "w.lang.en/shards/numbers"
@@ -47207,6 +47342,8 @@
   "k.words/shards/la"
  ],
  "later": [
+  "k.attributes/shards/aspects",
+  "k.time/schema.sop",
   "k.words/shards/la"
  ],
  "later than": [
@@ -48730,7 +48867,9 @@
   "k.body/schema.sop",
   "k.faces/schema.sop",
   "k.geo/schema.sop",
+  "k.time/schema.sop",
   "k.units/shards/core",
+  "k.units/shards/measures",
   "k.values/shards/scales",
   "k.words/shards/le"
  ],
@@ -54111,6 +54250,7 @@
   "k.words/shards/mi"
  ],
  "midday": [
+  "k.time/shards/clock",
   "k.words/shards/mi"
  ],
  "middle": [
@@ -54245,7 +54385,9 @@
   "k.words/shards/mi"
  ],
  "midnight": [
+  "k.attributes/shards/same-m",
   "k.scenes/shards/scenes-other",
+  "k.time/shards/clock",
   "k.words/shards/mi"
  ],
  "midnight blue": [
@@ -55656,7 +55798,9 @@
  ],
  "month": [
   "k.attributes/shards/aspects",
+  "k.attributes/shards/same-m",
   "k.time/schema.sop",
+  "k.time/shards/calendar",
   "k.units/shards/measures",
   "k.words/shards/mo"
  ],
@@ -55664,7 +55808,8 @@
   "k.words/shards/mo"
  ],
  "months": [
-  "k.time/schema.sop"
+  "k.time/schema.sop",
+  "k.time/shards/calendar"
  ],
  "montreal": [
   "k.words/shards/mo"
@@ -55874,9 +56019,14 @@
   "k.geo/shards/africa"
  ],
  "morning": [
+  "k.attributes/shards/same-m",
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-place-other-01",
+  "k.time/shards/clock",
   "k.words/shards/mo"
+ ],
+ "mornings": [
+  "k.time/shards/clock"
  ],
  "morocco": [
   "k.attributes/shards/same-m",
@@ -57696,6 +57846,7 @@
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
+  "k.time/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/na",
   "w.list/schema.sop",
@@ -58623,6 +58774,8 @@
   "k.objects/shards/animals-2"
  ],
  "next": [
+  "k.attributes/shards/aspects",
+  "k.time/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/ne",
   "w.lang.en/shards/prepositions"
@@ -58739,10 +58892,12 @@
   "k.geo/shards/psys2-countries"
  ],
  "night": [
+  "k.attributes/shards/same-n",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
   "k.objects/shards/noto-sky-weather-03",
   "k.scenes/shards/scenes-other",
+  "k.time/shards/clock",
   "k.words/shards/ni"
  ],
  "night club": [
@@ -58761,6 +58916,9 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-n",
   "k.objects/shards/noto-place-other-01"
+ ],
+ "night-time": [
+  "k.time/shards/clock"
  ],
  "nightcap": [
   "k.words/shards/ni"
@@ -58817,6 +58975,7 @@
   "k.words/shards/ni"
  ],
  "nighttime": [
+  "k.time/shards/clock",
   "k.words/shards/ni"
  ],
  "niigata": [
@@ -59069,6 +59228,8 @@
   "k.scenes/shards/things-n"
  ],
  "noon": [
+  "k.attributes/shards/same-n",
+  "k.time/shards/clock",
   "k.words/shards/no"
  ],
  "noose": [
@@ -59975,6 +60136,9 @@
  "o": [
   "k.words/shards/o"
  ],
+ "o'clock": [
+  "k.time/schema.sop"
+ ],
  "oaf": [
   "k.words/shards/oa"
  ],
@@ -60288,6 +60452,7 @@
  "of": [
   "k.actions/shards/verbs-change",
   "k.faces/schema.sop",
+  "k.time/schema.sop",
   "w.lang.en/shards/grammar",
   "w.lang.en/shards/prepositions"
  ],
@@ -61166,12 +61331,14 @@
   "k.attributes/shards/aspects",
   "k.objects/shards/noto-animal-mammal-02",
   "k.space/schema.sop",
+  "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/or",
   "w.list/schema.sop"
  ],
  "ordered": [
   "k.layouts/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/or"
  ],
  "ordering": [
@@ -62860,11 +63027,13 @@
  ],
  "part": [
   "k.actions/shards/acts",
+  "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.body/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
+  "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
   "k.words/shards/pa"
@@ -62877,9 +63046,16 @@
  "part of speech": [
   "k.words/schema.sop"
  ],
+ "part of the day": [
+  "k.attributes/shards/aspects",
+  "k.time/schema.sop"
+ ],
  "part_of": [
   "k.attributes/shards/aspects",
   "k.layouts/shards/joins"
+ ],
+ "part_of_day": [
+  "k.units/shards/measures"
  ],
  "partial": [
   "k.words/shards/pa"
@@ -66556,6 +66732,7 @@
   "k.words/shards/pl"
  ],
  "pm": [
+  "k.time/schema.sop",
   "k.words/shards/pm"
  ],
  "pneumonia": [
@@ -67293,6 +67470,7 @@
  ],
  "position": [
   "k.actions/shards/verbs-place",
+  "k.time/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/po",
   "w.list/schema.sop",
@@ -67758,6 +67936,9 @@
  ],
  "precedent": [
   "k.words/shards/pr"
+ ],
+ "precedes": [
+  "k.time/schema.sop"
  ],
  "preceding": [
   "k.values/shards/sets"
@@ -74237,6 +74418,7 @@
   "k.objects/shards/noto-office-02",
   "k.shapes/schema.sop",
   "k.shapes/shards/shapes",
+  "k.time/schema.sop",
   "k.values/shards/shapes",
   "k.words/shards/ro",
   "w.seating/schema.sop"
@@ -76968,7 +77150,8 @@
   "k.words/shards/se"
  ],
  "seasons": [
-  "k.time/schema.sop"
+  "k.time/schema.sop",
+  "k.time/shards/calendar"
  ],
  "seat": [
   "k.attributes/shards/drawn-noto",
@@ -83484,7 +83667,12 @@
   "k.feelings/shards/feelings"
  ],
  "starts": [
+  "k.time/schema.sop",
   "w.timeline/schema.sop"
+ ],
+ "starts_about": [
+  "k.attributes/shards/aspects",
+  "k.units/shards/measures"
  ],
  "starvation": [
   "k.words/shards/st"
@@ -89053,6 +89241,7 @@
   "k.attributes/shards/same-a",
   "k.attributes/shards/same-c",
   "k.attributes/shards/same-d",
+  "k.attributes/shards/same-e",
   "k.attributes/shards/same-f",
   "k.attributes/shards/same-h",
   "k.attributes/shards/same-j",
@@ -89074,7 +89263,8 @@
   "w.timeline/schema.sop"
  ],
  "time of day": [
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.time/schema.sop"
  ],
  "time-out": [
   "k.words/shards/ti"
@@ -92181,6 +92371,12 @@
   "k.values/shards/numbers",
   "k.words/shards/tw",
   "w.lang.en/shards/numbers"
+ ],
+ "twelve at night": [
+  "k.time/shards/clock"
+ ],
+ "twelve noon": [
+  "k.time/shards/clock"
  ],
  "twenties": [
   "k.words/shards/tw"

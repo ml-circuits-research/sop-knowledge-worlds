@@ -118,3 +118,23 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **A dictionary's exception list mixes reading and writing**: WordNet's noun.exc gives mice and feet, but also
   antennae, bani (for ban) and cola (for colon). Kept for reading only where the plural is classical or foreign
   (`read_only=yes`), left out where the plural is a word of its own: one list, two directions, two decisions.
+
+## After Round 11 (first worker): one build, order in time, derived facts, drawings
+
+- **Q35: a second build hides changes of meaning, not of syntax.** Moving every world to 0.30.0 changed nothing in
+  942 files of facts, but one key of a reusable world: `amount` on a list item had become an argument of the act
+  `make` (how many to make), so "a litre" was refused. A key name of a reusable world shares a namespace with the
+  arguments of the library's acts; a world validated by an older build than the acts it is driven by does not see
+  that. One build, and a session per reusable world as a test, found it in one run.
+- **Order in time is one type with a position and a successor, and one rule** (k.time version 2). Weekdays, months,
+  seasons, parts of the day and hours all extend `k.time.ordered` (`cycle`, `n`, `next`), so "before" is one rule
+  for every cycle (375 facts) and a host compares any two times of one cycle by one lookup. Two senses had to be
+  kept apart: `next` is cyclic (after December comes January), "before" is inside one round as the cycle counts it
+  (Friday is not before Monday). A cycle fact that says where the round starts is what makes the second answer honest.
+- **A reverse relation was dropped for the one home**: the season's `after` (the season before) is `next` read
+  backwards; keeping both would have let them disagree.
+- **A summary that can be derived should be derived, not written**: the first and last month of a season in each
+  hemisphere come from the months by four rules, so the 8 facts cannot disagree with the 24 values they summarise.
+- **Identity decides what can be said**: with `name` alone as the identity of a duration, "a year is 52 weeks"
+  could not stand next to "a year is 12 months". Making `name` and `unit` the identity let a span be told in
+  several units, and the two PSys2 facts left out in Round 10 now match ours.

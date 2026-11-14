@@ -116,6 +116,7 @@ export const FAMILIES = [
   ['kind of person', 'a kind of person by age and sex', 'k.people', 'k.people.kind', 'name'], ['role', 'a job, a family role or a story role', 'k.people', 'k.people.role', 'name'],
   ['month', 'a month of the year', 'k.time', 'k.time.month', 'name'], ['weekday', 'a day of the week', 'k.time', 'k.time.weekday', 'name'], ['season', 'a season', 'k.time', 'k.time.season', 'name'],
   ['duration', 'a length of time', 'k.time', 'k.time.duration', 'name'],
+  ['part of the day', 'a part of the day (morning, afternoon, evening, night)', 'k.time', 'k.time.part_of_day', 'name'], ['hour', 'an hour of the clock', 'k.time', 'k.time.hour', 'name'],
   ['body in space', 'a planet, moon, star or other body', 'k.space', 'k.space.body', 'name'],
   ['scene thing', 'a thing that has a usual place and size for scenes (the things of k.scenes)', 'k.scenes', 'k.scenes.thing', 'name'],
 ];
@@ -179,11 +180,18 @@ role | spatial | k.people.role | name | works_at
 role | relational | k.people.role | name | is, holds, uses, does
 role | social | k.people.role | name | group
 month | numeric | k.time.month | name | days, leap_days
-month | temporal | k.time.month | name | n, season_north, season_south
-weekday | temporal | k.time.weekday | name | n, weekend
-season | temporal | k.time.season | name | n, after
+month | temporal | k.time.month | name | n, next, season_north, season_south
+month | temporal | k.time.before | earlier | later
+weekday | temporal | k.time.weekday | name | n, next, weekend
+weekday | temporal | k.time.before | earlier | later
+season | temporal | k.time.season | name | n, next
+season | temporal | k.time.season_in | season | first, last
 season | relational | k.time.month | season_north | name
-duration | numeric | k.time.duration | name | count
+part of the day | temporal | k.time.part_of_day | name | n, next, starts_about, ends_about
+part of the day | relational | k.time.hour | part | name
+hour | temporal | k.time.hour | name | n, next, hour12, am_pm, part
+hour | temporal | k.time.before | earlier | later
+duration | numeric | k.time.duration | name | count, count_about
 duration | relational | k.time.duration | name | unit
 body in space | visual | k.space.body | name | colour, drawing, rings
 body in space | spatial | k.space.body | name | order, in

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-a: one name, one thing: for 106 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-a: one name, one thing: for 107 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -16,6 +16,7 @@
 @k.attributes.same.aeroplane.thing k.attributes.same name=aeroplane sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.afghanistan.place k.attributes.same name=afghanistan sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.africa.place k.attributes.same name=africa sense=place only=true in=k.geo.continent by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.afternoon.time k.attributes.same name=afternoon sense=time only=true in=k.time.part_of_day by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.aftershave.thing k.attributes.same name=aftershave sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.aircraft.thing k.attributes.same name=aircraft sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.airplane.thing k.attributes.same name=airplane sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

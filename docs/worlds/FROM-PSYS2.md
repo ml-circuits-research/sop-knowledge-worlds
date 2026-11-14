@@ -61,7 +61,7 @@ Shard `k.animals/shards/psys2` (CC0). **Left:** class (ours is finer: cnidarian,
 
 The 12 months (number, days, season), the 7 days (number, school day or weekend) and the 4 seasons are all in `k.time` with the same values (a school day is `weekend=false`; February's "29 in a leap year" is `leap_days=29`; PSys2's season is `season_north`).
 
-Lengths of time, 10: 7 we had (week: 7 days; year: 12 months; year: 365 days; leap year: 366 days; day: 24 hours; hour: 60 minutes; minute: 60 seconds); **taken** 1 (a weekend: 2 days) into `k.time/shards/psys2`; **left** 2: year: 52 weeks (ours says a year in months; a duration has one count and one unit); leap year: 12 months (ours says a leap year in days; a duration has one count and one unit): see `questions.md`.
+Lengths of time, 10: 9 we had (week: 7 days; year: 12 months; year: 52 weeks; year: 365 days; leap year: 366 days; leap year: 12 months; day: 24 hours; hour: 60 minutes; minute: 60 seconds); **taken** 1 (a weekend: 2 days) into `k.time/shards/psys2`; **left** 0: none: see `questions.md`.
 
 **Disagree:** nothing.
 

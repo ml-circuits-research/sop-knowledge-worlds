@@ -22,7 +22,9 @@ through a synonym or a stand-in has the value.
 | month | 12 | – | – | – | 12 (100%) | – | – | 12 (100%) | – |
 | weekday | 7 | – | – | – | – | – | – | 7 (100%) | – |
 | season | 4 | – | – | 4 (100%) | – | – | – | 4 (100%) | – |
-| duration | 14 | – | – | 13 (93%) | 13 (93%) | – | – | – | – |
+| duration | 15 | – | – | 14 (93%) | 14 (93%) | – | – | – | – |
+| part of the day | 4 | – | – | 4 (100%) | – | – | – | 4 (100%) | – |
+| hour | 24 | – | – | – | – | – | – | 24 (100%) | – |
 | body in space | 28 | 16 (57%) | 15 (54%) | 28 (100%) | 9 (32%) | – | – | 10 (36%) | – |
 | scene thing | 2308 | 2146 (93%) | 2308 (100%) | 785 (34%) | 647 (28%) | – | – | 257 (11%) | 256 (11%) |
 
@@ -39,9 +41,11 @@ through a synonym or a stand-in has the value.
 - **continent**: relational: `k.geo.country` (name).
 - **kind of person**: visual: `k.people.kind` (drawing, hair, face); relational: `k.people.kind` (is_a); numeric: `k.people.kind` (height_about); social: `k.people.kind` (age, sex).
 - **role**: visual: `k.people.role` (drawing, wears, hat, glasses, beard, moustache, shoulders, face); spatial: `k.people.role` (works_at); relational: `k.people.role` (is, holds, uses, does); social: `k.people.role` (group).
-- **month**: numeric: `k.time.month` (days, leap_days); temporal: `k.time.month` (n, season_north, season_south).
-- **weekday**: temporal: `k.time.weekday` (n, weekend).
-- **season**: relational: `k.time.month` (name); temporal: `k.time.season` (n, after).
-- **duration**: relational: `k.time.duration` (unit); numeric: `k.time.duration` (count).
+- **month**: numeric: `k.time.month` (days, leap_days); temporal: `k.time.month` (n, next, season_north, season_south), `k.time.before` (later).
+- **weekday**: temporal: `k.time.weekday` (n, next, weekend), `k.time.before` (later).
+- **season**: relational: `k.time.month` (name); temporal: `k.time.season` (n, next), `k.time.season_in` (first, last).
+- **duration**: relational: `k.time.duration` (unit); numeric: `k.time.duration` (count, count_about).
+- **part of the day**: relational: `k.time.hour` (name); temporal: `k.time.part_of_day` (n, next, starts_about, ends_about).
+- **hour**: temporal: `k.time.hour` (n, next, hour12, am_pm, part), `k.time.before` (later).
 - **body in space**: visual: `k.space.body` (colour, drawing, rings); spatial: `k.space.body` (order, in); relational: `k.space.body` (kind, orbits, group); numeric: `k.space.body` (size_rank, moons, moons_about); temporal: `k.space.body` (orbit_years).
 - **scene thing**: visual: `k.attributes.drawn` (drawn_colour), `k.attributes.thing` (colour); spatial: `k.scenes.thing` (place, size, on); relational: `k.attributes.thing` (kind, can, used_for), `k.parts.usual` (has); numeric: `k.attributes.number` (size_about, weight_about, speed_about, price_class); temporal: `k.attributes.usage` (season, time, weather); social: `k.attributes.usage` (age, used_by), `k.people.role` (name).
