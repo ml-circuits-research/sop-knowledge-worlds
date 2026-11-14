@@ -20,7 +20,7 @@
 @k.food.food.grows_on core.slot of=k.food.food key=grows_on enum=tree enum=bush enum=vine enum=plant enum=underground core.source="hand-core 1"
 @k.food.food.comes_from core.slot of=k.food.food key=comes_from many=true kind=atom kind=string core.source="hand-core 1"
 @k.food.food.eaten core.slot of=k.food.food key=eaten many=true enum=raw enum=cooked core.source="hand-core 1"
-@k.food.food.drawing core.slot of=k.food.food key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.food.food.drawing core.slot of=k.food.food key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 @k.food.food.made_of core.slot of=k.food.food key=made_of many=true kind=atom kind=string core.source="hand-core 1"
 
 # Words for the type and keys of this world.

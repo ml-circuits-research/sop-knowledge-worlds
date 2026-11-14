@@ -31,7 +31,7 @@
 @k.animals.animal.baby core.slot of=k.animals.animal key=baby kind=atom core.source="hand-core 1"
 @k.animals.animal.can core.slot of=k.animals.animal key=can many=true kind=atom core.source="hand-core 1"
 @k.animals.animal.cannot core.slot of=k.animals.animal key=cannot many=true kind=atom core.source="hand-core 1"
-@k.animals.animal.drawing core.slot of=k.animals.animal key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.animals.animal.drawing core.slot of=k.animals.animal key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 @k.animals.animal.thing core.slot of=k.animals.animal key=thing kind=atom kind=string core.source="hand-core 1"
 @k.animals.animal.group core.slot of=k.animals.animal key=group kind=atom core.source="hand-core 1"
 

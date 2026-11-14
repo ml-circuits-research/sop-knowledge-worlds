@@ -314,6 +314,18 @@ facts (a type and its keys named in the call), or a template part names a closed
 draft's templates leave the article out ("am desenat casă roșie"). (c) Without it, "e" (is) could not be read.
 Blocking: no. Meanwhile: the names above; no article in templates; variants as second irregular facts.
 
+## Q49 (Q48 applied, second worker, 2026-11-14): a join made after some targets are loaded, before its own
+Question: should a `by=` join also stay open when targets of its type are loaded but not the one it names, as the
+answer to Q48 said ("stays open while its target's facts are not loaded")?
+Context: on sopworld 0.63 the 10 `drawing` joins are declared and every load path of this repository passes
+(`fullWorld` of k.objects, k.animals, k.scenes, k.people, k.wearables: 0 open joins). But 0.60 keeps a join open
+only while no fact of the target type has the key at all: told after one object shard (cat) and before the shard of
+its own drawing (owl), an animal is refused ("animal whose object is not loaded, after another object": false in a
+three-line test). A host that loads object shards by the words of a message meets that order.
+Options: (a) the library keeps a join open until a target with that value arrives, and `check()` reports what is
+still open; (b) hosts tell the shard of a thing's drawing before the thing (the vocabulary gives the shard).
+Blocking: no. Meanwhile: declared as asked; docs/worlds/README.md tells hosts the order; the second check stays.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

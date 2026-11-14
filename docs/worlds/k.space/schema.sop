@@ -24,7 +24,7 @@
 @k.space.body.rings core.slot of=k.space.body key=rings kind=boolean core.source="hand-core 1"
 @k.space.body.orbit_years core.slot of=k.space.body key=orbit_years kind=number min=0 core.source="hand-core 1"
 @k.space.body.in core.slot of=k.space.body key=in kind=atom kind=string core.source="hand-core 1"
-@k.space.body.drawing core.slot of=k.space.body key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.space.body.drawing core.slot of=k.space.body key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 # Round 9. `colour_why` says in one plain sentence why it has its colour. Approximate numbers: `day_hours_about`, the
 # time of one turn around its own axis in Earth hours; `orbit_days_about`, the time of one trip around what it
 # orbits in Earth days (given where that is under two years); `diameter_about`, its width in kilometres;
@@ -49,7 +49,7 @@
 @k.space.kind.orbits core.slot of=k.space.kind key=orbits kind=atom kind=string core.source="hand-core 1"
 @k.space.kind.has core.slot of=k.space.kind key=has many=true kind=atom kind=string core.source="hand-core 1"
 @k.space.kind.does core.slot of=k.space.kind key=does many=true kind=atom kind=string core.source="hand-core 1"
-@k.space.kind.drawing core.slot of=k.space.kind key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.space.kind.drawing core.slot of=k.space.kind key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 # `about` says in one plain sentence what the kind is.
 @k.space.kind.about core.slot of=k.space.kind key=about kind=string core.source="hand-core 1"
 

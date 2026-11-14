@@ -18,7 +18,7 @@
 @k.body.part.count core.slot of=k.body.part key=count kind=integer min=1 core.source="hand-core 1"
 @k.body.part.child_count core.slot of=k.body.part key=child_count kind=integer min=1 core.source="hand-core 1"
 @k.body.part.does core.slot of=k.body.part key=does many=true kind=atom kind=string core.source="hand-core 1"
-@k.body.part.drawing core.slot of=k.body.part key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.body.part.drawing core.slot of=k.body.part key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 # Round 9. `about` says in one plain sentence what a main organ does. `count_per_part`: how many of it one larger
 # part has (five fingers on a hand). Approximate numbers: `count_about` (about 600 muscles), `temperature_about`
 # (the body, in degrees Celsius), `amount_about` (the blood of an adult, in litres), `length_about` (in metres),

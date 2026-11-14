@@ -59,9 +59,8 @@ test('Q34 item 6 and Q33: one kind-of relation, followed upwards by one rule; a 
 });
 
 test('block 06:55 item 2: every drawing= of every world names a k.objects object (the joins hold when the objects are told first)', () => {
-  // Not declared as `type=k.objects.object by=name` (questions.md Q48): sopworld checks such a join when a fact is
-  // told, once the type is declared, so a fact told before its object is refused; k.objects imports k.commonsense,
-  // which imports k.animals and k.food, whose facts join to k.objects.
+  // Declared as `type=k.objects.object by=name` since sopworld 0.60 (Q48); this is the second check the reviewer
+  // asked for, over every shard, whatever a load order leaves open.
   const objects = new Set(worlds.find((w) => w.id === 'k.objects').shards.flatMap((s) => [...s.text.matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)].map((m) => tok(m[1]))));
   const bad = [];
   let n = 0;

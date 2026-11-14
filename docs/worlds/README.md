@@ -27,9 +27,12 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
 - Shared modules with no facts of their own: `k.kinds` (`is_a`, and `kind_of` by its rules), `k.drawing` (parts and
   points of a drawing), `k.named` (the slot `named=model`, taken by 21 types through `extends=k.named.labelled`, a
   slot group of sopworld 0.34+). A world that takes one imports it. An approximate key (`moons_about`) and its exact
-  twin (`moons`) exclude each other on the slot (`excludes=`), not by a rule. The joins to drawings (`drawing=`) are
-  checked by a test, not declared with `type=` / `by=`: sopworld checks such a join when a fact is told, so a fact
-  told before the object it names would be refused (questions.md Q48).
+  twin (`moons`) exclude each other on the slot (`excludes=`), not by a rule. The joins to drawings (`drawing=`, 10 slots
+  of 7 worlds) are declared `type=k.objects.object by=name` (sopworld 0.60+: open while no object is loaded, checked
+  when objects are; `world.check()` lists those still open), and a test checks them all again. A host that loads
+  object shards lazily tells the shard of a thing's drawing before the thing, or loads the thing first: a reference
+  told after some objects but before its own is refused (questions.md Q49). The stand-ins of k.objects name drawings
+  of other shards of the same world and keep an undeclared join.
 - `w.<name>/schema.sop`: a **reusable world**: a schema in the library's `std.schema` format (kinds, attributes, the
   acts that apply, words), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`
   (`names`: the words that find it; `kinds` with their `acts`, `attributes` and `words`). They are validated with
@@ -41,7 +44,7 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
 ## index.json
 
 ```json
-{ "version": "<content hash>", "sopworld": "1d1c3c6",
+{ "version": "<content hash>", "sopworld": "b89215e",
   "worlds": [ { "id": "k.objects", "version": "1", "schema": "k.objects/schema.sop",
                 "exports": ["k.objects.object", "k.objects.part"], "depends": ["k.commonsense"],
                 "shards": [ { "id": "k.objects/shards/buildings", "path": "k.objects/shards/buildings.sop",

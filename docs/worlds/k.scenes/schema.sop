@@ -39,7 +39,7 @@
 @k.scenes.scene.weather core.slot of=k.scenes.scene key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
 @k.scenes.scene.season core.slot of=k.scenes.scene key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
 @k.scenes.scene.happens core.slot of=k.scenes.scene key=happens many=true kind=atom kind=string core.source="hand-core 1"
-@k.scenes.scene.drawing core.slot of=k.scenes.scene key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.scenes.scene.drawing core.slot of=k.scenes.scene key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # What is usually in a scene: one fact per scene and thing. `count` is how many there usually are; `where` is the
 # layer of the picture: `sky` (the top, outdoors), `ceiling` (the top, indoors), `background` (far away, behind the
@@ -57,7 +57,7 @@
 @k.scenes.has.side core.slot of=k.scenes.has key=side enum=left enum=centre enum=right core.source="hand-core 1"
 @k.scenes.has.on core.slot of=k.scenes.has key=on kind=atom kind=string core.source="hand-core 1"
 @k.scenes.has.fills core.slot of=k.scenes.has key=fills kind=boolean core.source="hand-core 1"
-@k.scenes.has.drawing core.slot of=k.scenes.has key=drawing kind=atom kind=string core.source="hand-core 1"
+@k.scenes.has.drawing core.slot of=k.scenes.has key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
 # Words for the types and keys of this world.
 @k.scenes.word.scene core.word text=scene text=scenes text=setting means=k.scenes.scene core.source="hand-core 1"

@@ -3883,3 +3883,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Rebased on k.interest (first worker, 5e39ba0): 30 worlds, 960 shards, vocab 24,661 words. Pushed after the build
   and the 10 test files that read generated files or k.objects / k.procedures (57 pass, 0 fail): three full runs
   in a row were overtaken by pushes of the other worker; the full run follows the push.
+
+## Reviewer 16:30 (2026-11-14, second worker): sopworld 0.63.0 and the 10 drawing joins declared
+
+- Build moved from 0.56.0 (1d1c3c6, the first worker's) to the library's current release 0.63.0 (b89215e, build
+  1d09dbca9e71, sha256 326fa339...): VERSION, README, docs/index.html, docs/worlds/README.md, w.lang.en WORLD.md, the
+  version test. validate: 990 files, 0 errors, 0 warnings.
+- `type=k.objects.object by=name` on the 10 `drawing` slots of k.animals, k.body, k.food, k.people (2), k.scenes (2),
+  k.space (2), k.wearables; not on the stand-ins of k.objects (their objects are in other shards of the same world,
+  and a stand-in shard told between object shards would be refused). `fullWorld` of k.objects (its imports' animals
+  and foods first), k.animals, k.scenes, k.people, k.wearables: loaded, 0 open joins by `check()`. The shared-modules
+  test stays as the second check.
+- Found: 0.60's deferred check keeps a join open only while no object is loaded at all; a reference told after one
+  object shard and before its own is refused (a three-line test with the 0.63 build). Q49; docs/worlds/README.md
+  tells hosts the order.
+- Checked before the push: the 8 test files of the build, the catalog and the joining worlds pass (catalog and derived
+  were killed for memory when run in parallel beside two other workers' suites; alone 8 and 4 pass). The full run
+  follows the push.
