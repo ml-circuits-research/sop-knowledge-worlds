@@ -3530,3 +3530,44 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   and on the import test not knowing the new shard; both fixed).
 - Rebased on Q44 (first worker) and three reviewer blocks: index.json rebuilt; vocab 24,427 words. npm test 2,884:
   2,877 pass, 7 skipped, 0 fail.
+
+
+## k.procedures: methods as knowledge (2026-11-14, first worker; block "09:10")
+
+- **The world** (`docs/worlds/k.procedures`, hand-core, CC0): the format of Q44 (seven types) plus three keys found
+  while writing the methods: `binding.together` (the values of several bindings: "parts with a kind or named by the
+  model"), `match.not` (not `detail`), and `history` read as it was before the plan began. 23 methods, all general
+  (none for one sentence), written by `tools/procedures-core.mjs`:
+  from knowledge (16): compose a scene (k.scenes), arrange in a layout (k.layouts slots), put / make a thing on the
+  anchor of another (k.layouts anchors: the seat of a swing, the top of a table), put on (a new) wearable
+  (k.wearables), a wearable on a face (w.face), a person of a role (k.people: wears, holds), a face of a role (w.face),
+  a feeling on a face (k.feelings on w.face), take apart a drawn thing (k.objects parts with a name), into named parts
+  (k.parts), a group, build from parts (k.layouts joins), a country / a city on the map (k.geo on w.map);
+  named tasks (7): a family photo (the people there, or a new family: alternatives by precondition), set a table
+  (picture, or w.seating), a chart of the things there (w.list), a report about what was done (w.timeline or w.list).
+  `core.word` facts name the tasks (family photo, set the table, chart, report).
+- **Reference reader** `tools/lib/plan.mjs` (330 lines): a test oracle that reads the facts as Q44 says (fit,
+  world, preconditions, rank; bindings, matches up the chain of kinds; each, after, expand, sub-goals to depth 3, no
+  method inside its own expansion, budget 200 acts; a toy live world with things, groups, history), not a planner for
+  hosts. Things made are named as the library names them (`swing1`).
+- **Tests** (`tests/k.procedures.test.mjs`, 15): structure (acts and roles of k.actions, one source per binding, every
+  name bound, knowledge types and keys exist, world schemas exist, no circle in the order; a plan in a world makes
+  only its kinds with its attributes); goal -> expected acts for draw a farm, a person sitting on a swing (and on an
+  existing swing, a man on a bench, a cup on a table), a family photo (both alternatives), set a table for four
+  (picture, existing table, w.seating, default four), take apart a car / a piano / a group / an idea (refused), build a
+  house from parts, a chart of the things in the picture, a report about what we did (timeline, list, refused when
+  nothing was done), a doctor, a pirate face, a shy and a hurt face, a hat on a man, a scarf on a girl, a cap on a
+  face, Peru and Lima on the map (and a country already shown), a row, a needed role asked. Coverage over all the
+  knowledge read: 61/61 scenes (1,261 acts, at most 35), 60/60 roles in a picture, 60/60 on a face, 105/105 wearables,
+  30/30 feelings, 17/17 layouts, 50/50 joined wholes, 1,643/1,643 drawings with named parts; 7 s.
+- Found on the way (fixed in the format, not in the facts): a pond, a field and a barn inside a farm were expanded as
+  the scenes of that name (now: no method inside its own expansion); kinds compared both ways let "person" fit every
+  role (now one way); a role the goal did not say vs a filler knowledge did not give (now told apart); the farmer lost
+  his number and place under the role method (the method now takes the goal's number and place). Lessons in
+  docs/lessons.md. **Q45**: unnamed drawing parts have no mark (take apart leaves the body), no `w.chart`, "about" is no
+  marker of make.
+- Numbers: k.procedures schema 127 wires (with 54 key words by tools/key-words.mjs); shards from-knowledge 299 wires,
+  53,738 bytes, tasks 117 wires, 21,497 bytes; validate 0 errors. Catalog 26 worlds, 949 shards (after the rebase on the second worker's aliases), vocab 24,470 words; k.units.measure says the 10 numeric keys of k.procedures (orders and plain numbers).
+  COVERAGE: k.procedures 3 of the common things by word. npm test 2,897: 2,893 pass, 3 skipped, 1 fail (k.units.measure:
+  no unit for the numbers of k.procedures); after tools/measures-core.mjs and the reports, the 7 test files that read
+  generated files: 464 pass, 0 fail.

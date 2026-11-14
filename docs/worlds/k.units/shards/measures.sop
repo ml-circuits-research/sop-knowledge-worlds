@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en): 165 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.procedures): 174 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -168,3 +168,12 @@
 @k.units.measure.w.lang.en.ellipsis.param.min k.units.measure world=w.lang.en type=ellipsis.param key=min counts="word or part that the name of the limit says" core.source="hand-core 1"
 @k.units.measure.w.lang.en.ellipsis.param.max k.units.measure world=w.lang.en type=ellipsis.param key=max counts="word or part that the name of the limit says" core.source="hand-core 1"
 @k.units.measure.w.lang.en.coord.param.value k.units.measure world=w.lang.en type=coord.param key=value counts=word core.source="hand-core 1"
+@k.units.measure.k.procedures.method.rank k.units.measure world=k.procedures type=method key=rank ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.goal.default k.units.measure world=k.procedures type=goal key=default plain=true core.source="hand-core 1"
+@k.units.measure.k.procedures.binding.step k.units.measure world=k.procedures type=binding key=step ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.step.n k.units.measure world=k.procedures type=step key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.step.after k.units.measure world=k.procedures type=step key=after ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.arg.step k.units.measure world=k.procedures type=arg key=step ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.arg.value k.units.measure world=k.procedures type=arg key=value plain=true core.source="hand-core 1"
+@k.units.measure.k.procedures.condition.n k.units.measure world=k.procedures type=condition key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.procedures.condition.step k.units.measure world=k.procedures type=condition key=step ordinal=true core.source="hand-core 1"

@@ -177,6 +177,23 @@ Blocking: no. Meanwhile: the world is written in this format; its tests expand e
 reader (`tools/lib/plan.mjs`, a test oracle that reads the facts, not a planner for hosts) and compare the act lists;
 the format changes when the library answers.
 
+## Q45 (block "09:10", `k.procedures`, first worker, 2026-11-14): three gaps the methods found in other worlds
+Question: may these be closed as below, each in its own world?
+Context: writing the methods as joins to other worlds showed three holes; none blocks a method, each is worked around.
+1. **An unnamed part of an imported drawing has no mark.** 21,654 of 27,902 `k.objects.part` facts are called `part<n>`;
+   7,734 of them carry `kind=detail` (a stroke or an outline by rule), the other 13,920 nothing, so nothing in the facts
+   tells "part7" (no name) from "body" (a hand-written name). "Take apart" therefore uses only parts with a kind (not
+   `detail`) or named by the model, and leaves the rest as the thing (the car's body and cabin), so the whole cannot be
+   removed. Proposal: the imports write `kind=detail` (or a new `unnamed=true`) on every part they do not name; that
+   rewrites the imported shards (the raw drawings must be fetched again).
+2. **No chart schema.** "A chart of the things in the picture" is a `w.list` list of counts. Proposal: a world schema
+   `w.chart` (a chart with a kind: bar, pie, line; series and points with label and value), when the library's chart
+   view exists; the method then gets a second alternative with `world=w.chart`.
+3. **"about" is no marker of `make`.** The report task fills the role `material` ("a report of what we did"); "a report
+   about what we did" needs `about` as a marker of `make.material` (or a role `topic` for `make`) in `k.actions`, and the
+   frame in `w.lang.en` (the second worker's world).
+Blocking: no. Meanwhile: as said above for each; `k.procedures/WORLD.md` lists them under Known limits.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

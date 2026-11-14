@@ -77,6 +77,10 @@ plain productions of 64 constructions, 233 argument frames of the acts of `k.act
 PSys2's hand-over and read by the library's `std.grammar` (`docs/worlds/w.lang.en/WORLD.md`). It is a reusable world
 of facts (types and shards, validated like the knowledge worlds), not a `std.schema` world.
 
+Block "09:10" (first worker): `k.procedures`, how goals are reached: 23 methods as facts (goal, steps as acts of `k.actions`
+with roles read off the goal, earlier steps, the live world and other knowledge worlds, preconditions, effects, order,
+alternatives by world and rank) for the library's planner `std.plan` (format: questions.md Q44; `docs/worlds/k.procedures/WORLD.md`).
+
 World schemas so far: `w.list`, `w.seating`, `w.timeline`, and (block "06:55" item 3, for the library's case
 corpus and the demo) `w.face`, a drawn face whose kinds are the slots of `k.faces`, and `w.map`, a map view over the
 places of `k.geo` with its own zoom and layer (each with a `WORLD.md`; sessions in `tests/w.schemas.test.mjs`). A

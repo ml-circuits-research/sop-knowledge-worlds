@@ -237,3 +237,29 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Decide what `copy` keeps before writing a constraint on a container.** A copied guest keeps its seat, so "one
   guest per seat" would refuse every copy of a seated guest; the constraint waits for the library's answer on what a
   copy of a thing inside another keeps.
+
+## k.procedures (first worker, block "09:10"): methods as knowledge
+
+- **A method is a join over many worlds, and writing one finds holes no coverage report finds.** Taking a car apart
+  needs to know which parts of its drawing have a name: nothing says so (an unnamed part is just `part7`); a chart
+  needs a chart schema that does not exist; "a report about" needs a marker `make` does not have (Q45). Each hole was
+  invisible while each world was checked on its own.
+- **A name that is both a scene and a thing is decided by where it stands, not by the name.** Composing a farm made a
+  pond, a field and a barn, and each was expanded again as the scene of that name. The rule that fixed it is general
+  (a method is never used inside its own expansion), not a list of names that are only things.
+- **Compare kinds one way.** Matching "a kind of the other, either way round" let `person` fit every role (a doctor is
+  a person, so a person was taken for a doctor). The rule that holds everywhere: a fact's value takes a name that is it
+  or a kind below it (what holds a person holds a man; a farm scene is not a wheat field).
+- **An empty filler means two different things.** A role the goal did not say (how many, where) is left out of the
+  step; a filler the knowledge should give and does not (no slot of the layout holds this kind) means the step cannot
+  be done. Treating both the same either drops honest steps or makes empty ones ("place the man" with no place).
+- **In a hierarchy, the goal's other roles must travel down.** The farmer of the farm (one, on the ground) became a
+  person of a role, and the method for a role made "a farmer" with no number or place: every method whose step makes
+  the goal's own thing must hand the goal's remaining roles to that act.
+- **The same task, one method per world schema, chosen by the world.** "Set a table" is chairs and plates in a picture
+  and a table with seats in a seating plan; "a report" is a timeline or a list. `world=` on the method keeps the
+  knowledge free of "if this is a seating plan" logic, and adds alternatives without touching the others.
+- **A small reference reader is the cheapest review of a format.** Expanding every scene, role, wearable, layout and
+  labelled drawing (2,000 goals in 7 s) with a 330-line oracle found what the proposal had left open (is the history
+  read before the plan or during it; "this or that" as a binding; "not this value") before the library writes the
+  planner; those points went into Q44 instead of into the library's code.

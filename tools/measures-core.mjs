@@ -58,6 +58,8 @@ export const MEASURES = {
     'ellipsis.lead': { order: ord }, 'ellipsis.trail': { order: ord }, 'ellipsis.param': { value: { counts: 'word or part that the name of the limit says' }, min: { counts: 'word or part that the name of the limit says' }, max: { counts: 'word or part that the name of the limit says' } },
     'coord.param': { value: { counts: 'word' } },
   },
+  // k.procedures: step numbers and ranks are orders; a default or a literal filler is the number the role takes.
+  'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord }, step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },
 };
 
 // The numeric slots of a world: [type, key] in the order of the schema.

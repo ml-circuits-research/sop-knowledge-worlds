@@ -159,12 +159,16 @@
  "a": [
   "k.attributes/shards/attributes",
   "k.layouts/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.values/shards/numbers",
   "k.words/shards/a",
   "w.lang.en/shards/determiners"
  ],
  "a bit": [
   "k.values/shards/scales"
+ ],
+ "a chart of the things there": [
+  "k.procedures/shards/tasks"
  ],
  "a couple": [
   "k.values/shards/numbers"
@@ -175,6 +179,15 @@
  ],
  "a dozen": [
   "k.values/shards/numbers"
+ ],
+ "a face of a role": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "a family photo of a new family": [
+  "k.procedures/shards/tasks"
+ ],
+ "a family photo of the people there": [
+  "k.procedures/shards/tasks"
  ],
  "a few": [
   "k.values/shards/scales"
@@ -209,8 +222,17 @@
  "a pair of": [
   "k.values/shards/numbers"
  ],
+ "a person of a role": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "a quarter": [
   "k.values/shards/numbers"
+ ],
+ "a report as a list": [
+  "k.procedures/shards/tasks"
+ ],
+ "a report on a timeline": [
+  "k.procedures/shards/tasks"
  ],
  "a tad": [
   "k.values/shards/scales"
@@ -344,6 +366,8 @@
   "k.attributes/schema.sop",
   "k.body/schema.sop",
   "k.layouts/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/tasks",
   "k.space/schema.sop",
   "k.values/schema.sop",
   "k.wearables/schema.sop",
@@ -631,6 +655,7 @@
  ],
  "act": [
   "k.actions/schema.sop",
+  "k.procedures/schema.sop",
   "k.words/shards/ac"
  ],
  "acting": [
@@ -1275,7 +1300,9 @@
   "k.objects/shards/noto-clothing-05"
  ],
  "after": [
+  "k.procedures/schema.sop",
   "k.time/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/af",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
@@ -2349,6 +2376,7 @@
   "k.layouts/shards/joins",
   "k.objects/shards/noto-transport-water-01",
   "k.objects/shards/things-3",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-a",
@@ -3450,6 +3478,9 @@
  "ares": [
   "k.words/shards/ar"
  ],
+ "arg": [
+  "k.units/shards/measures"
+ ],
  "argentina": [
   "k.attributes/shards/same-a",
   "k.geo/shards/psys2-cities-south-america",
@@ -3655,6 +3686,9 @@
   "k.actions/shards/verbs-group",
   "k.layouts/schema.sop",
   "k.words/shards/ar"
+ ],
+ "arrange in a layout": [
+  "k.procedures/shards/from-knowledge"
  ],
  "arranged": [
   "k.layouts/schema.sop",
@@ -4135,6 +4169,7 @@
   "k.commonsense/schema.sop",
   "k.objects/shards/noto-place-other-01",
   "k.objects/shards/noto-place-other-02",
+  "k.procedures/shards/tasks",
   "k.units/shards/measures",
   "k.words/shards/at",
   "w.lang.en/shards/prepositions",
@@ -4331,7 +4366,9 @@
  "attribute": [
   "k.actions/schema.sop",
   "k.actions/shards/acts",
-  "k.attributes/schema.sop"
+  "k.attributes/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge"
  ],
  "attributes": [
   "k.attributes/schema.sop"
@@ -4765,6 +4802,7 @@
  "b": [
   "k.colours/schema.sop",
   "k.layouts/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/b"
  ],
  "ba": [
@@ -5914,7 +5952,8 @@
  "bar chart": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-b",
-  "k.objects/shards/noto-office-02"
+  "k.objects/shards/noto-office-02",
+  "k.procedures/shards/tasks"
  ],
  "bar1": [
   "k.objects/shards/noto-office-02"
@@ -6260,6 +6299,7 @@
   "k.objects/shards/things",
   "k.objects/shards/things-2",
   "k.objects/shards/things-3",
+  "k.procedures/shards/from-knowledge",
   "k.units/schema.sop",
   "k.words/shards/ba"
  ],
@@ -8288,6 +8328,8 @@
   "k.words/shards/bi"
  ],
  "binding": [
+  "k.procedures/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/bi"
  ],
  "bingo": [
@@ -11734,6 +11776,9 @@
   "k.objects/shards/noto-phone-01",
   "k.words/shards/bu"
  ],
+ "build from parts": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "builder": [
   "k.attributes/shards/same-b",
   "k.people/shards/roles-jobs",
@@ -12545,6 +12590,7 @@
  "by": [
   "k.actions/shards/verbs-change",
   "k.attributes/schema.sop",
+  "k.procedures/schema.sop",
   "k.words/shards/by",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions"
@@ -15453,6 +15499,7 @@
  "chart": [
   "k.objects/shards/noto-money-02",
   "k.objects/shards/noto-office-02",
+  "k.procedures/shards/tasks",
   "k.words/shards/ch"
  ],
  "chart decreasing": [
@@ -18964,6 +19011,9 @@
  "compose": [
   "k.words/shards/co-1"
  ],
+ "compose a scene": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "composer": [
   "k.words/shards/co-1"
  ],
@@ -19146,6 +19196,8 @@
   "k.objects/shards/noto-food-prepared-05"
  ],
  "condition": [
+  "k.procedures/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/co-1"
  ],
  "conditioner": [
@@ -19155,6 +19207,7 @@
   "k.words/shards/co-1"
  ],
  "conditions": [
+  "k.procedures/schema.sop",
   "k.words/shards/co-1"
  ],
  "condo": [
@@ -20454,6 +20507,7 @@
  ],
  "counted": [
   "k.actions/shards/actions-mind-talk",
+  "k.procedures/shards/tasks",
   "w.timeline/schema.sop"
  ],
  "counter": [
@@ -23369,6 +23423,8 @@
   "w.lang.en/shards/hand-morphology"
  ],
  "default": [
+  "k.procedures/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/de"
  ],
  "defeat": [
@@ -25491,6 +25547,7 @@
  ],
  "done": [
   "k.objects/shards/noto-time-01",
+  "k.procedures/shards/tasks",
   "k.words/shards/do",
   "w.list/schema.sop"
  ],
@@ -26905,6 +26962,7 @@
   "k.words/shards/e"
  ],
  "each": [
+  "k.procedures/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/ea",
   "w.lang.en/shards/grammar"
@@ -27385,9 +27443,11 @@
   "k.objects/shards/animals-2"
  ],
  "effect": [
+  "k.procedures/schema.sop",
   "k.words/shards/ef"
  ],
  "effects": [
+  "k.procedures/schema.sop",
   "k.words/shards/ef"
  ],
  "efficiency": [
@@ -27954,6 +28014,9 @@
  ],
  "elope": [
   "k.words/shards/el"
+ ],
+ "else key": [
+  "k.procedures/schema.sop"
  ],
  "elves": [
   "k.words/shards/el"
@@ -28531,6 +28594,12 @@
  "equalling": [
   "k.words/shards/eq"
  ],
+ "equals": [
+  "k.procedures/schema.sop"
+ ],
+ "equals key": [
+  "k.procedures/schema.sop"
+ ],
  "equation": [
   "k.words/shards/eq"
  ],
@@ -29039,6 +29108,7 @@
  ],
  "example": [
   "k.actions/schema.sop",
+  "k.procedures/schema.sop",
   "k.words/shards/ex"
  ],
  "exceed": [
@@ -29164,6 +29234,7 @@
  ],
  "expand": [
   "k.actions/shards/verbs-change",
+  "k.procedures/schema.sop",
   "k.words/shards/ex"
  ],
  "expansion": [
@@ -29571,6 +29642,7 @@
   "k.objects/shards/openmoji-animals-nature-02",
   "k.objects/shards/openmoji-technology-01",
   "k.people/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.shapes/schema.sop",
   "k.wearables/schema.sop",
   "k.wearables/shards/places",
@@ -29608,6 +29680,7 @@
   "k.words/shards/fa"
  ],
  "fact": [
+  "k.procedures/schema.sop",
   "k.words/shards/fa"
  ],
  "faction": [
@@ -29806,17 +29879,20 @@
  "family": [
   "k.colours/schema.sop",
   "k.objects/shards/noto-clothing-05",
+  "k.procedures/shards/tasks",
   "k.words/shards/fa",
   "w.seating/schema.sop"
  ],
  "family photo": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "k.procedures/shards/tasks"
  ],
  "family photos": [
   "k.layouts/shards/layouts"
  ],
  "family picture": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "k.procedures/shards/tasks"
  ],
  "family portrait": [
   "k.layouts/shards/layouts"
@@ -30300,6 +30376,7 @@
  "feeling": [
   "k.body/shards/core",
   "k.feelings/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/fe",
   "w.face/schema.sop"
  ],
@@ -31225,6 +31302,7 @@
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02",
+  "k.procedures/shards/from-knowledge",
   "k.time/schema.sop",
   "k.values/shards/numbers",
   "k.values/shards/sets",
@@ -33553,6 +33631,7 @@
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-remove",
   "k.parts/schema.sop",
+  "k.procedures/schema.sop",
   "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
  ],
@@ -35605,8 +35684,10 @@
   "k.objects/shards/noto-sport-02",
   "k.objects/shards/noto-sport-03",
   "k.objects/shards/things-2",
+  "k.procedures/schema.sop",
   "k.scenes/shards/scenes-town",
   "k.scenes/shards/things-g",
+  "k.units/shards/measures",
   "k.words/shards/go"
  ],
  "goal net": [
@@ -35617,6 +35698,9 @@
  ],
  "goalie": [
   "k.words/shards/go"
+ ],
+ "goals": [
+  "k.procedures/schema.sop"
  ],
  "goat": [
   "k.animals/shards/mammals",
@@ -36982,6 +37066,7 @@
   "k.objects/shards/plants",
   "k.objects/shards/things",
   "k.objects/shards/things-2",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.words/shards/gr"
  ],
@@ -37013,13 +37098,16 @@
   "k.attributes/shards/aspects",
   "k.geo/schema.sop",
   "k.people/schema.sop",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.space/schema.sop",
   "k.units/shards/measures",
   "k.values/shards/numbers",
   "k.words/shards/gr"
  ],
  "group photo": [
-  "k.layouts/shards/layouts"
+  "k.layouts/shards/layouts",
+  "k.procedures/shards/tasks"
  ],
  "group picture": [
   "k.layouts/shards/layouts"
@@ -39937,6 +40025,7 @@
  "highlight": [
   "k.actions/shards/verbs-pick",
   "k.objects/shards/things-3",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/hi",
   "w.map/schema.sop"
  ],
@@ -40163,6 +40252,7 @@
   "k.words/shards/hi"
  ],
  "history": [
+  "k.procedures/schema.sop",
   "k.words/shards/hi",
   "w.timeline/schema.sop"
  ],
@@ -40331,7 +40421,8 @@
   "k.attributes/schema.sop",
   "k.attributes/shards/aspects",
   "k.layouts/schema.sop",
-  "k.people/schema.sop"
+  "k.people/schema.sop",
+  "k.procedures/shards/from-knowledge"
  ],
  "holdup": [
   "k.words/shards/ho"
@@ -41312,6 +41403,9 @@
  "how much": [
   "w.lang.en/shards/clauses",
   "w.list/schema.sop"
+ ],
+ "how to": [
+  "k.procedures/schema.sop"
  ],
  "how's": [
   "w.lang.en/shards/morphology"
@@ -44603,6 +44697,7 @@
  ],
  "joint": [
   "k.objects/shards/places",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/jo"
  ],
  "joint_1": [
@@ -45158,6 +45253,9 @@
  ],
  "k.people.role": [
   "k.attributes/shards/aspects"
+ ],
+ "k.procedures": [
+  "k.units/shards/measures"
  ],
  "k.scenes": [
   "k.units/shards/measures"
@@ -45737,6 +45835,7 @@
   "k.objects/shards/noto-food-fruit-01",
   "k.objects/shards/noto-lock-01",
   "k.parts/shards/k",
+  "k.procedures/schema.sop",
   "k.scenes/shards/things-k",
   "k.units/schema.sop",
   "k.words/shards/ke"
@@ -46109,6 +46208,9 @@
   "k.kinds/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.scenes/schema.sop",
   "k.shapes/schema.sop",
   "k.space/schema.sop",
@@ -46134,6 +46236,9 @@
  "kinda": [
   "k.words/shards/ki"
  ],
+ "kinded": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "kindergarten": [
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/ki"
@@ -46146,6 +46251,9 @@
  ],
  "kindness": [
   "k.words/shards/ki"
+ ],
+ "kinds": [
+  "k.procedures/shards/tasks"
  ],
  "king": [
   "k.attributes/shards/same-k",
@@ -47086,6 +47194,7 @@
   "k.objects/shards/noto-household-03",
   "k.objects/shards/things-2",
   "k.objects/shards/things-3",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/shards/things-l",
   "k.words/shards/la",
   "w.map/schema.sop"
@@ -47102,6 +47211,7 @@
   "k.objects/shards/food-2"
  ],
  "labelled": [
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/la"
  ],
  "labelling": [
@@ -48194,6 +48304,9 @@
   "k.words/shards/la",
   "k.words/shards/li"
  ],
+ "lay the table": [
+  "k.procedures/shards/tasks"
+ ],
  "layer": [
   "k.objects/shards/things-3",
   "k.wearables/schema.sop",
@@ -48205,6 +48318,7 @@
  ],
  "layout": [
   "k.layouts/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/la"
  ],
  "layouts": [
@@ -50630,6 +50744,7 @@
   "k.actions/shards/verbs-ask",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-office-02",
+  "k.procedures/shards/tasks",
   "k.words/shards/li",
   "w.list/schema.sop"
  ],
@@ -50738,6 +50853,7 @@
  "live": [
   "k.animals/schema.sop",
   "k.commonsense/schema.sop",
+  "k.procedures/schema.sop",
   "k.words/shards/li"
  ],
  "live shrimp": [
@@ -51263,6 +51379,7 @@
   "k.objects/shards/things-3"
  ],
  "loose": [
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/lo"
  ],
  "loose_1": [
@@ -52083,6 +52200,7 @@
   "k.attributes/schema.sop",
   "k.commonsense/schema.sop",
   "k.food/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.space/schema.sop",
   "k.words/shards/ma"
  ],
@@ -52439,6 +52557,9 @@
  ],
  "make a copy of": [
   "k.actions/shards/verbs-copy"
+ ],
+ "make a thing on the anchor of another": [
+  "k.procedures/shards/from-knowledge"
  ],
  "make dirty": [
   "k.actions/shards/actions-make-change"
@@ -53692,6 +53813,7 @@
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.commonsense/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/ma"
  ],
  "maternity": [
@@ -54732,7 +54854,12 @@
   "k.words/shards/me"
  ],
  "method": [
+  "k.procedures/schema.sop",
+  "k.units/shards/measures",
   "k.words/shards/me"
+ ],
+ "methods": [
+  "k.procedures/schema.sop"
  ],
  "metre": [
   "k.units/shards/core",
@@ -58475,6 +58602,8 @@
  "n": [
   "k.attributes/shards/aspects",
   "k.objects/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/tasks",
   "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
@@ -58624,6 +58753,9 @@
   "k.faces/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.time/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/na",
@@ -58651,6 +58783,7 @@
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.space/schema.sop",
   "k.values/schema.sop",
@@ -59168,6 +59301,7 @@
  ],
  "needed": [
   "k.actions/schema.sop",
+  "k.procedures/schema.sop",
   "k.words/shards/ne"
  ],
  "needier": [
@@ -60222,6 +60356,7 @@
  "not": [
   "k.objects/shards/noto-sound-02",
   "k.objects/shards/noto-time-01",
+  "k.procedures/schema.sop",
   "k.words/shards/no"
  ],
  "not any": [
@@ -60261,6 +60396,7 @@
   "k.objects/shards/noto-music-01",
   "k.objects/shards/noto-office-01",
   "k.objects/shards/things-2",
+  "k.procedures/shards/tasks",
   "k.words/shards/no",
   "w.list/schema.sop",
   "w.map/schema.sop",
@@ -60802,6 +60938,8 @@
   "k.actions/shards/actions-mind-talk",
   "k.actions/shards/acts",
   "k.objects/shards/noto-game-01",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.units/shards/measures",
   "k.values/schema.sop",
   "k.words/shards/nu",
@@ -61271,6 +61409,8 @@
  "of": [
   "k.actions/shards/verbs-change",
   "k.faces/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.time/schema.sop",
   "w.face/schema.sop",
   "w.lang.en/shards/grammar",
@@ -61632,6 +61772,7 @@
   "k.layouts/schema.sop",
   "k.layouts/shards/layouts",
   "k.objects/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.wearables/schema.sop",
   "k.words/shards/on",
@@ -62001,7 +62142,8 @@
  ],
  "optional": [
   "k.faces/schema.sop",
-  "k.layouts/schema.sop"
+  "k.layouts/schema.sop",
+  "k.procedures/schema.sop"
  ],
  "or": [
   "k.words/shards/or",
@@ -62381,6 +62523,7 @@
  ],
  "other": [
   "k.actions/shards/acts",
+  "k.procedures/schema.sop",
   "k.values/shards/sets",
   "k.words/shards/ot",
   "w.lang.en/shards/grammar"
@@ -63878,6 +64021,7 @@
   "k.layouts/schema.sop",
   "k.objects/schema.sop",
   "k.parts/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/schema.sop",
@@ -64943,6 +65087,7 @@
   "k.objects/shards/figures",
   "k.objects/shards/openmoji-travel-places-01",
   "k.people/schema.sop",
+  "k.procedures/shards/tasks",
   "k.words/shards/pe",
   "w.seating/schema.sop"
  ],
@@ -65183,6 +65328,7 @@
   "k.parts/shards/p",
   "k.parts/shards/psys2",
   "k.people/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-other",
@@ -66380,6 +66526,7 @@
   "k.words/shards/pi"
  ],
  "pinned": [
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/pi"
  ],
  "pinning": [
@@ -67011,6 +67158,8 @@
   "k.commonsense/schema.sop",
   "k.layouts/schema.sop",
   "k.objects/shards/noto-award-medal-01",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.scenes/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/pl",
@@ -67022,6 +67171,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
   "k.objects/shards/mulberry-food-kitchen-items-06",
+  "k.procedures/shards/tasks",
   "k.scenes/shards/things-p"
  ],
  "placement": [
@@ -67048,6 +67198,7 @@
   "k.words/shards/pl"
  ],
  "plan": [
+  "k.procedures/schema.sop",
   "k.words/shards/pl"
  ],
  "plane": [
@@ -68878,6 +69029,12 @@
  "precision": [
   "k.words/shards/pr"
  ],
+ "precondition": [
+  "k.procedures/schema.sop"
+ ],
+ "preconditions": [
+  "k.procedures/schema.sop"
+ ],
  "predator": [
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-03",
@@ -68992,6 +69149,7 @@
   "k.attributes/shards/usage",
   "k.objects/shards/mulberry-celebration-item-03",
   "k.objects/shards/noto-event-03",
+  "k.procedures/schema.sop",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-p",
@@ -69321,7 +69479,11 @@
   "k.words/shards/pr"
  ],
  "procedure": [
+  "k.procedures/schema.sop",
   "k.words/shards/pr"
+ ],
+ "procedures": [
+  "k.procedures/schema.sop"
  ],
  "proceed": [
   "k.words/shards/pr"
@@ -70180,6 +70342,12 @@
   "k.actions/shards/verbs-place",
   "k.words/shards/pu"
  ],
+ "put a thing on the anchor of another": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "put a wearable on a face": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "put back": [
   "k.actions/shards/verbs-place",
   "k.actions/shards/verbs-redo"
@@ -70195,6 +70363,12 @@
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/verbs-make",
   "k.actions/shards/verbs-place"
+ ],
+ "put on a new wearable": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "put on a wearable": [
+  "k.procedures/shards/from-knowledge"
  ],
  "put on the scales": [
   "k.actions/shards/actions-mind-talk"
@@ -70446,6 +70620,7 @@
   "w.lang.en/schema.sop"
  ],
  "quantity": [
+  "k.procedures/shards/tasks",
   "k.units/schema.sop",
   "k.words/shards/qu",
   "w.list/schema.sop"
@@ -71191,6 +71366,7 @@
  ],
  "rank": [
   "k.actions/shards/verbs-group",
+  "k.procedures/schema.sop",
   "k.units/shards/measures",
   "k.values/schema.sop",
   "k.words/shards/ra"
@@ -72242,7 +72418,9 @@
  ],
  "rel": [
   "k.attributes/shards/aspects",
-  "k.layouts/schema.sop"
+  "k.layouts/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge"
  ],
  "relapse": [
   "k.words/shards/re"
@@ -72517,6 +72695,7 @@
   "k.words/shards/re"
  ],
  "report": [
+  "k.procedures/shards/tasks",
   "k.words/shards/re"
  ],
  "reported": [
@@ -73022,6 +73201,9 @@
  "restaurants": [
   "k.objects/shards/places",
   "k.scenes/shards/scenes-indoors"
+ ],
+ "resting": [
+  "k.procedures/shards/from-knowledge"
  ],
  "restoration": [
   "k.words/shards/re"
@@ -74941,6 +75123,8 @@
   "k.actions/schema.sop",
   "k.attributes/shards/aspects",
   "k.people/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/ro"
  ],
  "roles": [
@@ -76084,6 +76268,7 @@
  ],
  "said": [
   "k.actions/shards/actions-mind-talk",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/sa"
  ],
  "saida": [
@@ -77477,6 +77662,7 @@
  ],
  "scene": [
   "k.commonsense/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.words/shards/sc"
  ],
@@ -78205,6 +78391,7 @@
   "k.parts/shards/p",
   "k.parts/shards/s",
   "k.parts/shards/w",
+  "k.procedures/shards/tasks",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-s",
   "k.words/shards/se",
@@ -78248,6 +78435,7 @@
   "w.seating/schema.sop"
  ],
  "seats": [
+  "k.procedures/shards/tasks",
   "k.words/shards/se",
   "w.seating/schema.sop"
  ],
@@ -78274,6 +78462,7 @@
  "second": [
   "k.attributes/shards/same-s",
   "k.objects/shards/noto-award-medal-01",
+  "k.procedures/shards/from-knowledge",
   "k.time/shards/calendar",
   "k.units/shards/core",
   "k.values/shards/numbers",
@@ -78898,6 +79087,12 @@
   "k.objects/shards/noto-office-03",
   "k.words/shards/se"
  ],
+ "set a table": [
+  "k.procedures/shards/tasks"
+ ],
+ "set a table in a seating plan": [
+  "k.procedures/shards/tasks"
+ ],
  "set down": [
   "k.actions/shards/verbs-place"
  ],
@@ -78906,6 +79101,9 @@
  ],
  "set off": [
   "k.actions/shards/actions-move"
+ ],
+ "set the table": [
+  "k.procedures/shards/tasks"
  ],
  "set up": [
   "k.actions/shards/verbs-make"
@@ -78921,6 +79119,7 @@
  ],
  "setting": [
   "k.objects/shards/things-3",
+  "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.words/shards/se"
  ],
@@ -80198,6 +80397,15 @@
   "k.objects/schema.sop",
   "k.words/shards/sh"
  ],
+ "show a city on the map": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "show a country on the map": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "show a feeling on a face": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "show the way": [
   "k.actions/shards/actions-move"
  ],
@@ -80246,6 +80454,7 @@
   "k.words/shards/sh"
  ],
  "shown": [
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/sh"
  ],
  "shown in": [
@@ -81814,6 +82023,7 @@
   "k.objects/shards/noto-game-02",
   "k.objects/shards/noto-mail-02",
   "k.objects/shards/structures",
+  "k.procedures/shards/from-knowledge",
   "k.units/shards/measures",
   "k.words/shards/sl"
  ],
@@ -82863,6 +83073,7 @@
  ],
  "sort": [
   "k.actions/shards/verbs-group",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/so",
   "w.timeline/schema.sop"
  ],
@@ -85068,6 +85279,7 @@
   "k.layouts/shards/joins",
   "k.layouts/shards/layouts",
   "k.objects/shards/places-2",
+  "k.procedures/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/st"
  ],
@@ -85117,6 +85329,7 @@
   "k.objects/shards/places",
   "k.objects/shards/places-3",
   "k.parts/schema.sop",
+  "k.procedures/schema.sop",
   "k.units/shards/measures",
   "k.values/schema.sop",
   "k.words/shards/st"
@@ -86435,6 +86648,7 @@
   "k.words/shards/su"
  ],
  "summary": [
+  "k.procedures/shards/tasks",
   "k.words/shards/su"
  ],
  "summed": [
@@ -87659,6 +87873,7 @@
   "k.parts/shards/a",
   "k.parts/shards/c",
   "k.parts/shards/d",
+  "k.procedures/shards/tasks",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-t",
   "k.words/shards/ta",
@@ -87673,6 +87888,9 @@
  ],
  "table plan": [
   "w.seating/schema.sop"
+ ],
+ "table setting": [
+  "k.procedures/shards/tasks"
  ],
  "table_top": [
   "k.objects/shards/mulberry-building-furniture-03",
@@ -87945,6 +88163,15 @@
   "k.actions/shards/acts",
   "k.actions/shards/verbs-take_apart"
  ],
+ "take apart a drawn thing": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "take apart a group": [
+  "k.procedures/shards/from-knowledge"
+ ],
+ "take apart into named parts": [
+  "k.procedures/shards/from-knowledge"
+ ],
  "take away": [
   "k.actions/shards/verbs-remove"
  ],
@@ -88105,6 +88332,7 @@
   "k.geo/shards/europe"
  ],
  "tally": [
+  "k.procedures/shards/tasks",
   "k.words/shards/ta"
  ],
  "talo": [
@@ -88400,6 +88628,7 @@
   "k.actions/shards/acts",
   "k.layouts/shards/layouts",
   "k.objects/shards/noto-game-01",
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/ta"
  ],
  "tarim": [
@@ -88445,10 +88674,12 @@
   "k.geo/shards/asia"
  ],
  "task": [
+  "k.procedures/schema.sop",
   "k.words/shards/ta",
   "w.list/schema.sop"
  ],
  "tasks": [
+  "k.procedures/schema.sop",
   "w.list/schema.sop"
  ],
  "tasman sea": [
@@ -89280,6 +89511,7 @@
   "k.words/shards/te"
  ],
  "text": [
+  "k.procedures/shards/tasks",
   "k.words/shards/te",
   "w.list/schema.sop"
  ],
@@ -89701,6 +89933,9 @@
   "k.attributes/shards/usage",
   "k.colours/schema.sop",
   "k.commonsense/schema.sop",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.scenes/schema.sop",
   "k.shapes/schema.sop",
   "k.units/shards/measures",
@@ -89709,6 +89944,8 @@
  ],
  "things": [
   "k.commonsense/schema.sop",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.words/shards/th"
  ],
  "think": [
@@ -90443,6 +90680,7 @@
  ],
  "timeline": [
   "k.layouts/shards/layouts",
+  "k.procedures/shards/tasks",
   "k.words/shards/ti",
   "w.timeline/schema.sop"
  ],
@@ -90753,6 +90991,7 @@
  ],
  "title": [
   "k.objects/shards/home",
+  "k.procedures/shards/tasks",
   "k.words/shards/ti",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
@@ -90938,6 +91177,7 @@
   "k.words/shards/to"
  ],
  "together": [
+  "k.procedures/schema.sop",
   "k.words/shards/to"
  ],
  "toggling": [
@@ -91632,6 +91872,7 @@
  ],
  "topic": [
   "k.actions/shards/acts",
+  "k.procedures/shards/tasks",
   "k.words/shards/to"
  ],
  "topped": [
@@ -94633,6 +94874,9 @@
  "upstairs": [
   "k.words/shards/up"
  ],
+ "upto": [
+  "k.procedures/schema.sop"
+ ],
  "uptown": [
   "k.words/shards/up"
  ],
@@ -94939,6 +95183,9 @@
  "value": [
   "k.actions/schema.sop",
   "k.actions/shards/acts",
+  "k.procedures/schema.sop",
+  "k.procedures/shards/from-knowledge",
+  "k.procedures/shards/tasks",
   "k.units/shards/measures",
   "k.values/schema.sop",
   "k.words/shards/va"
@@ -95013,6 +95260,7 @@
  ],
  "variant": [
   "k.faces/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "w.face/schema.sop"
  ],
  "variants": [
@@ -97240,6 +97488,7 @@
  "way": [
   "k.objects/shards/noto-sky-weather-03",
   "k.objects/shards/openmoji-travel-places-01",
+  "k.procedures/schema.sop",
   "k.values/schema.sop",
   "k.words/shards/wa"
  ],
@@ -97247,6 +97496,7 @@
   "k.words/shards/wa"
  ],
  "ways": [
+  "k.procedures/schema.sop",
   "k.words/shards/wa"
  ],
  "we": [
@@ -97280,8 +97530,12 @@
  "wear": [
   "k.actions/shards/actions-body-social-nature",
   "k.people/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.wearables/schema.sop",
   "k.words/shards/we"
+ ],
+ "wearer": [
+  "k.procedures/shards/from-knowledge"
  ],
  "wearied": [
   "k.words/shards/we"
@@ -97301,6 +97555,7 @@
   "k.actions/shards/actions-body-social-nature",
   "k.attributes/shards/aspects",
   "k.people/schema.sop",
+  "k.procedures/shards/from-knowledge",
   "k.wearables/schema.sop"
  ],
  "weary": [
@@ -97762,6 +98017,9 @@
  "what of": [
   "w.lang.en/shards/ellipsis"
  ],
+ "what we did": [
+  "k.procedures/shards/tasks"
+ ],
  "what's": [
   "w.lang.en/shards/morphology"
  ],
@@ -97912,6 +98170,7 @@
  ],
  "when": [
   "k.attributes/schema.sop",
+  "k.procedures/schema.sop",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/ellipsis",
   "w.timeline/schema.sop"
@@ -98205,6 +98464,7 @@
   "w.lang.en/shards/morphology"
  ],
  "whole": [
+  "k.procedures/shards/from-knowledge",
   "k.words/shards/wh"
  ],
  "wholesale": [
@@ -99299,6 +99559,7 @@
   "k.objects/shards/mulberry-science-astronomy-02",
   "k.objects/shards/noto-place-map-01",
   "k.parts/shards/w",
+  "k.procedures/schema.sop",
   "k.scenes/shards/things-w",
   "k.space/shards/solar-system",
   "k.words/shards/wo"
@@ -99335,6 +99596,7 @@
   "k.animals/shards/invertebrates"
  ],
  "worn": [
+  "k.procedures/shards/from-knowledge",
   "k.wearables/schema.sop",
   "k.words/shards/we"
  ],
