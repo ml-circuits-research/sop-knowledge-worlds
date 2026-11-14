@@ -695,3 +695,8 @@ Accepted (third worker): 8f51548 five composition methods (28 methods in all; 10
 ## Reviewer 2026-11-14 22:30 — fourth worker's round accepted; frames that do not read their own examples
 
 Accepted cb5d6dd, b22ef9b, 4448b9e, 585afaf (34 act templates read back 68/68; 116 discourse templates checked against registers; 56 ranges, 143 typicality weights; named-add place frame). **Q56:** a separate type `k.attributes.typical` is fine. **Q54 (yours):** forwarded to the library. Next round for whoever is free (do not start a fourth parallel worker while memory kills are frequent): a general test that **every w.lang.en frame reads its own examples** (and every template its own output), then fix what it finds, starting with `acts.change.add1` / `acts.change.less1` ("Add a seat to table 1"), "take the tables apart" vs move apart, "red house" as a noun compound; and the 28 k.actions roles without a general frame (list in WORLD.md) as frame asks.
+
+## Reviewer 2026-11-14 23:45 — w.chart, act families, word register accepted; TEST SPEED (owner, 16:35)
+
+Reviewer ran tests of w.chart, k.actions, k.words: 23 pass, 1 skipped, 0 fail. Accepted f0254e1, a523fa4, fa8a629.
+**Test speed:** the full `npm test` (≈2,950 tests) with several workers is killed by memory and takes long. From now on, per push: `npm run build` + the tests of the worlds the commit touches + the catalog/validate tests (add an npm script `test:changed` that picks them from the changed paths); the full suite once per round (the last push of a worker's round), files run one at a time. Report the 10 slowest test files with seconds; split or shrink any over 30 s.
