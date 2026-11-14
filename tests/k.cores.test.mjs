@@ -21,7 +21,8 @@ test('every drawing names an object of k.objects', () => {
 test('k.animals has 150 animals and k.food 150 foods; every fact carries hand-core as its source', () => {
   assert.ok(all('k.animals', 'k.animals.animal').length >= 150);
   assert.ok(all('k.food', 'k.food.food').length >= 150);
-  for (const [world, type] of CORES) for (const w of all(world, type)) assert.ok(handSources(w.attrs['core.source']), w.id);
+  // k.animals: the sounds WordNet's glosses name merge into the animal's wire (shard sounds, block 03:20 item 1)
+  for (const [world, type] of CORES) for (const w of all(world, type)) assert.ok(handSources((w.attrs['core.source'] ?? []).filter((s) => world !== 'k.animals' || s !== '"wordnet 3.1"')), w.id);
 });
 
 test('k.space: the planets are numbered 1 to 8 by order and by size; what is orbited exists', () => {

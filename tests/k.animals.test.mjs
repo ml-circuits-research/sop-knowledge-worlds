@@ -8,6 +8,8 @@ import { readAnimals, animalShards, animalThings, usualPlace, SIZES } from '../t
 import { parse } from '../tools/sopworld/sopworld.mjs';
 import { handSources } from '../tools/lib/worlds.mjs';
 import { sample } from '../tools/ask-sample.mjs';
+import { factsOf } from '../tools/lib/worlds.mjs';
+import { animalSounds, soundShard, SHARD } from '../tools/animal-sounds.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -20,7 +22,8 @@ test('the shards are what tools/animals-core.mjs gives; 300 animals, each with c
   for (const a of animals) {
     assert.equal(a.attrs.size, undefined, a.id);
     assert.deepEqual(a.attrs.named, ['model'], a.id);
-    assert.ok(handSources(a.attrs['core.source']), a.id);
+    // the sounds of WordNet's glosses merge into the wire of the animal (shard sounds, block 03:20 item 1)
+    assert.ok(handSources((a.attrs['core.source'] ?? []).filter((x) => x !== '"wordnet 3.1"')), a.id);
     assert.ok(a.attrs.habitat?.length || one(a, 'name') === 'flea', `${a.id}: where it lives`);
   }
   const count = (k) => animals.filter((a) => a.attrs[k]?.length).length;
@@ -100,4 +103,23 @@ test('Q33: the young of a rabbit is a kit, and "bunny" is a word for it', () => 
   assert.ok(word && word.attrs.text.includes('bunny') && word.attrs.of[0] === 'k.animals.animal.baby');
   const rabbit = parse(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', 'mammals.sop'), 'utf8')).find((w) => w.attrs.name?.[0] === 'rabbit');
   assert.deepEqual(rabbit.attrs.baby, ['kit']);
+});
+
+test('block 03:20 item 1: the sounds WordNet names are tools/animal-sounds.mjs\' shard, every sound is a word of k.words, the plain sounds are there', () => {
+  const r = animalSounds();
+  assert.equal(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', SHARD), 'utf8'), soundShard(r));
+  assert.ok(r.animals >= 30 && r.confirmed.length >= 25, `${r.animals} animals, ${r.confirmed.length} confirmed`);
+  // the WordNet wires add sounds to animals of the table, never a new animal
+  const told = new Set(animals.filter((a) => a.attrs.class).map((a) => one(a, 'name')));
+  for (const w of parse(readFileSync(join(WORLDS_DIR, 'k.animals', 'shards', SHARD), 'utf8'))) assert.ok(told.has(tok(w.attrs.name[0])), w.id);
+  // the typed relation: every sound value names a k.words sense by word (the declared join)
+  const words = new Set(factsOf('k.words', 'k.words.sense', worlds).map((w) => tok(w.attrs.word[0])));
+  const open = [...new Set(animals.flatMap((a) => (a.attrs.sound ?? []).map(tok)))].filter((s) => !words.has(s));
+  assert.deepEqual(open, []);
+  const sounds = (n) => (animals.find((a) => one(a, 'name') === n)?.attrs.sound ?? []).map(tok);
+  for (const [n, s] of [['cow', 'moo'], ['dog', 'bark'], ['cat', 'meow'], ['lion', 'roar'], ['owl', 'hoot'], ['duck', 'quack'], ['sheep', 'baa'], ['horse', 'neigh'], ['pig', 'oink'], ['bee', 'buzz'], ['elephant', 'trumpet'], ['frog', 'croak'], ['donkey', 'bray'], ['turkey', 'gobble'], ['pigeon', 'coo'], ['rooster', 'crow'], ['magpie', 'chatter']])
+    assert.ok(sounds(n).includes(s), `${n}: ${sounds(n)}`);
+  // no sound of a comparison ("a loud laugh that sounds like a horse neighing")
+  assert.ok(!sounds('horse').includes('horselaugh'));
+  assert.ok(animals.filter((a) => a.attrs.sound?.length).length >= 120);
 });

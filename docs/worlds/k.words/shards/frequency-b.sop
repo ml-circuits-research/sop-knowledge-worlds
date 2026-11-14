@@ -1,4 +1,4 @@
-# k.words/shards/frequency-b: how frequent the 765 words with senses here that start with "b" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-b: how frequent the 767 words with senses here that start with "b" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -238,6 +238,7 @@
 @k.words.frequency.believing k.words.frequency word=believing zipf=4.15 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.bell k.words.frequency word=bell zipf=4.59 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.belle k.words.frequency word=belle zipf=3.79 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.bellow k.words.frequency word=bellow zipf=2.79 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.bellows k.words.frequency word=bellows zipf=3.07 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.belly k.words.frequency word=belly zipf=4.1 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.belong k.words.frequency word=belong zipf=4.38 band=3 core.source="wordfreq 3.1.1"
@@ -557,6 +558,7 @@
 @k.words.frequency.bravery k.words.frequency word=bravery zipf=3.59 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.bravo k.words.frequency word=bravo zipf=3.77 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.brawl k.words.frequency word=brawl zipf=3.53 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.bray k.words.frequency word=bray zipf=3.31 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.brazil k.words.frequency word=brazil zipf=4.58 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.brazilian k.words.frequency word=brazilian zipf=4.23 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.breach k.words.frequency word=breach zipf=4.13 band=3 core.source="wordfreq 3.1.1"

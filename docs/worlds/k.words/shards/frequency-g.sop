@@ -1,4 +1,4 @@
-# k.words/shards/frequency-g: how frequent the 390 words with senses here that start with "g" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-g: how frequent the 391 words with senses here that start with "g" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -11,6 +11,7 @@
 @k.words.frequency.gadget k.words.frequency word=gadget zipf=3.45 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.gag k.words.frequency word=gag zipf=3.63 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.gage k.words.frequency word=gage zipf=3.22 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.gaggle k.words.frequency word=gaggle zipf=2.71 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.gaia k.words.frequency word=gaia zipf=3.03 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.gain k.words.frequency word=gain zipf=4.81 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.gaius k.words.frequency word=gaius zipf=2.99 band=5 core.source="wordfreq 3.1.1"

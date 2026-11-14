@@ -1,13 +1,8 @@
-# k.words/shards/co-2: senses of the words from "conflict" to "cozy" (first letters "co", part 2 of 2).
+# k.words/shards/co-2: senses of the words from "confront" to "cozy" (first letters "co", part 2 of 2).
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.conflict.noun.1 k.words.sense word=conflict pos=noun n=1 supersense=noun.act gloss="an open clash between two opposing groups (or individuals)" synonym=struggle synonym=battle is_a="group action" core.source="wordnet 3.1"
-@k.words.conflict.noun.2 k.words.sense word=conflict pos=noun n=2 supersense=noun.feeling gloss="opposition between two simultaneous but incompatible feelings" is_a=ambivalence core.source="wordnet 3.1"
-@k.words.conflict.noun.3 k.words.sense word=conflict pos=noun n=3 supersense=noun.act gloss="a hostile meeting of opposing military forces in the course of a war" synonym=battle synonym=fight synonym=engagement is_a="military action" part_of=war core.source="wordnet 3.1"
-@k.words.conflict.verb.1 k.words.sense word=conflict pos=verb n=1 supersense=verb.stative gloss="be in conflict" is_a=contrast core.source="wordnet 3.1"
-@k.words.conflict.verb.2 k.words.sense word=conflict pos=verb n=2 supersense=verb.social gloss="go against, as of rules and laws" synonym="run afoul" synonym=infringe synonym=contravene is_a=transgress core.source="wordnet 3.1"
 @k.words.confront.verb.1 k.words.sense word=confront pos=verb n=1 supersense=verb.competition gloss="oppose, as in hostility or a competition" synonym=face is_a=meet core.source="wordnet 3.1"
 @k.words.confront.verb.2 k.words.sense word=confront pos=verb n=2 supersense=verb.communication gloss="deal with (something unpleasant) head on" synonym="face up" synonym=face is_a="set about" opposite=avoid core.source="wordnet 3.1"
 @k.words.confront.verb.3 k.words.sense word=confront pos=verb n=3 supersense=verb.communication gloss="present somebody with something, usually to accuse or criticize" synonym=face synonym=present core.source="wordnet 3.1"
@@ -291,9 +286,9 @@
 @k.words.convoy.noun.2 k.words.sense word=convoy pos=noun n=2 supersense=noun.group gloss="a collection of merchant ships with an escort of warships" is_a=collection core.source="wordnet 3.1"
 @k.words.convoy.noun.3 k.words.sense word=convoy pos=noun n=3 supersense=noun.act gloss="the act of escorting while in transit" is_a=escort core.source="wordnet 3.1"
 @k.words.convoy.verb.1 k.words.sense word=convoy pos=verb n=1 supersense=verb.motion gloss="escort in transit" is_a=escort core.source="wordnet 3.1"
-@k.words.coo.noun.1 k.words.sense word=coo pos=noun n=1 supersense=noun.event gloss="the sound made by a pigeon" is_a=cry core.source="wordnet 3.1"
-@k.words.coo.verb.1 k.words.sense word=coo pos=verb n=1 supersense=verb.communication gloss="speak softly or lovingly" is_a=murmur core.source="wordnet 3.1"
-@k.words.coo.verb.2 k.words.sense word=coo pos=verb n=2 supersense=verb.communication gloss="cry softly, as of pigeons" is_a=utter core.source="wordnet 3.1"
+@k.words.coo.noun.1 k.words.sense word=coo pos=noun n=1 supersense=noun.event gloss="the sound made by a pigeon" is_a=cry kind_of=cry kind_of=sound kind_of=happening kind_of=event kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.coo.verb.1 k.words.sense word=coo pos=verb n=1 supersense=verb.communication gloss="speak softly or lovingly" is_a=murmur kind_of=murmur kind_of=talk kind_of=communicate kind_of=interact kind_of=act core.source="wordnet 3.1"
+@k.words.coo.verb.2 k.words.sense word=coo pos=verb n=2 supersense=verb.communication gloss="cry softly, as of pigeons" is_a=utter kind_of=utter core.source="wordnet 3.1"
 @k.words.cook.noun.1 k.words.sense word=cook pos=noun n=1 supersense=noun.person gloss="someone who cooks food" is_a="skilled worker" kind_of="skilled worker" kind_of=worker kind_of=person kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.cook.noun.2 k.words.sense word=Cook pos=noun n=2 supersense=noun.person gloss="English navigator who claimed the east coast of Australia for Britain and discovered several Pacific islands (1728-1779)" synonym="James Cook" synonym="Captain Cook" synonym="Captain James Cook" instance_of=navigator kind_of=navigator kind_of=explorer kind_of=person kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.cook.verb.1 k.words.sense word=cook pos=verb n=1 supersense=verb.creation gloss="prepare a hot meal" is_a="create from raw material" kind_of="create from raw material" kind_of=make core.source="wordnet 3.1"

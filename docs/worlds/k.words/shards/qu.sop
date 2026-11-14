@@ -3,10 +3,11 @@
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
 
-@k.words.quack.noun.1 k.words.sense word=quack pos=noun n=1 supersense=noun.person gloss="an untrained person who pretends to be a physician and who dispenses medical advice" is_a=doctor is_a=mountebank core.source="wordnet 3.1"
-@k.words.quack.noun.2 k.words.sense word=quack pos=noun n=2 supersense=noun.event gloss="the harsh sound of a duck" is_a=sound core.source="wordnet 3.1"
-@k.words.quack.verb.1 k.words.sense word=quack pos=verb n=1 supersense=verb.communication gloss="utter quacking noises" is_a=utter core.source="wordnet 3.1"
-@k.words.quack.verb.2 k.words.sense word=quack pos=verb n=2 supersense=verb.body gloss="act as a medical quack or a charlatan" is_a=act core.source="wordnet 3.1"
+@k.words.quack.noun.1 k.words.sense word=quack pos=noun n=1 supersense=noun.person gloss="an untrained person who pretends to be a physician and who dispenses medical advice" is_a=doctor is_a=mountebank kind_of=doctor kind_of="medical practitioner" kind_of="health professional" kind_of=professional kind_of=adult kind_of=person kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
+@k.words.quack.noun.2 k.words.sense word=quack pos=noun n=2 supersense=noun.event gloss="the harsh sound of a duck" is_a=sound kind_of=sound kind_of=happening kind_of=event kind_of="psychological feature" kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.quack.verb.1 k.words.sense word=quack pos=verb n=1 supersense=verb.communication gloss="utter quacking noises" is_a=utter kind_of=utter core.source="wordnet 3.1"
+@k.words.quack.verb.2 k.words.sense word=quack pos=verb n=2 supersense=verb.body gloss="act as a medical quack or a charlatan" is_a=act kind_of=act core.source="wordnet 3.1"
+@k.words.quack.adjective.1 k.words.sense word=quack pos=adjective n=1 supersense=adj.all gloss="medically unqualified" near_opposite=qualified core.source="wordnet 3.1"
 @k.words.quad.noun.1 k.words.sense word=quad pos=noun n=1 supersense=noun.person gloss="one of four children born at the same time from the same pregnancy" synonym=quadruplet is_a=sibling core.source="wordnet 3.1"
 @k.words.quad.noun.2 k.words.sense word=quad pos=noun n=2 supersense=noun.body gloss="a muscle of the thigh that extends the leg" synonym=quadriceps synonym="quadriceps femoris" synonym="musculus quadriceps femoris" is_a="extensor muscle" part_of=thigh core.source="wordnet 3.1"
 @k.words.quad.noun.3 k.words.sense word=quad pos=noun n=3 supersense=noun.artifact gloss="(printing) a block of type without a raised letter; used for spacing between words or sentences" synonym=space is_a=type core.source="wordnet 3.1"

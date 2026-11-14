@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
-import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, HAND_SENSES, USAGE, bandOf, LEXNAMES } from '../tools/import/wordnet.mjs';
+import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, askedWords, HAND_SENSES, USAGE, bandOf, LEXNAMES } from '../tools/import/wordnet.mjs';
 
 const fixture = {
   'data.noun': [
@@ -102,7 +102,7 @@ const wordfreq = join(REPO, 'sources/wordfreq/raw/en-top50k.tsv');
 test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list) && existsSync(wordfreq)) && 'raw files not downloaded' }, async () => {
   const names = ['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'];
   const raw = Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
-  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR), asked: ASKED, hand: HAND_SENSES, register: readFileSync(wordfreq, 'utf8') });
+  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR), asked: askedWords(WORLDS_DIR), hand: HAND_SENSES, register: readFileSync(wordfreq, 'utf8') });
   const dir = join(WORLDS_DIR, 'k.words', 'shards');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);

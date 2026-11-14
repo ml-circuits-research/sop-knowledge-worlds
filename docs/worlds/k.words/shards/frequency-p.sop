@@ -1,4 +1,4 @@
-# k.words/shards/frequency-p: how frequent the 835 words with senses here that start with "p" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-p: how frequent the 837 words with senses here that start with "p" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -158,6 +158,7 @@
 @k.words.frequency.patron k.words.frequency word=patron zipf=3.73 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.patronize k.words.frequency word=patronize zipf=2.72 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.patsy k.words.frequency word=patsy zipf=3.12 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.patter k.words.frequency word=patter zipf=2.77 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.pattern k.words.frequency word=pattern zipf=4.56 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.patty k.words.frequency word=patty zipf=3.58 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.paul k.words.frequency word=paul zipf=5.03 band=2 core.source="wordfreq 3.1.1"
@@ -823,6 +824,7 @@
 @k.words.frequency.purity k.words.frequency word=purity zipf=3.69 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.purple k.words.frequency word=purple zipf=4.32 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.purpose k.words.frequency word=purpose zipf=4.88 band=3 core.source="wordfreq 3.1.1"
+@k.words.frequency.purr k.words.frequency word=purr zipf=2.75 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.purse k.words.frequency word=purse zipf=3.95 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.pursue k.words.frequency word=pursue zipf=4.26 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.pursued k.words.frequency word=pursued zipf=3.89 band=4 core.source="wordfreq 3.1.1"

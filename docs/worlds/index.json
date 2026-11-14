@@ -1,5 +1,5 @@
 {
- "version": "f7c5c00abed7",
+ "version": "96bca825f0b5",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -1855,14 +1855,61 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.animals/shards/sounds",
+     "path": "k.animals/shards/sounds.sop",
+     "wires": 32,
+     "bytes": 6495,
+     "keys": [
+      "bee",
+      "bull",
+      "cat",
+      "cicada",
+      "cow",
+      "cricket",
+      "cuckoo",
+      "dog",
+      "donkey",
+      "duck",
+      "elephant",
+      "frog",
+      "goat",
+      "goose",
+      "grasshopper",
+      "hen",
+      "horse",
+      "lion",
+      "magpie",
+      "monkey",
+      "mouse",
+      "nightingale",
+      "owl",
+      "pig",
+      "pigeon",
+      "raven",
+      "rooster",
+      "seagull",
+      "sheep",
+      "toad",
+      "turkey",
+      "wolf"
+     ],
+     "sources": [
+      "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
     }
    ],
    "sources": [
     "hand-core-1",
-    "psys2-worlds-6b63b2ba"
+    "psys2-worlds-6b63b2ba",
+    "wordnet-3.1"
    ],
    "licenses": [
-    "CC0-1.0"
+    "CC0-1.0",
+    "WordNet-3.0"
    ],
    "warnings": []
   },
@@ -6103,7 +6150,7 @@
      "id": "k.attributes/shards/ranges",
      "path": "k.attributes/shards/ranges.sop",
      "wires": 51,
-     "bytes": 12700,
+     "bytes": 12710,
      "keys": [
       "animal",
       "appliance",
@@ -28509,7 +28556,7 @@
      "id": "k.kinds/shards/relations-animals",
      "path": "k.kinds/shards/relations-animals.sop",
      "wires": 17,
-     "bytes": 3830,
+     "bytes": 3848,
      "keys": [
       "baby",
       "can",
@@ -57756,7 +57803,7 @@
      "id": "k.words/shards/ba",
      "path": "k.words/shards/ba.sop",
      "wires": 453,
-     "bytes": 116295,
+     "bytes": 116978,
      "keys": [
       "adjective",
       "adverb",
@@ -57952,8 +57999,8 @@
     {
      "id": "k.words/shards/be",
      "path": "k.words/shards/be.sop",
-     "wires": 369,
-     "bytes": 90667,
+     "wires": 374,
+     "bytes": 92141,
      "keys": [
       "adjective",
       "adverb",
@@ -58029,6 +58076,7 @@
       "bell",
       "bell pepper",
       "belle",
+      "bellow",
       "bellows",
       "belly",
       "belong",
@@ -58165,8 +58213,8 @@
     {
      "id": "k.words/shards/bl",
      "path": "k.words/shards/bl.sop",
-     "wires": 221,
-     "bytes": 56258,
+     "wires": 224,
+     "bytes": 56941,
      "keys": [
       "adjective",
       "adverb",
@@ -58196,6 +58244,7 @@
       "blazer",
       "blazing",
       "bleach",
+      "bleat",
       "bleed",
       "bleeding",
       "bleep",
@@ -58258,8 +58307,8 @@
     {
      "id": "k.words/shards/bo",
      "path": "k.words/shards/bo.sop",
-     "wires": 339,
-     "bytes": 88472,
+     "wires": 341,
+     "bytes": 89209,
      "keys": [
       "adjective",
       "boa",
@@ -58365,6 +58414,7 @@
       "boutique",
       "bow",
       "bow tie",
+      "bow-wow",
       "bowel",
       "bowels",
       "bowie",
@@ -58394,8 +58444,8 @@
     {
      "id": "k.words/shards/br",
      "path": "k.words/shards/br.sop",
-     "wires": 344,
-     "bytes": 82601,
+     "wires": 348,
+     "bytes": 83579,
      "keys": [
       "adjective",
       "adverb",
@@ -58426,6 +58476,7 @@
       "bravery",
       "bravo",
       "brawl",
+      "bray",
       "brazil",
       "brazilian",
       "breach",
@@ -58539,7 +58590,7 @@
      "id": "k.words/shards/bu",
      "path": "k.words/shards/bu.sop",
      "wires": 355,
-     "bytes": 90790,
+     "bytes": 91097,
      "keys": [
       "adjective",
       "adverb",
@@ -58703,8 +58754,8 @@
     {
      "id": "k.words/shards/ca",
      "path": "k.words/shards/ca.sop",
-     "wires": 587,
-     "bytes": 158595,
+     "wires": 597,
+     "bytes": 161183,
      "keys": [
       "adjective",
       "adverb",
@@ -58717,6 +58768,7 @@
       "cabinet",
       "cable",
       "cabot",
+      "cackle",
       "cactus",
       "cadaver",
       "caddy",
@@ -58896,6 +58948,7 @@
       "caterer",
       "catering",
       "caterpillar",
+      "caterwaul",
       "catfish",
       "cathedral",
       "catherine",
@@ -58917,6 +58970,7 @@
       "cavern",
       "caviar",
       "cavity",
+      "caw",
       "cayman",
       "noun",
       "verb"
@@ -59011,8 +59065,8 @@
     {
      "id": "k.words/shards/ch",
      "path": "k.words/shards/ch.sop",
-     "wires": 530,
-     "bytes": 139801,
+     "wires": 532,
+     "bytes": 140442,
      "keys": [
       "adjective",
       "chad",
@@ -59156,7 +59210,9 @@
       "chip",
       "chipmunk",
       "chips",
+      "chirk",
       "chirp",
+      "chirr",
       "chisel",
       "chivalry",
       "chlorine",
@@ -59259,8 +59315,8 @@
     {
      "id": "k.words/shards/cl",
      "path": "k.words/shards/cl.sop",
-     "wires": 267,
-     "bytes": 67338,
+     "wires": 269,
+     "bytes": 68420,
      "keys": [
       "adjective",
       "adverb",
@@ -59349,6 +59405,7 @@
       "clown",
       "club",
       "clubhouse",
+      "cluck",
       "clucking",
       "clue",
       "cluster",
@@ -59382,8 +59439,8 @@
     {
      "id": "k.words/shards/co-1",
      "path": "k.words/shards/co-1.sop",
-     "wires": 635,
-     "bytes": 157555,
+     "wires": 640,
+     "bytes": 158640,
      "keys": [
       "adjective",
       "adverb",
@@ -59610,6 +59667,7 @@
       "confirm",
       "confirmation",
       "confiscate",
+      "conflict",
       "noun",
       "verb"
      ],
@@ -59622,12 +59680,11 @@
     {
      "id": "k.words/shards/co-2",
      "path": "k.words/shards/co-2.sop",
-     "wires": 633,
-     "bytes": 157342,
+     "wires": 628,
+     "bytes": 156471,
      "keys": [
       "adjective",
       "adverb",
-      "conflict",
       "confront",
       "confrontation",
       "confuse",
@@ -59888,7 +59945,7 @@
      "id": "k.words/shards/cr",
      "path": "k.words/shards/cr.sop",
      "wires": 353,
-     "bytes": 89404,
+     "bytes": 89581,
      "keys": [
       "adjective",
       "crab",
@@ -63086,8 +63143,8 @@
     {
      "id": "k.words/shards/frequency-b",
      "path": "k.words/shards/frequency-b.sop",
-     "wires": 765,
-     "bytes": 78758,
+     "wires": 767,
+     "bytes": 78958,
      "keys": [
       "b",
       "ba",
@@ -63324,6 +63381,7 @@
       "believing",
       "bell",
       "belle",
+      "bellow",
       "bellows",
       "belly",
       "belong",
@@ -63643,6 +63701,7 @@
       "bravery",
       "bravo",
       "brawl",
+      "bray",
       "brazil",
       "brazilian",
       "breach",
@@ -63864,8 +63923,8 @@
     {
      "id": "k.words/shards/frequency-c",
      "path": "k.words/shards/frequency-c.sop",
-     "wires": 1158,
-     "bytes": 121339,
+     "wires": 1159,
+     "bytes": 121435,
      "keys": [
       "c",
       "ca",
@@ -64073,6 +64132,7 @@
       "cavern",
       "caviar",
       "cavity",
+      "caw",
       "cayman",
       "cc",
       "cd",
@@ -66616,8 +66676,8 @@
     {
      "id": "k.words/shards/frequency-g",
      "path": "k.words/shards/frequency-g.sop",
-     "wires": 390,
-     "bytes": 40341,
+     "wires": 391,
+     "bytes": 40443,
      "keys": [
       "g",
       "ga",
@@ -66627,6 +66687,7 @@
       "gadget",
       "gag",
       "gage",
+      "gaggle",
       "gaia",
       "gain",
       "gaius",
@@ -68602,8 +68663,8 @@
     {
      "id": "k.words/shards/frequency-m",
      "path": "k.words/shards/frequency-m.sop",
-     "wires": 694,
-     "bytes": 71933,
+     "wires": 695,
+     "bytes": 72026,
      "keys": [
       "m",
       "ma",
@@ -68972,6 +69033,7 @@
       "metro",
       "metropolis",
       "metropolitan",
+      "mew",
       "mexican",
       "mexico",
       "mi",
@@ -69781,8 +69843,8 @@
     {
      "id": "k.words/shards/frequency-p",
      "path": "k.words/shards/frequency-p.sop",
-     "wires": 835,
-     "bytes": 86952,
+     "wires": 837,
+     "bytes": 87152,
      "keys": [
       "p",
       "pa",
@@ -69939,6 +70001,7 @@
       "patron",
       "patronize",
       "patsy",
+      "patter",
       "pattern",
       "patty",
       "paul",
@@ -70604,6 +70667,7 @@
       "purity",
       "purple",
       "purpose",
+      "purr",
       "purse",
       "pursue",
       "pursued",
@@ -73949,8 +74013,8 @@
     {
      "id": "k.words/shards/frequency-y",
      "path": "k.words/shards/frequency-y.sop",
-     "wires": 51,
-     "bytes": 5687,
+     "wires": 53,
+     "bytes": 5881,
      "keys": [
       "y",
       "yacht",
@@ -73963,6 +74027,7 @@
       "yang",
       "yank",
       "yankee",
+      "yap",
       "yard",
       "yarn",
       "yawn",
@@ -73980,6 +74045,7 @@
       "yelling",
       "yellow",
       "yellowstone",
+      "yelp",
       "yen",
       "yes",
       "yesterday",
@@ -74118,8 +74184,8 @@
     {
      "id": "k.words/shards/ga",
      "path": "k.words/shards/ga.sop",
-     "wires": 202,
-     "bytes": 53010,
+     "wires": 204,
+     "bytes": 53475,
      "keys": [
       "adjective",
       "ga",
@@ -74129,6 +74195,7 @@
       "gadget",
       "gag",
       "gage",
+      "gaggle",
       "gaia",
       "gain",
       "gaius",
@@ -74405,7 +74472,7 @@
      "id": "k.words/shards/go",
      "path": "k.words/shards/go.sop",
      "wires": 163,
-     "bytes": 44702,
+     "bytes": 44881,
      "keys": [
       "adjective",
       "adverb",
@@ -74498,7 +74565,7 @@
      "id": "k.words/shards/gr",
      "path": "k.words/shards/gr.sop",
      "wires": 342,
-     "bytes": 89142,
+     "bytes": 89871,
      "keys": [
       "adjective",
       "grab",
@@ -74879,10 +74946,12 @@
     {
      "id": "k.words/shards/hand",
      "path": "k.words/shards/hand.sop",
-     "wires": 1,
-     "bytes": 432,
+     "wires": 2,
+     "bytes": 598,
      "keys": [
       "adjective",
+      "maa",
+      "noun",
       "numbered"
      ],
      "sources": [
@@ -74894,8 +74963,8 @@
     {
      "id": "k.words/shards/he",
      "path": "k.words/shards/he.sop",
-     "wires": 280,
-     "bytes": 72647,
+     "wires": 282,
+     "bytes": 73204,
      "keys": [
       "adjective",
       "adverb",
@@ -74948,6 +75017,7 @@
       "hector",
       "hedge",
       "hedgehog",
+      "hee-haw",
       "heed",
       "heel",
       "height",
@@ -75024,7 +75094,7 @@
      "id": "k.words/shards/hi",
      "path": "k.words/shards/hi.sop",
      "wires": 151,
-     "bytes": 37146,
+     "bytes": 37484,
      "keys": [
       "adjective",
       "adverb",
@@ -75111,7 +75181,7 @@
      "id": "k.words/shards/ho",
      "path": "k.words/shards/ho.sop",
      "wires": 343,
-     "bytes": 84776,
+     "bytes": 85856,
      "keys": [
       "adjective",
       "adverb",
@@ -77503,8 +77573,8 @@
     {
      "id": "k.words/shards/me",
      "path": "k.words/shards/me.sop",
-     "wires": 264,
-     "bytes": 65926,
+     "wires": 268,
+     "bytes": 67290,
      "keys": [
       "adjective",
       "me",
@@ -77612,6 +77682,7 @@
       "metro",
       "metropolis",
       "metropolitan",
+      "mew",
       "mexican",
       "mexico",
       "noun",
@@ -77785,7 +77856,7 @@
      "id": "k.words/shards/mo",
      "path": "k.words/shards/mo.sop",
      "wires": 388,
-     "bytes": 99270,
+     "bytes": 99409,
      "keys": [
       "adjective",
       "adverb",
@@ -78196,8 +78267,8 @@
     {
      "id": "k.words/shards/ne",
      "path": "k.words/shards/ne.sop",
-     "wires": 178,
-     "bytes": 43472,
+     "wires": 180,
+     "bytes": 44045,
      "keys": [
       "adjective",
       "adverb",
@@ -78225,6 +78296,7 @@
       "negotiation",
       "negotiator",
       "negro",
+      "neigh",
       "neighbor",
       "neighborhood",
       "neighbour",
@@ -78674,11 +78746,12 @@
     {
      "id": "k.words/shards/oi",
      "path": "k.words/shards/oi.sop",
-     "wires": 7,
-     "bytes": 2549,
+     "wires": 9,
+     "bytes": 3077,
      "keys": [
       "noun",
       "oil",
+      "oink",
       "ointment",
       "verb"
      ],
@@ -79098,8 +79171,8 @@
     {
      "id": "k.words/shards/pa",
      "path": "k.words/shards/pa.sop",
-     "wires": 508,
-     "bytes": 131360,
+     "wires": 512,
+     "bytes": 132489,
      "keys": [
       "adjective",
       "adverb",
@@ -79264,6 +79337,7 @@
       "patron",
       "patronize",
       "patsy",
+      "patter",
       "pattern",
       "patty",
       "paul",
@@ -80077,8 +80151,8 @@
     {
      "id": "k.words/shards/pu",
      "path": "k.words/shards/pu.sop",
-     "wires": 184,
-     "bytes": 46884,
+     "wires": 187,
+     "bytes": 47723,
      "keys": [
       "adjective",
       "noun",
@@ -80131,6 +80205,7 @@
       "purity",
       "purple",
       "purpose",
+      "purr",
       "purse",
       "pursue",
       "pursued",
@@ -80204,8 +80279,8 @@
     {
      "id": "k.words/shards/qu",
      "path": "k.words/shards/qu.sop",
-     "wires": 147,
-     "bytes": 35669,
+     "wires": 148,
+     "bytes": 36213,
      "keys": [
       "adjective",
       "adverb",
@@ -80281,7 +80356,7 @@
      "id": "k.words/shards/ra",
      "path": "k.words/shards/ra.sop",
      "wires": 293,
-     "bytes": 74730,
+     "bytes": 75152,
      "keys": [
       "adjective",
       "adverb",
@@ -80812,7 +80887,7 @@
      "id": "k.words/shards/ro",
      "path": "k.words/shards/ro.sop",
      "wires": 262,
-     "bytes": 66954,
+     "bytes": 67497,
      "keys": [
       "adjective",
       "adverb",
@@ -81160,7 +81235,7 @@
      "id": "k.words/shards/sc",
      "path": "k.words/shards/sc.sop",
      "wires": 292,
-     "bytes": 74178,
+     "bytes": 74520,
      "keys": [
       "adjective",
       "noun",
@@ -82120,7 +82195,7 @@
      "id": "k.words/shards/sq",
      "path": "k.words/shards/sq.sop",
      "wires": 60,
-     "bytes": 14353,
+     "bytes": 15197,
      "keys": [
       "adjective",
       "adverb",
@@ -82166,8 +82241,8 @@
     {
      "id": "k.words/shards/st",
      "path": "k.words/shards/st.sop",
-     "wires": 695,
-     "bytes": 172547,
+     "wires": 696,
+     "bytes": 172854,
      "keys": [
       "adjective",
       "adverb",
@@ -82347,6 +82422,7 @@
       "stretcher",
       "stretching",
       "stride",
+      "stridulate",
       "strife",
       "strike",
       "striking",
@@ -84272,8 +84348,8 @@
     {
      "id": "k.words/shards/wh",
      "path": "k.words/shards/wh.sop",
-     "wires": 126,
-     "bytes": 31950,
+     "wires": 129,
+     "bytes": 32632,
      "keys": [
       "adjective",
       "adverb",
@@ -84297,6 +84373,7 @@
       "while",
       "whim",
       "whine",
+      "whinny",
       "whip",
       "whipped cream",
       "whipping",
@@ -84428,7 +84505,7 @@
      "id": "k.words/shards/wo",
      "path": "k.words/shards/wo.sop",
      "wires": 129,
-     "bytes": 34578,
+     "bytes": 34706,
      "keys": [
       "adjective",
       "adverb",
@@ -84624,8 +84701,8 @@
     {
      "id": "k.words/shards/ya",
      "path": "k.words/shards/ya.sop",
-     "wires": 41,
-     "bytes": 10089,
+     "wires": 44,
+     "bytes": 10794,
      "keys": [
       "noun",
       "verb",
@@ -84639,6 +84716,7 @@
       "yang",
       "yank",
       "yankee",
+      "yap",
       "yard",
       "yarn",
       "yawn",
@@ -84654,8 +84732,8 @@
     {
      "id": "k.words/shards/ye",
      "path": "k.words/shards/ye.sop",
-     "wires": 40,
-     "bytes": 10002,
+     "wires": 42,
+     "bytes": 10536,
      "keys": [
       "adjective",
       "adverb",
@@ -84673,6 +84751,7 @@
       "yelling",
       "yellow",
       "yellowstone",
+      "yelp",
       "yen",
       "yes",
       "yesterday",
@@ -84688,7 +84767,7 @@
      "id": "k.words/shards/yi",
      "path": "k.words/shards/yi.sop",
      "wires": 11,
-     "bytes": 2397,
+     "bytes": 2549,
      "keys": [
       "noun",
       "verb",
@@ -84706,8 +84785,8 @@
     {
      "id": "k.words/shards/yo",
      "path": "k.words/shards/yo.sop",
-     "wires": 34,
-     "bytes": 9344,
+     "wires": 37,
+     "bytes": 10220,
      "keys": [
       "adjective",
       "noun",
@@ -84724,7 +84803,8 @@
       "young",
       "younger",
       "youngster",
-      "youth"
+      "youth",
+      "yowl"
      ],
      "sources": [
       "wordnet-3.1"

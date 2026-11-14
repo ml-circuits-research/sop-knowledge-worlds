@@ -4769,3 +4769,38 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   tool dropped them, so they are now in its EXTRA (`k.words.sense.supersense`: supersenses, lexicographer file,
   semantic class) and the block is the tool's output again (one wire moved). ask-real 4, k.words, catalog 8, validate,
   repo pass.
+
+
+## 2026-11-15 — first worker: animal sounds as a typed relation (block 03:20 item 1; PSys2 Q15)
+
+- `k.animals.animal.sound` is a typed relation: declared join `type=k.words.sense by=word` (k.kinds.relation for
+  the key now `found=declared`), and **every sound value is a word of k.words** (57 distinct values, 0 open).
+- New shard `k.animals/shards/sounds` (WordNet 3.1, licence WordNet-3.0; 32 wires, 6,495 bytes; written by the new
+  `tools/animal-sounds.mjs`): the sounds WordNet's glosses name for an animal of k.animals ("moo: the sound made by a
+  cow or bull", "hoot: utter the characteristic sound of owls", "bees were buzzing around the hive"), one wire per
+  animal that merges with its other wires (as psys2.sop), each after a comment with the glosses it rests on. Glosses
+  of noun.event, verb.communication, verb.perception (and noun.communication only with "as of a X"); an animal word
+  that ends its phrase (not "a sharp swift blow"); a mention of a kind below the animal counts (hen for chicken; hound
+  for dog); examples only where the definition names no animal and the example uses the synset's own word; left out:
+  comparisons ("a loud laugh that sounds like a horse neighing", "a noise resembling the bark of a dog"), a call to
+  animals ("as of hunting dogs"), a word for any sound (cry). Lemmas: the first, and those whose first sense is the
+  synset and that a frequency list has (whinny, oink; not bombilate, low, click). Order of values: the animal's own
+  gloss first, nouns before verbs, frequent first.
+- Numbers: **32 animals, 51 pairs; 28 confirm a sound the hand table or PSys2 had, 23 new** (cat mew caterwaul yowl,
+  dog yip yelp bow-wow bay howl yap, horse whinny, pig squeal, raven caw, goose gaggle, hen cackle, bull moo, cricket
+  and grasshopper stridulate chirr, cicada chirr, mouse patter chirk, seagull mew, magpie chatter). Animals with a
+  sound: 121 -> 123 of 314. **Kinds with no sound: 191** (`node tools/animal-sounds.mjs --report` lists them): fish
+  and most invertebrates (no sound a child names), and birds and mammals that no source here names (penguin, swan,
+  peacock, flamingo, fox, giraffe, rabbit, zebra, camel, deer, ...): to add only with a source.
+- k.words: the sound words are asked words of the WordNet import (`soundWords`, `askedWords` in
+  tools/import/wordnet.mjs): +22 words, +57 senses (cluck, neigh, oink, whinny, bray, caw, purr, bleat ...); `maa`
+  (the goat in the PSys2 words) is a hand sense (noun.event). k.words 348 shards (9,402,222 bytes).
+- Found on the way: **tools/ranges-core.mjs read the class of an animal from the last wire of its name**; the PSys2
+  wires (no class) had erased the class of 15 animals, so the catalog's mammal ranges counted 11 mammals, not 24
+  (size 2-3 m -> 1.3-2.5 m, weight 60-900 -> 40-500 kg). Fixed (only wires with a class), ranges.sop regenerated.
+- Cost: a host that loads k.words and k.animals together pays the join check by scan (Q66): k.animals alone 0.1 s,
+  after k.words 1.9 s (29,500 senses scanned per sound value).
+- Tests: k.animals new test (shard = tool output, no new animal, every sound a k.words word, 17 plain sounds), 2 new
+  questions (magpie, seagull), an-p1 list grown; k.cores and k.animals accept `wordnet 3.1` on the merged animal
+  wires; import.wordnet uses `askedWords`. `npm run test:changed` on the rebased tip (55ff6ea): 40 files, 352 tests,
+  350 pass, 2 skipped, 0 fail.

@@ -1,4 +1,4 @@
-# k.words/shards/frequency-c: how frequent the 1158 words with senses here that start with "c" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-c: how frequent the 1159 words with senses here that start with "c" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -209,6 +209,7 @@
 @k.words.frequency.cavern k.words.frequency word=cavern zipf=3.08 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.caviar k.words.frequency word=caviar zipf=3.15 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.cavity k.words.frequency word=cavity zipf=3.61 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.caw k.words.frequency word=caw zipf=2.57 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.cayman k.words.frequency word=cayman zipf=3.19 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.cc k.words.frequency word=cc zipf=4.15 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.cd k.words.frequency word=cd zipf=4.36 band=3 core.source="wordfreq 3.1.1"

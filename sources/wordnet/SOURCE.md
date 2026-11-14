@@ -34,3 +34,7 @@
   and verb senses of those words. Counts with Round 10 item 2: 11,313 words, 28,987 senses (1,648 adjective, 534
   adverb), 1,377 senses with an opposite, 1,044 with a near opposite, 9,342 with a chain; 31,926 wires in 321
   shards, 7,258,687 bytes.
+- **Block 03:20 item 1 (2026-11-15), also kept, for `k.animals`:** the sound words of the key `k.animals.animal.sound`
+  are asked words of the import (all their senses, as common words: cluck, neigh, oink, whinny were not in the
+  frequency list); and the glosses of the sounds of noun.event, verb.communication and verb.perception that name an
+  animal of k.animals give `docs/worlds/k.animals/shards/sounds.sop` (`tools/animal-sounds.mjs`: 32 animals, 51 pairs).

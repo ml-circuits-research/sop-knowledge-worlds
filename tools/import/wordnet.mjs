@@ -31,6 +31,7 @@ export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thic
 // speech (none for these). "numbered" is in WordNet only as a form of the verb number ("give numbers to"). Each names
 // the lexicographer file WordNet would file it in (`supersense`; "numbered" is a participial adjective: adj.ppl).
 export const HAND_SENSES = [
+  { word: 'maa', pos: 'noun', n: 1, supersense: 'noun.event', gloss: 'the bleat of a goat, as a child says it', synonym: ['bleat'], why: 'k.animals: the sound of a goat in the PSys2 shard (block 03:20 item 1: every sound word in k.words); WordNet 3.1 has no maa' },
   { word: 'numbered', pos: 'adjective', n: 1, supersense: 'adj.ppl', gloss: 'marked with numbers that give an order', synonym: [], why: 'w.lang.ro numerotat; WordNet 3.1 has only the verb number, sense 2 "give numbers to"' },
 ];
 // The register of a sense (block "15:15" item 2): WordNet's usage-domain pointers (`;u`) to these synsets, by their
@@ -334,6 +335,17 @@ export function coreNames(files, worldsDir) {
   return out;
 }
 
+// Block 03:20 item 1: the sound words of k.animals (the key `sound`, joined to k.words by word), kept as asked words
+// whatever their place in the frequency list (cluck, neigh, oink were not in it).
+export function soundWords(worldsDir) {
+  const dir = join(worldsDir, 'k.animals', 'shards'), out = new Set();
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.sop')).sort())
+    for (const m of readFileSync(join(dir, f), 'utf8').matchAll(/ sound=("[^"]*"|\S+)/g)) out.add(m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]);
+  return [...out].sort();
+}
+// The asked words of an import: ASKED and the sound words of k.animals.
+export const askedWords = (worldsDir) => [...new Set([...ASKED, ...soundWords(worldsDir)])];
+
 // Not awaited at the top level: tools/coverage.mjs imports this module.
 async function main() {
   const repo = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
@@ -342,7 +354,7 @@ async function main() {
   const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(arg('freq', join(repo, 'sources/frequency-words/raw/en_50k.txt')), 'utf8');
   const register = readFileSync(arg('wordfreq', join(repo, 'sources/wordfreq/raw/en-top50k.tsv')), 'utf8');
-  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')), asked: ASKED, hand: HAND_SENSES, register });
+  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')), asked: askedWords(join(repo, 'docs/worlds')), hand: HAND_SENSES, register });
   writeShards(arg('out', join(repo, 'docs/worlds/k.words/shards')), out);
   console.log(JSON.stringify(stats));
 }

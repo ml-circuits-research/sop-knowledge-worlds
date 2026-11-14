@@ -1,4 +1,4 @@
-# k.words/shards/frequency-m: how frequent the 694 words with senses here that start with "m" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-m: how frequent the 695 words with senses here that start with "m" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -370,6 +370,7 @@
 @k.words.frequency.metro k.words.frequency word=metro zipf=4.18 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.metropolis k.words.frequency word=metropolis zipf=3.57 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.metropolitan k.words.frequency word=metropolitan zipf=4.18 band=3 core.source="wordfreq 3.1.1"
+@k.words.frequency.mew k.words.frequency word=mew zipf=3 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.mexican k.words.frequency word=mexican zipf=4.41 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.mexico k.words.frequency word=mexico zipf=4.75 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.mi k.words.frequency word=mi zipf=4.3 band=3 core.source="wordfreq 3.1.1"

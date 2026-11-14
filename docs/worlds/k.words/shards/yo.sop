@@ -1,4 +1,4 @@
-# k.words/shards/yo: senses of the words from "yo-yo" to "youth" (first letters "yo").
+# k.words/shards/yo: senses of the words from "yo-yo" to "yowl" (first letters "yo").
 # sources: wordnet 3.1 (Princeton WordNet 3.1; words chosen with frequency-words 2018, the 20,000 most frequent, and the common things of tools/coverage.mjs)
 # license: WordNet-3.0
 # script: tools/import/wordnet.mjs
@@ -37,3 +37,6 @@
 @k.words.youth.noun.1 k.words.sense word=youth pos=noun n=1 supersense=noun.person gloss="a young person (especially a young man or boy)" synonym="young person" synonym=younker synonym="spring chicken" is_a=juvenile kind_of=juvenile kind_of=person kind_of=organism kind_of="living thing" kind_of=whole kind_of=object kind_of="physical entity" kind_of=entity core.source="wordnet 3.1"
 @k.words.youth.noun.2 k.words.sense word=youth pos=noun n=2 supersense=noun.group gloss="young people collectively" synonym=young is_a="age group" kind_of="age group" kind_of=people kind_of=group kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
 @k.words.youth.noun.3 k.words.sense word=youth pos=noun n=3 supersense=noun.time gloss="the time of life between childhood and maturity" is_a="time of life" kind_of="time of life" kind_of="time period" kind_of="fundamental quantity" kind_of=measure kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.yowl.noun.1 k.words.sense word=yowl pos=noun n=1 supersense=noun.communication gloss="a very loud utterance (like the sound of an animal)" synonym=bellow synonym=bellowing synonym=holla synonym=holler synonym=hollering synonym=hollo synonym=holloa synonym=roar synonym=roaring is_a=cry kind_of=cry kind_of=utterance kind_of="auditory communication" kind_of=communication kind_of=abstraction kind_of=entity core.source="wordnet 3.1"
+@k.words.yowl.verb.1 k.words.sense word=yowl pos=verb n=1 supersense=verb.communication gloss="cry loudly, as of animals" synonym=howl synonym=wrawl synonym=yammer is_a=utter kind_of=utter core.source="wordnet 3.1"
+@k.words.yowl.verb.2 k.words.sense word=yowl pos=verb n=2 supersense=verb.communication gloss="utter shrieks, as of cats" synonym=caterwaul is_a=shriek kind_of=shriek kind_of=shout kind_of=utter core.source="wordnet 3.1"

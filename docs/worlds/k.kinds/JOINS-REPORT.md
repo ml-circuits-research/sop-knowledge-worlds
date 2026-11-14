@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **166** in 28 worlds; distinct values 5564, meeting a target 5404 (97.1 %), open 160
+- declared joins: **167** in 28 worlds; distinct values 5621, meeting a target 5461 (97.2 %), open 160
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **110**; left undeclared on purpose: 6
 
@@ -34,6 +34,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.animals | `k.animals.animal.cannot` | `k.actions.action` | name | 3 | 3 |  |
 | k.animals | `k.animals.animal.drawing` | `k.objects.object` | name | 151 | 151 |  |
 | k.animals | `k.animals.animal.habitat` | `k.commonsense.lives` | in | 34 | 32 | `hair`, `sky` |
+| k.animals | `k.animals.animal.sound` | `k.words.sense` | word | 57 | 57 |  |
 | k.animals | `k.animals.animal.thing` | `k.objects.object` | name | 3 | 3 |  |
 | k.attributes | `k.attributes.attribute.aspect` | `k.attributes.aspect` | name | 7 | 7 |  |
 | k.attributes | `k.attributes.drawn.drawn_shade` | `k.values.colour` | name | 127 | 127 |  |

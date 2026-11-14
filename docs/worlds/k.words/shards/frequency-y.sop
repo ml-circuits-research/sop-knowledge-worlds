@@ -1,4 +1,4 @@
-# k.words/shards/frequency-y: how frequent the 51 words with senses here that start with "y" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
+# k.words/shards/frequency-y: how frequent the 53 words with senses here that start with "y" are: the Zipf value in wordfreq's English list and its band (1 very common, Zipf >= 6; 2 common, >= 5; 3 familiar, >= 4; 4 uncommon, >= 3; 5 rare).
 # sources: wordfreq 3.1.1 (Robyn Speer, https://github.com/rspeer/wordfreq, data CC BY-SA 4.0: the large_en list, top 50,000, built from Google Books Ngrams, the Leeds Internet Corpus, Wikipedia, ParaCrawl, OpenSubtitles 2018, SUBTLEX and Twitter statistics; see sources/wordfreq/SOURCE.md)
 # license: CC-BY-SA-4.0
 # script: tools/import/wordnet.mjs
@@ -14,6 +14,7 @@
 @k.words.frequency.yang k.words.frequency word=yang zipf=3.91 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.yank k.words.frequency word=yank zipf=3 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.yankee k.words.frequency word=yankee zipf=3.6 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.yap k.words.frequency word=yap zipf=2.94 band=5 core.source="wordfreq 3.1.1"
 @k.words.frequency.yard k.words.frequency word=yard zipf=4.57 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.yarn k.words.frequency word=yarn zipf=3.6 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.yawn k.words.frequency word=yawn zipf=3.07 band=4 core.source="wordfreq 3.1.1"
@@ -31,6 +32,7 @@
 @k.words.frequency.yelling k.words.frequency word=yelling zipf=4.04 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.yellow k.words.frequency word=yellow zipf=4.69 band=3 core.source="wordfreq 3.1.1"
 @k.words.frequency.yellowstone k.words.frequency word=yellowstone zipf=3.28 band=4 core.source="wordfreq 3.1.1"
+@k.words.frequency.yelp k.words.frequency word=yelp zipf=3.25 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.yen k.words.frequency word=yen zipf=3.73 band=4 core.source="wordfreq 3.1.1"
 @k.words.frequency.yes k.words.frequency word=yes zipf=5.5 band=2 core.source="wordfreq 3.1.1"
 @k.words.frequency.yesterday k.words.frequency word=yesterday zipf=4.91 band=3 core.source="wordfreq 3.1.1"

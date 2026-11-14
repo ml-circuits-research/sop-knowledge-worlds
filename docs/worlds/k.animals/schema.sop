@@ -4,6 +4,8 @@
 # license: CC0-1.0
 # script: none (hand-written)
 # additions of Round 9 (not breaking): `group`, `named`; the class `myriapod`.
+# block 03:20 item 1 (not breaking): `sound` is a typed relation to k.words (declared join by word: every sound word has
+# its senses there); the sounds WordNet's glosses name are in the shard `sounds` (tools/animal-sounds.mjs).
 # Round 11 (Q32, breaking for a host that read `size` here): the size class and the usual place of an animal are in
 # k.scenes.thing, as for every other thing; `thing` names that fact where its name is not the name of the animal.
 
@@ -11,7 +13,9 @@
 
 # An animal, named by its common English name (the same name in k.objects is its drawing, in k.commonsense its
 # everyday facts). `legs` counts walking legs (a bird has 2, a fish 0); `covering` is what covers its body; `sound`
-# is the verb for the sound it makes; `habitat` is where it lives; `diet` says whether it eats plants, animals or both
+# is the word for the sound it makes (a noun and a verb: moo), joined to k.words.sense by word; the values of one animal
+# are in the order of the sources (the hand table, PSys2's words, then WordNet's: the word a gloss says of the animal
+# itself, its nouns first, the most frequent first); `habitat` is where it lives; `diet` says whether it eats plants, animals or both
 # and `eats` names typical food; `baby` is the name of its young; `can` names ways it moves and other abilities;
 # `cannot` names a well-known thing it cannot do (a penguin cannot fly); a missing `can` says nothing;
 # `drawing` names the k.objects object that draws it. The size class of the grown animal and its usual place are
@@ -24,7 +28,7 @@
 @k.animals.animal.class core.slot of=k.animals.animal key=class required=true enum=mammal enum=bird enum=fish enum=reptile enum=amphibian enum=insect enum=arachnid enum=crustacean enum=mollusc enum=worm enum=cnidarian enum=echinoderm enum=myriapod core.source="hand-core 1"
 @k.animals.animal.legs core.slot of=k.animals.animal key=legs kind=integer min=0 core.source="hand-core 1"
 @k.animals.animal.covering core.slot of=k.animals.animal key=covering many=true enum=fur enum=hair enum=wool enum=feathers enum=scales enum=skin enum=shell enum=spines core.source="hand-core 1"
-@k.animals.animal.sound core.slot of=k.animals.animal key=sound many=true kind=atom core.source="hand-core 1"
+@k.animals.animal.sound core.slot of=k.animals.animal key=sound many=true kind=atom kind=string type=k.words.sense by=word core.source="hand-core 1"
 @k.animals.animal.habitat core.slot of=k.animals.animal key=habitat many=true kind=atom kind=string type=k.commonsense.lives by=in core.source="hand-core 1"
 @k.animals.animal.diet core.slot of=k.animals.animal key=diet enum=herbivore enum=carnivore enum=omnivore core.source="hand-core 1"
 @k.animals.animal.eats core.slot of=k.animals.animal key=eats many=true kind=atom kind=string core.source="hand-core 1"
@@ -53,7 +57,7 @@
 @k.animals.word.class core.word text=class text=kind means=k.animals.animal.class core.source="hand-core 1"
 @k.animals.word.legs core.word text=legs text=leg means=k.animals.animal.legs core.source="hand-core 1"
 @k.animals.word.covering core.word text=covering text=covered means=k.animals.animal.covering core.source="hand-core 1"
-@k.animals.word.sound core.word text=sound text=noise text=says means=k.animals.animal.sound core.source="hand-core 1"
+@k.animals.word.sound core.word text=sound text=sounds text=noise text=noises text=says text=say means=k.animals.animal.sound core.source="hand-core 1"
 @k.animals.word.habitat core.word text=habitat text=lives text=live means=k.animals.animal.habitat core.source="hand-core 1"
 @k.animals.word.diet core.word text=diet means=k.animals.animal.diet core.source="hand-core 1"
 @k.animals.word.eats core.word text=eats text=eat text=food means=k.animals.animal.eats core.source="hand-core 1"

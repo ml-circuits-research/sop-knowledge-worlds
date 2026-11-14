@@ -120,7 +120,7 @@ export function computed(worlds = scanWorlds()) {
   const wires = (id) => worlds.find((w) => w.id === id).shards.flatMap((s) => parse(s.text).map((w) => ({ ...w, license: readHeader(s.text).license?.[0] })));
   const attrs = wires('k.attributes');
   const kindOf = new Map(attrs.filter((w) => w.type === 'k.attributes.thing' && one(w, 'kind')).map((w) => [`${one(w, 'name')} ${one(w, 'sense') ?? ''}`, one(w, 'kind')]));
-  const classOf = new Map(wires('k.animals').filter((w) => w.type === 'k.animals.animal').flatMap((w) => [[one(w, 'name'), one(w, 'class')], ...(one(w, 'thing') ? [[one(w, 'thing'), one(w, 'class')]] : [])]));
+  const classOf = new Map(wires('k.animals').filter((w) => w.type === 'k.animals.animal' && one(w, 'class')).flatMap((w) => [[one(w, 'name'), one(w, 'class')], ...(one(w, 'thing') ? [[one(w, 'thing'), one(w, 'class')]] : [])]));
   const groups = new Map();
   const add = (type, key, kind, x, src, license) => {
     const id = `${type}|${key}|${kind ?? ''}`;
