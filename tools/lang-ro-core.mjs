@@ -318,8 +318,8 @@ export const TEMPLATES = [
 
 // ---- the dictionary: lemma, class, gender (nouns), sense ----
 // The sense is a wire id of k.words (word.pos.n: `house` = k.words.house.noun.1 for a noun class) or of k.actions
-// (`@make.draw` = k.actions.verb.make.draw); `-` where k.words has no sense for it yet (no adjective `italic`,
-// `horizontal`, `bold`: the gap is reported by the test). Written by hand for the app's commands and its Romanian
+// (`@make.draw` = k.actions.verb.make.draw); `-` where k.words has no sense for it (the test reports
+// the gap; the 9 of the first draft were added to k.words in block "16:10": italic, bold, thicken, numbered...). Written by hand for the app's commands and its Romanian
 // examples.
 export const LEXICON = `
 copac m.cons m tree|cerc n.uri n circle|nor m.cons m cloud|soare m.e.oa m sun|casă f.ă f house|mașină f.ăi f car|barcă f.ăi.a f boat|stea f.ea f star
@@ -340,8 +340,8 @@ banană f.ă f banana|portocală f.ă f orange|zi f.ă f day|noapte f.e.alt f ni
 picior n.e.oa n leg|capitală f.ă f capital|grad n.e n degree|întrebare f.e.alt f question|spânzurătoare f.e.alt f gallows|ascultare f.e.alt f listening|vorbire f.e f speech|calculator n.e.oa n calculator
 roșu a.u - red|galben a.1 - yellow|verde a.e - green|albastru a.ru - blue|negru a.ru - black|alb a.1 - white|mov a.inv - purple|roz a.inv - pink
 maro a.inv - brown|portocaliu a.iu - orange|gri a.inv - grey|auriu a.iu - golden|mare a.e - big|mic a.1i - small|uriaș a.1 - huge|lung a.1i - long
-scurt a.1 - short|înalt a.1 - tall|gros a.1.oa - -|frumos a.1.oa - beautiful|nou a.1 - new|curat a.1 - clean|rapid a.1 - fast
-circular a.1 - round|orizontal a.1 - -|vertical a.1 - -|cursiv a.1 - -|îngroșat a.1 - -|numerotat a.1 - -|anterior a.1.oa - -|rotund a.1 - round
+scurt a.1 - short|înalt a.1 - tall|gros a.1.oa - thick|frumos a.1.oa - beautiful|nou a.1 - new|curat a.1 - clean|rapid a.1 - fast
+circular a.1 - round|orizontal a.1 - horizontal|vertical a.1 - vertical|cursiv a.1 - italic|îngroșat a.1 - bold.adjective.2|numerotat a.1 - numbered|anterior a.1.oa - anterior.adjective.2|rotund a.1 - round
 închis a.1 - dark|deschis a.1 - light|englez a.1 - english|puțin a.1 - little|mult a.1 - much|întors a.1.oa - turned|rar a.1 - rare|gol a.1.oa - empty
 desena v.a.ez - @make.draw|adăuga v.a.ă - @make.add|pune v.e.s.n - @place.put|muta v.a - @place.move|elimina v.a - @remove.remove|face v.e - @make.make|arăta v.a.ă3 - @change.show|schimba v.a - @change.change
 colora v.a.ez - @change.colour|șterge v.e.s.g - @remove.delete|deschide v.e.s.d - @load.open|închide v.e.s.d - @change.close|anula v.a.ez - @undo.undo|reface v.e - @redo.redo|picta v.a.ez - @make.paint|scrie v.e.iu - @save.write
@@ -352,8 +352,8 @@ trasa v.a.ez - draw.verb.1|transforma v.a - transform|redenumi v.i.esc - @change
 vorbi v.i.esc - speak|juca v.a.u - play|cânta v.a - sing|asculta v.a - listen|dansa v.a.ez - dance|merge v.e.s.g - go|veni v.i.esc - come|duce v.e.s.c - take
 vrea v.ea - want|putea v.ea.u - can.verb.1|avea v.ea - have|fi v.i.esc - be|vedea v.ea - see|plăcea v.ea.ă - like|prefera v.a - prefer|dori v.i.esc - want
 amesteca v.a - mix|obține v.e.n - get|număra v.a - count|calcula v.a.ez - calculate|aduna v.a - add.verb.1|înmulți v.i.esc - multiply|împărți v.i.esc - divide|găti v.i.esc - cook
-spăla v.a.ă3 - wash|trece v.e - pass|întâlni v.i.esc - meet|îngroșa v.a.oa - -|înota v.a.oa - swim|numi v.i.esc - name|așeza v.a.ez - sit|scăpa v.a.ă - escape|ruga v.a.u - ask.verb.1
-trage v.e.s.g - pull|schimb n.uri n exchange|sfârșit n.uri n end.noun.1|nisipiu a.iu - -|radar n.e n radar|repeta v.a - repeat|alege v.e.s.g - choose|lipi v.i.esc - paste|construi v.i.iesc - build|purta v.a.u - wear|trimite v.e.s.t - send|construi v.i.iesc - build
+spăla v.a.ă3 - wash|trece v.e - pass|întâlni v.i.esc - meet|îngroșa v.a.oa - thicken|înota v.a.oa - swim|numi v.i.esc - name|așeza v.a.ez - sit|scăpa v.a.ă - escape|ruga v.a.u - ask.verb.1
+trage v.e.s.g - pull|schimb n.uri n exchange|sfârșit n.uri n end.noun.1|nisipiu a.iu - sandy|radar n.e n radar|repeta v.a - repeat|alege v.e.s.g - choose|lipi v.i.esc - paste|construi v.i.iesc - build|purta v.a.u - wear|trimite v.e.s.t - send|construi v.i.iesc - build
 `.trim().split(/\n|\|/).map((r) => r.trim()).filter(Boolean).map((r) => r.split(' ')).filter((x, i, a) => a.findIndex((y) => y[0] === x[0]) === i);
 // The sense id of a row: `@act.verb` -> k.actions.verb.act.verb; `word` -> k.words.word.<pos>.1; `word.pos.n` as given.
 const POS = { n: 'noun', a: 'adjective', v: 'verb' };

@@ -20,6 +20,16 @@ const OFFENSIVE = /ethnic slur|\((?:[a-z]+ )?(?:offensive|vulgar|obscene|taboo|d
 const LEMMA = /^[a-z][a-z0-9-]*$/; // what can be an atom and a segment of an id
 // Q36: a name of several words, as WordNet writes it (manta_ray); its `word` is written with spaces ("manta ray")
 const MULTI = /^[a-z][a-z0-9-]*(_[a-z][a-z0-9-]*)+$/;
+// Words other worlds asked for, kept with every part of speech as common words whatever their place in the frequency
+// list (reviewer block "16:10": the 9 lemmas of w.lang.ro's dictionary that had no English sense; the adjectives of
+// text style and orientation that commands use).
+export const ASKED = ['anterior', 'bold', 'horizontal', 'italic', 'sandy', 'thick', 'thicken', 'vertical'];
+// Senses WordNet 3.1 does not have, written by hand (hand-core 1, CC0-1.0) into a shard of their own, `hand.sop`, so
+// that no wire of another licence shares a shard with them. `n` counts on from WordNet's senses of that part of
+// speech (none for these). "numbered" is in WordNet only as a form of the verb number ("give numbers to").
+export const HAND_SENSES = [
+  { word: 'numbered', pos: 'adjective', n: 1, gloss: 'marked with numbers that give an order', synonym: [], why: 'w.lang.ro numerotat; WordNet 3.1 has only the verb number, sense 2 "give numbers to"' },
+];
 const keyOf = (name) => String(name).toLowerCase().trim().replace(/\s+/g, '_');
 const kept = (w) => LEMMA.test(w) || MULTI.test(w);
 
@@ -72,10 +82,12 @@ export const bucketOf = (lemma) => (/^[a-z]{2}/.test(lemma) ? lemma.slice(0, 2) 
 // Round 9: the common words are those of the first `commonLimit` lines of the list and the words of `extra`: they
 // also get their adjective and adverb senses (files 'index.adj', 'data.adj', 'index.adv', 'data.adv', where given)
 // and, on their noun and verb senses, the chain `kind_of`. Every sense gets its `opposite`.
-export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map() } = {}) {
-  const wanted = new Set([...extra.keys()].map(keyOf).filter(kept));
+// asked: words kept as common words whatever their place in the list (ASKED). hand: senses written by hand (HAND_SENSES),
+// written to the shard `hand.sop` with their own header; a hand sense of a word and part of speech WordNet has is refused.
+export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map(), asked = [], hand = [] } = {}) {
+  const wanted = new Set([...extra.keys(), ...asked].map(keyOf).filter(kept));
   extra = new Map([...extra].map(([k, v]) => [keyOf(k), v]));
-  const common = new Set(commonLimit > 0 ? wanted : []);
+  const common = new Set(commonLimit > 0 ? wanted : asked.map(keyOf));
   for (const line of freq.split('\n').slice(0, commonLimit)) {
     const w = line.trim().split(/\s+/)[0]?.toLowerCase();
     if (w && LEMMA.test(w)) common.add(w);
@@ -191,6 +203,24 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
       stats.shards++;
     });
   }
+  // Hand senses (HAND_SENSES): one shard of their own, CC0.
+  const handLines = [];
+  for (const h of hand) {
+    const p = Object.keys(POS).find((x) => POS[x] === h.pos);
+    if (readIndex(files[`index.${FILE[p]}`] ?? '').has(keyOf(h.word))) throw new Error(`hand sense ${h.word} ${h.pos}: WordNet has this word as ${h.pos}`);
+    handLines.push(wire(`k.words.${seg(keyOf(h.word))}.${h.pos}.${h.n}`, 'k.words.sense', [['word', h.word], ['pos', h.pos], ['n', h.n], ['gloss', text(h.gloss)], ...h.synonym.map((w) => ['synonym', w])], 'hand-core 1'));
+  }
+  if (handLines.length) {
+    out['hand.sop'] = `${header({
+      id: 'k.words/shards/hand',
+      about: 'senses WordNet 3.1 does not have, asked for by other worlds and written by hand (tools/import/wordnet.mjs HAND_SENSES says why each).',
+      sources: ['hand-core 1 (written in this repository)'],
+      license: 'CC0-1.0',
+      script: 'tools/import/wordnet.mjs',
+    })}\n${handLines.join('\n')}\n`;
+    stats.hand = handLines.length;
+    stats.shards++;
+  }
   return { files: out, stats };
 }
 
@@ -251,7 +281,7 @@ async function main() {
   const dict = arg('dict', join(repo, 'sources/wordnet/raw/wordnet31'));
   const files = Object.fromEntries(['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'].map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
   const freq = readFileSync(arg('freq', join(repo, 'sources/frequency-words/raw/en_50k.txt')), 'utf8');
-  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')) });
+  const { files: out, stats } = importWordnet(files, freq, { extra: await extraWords(files, join(repo, 'docs/worlds')), asked: ASKED, hand: HAND_SENSES });
   writeShards(arg('out', join(repo, 'docs/worlds/k.words/shards')), out);
   console.log(JSON.stringify(stats));
 }

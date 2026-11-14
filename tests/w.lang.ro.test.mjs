@@ -59,7 +59,7 @@ test('w.lang.ro: the dictionary is sorted, split by the first folded letter, wit
     }
   }
   console.log(`dictionary: ${rows} lemmas, ${noSense.length} without a sense (k.words has none yet): ${noSense.join(' ')}`);
-  assert.ok(noSense.length <= 15);
+  assert.deepEqual(noSense, [], 'every lemma has an English sense (block 16:10 added the last 9 to k.words)');
   assert.equal(rows, dictionaryRows().length);
   assert.ok(rows >= 200, `${rows} lemmas`);
   // the commands of the app (imperative and present): each has a verb whose sense is that k.actions verb

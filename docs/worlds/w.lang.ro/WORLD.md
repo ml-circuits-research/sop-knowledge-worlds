@@ -68,8 +68,9 @@ for a word typed without diacritics).
   reading. Through the folds 92.4%, and the casual variants typed without diacritics 92.2% (1,076 of 1,167): the
   rest is Q51. Missed in exact spelling: kiwi, reprezintă, trebui (not in the dictionary) and spânzuratoarea (written
   without its ă in the source).
-- 9 lemmas have no sense: k.words has no adjective italic, horizontal, vertical, bold, numbered, sandy, anterior or
-  thick, and no verb thicken.
+- Every lemma has a sense: the 9 of the first draft without one (cursiv, orizontal, vertical, îngroșat, numerotat,
+  nisipiu, anterior, gros, îngroșa) are joined to the English senses k.words added for them in block "16:10"
+  (italic, horizontal, vertical, bold, numbered, sandy, anterior, thick adjectives; thicken verb).
 
 ## Not yet
 

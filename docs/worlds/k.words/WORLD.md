@@ -29,6 +29,12 @@ planet, manta ray an animal, light year a unit), and the adjective and adverb se
     (9,342 senses): "is a dog an animal" is one lookup, `where: { word: 'dog', pos: 'noun', n: 1, kind_of: 'animal' }`.
 - `core.word` facts in the shards: irregular forms (`text=children means=child`) and lower-case text for capitalised
   words (`text=paris means=Paris`), both `of=k.words.sense.word`.
+- Words asked for by other worlds (`ASKED` in the importer, block "16:10"): anterior, bold, horizontal, italic, sandy,
+  thick, thicken, vertical are kept with every part of speech whatever their place in the frequency list, for the
+  lemmas of `w.lang.ro`'s dictionary (cursiv = italic adjective 1, îngroșat = bold adjective 2 "clear and distinct",
+  îngroșa = thicken verb 1, anterior = anterior adjective 2 "earlier in time", nisipiu = sandy adjective 1).
+  `numbered` is not an adjective in WordNet 3.1 (only a form of the verb *number*, sense 2 "give numbers to"): its one
+  sense is written by hand (`HAND_SENSES`, `hand-core 1`, CC0) in the shard `hand.sop`, which holds no WordNet wire.
 - Exports: `k.words.sense`.
 
 The values of `is_a`, `part_of` and the others are words, not senses: to follow a chain beyond the common words (which carry `kind_of`), look the value up as a
@@ -40,7 +46,7 @@ the frequency list, the common things and the names of the cores have senses).
 By the first two letters of the word (`do.sop` holds `dog`, `door`, `do`; `ma.sop` holds `"manta ray"`); a one-letter word or a word whose second
 character is not a letter is in the shard of its first letter. A bucket that would pass the size limits is split into
 consecutive parts: `co` is now `co-1` and `co-2`. `vocab.json` maps every word (lower case) and every
-irregular form to its shard. 321 shards, 32,404 wires, 7,491,718 bytes; the largest is `re` (899 wires, 187,344
+irregular form to its shard. 322 shards (321 from WordNet and `hand.sop`), 32,432 wires, 7,498,386 bytes; the largest is `re` (899 wires, 187,344
 bytes).
 
 ## Sources

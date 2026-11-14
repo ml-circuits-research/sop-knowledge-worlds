@@ -1,5 +1,5 @@
 {
- "version": "1a1145bb003f",
+ "version": "e319ebe5f3a2",
  "sopworld": "1d1c3c6",
  "worlds": [
   {
@@ -38764,8 +38764,8 @@
     {
      "id": "k.words/shards/an",
      "path": "k.words/shards/an.sop",
-     "wires": 176,
-     "bytes": 42519,
+     "wires": 179,
+     "bytes": 43231,
      "keys": [
       "adjective",
       "adverb",
@@ -38827,6 +38827,7 @@
       "anteater",
       "antelope",
       "antenna",
+      "anterior",
       "anthem",
       "anthony",
       "anthrax",
@@ -39804,8 +39805,8 @@
     {
      "id": "k.words/shards/bo",
      "path": "k.words/shards/bo.sop",
-     "wires": 336,
-     "bytes": 80297,
+     "wires": 339,
+     "bytes": 80948,
      "keys": [
       "adjective",
       "boa",
@@ -44807,6 +44808,21 @@
      "warnings": []
     },
     {
+     "id": "k.words/shards/hand",
+     "path": "k.words/shards/hand.sop",
+     "wires": 1,
+     "bytes": 413,
+     "keys": [
+      "adjective",
+      "numbered"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.words/shards/he",
      "path": "k.words/shards/he.sop",
      "wires": 280,
@@ -45025,8 +45041,8 @@
     {
      "id": "k.words/shards/ho",
      "path": "k.words/shards/ho.sop",
-     "wires": 342,
-     "bytes": 77023,
+     "wires": 343,
+     "bytes": 77338,
      "keys": [
       "adjective",
       "adverb",
@@ -45888,12 +45904,13 @@
     {
      "id": "k.words/shards/it",
      "path": "k.words/shards/it.sop",
-     "wires": 21,
-     "bytes": 4779,
+     "wires": 27,
+     "bytes": 6158,
      "keys": [
       "adjective",
       "it",
       "italian",
+      "italic",
       "italy",
       "itch",
       "itching",
@@ -50939,8 +50956,8 @@
     {
      "id": "k.words/shards/sa",
      "path": "k.words/shards/sa.sop",
-     "wires": 321,
-     "bytes": 77673,
+     "wires": 324,
+     "bytes": 78193,
      "keys": [
       "adjective",
       "noun",
@@ -51014,6 +51031,7 @@
       "sander",
       "sands",
       "sandwich",
+      "sandy",
       "sang",
       "sanitarium",
       "sanitation",
@@ -52796,8 +52814,8 @@
     {
      "id": "k.words/shards/th",
      "path": "k.words/shards/th.sop",
-     "wires": 239,
-     "bytes": 55921,
+     "wires": 247,
+     "bytes": 57492,
      "keys": [
       "adjective",
       "adverb",
@@ -52832,6 +52850,7 @@
       "thesis",
       "theta",
       "thick",
+      "thicken",
       "thief",
       "thieving",
       "thigh",
@@ -53765,8 +53784,8 @@
     {
      "id": "k.words/shards/ve",
      "path": "k.words/shards/ve.sop",
-     "wires": 128,
-     "bytes": 28987,
+     "wires": 131,
+     "bytes": 29856,
      "keys": [
       "adjective",
       "adverb",
@@ -54789,9 +54808,11 @@
     }
    ],
    "sources": [
+    "hand-core-1",
     "wordnet-3.1"
    ],
    "licenses": [
+    "CC0-1.0",
     "WordNet-3.0"
    ],
    "warnings": []

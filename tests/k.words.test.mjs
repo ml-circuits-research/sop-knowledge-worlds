@@ -51,3 +51,26 @@ test('natural questions (Round 9 item 8): of the seeded sample of 100 about word
   assert.equal(r.asked, 100);
   assert.ok(r.found >= 90, `${r.found} of 100`);
 });
+
+test('senses asked by other worlds (block 16:10): the adjectives of text style and orientation, thicken; hand senses are CC0 in a shard of their own', () => {
+  const gloss = (word, pos, n) => {
+    for (const s of scanWorlds().find((w) => w.id === 'k.words').shards) {
+      const m = new RegExp(`^@k\\.words\\.${word}\\.${pos}\\.${n} k\\.words\\.sense .* gloss="([^"]*)"`, 'm').exec(s.text);
+      if (m) return { gloss: m[1], shard: s };
+    }
+    return null;
+  };
+  for (const [word, pos, n, part] of [['italic', 'adjective', 1, 'slanting'], ['horizontal', 'adjective', 1, 'horizon'], ['vertical', 'adjective', 1, 'right angles'],
+    ['bold', 'adjective', 2, 'clear and distinct'], ['sandy', 'adjective', 1, 'yellowish'], ['anterior', 'adjective', 2, 'earlier in time'], ['thick', 'adjective', 1, 'not thin'],
+    ['thicken', 'verb', 1, 'make thick'], ['numbered', 'adjective', 1, 'numbers']]) {
+    const g = gloss(word, pos, n);
+    assert.ok(g && g.gloss.includes(part), `${word} ${pos} ${n}: ${g?.gloss}`);
+  }
+  // A hand sense lies in hand.sop, CC0, with the hand source; every other shard holds WordNet's wires only.
+  for (const s of scanWorlds().find((w) => w.id === 'k.words').shards) {
+    const hand = /core\.source="hand-core 1"/.test(s.text);
+    const name = s.path ?? s.file ?? s.id ?? '';
+    if (hand) { assert.match(s.text, /^# license: CC0-1\.0$/m, name); assert.doesNotMatch(s.text, /core\.source="wordnet/, name); }
+  }
+  assert.equal(gloss('numbered', 'adjective', 1).shard.text.match(/^# license: (.*)$/m)[1], 'CC0-1.0');
+});

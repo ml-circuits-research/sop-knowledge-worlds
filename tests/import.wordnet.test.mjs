@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
-import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames } from '../tools/import/wordnet.mjs';
+import { importWordnet, shortGloss, bucketOf, commonThings, extraWords, coreNames, ASKED, HAND_SENSES } from '../tools/import/wordnet.mjs';
 
 const fixture = {
   'data.noun': [
@@ -101,7 +101,7 @@ const list = join(REPO, 'sources/frequency-words/raw/en_50k.txt');
 test('the k.words shards on disk are what the importer gives from the raw files', { skip: !(existsSync(dict) && existsSync(list)) && 'raw files not downloaded' }, async () => {
   const names = ['index.noun', 'data.noun', 'index.verb', 'data.verb', 'noun.exc', 'verb.exc', 'index.adj', 'data.adj', 'adj.exc', 'index.adv', 'data.adv', 'adv.exc'];
   const raw = Object.fromEntries(names.map((f) => [f, readFileSync(join(dict, f), 'latin1')]));
-  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR) });
+  const { files } = importWordnet(raw, readFileSync(list, 'utf8'), { extra: await extraWords(raw, WORLDS_DIR), asked: ASKED, hand: HAND_SENSES });
   const dir = join(WORLDS_DIR, 'k.words', 'shards');
   assert.deepEqual(readdirSync(dir).sort(), Object.keys(files).sort());
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
@@ -142,4 +142,14 @@ test('the one-word names of the hand-written worlds have their sense in k.words'
   assert.ok(glossOf('light year').some((g) => /distance/.test(g)), 'light year');
   // and under the roots added for them: edible fat, galaxy, black hole, operator
   for (const w of ['olive oil', 'milky way', 'black hole', 'bus driver']) assert.ok(glossOf(w).length, w);
+});
+
+test('asked words are kept whatever their place in the list; hand senses go to hand.sop, CC0, and never repeat a WordNet word', () => {
+  const { files, stats } = importWordnet(fixture, 'the 100\n', { commonLimit: 0, asked: ['pack'], hand: [{ word: 'numbered', pos: 'adjective', n: 1, gloss: 'marked with numbers', synonym: [] }] });
+  assert.deepEqual(Object.keys(files), ['pa.sop', 'hand.sop']);
+  assert.equal(stats.hand, 1);
+  assert.match(files['hand.sop'], /^# license: CC0-1\.0$/m);
+  assert.match(files['hand.sop'], /^@k\.words\.numbered\.adjective\.1 k\.words\.sense word=numbered pos=adjective n=1 gloss="marked with numbers" core\.source="hand-core 1"$/m);
+  assert.throws(() => importWordnet(fixture, 'the 100\n', { hand: [{ word: 'dog', pos: 'noun', n: 9, gloss: 'x', synonym: [] }] }), /WordNet has this word/);
+  assert.ok(HAND_SENSES.every((h) => h.why) && ASKED.includes('thicken'));
 });

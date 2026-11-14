@@ -3822,3 +3822,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   licence question.
 - Also: `k.units.measure` entries for its numbers; README and lessons.
 - `npm test` (in a worktree of this commit, after the rebase): 2,929 tests, 2,927 pass, 1 skipped, 1 todo (Q51), 0 fail.
+
+## 2026-11-14 — first worker: the missing English senses in k.words; w.lang.ro fully linked (block "16:10")
+
+- **k.words** (`tools/import/wordnet.mjs`): a list `ASKED` (anterior, bold, horizontal, italic, sandy, thick, thicken,
+  vertical) is kept with every part of speech whatever its place in the frequency list; 25 new WordNet senses in 7
+  shards (adjectives italic 1, horizontal 1, vertical 1-3, bold 1-3, sandy 1-2, anterior 1-2, thick 1-3; verb thicken
+  1-3; the nouns of italic; the chain of kinds on the nouns now that the words are common). `numbered` is no adjective
+  in WordNet 3.1 (only the verb *number* 2, "give numbers to"): one hand sense (`HAND_SENSES`, with why) in a shard of
+  its own, `hand.sop`, CC0, so no WordNet wire shares its licence; the importer refuses a hand sense of a word WordNet
+  has in that part of speech. 322 shards, 32,432 wires, 7,498,386 bytes; the importer stays byte-identical.
+- **w.lang.ro:** the 9 lemmas joined: cursiv italic.adjective.1, orizontal horizontal.adjective.1, vertical
+  vertical.adjective.1, îngroșat bold.adjective.2 ("clear and distinct; bold handwriting"), numerotat
+  numbered.adjective.1, nisipiu sandy.adjective.1 (the colour), anterior anterior.adjective.2 ("earlier in time": PSys2
+  says "ecranul anterior"), gros thick.adjective.1, îngroșa thicken.verb.1. 255 of 255 lemmas have a sense; the test
+  now requires all.
+- Tests: `tests/k.words.test.mjs` (the asked glosses; hand senses CC0 and alone in their shard),
+  `tests/import.wordnet.test.mjs` (asked words and hand senses on the fixture; the shards on disk equal the import),
+  `tests/w.lang.ro.test.mjs` (no lemma without a sense). `npm test`: 2,931 tests, 2,929 pass, 1 skipped, 1 todo (Q51), 0 fail.
