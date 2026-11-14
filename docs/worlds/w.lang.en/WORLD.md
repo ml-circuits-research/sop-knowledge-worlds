@@ -369,7 +369,14 @@ seasons, kinds, cities ..., each joined to the type of a `k.diagrams.fill`; "put
 tree, "put the boxes in a tree" and "put the nest of the bird in a tree" stay layouts); with an order criterion, any
 kind ("put the planets in order of size on a timeline"). The topic of acts.make.diagram.after.of is three parts
 (head, of, whole) mapped to the topic by role maps. A host that has the things named already drawn still sees the
-layout reading next. Not covered then: the kind after the topic and single-letter names (both
+layout reading next.
+
+**Single-letter names** (block 07:45 item 3). "Connect A to C": a capital single letter after a word of the lexicon
+`name.letter.after` (the verbs connect, join, link; from, to, between, and, or, with, called, named; w.diagram's
+words for a node and an edge: box, node, step, arrow, line ...), or after another such name ("A, B and C"), is a name
+and not the article. The reference reader (`tools/lib/lang-en.mjs`) lets only a role's words take a name: no
+determiner, verb, word or lexicon part matches it, and a thing may end in it ("the box A"). The first word of a
+sentence, "I", and a lower-case letter are left as they were ("connect a to c" is still the article). Not covered then: the kind after the topic and single-letter names (both
 block 07:45, below).
 
 ## Joins

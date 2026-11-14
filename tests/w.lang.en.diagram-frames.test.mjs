@@ -108,6 +108,22 @@ const AFTER = [
   ['put the boxes in a tree', '', 'place/layout', { thing: 'boxes', direction: 'tree' }],
   ['put the nest of the bird in a tree', '', 'place/layout', { thing: 'nest of the bird', direction: 'tree' }],
 ];
+// Single-letter names (block 07:45 item 3): a capital letter after connect, from, to, between, and, box ... is a name.
+const NAMES = [
+  ['connect A to C', '', 'connect/', { thing: 'a', target: 'c' }],
+  ['Connect A to B.', '', 'connect/', { thing: 'a', target: 'b' }],
+  ['connect B to A', '', 'connect/', { thing: 'b', target: 'a' }],
+  ['join A and C', '', 'connect/', { thing: 'a', target: 'c' }],
+  ['Connect A To C', '', 'connect/', { thing: 'a', target: 'c' }],
+  ['connect box A to box C', '', 'connect/', { thing: 'box a', target: 'box c' }],
+  ['connect the box A to the box C', '', 'connect/', { thing: 'box a', target: 'box c' }],
+  ['label the arrow from A to B no', '', 'change/set', { thing: 'arrow from a to b', value: 'no', attribute: 'label' }],
+  ['label the line between A and B yes', '', 'change/set', { thing: 'line between a and b', value: 'yes', attribute: 'label' }],
+  // the article stays the article: a lower-case a, a capital A first or after another word
+  ['put a cat to the left of a dog', '', 'place/', { thing: 'cat', 'place.marker': 'to the left of', place: 'dog' }],
+  ['A tree of the parts of a car', '', 'make/', { kind: 'tree', topic: 'parts of a car' }],
+  ['make A timeline of the planets by distance', '', 'make/', { kind: 'timeline', topic: 'planets', criterion: 'distance' }],
+];
 // Arrangements PSys2 sent to its avatar world (dg02, dg03, dg06, dg08, dg10): w.lang.en's layout frame already reads them
 // (acts.place.layout takes the verbs of place); the cause is the host's routing, not a missing frame.
 const ARRANGED = [
@@ -214,6 +230,15 @@ test('the kind after the topic: "draw the planets in order of distance from the 
   const fillTypes = new Set(shardsOf('k.diagrams').flatMap((t) => parse(t)).filter((w) => w.type === 'k.diagrams.fill').map((w) => one(w, 'type')));
   for (const [noun, type] of Object.entries(TOPIC_HEADS)) assert.ok(fillTypes.has(type), `${noun}: ${type} fills no kind`);
   assert.deepEqual(lex('diagram.topic.head'), Object.keys(TOPIC_HEADS).sort());
+});
+
+test('single-letter names: "connect A to C" reads A and C as the things, not "a" as the article (reference reader)', () => {
+  assert.deepEqual(check(NAMES), []);
+  // without the lexicon name.letter.after a reader reads as before ("A" is the article, the thing "to c")
+  const plain = frameReader(all.filter((w) => !(w.type === 'w.lang.en.lex' && one(w, 'name') === 'name.letter.after')), actions, { needs: (n) => NEEDS.has(n) });
+  assert.deepEqual(plain('connect A to C')[0].args, { thing: 'to c' });
+  // the words of the lexicon: the verbs of connect asked for, the ends of an edge, w.diagram's words for a node and an edge
+  for (const w of ['connect', 'from', 'to', 'between', 'and', 'box', 'node', 'arrow']) assert.ok(lex('name.letter.after').includes(w), w);
 });
 
 test('the arrangements PSys2 sent to another world are read as place/layout by the existing layout frame', () => {

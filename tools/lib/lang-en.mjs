@@ -146,7 +146,18 @@ export function frameReader(wires, actionWires, { lexicons = {}, needs = () => t
     return cap;
   }) }));
 
-  function match(parts, ws) { // the best match: most literal words, then the first in the search order; { roles, literal, captured }
+  // A capital single letter after a word of the lexicon name.letter.after (connect, from, to, between, and, box ...) or
+  // after another such name is a name, not the article: "connect A to C", "the arrow from A to B" (block 07:45 item 3).
+  // A name is taken only by a role's words: no fixed part (determiner, verb, word, lexicon) matches it, and a thing may
+  // end in it ("the box A").
+  const nameAfter = new Set((lexes.get('name.letter.after') ?? []).map((x) => x.toLowerCase()));
+  const namesOf = (sentence) => {
+    const raw = String(sentence).replace(/[.?!,;:]+/g, ' ').replace(/['\u2019]/g, '').trim().split(/\s+/).filter(Boolean);
+    const names = [];
+    raw.forEach((t, i) => { names[i] = i > 0 && /^[A-Z]$/.test(t) && t !== 'I' && (nameAfter.has(raw[i - 1].toLowerCase()) || names[i - 1]); });
+    return names;
+  };
+  function match(parts, ws, names = []) { // the best match: most literal words, then the first in the search order; { roles, literal, captured }
     const roles = {}, lex = [];
     let literal = 0, best = null, steps = 0;
     const go = (i, j) => { // bounded: parts x words, each alternative once per position, at most 20,000 steps a frame
@@ -155,7 +166,7 @@ export function frameReader(wires, actionWires, { lexicons = {}, needs = () => t
       const p = parts[i];
       const alts = p.any ? Array.from({ length: Math.min(p.any, ws.length - j) }, (_, n) => ws.slice(j, j + n + 1)) : p.alts ?? null;
       if (alts) for (const a of alts) {
-        if (a.every((t, k) => ws[j + k] === t)) {
+        if (a.every((t, k) => ws[j + k] === t && !names[j + k])) {
           if (p.kind === 'role') roles[p.role] = a.join(' ');
           if (p.literal) literal += a.length;
           if (p.lexicon) lex.push([p.lexicon, a.join(' ')]);
@@ -169,7 +180,7 @@ export function frameReader(wires, actionWires, { lexicons = {}, needs = () => t
         if (ws[j] !== undefined && (/^\d+$/.test(ws[j]) || numerals.has(ws[j]))) { roles[p.role] = ws[j]; go(i + 1, j + 1); delete roles[p.role]; }
       } else { // words or rest: one word or more, shortest first (rest: to the end, at least one word; an empty rest is an optional part left out)
         const from = p.takes === 'rest' ? Math.max(1, ws.length - j) : 1;
-        for (let n = from; n <= Math.min(p.max, ws.length - j); n++) { if (p.role === 'thing' && p.takes !== 'rest' && npEnd.has(ws[j + n - 1])) continue; roles[p.role] = ws.slice(j, j + n).join(' '); go(i + 1, j + n); }
+        for (let n = from; n <= Math.min(p.max, ws.length - j); n++) { if (p.role === 'thing' && p.takes !== 'rest' && npEnd.has(ws[j + n - 1]) && !names[j + n - 1]) continue; roles[p.role] = ws.slice(j, j + n).join(' '); go(i + 1, j + n); }
         delete roles[p.role];
       }
       if (p.opt) go(i + 1, j);
@@ -187,19 +198,20 @@ export function frameReader(wires, actionWires, { lexicons = {}, needs = () => t
 
   /** Every frame that reads the sentence, best first: { frame, act, mode, priority, roles (frame roles), args (k.actions roles) }. */
   // the sentence and its particle-shifted forms: "take the tables apart" -> "take apart the tables"
-  const forms = (ws) => {
-    const out = [ws];
+  const forms = (ws, names) => { // [[words, names]]: the names move with their words
+    const out = [[ws, names]];
+    const move = (xs, i, k) => [...xs.slice(0, i + 1), xs[k], ...xs.slice(i + 1, k), ...xs.slice(k + 1)];
     for (const [verb, particle] of separable) for (let i = 0; i < ws.length; i++) {
       if (ws[i] !== verb) continue;
       const k = ws.indexOf(particle, i + 2);
-      if (k > i + 1) out.push([...ws.slice(0, i + 1), particle, ...ws.slice(i + 1, k), ...ws.slice(k + 1)]);
+      if (k > i + 1) out.push([move(ws, i, k), move(names, i, k)]);
     }
     return out;
   };
   return function read(sentence) {
-    const out = [], variants = forms(toks(sentence));
+    const out = [], variants = forms(toks(sentence), namesOf(sentence));
     for (const { f, parts } of compiled) {
-      const m = variants.map((ws) => match(parts, ws)).filter(Boolean).sort((a, b) => b.literal - a.literal || a.captured - b.captured)[0];
+      const m = variants.map(([ws, names]) => match(parts, ws, names)).filter(Boolean).sort((a, b) => b.literal - a.literal || a.captured - b.captured)[0];
       if (!m) continue;
       const name = one(f, 'name'), act = one(f, 'act'), mode = one(f, 'mode');
       const args = {};

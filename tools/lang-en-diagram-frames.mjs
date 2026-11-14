@@ -53,6 +53,8 @@ export function lexicons() {
   // the names of the drawings of k.objects (read by pattern: the shards are 36 MB), to tell "in a tree" the place
   const odir = join(WORLDS_DIR, 'k.objects', 'shards');
   const drawings = new Set(readdirSync(odir).filter((f) => f.endsWith('.sop')).flatMap((f) => [...readFileSync(join(odir, f), 'utf8').matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)].map((m) => tok(m[1]).toLowerCase())));
+  // the words for a node of a diagram ("box A", "node C"): w.diagram's words for w.diagram.node, singular
+  const nodeWords = read('w.diagram', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.node').flatMap((w) => vals(w, 'text')).filter((t) => !t.endsWith('s'));
   const sorted = (xs) => [...new Set(xs.map((x) => x.toLowerCase()))].sort();
   return {
     'diagram.kind': { doc: 'Kinds of diagram: the names of k.diagrams.kind and their words (core.word of=k.diagrams.kind.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...kinds, ...kindWords]) },
@@ -61,6 +63,7 @@ export function lexicons() {
     'diagram.kind.only': { doc: 'Kinds of diagram whose words name no drawing of k.objects (all of diagram.kind but tree): "draw the planets on a timeline" is a timeline, "draw a bird in a tree" a bird in a tree; derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...kinds, ...kindWords]).filter((k) => !drawings.has(k)) },
     'diagram.topic.head': { doc: 'Nouns that name what a fill of k.diagrams gives, said before "of" in a topic ("the parts of a car", "the stages of a frog\'s life"): each joined to the type of a k.diagrams.fill (TOPIC_HEADS in tools/lang-en-diagram-frames.mjs).', items: sorted(Object.keys(TOPIC_HEADS)) },
     'diagram.topic.of': { doc: 'The word that joins a topic head to its whole ("the parts of a car").', items: ['of'] },
+    'name.letter.after': { doc: 'Words after which a capital single letter is a name, not the article (block 07:45 item 3): "connect A to C", "the arrow from A to B", "box A"; a letter after such a name is a name too ("A, B and C"). Read by the reference reader (tools/lib/lang-en.mjs).', items: sorted([...NAME_AFTER, ...edgeWords, ...nodeWords]) },
     'order.criterion': { doc: 'Attributes that can put things in order, the criterion of make, place and group (k.actions): the names of the k.attributes attributes that hold a number, a size or a step of a scale, and their words (core.word of=k.attributes.attribute.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...attrs, ...attrWords]) },
     'diagram.direction': { doc: 'Directions of a layout: the arrangement phrases (w.lang.en.arrangement) of a row or column in one direction whose diagram layout is left_right or top_down; derived by tools/lang-en-diagram-frames.mjs.', items: sorted(directions) },
   };
@@ -71,6 +74,9 @@ const verb = (act) => ['verb', act];
 const role = (r, takes = 'words', more = {}) => ['role', r, takes, more];
 const word = (words, optional = false, act = undefined) => ['word', words, optional, act];
 const OF = ['of', 'about', 'for', 'on', 'showing', 'that shows', 'to show', 'explaining'];
+// words before a node's name besides the words for a node and an edge: the verbs of connect and the words that name the
+// ends of an edge ("connect A to C", "from A to B", "between A and B")
+const NAME_AFTER = ['connect', 'join', 'link', 'from', 'to', 'between', 'and', 'or', 'with', 'called', 'named', 'point', 'step'];
 // verbs of showing (with the verbs of make) and of arranging that take the kind after the topic
 const SHOW = ['show', 'display', 'plot', 'present', 'map out'];
 const ARRANGE = ['put', 'place', 'arrange', 'organise', 'organize', 'lay out', 'set out', 'sort', 'order', 'turn', 'line up'];

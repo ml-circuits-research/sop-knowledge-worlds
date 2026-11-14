@@ -5276,3 +5276,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: 13 requests (10 read as make with topic and kind after it; "draw a bird in a tree" stays a bird in a tree,
   "put the boxes in a tree" and "put the nest of the bird in a tree" stay layouts); every topic head's type fills a
   kind of k.diagrams. Frames test: 403 frames, 387 best, 11 tie, 5 known.
+
+## 2026-11-15 — third worker: single-letter node names (block 07:45 item 3)
+
+- "connect A to C" read as connect, thing "to c" (A the article); "connect box A to box C" did not read (a thing may
+  not end in a determiner).
+- tools/lib/lang-en.mjs (the reference reader): a capital single letter after a word of the lexicon
+  `name.letter.after`, or after another such name, is a name: only a role's words take it (no determiner, verb, word
+  or lexicon part), and a thing may end in it. Not the first word, not "I", not a lower-case letter. The names move
+  with their words in the particle-shifted forms.
+- w.lang.en lexicon name.letter.after (21 words: connect, join, link, from, to, between, and, or, with, called, named,
+  point, step and w.diagram's words for a node and an edge), derived in tools/lang-en-diagram-frames.mjs (shard
+  diagram-frames 141 wires, 32,923 bytes).
+- Tests: 12 requests (connect A to C, B to A, A To C, box A to box C, the box A to the box C, label the arrow from A to
+  B no, the line between A and B; and three where "a"/"A" stays the article); a reader without the lexicon reads as
+  before.
