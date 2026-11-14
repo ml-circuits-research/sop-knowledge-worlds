@@ -364,8 +364,10 @@ export function patternParts(pattern) {
     } else {
       const alts = /^\[.*\]$/.test(t) ? t.slice(1, -1).split('|') : [t];
       const phrase = alts.filter((a) => a.startsWith('$')).map((a) => a.slice(1).replace(/^lang\./, ''));
-      const ws = alts.filter((a) => !a.startsWith('$')).map(words);
-      Object.assign(p, phrase.length && !ws.length ? { is: 'phrase', phrase } : { is: 'word', word: ws, ...(phrase.length ? { phrase } : {}) });
+      // a verb group among the words ("[V.place|arrange|lay_out]"): the verbs of that act of k.actions (`act`), not a word
+      const group = alts.find((a) => /^V\.\w+$/.test(a));
+      const ws = alts.filter((a) => !a.startsWith('$') && a !== group).map(words);
+      Object.assign(p, phrase.length && !ws.length ? { is: 'phrase', phrase } : { is: 'word', ...(group ? { act: VERB_ACT[group.slice(2)] ?? group.slice(2) } : {}), word: ws, ...(phrase.length ? { phrase } : {}) });
       // "[have]": one word written as a set; the part says so, so that the pattern can be written again as it was
       if (p.is === 'word' && alts.length === 1 && /^\[/.test(t)) p.listed = 'yes';
     }
@@ -374,6 +376,21 @@ export function patternParts(pattern) {
   }
   return out;
 }
+// Frames that do not read their own example (tests/w.lang.en.frames.test.mjs, block 22:30), fixed at the import:
+// frame -> parts -> parts.
+export const FRAME_FIXES = {
+  // "Add a seat to table 1": a determiner before the attribute (as acts.change.less1 has)
+  'acts.change.add1': (ps) => [...ps.slice(0, 2), { is: 'det', optional: true }, ...ps.slice(2)],
+  // "Give yourself a beard": give, said of the self, besides the verbs of make
+  'acts.make.self': (ps) => ps.map((p, i) => (i === 1 ? { is: 'word', act: p.act, word: ['give'] } : p)),
+  // "What colours can I use?": the verb after "can I"
+  'acts.more.ask.options': (ps) => [...ps, { is: 'word', word: ['use', 'draw', 'pick', 'choose', 'have', 'change'], optional: true }],
+  // "Colour list please."
+  'acts.more.ask.options.short': (ps) => [...ps, { is: 'word', word: ['please', 'pls', 'plz'], optional: true }],
+};
+// "Take the tables apart" is the act take apart, not a move apart (acts.place.dir, 13): the frame whose verb and
+// particle say it outranks the direction frames (block 22:30).
+export const FRAME_PRIORITY = { 'acts.apart.2': 14 };
 function framesOf(fr, W, notes, { own: takeOwn = false } = {}) {
   const bySet = {};
   let tab = 0;
@@ -381,11 +398,11 @@ function framesOf(fr, W, notes, { own: takeOwn = false } = {}) {
   if (own.length) notes.changed.push(`the ${own.length} frames of the act \`own\` of the hand-over (${own.map((w) => w.id.slice('lang.en.frame.'.length)).join(', ')}) are not read from it: the same frames are taken from src/lang/en.local.mjs, where they carry \`after\` (block 07:40: published, though they name no act of k.actions)`);
   for (const w of fr.filter((x) => takeOwn || one(x, 'act') !== 'own')) {
     const set = one(w, 'set'), name = w.id.slice('lang.en.frame.'.length);
-    const e = [['name', name], ['act', one(w, 'act')], ['mode', one(w, 'mode')], ['set', set], ['priority', one(w, 'priority')], ['needs', one(w, 'needs')], ...vals(w, 'role').map((r) => ['role', r]), ['after', one(w, 'after')], ['example', text(one(w, 'example'))]];
+    const e = [['name', name], ['act', one(w, 'act')], ['mode', one(w, 'mode')], ['set', set], ['priority', FRAME_PRIORITY[name] ?? one(w, 'priority')], ['needs', one(w, 'needs')], ...vals(w, 'role').map((r) => ['role', r]), ['after', one(w, 'after')], ['example', text(one(w, 'example'))]];
     if (one(w, 'tab-only') || one(w, 'tab-priority')) tab++;
     const lines = (bySet[set] ??= []);
     lines.push(W(`frame.${name}`, 'frame', e));
-    patternParts(one(w, 'pattern')).forEach((p, i) => {
+    (FRAME_FIXES[name] ?? ((ps) => ps))(patternParts(one(w, 'pattern'))).forEach((p, i) => {
       const pe = [['frame', name], ['at', i + 1], ['is', p.is]];
       for (const k of ['act', 'role', 'takes', 'lexicon', 'max_words', 'quotes', 'listed']) if (p[k] !== undefined) pe.push([k, k === 'act' && /\s/.test(p[k]) ? text(p[k]) : p[k]]);
       for (const x of p.word ?? []) pe.push(['word', text(x)]);
@@ -395,6 +412,8 @@ function framesOf(fr, W, notes, { own: takeOwn = false } = {}) {
     });
     for (const k of Object.keys(w.attrs).filter((x) => x.startsWith('lit.'))) lines.push(W(`fixed.${name}.${k.slice(4)}`, 'fixed', [['frame', name], ['role', k.slice(4)], ['value', text(one(w, k))]]));
   }
+  notes.changed.push(`the priority of ${Object.entries(FRAME_PRIORITY).map(([f, p]) => `${f} (${p})`).join(', ')}: take the tables apart is the act take apart, not a move apart (block 22:30)`);
+  notes.changed.push(`${Object.keys(FRAME_FIXES).length} frames that did not read their own example got a part (block 22:30, tests/w.lang.en.frames.test.mjs): ${Object.keys(FRAME_FIXES).join(', ')}`);
   if (tab) notes.left.push(`\`tab-only\` and \`tab-priority\` of ${tab} frames${takeOwn ? ' written after the import' : ''}: they say how the demo's tabs claim a sentence (an interface of one application)`);
   notes.changed.push('a frame `pattern` became one `w.lang.en.part` per part, in order (`at`): `is` lead, det, verb (with `act`), word (one of `word`), phrase (a phrase group), lexicon, or role (a capture: `role`, `takes` words, rest, number, prep or lexicon, `max_words`); `optional=yes` for `?`; `quotes=yes` for `rest(quotes)`; `listed=yes` for one word written as a set (`[have]`), so that the pattern can be written again as it was; the verb groups V.set and V.apart are the verbs of the acts change and take apart of k.actions; `lit.<role>=` became `w.lang.en.fixed frame= role= value=`');
   return bySet;

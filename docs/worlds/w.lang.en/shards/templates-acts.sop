@@ -58,7 +58,7 @@
 # ---- connect, group, take apart ----
 @w.lang.en.template.connect.target w.lang.en.template name=connect.target act=connect shape=thing.target role=thing role=target frame=acts.connect text="connect {thing} to {target}." example="Connect table 1 to table 2." core.source="hand-core 1"
 @w.lang.en.template.group.thing w.lang.en.template name=group.thing act=group shape=thing.group role=thing mode=group frame=acts.group text="group {thing}." example="Group the tables." core.source="hand-core 1"
-@w.lang.en.template.take_apart.thing w.lang.en.template name=take_apart.thing act="take apart" shape=thing role=thing frame=acts.apart text="take apart {thing}." example="Take apart the tables." core.source="hand-core 1"
+@w.lang.en.template.take_apart.thing w.lang.en.template name=take_apart.thing act="take apart" shape=thing role=thing frame=acts.apart frame=acts.apart.2 text="take {thing} apart." example="Take the tables apart." core.source="hand-core 1"
 
 # ---- pick, deselect ----
 @w.lang.en.template.pick.thing w.lang.en.template name=pick.thing act=pick shape=thing role=thing frame=acts.pick text="select {thing}." example="Select the house." core.source="hand-core 1"

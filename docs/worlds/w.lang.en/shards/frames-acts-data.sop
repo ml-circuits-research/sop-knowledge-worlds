@@ -174,7 +174,7 @@
 @w.lang.en.fixed.acts.data.change.chart.without.value w.lang.en.fixed frame=acts.data.change.chart.without role=value value="off" core.source="psys2 78f45863"
 @w.lang.en.frame.acts.data.change.number w.lang.en.frame name=acts.data.change.number act=change mode=set set=acts.data priority=12 needs=valued role=thing role=value example="Change pears to 6." core.source="psys2 78f45863"
 @w.lang.en.part.acts.data.change.number.1 w.lang.en.part frame=acts.data.change.number at=1 is=lead phrase=lead.polite optional=yes core.source="psys2 78f45863"
-@w.lang.en.part.acts.data.change.number.2 w.lang.en.part frame=acts.data.change.number at=2 is=word word="V.set" word="set" word="put" word="update" word="correct" word="fix" word="make" word="put down" core.source="psys2 78f45863"
+@w.lang.en.part.acts.data.change.number.2 w.lang.en.part frame=acts.data.change.number at=2 is=word act=change word="set" word="put" word="update" word="correct" word="fix" word="make" word="put down" core.source="psys2 78f45863"
 @w.lang.en.part.acts.data.change.number.3 w.lang.en.part frame=acts.data.change.number at=3 is=det optional=yes core.source="psys2 78f45863"
 @w.lang.en.part.acts.data.change.number.4 w.lang.en.part frame=acts.data.change.number at=4 is=role role=thing takes=words core.source="psys2 78f45863"
 @w.lang.en.part.acts.data.change.number.5 w.lang.en.part frame=acts.data.change.number at=5 is=word word="to" word="be" word="as" word="at" word="equal to" word="up to" optional=yes core.source="psys2 78f45863"

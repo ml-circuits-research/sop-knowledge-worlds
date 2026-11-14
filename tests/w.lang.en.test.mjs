@@ -195,7 +195,7 @@ const patternOf = (parts) => parts.map((p) => {
     case 'verb': return `V.${VERBS[one(p, 'act')] ?? one(p, 'act')}`;
     case 'phrase': return `[${v(p, 'phrase').map((x) => `$lang.${x}`).join('|')}]${opt}`;
     case 'lexicon': return `${lex(one(p, 'lexicon'))}${opt}`;
-    case 'word': { const ws = [...v(p, 'word').map(chunk), ...v(p, 'phrase').map((x) => `$lang.${x}`)]; return ws.length === 1 && !opt && one(p, 'listed') !== 'yes' ? ws[0] : `[${ws.join('|')}]${opt}`; }
+    case 'word': { const ws = [...(one(p, 'act') ? [`V.${VERBS[one(p, 'act')] ?? one(p, 'act')}`] : []), ...v(p, 'word').map(chunk), ...v(p, 'phrase').map((x) => `$lang.${x}`)]; return ws.length === 1 && !opt && one(p, 'listed') !== 'yes' ? ws[0] : `[${ws.join('|')}]${opt}`; }
     case 'role': {
       if (one(p, 'takes') === 'prep' && one(p, 'role') === 'rel') return 'REL';
       const arg = one(p, 'max_words') ?? (one(p, 'quotes') === 'yes' ? 'quotes' : null);
@@ -284,6 +284,15 @@ test('w.lang.en is what the library reads: the noun-phrase examples parse with t
     assert.equal(np.rule.replace(/^w\.lang\.en\.rule\./, '').replace(/\.\d+$/, ''), construction, s);
     assert.equal(np.lemma, lemma, s);
   }
+});
+
+test('block 22:30: "red house" is a modifier and a noun, not a compound of two nouns ("apple pie" still compounds)', () => {
+  for (const [s, mods] of [['red house', ['red']], ['a red house', ['red']], ['3 red tables', ['red']]]) {
+    const ps = read(s);
+    assert.ok(ps.length, s);
+    for (const p of ps) assert.deepEqual(nounPhrase(p.tree, C).mods ?? [], mods, `${s}: every parse`);
+  }
+  assert.ok(read('apple pie').some((p) => nounPhrase(p.tree, C).lemma === 'pie'));
 });
 
 test('w.lang.en is what the library reads: questions', () => {

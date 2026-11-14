@@ -36,9 +36,9 @@ const C = { det: 'DET', num: 'NUM', mod: 'MOD', head: 'N', pp: 'PP', ord: 'ORD',
 const kindPhrase = (words) => {
   const p = parseText(gw, words, { ...opts, start: 'NP', lexicon: hostLexicon(gw, words, worlds) });
   if (!p.length) return null;
-  // "red house" parses as a compound of two nouns too (red is also a noun): a host takes the reading with the most
-  // modifiers, as a word with an adjective sense before a noun is its modifier
-  const np = p.map((x) => nounPhrase(x.tree, C)).sort((a, b) => (b.mods?.length ?? 0) - (a.mods?.length ?? 0))[0];
+  // "red house": hostLexicon gives red only as a modifier before a noun, so every parse has it as a modifier
+  const nps = p.map((x) => nounPhrase(x.tree, C));
+  const np = nps[0];
   return np.lemma ? { head: np.lemma, mods: np.mods ?? [] } : null;
 };
 const readerFor = (t) => frameReader(all, actions, { lexicons: LEXICONS, kindPhrase, needs: (n) => GENERAL.has(n) || n === one(t, 'needs') });

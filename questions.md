@@ -899,3 +899,16 @@ text/relation; 7 form templates and 53 key templates in the library's template n
 of the set `acts.state` (needs=state) to the act change with thing, attribute and value (190 keys said from a real
 fact). Slots: {thing} with its determiner, {value} as said, {key} the key's word (the k.* core.word of the key).
 Blocking: no. Meanwhile the facts are published; a key that reads badly gets a template here when a composition shows it.
+
+## Q64 (block "22:30", first worker, 2026-11-15): frame asks, and PSys2's frames that do not read their own example
+Question: (1) Who writes the general frames for the 29 roles of k.actions no general frame reads (make.part,
+make.material, make.topic, change.old value, change.replacement, place.direction, place.source, connect.tool,
+group.target, group.group, group.criterion, take apart.parts / source / tool, pick.source, pick.other, ask.other,
+copy.place, send.means, send.format, undo.thing / number / state, save.thing, save.place, load.source, redo.thing,
+redo.number, deselect.thing): this repository, by the k.actions markers of each role ("make a table of wood": material
+by "of"; "replace the hat with a crown": replacement by "with"), one canonical frame per role, or PSys2 from its
+failures? (2) Nine of PSys2's local frames (src/lang/en.local.mjs, published as written) do not read their own
+example (tests/w.lang.en.frames.test.mjs KNOWN: acts.facts.ask.what.in.lead's example puts the thing before "is";
+acts.media.m.pick.play.bare lacks "play"; the media and text frames lose to a broader frame of their set): fix them
+here (and diverge from en.local.mjs, the 07:40 test then compares against a list of differences) or in PSys2?
+Blocking: no. Meanwhile they are listed with their reasons and the test fails if a new frame fails or a listed one passes.

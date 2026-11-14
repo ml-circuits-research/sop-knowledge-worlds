@@ -4529,3 +4529,26 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   `k.kinds.parent.sense` narrate=no; catalog 32 worlds, 1,063 shards, 26,471 words); after it k.kinds 8,
   k.kinds.relations 5, k.kinds.structures 4, k.attributes.narration 3, w.lang.en.phrasing 3, k.interest 5, repo 1,
   questions 424, shared-modules 5, validate 5, catalog 8 pass.
+
+## 2026-11-15 — first worker: every w.lang.en frame reads its own example (block 22:30; round "00:20" item 3)
+
+- **Test** `tests/w.lang.en.frames.test.mjs`: pass 1, each frame alone reads its example (a host lexicon it names
+  takes any 1–3 words; the words taken become that kind of world's lexicon); pass 2, in its world (frames with no needs
+  or its needs, those lexicons) the best reading is the frame or one with the same act, mode and roles. First run:
+  357 frames, 320 best, 9 tie, 14 other, 9 not read alone (and with closed sample lexicons 227 of 352 best: most
+  "failures" were missing host words, hence the two passes). Now: 333 best, 10 tie, 14 listed with reasons (KNOWN:
+  9 of PSys2's local media/text/facts frames, 5 chart frames); the test fails on a new failure and on a listed frame that
+  passes. Second test: 29 of 57 roles of k.actions no general frame reads (frame asks, WORLD.md, Q64).
+- **Reader fixes** (tools/lib/lang-en.mjs, general): `rest` takes at least one word (empty values: 5 frames);
+  apostrophes dropped inside words ("don't" = "dont"); the `thing` capture does not end in a preposition or determiner;
+  separable phrasal verbs of k.actions (61) also read with the particle moved back ("take the tables apart");
+  `openLexicons` and the words each lexicon part took (`lexicons`) for the test.
+- **Data fixes**: `V.place`, `V.make`, `V.set` inside word lists (5 parts, the hand-over's notation) are `act=` on the
+  part (the import tool does it; the 07:40 pattern test writes them back); at the import (`FRAME_FIXES`,
+  `FRAME_PRIORITY`, IMPORT.md says so; the import stays reproducible from the cited commit): acts.change.add1 gets a
+  determiner ("Add a seat to table 1"), acts.make.self "give", acts.more.ask.options the verb after "can I",
+  acts.more.ask.options.short "please", acts.apart.2 priority 14 over the direction frames; the template of take apart
+  says "take {thing} apart." (read by acts.apart and acts.apart.2 in the general world). hostLexicon: an adjective
+  right before a noun is its modifier ("red house" no longer a compound; "apple pie" still is); the templates test's
+  "most modifiers" workaround removed. Variants shard regenerated.
+- Tests: w.lang.en 22 (red house), templates 8, phrasing 3, frames 2, alternations 4, abstraction 5.

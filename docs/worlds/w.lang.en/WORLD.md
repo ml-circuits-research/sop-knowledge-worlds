@@ -101,11 +101,9 @@ read by this world's productions with k.words ("3 red tables": kind table, value
 the templates do not say: 28 of the 56 roles of k.actions have no template (make.part, make.material, change.old
 value, change.replacement outside the avatar's and a chart's frames, place.source, connect.tool, the target, group
 and criterion of group, pick.source and other, ask.other, copy.number, send.means and format, undo.state,
-save.format, deselect.thing...): each needs a frame first. Found on the way: "Add a seat to table 1" is not read by
-its own frame (acts.change.add1 has no determiner before the attribute; the templates use the number form), and "take
-the tables apart" is read as a move apart where the direction frames apply (the template says "take apart the
-tables"); "red house" is also a compound of two nouns for the productions (red is a noun), so a host takes the
-reading with the most modifiers.
+save.format, deselect.thing...): each needs a frame first. Found on the way and fixed (block 22:30): "Add a seat to table 1" (acts.change.add1 has a determiner before the
+attribute), "take the tables apart" (the template now says it so: the particle shift and acts.apart.2's priority), "red
+house" (a modifier before its noun, see the next section).
 
 ## Composition: discourse templates per move and register (blocks 14:45 item 2, 15:00 item 4, 17:05)
 
@@ -187,6 +185,30 @@ canonical form ends in have and would match its own rule), would you mind + -ing
   minus two, no hat); not and never stay negations. `if` is a joiner of a condition (`kind=condition`, no cut).
 - The named add with a place verb ("Put a guest named Maria at table 1.", block "20:15") is the fourth worker's
   `acts.make.name.place.p` in `hand-frames` (585afaf). Tests: `tests/w.lang.en.abstraction.test.mjs`.
+
+## Every frame reads its own example (block 22:30)
+
+`tests/w.lang.en.frames.test.mjs`, with the reference reader of tools/lib/lang-en.mjs, in two passes: the frame alone
+reads its example (a host lexicon it names takes any one to three words; what each took is the lexicon of the frame's
+kind of world, `needs`), then in its world (those lexicons, every frame the world meets) the best reading is the frame
+or one with the same act, mode and roles. Of 357 frames 333 read their example best, 10 tie with a frame of the same
+reading, 14 are listed with the reason (`KNOWN`; the test fails on a new failure and on a listed frame that passes):
+9 of PSys2's local frames (media, text, facts: an example that does not follow its frame, a frame that loses to a
+broader one of its set; they are published as PSys2 wrote them) and 5 of the chart frames (orders among one set).
+What the test found and is fixed: in the reader, a `rest` capture takes at least one word; apostrophes inside a word
+are dropped ("don't" is the frames' "dont"); the thing a frame acts on does not end in a preposition or a determiner;
+a phrasal verb k.actions marks `separable` is also read with its particle back next to the verb ("take the tables
+apart"); in the data, a verb group inside a word list (`V.place`, `V.make`, `V.set`: the hand-over's notation, kept
+as a word) is now `act=` on the part (the verbs of that act join the words; the import does it); in the frames (at the
+import, `FRAME_FIXES`, `FRAME_PRIORITY`): acts.change.add1's determiner, "give yourself", "what colours can I use",
+"colour list please", acts.apart.2 over the direction frames; in the host lexicon (`hostLexicon`): a word with an
+adjective sense right before a noun is its modifier, not the first noun of a compound ("red house"; "apple pie" still
+compounds).
+**Frame asks**: 29 of the 57 roles of k.actions have no general frame (counted by the test): make.part, make.material,
+make.topic, change.old value, change.replacement, place.direction, place.source, connect.tool, group.target,
+group.group, group.criterion, take apart.parts, take apart.source, take apart.tool, pick.source, pick.other, ask.other,
+copy.place, send.means, send.format, undo.thing, undo.number, undo.state, save.thing, save.place, load.source,
+redo.thing, redo.number, deselect.thing (questions.md Q64).
 
 ## How each attribute is said (block 00:05 item 2)
 

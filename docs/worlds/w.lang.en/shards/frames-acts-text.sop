@@ -5,7 +5,7 @@
 
 @w.lang.en.frame.acts.text.make.text w.lang.en.frame name=acts.text.make.text act=make mode=text set=acts.text priority=13 needs=textual role=thing role=value example="Add a heading Shopping." core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.text.1 w.lang.en.part frame=acts.text.make.text at=1 is=lead phrase=lead.polite optional=yes core.source="psys2 447a5f9a"
-@w.lang.en.part.acts.text.make.text.2 w.lang.en.part frame=acts.text.make.text at=2 is=word word="V.make" word="write" word="type" word="put in" word="put" word="create" word="start" word="begin" word="new" word="insert" optional=yes core.source="psys2 447a5f9a"
+@w.lang.en.part.acts.text.make.text.2 w.lang.en.part frame=acts.text.make.text at=2 is=word act=make word="write" word="type" word="put in" word="put" word="create" word="start" word="begin" word="new" word="insert" optional=yes core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.text.3 w.lang.en.part frame=acts.text.make.text at=3 is=word word="a" word="an" word="another" word="one more" word="1 more" word="some" optional=yes core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.text.4 w.lang.en.part frame=acts.text.make.text at=4 is=word listed=yes word="new" optional=yes core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.text.5 w.lang.en.part frame=acts.text.make.text at=5 is=role role=thing takes=lexicon lexicon=kind core.source="psys2 447a5f9a"
@@ -101,7 +101,7 @@
 @w.lang.en.part.acts.text.change.def.6 w.lang.en.part frame=acts.text.change.def at=6 is=role role=value takes=rest core.source="psys2 447a5f9a"
 @w.lang.en.frame.acts.text.make.kind w.lang.en.frame name=acts.text.make.kind act=make mode=text set=acts.text priority=12 needs=textual role=thing example="Insert a line." core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.kind.1 w.lang.en.part frame=acts.text.make.kind at=1 is=lead phrase=lead.polite optional=yes core.source="psys2 447a5f9a"
-@w.lang.en.part.acts.text.make.kind.2 w.lang.en.part frame=acts.text.make.kind at=2 is=word word="V.make" word="write" word="put" word="create" word="start" word="begin" word="new" word="insert" core.source="psys2 447a5f9a"
+@w.lang.en.part.acts.text.make.kind.2 w.lang.en.part frame=acts.text.make.kind at=2 is=word act=make word="write" word="put" word="create" word="start" word="begin" word="new" word="insert" core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.kind.3 w.lang.en.part frame=acts.text.make.kind at=3 is=word word="a" word="an" word="another" word="one more" word="1 more" word="some" optional=yes core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.kind.4 w.lang.en.part frame=acts.text.make.kind at=4 is=word listed=yes word="new" optional=yes core.source="psys2 447a5f9a"
 @w.lang.en.part.acts.text.make.kind.5 w.lang.en.part frame=acts.text.make.kind at=5 is=role role=thing takes=lexicon lexicon=kind core.source="psys2 447a5f9a"

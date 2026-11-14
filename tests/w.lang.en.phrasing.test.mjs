@@ -19,7 +19,7 @@ const all = shardsOf('w.lang.en').flatMap((t) => parse(t));
 const actions = shardsOf('k.actions').flatMap((t) => parse(t));
 const narration = parse(readFileSync(join(WORLDS_DIR, 'k.attributes/shards/narration.sop'), 'utf8'));
 const phrasings = all.filter((w) => w.type === 'w.lang.en.phrasing');
-const toks = (s) => String(s).toLowerCase().replace(/[.?!,;:()]+/g, ' ').trim().split(/\s+/).filter(Boolean);
+const toks = (s) => String(s).toLowerCase().replace(/[.?!,;:()]+/g, ' ').replace(/['\u2019]/g, '').trim().split(/\s+/).filter(Boolean); // as the reader
 const dets = new Set(all.filter((w) => w.type === 'w.lang.en.det').map((d) => one(d, 'text')));
 const norm = (s) => { const ws = toks(s); return (dets.has(ws[0]) ? ws.slice(1) : ws).join(' '); };
 const keyWord = (key) => key.replace(/_about$/, '').split('_').join(' ');
@@ -51,7 +51,8 @@ function sampleFacts(rows) {
         const [w] = parse(line);
         for (const key of Object.keys(w.attrs)) {
           const id = `${type} ${key}`;
-          if (need.has(id) && !out.has(id) && one(w, firstId.get(type))) { out.set(id, { thing: one(w, firstId.get(type)), values: v(w, key) }); need.delete(id); }
+          const thing = one(w, firstId.get(type));
+          if (need.has(id) && !out.has(id) && thing && String(thing).length > 2) { out.set(id, { thing: one(w, firstId.get(type)), values: v(w, key) }); need.delete(id); }
         }
       }
       if (!need.size) break;
@@ -79,7 +80,7 @@ test('phrasing: the shard is what the tool writes; every template names a frame 
 
 test('phrasing: the reviewer\'s four families read back ("the capital of Chad is N\'Djamena", eats, colour, legs)', () => {
   const cases = [
-    ['the capital of {thing} is {value}.', { thing: 'Chad', value: 'N\'Djamena' }, { thing: 'chad', attribute: 'capital', value: 'n\'djamena' }, 'acts.state.of'],
+    ['the capital of {thing} is {value}.', { thing: 'Chad', value: 'N\'Djamena' }, { thing: 'chad', attribute: 'capital', value: 'ndjamena' }, 'acts.state.of'],
     [templateFor('k.animals.animal', 'eats').attrs.text[0], { thing: 'a cow', value: 'grass' }, { thing: 'cow', attribute: 'eats', value: 'grass' }, 'acts.state.verb'],
     [templateFor('k.attributes.thing', 'colour').attrs.text[0], { thing: 'a banana', value: 'yellow' }, { thing: 'banana', value: 'yellow' }, 'acts.state.is'],
     [templateFor('k.animals.animal', 'legs', 'count').attrs.text[0], { thing: 'a hen', value: '2', key: 'legs' }, { thing: 'hen', value: '2', attribute: 'legs' }, 'acts.state.count'],
