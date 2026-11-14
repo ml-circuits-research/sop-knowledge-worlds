@@ -54,3 +54,13 @@ and `hat`, `glasses`, `beard`, `moustache`, `shoulders` are `k.faces.variant` na
 See `tests/k.people.questions.jsonl`: how a grandfather is drawn, which face a grandmother has, how tall a child is
 next to a grown man, which kinds are old; what a doctor wears and holds, where a teacher works, who holds a sword,
 which hat suits a king, who works on a farm.
+
+## Given names (Q62)
+
+`k.people.given_name` (shards `given-names-<letter>`, 2,990 names, written by `tools/import/given-names.mjs` from
+Wikidata's given-name items with a sex class, CC0; see `sources/given-names/SOURCE.md`): the name as spelled, its
+sexes (female, male, both for a unisex name), `holders` (Wikidata humans whose given name it is), a `band` computed
+from the holders (very common 123, common 934, frequent 1,441, rare 492) and its Wikidata items. A reader that meets
+"Zoe", "Ana", "Tom" or "Leo" learns that the word is a given name (the vocabulary leads the word to its letter's
+shard), so it can fill a `name` argument or a person instead of a dictionary sense. It says nothing of a person who
+bears the name; the holder counts lean to notable people. Checked by `tests/k.people.given-names.test.mjs`.

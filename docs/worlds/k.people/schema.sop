@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.people core.module name=k.people version=3 imports=k.kinds exports=kind exports=role core.source="hand-core 1"
+@k.people core.module name=k.people version=4 imports=k.kinds exports=kind exports=role exports=given_name core.source="hand-core 1"
 
 # A kind of person by age and sex. All kinds are drawn by the one person drawing of k.objects (`drawing`), varied by
 # what the fact says: `age` (baby, child, adult, old), `sex` where the word says it, `height_about`: the usual
@@ -48,7 +48,21 @@
 @k.people.role.face core.slot of=k.people.role key=face kind=atom kind=string type=k.faces.preset by=name core.source="hand-core 1"
 @k.people.role.drawing core.slot of=k.people.role key=drawing required=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
-# Words for the types and keys of this world.
+# A given name (Q62; shards given-names-<letter>, written by tools/import/given-names.mjs from Wikidata's given-name
+# items with a sex class, CC0): `name` the English label as spelled (José, Anna Maria, Abd al-Rahman), `sex` female,
+# male, or both for a unisex name, `holders` the Wikidata humans whose given name it is (a label of two items adds
+# them), `band` computed from `holders` (very common: 10,000 or more, common: 1,000, frequent: 100, rare: fewer),
+# `wikidata` its items. It tells a reader that a word is a given name (Zoe, Ana, Tom, Leo), not who bears it; the
+# holders lean to notable people and well-covered countries, so the band says how often a name is met in the record,
+# not in a population.
+@k.people.given_name core.type of=k.people.given_name shared=true closed=true core.source="hand-core 1"
+@k.people.given_name.name core.slot of=k.people.given_name key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.people.given_name.sex core.slot of=k.people.given_name key=sex many=true required=true enum=female enum=male core.source="hand-core 1"
+@k.people.given_name.holders core.slot of=k.people.given_name key=holders required=true kind=integer min=1 core.source="hand-core 1"
+@k.people.given_name.band core.slot of=k.people.given_name key=band required=true enum=rare enum=frequent enum=common enum="very common" core.source="hand-core 1"
+@k.people.given_name.wikidata core.slot of=k.people.given_name key=wikidata many=true required=true kind=atom core.source="hand-core 1"
+
+@k.people.word.given_name core.word text="given name" text="given names" text="first name" text="first names" means=k.people.given_name core.source="hand-core 1"
 @k.people.word.kind core.word text=person text=people text=persons means=k.people.kind core.source="hand-core 1"
 @k.people.word.age core.word text=age text=old means=k.people.kind.age core.source="hand-core 1"
 @k.people.word.height core.word text=height text=tall means=k.people.kind.height_about core.source="hand-core 1"

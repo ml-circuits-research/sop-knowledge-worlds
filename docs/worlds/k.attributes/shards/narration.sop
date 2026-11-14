@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (218 of 986 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (220 of 991 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -674,6 +674,11 @@
 @k.attributes.narration.k.people.role.shoulders k.attributes.narration type=k.people.role key=shoulders narrate=no salience=0 why="a join to a part of the drawn face (k.faces)" core.source="hand-core 1"
 @k.attributes.narration.k.people.role.face k.attributes.narration type=k.people.role key=face narrate=no salience=0 why="a join to a drawing, a sense or another catalog entry" core.source="hand-core 1"
 @k.attributes.narration.k.people.role.drawing k.attributes.narration type=k.people.role key=drawing narrate=no salience=0 why="a join to a drawing, a sense or another catalog entry" core.source="hand-core 1"
+@k.attributes.narration.k.people.given_name.name k.attributes.narration type=k.people.given_name key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.people.given_name.sex k.attributes.narration type=k.people.given_name key=sex narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.people.given_name.holders k.attributes.narration type=k.people.given_name key=holders narrate=yes salience=0.3 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.people.given_name.band k.attributes.narration type=k.people.given_name key=band narrate=no salience=0 why="an internal number (a position, a rank, a step count)" core.source="hand-core 1"
+@k.attributes.narration.k.people.given_name.wikidata k.attributes.narration type=k.people.given_name key=wikidata narrate=no salience=0 why="an identifier (a code)" core.source="hand-core 1"
 @k.attributes.narration.k.procedures.method.name k.attributes.narration type=k.procedures.method key=name narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
 @k.attributes.narration.k.procedures.method.about k.attributes.narration type=k.procedures.method key=about narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"
 @k.attributes.narration.k.procedures.method.act k.attributes.narration type=k.procedures.method key=act narrate=no salience=0 why="machinery: how goals are reached, steps for a planner" core.source="hand-core 1"

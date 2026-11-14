@@ -62,7 +62,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.motion` | 1 (0%) |
 | `k.objects` | 1191 (79%) |
 | `k.parts` | 977 (65%) |
-| `k.people` | 2 (0%) |
+| `k.people` | 17 (1%) |
 | `k.procedures` | 3 (0%) |
 | `k.scenes` | 822 (55%) |
 | `k.shapes` | 66 (4%) |

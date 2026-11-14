@@ -4706,3 +4706,24 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   common things); `npm run reports` rerun. `test:changed` had not run that test: a change of any world now also runs
   the tests that recompute a page of every world (COVERAGE, ASPECTS, JOINS). Slowest: derived 53 s, questions 31,
   k.attributes 29, gallery 25, k.objects.render 20, k.cores 18, k.objects.names 16; 362 s in all.
+
+## 2026-11-15 — second worker: given names (Q62) in k.people, from Wikidata (CC0)
+
+- The reviewer's first route (SSA via a GitHub mirror) worked and was set aside when PSys2's Wikidata set landed:
+  hadley/babynames (CC0 R package, the SSA file 1880-2017) was read by a 60-line reader of R's serialization (xz +
+  XDR; 1,924,665 rows, 97,310 names, 10,570 with at least 1,000 births); SOURCE.md names it as the alternative.
+- **k.people.given_name** (k.people version 4, exports given_name; 26 shards `given-names-<letter>`, 2,990 wires,
+  489,605 bytes; `tools/import/given-names.mjs` from psys2 `data/external/given-names/given-names.tsv`, commit
+  0a24284f, copied to sources/given-names/raw/): name, sex (female / male; both for the 184 unisex names), holders
+  (Wikidata humans with that given name), band computed from holders (very common 123 >= 10,000, common 934,
+  frequent 1,441, rare 492), wikidata items. 3,000 items -> 2,990 names: 9 labels of two items merged (Anna, Pavel,
+  Vladimir: other scripts of one name; holders added), 1 label with no Latin letter left out; ids collide for 47
+  accented / plain pairs (José, Jose) and the accented one takes its first item (`Jose_Q...`). Measures: holders
+  counts humans (k.units measures 242 wires). Narration (generated): sex and holders narrated, band and wikidata not.
+- Zoe (female, frequent, 985 holders), Ana (female, very common), Tom (male, very common), Leo (male, common) are given
+  names. Cost: vocab.json 26,480 -> 29,089 words; 15 common things now also lead to a k.people shard (COVERAGE.md
+  k.people 2 -> 17: names that are words, Rose, Cliff...).
+- Tests: new tests/k.people.given-names.test.mjs (3: the four names with sex and band; every fact's band computed,
+  items, unique ids; shards = the import's output, under the size gate). `npm run test:changed` (build 140 s; 29
+  files, 235 tests): 233 pass, 1 skipped, 1 fail (COVERAGE.md stale: `npm run reports` regenerated it), rerun
+  coverage-report 4, catalog 8, k.people.given-names 3, k.people, repo pass.

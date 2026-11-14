@@ -337,6 +337,12 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: CC0-1.0
 - Used by: `k.time` (1 shards)
 
+## wikidata-given-names-2026-11-14
+
+- License: CC0-1.0
+- Shard terms: CC0-1.0
+- Used by: `k.people` (26 shards)
+
 ## wikidata-typical-2026-11-14
 
 - What: numbers of Wikidata items by property, for typical ranges of k.attributes: the mass and length of taxa, the height of buildings, the area of countries (and, read but not used, heights and lifespans of taxa, heights of structures, populations, areas and elevations of cities, populations and elevations of countries, planets).

@@ -46,7 +46,7 @@ export const MEASURES = {
     range: { low: { counts: 'unit of the measure of the range\'s type and key' }, high: { counts: 'unit of the measure of the range\'s type and key' }, median: { counts: 'unit of the measure of the range\'s type and key' }, count: { counts: 'number of the kind in the catalog' } }, typical: { weight: { plain: true } }, narration: { salience: { plain: true } } },
   'k.commonsense': { thing: { usually_count: { counts: 'thing of that name usually found together' } } },
   'k.parts': { inherited: { steps: { counts: 'step from the thing up to the kind' } } },
-  'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } } },
+  'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } }, given_name: { holders: { counts: 'human in Wikidata whose given name it is' } } },
   'k.scenes': { has: { count: { counts: 'thing of that name in the scene' } } },
   'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
   'k.time': { ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord },

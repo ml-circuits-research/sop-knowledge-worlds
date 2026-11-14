@@ -1,8 +1,12 @@
-# k.kinds/shards/relations-people: the keys of the types of k.people read as relations: 26 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-people: the keys of the types of k.people read as relations: 30 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
+@k.kinds.relation.k.people.given_name.sex k.kinds.relation type=k.people.given_name key=sex subject="given name" object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.people.given_name.holders k.kinds.relation type=k.people.given_name key=holders subject="given name" object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.people.given_name.band k.kinds.relation type=k.people.given_name key=band subject="given name" object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.people.given_name.wikidata k.kinds.relation type=k.people.given_name key=wikidata subject="given name" object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.people.kind.age k.kinds.relation type=k.people.kind key=age subject=kind subject_sense=person object=value object_type=k.faces.preset object_type=k.people.kind object_sense=person found=value core.source="hand-core 1"
 @k.kinds.relation.k.people.kind.sex k.kinds.relation type=k.people.kind key=sex subject=kind subject_sense=person object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.people.kind.height_about k.kinds.relation type=k.people.kind key=height_about subject=kind subject_sense=person object=number found=schema core.source="hand-core 1"
