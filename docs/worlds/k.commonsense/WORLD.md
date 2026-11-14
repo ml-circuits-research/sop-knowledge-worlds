@@ -43,6 +43,14 @@ after the application acted ("Done! A fish is usually in water, not in the sky."
 - `shards/lives.sop`: 32 habitats and the place words they give. `shards/liquids.sop`: 15 everyday liquids.
 - `shards/core.sop`: 15 things (fish, bird, sun, moon, cloud, tree, house, car, boat, plane, flower, grass, star, dog,
   cat) and one `core.word` per thing with its forms. Source `hand-core 1`, CC0-1.0.
+- `shards/derived.sop` (**generated** by `tools/derive.mjs`, part of `npm run build`): what the rules of this module
+  and of k.kinds make from the told facts of k.commonsense, k.animals and k.food, 1,148 wires, one per thing and
+  rule, each with `derived=true` and `core.source="rule <rule id>"` (habitat, habitat.place, ability, inability,
+  drink; k.kinds.up.direct for `kind_of`). A host or
+  tool that reads shards without the rules finds them here (the place, abilities and inabilities of 330 animals;
+  7 drinks that are liquids); loaded with the rules, they are the rules' own conclusions (nothing is made twice).
+  A value that is also told is not written. Note: a derived wire has the identity of the thing (`name`), so loaded
+  in a world it merges with a told wire of the same name, and `derived=true` then stands on the merged wire.
 
 ## Questions it helps with
 

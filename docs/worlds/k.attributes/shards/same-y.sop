@@ -4,7 +4,7 @@
 # script: tools/joins.mjs
 
 @k.attributes.same.yacht.thing k.attributes.same name=yacht sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.yak.animal k.attributes.same name=yak sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.yak.animal k.attributes.same name=yak sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.yam.thing k.attributes.same name=yam sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.yarn.thing k.attributes.same name=yarn sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.year.time k.attributes.same name=year sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"

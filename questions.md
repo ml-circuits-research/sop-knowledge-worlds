@@ -90,6 +90,18 @@ why (`recognition=limited`, or `claimed_by=<country>` from Natural Earth's note)
 (Taiwan false, the other three unsaid); (d) follow Natural Earth (all four true).
 Blocking: no. Meanwhile: (a); WORLD.md and the schema say so, and a test keeps the four unsaid.
 
+## Q42 (block "02:45" item 3, first worker, 2026-11-14)
+Question: a derived wire (`derived=true`, `core.source="rule <id>"`) has the identity of its thing (`name`), so a host
+that loads `k.commonsense/shards/derived` with the told shards gets one merged wire per thing, and `derived=true` and
+the rule source then stand on a wire that also holds told values. Should the mark be per value instead?
+Context: shards keep told and derived apart (separate wires, the told values left out of the derived shard; a test),
+and tools that read shards see the difference. In a loaded world only the engine's provenance (`why`) tells a told
+value from a derived one. Options: (a) keep `derived=true` on the wire (as asked) and say it means "some values of
+this wire are derived"; (b) name the derived keys instead (`derived=at`, repeated), which survives a merge; (c) ask
+the library for provenance of told cells by source (a told value from a shard whose wires say `derived=true` is shown
+as derived by `why`).
+Blocking: no. Meanwhile: (a), said in k.commonsense/WORLD.md and sources/rule/SOURCE.md.
+
 # Closed
 
 Answered by the reviewer in `worker-tasks.md` (Q1 to Q21 in the blocks up to "2026-11-13 14:40").

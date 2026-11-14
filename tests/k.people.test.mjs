@@ -20,7 +20,8 @@ test('the eight kinds of person are variants of the one person drawing, each wit
     assert.ok(objects.has('person'));
     assert.ok(presets.has(tok(w.attrs.face[0])), `${w.id}: no preset ${w.attrs.face[0]}`);
     for (const k of w.attrs.is_a ?? []) assert.ok(names.includes(tok(k)), `${w.id} is_a ${k}`);
-    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+    // besides the told source, a loaded wire may carry the rule that derived `kind_of` (shard derived)
+    assert.deepEqual(w.attrs['core.source'].filter((x) => !x.startsWith('"rule ')), ['"hand-core 1"'], w.id);
   }
   const height = Object.fromEntries(kinds.map((w) => [tok(w.attrs.name[0]), Number(w.attrs.height_about[0])]));
   assert.ok(height.baby < height.child && height.child < height.boy && height.boy < height.woman && height.woman < height.man);
@@ -63,7 +64,8 @@ test('a role is drawn by the person; its kind is a kind; its face features are k
     for (const slot of ['hat', 'glasses', 'beard', 'moustache', 'shoulders']) for (const v of w.attrs[slot] ?? []) assert.ok(variants.has(`${slot} ${tok(v)}`), `${w.id}: ${slot} ${v}`);
     for (const f of w.attrs.face ?? []) assert.ok(presets.has(tok(f)), `${w.id}: face ${f}`);
     assert.ok(w.attrs.does?.length, `${w.id}: what the role does`);
-    assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
+    // besides the told source, a loaded wire may carry the rule that derived `kind_of` (shard derived)
+    assert.deepEqual(w.attrs['core.source'].filter((x) => !x.startsWith('"rule ')), ['"hand-core 1"'], w.id);
   }
 });
 

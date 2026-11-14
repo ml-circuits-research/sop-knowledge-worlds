@@ -172,3 +172,18 @@ learnt about making worlds that other worlds and hosts can combine, not what was
 - **Keep a fact in the shard of the licence it comes from.** Putting a second source on a public-domain wire looked
   harmless, but the catalog then listed the shard under ODbL terms. A wire of the same identity in the list's own
   shard says the same thing and merges when both are told.
+
+
+## Derived facts visible to tools (first worker, block "02:45" item 3)
+
+- **Derived facts become visible by writing them as facts, marked** (item 3). A build step runs each module's rules
+  over its told facts and writes what they make, one wire per thing and rule, `derived=true`, the rule as source.
+  Loaded with the rules, the wire is the rule's own conclusion, so the shard and the rules never disagree and
+  nothing is made twice. Three traps found on the way: a wire a rule made can later take told values (load order),
+  so "made by a rule" must be checked value by value against the told shards, not by the wire's maker; a fact made
+  only of identity keys (`k.time.before`) is a derived fact too, though it adds no value; and an identity-keyed
+  derived wire merges with a told wire of the same name in a host, so a wire-level flag says "some of this is
+  derived", not which values (the shards keep that apart).
+- **The sense of a derived fact is the sense of what it was derived from**: the joins table filed the animals of
+  k.commonsense as "unsure" until a derived wire took the sense of the one typed thing its rule reads. A rule's
+  patterns are metadata a tool can use.

@@ -10,6 +10,8 @@
 // some of unknown sense) is one thing; a name with two or more senses is a clash (orange the colour and the
 // fruit; bat the animal and the thing), and each sense gets its own fact. Types that are keyed by the word,
 // whatever it means (k.words.sense, k.parts), are listed apart (`by_word`): their gloss says what is meant.
+// A derived fact (`derived=true`, written by tools/derive.mjs with `core.source="rule <id>"`) has the sense of the
+// type its rule reads, where that type has one sense (the habitat rule reads k.animals.animal: an animal).
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
@@ -47,8 +49,24 @@ export const TYPES = [
   ['k.words.sense', 'word', 'word'], ['k.parts.whole', 'name', 'word'], ['k.parts.inherited', 'name', 'word'], ['k.parts.usual', 'name', 'word'], ['k.parts.called', 'of', 'word'],
 ];
 
+// rule id -> the sense of the one type of TYPES with a fixed sense that its `when` patterns read, if exactly one.
+export function ruleSenses(worlds) {
+  const fixed = new Map(TYPES.filter((t) => typeof t[2] === 'string' && SENSES.includes(t[2])).map((t) => [t[0], t[2]]));
+  const out = new Map();
+  for (const world of worlds) {
+    const wires = parse(world.schemaText), byId = new Map(wires.map((w) => [w.id, w]));
+    for (const r of wires.filter((w) => w.type === 'core.rule')) {
+      const senses = new Set((r.attrs.when ?? []).map((p) => fixed.get(byId.get(p.slice(1))?.type)).filter(Boolean));
+      if (senses.size === 1) out.set(r.id, [...senses][0]);
+    }
+  }
+  return out;
+}
+
 export function joins(worlds = scanWorlds()) {
   const typeOf = new Map(TYPES.map((t) => [t[0], t]));
+  const bySource = ruleSenses(worlds);
+  const derivedSense = (w) => (w.attrs.derived?.[0] === 'true' ? bySource.get(/^"rule (.+)"$/.exec(w.attrs['core.source']?.[0] ?? '')?.[1]) : undefined);
   // name (lower case) -> type -> Set of senses (null: unknown).
   const names = new Map();
   const spelt = new Map();
@@ -64,7 +82,7 @@ export function joins(worlds = scanWorlds()) {
         if (!names.has(key)) names.set(key, new Map());
         const m = names.get(key);
         if (!m.has(w.type)) m.set(w.type, new Set());
-        m.get(w.type).add(typeof t[2] === 'function' ? t[2](w, shardName) : t[2]);
+        m.get(w.type).add(derivedSense(w) ?? (typeof t[2] === 'function' ? t[2](w, shardName) : t[2]));
       }
     }
   }

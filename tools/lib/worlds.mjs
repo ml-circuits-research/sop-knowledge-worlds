@@ -51,7 +51,12 @@ export function readHeader(text) {
 
 // The sources of a hand-written fact: hand-core, and psys2-worlds where tools/import/psys2.mjs laid a fact of the
 // PSys2 tab worlds next to it (the facts of one thing merge). For tests of the hand-written worlds.
-export const handSources = (sources) => (sources ?? []).length > 0 && sources.every((s) => s === '"hand-core 1"' || /^"psys2-worlds [0-9a-f]+"$/.test(s)) && (sources.includes('"hand-core 1"') || sources.length === 1);
+// A loaded wire may also carry `rule <id>`: a value a rule derived (shards `derived`, tools/derive.mjs) merges into
+// the told wire of the same thing; it never stands alone.
+export const handSources = (sources) => {
+  const told = (sources ?? []).filter((s) => !/^"rule [^"]+"$/.test(s));
+  return told.length > 0 && told.every((s) => s === '"hand-core 1"' || /^"psys2-worlds [0-9a-f]+"$/.test(s)) && (told.includes('"hand-core 1"') || told.length === 1);
+};
 
 export const library = (worlds) => Object.fromEntries(worlds.map((w) => [w.id, w.schemaText]));
 

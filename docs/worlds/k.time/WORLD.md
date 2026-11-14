@@ -39,7 +39,8 @@ The calendar: months, weekdays, seasons and spans of time.
 
 Shards: `calendar` (months, weekdays, seasons, cycles, durations, words), `clock` (parts of the day, hours, words).
 The derived facts (`k.time.before`, `k.time.season_in`) are made by the rules of the schema when the shards are
-loaded. Hand-written (`hand-core 1`, CC0-1.0).
+loaded, and written into the generated shard `derived` (391 wires, `derived=true`, `core.source="rule <rule id>"`,
+by `tools/derive.mjs`) for tools and hosts that read shards without the rules. Hand-written (`hand-core 1`, CC0-1.0).
 
 ## Questions it helps with
 

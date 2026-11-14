@@ -5,7 +5,7 @@
 
 @k.attributes.same.qin.place k.attributes.same name=qin sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.quadrilateral.shape k.attributes.same name=quadrilateral sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.quail.animal k.attributes.same name=quail sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.quail.animal k.attributes.same name=quail sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.quarter.time k.attributes.same name=quarter sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.queen.person k.attributes.same name=queen sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.queens.place k.attributes.same name=queens sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"

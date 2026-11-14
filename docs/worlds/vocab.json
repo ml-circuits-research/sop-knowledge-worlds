@@ -18,22 +18,28 @@
   "w.lang.en/shards/morphology"
  ],
  "1 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "1 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "10 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "10 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "11 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "11 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "12 am": [
   "k.time/shards/clock"
@@ -54,10 +60,12 @@
   "k.scenes/shards/things-0"
  ],
  "2 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "2 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "2d": [
   "k.shapes/schema.sop"
@@ -72,10 +80,12 @@
   "k.scenes/shards/things-0"
  ],
  "3 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "3 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "3d": [
   "k.shapes/schema.sop"
@@ -96,43 +106,55 @@
   "k.scenes/shards/things-0"
  ],
  "4 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "4 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "5 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "5 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "6 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "6 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "7 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "7 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "8 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "8 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "8ball": [
   "k.objects/shards/noto-game-01"
  ],
  "9 am": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "9 pm": [
-  "k.time/shards/clock"
+  "k.time/shards/clock",
+  "k.time/shards/derived"
  ],
  "a": [
   "k.attributes/shards/attributes",
@@ -211,6 +233,7 @@
  "aardvark": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/aa"
  ],
@@ -1260,6 +1283,7 @@
  "afternoon": [
   "k.attributes/shards/same-a",
   "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/af"
  ],
  "afternoons": [
@@ -1621,6 +1645,7 @@
  "albatross": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/al"
  ],
@@ -1831,6 +1856,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-a",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-a",
@@ -1897,6 +1923,7 @@
  "alpaca": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-05",
   "k.scenes/shards/things-a",
   "k.words/shards/al"
@@ -2242,6 +2269,7 @@
  "anaconda": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/an"
  ],
@@ -2314,6 +2342,7 @@
  "anchovy": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/an"
  ],
@@ -2415,6 +2444,7 @@
  "angelfish": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/an"
  ],
@@ -2660,6 +2690,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-a",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -2695,6 +2726,7 @@
  "anteater": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/an"
  ],
@@ -2706,6 +2738,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -2924,6 +2957,7 @@
  "aphid": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/ap"
  ],
@@ -3023,6 +3057,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-a",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-01",
   "k.scenes/shards/things-a",
@@ -3117,6 +3152,7 @@
  "april": [
   "k.attributes/shards/same-a",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/ap"
  ],
  "apron": [
@@ -3465,6 +3501,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-a",
   "k.words/shards/ar"
@@ -4058,6 +4095,7 @@
  ],
  "at": [
   "k.actions/shards/verbs-pick",
+  "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.commonsense/schema.sop",
   "k.objects/shards/noto-place-other-01",
@@ -4317,6 +4355,7 @@
  "august": [
   "k.attributes/shards/same-a",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/au"
  ],
  "augustine": [
@@ -4474,6 +4513,7 @@
   "k.objects/shards/noto-plant-other-02",
   "k.scenes/shards/scenes-other",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/au"
  ],
  "autumn day": [
@@ -4641,6 +4681,7 @@
  "axolotl": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-a",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-a",
   "k.words/shards/ax"
  ],
@@ -4710,6 +4751,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
@@ -5006,6 +5048,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.scenes/shards/things-b",
   "k.words/shards/ba"
@@ -5983,6 +6026,7 @@
  "barnacle": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-b",
   "k.words/shards/ba"
  ],
@@ -6008,6 +6052,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
@@ -6283,6 +6328,7 @@
  "bass": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-b",
   "k.words/shards/ba"
  ],
@@ -6308,6 +6354,7 @@
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-sport-accessories-01",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-sport-02",
@@ -6792,6 +6839,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-07",
   "k.objects/shards/noto-animal-mammal-08",
@@ -6891,6 +6939,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-07",
   "k.scenes/shards/scenes-nature",
@@ -6980,6 +7029,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/more",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
@@ -7039,6 +7089,7 @@
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-nature",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-drink-type-01",
   "k.objects/shards/noto-drink-02",
@@ -7087,6 +7138,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
@@ -7406,6 +7458,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/things-b",
   "k.words/shards/be"
@@ -8322,6 +8375,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-04",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
@@ -8483,6 +8537,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
@@ -8953,6 +9008,7 @@
  "blue whale": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-b",
   "k.words/shards/bl"
  ],
@@ -8998,6 +9054,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
@@ -9062,6 +9119,7 @@
  "boa": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.scenes/shards/things-b",
   "k.words/shards/bo"
@@ -9074,6 +9132,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-04",
   "k.parts/shards/b",
   "k.scenes/shards/scenes-nature",
@@ -9170,6 +9229,7 @@
  "bobcat": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-b",
   "k.words/shards/bo"
  ],
@@ -10356,6 +10416,7 @@
  "boy": [
   "k.attributes/shards/same-b",
   "k.faces/shards/presets",
+  "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.words/shards/bo"
  ],
@@ -11493,6 +11554,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.objects/shards/noto-animal-mammal-04",
   "k.parts/shards/usual",
@@ -11684,6 +11746,7 @@
  "bull": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-game-01",
   "k.parts/shards/b",
@@ -11738,6 +11801,7 @@
  "bullfrog": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-b",
   "k.words/shards/bu"
  ],
@@ -11784,6 +11848,7 @@
  "bumblebee": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
@@ -12219,6 +12284,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -12356,6 +12422,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-b",
   "k.words/shards/bu"
@@ -12669,6 +12736,7 @@
  "caiman": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/ca"
  ],
@@ -12916,6 +12984,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.layouts/shards/anchors-points",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/usual",
@@ -13095,6 +13164,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/ca"
  ],
@@ -13512,6 +13582,7 @@
  "capybara": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/ca"
  ],
@@ -13660,6 +13731,7 @@
  "cardinal": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.values/shards/numbers",
   "k.words/shards/ca"
@@ -13785,6 +13857,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-event-02",
   "k.objects/shards/words-hand",
   "k.parts/shards/usual",
@@ -14069,6 +14142,7 @@
  "cassowary": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/ca"
  ],
@@ -14131,6 +14205,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.commonsense/shards/core",
+  "k.commonsense/shards/derived",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
   "k.objects/shards/noto-animal-mammal-02",
@@ -14210,6 +14285,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -14595,6 +14671,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -14950,6 +15027,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.scenes/shards/things-c",
   "k.words/shards/ch"
@@ -15527,6 +15605,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -15979,6 +16058,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -16016,6 +16096,7 @@
  "chinchilla": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/ch"
  ],
@@ -16094,6 +16175,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-07",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -16216,6 +16298,7 @@
  ],
  "chocolate milk": [
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.food/shards/dishes",
   "k.words/shards/ch"
  ],
@@ -16549,6 +16632,7 @@
  "cicada": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/ci",
   "w.lang.en/shards/core-plurals"
@@ -16775,6 +16859,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -17212,6 +17297,7 @@
   "k.scenes/shards/things-c",
   "k.time/schema.sop",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/cl"
  ],
  "clock radio": [
@@ -17503,6 +17589,7 @@
  "clownfish": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c"
  ],
  "clowns": [
@@ -17673,6 +17760,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -17705,6 +17793,7 @@
  "cockatoo": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/co-1"
  ],
@@ -17731,6 +17820,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -17801,6 +17891,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/stand-ins-hand",
   "k.scenes/shards/things-c",
@@ -17828,6 +17919,7 @@
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-nature",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-01",
@@ -18925,6 +19017,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
   "k.words/shards/co-1"
@@ -19740,6 +19833,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-02",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-c",
@@ -19817,6 +19911,7 @@
  "cormorant": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/co-2"
  ],
@@ -20128,6 +20223,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -20403,6 +20499,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.layouts/shards/joins",
   "k.objects/shards/noto-animal-mammal-04",
   "k.parts/shards/c",
@@ -20462,6 +20559,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -20488,6 +20586,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-02",
   "k.parts/shards/usual",
@@ -20611,6 +20710,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-tools-workshop-01",
   "k.objects/shards/noto-place-building-01",
   "k.scenes/shards/scenes-town",
@@ -20714,6 +20814,7 @@
  "crayfish": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/cr"
  ],
@@ -20940,6 +21041,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.objects/shards/noto-sport-02",
   "k.parts/shards/usual",
@@ -21057,6 +21159,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-reptile-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -21176,6 +21279,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-03",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-c",
@@ -21405,6 +21509,7 @@
   "k.attributes/shards/same-c",
   "k.objects/shards/food",
   "k.objects/shards/noto-drink-03",
+  "k.shapes/shards/derived",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
   "k.words/shards/cu"
@@ -21453,6 +21558,7 @@
  "cuckoo": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/cu"
  ],
@@ -22011,6 +22117,7 @@
  "cuttlefish": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-c",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-c",
   "k.words/shards/cu"
  ],
@@ -22724,6 +22831,7 @@
   "k.objects/shards/noto-sky-weather-02",
   "k.space/schema.sop",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.time/shards/psys2",
   "k.units/shards/core",
   "k.words/shards/da"
@@ -22896,6 +23004,7 @@
  "december": [
   "k.attributes/shards/same-d",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/de"
  ],
  "decency": [
@@ -23081,6 +23190,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.parts/shards/c",
@@ -23501,6 +23611,10 @@
   "k.attributes/shards/same-d",
   "k.objects/shards/noto-place-building-02",
   "k.scenes/shards/things-d"
+ ],
+ "derived": [
+  "k.kinds/schema.sop",
+  "k.time/schema.sop"
  ],
  "derrick": [
   "k.words/shards/de"
@@ -24180,6 +24294,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-d",
@@ -24995,6 +25110,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
   "k.commonsense/shards/core",
+  "k.commonsense/shards/derived",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
@@ -25101,6 +25217,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -25232,6 +25349,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-03",
   "k.scenes/shards/things-d",
   "k.words/shards/do"
@@ -25557,6 +25675,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-d",
@@ -25679,6 +25798,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-d",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -26239,6 +26359,7 @@
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-d",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/noto-animal-bird-03",
   "k.parts/shards/m",
@@ -26387,6 +26508,7 @@
  "dung beetle": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-d",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-d",
   "k.words/shards/du"
  ],
@@ -26614,6 +26736,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-02",
   "k.parts/shards/e",
   "k.scenes/shards/scenes-nature",
@@ -26784,6 +26907,7 @@
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-other-invertebrates-01",
   "k.objects/shards/noto-animal-bug-02",
   "k.scenes/shards/scenes-nature",
@@ -26798,6 +26922,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
   "k.scenes/shards/things-e",
   "k.words/shards/ea"
@@ -26908,6 +27033,7 @@
  "echidna": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-e",
   "k.words/shards/ec",
   "w.lang.en/shards/core-plurals"
@@ -27054,6 +27180,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
@@ -27501,6 +27628,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-e",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
   "k.objects/shards/noto-animal-mammal-06",
@@ -27576,6 +27704,7 @@
  "elk": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-03",
   "k.objects/shards/words-wordnet",
   "k.parts/shards/e",
@@ -27837,6 +27966,7 @@
  "emu": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-e",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-e",
   "k.words/shards/em"
  ],
@@ -28560,6 +28690,7 @@
   "k.attributes/shards/same-e",
   "k.objects/shards/noto-place-other-01",
   "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/ev"
  ],
  "evenings": [
@@ -29376,6 +29507,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-f",
@@ -29848,6 +29980,7 @@
  "february": [
   "k.attributes/shards/same-f",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/fe"
  ],
  "feces": [
@@ -30065,6 +30198,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-f",
@@ -30547,6 +30681,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.objects/shards/nature-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-f",
@@ -30794,6 +30929,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-f",
@@ -31215,6 +31351,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-town",
@@ -31353,6 +31490,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-f",
@@ -31543,6 +31681,7 @@
  "flounder": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-f",
   "k.words/shards/fl"
  ],
@@ -31722,6 +31861,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.geo/shards/oceania",
   "k.objects/shards/noto-animal-bird-01",
   "k.objects/shards/noto-animal-bird-03",
@@ -31752,6 +31892,7 @@
  "flying fish": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-f",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-f",
   "k.words/shards/fl"
  ],
@@ -32632,6 +32773,7 @@
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-living",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-02",
   "k.parts/shards/f",
@@ -33007,6 +33149,7 @@
  "friday": [
   "k.attributes/shards/same-f",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/fr"
  ],
  "fridays": [
@@ -33130,6 +33273,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-amphibian-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -34239,6 +34383,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-g",
@@ -34285,6 +34430,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-g",
@@ -34493,6 +34639,7 @@
  "gerbil": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-g",
   "k.words/shards/ge"
  ],
@@ -34620,6 +34767,7 @@
  "gibbon": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-g",
   "k.words/shards/gi"
  ],
@@ -34731,6 +34879,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/g",
   "k.scenes/shards/scenes-nature",
@@ -34747,6 +34896,7 @@
  "girl": [
   "k.attributes/shards/same-g",
   "k.faces/shards/presets",
+  "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.words/shards/gi"
  ],
@@ -35097,6 +35247,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-spiders-and-insects-01",
   "k.scenes/shards/things-g",
   "k.words/shards/gn"
@@ -35179,6 +35330,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/g",
   "k.scenes/shards/scenes-nature",
@@ -35304,6 +35456,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -35420,6 +35573,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-03",
   "k.parts/shards/g",
   "k.scenes/shards/things-g",
@@ -35501,6 +35655,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -35773,6 +35928,7 @@
  ],
  "grandfather": [
   "k.attributes/shards/same-g",
+  "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/gr"
@@ -35793,6 +35949,7 @@
  ],
  "grandmother": [
   "k.attributes/shards/same-g",
+  "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/gr"
@@ -35933,6 +36090,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
@@ -36087,6 +36245,7 @@
  "great white shark": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-g",
   "k.words/shards/gr"
  ],
@@ -36404,6 +36563,7 @@
  "grizzly bear": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-g",
   "k.words/shards/gr"
  ],
@@ -36531,6 +36691,7 @@
  "groundhog": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.scenes/shards/things-g",
   "k.words/shards/gr"
@@ -36812,6 +36973,7 @@
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.scenes/shards/things-g",
   "k.words/shards/gu"
@@ -37001,6 +37163,7 @@
  "guppy": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-g",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-g",
   "k.words/shards/gu"
  ],
@@ -37393,6 +37556,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-h",
@@ -37557,6 +37721,7 @@
  "hammerhead shark": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-h",
   "k.words/shards/ha"
  ],
@@ -37593,6 +37758,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-06",
   "k.parts/shards/usual",
   "k.scenes/shards/things-h",
@@ -38049,6 +38215,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-h",
@@ -38373,6 +38540,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/nature-2",
   "k.parts/shards/h",
   "k.scenes/shards/things-h",
@@ -38863,6 +39031,7 @@
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-living",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-07",
   "k.parts/shards/h",
   "k.scenes/shards/scenes-nature",
@@ -39085,6 +39254,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/more",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -39207,6 +39377,7 @@
  "hermit crab": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-h",
   "k.words/shards/he"
  ],
@@ -39250,6 +39421,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-h",
@@ -39271,6 +39443,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/stand-ins-hand",
   "k.scenes/shards/things-h",
@@ -39291,6 +39464,7 @@
  "hexagon": [
   "k.attributes/shards/same-h",
   "k.objects/shards/mulberry-leisure-toys-03",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
@@ -39607,6 +39781,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-06",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-h",
@@ -40074,6 +40249,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-food-ingredients-01",
@@ -40349,6 +40525,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-h",
@@ -40376,6 +40553,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.layouts/shards/anchors-points",
   "k.layouts/shards/joins",
   "k.objects/shards/noto-animal-mammal-03",
@@ -40406,6 +40584,7 @@
  "horsefly": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-h",
   "k.words/shards/ho"
  ],
@@ -40525,6 +40704,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-h",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.scenes/shards/things-h",
@@ -41028,6 +41208,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/h",
   "k.scenes/shards/things-h",
@@ -41058,6 +41239,7 @@
  "humpback whale": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-h",
   "k.words/shards/hu"
  ],
@@ -41244,6 +41426,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
+  "k.commonsense/shards/derived",
   "k.parts/shards/h",
   "k.scenes/shards/things-h",
   "k.words/shards/hy"
@@ -41331,6 +41514,7 @@
  "ibex": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-i",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-i",
   "k.words/shards/ib",
   "w.lang.en/shards/core-plurals"
@@ -41344,6 +41528,7 @@
  "ibis": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-i",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-i",
   "k.words/shards/ib"
  ],
@@ -41576,6 +41761,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-i",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-i",
   "k.words/shards/ig"
@@ -41707,6 +41893,7 @@
  "impala": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-i",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-i",
   "k.words/shards/im"
  ],
@@ -42283,6 +42470,7 @@
  ],
  "ink": [
   "k.attributes/shards/same-i",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/noto-lock-01",
   "k.words/shards/in"
@@ -43262,6 +43450,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-j",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/j",
   "k.scenes/shards/things-j",
@@ -43351,6 +43540,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-j",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-j",
@@ -43455,6 +43645,7 @@
  "january": [
   "k.attributes/shards/same-j",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/ja"
  ],
  "japan": [
@@ -43561,6 +43752,7 @@
  "jay": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-j",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-j",
   "k.words/shards/ja"
  ],
@@ -43662,6 +43854,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-j",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -44294,6 +44487,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-j",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/food",
@@ -44333,6 +44527,7 @@
  "july": [
   "k.attributes/shards/same-j",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/ju"
  ],
  "jump": [
@@ -44374,6 +44569,7 @@
  "june": [
   "k.attributes/shards/same-j",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/ju"
  ],
  "jung": [
@@ -44513,6 +44709,7 @@
   "k.units/shards/measures"
  ],
  "k.commonsense.thing": [
+  "k.attributes/shards/aspects",
   "k.attributes/shards/attributes"
  ],
  "k.drawing": [
@@ -44798,6 +44995,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-k",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.parts/shards/usual",
   "k.scenes/shards/things-k",
@@ -45649,6 +45847,7 @@
  "kingfisher": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-k",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-k",
   "k.words/shards/ki"
  ],
@@ -45806,6 +46005,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-k",
+  "k.commonsense/shards/derived",
   "k.food/shards/fruit",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.objects/shards/noto-food-fruit-03",
@@ -46092,6 +46292,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-k",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.parts/shards/usual",
   "k.scenes/shards/things-k",
@@ -46157,6 +46358,7 @@
  "komodo dragon": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-k",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-k",
   "k.words/shards/ko"
  ],
@@ -46291,6 +46493,7 @@
  "krill": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-k",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-k",
   "k.words/shards/kr"
  ],
@@ -46685,6 +46888,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-l",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-l",
@@ -47316,6 +47520,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-l",
@@ -47958,6 +48163,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-l",
@@ -48873,6 +49079,7 @@
  "lemming": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-l",
   "k.words/shards/le"
  ],
@@ -48907,6 +49114,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-l",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/derived",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.scenes/shards/scenes-indoors",
@@ -48930,6 +49138,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-l",
   "k.words/shards/le"
@@ -49039,6 +49248,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-l",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-03",
   "k.scenes/shards/things-l",
   "k.words/shards/le"
@@ -49954,6 +50164,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-02",
   "k.objects/shards/noto-animal-marine-01",
   "k.parts/shards/l",
@@ -50205,6 +50416,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-reptile-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -50225,6 +50437,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/usual",
   "k.scenes/shards/things-l",
@@ -50302,6 +50515,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-02",
   "k.parts/shards/l",
@@ -50406,6 +50620,7 @@
  "locust": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-l",
   "k.words/shards/lo"
  ],
@@ -50637,6 +50852,7 @@
  "loon": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-l",
   "k.words/shards/lo"
  ],
@@ -50837,6 +51053,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-l",
   "k.words/shards/lo",
   "w.lang.en/shards/core-plurals"
@@ -51266,6 +51483,7 @@
  "lynx": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-l",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-l",
   "k.words/shards/ly"
  ],
@@ -51362,6 +51580,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/openmoji-animals-nature-02",
   "k.scenes/shards/things-m",
   "k.words/shards/ma"
@@ -51431,6 +51650,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-m",
@@ -51654,6 +51874,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-m",
@@ -52000,6 +52221,7 @@
  "mamba": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/ma"
  ],
@@ -52081,6 +52303,7 @@
  "manatee": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/ma"
  ],
@@ -52118,6 +52341,7 @@
  "mandrill": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/ma"
  ],
@@ -52298,6 +52522,7 @@
  "manta ray": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/ma"
  ],
@@ -52508,6 +52733,7 @@
   "k.actions/shards/actions-move",
   "k.attributes/shards/same-m",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/ma"
  ],
  "marched": [
@@ -52659,6 +52885,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-m",
@@ -53214,6 +53441,7 @@
  "may": [
   "k.attributes/shards/same-m",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/ma"
  ],
  "may pen": [
@@ -53677,6 +53905,7 @@
  "meerkat": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/me"
  ],
@@ -54492,6 +54721,7 @@
   "k.attributes/shards/same-m",
   "k.scenes/shards/scenes-other",
   "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/mi"
  ],
  "midnight blue": [
@@ -54611,6 +54841,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-drink-type-02",
@@ -54660,6 +54891,7 @@
  "milkshake": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-food-sweets-and-desserts-03",
@@ -54771,6 +55003,7 @@
  "millipede": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/mi"
  ],
@@ -54999,6 +55232,7 @@
  "mink": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/mi"
  ],
@@ -55013,6 +55247,7 @@
  "minnow": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/mi"
  ],
@@ -55257,6 +55492,7 @@
  "mite": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/mi"
  ],
@@ -55422,6 +55658,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-m",
@@ -55561,6 +55798,7 @@
  "mole": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.faces/shards/plain-cheeks",
   "k.scenes/shards/things-m",
   "k.words/shards/mo"
@@ -55669,6 +55907,7 @@
  "monday": [
   "k.attributes/shards/same-m",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/mo"
  ],
  "mondays": [
@@ -55716,6 +55955,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-m",
   "k.words/shards/mo"
@@ -55735,6 +55975,7 @@
  "monitor lizard": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/mo"
  ],
@@ -55754,6 +55995,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -56033,6 +56275,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.objects/shards/noto-animal-mammal-03",
   "k.parts/shards/m",
@@ -56131,6 +56374,7 @@
   "k.objects/shards/noto-drink-01",
   "k.objects/shards/noto-place-other-01",
   "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/mo"
  ],
  "mornings": [
@@ -56248,6 +56492,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-02",
   "k.parts/shards/m",
   "k.scenes/shards/things-m",
@@ -56311,6 +56556,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-spiders-and-insects-02",
   "k.parts/shards/usual",
   "k.scenes/shards/things-m",
@@ -57062,6 +57308,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/home",
   "k.objects/shards/noto-animal-mammal-06",
   "k.objects/shards/noto-computer-01",
@@ -57379,6 +57626,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-mammal-03",
   "k.parts/shards/usual",
@@ -57608,6 +57856,7 @@
  "musk ox": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-m",
   "k.words/shards/mu"
  ],
@@ -57631,6 +57880,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-m",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
   "k.scenes/shards/things-m",
@@ -58164,6 +58414,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-n",
+  "k.commonsense/shards/derived",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/things-n",
   "k.words/shards/na"
@@ -58866,6 +59117,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-n",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.parts/shards/usual",
   "k.scenes/shards/things-n",
@@ -59006,6 +59258,7 @@
   "k.objects/shards/noto-sky-weather-03",
   "k.scenes/shards/scenes-other",
   "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/ni"
  ],
  "night club": [
@@ -59071,6 +59324,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-n",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-n",
@@ -59338,6 +59592,7 @@
  "noon": [
   "k.attributes/shards/same-n",
   "k.time/shards/clock",
+  "k.time/shards/derived",
   "k.words/shards/no"
  ],
  "noose": [
@@ -59383,6 +59638,7 @@
  "north": [
   "k.attributes/shards/aspects",
   "k.geo/schema.sop",
+  "k.time/shards/derived",
   "k.units/shards/measures",
   "k.values/shards/directions",
   "k.words/shards/no"
@@ -60007,6 +60263,7 @@
  "november": [
   "k.attributes/shards/same-n",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/no"
  ],
  "novi sad": [
@@ -60447,6 +60704,7 @@
  "ocelot": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-o",
   "k.words/shards/oc"
  ],
@@ -60471,6 +60729,7 @@
  ],
  "octagon": [
   "k.attributes/shards/same-o",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
@@ -60488,6 +60747,7 @@
  "october": [
   "k.attributes/shards/same-o",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/oc"
  ],
  "octoberfest": [
@@ -60502,6 +60762,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -60680,6 +60941,7 @@
  ],
  "oil": [
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-food-ingredients-01",
   "k.objects/shards/noto-light-video-02",
@@ -60712,6 +60974,7 @@
  "okapi": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-o",
   "k.words/shards/ok"
  ],
@@ -61218,6 +61481,7 @@
  "opossum": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.scenes/shards/things-o",
   "k.words/shards/op"
@@ -61336,6 +61600,7 @@
  ],
  "orange juice": [
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.food/shards/other",
   "k.words/shards/or"
  ],
@@ -61357,6 +61622,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-01",
   "k.scenes/shards/things-o",
   "k.words/shards/or"
@@ -61404,6 +61670,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-o",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/things-o",
@@ -61624,6 +61891,7 @@
  "osprey": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-o",
   "k.words/shards/os"
  ],
@@ -61644,6 +61912,7 @@
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-o",
@@ -61685,6 +61954,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-o",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-o",
@@ -62058,6 +62328,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-o",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-02",
   "k.parts/shards/o",
   "k.scenes/shards/scenes-nature",
@@ -62081,6 +62352,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-04",
   "k.scenes/shards/things-o",
   "k.words/shards/ox",
@@ -62114,6 +62386,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-o",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-03",
   "k.objects/shards/noto-food-asian-03",
@@ -62341,6 +62614,7 @@
   "k.actions/shards/verbs-make",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-tools-workshop-02",
   "k.scenes/shards/scenes-indoors",
@@ -62658,6 +62932,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
@@ -62701,6 +62976,7 @@
  "pangolin": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-p",
   "k.words/shards/pa"
  ],
@@ -62742,6 +63018,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/words-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
@@ -62926,6 +63203,7 @@
  "parakeet": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-p",
   "k.words/shards/pa"
  ],
@@ -63093,6 +63371,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-03",
   "k.parts/shards/p",
   "k.scenes/shards/scenes-nature",
@@ -63206,6 +63485,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/p",
   "k.scenes/shards/things-p",
@@ -63714,6 +63994,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-02",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
@@ -63963,6 +64244,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
@@ -64105,6 +64387,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -64162,6 +64445,7 @@
  ],
  "pentagon": [
   "k.attributes/shards/same-p",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
@@ -64268,6 +64552,7 @@
   "k.actions/shards/actions-body-social-nature",
   "k.animals/shards/fish",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/things",
   "k.scenes/shards/things-p",
   "k.words/shards/pe"
@@ -64723,6 +65008,7 @@
  ],
  "petrol": [
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.words/shards/pe"
  ],
@@ -64800,6 +65086,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
@@ -65288,6 +65575,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-04",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/p",
@@ -65311,6 +65599,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/openmoji-animals-nature-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -65376,6 +65665,7 @@
  "pike": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.parts/shards/p",
   "k.scenes/shards/things-p",
   "k.words/shards/pi"
@@ -65689,6 +65979,7 @@
  "piranha": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-p",
   "k.words/shards/pi"
  ],
@@ -66519,6 +66810,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
   "k.words/shards/pl"
@@ -67008,6 +67300,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-07",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-p",
@@ -67227,6 +67520,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/p",
   "k.scenes/shards/things-p",
@@ -67388,6 +67682,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.parts/shards/p",
@@ -67437,6 +67732,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-openmoji",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/things-p",
   "k.words/shards/po"
@@ -67988,6 +68284,7 @@
  "prairie dog": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-p",
   "k.words/shards/pr"
  ],
@@ -68015,6 +68312,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
   "k.objects/shards/noto-food-asian-02",
@@ -68043,6 +68341,7 @@
  "praying mantis": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/animals-2",
   "k.scenes/shards/things-p",
   "k.words/shards/pr"
@@ -69008,6 +69307,7 @@
  "pufferfish": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-p",
   "k.words/shards/pu"
  ],
@@ -69015,6 +69315,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.scenes/shards/things-p",
   "k.words/shards/pu"
@@ -69507,6 +69808,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-p",
@@ -69599,6 +69901,7 @@
  ],
  "quadrilateral": [
   "k.attributes/shards/same-q",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.values/shards/psys2",
   "k.words/shards/qu"
@@ -69613,6 +69916,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-q",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.scenes/shards/things-q",
   "k.words/shards/qu"
@@ -69899,6 +70203,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-07",
   "k.parts/shards/r",
   "k.scenes/shards/scenes-nature",
@@ -69925,6 +70230,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-r",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-02",
   "k.scenes/shards/things-r",
   "k.words/shards/ra"
@@ -70461,6 +70767,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-06",
   "k.parts/shards/usual",
   "k.scenes/shards/things-r",
@@ -70520,6 +70827,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
+  "k.commonsense/shards/derived",
   "k.objects/shards/words-hand",
   "k.parts/shards/r",
   "k.scenes/shards/things-r",
@@ -70543,6 +70851,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-bird-03",
   "k.parts/shards/usual",
@@ -71002,6 +71311,7 @@
  ],
  "rectangle": [
   "k.attributes/shards/same-r",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
@@ -71065,6 +71375,7 @@
  "red panda": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-r",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-r",
   "k.words/shards/re"
  ],
@@ -71372,6 +71683,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.parts/shards/r",
   "k.scenes/shards/scenes-nature",
@@ -72421,6 +72733,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-06",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -72444,6 +72757,7 @@
  ],
  "rhombus": [
   "k.attributes/shards/same-r",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/psys2",
@@ -73827,6 +74141,7 @@
  "roadrunner": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-r",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-r",
   "k.words/shards/ro"
  ],
@@ -73937,6 +74252,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -74351,6 +74667,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bird-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -75455,6 +75772,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-s",
   "k.words/shards/sa"
@@ -75526,6 +75844,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.colours/shards/colours",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.geo/shards/north-america",
   "k.objects/shards/nature-2",
@@ -76050,6 +76369,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
@@ -76168,6 +76488,7 @@
  "saturday": [
   "k.attributes/shards/same-s",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/sa"
  ],
  "saturdays": [
@@ -76470,6 +76791,7 @@
  "scallop": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/sc"
  ],
@@ -76815,6 +77137,7 @@
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-02",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-s",
@@ -77112,6 +77435,7 @@
  "sea anemone": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/se"
  ],
@@ -77130,6 +77454,7 @@
  "sea lion": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/se"
  ],
@@ -77147,6 +77472,7 @@
  "sea turtle": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/se"
  ],
@@ -77156,6 +77482,7 @@
  "sea urchin": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/se"
  ],
@@ -77183,6 +77510,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -77198,6 +77526,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
   "k.scenes/shards/scenes-other",
   "k.scenes/shards/things-s",
@@ -77212,6 +77541,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-01",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
@@ -77290,7 +77620,8 @@
  ],
  "seasons": [
   "k.time/schema.sop",
-  "k.time/shards/calendar"
+  "k.time/shards/calendar",
+  "k.time/shards/derived"
  ],
  "seat": [
   "k.attributes/shards/drawn-noto",
@@ -77856,6 +78187,7 @@
  "september": [
   "k.attributes/shards/same-s",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/se"
  ],
  "sequel": [
@@ -78371,6 +78703,7 @@
  "shampoo": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-healthcare-grooming-items-06",
   "k.objects/shards/noto-household-02",
@@ -78505,6 +78838,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -78645,6 +78979,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.objects/shards/noto-animal-mammal-05",
   "k.parts/shards/s",
@@ -79388,6 +79723,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.scenes/shards/things-s",
   "k.words/shards/sh"
@@ -79402,6 +79738,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/noto-animal-marine-02",
   "k.objects/shards/noto-food-asian-02",
@@ -80418,6 +80755,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.scenes/shards/things-s",
   "k.words/shards/sk"
@@ -80928,6 +81266,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-08",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/things-s",
@@ -80981,6 +81320,7 @@
   "k.animals/shards/invertebrates",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-crustacean-and-molluscs-01",
   "k.objects/shards/noto-animal-bug-01",
   "k.scenes/shards/things-s",
@@ -81167,6 +81507,7 @@
  ],
  "smoothie": [
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.food/shards/dishes",
   "k.words/shards/sm"
  ],
@@ -81206,6 +81547,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",
@@ -81222,6 +81564,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.geo/shards/north-america",
   "k.geo/shards/numbers",
   "k.objects/shards/noto-animal-reptile-01",
@@ -81379,6 +81722,7 @@
  "snow leopard": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/sn"
  ],
@@ -81976,6 +82320,7 @@
  "soup": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-food-meals-and-snacks-06",
@@ -82048,6 +82393,7 @@
  "south": [
   "k.attributes/shards/aspects",
   "k.geo/schema.sop",
+  "k.time/shards/derived",
   "k.units/shards/measures",
   "k.values/shards/directions",
   "k.words/shards/so"
@@ -82361,6 +82707,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/s",
   "k.scenes/shards/things-s",
@@ -82558,6 +82905,7 @@
  "sperm whale": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/sp"
  ],
@@ -82599,6 +82947,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-bug-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -83069,6 +83418,7 @@
   "k.objects/shards/things-3",
   "k.scenes/shards/scenes-other",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/sp"
  ],
  "spring day": [
@@ -83171,6 +83521,7 @@
   "k.faces/shards/plain-eyes",
   "k.faces/shards/plain-glasses",
   "k.faces/shards/plain-head",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
@@ -83283,6 +83634,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-02",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -83301,6 +83653,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/nature-2",
   "k.objects/shards/noto-animal-mammal-07",
   "k.parts/shards/usual",
@@ -83450,6 +83803,7 @@
  "stag beetle": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/st"
  ],
@@ -83751,6 +84105,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-other-invertebrates-01",
   "k.objects/shards/noto-place-geographic-01",
   "k.parts/shards/s",
@@ -83772,6 +84127,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-s",
@@ -84244,6 +84600,7 @@
  "stick insect": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/st"
  ],
@@ -84315,6 +84672,7 @@
  "stingray": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/st"
  ],
@@ -84362,6 +84720,7 @@
   "k.animals/shards/mammals",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-mammal-02",
   "k.scenes/shards/things-s",
   "k.words/shards/st"
@@ -84547,6 +84906,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.parts/shards/usual",
   "k.scenes/shards/things-s",
   "k.words/shards/st"
@@ -85154,6 +85514,7 @@
  "sturgeon": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/st"
  ],
@@ -85476,6 +85837,7 @@
   "k.objects/shards/noto-drink-02",
   "k.objects/shards/noto-transport-water-01",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/su"
  ],
  "summertime": [
@@ -85589,6 +85951,7 @@
  "sunday": [
   "k.attributes/shards/same-s",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/su"
  ],
  "sundays": [
@@ -86030,6 +86393,7 @@
   "k.animals/shards/birds",
   "k.attributes/shards/same-s",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/sw"
  ],
@@ -86067,6 +86431,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.geo/shards/oceania",
   "k.objects/shards/noto-animal-bird-02",
   "k.parts/shards/s",
@@ -86250,6 +86615,7 @@
  "swift": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/sw"
  ],
@@ -86441,6 +86807,7 @@
  "swordfish": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-s",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-s",
   "k.words/shards/sw"
  ],
@@ -87357,6 +87724,7 @@
  "tapir": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/ta"
  ],
@@ -87387,6 +87755,7 @@
  "tarantula": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/ta",
   "w.lang.en/shards/core-plurals"
@@ -87467,6 +87836,7 @@
  "tasmanian devil": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/ta"
  ],
@@ -87618,6 +87988,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.objects/shards/mulberry-drink-type-02",
@@ -88157,6 +88528,7 @@
  "termite": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/te"
  ],
@@ -88178,6 +88550,7 @@
  "terrapin": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-reptile-01",
   "k.scenes/shards/things-t",
   "k.words/shards/te"
@@ -89062,6 +89435,7 @@
  "thrush": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/th"
  ],
@@ -89128,6 +89502,7 @@
  "thursday": [
   "k.attributes/shards/same-t",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/th"
  ],
  "thursdays": [
@@ -89187,6 +89562,7 @@
   "k.actions/shards/verbs-pick",
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/ti"
  ],
@@ -89292,6 +89668,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-02",
   "k.scenes/shards/scenes-nature",
   "k.scenes/shards/scenes-town",
@@ -89806,6 +90183,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-t",
@@ -90724,6 +91102,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-reptiles-and-amphibians-01",
   "k.objects/shards/noto-animal-reptile-01",
   "k.parts/shards/t",
@@ -90778,6 +91157,7 @@
  "toucan": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/to"
  ],
@@ -91507,6 +91887,7 @@
  "tree frog": [
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-t",
   "k.words/shards/tr"
  ],
@@ -91584,6 +91965,7 @@
   "k.attributes/shards/same-t",
   "k.objects/shards/mulberry-leisure-toys-03",
   "k.objects/shards/noto-office-03",
+  "k.shapes/shards/derived",
   "k.shapes/shards/psys2",
   "k.shapes/shards/shapes",
   "k.values/shards/shapes",
@@ -91886,6 +92268,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/usual",
   "k.scenes/shards/things-t",
@@ -92136,6 +92519,7 @@
  "tuesday": [
   "k.attributes/shards/same-t",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/tu"
  ],
  "tuesdays": [
@@ -92258,6 +92642,7 @@
   "k.animals/shards/fish",
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.objects/shards/mulberry-food-fish-and-seafood-01",
   "k.parts/shards/usual",
@@ -92351,6 +92736,7 @@
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
+  "k.commonsense/shards/derived",
   "k.food/shards/animal-foods",
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders",
@@ -92464,6 +92850,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-reptile-01",
   "k.parts/shards/t",
   "k.scenes/shards/scenes-other",
@@ -94847,6 +95234,7 @@
  "vinegar": [
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-v",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-food-ingredients-02",
   "k.scenes/shards/things-v",
@@ -94925,6 +95313,7 @@
   "k.animals/shards/reptiles-and-amphibians",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-v",
+  "k.commonsense/shards/derived",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
   "k.scenes/shards/things-v",
@@ -95117,6 +95506,7 @@
  "vole": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-v",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-v",
   "k.words/shards/vo"
  ],
@@ -95224,6 +95614,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-v",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-birds-02",
   "k.parts/shards/v",
   "k.scenes/shards/scenes-nature",
@@ -95572,6 +95963,7 @@
  "wallaby": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wa"
  ],
@@ -95629,6 +96021,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.faces/shards/plain-moustache",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
   "k.parts/shards/usual",
@@ -95857,6 +96250,7 @@
  "warthog": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wa"
  ],
@@ -95944,6 +96338,7 @@
   "k.attributes/shards/drawn-mulberry",
   "k.attributes/shards/same-w",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/mulberry-animal-spiders-and-insects-02",
   "k.scenes/shards/things-w",
   "k.words/shards/wa"
@@ -96003,6 +96398,7 @@
   "k.actions/shards/actions-make-change",
   "k.attributes/shards/same-w",
   "k.attributes/shards/things-nature",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.food/shards/other",
   "k.layouts/shards/anchors",
@@ -96273,6 +96669,7 @@
  "weasel": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/we"
  ],
@@ -96367,6 +96764,7 @@
  "wednesday": [
   "k.attributes/shards/same-w",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/we"
  ],
  "wednesdays": [
@@ -96391,6 +96789,7 @@
  "week": [
   "k.attributes/shards/same-w",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.units/shards/core",
   "k.words/shards/we"
  ],
@@ -96430,6 +96829,7 @@
  "weevil": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/we"
  ],
@@ -96658,6 +97058,7 @@
   "k.animals/shards/psys2",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/openmoji-animals-nature-01",
   "k.scenes/shards/scenes-nature",
@@ -96668,6 +97069,7 @@
  "whale shark": [
   "k.animals/shards/fish",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wh"
  ],
@@ -97295,6 +97697,7 @@
  "wildebeest": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wi"
  ],
@@ -97646,6 +98049,7 @@
   "k.attributes/shards/same-w",
   "k.attributes/shards/things-nature",
   "k.attributes/shards/usage",
+  "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.objects/shards/mulberry-drink-type-03",
   "k.objects/shards/noto-drink-01",
@@ -97740,6 +98144,7 @@
   "k.objects/shards/noto-plant-other-03",
   "k.scenes/shards/scenes-other",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.words/shards/wi"
  ],
  "winter coat": [
@@ -97966,6 +98371,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-w",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-02",
   "k.parts/shards/w",
   "k.scenes/shards/scenes-nature",
@@ -98033,6 +98439,7 @@
  "wombat": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wo"
  ],
@@ -98113,6 +98520,7 @@
  "woodlouse": [
   "k.animals/shards/invertebrates",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wo",
   "w.lang.en/shards/core-plurals"
@@ -98120,6 +98528,7 @@
  "woodpecker": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wo"
  ],
@@ -98418,6 +98827,7 @@
  "wren": [
   "k.animals/shards/birds",
   "k.attributes/shards/same-w",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-w",
   "k.words/shards/wr"
  ],
@@ -98685,6 +99095,7 @@
  "yak": [
   "k.animals/shards/mammals",
   "k.attributes/shards/same-y",
+  "k.commonsense/shards/derived",
   "k.scenes/shards/things-y",
   "k.words/shards/ya"
  ],
@@ -98843,6 +99254,7 @@
   "k.attributes/shards/same-y",
   "k.space/schema.sop",
   "k.time/shards/calendar",
+  "k.time/shards/derived",
   "k.units/shards/core",
   "k.words/shards/ye",
   "w.timeline/schema.sop"
@@ -99249,6 +99661,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-z",
   "k.attributes/shards/things-living",
+  "k.commonsense/shards/derived",
   "k.objects/shards/noto-animal-mammal-03",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-nature",

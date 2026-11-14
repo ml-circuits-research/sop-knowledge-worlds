@@ -20,6 +20,9 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
   `imports=` (ids unchanged) or `core.use` (ids prefixed) never clashes with the application's ids.
 - `k.<world>/shards/<key>.sop`: facts only, at most about 2,000 wires and 300 kB each. Each starts with a header
   (`# sources:`, `# license:`, `# script:`) and every wire carries `core.source="<source id> <version>"`.
+- `k.<world>/shards/derived*.sop`: **generated** (`tools/derive.mjs`, in `npm run build`): what the rules of the
+  module derive from the told facts, each wire with `derived=true` and `core.source="rule <rule id>"`, so that a
+  host or a tool that reads shards sees them without running the rules. A test keeps them fresh.
 - `k.<world>/WORLD.md`: what the world knows, its sources, and questions it helps with.
 - `w.<name>/schema.sop`: a **reusable world**: a schema in the library's `std.schema` format (kinds, attributes, the
   acts that apply, words), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`

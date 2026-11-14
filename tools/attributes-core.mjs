@@ -50,14 +50,14 @@ export const ATTRIBUTES = [
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
   ['colour', 'k.attributes', 'k.attributes.thing', 'colour', 'common things'], ['colour', 'k.food', 'k.food.food', 'colour', 'foods'], ['colour', 'k.objects', 'k.objects.part', 'colour', 'each part of a drawing'], ['colour', 'k.attributes', 'k.attributes.drawn', 'drawn_colour', 'drawable things: the main colours of the drawing'],
-  ['material', 'k.attributes', 'k.attributes.thing', 'material', 'common things'], ['material', 'k.commonsense', 'k.commonsense.thing', 'made_of', 'a few common things'],
+  ['material', 'k.attributes', 'k.attributes.thing', 'material', 'common things'], ['material', 'k.commonsense', 'k.commonsense.thing', 'made_of', 'common things and, by its rules (the shard derived), animals and drinks'],
   ['size', 'k.scenes', 'k.scenes.thing', 'size', 'drawable things'],
-  ['place', 'k.scenes', 'k.scenes.thing', 'place', 'drawable things'], ['place', 'k.commonsense', 'k.commonsense.thing', 'at', 'a few common things'],
+  ['place', 'k.scenes', 'k.scenes.thing', 'place', 'drawable things'], ['place', 'k.commonsense', 'k.commonsense.thing', 'at', 'common things and, by its rules (the shard derived), animals and drinks'],
   ['kind', 'k.attributes', 'k.attributes.thing', 'kind', 'common things'], ['kind', 'k.animals', 'k.animals.animal', 'class', 'animals'], ['kind', 'k.food', 'k.food.food', 'kind', 'foods'],
   ['parts', 'k.objects', 'k.objects.part', 'name', 'drawings with named parts'], ['parts', 'k.layouts', 'k.layouts.joins', 'a', 'kinds joined by part_of'], ['parts', 'k.parts', 'k.parts.whole', 'has', 'common things, from WordNet'], ['parts', 'k.parts', 'k.parts.inherited', 'has', 'common things, through what they are a kind of'], ['parts', 'k.parts', 'k.parts.usual', 'has', 'common things without a part in WordNet, in plain words'],
   ['legs', 'k.animals', 'k.animals.animal', 'legs', 'animals'],
   ['wheels', 'k.attributes', 'k.attributes.thing', 'wheels', 'vehicles'],
-  ['can', 'k.attributes', 'k.attributes.thing', 'can', 'common things'], ['can', 'k.animals', 'k.animals.animal', 'can', 'animals'], ['can', 'k.commonsense', 'k.commonsense.thing', 'can', 'a few common things'],
+  ['can', 'k.attributes', 'k.attributes.thing', 'can', 'common things'], ['can', 'k.animals', 'k.animals.animal', 'can', 'animals'], ['can', 'k.commonsense', 'k.commonsense.thing', 'can', 'common things and, by its rules (the shard derived), animals and drinks'],
   ['cannot', 'k.animals', 'k.animals.animal', 'cannot', 'animals'],
   ['lives', 'k.animals', 'k.animals.animal', 'habitat', 'animals'],
   ['eats', 'k.animals', 'k.animals.animal', 'eats', 'animals'],
@@ -79,7 +79,7 @@ export const FOUND = [
   ['weather', 'k.attributes', 'k.attributes.usage', 'weather', 'things of k.scenes'], ['weather', 'k.scenes', 'k.scenes.scene', 'weather', 'scenes'],
   ['age', 'k.attributes', 'k.attributes.usage', 'age', 'things of k.scenes'], ['age', 'k.people', 'k.people.kind', 'age', 'kinds of person'],
   ['user', 'k.attributes', 'k.attributes.usage', 'used_by', 'things of k.scenes whose role does not list them'],
-  ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'], ['used_for', 'k.commonsense', 'k.commonsense.thing', 'used_for', 'a few common things'],
+  ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'], ['used_for', 'k.commonsense', 'k.commonsense.thing', 'used_for', 'common things and, by its rules (the shard derived), animals and drinks'],
 ];
 // The attributes a kind of thing usually has: [kind, attributes].
 export const KINDS = [
@@ -129,6 +129,7 @@ common thing | visual | k.objects.part | of | colour
 common thing | visual | k.attributes.drawn | name | drawn_colour, drawn_shade
 common thing | spatial | k.scenes.thing | name | place, size, on
 common thing | spatial | k.layouts.anchor | of | kind
+common thing | spatial | k.commonsense.thing | name | at
 common thing | relational | k.words.sense | word | is_a, part_of, synonym
 common thing | relational | k.attributes.thing | name | kind, can, used_for
 common thing | relational | k.layouts.joins | a | rel

@@ -166,6 +166,114 @@ A shard keeps the terms of its sources: share-alike stays share-alike, non-comme
 - Shard terms: CC-BY-4.0, CC0-1.0, ODbL-1.0
 - Used by: `k.animals` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.geo` (10 shards), `k.layouts` (1 shards), `k.parts` (1 shards), `k.scenes` (1 shards), `k.shapes` (1 shards), `k.time` (1 shards), `k.values` (1 shards)
 
+## rule-k.commonsense.ability
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.commonsense` (1 shards)
+
+## rule-k.commonsense.drink
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.commonsense` (1 shards)
+
+## rule-k.commonsense.habitat
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.commonsense` (1 shards)
+
+## rule-k.commonsense.habitat.place
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.commonsense` (1 shards)
+
+## rule-k.commonsense.inability
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.commonsense` (1 shards)
+
+## rule-k.kinds.up.direct
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.commonsense` (1 shards), `k.people` (1 shards), `k.shapes` (1 shards)
+
+## rule-k.kinds.up.step
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.shapes` (1 shards)
+
+## rule-k.time.order
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.time` (1 shards)
+
+## rule-k.time.season_in.first_north
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.time` (1 shards)
+
+## rule-k.time.season_in.first_south
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.time` (1 shards)
+
+## rule-k.time.season_in.last_north
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.time` (1 shards)
+
+## rule-k.time.season_in.last_south
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: CC0-1.0
+- Used by: `k.time` (1 shards)
+
 ## wordnet-3.1
 
 - What: the English lexical database of Princeton University: words grouped into sets of synonyms, each with a gloss, linked by is-a, instance-of and part-of.

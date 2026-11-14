@@ -1,0 +1,10 @@
+# k.people/shards/derived: generated, do not edit. What the rules of k.people (version 2) and of the modules it imports derive from the told facts
+# of k.people, k.kinds: 4 facts, each marked derived=true with its rule as source (k.kinds.up.direct).
+# sources: rule (a rule of a module of this repository, over the facts named above; sources/rule/SOURCE.md)
+# license: CC0-1.0
+# script: tools/derive.mjs
+
+@k.people.derived.k.kinds.up.direct.boy k.people.kind name=boy kind_of=child derived=true core.source="rule k.kinds.up.direct"
+@k.people.derived.k.kinds.up.direct.girl k.people.kind name=girl kind_of=child derived=true core.source="rule k.kinds.up.direct"
+@k.people.derived.k.kinds.up.direct.grandfather k.people.kind name=grandfather kind_of=man derived=true core.source="rule k.kinds.up.direct"
+@k.people.derived.k.kinds.up.direct.grandmother k.people.kind name=grandmother kind_of=woman derived=true core.source="rule k.kinds.up.direct"

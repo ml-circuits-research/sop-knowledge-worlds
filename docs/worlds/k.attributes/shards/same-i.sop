@@ -3,8 +3,8 @@
 # license: CC0-1.0
 # script: tools/joins.mjs
 
-@k.attributes.same.ibex.animal k.attributes.same name=ibex sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.ibis.animal k.attributes.same name=ibis sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.ibex.animal k.attributes.same name=ibex sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.ibis.animal k.attributes.same name=ibis sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice.food k.attributes.same name=ice sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice_cream.food k.attributes.same name="ice cream" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ice_cream_tub.food k.attributes.same name="ice cream tub" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -15,9 +15,9 @@
 @k.attributes.same.iceland.place k.attributes.same name=iceland sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.identification_card.thing k.attributes.same name="identification card" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.igloo.thing k.attributes.same name=igloo sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.layouts.anchor in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.iguana.animal k.attributes.same name=iguana sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.iguana.animal k.attributes.same name=iguana sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.commonsense.thing in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.illinois.place k.attributes.same name=illinois sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.impala.animal k.attributes.same name=impala sense=animal only=true in=k.animals.animal in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.impala.animal k.attributes.same name=impala sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.inbox_tray.thing k.attributes.same name="inbox tray" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.incisor.body_part k.attributes.same name=incisor sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.incoming_envelope.thing k.attributes.same name="incoming envelope" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"

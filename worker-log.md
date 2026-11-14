@@ -3231,3 +3231,58 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   "world schemas" for the schema file of a knowledge world.
 - Only docs and the regenerated index.json (its content hash covers docs/worlds/README.md). tests/catalog.test.mjs:
   6 pass; the full suite was 2,866 / 2,861 pass / 0 fail on the commit before, and no test reads the READMEs.
+
+## Derived facts visible to tools (2026-11-14, first worker; reviewer block "02:45", item 3)
+
+- **`tools/derive.mjs`** (in `npm run build`, before the joins): for each module whose world runs rules (its own
+  `core.rule`, or one of a module it imports: k.commonsense, k.time, and since the second worker's `k.kinds` of Q34
+  also k.people, k.shapes, k.objects), loads the module with the told facts of it and of its imports (not its own `derived`
+  shards), reads from each wire which values a rule of the module made (`meta.via` of the wire, `meta.fills` of the
+  values added later), leaves out every value a told shard states for the same thing and every `core.*` key, and
+  writes, for the wires of the module's own types, one wire per thing and rule into
+  `docs/worlds/<world>/shards/derived.sop`: the identity keys, the derived
+  values, `derived=true`, `core.source="rule <rule id>"`. Licence: that of the facts read (CC0-1.0; a mix is refused).
+  New source `sources/rule/SOURCE.md`. Slot `derived` declared on `k.kinds.kind` (one line in the second worker's
+  new module: it covers k.commonsense.thing, k.people.kind and k.shapes.shape, which extend it), `k.time.before`,
+  `k.time.season_in`.
+- **Output:** `k.commonsense/shards/derived` 1,148 wires, 164,395 bytes (ability 271, inability 225, habitat 311,
+  habitat.place 312 for 330 animals; drink 7: drinks are liquids; k.kinds.up.direct 22: kind_of from is_a);
+  `k.time/shards/derived` 391 wires, 55,292 bytes (375 before, 16 season spans); `k.shapes/shards/derived` 12
+  (a square is a kind of rectangle, rhombus, quadrilateral, polygon); `k.people/shards/derived` 4 (a boy is a kind
+  of child). A rerun gives byte-identical files.
+- **Found while writing it:** reading "made by a rule" from the wire's maker alone was wrong: k.commonsense's own told
+  facts (cat at house, dog can run, `core.source="hand-core 1"`) merged into wires the rules had made first from
+  k.animals, and came out as derived. Fixed by checking every value against the told shards; a test keeps a told
+  value out. A rule-made wire of identity keys only (k.time.before) was dropped at first; kept now.
+- **What the tools see now:** COVERAGE: common things reached by k.commonsense 35 -> **189** (13%); JOINS: 3,409 ->
+  3,411 names in more than one world, and 330 animals' names now also in `k.commonsense.thing`; the joins tool
+  gives a derived wire the sense of the one typed thing its rule reads (`ruleSenses`: habitat reads
+  k.animals.animal: an animal), so they join as animals, not "unsure"; ASPECTS: the place of k.commonsense is a
+  spatial row of common things now (no count changed: those things had a place in k.scenes already); the temporal
+  rows read `k.time.before` (counts unchanged, the months were covered by `n`). `tools/ask-real.mjs`: unchanged.
+- Tests: `tests/derived.test.mjs` (4: fresh against the tool; every wire marked, one source, a rule of its own
+  module; loaded with the rules nothing is made twice and no value changes; told values never written as derived,
+  and the tools see dolphin at sea, the swift flying, lemonade a liquid, Monday before Friday, winter in the north
+  from December, the dolphin joined as an animal).
+- **The merge seen in two tests:** loaded with `fullWorld`, the wire of the shape cube and of the kind boy now carry
+  `core.source="rule k.kinds.up.direct"` next to `hand-core 1` (the derived `kind_of` merged in), and
+  `tests/k.colours-shapes.test.mjs` and `tests/k.people.test.mjs` refused it. `handSources` (tools/lib/worlds.mjs)
+  now accepts a `rule <id>` source beside a told one, never alone; the k.people test filters it the same way.
+- **Not done / open:** a derived wire merges in a host with a told wire of the same identity, and `derived=true`
+  then stands on the merged wire (Q42; Q41 is taken by the second worker). The four
+  `ambiguous-key` warnings of the catalog (key `name` declared by k.kinds and by k.commonsense, k.people,
+  k.shapes) came with `k.kinds` and are not changed here. w.* worlds have no rules, so no derived shard.
+- **Looked at:** the derived lines of dolphin, swift, duck, cat, dog and the 7 drinks; the counts per rule.
+  **Not looked at:** the other 1,100 lines one by one (the same rules, read by a test against a run with the rules).
+- Numbers: catalog 23 worlds, 939 shards, vocab 24,256 words; 0 errors, 0 warnings. npm test 2,863: 2,862 pass,
+  1 skipped, 0 fail.
+- After the rebase on Q34 (a) (second worker: k.kinds, k.drawing) and on the temporal prepositions of w.lang.en, the
+  build rerun (index.json taken from either side and rebuilt; worker-log kept both entries): derived shards as above
+  (k.commonsense 1,148, k.time 391, k.shapes 12, k.people 4 wires). Catalog 25 worlds, 941 shards, vocab 24,257
+  words; validate 966 files, 0 errors. npm test 2,867: 2,866 pass, 1 skipped, 0 fail. (A first run lost
+  `tests/catalog.test.mjs` to SIGKILL while the second worker's build ran beside it; the rerun passed.)
+- Rebased again on Q36 and Q37 (second worker): generated files taken from main and rebuilt; numbers unchanged
+  (25 worlds, 941 shards, vocab 24,257 words; JOINS 3,454 names, the same as main: the derived animals' names were
+  already joined). The 16 test files that read generated files: 108 pass; the full run was on the base before Q37.
+- And on the Q33 facts (second worker): my question renumbered Q42 (Q41 is the second worker's); vocab 24,259
+  words; the 18 test files that read generated files or k.geo, k.animals: 117 pass.

@@ -34,6 +34,8 @@
 @k.time.before.cycle core.slot of=k.time.before key=cycle id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.before.earlier core.slot of=k.time.before key=earlier id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.time.before.later core.slot of=k.time.before key=later id=true required=true kind=atom kind=string core.source="hand-core 1"
+# `derived=true`: a fact that a rule of this module made, written by tools/derive.mjs into the shard `derived`.
+@k.time.before.derived core.slot of=k.time.before key=derived kind=boolean core.source="hand-core 1"
 
 # Rule (one, for every cycle): of two times of one cycle, the one with the smaller position is before the other.
 @k.time.order.earlier k.time.ordered cycle=?cycle name=?earlier n=?i
@@ -73,6 +75,7 @@
 @k.time.season_in.hemisphere core.slot of=k.time.season_in key=hemisphere id=true required=true enum=north enum=south core.source="hand-core 1"
 @k.time.season_in.first core.slot of=k.time.season_in key=first kind=atom core.source="hand-core 1"
 @k.time.season_in.last core.slot of=k.time.season_in key=last kind=atom core.source="hand-core 1"
+@k.time.season_in.derived core.slot of=k.time.season_in key=derived kind=boolean core.source="hand-core 1"
 
 @k.time.season_in.differ core.check fn=neq args=?season args=?other
 @k.time.season_in.first_north.before k.time.month name=?before season_north=?other next=?month
@@ -143,6 +146,7 @@
 @k.time.word.key.cycle.lasts core.word text=lasts means=k.time.cycle.lasts core.source="hand-core 1"
 @k.time.word.key.before.earlier core.word text=earlier means=k.time.before.earlier core.source="hand-core 1"
 @k.time.word.key.before.later core.word text=later means=k.time.before.later core.source="hand-core 1"
+@k.time.word.key.before.derived core.word text=derived means=k.time.before.derived core.source="hand-core 1"
 @k.time.word.key.month.n core.word text=n means=k.time.month.n core.source="hand-core 1"
 @k.time.word.key.month.days core.word text=long means=k.time.month.days core.source="hand-core 1"
 @k.time.word.key.month.leap_days core.word text="leap days" means=k.time.month.leap_days core.source="hand-core 1"
@@ -153,6 +157,7 @@
 @k.time.word.key.season.next core.word text=next means=k.time.season.next core.source="hand-core 1"
 @k.time.word.key.season_in.first core.word text=first means=k.time.season_in.first core.source="hand-core 1"
 @k.time.word.key.season_in.last core.word text=last means=k.time.season_in.last core.source="hand-core 1"
+@k.time.word.key.season_in.derived core.word text=derived means=k.time.season_in.derived core.source="hand-core 1"
 @k.time.word.key.part_of_day.n core.word text=n means=k.time.part_of_day.n core.source="hand-core 1"
 @k.time.word.key.part_of_day.starts_about core.word text=starts means=k.time.part_of_day.starts_about core.source="hand-core 1"
 @k.time.word.key.part_of_day.ends_about core.word text=ends means=k.time.part_of_day.ends_about core.source="hand-core 1"

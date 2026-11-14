@@ -16,6 +16,8 @@
 @k.kinds.kind.name core.slot of=k.kinds.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.kinds.kind.is_a core.slot of=k.kinds.kind key=is_a many=true kind=atom kind=string core.source="hand-core 1"
 @k.kinds.kind.kind_of core.slot of=k.kinds.kind key=kind_of many=true kind=atom kind=string core.source="hand-core 1"
+# `derived=true`: a fact that a rule made, written by tools/derive.mjs into the shard `derived` of the world of the thing.
+@k.kinds.kind.derived core.slot of=k.kinds.kind key=derived kind=boolean core.source="hand-core 1"
 
 # Rule: what a thing is, it is a kind of.
 @k.kinds.up.direct.is k.kinds.kind name=?thing is_a=?kind
@@ -32,3 +34,4 @@
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.kinds.word.key.kind.is_a core.word text="is a" means=k.kinds.kind.is_a core.source="hand-core 1"
 @k.kinds.word.key.kind.kind_of core.word text="kind of" means=k.kinds.kind.kind_of core.source="hand-core 1"
+@k.kinds.word.key.kind.derived core.word text=derived means=k.kinds.kind.derived core.source="hand-core 1"
