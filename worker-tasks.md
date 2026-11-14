@@ -442,3 +442,14 @@ Plus **library modules** (`std.*`: acts, fill, focus, relations, turn, know, gra
 In Romanian (for the owner): schema lumii, lume de cunoaștere, lume vie.
 
 Task (whichever worker finishes its current item first): README and docs/worlds/README.md use these names: this repository holds world schemas (`w.*`) and knowledge worlds (`k.*`, `w.lang.en`), never live worlds; say it in one paragraph with an example of each.
+
+## Reviewer 2026-11-14 06:45 — next stage after the current rounds: reusable SKILLS for coding agents that learn worlds (owner)
+
+**Owner's idea:** coding agents are the learning layer ("system 1" in his words), sopworld worlds the deliberate run-time layer ("system 2"); the system runs on the worlds and periodically learns from use and consolidates. This repository holds the reusable skills that let any coding agent do that for any application built on sopworld.
+Write them as agent skills under `skills/<name>/SKILL.md` (frontmatter `name`, `description` of when to use it; the body as concise steps with the checks; scripts the skill calls under `skills/<name>/scripts/` when needed), each tested by a dry run on real material from this repository and from PSys2 (read-only at /tmp/wt2):
+1. **`learn-world-from-examples`**: from a description and example requests of a new kind of world, write a world schema (`w.*`) in the library's `std.schema` format, reusing k.* and w.* (never a value list knowledge already has), with words, an example session and catalog entry; measure with requests written without seeing the schema.
+2. **`improve-world-from-failures`**: take a batch of failures (ledger / case-corpus format, the user's expectation included), group by cause and pipeline stage, decide where the fix belongs (knowledge world, world schema, `w.lang.en`, library mechanism, application), make the smallest general change, never a phrase-specific rule, and gate it: case corpus (no right-to-wrong), held-out set untouched, invariants; write the lesson.
+3. **`learn-language-rules`**: from failures of the reading stage (unread formulations, synonyms, constructions), add facts to `w.lang.en` (or a sibling language world) and verbs / synonyms to k.actions / k.words, with tests; check the parser of the library reads them.
+4. **`consolidate`**: the periodic cycle: ingest new failures, freeze held-out rows, run skills 2 and 3, rerun the landing measures and the learning curve, open the changes for review in each repository (knowledge, library, application) with the before / after table; stop if the held-out curve does not rise.
+5. **`audit-knowledge`**: sample model-labelled facts, check against sources, fix or flag, as done in the rounds so far.
+Each skill states what it may change and what it must never do (no restricted data, no phrase lists, no editing tests to pass). Use `docs/lessons.md` of the three repositories as the source of the steps: the skills are the lessons made executable.
