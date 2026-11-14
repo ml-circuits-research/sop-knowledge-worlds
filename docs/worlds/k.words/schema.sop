@@ -60,8 +60,8 @@
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.words.word.key.sense.pos core.word text=pos text="part of speech" means=k.words.sense.pos core.source="hand-core 1"
 @k.words.word.key.sense.n core.word text=n means=k.words.sense.n core.source="hand-core 1"
-@k.words.word.key.sense.gloss core.word text=define text=explain means=k.words.sense.gloss core.source="hand-core 1"
 @k.words.word.key.sense.supersense core.word text=supersense text=supersenses text="lexicographer file" text="semantic class" means=k.words.sense.supersense core.source="hand-core 1"
+@k.words.word.key.sense.gloss core.word text=define text=explain means=k.words.sense.gloss core.source="hand-core 1"
 @k.words.word.key.sense.is_a core.word text="is a" means=k.words.sense.is_a core.source="hand-core 1"
 @k.words.word.key.sense.instance_of core.word text="instance of" text=kind text="kind of" means=k.words.sense.instance_of core.source="hand-core 1"
 @k.words.word.key.sense.part_of core.word text="part of" means=k.words.sense.part_of core.source="hand-core 1"

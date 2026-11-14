@@ -20,7 +20,7 @@ export const EXTRA = {
   'k.scenes.thing': ['thing'], 'k.scenes.thing.place': ['where', 'find', 'found'], 'k.scenes.thing.on': ['on'],
   'k.objects.object': ['draw', 'sketch', 'show', 'shaped like', 'looks like'],
   'k.words.sense.gloss': ['define', 'explain'], 'k.words.sense.kind_of': ['kind', 'kind of', 'type', 'type of'], 'k.words.sense.instance_of': ['kind', 'kind of'],
-  'k.words.sense.near_opposite': ['opposite'], 'k.words.sense.pos': ['part of speech'],
+  'k.words.sense.near_opposite': ['opposite'], 'k.words.sense.pos': ['part of speech'], 'k.words.sense.supersense': ['supersenses', 'lexicographer file', 'semantic class'],
   'k.parts.usual': ['part', 'parts'], 'k.parts.usual.has': ['has', 'have', 'with', 'built', 'inside'], 'k.parts.inherited': ['part', 'parts'], 'k.parts.inherited.has': ['has', 'have', 'with'],
   'k.parts.whole.has': ['built', 'inside'], 'k.parts.whole.plain': ['has', 'have'],
   'k.space.body.kind': ['kind'], 'k.space.body.colour': ['colour', 'color'], 'k.space.body.moons_about': ['moons'], 'k.space.body.orbit_years': ['year'], 'k.space.body.temperature_about': ['hot', 'cold', 'warm'],

@@ -4764,3 +4764,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   3,035 pass, 5 skipped, 1 fail: ask-real "a word for every key" (the given-name keys had no word: tools/key-words.mjs
   not rerun after the import). Rerun it (4 key words in k.people), narration, relations, report, catalog; then
   ask-real 4, k.people, k.people.given-names 3, catalog 8, validate 5, repo, coverage-report 4, k.kinds.relations 5 pass.
+- Main was red after 04b767d (supersenses): ask-real "a word for every key" (the k.words schema's key-word block was
+  not the output of tools/key-words.mjs: the supersense words were written into the block by hand). Rerunning the
+  tool dropped them, so they are now in its EXTRA (`k.words.sense.supersense`: supersenses, lexicographer file,
+  semantic class) and the block is the tool's output again (one wire moved). ask-real 4, k.words, catalog 8, validate,
+  repo pass.
