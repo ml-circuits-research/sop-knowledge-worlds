@@ -666,3 +666,7 @@ Rule: **one home per fact by topic; imported data becomes shards of the world th
 - `conceptnet-en` (CC BY-SA, 136,623 assertions) → candidate facts for k.commonsense / k.procedures, imported only after review, filtered to kinds the catalog already has, share-alike shards; expect a few thousand facts, not all.
 - `arxiv-metadata`, `tinystories`, BillSum → **evaluation and example sets** (genre moves, story structure checks, summary measurement); not imported as knowledge.
 Report per import: rows read, facts written, bytes of the shards, what a typical session loads.
+
+## Reviewer 2026-11-14 19:45 — k.story checked against real stories; decide by the numbers
+
+PSys2 is fetching human-written public-domain tales (Grimm, Andersen, Aesop) into psys2 `data/external/tales-pd/`; TinyStories (synthetic, GPT-generated) is already there. Third worker, after the composition procedures: annotate a sample of each (e.g. 40 tales, 40 TinyStories; by hand or by a documented rule, say which) with k.story's elements and check each constraint: how often it holds, in what order elements appear. Report both columns. Keep a constraint that holds in the human tales; relax or mark soft one that does not; take candidate goals/obstacles/helpers only where they map to existing kinds. TinyStories is used for statistics only, never as a style reference; if it adds nothing over the tales, say so and it can be dropped.
