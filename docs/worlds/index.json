@@ -1,5 +1,5 @@
 {
- "version": "8c85b4288d43",
+ "version": "857b0b7b5e4a",
  "sopworld": "04fc35e",
  "worlds": [
   {
@@ -4497,8 +4497,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1066,
-     "bytes": 205135,
+     "wires": 1065,
+     "bytes": 204954,
      "keys": [
       "a",
       "about",
@@ -4580,7 +4580,6 @@
       "covering",
       "covers",
       "css",
-      "currency",
       "cycle",
       "darker",
       "day_hours_about",
@@ -11172,8 +11171,8 @@
     {
      "id": "k.attributes/shards/typical",
      "path": "k.attributes/shards/typical.sop",
-     "wires": 143,
-     "bytes": 18450,
+     "wires": 142,
+     "bytes": 18311,
      "keys": [
       "about",
       "age",
@@ -11195,7 +11194,6 @@
       "continent",
       "country",
       "covering",
-      "currency",
       "device",
       "done",
       "drink",
@@ -15186,7 +15184,7 @@
   },
   {
    "id": "k.geo",
-   "version": "5",
+   "version": "6",
    "schema": "k.geo/schema.sop",
    "exports": [
     "k.geo.city",
@@ -19425,7 +19423,7 @@
      "id": "k.geo/shards/psys2-countries",
      "path": "k.geo/shards/psys2-countries.sop",
      "wires": 282,
-     "bytes": 53970,
+     "bytes": 47489,
      "keys": [
       "afghanistan",
       "albania",
@@ -29245,8 +29243,8 @@
     {
      "id": "k.kinds/shards/relations-geo",
      "path": "k.kinds/shards/relations-geo.sop",
-     "wires": 79,
-     "bytes": 14810,
+     "wires": 78,
+     "bytes": 14634,
      "keys": [
       "area",
       "area_about",
@@ -29257,7 +29255,6 @@
       "code2",
       "continent",
       "country",
-      "currency",
       "east",
       "elevation",
       "formal",

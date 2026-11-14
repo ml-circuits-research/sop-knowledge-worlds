@@ -89,7 +89,8 @@ export function importPsys2(from, commit) {
       const entries = [['name', name], ['code2', cc]];
       if (isNew) entries.push(['capital', one(c, 'capital')], ['continent', CONTINENT[one(c, 'cont')]], ['region', one(c, 'sub')], ['area', Number(one(c, 'area')) > 0 ? one(c, 'area') : undefined], ['landlocked', one(c, 'land')], ['independent', one(c, 'ind')], ['lat', one(c, 'lat')], ['lon', one(c, 'lon')],
         ...vals(c, 'nb').map((x) => nameOf.get(x)).filter(Boolean).map((x) => ['neighbour', x]));
-      entries.push(['currency', one(c, 'cur')], ...vals(c, 'lang').map((l) => ['language', l]));
+      // not the list's currency (Q68: one home per fact; a country's currency is k.units.currency read backwards)
+      entries.push(...vals(c, 'lang').map((l) => ['language', l]));
       lines.push(`${wire(`k.geo.psys2.country.${cc}`, 'k.geo.country', entries, 'countries 5.1.0')} core.source=${JSON.stringify(SRC)}`);
       // PSys2's keys are search keys with the plural ending cut ("barbado", "united arab emirate"): a key is kept as
       // a name only when it is not the name or the formal name so cut, and is not the name of another country.
@@ -110,7 +111,7 @@ export function importPsys2(from, commit) {
       if (m.continent && m.continent[0] !== CONTINENT[one(c, 'cont')]) dis.continent.push(`${name}: PSys2 ${CONTINENT[one(c, 'cont')]}, ours ${m.continent[0]}`);
       if (m.independent && m.independent[0] !== one(c, 'ind')) dis.independent.push(`${name}: PSys2 ${one(c, 'ind')}, ours ${m.independent[0]}`);
     }
-    put('k.geo', 'psys2-countries', `for ${ours.size} countries and territories the two-letter code, the currency and the languages; ${fresh.length} territories that were missing (${fresh.map((c) => one(c, 'name')).join(', ')}); and ${words} more names by which a country is known. The facts of one country merge with those of the continent shards.`, lines,
+    put('k.geo', 'psys2-countries', `for ${ours.size} countries and territories the two-letter code and the languages; ${fresh.length} territories that were missing (${fresh.map((c) => one(c, 'name')).join(', ')}); and ${words} more names by which a country is known. The facts of one country merge with those of the continent shards.`, lines,
       { sources: ['countries 5.1.0 (mledoze/countries, ODbL-1.0), as carried by the PSys2 world geo.map', `${SRC} (the selection and the short names)`], license: 'ODbL-1.0' });
     // Cities: those of PSys2 that we do not have by name in the country, nor within a quarter of a degree.
     const oc = (facts.get('k.geo.city') ?? []).map((w) => ({ name: one(w, 'name'), n: norm(one(w, 'name')), c: one(w, 'country'), lat: Number(one(w, 'lat')), lon: Number(one(w, 'lon')) }));
@@ -170,7 +171,7 @@ export function importPsys2(from, commit) {
       `PSys2 has ${pc.length} countries, ${pcity.length} cities and ${preg.length} regions, generated from world-countries 5.1.0 (ODbL), country-json (MIT), GeoNames (CC BY 4.0). These are not the project's own data: the facts taken keep their sources and licences.`, '',
       '| what | PSys2 | ours before | taken | where |', '|---|---:|---:|---:|---|',
       `| countries and territories | ${pc.length} | ${countries.size} | ${fresh.length} missing territories | \`k.geo/shards/psys2-countries\` (ODbL-1.0) |`,
-      `| two-letter code, currency, languages | ${pc.length} | 0 | ${ours.size + fresh.length} countries: new keys \`code2\`, \`currency\`, \`language\` | the same shard |`,
+      `| two-letter code, languages | ${pc.length} | 0 | ${ours.size + fresh.length} countries: new keys \`code2\`, \`language\` (the currency left out, Q68: k.units.currency) | the same shard |`,
       `| other names of a country (uk, britain, uae, holland, burma, Türkiye, DR Congo) | – | – | ${words} words | the same shard (\`core.word\`) |`,
       `| cities | ${pcity.length} | ${oc.length} | ${added} (${same} we had by name; ${near} lie within 5 km of a city we have: ${cityWords.length} spelt alike, taken as other names of ours (\`core.word\`, shard \`psys2-city-words\`), ${left.length} spelt otherwise, left as districts or names in another language; ${nowhere} are in Antarctica or nowhere; the cities farther than 5 km from ours are taken even when they lie in the area of a larger city) | \`k.geo/shards/psys2-cities-<continent>\` (CC-BY-4.0) |`,
       `| groups of countries | ${preg.filter((r) => one(r, 'kind') === 'group').length} | 0 | ${groups.length}: new type \`k.geo.group\` | \`k.geo/shards/psys2-groups\` (CC0) |`, '',

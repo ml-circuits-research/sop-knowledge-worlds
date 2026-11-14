@@ -77,7 +77,7 @@ export const TYPICAL = [
   ['w.face.face', 'expression', 1], ['w.face.face', 'hair_colour', 0.8], ['w.face.face', 'eye_colour', 0.5], ['w.face.face', 'skin', 0.5], ['w.face.face', 'clothes', 0.5], ['w.face.face', 'style', 0.3],
   ['w.face.part', 'variant', 1], ['w.face.part', 'colour', 0.7], ['w.face.part', 'size', 0.5], ['w.face.part', 'x', 0.1], ['w.face.part', 'y', 0.1],
   // places of the map (k.geo): the keys a question or a highlight names first
-  ['k.geo.country', 'capital', 1], ['k.geo.country', 'population', 0.9], ['k.geo.country', 'continent', 0.8], ['k.geo.country', 'area', 0.7], ['k.geo.country', 'language', 0.6], ['k.geo.country', 'currency', 0.5], ['k.geo.country', 'neighbour', 0.5], ['k.geo.country', 'landlocked', 0.3],
+  ['k.geo.country', 'capital', 1], ['k.geo.country', 'population', 0.9], ['k.geo.country', 'continent', 0.8], ['k.geo.country', 'area', 0.7], ['k.geo.country', 'language', 0.6], ['k.geo.country', 'neighbour', 0.5], ['k.geo.country', 'landlocked', 0.3],
   ['k.geo.city', 'country', 1], ['k.geo.city', 'population', 0.8], ['k.geo.city', 'capital_of', 0.6],
   ['k.geo.river', 'length_about', 0.9], ['k.geo.river', 'country', 0.7],
   ['k.geo.mountain', 'elevation', 1], ['k.geo.mountain', 'country', 0.6],

@@ -22,7 +22,6 @@
 {"id":"geo-22","ask":"how large is Asia","query":{"type":"k.geo.continent","where":{"name":"Asia"},"seek":"area_about"},"expect":{"status":"supported","value":"44600000"}}
 {"id":"geo-23","ask":"how large is the Pacific Ocean","query":{"type":"k.geo.sea","where":{"name":"\"Pacific Ocean\""},"seek":"area_about"},"expect":{"status":"supported","value":"165000000"}}
 {"id":"geo-24","ask":"which countries lie on Lake Victoria","query":{"type":"k.geo.lake","where":{"name":"\"Lake Victoria\""},"seek":"country","mode":"list"},"expect":{"status":"supported","values":["Kenya","Tanzania","Uganda"]}}
-{"id":"geo-p1","ask":"what is the currency of Japan","query":{"type":"k.geo.country","where":{"name":"Japan"},"seek":"currency"},"expect":{"status":"supported","value":"\"Japanese yen\""}}
 {"id":"geo-p2","ask":"which languages are spoken in Switzerland","query":{"type":"k.geo.country","where":{"name":"Switzerland"},"seek":"language","mode":"list"},"expect":{"status":"supported","values":["French","\"Swiss German\"","Italian","Romansh"]}}
 {"id":"geo-p3","ask":"which country has the code FR","query":{"type":"k.geo.country","where":{"code2":"FR"},"seek":"name"},"expect":{"status":"supported","value":"France"}}
 {"id":"geo-p4","ask":"which countries are in the Benelux","query":{"type":"k.geo.group","where":{"name":"Benelux"},"seek":"member","mode":"list"},"expect":{"status":"supported","values":["Belgium","Netherlands","Luxembourg"]}}

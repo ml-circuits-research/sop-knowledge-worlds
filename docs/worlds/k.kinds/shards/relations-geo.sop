@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-geo: the keys of the types of k.geo read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-geo: the keys of the types of k.geo read as relations: 78 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -12,7 +12,6 @@
 @k.kinds.relation.k.geo.continent.named k.kinds.relation type=k.geo.continent key=named subject=continent subject_sense=place object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.country.code k.kinds.relation type=k.geo.country key=code subject=country subject_sense=place object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.geo.country.code2 k.kinds.relation type=k.geo.country key=code2 subject=country subject_sense=place object=word found=value core.source="hand-core 1"
-@k.kinds.relation.k.geo.country.currency k.kinds.relation type=k.geo.country key=currency subject=country subject_sense=place object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.geo.country.language k.kinds.relation type=k.geo.country key=language subject=country subject_sense=place object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.geo.country.formal k.kinds.relation type=k.geo.country key=formal subject=country subject_sense=place object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.country.capital k.kinds.relation type=k.geo.country key=capital subject=country subject_sense=place object=place object_type=k.geo.city object_sense=place found=declared object_by=name core.source="hand-core 1"

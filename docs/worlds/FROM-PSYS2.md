@@ -14,7 +14,7 @@ PSys2 has 250 countries, 1001 cities and 38 regions, generated from world-countr
 | what | PSys2 | ours before | taken | where |
 |---|---:|---:|---:|---|
 | countries and territories | 250 | 238 | 15 missing territories | `k.geo/shards/psys2-countries` (ODbL-1.0) |
-| two-letter code, currency, languages | 250 | 0 | 249 countries: new keys `code2`, `currency`, `language` | the same shard |
+| two-letter code, languages | 250 | 0 | 249 countries: new keys `code2`, `language` (the currency left out, Q68: k.units.currency) | the same shard |
 | other names of a country (uk, britain, uae, holland, burma, Türkiye, DR Congo) | – | – | 42 words | the same shard (`core.word`) |
 | cities | 1001 | 874 | 597 (359 we had by name; 44 lie within 5 km of a city we have: 15 spelt alike, taken as other names of ours (`core.word`, shard `psys2-city-words`), 29 spelt otherwise, left as districts or names in another language; 0 are in Antarctica or nowhere; the cities farther than 5 km from ours are taken even when they lie in the area of a larger city) | `k.geo/shards/psys2-cities-<continent>` (CC-BY-4.0) |
 | groups of countries | 8 | 0 | 8: new type `k.geo.group` | `k.geo/shards/psys2-groups` (CC0) |

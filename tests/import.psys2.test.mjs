@@ -27,10 +27,10 @@ test('every fact taken names psys2-worlds and its commit as a source; third-part
   }
 });
 
-test('the facts taken answer: currency, languages, code, groups, cities, sounds, shapes, shades, yes and no, part names', () => {
+test('the facts taken answer: languages, code, groups, cities, sounds, shapes, shades, yes and no, part names', () => {
   const geo = fullWorld('k.geo', worlds);
   const country = (n) => geo.ofType('k.geo.country').find((c) => tok(c.attrs.name[0]) === n);
-  assert.equal(tok(country('France').attrs.currency[0]), 'Euro');
+  assert.ok(geo.ofType('k.geo.country').every((c) => !c.attrs.currency), 'Q68: a country\'s currency is k.units.currency, not a key of k.geo.country');
   assert.deepEqual(country('France').attrs.code2, ['FR']);
   assert.deepEqual(country('France').attrs.code, ['FRA'], 'the facts of one country merge');
   assert.ok(country('Belgium').attrs.language.length >= 3);

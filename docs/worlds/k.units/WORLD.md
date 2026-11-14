@@ -33,8 +33,9 @@ centavo, kopek, paisa, grosz ...), and words for 22 currencies: slang (buck, gre
 codes as words, and **the usual reading of a unit word said alone** (dollar: USD; pound: GBP, while `pound` of
 k.units.unit is the pound of mass, so a host decides by what the number counts; leu and lei: RON; yen, euro, franc:
 CHF; peso: MXN; rupee: INR). A currency has no `factor`: exchange rates change daily and are no fact here. CLDR's notice: `LICENSE.cldr`.
-Not joined: `k.geo.country.currency` (the PSys2 country list's names, "United States dollar", "Euro") names a
-currency by another name than CLDR's; the way from a country to its currency is `country` here.
+The one home of "which currency a country uses" (Q68): `country` here, read backwards for "the currency of France"
+(`k.units.currency` where `country=France`: EUR). The PSys2 country list's `k.geo.country.currency` (its own names,
+"United States dollar", "Euro") was a second home with other names and is dropped.
 
 ## Questions it helps with
 

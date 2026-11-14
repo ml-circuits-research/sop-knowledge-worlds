@@ -18,6 +18,7 @@
 {"id":"un-c4","ask":"what are a hundredth of a pound called","query":{"type":"k.units.currency","where":{"code":"GBP"},"seek":"minor_plural"},"expect":{"status":"supported","value":"pence"}}
 {"id":"un-c5","ask":"what money do they use in Japan","query":{"type":"k.units.currency","where":{"country":"Japan"},"seek":"name"},"expect":{"status":"supported","value":"\"Japanese yen\""}}
 {"id":"un-c6","ask":"how many decimals has the yen","query":{"type":"k.units.currency","where":{"code":"JPY"},"seek":"decimals"},"expect":{"status":"supported","value":"0"}}
+{"id":"un-c7","ask":"what is the currency of France","query":{"type":"k.units.currency","where":{"country":"France"},"seek":"name"},"expect":{"status":"supported","value":"euro"}}
 {"id":"un-t1","ask":"how many seconds is a century","query":{"type":"k.units.unit","where":{"name":"century"},"seek":"factor"},"expect":{"status":"supported","value":"3155760000"}}
 {"id":"un-t2","ask":"what does a month measure","query":{"type":"k.units.unit","where":{"name":"month"},"seek":"quantity"},"expect":{"status":"supported","value":"time"}}
 {"id":"un-t3","ask":"how long is a decade in seconds","query":{"type":"k.units.unit","where":{"name":"decade"},"seek":"factor"},"expect":{"status":"supported","value":"315576000"}}

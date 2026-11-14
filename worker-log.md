@@ -5291,3 +5291,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: 12 requests (connect A to C, B to A, A To C, box A to box C, the box A to the box C, label the arrow from A to
   B no, the line between A and B; and three where "a"/"A" stays the article); a reader without the lexicon reads as
   before.
+
+
+## 2026-11-15 — first worker: one home for a country's currency (Q68; block 07:15 item 2)
+
+- **Schema change for hosts (k.geo version 6):** `k.geo.country.currency` is gone (slot, its words "currency" and
+  "money", and 246 values of the PSys2 country list in `psys2-countries`, ODbL). The currency of a country is
+  `k.units.currency` read backwards: `k.units.currency` where `country=<k.geo country name>` (a declared join), e.g.
+  France -> EUR "euro", Japan -> JPY "Japanese yen". No derived shard: the query answers it.
+- tools/import/psys2.mjs no longer takes the list's `cur` (it is run once: the demo deleted its copies, so the shard
+  was edited by the same rule, header and FROM-PSYS2.md row too). tools/ranges-core.mjs: `currency` no longer a typical
+  attribute of a country (typical.sop 142 wires); the build regenerated narration (no currency row), relations-geo
+  and the vocabulary ("currency" and "money" now lead to k.units only).
+- Questions: geo-p1 ("what is the currency of Japan", k.geo) dropped, as un-c5 asks it of k.units; un-c7 "what is the
+  currency of France" (k.units, euro) added. tests/import.psys2.test.mjs: no country has a `currency` key.
+- Docs: k.units/WORLD.md (the one home), k.geo/WORLD.md, the k.geo schema comment.
