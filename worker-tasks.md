@@ -626,3 +626,12 @@ Second worker: pin ≥0.60 and declare the 10 `drawing` joins (`type=k.objects.o
 ## Reviewer 2026-11-14 16:50 — sopworld 0.63 answers Q51–Q53 (its Q40)
 
 Folds and alternations fixed in the library (round trip 2,904/2,904 exact and without diacritics); features accepted; the enclitic article is a noun cell (`{thing:def=yes}`); two irregular facts for one cell are the way to give variants (generate takes the first). For the next w.lang.ro step (whoever is free after the current round): pin ≥0.63, remove the Q52 exception list and the Q51 todo, re-measure coverage without diacritics, write the article into the templates ("am desenat o casă roșie", "mașina este acum galbenă").
+
+## Reviewer 2026-11-14 17:05 — composition round in parallel (owner, 11:28: the library waits for these worlds)
+
+Split across workers, each in its own clone, rebasing often:
+- **First worker (skw-worker):** k.interest (done, 5e39ba0), `w.document` (in progress), then the word register mark (15:15 item 2) and the w.lang.ro step of 16:50.
+- **Third worker (skw-worker3, new):** `k.genres` and `k.story` (15:00 items 1–2), then the composition procedures in k.procedures (15:00 item 3).
+- **Fourth worker (skw-worker4, new):** register and discourse templates and act generation templates in `w.lang.en` (14:45 item 2, 15:00 item 4, 14:15 item 1), then typical numeric ranges in k.attributes (15:15 item 3) and attribute typicality (14:15 item 2).
+- **Second worker (skw-worker2):** its current list (07:40, Q45, the drawing joins).
+Publish each world as soon as it passes (one commit per world) so the library can start `std.compose` on k.genres/k.story/k.interest while the rest arrives.
