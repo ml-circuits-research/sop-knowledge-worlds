@@ -164,6 +164,29 @@ Of the 352 frame examples, 17 are changed by an alternation ("Pastel colours ple
 Not covered: double objects with a noun recipient ("give the dog the ball": two spans side by side cannot be told
 apart), tell and show with me (they ask: "tell me the capital of Japan"), plural have in embedded questions (the
 canonical form ends in have and would match its own rule), would you mind + -ing.
+## Variants, skipped words, removal (block "21:05" items 2 and 5)
+
+- **`w.lang.en.variant`** (shard `variants`, by `tools/lang-en-variants.mjs`, by rule from the frames' parts): the
+  frames that are variants a general alternation of the library will cover, marked and not deleted; `alternation`
+  names a family of the alternation rules (`w.lang.en.alternation_family`, shard `alternations`): 45 of 352 frames
+  (request wrapper 17: "I want the bars green", "can you tell me what continent Egypt is in"; passive 3: "I want
+  France and Spain highlighted"; verb ellipsis 27, a family added here under context: no verb, "House huge.",
+  "Legend off."; dative shift 0: every "draw me ..." frame has the oblique pronoun as an optional part, so the frame
+  is already canonical). 39 of them name `canonical` frames (same act and mode, no alternation, every role of the
+  variant). A question with its wh-word in front is canonical (wh in situ is the variant, as the alternation rules
+  say). Not variants by rule: a naming participle ("a guest called Ann" is a reduced relative), "I don't want pears"
+  (a removal: the negation changes the act), a role followed by a determiner ("Bold the second paragraph": the value
+  acts as the verb), a catch-all frame of the rest.
+- **`w.lang.en.skip`** (shard `hand-request`): the words a request skips, by class: politeness (please, pls, plz,
+  kindly, thank you, thanks), desire (want, wanna, like, love, wish, need), filler (also, now, just, too, very,
+  really, then, um, uh, er, hmm, hey, well, ok, okay, so, actually, maybe), conjunction (and between two things of one
+  role), copula (be, being, been: also forms of `w.lang.en.copula` now, with am), reflexive (yourself, myself,
+  ourselves, yourselves, urself), request_preposition (of, on, to, for, with: only for a reader that fills the parts of
+  a thing and has no role marked by them).
+- **Removal**: `w.lang.en.neg means=removal` text without, lose, minus, no (a house without a door, lose the hat, ten
+  minus two, no hat); not and never stay negations. `if` is a joiner of a condition (`kind=condition`, no cut).
+- The named add with a place verb ("Put a guest named Maria at table 1.", block "20:15") is the fourth worker's
+  `acts.make.name.place.p` in `hand-frames` (585afaf). Tests: `tests/w.lang.en.abstraction.test.mjs`.
 
 ## Joins
 

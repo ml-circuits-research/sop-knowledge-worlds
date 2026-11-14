@@ -87,7 +87,7 @@ export const SCALES = [
 export const COMPARATIVES = [
   ['size', 'up', 'bigger, larger', 'biggest, largest'], ['size', 'down', 'smaller, littler', 'smallest, littlest'],
   ['length', 'up', 'longer', 'longest'], ['length', 'down', 'shorter', 'shortest'],
-  ['width', 'up', 'wider, broader', 'widest, broadest'], ['width', 'down', 'narrower', 'narrowest'],
+  ['width', 'up', 'wider, broader, apart', 'widest, broadest'], ['width', 'down', 'narrower, together', 'narrowest'],
   ['height', 'up', 'taller, higher', 'tallest, highest'], ['height', 'down', 'shorter, lower', 'shortest, lowest'],
   ['thickness', 'up', 'thicker, fatter, bolder', 'thickest, fattest, boldest'], ['thickness', 'down', 'thinner, finer', 'thinnest, finest'],
   ['amount', 'up', 'more', 'most'], ['amount', 'down', 'less, fewer', 'least, fewest'],
@@ -95,7 +95,9 @@ export const COMPARATIVES = [
   ['speed', 'up', 'faster, quicker', 'fastest, quickest'], ['speed', 'down', 'slower', 'slowest'],
   ['weight', 'up', 'heavier', 'heaviest'], ['weight', 'down', 'lighter', 'lightest'],
   ['temperature', 'up', 'warmer, hotter', 'warmest, hottest'], ['temperature', 'down', 'colder, cooler', 'coldest, coolest'],
-  ['distance', 'up', 'farther, further', 'farthest, furthest'], ['distance', 'down', 'nearer, closer', 'nearest, closest'],
+  // together and apart (PSys2's ask, block "21:05" item 5): adverbs that compare a distance or a width like a
+  // comparative ("move them apart", "push the tables together"); no superlative
+  ['distance', 'up', 'farther, further, apart', 'farthest, furthest'], ['distance', 'down', 'nearer, closer, together', 'nearest, closest'],
   ['loudness', 'up', 'louder', 'loudest'], ['loudness', 'down', 'quieter, softer', 'quietest, softest'],
   ['price', 'up', 'dearer, pricier, more expensive', 'dearest, priciest, most expensive'], ['price', 'down', 'cheaper', 'cheapest'],
 ];

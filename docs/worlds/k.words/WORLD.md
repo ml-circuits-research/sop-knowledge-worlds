@@ -66,7 +66,9 @@ the ending of a contraction. Before this item 126 reached a sense; `subhead` ("A
 and is now kept as an asked word (WordNet noun 1, "a heading of a subdivision of a text", in its WordNet shard
 `su`). 128 of 138 reach a sense; the 10 that do not are not words of English or not content words: names (Zoe,
 Zoe's, Anah for Ana), a chess square (c3), a misspelling (wat), and closed-class words w.lang.en does not list yet
-(if, myself, yourself, hey, um: block "21:05" item 5). Reaching a sense is not reaching the meant one: Ana, Tom,
+(if, myself, yourself, hey, um: block "21:05" item 5). With item 5 (`w.lang.en.skip`, the joiner if) those are
+closed-class words and the fillers are no content words: 127 content words, 122 reach a sense, 5 misses (names,
+notation, misspelling). Reaching a sense is not reaching the meant one: Ana, Tom,
 Leo reach WordNet senses that are not the names (a collection of anecdotes, a male animal, a constellation), lei
 the garland (the money of Romania is `leu`), G a gram. Checked by `tests/k.words.paraphrase.test.mjs`.
 

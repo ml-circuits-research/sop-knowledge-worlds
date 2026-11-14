@@ -4363,3 +4363,29 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   seat ~ layout slot; table ~ layout; drawing part ~ chapter; face ~ drawing; chart series ~ chapter; list item ~
   event ~ method step), and transfer candidates (a timeline's end, start, finish missing from a list; nothing the
   other way). Measured: 96 world pairs share a structure, 343 filler pairs aligned, 174 roles offered for transfer.
+
+## Block 21:05 items 2 and 5 (2026-11-14, second worker): w.lang.en variants, skipped words, removal; together / apart
+
+- `w.lang.en.variant` (w.lang.en version 3; shard `variants`, 48 wires, 27.7 kB, `tools/lang-en-variants.mjs` by rule
+  from the frames' parts, nothing named by hand): 45 of 352 frames marked, none deleted; `alternation` names a family
+  of the third worker's alternation rules (a52dbec, landed during this item; my first draft had its own
+  `w.lang.en.alternation` type and a wh_fronting class, both dropped on the rebase: a fronted wh-word is the canonical
+  form there): request wrapper 17, passive 3, verb ellipsis 27 (a family added under context), dative shift 0 (the
+  oblique pronoun is optional in every "draw me" frame); 39 with canonical frames (same act and mode, no alternation,
+  all roles of the variant). Kept out by rule: naming participles, "I don't want X" (removal), a role followed by a
+  determiner (the value as verb), catch-all frames.
+- `w.lang.en.skip` (7 classes in the new hand-written shard `hand-request`, CC0): politeness, desire, filler,
+  conjunction, copula, reflexive, request_preposition: every word of the first host's ask (please pls plz; want like;
+  also now just too very really then; and; be; yourself myself; of on to for with) and a few more (um, hey, thanks,
+  ourselves). `w.lang.en.neg` gets `means=removal` (without, lose, minus, no); copula be, am, been, being; joiner if
+  (condition, no cut). The first host can drop its local `w.lang.en.fn` and `w.lang.en.neg` facts.
+- k.values: comparatives together (distance and width, down) and apart (up): 94 comparatives (scales.sop by
+  `node tools/values-core.mjs`).
+- The named add with a place verb (block 20:15) was done by the fourth worker (585afaf): not repeated.
+- Paraphrase coverage with the skip class (tools/paraphrase-words.mjs reads it, desire words stay content words):
+  127 content words, 122 reach a sense, 5 misses (zoe, zoe's, anah, c3, wat); the `closed` cause is empty.
+- Tests: `tests/w.lang.en.abstraction.test.mjs` (5): the shard is the tool's output and loads; every variant names a
+  frame that is there and a family of the alternations, canonical frames agree in act, mode, roles and carry no alternation; the rule's examples
+  (and three non-variants); the asked skip words by class, skipped prepositions and copulas are of the grammar; the
+  negation and removal words; together / apart. w.lang.en 21, templates 8, k.words.paraphrase 2, k.values 5,
+  ask-real 4, questions 424, joins 3 pass; k.kinds relations unchanged by k.values (rerun gives no diff).

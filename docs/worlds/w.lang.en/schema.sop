@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=2 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -396,6 +396,9 @@
 @w.lang.en.neg.text core.slot of=w.lang.en.neg key=text many=true kind=atom kind=string core.source="psys2 78f45863"
 @w.lang.en.neg.ending core.slot of=w.lang.en.neg key=ending many=true kind=string core.source="hand-core 1"
 @w.lang.en.neg.doc core.slot of=w.lang.en.neg key=doc kind=string core.source="psys2 78f45863"
+# `means=removal`: the words take away what follows ("a house without a door", "lose the hat", "minus two"), where
+# the other negation words deny it; a fact without `means` holds negation words (block "21:05" item 5).
+@w.lang.en.neg.means core.slot of=w.lang.en.neg key=means enum=negation enum=removal core.source="hand-core 1"
 # The words that turn a request into "do not"; the words after "do not" that make it no negated request.
 @w.lang.en.neg.imperative core.type of=w.lang.en.neg.imperative shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.neg.imperative.text core.slot of=w.lang.en.neg.imperative key=text many=true required=true kind=atom kind=string core.source="psys2 78f45863"
@@ -468,6 +471,26 @@
 @w.lang.en.word.irregular core.word text=plural text=plurals text=irregular means=w.lang.en.irregular core.source="hand-core 1"
 @w.lang.en.word.contraction core.word text=contraction text=contractions means=w.lang.en.contraction core.source="hand-core 1"
 @w.lang.en.word.wh core.word text="question word" text="question words" means=w.lang.en.wh core.source="hand-core 1"
+# Frames that are variants a general alternation will cover (block "21:05" item 2; the library applies the
+# alternations to every canonical frame once): `frame`, `alternation` (a w.lang.en.alternation_family: request
+# wrapper, passive, dative shift, verb ellipsis), `canonical` (many) the frames of the same act and mode with none of
+# these that take every role the variant takes. Marked, never deleted here: the frames are retired when the library's
+# curve says so. Written by tools/lang-en-variants.mjs (shard variants), by rule from the frames' parts.
+@w.lang.en.variant core.type of=w.lang.en.variant shared=true closed=true core.source="hand-core 1"
+@w.lang.en.variant.frame core.slot of=w.lang.en.variant key=frame id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.variant.alternation core.slot of=w.lang.en.variant key=alternation id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.variant.canonical core.slot of=w.lang.en.variant key=canonical many=true kind=atom core.source="hand-core 1"
+
+# Words a request skips (block "21:05" item 5, asked by the first host): around the content of a request they carry
+# no role. `class`: politeness (please), desire (want, like: a wish before the thing asked for), filler (also, just,
+# um), conjunction (and, where it joins two things of one role), copula (be), reflexive (yourself, myself: the
+# addressee or the speaker as the thing changed), request_preposition (of, on, to, for, with: skipped only by a reader
+# that fills the parts of a thing and has no role marked by them). `text` (many) the words; `doc`.
+@w.lang.en.skip core.type of=w.lang.en.skip shared=true closed=true core.source="hand-core 1"
+@w.lang.en.skip.class core.slot of=w.lang.en.skip key=class id=true required=true enum=politeness enum=desire enum=filler enum=conjunction enum=copula enum=reflexive enum=request_preposition core.source="hand-core 1"
+@w.lang.en.skip.text core.slot of=w.lang.en.skip key=text many=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.skip.doc core.slot of=w.lang.en.skip key=doc kind=string core.source="hand-core 1"
+
 @w.lang.en.word.aux core.word text=auxiliary text="auxiliary verb" means=w.lang.en.aux core.source="hand-core 1"
 @w.lang.en.word.frame core.word text="argument frame" text=frame text=frames means=w.lang.en.frame core.source="hand-core 1"
 @w.lang.en.word.rule core.word text="grammar rule" text=production means=w.lang.en.rule core.source="hand-core 1"

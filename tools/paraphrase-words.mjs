@@ -16,15 +16,15 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 export const PARAPHRASES = join(REPO, 'sources/psys2-eval/paraphrase-failures.jsonl');
 // The closed classes of w.lang.en whose words are not content words.
 const CLOSED = ['w.lang.en.det', 'w.lang.en.pron', 'w.lang.en.anaphor', 'w.lang.en.prep', 'w.lang.en.prep.time', 'w.lang.en.aux', 'w.lang.en.wh', 'w.lang.en.neg',
-  'w.lang.en.copula', 'w.lang.en.relpron', 'w.lang.en.joiner', 'w.lang.en.coord.sep', 'w.lang.en.numeral', 'w.lang.en.ordinal', 'w.lang.en.partitive', 'w.lang.en.other', 'w.lang.en.contraction', 'w.lang.en.answer'];
+  'w.lang.en.copula', 'w.lang.en.relpron', 'w.lang.en.joiner', 'w.lang.en.skip', 'w.lang.en.coord.sep', 'w.lang.en.numeral', 'w.lang.en.ordinal', 'w.lang.en.partitive', 'w.lang.en.other', 'w.lang.en.contraction', 'w.lang.en.answer'];
 // Misses that are not words of English, by cause (checked by hand against the paraphrases; a word listed here that
 // later reaches a sense is reported, so the list cannot hide a fixed word).
 export const NOT_WORDS = {
   name: ['zoe', 'anah'],
   notation: ['c3'],
   misspelling: ['wat'],
-  // closed-class words w.lang.en does not list yet (a conjunction, reflexives, fillers): block "21:05" item 5
-  closed: ['if', 'myself', 'yourself', 'hey', 'um'],
+  // closed-class words w.lang.en did not list (a conjunction, reflexives, fillers) are listed since block "21:05"
+  // item 5 (w.lang.en.skip, the joiner if): none left
 };
 
 // The endings of contractions (you're -> you + are): w.lang.en.contraction.ending.
@@ -35,7 +35,8 @@ export function contractionEndings(worlds = scanWorlds()) {
 export function closedWords(worlds = scanWorlds()) {
   const lang = worlds.find((w) => w.id === 'w.lang.en');
   const out = new Set();
-  for (const s of lang.shards) for (const x of parse(s.text)) if (CLOSED.includes(x.type)) {
+  // the words a request skips are closed-class words, but for the class desire (want, like: verbs of content)
+  for (const s of lang.shards) for (const x of parse(s.text)) if (CLOSED.includes(x.type) && !(x.type === 'w.lang.en.skip' && x.attrs.class?.[0] === 'desire')) {
     for (const k of ['text', 'word', 'form', 'full']) for (const v of x.attrs[k] ?? []) for (const w of String(tok(v)).toLowerCase().split(/\s+/)) out.add(w);
   }
   return out;

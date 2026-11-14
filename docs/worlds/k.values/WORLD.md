@@ -16,8 +16,10 @@ a place in the picture, which of several things, or a number.
   medium, large, huge: the sizes of `k.scenes.thing`), length, width, height, thickness, amount (none, a bit, some,
   a lot, all), degree (slightly, somewhat, quite, very, extremely), brightness, speed, weight, temperature,
   distance, loudness, price (cheap, medium, expensive: the price class of `k.attributes.number`): 14 scales, 47 steps. Other words for a step are `core.word` facts (big: large; little: small).
-- `k.values.comparative` (identity `text`, `scale`): 90 comparatives and superlatives with `way` (up: towards the
-  most) and `degree` (bigger: size, up; shortest: length and height, down; more, fewer, least).
+- `k.values.comparative` (identity `text`, `scale`): 94 comparatives and superlatives with `way` (up: towards the
+  most) and `degree` (bigger: size, up; shortest: length and height, down; more, fewer, least). `together` and `apart`
+  (block "21:05" item 5, asked by the first host) are adverbs that compare like comparatives, on distance and width
+  (move them apart: distance up; push the tables together: distance down).
 - `k.values.shape`: 30 shape names, `solid=true` for the six with depth; plurals and adjectives as words (round:
   circle). Sides, corners and things of a shape are not here.
 - `k.values.direction`: 18 directions with `axis`, `opposite`, and for those in the plane of a picture the step `x`,
