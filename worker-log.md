@@ -6642,3 +6642,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Done and on main: objects-hand data into hand-written shards; the pin at 0.144.0 (no test changes; no [LIB] case fixed yet).
 - Left: `strict=true` on the joined colour and direction slots (k.drawing, k.values, k.attributes, w.seating; imports of k.colours / k.values added; tools/validate.mjs loads the strict targets' shards first): validates (exit 0) but untested, not committed; the diff is in /tmp/w2-strict-joins.diff (scratch scripts in /tmp/w2scripts).
 - Not possible as asked: k.colours.colour.family (its target k.colours.basic is derived into the same world's last shard) and k.drawing.part.shape (k.shapes imports k.kinds: 2.6 MB more on every k.objects load); both keep their enum.
+
+## 2026-11-15 — third worker: stopped (owner, quota)
+
+- Pushed: plural rules (w.lang.en/ro.count), article fills, Romanian words for the w.* kinds, words shards of 22 k.* worlds (vocab byte-identical each).
+- Left (words shards): k.actions, k.animals, k.attributes, k.diagrams, k.drawing, k.faces, k.geo, k.scenes, k.time, k.values, k.words (their tools/tests read schema words: need tools/lib/words-shards.mjs readers); k.motion (its test forbids k.motion in language worlds: owner decision needed); k.objects (k.objects.drawables test red on main). Scripts: /tmp/w3word.sh, /tmp/w3batch.sh, /tmp/w3move_words.py.
+- Left (Romanian data, reviewer 16:10 (b) step 3): morphology tables, closed classes and templates of tools/lang-ro-core.mjs into hand shards (stem folds stay generated).
