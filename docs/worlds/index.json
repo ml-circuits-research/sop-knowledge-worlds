@@ -1,5 +1,5 @@
 {
- "version": "0d2e116b8d62",
+ "version": "4a26f9192d8e",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -90011,6 +90011,48 @@
       "unknown-word w.lang.en.word.k.layouts.key.outline_point.n: w.lang.en.word.k.layouts.key.outline_point.n: means=k.layouts.outline_point.n names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.layouts.key.outline_point.x: w.lang.en.word.k.layouts.key.outline_point.x: means=k.layouts.outline_point.x names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.layouts.key.outline_point.y: w.lang.en.word.k.layouts.key.outline_point.y: means=k.layouts.outline_point.y names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.music",
+     "path": "w.lang.en/shards/words-k.music.sop",
+     "wires": 29,
+     "bytes": 4151,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.music.note: w.lang.en.word.k.music.note: means=k.music.note names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.interval: w.lang.en.word.k.music.interval: means=k.music.interval names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key: w.lang.en.word.k.music.key: means=k.music.key names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.scale: w.lang.en.word.k.music.scale: means=k.music.scale names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.chord: w.lang.en.word.k.music.chord: means=k.music.chord names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.sharps: w.lang.en.word.k.music.sharps: means=k.music.key.sharps names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.flats: w.lang.en.word.k.music.flats: means=k.music.key.flats names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.relative: w.lang.en.word.k.music.relative: means=k.music.key.relative names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.note.letter: w.lang.en.word.k.music.key.note.letter: means=k.music.note.letter names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.note.accidental: w.lang.en.word.k.music.key.note.accidental: means=k.music.note.accidental names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.note.pitch_class: w.lang.en.word.k.music.key.note.pitch_class: means=k.music.note.pitch_class names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.note.enharmonic: w.lang.en.word.k.music.key.note.enharmonic: means=k.music.note.enharmonic names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.interval.semitones: w.lang.en.word.k.music.key.interval.semitones: means=k.music.interval.semitones names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.interval.number: w.lang.en.word.k.music.key.interval.number: means=k.music.interval.number names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.interval.quality: w.lang.en.word.k.music.key.interval.quality: means=k.music.interval.quality names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.tonic: w.lang.en.word.k.music.key.key.tonic: means=k.music.key.tonic names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.mode: w.lang.en.word.k.music.key.key.mode: means=k.music.key.mode names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.signature: w.lang.en.word.k.music.key.key.signature: means=k.music.key.signature names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.parallel: w.lang.en.word.k.music.key.key.parallel: means=k.music.key.parallel names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.enharmonic: w.lang.en.word.k.music.key.key.enharmonic: means=k.music.key.enharmonic names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.scale: w.lang.en.word.k.music.key.key.scale: means=k.music.key.scale names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.key.chord: w.lang.en.word.k.music.key.key.chord: means=k.music.key.chord names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.scale.tonic: w.lang.en.word.k.music.key.scale.tonic: means=k.music.scale.tonic names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.scale.type: w.lang.en.word.k.music.key.scale.type: means=k.music.scale.type names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.scale.note: w.lang.en.word.k.music.key.scale.note: means=k.music.scale.note names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.scale.key: w.lang.en.word.k.music.key.scale.key: means=k.music.scale.key names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.chord.root: w.lang.en.word.k.music.key.chord.root: means=k.music.chord.root names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.chord.quality: w.lang.en.word.k.music.key.chord.quality: means=k.music.chord.quality names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.music.key.chord.note: w.lang.en.word.k.music.key.chord.note: means=k.music.chord.note names no action, type, key or value of the matrix"
      ]
     },
     {
