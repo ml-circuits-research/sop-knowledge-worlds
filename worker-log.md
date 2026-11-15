@@ -6330,3 +6330,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: w.lang.en.forms (new, 2), k.actions (examples use the verb by the library), k.words, import.wordnet,
   questions (446; at-07 fails on main before), w.lang.en, frames, paraphrase, generators, sync, catalog, counts,
   validate (1,196 files, 0 errors), repo: pass.
+
+## 2026-11-15 — fourth worker: the PSys2 / catalog seating difference, a proposal (reviewer 16:45 item 4)
+
+- Read psys2 worlds/plan.seating/schema.host.sop (40292c6) against w.seating 2: guest at a table with a capacity vs
+  on a seat, `seats` default 4, `colour` on table and guest, needs one value. questions.md Q82 proposes one schema
+  (guest.table beside an optional seat with a second capacity and a deny that keeps them together; no seats default:
+  the typical range says it; colour joined to k.colours, no default; needs stays many). w.seating is unchanged.

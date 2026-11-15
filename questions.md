@@ -1151,3 +1151,27 @@ tests/w.lang.en.templates.test.mjs: baacdad (first worker, fixing). tests/genera
 worker) changed tools/lib/lang-en.mjs (the reader takes the singular of a listed pair) without rebuilding
 core-plurals, which now gains `ax/axes`; `node tools/lang-en-core.mjs` and a commit of the shard fixes it.
 Blocking: no.
+
+## Q82 (reviewer 16:45 item 4, fourth worker, 2026-11-15): one seating schema for PSys2 and the catalog (proposal; w.seating unchanged)
+
+Context: psys2 worlds/plan.seating/schema.host.sop (commit 40292c6) lists three deviations from w.seating version 2:
+(a) a guest is **at a table** (`in=table capacity=seats`), while w.seating puts a guest **on a seat** (guest.seat ->
+w.seating.seat -> table; the table's capacity counts seats); (b) `seats` defaults to 4 (w.seating: no default, a table
+with no `seats` takes any number); (c) `colour` on table and guest (default white), which w.seating does not have. And
+the import notes that guest.needs is many in w.seating, one value per attribute in PSys2.
+
+Proposal, one schema both can use (w.seating version 3), nothing changed until the reviewer agrees:
+1. **Table or seat, the seat optional.** A guest gets `table` (type=w.seating.table) beside `seat`; a second capacity
+   `std.schema.capacity of=w.seating.table key=seats holds=w.seating.guest via=table` counts guests at a table, as the
+   first counts seats. A host without seats (PSys2) uses guest.table only; a host with seats uses guest.seat, and a
+   deny keeps them together: a guest with a seat has that seat's table (or no table key). "Put Ana at table 1" and
+   "put Ana on seat 3 of table 1" are then both one act on one schema.
+2. **No default for `seats` in the schema.** A table's usual size is knowledge, not a schema default: the typical
+   range k.attributes.range w.seating.table seats (4 to 10, own) already says it, and a host's sampler or default (PSys2:
+   4) takes it from there. A schema default of 4 would change the meaning of "a table with no seats" for every host.
+   (If the reviewer prefers a default, 4 is the bottom of the range.)
+3. **`colour` on table and guest**, `kind=atom kind=string type=k.colours.colour by=name` (k.colours is the home of
+   colour names, block 14:45), with no default in the schema (white is the host's drawing choice), and the words
+   colour / color.
+4. `needs` stays many (a guest can be vegetarian and need a wheelchair); a host that keeps one value takes the first.
+Meanwhile: w.seating stays at version 2; PSys2 keeps schema.host.sop.
