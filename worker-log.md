@@ -5878,3 +5878,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   tools/measures-core.mjs: `calc.factor` is a plain number.
 - Tests run (new push rule 14:10): arithmetic 4, frames 3, w.lang.en, list-frames, abstraction, alternations,
   templates, phrasing, coverage-report, catalog 8, validate 5, repo: all pass.
+
+## 2026-11-15 — second worker takes block 15:00
+
+- In this order: the two answers of 15:00 (joins report folds quoted and bare names; `holds` / `money` narrate=no);
+  (1) the pin to the library's current release (0.130.0); (2) KR4 on the new pin (tools/lib/lang-en.mjs and
+  tools/lib/choose.mjs: the tests of the local copies run on the library; [LIB] questions where it falls short);
+  (3) `*-data.mjs` tables to hand-written shards, starting with tools/actions-data.mjs, one table per commit.
