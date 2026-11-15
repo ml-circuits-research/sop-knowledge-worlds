@@ -113,6 +113,21 @@ test('frames: "fă și o fetiță" makes a girl; two directions in one move ("mu
   }
 });
 
+// reviewer 16:10: the function words of w.lang.ro by view (shard fn) are the home of the frames' skip, focus and wish
+// groups; real turns: "pai muta casa pe pamint" (a lead filler), "pune si un lac" (focus), "te rog" anywhere
+test('fn: the views of w.lang.ro give the frames their skip, focus and wish words; real turns read with them', () => {
+  const ro = parse(readFileSync(join(WORLDS_DIR, 'w.lang.ro/shards/fn.sop'), 'utf8')).filter((w) => w.type === 'w.lang.ro.fn');
+  const view = (v) => ro.filter((w) => (w.attrs.view ?? []).map(tok).includes(v)).map((w) => one(w, 'text'));
+  for (const [t, v] of [['te rog', 'politeness'], ['vreau', 'wish'], ['aș vrea', 'wish'], ['păi', 'filler'], ['ăă', 'hesitation'], ['și', 'focus']]) assert.ok(view(v).includes(t), `${t}: ${v}`);
+  const phrase = (n) => parse(readFileSync(join(WORLDS_DIR, 'w.lang.ro/shards/frames.sop'), 'utf8')).find((w) => w.type === 'w.lang.ro.phrase' && one(w, 'name') === n);
+  for (const t of view('focus').filter((x) => !x.includes(' mai'))) assert.ok((phrase('focus').attrs.item ?? []).map(tok).includes(t), t);
+  for (const t of view('hesitation')) assert.ok((phrase('skip').attrs.item ?? []).map(tok).includes(t), t);
+  const r = (s) => reader.read(s)[0];
+  assert.equal(r('pai muta casa pe pamint').act, 'place');
+  assert.equal(r('ăă muta casa la stanga').act, 'place');
+  assert.equal(r('vreau o casa te rog').act, 'make');
+});
+
 const ROWS = process.env.RO_EN_MEANING ?? '/tmp/wt2/training/eval/ro-en-meaning/rows.jsonl';
 test('frames: on PSys2\'s ro-en-meaning set, the share of requests whose act and roles the frames read (skipped without it)', { skip: !existsSync(ROWS) && 'no ro-en-meaning rows' }, () => {
   const rows = readFileSync(ROWS, 'utf8').trim().split('\n').map((l) => JSON.parse(l));

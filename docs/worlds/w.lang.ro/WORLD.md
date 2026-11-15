@@ -196,3 +196,11 @@ the noun: "am desenat 20 de case"; English one and other), so a host takes the c
 adjective in the noun's gender and number (`{value:num=pl@kind}`: case roșii, copaci roșii, desene roșii). A word a
 template says itself and inflects is a `w.lang.ro.fill` ("cât de {many@thing}": mulți copaci, multe case).
 tests/w.lang.ro.replies.test.mjs realises every template with casă, copac and desen in every count.
+
+## Function words by view (reviewer 16:10)
+
+Shard `fn` (hand-written, CC0; `w.lang.ro.fn text view at`, as w.lang.en.fn): 44 words and phrases by view: filler
+(păi, deci, adică, uite), politeness (te rog, vă rog, mersi, dacă poți), wish (vreau, aș vrea, doresc, dă-mi),
+hesitation (ăă, hm, îî) and focus (și, de asemenea, tot), and where each stands. tools/lang-ro-frames.mjs takes the
+phrase groups skip (politeness, hesitation and filler that stand anywhere), focus, wish and the leads from here, so
+the shard is their home. Bench after: 105 / 83 / 65 of 161 ("pai muta casa pe pamint" now reads: păi is a lead filler).

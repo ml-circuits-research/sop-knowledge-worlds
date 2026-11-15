@@ -13,7 +13,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards and the dictionary are written by tools/lang-ro-core.mjs
 
-@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax exports=request exports=reply exports=fill core.source="hand-core 1"
+@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax exports=request exports=reply exports=fill exports=fn core.source="hand-core 1"
 
 # ---- morphology (std.morph) ----
 # A paradigm class: a class inherits every cell of its `parent` and overrides some. `drop`: what the lemma loses
@@ -96,6 +96,15 @@
 @w.lang.ro.fill.template core.slot of=w.lang.ro.fill key=template id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.ro.fill.role core.slot of=w.lang.ro.fill key=role id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.ro.fill.lemma core.slot of=w.lang.ro.fill key=lemma required=true kind=string core.source="hand-core 1"
+
+# A function word or phrase that carries no content of a request (reviewer 16:10, as w.lang.en.fn): `text`, its `view`
+# (many): filler (păi, deci, adică), politeness (te rog, vă rog), wish (vreau, aș vrea), hesitation (ăă, hm) and focus
+# (și before the object: "pune și un lac", too); `at` where it stands: lead, tail or any. The frames take their phrase
+# groups skip, focus and wish, and the leads, from these (tools/lang-ro-frames.mjs).
+@w.lang.ro.fn core.type of=w.lang.ro.fn shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.fn.text core.slot of=w.lang.ro.fn key=text id=true required=true kind=string core.source="hand-core 1"
+@w.lang.ro.fn.view core.slot of=w.lang.ro.fn key=view many=true required=true enum=filler enum=politeness enum=wish enum=hesitation enum=focus core.source="hand-core 1"
+@w.lang.ro.fn.at core.slot of=w.lang.ro.fn key=at required=true enum=lead enum=tail enum=any core.source="hand-core 1"
 
 # ---- closed classes ----
 # A determiner or article (the definite article is a cell of the nouns): `form` as written, `lemma` its base form,

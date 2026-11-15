@@ -162,6 +162,8 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
         if (SEARCH_KEYS.has(w.type)) for (const t of w.attrs[SEARCH_KEYS.get(w.type)] ?? []) addWord(text(t), shard.id, w.type, true);
         // a reusable world of facts (w.lang.en) names its own parts (frames, constructions, categories): only the
         // keys that hold English words make vocabulary
+        // vocab.json is an English index: another language world's words are not in it (Romanian stays in w.lang.ro)
+        if (/^w\.lang\./.test(world.id) && world.id !== 'w.lang.en') continue;
         for (const k of identityKeys(w.type).filter((x) => !world.id.startsWith('w.') || WORD_KEYS.has(x))) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
           if (isWordy(x) && !PLACEHOLDER.test(x)) { keys.push(lemma(x)); addWord(x, shard.id, w.type, Boolean(w.attrs.context?.includes('person'))); }

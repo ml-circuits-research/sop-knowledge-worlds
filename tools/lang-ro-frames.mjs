@@ -10,7 +10,7 @@
 // without a preposition (culoarea casei), the definite article is a suffix, clitics join an imperative with a hyphen.
 // Hand-written (CC0); this tool writes the shard from the table.
 //   node tools/lang-ro-frames.mjs      writes docs/worlds/w.lang.ro/shards/frames.sop
-import { writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 
@@ -19,16 +19,24 @@ const SRC = 'hand-core 1';
 const q = (s) => JSON.stringify(String(s));
 const ascii = (s) => String(s).replace(/[ăâîșțşţ]/g, (c) => ({ ă: 'a2', â: 'a3', î: 'i3', ș: 's2', ț: 't2', ş: 's2', ţ: 't2' })[c]).replace(/[^\w.]+/g, '_');
 
+// The function words of w.lang.ro by view (shard fn, hand-written): the home of the skip, focus and wish groups.
+const fnWires = readFileSync(join(WORLDS_DIR, W, 'shards', 'fn.sop'), 'utf8').split('\n').filter((l) => l.startsWith('@'));
+export const fnWords = (pick) => [...new Set(fnWires.flatMap((l) => {
+  const t = JSON.parse(/ text=("(?:[^"\\]|\\.)*")/.exec(l)[1]), at = / at=(\S+)/.exec(l)[1];
+  return [...l.matchAll(/ view=(\S+)/g)].some(([, v]) => pick(v, at)) ? [t] : [];
+}))];
 // Phrase groups (a lead, a politeness word anywhere, the clitics joined after an imperative) and lexicons.
 export const PHRASES = [
-  ['lead.polite', 'words before a request: politeness, a wish, an ability, a sequence', ['te rog', 'vă rog', 'poți să', 'puteți să', 'ai putea să', 'hai să', 'aș vrea să', 'vreau să', 'acum', 'apoi', 'și', 'deci', 'te rog să', 'încearcă să', 'mai']],
-  ['skip', 'politeness words a reader skips wherever they stand ("..., te rog")', ['te rog', 'vă rog', 'mersi', 'mulțumesc', 'hm', 'ăă', 'pls']],
+  // the leads: the fn words of w.lang.ro that stand before a request (shard fn: politeness, wish, filler at lead), and
+  // the sequence words and abilities kept here
+  ['lead.polite', 'words before a request: politeness, a wish, an ability, a sequence', [...new Set([...fnWords((v, at) => at === 'lead' && ['politeness', 'wish', 'filler'].includes(v)), 'te rog', 'vă rog', 'poți să', 'puteți să', 'ai putea să', 'hai să', 'aș vrea să', 'vreau să', 'acum', 'apoi', 'și', 'deci', 'te rog să', 'încearcă să', 'mai'])]],
+  ['skip', 'words a reader skips wherever they stand: the fn words of politeness, hesitation and filler that stand anywhere ("..., te rog", "ăă")', fnWords((v, at) => at !== 'lead' && ['politeness', 'hesitation', 'filler'].includes(v))],
   ['clitic.joined', 'the clitics joined to an imperative with a hyphen (w.lang.ro.pron clitic=joined): pune-l, scoate-ți, dă-mi (not și: an imperative speaks to you, and și after a verb is "too", the phrase focus)', ['l', 'o', 'i', 'le', 'mi', 'ți', 'ne', 'vă', 'ni', 'vi', 'li', 'm', 's', 'te', 'ne']],
   ['clitic.bound', 'the clitics before a finite verb (w.lang.ro.pron clitic=bound): îl mut, o șterg', ['îl', 'o', 'îi', 'le', 'îmi', 'îți', 'își', 'ne', 'vă', 'mă', 'te', 'se']],
   // Q69 item 2 (PSys2's real turns "pune și un lac", "mută și mai la stânga", "desenează și un măgar"): și after the verb
   // means too or also, not and; the frames take it as an optional part before the object or the direction
-  ['focus', 'words of focus between the verb and its object or direction, "too", "also", "even" (pune și un lac: put a lake too; mută și mai la stânga: move it even more to the left); a frame passes over them', ['și', 'de asemenea', 'tot']],
-  ['wish', 'a wish that names what to make', ['vreau', 'aș vrea', 'doresc', 'aș dori', 'mi-ar plăcea', 'îmi trebuie', 'dă-mi']],
+  ['focus', 'words of focus between the verb and its object or direction, "too", "also", "even" (pune și un lac: put a lake too; mută și mai la stânga: move it even more to the left); a frame passes over them', fnWords((v) => v === 'focus').filter((w) => !w.includes(' mai'))],
+  ['wish', 'a wish that names what to make', fnWords((v) => v === 'wish').filter((w) => !/ să$/.test(w))],
 ];
 export const LEXICONS = [
   ['cmp.more', 'comparatives up: mai + an adjective of size', ['mai mare', 'mai mari', 'mai lung', 'mai lungă', 'mai lungi', 'mai înalt', 'mai înaltă', 'mai înalți', 'mai lat', 'mai lată', 'mai gros', 'mai groasă', 'mai larg', 'mai largă', 'mai multe', 'mai mulți']],

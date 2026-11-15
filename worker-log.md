@@ -6150,3 +6150,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   and the k.actions form words; 1,043 of the k.words forms are no w.lang.en irregular_form (most are regular forms the
   class dictionary generates: pegged, married, pettier), so dropping them needs the library's inflectBy to confirm
   each one first (after the pin move). Number words not moved yet.
+
+## 2026-11-15 — third worker: fn views for w.lang.ro (reviewer 16:10 (c))
+
+- Type w.lang.ro.fn and hand shard fn (44: filler, politeness, wish, hesitation, focus); lang-ro-frames derives the
+  phrase groups skip, focus, wish and the leads from it. Bench: 104 / 82 / 64 -> **105 / 83 / 65** ("pai muta casa pe
+  pamint" reads place on the ground). tests/w.lang.ro.frames.test.mjs: views, the groups follow the shard, three real
+  shapes (păi, ăă, te rog at the end).

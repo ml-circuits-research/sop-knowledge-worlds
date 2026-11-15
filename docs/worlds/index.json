@@ -1,5 +1,5 @@
 {
- "version": "2eb1e327f058",
+ "version": "6335c651fdc2",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -89175,6 +89175,7 @@
     "w.lang.ro.det",
     "w.lang.ro.ending",
     "w.lang.ro.fill",
+    "w.lang.ro.fn",
     "w.lang.ro.fold",
     "w.lang.ro.frame",
     "w.lang.ro.irregular",
@@ -89207,10 +89208,22 @@
      "warnings": []
     },
     {
+     "id": "w.lang.ro/shards/fn",
+     "path": "w.lang.ro/shards/fn.sop",
+     "wires": 44,
+     "bytes": 4601,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.ro/shards/frames",
      "path": "w.lang.ro/shards/frames.sop",
      "wires": 347,
-     "bytes": 53745,
+     "bytes": 54140,
      "keys": [],
      "sources": [
       "hand-core-1"
