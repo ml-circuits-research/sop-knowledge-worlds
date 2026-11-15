@@ -1,5 +1,5 @@
 {
- "version": "ecb89fe8ee4d",
+ "version": "cc2b66b4abb5",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -13304,10 +13304,22 @@
      "warnings": []
     },
     {
+     "id": "k.diagrams/shards/topics-cc0-1-0-and-public-domain",
+     "path": "k.diagrams/shards/topics-cc0-1-0-and-public-domain.sop",
+     "wires": 23,
+     "bytes": 4906,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0 AND public-domain",
+     "warnings": []
+    },
+    {
      "id": "k.diagrams/shards/topics-cc0-1-0",
      "path": "k.diagrams/shards/topics-cc0-1-0.sop",
-     "wires": 1176,
-     "bytes": 201830,
+     "wires": 1153,
+     "bytes": 197798,
      "keys": [],
      "sources": [
       "conceptnet-5.7",
@@ -13377,6 +13389,7 @@
     "CC-BY-4.0",
     "CC-BY-SA-4.0",
     "CC0-1.0",
+    "CC0-1.0 AND public-domain",
     "ODbL-1.0",
     "WordNet-3.0",
     "public-domain"
@@ -54373,7 +54386,7 @@
      "id": "k.procedures/shards/everyday",
      "path": "k.procedures/shards/everyday.sop",
      "wires": 189,
-     "bytes": 38962,
+     "bytes": 39280,
      "keys": [
       "boiling an egg",
       "brushing teeth",
@@ -54402,7 +54415,7 @@
      "sources": [
       "hand-core-1"
      ],
-     "license": "CC0-1.0",
+     "license": "CC0-1.0 AND public-domain",
      "warnings": []
     },
     {
@@ -54540,7 +54553,8 @@
     "hand-core-1"
    ],
    "licenses": [
-    "CC0-1.0"
+    "CC0-1.0",
+    "CC0-1.0 AND public-domain"
    ],
    "warnings": []
   },

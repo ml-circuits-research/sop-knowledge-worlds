@@ -437,8 +437,8 @@ export const TASK_WORDS = [
 // `after` defaults to the step before (none for the first). `words` name the procedure as people ask for it: gerunds,
 // nouns and "how to" forms only ("make a cup of tea" may ask for a drawing of one).
 const CDC = 'Centers for Disease Control and Prevention (CDC), "When and How to Wash Your Hands", Handwashing in Community Settings (2023)';
-const ADA = 'American Dental Association, "Brushing Your Teeth", MouthHealthy (mouthhealthy.org, read 2026-11-15)';
-const GCC = 'The Green Cross Code (UK road safety for pedestrians), as given by Milton Keynes City Council, "Green Cross Code" (milton-keynes.gov.uk, read 2026-11-15)';
+const ADA = 'American Dental Association, "Brushing Your Teeth", MouthHealthy (mouthhealthy.org, read 2026-11-15; facts only, no text taken)';
+const GCC = 'The Green Cross Code (UK road safety for pedestrians), as given by Milton Keynes City Council, "Green Cross Code" (milton-keynes.gov.uk, read 2026-11-15; facts only, no text taken)';
 const FOODSAFETY = 'FoodSafety.gov (U.S. Department of Health and Human Services), "4 Steps to Food Safety" (read 2026-11-15)';
 const USFA = 'U.S. Fire Administration (FEMA), "Stop, drop and roll" pictograph (usfa.fema.gov, read 2026-11-15)';
 const READY = 'Ready.gov (FEMA), "Earthquakes": Survive DURING, Drop, Cover, then Hold On (read 2026-11-15)';
@@ -449,7 +449,7 @@ export const HOWTOS = [
     steps: [['Boil water'], ['Put a tea bag in a cup'], ['Pour the hot water into the cup'], ['Let it steep for a few minutes'],
       ['Take out the tea bag'], ['Milk or sugar?', { role: 'decision' }], ['Add milk or sugar', { branch: 'yes' }],
       ['Drink the tea', { after: [6, 7], branch: 'no' }]] },
-  { name: 'washing hands', basis: 'cited', cite: CDC, words: ['washing your hands', 'handwashing', 'hand washing', 'how to wash your hands', 'how to wash hands'],
+  { name: 'washing hands', basis: 'cited', license: 'public-domain', cite: CDC, words: ['washing your hands', 'handwashing', 'hand washing', 'how to wash your hands', 'how to wash hands'],
     about: 'washing hands with soap and water, in the five steps of the CDC (wet, lather, scrub, rinse, dry)',
     steps: [['Wet your hands', { detail: 'Wet your hands with clean, running water (warm or cold), turn off the tap, and apply soap.' }],
       ['Lather with soap', { detail: 'Lather your hands by rubbing them together with the soap. Lather the backs of your hands, between your fingers, and under your nails.' }],
@@ -462,38 +462,35 @@ export const HOWTOS = [
       ['Water the soil'], ['Put the pot in a warm, light place'], ['Is the soil dry?', { role: 'decision' }],
       ['Water the soil again', { branch: 'yes' }], ['Wait for the seed to sprout', { after: [7, 8], branch: 'no' }]] },
   // 20 more (reviewer 19:05, fourth worker): six cited (the words of the source kept in `detail`), fourteen own
-  { name: 'brushing teeth', basis: 'cited', cite: ADA, words: ['brushing your teeth', 'tooth brushing', 'toothbrushing', 'how to brush your teeth', 'how to brush teeth'],
-    about: 'brushing the teeth with a soft-bristled brush, as the American Dental Association describes it (twice a day)',
-    steps: [['Hold the brush at a 45-degree angle', { detail: 'Place your toothbrush at a 45-degree angle to the gums.' }],
-      ['Brush in short strokes', { detail: 'Gently move the brush back and forth in short (tooth-wide) strokes.' }],
-      ['Brush every surface', { detail: 'Brush the outer surfaces, the inner surfaces, and the chewing surfaces of the teeth.' }],
-      ['Brush the inside of the front teeth', { detail: 'To clean the inside surfaces of the front teeth, tilt the brush vertically and make several up-and-down strokes.' }]] },
-  { name: 'crossing the road', basis: 'cited', cite: GCC, words: ['crossing the street', 'crossing a road', 'green cross code', 'how to cross the road', 'how to cross the street'],
-    about: 'crossing a road on foot by the six steps of the Green Cross Code (think, stop, look, wait, look and listen again, arrive alive)',
-    steps: [['Find a safe place to cross', { detail: 'Find a safe place to cross the road such as a pedestrian crossing, an underpass or a footbridge.' }],
-      ['Stop at the kerb', { detail: 'Just before you get to the kerb, stop.' }],
-      ['Look and listen for traffic', { detail: 'Look all around you for traffic. Make sure that you listen carefully for traffic that you can’t see.' }],
-      ['Is traffic coming?', { role: 'decision' }],
-      ['Let it pass', { branch: 'yes', detail: 'If traffic is coming, let it pass.' }],
-      ['Walk straight across', { after: [4, 5], branch: 'no', detail: 'When it is safe and there is no traffic, walk straight across the road.' }],
-      ['Keep looking while you cross', { detail: 'Look and keep looking while you cross the road.' }]] },
-  { name: 'keeping food safe', basis: 'cited', cite: FOODSAFETY, words: ['food safety', 'safe food handling', 'clean separate cook chill', 'how to keep food safe'],
+  // brushing teeth and crossing the road: the steps are facts read where `cite` says, written here in our own words
+  // (basis=paraphrased, no quotation: the ADA's and the council's pages are not under a licence we may republish)
+  { name: 'brushing teeth', basis: 'paraphrased', cite: ADA, words: ['brushing your teeth', 'tooth brushing', 'toothbrushing', 'how to brush your teeth', 'how to brush teeth'],
+    about: 'brushing the teeth twice a day with a soft brush, after the steps the American Dental Association gives',
+    steps: [['Tilt the brush towards the gums'], ['Brush gently back and forth, one tooth at a time'],
+      ['Clean the outside, the inside and the tops of the teeth'], ['Turn the brush upright for the inside of the front teeth']] },
+  { name: 'crossing the road', basis: 'paraphrased', cite: GCC, words: ['crossing the street', 'crossing a road', 'green cross code', 'how to cross the road', 'how to cross the street'],
+    about: 'crossing a road on foot, after the six steps of the Green Cross Code (think, stop, look, wait, look and listen again, arrive alive)',
+    steps: [['Think: choose a safe place to cross', { detail: 'A crossing with lights or stripes, a bridge or a subway is safest.' }],
+      ['Stop near the edge of the pavement'], ['Look both ways and listen'], ['Is traffic coming?', { role: 'decision' }],
+      ['Wait until it has gone by', { branch: 'yes' }], ['Cross in a straight line', { after: [4, 5], branch: 'no' }],
+      ['Keep looking and listening until you are across']] },
+  { name: 'keeping food safe', basis: 'cited', license: 'public-domain', cite: FOODSAFETY, words: ['food safety', 'safe food handling', 'clean separate cook chill', 'how to keep food safe'],
     about: 'the four steps to food safety at home: clean, separate, cook, chill',
     steps: [['Clean', { detail: 'Wash cutting boards, dishes, utensils, and countertops with hot, soapy water.' }],
       ['Separate', { detail: 'Use separate cutting boards and plates for produce, meat, poultry, seafood, and eggs.' }],
       ['Cook', { detail: 'Use a food thermometer to be sure your food is safe.' }],
       ['Chill', { detail: 'Refrigerate perishable foods within 2 hours.' }]] },
-  { name: 'stop, drop and roll', basis: 'cited', cite: USFA, words: ['stop drop and roll', 'if your clothes catch fire', 'what to do if your clothes catch fire'],
+  { name: 'stop, drop and roll', basis: 'cited', license: 'public-domain', cite: USFA, words: ['stop drop and roll', 'if your clothes catch fire', 'what to do if your clothes catch fire'],
     about: 'what to do if your clothes catch fire, as the U.S. Fire Administration teaches it',
     steps: [['Stop', { detail: 'If your clothes catch fire, stop, drop and roll.' }],
       ['Drop to the ground and cover your face', { detail: 'Stop, drop to the ground, and cover your face with your hands.' }],
       ['Roll until the fire is out', { detail: 'Roll over and over or back and forth until the fire is out.' }]] },
-  { name: 'drop, cover and hold on', basis: 'cited', cite: READY, words: ['drop cover and hold on', 'what to do in an earthquake', 'earthquake safety'],
+  { name: 'drop, cover and hold on', basis: 'cited', license: 'public-domain', cite: READY, words: ['drop cover and hold on', 'what to do in an earthquake', 'earthquake safety'],
     about: 'what to do while the ground shakes in an earthquake, as Ready.gov describes it',
     steps: [['Drop to your hands and knees', { detail: 'Drop to your hands and knees.' }],
       ['Cover your head and neck', { detail: 'Cover your head and neck with your arms.' }],
       ['Hold on until the shaking stops', { detail: 'Hold on to any sturdy furniture until the shaking stops.' }]] },
-  { name: 'covering a cough', basis: 'cited', cite: CDC_COUGH, words: ['covering coughs and sneezes', 'cough etiquette', 'how to cover a cough', 'how to sneeze'],
+  { name: 'covering a cough', basis: 'cited', license: 'public-domain', cite: CDC_COUGH, words: ['covering coughs and sneezes', 'cough etiquette', 'how to cover a cough', 'how to sneeze'],
     about: 'covering a cough or a sneeze so as not to spread germs, as the CDC describes it',
     steps: [['Do you have a tissue?', { role: 'decision' }],
       ['Cough or sneeze into a tissue', { branch: 'yes', detail: 'Cover your mouth and nose with a tissue when you cough or sneeze' }],
@@ -563,10 +560,10 @@ export const HOWTOS = [
 
 function howtoLines(h) {
   const H = seg(h.name), out = [];
-  out.push(wire(`k.procedures.howto.${H}`, 'k.procedures.howto', [['name', text(h.name)], ['about', text(h.about)], ['basis', h.basis], ['cite', h.cite && text(h.cite)]], SRC));
+  out.push(wire(`k.procedures.howto.${H}`, 'k.procedures.howto', [['name', text(h.name)], ['about', text(h.about)], ['basis', h.basis], ['cite', h.cite && text(h.cite)], ['core.license', h.license]], SRC));
   h.steps.forEach(([about, o = {}], i) => {
     const n = i + 1, after = o.after ?? (n > 1 ? [n - 1] : []);
-    out.push(wire(`k.procedures.howto_step.${H}.${n}`, 'k.procedures.howto_step', [['howto', text(h.name)], ['n', n], ['about', text(about)], ['role', o.role ?? 'process'], ...after.map((a) => ['after', a]), ['branch', o.branch], ['detail', o.detail && text(o.detail)]], SRC));
+    out.push(wire(`k.procedures.howto_step.${H}.${n}`, 'k.procedures.howto_step', [['howto', text(h.name)], ['n', n], ['about', text(about)], ['role', o.role ?? 'process'], ...after.map((a) => ['after', a]), ['branch', o.branch], ['detail', o.detail && text(o.detail)], ['core.license', o.detail && h.license]], SRC));
   });
   out.push(wire(`k.procedures.word.howto.${H}`, 'core.word', [...h.words.map((w) => ['text', w]), ['means', h.name], ['of', 'k.procedures.howto.name']], SRC));
   return out;
@@ -615,7 +612,7 @@ export function procedureShards() {
     const words = shard === 'tasks' ? `\n\n# Words for the named tasks (the value of the goal role kind).\n${TASK_WORDS.map(([task, ws]) => wire(`k.procedures.word.task.${seg(task)}`, 'core.word', [...ws.map((w) => ['text', w]), ['means', task], ['of', 'k.procedures.goal.value']], SRC)).join('\n')}` : '';
     files[`${shard}.sop`] = `${header({ id: `k.procedures/shards/${shard}`, about: `${ms.length} ${about[shard]}`, sources: ['hand-core 1 (hand-written in this repository: tools/procedures-core.mjs)'], license: 'CC0-1.0', script: 'tools/procedures-core.mjs' })}\n${body}${words}\n`;
   }
-  files['everyday.sop'] = `${header({ id: 'k.procedures/shards/everyday', about: `${HOWTOS.length} everyday procedures a person may ask a flowchart of (${HOWTOS.map((h) => h.name).join(', ')}; block 07:30 item 2): their steps, decisions and order, each said to be cited or written here (own); not methods of the planner.`, sources: ['hand-core 1 (hand-written in this repository: tools/procedures-core.mjs; the instructions cited are named by `cite`)'], license: 'CC0-1.0', script: 'tools/procedures-core.mjs' })}\n${HOWTOS.map((h) => `# ${h.name}\n${howtoLines(h).join('\n')}`).join('\n\n')}\n`;
+  files['everyday.sop'] = `${header({ id: 'k.procedures/shards/everyday', about: `${HOWTOS.length} everyday procedures a person may ask a flowchart of (${HOWTOS.map((h) => h.name).join(', ')}; block 07:30 item 2): their steps, decisions and order, each said to be cited, paraphrased (facts read in a source, our words) or written here (own); not methods of the planner.`, sources: ['hand-core 1 (hand-written in this repository: tools/procedures-core.mjs; the instructions cited are named by `cite`; the steps of a procedure with basis=cited quote a work of the US government, public domain, marked core.license=public-domain)'], license: 'CC0-1.0 AND public-domain', script: 'tools/procedures-core.mjs' })}\n${HOWTOS.map((h) => `# ${h.name}\n${howtoLines(h).join('\n')}`).join('\n\n')}\n`;
   return files;
 }
 

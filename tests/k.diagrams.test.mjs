@@ -143,11 +143,15 @@ test('a flowchart of making tea, washing hands, planting a seed: everyday proced
   const names = howtos.map((h) => one(h, 'name'));
   assert.equal(names.length, 23);
   for (const n of ['making tea', 'planting a seed', 'washing hands', 'brushing teeth', 'crossing the road', 'doing the laundry']) assert.ok(names.includes(n), n);
-  // reviewer 19:05: 20 more; the cited ones keep the words of the source in `detail`
-  assert.deepEqual(howtos.filter((h) => one(h, 'basis') === 'cited').map((h) => one(h, 'name')).sort(), ['brushing teeth', 'covering a cough', 'crossing the road', 'drop, cover and hold on', 'keeping food safe', 'stop, drop and roll', 'washing hands']);
+  // reviewer 19:05: 20 more; the cited ones quote works of the US government (public domain, core.license) in
+  // `detail`; brushing teeth and crossing the road are paraphrased (reviewer 19:35: their sources' text is not ours to copy)
+  assert.deepEqual(howtos.filter((h) => one(h, 'basis') === 'cited').map((h) => one(h, 'name')).sort(), ['covering a cough', 'drop, cover and hold on', 'keeping food safe', 'stop, drop and roll', 'washing hands']);
+  for (const h of howtos.filter((x) => one(x, 'basis') === 'cited')) assert.equal(one(h, 'core.license'), 'public-domain', one(h, 'name'));
+  assert.deepEqual(howtos.filter((h) => one(h, 'basis') === 'paraphrased').map((h) => one(h, 'name')).sort(), ['brushing teeth', 'crossing the road']);
+  for (const s of steps.filter((x) => ['brushing teeth', 'crossing the road'].includes(one(x, 'howto')))) assert.doesNotMatch(String(one(s, 'detail') ?? ''), /kerb|45-degree|tooth-wide/, s.id);
   for (const h of howtos) {
     assert.ok(!methods.has(one(h, 'name')), `${one(h, 'name')} is not a method of the planner`);
-    assert.equal(Boolean(h.attrs.cite), one(h, 'basis') === 'cited', `${one(h, 'name')}: cited with a cite, own without`);
+    assert.equal(Boolean(h.attrs.cite), one(h, 'basis') !== 'own', `${one(h, 'name')}: cited or paraphrased with a cite, own without`);
     const own = steps.filter((s) => one(s, 'howto') === one(h, 'name'));
     const ns = new Set(own.map((s) => one(s, 'n')));
     assert.equal(own.filter((s) => !s.attrs.after).length, 1, `${one(h, 'name')}: one first step`);

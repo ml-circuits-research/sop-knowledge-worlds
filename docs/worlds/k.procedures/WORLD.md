@@ -38,19 +38,23 @@ face's variant, a map view, the list or seating-plan rendering of a task that ha
 random flowchart of a method takes a user-facing one, or an everyday procedure.
 
 **Everyday procedures** (shard `everyday`, block 07:30 item 2; PSys2 Q17: "a flowchart of making tea" found only the
-drawing methods): **making tea** (own: 8 steps, the decision "Milk or sugar?"), **washing hands** (cited: the CDC's
+drawing methods): **making tea** (own: 8 steps, the decision "Milk or sugar?"), **washing hands** (cited, public domain: the CDC's
 five steps, "When and How to Wash Your Hands", each step's `detail` its sentence), **planting a seed** (own: 9 steps,
 the decision "Is the soil dry?"). They are knowledge of how a person does a task, for diagrams (`k.diagrams` fills:
 flowchart by `after` and `n`, pipeline by `n`) and answers; the planner never reads them (their steps are not acts of
 k.actions on a live world). Their words are gerunds, nouns and "how to" forms ("tea making", "how to wash your
 hands"), never "make a cup of tea", which may ask for a drawing.
-Twenty more (reviewer 19:05, 23 in all): six **cited**, each step's `detail` the words of the source: brushing teeth
-(American Dental Association, MouthHealthy), crossing the road (the Green Cross Code), keeping food safe (FoodSafety.gov,
-clean, separate, cook, chill), stop, drop and roll (U.S. Fire Administration), drop, cover and hold on (Ready.gov),
-covering a cough (CDC; its last step, washing hands, is marked as added here); and fourteen **own**: making a sandwich,
-boiling an egg, making toast, cooking pasta, making the bed, doing the laundry, washing the dishes, setting the table,
-packing a school bag, feeding a pet, watering a plant, getting dressed, tying shoelaces, sending a letter. Thirteen of
-the 23 have a decision (a diamond in a flowchart).
+Twenty more (reviewer 19:05, 23 in all). **Cited**, each step's `detail` the words of a work of the US government
+(public domain; the procedure and its quoting steps say `core.license=public-domain`, the shard's header
+`CC0-1.0 AND public-domain`, and tools/validate.mjs refuses a cited fact without an allowed licence): washing hands
+(CDC), keeping food safe (FoodSafety.gov: clean, separate, cook, chill), stop, drop and roll (U.S. Fire
+Administration), drop, cover and hold on (Ready.gov), covering a cough (CDC; its last step, washing hands, is marked
+as added here). **Paraphrased** (reviewer 19:35: the facts read where `cite` says, every step in our own words, no
+quotation, since the pages are not under a licence we may republish): brushing teeth (American Dental Association,
+MouthHealthy), crossing the road (the Green Cross Code's six steps). **Own**: making a sandwich, boiling an egg,
+making toast, cooking pasta, making the bed, doing the laundry, washing the dishes, setting the table, packing a
+school bag, feeding a pet, watering a plant, getting dressed, tying shoelaces, sending a letter. Thirteen of the 23
+have a decision (a diamond in a flowchart).
 
 **Alternatives** are the methods of one goal: the planner keeps those whose goal facts fit, whose `world` is the live
 world's schema (or none), and whose preconditions hold, then takes the lowest `rank`, then the first by name.

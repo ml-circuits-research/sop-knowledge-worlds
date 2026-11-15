@@ -11,7 +11,8 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
 import { scanWorlds, schemaWorld, readHeader, isMatrix, fmtViolation, WORLDS_DIR, MAX_WIRES, MAX_BYTES, REPO } from './lib/worlds.mjs';
-import { refused, dataFolderErrors } from './lib/licenses.mjs';
+import { refused, dataFolderErrors, ids } from './lib/licenses.mjs';
+const bare = (v) => (String(v).startsWith('"') ? JSON.parse(v) : String(v));
 
 const CACHE = join(REPO, '.validate-cache.json');
 const sha = (...xs) => { const h = createHash('sha256'); for (const x of xs) h.update(x).update('\0'); return h.digest('hex'); };
@@ -76,6 +77,15 @@ export function validateWorlds(root = WORLDS_DIR, { cache = root === WORLDS_DIR 
         else if (!w.attrs['core.source']) errors.push(`${shard.path}: @${w.id} has no core.source`);
         // An open world takes a fact of a type no schema declares; here every fact's type must be declared.
         if (!isMatrix(w) && !w.type.startsWith('core.') && !base.world.schema(w.type)) errors.push(`${shard.path}: @${w.id} is of the type ${w.type}, which no schema declares`);
+        // Reviewer 19:35: a fact that quotes a source (`basis=cited`) names the licence of the quoted text
+        // (`core.license`), on the allowlist and among the licences of its file's header; a text under no licence we may
+        // republish is not quoted (`basis=paraphrased`: the facts in our own words).
+        if (!isMatrix(w) && w.attrs.basis?.map(bare).includes('cited')) {
+          const lic = w.attrs['core.license']?.map(bare)[0];
+          if (!lic) errors.push(`${shard.path}: @${w.id} quotes a source (basis=cited) and names no core.license`);
+          else if (refused(lic)) errors.push(`${shard.path}: @${w.id}: core.license ${lic}: ${refused(lic)}`);
+          else if (!ids(header.license?.[0]).includes(lic)) errors.push(`${shard.path}: @${w.id}: core.license ${lic} is not among the licences of the file's header`);
+        }
       }
       if (wires.length > MAX_WIRES) errors.push(`${shard.path}: ${wires.length} wires, more than ${MAX_WIRES}`);
       if (shard.bytes > MAX_BYTES) errors.push(`${shard.path}: ${shard.bytes} bytes, more than ${MAX_BYTES}`);

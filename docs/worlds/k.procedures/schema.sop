@@ -154,17 +154,19 @@
 # block 07:30 item 2): knowledge of how a task is done, not a method of the planner (its steps are not acts of
 # k.actions on a live world, and the planner never reads it). `name` says it as people ask for it ("a flowchart of
 # making tea"); `about` in words; `basis` says where its steps come from: `cited` (the published instructions `cite`
-# names) or `own` (written here from common practice, no source claimed).
+# names, quoted in the steps' `detail`: the fact names the `core.license` of the quoted text, which tools/validate.mjs
+# checks), `paraphrased` (the steps are facts read where `cite` says, written here in our own words, nothing quoted)
+# or `own` (written here from common practice, no source claimed).
 @k.procedures.howto core.type of=k.procedures.howto shared=true closed=true core.source="hand-core 1"
 @k.procedures.howto.name core.slot of=k.procedures.howto key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.procedures.howto.about core.slot of=k.procedures.howto key=about required=true kind=string core.source="hand-core 1"
-@k.procedures.howto.basis core.slot of=k.procedures.howto key=basis required=true enum=cited enum=own core.source="hand-core 1"
+@k.procedures.howto.basis core.slot of=k.procedures.howto key=basis required=true enum=cited enum=paraphrased enum=own core.source="hand-core 1"
 @k.procedures.howto.cite core.slot of=k.procedures.howto key=cite kind=string core.source="hand-core 1"
 
 # A step of an everyday procedure: number `n`; `about` the step in a few words (the text of its box in a flowchart);
 # `role` process (something done) or decision (a question answered yes or no); `after` (many) the steps it comes
 # after (none: the first step); `branch` the answer, yes or no, of the decision among `after` that leads to it;
-# `detail` the step in full, as the source says it.
+# `detail` the step in full: as the source says it where the procedure is cited, else in our own words.
 @k.procedures.howto_step core.type of=k.procedures.howto_step shared=true closed=true core.source="hand-core 1"
 @k.procedures.howto_step.howto core.slot of=k.procedures.howto_step key=howto id=true required=true kind=atom kind=string type=k.procedures.howto by=name core.source="hand-core 1"
 @k.procedures.howto_step.n core.slot of=k.procedures.howto_step key=n id=true required=true kind=integer min=1 core.source="hand-core 1"

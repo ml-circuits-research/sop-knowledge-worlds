@@ -42,6 +42,25 @@ test('a good world passes and is measured', () => {
   } finally { rmSync(root, { recursive: true }); }
 });
 
+test('a fact that quotes a source (basis=cited) names a core.license of the allowlist and of its header (reviewer 19:35)', () => {
+  const sch = '@k.toy core.module name=k.toy exports=item\n@k.toy.item.name core.slot of=k.toy.item key=name id=true kind=atom\n@k.toy.item.basis core.slot of=k.toy.item key=basis enum=cited enum=paraphrased enum=own\n';
+  const pd = '# sources: test 1\n# license: CC0-1.0 AND public-domain\n# script: none\n';
+  const root = fixture({
+    'k.toy/schema.sop': sch,
+    'k.toy/shards/a.sop': `${pd}@k.toy.a k.toy.item name=a basis=cited core.license=public-domain core.source="test 1"\n@k.toy.b k.toy.item name=b basis=paraphrased core.source="test 1"\n`,
+    'k.toy/shards/b.sop': `${pd}@k.toy.c k.toy.item name=c basis=cited core.source="test 1"\n`,
+    'k.toy/shards/c.sop': `${pd}@k.toy.d k.toy.item name=d basis=cited core.license=CC-BY-NC-4.0 core.source="test 1"\n`,
+    'k.toy/shards/d.sop': `${head}@k.toy.e k.toy.item name=e basis=cited core.license=public-domain core.source="test 1"\n`,
+  });
+  try {
+    const errs = validateWorlds(root).errors.join('\n');
+    assert.doesNotMatch(errs, /a\.sop/, 'cited with a public-domain licence of the header, and paraphrased without one: fine');
+    assert.match(errs, /b\.sop: @k\.toy\.c quotes a source \(basis=cited\) and names no core\.license/);
+    assert.match(errs, /c\.sop: @k\.toy\.d: core\.license CC-BY-NC-4\.0/);
+    assert.match(errs, /d\.sop: @k\.toy\.e: core\.license public-domain is not among the licences of the file's header/);
+  } finally { rmSync(root, { recursive: true }); }
+});
+
 test('refusals, a missing source, a missing header and a duplicate across shards are errors', () => {
   const root = fixture({
     'k.toy/schema.sop': schema,

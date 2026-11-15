@@ -6617,3 +6617,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - No silent change: the 15 test files that call library functions beyond parsing (now including w.lang.en.library,
   phrasing and forms) give identical spec output under 0.130 and 0.144. So the library has fixed none of the cases of
   Q83, Q84, Q87, Q88 yet: tests/w.lang.en.library.test.mjs keeps its lists (82 of 166 frame examples; 37 nouns).
+## 2026-11-15 — fourth worker: the licence of quoted steps (reviewer 19:35, fault in cdd50ba)
+
+- The `everyday` shard is CC0 and quoted its sources. The US government works (CDC washing hands of 66e839f and
+  covering a cough, FoodSafety.gov, USFA, Ready.gov) are public domain: their procedures and quoting steps carry
+  `core.license=public-domain`, the shard's header says `CC0-1.0 AND public-domain`. Brushing teeth (ADA) and crossing
+  the road (Green Cross Code, Milton Keynes Council's page) are copyrighted: rewritten in our own words, nothing
+  quoted, `basis=paraphrased` (a new value of k.procedures.howto.basis; `cite` says where the facts were read).
+- tools/validate.mjs: a fact with `basis=cited` must name a `core.license` on the allowlist and among its header's
+  licences; tests/validate.test.mjs has toy facts for each case.
+- Lesson: a quotation carries its source's licence, not the file's; quote only what is public domain or under an
+  allowed licence, and say so on the fact.
+- Tests: validate, k.diagrams, k.procedures, catalog.
