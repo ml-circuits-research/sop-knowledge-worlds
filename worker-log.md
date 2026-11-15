@@ -6006,3 +6006,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Type w.lang.en.fn (text, view: filler / politeness / wish / hesitation, at: lead / tail / any) and hand shard fn: 61
   words; tests/w.lang.en.fn.test.mjs (the reviewer's words with their views; 59 of 61 said in the hand-over's phrase
   groups, kindly and umm new).
+
+## 2026-11-15 — third worker: KR3, k.feelings replies to w.lang.en; AGENTS.md rule 2
+
+- k.feelings.feeling.reply (30 English sentences) moved to w.lang.en type feeling_reply (feeling joins
+  k.feelings.feeling by name), hand shard w.lang.en/shards/feelings; the slot and its word left k.feelings, the
+  strings left tools/feelings-core.mjs (one home); question fe-04 dropped from k.feelings (the reply is no k.feelings
+  fact now; tests/k.feelings.test.mjs checks a reply in w.lang.en for every feeling).
+- AGENTS.md rule 2: English is the language of ids and keys; words of a language live in its language world.
+- Seen on main, not mine: tests/k.kinds.relations.test.mjs fails "make.arrangement holds arrangement" (a k.actions role
+  whose holds value has no argument class yet).

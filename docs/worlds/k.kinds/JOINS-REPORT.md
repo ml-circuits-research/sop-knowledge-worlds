@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **224** in 33 worlds; distinct values 10358, meeting a target 10300 (99.4 %), open 58
+- declared joins: **228** in 34 worlds; distinct values 10425, meeting a target 10367 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
 
@@ -229,12 +229,16 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
 | w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 13 | 13 |  |
 | w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
+| w.lang.en | `w.lang.en.feeling_reply.feeling` | `k.feelings.feeling` | name | 30 | 30 |  |
 | w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 18 | 17 | `own` |
 | w.lang.en | `w.lang.en.mode_map.act` | `k.actions.act` | name | 2 | 2 |  |
 | w.lang.en | `w.lang.en.part.act` | `k.actions.act` | name | 16 | 16 |  |
+| w.lang.en | `w.lang.en.reply.act` | `k.actions.act` | name | 9 | 9 |  |
 | w.lang.en | `w.lang.en.role_map.act` | `k.actions.act` | name | 12 | 12 |  |
 | w.lang.en | `w.lang.en.role_map.act_role` | `k.actions.role` | name (match act:act) | 15 | 15 |  |
 | w.lang.en | `w.lang.en.template.act` | `k.actions.act` | name | 19 | 19 |  |
+| w.lang.ro | `w.lang.ro.reply.act` | `k.actions.act` | name | 9 | 9 |  |
+| w.lang.ro | `w.lang.ro.request.act` | `k.actions.act` | name | 19 | 19 |  |
 | w.list | `w.list.item.currency` | `k.units.currency` | code | 0 | 0 |  |
 | w.list | `w.list.item.food` | `k.food.food` | name | 0 | 0 |  |
 | w.list | `w.list.item.object` | `k.objects.object` | name | 0 | 0 |  |

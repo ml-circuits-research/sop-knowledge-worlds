@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (276 of 1100 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (276 of 1099 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -319,7 +319,6 @@
 @k.attributes.narration.k.feelings.feeling.looks_like k.attributes.narration type=k.feelings.feeling key=looks_like narrate=yes salience=0.06 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.feelings.feeling.caused_by k.attributes.narration type=k.feelings.feeling key=caused_by narrate=yes salience=0.5 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.feelings.feeling.opposite k.attributes.narration type=k.feelings.feeling key=opposite narrate=yes salience=0.34 form=relation basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.feelings.feeling.reply k.attributes.narration type=k.feelings.feeling key=reply narrate=no salience=0 why="what a host says back, not a fact" core.source="hand-core 1"
 @k.attributes.narration.k.food.food.name k.attributes.narration type=k.food.food key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.food.food.kind k.attributes.narration type=k.food.food key=kind narrate=yes salience=0.6 form=kind basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.food.food.botanically k.attributes.narration type=k.food.food key=botanically narrate=yes salience=0.51 form=kind basis=measured core.source="hand-core 1"

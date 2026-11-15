@@ -1,5 +1,5 @@
 {
- "version": "2110802af1cc",
+ "version": "f1aca83bac69",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4576,8 +4576,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1100,
-     "bytes": 212337,
+     "wires": 1099,
+     "bytes": 212143,
      "keys": [
       "a",
       "about",
@@ -5082,7 +5082,6 @@
       "relative",
       "repeat_max",
       "repeat_min",
-      "reply",
       "required",
       "result",
       "rgb",
@@ -14955,7 +14954,7 @@
      "id": "k.feelings/shards/feelings",
      "path": "k.feelings/shards/feelings.sop",
      "wires": 60,
-     "bytes": 13190,
+     "bytes": 11417,
      "keys": [
       "afraid",
       "amused",
@@ -30085,8 +30084,8 @@
     {
      "id": "k.kinds/shards/relations-feelings",
      "path": "k.kinds/shards/relations-feelings.sop",
-     "wires": 10,
-     "bytes": 2367,
+     "wires": 9,
+     "bytes": 2205,
      "keys": [
       "caused_by",
       "cheeks",
@@ -30097,7 +30096,6 @@
       "looks_like",
       "mouth",
       "opposite",
-      "reply",
       "tone"
      ],
      "sources": [
@@ -87389,6 +87387,7 @@
     "w.lang.en.ellipsis.starter",
     "w.lang.en.ellipsis.trail",
     "w.lang.en.ending",
+    "w.lang.en.feeling_reply",
     "w.lang.en.fixed",
     "w.lang.en.fn",
     "w.lang.en.frame",
@@ -88201,6 +88200,18 @@
      ],
      "sources": [
       "psys2-78f45863"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/feelings",
+     "path": "w.lang.en/shards/feelings.sop",
+     "wires": 30,
+     "bytes": 5011,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "CC0-1.0",
      "warnings": []

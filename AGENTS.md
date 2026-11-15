@@ -13,8 +13,12 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 
 1. **SOP Lang only for worlds.** Schemas and instances are `.sop` files. No JSON facts, no JS inside wires. Host functions
    are declared with `core.function` (sopworld 0.15.0) and are never needed to *read* a world.
-2. **English only inside worlds.** Type names, keys, values, `core.word` texts: English. Proper names keep their own
-   spelling (`Chișinău`). Translation is always a separate layer of the application, never here.
+2. **English is the language of ids and keys; words of a language live in its language world** (KR3, reviewer
+   14:25). Type names, keys and enum values are English identifiers in every world. Wording meant to be said or read
+   (replies, explanations, word lists) belongs to the language world of its language (`w.lang.en`, `w.lang.ro`), in a
+   shard that world owns, joined to the neutral fact by name; a second language adds a shard there and changes no
+   other world. Proper names keep their own spelling (`Chișinău`). The `core.word` blocks of the k.* schemas are
+   English words still to move (KR3, world by world).
 3. **One language, no notation inside values.** Use wires and repeated keys, never mini-grammars in strings
    (`a|b`, `x:y`, `?` as "optional"). `?x` is only a variable; `@` declares; `$` refers; `::` is a fact namespace;
    dots are part of names. If you need new syntax, stop and ask in `questions.md`.

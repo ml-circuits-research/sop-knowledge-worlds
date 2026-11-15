@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld } from '../tools/lib/worlds.mjs';
 import { feelingShards, FEELINGS } from '../tools/feelings-core.mjs';
+import { parse } from '../tools/sopworld/sopworld.mjs';
 import { presetFace, composeFace } from '../tools/render-faces.mjs';
 
 const worlds = scanWorlds();
@@ -22,6 +23,7 @@ test('the shard is what tools/feelings-core.mjs gives; 30 feelings', () => {
   assert.equal(feelings.filter((w) => w.attrs.expression).length, 20, 'feelings that name a k.faces expression');
 });
 
+const replies = new Map(parse(readFileSync(join(WORLDS_DIR, 'w.lang.en', 'shards', 'feelings.sop'), 'utf8')).filter((w) => w.type === 'w.lang.en.feeling_reply').map((w) => [tok(w.attrs.feeling[0]), w.attrs.text[0]]));
 test('every feeling shows on a face: a k.faces expression or variants that exist; it has causes and a kind reply', () => {
   const names = new Set(feelings.map((w) => tok(w.attrs.name[0])));
   for (const w of feelings) {
@@ -30,7 +32,8 @@ test('every feeling shows on a face: a k.faces expression or variants that exist
     for (const e of w.attrs.expression ?? []) assert.ok(expressions.has(tok(e)), `${w.id}: expression ${e}`);
     for (const s of slots) assert.ok(variants.has(`${s} ${tok(w.attrs[s][0])}`), `${w.id}: ${s} ${w.attrs[s][0]}`);
     assert.ok(w.attrs.caused_by.length >= 2, `${w.id}: causes`);
-    assert.ok(tok(w.attrs.reply[0]).length > 15, `${w.id}: reply`);
+    // the kind reply is English wording, w.lang.en's feeling_reply (KR3)
+    assert.ok(tok(replies.get(tok(w.attrs.name[0])) ?? '').length > 15, `${w.id}: reply in w.lang.en`);
     for (const o of w.attrs.opposite ?? []) assert.ok(names.has(tok(o)) && tok(o) !== tok(w.attrs.name[0]), `${w.id}: opposite ${o}`);
     assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
     // The face composes: the preset child with the expression and the variants of the feeling.
