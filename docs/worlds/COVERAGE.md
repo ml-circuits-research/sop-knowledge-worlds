@@ -29,7 +29,7 @@ the place of the dog).
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
 | material | 328 (22%) | 105 (7%) | 1067 (71%) | `k.attributes.thing` (material) |
-| what it can do | 340 (23%) | 70 (5%) | 1090 (73%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| what it can do (of the 463 it applies to) | 255 (55%) | 52 (11%) | 156 (34%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
 | what it is used for | 336 (22%) | 147 (10%) | 1017 (68%) | `k.attributes.thing` (used_for) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
@@ -40,6 +40,8 @@ the place of the dog).
 | kind (what it is a kind of) | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (is_a, instance_of) |
 | definition | 1500 (100%) | 0 (0%) | 0 (0%) | `k.words.sense` (gloss) |
 | where it is worn | 37 (2%) | 21 (1%) | 1442 (96%) | `k.wearables.wearable` (worn_on) |
+
+"what it can do" is counted only over the things it applies to: a thing that acts by itself: an animal, a person, a plant, a natural phenomenon, a machine, a vehicle, a powered device or appliance, a light, a clock, a weapon, a celestial body (by its k.attributes kind, or by its first WordNet noun sense; `canApplies` in tools/attributes-abilities.mjs).
 
 ## Worlds
 
@@ -104,7 +106,7 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **parts or joins between kinds**: world, phone, person, honey, gun, earth, hospital, street, coffee, road, building, ship, hotel, station, rock, sun, ball, key, star, prison, stick, tea, camera, store, jail, shop, wine, island, beer, planet
 - **anchor (where another thing sits)**: world, phone, honey, earth, hospital, coffee, road, picture, hotel, station, sun, ball, key, fish, star, stick, bank, tea, camera, store, jail, cat, shop, wine, beer, computer, planet, moon, suit, bell
 - **material**: world, person, honey, dog, hospital, street, coffee, road, building, hotel, station, horse, fish, prison, bank, tea, camera, store, jail, cat, shop, wine, island, beer, chicken, hole, bomb, bird, rose, restaurant
-- **what it can do**: world, person, honey, bed, earth, hospital, street, coffee, road, picture, building, hotel, bag, station, rock, box, key, prison, stick, bank, tea, camera, wall, store, jail, shop, wine, island, beer, planet
+- **what it can do**: earth, camera, planet, bullet, shower, pig, screen, sheep, bug, fridge, radar, nut, root, lance, shield, oven, reed, worm, buffalo, iris, stove, pod, hay, grill, swine, comet, refrigerator, laurel, ape, camel
 - **what it is used for**: world, person, dog, earth, street, building, station, rock, sun, horse, star, prison, stick, wall, jail, cat, island, planet, moon, chicken, hole, engine, bomb, bird, stone, beach, rose, cake, meat, mountain
 - **size in metres (the longest side)**: world, honey, earth, street, coffee, road, station, sun, star, bank, tea, wall, wine, island, beer, planet, moon, hole, beach, milk, meat, mountain, path, sugar, hill, pocket, plant, chocolate, soup, champagne
 - **weight in kilograms**: house, world, honey, earth, hospital, street, coffee, road, building, hotel, station, sun, star, prison, bank, tea, wall, store, jail, shop, wine, island, beer, planet, moon, hole, beach, rose, restaurant, milk

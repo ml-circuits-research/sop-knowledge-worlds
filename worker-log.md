@@ -6422,3 +6422,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - tests/k.actions.effects.test.mjs was red on main since 26ddd3f (the verb forms left k.actions): its verb table now
   takes the third person and past from w.lang.en through the library's inflectBy; 8 stories read again.
 - Tests: k.actions 4, effects 2, acts, families, w.lang.en.forms, catalog, validate, repo: 37 pass.
+## 2026-11-15 — fifth worker: COVERAGE.md counts `can` only where it applies (block 18:10 (3))
+
+- `canApplies` (tools/attributes-abilities.mjs): a thing acts by itself when its k.attributes kind is animal, creature,
+  person, plant, vehicle, machine, device, appliance, sky or weapon; a k.food name does not; otherwise its first WordNet
+  noun sense is an animal, a person, a plant or a natural phenomenon, or under machine, conveyance, electrical or
+  electronic device, source of illumination, timepiece, celestial body, weapon or appliance. tools/coverage-report.mjs
+  counts "what it can do" over those (`APPLIES`) and writes the rule under the table.
+- COVERAGE.md: "what it can do (of the 463 it applies to)": by its name 255 (55 %), through its drawing 52 (11 %), none
+  156 (34 %); before, over all 1,500: 340 / 70 / 1,090 (73 % "missing", most of them beds, roads, boxes). The gap list
+  is now of things that act (earth, camera, planet, bullet, pig, sheep, fridge, oven ...).
+- Test (tests/coverage-report.test.mjs): the row says "of the N it applies to", its counts add up to N, and N lies
+  between 300 and the 1,500.

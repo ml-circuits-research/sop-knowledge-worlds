@@ -69,6 +69,29 @@ export function proposals(worlds = scanWorlds()) {
   return out;
 }
 
+// Whether `can` applies to a thing at all (block "Reviewer 2026-11-15 18:10": COVERAGE.md counts abilities only where they
+// apply): a thing that does something by itself. Where k.attributes gives the thing a kind, the kind decides
+// (animal, creature, person, plant, vehicle, machine, device, appliance, sky, weapon); a name of k.food does not act;
+// otherwise its first WordNet noun sense decides: an animal, a person, a plant or a natural phenomenon
+// (noun.animal, noun.person, noun.plant, noun.phenomenon), or a kind of machine, conveyance, electrical or electronic
+// device, source of light, timepiece, celestial body, weapon or appliance. A bed, a road, a box, a key, a wall do
+// nothing by themselves: what they are for is `used_for` (tools/attributes-uses.mjs).
+export const ACTING_KINDS = new Set(['animal', 'creature', 'person', 'plant', 'vehicle', 'machine', 'device', 'appliance', 'sky', 'weapon']);
+const ACTING_LEX = new Set(['noun.animal', 'noun.person', 'noun.plant', 'noun.phenomenon']);
+const ACTING_UP = new Set(['machine', 'conveyance', 'electrical device', 'electronic device', 'electronic equipment', 'source of illumination', 'timepiece', 'celestial body', 'weapon', 'armament', 'home appliance', 'appliance']);
+export function canApplies(worlds = scanWorlds()) {
+  const senses = firstNounSenses(worlds);
+  const kind = new Map();
+  for (const t of factsOf('k.attributes', 'k.attributes.thing', worlds)) if (t.attrs.kind) kind.set(tok(t.attrs.name[0]), tok(t.attrs.kind[0]));
+  const foods = new Set(factsOf('k.food', 'k.food.food', worlds).map((f) => tok(f.attrs.name[0])));
+  return (w) => {
+    if (kind.has(w)) return ACTING_KINDS.has(kind.get(w));
+    if (foods.has(w)) return false;
+    const s = senses.get(w);
+    return Boolean(s && (ACTING_LEX.has(s.supersense) || s.kind_of.some((k) => ACTING_UP.has(k))));
+  };
+}
+
 export function derive(worlds = scanWorlds(), audit = readAudit()) {
   const props = proposals(worlds);
   const unaudited = props.filter((p) => !audit.has(`${p.name}\t${p.verb}`));

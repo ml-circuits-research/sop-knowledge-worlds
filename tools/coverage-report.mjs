@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { run } from './coverage.mjs';
+import { canApplies } from './attributes-abilities.mjs';
 import { factsByType } from './aspects-report.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -45,17 +46,25 @@ export const ROWS = [
   ['where it is worn', ['k.wearables.wearable', 'name', ['worn_on']]],
 ];
 
+// A row counted only over the things it applies to: [label of the row, (worlds) => (word) => boolean, the rule in words].
+export const APPLIES = { 'what it can do': [canApplies, 'a thing that acts by itself: an animal, a person, a plant, a natural phenomenon, a machine, a vehicle, a powered device or appliance, a light, a clock, a weapon, a celestial body (by its k.attributes kind, or by its first WordNet noun sense; `canApplies` in tools/attributes-abilities.mjs)'] };
+
 export function coverageReport(list, vocab) {
   const facts = factsByType(ROWS.flatMap((r) => r.slice(1).map((s) => s[0])));
   const sets = (row) => row.slice(1).map(([type, by, keys, only]) => new Set(facts.get(type).filter((w) => keys.some((k) => w.attrs[k]) && (!only || only(w))).flatMap((w) => (w.attrs[by] ?? []).map((t) => tok(t).toLowerCase()))));
   const drawn = list.filter((e) => e.drawing), linked = list.filter((e) => !e.drawing && e.link), neither = list.filter((e) => !e.drawing && !e.link);
   const rows = ROWS.map((row) => {
     const ss = sets(row);
+    const applies = APPLIES[row[0]]?.[0]();
+    const all = list;
+    list = applies ? all.filter((e) => applies(e.word)) : all; // the things the row applies to
     const has = (n) => n && ss.some((s) => s.has(n.toLowerCase()));
     const own = list.filter((e) => has(e.word));
     const through = list.filter((e) => !has(e.word) && (has(e.drawing) || has(e.link?.drawing)));
     const none = list.filter((e) => !has(e.word) && !has(e.drawing) && !has(e.link?.drawing));
-    return { label: row[0], where: row.slice(1).map(([type, , keys]) => `\`${type}\` (${keys.join(', ')})`).join(', '), own: own.length, through: through.length, none: none.length, gap: none.slice(0, GAP).map((e) => e.word) };
+    const of = list.length;
+    list = all;
+    return { label: row[0], where: row.slice(1).map(([type, , keys]) => `\`${type}\` (${keys.join(', ')})`).join(', '), own: own.length, through: through.length, none: none.length, gap: none.slice(0, GAP).map((e) => e.word), ...(applies ? { of, rule: APPLIES[row[0]][1] } : {}) };
   });
   const worlds = new Map();
   for (const e of list) for (const w of new Set((vocab[e.word] ?? []).map((id) => id.split('/')[0]))) worlds.set(w, (worlds.get(w) ?? 0) + 1);
@@ -74,7 +83,10 @@ export function coveragePage(r) {
     `- a drawing of its own name: ${pct(r.drawn)}`, `- no drawing, but a synonym or a stand-in with one: ${pct(r.linked)}`, `- neither: ${pct(r.neither)}`,
     `- the most frequent with neither: ${r.neitherGap.join(', ')}`, '',
     '## Attributes', '', '| attribute | by its name | through its drawing | none | where |', '|---|---:|---:|---:|---|'];
-  for (const x of r.rows) lines.push(`| ${x.label} | ${pct(x.own)} | ${pct(x.through)} | ${pct(x.none)} | ${x.where} |`);
+  const pctOf = (n, of) => `${n} (${Math.round((100 * n) / of)}%)`;
+  for (const x of r.rows) lines.push(x.of === undefined ? `| ${x.label} | ${pct(x.own)} | ${pct(x.through)} | ${pct(x.none)} | ${x.where} |`
+    : `| ${x.label} (of the ${x.of} it applies to) | ${pctOf(x.own, x.of)} | ${pctOf(x.through, x.of)} | ${pctOf(x.none, x.of)} | ${x.where} |`);
+  for (const x of r.rows.filter((y) => y.rule)) lines.push('', `"${x.label}" is counted only over the things it applies to: ${x.rule}.`);
   lines.push('', '## Worlds', '', 'How many of the common things are a word of the vocabulary index that leads to a shard of the world.', '', '| world | common things |', '|---|---:|');
   for (const [w, n] of r.worlds) lines.push(`| \`${w}\` | ${pct(n)} |`);
   lines.push('', '## Gaps', '', `The ${GAP} most frequent common things with no value, by their name or through a drawing.`, '');

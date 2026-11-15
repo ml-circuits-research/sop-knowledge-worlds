@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, schemaWorld } from '../tools/lib/worlds.mjs';
-import { ROWS } from '../tools/coverage-report.mjs';
+import { ROWS, APPLIES } from '../tools/coverage-report.mjs';
 
 test('every row of the report names a type and keys that exist', () => {
   const worlds = scanWorlds();
@@ -18,7 +18,7 @@ test('every row of the report names a type and keys that exist', () => {
 
 test('COVERAGE.md has the drawings, a line per attribute, the worlds and the gaps (the counts change with the worlds: rerun tools/coverage-report.mjs)', () => {
   const page = readFileSync(join(WORLDS_DIR, 'COVERAGE.md'), 'utf8');
-  for (const [label] of ROWS) assert.ok(page.includes(`| ${label} | `), label);
+  for (const [label] of ROWS) assert.ok(page.includes(APPLIES[label] ? `| ${label} (of the ` : `| ${label} | `), label);
   for (const h of ['## Drawings', '## Attributes', '## Worlds', '## Gaps']) assert.ok(page.includes(h), h);
 });
 
@@ -28,7 +28,10 @@ test('the counts of a fresh run add up (when the raw files are there)', { skip: 
   const r = coverageReport(run().list, JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8')));
   assert.equal(r.total, 1500);
   assert.equal(r.drawn + r.linked + r.neither, r.total);
-  for (const x of r.rows) assert.equal(x.own + x.through + x.none, r.total, x.label);
+  for (const x of r.rows) assert.equal(x.own + x.through + x.none, x.of ?? r.total, x.label);
+  // block 18:10: abilities are counted over the things they apply to (an animal, a machine ...), not over a bed or a road
+  const can = r.rows.find((x) => x.label === 'what it can do');
+  assert.ok(can.of > 300 && can.of < r.total && can.rule, `${can.of}`);
 });
 
 // Round 10, item 7: the two generated pages go stale when a world grows. With the raw files there, a fresh run
