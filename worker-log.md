@@ -6492,3 +6492,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - My Q82 and Q85 [LIB] (inflectBy's 37 catalog nouns; the planner's choose) collided with the fourth worker's Q82 and
   Q85 (pushed meanwhile): mine are renumbered **Q87** and **Q88** in questions.md, tests/w.lang.en.library.test.mjs and
   tests/k.compose.test.mjs. Q83 (readFrames) and Q84 (realise) keep their numbers.
+## 2026-11-15 — fifth worker: test:all on main at b717dac (06:45); state at be5c4e2
+
+- 105 files, 3,207 tests: 3,178 pass, 8 fail in 6 files, 21 skipped, 604 s; none not run. Five red files were those of
+  Q86 (26ddd3f: k.actions.effects, k.words.paraphrase; f4fcb4f: questions at-07, k.attributes.glosses). New:
+  tests/w.lang.en.abstraction.test.mjs (the variants shard is not what tools/lang-en-variants.mjs gives): **ee130ff**
+  (fourth worker, w.seating version 3 and its frames), found by running the test at every commit since 5b90131 (green
+  up to 44bebac, red from ee130ff).
+- Rerun on main at be5c4e2: all six are green now (k.attributes.glosses skips without the raw files). Over 30 s at
+  b717dac: catalog 74 s (fresh worktree, no validate cache), k.attributes 33 s. Questions.md Q87.

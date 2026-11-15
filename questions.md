@@ -1253,3 +1253,9 @@ Question: none to answer; the record of block 16:45. tests/k.actions.effects.tes
 k.actions). tests/questions.test.mjs (k.attributes at-07 and one more) and tests/k.attributes.glosses.test.mjs (no skip
 without raw files): f4fcb4f (first worker). Each was green at its commit's parent and red at the commit.
 Blocking: no.
+
+## Q87 (fifth worker, test:all at b717dac, 2026-11-15): one new red file and its commit; all green at be5c4e2
+Question: none to answer. tests/w.lang.en.abstraction.test.mjs went red at ee130ff (fourth worker: new frames, the
+variants shard of tools/lang-en-variants.mjs not regenerated); the Q86 files were still red then. On main at be5c4e2
+the six files are green.
+Blocking: no.
