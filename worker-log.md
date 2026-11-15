@@ -6603,3 +6603,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   UniMorph gives the same class, n.e).
 - Tests: w.schemas (a calendar session), w.lang.ro.words, w.lang.ro, k.kinds relations, joins report, structures,
   catalog, validate, w.lang.en.
+
+## 2026-11-15 — second worker: the one build moved to sopworld 0.144.0 (94cffa2; reviewer 18:45 item 2)
+
+- `tools/sopworld/sopworld.mjs` = the library's `docs/sopworld.mjs` at 94cffa2 (release 0.144.0, build 6cbb6f3ee855);
+  VERSION, the validate test, AGENTS.md, README.md, docs/index.html, docs/worlds/README.md, w.lang.en/WORLD.md and the
+  alternations test name it. Build: only the catalog's commit and hash change.
+- Removed names since 0.130 (`fallbackOf`, `subjectOf` no longer exported): not used here. All 33 names tools and tests
+  import exist in 0.144.
+- **Tests whose result changes: none.** Full run on 0.144 (93 files one at a time): 5 files fail, and each fails the
+  same way with 0.130 on this tip, so they are red on main, not from the pin: coverage, import.wordnet,
+  k.objects.drawables, k.values, w.lang.ro.words (the KR6 and words-shard work in progress).
+- No silent change: the 15 test files that call library functions beyond parsing (now including w.lang.en.library,
+  phrasing and forms) give identical spec output under 0.130 and 0.144. So the library has fixed none of the cases of
+  Q83, Q84, Q87, Q88 yet: tests/w.lang.en.library.test.mjs keeps its lists (82 of 166 frame examples; 37 nouns).

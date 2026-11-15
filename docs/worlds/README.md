@@ -44,7 +44,7 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
 ## index.json
 
 ```json
-{ "version": "<content hash>", "sopworld": "ad4d456",
+{ "version": "<content hash>", "sopworld": "94cffa2",
   "worlds": [ { "id": "k.objects", "version": "1", "schema": "k.objects/schema.sop",
                 "exports": ["k.objects.object", "k.objects.part"], "depends": ["k.commonsense"],
                 "shards": [ { "id": "k.objects/shards/buildings", "path": "k.objects/shards/buildings.sop",

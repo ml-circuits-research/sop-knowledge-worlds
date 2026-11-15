@@ -149,7 +149,7 @@ library's type-driven reader (`docs/worlds/k.kinds/WORLD.md`). Item 4: `k.kinds.
 the knowledge worlds with live use say which structures they are (assignment, whole with parts, sequence, graph,
 placement, values by category) and which types, keys and acts play each role, so analogies are computed. A
 world schema may hold denies (`w.timeline`: an event is inside its timeline; `w.face`: one part of each kind on a
-face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.130.0 at
-commit ad4d456 (`tools/sopworld/VERSION`).
+face) but no function. Every world, `k.*` and `w.*`, is validated with one sopworld build, 0.144.0 at
+commit 94cffa2 (`tools/sopworld/VERSION`).
 
 Agents working here start with [AGENTS.md](AGENTS.md).

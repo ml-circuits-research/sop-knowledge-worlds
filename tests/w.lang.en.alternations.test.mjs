@@ -2,7 +2,7 @@
 // canonical form a frame is written in, by rules that are facts of the language world. Checks: the shard is what the
 // tool writes and loads in the schema; families form a layered graph; every test sentence comes back to its canonical
 // form with the rules named, read by the pinned build's `normalise` (src/alternate.mjs of the library; the test's
-// copy of it was deleted when the pin reached 0.90, reviewer 00:40; on 0.130 since 2026-11-15).
+// copy of it was deleted when the pin reached 0.90, reviewer 00:40; on 0.144 since 2026-11-15).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
