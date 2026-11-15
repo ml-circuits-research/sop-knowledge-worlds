@@ -6068,3 +6068,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - vocab.json and vocab-kinds.json: byte-identical before and after (no diff, not even ordering). index.json lists the
   three new shards. COVERAGE.md was stale on main (k.colours 71 -> 73, k.values 20 -> 6, from another commit):
   regenerated here.
+## 2026-11-15 — fifth worker: full `npm run test:all` on main (db16219)
+
+- 88 files, 3,151 tests: 3,131 pass, 0 fail, 20 skipped, 631 s summed (load average about 9). No file "not run" (none
+  killed, none with 0 tests).
+- Over 30 s: only tests/questions.test.mjs (87.3 s, 1,928 MB, 448 questions of every world). Next slowest: import.geo
+  28.5, k.attributes 27.0, w.lang.ro.frames 24.1, w.lang.ro 24.1, k.kinds.relations 22.0, w.lang.en.templates 21.7,
+  k.procedures 20.4, derived.load 20.0, k.objects.render 19.5. Before this round eight files were over 30 s
+  (catalog 171, derived 89 killed, questions 79, k.objects.render 79, k.attributes 64, gallery 56, k.cores 51,
+  k.objects.names 43).
+- Skipped (raw data absent or by design): coverage 4, import.wordnet 3, coverage-report 2, import.objects 2, and one
+  each in import.dicebear, import.noto, import.psys2, k.actions.acts, k.animals, k.objects.drawables, k.parts,
+  k.people.given-names, k.units.currencies.
