@@ -123,8 +123,8 @@ copied in, without their tile), so that a page can show it. It is a plain compos
 its name. The vocabulary index maps the name of a thing to its shard.
 
 `scenes-nature` (19 scenes), `scenes-town` (15), `scenes-indoors` (17), `scenes-other` (10: space, underwater, night,
-the seasons, the weather, feasts): the scene, what it has, and its other names. Written by `tools/scenes-core.mjs`
-from `tools/scenes-data.mjs`.
+the seasons, the weather, feasts): the scene, what it has, and its other names. Hand-written: these shards are the home of the scenes (edit them
+there; reviewer 15:00 item 3; until 2026-11-15 they were written from a JS table with a notation of its own).
 
 ## Joins
 

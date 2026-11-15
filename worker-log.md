@@ -6434,3 +6434,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   is now of things that act (earth, camera, planet, bullet, pig, sheep, fridge, oven ...).
 - Test (tests/coverage-report.test.mjs): the row says "of the N it applies to", its counts add up to N, and N lies
   between 300 and the 1,500.
+
+## 2026-11-15 — second worker: tools/scenes-data.mjs into hand-written shards (reviewer 15:00 item 3, second table)
+
+- The four `k.scenes/shards/scenes-*.sop` are the home of the 61 scenes and what each has (1210 wires), byte for byte as
+  written before, the header now `# script: none (hand-written)`. tools/scenes-data.mjs is deleted: it held the
+  scenes in a notation of its own inside strings ("thing=drawing,count,where,side,@on,*"), against AGENTS rule 3.
+  tools/scenes-core.mjs writes only the things shards (from place-size.tsv) now.
+- tests/k.scenes.test.mjs checks what the generator checked: hand-written headers, one scene per name, one fact per
+  thing of a scene, whole counts (and, as before, drawings are objects and what a thing is on is in its scene); the
+  drawn share per scene is counted from the facts. k.scenes, catalog, validate, repo: 26 pass.
+- Left: tools/objects-hand-data.mjs (1,010 lines), the next table.

@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { readPlaceSize, thingShards, allThings, letterOf } from '../tools/scenes-core.mjs';
 import { animalThings } from '../tools/animals-core.mjs';
-import { handSources } from '../tools/lib/worlds.mjs';
+import { handSources, readHeader } from '../tools/lib/worlds.mjs';
 import { sizeClass, measuredSizes, SIZE_STEPS } from '../tools/lib/size-class.mjs';
 
 const worlds = scanWorlds();
@@ -116,20 +116,24 @@ test('KR1 item 5: the time of a scene and of a usage is a part of the day of k.t
 
 // ---- R7.1: the scenes
 import { existsSync } from 'node:fs';
-import { sceneShards, sceneWires, SCENES } from '../tools/scenes-data.mjs';
 import { readScenes, compose, renderScene, W as WIDTH } from '../tools/render-scenes.mjs';
 import { fileOf } from '../tools/render-svg.mjs';
 
 const sceneFacts = scenes.ofType('k.scenes.scene');
 const has = scenes.ofType('k.scenes.has');
 
-test('the scene shards are what tools/scenes-data.mjs gives; at least 60 scenes', () => {
-  const files = sceneShards(objects);
-  const dir = join(WORLDS_DIR, 'k.scenes', 'shards');
-  assert.deepEqual(readdirSync(dir).filter((f) => f.startsWith('scenes-')).sort(), Object.keys(files).sort());
-  for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
+// The scene shards are the home of the scenes (reviewer 15:00 item 3): hand-written, no generator; what the generator
+// checked is checked here and below (one scene per name, one fact per thing of a scene, drawings are objects, what a
+// thing is on is in its scene, counts are whole numbers).
+test('the scene shards are hand-written (no script); one fact per scene and per thing of a scene; at least 60 scenes', () => {
+  const entry = worlds.find((w) => w.id === 'k.scenes');
+  for (const sh of entry.shards.filter((x) => /\/scenes-/.test(x.id))) assert.equal(readHeader(sh.text).script?.[0], 'none (hand-written)', sh.id);
+  const sceneNames = sceneFacts.map((w) => tok(w.attrs.name[0]));
+  assert.equal(new Set(sceneNames).size, sceneNames.length, 'a scene is there twice');
+  const pairs = has.map((w) => `${tok(w.attrs.scene[0])}/${tok(w.attrs.thing[0])}`);
+  assert.equal(new Set(pairs).size, pairs.length, 'a thing is there twice in a scene');
+  for (const w of has) assert.ok(/^[1-9]\d*$/.test(w.attrs.count[0]), `${w.id}: count`);
   assert.ok(sceneFacts.length >= 60, `${sceneFacts.length} scenes`);
-  assert.equal(sceneFacts.length, SCENES.length);
   for (const name of ['beach', 'farm', 'city street', 'forest', 'kitchen', 'classroom', 'playground', 'space', 'underwater', 'winter']) assert.ok(sceneFacts.some((w) => tok(w.attrs.name[0]) === name), name);
 });
 
@@ -173,7 +177,7 @@ test('the joins of what a scene has close: every thing is a k.scenes.thing, ever
 });
 
 test('in every scene at least three quarters of the things have a drawing; over all scenes at least 95%', () => {
-  const { report } = sceneWires(objects);
+  const report = sceneFacts.map((w) => { const name = tok(w.attrs.name[0]); const mine = has.filter((h) => tok(h.attrs.scene[0]) === name); return { scene: name, things: mine.length, drawn: mine.filter((h) => h.attrs.drawing).length }; });
   for (const r of report) assert.ok(r.drawn >= r.things * 0.75, `${r.scene}: ${r.drawn} of ${r.things}`);
   const things = report.reduce((n, r) => n + r.things, 0), drawn = report.reduce((n, r) => n + r.drawn, 0);
   assert.equal(things, has.length);

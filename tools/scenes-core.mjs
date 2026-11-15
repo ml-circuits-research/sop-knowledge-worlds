@@ -1,9 +1,9 @@
 // The hand-written core of k.scenes (Round 7).
 //   node tools/scenes-core.mjs       writes docs/worlds/k.scenes/shards/things-<letter>.sop (the usual place and
-//                                    relative size of drawable things, from sources/hand-core/place-size.tsv) and
-//                                    scenes-<group>.sop (the scenes of tools/scenes-data.mjs)
+//                                    relative size of drawable things, from sources/hand-core/place-size.tsv). The
+//                                    scenes-<group>.sop shards are hand-written: they are the home of the scenes.
 // Deterministic: the same table and data give the same files.
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, byText } from './import/lib.mjs';
@@ -68,12 +68,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const rows = allThings();
   const things = thingShards(rows);
   writeShards(dir, things, 'things-');
-  let scenes = 0;
-  if (existsSync(join(REPO, 'tools/scenes-data.mjs'))) {
-    const { sceneShards } = await import('./scenes-data.mjs');
-    const files = sceneShards();
-    writeShards(dir, files, 'scenes-');
-    scenes = Object.keys(files).length;
-  }
-  console.log(`${rows.length} things in ${Object.keys(things).length} shards; ${scenes} scene shards`);
+  console.log(`${rows.length} things in ${Object.keys(things).length} shards`);
 }

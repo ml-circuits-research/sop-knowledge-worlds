@@ -1,7 +1,7 @@
 # k.scenes/shards/scenes-indoors: 17 scenes indoors (kitchen, bedroom, living room, bathroom, classroom, office, supermarket, restaurant, library, hospital, workshop, theatre, museum, cafe, nursery, laboratory, birthday party): what is usually there, how many, where in the picture, what happens there, the time, weather and season that fit; and other names of the scenes.
-# sources: hand-core 1 (hand-written in this repository: tools/scenes-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these facts: edit it here, reviewer 15:00 item 3; written from tools/scenes-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/scenes-core.mjs
+# script: none (hand-written)
 
 # kitchen
 @k.scenes.scene.kitchen k.scenes.scene name=kitchen kind=indoors ground=floor happens=cook happens=bake happens="wash the dishes" happens="eat breakfast" core.source="hand-core 1"
