@@ -6094,3 +6094,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   sides stops sync.sh with "README.md" listed, the rebase in progress and both lines kept (the old script union-merged
   it and went on); a conflict only in a generated file and the log goes through, the generated file is regenerated
   from both sides' sources, the log keeps both entries, and the regenerated file is in the worker's commit.
+
+## 2026-11-15 — fifth worker: generated files no longer conflict on a rebase (block 15:15); NOTE TO EVERY WORKER
+
+- Chosen: they stay in git (GitHub Pages serves docs/ from main with no build before publishing, so taking them out
+  would leave the site without a catalog) and get a merge rule. `.gitattributes`, written by tools/generated.mjs:
+  127 generated paths (index.json, vocab.json, vocab-kinds.json, LICENSES.md, JOINS.md, COVERAGE.md, ASPECTS.md,
+  JOINS-REPORT.md, PARENTS.md, the k.objects and k.scenes previews, the w.lang.en dictionary, and the 113 shards whose
+  `# script:` is a tool of `npm run regenerate`) take the merge driver `regenerate` (keep main's side, regenerate);
+  worker-log.md, questions.md, worker-tasks.md, docs/lessons.md and CHANGELOG.md take git's `union` merge. README.md
+  stays hand-written (its counts are rewritten by the build, but a conflict there stops sync.sh).
+- `npm run regenerate` = measures-core, the build, tools/generated.mjs, and the coverage and aspects reports where the
+  raw files exist (without them COVERAGE.md and ASPECTS.md stay as main has them).
+- **Every worker:** rebase with `tools/sync.sh` (it configures the driver in your clone with `git config
+  merge.regenerate.driver true`; without that config a plain `git rebase` still stops on generated files, take main's
+  side and run `npm run regenerate`). A conflict in a hand-written file stops sync.sh with the list: resolve it by hand.
+  Then compare `git show --stat HEAD` with what you changed, and push by the 14:10 rule. AGENTS.md has a section
+  "Generated files and rebases".
+- Test (tests/sync.test.mjs, +1): .gitattributes is what tools/generated.mjs writes; index.json, vocab.json,
+  JOINS-REPORT.md, COVERAGE.md and a derived shard are `regenerate`; package.json, tools, README.md and schemas are not.

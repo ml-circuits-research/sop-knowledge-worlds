@@ -78,3 +78,12 @@ test('a conflict only in generated files and logs goes through: generated files 
     assert.match(t.git(mine, 'show', '--stat', 'HEAD'), /src\/c\.txt/);
   } finally { rmSync(t.root, { recursive: true, force: true }); }
 });
+
+test('.gitattributes is what tools/generated.mjs writes; package.json and the hand-written tools are not generated', async () => {
+  const { attributesText } = await import('../tools/generated.mjs');
+  const text = readFileSync(join(REPO, '.gitattributes'), 'utf8');
+  assert.equal(text, attributesText(), 'run node tools/generated.mjs');
+  for (const p of ['docs/worlds/index.json', 'docs/worlds/vocab.json', 'docs/worlds/k.kinds/JOINS-REPORT.md', 'docs/worlds/COVERAGE.md', 'docs/worlds/k.commonsense/shards/derived.sop']) assert.match(text, new RegExp(`^${p.replace(/\./g, '\\.')} merge=regenerate$`, 'm'), p);
+  for (const p of ['package.json', 'tools/', 'README.md', 'schema.sop']) assert.doesNotMatch(text, new RegExp(`^\\S*${p.replace(/\./g, '\\.')}\\S* merge=regenerate$`, 'm'), p);
+  assert.match(text, /^worker-log\.md merge=union$/m);
+});
