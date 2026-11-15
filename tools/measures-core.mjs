@@ -64,6 +64,7 @@ export const MEASURES = {
     inflect: { order: ord, drop: { counts: 'letter' }, min_length: { counts: 'letter' } }, frame: { priority: ord }, rule: { priority: ord }, alternation: { n: ord }, part: { at: ord, max_words: { counts: 'word' } },
     'ellipsis.lead': { order: ord }, 'ellipsis.trail': { order: ord }, 'ellipsis.param': { value: { counts: 'word or part that the name of the limit says' }, min: { counts: 'word or part that the name of the limit says' }, max: { counts: 'word or part that the name of the limit says' } },
     'coord.param': { value: { counts: 'word' } },
+    calc: { factor: { plain: true } }, // a multiplier (double 2, half 0.5): a plain number
   },
   // k.motion: durations in milliseconds; layer priorities and step numbers are orders; a chance is a plain number.
   'k.motion': { layer: { priority: ord }, rule: { repeat_min: ms, repeat_max: ms, chance: { plain: true } }, step: { n: ord, with: ord, onset_min: ms, onset_max: ms, hold_min: ms, hold_max: ms, back_min: ms, back_max: ms }, set: { step: ord }, letters: { min: ms, max: ms } },

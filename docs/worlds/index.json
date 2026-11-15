@@ -1,5 +1,5 @@
 {
- "version": "6561fcae7475",
+ "version": "79fcacfe2be9",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -57760,8 +57760,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 254,
-     "bytes": 35995,
+     "wires": 255,
+     "bytes": 36124,
      "keys": [
       "after",
       "age_years_about",
@@ -57784,6 +57784,7 @@
       "binding",
       "body",
       "brow_above",
+      "calc",
       "canon",
       "chance",
       "child_count",
@@ -87210,7 +87211,7 @@
   },
   {
    "id": "w.lang.en",
-   "version": "3",
+   "version": "4",
    "schema": "w.lang.en/schema.sop",
    "exports": [
     "w.lang.en.alternation",
@@ -87220,6 +87221,7 @@
     "w.lang.en.answer",
     "w.lang.en.arrangement",
     "w.lang.en.aux",
+    "w.lang.en.calc",
     "w.lang.en.cat",
     "w.lang.en.choice",
     "w.lang.en.class",
@@ -87319,6 +87321,66 @@
       "the same for the house",
       "what about the tree?",
       "what is the capital of france"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/arithmetic",
+     "path": "w.lang.en/shards/arithmetic.sop",
+     "wires": 124,
+     "bytes": 24196,
+     "keys": [
+      "a quarter of",
+      "add",
+      "added to",
+      "all together",
+      "altogether",
+      "and",
+      "as many as",
+      "at first",
+      "at the start",
+      "divide",
+      "divided by",
+      "double",
+      "fewer",
+      "fewer than",
+      "half",
+      "half as many as",
+      "half of",
+      "in all",
+      "in the beginning",
+      "in total",
+      "left",
+      "less",
+      "less than",
+      "minus",
+      "more",
+      "more than",
+      "multiplied by",
+      "multiply",
+      "now",
+      "plus",
+      "share",
+      "split",
+      "subtract",
+      "take away",
+      "the fewest",
+      "the least",
+      "the most",
+      "times",
+      "times as many as",
+      "times as much as",
+      "to begin with",
+      "to start with",
+      "together",
+      "triple",
+      "twice",
+      "twice as many as",
+      "twice as much as"
      ],
      "sources": [
       "hand-core-1"
@@ -88700,8 +88762,8 @@
     {
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
-     "wires": 53,
-     "bytes": 34275,
+     "wires": 55,
+     "bytes": 34615,
      "keys": [],
      "sources": [
       "hand-core-1"

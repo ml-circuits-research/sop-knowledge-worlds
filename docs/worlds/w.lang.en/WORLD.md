@@ -507,3 +507,15 @@ What the speaker says and asks about themselves ("my name is Ana", "you can call
 name") is w.person's shard person-frames, not repeated here; tests/w.lang.en.talk-frames.test.mjs reads "who am I?"
 (r0148) through it once it is on the tree. Real rows: "hello" r0166, r0216, r0630; "thanks" r0588, r0591, r0594,
 r0597, r0600, r0603, r0606, r0612.
+
+## Arithmetic words and frames (shard arithmetic; reviewer 09:20, PSys2 Q18 K4)
+
+`w.lang.en.calc`: 48 words of arithmetic, each with its kind (operator, comparison, aggregate, extreme, state), how it
+is said (infix "3 plus 4", prefix "double 6", split "share 12 between 3" with its markers, relation "3 more than
+Tom", question "how many more") and the core.calc builtin it names (add, sub, mul, div, eq, sum, argmax, argmin), a
+factor for double, twice, triple, half, a quarter of, and the state a word asks for ("left", "now": now; "at first",
+"to begin with": start). Nine frames of the act ask in the mode calc, `needs=calc` ("what is N op M", "what is double
+N", "share N between M", "how many X does O have (left / at first)", "how many X are there altogether", "how many X
+do A and B have in total", "who has the most X", "how many more X does A have than B"); their lexicons are drawn from
+the words. Written by `tools/lang-en-arithmetic.mjs` (in `npm run build`); `tests/w.lang.en.arithmetic.test.mjs`
+reads 19 requests back. The verbs of a story (has, gives, eats, buys) are k.actions actions with `holds=` / `money=`.

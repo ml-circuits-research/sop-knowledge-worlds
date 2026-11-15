@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=3 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -125,6 +125,22 @@
 @w.lang.en.arrangement.inverse core.slot of=w.lang.en.arrangement key=inverse enum=yes core.source="hand-core 1"
 @w.lang.en.arrangement.direction core.slot of=w.lang.en.arrangement key=direction enum=left_to_right enum=right_to_left enum=top_to_bottom enum=bottom_to_top enum=clockwise enum=anticlockwise core.source="hand-core 1"
 @w.lang.en.arrangement.diagram_layout core.slot of=w.lang.en.arrangement key=diagram_layout enum=top_down enum=left_right enum=radial enum=circular enum=grid enum=overlapping enum=free core.source="hand-core 1"
+
+# Arithmetic words (reviewer 09:20, PSys2 Q18 K4; shard arithmetic, tools/lang-en-arithmetic.mjs): a word or phrase of
+# arithmetic, its `kind` (operator, comparison, aggregate, extreme, state), how it is said (`form`: infix "3 plus 4",
+# prefix "double 6", split "share 12 between 3" with its `marker` words, relation "3 more than Tom", question "how many
+# more"), the core.calc function it names (`calc`: the builtins add, sub, mul, div, eq, sum, argmax, argmin), a
+# `factor` for a word that multiplies by a fixed number (double 2, half 0.5), the `state` of a story's quantity a state
+# word asks for (left and now: now; at first: start), and an example.
+@w.lang.en.calc core.type of=w.lang.en.calc shared=true closed=true core.source="hand-core 1"
+@w.lang.en.calc.text core.slot of=w.lang.en.calc key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.calc.kind core.slot of=w.lang.en.calc key=kind id=true required=true enum=operator enum=comparison enum=aggregate enum=extreme enum=state core.source="hand-core 1"
+@w.lang.en.calc.form core.slot of=w.lang.en.calc key=form enum=infix enum=prefix enum=split enum=relation enum=question core.source="hand-core 1"
+@w.lang.en.calc.calc core.slot of=w.lang.en.calc key=calc enum=add enum=sub enum=mul enum=div enum=eq enum=sum enum=argmax enum=argmin core.source="hand-core 1"
+@w.lang.en.calc.factor core.slot of=w.lang.en.calc key=factor kind=number core.source="hand-core 1"
+@w.lang.en.calc.marker core.slot of=w.lang.en.calc key=marker many=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.calc.state core.slot of=w.lang.en.calc key=state enum=now enum=start core.source="hand-core 1"
+@w.lang.en.calc.example core.slot of=w.lang.en.calc key=example required=true kind=string core.source="hand-core 1"
 
 # ---- morphology ----
 # A rule of inflection: `op` singular (from a plural) or plural (from a singular), or (block "02:55", shard

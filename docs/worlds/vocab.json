@@ -626,6 +626,9 @@
  "a quarter": [
   "k.values/shards/numbers"
  ],
+ "a quarter of": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "a quarter of an hour": [
   "k.time/shards/clock-words"
  ],
@@ -2556,10 +2559,14 @@
  "add": [
   "k.actions/shards/verbs-make",
   "k.words/shards/ad",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "w.lang.en/shards/arithmetic"
  ],
  "add up": [
   "k.actions/shards/actions-mind-talk"
+ ],
+ "added to": [
+  "w.lang.en/shards/arithmetic"
  ],
  "addict": [
   "k.words/shards/ad",
@@ -4358,6 +4365,9 @@
  "all the": [
   "k.values/shards/sets"
  ],
+ "all together": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "alla": [
   "k.people/shards/given-names-a"
  ],
@@ -4670,7 +4680,8 @@
  ],
  "altogether": [
   "k.words/shards/al",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "w.lang.en/shards/arithmetic"
  ],
  "altyn-tagh": [
   "k.geo/shards/asia"
@@ -5258,6 +5269,7 @@
   "k.words/shards/frequency-a"
  ],
  "and": [
+  "w.lang.en/shards/arithmetic",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
@@ -7666,6 +7678,9 @@
  "as a tree": [
   "w.lang.en/shards/hand-arrangements"
  ],
+ "as many as": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "as of": [
   "k.geo/schema.sop"
  ],
@@ -8081,6 +8096,9 @@
  "at equal distances": [
   "w.lang.en/shards/hand-arrangements"
  ],
+ "at first": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "at night": [
   "k.scenes/shards/scenes-other"
  ],
@@ -8093,6 +8111,9 @@
  ],
  "at the bottom": [
   "k.values/shards/directions"
+ ],
+ "at the start": [
+  "w.lang.en/shards/arithmetic"
  ],
  "at the top": [
   "k.values/shards/directions"
@@ -22475,6 +22496,9 @@
  ],
  "calanshio sand sea": [
   "k.geo/shards/africa"
+ ],
+ "calc": [
+  "k.units/shards/measures"
  ],
  "calcite": [
   "k.kinds/shards/wordnet-1"
@@ -40919,10 +40943,14 @@
   "k.actions/shards/actions-make-change",
   "k.actions/shards/verbs-take_apart",
   "k.words/shards/di",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.lang.en/shards/arithmetic"
  ],
  "divide up": [
   "k.actions/shards/actions-body-social-nature"
+ ],
+ "divided by": [
+  "w.lang.en/shards/arithmetic"
  ],
  "dividers": [
   "k.objects/shards/noto-office-01"
@@ -41974,7 +42002,8 @@
  "double": [
   "k.values/shards/numbers",
   "k.words/shards/do",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.lang.en/shards/arithmetic"
  ],
  "double bed": [
   "k.attributes/shards/drawn-mulberry",
@@ -51485,7 +51514,11 @@
   "w.lang.en/shards/determiners"
  ],
  "fewer": [
-  "k.values/shards/scales"
+  "k.values/shards/scales",
+  "w.lang.en/shards/arithmetic"
+ ],
+ "fewer than": [
+  "w.lang.en/shards/arithmetic"
  ],
  "fewest": [
   "k.values/shards/scales"
@@ -63784,6 +63817,7 @@
   "k.values/shards/sets",
   "k.words/shards/frequency-h",
   "k.words/shards/ha",
+  "w.lang.en/shards/arithmetic",
   "k.objects/shards/openmoji-food-drink-01"
  ],
  "half a dozen": [
@@ -63791,6 +63825,9 @@
  ],
  "half an hour": [
   "k.time/shards/clock-words"
+ ],
+ "half as many as": [
+  "w.lang.en/shards/arithmetic"
  ],
  "half ball": [
   "k.shapes/shards/shapes"
@@ -63804,6 +63841,9 @@
  ],
  "half moon": [
   "k.shapes/shards/shapes"
+ ],
+ "half of": [
+  "w.lang.en/shards/arithmetic"
  ],
  "half of them": [
   "k.values/shards/sets"
@@ -70276,6 +70316,9 @@
  "in a tree": [
   "w.lang.en/shards/hand-arrangements"
  ],
+ "in all": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "in front": [
   "k.values/shards/directions"
  ],
@@ -70295,6 +70338,9 @@
  ],
  "in the background": [
   "k.values/shards/directions"
+ ],
+ "in the beginning": [
+  "w.lang.en/shards/arithmetic"
  ],
  "in the center": [
   "k.values/shards/directions"
@@ -70333,6 +70379,9 @@
  ],
  "in the way": [
   "k.story/schema.sop"
+ ],
+ "in total": [
+  "w.lang.en/shards/arithmetic"
  ],
  "in turn": [
   "k.values/shards/sets"
@@ -80499,6 +80548,7 @@
   "k.words/shards/frequency-l",
   "k.words/shards/le",
   "w.face/schema.sop",
+  "w.lang.en/shards/arithmetic",
   "w.list/schema.sop",
   "w.tasks/schema.sop",
   "k.objects/shards/noto-light-video-02",
@@ -81746,7 +81796,11 @@
  "less": [
   "k.values/shards/scales",
   "k.words/shards/frequency-l",
-  "k.words/shards/le"
+  "k.words/shards/le",
+  "w.lang.en/shards/arithmetic"
+ ],
+ "less than": [
+  "w.lang.en/shards/arithmetic"
  ],
  "lesser ape": [
   "k.kinds/shards/wordnet-1",
@@ -90423,6 +90477,7 @@
   "k.objects/shards/noto-computer-01",
   "k.words/shards/frequency-m",
   "k.words/shards/mi",
+  "w.lang.en/shards/arithmetic",
   "w.lang.en/shards/closed-classes"
  ],
  "minute": [
@@ -91838,10 +91893,14 @@
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
   "w.document/schema.sop",
+  "w.lang.en/shards/arithmetic",
   "w.timeline/schema.sop"
  ],
  "more expensive": [
   "k.values/shards/scales"
+ ],
+ "more than": [
+  "w.lang.en/shards/arithmetic"
  ],
  "morelia": [
   "k.geo/shards/psys2-cities-north-america"
@@ -93476,9 +93535,13 @@
  "multiplied": [
   "k.words/shards/mu"
  ],
+ "multiplied by": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "multiply": [
   "k.words/shards/frequency-m",
-  "k.words/shards/mu"
+  "k.words/shards/mu",
+  "w.lang.en/shards/arithmetic"
  ],
  "mum": [
   "k.people/shards/roles-family",
@@ -97134,6 +97197,7 @@
  "now": [
   "k.words/shards/frequency-n",
   "k.words/shards/no",
+  "w.lang.en/shards/arithmetic",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis"
  ],
@@ -106683,7 +106747,8 @@
   "k.objects/shards/noto-computer-01",
   "k.shapes/shards/shapes",
   "k.words/shards/frequency-p",
-  "k.words/shards/pl"
+  "k.words/shards/pl",
+  "w.lang.en/shards/arithmetic"
  ],
  "plus sign": [
   "k.shapes/shards/shapes",
@@ -123593,7 +123658,8 @@
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/verbs-send",
   "k.words/shards/frequency-s",
-  "k.words/shards/sh"
+  "k.words/shards/sh",
+  "w.lang.en/shards/arithmetic"
  ],
  "share_beyond_band": [
   "k.interest/shards/features"
@@ -129480,6 +129546,7 @@
   "k.geo/shards/europe",
   "k.words/shards/frequency-s",
   "k.words/shards/sp",
+  "w.lang.en/shards/arithmetic",
   "k.objects/shards/noto-tool-01"
  ],
  "split up": [
@@ -132830,6 +132897,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/su"
  ],
+ "subtract": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "suburban": [
   "k.objects/shards/noto-place-building-02"
  ],
@@ -135266,7 +135336,8 @@
   "k.procedures/shards/from-knowledge"
  ],
  "take away": [
-  "k.actions/shards/verbs-remove"
+  "k.actions/shards/verbs-remove",
+  "w.lang.en/shards/arithmetic"
  ],
  "take back": [
   "k.actions/shards/actions-hands",
@@ -137320,6 +137391,9 @@
  "the cat is sitting by the door": [
   "w.lang.en/shards/alternations"
  ],
+ "the fewest": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "the first one": [
   "k.values/shards/sets"
  ],
@@ -137335,8 +137409,14 @@
  "the last one": [
   "k.values/shards/sets"
  ],
+ "the least": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "the majority": [
   "k.values/shards/sets"
+ ],
+ "the most": [
+  "w.lang.en/shards/arithmetic"
  ],
  "the mountains": [
   "k.scenes/shards/scenes-nature"
@@ -139665,7 +139745,14 @@
  "times": [
   "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/ti"
+  "k.words/shards/ti",
+  "w.lang.en/shards/arithmetic"
+ ],
+ "times as many as": [
+  "w.lang.en/shards/arithmetic"
+ ],
+ "times as much as": [
+  "w.lang.en/shards/arithmetic"
  ],
  "timetable": [
   "k.words/shards/frequency-t",
@@ -140079,6 +140166,12 @@
   "w.lang.en/shards/prepositions",
   "w.timeline/schema.sop"
  ],
+ "to begin with": [
+  "w.lang.en/shards/arithmetic"
+ ],
+ "to start with": [
+  "w.lang.en/shards/arithmetic"
+ ],
  "to the back": [
   "k.values/shards/directions"
  ],
@@ -140305,7 +140398,8 @@
   "k.procedures/schema.sop",
   "k.values/shards/scales",
   "k.words/shards/frequency-t",
-  "k.words/shards/to"
+  "k.words/shards/to",
+  "w.lang.en/shards/arithmetic"
  ],
  "toggle": [
   "k.attributes/schema.sop"
@@ -142706,7 +142800,8 @@
  "triple": [
   "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/tr"
+  "k.words/shards/tr",
+  "w.lang.en/shards/arithmetic"
  ],
  "tripod": [
   "k.attributes/shards/numbers-p-z",
@@ -143949,7 +144044,14 @@
  "twice": [
   "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/arithmetic"
+ ],
+ "twice as many as": [
+  "w.lang.en/shards/arithmetic"
+ ],
+ "twice as much as": [
+  "w.lang.en/shards/arithmetic"
  ],
  "twig": [
   "k.attributes/shards/numbers-p-z",

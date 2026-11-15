@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.diagrams, k.story, k.procedures): 254 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.diagrams, k.story, k.procedures): 255 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -179,6 +179,7 @@
 @k.units.measure.w.lang.en.prep.arity k.units.measure world=w.lang.en type=prep key=arity counts="thing the preposition relates" core.source="hand-core 1"
 @k.units.measure.w.lang.en.ordinal.value k.units.measure world=w.lang.en type=ordinal key=value plain=true core.source="hand-core 1"
 @k.units.measure.w.lang.en.numeral.value k.units.measure world=w.lang.en type=numeral key=value plain=true core.source="hand-core 1"
+@k.units.measure.w.lang.en.calc.factor k.units.measure world=w.lang.en type=calc key=factor plain=true core.source="hand-core 1"
 @k.units.measure.w.lang.en.inflect.order k.units.measure world=w.lang.en type=inflect key=order ordinal=true core.source="hand-core 1"
 @k.units.measure.w.lang.en.inflect.drop k.units.measure world=w.lang.en type=inflect key=drop counts=letter core.source="hand-core 1"
 @k.units.measure.w.lang.en.inflect.min_length k.units.measure world=w.lang.en type=inflect key=min_length counts=letter core.source="hand-core 1"

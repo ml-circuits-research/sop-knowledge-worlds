@@ -5857,3 +5857,24 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   Real rows r0598, r0599, r0622-r0627 still read with the right act and roles (9 of 9), with the moved key.
 - questions.md Q77 [LIB]: old key w.list.list.tendered, new reading for the library's listSums.
 - Tests: list-frames 5, w.schemas 17, frames (442 frames), w.lang.en 22, catalog 9, validate 5: all pass.
+
+## 2026-11-15 — second worker: K4, arithmetic words and frames in w.lang.en (block 09:20; real rows r0194, r0195, r0201, r0543)
+
+- New type `w.lang.en.calc` (text, kind, form, calc, factor, marker, state, example; w.lang.en version 4) and an own
+  shard `arithmetic` (124 wires, 24196 bytes) written by `tools/lang-en-arithmetic.mjs` (in `npm run build`):
+  48 words with the core.calc builtin each names: operators (plus, minus, times, divided by, take away, add/subtract/
+  multiply/divide/share/split with their markers; double, twice, triple, half, half of, a quarter of with a factor),
+  comparisons (more than, fewer than, less than, N times as many as, twice / half as many as, as many as; more / fewer
+  / less in a question), aggregates (in total, altogether, all together, in all, together), extremes (the most, the
+  fewest, the least), states (left, now: now; at first, at the start, to begin with, to start with, in the
+  beginning: start). 8 lexicons drawn from the words.
+- 9 frames, act ask, mode calc, needs=calc: "what is N op M", "what is double N", "share N (X) between M (Y)",
+  "how many X does O have (left / now)", "how many X did O have at first", "how many X are there altogether", "how
+  many X do A and B have in total", "who has the most X", "how many more X does A have than B". Role maps: the first
+  number or owner -> thing / place, the second -> other, the operator, state, aggregate, extreme, comparison -> topic.
+- `tests/w.lang.en.arithmetic.test.mjs`: shard = tool; every calc name is a builtin of the pin; lexicons = words;
+  19 requests read with the right act, mode and roles (19 of 19); a world without calc reads none of them as calc.
+  Frames test: 450 frames, 433 best, 12 tie, 5 known (unchanged). variants: 2 new verb-ellipsis variants marked.
+  tools/measures-core.mjs: `calc.factor` is a plain number.
+- Tests run (new push rule 14:10): arithmetic 4, frames 3, w.lang.en, list-frames, abstraction, alternations,
+  templates, phrasing, coverage-report, catalog 8, validate 5, repo: all pass.
