@@ -1246,3 +1246,10 @@ the schema's capacity; the host's own line can go; (5) the host's `colour` attri
 - "Fă masa 1 albastră": ro.change.value reads, but the value role keeps the Romanian word ("A table cannot be
   albastră"); the w.lang.ro dictionary has albastru with the sense k.words.blue.adjective.1, so the value role could be
   glossed through the dictionary as the kind is (masă -> table).
+
+## Q86 (fifth worker, test:all at 5b90131, 2026-11-15): four red files on main and their commits
+Question: none to answer; the record of block 16:45. tests/k.actions.effects.test.mjs and tests/k.words.paraphrase.test.mjs:
+26ddd3f (fourth worker; storyState misses `set`, "bought" and "got" reach no sense once the forms left k.words and
+k.actions). tests/questions.test.mjs (k.attributes at-07 and one more) and tests/k.attributes.glosses.test.mjs (no skip
+without raw files): f4fcb4f (first worker). Each was green at its commit's parent and red at the commit.
+Blocking: no.

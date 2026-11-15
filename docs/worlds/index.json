@@ -1,5 +1,5 @@
 {
- "version": "d09d3a08fc06",
+ "version": "070a3c6e4c40",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -87670,6 +87670,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/capacity-frames",
+     "path": "w.lang.en/shards/capacity-frames.sop",
+     "wires": 9,
+     "bytes": 1892,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/catalog-plurals",
      "path": "w.lang.en/shards/catalog-plurals.sop",
      "wires": 50,
@@ -90117,6 +90129,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.ro/shards/seating-frames",
+     "path": "w.lang.ro/shards/seating-frames.sop",
+     "wires": 22,
+     "bytes": 3987,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.ro/shards/templates",
      "path": "w.lang.ro/shards/templates.sop",
      "wires": 3,
@@ -90252,8 +90276,8 @@
     {
      "id": "w.lang.ro/shards/words-w.seating",
      "path": "w.lang.ro/shards/words-w.seating.sop",
-     "wires": 4,
-     "bytes": 910,
+     "wires": 7,
+     "bytes": 1365,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -90263,7 +90287,10 @@
       "unknown-word w.lang.ro.word.w.seating.world: w.lang.ro.word.w.seating.world: means=w.seating of=std.schema.world.name names no action, type, key or value of the matrix",
       "unknown-word w.lang.ro.word.w.seating.table: w.lang.ro.word.w.seating.table: means=w.seating.table names no action, type, key or value of the matrix",
       "unknown-word w.lang.ro.word.w.seating.seat: w.lang.ro.word.w.seating.seat: means=w.seating.seat names no action, type, key or value of the matrix",
-      "unknown-word w.lang.ro.word.w.seating.guest: w.lang.ro.word.w.seating.guest: means=w.seating.guest names no action, type, key or value of the matrix"
+      "unknown-word w.lang.ro.word.w.seating.guest: w.lang.ro.word.w.seating.guest: means=w.seating.guest names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.seating.table.colour: w.lang.ro.word.w.seating.table.colour: means=w.seating.table.colour names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.seating.guest.colour: w.lang.ro.word.w.seating.guest.colour: means=w.seating.guest.colour names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.seating.guest.table: w.lang.ro.word.w.seating.guest.table: means=w.seating.guest.table names no action, type, key or value of the matrix"
      ]
     },
     {
@@ -91508,7 +91535,7 @@
   },
   {
    "id": "w.seating",
-   "version": "2",
+   "version": "3",
    "schema": "w.seating/schema.sop",
    "depends": [],
    "about": "a seating plan: tables, seats and the guests on them",
@@ -91537,6 +91564,7 @@
       "name",
       "shape",
       "seats",
+      "colour",
       "x",
       "y"
      ],
@@ -91583,9 +91611,11 @@
      ],
      "attributes": [
       "name",
+      "table",
       "seat",
       "party",
       "needs",
+      "colour",
       "note"
      ],
      "words": [
@@ -91596,8 +91626,8 @@
      ]
     }
    ],
-   "wires": 40,
-   "bytes": 6606,
+   "wires": 50,
+   "bytes": 8762,
    "sources": [
     "hand-core-1"
    ],

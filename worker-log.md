@@ -6395,3 +6395,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   plan.seating).
 - Tests: w.schemas 18 (a version 3 session), frames, templates, w.lang.en, w.lang.ro, w.lang.ro.frames, replies,
   k.kinds relations, joins report, structures, catalog, validate.
+
+## 2026-11-15 — fifth worker: test:all on main at 5b90131 (06:20), an hour after the first
+
+- 105 files, 3,206 tests: 3,180 pass, **5 fail in 4 files**, 21 skipped, 615 s; no file not run. The three red files
+  of 05:30 are green (baacdad's two fixed by the first worker; core-plurals rebuilt). Red now, each checked against
+  its commit's parent (green there, red at the commit):
+  - tests/k.actions.effects.test.mjs (storyState's verb table: `set` missing) and tests/k.words.paraphrase.test.mjs
+    ("bought", "got" reach no sense): **26ddd3f** (fourth worker, verb forms have one home in w.lang.en).
+  - tests/questions.test.mjs, at-07 "which things are usually pink" (rhubarb now usual pink) and one more of
+    k.attributes: **f4fcb4f** (first worker, KR6 colour from glosses); the expected lists need the new values (or the
+    values are wrong).
+  - tests/k.attributes.glosses.test.mjs fails without WordNet's raw files (ENOENT index.noun) instead of skipping:
+    **f4fcb4f** too.
+- Over 30 s: k.attributes 42.2 s and w.lang.en.library 33.6 s (load average about 7; both 24-27 s when quieter).
+  questions.test.mjs 23.9 s. Questions.md Q86.
