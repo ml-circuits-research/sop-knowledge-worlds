@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (292 of 1132 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (296 of 1148 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -503,6 +503,22 @@
 @k.attributes.narration.k.geo.group.name k.attributes.narration type=k.geo.group key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.geo.group.member k.attributes.narration type=k.geo.group key=member narrate=yes salience=0.5 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.geo.group.as_of k.attributes.narration type=k.geo.group key=as_of narrate=no salience=0 why="metadata: where a fact comes from or how sure it is" core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.name k.attributes.narration type=k.geo.island key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.country k.attributes.narration type=k.geo.island key=country narrate=yes salience=0.28 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.archipelago k.attributes.narration type=k.geo.island key=archipelago narrate=yes salience=0.1 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.area k.attributes.narration type=k.geo.island key=area narrate=yes salience=0.07 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.lat k.attributes.narration type=k.geo.island key=lat narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.lon k.attributes.narration type=k.geo.island key=lon narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.island.wikidata k.attributes.narration type=k.geo.island key=wikidata narrate=no salience=0 why="an identifier (a code)" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.name k.attributes.narration type=k.geo.region key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.continent k.attributes.narration type=k.geo.region key=continent narrate=yes salience=0.3 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.lat k.attributes.narration type=k.geo.region key=lat narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.lon k.attributes.narration type=k.geo.region key=lon narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.west k.attributes.narration type=k.geo.region key=west narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.south k.attributes.narration type=k.geo.region key=south narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.east k.attributes.narration type=k.geo.region key=east narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.north k.attributes.narration type=k.geo.region key=north narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.geo.region.wikidata k.attributes.narration type=k.geo.region key=wikidata narrate=no salience=0 why="an identifier (a code)" core.source="hand-core 1"
 @k.attributes.narration.k.interest.source.name k.attributes.narration type=k.interest.source key=name narrate=no salience=0 why="machinery: how interest is computed" core.source="hand-core 1"
 @k.attributes.narration.k.interest.source.cite k.attributes.narration type=k.interest.source key=cite narrate=no salience=0 why="machinery: how interest is computed" core.source="hand-core 1"
 @k.attributes.narration.k.interest.source.year k.attributes.narration type=k.interest.source key=year narrate=no salience=0 why="machinery: how interest is computed" core.source="hand-core 1"

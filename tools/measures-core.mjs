@@ -25,6 +25,7 @@ export const MEASURES = {
     river: { length_about: { unit: 'kilometre' } },
     mountain: { elevation: { unit: 'metre' } },
     group: { as_of: { ordinal: true } },
+    island: { area: km2 },
   },
   'k.animals': { '*': { legs: { counts: 'leg' } } },
   'k.music': { note: { pitch_class: { counts: 'semitone above C' } }, interval: { semitones: { counts: 'semitone' }, number: ord }, key: { sharps: { counts: 'sharp' }, flats: { counts: 'flat' } } },

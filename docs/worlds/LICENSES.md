@@ -135,11 +135,11 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 ## natural-earth-5.1.2
 
 - What: public domain map data: countries, populated places, rivers, elevation points and physical regions, with names and attributes. Used for `k.geo`.
-- Origin: https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`, `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`, `ne_10m_geography_regions_polys`, `ne_10m_lakes`, `ne_10m_geography_marine_polys` (`.geojson`).
+- Origin: https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`, `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`, `ne_10m_geography_regions_polys`, `ne_10m_lakes`, `ne_10m_geography_marine_polys` (`.geojson`); the regions file is read again by `tools/import/geo-places.mjs`.
 - License: public domain (`LICENSE.md` of the repository: "All versions of Natural Earth raster + vector map data found on this website are in the public domain"); written `public-domain` in shard headers and the catalog.
 - Attribution: none required. Made with Natural Earth, free vector and raster map data at naturalearthdata.com.
 - Shard terms: CC0-1.0, public-domain
-- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.geo` (8 shards)
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.geo` (9 shards)
 
 ## noto-emoji-99701e0
 
@@ -411,6 +411,15 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: CC0-1.0
 - Shard terms: CC0-1.0
 - Used by: `k.people` (26 shards)
+
+## wikidata-islands-2026-11-15
+
+- What: islands (items whose P31 is island, Q23442, or a direct subclass of it) with an area of 100 km² or more, or 20,000 inhabitants or more, and a coordinate: English label, coordinate (P625), area (P2046, normalised to m²), country (P17, by its ISO 3166-1 alpha-3 code P298), archipelago (P361 whose item is an archipelago, Q33837, or a direct subclass). For `k.geo.island` (psys2 real turn T43: a map places "Tenerife").
+- Origin: Wikidata Query Service (https://query.wikidata.org/sparql), fetched 2026-11-15 with the User-Agent `psys2-data-fetch/1.0`. 1,774 rows, 1,440 items.
+- License: CC0-1.0 (Wikidata structured data, https://www.wikidata.org/wiki/Wikidata:Licensing).
+- Attribution: none required. Data from Wikidata.
+- Shard terms: CC0-1.0
+- Used by: `k.geo` (8 shards)
 
 ## wikidata-typical-2026-11-14
 

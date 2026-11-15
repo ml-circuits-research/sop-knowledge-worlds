@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.diagrams, k.story, k.procedures): 269 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.diagrams, k.story, k.procedures): 278 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -53,6 +53,15 @@
 @k.units.measure.k.geo.continent.area_about k.units.measure world=k.geo type=continent key=area_about unit="square kilometre" approximate=true core.source="hand-core 1"
 @k.units.measure.k.geo.river.length_about k.units.measure world=k.geo type=river key=length_about unit=kilometre approximate=true core.source="hand-core 1"
 @k.units.measure.k.geo.group.as_of k.units.measure world=k.geo type=group key=as_of ordinal=true core.source="hand-core 1"
+@k.units.measure.k.geo.island.area k.units.measure world=k.geo type=island key=area unit="square kilometre" core.source="hand-core 1"
+@k.units.measure.k.geo.island.lat k.units.measure world=k.geo type=island key=lat unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.island.lon k.units.measure world=k.geo type=island key=lon unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.region.lat k.units.measure world=k.geo type=region key=lat unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.region.lon k.units.measure world=k.geo type=region key=lon unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.region.west k.units.measure world=k.geo type=region key=west unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.region.south k.units.measure world=k.geo type=region key=south unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.region.east k.units.measure world=k.geo type=region key=east unit=degree core.source="hand-core 1"
+@k.units.measure.k.geo.region.north k.units.measure world=k.geo type=region key=north unit=degree core.source="hand-core 1"
 @k.units.measure.k.animals.animal.legs k.units.measure world=k.animals type=animal key=legs counts=leg core.source="hand-core 1"
 @k.units.measure.k.animals.class.legs k.units.measure world=k.animals type=class key=legs counts=leg core.source="hand-core 1"
 @k.units.measure.k.music.note.pitch_class k.units.measure world=k.music type=note key=pitch_class counts="semitone above C" core.source="hand-core 1"

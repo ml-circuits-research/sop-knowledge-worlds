@@ -6720,3 +6720,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Found: "nume" is not in the w.lang.ro dictionary (no def form "numele"); the replies test uses "culoare" as its key.
 - Tests: k.faces (new test: kinds reach presets), w.lang.ro.replies (new fillers; 4 new checks); `npm run test:changed`
   77 files, 0 red.
+## 2026-11-15 — islands and geographic regions in k.geo (psys2 T43, reviewer block 13:10 in psys2)
+
+- `k.geo.island` (1,382, Wikidata CC0, shards `islands-<continent>`, `tools/import/geo-places.mjs`): name, country
+  (many), archipelago (many), area (only ≥ 1,000 km², 324), lat, lon, wikidata. `k.geo.region` (43, Natural Earth
+  Geoarea, shard `regions`): name, continent, centre, box, wikidata. Tenerife: Spain, Canary Islands, 2,034 km²,
+  28.27 / -16.61. Schema version 8; 9 shards, 1,425 wires, 245,657 bytes.
+- KR6 hand checks (115 islands in three samples; all 43 regions): names, countries, points 0 wrong in 82; areas of
+  islands < 1,000 km² 4 wrong in 62 (6.5 %: municipality areas, a unit slip) so not imported; ≥ 1,000 km² 1 in 53;
+  groups named "... Islands/Archipelago" filtered; 5 corrections by item (Malta's country, Cres, Illas Ons, two
+  region names, Anatolia's continent). Published values as imported: 2 wrong in 115 (1.7 %), corrected.
+- Not imported: first-level administrative divisions. Natural Earth admin-1: 3 of 35 out of date (Kenya, Latvia,
+  Burundi reforms: 8.6 %); Wikidata P150 no cleaner (France: Lorraine listed, 5 regions missing; a river as a
+  division). Needs a source that is kept current, or a per-country check.
+- Tests: k.geo (new T43 test); `npm run test:changed` 71 files, 0 red.

@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-geo: the keys of the types of k.geo read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-geo: the keys of the types of k.geo read as relations: 93 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -42,6 +42,12 @@
 @k.kinds.relation.k.geo.desert.named k.kinds.relation type=k.geo.desert key=named subject=desert subject_sense=place object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.group.member k.kinds.relation type=k.geo.group key=member subject=group object=place object_type=k.geo.country object_sense=place found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.geo.group.as_of k.kinds.relation type=k.geo.group key=as_of subject=group object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.island.country k.kinds.relation type=k.geo.island key=country subject=island object=place object_type=k.geo.country object_sense=place found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.geo.island.archipelago k.kinds.relation type=k.geo.island key=archipelago subject=island object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.geo.island.area k.kinds.relation type=k.geo.island key=area subject=island object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.island.lat k.kinds.relation type=k.geo.island key=lat subject=island object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.island.lon k.kinds.relation type=k.geo.island key=lon subject=island object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.island.wikidata k.kinds.relation type=k.geo.island key=wikidata subject=island object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.geo.lake.continent k.kinds.relation type=k.geo.lake key=continent subject=lake subject_sense=place object=place object_type=k.geo.continent object_sense=place found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.geo.lake.country k.kinds.relation type=k.geo.lake key=country subject=lake subject_sense=place object=place object_type=k.geo.country object_sense=place found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.geo.lake.area_about k.kinds.relation type=k.geo.lake key=area_about subject=lake subject_sense=place object=amount found=schema core.source="hand-core 1"
@@ -63,6 +69,14 @@
 @k.kinds.relation.k.geo.range.south k.kinds.relation type=k.geo.range key=south subject=range subject_sense=place object=amount found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.range.east k.kinds.relation type=k.geo.range key=east subject=range subject_sense=place object=amount found=schema core.source="hand-core 1"
 @k.kinds.relation.k.geo.range.north k.kinds.relation type=k.geo.range key=north subject=range subject_sense=place object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.continent k.kinds.relation type=k.geo.region key=continent subject=region object=place object_type=k.geo.continent object_sense=place found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.lat k.kinds.relation type=k.geo.region key=lat subject=region object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.lon k.kinds.relation type=k.geo.region key=lon subject=region object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.west k.kinds.relation type=k.geo.region key=west subject=region object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.south k.kinds.relation type=k.geo.region key=south subject=region object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.east k.kinds.relation type=k.geo.region key=east subject=region object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.north k.kinds.relation type=k.geo.region key=north subject=region object=amount found=schema core.source="hand-core 1"
+@k.kinds.relation.k.geo.region.wikidata k.kinds.relation type=k.geo.region key=wikidata subject=region object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.geo.river.continent k.kinds.relation type=k.geo.river key=continent subject=river subject_sense=place object=place object_type=k.geo.continent object_sense=place found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.geo.river.country k.kinds.relation type=k.geo.river key=country subject=river subject_sense=place object=place object_type=k.geo.country object_sense=place found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.geo.river.lat k.kinds.relation type=k.geo.river key=lat subject=river subject_sense=place object=amount found=schema core.source="hand-core 1"

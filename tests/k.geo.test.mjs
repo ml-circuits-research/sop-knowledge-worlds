@@ -39,6 +39,27 @@ test('100 lakes with the area of their outline; deserts; oceans and seas', () =>
   assert.ok(seas.length >= 70);
 });
 
+test('psys2 T43: islands (Wikidata) and geographic regions (Natural Earth) place names on a map', () => {
+  const q = (type, name, seek) => geo.query({ type, where: { name }, seek });
+  assert.equal(q('k.geo.island', 'Tenerife', 'country').value, 'Spain');
+  assert.equal(tok(q('k.geo.island', 'Tenerife', 'archipelago').value), 'Canary Islands');
+  assert.ok(Math.abs(Number(q('k.geo.island', 'Tenerife', 'lat').value) - 28.27) < 0.1 && Math.abs(Number(q('k.geo.island', 'Tenerife', 'lon').value) + 16.6) < 0.1);
+  assert.equal(q('k.geo.island', 'Malta', 'country').value, 'Malta'); // ISLAND_FIXES: Wikidata's P17 said Italy
+  assert.deepEqual(geo.ofType('k.geo.island').find((i) => one(i, 'name') === 'Borneo').attrs.country.map(tok).sort(), ['Brunei', 'Indonesia', 'Malaysia']);
+  const islands = geo.ofType('k.geo.island');
+  assert.ok(islands.length > 1300);
+  for (const i of islands) {
+    assert.ok(i.attrs.lat && i.attrs.lon && /^Q[0-9]+$/.test(one(i, 'wikidata')), i.id);
+    assert.ok(!/(Islands|Archipelago)$/.test(one(i, 'name')), i.id); // groups are not islands
+    if (i.attrs.area) assert.ok(Number(one(i, 'area')) >= 1000, i.id); // smaller areas failed the KR6 sample
+  }
+  const regions = geo.ofType('k.geo.region');
+  assert.equal(regions.length, 43);
+  assert.equal(q('k.geo.region', 'Anatolia', 'continent').value, 'Asia'); // REGION_FIXES
+  assert.equal(q('k.geo.region', 'Patagonia', 'continent').value, '"South America"');
+  for (const r of regions) assert.ok(Number(one(r, 'west')) <= Number(one(r, 'lon')) && Number(one(r, 'lon')) <= Number(one(r, 'east')), r.id);
+});
+
 test('the shard numbers is what tools/geo-numbers.mjs gives; each fact joins an imported one; the figures are in order', () => {
   assert.equal(readFileSync(join(WORLDS_DIR, 'k.geo', 'shards', 'numbers.sop'), 'utf8'), numbersShard());
   for (const [name, continent, km] of RIVERS) {

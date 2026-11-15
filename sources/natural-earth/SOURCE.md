@@ -5,7 +5,7 @@
 - **Origin:** https://github.com/nvkelso/natural-earth-vector , tag `v5.1.2` (commit
   `f1890d9f152c896d250a77557a5751a93d494776`), folder `geojson`: `ne_50m_admin_0_countries`,
   `ne_10m_populated_places_simple`, `ne_10m_rivers_lake_centerlines`, `ne_10m_geography_regions_elevation_points`,
-  `ne_10m_geography_regions_polys`, `ne_10m_lakes`, `ne_10m_geography_marine_polys` (`.geojson`).
+  `ne_10m_geography_regions_polys`, `ne_10m_lakes`, `ne_10m_geography_marine_polys` (`.geojson`); the regions file is read again by `tools/import/geo-places.mjs`.
 - **Version:** 5.1.2 (`core.source="natural-earth 5.1.2"`).
 - **License:** public domain (`LICENSE.md` of the repository: "All versions of Natural Earth raster + vector map
   data found on this website are in the public domain"); written `public-domain` in shard headers and the catalog.
@@ -30,3 +30,10 @@
   out on the sphere and kept to three digits (`area_about`); 58 deserts (name, continent, centre, box); 72 oceans,
   seas, gulfs, bays, straits and channels of scale rank 0 to 3 (kind, centre, box). Not taken from the geometry:
   river lengths and the areas of deserts and seas (see `k.geo/WORLD.md`, Limits).
+- **2026-11-15 (psys2 T43):** also kept, by `tools/import/geo-places.mjs`: the 43 geographic regions of
+  `ne_10m_geography_regions_polys` whose class is `Geoarea` (Siberia, Patagonia, Normandy, Lapland, the lands of
+  Greenland and Antarctica): name, continent, centre and box, Wikidata item; shard `k.geo/shards/regions`. All 43
+  checked by hand: 3 wrong, corrected in `REGION_FIXES` (Knud Ramussen Land and Mac. Robertson Land misspelt in
+  NAME_EN; Anatolia filed under Europe). Not kept: the admin-1 states and provinces (`ne_10m_admin_1_states_provinces`):
+  a sample of 35 had 3 out of date (Kenya's provinces of before 2013, Latvia's municipalities of before 2021,
+  Burundi's provinces of before 2025): 8.6 %, above KR6's 5 %.

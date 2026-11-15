@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **243** in 37 worlds; distinct values 10834, meeting a target 10775 (99.5 %), open 59
+- declared joins: **245** in 37 worlds; distinct values 10963, meeting a target 10904 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 5; keys with an enum, never suggested: 39
 
@@ -110,11 +110,13 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.geo | `k.geo.country.political_continent` | `k.geo.continent` | name | 1 | 1 |  |
 | k.geo | `k.geo.desert.continent` | `k.geo.continent` | name | 5 | 5 |  |
 | k.geo | `k.geo.group.member` | `k.geo.country` | name | 54 | 54 |  |
+| k.geo | `k.geo.island.country` | `k.geo.country` | name | 122 | 122 |  |
 | k.geo | `k.geo.lake.continent` | `k.geo.continent` | name | 6 | 6 |  |
 | k.geo | `k.geo.lake.country` | `k.geo.country` | name | 35 | 35 |  |
 | k.geo | `k.geo.mountain.continent` | `k.geo.continent` | name | 7 | 7 |  |
 | k.geo | `k.geo.mountain.country` | `k.geo.country` | name | 195 | 195 |  |
 | k.geo | `k.geo.range.continent` | `k.geo.continent` | name | 7 | 7 |  |
+| k.geo | `k.geo.region.continent` | `k.geo.continent` | name | 7 | 7 |  |
 | k.geo | `k.geo.river.continent` | `k.geo.continent` | name | 6 | 6 |  |
 | k.geo | `k.geo.river.country` | `k.geo.country` | name | 144 | 144 |  |
 | k.interest | `k.interest.appraisal.source` | `k.interest.source` | name | 9 | 9 |  |

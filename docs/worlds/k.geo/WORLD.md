@@ -1,7 +1,7 @@
 # k.geo
 
 Geography: countries, capitals, continents, neighbours, population, area, largest cities, rivers, mountains, mountain
-ranges, lakes, deserts, oceans and seas, each with a number where a free source or a usual figure has one.
+ranges, lakes, deserts, oceans and seas, islands and geographic regions, each with a number where a free source or a usual figure has one.
 
 ## What it knows
 
@@ -26,6 +26,14 @@ ranges, lakes, deserts, oceans and seas, each with a number where a free source 
   figure; `named=model`).
 - `k.geo.sea` (identity `name`): 72 oceans, seas, gulfs, bays, straits and channels: `kind`, `lat`, `lon`, box; for
   the 5 oceans and 17 seas `area_about` (the usual figure; `named=model`).
+- `k.geo.island` (identity `name`; psys2 T43, a map places "Tenerife"): 1,382 islands of Wikidata (100 km² or
+  more, or 20,000 people or more): `country` (many: Borneo has three), `archipelago` (many: Tenerife, Canary
+  Islands), `area` (square kilometres, only for the 324 islands of 1,000 km² or more: the smaller areas failed the
+  hand check), `lat`, `lon`, `wikidata` (the item). One island per name: the largest (Long Island is New York's).
+- `k.geo.region` (identity `name`): 43 geographic regions that are no country (Siberia, Patagonia, Normandy,
+  Brittany, Lapland, Anatolia, Jutland, the lands of Greenland and Antarctica): `continent`, `lat`, `lon`, box,
+  `wikidata`. No first-level administrative divisions (provinces, states): the sources failed the hand check (see
+  `sources/natural-earth/SOURCE.md`).
 - A number that is only approximate has the suffix `_about`. The unit of every number is a `k.units.measure` fact
   (`world=k.geo type=mountain key=elevation unit=metre`).
 - A name of several words is a string (`"Mount Everest"`). No geometry beyond a point and a box.
@@ -40,6 +48,9 @@ Two per continent:
   one country are one wire. An application that wants public-domain facts only leaves these shards out.
 
 - `seas`: the oceans and seas, from Natural Earth, public domain.
+- `islands-<continent>` (by the continent of the island's first country; `islands-other`: no country k.geo knows):
+  Wikidata, CC0-1.0, `tools/import/geo-places.mjs`; hand check and corrections in `sources/wikidata-islands/SOURCE.md`.
+- `regions`: the geographic regions, Natural Earth, public domain, same script.
 - `numbers`: the approximate numbers that no imported source gives (river lengths, the areas of oceans, seas,
   deserts and continents), hand-written (`hand-core 1`, CC0-1.0, `named=model`; `tools/geo-numbers.mjs`). Each fact
   names a thing of the other shards, so the facts merge when both are told.
