@@ -1,4 +1,4 @@
-# k.kinds/shards/classes: 315 up edges: the parents of the kinds made by these edges (farm animal, thing with wheels, road vehicle, machine) and of the group kinds.
+# k.kinds/shards/classes: 317 up edges: the parents of the kinds made by these edges (farm animal, thing with wheels, road vehicle, machine) and of the group kinds.
 # sources: hand-core 1 (read from the catalog's own facts by tools/kinds-core.mjs)
 # license: CC0-1.0
 # script: tools/kinds-core.mjs
@@ -118,6 +118,7 @@
 @k.kinds.parent.thing_for_cutting.thing k.kinds.parent name="thing for cutting" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_cutting_wood.thing k.kinds.parent name="thing for cutting wood" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_dancing.thing k.kinds.parent name="thing for dancing" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
+@k.kinds.parent.thing_for_decoration.thing k.kinds.parent name="thing for decoration" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_digging.thing k.kinds.parent name="thing for digging" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_drawing.thing k.kinds.parent name="thing for drawing" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_drinking.thing k.kinds.parent name="thing for drinking" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
@@ -131,6 +132,7 @@
 @k.kinds.parent.thing_for_fighting.thing k.kinds.parent name="thing for fighting" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_finding_the_way.thing k.kinds.parent name="thing for finding the way" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_flying.thing k.kinds.parent name="thing for flying" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
+@k.kinds.parent.thing_for_food.thing k.kinds.parent name="thing for food" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_freezing_food.thing k.kinds.parent name="thing for freezing food" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_frying.thing k.kinds.parent name="thing for frying" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_for_getting_water.thing k.kinds.parent name="thing for getting water" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"

@@ -1035,3 +1035,20 @@ says otherwise; South Africa (three) is the only country the list gives several 
 The Bottom capitals of Caribbean Netherlands, which is wrong (they are the seats of Sint Eustatius and Saba); not taken.
 A `seat_of` key for those seats is not added (no real row asks).
 Blocking: no. Meanwhile: the country list decides, as above.
+
+## Q72 [PSYS2] [LIB] (KR1 item 4, fifth worker, 2026-11-15): k.commonsense.thing.made_of and used_for dropped; told can moved
+Question: none to answer; a note of renamed and dropped keys for readers. Old -> new:
+`k.commonsense.thing.made_of` -> `k.attributes.thing.material`; `k.commonsense.thing.used_for` ->
+`k.attributes.thing.used_for`; the told `k.commonsense.thing.can` of the 15 hand-written things -> `k.attributes.thing.can`
+(the value sets of k.attributes: a car `can=move used_for=travelling`, not `can=drive used_for=travel`).
+`k.commonsense.thing.can` and `cannot` stay, filled only by the rules from k.animals (shard derived). ConceptNet's
+CapableOf, UsedFor and MadeOf now go to k.attributes.thing (tools/import/conceptnet.mjs, not run yet).
+Context: review 2026-11-15 finding 6. A host that asked "what is a house made of" of k.commonsense asks k.attributes.thing
+`material` (the questions moved: tests/k.attributes.questions.jsonl at-27 to at-30).
+Blocking: no.
+
+## Q73 (KR1 item 4, fifth worker, 2026-11-15): k.space.kind.made_of is a material under another key
+Question: `k.space.kind.made_of` (a comet: ice, dust) says what a kind of body is made of, which k.attributes calls
+`material`. Rename it to `material` (and keep `made_of` only for k.food's ingredients), or leave it as a key of its own world?
+Context: KR1 item 4 made `material` the one key for what a thing is made of; k.space was not in the task.
+Blocking: no. Meanwhile: left as it is.

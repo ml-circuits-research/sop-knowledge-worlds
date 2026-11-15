@@ -1,4 +1,4 @@
-# k.kinds/shards/kind: 1508 up edges: what a thing is, by the classes of the catalog's own facts (k.animals class, k.attributes kind, k.food kind, k.body kind, k.space kind, k.wearables kind, k.people role is and group).
+# k.kinds/shards/kind: 1510 up edges: what a thing is, by the classes of the catalog's own facts (k.animals class, k.attributes kind, k.food kind, k.body kind, k.space kind, k.wearables kind, k.people role is and group).
 # sources: hand-core 1 (read from the catalog's own facts by tools/kinds-core.mjs)
 # license: CC0-1.0
 # script: tools/kinds-core.mjs
@@ -113,6 +113,7 @@
 @k.kinds.parent.bike.vehicle k.kinds.parent name=bike is_a=vehicle dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"
 @k.kinds.parent.bikini.whole k.kinds.parent name=bikini is_a=whole dimension=kind from=k.wearables.wearable key=kind core.source="hand-core 1"
 @k.kinds.parent.bin.container k.kinds.parent name=bin is_a=container dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"
+@k.kinds.parent.bird.animal k.kinds.parent name=bird is_a=animal dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"
 @k.kinds.parent.biscuit.sweet k.kinds.parent name=biscuit is_a=sweet dimension=kind from=k.food.food key=kind core.source="hand-core 1"
 @k.kinds.parent.bison.animal k.kinds.parent name=bison is_a=animal dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"
 @k.kinds.parent.bison.mammal k.kinds.parent name=bison is_a=mammal dimension=kind from=k.animals.animal key=class core.source="hand-core 1"
@@ -464,6 +465,7 @@
 @k.kinds.parent.firefighter.worker k.kinds.parent name=firefighter is_a=worker dimension=kind from=k.people.role key=group value=job core.source="hand-core 1"
 @k.kinds.parent.firefly.insect k.kinds.parent name=firefly is_a=insect dimension=kind from=k.animals.animal key=class core.source="hand-core 1"
 @k.kinds.parent.fireplace.part k.kinds.parent name=fireplace is_a=part dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"
+@k.kinds.parent.fish.animal k.kinds.parent name=fish is_a=animal dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"
 @k.kinds.parent.fish_and_chips.dish k.kinds.parent name="fish and chips" is_a=dish dimension=kind from=k.food.food key=kind core.source="hand-core 1"
 @k.kinds.parent.fisherman.worker k.kinds.parent name=fisherman is_a=worker dimension=kind from=k.people.role key=group value=job core.source="hand-core 1"
 @k.kinds.parent.flamingo.animal k.kinds.parent name=flamingo is_a=animal dimension=kind from=k.attributes.thing key=kind core.source="hand-core 1"

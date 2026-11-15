@@ -5668,3 +5668,23 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Test (tests/k.scenes.test.mjs, +1): every k.scenes thing with a k.attributes size_about has the class of the
   number; no place-size.tsv row tells a size the number gives, and the reader refuses one; the resolved conflicts;
   elephant huge, mouse tiny. The audit test compares a "right" size only where no number decides it.
+
+## 2026-11-15 — fifth worker: KR1 item 4, material / made_of and can / used_for: one key, one home
+
+- **Home:** `k.attributes.thing` (`material`, `can`, `used_for`), the world with the source: the audited table
+  sources/hand-core/attributes.tsv (761 -> 763 things). k.commonsense (version 5) keeps `at`, `usually_count` and the
+  rules; its slots `made_of` and `used_for` are dropped, and `can` / `cannot` hold only what its rules make from
+  k.animals (the join of an animal's name; shard derived, 1,148 -> 1,149 facts).
+- **Before:** k.commonsense/shards/core told made_of 9, can 8, used_for 7 for 15 things; 9 of those things also in
+  k.attributes, with other values (car can=drive used_for=travel against can=move used_for=travelling; boat travel against
+  travelling). **After:** 0 told in k.commonsense; what k.attributes lacked moved there in its value set: cloud can rain,
+  boat can sail, flower used_for decoration, two rows for the generic bird (can fly, sing) and fish (can swim, used_for
+  food); car "can drive" dropped (a car moves; a person drives it), dog and cat take their abilities from k.animals.
+- tools/import/conceptnet.mjs (not run yet): CapableOf, UsedFor, MadeOf go to k.attributes.thing (`material`, not
+  `made_of`), in k.attributes shards of their own (CC-BY-SA-4.0). tools/attributes-core.mjs FOUND and
+  tools/coverage-report.mjs no longer list k.commonsense for material and used_for. Questions cs-03/04/05/08 moved to
+  k.attributes (at-27 to at-30). Q72 [PSYS2] [LIB] records the old and new names; Q73 asks about k.space.kind.made_of.
+- Test (tests/k.commonsense.rules.test.mjs, +1): k.commonsense.thing has no made_of, used_for or material slot; no
+  told shard of k.commonsense says can, cannot, made_of or used_for; derived can/cannot come from the ability rules;
+  car, boat, house, bird, fish, cloud, flower have their values in k.attributes. tests/import.conceptnet.test.mjs: the
+  importer writes material and used_for on k.attributes.thing.

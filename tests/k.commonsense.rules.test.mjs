@@ -83,3 +83,24 @@ test('with the catalog: every animal of k.animals has a usual place; the water h
   assert.deepEqual(w.ask('k.commonsense.thing name=penguin cannot=?v').map((x) => x.v), ['fly']);
   assert.ok(w.ask('k.commonsense.thing name=?t is_a=liquid').length >= 15);
 });
+
+// KR1 item 4 (review 2026-11-15, finding 6): thing facts were split between k.attributes.thing (material, can,
+// used_for) and k.commonsense.thing (made_of, can, used_for) and had drifted: a car "can move, used for travelling"
+// in one and "can drive, used for travel" in the other.
+test('KR1 item 4: what a thing is made of, can do and is used for has one home, k.attributes.thing, under one key each', async () => {
+  const { parse } = await import('../tools/sopworld/sopworld.mjs');
+  const { factsOf } = await import('../tools/lib/worlds.mjs');
+  const cs = worlds.find((w) => w.id === 'k.commonsense');
+  const slots = parse(cs.schemaText).filter((x) => x.type === 'core.slot' && x.attrs.of?.[0] === 'k.commonsense.thing').map((x) => x.attrs.key[0]);
+  for (const k of ['made_of', 'used_for', 'material']) assert.ok(!slots.includes(k), `k.commonsense.thing.${k}`);
+  // told shards say where a thing is and how many; can and cannot come only from the rules (shard derived)
+  for (const s of cs.shards.filter((x) => !x.id.endsWith('/derived'))) for (const w of parse(s.text)) if (w.type === 'k.commonsense.thing') for (const k of ['can', 'cannot', 'made_of', 'used_for']) assert.ok(!w.attrs[k], `${s.id} @${w.id} ${k}`);
+  for (const w of parse(cs.shards.find((x) => x.id.endsWith('/derived')).text)) if (w.attrs.can || w.attrs.cannot) assert.match(w.attrs['core.source'][0], /^"rule k\.commonsense\.(in)?ability"$/, w.id);
+  // no other world calls a thing's material made_of (k.food.food.made_of is the ingredients of a dish; k.space: Q72)
+  const things = new Map(factsOf('k.attributes', 'k.attributes.thing', worlds).map((w) => [w.attrs.name[0], w]));
+  const vals = (n, k) => (things.get(n)?.attrs[k] ?? []).map((v) => (v.startsWith('"') ? JSON.parse(v) : v));
+  assert.deepEqual([vals('car', 'can'), vals('car', 'used_for'), vals('car', 'material')], [['move'], ['travelling'], ['metal']]);
+  assert.deepEqual(vals('boat', 'can'), ['float', 'move', 'sail']);
+  assert.deepEqual(vals('house', 'material'), ['brick', 'wood', 'stone']);
+  assert.deepEqual([vals('bird', 'can'), vals('fish', 'can'), vals('cloud', 'can'), vals('flower', 'used_for')], [['fly', 'sing'], ['swim'], ['rain'], ['decoration']]);
+});

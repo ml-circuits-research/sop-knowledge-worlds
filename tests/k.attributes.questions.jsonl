@@ -24,3 +24,7 @@
 {"id":"at-24","ask":"in which season is a sled used","query":{"type":"k.attributes.usage","where":{"name":"sled"},"seek":"season","mode":"list"},"expect":{"status":"supported","values":["winter"]}}
 {"id":"at-25","ask":"who uses a stethoscope","query":{"type":"k.attributes.usage","where":{"name":"stethoscope"},"seek":"used_by","mode":"list"},"expect":{"status":"supported","values":["doctor","nurse","vet"]}}
 {"id":"at-26","ask":"in what weather is an umbrella used","query":{"type":"k.attributes.usage","where":{"name":"umbrella"},"seek":"weather","mode":"list"},"expect":{"status":"supported","values":["rainy"]}}
+{"id":"at-27","ask":"what can a bird do","query":{"type":"k.attributes.thing","where":{"name":"bird"},"seek":"can","mode":"list"},"expect":{"status":"supported","values":["fly","sing"]}}
+{"id":"at-28","ask":"what is a boat used for","query":{"type":"k.attributes.thing","where":{"name":"boat"},"seek":"used_for"},"expect":{"status":"supported","value":"\"travelling\""}}
+{"id":"at-29","ask":"what is a house made of","query":{"type":"k.attributes.thing","where":{"name":"house"},"seek":"material","mode":"list"},"expect":{"status":"supported","values":["brick","wood","stone"]}}
+{"id":"at-30","ask":"can a plane fly","query":{"type":"k.attributes.thing","where":{"name":"plane","can":"fly"},"seek":"can","mode":"check"},"expect":{"status":"supported","value":"yes"}}

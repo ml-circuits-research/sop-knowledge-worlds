@@ -66,14 +66,14 @@ export const SWITCHES = [
 // Where the values of an attribute are found: [attribute, world, type, key, for which things].
 export const FOUND = [
   ['colour', 'k.attributes', 'k.attributes.thing', 'colour', 'common things'], ['colour', 'k.food', 'k.food.food', 'colour', 'foods'], ['colour', 'k.objects', 'k.objects.part', 'colour', 'each part of a drawing'], ['colour', 'k.attributes', 'k.attributes.drawn', 'drawn_colour', 'drawable things: the main colours of the drawing'],
-  ['material', 'k.attributes', 'k.attributes.thing', 'material', 'common things'], ['material', 'k.commonsense', 'k.commonsense.thing', 'made_of', 'common things and, by its rules (the shard derived), animals and drinks'],
+  ['material', 'k.attributes', 'k.attributes.thing', 'material', 'common things'],
   ['size', 'k.scenes', 'k.scenes.thing', 'size', 'drawable things'],
   ['place', 'k.scenes', 'k.scenes.thing', 'place', 'drawable things'], ['place', 'k.commonsense', 'k.commonsense.thing', 'at', 'common things and, by its rules (the shard derived), animals and drinks'],
   ['kind', 'k.attributes', 'k.attributes.thing', 'kind', 'common things'], ['kind', 'k.animals', 'k.animals.animal', 'class', 'animals'], ['kind', 'k.food', 'k.food.food', 'kind', 'foods'],
   ['parts', 'k.objects', 'k.objects.part', 'name', 'drawings with named parts'], ['parts', 'k.layouts', 'k.layouts.joins', 'a', 'kinds joined by part_of'], ['parts', 'k.parts', 'k.parts.whole', 'has', 'common things, from WordNet'], ['parts', 'k.parts', 'k.parts.inherited', 'has', 'common things, through what they are a kind of'], ['parts', 'k.parts', 'k.parts.usual', 'has', 'common things without a part in WordNet, in plain words'],
   ['legs', 'k.animals', 'k.animals.animal', 'legs', 'animals'],
   ['wheels', 'k.attributes', 'k.attributes.thing', 'wheels', 'vehicles'],
-  ['can', 'k.attributes', 'k.attributes.thing', 'can', 'common things'], ['can', 'k.animals', 'k.animals.animal', 'can', 'animals'], ['can', 'k.commonsense', 'k.commonsense.thing', 'can', 'common things and, by its rules (the shard derived), animals and drinks'],
+  ['can', 'k.attributes', 'k.attributes.thing', 'can', 'common things'], ['can', 'k.animals', 'k.animals.animal', 'can', 'animals'], ['can', 'k.commonsense', 'k.commonsense.thing', 'can', 'animals, by its rules from k.animals (the shard derived)'],
   ['cannot', 'k.animals', 'k.animals.animal', 'cannot', 'animals'],
   ['lives', 'k.animals', 'k.animals.animal', 'habitat', 'animals'],
   ['eats', 'k.animals', 'k.animals.animal', 'eats', 'animals'],
@@ -95,7 +95,7 @@ export const FOUND = [
   ['weather', 'k.attributes', 'k.attributes.usage', 'weather', 'things of k.scenes'], ['weather', 'k.scenes', 'k.scenes.scene', 'weather', 'scenes'],
   ['age', 'k.attributes', 'k.attributes.usage', 'age', 'things of k.scenes'], ['age', 'k.people', 'k.people.kind', 'age', 'kinds of person'],
   ['user', 'k.attributes', 'k.attributes.usage', 'used_by', 'things of k.scenes whose role does not list them'],
-  ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'], ['used_for', 'k.commonsense', 'k.commonsense.thing', 'used_for', 'common things and, by its rules (the shard derived), animals and drinks'],
+  ['used_for', 'k.attributes', 'k.attributes.thing', 'used_for', 'common things'],
 ];
 // The attributes a kind of thing usually has: [kind, attributes].
 export const KINDS = [

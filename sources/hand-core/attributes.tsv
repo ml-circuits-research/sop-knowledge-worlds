@@ -21,7 +21,7 @@ sun	sky	yellow	gas		shine
 box	container	brown	cardboard			storing
 ball	toy	any	rubber		roll, bounce	playing
 key	tool		metal			locking
-boat	vehicle	any	wood	0	float, move	travelling
+boat	vehicle	any	wood	0	float, move, sail	travelling
 star	sky		gas		shine	
 prison	building					
 stick	natural thing		wood			
@@ -105,7 +105,7 @@ factory	building					making things
 mirror			glass			looking at yourself
 taxi	vehicle		metal	4	move	travelling
 candy	food	any	sugar			eating
-flower	plant	any			grow	
+flower	plant	any			grow	decoration
 champagne	drink					drinking
 juice	drink					drinking
 tower	building		stone			
@@ -550,7 +550,7 @@ dragon	creature	green			fly
 unicorn	creature	white				
 ghost	creature	white				
 snowman		white	snow		melt	
-cloud	sky	white	water			
+cloud	sky	white	water		rain	
 sky	sky	blue				
 sea	landform	blue	water			
 lake	landform	blue	water			
@@ -760,3 +760,5 @@ jungle	place	green
 kennel	building		wood			keeping a dog
 well	building		stone			getting water
 greenhouse	building		glass			growing plants
+bird	animal				fly, sing	
+fish	animal				swim	food

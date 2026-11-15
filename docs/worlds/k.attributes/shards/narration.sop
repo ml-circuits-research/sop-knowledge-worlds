@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (277 of 1083 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1081 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -179,8 +179,6 @@
 @k.attributes.narration.k.colours.mix.gives k.attributes.narration type=k.colours.mix key=gives narrate=yes salience=0.5 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.commonsense.thing.at k.attributes.narration type=k.commonsense.thing key=at narrate=yes salience=0.5 form=relation basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.commonsense.thing.can k.attributes.narration type=k.commonsense.thing key=can narrate=yes salience=0.6 form=relation basis=typical core.source="hand-core 1"
-@k.attributes.narration.k.commonsense.thing.used_for k.attributes.narration type=k.commonsense.thing key=used_for narrate=yes salience=1 form=text basis=typical core.source="hand-core 1"
-@k.attributes.narration.k.commonsense.thing.made_of k.attributes.narration type=k.commonsense.thing key=made_of narrate=yes salience=0.7 form=relation basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.commonsense.thing.part_of k.attributes.narration type=k.commonsense.thing key=part_of narrate=yes salience=0 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.commonsense.thing.has k.attributes.narration type=k.commonsense.thing key=has narrate=yes salience=0 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.commonsense.thing.cannot k.attributes.narration type=k.commonsense.thing key=cannot narrate=yes salience=0.26 form=relation basis=measured core.source="hand-core 1"

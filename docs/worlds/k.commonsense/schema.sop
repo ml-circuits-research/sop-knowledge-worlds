@@ -4,15 +4,16 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.commonsense core.module name=k.commonsense version=4 imports=k.kinds imports=k.animals imports=k.food exports=thing exports=placed exports=lives core.source="hand-core 1"
+@k.commonsense core.module name=k.commonsense version=5 imports=k.kinds imports=k.animals imports=k.food exports=thing exports=placed exports=lives core.source="hand-core 1"
 
 # A thing of everyday life, named by an English lemma. Shared: it belongs to every namespace, so an application's
-# facts in its own namespace join with it.
+# facts in its own namespace join with it. KR1 item 4 (review 2026-11-15, finding 6): what a thing can do, what it is
+# used for and what it is made of have one home, `k.attributes.thing` (`can`, `used_for`, `material`, from the audited
+# table sources/hand-core/attributes.tsv); `made_of` and `used_for` are no keys here, and `can` / `cannot` hold only
+# what the rules below make from k.animals (an animal's abilities, read through the join of its name).
 @k.commonsense.thing core.type of=k.commonsense.thing extends=k.kinds.kind shared=true closed=true core.source="hand-core 1"
 @k.commonsense.thing.at core.slot of=k.commonsense.thing key=at many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.can core.slot of=k.commonsense.thing key=can many=true kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
-@k.commonsense.thing.used_for core.slot of=k.commonsense.thing key=used_for many=true kind=atom kind=string core.source="hand-core 1"
-@k.commonsense.thing.made_of core.slot of=k.commonsense.thing key=made_of many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.part_of core.slot of=k.commonsense.thing key=part_of many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.has core.slot of=k.commonsense.thing key=has many=true kind=atom kind=string core.source="hand-core 1"
 @k.commonsense.thing.cannot core.slot of=k.commonsense.thing key=cannot many=true kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
@@ -104,16 +105,12 @@
 # Words for the types and keys of this world.
 @k.commonsense.word.thing core.word text=thing text=things means=k.commonsense.thing core.source="hand-core 1"
 @k.commonsense.word.at core.word text=where text=live text=lives means=k.commonsense.thing.at core.source="hand-core 1"
-@k.commonsense.word.used_for core.word text=use text=used means=k.commonsense.thing.used_for core.source="hand-core 1"
 @k.commonsense.word.lives core.word text="where it lives" means=k.commonsense.lives core.source="hand-core 1"
 @k.commonsense.word.lives.in core.word text=habitat text="lives in" means=k.commonsense.lives.in core.source="hand-core 1"
-@k.commonsense.word.made_of core.word text=made text=material means=k.commonsense.thing.made_of core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
 @k.commonsense.word.key.thing.at core.word text=at text=find text=found text=place means=k.commonsense.thing.at core.source="hand-core 1"
 @k.commonsense.word.key.thing.can core.word text=can text=able text=do means=k.commonsense.thing.can core.source="hand-core 1"
-@k.commonsense.word.key.thing.used_for core.word text="used for" means=k.commonsense.thing.used_for core.source="hand-core 1"
-@k.commonsense.word.key.thing.made_of core.word text="made of" means=k.commonsense.thing.made_of core.source="hand-core 1"
 @k.commonsense.word.key.thing.part_of core.word text="part of" means=k.commonsense.thing.part_of core.source="hand-core 1"
 @k.commonsense.word.key.thing.has core.word text=has means=k.commonsense.thing.has core.source="hand-core 1"
 @k.commonsense.word.key.thing.cannot core.word text=cannot means=k.commonsense.thing.cannot core.source="hand-core 1"

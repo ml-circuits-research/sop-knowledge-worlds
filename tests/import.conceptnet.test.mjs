@@ -26,16 +26,24 @@ test('edges are filtered and mapped to keys', () => {
 
 test('one fact per thing, values by weight, hand-written things left alone, and it loads', async () => {
   const run = () => importConceptnet(lines, { taken: new Set(['fish']) });
-  const { files, stats } = await run();
+  const { files, attributeFiles, stats } = await run();
   assert.deepEqual(Object.keys(files), ['conceptnet-k.sop', 'conceptnet-s.sop']);
-  assert.deepEqual(stats, { lines: 13, edges: 9, things: 2, values: 7, skippedTaken: 1, shards: 2 });
+  assert.deepEqual(stats, { lines: 13, edges: 9, things: 3, values: 7, skippedTaken: 1, shards: 3 });
   assert.equal(files['conceptnet-k.sop'].split('\n').find((l) => l.startsWith('@')),
-    '@k.commonsense.cn.kettle k.commonsense.thing name=kettle at=kitchen at=stove used_for="boil water" made_of=metal is_a=pot has=handle core.source="conceptnet 5.7"');
+    '@k.commonsense.cn.kettle k.commonsense.thing name=kettle at=kitchen at=stove is_a=pot has=handle core.source="conceptnet 5.7"');
+  // KR1 item 4: what a thing is used for and made of are facts of k.attributes.thing (key material, not made_of)
+  assert.deepEqual(Object.keys(attributeFiles), ['conceptnet-k.sop']);
+  assert.equal(attributeFiles['conceptnet-k.sop'].split('\n').find((l) => l.startsWith('@')),
+    '@k.attributes.cn.kettle k.attributes.thing name=kettle used_for="boil water" material=metal core.source="conceptnet 5.7"');
+  assert.ok(attributeFiles['conceptnet-k.sop'].includes('# license: CC-BY-SA-4.0'));
+  assert.equal((await importConceptnet(lines, { takenAttributes: new Set(['kettle']) })).attributeFiles['conceptnet-k.sop'], undefined);
   assert.ok(files['conceptnet-s.sop'].includes('@k.commonsense.cn.spout k.commonsense.thing name=spout part_of=kettle core.source="conceptnet 5.7"'));
   assert.ok(files['conceptnet-k.sop'].includes('# license: CC-BY-SA-4.0'));
   assert.deepEqual((await run()).files, files);
   const w = new World({ library: library(scanWorlds()) });
   w.use('k.commonsense');
   for (const text of Object.values(files)) assert.equal(w.tell(text).ok, true);
+  w.use('k.attributes');
+  for (const text of Object.values(attributeFiles)) assert.equal(w.tell(text).ok, true);
   assert.deepEqual(w.query({ type: 'k.commonsense.thing', where: { name: 'kettle' }, seek: 'at' }).values, ['kitchen', 'stove']);
 });

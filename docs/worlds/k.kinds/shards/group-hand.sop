@@ -1,4 +1,4 @@
-# k.kinds/shards/group-hand: 89 up edges: the hand-written group of a drawing (k.objects).
+# k.kinds/shards/group-hand: 87 up edges: the hand-written group of a drawing (k.objects).
 # sources: hand-core 1 (read from the catalog's own facts by tools/kinds-core.mjs)
 # license: CC0-1.0
 # script: tools/kinds-core.mjs
@@ -6,7 +6,6 @@
 @k.kinds.parent.bag.household_item k.kinds.parent name=bag is_a="household item" dimension=kind from=k.objects.object group=home core.source="hand-core 1"
 @k.kinds.parent.barn.structure k.kinds.parent name=barn is_a=structure dimension=kind from=k.objects.object group=structures core.source="hand-core 1"
 @k.kinds.parent.battleship.vehicle k.kinds.parent name=battleship is_a=vehicle dimension=kind from=k.objects.object group=vehicles core.source="hand-core 1"
-@k.kinds.parent.bird.animal k.kinds.parent name=bird is_a=animal dimension=kind from=k.objects.object group=animals core.source="hand-core 1"
 @k.kinds.parent.book.household_item k.kinds.parent name=book is_a="household item" dimension=kind from=k.objects.object group=home core.source="hand-core 1"
 @k.kinds.parent.bottle.household_item k.kinds.parent name=bottle is_a="household item" dimension=kind from=k.objects.object group=home core.source="hand-core 1"
 @k.kinds.parent.box.household_item k.kinds.parent name=box is_a="household item" dimension=kind from=k.objects.object group=home core.source="hand-core 1"
@@ -35,7 +34,6 @@
 @k.kinds.parent.dough.food k.kinds.parent name=dough is_a=food dimension=kind from=k.objects.object group=food core.source="hand-core 1"
 @k.kinds.parent.eel.animal.animal k.kinds.parent name=eel is_a=animal dimension=kind from=k.objects.object group=animals sense=animal core.source="hand-core 1"
 @k.kinds.parent.fence.structure k.kinds.parent name=fence is_a=structure dimension=kind from=k.objects.object group=structures core.source="hand-core 1"
-@k.kinds.parent.fish.animal k.kinds.parent name=fish is_a=animal dimension=kind from=k.objects.object group=animals core.source="hand-core 1"
 @k.kinds.parent.flea.animal k.kinds.parent name=flea is_a=animal dimension=kind from=k.objects.object group=animals core.source="hand-core 1"
 @k.kinds.parent.freighter.vehicle k.kinds.parent name=freighter is_a=vehicle dimension=kind from=k.objects.object group=vehicles core.source="hand-core 1"
 @k.kinds.parent.gate.structure k.kinds.parent name=gate is_a=structure dimension=kind from=k.objects.object group=structures core.source="hand-core 1"

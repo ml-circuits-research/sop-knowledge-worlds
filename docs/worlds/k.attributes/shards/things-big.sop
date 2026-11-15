@@ -13,7 +13,7 @@
 @k.attributes.thing.barn k.attributes.thing name=barn kind=building material=wood used_for="keeping animals" named=model core.source="hand-core 1"
 @k.attributes.thing.bicycle k.attributes.thing name=bicycle kind=vehicle colour=any material=metal wheels=2 can=move used_for="riding" named=model core.source="hand-core 1"
 @k.attributes.thing.bike k.attributes.thing name=bike kind=vehicle colour=any material=metal wheels=2 can=move used_for="riding" named=model core.source="hand-core 1"
-@k.attributes.thing.boat k.attributes.thing name=boat kind=vehicle colour=any material=wood wheels=0 can=float can=move used_for="travelling" named=model core.source="hand-core 1"
+@k.attributes.thing.boat k.attributes.thing name=boat kind=vehicle colour=any material=wood wheels=0 can=float can=move can=sail used_for="travelling" named=model core.source="hand-core 1"
 @k.attributes.thing.bridge k.attributes.thing name=bridge kind=building material=stone material=metal used_for="crossing" named=model core.source="hand-core 1"
 @k.attributes.thing.bus k.attributes.thing name=bus kind=vehicle material=metal can=move used_for="travelling" named=model core.source="hand-core 1"
 @k.attributes.thing.cafe k.attributes.thing name=cafe kind=building used_for="drinking coffee" named=model core.source="hand-core 1"

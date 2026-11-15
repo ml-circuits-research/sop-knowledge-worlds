@@ -1,4 +1,4 @@
-# k.kinds/shards/use: 564 up edges: what a thing is for (k.attributes used_for) and where a wearable is worn (k.wearables worn_on).
+# k.kinds/shards/use: 566 up edges: what a thing is for (k.attributes used_for) and where a wearable is worn (k.wearables worn_on).
 # sources: hand-core 1 (read from the catalog's own facts by tools/kinds-core.mjs)
 # license: CC0-1.0
 # script: tools/kinds-core.mjs
@@ -173,8 +173,10 @@
 @k.kinds.parent.fire_extinguisher.thing_for_putting_out_fires k.kinds.parent name="fire extinguisher" is_a="thing for putting out fires" dimension=use from=k.attributes.thing key=used_for value="putting out fires" core.source="hand-core 1"
 @k.kinds.parent.fire_helmet.thing_worn_on_the_head k.kinds.parent name="fire helmet" is_a="thing worn on the head" dimension=use from=k.wearables.wearable key=worn_on value=head core.source="hand-core 1"
 @k.kinds.parent.fireplace.thing_for_heating k.kinds.parent name=fireplace is_a="thing for heating" dimension=use from=k.attributes.thing key=used_for value=heating core.source="hand-core 1"
+@k.kinds.parent.fish.thing_for_food k.kinds.parent name=fish is_a="thing for food" dimension=use from=k.attributes.thing key=used_for value=food core.source="hand-core 1"
 @k.kinds.parent.flashlight.thing_for_giving_light k.kinds.parent name=flashlight is_a="thing for giving light" dimension=use from=k.attributes.thing key=used_for value="giving light" core.source="hand-core 1"
 @k.kinds.parent.flour.thing_for_baking k.kinds.parent name=flour is_a="thing for baking" dimension=use from=k.attributes.thing key=used_for value=baking core.source="hand-core 1"
+@k.kinds.parent.flower.thing_for_decoration k.kinds.parent name=flower is_a="thing for decoration" dimension=use from=k.attributes.thing key=used_for value=decoration core.source="hand-core 1"
 @k.kinds.parent.flute.thing_for_making_music k.kinds.parent name=flute is_a="thing for making music" dimension=use from=k.attributes.thing key=used_for value="making music" core.source="hand-core 1"
 @k.kinds.parent.football.thing_for_playing k.kinds.parent name=football is_a="thing for playing" dimension=use from=k.attributes.thing key=used_for value=playing core.source="hand-core 1"
 @k.kinds.parent.football_kit.thing_worn_on_the_body k.kinds.parent name="football kit" is_a="thing worn on the body" dimension=use from=k.wearables.wearable key=worn_on value=body core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.attributes/shards/things-living: usual values of 73 things (animals and creatures): colour, material, wheels, what it can do, what it is used for, each only where it is plain.
+# k.attributes/shards/things-living: usual values of 75 things (animals and creatures): colour, material, wheels, what it can do, what it is used for, each only where it is plain.
 # sources: hand-core 1 (labelled by a language model, named=model: sources/hand-core/attributes.tsv)
 # license: CC0-1.0
 # script: tools/attributes-core.mjs
@@ -10,6 +10,7 @@
 @k.attributes.thing.bear k.attributes.thing name=bear kind=animal colour=brown named=model core.source="hand-core 1"
 @k.attributes.thing.beaver k.attributes.thing name=beaver kind=animal colour=brown can=swim named=model core.source="hand-core 1"
 @k.attributes.thing.bee k.attributes.thing name=bee kind=animal colour=yellow colour=black can=fly named=model core.source="hand-core 1"
+@k.attributes.thing.bird k.attributes.thing name=bird kind=animal can=fly can=sing named=model core.source="hand-core 1"
 @k.attributes.thing.bison k.attributes.thing name=bison kind=animal colour=brown named=model core.source="hand-core 1"
 @k.attributes.thing.blackbird k.attributes.thing name=blackbird kind=animal colour=black can=fly named=model core.source="hand-core 1"
 @k.attributes.thing.bluebird k.attributes.thing name=bluebird kind=animal colour=blue can=fly named=model core.source="hand-core 1"
@@ -27,6 +28,7 @@
 @k.attributes.thing.dove k.attributes.thing name=dove kind=animal colour=white can=fly named=model core.source="hand-core 1"
 @k.attributes.thing.dragon k.attributes.thing name=dragon kind=creature colour=green can=fly named=model core.source="hand-core 1"
 @k.attributes.thing.elephant k.attributes.thing name=elephant kind=animal colour=grey named=model core.source="hand-core 1"
+@k.attributes.thing.fish k.attributes.thing name=fish kind=animal can=swim used_for="food" named=model core.source="hand-core 1"
 @k.attributes.thing.flamingo k.attributes.thing name=flamingo kind=animal colour=pink can=fly named=model core.source="hand-core 1"
 @k.attributes.thing.fox k.attributes.thing name=fox kind=animal colour=orange named=model core.source="hand-core 1"
 @k.attributes.thing.frog k.attributes.thing name=frog kind=animal colour=green can=jump can=swim named=model core.source="hand-core 1"

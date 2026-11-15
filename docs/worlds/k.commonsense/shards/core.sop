@@ -1,23 +1,24 @@
-# k.commonsense/shards/core: the hand-written core: 15 everyday things and their words.
+# k.commonsense/shards/core: the hand-written core: 15 everyday things, where they usually are and how many a scene
+# has, and their words. What they can do, are used for and are made of is in k.attributes.thing (KR1 item 4).
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.commonsense.fish k.commonsense.thing name=fish at=water can=swim used_for=food core.source="hand-core 1"
-@k.commonsense.bird k.commonsense.thing name=bird at=sky at=tree can=fly can=sing core.source="hand-core 1"
-@k.commonsense.sun k.commonsense.thing name=sun at=sky made_of=gas usually_count=1 core.source="hand-core 1"
-@k.commonsense.moon k.commonsense.thing name=moon at=sky made_of=rock usually_count=1 core.source="hand-core 1"
-@k.commonsense.cloud k.commonsense.thing name=cloud at=sky made_of=water can=rain core.source="hand-core 1"
-@k.commonsense.tree k.commonsense.thing name=tree at=forest at=park at=garden made_of=wood used_for=shade core.source="hand-core 1"
-@k.commonsense.house k.commonsense.thing name=house at=town at=village made_of=brick made_of=wood used_for=living core.source="hand-core 1"
-@k.commonsense.car k.commonsense.thing name=car at=road can=drive made_of=metal used_for=travel core.source="hand-core 1"
-@k.commonsense.boat k.commonsense.thing name=boat at=water can=float can=sail made_of=wood used_for=travel core.source="hand-core 1"
-@k.commonsense.plane k.commonsense.thing name=plane at=sky at=airport can=fly made_of=metal used_for=travel core.source="hand-core 1"
-@k.commonsense.flower k.commonsense.thing name=flower at=garden at=grass used_for=decoration core.source="hand-core 1"
+@k.commonsense.fish k.commonsense.thing name=fish at=water core.source="hand-core 1"
+@k.commonsense.bird k.commonsense.thing name=bird at=sky at=tree core.source="hand-core 1"
+@k.commonsense.sun k.commonsense.thing name=sun at=sky usually_count=1 core.source="hand-core 1"
+@k.commonsense.moon k.commonsense.thing name=moon at=sky usually_count=1 core.source="hand-core 1"
+@k.commonsense.cloud k.commonsense.thing name=cloud at=sky core.source="hand-core 1"
+@k.commonsense.tree k.commonsense.thing name=tree at=forest at=park at=garden core.source="hand-core 1"
+@k.commonsense.house k.commonsense.thing name=house at=town at=village core.source="hand-core 1"
+@k.commonsense.car k.commonsense.thing name=car at=road core.source="hand-core 1"
+@k.commonsense.boat k.commonsense.thing name=boat at=water core.source="hand-core 1"
+@k.commonsense.plane k.commonsense.thing name=plane at=sky at=airport core.source="hand-core 1"
+@k.commonsense.flower k.commonsense.thing name=flower at=garden at=grass core.source="hand-core 1"
 @k.commonsense.grass k.commonsense.thing name=grass at=ground at=garden at=park core.source="hand-core 1"
-@k.commonsense.star k.commonsense.thing name=star at=sky made_of=gas core.source="hand-core 1"
-@k.commonsense.dog k.commonsense.thing name=dog at=house at=garden can=run can=bark core.source="hand-core 1"
-@k.commonsense.cat k.commonsense.thing name=cat at=house can=climb can=jump core.source="hand-core 1"
+@k.commonsense.star k.commonsense.thing name=star at=sky core.source="hand-core 1"
+@k.commonsense.dog k.commonsense.thing name=dog at=house at=garden core.source="hand-core 1"
+@k.commonsense.cat k.commonsense.thing name=cat at=house core.source="hand-core 1"
 
 @k.commonsense.word.fish core.word text=fish text=fishes means=fish of=k.commonsense.thing.name core.source="hand-core 1"
 @k.commonsense.word.bird core.word text=bird text=birds means=bird of=k.commonsense.thing.name core.source="hand-core 1"

@@ -1,5 +1,5 @@
-# k.commonsense/shards/derived: generated, do not edit. What the rules of k.commonsense (version 4) and of the modules it imports derive from the told facts
-# of k.commonsense, k.kinds, k.animals, k.named, k.food, k.values: 1148 facts, each marked derived=true with its rule as source (k.commonsense.ability, k.commonsense.drink, k.commonsense.habitat, k.commonsense.habitat.place, k.commonsense.inability, k.kinds.up.direct).
+# k.commonsense/shards/derived: generated, do not edit. What the rules of k.commonsense (version 5) and of the modules it imports derive from the told facts
+# of k.commonsense, k.kinds, k.animals, k.named, k.food, k.values: 1149 facts, each marked derived=true with its rule as source (k.commonsense.ability, k.commonsense.drink, k.commonsense.habitat, k.commonsense.habitat.place, k.commonsense.inability, k.kinds.up.direct).
 # sources: rule (a rule of a module of this repository, over the facts named above; sources/rule/SOURCE.md)
 # license: CC0-1.0
 # script: tools/derive.mjs
@@ -43,6 +43,7 @@
 @k.commonsense.derived.ability.cardinal k.commonsense.thing name=cardinal can=fly derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.carp k.commonsense.thing name=carp can=swim derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.cassowary k.commonsense.thing name=cassowary can=run can=swim derived=true core.source="rule k.commonsense.ability"
+@k.commonsense.derived.ability.cat k.commonsense.thing name=cat can=climb can=jump derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.catfish k.commonsense.thing name=catfish can=swim derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.centipede k.commonsense.thing name=centipede can=run derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.chameleon k.commonsense.thing name=chameleon can=climb derived=true core.source="rule k.commonsense.ability"
@@ -70,7 +71,7 @@
 @k.commonsense.derived.ability.cuttlefish k.commonsense.thing name=cuttlefish can=swim derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.deer k.commonsense.thing name=deer can=jump can=run can=swim derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.dingo k.commonsense.thing name=dingo can=run derived=true core.source="rule k.commonsense.ability"
-@k.commonsense.derived.ability.dog k.commonsense.thing name=dog can=swim derived=true core.source="rule k.commonsense.ability"
+@k.commonsense.derived.ability.dog k.commonsense.thing name=dog can=run can=swim derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.dolphin k.commonsense.thing name=dolphin can=jump can=swim derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.dove k.commonsense.thing name=dove can=fly derived=true core.source="rule k.commonsense.ability"
 @k.commonsense.derived.ability.dragonfly k.commonsense.thing name=dragonfly can=fly derived=true core.source="rule k.commonsense.ability"
