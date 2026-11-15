@@ -1,4 +1,4 @@
-# k.attributes/shards/things-abilities: what 56 common things of the catalog that had no ability can do (121 values; 16 of 137 proposed were wrong by the hand check and are not written): the agent role of k.actions, and abilities inherited down WordNet's hypernyms from the kinds the catalog describes (KR6; the rule in tools/attributes-abilities.mjs)
+# k.attributes/shards/things-abilities: what 63 common things of the catalog that had no ability can do (128 values; 16 of 144 proposed were wrong by the hand check and are not written): the agent role of k.actions, and abilities inherited down WordNet's hypernyms from the kinds the catalog describes (KR6; the rule in tools/attributes-abilities.mjs)
 # sources: wordnet 3.1 (the hypernym chains of the first noun senses, as imported in k.words; the abilities they carry down are the catalog's own: k.attributes, k.animals, k.actions; hand-checked in sources/coverage/abilities-audit.tsv)
 # license: WordNet-3.0
 # script: tools/attributes-abilities.mjs
@@ -13,10 +13,14 @@
 @k.attributes.thing.abilities.battleship k.attributes.thing name=battleship can=float can=leave can=move can=sail can=sink core.source="wordnet 3.1"
 # branch: the agent of these actions in k.actions
 @k.attributes.thing.abilities.branch k.attributes.thing name=branch can=wave core.source="wordnet 3.1"
+# bungalow: a kind of house (WordNet)
+@k.attributes.thing.abilities.bungalow k.attributes.thing name=bungalow can=stand core.source="wordnet 3.1"
 # card: a kind of paper (WordNet)
 @k.attributes.thing.abilities.card k.attributes.thing name=card can=burn core.source="wordnet 3.1"
 # castle: a kind of house (WordNet)
 @k.attributes.thing.abilities.castle k.attributes.thing name=castle can=stand core.source="wordnet 3.1"
+# cellphone: a kind of telephone (WordNet)
+@k.attributes.thing.abilities.cellphone k.attributes.thing name=cellphone can=ring core.source="wordnet 3.1"
 # chainsaw: a kind of machine (WordNet)
 @k.attributes.thing.abilities.chainsaw k.attributes.thing name=chainsaw can=work core.source="wordnet 3.1"
 # chick: the agent of these actions in k.actions
@@ -45,8 +49,12 @@
 @k.attributes.thing.abilities.freighter k.attributes.thing name=freighter can=float can=leave can=move can=sail can=sink core.source="wordnet 3.1"
 # gear: a kind of wheel (WordNet)
 @k.attributes.thing.abilities.gear k.attributes.thing name=gear can=spin can=turn core.source="wordnet 3.1"
+# grenade: a kind of bomb (WordNet)
+@k.attributes.thing.abilities.grenade k.attributes.thing name=grenade can=explode core.source="wordnet 3.1"
 # guide: the agent of these actions in k.actions
 @k.attributes.thing.abilities.guide k.attributes.thing name=guide can=lead core.source="wordnet 3.1"
+# handgun: a kind of gun (WordNet)
+@k.attributes.thing.abilities.handgun k.attributes.thing name=handgun can=shoot core.source="wordnet 3.1"
 # house: the agent of these actions in k.actions
 @k.attributes.thing.abilities.house k.attributes.thing name=house can=stand core.source="wordnet 3.1"
 # jukebox: a kind of machine (WordNet)
@@ -83,6 +91,10 @@
 @k.attributes.thing.abilities.praying_mantis k.attributes.thing name="praying mantis" can=crawl can=fly can="fly away" core.source="wordnet 3.1"
 # puddle: the agent of these actions in k.actions
 @k.attributes.thing.abilities.puddle k.attributes.thing name=puddle can=shrink core.source="wordnet 3.1"
+# puppy: the agent of these actions in k.actions
+@k.attributes.thing.abilities.puppy k.attributes.thing name=puppy can=play core.source="wordnet 3.1"
+# revolver: a kind of pistol (WordNet)
+@k.attributes.thing.abilities.revolver k.attributes.thing name=revolver can=shoot core.source="wordnet 3.1"
 # rooster: a kind of bird (WordNet)
 @k.attributes.thing.abilities.rooster k.attributes.thing name=rooster can=feed can=fly can="fly away" can=hop can=sit core.source="wordnet 3.1"
 # scalpel: a kind of knife (WordNet)
@@ -91,6 +103,8 @@
 @k.attributes.thing.abilities.shipwreck k.attributes.thing name=shipwreck can=sink core.source="wordnet 3.1"
 # sky: the agent of these actions in k.actions
 @k.attributes.thing.abilities.sky k.attributes.thing name=sky can=rain can=snow core.source="wordnet 3.1"
+# skylight: a kind of window (WordNet)
+@k.attributes.thing.abilities.skylight k.attributes.thing name=skylight can=open core.source="wordnet 3.1"
 # smoke: the agent of these actions in k.actions
 @k.attributes.thing.abilities.smoke k.attributes.thing name=smoke can=rise core.source="wordnet 3.1"
 # softball: a kind of ball (WordNet)

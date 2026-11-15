@@ -49,7 +49,9 @@ export const readAudit = (text = existsSync(AUDIT) ? readFileSync(AUDIT, 'utf8')
 // The catalog: things that have each key (in shards other than this one), the action names, the verbs of w.lang.en.
 function catalog() {
   const dir = join(REPO, 'docs/worlds/k.attributes/shards'), has = new Map();
-  for (const f of readdirSync(dir).filter((x) => x.endsWith('.sop') && x !== 'things-conceptnet.sop')) for (const l of readFileSync(join(dir, f), 'utf8').split('\n')) {
+  // the catalog's own values, without the shards derived from WordNet by tools/attributes-abilities.mjs and
+  // attributes-uses.mjs (they leave ConceptNet's facts out in turn, so neither depends on the other)
+  for (const f of readdirSync(dir).filter((x) => x.endsWith('.sop') && !['things-conceptnet.sop', 'things-abilities.sop', 'things-uses.sop'].includes(x))) for (const l of readFileSync(join(dir, f), 'utf8').split('\n')) {
     const m = / k\.attributes\.thing name=("[^"]*"|\S+)/.exec(l);
     if (!m) continue;
     const n = tok(m[1]);

@@ -21,7 +21,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Origin: https://github.com/commonsense/conceptnet5/wiki/Downloads ; the file is `https://s3.amazonaws.com/conceptnet/downloads/2019/edges/conceptnet-assertions-5.7.0.csv.gz` (about 475 MB).
 - License: CC-BY-SA-4.0.
 - Attribution: This work includes data from ConceptNet 5, which was compiled by the Commonsense Computing Initiative. ConceptNet 5 is freely available under the Creative Commons Attribution-ShareAlike license (CC BY-SA 4.0) from https://conceptnet.io . The included data was created by contributors to Commonsense Computing projects, contributors to Wikimedia projects, Games with a Purpose, Princeton University's WordNet, DBPedia, OpenCyc, and Umbel.
-- Shard terms: CC-BY-SA-4.0, CC0-1.0
+- Shard terms: CC-BY-SA-4.0
 - Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (2 shards)
 
 ## countries-5.1.0

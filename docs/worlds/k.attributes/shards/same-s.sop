@@ -207,7 +207,7 @@
 @k.attributes.same.skull.body_part k.attributes.same name=skull sense="body part" only=true in=k.attributes.thing in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.skunk.animal k.attributes.same name=skunk sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.sky.thing k.attributes.same name=sky sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.skylight.thing k.attributes.same name=skylight sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.skylight.thing k.attributes.same name=skylight sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.skyscraper.thing k.attributes.same name=skyscraper sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.slab.thing k.attributes.same name=slab sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.slaughterhouse.thing k.attributes.same name=slaughterhouse sense=thing only=true in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

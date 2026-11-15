@@ -1,4 +1,4 @@
-# k.kinds/shards/use-wordnet: 69 up edges: undefined.
+# k.kinds/shards/use-wordnet: 76 up edges: undefined.
 # sources: wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)
 # license: WordNet-3.0
 # script: tools/kinds-core.mjs
@@ -7,13 +7,17 @@
 @k.kinds.parent.balance_scale.thing_for_weighing k.kinds.parent name="balance scale" is_a="thing for weighing" dimension=use from=k.attributes.thing key=used_for value=weighing core.source="wordnet 3.1"
 @k.kinds.parent.ballet_shoes.thing_for_dancing k.kinds.parent name="ballet shoes" is_a="thing for dancing" dimension=use from=k.attributes.thing key=used_for value=dancing core.source="wordnet 3.1"
 @k.kinds.parent.binoculars.thing_for_watching k.kinds.parent name=binoculars is_a="thing for watching" dimension=use from=k.attributes.thing key=used_for value=watching core.source="wordnet 3.1"
+@k.kinds.parent.bookshop.thing_for_buying k.kinds.parent name=bookshop is_a="thing for buying" dimension=use from=k.attributes.thing key=used_for value=buying core.source="wordnet 3.1"
+@k.kinds.parent.bookstore.thing_for_buying k.kinds.parent name=bookstore is_a="thing for buying" dimension=use from=k.attributes.thing key=used_for value=buying core.source="wordnet 3.1"
 @k.kinds.parent.boutique.thing_for_buying k.kinds.parent name=boutique is_a="thing for buying" dimension=use from=k.attributes.thing key=used_for value=buying core.source="wordnet 3.1"
 @k.kinds.parent.bow_tie.thing_for_wearing k.kinds.parent name="bow tie" is_a="thing for wearing" dimension=use from=k.attributes.thing key=used_for value=wearing core.source="wordnet 3.1"
 @k.kinds.parent.brain.thing_for_thinking k.kinds.parent name=brain is_a="thing for thinking" dimension=use from=k.attributes.thing key=used_for value=thinking core.source="wordnet 3.1"
+@k.kinds.parent.bungalow.thing_for_living k.kinds.parent name=bungalow is_a="thing for living" dimension=use from=k.attributes.thing key=used_for value=living core.source="wordnet 3.1"
 @k.kinds.parent.canteen.thing_for_holding_drinks k.kinds.parent name=canteen is_a="thing for holding drinks" dimension=use from=k.attributes.thing key=used_for value="holding drinks" core.source="wordnet 3.1"
 @k.kinds.parent.caramel.thing_for_eating k.kinds.parent name=caramel is_a="thing for eating" dimension=use from=k.attributes.thing key=used_for value=eating core.source="wordnet 3.1"
 @k.kinds.parent.card.thing_for_writing k.kinds.parent name=card is_a="thing for writing" dimension=use from=k.attributes.thing key=used_for value=writing core.source="wordnet 3.1"
 @k.kinds.parent.castle.thing_for_living k.kinds.parent name=castle is_a="thing for living" dimension=use from=k.attributes.thing key=used_for value=living core.source="wordnet 3.1"
+@k.kinds.parent.cauldron.thing_for_cooking k.kinds.parent name=cauldron is_a="thing for cooking" dimension=use from=k.attributes.thing key=used_for value=cooking core.source="wordnet 3.1"
 @k.kinds.parent.chocolate_milk.thing_for_drinking k.kinds.parent name="chocolate milk" is_a="thing for drinking" dimension=use from=k.attributes.thing key=used_for value=drinking core.source="wordnet 3.1"
 @k.kinds.parent.commissary.thing_for_buying k.kinds.parent name=commissary is_a="thing for buying" dimension=use from=k.attributes.thing key=used_for value=buying core.source="wordnet 3.1"
 @k.kinds.parent.convent.thing_for_living k.kinds.parent name=convent is_a="thing for living" dimension=use from=k.attributes.thing key=used_for value=living core.source="wordnet 3.1"
@@ -24,11 +28,14 @@
 @k.kinds.parent.dish_cloth.thing_for_wiping k.kinds.parent name="dish cloth" is_a="thing for wiping" dimension=use from=k.attributes.thing key=used_for value=wiping core.source="wordnet 3.1"
 @k.kinds.parent.dough.thing_for_baking k.kinds.parent name=dough is_a="thing for baking" dimension=use from=k.attributes.thing key=used_for value=baking core.source="wordnet 3.1"
 @k.kinds.parent.dressing_gown.thing_for_wearing k.kinds.parent name="dressing gown" is_a="thing for wearing" dimension=use from=k.attributes.thing key=used_for value=wearing core.source="wordnet 3.1"
+@k.kinds.parent.driveway.thing_for_driving k.kinds.parent name=driveway is_a="thing for driving" dimension=use from=k.attributes.thing key=used_for value=driving core.source="wordnet 3.1"
 @k.kinds.parent.espresso.thing_for_drinking k.kinds.parent name=espresso is_a="thing for drinking" dimension=use from=k.attributes.thing key=used_for value=drinking core.source="wordnet 3.1"
 @k.kinds.parent.farmhouse.thing_for_living k.kinds.parent name=farmhouse is_a="thing for living" dimension=use from=k.attributes.thing key=used_for value=living core.source="wordnet 3.1"
 @k.kinds.parent.fire.thing_for_burning k.kinds.parent name=fire is_a="thing for burning" dimension=use from=k.attributes.thing key=used_for value=burning core.source="wordnet 3.1"
 @k.kinds.parent.fire_hose.thing_for_putting_out k.kinds.parent name="fire hose" is_a="thing for putting out" dimension=use from=k.attributes.thing key=used_for value="putting out" core.source="wordnet 3.1"
 @k.kinds.parent.fishing_pole.thing_for_catching k.kinds.parent name="fishing pole" is_a="thing for catching" dimension=use from=k.attributes.thing key=used_for value=catching core.source="wordnet 3.1"
+@k.kinds.parent.flask.thing_for_holding_drinks k.kinds.parent name=flask is_a="thing for holding drinks" dimension=use from=k.attributes.thing key=used_for value="holding drinks" core.source="wordnet 3.1"
+@k.kinds.parent.freeway.thing_for_driving k.kinds.parent name=freeway is_a="thing for driving" dimension=use from=k.attributes.thing key=used_for value=driving core.source="wordnet 3.1"
 @k.kinds.parent.glue.thing_for_gluing k.kinds.parent name=glue is_a="thing for gluing" dimension=use from=k.attributes.thing key=used_for value=gluing core.source="wordnet 3.1"
 @k.kinds.parent.glue.thing_for_joining k.kinds.parent name=glue is_a="thing for joining" dimension=use from=k.attributes.thing key=used_for value=joining core.source="wordnet 3.1"
 @k.kinds.parent.glue.thing_for_mending k.kinds.parent name=glue is_a="thing for mending" dimension=use from=k.attributes.thing key=used_for value=mending core.source="wordnet 3.1"
@@ -51,8 +58,8 @@
 @k.kinds.parent.paint_brush.thing_for_painting k.kinds.parent name="paint brush" is_a="thing for painting" dimension=use from=k.attributes.thing key=used_for value=painting core.source="wordnet 3.1"
 @k.kinds.parent.palace.thing_for_living k.kinds.parent name=palace is_a="thing for living" dimension=use from=k.attributes.thing key=used_for value=living core.source="wordnet 3.1"
 @k.kinds.parent.pencil_sharpener.thing_for_sharpening k.kinds.parent name="pencil sharpener" is_a="thing for sharpening" dimension=use from=k.attributes.thing key=used_for value=sharpening core.source="wordnet 3.1"
+@k.kinds.parent.pouch.thing_for_carrying k.kinds.parent name=pouch is_a="thing for carrying" dimension=use from=k.attributes.thing key=used_for value=carrying core.source="wordnet 3.1"
 @k.kinds.parent.scales.thing_for_weighing k.kinds.parent name=scales is_a="thing for weighing" dimension=use from=k.attributes.thing key=used_for value=weighing core.source="wordnet 3.1"
-@k.kinds.parent.scalpel.thing_for_cutting k.kinds.parent name=scalpel is_a="thing for cutting" dimension=use from=k.attributes.thing key=used_for value=cutting core.source="wordnet 3.1"
 @k.kinds.parent.scrubbing_brush.thing_for_brushing k.kinds.parent name="scrubbing brush" is_a="thing for brushing" dimension=use from=k.attributes.thing key=used_for value=brushing core.source="wordnet 3.1"
 @k.kinds.parent.sewing_needle.thing_for_mending k.kinds.parent name="sewing needle" is_a="thing for mending" dimension=use from=k.attributes.thing key=used_for value=mending core.source="wordnet 3.1"
 @k.kinds.parent.sewing_needle.thing_for_sewing k.kinds.parent name="sewing needle" is_a="thing for sewing" dimension=use from=k.attributes.thing key=used_for value=sewing core.source="wordnet 3.1"

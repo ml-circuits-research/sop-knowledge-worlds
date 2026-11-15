@@ -97,7 +97,9 @@ test('KR1 item 4: what a thing is made of, can do and is used for has one home, 
   for (const s of cs.shards.filter((x) => !x.id.endsWith('/derived'))) for (const w of parse(s.text)) if (w.type === 'k.commonsense.thing') for (const k of ['can', 'cannot', 'made_of', 'used_for']) assert.ok(!w.attrs[k], `${s.id} @${w.id} ${k}`);
   for (const w of parse(cs.shards.find((x) => x.id.endsWith('/derived')).text)) if (w.attrs.can || w.attrs.cannot) assert.match(w.attrs['core.source'][0], /^"rule k\.commonsense\.(in)?ability"$/, w.id);
   // no other world calls a thing's material made_of (k.food.food.made_of is the ingredients of a dish; k.space: Q72)
-  const things = new Map(factsOf('k.attributes', 'k.attributes.thing', worlds).map((w) => [w.attrs.name[0], w]));
+  // the hand-written table's facts (things-*.sop by tools/attributes-core.mjs); other shards (ConceptNet, the WordNet
+  // tools) may add facts of the same name
+  const things = new Map(factsOf('k.attributes', 'k.attributes.thing', worlds).filter((w) => !/^k\.attributes\.thing\.(conceptnet|abilities|uses|glosses)\./.test(w.id)).map((w) => [w.attrs.name[0], w]));
   const vals = (n, k) => (things.get(n)?.attrs[k] ?? []).map((v) => (v.startsWith('"') ? JSON.parse(v) : v));
   assert.deepEqual([vals('car', 'can'), vals('car', 'used_for'), vals('car', 'material')], [['move'], ['travelling'], ['metal']]);
   assert.deepEqual(vals('boat', 'can'), ['float', 'move', 'sail']);

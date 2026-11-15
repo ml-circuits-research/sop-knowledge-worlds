@@ -29,8 +29,8 @@ the place of the dog).
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
 | material | 346 (23%) | 113 (8%) | 1041 (69%) | `k.attributes.thing` (material) |
-| what it can do (of the 463 it applies to) | 257 (56%) | 55 (12%) | 151 (33%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 410 (27%) | 148 (10%) | 942 (63%) | `k.attributes.thing` (used_for) |
+| what it can do (of the 463 it applies to) | 261 (56%) | 51 (11%) | 151 (33%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| what it is used for | 432 (29%) | 156 (10%) | 912 (61%) | `k.attributes.thing` (used_for) |
 | property (sharp, sticky, heavy ...) | 34 (2%) | 25 (2%) | 1441 (96%) | `k.attributes.thing` (property) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
@@ -52,7 +52,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 22 (1%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1283 (86%) |
+| `k.attributes` | 1284 (86%) |
 | `k.body` | 4 (0%) |
 | `k.charts` | 1 (0%) |
 | `k.colours` | 73 (5%) |
@@ -62,7 +62,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.food` | 147 (10%) |
 | `k.genres` | 1 (0%) |
 | `k.geo` | 20 (1%) |
-| `k.kinds` | 1282 (85%) |
+| `k.kinds` | 1283 (86%) |
 | `k.layouts` | 221 (15%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
@@ -108,7 +108,7 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **anchor (where another thing sits)**: world, phone, honey, earth, hospital, coffee, road, picture, hotel, station, sun, ball, key, fish, star, stick, bank, tea, camera, store, jail, cat, shop, wine, beer, computer, planet, moon, suit, bell
 - **material**: world, person, honey, dog, hospital, street, coffee, road, building, hotel, station, horse, fish, prison, bank, tea, camera, store, jail, cat, shop, island, beer, chicken, hole, bird, rose, restaurant, milk, meat
 - **what it can do**: earth, camera, planet, bullet, shower, screen, sheep, bug, fridge, radar, nut, root, lance, shield, oven, reed, worm, buffalo, iris, stove, pod, hay, grill, comet, refrigerator, laurel, ape, camel, dinosaur, blossom
-- **what it is used for**: world, person, building, station, rock, horse, star, stick, jail, island, planet, moon, chicken, hole, bird, stone, beach, rose, mountain, pig, cheese, hill, plant, airport, grave, pizza, chocolate, soup, rat, monkey
+- **what it is used for**: world, person, station, rock, star, stick, jail, island, planet, moon, chicken, hole, bird, stone, beach, rose, mountain, pig, cheese, hill, plant, airport, grave, pizza, chocolate, soup, rat, monkey, egg, wolf
 - **property (sharp, sticky, heavy ...)**: house, world, door, phone, honey, gun, dog, hospital, street, coffee, road, picture, building, ship, hotel, bag, station, box, ball, key, boat, fish, star, prison, stick, bank, tea, camera, window, wall
 - **size in metres (the longest side)**: world, honey, earth, street, coffee, road, station, sun, star, bank, tea, wall, wine, island, beer, planet, moon, hole, beach, milk, meat, mountain, path, sugar, hill, pocket, plant, chocolate, soup, champagne
 - **weight in kilograms**: house, world, honey, earth, hospital, street, coffee, road, building, hotel, station, sun, star, prison, bank, tea, wall, store, jail, shop, wine, island, beer, planet, moon, hole, beach, rose, restaurant, milk

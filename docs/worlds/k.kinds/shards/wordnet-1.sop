@@ -1,4 +1,4 @@
-# k.kinds/shards/wordnet-1: 1190 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
+# k.kinds/shards/wordnet-1: 1193 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
 # sources: wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)
 # license: WordNet-3.0
 # script: tools/kinds-core.mjs
@@ -231,6 +231,8 @@
 @k.kinds.parent.bonfire.fire k.kinds.parent name=bonfire is_a=fire dimension=kind from=k.words.sense key=is_a value="bonfire noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.bony_fish.fish k.kinds.parent name="bony fish" is_a=fish dimension=kind from=k.words.sense key=kind_of value="anchovy noun 2" core.source="wordnet 3.1"
 @k.kinds.parent.book.publication k.kinds.parent name=book is_a=publication dimension=kind from=k.words.sense key=is_a value="book noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.bookshop.shop k.kinds.parent name=bookshop is_a=shop dimension=kind from=k.words.sense key=is_a value="bookshop noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.bookstore.shop k.kinds.parent name=bookstore is_a=shop dimension=kind from=k.words.sense key=is_a value="bookstore noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.boot.footwear k.kinds.parent name=boot is_a=footwear dimension=kind from=k.words.sense key=is_a value="boot noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.borscht.soup k.kinds.parent name=borscht is_a=soup dimension=kind from=k.words.sense key=is_a value="borscht noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.bottle.vessel k.kinds.parent name=bottle is_a=vessel dimension=kind from=k.words.sense key=is_a value="bottle noun 1" core.source="wordnet 3.1"
@@ -287,6 +289,7 @@
 @k.kinds.parent.bullfrog.true_frog k.kinds.parent name=bullfrog is_a="true frog" dimension=kind from=k.words.sense key=is_a value="bullfrog noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.bumblebee.bee k.kinds.parent name=bumblebee is_a=bee dimension=kind from=k.words.sense key=is_a value="bumblebee noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.bun.bread k.kinds.parent name=bun is_a=bread dimension=kind from=k.words.sense key=kind_of value="bagel noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.bungalow.house k.kinds.parent name=bungalow is_a=house dimension=kind from=k.words.sense key=is_a value="bungalow noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.buoy.reference_point k.kinds.parent name=buoy is_a="reference point" dimension=kind from=k.words.sense key=is_a value="buoy noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.burner.apparatus k.kinds.parent name=burner is_a=apparatus dimension=kind from=k.words.sense key=kind_of value="blowtorch noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.burr.pericarp k.kinds.parent name=burr is_a=pericarp dimension=kind from=k.words.sense key=is_a value="burr noun 1" core.source="wordnet 3.1"
@@ -674,7 +677,7 @@
 @k.kinds.parent.dung_beetle.scarabaeid_beetle k.kinds.parent name="dung beetle" is_a="scarabaeid beetle" dimension=kind from=k.words.sense key=is_a value="dung beetle noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.dungeon.stronghold k.kinds.parent name=dungeon is_a=stronghold dimension=kind from=k.words.sense key=is_a value="dungeon noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.durables.consumer_goods k.kinds.parent name=durables is_a="consumer goods" dimension=kind from=k.words.sense key=kind_of value="dishwasher noun 1" core.source="wordnet 3.1"
-@k.kinds.parent.dwelling.housing k.kinds.parent name=dwelling is_a=housing dimension=kind from=k.words.sense key=kind_of value="castle noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.dwelling.housing k.kinds.parent name=dwelling is_a=housing dimension=kind from=k.words.sense key=kind_of value="bungalow noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.Earth.terrestrial_planet k.kinds.parent name=Earth is_a="terrestrial planet" dimension=kind from=k.words.sense key=instance_of value="Earth noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.Europa.Galilean_satellite k.kinds.parent name=Europa is_a="Galilean satellite" dimension=kind from=k.words.sense key=instance_of value="Europa noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.e-mail.electronic_communication k.kinds.parent name=e-mail is_a="electronic communication" dimension=kind from=k.words.sense key=is_a value="e-mail noun 1" core.source="wordnet 3.1"
@@ -788,7 +791,7 @@
 @k.kinds.parent.finger.digit k.kinds.parent name=finger is_a=digit dimension=kind from=k.words.sense key=is_a value="finger noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.finger.extremity k.kinds.parent name=finger is_a=extremity dimension=kind from=k.words.sense key=is_a value="finger noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.fire.combustion k.kinds.parent name=fire is_a=combustion dimension=kind from=k.words.sense key=is_a value="fire noun 3" core.source="wordnet 3.1"
-@k.kinds.parent.firearm.gun k.kinds.parent name=firearm is_a=gun dimension=kind from=k.words.sense key=kind_of value="pistol noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.firearm.gun k.kinds.parent name=firearm is_a=gun dimension=kind from=k.words.sense key=kind_of value="handgun noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.firefighter.defender k.kinds.parent name=firefighter is_a=defender dimension=kind from=k.words.sense key=is_a value="firefighter noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.firefly.elaterid_beetle k.kinds.parent name=firefly is_a="elaterid beetle" dimension=kind from=k.words.sense key=is_a value="firefly noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.fireplace.recess k.kinds.parent name=fireplace is_a=recess dimension=kind from=k.words.sense key=is_a value="fireplace noun 1" core.source="wordnet 3.1"
@@ -1004,7 +1007,7 @@
 @k.kinds.parent.jewel.jewelry k.kinds.parent name=jewel is_a=jewelry dimension=kind from=k.words.sense key=is_a value="jewel noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.jewelled_headdress.headdress k.kinds.parent name="jewelled headdress" is_a=headdress dimension=kind from=k.words.sense key=kind_of value="crown noun 4" core.source="wordnet 3.1"
 @k.kinds.parent.jewellery.adornment k.kinds.parent name=jewellery is_a=adornment dimension=kind from=k.words.sense key=is_a value="jewellery noun 1" core.source="wordnet 3.1"
-@k.kinds.parent.jewelry.adornment k.kinds.parent name=jewelry is_a=adornment dimension=kind from=k.words.sense key=kind_of value="brooch noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.jewelry.adornment k.kinds.parent name=jewelry is_a=adornment dimension=kind from=k.words.sense key=is_a value="jewelry noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.joint.body_part k.kinds.parent name=joint is_a="body part" dimension=kind from=k.words.sense key=kind_of value="ankle noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.judge.adjudicator k.kinds.parent name=judge is_a=adjudicator dimension=kind from=k.words.sense key=is_a value="judge noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.judge.official k.kinds.parent name=judge is_a=official dimension=kind from=k.words.sense key=is_a value="judge noun 1" core.source="wordnet 3.1"
@@ -1120,7 +1123,7 @@
 @k.kinds.parent.membrane.animal_tissue k.kinds.parent name=membrane is_a="animal tissue" dimension=kind from=k.words.sense key=kind_of value="cornea noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.memo.note k.kinds.parent name=memo is_a=note dimension=kind from=k.words.sense key=is_a value="memo noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.memory_device.device k.kinds.parent name="memory device" is_a=device dimension=kind from=k.words.sense key=kind_of value="disc noun 1" core.source="wordnet 3.1"
-@k.kinds.parent.mercantile_establishment.place_of_business k.kinds.parent name="mercantile establishment" is_a="place of business" dimension=kind from=k.words.sense key=kind_of value="boutique noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.mercantile_establishment.place_of_business k.kinds.parent name="mercantile establishment" is_a="place of business" dimension=kind from=k.words.sense key=kind_of value="bookshop noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.merchant.businessperson k.kinds.parent name=merchant is_a=businessperson dimension=kind from=k.words.sense key=kind_of value="baker noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.metallic_element.chemical_element k.kinds.parent name="metallic element" is_a="chemical element" dimension=kind from=k.words.sense key=kind_of value="gold noun 3" core.source="wordnet 3.1"
 @k.kinds.parent.metatherian.mammal k.kinds.parent name=metatherian is_a=mammal dimension=kind from=k.words.sense key=kind_of value="Tasmanian devil noun 1" core.source="wordnet 3.1"

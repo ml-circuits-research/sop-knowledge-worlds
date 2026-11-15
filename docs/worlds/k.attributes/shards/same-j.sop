@@ -1,4 +1,4 @@
-# k.attributes/shards/same-j: one name, one thing: for 51 names that start with "j" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-j: one name, one thing: for 52 names that start with "j" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -35,6 +35,7 @@
 @k.attributes.same.jet.thing k.attributes.same name=jet sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jet_plane.thing k.attributes.same name="jet plane" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jewel.clothing k.attributes.same name=jewel sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.jewelry.thing k.attributes.same name=jewelry sense=thing only=true in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jigsaw.thing k.attributes.same name=jigsaw sense=thing only=true in=k.attributes.number by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jigsaw_puzzle.thing k.attributes.same name="jigsaw puzzle" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jigsaw_puzzle_piece.thing k.attributes.same name="jigsaw puzzle piece" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

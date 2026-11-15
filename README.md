@@ -38,7 +38,7 @@ Status: <!--n:worlds-->35<!--/n--> knowledge worlds and <!--n:schemas-->11<!--/n
 the build network; the import scripts for the first two exist with fixture tests).
 Round 8 worlds: `k.actions` (the words of the acts: <!--n:facts:k.actions.act-->19<!--/n--> acts, their roles and markers, <!--n:facts:k.actions.verb-->331<!--/n--> verbs and phrasal verbs; and, from Round 7, 187 everyday actions: who does it, to what, with what, the opposite, what undoes it), `k.values` (the words for values: 170 colour names with RGB, 13 ordered scales and their
 comparatives, shapes, directions, positions, set words, number words), `k.attributes` (which attributes kinds of things have, where their values are
-found, usual colour, material, wheels, abilities and use of <!--n:facts:k.attributes.thing-->951<!--/n--> common things), `k.wearables` (what is worn where: 15 places on the body with their anchor on the
+found, usual colour, material, wheels, abilities and use of <!--n:facts:k.attributes.thing-->965<!--/n--> common things), `k.wearables` (what is worn where: 15 places on the body with their anchor on the
 person drawing, 105 wearables joined to drawings and face variants), `k.parts` (usual parts of 541 of the 1,500 common things, from WordNet).
 Coverage of the 1,500 common things per attribute and per world, with the gaps: `docs/worlds/COVERAGE.md`; families of things by aspect: `docs/worlds/k.attributes/ASPECTS.md`.
 Round 9 (the facts the Talk tab asked for): `k.layouts` has 225 anchors (where a thing sits, stands, lies or is put:

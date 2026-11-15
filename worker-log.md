@@ -6648,3 +6648,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Pushed: plural rules (w.lang.en/ro.count), article fills, Romanian words for the w.* kinds, words shards of 22 k.* worlds (vocab byte-identical each).
 - Left (words shards): k.actions, k.animals, k.attributes, k.diagrams, k.drawing, k.faces, k.geo, k.scenes, k.time, k.values, k.words (their tools/tests read schema words: need tools/lib/words-shards.mjs readers); k.motion (its test forbids k.motion in language worlds: owner decision needed); k.objects (k.objects.drawables test red on main). Scripts: /tmp/w3word.sh, /tmp/w3batch.sh, /tmp/w3move_words.py.
 - Left (Romanian data, reviewer 16:10 (b) step 3): morphology tables, closed classes and templates of tools/lang-ro-core.mjs into hand shards (stem folds stay generated).
+## 2026-11-15 — fifth worker: my ConceptNet commit left eight generated files stale; fixed (full suite at f77c570)
+
+- The full suite at f77c570 found 10 red files; 8 were mine. Under the new push rule I ran only the touched tests
+  and the catalog, not `npm run regenerate`, and the new slot `property` and the new facts moved joins, narration,
+  relations, kinds (material and use edges), diagram topics and COVERAGE.md (kept as main's by the merge driver).
+  Fixed: `npm run regenerate` on the tip. Lesson for me: after a change of facts or of a schema, run
+  `npm run regenerate` before the push (the pre-push hook checks only the catalog).
+- Licences kept apart: tools/kinds-core.mjs writes the edges read from ConceptNet's values into shards of their own
+  (material-conceptnet, use-conceptnet, CC-BY-SA-4.0; the k.kinds licence test found them in the CC0 `material`
+  shard). tools/attributes-abilities.mjs and attributes-uses.mjs no longer seed from ConceptNet's facts (a share-alike
+  value must not reach a WordNet-licensed shard), and the ConceptNet importer no longer reads their shards, so neither
+  depends on the other.
+- With that order, the samples were drawn again and the new values checked (audits extended): ConceptNet CapableOf 7 of
+  100 wrong (7.0 %), UsedFor 30 of 100 (30.0 %), MadeOf 21 of 46, HasProperty 60 of 100: still only the checked-right
+  values (can 98, used_for 109, material 25, property 40; 133 things). Abilities from WordNet 16 of 144 wrong (128
+  written), uses 14 of 91 wrong (77 written).
+- tests/k.commonsense.rules.test.mjs reads the table's own facts (other shards add facts of the same name).
+- Not mine: tests/w.lang.ro.words.test.mjs (w.seating.table.colour) — recorded with its commit after the next run.

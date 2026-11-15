@@ -280,6 +280,7 @@ const SHARD_OF = (e) => {
   if (e.head) return 'head';
   if (e.from === 'k.objects.object') return `group-${e.group.startsWith('noto') ? 'noto' : e.group.startsWith('mulberry') ? 'mulberry' : e.group.startsWith('openmoji') ? 'openmoji' : 'hand'}`;
   if (/^"?wordnet/.test(e.source)) return e.from === 'k.words.sense' ? 'wordnet' : `${e.dimension}-wordnet`;
+  if (/^"?conceptnet/.test(e.source)) return `${e.dimension}-conceptnet`; // KR6: ConceptNet's facts are share-alike, a shard of their own
   if (e.made) return 'classes';
   if (e.head) return 'head';
   return e.dimension;
@@ -298,6 +299,8 @@ export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
     'feature-wordnet': 'what a thing has, read off the WordNet parts of k.parts: a thing with wheels, a machine (it has an engine or a motor), a thing with wings',
     use: 'what a thing is for (k.attributes used_for) and where a wearable is worn (k.wearables worn_on)',
     material: 'what a thing is made of (k.attributes material)',
+    'material-conceptnet': 'what a thing is made of, by the materials k.attributes takes from ConceptNet (shard things-conceptnet, KR6)',
+    'use-conceptnet': 'what a thing is for, by the uses k.attributes takes from ConceptNet (shard things-conceptnet, KR6)',
     'material-wordnet': 'what a thing is made of, by the materials k.attributes reads from WordNet glosses (shard things-glosses, KR6): a crowbar is a metal thing',
     diet: 'what an animal eats (k.animals diet): a herbivore, a carnivore, an omnivore',
     part_of: 'what a part belongs to, derived from the usual parts of k.parts (usual has), what people call a part of a thing (k.parts called) and the larger part of a body part (k.body part_of): a leg is part of an ant',
@@ -314,6 +317,7 @@ export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
     if (name.startsWith('group-') && name !== 'group-hand') {
       const hs = [...new Set(es.map((e) => e.licence.id))].map((id) => licenceOf(shardHeaders.get(id)));
       sources = [...new Set(hs.flatMap((h) => h.sources))]; licence = [...new Set(hs.flatMap((h) => h.license))].join(' AND ');
+    } else if (name.endsWith('-conceptnet')) { sources = ['conceptnet 5.7 (ConceptNet 5 (conceptnet.io), derived in part from Open Mind Common Sense, Wiktionary, WordNet and other sources: the values k.attributes takes from it, shard things-conceptnet)']; licence = 'CC-BY-SA-4.0';
     } else if (name === 'material-wordnet') { sources = ['wordnet 3.1 (Princeton WordNet 3.1: the materials k.attributes reads from its glosses, shard things-glosses)']; licence = 'WordNet-3.0';
     } else if (/wordnet/.test(name)) { sources = ['wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)']; licence = 'WordNet-3.0'; }
     else { sources = ['hand-core 1 (read from the catalog\'s own facts by tools/kinds-core.mjs)']; licence = 'CC0-1.0'; }

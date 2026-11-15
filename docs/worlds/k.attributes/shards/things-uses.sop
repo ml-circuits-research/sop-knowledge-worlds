@@ -1,4 +1,4 @@
-# k.attributes/shards/things-uses: what 59 common things of the catalog that do nothing by themselves and had no use are for (69 values; 13 of 82 proposed (15.9 %) were wrong by the hand check and are not written): the instrument role of k.actions, and uses inherited down WordNet's hypernyms from the kinds the catalog describes (KR6; the rule in tools/attributes-uses.mjs)
+# k.attributes/shards/things-uses: what 67 common things of the catalog that do nothing by themselves and had no use are for (77 values; 14 of 91 proposed (15.4 %) were wrong by the hand check and are not written): the instrument role of k.actions, and uses inherited down WordNet's hypernyms from the kinds the catalog describes (KR6; the rule in tools/attributes-uses.mjs)
 # sources: wordnet 3.1 (the hypernym chains of the first noun senses, as imported in k.words; the uses they carry down are the catalog's own: k.attributes, k.actions; hand-checked in sources/coverage/uses-audit.tsv)
 # license: WordNet-3.0
 # script: tools/attributes-uses.mjs
@@ -11,12 +11,18 @@
 @k.attributes.thing.uses.ballet_shoes k.attributes.thing name="ballet shoes" used_for="dancing" core.source="wordnet 3.1"
 # binoculars: the instrument of these actions in k.actions
 @k.attributes.thing.uses.binoculars k.attributes.thing name=binoculars used_for="watching" core.source="wordnet 3.1"
+# bookshop: a kind of shop (WordNet)
+@k.attributes.thing.uses.bookshop k.attributes.thing name=bookshop used_for="buying" core.source="wordnet 3.1"
+# bookstore: a kind of shop (WordNet)
+@k.attributes.thing.uses.bookstore k.attributes.thing name=bookstore used_for="buying" core.source="wordnet 3.1"
 # boutique: a kind of shop (WordNet)
 @k.attributes.thing.uses.boutique k.attributes.thing name=boutique used_for="buying" core.source="wordnet 3.1"
 # bow tie: a kind of necktie (WordNet)
 @k.attributes.thing.uses.bow_tie k.attributes.thing name="bow tie" used_for="wearing" core.source="wordnet 3.1"
 # brain: the instrument of these actions in k.actions
 @k.attributes.thing.uses.brain k.attributes.thing name=brain used_for="thinking" core.source="wordnet 3.1"
+# bungalow: a kind of house (WordNet)
+@k.attributes.thing.uses.bungalow k.attributes.thing name=bungalow used_for="living" core.source="wordnet 3.1"
 # canteen: a kind of bottle (WordNet)
 @k.attributes.thing.uses.canteen k.attributes.thing name=canteen used_for="holding drinks" core.source="wordnet 3.1"
 # caramel: a kind of candy (WordNet)
@@ -25,6 +31,8 @@
 @k.attributes.thing.uses.card k.attributes.thing name=card used_for="writing" core.source="wordnet 3.1"
 # castle: a kind of house (WordNet)
 @k.attributes.thing.uses.castle k.attributes.thing name=castle used_for="living" core.source="wordnet 3.1"
+# cauldron: a kind of pot (WordNet)
+@k.attributes.thing.uses.cauldron k.attributes.thing name=cauldron used_for="cooking" core.source="wordnet 3.1"
 # chocolate milk: a kind of milk (WordNet)
 @k.attributes.thing.uses.chocolate_milk k.attributes.thing name="chocolate milk" used_for="drinking" core.source="wordnet 3.1"
 # commissary: a kind of shop (WordNet)
@@ -41,6 +49,8 @@
 @k.attributes.thing.uses.dough k.attributes.thing name=dough used_for="baking" core.source="wordnet 3.1"
 # dressing gown: a kind of robe (WordNet)
 @k.attributes.thing.uses.dressing_gown k.attributes.thing name="dressing gown" used_for="wearing" core.source="wordnet 3.1"
+# driveway: a kind of road (WordNet)
+@k.attributes.thing.uses.driveway k.attributes.thing name=driveway used_for="driving" core.source="wordnet 3.1"
 # espresso: a kind of coffee (WordNet)
 @k.attributes.thing.uses.espresso k.attributes.thing name=espresso used_for="drinking" core.source="wordnet 3.1"
 # farmhouse: a kind of house (WordNet)
@@ -51,6 +61,10 @@
 @k.attributes.thing.uses.fire_hose k.attributes.thing name="fire hose" used_for="putting out" core.source="wordnet 3.1"
 # fishing pole: the instrument of these actions in k.actions
 @k.attributes.thing.uses.fishing_pole k.attributes.thing name="fishing pole" used_for="catching" core.source="wordnet 3.1"
+# flask: a kind of bottle (WordNet)
+@k.attributes.thing.uses.flask k.attributes.thing name=flask used_for="holding drinks" core.source="wordnet 3.1"
+# freeway: a kind of highway (WordNet)
+@k.attributes.thing.uses.freeway k.attributes.thing name=freeway used_for="driving" core.source="wordnet 3.1"
 # glue: the instrument of these actions in k.actions
 @k.attributes.thing.uses.glue k.attributes.thing name=glue used_for="gluing" used_for="joining" used_for="mending" core.source="wordnet 3.1"
 # hairbrush: the instrument of these actions in k.actions
@@ -85,6 +99,8 @@
 @k.attributes.thing.uses.palace k.attributes.thing name=palace used_for="living" core.source="wordnet 3.1"
 # pencil sharpener: the instrument of these actions in k.actions
 @k.attributes.thing.uses.pencil_sharpener k.attributes.thing name="pencil sharpener" used_for="sharpening" core.source="wordnet 3.1"
+# pouch: a kind of bag (WordNet)
+@k.attributes.thing.uses.pouch k.attributes.thing name=pouch used_for="carrying" core.source="wordnet 3.1"
 # scales: the instrument of these actions in k.actions
 @k.attributes.thing.uses.scales k.attributes.thing name=scales used_for="weighing" core.source="wordnet 3.1"
 # scalpel: a kind of knife (WordNet)
