@@ -29,7 +29,7 @@ the object and the prepositions.
 
 ## Shards
 
-`acts` (16 acts, 59 roles; Q45: make has `topic`, marked by about; block 07:45: make and place have `criterion`, the attribute that orders the things, like group's: "a timeline of the planets by distance", "line up the planets in order of size"), `families` (act families, below) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
+`acts` (19 acts, 62 roles; block 09:20 K3: greet, thank and farewell, the family conversation, speech acts after Searle 1969 and Austin 1962, which an application answers and which change nothing in the work; Q45: make has `topic`, marked by about; block 07:45: make and place have `criterion`, the attribute that orders the things, like group's: "a timeline of the planets by distance", "line up the planets in order of size"), `families` (act families, below) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
 `verbs-place`, `verbs-connect`, `verbs-group`, `verbs-take_apart`, `verbs-pick`, `verbs-ask`, `verbs-copy`,
 `verbs-send`, `verbs-undo`, `verbs-save`, `verbs-load`, `verbs-redo`, `verbs-deselect`: <!--n:facts:k.actions.verb-->316<!--/n--> verbs (272 from WordNet
 senses, 42 hand-written in the hand-over) and <!--n:facts:k.actions.marking-->90<!--/n--> markings. The hand-over added doodle, scribble, whip up, shove, nudge, scoot, wipe,

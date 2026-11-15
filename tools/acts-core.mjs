@@ -118,6 +118,18 @@ export const ACTS = [
   ['deselect', 'leave off picking a thing, so that it is no longer picked; with no thing, nothing is picked', 'pick', [
     ['thing', 'thing', false, 'what is no longer picked; none: all of them', []],
   ]],
+  // Block 09:20 K3 (PSys2 Q18; real rows r0166, r0216, r0630 "hello", r0588 ... r0612 "thanks" x8): the moves of a
+  // conversation, which an application answers and which change nothing in the work (speech acts: Searle 1969's
+  // expressives; Austin 1962's behabitives)
+  ['greet', 'say hello: open a conversation or meet someone', 'farewell', [
+    ['person', 'person', false, 'who is greeted', ['to']],
+  ]],
+  ['thank', 'say that one is grateful for something done', undefined, [
+    ['topic', 'topic', false, 'what the thanks are for', ['for']],
+  ]],
+  ['farewell', 'say goodbye: end a conversation or leave someone', 'greet', [
+    ['person', 'person', false, 'who is left', ['to']],
+  ]],
 ];
 
 // Act families (reviewer 21:55, owner 15:03: the up edges of acts, for the library's cousins): the 16 acts grouped by
@@ -141,6 +153,7 @@ export const FAMILIES = [
   ['view', 'only what is picked changes: the things the next acts are about', ['no change of things']],
   ['history', 'the things come back as they were at an earlier or a later step', ['the work itself']],
   ['keeping', 'the work goes out of the application or comes back into it (kept, brought back, given to someone)', ['the work itself']],
+  ['conversation', 'a move of talk the other side answers (a greeting, thanks, a goodbye); nothing in the work changes', ['no change of things']],
 ];
 // [act, family, why]
 export const MEMBERS = [
@@ -161,6 +174,9 @@ export const MEMBERS = [
   ['redo', 'history', 'what undo took back is done again'],
   ['save', 'keeping', 'the work is kept so that it can be brought back later'],
   ['load', 'keeping', 'work that was kept is brought back'],
+  ['greet', 'conversation', 'it opens a conversation; the other side greets back'],
+  ['thank', 'conversation', 'it says the speaker is grateful; the other side answers (you are welcome)'],
+  ['farewell', 'conversation', 'it ends a conversation; the other side says goodbye'],
 ];
 // The second dimension: the role an act needs, read off the roles (holds of the needed role, or none needed).
 export const TAKES = { kind: 'acts on a kind', thing: 'acts on a thing', none: 'acts that need no filler' };

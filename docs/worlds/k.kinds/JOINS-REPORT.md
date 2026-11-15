@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **202** in 31 worlds; distinct values 10081, meeting a target 10023 (99.4 %), open 58
+- declared joins: **202** in 31 worlds; distinct values 10100, meeting a target 10042 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **49**; left undeclared on purpose: 4; keys with an enum, never suggested: 65
 
@@ -17,7 +17,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 
 | world | type.key | target | by | values | meet | open values |
 | --- | --- | --- | --- | ---: | ---: | --- |
-| k.actions | `k.actions.act.opposite` | `k.actions.act` | name | 10 | 10 |  |
+| k.actions | `k.actions.act.opposite` | `k.actions.act` | name | 12 | 12 |  |
 | k.actions | `k.actions.action.opposite` | `k.actions.action` | name | 82 | 82 |  |
 | k.actions | `k.actions.action.tool` | `k.objects.object` | name | 151 | 121 | `"magnifying glass"`, `"sewing machine"`, `"skipping rope"`, `"traffic light"`, `"vacuum cleaner"`, `arm`, … (30) |
 | k.actions | `k.actions.action.undone_by` | `k.actions.action` | name | 45 | 45 |  |
@@ -25,11 +25,11 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.actions | `k.actions.family.parent` | `k.actions.family` | name | 6 | 6 |  |
 | k.actions | `k.actions.marking.act` | `k.actions.act` | name | 7 | 7 |  |
 | k.actions | `k.actions.marking.role` | `k.actions.role` | name (match act:act) | 10 | 10 |  |
-| k.actions | `k.actions.member.act` | `k.actions.act` | name | 16 | 16 |  |
-| k.actions | `k.actions.member.family` | `k.actions.family` | name | 13 | 13 |  |
-| k.actions | `k.actions.role.act` | `k.actions.act` | name | 16 | 16 |  |
+| k.actions | `k.actions.member.act` | `k.actions.act` | name | 19 | 19 |  |
+| k.actions | `k.actions.member.family` | `k.actions.family` | name | 14 | 14 |  |
+| k.actions | `k.actions.role.act` | `k.actions.act` | name | 19 | 19 |  |
 | k.actions | `k.actions.similar.action` | `k.actions.action` | name | 192 | 192 |  |
-| k.actions | `k.actions.verb.act` | `k.actions.act` | name | 16 | 16 |  |
+| k.actions | `k.actions.verb.act` | `k.actions.act` | name | 19 | 19 |  |
 | k.animals | `k.animals.animal.can` | `k.actions.action` | name | 8 | 8 |  |
 | k.animals | `k.animals.animal.cannot` | `k.actions.action` | name | 3 | 3 |  |
 | k.animals | `k.animals.animal.drawing` | `k.objects.object` | name | 151 | 151 |  |
@@ -208,12 +208,12 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
 | w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 13 | 13 |  |
 | w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
-| w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 15 | 14 | `own` |
+| w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 18 | 17 | `own` |
 | w.lang.en | `w.lang.en.mode_map.act` | `k.actions.act` | name | 2 | 2 |  |
-| w.lang.en | `w.lang.en.part.act` | `k.actions.act` | name | 15 | 15 |  |
+| w.lang.en | `w.lang.en.part.act` | `k.actions.act` | name | 16 | 16 |  |
 | w.lang.en | `w.lang.en.role_map.act` | `k.actions.act` | name | 12 | 12 |  |
 | w.lang.en | `w.lang.en.role_map.act_role` | `k.actions.role` | name (match act:act) | 15 | 15 |  |
-| w.lang.en | `w.lang.en.template.act` | `k.actions.act` | name | 16 | 16 |  |
+| w.lang.en | `w.lang.en.template.act` | `k.actions.act` | name | 19 | 19 |  |
 | w.list | `w.list.item.currency` | `k.units.currency` | code | 0 | 0 |  |
 | w.list | `w.list.item.food` | `k.food.food` | name | 0 | 0 |  |
 | w.list | `w.list.item.object` | `k.objects.object` | name | 0 | 0 |  |

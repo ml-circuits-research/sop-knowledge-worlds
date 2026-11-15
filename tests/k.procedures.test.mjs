@@ -63,7 +63,7 @@ test('the shards are what tools/procedures-core.mjs gives, and they load', () =>
 test('every act is an act of k.actions, every role a role of its act', () => {
   const acts = new Set(knowledge.facts('k.actions.act').map((f) => f.attrs.name[0]));
   const roles = new Set(knowledge.facts('k.actions.role').map((f) => `${f.attrs.act[0]} ${f.attrs.name[0]}`));
-  assert.equal(acts.size, 16);
+  assert.equal(acts.size, 19); // 16, and greet, thank, farewell (block 09:20 K3)
   for (const m of methods) {
     assert.ok(acts.has(m.act), `${m.name}: act ${m.act}`);
     for (const r of Object.keys(m.goal)) assert.ok(roles.has(`${m.act} ${r}`), `${m.name}: goal role ${r} of ${m.act}`);

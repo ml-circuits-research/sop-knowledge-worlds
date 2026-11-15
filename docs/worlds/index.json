@@ -1,5 +1,5 @@
 {
- "version": "c668a94843e3",
+ "version": "e57fb948e0e7",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -721,8 +721,8 @@
     {
      "id": "k.actions/shards/acts",
      "path": "k.actions/shards/acts.sop",
-     "wires": 75,
-     "bytes": 14160,
+     "wires": 81,
+     "bytes": 15062,
      "keys": [
       "amount",
       "ask",
@@ -733,7 +733,9 @@
       "criterion",
       "deselect",
       "direction",
+      "farewell",
       "format",
+      "greet",
       "group",
       "kind",
       "load",
@@ -746,6 +748,7 @@
       "other",
       "part",
       "parts",
+      "person",
       "pick",
       "place",
       "recipient",
@@ -758,6 +761,7 @@
       "state",
       "take apart",
       "target",
+      "thank",
       "thing",
       "tool",
       "topic",
@@ -773,8 +777,8 @@
     {
      "id": "k.actions/shards/families",
      "path": "k.actions/shards/families.sop",
-     "wires": 52,
-     "bytes": 9892,
+     "wires": 59,
+     "bytes": 11183,
      "keys": [
       "acts by what they need",
       "acts on a kind",
@@ -786,11 +790,14 @@
       "change of place",
       "change of the world",
       "connect",
+      "conversation",
       "copy",
       "creation",
       "deselect",
       "destruction",
       "existence",
+      "farewell",
+      "greet",
       "group",
       "history",
       "joining",
@@ -808,6 +815,7 @@
       "separating",
       "structure",
       "take apart",
+      "thank",
       "the work itself",
       "undo",
       "view"
@@ -1010,6 +1018,43 @@
       "unmark",
       "unselect",
       "untick"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.actions/shards/verbs-farewell",
+     "path": "k.actions/shards/verbs-farewell.sop",
+     "wires": 5,
+     "bytes": 1226,
+     "keys": [
+      "bid farewell",
+      "farewell",
+      "say bye",
+      "say goodbye",
+      "sign off",
+      "take leave"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.actions/shards/verbs-greet",
+     "path": "k.actions/shards/verbs-greet.sop",
+     "wires": 5,
+     "bytes": 1133,
+     "keys": [
+      "greet",
+      "hail",
+      "say hello",
+      "say hi",
+      "welcome"
      ],
      "sources": [
       "hand-core-1"
@@ -1350,6 +1395,24 @@
      "sources": [
       "hand-core-1",
       "wordnet-3.1"
+     ],
+     "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "k.actions/shards/verbs-thank",
+     "path": "k.actions/shards/verbs-thank.sop",
+     "wires": 5,
+     "bytes": 1212,
+     "keys": [
+      "express thanks",
+      "say thank you",
+      "say thanks",
+      "show gratitude",
+      "thank"
+     ],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "WordNet-3.0",
      "warnings": []
@@ -88571,10 +88634,22 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/talk-frames",
+     "path": "w.lang.en/shards/talk-frames.sop",
+     "wires": 36,
+     "bytes": 8401,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/templates-acts",
      "path": "w.lang.en/shards/templates-acts.sop",
-     "wires": 58,
-     "bytes": 11894,
+     "wires": 63,
+     "bytes": 12858,
      "keys": [
       "a",
       "an"

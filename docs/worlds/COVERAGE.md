@@ -47,7 +47,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 
 | world | common things |
 |---|---:|
-| `k.actions` | 24 (2%) |
+| `k.actions` | 25 (2%) |
 | `k.animals` | 166 (11%) |
 | `k.attributes` | 1258 (84%) |
 | `k.body` | 4 (0%) |

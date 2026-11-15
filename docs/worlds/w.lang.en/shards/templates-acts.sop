@@ -84,3 +84,10 @@
 @w.lang.en.template.redo.last w.lang.en.template name=redo.last act=redo shape=none frame=acts.redo text="redo that." example="Redo that." core.source="hand-core 1"
 @w.lang.en.template.save.name w.lang.en.template name=save.name act=save shape=name role=name frame=acts.save text="save it as {name}." example="Save it as lunch." core.source="hand-core 1"
 @w.lang.en.template.load.thing w.lang.en.template name=load.thing act=load shape=thing role=thing frame=acts.load text="load {thing}." example="Load lunch." core.source="hand-core 1"
+
+# ---- conversation (block 09:20 K3) ----
+@w.lang.en.template.greet.none w.lang.en.template name=greet.none act=greet shape=none frame=talk.greet text="hello." example="Hello." core.source="hand-core 1"
+@w.lang.en.template.greet.person w.lang.en.template name=greet.person act=greet shape=person role=person frame=talk.greet.person text="hello {person}." example="Hello Ana." core.source="hand-core 1"
+@w.lang.en.template.thank.none w.lang.en.template name=thank.none act=thank shape=none frame=talk.thank text="thank you." example="Thank you." core.source="hand-core 1"
+@w.lang.en.template.thank.topic w.lang.en.template name=thank.topic act=thank shape=topic role=topic frame=talk.thank.for text="thank you for {topic}." example="Thank you for the drawing." core.source="hand-core 1"
+@w.lang.en.template.farewell.none w.lang.en.template name=farewell.none act=farewell shape=none frame=talk.farewell text="goodbye." example="Goodbye." core.source="hand-core 1"

@@ -62,6 +62,7 @@ const OVERRIDE = { // by template: what its roles take
   'change.less.one': [{ attribute: 'seat' }, { attribute: 'window' }], 'ask.count': [{ thing: 'table' }, { thing: 'star' }], 'ask.where': [{ thing: 'Ann' }, { thing: 'the cat' }],
   'group.thing': [{ thing: 'the tables' }, { thing: 'the stars' }], 'take_apart.thing': [{ thing: 'the tables' }, { thing: 'the house' }],
   'load.thing': [{ thing: 'lunch' }, { thing: 'garden' }], 'undo.number': [{ number: '2' }, { number: '5' }],
+  'greet.person': [{ person: 'Ann' }, { person: 'Bob' }], // block 09:20 K3
   // block 07:45: the order criterion, an attribute that can order things (lexicon order.criterion)
   'make.topic.criterion': [{ kind: 'timeline', topic: 'planets', criterion: 'distance' }, { kind: 'tree', topic: 'animals', criterion: 'size' }],
   'place.criterion': [{ thing: 'the planets', criterion: 'size' }, { thing: 'the tables', criterion: 'height' }],

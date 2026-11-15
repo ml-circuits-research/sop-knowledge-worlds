@@ -1,4 +1,4 @@
-# k.actions/shards/acts: the 16 acts (make, remove, change, place, connect, group, take apart, pick, ask, copy, send, undo, save, load, redo, deselect), and the roles each act takes with the prepositions that usually mark them.
+# k.actions/shards/acts: the 19 acts (make, remove, change, place, connect, group, take apart, pick, ask, copy, send, undo, save, load, redo, deselect, greet, thank, farewell), and the roles each act takes with the prepositions that usually mark them.
 # sources: hand-core 1 (hand-written in this repository: tools/acts-core.mjs)
 # license: CC0-1.0
 # script: tools/acts-core.mjs
@@ -19,6 +19,9 @@
 @k.actions.act.load k.actions.act name=load about="bring back work that was kept" opposite=save role=thing role=source core.source="hand-core 1"
 @k.actions.act.redo k.actions.act name=redo about="do again what was taken back by undo" opposite=undo role=thing role=number core.source="hand-core 1"
 @k.actions.act.deselect k.actions.act name=deselect about="leave off picking a thing, so that it is no longer picked; with no thing, nothing is picked" opposite=pick role=thing core.source="hand-core 1"
+@k.actions.act.greet k.actions.act name=greet about="say hello: open a conversation or meet someone" opposite=farewell role=person core.source="hand-core 1"
+@k.actions.act.thank k.actions.act name=thank about="say that one is grateful for something done" role=topic core.source="hand-core 1"
+@k.actions.act.farewell k.actions.act name=farewell about="say goodbye: end a conversation or leave someone" opposite=greet role=person core.source="hand-core 1"
 
 # Roles: what an act can be told, what kind of filler each takes, and the words that mark it.
 @k.actions.role.make.kind k.actions.role act=make name=kind holds=kind needed=true about="what kind of thing to make" core.source="hand-core 1"
@@ -80,3 +83,6 @@
 @k.actions.role.redo.thing k.actions.role act=redo name=thing holds=thing about="what was taken back and is done again" core.source="hand-core 1"
 @k.actions.role.redo.number k.actions.role act=redo name=number holds=number about="how many steps" core.source="hand-core 1"
 @k.actions.role.deselect.thing k.actions.role act=deselect name=thing holds=thing about="what is no longer picked; none: all of them" core.source="hand-core 1"
+@k.actions.role.greet.person k.actions.role act=greet name=person holds=person about="who is greeted" marker=to core.source="hand-core 1"
+@k.actions.role.thank.topic k.actions.role act=thank name=topic holds=topic about="what the thanks are for" marker=for core.source="hand-core 1"
+@k.actions.role.farewell.person k.actions.role act=farewell name=person holds=person about="who is left" marker=to core.source="hand-core 1"

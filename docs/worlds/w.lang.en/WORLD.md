@@ -492,3 +492,15 @@ the new shard clock-words) and w.lang.en's numerals (one to twelve); the parts o
 ("half past 3"). "It is" reads a time only before a clock phrase, an hour with o'clock, am or pm, or noon and midnight
 ("it is red" is not a time). Checked by `tests/w.lang.en.time-frames.test.mjs` (15 requests, the values joined to
 k.time). The frames carry no `mood` yet: the slot comes with w.person's schema change.
+
+## Conversation frames (block 09:20 K3, PSys2 Q18)
+
+Shard `talk-frames` (`tools/lang-en-talk-frames.mjs`, hand-written, CC0; 9 frames): a greeting, thanks and a goodbye
+as the acts greet, thank and farewell of k.actions (family conversation; greet and farewell opposites), with the
+person greeted or left ("hello Robi", "bye Robi", "say hello to Ana") and what the thanks are for ("thank you for the
+drawing"); the questions about the assistant, "who are you" (ask who) and "how are you" (ask feeling), the thing fixed
+to "yourself" as acts.ask.name does for "what is your name". Templates hello / thank you / goodbye in templates-acts.
+What the speaker says and asks about themselves ("my name is Ana", "you can call me Ana", "who am I", "what is my
+name") is w.person's shard person-frames, not repeated here; tests/w.lang.en.talk-frames.test.mjs reads "who am I?"
+(r0148) through it once it is on the tree. Real rows: "hello" r0166, r0216, r0630; "thanks" r0588, r0591, r0594,
+r0597, r0600, r0603, r0606, r0612.

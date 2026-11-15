@@ -5801,3 +5801,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   derived lexicons; 114 wires, 24,794 bytes.
 - tests/w.lang.en.time-frames.test.mjs: 15 requests read back (r0586 among them), "it is red" is no time, the values
   are k.time facts, quarter to = -15, half an hour = 30 minutes.
+
+## 2026-11-15 — third worker: K3 conversation frames (block 09:20)
+
+- Real rows: "hello" (r0166, r0216, r0630) and "thanks" (8 rows) read as greet and thank (were not read); "who am I?"
+  (r0148) is w.person's (not on main yet: the test reads it once person-frames is there; skipped meanwhile).
+- k.actions: acts greet (role person, to), thank (role topic, for), farewell (role person, to), family conversation
+  under "no change of things"; 15 hand verbs (say hello, say thanks, say goodbye ...). 19 acts, 62 roles, 331 verbs.
+- w.lang.en shard talk-frames (tools/lang-en-talk-frames.mjs): 9 frames (greet, greet + person, greet verb; thank,
+  thank for; farewell, farewell + person; who are you; how are you), "what is your name" stays acts.ask.name; 5
+  templates (hello, hello {person}, thank you, thank you for {topic}, goodbye).
+- tests/w.lang.en.talk-frames.test.mjs: 11 real rows and 9 paraphrases read back; the acts and family in k.actions.

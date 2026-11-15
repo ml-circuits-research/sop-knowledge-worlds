@@ -14661,6 +14661,9 @@
   "k.words/shards/bi",
   "k.words/shards/frequency-b"
  ],
+ "bid farewell": [
+  "k.actions/shards/verbs-farewell"
+ ],
  "bidden": [
   "k.words/shards/bi"
  ],
@@ -31983,6 +31986,7 @@
   "k.objects/shards/places-2"
  ],
  "conversation": [
+  "k.actions/shards/families",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
  ],
@@ -48547,6 +48551,9 @@
   "k.words/shards/ex",
   "k.words/shards/frequency-e"
  ],
+ "express thanks": [
+  "k.actions/shards/verbs-thank"
+ ],
  "expression": [
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
@@ -50622,6 +50629,9 @@
   "k.words/shards/frequency-f"
  ],
  "farewell": [
+  "k.actions/shards/acts",
+  "k.actions/shards/families",
+  "k.actions/shards/verbs-farewell",
   "k.words/shards/fa",
   "k.words/shards/frequency-f"
  ],
@@ -61756,6 +61766,9 @@
   "k.values/shards/colours-css"
  ],
  "greet": [
+  "k.actions/shards/acts",
+  "k.actions/shards/families",
+  "k.actions/shards/verbs-greet",
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
@@ -63536,6 +63549,7 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "hail": [
+  "k.actions/shards/verbs-greet",
   "k.words/shards/frequency-h",
   "k.words/shards/ha",
   "k.objects/shards/noto-transport-ground-03"
@@ -103437,6 +103451,7 @@
   "k.words/shards/pe"
  ],
  "person": [
+  "k.actions/shards/acts",
   "k.attributes/shards/attributes",
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/narration",
@@ -119897,8 +119912,24 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sa"
  ],
+ "say bye": [
+  "k.actions/shards/verbs-farewell"
+ ],
+ "say goodbye": [
+  "k.actions/shards/verbs-farewell"
+ ],
+ "say hello": [
+  "k.actions/shards/verbs-greet"
+ ],
+ "say hi": [
+  "k.actions/shards/verbs-greet"
+ ],
  "say thank you": [
-  "k.actions/shards/actions-body-social-nature"
+  "k.actions/shards/actions-body-social-nature",
+  "k.actions/shards/verbs-thank"
+ ],
+ "say thanks": [
+  "k.actions/shards/verbs-thank"
  ],
  "say the reply": [
   "k.motion/shards/rules"
@@ -124721,6 +124752,9 @@
  "show a feeling on a face": [
   "k.procedures/shards/from-knowledge"
  ],
+ "show gratitude": [
+  "k.actions/shards/verbs-thank"
+ ],
  "show the way": [
   "k.actions/shards/actions-move"
  ],
@@ -125291,6 +125325,9 @@
   "k.words/shards/si",
   "k.objects/shards/noto-other-object-01",
   "k.objects/shards/openmoji-travel-places-01"
+ ],
+ "sign off": [
+  "k.actions/shards/verbs-farewell"
  ],
  "sign_bar": [
   "k.objects/shards/places-2"
@@ -135239,6 +135276,9 @@
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-undo"
  ],
+ "take leave": [
+  "k.actions/shards/verbs-farewell"
+ ],
  "take off": [
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/verbs-remove"
@@ -137184,6 +137224,9 @@
  ],
  "thank": [
   "k.actions/shards/actions-body-social-nature",
+  "k.actions/shards/acts",
+  "k.actions/shards/families",
+  "k.actions/shards/verbs-thank",
   "k.words/shards/frequency-t",
   "k.words/shards/th"
  ],
@@ -149659,6 +149702,7 @@
   "k.words/shards/we"
  ],
  "welcome": [
+  "k.actions/shards/verbs-greet",
   "k.words/shards/frequency-w",
   "k.words/shards/we"
  ],
