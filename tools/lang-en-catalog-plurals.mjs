@@ -43,18 +43,22 @@ export function catalogPluralsShard(worlds = scanWorlds()) {
   const rows = [];
   // a singular WordNet already lists (identity: one pair per singular) keeps its pair; read with the reader's rule that
   // the singular of a listed pair is a singular
-  const listed = new Set(of('irregular').map((w) => tok(w.attrs.singular[0])));
+  // a singular with only a classical (read-only) plural also gets its common one, register=common (KR2, reviewer 16:45)
+  const listed = new Set(of('irregular').filter((w) => tok(w.attrs.read_only?.[0]) !== 'yes').map((w) => tok(w.attrs.singular[0])));
+  const classical = new Set(of('irregular').filter((w) => tok(w.attrs.read_only?.[0]) === 'yes').map((w) => tok(w.attrs.singular[0])));
   const heads = catalogNouns(worlds);
   for (const [head, from] of [...heads].sort(([a], [b]) => (a < b ? -1 : 1))) {
     // a head that the rules read as the plural of another noun is that plural (hearts, drawers, glasses): no pair
     if (listed.has(head)) continue;
+    const same = of('irregular').some((w) => tok(w.attrs.singular[0]) === head && tok(w.attrs.plural[0]) === (PLURAL_ONLY.includes(head) ? head : null));
+    if (same) continue; // the pair is there already (WordNet's)
     const sg = inflect(facts, head, 'singular', 'lemma');
     if (sg !== head && heads.nouns.has(sg)) continue;
     const plural = PLURAL_ONLY.includes(head) ? head : inflect(facts, head, 'plural'); // WordNet's everyday irregulars (mice) or the rule (a read-only abaci is not written)
-    if (inflect(facts, head, 'singular', 'lemma') === head && inflect(facts, plural, 'singular', 'lemma') === head) continue;
-    rows.push([head, plural, from]);
+    if (inflect(facts, head, 'plural') === plural && inflect(facts, head, 'singular', 'lemma') === head && inflect(facts, plural, 'singular', 'lemma') === head) continue;
+    rows.push([head, plural, from, classical.has(head) ? 'common' : undefined]);
   }
-  const lines = rows.map(([singular, plural]) => wire(`w.lang.en.irregular.catalog.${seg(singular)}`, 'w.lang.en.irregular', [['singular', singular], ['plural', plural]], 'hand-core 1'));
+  const lines = rows.map(([singular, plural, , register]) => wire(`w.lang.en.irregular.catalog.${seg(singular)}`, 'w.lang.en.irregular', [['singular', singular], ['plural', plural], ['register', register]], 'hand-core 1'));
   return { text: `${header({ id: 'w.lang.en/shards/catalog-plurals', about: `${rows.length} nouns of the catalog (the head nouns of k.objects and k.animals names that are nouns of k.words) that the morphology rules of w.lang.en do not read both ways, with their plural: "gas" is no plural of "ga", "caves" is the plural of "cave". A reader takes them by lookup before the rules.`, sources: ['hand-core 1 (computed by tools/lang-en-catalog-plurals.mjs from k.objects, k.animals, k.words and the rules of w.lang.en; own)'], license: 'CC0-1.0', script: 'tools/lang-en-catalog-plurals.mjs' })}\n${lines.join('\n')}\n`, rows };
 }
 

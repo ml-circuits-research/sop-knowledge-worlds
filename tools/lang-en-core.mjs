@@ -20,12 +20,12 @@ const OUT = join(WORLDS_DIR, 'w.lang.en/shards/core-plurals.sop');
 const DROP = new Set(['cola', 'crying', 'dive', 'gas', 'signore', 'soles']);
 const WRITTEN = new Set(['child', 'grandchild', 'foot', 'tooth', 'goose', 'man', 'mouse', 'louse', 'woodlouse', 'ox', 'knife', 'wife', 'life', 'housewife', 'midwife',
   'potato', 'tomato', 'hero', 'echo', 'volcano', 'mosquito', 'tornado', 'torpedo', 'veto', 'domino', 'cargo', 'crisis', 'analysis', 'thesis', 'hypothesis', 'diagnosis', 'oasis',
-  'emphasis', 'paralysis', 'prognosis', 'phenomenon', 'quiz', 'matrix', 'vertebra', 'nucleus', 'stimulus', 'penny', 'flamingo', 'mango', 'motto', 'halo', 'grotto', 'fez']);
+  'emphasis', 'paralysis', 'prognosis', 'phenomenon', 'quiz', 'matrix', 'forceps', 'vertebra', 'nucleus', 'stimulus', 'penny', 'flamingo', 'mango', 'motto', 'halo', 'grotto', 'fez']);
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 
 export function pluralsShard(excText, worlds = scanWorlds()) {
   const lang = worlds.find((w) => w.id === 'w.lang.en');
-  const wires = lang.shards.filter((s) => !/\/core-/.test(s.id)).flatMap((s) => parse(s.text));
+  const wires = lang.shards.filter((s) => !/\/(core-|catalog-plurals)/.test(s.id)).flatMap((s) => parse(s.text)); // catalog-plurals is built after this, from it
   const of = (t) => wires.filter((w) => w.type === `w.lang.en.${t}`);
   const facts = { inflect: of('inflect'), irregular: of('irregular'), exceptions: of('noun.exception') };
   const have = new Set(of('irregular').map((w) => tok(w.attrs.singular[0])));
@@ -39,7 +39,7 @@ export function pluralsShard(excText, worlds = scanWorlds()) {
     if (DROP.has(plural)) continue;
     if (!rows.has(singular)) rows.set(singular, plural); // the first plural WordNet lists for a singular
   }
-  const lines = [...rows].sort(([a], [b]) => (a < b ? -1 : 1)).map(([singular, plural]) => wire(`w.lang.en.irregular.wordnet.${seg(singular)}`, 'w.lang.en.irregular', [['singular', singular], ['plural', plural], ['read_only', WRITTEN.has(singular) ? undefined : 'yes']], 'wordnet 3.1'));
+  const lines = [...rows].sort(([a], [b]) => (a < b ? -1 : 1)).map(([singular, plural]) => wire(`w.lang.en.irregular.wordnet.${seg(singular)}`, 'w.lang.en.irregular', [['singular', singular], ['plural', plural], ['read_only', WRITTEN.has(singular) ? undefined : 'yes'], ['register', WRITTEN.has(singular) ? undefined : 'classical']], 'wordnet 3.1'));
   return `${header({ id: 'w.lang.en/shards/core-plurals', about: `${lines.length} irregular plurals of the nouns of k.words that the morphology rules do not read (WordNet's noun exceptions: mice, feet, criteria; the classical and foreign ones read only)`, sources: ['wordnet 3.1 (noun.exc, the noun exception list of Princeton WordNet 3.1)'], license: 'WordNet-3.0', script: 'tools/lang-en-core.mjs' })}\n${lines.join('\n')}\n`;
 }
 

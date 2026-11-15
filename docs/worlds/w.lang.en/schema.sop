@@ -194,12 +194,15 @@
 @w.lang.en.irregular_form.degree core.slot of=w.lang.en.irregular_form key=degree enum=positive enum=comparative enum=superlative core.source="hand-core 1"
 @w.lang.en.irregular_form.variant core.slot of=w.lang.en.irregular_form key=variant enum=yes core.source="hand-core 1"
 @w.lang.en.irregular_form.from core.slot of=w.lang.en.irregular_form key=from kind=atom core.source="hand-core 1"
-# An irregular plural (taken before any rule, both ways).
+# An irregular plural (taken before any rule, both ways). A singular may have two plurals, one fact each (identity
+# singular + plural): `register=classical` the Latin or Greek one (hippopotami, irides), `register=common` the English
+# one (hippopotamuses); both are read, the common one is written (KR2, reviewer 16:45).
 @w.lang.en.irregular core.type of=w.lang.en.irregular shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.irregular.singular core.slot of=w.lang.en.irregular key=singular id=true required=true kind=atom kind=string core.source="psys2 78f45863"
-@w.lang.en.irregular.plural core.slot of=w.lang.en.irregular key=plural required=true kind=atom kind=string core.source="psys2 78f45863"
+@w.lang.en.irregular.plural core.slot of=w.lang.en.irregular key=plural id=true required=true kind=atom kind=string core.source="psys2 78f45863"
 # `read_only=yes`: the plural is read (antennae -> antenna), but a writer forms the plural by the rules (antennas).
 @w.lang.en.irregular.read_only core.slot of=w.lang.en.irregular key=read_only enum=yes core.source="hand-core 1"
+@w.lang.en.irregular.register core.slot of=w.lang.en.irregular key=register enum=classical enum=common core.source="hand-core 1"
 # A noun that the rules would read wrongly: is-plural (kiwis is kiwi + s, not kiwi + is), us-plural-suffix (a word
 # that ends in `stem` + es is a -us noun + es: octopuses), us-plural-word (the whole `word`).
 @w.lang.en.noun.exception core.type of=w.lang.en.noun.exception shared=true closed=true core.source="psys2 78f45863"

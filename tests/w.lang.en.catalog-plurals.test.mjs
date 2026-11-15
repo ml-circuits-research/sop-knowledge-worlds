@@ -14,9 +14,6 @@ import { catalogPluralsShard, catalogNouns } from '../tools/lang-en-catalog-plur
 const dir = join(WORLDS_DIR, 'w.lang.en', 'shards');
 const en = readdirSync(dir).filter((f) => f.endsWith('.sop')).flatMap((f) => parse(readFileSync(join(dir, f), 'utf8')));
 const facts = { inflect: en.filter((w) => w.type === 'w.lang.en.inflect'), irregular: en.filter((w) => w.type === 'w.lang.en.irregular'), exceptions: en.filter((w) => w.type === 'w.lang.en.noun.exception') };
-// WordNet lists a classical plural (read only) for these singulars, and one singular has one irregular fact: the
-// English plural the rules write does not read back (questions.md Q79)
-const KNOWN = ['forceps', 'hippopotamus', 'iris', 'macaroni', 'mantis', 'plateau'];
 const sg = (w) => inflect(facts, w, 'singular', 'lemma'), pl = (w) => inflect(facts, w, 'plural');
 
 test('catalog-plurals: the shard is what the tool gives', () => {
@@ -30,13 +27,12 @@ test('catalog-plurals: every head noun of k.objects and k.animals reads as itsel
   for (const [h] of heads) {
     // a head the rules read as the plural of another noun is that plural (hearts, glasses, trousers as worn)
     if (!facts.irregular.some((x) => x.attrs.singular[0] === h) && sg(h) !== h && heads.nouns.has(sg(h))) continue;
-    if (KNOWN.includes(h)) continue;
     checked += 1;
     if (sg(h) !== h || sg(pl(h)) !== h) bad.push(`${h}: ${sg(h)}, ${pl(h)} -> ${sg(pl(h))}`);
   }
   console.log(`# ${checked} head nouns read both ways, ${bad.length} not`);
   assert.deepEqual(bad, []);
   assert.ok(checked > 1300);
-  for (const [w, s] of [['bus', 'bus'], ['buses', 'bus'], ['lens', 'lens'], ['lenses', 'lens'], ['caves', 'cave'], ['axes', 'axe'], ['gloves', 'glove'], ['mice', 'mouse'], ['scissors', 'scissors'], ['ibises', 'ibis']]) assert.equal(sg(w), s, w);
-  for (const [w, p] of [['cave', 'caves'], ['mouse', 'mice'], ['scissors', 'scissors'], ['emu', 'emus']]) assert.equal(pl(w), p, w);
+  for (const [w, s] of [['bus', 'bus'], ['buses', 'bus'], ['lens', 'lens'], ['lenses', 'lens'], ['caves', 'cave'], ['axes', 'axe'], ['gloves', 'glove'], ['mice', 'mouse'], ['scissors', 'scissors'], ['ibises', 'ibis'], ['hippopotamuses', 'hippopotamus'], ['hippopotami', 'hippopotamus'], ['irises', 'iris'], ['irides', 'iris']]) assert.equal(sg(w), s, w);
+  for (const [w, p] of [['cave', 'caves'], ['mouse', 'mice'], ['scissors', 'scissors'], ['emu', 'emus'], ['hippopotamus', 'hippopotamuses']]) assert.equal(pl(w), p, w);
 });

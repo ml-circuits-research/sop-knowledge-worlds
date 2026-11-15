@@ -6238,3 +6238,16 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   loaded with its imports in full and, of its own shards, only the facts of the types its questions ask or tell and
   its words; the others in full as before. 447 questions pass. 44-87 s -> 22 s (load average about 7); k.objects alone
   was 50 s of it.
+## 2026-11-15 — fourth worker: two plurals for one singular, `register` (reviewer 16:45; Q79 (2))
+
+- w.lang.en.irregular: identity singular + plural (`plural` id=true), new key `register` (classical, common). WordNet's
+  read-only plurals carry register=classical (core-plurals, 185 wires); catalog-plurals adds the common plural of the
+  catalog nouns that had only a classical one (hippopotamuses, irises, mantises, macaronis, plateaus; 50 pairs).
+  forceps is written as forceps (WRITTEN in tools/lang-en-core.mjs). tools/lang-en-core.mjs no longer reads
+  catalog-plurals (it is built after it, from it).
+- Reference reader: a common pair of a plural is read before a classical one ("axes": axe before ax).
+- The pinned reader takes it: lang-en-morph writes both as std.morph irregular forms of the cell num=pl, the classical
+  one `variant=yes` (read, not written: hippopotami), the common one written (hippopotamuses). So Q79 (2) needs no
+  library change; Q79 (1) (the singular of a listed pair read as a singular) stays for the library.
+- Catalog nouns read both ways: 1,362 of 1,362 (was 1,356). Tests: catalog-plurals, w.lang.en, morph, frames, catalog,
+  validate (1,181 files, 0 errors), repo: pass.

@@ -14,7 +14,9 @@ const CONSONANT = /[bcdfghjklmnpqrstvwxz]$/;
 // the first rule of the set by order that matches (the semantics written in schema.sop).
 export function inflect({ inflect: rules, irregular = [], exceptions = [] }, word, op, set) {
   const w = String(word).toLowerCase();
-  const irr = new Map(irregular.filter((x) => op === 'singular' || one(x, 'read_only') !== 'yes').map((x) => (op === 'singular' ? [one(x, 'plural'), one(x, 'singular')] : [one(x, 'singular'), one(x, 'plural')])));
+  // a read-only (classical) plural is read, but a common pair of the same plural is read first (axes: axe before ax)
+  const ordered = [...irregular.filter((x) => one(x, 'read_only') === 'yes'), ...irregular.filter((x) => one(x, 'read_only') !== 'yes')];
+  const irr = new Map(ordered.filter((x) => op === 'singular' || one(x, 'read_only') !== 'yes').map((x) => (op === 'singular' ? [one(x, 'plural'), one(x, 'singular')] : [one(x, 'singular'), one(x, 'plural')])));
   if (irr.has(w)) return irr.get(w);
   // the singular of a listed pair is a singular: "gas" (gas, gases) is not read as the plural of "ga" (KR2: catalog-plurals)
   if (op === 'singular' && irregular.some((x) => one(x, 'singular') === w)) return w;

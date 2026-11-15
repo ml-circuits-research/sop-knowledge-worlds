@@ -1,4 +1,4 @@
-# w.lang.en/shards/irregular-forms: 498 irregular forms in std.morph's shape (lemma, form, cell): the irregular verbs and adjectives of the catalog (written in tools/lang-en-morph.mjs; a compound like understand from stand where WordNet has its forms) and the irregular plurals of w.lang.en.irregular that are not WordNet's (`from` names the fact, which stays their home); variant=yes: read, never written (burnt beside burned)
+# w.lang.en/shards/irregular-forms: 503 irregular forms in std.morph's shape (lemma, form, cell): the irregular verbs and adjectives of the catalog (written in tools/lang-en-morph.mjs; a compound like understand from stand where WordNet has its forms) and the irregular plurals of w.lang.en.irregular that are not WordNet's (`from` names the fact, which stays their home); variant=yes: read, never written (burnt beside burned)
 # sources: hand-core 1 (written in this repository)
 # sources: psys2 78f45863 (the irregular plurals of PSys2's hand-over, CC0)
 # license: CC0-1.0
@@ -179,6 +179,7 @@
 @w.lang.en.irregular_form.heave.past_participle.hove w.lang.en.irregular_form lemma=heave form=hove vform=past_participle variant=yes core.source="hand-core 1"
 @w.lang.en.irregular_form.hide.past w.lang.en.irregular_form lemma=hide form=hid vform=past core.source="hand-core 1"
 @w.lang.en.irregular_form.hide.past_participle w.lang.en.irregular_form lemma=hide form=hidden vform=past_participle core.source="hand-core 1"
+@w.lang.en.irregular_form.hippopotamus.pl w.lang.en.irregular_form lemma=hippopotamus form=hippopotamuses num=pl from=w.lang.en.irregular.catalog.hippopotamus core.source="hand-core 1"
 @w.lang.en.irregular_form.hit.past w.lang.en.irregular_form lemma=hit form=hit vform=past core.source="hand-core 1"
 @w.lang.en.irregular_form.hit.past_participle w.lang.en.irregular_form lemma=hit form=hit vform=past_participle core.source="hand-core 1"
 @w.lang.en.irregular_form.hive.pl w.lang.en.irregular_form lemma=hive form=hives num=pl from=w.lang.en.irregular.catalog.hive core.source="hand-core 1"
@@ -189,6 +190,7 @@
 @w.lang.en.irregular_form.ibis.pl w.lang.en.irregular_form lemma=ibis form=ibises num=pl from=w.lang.en.irregular.catalog.ibis core.source="hand-core 1"
 @w.lang.en.irregular_form.ill.comparative w.lang.en.irregular_form lemma=ill form=worse degree=comparative core.source="hand-core 1"
 @w.lang.en.irregular_form.ill.superlative w.lang.en.irregular_form lemma=ill form=worst degree=superlative core.source="hand-core 1"
+@w.lang.en.irregular_form.iris.pl w.lang.en.irregular_form lemma=iris form=irises num=pl from=w.lang.en.irregular.catalog.iris core.source="hand-core 1"
 @w.lang.en.irregular_form.keep.past w.lang.en.irregular_form lemma=keep form=kept vform=past core.source="hand-core 1"
 @w.lang.en.irregular_form.keep.past_participle w.lang.en.irregular_form lemma=keep form=kept vform=past_participle core.source="hand-core 1"
 @w.lang.en.irregular_form.kneel.past w.lang.en.irregular_form lemma=kneel form=knelt vform=past core.source="hand-core 1"
@@ -226,9 +228,11 @@
 @w.lang.en.irregular_form.lose.past w.lang.en.irregular_form lemma=lose form=lost vform=past core.source="hand-core 1"
 @w.lang.en.irregular_form.lose.past_participle w.lang.en.irregular_form lemma=lose form=lost vform=past_participle core.source="hand-core 1"
 @w.lang.en.irregular_form.lotus.pl w.lang.en.irregular_form lemma=lotus form=lotuses num=pl from=w.lang.en.irregular.catalog.lotus core.source="hand-core 1"
+@w.lang.en.irregular_form.macaroni.pl w.lang.en.irregular_form lemma=macaroni form=macaronis num=pl from=w.lang.en.irregular.catalog.macaroni core.source="hand-core 1"
 @w.lang.en.irregular_form.magpie.pl w.lang.en.irregular_form lemma=magpie form=magpies num=pl from=w.lang.en.irregular.catalog.magpie core.source="hand-core 1"
 @w.lang.en.irregular_form.make.past w.lang.en.irregular_form lemma=make form=made vform=past core.source="hand-core 1"
 @w.lang.en.irregular_form.make.past_participle w.lang.en.irregular_form lemma=make form=made vform=past_participle core.source="hand-core 1"
+@w.lang.en.irregular_form.mantis.pl w.lang.en.irregular_form lemma=mantis form=mantises num=pl from=w.lang.en.irregular.catalog.mantis core.source="hand-core 1"
 @w.lang.en.irregular_form.many.comparative w.lang.en.irregular_form lemma=many form=more degree=comparative core.source="hand-core 1"
 @w.lang.en.irregular_form.many.superlative w.lang.en.irregular_form lemma=many form=most degree=superlative core.source="hand-core 1"
 @w.lang.en.irregular_form.mean.past w.lang.en.irregular_form lemma=mean form=meant vform=past core.source="hand-core 1"
@@ -275,6 +279,7 @@
 @w.lang.en.irregular_form.pay.past_participle w.lang.en.irregular_form lemma=pay form=paid vform=past_participle core.source="hand-core 1"
 @w.lang.en.irregular_form.person.pl w.lang.en.irregular_form lemma=person form=people num=pl from=w.lang.en.irregular.person core.source="hand-core 1"
 @w.lang.en.irregular_form.pie.pl w.lang.en.irregular_form lemma=pie form=pies num=pl from=w.lang.en.irregular.catalog.pie core.source="hand-core 1"
+@w.lang.en.irregular_form.plateau.pl w.lang.en.irregular_form lemma=plateau form=plateaus num=pl from=w.lang.en.irregular.catalog.plateau core.source="hand-core 1"
 @w.lang.en.irregular_form.plead.past.pled w.lang.en.irregular_form lemma=plead form=pled vform=past variant=yes core.source="hand-core 1"
 @w.lang.en.irregular_form.plead.past_participle.pled w.lang.en.irregular_form lemma=plead form=pled vform=past_participle variant=yes core.source="hand-core 1"
 @w.lang.en.irregular_form.pliers.pl w.lang.en.irregular_form lemma=pliers form=pliers num=pl from=w.lang.en.irregular.catalog.pliers core.source="hand-core 1"
