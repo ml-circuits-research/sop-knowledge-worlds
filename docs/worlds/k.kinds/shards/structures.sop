@@ -1,4 +1,4 @@
-# k.kinds/shards/structures: the structures of worlds, for alignment: 7 structures with their roles (direction, cardinality, required) and 6 constraints, and how 19 worlds are each (40 forms, 187 roles cast to their types, keys and acts).
+# k.kinds/shards/structures: the structures of worlds, for alignment: 7 structures with their roles (direction, cardinality, required) and 6 constraints, and how 20 worlds are each (41 forms, 194 roles cast to their types, keys and acts).
 # sources: hand-core 1 (hand-written in this repository: tools/structures-core.mjs)
 # license: CC0-1.0
 # script: tools/structures-core.mjs
@@ -103,6 +103,14 @@
 @k.kinds.cast.w.tasks.sequence.element.w_tasks_task k.kinds.cast world=w.tasks structure=sequence role=element filler=w.tasks.task as=type core.source="hand-core 1"
 @k.kinds.cast.w.tasks.sequence.position.w_tasks_task_n k.kinds.cast world=w.tasks structure=sequence role=position filler=w.tasks.task.n as=key core.source="hand-core 1"
 @k.kinds.cast.w.tasks.sequence.element_of.w_tasks_task_list k.kinds.cast world=w.tasks structure=sequence role=element_of filler=w.tasks.task.list as=key core.source="hand-core 1"
+@k.kinds.form.w.person.graph k.kinds.form world=w.person structure=graph about="a person linked to their relatives (a relative of a relation) and to what they like or dislike" core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.node.w_person_person k.kinds.cast world=w.person structure=graph role=node filler=w.person.person as=type core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.link.w_person_relative k.kinds.cast world=w.person structure=graph role=link filler=w.person.relative as=type core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.from.w_person_relative_of k.kinds.cast world=w.person structure=graph role=from filler=w.person.relative.of as=key core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.label.w_person_relative_relation k.kinds.cast world=w.person structure=graph role=label filler=w.person.relative.relation as=key core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.link.w_person_taste k.kinds.cast world=w.person structure=graph role=link filler=w.person.taste as=type core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.from.w_person_taste_of k.kinds.cast world=w.person structure=graph role=from filler=w.person.taste.of as=key core.source="hand-core 1"
+@k.kinds.cast.w.person.graph.label.w_person_taste_stance k.kinds.cast world=w.person structure=graph role=label filler=w.person.taste.stance as=key core.source="hand-core 1"
 @k.kinds.form.w.face.whole_with_parts k.kinds.form world=w.face structure="whole with parts" about="a face made of parts of kinds (eyes, nose, mouth), each with a variant, a place and a size" core.source="hand-core 1"
 @k.kinds.cast.w.face.whole_with_parts.whole.w_face_face k.kinds.cast world=w.face structure="whole with parts" role=whole filler=w.face.face as=type core.source="hand-core 1"
 @k.kinds.cast.w.face.whole_with_parts.part.w_face_part k.kinds.cast world=w.face structure="whole with parts" role=part filler=w.face.part as=type core.source="hand-core 1"

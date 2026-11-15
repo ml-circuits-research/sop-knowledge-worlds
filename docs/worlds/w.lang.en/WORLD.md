@@ -519,3 +519,13 @@ N", "share N between M", "how many X does O have (left / at first)", "how many X
 do A and B have in total", "who has the most X", "how many more X does A have than B"); their lexicons are drawn from
 the words. Written by `tools/lang-en-arithmetic.mjs` (in `npm run build`); `tests/w.lang.en.arithmetic.test.mjs`
 reads 19 requests back. The verbs of a story (has, gives, eats, buys) are k.actions actions with `holds=` / `money=`.
+
+## Mood, and what a person says about themselves (block 10:55)
+
+`w.lang.en.frame mood`: declarative (a statement the speaker makes: a host records it, it does not obey it),
+interrogative (a question), imperative (a request); not said, a frame is a request (or a question for the act ask). The
+shard `person-frames` (tools/lang-en-person-frames.mjs, 16 frames, `needs=person`) reads first-person statements (8,
+mood declarative, set acts.state: "I have two kids", "I am 40", "I like cats, dogs and horses", "my name is Ana") and
+questions about the speaker (8, mood interrogative: "what do you know about me", "how many kids do I have", "how old am
+I") for the world schema w.person; its lexicons (person.relation, person.occupation) are derived from w.person and the
+jobs of k.people. The reference reader returns the frame's `mood`.

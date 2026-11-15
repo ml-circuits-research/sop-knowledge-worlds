@@ -1,5 +1,5 @@
 {
- "version": "dbdea791c852",
+ "version": "9d1e19fcb43a",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -30883,8 +30883,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 285,
-     "bytes": 52396,
+     "wires": 293,
+     "bytes": 53775,
      "keys": [
       "assigned",
       "assignment",
@@ -31060,6 +31060,14 @@
       "w.map.place",
       "w.map.view",
       "w.map.view.layer",
+      "w.person",
+      "w.person.person",
+      "w.person.relative",
+      "w.person.relative.of",
+      "w.person.relative.relation",
+      "w.person.taste",
+      "w.person.taste.of",
+      "w.person.taste.stance",
       "w.seating",
       "w.seating.guest",
       "w.seating.guest.seat",
@@ -88567,6 +88575,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/person-frames",
+     "path": "w.lang.en/shards/person-frames.sop",
+     "wires": 77,
+     "bytes": 16838,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/phrases",
      "path": "w.lang.en/shards/phrases.sop",
      "wires": 85,
@@ -88763,7 +88783,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 55,
-     "bytes": 34615,
+     "bytes": 35727,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -89989,6 +90009,101 @@
    ],
    "wires": 39,
    "bytes": 6830,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.person",
+   "version": "1",
+   "schema": "w.person/schema.sop",
+   "depends": [],
+   "about": "who a person is: name, age, occupation, languages, family, likes and dislikes",
+   "names": [
+    "profile",
+    "my profile",
+    "about me",
+    "user profile"
+   ],
+   "kinds": [
+    {
+     "type": "w.person.person",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "user",
+      "name",
+      "age",
+      "occupation",
+      "language",
+      "note"
+     ],
+     "words": [
+      "person",
+      "people",
+      "user",
+      "me"
+     ]
+    },
+    {
+     "type": "w.person.relative",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "of",
+      "relation",
+      "count",
+      "name",
+      "age"
+     ],
+     "words": [
+      "relative",
+      "relatives",
+      "family",
+      "family member",
+      "family members"
+     ]
+    },
+    {
+     "type": "w.person.taste",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask"
+     ],
+     "attributes": [
+      "of",
+      "thing",
+      "type",
+      "stance",
+      "strong"
+     ],
+     "words": [
+      "likes",
+      "dislikes",
+      "preferences",
+      "favourites",
+      "favorites"
+     ]
+    }
+   ],
+   "wires": 62,
+   "bytes": 10830,
    "sources": [
     "hand-core-1"
    ],

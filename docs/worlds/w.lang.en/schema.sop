@@ -285,6 +285,10 @@
 # `after`: the frame of the same set this one comes right after, where the order of the frames matters to a reader
 # that tries them in order. The frames of the act `own` hand a sentence to the reader of a world of its own ("Make a
 # diagram shaped like a house"): they name no act of k.actions.
+# `mood` (block 10:55): what the sentence is: declarative (a statement the speaker makes: "I am 40", "I have two kids";
+# a host records it, it does not obey it), interrogative (a question), imperative (a request). Not said: a request,
+# or a question for the act ask.
+@w.lang.en.frame.mood core.slot of=w.lang.en.frame key=mood enum=declarative enum=interrogative enum=imperative core.source="hand-core 1"
 @w.lang.en.frame.after core.slot of=w.lang.en.frame key=after kind=atom core.source="psys2 447a5f9a"
 # A part of a frame, at place `at`. `is`: lead (an optional polite lead-in, the phrase group `phrase`), det (an
 # optional determiner), verb (a verb of the act `act`, from k.actions), word (one of the words `word`, or of the

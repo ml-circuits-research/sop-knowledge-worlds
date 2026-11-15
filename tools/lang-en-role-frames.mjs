@@ -95,8 +95,8 @@ export const MOVED_HERE = [
     { what: 'pin' }, 'priority 15, over acts.facts.layer.on.pin.verb (14), which took "on Berlin" as the thing'],
 ];
 
-export function frameLines(name, { act, mode, set, priority, needs, roles, example }, parts, fixed = {}, src = SRC) {
-  const lines = [wire(`w.lang.en.frame.${name}`, 'w.lang.en.frame', [['name', name], ['act', act], ['mode', mode], ['set', set], ['priority', priority], ['needs', needs], ...roles.map((r) => ['role', r]), ['example', text(example)]], src)];
+export function frameLines(name, { act, mode, set, priority, needs, roles, example, mood }, parts, fixed = {}, src = SRC) {
+  const lines = [wire(`w.lang.en.frame.${name}`, 'w.lang.en.frame', [['name', name], ['act', act], ['mode', mode], ['set', set], ['priority', priority], ['needs', needs], ['mood', mood], ...roles.map((r) => ['role', r]), ['example', text(example)]], src)];
   parts.forEach(([is, a, b, c], i) => {
     const e = [['frame', name], ['at', i + 1]];
     if (is === 'lead') e.push(['is', 'lead'], ['phrase', 'lead.polite'], ['optional', 'yes']);

@@ -2019,6 +2019,9 @@
   "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
+ "about me": [
+  "w.person/schema.sop"
+ ],
  "above": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-objects",
@@ -3401,7 +3404,8 @@
   "k.people/schema.sop",
   "k.words/shards/ag",
   "k.words/shards/frequency-a",
-  "w.lang.en/shards/hand-grammar"
+  "w.lang.en/shards/hand-grammar",
+  "w.person/schema.sop"
  ],
  "age years": [
   "k.space/schema.sop"
@@ -18069,7 +18073,8 @@
   "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.words/shards/bo",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.person/schema.sop"
  ],
  "boyan": [
   "k.people/shards/given-names-b"
@@ -18080,14 +18085,16 @@
  ],
  "boyfriend": [
   "k.words/shards/bo",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.person/schema.sop"
  ],
  "boyle": [
   "k.words/shards/bo",
   "k.words/shards/frequency-b"
  ],
  "boys": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "w.person/schema.sop"
  ],
  "bozo": [
   "k.words/shards/bo",
@@ -19208,7 +19215,8 @@
   "k.people/shards/roles-family",
   "k.words/shards/br",
   "k.words/shards/frequency-b",
-  "w.lang.en/shards/core-plurals"
+  "w.lang.en/shards/core-plurals",
+  "w.person/schema.sop"
  ],
  "brother-in-law": [
   "k.words/shards/br"
@@ -19218,7 +19226,8 @@
   "k.words/shards/frequency-b"
  ],
  "brothers": [
-  "k.people/shards/roles-family"
+  "k.people/shards/roles-family",
+  "w.person/schema.sop"
  ],
  "brothers-in-law": [
   "k.words/shards/br"
@@ -22615,6 +22624,7 @@
   "w.face/schema.sop",
   "w.list/schema.sop",
   "w.map/schema.sop",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -26924,7 +26934,8 @@
   "k.scenes/shards/things-c",
   "k.words/shards/ch",
   "k.words/shards/frequency-c",
-  "w.lang.en/shards/core-plurals"
+  "w.lang.en/shards/core-plurals",
+  "w.person/schema.sop"
  ],
  "child count": [
   "k.body/schema.sop"
@@ -26944,7 +26955,8 @@
  ],
  "children": [
   "k.people/shards/kinds",
-  "k.words/shards/ch"
+  "k.words/shards/ch",
+  "w.person/schema.sop"
  ],
  "chile": [
   "k.attributes/shards/same-c",
@@ -32971,7 +32983,8 @@
   "k.time/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/co-2",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.person/schema.sop"
  ],
  "count per part": [
   "k.body/schema.sop"
@@ -33215,6 +33228,9 @@
  "cousin": [
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
+ ],
+ "cousins": [
+  "w.person/schema.sop"
  ],
  "cove": [
   "k.words/shards/co-2",
@@ -37048,6 +37064,7 @@
   "k.people/shards/roles-family",
   "k.words/shards/da",
   "k.words/shards/frequency-d",
+  "w.person/schema.sop",
   "k.objects/shards/noto-clothing-06"
  ],
  "dada": [
@@ -37057,7 +37074,8 @@
  "daddy": [
   "k.people/shards/roles-family",
   "k.words/shards/da",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.person/schema.sop"
  ],
  "dadonghai": [
   "k.geo/shards/psys2-cities-asia"
@@ -37808,10 +37826,14 @@
  ],
  "daughter": [
   "k.words/shards/da",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.person/schema.sop"
  ],
  "daughter-in-law": [
   "k.words/shards/da"
+ ],
+ "daughters": [
+  "w.person/schema.sop"
  ],
  "daughters-in-law": [
   "k.words/shards/da"
@@ -40697,7 +40719,11 @@
  ],
  "dislike": [
   "k.words/shards/di",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.person/schema.sop"
+ ],
+ "dislikes": [
+  "w.person/schema.sop"
  ],
  "dismantle": [
   "k.actions/shards/verbs-take_apart",
@@ -50498,14 +50524,17 @@
   "k.procedures/shards/tasks",
   "k.words/shards/fa",
   "k.words/shards/frequency-f",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "k.objects/shards/noto-clothing-05"
  ],
  "family member": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "w.person/schema.sop"
  ],
  "family members": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "w.person/schema.sop"
  ],
  "family photo": [
   "k.layouts/shards/layouts",
@@ -50959,6 +50988,9 @@
   "k.words/shards/fa",
   "k.words/shards/frequency-f"
  ],
+ "favorites": [
+  "w.person/schema.sop"
+ ],
  "favour": [
   "k.words/shards/fa",
   "k.words/shards/frequency-f"
@@ -50966,6 +50998,9 @@
  "favourite": [
   "k.words/shards/fa",
   "k.words/shards/frequency-f"
+ ],
+ "favourites": [
+  "w.person/schema.sop"
  ],
  "fawn": [
   "k.colours/shards/colours"
@@ -59752,14 +59787,17 @@
   "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.words/shards/frequency-g",
-  "k.words/shards/gi"
+  "k.words/shards/gi",
+  "w.person/schema.sop"
  ],
  "girlfriend": [
   "k.words/shards/frequency-g",
-  "k.words/shards/gi"
+  "k.words/shards/gi",
+  "w.person/schema.sop"
  ],
  "girls": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "w.person/schema.sop"
  ],
  "girolamo": [
   "k.people/shards/given-names-g"
@@ -61174,7 +61212,8 @@
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.person/schema.sop"
  ],
  "grandchild": [
   "k.words/shards/frequency-g",
@@ -61182,13 +61221,15 @@
   "w.lang.en/shards/core-plurals"
  ],
  "grandchildren": [
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.person/schema.sop"
  ],
  "granddad": [
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.person/schema.sop"
  ],
  "granddaughter": [
   "k.words/shards/frequency-g",
@@ -61220,11 +61261,18 @@
  "grandiozny peak": [
   "k.geo/shards/asia"
  ],
+ "grandkid": [
+  "w.person/schema.sop"
+ ],
+ "grandkids": [
+  "w.person/schema.sop"
+ ],
  "grandma": [
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.person/schema.sop"
  ],
  "grandmas": [
   "k.people/shards/kinds"
@@ -61245,10 +61293,14 @@
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.person/schema.sop"
  ],
  "grandparent": [
   "k.kinds/shards/wordnet-1"
+ ],
+ "grandparents": [
+  "w.person/schema.sop"
  ],
  "grandpas": [
   "k.people/shards/kinds"
@@ -61275,7 +61327,8 @@
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-g",
-  "k.words/shards/gr"
+  "k.words/shards/gr",
+  "w.person/schema.sop"
  ],
  "grant": [
   "k.kinds/shards/wordnet-1",
@@ -65124,7 +65177,8 @@
  ],
  "hate": [
   "k.words/shards/frequency-h",
-  "k.words/shards/ha"
+  "k.words/shards/ha",
+  "w.person/schema.sop"
  ],
  "hated": [
   "k.words/shards/frequency-h",
@@ -68730,7 +68784,8 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/grammar",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.person/schema.sop"
  ],
  "how many seats": [
   "w.seating/schema.sop"
@@ -69262,7 +69317,8 @@
  ],
  "husband": [
   "k.words/shards/frequency-h",
-  "k.words/shards/hu"
+  "k.words/shards/hu",
+  "w.person/schema.sop"
  ],
  "hush": [
   "k.words/shards/frequency-h",
@@ -73656,6 +73712,7 @@
   "k.people/schema.sop",
   "k.words/shards/frequency-j",
   "k.words/shards/jo",
+  "w.person/schema.sop",
   "w.tasks/schema.sop",
   "k.objects/shards/noto-place-building-02",
   "k.people/shards/given-names-j"
@@ -76998,7 +77055,8 @@
  "kid": [
   "k.people/shards/kinds",
   "k.words/shards/frequency-k",
-  "k.words/shards/ki"
+  "k.words/shards/ki",
+  "w.person/schema.sop"
  ],
  "kidded": [
   "k.words/shards/ki"
@@ -77041,7 +77099,8 @@
   "k.body/shards/core"
  ],
  "kids": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "w.person/schema.sop"
  ],
  "kiev": [
   "k.words/shards/frequency-k",
@@ -77235,6 +77294,7 @@
   "w.face/schema.sop",
   "w.list/schema.sop",
   "w.map/schema.sop",
+  "w.person/schema.sop",
   "w.timeline/schema.sop"
  ],
  "kind of": [
@@ -79486,10 +79546,12 @@
   "k.kinds/shards/relations-geo",
   "k.words/shards/frequency-l",
   "k.words/shards/la",
-  "w.document/schema.sop"
+  "w.document/schema.sop",
+  "w.person/schema.sop"
  ],
  "languages": [
-  "k.geo/schema.sop"
+  "k.geo/schema.sop",
+  "w.person/schema.sop"
  ],
  "lantern": [
   "k.attributes/shards/drawn-mulberry",
@@ -82613,7 +82675,8 @@
   "k.words/shards/frequency-l",
   "k.words/shards/li",
   "w.lang.en/shards/closed-classes",
-  "w.lang.en/shards/prepositions"
+  "w.lang.en/shards/prepositions",
+  "w.person/schema.sop"
  ],
  "liked": [
   "k.words/shards/frequency-l",
@@ -82631,6 +82694,9 @@
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-l",
   "k.words/shards/li"
+ ],
+ "likes": [
+  "w.person/schema.sop"
  ],
  "liking": [
   "k.words/shards/frequency-l",
@@ -83287,6 +83353,9 @@
  ],
  "little fingers": [
   "k.body/shards/core"
+ ],
+ "little ones": [
+  "w.person/schema.sop"
  ],
  "littler": [
   "k.values/shards/scales"
@@ -84320,6 +84389,7 @@
   "k.feelings/shards/feelings",
   "k.words/shards/frequency-l",
   "k.words/shards/lo",
+  "w.person/schema.sop",
   "k.objects/shards/noto-musical-instrument-02",
   "k.objects/shards/noto-place-building-03",
   "k.objects/shards/noto-plant-flower-01"
@@ -85976,7 +86046,8 @@
  "mama": [
   "k.people/shards/roles-family",
   "k.words/shards/frequency-m",
-  "k.words/shards/ma"
+  "k.words/shards/ma",
+  "w.person/schema.sop"
  ],
  "mamas": [
   "k.geo/shards/asia"
@@ -88051,7 +88122,8 @@
   "k.words/shards/frequency-m",
   "k.words/shards/me",
   "w.lang.en/shards/closed-classes",
-  "w.lang.en/shards/pronouns"
+  "w.lang.en/shards/pronouns",
+  "w.person/schema.sop"
  ],
  "mead": [
   "k.words/shards/frequency-m",
@@ -91237,7 +91309,8 @@
  "mom": [
   "k.people/shards/roles-family",
   "k.words/shards/frequency-m",
-  "k.words/shards/mo"
+  "k.words/shards/mo",
+  "w.person/schema.sop"
  ],
  "moma": [
   "k.geo/shards/europe"
@@ -91264,7 +91337,8 @@
  "mommy": [
   "k.people/shards/roles-family",
   "k.words/shards/frequency-m",
-  "k.words/shards/mo"
+  "k.words/shards/mo",
+  "w.person/schema.sop"
  ],
  "momskiy khrebet": [
   "k.geo/shards/asia"
@@ -93546,7 +93620,8 @@
  "mum": [
   "k.people/shards/roles-family",
   "k.words/shards/frequency-m",
-  "k.words/shards/mu"
+  "k.words/shards/mu",
+  "w.person/schema.sop"
  ],
  "mumbai": [
   "k.attributes/shards/same-m",
@@ -93561,7 +93636,8 @@
  "mummy": [
   "k.people/shards/roles-family",
   "k.words/shards/frequency-m",
-  "k.words/shards/mu"
+  "k.words/shards/mu",
+  "w.person/schema.sop"
  ],
  "mun": [
   "k.geo/shards/asia"
@@ -93982,6 +94058,9 @@
   "w.lang.en/shards/determiners",
   "w.lang.en/shards/pronouns"
  ],
+ "my profile": [
+  "w.person/schema.sop"
+ ],
  "myanmar": [
   "k.geo/shards/asia",
   "k.geo/shards/asia-borders",
@@ -94018,7 +94097,8 @@
   "k.words/shards/my"
  ],
  "myself": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.person/schema.sop"
  ],
  "mysore": [
   "k.geo/shards/psys2-cities-asia"
@@ -94347,6 +94427,7 @@
   "w.lang.en/shards/hand-grammar",
   "w.list/schema.sop",
   "w.map/schema.sop",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -94425,7 +94506,8 @@
   "k.people/shards/kinds",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-n",
-  "k.words/shards/na"
+  "k.words/shards/na",
+  "w.person/schema.sop"
  ],
  "nana": [
   "k.people/shards/given-names-n",
@@ -96703,6 +96785,7 @@
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.map/schema.sop",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "w.tasks/schema.sop",
   "k.objects/shards/noto-money-01",
@@ -96758,6 +96841,7 @@
   "k.music/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "w.tasks/schema.sop",
   "k.objects/shards/noto-music-01",
@@ -97777,7 +97861,8 @@
  ],
  "occupation": [
   "k.words/shards/frequency-o",
-  "k.words/shards/oc"
+  "k.words/shards/oc",
+  "w.person/schema.sop"
  ],
  "occupied": [
   "k.words/shards/oc"
@@ -98016,7 +98101,8 @@
   "w.face/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/grammar",
-  "w.lang.en/shards/prepositions"
+  "w.lang.en/shards/prepositions",
+  "w.person/schema.sop"
  ],
  "of course": [
   "k.values/shards/psys2"
@@ -98285,6 +98371,7 @@
   "k.space/schema.sop",
   "k.words/shards/frequency-o",
   "k.words/shards/ol",
+  "w.person/schema.sop",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-office-02"
@@ -101189,7 +101276,8 @@
  "papa": [
   "k.people/shards/roles-family",
   "k.words/shards/frequency-p",
-  "k.words/shards/pa"
+  "k.words/shards/pa",
+  "w.person/schema.sop"
  ],
  "papaloapan": [
   "k.geo/shards/north-america"
@@ -101529,7 +101617,8 @@
   "w.diagram/schema.sop"
  ],
  "parents": [
-  "k.kinds/schema.sop"
+  "k.kinds/schema.sop",
+  "w.person/schema.sop"
  ],
  "paris": [
   "k.attributes/shards/same-p",
@@ -103197,6 +103286,7 @@
   "k.procedures/shards/tasks",
   "k.words/shards/frequency-p",
   "k.words/shards/pe",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "k.objects/shards/openmoji-travel-places-01"
  ],
@@ -103567,6 +103657,7 @@
   "k.words/shards/frequency-p",
   "k.words/shards/pe",
   "w.lang.en/shards/hand-morphology",
+  "w.person/schema.sop",
   "w.seating/schema.sop",
   "k.objects/shards/openmoji-travel-places-01"
  ],
@@ -108518,6 +108609,9 @@
   "k.words/shards/frequency-p",
   "k.words/shards/pr"
  ],
+ "preferences": [
+  "w.person/schema.sop"
+ ],
  "preferred": [
   "k.words/shards/pr"
  ],
@@ -109194,7 +109288,8 @@
  ],
  "profession": [
   "k.words/shards/frequency-p",
-  "k.words/shards/pr"
+  "k.words/shards/pr",
+  "w.person/schema.sop"
  ],
  "professional": [
   "k.kinds/shards/wordnet-1",
@@ -109208,7 +109303,8 @@
  ],
  "profile": [
   "k.words/shards/frequency-p",
-  "k.words/shards/pr"
+  "k.words/shards/pr",
+  "w.person/schema.sop"
  ],
  "profit": [
   "k.words/shards/frequency-p",
@@ -112280,7 +112376,8 @@
   "k.values/shards/scales",
   "k.words/shards/frequency-r",
   "k.words/shards/re",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.person/schema.sop"
  ],
  "realm": [
   "k.words/shards/frequency-r",
@@ -113285,7 +113382,8 @@
   "k.people/shards/kinds",
   "k.story/schema.sop",
   "k.words/shards/frequency-r",
-  "k.words/shards/re"
+  "k.words/shards/re",
+  "w.person/schema.sop"
  ],
  "relational": [
   "k.attributes/shards/aspects"
@@ -113310,7 +113408,8 @@
   "k.people/shards/derived",
   "k.people/shards/kinds",
   "k.words/shards/frequency-r",
-  "k.words/shards/re"
+  "k.words/shards/re",
+  "w.person/schema.sop"
  ],
  "relative major": [
   "k.music/schema.sop"
@@ -113319,7 +113418,8 @@
   "k.music/schema.sop"
  ],
  "relatives": [
-  "k.people/shards/kinds"
+  "k.people/shards/kinds",
+  "w.person/schema.sop"
  ],
  "relativity": [
   "k.words/shards/frequency-r",
@@ -125133,6 +125233,9 @@
  "sibling_rank": [
   "k.interest/shards/features"
  ],
+ "siblings": [
+  "w.person/schema.sop"
+ ],
  "sibylla": [
   "k.people/shards/given-names-s"
  ],
@@ -125908,13 +126011,15 @@
   "k.people/shards/derived",
   "k.people/shards/roles-family",
   "k.words/shards/frequency-s",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.person/schema.sop"
  ],
  "sister-in-law": [
   "k.words/shards/si"
  ],
  "sisters": [
-  "k.people/shards/roles-family"
+  "k.people/shards/roles-family",
+  "w.person/schema.sop"
  ],
  "sisters-in-law": [
   "k.words/shards/si"
@@ -128254,7 +128359,8 @@
   "k.attributes/shards/same-s",
   "k.geo/shards/asia",
   "k.words/shards/frequency-s",
-  "k.words/shards/so"
+  "k.words/shards/so",
+  "w.person/schema.sop"
  ],
  "son-in-law": [
   "k.words/shards/so"
@@ -128291,6 +128397,9 @@
  "sonoran desert": [
   "k.geo/shards/north-america",
   "k.geo/shards/numbers"
+ ],
+ "sons": [
+  "w.person/schema.sop"
  ],
  "sons-in-law": [
   "k.words/shards/so"
@@ -129021,7 +129130,8 @@
   "k.actions/shards/actions-mind-talk",
   "k.geo/schema.sop",
   "k.words/shards/frequency-s",
-  "k.words/shards/sp"
+  "k.words/shards/sp",
+  "w.person/schema.sop"
  ],
  "speak softly": [
   "k.actions/shards/actions-mind-talk"
@@ -137821,7 +137931,8 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-t",
   "k.words/shards/th",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.person/schema.sop"
  ],
  "thing for baking": [
   "k.kinds/shards/classes",
@@ -144196,6 +144307,7 @@
   "w.document/schema.sop",
   "w.face/schema.sop",
   "w.list/schema.sop",
+  "w.person/schema.sop",
   "w.timeline/schema.sop"
  ],
  "type of": [
@@ -145581,10 +145693,14 @@
  "user": [
   "k.attributes/shards/attributes",
   "k.words/shards/frequency-u",
-  "k.words/shards/us"
+  "k.words/shards/us",
+  "w.person/schema.sop"
  ],
  "user facing": [
   "k.procedures/schema.sop"
+ ],
+ "user profile": [
+  "w.person/schema.sop"
  ],
  "user_facing": [
   "k.attributes/shards/narration",
@@ -148068,6 +148184,30 @@
  "w.map.view.layer": [
   "k.kinds/shards/structures"
  ],
+ "w.person": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.person": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.relative": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.relative.of": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.relative.relation": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.taste": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.taste.of": [
+  "k.kinds/shards/structures"
+ ],
+ "w.person.taste.stance": [
+  "k.kinds/shards/structures"
+ ],
  "w.seating": [
   "k.kinds/shards/structures"
  ],
@@ -150086,6 +150226,7 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
+  "w.person/schema.sop",
   "w.tasks/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -150729,7 +150870,8 @@
   "w.face/schema.sop",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
-  "w.lang.en/shards/ellipsis"
+  "w.lang.en/shards/ellipsis",
+  "w.person/schema.sop"
  ],
  "wht": [
   "k.values/shards/psys2"
@@ -150816,7 +150958,8 @@
  "wife": [
   "k.words/shards/frequency-w",
   "k.words/shards/wi",
-  "w.lang.en/shards/core-plurals"
+  "w.lang.en/shards/core-plurals",
+  "w.person/schema.sop"
  ],
  "wig": [
   "k.attributes/shards/drawn-hand",
@@ -152112,7 +152255,8 @@
   "k.people/schema.sop",
   "k.procedures/shards/compose",
   "k.words/shards/frequency-w",
-  "k.words/shards/wo"
+  "k.words/shards/wo",
+  "w.person/schema.sop"
  ],
  "work done": [
   "k.genres/shards/report"
@@ -153123,6 +153267,9 @@
   "k.words/shards/frequency-y",
   "k.words/shards/ye"
  ],
+ "years old": [
+  "w.person/schema.sop"
+ ],
  "yeast": [
   "k.words/shards/frequency-y",
   "k.words/shards/ye"
@@ -153423,7 +153570,8 @@
   "k.geo/shards/asia",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
-  "w.lang.en/shards/pronouns"
+  "w.lang.en/shards/pronouns",
+  "w.person/schema.sop"
  ],
  "you bet": [
   "k.values/shards/psys2"

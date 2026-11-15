@@ -81,6 +81,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `w.lang.en` | 52 (3%) |
 | `w.list` | 2 (0%) |
 | `w.map` | 3 (0%) |
+| `w.person` | 1 (0%) |
 | `w.seating` | 2 (0%) |
 
 ## Gaps

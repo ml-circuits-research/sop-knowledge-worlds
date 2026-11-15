@@ -5894,3 +5894,32 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - `holds` and `money` of k.actions.action are machinery: narrate=no (`MACHINE_KEYS` in tools/narration-core.mjs,
   by type.key).
 - Tests: k.kinds.joins-report, k.kinds.relations, k.attributes: 20 pass.
+
+
+## 2026-11-15 — first worker: w.person and the first-person frames (block 10:55, PSys2 Q19)
+
+- New world schema **w.person** (std.schema format, CC0, 62 wires, 10830 bytes, no rule, no function): `person`
+  (user, name, age, occupation a declared join to k.people.role, language many, note), `relative` (of, relation: 23
+  values, count, name, age: "two kids" is one fact, count 2), `taste` (of, thing, type the catalog type that names it,
+  stance likes or dislikes, strong): likes and dislikes as typed relations over the catalog. Words for the world, its
+  kinds, every key, and the relation values ("kids" are children, "mum", "grandma"). WORLD.md. Terms after schema.org
+  Person.
+- **w.lang.en:** new frame key `mood` (declarative, interrogative, imperative; not said: a request, or a question for
+  ask); the reference reader (tools/lib/lang-en.mjs) returns it; tools/lang-en-role-frames.mjs `frameLines` writes it
+  (other shards unchanged). Shard **person-frames** (tools/lang-en-person-frames.mjs, in the build; 77 wires, 16,838
+  bytes; needs=person): 8 statements (mood declarative, set acts.state, change/set, thing=me: name, called, age,
+  relatives with a count, likes, dislikes, occupation, language) and 8 questions (mood interrogative, ask: what do you
+  know about me, how many kids do I have, how old am I, name, likes, dislikes, job, languages); 2 derived lexicons
+  (person.relation from w.person, person.occupation from the 36 jobs of k.people). The determiner part could not stay
+  before the count (the determiners hold number words: "I have two kids" lost "two"); an "a/an" word part instead.
+- Tests: tests/w.person.test.mjs (3): shard = tool output and its lexicons; 28 turns read back (act/mode, mood, args;
+  "I have a cat" is read by no person frame); a session (user, two kids, tastes, age changed, a wrong relation and an
+  age of 200 refused). tests/w.schemas.test.mjs lists ten world schemas. The general frame test (every frame reads its
+  own example, alone and in its world), w.lang.en and diagram-frames tests pass. Build: variants regenerated.
+- k.kinds structures (tools/structures-core.mjs): w.person is a graph (the person a node; a relative and a taste links
+  from it, labelled by relation and stance), as every world schema has a structure (tests/k.kinds.structures.test.mjs).
+- Push: test:changed green on seven rebased tips, each push rejected as main moved meanwhile; pushed under the
+  reviewer's 14:10 rule (rebase; the commit's own tests, catalog and validate: 8 files, 66 pass). COVERAGE.md and
+  ASPECTS.md regenerated in this commit where other workers' changes had left them stale.
+- Owned by another worker (skw-worker4): the list and task frames; this commit touches only person-frames among the
+  frame shards.

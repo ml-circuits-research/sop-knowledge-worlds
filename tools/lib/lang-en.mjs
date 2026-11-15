@@ -223,7 +223,7 @@ export function frameReader(wires, actionWires, { lexicons = {}, needs = () => t
       }
       if (kindPhrase && args.kind) { const np = kindPhrase(args.kind); if (np?.head) { args.kind = np.head; if (np.mods?.length) args.value = [...np.mods, ...(args.value ? [args.value] : [])].join(' '); } }
       const mm = modes.find((x) => one(x, 'act') === act && one(x, 'mode') === mode);
-      out.push({ frame: name, act: mm ? one(mm, 'means') : act, mode, priority: Number(one(f, 'priority')), literal: m.literal, captured: m.captured, roles: m.roles, args, lexicons: m.lex });
+      out.push({ frame: name, act: mm ? one(mm, 'means') : act, mode, mood: one(f, 'mood'), priority: Number(one(f, 'priority')), literal: m.literal, captured: m.captured, roles: m.roles, args, lexicons: m.lex });
     }
     return out.sort((a, b) => b.priority - a.priority || b.literal - a.literal || a.captured - b.captured);
   };
