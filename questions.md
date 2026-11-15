@@ -1022,7 +1022,7 @@ meanwhile as said:
    reads as a task (acts.tasks.should, priority 12) and "how much is 7 plus 5" (K4, arithmetic) as a price
    (acts.shop.price.of, 14). Meanwhile nothing is done: the K3 and K4 frames should take a higher priority (or a needs
    the host checks first) when they are written. Agreed?
-## Q71 (KR1 item 2, fifth worker, 2026-11-15): which source decides between several capitals of one country?
+## Q75 (KR1 item 2, fifth worker, 2026-11-15): which source decides between several capitals of one country?
 Question: Natural Earth marks two to four places of 16 countries as capitals (`Admin-0 capital` and `Admin-0 capital
 alt`). I keep only those the country list (5.1.0) names, where it names some: Benin Porto-Novo (not Cotonou), Côte
 d'Ivoire Yamoussoukro (not Abidjan), Tanzania Dodoma (not Dar es Salaam), eSwatini Lobamba (not Mbabane), Sri Lanka
@@ -1052,3 +1052,14 @@ Question: `k.space.kind.made_of` (a comet: ice, dust) says what a kind of body i
 `material`. Rename it to `material` (and keep `made_of` only for k.food's ingredients), or leave it as a key of its own world?
 Context: KR1 item 4 made `material` the one key for what a thing is made of; k.space was not in the task.
 Blocking: no. Meanwhile: left as it is.
+
+## Q74 (KR1 item 6, fifth worker, 2026-11-15): the Unicode licence, and share-alike SOP shards in folders of their own?
+Question: (1) 127 shards carry `Unicode-3.0` (CLDR names and keywords; with Apache-2.0 for the Noto emoji drawings). It
+is a permissive licence like MIT, but not in the allowlist of KR1 item 6. Allow it (as now), or move those shards?
+(2) "share-alike shards in folders of their own": the TSV folders are (one licence per folder, checked), but the 205
+CC-BY-SA and ODbL SOP shards sit in `shards/` next to CC0 ones, one licence per file. Should they move to
+`shards/<licence>/` (scanWorlds, the catalog and hosts read `shards/*.sop` only today), or is one licence per file
+enough?
+Context: tools/lib/licenses.mjs, tools/validate.mjs. A share-alike licence joined by AND with another in one file is
+refused; so is any NC, ND, research-only or unknown licence, and any licence outside the list.
+Blocking: no. Meanwhile: Unicode-3.0 allowed (marked "Q74" in the list); SA SOP shards stay in `shards/`, one licence per file.

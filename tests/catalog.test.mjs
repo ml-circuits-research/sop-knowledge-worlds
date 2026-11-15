@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { buildCatalog, serialize, serializeCompact } from '../tools/build-catalog.mjs';
 import { scanWorlds, WORLDS_DIR } from '../tools/lib/worlds.mjs';
+import { refused } from '../tools/lib/licenses.mjs';
 
 // buildCatalog validates every world first (tools/validate.mjs: every schema and shard loads with zero errors, alone
 // and with the other shards of its world) and returns its errors: the first test is the validation of the catalog.
@@ -62,7 +63,7 @@ test('a fixture world gives keys, sources, license and vocabulary from words and
   put('k.toy/schema.sop', '@k.toy core.module name=k.toy version=1 exports=item\n'
     + '@k.toy.item.name core.slot of=k.toy.item key=name id=true kind=atom\n'
     + '@k.toy.word.item core.word text=item text=items means=k.toy.item\n');
-  put('k.toy/shards/a.sop', '# sources: test 1\n# license: CC-BY-NC-4.0\n# script: none\n'
+  put('k.toy/shards/a.sop', '# sources: test 1\n# license: CC-BY-4.0\n# script: none\n'
     + '@k.toy.cup k.toy.item name=Cup core.source="test 1"\n'
     + '@k.toy.word.cup core.word text=mug means=Cup of=k.toy.item.name core.source="test 1"\n');
   try {
@@ -73,10 +74,36 @@ test('a fixture world gives keys, sources, license and vocabulary from words and
     assert.deepEqual(w.exports, ['k.toy.item']);
     assert.deepEqual(w.shards[0].keys, ['cup']);
     assert.deepEqual(w.shards[0].sources, ['test-1']);
-    assert.equal(w.shards[0].nc, true);
+    assert.equal(w.shards[0].license, 'CC-BY-4.0');
     assert.deepEqual(vocab, { cup: ['k.toy/shards/a'], item: ['k.toy/schema.sop'], items: ['k.toy/schema.sop'], mug: ['k.toy/shards/a'] });
     assert.match(index.version, /^[0-9a-f]{12}$/);
+    // KR1 item 6 (review 2026-11-15, findings 2 and 7): a TSV folder is catalogued with its source and licence; the
+    // validator refuses a licence outside the allowlist, NC above all, and two licences in one folder of data files
+    put('k.toy/dictionary/a.tsv', '# toy dictionary\n# source: toydict 1 (made up)\n# license: CC-BY-SA-3.0\n# script: none\ncup\tnoun\n');
+    const withData = buildCatalog(root);
+    assert.deepEqual(withData.errors, []);
+    assert.deepEqual(withData.index.worlds[0].data.map((d) => [d.id, d.format, d.files, d.sources, d.license]), [['k.toy/dictionary', 'tsv', 1, ['toydict-1'], 'CC-BY-SA-3.0']]);
+    assert.deepEqual(withData.index.worlds[0].licenses, ['CC-BY-4.0', 'CC-BY-SA-3.0']);
+    assert.match(withData.licenses, /## toydict-1[\s\S]*Shard terms: CC-BY-SA-3.0/);
+    put('k.toy/dictionary/b.tsv', '# toy dictionary\n# source: test 1\n# license: CC0-1.0\n# script: none\nmug\tnoun\n');
+    assert.ok(buildCatalog(root).errors.some((e) => /one licence/.test(e)));
+    rmSync(join(root, 'k.toy/dictionary/b.tsv'));
+    for (const [license, re] of [['CC-BY-NC-4.0', /never published/], ['CC-BY-ND-4.0', /never published/], ['GPL-3.0', /allowlist/], ['', /no "# license:"|no licence/], ['CC-BY-SA-4.0 AND CC0-1.0', /share-alike/]]) {
+      put('k.toy/shards/a.sop', `# sources: test 1\n${license ? `# license: ${license}\n` : ''}# script: none\n@k.toy.cup k.toy.item name=Cup core.source="test 1"\n`);
+      assert.ok(buildCatalog(root).errors.some((e) => re.test(e)), license);
+    }
   } finally { rmSync(root, { recursive: true }); }
+});
+
+test('KR1 item 6: every published file has a licence of the allowlist; the UniMorph dictionary is in index.json and LICENSES.md', () => {
+  const index = JSON.parse(readFileSync(join(WORLDS_DIR, 'index.json'), 'utf8'));
+  const ro = index.worlds.find((w) => w.id === 'w.lang.ro');
+  assert.deepEqual(ro.data.find((d) => d.id === 'w.lang.ro/dictionary-unimorph')?.license, 'CC-BY-SA-3.0');
+  assert.ok(ro.licenses.includes('CC-BY-SA-3.0') && ro.sources.some((s) => s.startsWith('unimorph-ron')));
+  const licenses = readFileSync(join(WORLDS_DIR, 'LICENSES.md'), 'utf8');
+  assert.match(licenses, /## unimorph-ron[\s\S]*?CC BY-SA 3\.0[\s\S]*?Used by: `w\.lang\.ro`/);
+  assert.doesNotMatch(licenses, /non-commercial stays/);
+  for (const w of index.worlds) for (const s of [...w.shards, ...(w.data ?? [])]) assert.equal(refused(s.license), null, `${s.id}: ${s.license}`);
 });
 
 test('block 07:40 item 3: vocab-kinds.json says what each word names, with the same shards as vocab.json', () => {

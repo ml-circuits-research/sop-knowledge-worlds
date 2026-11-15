@@ -11,6 +11,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { parse } from './sopworld/sopworld.mjs';
 import { scanWorlds, schemaWorld, readHeader, isMatrix, fmtViolation, WORLDS_DIR, MAX_WIRES, MAX_BYTES, REPO } from './lib/worlds.mjs';
+import { refused, dataFolderErrors } from './lib/licenses.mjs';
 
 const CACHE = join(REPO, '.validate-cache.json');
 const sha = (...xs) => { const h = createHash('sha256'); for (const x of xs) h.update(x).update('\0'); return h.digest('hex'); };
@@ -25,6 +26,16 @@ export function validateWorlds(root = WORLDS_DIR, { cache = root === WORLDS_DIR 
   const fresh = {};
   const build = sha(...['tools/sopworld/sopworld.mjs', 'tools/validate.mjs', 'tools/lib/worlds.mjs'].map((f) => readFileSync(join(REPO, f))));
   const schemas = sha(...worlds.map((w) => `${w.id}\n${w.schemaText}`));
+  // KR1 item 6: every published file has a licence of the allowlist (tools/lib/licenses.mjs), a share-alike licence
+  // alone in its file, and a folder of data files (TSV) one licence. Checked on every run (cheap; not cached).
+  for (const world of worlds) for (const [path, text] of [[world.schemaPath, world.schemaText], ...world.shards.map((x) => [x.path, x.text])]) {
+    const l = readHeader(text).license;
+    if (!l) continue; // a shard without the line is reported below; a schema without one is not checked here
+    if (l.length > 1) errors.push(`${path}: ${l.length} "# license:" lines; one licence per file`);
+    const why = refused(l[0]);
+    if (why) errors.push(`${path}: ${why}`);
+  }
+  errors.push(...dataFolderErrors(root));
   for (const world of worlds) {
     const key = sha(build, schemas, world.id, ...world.shards.map((x) => `${x.id}\n${x.text}`));
     if (old[world.id]?.key === key) { results.push(...old[world.id].results); fresh[world.id] = old[world.id]; continue; }

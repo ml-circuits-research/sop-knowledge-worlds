@@ -15119,10 +15119,10 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/ranges",
   "k.attributes/shards/same-b",
+  "k.attributes/shards/things-living",
   "k.commonsense/shards/core",
   "k.commonsense/shards/psys2",
   "k.kinds/shards/feature-wordnet",
-  "k.kinds/shards/group-hand",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/group-noto",
   "k.kinds/shards/head",
@@ -52503,13 +52503,14 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-f",
+  "k.attributes/shards/things-living",
   "k.commonsense/shards/core",
-  "k.kinds/shards/group-hand",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
+  "k.kinds/shards/use",
   "k.kinds/shards/wordnet-1",
   "k.layouts/shards/joins",
   "k.objects/shards/animals",
@@ -53439,6 +53440,7 @@
   "k.kinds/shards/group-noto",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/use",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/joins",
@@ -85004,7 +85006,6 @@
  "made": [
   "k.actions/shards/actions-make-change",
   "k.attributes/schema.sop",
-  "k.commonsense/schema.sop",
   "k.food/schema.sop",
   "k.procedures/shards/from-knowledge",
   "k.space/schema.sop",
@@ -85017,7 +85018,6 @@
  ],
  "made of": [
   "k.attributes/schema.sop",
-  "k.commonsense/schema.sop",
   "k.food/schema.sop",
   "k.space/schema.sop"
  ],
@@ -85025,9 +85025,7 @@
   "k.parts/schema.sop"
  ],
  "made_of": [
-  "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
-  "k.kinds/shards/relations-commonsense",
   "k.kinds/shards/relations-food",
   "k.kinds/shards/relations-space"
  ],
@@ -87420,7 +87418,6 @@
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
-  "k.commonsense/schema.sop",
   "k.kinds/shards/kind",
   "k.kinds/shards/relations-attributes",
   "k.kinds/shards/wordnet-1",
@@ -137641,6 +137638,10 @@
   "k.kinds/shards/classes",
   "k.kinds/shards/use"
  ],
+ "thing for decoration": [
+  "k.kinds/shards/classes",
+  "k.kinds/shards/use"
+ ],
  "thing for digging": [
   "k.kinds/shards/classes",
   "k.kinds/shards/use"
@@ -137690,6 +137691,10 @@
   "k.kinds/shards/use"
  ],
  "thing for flying": [
+  "k.kinds/shards/classes",
+  "k.kinds/shards/use"
+ ],
+ "thing for food": [
   "k.kinds/shards/classes",
   "k.kinds/shards/use"
  ],
@@ -145157,14 +145162,12 @@
  ],
  "use": [
   "k.attributes/schema.sop",
-  "k.commonsense/schema.sop",
   "k.people/schema.sop",
   "k.words/shards/frequency-u",
   "k.words/shards/us"
  ],
  "used": [
   "k.attributes/schema.sop",
-  "k.commonsense/schema.sop",
   "k.units/schema.sop",
   "k.words/shards/frequency-u",
   "k.words/shards/us"
@@ -145174,7 +145177,6 @@
  ],
  "used for": [
   "k.attributes/schema.sop",
-  "k.commonsense/schema.sop",
   "k.diagrams/schema.sop"
  ],
  "used_by": [
@@ -145188,8 +145190,7 @@
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
-  "k.kinds/shards/relations-attributes",
-  "k.kinds/shards/relations-commonsense"
+  "k.kinds/shards/relations-attributes"
  ],
  "useful": [
   "k.words/shards/frequency-u",

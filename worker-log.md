@@ -5639,7 +5639,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   (`capitalsNotListed` 16: Cotonou, Abidjan, Laayoune, Lagos, Johannesburg, Dar es Salaam, Mbabane, Tel Aviv, Kyoto,
   Putrajaya, Yangon, Baguio, Sri Jayawardenepura Kotte, The Hague, La Paz, Valparaíso; they stay cities). Rerun on
   the raw files: only these lines change. tools/import/psys2.mjs and its six city shards: no `capital_of`.
-  Q71 asks whether a seat of government should stay a second capital (meanwhile the list decides).
+  Q75 (numbered Q71 at first; Q71 is the fourth worker's) asks whether a seat of government should stay a second capital (meanwhile the list decides).
 - Tests: tests/k.geo.test.mjs (+1): no told capital_of, derived ones name the rule, every capital a told city, the
   countries with several capitals are exactly South Africa's three, capital_of read with the rule equals
   country.capital backwards, Caribbean Netherlands' capital is Kralendijk and Oranjestad / The Bottom are not
@@ -5701,3 +5701,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Test (tests/k.scenes.test.mjs, +1): both slots declare the join and no enum; every time value of the scenes and the
   usages is a k.time.part_of_day name; the beach is morning and afternoon. tests/k.attributes.test.mjs compares only
   season and weather as enums now.
+
+## 2026-11-15 — fifth worker: KR1 item 6, licences: UniMorph catalogued, an allowlist in the validator
+
+- **Catalog:** tools/build-catalog.mjs lists the folders of data files that are not SOP (the TSV dictionaries) as a
+  world's `data` (id, path, format, files, bytes, sources, license), and counts their sources and licences in the
+  world's `sources` / `licenses` and in LICENSES.md. **Before:** w.lang.ro `licenses ['CC0-1.0']`, `sources
+  ['hand-core-1']`, no unimorph section in LICENSES.md. **After:** w.lang.ro `licenses ['CC-BY-SA-3.0', 'CC0-1.0']`,
+  `sources` with `unimorph-ron-2026-11-14`, data `w.lang.ro/dictionary-unimorph` (23 files, 67,603 bytes, CC-BY-SA-3.0)
+  and `w.lang.ro/dictionary` (21, CC0), `w.lang.en/dictionary` (26, WordNet-3.0); LICENSES.md has `unimorph-ron` with
+  the CC BY-SA 3.0 terms and attribution. The `nc` flag and "non-commercial stays non-commercial" are gone.
+- **Allowlist:** tools/lib/licenses.mjs (CC0, public domain, MIT, BSD, Apache-2.0, MPL-2.0, WordNet-3.0, CC BY, ODbL,
+  CC BY-SA, CDLA; Unicode-3.0 meanwhile, Q74); tools/validate.mjs refuses any other id, NC / ND / research-only /
+  unknown above all, more than one `# license:` line, a share-alike licence joined with another in one file, a data
+  file without licence or source, and two licences in one folder of data files. Checked on every run (not cached).
+  The 1,156 files of today all pass. AGENTS.md rule 9 names the allowlist. docs/worlds/README.md documents `data`.
+- Tests (tests/catalog.test.mjs, +1 and the toy catalog): a toy TSV folder is catalogued with its source and licence
+  and appears in LICENSES.md; NC, ND, GPL, a missing licence, CC-BY-SA AND CC0, and two licences in one folder fail;
+  the real catalog has the UniMorph folder under CC-BY-SA-3.0, LICENSES.md its section, and every shard and data
+  folder a licence the allowlist takes.

@@ -58,7 +58,13 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
 - World `version`: the schema's version (`version=` on its `core.module` wire); a breaking schema change raises it.
 - `exports`: the types other modules may read. `depends`: worlds whose schemas must be in the same library.
 - Shard `keys`: the identity values of its wires (lowercased). `sources`: the `core.source` values, as `<id>-<version>`.
-  `license`: the shard's terms (a shard keeps its source's terms); `nc: true` marks non-commercial terms.
+  `license`: the shard's terms (a shard keeps its source's terms). Only licences of the allowlist in
+  `tools/lib/licenses.mjs` are published (CC0, public domain, MIT, BSD, Apache, MPL, WordNet, CC BY, ODbL, CC BY-SA,
+  CDLA; never non-commercial, no-derivatives, research-only or unknown), and a share-alike licence is alone in its file.
+- World `data` (KR1 item 6): the folders of data files that are not SOP (the TSV dictionaries of `w.lang.en` and
+  `w.lang.ro`), one entry per folder: `id`, `path`, `format` (`tsv`), `files`, `bytes`, `sources`, `license` (one
+  licence per folder: the UniMorph-derived `w.lang.ro/dictionary-unimorph` is CC-BY-SA-3.0, apart from the CC0
+  `dictionary`). The world's `sources` and `licenses` include them.
   `warnings`: what sopworld noted when loading it (no shard is published with errors).
 
 ## vocab.json
