@@ -60,7 +60,7 @@ const T = true;
 export const SHAPES = [
   // ---- flat
   ['circle', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'ball, wheel, plate, clock, pizza, button, coin, full moon, sun', 'circles, round, disc, disk, circular'],
-  ['oval', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'egg, rugby ball, mirror, lemon, balloon, pond', 'ovals, ellipse, egg-shaped, elliptical'],
+  ['oval', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'egg, rugby ball, mirror, lemon, balloon, pond', 'ovals, ellipse, egg-shaped, elliptical, ellipses'],
   ['semicircle', 'flat', { sides: 1, corners: 2, round: T, symmetric: T }, 'rainbow, igloo, bridge, croissant', 'semicircles, half circle, half-circle, half moon'],
   ['triangle', 'flat', { sides: 3, corners: 3, round: false, symmetric: T }, 'roof, tent, mountain, pyramid, cheese wedge', 'triangles, triangular, three-sided'],
   ['square', 'flat', { sides: 4, corners: 4, round: false, equal: T, symmetric: T, is_a: 'rectangle, rhombus' }, 'window, dice, picture frame, gift box', 'squares, box shape'],
@@ -74,25 +74,27 @@ export const SHAPES = [
   ['polygon', 'flat', { round: false }, '', 'polygons, many-sided shape'],
   ['star', 'flat', { sides: 10, corners: 10, round: false, equal: T, symmetric: T }, 'star, starfish, glowing star', 'stars, five-pointed star, star-shaped'],
   ['heart', 'flat', { round: T, symmetric: T }, 'heart, strawberry', 'hearts, heart-shaped'],
-  ['crescent', 'flat', { sides: 0, corners: 2, round: T, symmetric: T }, 'crescent moon, banana, croissant', 'crescents, sickle, moon shape'],
+  ['crescent', 'flat', { sides: 0, corners: 2, round: T, symmetric: T }, 'crescent moon, banana, croissant', 'crescents, sickle, moon shape, crescent moon'],
   ['cross', 'flat', { sides: 12, corners: 12, round: false, equal: T, symmetric: T }, 'first aid kit, signpost', 'crosses, plus, plus sign'],
   ['arrow', 'flat', { sides: 7, corners: 7, round: false, symmetric: T }, 'signpost', 'arrows, pointer'],
+  // KR2 (reviewer 14:45): the one shape k.values named and k.shapes did not
+  ['dot', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'button', 'dots, point, points, spot, spots'],
   ['ring', 'flat', { sides: 0, corners: 0, round: T, symmetric: T }, 'ring, doughnut, tire, bagel, wheel', 'rings, hoop, loop, annulus'],
   ['drop', 'flat', { sides: 0, corners: 1, round: T, symmetric: T }, 'droplet, pear, balloon, light bulb', 'drops, teardrop, tear shape'],
   ['cloud shape', 'flat', { sides: 0, corners: 0, round: T }, 'cloud, sheep, tree, broccoli', 'cloud-shaped, fluffy shape, bumpy outline'],
   // ---- lines
   ['line', 'line', { round: false }, 'pencil, pole, rope, ladder', 'lines, straight line, stroke'],
-  ['arc', 'line', { round: T }, 'rainbow, bridge, horseshoe magnet', 'arcs, curve, bow, bend'],
+  ['arc', 'line', { round: T }, 'rainbow, bridge, horseshoe magnet', 'arcs, curve, bow, bend, curves, curved line'],
   ['zigzag', 'line', { round: false }, 'saw, stairs, mountain', 'zigzags, zig-zag, jagged line'],
   ['wavy line', 'line', { round: T }, 'water wave, snake, river', 'wave, waves, wavy, squiggle'],
   ['spiral', 'line', { round: T }, 'snail, shell', 'spirals, coil, swirl, whorl'],
   // ---- solids
-  ['sphere', 'solid', { faces: 1, edges: 0, corners: 0, round: T, symmetric: T, flat: 'circle' }, 'ball, orange, planet, soccer ball, basketball, melon, coconut', 'spheres, ball shape, globe, orb, spherical'],
+  ['sphere', 'solid', { faces: 1, edges: 0, corners: 0, round: T, symmetric: T, flat: 'circle' }, 'ball, orange, planet, soccer ball, basketball, melon, coconut', 'spheres, ball shape, globe, orb, spherical, globe shape'],
   ['hemisphere', 'solid', { faces: 2, edges: 1, corners: 0, round: T, symmetric: T, flat: 'semicircle', face: 'circle' }, 'igloo, bowl', 'hemispheres, half sphere, dome, half ball'],
   ['egg shape', 'solid', { faces: 1, edges: 0, corners: 0, round: T, symmetric: T, flat: 'oval' }, 'egg, lemon, rugby ball, avocado', 'ovoid, egg-shaped solid'],
   ['cube', 'solid', { faces: 6, edges: 12, corners: 8, round: false, equal: T, symmetric: T, flat: 'square', face: 'square', is_a: 'cuboid' }, 'dice, box, gift box', 'cubes, block, cubic'],
   ['cuboid', 'solid', { faces: 6, edges: 12, corners: 8, round: false, symmetric: T, flat: 'rectangle', face: 'rectangle' }, 'brick, book, box, refrigerator, package', 'cuboids, box shape, rectangular block, rectangular prism'],
-  ['cylinder', 'solid', { faces: 3, edges: 2, corners: 0, round: T, symmetric: T, flat: 'rectangle', face: 'circle' }, 'drum, candle, log, battery, glass bottle, telescope', 'cylinders, tube, pipe shape, cylindrical, can shape'],
+  ['cylinder', 'solid', { faces: 3, edges: 2, corners: 0, round: T, symmetric: T, flat: 'rectangle', face: 'circle' }, 'drum, candle, log, battery, glass bottle, telescope', 'cylinders, tube, pipe shape, cylindrical, can shape, tube shape'],
   ['cone', 'solid', { faces: 2, edges: 1, corners: 1, round: T, symmetric: T, flat: 'triangle', face: 'circle' }, 'ice cream, party popper, funnel, volcano, carrot', 'cones, conical, cone-shaped'],
   ['pyramid', 'solid', { faces: 5, edges: 8, corners: 5, round: false, symmetric: T, flat: 'triangle', face: 'triangle, square' }, 'pyramid, tent, roof', 'pyramids, square pyramid'],
   ['prism', 'solid', { faces: 5, edges: 9, corners: 6, round: false, symmetric: T, flat: 'rectangle', face: 'triangle, rectangle' }, 'tent, roof, cheese wedge', 'prisms, triangular prism, wedge'],
@@ -133,7 +135,7 @@ export function shapeShards() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  writeShards(join(WORLDS_DIR, 'k.colours', 'shards'), colourShards(), '', ['colours-']);
-  writeShards(join(WORLDS_DIR, 'k.shapes', 'shards'), shapeShards());
+  writeShards(join(WORLDS_DIR, 'k.colours', 'shards'), colourShards(), '', ['colours-', 'derived']);
+  writeShards(join(WORLDS_DIR, 'k.shapes', 'shards'), shapeShards(), '', ['derived']);
   console.log(`${COLOURS.length} colours, ${MIXES.length} mixes, ${SHAPES.length} shapes`);
 }

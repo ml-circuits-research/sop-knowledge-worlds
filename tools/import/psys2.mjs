@@ -363,9 +363,11 @@ export function importPsys2(from, commit) {
     lines.push(wire('k.values.psys2.word.reply.yes', 'core.word', [...yes.filter((x) => x !== 'yes').map((x) => ['text', x]), ['means', 'yes'], ['of', 'k.values.reply.name']], SRC));
     lines.push(wire('k.values.psys2.word.reply.no', 'core.word', [...no.filter((x) => x !== 'no').map((x) => ['text', x]), ['means', 'no'], ['of', 'k.values.reply.name']], SRC));
     // The shape names PSys2 has and k.values lacks (k.values holds the words of values; k.shapes the facts).
-    const shapeNames = new Set((facts.get('k.values.shape') ?? []).map((w) => one(w, 'name')));
+    // KR2: k.shapes is the home of shape names (its psys2 shard has polygon, quadrilateral, rhombus); the lines this
+    // wrote into k.values are gone (the import is not run again)
+    const shapeNames = new Set((facts.get('k.shapes.shape') ?? []).map((w) => one(w, 'name')));
     const newShapes = [...new Set(parse(P('kids.shapes/kb.sop')).filter((w) => w.type === 'kids.shapes.family' || w.type === 'kids.shapes.shape').flatMap((w) => [one(w, 'name'), one(w, 'kind')]).filter((n) => n && !n.includes('_') && !shapeNames.has(n)))].sort(byText);
-    for (const n of newShapes) lines.push(wire(`k.values.psys2.shape.${seg(n)}`, 'k.values.shape', [['name', n]], SRC));
+    for (const n of newShapes) lines.push(wire(`k.shapes.psys2.name.${seg(n)}`, 'k.shapes.shape', [['name', n]], SRC));
     put('k.values', 'psys2', `from the PSys2 drawing world and lexicon: ${newShapes.length} shape names (${newShapes.join(', ')}), ${newColours.length} colour (${newColours.map((c) => c[0]).join(', ')}), ${newWords.length} more words for colours, ${shades.length - Object.keys(SHORT).length} shade words with how they change a colour, and the words for yes (${yes.length}) and no (${no.length}).`, lines);
     const hexOf = (m) => (m.rgb ?? m.rgb_about)?.[0];
     const rgbDis = base.filter(([n]) => colours.has(n)).map(([n, rgb]) => [n, rgb, hexOf(colours.get(n))]).filter(([, a, b]) => b && a !== b);
@@ -398,7 +400,7 @@ export function importPsys2(from, commit) {
       `| shade words (\`SHADES\`) | ${shades.length} | light and dark as steps of the scale brightness | ${shades.length - 2}: new type \`k.values.shade\` (${shades.filter(([n]) => !SHORT[n]).map((x) => x[0]).join(', ')}; how much lighter and how much more colour); dk and lt as words | the same shard |`,
       `| words for yes and no (lexicon) | ${yes.length} + ${alts('phrase.lang.no').length} | 0 | ${yes.length} + ${no.length}: new type \`k.values.reply\` | the same shard |`,
       `| the names of the parts of the built-in kinds | ${kinds.length} kinds | part names of the drawings in \`k.objects.part\`, usual parts in \`k.parts\` | ${pl.length} parts with their other names: new type \`k.parts.called\` | \`k.parts/shards/psys2\` |`,
-      `| shape names (\`kids.shapes\`) | 9 + their kinds | the others in \`k.values.shape\` | ${newShapes.length}: ${newShapes.join(', ')} | \`k.values/shards/psys2\` |`,
+      `| shape names (\`kids.shapes\`) | 9 + their kinds | the others in \`k.shapes.shape\` | ${newShapes.length}: ${newShapes.join(', ')} | \`k.values/shards/psys2\` |`,
       `| ordinal words (lexicon) | ${ordinals.length} | ${ordinals.filter((o) => nums.has(o)).length} in \`k.values.number\` | 0 | – |`, '',
       `**Left:** the values of the base colours we have under the same name (the demo's palette; ours are the CSS values: ${rgbDis.length} differ, as two palettes do); the drawings, sizes and default colours of the built-in kinds (drawings are \`k.objects\`; a default colour of a circle is the demo's choice); the phrases of the lexicon (how a request is worded: the demo's language layer, not knowledge of things); from the no-words those that are refusals to act (stay, leave it, not now, never, do not, I do not know); the lexicon's colour words that are a shade and a colour (light red, dark green: a shade word and a colour name say it)${lexMissing.length ? `; colour words with no value in PSys2 either: ${lexMissing.join(', ')}` : ''}. The lexicon has no number words besides the ordinals; \`k.values.number\` has ${nums.size}.`]);
   }

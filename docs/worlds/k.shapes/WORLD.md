@@ -1,6 +1,6 @@
 # k.shapes
 
-<!--n:facts:k.shapes.shape-->38<!--/n--> shapes: flat shapes, lines and solids, with their sides and corners (or faces, edges and corners), whether they
+<!--n:facts:k.shapes.shape-->39<!--/n--> shapes: flat shapes, lines and solids, with their sides and corners (or faces, edges and corners), whether they
 are round, and things that typically have the shape. Hand-written (`hand-core 1`, CC0-1.0).
 
 ## What it knows
@@ -26,8 +26,9 @@ are round, and things that typically have the shape. Hand-written (`hand-core 1`
 ## Joins
 
 By name, with no import: the eight shapes that a `k.objects` part can have (rectangle, square, circle, oval,
-triangle, line, arc, polygon) are shapes here (a test); 124 of the 128 typical things are `k.objects` drawings. 28 of the 36 shapes are named by `k.values.shape` (not:
-polygon, drop, cloud shape, wavy line, hemisphere, egg shape, prism, torus).
+triangle, line, arc, polygon) are shapes here (a test); 124 of the 128 typical things are `k.objects` drawings. k.shapes is the one
+home of shape names (KR2, reviewer 14:45): k.values.shape is gone; its words (ellipses, curved line, globe shape …) are
+words of these shapes, its trapezoid and curve are words of trapezium and arc, and its dot is a shape here.
 
 ## Questions it answers
 

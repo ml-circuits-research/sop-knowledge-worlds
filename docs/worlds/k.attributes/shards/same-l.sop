@@ -89,7 +89,7 @@
 @k.attributes.same.lime.colour k.attributes.same name=lime sense=colour only=false in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.limousine.thing k.attributes.same name=limousine sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.linden.place k.attributes.same name=linden sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.line.shape k.attributes.same name=line sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.line.shape k.attributes.same name=line sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.linen.colour k.attributes.same name=linen sense=colour only=true in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.link.thing k.attributes.same name=link sense=thing only=true in=k.attributes.drawn in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.linked_paperclips.thing k.attributes.same name="linked paperclips" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

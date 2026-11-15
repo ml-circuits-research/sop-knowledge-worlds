@@ -8,3 +8,4 @@
 {"id":"sh-08","ask":"what is a square a kind of (Q33: a rectangle and a rhombus)","query":{"type":"k.shapes.shape","where":{"name":"square"},"seek":"is_a","mode":"list"},"expect":{"status":"supported","values":["rectangle","rhombus"]}}
 {"id":"sh-09","ask":"which shape has a ball","query":{"type":"k.shapes.shape","where":{"thing":"ball"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["circle","sphere"]}}
 {"id":"sh-10","ask":"which shapes are lines","query":{"type":"k.shapes.shape","where":{"kind":"line"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["line","arc","zigzag","\"wavy line\"","spiral"]}}
+{"id":"sh-v1","ask":"is a cube a solid shape","query":{"type":"k.shapes.shape","where":{"name":"cube"},"seek":"kind"},"expect":{"status":"supported","value":"solid"}}

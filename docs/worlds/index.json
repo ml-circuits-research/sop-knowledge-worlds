@@ -1,5 +1,5 @@
 {
- "version": "f1aca83bac69",
+ "version": "6337b140b0ea",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4576,8 +4576,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1099,
-     "bytes": 212143,
+     "wires": 1097,
+     "bytes": 211764,
      "keys": [
       "a",
       "about",
@@ -4940,7 +4940,6 @@
       "k.values.scale",
       "k.values.set_word",
       "k.values.shade",
-      "k.values.shape",
       "k.values.step",
       "k.wearables.place",
       "k.wearables.wearable",
@@ -5123,7 +5122,6 @@
       "skin",
       "slot",
       "soft",
-      "solid",
       "sound",
       "source",
       "south",
@@ -6362,7 +6360,7 @@
      "id": "k.attributes/shards/same-a",
      "path": "k.attributes/shards/same-a.sop",
      "wires": 116,
-     "bytes": 22922,
+     "bytes": 22886,
      "keys": [
       "aardvark",
       "abacus",
@@ -6856,8 +6854,8 @@
     {
      "id": "k.attributes/shards/same-c",
      "path": "k.attributes/shards/same-c.sop",
-     "wires": 452,
-     "bytes": 91828,
+     "wires": 451,
+     "bytes": 91554,
      "keys": [
       "animal",
       "body in space",
@@ -7295,7 +7293,6 @@
       "curry rice",
       "curtain",
       "curtains",
-      "curve",
       "cushion",
       "custard",
       "cut of meat",
@@ -7323,7 +7320,7 @@
      "id": "k.attributes/shards/same-d",
      "path": "k.attributes/shards/same-d.sop",
      "wires": 129,
-     "bytes": 26029,
+     "bytes": 26011,
      "keys": [
       "animal",
       "body in space",
@@ -7906,7 +7903,7 @@
      "id": "k.attributes/shards/same-h",
      "path": "k.attributes/shards/same-h.sop",
      "wires": 164,
-     "bytes": 33537,
+     "bytes": 33501,
      "keys": [
       "animal",
       "body part",
@@ -8296,7 +8293,7 @@
      "id": "k.attributes/shards/same-l",
      "path": "k.attributes/shards/same-l.sop",
      "wires": 132,
-     "bytes": 27308,
+     "bytes": 27290,
      "keys": [
       "animal",
       "body part",
@@ -8814,7 +8811,7 @@
      "id": "k.attributes/shards/same-o",
      "path": "k.attributes/shards/same-o.sop",
      "wires": 63,
-     "bytes": 12915,
+     "bytes": 12879,
      "keys": [
       "animal",
       "body part",
@@ -8896,7 +8893,7 @@
      "id": "k.attributes/shards/same-p",
      "path": "k.attributes/shards/same-p.sop",
      "wires": 314,
-     "bytes": 63747,
+     "bytes": 63675,
      "keys": [
       "animal",
       "body in space",
@@ -9225,7 +9222,7 @@
      "id": "k.attributes/shards/same-q",
      "path": "k.attributes/shards/same-q.sop",
      "wires": 11,
-     "bytes": 2290,
+     "bytes": 2272,
      "keys": [
       "animal",
       "food",
@@ -9256,7 +9253,7 @@
      "id": "k.attributes/shards/same-r",
      "path": "k.attributes/shards/same-r.sop",
      "wires": 139,
-     "bytes": 28944,
+     "bytes": 28890,
      "keys": [
       "animal",
       "body part",
@@ -9415,7 +9412,7 @@
      "id": "k.attributes/shards/same-s",
      "path": "k.attributes/shards/same-s.sop",
      "wires": 435,
-     "bytes": 89622,
+     "bytes": 89532,
      "keys": [
       "animal",
       "body in space",
@@ -9865,7 +9862,7 @@
      "id": "k.attributes/shards/same-t",
      "path": "k.attributes/shards/same-t.sop",
      "wires": 226,
-     "bytes": 45991,
+     "bytes": 45973,
      "keys": [
       "animal",
       "body in space",
@@ -10414,7 +10411,7 @@
      "id": "k.attributes/shards/same-z",
      "path": "k.attributes/shards/same-z.sop",
      "wires": 6,
-     "bytes": 1567,
+     "bytes": 1549,
      "keys": [
       "animal",
       "clothing",
@@ -21190,7 +21187,7 @@
      "id": "k.kinds/shards/arguments",
      "path": "k.kinds/shards/arguments.sop",
      "wires": 18,
-     "bytes": 4907,
+     "bytes": 4887,
      "keys": [
       "act",
       "amount",
@@ -30008,7 +30005,7 @@
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
      "wires": 78,
-     "bytes": 13731,
+     "bytes": 13704,
      "keys": [
       "about",
       "age",
@@ -30911,8 +30908,8 @@
     {
      "id": "k.kinds/shards/relations-values",
      "path": "k.kinds/shards/relations-values.sop",
-     "wires": 29,
-     "bytes": 5518,
+     "wires": 28,
+     "bytes": 5344,
      "keys": [
       "about",
       "axis",
@@ -30930,7 +30927,6 @@
       "k.values.scale",
       "k.values.set_word",
       "k.values.shade",
-      "k.values.shape",
       "k.values.step",
       "kind",
       "lightness",
@@ -30942,7 +30938,6 @@
       "row",
       "saturation",
       "scale",
-      "solid",
       "steps",
       "text",
       "value",
@@ -57155,8 +57150,8 @@
     {
      "id": "k.shapes/shards/shapes",
      "path": "k.shapes/shards/shapes.sop",
-     "wires": 72,
-     "bytes": 12826,
+     "wires": 74,
+     "bytes": 13219,
      "keys": [
       "arc",
       "arrow",
@@ -57169,6 +57164,7 @@
       "cuboid",
       "cylinder",
       "diamond",
+      "dot",
       "drop",
       "egg shape",
       "heart",
@@ -58375,7 +58371,6 @@
     "k.values.scale",
     "k.values.set_word",
     "k.values.shade",
-    "k.values.shape",
     "k.values.step"
    ],
    "depends": [
@@ -58685,8 +58680,8 @@
     {
      "id": "k.values/shards/psys2",
      "path": "k.values/shards/psys2.sop",
-     "wires": 15,
-     "bytes": 2599,
+     "wires": 12,
+     "bytes": 2256,
      "keys": [
       "bright",
       "dark",
@@ -58694,9 +58689,6 @@
       "light",
       "no",
       "pale",
-      "polygon",
-      "quadrilateral",
-      "rhombus",
       "soft",
       "yes"
      ],
@@ -58883,49 +58875,6 @@
       "random",
       "same",
       "some"
-     ],
-     "sources": [
-      "hand-core-1"
-     ],
-     "license": "CC0-1.0",
-     "warnings": []
-    },
-    {
-     "id": "k.values/shards/shapes",
-     "path": "k.values/shards/shapes.sop",
-     "wires": 60,
-     "bytes": 6791,
-     "keys": [
-      "arc",
-      "arrow",
-      "circle",
-      "cone",
-      "crescent",
-      "cross",
-      "cube",
-      "cuboid",
-      "curve",
-      "cylinder",
-      "diamond",
-      "dot",
-      "heart",
-      "hexagon",
-      "line",
-      "octagon",
-      "oval",
-      "parallelogram",
-      "pentagon",
-      "pyramid",
-      "rectangle",
-      "ring",
-      "semicircle",
-      "sphere",
-      "spiral",
-      "square",
-      "star",
-      "trapezoid",
-      "triangle",
-      "zigzag"
      ],
      "sources": [
       "hand-core-1"

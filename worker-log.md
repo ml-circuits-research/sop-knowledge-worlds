@@ -6022,3 +6022,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Pushed: class=dialogue; the two Romanian shapes (bench 104 / 82 / 64); Romanian reply and request templates (46
   requests, 34 + 24 replies); w.lang.en.fn (61); k.feelings replies to w.lang.en; AGENTS.md rule 2.
 - Q78: where core.word should live for KR3 (vocab build) and [LIB] issue bindings for the deny `why` texts.
+
+## 2026-11-15 — fourth worker: k.shapes is the one home of shape names (reviewer 14:45, KR2)
+
+- k.values.shape gone (type, `solid`, words, shard shapes with 30 names and 30 word facts, 3 PSys2 names): every name
+  was a k.shapes shape or a word of one (trapezoid -> trapezium, curve -> arc, rhombus -> diamond and k.shapes/psys2);
+  dot is a new k.shapes shape (flat, round; 37 shapes); the words k.shapes lacked (ellipses, crescent moon, curves,
+  curved line, globe shape, tube shape) are words of its shapes. k.shapes.shape.face and flat join k.shapes.shape
+  (were k.values.shape). tools/values-core.mjs writes no shapes; joins.mjs, relations-core, the PSys2 import follow.
+- tools/colours-shapes-core.mjs keeps the derived shards of k.colours and k.shapes (it deleted them on every run).
+- Question va-12 ("is a cube a solid shape") is sh-v1 of k.shapes (kind solid).
+- Tests: k.colours-shapes 8, k.values 4, shared-modules 5, questions 448, narration 3, import.psys2, joins, joins
+  report, counts, k.objects.render, catalog, validate (1,174 files, 0 errors), repo: pass. k.kinds.relations fails on
+  main before this commit too ("make.arrangement holds arrangement": the outlines commit baacdad added the role).
+- Look-back (reviewer 15:35): my rebases tonight went through my own scripts (logs by union, generated files from main
+  then rebuilt, any other conflict stopped); checked on main: the list-frames build step, the w.tasks typicality and
+  structure, the season joins and the frames' WORLD.md sections are all there; no change was lost.

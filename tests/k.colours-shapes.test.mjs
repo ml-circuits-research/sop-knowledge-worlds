@@ -97,16 +97,10 @@ test('joins: most typical things have a drawing; every shape of a k.objects part
   for (const s of partShapes) assert.ok(names.has(s), `the part shape ${s} is not a k.shapes shape`);
 });
 
-test('joins to k.values: most shapes have their name there; every colour has its value in k.colours itself (KR2)', () => {
-  const values = fullWorld('k.values', worlds);
-  const reach = (type, of) => {
-    const names = new Set(values.ofType(type).map((w) => one(w, 'name')));
-    for (const w of values.ofType('core.word')) if (w.attrs.of?.[0] === of) for (const t of w.attrs.text ?? []) names.add(tok(t));
-    return names;
-  };
-  const valueShapes = reach('k.values.shape', 'k.values.shape.name');
-  const without = shapes.map((w) => one(w, 'name')).filter((n) => !valueShapes.has(n));
-  assert.ok(without.length <= 8, `shapes that k.values does not name: ${without.join(', ')}`);
+test('one home for shape names (KR2): k.values names no shape; the shapes of k.drawing parts and the words k.values had are here', () => {
+  assert.equal(existsSync(join(WORLDS_DIR, 'k.values', 'shards', 'shapes.sop')), false);
+  const words = new Set([...shapes.map((w) => one(w, 'name')), ...shapesWorld.ofType('core.word').filter((w) => w.attrs.of?.[0] === 'k.shapes.shape.name').flatMap((w) => (w.attrs.text ?? []).map(tok))]);
+  for (const w of ['trapezoid', 'curve', 'dot', 'ellipses', 'curved line', 'globe shape', 'tube shape', 'crescent moon', 'rhombus']) assert.ok(words.has(w), w);
 });
 
 // KR2 (reviewer 14:45): k.colours is the home of every colour name; the CSS names and the common names moved here from

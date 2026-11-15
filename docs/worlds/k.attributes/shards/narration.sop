@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (276 of 1099 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1097 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -859,7 +859,7 @@
 @k.attributes.narration.k.scenes.has.on k.attributes.narration type=k.scenes.has key=on narrate=no salience=0 why="machinery: what a drawn scene holds and where" core.source="hand-core 1"
 @k.attributes.narration.k.scenes.has.fills k.attributes.narration type=k.scenes.has key=fills narrate=no salience=0 why="machinery: what a drawn scene holds and where" core.source="hand-core 1"
 @k.attributes.narration.k.scenes.has.drawing k.attributes.narration type=k.scenes.has key=drawing narrate=no salience=0 why="machinery: what a drawn scene holds and where" core.source="hand-core 1"
-@k.attributes.narration.k.shapes.shape.kind k.attributes.narration type=k.shapes.shape key=kind narrate=yes salience=0.2 form=kind basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.shapes.shape.kind k.attributes.narration type=k.shapes.shape key=kind narrate=yes salience=0.4 form=kind basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.shapes.shape.sides k.attributes.narration type=k.shapes.shape key=sides narrate=yes salience=0.31 form=count basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.shapes.shape.corners k.attributes.narration type=k.shapes.shape key=corners narrate=yes salience=0.36 form=count basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.shapes.shape.faces k.attributes.narration type=k.shapes.shape key=faces narrate=yes salience=0.05 form=count basis=measured core.source="hand-core 1"
@@ -1041,8 +1041,6 @@
 @k.attributes.narration.k.values.comparative.scale k.attributes.narration type=k.values.comparative key=scale narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.comparative.way k.attributes.narration type=k.values.comparative key=way narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.comparative.degree k.attributes.narration type=k.values.comparative key=degree narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
-@k.attributes.narration.k.values.shape.name k.attributes.narration type=k.values.shape key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
-@k.attributes.narration.k.values.shape.solid k.attributes.narration type=k.values.shape key=solid narrate=yes salience=0.25 form=state basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.values.direction.name k.attributes.narration type=k.values.direction key=name narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.direction.axis k.attributes.narration type=k.values.direction key=axis narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.direction.x k.attributes.narration type=k.values.direction key=x narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"

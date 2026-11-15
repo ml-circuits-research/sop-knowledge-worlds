@@ -1,5 +1,5 @@
 // k.values (Round 8, item 3): the words for values: ordered scales (size, amount, degree …)
-// with their comparatives, shape names, directions and positions, set words, number words and ordinals.
+// with their comparatives, directions and positions, set words, number words and ordinals.
 //   node tools/values-core.mjs          writes docs/worlds/k.values/shards/*.sop, and the colour names with RGB into
 //                                       k.colours/shards/colours-css.sop and colours-common.sop (KR2: k.colours is the
 //                                       home of every colour name, reviewer 14:45)
@@ -104,17 +104,7 @@ export const COMPARATIVES = [
   ['price', 'up', 'dearer, pricier, more expensive', 'dearest, priciest, most expensive'], ['price', 'down', 'cheaper', 'cheapest'],
 ];
 
-// ---- Shapes: [name, solid, other words] ---------------------------------------------------------------------------
-export const SHAPES = [
-  ['circle', false, 'circles, round, circular, disc, disk'], ['oval', false, 'ovals, ellipse, ellipses, elliptical'], ['semicircle', false, 'semicircles, half circle, half-circle'],
-  ['ring', false, 'rings, hoop'], ['crescent', false, 'crescents, crescent moon'], ['square', false, 'squares'], ['rectangle', false, 'rectangles, rectangular, oblong'],
-  ['triangle', false, 'triangles, triangular'], ['diamond', false, 'diamonds, rhombus, lozenge'], ['parallelogram', false, 'parallelograms'], ['trapezoid', false, 'trapezoids, trapezium'],
-  ['pentagon', false, 'pentagons'], ['hexagon', false, 'hexagons, hexagonal'], ['octagon', false, 'octagons, octagonal'], ['star', false, 'stars, star-shaped'],
-  ['heart', false, 'hearts, heart-shaped'], ['cross', false, 'crosses, plus sign'], ['arrow', false, 'arrows'], ['line', false, 'lines, straight line'],
-  ['curve', false, 'curves, curved line'], ['arc', false, 'arcs'], ['zigzag', false, 'zigzags, zig-zag'], ['spiral', false, 'spirals'], ['dot', false, 'dots, point, points, spot'],
-  ['cube', true, 'cubes'], ['cuboid', true, 'cuboids, box shape, block'], ['sphere', true, 'spheres, ball shape, globe shape, spherical'], ['cone', true, 'cones, conical'],
-  ['cylinder', true, 'cylinders, tube shape, cylindrical'], ['pyramid', true, 'pyramids'],
-];
+// ---- Shapes: in k.shapes (KR2, reviewer 14:45: one home); their names and words are k.shapes.shape facts.
 
 // ---- Directions: [name, axis, x, y, opposite, other words]; x to the right, y downwards, as in k.objects ----------
 export const DIRECTIONS = [
@@ -233,12 +223,6 @@ export function valueShards() {
     }
     files['scales.sop'] = shard('scales', `${SCALES.length} ordered scales (${SCALES.map((s) => s[0]).join(', ')}): the steps of each from the least to the most, other words for a step, and the comparatives and superlatives that move along a scale (bigger, smallest).`,
       `${lines.join('\n')}\n\n# Words: other words for a step.\n${words.join('\n')}\n\n# Comparatives and superlatives.\n${comps.join('\n')}`);
-  }
-  // Shapes.
-  {
-    const lines = SHAPES.map(([name, solid]) => wire(`k.values.shape.${seg(name)}`, 'k.values.shape', [['name', name], ['solid', solid ? 'true' : undefined]], HAND));
-    const words = SHAPES.map(([name, , others]) => word(`k.values.word.shape.${seg(name)}`, list(others), name, 'k.values.shape.name'));
-    files['shapes.sop'] = shard('shapes', `${SHAPES.length} shape names (${SHAPES.map((s) => s[0]).join(', ')}), flat or solid, with their plurals and adjectives.`, `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`);
   }
   // Directions and positions.
   {

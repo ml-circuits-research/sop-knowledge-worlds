@@ -1,4 +1,4 @@
-// k.values (Round 8, item 3): colour names with RGB, scales, comparatives, shapes, directions, set words, numbers.
+// k.values (Round 8, item 3): scales, comparatives, directions, set words, numbers (colour names: k.colours; shapes: k.shapes).
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
@@ -14,7 +14,7 @@ const of = (t) => world.ofType(`k.values.${t}`);
 
 test('the shards are what tools/values-core.mjs gives; the colour names it writes into k.colours (the CSS ones when the raw file is there)', () => {
   const files = valueShards();
-  assert.equal(Object.keys(files).length, 6);
+  assert.equal(Object.keys(files).length, 5);
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(WORLDS_DIR, 'k.values', 'shards', name), 'utf8'), text, name);
   const colours = colourNameShards();
   assert.equal(Object.keys(colours).length, existsSync(CSS_RAW) ? 2 : 1);
@@ -50,11 +50,11 @@ test('directions have opposites that point back; numbers: one fact per word and 
   const value = (t, kind) => Number(one(nums.find((n) => one(n, 'text') === t && one(n, 'kind') === kind), 'value'));
   assert.equal(value('forty-two', 'cardinal'), 42); assert.equal(value('twelfth', 'ordinal'), 12); assert.equal(value('ninety-ninth', 'ordinal'), 99);
   assert.equal(value('dozen', 'group'), 12); assert.equal(value('twice', 'times'), 2); assert.equal(value('half', 'fraction'), 0.5);
-  for (const w of [...of('step'), ...of('shape'), ...of('direction'), ...of('position'), ...of('set_word'), ...nums]) assert.ok(w.attrs['core.source'], w.id);
+  for (const w of [...of('step'), ...of('direction'), ...of('position'), ...of('set_word'), ...nums]) assert.ok(w.attrs['core.source'], w.id);
 });
 
 test('words reach their shard through the vocabulary index', () => {
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
-  for (const [word, shard, world] of [['darkolivegreen', 'colours-css', 'k.colours'], ['dark gray', 'colours-css', 'k.colours'], ['mustard', 'colours-common', 'k.colours'], ['big', 'scales'], ['bigger', 'scales'], ['round', 'shapes'],
+  for (const [word, shard, world] of [['darkolivegreen', 'colours-css', 'k.colours'], ['dark gray', 'colours-css', 'k.colours'], ['mustard', 'colours-common', 'k.colours'], ['big', 'scales'], ['bigger', 'scales'], ['round', 'shapes', 'k.shapes'],
     ['counterclockwise', 'directions'], ['upper left', 'directions'], ['every', 'sets'], ['the rest', 'sets'], ['seventeen', 'numbers'], ['third', 'numbers']]) assert.ok(vocab[word]?.includes(`${world ?? 'k.values'}/shards/${shard}`), word);
 });

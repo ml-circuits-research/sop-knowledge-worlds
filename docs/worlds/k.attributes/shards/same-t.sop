@@ -185,7 +185,7 @@
 @k.attributes.same.tree_trunk.plant k.attributes.same name="tree trunk" sense=plant only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.trench.thing k.attributes.same name=trench sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.trent.place k.attributes.same name=trent sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.triangle.shape k.attributes.same name=triangle sense=shape only=true in=k.shapes.shape in=k.values.shape by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.triangle.shape k.attributes.same name=triangle sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.triangular_ruler.thing k.attributes.same name="triangular ruler" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.trident.thing k.attributes.same name=trident sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.trifle.food k.attributes.same name=trifle sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

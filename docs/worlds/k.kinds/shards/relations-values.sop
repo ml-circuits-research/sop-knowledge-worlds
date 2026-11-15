@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-values: the keys of the types of k.values read as relations: 29 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-values: the keys of the types of k.values read as relations: 28 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -28,7 +28,6 @@
 @k.kinds.relation.k.values.set_word.about k.kinds.relation type=k.values.set_word key=about subject="set word" object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.values.shade.lightness k.kinds.relation type=k.values.shade key=lightness subject=shade object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.values.shade.saturation k.kinds.relation type=k.values.shade key=saturation subject=shade object=number found=schema core.source="hand-core 1"
-@k.kinds.relation.k.values.shape.solid k.kinds.relation type=k.values.shape key=solid subject=shape subject_sense=shape object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.values.step.scale k.kinds.relation type=k.values.step key=scale subject=step object=value object_type=k.values.scale found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.values.step.name k.kinds.relation type=k.values.step key=name subject=step object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.values.step.rank k.kinds.relation type=k.values.step key=rank subject=step object=number found=schema core.source="hand-core 1"

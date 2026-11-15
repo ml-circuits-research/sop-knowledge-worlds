@@ -174,8 +174,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.scenes | `k.scenes.scene.drawing` | `k.objects.object` | name | 28 | 28 |  |
 | k.scenes | `k.scenes.scene.season` | `k.time.season` | name | 4 | 4 |  |
 | k.scenes | `k.scenes.scene.time` | `k.time.part_of_day` | name | 4 | 4 |  |
-| k.shapes | `k.shapes.shape.face` | `k.values.shape` | name | 4 | 4 |  |
-| k.shapes | `k.shapes.shape.flat` | `k.values.shape` | name | 7 | 7 |  |
+| k.shapes | `k.shapes.shape.face` | `k.shapes.shape` | name | 4 | 4 |  |
+| k.shapes | `k.shapes.shape.flat` | `k.shapes.shape` | name | 7 | 7 |  |
 | k.shapes | `k.shapes.shape.thing` | `k.objects.object` | name | 104 | 98 | `"gift box"`, `"horseshoe magnet"`, `"pizza slice"`, `chessboard`, `honeycomb`, `tv` |
 | k.space | `k.space.body.drawing` | `k.objects.object` | name | 13 | 13 |  |
 | k.space | `k.space.body.in` | `k.space.body` | name | 1 | 1 |  |
@@ -266,7 +266,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3501 | 2345 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3500 | 2345 |
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
@@ -304,8 +304,8 @@ whose slot has an enum is never suggested here (see the last section).
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
 | k.scenes | `k.scenes.scene.ground` | thing | `k.scenes.thing` | name | 15 | 6 |
 | k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.objects.object`, `k.layouts.anchor` | name | 23 | 19 |
-| k.shapes | `k.shapes.shape.is_a` | kind | `k.values.shape` | name | 5 | 5 |
-| k.shapes | `k.shapes.shape.kind_of` | kind | `k.values.shape` | name | 5 | 5 |
+| k.shapes | `k.shapes.shape.is_a` | kind | `k.shapes.shape` | name | 5 | 5 |
+| k.shapes | `k.shapes.shape.kind_of` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.space | `k.space.kind.made_of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
 | k.wearables | `k.wearables.wearable.face` | thing | `k.scenes.thing` | name | 36 | 18 |
@@ -336,9 +336,9 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.colours | `k.colours.colour.tone` | 3 | 3 | 2 | `k.values.shade` |
 | k.diagrams | `k.diagrams.kind.form` | 10 | 10 | 6 | `k.diagrams.kind` |
 | k.diagrams | `k.diagrams.kind.groups` | 2 | 2 | 2 | `k.values.reply` |
-| k.diagrams | `k.diagrams.shape.shape` | 11 | 11 | 6 | `k.values.shape` |
+| k.diagrams | `k.diagrams.shape.shape` | 11 | 11 | 6 | `k.shapes.shape` |
 | k.faces | `k.faces.colour.of` | 4 | 4 | 2 | `k.body.part` |
-| k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape`, `k.values.shape` |
+| k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape` |
 | k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.kinds | `k.kinds.parent.sense` | 12 | 7 | 4 | `k.attributes.kind` |
