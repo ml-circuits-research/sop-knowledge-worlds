@@ -5592,3 +5592,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   5 more names (Chad, Georgia, India, Montserrat, Viola). k.diagrams.topic is a generated gathering of other worlds'
   names, like k.kinds and k.attributes, so the rule skips that type (`CONTEXT_SKIP_TYPES`); the import gives the
   published shards byte for byte again (context=person 49).
+
+## 2026-11-15 — second worker takes: the joins report without enum keys (08:00), then K5 + K4 (block 09:20)
+
+- part.of is on main (f15117d). Next, in this order: the joins report stops suggesting keys whose slot has an enum
+  (`k.people.given_name.context`); K5 typed possession effects `holds=` / `money=` on k.actions; K4 arithmetic words
+  and frames in w.lang.en, in a frame shard of my own (`arithmetic`).
