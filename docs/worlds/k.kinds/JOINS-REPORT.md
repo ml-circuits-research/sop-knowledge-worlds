@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **228** in 34 worlds; distinct values 10436, meeting a target 10378 (99.4 %), open 58
+- declared joins: **228** in 34 worlds; distinct values 10437, meeting a target 10379 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
 
@@ -227,7 +227,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.face | `w.face.face.expression` | `k.faces.expression` | name | 0 | 0 |  |
 | w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |
 | w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
-| w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 13 | 13 |  |
+| w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 14 | 14 |  |
 | w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
 | w.lang.en | `w.lang.en.feeling_reply.feeling` | `k.feelings.feeling` | name | 30 | 30 |  |
 | w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 18 | 17 | `own` |

@@ -67,6 +67,10 @@ const OVERRIDE = { // by template: what its roles take
   'make.topic.criterion': [{ kind: 'timeline', topic: 'planets', criterion: 'distance' }, { kind: 'tree', topic: 'animals', criterion: 'size' }],
   'place.criterion': [{ thing: 'the planets', criterion: 'size' }, { thing: 'the tables', criterion: 'height' }],
   'group.criterion': [{ thing: 'the planets', criterion: 'weight' }, { thing: 'the stars', criterion: 'distance' }],
+  // block 09:50 item F: the arrangement, an outline of k.layouts (lexicon outline.shape)
+  'make.kind.arrangement': [{ kind: 'diagram', arrangement: 'house' }, { kind: 'flowchart', arrangement: 'star' }],
+  'place.arrangement': [{ thing: 'the boxes', arrangement: 'star' }, { thing: 'the nodes', arrangement: 'heart' }],
+  'group.arrangement': [{ thing: 'the dots', arrangement: 'heart' }, { thing: 'the stars', arrangement: 'circle' }],
 };
 const fillersOf = (t, i) => ({ ...FILLERS[i], ...(OVERRIDE[one(t, 'name')]?.[i] ?? {}) });
 const sayOf = (f) => Object.fromEntries(Object.entries(f).map(([k, x]) => [k, Array.isArray(x) ? x.join(' ') : x]));

@@ -61,6 +61,10 @@
 @w.lang.en.template.connect.target w.lang.en.template name=connect.target act=connect shape=thing.target role=thing role=target frame=acts.connect text="connect {thing} to {target}." example="Connect table 1 to table 2." core.source="hand-core 1"
 @w.lang.en.template.group.thing w.lang.en.template name=group.thing act=group shape=thing.group role=thing mode=group frame=acts.group text="group {thing}." example="Group the tables." core.source="hand-core 1"
 @w.lang.en.template.group.criterion w.lang.en.template name=group.criterion act=group shape=thing.criterion.group role=thing role=criterion mode=group frame=acts.group.by text="sort {thing} by {criterion}." example="Sort the planets by size." core.source="hand-core 1"
+# block 09:50 item F: the arrangement of make, place and group, an outline of k.layouts ("in the shape of a house")
+@w.lang.en.template.make.kind.arrangement w.lang.en.template name=make.kind.arrangement act=make shape=kind.arrangement role=kind role=arrangement frame=shape.make.of needs=layout text="make a {kind} in the shape of a {arrangement}." example="Make a diagram in the shape of a house." core.source="hand-core 1"
+@w.lang.en.template.place.arrangement w.lang.en.template name=place.arrangement act=place shape=thing.arrangement.layout role=thing role=arrangement mode=layout frame=shape.place.of needs=layout text="arrange {thing} in the shape of a {arrangement}." example="Arrange the boxes in the shape of a star." core.source="hand-core 1"
+@w.lang.en.template.group.arrangement w.lang.en.template name=group.arrangement act=group shape=thing.arrangement role=thing role=arrangement frame=shape.group.of needs=layout text="group {thing} in the shape of a {arrangement}." example="Group the dots in the shape of a heart." core.source="hand-core 1"
 @w.lang.en.template.take_apart.thing w.lang.en.template name=take_apart.thing act="take apart" shape=thing role=thing frame=acts.apart frame=acts.apart.2 text="take {thing} apart." example="Take the tables apart." core.source="hand-core 1"
 
 # ---- pick, deselect ----

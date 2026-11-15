@@ -6197,3 +6197,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - tools/attributes-glosses.mjs is a step of `npm run build` (before kinds-core, which reads its materials), so its
   shard is generated (.gitattributes by tools/generated.mjs: merge=regenerate); the audit stays hand-written. A value
   the rules propose that the audit has not seen stops the build until it is checked.
+
+
+## 2026-11-15 — first worker: the outline arrangement in w.lang.en's phrases and templates (red after baacdad)
+
+- tests/w.lang.en.arrangement.test.mjs (a phrase for every repeating arrangement of k.layouts: `outline` had none) and
+  tests/w.lang.en.templates.test.mjs (the holes count: the role `arrangement` had no template) were red on main after
+  baacdad. Added to hand-arrangements three phrases with layout=outline ("in the shape of", "shaped like", "in the form
+  of") and to templates-acts three templates: make.kind.arrangement ("make a {kind} in the shape of a {arrangement}."),
+  place.arrangement (mode layout) and group.arrangement, each with its frame of shape-frames; the test's sample
+  fillers for them (house, star, heart, circle). All w.lang.en tests, k.kinds.relations and k.layouts.outlines: 19
+  files, 97 pass, 1 skipped, 1 failing that is not this change's: w.lang.en.catalog-plurals ("axe: axes -> ax"), red
+  without it too (the plurals work of KR2 item 4).
+- Lesson: a new role or arrangement reaches w.lang.en's phrases and templates as well as k.kinds' argument classes; all
+  w.lang.en tests belong to such a commit's touched tests.
