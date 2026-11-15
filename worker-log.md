@@ -6666,3 +6666,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   written), uses 14 of 91 wrong (77 written).
 - tests/k.commonsense.rules.test.mjs reads the table's own facts (other shards add facts of the same name).
 - Not mine: tests/w.lang.ro.words.test.mjs (w.seating.table.colour) — recorded with its commit after the next run.
+
+## 2026-11-15 — fifth worker stops (owner: save quota)
+
+- Left: the last full suite on main after fddd8ac (the one at f77c570 had 10 red files, 8 mine, fixed in fddd8ac); and
+  the commit that made tests/w.lang.ro.words.test.mjs red (w.seating.table.colour) is not yet bisected.
+- Scratch: /tmp/w5 (analysis scripts), /tmp/w5-all (a worktree of main for full runs), logs /tmp/w5-all*.log.
