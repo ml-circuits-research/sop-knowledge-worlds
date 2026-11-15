@@ -3,7 +3,7 @@
 // The paraphrases: sources/psys2-eval/paraphrase-failures.jsonl (the rows of its failures.jsonl whose class starts
 // with "paraphrase:"). A content word is a word that is not a closed-class word of w.lang.en (determiners, pronouns,
 // prepositions, auxiliaries, wh-words, numerals, conjunctions and the other closed lists) nor a number. It reaches a
-// sense when k.words has a sense of it, of a form k.words names (core.word: children -> child), or of its stem by the
+// sense when k.words has a sense of it, of a form k.words names (core.word: children -> child) or w.lang.en reads back to its lemma (bought -> buy), or of its stem by the
 // regular endings of English (-s, -es, -ies, -ed, -ing, -er, -est, -'s; a doubled consonant and a dropped e restored).
 // A word that reaches none is a miss, with a cause from the list below where one is known (a name, a misspelling, a
 // notation), else "no sense".
@@ -11,6 +11,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
 import { parse } from './sopworld/sopworld.mjs';
+import { lemmasOf } from './lib/lang-en.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 export const PARAPHRASES = join(REPO, 'sources/psys2-eval/paraphrase-failures.jsonl');
@@ -77,7 +78,8 @@ export function coverage({ worlds = scanWorlds(), rows = readFileSync(PARAPHRASE
   const closed = closedWords(worlds), { words, forms } = senseWords(worlds), endings = contractionEndings(worlds);
   // a word without its possessive 's and without the ending of a contraction
   const bare = (w) => { const m = w.replace(/'s$/, ''); const e = endings.find((x) => m.endsWith(x) && m.length > x.length); return e ? m.slice(0, -e.length) : m; };
-  const reach = (w) => { for (const s of [...stems(w), bare(w)]) { if (words.has(s)) return s; if (forms.has(s) && words.has(forms.get(s))) return forms.get(s); } return null; };
+  // a form k.words does not name is read back to its lemma by w.lang.en (bought -> buy), the one home of forms (KR2 item 4)
+  const reach = (w) => { for (const s of [...stems(w), bare(w)]) { if (words.has(s)) return s; if (forms.has(s) && words.has(forms.get(s))) return forms.get(s); } for (const l of lemmasOf(bare(w))) if (words.has(l)) return l; return null; };
   const cause = (w) => Object.entries(NOT_WORDS).find(([, ws]) => ws.includes(w) || ws.includes(bare(w)))?.[0] ?? 'no sense';
   const seen = new Map();
   for (const r of rows) for (const raw of r.text.toLowerCase().replace(/’/g, "'").match(/[a-z][a-z0-9'-]*/g) ?? []) {

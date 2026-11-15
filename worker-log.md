@@ -6472,3 +6472,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Test (tests/k.attributes.uses.test.mjs, new, 2): the shard is fresh and says its error rate; only things that do not act;
   no value checked wrong written; soap washing, palace living, motorway driving; alley, coffin, vial, balloon none; the
   -ing forms (sleeping, putting on, cutting).
+## 2026-11-15 — fourth worker: the readers of verb forms read w.lang.en (red files of 26ddd3f, reviewer)
+
+- 26ddd3f dropped the k.words / k.actions forms w.lang.en confirms; two readers still read them there:
+  tests/k.actions.effects.test.mjs (fixed on main meanwhile by 6bb54d6, kept as it is) and tools/paraphrase-words.mjs
+  ("bought", "got" reached no sense). tools/lib/lang-en.mjs gets `lemmasOf(form)` (the w.lang.en dictionary and
+  morphology, the library's analyse) and `verbFormsOf(lemma)` (the library's inflectBy: third, past, ing) for any reader;
+  paraphrase-words reads a form back with lemmasOf. No test changed what it asserts.
+- Also: ee130ff added the frame acts.make.for without the variants shard rebuilt (w.lang.en.abstraction red); 6bb54d6
+  rebuilt it on main meanwhile.
+- Lesson: deleting facts from a world runs every test that reads that world (grep its type names in tests/ and
+  tools/); a new frame of w.lang.en runs the w.lang.en.* tests, the abstraction test among them. After a rebase the
+  merge driver keeps main's generated files: rebuild them before the push.
+- Tests: k.actions.*, k.words.*, w.lang.en.*, import.wordnet, k.kinds relations and structures, k.time, w.person,
+  w.lang.ro (k.attributes.glosses needs sources/wordnet/raw, not in this clone).

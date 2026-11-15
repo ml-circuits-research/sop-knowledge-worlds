@@ -1,10 +1,11 @@
 // Reading w.lang.en the way a host does, for tests and tools: the morphology rules as facts, and the options the
 // library's std.grammar needs (which category is which type), built from the world's own `w.lang.en.cat` facts.
 // The algorithms are the library's (std.grammar) or the host's; these are the smallest reference readings.
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, schemaWorld } from './worlds.mjs';
-import { articleFor as libArticleFor } from '../sopworld/sopworld.mjs';
+import { articleFor as libArticleFor, morphOf, analyse, dictionary, inflectBy } from '../sopworld/sopworld.mjs';
+import { TYPES, DIR } from '../lang-en-morph.mjs';
 
 // w.lang.en as a World (its schema and shards), built once: what the library's functions read (KR4).
 let en = null;
@@ -14,6 +15,24 @@ export function enWorld() {
   const { world } = schemaWorld(worlds, 'w.lang.en');
   for (const s of worlds.find((w) => w.id === 'w.lang.en').shards) world.tell(s.text);
   return (en = world);
+}
+
+// Word forms have one home, w.lang.en (KR2 item 4: k.words and k.actions keep only the forms it does not confirm).
+// lemmasOf(form): the lemmas the w.lang.en dictionary and morphology read the form back to (bought -> buy);
+// verbFormsOf(lemma): the third person, past and ing forms the library's inflectBy writes from w.lang.en (have -> has,
+// had, having). A reader of the forms reads them here, not from the k.words / k.actions facts.
+let morph = null;
+function enMorph() {
+  if (morph) return morph;
+  const file = (p) => (existsSync(join(DIR, 'dictionary', `${p}.tsv`)) ? readFileSync(join(DIR, 'dictionary', `${p}.tsv`), 'utf8') : null);
+  return (morph = { m: morphOf(enWorld(), { types: TYPES }), dict: dictionary({ read: file }) });
+}
+export function lemmasOf(form) {
+  const { m, dict } = enMorph();
+  return [...new Set(analyse(m, String(form).toLowerCase(), { dictionary: dict }).map((r) => r.lemma))];
+}
+export function verbFormsOf(lemma, ops = ['third', 'past', 'ing']) {
+  return [...new Set(ops.flatMap((op) => { try { const f = inflectBy(enWorld(), lemma, op); return f ? [f] : []; } catch { return []; } }))];
 }
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
