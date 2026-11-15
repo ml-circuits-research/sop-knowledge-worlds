@@ -5955,3 +5955,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   The tests of the touched files: 15 files, 96 tests, 95 pass, 1 skipped.
 - package.json: the step `lang-en-person-frames` lost in the w.person commit's rebase (sync.sh keeps main's side of a
   non-.md conflict) is back, with the two new steps.
+
+
+## 2026-11-15 — first worker: items taken (block 15:35), and tonight's rebased commits checked
+
+- Taken, in order: (1) **KR6 coverage** (usual colour, material, abilities of the 1,500 common things), (2) **chart
+  selection rules** (which chart fits which data, from the visualisation literature), (3) time zones and dates if time
+  is left.
+- Look-back (block 15:35): the key changes of each of tonight's commits checked on main (23 checks over ab3b2ab,
+  4719034, a4b31f4, 66e839f, 687d193, 922a864, 4d70c88, baacdad: schema slots, tool steps in package.json, importer
+  and measures entries, tests): all present. The one change sync.sh dropped (the `lang-en-person-frames` build step
+  of 4d70c88) was restored in baacdad.
