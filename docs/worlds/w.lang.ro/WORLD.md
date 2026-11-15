@@ -180,3 +180,19 @@ continuation, "mai în dreapta", "și mai jos": the host keeps the previous act 
 four new reads, "mai in dreapta" and "mai in stinga" count as read only (their glosses have no verb), "și mai jos"
 counts right. Two directions in one turn ("mai la stânga și mai jos") are still read with the first inside the thing.
 
+
+## Replies and requests (block 14:25 item 2; real: the owner read a machine-translated reply)
+
+Hand-written shards, CC0. `requests` (`w.lang.ro.request`, 46 templates): w.lang.en's 42 act templates said in
+Romanian, one to one by name, act, shape and roles, in the imperative, informal singular ("adaugă o casă roșie", "care
+este culoarea casei?"), for a host that realises a request ("ai vrut să spui: …"); 31 of them read back by w.lang.ro's
+frames to their act. `replies` (`w.lang.ro.reply`, 34) and w.lang.en's `replies` (`w.lang.en.reply`, 24): what the
+assistant says, first person, informal singular, the same names in both languages: done.make, done.make.value,
+done.make.shape ("am desenat un nor în formă de inimă"), done.add, done.place, done.remove, done.change, done.connect,
+done.undo, not_understood ("nu am înțeles: {words}"), not_understood.all, did_you_mean, welcome, hello, goodbye. A
+template that says a number has one row per CLDR plural category (Romanian one, few and other, which puts "de" before
+the noun: "am desenat 20 de case"; English one and other), so a host takes the category of its number
+(Intl.PluralRules) and the row. Agreement is the library's realise: the article `{art@kind}` (o casă, un copac), the
+adjective in the noun's gender and number (`{value:num=pl@kind}`: case roșii, copaci roșii, desene roșii). A word a
+template says itself and inflects is a `w.lang.ro.fill` ("cât de {many@thing}": mulți copaci, multe case).
+tests/w.lang.ro.replies.test.mjs realises every template with casă, copac and desen in every count.

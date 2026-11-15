@@ -5966,3 +5966,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   4719034, a4b31f4, 66e839f, 687d193, 922a864, 4d70c88, baacdad: schema slots, tool steps in package.json, importer
   and measures entries, tests): all present. The one change sync.sh dropped (the `lang-en-person-frames` build step
   of 4d70c88) was restored in baacdad.
+
+## 2026-11-15 — third worker: Romanian reply and request templates (block 14:25 item 2)
+
+- w.lang.ro: types request, reply, fill (schema); hand-written shards requests (46 rows: the 42 English act templates
+  one to one, numbers in CLDR few / other) and replies (34 rows, 15 names); w.lang.en: type reply and shard replies
+  (24 rows, the same 15 names, one / other). tools/lang-ro-core.mjs now rewrites only its own shards (it deleted the
+  others).
+- tests/w.lang.ro.replies.test.mjs: one-to-one names; every template realised with casă, copac, desen in every count
+  (o casă, un copac, 3 desene, 20 de case, 3 copaci roșii, cele 3 case sunt acum roșii, cât de mulți copaci); English
+  replies realised (I drew an apple, I drew 3 mice); 31 requests read back to their act by the Romanian frames.
+- Not mirrored: the 151 discourse templates of w.lang.en (rhetorical moves of k.genres for essays and reports): no
+  real row asks for them in Romanian.

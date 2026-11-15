@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc exports=reply core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -374,6 +374,17 @@
 @w.lang.en.template.needs core.slot of=w.lang.en.template key=needs kind=atom core.source="hand-core 1"
 @w.lang.en.template.text core.slot of=w.lang.en.template key=text required=true kind=string core.source="hand-core 1"
 @w.lang.en.template.example core.slot of=w.lang.en.template key=example kind=string core.source="hand-core 1"
+# A reply the assistant says (reviewer block 14:25 item 2: first person, informal): "I drew 3 houses", "I did not
+# understand: blorp", "Did you mean: add a house?". `count` the CLDR plural category of its number (English: one,
+# other); `name` and `count` its identity, the same names as the replies of the other language worlds (a host picks by
+# language).
+@w.lang.en.reply core.type of=w.lang.en.reply shared=true closed=true core.source="hand-core 1"
+@w.lang.en.reply.name core.slot of=w.lang.en.reply key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.reply.count core.slot of=w.lang.en.reply key=count id=true enum=one enum=other core.source="hand-core 1"
+@w.lang.en.reply.act core.slot of=w.lang.en.reply key=act kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
+@w.lang.en.reply.role core.slot of=w.lang.en.reply key=role many=true kind=atom core.source="hand-core 1"
+@w.lang.en.reply.text core.slot of=w.lang.en.reply key=text required=true kind=string core.source="hand-core 1"
+@w.lang.en.reply.example core.slot of=w.lang.en.reply key=example kind=string core.source="hand-core 1"
 # A discourse template (blocks 14:45 item 2, 15:00 item 4, 17:05): one sentence that makes a rhetorical move
 # (`move`, a `k.genres.move name`) in a register (`register`, a `k.genres.register name`: scientific, presentation,
 # essay, narrative, report), for the library's std.compose. Several templates of one move and register are

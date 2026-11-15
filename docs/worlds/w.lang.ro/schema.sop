@@ -13,7 +13,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards and the dictionary are written by tools/lang-ro-core.mjs
 
-@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax core.source="hand-core 1"
+@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax exports=request exports=reply exports=fill core.source="hand-core 1"
 
 # ---- morphology (std.morph) ----
 # A paradigm class: a class inherits every cell of its `parent` and overrides some. `drop`: what the lemma loses
@@ -68,6 +68,34 @@
 @w.lang.ro.template.act core.slot of=w.lang.ro.template key=act id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.ro.template.shape core.slot of=w.lang.ro.template key=shape kind=atom core.source="hand-core 1"
 @w.lang.ro.template.text core.slot of=w.lang.ro.template key=text required=true kind=string core.source="hand-core 1"
+
+# Reply and request templates (reviewer block 14:25 item 2): what a host needs to compose its own replies in Romanian,
+# the same names, acts and shapes as w.lang.en's templates (w.lang.en.template, w.lang.en.reply), so a host picks by
+# language. `count` is the CLDR plural category of the number the template says (Romanian: one 1; few 0, 2 to 19 and
+# numbers ending in 01 to 19; other the rest, which put "de" before the noun: 20 de case); `name` and `count` are the
+# identity. A request is what a person says (the imperative, informal singular), read back by w.lang.ro's frames
+# where they say the act; a reply is what the assistant says (first person, informal singular). Text as in
+# w.lang.ro.template: {role} the lemma, {role:f=v,...} a cell, {role@other} agreeing with the other role.
+@w.lang.ro.request core.type of=w.lang.ro.request shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.request.name core.slot of=w.lang.ro.request key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.request.count core.slot of=w.lang.ro.request key=count id=true enum=one enum=few enum=other core.source="hand-core 1"
+@w.lang.ro.request.act core.slot of=w.lang.ro.request key=act required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
+@w.lang.ro.request.shape core.slot of=w.lang.ro.request key=shape required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.request.role core.slot of=w.lang.ro.request key=role many=true kind=atom core.source="hand-core 1"
+@w.lang.ro.request.text core.slot of=w.lang.ro.request key=text required=true kind=string core.source="hand-core 1"
+@w.lang.ro.request.example core.slot of=w.lang.ro.request key=example kind=string core.source="hand-core 1"
+@w.lang.ro.reply core.type of=w.lang.ro.reply shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.reply.name core.slot of=w.lang.ro.reply key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.reply.count core.slot of=w.lang.ro.reply key=count id=true enum=one enum=few enum=other core.source="hand-core 1"
+@w.lang.ro.reply.act core.slot of=w.lang.ro.reply key=act kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
+@w.lang.ro.reply.role core.slot of=w.lang.ro.reply key=role many=true kind=atom core.source="hand-core 1"
+@w.lang.ro.reply.text core.slot of=w.lang.ro.reply key=text required=true kind=string core.source="hand-core 1"
+@w.lang.ro.reply.example core.slot of=w.lang.ro.reply key=example kind=string core.source="hand-core 1"
+# A word a template says itself, agreeing like a role (`{many@thing}` with role many the lemma mult: cât de mulți copaci).
+@w.lang.ro.fill core.type of=w.lang.ro.fill shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.fill.template core.slot of=w.lang.ro.fill key=template id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.fill.role core.slot of=w.lang.ro.fill key=role id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.ro.fill.lemma core.slot of=w.lang.ro.fill key=lemma required=true kind=string core.source="hand-core 1"
 
 # ---- closed classes ----
 # A determiner or article (the definite article is a cell of the nouns): `form` as written, `lemma` its base form,

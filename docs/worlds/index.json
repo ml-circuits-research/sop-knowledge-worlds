@@ -1,5 +1,5 @@
 {
- "version": "0551ca499352",
+ "version": "2e1144b27677",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -87394,6 +87394,7 @@
     "w.lang.en.prep.time",
     "w.lang.en.pron",
     "w.lang.en.relpron",
+    "w.lang.en.reply",
     "w.lang.en.role_map",
     "w.lang.en.rule",
     "w.lang.en.skip",
@@ -88830,6 +88831,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/replies",
+     "path": "w.lang.en/shards/replies.sop",
+     "wires": 21,
+     "bytes": 4651,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/role-frames",
      "path": "w.lang.en/shards/role-frames.sop",
      "wires": 294,
@@ -88963,6 +88976,7 @@
     "w.lang.ro.class",
     "w.lang.ro.det",
     "w.lang.ro.ending",
+    "w.lang.ro.fill",
     "w.lang.ro.fold",
     "w.lang.ro.frame",
     "w.lang.ro.irregular",
@@ -88973,6 +88987,8 @@
     "w.lang.ro.phrase",
     "w.lang.ro.prep",
     "w.lang.ro.pron",
+    "w.lang.ro.reply",
+    "w.lang.ro.request",
     "w.lang.ro.split",
     "w.lang.ro.syntax",
     "w.lang.ro.template",
@@ -89021,6 +89037,30 @@
      "path": "w.lang.ro/shards/morphology.sop",
      "wires": 415,
      "bytes": 61350,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/replies",
+     "path": "w.lang.ro/shards/replies.sop",
+     "wires": 27,
+     "bytes": 6124,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/requests",
+     "path": "w.lang.ro/shards/requests.sop",
+     "wires": 46,
+     "bytes": 10581,
      "keys": [],
      "sources": [
       "hand-core-1"
