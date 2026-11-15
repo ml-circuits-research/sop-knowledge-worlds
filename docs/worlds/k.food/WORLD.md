@@ -17,7 +17,7 @@ Common foods and drinks, as a child's encyclopedia describes them. Hand-written 
 
 `fruit` (32 foods), `vegetables` (29), `grains-nuts-and-pulses` (25), `animal-foods` (25), `other` (43: sweets,
 drinks, seasonings, herbs, oils, sauces, dishes), `dishes` (75, Round 9: soups, pasta and rice dishes, egg dishes,
-breads, sauces, sweets): 229 foods, 347 wires, 51,883 bytes.
+breads, sauces, sweets): <!--n:facts:k.food.food-->229<!--/n--> foods, 347 wires, 51,883 bytes.
 
 Round 9: `made_of` (many) says what a dish or a made food is made of, by the names of other foods where they are
 foods (bread: flour, water, yeast, salt; pesto: basil, olive oil, garlic, cheese, nuts): 118 foods, among them every

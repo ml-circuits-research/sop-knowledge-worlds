@@ -1,6 +1,6 @@
 # k.people
 
-Kinds of person, and 60 roles and jobs. Hand-written (`hand-core 1`, CC0-1.0).
+Kinds of person, and <!--n:facts:k.people.role-->62<!--/n--> roles and jobs. Hand-written (`hand-core 1`, CC0-1.0).
 
 ## What it knows
 

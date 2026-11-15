@@ -9,14 +9,10 @@ const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const all = (world, type) => fullWorld(world, worlds).ofType(type);
 const names = (wires) => new Set(wires.map((w) => tok(w.attrs.name[0])));
-const objects = names(all('k.objects', 'k.objects.object'));
 const CORES = [['k.space', 'k.space.body'], ['k.space', 'k.space.kind'], ['k.animals', 'k.animals.animal'], ['k.body', 'k.body.part'], ['k.food', 'k.food.food']];
 
-test('every drawing names an object of k.objects', () => {
-  let n = 0;
-  for (const [world, type] of CORES) for (const w of all(world, type)) for (const d of w.attrs.drawing ?? []) { n++; assert.ok(objects.has(tok(d)), `${world} ${tok(w.attrs.name[0])}: drawing ${d}`); }
-  assert.ok(n > 150, `${n} drawings`);
-});
+// KR5: "every drawing names an object of k.objects" is checked once, for every world, by
+// tests/shared-modules.test.mjs (and declared as a join); this file no longer loads k.objects.
 
 test('k.animals has 150 animals and k.food 150 foods; every fact carries hand-core as its source', () => {
   assert.ok(all('k.animals', 'k.animals.animal').length >= 150);

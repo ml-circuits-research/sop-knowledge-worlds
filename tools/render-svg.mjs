@@ -7,7 +7,7 @@
 // renderHighlighted (used by tools/audit-part-names.mjs): the object next to itself with one part highlighted.
 import { mkdirSync, writeFileSync, readdirSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { fullWorld, scanWorlds, readHeader, WORLDS_DIR } from './lib/worlds.mjs';
+import { objectsView, scanWorlds, readHeader, WORLDS_DIR } from './lib/worlds.mjs';
 
 export const SHAPES = ['rectangle', 'square', 'circle', 'oval', 'triangle', 'line', 'arc', 'polygon'];
 const tok = (t) => (t !== undefined && t.startsWith('"') ? JSON.parse(t) : t);
@@ -200,7 +200,7 @@ export function renderAll(world) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
-  const world = fullWorld('k.objects');
+  const world = objectsView(); // KR5: the drawings' facts merged by wire id, the same parts as fullWorld in a fifth of the time
   if (args[0] === '--label') {
     // node tools/render-svg.mjs --label <out-dir> [object name ...]: labelling pictures (all objects when none is named).
     const out = args[1];

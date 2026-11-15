@@ -1,4 +1,4 @@
-# w.lang.en/shards/irregular-forms-wordnet: 303 irregular plurals in std.morph's shape, derived from the WordNet plurals of w.lang.en.irregular (shard core-plurals; `from` names the fact, which stays their home); variant=yes: read, never written (antennae)
+# w.lang.en/shards/irregular-forms-wordnet: 304 irregular plurals in std.morph's shape, derived from the WordNet plurals of w.lang.en.irregular (shard core-plurals; `from` names the fact, which stays their home); variant=yes: read, never written (antennae)
 # sources: wordnet 3.1 (noun.exc, the noun exception list of Princeton WordNet 3.1)
 # license: WordNet-3.0
 # script: tools/lang-en-morph.mjs
@@ -50,6 +50,7 @@
 @w.lang.en.irregular_form.chisel.past.chiseled w.lang.en.irregular_form lemma=chisel form=chiseled vform=past variant=yes core.source="wordnet 3.1"
 @w.lang.en.irregular_form.chisel.past_participle.chiseled w.lang.en.irregular_form lemma=chisel form=chiseled vform=past_participle variant=yes core.source="wordnet 3.1"
 @w.lang.en.irregular_form.chou.pl.choux w.lang.en.irregular_form lemma=chou form=choux num=pl variant=yes from=w.lang.en.irregular.wordnet.chou core.source="wordnet 3.1"
+@w.lang.en.irregular_form.chrysalis.pl.chrysalides w.lang.en.irregular_form lemma=chrysalis form=chrysalides num=pl variant=yes from=w.lang.en.irregular.wordnet.chrysalis core.source="wordnet 3.1"
 @w.lang.en.irregular_form.cicada.pl.cicadae w.lang.en.irregular_form lemma=cicada form=cicadae num=pl variant=yes from=w.lang.en.irregular.wordnet.cicada core.source="wordnet 3.1"
 @w.lang.en.irregular_form.cisco.pl.ciscoes w.lang.en.irregular_form lemma=cisco form=ciscoes num=pl variant=yes from=w.lang.en.irregular.wordnet.cisco core.source="wordnet 3.1"
 @w.lang.en.irregular_form.colon.pl.colones w.lang.en.irregular_form lemma=colon form=colones num=pl variant=yes from=w.lang.en.irregular.wordnet.colon core.source="wordnet 3.1"

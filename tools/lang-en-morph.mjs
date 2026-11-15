@@ -24,7 +24,9 @@ import { wire, header, seg, byText } from './import/lib.mjs';
 const W = 'w.lang.en';
 const SRC = 'hand-core 1', WN = 'wordnet 3.1';
 export const DIR = join(WORLDS_DIR, W);
-export const RAW = join(REPO, 'sources/wordnet/raw/wordnet31');
+// KR5 (review finding 26): the four exception lists of WordNet 3.1 are committed (sources/wordnet/exc, 100 kB, WordNet
+// licence), so the dictionary is rebuilt in every clone and never goes stale for want of raw files.
+export const RAW = join(REPO, 'sources/wordnet/exc');
 // The library's morph types, renamed into this world.
 export const TYPES = { cls: `${W}.class`, ending: `${W}.ending`, irregular: `${W}.irregular_form` };
 

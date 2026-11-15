@@ -10,7 +10,7 @@
 // colours, the values of k.attributes.thing.colour). A colour is kept when it covers at least a fifth of the
 // filled places; at most three, the largest first; the largest is always kept.
 import { join } from 'node:path';
-import { WORLDS_DIR, fullWorld } from './lib/worlds.mjs';
+import { WORLDS_DIR, objectsView } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, byText } from './import/lib.mjs';
 import { partsOf } from './render-svg.mjs';
 import { lab } from './import/svg-parts.mjs';
@@ -88,7 +88,7 @@ const SHARDS = [
   ['openmoji', (s) => s.startsWith('openmoji'), 'CC-BY-SA-4.0', 'OpenMoji drawings'],
 ];
 
-export function drawnShards(world = fullWorld('k.objects')) {
+export function drawnShards(world = objectsView()) { // KR5: the drawings' facts only (fullWorld took 44 s)
   const colours = valueColours(), withBasic = colours.filter((c) => c.basic);
   const memo = new Map();
   const names = (value) => { if (!memo.has(value)) memo.set(value, { shade: nearest(colours, value).name, basic: nearest(colours, value).basic ?? nearest(withBasic, value).basic }); return memo.get(value); };

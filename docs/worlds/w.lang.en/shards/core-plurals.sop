@@ -1,4 +1,4 @@
-# w.lang.en/shards/core-plurals: 184 irregular plurals of the nouns of k.words that the morphology rules do not read (WordNet's noun exceptions: mice, feet, criteria; the classical and foreign ones read only)
+# w.lang.en/shards/core-plurals: 185 irregular plurals of the nouns of k.words that the morphology rules do not read (WordNet's noun exceptions: mice, feet, criteria; the classical and foreign ones read only)
 # sources: wordnet 3.1 (noun.exc, the noun exception list of Princeton WordNet 3.1)
 # license: WordNet-3.0
 # script: tools/lang-en-core.mjs
@@ -32,6 +32,7 @@
 @w.lang.en.irregular.wordnet.child w.lang.en.irregular singular=child plural=children core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.chilli w.lang.en.irregular singular=chilli plural=chillies read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.chou w.lang.en.irregular singular=chou plural=choux read_only=yes core.source="wordnet 3.1"
+@w.lang.en.irregular.wordnet.chrysalis w.lang.en.irregular singular=chrysalis plural=chrysalides read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.cicada w.lang.en.irregular singular=cicada plural=cicadae read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.cisco w.lang.en.irregular singular=cisco plural=ciscoes read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.colon w.lang.en.irregular singular=colon plural=colones read_only=yes core.source="wordnet 3.1"

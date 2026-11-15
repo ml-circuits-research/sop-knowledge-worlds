@@ -11,7 +11,7 @@ import { WORLDS_DIR, REPO, scanWorlds } from './lib/worlds.mjs';
 import { header, wire, seg } from './import/lib.mjs';
 import { inflect } from './lib/lang-en.mjs';
 
-const RAW = join(REPO, 'sources/wordnet/raw/wordnet31/noun.exc');
+const RAW = join(REPO, 'sources/wordnet/exc/noun.exc'); // committed (KR5): the plurals are rebuilt in every clone
 const OUT = join(WORLDS_DIR, 'w.lang.en/shards/core-plurals.sop');
 // WordNet lists plurals that are words of their own (cola is no plural of colon for a reader; dive, crying, soles):
 // left out. And it lists the classical or foreign plural first (antennae, aquaria, bani for ban): those are read

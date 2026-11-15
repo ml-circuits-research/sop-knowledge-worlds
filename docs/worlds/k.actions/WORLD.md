@@ -31,8 +31,8 @@ the object and the prepositions.
 
 `acts` (16 acts, 59 roles; Q45: make has `topic`, marked by about; block 07:45: make and place have `criterion`, the attribute that orders the things, like group's: "a timeline of the planets by distance", "line up the planets in order of size"), `families` (act families, below) and one shard of verbs per act: `verbs-make`, `verbs-remove`, `verbs-change`,
 `verbs-place`, `verbs-connect`, `verbs-group`, `verbs-take_apart`, `verbs-pick`, `verbs-ask`, `verbs-copy`,
-`verbs-send`, `verbs-undo`, `verbs-save`, `verbs-load`, `verbs-redo`, `verbs-deselect`: 314 verbs (272 from WordNet
-senses, 42 hand-written) and 89 markings. The hand-over added doodle, scribble, whip up, shove, nudge, scoot, wipe,
+`verbs-send`, `verbs-undo`, `verbs-save`, `verbs-load`, `verbs-redo`, `verbs-deselect`: <!--n:facts:k.actions.verb-->316<!--/n--> verbs (272 from WordNet
+senses, 42 hand-written in the hand-over) and <!--n:facts:k.actions.marking-->90<!--/n--> markings. The hand-over added doodle, scribble, whip up, shove, nudge, scoot, wipe,
 click, tap, touch, step back, export; moved download from load to save (with the new role `format` of save, marked
 by as and in); and the verbs of redo (redo, do again, put back, bring back, get back) and deselect (deselect,
 unselect, unmark, unhighlight, untick, uncheck). Left for `w.lang.en` (Round 12): the frames ("undo that change",

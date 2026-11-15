@@ -25,10 +25,10 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
   host or a tool that reads shards sees them without running the rules. A test keeps them fresh.
 - `k.<world>/WORLD.md`: what the world knows, its sources, and questions it helps with.
 - Shared modules with no facts of their own: `k.kinds` (`is_a`, and `kind_of` by its rules), `k.drawing` (parts and
-  points of a drawing), `k.named` (the slot `named=model`, taken by 21 types through `extends=k.named.labelled`, a
+  points of a drawing), `k.named` (the slot `named=model`, taken by <!--n:named-takers-->21<!--/n--> types through `extends=k.named.labelled`, a
   slot group of sopworld 0.34+). A world that takes one imports it. An approximate key (`moons_about`) and its exact
-  twin (`moons`) exclude each other on the slot (`excludes=`), not by a rule. The joins to drawings (`drawing=`, 10 slots
-  of 7 worlds) are declared `type=k.objects.object by=name` (sopworld 0.60+: open while no object is loaded, checked
+  twin (`moons`) exclude each other on the slot (`excludes=`), not by a rule. The joins to drawings (`drawing=`, <!--n:slots:drawing-->11<!--/n--> slots
+  of <!--n:slot-worlds:drawing-->8<!--/n--> worlds) are declared `type=k.objects.object by=name` (sopworld 0.60+: open while no object is loaded, checked
   when objects are; `world.check()` lists those still open), and a test checks them all again. A host that loads
   object shards lazily tells the shard of a thing's drawing before the thing, or loads the thing first: a reference
   told after some objects but before its own is refused (questions.md Q49). The stand-ins of k.objects name drawings

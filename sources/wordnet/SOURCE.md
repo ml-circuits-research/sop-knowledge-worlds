@@ -15,6 +15,9 @@
 - **How to fetch:** `mkdir -p sources/wordnet/raw && cd sources/wordnet/raw && curl -L -o wordnet31.zip
   https://raw.githubusercontent.com/nltk/nltk_data/550b6625bcef1f2abff2ff770a5a0d272c9c6b2a/packages/corpora/wordnet31.zip
   && unzip wordnet31.zip` ; then `node tools/import/wordnet.mjs`.
+- **Committed (KR5, 2026-11-15):** the four exception lists `noun.exc`, `verb.exc`, `adj.exc`, `adv.exc` and WordNet's
+  `LICENSE`, unchanged from `wordnet31.zip`, in `sources/wordnet/exc/` (100 kB): `tools/lang-en-morph.mjs` and
+  `tools/lang-en-core.mjs` read them, so the w.lang.en dictionary and plurals are rebuilt in every clone.
 - **What is kept:** for the words of the frequency list (its first 20,000 lines, and the common things of
   `tools/coverage.mjs` wherever they stand in it; lower case letters, digits and hyphens only) that WordNet has as a noun or a verb: the 3 most frequent senses per part of speech, each with the
   definition part of its gloss (no example sentences), the other words of its synset (`synonym`), the first word of

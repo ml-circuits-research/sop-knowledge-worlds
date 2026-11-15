@@ -19,7 +19,7 @@ const same = (a, b) => Object.keys(a).length === Object.keys(b).length && Object
 const unq = (v) => String(v).replace(/^"|"$/g, '');
 const POS = Object.fromEntries(CLASSES.map((c) => [c[0], c[4]]));
 
-test('the shards and the dictionary are what tools/lang-en-morph.mjs gives (skipped without WordNet\'s raw files)', { skip: !existsSync(join(RAW, 'verb.exc')) && 'raw files not downloaded' }, () => {
+test('the shards and the dictionary are what tools/lang-en-morph.mjs gives (from the committed WordNet exception lists, KR5)', () => {
   const f = files(build());
   for (const [name, text] of Object.entries(f.shards)) assert.equal(readFileSync(join(DIR, 'shards', name), 'utf8'), text, name);
   assert.deepEqual(names, Object.keys(f.dictionary).sort());

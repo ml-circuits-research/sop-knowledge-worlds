@@ -4,10 +4,10 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { fullWorld, WORLDS_DIR } from '../tools/lib/worlds.mjs';
+import { objectsView, WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { SHAPES, partsOf, objectsOf, renderAll, fileOf } from '../tools/render-svg.mjs';
 
-const world = fullWorld('k.objects');
+const world = objectsView(); // KR5: the drawings' facts only (fullWorld took 44 s for the same parts)
 const objects = objectsOf(world);
 const cx = (p) => p.x + p.w / 2;
 const cy = (p) => p.y + p.h / 2;

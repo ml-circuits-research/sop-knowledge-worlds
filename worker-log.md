@@ -5747,3 +5747,28 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Test (tests/k.kinds.sensitive.test.mjs, new, 3 tests, 1.7 s): the shard is fresh; weapons, drugs, drinks and tobacco
   are marked and knife, axe, hammer, saw, scissors, fork, bow, arrow, shield, tank, slingshot, water pistol, battery,
   shell, glycerol ... are not; every row of sensitive-not.tsv is a word the rule would otherwise mark.
+
+## 2026-11-15 — fifth worker: KR5, tests and docs (review findings 26, 27, 31)
+
+- **k.objects once, cheaply:** `objectsView()` (tools/lib/worlds.mjs: the object, part and point facts of k.objects
+  merged by wire id, the one method the readers use, `ofType`) gives what `fullWorld('k.objects')` gives, checked once
+  over all 2,212 objects (partsOf identical, objectList identical): 8.6 s against 51 s. Used by tests/gallery,
+  k.objects.render, tools/render-svg.mjs (the first step of the build) and tools/drawn-colour.mjs (so
+  k.attributes.test); tests/k.objects.names asks its queries of an engine world with the object and part facts only
+  (13 s). Before -> after (load average about 9): k.cores 54 -> 4.6 s, gallery 49 -> 9.7, k.objects.render 39 -> 13.3,
+  k.objects.names 36 -> 13.6, k.attributes 69 -> 24.4.
+- **One drawing-name check:** the k.cores copy of "every drawing names a k.objects object" is gone (it loaded k.objects);
+  tests/shared-modules.test.mjs checks it for every world, and the joins are declared.
+- **Freshness:** tests/generators.test.mjs reruns tools/objects-hand.mjs (7 shards), tools/lang-en-core.mjs and
+  tools/lang-en-discourse.mjs. WordNet's four exception lists are committed (sources/wordnet/exc, 100 kB, WordNet
+  licence), so lang-en-core and lang-en-morph run in every clone: `npm run build` runs lang-en-core and lang-en-morph
+  without `--if-raw`, and tests/w.lang.en.morph's freshness test no longer skips. It found core-plurals stale (184 ->
+  185: chrysalis, from a k.words noun added since) and irregular-forms-wordnet with it.
+- **Counts generated:** tools/counts.mjs (in the build, before the catalog) rewrites counts between `<!--n:SPEC-->`
+  markers (worlds, schemas, facts:<type> as distinct identities, named-takers, slots / slot-worlds of a key). The ten
+  stale counts of finding 31 are markers: README (34 worlds and 9 schemas, not "nineteen"; 2,212 objects; 62 roles; 16
+  acts; 316 verbs; 314 animals, distinct names: two animals are told in two shards; 763 common things), k.people (62
+  roles), k.shapes (38 shapes), k.food (229 foods), k.actions (316 verbs, 90 markings), docs/worlds/README (21 types
+  take k.named; 11 drawing slots in 8 worlds).
+- Tests: tests/generators.test.mjs (new, 3), tests/counts.test.mjs (new, 2: every marker fresh; the review's stale
+  places are markers).

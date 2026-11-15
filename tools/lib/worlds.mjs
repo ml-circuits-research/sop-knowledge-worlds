@@ -97,6 +97,23 @@ export function factsOf(id, types, worlds = scanWorlds()) {
   return out;
 }
 
+// KR5 (review 2026-11-15, finding 27): the facts of some types of a world, merged by wire id as a world merges a fact
+// told in two shards, with the one method the readers of k.objects use (`ofType`). For the drawings of k.objects
+// (object, part, point) it gives what fullWorld gives, value for value (checked once over all 2,212 objects when it was written, KR5),
+// in about 9 s instead of 50: the four test files that read the drawings and tools/render-svg.mjs use it.
+export function factsView(id, types, worlds = scanWorlds()) {
+  const byType = new Map([].concat(types).map((t) => [t, new Map()]));
+  for (const w of factsOf(id, types, worlds)) {
+    const m = byType.get(w.type);
+    const old = m.get(w.id);
+    if (!old) { m.set(w.id, { id: w.id, type: w.type, attrs: Object.fromEntries(Object.entries(w.attrs).map(([k, v]) => [k, [...v]])) }); continue; }
+    for (const [k, v] of Object.entries(w.attrs)) { old.attrs[k] ??= []; for (const x of v) if (!old.attrs[k].includes(x)) old.attrs[k].push(x); }
+  }
+  return { ofType: (type) => [...(byType.get(type)?.values() ?? [])] };
+}
+export const OBJECT_TYPES = ['k.objects.object', 'k.objects.part', 'k.objects.point'];
+export const objectsView = (worlds = scanWorlds()) => factsView('k.objects', OBJECT_TYPES, worlds);
+
 export function fullWorld(id, worlds = scanWorlds()) {
   const { world, result } = schemaWorld(worlds, id);
   if (!result.ok) throw new Error(`${id}: ${JSON.stringify(result.violations)}`);

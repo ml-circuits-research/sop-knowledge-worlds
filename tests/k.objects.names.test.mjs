@@ -4,11 +4,16 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, fullWorld } from '../tools/lib/worlds.mjs';
+import { REPO, scanWorlds, schemaWorld } from '../tools/lib/worlds.mjs';
 import { partsOf, objectsOf } from '../tools/render-svg.mjs';
 import { readPartNames } from '../tools/import/noto-emoji.mjs';
 
-const world = fullWorld('k.objects');
+// KR5: a world of the k.objects schema with only its object and part facts (13 s; the full world with the 271,000
+// points and the imported worlds took 44 s): the queries below are the engine's, the parts' points are not needed.
+const worlds = scanWorlds();
+const { world } = schemaWorld(worlds, 'k.objects');
+const told = world.tell(worlds.find((w) => w.id === 'k.objects').shards.flatMap((s) => s.text.split('\n').filter((l) => /^@\S+ k\.objects\.(object|part) /.test(l))).join('\n'));
+if (!told.ok) throw new Error(JSON.stringify(told.violations).slice(0, 500));
 const names = readPartNames(['noto-emoji', 'openmoji', 'mulberry'].map((s) => readFileSync(join(REPO, 'sources', s, 'part-names.tsv'), 'utf8')).join('\n'));
 const objects = new Set(objectsOf(world));
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);

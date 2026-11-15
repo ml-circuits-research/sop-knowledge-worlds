@@ -30,19 +30,19 @@ module and load only the instance shards that a conversation needs, when the wor
   knowledge lazily.
 - **Documentation:** `docs/index.html` (how to use the catalog from an application) and `docs/worlds/README.md`.
 
-Status (Round 7): nineteen worlds are published: `k.commonsense`, `k.objects` (2,108 drawable objects; browse them in
+Status: <!--n:worlds-->34<!--/n--> knowledge worlds and <!--n:schemas-->9<!--/n--> world schemas are published (the counts between `<!--n:…-->` markers are written by `tools/counts.mjs`; the rounds below say what each added). Round 7: `k.commonsense`, `k.objects` (<!--n:facts:k.objects.object-->2,212<!--/n--> drawable objects; browse them in
 `docs/gallery.html`), `k.words`, `k.geo`, `k.units`, `k.time`, and the hand-written cores `k.space`, `k.animals`,
 `k.body`, `k.food`, and `k.faces` (faces built from replaceable parts; previews in
 `docs/worlds/k.faces/preview/index.html`), `k.scenes` (the usual place and relative size of drawable things, and 61 typical scenes; previews in
-`docs/worlds/k.scenes/preview/index.html`) `k.people` (kinds of person, 60 roles and jobs), `k.feelings` (30 feelings and how a face shows them), `k.layouts` (17 named arrangements, anchors on drawable things, what joins what), `k.colours` (33 colours: family, light or dark, mixes, typical things) and `k.shapes` (36 shapes: sides, corners, round or not, typical things). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
+`docs/worlds/k.scenes/preview/index.html`) `k.people` (kinds of person, <!--n:facts:k.people.role-->62<!--/n--> roles and jobs), `k.feelings` (30 feelings and how a face shows them), `k.layouts` (17 named arrangements, anchors on drawable things, what joins what), `k.colours` (33 colours: family, light or dark, mixes, typical things) and `k.shapes` (36 shapes: sides, corners, round or not, typical things). ConceptNet, Quick, Draw! and Wikidata are not imported yet (their hosts are not reachable from
 the build network; the import scripts for the first two exist with fixture tests).
-Round 8 worlds: `k.actions` (the words of the acts: 14 acts, their roles and markers, 291 verbs and phrasal verbs; and, from Round 7, 187 everyday actions: who does it, to what, with what, the opposite, what undoes it), `k.values` (the words for values: 170 colour names with RGB, 13 ordered scales and their
+Round 8 worlds: `k.actions` (the words of the acts: <!--n:facts:k.actions.act-->16<!--/n--> acts, their roles and markers, <!--n:facts:k.actions.verb-->316<!--/n--> verbs and phrasal verbs; and, from Round 7, 187 everyday actions: who does it, to what, with what, the opposite, what undoes it), `k.values` (the words for values: 170 colour names with RGB, 13 ordered scales and their
 comparatives, shapes, directions, positions, set words, number words), `k.attributes` (which attributes kinds of things have, where their values are
-found, usual colour, material, wheels, abilities and use of 761 common things), `k.wearables` (what is worn where: 15 places on the body with their anchor on the
+found, usual colour, material, wheels, abilities and use of <!--n:facts:k.attributes.thing-->763<!--/n--> common things), `k.wearables` (what is worn where: 15 places on the body with their anchor on the
 person drawing, 105 wearables joined to drawings and face variants), `k.parts` (usual parts of 541 of the 1,500 common things, from WordNet).
 Coverage of the 1,500 common things per attribute and per world, with the gaps: `docs/worlds/COVERAGE.md`; families of things by aspect: `docs/worlds/k.attributes/ASPECTS.md`.
 Round 9 (the facts the Talk tab asked for): `k.layouts` has 225 anchors (where a thing sits, stands, lies or is put:
-swing, bench, bed, horse, bookcase, branch, roof; the feet and hips of the person); `k.animals` 314 animals with size
+swing, bench, bed, horse, bookcase, branch, roof; the feet and hips of the person); `k.animals` <!--n:facts:k.animals.animal-->314<!--/n--> animals with size
 class, group name and what they cannot do; `k.geo` capitals for 232 of 238 countries and territories, 100 lakes, 58
 deserts, 72 oceans and seas, river lengths and areas as `_about` values; `k.space` colours and why, days, years,
 widths, distances; `k.body` 91 parts with the parts of hand, eye, ear and mouth; `k.food` 229 foods with what dishes

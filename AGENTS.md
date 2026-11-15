@@ -59,7 +59,8 @@ Several workers share one machine (8 GB, 2 CPUs): run test files one at a time, 
   since it passed (same sopworld build and validator, same schemas, same shards: `.validate-cache.json`,
   git-ignored); `SKW_NO_CACHE=1` validates everything, as a fresh clone does.
 - A test that only reads facts of a world uses `factsOf(world, types)` (tools/lib/worlds.mjs), not `fullWorld`:
-  loading k.objects takes 44 s. `tools/sync.sh` rebases on origin/main and regenerates the
+  loading k.objects takes 44 s; a test of its drawings uses `objectsView()` (the object, part and point facts merged by
+  wire id, about 9 s). `tools/sync.sh` rebases on origin/main and regenerates the
   generated files after a conflict (logs keep both sides; `tests/repo.test.mjs` refuses conflict markers).
 
 ## sopworld version

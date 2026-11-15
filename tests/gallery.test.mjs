@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { REPO, WORLDS_DIR, fullWorld } from '../tools/lib/worlds.mjs';
+import { REPO, WORLDS_DIR, fullWorld, objectsView } from '../tools/lib/worlds.mjs';
 import { objectsOf, fileOf } from '../tools/render-svg.mjs';
 
 const preview = join(WORLDS_DIR, 'k.objects', 'preview');
@@ -13,7 +13,7 @@ const html = readFileSync(join(REPO, 'docs/gallery.html'), 'utf8');
 const LICENSES = new Set(['CC0-1.0', 'Apache-2.0 AND Unicode-3.0', 'CC-BY-SA-4.0']);
 
 test('objects.json lists every object of k.objects once, with its picture, source and licence', () => {
-  assert.deepEqual(list.map((o) => o.name), objectsOf(fullWorld('k.objects')));
+  assert.deepEqual(list.map((o) => o.name), objectsOf(objectsView()));
   assert.equal(new Set(list.map((o) => o.file)).size, list.length);
   for (const o of list) {
     assert.ok(existsSync(join(preview, o.file)), `${o.name}: ${o.file}`);
