@@ -58,6 +58,10 @@ export const SYNTAX = [
 export const FRAMES = [
   ['ro.make', 'acts.make', 'make', null, 10, null, 'Desenează o casă.', 'L? V.make CJ? $focus? D? {thing:words}'],
   ['ro.make.n', 'acts.make.n', 'make', null, 12, null, 'Desenează două case.', 'L? V.make CJ? $focus? {amount:number} {thing:words}'],
+  // block 14:25 item 1: "fă și o fetiță" (make a little girl too): a focus word after the verb says a new thing, so the
+  // frames of make with the focus said outrank the change frame that took "și o" as the thing
+  ['ro.make.focus', 'acts.make', 'make', null, 14, null, 'Fă și o fetiță.', 'L? V.make CJ? $focus D? {thing:words}'],
+  ['ro.make.place.focus', 'acts.make.place', 'make', null, 15, 'in', 'Fă și un lac mic în stânga.', 'L? V.make CJ? $focus D? {thing:words} {rel:prep} D? {place:words}'],
   ['ro.make.place', 'acts.make.place', 'make', null, 12, 'in', 'Adaugă un copac lângă casă.', 'L? V.make CJ? $focus? D? {thing:words} {rel:prep} D? {place:words}'],
   ['ro.make.name', 'acts.make.name', 'make', null, 13, 'named', 'Adaugă un invitat numit Ana.', 'L? V.make CJ? D? {thing:words} [numit|numită|numiți|numite|cu_numele|chemat|chemată] {value:rest}'],
   ['ro.make.wish', 'acts.more.make.wish', 'make', null, 9, 'wish', 'Vreau o casă.', '$wish $focus? D? {thing:words}'],
@@ -76,6 +80,8 @@ export const FRAMES = [
   ['ro.place', 'acts.place', 'place', null, 11, 'in', 'Mută casa lângă copac.', 'L? V.place CJ? $focus? D? {thing:words} {rel:prep} D? {place:words}'],
   ['ro.place.bare', 'acts.place.bare', 'place', null, 5, 'in', 'Pune un lac.', 'L? V.place CJ? $focus? D? {thing:words}'],
   ['ro.place.dir.amt', 'acts.more.place.dir.amt', 'place', null, 14, 'scale', 'Mută capra mai la stânga.', 'L? V.place CJ? $focus? D? {thing:words} {amount:lex.space.amounts} {rel:lex.acts.dir} {amount2:lex.space.amounts}?'],
+  // two directions in one move ("mută prima casă mai la stânga și mai jos")
+  ['ro.place.dir.two', 'acts.more.place.dir.two', 'place', null, 15, 'scale', 'Mută prima casă mai la stânga și mai jos.', 'L? V.place CJ? $focus? D? {thing:words} {amount:lex.space.amounts}? {rel:lex.acts.dir} [și|iar|apoi|și_apoi] {amount2:lex.space.amounts}? {rel2:lex.acts.dir}'],
   ['ro.place.dir.amt.it', 'acts.more.place.dir.amt', 'place', null, 15, 'scale', 'Mută și mai la stânga.', 'L? V.place CJ? $focus? {amount:lex.space.amounts} {rel:lex.acts.dir} {amount2:lex.space.amounts}?'],
   ['ro.place.dir.amt.bare', 'acts.more.place.dir.amt', 'place', null, 7, 'scale', 'Mai în dreapta.', '$focus? {amount:lex.space.amounts} {rel:lex.acts.dir} {amount2:lex.space.amounts}?'],
   ['ro.place.dir', 'acts.place.dir', 'place', null, 13, 'dir', 'Mută casa la stânga.', 'L? V.place CJ? $focus? D? {thing:words} {rel:lex.acts.dir}'],

@@ -99,6 +99,20 @@ test('frames: "mai" + a direction, a relative move ("mută capra mai jos", "mut�
   assert.ok(!lex('acts.dir').includes('mai jos') && !lex('acts.dir').includes('mai sus'), 'mai is the amount, not a part of the direction');
 });
 
+// block 14:25 item 1: the two shapes of the real turns still unread after Q69
+test('frames: "fă și o fetiță" makes a girl; two directions in one move ("mută prima casă mai la stânga și mai jos")', () => {
+  const r = (s) => reader.read(s)[0];
+  assert.equal(r('fa si o fetita').frame, 'ro.make.focus');
+  assert.equal(r('fa si o fetita').act, 'make');
+  assert.equal(r('fa si un lac mic in stinga').frame, 'ro.make.place.focus');
+  for (const [s, rel, rel2] of [['muta prima casa mai la stinga si mai jos', 'la stanga', 'jos'], ['muta capra mai jos si mai in stinga', 'jos', 'in stanga'], ['muta vaca si mai jos si mai in dreapta', 'jos', 'in dreapta']]) {
+    const x = r(s);
+    assert.equal(x.frame, 'ro.place.dir.two', s);
+    assert.equal(x.roles.rel, rel, s);
+    assert.equal(x.roles.rel2, rel2, s);
+  }
+});
+
 const ROWS = process.env.RO_EN_MEANING ?? '/tmp/wt2/training/eval/ro-en-meaning/rows.jsonl';
 test('frames: on PSys2\'s ro-en-meaning set, the share of requests whose act and roles the frames read (skipped without it)', { skip: !existsSync(ROWS) && 'no ro-en-meaning rows' }, () => {
   const rows = readFileSync(ROWS, 'utf8').trim().split('\n').map((l) => JSON.parse(l));

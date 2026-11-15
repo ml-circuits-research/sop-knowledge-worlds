@@ -5836,3 +5836,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   colour slots of the w.* schemas (users name any of k.values.colour's 171 colours, k.colours has 33: which is the home
   of colour names is asked in Q76).
 - Validate: 1,156 files, 0 errors.
+
+## 2026-11-15 — third worker: the two Romanian shapes (block 14:25 item 1)
+
+- "fă și o fetiță": ro.make.focus (14) and ro.make.place.focus (15), the focus word required: make, thing girl (was
+  change with the thing "și o"). Two directions: English frame acts.more.place.dir.two ("move the house a bit left and
+  up", hand-frames; rel2 -> direction) and ro.place.dir.two: "mută prima casă mai la stânga și mai jos" reads amount
+  mai, la stânga, amount2 mai, jos. 46 Romanian frames.
+- Bench (161 real turns): 104 / 83 / 64 -> 104 / 82 / 64. The one fewer is "fa si o fetita", now read right (make, girl)
+  but scored against the act change, the bench's reading of the gloss's "make" (one of the three bench faults sent to
+  the library). The three two-direction turns now carry both directions.
