@@ -6277,3 +6277,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Test (tests/k.attributes.abilities.test.mjs, new, 2): the shard is fresh; at most 20 % of proposals wrong; no value
   checked wrong is written; laptop works, freighter sails, baby cries, a louse only crawls, plum / onion / queen /
   mortar / person get nothing, a shipwreck only sinks.
+## 2026-11-15 — second worker: the one build moved to sopworld 0.130.0 (ad4d456; reviewer 15:00 item 1)
+
+- `tools/sopworld/sopworld.mjs` = the library's `docs/sopworld.mjs` at ad4d456 (release 0.130.0, build 150c9d0ec306);
+  VERSION, the validate test, AGENTS.md, README.md, docs/index.html, docs/worlds/README.md, w.lang.en/WORLD.md and the
+  alternations test's comment name it. `npm run build`: only the catalog's commit and hash changed (34 worlds,
+  1,132 shards, 33,461 words, 0 warnings).
+- Names the library removed since 0.113 (`cousins`, `judgeFix`, `liftTokens`, `continueAct`, `variantsOf`, the old
+  `calibrate`, `route`, `veto`, `typedWorldOf`, `readRolesByTypes`, `assignBySlotTypes`, `motionPlan`), by grep in
+  tools/ and tests/: none is called (only comments say "the library's cousins"). Every one of the 30 names tools and
+  tests import from the build exists in 0.130.
+- Tests whose result changes: **none**. Full run on 0.130 (`node tools/test-run.mjs`, 92 files one at a time):
+  3,165 tests, 3,157 pass, 1 fail, 7 skipped, 580 s. The one failure, coverage-report, was already red on main
+  (COVERAGE.md said w.list has 2 keys; it has 1 since w.list v4): regenerated here. The skips are the same raw-file
+  skips as on 0.113 (import.dicebear, noto, objects 2, psys2, k.units.currencies) plus talk-frames' new one.
+- No silent change either: the 12 test files that call the library's functions beyond parsing (k.actions.effects /
+  families, k.compose, k.procedures, k.motion, w.lang.en, morph, templates, alternations, frames, w.lang.ro, ro.frames)
+  were run under 0.113 and 0.130 and their full spec output compared: identical.
+- After the rebase onto 7ecf82d, the tests the incoming commits touch, on 0.130: 85 files, 3,048 pass, 5 fail. The
+  five (coverage-report, k.kinds.relations, w.lang.en.templates, k.values, w.lang.en.arrangement) fail the same way
+  with the 0.113 build on that tip: red on main since ccf47d7 / 7e31925 (k.colours as the home of colour names, the
+  fn words), not from the pin; left to their author (14:10 rule 3).
+- Rebased again (onto the catalog-plurals commits): 50 touched files on 0.130, 4 fail, each failing the same way with
+  0.113 on that tip (coverage-report, w.lang.en.arrangement, w.lang.en.templates, and w.lang.en.catalog-plurals:
+  "axes -> ax"): red on main, not from the pin.

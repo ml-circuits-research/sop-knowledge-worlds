@@ -116,15 +116,15 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2331 |
+| `k.attributes` and `k.objects` | 2336 |
 | `k.objects` and `k.scenes` | 2196 |
-| `k.attributes` and `k.scenes` | 2143 |
+| `k.attributes` and `k.scenes` | 2153 |
 | `k.commonsense` and `k.scenes` | 318 |
 | `k.animals` and `k.commonsense` | 290 |
 | `k.animals` and `k.scenes` | 290 |
-| `k.attributes` and `k.commonsense` | 203 |
+| `k.attributes` and `k.commonsense` | 207 |
 | `k.commonsense` and `k.objects` | 192 |
-| `k.animals` and `k.attributes` | 175 |
+| `k.animals` and `k.attributes` | 179 |
 | `k.attributes` and `k.layouts` | 167 |
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
@@ -144,10 +144,10 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.attributes` and `k.body` | 13 |
 | `k.body` and `k.objects` | 10 |
 | `k.commonsense` and `k.layouts` | 9 |
+| `k.attributes` and `k.people` | 8 |
 | `k.attributes` and `k.colours` | 5 |
 | `k.geo` and `k.objects` | 5 |
 | `k.animals` and `k.layouts` | 4 |
-| `k.attributes` and `k.people` | 4 |
 | `k.body` and `k.scenes` | 4 |
 | `k.attributes` and `k.geo` | 3 |
 | `k.commonsense` and `k.space` | 2 |

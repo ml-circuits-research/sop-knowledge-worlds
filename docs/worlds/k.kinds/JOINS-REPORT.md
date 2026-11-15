@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **228** in 34 worlds; distinct values 10437, meeting a target 10379 (99.4 %), open 58
+- declared joins: **228** in 34 worlds; distinct values 10477, meeting a target 10419 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
 
@@ -45,7 +45,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.attributes | `k.attributes.kind.attribute` | `k.attributes.attribute` | name | 18 | 18 |  |
 | k.attributes | `k.attributes.shows.aspect` | `k.attributes.aspect` | name | 8 | 8 |  |
 | k.attributes | `k.attributes.shows.family` | `k.attributes.family` | name | 19 | 19 |  |
-| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 41 | 31 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
+| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 81 | 71 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
 | k.attributes | `k.attributes.thing.kind` | `k.attributes.kind` | name | 26 | 26 |  |
 | k.attributes | `k.attributes.usage.season` | `k.time.season` | name | 4 | 4 |  |
 | k.attributes | `k.attributes.usage.time` | `k.time.part_of_day` | name | 4 | 4 |  |
@@ -283,7 +283,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4566 | 2287 |
+| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4571 | 2289 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |
@@ -332,7 +332,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.attributes | `k.attributes.same.sense` | 12 | 12 | 6 | `k.attributes.kind` |
 | k.attributes | `k.attributes.thing.colour` | 12 | 12 | 11 | `k.colours.basic`, `k.colours.colour` |
 | k.attributes | `k.attributes.usage.sense` | 12 | 4 | 2 | `k.attributes.kind` |
-| k.attributes | `k.attributes.usage.age` | 4 | 4 | 2 | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` |
+| k.attributes | `k.attributes.usage.age` | 4 | 4 | 2 | `k.attributes.thing`, `k.faces.preset`, `k.people.kind` |
 | k.colours | `k.colours.colour.tone` | 3 | 3 | 2 | `k.values.shade` |
 | k.diagrams | `k.diagrams.kind.form` | 10 | 10 | 6 | `k.diagrams.kind` |
 | k.diagrams | `k.diagrams.kind.groups` | 2 | 2 | 2 | `k.values.reply` |
@@ -349,7 +349,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.motion | `k.motion.when.feature` | 6 | 1 | 0 | `k.attributes.attribute` |
 | k.music | `k.music.note.letter` | 7 | 7 | 7 | `k.music.chord`, `k.music.note` |
 | k.people | `k.people.given_name.context` | 1 | 1 | 1 | `k.attributes.drawn`, `k.attributes.kind`, `k.attributes.number` |
-| k.people | `k.people.kind.age` | 4 | 4 | 2 | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` |
+| k.people | `k.people.kind.age` | 4 | 4 | 2 | `k.attributes.thing`, `k.faces.preset`, `k.people.kind` |
 | k.procedures | `k.procedures.howto_step.branch` | 2 | 2 | 2 | `k.values.reply` |
 | k.scenes | `k.scenes.has.side` | 3 | 3 | 3 | `k.values.position` |
 | k.scenes | `k.scenes.scene.kind` | 4 | 4 | 2 | `k.scenes.scene` |

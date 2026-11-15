@@ -1,4 +1,4 @@
-# k.kinds/shards/wordnet-2: 1148 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
+# k.kinds/shards/wordnet-2: 1149 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
 # sources: wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)
 # license: WordNet-3.0
 # script: tools/kinds-core.mjs
@@ -401,6 +401,7 @@
 @k.kinds.parent.sherry.fortified_wine k.kinds.parent name=sherry is_a="fortified wine" dimension=kind from=k.words.sense key=is_a value="sherry noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.shield.protective_covering k.kinds.parent name=shield is_a="protective covering" dimension=kind from=k.words.sense key=is_a value="shield noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.ship.vessel k.kinds.parent name=ship is_a=vessel dimension=kind from=k.words.sense key=is_a value="ship noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.shipwreck.ship k.kinds.parent name=shipwreck is_a=ship dimension=kind from=k.words.sense key=is_a value="shipwreck noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.shirt.garment k.kinds.parent name=shirt is_a=garment dimension=kind from=k.words.sense key=is_a value="shirt noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.shoe.footwear k.kinds.parent name=shoe is_a=footwear dimension=kind from=k.words.sense key=is_a value="shoe noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.shop.mercantile_establishment k.kinds.parent name=shop is_a="mercantile establishment" dimension=kind from=k.words.sense key=is_a value="shop noun 1" core.source="wordnet 3.1"

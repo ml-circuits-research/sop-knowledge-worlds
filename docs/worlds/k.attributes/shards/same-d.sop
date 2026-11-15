@@ -45,7 +45,7 @@
 @k.attributes.same.desk_lamp.thing k.attributes.same name="desk lamp" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.desktop_computer.thing k.attributes.same name="desktop computer" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.dessert_menu.food k.attributes.same name="dessert menu" sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.destroyer.thing k.attributes.same name=destroyer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.destroyer.thing k.attributes.same name=destroyer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.detective.person k.attributes.same name=detective sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.detroit.place k.attributes.same name=detroit sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.diamond.shape k.attributes.same name=diamond sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"

@@ -51,7 +51,7 @@
 @k.attributes.same.weeds.plant k.attributes.same name=weeds sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.week.time k.attributes.same name=week sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.weekend.time k.attributes.same name=weekend sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.weevil.animal k.attributes.same name=weevil sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.weevil.animal k.attributes.same name=weevil sense=animal only=true in=k.animals.animal in=k.attributes.thing in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.wei.place k.attributes.same name=wei sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.weir.place k.attributes.same name=weir sense=place only=true in=k.geo.river in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.well.thing k.attributes.same name=well sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
