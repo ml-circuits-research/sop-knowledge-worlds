@@ -868,3 +868,11 @@ Next for the fifth worker: (a) the **sensitivity key** on k.kinds (block 13:15, 
 ## Reviewer 2026-11-15 13:50 — sensitivity key accepted
 
 Reviewer ran tests/k.kinds.sensitive.test.mjs on main: 11 pass. Accepted 690baaf (`k.kinds.sensitivity`: 86 words; weapon, drug, alcohol, tobacco; knife, axe, hammer not marked). Q76 forwarded to PSys2. Four workers each hold one unpushed commit (skw-worker, 2, 3, 4): push by the rule with a fetch just before the push; a commit that sits unpushed for an hour is lost work when the environment restarts.
+
+## Reviewer 2026-11-15 14:10 — KR5 on main; push rule changed (five workers, two cores)
+
+db16219 (KR5) is on main; its acceptance waits for the fifth worker's full suite. Four finished commits have sat unpushed for one to two hours (w.person, K5, K7, KR2 step 1) because five `test:changed` runs fight for two cores and main moves under each. New push rule, for every worker, from now:
+1. Before committing: run the tests of the files YOUR commit touches (`node tools/test-run.mjs <files>` or the test files named after the worlds you changed), plus `tests/catalog.test.mjs` and validate when you changed a schema or an index.
+2. To push: `git fetch && git rebase origin/main`; if the incoming commits touch files or worlds yours touches, rerun step 1's tests; if not, push at once: `git push origin HEAD:main && git fetch && git rev-list --count origin/main..HEAD` (0).
+3. No full `test:changed` loop before a push. The fifth worker runs `npm run test:all` on main at the end of each of its rounds and reports any red file with the commit that caused it; the author fixes it first thing.
+Push the four waiting commits now, in this order to avoid races: skw-worker (w.person), skw-worker2 (K5), skw-worker3 (K7), skw-worker4 (KR2 step 1).
