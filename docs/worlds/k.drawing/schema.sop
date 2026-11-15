@@ -13,16 +13,16 @@
 # colours by name (the basic colours of k.values: `k.values.coloured`; required here, so the enum is said again and a
 # test keeps it equal), `rgb` its exact colour ("#RRGGBB"), `pointing` and `opens` its direction.
 @k.drawing.part core.type of=k.drawing.part shared=true core.source="hand-core 1"
-@k.drawing.part.shape core.slot of=k.drawing.part key=shape required=true enum=rectangle enum=square enum=circle enum=oval enum=triangle enum=line enum=arc enum=polygon core.source="hand-core 1"
+@k.drawing.part.shape core.slot of=k.drawing.part key=shape required=true enum=rectangle enum=square enum=circle enum=oval enum=triangle enum=line enum=arc enum=polygon kind=atom type=k.shapes.shape by=name core.source="hand-core 1"
 @k.drawing.part.x core.slot of=k.drawing.part key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.drawing.part.y core.slot of=k.drawing.part key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.drawing.part.w core.slot of=k.drawing.part key=w required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.drawing.part.h core.slot of=k.drawing.part key=h required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.drawing.part.z core.slot of=k.drawing.part key=z required=true kind=integer core.source="hand-core 1"
-@k.drawing.part.colour core.slot of=k.drawing.part key=colour required=true many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
+@k.drawing.part.colour core.slot of=k.drawing.part key=colour required=true many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.colour by=name core.source="hand-core 1"
 @k.drawing.part.rgb core.slot of=k.drawing.part key=rgb kind=string core.source="hand-core 1"
-@k.drawing.part.pointing core.slot of=k.drawing.part key=pointing enum=up enum=down enum=left enum=right core.source="hand-core 1"
-@k.drawing.part.opens core.slot of=k.drawing.part key=opens enum=up enum=down enum=left enum=right core.source="hand-core 1"
+@k.drawing.part.pointing core.slot of=k.drawing.part key=pointing enum=up enum=down enum=left enum=right kind=atom type=k.values.direction by=name core.source="hand-core 1"
+@k.drawing.part.opens core.slot of=k.drawing.part key=opens enum=up enum=down enum=left enum=right kind=atom type=k.values.direction by=name core.source="hand-core 1"
 
 # A point of a line or polygon part: `n` its place in drawing order, `x y` where it is. The world that extends the
 # type says which part it belongs to (`part`, a reference to its own part type).

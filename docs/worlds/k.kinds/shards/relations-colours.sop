@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
-@k.kinds.relation.k.colours.colour.family k.kinds.relation type=k.colours.colour key=family subject=colour subject_sense=colour object=kind object_type=k.colours.colour object_type=k.values.colour object_sense=colour found=value core.source="hand-core 1"
+@k.kinds.relation.k.colours.colour.family k.kinds.relation type=k.colours.colour key=family subject=colour subject_sense=colour object=kind object_type=k.colours.colour object_sense=colour found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.colours.colour.tone k.kinds.relation type=k.colours.colour key=tone subject=colour subject_sense=colour object=value object_type=k.values.shade scale=brightness found=value core.source="hand-core 1"
 @k.kinds.relation.k.colours.colour.temperature k.kinds.relation type=k.colours.colour key=temperature subject=colour subject_sense=colour object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.colours.colour.lighter k.kinds.relation type=k.colours.colour key=lighter subject=colour subject_sense=colour object=value object_type=k.colours.colour object_sense=colour found=declared object_by=name core.source="hand-core 1"

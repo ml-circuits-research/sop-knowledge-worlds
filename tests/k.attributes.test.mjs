@@ -5,6 +5,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds, fullWorld, schemaWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { attributeShards, readThings, ATTRIBUTES } from '../tools/attributes-core.mjs';
+import { parse } from '../tools/sopworld/sopworld.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -157,7 +158,12 @@ test('k.attributes.usage: the shard is what tools/usage-core.mjs gives; every th
   const enumOf = (w, type, key) => [...(schemaWorld(worlds, w).world.schema(type).keys[key].enum ?? [])].map(String).sort();
   const own = schemaWorld(worlds, 'k.attributes').world;
   // time: a declared join to k.time.part_of_day on both (KR1 item 5, tests/k.scenes.test.mjs)
-  for (const k of ['season', 'weather']) assert.deepEqual([...own.schema('k.attributes.usage').keys[k].enum].map(String).sort(), enumOf('k.scenes', 'k.scenes.scene', k), k);
+  for (const k of ['weather']) assert.deepEqual([...own.schema('k.attributes.usage').keys[k].enum].map(String).sort(), enumOf('k.scenes', 'k.scenes.scene', k), k);
+  // KR2: the season is no copied enum; both slots name a season of k.time
+  for (const [w, t] of [['k.attributes', 'k.attributes.usage'], ['k.scenes', 'k.scenes.scene']]) {
+    const s = parse(readFileSync(join(WORLDS_DIR, w, 'schema.sop'), 'utf8')).find((x) => x.type === 'core.slot' && x.attrs.of[0] === t && x.attrs.key[0] === 'season');
+    assert.deepEqual([s.attrs.enum, s.attrs.type[0], s.attrs.by[0]], [undefined, 'k.time.season', 'name'], t);
+  }
   assert.deepEqual([...own.schema('k.attributes.usage').keys.age.enum].map(String).sort(), enumOf('k.people', 'k.people.kind', 'age'));
   const uses = roleUses(worlds);
   for (const u of usage) {

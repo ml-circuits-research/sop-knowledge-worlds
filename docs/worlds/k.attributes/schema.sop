@@ -17,7 +17,7 @@
 # Block 07:40 item 4: `default_type` and `default_key` say where the value an attribute goes back to when it is reset
 # is found ("reset the colours": the colour of each part in the thing's drawing, k.objects.part colour).
 @k.attributes.attribute.default_type core.slot of=k.attributes.attribute key=default_type kind=atom core.source="hand-core 1"
-@k.attributes.attribute.default_key core.slot of=k.attributes.attribute key=default_key kind=atom core.source="hand-core 1"
+@k.attributes.attribute.default_key core.slot of=k.attributes.attribute key=default_key kind=atom type=k.attributes.attribute by=name core.source="hand-core 1"
 
 # A switch attribute of a thing a user makes: true or false. `on` names the verbs that make it true (show, stack),
 # `off` those that make it false (hide, unstack), `default` its value before any act (a thing is visible, not
@@ -68,7 +68,7 @@
 # is k.attributes.thing.colour, and the two are never mixed. The source of the fact is the source of the drawing.
 @k.attributes.drawn core.type of=k.attributes.drawn shared=true closed=true core.source="hand-core 1"
 @k.attributes.drawn.name core.slot of=k.attributes.drawn key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
+@k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.colour by=name core.source="hand-core 1"
 @k.attributes.drawn.drawn_shade core.slot of=k.attributes.drawn key=drawn_shade many=true kind=atom kind=string type=k.values.colour by=name core.source="hand-core 1"
 
 # The usual numbers of a common thing (tools/numbers-core.mjs), each only where it is plain and about right, for
@@ -103,7 +103,7 @@
 @k.attributes.usage core.type of=k.attributes.usage extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.attributes.usage.name core.slot of=k.attributes.usage key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.usage.sense core.slot of=k.attributes.usage key=sense id=true enum=animal enum=food enum=plant enum=person enum="body part" enum=clothing enum=colour enum=shape enum=place enum=time enum="body in space" enum=thing core.source="hand-core 1"
-@k.attributes.usage.season core.slot of=k.attributes.usage key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
+@k.attributes.usage.season core.slot of=k.attributes.usage key=season many=true kind=atom type=k.time.season by=name core.source="hand-core 1"
 @k.attributes.usage.time core.slot of=k.attributes.usage key=time many=true kind=atom type=k.time.part_of_day by=name core.source="hand-core 1"
 @k.attributes.usage.weather core.slot of=k.attributes.usage key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
 @k.attributes.usage.age core.slot of=k.attributes.usage key=age many=true enum=baby enum=child enum=adult enum=old core.source="hand-core 1"

@@ -17,7 +17,7 @@
 # (many; the name of a k.objects object where there is one).
 @k.colours.colour core.type of=k.colours.colour shared=true closed=true core.source="hand-core 1"
 @k.colours.colour.name core.slot of=k.colours.colour key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.colours.colour.family core.slot of=k.colours.colour key=family required=true enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown enum=black enum=white enum=grey core.source="hand-core 1"
+@k.colours.colour.family core.slot of=k.colours.colour key=family required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.colour by=name core.source="hand-core 1"
 @k.colours.colour.tone core.slot of=k.colours.colour key=tone required=true enum=light enum=medium enum=dark core.source="hand-core 1"
 @k.colours.colour.temperature core.slot of=k.colours.colour key=temperature required=true enum=warm enum=cool enum=neutral core.source="hand-core 1"
 @k.colours.colour.lighter core.slot of=k.colours.colour key=lighter kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"

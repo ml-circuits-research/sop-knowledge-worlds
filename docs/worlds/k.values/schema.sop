@@ -17,7 +17,7 @@
 @k.values.colour.css core.slot of=k.values.colour key=css kind=atom core.source="hand-core 1"
 @k.values.colour.rgb core.slot of=k.values.colour key=rgb kind=string core.source="hand-core 1"
 @k.values.colour.rgb_about core.slot of=k.values.colour key=rgb_about excludes=rgb kind=string core.source="hand-core 1"
-@k.values.colour.basic core.slot of=k.values.colour key=basic enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown core.source="hand-core 1"
+@k.values.colour.basic core.slot of=k.values.colour key=basic enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.colour by=name core.source="hand-core 1"
 # An exact value and a usual value are never both on one colour (`excludes` on `rgb_about`).
 
 # The basic colours, declared once (Q34 item 4): a type of the worlds whose things have a usual colour by name

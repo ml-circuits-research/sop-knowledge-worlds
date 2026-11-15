@@ -1073,3 +1073,14 @@ it in the turn or asked for that category. Gun, rifle, sword, bomb, beer, cigare
 shield, tank, water pistol are not.
 Context: a type of its own (not a key of k.kinds.kind), so it does not merge into the things of other worlds.
 Blocking: no.
+
+
+## Q76 (reviewer 10:50 KR2, fourth worker, 2026-11-15): the home of colour names is k.colours (33) or k.values.colour (171)?
+
+Context: the review (finding 8) makes k.colours the one home of colour names and drops k.values.colour. But k.colours
+has 33 colours and k.values.colour 171 (CSS/X11 names with RGB, which hosts use to read "navy", "teal", "salmon"). KR2
+step 1 joins the basic-colour slots of k.drawing, k.attributes, k.values.colour.basic and k.colours.colour.family to
+`k.colours.colour` (all their values are among the 33), and leaves the w.* colour slots (w.chart series, w.diagram
+node, w.map place and pin) undeclared, since a user may name any of the 171. Meanwhile: nothing moved. Should the 171
+names (rgb, basic family) move into k.colours (one type, `basic=true` on 11), after which k.values.colour is dropped
+and the w.* colour slots join k.colours?

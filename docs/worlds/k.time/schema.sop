@@ -51,8 +51,8 @@
 @k.time.month.n core.slot of=k.time.month key=n required=true kind=integer min=1 max=12 core.source="hand-core 1"
 @k.time.month.days core.slot of=k.time.month key=days required=true kind=integer min=28 max=31 core.source="hand-core 1"
 @k.time.month.leap_days core.slot of=k.time.month key=leap_days kind=integer min=28 max=31 core.source="hand-core 1"
-@k.time.month.season_north core.slot of=k.time.month key=season_north required=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
-@k.time.month.season_south core.slot of=k.time.month key=season_south required=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
+@k.time.month.season_north core.slot of=k.time.month key=season_north required=true kind=atom type=k.time.season by=name core.source="hand-core 1"
+@k.time.month.season_south core.slot of=k.time.month key=season_south required=true kind=atom type=k.time.season by=name core.source="hand-core 1"
 
 # A day of the week (cycle `week`). `n` counts from Monday (ISO 8601); `weekend` is true for Saturday and Sunday.
 @k.time.weekday core.type of=k.time.weekday extends=k.time.ordered shared=true closed=true complete=true core.source="hand-core 1"
@@ -71,7 +71,7 @@
 # four rules below (a month whose season differs from the season of the month before it is the first of its
 # season; one whose season differs from the next month's is the last), so it never disagrees with the months.
 @k.time.season_in core.type of=k.time.season_in shared=true closed=true core.source="hand-core 1"
-@k.time.season_in.season core.slot of=k.time.season_in key=season id=true required=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
+@k.time.season_in.season core.slot of=k.time.season_in key=season id=true required=true kind=atom type=k.time.season by=name core.source="hand-core 1"
 @k.time.season_in.hemisphere core.slot of=k.time.season_in key=hemisphere id=true required=true enum=north enum=south core.source="hand-core 1"
 @k.time.season_in.first core.slot of=k.time.season_in key=first kind=atom type=k.time.month by=name core.source="hand-core 1"
 @k.time.season_in.last core.slot of=k.time.season_in key=last kind=atom type=k.time.month by=name core.source="hand-core 1"
@@ -123,7 +123,7 @@
 @k.time.hour.n core.slot of=k.time.hour key=n required=true kind=integer min=0 max=23 core.source="hand-core 1"
 @k.time.hour.hour12 core.slot of=k.time.hour key=hour12 required=true kind=integer min=1 max=12 core.source="hand-core 1"
 @k.time.hour.am_pm core.slot of=k.time.hour key=am_pm required=true enum=am enum=pm core.source="hand-core 1"
-@k.time.hour.part core.slot of=k.time.hour key=part required=true enum=morning enum=afternoon enum=evening enum=night core.source="hand-core 1"
+@k.time.hour.part core.slot of=k.time.hour key=part required=true kind=atom type=k.time.part_of_day by=name core.source="hand-core 1"
 
 # How the clock names a time by an hour (block 09:20 K7, PSys2's real turn r0586 "today is Friday" and its clock turns):
 # "o'clock", "half past", "quarter to". `minutes` is what the phrase adds to the hour it names ("half past 3" is 3:30);

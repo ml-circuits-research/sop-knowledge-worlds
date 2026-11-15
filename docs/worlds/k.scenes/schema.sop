@@ -42,7 +42,7 @@
 @k.scenes.scene.ground core.slot of=k.scenes.scene key=ground kind=atom kind=string core.source="hand-core 1"
 @k.scenes.scene.time core.slot of=k.scenes.scene key=time many=true kind=atom type=k.time.part_of_day by=name core.source="hand-core 1"
 @k.scenes.scene.weather core.slot of=k.scenes.scene key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
-@k.scenes.scene.season core.slot of=k.scenes.scene key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
+@k.scenes.scene.season core.slot of=k.scenes.scene key=season many=true kind=atom type=k.time.season by=name core.source="hand-core 1"
 @k.scenes.scene.happens core.slot of=k.scenes.scene key=happens many=true kind=atom kind=string core.source="hand-core 1"
 @k.scenes.scene.drawing core.slot of=k.scenes.scene key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 
@@ -64,7 +64,7 @@
 @k.scenes.has.count core.slot of=k.scenes.has key=count required=true kind=integer min=1 core.source="hand-core 1"
 @k.scenes.has.where core.slot of=k.scenes.has key=where required=true enum=sky enum=ceiling enum=background enum=wall enum=ground enum=water enum=foreground core.source="hand-core 1"
 @k.scenes.has.side core.slot of=k.scenes.has key=side enum=left enum=centre enum=right core.source="hand-core 1"
-@k.scenes.has.on core.slot of=k.scenes.has key=on kind=atom kind=string core.source="hand-core 1"
+@k.scenes.has.on core.slot of=k.scenes.has key=on kind=atom kind=string type=k.scenes.thing by=name core.source="hand-core 1"
 @k.scenes.has.fills core.slot of=k.scenes.has key=fills kind=boolean core.source="hand-core 1"
 @k.scenes.has.drawing core.slot of=k.scenes.has key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 

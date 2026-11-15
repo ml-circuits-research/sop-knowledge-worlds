@@ -5814,3 +5814,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - tests/w.lang.en.talk-frames.test.mjs: 11 real rows and 9 paraphrases read back; the acts and family in k.actions.
 
 ## 2026-11-15 — third worker takes block 14:25: class=dialogue, the two Romanian shapes, Romanian reply templates, KR3 (fn first)
+
+## 2026-11-15 — fourth worker: KR2 step 1, enums joined, not copied; joins that meet 100 % declared (reviewer 10:50 KR2)
+
+- Declared (`type= by=`), the enum that copied another world's names dropped where it was a copy: the seasons
+  (k.attributes.usage.season, k.scenes.scene.season, k.time.month.season_north / season_south, k.time.season_in.season
+  -> `k.time.season`), the part of the day of an hour (k.time.hour.part -> `k.time.part_of_day`), the class of an animal
+  (k.animals.animal.class -> `k.animals.class`), the acts of a method and a step (k.procedures.method.act, step.act ->
+  `k.actions.act`; the enum was a copy of the act list), what a thing of a scene stands on (k.scenes.has.on ->
+  `k.scenes.thing`), an attribute's default key (-> `k.attributes.attribute`).
+- Joined but the enum kept, because the enum is a narrower set of its own, not a copy: the drawing primitives
+  (k.drawing.part.shape: rectangle ... polygon, now also declared shapes of `k.shapes.shape`), the directions a part
+  points or opens to (up, down, left, right; -> `k.values.direction`) and the basic colours of k.drawing.part.colour,
+  k.attributes.drawn.drawn_colour, k.values.colour.basic and k.colours.colour.family (-> `k.colours.colour`). The pinned
+  engine (0.113) reports a value that meets no target as an open join and does not refuse it, so dropping these enums
+  would have let "teal" or a family "sea" in unchecked (two tests said so); the enum stays as the check until Q76.
+  tests/shared-modules.test.mjs checks the joins with the lists; tests/k.attributes.test.mjs checks the season joins.
+- Joins report: declared joins 217 in 32 worlds (was 196), 0 broken; undeclared 89 (was 114). Left undeclared from the
+  100 % list on purpose: yes/no values that meet k.values.reply by accident, the hemisphere meeting k.values.direction
+  (north/south), k.people.given_name.context, k.motion and k.procedures.binding values (one value each), and the
+  colour slots of the w.* schemas (users name any of k.values.colour's 171 colours, k.colours has 33: which is the home
+  of colour names is asked in Q76).
+- Validate: 1,156 files, 0 errors.

@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
-@k.kinds.relation.k.animals.animal.class k.kinds.relation type=k.animals.animal key=class subject=animal subject_sense=animal object=kind object_type=k.animals.class found=value core.source="hand-core 1"
+@k.kinds.relation.k.animals.animal.class k.kinds.relation type=k.animals.animal key=class subject=animal subject_sense=animal object=kind object_type=k.animals.class found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.animals.animal.legs k.kinds.relation type=k.animals.animal key=legs subject=animal subject_sense=animal object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.animals.animal.covering k.kinds.relation type=k.animals.animal key=covering subject=animal subject_sense=animal object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.animals.animal.sound k.kinds.relation type=k.animals.animal key=sound subject=animal subject_sense=animal object=word object_type=k.words.sense found=declared object_by=word core.source="hand-core 1"

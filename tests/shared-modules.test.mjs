@@ -28,7 +28,7 @@ test('Q34 item 1: k.objects and k.faces draw with the parts and points of k.draw
   }
 });
 
-test('Q34 item 4: the basic colours are declared once in k.values; every other list of them is the same list', () => {
+test('Q34 item 4 and KR2: the basic colours are declared once in k.values; the other colour slots are the same list and join k.colours', () => {
   const enumOf = (id, type, key) => slots(id, type).find((s) => s.attrs.key[0] === key).attrs.enum;
   const basic = enumOf('k.values', 'k.values.coloured', 'colour');
   assert.equal(basic.length, 11);
@@ -37,8 +37,13 @@ test('Q34 item 4: the basic colours are declared once in k.values; every other l
     assert.equal(slots(id, type).some((s) => s.attrs.key[0] === 'colour'), false, `${type} takes colour from k.values`);
     assert.equal(schemaWorld(worlds, id).world.fork().tell(`@t.f ${type} name=x colour=teal core.source="t"`).ok, false, `${type}: a colour outside the list is refused`);
   }
-  for (const [id, type, key, extra] of [['k.drawing', 'k.drawing.part', 'colour', []], ['k.values', 'k.values.colour', 'basic', []], ['k.attributes', 'k.attributes.drawn', 'drawn_colour', []],
-    ['k.colours', 'k.colours.colour', 'family', []], ['k.attributes', 'k.attributes.thing', 'colour', ['any']]]) assert.deepEqual([...enumOf(id, type, key)].sort(), [...basic, ...extra].sort(), `${type}.${key}`);
+  // KR2 (one home per idea): the other colour slots also declare where colour names live (k.colours, by name); the enum
+  // stays as their check, since the engine reports an unmet join and does not refuse it (Q72)
+  for (const [id, type, key] of [['k.drawing', 'k.drawing.part', 'colour'], ['k.values', 'k.values.colour', 'basic'], ['k.attributes', 'k.attributes.drawn', 'drawn_colour'], ['k.colours', 'k.colours.colour', 'family']]) {
+    const s = slots(id, type).find((x) => x.attrs.key[0] === key);
+    assert.deepEqual([[...s.attrs.enum].sort(), s.attrs.type?.[0], s.attrs.by?.[0]], [[...basic].sort(), 'k.colours.colour', 'name'], `${type}.${key}`);
+  }
+  assert.deepEqual([...enumOf('k.attributes', 'k.attributes.thing', 'colour')].sort(), [...basic, 'any'].sort(), 'k.attributes.thing.colour (with any)');
 });
 
 test('Q34 item 6 and Q33: one kind-of relation, followed upwards by one rule; a shape may be a kind of several', () => {
