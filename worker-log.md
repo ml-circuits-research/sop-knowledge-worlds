@@ -5442,3 +5442,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests (tests/w.schemas.test.mjs, 16 pass): the list session on status and a numeric quantity; a new shop session
   (budget 30 RON, 2 pencils at 3 and a ball at 5, tendered 20: change 9, left 19; refusals: a sort that is not one, a
   negative price, "a bag" as a quantity) and the joins' names checked against k.objects, k.food and k.units facts.
+
+## 2026-11-15 — fourth worker: w.tasks, tasks open or done (reviewer 09:20, PSys2 Q18 K2)
+
+- Real row: r0590 "i should call grandma" (PSys2 real set 2026-11-15); the 25 sentences of PSys2's kids.tasks world.
+- `docs/worlds/w.tasks/schema.sop` (version 1; 23 wires, 4,658 bytes; CC0, own) and `WORLD.md`: `w.tasks.task` with
+  `text` (required), `status` (open, done; default open), `list` (a `w.list.list`: w.tasks imports w.list, one home for
+  lists, a to-do list is a w.list list of sort to-do), `n`, `due`, `reminder` (ISO 8601 or a k.time word, read by the
+  library's std.time), `owner`, `note`; acts make, remove, change, group, pick, ask, copy; at most 1,000 tasks. Terms
+  after iCalendar's VTODO (RFC 5545): SUMMARY, STATUS (open = NEEDS-ACTION, done = COMPLETED), DUE, VALARM TRIGGER,
+  ATTENDEE. "Done is a state that acts change": the closed set is set by `change` (anything else refused with the two
+  allowed), read by `pick` and `ask`, taken back by `undo`.
+- The first w.* schema that imports another: `describeSchema` (tools/lib/schemas.mjs) loads a schema with the other
+  schemas in the library, as a host does, and the catalog entry of every schema now has `depends` (w.tasks:
+  ["w.list"]; the others []). build-catalog passes its own scan.
+- k.kinds.structure: w.tasks is a sequence (task, n, list; structures.sop 285 wires); k.attributes typicality of the
+  task's keys (typical.sop 153 wires); the coverage test of schema kinds includes w.tasks.
+- Tests (tests/w.schemas.test.mjs, 17): nine schemas; tasks/chores/things to do find w.tasks; a session (a to-do list,
+  call grandma, water the plants with a reminder, homework due Friday; done set and picked, open again and undone;
+  refused: status finished, a task on a task, a place in a picture; grouped as today).

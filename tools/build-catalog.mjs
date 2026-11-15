@@ -191,8 +191,9 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
   }
   // The reusable worlds (w.*): found by name. Their words go to the vocabulary with the path of the schema.
   const schemas = [];
-  for (const s of scanSchemas(root)) {
-    const d = describeSchema(s);
+  const allSchemas = scanSchemas(root);
+  for (const s of allSchemas) {
+    const d = describeSchema(s, allSchemas);
     if (d.errors.length) return { errors: d.errors };
     for (const t of d.allWords) addWord(t, s.schemaPath, d.entry.id ?? d.entry.name ?? null);
     schemas.push(d.entry);

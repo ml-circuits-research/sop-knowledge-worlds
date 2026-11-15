@@ -242,7 +242,7 @@ exact (token for token) against the first candidate; the value share itself also
 | k.attributes | `k.attributes.same.sense` | value | `k.attributes.kind` | name | 12 | 6 |
 | k.attributes | `k.attributes.thing.colour` | value | `k.colours.colour`, `k.values.colour` | name | 12 | 11 |
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
-| k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 35 | 18 |
+| k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.attributes | `k.attributes.usage.sense` | value | `k.attributes.kind` | name | 4 | 2 |
 | k.attributes | `k.attributes.usage.season` | time | `k.time.season` | name | 4 | 4 |
 | k.attributes | `k.attributes.usage.time` | time | `k.time.part_of_day` | name | 4 | 3 |

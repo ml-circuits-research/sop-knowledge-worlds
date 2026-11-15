@@ -3896,6 +3896,7 @@
  "alarm": [
   "k.words/shards/al",
   "k.words/shards/frequency-a",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-time-01",
   "k.objects/shards/noto-transport-ground-06",
   "k.objects/shards/openmoji-travel-places-01"
@@ -4097,6 +4098,7 @@
  "alert": [
   "k.words/shards/al",
   "k.words/shards/frequency-a",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-transport-ground-06"
  ],
  "alessandra": [
@@ -7871,7 +7873,8 @@
   "k.words/shards/frequency-a"
  ],
  "assigned": [
-  "k.kinds/shards/structures"
+  "k.kinds/shards/structures",
+  "w.tasks/schema.sop"
  ],
  "assignment": [
   "k.kinds/shards/structures",
@@ -20701,7 +20704,8 @@
   "k.words/shards/frequency-b",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-joins",
-  "w.lang.en/shards/prepositions"
+  "w.lang.en/shards/prepositions",
+  "w.tasks/schema.sop"
  ],
  "by default": [
   "w.lang.en/shards/clauses"
@@ -27359,9 +27363,15 @@
  "chords": [
   "k.music/schema.sop"
  ],
+ "chore": [
+  "w.tasks/schema.sop"
+ ],
  "choreography": [
   "k.words/shards/ch",
   "k.words/shards/frequency-c"
+ ],
+ "chores": [
+  "w.tasks/schema.sop"
  ],
  "chorus": [
   "k.words/shards/ch",
@@ -30342,7 +30352,8 @@
  "comment": [
   "k.words/shards/co-1",
   "k.words/shards/frequency-c",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "commentary": [
   "k.words/shards/co-1",
@@ -30648,6 +30659,9 @@
  "complete": [
   "k.words/shards/co-1",
   "k.words/shards/frequency-c"
+ ],
+ "completed": [
+  "w.tasks/schema.sop"
  ],
  "completely": [
   "k.words/shards/co-1",
@@ -37987,7 +38001,8 @@
  ],
  "deadline": [
   "k.words/shards/de",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.tasks/schema.sop"
  ],
  "deaf": [
   "k.words/shards/de",
@@ -41387,6 +41402,7 @@
   "k.words/shards/do",
   "k.words/shards/frequency-d",
   "w.list/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-time-01"
  ],
  "done: smile": [
@@ -42846,8 +42862,10 @@
   "k.words/shards/frequency-d"
  ],
  "due": [
+  "k.attributes/shards/typical",
   "k.words/shards/du",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.tasks/schema.sop"
  ],
  "duel": [
   "k.words/shards/du",
@@ -51927,7 +51945,8 @@
  "finished": [
   "k.words/shards/fi",
   "k.words/shards/frequency-f",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "finishing": [
   "k.words/shards/fi",
@@ -52237,6 +52256,7 @@
   "k.words/shards/frequency-f",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/numbers",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-award-medal-01",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02"
@@ -53931,7 +53951,8 @@
   "k.wearables/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/prepositions",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "for now": [
   "w.lang.en/shards/clauses"
@@ -73234,6 +73255,7 @@
   "k.people/schema.sop",
   "k.words/shards/frequency-j",
   "k.words/shards/jo",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-place-building-02",
   "k.people/shards/given-names-j"
  ],
@@ -73244,7 +73266,8 @@
   "k.words/shards/jo"
  ],
  "jobs": [
-  "k.people/schema.sop"
+  "k.people/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "jocelyn": [
   "k.people/shards/given-names-j"
@@ -80085,6 +80108,7 @@
   "k.words/shards/le",
   "w.face/schema.sop",
   "w.list/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/openmoji-technology-01"
  ],
@@ -82693,6 +82717,7 @@
   "k.words/shards/frequency-l",
   "k.words/shards/li",
   "w.list/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-office-02"
  ],
  "list_without_point": [
@@ -95122,7 +95147,8 @@
   "k.words/shards/frequency-n",
   "k.words/shards/ne",
   "w.lang.en/shards/closed-classes",
-  "w.lang.en/shards/prepositions"
+  "w.lang.en/shards/prepositions",
+  "w.tasks/schema.sop"
  ],
  "next step": [
   "k.genres/shards/moves",
@@ -96123,6 +96149,7 @@
   "w.list/schema.sop",
   "w.map/schema.sop",
   "w.seating/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-office-01"
  ],
@@ -96177,6 +96204,7 @@
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.seating/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-music-01",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/noto-writing-01",
@@ -97967,6 +97995,7 @@
   "w.lang.en/shards/prepositions",
   "w.list/schema.sop",
   "w.map/schema.sop",
+  "w.tasks/schema.sop",
   "w.timeline/schema.sop"
  ],
  "on or off": [
@@ -98240,6 +98269,7 @@
   "k.words/shards/frequency-o",
   "k.words/shards/op",
   "w.list/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-book-paper-01",
   "k.objects/shards/noto-lock-01",
   "k.objects/shards/noto-mail-02",
@@ -98690,6 +98720,7 @@
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-animal-mammal-02"
  ],
  "ordered": [
@@ -99624,9 +99655,11 @@
   "k.words/shards/ow"
  ],
  "owner": [
+  "k.attributes/shards/typical",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-o",
-  "k.words/shards/ow"
+  "k.words/shards/ow",
+  "w.tasks/schema.sop"
  ],
  "ownership": [
   "k.words/shards/frequency-o",
@@ -105278,6 +105311,7 @@
   "w.list/schema.sop",
   "w.map/schema.sop",
   "w.seating/schema.sop",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-award-medal-01"
  ],
  "place kind": [
@@ -107180,7 +107214,8 @@
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
-  "w.seating/schema.sop"
+  "w.seating/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "positions": [
   "k.values/schema.sop"
@@ -112802,11 +112837,14 @@
  ],
  "remind": [
   "k.words/shards/frequency-r",
-  "k.words/shards/re"
+  "k.words/shards/re",
+  "w.tasks/schema.sop"
  ],
  "reminder": [
+  "k.attributes/shards/typical",
   "k.words/shards/frequency-r",
   "k.words/shards/re",
+  "w.tasks/schema.sop",
   "k.objects/shards/noto-event-03"
  ],
  "reminder ribbon": [
@@ -112816,6 +112854,9 @@
   "k.kinds/shards/head",
   "k.objects/shards/noto-event-03",
   "k.scenes/shards/things-r"
+ ],
+ "reminders": [
+  "w.tasks/schema.sop"
  ],
  "remorse": [
   "k.words/shards/frequency-r",
@@ -119287,7 +119328,8 @@
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
-  "w.map/schema.sop"
+  "w.map/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "saša": [
   "k.people/shards/given-names-s"
@@ -130325,7 +130367,8 @@
   "k.attributes/shards/typical",
   "k.words/shards/frequency-s",
   "k.words/shards/st",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "status report": [
   "k.genres/shards/report"
@@ -130846,7 +130889,8 @@
  ],
  "still": [
   "k.words/shards/frequency-s",
-  "k.words/shards/st"
+  "k.words/shards/st",
+  "w.tasks/schema.sop"
  ],
  "stimulate": [
   "k.words/shards/frequency-s",
@@ -135237,10 +135281,15 @@
  "task": [
   "k.procedures/schema.sop",
   "k.words/shards/frequency-t",
-  "k.words/shards/ta"
+  "k.words/shards/ta",
+  "w.tasks/schema.sop"
+ ],
+ "task list": [
+  "w.tasks/schema.sop"
  ],
  "tasks": [
-  "k.procedures/schema.sop"
+  "k.procedures/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "tasman sea": [
   "k.geo/shards/seas"
@@ -136411,7 +136460,8 @@
   "k.words/shards/te",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "text phone": [
   "k.attributes/shards/drawn-mulberry",
@@ -137915,6 +137965,9 @@
   "k.words/shards/th",
   "w.list/schema.sop"
  ],
+ "things to do": [
+  "w.tasks/schema.sop"
+ ],
  "think": [
   "k.actions/shards/actions-mind-talk",
   "k.words/shards/frequency-t",
@@ -139339,10 +139392,14 @@
   "w.lang.en/shards/hand-joins"
  ],
  "to-do": [
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "to-do list": [
   "w.list/schema.sop"
+ ],
+ "to-dos": [
+  "w.tasks/schema.sop"
  ],
  "toad": [
   "k.animals/shards/reptiles-and-amphibians",
@@ -139452,13 +139509,17 @@
   "k.people/shards/kinds"
  ],
  "todo": [
-  "w.list/schema.sop"
+  "w.list/schema.sop",
+  "w.tasks/schema.sop"
  ],
  "todo list": [
   "w.list/schema.sop"
  ],
  "todor": [
   "k.people/shards/given-names-t"
+ ],
+ "todos": [
+  "w.tasks/schema.sop"
  ],
  "toe": [
   "k.attributes/shards/same-t",
@@ -144254,6 +144315,7 @@
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions",
+  "w.tasks/schema.sop",
   "w.timeline/schema.sop"
  ],
  "untouchable": [
@@ -147173,6 +147235,19 @@
  "w.seating.table.y": [
   "k.kinds/shards/structures"
  ],
+ "w.tasks": [
+  "k.kinds/shards/structures"
+ ],
+ "w.tasks.task": [
+  "k.attributes/shards/typical",
+  "k.kinds/shards/structures"
+ ],
+ "w.tasks.task.list": [
+  "k.kinds/shards/structures"
+ ],
+ "w.tasks.task.n": [
+  "k.kinds/shards/structures"
+ ],
  "w.timeline": [
   "k.kinds/shards/structures"
  ],
@@ -149135,6 +149210,7 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
+  "w.tasks/schema.sop",
   "w.timeline/schema.sop"
  ],
  "what about": [
@@ -149366,6 +149442,7 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
+  "w.tasks/schema.sop",
   "w.timeline/schema.sop"
  ],
  "when's": [
@@ -149710,7 +149787,8 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
-  "w.lang.en/shards/grammar"
+  "w.lang.en/shards/grammar",
+  "w.tasks/schema.sop"
  ],
  "who sits where": [
   "w.seating/schema.sop"

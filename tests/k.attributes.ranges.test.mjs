@@ -105,7 +105,7 @@ test('typicality: every fact names a kind and an attribute (or a type and its ke
 test('coverage: the kinds std.sample hits in PSys2\'s tabs have typicality and, where they have numbers, ranges', () => {
   const ofs = new Set(typical.map((t) => one(t, 'of')));
   // world schemas: every kind (a face part through w.face.part, which they extend)
-  const schemaKinds = worlds.length && ['w.seating', 'w.map', 'w.list', 'w.timeline', 'w.face'].flatMap((id) => [...readFileSync(join(WORLDS_DIR, id, 'schema.sop'), 'utf8').matchAll(/std\.schema\.kind of=(\S+)/g)].map((m) => m[1]));
+  const schemaKinds = worlds.length && ['w.seating', 'w.map', 'w.list', 'w.tasks', 'w.timeline', 'w.face'].flatMap((id) => [...readFileSync(join(WORLDS_DIR, id, 'schema.sop'), 'utf8').matchAll(/std\.schema\.kind of=(\S+)/g)].map((m) => m[1]));
   const faceParts = (k) => k.startsWith('w.face.') && k !== 'w.face.face';
   assert.deepEqual(schemaKinds.filter((k) => !ofs.has(k) && !(faceParts(k) && ofs.has('w.face.part'))), [], 'schema kinds without typicality');
   // drawings: the kinds of common things that have attributes beyond a few

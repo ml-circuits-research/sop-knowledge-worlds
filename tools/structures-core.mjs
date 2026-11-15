@@ -86,6 +86,7 @@ export const FORMS = [
     ['item', 'w.timeline.event', T], ['slot', 'w.timeline.event.at', K], ['assigned', 'w.timeline.event.at', K], ['container', 'w.timeline.timeline', T], ['constraint', 'w.timeline.timeline.from', K], ['constraint', 'w.timeline.timeline.to', K]]],
   ['w.timeline', 'graph', 'events are linked (leads to, causes)', [['node', 'w.timeline.event', T], ['link', 'connect', A]]],
   ['w.list', 'sequence', 'items in order on a list', [['element', 'w.list.item', T], ['position', 'w.list.item.n', K], ['sequence', 'w.list.list', T], ['element_of', 'w.list.item.list', K]]],
+  ['w.tasks', 'sequence', 'tasks in order on a to-do list (a list of w.list)', [['element', 'w.tasks.task', T], ['position', 'w.tasks.task.n', K], ['element_of', 'w.tasks.task.list', K]]],
   ['w.face', 'whole with parts', 'a face made of parts of kinds (eyes, nose, mouth), each with a variant, a place and a size', [
     ['whole', 'w.face.face', T], ['part', 'w.face.part', T], ['part_of', 'w.face.part.face', K], ['part_kind', 'w.face.part.variant', K], ['position', 'w.face.part.x', K], ['position', 'w.face.part.y', K], ['size', 'w.face.part.size', K]]],
   ['w.face', 'placement', 'the parts of a face are placed on it', [['thing', 'w.face.part', T], ['position', 'w.face.part.x', K], ['position', 'w.face.part.y', K], ['space', 'w.face.face', T], ['size', 'w.face.part.size', K]]],

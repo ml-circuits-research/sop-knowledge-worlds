@@ -25,12 +25,14 @@ export function actsWorld(ids, schemas = scanSchemas()) {
 }
 
 // What the catalog says of a reusable world: its name, what it is, the words that find it, its kinds with their
-// acts and attributes, and the errors and warnings of loading it alone.
-export function describeSchema(s) {
+// acts and attributes, the schemas it imports (`depends`: w.tasks imports w.list, whose lists its tasks stand on), and
+// the errors and warnings of loading it alone (with the schemas it imports in the library, the way a host loads it).
+export function describeSchema(s, all = scanSchemas()) {
   const wires = parse(s.schemaText);
   const errors = [], warnings = [];
-  try { const w = actsWorld([s.id], [s]); warnings.push(...(w.warnings ?? []).map((x) => x.why ?? x.kind)); } catch (e) { errors.push(e.message); }
   const module = wires.find((w) => w.type === 'core.module');
+  const depends = (module?.attrs.imports ?? []).map(tok).sort(byText);
+  try { const w = actsWorld([s.id], [s, ...all.filter((x) => x.id !== s.id)]); warnings.push(...(w.warnings ?? []).map((x) => x.why ?? x.kind)); } catch (e) { errors.push(e.message); }
   const world = wires.find((w) => w.type === 'std.schema.world');
   // A world schema may hold denies and rules (the library's kinds-of-worlds), never a function. The patterns and
   // checks a deny or rule names are parts of it and carry no source of their own (a source on a pattern would be
@@ -61,5 +63,5 @@ export function describeSchema(s) {
   const names = words(s.id);
   if (!names.length) errors.push(`${s.id}: no core.word for the world`);
   const allWords = [...new Set(wires.filter((w) => w.type === 'core.word').flatMap((w) => (w.attrs.text ?? []).map(tok)))];
-  return { entry: { id: s.id, version: tok(module?.attrs.version?.[0]) ?? null, schema: s.schemaPath, about: tok(world?.attrs.doc?.[0]) ?? null, names, kinds, wires: wires.length, bytes: Buffer.byteLength(s.schemaText), sources: ['hand-core-1'], license: 'CC0-1.0', warnings }, errors, allWords, names };
+  return { entry: { id: s.id, version: tok(module?.attrs.version?.[0]) ?? null, schema: s.schemaPath, depends, about: tok(world?.attrs.doc?.[0]) ?? null, names, kinds, wires: wires.length, bytes: Buffer.byteLength(s.schemaText), sources: ['hand-core-1'], license: 'CC0-1.0', warnings }, errors, allWords, names };
 }

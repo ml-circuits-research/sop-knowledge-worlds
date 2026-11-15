@@ -1,4 +1,4 @@
-# k.kinds/shards/structures: the structures of worlds, for alignment: 7 structures with their roles (direction, cardinality, required) and 6 constraints, and how 18 worlds are each (39 forms, 184 roles cast to their types, keys and acts).
+# k.kinds/shards/structures: the structures of worlds, for alignment: 7 structures with their roles (direction, cardinality, required) and 6 constraints, and how 19 worlds are each (40 forms, 187 roles cast to their types, keys and acts).
 # sources: hand-core 1 (hand-written in this repository: tools/structures-core.mjs)
 # license: CC0-1.0
 # script: tools/structures-core.mjs
@@ -99,6 +99,10 @@
 @k.kinds.cast.w.list.sequence.position.w_list_item_n k.kinds.cast world=w.list structure=sequence role=position filler=w.list.item.n as=key core.source="hand-core 1"
 @k.kinds.cast.w.list.sequence.sequence.w_list_list k.kinds.cast world=w.list structure=sequence role=sequence filler=w.list.list as=type core.source="hand-core 1"
 @k.kinds.cast.w.list.sequence.element_of.w_list_item_list k.kinds.cast world=w.list structure=sequence role=element_of filler=w.list.item.list as=key core.source="hand-core 1"
+@k.kinds.form.w.tasks.sequence k.kinds.form world=w.tasks structure=sequence about="tasks in order on a to-do list (a list of w.list)" core.source="hand-core 1"
+@k.kinds.cast.w.tasks.sequence.element.w_tasks_task k.kinds.cast world=w.tasks structure=sequence role=element filler=w.tasks.task as=type core.source="hand-core 1"
+@k.kinds.cast.w.tasks.sequence.position.w_tasks_task_n k.kinds.cast world=w.tasks structure=sequence role=position filler=w.tasks.task.n as=key core.source="hand-core 1"
+@k.kinds.cast.w.tasks.sequence.element_of.w_tasks_task_list k.kinds.cast world=w.tasks structure=sequence role=element_of filler=w.tasks.task.list as=key core.source="hand-core 1"
 @k.kinds.form.w.face.whole_with_parts k.kinds.form world=w.face structure="whole with parts" about="a face made of parts of kinds (eyes, nose, mouth), each with a variant, a place and a size" core.source="hand-core 1"
 @k.kinds.cast.w.face.whole_with_parts.whole.w_face_face k.kinds.cast world=w.face structure="whole with parts" role=whole filler=w.face.face as=type core.source="hand-core 1"
 @k.kinds.cast.w.face.whole_with_parts.part.w_face_part k.kinds.cast world=w.face structure="whole with parts" role=part filler=w.face.part as=type core.source="hand-core 1"

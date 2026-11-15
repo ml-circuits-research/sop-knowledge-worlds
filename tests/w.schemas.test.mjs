@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('eight world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.timeline']);
+test('nine world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.seating', 'w.tasks', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
@@ -33,7 +33,7 @@ test('eight world schemas; each names no function, loads with std.acts, has word
     assert.deepEqual(index.schemas.find((x) => x.id === s.id), d.entry, s.id);
     assert.match(s.schemaText, /^# license: CC0-1\.0$/m);
   }
-  // All eight together in one world: no name of one clashes with another.
+  // All nine together in one world: no name of one clashes with another.
   assert.deepEqual(actsWorld().warnings ?? [], []);
 });
 
@@ -46,7 +46,7 @@ test('one sopworld build: the reusable worlds are validated with the build that 
 });
 
 test('a host finds a schema by name: the words of the vocabulary lead to the schema', () => {
-  for (const [word, id] of [['seating plan', 'w.seating'], ['table plan', 'w.seating'], ['shopping list', 'w.list'], ['checklist', 'w.list'], ['timeline', 'w.timeline'], ['chronology', 'w.timeline'], ['face', 'w.face'], ['avatar', 'w.face'], ['map', 'w.map'], ['world map', 'w.map'], ['bar chart', 'w.chart'], ['pie chart', 'w.chart'], ['line graph', 'w.chart'], ['flowchart', 'w.diagram'], ['mind map', 'w.diagram'], ['venn diagram', 'w.diagram']]) {
+  for (const [word, id] of [['seating plan', 'w.seating'], ['table plan', 'w.seating'], ['shopping list', 'w.list'], ['checklist', 'w.list'], ['timeline', 'w.timeline'], ['chronology', 'w.timeline'], ['face', 'w.face'], ['avatar', 'w.face'], ['map', 'w.map'], ['world map', 'w.map'], ['bar chart', 'w.chart'], ['pie chart', 'w.chart'], ['line graph', 'w.chart'], ['flowchart', 'w.diagram'], ['mind map', 'w.diagram'], ['venn diagram', 'w.diagram'], ['tasks', 'w.tasks'], ['chores', 'w.tasks'], ['things to do', 'w.tasks']]) {
     assert.ok(vocab[word]?.includes(`${id}/schema.sop`), word);
     assert.ok(index.schemas.find((x) => x.id === id).names.includes(word), word);
   }
@@ -104,6 +104,35 @@ test('w.list (PSys2 Q18 K1): a shop list with prices in lei, a budget and the mo
   const joins = Object.fromEntries(s.filter((x) => x.attrs.by).map((x) => [`${x.attrs.of[0]}.${x.attrs.key[0]}`, `${x.attrs.type[0]} by ${x.attrs.by[0]}`]));
   assert.deepEqual(joins, { 'w.list.list.currency': 'k.units.currency by code', 'w.list.item.food': 'k.food.food by name', 'w.list.item.object': 'k.objects.object by name',
     'w.list.item.unit': 'k.units.unit by name', 'w.list.item.currency': 'k.units.currency by code' });
+});
+
+test('w.tasks (PSys2 Q18 K2): tasks on a to-do list of w.list; done is a state the act change sets; open tasks picked; a reminder and a due date', () => {
+  const tasks = schemas.find((x) => x.id === 'w.tasks');
+  assert.deepEqual(describeSchema(tasks).entry.depends, ['w.list'], 'w.tasks imports w.list: its tasks stand on a w.list list');
+  assert.deepEqual(describeSchema(schemas.find((x) => x.id === 'w.list')).entry.depends, []);
+  const w = actsWorld(['w.tasks']), act = session(w);
+  assert.equal(act('make', { kind: 'w.list.list', name: 'to do', sort: 'to-do' }).result.thing, 'w_list_list1');
+  // "I should call grandma" (real row r0590), "set a reminder to water the plants", "my homework, due Friday"
+  assert.equal(act('make', { kind: 'w.tasks.task', text: 'call grandma', list: '$w_list_list1', n: 1, owner: 'me' }).ok, true);
+  assert.equal(act('make', { kind: 'w.tasks.task', text: 'water the plants', list: '$w_list_list1', n: 2, reminder: '2026-11-15T18:00' }).ok, true);
+  assert.equal(act('make', { kind: 'w.tasks.task', text: 'homework', list: '$w_list_list1', n: 3, due: 'Friday' }).ok, true);
+  assert.equal(act('ask', { thing: 'w_tasks_task1', attr: 'status' }).result.value, 'open');
+  // "I just finished my homework": status done; "what is left to do": the open tasks
+  assert.equal(act('change', { thing: 'w_tasks_task3', attr: 'status', value: 'done' }).ok, true);
+  assert.deepEqual(act('pick', { kind: 'w.tasks.task', status: 'open' }).result.things, ['w_tasks_task1', 'w_tasks_task2']);
+  assert.deepEqual(act('pick', { kind: 'w.tasks.task', status: 'done' }).result.things, ['w_tasks_task3']);
+  // "I didn't finish my homework": status open again; undo takes it back
+  assert.equal(act('change', { thing: 'w_tasks_task3', attr: 'status', value: 'open' }).ok, true);
+  assert.equal(act('undo', {}).ok, true);
+  assert.equal(act('ask', { thing: 'w_tasks_task3', attr: 'status' }).result.value, 'done');
+  // Refused: a status that is not one; a task on something that is not a list; a task with no text; a place in a picture.
+  const no = act('change', { thing: 'w_tasks_task1', attr: 'status', value: 'finished' });
+  assert.deepEqual([no.ok, no.violations[0].allowed], [false, ['open', 'done']]);
+  assert.equal(act('make', { kind: 'w.tasks.task', text: 'x', list: '$w_tasks_task1' }).ok, false);
+  assert.equal(act('place', { thing: 'w_tasks_task1', x: 3 }).ok, false);
+  // tasks are grouped (the chores of a day)
+  assert.equal(act('group', { things: ['w_tasks_task1', 'w_tasks_task2'], name: 'today' }).ok, true);
+  assert.equal(act('pick', { kind: 'w.tasks.task' }).result.things.length, 3);
 });
 
 test('a session with a seating plan: a table, seats, guests on seats, a link between guests, a shape that is not allowed', () => {

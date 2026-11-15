@@ -1,5 +1,5 @@
 {
- "version": "a31523a34446",
+ "version": "50be8d5458bf",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -11177,8 +11177,8 @@
     {
      "id": "k.attributes/shards/typical",
      "path": "k.attributes/shards/typical.sop",
-     "wires": 146,
-     "bytes": 18829,
+     "wires": 153,
+     "bytes": 19736,
      "keys": [
       "about",
       "age",
@@ -11203,6 +11203,7 @@
       "covering",
       "device",
       "drink",
+      "due",
       "eats",
       "elevation",
       "expression",
@@ -11234,6 +11235,7 @@
       "neighbour",
       "note",
       "on",
+      "owner",
       "parts",
       "party",
       "person",
@@ -11242,6 +11244,7 @@
       "population",
       "price",
       "quantity",
+      "reminder",
       "seat",
       "seats",
       "shape",
@@ -11274,6 +11277,7 @@
       "w.seating.guest",
       "w.seating.seat",
       "w.seating.table",
+      "w.tasks.task",
       "w.timeline.event",
       "w.timeline.timeline",
       "weight",
@@ -30080,8 +30084,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 281,
-     "bytes": 51720,
+     "wires": 285,
+     "bytes": 52396,
      "keys": [
       "assigned",
       "assignment",
@@ -30267,6 +30271,10 @@
       "w.seating.table.seats",
       "w.seating.table.x",
       "w.seating.table.y",
+      "w.tasks",
+      "w.tasks.task",
+      "w.tasks.task.list",
+      "w.tasks.task.n",
       "w.timeline",
       "w.timeline.event",
       "w.timeline.event.at",
@@ -87922,6 +87930,7 @@
    "id": "w.chart",
    "version": "1",
    "schema": "w.chart/schema.sop",
+   "depends": [],
    "about": "charts of numbers: series of values by category",
    "names": [
     "chart",
@@ -88025,6 +88034,7 @@
    "id": "w.diagram",
    "version": "1",
    "schema": "w.diagram/schema.sop",
+   "depends": [],
    "about": "diagrams of nodes joined by edges, in groups, laid out by the diagram's kind",
    "names": [
     "diagram",
@@ -88170,6 +88180,7 @@
    "id": "w.document",
    "version": "1",
    "schema": "w.document/schema.sop",
+   "depends": [],
    "about": "written documents: chapters, sections, paragraphs, slides and sentences, each sentence with the facts it states",
    "names": [
     "document",
@@ -88342,6 +88353,7 @@
    "id": "w.face",
    "version": "1",
    "schema": "w.face/schema.sop",
+   "depends": [],
    "about": "a drawn face: parts with their variant, colour, size and place, and an expression",
    "names": [
     "face",
@@ -88819,6 +88831,7 @@
    "id": "w.list",
    "version": "3",
    "schema": "w.list/schema.sop",
+   "depends": [],
    "about": "lists of entries in order, which can be ticked off",
    "names": [
     "list",
@@ -88904,6 +88917,7 @@
    "id": "w.map",
    "version": "1",
    "schema": "w.map/schema.sop",
+   "depends": [],
    "about": "a map of the world: places of k.geo shown, highlighted and pinned, and the view's zoom and layer",
    "names": [
     "map",
@@ -88992,6 +89006,7 @@
    "id": "w.seating",
    "version": "2",
    "schema": "w.seating/schema.sop",
+   "depends": [],
    "about": "a seating plan: tables, seats and the guests on them",
    "names": [
     "seating plan",
@@ -89086,9 +89101,71 @@
    "warnings": []
   },
   {
+   "id": "w.tasks",
+   "version": "1",
+   "schema": "w.tasks/schema.sop",
+   "depends": [
+    "w.list"
+   ],
+   "about": "tasks to do, each open or done, with a due date, an owner and a reminder",
+   "names": [
+    "tasks",
+    "task list",
+    "chores",
+    "reminders",
+    "things to do",
+    "to-dos",
+    "todos"
+   ],
+   "kinds": [
+    {
+     "type": "w.tasks.task",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "group",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "text",
+      "status",
+      "list",
+      "n",
+      "due",
+      "reminder",
+      "owner",
+      "note"
+     ],
+     "words": [
+      "task",
+      "tasks",
+      "chore",
+      "chores",
+      "job",
+      "jobs",
+      "to-do",
+      "todo",
+      "reminder",
+      "reminders"
+     ]
+    }
+   ],
+   "wires": 23,
+   "bytes": 4658,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
    "id": "w.timeline",
    "version": "2",
    "schema": "w.timeline/schema.sop",
+   "depends": [],
    "about": "timelines: events in order of time",
    "names": [
     "timeline",
