@@ -1,5 +1,5 @@
 {
- "version": "821459a82fe6",
+ "version": "82bd5025fa08",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -89367,6 +89367,39 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/words-k.body",
+     "path": "w.lang.en/shards/words-k.body.sop",
+     "wires": 20,
+     "bytes": 2965,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.body.part: w.lang.en.word.k.body.part: means=k.body.part names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.sense: w.lang.en.word.k.body.sense: means=k.body.sense names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.count: w.lang.en.word.k.body.count: means=k.body.part.count names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.does: w.lang.en.word.k.body.does: means=k.body.part.does names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.inside: w.lang.en.word.k.body.inside: means=k.body.part.inside names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.about: w.lang.en.word.k.body.about: means=k.body.part.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.kind: w.lang.en.word.k.body.key.part.kind: means=k.body.part.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.part_of: w.lang.en.word.k.body.key.part.part_of: means=k.body.part.part_of names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.count: w.lang.en.word.k.body.key.part.count: means=k.body.part.count names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.child_count: w.lang.en.word.k.body.key.part.child_count: means=k.body.part.child_count names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.does: w.lang.en.word.k.body.key.part.does: means=k.body.part.does names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.drawing: w.lang.en.word.k.body.key.part.drawing: means=k.body.part.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.about: w.lang.en.word.k.body.key.part.about: means=k.body.part.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.count_per_part: w.lang.en.word.k.body.key.part.count_per_part: means=k.body.part.count_per_part names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.count_about: w.lang.en.word.k.body.key.part.count_about: means=k.body.part.count_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.temperature_about: w.lang.en.word.k.body.key.part.temperature_about: means=k.body.part.temperature_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.amount_about: w.lang.en.word.k.body.key.part.amount_about: means=k.body.part.amount_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.length_about: w.lang.en.word.k.body.key.part.length_about: means=k.body.part.length_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.part.weight_about: w.lang.en.word.k.body.key.part.weight_about: means=k.body.part.weight_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.body.key.sense.organ: w.lang.en.word.k.body.key.sense.organ: means=k.body.sense.organ names no action, type, key or value of the matrix"
+     ]
     },
     {
      "id": "w.lang.en/shards/words-k.feelings",
