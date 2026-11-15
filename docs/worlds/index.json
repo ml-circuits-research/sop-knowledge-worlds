@@ -1,5 +1,5 @@
 {
- "version": "f00e0ce1174b",
+ "version": "3b8da665e988",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -91304,6 +91304,48 @@
       "unknown-word w.lang.en.word.k.story.key.constraint.about: w.lang.en.word.k.story.key.constraint.about: means=k.story.constraint.about names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.story.key.constraint.source: w.lang.en.word.k.story.key.constraint.source: means=k.story.constraint.source names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.story.key.constraint.own: w.lang.en.word.k.story.key.constraint.own: means=k.story.constraint.own names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.units",
+     "path": "w.lang.en/shards/words-k.units.sop",
+     "wires": 29,
+     "bytes": 4225,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.units.unit: w.lang.en.word.k.units.unit: means=k.units.unit names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.currency: w.lang.en.word.k.units.currency: means=k.units.currency names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.symbol: w.lang.en.word.k.units.symbol: means=k.units.unit.symbol names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.factor: w.lang.en.word.k.units.factor: means=k.units.unit.factor names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.quantity: w.lang.en.word.k.units.quantity: means=k.units.unit.quantity names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.measure: w.lang.en.word.k.units.measure: means=k.units.measure names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.quantity: w.lang.en.word.k.units.key.quantity: means=k.units.quantity names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.quantity.base: w.lang.en.word.k.units.key.quantity.base: means=k.units.quantity.base names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.unit.quantity: w.lang.en.word.k.units.key.unit.quantity: means=k.units.unit.quantity names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.unit.offset: w.lang.en.word.k.units.key.unit.offset: means=k.units.unit.offset names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.unit.system: w.lang.en.word.k.units.key.unit.system: means=k.units.unit.system names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.type: w.lang.en.word.k.units.key.measure.type: means=k.units.measure.type names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.key: w.lang.en.word.k.units.key.measure.key: means=k.units.measure.key names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.unit: w.lang.en.word.k.units.key.measure.unit: means=k.units.measure.unit names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.counts: w.lang.en.word.k.units.key.measure.counts: means=k.units.measure.counts names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.frame: w.lang.en.word.k.units.key.measure.frame: means=k.units.measure.frame names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.plain: w.lang.en.word.k.units.key.measure.plain: means=k.units.measure.plain names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.ordinal: w.lang.en.word.k.units.key.measure.ordinal: means=k.units.measure.ordinal names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.measure.approximate: w.lang.en.word.k.units.key.measure.approximate: means=k.units.measure.approximate names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.name: w.lang.en.word.k.units.key.currency.name: means=k.units.currency.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.name_plural: w.lang.en.word.k.units.key.currency.name_plural: means=k.units.currency.name_plural names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.unit: w.lang.en.word.k.units.key.currency.unit: means=k.units.currency.unit names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.unit_plural: w.lang.en.word.k.units.key.currency.unit_plural: means=k.units.currency.unit_plural names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.symbol: w.lang.en.word.k.units.key.currency.symbol: means=k.units.currency.symbol names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.narrow: w.lang.en.word.k.units.key.currency.narrow: means=k.units.currency.narrow names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.decimals: w.lang.en.word.k.units.key.currency.decimals: means=k.units.currency.decimals names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.minor: w.lang.en.word.k.units.key.currency.minor: means=k.units.currency.minor names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.minor_plural: w.lang.en.word.k.units.key.currency.minor_plural: means=k.units.currency.minor_plural names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.units.key.currency.country: w.lang.en.word.k.units.key.currency.country: means=k.units.currency.country names no action, type, key or value of the matrix"
      ]
     },
     {
