@@ -6734,3 +6734,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   Burundi reforms: 8.6 %); Wikidata P150 no cleaner (France: Lorraine listed, 5 regions missing; a river as a
   division). Needs a source that is kept current, or a per-country check.
 - Tests: k.geo (new T43 test); `npm run test:changed` 71 files, 0 red.
+## 2026-11-15 — w.request, w.dialogue, k.expect and the cues (owner's GO, psys2 reviewer block 14:00)
+
+- `w.request` (schema v1): request (act, mode, target, refers, goes_to, text, said, n, revises, status), constraint
+  (request, on = kind|count|size|extent|attribute|place|manner|layout|with|about|length, want = yes|no|not_all, value,
+  of, attribute, relation, number, min, max, amount, unit, words, origin = said|default|reaction, honoured, why),
+  unread (request, text, n, note).
+- `w.dialogue` (schema v1, imports w.request): session, tab (last_request, last_result), turn (sort, reaction),
+  result (thing many, effect, status, replaces, seed), assumption, question; `w.dialogue.revision` data: how each of
+  reject, reduce, enlarge, refine, redo, put_back, thanks, frustration revises the last request.
+- `k.expect` (new world, tools/expect-core.mjs in the build): 9 amounts, 5 scale steps, 13 hand makes (diagram 5-9
+  nodes of 2-3 shapes; pond: water + water plants + animals ...), 60 scene makes from k.scenes has, 10 diagram makes
+  from k.diagrams; 1,302 wires in 4 shards, all hand-core 1 CC0.
+- `w.lang.en.cue` type + shard `hand-cues` (81 cues: negation, counts/ranges/amounts, scale, place, manner, layout,
+  attribute, with, about, length, reactions); replies sorry, assumed, not_honoured, unread, done.revise (en, ro).
+- Tests: new tests/request-worlds.test.mjs; `npm run test:changed` 75 files, 0 red.

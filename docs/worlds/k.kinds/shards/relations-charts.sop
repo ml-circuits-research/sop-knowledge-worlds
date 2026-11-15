@@ -22,7 +22,7 @@
 @k.kinds.relation.k.charts.rule.kind k.kinds.relation type=k.charts.rule key=kind subject=rule object=kind object_type=k.charts.kind found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.charts.rule.rank k.kinds.relation type=k.charts.rule key=rank subject=rule object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.charts.rule.categories_max k.kinds.relation type=k.charts.rule key=categories_max subject=rule object=number found=schema core.source="hand-core 1"
-@k.kinds.relation.k.charts.rule.series k.kinds.relation type=k.charts.rule key=series subject=rule object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.charts.rule.series k.kinds.relation type=k.charts.rule key=series subject=rule object=value object_type=k.expect.amount found=value core.source="hand-core 1"
 @k.kinds.relation.k.charts.rule.points_min k.kinds.relation type=k.charts.rule key=points_min subject=rule object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.charts.rule.about k.kinds.relation type=k.charts.rule key=about subject=rule object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.charts.rule.source k.kinds.relation type=k.charts.rule key=source subject=rule object=thing object_type=k.charts.source found=declared object_by=name core.source="hand-core 1"

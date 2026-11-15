@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=number exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc exports=reply exports=fn exports=feeling_reply exports=count core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=number exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc exports=reply exports=fn exports=feeling_reply exports=count exports=cue core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -636,6 +636,39 @@
 @w.lang.en.skip.class core.slot of=w.lang.en.skip key=class id=true required=true enum=politeness enum=desire enum=filler enum=conjunction enum=copula enum=reflexive enum=request_preposition core.source="hand-core 1"
 @w.lang.en.skip.text core.slot of=w.lang.en.skip key=text many=true required=true kind=atom kind=string core.source="hand-core 1"
 @w.lang.en.skip.doc core.slot of=w.lang.en.skip key=doc kind=string core.source="hand-core 1"
+
+# A cue (reviewer block 2026-11-15 14:00, w.request and w.dialogue): a phrasing that sets a constraint of a w.request
+# request, or marks a turn as a reaction of w.dialogue. `on` what it sets: a constraint `on` of w.request (kind,
+# count, size, extent, attribute, place, manner, layout, with, about, length) or `reaction` (a w.dialogue reaction,
+# `value` the reaction: reject, reduce ...). `want` the w.request `want` it gives (no: "not", "without", "instead of";
+# not_all: "not all"). `attribute` the k.attributes attribute a value is of (colour: "in red"). `value` the value it gives (a k.expect scale step: small, big; a manner: tidy; a place:
+# corner; a reaction). `bound` for a count or a length: exact, min ("at least"), max ("at most"), range ("between 5 and
+# 10"), about ("about 5": a range around the number, the k.expect amount `about`). `amount` a k.expect amount by name
+# ("a few": few). `step` up or down: a comparative or a reaction moves the constraint one scale step ("bigger",
+# "too much"). How it is said: `lead` (many: alternatives) the words before the operand, `between` (many) the words
+# between the two operands of a range, `trail` (many) the words after it; a cue with no operand (`takes=none`) is
+# said by its lead alone. `takes` what follows the lead: none, number, range (two numbers), kind (a noun phrase: the
+# kind), value (a word: an adjective, a colour), topic (the rest of the sentence), thing (a thing of the world).
+# `unit` for a length (word, sentence, paragraph, chapter, page). `priority` where two cues read the same words, the
+# higher wins (the longer phrase). `example` (many) sentences it reads.
+@w.lang.en.cue core.type of=w.lang.en.cue shared=true closed=true core.source="hand-core 1"
+@w.lang.en.cue.name core.slot of=w.lang.en.cue key=name id=true required=true kind=atom core.source="hand-core 1"
+@w.lang.en.cue.on core.slot of=w.lang.en.cue key=on required=true enum=kind enum=count enum=size enum=extent enum=attribute enum=place enum=manner enum=layout enum=with enum=about enum=length enum=reaction core.source="hand-core 1"
+@w.lang.en.cue.want core.slot of=w.lang.en.cue key=want enum=yes enum=no enum=not_all core.source="hand-core 1"
+@w.lang.en.cue.value core.slot of=w.lang.en.cue key=value kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.cue.relation core.slot of=w.lang.en.cue key=relation kind=atom core.source="hand-core 1"
+@w.lang.en.cue.attribute core.slot of=w.lang.en.cue key=attribute kind=atom core.source="hand-core 1"
+@w.lang.en.cue.bound core.slot of=w.lang.en.cue key=bound enum=exact enum=min enum=max enum=range enum=about core.source="hand-core 1"
+@w.lang.en.cue.amount core.slot of=w.lang.en.cue key=amount kind=atom core.source="hand-core 1"
+@w.lang.en.cue.step core.slot of=w.lang.en.cue key=step enum=up enum=down core.source="hand-core 1"
+@w.lang.en.cue.lead core.slot of=w.lang.en.cue key=lead many=true kind=string core.source="hand-core 1"
+@w.lang.en.cue.between core.slot of=w.lang.en.cue key=between many=true kind=string core.source="hand-core 1"
+@w.lang.en.cue.trail core.slot of=w.lang.en.cue key=trail many=true kind=string core.source="hand-core 1"
+@w.lang.en.cue.takes core.slot of=w.lang.en.cue key=takes required=true enum=none enum=number enum=range enum=kind enum=value enum=topic enum=thing core.source="hand-core 1"
+@w.lang.en.cue.unit core.slot of=w.lang.en.cue key=unit kind=atom core.source="hand-core 1"
+@w.lang.en.cue.priority core.slot of=w.lang.en.cue key=priority kind=integer min=1 core.source="hand-core 1"
+@w.lang.en.cue.example core.slot of=w.lang.en.cue key=example many=true kind=string core.source="hand-core 1"
+@w.lang.en.word.cue core.word text=cue text=cues text="request cue" text="reaction cue" means=w.lang.en.cue core.source="hand-core 1"
 
 @w.lang.en.word.closed core.word text="word class" text="closed class" text="function word" text="function words" means=w.lang.en.closed core.source="hand-core 1"
 @w.lang.en.word.class core.word text="paradigm class" text="inflection class" text=inflection text=conjugation means=w.lang.en.class core.source="hand-core 1"

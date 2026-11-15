@@ -1,4 +1,4 @@
-# k.kinds/shards/structures: the structures of worlds, for alignment: 7 structures with their roles (direction, cardinality, required) and 6 constraints, and how 21 worlds are each (42 forms, 200 roles cast to their types, keys and acts).
+# k.kinds/shards/structures: the structures of worlds, for alignment: 7 structures with their roles (direction, cardinality, required) and 6 constraints, and how 23 worlds are each (45 forms, 213 roles cast to their types, keys and acts).
 # sources: hand-core 1 (hand-written in this repository: tools/structures-core.mjs)
 # license: CC0-1.0
 # script: tools/structures-core.mjs
@@ -101,6 +101,22 @@
 @k.kinds.cast.w.calendar.sequence.sequence.w_calendar_calendar k.kinds.cast world=w.calendar structure=sequence role=sequence filler=w.calendar.calendar as=type core.source="hand-core 1"
 @k.kinds.cast.w.calendar.sequence.element_of.w_calendar_event_calendar k.kinds.cast world=w.calendar structure=sequence role=element_of filler=w.calendar.event.calendar as=key core.source="hand-core 1"
 @k.kinds.cast.w.calendar.sequence.end.w_calendar_event_last_date k.kinds.cast world=w.calendar structure=sequence role=end filler=w.calendar.event.last_date as=key core.source="hand-core 1"
+@k.kinds.form.w.request.whole_with_parts k.kinds.form world=w.request structure="whole with parts" about="a request made of constraints (each on a key: kind, count, size ...) and the words no constraint took" core.source="hand-core 1"
+@k.kinds.cast.w.request.whole_with_parts.whole.w_request_request k.kinds.cast world=w.request structure="whole with parts" role=whole filler=w.request.request as=type core.source="hand-core 1"
+@k.kinds.cast.w.request.whole_with_parts.part.w_request_constraint k.kinds.cast world=w.request structure="whole with parts" role=part filler=w.request.constraint as=type core.source="hand-core 1"
+@k.kinds.cast.w.request.whole_with_parts.part.w_request_unread k.kinds.cast world=w.request structure="whole with parts" role=part filler=w.request.unread as=type core.source="hand-core 1"
+@k.kinds.cast.w.request.whole_with_parts.part_of.w_request_constraint_request k.kinds.cast world=w.request structure="whole with parts" role=part_of filler=w.request.constraint.request as=key core.source="hand-core 1"
+@k.kinds.cast.w.request.whole_with_parts.part_of.w_request_unread_request k.kinds.cast world=w.request structure="whole with parts" role=part_of filler=w.request.unread.request as=key core.source="hand-core 1"
+@k.kinds.cast.w.request.whole_with_parts.part_kind.w_request_constraint_on k.kinds.cast world=w.request structure="whole with parts" role=part_kind filler=w.request.constraint.on as=key core.source="hand-core 1"
+@k.kinds.form.w.dialogue.whole_with_parts k.kinds.form world=w.dialogue structure="whole with parts" about="a session made of tabs" core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.whole_with_parts.whole.w_dialogue_session k.kinds.cast world=w.dialogue structure="whole with parts" role=whole filler=w.dialogue.session as=type core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.whole_with_parts.part.w_dialogue_tab k.kinds.cast world=w.dialogue structure="whole with parts" role=part filler=w.dialogue.tab as=type core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.whole_with_parts.part_of.w_dialogue_tab_session k.kinds.cast world=w.dialogue structure="whole with parts" role=part_of filler=w.dialogue.tab.session as=key core.source="hand-core 1"
+@k.kinds.form.w.dialogue.sequence k.kinds.form world=w.dialogue structure=sequence about="the turns of a tab in order" core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.sequence.element.w_dialogue_turn k.kinds.cast world=w.dialogue structure=sequence role=element filler=w.dialogue.turn as=type core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.sequence.position.w_dialogue_turn_n k.kinds.cast world=w.dialogue structure=sequence role=position filler=w.dialogue.turn.n as=key core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.sequence.sequence.w_dialogue_tab k.kinds.cast world=w.dialogue structure=sequence role=sequence filler=w.dialogue.tab as=type core.source="hand-core 1"
+@k.kinds.cast.w.dialogue.sequence.element_of.w_dialogue_turn_tab k.kinds.cast world=w.dialogue structure=sequence role=element_of filler=w.dialogue.turn.tab as=key core.source="hand-core 1"
 @k.kinds.form.w.list.sequence k.kinds.form world=w.list structure=sequence about="items in order on a list" core.source="hand-core 1"
 @k.kinds.cast.w.list.sequence.element.w_list_item k.kinds.cast world=w.list structure=sequence role=element filler=w.list.item as=type core.source="hand-core 1"
 @k.kinds.cast.w.list.sequence.position.w_list_item_n k.kinds.cast world=w.list structure=sequence role=position filler=w.list.item.n as=key core.source="hand-core 1"

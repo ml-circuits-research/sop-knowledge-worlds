@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.diagrams, k.story, k.procedures): 278 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.expect, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.diagrams, k.story, k.procedures): 297 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -153,6 +153,24 @@
 @k.units.measure.k.people.kind.height_about k.units.measure world=k.people type=kind key=height_about counts="hundredth of the height of a grown man" approximate=true core.source="hand-core 1"
 @k.units.measure.k.people.given_name.holders k.units.measure world=k.people type=given_name key=holders counts="human in Wikidata whose given name it is" core.source="hand-core 1"
 @k.units.measure.k.scenes.has.count k.units.measure world=k.scenes type=has key=count counts="thing of that name in the scene" core.source="hand-core 1"
+@k.units.measure.k.expect.amount.min k.units.measure world=k.expect type=amount key=min counts="thing counted" core.source="hand-core 1"
+@k.units.measure.k.expect.amount.max k.units.measure world=k.expect type=amount key=max counts="thing counted" core.source="hand-core 1"
+@k.units.measure.k.expect.amount.typical k.units.measure world=k.expect type=amount key=typical counts="thing counted" core.source="hand-core 1"
+@k.units.measure.k.expect.amount.min_factor k.units.measure world=k.expect type=amount key=min_factor plain=true core.source="hand-core 1"
+@k.units.measure.k.expect.amount.max_factor k.units.measure world=k.expect type=amount key=max_factor plain=true core.source="hand-core 1"
+@k.units.measure.k.expect.scale.order k.units.measure world=k.expect type=scale key=order ordinal=true core.source="hand-core 1"
+@k.units.measure.k.expect.scale.count_factor k.units.measure world=k.expect type=scale key=count_factor plain=true core.source="hand-core 1"
+@k.units.measure.k.expect.scale.size_factor k.units.measure world=k.expect type=scale key=size_factor plain=true core.source="hand-core 1"
+@k.units.measure.k.expect.scale.extent k.units.measure world=k.expect type=scale key=extent plain=true core.source="hand-core 1"
+@k.units.measure.k.expect.make.min k.units.measure world=k.expect type=make key=min counts="unit that the key unit of the same fact names" core.source="hand-core 1"
+@k.units.measure.k.expect.make.max k.units.measure world=k.expect type=make key=max counts="unit that the key unit of the same fact names" core.source="hand-core 1"
+@k.units.measure.k.expect.make.typical k.units.measure world=k.expect type=make key=typical counts="unit that the key unit of the same fact names" core.source="hand-core 1"
+@k.units.measure.k.expect.make.kinds_min k.units.measure world=k.expect type=make key=kinds_min counts="kind of part" core.source="hand-core 1"
+@k.units.measure.k.expect.make.kinds_max k.units.measure world=k.expect type=make key=kinds_max counts="kind of part" core.source="hand-core 1"
+@k.units.measure.k.expect.make.length k.units.measure world=k.expect type=make key=length counts="unit that the key length_unit of the same fact names" core.source="hand-core 1"
+@k.units.measure.k.expect.part.min k.units.measure world=k.expect type=part key=min counts="part of that name" core.source="hand-core 1"
+@k.units.measure.k.expect.part.max k.units.measure world=k.expect type=part key=max counts="part of that name" core.source="hand-core 1"
+@k.units.measure.k.expect.part.typical k.units.measure world=k.expect type=part key=typical counts="part of that name" core.source="hand-core 1"
 @k.units.measure.k.shapes.shape.sides k.units.measure world=k.shapes type=shape key=sides counts=side core.source="hand-core 1"
 @k.units.measure.k.shapes.shape.corners k.units.measure world=k.shapes type=shape key=corners counts=corner core.source="hand-core 1"
 @k.units.measure.k.shapes.shape.faces k.units.measure world=k.shapes type=shape key=faces counts=face core.source="hand-core 1"
@@ -212,6 +230,7 @@
 @k.units.measure.w.lang.en.ellipsis.param.min k.units.measure world=w.lang.en type=ellipsis.param key=min counts="word or part that the name of the limit says" core.source="hand-core 1"
 @k.units.measure.w.lang.en.ellipsis.param.max k.units.measure world=w.lang.en type=ellipsis.param key=max counts="word or part that the name of the limit says" core.source="hand-core 1"
 @k.units.measure.w.lang.en.coord.param.value k.units.measure world=w.lang.en type=coord.param key=value counts=word core.source="hand-core 1"
+@k.units.measure.w.lang.en.cue.priority k.units.measure world=w.lang.en type=cue key=priority ordinal=true core.source="hand-core 1"
 @k.units.measure.k.motion.layer.priority k.units.measure world=k.motion type=layer key=priority ordinal=true core.source="hand-core 1"
 @k.units.measure.k.motion.rule.repeat_min k.units.measure world=k.motion type=rule key=repeat_min unit=millisecond core.source="hand-core 1"
 @k.units.measure.k.motion.rule.repeat_max k.units.measure world=k.motion type=rule key=repeat_max unit=millisecond core.source="hand-core 1"

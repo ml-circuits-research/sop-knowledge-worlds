@@ -10,7 +10,7 @@
 @k.kinds.relation.k.diagrams.fill.topic k.kinds.relation type=k.diagrams.fill key=topic subject=fill object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.fill.about k.kinds.relation type=k.diagrams.fill key=about subject=fill object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.fill.by k.kinds.relation type=k.diagrams.fill key=by subject=fill object=thing object_type=k.attributes.attribute found=declared object_by=name core.source="hand-core 1"
-@k.kinds.relation.k.diagrams.kind.form k.kinds.relation type=k.diagrams.kind key=form subject=kind object=value object_type=k.diagrams.kind found=value core.source="hand-core 1"
+@k.kinds.relation.k.diagrams.kind.form k.kinds.relation type=k.diagrams.kind key=form subject=kind object=value object_type=k.diagrams.kind object_type=k.expect.make found=value core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.kind.about k.kinds.relation type=k.diagrams.kind key=about subject=kind object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.kind.structure k.kinds.relation type=k.diagrams.kind key=structure subject=kind object=thing object_type=k.kinds.structure found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.diagrams.kind.layout k.kinds.relation type=k.diagrams.kind key=layout subject=kind object=value found=schema core.source="hand-core 1"

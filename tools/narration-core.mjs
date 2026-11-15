@@ -35,7 +35,7 @@ const q = (s) => (/^[a-z][\w.]*$/.test(String(s)) ? String(s) : JSON.stringify(S
 
 // Types that are machinery, not things a composition is about: by world (every type of it) or by type.
 export const MACHINERY = {
-  'k.motion': 'how a drawn face moves over time', 'k.procedures': 'how goals are reached, steps for a planner',
+  'k.expect': 'what a planner fills in when a request does not say it', 'k.motion': 'how a drawn face moves over time', 'k.procedures': 'how goals are reached, steps for a planner',
   'k.genres': 'how documents are built', 'k.interest': 'how interest is computed', 'k.story': 'how stories are built',
   'k.layouts': 'where things are placed in a drawing', 'k.drawing': 'the geometry of drawings', 'k.faces': 'the parts of a drawn face',
   'k.objects': 'drawings and their parts', 'k.named': 'a helper type of names', 'k.kinds': 'the up edges of the catalog, generated',

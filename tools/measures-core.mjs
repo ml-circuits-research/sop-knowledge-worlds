@@ -50,6 +50,13 @@ export const MEASURES = {
   'k.parts': { inherited: { steps: { counts: 'step from the thing up to the kind' } } },
   'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } }, given_name: { holders: { counts: 'human in Wikidata whose given name it is' } } },
   'k.scenes': { has: { count: { counts: 'thing of that name in the scene' } } },
+  // k.expect: counts of things, parts and kinds; factors and the share of the canvas are plain numbers.
+  'k.expect': {
+    amount: { min: { counts: 'thing counted' }, max: { counts: 'thing counted' }, typical: { counts: 'thing counted' }, min_factor: { plain: true }, max_factor: { plain: true } },
+    scale: { order: ord, count_factor: { plain: true }, size_factor: { plain: true }, extent: { plain: true } },
+    make: { min: { counts: 'unit that the key unit of the same fact names' }, max: { counts: 'unit that the key unit of the same fact names' }, typical: { counts: 'unit that the key unit of the same fact names' }, kinds_min: { counts: 'kind of part' }, kinds_max: { counts: 'kind of part' }, length: { counts: 'unit that the key length_unit of the same fact names' } },
+    part: { min: { counts: 'part of that name' }, max: { counts: 'part of that name' }, typical: { counts: 'part of that name' } },
+  },
   'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
   'k.time': { zone: { lat: deg, lon: deg, offset_january: { unit: 'minute' }, offset_july: { unit: 'minute' } }, ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord }, stage: { n: ord },
     part_of_day: { n: ord, starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, span: { starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, hour: { n: { counts: 'hour after midnight' }, hour12: { counts: 'hour after midnight or noon' } },
@@ -62,7 +69,7 @@ export const MEASURES = {
   'w.lang.en': {
     det: { person: { plain: true }, value: { plain: true } }, number: { value: { plain: true }, value_about: { plain: true } }, pron: { person: { plain: true } }, anaphor: { order: ord }, prep: { arity: { counts: 'thing the preposition relates' } },
     ordinal: { value: { plain: true } }, numeral: { value: { plain: true } },
-    inflect: { order: ord, drop: { counts: 'letter' }, min_length: { counts: 'letter' } }, frame: { priority: ord }, rule: { priority: ord }, alternation: { n: ord }, part: { at: ord, max_words: { counts: 'word' } },
+    inflect: { order: ord, drop: { counts: 'letter' }, min_length: { counts: 'letter' } }, frame: { priority: ord }, cue: { priority: ord }, rule: { priority: ord }, alternation: { n: ord }, part: { at: ord, max_words: { counts: 'word' } },
     'ellipsis.lead': { order: ord }, 'ellipsis.trail': { order: ord }, 'ellipsis.param': { value: { counts: 'word or part that the name of the limit says' }, min: { counts: 'word or part that the name of the limit says' }, max: { counts: 'word or part that the name of the limit says' } },
     'coord.param': { value: { counts: 'word' } },
     calc: { factor: { plain: true } }, // a multiplier (double 2, half 0.5): a plain number

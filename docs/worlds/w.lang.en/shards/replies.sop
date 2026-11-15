@@ -73,3 +73,12 @@
 @w.lang.en.reply.refused.nothing_to_show.one w.lang.en.reply name=refused.nothing_to_show count=one role=view text="Nothing here has what the view {view} shows." core.source="hand-core 1"
 @w.lang.en.reply.refused.bad_value.one w.lang.en.reply name=refused.bad_value count=one role=key text="That is not a {key} here." core.source="hand-core 1"
 @w.lang.en.reply.person.know.none.one w.lang.en.reply name=person.know.none count=one text="I do not know anything about you yet." core.source="hand-core 1"
+
+# The replies of a request and its revision (reviewer block 2026-11-15 14:00: w.request, w.dialogue): an apology for a
+# frustration, what was assumed (a constraint with origin=default), a constraint the world could not honour, the words
+# no constraint took (w.request.unread), and a revision redone.
+@w.lang.en.reply.sorry.one w.lang.en.reply name=sorry count=one text="Sorry, I will try again." example="Sorry, I will try again." core.source="hand-core 1"
+@w.lang.en.reply.assumed.one w.lang.en.reply name=assumed count=one role=key role=value text="I assumed {value} for the {key}." example="I assumed 7 for the count." core.source="hand-core 1"
+@w.lang.en.reply.not_honoured.one w.lang.en.reply name=not_honoured count=one role=words role=why text="I could not do {words}: {why}." example="I could not do in a corner: a diagram has no corners." core.source="hand-core 1"
+@w.lang.en.reply.unread.one w.lang.en.reply name=unread count=one role=words text="I did not use: {words}." example="I did not use: blorp." core.source="hand-core 1"
+@w.lang.en.reply.done.revise.one w.lang.en.reply name=done.revise count=one text="I made it again, the way you said." example="I made it again, the way you said." core.source="hand-core 1"

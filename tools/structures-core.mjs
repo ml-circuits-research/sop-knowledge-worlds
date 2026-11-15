@@ -88,6 +88,10 @@ export const FORMS = [
   ['w.calendar', 'sequence', 'events in order of their dates on a calendar (an event of several days ends on its last date)', [
     ['element', 'w.calendar.event', T], ['position', 'w.calendar.event.date', K], ['position', 'w.calendar.event.start', K], ['sequence', 'w.calendar.calendar', T], ['element_of', 'w.calendar.event.calendar', K],
     ['end', 'w.calendar.event.last_date', K]]],
+  ['w.request', 'whole with parts', 'a request made of constraints (each on a key: kind, count, size ...) and the words no constraint took', [
+    ['whole', 'w.request.request', T], ['part', 'w.request.constraint', T], ['part', 'w.request.unread', T], ['part_of', 'w.request.constraint.request', K], ['part_of', 'w.request.unread.request', K], ['part_kind', 'w.request.constraint.on', K]]],
+  ['w.dialogue', 'whole with parts', 'a session made of tabs', [['whole', 'w.dialogue.session', T], ['part', 'w.dialogue.tab', T], ['part_of', 'w.dialogue.tab.session', K]]],
+  ['w.dialogue', 'sequence', 'the turns of a tab in order', [['element', 'w.dialogue.turn', T], ['position', 'w.dialogue.turn.n', K], ['sequence', 'w.dialogue.tab', T], ['element_of', 'w.dialogue.turn.tab', K]]],
   ['w.list', 'sequence', 'items in order on a list', [['element', 'w.list.item', T], ['position', 'w.list.item.n', K], ['sequence', 'w.list.list', T], ['element_of', 'w.list.item.list', K]]],
   ['w.tasks', 'sequence', 'tasks in order on a to-do list (a list of w.list)', [['element', 'w.tasks.task', T], ['position', 'w.tasks.task.n', K], ['element_of', 'w.tasks.task.list', K]]],
   ['w.person', 'graph', 'a person linked to their relatives (a relative of a relation) and to what they like or dislike', [['node', 'w.person.person', T], ['link', 'w.person.relative', T], ['from', 'w.person.relative.of', K], ['label', 'w.person.relative.relation', K], ['link', 'w.person.taste', T], ['from', 'w.person.taste.of', K], ['label', 'w.person.taste.stance', K]]],

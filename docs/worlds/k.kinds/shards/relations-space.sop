@@ -6,7 +6,7 @@
 @k.kinds.relation.k.space.body.kind k.kinds.relation type=k.space.body key=kind subject=body subject_sense="body in space" object=kind object_type=k.space.kind object_sense="body in space" found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.space.body.orbits k.kinds.relation type=k.space.body key=orbits subject=body subject_sense="body in space" object=thing object_type=k.space.body object_sense="body in space" found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.space.body.order k.kinds.relation type=k.space.body key=order subject=body subject_sense="body in space" object=number found=schema core.source="hand-core 1"
-@k.kinds.relation.k.space.body.size k.kinds.relation type=k.space.body key=size subject=body subject_sense="body in space" object=value scale=size found=schema core.source="hand-core 1"
+@k.kinds.relation.k.space.body.size k.kinds.relation type=k.space.body key=size subject=body subject_sense="body in space" object=value object_type=k.expect.scale scale=size found=value core.source="hand-core 1"
 @k.kinds.relation.k.space.body.size_rank k.kinds.relation type=k.space.body key=size_rank subject=body subject_sense="body in space" object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.group k.kinds.relation type=k.space.body key=group subject=body subject_sense="body in space" object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.space.body.moons k.kinds.relation type=k.space.body key=moons subject=body subject_sense="body in space" object=number found=schema core.source="hand-core 1"

@@ -98,3 +98,10 @@
 @w.lang.ro.fill.refused_no_kind_in.art w.lang.ro.fill template=refused.no_kind_in role=art lemma=un core.source="hand-core 1"
 @w.lang.ro.fill.refused_no_aspect.art w.lang.ro.fill template=refused.no_aspect role=art lemma=un core.source="hand-core 1"
 @w.lang.ro.fill.refused_bad_value.art w.lang.ro.fill template=refused.bad_value role=art lemma=un core.source="hand-core 1"
+
+# The replies of a request and its revision (reviewer block 2026-11-15 14:00: w.request, w.dialogue): the same names as w.lang.en.
+@w.lang.ro.reply.sorry.one w.lang.ro.reply name=sorry count=one text="îmi pare rău, mai încerc o dată." example="Îmi pare rău, mai încerc o dată." core.source="hand-core 1"
+@w.lang.ro.reply.assumed.one w.lang.ro.reply name=assumed count=one role=key role=value text="am presupus {value} pentru {key:def=yes}." example="Am presupus 7 pentru numărul." core.source="hand-core 1"
+@w.lang.ro.reply.not_honoured.one w.lang.ro.reply name=not_honoured count=one role=words role=why text="nu am putut face {words}: {why}." example="Nu am putut face în colț: o diagramă nu are colțuri." core.source="hand-core 1"
+@w.lang.ro.reply.unread.one w.lang.ro.reply name=unread count=one role=words text="nu am folosit: {words}." example="Nu am folosit: blorp." core.source="hand-core 1"
+@w.lang.ro.reply.done.revise.one w.lang.ro.reply name=done.revise count=one text="am refăcut-o, cum ai spus." example="Am refăcut-o, cum ai spus." core.source="hand-core 1"
