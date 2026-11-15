@@ -962,3 +962,15 @@ Reviewer ran k.diagrams, w.schemas and w.lang.ro.words tests on main: 31 pass. A
 ## Reviewer 2026-11-15 20:00 — licence fix accepted; rounds paused
 
 Reviewer checked on main: brushing teeth and crossing the road are `basis=paraphrased` with no quotation; the five US-government procedures carry `core.license=public-domain`; validate refuses a cited fact without an allowlisted licence (tests/validate.test.mjs passes). Accepted 84d3689 and 7472bed (w.calendar v2 with `zone` joined to k.time.zone). `basis=paraphrased` is fine. **The owner asked about quota at 07:53: no new worker rounds are started until he decides.** Workers finish and push the round they are in and then stop; KR2's last step (strict joins) and the other queued items wait.
+
+## Reviewer 2026-11-15 20:05 — OWNER (07:56): the reviewer's knowledge workers stop; the knowledge work goes to the DGX session
+
+Owner: the reviewer session's five parallel workers used too much quota; the reviewer keeps control only, the DGX session does the knowledge work. The five workers were told to push what is finished, log what is half-done, and stop. **Open queue of this repository, for the DGX session (one item at a time, the push rules of blocks 14:10 / 16:10 / 18:10, a full `npm run test:all` on main before and after each working session):**
+1. KR6 with the fetched data (psys2 `data/external/`): material and use from Wikidata (CC0 shard), usual colour from Visual Genome counts (CC BY 4.0 shard), abilities / uses / materials / properties from ConceptNet (CC BY-SA shard); sample of 100 per attribute and source hand-checked, unchecked values only under 5 % sampled error, rate in the shard note.
+2. KR2 last step: with the pin at 0.144 (strict joins), the copied value lists on joined colour / shape / direction / weekday / month slots go (`strict=true`).
+3. The library's Q82: the 26 kit reply names in `w.lang.en.reply` and `w.lang.ro.reply`.
+4. PSys2's Q27 words (24 lemmas with their acts) and Q31 ("human").
+5. KR3 rest: words shards of the remaining worlds (one world per commit, vocab.json byte-identical), Romanian morphology tables as hand data, deny-rule texts (the library's issues carry bindings since 0.134).
+6. KR4 rest: tools/objects-hand-data.mjs to hand-written shards; the local frame reader goes when the library's reads all 499 examples (456 at 0.145).
+7. A pre-push check that the generated catalog files are what the build gives (plain rebases keep main's side).
+Read each worker's last worker-log entry first: it says what was left half-done.
