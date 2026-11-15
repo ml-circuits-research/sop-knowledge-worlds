@@ -4,7 +4,7 @@
 //   node tools/joins-report.mjs      writes docs/worlds/k.kinds/JOINS-REPORT.md
 // Three lists:
 //   - declared joins: for each, how many distinct values of the key meet a target (a T fact with that value under k,
-//     compared token for token as sopworld does) over all shards of all worlds, whatever order they load in; the
+//     compared as sopworld compares them since 0.109: a quoted atom and the bare atom are one name, Q70) over all shards of all worlds, whatever order they load in; the
 //     values that meet none are the joins a host sees open (`world.check()` reports them as `open-join`);
 //   - broken: declared joins where fewer than half of the values meet a target, or whose target type or key no
 //     schema declares;
@@ -20,6 +20,10 @@ import { WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
 import { relationRows, readTypes } from './relations-core.mjs';
 import { scanSchemas } from './lib/schemas.mjs';
 import { byText } from './import/lib.mjs';
+
+// A quoted string whose text is an atom and the bare atom are one name (sopworld 0.109; Q70, reviewer 15:00).
+const ATOM = /^[A-Za-z_][\w.:-]*$/; // the engine's text of a bare atom
+export const fold = (v) => { const m = /^"(.*)"$/.exec(v); return m && ATOM.test(m[1]) ? m[1] : v; };
 
 export const REPORT = join(WORLDS_DIR, 'k.kinds', 'JOINS-REPORT.md');
 // Keys left undeclared on purpose, with the reason (the report lists them apart, not as gaps).
@@ -72,12 +76,12 @@ export function joinsReport(worlds = scanWorlds()) {
     const malformed = !declaredTypes.has(j.target) ? `no schema declares ${j.target}` : !slotKeys(j.target).includes(j.by) ? `${j.target} has no key ${j.by}` : null;
     // the target values: one set per key value of the join (by and every match key)
     const index = new Map();
-    for (const a of facts.get(j.target) ?? []) for (const v of a[j.by] ?? []) { if (!index.has(v)) index.set(v, []); index.get(v).push(a); }
+    for (const a of facts.get(j.target) ?? []) for (const v of (a[j.by] ?? []).map(fold)) { if (!index.has(v)) index.set(v, []); index.get(v).push(a); }
     const values = new Map(); // value -> meets
     for (const a of factsOf(j.type)) for (const v of a[j.key] ?? []) {
       if (v.startsWith('$')) continue;
-      const meets = (index.get(v) ?? []).some((t) => j.match.every(([mine, theirs]) => (a[mine] ?? []).some((x) => (t[theirs || mine] ?? []).includes(x))));
-      values.set(v, (values.get(v) ?? false) || meets);
+      const meets = (index.get(fold(v)) ?? []).some((t) => j.match.every(([mine, theirs]) => (a[mine] ?? []).map(fold).some((x) => (t[theirs || mine] ?? []).map(fold).includes(x))));
+      values.set(fold(v), (values.get(fold(v)) ?? false) || meets);
     }
     const open = [...values].filter(([, m]) => !m).map(([v]) => v).sort(byText);
     declared.push({ ...j, values: values.size, meet: values.size - open.length, open, malformed, broken: Boolean(malformed) || (values.size > 0 && (values.size - open.length) * 2 < values.size) });
@@ -92,9 +96,9 @@ export function joinsReport(worlds = scanWorlds()) {
     if (r.found !== 'value' || !r.object_type.length || r.object_type[0] === 'k.words.sense' || isDeclared.has(`${r.type} ${r.key}`)) continue;
     const target = r.object_type[0], by = types.get(target)?.naming;
     if (!by) continue;
-    const names = new Set((facts.get(target) ?? []).flatMap((a) => a[by] ?? []));
+    const names = new Set((facts.get(target) ?? []).flatMap((a) => (a[by] ?? []).map(fold)));
     const vals = [...new Set(factsOf(r.type).flatMap((a) => (a[r.key] ?? []).filter((v) => !v.startsWith('$'))))];
-    const row = { world: r.world, type: r.type, key: r.key, object: r.object, candidates: r.object_type, by, values: vals.length, meet: vals.filter((v) => names.has(v)).length };
+    const row = { world: r.world, type: r.type, key: r.key, object: r.object, candidates: r.object_type, by, values: vals.length, meet: vals.filter((v) => names.has(fold(v))).length };
     // a key with an enum takes one of the values its slot lists (k.people.given_name.context=person), not a name of
     // another type: it is never suggested as a join. Listed apart, with the enum's size: an enum that copies another
     // world's names (the 11 basic colours) is KR2's to replace by a join, a decision per enum, not a suggestion here.
@@ -124,7 +128,7 @@ export function reportText({ declared, undeclared, kept, enums = [] }) {
     'per value since 0.70): the value names the `T` fact whose `k` is that value. The declared joins are the source of',
     'truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of values that name things of a type',
     '(`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.',
-    'Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).',
+    'Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.',
     '',
     `- declared joins: **${declared.length}** in ${worlds.size} worlds; distinct values ${vals}, meeting a target ${meet} (${vals ? Math.round((meet / vals) * 1000) / 10 : 0} %), open ${vals - meet}`,
     `- broken (under half of the values meet a target, or the target is not declared): **${broken.length}**`,
@@ -147,7 +151,7 @@ export function reportText({ declared, undeclared, kept, enums = [] }) {
     '## Undeclared: keys whose values name things of a type (the value share)',
     '',
     'Each is a join to declare on the slot (`type=<first candidate> by=<by>`), or to leave with a reason. The share is',
-    'exact (token for token) against the first candidate; the value share itself also folds case and plurals. A key',
+    'exact (as sopworld compares names) against the first candidate; the value share itself also folds case and plurals. A key',
     'whose slot has an enum is never suggested here (see the last section).',
     '',
     '| world | type.key | class | candidates | by | values | meet |',

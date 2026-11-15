@@ -5885,3 +5885,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   (1) the pin to the library's current release (0.130.0); (2) KR4 on the new pin (tools/lib/lang-en.mjs and
   tools/lib/choose.mjs: the tests of the local copies run on the library; [LIB] questions where it falls short);
   (3) `*-data.mjs` tables to hand-written shards, starting with tools/actions-data.mjs, one table per commit.
+
+## 2026-11-15 — second worker: the two answers of 15:00
+
+- `tools/joins-report.mjs` folds a quoted atom and the bare atom into one name (the engine's own atom pattern,
+  sopworld 0.109; Q70 answered): in the declared joins, the match keys and the undeclared share. No number changes
+  today (220 declared joins, 0 broken, 47 undeclared, 4 kept); the report's text says how values are compared.
+- `holds` and `money` of k.actions.action are machinery: narrate=no (`MACHINE_KEYS` in tools/narration-core.mjs,
+  by type.key).
+- Tests: k.kinds.joins-report, k.kinds.relations, k.attributes: 20 pass.

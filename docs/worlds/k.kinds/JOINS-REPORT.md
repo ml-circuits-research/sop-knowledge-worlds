@@ -7,7 +7,7 @@ A join is declared on the slot whose values name things of another type: `type=T
 per value since 0.70): the value names the `T` fact whose `k` is that value. The declared joins are the source of
 truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of values that name things of a type
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
-Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
+Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
 - declared joins: **220** in 32 worlds; distinct values 10256, meeting a target 10198 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
@@ -249,7 +249,7 @@ None.
 ## Undeclared: keys whose values name things of a type (the value share)
 
 Each is a join to declare on the slot (`type=<first candidate> by=<by>`), or to leave with a reason. The share is
-exact (token for token) against the first candidate; the value share itself also folds case and plurals. A key
+exact (as sopworld compares names) against the first candidate; the value share itself also folds case and plurals. A key
 whose slot has an enum is never suggested here (see the last section).
 
 | world | type.key | class | candidates | by | values | meet |

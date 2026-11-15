@@ -54,6 +54,12 @@ export const MACHINERY = {
   'k.values.direction': 'the words for values', 'k.values.position': 'the words for values', 'k.values.coloured': 'the words for values',
 };
 
+// Keys of a type that is otherwise narrated which are machinery themselves, by type.key (reviewer 15:00).
+export const MACHINE_KEYS = {
+  'k.actions.action.holds': 'typed possession effects for a reader of word problems (storyState)',
+  'k.actions.action.money': 'typed possession effects for a reader of word problems (storyState)',
+};
+
 // Keys that are identifiers or metadata wherever they stand, by name, each with why.
 export const KEY_NO = [
   [/^(code\d*|iso\w*|qid|wikidata|id|\w+_id)$/, 'an identifier (a code)'],
@@ -137,6 +143,7 @@ export function narration(root = WORLDS_DIR) {
       const values = (ks?.values ?? []).map(String);
       let why = null;
       if (mach) why = `machinery: ${mach}`;
+      else if (MACHINE_KEYS[`${type}.${key}`]) why = `machinery: ${MACHINE_KEYS[`${type}.${key}`]}`;
       else if (firstId.get(type) === key && NAMING.has(key)) why = 'the name of the thing: the subject, not an attribute';
       else if (one(s, 'id') === 'true' && !NAMING.has(firstId.get(type))) why = 'part of the subject of a fact of several keys (red and yellow give orange)';
       else if (KEY_NO.find(([re]) => re.test(key))) why = KEY_NO.find(([re]) => re.test(key))[1];
