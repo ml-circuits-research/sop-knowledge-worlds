@@ -18,7 +18,11 @@ standing in order on a to-do list.
 - Found by: tasks, task list, chores, reminders, things to do, to-dos.
 
 **Done is a state that acts change.** `status` is a closed set (open, done): the act `change` sets it and refuses any
-other value with the two allowed; `pick` and `ask` read it; `undo` takes a change back. Which act
+other value with the two allowed; `pick` and `ask` read it; `undo` takes a change back. In English (w.lang.en, shard
+`list-frames`, PSys2 Q18 K6): "I (just) finished my homework" and "my homework is done" are `change` of `status` to
+done; "I didn't finish my homework" is `change` in the mode `not`, status open (nothing is ticked off); "what is left
+to do", "what's still open" ask for the open tasks; "did I finish my homework" asks for one task's status; "set a
+reminder to water the plants" and "remind me to …" make a reminder; "I should call grandma" makes a task. Which act
 and turn set a status ("why is milk done?") is the library's provenance of a value (PSys2 Q18 L3), not a key.
 
 **One home for lists.** A task stands on a list of `w.list` (the schema imports w.list; the catalog's entry says

@@ -5503,3 +5503,33 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   w.lang.en frames for first-person statements and questions about the user, in a frame shard of my own; (2)
   **outlines of objects as arrangement paths** and the "in the shape of X" frames (block 09:50 item F, the owner's
   case "a diagram in the shape of a house").
+
+## 2026-11-15 — fourth worker: frames for lists, tasks, a shop and a wallet (reviewer 09:20, PSys2 Q18 K6)
+
+- w.lang.en shard `list-frames` (tools/lang-en-list-frames.mjs, in `npm run build` after the diagram frames; 31
+  frames, 196 wires, 46,468 bytes, CC0, own), every frame `needs=entries`, bound to the acts of k.actions and the keys
+  of w.list (K1) and w.tasks (K2): lists (add / put X on my list: make, the list's name its place; take X off / remove
+  X from: remove; does my list have X / is X on my list: ask has; how long is my list: ask count; which lists do I
+  have: ask all, thing list), tasks (what is left to do / what's still open: ask open; I (just) finished X / X is done:
+  change status done; I didn't finish X: change in the mode not, status open; did I finish X: ask done; set a reminder
+  to X / remind me to X: make a reminder, topic X; I should X: make a task, topic X), shop (how much do N X cost / what
+  is the price of X: ask price; can I buy N X / is N X affordable: ask afford; what is the change / how much change do
+  I get: ask change; change from N lei for X / change for X with N lei: ask change, the money paid the other amount;
+  I want X / I want N X: make; I pay / give the cashier N lei: change tendered), wallet (I start with N lei / my
+  wallet has N lei: change budget; how much money is left: ask left). 3 role maps (the currency word goes with the
+  number into change.value, or into ask.other), 1 lexicon `money.unit` (454 words derived from k.units; codes and
+  signs left out).
+- tools/lib/lang-en.mjs `clauseReader`: a sentence cut at . ? ! ;, a comma, a joiner of w.lang.en that cuts or before
+  a question word (w.lang.en.wh, for run-ons); the cutting whose clauses all read wins (literal words, then captured,
+  then clauses).
+- **Real rows** (sources/psys2-eval/real-q18.tsv, the 9 turns of psys2 real-2026-11-15 at 40292c6 that Q18 names),
+  read clause by clause with the right act and roles: **9 of 9** — r0590 make kind=task topic="call grandma"; r0598 /
+  r0624 make kind=puzzle | change tendered "10 lei" | ask change; r0599 / r0627 make 2 pencils | change tendered "10
+  lei" | ask change; r0622 / r0625 make "ball and a pencil" | change tendered "20 lei" | ask change (r0625 has no
+  punctuation: cut before "what"); r0623 / r0626 ask price thing pencil / ball.
+- PSys2's kids.shop and kids.tasks sentences the frames are for: 35 of 35 read right (tests/w.lang.en.list-frames.test.mjs,
+  5 tests, 1.6 s). Not read: "Change from thirty lei, puzzle and 2 kites" (thirty is no numeral here).
+- Frames test (every frame reads its own example): 434 frames, 418 best, 11 tie, 5 known (all 31 new read best).
+- questions.md **Q71**: where the wallet lives (budget and tendered on a shopping list meanwhile, or a kind, or
+  storyState); `n` or `position` across the w.* schemas (kept `n`); clause splitting as [LIB]; the conversation (K3)
+  and arithmetic (K4) frames must outrank "I should …" and "how much is …" here.

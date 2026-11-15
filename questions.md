@@ -995,3 +995,30 @@ the build changed nothing but the catalog's commit and hash. No test changed beh
 change is recorded here, not patched). The names deprecated in 0.111 (`cousins`, `liftTokens`, `calibrate` ...) go
 in 0.114; nothing here calls them (only comments say "the library's cousins").
 Blocking: no.
+
+## Q71 (reviewer 09:20, PSys2 Q18 K1/K2/K6, fourth worker, 2026-11-15): where the wallet lives; `n` or `position`; who splits clauses; which frames outrank the list frames
+
+Context: K1 extends `w.list` (version 3), K2 adds `w.tasks` (importing w.list for its lists), K6 adds 31 frames
+(`w.lang.en` shard `list-frames`, all `needs=entries`). PSys2's real rows r0590, r0598, r0599, r0622-r0627 now read
+with the right act and roles clause by clause (reference reader). Four decisions beyond the task, each taken
+meanwhile as said:
+
+1. **The wallet.** "I start with 30 lei", "my wallet has 15 lei" and "I pay 10 lei" need a home for money. Meanwhile
+   they are keys of a shopping list: `budget` (the money to spend) and `tendered` (the amount handed over at the till),
+   with the list's `currency`; what is spent, left and the change are computed (L3). Alternatives: a kind of its own
+   (`w.list.wallet`, money a person has across lists and shops), or no key at all and the library's storyState keeps
+   money as a quantity by events (L1: "I spent 5 lei", "Mom gave me 5 lei"). Which one? If storyState, the frames
+   `acts.wallet.start` and `acts.shop.pay` keep their readings and only the key they name (fixed attribute) moves.
+2. **`n` or `position`.** The block asked for an entry's "order"; schema.org's ListItem calls it `position`. Every w.*
+   schema says `n` for a place in an order (w.seating seat, w.chart point and series, w.document, w.diagram), so w.list
+   and w.tasks keep `n` (with the words order, position, place). Rename across all w.* schemas, or keep `n`?
+3. **Splitting a message into clauses.** The real rows are several clauses ("I want a puzzle and I pay 10 lei. What
+   is the change?"). The reference reader now has `clauseReader` (tools/lib/lang-en.mjs): cut at . ? ! ;, at a comma,
+   at a joiner of w.lang.en that cuts, or before a question word; the cutting whose clauses all read wins (most literal
+   words, fewest captured, fewest clauses). That is mechanism in tools/, the library's job (review item D): [LIB] does
+   std.grammar or the acts reader want this rule, or does it have its own splitter that should read `w.lang.en.joiner`
+   and `w.lang.en.wh` the same way?
+4. **Competition with frames still to come.** With needs=entries, "I should tell you something" (K3, conversation)
+   reads as a task (acts.tasks.should, priority 12) and "how much is 7 plus 5" (K4, arithmetic) as a price
+   (acts.shop.price.of, 14). Meanwhile nothing is done: the K3 and K4 frames should take a higher priority (or a needs
+   the host checks first) when they are written. Agreed?

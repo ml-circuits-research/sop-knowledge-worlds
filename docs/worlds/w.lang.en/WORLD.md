@@ -379,6 +379,48 @@ determiner, verb, word or lexicon part matches it, and a thing may end in it ("t
 sentence, "I", and a lower-case letter are left as they were ("connect a to c" is still the article). Not covered then: the kind after the topic and single-letter names (both
 block 07:45, below).
 
+## Lists, tasks, a shop and a wallet (reviewer 09:20, PSys2 Q18 K6)
+
+Shard `list-frames` (`tools/lang-en-list-frames.mjs`, rerun by `npm run build`; 31 frames, 3 role maps, 1 lexicon),
+every frame `needs=entries` (a world of lists of entries with a status, a quantity and a price: `w.list`, `w.tasks`),
+bound to the acts of k.actions and the keys of those two schemas:
+
+- lists: "add milk to my shopping list", "put bread on my list" (make: the entry is the thing made, the list's name
+  its place: `place=shopping`; no name, the host's default list), "add to my shopping list" (make with nothing said:
+  the host asks what), "take milk off my list", "remove milk from my list" (remove), "does my list have milk", "is
+  homework on my list" (ask, mode has), "how long is my list", "how many things are on my list" (ask, mode count),
+  "which lists do I have" (ask, mode all, thing list);
+- tasks: "what is left to do", "what's still open" (ask, mode open: the entries whose `status` is open), "I (just)
+  finished my reading", "my homework is done" (change: `status` done, a fixed argument), "I didn't finish my homework"
+  (change in the mode not: status open, nothing ticked off), "did I finish my homework" (ask, mode done), "set a
+  reminder to water the plants", "remind me to …" (make: a reminder, what it is about its topic), "I should call
+  grandma" (make: a task, its topic; PSys2's real row r0590);
+- shop: "how much do 3 pencils cost", "what is the price of a kite" (ask, mode price; the number stays in the thing,
+  ask has no number role), "can I buy 3 pencils", "is 2 balls affordable" (ask, mode afford), "what is the change", "how
+  much change do I get" (ask, mode change), "what is the change from 20 lei for a ball and a pencil", "change for 2
+  balls with 5 lei" (ask, mode change: the money paid is the *other* amount, the one the price is taken from), "I want a
+  puzzle", "I want 2 pencils" (make: on the shopping list; an article or a number must follow, so "I want to draw a
+  cat" is no purchase), "I pay 10 lei", "I give the cashier 10 lei" (change: the list's `tendered`);
+- wallet: "I start with 30 lei", "my wallet has 15 lei" (change: the list's `budget`), "how much money is left", "how
+  much money do I have left after I buy 2 pencils" (ask, mode left).
+
+A sum of money is a number and a word of the lexicon `money.unit` (derived from k.units: the everyday unit, its plural,
+the name and the minor unit of each currency and their core.word texts: leu, lei, bani, dollars, cents, quid; codes and
+signs left out), both mapped to one role ("10 lei"): "I pay 10" and "I have 3 apples" are no money. What the frames
+set (`w.lang.en.fixed`: status, tendered, budget) are keys of w.list and w.tasks with values they allow, and what they
+make or ask about (list, task, reminder) are words of their kinds; a test checks both.
+
+**Several clauses** ("I want a puzzle and I pay 10 lei. What is the change?"): the reference reader's `clauseReader`
+(tools/lib/lang-en.mjs) cuts a sentence at . ? ! ;, and inside one at a comma, at a joiner of this world that cuts (and,
+then, also, but) or before a question word (`w.lang.en.wh`, for run-ons: "pay with 20 lei what is the change"); of the
+ways to cut, the one whose clauses all read wins, most literal words first, then fewest captured words, then fewest
+clauses (the frames' own order summed), so "a ball and a pencil" stays one thing. PSys2's real rows r0590, r0598,
+r0599, r0622-r0627 read clause by clause with the right act and roles (9 of 9), and 35 of the sentences of its kids.shop
+and kids.tasks worlds (`tests/w.lang.en.list-frames.test.mjs`). Not read: "Change from thirty lei, puzzle and 2 kites"
+(thirty is no numeral of this world; a list after a comma). Known competition for a host that also has the frames of
+other worlds: "I should tell you something" (a conversation, PSys2 Q18 K3) reads as a task here, and "how much is 7 plus
+5" (arithmetic, K4) as a price; those frames must outrank these when they come (questions.md Q71).
+
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the

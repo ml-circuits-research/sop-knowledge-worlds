@@ -1,5 +1,5 @@
 {
- "version": "5d91c1bee146",
+ "version": "c13c26c7a720",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -87670,6 +87670,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/list-frames",
+     "path": "w.lang.en/shards/list-frames.sop",
+     "wires": 196,
+     "bytes": 46468,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/morphology-classes",
      "path": "w.lang.en/shards/morphology-classes.sop",
      "wires": 137,
@@ -87922,8 +87934,8 @@
     {
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
-     "wires": 50,
-     "bytes": 31947,
+     "wires": 53,
+     "bytes": 33532,
      "keys": [],
      "sources": [
       "hand-core-1"

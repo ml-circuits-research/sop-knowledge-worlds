@@ -47,7 +47,9 @@ w.act({ action: 'change', args: { thing: 'w_list_list1', attr: 'tendered', value
 ```
 
 The catalog lists it under `schemas` in `index.json` (names, kinds, acts, attributes), and its words are in
-`vocab.json` with the path of the schema. Sessions are in `tests/w.schemas.test.mjs`. The names of kinds are written in full (`w.list.…`); a host gets from a word of the user ("entry",
+`vocab.json` with the path of the schema. Sessions are in `tests/w.schemas.test.mjs`; the English requests for it ("add
+milk to my shopping list", "how much do 3 pencils cost", "I pay 10 lei", "what is the change") are frames of `w.lang.en`
+(shard `list-frames`, PSys2 Q18 K6). The names of kinds are written in full (`w.list.…`); a host gets from a word of the user ("entry",
 "basket") to the kind by the `core.word` facts of the schema.
 
 Changes in version 3 for hosts: `done` (boolean) is now `status` (open, done); `quantity` is a number (with `unit`),

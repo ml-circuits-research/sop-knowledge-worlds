@@ -256,3 +256,46 @@ export function realiseEn(wires, text, fillers) {
   s = s.replace(/\b(a|an) (\S+)/gi, (m, a, next) => (article.has(a.toLowerCase()) ? `${articleFor(wires, next)} ${next}` : m));
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
+
+// ---- a sentence of several clauses (PSys2 Q18 K6: "I want a puzzle and I pay 10 lei. What is the change?") ----
+// The smallest reference splitter a host does before its frames: a sentence ends at . ? ! or ;; inside one, a clause
+// may end at a comma or at a joiner of w.lang.en that cuts (and, then, also, but: the joiner is dropped), or right before
+// a question word of w.lang.en (w.lang.en.wh: "pay with 20 lei what is the change", a run-on). Of the ways to cut, the one
+// whose clauses all read by a frame wins, the most literal words first, then the fewest captured words, then the fewest
+// clauses (the frames' own order, summed over the clauses). `read` is a frameReader; returns the best reading of each
+// clause in order, or null when no way of cutting reads every clause.
+export function clauseReader(read, wires) {
+  const joiners = new Set(wires.filter((w) => w.type === 'w.lang.en.joiner' && one(w, 'cut') === 'yes' && /^[a-z]+$/.test(one(w, 'text'))).map((w) => one(w, 'text')));
+  const wh = new Set(wires.filter((w) => w.type === 'w.lang.en.wh').map((w) => one(w, 'text')));
+  const better = (a, b) => !b || a.literal > b.literal || (a.literal === b.literal && (a.captured < b.captured || (a.captured === b.captured && a.clauses.length < b.clauses.length)));
+  function one1(sentence) { // one sentence: cut points, then the best cutting by dynamic programming from the end
+    const ws = sentence.replace(/,/g, ' , ').trim().split(/\s+/).filter(Boolean);
+    const low = ws.map((w) => w.toLowerCase().replace(/['’]/g, ''));
+    const cuts = []; // [end of a clause, start of the next]
+    low.forEach((w, i) => { if (i > 0 && (w === ',' || joiners.has(w))) cuts.push([i, i + 1]); else if (i > 0 && wh.has(w)) cuts.push([i, i]); });
+    const memo = new Map();
+    const from = (s) => {
+      if (s >= ws.length) return { literal: 0, captured: 0, clauses: [] };
+      if (memo.has(s)) return memo.get(s);
+      let best = null;
+      for (const [end, next] of [...cuts.filter(([e]) => e > s), [ws.length, ws.length]]) {
+        const text = ws.slice(s, end).filter((w) => w !== ',').join(' ');
+        if (!text) continue;
+        const [r] = read(text);
+        if (!r) continue;
+        const rest = from(next);
+        if (!rest) continue;
+        const c = { literal: r.literal + rest.literal, captured: r.captured + rest.captured, clauses: [{ text, ...r }, ...rest.clauses] };
+        if (better(c, best)) best = c;
+      }
+      memo.set(s, best);
+      return best;
+    };
+    return from(0);
+  }
+  return (text) => {
+    const out = [];
+    for (const s of String(text).split(/[.?!;]+/).map((x) => x.trim()).filter(Boolean)) { const r = one1(s); if (!r) return null; out.push(...r.clauses); }
+    return out;
+  };
+}
