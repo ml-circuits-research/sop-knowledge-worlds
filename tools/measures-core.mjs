@@ -78,6 +78,7 @@ export const MEASURES = {
     part: { n: ord, min: { counts: 'time the part occurs in one document' }, max: { counts: 'time the part occurs in one document' } }, step: { n: ord, min: { counts: 'sentence' }, max: { counts: 'sentence' } } },
   // k.story: places in an order and years are orders; how many of an element a story has.
   // k.diagrams: a year is an order.
+  'k.charts': { source: { year: ord }, rank: { rank: ord }, rule: { rank: ord, categories_max: { counts: 'category or slice' }, points_min: { counts: 'value of a series' } } },
   'k.diagrams': { source: { year: ord }, topic: { nodes: { counts: 'node of the largest diagram of the topic' } } },
   'k.story': { source: { year: ord }, element: { n: ord, min: { counts: 'element of that name in one story' }, max: { counts: 'element of that name in one story' } } },
   'k.procedures': { method: { rank: ord }, goal: { default: { plain: true } }, binding: { step: ord, choose: { counts: 'value chosen' }, choose_min: { counts: 'value chosen' } }, match: { n: ord }, step: { n: ord, after: ord }, howto_step: { n: ord, after: ord }, arg: { step: ord, value: { plain: true } }, condition: { n: ord, step: ord } },

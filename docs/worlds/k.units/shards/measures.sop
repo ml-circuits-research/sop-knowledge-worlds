@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.diagrams, k.story, k.procedures): 260 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.charts, k.diagrams, k.story, k.procedures): 265 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -243,6 +243,11 @@
 @k.units.measure.k.genres.step.n k.units.measure world=k.genres type=step key=n ordinal=true core.source="hand-core 1"
 @k.units.measure.k.genres.step.min k.units.measure world=k.genres type=step key=min counts=sentence core.source="hand-core 1"
 @k.units.measure.k.genres.step.max k.units.measure world=k.genres type=step key=max counts=sentence core.source="hand-core 1"
+@k.units.measure.k.charts.source.year k.units.measure world=k.charts type=source key=year ordinal=true core.source="hand-core 1"
+@k.units.measure.k.charts.rank.rank k.units.measure world=k.charts type=rank key=rank ordinal=true core.source="hand-core 1"
+@k.units.measure.k.charts.rule.rank k.units.measure world=k.charts type=rule key=rank ordinal=true core.source="hand-core 1"
+@k.units.measure.k.charts.rule.categories_max k.units.measure world=k.charts type=rule key=categories_max counts="category or slice" core.source="hand-core 1"
+@k.units.measure.k.charts.rule.points_min k.units.measure world=k.charts type=rule key=points_min counts="value of a series" core.source="hand-core 1"
 @k.units.measure.k.diagrams.source.year k.units.measure world=k.diagrams type=source key=year ordinal=true core.source="hand-core 1"
 @k.units.measure.k.diagrams.topic.nodes k.units.measure world=k.diagrams type=topic key=nodes counts="node of the largest diagram of the topic" core.source="hand-core 1"
 @k.units.measure.k.story.source.year k.units.measure world=k.story type=source key=year ordinal=true core.source="hand-core 1"

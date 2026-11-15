@@ -6355,3 +6355,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   slot filling stays, with the library's articleFor.
 - `solveChoices` (tools/lib/choose.mjs): next step.
 - Tests: library 4, templates, phrasing, w.lang.en, catalog-plurals, repo: 40 pass.
+## 2026-11-15 — first worker: k.charts, which chart fits which data (block 15:35 item 2)
+
+- New world **k.charts** (CC0; tools/charts-core.mjs; shard charts 95 wires, 17,186 bytes, no warning): 5 works cited
+  (Mackinlay 1986, expressiveness and effectiveness; Cleveland and McGill 1984, the ranking of encodings; Few 2012 and
+  2007; Zelazny 1985); 9 kinds of chart, each with the w.chart form that draws it, its mark, its main encoding and the
+  data types of its axes (nominal, ordinal, quantitative, time; `whole` for the parts of one whole); 14 encodings in 4
+  rankings (Cleveland and McGill for quantities; Mackinlay for quantitative, ordinal, nominal data); 7 relationships
+  of data (Few: time series, ranking, part-to-whole, deviation, distribution, correlation, nominal comparison); 15
+  selection rules (relationship -> kind, rank, conditions categories_max, series, points_min, why, sources): "a share
+  of a whole -> pie (at most 5 parts, one whole) or stacked bar (several wholes)", "a trend over time -> line".
+- Its English words in w.lang.en (shard words-k.charts, KR3: the type words, chart names such as "bar graph", "pie
+  graph", relationship phrases such as "share of a whole", "trend over time"; no single common word, which would
+  read "compare" or "pie" as a value), and the key words by tools/key-words.mjs there. Measures for its integers.
+- Tests: tests/k.charts.test.mjs (4: shard = tool; joins to w.chart forms, encodings, relationships; the rankings'
+  order; the reviewer's cases through chartsFor and the axes' types of each best kind). The touched tests: 29 files,
+  143 pass, 1 failing that was not this change's (w.lang.en.catalog-plurals); after the rebase on its fix: 23 files, 116 pass.
