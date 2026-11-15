@@ -33,7 +33,13 @@ export const PHRASES = [
 export const LEXICONS = [
   ['cmp.more', 'comparatives up: mai + an adjective of size', ['mai mare', 'mai mari', 'mai lung', 'mai lungă', 'mai lungi', 'mai înalt', 'mai înaltă', 'mai înalți', 'mai lat', 'mai lată', 'mai gros', 'mai groasă', 'mai larg', 'mai largă', 'mai multe', 'mai mulți']],
   ['cmp.less', 'comparatives down', ['mai mic', 'mai mică', 'mai mici', 'mai scurt', 'mai scurtă', 'mai scurți', 'mai scurte', 'mai îngust', 'mai îngustă', 'mai subțire', 'mai subțiri', 'mai puține', 'mai puțini']],
-  ['acts.dir', 'directions of a move (the English lexicon acts.dir says them in English)', ['la stânga', 'la dreapta', 'în sus', 'în jos', 'sus', 'jos', 'mai aproape', 'mai departe', 'în față', 'în spate', 'la mijloc', 'în centru', 'stânga', 'dreapta', 'mai sus', 'mai jos']],
+  // Q69 item 4: "mai" before a direction is a relative move ("mai la stânga", "mai jos": further left, lower); the
+  // directions are plain here and mai is an amount (space.amounts), as English "a bit" in acts.more.place.dir.amt
+  ['acts.dir', 'directions of a move (the English lexicon acts.dir says them in English)', ['la stânga', 'la dreapta', 'în sus', 'în jos', 'sus', 'jos', 'mai aproape', 'mai departe', 'în față', 'în spate', 'la mijloc', 'în centru', 'stânga', 'dreapta',
+    'în stânga', 'în dreapta', 'spre stânga', 'spre dreapta', 'spre sus', 'spre jos', 'în stânga sus', 'în dreapta sus', 'în stânga jos', 'în dreapta jos', 'stânga sus', 'dreapta sus', 'stânga jos', 'dreapta jos']],
+  ['space.amounts', 'how far one move goes, said before or after its direction (the English lexicon space.amounts): mai (further, more), și mai (even more), încă, puțin, un pic', ['mai', 'și mai', 'încă', 'încă puțin', 'tot mai', 'mult mai', 'și mai mult', 'mai mult', 'puțin', 'puțin mai', 'un pic', 'un pic mai', 'un pas', 'ceva mai', 'ușor', 'mult', 'de tot', 'până la margine', 'la jumătate']],
+  ['relative.more', 'the words that make a move relative, further the same way (the library\'s resolveEllipsis option more for w.lang.ro: "mai la stânga", "încă")', ['mai', 'încă']],
+  ['relative.small', 'the words of a small step (resolveEllipsis option small: "puțin mai jos", "un pic la stânga")', ['puțin', 'pic', 'ușor']],
 ];
 
 // Order facts (`w.lang.ro.syntax`): what a reader of these frames does with the words a frame captures.
@@ -69,6 +75,9 @@ export const FRAMES = [
   ['ro.change.cmp.less', 'acts.change.cmp.less', 'change', 'less', 13, 'less', 'Fă masa 1 mai mică.', 'L? [fă|V.change] CJ? D? {thing:words} {value:lex.cmp.less}'],
   ['ro.place', 'acts.place', 'place', null, 11, 'in', 'Mută casa lângă copac.', 'L? V.place CJ? $focus? D? {thing:words} {rel:prep} D? {place:words}'],
   ['ro.place.bare', 'acts.place.bare', 'place', null, 5, 'in', 'Pune un lac.', 'L? V.place CJ? $focus? D? {thing:words}'],
+  ['ro.place.dir.amt', 'acts.more.place.dir.amt', 'place', null, 14, 'scale', 'Mută capra mai la stânga.', 'L? V.place CJ? $focus? D? {thing:words} {amount:lex.space.amounts} {rel:lex.acts.dir} {amount2:lex.space.amounts}?'],
+  ['ro.place.dir.amt.it', 'acts.more.place.dir.amt', 'place', null, 15, 'scale', 'Mută și mai la stânga.', 'L? V.place CJ? $focus? {amount:lex.space.amounts} {rel:lex.acts.dir} {amount2:lex.space.amounts}?'],
+  ['ro.place.dir.amt.bare', 'acts.more.place.dir.amt', 'place', null, 7, 'scale', 'Mai în dreapta.', '$focus? {amount:lex.space.amounts} {rel:lex.acts.dir} {amount2:lex.space.amounts}?'],
   ['ro.place.dir', 'acts.place.dir', 'place', null, 13, 'dir', 'Mută casa la stânga.', 'L? V.place CJ? $focus? D? {thing:words} {rel:lex.acts.dir}'],
   ['ro.connect', 'acts.connect', 'connect', null, 11, null, 'Conectează masa 1 cu masa 2.', 'L? [conectează|conectați|leagă|legați|unește|V.connect] CJ? D? {thing:words} [cu|de|la|și] D? {place:words}'],
   ['ro.connect.bare', 'acts.connect.bare', 'connect', null, 5, null, 'Conectează masa 1.', 'L? [conectează|conectați|leagă|legați|unește|V.connect] CJ? D? {thing:words}'],

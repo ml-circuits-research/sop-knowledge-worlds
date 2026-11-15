@@ -71,6 +71,34 @@ test('frames: "și" as a focus word, too or also, before the object ("pune și u
   assert.equal(reader.read('Dă-ți ochi de vizor.')[0].frame, 'ro.make.self', 'the joined clitic ți stays the avatar\'s self');
 });
 
+// Q69 item 4: "mai" + a direction is a relative move, the amount of English acts.more.place.dir.amt; real turns of
+// PSys2 (real-ro.tsv at 23f283a6), with a thing, with "și" and none, and verbless continuations (the host resolves
+// them with the previous act: the library's resolveEllipsis takes relative.more and relative.small as more and small).
+test('frames: "mai" + a direction, a relative move ("mută capra mai jos", "mută și mai la stânga", "mai în dreapta")', () => {
+  const r = (s) => { const x = reader.read(s)[0]; return x && [x.frame, x.act, x.roles]; };
+  for (const [s, frame, roles] of [
+    ['muta crocodilii mai jos', 'ro.place.dir.amt', { thing: 'crocodilii', amount: 'mai', rel: 'jos' }],
+    ['muta casele mai sus', 'ro.place.dir.amt', { thing: 'casele', amount: 'mai', rel: 'sus' }],
+    ['muta capra mai in dreapta', 'ro.place.dir.amt', { thing: 'capra', amount: 'mai', rel: 'in dreapta' }],
+    ['mută casa din mijloc mai la dreapta', 'ro.place.dir.amt', { thing: 'casa din mijloc', amount: 'mai', rel: 'la dreapta' }],
+    ['muta si mai la stinga', 'ro.place.dir.amt.it', { amount: 'mai', rel: 'la stanga' }],
+    ['muta copilul in stinga sus', 'ro.place.dir', { thing: 'copilul', rel: 'in stanga sus' }],
+    ['mai in dreapta', 'ro.place.dir.amt.bare', { amount: 'mai', rel: 'in dreapta' }],
+    ['si mai jos', 'ro.place.dir.amt.bare', { amount: 'mai', rel: 'jos' }],
+    ['puțin mai la stânga', 'ro.place.dir.amt.bare', { amount: 'putin mai', rel: 'la stanga' }],
+  ]) {
+    const got = r(s);
+    assert.ok(got, `${s}: not read`);
+    assert.equal(got[0], frame, `${s}: ${got[0]}`);
+    assert.equal(got[1], 'place', s);
+    for (const [k, v] of Object.entries(roles)) assert.equal(got[2][k], v, `${s}: ${k} ${JSON.stringify(got[2])}`);
+  }
+  // the lexicons a host passes to resolveEllipsis: single words, each an amount of a move
+  const lex = (n) => parse(readFileSync(join(WORLDS_DIR, 'w.lang.ro/shards/frames.sop'), 'utf8')).filter((w) => w.type === 'w.lang.ro.lex' && one(w, 'name') === n).flatMap((w) => (w.attrs.item ?? []).map(tok));
+  for (const n of ['relative.more', 'relative.small']) for (const w of lex(n)) { assert.ok(!/\s/.test(w), w); assert.ok(lex('space.amounts').some((a) => a.split(' ').includes(w)), w); }
+  assert.ok(!lex('acts.dir').includes('mai jos') && !lex('acts.dir').includes('mai sus'), 'mai is the amount, not a part of the direction');
+});
+
 const ROWS = process.env.RO_EN_MEANING ?? '/tmp/wt2/training/eval/ro-en-meaning/rows.jsonl';
 test('frames: on PSys2\'s ro-en-meaning set, the share of requests whose act and roles the frames read (skipped without it)', { skip: !existsSync(ROWS) && 'no ro-en-meaning rows' }, () => {
   const rows = readFileSync(ROWS, 'utf8').trim().split('\n').map((l) => JSON.parse(l));

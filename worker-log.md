@@ -5608,3 +5608,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   values are names of the first candidate, for KR2 (enums joined, not copied), which decides per enum. Left undeclared
   on purpose: 4 (k.time.season.next has an enum, so it is in the enum list now).
 - `tests/k.kinds.joins-report.test.mjs`: no suggested key has an enum; context is among the enum keys.
+
+## 2026-11-15 — third worker: Q69 item 4, "mai" + a direction; then K3 and K7 taken
+
+- Bench (library tools/bench-ro-frames.mjs, 161 real turns): before Q69 93 / 74 / 38; (1) nouns 93 / 74 / 55; (2) "și"
+  focus 100 / 83 / 63; (3) î -> â stem folds 100 / 82 / 62; **(4) "mai" + direction 104 / 83 / 64** (read by a frame /
+  right act / right act and thing).
+- tools/lang-ro-frames.mjs: acts.dir plain (mai jos, mai sus out; în stânga, în dreapta, spre stânga, în stânga sus ...
+  in); lexicons space.amounts (mai, și mai, încă, puțin, un pic ...), relative.more (mai, încă) and relative.small
+  (puțin, pic, ușor) for the library's resolveEllipsis options; frames ro.place.dir.amt (14), .amt.it (15, no thing:
+  "mută și mai la stânga"), .amt.bare (7, verbless continuation), all en=acts.more.place.dir.amt. 43 frames, 318 wires,
+  49,417 bytes.
+- tests/w.lang.ro.frames.test.mjs: 9 real-turn shapes read with amount mai and the direction; the relative words are
+  single words and amounts; mai is not part of a direction.
+- Taken next (assignment 12:10): K3 conversation frames (bound to w.person where it exists) and K7 clock and calendar
+  words, in w.lang.en frame shards of my own.

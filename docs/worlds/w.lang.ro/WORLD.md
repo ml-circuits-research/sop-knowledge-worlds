@@ -140,6 +140,7 @@ act is the gloss's, and when the thing read shares a word with the gloss).
 | (1) the nouns of the real turns | 93 | 74 | 55 |
 | (2) "și" as a focus word, and a place frame without a place | 100 | 83 | 63 |
 | (3) the old spelling, î for â (stinga, linga, pamint) | 100 | 82 | 62 |
+| (4) "mai" + a direction, a relative move | 104 | 83 | 64 |
 
 (1) The hand dictionary has the nouns of the real turns with senses of k.words whose English word names a drawing, an
 animal, a scene thing or a kind of person (a test checks it through vocab.json): crocodil, minge, capră, rață, iarbă
@@ -167,4 +168,15 @@ Shorter stems were refused: "cit" (cât) would join citi and câți, "pin" (pân
 fewer: "fa un bunic linga rata" now reads make, grandfather, near the duck (lîngă is the preposition), which the bench
 marks wrong because it takes the act of the gloss's "make" as change; "muta fetita linga baiat" and "muta capra linga
 rata" now have the place and its relation instead of a thing "girl linga boy".
+
+(4) "mai" before a direction is a relative move ("mută capra mai jos", "mută și mai la stânga", "mai în dreapta"): the
+directions of `acts.dir` are plain (mai jos and mai sus left the list; în stânga, în dreapta, spre stânga, în stânga sus
+... came in from the real turns), and mai is an amount of the lexicon `space.amounts` (mai, și mai, încă, puțin, un pic
+...; the name of the English frame's lexicon), as English "a bit" in acts.more.place.dir.amt. Three frames say that
+English frame: `ro.place.dir.amt` (a thing), `.amt.it` ("mută și mai la stânga", no thing) and `.amt.bare` (a verbless
+continuation, "mai în dreapta", "și mai jos": the host keeps the previous act and thing). For the library's
+`resolveEllipsis` (0.116) a host passes `lang: 'w.lang.ro'`, the items of `relative.more` (mai, încă) as `more` and of
+`relative.small` (puțin, pic, ușor) as `small`, and the folds; the directions it reads are those of `acts.dir`. Of the
+four new reads, "mai in dreapta" and "mai in stinga" count as read only (their glosses have no verb), "și mai jos"
+counts right. Two directions in one turn ("mai la stânga și mai jos") are still read with the first inside the thing.
 
