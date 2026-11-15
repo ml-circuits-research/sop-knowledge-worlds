@@ -6,9 +6,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { parse } from '../tools/sopworld/sopworld.mjs';
+import { parse, articleFor } from '../tools/sopworld/sopworld.mjs';
 import { WORLDS_DIR } from '../tools/lib/worlds.mjs';
-import { frameReader, realiseEn, articleFor } from '../tools/lib/lang-en.mjs';
+import { frameReader, realiseEn, enWorld } from '../tools/lib/lang-en.mjs';
 import { phrasingShard, middle, KEYS } from '../tools/lang-en-phrasing.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -117,7 +117,7 @@ test('phrasing: every narrated key, said from a real fact of the catalog, reads 
     const p = templateFor(type, key, form, polarity);
     assert.ok(p, `${type}.${key}: a template`);
     const proper = /^[A-Z0-9]/.test(f.thing);
-    const thing = proper ? f.thing : `${articleFor(all, f.thing)} ${f.thing}`;
+    const thing = proper ? f.thing : `${articleFor(enWorld(), f.thing)} ${f.thing}`;
     const s = realiseEn(all, one(p, 'text'), { thing, value, key: keyWord(key) });
     const [best] = read(s);
     const why = [];

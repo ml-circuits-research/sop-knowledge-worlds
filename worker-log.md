@@ -6337,3 +6337,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   on a seat, `seats` default 4, `colour` on table and guest, needs one value. questions.md Q82 proposes one schema
   (guest.table beside an optional seat with a second capacity and a deny that keeps them together; no seats default:
   the typical range says it; colour joined to k.colours, no default; needs stays many). w.seating is unchanged.
+## 2026-11-15 — second worker: KR4 step 1, the tests on the library (reviewer 15:00 item 2)
+
+- `articleFor`: the library's gives the local copy's article for all 8,886 nouns of k.words: the local copy is
+  deleted; `realiseEn` and the templates and phrasing tests call the library's (`enWorld()` in tools/lib/lang-en.mjs:
+  w.lang.en as a World, built once).
+- `inflect` vs the library's `inflectBy`: plurals differ for 4 of 8,886 nouns (axis, basis, forceps right in the
+  library, taxis wrong); singulars back from the plural: library 8,589 right, local 8,299. On the catalog's 1,356 head
+  nouns the library reads 1,319 both ways: 37 cases (bus -> bu, iris -> iri, houses -> hous ...) are **Q82 [LIB]**.
+  `tests/w.lang.en.library.test.mjs` checks the library's inflectBy on the hand-over table and the catalog nouns with
+  those cases listed (a listed case that reads fails the test). The local `inflect` stays only for the tools that write
+  core-plurals and catalog-plurals.
+- `frameReader` vs the library's `readFrames` on the 498 frame examples: the same frame for 249, the same act and mode
+  for 37, another reading for 212 (no `needs`, role maps, fixed values or host lexicons): **Q83 [LIB]**; the reference
+  reader and clauseReader stay. The test measures every third example (82 of 166) to stay under 30 s (27 s).
+- `realiseEn` vs the library's `realise`: no article form, no English plural, no capital: **Q84 [LIB]**; the local
+  slot filling stays, with the library's articleFor.
+- `solveChoices` (tools/lib/choose.mjs): next step.
+- Tests: library 4, templates, phrasing, w.lang.en, catalog-plurals, repo: 40 pass.

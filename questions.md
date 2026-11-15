@@ -1175,3 +1175,43 @@ Proposal, one schema both can use (w.seating version 3), nothing changed until t
    colour / color.
 4. `needs` stays many (a guest can be vegetarian and need a wheelchair); a host that keeps one value takes the first.
 Meanwhile: w.seating stays at version 2; PSys2 keeps schema.host.sop.
+## Q82 [LIB] (reviewer 15:00 item 2, KR4, second worker, 2026-11-15): inflectBy reads 37 head nouns of the catalog wrong that w.lang.en's rules read
+Question: can `inflectBy(world, word, 'singular' | 'plural')` read the singular of these nouns as w.lang.en's facts
+say? At 0.130 the library reads 1,319 of the catalog's 1,356 head nouns both ways (the reference reading of
+tools/lib/lang-en.mjs reads all of them), and 8,589 of 8,886 k.words nouns back from their plural (the local reading
+8,299: the library is better there, so the tests move to it).
+Failing cases (tests/w.lang.en.library.test.mjs, `Q82`):
+1. A singular read as a plural (`unless_is_singular`, the -us/-is exceptions and the singular of an irregular pair,
+   Q79 item 1, are not applied): bus -> bu, iris -> iri, lens -> len, ibis -> ibi, mantis -> manti, walrus -> walru,
+   asparagus, rhinoceros, hippopotamus, octopus, lotus, cactus, tennis, platypus.
+2. A plural in -ses whose singular ends in -se (the -es rule taken before the -s rule): houses -> hous, horses ->
+   hors, roses -> ros, cases, vases, noses, cheeses, bases, hoses, purses, blouses, tortoises, porpoises, sunrises,
+   mongooses, suitcases, briefcases, seahorses, lighthouses, courthouses, greenhouses, warehouses, mayonnaises.
+3. A plural: taxis -> taxes (taxis is its own plural; axis -> axes and basis -> bases are right).
+Meanwhile: the tests check the library with these cases listed; the local `inflect` stays only for the tools that
+write the plural shards (core-plurals, catalog-plurals) until these read.
+Blocking: no.
+
+## Q83 [LIB] (reviewer 15:00 item 2, KR4, second worker, 2026-11-15): readFrames and the frames of w.lang.en: needs, role maps, fixed values, host lexicons
+Question: can `readFrames(world, text, { lang: 'w.lang.en' })` read w.lang.en's frames as a host does: (1) only the
+frames whose `needs` the host's world meets (an option `needs(n)`, or the world's kinds), (2) the frame roles turned
+into the act's roles by `w.lang.en.role_map` (`frame=`, or `act=` and `takes=`), (3) the `w.lang.en.fixed` values of a
+frame (attribute status, value done) in the result, (4) lexicons a host gives (its kinds, attributes, values), a
+lexicon the world lacks taking one to three words?
+Context: on the 498 frame examples at 0.130, readFrames takes the frame itself or the reference reader's frame for 249,
+a frame of the same act and mode for 37, another reading for 212. Cases: "Make a flowchart of making tea." ->
+acts.read.own (acts.make.diagram needs `layout`); "Make it a pie chart." -> acts.read.own (acts.data.change.value.d
+needs a chart world); "I want the bars green." -> acts.shop.want (needs=entries wins in a chart world); "The bars are
+teal now." -> acts.state.is; "Use rainbow colors." -> acts.more.make.wish. The reference reader
+(tools/lib/lang-en.mjs `frameReader`, with `clauseReader`) stays, and the 10 frame tests use it, until these read;
+tests/w.lang.en.library.test.mjs measures the library on every third example (82 of 166 at 0.130).
+Blocking: no.
+
+## Q84 [LIB] (reviewer 15:00 item 2, KR4, second worker, 2026-11-15): realise for English: articles, plurals, the capital
+Question: can `realise(m, template, roles)` fill w.lang.en's templates as tools/lib/lang-en.mjs `realiseEn` does?
+Cases at 0.130 (morphOf of w.lang.en, no dictionary): 'add a {value} {kind}.' with orange, house -> "add a orange
+house." (wanted "Add an orange house.": the article `a` takes its form from the next word, w.lang.en.det before= and
+onsets, as `articleFor` does; the first letter upper case); 'add {number} {kind:num=pl}.' with 3, mouse -> "add 3
+mouse." (wanted "Add 3 mice.": `num=pl` by w.lang.en's rules and irregulars, as `inflectBy`); 'add a {kind}.' with no
+kind -> null (same). Meanwhile `realiseEn` fills the slots and takes the article from the library's articleFor.
+Blocking: no.

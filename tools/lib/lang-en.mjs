@@ -3,7 +3,18 @@
 // The algorithms are the library's (std.grammar) or the host's; these are the smallest reference readings.
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR } from './worlds.mjs';
+import { WORLDS_DIR, scanWorlds, schemaWorld } from './worlds.mjs';
+import { articleFor as libArticleFor } from '../sopworld/sopworld.mjs';
+
+// w.lang.en as a World (its schema and shards), built once: what the library's functions read (KR4).
+let en = null;
+export function enWorld() {
+  if (en) return en;
+  const worlds = scanWorlds();
+  const { world } = schemaWorld(worlds, 'w.lang.en');
+  for (const s of worlds.find((w) => w.id === 'w.lang.en').shards) world.tell(s.text);
+  return (en = world);
+}
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
@@ -233,17 +244,9 @@ export function frameReader(wires, actionWires, { lexicons = {}, needs = () => t
   };
 }
 
-// The article before a word: `a` or `an` by the sound the word begins with (`w.lang.en.det before=`), the spelling's
-// first letter unless a `w.lang.en.onset` fact says otherwise for the longest beginning it names (an hour, a unicorn).
-export function articleFor(wires, word) {
-  const w = String(word).toLowerCase();
-  const onset = wires.filter((x) => x.type === 'w.lang.en.onset' && w.startsWith(one(x, 'begins'))).sort((a, b) => one(b, 'begins').length - one(a, 'begins').length)[0];
-  const sound = onset ? one(onset, 'sound') : /^[aeiou]/.test(w) ? 'vowel' : 'consonant';
-  return one(wires.find((x) => x.type === 'w.lang.en.det' && one(x, 'before') === sound), 'text');
-}
-
 // A template filled (the library's notation, std.morph `realise`): `{role}` the filler as given, `{role:num=pl}` its
-// plural by the morphology rules of w.lang.en; the article `a` takes its form from the next word. The first letter is
+// plural by the morphology rules of w.lang.en; the article `a` takes its form from the next word (the library's
+// articleFor; KR4: the slots, the plural and the capital stay here until the library's realise does English, Q84). The first letter is
 // made upper case. Returns null when a role of the template has no filler.
 export function realiseEn(wires, text, fillers) {
   const facts = { inflect: wires.filter((w) => w.type === 'w.lang.en.inflect'), irregular: wires.filter((w) => w.type === 'w.lang.en.irregular'), exceptions: wires.filter((w) => w.type === 'w.lang.en.noun.exception') };
@@ -257,7 +260,7 @@ export function realiseEn(wires, text, fillers) {
   });
   if (missing) return null;
   const article = new Set(wires.filter((w) => w.type === 'w.lang.en.det' && one(w, 'before')).map((w) => one(w, 'text')));
-  s = s.replace(/\b(a|an) (\S+)/gi, (m, a, next) => (article.has(a.toLowerCase()) ? `${articleFor(wires, next)} ${next}` : m));
+  s = s.replace(/\b(a|an) (\S+)/gi, (m, a, next) => (article.has(a.toLowerCase()) ? `${libArticleFor(enWorld(), next)} ${next}` : m));
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 

@@ -4,9 +4,9 @@
 // std.sample (realise / read round trip) and std.grammar generation can read in place.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { parse, World, parseText, nounPhrase } from '../tools/sopworld/sopworld.mjs';
+import { parse, World, parseText, nounPhrase, articleFor } from '../tools/sopworld/sopworld.mjs';
 import { scanWorlds } from '../tools/lib/worlds.mjs';
-import { frameReader, realiseEn, articleFor, hostOptions, hostLexicon, inflect } from '../tools/lib/lang-en.mjs';
+import { frameReader, realiseEn, enWorld, hostOptions, hostLexicon, inflect } from '../tools/lib/lang-en.mjs';
 
 const worlds = scanWorlds();
 const lang = worlds.find((w) => w.id === 'w.lang.en');
@@ -106,7 +106,7 @@ test('templates: every act of k.actions has one, each names a frame of its act, 
 });
 
 test('templates: the article takes its form from the next word (w.lang.en.det before, onsets)', () => {
-  for (const [w, a] of Object.entries({ house: 'a', apple: 'an', umbrella: 'an', hour: 'an', honest: 'an', unicorn: 'a', uniform: 'a', unimportant: 'an', european: 'a', one: 'a', user: 'a', orange: 'an', ewe: 'a', egg: 'an' })) assert.equal(articleFor(all, w), a, w);
+  for (const [w, a] of Object.entries({ house: 'a', apple: 'an', umbrella: 'an', hour: 'an', honest: 'an', unicorn: 'a', uniform: 'a', unimportant: 'an', european: 'a', one: 'a', user: 'a', orange: 'an', ewe: 'a', egg: 'an' })) assert.equal(articleFor(enWorld(), w), a, w);
   assert.equal(realiseEn(all, 'add a {value} {kind}.', { value: 'orange', kind: 'house' }), 'Add an orange house.');
   assert.equal(realiseEn(all, 'add {number} {kind:num=pl}.', { number: '3', kind: 'mouse' }), 'Add 3 mice.');
   assert.equal(realiseEn(all, 'add a {kind}.', {}), null, 'a role without a filler');
