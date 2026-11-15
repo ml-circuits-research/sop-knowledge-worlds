@@ -242,8 +242,8 @@ test('w.lang.en: the parts of every frame give a pattern that reads back to the 
   }
 });
 
-test('w.lang.en joins k.values: the numerals and ordinals agree with k.values.number', () => {
-  const nums = kw('k.values', 'k.values.number');
+test('w.lang.en: the numerals and ordinals agree with the number words of this world (w.lang.en.number, KR2)', () => {
+  const nums = of('number');
   const value = (text, kind) => nums.find((n) => one(n, 'text') === text && one(n, 'kind') === kind)?.attrs.value?.[0];
   for (const n of of('numeral')) assert.equal(value(one(n, 'text'), 'cardinal'), one(n, 'value'), one(n, 'text'));
   for (const n of of('ordinal').filter((x) => one(x, 'text') !== 'last')) assert.equal(value(one(n, 'text'), 'ordinal'), one(n, 'value'), one(n, 'text'));

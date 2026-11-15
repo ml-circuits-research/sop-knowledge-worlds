@@ -1,8 +1,9 @@
 // k.values (Round 8, item 3): the words for values: ordered scales (size, amount, degree …)
-// with their comparatives, directions and positions, set words, number words and ordinals.
+// with their comparatives, directions and positions, set words (number words: w.lang.en, colour names: k.colours).
 //   node tools/values-core.mjs          writes docs/worlds/k.values/shards/*.sop, and the colour names with RGB into
 //                                       k.colours/shards/colours-css.sop and colours-common.sop (KR2: k.colours is the
-//                                       home of every colour name, reviewer 14:45)
+//                                       home of every colour name, reviewer 14:45), and the number words into
+//                                       w.lang.en/shards/number-words.sop (reviewer 16:45)
 // The CSS colour names come from sources/css-colors/raw/index.js (see sources/css-colors/SOURCE.md); when the raw
 // file is not there the shard k.colours/shards/colours-css is left as it is. Everything else is hand-written here.
 import { readFileSync, existsSync } from 'node:fs';
@@ -182,6 +183,26 @@ export function numberWords() {
   return out;
 }
 
+// The number words (KR2, reviewer 16:45): English words, so their one home is w.lang.en (`w.lang.en.number`); the
+// compounds (twenty-three, twenty-third) are made by the tens-and-units rule of numberWords.
+export function numberWordShards() {
+  const files = {};
+  {
+    const nums = numberWords();
+    const exact = (v) => Math.round(v * 1000) / 1000 === v;
+    const lines = nums.map(([t, kind, value]) => wire(`w.lang.en.number.${kind}.${seg(t)}`, 'w.lang.en.number', [['text', t], ['kind', kind],
+      exact(value) ? ['value', value] : ['value_about', Math.round(value * 1000) / 1000]], HAND));
+    const words = [word('w.lang.en.word.number.cardinal.one', ['a', 'an'], 'one', 'w.lang.en.number.text'), word('w.lang.en.word.number.cardinal.zero', ['nought', 'nil'], 'zero', 'w.lang.en.number.text'),
+      word('w.lang.en.word.number.cardinal.hundred', ['a hundred', 'one hundred'], 'hundred', 'w.lang.en.number.text'), word('w.lang.en.word.number.cardinal.thousand', ['a thousand', 'one thousand'], 'thousand', 'w.lang.en.number.text'),
+      word('w.lang.en.word.number.group.dozen', ['a dozen'], 'dozen', 'w.lang.en.number.text'), word('w.lang.en.word.number.group.pair', ['a pair', 'a pair of'], 'pair', 'w.lang.en.number.text'),
+      word('w.lang.en.word.number.group.couple', ['a couple', 'a couple of'], 'couple', 'w.lang.en.number.text'), word('w.lang.en.word.number.fraction.half', ['a half', 'one half'], 'half', 'w.lang.en.number.text'),
+      word('w.lang.en.word.number.fraction.quarter', ['a quarter', 'one quarter'], 'quarter', 'w.lang.en.number.text'), word('w.lang.en.word.number.fraction.third', ['a third', 'one third'], 'third', 'w.lang.en.number.text')];
+    files['number-words.sop'] = shard('number-words', `${nums.length} number words: the cardinals zero to ninety-nine, hundred, thousand, million, billion; the ordinals first to ninety-ninth, hundredth, thousandth, millionth; once, twice, thrice; single, double, triple, quadruple; pair, couple, trio, dozen; half, third, quarter.`,
+      `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`, { world: 'w.lang.en' });
+  }
+  return files;
+}
+
 // The colour names (KR2, reviewer 14:45): k.colours.colour facts with their RGB; `family` is the basic colour a name is a
 // kind of (was k.values.colour basic).
 export function colourNameShards() {
@@ -245,28 +266,16 @@ export function valueShards() {
     const words = FILLS.map((f) => word(`k.values.word.fill.${seg(f[0])}`, list(f[2]), f[0], 'k.values.fill.name'));
     files['fills.sop'] = shard('fills', `${FILLS.length} ways a shape is filled in a picture (${FILLS.map((f) => f[0]).join(', ')}) and their other words.`, `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`);
   }
-  // Numbers.
-  {
-    const nums = numberWords();
-    const exact = (v) => Math.round(v * 1000) / 1000 === v;
-    const lines = nums.map(([t, kind, value]) => wire(`k.values.number.${kind}.${seg(t)}`, 'k.values.number', [['text', t], ['kind', kind],
-      exact(value) ? ['value', value] : ['value_about', Math.round(value * 1000) / 1000]], HAND));
-    const words = [word('k.values.word.number.cardinal.one', ['a', 'an'], 'one', 'k.values.number.text'), word('k.values.word.number.cardinal.zero', ['nought', 'nil'], 'zero', 'k.values.number.text'),
-      word('k.values.word.number.cardinal.hundred', ['a hundred', 'one hundred'], 'hundred', 'k.values.number.text'), word('k.values.word.number.cardinal.thousand', ['a thousand', 'one thousand'], 'thousand', 'k.values.number.text'),
-      word('k.values.word.number.group.dozen', ['a dozen'], 'dozen', 'k.values.number.text'), word('k.values.word.number.group.pair', ['a pair', 'a pair of'], 'pair', 'k.values.number.text'),
-      word('k.values.word.number.group.couple', ['a couple', 'a couple of'], 'couple', 'k.values.number.text'), word('k.values.word.number.fraction.half', ['a half', 'one half'], 'half', 'k.values.number.text'),
-      word('k.values.word.number.fraction.quarter', ['a quarter', 'one quarter'], 'quarter', 'k.values.number.text'), word('k.values.word.number.fraction.third', ['a third', 'one third'], 'third', 'k.values.number.text')];
-    files['numbers.sop'] = shard('numbers', `${nums.length} number words: the cardinals zero to ninety-nine, hundred, thousand, million, billion; the ordinals first to ninety-ninth, hundredth, thousandth, millionth; once, twice, thrice; single, double, triple, quadruple; pair, couple, trio, dozen; half, third, quarter.`,
-      `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`);
-  }
   return files;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const files = valueShards();
   writeShards(join(WORLDS_DIR, 'k.values', 'shards'), files, '', ['psys2']);
+  const numbers = numberWordShards();
+  writeShards(join(WORLDS_DIR, 'w.lang.en', 'shards'), numbers, 'number-words');
   const cdir = join(WORLDS_DIR, 'k.colours', 'shards'), colours = colourNameShards();
   if (!colours['colours-css.sop'] && existsSync(join(cdir, 'colours-css.sop'))) colours['colours-css.sop'] = readFileSync(join(cdir, 'colours-css.sop'), 'utf8');
   writeShards(cdir, colours, 'colours-');
-  console.log([...Object.keys(files), ...Object.keys(colours).map((f) => `k.colours/${f}`)].join(', '));
+  console.log([...Object.keys(files), ...Object.keys(colours).map((f) => `k.colours/${f}`), ...Object.keys(numbers).map((f) => `w.lang.en/${f}`)].join(', '));
 }

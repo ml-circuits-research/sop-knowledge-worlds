@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1097 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1093 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -1054,10 +1054,6 @@
 @k.attributes.narration.k.values.set_word.picks k.attributes.narration type=k.values.set_word key=picks narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.set_word.manner k.attributes.narration type=k.values.set_word key=manner narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.set_word.about k.attributes.narration type=k.values.set_word key=about narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
-@k.attributes.narration.k.values.number.text k.attributes.narration type=k.values.number key=text narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
-@k.attributes.narration.k.values.number.kind k.attributes.narration type=k.values.number key=kind narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
-@k.attributes.narration.k.values.number.value k.attributes.narration type=k.values.number key=value narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
-@k.attributes.narration.k.values.number.value_about k.attributes.narration type=k.values.number key=value_about narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.fill.name k.attributes.narration type=k.values.fill key=name narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.fill.about k.attributes.narration type=k.values.fill key=about narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"
 @k.attributes.narration.k.values.shade.name k.attributes.narration type=k.values.shade key=name narrate=no salience=0 why="machinery: the words for values" core.source="hand-core 1"

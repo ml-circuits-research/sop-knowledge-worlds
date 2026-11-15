@@ -374,7 +374,7 @@ export function importPsys2(from, commit) {
     const lexColours = vals(lex.find((w) => w.id === 'lex.lang.colour'), 'word').map(spaced);
     const lexMissing = lexColours.filter((c) => !colours.has(c) && !words.has(c) && !newColours.some(([n]) => n === c) && !newWords.some(([a]) => a === c) && !/^(light|dark) /.test(c));
     const ordinals = vals(lex.find((w) => w.id === 'lex.lang.ordinal'), 'word');
-    const nums = new Set((facts.get('k.values.number') ?? []).map((n) => one(n, 'text')));
+    const nums = new Set((facts.get('w.lang.en.number') ?? []).map((n) => one(n, 'text'))); // KR2: the number words are w.lang.en's
     // Built-in kinds: what the parts of a thing are called.
     const kinds = [];
     const body = between('const BUILTIN = {', '\nfor (const k of Object.values(BUILTIN))');
@@ -401,8 +401,8 @@ export function importPsys2(from, commit) {
       `| words for yes and no (lexicon) | ${yes.length} + ${alts('phrase.lang.no').length} | 0 | ${yes.length} + ${no.length}: new type \`k.values.reply\` | the same shard |`,
       `| the names of the parts of the built-in kinds | ${kinds.length} kinds | part names of the drawings in \`k.objects.part\`, usual parts in \`k.parts\` | ${pl.length} parts with their other names: new type \`k.parts.called\` | \`k.parts/shards/psys2\` |`,
       `| shape names (\`kids.shapes\`) | 9 + their kinds | the others in \`k.shapes.shape\` | ${newShapes.length}: ${newShapes.join(', ')} | \`k.values/shards/psys2\` |`,
-      `| ordinal words (lexicon) | ${ordinals.length} | ${ordinals.filter((o) => nums.has(o)).length} in \`k.values.number\` | 0 | – |`, '',
-      `**Left:** the values of the base colours we have under the same name (the demo's palette; ours are the CSS values: ${rgbDis.length} differ, as two palettes do); the drawings, sizes and default colours of the built-in kinds (drawings are \`k.objects\`; a default colour of a circle is the demo's choice); the phrases of the lexicon (how a request is worded: the demo's language layer, not knowledge of things); from the no-words those that are refusals to act (stay, leave it, not now, never, do not, I do not know); the lexicon's colour words that are a shade and a colour (light red, dark green: a shade word and a colour name say it)${lexMissing.length ? `; colour words with no value in PSys2 either: ${lexMissing.join(', ')}` : ''}. The lexicon has no number words besides the ordinals; \`k.values.number\` has ${nums.size}.`]);
+      `| ordinal words (lexicon) | ${ordinals.length} | ${ordinals.filter((o) => nums.has(o)).length} in \`w.lang.en.number\` | 0 | – |`, '',
+      `**Left:** the values of the base colours we have under the same name (the demo's palette; ours are the CSS values: ${rgbDis.length} differ, as two palettes do); the drawings, sizes and default colours of the built-in kinds (drawings are \`k.objects\`; a default colour of a circle is the demo's choice); the phrases of the lexicon (how a request is worded: the demo's language layer, not knowledge of things); from the no-words those that are refusals to act (stay, leave it, not now, never, do not, I do not know); the lexicon's colour words that are a shade and a colour (light red, dark green: a shade word and a colour name say it)${lexMissing.length ? `; colour words with no value in PSys2 either: ${lexMissing.join(', ')}` : ''}. The lexicon has no number words besides the ordinals; \`w.lang.en.number\` has ${nums.size}.`]);
   }
   return { files, page: `${md.join('\n').trimEnd()}\n`, stats };
 }

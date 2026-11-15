@@ -50,7 +50,7 @@ export const MACHINERY = {
   'k.time.ordered': 'orders for the time solver', 'k.time.before': 'orders for the time solver, derived', 'k.time.during': 'spans for the time solver, derived',
   'k.time.season_in': 'spans for the time solver, derived', 'k.scenes.has': 'what a drawn scene holds and where', 'k.values.scale': 'the words for values',
   'k.values.step': 'the words for values', 'k.values.comparative': 'the words for values', 'k.values.set_word': 'the words for values',
-  'k.values.number': 'the words for values', 'k.values.fill': 'the words for values', 'k.values.shade': 'the words for values', 'k.values.reply': 'the words for values',
+  'k.values.fill': 'the words for values', 'k.values.shade': 'the words for values', 'k.values.reply': 'the words for values',
   'k.values.direction': 'the words for values', 'k.values.position': 'the words for values', 'k.values.coloured': 'the words for values',
 };
 

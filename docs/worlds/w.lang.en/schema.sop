@@ -10,7 +10,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/import/psys2-lang-en.mjs, except shards/hand-*.sop
 
-@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc exports=reply exports=fn exports=feeling_reply exports=count core.source="psys2 78f45863"
+@w.lang.en core.module name=w.lang.en version=4 exports=det exports=pron exports=anaphor exports=prep exports=prep.time exports=number exports=ordinal exports=numeral exports=inflect exports=irregular exports=noun.exception exports=contraction exports=contraction.ending exports=cat exports=word exports=rule exports=construction exports=frame exports=part exports=fixed exports=phrase exports=lex exports=joiner exports=joiner.keep exports=frame_lead exports=correction exports=correction.lead exports=answer exports=wh exports=aux exports=neg exports=neg.imperative exports=neg.imperative.skip exports=imperative.lead exports=ellipsis.lead exports=ellipsis.trail exports=ellipsis.repeat exports=ellipsis.starter exports=ellipsis.param exports=coord.sep exports=coord.param exports=relpron exports=copula exports=partitive exports=other exports=choice exports=role_map exports=mode_map exports=template exports=phrasing exports=discourse exports=slot exports=onset exports=alternation exports=alternation_family exports=alternation_case exports=variant exports=skip exports=closed exports=class exports=ending exports=irregular_form exports=arrangement exports=calc exports=reply exports=fn exports=feeling_reply exports=count core.source="psys2 78f45863"
 
 # ---- closed word classes ----
 # A determiner or quantifier. `in` names a view: one of the lists PSys2 kept in its modules (acts, expand, dialogue,
@@ -91,6 +91,17 @@
 
 # Ordinals and small cardinals a reader needs before the catalog is reachable. k.values.number holds every number
 # word; these agree with it (a test). `last` counts from the end (value -1).
+# A number word (KR2, reviewer 16:45: the one home of English number words; was k.values.number): `text`, `kind`
+# (cardinal, ordinal, times, multiple, group, fraction), `value` (exact) or `value_about` (a third: 0.333). The cardinals
+# and ordinals to ninety-nine are made by the tens-and-units rule of tools/values-core.mjs (twenty-three, twenty-third);
+# the numerals and ordinals below are the small closed classes the grammar and the frames read, each a number word here.
+@w.lang.en.number core.type of=w.lang.en.number shared=true closed=true core.source="hand-core 1"
+@w.lang.en.number.text core.slot of=w.lang.en.number key=text id=true required=true kind=atom kind=string core.source="hand-core 1"
+@w.lang.en.number.kind core.slot of=w.lang.en.number key=kind id=true required=true enum=cardinal enum=ordinal enum=times enum=multiple enum=group enum=fraction core.source="hand-core 1"
+@w.lang.en.number.value core.slot of=w.lang.en.number key=value kind=number core.source="hand-core 1"
+@w.lang.en.number.value_about core.slot of=w.lang.en.number key=value_about excludes=value kind=number core.source="hand-core 1"
+@w.lang.en.word.number core.word text=number text=numbers text="number word" means=w.lang.en.number core.source="hand-core 1"
+@w.lang.en.word.number.value core.word text=value means=w.lang.en.number.value core.source="hand-core 1"
 @w.lang.en.ordinal core.type of=w.lang.en.ordinal shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.ordinal.text core.slot of=w.lang.en.ordinal key=text id=true required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.ordinal.value core.slot of=w.lang.en.ordinal key=value required=true kind=integer core.source="psys2 78f45863"

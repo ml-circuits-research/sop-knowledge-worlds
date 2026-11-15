@@ -22,18 +22,8 @@ a place in the picture, which of several things, or a number.
   with `column`, `row`, `depth` (top left, centre, bottom, front).
 - `k.values.set_word`: all, each, both, either, any, some, most, half, none, other, another, random, same,
   different, alternating, first, last, next, previous: `picks` (how many of the things meant) and `manner`.
-- `k.values.number` (identity `text`, `kind`): cardinals zero to ninety-nine, hundred, thousand, million, billion;
-  ordinals first to ninety-ninth, hundredth, thousandth, millionth; once, twice, thrice; single to quadruple; pair,
-  couple, trio, half a dozen, dozen; half, third (`value_about`), quarter, three quarters: 222 facts.
-
-## Shards
-
-`fills` (5 fills: solid, outline, striped, dotted, checked, with their other words; `k.values.fill`, a value of
-the role `value` of change, from the PSys2 hand-over), `scales` (186), `shapes` (60), `directions` (61), `sets` (37),
-`numbers` (232): 838 wires. Written by `tools/values-core.mjs`.
-
-## What it does not know
-
+- Number words are no longer here (KR2, reviewer 16:45): `w.lang.en.number` (shard w.lang.en/number-words, 222 words:
+  cardinals and ordinals to ninety-nine by the tens-and-units rule, hundred ... billion, once, double, dozen, half).
 - Which things have which colour, what mixes into what, light and dark families: a colour world can join here by
   the colour name.
 - Numbers above ninety-nine as phrases ("two hundred and five"): a host composes them from the words here.

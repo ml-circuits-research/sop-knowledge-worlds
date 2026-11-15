@@ -6301,3 +6301,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Rebased again (onto the catalog-plurals commits): 50 touched files on 0.130, 4 fail, each failing the same way with
   0.113 on that tip (coverage-report, w.lang.en.arrangement, w.lang.en.templates, and w.lang.en.catalog-plurals:
   "axes -> ax"): red on main, not from the pin.
+
+## 2026-11-15 — fourth worker: number words have one home, w.lang.en (reviewer 16:45, KR2 item 4)
+
+- The 222 number words (cardinals and ordinals to ninety-nine by the tens-and-units rule of tools/values-core.mjs,
+  hundred ... billion, once / twice / thrice, single ... quadruple, pair ... dozen, half ... three quarters) are
+  `w.lang.en.number` (new type: text, kind, value, value_about) in shard w.lang.en/number-words (written by
+  values-core); k.values.number (type, 4 slots, words, shard numbers) is gone. The 13 numerals and 11 ordinals of
+  w.lang.en stay as the grammar's closed classes (the parser's NUM and ORD) and agree with w.lang.en.number (a test).
+- Followers: measures (w.lang.en.number value plain), relations-core (the amount and number argument classes),
+  narration, the PSys2 importers' texts (FROM-PSYS2.md, the w.lang.en numbers header), w.lang.ro's numeral test.
+  Questions va-10, va-11 are en-n1, en-n2 of tests/w.lang.en.questions.jsonl.
+- Tests: k.values (5), w.lang.en 22, w.lang.ro, questions (446 pass; at-07 "which things are usually pink" fails on
+  main before this commit too: the KR6 glosses added rhubarb), relations, narration, import.psys2, generators,
+  counts, catalog, validate (1,185 files, 0 errors), repo.

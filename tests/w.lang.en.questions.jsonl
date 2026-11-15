@@ -1,0 +1,2 @@
+{"id":"en-n1","ask":"what number is twenty-three","query":{"type":"w.lang.en.number","where":{"text":"twenty-three","kind":"cardinal"},"seek":"value"},"expect":{"status":"supported","value":"23"}}
+{"id":"en-n2","ask":"which number is fifth","query":{"type":"w.lang.en.number","where":{"text":"fifth","kind":"ordinal"},"seek":"value"},"expect":{"status":"supported","value":"5"}}

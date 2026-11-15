@@ -61,7 +61,7 @@ export function importLangEn(read, commit, local) {
   notes.changed.push('the temporal prepositions (`time=yes`) are a type of their own, `w.lang.en.prep.time`, so that a grammar reads them as their own category (TPREP); `next_to`, `earlier_than` are written "next to", "earlier than"');
 
   const nums = shard('numbers');
-  put('numbers', 'ordinals and small cardinals a reader needs before the catalog is reachable; the whole system of number words is k.values.number, and these agree with it (a test)', nums.map((w) => (w.type === 'lang.en.ordinal' ? W(`ordinal.${idOf(w, 'lang.en.ordinal.')}`, 'ordinal', copy(w)) : W(`numeral.${idOf(w, 'lang.en.numeral.')}`, 'numeral', copy(w)))));
+  put('numbers', 'ordinals and small cardinals a reader needs before the catalog is reachable; the whole system of number words is w.lang.en.number (shard number-words), and these agree with it (a test)', nums.map((w) => (w.type === 'lang.en.ordinal' ? W(`ordinal.${idOf(w, 'lang.en.ordinal.')}`, 'ordinal', copy(w)) : W(`numeral.${idOf(w, 'lang.en.numeral.')}`, 'numeral', copy(w)))));
 
   // ---- morphology ----
   const mo = shard('morphology');

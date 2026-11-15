@@ -176,8 +176,8 @@ test('w.lang.ro: closed classes join w.lang.en and k.layouts by relation; numera
     assert.ok(rels.has(one(p, 'rel')), `${one(p, 'form')}: rel ${one(p, 'rel')} is a w.lang.en relation`);
     if (p.attrs.layout) assert.equal(`${one(p, 'layout')} ${one(p, 'inverse') ?? ''}`, layoutOf.get(one(p, 'rel')), `${one(p, 'form')}: the same k.layouts relation as w.lang.en`);
   }
-  const values = new Set(worlds.find((w) => w.id === 'k.values').shards.flatMap((s) => parse(s.text)).filter((w) => w.type === 'k.values.number').map((w) => Number(tok(w.attrs.value?.[0]))));
-  for (const n of of('numeral')) assert.ok(values.has(Number(one(n, 'value'))), `${one(n, 'form')}: ${one(n, 'value')} is a k.values number`);
+  const values = new Set(worlds.find((w) => w.id === 'w.lang.en').shards.flatMap((s) => parse(s.text)).filter((w) => w.type === 'w.lang.en.number').map((w) => Number(tok(w.attrs.value?.[0]))));
+  for (const n of of('numeral')) assert.ok(values.has(Number(one(n, 'value'))), `${one(n, 'form')}: ${one(n, 'value')} is a number of w.lang.en`);
   assert.deepEqual(splitClitics(m, 'desenează-mi'), ['desenează', 'mi']);
   for (const p of of('pron').filter((x) => one(x, 'clitic') === 'joined')) assert.ok(of('pron').some((q) => one(q, 'lemma') === one(p, 'lemma') && one(q, 'clitic') !== 'joined'), `${one(p, 'form')}: a joined clitic has a full form`);
 });

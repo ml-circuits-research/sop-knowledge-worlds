@@ -90,6 +90,6 @@ The `KNOWLEDGE` table of `space.mjs` (supports, around, face) is the same list a
 | words for yes and no (lexicon) | 26 + 16 | 0 | 26 + 16: new type `k.values.reply` | the same shard |
 | the names of the parts of the built-in kinds | 23 kinds | part names of the drawings in `k.objects.part`, usual parts in `k.parts` | 91 parts with their other names: new type `k.parts.called` | `k.parts/shards/psys2` |
 | shape names (`kids.shapes`) | 9 + their kinds | the others in `k.values.shape` | 3: polygon, quadrilateral, rhombus | `k.values/shards/psys2` |
-| ordinal words (lexicon) | 11 | 10 in `k.values.number` | 0 | – |
+| ordinal words (lexicon) | 11 | 10 in `w.lang.en.number` | 0 | – |
 
 **Left:** the values of the base colours we have under the same name (the demo's palette; ours are the CSS values: 27 differ, as two palettes do); the drawings, sizes and default colours of the built-in kinds (drawings are `k.objects`; a default colour of a circle is the demo's choice); the phrases of the lexicon (how a request is worded: the demo's language layer, not knowledge of things); from the no-words those that are refusals to act (stay, leave it, not now, never, do not, I do not know); the lexicon's colour words that are a shade and a colour (light red, dark green: a shade word and a colour name say it); colour words with no value in PSys2 either: off white, caramel, blonde, auburn. The lexicon has no number words besides the ordinals; `k.values.number` has 221.

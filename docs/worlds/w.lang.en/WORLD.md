@@ -16,7 +16,7 @@ Source: PSys2's hand-over `handover/lang.en` at commit `78f45863` (CC0, `sources
 | determiners | 31 determiners and quantifiers, with kind, number, definiteness, person; `in` = the PSys2 list (view) a word was in |
 | pronouns | 21 pronouns (case, person, number, gender, what they refer to), 14 anaphoric noun phrases ("that one") in the order they are tried |
 | prepositions | 32 prepositions as relations (place, goal, source, way; roles), 7 temporal ones (`w.lang.en.prep.time`: earlier, later, within; all 7 joined: to `k.time.before`, and during to `k.time.during`) |
-| numbers | 11 ordinals, 13 small cardinals (agree with `k.values.number`) |
+| numbers, number-words | 11 ordinals, 13 small cardinals (closed classes of the grammar); 222 number words (`w.lang.en.number`, the one home, KR2) |
 | morphology | 11 inflection rules in order, 5 irregular plurals, 31 noun exceptions, 20 contractions, 6 contraction endings (and core-plurals, hand-morphology: 201 irregular plurals more) |
 | ellipsis | 19 lead and 4 trail markers of a fragment, 10 repeats, 27 sentence starters, 6 limits |
 | grammar | 64 constructions (54 of English, 10 helpers) with 84 productions over 53 categories; the 28 words of 16 small categories; coordination words and limits |
@@ -438,7 +438,7 @@ the lexicon taken from k.attributes and k.time (11 of 11).
 
 ## Joins
 
-- **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the
+- **number words:** the numerals, ordinals and numeral determiners have the values of `w.lang.en.number` (a test); the
   quantifiers over a set (all, every, each, both) are `k.values.set_word` names or their words (every is a word of each).
 - **k.words:** the irregular singulars and the noun exceptions are words of `k.words`; plurals in a sentence are
   read by the morphology rules to the word `k.words` holds (`hostLexicon`). `shards/core-plurals.sop` (WordNet's noun

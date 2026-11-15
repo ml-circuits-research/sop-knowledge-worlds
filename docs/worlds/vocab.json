@@ -185,11 +185,11 @@
   "k.music/shards/chords",
   "k.music/shards/notes",
   "k.procedures/shards/from-knowledge",
-  "k.values/shards/numbers",
   "k.words/shards/a",
   "k.words/shards/frequency-a",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/templates-acts"
  ],
  "a 6": [
@@ -226,11 +226,11 @@
   "k.music/shards/chords"
  ],
  "a couple": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a couple of": [
-  "k.values/shards/numbers",
-  "k.values/shards/scales"
+  "k.values/shards/scales",
+  "w.lang.en/shards/number-words"
  ],
  "a cow makes what sound": [
   "w.lang.en/shards/alternations"
@@ -269,7 +269,7 @@
   "k.music/shards/notes"
  ],
  "a dozen": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a face of a role": [
   "k.procedures/shards/from-knowledge"
@@ -489,7 +489,7 @@
   "k.music/shards/chords"
  ],
  "a half": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a half diminished": [
   "k.music/shards/chords"
@@ -507,7 +507,7 @@
   "k.music/shards/keys"
  ],
  "a hundred": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a little": [
   "k.values/shards/scales"
@@ -615,16 +615,16 @@
   "k.values/shards/scales"
  ],
  "a pair": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a pair of": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a person of a role": [
   "k.procedures/shards/from-knowledge"
  ],
  "a quarter": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a quarter of": [
   "w.lang.en/shards/arithmetic"
@@ -882,10 +882,10 @@
   "k.values/shards/scales"
  ],
  "a third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a thousand": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "a#": [
   "k.music/shards/chords",
@@ -5109,11 +5109,11 @@
   "k.people/shards/given-names-a"
  ],
  "an": [
-  "k.values/shards/numbers",
   "k.words/shards/an",
   "k.words/shards/frequency-a",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/templates-acts"
  ],
  "an additional": [
@@ -15047,9 +15047,9 @@
   "k.words/shards/frequency-b"
  ],
  "billion": [
-  "k.values/shards/numbers",
   "k.words/shards/bi",
   "k.words/shards/frequency-b",
+  "w.lang.en/shards/number-words",
   "k.objects/shards/noto-money-01"
  ],
  "billionaire": [
@@ -23871,7 +23871,6 @@
   "k.kinds/shards/place",
   "k.kinds/shards/wordnet-1",
   "k.scenes/shards/things-c",
-  "k.values/shards/numbers",
   "k.words/shards/ca",
   "k.words/shards/frequency-c",
   "k.objects/shards/openmoji-objects-01"
@@ -33214,9 +33213,9 @@
  ],
  "couple": [
   "k.actions/shards/verbs-connect",
-  "k.values/shards/numbers",
   "k.words/shards/co-2",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.lang.en/shards/number-words"
  ],
  "coupon": [
   "k.words/shards/co-2",
@@ -42140,10 +42139,10 @@
   "k.geo/shards/africa"
  ],
  "double": [
-  "k.values/shards/numbers",
   "k.words/shards/do",
   "k.words/shards/frequency-d",
-  "w.lang.en/shards/arithmetic"
+  "w.lang.en/shards/arithmetic",
+  "w.lang.en/shards/number-words"
  ],
  "double bed": [
   "k.attributes/shards/drawn-mulberry",
@@ -42317,9 +42316,9 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "dozen": [
-  "k.values/shards/numbers",
   "k.words/shards/do",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.lang.en/shards/number-words"
  ],
  "dozens": [
   "k.words/shards/do",
@@ -45965,11 +45964,11 @@
   "k.scenes/shards/things-e"
  ],
  "eight": [
-  "k.values/shards/numbers",
   "k.words/shards/ei",
   "k.words/shards/frequency-e",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-game-01"
  ],
@@ -45977,81 +45976,81 @@
   "k.shapes/shards/shapes"
  ],
  "eighteen": [
-  "k.values/shards/numbers",
   "k.words/shards/ei",
-  "k.words/shards/frequency-e"
+  "k.words/shards/frequency-e",
+  "w.lang.en/shards/number-words"
  ],
  "eighteenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighth": [
-  "k.values/shards/numbers",
   "k.words/shards/ei",
   "k.words/shards/frequency-e",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "eightieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty": [
-  "k.values/shards/numbers",
   "k.words/shards/ei",
-  "k.words/shards/frequency-e"
+  "k.words/shards/frequency-e",
+  "w.lang.en/shards/number-words"
  ],
  "eighty-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-five": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eighty-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "eija": [
   "k.people/shards/given-names-e"
@@ -46463,14 +46462,14 @@
   "k.words/shards/frequency-e"
  ],
  "eleven": [
-  "k.values/shards/numbers",
   "k.words/shards/el",
   "k.words/shards/frequency-e",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "eleventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "elf": [
   "k.attributes/shards/drawn-mulberry",
@@ -51838,19 +51837,19 @@
   "k.objects/shards/noto-musical-instrument-02"
  ],
  "fifteen": [
-  "k.values/shards/numbers",
   "k.words/shards/fi",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "w.lang.en/shards/number-words"
  ],
  "fifteenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifth": [
   "k.music/shards/notes",
-  "k.values/shards/numbers",
   "k.words/shards/fi",
   "k.words/shards/frequency-f",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "fifth_post": [
@@ -51863,66 +51862,66 @@
   "k.objects/shards/vehicles"
  ],
  "fiftieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty": [
-  "k.values/shards/numbers",
   "k.words/shards/fi",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "w.lang.en/shards/number-words"
  ],
  "fifty-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-five": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fifty-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fig": [
   "k.attributes/shards/drawn-mulberry",
@@ -52670,11 +52669,11 @@
   "k.kinds/shards/relations-time",
   "k.procedures/shards/from-knowledge",
   "k.time/schema.sop",
-  "k.values/shards/numbers",
   "k.values/shards/sets",
   "k.words/shards/fi",
   "k.words/shards/frequency-f",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "w.tasks/schema.sop",
   "k.objects/shards/noto-award-medal-01",
@@ -52969,11 +52968,11 @@
   "k.geo/shards/oceania"
  ],
  "five": [
-  "k.values/shards/numbers",
   "k.words/shards/fi",
   "k.words/shards/frequency-f",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "five past": [
@@ -54791,7 +54790,7 @@
   "k.words/shards/frequency-f"
  ],
  "fortieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fortified wine": [
   "k.kinds/shards/wordnet-1",
@@ -54846,65 +54845,65 @@
   "k.scenes/shards/things-f"
  ],
  "forty": [
-  "k.values/shards/numbers",
   "k.words/shards/fo",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "w.lang.en/shards/number-words"
  ],
  "forty-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-five": [
   "k.kinds/shards/sensitive",
-  "k.values/shards/numbers",
-  "k.words/shards/fo"
+  "k.words/shards/fo",
+  "w.lang.en/shards/number-words"
  ],
  "forty-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forty-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "forum": [
   "k.words/shards/fo",
@@ -55001,11 +55000,11 @@
   "k.scenes/shards/things-f"
  ],
  "four": [
-  "k.values/shards/numbers",
   "k.words/shards/fo",
   "k.words/shards/frequency-f",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-plant-other-02"
  ],
@@ -55025,19 +55024,19 @@
   "k.objects/shards/noto-plant-other-02"
  ],
  "fourteen": [
-  "k.values/shards/numbers",
   "k.words/shards/fo",
-  "k.words/shards/frequency-f"
+  "k.words/shards/frequency-f",
+  "w.lang.en/shards/number-words"
  ],
  "fourteenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "fourth": [
   "k.music/shards/notes",
-  "k.values/shards/numbers",
   "k.words/shards/fo",
   "k.words/shards/frequency-f",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "fourth_knob": [
@@ -55116,7 +55115,6 @@
   "k.geo/shards/africa"
  ],
  "fraction": [
-  "k.values/shards/numbers",
   "k.words/shards/fr",
   "k.words/shards/frequency-f"
  ],
@@ -62475,7 +62473,6 @@
   "k.procedures/shards/tasks",
   "k.space/schema.sop",
   "k.units/shards/measures",
-  "k.values/shards/numbers",
   "k.words/shards/frequency-g",
   "k.words/shards/gr",
   "w.chart/schema.sop",
@@ -64035,15 +64032,15 @@
   "k.words/shards/ha"
  ],
  "half": [
-  "k.values/shards/numbers",
   "k.values/shards/sets",
   "k.words/shards/frequency-h",
   "k.words/shards/ha",
   "w.lang.en/shards/arithmetic",
+  "w.lang.en/shards/number-words",
   "k.objects/shards/openmoji-food-drink-01"
  ],
  "half a dozen": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "half an hour": [
   "k.time/shards/clock-words"
@@ -69387,12 +69384,12 @@
   "k.words/shards/hu"
  ],
  "hundred": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-h",
-  "k.words/shards/hu"
+  "k.words/shards/hu",
+  "w.lang.en/shards/number-words"
  ],
  "hundredth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "hunedoara": [
   "k.geo/shards/psys2-cities-europe"
@@ -75769,10 +75766,6 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-values"
  ],
- "k.values.number": [
-  "k.attributes/shards/narration",
-  "k.kinds/shards/relations-values"
- ],
  "k.values.position": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-values"
@@ -77511,7 +77504,6 @@
   "k.kinds/shards/relations-scenes",
   "k.kinds/shards/relations-shapes",
   "k.kinds/shards/relations-space",
-  "k.kinds/shards/relations-values",
   "k.kinds/shards/relations-wearables",
   "k.layouts/schema.sop",
   "k.motion/schema.sop",
@@ -77526,7 +77518,6 @@
   "k.space/schema.sop",
   "k.units/schema.sop",
   "k.units/shards/measures",
-  "k.values/schema.sop",
   "k.wearables/schema.sop",
   "k.words/schema.sop",
   "k.words/shards/frequency-k",
@@ -90386,9 +90377,9 @@
   "k.units/shards/core"
  ],
  "million": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-m",
   "k.words/shards/mi",
+  "w.lang.en/shards/number-words",
   "k.objects/shards/noto-money-01"
  ],
  "millionaire": [
@@ -90397,7 +90388,7 @@
   "k.objects/shards/noto-transport-water-01"
  ],
  "millionth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "millipede": [
   "k.animals/shards/invertebrates",
@@ -93891,7 +93882,6 @@
   "k.geo/shards/psys2-cities-asia"
  ],
  "multiple": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-m",
   "k.words/shards/mu"
  ],
@@ -96401,9 +96391,9 @@
   "k.people/shards/given-names-n"
  ],
  "nil": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-n",
-  "k.words/shards/ni"
+  "k.words/shards/ni",
+  "w.lang.en/shards/number-words"
  ],
  "nile": [
   "k.attributes/shards/same-n",
@@ -96427,82 +96417,82 @@
   "k.words/shards/ni"
  ],
  "nine": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-n",
   "k.words/shards/ni",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "nineteen": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-n",
-  "k.words/shards/ni"
+  "k.words/shards/ni",
+  "w.lang.en/shards/number-words"
  ],
  "nineteenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninetieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-n",
-  "k.words/shards/ni"
+  "k.words/shards/ni",
+  "w.lang.en/shards/number-words"
  ],
  "ninety-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-five": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ninety-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "ningbo": [
   "k.geo/shards/psys2-cities-asia"
@@ -96515,10 +96505,10 @@
   "k.people/shards/given-names-n"
  ],
  "ninth": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-n",
   "k.words/shards/ni",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "nio": [
@@ -97192,7 +97182,7 @@
   "k.geo/shards/derived"
  ],
  "nought": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "nouméa": [
   "k.geo/shards/derived",
@@ -97692,12 +97682,12 @@
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.units/shards/measures",
-  "k.values/schema.sop",
   "k.words/shards/frequency-n",
   "k.words/shards/nu",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
+  "w.lang.en/schema.sop",
   "w.list/schema.sop",
   "w.seating/schema.sop"
  ],
@@ -97710,6 +97700,9 @@
  "number of wheels": [
   "k.attributes/shards/attributes"
  ],
+ "number word": [
+  "w.lang.en/schema.sop"
+ ],
  "number_given": [
   "k.interest/shards/features"
  ],
@@ -97721,9 +97714,9 @@
  ],
  "numbers": [
   "k.attributes/schema.sop",
-  "k.values/schema.sop",
   "k.words/shards/frequency-n",
-  "k.words/shards/nu"
+  "k.words/shards/nu",
+  "w.lang.en/schema.sop"
  ],
  "numeral": [
   "k.units/shards/measures"
@@ -98992,9 +98985,9 @@
   "k.interest/shards/features"
  ],
  "once": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-o",
-  "k.words/shards/on"
+  "k.words/shards/on",
+  "w.lang.en/shards/number-words"
  ],
  "once more": [
   "w.lang.en/shards/ellipsis"
@@ -99042,12 +99035,12 @@
   "k.people/shards/given-names-o"
  ],
  "one": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-o",
   "k.words/shards/on",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
   "w.lang.en/shards/grammar",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-animal-mammal-05"
  ],
@@ -99066,10 +99059,10 @@
   "k.faces/schema.sop"
  ],
  "one half": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "one hundred": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "one inside the other": [
   "k.layouts/shards/layouts",
@@ -99082,13 +99075,13 @@
   "w.lang.en/shards/ellipsis"
  ],
  "one quarter": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "one third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "one thousand": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "one under the other": [
   "w.lang.en/shards/hand-arrangements"
@@ -99697,8 +99690,7 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-units",
   "k.units/schema.sop",
-  "k.units/shards/measures",
-  "k.values/shards/numbers"
+  "k.units/shards/measures"
  ],
  "ordinance": [
   "k.words/shards/frequency-o",
@@ -101085,10 +101077,10 @@
   "k.kinds/shards/relations-layouts",
   "k.kinds/shards/relations-wearables",
   "k.layouts/schema.sop",
-  "k.values/shards/numbers",
   "k.wearables/schema.sop",
   "k.words/shards/frequency-p",
-  "k.words/shards/pa"
+  "k.words/shards/pa",
+  "w.lang.en/shards/number-words"
  ],
  "paisley": [
   "k.attributes/shards/same-p",
@@ -111048,7 +111040,7 @@
   "k.words/shards/qu"
  ],
  "quadruple": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "quagmire": [
   "k.words/shards/frequency-q",
@@ -111147,9 +111139,9 @@
  "quarter": [
   "k.attributes/shards/same-q",
   "k.time/shards/calendar",
-  "k.values/shards/numbers",
   "k.words/shards/frequency-q",
   "k.words/shards/qu",
+  "w.lang.en/shards/number-words",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02"
  ],
@@ -122631,10 +122623,10 @@
   "k.procedures/shards/from-knowledge",
   "k.time/shards/calendar",
   "k.units/shards/core",
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
   "k.words/shards/se",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-award-medal-01"
  ],
@@ -123590,11 +123582,11 @@
   "k.geo/shards/europe"
  ],
  "seven": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
   "k.words/shards/se",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "seven wonders of the ancient world": [
@@ -123610,81 +123602,81 @@
   "k.objects/shards/noto-game-02"
  ],
  "seventeen": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.lang.en/shards/number-words"
  ],
  "seventeenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventh": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
   "k.words/shards/se",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "seventieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
-  "k.words/shards/se"
+  "k.words/shards/se",
+  "w.lang.en/shards/number-words"
  ],
  "seventy-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-five": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "seventy-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sever": [
   "k.actions/shards/verbs-take_apart",
@@ -126230,9 +126222,9 @@
  ],
  "single": [
   "k.procedures/shards/compose",
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.lang.en/shards/number-words"
  ],
  "single bed": [
   "k.attributes/shards/drawn-mulberry",
@@ -126463,11 +126455,11 @@
   "k.geo/shards/asia"
  ],
  "six": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
   "k.words/shards/si",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "six-pack": [
@@ -126477,90 +126469,90 @@
   "k.shapes/shards/shapes"
  ],
  "sixteen": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.lang.en/shards/number-words"
  ],
  "sixteenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixten": [
   "k.people/shards/given-names-s"
  ],
  "sixth": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
   "k.words/shards/si",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "sixth_window": [
   "k.objects/shards/vehicles"
  ],
  "sixtieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixtus": [
   "k.people/shards/given-names-s"
  ],
  "sixty": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-s",
-  "k.words/shards/si"
+  "k.words/shards/si",
+  "w.lang.en/shards/number-words"
  ],
  "sixty-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-five": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "sixty-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "size": [
   "k.attributes/schema.sop",
@@ -137342,11 +137334,11 @@
   "k.objects/shards/noto-food-asian-02"
  ],
  "ten": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/te",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "ten past": [
@@ -137462,10 +137454,10 @@
   "k.objects/shards/noto-animal-marine-02"
  ],
  "tenth": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/te",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "tenure": [
@@ -139324,10 +139316,10 @@
  ],
  "third": [
   "k.music/shards/notes",
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/th",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-award-medal-01"
  ],
@@ -139363,74 +139355,74 @@
   "k.words/shards/th"
  ],
  "thirteen": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/number-words"
  ],
  "thirteenth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirtieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/number-words"
  ],
  "thirty-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-five": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-four": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-one": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thirty-two": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thiruvananthapuram": [
   "k.geo/shards/psys2-cities-asia"
@@ -139550,12 +139542,12 @@
   "k.words/shards/th"
  ],
  "thousand": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/th"
+  "k.words/shards/th",
+  "w.lang.en/shards/number-words"
  ],
  "thousandth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thrash": [
   "k.words/shards/frequency-t",
@@ -139592,15 +139584,15 @@
   "k.words/shards/th"
  ],
  "three": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/th",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "three quarters": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "three-sided": [
   "k.shapes/shards/shapes"
@@ -139618,7 +139610,7 @@
   "k.words/shards/th"
  ],
  "thrice": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "thrift": [
   "k.words/shards/frequency-t",
@@ -140284,7 +140276,6 @@
   "k.objects/shards/things-2"
  ],
  "times": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
   "w.lang.en/shards/arithmetic"
@@ -143333,9 +143324,9 @@
   "k.words/shards/tr"
  ],
  "trio": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/tr"
+  "k.words/shards/tr",
+  "w.lang.en/shards/number-words"
  ],
  "trip": [
   "k.words/shards/frequency-t",
@@ -143348,10 +143339,10 @@
   "k.words/shards/tr"
  ],
  "triple": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/tr",
-  "w.lang.en/shards/arithmetic"
+  "w.lang.en/shards/arithmetic",
+  "w.lang.en/shards/number-words"
  ],
  "tripod": [
   "k.attributes/shards/numbers-p-z",
@@ -144494,13 +144485,13 @@
   "k.objects/shards/openmoji-healthcare-02"
  ],
  "twelfth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twelve": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/tw",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers"
  ],
  "twelve at night": [
@@ -144517,12 +144508,12 @@
   "k.words/shards/tw"
  ],
  "twentieth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/number-words"
  ],
  "twenty past": [
   "k.time/shards/clock-words"
@@ -144531,20 +144522,20 @@
   "k.time/shards/clock-words"
  ],
  "twenty-eight": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-eighth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-fifth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-first": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-five": [
-  "k.values/shards/numbers",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/number-words"
  ],
  "twenty-five past": [
   "k.time/shards/clock-words"
@@ -144553,52 +144544,52 @@
   "k.time/shards/clock-words"
  ],
  "twenty-four": [
-  "k.values/shards/numbers",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/number-words"
  ],
  "twenty-fourth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-nine": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-ninth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-one": [
-  "k.values/shards/numbers",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/number-words"
  ],
  "twenty-second": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-seven": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-seventh": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-six": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-sixth": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-third": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-three": [
-  "k.values/shards/numbers"
+  "w.lang.en/shards/number-words"
  ],
  "twenty-two": [
-  "k.values/shards/numbers",
-  "k.words/shards/tw"
+  "k.words/shards/tw",
+  "w.lang.en/shards/number-words"
  ],
  "twice": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/tw",
-  "w.lang.en/shards/arithmetic"
+  "w.lang.en/shards/arithmetic",
+  "w.lang.en/shards/number-words"
  ],
  "twice as many as": [
   "w.lang.en/shards/arithmetic"
@@ -144695,11 +144686,11 @@
   "k.words/shards/tw"
  ],
  "two": [
-  "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/tw",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/determiners",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-animal-mammal-05"
  ],
@@ -146476,7 +146467,6 @@
   "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-procedures",
-  "k.kinds/shards/relations-values",
   "k.kinds/shards/structures",
   "k.motion/schema.sop",
   "k.procedures/schema.sop",
@@ -146484,14 +146474,12 @@
   "k.procedures/shards/from-knowledge",
   "k.procedures/shards/tasks",
   "k.units/shards/measures",
-  "k.values/schema.sop",
   "k.words/shards/frequency-v",
   "k.words/shards/va",
-  "w.chart/schema.sop"
+  "w.chart/schema.sop",
+  "w.lang.en/schema.sop"
  ],
  "value_about": [
-  "k.attributes/shards/narration",
-  "k.kinds/shards/relations-values",
   "k.units/shards/measures"
  ],
  "value_of": [
@@ -154402,12 +154390,12 @@
   "k.people/shards/given-names-z"
  ],
  "zero": [
-  "k.values/shards/numbers",
   "k.values/shards/scales",
   "k.words/shards/frequency-z",
   "k.words/shards/ze",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/core-plurals",
+  "w.lang.en/shards/number-words",
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-mail-01"
  ],

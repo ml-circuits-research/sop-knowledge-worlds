@@ -14,7 +14,7 @@
 //    the state is a lexicon role whose words are the `w.lang.en.calc` facts of its kind, so the lexicons cannot disagree
 //    with the words (a test).
 // The words of a story's verbs (has, gives, eats, buys) are k.actions actions with their typed possession effects
-// (`holds=`, `money=`, K5), not here; the number words are k.values.number and w.lang.en.numeral.
+// (`holds=`, `money=`, K5), not here; the number words are w.lang.en.number and w.lang.en.numeral.
 //   node tools/lang-en-arithmetic.mjs     writes docs/worlds/w.lang.en/shards/arithmetic.sop
 // Deterministic, no input. tests/w.lang.en.arithmetic.test.mjs reads every request back.
 import { writeFileSync } from 'node:fs';

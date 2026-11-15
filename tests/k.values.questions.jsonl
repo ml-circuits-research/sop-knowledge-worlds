@@ -4,7 +4,5 @@
 {"id":"va-07","ask":"what is the opposite of clockwise","query":{"type":"k.values.direction","where":{"name":"clockwise"},"seek":"opposite"},"expect":{"status":"supported","value":"anticlockwise"}}
 {"id":"va-08","ask":"which column is top left","query":{"type":"k.values.position","where":{"name":"\"top left\""},"seek":"column"},"expect":{"status":"supported","value":"left"}}
 {"id":"va-09","ask":"how many does each pick","query":{"type":"k.values.set_word","where":{"name":"each"},"seek":"picks"},"expect":{"status":"supported","value":"all"}}
-{"id":"va-10","ask":"what number is twenty-three","query":{"type":"k.values.number","where":{"text":"twenty-three","kind":"cardinal"},"seek":"value"},"expect":{"status":"supported","value":"23"}}
-{"id":"va-11","ask":"which number is fifth","query":{"type":"k.values.number","where":{"text":"fifth","kind":"ordinal"},"seek":"value"},"expect":{"status":"supported","value":"5"}}
 {"id":"va-p1","ask":"how much lighter is a pale colour","query":{"type":"k.values.shade","where":{"name":"pale"},"seek":"lightness"},"expect":{"status":"supported","value":"0.3"}}
 {"id":"va-f1","ask":"what does outline mean as a fill","query":{"type":"k.values.fill","where":{"name":"outline"},"seek":"about"},"expect":{"status":"supported","value":"\"only the line around it is drawn; the inside is empty\""}}
