@@ -18,8 +18,9 @@ const one = (w, k) => tok(w.attrs[k]?.[0]);
 const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
 const shard = (id, f) => parse(readFileSync(join(WORLDS_DIR, id, 'shards', f), 'utf8'));
 const enAll = readdirSync(join(WORLDS_DIR, 'w.lang.en', 'shards')).filter((f) => f.endsWith('.sop')).flatMap((f) => shard('w.lang.en', f));
-const requests = shard('w.lang.ro', 'requests.sop').filter((w) => w.type === 'w.lang.ro.request');
-const fills = [...shard('w.lang.ro', 'requests.sop'), ...shard('w.lang.ro', 'replies.sop')].filter((w) => w.type === 'w.lang.ro.fill');
+const roAll = readdirSync(join(WORLDS_DIR, 'w.lang.ro', 'shards')).filter((f) => f.endsWith('.sop')).flatMap((f) => shard('w.lang.ro', f));
+const requests = roAll.filter((w) => w.type === 'w.lang.ro.request'); // every shard (seating-frames has make.for)
+const fills = roAll.filter((w) => w.type === 'w.lang.ro.fill');
 const roReplies = shard('w.lang.ro', 'replies.sop'), enReplies = shard('w.lang.en', 'replies.sop');
 const enTemplates = enAll.filter((w) => w.type === 'w.lang.en.template');
 const m = morphOf(fullWorld('w.lang.ro', scanWorlds()), { types: TYPES });
@@ -31,7 +32,7 @@ const THINGS = ['casă', 'copac', 'desen'];
 const N = { one: '1', few: '3', other: '20' };
 const fillersRo = (thing, count) => ({ kind: thing, thing, value: 'roșu', number: N[count ?? 'few'], place: 'lângă copac', source: 'casă', target: 'copac', attribute: 'culoare', amount: 'puțin',
   direction: 'la stânga', topic: 'culoare', criterion: 'mărime', recipient: 'Ana', name: 'prânz', person: 'Ana', shape: 'inimă', arrangement: 'inimă', words: 'blorp', request: 'adaugă o casă' });
-const OVERRIDE = { 'make.name': { value: 'Ana' }, 'make.name.place': { value: 'Ana' }, 'change.more': { amount: '2' }, 'change.less': { amount: '2' } };
+const OVERRIDE = { 'make.name': { value: 'Ana' }, 'make.name.place': { value: 'Ana' }, 'make.for': { value: '4' }, 'change.more': { amount: '2' }, 'change.less': { amount: '2' } };
 const ro = (t, thing, count) => realise(m, one(t, 'text'), { ...fillersRo(thing, count), ...(OVERRIDE[one(t, 'name')] ?? {}), ...Object.fromEntries(fills.filter((f) => one(f, 'template') === one(t, 'name')).map((f) => [one(f, 'role'), one(f, 'lemma')])) }, { dictionary: dict, base });
 
 test('requests: one to one with w.lang.en\'s act templates (name, act, shape, roles); a number in its CLDR categories', () => {

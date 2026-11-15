@@ -182,7 +182,7 @@ test('a session with a timeline: events with their time, moved later and back, p
   assert.equal(act('change', { thing: 'w_timeline_event1', attr: 'at', value: 'soon' }).ok, false);
 });
 
-test('w.seating, the acts the case corpus needs: tables placed, linked and grouped; guests copied and placed; a table holds its seats', () => {
+test('w.seating, the acts the case corpus needs: tables placed, linked and grouped; guests copied and placed', () => {
   const w = actsWorld(['w.seating']), act = session(w);
   assert.equal(act('make', { kind: 'w.seating.table', name: 'family', seats: 2 }).ok, true);
   assert.equal(act('make', { kind: 'w.seating.table', name: 'friends' }).ok, true);
@@ -190,11 +190,8 @@ test('w.seating, the acts the case corpus needs: tables placed, linked and group
   assert.equal(act('change', { thing: 'w_seating_table1', attr: 'y', value: 5 }).ok, true);
   assert.equal(act('connect', { a: 'w_seating_table1', b: 'w_seating_table2', rel: 'next to' }).ok, true);
   assert.equal(act('group', { things: ['w_seating_table1', 'w_seating_table2'], name: 'garden' }).ok, true);
-  // A table holds at most its seats; a table with no `seats` takes any number.
-  for (const n of [1, 2]) assert.equal(act('make', { kind: 'w.seating.seat', table: '$w_seating_table1', n }).ok, true);
-  const full = act('make', { kind: 'w.seating.seat', table: '$w_seating_table1', n: 3 });
-  assert.deepEqual([full.ok, full.violations[0].why], [false, 'w_seating_table1 has room for 0 more w.seating.seats (seats 2)']);
-  assert.equal(act('change', { thing: 'w_seating_table1', attr: 'seats', value: 1 }).ok, false);
+  // Seats are made freely; a table holds at most its `seats` guests (version 3: the capacity counts guests at the table).
+  for (const n of [1, 2, 3]) assert.equal(act('make', { kind: 'w.seating.seat', table: '$w_seating_table1', n }).ok, true);
   for (const n of [1, 2, 3]) assert.equal(act('make', { kind: 'w.seating.seat', table: '$w_seating_table2', n }).ok, true);
   // Guests: seated, copied (the copy keeps the attributes), connected, grouped.
   assert.equal(act('make', { kind: 'w.seating.guest', name: 'Ana', party: 'bride' }).ok, true);
@@ -206,6 +203,22 @@ test('w.seating, the acts the case corpus needs: tables placed, linked and group
   assert.equal(act('group', { things: ['w_seating_guest1', 'w_seating_guest2'], name: 'bride' }).ok, true);
   // A seat has no place of its own in the room.
   assert.equal(act('place', { thing: 'w_seating_seat1', x: 2 }).ok, false);
+});
+
+test('w.seating version 3 (Q82): a guest at a table, the table holds its seats in guests; a seat of another table is refused; colours', () => {
+  const w = actsWorld(['w.seating']), act = session(w);
+  const why = (r) => (r.ok ? 'done' : r.violations[0].why);
+  assert.equal(act('make', { kind: 'w.seating.table', name: '1', seats: 2, colour: 'blue' }).ok, true);
+  for (const name of ['Ann', 'Bo']) assert.equal(act('make', { kind: 'w.seating.guest', name, table: '$w_seating_table1' }).ok, true);
+  assert.equal(why(act('make', { kind: 'w.seating.guest', name: 'Cy', table: '$w_seating_table1' })), 'w_seating_table1 has room for 0 more w.seating.guests (seats 2)');
+  assert.equal(why(act('change', { thing: 'w_seating_table1', attr: 'seats', value: 1 })), 'w_seating_table1 has 2 w.seating.guests now');
+  assert.equal(act('make', { kind: 'w.seating.table', name: '2' }).ok, true, 'no seats: any number, no default');
+  assert.equal(act('make', { kind: 'w.seating.seat', table: '$w_seating_table2', n: 1 }).ok, true);
+  assert.equal(act('make', { kind: 'w.seating.guest', name: 'Dee', table: '$w_seating_table2', seat: '$w_seating_seat1' }).ok, true);
+  assert.equal(act('make', { kind: 'w.seating.table', name: '3' }).ok, true);
+  assert.equal(why(act('change', { thing: 'w_seating_guest3', attr: 'table', value: '$w_seating_table3' })), 'A guest on a seat is at the table of that seat.');
+  assert.equal(act('change', { thing: 'w_seating_guest1', attr: 'colour', value: 'red' }).ok, true);
+  assert.equal(act('change', { thing: 'w_seating_table1', attr: 'colour', value: 'teal' }).ok, false, 'a basic colour (the list stays until strict joins)');
 });
 
 test('w.seating: a guest placed on a seat through the seat slot (place at=<seat>)', { skip: needs('0.33.0') }, () => {

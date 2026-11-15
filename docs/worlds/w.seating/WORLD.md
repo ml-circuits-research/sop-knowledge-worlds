@@ -34,3 +34,17 @@ The catalog lists it under `schemas` in `index.json` (names, kinds, acts, attrib
 `vocab.json` with the path of the schema. A session is in `tests/w.schemas.test.mjs`. The names of kinds are
 written in full (`w.seating.…`); a host gets from a word of the user ("guest", "item") to the kind by the `core.word`
 facts of the schema.
+
+## Version 3 (reviewer, Q82: one schema for PSys2 and the catalog)
+
+- A guest is **at a table** (`guest.table`, a w.seating.table); the seat is optional (`guest.seat`), and a deny keeps a
+  guest on a seat at that seat's table ("A guest on a seat is at the table of that seat.").
+- A table holds at most its `seats` **guests** (std.schema.capacity holds=w.seating.guest via=table; version 2 counted
+  seats, and the engine takes one capacity per kind). `seats` has no schema default: a table's usual size is the typical
+  range of k.attributes (4 to 10).
+- `colour` on table and guest: one of the 11 basic colours, joined to `k.colours.basic` (the list stays until the
+  library refuses a value that meets no join target).
+- English: "add a guest called Ann at table 1" (acts.make.name.place), "make table 1 blue" (a value of the colour list),
+  "add a table for 4" (acts.make.for with the template make.for, attribute seats; shard capacity-frames); Romanian:
+  "Adaugă un invitat numit Ana la masa 1", "Adaugă o masă pentru 4" (w.lang.ro shard seating-frames), "Fă masa 1
+  albastră" (ro.change.value). What still differs from PSys2's plan.seating is in questions.md (Q85 [PSYS2]).

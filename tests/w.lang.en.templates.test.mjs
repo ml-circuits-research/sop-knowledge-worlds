@@ -56,7 +56,7 @@ const FILLERS = [
     attribute: 'size', topic: 'height', direction: 'left', amount: 'a lot', name: 'garden' },
 ];
 const OVERRIDE = { // by template: what its roles take
-  'make.name': [{ kind: 'guest', value: 'Ann' }, { kind: 'cat', value: 'Tom' }], 'make.name.place': [{ kind: 'guest', value: 'Ann' }, { kind: 'guest', value: 'Bob' }],
+  'make.name': [{ kind: 'guest', value: 'Ann' }, { kind: 'cat', value: 'Tom' }], 'make.name.place': [{ kind: 'guest', value: 'Ann' }, { kind: 'guest', value: 'Bob' }], 'make.for': [{ kind: 'table', value: '4' }, { kind: 'bench', value: '6' }],
   'change.amount.value': [{ value: 'bigger' }, { value: 'smaller' }], 'change.more': [{ attribute: 'seat', amount: '2' }, { attribute: 'window', amount: '5' }],
   'change.less': [{ attribute: 'seat', amount: '2' }, { attribute: 'window', amount: '3' }], 'change.more.one': [{ attribute: 'seat' }, { attribute: 'window' }],
   'change.less.one': [{ attribute: 'seat' }, { attribute: 'window' }], 'ask.count': [{ thing: 'table' }, { thing: 'star' }], 'ask.where': [{ thing: 'Ann' }, { thing: 'the cat' }],

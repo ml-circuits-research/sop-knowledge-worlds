@@ -1228,3 +1228,21 @@ k.story holds; the plan's lines are the document and its five chapters) and 20 s
 tools/lib/choose.mjs stays for the traced story (fixed choices), the presentation's first solution and the keys of the
 points, arguments, counterargument and results, until these three are in the planner.
 Blocking: no.
+## Q85 [PSYS2] [LIB] (reviewer, w.seating version 3, fourth worker, 2026-11-15): what is left between plan.seating and w.seating 3, and two library cases
+
+w.seating version 3 is published (Q82 as approved): guest.table beside an optional guest.seat (a deny keeps a seated
+guest at the seat's table), the capacity counts guests at a table, `colour` on table and guest (the 11 basic colours,
+joined to k.colours.basic), no default for `seats`.
+**[PSYS2] left against psys2 worlds/plan.seating/schema.host.sop (40292c6):** (1) `seats` default 4 stays the host's
+(the schema has none; k.attributes' typical range is 4 to 10); (2) colour default white stays the host's; (3) `needs`
+is many in w.seating, one value in the host (take the first); (4) the host's `capacity=seats` on the guest kind is now
+the schema's capacity; the host's own line can go; (5) the host's `colour` attribute can go (the schema has it).
+**[LIB] seen with the library's examples/seating-app.mjs on this tree (a scratch copy pinned to it):**
+- "add a guest called Ann at table 1" and "make table 1 blue" are done; "Adaugă un invitat numit Ana la masa 1" is done.
+- "add a table for 4": the new frame acts.make.for reads first and binds seats=4 with no unread word (template make.for,
+  attribute seats), but the kit's `finer` rule then prefers acts.make.place ("a reading that saw a place this kind
+  cannot take") because it has more roles, and answers "There is no 4 here". A complete binding should win over a finer
+  reading that leaves words unread. Same in Romanian ("Adaugă o masă pentru 4", ro.make.for).
+- "Fă masa 1 albastră": ro.change.value reads, but the value role keeps the Romanian word ("A table cannot be
+  albastră"); the w.lang.ro dictionary has albastru with the sense k.words.blue.adjective.1, so the value role could be
+  glossed through the dictionary as the kind is (masă -> table).

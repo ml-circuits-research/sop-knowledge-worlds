@@ -6380,3 +6380,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   not yet done. 8 pass, 5.9 s.
 - What the planner does not give yet: statements and history entries as values ("[object Object]" in `chosen`), choices
   fixed by the host, the first solution without a seed: **Q85 [LIB]**; choose.mjs stays for those tests only.
+## 2026-11-15 — fourth worker: w.seating version 3 and its frames in English and Romanian (reviewer, Q82 approved)
+
+- w.seating 3: guest.table (a w.seating.table) beside the optional guest.seat, a deny "A guest on a seat is at the
+  table of that seat."; the capacity counts guests at a table (the engine takes one capacity per kind; version 2
+  counted seats); `colour` on table and guest (11 basic colours, joined to k.colours.basic); `seats` has no default.
+- Frames: w.lang.en shard capacity-frames (acts.make.for "Add a table for 4." and its template make.for, attribute
+  seats); w.lang.ro shard seating-frames (ro.make.name.place "Adaugă un invitat numit Ana la masa 1.", ro.make.for
+  "Adaugă o masă pentru 4.", the request make.for and its article fill); words-w.seating gets the new keys (culoare, la
+  masa). tests/w.lang.ro.replies.test.mjs reads requests and fills from every w.lang.ro shard.
+- With the library's examples/seating-app.mjs on this tree (a scratch copy pinned to my clone): "add a guest called Ann
+  at table 1", "make table 1 blue", "Adaugă un invitat numit Ana la masa 1" are done; "add a table for 4" and
+  "Fă masa 1 albastră" read right but the kit still refuses them: Q85 [LIB] (and [PSYS2]: what is left against
+  plan.seating).
+- Tests: w.schemas 18 (a version 3 session), frames, templates, w.lang.en, w.lang.ro, w.lang.ro.frames, replies,
+  k.kinds relations, joins report, structures, catalog, validate.
