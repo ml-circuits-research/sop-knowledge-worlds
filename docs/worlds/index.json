@@ -1,5 +1,5 @@
 {
- "version": "8d0b8735e055",
+ "version": "ff3b54b6e6b8",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -91033,6 +91033,48 @@
       "unknown-word w.lang.en.word.k.parts.key.usual.named: w.lang.en.word.k.parts.key.usual.named: means=k.parts.usual.named names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.parts.key.called.part: w.lang.en.word.k.parts.key.called.part: means=k.parts.called.part names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.parts.key.called.also: w.lang.en.word.k.parts.key.called.also: means=k.parts.called.also names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.people",
+     "path": "w.lang.en/shards/words-k.people.sop",
+     "wires": 29,
+     "bytes": 4053,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.people.given_name: w.lang.en.word.k.people.given_name: means=k.people.given_name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.kind: w.lang.en.word.k.people.kind: means=k.people.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.age: w.lang.en.word.k.people.age: means=k.people.kind.age names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.height: w.lang.en.word.k.people.height: means=k.people.kind.height_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.hair: w.lang.en.word.k.people.hair: means=k.people.kind.hair names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.face: w.lang.en.word.k.people.face: means=k.people.kind.face names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.role: w.lang.en.word.k.people.role: means=k.people.role names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.wears: w.lang.en.word.k.people.wears: means=k.people.role.wears names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.holds: w.lang.en.word.k.people.holds: means=k.people.role.holds names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.uses: w.lang.en.word.k.people.uses: means=k.people.role.uses names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.works_at: w.lang.en.word.k.people.works_at: means=k.people.role.works_at names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.does: w.lang.en.word.k.people.does: means=k.people.role.does names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.kind.sex: w.lang.en.word.k.people.key.kind.sex: means=k.people.kind.sex names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.kind.drawing: w.lang.en.word.k.people.key.kind.drawing: means=k.people.kind.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.group: w.lang.en.word.k.people.key.role.group: means=k.people.role.group names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.is: w.lang.en.word.k.people.key.role.is: means=k.people.role.is names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.does: w.lang.en.word.k.people.key.role.does: means=k.people.role.does names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.hat: w.lang.en.word.k.people.key.role.hat: means=k.people.role.hat names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.glasses: w.lang.en.word.k.people.key.role.glasses: means=k.people.role.glasses names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.beard: w.lang.en.word.k.people.key.role.beard: means=k.people.role.beard names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.moustache: w.lang.en.word.k.people.key.role.moustache: means=k.people.role.moustache names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.shoulders: w.lang.en.word.k.people.key.role.shoulders: means=k.people.role.shoulders names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.face: w.lang.en.word.k.people.key.role.face: means=k.people.role.face names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.role.drawing: w.lang.en.word.k.people.key.role.drawing: means=k.people.role.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.given_name.sex: w.lang.en.word.k.people.key.given_name.sex: means=k.people.given_name.sex names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.given_name.holders: w.lang.en.word.k.people.key.given_name.holders: means=k.people.given_name.holders names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.given_name.band: w.lang.en.word.k.people.key.given_name.band: means=k.people.given_name.band names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.given_name.wikidata: w.lang.en.word.k.people.key.given_name.wikidata: means=k.people.given_name.wikidata names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.people.key.given_name.context: w.lang.en.word.k.people.key.given_name.context: means=k.people.given_name.context names no action, type, key or value of the matrix"
      ]
     },
     {
