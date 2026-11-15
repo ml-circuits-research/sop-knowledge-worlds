@@ -19,6 +19,7 @@ BRANCH=${SKW_BRANCH:-main}
 LOG=$(mktemp -t skw-sync.XXXX)
 git config merge.regenerate.name "a generated file: keep main's side; tools/sync.sh regenerates it"
 git config merge.regenerate.driver true
+git config core.hooksPath tools/hooks # tools/hooks/pre-push refuses a push with stale generated files
 in_rebase() { [ -d "$(git rev-parse --git-path rebase-merge)" ] || [ -d "$(git rev-parse --git-path rebase-apply)" ]; }
 is_generated() { [ "$(git check-attr merge -- "$1" | sed 's/.*: merge: //')" = regenerate ]; }
 stop_on_conflicts() { # every conflict left after the merge rules: generated ones take main's side, the rest stop us

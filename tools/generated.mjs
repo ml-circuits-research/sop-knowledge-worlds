@@ -43,6 +43,10 @@ export function attributesText(paths = generatedPaths(), old = existsSync(ATTRIB
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const text = attributesText();
+  if (process.argv.includes('--check')) { // tools/hooks/pre-push
+    if ((existsSync(ATTRIBUTES) ? readFileSync(ATTRIBUTES, 'utf8') : '') !== text) { console.error('stale: .gitattributes (node tools/generated.mjs)'); process.exit(1); }
+    process.exit(0);
+  }
   writeFileSync(ATTRIBUTES, text);
   console.log(`.gitattributes: ${text.split('\n').filter((l) => l.endsWith('merge=regenerate')).length} generated paths, ${LOGS.length} logs`);
 }

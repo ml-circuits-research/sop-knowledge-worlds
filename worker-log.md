@@ -6517,3 +6517,16 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   out; denies stay).
 - Tests: w.schemas, k.kinds relations, joins report, structures, k.attributes ranges, catalog, validate, w.lang.en,
   w.lang.ro.
+
+## 2026-11-15 — fifth worker: a pre-push check for stale generated files (block 18:45 (1)); NOTE TO EVERY WORKER
+
+- tools/hooks/pre-push runs `npm run check-generated` (new script: tools/counts.mjs --check, tools/generated.mjs --check,
+  tools/build-catalog.mjs --check) and refuses the push when the counts, .gitattributes or the catalog files
+  (index.json, vocab.json, vocab-kinds.json, LICENSES.md) are not what the build gives: after a plain `git rebase` the
+  merge driver keeps main's versions of them. About 60 s with a warm validate cache. tools/sync.sh installs it
+  (`git config core.hooksPath tools/hooks`); AGENTS.md says so.
+- **Every worker:** run `git config core.hooksPath tools/hooks` once in your clone (tools/sync.sh does it), and when a
+  push is refused run `npm run regenerate`, commit, push again. COVERAGE.md and ASPECTS.md are not checked (they need
+  raw files).
+- Test (tests/sync.test.mjs, +1, toy repository): sync.sh sets core.hooksPath; a push with a stale generated file is
+  refused with "generated files are stale"; after regenerating it goes through.

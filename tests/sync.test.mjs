@@ -14,7 +14,9 @@ import { REPO } from '../tools/lib/worlds.mjs';
 const GEN = `import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 mkdirSync('docs/worlds', { recursive: true });
 const src = readdirSync('src').sort().map((f) => f + ':' + readFileSync('src/' + f, 'utf8').trim());
-writeFileSync('docs/worlds/index.json', JSON.stringify(src) + '\\n');
+const out = JSON.stringify(src) + '\\n';
+if (process.argv.includes('--check')) { if (readFileSync('docs/worlds/index.json', 'utf8') !== out) { console.error('stale: index.json'); process.exit(1); } }
+else writeFileSync('docs/worlds/index.json', out);
 `;
 
 function toy() {
@@ -25,7 +27,9 @@ function toy() {
   mkdirSync(join(seed, 'tools'), { recursive: true });
   mkdirSync(join(seed, 'src'));
   copyFileSync(join(REPO, 'tools/sync.sh'), join(seed, 'tools/sync.sh'));
-  writeFileSync(join(seed, 'package.json'), JSON.stringify({ name: 'toy', private: true, scripts: { regenerate: 'node gen.mjs' } }));
+  mkdirSync(join(seed, 'tools/hooks'));
+  copyFileSync(join(REPO, 'tools/hooks/pre-push'), join(seed, 'tools/hooks/pre-push'));
+  writeFileSync(join(seed, 'package.json'), JSON.stringify({ name: 'toy', private: true, scripts: { regenerate: 'node gen.mjs', 'check-generated': 'node gen.mjs --check' } }));
   writeFileSync(join(seed, 'gen.mjs'), GEN);
   writeFileSync(join(seed, '.gitattributes'), 'worker-log.md merge=union\ndocs/worlds/index.json merge=regenerate\n');
   writeFileSync(join(seed, 'README.md'), 'line one\nline two\n');
@@ -76,6 +80,24 @@ test('a conflict only in generated files and logs goes through: generated files 
     assert.equal(t.git(mine, 'log', '-1', '--format=%s').trim(), 'worker adds c');
     assert.equal(t.git(mine, 'status', '--porcelain').trim(), '', 'the regenerated file went into the worker\'s commit');
     assert.match(t.git(mine, 'show', '--stat', 'HEAD'), /src\/c\.txt/);
+  } finally { rmSync(t.root, { recursive: true, force: true }); }
+});
+
+// block 18:45: after a plain rebase the generated files are main's; the pre-push hook that sync.sh installs refuses them
+test('the pre-push hook installed by sync.sh refuses a push whose generated files are stale, and lets a fresh one through', () => {
+  const t = toy();
+  try {
+    const mine = t.clone('worker');
+    assert.equal(t.sync(mine).status, 0);
+    assert.equal(t.git(mine, 'config', 'core.hooksPath').trim(), 'tools/hooks');
+    writeFileSync(join(mine, 'src/d.txt'), 'd\n');
+    t.git(mine, 'add', '-A'); t.git(mine, 'commit', '-q', '-m', 'd without regenerating');
+    const refused = spawnSync('git', ['push', '-q', 'origin', 'HEAD:main'], { cwd: mine, encoding: 'utf8' });
+    assert.notEqual(refused.status, 0);
+    assert.match(refused.stderr, /generated files are stale/);
+    t.commit(mine, 'regenerated');
+    const ok = spawnSync('git', ['push', '-q', 'origin', 'HEAD:main'], { cwd: mine, encoding: 'utf8' });
+    assert.equal(ok.status, 0, ok.stderr);
   } finally { rmSync(t.root, { recursive: true, force: true }); }
 });
 

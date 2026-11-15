@@ -80,6 +80,10 @@ Several workers share one machine (8 GB, 2 CPUs): run test files one at a time, 
   in progress). Resolve by hand, `git rebase --continue`, run it again. Before pushing, compare `git show --stat HEAD`
   with what your commit changed. `tests/repo.test.mjs` refuses conflict markers.
 - A new generating tool goes into `npm run build` (or `regenerate`); then `node tools/generated.mjs` adds its files.
+- A plain `git rebase` keeps main's generated files, stale for your commits. The pre-push hook `tools/hooks/pre-push`
+  (installed by `tools/sync.sh`: `git config core.hooksPath tools/hooks`; or set it yourself once) runs
+  `npm run check-generated` (counts, .gitattributes, catalog: index.json, vocab.json, vocab-kinds.json, LICENSES.md)
+  and refuses the push when they are not what the build gives: run `npm run regenerate`, commit, push again.
 
 ## sopworld version
 
