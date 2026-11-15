@@ -2,9 +2,10 @@
 # k.actions with their roles, in w.lang.en's frame vocabulary (each names the English frame it says: `en`), the phrase groups
 # (leads, politeness, joined and bound clitics, wishes), lexicons (comparatives, directions) and the order facts a reader of
 # them needs (adjective after its noun, genitive possessor, article suffix, clitic placement).
-# sources: hand-core 1 (written by hand in this repository)
+# sources: hand-core 1 (written by hand in this repository; the phrase groups skip, focus, wish and the leads follow the shard
+#   fn, which tests/w.lang.ro.frames.test.mjs checks)
 # license: CC0-1.0
-# script: tools/lang-ro-frames.mjs
+# script: none (hand-written: the home of the frames since reviewer 16:10; written by tools/lang-ro-frames.mjs until then)
 
 @w.lang.ro.syntax.adjective.after.noun w.lang.ro.syntax name=adjective.after.noun about="an adjective follows the noun it qualifies (o casă roșie); a host reading the noun phrase of a kind takes the first noun as the head and the adjectives after it as its values" core.source="hand-core 1"
 @w.lang.ro.syntax.genitive.possessor w.lang.ro.syntax name=genitive.possessor about="the possessor follows its noun in the genitive, without a preposition (culoarea casei: the colour of the house); the frames take the attribute as one word, the thing after it" core.source="hand-core 1"

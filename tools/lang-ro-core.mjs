@@ -430,7 +430,7 @@ export function langRoShards() {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const shards = langRoShards();
-  // only the shards this tool writes: frames (tools/lang-ro-frames.mjs), requests and replies (hand-written) stay
+  // only the shards this tool writes: frames, fn, requests and replies (hand-written) stay
   writeShards(join(DIR, 'shards'), shards, '', readdirSync(join(DIR, 'shards')).filter((f) => !(f in shards)));
   const dict = dictionaryFiles();
   const ddir = join(DIR, 'dictionary');

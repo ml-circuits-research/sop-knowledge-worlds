@@ -6162,3 +6162,6 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 
 - The 270-lemma table left tools/lang-ro-core.mjs: the TSV files of w.lang.ro/dictionary are the home; the tool reads
   them (LEXICON, dictionaryRows) and writes them back sorted (byte-identical); dictionary-unimorph regenerates the same.
+- Step 2: the Romanian frames are data of w.lang.ro: shard frames is hand-written (46 frames), tools/lang-ro-frames.mjs
+  is gone; tests/w.lang.ro.frames.test.mjs reads the frames from the shard (each says an English frame, parts in order,
+  roles are its role parts) and checks that skip and focus follow the fn shard.

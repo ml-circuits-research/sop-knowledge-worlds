@@ -106,7 +106,7 @@ the forms, the one with the fewest forms UniMorph lacks wins, then the first cla
 
 ## Frames and order (block "18:20" item 1)
 
-`shards/frames.sop` (`tools/lang-ro-frames.mjs`, hand-written, CC0): 39 frames from Romanian requests to the acts of
+`shards/frames.sop` (hand-written, CC0; its own home since reviewer 16:10, the tool that wrote it is gone): 39 frames from Romanian requests to the acts of
 k.actions with their roles, in w.lang.en's frame vocabulary (`w.lang.ro.frame` name, act, mode, set, priority, needs,
 role, example; `w.lang.ro.part` frame, at, is, act, role, takes, lexicon, max_words, word, phrase, optional), each naming
 the English frame it says (`en`: same act, mode, needs; its roles among the English frame's roles), so one reader reads
@@ -201,6 +201,5 @@ tests/w.lang.ro.replies.test.mjs realises every template with casă, copac and d
 
 Shard `fn` (hand-written, CC0; `w.lang.ro.fn text view at`, as w.lang.en.fn): 44 words and phrases by view: filler
 (păi, deci, adică, uite), politeness (te rog, vă rog, mersi, dacă poți), wish (vreau, aș vrea, doresc, dă-mi),
-hesitation (ăă, hm, îî) and focus (și, de asemenea, tot), and where each stands. tools/lang-ro-frames.mjs takes the
-phrase groups skip (politeness, hesitation and filler that stand anywhere), focus, wish and the leads from here, so
-the shard is their home. Bench after: 105 / 83 / 65 of 161 ("pai muta casa pe pamint" now reads: păi is a lead filler).
+hesitation (ăă, hm, îî) and focus (și, de asemenea, tot), and where each stands. the frames' phrase groups skip (politeness, hesitation and filler that stand anywhere), focus, wish and the leads follow it
+(a test checks them). Bench after: 105 / 83 / 65 of 161 ("pai muta casa pe pamint" now reads: păi is a lead filler).

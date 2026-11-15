@@ -7,7 +7,6 @@ import { join } from 'node:path';
 import { parse } from '../tools/sopworld/sopworld.mjs';
 import { WORLDS_DIR } from '../tools/lib/worlds.mjs';
 import { roReader } from '../tools/lib/lang-ro.mjs';
-import { framesShard, FRAMES, rolesOf } from '../tools/lang-ro-frames.mjs';
 import { measureFrames } from '../tools/lang-ro-coverage.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -17,8 +16,16 @@ const en = readdirSync(enDir).filter((f) => f.endsWith('.sop')).flatMap((f) => p
 const enFrames = new Map(en.filter((w) => w.type === 'w.lang.en.frame').map((f) => [one(f, 'name'), f]));
 const reader = roReader();
 
-test('frames: the shard is what tools/lang-ro-frames.mjs writes; each frame says an English frame (same act, mode, roles among its roles)', () => {
-  assert.equal(readFileSync(join(WORLDS_DIR, 'w.lang.ro/shards/frames.sop'), 'utf8'), framesShard());
+// The frames are data of w.lang.ro (reviewer 16:10: Romanian out of the tools): shard frames, edited by hand.
+const roWires = parse(readFileSync(join(WORLDS_DIR, 'w.lang.ro/shards/frames.sop'), 'utf8'));
+const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
+// [name, en, act, mode, priority, needs, example, roles]
+const FRAMES = roWires.filter((w) => w.type === 'w.lang.ro.frame').map((f) => [one(f, 'name'), one(f, 'en'), one(f, 'act'), one(f, 'mode') ?? null, Number(one(f, 'priority')), one(f, 'needs') ?? null, one(f, 'example'), vals(f, 'role')]);
+const rolesOf = (roles) => roles;
+
+test('frames: each frame says an English frame (same act, mode, needs, roles among its roles), its parts in order', () => {
+  assert.ok(FRAMES.length >= 46);
+  const parts = roWires.filter((w) => w.type === 'w.lang.ro.part');
   for (const [name, enName, act, mode, , needs, , pattern] of FRAMES) {
     const f = enFrames.get(enName);
     assert.ok(f, `${name}: English frame ${enName}`);
@@ -27,6 +34,9 @@ test('frames: the shard is what tools/lang-ro-frames.mjs writes; each frame says
     assert.equal(one(f, 'needs') ?? null, needs, `${name}: needs`);
     const enRoles = new Set((f.attrs.role ?? []).map(tok));
     for (const r of rolesOf(pattern)) assert.ok(enRoles.has(r), `${name}: role ${r} is a role of ${enName}`);
+    const mine = parts.filter((p) => one(p, 'frame') === name).map((p) => Number(one(p, 'at'))).sort((a, b) => a - b);
+    assert.deepEqual(mine, mine.map((_, i) => i + 1), `${name}: parts 1..n`);
+    assert.deepEqual(parts.filter((p) => one(p, 'frame') === name && one(p, 'is') === 'role').map((p) => one(p, 'role')).filter((r, i, a) => a.indexOf(r) === i).sort(), [...pattern].sort(), `${name}: the roles are its role parts`);
   }
 });
 
