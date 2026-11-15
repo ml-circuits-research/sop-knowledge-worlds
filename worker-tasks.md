@@ -980,3 +980,24 @@ Read each worker's last worker-log entry first: it says what was left half-done.
 Owner: the two language worlds have different rules. **w.lang.ro** may hold the whole Romanian vocabulary (Romanian stays out of domain worlds, as before). **w.lang.en** is for parsing and formalising (grammar, morphology, frames, templates, function words); **the English words of a world belong to that world and are stored beside it**, as a principle of organisation. If parsing needs vocabulary, the reader loads the worlds' vocabularies; it does not own them.
 So the move of Q78 (1) / KR3 is reversed for the 22 worlds already moved: `w.lang.en/shards/words-<world>.sop` goes back into the world's own folder (a `words` shard of the world, `docs/worlds/<world>/shards/words.sop`, or back into its schema — choose the one with the smaller change to build-catalog; a separate shard in the world's folder is preferred, it keeps schema and words apart). vocab.json and vocab-kinds.json stay byte-identical at every step. The other 18 worlds stay as they are. What stays in w.lang.en: morphology, frames, templates, `fn`, `count`, number words, verb forms, catalog plurals. `w.lang.en.feeling_reply` (the k.feelings replies) stays in w.lang.en: those are phrasings, not vocabulary — say in questions.md if you see it otherwise. AGENTS.md rule 2 is reworded to this decision. For the DGX session, after the red tests of main; a mechanical job: small model, one commit per few worlds.
 **Red on main reported by the stopped workers (not verified by me):** k.attributes.abilities, k.attributes.uses and the k.kinds licence test (from f77c570, ConceptNet; fddd8ac may have fixed them), tests/w.lang.ro.words.test.mjs, tests/k.objects.drawables.test.mjs, two questions. First job: `npm run test:all` on main, fix what is red.
+
+## Reviewer 2026-11-16 07:30 — OWNER DECISION: new names for the three kinds of worlds, adopted gradually
+
+Owner (2026-11-15 23:41): the names an outside review proposed are better; move to them step by step. The old names stay valid for a time; **whatever is written or changed from now on uses the new names.**
+
+| Old | New (English) | New (Romanian) |
+|---|---|---|
+| world schema | **world pattern** | tipar de lume |
+| knowledge world | **knowledge base** | bază de cunoaștere |
+| live world | **world instance** | instanță de lume |
+
+"Schema" keeps one precise meaning: the rule part of any world (what the code calls matrix; that rename is still the owner's to decide — do not start it). A world pattern is a schema packaged and published by name with its words.
+
+Rules of the transition:
+1. No mass rename and no breaking change. Identifiers, wire types (`std.schema.*`, `k.*`, `w.*`), file and repository names stay as they are.
+2. New or edited prose (docs, skills, comments, log entries, replies to questions, AGENTS.md when next touched) uses the new names. A page that is edited is converted whole, not half.
+3. The glossary gets the three new terms now, each with "formerly: …" once; the old terms stay as entries that point to the new ones.
+4. New public API names and new doc headings use the new terms; an existing API name that contains an old term gets an alias only when it is next changed for another reason.
+5. Report nothing special for this; it rides on other work. In a month I look at what is left and we decide the rest.
+
+The course `reviews/sop-worlds-curs.md` (version 5) already uses the new names and mentions the old ones once, in lesson 11.
