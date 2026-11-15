@@ -5923,3 +5923,35 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   ASPECTS.md regenerated in this commit where other workers' changes had left them stale.
 - Owned by another worker (skw-worker4): the list and task frames; this commit touches only person-frames among the
   frame shards.
+
+
+## 2026-11-15 — first worker: outlines as arrangement paths, "in the shape of X" (block 09:50 item F)
+
+- The owner's case: "a diagram in the shape of a house" drew one circle. New in k.layouts (version 3):
+  `k.layouts.outline` (name, from, shape or drawing as declared joins, points, tolerance) and `k.layouts.outline_point`
+  (outline, n, x, y): the edge of a shape as an ordered closed path in the 0 to 100 frame, clockwise from the topmost
+  point; and the layout `outline` (things evenly spaced along it). tools/outlines-core.mjs (in the build): 50 outlines
+  in 3 shards, one per licence (CC0 520 wires 58,094 bytes; Apache/Unicode 331, 46,045; CC BY-SA 50, 6,009): 17 shapes
+  of k.shapes by geometry (circle, oval, semicircle, triangle, square, rectangle, diamond, rhombus, parallelogram,
+  trapezium, pentagon, hexagon, octagon, star, cross, arrow, ring) and 33 drawings traced (house, heart, tree, fish,
+  cloud, moon, apple, car, bell, key, umbrella, rocket, castle, church, teapot, crown ...): parts filled on a 100 x 100
+  grid (details, lines and arcs left out), the largest piece with its holes filled, its edge traced, simplified
+  (Ramer-Douglas-Peucker, 1.5 units, raised to at most 40 points). Refused with the reason: boat and cat (in several
+  pieces, the largest about 60 %). The house: 11 points, the ridge first (49, 15), the chimney, the body to y=95.
+- The role `arrangement` (holds arrangement, markers in the shape of, shaped like, in the form of, in the outline of)
+  of make, place and group in k.actions (tools/acts-core.mjs); the markers as prepositions of w.lang.en (hand-joins,
+  role=arrangement). Shard **shape-frames** (tools/lang-en-shape-frames.mjs, in the build; 8 frames, needs=layout, 66
+  wires): "make a diagram in the shape of a house", "a flowchart shaped like a fish", "a house-shaped diagram", "a
+  diagram in heart form", "arrange the boxes in the shape of a star", "put the nodes in a heart shape", "lay the boxes
+  out star-shaped", "group the dots in the shape of a heart"; lexicons outline.shape and outline.shaped derived from
+  the outline shards (the adjective keeps its ending: "house-shaped").
+- The library: `arrange(nodes, 'path', { points, closed })` exists since 0.129 (no [LIB] question needed); with the
+  library's current build, 8 nodes along the house's outline go round it from the ridge (49,15 | 72,23 | 80,45 | 80,80 |
+  59,95 | 24,95 | 20,63 | 21,37). The library's `outlineOf` is the convex hull of the part boxes (PSys2's lopsided
+  pentagon); these outlines are the silhouette. With the pin at 0.113 the arrange test is skipped and says why.
+- Tests: tests/k.layouts.outlines.test.mjs (5: shards and frames = generators; every path closed, in the frame,
+  clockwise from the top, as many points as it says, geometry CC0 and traces in their drawing's licence; the owner's
+  shapes present, the house's ridge at the top; 10 requests read back; arrange along the house, skipped before 0.129).
+  The tests of the touched files: 15 files, 96 tests, 95 pass, 1 skipped.
+- package.json: the step `lang-en-person-frames` lost in the w.person commit's rebase (sync.sh keeps main's side of a
+  non-.md conflict) is back, with the two new steps.

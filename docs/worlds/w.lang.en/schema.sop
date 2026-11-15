@@ -61,7 +61,7 @@
 @w.lang.en.prep.text core.slot of=w.lang.en.prep key=text id=true required=true kind=atom kind=string core.source="psys2 78f45863"
 @w.lang.en.prep.rel core.slot of=w.lang.en.prep key=rel required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.prep.space core.slot of=w.lang.en.prep key=space enum=static enum=direction enum=source enum=path core.source="psys2 78f45863"
-@w.lang.en.prep.role core.slot of=w.lang.en.prep key=role many=true enum=accompaniment enum=instrument enum=part enum=possession enum=beneficiary enum=purpose enum=topic enum=role enum=similarity enum=criterion enum=replacement core.source="psys2 78f45863"
+@w.lang.en.prep.role core.slot of=w.lang.en.prep key=role many=true enum=accompaniment enum=instrument enum=part enum=possession enum=beneficiary enum=purpose enum=topic enum=role enum=similarity enum=criterion enum=replacement enum=arrangement core.source="psys2 78f45863"
 @w.lang.en.prep.support core.slot of=w.lang.en.prep key=support enum=yes core.source="psys2 78f45863"
 @w.lang.en.prep.contain core.slot of=w.lang.en.prep key=contain enum=yes core.source="psys2 78f45863"
 @w.lang.en.prep.arity core.slot of=w.lang.en.prep key=arity kind=integer min=1 core.source="psys2 78f45863"

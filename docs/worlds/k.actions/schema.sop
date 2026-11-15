@@ -21,14 +21,15 @@
 @k.actions.act.role core.slot of=k.actions.act key=role many=true required=true kind=atom kind=string core.source="hand-core 1"
 
 # A role of an act: something the act can be told (the thing, the place, the new value). `holds` says what kind of
-# filler it takes; `needed=true`: the act cannot be done without it. `marker` (many) names the prepositions and
+# filler it takes (arrangement: a layout of k.layouts or the outline of a shape, k.layouts.outline); `needed=true`: the
+# act cannot be done without it. `marker` (many) names the prepositions and
 # other words that usually mark the role after any verb of the act ("on the table": the place); a role with no
 # marker is said without one (the object of the verb, a number before the noun). A verb may mark a role in its own
 # way: see k.actions.marking, which comes first.
 @k.actions.role core.type of=k.actions.role shared=true closed=true core.source="hand-core 1"
 @k.actions.role.act core.slot of=k.actions.role key=act id=true required=true kind=atom kind=string type=k.actions.act by=name core.source="hand-core 1"
 @k.actions.role.name core.slot of=k.actions.role key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.actions.role.holds core.slot of=k.actions.role key=holds required=true enum=thing enum=kind enum=place enum=direction enum=value enum=attribute enum=amount enum=number enum=name enum=person enum=group enum=topic enum=means core.source="hand-core 1"
+@k.actions.role.holds core.slot of=k.actions.role key=holds required=true enum=thing enum=kind enum=place enum=direction enum=value enum=attribute enum=amount enum=number enum=name enum=person enum=group enum=topic enum=means enum=arrangement core.source="hand-core 1"
 @k.actions.role.needed core.slot of=k.actions.role key=needed kind=boolean core.source="hand-core 1"
 @k.actions.role.about core.slot of=k.actions.role key=about required=true kind=string core.source="hand-core 1"
 @k.actions.role.marker core.slot of=k.actions.role key=marker many=true kind=atom kind=string core.source="hand-core 1"

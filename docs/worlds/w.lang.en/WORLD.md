@@ -529,3 +529,13 @@ mood declarative, set acts.state: "I have two kids", "I am 40", "I like cats, do
 questions about the speaker (8, mood interrogative: "what do you know about me", "how many kids do I have", "how old am
 I") for the world schema w.person; its lexicons (person.relation, person.occupation) are derived from w.person and the
 jobs of k.people. The reference reader returns the frame's `mood`.
+
+## In the shape of something (block 09:50 item F)
+
+The shard `shape-frames` (tools/lang-en-shape-frames.mjs, 8 frames, `needs=layout`) reads "make a diagram in the shape
+of a house", "make a flowchart shaped like a fish", "a house-shaped diagram", "draw a diagram in heart form", "arrange
+the boxes in the shape of a star", "put the nodes in a heart shape", "group the dots in the shape of a heart" as make,
+place (mode layout) or group with the role `arrangement` (k.actions), an outline of k.layouts by name; its lexicons
+(outline.shape, outline.shaped) are derived from the outline shards. The adjective form keeps its ending ("house-shaped"):
+the reader keeps a hyphenated word whole, and the host strips "-shaped". The markers (in the shape of, shaped like, in
+the form of, in the outline of) are prepositions of `hand-joins` with `role=arrangement`.

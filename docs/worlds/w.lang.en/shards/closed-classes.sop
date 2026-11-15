@@ -1,4 +1,4 @@
-# w.lang.en/shards/closed-classes: the class of each of the 261 closed-class words of this world's word lists (275 facts: a word of several classes has one fact per class; `from` names the lists it is in), derived from those lists by the tables of the script
+# w.lang.en/shards/closed-classes: the class of each of the 265 closed-class words of this world's word lists (279 facts: a word of several classes has one fact per class; `from` names the lists it is in), derived from those lists by the tables of the script
 # sources: hand-core 1 (the classes, written in this repository; the words are those of the lists named in `from`)
 # license: CC0-1.0
 # script: tools/lang-en-closed.mjs
@@ -108,7 +108,10 @@
 @w.lang.en.closed.in.preposition w.lang.en.closed text=in class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.in_front_of.preposition w.lang.en.closed text="in front of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.in_order_of.preposition w.lang.en.closed text="in order of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
+@w.lang.en.closed.in_the_form_of.preposition w.lang.en.closed text="in the form of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.in_the_middle_of.preposition w.lang.en.closed text="in the middle of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
+@w.lang.en.closed.in_the_outline_of.preposition w.lang.en.closed text="in the outline of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
+@w.lang.en.closed.in_the_shape_of.preposition w.lang.en.closed text="in the shape of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.inside.preposition w.lang.en.closed text=inside class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.instead.adverb w.lang.en.closed text=instead class=adverb from=w.lang.en.ellipsis.trail core.source="hand-core 1"
 @w.lang.en.closed.instead_of.preposition w.lang.en.closed text="instead of" class=preposition from=w.lang.en.prep core.source="hand-core 1"
@@ -185,6 +188,7 @@
 @w.lang.en.closed.seven.numeral w.lang.en.closed text=seven class=numeral from=w.lang.en.det from=w.lang.en.numeral core.source="hand-core 1"
 @w.lang.en.closed.seventh.ordinal w.lang.en.closed text=seventh class=ordinal from=w.lang.en.ordinal core.source="hand-core 1"
 @w.lang.en.closed.several.determiner w.lang.en.closed text=several class=determiner from=w.lang.en.det from=w.lang.en.partitive core.source="hand-core 1"
+@w.lang.en.closed.shaped_like.preposition w.lang.en.closed text="shaped like" class=preposition from=w.lang.en.prep core.source="hand-core 1"
 @w.lang.en.closed.she.pronoun w.lang.en.closed text=she class=pronoun from=w.lang.en.pron core.source="hand-core 1"
 @w.lang.en.closed.should.auxiliary w.lang.en.closed text=should class=auxiliary from=w.lang.en.aux from=w.lang.en.ellipsis.starter core.source="hand-core 1"
 @w.lang.en.closed.shouldnqt.auxiliary w.lang.en.closed text=shouldn't class=auxiliary from=w.lang.en.word core.source="hand-core 1"

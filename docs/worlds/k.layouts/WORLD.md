@@ -76,3 +76,22 @@ wheel part of?", "What does an arrow connect?" (`tests/k.layouts.questions.jsonl
 Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
 merge with the others). `psys2`: `k.layouts.joins` with the new relation `around`: chairs, stools, plates, cups and people around a table, a bench at a fire, a chair at a desk.
 What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).
+
+## Outlines: arranging things in the shape of something (block 09:50 item F)
+
+The owner's case: "a diagram in the shape of a house" drew one circle. `k.layouts.outline` (shards `outlines-<licence>`,
+derived by tools/outlines-core.mjs) is the edge of a shape as an ordered closed path of points in the 0 to 100 frame,
+clockwise from the topmost point; the layout `outline` spaces things evenly along it. 50 outlines: 17 shapes of k.shapes
+by their geometry (circle, oval, semicircle, triangle, square, rectangle, diamond, rhombus, parallelogram, trapezium,
+pentagon, hexagon, octagon, star, cross, arrow, ring; CC0) and 33 drawings of k.objects traced (house, heart, tree,
+fish, cloud, moon, apple, car, bell, key, umbrella, rocket ...: the parts filled on a 100 x 100 grid, the largest piece
+kept with its holes filled, its edge traced and simplified to at most 40 points; each outline in a shard of its
+drawing's licence). Refused, with the reason printed by the tool: the boat and the cat (in several pieces: the largest
+holds about 60 % of the drawing). A name that is a shape of k.shapes with a geometry takes the geometry (star, arrow).
+
+Read by the frames of w.lang.en's shard `shape-frames` ("make a diagram in the shape of a house", "a house-shaped
+diagram", "a diagram in heart form", "arrange the boxes in the shape of a star", "group the dots in the shape of a
+heart"): the role `arrangement` of make, place and group (k.actions) takes an outline's name. A host lays the things
+out with the library's `arrange(nodes, 'path', { points, closed: true })` (sopworld 0.129 and later: evenly by length
+along the path, the first at its first point), the points of the outline in their order. The library's `outlineOf` is
+the convex hull of a drawing's part boxes (a house becomes a lopsided pentagon); these outlines are the silhouette.

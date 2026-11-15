@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (276 of 1089 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (276 of 1099 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -587,6 +587,16 @@
 @k.attributes.narration.k.layouts.joins.rel k.attributes.narration type=k.layouts.joins key=rel narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.joins.b k.attributes.narration type=k.layouts.joins key=b narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.layouts.joins.side k.attributes.narration type=k.layouts.joins key=side narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline.name k.attributes.narration type=k.layouts.outline key=name narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline.from k.attributes.narration type=k.layouts.outline key=from narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline.shape k.attributes.narration type=k.layouts.outline key=shape narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline.drawing k.attributes.narration type=k.layouts.outline key=drawing narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline.points k.attributes.narration type=k.layouts.outline key=points narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline.tolerance k.attributes.narration type=k.layouts.outline key=tolerance narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline_point.outline k.attributes.narration type=k.layouts.outline_point key=outline narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline_point.n k.attributes.narration type=k.layouts.outline_point key=n narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline_point.x k.attributes.narration type=k.layouts.outline_point key=x narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
+@k.attributes.narration.k.layouts.outline_point.y k.attributes.narration type=k.layouts.outline_point key=y narrate=no salience=0 why="machinery: where things are placed in a drawing" core.source="hand-core 1"
 @k.attributes.narration.k.motion.event.name k.attributes.narration type=k.motion.event key=name narrate=no salience=0 why="machinery: how a drawn face moves over time" core.source="hand-core 1"
 @k.attributes.narration.k.motion.event.about k.attributes.narration type=k.motion.event key=about narrate=no salience=0 why="machinery: how a drawn face moves over time" core.source="hand-core 1"
 @k.attributes.narration.k.motion.field.event k.attributes.narration type=k.motion.field key=event narrate=no salience=0 why="machinery: how a drawn face moves over time" core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-layouts: the keys of the types of k.layouts read as relations: 35 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-layouts: the keys of the types of k.layouts read as relations: 44 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -22,6 +22,15 @@
 @k.kinds.relation.k.layouts.layout.about k.kinds.relation type=k.layouts.layout key=about subject=layout object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.layout.ordered k.kinds.relation type=k.layouts.layout key=ordered subject=layout object=boolean found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.layout.usual_for k.kinds.relation type=k.layouts.layout key=usual_for subject=layout object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline.from k.kinds.relation type=k.layouts.outline key=from subject=outline object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline.shape k.kinds.relation type=k.layouts.outline key=shape subject=outline object=value object_type=k.shapes.shape object_sense=shape found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline.drawing k.kinds.relation type=k.layouts.outline key=drawing subject=outline object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline.points k.kinds.relation type=k.layouts.outline key=points subject=outline object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline.tolerance k.kinds.relation type=k.layouts.outline key=tolerance subject=outline object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline_point.outline k.kinds.relation type=k.layouts.outline_point key=outline subject="outline point" object=thing object_type=k.layouts.outline found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline_point.n k.kinds.relation type=k.layouts.outline_point key=n subject="outline point" object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline_point.x k.kinds.relation type=k.layouts.outline_point key=x subject="outline point" object=number found=schema core.source="hand-core 1"
+@k.kinds.relation.k.layouts.outline_point.y k.kinds.relation type=k.layouts.outline_point key=y subject="outline point" object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.layouts.relation.layout k.kinds.relation type=k.layouts.relation key=layout subject=relation object=group object_type=k.layouts.layout found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.layouts.relation.a k.kinds.relation type=k.layouts.relation key=a subject=relation object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.layouts.relation.rel k.kinds.relation type=k.layouts.relation key=rel subject=relation object=value found=schema core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.layouts/shards/layouts: 17 named arrangements (row, column, grid, ring, scatter, corners, stack, pyramid, tree, flow, radial, nested, border, landscape, room, family photo, face): their places, how the places sit to each other, what is usually arranged so; and other names of the arrangements.
+# k.layouts/shards/layouts: 18 named arrangements (row, column, grid, ring, scatter, corners, stack, pyramid, tree, flow, radial, nested, border, outline, landscape, room, family photo, face): their places, how the places sit to each other, what is usually arranged so; and other names of the arrangements.
 # sources: hand-core 1 (hand-written in this repository: tools/layouts-core.mjs)
 # license: CC0-1.0
 # script: tools/layouts-core.mjs
@@ -109,6 +109,12 @@
 @k.layouts.relation.border.edge.evenly_spaced.edge k.layouts.relation layout=border a=edge rel=evenly_spaced b=edge among=neighbours core.source="hand-core 1"
 @k.layouts.relation.border.edge.same_size.edge k.layouts.relation layout=border a=edge rel=same_size b=edge among=all core.source="hand-core 1"
 
+# outline
+@k.layouts.layout.outline k.layouts.layout name=outline kind=repeating about="Things spaced evenly along the outline of a shape (a house, a star, a heart): the path of an outline of k.layouts, the first thing at its first point, the others in order round it." ordered=true usual_for="a diagram in the shape of a house" usual_for="candles in the shape of a heart" usual_for="lights in the shape of a star" usual_for="stones laid out in the shape of an arrow" core.source="hand-core 1"
+@k.layouts.slot.outline.item k.layouts.slot layout=outline name=item count=many holds=thing core.source="hand-core 1"
+@k.layouts.relation.outline.item.evenly_spaced.item k.layouts.relation layout=outline a=item rel=evenly_spaced b=item among=neighbours core.source="hand-core 1"
+@k.layouts.relation.outline.item.same_size.item k.layouts.relation layout=outline a=item rel=same_size b=item among=all core.source="hand-core 1"
+
 # landscape
 @k.layouts.layout.landscape k.layouts.layout name=landscape kind=fixed about="An outdoor view: the sky above the ground, far things on the horizon, water lying in the ground, small things in front." usual_for="an outdoor scene" usual_for="a farm" usual_for="a beach" usual_for="a village" usual_for="a view of the countryside" core.source="hand-core 1"
 @k.layouts.slot.landscape.sky k.layouts.slot layout=landscape name=sky count=one holds=sun holds=moon holds=cloud holds=star holds=bird holds=rainbow holds=plane arranged=scatter x=0 y=0 w=100 h=50 core.source="hand-core 1"
@@ -209,6 +215,7 @@
 @k.layouts.word.layout.radial core.word text=radial text="mind map" text="hub and spokes" text=spokes text="spider diagram" text="star shape" text=rays means=radial of=k.layouts.layout.name core.source="hand-core 1"
 @k.layouts.word.layout.nested core.word text=nested text="inside each other" text="one inside the other" text=concentric text=target text=nesting means=nested of=k.layouts.layout.name core.source="hand-core 1"
 @k.layouts.word.layout.border core.word text=border text=borders text=frame text=edging text=surround text="all around" text="along the edge" means=border of=k.layouts.layout.name core.source="hand-core 1"
+@k.layouts.word.layout.outline core.word text=outline text="in the shape of" text="shaped like" text="in the form of" means=outline of=k.layouts.layout.name core.source="hand-core 1"
 @k.layouts.word.layout.landscape core.word text=landscape text=landscapes text=scenery text=view text=countryside text="outdoor scene" text=panorama text=horizon means=landscape of=k.layouts.layout.name core.source="hand-core 1"
 @k.layouts.word.layout.room core.word text=room text=rooms text=interior text=indoors text="inside a house" text="indoor scene" means=room of=k.layouts.layout.name core.source="hand-core 1"
 @k.layouts.word.layout.family_photo core.word text="family photo" text="family photos" text="group photo" text="group picture" text="family picture" text="family portrait" text="team photo" text="class photo" means="family photo" of=k.layouts.layout.name core.source="hand-core 1"

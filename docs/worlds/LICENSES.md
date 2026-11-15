@@ -13,7 +13,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: Unicode-3.0 (Unicode License V3, permissive, with the copyright notice kept).
 - Attribution: Copyright © 1991-2025 Unicode, Inc. Unicode CLDR data, used under the Unicode License V3 (text: `docs/worlds/k.objects/LICENSE.cldr`).
 - Shard terms: Apache-2.0 AND Unicode-3.0, Unicode-3.0
-- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.objects` (124 shards), `k.units` (1 shards)
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.layouts` (1 shards), `k.objects` (124 shards), `k.units` (1 shards)
 
 ## countries-5.1.0
 
@@ -112,7 +112,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: CC0-1.0 (the repository's `LICENSE`, section 2: schemas and hand-written facts).
 - Attribution: none required.
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
-- Used by: `k.actions` (25 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.diagrams` (2 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (45 shards), `k.layouts` (4 shards), `k.motion` (2 shards), `k.music` (3 shards), `k.objects` (30 shards), `k.parts` (1 shards), `k.people` (23 shards), `k.procedures` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (3 shards), `k.units` (3 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (49 shards), `w.lang.ro` (26 shards)
+- Used by: `k.actions` (25 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.diagrams` (2 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (45 shards), `k.layouts` (5 shards), `k.motion` (2 shards), `k.music` (3 shards), `k.objects` (30 shards), `k.parts` (1 shards), `k.people` (23 shards), `k.procedures` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (3 shards), `k.units` (3 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (50 shards), `w.lang.ro` (26 shards)
 
 ## mulberry-fa94a93
 
@@ -121,7 +121,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: CC-BY-SA-4.0 (`LICENSE.txt`: "licensed under the Creative Commons Attribution-Share Alike License", https://creativecommons.org/licenses/by-sa/4.0/).
 - Attribution: Mulberry Symbols, Copyright 2018-2026 Steve Lee, https://mulberrysymbols.org , CC BY-SA 4.0. The drawings were changed: converted to simplified polygons, lines and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: CC-BY-SA-4.0
-- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.objects` (149 shards)
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.layouts` (1 shards), `k.objects` (149 shards)
 
 ## natural-earth-5.1.2
 
@@ -139,7 +139,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: Apache-2.0 (`2D/svg/LICENSE` in the repository: "Copyright 2013 Google, Inc. All Rights Reserved. Licensed under the Apache License, Version 2.0"; the fonts are OFL-1.1 and the flag images public domain; neither is used).
 - Attribution: Noto Emoji, Copyright 2013 Google, Inc., licensed under the Apache License, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0 ; the notice is `docs/worlds/k.objects/LICENSE.noto-emoji`). The drawings were changed: converted to simplified polygons and primitive shapes with flat colours, at most 16 parts per object.
 - Shard terms: Apache-2.0 AND Unicode-3.0
-- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.objects` (124 shards)
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.layouts` (1 shards), `k.objects` (124 shards)
 
 ## openmoji-3e01de5
 

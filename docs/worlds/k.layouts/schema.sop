@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.layouts core.module name=k.layouts version=2 imports=k.named exports=layout exports=slot exports=relation exports=anchor exports=joins core.source="hand-core 1"
+@k.layouts core.module name=k.layouts version=3 imports=k.named exports=layout exports=slot exports=relation exports=anchor exports=joins exports=outline exports=outline_point core.source="hand-core 1"
 
 # A named arrangement. `kind` is `repeating` when it arranges any number of like things (a row, a ring) and `fixed`
 # when it has named places, each for its own kind of thing (a landscape, a face). `about` says it in one sentence;
@@ -89,7 +89,29 @@
 @k.layouts.joins.b core.slot of=k.layouts.joins key=b id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.layouts.joins.side core.slot of=k.layouts.joins key=side enum=top enum=bottom enum=side enum=front enum=back enum=end enum=edge enum=corner enum=centre enum=inside enum=around core.source="hand-core 1"
 
+# An outline (block 09:50 item F): the edge of a shape as an ordered closed path of points in the 0 to 100 frame (x
+# right, y down), the first point the topmost (then the leftmost), going round clockwise; the layout `outline` spaces
+# things evenly along it ("a diagram in the shape of a house"). `name` the shape as a request names it (house,
+# triangle); `from` the type it is derived from: k.shapes.shape (the shape by its geometry: `shape` names it) or
+# k.objects.object (the silhouette of the drawing `drawing`, traced); `points` how many points the path has;
+# `tolerance` the largest distance, in frame units, of the drawing's traced edge from the path (0 for a geometry).
+# Derived by tools/outlines-core.mjs; an outline keeps the licence of the drawing it is traced from.
+@k.layouts.outline core.type of=k.layouts.outline shared=true closed=true core.source="hand-core 1"
+@k.layouts.outline.name core.slot of=k.layouts.outline key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.layouts.outline.from core.slot of=k.layouts.outline key=from required=true enum=k.shapes.shape enum=k.objects.object core.source="hand-core 1"
+@k.layouts.outline.shape core.slot of=k.layouts.outline key=shape kind=atom kind=string type=k.shapes.shape by=name core.source="hand-core 1"
+@k.layouts.outline.drawing core.slot of=k.layouts.outline key=drawing kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
+@k.layouts.outline.points core.slot of=k.layouts.outline key=points required=true kind=integer min=3 core.source="hand-core 1"
+@k.layouts.outline.tolerance core.slot of=k.layouts.outline key=tolerance required=true kind=number min=0 core.source="hand-core 1"
+# A point of an outline: `outline` its name, `n` its place on the path (from 1), `x` and `y` in the frame.
+@k.layouts.outline_point core.type of=k.layouts.outline_point shared=true closed=true core.source="hand-core 1"
+@k.layouts.outline_point.outline core.slot of=k.layouts.outline_point key=outline id=true required=true kind=atom kind=string type=k.layouts.outline by=name core.source="hand-core 1"
+@k.layouts.outline_point.n core.slot of=k.layouts.outline_point key=n id=true required=true kind=integer min=1 core.source="hand-core 1"
+@k.layouts.outline_point.x core.slot of=k.layouts.outline_point key=x required=true kind=number min=0 max=100 core.source="hand-core 1"
+@k.layouts.outline_point.y core.slot of=k.layouts.outline_point key=y required=true kind=number min=0 max=100 core.source="hand-core 1"
+
 # Words for the types and keys of this world.
+@k.layouts.word.outline core.word text="outline of a shape" text="shape outline" text=silhouette text=outlines means=k.layouts.outline core.source="hand-core 1"
 @k.layouts.word.layout core.word text=layout text=layouts text=arrangement text=arrangements text=arranged text=arrange means=k.layouts.layout core.source="hand-core 1"
 @k.layouts.word.usual_for core.word text=usual text=typical means=k.layouts.layout.usual_for core.source="hand-core 1"
 @k.layouts.word.slot core.word text=place text=places text=slot text=slots means=k.layouts.slot core.source="hand-core 1"
@@ -128,3 +150,11 @@
 @k.layouts.word.key.joins.rel core.word text=rel means=k.layouts.joins.rel core.source="hand-core 1"
 @k.layouts.word.key.joins.b core.word text=b means=k.layouts.joins.b core.source="hand-core 1"
 @k.layouts.word.key.joins.side core.word text=side means=k.layouts.joins.side core.source="hand-core 1"
+@k.layouts.word.key.outline.from core.word text=from means=k.layouts.outline.from core.source="hand-core 1"
+@k.layouts.word.key.outline.shape core.word text=shape means=k.layouts.outline.shape core.source="hand-core 1"
+@k.layouts.word.key.outline.drawing core.word text=drawing means=k.layouts.outline.drawing core.source="hand-core 1"
+@k.layouts.word.key.outline.points core.word text=points means=k.layouts.outline.points core.source="hand-core 1"
+@k.layouts.word.key.outline.tolerance core.word text=tolerance means=k.layouts.outline.tolerance core.source="hand-core 1"
+@k.layouts.word.key.outline_point.n core.word text=n means=k.layouts.outline_point.n core.source="hand-core 1"
+@k.layouts.word.key.outline_point.x core.word text=x means=k.layouts.outline_point.x core.source="hand-core 1"
+@k.layouts.word.key.outline_point.y core.word text=y means=k.layouts.outline_point.y core.source="hand-core 1"

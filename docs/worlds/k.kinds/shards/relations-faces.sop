@@ -74,7 +74,7 @@
 @k.kinds.relation.k.faces.variant.slot k.kinds.relation type=k.faces.variant key=slot subject=variant object=thing object_type=k.faces.slot found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.faces.variant.name k.kinds.relation type=k.faces.variant key=name subject=variant object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.variant.style k.kinds.relation type=k.faces.variant key=style subject=variant object=word found=value core.source="hand-core 1"
-@k.kinds.relation.k.faces.variant.shape k.kinds.relation type=k.faces.variant key=shape subject=variant object=value object_type=k.shapes.shape object_type=k.values.shape object_sense=shape found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.variant.shape k.kinds.relation type=k.faces.variant key=shape subject=variant object=value object_type=k.layouts.outline object_type=k.shapes.shape object_type=k.values.shape object_sense=shape found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.variant.size k.kinds.relation type=k.faces.variant key=size subject=variant object=value scale=size found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.variant.length k.kinds.relation type=k.faces.variant key=length subject=variant object=value scale=length found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.variant.feel k.kinds.relation type=k.faces.variant key=feel subject=variant object=value found=schema core.source="hand-core 1"

@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **221** in 33 worlds; distinct values 10256, meeting a target 10198 (99.4 %), open 58
+- declared joins: **224** in 33 worlds; distinct values 10358, meeting a target 10300 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 41
 
@@ -113,9 +113,12 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.interest | `k.interest.feature.appraisal` | `k.interest.appraisal` | name | 4 | 4 |  |
 | k.interest | `k.interest.feature.measure` | `k.interest.measure` | name | 20 | 20 |  |
 | k.interest | `k.interest.feature.source` | `k.interest.source` | name | 23 | 23 |  |
-| k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 17 | 17 |  |
+| k.layouts | `k.layouts.outline.drawing` | `k.objects.object` | name | 33 | 33 |  |
+| k.layouts | `k.layouts.outline.shape` | `k.shapes.shape` | name | 17 | 17 |  |
+| k.layouts | `k.layouts.outline_point.outline` | `k.layouts.outline` | name | 50 | 50 |  |
+| k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 18 | 18 |  |
 | k.layouts | `k.layouts.slot.arranged` | `k.layouts.layout` | name | 2 | 2 |  |
-| k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 17 | 17 |  |
+| k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 18 | 18 |  |
 | k.motion | `k.motion.field.event` | `k.motion.event` | name | 2 | 2 |  |
 | k.motion | `k.motion.letters.splitter` | `k.motion.splitter` | name | 1 | 1 |  |
 | k.motion | `k.motion.rule.emits` | `k.motion.event` | name | 1 | 1 |  |
@@ -331,7 +334,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.diagrams | `k.diagrams.kind.groups` | 2 | 2 | 2 | `k.values.reply` |
 | k.diagrams | `k.diagrams.shape.shape` | 11 | 11 | 6 | `k.values.shape` |
 | k.faces | `k.faces.colour.of` | 4 | 4 | 2 | `k.body.part` |
-| k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.shapes.shape`, `k.values.shape` |
+| k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape`, `k.values.shape` |
 | k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |

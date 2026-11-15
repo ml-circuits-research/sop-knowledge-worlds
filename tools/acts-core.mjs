@@ -34,6 +34,9 @@ export const ACTS = [
     // Reviewer block 07:45 item 1 (the owner's diagram complaint): "a timeline of the planets by distance", "a list
     // sorted by size": the attribute whose values put the things the new thing shows in order (k.attributes)
     ['criterion', 'attribute', false, 'what puts the things the new thing shows in order (a timeline of the planets by distance, a list sorted by size)', ['by', 'in order of', 'according to']],
+    // block 09:50 item F (the owner's case: "a diagram in the shape of a house" drew one circle): the arrangement the things
+    // the new thing shows are laid out in: a layout of k.layouts or the outline of a shape (k.layouts.outline)
+    ['arrangement', 'arrangement', false, 'the arrangement the things it shows are laid out in (a diagram in the shape of a house: the outline of a house)', ['in the shape of', 'shaped like', 'in the form of', 'in the outline of']],
   ]],
   ['remove', 'take a thing away so that it is no longer there', 'make', [
     ['thing', 'thing', true, 'what to remove', []],
@@ -55,6 +58,7 @@ export const ACTS = [
     ['amount', 'amount', false, 'how far', ['by']],
     // block 07:45: "line up the planets in order of size"; not "by", which marks how far ("move it by 2 cm")
     ['criterion', 'attribute', false, 'what decides the order the things are put in (line up the planets in order of size)', ['in order of', 'according to']],
+    ['arrangement', 'arrangement', false, 'the arrangement the things are laid out in (arrange the boxes in the shape of a star)', ['in the shape of', 'shaped like', 'in the form of', 'in the outline of']],
   ]],
   ['connect', 'join two things so that they stay together or a line runs between them', 'take apart', [
     ['thing', 'thing', true, 'the first thing', []],
@@ -66,6 +70,7 @@ export const ACTS = [
     ['target', 'thing', false, 'what they are grouped with', ['with', 'and']],
     ['group', 'group', false, 'the group or groups they go into', ['into', 'in', 'as']],
     ['criterion', 'attribute', false, 'what decides the group or the order', ['by', 'according to', 'in order of']],
+    ['arrangement', 'arrangement', false, 'the arrangement the group is laid out in (group them in the shape of a heart)', ['in the shape of', 'shaped like', 'in the form of', 'in the outline of']],
   ]],
   ['take apart', 'separate a thing into its parts, or one thing from another', 'connect', [
     ['thing', 'thing', true, 'what to take apart', []],

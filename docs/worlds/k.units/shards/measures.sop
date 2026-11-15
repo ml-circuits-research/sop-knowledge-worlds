@@ -1,4 +1,4 @@
-# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.diagrams, k.story, k.procedures): 255 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
+# k.units/shards/measures: in which unit the numbers of every knowledge world are given (k.geo, k.animals, k.music, k.body, k.space, k.objects, k.faces, k.drawing, k.layouts, k.wearables, k.actions, k.words, k.attributes, k.commonsense, k.parts, k.people, k.scenes, k.shapes, k.time, k.units, k.values, w.lang.en, k.motion, w.lang.ro, k.interest, k.genres, k.diagrams, k.story, k.procedures): 260 slots, each with its unit, with what it counts, as a place in an order, as a position in a frame, or as a plain number.
 # sources: hand-core 1 (hand-written in this repository: tools/measures-core.mjs)
 # license: CC0-1.0
 # script: tools/measures-core.mjs
@@ -114,6 +114,11 @@
 @k.units.measure.k.layouts.anchor.y k.units.measure world=k.layouts type=anchor key=y frame=object core.source="hand-core 1"
 @k.units.measure.k.layouts.anchor.w k.units.measure world=k.layouts type=anchor key=w frame=object core.source="hand-core 1"
 @k.units.measure.k.layouts.anchor.h k.units.measure world=k.layouts type=anchor key=h frame=object core.source="hand-core 1"
+@k.units.measure.k.layouts.outline.points k.units.measure world=k.layouts type=outline key=points counts="point of the path" core.source="hand-core 1"
+@k.units.measure.k.layouts.outline.tolerance k.units.measure world=k.layouts type=outline key=tolerance frame=outline core.source="hand-core 1"
+@k.units.measure.k.layouts.outline_point.n k.units.measure world=k.layouts type=outline_point key=n ordinal=true core.source="hand-core 1"
+@k.units.measure.k.layouts.outline_point.x k.units.measure world=k.layouts type=outline_point key=x frame=outline core.source="hand-core 1"
+@k.units.measure.k.layouts.outline_point.y k.units.measure world=k.layouts type=outline_point key=y frame=outline core.source="hand-core 1"
 @k.units.measure.k.wearables.place.x k.units.measure world=k.wearables type=place key=x frame="person drawing" core.source="hand-core 1"
 @k.units.measure.k.wearables.place.y k.units.measure world=k.wearables type=place key=y frame="person drawing" core.source="hand-core 1"
 @k.units.measure.k.wearables.place.w k.units.measure world=k.wearables type=place key=w frame="person drawing" core.source="hand-core 1"
