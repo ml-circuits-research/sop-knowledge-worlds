@@ -6693,3 +6693,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   checked right, each source in its licence's shard); questions 448 pass; k.attributes*, k.kinds, coverage-report,
   sync, catalog, validate, repo green except the three red on main before this commit (k.attributes.abilities,
   k.attributes.uses, k.kinds licences: from f77c570).
+## 2026-11-15 — DGX session: red files of main fixed; words shards back beside their worlds
+
+- KR6 import (queue item 1) started, then stopped on the coordinator's order (reviewer 09:30 in psys2): nothing of it
+  committed. (357c0105 had already published the hand-checked Wikidata / Visual Genome values.)
+- 6ea0e338, red files: `npm run test:all` on main had 5 red (coverage, k.attributes.abilities, k.attributes.uses,
+  k.kinds licence, k.objects.drawables). Causes: k.kinds put Wikidata edges in the hand CC0 shard (now
+  material-/use-wikidata CC0, -visual-genome CC-BY-4.0); abilities/uses were seeded by the imported facts (now left
+  out, as ConceptNet's; 14 new proposals checked by hand); MISSING.md and stand-ins-kinds-wordnet were stale (their
+  tools need the raw WordNet, not in `regenerate`). After: 0 red.
+- 34bab7c6, owner 08:10: the 20 words-<world> shards of w.lang.en moved back to `<world>/shards/words.sop` (k.named
+  into its schema), ids `<world>.word.*`; writeShards never removes words.sop; vocab.json and vocab-kinds.json
+  byte-identical. Full touched run (110 files): 0 red. The reviewer counted 22 moved worlds; there were 20.
+- Lesson: tools that need the raw files (coverage.mjs, stand-ins-kinds.mjs, attributes-abilities/uses) are not in
+  `regenerate`, so their outputs go stale silently on clones without the raw files.
