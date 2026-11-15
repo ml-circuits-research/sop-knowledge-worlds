@@ -6000,3 +6000,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   k.attributes 11, narration 3, questions 448, joins, joins report, relations, catalog, validate (1,166 files, 0
   errors), and coverage-report, import.psys2, counts, derived.load, generators, k.food, k.space, k.faces,
   k.objects.render, coverage, ranges, repo, page: all pass.
+
+## 2026-11-15 — third worker: w.lang.en.fn (block 14:25 item 3, KR3, first)
+
+- Type w.lang.en.fn (text, view: filler / politeness / wish / hesitation, at: lead / tail / any) and hand shard fn: 61
+  words; tests/w.lang.en.fn.test.mjs (the reviewer's words with their views; 59 of 61 said in the hand-over's phrase
+  groups, kindly and umm new).

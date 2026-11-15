@@ -2509,7 +2509,8 @@
   "k.words/shards/ac",
   "k.words/shards/frequency-a",
   "w.lang.en/shards/clauses",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "acute": [
   "k.words/shards/ac",
@@ -3505,7 +3506,8 @@
   "k.people/shards/given-names-a"
  ],
  "ah": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "ahag": [
   "k.geo/shards/africa"
@@ -4604,7 +4606,8 @@
  ],
  "alright": [
   "k.words/shards/al",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "w.lang.en/shards/fn"
  ],
  "also": [
   "k.attributes/shards/narration",
@@ -6272,7 +6275,8 @@
  ],
  "anyway": [
   "k.words/shards/an",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "w.lang.en/shards/fn"
  ],
  "anywhere": [
   "k.words/shards/an",
@@ -12174,7 +12178,8 @@
  ],
  "basically": [
   "k.words/shards/ba",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.lang.en/shards/fn"
  ],
  "basics": [
   "k.words/shards/ba",
@@ -22947,6 +22952,9 @@
  "can tho": [
   "k.geo/shards/asia"
  ],
+ "can you": [
+  "w.lang.en/shards/fn"
+ ],
  "can you please draw a cat": [
   "w.lang.en/shards/alternations"
  ],
@@ -32942,6 +32950,9 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis"
+ ],
+ "could you": [
+  "w.lang.en/shards/fn"
  ],
  "could you open the door?": [
   "w.lang.en/shards/alternations"
@@ -45863,6 +45874,9 @@
   "k.words/shards/eg",
   "k.words/shards/frequency-e"
  ],
+ "eh": [
+  "w.lang.en/shards/fn"
+ ],
  "eiffel": [
   "k.words/shards/ei",
   "k.words/shards/frequency-e"
@@ -47513,7 +47527,8 @@
  "er": [
   "k.words/shards/er",
   "k.words/shards/frequency-e",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "era": [
   "k.words/shards/er",
@@ -47625,6 +47640,9 @@
  ],
  "erling": [
   "k.people/shards/given-names-e"
+ ],
+ "erm": [
+  "w.lang.en/shards/fn"
  ],
  "ermine": [
   "k.animals/shards/mammals",
@@ -54300,6 +54318,9 @@
   "w.list/schema.sop",
   "w.tasks/schema.sop"
  ],
+ "for me": [
+  "w.lang.en/shards/fn"
+ ],
  "for now": [
   "w.lang.en/shards/clauses"
  ],
@@ -59695,6 +59716,9 @@
  "gillian": [
   "k.people/shards/given-names-g"
  ],
+ "gimme": [
+  "w.lang.en/shards/fn"
+ ],
  "gin": [
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-g",
@@ -59906,6 +59930,9 @@
  ],
  "give light": [
   "k.actions/shards/actions-body-social-nature"
+ ],
+ "give me": [
+  "w.lang.en/shards/fn"
  ],
  "give me the ball": [
   "w.lang.en/shards/alternations"
@@ -67325,10 +67352,12 @@
  "hm": [
   "k.words/shards/frequency-h",
   "k.words/shards/hm",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "hmm": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "hnl": [
   "k.units/shards/currencies"
@@ -69574,10 +69603,17 @@
   "w.lang.en/shards/pronouns"
  ],
  "i mean": [
-  "w.lang.en/shards/clauses"
+  "w.lang.en/shards/clauses",
+  "w.lang.en/shards/fn"
  ],
  "i meant": [
   "w.lang.en/shards/clauses"
+ ],
+ "i need": [
+  "w.lang.en/shards/fn"
+ ],
+ "i want": [
+  "w.lang.en/shards/fn"
  ],
  "i want to draw a house": [
   "w.lang.en/shards/alternations"
@@ -69587,6 +69623,9 @@
  ],
  "i wonder who lives in the castle": [
   "w.lang.en/shards/alternations"
+ ],
+ "i would like": [
+  "w.lang.en/shards/fn"
  ],
  "i'd": [
   "w.lang.en/shards/morphology"
@@ -69848,6 +69887,12 @@
   "k.words/shards/id",
   "k.objects/shards/noto-other-object-02"
  ],
+ "id like": [
+  "w.lang.en/shards/fn"
+ ],
+ "id love": [
+  "w.lang.en/shards/fn"
+ ],
  "ida": [
   "k.people/shards/given-names-i",
   "k.words/shards/frequency-i",
@@ -69932,6 +69977,18 @@
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-grammar",
   "w.lang.en/shards/hand-request"
+ ],
+ "if possible": [
+  "w.lang.en/shards/fn"
+ ],
+ "if you can": [
+  "w.lang.en/shards/fn"
+ ],
+ "if you could": [
+  "w.lang.en/shards/fn"
+ ],
+ "if you dont mind": [
+  "w.lang.en/shards/fn"
  ],
  "igan": [
   "k.geo/shards/asia"
@@ -74563,7 +74620,8 @@
  "just": [
   "k.words/shards/frequency-j",
   "k.words/shards/ju",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "justice": [
   "k.words/shards/frequency-j",
@@ -77368,7 +77426,8 @@
   "k.colours/schema.sop",
   "k.food/schema.sop",
   "k.kinds/schema.sop",
-  "k.words/schema.sop"
+  "k.words/schema.sop",
+  "w.lang.en/shards/fn"
  ],
  "kind of act": [
   "k.actions/schema.sop"
@@ -77410,7 +77469,8 @@
   "k.actions/shards/actions-make-change"
  ],
  "kindly": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "kindness": [
   "k.words/shards/frequency-k",
@@ -81968,11 +82028,17 @@
  "let know": [
   "k.actions/shards/actions-mind-talk"
  ],
+ "let me": [
+  "w.lang.en/shards/fn"
+ ],
  "let's": [
   "w.lang.en/shards/morphology"
  ],
  "let's add a guest": [
   "w.lang.en/shards/alternations"
+ ],
+ "lets": [
+  "w.lang.en/shards/fn"
  ],
  "letter": [
   "k.attributes/shards/drawn-mulberry",
@@ -82743,6 +82809,7 @@
   "k.words/shards/frequency-l",
   "k.words/shards/li",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn",
   "w.lang.en/shards/prepositions",
   "w.person/schema.sop"
  ],
@@ -83937,6 +84004,9 @@
  ],
  "lokoro": [
   "k.geo/shards/africa"
+ ],
+ "lol": [
+  "w.lang.en/shards/fn"
  ],
  "lola": [
   "k.people/shards/given-names-l"
@@ -91029,7 +91099,8 @@
  "mm": [
   "k.units/shards/core",
   "k.words/shards/frequency-m",
-  "k.words/shards/mm"
+  "k.words/shards/mm",
+  "w.lang.en/shards/fn"
  ],
  "mmk": [
   "k.units/shards/currencies"
@@ -95259,6 +95330,7 @@
  "need": [
   "k.words/shards/frequency-n",
   "k.words/shards/ne",
+  "w.lang.en/shards/fn",
   "w.seating/schema.sop"
  ],
  "needed": [
@@ -97355,7 +97427,8 @@
   "k.words/shards/no",
   "w.lang.en/shards/arithmetic",
   "w.lang.en/shards/closed-classes",
-  "w.lang.en/shards/ellipsis"
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/fn"
  ],
  "now move the cat to the left": [
   "w.lang.en/shards/alternations"
@@ -98371,7 +98444,8 @@
   "k.values/shards/psys2",
   "k.words/shards/frequency-o",
   "k.words/shards/ok",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "oka": [
   "k.geo/shards/europe"
@@ -98398,7 +98472,8 @@
   "k.values/shards/psys2",
   "k.words/shards/frequency-o",
   "k.words/shards/ok",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "okayama": [
   "k.geo/shards/psys2-cities-asia"
@@ -106701,7 +106776,8 @@
   "k.words/shards/frequency-p",
   "k.words/shards/pl",
   "w.lang.en/shards/closed-classes",
-  "w.lang.en/shards/ellipsis"
+  "w.lang.en/shards/ellipsis",
+  "w.lang.en/shards/fn"
  ],
  "please open the door": [
   "w.lang.en/shards/alternations"
@@ -106809,7 +106885,8 @@
   "k.words/shards/pl"
  ],
  "pls": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "pluck": [
   "k.words/shards/frequency-p",
@@ -106964,7 +107041,8 @@
   "k.words/shards/pl"
  ],
  "plz": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "pm": [
   "k.time/schema.sop",
@@ -115279,6 +115357,7 @@
   "k.words/shards/frequency-r",
   "k.words/shards/ri",
   "w.face/schema.sop",
+  "w.lang.en/shards/fn",
   "k.objects/shards/noto-light-video-02",
   "k.objects/shards/noto-office-02",
   "k.objects/shards/openmoji-objects-01",
@@ -127967,7 +128046,8 @@
   "k.values/shards/scales",
   "k.words/shards/frequency-s",
   "k.words/shards/so",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "soak": [
   "k.actions/shards/actions-make-change",
@@ -128595,6 +128675,9 @@
   "k.words/shards/so",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
+ ],
+ "sort of": [
+  "w.lang.en/shards/fn"
  ],
  "sorting": [
   "k.words/shards/frequency-s",
@@ -137526,6 +137609,9 @@
   "k.genres/shards/moves",
   "k.genres/shards/presentation"
  ],
+ "thank you": [
+  "w.lang.en/shards/fn"
+ ],
  "thanked": [
   "k.actions/shards/actions-body-social-nature"
  ],
@@ -137539,7 +137625,8 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-t",
   "k.words/shards/th",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "thanksgiving": [
   "k.words/shards/frequency-t",
@@ -137813,6 +137900,7 @@
   "k.words/shards/th",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn",
   "w.lang.en/shards/hand-grammar"
  ],
  "theo": [
@@ -139513,6 +139601,9 @@
  ],
  "thwart": [
   "k.kinds/shards/part_of-wordnet-3"
+ ],
+ "thx": [
+  "w.lang.en/shards/fn"
  ],
  "thérèse": [
   "k.people/shards/given-names-t"
@@ -144661,7 +144752,14 @@
   "k.units/shards/currencies"
  ],
  "uh": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
+ ],
+ "uhh": [
+  "w.lang.en/shards/fn"
+ ],
+ "uhm": [
+  "w.lang.en/shards/fn"
  ],
  "uk": [
   "k.geo/shards/psys2-countries",
@@ -144769,7 +144867,8 @@
   "k.words/shards/ul"
  ],
  "um": [
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "uma": [
   "k.words/shards/frequency-u",
@@ -144822,6 +144921,9 @@
  ],
  "umbrellas": [
   "k.objects/shards/household"
+ ],
+ "umm": [
+  "w.lang.en/shards/fn"
  ],
  "umrah": [
   "k.objects/shards/noto-place-religious-01"
@@ -148982,6 +149084,9 @@
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
  ],
+ "wanna": [
+  "w.lang.en/shards/fn"
+ ],
  "wannabe": [
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
@@ -149000,7 +149105,8 @@
  ],
  "want": [
   "k.words/shards/frequency-w",
-  "k.words/shards/wa"
+  "k.words/shards/wa",
+  "w.lang.en/shards/fn"
  ],
  "wanted": [
   "k.words/shards/frequency-w",
@@ -150099,7 +150205,8 @@
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
   "k.words/shards/we",
-  "w.lang.en/shards/closed-classes"
+  "w.lang.en/shards/closed-classes",
+  "w.lang.en/shards/fn"
  ],
  "well-being": [
   "k.words/shards/we"
@@ -151873,7 +151980,8 @@
  ],
  "wish": [
   "k.words/shards/frequency-w",
-  "k.words/shards/wi"
+  "k.words/shards/wi",
+  "w.lang.en/shards/fn"
  ],
  "wishbone": [
   "k.attributes/shards/drawn-mulberry",
@@ -152619,6 +152727,18 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis"
+ ],
+ "would like": [
+  "w.lang.en/shards/fn"
+ ],
+ "would love": [
+  "w.lang.en/shards/fn"
+ ],
+ "would you": [
+  "w.lang.en/shards/fn"
+ ],
+ "would you mind": [
+  "w.lang.en/shards/fn"
  ],
  "wouldn't": [
   "w.lang.en/shards/closed-classes",
@@ -153709,6 +153829,9 @@
  ],
  "you bet": [
   "k.values/shards/psys2"
+ ],
+ "you know": [
+  "w.lang.en/shards/fn"
  ],
  "young": [
   "k.animals/schema.sop",

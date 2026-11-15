@@ -539,3 +539,11 @@ place (mode layout) or group with the role `arrangement` (k.actions), an outline
 (outline.shape, outline.shaped) are derived from the outline shards. The adjective form keeps its ending ("house-shaped"):
 the reader keeps a hyphenated word whole, and the host strips "-shaped". The markers (in the shape of, shaped like, in
 the form of, in the outline of) are prepositions of `hand-joins` with `role=arrangement`.
+
+## Function words by view (block 14:25 item 3, KR3)
+
+Shard `fn` (hand-written, CC0; `w.lang.en.fn text view at`): 61 function words and phrases that carry no content of a
+request, each with its views (filler: just, like, I mean; politeness: please, pls, kindly, if you can; wish: want,
+wanna, would like, need, let me; hesitation: um, uh, hmm) and where it stands (lead, tail, any). One home for what a
+host or the library strips or reads for tone; the hand-over's phrase groups keep their lists for PSys2's readers, and
+`tests/w.lang.en.fn.test.mjs` checks that every fn word is said in one of them (all but kindly and umm).
