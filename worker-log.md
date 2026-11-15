@@ -5495,3 +5495,11 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Q70 answered (keep the dedicated type). Open for hosts: PSys2 to read keywords last (vocab order and
   `drawingFor` order), a country's currency through k.units, `by` on order fills, user_facing for random flowcharts,
   the topics shards for its speller.
+
+
+## 2026-11-15 — first worker: items taken for the next round (coordinator relay, reviewer blocks 10:55 and 09:50 F)
+
+- Taken, in this order: (1) **w.person** (block 10:55, PSys2 Q19, 30 real turns): the world schema on k.people and
+  w.lang.en frames for first-person statements and questions about the user, in a frame shard of my own; (2)
+  **outlines of objects as arrangement paths** and the "in the shape of X" frames (block 09:50 item F, the owner's
+  case "a diagram in the shape of a house").
