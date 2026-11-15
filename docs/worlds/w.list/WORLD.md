@@ -8,8 +8,10 @@ Lists of entries in order, which can be ticked off: a shopping list (with prices
 list, a packing list. Version 3 (PSys2 Q18 K1, real rows r0598, r0599, r0622-r0627: prices and change in a shop).
 
 - `w.list.list`: `name` (required), `about`, `sort` (shopping, to-do, any; default any); for a shopping list
-  `budget` (the money there is to spend: "I start with 30 lei"), `tendered` (the money handed over at the till: "I pay
-  10 lei") and `currency` (the ISO 4217 code of a `k.units.currency`: RON for lei).
+  `budget` (a planned limit: "my budget is 30 lei") and `currency` (the ISO 4217 code of a `k.units.currency`: RON
+  for lei). The money a person has ("I start with 30 lei") and pays ("I pay 10 lei") is no key of a list (version 4,
+  the reviewer's answer to Q71 (1)): paying is an event of the story (k.actions `pay`, `money=remove`) and a person's
+  money its state.
 - `w.list.item` (an entry): `text` (required: what it says, as the user said it), `food` (a `k.food.food` by name) or
   `object` (a `k.objects.object` by name) where the catalog knows the thing, neither for free text; `list` (its list),
   `n` (its place in the list, from 1), `quantity` (a number: how many, or how much in `unit`, a `k.units.unit` by name:
@@ -25,14 +27,14 @@ Declared joins (`type=… by=…`, checked by the engine when the target world i
 so a host reads "10 lei" as 10 in RON.
 
 What is **computed, never stored** (one home per fact; the library's list acts, PSys2 Q18 L3): the total of a list
-(the sum of quantity x price over its entries), what is left (budget - total), the change (tendered - total), whether
+(the sum of quantity x price over its entries), what the budget leaves (budget - total), the change (the amount paid,
+from the story, less the total), whether
 a list can be bought (total <= budget). The prices themselves are an application's data (a shop's price list), not
 knowledge: no k.* world holds prices.
 
 Where the words come from: an entry is schema.org's `ListItem` (`position`: here `n`, the name every w.* schema uses for
 a place in an order; `item`: here `text` with its `food` or `object`); a price with a currency is schema.org's
-`Offer` (`price`, `priceCurrency`), a quantity with a unit its `QuantitativeValue` (`value`, `unitText`); the money handed
-over is the *amount tendered* of point-of-sale systems. A task with a due date, an owner and a reminder is `w.tasks`,
+`Offer` (`price`, `priceCurrency`), a quantity with a unit its `QuantitativeValue` (`value`, `unitText`). A task with a due date, an owner and a reminder is `w.tasks`,
 whose tasks stand on a list of this world (sort to-do).
 
 ## How to use it
@@ -43,7 +45,6 @@ w.load('@acts core.use world=std.acts');
 w.use('w.list');
 w.act({ action: 'make', args: { kind: 'w.list.list', name: 'shop', sort: 'shopping', budget: 30, currency: 'RON' } });
 w.act({ action: 'make', args: { kind: 'w.list.item', text: 'pencil', object: 'pencil', quantity: 2, price: 3, currency: 'RON', list: '$w_list_list1' } });
-w.act({ action: 'change', args: { thing: 'w_list_list1', attr: 'tendered', value: 10 } });   // "I give the cashier 10 lei"
 ```
 
 The catalog lists it under `schemas` in `index.json` (names, kinds, acts, attributes), and its words are in
@@ -51,6 +52,9 @@ The catalog lists it under `schemas` in `index.json` (names, kinds, acts, attrib
 milk to my shopping list", "how much do 3 pencils cost", "I pay 10 lei", "what is the change") are frames of `w.lang.en`
 (shard `list-frames`, PSys2 Q18 K6). The names of kinds are written in full (`w.list.…`); a host gets from a word of the user ("entry",
 "basket") to the kind by the `core.word` facts of the schema.
+
+Changes in version 4: `tendered` is gone (Q71 (1)); "I pay 10 lei" reads as change, mode less, attribute money,
+amount 10 lei (w.lang.en acts.shop.pay), a story event.
 
 Changes in version 3 for hosts: `done` (boolean) is now `status` (open, done); `quantity` is a number (with `unit`),
 no longer a phrase ("a litre" is quantity 1, unit litre); new keys `sort`, `budget`, `tendered`, `currency` on a list

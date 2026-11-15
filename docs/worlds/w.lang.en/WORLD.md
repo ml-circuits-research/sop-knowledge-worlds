@@ -381,7 +381,7 @@ block 07:45, below).
 
 ## Lists, tasks, a shop and a wallet (reviewer 09:20, PSys2 Q18 K6)
 
-Shard `list-frames` (`tools/lang-en-list-frames.mjs`, rerun by `npm run build`; 31 frames, 3 role maps, 1 lexicon),
+Shard `list-frames` (`tools/lang-en-list-frames.mjs`, rerun by `npm run build`; 32 frames, 4 role maps, 1 lexicon),
 every frame `needs=entries` (a world of lists of entries with a status, a quantity and a price: `w.list`, `w.tasks`),
 bound to the acts of k.actions and the keys of those two schemas:
 
@@ -400,14 +400,17 @@ bound to the acts of k.actions and the keys of those two schemas:
   much change do I get" (ask, mode change), "what is the change from 20 lei for a ball and a pencil", "change for 2
   balls with 5 lei" (ask, mode change: the money paid is the *other* amount, the one the price is taken from), "I want a
   puzzle", "I want 2 pencils" (make: on the shopping list; an article or a number must follow, so "I want to draw a
-  cat" is no purchase), "I pay 10 lei", "I give the cashier 10 lei" (change: the list's `tendered`);
-- wallet: "I start with 30 lei", "my wallet has 15 lei" (change: the list's `budget`), "how much money is left", "how
+  cat" is no purchase), "I pay 10 lei", "I give the cashier 10 lei" (change in the mode less, attribute money, the
+  amount paid: an event of the story, Q71 (1));
+- wallet: "I start with 30 lei", "my wallet has 15 lei" (change: attribute money, the person's money in the story
+  state), "my budget is 30 lei" (change: the list's `budget`, a planned limit), "how much money is left", "how
   much money do I have left after I buy 2 pencils" (ask, mode left).
 
 A sum of money is a number and a word of the lexicon `money.unit` (derived from k.units: the everyday unit, its plural,
 the name and the minor unit of each currency and their core.word texts: leu, lei, bani, dollars, cents, quid; codes and
 signs left out), both mapped to one role ("10 lei"): "I pay 10" and "I have 3 apples" are no money. What the frames
-set (`w.lang.en.fixed`: status, tendered, budget) are keys of w.list and w.tasks with values they allow, and what they
+set (`w.lang.en.fixed`: status, budget) are keys of w.list and w.tasks with values they allow (and money the key of
+k.actions whose effects change what a person has), and what they
 make or ask about (list, task, reminder) are words of their kinds; a test checks both.
 
 **Several clauses** ("I want a puzzle and I pay 10 lei. What is the change?"): the reference reader's `clauseReader`

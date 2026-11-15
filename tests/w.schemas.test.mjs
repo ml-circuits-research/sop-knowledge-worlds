@@ -80,9 +80,9 @@ test('a session with a list: items are made, ticked off, picked, copied and remo
   assert.deepEqual(act('pick', { kind: 'w.list.item' }).result.things.length, 2);
 });
 
-test('w.list (PSys2 Q18 K1): a shop list with prices in lei, a budget and the money handed over; the joins to k.food, k.objects and k.units name real facts', () => {
+test('w.list (PSys2 Q18 K1): a shop list with prices in lei and a budget (Q71: the money paid is a story event, no key); the joins to k.food, k.objects and k.units name real facts', () => {
   const w = actsWorld(['w.list']), act = session(w);
-  // "I start with 30 lei": the budget of a shopping list in RON (lei is a word of k.units for RON)
+  // "my budget is 30 lei": a planned limit of a shopping list in RON (lei is a word of k.units for RON)
   assert.equal(act('make', { kind: 'w.list.list', name: 'shop', sort: 'shopping', budget: 30, currency: 'RON' }).ok, true);
   assert.equal(act('make', { kind: 'w.list.list', name: 'chores', sort: 'chores' }).ok, false, 'shopping, to-do or any');
   // "I want 2 pencils", "the pencil is 3 lei"; "a ball", 5 lei
@@ -90,10 +90,11 @@ test('w.list (PSys2 Q18 K1): a shop list with prices in lei, a budget and the mo
   assert.equal(act('make', { kind: 'w.list.item', text: 'ball', object: 'ball', quantity: 1, price: 5, currency: 'RON', list: '$w_list_list1', n: 2 }).ok, true);
   assert.equal(act('ask', { thing: 'w_list_item1', attr: 'price' }).result.value, '3');
   assert.equal(act('change', { thing: 'w_list_item1', attr: 'price', value: -1 }).ok, false, 'a price is not below 0');
-  // "I pay 20 lei": the money handed over; the change (20 - 2x3 - 5 = 9) is the library's sum, not a key
-  assert.equal(act('change', { thing: 'w_list_list1', attr: 'tendered', value: 20 }).ok, true);
+  // "I pay 20 lei" is an event of the story (Q71 (1)): a list has no key for it; the change (20 - 2x3 - 5 = 9) is the
+  // library's sum of the list against the amount paid
+  assert.equal(act('change', { thing: 'w_list_list1', attr: 'tendered', value: 20 }).ok, false, 'no tendered on a list');
   const total = w.ofType('w.list.item').reduce((s, x) => s + Number(x.attrs.quantity[0]) * Number(x.attrs.price[0]), 0);
-  assert.equal(Number(w.get('w_list_list1').attrs.tendered[0]) - total, 9);
+  assert.equal(20 - total, 9);
   assert.equal(Number(w.get('w_list_list1').attrs.budget[0]) - total, 19);
   // the joins: the names used are facts of k.objects, k.food and k.units (a host checks them when it loads those worlds)
   const names = (world, type, key) => new Set(facts(world).filter((x) => x.type === type).map((x) => tok(x.attrs[key]?.[0])));

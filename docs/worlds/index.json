@@ -1,5 +1,5 @@
 {
- "version": "3d7ded44e616",
+ "version": "6561fcae7475",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -88402,8 +88402,8 @@
     {
      "id": "w.lang.en/shards/list-frames",
      "path": "w.lang.en/shards/list-frames.sop",
-     "wires": 196,
-     "bytes": 46468,
+     "wires": 202,
+     "bytes": 47740,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -89761,7 +89761,7 @@
   },
   {
    "id": "w.list",
-   "version": "3",
+   "version": "4",
    "schema": "w.list/schema.sop",
    "depends": [],
    "about": "lists of entries in order, which can be ticked off",
@@ -89793,7 +89793,6 @@
       "about",
       "sort",
       "budget",
-      "tendered",
       "currency"
      ],
      "words": [
@@ -89837,8 +89836,8 @@
      ]
     }
    ],
-   "wires": 45,
-   "bytes": 8180,
+   "wires": 43,
+   "bytes": 7988,
    "sources": [
     "hand-core-1"
    ],

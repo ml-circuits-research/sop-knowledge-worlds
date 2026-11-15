@@ -10,13 +10,14 @@
 //  - shop: "how much do N X cost", "what is the price of X" (ask, mode price), "can I buy N X", "is N X affordable" (ask,
 //    mode afford), "what is the change", "how much change do I get" (ask, mode change), "change from N lei for X and Y"
 //    (ask, mode change: the money paid is the other amount the price is taken from), "I want X" (make: X goes on the
-//    shopping list), "I pay N lei", "I give the cashier N lei" (change: the list's tendered);
-//  - wallet: "I start with N lei", "my wallet has N lei" (change: the list's budget), "how much money is left" (ask,
-//    mode left).
+//    shopping list), "I pay N lei", "I give the cashier N lei" (change in the mode less of the person's money by that
+//    amount: paying is an event of the story, k.actions pay money=remove; Q71 (1));
+//  - wallet: "I start with N lei", "my wallet has N lei" (change: the person's money, the story state), "my budget is N
+//    lei" (change: the list's budget, a planned limit), "how much money is left" (ask, mode left).
 // Every frame `needs=entries`: a world with lists of entries that have a status, a quantity and a price (w.list,
 // w.tasks); so the frames compete with each other and with the general frames, never with those of other worlds.
-// The keys a frame sets (`w.lang.en.fixed`: attribute status, tendered, budget) are keys of w.list and w.tasks, and a
-// test checks they are. The lexicon of money words (money.unit) is derived from k.units (the everyday unit, its plural,
+// The keys a frame sets (`w.lang.en.fixed`: attribute status, budget) are keys of w.list and w.tasks, and `money` the
+// key of k.actions whose effects change what a person has (K5); a test checks they are. The lexicon of money words (money.unit) is derived from k.units (the everyday unit, its plural,
 // the minor unit and the core.word texts of each currency, codes and signs left out), so it cannot disagree with k.units;
 // `npm run build` reruns this tool.
 //   node tools/lang-en-list-frames.mjs     writes docs/worlds/w.lang.en/shards/list-frames.sop
@@ -108,7 +109,7 @@ export const FRAMES = [
   ['acts.tasks.should', 'make', undefined, 12, 'I should call grandma.',
     [word(['i should', 'i need to', 'i have to', 'i must', 'i ought to', 'i gotta', 'i got to', 'i still have to', 'i still need to', 'we should', 'we need to', 'we have to', 'remember to', 'dont forget to']), role('topic', 'rest')], { thing: 'task' },
     'a task said as something one should do (PSys2 real row r0590)'],
-  // ---- shop (w.list: price, tendered) ----
+  // ---- shop (w.list: price; paying is an event on the person's money) ----
   ['acts.shop.price', 'ask', 'price', 14, 'How much do 3 pencils cost?',
     [word(['how much do', 'how much does', 'what do', 'what does', 'how much will', 'what will']), det, role('thing'), word(['cost', 'costs', 'come to'])], {}, 'the number stays in the thing (3 pencils): ask has no number role'],
   ['acts.shop.price.of', 'ask', 'price', 14, 'What is the price of a kite?',
@@ -129,13 +130,16 @@ export const FRAMES = [
     'what a customer asks for goes on the shopping list (make: kind); an article or a number says a thing follows ("I want to draw" is no purchase)'],
   ['acts.shop.want.n', 'make', undefined, 13, 'I want 2 pencils.',
     [wants, role('amount', 'number'), role('thing'), tail], {}, null],
-  ['acts.shop.pay', 'change', undefined, 14, 'I pay 10 lei.',
-    [subject, word(['pay', 'paid', 'pay with', 'paid with', 'give', 'gave', 'give the cashier', 'gave the cashier', 'give the shopkeeper', 'gave the shopkeeper', 'hand over', 'handed over', 'hand the cashier', 'handed the cashier', 'have to pay']), ...money('value')], { attribute: 'tendered' },
-    'the money handed over at the till: the list\'s tendered'],
-  // ---- wallet (w.list: budget) ----
+  ['acts.shop.pay', 'change', 'less', 14, 'I pay 10 lei.',
+    [subject, word(['pay', 'paid', 'pay with', 'paid with', 'give', 'gave', 'give the cashier', 'gave the cashier', 'give the shopkeeper', 'gave the shopkeeper', 'hand over', 'handed over', 'hand the cashier', 'handed the cashier', 'have to pay']), role('amount', 'number'), role('unit', 'lexicon', { lexicon: 'money.unit' })], { attribute: 'money' },
+    'the money handed over at the till: an event that takes that amount from the person\'s money (Q71 (1): no key of a list)'],
+  // ---- wallet (the person's money; w.list: budget) ----
   ['acts.wallet.start', 'change', undefined, 14, 'I start with 30 lei.',
-    [word(['i start with', 'i started with', 'i begin with', 'i began with', 'we start with', 'i have', 'i have got', 'ive got', 'i got', 'my wallet has', 'in my wallet i have', 'my wallet holds', 'there are', 'my budget is']), ...money('value'), word(['in my wallet', 'in my pocket', 'to spend'], true)], { attribute: 'budget' },
-    'the money there is to spend: the list\'s budget'],
+    [word(['i start with', 'i started with', 'i begin with', 'i began with', 'we start with', 'i have', 'i have got', 'ive got', 'i got', 'my wallet has', 'in my wallet i have', 'my wallet holds', 'there are']), ...money('value'), word(['in my wallet', 'in my pocket', 'to spend'], true)], { attribute: 'money' },
+    'the money a person has: the story state (Q71 (1)), not a list'],
+  ['acts.list.budget', 'change', undefined, 14, 'My budget is 30 lei.',
+    [word(['my budget is', 'the budget is', 'i can spend', 'i want to spend', 'i may spend', 'spend at most', 'set the budget to', 'set my budget to']), ...money('value')], { attribute: 'budget' },
+    'a planned limit: the list\'s budget'],
   ['acts.wallet.left', 'ask', 'left', 14, 'How much money is left?',
     [word(['how much money is left', 'how much money do i have left', 'how much money have i got left', 'how much is left', 'how much do i have left', 'how much have i got left', 'what money is left', 'how much money remains', 'how much money do i have', 'show me my cash total', 'whats my cash total', 'what is my cash total']), word(['after i buy', 'after buying', 'if i buy'], true), role('thing', 'words', { optional: true }), tail], {}, null],
 ];
@@ -145,6 +149,7 @@ export const ROLE_MAPS = [
   ['list.change.currency', 'change', 'currency', 'value', 'The currency word goes with the number: "I pay 10 lei": the value 10 lei'],
   ['list.ask.money', 'ask', 'money', 'other', 'The money paid in a question of change: "the change from 20 lei for a ball": 20 lei is the other amount'],
   ['list.ask.unit', 'ask', 'unit', 'other', 'The currency word of the money paid: "from 20 lei": lei'],
+  ['list.change.unit', 'change', 'unit', 'amount', 'The currency word of the money paid: "I pay 10 lei": the amount 10 lei', 'acts.shop.pay'],
 ];
 
 export function lexiconWires() {
@@ -157,7 +162,7 @@ export function listFrameShard() {
     const fl = frameLines(name, { act, mode, set: 'acts', priority, needs: 'entries', roles: rolesOf(parts), example }, parts, fixed);
     lines.push(...(why ? [`# ${name}: ${why}`] : []), ...fl);
   }
-  const maps = ROLE_MAPS.map(([n, act, r, actRole, doc]) => wire(`w.lang.en.role_map.${n}`, 'w.lang.en.role_map', [['name', n], ['act', act], ['role', r], ['act_role', actRole], ['doc', text(doc)]], SRC));
+  const maps = ROLE_MAPS.map(([n, act, r, actRole, doc, frame]) => wire(`w.lang.en.role_map.${n}`, 'w.lang.en.role_map', [['name', n], ['act', act], ['role', r], ['act_role', actRole], ['frame', frame], ['doc', text(doc)]], SRC));
   return `${header({ id: 'w.lang.en/shards/list-frames', about: `frames for lists, tasks, a shop and a wallet (reviewer block 2026-11-15 09:20, PSys2 Q18 K6): ${FRAMES.length} frames bound to the acts and keys of the world schemas w.list and w.tasks ("add milk to my shopping list", "what is left to do", "I finished my homework", "how much do 3 pencils cost", "what is the change", "I start with 30 lei"), all with needs=entries; their role maps; and the lexicon of money words, derived from k.units.`,
     sources: ['hand-core 1 (written in this repository, own: tools/lang-en-list-frames.mjs; the money words derived from k.units, whose currencies come from CLDR 48 and hand-core 1)'], license: 'CC0-1.0', script: 'tools/lang-en-list-frames.mjs' })}\n${lines.join('\n')}\n\n# Role maps of these frames.\n${maps.join('\n')}\n\n# The lexicon of money words, derived from k.units.\n${lexiconWires().join('\n')}\n`;
 }

@@ -5846,3 +5846,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Bench (161 real turns): 104 / 83 / 64 -> 104 / 82 / 64. The one fewer is "fa si o fetita", now read right (make, girl)
   but scored against the act change, the bench's reading of the gloss's "make" (one of the three bench faults sent to
   the library). The three two-direction turns now carry both directions.
+
+## 2026-11-15 — fourth worker: w.list version 4, `tendered` out (reviewer 12:30, Q71 (1))
+
+- w.list: `w.list.list.tendered` and its words gone (version 4; 44 wires); `budget` stays, a planned limit (words budget,
+  limit, spend at most). The money a person has and pays is the story's (k.actions pay `money=remove`, K5; L1).
+- w.lang.en list-frames (32 frames, 202 wires, 47,740 bytes): acts.shop.pay now reads change, mode less, fixed attribute
+  `money`, amount "10 lei" (role map list.change.unit for that frame); acts.wallet.start ("I start with 30 lei", "my
+  wallet has 15 lei") change attribute `money`; new acts.list.budget ("my budget is 30 lei") change attribute budget.
+  Real rows r0598, r0599, r0622-r0627 still read with the right act and roles (9 of 9), with the moved key.
+- questions.md Q77 [LIB]: old key w.list.list.tendered, new reading for the library's listSums.
+- Tests: list-frames 5, w.schemas 17, frames (442 frames), w.lang.en 22, catalog 9, validate 5: all pass.

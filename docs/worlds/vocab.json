@@ -24237,7 +24237,6 @@
  "cash": [
   "k.words/shards/ca",
   "k.words/shards/frequency-c",
-  "w.list/schema.sop",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-money-02"
  ],
@@ -58577,8 +58576,7 @@
  ],
  "gave": [
   "k.actions/shards/actions-hands",
-  "k.words/shards/gi",
-  "w.list/schema.sop"
+  "k.words/shards/gi"
  ],
  "gavel": [
   "k.attributes/shards/drawn-hand",
@@ -59775,8 +59773,7 @@
   "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-send",
   "k.words/shards/frequency-g",
-  "k.words/shards/gi",
-  "w.list/schema.sop"
+  "k.words/shards/gi"
  ],
  "give a hand": [
   "k.actions/shards/actions-body-social-nature"
@@ -64219,8 +64216,7 @@
  ],
  "hand over": [
   "k.actions/shards/actions-hands",
-  "k.actions/shards/verbs-send",
-  "w.list/schema.sop"
+  "k.actions/shards/verbs-send"
  ],
  "hand over money": [
   "k.actions/shards/actions-body-social-nature"
@@ -65157,8 +65153,7 @@
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
-  "w.lang.en/shards/grammar",
-  "w.list/schema.sop"
+  "w.lang.en/shards/grammar"
  ],
  "have a chat": [
   "k.actions/shards/actions-mind-talk"
@@ -82716,7 +82711,8 @@
  ],
  "limit": [
   "k.words/shards/frequency-l",
-  "k.words/shards/li"
+  "k.words/shards/li",
+  "w.list/schema.sop"
  ],
  "limited": [
   "k.words/shards/frequency-l",
@@ -100496,7 +100492,6 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-p",
   "k.words/shards/pa",
-  "w.list/schema.sop",
   "k.objects/shards/noto-money-01"
  ],
  "paige": [
@@ -102338,7 +102333,6 @@
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-p",
   "k.words/shards/pa",
-  "w.list/schema.sop",
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-money-02"
  ],
@@ -129162,6 +129156,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
+ "spend at most": [
+  "w.list/schema.sop"
+ ],
  "spending": [
   "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-s",
@@ -130839,9 +130836,6 @@
  ],
  "start from": [
   "w.face/schema.sop"
- ],
- "start with": [
-  "w.list/schema.sop"
  ],
  "start_at": [
   "k.attributes/shards/narration",
@@ -136789,9 +136783,6 @@
  "tender": [
   "k.words/shards/frequency-t",
   "k.words/shards/te"
- ],
- "tendered": [
-  "w.list/schema.sop"
  ],
  "tenderness": [
   "k.words/shards/frequency-t",
@@ -148462,8 +148453,7 @@
   "k.parts/shards/usual",
   "k.scenes/shards/things-w",
   "k.words/shards/frequency-w",
-  "k.words/shards/wa",
-  "w.list/schema.sop"
+  "k.words/shards/wa"
  ],
  "wallis and futuna": [
   "k.geo/shards/oceania"

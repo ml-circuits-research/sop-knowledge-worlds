@@ -35,6 +35,7 @@ test('list-frames: the keys they set are keys of w.list or w.tasks, with values 
   const schema = (id) => parse(readFileSync(join(WORLDS_DIR, id, 'schema.sop'), 'utf8'));
   const wires = [...schema('w.list'), ...schema('w.tasks')];
   const slots = wires.filter((w) => w.type === 'core.slot');
+  const actionSlots = parse(readFileSync(join(WORLDS_DIR, 'k.actions', 'schema.sop'), 'utf8')).filter((w) => w.type === 'core.slot' && w.attrs.of[0] === 'k.actions.action');
   const kindWords = new Set(wires.filter((w) => w.type === 'core.word' && wires.some((k) => k.type === 'std.schema.kind' && k.attrs.of[0] === tok(w.attrs.means?.[0]))).flatMap((w) => (w.attrs.text ?? []).map(tok)));
   const fixed = all.filter((w) => w.type === 'w.lang.en.fixed' && FRAMES.some((f) => f[0] === one(w, 'frame')));
   const byFrame = (name) => Object.fromEntries(fixed.filter((x) => one(x, 'frame') === name).map((x) => [one(x, 'role'), one(x, 'value')]));
@@ -42,28 +43,30 @@ test('list-frames: the keys they set are keys of w.list or w.tasks, with values 
   for (const [name] of FRAMES) {
     const f = byFrame(name);
     if (f.attribute) {
-      const s = slots.filter((x) => x.attrs.key[0] === f.attribute);
-      assert.ok(s.length, `${name}: ${f.attribute} is a key of w.list or w.tasks`);
+      // money: what a person has, the story state that k.actions money effects change (Q71 (1)), no key of a list
+      const s = f.attribute === 'money' ? actionSlots.filter((x) => x.attrs.key[0] === 'money') : slots.filter((x) => x.attrs.key[0] === f.attribute);
+      assert.ok(s.length, `${name}: ${f.attribute} is a key of w.list or w.tasks, or k.actions money`);
+      if (f.attribute === 'money') { n += 1; continue; }
       if (f.value) assert.ok(s.every((x) => (x.attrs.enum ?? []).includes(f.value)), `${name}: ${f.attribute}=${f.value}`);
       n += 1;
     }
     if (f.thing) { assert.ok(kindWords.has(f.thing), `${name}: "${f.thing}" names a kind of w.list or w.tasks`); n += 1; }
   }
-  assert.equal(n, 9); // status (3), tendered, budget; list, reminder (2), task
+  assert.equal(n, 10); // status (3), money (2), budget; list, reminder (2), task
 });
 
 // PSys2's real set (psys2 training/eval/real-2026-11-15.jsonl): the turns Q18 names for K1, K2 and K6, read clause by
 // clause (tools/lib/lang-en.mjs clauseReader), each clause with its act, mode and k.actions roles.
 export const REAL = {
   r0590: ['i should call grandma', ['make kind=task topic=call grandma']],
-  r0598: ['I want a puzzle and I pay 10 lei. What is the change?', ['make kind=puzzle', 'change attribute=tendered value=10 lei', 'ask/change']],
-  r0599: ['I want 2 pencils and I give the cashier 10 lei. How much change do I get?', ['make kind=pencils number=2', 'change attribute=tendered value=10 lei', 'ask/change']],
-  r0622: ["I would like a ball and a pencil and pay with 20 lei. what's the change", ['make kind=ball and a pencil', 'change attribute=tendered value=20 lei', 'ask/change']],
+  r0598: ['I want a puzzle and I pay 10 lei. What is the change?', ['make kind=puzzle', 'change/less amount=10 lei attribute=money', 'ask/change']],
+  r0599: ['I want 2 pencils and I give the cashier 10 lei. How much change do I get?', ['make kind=pencils number=2', 'change/less amount=10 lei attribute=money', 'ask/change']],
+  r0622: ["I would like a ball and a pencil and pay with 20 lei. what's the change", ['make kind=ball and a pencil', 'change/less amount=20 lei attribute=money', 'ask/change']],
   r0623: ['how much does a pencil cost?', ['ask/price thing=pencil']],
-  r0624: ['I want a puzzle and I pay 10 lei. What is the change?', ['make kind=puzzle', 'change attribute=tendered value=10 lei', 'ask/change']],
-  r0625: ['I want a ball and a pencil and pay with 20 lei what is the change', ['make kind=ball and a pencil', 'change attribute=tendered value=20 lei', 'ask/change']],
+  r0624: ['I want a puzzle and I pay 10 lei. What is the change?', ['make kind=puzzle', 'change/less amount=10 lei attribute=money', 'ask/change']],
+  r0625: ['I want a ball and a pencil and pay with 20 lei what is the change', ['make kind=ball and a pencil', 'change/less amount=20 lei attribute=money', 'ask/change']],
   r0626: ['how much does a ball cost?', ['ask/price thing=ball']],
-  r0627: ['I want 2 pencils and I give the cashier 10 lei. How much change do I get?', ['make kind=pencils number=2', 'change attribute=tendered value=10 lei', 'ask/change']],
+  r0627: ['I want 2 pencils and I give the cashier 10 lei. How much change do I get?', ['make kind=pencils number=2', 'change/less amount=10 lei attribute=money', 'ask/change']],
 };
 
 test('list-frames: the real rows of PSys2 (Q18 K1, K2, K6) read with the right act and roles, clause by clause', () => {
@@ -91,7 +94,7 @@ const KIDS = [
   ['How much do 3 pencils cost?', 'ask/price thing=3 pencils'], ['What do 3 pencils cost?', 'ask/price thing=3 pencils'], ['The price of a kite?', null],
   ['Can I buy 3 pencils?', 'ask/afford thing=3 pencils'], ['Is 2 balls affordable?', 'ask/afford thing=2 balls'],
   ['Change for 2 balls with 5 lei?', 'ask/change other=5 lei thing=2 balls'], ['What is the change from 20 lei for a ball and a pencil?', 'ask/change other=20 lei thing=ball and a pencil'],
-  ['I start with 30 lei.', 'change attribute=budget value=30 lei'], ['My wallet has 15 lei.', 'change attribute=budget value=15 lei'],
+  ['I start with 30 lei.', 'change attribute=money value=30 lei'], ['My wallet has 15 lei.', 'change attribute=money value=15 lei'], ['My budget is 30 lei.', 'change attribute=budget value=30 lei'],
   ['How much money is left?', 'ask/left'], ['How much money do I have left after I buy 2 pencils?', 'ask/left thing=2 pencils'], ['Show me my cash total.', 'ask/left'],
 ];
 
@@ -107,7 +110,7 @@ test('list-frames: what is not theirs stays with the general frames, or is not r
   assert.ok(!clauses('Put the cat on the sofa.')?.some((c) => c.frame.startsWith('acts.list.')));
   assert.deepEqual(clauses('Add a table.').map((c) => c.frame), ['acts.make']);
   assert.notEqual(readAll('Did I finish my homework?')[0].split(' ')[0], 'change');
-  // a currency word is needed for money: "I pay 10" is no tendered amount, "I have 3 apples" no budget
+  // a currency word is needed for money: "I pay 10" is no payment, "I have 3 apples" no money
   assert.ok(!clauses('I pay 10.')?.some((c) => c.frame === 'acts.shop.pay'));
   assert.ok(!clauses('I have 3 apples.')?.some((c) => c.frame === 'acts.wallet.start'));
   // a clause is cut only where every clause reads: "a ball and a pencil" stays one thing

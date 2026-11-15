@@ -1084,3 +1084,14 @@ step 1 joins the basic-colour slots of k.drawing, k.attributes, k.values.colour.
 node, w.map place and pin) undeclared, since a user may name any of the 171. Meanwhile: nothing moved. Should the 171
 names (rgb, basic family) move into k.colours (one type, `basic=true` on 11), after which k.values.colour is dropped
 and the w.* colour slots join k.colours?
+
+## Q77 [LIB] (reviewer 12:30 Q71 (1), fourth worker, 2026-11-15): `w.list.list.tendered` is gone; the amount paid is a story event
+
+For the library's `listSums` (0.126 reads w.list v3: total, change, short, left). w.list version 4 drops
+`w.list.list.tendered` (old key). The amount paid is no key of a list now: "I pay 10 lei" / "I give the cashier 10 lei"
+read (w.lang.en acts.shop.pay) as act change, mode less, fixed attribute `money`, amount "10 lei": an event on the
+person's money (k.actions `pay`, `money=remove`; the story state, L1). "I start with 30 lei" / "my wallet has 15 lei"
+read as change, attribute `money`, value "30 lei" (the person's money); "my budget is 30 lei" as change, attribute
+`budget` (the list's planned limit, unchanged). So: change = the amount of the last payment event less the list's
+total; left = the person's money less the total; `budget` stays a key of the list (left of budget = budget - total).
+Meanwhile nothing else moved; the real rows r0598, r0599, r0622-r0627 read with the new key (9 of 9).
