@@ -3,20 +3,23 @@
 # std.acts drive it; three denies keep an event's ends in order; it has no function of its own. Its events follow the
 # iCalendar standard (RFC 5545: an event has a start date, a start and an end time or none for an all-day event, and
 # a recurrence rule of a frequency, an interval, weekdays, a count or an end date); the weeks start on Monday by
-# ISO 8601 unless the calendar says Sunday. Version 1 (Q92-w4).
+# ISO 8601 unless the calendar says Sunday. Version 1 (Q92-w4); version 2 adds the calendar's time zone.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
 # needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
-@w.calendar core.module name=w.calendar version=1 exports=calendar exports=event exports=view core.source="hand-core 1"
+@w.calendar core.module name=w.calendar version=2 exports=calendar exports=event exports=view core.source="hand-core 1"
 @w.calendar.world std.schema.world name=w.calendar doc="calendars: events on the days of a month" core.source="hand-core 1"
 
 # A calendar. `name`; `week_starts` is the first day of each row of the grid (Monday by ISO 8601; Sunday in the
-# United States and some other countries), a weekday of k.time (the seven names stay listed until strict joins).
+# United States and some other countries), a weekday of k.time (the seven names stay listed until strict joins);
+# `zone` the time zone its clock times are in, a zone of k.time.zone by its IANA name (Europe/Bucharest; version 2,
+# Q92-w4 item 3). A calendar without one keeps the times as they are said.
 @w.calendar.calendar core.type of=w.calendar.calendar extends=std.schema.thing closed=true core.source="hand-core 1"
 @w.calendar.calendar.name core.slot of=w.calendar.calendar key=name required=true kind=atom kind=string core.source="hand-core 1"
 @w.calendar.calendar.week_starts core.slot of=w.calendar.calendar key=week_starts enum=Monday enum=Sunday default=Monday kind=atom type=k.time.weekday by=name core.source="hand-core 1"
+@w.calendar.calendar.zone core.slot of=w.calendar.calendar key=zone kind=atom kind=string type=k.time.zone by=name core.source="hand-core 1"
 
 # An event (RFC 5545 VEVENT). `title` is what happens; `calendar` refers to its calendar; `date` is its day (an ISO
 # 8601 date, 2026-11-20; DTSTART); `start` and `end` are clock times that day (14:30; an event without `start` lasts
@@ -76,6 +79,7 @@
 @w.calendar.word.event core.word text=event text=events text=appointment text=appointments text=meeting text=meetings means=w.calendar.event core.source="hand-core 1"
 @w.calendar.word.view core.word text=month text=view means=w.calendar.view core.source="hand-core 1"
 @w.calendar.word.name core.word text=name text=called means=w.calendar.calendar.name core.source="hand-core 1"
+@w.calendar.word.zone core.word text="time zone" text=zone text=timezone means=w.calendar.calendar.zone core.source="hand-core 1"
 @w.calendar.word.week_starts core.word text="week starts" text="first day" means=w.calendar.calendar.week_starts core.source="hand-core 1"
 @w.calendar.word.title core.word text=title text=called text=what means=w.calendar.event.title core.source="hand-core 1"
 @w.calendar.word.event.calendar core.word text=on text=in means=w.calendar.event.calendar core.source="hand-core 1"

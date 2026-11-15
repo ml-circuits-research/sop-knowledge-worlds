@@ -186,10 +186,13 @@ test('a session with a timeline: events with their time, moved later and back, p
   assert.equal(act('show', { thing: 'w.timeline.timeline', set: 'each', view: 'w.timeline' }).ok, false);
 });
 
-test('w.calendar (Q92-w4): a weekly event on two weekdays, a yearly birthday, the month grid; the ends of an event in order', () => {
+test('w.calendar (Q92-w4): a time zone, a weekly event on two weekdays, a yearly birthday, the month grid; the ends of an event in order', () => {
   const w = actsWorld(['w.calendar']), act = session(w);
   assert.equal(act('make', { kind: 'w.calendar.calendar', name: 'family' }).ok, true);
   assert.equal(act('ask', { thing: 'w.calendar.calendar', attr: 'week_starts' }).result.value, 'Monday');
+  // version 2: the time zone of its clock times, a zone of k.time.zone by name
+  assert.ok(facts('k.time').some((x) => x.type === 'k.time.zone' && tok(x.attrs.name[0]) === 'Europe/Bucharest'));
+  assert.equal(act('change', { thing: 'w_calendar_calendar1', attr: 'zone', value: 'Europe/Bucharest' }).ok, true);
   assert.equal(act('make', { kind: 'w.calendar.event', title: 'swimming', date: '2026-11-16', start: '17:00', end: '18:00', repeat: 'weekly', on: ['Monday', 'Thursday'], calendar: '$w_calendar_calendar1' }).ok, true);
   assert.equal(act('make', { kind: 'w.calendar.event', title: 'birthday', date: '2027-03-04', repeat: 'yearly' }).ok, true);
   assert.equal(act('ask', { thing: 'w_calendar_event2', attr: 'every' }).result.value, '1');

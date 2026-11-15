@@ -1,5 +1,5 @@
 {
- "version": "cc2b66b4abb5",
+ "version": "80288fdbd77d",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -91688,7 +91688,7 @@
  "schemas": [
   {
    "id": "w.calendar",
-   "version": "1",
+   "version": "2",
    "schema": "w.calendar/schema.sop",
    "depends": [],
    "about": "calendars: events on the days of a month",
@@ -91713,7 +91713,8 @@
      ],
      "attributes": [
       "name",
-      "week_starts"
+      "week_starts",
+      "zone"
      ],
      "words": [
       "calendar",
@@ -91775,8 +91776,8 @@
      ]
     }
    ],
-   "wires": 64,
-   "bytes": 10467,
+   "wires": 66,
+   "bytes": 10970,
    "sources": [
     "hand-core-1"
    ],

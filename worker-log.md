@@ -6629,3 +6629,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Lesson: a quotation carries its source's licence, not the file's; quote only what is public domain or under an
   allowed licence, and say so on the fact.
 - Tests: validate, k.diagrams, k.procedures, catalog.
+
+## 2026-11-15 — fourth worker: w.calendar version 2, the time zone (Q92-w4 item 3, reviewer 19:35)
+
+- `zone` on the calendar: a zone of k.time.zone by its IANA name (the first worker's 312 zones); words time zone,
+  zone, timezone. The answers of Q92-w4 written into WORLD.md (recurrence expansion is the library's; "first
+  Monday" waits for a real row; holidays later as data). The value list of k.time.zone is not copied (no enum).
+- Tests: w.schemas (the calendar session sets Europe/Bucharest), k.kinds relations, joins report, catalog, validate.
