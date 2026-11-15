@@ -5481,3 +5481,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   fills a tree. measures-core: `nodes` counts nodes.
 - For PSys2 (host): load the `k.diagrams/shards/topics-*` shards with the diagram knowledge (or vocab.json's words)
   into the speller's vocabulary.
+
+
+## 2026-11-15 — first worker: end of round (block 07:15 items 1-2, block 07:30 items 1, 2, 3, 9)
+
+- Commits: ab3b2ab (Q67 b: k.objects.keyword), 4719034 (Q68: k.geo.country.currency dropped), a4b31f4 (parts of a
+  thing fill trees: k.parts.whole), 66e839f (planets as timelines, fill `by`; everyday procedures), 687d193
+  (user_facing methods), the diagram topics commit (k.diagrams.topic, 3,045 topics). 07:15 item 3 (more animal
+  sounds) dropped by the owner's decision of 07:30 (no real row).
+- Full suite on the rebased tip (`npm run test:all`, files one at a time): 83 files, 3,128 tests, 3,125 pass, 1 fail,
+  2 skipped, 774 s. The failure: COVERAGE.md lacked the row of `w.list` (another worker's new schema, reports not
+  rerun); regenerated here (`npm run reports`), coverage-report passes.
+- Q70 answered (keep the dedicated type). Open for hosts: PSys2 to read keywords last (vocab order and
+  `drawingFor` order), a country's currency through k.units, `by` on order fills, user_facing for random flowcharts,
+  the topics shards for its speller.
