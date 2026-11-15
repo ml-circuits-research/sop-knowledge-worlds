@@ -21,7 +21,7 @@
 @k.attributes.same.bag.thing k.attributes.same name=bag sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.bagel.food k.attributes.same name=bagel sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.baggage.thing k.attributes.same name=baggage sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.bagging.thing k.attributes.same name=bagging sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.bagging.thing k.attributes.same name=bagging sense=thing only=true in=k.attributes.thing in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.baghdad.place k.attributes.same name=baghdad sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.baguette_bread.food k.attributes.same name="baguette bread" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.bahamas.place k.attributes.same name=bahamas sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"

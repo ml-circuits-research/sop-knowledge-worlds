@@ -87,7 +87,7 @@
 @k.attributes.same.flatbread.food k.attributes.same name=flatbread sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.flatscreen_tv.thing k.attributes.same name="flatscreen tv" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.flea.animal k.attributes.same name=flea sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.flipper.thing k.attributes.same name=flipper sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.flipper.thing k.attributes.same name=flipper sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.floppy_disk.thing k.attributes.same name="floppy disk" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.florence.place k.attributes.same name=florence sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.floss.thing k.attributes.same name=floss sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

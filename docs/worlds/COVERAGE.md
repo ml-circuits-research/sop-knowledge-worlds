@@ -29,8 +29,8 @@ the place of the dog).
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
 | material | 376 (25%) | 109 (7%) | 1015 (68%) | `k.attributes.thing` (material) |
-| what it can do (of the 463 it applies to) | 261 (56%) | 51 (11%) | 151 (33%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 492 (33%) | 150 (10%) | 858 (57%) | `k.attributes.thing` (used_for) |
+| what it can do (of the 463 it applies to) | 263 (57%) | 50 (11%) | 150 (32%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| what it is used for | 498 (33%) | 145 (10%) | 857 (57%) | `k.attributes.thing` (used_for) |
 | property (sharp, sticky, heavy ...) | 34 (2%) | 25 (2%) | 1441 (96%) | `k.attributes.thing` (property) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
@@ -66,7 +66,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.layouts` | 221 (15%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
-| `k.objects` | 1212 (81%) |
+| `k.objects` | 1218 (81%) |
 | `k.parts` | 977 (65%) |
 | `k.people` | 17 (1%) |
 | `k.procedures` | 3 (0%) |

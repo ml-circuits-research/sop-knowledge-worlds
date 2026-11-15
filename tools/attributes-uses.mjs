@@ -48,7 +48,7 @@ export function proposals(worlds = scanWorlds()) {
   }
   const kindUses = new Map(), has = new Set();
   for (const t of factsOf('k.attributes', 'k.attributes.thing', worlds)) {
-    if (t.id.startsWith('k.attributes.thing.uses.') || t.id.startsWith('k.attributes.thing.conceptnet.')) continue; // this tool's own facts; ConceptNet's are share-alike and must not seed a WordNet-licensed shard
+    if (/^k\.attributes\.thing\.(uses|conceptnet|wikidata|vg)\./.test(t.id)) continue; // this tool's own facts; the imported ones (ConceptNet, Wikidata, Visual Genome: tools/import/*-attributes.mjs, attributes-data.mjs) are not the catalog's own and must not seed a WordNet-licensed shard, so neither depends on the other
     const n = tok(t.attrs.name[0]);
     if (t.attrs.used_for) { has.add(n); if (!kindUses.has(n)) kindUses.set(n, new Set()); for (const u of t.attrs.used_for.map(tok)) kindUses.get(n).add(u); }
   }

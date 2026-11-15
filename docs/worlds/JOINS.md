@@ -116,7 +116,7 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2349 |
+| `k.attributes` and `k.objects` | 2356 |
 | `k.objects` and `k.scenes` | 2196 |
 | `k.attributes` and `k.scenes` | 2154 |
 | `k.commonsense` and `k.scenes` | 318 |

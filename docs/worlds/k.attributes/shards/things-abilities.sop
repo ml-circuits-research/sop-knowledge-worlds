@@ -1,4 +1,4 @@
-# k.attributes/shards/things-abilities: what 63 common things of the catalog that had no ability can do (128 values; 16 of 144 proposed were wrong by the hand check and are not written): the agent role of k.actions, and abilities inherited down WordNet's hypernyms from the kinds the catalog describes (KR6; the rule in tools/attributes-abilities.mjs)
+# k.attributes/shards/things-abilities: what 65 common things of the catalog that had no ability can do (132 values; 16 of 148 proposed were wrong by the hand check and are not written): the agent role of k.actions, and abilities inherited down WordNet's hypernyms from the kinds the catalog describes (KR6; the rule in tools/attributes-abilities.mjs)
 # sources: wordnet 3.1 (the hypernym chains of the first noun senses, as imported in k.words; the abilities they carry down are the catalog's own: k.attributes, k.animals, k.actions; hand-checked in sources/coverage/abilities-audit.tsv)
 # license: WordNet-3.0
 # script: tools/attributes-abilities.mjs
@@ -67,6 +67,8 @@
 @k.attributes.thing.abilities.laptop k.attributes.thing name=laptop can=work core.source="wordnet 3.1"
 # leaf: the agent of these actions in k.actions
 @k.attributes.thing.abilities.leaf k.attributes.thing name=leaf can=fall can=float can=wilt core.source="wordnet 3.1"
+# lifeboat: a kind of boat (WordNet)
+@k.attributes.thing.abilities.lifeboat k.attributes.thing name=lifeboat can=float can=move can=sail core.source="wordnet 3.1"
 # louse: a kind of insect (WordNet)
 @k.attributes.thing.abilities.louse k.attributes.thing name=louse can=crawl core.source="wordnet 3.1"
 # mainframe: a kind of machine (WordNet)
@@ -95,6 +97,8 @@
 @k.attributes.thing.abilities.puppy k.attributes.thing name=puppy can=play core.source="wordnet 3.1"
 # revolver: a kind of pistol (WordNet)
 @k.attributes.thing.abilities.revolver k.attributes.thing name=revolver can=shoot core.source="wordnet 3.1"
+# rickshaw: a kind of cart (WordNet)
+@k.attributes.thing.abilities.rickshaw k.attributes.thing name=rickshaw can=move core.source="wordnet 3.1"
 # rooster: a kind of bird (WordNet)
 @k.attributes.thing.abilities.rooster k.attributes.thing name=rooster can=feed can=fly can="fly away" can=hop can=sit core.source="wordnet 3.1"
 # scalpel: a kind of knife (WordNet)

@@ -1,4 +1,4 @@
-# k.diagrams/shards/topics-wordnet-3-0: 1651 topics a diagram can be drawn about, read from the fills of k.diagrams over facts under WordNet-3.0 (block 07:30 item 9): each with the kinds of diagram it fills, the types it comes from and the nodes of its largest diagram. Derived; rebuilt by the build.
+# k.diagrams/shards/topics-wordnet-3-0: 1655 topics a diagram can be drawn about, read from the fills of k.diagrams over facts under WordNet-3.0 (block 07:30 item 9): each with the kinds of diagram it fills, the types it comes from and the nodes of its largest diagram. Derived; rebuilt by the build.
 # sources: wordnet 3.1 (the facts the topics are read from)
 # license: WordNet-3.0
 # script: tools/diagram-topics.mjs
@@ -1461,6 +1461,7 @@
 @k.diagrams.topic.wordnet_3_0.thing_for_burning k.diagrams.topic name="thing for burning" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_buying k.diagrams.topic name="thing for buying" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=6 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_carrying k.diagrams.topic name="thing for carrying" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
+@k.diagrams.topic.wordnet_3_0.thing_for_carrying_water k.diagrams.topic name="thing for carrying water" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_catching k.diagrams.topic name="thing for catching" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_cleaning k.diagrams.topic name="thing for cleaning" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_cooking k.diagrams.topic name="thing for cooking" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
@@ -1492,13 +1493,16 @@
 @k.diagrams.topic.wordnet_3_0.thing_for_putting_out k.diagrams.topic name="thing for putting out" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_sewing k.diagrams.topic name="thing for sewing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_sharpening k.diagrams.topic name="thing for sharpening" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
+@k.diagrams.topic.wordnet_3_0.thing_for_sitting k.diagrams.topic name="thing for sitting" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_spending k.diagrams.topic name="thing for spending" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
+@k.diagrams.topic.wordnet_3_0.thing_for_staying_overnight k.diagrams.topic name="thing for staying overnight" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_stopping k.diagrams.topic name="thing for stopping" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_storing k.diagrams.topic name="thing for storing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_thinking k.diagrams.topic name="thing for thinking" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
+@k.diagrams.topic.wordnet_3_0.thing_for_typing k.diagrams.topic name="thing for typing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_washing k.diagrams.topic name="thing for washing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_watching k.diagrams.topic name="thing for watching" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"
-@k.diagrams.topic.wordnet_3_0.thing_for_wearing k.diagrams.topic name="thing for wearing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=5 core.source="wordnet 3.1"
+@k.diagrams.topic.wordnet_3_0.thing_for_wearing k.diagrams.topic name="thing for wearing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=9 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_weighing k.diagrams.topic name="thing for weighing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_wiping k.diagrams.topic name="thing for wiping" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=4 core.source="wordnet 3.1"
 @k.diagrams.topic.wordnet_3_0.thing_for_writing k.diagrams.topic name="thing for writing" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="wordnet 3.1"

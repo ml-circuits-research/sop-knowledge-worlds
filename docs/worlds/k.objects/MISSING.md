@@ -22,9 +22,9 @@ is made only in the sense kept.
 | with a drawing of that name | 780 | 52.0% |
 | without, but a WordNet synonym has a drawing | 71 | 4.7% |
 | without, but the direct hypernym has a drawing | 181 | 12.1% |
-| without, but it is another word of an object (hand-written) | 29 | 1.9% |
+| without, but it is another word of an object (hand-written) | 33 | 2.2% |
 | without, but a stand-in written by hand has a drawing | 79 | 5.3% |
-| with no drawing at all | 360 | 24.0% |
+| with no drawing at all | 356 | 23.7% |
 
 ## The 720 words without a drawing of their name, most frequent first
 
@@ -370,7 +370,7 @@ gloss is WordNet's, for the sense kept.
 | 1039 | jigsaw | hand synonym jigsaw puzzle | a portable power saw with a reciprocating blade |
 | 1040 | louse |  | wingless usually flattened bloodsucking insect parasitic on warm-blooded animals |
 | 1041 | cavern | hand stand-in cave | any large dark enclosed space |
-| 1042 | warship |  | a government ship that is available for waging war |
+| 1042 | warship | word destroyer | a government ship that is available for waging war |
 | 1043 | rein |  | one of a pair of long straps (usually connected to the bit or the headpiece) used to control a horse |
 | 1044 | pheasant | hand stand-in bird | large long-tailed gallinaceous bird native to the Old World but introduced elsewhere |
 | 1045 | yam |  | edible tuber of any of several yams |
@@ -380,7 +380,7 @@ gloss is WordNet's, for the sense kept.
 | 1050 | peppermint |  | herb with downy leaves and small purple or white flowers that yields a pungent oil used as a flavoring |
 | 1051 | wreath |  | flower arrangement consisting of a circular band of foliage or flowers for ornamental purposes |
 | 1052 | bale |  | a large bundle bound for storage or transport |
-| 1054 | roe |  | fish eggs or egg-filled ovary |
+| 1054 | roe | word caviar | fish eggs or egg-filled ovary |
 | 1056 | hyena |  | doglike nocturnal mammal of Africa and southern Asia that feeds chiefly on carrion |
 | 1058 | boa | hypernym scarf | a long thin fluffy scarf of feathers or fur |
 | 1060 | facade |  | the face or front of a building |
@@ -572,7 +572,7 @@ gloss is WordNet's, for the sense kept.
 | 1293 | ware |  | articles of the same kind or material |
 | 1294 | carburetor |  | mixes air with gasoline vapor prior to explosion |
 | 1295 | lilac | hypernym bush | any of various plants of the genus Syringa having large panicles of usually fragrant flowers |
-| 1296 | kelp |  | large brown seaweeds having fluted leathery fronds |
+| 1296 | kelp | word seaweed | large brown seaweeds having fluted leathery fronds |
 | 1297 | chamomile | hypernym herb | Eurasian plant with apple-scented foliage and white-rayed flowers and feathery leaves used medicinally |
 | 1298 | terrier | hand stand-in dog | any of several usually small short-bodied breeds originally trained to hunt animals living underground |
 | 1299 | defibrillator |  | an electronic device that administers an electric shock of preset voltage to the heart through the chest wall in an attempt to restore the normal rhythm of the heart during ventricular fibrillation |
@@ -671,7 +671,7 @@ gloss is WordNet's, for the sense kept.
 | 1406 | chutney |  | a spicy condiment made of chopped fruits or vegetables cooked in vinegar and sugar with ginger and spices |
 | 1407 | yolk | synonym egg yolk | the yellow spherical part of an egg that is surrounded by the albumen |
 | 1408 | hummingbird | hand stand-in bird | tiny American bird having brilliant iridescent plumage and long slender bills |
-| 1409 | beehive |  | any workplace where people are very busy |
+| 1409 | beehive | word hive | any workplace where people are very busy |
 | 1410 | gazebo |  | a small roofed building affording shade and rest |
 | 1411 | nautilus |  | a submarine that is propelled by nuclear power |
 | 1412 | platypus |  | small densely furred aquatic monotreme of Australia and Tasmania having a broad bill and tail and webbed feet |

@@ -105,7 +105,7 @@
 @k.attributes.same.cathedral.thing k.attributes.same name=cathedral sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.catherine_wheel.thing k.attributes.same name="catherine wheel" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.catheter.thing k.attributes.same name=catheter sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.cauldron.thing k.attributes.same name=cauldron sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.cauldron.thing k.attributes.same name=cauldron sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.cauliflower.food k.attributes.same name=cauliflower sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.cave.thing k.attributes.same name=cave sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.cavern.thing k.attributes.same name=cavern sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

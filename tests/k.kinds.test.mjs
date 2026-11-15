@@ -74,7 +74,9 @@ test('licences follow the facts: WordNet edges in WordNet shards, share-alike dr
   for (const f of readdirSync(dir).filter(ownShard)) {
     const text = readFileSync(join(dir, f), 'utf8'), h = readHeader(text);
     const sources = new Set([...text.matchAll(/core\.source="([^"]+)"/g)].map((m) => m[1].split(' ')[0]));
-    if (h.license[0] === 'CC0-1.0') assert.ok([...sources].every((x) => x === 'hand-core' || x === 'psys2-worlds'), `${f}: ${[...sources]}`); // psys2-worlds: CC0, the project's own data
+    if (h.license[0] === 'CC0-1.0') assert.ok([...sources].every((x) => x === 'hand-core' || x === 'psys2-worlds') || [...sources].every((x) => x === 'wikidata'), `${f}: ${[...sources]}`); // psys2-worlds: CC0, the project's own data; Wikidata (CC0) in shards of its own
+    if (sources.has('visual-genome')) assert.equal(h.license[0], 'CC-BY-4.0', f);
+    if (sources.has('conceptnet')) assert.equal(h.license[0], 'CC-BY-SA-4.0', f);
     if (sources.has('wordnet')) assert.equal(h.license[0], 'WordNet-3.0', f);
     if (sources.has('mulberry') || sources.has('openmoji')) assert.match(h.license[0], /CC-BY-SA/, f);
     if (sources.has('noto-emoji')) assert.match(h.license[0], /Apache-2.0/, f);

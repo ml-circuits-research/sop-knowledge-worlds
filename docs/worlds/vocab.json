@@ -2364,7 +2364,7 @@
   "k.colours/shards/colours",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of-wordnet-1",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-plants-and-trees-01",
   "k.objects/shards/nature-2",
@@ -4700,7 +4700,7 @@
   "k.kinds/shards/material",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/a",
@@ -6654,7 +6654,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-a",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-1",
   "k.parts/shards/usual",
@@ -7322,7 +7322,7 @@
   "k.actions/shards/verbs-save",
   "k.attributes/shards/same-a",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.words/shards/ar",
   "k.words/shards/frequency-a"
@@ -11374,6 +11374,7 @@
   "k.attributes/shards/things-glosses",
   "k.kinds/shards/material-wordnet",
   "k.kinds/shards/wordnet-1",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.words/shards/ba",
   "k.words/shards/frequency-b"
  ],
@@ -12376,7 +12377,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/b",
@@ -12879,7 +12880,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-noto",
   "k.kinds/shards/kind",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use",
   "k.layouts/shards/anchors-points",
@@ -13050,8 +13051,10 @@
  "bathrobe": [
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-visual-genome",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
@@ -16378,9 +16381,11 @@
  "blazer": [
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/usual",
@@ -16422,7 +16427,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/words-hand",
@@ -17605,10 +17610,12 @@
  "bonnet": [
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-b",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/b",
@@ -20730,7 +20737,7 @@
  "bunker": [
   "k.attributes/shards/same-b",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.words/shards/bu",
   "k.words/shards/frequency-b"
@@ -22724,7 +22731,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-openmoji",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-transport-air-02",
   "k.objects/shards/openmoji-technology-01",
@@ -23710,10 +23717,10 @@
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-conceptnet",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/sensitive",
-  "k.kinds/shards/use",
   "k.kinds/shards/use-conceptnet",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.words/shards/ca",
   "k.words/shards/frequency-c"
@@ -23786,7 +23793,7 @@
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-uses",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-1",
@@ -24826,7 +24833,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-1",
@@ -25231,6 +25238,7 @@
   "k.kinds/shards/part_of",
   "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-1",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.parts/shards/usual",
   "k.words/shards/ca",
   "k.words/shards/frequency-c"
@@ -27297,7 +27305,7 @@
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-animal-bird-01",
@@ -28290,7 +28298,7 @@
  "chute": [
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
@@ -32847,7 +32855,7 @@
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/food",
@@ -33056,7 +33064,7 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-1",
   "k.parts/shards/usual",
@@ -33979,7 +33987,7 @@
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-visual-genome",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-3",
   "k.kinds/shards/wordnet-1",
@@ -35070,7 +35078,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.objects/shards/noto-food-vegetable-01",
   "k.parts/shards/usual",
   "k.scenes/shards/things-c",
@@ -39362,8 +39370,8 @@
   "k.attributes/shards/things-conceptnet",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-mulberry",
-  "k.kinds/shards/use",
   "k.kinds/shards/use-conceptnet",
+  "k.kinds/shards/use-wikidata",
   "k.objects/shards/mulberry-healthcare-grooming-items-02",
   "k.scenes/shards/things-d",
   "k.words/shards/de",
@@ -40344,7 +40352,7 @@
  "dill": [
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/di",
@@ -40717,7 +40725,7 @@
   "k.attributes/shards/same-d",
   "k.attributes/shards/things-objects",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
@@ -51570,7 +51578,7 @@
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-mulberry",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-food-vegetables-and-salads-03",
   "k.scenes/shards/things-f",
@@ -53467,11 +53475,12 @@
   "k.attributes/shards/same-f",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-animal-fish-and-marine-mammals-01",
   "k.objects/shards/noto-animal-marine-01",
   "k.objects/shards/openmoji-animals-nature-01",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.parts/shards/usual",
   "k.words/shards/fl",
   "k.words/shards/frequency-f"
@@ -55402,7 +55411,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-hand",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/vehicles-2",
   "k.parts/shards/f",
@@ -59620,7 +59629,7 @@
   "k.kinds/shards/group-hand",
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/food-2",
   "k.scenes/shards/things-g",
@@ -59846,7 +59855,7 @@
   "k.attributes/shards/drawn-hand",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/land-3",
@@ -60143,7 +60152,7 @@
   "k.attributes/shards/things-worn",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use",
   "k.kinds/shards/wordnet-1",
@@ -60368,7 +60377,7 @@
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/place",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-animal-mammal-05",
@@ -61278,7 +61287,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/mulberry-drink-type-02",
   "k.objects/shards/mulberry-food-fruit-02",
@@ -62888,7 +62897,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-g",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.words/shards/frequency-g",
   "k.words/shards/gu"
@@ -64215,7 +64224,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/usual",
@@ -65534,7 +65543,7 @@
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/h",
   "k.words/shards/frequency-h",
@@ -66839,7 +66848,7 @@
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-glosses",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-2",
@@ -67037,7 +67046,7 @@
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/things-3",
   "k.parts/shards/usual",
@@ -67128,7 +67137,7 @@
   "k.attributes/shards/usage",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-tools-garden-01",
   "k.parts/shards/h",
@@ -67529,7 +67538,7 @@
  "hone": [
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-h",
   "k.words/shards/ho"
@@ -68018,7 +68027,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-h",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-h",
   "k.words/shards/ho",
@@ -68111,11 +68120,12 @@
  ],
  "hostel": [
   "k.attributes/shards/same-h",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/h",
@@ -72575,7 +72585,7 @@
   "k.attributes/shards/same-j",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/places",
   "k.parts/shards/usual",
@@ -72586,7 +72596,7 @@
  "jailhouse": [
   "k.attributes/shards/same-j",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/words-wordnet",
   "k.words/shards/frequency-j",
@@ -76724,8 +76734,10 @@
  "keypad": [
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-k",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-visual-genome",
   "k.kinds/shards/part_of",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/words-wordnet",
   "k.parts/shards/usual",
@@ -77473,7 +77485,7 @@
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
   "k.kinds/shards/place",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.objects/shards/mulberry-food-fruit-02",
   "k.parts/shards/usual",
   "k.scenes/shards/things-k",
@@ -79082,7 +79094,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.objects/shards/mulberry-food-meat-01",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -79322,7 +79334,7 @@
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use",
   "k.kinds/shards/wordnet-2",
@@ -82034,9 +82046,10 @@
  "lifeboat": [
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-l",
+  "k.attributes/shards/things-abilities",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/usual",
   "k.words/shards/frequency-l",
@@ -83994,7 +84007,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-plant-flower-01",
   "k.parts/shards/l",
@@ -89054,7 +89067,7 @@
   "k.attributes/shards/numbers-g-o",
   "k.attributes/shards/same-m",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-1",
   "k.parts/shards/m",
@@ -91879,7 +91892,7 @@
   "k.kinds/shards/material",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-transport-water-01",
   "k.objects/shards/openmoji-technology-01",
@@ -96990,7 +97003,7 @@
  "nutmeg": [
   "k.attributes/shards/same-n",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-n",
   "k.words/shards/nu"
@@ -100157,7 +100170,7 @@
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-conceptnet",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/use-conceptnet",
   "k.kinds/shards/wordnet-2",
@@ -102656,7 +102669,7 @@
  "penitentiary": [
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/words-hand",
   "k.words/shards/frequency-p",
@@ -102783,7 +102796,7 @@
  "peppermint": [
   "k.attributes/shards/same-p",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-p",
   "k.words/shards/pe"
@@ -103496,8 +103509,10 @@
  "pew": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-p",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-visual-genome",
   "k.kinds/shards/part_of-wordnet-3",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/p",
@@ -105585,6 +105600,7 @@
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-plants-and-trees-03",
@@ -107528,7 +107544,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-food-vegetables-and-salads-05",
@@ -109430,7 +109446,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.objects/shards/food-2",
   "k.parts/shards/usual",
   "k.scenes/shards/scenes-other",
@@ -110276,10 +110292,10 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-q",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-animal-bird-02",
   "k.objects/shards/stand-ins-wordnet",
@@ -112172,7 +112188,7 @@
  "reef": [
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.scenes/shards/scenes-other",
   "k.words/shards/frequency-r",
@@ -113997,7 +114013,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.objects/shards/mulberry-food-vegetables-and-salads-04",
   "k.parts/shards/usual",
   "k.scenes/shards/things-r",
@@ -114107,7 +114123,7 @@
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-food-pastas-and-rice-01",
   "k.objects/shards/noto-food-asian-01",
@@ -114189,10 +114205,11 @@
  "rickshaw": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-r",
+  "k.attributes/shards/things-abilities",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/head",
   "k.kinds/shards/part_of-wordnet-1",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/r",
@@ -116410,7 +116427,7 @@
   "k.attributes/shards/same-r",
   "k.attributes/shards/things-objects",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
@@ -116489,7 +116506,7 @@
   "k.kinds/shards/group-noto",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/noto-plant-flower-01",
   "k.objects/shards/things-3",
@@ -116863,7 +116880,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/r",
   "k.words/shards/frequency-r",
@@ -120103,7 +120120,7 @@
   "k.attributes/shards/things-conceptnet",
   "k.attributes/shards/things-uses",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use-conceptnet",
   "k.kinds/shards/wordnet-2",
@@ -121277,7 +121294,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/things-3",
@@ -122182,8 +122199,9 @@
  "sesame": [
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.words/shards/frequency-s",
   "k.words/shards/se"
  ],
@@ -122440,8 +122458,10 @@
  ],
  "sewer": [
   "k.attributes/shards/same-s",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-s",
   "k.words/shards/se"
@@ -122924,7 +122944,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/things-3",
@@ -124216,7 +124236,7 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/s",
   "k.shapes/shards/shapes",
@@ -125587,7 +125607,7 @@
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/s",
@@ -125665,7 +125685,7 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-hand",
   "k.parts/shards/s",
@@ -126592,7 +126612,7 @@
   "k.kinds/shards/head",
   "k.kinds/shards/material",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/outlines-cc0-1-0",
   "k.objects/shards/figures",
@@ -129216,8 +129236,9 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.parts/shards/s",
   "k.words/shards/frequency-s",
   "k.words/shards/st"
@@ -132856,10 +132877,12 @@
  "sweatpants": [
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-s",
+  "k.attributes/shards/things-uses",
   "k.attributes/shards/things-visual-genome",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/part_of-wordnet-3",
+  "k.kinds/shards/use-wordnet",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/s",
@@ -133110,9 +133133,9 @@
   "k.attributes/shards/same-s",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/head",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/words-wordnet",
@@ -133433,7 +133456,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/food-2",
   "k.objects/shards/noto-food-prepared-01",
@@ -134373,7 +134396,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/group-hand",
   "k.kinds/shards/part_of-wordnet-2",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/vehicles-2",
   "k.parts/shards/t",
@@ -134619,7 +134642,7 @@
  "taro": [
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.words/shards/frequency-t",
@@ -136271,7 +136294,7 @@
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.parts/shards/t",
   "k.words/shards/frequency-t",
@@ -136422,15 +136445,15 @@
  ],
  "thing for animal slaughter": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for articulated steering": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for artillery": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for baking": [
   "k.kinds/shards/classes",
@@ -136443,7 +136466,7 @@
  ],
  "thing for beekeeping": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for binding many pieces of paper": [
   "k.kinds/shards/classes",
@@ -136514,7 +136537,7 @@
  ],
  "thing for cargo shipping": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for caring for the sick": [
   "k.kinds/shards/classes",
@@ -136561,7 +136584,8 @@
  "thing for carrying water": [
   "k.kinds/shards/classes",
   "k.kinds/shards/use",
-  "k.kinds/shards/use-conceptnet"
+  "k.kinds/shards/use-conceptnet",
+  "k.kinds/shards/use-wordnet"
  ],
  "thing for catching": [
   "k.kinds/shards/classes",
@@ -136570,7 +136594,7 @@
  ],
  "thing for cereal": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for chopping wood": [
   "k.kinds/shards/classes",
@@ -136583,7 +136607,7 @@
  ],
  "thing for cleaning product": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for cleaning teeth": [
   "k.kinds/shards/classes",
@@ -136625,7 +136649,7 @@
  ],
  "thing for cooking alcohol": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for cooling": [
   "k.kinds/shards/classes",
@@ -136686,7 +136710,8 @@
  "thing for decoration": [
   "k.kinds/shards/classes",
   "k.kinds/shards/use",
-  "k.kinds/shards/use-conceptnet"
+  "k.kinds/shards/use-conceptnet",
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for dessert": [
   "k.kinds/shards/classes",
@@ -136694,7 +136719,7 @@
  ],
  "thing for destruction": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for digging": [
   "k.kinds/shards/classes",
@@ -136718,7 +136743,8 @@
  ],
  "thing for drawing": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for drinking": [
   "k.kinds/shards/classes",
@@ -136756,7 +136782,7 @@
  ],
  "thing for electrical circuit": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for energy": [
   "k.kinds/shards/classes",
@@ -136805,27 +136831,28 @@
  ],
  "thing for fodder": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for food": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for food industry": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for food ingredient": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for food thickener": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for forging": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for freezing food": [
   "k.kinds/shards/classes",
@@ -136833,11 +136860,11 @@
  ],
  "thing for fruit": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for fruit vegetable": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for frying": [
   "k.kinds/shards/classes",
@@ -136845,7 +136872,7 @@
  ],
  "thing for game": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for getting warm": [
   "k.kinds/shards/classes",
@@ -136858,7 +136885,7 @@
  ],
  "thing for gift": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for giving light": [
   "k.kinds/shards/classes",
@@ -136886,7 +136913,7 @@
  ],
  "thing for grasping": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for grinding grain": [
   "k.kinds/shards/classes",
@@ -136914,11 +136941,11 @@
  ],
  "thing for haircutting": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for handicraft": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for hanging": [
   "k.kinds/shards/classes",
@@ -136930,7 +136957,7 @@
  ],
  "thing for harvest": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for headaches": [
   "k.kinds/shards/classes",
@@ -137029,15 +137056,15 @@
  ],
  "thing for hygiene": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for imprisonment": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for incarceration": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for ironing clothes": [
   "k.kinds/shards/classes",
@@ -137188,7 +137215,7 @@
  ],
  "thing for log cabin": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for looking at": [
   "k.kinds/shards/classes",
@@ -137224,7 +137251,7 @@
  ],
  "thing for mail": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for making apple pie": [
   "k.kinds/shards/classes",
@@ -137245,7 +137272,7 @@
  ],
  "thing for marinating": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for meals": [
   "k.kinds/shards/classes",
@@ -137265,7 +137292,7 @@
  ],
  "thing for medicinal plant": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for mending": [
   "k.kinds/shards/classes",
@@ -137273,11 +137300,11 @@
  ],
  "thing for military depot": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for milk": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for office space": [
   "k.kinds/shards/classes",
@@ -137289,7 +137316,7 @@
  ],
  "thing for ornamental plant": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for paddling": [
   "k.kinds/shards/classes",
@@ -137328,7 +137355,7 @@
  ],
  "thing for porridge": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for posting letters": [
   "k.kinds/shards/classes",
@@ -137336,7 +137363,7 @@
  ],
  "thing for potato starch": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for pouring": [
   "k.kinds/shards/classes",
@@ -137364,7 +137391,7 @@
  ],
  "thing for propulsion": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for protecting": [
   "k.kinds/shards/classes",
@@ -137385,7 +137412,7 @@
  ],
  "thing for public transport": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for pulling a train": [
   "k.kinds/shards/classes",
@@ -137417,7 +137444,7 @@
  ],
  "thing for reform": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for remembering": [
   "k.kinds/shards/classes",
@@ -137429,7 +137456,7 @@
  ],
  "thing for repository": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for resting": [
   "k.kinds/shards/classes",
@@ -137446,7 +137473,7 @@
  ],
  "thing for risotto": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for rolling": [
   "k.kinds/shards/classes",
@@ -137458,7 +137485,7 @@
  ],
  "thing for root vegetable": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for rowing": [
   "k.kinds/shards/classes",
@@ -137478,7 +137505,7 @@
  ],
  "thing for sanitation": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for scaring birds": [
   "k.kinds/shards/classes",
@@ -137515,7 +137542,7 @@
  ],
  "thing for sharpening": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/use-wordnet"
  ],
  "thing for shaving": [
@@ -137557,7 +137584,8 @@
  ],
  "thing for sitting": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use",
+  "k.kinds/shards/use-wordnet"
  ],
  "thing for skating": [
   "k.kinds/shards/classes",
@@ -137593,7 +137621,7 @@
  ],
  "thing for spice": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for stabbing olive": [
   "k.kinds/shards/classes",
@@ -137609,7 +137637,8 @@
  ],
  "thing for staying overnight": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use",
+  "k.kinds/shards/use-wordnet"
  ],
  "thing for sticking": [
   "k.kinds/shards/classes",
@@ -137638,7 +137667,7 @@
  ],
  "thing for surface water rescue": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for sweeping": [
   "k.kinds/shards/classes",
@@ -137650,7 +137679,8 @@
  ],
  "thing for swimming": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for taking pictures": [
   "k.kinds/shards/classes",
@@ -137666,7 +137696,7 @@
  ],
  "thing for temperature control": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for thinking": [
   "k.kinds/shards/classes",
@@ -137678,7 +137708,7 @@
  ],
  "thing for tillage": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for toasting bread": [
   "k.kinds/shards/classes",
@@ -137686,11 +137716,11 @@
  ],
  "thing for transfer of corpses": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for transport": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for transportation": [
   "k.kinds/shards/classes",
@@ -137730,19 +137760,20 @@
  ],
  "thing for typing": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use",
+  "k.kinds/shards/use-wordnet"
  ],
  "thing for underwater diving": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for urban and regional transportation": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for vegetable": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for waking up": [
   "k.kinds/shards/classes",
@@ -137784,7 +137815,7 @@
  ],
  "thing for water discharge management": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for watering": [
   "k.kinds/shards/classes",
@@ -137801,7 +137832,7 @@
  ],
  "thing for weeding": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for weighing": [
   "k.kinds/shards/classes",
@@ -137809,7 +137840,7 @@
  ],
  "thing for wind direction": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for wiping": [
   "k.kinds/shards/classes",
@@ -137822,7 +137853,7 @@
  ],
  "thing for wool": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for working": [
   "k.kinds/shards/classes",
@@ -137834,7 +137865,7 @@
  ],
  "thing for worship": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/use"
+  "k.kinds/shards/use-wikidata"
  ],
  "thing for wrestling on": [
   "k.kinds/shards/classes",
@@ -137843,6 +137874,7 @@
  "thing for writing": [
   "k.kinds/shards/classes",
   "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/use-wordnet"
  ],
  "thing for writing letter": [
@@ -137871,15 +137903,18 @@
  ],
  "thing made of china": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of clay": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of cloth": [
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of concrete": [
@@ -137888,7 +137923,7 @@
  ],
  "thing made of cotton": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of cucumbers": [
   "k.kinds/shards/classes",
@@ -137908,11 +137943,11 @@
  ],
  "thing made of feather": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of fibre": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of flour": [
   "k.kinds/shards/classes",
@@ -137929,6 +137964,7 @@
  "thing made of glass": [
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of gold": [
@@ -137942,11 +137978,13 @@
  "thing made of ice": [
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of leather": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of lemons": [
   "k.kinds/shards/classes",
@@ -137954,7 +137992,7 @@
  ],
  "thing made of limestone": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of meat": [
   "k.kinds/shards/classes",
@@ -137964,6 +138002,7 @@
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
   "k.kinds/shards/material-conceptnet",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of microchips": [
@@ -137976,11 +138015,12 @@
  ],
  "thing made of nylon": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of paper": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of pig": [
   "k.kinds/shards/classes",
@@ -137990,11 +138030,12 @@
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
   "k.kinds/shards/material-conceptnet",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of polyester": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of rock": [
   "k.kinds/shards/classes",
@@ -138010,7 +138051,7 @@
  ],
  "thing made of shellac": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of shrapnel": [
   "k.kinds/shards/classes",
@@ -138018,7 +138059,7 @@
  ],
  "thing made of silicon": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of silver": [
   "k.kinds/shards/classes",
@@ -138031,6 +138072,7 @@
  "thing made of stone": [
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of straw": [
@@ -138065,17 +138107,19 @@
  ],
  "thing made of wicker": [
   "k.kinds/shards/classes",
-  "k.kinds/shards/material"
+  "k.kinds/shards/material-wikidata"
  ],
  "thing made of wood": [
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
   "k.kinds/shards/material-conceptnet",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing made of wool": [
   "k.kinds/shards/classes",
   "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/material-wordnet"
  ],
  "thing with wheels": [
@@ -138952,7 +138996,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/things-3",
   "k.scenes/shards/things-t",
@@ -140076,7 +140120,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-food-kitchen-items-09",
   "k.parts/shards/usual",
@@ -140417,9 +140461,10 @@
   "k.attributes/shards/same-t",
   "k.attributes/shards/things-conceptnet",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/use-conceptnet",
   "k.kinds/shards/wordnet-2",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.words/shards/frequency-t",
   "k.words/shards/to"
  ],
@@ -142477,7 +142522,7 @@
   "k.kinds/shards/material",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/joins",
   "k.objects/shards/land",
@@ -143056,7 +143101,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/origin",
   "k.kinds/shards/part_of",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-food-vegetables-and-salads-06",
   "k.parts/shards/usual",
@@ -143341,7 +143386,7 @@
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
   "k.kinds/shards/part_of-wordnet-1",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/stand-ins-wordnet",
   "k.parts/shards/t",
@@ -145190,7 +145235,7 @@
   "k.attributes/shards/same-v",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.words/shards/frequency-v",
   "k.words/shards/va"
@@ -146086,7 +146131,7 @@
   "k.attributes/shards/numbers-p-z",
   "k.attributes/shards/same-v",
   "k.attributes/shards/things-wikidata",
-  "k.kinds/shards/material",
+  "k.kinds/shards/material-wikidata",
   "k.kinds/shards/part_of-wordnet-1",
   "k.kinds/shards/part_of-wordnet-2",
   "k.kinds/shards/wordnet-2",
@@ -146422,7 +146467,7 @@
   "k.commonsense/shards/derived",
   "k.commonsense/shards/liquids",
   "k.kinds/shards/group-mulberry",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-food-ingredients-02",
   "k.scenes/shards/things-v",
@@ -146440,7 +146485,7 @@
   "k.attributes/shards/same-v",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/sensitive",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/words-wordnet",
   "k.words/shards/frequency-v",
@@ -146469,6 +146514,7 @@
   "k.attributes/shards/things-conceptnet",
   "k.kinds/shards/use-conceptnet",
   "k.kinds/shards/wordnet-2",
+  "k.objects/shards/stand-ins-kinds-wordnet",
   "k.people/shards/given-names-v",
   "k.words/shards/frequency-v",
   "k.words/shards/vi"
@@ -152492,7 +152538,7 @@
   "k.attributes/shards/things-glosses",
   "k.attributes/shards/things-wikidata",
   "k.kinds/shards/part_of-wordnet-3",
-  "k.kinds/shards/use",
+  "k.kinds/shards/use-wikidata",
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/mulberry-food-eggs-01",
   "k.objects/shards/things",
