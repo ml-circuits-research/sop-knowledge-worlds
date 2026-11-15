@@ -6455,3 +6455,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   its first test (the shard against the tool, which reads the coverage list from the raw files) now skips with the
   reason, as the other raw-data tests do; checked with the raw files moved away (1 skipped, 2 pass) and present (3 pass).
 - Lesson: a change to k.attributes runs tests/questions.test.mjs too (under 30 s).
+## 2026-11-15 — fifth worker: KR6 uses (`used_for`) for the things that do nothing by themselves (block 18:10 (2))
+
+- tools/attributes-uses.mjs (not in the build: new proposals are checked by hand first; the test names unchecked ones)
+  writes shard k.attributes/things-uses (WordNet-3.0) for catalog things where `can` does not apply (`canApplies`) and
+  no use is known: (1) the instrument role of k.actions (`tool`: soap -> washing, scales -> weighing, a fishing pole ->
+  catching); (2) uses the catalog gives a kind, carried down WordNet's hypernyms with the guards of the abilities (a
+  palace, a convent, a farmhouse are houses: living; a motorway, a street are roads: driving); the use is the -ing form
+  of the action's verb, written by the library's inflectBy on w.lang.en.
+- **Hand check of every proposal** (sources/coverage/uses-audit.tsv): by source, instrument role 8 of 52 wrong, inherited
+  4 of 29 wrong (alley, coffin, sarcophagus, vial), and the object role of k.actions 104 of 112 wrong (an apple is peeled,
+  bitten, taken; a wall painted, touched: what is done to a thing is rarely what it is for), so the object role is not
+  read; after it, balloon -> travelling (WordNet's first sense is the aircraft) wrong too. Published: **13 of 82 wrong
+  (15.9 %)**, 69 values for 59 things; the rate is in the shard's header.
+- COVERAGE.md "what it is used for" over the 1,500: by its name 336 -> 357 (22 -> 24 %).
+- Test (tests/k.attributes.uses.test.mjs, new, 2): the shard is fresh and says its error rate; only things that do not act;
+  no value checked wrong written; soap washing, palace living, motorway driving; alley, coffin, vial, balloon none; the
+  -ing forms (sleeping, putting on, cutting).

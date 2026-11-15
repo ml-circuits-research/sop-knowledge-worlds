@@ -30,7 +30,7 @@ the place of the dog).
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
 | material | 328 (22%) | 105 (7%) | 1067 (71%) | `k.attributes.thing` (material) |
 | what it can do (of the 463 it applies to) | 255 (55%) | 52 (11%) | 156 (34%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 336 (22%) | 147 (10%) | 1017 (68%) | `k.attributes.thing` (used_for) |
+| what it is used for | 357 (24%) | 146 (10%) | 997 (66%) | `k.attributes.thing` (used_for) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
 | size in metres (the longest side) | 970 (65%) | 69 (5%) | 461 (31%) | `k.attributes.number` (size_about) |
@@ -107,6 +107,6 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **anchor (where another thing sits)**: world, phone, honey, earth, hospital, coffee, road, picture, hotel, station, sun, ball, key, fish, star, stick, bank, tea, camera, store, jail, cat, shop, wine, beer, computer, planet, moon, suit, bell
 - **material**: world, person, honey, dog, hospital, street, coffee, road, building, hotel, station, horse, fish, prison, bank, tea, camera, store, jail, cat, shop, wine, island, beer, chicken, hole, bomb, bird, rose, restaurant
 - **what it can do**: earth, camera, planet, bullet, shower, pig, screen, sheep, bug, fridge, radar, nut, root, lance, shield, oven, reed, worm, buffalo, iris, stove, pod, hay, grill, swine, comet, refrigerator, laurel, ape, camel
-- **what it is used for**: world, person, dog, earth, street, building, station, rock, sun, horse, star, prison, stick, wall, jail, cat, island, planet, moon, chicken, hole, engine, bomb, bird, stone, beach, rose, cake, meat, mountain
+- **what it is used for**: world, person, dog, earth, building, station, rock, sun, horse, star, prison, stick, wall, jail, cat, island, planet, moon, chicken, hole, engine, bomb, bird, stone, beach, rose, cake, meat, mountain, bullet
 - **size in metres (the longest side)**: world, honey, earth, street, coffee, road, station, sun, star, bank, tea, wall, wine, island, beer, planet, moon, hole, beach, milk, meat, mountain, path, sugar, hill, pocket, plant, chocolate, soup, champagne
 - **weight in kilograms**: house, world, honey, earth, hospital, street, coffee, road, building, hotel, station, sun, star, prison, bank, tea, wall, store, jail, shop, wine, island, beer, planet, moon, hole, beach, rose, restaurant, milk
