@@ -1,5 +1,5 @@
 {
- "version": "33ccd12edfbe",
+ "version": "cfbf6b48e0f8",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -91190,6 +91190,50 @@
       "unknown-word w.lang.en.word.k.shapes.key.shape.symmetric: w.lang.en.word.k.shapes.key.shape.symmetric: means=k.shapes.shape.symmetric names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.shapes.key.shape.flat: w.lang.en.word.k.shapes.key.shape.flat: means=k.shapes.shape.flat names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.shapes.key.shape.thing: w.lang.en.word.k.shapes.key.shape.thing: means=k.shapes.shape.thing names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.space",
+     "path": "w.lang.en/shards/words-k.space.sop",
+     "wires": 31,
+     "bytes": 4384,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.space.body: w.lang.en.word.k.space.body: means=k.space.body names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.orbits: w.lang.en.word.k.space.orbits: means=k.space.body.orbits names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.order: w.lang.en.word.k.space.order: means=k.space.body.order names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.moons: w.lang.en.word.k.space.moons: means=k.space.body.moons names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.rings: w.lang.en.word.k.space.rings: means=k.space.body.rings names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.size: w.lang.en.word.k.space.size: means=k.space.body.size_rank names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.day: w.lang.en.word.k.space.day: means=k.space.body.day_hours_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.diameter: w.lang.en.word.k.space.diameter: means=k.space.body.diameter_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.distance: w.lang.en.word.k.space.distance: means=k.space.body.distance_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.why: w.lang.en.word.k.space.why: means=k.space.body.colour_why names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.kind: w.lang.en.word.k.space.key.body.kind: means=k.space.body.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.size: w.lang.en.word.k.space.key.body.size: means=k.space.body.size names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.size_rank: w.lang.en.word.k.space.key.body.size_rank: means=k.space.body.size_rank names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.group: w.lang.en.word.k.space.key.body.group: means=k.space.body.group names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.moons_about: w.lang.en.word.k.space.key.body.moons_about: means=k.space.body.moons_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.orbit_years: w.lang.en.word.k.space.key.body.orbit_years: means=k.space.body.orbit_years names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.in: w.lang.en.word.k.space.key.body.in: means=k.space.body.in names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.drawing: w.lang.en.word.k.space.key.body.drawing: means=k.space.body.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.colour_why: w.lang.en.word.k.space.key.body.colour_why: means=k.space.body.colour_why names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.day_hours_about: w.lang.en.word.k.space.key.body.day_hours_about: means=k.space.body.day_hours_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.orbit_days_about: w.lang.en.word.k.space.key.body.orbit_days_about: means=k.space.body.orbit_days_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.temperature_about: w.lang.en.word.k.space.key.body.temperature_about: means=k.space.body.temperature_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.age_years_about: w.lang.en.word.k.space.key.body.age_years_about: means=k.space.body.age_years_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.body.light_years_about: w.lang.en.word.k.space.key.body.light_years_about: means=k.space.body.light_years_about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind: w.lang.en.word.k.space.key.kind: means=k.space.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind.material: w.lang.en.word.k.space.key.kind.material: means=k.space.kind.material names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind.orbits: w.lang.en.word.k.space.key.kind.orbits: means=k.space.kind.orbits names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind.has: w.lang.en.word.k.space.key.kind.has: means=k.space.kind.has names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind.does: w.lang.en.word.k.space.key.kind.does: means=k.space.kind.does names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind.drawing: w.lang.en.word.k.space.key.kind.drawing: means=k.space.kind.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.space.key.kind.about: w.lang.en.word.k.space.key.kind.about: means=k.space.kind.about names no action, type, key or value of the matrix"
      ]
     },
     {
