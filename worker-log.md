@@ -6445,3 +6445,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   thing of a scene, whole counts (and, as before, drawings are objects and what a thing is on is in its scene); the
   drawn share per scene is counted from the facts. k.scenes, catalog, validate, repo: 26 pass.
 - Left: tools/objects-hand-data.mjs (1,010 lines), the next table.
+## 2026-11-15 — first worker: at-07 ("which things are usually pink") after the gloss values
+
+- tests/questions.test.mjs was red on main at at-07 since the KR6 glosses commit gave rhubarb the colour pink. By the
+  source the fact stands: WordNet's gloss of the sense kept is "long pinkish sour leafstalks usually eaten cooked and
+  sweetened" (rhubarb stalks are red to pink); the question's expected list now has rhubarb (first, in the order the
+  query returns). tests/questions.test.mjs: 449 pass.
+- tests/k.attributes.glosses.test.mjs crashed where WordNet's raw files are missing (the fifth worker's full suite):
+  its first test (the shard against the tool, which reads the coverage list from the raw files) now skips with the
+  reason, as the other raw-data tests do; checked with the raw files moved away (1 skipped, 2 pass) and present (3 pass).
+- Lesson: a change to k.attributes runs tests/questions.test.mjs too (under 30 s).

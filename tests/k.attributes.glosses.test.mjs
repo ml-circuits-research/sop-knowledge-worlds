@@ -2,11 +2,14 @@
 // (tools/attributes-glosses.mjs), every proposed value checked by hand in sources/coverage/kr6-audit.tsv.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
-import { scanWorlds, factsOf } from '../tools/lib/worlds.mjs';
+import { readFileSync, existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { REPO, scanWorlds, factsOf } from '../tools/lib/worlds.mjs';
 import { SHARD, derive, shardText, fromGloss, readAudit } from '../tools/attributes-glosses.mjs';
 
-test('the shard things-glosses is what the tool gives, and every value the rules propose is in the audit', async () => {
+// the rules read the glosses of the senses kept by tools/coverage.mjs, which needs the raw WordNet and frequency files
+const RAW = ['sources/wordnet/raw/wordnet31/data.noun', 'sources/frequency-words/raw/en_50k.txt'].every((f) => existsSync(join(REPO, f)));
+test('the shard things-glosses is what the tool gives, and every value the rules propose is in the audit', { skip: !RAW && 'raw files not downloaded (sources/wordnet, sources/frequency-words)' }, async () => {
   const d = await derive();
   assert.deepEqual(d.unaudited, []);
   assert.equal(readFileSync(SHARD, 'utf8'), shardText(d));
