@@ -1144,3 +1144,10 @@ Why: COVERAGE.md shows the usual colour missing for 82 % of the 1,500 common thi
 attributes-glosses.mjs, every value checked by hand: colour 3 of 22 wrong, material 8 of 38, can 7 of 31); WordNet's
 substance meronyms are chemistry (protein, keratin) more than materials, and inheriting along k.kinds gives nonsense
 (a star blue from the sky, bread made of china from dish, a chicken that flies). Blocking: no.
+
+## Q80 (fifth worker, test:all at e2fd461, 2026-11-15): three red files on main and their commits
+Question: none to answer; the record the reviewer asked for (block 16:45). tests/w.lang.en.arrangement.test.mjs and
+tests/w.lang.en.templates.test.mjs: baacdad (first worker, fixing). tests/generators.test.mjs: 77f1294 (fourth
+worker) changed tools/lib/lang-en.mjs (the reader takes the singular of a listed pair) without rebuilding
+core-plurals, which now gains `ax/axes`; `node tools/lang-en-core.mjs` and a commit of the shard fixes it.
+Blocking: no.

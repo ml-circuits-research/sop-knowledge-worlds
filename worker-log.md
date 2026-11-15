@@ -6221,3 +6221,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - The article chosen by gender, not given by the caller: w.lang.ro.fill role=art lemma=un on the 7 requests and 4
   replies that say {art@kind}; the three new English arrangement templates mirrored (49 Romanian requests, 33 read back
   to their act). tests/w.lang.ro.replies.test.mjs realises without an art filler.
+
+## 2026-11-15 — fifth worker: test:all on main at e2fd461 (05:30); tests/questions.test.mjs under 30 s
+
+- **Full suite at e2fd461** (a clean worktree of main): 98 files, 3,184 tests, 3,159 pass, **3 fail**, 22 skipped,
+  532 s; no file not run. Red, with the commit that caused each:
+  - tests/w.lang.en.arrangement.test.mjs (no phrase for the `outline` arrangement) and tests/w.lang.en.templates.test.mjs
+    (the `arrangement` role has no template): **baacdad** (first worker, outlines), being fixed by the first worker.
+  - tests/generators.test.mjs (core-plurals is stale: the generator now gives 186 plurals, `ax/axes` added):
+    **77f1294** (fourth worker, catalog plurals) changed tools/lib/lang-en.mjs so the rules no longer read axes -> ax,
+    and pushed without the build (lang-en-core is in it since db16219), so core-plurals was not rewritten. Fix: run
+    `node tools/lang-en-core.mjs` (or `npm run build`) and commit the shard. Questions.md Q80.
+  - Over 30 s: tests/catalog.test.mjs 118 s (a fresh worktree: no .validate-cache.json, every world validated, as on a
+    fresh clone; 12 s with the cache) and tests/questions.test.mjs 44 s (before the change below).
+- **questions.test.mjs:** a world whose own shards pass 5 MB (k.objects 36 MB with 271,000 points, k.words 9.4 MB) is
+  loaded with its imports in full and, of its own shards, only the facts of the types its questions ask or tell and
+  its words; the others in full as before. 447 questions pass. 44-87 s -> 22 s (load average about 7); k.objects alone
+  was 50 s of it.
