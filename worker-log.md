@@ -5720,3 +5720,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   and appears in LICENSES.md; NC, ND, GPL, a missing licence, CC-BY-SA AND CC0, and two licences in one folder fail;
   the real catalog has the UniMorph folder under CC-BY-SA-3.0, LICENSES.md its section, and every shard and data
   folder a licence the allowlist takes.
+
+## 2026-11-15 — fifth worker takes: the sensitivity key (block 13:15), KR5, then a full test:all on main
+
+- (a) `sensitive=` on k.kinds from WordNet with a generator and a freshness test; (b) KR5 (k.objects loaded once for
+  the four test files, one drawing-name check, freshness tests for objects-hand / lang-en-core / lang-en-discourse,
+  generated counts in README and WORLD.md); (c) `npm run test:all` on main, with every file not run or over 30 s.

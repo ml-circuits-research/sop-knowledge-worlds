@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared token for token, as sopworld compares them (`"horse"` and `horse` are two values).
 
-- declared joins: **200** in 31 worlds; distinct values 10086, meeting a target 10028 (99.4 %), open 58
+- declared joins: **202** in 31 worlds; distinct values 10075, meeting a target 10017 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **50**; left undeclared on purpose: 4; keys with an enum, never suggested: 66
+- undeclared keys whose values the value share joins to a type: **49**; left undeclared on purpose: 4; keys with an enum, never suggested: 64
 
 ## Declared joins
 
@@ -42,8 +42,9 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.attributes | `k.attributes.kind.attribute` | `k.attributes.attribute` | name | 18 | 18 |  |
 | k.attributes | `k.attributes.shows.aspect` | `k.attributes.aspect` | name | 8 | 8 |  |
 | k.attributes | `k.attributes.shows.family` | `k.attributes.family` | name | 19 | 19 |  |
-| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 27 | 17 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
+| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 30 | 20 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
 | k.attributes | `k.attributes.thing.kind` | `k.attributes.kind` | name | 26 | 26 |  |
+| k.attributes | `k.attributes.usage.time` | `k.time.part_of_day` | name | 4 | 4 |  |
 | k.attributes | `k.attributes.usage.used_by` | `k.people.role` | name | 41 | 41 |  |
 | k.body | `k.body.part.drawing` | `k.objects.object` | name | 5 | 5 |  |
 | k.body | `k.body.part.inside` | `k.body.part` | name | 9 | 9 |  |
@@ -56,7 +57,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.colours | `k.colours.mix.a` | `k.colours.colour` | name | 10 | 10 |  |
 | k.colours | `k.colours.mix.b` | `k.colours.colour` | name | 8 | 8 |  |
 | k.colours | `k.colours.mix.gives` | `k.colours.colour` | name | 23 | 23 |  |
-| k.commonsense | `k.commonsense.thing.can` | `k.actions.action` | name | 14 | 14 |  |
+| k.commonsense | `k.commonsense.thing.can` | `k.actions.action` | name | 8 | 8 |  |
 | k.commonsense | `k.commonsense.thing.cannot` | `k.actions.action` | name | 3 | 3 |  |
 | k.diagrams | `k.diagrams.fill.by` | `k.attributes.attribute` | name | 2 | 2 |  |
 | k.diagrams | `k.diagrams.fill.kind` | `k.diagrams.kind` | name | 9 | 9 |  |
@@ -86,7 +87,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.genres | `k.genres.step.source` | `k.genres.source` | name | 17 | 17 |  |
 | k.geo | `k.geo.city.capital_of` | `k.geo.country` | name | 245 | 245 |  |
 | k.geo | `k.geo.city.country` | `k.geo.country` | name | 248 | 248 |  |
-| k.geo | `k.geo.country.capital` | `k.geo.city` | name | 262 | 262 |  |
+| k.geo | `k.geo.country.capital` | `k.geo.city` | name | 246 | 246 |  |
 | k.geo | `k.geo.country.continent` | `k.geo.continent` | name | 7 | 7 |  |
 | k.geo | `k.geo.country.neighbour` | `k.geo.country` | name | 160 | 160 |  |
 | k.geo | `k.geo.country.political_continent` | `k.geo.continent` | name | 1 | 1 |  |
@@ -156,6 +157,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 | k.scenes | `k.scenes.has.scene` | `k.scenes.scene` | name | 61 | 61 |  |
 | k.scenes | `k.scenes.has.thing` | `k.scenes.thing` | name | 595 | 595 |  |
 | k.scenes | `k.scenes.scene.drawing` | `k.objects.object` | name | 28 | 28 |  |
+| k.scenes | `k.scenes.scene.time` | `k.time.part_of_day` | name | 4 | 4 |  |
 | k.shapes | `k.shapes.shape.face` | `k.values.shape` | name | 4 | 4 |  |
 | k.shapes | `k.shapes.shape.flat` | `k.values.shape` | name | 7 | 7 |  |
 | k.shapes | `k.shapes.shape.thing` | `k.objects.object` | name | 104 | 98 | `"gift box"`, `"horseshoe magnet"`, `"pizza slice"`, `chessboard`, `honeycomb`, `tv` |
@@ -243,7 +245,6 @@ whose slot has an enum is never suggested here (see the last section).
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
-| k.commonsense | `k.commonsense.thing.made_of` | thing | `k.attributes.thing`, `k.objects.object`, `k.scenes.thing` | name | 6 | 4 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
 | k.faces | `k.faces.colour.name` | value | `k.values.colour`, `k.colours.colour` | name | 21 | 14 |
 | k.faces | `k.faces.expression.eyes` | thing | `k.feelings.feeling` | name | 4 | 2 |
@@ -257,7 +258,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4513 | 2287 |
+| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4515 | 2287 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |
@@ -310,7 +311,6 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.attributes | `k.attributes.thing.colour` | 12 | 12 | 11 | `k.colours.colour`, `k.values.colour` |
 | k.attributes | `k.attributes.usage.sense` | 12 | 4 | 2 | `k.attributes.kind` |
 | k.attributes | `k.attributes.usage.season` | 4 | 4 | 4 | `k.time.season` |
-| k.attributes | `k.attributes.usage.time` | 4 | 4 | 3 | `k.time.part_of_day` |
 | k.attributes | `k.attributes.usage.age` | 4 | 4 | 2 | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` |
 | k.colours | `k.colours.colour.family` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
 | k.colours | `k.colours.colour.tone` | 3 | 3 | 2 | `k.values.shade` |
@@ -347,7 +347,6 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.procedures | `k.procedures.step.act` | 16 | 8 | 8 | `k.actions.act` |
 | k.scenes | `k.scenes.has.side` | 3 | 3 | 3 | `k.values.position` |
 | k.scenes | `k.scenes.scene.kind` | 4 | 4 | 2 | `k.scenes.scene` |
-| k.scenes | `k.scenes.scene.time` | 4 | 4 | 3 | `k.time.part_of_day` |
 | k.scenes | `k.scenes.scene.season` | 4 | 4 | 4 | `k.time.season` |
 | k.space | `k.space.body.colour` | 11 | 7 | 7 | `k.colours.colour`, `k.values.colour` |
 | k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
