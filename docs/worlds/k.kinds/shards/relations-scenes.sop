@@ -13,7 +13,7 @@
 @k.kinds.relation.k.scenes.has.drawing k.kinds.relation type=k.scenes.has key=drawing subject=has object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.scenes.scene.kind k.kinds.relation type=k.scenes.scene key=kind subject=scene object=kind object_type=k.scenes.scene found=value core.source="hand-core 1"
 @k.kinds.relation.k.scenes.scene.ground k.kinds.relation type=k.scenes.scene key=ground subject=scene object=thing object_type=k.scenes.thing found=value core.source="hand-core 1"
-@k.kinds.relation.k.scenes.scene.time k.kinds.relation type=k.scenes.scene key=time subject=scene object=time object_type=k.time.part_of_day object_sense=time found=value core.source="hand-core 1"
+@k.kinds.relation.k.scenes.scene.time k.kinds.relation type=k.scenes.scene key=time subject=scene object=time object_type=k.time.part_of_day object_sense=time found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.scenes.scene.weather k.kinds.relation type=k.scenes.scene key=weather subject=scene object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.scenes.scene.season k.kinds.relation type=k.scenes.scene key=season subject=scene object=time object_type=k.time.season object_sense=time found=value core.source="hand-core 1"
 @k.kinds.relation.k.scenes.scene.happens k.kinds.relation type=k.scenes.scene key=happens subject=scene object=word found=value core.source="hand-core 1"

@@ -34,11 +34,13 @@
 # `space`; `ground` names what covers the ground (sand, grass, snow, floor); `time`, `weather` and `season` are those
 # that fit (left out when any fits); `happens` names what people or animals usually do there (a verb or a short
 # phrase); `drawing` names a k.objects object that draws the whole scene, where one exists.
+# `time` is a part of the day of k.time (`k.time.part_of_day`: morning, afternoon, evening, night; KR1 item 5: the
+# daytime, once `day`, is the morning and the afternoon), a declared join.
 @k.scenes.scene core.type of=k.scenes.scene shared=true closed=true core.source="hand-core 1"
 @k.scenes.scene.name core.slot of=k.scenes.scene key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.scenes.scene.kind core.slot of=k.scenes.scene key=kind required=true enum=outdoors enum=indoors enum=underwater enum=space core.source="hand-core 1"
 @k.scenes.scene.ground core.slot of=k.scenes.scene key=ground kind=atom kind=string core.source="hand-core 1"
-@k.scenes.scene.time core.slot of=k.scenes.scene key=time many=true enum=morning enum=day enum=evening enum=night core.source="hand-core 1"
+@k.scenes.scene.time core.slot of=k.scenes.scene key=time many=true kind=atom type=k.time.part_of_day by=name core.source="hand-core 1"
 @k.scenes.scene.weather core.slot of=k.scenes.scene key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
 @k.scenes.scene.season core.slot of=k.scenes.scene key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
 @k.scenes.scene.happens core.slot of=k.scenes.scene key=happens many=true kind=atom kind=string core.source="hand-core 1"

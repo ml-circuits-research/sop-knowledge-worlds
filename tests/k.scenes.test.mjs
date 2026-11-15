@@ -97,6 +97,23 @@ test('KR1 item 3: size has one home: the class of every thing with a k.attribute
   assert.equal(size('mouse'), 'tiny');
 });
 
+// KR1 item 5 (review 2026-11-15, finding 3): k.scenes.scene.time and k.attributes.usage.time had `day`, which k.time's
+// parts of the day (morning, afternoon, evening, night) do not have: 3 of 4 values met the join.
+test('KR1 item 5: the time of a scene and of a usage is a part of the day of k.time, by a declared join that every value meets', async () => {
+  const { parse } = await import('../tools/sopworld/sopworld.mjs');
+  const parts = new Set(factsOf('k.time', 'k.time.part_of_day', worlds).map((w) => tok(w.attrs.name[0])));
+  assert.deepEqual([...parts].sort(), ['afternoon', 'evening', 'morning', 'night']);
+  for (const [world, type] of [['k.scenes', 'k.scenes.scene'], ['k.attributes', 'k.attributes.usage']]) {
+    const slot = parse(worlds.find((w) => w.id === world).schemaText).find((x) => x.type === 'core.slot' && x.attrs.of?.[0] === type && x.attrs.key?.[0] === 'time');
+    assert.deepEqual([slot.attrs.type, slot.attrs.by, slot.attrs.enum], [['k.time.part_of_day'], ['name'], undefined], type);
+    const values = factsOf(world, type, worlds).flatMap((w) => (w.attrs.time ?? []).map(tok));
+    assert.ok(values.length > 30, type);
+    assert.deepEqual(values.filter((v) => !parts.has(v)), [], type);
+  }
+  // the daytime is the morning and the afternoon
+  assert.deepEqual(scenes.ofType('k.scenes.scene').find((s) => tok(s.attrs.name[0]) === 'beach').attrs.time, ['morning', 'afternoon']);
+});
+
 // ---- R7.1: the scenes
 import { existsSync } from 'node:fs';
 import { sceneShards, sceneWires, SCENES } from '../tools/scenes-data.mjs';

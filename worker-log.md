@@ -5688,3 +5688,16 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   told shard of k.commonsense says can, cannot, made_of or used_for; derived can/cannot come from the ability rules;
   car, boat, house, bird, fish, cloud, flower have their values in k.attributes. tests/import.conceptnet.test.mjs: the
   importer writes material and used_for on k.attributes.thing.
+
+## 2026-11-15 — fifth worker: KR1 item 5, the time of day joins k.time
+
+- `k.scenes.scene.time` and `k.attributes.usage.time` were `enum=morning enum=day enum=evening enum=night`; k.time's
+  parts of the day are morning, afternoon, evening, night. Both slots are now `type=k.time.part_of_day by=name` (a
+  declared join), and `day` (the daytime) became `morning` + `afternoon`: 41 scenes in tools/scenes-data.mjs (one
+  "evening, day" -> morning, afternoon, evening) and 36 rows of sources/hand-core/usage.tsv. The renderer's night
+  test reads morning and afternoon instead of day (previews unchanged).
+- **Before:** the joins report showed 3 of 4 values meeting for each slot (k.kinds/JOINS-REPORT.md). **After:** 4 of 4,
+  declared.
+- Test (tests/k.scenes.test.mjs, +1): both slots declare the join and no enum; every time value of the scenes and the
+  usages is a k.time.part_of_day name; the beach is morning and afternoon. tests/k.attributes.test.mjs compares only
+  season and weather as enums now.

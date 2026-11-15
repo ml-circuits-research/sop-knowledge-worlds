@@ -156,7 +156,8 @@ test('k.attributes.usage: the shard is what tools/usage-core.mjs gives; every th
   const sceneThings = new Set(scenes.ofType('k.scenes.thing').map((t) => one(t, 'name')));
   const enumOf = (w, type, key) => [...(schemaWorld(worlds, w).world.schema(type).keys[key].enum ?? [])].map(String).sort();
   const own = schemaWorld(worlds, 'k.attributes').world;
-  for (const k of ['season', 'time', 'weather']) assert.deepEqual([...own.schema('k.attributes.usage').keys[k].enum].map(String).sort(), enumOf('k.scenes', 'k.scenes.scene', k), k);
+  // time: a declared join to k.time.part_of_day on both (KR1 item 5, tests/k.scenes.test.mjs)
+  for (const k of ['season', 'weather']) assert.deepEqual([...own.schema('k.attributes.usage').keys[k].enum].map(String).sort(), enumOf('k.scenes', 'k.scenes.scene', k), k);
   assert.deepEqual([...own.schema('k.attributes.usage').keys.age.enum].map(String).sort(), enumOf('k.people', 'k.people.kind', 'age'));
   const uses = roleUses(worlds);
   for (const u of usage) {

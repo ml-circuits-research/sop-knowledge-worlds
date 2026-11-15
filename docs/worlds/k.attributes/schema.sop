@@ -96,7 +96,7 @@
 
 # When and by whom a thing of k.scenes is usually used or seen (tools/usage-core.mjs), each only where it is plain:
 # `season`, `time` and `weather` (many) take the values of k.scenes.scene, so a thing fits a scene with the same
-# value (a sled in winter and snow, an owl at night); `age` (many) the ages of k.people.kind (a rattle for a baby,
+# value (a sled in winter and snow, an owl at night; `time` is a k.time.part_of_day, a declared join: KR1 item 5); `age` (many) the ages of k.people.kind (a rattle for a baby,
 # beer for an adult); `used_by` (many) names a k.people.role that uses it, where the role does not already list it in
 # its own `uses` (who uses a thing: both). `named=model`: the values were given by a language model. Q37: `sense`,
 # only on the facts of a name with several senses (star the shape and the body in space), says which one is meant.
@@ -104,7 +104,7 @@
 @k.attributes.usage.name core.slot of=k.attributes.usage key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.attributes.usage.sense core.slot of=k.attributes.usage key=sense id=true enum=animal enum=food enum=plant enum=person enum="body part" enum=clothing enum=colour enum=shape enum=place enum=time enum="body in space" enum=thing core.source="hand-core 1"
 @k.attributes.usage.season core.slot of=k.attributes.usage key=season many=true enum=spring enum=summer enum=autumn enum=winter core.source="hand-core 1"
-@k.attributes.usage.time core.slot of=k.attributes.usage key=time many=true enum=morning enum=day enum=evening enum=night core.source="hand-core 1"
+@k.attributes.usage.time core.slot of=k.attributes.usage key=time many=true kind=atom type=k.time.part_of_day by=name core.source="hand-core 1"
 @k.attributes.usage.weather core.slot of=k.attributes.usage key=weather many=true enum=sunny enum=cloudy enum=rainy enum=snowy enum=windy enum=stormy enum=foggy core.source="hand-core 1"
 @k.attributes.usage.age core.slot of=k.attributes.usage key=age many=true enum=baby enum=child enum=adult enum=old core.source="hand-core 1"
 @k.attributes.usage.used_by core.slot of=k.attributes.usage key=used_by many=true kind=atom kind=string type=k.people.role by=name core.source="hand-core 1"

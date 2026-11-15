@@ -156,7 +156,7 @@ export const layout = (scene) => compose(scene).items;
 
 export function renderScene(scene, { previewDir = join(WORLDS_DIR, 'k.objects', 'preview') } = {}) {
   const { height: H, horizon, items } = compose(scene);
-  const night = scene.time.includes('night') && !scene.time.includes('day');
+  const night = scene.time.includes('night') && !scene.time.includes('morning') && !scene.time.includes('afternoon');
   const g = GROUND[scene.ground] ?? '#bdbdbd';
   let back;
   if (scene.kind === 'space') back = `<rect width="${W}" height="${H}" fill="#101430"/>`;

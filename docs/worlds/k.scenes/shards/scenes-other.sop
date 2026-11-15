@@ -71,7 +71,7 @@
 @k.scenes.word.scene.night core.word text="night sky" text="at night" text=midnight text="night time" means=night of=k.scenes.scene.name core.source="hand-core 1"
 
 # winter
-@k.scenes.scene.winter k.scenes.scene name=winter kind=outdoors ground=snow time=day weather=snowy season=winter happens="build a snowman" happens="throw snowballs" happens=ski happens=skate happens=sledge core.source="hand-core 1"
+@k.scenes.scene.winter k.scenes.scene name=winter kind=outdoors ground=snow time=morning time=afternoon weather=snowy season=winter happens="build a snowman" happens="throw snowballs" happens=ski happens=skate happens=sledge core.source="hand-core 1"
 @k.scenes.has.winter.cloud k.scenes.has scene=winter thing=cloud count=3 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.winter.snowflake k.scenes.has scene=winter thing=snowflake count=20 where=sky drawing=snowflake core.source="hand-core 1"
 @k.scenes.has.winter.leafless_tree k.scenes.has scene=winter thing="leafless tree" count=3 where=background drawing="leafless tree" core.source="hand-core 1"
@@ -94,7 +94,7 @@
 @k.scenes.word.scene.winter core.word text=snow text="snowy day" text="winter day" text="in the snow" means=winter of=k.scenes.scene.name core.source="hand-core 1"
 
 # autumn
-@k.scenes.scene.autumn k.scenes.scene name=autumn kind=outdoors ground=leaves time=day weather=windy weather=rainy weather=cloudy season=autumn happens="rake the leaves" happens="collect chestnuts" happens="fly a kite" happens="jump in puddles" core.source="hand-core 1"
+@k.scenes.scene.autumn k.scenes.scene name=autumn kind=outdoors ground=leaves time=morning time=afternoon weather=windy weather=rainy weather=cloudy season=autumn happens="rake the leaves" happens="collect chestnuts" happens="fly a kite" happens="jump in puddles" core.source="hand-core 1"
 @k.scenes.has.autumn.cloud k.scenes.has scene=autumn thing=cloud count=3 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.autumn.kite k.scenes.has scene=autumn thing=kite count=1 where=sky drawing=kite core.source="hand-core 1"
 @k.scenes.has.autumn.leaf_fluttering_in_wind k.scenes.has scene=autumn thing="leaf fluttering in wind" count=10 where=sky drawing="leaf fluttering in wind" core.source="hand-core 1"
@@ -117,7 +117,7 @@
 @k.scenes.word.scene.autumn core.word text=fall text="autumn day" means=autumn of=k.scenes.scene.name core.source="hand-core 1"
 
 # spring
-@k.scenes.scene.spring k.scenes.scene name=spring kind=outdoors ground=grass time=day weather=sunny weather=rainy season=spring happens="plant seeds" happens="watch the lambs" happens="pick flowers" happens="build nests" core.source="hand-core 1"
+@k.scenes.scene.spring k.scenes.scene name=spring kind=outdoors ground=grass time=morning time=afternoon weather=sunny weather=rainy season=spring happens="plant seeds" happens="watch the lambs" happens="pick flowers" happens="build nests" core.source="hand-core 1"
 @k.scenes.has.spring.sun k.scenes.has scene=spring thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.spring.cloud k.scenes.has scene=spring thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.spring.rainbow k.scenes.has scene=spring thing=rainbow count=1 where=sky drawing=rainbow core.source="hand-core 1"
@@ -203,7 +203,7 @@
 @k.scenes.word.scene.Halloween core.word text=halloween text="spooky night" text="haunted house" means=Halloween of=k.scenes.scene.name core.source="hand-core 1"
 
 # pirate ship
-@k.scenes.scene.pirate_ship k.scenes.scene name="pirate ship" kind=outdoors ground=water time=day weather=windy happens="sail the seas" happens="hunt for treasure" happens="fire the cannon" happens="walk the plank" core.source="hand-core 1"
+@k.scenes.scene.pirate_ship k.scenes.scene name="pirate ship" kind=outdoors ground=water time=morning time=afternoon weather=windy happens="sail the seas" happens="hunt for treasure" happens="fire the cannon" happens="walk the plank" core.source="hand-core 1"
 @k.scenes.has.pirate_ship.sun k.scenes.has scene="pirate ship" thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.pirate_ship.cloud k.scenes.has scene="pirate ship" thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.pirate_ship.seagull k.scenes.has scene="pirate ship" thing=seagull count=3 where=sky drawing=seagull core.source="hand-core 1"

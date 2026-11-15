@@ -104,7 +104,7 @@
 @k.scenes.word.scene.bathroom core.word text=bathrooms text=washroom means=bathroom of=k.scenes.scene.name core.source="hand-core 1"
 
 # classroom
-@k.scenes.scene.classroom k.scenes.scene name=classroom kind=indoors ground=floor time=morning time=day happens=learn happens=read happens=write happens=count happens="raise a hand" core.source="hand-core 1"
+@k.scenes.scene.classroom k.scenes.scene name=classroom kind=indoors ground=floor time=morning time=afternoon happens=learn happens=read happens=write happens=count happens="raise a hand" core.source="hand-core 1"
 @k.scenes.has.classroom.ceiling_light k.scenes.has scene=classroom thing="ceiling light" count=2 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.classroom.blackboard k.scenes.has scene=classroom thing=blackboard count=1 where=wall side=centre drawing=blackboard core.source="hand-core 1"
 @k.scenes.has.classroom.clock k.scenes.has scene=classroom thing=clock count=1 where=wall drawing=clock core.source="hand-core 1"
@@ -129,7 +129,7 @@
 @k.scenes.word.scene.classroom core.word text=classrooms text=school text=class text=schoolroom means=classroom of=k.scenes.scene.name core.source="hand-core 1"
 
 # office
-@k.scenes.scene.office k.scenes.scene name=office kind=indoors ground=floor time=day happens=type happens=phone happens="hold a meeting" happens=print core.source="hand-core 1"
+@k.scenes.scene.office k.scenes.scene name=office kind=indoors ground=floor time=morning time=afternoon happens=type happens=phone happens="hold a meeting" happens=print core.source="hand-core 1"
 @k.scenes.has.office.ceiling_light k.scenes.has scene=office thing="ceiling light" count=2 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.office.window k.scenes.has scene=office thing=window count=2 where=wall drawing=window core.source="hand-core 1"
 @k.scenes.has.office.clock k.scenes.has scene=office thing=clock count=1 where=wall drawing=clock core.source="hand-core 1"
@@ -201,7 +201,7 @@
 @k.scenes.word.scene.restaurant core.word text=restaurants text=diner text=bistro means=restaurant of=k.scenes.scene.name core.source="hand-core 1"
 
 # library
-@k.scenes.scene.library k.scenes.scene name=library kind=indoors ground=floor time=day happens=read happens="borrow a book" happens=whisper happens=study drawing=library core.source="hand-core 1"
+@k.scenes.scene.library k.scenes.scene name=library kind=indoors ground=floor time=morning time=afternoon happens=read happens="borrow a book" happens=whisper happens=study drawing=library core.source="hand-core 1"
 @k.scenes.has.library.ceiling_light k.scenes.has scene=library thing="ceiling light" count=3 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.library.window k.scenes.has scene=library thing=window count=2 where=wall drawing=window core.source="hand-core 1"
 @k.scenes.has.library.clock k.scenes.has scene=library thing=clock count=1 where=wall drawing=clock core.source="hand-core 1"
@@ -247,7 +247,7 @@
 @k.scenes.word.scene.hospital core.word text=hospitals text=ward text="hospital room" text=clinic text="doctor's surgery" means=hospital of=k.scenes.scene.name core.source="hand-core 1"
 
 # workshop
-@k.scenes.scene.workshop k.scenes.scene name=workshop kind=indoors ground=floor time=day happens=saw happens=hammer happens=drill happens=repair happens=paint core.source="hand-core 1"
+@k.scenes.scene.workshop k.scenes.scene name=workshop kind=indoors ground=floor time=morning time=afternoon happens=saw happens=hammer happens=drill happens=repair happens=paint core.source="hand-core 1"
 @k.scenes.has.workshop.ceiling_light k.scenes.has scene=workshop thing="ceiling light" count=1 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.workshop.window k.scenes.has scene=workshop thing=window count=1 where=wall drawing=window core.source="hand-core 1"
 @k.scenes.has.workshop.shelf k.scenes.has scene=workshop thing=shelf count=2 where=wall drawing=shelf core.source="hand-core 1"
@@ -291,7 +291,7 @@
 @k.scenes.word.scene.theatre core.word text=theater text=stage text=theatres text=playhouse text=opera means=theatre of=k.scenes.scene.name core.source="hand-core 1"
 
 # museum
-@k.scenes.scene.museum k.scenes.scene name=museum kind=indoors ground=floor time=day happens="look at paintings" happens="learn about the past" happens="follow the guide" drawing=museum core.source="hand-core 1"
+@k.scenes.scene.museum k.scenes.scene name=museum kind=indoors ground=floor time=morning time=afternoon happens="look at paintings" happens="learn about the past" happens="follow the guide" drawing=museum core.source="hand-core 1"
 @k.scenes.has.museum.ceiling_light k.scenes.has scene=museum thing="ceiling light" count=3 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.museum.painting k.scenes.has scene=museum thing=painting count=5 where=wall drawing=painting core.source="hand-core 1"
 @k.scenes.has.museum.portrait k.scenes.has scene=museum thing=portrait count=2 where=wall drawing=portrait core.source="hand-core 1"
@@ -311,7 +311,7 @@
 @k.scenes.word.scene.museum core.word text=museums text=gallery text="art gallery" text=exhibition means=museum of=k.scenes.scene.name core.source="hand-core 1"
 
 # cafe
-@k.scenes.scene.cafe k.scenes.scene name=cafe kind=indoors ground=floor time=morning time=day happens="drink coffee" happens="eat cake" happens=chat happens="read the newspaper" drawing="viennese coffee house" core.source="hand-core 1"
+@k.scenes.scene.cafe k.scenes.scene name=cafe kind=indoors ground=floor time=morning time=afternoon happens="drink coffee" happens="eat cake" happens=chat happens="read the newspaper" drawing="viennese coffee house" core.source="hand-core 1"
 @k.scenes.has.cafe.ceiling_light k.scenes.has scene=cafe thing="ceiling light" count=2 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.cafe.window k.scenes.has scene=cafe thing=window count=2 where=wall drawing=window core.source="hand-core 1"
 @k.scenes.has.cafe.picture k.scenes.has scene=cafe thing=picture count=2 where=wall drawing=picture core.source="hand-core 1"
@@ -333,7 +333,7 @@
 @k.scenes.word.scene.cafe core.word text=café text="coffee shop" text="coffee house" text="tea room" text=cafes means=cafe of=k.scenes.scene.name core.source="hand-core 1"
 
 # nursery
-@k.scenes.scene.nursery k.scenes.scene name=nursery kind=indoors ground=floor time=day happens=play happens=nap happens="build with bricks" happens=sing core.source="hand-core 1"
+@k.scenes.scene.nursery k.scenes.scene name=nursery kind=indoors ground=floor time=morning time=afternoon happens=play happens=nap happens="build with bricks" happens=sing core.source="hand-core 1"
 @k.scenes.has.nursery.ceiling_light k.scenes.has scene=nursery thing="ceiling light" count=1 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.nursery.window k.scenes.has scene=nursery thing=window count=1 where=wall drawing=window core.source="hand-core 1"
 @k.scenes.has.nursery.picture k.scenes.has scene=nursery thing=picture count=3 where=wall drawing=picture core.source="hand-core 1"
@@ -357,7 +357,7 @@
 @k.scenes.word.scene.nursery core.word text=playroom text="baby room" text=kindergarten text="day care" text=nurseries means=nursery of=k.scenes.scene.name core.source="hand-core 1"
 
 # laboratory
-@k.scenes.scene.laboratory k.scenes.scene name=laboratory kind=indoors ground=floor time=day happens=experiment happens=measure happens=mix happens="look through the microscope" core.source="hand-core 1"
+@k.scenes.scene.laboratory k.scenes.scene name=laboratory kind=indoors ground=floor time=morning time=afternoon happens=experiment happens=measure happens=mix happens="look through the microscope" core.source="hand-core 1"
 @k.scenes.has.laboratory.ceiling_light k.scenes.has scene=laboratory thing="ceiling light" count=2 where=ceiling drawing="ceiling light" core.source="hand-core 1"
 @k.scenes.has.laboratory.window k.scenes.has scene=laboratory thing=window count=1 where=wall drawing=window core.source="hand-core 1"
 @k.scenes.has.laboratory.shelf k.scenes.has scene=laboratory thing=shelf count=2 where=wall drawing=shelf core.source="hand-core 1"
@@ -380,7 +380,7 @@
 @k.scenes.word.scene.laboratory core.word text=lab text="science lab" text=laboratories means=laboratory of=k.scenes.scene.name core.source="hand-core 1"
 
 # birthday party
-@k.scenes.scene.birthday_party k.scenes.scene name="birthday party" kind=indoors ground=floor time=day happens="blow out the candles" happens=sing happens="open presents" happens="play games" happens="eat cake" core.source="hand-core 1"
+@k.scenes.scene.birthday_party k.scenes.scene name="birthday party" kind=indoors ground=floor time=morning time=afternoon happens="blow out the candles" happens=sing happens="open presents" happens="play games" happens="eat cake" core.source="hand-core 1"
 @k.scenes.has.birthday_party.balloon k.scenes.has scene="birthday party" thing=balloon count=8 where=ceiling drawing=balloon core.source="hand-core 1"
 @k.scenes.has.birthday_party.party_streamers k.scenes.has scene="birthday party" thing="party streamers" count=3 where=ceiling drawing="confetti ball" core.source="hand-core 1"
 @k.scenes.has.birthday_party.table k.scenes.has scene="birthday party" thing=table count=1 where=ground side=centre drawing=table core.source="hand-core 1"

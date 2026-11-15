@@ -4,7 +4,7 @@
 # script: tools/scenes-core.mjs
 
 # city street
-@k.scenes.scene.city_street k.scenes.scene name="city street" kind=outdoors ground=road time=day happens=drive happens="cross the road" happens=shop happens="wait for the bus" drawing=street core.source="hand-core 1"
+@k.scenes.scene.city_street k.scenes.scene name="city street" kind=outdoors ground=road time=morning time=afternoon happens=drive happens="cross the road" happens=shop happens="wait for the bus" drawing=street core.source="hand-core 1"
 @k.scenes.has.city_street.sun k.scenes.has scene="city street" thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.city_street.cloud k.scenes.has scene="city street" thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.city_street.pigeon k.scenes.has scene="city street" thing=pigeon count=3 where=sky drawing=pigeon core.source="hand-core 1"
@@ -29,7 +29,7 @@
 @k.scenes.word.scene.city_street core.word text=street text=city text=town text=downtown text=streets means="city street" of=k.scenes.scene.name core.source="hand-core 1"
 
 # village
-@k.scenes.scene.village k.scenes.scene name=village kind=outdoors ground=road time=day happens="go to market" happens="ring the church bell" happens="meet the neighbours" core.source="hand-core 1"
+@k.scenes.scene.village k.scenes.scene name=village kind=outdoors ground=road time=morning time=afternoon happens="go to market" happens="ring the church bell" happens="meet the neighbours" core.source="hand-core 1"
 @k.scenes.has.village.sun k.scenes.has scene=village thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.village.cloud k.scenes.has scene=village thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.village.bird k.scenes.has scene=village thing=bird count=3 where=sky drawing=bird core.source="hand-core 1"
@@ -51,7 +51,7 @@
 @k.scenes.word.scene.village core.word text=villages text=hamlet means=village of=k.scenes.scene.name core.source="hand-core 1"
 
 # playground
-@k.scenes.scene.playground k.scenes.scene name=playground kind=outdoors ground=sand time=day weather=sunny happens=swing happens=slide happens=climb happens="play in the sand" happens=run core.source="hand-core 1"
+@k.scenes.scene.playground k.scenes.scene name=playground kind=outdoors ground=sand time=morning time=afternoon weather=sunny happens=swing happens=slide happens=climb happens="play in the sand" happens=run core.source="hand-core 1"
 @k.scenes.has.playground.sun k.scenes.has scene=playground thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.playground.cloud k.scenes.has scene=playground thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.playground.kite k.scenes.has scene=playground thing=kite count=1 where=sky drawing=kite core.source="hand-core 1"
@@ -74,7 +74,7 @@
 @k.scenes.word.scene.playground core.word text=playgrounds text="play park" means=playground of=k.scenes.scene.name core.source="hand-core 1"
 
 # market
-@k.scenes.scene.market k.scenes.scene name=market kind=outdoors ground=paving time=morning time=day happens="buy fruit" happens="sell vegetables" happens=weigh happens="carry bags" core.source="hand-core 1"
+@k.scenes.scene.market k.scenes.scene name=market kind=outdoors ground=paving time=morning time=afternoon happens="buy fruit" happens="sell vegetables" happens=weigh happens="carry bags" core.source="hand-core 1"
 @k.scenes.has.market.sun k.scenes.has scene=market thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.market.building k.scenes.has scene=market thing=building count=3 where=background drawing=building core.source="hand-core 1"
 @k.scenes.has.market.stall k.scenes.has scene=market thing=stall count=5 where=ground drawing=shop core.source="hand-core 1"
@@ -95,7 +95,7 @@
 @k.scenes.word.scene.market core.word text=markets text=marketplace text="street market" text=bazaar means=market of=k.scenes.scene.name core.source="hand-core 1"
 
 # harbour
-@k.scenes.scene.harbour k.scenes.scene name=harbour kind=outdoors ground=water time=day happens="load ships" happens=fish happens="sail away" happens="watch the boats" core.source="hand-core 1"
+@k.scenes.scene.harbour k.scenes.scene name=harbour kind=outdoors ground=water time=morning time=afternoon happens="load ships" happens=fish happens="sail away" happens="watch the boats" core.source="hand-core 1"
 @k.scenes.has.harbour.sun k.scenes.has scene=harbour thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.harbour.cloud k.scenes.has scene=harbour thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.harbour.seagull k.scenes.has scene=harbour thing=seagull count=5 where=sky drawing=seagull core.source="hand-core 1"
@@ -157,7 +157,7 @@
 @k.scenes.word.scene.railway_station core.word text="train station" text=station text="railroad station" text=platform means="railway station" of=k.scenes.scene.name core.source="hand-core 1"
 
 # construction site
-@k.scenes.scene.construction_site k.scenes.scene name="construction site" kind=outdoors ground=earth time=day happens=dig happens=lift happens=build happens="pour concrete" drawing="building construction" core.source="hand-core 1"
+@k.scenes.scene.construction_site k.scenes.scene name="construction site" kind=outdoors ground=earth time=morning time=afternoon happens=dig happens=lift happens=build happens="pour concrete" drawing="building construction" core.source="hand-core 1"
 @k.scenes.has.construction_site.sun k.scenes.has scene="construction site" thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.construction_site.cloud k.scenes.has scene="construction site" thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.construction_site.crane k.scenes.has scene="construction site" thing=crane count=1 where=background drawing=crane core.source="hand-core 1"
@@ -195,7 +195,7 @@
 @k.scenes.word.scene.petrol_station core.word text="gas station" text="filling station" text="service station" means="petrol station" of=k.scenes.scene.name core.source="hand-core 1"
 
 # zoo
-@k.scenes.scene.zoo k.scenes.scene name=zoo kind=outdoors ground=paving time=day happens="watch the animals" happens="feed the goats" happens="take photos" core.source="hand-core 1"
+@k.scenes.scene.zoo k.scenes.scene name=zoo kind=outdoors ground=paving time=morning time=afternoon happens="watch the animals" happens="feed the goats" happens="take photos" core.source="hand-core 1"
 @k.scenes.has.zoo.sun k.scenes.has scene=zoo thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.zoo.cloud k.scenes.has scene=zoo thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.zoo.tree k.scenes.has scene=zoo thing=tree count=4 where=background drawing=tree core.source="hand-core 1"
@@ -222,7 +222,7 @@
 @k.scenes.word.scene.zoo core.word text=zoos text="animal park" means=zoo of=k.scenes.scene.name core.source="hand-core 1"
 
 # fairground
-@k.scenes.scene.fairground k.scenes.scene name=fairground kind=outdoors ground=grass time=evening time=day happens="ride the carousel" happens="eat candy floss" happens="win a prize" core.source="hand-core 1"
+@k.scenes.scene.fairground k.scenes.scene name=fairground kind=outdoors ground=grass time=morning time=afternoon time=evening happens="ride the carousel" happens="eat candy floss" happens="win a prize" core.source="hand-core 1"
 @k.scenes.has.fairground.cloud k.scenes.has scene=fairground thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.fairground.balloon k.scenes.has scene=fairground thing=balloon count=6 where=sky drawing=balloon core.source="hand-core 1"
 @k.scenes.has.fairground.fireworks k.scenes.has scene=fairground thing=fireworks count=2 where=sky drawing=fireworks core.source="hand-core 1"
@@ -242,7 +242,7 @@
 @k.scenes.word.scene.fairground core.word text=funfair text=fair text="amusement park" text=carnival text="theme park" means=fairground of=k.scenes.scene.name core.source="hand-core 1"
 
 # football pitch
-@k.scenes.scene.football_pitch k.scenes.scene name="football pitch" kind=outdoors ground=grass time=day happens="kick the ball" happens="score a goal" happens=cheer happens=run core.source="hand-core 1"
+@k.scenes.scene.football_pitch k.scenes.scene name="football pitch" kind=outdoors ground=grass time=morning time=afternoon happens="kick the ball" happens="score a goal" happens=cheer happens=run core.source="hand-core 1"
 @k.scenes.has.football_pitch.sun k.scenes.has scene="football pitch" thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.football_pitch.cloud k.scenes.has scene="football pitch" thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.football_pitch.stadium k.scenes.has scene="football pitch" thing=stadium count=1 where=background drawing=stadium core.source="hand-core 1"
@@ -259,7 +259,7 @@
 @k.scenes.word.scene.football_pitch core.word text="football field" text="soccer field" text=pitch text=stadium text="soccer pitch" means="football pitch" of=k.scenes.scene.name core.source="hand-core 1"
 
 # swimming pool
-@k.scenes.scene.swimming_pool k.scenes.scene name="swimming pool" kind=outdoors ground=tiles time=day weather=sunny season=summer happens=swim happens=dive happens=splash happens=float drawing=pool core.source="hand-core 1"
+@k.scenes.scene.swimming_pool k.scenes.scene name="swimming pool" kind=outdoors ground=tiles time=morning time=afternoon weather=sunny season=summer happens=swim happens=dive happens=splash happens=float drawing=pool core.source="hand-core 1"
 @k.scenes.has.swimming_pool.sun k.scenes.has scene="swimming pool" thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.swimming_pool.pool k.scenes.has scene="swimming pool" thing=pool count=1 where=ground side=centre drawing=pool core.source="hand-core 1"
 @k.scenes.has.swimming_pool.swimmer k.scenes.has scene="swimming pool" thing=swimmer count=5 where=water on=pool drawing=person core.source="hand-core 1"
@@ -300,7 +300,7 @@
 @k.scenes.word.scene.circus core.word text=circuses text="big top" means=circus of=k.scenes.scene.name core.source="hand-core 1"
 
 # castle
-@k.scenes.scene.castle k.scenes.scene name=castle kind=outdoors ground=grass time=day happens="guard the gate" happens="ride out" happens="hold a feast" drawing=castle core.source="hand-core 1"
+@k.scenes.scene.castle k.scenes.scene name=castle kind=outdoors ground=grass time=morning time=afternoon happens="guard the gate" happens="ride out" happens="hold a feast" drawing=castle core.source="hand-core 1"
 @k.scenes.has.castle.sun k.scenes.has scene=castle thing=sun count=1 where=sky drawing=sun core.source="hand-core 1"
 @k.scenes.has.castle.cloud k.scenes.has scene=castle thing=cloud count=2 where=sky drawing=cloud core.source="hand-core 1"
 @k.scenes.has.castle.bird k.scenes.has scene=castle thing=bird count=3 where=sky drawing=bird core.source="hand-core 1"
