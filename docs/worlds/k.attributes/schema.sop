@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/attributes-core.mjs
 
-@k.attributes core.module name=k.attributes version=5 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage exports=range exports=typical exports=narration core.source="hand-core 1"
+@k.attributes core.module name=k.attributes version=6 imports=k.named exports=attribute exports=switch exports=found exports=kind exports=thing exports=aspect exports=family exports=shows exports=drawn exports=same exports=number exports=usage exports=range exports=typical exports=narration core.source="hand-core 1"
 
 # An attribute of things. `holds` says what kind of value it takes; `aspect` names the aspect it belongs to.
 @k.attributes.attribute core.type of=k.attributes.attribute shared=true closed=true core.source="hand-core 1"
@@ -60,6 +60,9 @@
 @k.attributes.thing.wheels core.slot of=k.attributes.thing key=wheels kind=integer min=0 core.source="hand-core 1"
 @k.attributes.thing.can core.slot of=k.attributes.thing key=can many=true kind=atom type=k.actions.action by=name core.source="hand-core 1"
 @k.attributes.thing.used_for core.slot of=k.attributes.thing key=used_for many=true kind=string core.source="hand-core 1"
+# `property` (many): a plain property of the thing in a few words (sharp, sticky, heavy, far from earth), from
+# ConceptNet's HasProperty, only values checked by hand (shard things-conceptnet, KR6).
+@k.attributes.thing.property core.slot of=k.attributes.thing key=property many=true kind=string core.source="hand-core 1"
 
 # The colours a drawable thing is drawn in: computed from the drawing of k.objects that has the name `name`
 # (tools/drawn-colour.mjs), the largest first, at most three. `drawn_colour` (many) is one of the eleven basic
@@ -250,6 +253,7 @@
 @k.attributes.word.key.thing.kind core.word text=kind means=k.attributes.thing.kind core.source="hand-core 1"
 @k.attributes.word.key.thing.wheels core.word text=many means=k.attributes.thing.wheels core.source="hand-core 1"
 @k.attributes.word.key.thing.can core.word text=do means=k.attributes.thing.can core.source="hand-core 1"
+@k.attributes.word.key.thing.property core.word text=property means=k.attributes.thing.property core.source="hand-core 1"
 @k.attributes.word.key.drawn.drawn_shade core.word text="drawn shade" means=k.attributes.drawn.drawn_shade core.source="hand-core 1"
 @k.attributes.word.key.number.sense core.word text=sense means=k.attributes.number.sense core.source="hand-core 1"
 @k.attributes.word.key.number.weight_class core.word text="weight class" means=k.attributes.number.weight_class core.source="hand-core 1"

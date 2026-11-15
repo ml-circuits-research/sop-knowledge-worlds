@@ -6551,3 +6551,21 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   shoelaces, letter); 13 have a decision. The k.diagrams topics are rebuilt (tools/diagram-topics.mjs).
 - Tests: k.diagrams (names, cited/own, one first step, decisions with yes and no, flowchart fill), k.procedures,
   catalog, validate.
+## 2026-11-15 — fifth worker: KR6 from ConceptNet 5.7 (block 18:45 (2)): can, used_for, material, property
+
+- tools/import/conceptnet-attributes.mjs reads the [DATA] PSys2's machine fetched (psys2 data/external/conceptnet-en/,
+  copied to sources/conceptnet/raw, git-ignored; CC BY-SA 4.0): for the 1,500 common things, CapableOf -> `can` (an
+  action of k.actions: the end or its first word), UsedFor -> `used_for` (-ing form of a leading verb, inflectBy),
+  MadeOf -> `material` (one-word parts), HasProperty -> `property` (new slot of k.attributes.thing, version bumped);
+  `can`, `used_for` and `material` only where the catalog has none. Shard k.attributes/things-conceptnet,
+  CC-BY-SA-4.0, a shard of its own.
+- **Hand check, 100 per relation** (sources/conceptnet/audit.tsv; drawn seeded from the edges with weight >= 2, or from
+  all, weight >= 1, where fewer than 100 have 2; MadeOf has only 46 candidates, all checked):
+  CapableOf 6 of 100 wrong (6.0 %; weight >= 2), UsedFor 31 of 100 (31.0 %; weight >= 2), MadeOf 21 of 46 (45.7 %;
+  weight >= 1), HasProperty 60 of 100 (60.0 %; weight >= 1: opinions, uses, events, puns). None under 5 %, so **only
+  the values checked right are written**: can 94, used_for 69, material 25 (18 things after splitting lists into one
+  word each), property 40; 124 things. The rates and the choice are in the shard's header.
+- COVERAGE.md over the 1,500: used for 357 -> 410 by name (24 -> 27 %), material 328 -> 346, can 255 -> 257 of the 463
+  it applies to (ConceptNet's abilities are mostly of things that already have some), property (new row) 34.
+- Test (tests/k.attributes.conceptnet.test.mjs, new, 3): licence and the per-relation rates in the header; every value
+  written is in the audit as right; with the raw files, the shard is what the importer gives (skips without them).

@@ -1,4 +1,4 @@
-# conceptnet: ConceptNet 5.7 (not imported yet)
+# conceptnet: ConceptNet 5.7
 
 - **What:** a graph of common-sense assertions between words and phrases. For `k.commonsense`: where things are,
   what they can do, what they are used for and made of, what they are a kind of, a part of, and what they have.
@@ -22,3 +22,10 @@
   AtLocation (`at`), CapableOf (`can`), UsedFor (`used_for`), MadeOf (`made_of`), IsA (`is_a`), PartOf
   (`part_of`), HasA (`has`); one `k.commonsense.thing` per start term, values by weight; things the hand-written
   core already has are left to it. Shards `conceptnet-<first letter>`, split into parts inside the size gate.
+
+- **Imported (KR6, 2026-11-15):** CapableOf, UsedFor, MadeOf and HasProperty of the 1,500 common things into
+  `k.attributes.thing` (`can`, `used_for`, `material`, `property`), shard `k.attributes/shards/things-conceptnet`
+  (CC-BY-SA-4.0, a shard of its own), by `tools/import/conceptnet-attributes.mjs` from the subset PSys2's machine fetched
+  (psys2 `data/external/conceptnet-en/`, copied to `sources/conceptnet/raw/`, git-ignored). Hand check:
+  `sources/conceptnet/audit.tsv` (it quotes ConceptNet and keeps its licence). Only values checked right are written:
+  no relation's sampled error was under 5 %.

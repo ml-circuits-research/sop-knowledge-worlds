@@ -1,0 +1,349 @@
+# Hand check of the ConceptNet values that tools/import/conceptnet-attributes.mjs samples (fifth worker, 2026-11-15).
+# relation<tab>thing<tab>value<tab>weight<tab>verdict (right / wrong)<tab>why, for a wrong one
+# These rows quote ConceptNet 5.7 (conceptnet.io; CC BY-SA 4.0, attribution: ConceptNet 5, derived in part from Open Mind Common Sense, Wiktionary, WordNet and other sources); the file keeps that licence.
+CapableOf	bag	carry	2	right
+CapableOf	blanket	cover	2	right
+CapableOf	building	fall	2	wrong	a building does not fall by itself; collapse is not an ability
+CapableOf	butterfly	fly	2	right
+CapableOf	candy	taste	2	wrong	candy is tasted; it does not taste
+CapableOf	cat	catch	6	right
+CapableOf	cat	climb	5.292	right
+CapableOf	cat	drink	6	right
+CapableOf	cat	eat	2.828	right
+CapableOf	cat	fight	2	right
+CapableOf	cat	hide	2.828	right
+CapableOf	cat	look	4.472	right
+CapableOf	cat	see	2.828	right
+CapableOf	cat	sleep	3.464	right
+CapableOf	cat	watch	2	right
+CapableOf	cheese	smell	2	right
+CapableOf	chocolate	melt	2.828	right
+CapableOf	cup	hold	6.928	right
+CapableOf	dam	stop	2	right
+CapableOf	dog	bark	16	right
+CapableOf	dog	bite	2	right
+CapableOf	dog	dig	2.828	right
+CapableOf	dog	drink	4.472	right
+CapableOf	dog	fight	2.828	right
+CapableOf	dog	learn	2.828	right
+CapableOf	dog	run	6	right
+CapableOf	dog	shake	2	right
+CapableOf	dog	smell	3.464	right
+CapableOf	dog	walk	2.828	right
+CapableOf	dog	wear	2	wrong	a dog wears a collar at most; not an ability
+CapableOf	dog	win	2	wrong	from "win a race": not an ability of dogs
+CapableOf	dryer	dry	3.464	right
+CapableOf	garlic	leave	2	wrong	from "leave a smell": not an ability
+CapableOf	hammer	break	3.464	right
+CapableOf	hammer	drive	2.828	right
+CapableOf	horse	carry	2	right
+CapableOf	horse	drink	2	right
+CapableOf	horse	jump	2	right
+CapableOf	horse	pull	3.464	right
+CapableOf	horse	run	2	right
+CapableOf	key	open	6.325	right
+CapableOf	milk	come	2.828	wrong	from "come from a cow": not an ability
+CapableOf	mosquito	fly	4	right
+CapableOf	mouse	hear	2	right
+CapableOf	owl	hear	2.828	right
+CapableOf	owl	see	2	right
+CapableOf	person	blow	2	right
+CapableOf	person	buy	3.464	right
+CapableOf	person	catch	4.899	right
+CapableOf	person	cook	2.828	right
+CapableOf	person	drink	3.464	right
+CapableOf	person	enter	4	right
+CapableOf	person	give	2.828	right
+CapableOf	person	go	2	right
+CapableOf	person	hear	4	right
+CapableOf	person	hold	2	right
+CapableOf	person	laugh	5.292	right
+CapableOf	person	leave	4.472	right
+CapableOf	person	lie	2	right
+CapableOf	person	lose	2	right
+CapableOf	person	lower	2	right
+CapableOf	person	make	2	right
+CapableOf	person	meet	2	right
+CapableOf	person	open	2	right
+CapableOf	person	pay	3.464	right
+CapableOf	person	plant	4.472	right
+CapableOf	person	play	2	right
+CapableOf	person	read	2	right
+CapableOf	person	receive	2.828	right
+CapableOf	person	sail	2.828	right
+CapableOf	person	say	2	right
+CapableOf	person	shout	2	right
+CapableOf	person	sit	2	right
+CapableOf	person	take	2	right
+CapableOf	person	talk	2	right
+CapableOf	person	taste	4.472	right
+CapableOf	person	tear	4	right
+CapableOf	person	thank	6.633	right
+CapableOf	person	visit	3.464	right
+CapableOf	person	wait	2	right
+CapableOf	person	walk	3.464	right
+CapableOf	person	wash	2.828	right
+CapableOf	person	water	5.292	right
+CapableOf	person	wave	4.899	right
+CapableOf	person	wear	2	right
+CapableOf	person	win	2.828	right
+CapableOf	person	write	3.464	right
+CapableOf	pig	find	2	right
+CapableOf	purse	hold	2	right
+CapableOf	screwdriver	turn	7.211	right
+CapableOf	shovel	dig	6.325	right
+CapableOf	sprinkler	water	2	right
+CapableOf	tablecloth	cover	3.464	right
+CapableOf	theater	show	4.472	right
+CapableOf	thermometer	measure	5.657	right
+CapableOf	towel	dry	3.464	right
+CapableOf	vase	hold	2	right
+CapableOf	wall	separate	2	right
+CapableOf	wallet	hold	2.828	right
+CapableOf	winery	make	2.828	right
+UsedFor	apple	making apple pie	2	right
+UsedFor	aquarium	attracting	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	aquarium	holding	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	baggage	carrying clothes	2.828	right
+UsedFor	balloon	birthday parties	2	right
+UsedFor	balloon	birthday party	2	right
+UsedFor	bean	cooking	2.828	right
+UsedFor	bird	watching	2.828	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bomb	blowing things up	6.928	right
+UsedFor	bomb	committing genocide	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bomb	killing people	4.899	right
+UsedFor	bomb	scaring people	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bomber	launching	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bomber	taking off	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	brake	failing	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bread	buttering	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bread	eating	5.657	right
+UsedFor	bullet	murdering	2.828	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	bullet	shooting	2.828	right
+UsedFor	cake	dessert	2.828	right
+UsedFor	cake	wedding	2	right
+UsedFor	cannon	firing cannon balls	2	right
+UsedFor	cannon	killing enemy	2.828	right
+UsedFor	cat	companionship	4	right
+UsedFor	cellphone	communication	2.828	right
+UsedFor	chainsaw	cutting down trees	2	right
+UsedFor	clipboard	holding papers	3.464	right
+UsedFor	counter	counting	2.828	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	counter	spacing	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	counter	storing	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	courthouse	trying cases	2.828	right
+UsedFor	cubicle	granting personal space	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	cubicle	privacy	4	right
+UsedFor	cubicle	working within	3.464	right
+UsedFor	curb	parking car	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	dog	guarding house	2	right
+UsedFor	dog	keeping company	2	right
+UsedFor	driveway	parking	4	right
+UsedFor	earth	living on	4	right
+UsedFor	engine	powering	2	right
+UsedFor	faucet	getting water	2	right
+UsedFor	feather	tickling	5.657	right
+UsedFor	flask	holding wine	2	right
+UsedFor	flask	storing liquids	3.464	right
+UsedFor	fountain	decoration	2	right
+UsedFor	freeway	driving on	2.828	right
+UsedFor	gate	closing	2	right
+UsedFor	grenade	blowing up enemy	2	right
+UsedFor	grenade	doing damage	2.828	right
+UsedFor	grenade	murdering	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	harmonica	making music	4	right
+UsedFor	hill	climbing	4.472	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	isle	walking	2.828	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	jewelry	making social statement	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	lane	bowling	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	leaf	photosynthesis	2.828	right
+UsedFor	lens	magnifying	2.828	right
+UsedFor	lens	magnifying object	2	right
+UsedFor	mast	holding sail	4.472	right
+UsedFor	meat	eating	4.472	right
+UsedFor	meat	meals	2.828	right
+UsedFor	meat	peopling to eat	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	microphone	amplify	2	right
+UsedFor	monument	remembering	2	right
+UsedFor	mouse	operating	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	pail	carrying water	2.828	right
+UsedFor	pedestal	putting statue on	2	right
+UsedFor	person	loving	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	pill	curing illness	2	right
+UsedFor	pouch	holding	2	right
+UsedFor	pouch	holding very small items	2	right
+UsedFor	prison	punishment	2	right
+UsedFor	pulpit	preacher	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	pulpit	preaching	5.292	right
+UsedFor	revolver	shooting person	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	roof	protection from elements	2.828	right
+UsedFor	rook	protecting king	2.828	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	runway	landing airplanes	2.828	right
+UsedFor	saloon	drinking	4	right
+UsedFor	sesame	making sauce	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	skyscraper	cities	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	skyscraper	office space	2.828	right
+UsedFor	stapler	binding many pieces of paper	2	right
+UsedFor	stapler	fastening sheets of paper together	2	right
+UsedFor	stapler	stapling	2	right
+UsedFor	stapler	stapling papers together	2	right
+UsedFor	sun	energy	2.828	right
+UsedFor	tile	bathroom	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	toilet	disposing of waste	2	right
+UsedFor	tourniquet	stopping flow of blood	2	right
+UsedFor	tripod	keeping camera steady	2	right
+UsedFor	tub	soaking	2	right
+UsedFor	vcr	watching vcr tapes	2	right
+UsedFor	viola	playing music	2.828	right
+UsedFor	wall	dividing countries	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+UsedFor	wall	dividing open space into smaller areas	2.828	right
+UsedFor	wall	holding up roof	2.828	right
+UsedFor	wire	conducting electricity	2	right
+UsedFor	wire	fastening	2	right
+UsedFor	wire	shaping	2	wrong	not what it is for (an event, an opinion, a misuse, another sense, or a word split wrong)
+MadeOf	bacon	pig	1	right
+MadeOf	banjo	wood	1	right
+MadeOf	binder	plastic and metal	1	right
+MadeOf	bomb	explosives	1	right
+MadeOf	bomb	shrapnel	1	right
+MadeOf	bread	dough	1	right
+MadeOf	bread	wheat	1	right
+MadeOf	butter	milk	1	right
+MadeOf	cake	egg	1	right
+MadeOf	cake	egs	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	cake	flour	1	right
+MadeOf	cake	ingredients	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	cat	fur	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	cheese	fermented milk and bacteria	1	right
+MadeOf	cheese	milk	2	right
+MadeOf	continent	countries	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	dog	flesh and bones	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	dog	hair	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	donut	deep fried dough and sugar	1	right
+MadeOf	earring	silver and sometimes gold	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	hamburger	wheat	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	highway	asphalt	1	right
+MadeOf	ipod	microchips and plastic	3.464	right
+MadeOf	kitten	flesh	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	leaf	chlorophyll	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	lemonade	lemons	1	right
+MadeOf	milk	minerals	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	pancake	milk water salt eggs and flour	1	right
+MadeOf	panda	cells	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	person	water	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	pickle	cucumbers	1	right
+MadeOf	pickle	vinegar and cucumbers	1	right
+MadeOf	sausage	meat	2	right
+MadeOf	soup	water	1	right
+MadeOf	stigma	discrimination	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	stigma	ignorance	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	stigma	prejudice	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	sugar	minerals	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	sundae	ice cream	1	right
+MadeOf	sushi	raw fishes	1	right
+MadeOf	toothpick	plastic	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	wicket	stumps	1	right
+MadeOf	wine	fruit	2	right
+MadeOf	world	continents	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	world	countries	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+MadeOf	zipper	teeth	1	wrong	not what it is made of (a body, a part, a kind of thing, a typo, or not usual)
+HasProperty	airplane	good for quickly travelling long distances	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	bed	flat	2.828	right
+HasProperty	beer	harmful	2.828	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	beer	nice for adult humans	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	bicycle	fun to ride	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	bike	stationary	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	bowl	convex down	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	box	good to ship things in	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	bread	baked at bakery	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	butter	yellow	5.657	right
+HasProperty	cake	spongy	1	right
+HasProperty	cake	yummy	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	cannonball	heavy	1	right
+HasProperty	car	expensive	1	right
+HasProperty	car	heavy	2.828	right
+HasProperty	car	pushing from behind	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	car	red	3.464	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	car	slow	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	carpet	opaque	1	right
+HasProperty	cat	running after mouse	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	cauldron	black in color	1	right
+HasProperty	cereal	concrete	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	chicken	tasty when fried or baked	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	corn	one kind of vegetable	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	counter	likely to hold cash register	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	deodorant	useful for neutralizing body odours	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	dolphin	alive	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	earth	finite	2	right
+HasProperty	earth	flat	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	earth	revolving around sun	1	right
+HasProperty	earth	round like ball	2	right
+HasProperty	egg	hard boiled	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	egg	round	2	right
+HasProperty	egg	white	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	fan	short for fanatic	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	fountain	pretty	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	freezer	cold enough to freeze water	1	right
+HasProperty	frog	green	2	right
+HasProperty	giraffe	female	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	grass	recycled by mulching	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	gun	hidden in room	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	hamburger	well over 300 caleries	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	hill	like montain only much smaller	1	right
+HasProperty	hole	one	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	horse	larger than person	1	right
+HasProperty	jacket	worn to keep warm in winter	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	jelly	sticky	1	right
+HasProperty	jewelry	considered beautiful	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	knife	dull	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	knife	important for making food	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	labyrinth	complex	1	right
+HasProperty	labyrinth	intricate	1	right
+HasProperty	lotion	sticky	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	map	one form of information	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	marsh	wet	1	right
+HasProperty	meat	shaped as cubes	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	meat	unable to eaten by rabbits	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	milk	nutritious and tasty for cats	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	milk	packaged in either jugs or boxes	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	mustard	yellow	1	right
+HasProperty	needle	small	3.464	right
+HasProperty	painting	two dimensional	1	right
+HasProperty	person	found guilty at trial	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	person	guilty of crime	2.828	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	person	jealous of another person	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	person	lighter than cow	1	right
+HasProperty	person	standing in line	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	phone	one kind of electric machine	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	picture	symbolic of sexual intercourse	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	picture	useful to convey idea	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	pistol	dangerous	2	right
+HasProperty	poodle	mean	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	pouch	similar to pocket	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	puppy	soft	1	right
+HasProperty	ribbon	thin	1	right
+HasProperty	rice	black	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	rock	heavy	2.828	right
+HasProperty	scissors	sharp	2	right
+HasProperty	scissors	useful for cutting things	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	seaweed	edible	1	right
+HasProperty	shop	short for discount store	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	silo	full of corn	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	spinach	high in calcium	2	right
+HasProperty	staple	small	1	right
+HasProperty	sun	essential for food production in plants	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	sun	far from earth	2.828	right
+HasProperty	sun	very far away	1	right
+HasProperty	sunscreen	greasy	1	right
+HasProperty	teapot	only for making tea	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	toothbrush	inexpensive	1	right
+HasProperty	trombone	long	1	right
+HasProperty	valley	lower than hill	1	right
+HasProperty	violin	brown	1	right
+HasProperty	violin	like viola but smaller	1	right
+HasProperty	volcano	extinct	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	window	double hung	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	wine	drunk	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	world	full of sinners	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	world	small	2	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)
+HasProperty	world	square	1	wrong	not a property of the thing (an opinion, a use, a kind, an event, a pun, or not usual)

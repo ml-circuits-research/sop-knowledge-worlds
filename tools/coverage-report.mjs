@@ -35,6 +35,7 @@ export const ROWS = [
   ['material', ['k.attributes.thing', 'name', ['material']]],
   ['what it can do', ['k.attributes.thing', 'name', ['can']], ['k.animals.animal', 'name', ['can']], ['k.commonsense.thing', 'name', ['can']]],
   ['what it is used for', ['k.attributes.thing', 'name', ['used_for']]],
+  ['property (sharp, sticky, heavy ...)', ['k.attributes.thing', 'name', ['property']]],
   ['wheels', ['k.attributes.thing', 'name', ['wheels']]],
   ['legs', ['k.animals.animal', 'name', ['legs']], ['k.attributes.number', 'name', ['legs']]],
   ['size in metres (the longest side)', ['k.attributes.number', 'name', ['size_about']]],

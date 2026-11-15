@@ -15,6 +15,15 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Shard terms: Apache-2.0 AND Unicode-3.0, Unicode-3.0
 - Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.layouts` (1 shards), `k.objects` (124 shards), `k.units` (1 shards), `w.lang.en` (1 shards), `w.lang.ro` (1 shards)
 
+## conceptnet-5.7
+
+- What: a graph of common-sense assertions between words and phrases. For `k.commonsense`: where things are, what they can do, what they are used for and made of, what they are a kind of, a part of, and what they have.
+- Origin: https://github.com/commonsense/conceptnet5/wiki/Downloads ; the file is `https://s3.amazonaws.com/conceptnet/downloads/2019/edges/conceptnet-assertions-5.7.0.csv.gz` (about 475 MB).
+- License: CC-BY-SA-4.0.
+- Attribution: This work includes data from ConceptNet 5, which was compiled by the Commonsense Computing Initiative. ConceptNet 5 is freely available under the Creative Commons Attribution-ShareAlike license (CC BY-SA 4.0) from https://conceptnet.io . The included data was created by contributors to Commonsense Computing projects, contributors to Wikimedia projects, Games with a Purpose, Princeton University's WordNet, DBPedia, OpenCyc, and Umbel.
+- Shard terms: CC-BY-SA-4.0
+- Used by: `k.attributes` (1 shards)
+
 ## countries-5.1.0
 
 - What: a list of the world's countries with codes, borders, area and more. Used in `k.geo` only for what Natural Earth (public domain) does not have: land neighbours, area, landlocked.
