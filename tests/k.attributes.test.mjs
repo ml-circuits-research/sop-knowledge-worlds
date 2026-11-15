@@ -11,7 +11,9 @@ const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const world = fullWorld('k.attributes', worlds);
-const things = world.ofType('k.attributes.thing');
+// the things of tools/attributes-core.mjs (hand-written, model-labelled); a thing may also have values of another shard
+// with its own source (things-glosses: WordNet), merged by name
+const things = world.ofType('k.attributes.thing').filter((t) => t.attrs['core.source'].includes('"hand-core 1"'));
 
 test('the shards are what tools/attributes-core.mjs gives; every thing is model-labelled and says something', () => {
   for (const [name, text] of Object.entries(attributeShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.attributes', 'shards', name), 'utf8'), text, name);
@@ -20,7 +22,7 @@ test('the shards are what tools/attributes-core.mjs gives; every thing is model-
   const kinds = new Set(world.ofType('k.attributes.kind').map((k) => one(k, 'name')));
   for (const t of things) {
     assert.equal(one(t, 'named'), 'model', t.id);
-    assert.deepEqual(t.attrs['core.source'], ['"hand-core 1"'], t.id);
+    assert.ok(t.attrs['core.source'].includes('"hand-core 1"'), t.id);
     assert.ok(['kind', 'colour', 'material', 'wheels', 'can', 'used_for'].some((k) => t.attrs[k]), t.id);
     if (t.attrs.kind) assert.ok(kinds.has(one(t, 'kind')), `${t.id}: kind ${one(t, 'kind')}`);
   }

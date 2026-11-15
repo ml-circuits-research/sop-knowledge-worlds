@@ -1,4 +1,4 @@
-# k.attributes/shards/same-p: one name, one thing: for 307 names that start with "p" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (14 facts of such names here).
+# k.attributes/shards/same-p: one name, one thing: for 308 names that start with "p" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (14 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -19,7 +19,7 @@
 @k.attributes.same.paintbrush.thing k.attributes.same name=paintbrush sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.painter.person k.attributes.same name=painter sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.painting.thing k.attributes.same name=painting sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.paisley.thing k.attributes.same name=paisley sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.paisley.thing k.attributes.same name=paisley sense=thing only=true in=k.attributes.thing in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pakistan.place k.attributes.same name=pakistan sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.palace.thing k.attributes.same name=palace sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.palate.body_part k.attributes.same name=palate sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
@@ -35,6 +35,7 @@
 @k.attributes.same.pancakes.food k.attributes.same name=pancakes sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.pancreas.body_part k.attributes.same name=pancreas sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.panda.animal k.attributes.same name=panda sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.pane.thing k.attributes.same name=pane sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pangolin.animal k.attributes.same name=pangolin sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.panther.animal k.attributes.same name=panther sense=animal only=true in=k.animals.animal in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pants.clothing k.attributes.same name=pants sense=clothing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
@@ -101,7 +102,7 @@
 @k.attributes.same.pencil_box.thing k.attributes.same name="pencil box" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.pencil_case.thing k.attributes.same name="pencil case" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.pencil_sharpener.thing k.attributes.same name="pencil sharpener" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.pendant.thing k.attributes.same name=pendant sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.pendant.thing k.attributes.same name=pendant sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pendulum.thing k.attributes.same name=pendulum sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.penguin.animal k.attributes.same name=penguin sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.pentagon.shape k.attributes.same name=pentagon sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"
@@ -240,7 +241,7 @@
 @k.attributes.same.popcorn.food k.attributes.same name=popcorn sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.poppadoms.food k.attributes.same name=poppadoms sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.poppy.plant k.attributes.same name=poppy sense=plant only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.popsicle.thing k.attributes.same name=popsicle sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.popsicle.thing k.attributes.same name=popsicle sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.porch.thing k.attributes.same name=porch sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.porcupine.animal k.attributes.same name=porcupine sense=animal only=false in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.porcupine.place k.attributes.same name=porcupine sense=place only=false in=k.geo.river by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.kinds/shards/classes: 317 up edges: the parents of the kinds made by these edges (farm animal, thing with wheels, road vehicle, machine) and of the group kinds.
+# k.kinds/shards/classes: 318 up edges: the parents of the kinds made by these edges (farm animal, thing with wheels, road vehicle, machine) and of the group kinds.
 # sources: hand-core 1 (read from the catalog's own facts by tools/kinds-core.mjs)
 # license: CC0-1.0
 # script: tools/kinds-core.mjs
@@ -285,6 +285,7 @@
 @k.kinds.parent.thing_made_of_rock.thing k.kinds.parent name="thing made of rock" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_made_of_rubber.thing k.kinds.parent name="thing made of rubber" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_made_of_sand.thing k.kinds.parent name="thing made of sand" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
+@k.kinds.parent.thing_made_of_silver.thing k.kinds.parent name="thing made of silver" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_made_of_snow.thing k.kinds.parent name="thing made of snow" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_made_of_stone.thing k.kinds.parent name="thing made of stone" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"
 @k.kinds.parent.thing_made_of_straw.thing k.kinds.parent name="thing made of straw" is_a=thing dimension=kind from=k.kinds.parent core.source="hand-core 1"

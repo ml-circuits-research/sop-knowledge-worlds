@@ -179,3 +179,14 @@ a temple, the kind of a roller skate, one empty row). Record: `sources/hand-core
 See `tests/k.attributes.questions.jsonl`: the colour of grass and of a zebra, the wheels of a bicycle, what a
 window is made of, what a helicopter can do, what a ladder is used for, which things are pink, where the number
 of legs is found, which attributes a vehicle has.
+
+## Values read from WordNet glosses (KR6, block 15:35)
+
+Shard `things-glosses` (WordNet-3.0; tools/attributes-glosses.mjs): the usual colour, material and abilities of 66
+common things that the catalog lacked, read from the WordNet gloss of the sense kept ("sweet fleshy red fruit":
+strawberry red; "a heavy iron lever": crowbar metal; "a machine that cuts grain": binder can cut). Every value the rules
+propose is checked by hand in `sources/coverage/kr6-audit.tsv`, with the reason for each wrong one, and only the right
+ones are published: of the proposed values, colour 3 of 22 were wrong (a wine "white" by kind), material 8 of 38 (the
+sense kept was not the one people mean: a bumper as a full glass), abilities 7 of 31 (an event, not an ability: a meteor
+hits). The gloss covers little; the rest waits for data (questions.md Q80: Wikidata through WordNet ids, ConceptNet,
+Visual Genome).

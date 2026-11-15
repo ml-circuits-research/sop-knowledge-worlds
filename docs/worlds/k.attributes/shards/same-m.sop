@@ -243,7 +243,7 @@
 @k.attributes.same.mouth.body_part k.attributes.same name=mouth sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.movie_camera.thing k.attributes.same name="movie camera" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mower.thing k.attributes.same name=mower sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.mozzarella.thing k.attributes.same name=mozzarella sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mozzarella.thing k.attributes.same name=mozzarella sense=thing only=true in=k.attributes.thing in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mud.thing k.attributes.same name=mud sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.muesli.food k.attributes.same name=muesli sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.muffin.food k.attributes.same name=muffin sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

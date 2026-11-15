@@ -19,8 +19,8 @@ the place of the dog).
 |---|---:|---:|---:|---|
 | place | 793 (53%) | 322 (21%) | 385 (26%) | `k.scenes.thing` (place) |
 | size | 810 (54%) | 334 (22%) | 356 (24%) | `k.scenes.thing` (size) |
-| colour (usual colour of the thing) | 225 (15%) | 51 (3%) | 1224 (82%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour (the usual one, or said to be any colour) | 312 (21%) | 94 (6%) | 1094 (73%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (usual colour of the thing) | 236 (16%) | 49 (3%) | 1215 (81%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (the usual one, or said to be any colour) | 323 (22%) | 92 (6%) | 1085 (72%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour the thing is drawn in | 753 (50%) | 386 (26%) | 361 (24%) | `k.attributes.drawn` (drawn_colour) |
 | colour of the parts of a drawing | 754 (50%) | 386 (26%) | 360 (24%) | `k.objects.part` (colour) |
 | parts (WordNet, own or inherited) | 541 (36%) | 62 (4%) | 897 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
@@ -28,8 +28,8 @@ the place of the dog).
 | parts (named parts of a drawing) | 645 (43%) | 326 (22%) | 529 (35%) | `k.objects.part` (name) |
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
-| material | 303 (20%) | 107 (7%) | 1090 (73%) | `k.attributes.thing` (material) |
-| what it can do | 276 (18%) | 67 (4%) | 1157 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
+| material | 328 (22%) | 105 (7%) | 1067 (71%) | `k.attributes.thing` (material) |
+| what it can do | 300 (20%) | 64 (4%) | 1136 (76%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
 | what it is used for | 336 (22%) | 147 (10%) | 1017 (68%) | `k.attributes.thing` (used_for) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
@@ -49,7 +49,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 25 (2%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1258 (84%) |
+| `k.attributes` | 1275 (85%) |
 | `k.body` | 4 (0%) |
 | `k.colours` | 73 (5%) |
 | `k.commonsense` | 189 (13%) |
@@ -58,7 +58,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.food` | 147 (10%) |
 | `k.genres` | 1 (0%) |
 | `k.geo` | 20 (1%) |
-| `k.kinds` | 1254 (84%) |
+| `k.kinds` | 1273 (85%) |
 | `k.layouts` | 221 (15%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
@@ -78,7 +78,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `w.diagram` | 2 (0%) |
 | `w.document` | 2 (0%) |
 | `w.face` | 7 (0%) |
-| `w.lang.en` | 52 (3%) |
+| `w.lang.en` | 82 (5%) |
 | `w.list` | 1 (0%) |
 | `w.map` | 3 (0%) |
 | `w.person` | 1 (0%) |

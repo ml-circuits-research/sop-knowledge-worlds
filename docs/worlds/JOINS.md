@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3500
-- one thing everywhere: 3429
+- names carried by facts of more than one world: 3517
+- one thing everywhere: 3446
 - clashes of sense: 71
 
 | sense of the one thing | names |
@@ -32,7 +32,7 @@ and the meat).
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
-| thing | 1729 |
+| thing | 1746 |
 
 ## Clashes of sense
 
@@ -69,7 +69,7 @@ and the meat).
 | herring | **animal**: `k.animals.animal`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
 | kiwi | **animal**: `k.animals.animal`, `k.commonsense.thing`; **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing` |
 | lavender | **plant**: `k.attributes.thing`; **colour**: `k.colours.colour` |
-| lemon | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
+| lemon | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | lilac | **plant**: `k.attributes.number`, `k.attributes.thing`; **colour**: `k.colours.colour`; unsure: `k.objects.stand_in` |
 | lime | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
 | lobster | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
@@ -102,7 +102,7 @@ and the meat).
 | swan | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | tamale | **food**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.city` |
 | toast | **food**: `k.food.food`; **thing**: `k.attributes.drawn`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing` |
-| tomato | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
+| tomato | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | tuna | **animal**: `k.animals.animal`, `k.commonsense.thing`; **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing` |
 | turkey | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; **place**: `k.geo.country` |
 | violet | **plant**: `k.attributes.number`, `k.attributes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
@@ -116,7 +116,7 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2325 |
+| `k.attributes` and `k.objects` | 2331 |
 | `k.objects` and `k.scenes` | 2196 |
 | `k.attributes` and `k.scenes` | 2143 |
 | `k.commonsense` and `k.scenes` | 318 |

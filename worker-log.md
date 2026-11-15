@@ -6170,3 +6170,30 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 
 - KR6: I take abilities (`can` of k.attributes.thing for the 1,500 common things, from WordNet relations and the
   k.actions roles in data). The first worker takes colour and material.
+## 2026-11-15 — first worker: KR6 coverage, what the data here gives (block 15:35)
+
+- From the sources in data, for the 1,500 common things (usual colour missing 82 %, material 73 %, abilities 77 %):
+  - **WordNet glosses** (tools/attributes-glosses.mjs, shard `k.attributes/shards/things-glosses`, WordNet-3.0, 66
+    wires, 12238 bytes): three rules on the gloss of the sense kept (a basic colour in the head noun phrase; a material
+    in the head or after "made of"; the verb of a relative clause that is an action of k.actions), only where the
+    catalog has no value. **Every** proposed value checked by hand (fewer than 50 per attribute, so the audit is the
+    whole set; sources/coverage/kr6-audit.tsv, with why for each wrong one): colour 3 of 22 wrong (14 %), material 8 of
+    38 (21 %), can 7 of 31 (23 %); only the right ones are published, a value the audit has not seen stops the tool.
+    Most wrong ones are WordNet's sense kept not being the one people mean (bumper as a full glass, stretcher as a
+    painter's frame, cowl as an engine cowling). Missing now: colour 81 %, material 71 %, can 76 %.
+  - **WordNet substance meronyms**: 46 things, mostly chemistry (protein, keratin, palmitic acid): not taken.
+  - **Inheritance along k.kinds** (a thing takes its parent's value): measured and refused, it gives nonsense (a star
+    blue from sky, bread made of china from dish, a chicken that flies).
+  - **ConceptNet**: no local copy (the importer needs sources/conceptnet/raw). **Wikidata**: the query service is
+    refused by this machine's proxy (403).
+- [DATA] ask **Q80** (questions.md): Wikidata color / made from material / has use for the items with a WordNet 3.1
+  synset id (P8814, CC0); ConceptNet 5.7 CapableOf / MadeOf / HasProperty / UsedFor (CC BY-SA 4.0); Visual Genome
+  colour attributes (CC BY 4.0); columns and sizes given. (Q78 and Q79 were taken by other workers meanwhile.)
+- Derived: k.kinds `material-wordnet` (30 up edges from the new materials, WordNet licence; its description added to
+  tools/kinds-core.mjs), k.attributes `same-*` (in=k.attributes.thing where a thing gained a value). tests/
+  k.attributes.test.mjs reads the hand-written things by their source (a thing can now also have values of another
+  shard, merged by name). Tests: tests/k.attributes.glosses.test.mjs (3); the touched tests (k.attributes*, k.kinds*,
+  k.diagrams, coverage-report, catalog, validate, repo): 14 files, 78 pass.
+- tools/attributes-glosses.mjs is a step of `npm run build` (before kinds-core, which reads its materials), so its
+  shard is generated (.gitattributes by tools/generated.mjs: merge=regenerate); the audit stays hand-written. A value
+  the rules propose that the audit has not seen stops the build until it is checked.

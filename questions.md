@@ -1125,3 +1125,22 @@ one fact per singular, so a noun with a read-only classical plural from WordNet 
 plateaux, forceps, macaronies) cannot also list the English plural the rules write (hippopotamuses), which then does
 not read back. Allow two plurals per singular (identity singular + plural, the read-only one marked), or keep one?
 Meanwhile: the 6 are listed as known in tests/w.lang.en.catalog-plurals.test.mjs.
+## Q80 [DATA] (block 15:35 KR6, first worker, 2026-11-15): usual colour, material and abilities of the 1,500 common things
+What, three sources, any of which helps (each kept in a shard of its own licence, under k.attributes.thing):
+1. **Wikidata** (CC0): for the items that carry a WordNet 3.1 synset id (P8814; our 1,500 things name their kept sense
+   by its WordNet 3.1 offset, `tools/coverage.mjs`): `color` (P462), `made from material` (P186), `has use` (P366),
+   `instance of` / `subclass of` (P31/P279, to tell a kind from an instance). Columns wanted: synset id, item, label,
+   property, value item, value label. Size: at most a few thousand rows (one SPARQL query per property over the items
+   with P8814). The Wikidata Query Service is not reachable from this machine (the proxy refuses query.wikidata.org).
+2. **ConceptNet 5.7** assertions (CC BY-SA 4.0; `conceptnet-assertions-5.7.0.csv.gz`, 475 MB, of which the English
+   edges are about 3.4 M): the English edges `CapableOf`, `MadeOf`, `HasProperty` (for colours), `UsedFor`, with their
+   weight and dataset. Columns wanted: relation, start, end, weight, dataset. The importer `tools/import/conceptnet.mjs`
+   runs on a local copy in `sources/conceptnet/raw/`; none is here.
+3. **Visual Genome attributes** (CC BY 4.0; `attributes.json`, about 470 MB): object name and its colour attributes, to
+   count the usual colour of a thing from how often it is seen in that colour. Columns wanted: object name (synset
+   where given), attribute, count.
+Why: COVERAGE.md shows the usual colour missing for 82 % of the 1,500 common things, material for 73 %, abilities for
+77 %. From the data here, WordNet's glosses give 66 things (shard `k.attributes/shards/things-glosses`, tools/
+attributes-glosses.mjs, every value checked by hand: colour 3 of 22 wrong, material 8 of 38, can 7 of 31); WordNet's
+substance meronyms are chemistry (protein, keratin) more than materials, and inheriting along k.kinds gives nonsense
+(a star blue from the sky, bread made of china from dish, a chicken that flies). Blocking: no.

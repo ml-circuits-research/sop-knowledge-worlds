@@ -1,4 +1,4 @@
-# w.lang.en/shards/irregular-forms-wordnet: 304 irregular plurals in std.morph's shape, derived from the WordNet plurals of w.lang.en.irregular (shard core-plurals; `from` names the fact, which stays their home); variant=yes: read, never written (antennae)
+# w.lang.en/shards/irregular-forms-wordnet: 305 irregular plurals in std.morph's shape, derived from the WordNet plurals of w.lang.en.irregular (shard core-plurals; `from` names the fact, which stays their home); variant=yes: read, never written (antennae)
 # sources: wordnet 3.1 (noun.exc, the noun exception list of Princeton WordNet 3.1)
 # license: WordNet-3.0
 # script: tools/lang-en-morph.mjs
@@ -14,6 +14,7 @@
 @w.lang.en.irregular_form.auditorium.pl.auditoria w.lang.en.irregular_form lemma=auditorium form=auditoria num=pl variant=yes from=w.lang.en.irregular.wordnet.auditorium core.source="wordnet 3.1"
 @w.lang.en.irregular_form.aura.pl.aurae w.lang.en.irregular_form lemma=aura form=aurae num=pl variant=yes from=w.lang.en.irregular.wordnet.aura core.source="wordnet 3.1"
 @w.lang.en.irregular_form.aurora.pl.aurorae w.lang.en.irregular_form lemma=aurora form=aurorae num=pl variant=yes from=w.lang.en.irregular.wordnet.aurora core.source="wordnet 3.1"
+@w.lang.en.irregular_form.ax.pl.axes w.lang.en.irregular_form lemma=ax form=axes num=pl variant=yes from=w.lang.en.irregular.wordnet.ax core.source="wordnet 3.1"
 @w.lang.en.irregular_form.axis.pl w.lang.en.irregular_form lemma=axis form=axes num=pl core.source="wordnet 3.1"
 @w.lang.en.irregular_form.ban.pl.bani w.lang.en.irregular_form lemma=ban form=bani num=pl variant=yes from=w.lang.en.irregular.wordnet.ban core.source="wordnet 3.1"
 @w.lang.en.irregular_form.bandit.pl.banditti w.lang.en.irregular_form lemma=bandit form=banditti num=pl variant=yes from=w.lang.en.irregular.wordnet.bandit core.source="wordnet 3.1"

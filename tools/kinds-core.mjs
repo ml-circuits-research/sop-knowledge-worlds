@@ -298,6 +298,7 @@ export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
     'feature-wordnet': 'what a thing has, read off the WordNet parts of k.parts: a thing with wheels, a machine (it has an engine or a motor), a thing with wings',
     use: 'what a thing is for (k.attributes used_for) and where a wearable is worn (k.wearables worn_on)',
     material: 'what a thing is made of (k.attributes material)',
+    'material-wordnet': 'what a thing is made of, by the materials k.attributes reads from WordNet glosses (shard things-glosses, KR6): a crowbar is a metal thing',
     diet: 'what an animal eats (k.animals diet): a herbivore, a carnivore, an omnivore',
     part_of: 'what a part belongs to, derived from the usual parts of k.parts (usual has), what people call a part of a thing (k.parts called) and the larger part of a body part (k.body part_of): a leg is part of an ant',
     'part_of-wordnet': 'what a part belongs to, derived from the WordNet parts of k.parts (whole and inherited: has and plain): a fuselage is part of an aeroplane, a car wheel and a wheel of a car',
@@ -313,6 +314,7 @@ export function kindsShards(g = kindsGraph(), worlds = scanWorlds()) {
     if (name.startsWith('group-') && name !== 'group-hand') {
       const hs = [...new Set(es.map((e) => e.licence.id))].map((id) => licenceOf(shardHeaders.get(id)));
       sources = [...new Set(hs.flatMap((h) => h.sources))]; licence = [...new Set(hs.flatMap((h) => h.license))].join(' AND ');
+    } else if (name === 'material-wordnet') { sources = ['wordnet 3.1 (Princeton WordNet 3.1: the materials k.attributes reads from its glosses, shard things-glosses)']; licence = 'WordNet-3.0';
     } else if (/wordnet/.test(name)) { sources = ['wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)']; licence = 'WordNet-3.0'; }
     else { sources = ['hand-core 1 (read from the catalog\'s own facts by tools/kinds-core.mjs)']; licence = 'CC0-1.0'; }
     const groups = es.reduce((m, e) => { const k = e.name[0].toLowerCase(); (m.get(k) ?? m.set(k, []).get(k)).push(line(e)); return m; }, new Map());

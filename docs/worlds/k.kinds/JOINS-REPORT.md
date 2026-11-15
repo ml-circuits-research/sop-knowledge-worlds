@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **228** in 34 worlds; distinct values 10425, meeting a target 10367 (99.4 %), open 58
+- declared joins: **228** in 34 worlds; distinct values 10436, meeting a target 10378 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
 
@@ -45,7 +45,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.attributes | `k.attributes.kind.attribute` | `k.attributes.attribute` | name | 18 | 18 |  |
 | k.attributes | `k.attributes.shows.aspect` | `k.attributes.aspect` | name | 8 | 8 |  |
 | k.attributes | `k.attributes.shows.family` | `k.attributes.family` | name | 19 | 19 |  |
-| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 30 | 20 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
+| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 41 | 31 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
 | k.attributes | `k.attributes.thing.kind` | `k.attributes.kind` | name | 26 | 26 |  |
 | k.attributes | `k.attributes.usage.season` | `k.time.season` | name | 4 | 4 |  |
 | k.attributes | `k.attributes.usage.time` | `k.time.part_of_day` | name | 4 | 4 |  |
@@ -266,8 +266,8 @@ whose slot has an enum is never suggested here (see the last section).
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3500 | 2345 |
-| k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3517 | 2345 |
+| k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 27 | 14 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
@@ -283,7 +283,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4515 | 2287 |
+| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4566 | 2287 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |

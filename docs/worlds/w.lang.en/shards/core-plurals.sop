@@ -1,4 +1,4 @@
-# w.lang.en/shards/core-plurals: 185 irregular plurals of the nouns of k.words that the morphology rules do not read (WordNet's noun exceptions: mice, feet, criteria; the classical and foreign ones read only)
+# w.lang.en/shards/core-plurals: 186 irregular plurals of the nouns of k.words that the morphology rules do not read (WordNet's noun exceptions: mice, feet, criteria; the classical and foreign ones read only)
 # sources: wordnet 3.1 (noun.exc, the noun exception list of Princeton WordNet 3.1)
 # license: WordNet-3.0
 # script: tools/lang-en-core.mjs
@@ -14,6 +14,7 @@
 @w.lang.en.irregular.wordnet.auditorium w.lang.en.irregular singular=auditorium plural=auditoria read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.aura w.lang.en.irregular singular=aura plural=aurae read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.aurora w.lang.en.irregular singular=aurora plural=aurorae read_only=yes core.source="wordnet 3.1"
+@w.lang.en.irregular.wordnet.ax w.lang.en.irregular singular=ax plural=axes read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.ban w.lang.en.irregular singular=ban plural=bani read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.bandit w.lang.en.irregular singular=bandit plural=banditti read_only=yes core.source="wordnet 3.1"
 @w.lang.en.irregular.wordnet.banjo w.lang.en.irregular singular=banjo plural=banjoes read_only=yes core.source="wordnet 3.1"
