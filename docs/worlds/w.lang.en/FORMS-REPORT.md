@@ -9,7 +9,7 @@ irregular form, or a WordNet entry that is no form of that lemma: cola is no plu
 
 - form words left in k.words: 48, of which the library confirms 0 (each confirmed one is dropped by
   `--apply`; 1,459 of the 1,507 WordNet form words were dropped so, reviewer 16:45); listed here: 48.
-- k.actions keeps only the forms w.lang.en does not confirm (tools/actions-core.mjs: wetted).
+- k.actions keeps only the forms w.lang.en does not confirm (the hand-written actions shards: wetted).
 
 ## (no class) (7)
 

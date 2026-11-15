@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **236** in 35 worlds; distinct values 10522, meeting a target 10464 (99.4 %), open 58
+- declared joins: **238** in 36 worlds; distinct values 10522, meeting a target 10464 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
 
@@ -253,6 +253,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.list | `w.list.item.unit` | `k.units.unit` | name | 0 | 0 |  |
 | w.list | `w.list.list.currency` | `k.units.currency` | code | 0 | 0 |  |
 | w.person | `w.person.person.occupation` | `k.people.role` | name | 0 | 0 |  |
+| w.seating | `w.seating.guest.colour` | `k.colours.basic` | name | 0 | 0 |  |
+| w.seating | `w.seating.table.colour` | `k.colours.basic` | name | 0 | 0 |  |
 
 ## Measured cost of declared joins
 

@@ -6410,3 +6410,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
     **f4fcb4f** too.
 - Over 30 s: k.attributes 42.2 s and w.lang.en.library 33.6 s (load average about 7; both 24-27 s when quieter).
   questions.test.mjs 23.9 s. Questions.md Q86.
+
+## 2026-11-15 — second worker: tools/actions-data.mjs into hand-written shards (reviewer 15:00 item 3, first table)
+
+- The five `k.actions/shards/actions-*.sop` are the home of the 192 everyday actions, their near words and the kept
+  form (wetted): 646 wires, byte for byte what the generator wrote, with the header now `# script: none
+  (hand-written)` and a source line saying edits go there. tools/actions-data.mjs and tools/actions-core.mjs are
+  deleted (the forms they held are w.lang.en's since 26ddd3f; nothing derived from the table is lost).
+- What the generator checked is in tests/k.actions.test.mjs: hand-written headers, one fact per name, a known group,
+  opposites and undoing name other actions (both sides), the example uses the verb (by the library's form check).
+- tests/k.actions.effects.test.mjs was red on main since 26ddd3f (the verb forms left k.actions): its verb table now
+  takes the third person and past from w.lang.en through the library's inflectBy; 8 stories read again.
+- Tests: k.actions 4, effects 2, acts, families, w.lang.en.forms, catalog, validate, repo: 37 pass.

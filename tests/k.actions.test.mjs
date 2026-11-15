@@ -3,10 +3,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
-import { actionShards } from '../tools/actions-core.mjs';
+import { WORLDS_DIR, scanWorlds, fullWorld, factsOf, readHeader } from '../tools/lib/worlds.mjs';
 import { formChecker } from '../tools/forms-report.mjs';
-import { ACTIONS } from '../tools/actions-data.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -16,9 +14,14 @@ const check = formChecker();
 const actions = world.ofType('k.actions.action'), similar = world.ofType('k.actions.similar');
 const names = new Set(actions.map((w) => one(w, 'name')));
 
-test('the shards are what tools/actions-core.mjs gives; at least 150 actions', () => {
-  for (const [name, text] of Object.entries(actionShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.actions', 'shards', name), 'utf8'), text, name);
-  assert.equal(actions.length, ACTIONS.length);
+// The actions shards are the home of their facts (reviewer 15:00 item 3): hand-written, no generator; what the
+// generator checked is checked here (one fact per name, groups, opposites and effects on actions of this world).
+const GROUPS = ['move', 'hands', 'make', 'change', 'sense', 'mind', 'talk', 'body', 'social', 'nature'];
+test('the actions shards are hand-written (no script); one fact per action, in a known group; at least 150 actions', () => {
+  const entry = worlds.find((w) => w.id === 'k.actions');
+  for (const sh of entry.shards.filter((x) => /\/actions-/.test(x.id))) assert.equal(readHeader(sh.text).script?.[0], 'none (hand-written)', sh.id);
+  assert.equal(names.size, actions.length, 'an action is there twice');
+  for (const w of actions) assert.ok(GROUPS.includes(one(w, 'group')), w.id);
   assert.ok(actions.length >= 150, `${actions.length} actions`);
   for (const w of [...actions, ...similar]) assert.deepEqual(w.attrs['core.source'], ['"hand-core 1"'], w.id);
 });
@@ -34,8 +37,7 @@ test('every action says who does it, what comes of it and an example; opposites 
     // The example uses the verb: its base form or one of its other forms (for a phrase, the forms of its first word).
     const first = name.split(' ')[0];
     // (the forms are w.lang.en's, KR2: a word of the example is the verb when the pinned library reads it as a form of it)
-    const given = Object.values(ACTIONS.find((a) => a[0] === name)[11] ?? {}).map((f) => f.split(' ')[0]);
-    assert.ok(example.toLowerCase().match(/[a-z'-]+/g).some((x) => x === first || given.includes(x) || check(first, x)), `${w.id}: the example does not use the verb`);
+    assert.ok(example.toLowerCase().match(/[a-z'-]+/g).some((x) => x === first || check(first, x)), `${w.id}: the example does not use the verb`);
     for (const k of ['opposite', 'undone_by']) for (const v of w.attrs[k] ?? []) assert.ok(names.has(tok(v)) && tok(v) !== name, `${w.id}: ${k} ${v}`);
     if (w.attrs.opposite) opposite.set(name, one(w, 'opposite'));
     if (w.attrs.undone_by) undone.set(name, one(w, 'undone_by'));

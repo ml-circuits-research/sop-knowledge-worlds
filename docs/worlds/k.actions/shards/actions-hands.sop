@@ -1,7 +1,7 @@
 # k.actions/shards/actions-hands: 32 actions of handling a thing: who or what does it, to what, with what, where, what comes of it, the opposite and what undoes it, an example; a form of a verb w.lang.en does not have (wetted); and 75 verbs and phrases that mean nearly the same.
-# sources: hand-core 1 (hand-written in this repository: tools/actions-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these facts: edit it here, reviewer 15:00 item 3; written from tools/actions-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/actions-core.mjs
+# script: none (hand-written)
 
 @k.actions.action.hold k.actions.action name=hold group=hands who=person who=monkey object=cup object=hand object=book object=balloon tool=hand result="the thing staying in the hand" holds=set opposite=drop example="A child holds a balloon." core.source="hand-core 1"
 @k.actions.action.carry k.actions.action name=carry group=hands who=person who=ant who=truck object=bag object=box object=baby object=bucket tool=bag tool=basket tool=backpack result="the thing being somewhere else" example="A postman carries a parcel." core.source="hand-core 1"

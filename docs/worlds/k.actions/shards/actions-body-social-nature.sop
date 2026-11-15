@@ -1,7 +1,7 @@
 # k.actions/shards/actions-body-social-nature: 47 actions of the body; with others; what weather, plants and things do: who or what does it, to what, with what, where, what comes of it, the opposite and what undoes it, an example; a form of a verb w.lang.en does not have (wetted); and 121 verbs and phrases that mean nearly the same.
-# sources: hand-core 1 (hand-written in this repository: tools/actions-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these facts: edit it here, reviewer 15:00 item 3; written from tools/actions-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/actions-core.mjs
+# script: none (hand-written)
 
 @k.actions.action.eat k.actions.action name=eat group=body who=person who=animal object=apple object=bread object=grass object=soup object=cake tool=spoon tool=fork tool=mouth where=kitchen where=restaurant where=picnic result="not being hungry; the food being gone" holds=remove example="A rabbit eats a carrot." core.source="hand-core 1"
 @k.actions.action.drink k.actions.action name=drink group=body who=person who=animal object=water object=milk object=juice object=tea tool=cup tool=glass tool=bottle tool=straw where=kitchen where=cafe result="not being thirsty" example="A cat drinks milk." core.source="hand-core 1"

@@ -1,7 +1,7 @@
 # k.actions/shards/actions-make-change: 45 actions of making; changing a thing: who or what does it, to what, with what, where, what comes of it, the opposite and what undoes it, an example; a form of a verb w.lang.en does not have (wetted); and 107 verbs and phrases that mean nearly the same.
-# sources: hand-core 1 (hand-written in this repository: tools/actions-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these facts: edit it here, reviewer 15:00 item 3; written from tools/actions-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/actions-core.mjs
+# script: none (hand-written)
 
 @k.actions.action.make k.actions.action name=make group=make who=person who=bird who=bee object=cake object=toy object=nest object=noise tool=hand where=workshop where=kitchen result="a new thing" opposite=destroy undone_by=destroy example="A bird makes a nest from twigs." core.source="hand-core 1"
 @k.actions.action.build k.actions.action name=build group=make who=person who=bird who=beaver object=house object=tower object=bridge object=sandcastle object=nest tool=brick tool=hammer tool=crane where="construction site" where=beach result="a new building or thing that stands" opposite="knock down" undone_by="knock down" example="Builders build a house from bricks." core.source="hand-core 1"

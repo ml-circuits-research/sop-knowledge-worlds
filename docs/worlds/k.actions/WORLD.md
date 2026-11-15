@@ -106,7 +106,7 @@ talk about what things do, and for giving a verb in a sentence its usual roles.
 ### Shards
 
 `actions-move` (30 actions), `actions-hands` (29), `actions-make-change` (45), `actions-mind-talk` (37),
-`actions-body-social-nature` (46); 816 wires, written by `tools/actions-core.mjs` from `tools/actions-data.mjs`.
+`actions-body-social-nature` (46); 816 wires, hand-written: the shards are the home of these facts (edit them there; reviewer 15:00 item 3, until 2026-11-15 they were written from a JS table).
 
 ### Joins
 

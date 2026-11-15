@@ -6,7 +6,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { scanWorlds, factsOf } from '../tools/lib/worlds.mjs';
-import { storyState } from '../tools/sopworld/sopworld.mjs';
+import { storyState, inflectBy } from '../tools/sopworld/sopworld.mjs';
+import { enWorld } from '../tools/lib/lang-en.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
@@ -30,7 +31,8 @@ test('K5: the actions a word problem tells carry their typed effect; buy, spend 
 // money effect, for a story that counts money: "spends 3 lei").
 const verbs = {};
 for (const [name, e] of effect) {
-  const words = [name, ...vals(forms.find((w) => one(w, 'means') === name) ?? { attrs: {} }, 'text')].filter((w) => !w.includes(' '));
+  // the forms of a verb are w.lang.en's (KR2, 26ddd3f): the library's inflectBy writes them (third person, past)
+  const words = [name, ...['third', 'past'].map((op) => inflectBy(enWorld(), name, op)), ...vals(forms.find((w) => one(w, 'means') === name) ?? { attrs: {} }, 'text')].filter((w) => w && !w.includes(' '));
   for (const w of words) verbs[w] = e.holds ?? e.money;
 }
 const EN = { verbs, pronouns: ['she', 'he', 'they'], question: ['how', 'many'], all: ['together', 'altogether', 'total'], skip: ['more', 'the', 'a', 'to', 'does', 'do', 'now', 'left', 'in', 'of'] };

@@ -1,7 +1,7 @@
 # k.actions/shards/actions-move: 31 actions of moving oneself: who or what does it, to what, with what, where, what comes of it, the opposite and what undoes it, an example; a form of a verb w.lang.en does not have (wetted); and 59 verbs and phrases that mean nearly the same.
-# sources: hand-core 1 (hand-written in this repository: tools/actions-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these facts: edit it here, reviewer 15:00 item 3; written from tools/actions-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/actions-core.mjs
+# script: none (hand-written)
 
 @k.actions.action.walk k.actions.action name=walk group=move who=person who=animal where=park where="city street" where=forest result="being somewhere else" example="A person walks through the park." core.source="hand-core 1"
 @k.actions.action.run k.actions.action name=run group=move who=person who=animal where=park where=playground where="football pitch" result="being somewhere else fast" example="A dog runs across the field." core.source="hand-core 1"
