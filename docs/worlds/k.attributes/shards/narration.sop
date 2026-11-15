@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1084 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (277 of 1086 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -32,10 +32,12 @@
 @k.attributes.narration.k.actions.action.who k.attributes.narration type=k.actions.action key=who narrate=yes salience=0.5 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.actions.action.object k.attributes.narration type=k.actions.action key=object narrate=yes salience=0.43 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.actions.action.tool k.attributes.narration type=k.actions.action key=tool narrate=yes salience=0.43 form=relation basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.actions.action.where k.attributes.narration type=k.actions.action key=where narrate=yes salience=0.17 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.actions.action.where k.attributes.narration type=k.actions.action key=where narrate=yes salience=0.16 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.actions.action.result k.attributes.narration type=k.actions.action key=result narrate=yes salience=0.5 form=text basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.actions.action.holds k.attributes.narration type=k.actions.action key=holds narrate=yes salience=0.02 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.actions.action.money k.attributes.narration type=k.actions.action key=money narrate=yes salience=0.01 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.actions.action.opposite k.attributes.narration type=k.actions.action key=opposite narrate=yes salience=0.33 form=relation basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.actions.action.undone_by k.attributes.narration type=k.actions.action key=undone_by narrate=yes salience=0.49 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.actions.action.undone_by k.attributes.narration type=k.actions.action key=undone_by narrate=yes salience=0.48 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.actions.action.example k.attributes.narration type=k.actions.action key=example narrate=yes salience=0.5 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.actions.similar.name k.attributes.narration type=k.actions.similar key=name narrate=no salience=0 why="machinery: the words of everyday actions" core.source="hand-core 1"
 @k.attributes.narration.k.actions.similar.action k.attributes.narration type=k.actions.similar key=action narrate=no salience=0 why="machinery: the words of everyday actions" core.source="hand-core 1"

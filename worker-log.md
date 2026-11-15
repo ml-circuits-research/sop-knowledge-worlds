@@ -5772,3 +5772,20 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   take k.named; 11 drawing slots in 8 worlds).
 - Tests: tests/generators.test.mjs (new, 3), tests/counts.test.mjs (new, 2: every marker fresh; the review's stale
   places are markers).
+
+
+## 2026-11-15 — second worker: K5, typed possession effects on k.actions (block 09:20; real rows r0194, r0195, r0201, r0542)
+
+- `k.actions.action` gains `holds` (enum add, remove, give, set) and `money` (enum add, remove); k.actions version 4.
+  17 actions carry them (`EFFECTS` in tools/actions-data.mjs, written by tools/actions-core.mjs): holds=add find, get,
+  receive, get back, win, buy; remove lose, eat, break, fly away, leave, sell; give give; set have, hold; money=remove
+  buy, spend, pay; money=add sell. `result` stays the gloss.
+- Five actions added for them (192 actions, was 187): get, get back, have (hands), fly away (move), spend (social),
+  each with who, object, tool, result, example, forms (got, gets back, has, flew away, spent) and near words; "get" and
+  "have" are no longer near words of take, receive, eat and wear (an action stands for itself).
+- `tests/k.actions.effects.test.mjs`: the asked verbs carry their effects; storyState of the pinned build reads 8
+  stories (buy, eat, give both ways, lose + find, get + receive, spend lei, together) with a verb table built from the
+  shards (each action and its forms -> holds, else money), none written by hand. For the library (L1): read
+  `k.actions.action holds= money=` and the action's `core.word` forms.
+- main was red on `tests/coverage-report.test.mjs` again (COVERAGE.md and ASPECTS.md stale after the KR1 material /
+  size commits); `npm run reports` regenerated them, carried in this commit.

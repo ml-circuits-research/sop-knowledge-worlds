@@ -11,6 +11,7 @@ export const ACTIONS = [
   ['climb', 'move', 'person, animal', 'tree, ladder, mountain, stairs', 'ladder, rope', 'mountains, playground, forest', 'being higher up', '', '', 'A monkey climbs a tree.', 'scale, clamber', {}],
   ['swim', 'move', 'person, fish, animal', '', '', 'swimming pool, lake, river, beach', 'moving through water', '', '', 'A fish swims in the sea.', 'paddle', { past: 'swam', ing: 'swimming' }],
   ['fly', 'move', 'bird, insect, plane, kite, balloon', '', 'wing', 'night, airport, space', 'moving through the air', '', '', 'Birds and planes fly.', 'soar, glide', { past: 'flew', third: 'flies' }],
+  ['fly away', 'move', 'bird, butterfly, balloon, insect', '', 'wing', '', 'not being there any more', '', '', 'Two of the birds fly away.', 'take off, flutter off, fly off', { past: 'flew away', third: 'flies away', ing: 'flying away' }],
   ['crawl', 'move', 'baby, insect, snake', '', '', '', 'moving close to the ground', '', '', 'A baby crawls across the floor.', 'creep', {}],
   ['fall', 'move', 'person, leaf, rain, apple', '', '', '', 'being lower down, on the ground', 'rise', '', 'Leaves fall from the tree in autumn.', 'drop down, tumble', { past: 'fell' }],
   ['rise', 'move', 'sun, balloon, smoke', '', '', '', 'being higher up', 'fall', '', 'The sun rises in the morning.', 'go up, come up', { past: 'rose', ing: 'rising' }],
@@ -48,6 +49,9 @@ export const ACTIONS = [
   ['pick up', 'hands', 'person', 'ball, toy, book, baby', 'hand', '', 'the thing being in the hand', '', 'put', 'She picks up the toys from the floor.', 'gather, collect', { past: 'picked up', third: 'picks up', ing: 'picking up' }],
   ['put', 'hands', 'person', 'cup, book, toy, plate', 'hand', '', 'the thing being in its new place', '', 'take', 'She puts the cup on the table.', 'place, set, lay, put down', { past: 'put', ing: 'putting' }],
   ['take', 'hands', 'person, animal', 'book, apple, toy', 'hand', '', 'having the thing', 'give', 'put', 'He takes an apple from the bowl.', 'grab, get, remove', { past: 'took', ing: 'taking' }],
+  ['get', 'hands', 'person, animal', 'present, apple, letter, ticket', 'hand', '', 'having the thing', '', '', 'Tom gets two apples from his grandmother.', 'obtain, come by, be given', { past: 'got', ing: 'getting' }],
+  ['get back', 'hands', 'person', 'ball, book, money, change', 'hand', '', 'having the thing again', '', '', 'She gets back two lei in change.', 'recover, take back, be given back', { past: 'got back', third: 'gets back', ing: 'getting back' }],
+  ['have', 'hands', 'person, animal', 'apple, toy, pet, book', '', '', 'the thing being one\'s own', '', '', 'Ana has five apples.', 'own, possess, have got', { past: 'had', third: 'has', ing: 'having' }],
   ['give', 'hands', 'person', 'present, flower, book, food', 'hand', 'birthday party, Christmas', 'another having the thing', 'take', 'take', 'A child gives a present to a friend.', 'hand over, pass, offer', { past: 'gave', ing: 'giving' }],
   ['open', 'hands', 'person', 'door, window, box, book, bottle, umbrella', 'key, hand', '', 'the thing being open', 'close', 'close', 'She opens the door with a key.', 'unlock, unwrap', {}],
   ['close', 'hands', 'person', 'door, window, box, book, eyes', 'hand', '', 'the thing being closed', 'open', 'open', 'He closes the window.', 'shut, lock', { ing: 'closing' }],
@@ -182,6 +186,7 @@ export const ACTIONS = [
   ['feed', 'social', 'person, bird', 'baby, cat, hen, duck, fish', 'bottle, spoon, bowl, hay', 'farm, zoo, park', 'another not being hungry', '', '', 'The farmer feeds the hens.', 'give food to, nourish', { past: 'fed' }],
   ['buy', 'social', 'person', 'bread, ticket, toy, shoes', 'money, shopping bags, shopping cart', 'supermarket, market', 'having the thing, and less money', 'sell', '', 'She buys bread at the market.', 'purchase, shop for, pay for', { past: 'bought' }],
   ['sell', 'social', 'person, shopkeeper', 'bread, flowers, tickets, fruit', 'balance scale, money', 'supermarket, market', 'having money, and the thing gone', 'buy', '', 'The baker sells bread.', 'offer for sale, trade', { past: 'sold' }],
+  ['spend', 'social', 'person', 'money, coin', 'money', 'supermarket, market', 'having less money', '', '', 'She spends ten lei on fruit.', 'pay out, use up', { past: 'spent' }],
   ['pay', 'social', 'person', 'bill, ticket, shopkeeper', 'money, coin', 'supermarket, restaurant, cafe', 'the other having the money', '', '', 'He pays for the tickets.', 'pay for, settle, hand over money', { past: 'paid' }],
   ['win', 'social', 'person, team, horse', 'game, race, prize, cup', '', 'football pitch, fairground', 'being first or best', '', '', 'Her team wins the game.', 'come first, triumph, beat the others', { past: 'won', ing: 'winning' }],
   ['send', 'social', 'person', 'letter, parcel, message, postcard', 'envelope, postbox, phone', '', 'the thing being on its way to another', 'receive', '', 'She sends a postcard to her friend.', 'post, mail, dispatch', { past: 'sent' }],
@@ -201,3 +206,17 @@ export const ACTIONS = [
   ['hatch', 'nature', 'chick, bird, turtle, crocodile', 'egg', '', 'farm, spring', 'a young animal out of its egg', '', '', 'A chick hatches from the egg.', 'come out of the egg, break out', { third: 'hatches' }],
   ['ring', 'nature', 'bell, phone, alarm clock', '', '', 'classroom', 'a clear sound', '', '', 'The school bell rings.', 'chime, sound, jingle', { past: 'rang' }],
 ];
+
+// Typed possession effects (reviewer block 2026-11-15 09:20, PSys2 Q18 K5): what an action does to what its doer holds,
+// for a reader of word problems (the library's storyState takes its verbs from these). `holds`: add (the doer has
+// more of the thing: find, get, receive), remove (less: lose, eat, break, a bird that flies away), give (the thing
+// goes to another: give), set (the doer holds that many: have, hold); `money`: add or remove (the doer's money goes up
+// or down: buy, spend, pay; sell). The free-text `result` stays the gloss.
+export const EFFECTS = {
+  find: { holds: 'add' }, get: { holds: 'add' }, receive: { holds: 'add' }, 'get back': { holds: 'add' }, win: { holds: 'add' },
+  buy: { holds: 'add', money: 'remove' }, sell: { holds: 'remove', money: 'add' },
+  lose: { holds: 'remove' }, eat: { holds: 'remove' }, break: { holds: 'remove' }, 'fly away': { holds: 'remove' }, leave: { holds: 'remove' },
+  give: { holds: 'give' },
+  spend: { money: 'remove' }, pay: { money: 'remove' },
+  hold: { holds: 'set' }, have: { holds: 'set' },
+};

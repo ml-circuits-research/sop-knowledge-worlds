@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-actions: the keys of the types of k.actions read as relations: 41 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-actions: the keys of the types of k.actions read as relations: 43 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -12,6 +12,8 @@
 @k.kinds.relation.k.actions.action.tool k.kinds.relation type=k.actions.action key=tool subject=action object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.where k.kinds.relation type=k.actions.action key=where subject=action object=place object_type=k.scenes.scene found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.result k.kinds.relation type=k.actions.action key=result subject=action object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.actions.action.holds k.kinds.relation type=k.actions.action key=holds subject=action object=value found=schema core.source="hand-core 1"
+@k.kinds.relation.k.actions.action.money k.kinds.relation type=k.actions.action key=money subject=action object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.opposite k.kinds.relation type=k.actions.action key=opposite subject=action object=act object_type=k.actions.action found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.undone_by k.kinds.relation type=k.actions.action key=undone_by subject=action object=act object_type=k.actions.action found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.example k.kinds.relation type=k.actions.action key=example subject=action object=text found=schema core.source="hand-core 1"

@@ -12804,7 +12804,11 @@
   "k.actions/shards/actions-body-social-nature"
  ],
  "be given": [
-  "k.actions/shards/actions-body-social-nature"
+  "k.actions/shards/actions-body-social-nature",
+  "k.actions/shards/actions-hands"
+ ],
+ "be given back": [
+  "k.actions/shards/actions-hands"
  ],
  "be grateful to": [
   "k.actions/shards/actions-body-social-nature"
@@ -30332,6 +30336,9 @@
  ],
  "come across": [
   "k.actions/shards/actions-mind-talk"
+ ],
+ "come by": [
+  "k.actions/shards/actions-hands"
  ],
  "come first": [
   "k.actions/shards/actions-body-social-nature"
@@ -53166,6 +53173,9 @@
   "k.actions/shards/actions-move",
   "k.words/shards/fl"
  ],
+ "flew away": [
+  "k.actions/shards/actions-move"
+ ],
  "flex": [
   "k.words/shards/fl",
   "k.words/shards/frequency-f"
@@ -53179,6 +53189,9 @@
   "k.animals/shards/invertebrates",
   "k.words/shards/fl",
   "k.words/shards/frequency-f"
+ ],
+ "flies away": [
+  "k.actions/shards/actions-move"
  ],
  "flight": [
   "k.words/shards/fl",
@@ -53612,6 +53625,9 @@
   "k.objects/shards/noto-clothing-03",
   "k.objects/shards/noto-plant-other-02"
  ],
+ "flutter off": [
+  "k.actions/shards/actions-move"
+ ],
  "fluttering": [
   "k.objects/shards/noto-plant-other-02"
  ],
@@ -53641,6 +53657,12 @@
   "k.objects/shards/noto-money-01",
   "k.objects/shards/noto-transport-air-01"
  ],
+ "fly away": [
+  "k.actions/shards/actions-move"
+ ],
+ "fly off": [
+  "k.actions/shards/actions-move"
+ ],
  "flyer": [
   "k.words/shards/fl",
   "k.words/shards/frequency-f"
@@ -53653,6 +53675,9 @@
   "k.objects/shards/noto-sport-02",
   "k.objects/shards/noto-transport-air-01",
   "k.objects/shards/noto-transport-air-02"
+ ],
+ "flying away": [
+  "k.actions/shards/actions-move"
  ],
  "flying disc": [
   "k.attributes/shards/drawn-noto",
@@ -59288,12 +59313,12 @@
   "k.words/shards/ge"
  ],
  "get": [
-  "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/actions-hands",
   "k.words/shards/frequency-g",
   "k.words/shards/ge"
  ],
  "get back": [
+  "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-load",
   "k.actions/shards/verbs-redo"
  ],
@@ -59319,9 +59344,19 @@
   "k.words/shards/frequency-g",
   "k.words/shards/ge"
  ],
+ "gets": [
+  "k.actions/shards/actions-hands"
+ ],
+ "gets back": [
+  "k.actions/shards/actions-hands"
+ ],
  "getting": [
+  "k.actions/shards/actions-hands",
   "k.words/shards/frequency-g",
   "k.words/shards/ge"
+ ],
+ "getting back": [
+  "k.actions/shards/actions-hands"
  ],
  "getup": [
   "k.words/shards/ge"
@@ -60769,7 +60804,11 @@
   "k.words/shards/go"
  ],
  "got": [
+  "k.actions/shards/actions-hands",
   "k.words/shards/ge"
+ ],
+ "got back": [
+  "k.actions/shards/actions-hands"
  ],
  "gothenburg": [
   "k.geo/shards/europe"
@@ -63425,6 +63464,7 @@
   "k.words/shards/ha"
  ],
  "had": [
+  "k.actions/shards/actions-hands",
   "k.words/shards/ha"
  ],
  "hadejia": [
@@ -64826,6 +64866,7 @@
   "k.geo/shards/europe"
  ],
  "has": [
+  "k.actions/shards/actions-hands",
   "k.attributes/shards/aspects",
   "k.attributes/shards/attributes",
   "k.attributes/shards/narration",
@@ -65055,6 +65096,7 @@
   "k.words/shards/ha"
  ],
  "have": [
+  "k.actions/shards/actions-hands",
   "k.parts/schema.sop",
   "k.scenes/schema.sop",
   "k.words/shards/frequency-h",
@@ -65074,6 +65116,9 @@
  "have fun": [
   "k.actions/shards/actions-body-social-nature"
  ],
+ "have got": [
+  "k.actions/shards/actions-hands"
+ ],
  "have on": [
   "k.actions/shards/actions-body-social-nature"
  ],
@@ -65087,6 +65132,9 @@
  ],
  "havent": [
   "w.lang.en/shards/closed-classes"
+ ],
+ "having": [
+  "k.actions/shards/actions-hands"
  ],
  "havoc": [
   "k.words/shards/frequency-h",
@@ -91175,11 +91223,14 @@
   "k.time/shards/calendar"
  ],
  "money": [
+  "k.actions/schema.sop",
   "k.attributes/shards/drawn-mulberry",
+  "k.attributes/shards/narration",
   "k.attributes/shards/same-m",
   "k.kinds/shards/classes",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/group-noto",
+  "k.kinds/shards/relations-actions",
   "k.objects/shards/mulberry-money-01",
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-m",
@@ -97567,6 +97618,7 @@
   "k.words/shards/ob"
  ],
  "obtain": [
+  "k.actions/shards/actions-hands",
   "k.words/shards/frequency-o",
   "k.words/shards/ob"
  ],
@@ -100031,6 +100083,7 @@
   "k.animals/shards/birds"
  ],
  "own": [
+  "k.actions/shards/actions-hands",
   "k.attributes/schema.sop",
   "k.attributes/shards/narration",
   "k.attributes/shards/ranges",
@@ -102227,6 +102280,9 @@
   "k.actions/shards/actions-mind-talk"
  ],
  "pay for": [
+  "k.actions/shards/actions-body-social-nature"
+ ],
+ "pay out": [
   "k.actions/shards/actions-body-social-nature"
  ],
  "payback": [
@@ -107647,6 +107703,7 @@
   "k.words/shards/po"
  ],
  "possess": [
+  "k.actions/shards/actions-hands",
   "k.words/shards/frequency-p",
   "k.words/shards/po"
  ],
@@ -112450,6 +112507,7 @@
   "k.actions/shards/actions-mind-talk"
  ],
  "recover": [
+  "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-load",
   "k.words/shards/frequency-r",
   "k.words/shards/re"
@@ -128997,14 +129055,20 @@
   "k.words/shards/sp"
  ],
  "spend": [
+  "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
  "spending": [
+  "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
+ "spends": [
+  "k.actions/shards/actions-body-social-nature"
+ ],
  "spent": [
+  "k.actions/shards/actions-body-social-nature",
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
@@ -135108,6 +135172,7 @@
   "k.actions/shards/verbs-remove"
  ],
  "take back": [
+  "k.actions/shards/actions-hands",
   "k.actions/shards/verbs-undo"
  ],
  "take off": [
@@ -145249,6 +145314,9 @@
   "k.people/schema.sop",
   "k.words/shards/frequency-u",
   "k.words/shards/us"
+ ],
+ "use up": [
+  "k.actions/shards/actions-body-social-nature"
  ],
  "used": [
   "k.attributes/schema.sop",

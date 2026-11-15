@@ -90,6 +90,12 @@ talk about what things do, and for giving a verb in a sentence its usual roles.
   `where` (many: a `k.scenes` scene); `result` (a short phrase: melt gives `"a liquid"`); `opposite` (82 actions;
   always said from both sides: push and pull, float and sink, buy and sell); `undone_by` (53 actions: tie and
   untie, fold and unfold, melt and freeze, break is undone by mend); `example` (one sentence that uses the verb).
+- Typed possession effects (reviewer 09:20, PSys2 Q18 K5), on 17 actions, for a reader of word problems (the
+  library's storyState takes its verbs from them): `holds` add (find, get, receive, get back, win, buy), remove (lose,
+  eat, break, fly away, leave, sell), give (give: the thing goes to another), set (have, hold: the doer holds that
+  many); `money` remove (buy, spend, pay) or add (sell). `result` stays the gloss in words. get, get back, have, spend
+  and fly away were added as actions for them. `tests/k.actions.effects.test.mjs` reads stories with the pinned
+  storyState and a verb table taken from these facts.
 - `core.word` facts: the other forms of every verb (cuts, cut, cutting; flies, flew, flying), worked out by rule
   with the irregular forms given by hand; all read.
 - `k.actions.similar` (identity `name`, `action`): 442 verbs and phrases that mean nearly the same as an action or

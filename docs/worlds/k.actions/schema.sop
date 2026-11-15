@@ -7,7 +7,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards are written by tools/acts-core.mjs
 
-@k.actions core.module name=k.actions version=3 imports=k.named exports=act exports=role exports=verb exports=marking exports=action exports=similar exports=family exports=member core.source="hand-core 1"
+@k.actions core.module name=k.actions version=4 imports=k.named exports=act exports=role exports=verb exports=marking exports=action exports=similar exports=family exports=member core.source="hand-core 1"
 
 # An act: one of the few things a person can ask for, whatever the things are. `about` says it in plain words;
 # `opposite` names the act that does the contrary, where there is one; `role` names the roles the act takes (many).
@@ -78,6 +78,12 @@
 @k.actions.action.tool core.slot of=k.actions.action key=tool many=true kind=atom kind=string type=k.objects.object by=name core.source="hand-core 1"
 @k.actions.action.where core.slot of=k.actions.action key=where many=true kind=atom kind=string type=k.scenes.scene by=name core.source="hand-core 1"
 @k.actions.action.result core.slot of=k.actions.action key=result required=true kind=string core.source="hand-core 1"
+# Typed possession effects (reviewer 09:20, PSys2 Q18 K5): what the action does to what its doer holds, for a reader of
+# word problems (the library's storyState): `holds` add (find, get, receive), remove (lose, eat, break, fly away), give
+# (the thing goes to another: give), set (the doer holds that many: have, hold); `money` add or remove (buy, spend, pay;
+# sell). `result` stays the gloss in words.
+@k.actions.action.holds core.slot of=k.actions.action key=holds enum=add enum=remove enum=give enum=set core.source="hand-core 1"
+@k.actions.action.money core.slot of=k.actions.action key=money enum=add enum=remove core.source="hand-core 1"
 @k.actions.action.opposite core.slot of=k.actions.action key=opposite kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
 @k.actions.action.undone_by core.slot of=k.actions.action key=undone_by kind=atom kind=string type=k.actions.action by=name core.source="hand-core 1"
 @k.actions.action.example core.slot of=k.actions.action key=example required=true kind=string core.source="hand-core 1"
@@ -141,6 +147,8 @@
 @k.actions.word.key.marking.role core.word text=role means=k.actions.marking.role core.source="hand-core 1"
 @k.actions.word.key.action.group core.word text=group means=k.actions.action.group core.source="hand-core 1"
 @k.actions.word.key.action.object core.word text=object means=k.actions.action.object core.source="hand-core 1"
+@k.actions.word.key.action.holds core.word text=holds means=k.actions.action.holds core.source="hand-core 1"
+@k.actions.word.key.action.money core.word text=money means=k.actions.action.money core.source="hand-core 1"
 @k.actions.word.key.action.undone_by core.word text="undone by" means=k.actions.action.undone_by core.source="hand-core 1"
 @k.actions.word.key.action.example core.word text=example means=k.actions.action.example core.source="hand-core 1"
 @k.actions.word.key.similar.action core.word text=action means=k.actions.similar.action core.source="hand-core 1"

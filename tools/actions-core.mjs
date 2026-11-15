@@ -6,7 +6,7 @@
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, text, writeShards } from './import/lib.mjs';
-import { ACTIONS } from './actions-data.mjs';
+import { ACTIONS, EFFECTS } from './actions-data.mjs';
 
 const SRC = 'hand-core 1';
 const list = (v) => (v ? v.split(',').map((x) => x.trim()).filter(Boolean) : []);
@@ -26,6 +26,7 @@ export function formsOf(verb, given = {}) {
 export function actionShards() {
   const names = new Set(ACTIONS.map((a) => a[0]));
   if (names.size !== ACTIONS.length) throw new Error('an action is there twice');
+  for (const v of Object.keys(EFFECTS)) if (!names.has(v)) throw new Error(`effect of ${v}: no such action`);
   const byShard = new Map();
   for (const [name, group, who, object, tool, where, result, opposite, undone, example, similar, forms] of ACTIONS) {
     if (!GROUPS[group]) throw new Error(`${name}: group ${group}`);
@@ -35,7 +36,7 @@ export function actionShards() {
     const b = byShard.get(s);
     b.groups.add(group);
     b.actions.push(wire(`k.actions.action.${seg(name)}`, 'k.actions.action', [['name', name], ['group', group], ...list(who).map((v) => ['who', v]), ...list(object).map((v) => ['object', v]), ...list(tool).map((v) => ['tool', v]),
-      ...list(where).map((v) => ['where', v]), ['result', text(result)], ['opposite', opposite], ['undone_by', undone], ['example', text(example)]], SRC));
+      ...list(where).map((v) => ['where', v]), ['result', text(result)], ['holds', EFFECTS[name]?.holds], ['money', EFFECTS[name]?.money], ['opposite', opposite], ['undone_by', undone], ['example', text(example)]], SRC));
     b.words.push(wire(`k.actions.word.action.${seg(name)}`, 'core.word', [...[...new Set(formsOf(name, forms))].filter((f) => f !== name).map((f) => ['text', f]), ['means', name], ['of', 'k.actions.action.name']], SRC));
     for (const w of list(similar)) {
       if (names.has(w)) continue; // a verb that is an action itself stands for itself (hop is not listed under jump)

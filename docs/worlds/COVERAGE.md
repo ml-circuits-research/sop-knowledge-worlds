@@ -28,12 +28,12 @@ the place of the dog).
 | parts (named parts of a drawing) | 645 (43%) | 326 (22%) | 529 (35%) | `k.objects.part` (name) |
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
-| material | 303 (20%) | 107 (7%) | 1090 (73%) | `k.attributes.thing` (material), `k.commonsense.thing` (made_of) |
+| material | 303 (20%) | 107 (7%) | 1090 (73%) | `k.attributes.thing` (material) |
 | what it can do | 276 (18%) | 67 (4%) | 1157 (77%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 336 (22%) | 147 (10%) | 1017 (68%) | `k.attributes.thing` (used_for), `k.commonsense.thing` (used_for) |
+| what it is used for | 336 (22%) | 147 (10%) | 1017 (68%) | `k.attributes.thing` (used_for) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
-| size in metres (the longest side) | 975 (65%) | 71 (5%) | 454 (30%) | `k.attributes.number` (size_about) |
+| size in metres (the longest side) | 970 (65%) | 69 (5%) | 461 (31%) | `k.attributes.number` (size_about) |
 | weight in kilograms | 855 (57%) | 43 (3%) | 602 (40%) | `k.attributes.number` (weight_about), `k.body.part` (weight_about) |
 | speed (top speed in km/h) | 232 (15%) | 20 (1%) | 1248 (83%) | `k.attributes.number` (speed_about) |
 | price class | 645 (43%) | 47 (3%) | 808 (54%) | `k.attributes.number` (price_class) |
@@ -58,7 +58,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.food` | 147 (10%) |
 | `k.genres` | 1 (0%) |
 | `k.geo` | 20 (1%) |
-| `k.kinds` | 1238 (83%) |
+| `k.kinds` | 1254 (84%) |
 | `k.layouts` | 210 (14%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
