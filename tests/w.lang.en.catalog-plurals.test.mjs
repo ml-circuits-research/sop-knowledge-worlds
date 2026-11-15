@@ -15,7 +15,7 @@ const dir = join(WORLDS_DIR, 'w.lang.en', 'shards');
 const en = readdirSync(dir).filter((f) => f.endsWith('.sop')).flatMap((f) => parse(readFileSync(join(dir, f), 'utf8')));
 const facts = { inflect: en.filter((w) => w.type === 'w.lang.en.inflect'), irregular: en.filter((w) => w.type === 'w.lang.en.irregular'), exceptions: en.filter((w) => w.type === 'w.lang.en.noun.exception') };
 // WordNet lists a classical plural (read only) for these singulars, and one singular has one irregular fact: the
-// English plural the rules write does not read back (questions.md Q78)
+// English plural the rules write does not read back (questions.md Q79)
 const KNOWN = ['forceps', 'hippopotamus', 'iris', 'macaroni', 'mantis', 'plateau'];
 const sg = (w) => inflect(facts, w, 'singular', 'lemma'), pl = (w) => inflect(facts, w, 'plural');
 

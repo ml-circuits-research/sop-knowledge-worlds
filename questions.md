@@ -1116,7 +1116,7 @@ Context: done and on main: `w.lang.en.fn` (61 function words by view), the k.fee
    library's template notation) and leave the rules. Meanwhile: the `why` texts stay in the rules.
 Blocking: no (the other KR3 items go on world by world once 1 is answered).
 
-## Q78 [LIB] (reviewer 14:45 KR2 item 4, fourth worker, 2026-11-15): two plurals of one singular, and "the singular of a listed pair is a singular"
+## Q79 [LIB] (reviewer 14:45 KR2 item 4, fourth worker, 2026-11-15): two plurals of one singular, and "the singular of a listed pair is a singular"
 
 Context: w.lang.en shard catalog-plurals lists the catalog nouns whose plural the rules do not read both ways. (1) The
 reference reader now treats the singular of a `w.lang.en.irregular` pair as a singular ("lens" is no plural of "len",
