@@ -1,12 +1,14 @@
 # w.timeline: a reusable world: timelines of events in order of time (the life of a person, the history of a town,
 # the plan of a project, a day). Declared in the library's std.schema format; the acts of std.acts drive it; four
-# denies keep an event inside its timeline and its end after its start; it has no function of its own.
+# denies keep an event inside its timeline and its end after its start; it has no function of its own. Version 3
+# (Q89, a superset of version 2): an event has the aspect w.timeline.temporal, the view w.timeline shows it, and the
+# act show applies to events.
 # sources: hand-core 1 (hand-written in this repository)
 # license: CC0-1.0
 # script: none (hand-written)
 # needs: sopworld with std.schema and std.acts (tools/sopworld/VERSION, 0.30.0 or later)
 
-@w.timeline core.module name=w.timeline version=2 exports=timeline exports=event core.source="hand-core 1"
+@w.timeline core.module name=w.timeline version=3 exports=timeline exports=event core.source="hand-core 1"
 @w.timeline.world std.schema.world name=w.timeline doc="timelines: events in order of time" core.source="hand-core 1"
 
 # A timeline. `name`; `unit` says what the numbers of its events count (the year, the day of a plan, the hour of a
@@ -50,9 +52,13 @@
 @w.timeline.order.ends core.deny when=$w.timeline.order.event if=$w.timeline.order.earlier why="An event does not end before it begins: until ?until is before ?at." core.source="hand-core 1"
 
 # The kinds and the acts that apply to them. Events can be linked (connect: leads to, causes) and grouped (an
-# age, a phase). At most 20 timelines and 1,000 events.
+# age, a phase), and shown (show: what the timeline shows, each event with the keys of its aspect, the temporal
+# aspect of k.attributes: when a thing is, how long it lasts, what comes before and after). At most 20 timelines and
+# 1,000 events.
 @w.timeline.kind.timeline std.schema.kind of=w.timeline.timeline world=w.timeline acts=make acts=remove acts=change acts=pick acts=ask acts=copy core.source="hand-core 1"
-@w.timeline.kind.event std.schema.kind of=w.timeline.event world=w.timeline acts=make acts=remove acts=change acts=connect acts=group acts=pick acts=ask acts=copy core.source="hand-core 1"
+@w.timeline.kind.event std.schema.kind of=w.timeline.event world=w.timeline acts=make acts=remove acts=change acts=connect acts=group acts=pick acts=ask acts=copy acts=show aspects=w.timeline.temporal core.source="hand-core 1"
+@w.timeline.aspect.temporal std.schema.aspect name=w.timeline.temporal keys=title keys=at keys=until keys=sort keys=certain doc="an event in time: when, until when, how sure" core.source="hand-core 1"
+@w.timeline.view.timeline std.schema.view name=w.timeline shows=w.timeline.temporal core.source="hand-core 1"
 @w.timeline.limit.timeline std.schema.limit of=w.timeline.timeline max=20 core.source="hand-core 1"
 @w.timeline.limit.event std.schema.limit of=w.timeline.event max=1000 core.source="hand-core 1"
 

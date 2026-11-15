@@ -6507,3 +6507,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - (1) tools/objects-hand-data.mjs into hand-written shards; (2) the pin to the library's current release (0.144.0),
   then `strict=true` on the joined colour / shape / direction slots with their copied value lists removed, slot by
   slot; tests/w.lang.en.library.test.mjs re-run on the new pin, fixed cases taken off the lists.
+## 2026-11-15 — fourth worker: w.timeline against plan.timeline (reviewer: proposal first, superset only)
+
+- Read psys2 worlds/plan.timeline/schema.host.sop and its generated schema.sop (d363718): the host keeps aspect
+  temporal, a view, `named=yes` on events, `at` default 0 and the words later / earlier of its own.
+- w.timeline 3 (a superset of 2): std.schema.aspect w.timeline.temporal, the view w.timeline, act show on events;
+  a session shows the events (tests/w.schemas.test.mjs). Q89 [PSYS2] proposes the rest (the importer maps a required
+  `title` to the host's name; `at` default stays the host's; [LIB] comparative words of a number slot; calendar left
+  out; denies stay).
+- Tests: w.schemas, k.kinds relations, joins report, structures, k.attributes ranges, catalog, validate, w.lang.en,
+  w.lang.ro.

@@ -1259,3 +1259,30 @@ Question: none to answer. tests/w.lang.en.abstraction.test.mjs went red at ee130
 variants shard of tools/lang-en-variants.mjs not regenerated); the Q86 files were still red then. On main at be5c4e2
 the six files are green.
 Blocking: no.
+## Q89 [PSYS2] (reviewer, w.timeline against plan.timeline, fourth worker, 2026-11-15): one timeline schema for PSys2 and the catalog (proposal; version 3 built only where it is a superset)
+
+Read: psys2 worlds/plan.timeline/schema.host.sop (d363718) and the schema.sop it generates from w.timeline 2. The host
+takes every slot, kind and word of w.timeline 2 and keeps four lines of its own; the four denies are "not taken by the
+host" (its executor does not check them).
+**Built (w.timeline 3, a superset: no slot, value or rule of version 2 changed):** the host's `aspect=temporal` and
+its view `acts.view aspects=temporal` are now the schema's: `std.schema.aspect name=w.timeline.temporal keys=title
+keys=at keys=until keys=sort keys=certain` (the temporal aspect of k.attributes), `aspects=` on the event kind, a
+`std.schema.view name=w.timeline shows=w.timeline.temporal`, and the act `show` on events (as w.map shows places). A
+session in tests/w.schemas.test.mjs shows the events with their title and time.
+**Proposed, not built (not a superset, or the engine has no place for it):**
+1. The event's name. The host names events (`named=yes`; "add an event called Monday"), the schema has a required
+   `title` and no `name`, so a host event has a name and an empty title. Proposal: the importer maps a required
+   string `title` of a kind without `name` to the name (`named=yes`, as `key=name`), and the host drops its own
+   `named=yes`; w.timeline keeps `title` (a "title" is what the literature of timelines calls an event's label;
+   renaming it to `name` would break version 2 data). Alternative: version 4 renames title to name (not a superset).
+2. `at` default 0 (host) against `at` required (schema). An event with no time is not placed on a timeline; the
+   proposal is that the host keeps its default as its own (like seats default 4 in Q82/Q85), the schema stays required.
+3. The words of the directions of `at`: the host's `more=later less=earlier`. std.schema has no place for the words of
+   `change by=more|less` of a slot. Proposal for the library [LIB]: a `core.word` with `role=more|less` on a slot's
+   words (`text=later means=w.timeline.event.at role=more`), so every number slot can say its comparative words
+   (later / earlier, longer / shorter, higher / lower); w.lang.en already joins earlier / later to k.time.before.
+4. The view's words `timeline`, `time line`, `calendar`: "timeline" and "time line" are world words already;
+   "calendar" is a different thing in the literature (a grid of days, not a line of events) and is left out of the
+   schema; a host that opens its timeline tab for "calendar" keeps that word as its own.
+5. The four denies (an event inside its timeline, its end after its start) stay the schema's; the host does not take
+   them until its executor checks `core.deny` (as plan.seating's same-seat deny in Q85).

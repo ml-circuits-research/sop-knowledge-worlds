@@ -180,6 +180,10 @@ test('a session with a timeline: events with their time, moved later and back, p
   assert.deepEqual(act('pick', { kind: 'w.timeline.event', at: 1957 }).result.things, ['w_timeline_event2']);
   assert.equal(act('connect', { a: 'w_timeline_event2', b: 'w_timeline_event1', rel: 'leads to' }).ok, true);
   assert.equal(act('change', { thing: 'w_timeline_event1', attr: 'at', value: 'soon' }).ok, false);
+  // Version 3 (Q89): the view w.timeline shows each event with the keys of its temporal aspect.
+  const shown = act('show', { thing: 'w.timeline.event', set: 'each', view: 'w.timeline' }).result.things;
+  assert.deepEqual(shown.map((t) => [tok(t.values.title), String(t.values.at)]), [['first person on the Moon', '1969'], ['first satellite', '1957']]);
+  assert.equal(act('show', { thing: 'w.timeline.timeline', set: 'each', view: 'w.timeline' }).ok, false);
 });
 
 test('w.seating, the acts the case corpus needs: tables placed, linked and grouped; guests copied and placed', () => {

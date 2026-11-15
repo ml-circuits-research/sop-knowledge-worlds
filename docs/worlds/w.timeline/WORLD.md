@@ -33,3 +33,10 @@ The catalog lists it under `schemas` in `index.json` (names, kinds, acts, attrib
 `vocab.json` with the path of the schema. A session is in `tests/w.schemas.test.mjs`. The names of kinds are
 written in full (`w.timeline.…`); a host gets from a word of the user ("guest", "item") to the kind by the `core.word`
 facts of the schema.
+
+## Version 3
+
+Version 3 (Q89) adds and changes nothing of version 2: the event has the aspect `w.timeline.temporal` (its title, time,
+end, sort and certainty: the temporal aspect of k.attributes), the view `w.timeline` shows it, and `show` is an act of
+events (`act('show', { thing: 'w.timeline.event', set: 'each', view: 'w.timeline' })`). What still differs from
+PSys2's plan.timeline (the event's name, the default of `at`, the words later and earlier) is in questions.md (Q89).

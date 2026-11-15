@@ -1,5 +1,5 @@
 {
- "version": "7308dfc13331",
+ "version": "fce9fb2608db",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -91826,7 +91826,7 @@
   },
   {
    "id": "w.timeline",
-   "version": "2",
+   "version": "3",
    "schema": "w.timeline/schema.sop",
    "depends": [],
    "about": "timelines: events in order of time",
@@ -91870,7 +91870,8 @@
       "group",
       "pick",
       "ask",
-      "copy"
+      "copy",
+      "show"
      ],
      "attributes": [
       "title",
@@ -91890,8 +91891,8 @@
      ]
     }
    ],
-   "wires": 46,
-   "bytes": 7546,
+   "wires": 48,
+   "bytes": 8241,
    "sources": [
     "hand-core-1"
    ],
