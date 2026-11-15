@@ -6218,3 +6218,6 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   or n != 1 and n % 100 = 1..19" (the note in Q79 had 2..19). tests/w.lang.counts.test.mjs: the rules agree with
   Intl.PluralRules for 0..300 and decimals in both languages; 3 case, 20 de case, 101 case, 120 de case; template rows
   name only these classes.
+- The article chosen by gender, not given by the caller: w.lang.ro.fill role=art lemma=un on the 7 requests and 4
+  replies that say {art@kind}; the three new English arrangement templates mirrored (49 Romanian requests, 33 read back
+  to their act). tests/w.lang.ro.replies.test.mjs realises without an art filler.

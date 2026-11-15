@@ -51,5 +51,18 @@
 @w.lang.ro.request.thank.topic w.lang.ro.request name=thank.topic act=thank shape=topic role=topic text="mulțumesc pentru {topic:def=yes}." example="Mulțumesc pentru desen." core.source="hand-core 1"
 @w.lang.ro.request.farewell.none w.lang.ro.request name=farewell.none act=farewell shape=none text="la revedere." example="La revedere." core.source="hand-core 1"
 
+@w.lang.ro.request.make_kind_arrangement w.lang.ro.request name=make.kind.arrangement act=make shape=kind.arrangement role=kind role=arrangement text="fă {art@kind} {kind} în formă de {arrangement}." example="Fă o diagramă în formă de casă." core.source="hand-core 1"
+@w.lang.ro.request.place_arrangement w.lang.ro.request name=place.arrangement act=place shape=thing.arrangement.layout role=thing role=arrangement text="aranjează {thing:num=pl,def=yes} în formă de {arrangement}." example="Aranjează cutiile în formă de stea." core.source="hand-core 1"
+@w.lang.ro.request.group_arrangement w.lang.ro.request name=group.arrangement act=group shape=thing.arrangement role=thing role=arrangement text="grupează {thing:num=pl,def=yes} în formă de {arrangement}." example="Grupează punctele în formă de inimă." core.source="hand-core 1"
 # the words a template says itself, agreeing like a role
 @w.lang.ro.fill.ask_count.many w.lang.ro.fill template=ask.count role=many lemma=mult core.source="hand-core 1"
+
+# the indefinite article: the lemma un of w.lang.ro (det.art), its form chosen by the gender and number of the noun
+# (o casă, un copac): the template says it, a caller gives no article (the library's Q79)
+@w.lang.ro.fill.make_kind.art w.lang.ro.fill template=make.kind role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.make_value.art w.lang.ro.fill template=make.value role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.make_kind_arrangement.art w.lang.ro.fill template=make.kind.arrangement role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.make_place.art w.lang.ro.fill template=make.place role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.make_name.art w.lang.ro.fill template=make.name role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.make_name_place.art w.lang.ro.fill template=make.name.place role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.make_topic_criterion.art w.lang.ro.fill template=make.topic.criterion role=art lemma=un core.source="hand-core 1"

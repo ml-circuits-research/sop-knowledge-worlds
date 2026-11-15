@@ -33,3 +33,10 @@
 @w.lang.ro.reply.welcome.one w.lang.ro.reply name=welcome count=one act=thank text="cu plăcere." example="Cu plăcere." core.source="hand-core 1"
 @w.lang.ro.reply.hello.one w.lang.ro.reply name=hello count=one act=greet text="salut!" example="Salut!" core.source="hand-core 1"
 @w.lang.ro.reply.goodbye.one w.lang.ro.reply name=goodbye count=one act=farewell text="la revedere!" example="La revedere!" core.source="hand-core 1"
+
+# the indefinite article: the lemma un of w.lang.ro (det.art), its form chosen by the gender and number of the noun
+# (o casă, un copac): the template says it, a caller gives no article (the library's Q79)
+@w.lang.ro.fill.done_make.art w.lang.ro.fill template=done.make role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.done_make_value.art w.lang.ro.fill template=done.make.value role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.done_make_shape.art w.lang.ro.fill template=done.make.shape role=art lemma=un core.source="hand-core 1"
+@w.lang.ro.fill.done_add.art w.lang.ro.fill template=done.add role=art lemma=un core.source="hand-core 1"

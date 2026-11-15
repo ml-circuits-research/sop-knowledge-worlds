@@ -210,3 +210,8 @@ Shard `counts` (Unicode CLDR 48, Unicode-3.0): `w.lang.ro.count class rule sampl
 (`v != 0 or n = 0 or n != 1 and n % 100 = 1..19`: 0, 2 to 19, 101 to 119 ...), other (the rest: 20 de case). The
 templates' `count` names these classes; tests/w.lang.counts.test.mjs evaluates the rules against Intl.PluralRules.
 (The library's note quoted "n % 100 = 2..19"; CLDR's rule is the one copied here: n != 1 and n % 100 = 1..19.)
+
+The indefinite article is the template's own word (reviewer 16:45): a `w.lang.ro.fill` with role art and lemma un for
+every request and reply that says `{art@kind}`, so the form (o casă, un copac, niște case) comes from the det.art class
+by the noun's gender and number and a caller gives no article. The three arrangement templates of w.lang.en ("in the
+shape of a house") are mirrored too ("fă o diagramă în formă de casă"): 49 requests.

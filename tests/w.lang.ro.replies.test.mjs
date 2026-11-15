@@ -19,7 +19,7 @@ const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
 const shard = (id, f) => parse(readFileSync(join(WORLDS_DIR, id, 'shards', f), 'utf8'));
 const enAll = readdirSync(join(WORLDS_DIR, 'w.lang.en', 'shards')).filter((f) => f.endsWith('.sop')).flatMap((f) => shard('w.lang.en', f));
 const requests = shard('w.lang.ro', 'requests.sop').filter((w) => w.type === 'w.lang.ro.request');
-const fills = shard('w.lang.ro', 'requests.sop').filter((w) => w.type === 'w.lang.ro.fill');
+const fills = [...shard('w.lang.ro', 'requests.sop'), ...shard('w.lang.ro', 'replies.sop')].filter((w) => w.type === 'w.lang.ro.fill');
 const roReplies = shard('w.lang.ro', 'replies.sop'), enReplies = shard('w.lang.en', 'replies.sop');
 const enTemplates = enAll.filter((w) => w.type === 'w.lang.en.template');
 const m = morphOf(fullWorld('w.lang.ro', scanWorlds()), { types: TYPES });
@@ -29,8 +29,8 @@ const base = { num: 'sg', case: 'nomacc', def: 'no' };
 // three things of different gender, and the other fillers (lemmas where the template inflects them)
 const THINGS = ['casă', 'copac', 'desen'];
 const N = { one: '1', few: '3', other: '20' };
-const fillersRo = (thing, count) => ({ kind: thing, thing, art: 'un', value: 'roșu', number: N[count ?? 'few'], place: 'lângă copac', source: 'casă', target: 'copac', attribute: 'culoare', amount: 'puțin',
-  direction: 'la stânga', topic: 'culoare', criterion: 'mărime', recipient: 'Ana', name: 'prânz', person: 'Ana', shape: 'inimă', words: 'blorp', request: 'adaugă o casă' });
+const fillersRo = (thing, count) => ({ kind: thing, thing, value: 'roșu', number: N[count ?? 'few'], place: 'lângă copac', source: 'casă', target: 'copac', attribute: 'culoare', amount: 'puțin',
+  direction: 'la stânga', topic: 'culoare', criterion: 'mărime', recipient: 'Ana', name: 'prânz', person: 'Ana', shape: 'inimă', arrangement: 'inimă', words: 'blorp', request: 'adaugă o casă' });
 const OVERRIDE = { 'make.name': { value: 'Ana' }, 'make.name.place': { value: 'Ana' }, 'change.more': { amount: '2' }, 'change.less': { amount: '2' } };
 const ro = (t, thing, count) => realise(m, one(t, 'text'), { ...fillersRo(thing, count), ...(OVERRIDE[one(t, 'name')] ?? {}), ...Object.fromEntries(fills.filter((f) => one(f, 'template') === one(t, 'name')).map((f) => [one(f, 'role'), one(f, 'lemma')])) }, { dictionary: dict, base });
 
@@ -41,7 +41,7 @@ test('requests: one to one with w.lang.en\'s act templates (name, act, shape, ro
     const e = byName.get(one(r, 'name'));
     for (const k of ['act', 'shape']) assert.equal(one(r, k), one(e, k), `${one(r, 'name')}: ${k}`);
     assert.deepEqual(vals(r, 'role').sort(), vals(e, 'role').sort(), one(r, 'name'));
-    const slots = [...one(r, 'text').matchAll(/\{(\w+)/g)].map((x) => x[1]).filter((x) => x !== 'art' && !fills.some((f) => one(f, 'template') === one(r, 'name') && one(f, 'role') === x));
+    const slots = [...one(r, 'text').matchAll(/\{(\w+)/g)].map((x) => x[1]).filter((x) => !fills.some((f) => one(f, 'template') === one(r, 'name') && one(f, 'role') === x));
     for (const s of slots) assert.ok(vals(r, 'role').includes(s), `${one(r, 'name')}: slot ${s}`);
     if (vals(r, 'role').includes('number')) assert.ok(['few', 'other'].includes(one(r, 'count')), one(r, 'name'));
   }
