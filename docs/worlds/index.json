@@ -1,5 +1,5 @@
 {
- "version": "4a26f9192d8e",
+ "version": "7308dfc13331",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -90053,6 +90053,21 @@
       "unknown-word w.lang.en.word.k.music.key.chord.root: w.lang.en.word.k.music.key.chord.root: means=k.music.chord.root names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.music.key.chord.quality: w.lang.en.word.k.music.key.chord.quality: means=k.music.chord.quality names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.music.key.chord.note: w.lang.en.word.k.music.key.chord.note: means=k.music.chord.note names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.named",
+     "path": "w.lang.en/shards/words-k.named.sop",
+     "wires": 2,
+     "bytes": 821,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.named.named: w.lang.en.word.k.named.named: means=k.named.labelled.named names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.named.key.labelled.named: w.lang.en.word.k.named.key.labelled.named: means=k.named.labelled.named names no action, type, key or value of the matrix"
      ]
     },
     {

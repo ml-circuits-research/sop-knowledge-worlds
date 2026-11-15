@@ -1,0 +1,10 @@
+# w.lang.en/shards/words-k.named: the English words of k.named (its types, keys and values), owned by the language world
+# (Q78, reviewer 16:10; KR3): they were the core.word facts of its schema; tools/build-catalog.mjs reads them as its own words.
+# sources: hand-core 1 (written in this repository; the block at the end by tools/key-words.mjs)
+# license: CC0-1.0
+# script: none (hand-written); the block of word wires for keys: tools/key-words.mjs
+
+@w.lang.en.word.k.named.named core.word text="labelled by a model" text="named by a model" means=k.named.labelled.named core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@w.lang.en.word.k.named.key.labelled.named core.word text=named means=k.named.labelled.named core.source="hand-core 1"
