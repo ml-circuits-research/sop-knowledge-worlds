@@ -24,7 +24,7 @@ export const EXTRA = {
   'k.parts.usual': ['part', 'parts'], 'k.parts.usual.has': ['has', 'have', 'with', 'built', 'inside'], 'k.parts.inherited': ['part', 'parts'], 'k.parts.inherited.has': ['has', 'have', 'with'],
   'k.parts.whole.has': ['built', 'inside'], 'k.parts.whole.plain': ['has', 'have'],
   'k.space.body.kind': ['kind'], 'k.space.body.colour': ['colour', 'color'], 'k.space.body.moons_about': ['moons'], 'k.space.body.orbit_years': ['year'], 'k.space.body.temperature_about': ['hot', 'cold', 'warm'],
-  'k.space.body.age_years_about': ['old'], 'k.space.kind': ['kind'], 'k.space.kind.made_of': ['made', 'made of'],
+  'k.space.body.age_years_about': ['old'], 'k.space.kind': ['kind'], 'k.space.kind.material': ['made', 'made of'],
   'k.body.part.part_of': ['part of', 'belongs'], 'k.body.part.count_per_part': ['many'], 'k.body.part.count_about': ['many'], 'k.body.part.about': ['for'], 'k.body.part.does': ['for'],
   'k.food.food.made_of': ['made', 'made from', 'make', 'recipe'], 'k.food.food.kind': ['kind of'],
   'k.geo.country.continent': ['where'], 'k.geo.country.recognition': ['recognised', 'recognized'], 'k.geo.city.country': ['where'], 'k.geo.city.capital_of': ['capital'], 'k.geo.river.country': ['where', 'flows'], 'k.geo.mountain.country': ['where'],

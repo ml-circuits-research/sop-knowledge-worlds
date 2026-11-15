@@ -6038,3 +6038,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Look-back (reviewer 15:35): my rebases tonight went through my own scripts (logs by union, generated files from main
   then rebuilt, any other conflict stopped); checked on main: the list-frames build step, the w.tasks typicality and
   structure, the season joins and the frames' WORLD.md sections are all there; no change was lost.
+
+## 2026-11-15 — fourth worker: k.space.kind.made_of is `material` (reviewer 14:45, KR2; Q73)
+
+- The key of what a kind of body in space is made of is `material`, the key k.attributes uses (KR1 item 4): slot, key
+  words (material, made of, made), 7 facts of k.space/kinds (star: gas; comet: ice, dust ...), the question sp-13, the
+  ask-domains template and the key-words table. `made_of` stays only on k.food (ingredients). Relations, narration,
+  the joins report and the catalog follow.
+- Tests: k.space, questions (all 473 of the run), narration, phrasing, catalog, counts, validate (1,176 files, 0
+  errors): pass.

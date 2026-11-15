@@ -10,7 +10,7 @@
 {"id":"sp-10","ask":"how long is a year on Neptune, in Earth years","query":{"type":"k.space.body","where":{"name":"Neptune"},"seek":"orbit_years"},"expect":{"status":"supported","value":"165"}}
 {"id":"sp-11","ask":"what kind of thing is Pluto","query":{"type":"k.space.body","where":{"name":"Pluto"},"seek":"kind"},"expect":{"status":"supported","value":"\"dwarf planet\""}}
 {"id":"sp-12","ask":"which galaxy is the Sun in","query":{"type":"k.space.body","where":{"name":"Sun"},"seek":"in"},"expect":{"status":"supported","value":"\"Milky Way\""}}
-{"id":"sp-13","ask":"what is a comet made of","query":{"type":"k.space.kind","where":{"name":"comet"},"seek":"made_of","mode":"list"},"expect":{"status":"supported","values":["ice","dust"]}}
+{"id":"sp-13","ask":"what is a comet made of","query":{"type":"k.space.kind","where":{"name":"comet"},"seek":"material","mode":"list"},"expect":{"status":"supported","values":["ice","dust"]}}
 {"id":"sp-14","ask":"which drawing shows Saturn","query":{"type":"k.space.body","where":{"name":"Saturn"},"seek":"drawing"},"expect":{"status":"supported","value":"Saturn"}}
 {"id":"sp-15","ask":"an application's own star is accepted","tell":"@s1 k.space.body name=Vega kind=star","ns":"app","expect":{"issues":[]}}
 {"id":"sp-16","ask":"why is Mars red","query":{"type":"k.space.body","where":{"name":"Mars"},"seek":"colour_why"},"expect":{"status":"supported","value":"\"Its soil is full of iron that has rusted.\""}}

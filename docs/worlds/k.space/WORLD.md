@@ -20,7 +20,7 @@ were written by a language model, only where sure (`named=model`).
   5,500 degrees Celsius), `age_years_about` (the Sun), `light_years_about` (the distance of a star or galaxy from
   the Sun). The unit of each is a `k.units.measure` fact.
 - `k.space.kind` (identity `name`): star, planet, dwarf planet, moon, comet, asteroid, galaxy, solar system,
-  constellation, meteor, black hole: `about` (one plain sentence saying what it is), `made_of`, `orbits`, `has`,
+  constellation, meteor, black hole: `about` (one plain sentence saying what it is), `material` (what it is made of: the key k.attributes uses, KR2; was `made_of`), `orbits`, `has`,
   `does`, `drawing`.
 - `core.word` facts: other names (`"Red Planet"`, `"North Star"`) and plural forms of the kinds.
 - The numbers are rounded so far that books agree on them; a test checks them against each other (farther planets

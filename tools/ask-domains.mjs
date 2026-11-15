@@ -54,7 +54,7 @@ export const DOMAINS = {
       moon: [['how wide is the {x}', one('k.space.body', 'diameter_about')], ['how far is the {x} from the Earth', one('k.space.body', 'distance_about')], ['what does the {x} go around', one('k.space.body', 'orbits')],
         ['how long does the {x} take to go around the Earth', one('k.space.body', 'orbit_days_about')], ['what colour is the {x}', one('k.space.body', 'colour')], ['why does the {x} shine', one('k.space.body', 'colour_why')]],
       star: [['how far away is {x}', one('k.space.body', 'light_years_about')], ['what kind of thing is {x}', one('k.space.body', 'kind')], ['in which galaxy is {x}', one('k.space.body', 'in')]],
-      kind: [['what is a {x}', one('k.space.kind', 'about')], ['what is a {x} made of', one('k.space.kind', 'made_of')]],
+      kind: [['what is a {x}', one('k.space.kind', 'about')], ['what is a {x} made of', one('k.space.kind', 'material')]],
     },
   },
   // sources/hand-core/questions/body.tsv: parts of the body by their common names, written without looking at k.body.

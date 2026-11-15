@@ -1,5 +1,5 @@
 {
- "version": "6337b140b0ea",
+ "version": "0df5573676b3",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4577,7 +4577,7 @@
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
      "wires": 1097,
-     "bytes": 211764,
+     "bytes": 211766,
      "keys": [
       "a",
       "about",
@@ -30721,7 +30721,7 @@
      "id": "k.kinds/shards/relations-space",
      "path": "k.kinds/shards/relations-space.sop",
      "wires": 29,
-     "bytes": 6374,
+     "bytes": 6376,
      "keys": [
       "about",
       "age_years_about",
@@ -30739,7 +30739,7 @@
       "k.space.kind",
       "kind",
       "light_years_about",
-      "made_of",
+      "material",
       "moons",
       "moons_about",
       "named",
@@ -57226,7 +57226,7 @@
      "id": "k.space/shards/kinds",
      "path": "k.space/shards/kinds.sop",
      "wires": 22,
-     "bytes": 3905,
+     "bytes": 3921,
      "keys": [
       "asteroid",
       "black hole",

@@ -45,7 +45,7 @@
 # A kind of thing in space: what it is made of, what it goes around, what it has, what it does.
 @k.space.kind core.type of=k.space.kind extends=k.named.labelled shared=true closed=true core.source="hand-core 1"
 @k.space.kind.name core.slot of=k.space.kind key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.space.kind.made_of core.slot of=k.space.kind key=made_of many=true kind=atom kind=string core.source="hand-core 1"
+@k.space.kind.material core.slot of=k.space.kind key=material many=true kind=atom kind=string core.source="hand-core 1"
 @k.space.kind.orbits core.slot of=k.space.kind key=orbits kind=atom kind=string core.source="hand-core 1"
 @k.space.kind.has core.slot of=k.space.kind key=has many=true kind=atom kind=string core.source="hand-core 1"
 @k.space.kind.does core.slot of=k.space.kind key=does many=true kind=atom kind=string core.source="hand-core 1"
@@ -81,7 +81,7 @@
 @k.space.word.key.body.age_years_about core.word text="age years" text=old means=k.space.body.age_years_about core.source="hand-core 1"
 @k.space.word.key.body.light_years_about core.word text="light years" means=k.space.body.light_years_about core.source="hand-core 1"
 @k.space.word.key.kind core.word text=kind means=k.space.kind core.source="hand-core 1"
-@k.space.word.key.kind.made_of core.word text="made of" text=made means=k.space.kind.made_of core.source="hand-core 1"
+@k.space.word.key.kind.material core.word text=material text=made text="made of" means=k.space.kind.material core.source="hand-core 1"
 @k.space.word.key.kind.orbits core.word text=orbits means=k.space.kind.orbits core.source="hand-core 1"
 @k.space.word.key.kind.has core.word text=has means=k.space.kind.has core.source="hand-core 1"
 @k.space.word.key.kind.does core.word text=does means=k.space.kind.does core.source="hand-core 1"
