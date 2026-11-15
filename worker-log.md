@@ -6113,3 +6113,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   "Generated files and rebases".
 - Test (tests/sync.test.mjs, +1): .gitattributes is what tools/generated.mjs writes; index.json, vocab.json,
   JOINS-REPORT.md, COVERAGE.md and a derived shard are `regenerate`; package.json, tools, README.md and schemas are not.
+
+## 2026-11-15 — fifth worker: tonight's rebased commits checked for lost changes (block 15:35)
+
+- Method: for the 138 commits on main since 18:00 yesterday, every tools/ and tests/ path named in the commit message
+  or in the worker-log lines the commit added, against the commit's own file list and against main; every tool a
+  commit says is "in npm run build", against package.json; and every commit that changed package.json, for build steps
+  it removed.
+- **Lost:** 6e1ad74 (K7, third worker, 02:59) says "tools/lang-en-time-frames.mjs (in npm run build)" but changed no
+  package.json, and no later commit added it: the build step was dropped (by sync.sh's `checkout --ours`, most
+  likely). Restored here, after lang-en-arithmetic; its shard time-frames.sop was still fresh (the tool gives it byte
+  for byte), and .gitattributes now lists it as generated (128 paths).
+- Already restored by its author: the w.person build step (4d70c88). No commit removed a build step; every other path
+  the commits name is in the commit or on main (tools/bench-ro-frames.mjs is the library's bench, not ours).
+- Correction to my previous entry: the generated paths are 12 named outputs and 115 shards (127, now 128), not 113.
