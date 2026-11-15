@@ -35,7 +35,8 @@ const fixture = {
 const freq = 'the 100\ndog 90\nrun 80\nparis 70\nchild 60\nit\'s 50\ncity 40\n';
 
 test('the importer maps senses, synonyms, is-a, instance-of, part-of and irregular forms', () => {
-  const { files, stats } = importWordnet(fixture, freq, { commonLimit: 0 });
+  // the fixture's forms are kept whatever w.lang.en confirms (the filter is tests/w.lang.en.forms.test.mjs's)
+  const { files, stats } = importWordnet(fixture, freq, { commonLimit: 0, confirmed: () => false });
   assert.deepEqual(Object.keys(files), ['ch.sop', 'ci.sop', 'do.sop', 'pa.sop', 'ru.sop']);
   assert.deepEqual(stats, { listed: 6, words: 5, senses: 5, skipped: 1, forms: 2, spellings: 1, shards: 5, opposites: 0, nearOpposites: 0, chains: 0 });
   const lines = (f) => files[f].split('\n').filter((l) => l.startsWith('@'));
@@ -82,10 +83,10 @@ test('Round 9: opposites, near opposites of adjectives, adjectives and adverbs a
 });
 
 test('the same input gives the same bytes; limits split a bucket into parts', () => {
-  assert.deepEqual(importWordnet(fixture, freq).files, importWordnet(fixture, freq).files);
-  const { files } = importWordnet(fixture, 'city 1\nchild 1\n', { commonLimit: 0, limits: { maxWires: 1 } });
+  assert.deepEqual(importWordnet(fixture, freq, { confirmed: () => false }).files, importWordnet(fixture, freq, { confirmed: () => false }).files);
+  const { files } = importWordnet(fixture, 'city 1\nchild 1\n', { commonLimit: 0, limits: { maxWires: 1 }, confirmed: () => false });
   assert.deepEqual(Object.keys(files), ['ch.sop', 'ci.sop']);
-  const more = importWordnet({ ...fixture, 'index.noun': `${fixture['index.noun']}\nchin n 1 0 1 0 00000005` }, 'child 1\nchin 1\n', { commonLimit: 0, limits: { maxWires: 1 } });
+  const more = importWordnet({ ...fixture, 'index.noun': `${fixture['index.noun']}\nchin n 1 0 1 0 00000005` }, 'child 1\nchin 1\n', { commonLimit: 0, limits: { maxWires: 1 }, confirmed: () => false });
   assert.deepEqual(Object.keys(more.files), ['ch-1.sop', 'ch-2.sop']);
 });
 

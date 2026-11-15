@@ -4,13 +4,15 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
-import { actionShards, formsOf } from '../tools/actions-core.mjs';
+import { actionShards } from '../tools/actions-core.mjs';
+import { formChecker } from '../tools/forms-report.mjs';
 import { ACTIONS } from '../tools/actions-data.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const world = fullWorld('k.actions', worlds);
+const check = formChecker();
 const actions = world.ofType('k.actions.action'), similar = world.ofType('k.actions.similar');
 const names = new Set(actions.map((w) => one(w, 'name')));
 
@@ -31,8 +33,9 @@ test('every action says who does it, what comes of it and an example; opposites 
     assert.ok(/^[A-Z].*\.$/.test(example), `${w.id}: the example is a sentence`);
     // The example uses the verb: its base form or one of its other forms (for a phrase, the forms of its first word).
     const first = name.split(' ')[0];
-    const forms = [first, ...formsOf(first, first === name ? ACTIONS.find((a) => a[0] === name)[11] : {}), ...formsOf(name, ACTIONS.find((a) => a[0] === name)[11]).map((f) => f.split(' ')[0])];
-    assert.ok(forms.some((f) => new RegExp(`\\b${f}\\b`, 'i').test(example)), `${w.id}: the example does not use the verb`);
+    // (the forms are w.lang.en's, KR2: a word of the example is the verb when the pinned library reads it as a form of it)
+    const given = Object.values(ACTIONS.find((a) => a[0] === name)[11] ?? {}).map((f) => f.split(' ')[0]);
+    assert.ok(example.toLowerCase().match(/[a-z'-]+/g).some((x) => x === first || given.includes(x) || check(first, x)), `${w.id}: the example does not use the verb`);
     for (const k of ['opposite', 'undone_by']) for (const v of w.attrs[k] ?? []) assert.ok(names.has(tok(v)) && tok(v) !== name, `${w.id}: ${k} ${v}`);
     if (w.attrs.opposite) opposite.set(name, one(w, 'opposite'));
     if (w.attrs.undone_by) undone.set(name, one(w, 'undone_by'));
@@ -59,14 +62,12 @@ test('joins: where is a k.scenes scene; most tools are a drawing or a part of th
   }
 });
 
-test('verbs that mean nearly the same lead to an action and are not actions themselves; forms by rule', () => {
+test('verbs that mean nearly the same lead to an action and are not actions themselves; forms are w.lang.en\'s', () => {
   for (const w of similar) { assert.ok(names.has(one(w, 'action')), w.id); assert.ok(!names.has(one(w, 'name')), `${w.id}: an action itself`); }
   assert.ok(similar.length >= 350, `${similar.length} similar verbs`);
-  assert.deepEqual(formsOf('carry'), ['carries', 'carried', 'carrying']);
-  assert.deepEqual(formsOf('bake'), ['bakes', 'baked', 'baking']);
-  assert.deepEqual(formsOf('tie'), ['ties', 'tied', 'tying']);
-  assert.deepEqual(formsOf('see', { past: 'saw' }), ['sees', 'saw', 'seeing']);
-  assert.throws(() => formsOf('pick up'), /three forms/);
+  // the forms of the verbs are w.lang.en's (KR2): the pinned library confirms them; k.actions keeps only wetted
+  for (const [lemma, f] of [['carry', 'carries'], ['carry', 'carried'], ['bake', 'baking'], ['tie', 'tying'], ['see', 'saw'], ['fly', 'flew'], ['take', 'took']]) assert.ok(check(lemma, f), `${lemma} ${f}`);
+  assert.deepEqual(world.ofType('core.word').filter((x) => x.attrs.of?.[0] === 'k.actions.action.name').map((x) => x.attrs.text.map(tok).join(' ')), ['wetted']);
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
-  for (const [word, shard] of [['cutting', 'actions-make-change'], ['flew', 'actions-move'], ['stroll', 'actions-move'], ['rub out', 'actions-make-change'], ['repair', 'actions-make-change'], ['giggle', 'actions-mind-talk'], ['took off', 'actions-body-social-nature']]) assert.ok(vocab[word]?.includes(`k.actions/shards/${shard}`), word);
+  for (const [word, shard] of [['cut', 'actions-make-change'], ['fly', 'actions-move'], ['stroll', 'actions-move'], ['rub out', 'actions-make-change'], ['repair', 'actions-make-change'], ['giggle', 'actions-mind-talk'], ['take off', 'actions-body-social-nature']]) assert.ok(vocab[word]?.includes(`k.actions/shards/${shard}`), word);
 });

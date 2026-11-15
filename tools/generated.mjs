@@ -18,7 +18,7 @@ export const END = '# ---- end of the generated block ----';
 export const LOGS = ['worker-log.md', 'questions.md', 'worker-tasks.md', 'docs/lessons.md', 'CHANGELOG.md'];
 // Files and folders the regenerating tools write that are not shards with a `# script:` header.
 export const OUTPUTS = ['docs/worlds/index.json', 'docs/worlds/vocab.json', 'docs/worlds/vocab-kinds.json', 'docs/worlds/LICENSES.md',
-  'docs/worlds/JOINS.md', 'docs/worlds/COVERAGE.md', 'docs/worlds/k.attributes/ASPECTS.md', 'docs/worlds/k.kinds/JOINS-REPORT.md', 'docs/worlds/k.kinds/PARENTS.md',
+  'docs/worlds/JOINS.md', 'docs/worlds/COVERAGE.md', 'docs/worlds/k.attributes/ASPECTS.md', 'docs/worlds/k.kinds/JOINS-REPORT.md', 'docs/worlds/k.kinds/PARENTS.md', 'docs/worlds/w.lang.en/FORMS-REPORT.md',
   'docs/worlds/k.objects/preview/**', 'docs/worlds/k.scenes/preview/**', 'docs/worlds/w.lang.en/dictionary/*.tsv'];
 
 // The tools `npm run regenerate` runs (from package.json, so a new build step counts at once).

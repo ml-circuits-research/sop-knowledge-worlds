@@ -96,8 +96,9 @@ talk about what things do, and for giving a verb in a sentence its usual roles.
   many); `money` remove (buy, spend, pay) or add (sell). `result` stays the gloss in words. get, get back, have, spend
   and fly away were added as actions for them. `tests/k.actions.effects.test.mjs` reads stories with the pinned
   storyState and a verb table taken from these facts.
-- `core.word` facts: the other forms of every verb (cuts, cut, cutting; flies, flew, flying), worked out by rule
-  with the irregular forms given by hand; all read.
+- The forms of the verbs (cuts, cut, cutting; flies, flew, flying) are w.lang.en's (KR2, reviewer 16:45): the pinned
+  library confirms 569 of the 570 that k.actions wrote; only `wetted` (a form the data gives and w.lang.en does not)
+  stays as a `core.word`. A host reads "flew" with inflectBy / analyse and the w.lang.en dictionary.
 - `k.actions.similar` (identity `name`, `action`): 442 verbs and phrases that mean nearly the same as an action or
   are a kind of it (stroll is close to walk, `"rub out"` to erase, repair to mend, grab to catch and to take). They
   are not `core.word` facts, because they are not the same action.

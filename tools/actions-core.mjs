@@ -1,12 +1,12 @@
 // The hand-written core of k.actions (R7.2): common verbs with who does it, to what, with what, where, the result,
 // the opposite and what undoes it.
-//   node tools/actions-core.mjs     writes docs/worlds/k.actions/shards/actions-<group>.sop; prints the forms with --forms
-// The other forms of a verb (third person, past, -ing) are worked out by rule unless the data gives them; all of
-// them were read (the list printed by --forms).
+//   node tools/actions-core.mjs     writes docs/worlds/k.actions/shards/actions-<group>.sop
+// The forms of the verbs are w.lang.en's (KR2); see unconfirmedForms.
 import { join } from 'node:path';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, text, writeShards } from './import/lib.mjs';
 import { ACTIONS, EFFECTS } from './actions-data.mjs';
+import { formChecker } from './forms-report.mjs';
 
 const SRC = 'hand-core 1';
 const list = (v) => (v ? v.split(',').map((x) => x.trim()).filter(Boolean) : []);
@@ -14,13 +14,14 @@ const GROUPS = { move: 'moving oneself', hands: 'handling a thing', make: 'makin
 // Shards: groups put together so that no shard is tiny.
 const SHARDS = { move: 'move', hands: 'hands', make: 'make-change', change: 'make-change', sense: 'mind-talk', mind: 'mind-talk', talk: 'mind-talk', body: 'body-social-nature', social: 'body-social-nature', nature: 'body-social-nature' };
 
-// The third person, the past and the -ing form of a verb (the first word of a phrase is the verb).
-export function formsOf(verb, given = {}) {
-  const third = /(s|x|z|ch|sh|o)$/.test(verb) ? `${verb}es` : /[^aeiou]y$/.test(verb) ? `${verb.slice(0, -1)}ies` : `${verb}s`;
-  const past = verb.endsWith('e') ? `${verb}d` : /[^aeiou]y$/.test(verb) ? `${verb.slice(0, -1)}ied` : `${verb}ed`;
-  const ing = verb.endsWith('ie') ? `${verb.slice(0, -2)}ying` : verb.endsWith('e') && !/(ee|ye|oe)$/.test(verb) ? `${verb.slice(0, -1)}ing` : `${verb}ing`;
-  if (verb.includes(' ') && !(given.third && given.past && given.ing)) throw new Error(`${verb}: a phrase needs its three forms`);
-  return [given.third ?? third, given.past ?? past, given.ing ?? ing];
+// The forms of a verb (third person, past, -ing) have one home, w.lang.en (KR2, reviewer 16:45): a form the pinned
+// library confirms there (tools/forms-report.mjs: analyse or inflectBy; for a phrase, its first word and the same
+// particle) is not written here; only a form the data gives and w.lang.en does not confirm stays (wetted).
+let checker = null;
+export function unconfirmedForms(name, given = {}) {
+  checker ??= formChecker();
+  const head = name.split(' ')[0], rest = name.split(' ').slice(1).join(' ');
+  return Object.values(given).filter((f) => !(checker(name, f) || (rest && f.split(' ').slice(1).join(' ') === rest && checker(head, f.split(' ')[0]))));
 }
 
 export function actionShards() {
@@ -37,7 +38,8 @@ export function actionShards() {
     b.groups.add(group);
     b.actions.push(wire(`k.actions.action.${seg(name)}`, 'k.actions.action', [['name', name], ['group', group], ...list(who).map((v) => ['who', v]), ...list(object).map((v) => ['object', v]), ...list(tool).map((v) => ['tool', v]),
       ...list(where).map((v) => ['where', v]), ['result', text(result)], ['holds', EFFECTS[name]?.holds], ['money', EFFECTS[name]?.money], ['opposite', opposite], ['undone_by', undone], ['example', text(example)]], SRC));
-    b.words.push(wire(`k.actions.word.action.${seg(name)}`, 'core.word', [...[...new Set(formsOf(name, forms))].filter((f) => f !== name).map((f) => ['text', f]), ['means', name], ['of', 'k.actions.action.name']], SRC));
+    const kept = [...new Set(unconfirmedForms(name, forms))];
+    if (kept.length) b.words.push(wire(`k.actions.word.action.${seg(name)}`, 'core.word', [...kept.map((f) => ['text', f]), ['means', name], ['of', 'k.actions.action.name']], SRC));
     for (const w of list(similar)) {
       if (names.has(w)) continue; // a verb that is an action itself stands for itself (hop is not listed under jump)
       b.similar.push(wire(`k.actions.similar.${seg(w)}.${seg(name)}`, 'k.actions.similar', [['name', w], ['action', name]], SRC));
@@ -48,16 +50,15 @@ export function actionShards() {
     const id = `actions-${s}`;
     files[`${id}.sop`] = `${header({
       id: `k.actions/shards/${id}`,
-      about: `${b.actions.length} actions of ${[...b.groups].map((g) => GROUPS[g]).join('; ')}: who or what does it, to what, with what, where, what comes of it, the opposite and what undoes it, an example; the other forms of the verbs; and ${b.similar.length} verbs and phrases that mean nearly the same.`,
+      about: `${b.actions.length} actions of ${[...b.groups].map((g) => GROUPS[g]).join('; ')}: who or what does it, to what, with what, where, what comes of it, the opposite and what undoes it, an example; a form of a verb w.lang.en does not have (wetted); and ${b.similar.length} verbs and phrases that mean nearly the same.`,
       sources: ['hand-core 1 (hand-written in this repository: tools/actions-data.mjs)'],
       license: 'CC0-1.0', script: 'tools/actions-core.mjs',
-    })}\n${b.actions.join('\n')}\n\n# Words: the other forms of the verbs.\n${b.words.join('\n')}\n\n# Verbs and phrases that mean nearly the same as an action, or a kind of it.\n${b.similar.join('\n')}\n`;
+    })}\n${b.actions.join('\n')}\n\n# Words: the forms of a verb that w.lang.en does not confirm (its forms are w.lang.en's, KR2).\n${b.words.join('\n')}\n\n# Verbs and phrases that mean nearly the same as an action, or a kind of it.\n${b.similar.join('\n')}\n`;
   }
   return files;
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  if (process.argv.includes('--forms')) { for (const a of ACTIONS) console.log(`${a[0]}: ${formsOf(a[0], a[11]).join(', ')}`); process.exit(0); }
   const files = actionShards();
   writeShards(join(WORLDS_DIR, 'k.actions', 'shards'), files, 'actions-');
   console.log(`${ACTIONS.length} actions\n${Object.entries(files).map(([f, t]) => `${f}: ${t.split('\n').filter((l) => l.startsWith('@')).length} wires, ${Buffer.byteLength(t)} bytes`).join('\n')}`);

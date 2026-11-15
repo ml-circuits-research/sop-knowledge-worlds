@@ -8,6 +8,10 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { byText, seg, wire, text, header, writeShards, splitParts } from './lib.mjs';
+import { formChecker } from '../forms-report.mjs';
+let checker = null;
+const formConfirmed = (lemma, form) => (checker ??= formChecker())(lemma, form);
+
 
 export const SOURCE = 'wordnet 3.1';
 export const WORD_LIMIT = 20000;   // the first lines of the frequency list
@@ -116,7 +120,7 @@ export const bucketOf = (lemma) => (/^[a-z]{2}/.test(lemma) ? lemma.slice(0, 2) 
 // header line): the usage of each sense (USAGE) and the frequency of the words (Zipf value and band).
 // asked: words kept as common words whatever their place in the list (ASKED). hand: senses written by hand (HAND_SENSES),
 // written to the shard `hand.sop` with their own header; a hand sense of a word and part of speech WordNet has is refused.
-export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map(), asked = [], hand = [], register = null } = {}) {
+export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit = SENSE_LIMIT, commonLimit = COMMON_LIMIT, limits, extra = new Map(), asked = [], hand = [], register = null, confirmed = formConfirmed } = {}) {
   const wanted = new Set([...extra.keys(), ...asked].map(keyOf).filter(kept));
   extra = new Map([...extra].map(([k, v]) => [keyOf(k), v]));
   const common = new Set(commonLimit > 0 ? wanted : asked.map(keyOf));
@@ -216,7 +220,9 @@ export function importWordnet(files, freq, { wordLimit = WORD_LIMIT, senseLimit 
     const lines = [...g.senses];
     // One core.word per word that has other spellings or irregular forms: text= each of them, means= the word.
     const spellings = g.words.filter((x) => x.own).map((x) => x.own).sort(byText);
-    const forms = g.words.filter((x) => x.form).map((x) => x.form).sort(byText);
+    // KR2 (reviewer 16:45): a form the pinned library confirms from w.lang.en (analyse / inflectBy) has its home there
+    // and is not written here; tools/forms-report.mjs lists the others
+    const forms = g.words.filter((x) => x.form && !confirmed(lemma, x.form)).map((x) => x.form).sort(byText);
     stats.spellings += spellings.length;
     stats.forms += forms.length;
     // A spelling with a capital (China) is its own value of `word`; lower case text finds it.

@@ -27,7 +27,8 @@ planet, manta ray an animal, light year a unit), and the adjective and adverb se
     first kind at each step (`dog` → canine, carnivore, placental, mammal, vertebrate, chordate, animal, organism,
     "living thing", whole, object, "physical entity", entity), on the noun and verb senses of the common words
     (9,342 senses): "is a dog an animal" is one lookup, `where: { word: 'dog', pos: 'noun', n: 1, kind_of: 'animal' }`.
-- `core.word` facts in the shards: irregular forms (`text=children means=child`) and lower-case text for capitalised
+- `core.word` facts in the shards: the irregular forms that w.lang.en does not confirm (48, listed in
+  w.lang.en/FORMS-REPORT.md; the other 1,459 of WordNet's forms are w.lang.en's, KR2) and lower-case text for capitalised
   words (`text=paris means=Paris`), both `of=k.words.sense.word`.
 - Words asked for by other worlds (`ASKED` in the importer, block "16:10"; subhead, block "21:05" item 3): anterior, bold, horizontal, italic, sandy,
   thick, thicken, vertical are kept with every part of speech whatever their place in the frequency list, for the

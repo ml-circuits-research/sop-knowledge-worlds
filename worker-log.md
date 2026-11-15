@@ -6315,3 +6315,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: k.values (5), w.lang.en 22, w.lang.ro, questions (446 pass; at-07 "which things are usually pink" fails on
   main before this commit too: the KR6 glosses added rhubarb), relations, narration, import.psys2, generators,
   counts, catalog, validate (1,185 files, 0 errors), repo.
+
+## 2026-11-15 — fourth worker: verb forms have one home, w.lang.en; each checked with the pinned library (reviewer 16:45, KR2 item 4)
+
+- Pin 0.130 (second worker) in place. tools/forms-report.mjs checks every form word of k.words (WordNet's exception
+  lists) and k.actions with the pinned library: confirmed when std.morph reads it back to its lemma with the w.lang.en
+  dictionary (`analyse`) or `inflectBy` writes it. k.words: 1,507 forms of 929 lemmas, 1,459 confirmed and dropped
+  (163 shards; the importer tools/import/wordnet.mjs drops them the same way, `confirmed` injectable for its fixture
+  test); 48 kept and listed by class in docs/worlds/w.lang.en/FORMS-REPORT.md (archaic and British variants: curst,
+  swopped, gript, quitted; foreign plurals: frauen, senores; WordNet entries that are no form of that lemma: cola of
+  colon, dive of diva; and be's am / are, which w.lang.en has as a closed class). k.actions: 569 of 570 confirmed (a
+  phrase by its first word and the same particle); tools/actions-core.mjs no longer has its own English rule
+  (formsOf goes) and writes only `wetted`. FORMS-REPORT.md is generated (in the build, .gitattributes).
+- Tests: w.lang.en.forms (new, 2), k.actions (examples use the verb by the library), k.words, import.wordnet,
+  questions (446; at-07 fails on main before), w.lang.en, frames, paraphrase, generators, sync, catalog, counts,
+  validate (1,196 files, 0 errors), repo: pass.
