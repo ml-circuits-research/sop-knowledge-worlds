@@ -6501,3 +6501,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   up to 44bebac, red from ee130ff).
 - Rerun on main at be5c4e2: all six are green now (k.attributes.glosses skips without the raw files). Over 30 s at
   b717dac: catalog 74 s (fresh worktree, no validate cache), k.attributes 33 s. Questions.md Q87.
+
+## 2026-11-15 — second worker takes block 18:45
+
+- (1) tools/objects-hand-data.mjs into hand-written shards; (2) the pin to the library's current release (0.144.0),
+  then `strict=true` on the joined colour / shape / direction slots with their copied value lists removed, slot by
+  slot; tests/w.lang.en.library.test.mjs re-run on the new pin, fixed cases taken off the lists.
