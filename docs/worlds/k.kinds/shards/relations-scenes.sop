@@ -19,6 +19,6 @@
 @k.kinds.relation.k.scenes.scene.happens k.kinds.relation type=k.scenes.scene key=happens subject=scene object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.scenes.scene.drawing k.kinds.relation type=k.scenes.scene key=drawing subject=scene object=thing object_type=k.objects.object found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.scenes.thing.place k.kinds.relation type=k.scenes.thing key=place subject=thing object=place found=schema core.source="hand-core 1"
-@k.kinds.relation.k.scenes.thing.on k.kinds.relation type=k.scenes.thing key=on subject=thing object=thing object_type=k.attributes.drawn object_type=k.objects.object object_type=k.layouts.anchor found=value core.source="hand-core 1"
+@k.kinds.relation.k.scenes.thing.on k.kinds.relation type=k.scenes.thing key=on subject=thing object=thing object_type=k.attributes.drawn object_type=k.attributes.thing object_type=k.objects.object found=value core.source="hand-core 1"
 @k.kinds.relation.k.scenes.thing.size k.kinds.relation type=k.scenes.thing key=size subject=thing object=value scale=size found=schema core.source="hand-core 1"
 @k.kinds.relation.k.scenes.thing.named k.kinds.relation type=k.scenes.thing key=named subject=thing object=value found=schema core.source="hand-core 1"

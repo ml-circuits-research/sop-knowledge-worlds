@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-attributes: the keys of the types of k.attributes read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-attributes: the keys of the types of k.attributes read as relations: 80 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -67,10 +67,11 @@
 @k.kinds.relation.k.attributes.switch.about k.kinds.relation type=k.attributes.switch key=about subject=switch object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.attributes.thing.kind k.kinds.relation type=k.attributes.thing key=kind subject=thing object=kind object_type=k.attributes.kind found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.attributes.thing.colour k.kinds.relation type=k.attributes.thing key=colour subject=thing object=value object_type=k.colours.basic object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
-@k.kinds.relation.k.attributes.thing.material k.kinds.relation type=k.attributes.thing key=material subject=thing object=thing object_type=k.attributes.thing found=value core.source="hand-core 1"
+@k.kinds.relation.k.attributes.thing.material k.kinds.relation type=k.attributes.thing key=material subject=thing object=thing object_type=k.objects.object object_type=k.scenes.thing found=value core.source="hand-core 1"
 @k.kinds.relation.k.attributes.thing.wheels k.kinds.relation type=k.attributes.thing key=wheels subject=thing object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.attributes.thing.can k.kinds.relation type=k.attributes.thing key=can subject=thing object=act object_type=k.actions.action found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.attributes.thing.used_for k.kinds.relation type=k.attributes.thing key=used_for subject=thing object=text found=schema core.source="hand-core 1"
+@k.kinds.relation.k.attributes.thing.property k.kinds.relation type=k.attributes.thing key=property subject=thing object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.attributes.thing.named k.kinds.relation type=k.attributes.thing key=named subject=thing object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.attributes.typical.of k.kinds.relation type=k.attributes.typical key=of subject=typical object=thing object_type=k.attributes.kind found=value core.source="hand-core 1"
 @k.kinds.relation.k.attributes.typical.attribute k.kinds.relation type=k.attributes.typical key=attribute subject=typical object=word object_type=k.words.sense found=value core.source="hand-core 1"

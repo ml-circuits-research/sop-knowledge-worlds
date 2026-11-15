@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **238** in 36 worlds; distinct values 10522, meeting a target 10464 (99.4 %), open 58
+- declared joins: **239** in 36 worlds; distinct values 10830, meeting a target 10771 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
+- undeclared keys whose values the value share joins to a type: **48**; left undeclared on purpose: 5; keys with an enum, never suggested: 38
 
 ## Declared joins
 
@@ -45,7 +45,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.attributes | `k.attributes.kind.attribute` | `k.attributes.attribute` | name | 18 | 18 |  |
 | k.attributes | `k.attributes.shows.aspect` | `k.attributes.aspect` | name | 8 | 8 |  |
 | k.attributes | `k.attributes.shows.family` | `k.attributes.family` | name | 19 | 19 |  |
-| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 81 | 71 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
+| k.attributes | `k.attributes.thing.can` | `k.actions.action` | name | 122 | 112 | `bounce`, `erupt`, `explode`, `flush`, `move`, `rock`, … (10) |
 | k.attributes | `k.attributes.thing.kind` | `k.attributes.kind` | name | 26 | 26 |  |
 | k.attributes | `k.attributes.usage.season` | `k.time.season` | name | 4 | 4 |  |
 | k.attributes | `k.attributes.usage.time` | `k.time.part_of_day` | name | 4 | 4 |  |
@@ -170,7 +170,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.procedures | `k.procedures.binding.method` | `k.procedures.method` | name | 29 | 29 |  |
 | k.procedures | `k.procedures.condition.method` | `k.procedures.method` | name | 29 | 29 |  |
 | k.procedures | `k.procedures.goal.method` | `k.procedures.method` | name | 29 | 29 |  |
-| k.procedures | `k.procedures.howto_step.howto` | `k.procedures.howto` | name | 3 | 3 |  |
+| k.procedures | `k.procedures.howto_step.howto` | `k.procedures.howto` | name | 23 | 23 |  |
 | k.procedures | `k.procedures.match.method` | `k.procedures.method` | name | 22 | 22 |  |
 | k.procedures | `k.procedures.method.act` | `k.actions.act` | name | 6 | 6 |  |
 | k.procedures | `k.procedures.step.act` | `k.actions.act` | name | 8 | 8 |  |
@@ -215,6 +215,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.time | `k.time.span.cycle` | `k.time.cycle` | name | 3 | 3 |  |
 | k.time | `k.time.span.within` | `k.time.part_of_day` | name | 2 | 2 |  |
 | k.time | `k.time.stage.cycle` | `k.time.cycle` | name | 4 | 4 |  |
+| k.time | `k.time.zone.country_code` | `k.geo.country` | code2 | 247 | 246 | `AQ` |
 | k.units | `k.units.currency.country` | `k.geo.country` | name | 249 | 249 |  |
 | k.units | `k.units.measure.unit` | `k.units.unit` | name | 14 | 14 |  |
 | k.units | `k.units.quantity.base` | `k.units.unit` | name | 8 | 8 |  |
@@ -272,12 +273,12 @@ whose slot has an enum is never suggested here (see the last section).
 
 | world | type.key | class | candidates | by | values | meet |
 | --- | --- | --- | --- | --- | ---: | ---: |
-| k.actions | `k.actions.action.who` | thing | `k.scenes.thing` | name | 102 | 75 |
+| k.actions | `k.actions.action.who` | thing | `k.scenes.thing`, `k.attributes.thing` | name | 102 | 75 |
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3518 | 2346 |
-| k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 27 | 14 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3526 | 2346 |
+| k.attributes | `k.attributes.thing.material` | thing | `k.objects.object`, `k.scenes.thing` | name | 44 | 19 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
@@ -293,12 +294,11 @@ whose slot has an enum is never suggested here (see the last section).
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4593 | 2291 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
-| k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
-| k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |
+| k.layouts | `k.layouts.anchor.on` | thing | `k.attributes.thing`, `k.scenes.thing` | name | 15 | 9 |
+| k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 143 | 81 |
 | k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 71 |
-| k.layouts | `k.layouts.slot.holds` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 83 | 47 |
+| k.layouts | `k.layouts.slot.holds` | thing | `k.attributes.thing`, `k.scenes.thing`, `k.attributes.drawn` | name | 83 | 48 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |
@@ -313,11 +313,13 @@ whose slot has an enum is never suggested here (see the last section).
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
 | k.scenes | `k.scenes.scene.ground` | thing | `k.scenes.thing` | name | 15 | 6 |
-| k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.objects.object`, `k.layouts.anchor` | name | 23 | 19 |
+| k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 19 |
 | k.shapes | `k.shapes.shape.is_a` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.space | `k.space.kind.material` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
+| k.time | `k.time.stage.name` | thing | `k.attributes.thing` | name | 15 | 8 |
+| k.time | `k.time.stage.is` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.wearables | `k.wearables.wearable.face` | thing | `k.scenes.thing` | name | 36 | 18 |
 
 ## Left undeclared on purpose
@@ -325,6 +327,7 @@ whose slot has an enum is never suggested here (see the last section).
 - `k.time.hour.next` -> `k.time.hour` (24 of 24 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.month.next` -> `k.time.month` (12 of 12 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.part_of_day.next` -> `k.time.part_of_day` (4 of 4 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
+- `k.time.stage.next` -> `k.attributes.thing` (8 of 15 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.weekday.next` -> `k.time.weekday` (7 of 7 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 
 ## Keys with an enum (never suggested as joins)

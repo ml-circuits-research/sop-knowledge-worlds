@@ -1,4 +1,4 @@
-# k.attributes/shards/same-f: one name, one thing: for 161 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
+# k.attributes/shards/same-f: one name, one thing: for 162 names that start with "f" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (6 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -18,7 +18,7 @@
 @k.attributes.same.father.person k.attributes.same name=father sense=person only=true in=k.people.role by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.father_christmas.person k.attributes.same name="father christmas" sense=person only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.father_christmas_sack.thing k.attributes.same name="father christmas sack" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.faucet.thing k.attributes.same name=faucet sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.faucet.thing k.attributes.same name=faucet sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fax.thing k.attributes.same name=fax sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.fax_machine.thing k.attributes.same name="fax machine" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.feather.animal k.attributes.same name=feather sense=animal only=false in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing unsure=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
@@ -82,7 +82,7 @@
 @k.attributes.same.flamingo.animal k.attributes.same name=flamingo sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.flannel.thing k.attributes.same name=flannel sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.flashlight.thing k.attributes.same name=flashlight sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.flask.thing k.attributes.same name=flask sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.flask.thing k.attributes.same name=flask sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.flat_shoe.clothing k.attributes.same name="flat shoe" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.flatbread.food k.attributes.same name=flatbread sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.flatscreen_tv.thing k.attributes.same name="flatscreen tv" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
@@ -134,6 +134,7 @@
 @k.attributes.same.framed_picture.thing k.attributes.same name="framed picture" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.france.place k.attributes.same name=france sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.frankfurt.place k.attributes.same name=frankfurt sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.freeway.thing k.attributes.same name=freeway sense=thing only=true in=k.attributes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.freezer.thing k.attributes.same name=freezer sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.freighter.thing k.attributes.same name=freighter sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.french.place k.attributes.same name=french sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"

@@ -13,7 +13,7 @@
 @k.kinds.relation.k.kinds.kind.is_a k.kinds.relation type=k.kinds.kind key=is_a subject=kind object=kind found=value core.source="hand-core 1"
 @k.kinds.relation.k.kinds.kind.kind_of k.kinds.relation type=k.kinds.kind key=kind_of subject=kind object=kind found=value core.source="hand-core 1"
 @k.kinds.relation.k.kinds.kind.derived k.kinds.relation type=k.kinds.kind key=derived subject=kind object=boolean found=schema core.source="hand-core 1"
-@k.kinds.relation.k.kinds.parent.name k.kinds.relation type=k.kinds.parent key=name subject=parent object=thing object_type=k.scenes.thing found=value core.source="hand-core 1"
+@k.kinds.relation.k.kinds.parent.name k.kinds.relation type=k.kinds.parent key=name subject=parent object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.kinds.parent.is_a k.kinds.relation type=k.kinds.parent key=is_a subject=parent object=kind object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.kinds.parent.dimension k.kinds.relation type=k.kinds.parent key=dimension subject=parent object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.kinds.parent.from k.kinds.relation type=k.kinds.parent key=from subject=parent object=word found=value core.source="hand-core 1"

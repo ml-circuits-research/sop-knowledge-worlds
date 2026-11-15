@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.time core.module name=k.time version=6 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration exports=stage exports=clock_phrase core.source="hand-core 1"
+@k.time core.module name=k.time version=7 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration exports=stage exports=clock_phrase exports=zone core.source="hand-core 1"
 
 # Order in time. Every time that repeats in a cycle (a weekday in the week, a month in the year, a season, a part of
 # the day, an hour of the clock) is a `k.time.ordered`: `cycle` names its cycle, `n` is its position in it, `next`
@@ -177,6 +177,21 @@
 @k.time.during.weekend.then k.time.during time=?time span=weekend
 @k.time.during.weekend core.rule when=$k.time.during.weekend.when then=$k.time.during.weekend.then core.source="hand-core 1"
 
+# A time zone of the IANA time zone database (tzdata; block 15:35 item 3): `name` its id (Europe/Bucharest); `country_code`
+# (many) the ISO 3166 two-letter codes of the countries it covers (the join to k.geo.country by code2); `lat` and `lon`
+# the principal place of the zone, in degrees; `offset_january` and `offset_july` its UTC offset in minutes in
+# January and July of the year the shard says (120 and 180 for Bucharest in 2026); `summer_time` true when they
+# differ; `about` the database's comment (the part of a country it covers). Imported by tools/import/tzdata.mjs.
+@k.time.zone core.type of=k.time.zone shared=true closed=true core.source="hand-core 1"
+@k.time.zone.name core.slot of=k.time.zone key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.zone.country_code core.slot of=k.time.zone key=country_code many=true required=true kind=atom type=k.geo.country by=code2 core.source="hand-core 1"
+@k.time.zone.lat core.slot of=k.time.zone key=lat required=true kind=number min=-90 max=90 core.source="hand-core 1"
+@k.time.zone.lon core.slot of=k.time.zone key=lon required=true kind=number min=-180 max=180 core.source="hand-core 1"
+@k.time.zone.offset_january core.slot of=k.time.zone key=offset_january required=true kind=integer min=-720 max=840 core.source="hand-core 1"
+@k.time.zone.offset_july core.slot of=k.time.zone key=offset_july required=true kind=integer min=-720 max=840 core.source="hand-core 1"
+@k.time.zone.summer_time core.slot of=k.time.zone key=summer_time required=true kind=boolean core.source="hand-core 1"
+@k.time.zone.about core.slot of=k.time.zone key=about kind=string core.source="hand-core 1"
+
 # A span of time: it is `count` times the span `unit` names (a week is 7 days), or about `count_about` times
 # (a month is about 30 days). A span may be told in several units, one fact each (a week is 7 days, a week is 168
 # hours): `name` and `unit` together are its identity. The second has no smaller unit here.
@@ -191,6 +206,7 @@
 @k.time.word.weekday core.word text=weekday text=weekdays means=k.time.weekday core.source="hand-core 1"
 @k.time.word.season core.word text=season text=seasons means=k.time.season core.source="hand-core 1"
 @k.time.word.duration core.word text=long text=lasts text=duration means=k.time.duration core.source="hand-core 1"
+@k.time.word.zone core.word text="time zone" text="time zones" text=timezone means=k.time.zone core.source="hand-core 1"
 @k.time.word.days core.word text=days means=k.time.month.days core.source="hand-core 1"
 @k.time.word.weekend core.word text=weekend means=k.time.weekday.weekend core.source="hand-core 1"
 @k.time.word.span core.word text=span text="span of time" means=k.time.span core.source="hand-core 1"
@@ -246,6 +262,13 @@
 @k.time.word.key.span.within core.word text=within means=k.time.span.within core.source="hand-core 1"
 @k.time.word.key.span.starts_about core.word text=starts means=k.time.span.starts_about core.source="hand-core 1"
 @k.time.word.key.span.ends_about core.word text=ends means=k.time.span.ends_about core.source="hand-core 1"
+@k.time.word.key.zone.country_code core.word text="country code" means=k.time.zone.country_code core.source="hand-core 1"
+@k.time.word.key.zone.lat core.word text=lat means=k.time.zone.lat core.source="hand-core 1"
+@k.time.word.key.zone.lon core.word text=lon means=k.time.zone.lon core.source="hand-core 1"
+@k.time.word.key.zone.offset_january core.word text="offset january" means=k.time.zone.offset_january core.source="hand-core 1"
+@k.time.word.key.zone.offset_july core.word text="offset july" means=k.time.zone.offset_july core.source="hand-core 1"
+@k.time.word.key.zone.summer_time core.word text="summer time" means=k.time.zone.summer_time core.source="hand-core 1"
+@k.time.word.key.zone.about core.word text=about means=k.time.zone.about core.source="hand-core 1"
 @k.time.word.key.duration.count core.word text=count text=many means=k.time.duration.count core.source="hand-core 1"
 @k.time.word.key.duration.count_about core.word text=count means=k.time.duration.count_about core.source="hand-core 1"
 @k.time.word.key.duration.unit core.word text=unit means=k.time.duration.unit core.source="hand-core 1"

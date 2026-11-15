@@ -21,8 +21,8 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Origin: https://github.com/commonsense/conceptnet5/wiki/Downloads ; the file is `https://s3.amazonaws.com/conceptnet/downloads/2019/edges/conceptnet-assertions-5.7.0.csv.gz` (about 475 MB).
 - License: CC-BY-SA-4.0.
 - Attribution: This work includes data from ConceptNet 5, which was compiled by the Commonsense Computing Initiative. ConceptNet 5 is freely available under the Creative Commons Attribution-ShareAlike license (CC BY-SA 4.0) from https://conceptnet.io . The included data was created by contributors to Commonsense Computing projects, contributors to Wikimedia projects, Games with a Purpose, Princeton University's WordNet, DBPedia, OpenCyc, and Umbel.
-- Shard terms: CC-BY-SA-4.0
-- Used by: `k.attributes` (1 shards)
+- Shard terms: CC-BY-SA-4.0, CC0-1.0
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (2 shards)
 
 ## countries-5.1.0
 
@@ -365,6 +365,14 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Attribution: that of the facts read (none for CC0-1.0).
 - Shard terms: CC0-1.0
 - Used by: `k.time` (1 shards)
+
+## tzdata-2026e
+
+- What: the time zones of the IANA time zone database (tz, "Olson"): `zone1970.tab`, one row per zone that has had the same clocks since 1970, with the ISO 3166 codes of the countries it covers, the coordinates of its principal place and a comment; the UTC offset of each zone in January and July of 2026, read from the same release through Node's `Intl` (ICU's copy of tz, release 2026e, `process.versions.tz`).
+- Origin: https://www.iana.org/time-zones; the files as installed by the system's tzdata package (`/usr/share/zoneinfo/zone1970.tab`, `iso3166.tab`, `tzdata.zi` for the release line).
+- License: public domain (the tz database: "This database is in the public domain", the file LICENSE of tz).
+- Shard terms: public-domain
+- Used by: `k.time` (2 shards)
 
 ## unimorph-ron-2026-11-14
 

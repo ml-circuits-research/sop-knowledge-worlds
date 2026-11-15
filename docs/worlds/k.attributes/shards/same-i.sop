@@ -36,7 +36,7 @@
 @k.attributes.same.intestine.body_part k.attributes.same name=intestine sense="body part" only=true in=k.attributes.drawn in=k.body.part in=k.objects.object by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.io.body_in_space k.attributes.same name=io sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.iphone.thing k.attributes.same name=iphone sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.ipod.thing k.attributes.same name=ipod sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.ipod.thing k.attributes.same name=ipod sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.iran.place k.attributes.same name=iran sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.iraq.place k.attributes.same name=iraq sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ireland.place k.attributes.same name=ireland sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-v: one name, one thing: for 49 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
+# k.attributes/shards/same-v: one name, one thing: for 50 names that start with "v" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (2 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -12,7 +12,7 @@
 @k.attributes.same.vase.thing k.attributes.same name=vase sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vatican.place k.attributes.same name=vatican sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vault.thing k.attributes.same name=vault sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.vcr.thing k.attributes.same name=vcr sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.vcr.thing k.attributes.same name=vcr sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.veal.thing k.attributes.same name=veal sense=thing only=true in=k.objects.stand_in by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vega.body_in_space k.attributes.same name=vega sense="body in space" only=true in=k.space.body by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vegetable_soup.food k.attributes.same name="vegetable soup" sense=food only=true in=k.food.food by_word=k.words.sense core.source="hand-core 1"
@@ -41,6 +41,7 @@
 @k.attributes.same.villa.thing k.attributes.same name=villa sense=thing only=true in=k.objects.stand_in in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vine.plant k.attributes.same name=vine sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.vinegar.food k.attributes.same name=vinegar sense=food only=true in=k.attributes.drawn in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.viola.thing k.attributes.same name=viola sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violet.plant k.attributes.same name=violet sense=plant only=false in=k.attributes.number in=k.attributes.thing unsure=k.attributes.drawn unsure=k.objects.object unsure=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violet.colour k.attributes.same name=violet sense=colour only=false in=k.colours.colour unsure=k.attributes.drawn unsure=k.objects.object unsure=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.violin.thing k.attributes.same name=violin sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"

@@ -62,7 +62,7 @@ export const MACHINE_KEYS = {
 
 // Keys that are identifiers or metadata wherever they stand, by name, each with why.
 export const KEY_NO = [
-  [/^(code\d*|iso\w*|qid|wikidata|id|\w+_id)$/, 'an identifier (a code)'],
+  [/^(code\d*|iso\w*|qid|wikidata|id|\w+_id|\w+_code\d*)$/, 'an identifier (a code)'],
   [/^formal$/, 'a formal name, metadata of the name'],
   [/^(source|cite|citations|doi|own|basis|as_of|unsure|approximate|by_word|derived|recognition)$/, 'metadata: where a fact comes from or how sure it is'],
   [/^reply$/, 'what a host says back, not a fact'],

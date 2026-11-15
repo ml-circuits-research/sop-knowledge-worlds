@@ -108,7 +108,7 @@
 @k.attributes.same.green_salad.food k.attributes.same name="green salad" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.greenhouse.thing k.attributes.same name=greenhouse sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.greenland.place k.attributes.same name=greenland sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.grenade.thing k.attributes.same name=grenade sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.grenade.thing k.attributes.same name=grenade sense=thing only=true in=k.attributes.number in=k.attributes.thing in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grey.colour k.attributes.same name=grey sense=colour only=false in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.grey.place k.attributes.same name=grey sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.greyhound.thing k.attributes.same name=greyhound sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"

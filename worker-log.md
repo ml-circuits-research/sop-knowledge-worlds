@@ -6569,3 +6569,22 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   it applies to (ConceptNet's abilities are mostly of things that already have some), property (new row) 34.
 - Test (tests/k.attributes.conceptnet.test.mjs, new, 3): licence and the per-relation rates in the header; every value
   written is in the audit as right; with the raw files, the shard is what the importer gives (skips without them).
+
+
+## 2026-11-15 — first worker: time zones (block 15:35 item 3)
+
+- New type **k.time.zone** (k.time version 7): name (IANA id), country_code (many; a declared join to k.geo.country by
+  code2: 246 of 247 meet, AQ is no k.geo country), lat and lon of the principal place, offset_january and offset_july
+  (minutes, 2026), summer_time, about (the database's comment). tools/import/tzdata.mjs from the IANA time zone database
+  (sources/tzdata, public domain, release 2026e: zone1970.tab, the offsets through Node's Intl, whose tz release is the
+  same; the tool stops when they differ): 312 zones in 2 shards (zones-africa-asia, zones-atlantic-pacific), no
+  warning. Europe/Bucharest 120/180, America/New_York -300/-240, Asia/Kolkata 330, Asia/Kathmandu 345.
+- tools/narration-core.mjs: a key named `*_code` is an identifier (not narrated), as `*_id` is; no other world has
+  such a key. Words: "time zone" for the type; the key words by rule. Measures: degrees and minutes.
+- Dates (the order of day, month and year by country) wait for CLDR's date patterns, which are not in the data here.
+- Tests: tests/k.time.zones.test.mjs (2: the shards = the importer on the raw files of the release Intl has, skipped
+  otherwise with the reason; the cases above, summer time where the offsets differ, the join). Touched tests (k.time*,
+  k.kinds*, k.attributes*, questions, coverage-report, sync, catalog, validate, repo): 19 files, 533 pass.
+- At the push, main itself was red on three tests from f77c570 (KR6 ConceptNet, fifth worker), the same in a clean
+  worktree of origin/main: k.attributes.abilities and k.attributes.uses (their shards stale against their tools) and
+  k.kinds (material.sop: hand-core and conceptnet facts in one CC0 shard). Not this commit's; reported.

@@ -26,7 +26,7 @@
 @k.attributes.same.jay.animal k.attributes.same name=jay sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jeans.clothing k.attributes.same name=jeans sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.wearables.wearable by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jeep.thing k.attributes.same name=jeep sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.jelly.food k.attributes.same name=jelly sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.jelly.food k.attributes.same name=jelly sense=food only=true in=k.attributes.drawn in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jelly_beans.food k.attributes.same name="jelly beans" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jellyfish.animal k.attributes.same name=jellyfish sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jerky.thing k.attributes.same name=jerky sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"

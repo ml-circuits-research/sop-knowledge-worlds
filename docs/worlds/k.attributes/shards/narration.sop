@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (287 of 1122 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (292 of 1131 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -91,6 +91,7 @@
 @k.attributes.narration.k.attributes.thing.wheels k.attributes.narration type=k.attributes.thing key=wheels narrate=yes salience=0.7 form=count basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.attributes.thing.can k.attributes.narration type=k.attributes.thing key=can narrate=yes salience=0.6 form=relation basis=typical core.source="hand-core 1"
 @k.attributes.narration.k.attributes.thing.used_for k.attributes.narration type=k.attributes.thing key=used_for narrate=yes salience=1 form=text basis=typical core.source="hand-core 1"
+@k.attributes.narration.k.attributes.thing.property k.attributes.narration type=k.attributes.thing key=property narrate=yes salience=0.01 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.attributes.drawn.name k.attributes.narration type=k.attributes.drawn key=name narrate=no salience=0 why="machinery: the colours of drawings" core.source="hand-core 1"
 @k.attributes.narration.k.attributes.drawn.drawn_colour k.attributes.narration type=k.attributes.drawn key=drawn_colour narrate=no salience=0 why="machinery: the colours of drawings" core.source="hand-core 1"
 @k.attributes.narration.k.attributes.drawn.drawn_shade k.attributes.narration type=k.attributes.drawn key=drawn_shade narrate=no salience=0 why="machinery: the colours of drawings" core.source="hand-core 1"
@@ -1027,6 +1028,14 @@
 @k.attributes.narration.k.time.span.within k.attributes.narration type=k.time.span key=within narrate=yes salience=0.12 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.span.starts_about k.attributes.narration type=k.time.span key=starts_about narrate=yes salience=0.12 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.span.ends_about k.attributes.narration type=k.time.span key=ends_about narrate=yes salience=0.12 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.name k.attributes.narration type=k.time.zone key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.country_code k.attributes.narration type=k.time.zone key=country_code narrate=no salience=0 why="an identifier (a code)" core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.lat k.attributes.narration type=k.time.zone key=lat narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.lon k.attributes.narration type=k.time.zone key=lon narrate=no salience=0 why="a coordinate" core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.offset_january k.attributes.narration type=k.time.zone key=offset_january narrate=yes salience=0.3 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.offset_july k.attributes.narration type=k.time.zone key=offset_july narrate=yes salience=0.3 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.summer_time k.attributes.narration type=k.time.zone key=summer_time narrate=yes salience=0.3 form=state basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.zone.about k.attributes.narration type=k.time.zone key=about narrate=yes salience=0.19 form=text basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.duration.name k.attributes.narration type=k.time.duration key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.time.duration.count k.attributes.narration type=k.time.duration key=count narrate=yes salience=0.95 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.duration.count_about k.attributes.narration type=k.time.duration key=count_about narrate=yes salience=0.54 form=measure basis=measured core.source="hand-core 1"

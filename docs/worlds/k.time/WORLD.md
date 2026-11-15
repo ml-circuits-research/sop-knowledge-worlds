@@ -83,3 +83,15 @@ Shard `clock-words` (hand-written, CC0): how the clock names a time by an hour, 
 minutes added to the hour named); the spans said in clock words as `k.time.duration` in minutes (half an hour 30, a
 quarter of an hour 15, an hour and a half 90); two more names of noon and midnight (12 noon, 12 midnight; midday and
 twelve noon were there). w.lang.en's time frames (shard time-frames) take their words from here.
+
+## Time zones (block 15:35 item 3)
+
+`k.time.zone` (shards `zones-africa-asia`, `zones-atlantic-pacific`; public domain; tools/import/tzdata.mjs): the 312
+zones of the IANA time zone database (`zone1970.tab`, release 2026e), each with the countries it covers (ISO 3166
+codes, a declared join to `k.geo.country` by `code2`: 246 of 247 meet, Antarctica is no country of k.geo), the
+latitude and longitude of its principal place, the database's comment ("Eastern (most areas)"), and its UTC offset in
+minutes in January and in July 2026 (Europe/Bucharest 120 and 180, America/New_York -300 and -240, Asia/Kolkata 330
+and 330) with `summer_time`. The offsets are read through Node's `Intl` from ICU's copy of the same release; the tool
+stops when the two releases differ. Questions it answers: what time zone is Bucharest in, how many hours is India ahead
+of London in winter, does Japan change its clocks in summer. Dates (the order of day, month and year by country) wait
+for CLDR's date patterns, not in the data here.

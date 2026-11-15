@@ -50,7 +50,7 @@ export const MEASURES = {
   'k.people': { kind: { height_about: { counts: 'hundredth of the height of a grown man' } }, given_name: { holders: { counts: 'human in Wikidata whose given name it is' } } },
   'k.scenes': { has: { count: { counts: 'thing of that name in the scene' } } },
   'k.shapes': { shape: { sides: { counts: 'side' }, corners: { counts: 'corner' }, faces: { counts: 'face' }, edges: { counts: 'edge' } } },
-  'k.time': { ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord }, stage: { n: ord },
+  'k.time': { zone: { lat: deg, lon: deg, offset_january: { unit: 'minute' }, offset_july: { unit: 'minute' } }, ordered: { n: ord }, cycle: { length: { counts: 'time of the cycle' } }, month: { n: ord, days: { unit: 'day' }, leap_days: { unit: 'day' } }, weekday: { n: ord }, season: { n: ord }, stage: { n: ord },
     part_of_day: { n: ord, starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, span: { starts_about: { counts: 'hour after midnight' }, ends_about: { counts: 'hour after midnight' } }, hour: { n: { counts: 'hour after midnight' }, hour12: { counts: 'hour after midnight or noon' } },
     clock_phrase: { minutes: { unit: 'minute' } },
     duration: { count: { counts: 'span that the key unit of the same fact names' }, count_about: { counts: 'span that the key unit of the same fact names' } } },
