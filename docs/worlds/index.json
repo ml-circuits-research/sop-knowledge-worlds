@@ -1,5 +1,5 @@
 {
- "version": "24d04324f2fa",
+ "version": "76b1c2b5d635",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -89766,6 +89766,47 @@
       "unknown-word w.lang.en.word.k.genres.key.step.tense: w.lang.en.word.k.genres.key.step.tense: means=k.genres.step.tense names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.genres.key.step.about: w.lang.en.word.k.genres.key.step.about: means=k.genres.step.about names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.genres.key.step.source: w.lang.en.word.k.genres.key.step.source: means=k.genres.step.source names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.interest",
+     "path": "w.lang.en/shards/words-k.interest.sop",
+     "wires": 28,
+     "bytes": 4243,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.interest.world: w.lang.en.word.k.interest.world: means=k.interest.feature names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.source: w.lang.en.word.k.interest.source: means=k.interest.source names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.appraisal: w.lang.en.word.k.interest.appraisal: means=k.interest.appraisal names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.measure: w.lang.en.word.k.interest.measure: means=k.interest.measure names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.source.cite: w.lang.en.word.k.interest.key.source.cite: means=k.interest.source.cite names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.source.year: w.lang.en.word.k.interest.key.source.year: means=k.interest.source.year names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.source.doi: w.lang.en.word.k.interest.key.source.doi: means=k.interest.source.doi names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.source.finding: w.lang.en.word.k.interest.key.source.finding: means=k.interest.source.finding names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.appraisal.about: w.lang.en.word.k.interest.key.appraisal.about: means=k.interest.appraisal.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.appraisal.combine: w.lang.en.word.k.interest.key.appraisal.combine: means=k.interest.appraisal.combine names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.appraisal.base: w.lang.en.word.k.interest.key.appraisal.base: means=k.interest.appraisal.base names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.appraisal.source: w.lang.en.word.k.interest.key.appraisal.source: means=k.interest.appraisal.source names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.appraisal.own: w.lang.en.word.k.interest.key.appraisal.own: means=k.interest.appraisal.own names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.measure.scope: w.lang.en.word.k.interest.key.measure.scope: means=k.interest.measure.scope names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.measure.reads: w.lang.en.word.k.interest.key.measure.reads: means=k.interest.measure.reads names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.measure.gives: w.lang.en.word.k.interest.key.measure.gives: means=k.interest.measure.gives names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.measure.about: w.lang.en.word.k.interest.key.measure.about: means=k.interest.measure.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.appraisal: w.lang.en.word.k.interest.key.feature.appraisal: means=k.interest.feature.appraisal names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.measure: w.lang.en.word.k.interest.key.feature.measure: means=k.interest.feature.measure names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.shape: w.lang.en.word.k.interest.key.feature.shape: means=k.interest.feature.shape names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.start_at: w.lang.en.word.k.interest.key.feature.start_at: means=k.interest.feature.start_at names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.peak_at: w.lang.en.word.k.interest.key.feature.peak_at: means=k.interest.feature.peak_at names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.full_at: w.lang.en.word.k.interest.key.feature.full_at: means=k.interest.feature.full_at names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.weight_min: w.lang.en.word.k.interest.key.feature.weight_min: means=k.interest.feature.weight_min names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.weight_max: w.lang.en.word.k.interest.key.feature.weight_max: means=k.interest.feature.weight_max names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.about: w.lang.en.word.k.interest.key.feature.about: means=k.interest.feature.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.source: w.lang.en.word.k.interest.key.feature.source: means=k.interest.feature.source names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.interest.key.feature.own: w.lang.en.word.k.interest.key.feature.own: means=k.interest.feature.own names no action, type, key or value of the matrix"
      ]
     },
     {
