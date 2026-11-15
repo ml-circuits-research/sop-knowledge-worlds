@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 384" width="480" height="384">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="480" height="400">
   <title>castle</title>
-  <rect width="480" height="384" fill="#cfe8fa"/><rect y="132.8" width="480" height="251.2" fill="#8fce6b"/>
+  <rect width="480" height="400" fill="#cfe8fa"/><rect y="132.8" width="480" height="267.2" fill="#8fce6b"/>
   <defs>
     <symbol id="o-sun" viewBox="0 0 100 100">
   <polyline points="50,5 50,20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_ray</title></polyline>
@@ -165,18 +165,6 @@
   <polyline points="57,57 31,83" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>spoke_4</title></polyline>
   <ellipse cx="44" cy="70" rx="4" ry="4" fill="grey" stroke="#333" stroke-width="0.8"><title>hub</title></ellipse>
     </symbol>
-    <symbol id="o-throne" viewBox="0 0 100 100">
-  <rect x="24" y="6" width="52" height="56" fill="yellow" stroke="#333" stroke-width="0.8"><title>back_frame</title></rect>
-  <rect x="22" y="72" width="8" height="22" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_leg</title></rect>
-  <rect x="70" y="72" width="8" height="22" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_leg</title></rect>
-  <rect x="31" y="13" width="38" height="46" fill="red" stroke="#333" stroke-width="0.8"><title>back_cushion</title></rect>
-  <rect x="22" y="60" width="56" height="12" fill="red" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
-  <ellipse cx="50" cy="6" rx="5" ry="5" fill="yellow" stroke="#333" stroke-width="0.8"><title>finial</title></ellipse>
-  <rect x="14" y="46" width="10" height="26" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_arm</title></rect>
-  <rect x="76" y="46" width="10" height="26" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_arm</title></rect>
-  <ellipse cx="19" cy="45" rx="5" ry="5" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_knob</title></ellipse>
-  <ellipse cx="81" cy="45" rx="5" ry="5" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_knob</title></ellipse>
-    </symbol>
     <symbol id="o-person" viewBox="0 0 100 100">
   <polyline points="50,29 50,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>body</title></polyline>
   <polyline points="50,38 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_arm</title></polyline>
@@ -213,6 +201,18 @@
   <ellipse cx="73.3" cy="71.3" rx="1.5" ry="1.5" fill="#37474F"><title>part15</title></ellipse>
   <ellipse cx="77.9" cy="61.7" rx="1.5" ry="1.5" fill="#37474F"><title>part16</title></ellipse>
     </symbol>
+    <symbol id="o-throne" viewBox="0 0 100 100">
+  <rect x="24" y="6" width="52" height="56" fill="yellow" stroke="#333" stroke-width="0.8"><title>back_frame</title></rect>
+  <rect x="22" y="72" width="8" height="22" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_leg</title></rect>
+  <rect x="70" y="72" width="8" height="22" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_leg</title></rect>
+  <rect x="31" y="13" width="38" height="46" fill="red" stroke="#333" stroke-width="0.8"><title>back_cushion</title></rect>
+  <rect x="22" y="60" width="56" height="12" fill="red" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
+  <ellipse cx="50" cy="6" rx="5" ry="5" fill="yellow" stroke="#333" stroke-width="0.8"><title>finial</title></ellipse>
+  <rect x="14" y="46" width="10" height="26" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_arm</title></rect>
+  <rect x="76" y="46" width="10" height="26" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_arm</title></rect>
+  <ellipse cx="19" cy="45" rx="5" ry="5" fill="yellow" stroke="#333" stroke-width="0.8"><title>left_knob</title></ellipse>
+  <ellipse cx="81" cy="45" rx="5" ry="5" fill="yellow" stroke="#333" stroke-width="0.8"><title>right_knob</title></ellipse>
+    </symbol>
     <symbol id="o-crown" viewBox="0 0 100 100">
   <polygon points="73.8,17 76.9,13.2 76,8.6 71.4,6.2 67.4,7.9 65.7,12.6 66.6,15 69,17.1 65.2,29.9 59.7,36.7 50.4,40.3 52.7,46.4 56.2,51.5 61.8,55.8 65.6,57.1 74.5,57.1 81.1,53.9 85.1,49 87.6,42.2 87.9,40.4 81.4,39 77.2,34.7 74.3,25.6" fill="#F19534"><title>part1</title></polygon>
   <polygon points="27.1,17 24.1,13.2 25,8.6 29.6,6.2 33.6,7.9 35.2,12.6 34.4,15 32,17.1 35.8,29.9 41.3,36.7 50.5,40.3 48.3,46.4 44.8,51.5 39.2,55.8 35.4,57.1 26.5,57.1 19.9,53.9 15.9,49 13.4,42.2 13.1,40.4 19.6,39 23.7,34.7 26.7,25.6" fill="#F19534"><title>part2</title></polygon>
@@ -243,25 +243,26 @@
   <use href="#o-tree" x="147.5" y="64" width="76.8" height="76.8"><title>tree</title></use>
   <use href="#o-tree" x="255.7" y="64" width="76.8" height="76.8"><title>tree</title></use>
   <use href="#o-tree" x="363.8" y="64" width="76.8" height="76.8"><title>tree</title></use>
-  <use href="#o-castle" x="24" y="157.6" width="96" height="96"><title>castle</title></use>
-  <use href="#o-tower" x="136" y="157.6" width="96" height="96"><title>tower</title></use>
-  <use href="#o-flag" x="152.5" y="146.8" width="30" height="30"><title>flag</title></use>
-  <use href="#o-flag" x="185.5" y="146.8" width="30" height="30"><title>flag</title></use>
-  <use href="#o-bridge" x="248" y="157.6" width="96" height="96"><title>bridge</title></use>
-  <use href="#o-ditch" x="360" y="157.6" width="96" height="96"><title>moat</title></use>
-  <use href="#o-gate" x="13.3" y="259.6" width="66" height="66"><title>gate</title></use>
-  <use href="#o-wall" x="84.5" y="259.6" width="66" height="66"><title>wall</title></use>
-  <use href="#o-horse" x="155.8" y="259.6" width="66" height="66"><title>horse</title></use>
-  <use href="#o-cannon" x="227" y="259.6" width="66" height="66"><title>cannon</title></use>
-  <use href="#o-throne" x="298.3" y="259.6" width="66" height="66"><title>throne</title></use>
-  <use href="#o-person" x="369.5" y="279.6" width="46" height="46"><title>knight</title></use>
-  <use href="#o-person" x="420.8" y="279.6" width="46" height="46"><title>knight</title></use>
-  <use href="#o-person" x="22.2" y="331.6" width="46" height="46"><title>king</title></use>
-  <use href="#o-person" x="82.4" y="331.6" width="46" height="46"><title>queen</title></use>
-  <use href="#o-sword" x="142.7" y="331.6" width="46" height="46"><title>sword</title></use>
-  <use href="#o-sword" x="202.9" y="331.6" width="46" height="46"><title>sword</title></use>
-  <use href="#o-shield" x="263.1" y="331.6" width="46" height="46"><title>shield</title></use>
-  <use href="#o-shield" x="323.3" y="331.6" width="46" height="46"><title>shield</title></use>
-  <use href="#o-crown" x="383.6" y="347.6" width="30" height="30"><title>crown</title></use>
-  <use href="#o-crown" x="427.8" y="347.6" width="30" height="30"><title>crown</title></use>
+  <use href="#o-castle" x="24" y="173.6" width="96" height="96"><title>castle</title></use>
+  <use href="#o-tower" x="136" y="173.6" width="96" height="96"><title>tower</title></use>
+  <use href="#o-flag" x="136.5" y="146.8" width="46" height="46"><title>flag</title></use>
+  <use href="#o-flag" x="185.5" y="146.8" width="46" height="46"><title>flag</title></use>
+  <use href="#o-bridge" x="248" y="173.6" width="96" height="96"><title>bridge</title></use>
+  <use href="#o-ditch" x="360" y="173.6" width="96" height="96"><title>moat</title></use>
+  <use href="#o-gate" x="13.3" y="275.6" width="66" height="66"><title>gate</title></use>
+  <use href="#o-wall" x="84.5" y="275.6" width="66" height="66"><title>wall</title></use>
+  <use href="#o-horse" x="155.8" y="275.6" width="66" height="66"><title>horse</title></use>
+  <use href="#o-horse" x="227" y="275.6" width="66" height="66"><title>horse</title></use>
+  <use href="#o-cannon" x="298.3" y="275.6" width="66" height="66"><title>cannon</title></use>
+  <use href="#o-person" x="369.5" y="295.6" width="46" height="46"><title>knight</title></use>
+  <use href="#o-person" x="420.8" y="295.6" width="46" height="46"><title>knight</title></use>
+  <use href="#o-person" x="16.2" y="347.6" width="46" height="46"><title>king</title></use>
+  <use href="#o-person" x="70.4" y="347.6" width="46" height="46"><title>queen</title></use>
+  <use href="#o-sword" x="124.6" y="347.6" width="46" height="46"><title>sword</title></use>
+  <use href="#o-sword" x="178.8" y="347.6" width="46" height="46"><title>sword</title></use>
+  <use href="#o-shield" x="233" y="347.6" width="46" height="46"><title>shield</title></use>
+  <use href="#o-shield" x="287.2" y="347.6" width="46" height="46"><title>shield</title></use>
+  <use href="#o-throne" x="341.4" y="347.6" width="46" height="46"><title>throne</title></use>
+  <use href="#o-crown" x="395.6" y="363.6" width="30" height="30"><title>crown</title></use>
+  <use href="#o-crown" x="433.8" y="363.6" width="30" height="30"><title>crown</title></use>
 </svg>

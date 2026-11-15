@@ -133,15 +133,6 @@
   <polygon points="32.4,87 34.6,86.3 37,87 37.1,97.1 36.2,97.5 33.1,97.3" fill="#9C2D1B"><title>peg2</title></polygon>
   <polygon points="93,82.6 94.6,81.8 97,82.3 96.4,92.7 95.4,93.3 92.6,92.9" fill="#9C2D1B"><title>peg3</title></polygon>
     </symbol>
-    <symbol id="o-rock" viewBox="0 0 100 100">
-  <polygon points="7,70.9 4.7,63.6 5.5,57.3 8.8,49.2 16.4,35.1 18.9,33.1 32.6,24.6 47.6,9.4 60.9,6 63.6,5.9 65.4,6.7 71.8,15.8 88.2,42.6 88.8,53.6 92.1,64.6 92,73 91.1,78.4 85.9,86.5 84.5,87.9 79.8,89.8 62.6,95.7 55.7,95 19.8,89.3 16.6,88.2 14.9,86.7" fill="#8E8884"><title>part1</title></polygon>
-  <polygon points="24.5,89.8 47.3,93.6 38.6,83.6 40.3,73.4 25.5,75.9 19.3,70.4 13.1,63.1 10.3,59.1 9.7,57.4 11.3,44.4 5.5,57.3 4.7,61.5 5.1,65.8 9.7,76.9 14.9,86.7 17.6,88.7" fill="#37474F"><title>part2</title></polygon>
-  <polygon points="66.4,7.8 64.4,7.1 62.2,8.2 54.1,16.3 54.7,31.8 63.9,45 67,48.7 69.2,50.2 70.9,49.2 77.8,40.5 83.9,41 84.9,40 85.2,37.7" fill="#AEA298"><title>part3</title></polygon>
-  <polygon points="33.5,36.2 43.4,34.5 47.4,33.2 50,30.7 54.3,24.2 54.4,36 51.5,53.4 50.5,56.4 40.3,73.4 23.5,56.4 20.2,44.6 19.7,40.9 20.8,39.1 25.1,37.4" fill="#4C5C64"><title>part4</title></polygon>
-  <polygon points="52.5,16.2 51.5,14.1 51.5,11.8 55.3,7.3 48.3,9.1 46.2,10.5 32.6,24.6" fill="#4C5C64"><title>part5</title></polygon>
-  <polygon points="90.7,60.5 89.1,55.4 88.3,50.1 82.2,54.9 77.9,57.2 67.3,59.2 60.4,61.7 53.3,62.2 51.6,62.9 52.7,64.3 60.2,69.1 67.3,77.1 69.4,78.3 80.1,70.5 90.8,64.6 91.6,62.7" fill="#AEA298"><title>part6</title></polygon>
-  <polygon points="92.1,64.6 91.7,63.1 89.9,64.9 80.8,69.8 76.5,72.8 71,77.8 69.1,81 66.4,90.2 63.1,95.6 81.9,89 84.5,87.9 85.9,86.5 89.6,81.2 91.5,77.3" fill="#37474F"><title>part7</title></polygon>
-    </symbol>
     <symbol id="o-goat" viewBox="0 0 100 100">
   <polygon points="52.1,38.7 65.9,35.7 69.3,29.5 70.2,23.5 75.5,24 78,27.6 77.3,34.2 74,39.2 80.6,49.9 80.6,67.9 78.9,70.2 76.1,70.4 68.7,65.5 66.7,65.8 64.6,69.3 63,79.6 59.4,80.6 52.8,78.3 51,73.6 44.7,79.8 38.7,74.9 34.9,65.1 34.4,54.5 27.7,21.7 33.3,8.9 39,3.9 44.3,3.6 38.2,15.4 37.1,19.5 39.4,20.1 43.7,13.1 48.7,8.6 54,7 59.8,8.7 59.7,10.3 55.7,11.8 51.1,16.1 45.6,27.6 51.2,33.7" fill="#B68859"><title>part1</title></polygon>
   <polygon points="27.9,54.8 34.3,57.7 38.5,57 42.8,54.7 47,49.9 49.1,44.6 49.2,38.7 47.4,33.5 52,35.8 57.7,35.2 62.5,31.4 64.2,27.7 64.2,25.9 61.6,25.9 54,29.4 40.8,30.3 27.1,49.9" fill="#6D4938"><title>part2</title></polygon>
@@ -168,6 +159,15 @@
   <ellipse cx="45" cy="14" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>left_eye</title></ellipse>
   <ellipse cx="55" cy="14" rx="2" ry="2" fill="black" stroke="#333" stroke-width="0.8"><title>right_eye</title></ellipse>
   <path d="M44 18 A6 6 0 0 0 56 18" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></path>
+    </symbol>
+    <symbol id="o-rock" viewBox="0 0 100 100">
+  <polygon points="7,70.9 4.7,63.6 5.5,57.3 8.8,49.2 16.4,35.1 18.9,33.1 32.6,24.6 47.6,9.4 60.9,6 63.6,5.9 65.4,6.7 71.8,15.8 88.2,42.6 88.8,53.6 92.1,64.6 92,73 91.1,78.4 85.9,86.5 84.5,87.9 79.8,89.8 62.6,95.7 55.7,95 19.8,89.3 16.6,88.2 14.9,86.7" fill="#8E8884"><title>part1</title></polygon>
+  <polygon points="24.5,89.8 47.3,93.6 38.6,83.6 40.3,73.4 25.5,75.9 19.3,70.4 13.1,63.1 10.3,59.1 9.7,57.4 11.3,44.4 5.5,57.3 4.7,61.5 5.1,65.8 9.7,76.9 14.9,86.7 17.6,88.7" fill="#37474F"><title>part2</title></polygon>
+  <polygon points="66.4,7.8 64.4,7.1 62.2,8.2 54.1,16.3 54.7,31.8 63.9,45 67,48.7 69.2,50.2 70.9,49.2 77.8,40.5 83.9,41 84.9,40 85.2,37.7" fill="#AEA298"><title>part3</title></polygon>
+  <polygon points="33.5,36.2 43.4,34.5 47.4,33.2 50,30.7 54.3,24.2 54.4,36 51.5,53.4 50.5,56.4 40.3,73.4 23.5,56.4 20.2,44.6 19.7,40.9 20.8,39.1 25.1,37.4" fill="#4C5C64"><title>part4</title></polygon>
+  <polygon points="52.5,16.2 51.5,14.1 51.5,11.8 55.3,7.3 48.3,9.1 46.2,10.5 32.6,24.6" fill="#4C5C64"><title>part5</title></polygon>
+  <polygon points="90.7,60.5 89.1,55.4 88.3,50.1 82.2,54.9 77.9,57.2 67.3,59.2 60.4,61.7 53.3,62.2 51.6,62.9 52.7,64.3 60.2,69.1 67.3,77.1 69.4,78.3 80.1,70.5 90.8,64.6 91.6,62.7" fill="#AEA298"><title>part6</title></polygon>
+  <polygon points="92.1,64.6 91.7,63.1 89.9,64.9 80.8,69.8 76.5,72.8 71,77.8 69.1,81 66.4,90.2 63.1,95.6 81.9,89 84.5,87.9 85.9,86.5 89.6,81.2 91.5,77.3" fill="#37474F"><title>part7</title></polygon>
     </symbol>
     <symbol id="o-flower" viewBox="0 0 100 100">
   <polyline points="50,45 50,95" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stem</title></polyline>
@@ -197,12 +197,12 @@
   <use href="#o-cow" x="194.9" y="278.8" width="66" height="66"><title>cow</title></use>
   <use href="#o-cow" x="269.1" y="278.8" width="66" height="66"><title>cow</title></use>
   <use href="#o-tent" x="343.4" y="278.8" width="66" height="66"><title>tent</title></use>
-  <use href="#o-rock" x="417.7" y="298.8" width="46" height="46"><title>rock</title></use>
-  <use href="#o-rock" x="47" y="350.8" width="46" height="46"><title>rock</title></use>
-  <use href="#o-rock" x="132" y="350.8" width="46" height="46"><title>rock</title></use>
-  <use href="#o-goat" x="217" y="350.8" width="46" height="46"><title>goat</title></use>
-  <use href="#o-person" x="302" y="350.8" width="46" height="46"><title>hiker</title></use>
-  <use href="#o-person" x="387" y="350.8" width="46" height="46"><title>hiker</title></use>
+  <use href="#o-goat" x="417.7" y="298.8" width="46" height="46"><title>goat</title></use>
+  <use href="#o-person" x="55" y="350.8" width="46" height="46"><title>hiker</title></use>
+  <use href="#o-person" x="148" y="350.8" width="46" height="46"><title>hiker</title></use>
+  <use href="#o-rock" x="241" y="366.8" width="30" height="30"><title>rock</title></use>
+  <use href="#o-rock" x="318" y="366.8" width="30" height="30"><title>rock</title></use>
+  <use href="#o-rock" x="395" y="366.8" width="30" height="30"><title>rock</title></use>
   <use href="#o-flower" x="101.5" y="402.8" width="30" height="30"><title>flower</title></use>
   <use href="#o-flower" x="225" y="402.8" width="30" height="30"><title>flower</title></use>
   <use href="#o-flower" x="348.5" y="402.8" width="30" height="30"><title>flower</title></use>

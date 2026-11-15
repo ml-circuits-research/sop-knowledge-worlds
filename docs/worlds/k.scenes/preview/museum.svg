@@ -20,6 +20,13 @@
   <polyline points="44,28.6 43,32.5 56.7,32.5 54,23.1 45.6,23.1" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="25,16.9 41.3,22.7" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
+    <symbol id="o-sword" viewBox="0 0 100 100">
+  <polygon points="50,3 55,12 55,66 45,66 45,12" fill="grey" stroke="#333" stroke-width="0.8"><title>blade</title></polygon>
+  <rect x="46" y="72" width="8" height="16" fill="brown" stroke="#333" stroke-width="0.8"><title>grip</title></rect>
+  <polyline points="50,14 50,62" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fuller</title></polyline>
+  <rect x="30" y="66" width="40" height="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>guard</title></rect>
+  <ellipse cx="50" cy="93" rx="6" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>pommel</title></ellipse>
+    </symbol>
     <symbol id="o-painting" viewBox="0 0 100 100">
   <polyline points="40,16 50,6 60,16" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>wire</title></polyline>
   <rect x="10" y="16" width="80" height="66" fill="brown" stroke="#333" stroke-width="0.8"><title>frame</title></rect>
@@ -27,13 +34,6 @@
   <rect x="17" y="62" width="66" height="13" fill="green" stroke="#333" stroke-width="0.8"><title>ground</title></rect>
   <ellipse cx="70" cy="34" rx="6" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>sun</title></ellipse>
   <polygon points="41,40 60,64 22,64" fill="grey" stroke="#333" stroke-width="0.8"><title>mountain</title></polygon>
-    </symbol>
-    <symbol id="o-sword" viewBox="0 0 100 100">
-  <polygon points="50,3 55,12 55,66 45,66 45,12" fill="grey" stroke="#333" stroke-width="0.8"><title>blade</title></polygon>
-  <rect x="46" y="72" width="8" height="16" fill="brown" stroke="#333" stroke-width="0.8"><title>grip</title></rect>
-  <polyline points="50,14 50,62" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>fuller</title></polyline>
-  <rect x="30" y="66" width="40" height="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>guard</title></rect>
-  <ellipse cx="50" cy="93" rx="6" ry="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>pommel</title></ellipse>
     </symbol>
     <symbol id="o-portrait" viewBox="0 0 100 100">
   <rect x="18" y="6" width="64" height="88" fill="yellow" stroke="#333" stroke-width="0.8"><title>frame</title></rect>
@@ -194,12 +194,12 @@
   <use href="#o-ceiling_light" x="106" y="6" width="24" height="24"><title>ceiling light</title></use>
   <use href="#o-ceiling_light" x="228" y="6" width="24" height="24"><title>ceiling light</title></use>
   <use href="#o-ceiling_light" x="350" y="6" width="24" height="24"><title>ceiling light</title></use>
-  <use href="#o-painting" x="46.4" y="36" width="36.8" height="36.8"><title>painting</title></use>
-  <use href="#o-painting" x="121.6" y="36" width="36.8" height="36.8"><title>painting</title></use>
-  <use href="#o-painting" x="196.8" y="36" width="36.8" height="36.8"><title>painting</title></use>
-  <use href="#o-sword" x="272" y="36" width="36.8" height="36.8"><title>sword</title></use>
-  <use href="#o-portrait" x="347.2" y="48.8" width="24" height="24"><title>portrait</title></use>
-  <use href="#o-portrait" x="409.6" y="48.8" width="24" height="24"><title>portrait</title></use>
+  <use href="#o-sword" x="51.9" y="36" width="36.8" height="36.8"><title>sword</title></use>
+  <use href="#o-painting" x="132.6" y="48.8" width="24" height="24"><title>painting</title></use>
+  <use href="#o-painting" x="200.5" y="48.8" width="24" height="24"><title>painting</title></use>
+  <use href="#o-painting" x="268.3" y="48.8" width="24" height="24"><title>painting</title></use>
+  <use href="#o-portrait" x="336.2" y="48.8" width="24" height="24"><title>portrait</title></use>
+  <use href="#o-portrait" x="404.1" y="48.8" width="24" height="24"><title>portrait</title></use>
   <use href="#o-sauropod" x="19.1" y="78.8" width="96" height="96"><title>dinosaur</title></use>
   <use href="#o-statue" x="126.3" y="108.8" width="66" height="66"><title>statue</title></use>
   <use href="#o-statue" x="203.4" y="108.8" width="66" height="66"><title>statue</title></use>

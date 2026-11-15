@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 308" width="480" height="308">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 324" width="480" height="324">
   <title>picnic</title>
-  <rect width="480" height="308" fill="#cfe8fa"/><rect y="132.8" width="480" height="175.2" fill="#8fce6b"/>
+  <rect width="480" height="324" fill="#cfe8fa"/><rect y="132.8" width="480" height="191.2" fill="#8fce6b"/>
   <defs>
     <symbol id="o-sun" viewBox="0 0 100 100">
   <polyline points="50,5 50,20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_ray</title></polyline>
@@ -72,11 +72,6 @@
   <polygon points="53.9,60.5 61.2,61.2 87.3,39.3 93.9,31.8 94.7,24.1 93.9,21.5 93.4,21.2 54.7,49" fill="#D46F1E"><title>part14</title></polygon>
   <polygon points="61.3,50.5 61.2,61.2 57.7,62.5 50.6,63.3 41.9,62.2 32.5,57.5 28.1,53.1 16.5,52.8 11.6,51.5 8.2,49.7 6.4,47.7 5.1,44.5 5.3,36.5 6.8,34 23.1,20.3 40.4,8.5 51.1,10 69,13.8 89.3,19.3 93.4,21.2 93.9,22.4 92.4,24.5 91.2,24.9 77,25.6 69.7,27.3" fill="#E38211"><title>part15</title></polygon>
   <polygon points="40.7,10.4 32.2,15.9 11.9,32.1 8.4,35.2 7.5,37.7 8.6,40.9 13.1,43.9 20.2,45.5 30.9,45.4 35.2,50.3 41,53.2 52.9,54 58.3,53.2 61.2,51.9 82.2,34.2 92.6,23.8 87.6,21 76.8,17.9 51.9,12.2" fill="#FADFB1"><title>part16</title></polygon>
-    </symbol>
-    <symbol id="o-apple" viewBox="0 0 100 100">
-  <ellipse cx="50" cy="55" rx="35" ry="35" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
-  <polyline points="50,22 54,5" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stem</title></polyline>
-  <ellipse cx="65" cy="10.5" rx="9" ry="4.5" fill="green" stroke="#333" stroke-width="0.8"><title>leaf</title></ellipse>
     </symbol>
     <symbol id="o-grapes" viewBox="0 0 100 100">
   <polygon points="28,35.3 25.9,39.8 26.8,46.4 11.8,57.1 13.7,61.8 23.1,75.4 30.6,71.6 46.2,87.1 51.3,87.1 69.1,91.5 73.2,94.4 87.6,78.8 82.8,74.3 82.3,57.1 73.1,54.2 68.8,39.2 70.9,35.6 70.7,32.4 56.3,29.3 54,22 50.6,27.6 32.2,32.4" fill="#4C186E"><title>part1</title></polygon>
@@ -151,6 +146,11 @@
   <polyline points="59.5,6.6 59.6,14.5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part14</title></polyline>
   <polyline points="59.6,14.5 58.4,28.2 59,31.9 60.2,32.1 60.6,30.5 59.6,14.5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
     </symbol>
+    <symbol id="o-apple" viewBox="0 0 100 100">
+  <ellipse cx="50" cy="55" rx="35" ry="35" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></ellipse>
+  <polyline points="50,22 54,5" fill="none" stroke="brown" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>stem</title></polyline>
+  <ellipse cx="65" cy="10.5" rx="9" ry="4.5" fill="green" stroke="#333" stroke-width="0.8"><title>leaf</title></ellipse>
+    </symbol>
     <symbol id="o-person" viewBox="0 0 100 100">
   <polyline points="50,29 50,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>body</title></polyline>
   <polyline points="50,38 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_arm</title></polyline>
@@ -209,28 +209,28 @@
   <use href="#o-sun" x="128" y="6" width="52" height="52"><title>sun</title></use>
   <use href="#o-cloud" x="300" y="6" width="52" height="52"><title>cloud</title></use>
   <use href="#o-tree" x="201.6" y="64" width="76.8" height="76.8"><title>tree</title></use>
-  <use href="#o-blanket" x="189.8" y="167.6" width="46" height="46"><title>blanket</title></use>
-  <use href="#o-basket" x="16.3" y="146.8" width="30" height="30"><title>basket</title></use>
-  <use href="#o-sandwich" x="49.3" y="146.8" width="30" height="30"><title>sandwich</title></use>
-  <use href="#o-sandwich" x="82.3" y="146.8" width="30" height="30"><title>sandwich</title></use>
-  <use href="#o-apple" x="115.3" y="146.8" width="30" height="30"><title>apple</title></use>
-  <use href="#o-apple" x="148.3" y="146.8" width="30" height="30"><title>apple</title></use>
-  <use href="#o-grapes" x="181.3" y="146.8" width="30" height="30"><title>grapes</title></use>
-  <use href="#o-cake" x="214.3" y="146.8" width="30" height="30"><title>cake</title></use>
-  <use href="#o-lemonade" x="247.3" y="146.8" width="30" height="30"><title>lemonade</title></use>
-  <use href="#o-cup" x="280.3" y="146.8" width="30" height="30"><title>cup</title></use>
-  <use href="#o-cup" x="313.3" y="146.8" width="30" height="30"><title>cup</title></use>
-  <use href="#o-plate" x="346.3" y="146.8" width="30" height="30"><title>plate</title></use>
-  <use href="#o-plate" x="379.3" y="146.8" width="30" height="30"><title>plate</title></use>
-  <use href="#o-person" x="417.7" y="167.6" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="67.2" y="219.6" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="172.4" y="219.6" width="46" height="46"><title>person</title></use>
-  <use href="#o-dog" x="277.6" y="219.6" width="46" height="46"><title>dog</title></use>
-  <use href="#o-ball" x="382.8" y="235.6" width="30" height="30"><title>ball</title></use>
-  <use href="#o-flower" x="52.9" y="271.6" width="30" height="30"><title>flower</title></use>
-  <use href="#o-flower" x="127.7" y="271.6" width="30" height="30"><title>flower</title></use>
-  <use href="#o-flower" x="202.6" y="271.6" width="30" height="30"><title>flower</title></use>
-  <use href="#o-ant" x="277.4" y="281.6" width="20" height="20"><title>ant</title></use>
-  <use href="#o-ant" x="342.3" y="281.6" width="20" height="20"><title>ant</title></use>
-  <use href="#o-ant" x="407.1" y="281.6" width="20" height="20"><title>ant</title></use>
+  <use href="#o-blanket" x="176.5" y="163.6" width="66" height="66"><title>blanket</title></use>
+  <use href="#o-basket" x="23" y="146.8" width="30" height="30"><title>basket</title></use>
+  <use href="#o-sandwich" x="56" y="146.8" width="30" height="30"><title>sandwich</title></use>
+  <use href="#o-sandwich" x="89" y="146.8" width="30" height="30"><title>sandwich</title></use>
+  <use href="#o-grapes" x="122" y="146.8" width="30" height="30"><title>grapes</title></use>
+  <use href="#o-cake" x="155" y="146.8" width="30" height="30"><title>cake</title></use>
+  <use href="#o-lemonade" x="188" y="146.8" width="30" height="30"><title>lemonade</title></use>
+  <use href="#o-cup" x="221" y="146.8" width="30" height="30"><title>cup</title></use>
+  <use href="#o-cup" x="254" y="146.8" width="30" height="30"><title>cup</title></use>
+  <use href="#o-plate" x="287" y="146.8" width="30" height="30"><title>plate</title></use>
+  <use href="#o-plate" x="320" y="146.8" width="30" height="30"><title>plate</title></use>
+  <use href="#o-apple" x="353" y="156.8" width="20" height="20"><title>apple</title></use>
+  <use href="#o-apple" x="376" y="156.8" width="20" height="20"><title>apple</title></use>
+  <use href="#o-person" x="411" y="183.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="67.2" y="235.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="172.4" y="235.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-dog" x="277.6" y="235.6" width="46" height="46"><title>dog</title></use>
+  <use href="#o-ball" x="382.8" y="251.6" width="30" height="30"><title>ball</title></use>
+  <use href="#o-flower" x="52.9" y="287.6" width="30" height="30"><title>flower</title></use>
+  <use href="#o-flower" x="127.7" y="287.6" width="30" height="30"><title>flower</title></use>
+  <use href="#o-flower" x="202.6" y="287.6" width="30" height="30"><title>flower</title></use>
+  <use href="#o-ant" x="277.4" y="297.6" width="20" height="20"><title>ant</title></use>
+  <use href="#o-ant" x="342.3" y="297.6" width="20" height="20"><title>ant</title></use>
+  <use href="#o-ant" x="407.1" y="297.6" width="20" height="20"><title>ant</title></use>
 </svg>

@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 290" width="480" height="290">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 291" width="480" height="291">
   <title>bedroom</title>
-  <rect width="480" height="290" fill="#f3ead8"/><rect y="97.2" width="480" height="192.8" fill="#d9c2a0"/>
+  <rect width="480" height="291" fill="#f3ead8"/><rect y="97.2" width="480" height="193.8" fill="#d9c2a0"/>
   <defs>
     <symbol id="o-ceiling_light" viewBox="0 0 100 100">
   <polygon points="88.7,13.2 88.7,86.5 86.9,87.2 72.9,71 72.9,28.7 87,12.5" fill="#FFF5B4"><title>part1</title></polygon>
@@ -137,6 +137,24 @@
   <polygon points="32.3,12.3 33.5,9.7 35.8,8.3 38.3,8.6 40,10.1 39.7,11 34.1,16.4 32.7,15" fill="#874D36"><title>left_ear</title></polygon>
   <polygon points="74.4,17.6 74,14.8 72.1,12.9 69.5,12.6 67.6,13.6 67.6,14.6 71.7,21.2 73.3,20.2" fill="#874D36"><title>right_ear</title></polygon>
     </symbol>
+    <symbol id="o-rug" viewBox="0 0 100 100">
+  <polygon points="53.7,30.3 74.8,35.2 74.7,35.6 53.5,30.9" fill="#CB82B7"><title>part1</title></polygon>
+  <polygon points="27.9,55.3 55.7,65.2 55.5,65.7 27.7,55.8" fill="#CB82B7"><title>part2</title></polygon>
+  <polygon points="28,55.3 27.5,54.9 53.2,30.4 53.5,30.9" fill="#CB82B7"><title>part3</title></polygon>
+  <polygon points="27.3,57.5 25.7,55.8 27.7,55.8 55.5,65.7 56.1,66.6 54.8,67.4 50.5,64.9 45.6,64.1 40.4,61.4 36.4,60.8 32,58.4" fill="#CB82B7"><title>part4</title></polygon>
+  <polygon points="27.3,54.7 26.4,55.6 25.8,55.5 26.3,53.6 30.1,51.1 32.6,47.7 30.5,46 31.3,45.2 31.7,45.5 32.7,47.5 35.4,45.9 39,41.5 37.8,41.1 37,39.9 37.9,39.2 39.4,41.3 42.4,39.4 44.6,36.9 45.5,35.3 44.4,35 43.5,34 44.1,33 45.8,35.2 49.3,32.8 51.9,29.1 53.2,29.6 53.2,30.4" fill="#CB82B7"><title>part5</title></polygon>
+  <polygon points="56.1,65.5 75.1,36 76.5,35.2 76.6,37 73.9,39.7 71.9,44.3 68.4,48.3 67.1,51.7 64,55 62.4,59.1 59.3,62.4 57.7,66.5 56.1,66.6" fill="#CB82B7"><title>part6</title></polygon>
+  <polygon points="60.9,58.1 56.1,65.5 55.7,65.2 74.7,35.7 75.1,36" fill="#CB82B7"><title>part7</title></polygon>
+  <polygon points="54.1,28.6 59.2,30.6 64.7,31 69.8,33 75.2,33.4 76.5,35.2 74.8,35.2 53.7,30.3 53.2,29.6" fill="#CB82B7"><title>part8</title></polygon>
+  <polygon points="74.6,35.7 55.7,65.2 28,55.3 53.5,30.9" fill="#CB82B7"><title>rug</title></polygon>
+  <polyline points="91.8,28.6 60.4,78.5 8.1,59.9 50.9,20.2 91.8,28.6" fill="none" stroke="#8C469B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part10</title></polyline>
+  <polyline points="50.9,20.2 91.8,28.6 60.4,78.5 8.1,59.9" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part11</title></polyline>
+  <polyline points="54.1,28.6 59.2,30.6 64.5,31" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part12</title></polyline>
+  <polyline points="53.7,30.3 64.2,32.7" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part13</title></polyline>
+  <polyline points="53.6,30.9 64.1,33.3" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part14</title></polyline>
+  <polyline points="64.2,32.8 74.8,35.2" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
+  <polyline points="64.1,33.3 74.6,35.7" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
+    </symbol>
     <symbol id="o-chest_of_drawers" viewBox="0 0 100 100">
   <polygon points="87.6,15.3 87.2,72.3 75.5,80.7 75.8,16.8 87.5,14.8" fill="#F6CC4B"><title>side</title></polygon>
   <polygon points="70.1,16.4 70,33.8 42,31.1 42.2,14.9" fill="#FFF5B4"><title>top_right_drawer</title></polygon>
@@ -171,24 +189,6 @@
   <rect x="25" y="62" width="7" height="33" fill="brown" stroke="#333" stroke-width="0.8"><title>back_leg</title></rect>
   <rect x="68" y="62" width="7" height="33" fill="brown" stroke="#333" stroke-width="0.8"><title>front_leg</title></rect>
   <rect x="25" y="55" width="50" height="7" fill="brown" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
-    </symbol>
-    <symbol id="o-rug" viewBox="0 0 100 100">
-  <polygon points="53.7,30.3 74.8,35.2 74.7,35.6 53.5,30.9" fill="#CB82B7"><title>part1</title></polygon>
-  <polygon points="27.9,55.3 55.7,65.2 55.5,65.7 27.7,55.8" fill="#CB82B7"><title>part2</title></polygon>
-  <polygon points="28,55.3 27.5,54.9 53.2,30.4 53.5,30.9" fill="#CB82B7"><title>part3</title></polygon>
-  <polygon points="27.3,57.5 25.7,55.8 27.7,55.8 55.5,65.7 56.1,66.6 54.8,67.4 50.5,64.9 45.6,64.1 40.4,61.4 36.4,60.8 32,58.4" fill="#CB82B7"><title>part4</title></polygon>
-  <polygon points="27.3,54.7 26.4,55.6 25.8,55.5 26.3,53.6 30.1,51.1 32.6,47.7 30.5,46 31.3,45.2 31.7,45.5 32.7,47.5 35.4,45.9 39,41.5 37.8,41.1 37,39.9 37.9,39.2 39.4,41.3 42.4,39.4 44.6,36.9 45.5,35.3 44.4,35 43.5,34 44.1,33 45.8,35.2 49.3,32.8 51.9,29.1 53.2,29.6 53.2,30.4" fill="#CB82B7"><title>part5</title></polygon>
-  <polygon points="56.1,65.5 75.1,36 76.5,35.2 76.6,37 73.9,39.7 71.9,44.3 68.4,48.3 67.1,51.7 64,55 62.4,59.1 59.3,62.4 57.7,66.5 56.1,66.6" fill="#CB82B7"><title>part6</title></polygon>
-  <polygon points="60.9,58.1 56.1,65.5 55.7,65.2 74.7,35.7 75.1,36" fill="#CB82B7"><title>part7</title></polygon>
-  <polygon points="54.1,28.6 59.2,30.6 64.7,31 69.8,33 75.2,33.4 76.5,35.2 74.8,35.2 53.7,30.3 53.2,29.6" fill="#CB82B7"><title>part8</title></polygon>
-  <polygon points="74.6,35.7 55.7,65.2 28,55.3 53.5,30.9" fill="#CB82B7"><title>rug</title></polygon>
-  <polyline points="91.8,28.6 60.4,78.5 8.1,59.9 50.9,20.2 91.8,28.6" fill="none" stroke="#8C469B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part10</title></polyline>
-  <polyline points="50.9,20.2 91.8,28.6 60.4,78.5 8.1,59.9" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part11</title></polyline>
-  <polyline points="54.1,28.6 59.2,30.6 64.5,31" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part12</title></polyline>
-  <polyline points="53.7,30.3 64.2,32.7" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part13</title></polyline>
-  <polyline points="53.6,30.9 64.1,33.3" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part14</title></polyline>
-  <polyline points="64.2,32.8 74.8,35.2" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
-  <polyline points="64.1,33.3 74.6,35.7" fill="none" stroke="#141212" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
     <symbol id="o-toy_box" viewBox="0 0 100 100">
   <polyline points="86.6,53.6 86.6,90 11.3,90 11.3,53.6 86.6,53.6" fill="none" stroke="#9E5C26" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part1</title></polyline>
@@ -269,21 +269,21 @@
   <use href="#o-curtains" x="108.3" y="36" width="25.8" height="25.8"><title>curtains</title></use>
   <use href="#o-picture" x="234.4" y="67.2" width="24" height="24"><title>picture</title></use>
   <use href="#o-picture" x="353.2" y="67.2" width="24" height="24"><title>picture</title></use>
-  <use href="#o-wardrobe" x="17.9" y="130" width="66" height="66"><title>wardrobe</title></use>
-  <use href="#o-bed" x="133.2" y="130" width="66" height="66"><title>bed</title></use>
-  <use href="#o-blanket" x="93.7" y="97.2" width="46" height="46"><title>blanket</title></use>
-  <use href="#o-pillow" x="142.7" y="113.2" width="30" height="30"><title>pillow</title></use>
-  <use href="#o-pillow" x="175.7" y="113.2" width="30" height="30"><title>pillow</title></use>
-  <use href="#o-teddy_bear" x="208.7" y="113.2" width="30" height="30"><title>teddy bear</title></use>
-  <use href="#o-chest_of_drawers" x="248.6" y="150" width="46" height="46"><title>chest of drawers</title></use>
-  <use href="#o-desk" x="304.4" y="150" width="46" height="46"><title>desk</title></use>
-  <use href="#o-chair" x="360.3" y="150" width="46" height="46"><title>chair</title></use>
-  <use href="#o-rug" x="416.1" y="150" width="46" height="46"><title>rug</title></use>
-  <use href="#o-toy_box" x="46.3" y="202" width="46" height="46"><title>toy box</title></use>
-  <use href="#o-lamp" x="130.6" y="218" width="30" height="30"><title>lamp</title></use>
-  <use href="#o-alarm_clock" x="198.9" y="218" width="30" height="30"><title>alarm clock</title></use>
-  <use href="#o-book" x="267.1" y="218" width="30" height="30"><title>book</title></use>
-  <use href="#o-book" x="335.4" y="218" width="30" height="30"><title>book</title></use>
-  <use href="#o-book" x="403.7" y="218" width="30" height="30"><title>book</title></use>
-  <use href="#o-slippers" x="225" y="254" width="30" height="30"><title>slippers</title></use>
+  <use href="#o-wardrobe" x="15" y="130.2" width="66" height="66"><title>wardrobe</title></use>
+  <use href="#o-bed" x="127.5" y="130.2" width="66" height="66"><title>bed</title></use>
+  <use href="#o-blanket" x="87.9" y="97.2" width="46.2" height="46.2"><title>blanket</title></use>
+  <use href="#o-pillow" x="137.1" y="113.4" width="30" height="30"><title>pillow</title></use>
+  <use href="#o-pillow" x="170.1" y="113.4" width="30" height="30"><title>pillow</title></use>
+  <use href="#o-teddy_bear" x="203.1" y="113.4" width="30" height="30"><title>teddy bear</title></use>
+  <use href="#o-rug" x="240.1" y="130.2" width="66" height="66"><title>rug</title></use>
+  <use href="#o-chest_of_drawers" x="313.1" y="150.2" width="46" height="46"><title>chest of drawers</title></use>
+  <use href="#o-desk" x="366.1" y="150.2" width="46" height="46"><title>desk</title></use>
+  <use href="#o-chair" x="419" y="150.2" width="46" height="46"><title>chair</title></use>
+  <use href="#o-toy_box" x="46.3" y="202.2" width="46" height="46"><title>toy box</title></use>
+  <use href="#o-lamp" x="130.6" y="218.2" width="30" height="30"><title>lamp</title></use>
+  <use href="#o-alarm_clock" x="198.9" y="218.2" width="30" height="30"><title>alarm clock</title></use>
+  <use href="#o-book" x="267.1" y="218.2" width="30" height="30"><title>book</title></use>
+  <use href="#o-book" x="335.4" y="218.2" width="30" height="30"><title>book</title></use>
+  <use href="#o-book" x="403.7" y="218.2" width="30" height="30"><title>book</title></use>
+  <use href="#o-slippers" x="225" y="254.2" width="30" height="30"><title>slippers</title></use>
 </svg>

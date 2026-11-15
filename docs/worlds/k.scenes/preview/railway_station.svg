@@ -139,13 +139,6 @@
   <polyline points="14,49.8 70.9,41.4 67.8,17.4 65,17.7 67.7,41.4" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="28.8,24.3 32,46.3" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
-    <symbol id="o-suitcase" viewBox="0 0 100 100">
-  <path d="M36 32 A14 16 0 0 1 64 32" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handle</title></path>
-  <rect x="12" y="32" width="76" height="56" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></rect>
-  <rect x="26" y="32" width="6" height="56" fill="black" stroke="#333" stroke-width="0.8"><title>left_strap</title></rect>
-  <rect x="68" y="32" width="6" height="56" fill="black" stroke="#333" stroke-width="0.8"><title>right_strap</title></rect>
-  <rect x="46" y="34" width="8" height="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>lock</title></rect>
-    </symbol>
     <symbol id="o-person" viewBox="0 0 100 100">
   <polyline points="50,29 50,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>body</title></polyline>
   <polyline points="50,38 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_arm</title></polyline>
@@ -174,6 +167,13 @@
   <polyline points="69.4,77.8 69.2,83.1 67.3,85.1 61.5,87.5 56.1,88.5 46.8,88.8 38.5,87.5 32.7,85.1 30.6,81.9 30.6,77.8 32.3,80.7 38.4,83.3 47.4,84.7 55,84.5 65.1,82.2 68.6,79.9 69.4,77.8" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part14</title></polyline>
   <polyline points="35.8,73 32,75.2 30.6,77.8 21.1,34.3 23.3,36.7 30.6,39.6 41.4,41.3 50,41.7 58.6,41.3 69.4,39.6 76.7,36.7 78.9,34.3 69.4,77.8 68.5,75.6 64,72.9 56.6,71.2 50,70.8" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="69,52.4 62.7,60.7 56.3,52.4 62.7,44 69,52.4" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
+    </symbol>
+    <symbol id="o-suitcase" viewBox="0 0 100 100">
+  <path d="M36 32 A14 16 0 0 1 64 32" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handle</title></path>
+  <rect x="12" y="32" width="76" height="56" fill="brown" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <rect x="26" y="32" width="6" height="56" fill="black" stroke="#333" stroke-width="0.8"><title>left_strap</title></rect>
+  <rect x="68" y="32" width="6" height="56" fill="black" stroke="#333" stroke-width="0.8"><title>right_strap</title></rect>
+  <rect x="46" y="34" width="8" height="6" fill="yellow" stroke="#333" stroke-width="0.8"><title>lock</title></rect>
     </symbol>
     <symbol id="o-ticket" viewBox="0 0 100 100">
   <polygon points="2.5,26.1 2.5,77.1 3.3,78.5 94.6,78.7 96,77.9 96.2,26.1 95.4,24.7 4,24.6 2.9,25" fill="#A65F3E"><title>part1</title></polygon>
@@ -210,16 +210,16 @@
   <use href="#o-vertical_traffic_light" x="293.4" y="278.8" width="66" height="66"><title>signal</title></use>
   <use href="#o-bench" x="366.3" y="298.8" width="46" height="46"><title>bench</title></use>
   <use href="#o-bench" x="419.1" y="298.8" width="46" height="46"><title>bench</title></use>
-  <use href="#o-suitcase" x="13.1" y="350.8" width="46" height="46"><title>suitcase</title></use>
-  <use href="#o-suitcase" x="64.2" y="350.8" width="46" height="46"><title>suitcase</title></use>
-  <use href="#o-suitcase" x="115.3" y="350.8" width="46" height="46"><title>suitcase</title></use>
-  <use href="#o-person" x="166.4" y="350.8" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="217.5" y="350.8" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="268.5" y="350.8" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="319.6" y="350.8" width="46" height="46"><title>conductor</title></use>
-  <use href="#o-trash_bin" x="370.7" y="350.8" width="46" height="46"><title>trash bin</title></use>
-  <use href="#o-ticket" x="421.8" y="376.8" width="20" height="20"><title>ticket</title></use>
-  <use href="#o-ticket" x="446.9" y="376.8" width="20" height="20"><title>ticket</title></use>
+  <use href="#o-person" x="17.5" y="350.8" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="72.9" y="350.8" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="128.4" y="350.8" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="183.8" y="350.8" width="46" height="46"><title>conductor</title></use>
+  <use href="#o-trash_bin" x="239.3" y="350.8" width="46" height="46"><title>trash bin</title></use>
+  <use href="#o-suitcase" x="294.7" y="366.8" width="30" height="30"><title>suitcase</title></use>
+  <use href="#o-suitcase" x="334.2" y="366.8" width="30" height="30"><title>suitcase</title></use>
+  <use href="#o-suitcase" x="373.6" y="366.8" width="30" height="30"><title>suitcase</title></use>
+  <use href="#o-ticket" x="413.1" y="376.8" width="20" height="20"><title>ticket</title></use>
+  <use href="#o-ticket" x="442.5" y="376.8" width="20" height="20"><title>ticket</title></use>
   <use href="#o-pigeon" x="101.5" y="402.8" width="30" height="30"><title>pigeon</title></use>
   <use href="#o-pigeon" x="225" y="402.8" width="30" height="30"><title>pigeon</title></use>
   <use href="#o-pigeon" x="348.5" y="402.8" width="30" height="30"><title>pigeon</title></use>

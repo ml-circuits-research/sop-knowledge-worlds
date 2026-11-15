@@ -78,7 +78,8 @@
 # `sides` its flat sides where they are counted (a dice, a box). `weight_class` and `speed_class` are steps of the
 # k.values scales weight and speed, computed from the number (light under 2 kg, heavy over 30 kg; slow under
 # 10 km/h, fast over 60 km/h), never labelled apart; `price_class` (a step of the k.values scale price) says
-# whether it is cheap, medium or expensive to buy. The units are in k.units.measure. `named=model`: the values were
+# whether it is cheap, medium or expensive to buy. The units are in k.units.measure. `size_about` is the one home of the
+# size of a thing: the size class of k.scenes.thing is computed from it (KR1 item 3, tools/lib/size-class.mjs). `named=model`: the values were
 # given by a language model from the name of the thing. Q37: `sense`, only on the facts of a name with several
 # senses (k.attributes.same with only=false: turkey the bird and the food), says which one the numbers are about.
 @k.attributes.number core.type of=k.attributes.number extends=k.named.labelled shared=true closed=true core.source="hand-core 1"

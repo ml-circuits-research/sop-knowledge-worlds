@@ -8,17 +8,21 @@ import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards, byText } from './import/lib.mjs';
 import { animalThings } from './animals-core.mjs';
+import { measuredSizes } from './lib/size-class.mjs';
 
 const SRC = 'hand-core 1';
 const PLACES = ['sky', 'ground', 'water', 'indoors', 'on_thing'];
 const SIZES = ['tiny', 'small', 'medium', 'large', 'huge'];
 
-// The rows of place-size.tsv: { name, place, on, size }.
-export function readPlaceSize(text) {
+// The rows of place-size.tsv: { name, place, on, size }. KR1 item 3: the size of a thing that has a size_about in
+// numbers.tsv is the class of that number (tools/lib/size-class.mjs), and the table tells none for it (one home).
+export function readPlaceSize(text, measured = measuredSizes()) {
   return text.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => {
-    const [name, place = '', on = '', size = ''] = l.split('\t').map((x) => x.trim());
+    const [name, place = '', on = '', told = ''] = l.split('\t').map((x) => x.trim());
     if (place && !PLACES.includes(place)) throw new Error(`place-size.tsv: ${name}: place ${place}`);
-    if (size && !SIZES.includes(size)) throw new Error(`place-size.tsv: ${name}: size ${size}`);
+    if (told && !SIZES.includes(told)) throw new Error(`place-size.tsv: ${name}: size ${told}`);
+    if (told && measured.has(name)) throw new Error(`place-size.tsv: ${name}: size ${told} told, but numbers.tsv has its size_about (${measured.get(name).metres} m): the class comes from the number`);
+    const size = told || measured.get(name)?.size || '';
     if (!place && !size) throw new Error(`place-size.tsv: ${name}: neither a place nor a size`);
     if (place === 'on_thing' && !on) throw new Error(`place-size.tsv: ${name}: on what?`);
     return { name, place, on, size };

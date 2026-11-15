@@ -14,7 +14,10 @@
 # real thing among five classes: `tiny` fits in a closed hand (a coin, a bee, a berry); `small` is held in one or
 # two hands (a cup, a book, a cat, a shoe); `medium` is carried in both arms, up to the size of a person (a chair,
 # a dog, a bicycle, a person); `large` is bigger than a person, up to a truck (a car, a horse, a bed, a tent);
-# `huge` is bigger than a truck (a house, a tree, a ship, a mountain, the sun). A key is left out where the thing
+# `huge` is bigger than a truck (a house, a tree, a ship, a mountain, the sun). KR1 item 3: where the thing has a
+# `k.attributes.number.size_about` (its longest side in metres, the one home of its size), `size` is computed from
+# it (under 0.1 m tiny, 0.8 m small, 2 m medium, 6 m large, else huge: tools/lib/size-class.mjs), never labelled
+# apart; it is labelled only where no number exists. A key is left out where the thing
 # has no usual place or the size is not plain. `named=model`: the label was given by a language model from the
 # name of the thing, and only where sure; a sample was checked against the drawings.
 @k.scenes.thing core.type of=k.scenes.thing extends=k.named.labelled shared=true closed=true core.source="hand-core 1"

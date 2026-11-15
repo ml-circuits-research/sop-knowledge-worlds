@@ -5646,3 +5646,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   capitals of it. tests/import.geo.test.mjs (+1): the importer keeps the listed one of two marked capitals, keeps
   both when the list names neither, keeps the other as a city, and writes no capital_of; the freshness test skips
   derived shards.
+
+## 2026-11-15 — fifth worker: KR1 item 3, size has one home
+
+- **Home:** `k.attributes.number.size_about` (metres, sources/hand-core/numbers.tsv). The k.scenes size class is
+  computed from it where it exists (tools/lib/size-class.mjs: under 0.1 m tiny, 0.8 small, 2 medium, 6 large, else
+  huge, from the examples the class definitions give: a mouse tiny, a cat or hen small, a dog or person medium, a
+  horse or car large, an elephant or house huge), as weight_class and speed_class are; told only where no number
+  exists. The tables can no longer tell it apart: tools/scenes-core.mjs and tools/animals-core.mjs refuse a told size
+  for a thing whose number exists (an animal only where the number is about the animal, senses.tsv); 589 sizes of
+  place-size.tsv and 148 of animals.tsv blanked.
+- **Before:** 650 things with both (the review counted 623 a few commits earlier), 499 of the same class under these
+  steps, 9 by two classes or more (bandage, cable, chime, fence, holly, pipe, ribbon, rope, wire). **After:** every
+  thing with a number has the number's class (144 k.scenes things changed class, most by one step); 0 conflicts.
+- **The conflicts, by the source** (each in sources/hand-core/numbers-audit.tsv): the number was of another thing than
+  the drawing: bandage 1 m -> 0.07 (the adhesive bandage, U+1FA79), ribbon 1 m -> 0.15 (the bow, U+1F380), holly 5 m ->
+  0.2 (the Mulberry sprig, not the tree); the class was wrong: chime (a wind chime, 0.5 m) large -> small; the length is
+  any length and so not plain (numbers.tsv's own rule): cable, rope, wire, pipe (also two things), fence: size_about
+  dropped, the class stays told. k.attributes: size_about 975 -> 970.
+- The 61 scene previews are drawn again (sizes moved). Schemas: comments in k.scenes and k.attributes.
+- Test (tests/k.scenes.test.mjs, +1): every k.scenes thing with a k.attributes size_about has the class of the
+  number; no place-size.tsv row tells a size the number gives, and the reader refuses one; the resolved conflicts;
+  elephant huge, mouse tiny. The audit test compares a "right" size only where no number decides it.

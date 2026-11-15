@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: tools/scenes-core.mjs
 
-@k.scenes.thing.yacht k.scenes.thing name=yacht place=water size=large named=model core.source="hand-core 1"
+@k.scenes.thing.yacht k.scenes.thing name=yacht place=water size=huge named=model core.source="hand-core 1"
 @k.scenes.thing.yak k.scenes.thing name=yak place=ground size=large named=model core.source="hand-core 1"
 @k.scenes.thing.yarn k.scenes.thing name=yarn place=indoors size=small named=model core.source="hand-core 1"
 @k.scenes.thing.yen_banknote k.scenes.thing name="yen banknote" place=indoors size=small named=model core.source="hand-core 1"

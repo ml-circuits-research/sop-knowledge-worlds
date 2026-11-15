@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 261" width="480" height="261">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 235" width="480" height="235">
   <title>autumn</title>
-  <rect width="480" height="261" fill="#cfe8fa"/><rect y="132.8" width="480" height="128.2" fill="#d9a45b"/>
+  <rect width="480" height="235" fill="#cfe8fa"/><rect y="132.8" width="480" height="102.2" fill="#d9a45b"/>
   <defs>
     <symbol id="o-cloud" viewBox="0 0 100 100">
   <ellipse cx="27.5" cy="57.5" rx="17.5" ry="17.5" fill="white" stroke="#333" stroke-width="0.8"><title>left_puff</title></ellipse>
@@ -100,17 +100,6 @@
   <polyline points="50,45 50,85" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handle</title></polyline>
   <path d="M42 80 A4 10 0 0 0 50 80" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>hook</title></path>
   <polygon points="5,45 10,30 20,18 35,10 50,8 65,10 80,18 90,30 95,45" fill="red" stroke="#333" stroke-width="0.8"><title>canopy</title></polygon>
-    </symbol>
-    <symbol id="o-mushroom" viewBox="0 0 100 100">
-  <polygon points="31.2,58.8 31.4,65.8 30.9,71.6 33.6,93.9 40.1,95.9 51,96.4 60.1,95.4 64.3,94.1 67.2,92.3 68.9,89.9 69.4,87.3 66.3,70.6 66.3,60" fill="#C4A878"><title>stem</title></polygon>
-  <polygon points="27.3,88.2 29.2,91.4 34,94.1 46.2,94.1 55,92.2 57.6,90.3 58.4,88.6 58.7,84.3 58.2,74.2 41.3,73.7 31,71.3 27.2,83.7" fill="#E8D4AF"><title>part2</title></polygon>
-  <polygon points="49,3.1 40.3,3.7 32.6,5.4 25.9,8.1 20.2,11.7 15.4,16 11.5,20.9 8.6,26.3 6.5,32.1 5.4,38.2 5.1,44.3 6.1,49.4 8.4,53.6 11.9,57 16.4,59.7 21.5,61.7 32.6,64.2 43.4,65.2 60.9,64.9 73.4,63 79.1,61.3 84.2,59.1 88.4,56.3 91.7,52.8 93.9,48.7 94.7,43.8 94.4,37.7 93.2,31.7 91,26 87.9,20.7 83.9,15.8 78.8,11.6 72.8,8.1 65.9,5.4 57.9,3.7" fill="#FF521A"><title>cap</title></polygon>
-  <polygon points="48.1,7.4 44.3,7.7 41.1,8.8 37.6,11.9 36.5,14.8 36.7,18.1 37.3,19.5 39.6,21.6 44,23.2 49.3,23.6 55.2,22.1 58.5,19.3 59.2,18 59.4,15.1 57.5,11.2 53.5,8.5" fill="#FFFFFF"><title>spot1</title></polygon>
-  <polygon points="21.8,15.6 20.1,17.6 19.3,19.9 19.7,22 21.2,23.1 23.3,23.1 26.1,21.6 28.5,19.4 29.9,16.9 29.6,15.1 27.8,13.7 25.3,13.8" fill="#FFFFFF"><title>spot2</title></polygon>
-  <polygon points="12.8,36.2 11.8,41.2 12,44.4 14,48.3 16.5,50.2 19.6,51 22.9,50.7 27.3,48.2 29.5,45.5 30.7,42.3 31,37 29.6,32.3 27.6,30 23.2,28.7 18.5,29.9 14.5,33.1" fill="#FFFFFF"><title>spot3</title></polygon>
-  <polygon points="42.1,45 42.7,49.1 45.8,54.2 51,57.3 55.2,57.8 59.3,57.1 64,54.4 66.7,49.8 67.3,45.7 66.6,41.3 65.7,39.4 63.2,36.3 59.9,34.2 54.1,33.2 50.3,33.8 45.6,36.5 42.8,41.1" fill="#FFFFFF"><title>spot4</title></polygon>
-  <polygon points="65.3,19.3 63.9,22.3 63.8,25.3 64.7,28.1 67.4,31.7 71.4,34.4 74.3,35.4 78.6,35.1 80.9,33.6 82.6,31 83.2,26.7 81.8,22.8 79.2,19.5 75.5,17 72.4,16.3 67.8,17.1" fill="#FFFFFF"><title>spot5</title></polygon>
-  <polygon points="80.6,41.7 78.6,43.8 78.5,45.9 79.1,47.8 81.9,50.2 84.9,50 86.6,47.6 86.6,45.6 85.8,43.6 83.7,41.6" fill="#FFFFFF"><title>spot6</title></polygon>
     </symbol>
     <symbol id="o-pumpkin" viewBox="0 0 100 100">
   <ellipse cx="29" cy="60" rx="19" ry="26" fill="orange" stroke="#333" stroke-width="0.8"><title>left_lobe</title></ellipse>
@@ -229,6 +218,17 @@
   <polyline points="46.8,78.7 53.5,78.6 60.1,77.5 65.4,75.4 69.7,72.4 72.8,68.6 74.4,63.9 74.5,56.8 73.3,52.4 72.4,51.7 71,51.8 64.6,55 59,56.7 49.2,57.4 38.8,56.3 27.4,51.7 26.3,51.9 25.5,53.2 24.6,58.7 24.9,64.2 27,69.4 28.7,71.6 33.5,75.1 39.6,77.5 46.8,78.7" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part7</title></polyline>
   <polyline points="46.8,79.3 46,81.5 44.2,83.6 38.2,85.8 39.8,90.5 47.9,87.9 51.7,85.9 55.2,82.5 57.1,78.3" fill="none" stroke="#231F20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part8</title></polyline>
     </symbol>
+    <symbol id="o-mushroom" viewBox="0 0 100 100">
+  <polygon points="31.2,58.8 31.4,65.8 30.9,71.6 33.6,93.9 40.1,95.9 51,96.4 60.1,95.4 64.3,94.1 67.2,92.3 68.9,89.9 69.4,87.3 66.3,70.6 66.3,60" fill="#C4A878"><title>stem</title></polygon>
+  <polygon points="27.3,88.2 29.2,91.4 34,94.1 46.2,94.1 55,92.2 57.6,90.3 58.4,88.6 58.7,84.3 58.2,74.2 41.3,73.7 31,71.3 27.2,83.7" fill="#E8D4AF"><title>part2</title></polygon>
+  <polygon points="49,3.1 40.3,3.7 32.6,5.4 25.9,8.1 20.2,11.7 15.4,16 11.5,20.9 8.6,26.3 6.5,32.1 5.4,38.2 5.1,44.3 6.1,49.4 8.4,53.6 11.9,57 16.4,59.7 21.5,61.7 32.6,64.2 43.4,65.2 60.9,64.9 73.4,63 79.1,61.3 84.2,59.1 88.4,56.3 91.7,52.8 93.9,48.7 94.7,43.8 94.4,37.7 93.2,31.7 91,26 87.9,20.7 83.9,15.8 78.8,11.6 72.8,8.1 65.9,5.4 57.9,3.7" fill="#FF521A"><title>cap</title></polygon>
+  <polygon points="48.1,7.4 44.3,7.7 41.1,8.8 37.6,11.9 36.5,14.8 36.7,18.1 37.3,19.5 39.6,21.6 44,23.2 49.3,23.6 55.2,22.1 58.5,19.3 59.2,18 59.4,15.1 57.5,11.2 53.5,8.5" fill="#FFFFFF"><title>spot1</title></polygon>
+  <polygon points="21.8,15.6 20.1,17.6 19.3,19.9 19.7,22 21.2,23.1 23.3,23.1 26.1,21.6 28.5,19.4 29.9,16.9 29.6,15.1 27.8,13.7 25.3,13.8" fill="#FFFFFF"><title>spot2</title></polygon>
+  <polygon points="12.8,36.2 11.8,41.2 12,44.4 14,48.3 16.5,50.2 19.6,51 22.9,50.7 27.3,48.2 29.5,45.5 30.7,42.3 31,37 29.6,32.3 27.6,30 23.2,28.7 18.5,29.9 14.5,33.1" fill="#FFFFFF"><title>spot3</title></polygon>
+  <polygon points="42.1,45 42.7,49.1 45.8,54.2 51,57.3 55.2,57.8 59.3,57.1 64,54.4 66.7,49.8 67.3,45.7 66.6,41.3 65.7,39.4 63.2,36.3 59.9,34.2 54.1,33.2 50.3,33.8 45.6,36.5 42.8,41.1" fill="#FFFFFF"><title>spot4</title></polygon>
+  <polygon points="65.3,19.3 63.9,22.3 63.8,25.3 64.7,28.1 67.4,31.7 71.4,34.4 74.3,35.4 78.6,35.1 80.9,33.6 82.6,31 83.2,26.7 81.8,22.8 79.2,19.5 75.5,17 72.4,16.3 67.8,17.1" fill="#FFFFFF"><title>spot5</title></polygon>
+  <polygon points="80.6,41.7 78.6,43.8 78.5,45.9 79.1,47.8 81.9,50.2 84.9,50 86.6,47.6 86.6,45.6 85.8,43.6 83.7,41.6" fill="#FFFFFF"><title>spot6</title></polygon>
+    </symbol>
   </defs>
   <use href="#o-cloud" x="21.7" y="6" width="52" height="52"><title>cloud</title></use>
   <use href="#o-cloud" x="87.5" y="6" width="52" height="52"><title>cloud</title></use>
@@ -240,36 +240,36 @@
   <use href="#o-leaf_fluttering_in_wind" x="382.8" y="6" width="16" height="16"><title>leaf fluttering in wind</title></use>
   <use href="#o-leaf_fluttering_in_wind" x="412.5" y="6" width="16" height="16"><title>leaf fluttering in wind</title></use>
   <use href="#o-leaf_fluttering_in_wind" x="442.3" y="6" width="16" height="16"><title>leaf fluttering in wind</title></use>
-  <use href="#o-deciduous_tree" x="44.2" y="64" width="76.8" height="76.8"><title>tree</title></use>
-  <use href="#o-deciduous_tree" x="157.1" y="64" width="76.8" height="76.8"><title>tree</title></use>
-  <use href="#o-deciduous_tree" x="270.1" y="64" width="76.8" height="76.8"><title>tree</title></use>
-  <use href="#o-scarecrow" x="383" y="88" width="52.8" height="52.8"><title>scarecrow</title></use>
+  <use href="#o-deciduous_tree" x="47.4" y="64" width="76.8" height="76.8"><title>tree</title></use>
+  <use href="#o-deciduous_tree" x="163.5" y="64" width="76.8" height="76.8"><title>tree</title></use>
+  <use href="#o-deciduous_tree" x="279.7" y="64" width="76.8" height="76.8"><title>tree</title></use>
+  <use href="#o-scarecrow" x="395.8" y="104" width="36.8" height="36.8"><title>scarecrow</title></use>
   <use href="#o-rake" x="13.8" y="146.8" width="46" height="46"><title>rake</title></use>
   <use href="#o-person" x="65.7" y="146.8" width="46" height="46"><title>person</title></use>
   <use href="#o-person" x="117.5" y="146.8" width="46" height="46"><title>person</title></use>
   <use href="#o-umbrella" x="169.3" y="146.8" width="46" height="46"><title>umbrella</title></use>
-  <use href="#o-mushroom" x="221.2" y="162.8" width="30" height="30"><title>mushroom</title></use>
-  <use href="#o-mushroom" x="257" y="162.8" width="30" height="30"><title>mushroom</title></use>
-  <use href="#o-mushroom" x="292.8" y="162.8" width="30" height="30"><title>mushroom</title></use>
-  <use href="#o-pumpkin" x="328.7" y="162.8" width="30" height="30"><title>pumpkin</title></use>
-  <use href="#o-pumpkin" x="364.5" y="162.8" width="30" height="30"><title>pumpkin</title></use>
-  <use href="#o-pumpkin" x="400.3" y="162.8" width="30" height="30"><title>pumpkin</title></use>
-  <use href="#o-pond" x="436.2" y="162.8" width="30" height="30"><title>puddle</title></use>
-  <use href="#o-pond" x="13.5" y="198.8" width="30" height="30"><title>puddle</title></use>
-  <use href="#o-squirrel" x="49.1" y="198.8" width="30" height="30"><title>squirrel</title></use>
-  <use href="#o-hedgehog" x="84.6" y="198.8" width="30" height="30"><title>hedgehog</title></use>
-  <use href="#o-wellington_boots" x="120.1" y="198.8" width="30" height="30"><title>wellington boots</title></use>
-  <use href="#o-wellington_boots" x="155.6" y="198.8" width="30" height="30"><title>wellington boots</title></use>
-  <use href="#o-fallen_leaf" x="191.2" y="208.8" width="20" height="20"><title>fallen leaf</title></use>
-  <use href="#o-fallen_leaf" x="216.7" y="208.8" width="20" height="20"><title>fallen leaf</title></use>
-  <use href="#o-fallen_leaf" x="242.2" y="208.8" width="20" height="20"><title>fallen leaf</title></use>
-  <use href="#o-maple_leaf" x="267.8" y="208.8" width="20" height="20"><title>maple leaf</title></use>
-  <use href="#o-maple_leaf" x="293.3" y="208.8" width="20" height="20"><title>maple leaf</title></use>
-  <use href="#o-maple_leaf" x="318.8" y="208.8" width="20" height="20"><title>maple leaf</title></use>
-  <use href="#o-chestnut" x="344.4" y="208.8" width="20" height="20"><title>chestnut</title></use>
-  <use href="#o-chestnut" x="369.9" y="208.8" width="20" height="20"><title>chestnut</title></use>
-  <use href="#o-chestnut" x="395.4" y="208.8" width="20" height="20"><title>chestnut</title></use>
-  <use href="#o-acorn" x="420.9" y="208.8" width="20" height="20"><title>acorn</title></use>
-  <use href="#o-acorn" x="446.5" y="208.8" width="20" height="20"><title>acorn</title></use>
-  <use href="#o-acorn" x="230" y="234.8" width="20" height="20"><title>acorn</title></use>
+  <use href="#o-pumpkin" x="221.2" y="162.8" width="30" height="30"><title>pumpkin</title></use>
+  <use href="#o-pumpkin" x="257" y="162.8" width="30" height="30"><title>pumpkin</title></use>
+  <use href="#o-pumpkin" x="292.8" y="162.8" width="30" height="30"><title>pumpkin</title></use>
+  <use href="#o-pond" x="328.7" y="162.8" width="30" height="30"><title>puddle</title></use>
+  <use href="#o-pond" x="364.5" y="162.8" width="30" height="30"><title>puddle</title></use>
+  <use href="#o-squirrel" x="400.3" y="162.8" width="30" height="30"><title>squirrel</title></use>
+  <use href="#o-hedgehog" x="436.2" y="162.8" width="30" height="30"><title>hedgehog</title></use>
+  <use href="#o-wellington_boots" x="13.8" y="198.8" width="30" height="30"><title>wellington boots</title></use>
+  <use href="#o-wellington_boots" x="49.6" y="198.8" width="30" height="30"><title>wellington boots</title></use>
+  <use href="#o-fallen_leaf" x="85.3" y="208.8" width="20" height="20"><title>fallen leaf</title></use>
+  <use href="#o-fallen_leaf" x="111.1" y="208.8" width="20" height="20"><title>fallen leaf</title></use>
+  <use href="#o-fallen_leaf" x="136.9" y="208.8" width="20" height="20"><title>fallen leaf</title></use>
+  <use href="#o-maple_leaf" x="162.7" y="208.8" width="20" height="20"><title>maple leaf</title></use>
+  <use href="#o-maple_leaf" x="188.4" y="208.8" width="20" height="20"><title>maple leaf</title></use>
+  <use href="#o-maple_leaf" x="214.2" y="208.8" width="20" height="20"><title>maple leaf</title></use>
+  <use href="#o-chestnut" x="240" y="208.8" width="20" height="20"><title>chestnut</title></use>
+  <use href="#o-chestnut" x="265.8" y="208.8" width="20" height="20"><title>chestnut</title></use>
+  <use href="#o-chestnut" x="291.6" y="208.8" width="20" height="20"><title>chestnut</title></use>
+  <use href="#o-acorn" x="317.3" y="208.8" width="20" height="20"><title>acorn</title></use>
+  <use href="#o-acorn" x="343.1" y="208.8" width="20" height="20"><title>acorn</title></use>
+  <use href="#o-acorn" x="368.9" y="208.8" width="20" height="20"><title>acorn</title></use>
+  <use href="#o-mushroom" x="394.7" y="208.8" width="20" height="20"><title>mushroom</title></use>
+  <use href="#o-mushroom" x="420.4" y="208.8" width="20" height="20"><title>mushroom</title></use>
+  <use href="#o-mushroom" x="446.2" y="208.8" width="20" height="20"><title>mushroom</title></use>
 </svg>

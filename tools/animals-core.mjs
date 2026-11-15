@@ -2,6 +2,7 @@
 //   node tools/animals-core.mjs     writes docs/worlds/k.animals/shards/*.sop
 // Deterministic: the same table gives the same files. The table says how its columns are read.
 import { readFileSync } from 'node:fs';
+import { measuredSizes } from './lib/size-class.mjs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards } from './import/lib.mjs';
@@ -20,11 +21,17 @@ const SHARDS = [
 ];
 const list = (t) => (t ?? '').split(',').map((x) => x.trim()).filter(Boolean);
 
-export function readAnimals(tsv = readFileSync(join(REPO, 'sources/hand-core/animals.tsv'), 'utf8')) {
+// KR1 item 3: an animal whose name has a size_about in numbers.tsv about the animal (no other sense recorded for the
+// name in senses.tsv) takes the class of that number (tools/lib/size-class.mjs), and the table tells none for it.
+export function readAnimals(tsv = readFileSync(join(REPO, 'sources/hand-core/animals.tsv'), 'utf8'), measured = measuredSizes()) {
   const seen = new Set();
   return tsv.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => {
-    const [name, cls, size, habitat, diet, eats, sound, baby, group, can, cannot, legs, covering, words, drawing] = l.split('\t').map((x) => x.trim());
+    const [name, cls, told, habitat, diet, eats, sound, baby, group, can, cannot, legs, covering, words, drawing] = l.split('\t').map((x) => x.trim());
     const where = `animals.tsv: ${name}`;
+    const m = measured.get(name);
+    const mine = m && (m.sense === undefined || m.sense === 'animal');
+    if (told && mine) throw new Error(`${where}: size ${told} told, but numbers.tsv has its size_about (${m.metres} m): the class comes from the number`);
+    const size = told || (mine ? m.size : '');
     if (!name || seen.has(name)) throw new Error(`${where}: a name, once`);
     seen.add(name);
     if (!CLASSES.includes(cls)) throw new Error(`${where}: class ${cls}`);
@@ -60,8 +67,8 @@ export function usualPlace(a) {
   if (a.habitat.length && wet(a.habitat[0])) return 'water';
   return a.cannot.includes('fly') ? 'ground' : '';
 }
-export function readPlaceSizeNames(tsv = readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8')) {
-  return new Map(tsv.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim())).map(([name, , , size = '']) => [name, size]));
+export function readPlaceSizeNames(tsv = readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8'), measured = measuredSizes()) {
+  return new Map(tsv.split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t').map((x) => x.trim())).map(([name, , , size = '']) => [name, size || measured.get(name)?.size || '']));
 }
 export function animalThings(animals = readAnimals(), taken = readPlaceSizeNames()) {
   const rows = [], thingOf = new Map();

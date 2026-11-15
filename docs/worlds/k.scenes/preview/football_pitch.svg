@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 256" width="480" height="256">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 272" width="480" height="272">
   <title>football pitch</title>
-  <rect width="480" height="256" fill="#cfe8fa"/><rect y="132.8" width="480" height="123.2" fill="#8fce6b"/>
+  <rect width="480" height="272" fill="#cfe8fa"/><rect y="132.8" width="480" height="139.2" fill="#8fce6b"/>
   <defs>
     <symbol id="o-sun" viewBox="0 0 100 100">
   <polyline points="50,5 50,20" fill="none" stroke="yellow" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>top_ray</title></polyline>
@@ -88,6 +88,12 @@
   <polyline points="82.6,73.3 82.6,86.1 64.7,86.1 64.7,78.5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part5</title></polyline>
   <polyline points="23.5,82.8 16.8,82.8 12.3,82.1 10.7,80.8 10.2,79.8 10.2,76.7 11.4,74 13.5,72.3 24.1,68.3 30.8,64.4 35.5,60.7 37.2,57.8 38.2,51.3 36.2,13.2 72.1,12.8 71.9,17.6" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part6</title></polyline>
     </symbol>
+    <symbol id="o-flag" viewBox="0 0 100 100">
+  <rect x="14" y="8" width="4" height="86" fill="brown" stroke="#333" stroke-width="0.8"><title>pole</title></rect>
+  <rect x="18" y="12" width="62" height="38" fill="red" stroke="#333" stroke-width="0.8"><title>cloth</title></rect>
+  <ellipse cx="16" cy="6" rx="4" ry="4" fill="yellow" stroke="#333" stroke-width="0.8"><title>knob</title></ellipse>
+  <rect x="18" y="26" width="62" height="10" fill="white" stroke="#333" stroke-width="0.8"><title>stripe</title></rect>
+    </symbol>
     <symbol id="o-bench" viewBox="0 0 100 100">
   <polygon points="47.2,23 13,24.9 12.5,21 65.1,18.1 65.5,22" fill="#9C5B16"><title>part1</title></polygon>
   <polygon points="30.7,43.1 27.3,43.5 15.1,40.8 14.7,37.6 19,38.8 28.3,39.5 30.1,40.7" fill="#9C5B16"><title>part2</title></polygon>
@@ -124,12 +130,6 @@
   <polygon points="6.2,32.7 11.1,36.4 18.8,28.7 28.5,21.3 31.1,6.9 23.8,10.7 17.5,15.7 10.5,24.4" fill="#474C4F"><title>part15</title></polygon>
   <polygon points="52.4,3.2 58.8,6.8 65,11.4 77.2,11.5 71.2,8.1 66.3,6 60.3,4.3" fill="#474C4F"><title>part16</title></polygon>
     </symbol>
-    <symbol id="o-flag" viewBox="0 0 100 100">
-  <rect x="14" y="8" width="4" height="86" fill="brown" stroke="#333" stroke-width="0.8"><title>pole</title></rect>
-  <rect x="18" y="12" width="62" height="38" fill="red" stroke="#333" stroke-width="0.8"><title>cloth</title></rect>
-  <ellipse cx="16" cy="6" rx="4" ry="4" fill="yellow" stroke="#333" stroke-width="0.8"><title>knob</title></ellipse>
-  <rect x="18" y="26" width="62" height="10" fill="white" stroke="#333" stroke-width="0.8"><title>stripe</title></rect>
-    </symbol>
     <symbol id="o-trophy" viewBox="0 0 100 100">
   <polygon points="75.9,46.4 91.3,35.1 95.3,30.4 96.3,19.4 94.2,15.3 89.9,12 82.9,10.8 75.7,14 72.5,9.2 66,6.1 55.1,3.9 44.2,3.8 28.9,7.5 23.4,13.6 17.1,10.6 10.6,11.2 6,14.2 3.3,18.3 2.8,25.2 5.1,31.3 25.9,48.6 25.6,51.7 23.6,50.6 22,51.7 22.8,55.3 28.2,55.9 30.7,48.8 43.9,58.9 42.9,67.9 36.8,77.4 36.7,80.3 62.4,79.7 55.6,67.7 54.6,56.7 67.9,48.5 71.2,55.6 76.1,56.2 77.2,51.9 74,52 73.1,50.3" fill="#FEC417"><title>part1</title></polygon>
   <polygon points="93.7,23.9 90.5,17.7 83.9,15.7 79.3,18.2 74.4,26 75.7,13.9 73.4,10 72.9,12.3 70.5,12.2 69.6,37.6 61.7,49.8 55.5,53.7 48.9,54.9 40.5,52.4 31.4,44.6 27.3,32.5 26.9,12.9 23.5,12.6 23.8,24.2 19.5,17.3 14.6,15.6 8.5,17.6 5.8,24.3 9.6,32 28.7,47.3 29.4,52.3 27.4,56.3 31.5,50.7 39.8,57.5 49.1,59.5 60.3,56.9 67.9,50.1 69.6,54.6 73,56.6 70.3,52.4 71.6,46.3 90.1,32" fill="#FFA828"><title>part2</title></polygon>
@@ -161,11 +161,11 @@
   <use href="#o-boots" x="233.9" y="146.8" width="30" height="30"><title>boots</title></use>
   <use href="#o-boots" x="266.9" y="146.8" width="30" height="30"><title>boots</title></use>
   <use href="#o-person" x="306.1" y="167.6" width="46" height="46"><title>referee</title></use>
-  <use href="#o-bench" x="361.4" y="167.6" width="46" height="46"><title>bench</title></use>
-  <use href="#o-bench" x="416.7" y="167.6" width="46" height="46"><title>bench</title></use>
-  <use href="#o-soccer_ball" x="60.3" y="219.6" width="30" height="30"><title>football</title></use>
-  <use href="#o-flag" x="142.7" y="219.6" width="30" height="30"><title>flag</title></use>
-  <use href="#o-flag" x="225" y="219.6" width="30" height="30"><title>flag</title></use>
-  <use href="#o-flag" x="307.3" y="219.6" width="30" height="30"><title>flag</title></use>
-  <use href="#o-trophy" x="389.7" y="219.6" width="30" height="30"><title>trophy</title></use>
+  <use href="#o-flag" x="361.4" y="167.6" width="46" height="46"><title>flag</title></use>
+  <use href="#o-flag" x="416.7" y="167.6" width="46" height="46"><title>flag</title></use>
+  <use href="#o-flag" x="52.3" y="219.6" width="46" height="46"><title>flag</title></use>
+  <use href="#o-bench" x="142.7" y="219.6" width="46" height="46"><title>bench</title></use>
+  <use href="#o-bench" x="233" y="219.6" width="46" height="46"><title>bench</title></use>
+  <use href="#o-soccer_ball" x="323.3" y="235.6" width="30" height="30"><title>football</title></use>
+  <use href="#o-trophy" x="397.7" y="235.6" width="30" height="30"><title>trophy</title></use>
 </svg>

@@ -94,18 +94,6 @@
   <rect x="86" y="22" width="2" height="40" fill="black" stroke="#333" stroke-width="0.8"><title>lamp_post</title></rect>
   <ellipse cx="87" cy="18.5" rx="4.5" ry="4.5" fill="yellow" stroke="#333" stroke-width="0.8"><title>lamp</title></ellipse>
     </symbol>
-    <symbol id="o-tree" viewBox="0 0 100 100">
-  <rect x="42" y="55" width="16" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>trunk</title></rect>
-  <ellipse cx="50" cy="35" rx="30" ry="30" fill="green" stroke="#333" stroke-width="0.8"><title>crown</title></ellipse>
-    </symbol>
-    <symbol id="o-car" viewBox="0 0 100 100">
-  <rect x="5" y="45" width="90" height="25" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></rect>
-  <polygon points="25,45 32,25 68,25 78,45" fill="red" stroke="#333" stroke-width="0.8"><title>cabin</title></polygon>
-  <polygon points="30,43 35,29 48,29 48,43" fill="blue" stroke="#333" stroke-width="0.8"><title>left_window</title></polygon>
-  <polygon points="52,43 52,29 66,29 73,43" fill="blue" stroke="#333" stroke-width="0.8"><title>right_window</title></polygon>
-  <ellipse cx="26" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>left_wheel</title></ellipse>
-  <ellipse cx="74" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>right_wheel</title></ellipse>
-    </symbol>
     <symbol id="o-bus" viewBox="0 0 100 100">
   <polygon points="38.4,39.2 38.9,34 40,32.7 41.6,32.4 62.9,32.4 64.7,34.1 65.3,39.1 65.3,39.4" fill="#B9A074"><title>sign</title></polygon>
   <polygon points="33.2,38.2 31.7,36.1 22.8,36 14.9,38 11.1,41.1 8.9,45.6 6.8,53.6 5.6,63.3 5.1,73.9 57.8,76.2 94.3,74.1 93.5,45.8 92.6,41.8 90.4,39.3 87.4,38.7" fill="#F4DAAD"><title>part2</title></polygon>
@@ -124,6 +112,26 @@
   <polygon points="84.3,60.4 67.7,60.4 67.7,64.5 86.7,64.2 87.6,63.3 88.1,61.2 88,52" fill="#96C8EC"><title>part15</title></polygon>
   <polygon points="43.3,60.4 43.3,64.6 64.9,64.6 64.9,60.4" fill="#96C8EC"><title>part16</title></polygon>
     </symbol>
+    <symbol id="o-truck" viewBox="0 0 100 100">
+  <rect x="5" y="25" width="58" height="50" fill="red" stroke="#333" stroke-width="0.8"><title>cargo</title></rect>
+  <rect x="63" y="40" width="30" height="35" fill="red" stroke="#333" stroke-width="0.8"><title>cab</title></rect>
+  <rect x="70" y="45" width="16" height="13" fill="blue" stroke="#333" stroke-width="0.8"><title>window</title></rect>
+  <ellipse cx="23" cy="77" rx="9" ry="9" fill="black" stroke="#333" stroke-width="0.8"><title>back_wheel</title></ellipse>
+  <ellipse cx="77" cy="77" rx="9" ry="9" fill="black" stroke="#333" stroke-width="0.8"><title>front_wheel</title></ellipse>
+  <ellipse cx="91" cy="66" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>headlight</title></ellipse>
+    </symbol>
+    <symbol id="o-tree" viewBox="0 0 100 100">
+  <rect x="42" y="55" width="16" height="40" fill="brown" stroke="#333" stroke-width="0.8"><title>trunk</title></rect>
+  <ellipse cx="50" cy="35" rx="30" ry="30" fill="green" stroke="#333" stroke-width="0.8"><title>crown</title></ellipse>
+    </symbol>
+    <symbol id="o-car" viewBox="0 0 100 100">
+  <rect x="5" y="45" width="90" height="25" fill="red" stroke="#333" stroke-width="0.8"><title>body</title></rect>
+  <polygon points="25,45 32,25 68,25 78,45" fill="red" stroke="#333" stroke-width="0.8"><title>cabin</title></polygon>
+  <polygon points="30,43 35,29 48,29 48,43" fill="blue" stroke="#333" stroke-width="0.8"><title>left_window</title></polygon>
+  <polygon points="52,43 52,29 66,29 73,43" fill="blue" stroke="#333" stroke-width="0.8"><title>right_window</title></polygon>
+  <ellipse cx="26" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>left_wheel</title></ellipse>
+  <ellipse cx="74" cy="69" rx="11" ry="11" fill="black" stroke="#333" stroke-width="0.8"><title>right_wheel</title></ellipse>
+    </symbol>
     <symbol id="o-taxi" viewBox="0 0 100 100">
   <polygon points="23.6,57 8.2,60.3 5.2,61.6 3.9,63.1 2.8,68.2 2.6,82.1 3.2,85.4 5.4,88.3 93.5,88.6 95.4,87.5 97.1,85 97.1,61.3 95.9,59.9 92.3,57.5 87.6,50.7 82.5,45.4 78,42 73.8,40.1 67.5,38.7 57.9,38.3 47.9,38.9 42,40.3 37.1,42.7 33.8,45.4" fill="#FFD61C"><title>body</title></polygon>
   <polygon points="4.6,73.9 10.1,73.6 12.1,69.3 12.3,66.4 5.7,66.2" fill="#FFFFFF"><title>headlight</title></polygon>
@@ -141,14 +149,6 @@
   <polygon points="19.1,85.8 19.7,88 21.2,90.1 22.9,91 25,91.4 27.2,91.1 29.5,89.6 30.4,88.1 30.9,85.5 30.5,83.7 29.1,81.5 26.7,80.3 24.8,80 22.9,80.3 20.7,81.8 19.4,84" fill="#C8C8C8"><title>part14</title></polygon>
   <polygon points="69.2,86.5 70.1,90.7 73,94.6 76,96.3 79.9,97 83.9,96.4 88.2,93.5 90,90.6 90.8,85.6 90.2,82.2 87.5,78.3 83.2,76 79.5,75.6 76.1,76.3 72,78.9 69.6,83.2" fill="#4E433D"><title>right_wheel</title></polygon>
   <polygon points="74.1,86.2 74.6,88.4 76.2,90.5 77.8,91.4 80,91.8 82.1,91.5 84.4,90 85.4,88.5 85.8,85.9 85.4,84.1 84,81.9 81.6,80.7 79.7,80.4 77.8,80.7 75.6,82.1 74.3,84.4" fill="#C8C8C8"><title>part16</title></polygon>
-    </symbol>
-    <symbol id="o-truck" viewBox="0 0 100 100">
-  <rect x="5" y="25" width="58" height="50" fill="red" stroke="#333" stroke-width="0.8"><title>cargo</title></rect>
-  <rect x="63" y="40" width="30" height="35" fill="red" stroke="#333" stroke-width="0.8"><title>cab</title></rect>
-  <rect x="70" y="45" width="16" height="13" fill="blue" stroke="#333" stroke-width="0.8"><title>window</title></rect>
-  <ellipse cx="23" cy="77" rx="9" ry="9" fill="black" stroke="#333" stroke-width="0.8"><title>back_wheel</title></ellipse>
-  <ellipse cx="77" cy="77" rx="9" ry="9" fill="black" stroke="#333" stroke-width="0.8"><title>front_wheel</title></ellipse>
-  <ellipse cx="91" cy="66" rx="2" ry="2" fill="yellow" stroke="#333" stroke-width="0.8"><title>headlight</title></ellipse>
     </symbol>
     <symbol id="o-vertical_traffic_light" viewBox="0 0 100 100">
   <polygon points="50,3.1 46.7,3.4 40.7,5.3 35.8,9 32.2,14.1 30.2,20.4 30,37 30,76.1 31,82.9 33.8,88.6 38.1,93 43.6,95.9 50,96.9 53.3,96.6 59.3,94.7 64.2,91 66.2,88.6 69,82.9 69.8,79.6 70,70.2 70,23.9 69,17.1 66.2,11.4 61.9,7 56.4,4.1" fill="#424242"><title>box</title></polygon>
@@ -230,21 +230,6 @@
   <ellipse cx="4.5" cy="37.5" rx="2.5" ry="2.5" fill="black" stroke="#333" stroke-width="0.8"><title>nose</title></ellipse>
   <polyline points="6,44 15,45" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>mouth</title></polyline>
     </symbol>
-    <symbol id="o-postbox" viewBox="0 0 100 100">
-  <polygon points="25.5,2.9 75.7,3 78.4,5 81.9,13.6 18,13.6 21.8,4.9 23.6,3.3" fill="#C62828"><title>top</title></polygon>
-  <rect x="41.3" y="68.1" width="17.4" height="28.8" fill="#78A3AC"><title>part2</title></rect>
-  <polygon points="58.6,74.5 41.3,74.5 41.3,89.3 45.4,88.2 51.4,88.7 55.5,90.5 58.6,93.4" fill="#4B727B"><title>part3</title></polygon>
-  <polygon points="79.6,84.3 20.4,84.3 18.3,83.2 17.7,81.6 17.7,14.9 18.8,12.7 20.4,12.2 79.6,12.2 81.7,13.3 82.3,14.9 82.3,81.6 81.5,83.5" fill="#F44336"><title>part4</title></polygon>
-  <polyline points="73.8,77.8 25,77.5 23.8,76.4 23.5,75.2 23.8,49.6 25,48.5 26.2,48.2 75,48.5 76.2,49.6 76.5,50.8 76.5,75.2 75.7,77 73.8,77.8" fill="none" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part5</title></polyline>
-  <polygon points="35.3,64.4 36.4,65.6 75.2,65.6 76,65.2 76.2,64.3 70.9,35.2 73.8,34.7 75.4,33.8 75.4,29.2 72.5,25.3 69.7,22.9 28.3,24.9 31.8,33.3 37.5,33.4 37.8,43.1" fill="#C62828"><title>part6</title></polygon>
-  <polygon points="66.5,34.1 33.2,34.1 31.9,32.7 31.8,27.8 68.2,27.8 68.1,33" fill="#4E342E"><title>part7</title></polygon>
-  <polygon points="64.1,24.7 71.6,55.8 71.4,56.6 30.2,56.9 29,56.6 28.8,55.8 36.3,23.9 62.7,23.6 63.6,23.8" fill="#FFFFFF"><title>part8</title></polygon>
-  <polygon points="66.2,33 34,33.1 35.6,26.1 64.3,25.2" fill="#E0E0E0"><title>part9</title></polygon>
-  <polygon points="70.1,55.3 49.9,42.9 52.9,40.5 53.7,38.5 52.9,36.6 49.7,33.9 63,24.1 48.4,32.8 37.6,24.1 50.9,37.1 51.3,38.9 50.2,40.4 30.3,55.3 30,56 47.6,44.3 70,55.8 70.5,55.7" fill="#6FBFF0"><title>part10</title></polygon>
-  <polygon points="69,27.8 30.1,27.8 28.5,26.9 28.3,24.9 70.3,21.1 70.9,26.2 70.2,27.4" fill="#F44336"><title>part11</title></polygon>
-  <polygon points="67.9,26.1 31.3,26.1 29.8,25.6 29.1,24.1 29.8,21.9 30.9,20.8 68.6,20.8 69.4,21.9 69.6,24.9 68.9,25.8" fill="#FF7555"><title>part12</title></polygon>
-  <polygon points="30.3,21 33.2,21.2 31.8,26 28.6,25.5" fill="#FF9D83"><title>part13</title></polygon>
-    </symbol>
     <symbol id="o-trash_bin" viewBox="0 0 100 100">
   <polygon points="79.2,29.2 78.3,31.3 73.3,28.3 64.9,26.2 54,25.1 43.1,25.2 43.1,21.1 56.3,21 67.5,22.5 76,25.4 78.6,27.6" fill="#92D3F5"><title>part1</title></polygon>
   <polygon points="59.7,37 59.7,41.2 45.6,41.6 33.9,40.3 25.3,37.7 21.9,35.6 20.8,33.3 20.8,29.2 21.8,31.3 24.6,33.3 32,35.7 46,37.4" fill="#92D3F5"><title>part2</title></polygon>
@@ -263,6 +248,21 @@
   <polyline points="35.8,73 32,75.2 30.6,77.8 21.1,34.3 23.3,36.7 30.6,39.6 41.4,41.3 50,41.7 58.6,41.3 69.4,39.6 76.7,36.7 78.9,34.3 69.4,77.8 68.5,75.6 64,72.9 56.6,71.2 50,70.8" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="69,52.4 62.7,60.7 56.3,52.4 62.7,44 69,52.4" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
+    <symbol id="o-postbox" viewBox="0 0 100 100">
+  <polygon points="25.5,2.9 75.7,3 78.4,5 81.9,13.6 18,13.6 21.8,4.9 23.6,3.3" fill="#C62828"><title>top</title></polygon>
+  <rect x="41.3" y="68.1" width="17.4" height="28.8" fill="#78A3AC"><title>part2</title></rect>
+  <polygon points="58.6,74.5 41.3,74.5 41.3,89.3 45.4,88.2 51.4,88.7 55.5,90.5 58.6,93.4" fill="#4B727B"><title>part3</title></polygon>
+  <polygon points="79.6,84.3 20.4,84.3 18.3,83.2 17.7,81.6 17.7,14.9 18.8,12.7 20.4,12.2 79.6,12.2 81.7,13.3 82.3,14.9 82.3,81.6 81.5,83.5" fill="#F44336"><title>part4</title></polygon>
+  <polyline points="73.8,77.8 25,77.5 23.8,76.4 23.5,75.2 23.8,49.6 25,48.5 26.2,48.2 75,48.5 76.2,49.6 76.5,50.8 76.5,75.2 75.7,77 73.8,77.8" fill="none" stroke="#C62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part5</title></polyline>
+  <polygon points="35.3,64.4 36.4,65.6 75.2,65.6 76,65.2 76.2,64.3 70.9,35.2 73.8,34.7 75.4,33.8 75.4,29.2 72.5,25.3 69.7,22.9 28.3,24.9 31.8,33.3 37.5,33.4 37.8,43.1" fill="#C62828"><title>part6</title></polygon>
+  <polygon points="66.5,34.1 33.2,34.1 31.9,32.7 31.8,27.8 68.2,27.8 68.1,33" fill="#4E342E"><title>part7</title></polygon>
+  <polygon points="64.1,24.7 71.6,55.8 71.4,56.6 30.2,56.9 29,56.6 28.8,55.8 36.3,23.9 62.7,23.6 63.6,23.8" fill="#FFFFFF"><title>part8</title></polygon>
+  <polygon points="66.2,33 34,33.1 35.6,26.1 64.3,25.2" fill="#E0E0E0"><title>part9</title></polygon>
+  <polygon points="70.1,55.3 49.9,42.9 52.9,40.5 53.7,38.5 52.9,36.6 49.7,33.9 63,24.1 48.4,32.8 37.6,24.1 50.9,37.1 51.3,38.9 50.2,40.4 30.3,55.3 30,56 47.6,44.3 70,55.8 70.5,55.7" fill="#6FBFF0"><title>part10</title></polygon>
+  <polygon points="69,27.8 30.1,27.8 28.5,26.9 28.3,24.9 70.3,21.1 70.9,26.2 70.2,27.4" fill="#F44336"><title>part11</title></polygon>
+  <polygon points="67.9,26.1 31.3,26.1 29.8,25.6 29.1,24.1 29.8,21.9 30.9,20.8 68.6,20.8 69.4,21.9 69.6,24.9 68.9,25.8" fill="#FF7555"><title>part12</title></polygon>
+  <polygon points="30.3,21 33.2,21.2 31.8,26 28.6,25.5" fill="#FF9D83"><title>part13</title></polygon>
+    </symbol>
   </defs>
   <svg x="0" y="229.6" width="480" height="40" viewBox="3 45 94 50" preserveAspectRatio="none"><title>road</title><use href="#o-road" width="100" height="100"/></svg>
   <use href="#o-sun" x="41.7" y="6" width="52" height="52"><title>sun</title></use>
@@ -277,23 +277,22 @@
   <use href="#o-shop" x="291.7" y="64" width="76.8" height="76.8"><title>shop</title></use>
   <use href="#o-shop" x="381.9" y="64" width="76.8" height="76.8"><title>shop</title></use>
   <use href="#o-shop" x="201.6" y="146.8" width="76.8" height="76.8"><title>shop</title></use>
-  <use href="#o-sidewalk" x="20.3" y="269.6" width="96" height="96"><title>sidewalk</title></use>
-  <use href="#o-tree" x="128.7" y="269.6" width="96" height="96"><title>tree</title></use>
-  <use href="#o-car" x="237" y="299.6" width="66" height="66"><title>car</title></use>
-  <use href="#o-bus" x="315.3" y="299.6" width="66" height="66"><title>bus</title></use>
-  <use href="#o-taxi" x="393.7" y="299.6" width="66" height="66"><title>taxi</title></use>
-  <use href="#o-truck" x="17.7" y="371.6" width="66" height="66"><title>truck</title></use>
-  <use href="#o-vertical_traffic_light" x="93.4" y="371.6" width="66" height="66"><title>traffic light</title></use>
+  <use href="#o-sidewalk" x="24" y="269.6" width="96" height="96"><title>sidewalk</title></use>
+  <use href="#o-bus" x="136" y="269.6" width="96" height="96"><title>bus</title></use>
+  <use href="#o-truck" x="248" y="269.6" width="96" height="96"><title>truck</title></use>
+  <use href="#o-tree" x="360" y="269.6" width="96" height="96"><title>tree</title></use>
+  <use href="#o-car" x="17.7" y="371.6" width="66" height="66"><title>car</title></use>
+  <use href="#o-taxi" x="93.4" y="371.6" width="66" height="66"><title>taxi</title></use>
   <use href="#o-vertical_traffic_light" x="169.1" y="371.6" width="66" height="66"><title>traffic light</title></use>
   <use href="#o-lamp" x="244.9" y="371.6" width="66" height="66"><title>street lamp</title></use>
   <use href="#o-lamp" x="320.6" y="371.6" width="66" height="66"><title>street lamp</title></use>
   <use href="#o-stop_sign" x="396.3" y="371.6" width="66" height="66"><title>stop sign</title></use>
-  <use href="#o-bicycle" x="18.7" y="443.6" width="46" height="46"><title>bicycle</title></use>
-  <use href="#o-bus_stop" x="75.3" y="443.6" width="46" height="46"><title>bus stop</title></use>
-  <use href="#o-person" x="132" y="443.6" width="46" height="46"><title>person</title></use>
-  <use href="#o-person" x="188.7" y="443.6" width="46" height="46"><title>person</title></use>
-  <use href="#o-dog" x="245.3" y="443.6" width="46" height="46"><title>dog</title></use>
-  <use href="#o-postbox" x="302" y="443.6" width="46" height="46"><title>mailbox</title></use>
-  <use href="#o-trash_bin" x="358.7" y="443.6" width="46" height="46"><title>trash bin</title></use>
-  <use href="#o-trash_bin" x="415.3" y="443.6" width="46" height="46"><title>trash bin</title></use>
+  <use href="#o-bicycle" x="20.4" y="443.6" width="46" height="46"><title>bicycle</title></use>
+  <use href="#o-bus_stop" x="78.9" y="443.6" width="46" height="46"><title>bus stop</title></use>
+  <use href="#o-person" x="137.3" y="443.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-person" x="195.8" y="443.6" width="46" height="46"><title>person</title></use>
+  <use href="#o-dog" x="254.2" y="443.6" width="46" height="46"><title>dog</title></use>
+  <use href="#o-trash_bin" x="312.7" y="443.6" width="46" height="46"><title>trash bin</title></use>
+  <use href="#o-trash_bin" x="371.1" y="443.6" width="46" height="46"><title>trash bin</title></use>
+  <use href="#o-postbox" x="429.6" y="459.6" width="30" height="30"><title>mailbox</title></use>
 </svg>

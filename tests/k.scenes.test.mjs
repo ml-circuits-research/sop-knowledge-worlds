@@ -7,6 +7,7 @@ import { REPO, WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/w
 import { readPlaceSize, thingShards, allThings, letterOf } from '../tools/scenes-core.mjs';
 import { animalThings } from '../tools/animals-core.mjs';
 import { handSources } from '../tools/lib/worlds.mjs';
+import { sizeClass, measuredSizes, SIZE_STEPS } from '../tools/lib/size-class.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -26,8 +27,8 @@ test('the things shards are what tools/scenes-core.mjs gives from place-size.tsv
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(dir, name), 'utf8'), text, name);
   assert.equal(letterOf('1st place medal'), '0');
   assert.equal(letterOf('Earth'), 'e');
-  assert.throws(() => readPlaceSize('hat\ton_thing\t\tsmall\n'), /on what/);
-  assert.throws(() => readPlaceSize('hat\tupstairs\t\tsmall\n'), /place/);
+  assert.throws(() => readPlaceSize('hat\ton_thing\t\tsmall\n', new Map()), /on what/);
+  assert.throws(() => readPlaceSize('hat\tupstairs\t\tsmall\n', new Map()), /place/);
 });
 
 test('every thing with a usual place or size is a k.objects object, word or stand-in, an animal of k.animals, or a listed thing of a scene that nothing draws; nearly every object has one', () => {
@@ -52,6 +53,8 @@ test('a thing that is on another thing says on which', () => {
   assert.equal(w.tell('@a2 k.scenes.thing name=bonnet place=on_thing on=head size=small', { ns: 'app' }).ok, true);
 });
 
+const measured = measuredSizes();
+
 test('the audit of the labels: 200 rows, the wrong ones are corrected in the table', () => {
   const rows = readFileSync(join(REPO, 'sources/hand-core/place-size-audit.tsv'), 'utf8').split('\n').filter((l) => l.trim() && !l.startsWith('#')).map((l) => l.split('\t'));
   assert.equal(rows.length, 200);
@@ -61,9 +64,37 @@ test('the audit of the labels: 200 rows, the wrong ones are corrected in the tab
     const now = table.get(name);
     assert.ok(now, name);
     if (verdict === 'wrong') { assert.ok(note, name); assert.notDeepEqual([now.place, now.on, now.size], [place, on, size], `${name} is still as it was`); }
-    if (verdict === 'right') assert.deepEqual([now.place, now.on, now.size], [place, on, size], name);
+    // KR1 item 3: a size the number decides (numbers.tsv) is no longer the label that was audited
+    if (verdict === 'right') assert.deepEqual([now.place, now.on, measured.has(name) ? size : now.size], [place, on, size], name);
   }
   assert.ok(rows.filter((r) => r[5] === 'wrong').length <= 20);
+});
+
+// KR1 item 3 (review 2026-11-15, finding 5): size had two homes that disagreed (fence medium but 20 m, chime large but
+// 0.5 m, rope small but 10 m: 8 by two classes or more of 623).
+test('KR1 item 3: size has one home: the class of every thing with a k.attributes size_about is computed from it, and no table tells it apart', () => {
+  assert.deepEqual(SIZE_STEPS.map(([m, c]) => [m, c]), [[0.1, 'tiny'], [0.8, 'small'], [2, 'medium'], [6, 'large'], [Infinity, 'huge']]);
+  const metres = new Map(factsOf('k.attributes', 'k.attributes.number', worlds).filter((w) => w.attrs.size_about).map((w) => [tok(w.attrs.name[0]), Number(w.attrs.size_about[0])]));
+  let n = 0;
+  for (const t of things) {
+    const name = tok(t.attrs.name[0]);
+    if (!metres.has(name) || !t.attrs.size) continue;
+    n++;
+    assert.equal(t.attrs.size[0], sizeClass(metres.get(name)), `${name}: ${metres.get(name)} m`);
+  }
+  assert.ok(n >= 600, `${n} things with both`);
+  // the tables cannot tell a size the number gives
+  assert.throws(() => readPlaceSize('fence\tground\t\tmedium\n', new Map([['fence', { metres: 20, size: 'huge' }]])), /comes from the number/);
+  for (const l of readFileSync(join(REPO, 'sources/hand-core/place-size.tsv'), 'utf8').split('\n').filter((x) => x.trim() && !x.startsWith('#'))) {
+    const [name, , , size = ''] = l.split('\t').map((x) => x.trim());
+    assert.ok(!(size && measured.has(name)), name);
+  }
+  // the eight-plus conflicts the review found, resolved by the source (sources/hand-core/numbers-audit.tsv)
+  const size = (name) => tok(things.find((t) => tok(t.attrs.name[0]) === name)?.attrs.size?.[0]);
+  assert.deepEqual(['chime', 'bandage', 'ribbon', 'holly'].map((x) => [x, metres.get(x), size(x)]), [['chime', 0.5, 'small'], ['bandage', 0.07, 'tiny'], ['ribbon', 0.15, 'small'], ['holly', 0.2, 'small']]);
+  for (const x of ['fence', 'rope', 'wire', 'cable', 'pipe']) assert.ok(!metres.has(x) && size(x), `${x}: any length, not plain: the class stays told`);
+  assert.equal(size('elephant'), 'huge');
+  assert.equal(size('mouse'), 'tiny');
 });
 
 // ---- R7.1: the scenes

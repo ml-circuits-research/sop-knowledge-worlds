@@ -204,19 +204,6 @@
   <rect x="33" y="38" width="12" height="4" fill="black" stroke="#333" stroke-width="0.8"><title>seat</title></rect>
   <polyline points="66,45 64,36 72,36" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>handlebar</title></polyline>
     </symbol>
-    <symbol id="o-tire" viewBox="0 0 100 100">
-  <ellipse cx="50" cy="50" rx="42" ry="42" fill="black" stroke="#333" stroke-width="0.8"><title>tread</title></ellipse>
-  <ellipse cx="50" cy="50" rx="32" ry="32" fill="grey" stroke="#333" stroke-width="0.8"><title>sidewall</title></ellipse>
-  <ellipse cx="50" cy="50" rx="18" ry="18" fill="white" stroke="#333" stroke-width="0.8"><title>hole</title></ellipse>
-  <polyline points="50,9 50,17" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_1</title></polyline>
-  <polyline points="79,21 73,27" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_2</title></polyline>
-  <polyline points="91,50 83,50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_3</title></polyline>
-  <polyline points="79,79 73,73" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_4</title></polyline>
-  <polyline points="50,91 50,83" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_5</title></polyline>
-  <polyline points="21,79 27,73" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_6</title></polyline>
-  <polyline points="9,50 17,50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_7</title></polyline>
-  <polyline points="21,21 27,27" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_8</title></polyline>
-    </symbol>
     <symbol id="o-person" viewBox="0 0 100 100">
   <polyline points="50,29 50,62" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>body</title></polyline>
   <polyline points="50,38 30,55" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>left_arm</title></polyline>
@@ -273,6 +260,19 @@
   <polyline points="84,92.5 80.2,91.4 78.4,90.3 77.6,88.6 76.8,83.6 75.4,81.1 72.7,78.8 69,77.9" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part15</title></polyline>
   <polyline points="74.1,89.9 74.1,86.1 72.9,82.3 70.7,79.7 68.2,78.5" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>part16</title></polyline>
     </symbol>
+    <symbol id="o-tire" viewBox="0 0 100 100">
+  <ellipse cx="50" cy="50" rx="42" ry="42" fill="black" stroke="#333" stroke-width="0.8"><title>tread</title></ellipse>
+  <ellipse cx="50" cy="50" rx="32" ry="32" fill="grey" stroke="#333" stroke-width="0.8"><title>sidewall</title></ellipse>
+  <ellipse cx="50" cy="50" rx="18" ry="18" fill="white" stroke="#333" stroke-width="0.8"><title>hole</title></ellipse>
+  <polyline points="50,9 50,17" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_1</title></polyline>
+  <polyline points="79,21 73,27" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_2</title></polyline>
+  <polyline points="91,50 83,50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_3</title></polyline>
+  <polyline points="79,79 73,73" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_4</title></polyline>
+  <polyline points="50,91 50,83" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_5</title></polyline>
+  <polyline points="21,79 27,73" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_6</title></polyline>
+  <polyline points="9,50 17,50" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_7</title></polyline>
+  <polyline points="21,21 27,27" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>groove_8</title></polyline>
+    </symbol>
   </defs>
   <use href="#o-ceiling_light" x="228" y="6" width="24" height="24"><title>ceiling light</title></use>
   <use href="#o-window" x="73.9" y="36" width="36.8" height="36.8"><title>window</title></use>
@@ -294,18 +294,18 @@
   <use href="#o-screw" x="355" y="88.8" width="20" height="20"><title>screw</title></use>
   <use href="#o-screw" x="378" y="88.8" width="20" height="20"><title>screw</title></use>
   <use href="#o-ladder" x="402" y="95.6" width="66" height="66"><title>ladder</title></use>
-  <use href="#o-car" x="16.4" y="167.6" width="66" height="66"><title>car</title></use>
-  <use href="#o-wood" x="90.9" y="187.6" width="46" height="46"><title>wood</title></use>
-  <use href="#o-wood" x="145.3" y="187.6" width="46" height="46"><title>wood</title></use>
-  <use href="#o-wood" x="199.8" y="187.6" width="46" height="46"><title>wood</title></use>
-  <use href="#o-bicycle" x="254.2" y="187.6" width="46" height="46"><title>bicycle</title></use>
-  <use href="#o-tire" x="308.7" y="187.6" width="46" height="46"><title>tire</title></use>
-  <use href="#o-tire" x="363.1" y="187.6" width="46" height="46"><title>tire</title></use>
-  <use href="#o-person" x="417.6" y="187.6" width="46" height="46"><title>mechanic</title></use>
-  <use href="#o-toolbox" x="48.6" y="239.6" width="30" height="30"><title>toolbox</title></use>
-  <use href="#o-paint" x="119.1" y="239.6" width="30" height="30"><title>paint</title></use>
-  <use href="#o-paint" x="189.7" y="239.6" width="30" height="30"><title>paint</title></use>
-  <use href="#o-paint" x="260.3" y="239.6" width="30" height="30"><title>paint</title></use>
-  <use href="#o-paint_brush" x="330.9" y="239.6" width="30" height="30"><title>paint brush</title></use>
-  <use href="#o-paint_brush" x="401.4" y="239.6" width="30" height="30"><title>paint brush</title></use>
+  <use href="#o-car" x="15.8" y="167.6" width="66" height="66"><title>car</title></use>
+  <use href="#o-wood" x="89.6" y="187.6" width="46" height="46"><title>wood</title></use>
+  <use href="#o-wood" x="143.4" y="187.6" width="46" height="46"><title>wood</title></use>
+  <use href="#o-wood" x="197.2" y="187.6" width="46" height="46"><title>wood</title></use>
+  <use href="#o-bicycle" x="251" y="187.6" width="46" height="46"><title>bicycle</title></use>
+  <use href="#o-person" x="304.8" y="187.6" width="46" height="46"><title>mechanic</title></use>
+  <use href="#o-toolbox" x="358.6" y="203.6" width="30" height="30"><title>toolbox</title></use>
+  <use href="#o-paint" x="396.4" y="203.6" width="30" height="30"><title>paint</title></use>
+  <use href="#o-paint" x="434.2" y="203.6" width="30" height="30"><title>paint</title></use>
+  <use href="#o-paint" x="60.3" y="239.6" width="30" height="30"><title>paint</title></use>
+  <use href="#o-paint_brush" x="142.7" y="239.6" width="30" height="30"><title>paint brush</title></use>
+  <use href="#o-paint_brush" x="225" y="239.6" width="30" height="30"><title>paint brush</title></use>
+  <use href="#o-tire" x="307.3" y="239.6" width="30" height="30"><title>tire</title></use>
+  <use href="#o-tire" x="389.7" y="239.6" width="30" height="30"><title>tire</title></use>
 </svg>

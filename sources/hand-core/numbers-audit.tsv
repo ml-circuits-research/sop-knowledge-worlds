@@ -103,3 +103,12 @@ acorn	right
 caviar	wrong	one egg weighed 0.1 g, about 0.01 g: corrected (density check)
 spider	wrong	1 g for a 1 cm spider, about 0.5 g for 2 cm: corrected (density check)
 bug	wrong	1 g for a 1 cm insect, about 0.1 g: corrected (density check)
+bandage	wrong	KR1 item 3: size 1 m against k.scenes tiny; the drawing (and the everyday thing) is the adhesive bandage of about 7 cm: corrected to 0.07
+ribbon	wrong	KR1 item 3: size 1 m against k.scenes tiny; the drawing is the bow (U+1F380), about 15 cm: corrected to 0.15
+holly	wrong	KR1 item 3: size 5 m (the tree) against k.scenes small; the drawing (Mulberry) is a sprig, about 20 cm: corrected to 0.2
+chime	right	KR1 item 3: size 0.5 m (a wind chime) against k.scenes large: the class was wrong, it now comes from the number (small)
+cable	unclear	KR1 item 3: size 2 m against k.scenes small; the length of a cable is any length, not plain: size dropped, the class stays told
+rope	unclear	KR1 item 3: size 10 m against k.scenes small; the length of a rope is any length, not plain: size dropped, the class stays told
+wire	unclear	KR1 item 3: size 10 m against k.scenes small; the length of a wire is any length, not plain: size dropped, the class stays told
+pipe	unclear	KR1 item 3: size 3 m (a water pipe) against k.scenes small (a pipe for smoking?); two things and any length: size dropped, the class stays told
+fence	unclear	KR1 item 3: size 20 m against k.scenes medium; the length of a fence is any length, not plain: size dropped, the class stays told
