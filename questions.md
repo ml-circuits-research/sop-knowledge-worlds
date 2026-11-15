@@ -1115,3 +1115,13 @@ Context: done and on main: `w.lang.en.fn` (61 function words by view), the k.fee
    (`{ thing: 'shark', ... }`), the wording could be a w.lang.en template per rule (`w.lang.en.why rule= text=` in the
    library's template notation) and leave the rules. Meanwhile: the `why` texts stay in the rules.
 Blocking: no (the other KR3 items go on world by world once 1 is answered).
+
+## Q78 [LIB] (reviewer 14:45 KR2 item 4, fourth worker, 2026-11-15): two plurals of one singular, and "the singular of a listed pair is a singular"
+
+Context: w.lang.en shard catalog-plurals lists the catalog nouns whose plural the rules do not read both ways. (1) The
+reference reader now treats the singular of a `w.lang.en.irregular` pair as a singular ("lens" is no plural of "len",
+"gas" of "ga"): does the library's inflectBy / std.morph read irregulars the same way? (2) `w.lang.en.irregular` has
+one fact per singular, so a noun with a read-only classical plural from WordNet (hippopotami, irides, mantes,
+plateaux, forceps, macaronies) cannot also list the English plural the rules write (hippopotamuses), which then does
+not read back. Allow two plurals per singular (identity singular + plural, the read-only one marked), or keep one?
+Meanwhile: the 6 are listed as known in tests/w.lang.en.catalog-plurals.test.mjs.

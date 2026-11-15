@@ -16,6 +16,8 @@ export function inflect({ inflect: rules, irregular = [], exceptions = [] }, wor
   const w = String(word).toLowerCase();
   const irr = new Map(irregular.filter((x) => op === 'singular' || one(x, 'read_only') !== 'yes').map((x) => (op === 'singular' ? [one(x, 'plural'), one(x, 'singular')] : [one(x, 'singular'), one(x, 'plural')])));
   if (irr.has(w)) return irr.get(w);
+  // the singular of a listed pair is a singular: "gas" (gas, gases) is not read as the plural of "ga" (KR2: catalog-plurals)
+  if (op === 'singular' && irregular.some((x) => one(x, 'singular') === w)) return w;
   const exc = (kind, key) => exceptions.filter((x) => one(x, 'kind') === kind).map((x) => one(x, key));
   const mine = rules.filter((r) => one(r, 'op') === op && (op === 'plural' || one(r, 'set') === set)).sort((a, b) => Number(one(a, 'order')) - Number(one(b, 'order')));
   for (const r of mine) {

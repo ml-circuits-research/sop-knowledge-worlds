@@ -6127,3 +6127,19 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Already restored by its author: the w.person build step (4d70c88). No commit removed a build step; every other path
   the commits name is in the commit or on main (tools/bench-ro-frames.mjs is the library's bench, not ours).
 - Correction to my previous entry: the generated paths are 12 named outputs and 115 shards (127, now 128), not 113.
+## 2026-11-15 — fourth worker: the plurals of every catalog noun in w.lang.en (reviewer 14:45, KR2 item 4, part 1)
+
+- tools/lang-en-catalog-plurals.mjs (in npm run build after lang-en-core, before lang-en-morph) writes w.lang.en shard
+  catalog-plurals (45 pairs, 5597 bytes, CC0, own): for the head noun of every k.objects / k.animals name that is a
+  noun of k.words (1,381 heads), the rules of w.lang.en are checked both ways; where the noun itself or its plural
+  does not read back (cave/caves read "caf", axe/axes "ax", lens "len", emu/emus, die/dies, glove, hive, stove ...),
+  the pair is a w.lang.en.irregular fact; plural-only nouns (scissors, trousers, tights, 15 by hand) have one form.
+  lang-en-morph derives their irregular_form wires (irregular-forms.sop).
+- Reference reader (tools/lib/lang-en.mjs inflect): the singular of a listed pair is read as a singular ("lens" is no
+  plural of "len"). Told to the library with Q78.
+- 1,356 of the heads read both ways (tests/w.lang.en.catalog-plurals.test.mjs, 2 tests); 6 do not: WordNet lists a
+  read-only classical plural for them (hippopotami, irides, mantes, plateaux, macaronies, forceps), and one singular
+  has one irregular fact, so the English plural the rules write (hippopotamuses) does not read back: Q78.
+- Tests: catalog-plurals, w.lang.en, morph, frames, list-frames, question-frames, phrasing, catalog, counts, validate
+  (1,177 files, 0 errors), repo: pass. w.lang.en.templates and k.kinds.relations fail on main before this commit
+  (the arrangement role of baacdad has no template and no argument class).
