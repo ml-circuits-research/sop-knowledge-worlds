@@ -1,5 +1,5 @@
 {
- "version": "13fb7b920063",
+ "version": "832d465f0a6f",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -89552,6 +89552,175 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.chart",
+     "path": "w.lang.ro/shards/words-w.chart.sop",
+     "wires": 4,
+     "bytes": 885,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.chart.world: w.lang.ro.word.w.chart.world: means=w.chart of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.chart.chart: w.lang.ro.word.w.chart.chart: means=w.chart.chart names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.chart.series: w.lang.ro.word.w.chart.series: means=w.chart.series names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.chart.point: w.lang.ro.word.w.chart.point: means=w.chart.point names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.diagram",
+     "path": "w.lang.ro/shards/words-w.diagram.sop",
+     "wires": 5,
+     "bytes": 1009,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.diagram.world: w.lang.ro.word.w.diagram.world: means=w.diagram of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.diagram.diagram: w.lang.ro.word.w.diagram.diagram: means=w.diagram.diagram names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.diagram.node: w.lang.ro.word.w.diagram.node: means=w.diagram.node names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.diagram.edge: w.lang.ro.word.w.diagram.edge: means=w.diagram.edge names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.diagram.group: w.lang.ro.word.w.diagram.group: means=w.diagram.group names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.document",
+     "path": "w.lang.ro/shards/words-w.document.sop",
+     "wires": 7,
+     "bytes": 1280,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.document.world: w.lang.ro.word.w.document.world: means=w.document of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.document.document: w.lang.ro.word.w.document.document: means=w.document.document names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.document.chapter: w.lang.ro.word.w.document.chapter: means=w.document.chapter names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.document.section: w.lang.ro.word.w.document.section: means=w.document.section names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.document.paragraph: w.lang.ro.word.w.document.paragraph: means=w.document.paragraph names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.document.slide: w.lang.ro.word.w.document.slide: means=w.document.slide names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.document.sentence: w.lang.ro.word.w.document.sentence: means=w.document.sentence names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.face",
+     "path": "w.lang.ro/shards/words-w.face.sop",
+     "wires": 3,
+     "bytes": 772,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.face.world: w.lang.ro.word.w.face.world: means=w.face of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.face.face: w.lang.ro.word.w.face.face: means=w.face.face names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.face.part: w.lang.ro.word.w.face.part: means=w.face.part names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.list",
+     "path": "w.lang.ro/shards/words-w.list.sop",
+     "wires": 3,
+     "bytes": 774,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.list.world: w.lang.ro.word.w.list.world: means=w.list of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.list.list: w.lang.ro.word.w.list.list: means=w.list.list names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.list.item: w.lang.ro.word.w.list.item: means=w.list.item names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.map",
+     "path": "w.lang.ro/shards/words-w.map.sop",
+     "wires": 4,
+     "bytes": 856,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.map.world: w.lang.ro.word.w.map.world: means=w.map of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.map.place: w.lang.ro.word.w.map.place: means=w.map.place names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.map.pin: w.lang.ro.word.w.map.pin: means=w.map.pin names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.map.view: w.lang.ro.word.w.map.view: means=w.map.view names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.person",
+     "path": "w.lang.ro/shards/words-w.person.sop",
+     "wires": 4,
+     "bytes": 911,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.person.world: w.lang.ro.word.w.person.world: means=w.person of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.person.person: w.lang.ro.word.w.person.person: means=w.person.person names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.person.relative: w.lang.ro.word.w.person.relative: means=w.person.relative names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.person.taste: w.lang.ro.word.w.person.taste: means=w.person.taste names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.seating",
+     "path": "w.lang.ro/shards/words-w.seating.sop",
+     "wires": 4,
+     "bytes": 910,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.seating.world: w.lang.ro.word.w.seating.world: means=w.seating of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.seating.table: w.lang.ro.word.w.seating.table: means=w.seating.table names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.seating.seat: w.lang.ro.word.w.seating.seat: means=w.seating.seat names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.seating.guest: w.lang.ro.word.w.seating.guest: means=w.seating.guest names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.tasks",
+     "path": "w.lang.ro/shards/words-w.tasks.sop",
+     "wires": 2,
+     "bytes": 696,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.tasks.world: w.lang.ro.word.w.tasks.world: means=w.tasks of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.tasks.task: w.lang.ro.word.w.tasks.task: means=w.tasks.task names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.ro/shards/words-w.timeline",
+     "path": "w.lang.ro/shards/words-w.timeline.sop",
+     "wires": 3,
+     "bytes": 826,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.timeline.world: w.lang.ro.word.w.timeline.world: means=w.timeline of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.timeline.timeline: w.lang.ro.word.w.timeline.timeline: means=w.timeline.timeline names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.timeline.event: w.lang.ro.word.w.timeline.event: means=w.timeline.event names no action, type, key or value of the matrix"
+     ]
     }
    ],
    "sources": [
@@ -89570,7 +89739,7 @@
      "path": "docs/worlds/w.lang.ro/dictionary",
      "format": "tsv",
      "files": 21,
-     "bytes": 15536,
+     "bytes": 16159,
      "sources": [
       "hand-core-1"
      ],
@@ -89581,7 +89750,7 @@
      "path": "docs/worlds/w.lang.ro/dictionary-unimorph",
      "format": "tsv",
      "files": 23,
-     "bytes": 67603,
+     "bytes": 67498,
      "sources": [
       "unimorph-ron-2026-11-14"
      ],

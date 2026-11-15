@@ -187,7 +187,8 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
     // type or a key of the world goes to the world's schema path (the host then knows the world is relevant and
     // picks its shards by the other words of the message).
     // (and the words of the world in the shards words-<world> of the language worlds, Q78: read exactly as schema words)
-    const wordsShards = worlds.flatMap((x) => x.shards).filter((sh) => worldOfWordsShard(sh.id) === world.id);
+    // vocab.json is English: only w.lang.en's words shards count; another language's words shards are its own
+    const wordsShards = worlds.flatMap((x) => x.shards).filter((sh) => worldOfWordsShard(sh.id) === world.id && sh.id.startsWith('w.lang.en/'));
     for (const w of [...parse(world.schemaText), ...wordsShards.flatMap((sh) => parse(sh.text))]) {
       if (w.type !== 'core.word') continue;
       const means = text(w.attrs.means?.[0] ?? '');

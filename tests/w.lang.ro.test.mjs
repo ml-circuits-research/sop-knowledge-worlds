@@ -33,7 +33,8 @@ test('w.lang.ro: the shards and the dictionary are what tools/lang-ro-core.mjs g
   const files = dictionaryFiles();
   assert.deepEqual(readdirSync(join(DIR, 'dictionary')).filter((f) => f.endsWith('.tsv')).sort(), Object.keys(files).sort());
   for (const [name, t] of Object.entries(files)) assert.equal(readFileSync(join(DIR, 'dictionary', name), 'utf8'), t, name);
-  assert.deepEqual(world.warnings ?? [], []);
+  // a words shard names the kinds of another world (words-w.seating: w.seating.table), read with that world: alone they are unknown
+  assert.deepEqual((world.warnings ?? []).filter((w) => !(w.kind === 'unknown-word' && w.id.startsWith('w.lang.ro.word.'))), []);
   assert.equal(m.classes.size, CLASSES.length);
 });
 

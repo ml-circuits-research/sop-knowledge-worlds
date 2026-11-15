@@ -6251,3 +6251,5 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   library change; Q79 (1) (the singular of a listed pair read as a singular) stays for the library.
 - Catalog nouns read both ways: 1,362 of 1,362 (was 1,356). Tests: catalog-plurals, w.lang.en, morph, frames, catalog,
   validate (1,181 files, 0 errors), repo: pass.
+- Romanian words for the kinds of the 10 published world schemas (shards w.lang.ro/words-w.*), 17 new dictionary
+  lemmas (287); build-catalog reads only w.lang.en's words shards into vocab.json (unchanged). tests/w.lang.ro.words.

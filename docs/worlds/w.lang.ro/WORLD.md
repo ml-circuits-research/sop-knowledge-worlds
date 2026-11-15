@@ -215,3 +215,12 @@ The indefinite article is the template's own word (reviewer 16:45): a `w.lang.ro
 every request and reply that says `{art@kind}`, so the form (o casă, un copac, niște case) comes from the det.art class
 by the noun's gender and number and a caller gives no article. The three arrangement templates of w.lang.en ("in the
 shape of a house") are mirrored too ("fă o diagramă în formă de casă"): 49 requests.
+
+## The Romanian word of each kind of the world schemas (reviewer 16:45, the library's Q79)
+
+Shards `words-w.<schema>` (10, hand-written): a `core.word` per kind of each published world schema and one for the
+world (w.seating.table → masă, w.seating.guest → invitat, w.list.item → articol, w.tasks.task → sarcină, w.seating → plan
+de așezare), so a host names a kind in Romanian with no wordOf of its own. Each word is a lemma of the hand dictionary
+(17 new: loc, invitat, articol, sarcină, diagramă, grup, serie, capitol, secțiune, față, persoană, rudă, preferință,
+cronologie, eveniment, vedere, marcaj), so its gender and plural come from its class; nod and diapozitiv are words only
+(k.words has no sense of node or of a presentation slide to join). Build-catalog keeps them out of the English vocab.json.
