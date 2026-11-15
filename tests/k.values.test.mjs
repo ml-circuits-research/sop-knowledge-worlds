@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld, schemaWorld } from '../tools/lib/worlds.mjs';
-import { valueShards, CSS_RAW, BASIC, SCALES, numberWords } from '../tools/values-core.mjs';
+import { valueShards, colourNameShards, CSS_RAW, BASIC, SCALES, numberWords } from '../tools/values-core.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
@@ -12,32 +12,13 @@ const one = (w, k) => tok(w.attrs[k]?.[0]);
 const world = fullWorld('k.values', worlds);
 const of = (t) => world.ofType(`k.values.${t}`);
 
-test('the shards are what tools/values-core.mjs gives (the CSS colours when the raw file is there)', () => {
+test('the shards are what tools/values-core.mjs gives; the colour names it writes into k.colours (the CSS ones when the raw file is there)', () => {
   const files = valueShards();
-  assert.equal(Object.keys(files).length, existsSync(CSS_RAW) ? 8 : 7);
+  assert.equal(Object.keys(files).length, 6);
   for (const [name, text] of Object.entries(files)) assert.equal(readFileSync(join(WORLDS_DIR, 'k.values', 'shards', name), 'utf8'), text, name);
-});
-
-test('colours: 141 CSS colours with an exact RGB value, common names with a usual one, never both; the basic colours are there', () => {
-  const colours = of('colour');
-  const css = colours.filter((c) => c.attrs.css);
-  assert.equal(css.length, 141);
-  for (const c of colours) {
-    assert.ok(/^#[0-9A-F]{6}$/.test(one(c, 'rgb') ?? one(c, 'rgb_about')), c.id);
-    assert.ok(!(c.attrs.rgb && c.attrs.rgb_about), c.id);
-    assert.ok(c.attrs.css ? one(c, 'core.source') === 'css-colors 2.1.1' : /^(hand-core 1|psys2-worlds [0-9a-f]+)$/.test(one(c, 'core.source')), c.id);
-    if (!c.attrs.css) assert.ok(c.attrs.rgb_about, c.id);
-  }
-  const byName = new Map(colours.map((c) => [one(c, 'name'), c]));
-  for (const b of BASIC) assert.equal(one(byName.get(b), 'basic'), b, b);
-  assert.equal(one(byName.get('red'), 'rgb'), '#FF0000');
-  assert.equal(one(byName.get('dark olive green'), 'css'), 'darkolivegreen');
-  assert.equal(one(byName.get('crimson'), 'named'), 'model');
-  // The basic colours are the colour names of k.objects.part.colour.
-  const { world: objects } = schemaWorld(worlds, 'k.objects');
-  assert.deepEqual([...objects.schema('k.objects.part').keys.colour.enum].map(tok).sort(), [...BASIC].sort());
-  const r = world.fork().tell('@x k.values.colour name=test rgb="#000000" rgb_about="#000000" core.source="test 1"');
-  assert.equal(r.ok, false, 'both values are refused');
+  const colours = colourNameShards();
+  assert.equal(Object.keys(colours).length, existsSync(CSS_RAW) ? 2 : 1);
+  for (const [name, text] of Object.entries(colours)) assert.equal(readFileSync(join(WORLDS_DIR, 'k.colours', 'shards', name), 'utf8'), text, name);
 });
 
 test('scales: ranks run from 1 to the number of steps; the size steps are the sizes of k.scenes; comparatives name a scale', () => {
@@ -69,11 +50,11 @@ test('directions have opposites that point back; numbers: one fact per word and 
   const value = (t, kind) => Number(one(nums.find((n) => one(n, 'text') === t && one(n, 'kind') === kind), 'value'));
   assert.equal(value('forty-two', 'cardinal'), 42); assert.equal(value('twelfth', 'ordinal'), 12); assert.equal(value('ninety-ninth', 'ordinal'), 99);
   assert.equal(value('dozen', 'group'), 12); assert.equal(value('twice', 'times'), 2); assert.equal(value('half', 'fraction'), 0.5);
-  for (const w of [...of('colour'), ...of('step'), ...of('shape'), ...of('direction'), ...of('position'), ...of('set_word'), ...nums]) assert.ok(w.attrs['core.source'], w.id);
+  for (const w of [...of('step'), ...of('shape'), ...of('direction'), ...of('position'), ...of('set_word'), ...nums]) assert.ok(w.attrs['core.source'], w.id);
 });
 
 test('words reach their shard through the vocabulary index', () => {
   const vocab = JSON.parse(readFileSync(join(WORLDS_DIR, 'vocab.json'), 'utf8'));
-  for (const [word, shard] of [['darkolivegreen', 'colours-css'], ['dark gray', 'colours-css'], ['mustard', 'colours-common'], ['big', 'scales'], ['bigger', 'scales'], ['round', 'shapes'],
-    ['counterclockwise', 'directions'], ['upper left', 'directions'], ['every', 'sets'], ['the rest', 'sets'], ['seventeen', 'numbers'], ['third', 'numbers']]) assert.ok(vocab[word]?.includes(`k.values/shards/${shard}`), word);
+  for (const [word, shard, world] of [['darkolivegreen', 'colours-css', 'k.colours'], ['dark gray', 'colours-css', 'k.colours'], ['mustard', 'colours-common', 'k.colours'], ['big', 'scales'], ['bigger', 'scales'], ['round', 'shapes'],
+    ['counterclockwise', 'directions'], ['upper left', 'directions'], ['every', 'sets'], ['the rest', 'sets'], ['seventeen', 'numbers'], ['third', 'numbers']]) assert.ok(vocab[word]?.includes(`${world ?? 'k.values'}/shards/${shard}`), word);
 });

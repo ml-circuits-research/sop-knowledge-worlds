@@ -103,7 +103,7 @@ test('Q29: `any` never stands next to a colour; the drawn colours are what tools
   assert.equal(drawn.length, rows.length);
   const objects = new Set(factsOf('k.objects', 'k.objects.object', worlds).map((o) => one(o, 'name')));
   assert.ok(objects.size - drawn.length <= 5, 'only drawings made of lines have no drawn colour');
-  const shades = new Set(fullWorld('k.values', worlds).ofType('k.values.colour').map((c) => one(c, 'name')));
+  const shades = new Set(fullWorld('k.colours', worlds).ofType('k.colours.colour').map((c) => one(c, 'name')));
   for (const d of drawn) {
     assert.ok(objects.has(one(d, 'name')), d.id);
     assert.ok(d.attrs.drawn_colour.length >= 1 && d.attrs.drawn_colour.length <= 3, d.id);

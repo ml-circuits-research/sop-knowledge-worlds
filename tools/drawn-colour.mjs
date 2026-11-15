@@ -5,7 +5,7 @@
 // How it is computed: the drawing is sampled on a grid of 60 x 60 places in its frame; at each place the topmost
 // filled part (rectangle, square, circle, oval, triangle, polygon; lines and arcs are strokes and do not count)
 // gives its colour: the exact `rgb` of an imported part, or the value of the first colour name of a hand-written
-// part. Each colour is mapped to the nearest colour name of k.values.colour (distance in CIE Lab): `drawn_shade`
+// part. Each colour is mapped to the nearest colour name of k.colours.colour (distance in CIE Lab): `drawn_shade`
 // is that name; `drawn_colour` is the basic colour of that name, or of the nearest name that has one (one of the eleven basic
 // colours, the values of k.attributes.thing.colour). A colour is kept when it covers at least a fifth of the
 // filled places; at most three, the largest first; the largest is always kept.
@@ -42,12 +42,19 @@ const hit = (p, x, y) => {
   }
 };
 
-// The colour names of k.values with their value: { name, rgb, lab, basic }.
+// The colour names of k.colours with their value: { name, rgb, lab, basic } (`basic`: the family). A colour's facts are
+// in several shards (colours, colours-css, colours-common), merged by name as the engine merges them (KR2).
 export function valueColours() {
   const rgbOf = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
-  return factsByType(['k.values.colour']).get('k.values.colour').map((w) => {
-    const rgb = rgbOf(tok(w.attrs.rgb?.[0] ?? w.attrs.rgb_about[0]));
-    return { name: tok(w.attrs.name[0]), rgb, lab: lab(rgb), basic: tok(w.attrs.basic?.[0]) };
+  const byName = new Map();
+  for (const w of factsByType(['k.colours.colour']).get('k.colours.colour')) {
+    const n = tok(w.attrs.name[0]), c = byName.get(n) ?? {};
+    for (const k of ['rgb', 'rgb_about', 'family']) if (w.attrs[k] && c[k] === undefined) c[k] = tok(w.attrs[k][0]);
+    byName.set(n, c);
+  }
+  return [...byName].filter(([, c]) => c.rgb ?? c.rgb_about).map(([name, c]) => {
+    const rgb = rgbOf(c.rgb ?? c.rgb_about);
+    return { name, rgb, lab: lab(rgb), basic: c.family };
   }).sort((a, b) => byText(a.name, b.name));
 }
 // The nearest colour of a list to an "#RRGGBB" value.

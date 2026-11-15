@@ -11,7 +11,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 
 - declared joins: **224** in 33 worlds; distinct values 10358, meeting a target 10300 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 41
+- undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 4; keys with an enum, never suggested: 38
 
 ## Declared joins
 
@@ -39,8 +39,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.animals | `k.animals.animal.thing` | `k.objects.object` | name | 3 | 3 |  |
 | k.attributes | `k.attributes.attribute.aspect` | `k.attributes.aspect` | name | 7 | 7 |  |
 | k.attributes | `k.attributes.attribute.default_key` | `k.attributes.attribute` | name | 2 | 2 |  |
-| k.attributes | `k.attributes.drawn.drawn_colour` | `k.colours.colour` | name | 11 | 11 |  |
-| k.attributes | `k.attributes.drawn.drawn_shade` | `k.values.colour` | name | 127 | 127 |  |
+| k.attributes | `k.attributes.drawn.drawn_colour` | `k.colours.basic` | name | 11 | 11 |  |
+| k.attributes | `k.attributes.drawn.drawn_shade` | `k.colours.colour` | name | 127 | 127 |  |
 | k.attributes | `k.attributes.found.attribute` | `k.attributes.attribute` | name | 28 | 28 |  |
 | k.attributes | `k.attributes.kind.attribute` | `k.attributes.attribute` | name | 18 | 18 |  |
 | k.attributes | `k.attributes.shows.aspect` | `k.attributes.aspect` | name | 8 | 8 |  |
@@ -56,7 +56,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.body | `k.body.sense.organ` | `k.body.part` | name | 5 | 5 |  |
 | k.colours | `k.colours.colour.complement` | `k.colours.colour` | name | 6 | 6 |  |
 | k.colours | `k.colours.colour.darker` | `k.colours.colour` | name | 13 | 13 |  |
-| k.colours | `k.colours.colour.family` | `k.colours.colour` | name | 11 | 11 |  |
+| k.colours | `k.colours.colour.family` | `k.colours.basic` | name | 11 | 11 |  |
 | k.colours | `k.colours.colour.lighter` | `k.colours.colour` | name | 13 | 13 |  |
 | k.colours | `k.colours.colour.thing` | `k.objects.object` | name | 111 | 106 | `"fire truck"`, `"traffic light"`, `mustard`, `night`, `ocean` |
 | k.colours | `k.colours.mix.a` | `k.colours.colour` | name | 10 | 10 |  |
@@ -72,7 +72,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.diagrams | `k.diagrams.shape.kind` | `k.diagrams.kind` | name | 10 | 10 |  |
 | k.diagrams | `k.diagrams.shape.source` | `k.diagrams.source` | name | 6 | 6 |  |
 | k.diagrams | `k.diagrams.topic.kind` | `k.diagrams.kind` | name | 7 | 7 |  |
-| k.drawing | `k.drawing.part.colour` | `k.colours.colour` | name | 11 | 11 |  |
+| k.drawing | `k.drawing.part.colour` | `k.colours.basic` | name | 11 | 11 |  |
 | k.drawing | `k.drawing.part.opens` | `k.values.direction` | name | 4 | 4 |  |
 | k.drawing | `k.drawing.part.pointing` | `k.values.direction` | name | 4 | 4 |  |
 | k.drawing | `k.drawing.part.shape` | `k.shapes.shape` | name | 8 | 8 |  |
@@ -211,7 +211,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.units | `k.units.measure.unit` | `k.units.unit` | name | 14 | 14 |  |
 | k.units | `k.units.quantity.base` | `k.units.unit` | name | 8 | 8 |  |
 | k.units | `k.units.unit.quantity` | `k.units.quantity` | name | 8 | 8 |  |
-| k.values | `k.values.colour.basic` | `k.colours.colour` | name | 11 | 11 |  |
+| k.values | `k.values.coloured.colour` | `k.colours.basic` | name | 11 | 11 |  |
 | k.values | `k.values.comparative.scale` | `k.values.scale` | name | 13 | 13 |  |
 | k.values | `k.values.direction.opposite` | `k.values.direction` | name | 18 | 18 |  |
 | k.values | `k.values.step.scale` | `k.values.scale` | name | 14 | 14 |  |
@@ -262,18 +262,18 @@ whose slot has an enum is never suggested here (see the last section).
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3506 | 2345 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3501 | 2345 |
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
-| k.faces | `k.faces.colour.name` | value | `k.values.colour`, `k.colours.colour` | name | 21 | 14 |
+| k.faces | `k.faces.colour.name` | value | `k.colours.colour` | name | 21 | 14 |
 | k.faces | `k.faces.expression.eyes` | thing | `k.feelings.feeling` | name | 4 | 2 |
 | k.faces | `k.faces.preset.hat` | thing | `k.scenes.thing` | name | 5 | 5 |
 | k.faces | `k.faces.preset.shoulders` | thing | `k.wearables.wearable` | name | 8 | 4 |
-| k.faces | `k.faces.preset.skin` | value | `k.values.colour` | name | 9 | 5 |
-| k.faces | `k.faces.preset.hair_colour` | value | `k.colours.colour`, `k.values.colour` | name | 9 | 7 |
-| k.faces | `k.faces.preset.eye_colour` | value | `k.colours.colour`, `k.values.colour` | name | 7 | 6 |
+| k.faces | `k.faces.preset.skin` | value | `k.colours.colour` | name | 9 | 5 |
+| k.faces | `k.faces.preset.hair_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 9 | 7 |
+| k.faces | `k.faces.preset.eye_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 7 | 6 |
 | k.faces | `k.faces.slot.name` | thing | `k.body.part` | name | 18 | 4 |
 | k.feelings | `k.feelings.feeling.eyebrows` | thing | `k.faces.expression` | name | 4 | 2 |
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
@@ -326,7 +326,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.attributes | `k.attributes.narration.narrate` | 2 | 2 | 2 | `k.values.reply` |
 | k.attributes | `k.attributes.number.sense` | 12 | 4 | 3 | `k.attributes.kind` |
 | k.attributes | `k.attributes.same.sense` | 12 | 12 | 6 | `k.attributes.kind` |
-| k.attributes | `k.attributes.thing.colour` | 12 | 12 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.attributes | `k.attributes.thing.colour` | 12 | 12 | 11 | `k.colours.basic`, `k.colours.colour` |
 | k.attributes | `k.attributes.usage.sense` | 12 | 4 | 2 | `k.attributes.kind` |
 | k.attributes | `k.attributes.usage.age` | 4 | 4 | 2 | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` |
 | k.colours | `k.colours.colour.tone` | 3 | 3 | 2 | `k.values.shade` |
@@ -337,7 +337,6 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape`, `k.values.shape` |
 | k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
-| k.food | `k.food.food.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
 | k.kinds | `k.kinds.parent.sense` | 12 | 7 | 4 | `k.attributes.kind` |
 | k.kinds | `k.kinds.sensitivity.sensitive` | 4 | 4 | 3 | `k.kinds.sensitivity` |
 | k.motion | `k.motion.layer.key` | 4 | 4 | 1 | `k.body.part` |
@@ -350,11 +349,9 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.procedures | `k.procedures.howto_step.branch` | 2 | 2 | 2 | `k.values.reply` |
 | k.scenes | `k.scenes.has.side` | 3 | 3 | 3 | `k.values.position` |
 | k.scenes | `k.scenes.scene.kind` | 4 | 4 | 2 | `k.scenes.scene` |
-| k.space | `k.space.body.colour` | 11 | 7 | 7 | `k.colours.colour`, `k.values.colour` |
 | k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
 | k.time | `k.time.season.next` | 4 | 4 | 4 | `k.time.season` |
 | k.time | `k.time.season_in.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
-| k.values | `k.values.coloured.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
 | k.values | `k.values.comparative.way` | 2 | 2 | 2 | `k.values.direction` |
 | k.values | `k.values.position.column` | 3 | 3 | 3 | `k.values.position` |
 | k.values | `k.values.position.row` | 3 | 3 | 2 | `k.values.position` |

@@ -27,7 +27,7 @@ test('narration: the shard is what the tool computes; one fact per slot of every
 test('narration: PSys2\'s metadata is not narrated, the attributes it should have said are, by salience', () => {
   const n = (id) => one(by.get(id), 'narrate'), s = (id) => Number(one(by.get(id), 'salience'));
   for (const id of ['k.geo.country.code', 'k.geo.country.code2', 'k.geo.country.formal', 'k.geo.country.name', 'k.geo.country.lat', 'k.animals.animal.drawing',
-    'k.words.sense.n', 'k.values.colour.rgb', 'k.genres.source.doi', 'k.attributes.range.cite', 'k.people.role.hat', 'k.faces.slot.x', 'k.kinds.parent.from']) assert.equal(n(id), 'no', id);
+    'k.words.sense.n', 'k.colours.colour.rgb', 'k.genres.source.doi', 'k.attributes.range.cite', 'k.people.role.hat', 'k.faces.slot.x', 'k.kinds.parent.from']) assert.equal(n(id), 'no', id);
   for (const id of ['k.geo.country.capital', 'k.geo.country.population', 'k.geo.country.continent', 'k.animals.animal.eats', 'k.animals.animal.legs',
     'k.animals.animal.class', 'k.attributes.thing.colour', 'k.food.food.made_of', 'k.geo.country.landlocked']) assert.equal(n(id), 'yes', id);
   assert.ok(s('k.geo.country.capital') > s('k.geo.country.region'));

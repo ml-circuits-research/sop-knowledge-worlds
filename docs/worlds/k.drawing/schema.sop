@@ -19,7 +19,7 @@
 @k.drawing.part.w core.slot of=k.drawing.part key=w required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.drawing.part.h core.slot of=k.drawing.part key=h required=true kind=number min=0 max=100 core.source="hand-core 1"
 @k.drawing.part.z core.slot of=k.drawing.part key=z required=true kind=integer core.source="hand-core 1"
-@k.drawing.part.colour core.slot of=k.drawing.part key=colour required=true many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.colour by=name core.source="hand-core 1"
+@k.drawing.part.colour core.slot of=k.drawing.part key=colour required=true many=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.basic by=name core.source="hand-core 1"
 @k.drawing.part.rgb core.slot of=k.drawing.part key=rgb kind=string core.source="hand-core 1"
 @k.drawing.part.pointing core.slot of=k.drawing.part key=pointing enum=up enum=down enum=left enum=right kind=atom type=k.values.direction by=name core.source="hand-core 1"
 @k.drawing.part.opens core.slot of=k.drawing.part key=opens enum=up enum=down enum=left enum=right kind=atom type=k.values.direction by=name core.source="hand-core 1"

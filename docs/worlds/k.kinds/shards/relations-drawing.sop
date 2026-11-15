@@ -9,7 +9,7 @@
 @k.kinds.relation.k.drawing.part.w k.kinds.relation type=k.drawing.part key=w subject=part object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.drawing.part.h k.kinds.relation type=k.drawing.part key=h subject=part object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.drawing.part.z k.kinds.relation type=k.drawing.part key=z subject=part object=number found=schema core.source="hand-core 1"
-@k.kinds.relation.k.drawing.part.colour k.kinds.relation type=k.drawing.part key=colour subject=part object=value object_type=k.colours.colour object_sense=colour found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.drawing.part.colour k.kinds.relation type=k.drawing.part key=colour subject=part object=value object_type=k.colours.basic found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.drawing.part.rgb k.kinds.relation type=k.drawing.part key=rgb subject=part object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.drawing.part.pointing k.kinds.relation type=k.drawing.part key=pointing subject=part object=value object_type=k.values.direction found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.drawing.part.opens k.kinds.relation type=k.drawing.part key=opens subject=part object=value object_type=k.values.direction found=declared object_by=name core.source="hand-core 1"

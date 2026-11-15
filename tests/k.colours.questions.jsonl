@@ -1,7 +1,7 @@
 {"id":"co-01","ask":"what do red and yellow make","query":{"type":"k.colours.mix","where":{"a":"red","b":"yellow"},"seek":"gives"},"expect":{"status":"supported","value":"orange"}}
 {"id":"co-02","ask":"what is a darker blue","query":{"type":"k.colours.colour","where":{"name":"blue"},"seek":"darker"},"expect":{"status":"supported","value":"navy"}}
 {"id":"co-03","ask":"what kind of colour is maroon","query":{"type":"k.colours.colour","where":{"name":"maroon"},"seek":"family"},"expect":{"status":"supported","value":"red"}}
-{"id":"co-04","ask":"which colours are greens","query":{"type":"k.colours.colour","where":{"family":"green"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["green","\"light green\"","lime","\"dark green\"","olive"]}}
+{"id":"co-04","ask":"which colours are greens","query":{"type":"k.colours.colour","where":{"family":"green"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["mint","emerald","jade","\"bottle green\"","chartreuse","\"dark green\"","\"dark olive green\"","\"dark sea green\"","\"forest green\"","green","\"lawn green\"","\"light green\"","lime","\"lime green\"","\"medium sea green\"","\"medium spring green\"","olive","\"pale green\"","\"sea green\"","\"spring green\"","\"yellow green\""]}}
 {"id":"co-05","ask":"what is the opposite colour of red","query":{"type":"k.colours.colour","where":{"name":"red"},"seek":"complement"},"expect":{"status":"supported","value":"green"}}
 {"id":"co-06","ask":"which colour does a banana have","query":{"type":"k.colours.colour","where":{"thing":"banana"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["yellow"]}}
 {"id":"co-07","ask":"is yellow a warm colour","query":{"type":"k.colours.colour","where":{"name":"yellow"},"seek":"temperature"},"expect":{"status":"supported","value":"warm"}}
@@ -9,3 +9,6 @@
 {"id":"co-09","ask":"which colours are metallic","query":{"type":"k.colours.colour","where":{"kind":"metallic"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["gold","silver"]}}
 {"id":"co-10","ask":"is navy light or dark","query":{"type":"k.colours.colour","where":{"name":"navy"},"seek":"tone"},"expect":{"status":"supported","value":"dark"}}
 {"id":"co-p1","ask":"which colours are primary","query":{"type":"k.colours.colour","where":{"kind":"primary"},"seek":"name","mode":"list"},"expect":{"status":"supported","values":["red","yellow","blue"]}}
+{"id":"co-v1","ask":"what is the RGB value of crimson","query":{"type":"k.colours.colour","where":{"name":"crimson"},"seek":"rgb"},"expect":{"status":"supported","value":"\"#DC143C\""}}
+{"id":"co-v2","ask":"what basic colour is navy","query":{"type":"k.colours.colour","where":{"name":"navy"},"seek":"family"},"expect":{"status":"supported","value":"blue"}}
+{"id":"co-v3","ask":"what is a usual RGB value of mustard","query":{"type":"k.colours.colour","where":{"name":"mustard"},"seek":"rgb_about"},"expect":{"status":"supported","value":"\"#FFDB58\""}}

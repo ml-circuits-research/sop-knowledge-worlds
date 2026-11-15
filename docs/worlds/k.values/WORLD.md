@@ -5,13 +5,8 @@ a place in the picture, which of several things, or a number.
 
 ## What it knows
 
-- `k.values.colour` (identity `name`): 141 CSS colours (`css-colors 2.1.1`, MIT) with `rgb` as "#RRGGBB" and the
-  CSS keyword as `css` (name "dark olive green", `css=darkolivegreen`), and 29 common names CSS does not have
-  (cream, mustard, scarlet, burgundy, emerald, lilac, charcoal …; hand-written) with `rgb_about`, a usual value.
-  A fact with both is refused. `basic`: the basic colour it is a kind of (black, white, grey, red, orange, yellow,
-  green, blue, purple, pink, brown: the names of `k.objects.part.colour`), on 87 CSS colours: 62 by the last word
-  of the name (dark green), 25 where it is plain (crimson, navy, gold: `named=model`); and on 20 common names.
-  Colours between two basic colours have none (teal, cyan, turquoise, maroon, indigo, coral, khaki, beige).
+- Colour names are no longer here (KR2, reviewer 14:45): `k.colours.colour` holds every colour name with its RGB
+  (the 141 CSS names, the 29 common names) and `basic=true` on the 11 basic terms; k.values.colour is gone.
 - `k.values.scale` and `k.values.step` (identity `scale`, `name`; `rank` from 1, the least): size (tiny, small,
   medium, large, huge: the sizes of `k.scenes.thing`), length, width, height, thickness, amount (none, a bit, some,
   a lot, all), degree (slightly, somewhat, quite, very, extremely), brightness, speed, weight, temperature,
@@ -34,7 +29,7 @@ a place in the picture, which of several things, or a number.
 ## Shards
 
 `fills` (5 fills: solid, outline, striped, dotted, checked, with their other words; `k.values.fill`, a value of
-the role `value` of change, from the PSys2 hand-over), `colours-css` (233 wires), `colours-common` (44), `scales` (186), `shapes` (60), `directions` (61), `sets` (37),
+the role `value` of change, from the PSys2 hand-over), `scales` (186), `shapes` (60), `directions` (61), `sets` (37),
 `numbers` (232): 838 wires. Written by `tools/values-core.mjs`.
 
 ## What it does not know
@@ -46,7 +41,7 @@ the role `value` of change, from the PSys2 hand-over), `colours-css` (233 wires)
 
 ## Questions it helps with
 
-See `tests/k.values.questions.jsonl`: the RGB value of crimson, the basic colour of navy, where large stands on
+See `tests/k.values.questions.jsonl` (the colour questions moved to k.colours): where large stands on
 the size scale, which way smaller moves, the two scales of shorter, the opposite of clockwise, what each picks,
 the value of twenty-three and of fifth.
 

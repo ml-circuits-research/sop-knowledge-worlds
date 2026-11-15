@@ -41,7 +41,7 @@
 @k.attributes.same.elk.animal k.attributes.same name=elk sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.elm.thing k.attributes.same name=elm sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.embassy.thing k.attributes.same name=embassy sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.emerald.colour k.attributes.same name=emerald sense=colour only=true in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.emerald.colour k.attributes.same name=emerald sense=colour only=true in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.emergency_exit.thing k.attributes.same name="emergency exit" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.emery_board.thing k.attributes.same name="emery board" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.empty_nest.plant k.attributes.same name="empty nest" sense=plant only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

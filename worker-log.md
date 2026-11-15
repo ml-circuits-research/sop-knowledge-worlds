@@ -5978,3 +5978,25 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   replies realised (I drew an apple, I drew 3 mice); 31 requests read back to their act by the Romanian frames.
 - Not mirrored: the 151 discourse templates of w.lang.en (rhetorical moves of k.genres for essays and reports): no
   real row asks for them in Romanian.
+
+## 2026-11-15 — fourth worker: k.colours is the home of every colour name (reviewer 14:45, KR2)
+
+- The 141 CSS colours (shard k.colours/colours-css, css-colors 2.1.1, MIT, 233 wires) and the 29 common names
+  (colours-common, CC0) moved from k.values.colour to `k.colours.colour` (ids k.colours.css.*, k.colours.common.*;
+  `basic=` became `family=`), merged by name with the 33 colours of shard colours; skin and 11 colour words from
+  k.values/psys2 to k.colours/psys2 (the import is not run again; tools/import/psys2.mjs names the new type).
+  tools/values-core.mjs writes the two colour shards into k.colours (prefix colours-); colours-shapes-core keeps them.
+- k.colours version 2: imports k.named; `css`, `rgb`, `rgb_about` (excludes rgb), `basic` (boolean, true on the 11
+  basic terms of Berlin and Kay); family, tone, temperature no longer required (a CSS name may have only its value);
+  `k.colours.basic`, the basic view, by rule (shard derived, 11 facts). family, k.values.coloured.colour,
+  k.drawing.part.colour and k.attributes.drawn.drawn_colour join `k.colours.basic` (their 11-value list stays as the
+  check until strict joins); drawn_shade joins k.colours.colour. k.values.colour (type, 5 slots, words, 2 shards) gone.
+- tools/drawn-colour.mjs merges a colour's wires by name; 7 names that the CSS shard left without family now take the
+  hand-written one (amber orange, beige brown ...), so 95 lines of k.attributes drawn-* changed. joins.mjs,
+  relations-core.mjs, narration and the joins report follow.
+- Questions va-01..03 moved to k.colours (co-v1..3: the RGB of crimson, the family of navy, the usual RGB of mustard);
+  co-04 "which colours are greens" now lists 21 names (was 5).
+- Tests: k.colours-shapes 8 (a new test of the colour names and the basic view), k.values 4, shared-modules 5,
+  k.attributes 11, narration 3, questions 448, joins, joins report, relations, catalog, validate (1,166 files, 0
+  errors), and coverage-report, import.psys2, counts, derived.load, generators, k.food, k.space, k.faces,
+  k.objects.render, coverage, ranges, repo, page: all pass.

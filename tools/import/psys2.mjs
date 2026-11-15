@@ -341,15 +341,17 @@ export function importPsys2(from, commit) {
     const base = [...between('BASE_COLORS = {', 'COLOR_ALIASES').matchAll(/(\w+): '(#[0-9a-f]{6})'/g)].map((m) => [m[1], m[2].toUpperCase()]);
     const aliases = [...between('COLOR_ALIASES = {', 'export const SHADES').matchAll(/'?([\w-]+)'?: '([\w ]+)'/g)].map((m) => [m[1], m[2]]);
     const shades = [...between('SHADES = {', 'const clamp').matchAll(/(\w+): \[(-?[\d.]+), (-?[\d.]+)\]/g)].map((m) => [m[1], Number(m[2]), Number(m[3])]);
-    const colours = mergedBy(facts, 'k.values.colour');
-    const words = new Map((facts.get('core.word') ?? []).filter((w) => one(w, 'of') === 'k.values.colour.name').flatMap((w) => vals(w, 'text').map((t) => [t, one(w, 'means')])));
+    // KR2 (reviewer 14:45): k.colours is the home of colour names; the colour lines below were moved by the same rule
+    // to k.colours/shards/psys2 (the import is not run again: the demo deleted its copies)
+    const colours = mergedBy(facts, 'k.colours.colour');
+    const words = new Map((facts.get('core.word') ?? []).filter((w) => one(w, 'of') === 'k.colours.colour.name').flatMap((w) => vals(w, 'text').map((t) => [t, one(w, 'means')])));
     const lines = [];
     const newColours = base.filter(([n]) => !colours.has(n) && !words.has(n));
-    for (const [n, rgb] of newColours) lines.push(wire(`k.values.psys2.colour.${seg(n)}`, 'k.values.colour', [['name', n], ['rgb_about', text(rgb)]], SRC));
+    for (const [n, rgb] of newColours) lines.push(wire(`k.colours.psys2.colour.${seg(n)}`, 'k.colours.colour', [['name', n], ['rgb_about', text(rgb)]], SRC));
     const newWords = aliases.filter(([a]) => !colours.has(a) && !words.has(a) && !['dk', 'lt'].includes(a));
     const byTarget = new Map();
     for (const [a, b] of newWords) { if (!byTarget.has(b)) byTarget.set(b, []); byTarget.get(b).push(a); }
-    for (const [b, as] of [...byTarget.entries()].sort((x, y) => byText(x[0], y[0]))) lines.push(wire(`k.values.psys2.word.${seg(b)}`, 'core.word', [...as.map((a) => ['text', a]), ['means', b], ['of', 'k.values.colour.name']], SRC));
+    for (const [b, as] of [...byTarget.entries()].sort((x, y) => byText(x[0], y[0]))) lines.push(wire(`k.colours.psys2.word.${seg(b)}`, 'core.word', [...as.map((a) => ['text', a]), ['means', b], ['of', 'k.colours.colour.name']], SRC));
     const SHORT = { dk: 'dark', lt: 'light' };
     for (const [n, l, sat] of shades.filter(([n]) => !SHORT[n])) lines.push(wire(`k.values.psys2.shade.${seg(n)}`, 'k.values.shade', [['name', n], ['lightness', l], ['saturation', sat]], SRC));
     for (const [short, long] of Object.entries(SHORT)) if (shades.some(([n]) => n === short)) lines.push(wire(`k.values.psys2.word.shade.${short}`, 'core.word', [['text', short], ['means', long], ['of', 'k.values.shade.name']], SRC));
@@ -391,7 +393,7 @@ export function importPsys2(from, commit) {
     stats.values = { colours: newColours.length, words: newWords.length, shades: shades.length - 2, yes: yes.length, no: no.length, called: pl.length, kinds: kinds.length };
     sec('`art.draw/scene.mjs` and `lang.common/lexicon.sop` → `k.values`, `k.parts`', [
       '| what | PSys2 | had | taken | where |', '|---|---:|---|---|---|',
-      `| base colours with a value (\`BASE_COLORS\`) | ${base.length} | ${base.length - newColours.length} names in \`k.values.colour\` | ${newColours.length}: ${newColours.map((c) => c.join(' ')).join(', ')} | \`k.values/shards/psys2\` |`,
+      `| base colours with a value (\`BASE_COLORS\`) | ${base.length} | ${base.length - newColours.length} names in \`k.colours.colour\` | ${newColours.length}: ${newColours.map((c) => c.join(' ')).join(', ')} | \`k.values/shards/psys2\` |`,
       `| other words for a colour (\`COLOR_ALIASES\`) | ${aliases.length} | ${aliases.length - newWords.length}: colours or words of \`k.values\` (gray, golden; rose, scarlet, aqua, teal and lemon are colours of their own there) | ${newWords.length}: ${newWords.map(([a, b]) => `${a} (${b})`).join(', ')} | the same shard (\`core.word\`) |`,
       `| shade words (\`SHADES\`) | ${shades.length} | light and dark as steps of the scale brightness | ${shades.length - 2}: new type \`k.values.shade\` (${shades.filter(([n]) => !SHORT[n]).map((x) => x[0]).join(', ')}; how much lighter and how much more colour); dk and lt as words | the same shard |`,
       `| words for yes and no (lexicon) | ${yes.length} + ${alts('phrase.lang.no').length} | 0 | ${yes.length} + ${no.length}: new type \`k.values.reply\` | the same shard |`,

@@ -1,8 +1,10 @@
-// k.values (Round 8, item 3): the words for values: colour names with RGB, ordered scales (size, amount, degree …)
+// k.values (Round 8, item 3): the words for values: ordered scales (size, amount, degree …)
 // with their comparatives, shape names, directions and positions, set words, number words and ordinals.
-//   node tools/values-core.mjs          writes docs/worlds/k.values/shards/*.sop
+//   node tools/values-core.mjs          writes docs/worlds/k.values/shards/*.sop, and the colour names with RGB into
+//                                       k.colours/shards/colours-css.sop and colours-common.sop (KR2: k.colours is the
+//                                       home of every colour name, reviewer 14:45)
 // The CSS colour names come from sources/css-colors/raw/index.js (see sources/css-colors/SOURCE.md); when the raw
-// file is not there the shard colours-css is left as it is. Everything else is hand-written here.
+// file is not there the shard k.colours/shards/colours-css is left as it is. Everything else is hand-written here.
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR } from './lib/worlds.mjs';
@@ -14,7 +16,7 @@ export const CSS_RAW = join(REPO, 'sources', 'css-colors', 'raw', 'index.js');
 const list = (s) => s.split(',').map((x) => x.trim()).filter(Boolean);
 const hex = (rgb) => `#${rgb.map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase()}`;
 const word = (id, texts, means, of) => wire(id, 'core.word', [...texts.map((t) => ['text', t]), ['means', means], ['of', of]], HAND);
-const shard = (id, about, body, extra = {}) => `${header({ id: `k.values/shards/${id}`, about, sources: extra.sources ?? ['hand-core 1 (hand-written in this repository: tools/values-core.mjs)'], license: extra.license ?? 'CC0-1.0', script: 'tools/values-core.mjs' })}\n${body}\n`;
+const shard = (id, about, body, extra = {}) => `${header({ id: `${extra.world ?? 'k.values'}/shards/${id}`, about, sources: extra.sources ?? ['hand-core 1 (hand-written in this repository: tools/values-core.mjs)'], license: extra.license ?? 'CC0-1.0', script: 'tools/values-core.mjs' })}\n${body}\n`;
 
 // ---- Colours ------------------------------------------------------------------------------------------------------
 export const BASIC = ['black', 'white', 'grey', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'brown'];
@@ -190,23 +192,29 @@ export function numberWords() {
   return out;
 }
 
-export function valueShards() {
+// The colour names (KR2, reviewer 14:45): k.colours.colour facts with their RGB; `family` is the basic colour a name is a
+// kind of (was k.values.colour basic).
+export function colourNameShards() {
   const files = {};
-  // Colours.
   if (existsSync(CSS_RAW)) {
     const colours = cssColours(readFileSync(CSS_RAW, 'utf8'));
-    const lines = colours.map((c) => wire(`k.values.colour.${seg(c.name)}`, 'k.values.colour', [['name', c.name], ['css', c.css], ['rgb', text(c.rgb)], ['basic', c.basic], ['named', c.named]], CSS));
-    const words = colours.filter((c) => c.words.length).map((c) => word(`k.values.word.colour.${seg(c.name)}`, c.words, c.name, 'k.values.colour.name'));
+    const lines = colours.map((c) => wire(`k.colours.css.${seg(c.name)}`, 'k.colours.colour', [['name', c.name], ['css', c.css], ['rgb', text(c.rgb)], ['family', c.basic], ['named', c.named]], CSS));
+    const words = colours.filter((c) => c.words.length).map((c) => word(`k.colours.css.word.${seg(c.name)}`, c.words, c.name, 'k.colours.colour.name'));
     files['colours-css.sop'] = shard('colours-css', `the ${colours.length} colour names of CSS with their RGB value, and the basic colour each is a kind of where its name says it or it is plain.`,
       `${lines.join('\n')}\n\n# Words: the CSS keyword written as one word, and the spelling with "gray".\n${words.join('\n')}`,
-      { sources: ['css-colors 2.1.1 (the CSS named colours as listed by the package color-name 2.1.1, MIT: name and RGB)', 'hand-core 1 (the basic colour of a name that does not end in one, named=model; the word facts)'], license: 'MIT' });
+      { world: 'k.colours', sources: ['css-colors 2.1.1 (the CSS named colours as listed by the package color-name 2.1.1, MIT: name and RGB)', 'hand-core 1 (the basic colour of a name that does not end in one, named=model; the word facts)'], license: 'MIT' });
   }
   {
-    const lines = COMMON_COLOURS.map(([name, r, g, b, basic]) => wire(`k.values.colour.${seg(name)}`, 'k.values.colour', [['name', name], ['rgb_about', text(hex([r, g, b]))], ['basic', basic]], HAND));
-    const words = COMMON_COLOURS.filter((c) => c[5]).map((c) => word(`k.values.word.colour.${seg(c[0])}`, list(c[5]), c[0], 'k.values.colour.name'));
+    const lines = COMMON_COLOURS.map(([name, r, g, b, basic]) => wire(`k.colours.common.${seg(name)}`, 'k.colours.colour', [['name', name], ['rgb_about', text(hex([r, g, b]))], ['family', basic]], HAND));
+    const words = COMMON_COLOURS.filter((c) => c[5]).map((c) => word(`k.colours.common.word.${seg(c[0])}`, list(c[5]), c[0], 'k.colours.colour.name'));
     files['colours-common.sop'] = shard('colours-common', `${COMMON_COLOURS.length} common colour names that CSS does not have (${COMMON_COLOURS.slice(0, 8).map((c) => c[0]).join(', ')} ...), each with a usual RGB value (approximate: a name like this has no fixed value).`,
-      `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`);
+      `${lines.join('\n')}\n\n# Words.\n${words.join('\n')}`, { world: 'k.colours' });
   }
+  return files;
+}
+
+export function valueShards() {
+  const files = {};
   // Scales.
   {
     const lines = [], words = [];
@@ -272,8 +280,9 @@ export function valueShards() {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const files = valueShards();
-  const dir = join(WORLDS_DIR, 'k.values', 'shards');
-  if (!files['colours-css.sop'] && existsSync(join(dir, 'colours-css.sop'))) files['colours-css.sop'] = readFileSync(join(dir, 'colours-css.sop'), 'utf8');
-  writeShards(dir, files);
-  console.log(Object.keys(files).join(', '));
+  writeShards(join(WORLDS_DIR, 'k.values', 'shards'), files, '', ['psys2']);
+  const cdir = join(WORLDS_DIR, 'k.colours', 'shards'), colours = colourNameShards();
+  if (!colours['colours-css.sop'] && existsSync(join(cdir, 'colours-css.sop'))) colours['colours-css.sop'] = readFileSync(join(cdir, 'colours-css.sop'), 'utf8');
+  writeShards(cdir, colours, 'colours-');
+  console.log([...Object.keys(files), ...Object.keys(colours).map((f) => `k.colours/${f}`)].join(', '));
 }

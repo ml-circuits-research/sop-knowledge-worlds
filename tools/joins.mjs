@@ -38,7 +38,7 @@ const KIND_SENSE = { animal: 'animal', food: 'food', drink: 'food', plant: 'plan
 export const TYPES = [
   ['k.objects.object', 'name', (w, shard) => shardSense(shard)], ['k.objects.stand_in', 'name', null],
   ['k.animals.animal', 'name', 'animal'], ['k.food.food', 'name', 'food'],
-  ['k.colours.colour', 'name', 'colour'], ['k.values.colour', 'name', 'colour'], ['k.shapes.shape', 'name', 'shape'], ['k.values.shape', 'name', 'shape'],
+  ['k.colours.colour', 'name', 'colour'], ['k.shapes.shape', 'name', 'shape'], ['k.values.shape', 'name', 'shape'],
   ['k.body.part', 'name', 'body part'], ['k.wearables.wearable', 'name', 'clothing'], ['k.people.kind', 'name', 'person'], ['k.people.role', 'name', 'person'],
   ['k.space.body', 'name', 'body in space'], ['k.space.kind', 'name', 'body in space'],
   ['k.geo.continent', 'name', 'place'], ['k.geo.country', 'name', 'place'], ['k.geo.city', 'name', 'place'], ['k.geo.river', 'name', 'place'], ['k.geo.mountain', 'name', 'place'], ['k.geo.range', 'name', 'place'], ['k.geo.lake', 'name', 'place'], ['k.geo.desert', 'name', 'place'], ['k.geo.sea', 'name', 'place'],

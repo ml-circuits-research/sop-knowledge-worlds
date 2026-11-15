@@ -1,8 +1,20 @@
 # k.colours
 
-33 colours and what is known about them: the family, light or dark, warm or cool, a lighter and a darker colour,
-the opposite on the colour wheel, typical things; and what 25 pairs of colours mix into. Hand-written (`hand-core
-1`, CC0-1.0). It does not give the value of a colour (RGB).
+The home of every colour name (KR2, reviewer 14:45): 33 colours and what is known about them (the family, light or
+dark, warm or cool, a lighter and a darker colour, the opposite on the colour wheel, typical things; hand-written,
+`hand-core 1`, CC0-1.0), what 25 pairs of colours mix into, and the value of each colour name: the 141 CSS colours with
+their exact RGB (shard `colours-css`, `css-colors 2.1.1`, MIT) and 29 common names with a usual one (shard
+`colours-common`, CC0), moved here from k.values.colour, which is gone. The 11 basic colour terms of English (Berlin
+and Kay 1969) carry `basic=true`; the type `k.colours.basic` is their view, one fact each by rule (shard derived), and
+a slot that takes only a basic colour joins it (`type=k.colours.basic by=name`: k.values.coloured, k.drawing.part,
+k.attributes.drawn, k.colours.colour.family).
+
+A colour's facts stand in several shards (colours, colours-css, colours-common, psys2) and merge by name. `css`,
+`rgb` (exact, "#RRGGBB"), `rgb_about` (usual; never both), `family` (the basic colour it is a kind of, where it has
+one: on 87 CSS colours by the last word of the name or plainly, `named=model` where a language model labelled it),
+`basic=true`. Where the hand-written family and the CSS shard's family both exist they agree (checked when moved);
+the 7 names the CSS shard left without family (amber, beige, cream, magenta, maroon, peach, turquoise) take the
+hand-written one, so their drawn colours in k.attributes moved with it (95 lines of the drawn-* shards).
 
 ## What it knows
 

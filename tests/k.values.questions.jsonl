@@ -1,6 +1,3 @@
-{"id":"va-01","ask":"what is the RGB value of crimson","query":{"type":"k.values.colour","where":{"name":"crimson"},"seek":"rgb"},"expect":{"status":"supported","value":"\"#DC143C\""}}
-{"id":"va-02","ask":"what basic colour is navy","query":{"type":"k.values.colour","where":{"name":"navy"},"seek":"basic"},"expect":{"status":"supported","value":"blue"}}
-{"id":"va-03","ask":"what is a usual RGB value of mustard","query":{"type":"k.values.colour","where":{"name":"mustard"},"seek":"rgb_about"},"expect":{"status":"supported","value":"\"#FFDB58\""}}
 {"id":"va-04","ask":"where does large stand on the size scale","query":{"type":"k.values.step","where":{"scale":"size","name":"large"},"seek":"rank"},"expect":{"status":"supported","value":"4"}}
 {"id":"va-05","ask":"which way does smaller move on the size scale","query":{"type":"k.values.comparative","where":{"text":"smaller"},"seek":"way"},"expect":{"status":"supported","value":"down"}}
 {"id":"va-06","ask":"which scales can shorter belong to","query":{"type":"k.values.comparative","where":{"text":"shorter"},"seek":"scale","mode":"list"},"expect":{"status":"supported","values":["length","height"]}}

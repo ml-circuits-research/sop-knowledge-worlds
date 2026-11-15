@@ -99,12 +99,16 @@ export const SHAPES = [
   ['torus', 'solid', { faces: 1, edges: 0, corners: 0, round: T, symmetric: T, flat: 'ring' }, 'doughnut, tire, bagel, ring', 'ring shape, doughnut shape, ring doughnut'],
 ];
 
+// The 11 basic colour terms of English (Berlin and Kay 1969, Basic Color Terms): `basic=true` (KR2, reviewer 14:45).
+export const BASIC_TERMS = ['black', 'white', 'grey', 'red', 'orange', 'yellow', 'green', 'blue', 'purple', 'pink', 'brown'];
+
 export function colourShards() {
   const names = new Set(COLOURS.map((c) => c[0]));
+  for (const b of BASIC_TERMS) if (!names.has(b) || COLOURS.find((c) => c[0] === b)[1] !== b) throw new Error(`${b}: a basic term is a colour of its own family`);
   const lines = COLOURS.map(([name, family, tone, temperature, o, things]) => {
     for (const k of ['lighter', 'darker', 'complement']) if (o[k] && (!names.has(o[k]) || o[k] === name)) throw new Error(`${name}: ${k} ${o[k]} is not another colour`);
     if (!names.has(family)) throw new Error(`${name}: the family ${family} is not a colour`);
-    return wire(`k.colours.colour.${seg(name)}`, 'k.colours.colour', [['name', name], ['family', family], ['tone', tone], ['temperature', temperature], ['lighter', o.lighter], ['darker', o.darker], ['complement', o.complement], ['kind', o.kind], ...list(things).map((t) => ['thing', t])], SRC);
+    return wire(`k.colours.colour.${seg(name)}`, 'k.colours.colour', [['name', name], ['basic', BASIC_TERMS.includes(name) ? 'true' : undefined], ['family', family], ['tone', tone], ['temperature', temperature], ['lighter', o.lighter], ['darker', o.darker], ['complement', o.complement], ['kind', o.kind], ...list(things).map((t) => ['thing', t])], SRC);
   });
   const mixes = MIXES.map(([a, b, gives]) => {
     if (!(a < b)) throw new Error(`mix ${a} + ${b}: the two colours come in the order of the alphabet`);
@@ -129,7 +133,7 @@ export function shapeShards() {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  writeShards(join(WORLDS_DIR, 'k.colours', 'shards'), colourShards());
+  writeShards(join(WORLDS_DIR, 'k.colours', 'shards'), colourShards(), '', ['colours-']);
   writeShards(join(WORLDS_DIR, 'k.shapes', 'shards'), shapeShards());
   console.log(`${COLOURS.length} colours, ${MIXES.length} mixes, ${SHAPES.length} shapes`);
 }

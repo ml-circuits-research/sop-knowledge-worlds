@@ -39,9 +39,9 @@ test('Q34 item 4 and KR2: the basic colours are declared once in k.values; the o
   }
   // KR2 (one home per idea): the other colour slots also declare where colour names live (k.colours, by name); the enum
   // stays as their check, since the engine reports an unmet join and does not refuse it (Q72)
-  for (const [id, type, key] of [['k.drawing', 'k.drawing.part', 'colour'], ['k.values', 'k.values.colour', 'basic'], ['k.attributes', 'k.attributes.drawn', 'drawn_colour'], ['k.colours', 'k.colours.colour', 'family']]) {
+  for (const [id, type, key] of [['k.drawing', 'k.drawing.part', 'colour'], ['k.attributes', 'k.attributes.drawn', 'drawn_colour'], ['k.colours', 'k.colours.colour', 'family']]) {
     const s = slots(id, type).find((x) => x.attrs.key[0] === key);
-    assert.deepEqual([[...s.attrs.enum].sort(), s.attrs.type?.[0], s.attrs.by?.[0]], [[...basic].sort(), 'k.colours.colour', 'name'], `${type}.${key}`);
+    assert.deepEqual([[...s.attrs.enum].sort(), s.attrs.type?.[0], s.attrs.by?.[0]], [[...basic].sort(), 'k.colours.basic', 'name'], `${type}.${key}`);
   }
   assert.deepEqual([...enumOf('k.attributes', 'k.attributes.thing', 'colour')].sort(), [...basic, 'any'].sort(), 'k.attributes.thing.colour (with any)');
 });
@@ -95,8 +95,8 @@ test('block 06:55 item 2: one slot named in the slot group k.named; excludes on 
   let pairs = 0;
   for (const [type, keys] of slotsOf) for (const [k, x] of keys) if (k.endsWith('_about') && keys.has(k.slice(0, -6))) { pairs++; assert.deepEqual(x.attrs.excludes, [k.slice(0, -6)], `${type}.${k}`); }
   assert.equal(pairs, 5);
-  const { world } = schemaWorld(worlds, 'k.values');
-  const r = world.fork().tell('@t.c k.values.colour name=t rgb=1 rgb_about=1 core.source="t"');
+  const { world } = schemaWorld(worlds, 'k.colours');
+  const r = world.fork().tell('@t.c k.colours.colour name=t rgb=1 rgb_about=1 core.source="t"');
   assert.equal(r.ok, false);
   assert.ok(r.violations.some((v) => v.kind === 'excludes'), JSON.stringify(r.violations));
   assert.equal(all.filter((x) => x.type === 'core.deny' && /\.both$/.test(x.id) && !['k.animals', 'k.units'].includes(x.world)).length, 0, 'the denies that excludes replaces are gone');

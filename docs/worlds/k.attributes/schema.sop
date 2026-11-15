@@ -47,7 +47,7 @@
 
 # The usual values of a common thing, each only where it is plain: a missing key says nothing. `kind` names a
 # k.attributes.kind; `colour` (many) is one of the eleven basic colours (the names of k.objects.part.colour and of
-# k.values.colour.basic), or the one value `any`: the thing comes in any colour and has no usual one (a car, a
+# k.colours.colour family), or the one value `any`: the thing comes in any colour and has no usual one (a car, a
 # ball, a shirt); `any` never stands next to a colour. How a thing is drawn is another fact: k.attributes.drawn.
 # A host that needs a colour takes the usual one, then the drawn one. `material` (many) what it is usually made of; `wheels` how
 # many wheels it usually has (0: it is a vehicle without wheels); `can` (many) what it can do; `used_for` (many)
@@ -63,13 +63,13 @@
 
 # The colours a drawable thing is drawn in: computed from the drawing of k.objects that has the name `name`
 # (tools/drawn-colour.mjs), the largest first, at most three. `drawn_colour` (many) is one of the eleven basic
-# colours; `drawn_shade` (many) is the nearest colour name of k.values.colour to each main fill colour. This says
+# colours; `drawn_shade` (many) is the nearest colour name of k.colours.colour to each main fill colour. This says
 # how the thing is drawn, never what colour it usually is (a car that happens to be drawn red): the usual colour
 # is k.attributes.thing.colour, and the two are never mixed. The source of the fact is the source of the drawing.
 @k.attributes.drawn core.type of=k.attributes.drawn shared=true closed=true core.source="hand-core 1"
 @k.attributes.drawn.name core.slot of=k.attributes.drawn key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
-@k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.colour by=name core.source="hand-core 1"
-@k.attributes.drawn.drawn_shade core.slot of=k.attributes.drawn key=drawn_shade many=true kind=atom kind=string type=k.values.colour by=name core.source="hand-core 1"
+@k.attributes.drawn.drawn_colour core.slot of=k.attributes.drawn key=drawn_colour many=true required=true enum=black enum=white enum=grey enum=red enum=orange enum=yellow enum=green enum=blue enum=purple enum=pink enum=brown kind=atom type=k.colours.basic by=name core.source="hand-core 1"
+@k.attributes.drawn.drawn_shade core.slot of=k.attributes.drawn key=drawn_shade many=true kind=atom kind=string type=k.colours.colour by=name core.source="hand-core 1"
 
 # The usual numbers of a common thing (tools/numbers-core.mjs), each only where it is plain and about right, for
 # a usual grown one in its everyday meaning: `size_about` the length of its longest side in metres; `weight_about`

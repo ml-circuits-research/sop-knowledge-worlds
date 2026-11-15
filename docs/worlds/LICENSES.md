@@ -31,7 +31,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: MIT (the package). The names and values themselves are those of the CSS specification.
 - Attribution: color-name, Copyright (c) 2015 Dmitry Ivanov, MIT License, https://github.com/colorjs/color-name .
 - Shard terms: MIT
-- Used by: `k.values` (1 shards)
+- Used by: `k.colours` (1 shards)
 
 ## dicebear-big-smile-67f54a0
 
@@ -114,6 +114,8 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Shard terms: CC0-1.0, MIT, WordNet-3.0
 - Used by: `k.actions` (25 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (1 shards), `k.commonsense` (3 shards), `k.diagrams` (2 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (45 shards), `k.layouts` (5 shards), `k.motion` (2 shards), `k.music` (3 shards), `k.objects` (30 shards), `k.parts` (1 shards), `k.people` (23 shards), `k.procedures` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (3 shards), `k.units` (3 shards), `k.values` (8 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (51 shards), `w.lang.ro` (28 shards)
 
+- Used by: `k.actions` (25 shards), `k.animals` (6 shards), `k.attributes` (42 shards), `k.body` (1 shards), `k.colours` (3 shards), `k.commonsense` (3 shards), `k.diagrams` (2 shards), `k.faces` (20 shards), `k.feelings` (1 shards), `k.food` (6 shards), `k.genres` (8 shards), `k.geo` (1 shards), `k.interest` (2 shards), `k.kinds` (45 shards), `k.layouts` (5 shards), `k.motion` (2 shards), `k.music` (3 shards), `k.objects` (30 shards), `k.parts` (1 shards), `k.people` (23 shards), `k.procedures` (4 shards), `k.scenes` (31 shards), `k.shapes` (1 shards), `k.space` (3 shards), `k.story` (3 shards), `k.time` (3 shards), `k.units` (3 shards), `k.values` (6 shards), `k.wearables` (2 shards), `k.words` (1 shards), `w.lang.en` (50 shards), `w.lang.ro` (26 shards)
+
 ## mulberry-fa94a93
 
 - What: about 3,400 coloured pictograms made for communication aids (AAC), each named in English and put in a category. Chosen as the second filled icon set for `k.objects` after comparing 20 objects with game-icons (`game-icons/icons`, CC BY 3.0: one colour, white on black, fantasy-game subjects, 11 of the 20 everyday names present) — Mulberry had 17 of the 20, in colour, drawn for exactly these everyday things (worker-log.md).
@@ -176,6 +178,15 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Attribution: none needed for the hand-written part.
 - Shard terms: CC-BY-4.0, CC0-1.0, ODbL-1.0
 - Used by: `k.animals` (1 shards), `k.colours` (1 shards), `k.commonsense` (1 shards), `k.diagrams` (2 shards), `k.geo` (10 shards), `k.kinds` (3 shards), `k.layouts` (1 shards), `k.parts` (1 shards), `k.scenes` (1 shards), `k.shapes` (1 shards), `k.time` (1 shards), `k.values` (1 shards)
+
+## rule-k.colours.basic.rule
+
+- What: the values a `core.rule` of a schema module (`k.commonsense`, `k.time`, `k.kinds`) makes from the told facts of a module and of the modules it imports, on the wires of that module's own types, written by `tools/derive.mjs` into the generated shards `docs/worlds/<world>/shards/derived*.sop`, so that tools and hosts that read shards see them. Every such wire carries `derived=true` and `core.source="rule <rule id>"`: the source names the rule, whose own `core.source` (in the schema) names who wrote it. A value that is also told is not written.
+- Origin: this repository (the rules, `hand-core 1`), applied to the facts named in the shard header.
+- License: the licence of the facts the rules read; `tools/derive.mjs` refuses a mix of licences in one shard. All derived shards so far read CC0-1.0 facts only, so they are CC0-1.0.
+- Attribution: that of the facts read (none for CC0-1.0).
+- Shard terms: MIT
+- Used by: `k.colours` (1 shards)
 
 ## rule-k.commonsense.ability
 

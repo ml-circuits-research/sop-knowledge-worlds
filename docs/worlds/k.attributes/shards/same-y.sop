@@ -8,7 +8,7 @@
 @k.attributes.same.yam.thing k.attributes.same name=yam sense=thing only=true in=k.attributes.number by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.yarn.thing k.attributes.same name=yarn sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.year.time k.attributes.same name=year sense=time only=true in=k.time.duration by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.yellow.colour k.attributes.same name=yellow sense=colour only=false in=k.colours.colour in=k.values.colour by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.yellow.colour k.attributes.same name=yellow sense=colour only=false in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.yellow.place k.attributes.same name=yellow sense=place only=false in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.yellowstone.place k.attributes.same name=yellowstone sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.yen_banknote.thing k.attributes.same name="yen banknote" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

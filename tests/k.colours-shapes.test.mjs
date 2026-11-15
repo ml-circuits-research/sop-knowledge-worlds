@@ -2,17 +2,19 @@
 // corners, round or not, and things of that shape.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
+import { parse } from '../tools/sopworld/sopworld.mjs';
 import { join } from 'node:path';
 import { WORLDS_DIR, scanWorlds, fullWorld, factsOf } from '../tools/lib/worlds.mjs';
 import { handSources } from '../tools/lib/worlds.mjs';
-import { colourShards, shapeShards, COLOURS, SHAPES } from '../tools/colours-shapes-core.mjs';
+import { colourShards, shapeShards, COLOURS, SHAPES, BASIC_TERMS } from '../tools/colours-shapes-core.mjs';
 
 const worlds = scanWorlds();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const coloursWorld = fullWorld('k.colours', worlds), shapesWorld = fullWorld('k.shapes', worlds);
-const colours = coloursWorld.ofType('k.colours.colour'), mixes = coloursWorld.ofType('k.colours.mix'), shapes = shapesWorld.ofType('k.shapes.shape');
+// the 33 colours of shard colours (tone, temperature, lighter, darker, things); the other colour names have a value only
+const colours = parse(readFileSync(join(WORLDS_DIR, 'k.colours', 'shards', 'colours.sop'), 'utf8')).filter((w) => w.type === 'k.colours.colour'), mixes = coloursWorld.ofType('k.colours.mix'), shapes = shapesWorld.ofType('k.shapes.shape');
 const drawn = new Set(factsOf('k.objects', ['k.objects.object', 'k.objects.stand_in'], worlds).map((w) => one(w, 'name')));
 const TONE = { light: 0, medium: 1, dark: 2 };
 
@@ -95,17 +97,47 @@ test('joins: most typical things have a drawing; every shape of a k.objects part
   for (const s of partShapes) assert.ok(names.has(s), `the part shape ${s} is not a k.shapes shape`);
 });
 
-test('joins to k.values: every colour here has its value there (by name or by a word); most shapes have their name there', () => {
+test('joins to k.values: most shapes have their name there; every colour has its value in k.colours itself (KR2)', () => {
   const values = fullWorld('k.values', worlds);
   const reach = (type, of) => {
     const names = new Set(values.ofType(type).map((w) => one(w, 'name')));
     for (const w of values.ofType('core.word')) if (w.attrs.of?.[0] === of) for (const t of w.attrs.text ?? []) names.add(tok(t));
     return names;
   };
-  const valueColours = reach('k.values.colour', 'k.values.colour.name'), valueShapes = reach('k.values.shape', 'k.values.shape.name');
-  for (const w of colours) assert.ok(valueColours.has(one(w, 'name')), `${one(w, 'name')} has no value in k.values`);
+  const valueShapes = reach('k.values.shape', 'k.values.shape.name');
   const without = shapes.map((w) => one(w, 'name')).filter((n) => !valueShapes.has(n));
   assert.ok(without.length <= 8, `shapes that k.values does not name: ${without.join(', ')}`);
+});
+
+// KR2 (reviewer 14:45): k.colours is the home of every colour name; the CSS names and the common names moved here from
+// k.values.colour (shards colours-css, MIT, and colours-common), merged by name with the 33 colours of shard colours.
+test('colour names: 141 CSS colours with an exact RGB value, common names with a usual one, never both; the 11 basic terms', () => {
+  const all = coloursWorld.ofType('k.colours.colour');
+  const byName = new Map(all.map((c) => [one(c, 'name'), c]));
+  const css = all.filter((c) => c.attrs.css);
+  assert.equal(css.length, 141);
+  assert.ok(byName.size >= 171, `${byName.size} colour names`);
+  for (const c of all) {
+    assert.ok(/^#[0-9A-F]{6}$/.test(one(c, 'rgb') ?? one(c, 'rgb_about') ?? ''), `${one(c, 'name')}: a value`);
+    assert.ok(!(c.attrs.rgb && c.attrs.rgb_about), c.id);
+  }
+  for (const w of colours) assert.ok(byName.get(one(w, 'name'))?.attrs.rgb || byName.get(one(w, 'name'))?.attrs.rgb_about, `${one(w, 'name')} has a value`);
+  const basic = all.filter((c) => one(c, 'basic') === 'true').map((c) => one(c, 'name')).sort();
+  assert.deepEqual(basic, [...BASIC_TERMS].sort());
+  for (const b of BASIC_TERMS) assert.equal(one(byName.get(b), 'family'), b, b);
+  assert.deepEqual(coloursWorld.ofType('k.colours.basic').map((c) => one(c, 'name')).sort(), [...BASIC_TERMS].sort(), 'the basic view, by rule');
+  assert.equal(one(byName.get('red'), 'rgb'), '#FF0000');
+  assert.equal(one(byName.get('dark olive green'), 'css'), 'darkolivegreen');
+  assert.equal(one(byName.get('crimson'), 'named'), 'model');
+  assert.equal(one(byName.get('navy'), 'family'), 'blue');
+  const r = coloursWorld.fork().tell('@x k.colours.colour name=test rgb="#000000" rgb_about="#000000" core.source="test 1"');
+  assert.equal(r.ok, false, 'both values are refused');
+  // the slots that take only a basic colour join the basic view
+  for (const [id, type, key] of [['k.values', 'k.values.coloured', 'colour'], ['k.drawing', 'k.drawing.part', 'colour'], ['k.attributes', 'k.attributes.drawn', 'drawn_colour'], ['k.colours', 'k.colours.colour', 'family']]) {
+    const sl = parse(readFileSync(join(WORLDS_DIR, id, 'schema.sop'), 'utf8')).find((x) => x.type === 'core.slot' && x.attrs.of[0] === type && x.attrs.key[0] === key);
+    assert.deepEqual([sl.attrs.type?.[0], sl.attrs.by?.[0]], ['k.colours.basic', 'name'], `${type}.${key}`);
+  }
+  assert.equal(existsSync(join(WORLDS_DIR, 'k.values', 'shards', 'colours-css.sop')), false, 'k.values.colour is gone');
 });
 
 test('other names reach the colour and the shape through the vocabulary index', () => {
