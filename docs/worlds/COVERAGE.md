@@ -19,8 +19,8 @@ the place of the dog).
 |---|---:|---:|---:|---|
 | place | 793 (53%) | 326 (22%) | 381 (25%) | `k.scenes.thing` (place) |
 | size | 810 (54%) | 338 (23%) | 352 (23%) | `k.scenes.thing` (size) |
-| colour (usual colour of the thing) | 236 (16%) | 49 (3%) | 1215 (81%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
-| colour (the usual one, or said to be any colour) | 323 (22%) | 92 (6%) | 1085 (72%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (usual colour of the thing) | 320 (21%) | 61 (4%) | 1119 (75%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
+| colour (the usual one, or said to be any colour) | 407 (27%) | 101 (7%) | 992 (66%) | `k.attributes.thing` (colour), `k.food.food` (colour) |
 | colour the thing is drawn in | 753 (50%) | 390 (26%) | 357 (24%) | `k.attributes.drawn` (drawn_colour) |
 | colour of the parts of a drawing | 754 (50%) | 390 (26%) | 356 (24%) | `k.objects.part` (colour) |
 | parts (WordNet, own or inherited) | 541 (36%) | 62 (4%) | 897 (60%) | `k.parts.whole` (has), `k.parts.inherited` (has) |
@@ -28,9 +28,9 @@ the place of the dog).
 | parts (named parts of a drawing) | 645 (43%) | 330 (22%) | 525 (35%) | `k.objects.part` (name) |
 | parts or joins between kinds | 64 (4%) | 79 (5%) | 1357 (90%) | `k.layouts.joins` (a) |
 | anchor (where another thing sits) | 133 (9%) | 105 (7%) | 1262 (84%) | `k.layouts.anchor` (kind) |
-| material | 346 (23%) | 113 (8%) | 1041 (69%) | `k.attributes.thing` (material) |
+| material | 376 (25%) | 109 (7%) | 1015 (68%) | `k.attributes.thing` (material) |
 | what it can do (of the 463 it applies to) | 261 (56%) | 51 (11%) | 151 (33%) | `k.attributes.thing` (can), `k.animals.animal` (can), `k.commonsense.thing` (can) |
-| what it is used for | 432 (29%) | 156 (10%) | 912 (61%) | `k.attributes.thing` (used_for) |
+| what it is used for | 492 (33%) | 150 (10%) | 858 (57%) | `k.attributes.thing` (used_for) |
 | property (sharp, sticky, heavy ...) | 34 (2%) | 25 (2%) | 1441 (96%) | `k.attributes.thing` (property) |
 | wheels | 33 (2%) | 13 (1%) | 1454 (97%) | `k.attributes.thing` (wheels) |
 | legs | 161 (11%) | 28 (2%) | 1311 (87%) | `k.animals.animal` (legs), `k.attributes.number` (legs) |
@@ -52,7 +52,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 |---|---:|
 | `k.actions` | 22 (1%) |
 | `k.animals` | 166 (11%) |
-| `k.attributes` | 1284 (86%) |
+| `k.attributes` | 1306 (87%) |
 | `k.body` | 4 (0%) |
 | `k.charts` | 1 (0%) |
 | `k.colours` | 73 (5%) |
@@ -62,7 +62,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.food` | 147 (10%) |
 | `k.genres` | 1 (0%) |
 | `k.geo` | 20 (1%) |
-| `k.kinds` | 1283 (86%) |
+| `k.kinds` | 1303 (87%) |
 | `k.layouts` | 221 (15%) |
 | `k.motion` | 1 (0%) |
 | `k.music` | 3 (0%) |
@@ -97,8 +97,8 @@ the place where a thing is worn belong to some kinds of things only (no list for
 
 - **place**: gun, engine, bullet, sword, rope, wing, pipe, motor, tube, mall, needle, root, lance, jewelry, shield, coffin, aircraft, vault, barrel, rod, pistol, reed, shotgun, dock, cape, balcony, marina, sketch, clip, brake
 - **size**: wing, grass, mall, needle, root, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker
-- **colour (usual colour of the thing)**: house, world, car, door, phone, person, gun, bed, dog, hospital, picture, building, ship, hotel, bag, station, horse, ball, key, boat, fish, star, prison, stick, bank, camera, window, wall, store, jail
-- **colour (the usual one, or said to be any colour)**: house, world, phone, person, gun, bed, dog, hospital, picture, building, ship, hotel, station, horse, key, fish, star, prison, stick, bank, camera, window, wall, store, jail, cat, shop, wine, island, plane
+- **colour (usual colour of the thing)**: house, world, car, door, person, bed, dog, hospital, picture, building, ship, hotel, bag, station, ball, key, boat, fish, star, prison, stick, bank, window, wall, store, jail, cat, shop, wine, island
+- **colour (the usual one, or said to be any colour)**: house, world, person, bed, dog, hospital, picture, building, ship, hotel, station, key, fish, star, prison, stick, bank, window, wall, store, jail, cat, shop, wine, island, plane, beer, computer, planet, bus
 - **colour the thing is drawn in**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
 - **colour of the parts of a drawing**: mall, needle, jewelry, aircraft, vault, barrel, reed, dock, cape, balcony, marina, sketch, clip, brake, shutter, delta, ridge, rack, chili, continent, grill, grocery, salon, workshop, magnum, laurel, bunker, ape, rail, mustard
 - **parts (WordNet, own or inherited)**: honey, street, coffee, picture, bag, station, rock, ball, star, stick, bank, tea, jail, wine, island, beer, moon, suit, hole, stone, pants, beach, cup, tape, milk, cake, meat, photo, bullet, pool
@@ -108,7 +108,7 @@ the place where a thing is worn belong to some kinds of things only (no list for
 - **anchor (where another thing sits)**: world, phone, honey, earth, hospital, coffee, road, picture, hotel, station, sun, ball, key, fish, star, stick, bank, tea, camera, store, jail, cat, shop, wine, beer, computer, planet, moon, suit, bell
 - **material**: world, person, honey, dog, hospital, street, coffee, road, building, hotel, station, horse, fish, prison, bank, tea, camera, store, jail, cat, shop, island, beer, chicken, hole, bird, rose, restaurant, milk, meat
 - **what it can do**: earth, camera, planet, bullet, shower, screen, sheep, bug, fridge, radar, nut, root, lance, shield, oven, reed, worm, buffalo, iris, stove, pod, hay, grill, comet, refrigerator, laurel, ape, camel, dinosaur, blossom
-- **what it is used for**: world, person, station, rock, star, stick, jail, island, planet, moon, chicken, hole, bird, stone, beach, rose, mountain, pig, cheese, hill, plant, airport, grave, pizza, chocolate, soup, rat, monkey, egg, wolf
+- **what it is used for**: world, person, station, rock, star, stick, island, planet, moon, hole, bird, stone, beach, mountain, pig, cheese, hill, plant, airport, grave, pizza, chocolate, soup, rat, monkey, egg, wolf, cow, tower, pie
 - **property (sharp, sticky, heavy ...)**: house, world, door, phone, honey, gun, dog, hospital, street, coffee, road, picture, building, ship, hotel, bag, station, box, ball, key, boat, fish, star, prison, stick, bank, tea, camera, window, wall
 - **size in metres (the longest side)**: world, honey, earth, street, coffee, road, station, sun, star, bank, tea, wall, wine, island, beer, planet, moon, hole, beach, milk, meat, mountain, path, sugar, hill, pocket, plant, chocolate, soup, champagne
 - **weight in kilograms**: house, world, honey, earth, hospital, street, coffee, road, building, hotel, station, sun, star, prison, bank, tea, wall, store, jail, shop, wine, island, beer, planet, moon, hole, beach, rose, restaurant, milk

@@ -1,4 +1,4 @@
-# k.attributes/shards/same-m: one name, one thing: for 261 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
+# k.attributes/shards/same-m: one name, one thing: for 262 names that start with "m" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (12 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -123,7 +123,7 @@
 @k.attributes.same.mexico.place k.attributes.same name=mexico sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.miami.place k.attributes.same name=miami sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.microbe.animal k.attributes.same name=microbe sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.microchip.thing k.attributes.same name=microchip sense=thing only=true in=k.attributes.number by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.microchip.thing k.attributes.same name=microchip sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.microphone.thing k.attributes.same name=microphone sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.microscope.thing k.attributes.same name=microscope sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.microwave.thing k.attributes.same name=microwave sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
@@ -229,6 +229,7 @@
 @k.attributes.same.motorcycle.thing k.attributes.same name=motorcycle sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.motorized_wheelchair.thing k.attributes.same name="motorized wheelchair" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.motorway.thing k.attributes.same name=motorway sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mound.thing k.attributes.same name=mound sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mount_fuji.place k.attributes.same name="mount fuji" sense=place only=false in=k.geo.mountain core.source="hand-core 1"
 @k.attributes.same.mount_fuji.thing k.attributes.same name="mount fuji" sense=thing only=false in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.mountain.thing k.attributes.same name=mountain sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.parts.called by_word=k.words.sense core.source="hand-core 1"
@@ -246,7 +247,7 @@
 @k.attributes.same.mozzarella.thing k.attributes.same name=mozzarella sense=thing only=true in=k.attributes.thing in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mud.thing k.attributes.same name=mud sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.muesli.food k.attributes.same name=muesli sense=food only=true in=k.attributes.drawn in=k.attributes.usage in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.muffin.food k.attributes.same name=muffin sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.muffin.food k.attributes.same name=muffin sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mule.animal k.attributes.same name=mule sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.mumbai.place k.attributes.same name=mumbai sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.munich.place k.attributes.same name=munich sense=place only=true in=k.geo.city by_word=k.words.sense core.source="hand-core 1"
@@ -254,8 +255,8 @@
 @k.attributes.same.murray.place k.attributes.same name=murray sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.muscle.body_part k.attributes.same name=muscle sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.museum.thing k.attributes.same name=museum sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.layouts.anchor in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.mushroom.food k.attributes.same name=mushroom sense=food only=false in=k.food.food by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.mushroom.plant k.attributes.same name=mushroom sense=plant only=false in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mushroom.food k.attributes.same name=mushroom sense=food only=false in=k.food.food unsure=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.mushroom.plant k.attributes.same name=mushroom sense=plant only=false in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing unsure=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.musical_keyboard.thing k.attributes.same name="musical keyboard" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.musical_note.thing k.attributes.same name="musical note" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"
 @k.attributes.same.musical_notes.thing k.attributes.same name="musical notes" sense=thing only=true in=k.attributes.drawn in=k.objects.object core.source="hand-core 1"

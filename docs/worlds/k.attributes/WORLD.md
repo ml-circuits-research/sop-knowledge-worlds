@@ -190,3 +190,18 @@ ones are published: of the proposed values, colour 3 of 22 were wrong (a wine "w
 sense kept was not the one people mean: a bumper as a full glass), abilities 7 of 31 (an event, not an ability: a meteor
 hits). The gloss covers little; the rest waits for data (questions.md Q80: Wikidata through WordNet ids, ConceptNet,
 Visual Genome).
+
+## Material, use and colour from Wikidata and Visual Genome (KR6, block 18:45; questions.md Q80)
+
+`tools/import/attributes-data.mjs`, for the common things that lacked the key, each value checked by hand
+(`sources/coverage/kr6-*-audit.tsv`); a shard publishes its unchecked values only when the checked error is under 5 %,
+and none of the three was:
+- shard `things-wikidata` (CC0): `material` from made from material (P186) of the item with the WordNet 3.1 id of the
+  sense kept (not for foods: their P186 values are ingredients, whose home is k.food made_of), named as the catalog
+  names materials (steel is metal, porcelain china); all 68 checked, 25 wrong (37 %: the item is another thing, a hand
+  fan for "fan", a tabernacle for "synagogue"; a trace, a part), 43 published. `used_for` from has use (P366): 100 of 395
+  checked, 27 wrong (27 %: weak "medicinal plant" claims, novelties, the thing itself), 73 published.
+- shard `things-visual-genome` (CC BY 4.0, "Visual Genome (Krishna et al., 2017)"): `colour`, the modal basic colour
+  of the sense's synset in Visual Genome's object attributes, when its colour words are said at least 20 times and it
+  holds at least half of them; all 133 checked, 26 wrong (20 %: things of many colours, wine red or white; the scene
+  around it, a mirror black; the sense, a traffic cone for "cone"), 107 published.

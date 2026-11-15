@@ -53,7 +53,7 @@
 @k.attributes.same.dice.thing k.attributes.same name=dice sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dictionary.thing k.attributes.same name=dictionary sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.diesel_locomotive.thing k.attributes.same name="diesel locomotive" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.dill.thing k.attributes.same name=dill sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.dill.thing k.attributes.same name=dill sense=thing only=true in=k.attributes.thing in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dinghy.thing k.attributes.same name=dinghy sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dingo.animal k.attributes.same name=dingo sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.dining_table.thing k.attributes.same name="dining table" sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"

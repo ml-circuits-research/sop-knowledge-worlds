@@ -1,4 +1,4 @@
-# k.attributes/shards/same-a: one name, one thing: for 114 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
+# k.attributes/shards/same-a: one name, one thing: for 115 names that start with "a" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (4 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -63,9 +63,9 @@
 @k.attributes.same.ant_eater.animal k.attributes.same name="ant eater" sense=animal only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.antarctica.place k.attributes.same name=antarctica sense=place only=true in=k.geo.continent by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.anteater.animal k.attributes.same name=anteater sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.antelope.animal k.attributes.same name=antelope sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.antelope.animal k.attributes.same name=antelope sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.antenna.thing k.attributes.same name=antenna sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.anvil.thing k.attributes.same name=anvil sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.anvil.thing k.attributes.same name=anvil sense=thing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.ape.thing k.attributes.same name=ape sense=thing only=true in=k.attributes.number by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.aphid.animal k.attributes.same name=aphid sense=animal only=true in=k.animals.animal in=k.attributes.thing in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.apple.food k.attributes.same name=apple sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
@@ -81,6 +81,7 @@
 @k.attributes.same.arc.shape k.attributes.same name=arc sense=shape only=true in=k.shapes.shape by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.arch_lever_file.thing k.attributes.same name="arch lever file" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.archery_target.thing k.attributes.same name="archery target" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.archive.thing k.attributes.same name=archive sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.argentina.place k.attributes.same name=argentina sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.arkansas.place k.attributes.same name=arkansas sense=place only=true in=k.geo.river by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.arm.body_part k.attributes.same name=arm sense="body part" only=true in=k.body.part by_word=k.words.sense core.source="hand-core 1"
@@ -97,7 +98,7 @@
 @k.attributes.same.artist_palette.thing k.attributes.same name="artist palette" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.ashtray.thing k.attributes.same name=ashtray sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.asia.place k.attributes.same name=asia sense=place only=true in=k.geo.continent by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.asparagus.food k.attributes.same name=asparagus sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.asparagus.food k.attributes.same name=asparagus sense=food only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.aspen.thing k.attributes.same name=aspen sense=thing only=true in=k.objects.stand_in by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.asteroid.body_in_space k.attributes.same name=asteroid sense="body in space" only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing in=k.space.kind by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.astronaut.person k.attributes.same name=astronaut sense=person only=true in=k.objects.stand_in in=k.people.role in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

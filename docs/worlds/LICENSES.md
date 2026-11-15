@@ -392,6 +392,20 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - Shard terms: public-domain
 - Used by: `k.diagrams` (1 shards), `k.time` (1 shards)
 
+## visual-genome-1.4
+
+- What: Visual Genome 1.4 object attributes, aggregated: for each object synset (NLTK WordNet 3.0 name, car.n.01), each attribute and its count over the dataset's 3.8 M objects (439,318 rows).
+- Origin: Visual Genome (Krishna et al., "Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations", IJCV 2017), `attributes.json` from the verbatim mirror https://huggingface.co/datasets/jn12/VisualGenome; aggregated for questions.md Q80 by PSys2's machine (psys2 `data/external/visual-genome-attributes/`, commit 30a5808a, with its own SOURCE.md).
+- License: CC-BY-4.0. Attribution: "Visual Genome (Krishna et al., 2017), CC BY 4.0".
+- Shard terms: CC-BY-4.0
+- Used by: `k.attributes` (1 shards)
+
+## wikidata-2026-11-15
+
+- License: CC0-1.0
+- Shard terms: CC0-1.0
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (2 shards)
+
 ## wikidata-given-names-2026-11-14
 
 - License: CC0-1.0

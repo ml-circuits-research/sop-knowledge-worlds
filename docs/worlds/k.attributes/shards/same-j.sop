@@ -1,4 +1,4 @@
-# k.attributes/shards/same-j: one name, one thing: for 52 names that start with "j" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
+# k.attributes/shards/same-j: one name, one thing: for 53 names that start with "j" and are carried by facts of more than one world, the sense of the name and the types whose facts are about that thing; a name with two senses has two facts (0 facts of such names here).
 # sources: hand-core 1 (computed from the shards of the catalog by tools/joins.mjs)
 # license: CC0-1.0
 # script: tools/joins.mjs
@@ -10,7 +10,8 @@
 @k.attributes.same.jacket_-_mans.clothing k.attributes.same name="jacket - mans" sense=clothing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jade.colour k.attributes.same name=jade sense=colour only=true in=k.colours.colour by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jaguar.animal k.attributes.same name=jaguar sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.attributes.number in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.jail.thing k.attributes.same name=jail sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.jail.thing k.attributes.same name=jail sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.jailhouse.thing k.attributes.same name=jailhouse sense=thing only=true in=k.attributes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jam.food k.attributes.same name=jam sense=food only=true in=k.attributes.drawn in=k.food.food in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.jam_tart.food k.attributes.same name="jam tart" sense=food only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.jamaica.place k.attributes.same name=jamaica sense=place only=true in=k.geo.country by_word=k.words.sense core.source="hand-core 1"

@@ -11,7 +11,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 
 - declared joins: **243** in 37 worlds; distinct values 10830, meeting a target 10771 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **48**; left undeclared on purpose: 5; keys with an enum, never suggested: 38
+- undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 5; keys with an enum, never suggested: 38
 
 ## Declared joins
 
@@ -281,8 +281,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3527 | 2346 |
-| k.attributes | `k.attributes.thing.material` | thing | `k.objects.object`, `k.scenes.thing` | name | 44 | 19 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3549 | 2346 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
@@ -316,7 +315,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.procedures | `k.procedures.goal.value` | thing | `k.genres.genre` | name | 9 | 5 |
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
-| k.scenes | `k.scenes.scene.ground` | thing | `k.scenes.thing` | name | 15 | 6 |
+| k.scenes | `k.scenes.scene.ground` | thing | `k.attributes.thing`, `k.scenes.thing` | name | 15 | 7 |
 | k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 23 | 19 |
 | k.shapes | `k.shapes.shape.is_a` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.shapes.shape` | name | 5 | 5 |
@@ -357,7 +356,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.faces | `k.faces.colour.of` | 4 | 4 | 2 | `k.body.part` |
 | k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape` |
 | k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
-| k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
+| k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` |
 | k.kinds | `k.kinds.parent.sense` | 12 | 7 | 4 | `k.attributes.kind` |
 | k.kinds | `k.kinds.sensitivity.sensitive` | 4 | 4 | 3 | `k.kinds.sensitivity` |
 | k.motion | `k.motion.layer.key` | 4 | 4 | 1 | `k.body.part` |

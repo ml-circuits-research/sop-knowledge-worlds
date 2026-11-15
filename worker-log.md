@@ -6672,3 +6672,24 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Left: the last full suite on main after fddd8ac (the one at f77c570 had 10 red files, 8 mine, fixed in fddd8ac); and
   the commit that made tests/w.lang.ro.words.test.mjs red (w.seating.table.colour) is not yet bisected.
 - Scratch: /tmp/w5 (analysis scripts), /tmp/w5-all (a worktree of main for full runs), logs /tmp/w5-all*.log.
+## 2026-11-15 — first worker: KR6 from the Q80 data, Wikidata and Visual Genome (block 18:45)
+
+- tools/import/attributes-data.mjs (raw copied from psys2 data/external, commit 30a5808a; SOURCE.md for both):
+  - **Wikidata** (CC0, shard things-wikidata, 89 wires): `material` from P186 of the item whose WordNet 3.1 id
+    (P8814) is the sense kept, not for foods (their P186 values are ingredients: home k.food made_of; WordNet
+    noun.food or a food of k.food), named as the catalog names materials; `used_for` from P366.
+  - **Visual Genome** (CC BY 4.0, shard things-visual-genome, 107 wires): `colour` = the modal basic colour of the
+    sense's synset (NLTK name from the WordNet 3.1 sense: first lemma, sense number) when its colour words are said at
+    least 20 times and it holds at least 50 % of them.
+  - Only where the catalog had no value for the key (ConceptNet's shard of the fifth worker counts as the catalog).
+- Hand checks (sources/coverage/kr6-wikidata-material-audit.tsv, kr6-wikidata-use-audit.tsv,
+  kr6-visual-genome-colour-audit.tsv, with why for each wrong value): material all 68, 25 wrong (37 %); use a seeded
+  100 of 395, 27 wrong (27 %); colour all 133, 26 wrong (20 %). All over 5 %, so only checked right values are
+  published: material 43, use 73, colour 107. Main causes: the item is another or a narrower thing (hand fan for
+  "fan", tabernacle for "synagogue", traffic cone for "cone"), things of many colours (wine, suit), weak or novelty
+  uses ("medicinal plant", potato as an electrical energy source).
+- questions at-07 ("which things are usually pink"): ham added (Visual Genome, checked right).
+- Tests: tests/k.attributes.data.test.mjs (2: shards = importer, skipped without the raw files; every published value
+  checked right, each source in its licence's shard); questions 448 pass; k.attributes*, k.kinds, coverage-report,
+  sync, catalog, validate, repo green except the three red on main before this commit (k.attributes.abilities,
+  k.attributes.uses, k.kinds licences: from f77c570).

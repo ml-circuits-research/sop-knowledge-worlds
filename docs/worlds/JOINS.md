@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3527
-- one thing everywhere: 3456
+- names carried by facts of more than one world: 3549
+- one thing everywhere: 3478
 - clashes of sense: 71
 
 | sense of the one thing | names |
@@ -32,7 +32,7 @@ and the meat).
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
-| thing | 1756 |
+| thing | 1778 |
 
 ## Clashes of sense
 
@@ -48,7 +48,7 @@ and the meat).
 | bug | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | cherry | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
 | chestnut | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
-| chicken | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
+| chicken | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.attributes.thing` |
 | chocolate | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | cod | **animal**: `k.animals.animal`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
 | cone | **shape**: `k.shapes.shape`; **thing**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing` |
@@ -67,7 +67,7 @@ and the meat).
 | hay | **food**: `k.attributes.drawn`, `k.attributes.usage`, `k.objects.object`, `k.scenes.thing`; **plant**: `k.attributes.thing` |
 | heart | **body part**: `k.body.part`; **shape**: `k.shapes.shape`; unsure: `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` |
 | herring | **animal**: `k.animals.animal`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
-| kiwi | **animal**: `k.animals.animal`, `k.commonsense.thing`; **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing` |
+| kiwi | **animal**: `k.animals.animal`, `k.commonsense.thing`; **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.thing` |
 | lavender | **plant**: `k.attributes.thing`; **colour**: `k.colours.colour` |
 | lemon | **food**: `k.attributes.drawn`, `k.attributes.number`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | lilac | **plant**: `k.attributes.number`, `k.attributes.thing`; **colour**: `k.colours.colour`; unsure: `k.objects.stand_in` |
@@ -76,7 +76,7 @@ and the meat).
 | mint | **food**: `k.food.food`; **colour**: `k.colours.colour` |
 | moose | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | mount fuji | **place**: `k.geo.mountain`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
-| mushroom | **food**: `k.food.food`; **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing` |
+| mushroom | **food**: `k.food.food`; **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.thing` |
 | mussel | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
 | mustard | **food**: `k.food.food`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | olive | **food**: `k.attributes.drawn`, `k.food.food`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
@@ -91,7 +91,7 @@ and the meat).
 | pyramid | **shape**: `k.shapes.shape`; **thing**: `k.attributes.drawn`, `k.layouts.anchor`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.thing` |
 | red | **colour**: `k.colours.colour`; **place**: `k.geo.river` |
 | ring | **clothing**: `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`, `k.wearables.wearable`; **shape**: `k.shapes.shape` |
-| rose | **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
+| rose | **plant**: `k.attributes.drawn`, `k.attributes.number`, `k.attributes.thing`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour`; unsure: `k.attributes.thing` |
 | salmon | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; **colour**: `k.colours.colour`; **place**: `k.geo.river`; unsure: `k.objects.object` |
 | sardine | **animal**: `k.animals.animal`, `k.attributes.number`, `k.commonsense.thing`, `k.scenes.thing`; **food**: `k.food.food`; unsure: `k.objects.stand_in` |
 | shrimp | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
@@ -116,7 +116,7 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 
 | worlds | names |
 |---|---:|
-| `k.attributes` and `k.objects` | 2340 |
+| `k.attributes` and `k.objects` | 2349 |
 | `k.objects` and `k.scenes` | 2196 |
 | `k.attributes` and `k.scenes` | 2154 |
 | `k.commonsense` and `k.scenes` | 318 |
@@ -129,7 +129,7 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
 | `k.animals` and `k.objects` | 164 |
-| `k.attributes` and `k.food` | 144 |
+| `k.attributes` and `k.food` | 147 |
 | `k.food` and `k.objects` | 143 |
 | `k.food` and `k.scenes` | 131 |
 | `k.attributes` and `k.wearables` | 87 |
