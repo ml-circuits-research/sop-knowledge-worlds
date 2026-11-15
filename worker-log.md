@@ -6231,7 +6231,7 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   - tests/generators.test.mjs (core-plurals is stale: the generator now gives 186 plurals, `ax/axes` added):
     **77f1294** (fourth worker, catalog plurals) changed tools/lib/lang-en.mjs so the rules no longer read axes -> ax,
     and pushed without the build (lang-en-core is in it since db16219), so core-plurals was not rewritten. Fix: run
-    `node tools/lang-en-core.mjs` (or `npm run build`) and commit the shard. Questions.md Q80.
+    `node tools/lang-en-core.mjs` (or `npm run build`) and commit the shard. Questions.md Q81 (first written Q80, which the first worker had taken).
   - Over 30 s: tests/catalog.test.mjs 118 s (a fresh worktree: no .validate-cache.json, every world validated, as on a
     fresh clone; 12 s with the cache) and tests/questions.test.mjs 44 s (before the change below).
 - **questions.test.mjs:** a world whose own shards pass 5 MB (k.objects 36 MB with 271,000 points, k.words 9.4 MB) is
@@ -6253,3 +6253,27 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   validate (1,181 files, 0 errors), repo: pass.
 - Romanian words for the kinds of the 10 published world schemas (shards w.lang.ro/words-w.*), 17 new dictionary
   lemmas (287); build-catalog reads only w.lang.en's words shards into vocab.json (unchanged). tests/w.lang.ro.words.
+
+## 2026-11-15 — fifth worker: KR6 abilities (`can`) from WordNet's hypernyms and the k.actions agents
+
+- tools/attributes-abilities.mjs (not in the build: a new proposal must be checked by hand first; its test names any
+  unchecked one) writes shard k.attributes/things-abilities (WordNet-3.0): for the catalog things with no ability,
+  (1) the actions of k.actions whose `who` names the thing (a baby cries, a stone sinks; not person or animal), and
+  (2) the abilities the catalog gives a kind (k.attributes, k.animals, k.actions agents) carried down WordNet's
+  hypernym chain to the things under it, from the nearest kind that says anything, only where the kind's word means
+  the same WordNet sense (its chain is the same: the lamp "bulb" gives nothing to an onion), never from a wide kind
+  (entity, artifact, animal, person, plant, food ...); a k.food name whose first sense is no food (plum: the tree) and a
+  name with senses in two domains (queen, needle) are skipped.
+- **Hand check of every proposal** (sources/coverage/abilities-audit.tsv, more than the 50 asked): 137 values for 58
+  things, **16 wrong (11.7 %)**: louse fly / fly away (wingless), gear roll, the catalog's mortar and queen (other
+  senses than WordNet's first: the grinding bowl, a person or chess piece; 4), rooster hatch / drop / make / build /
+  sing (bird abilities that a rooster has not; 5), shipwreck sail / leave / float / move (4). Written: 121 values for
+  56 things (laptop, computer, engine, motor: work; freighter, tanker, destroyer, battleship: sail, float, sink ...;
+  poodle: the dog's 21; stag: run, jump, swim; baby: cry, crawl; sky: rain, snow ...).
+- **Coverage of the 1,500 common things** (COVERAGE.md, rebuilt with the raw files): "what it can do" by its name 300
+  -> 340 (20 -> 23 %), none 1,136 -> 1,090 (76 -> 73 %). What is still missing is mostly things that do nothing by
+  themselves (world, bed, road, picture, building, bag, box, key, wall): "can" does not apply to them, so the 73 % is
+  not a gap to fill; a usual use (`used_for`) is their attribute.
+- Test (tests/k.attributes.abilities.test.mjs, new, 2): the shard is fresh; at most 20 % of proposals wrong; no value
+  checked wrong is written; laptop works, freighter sails, baby cries, a louse only crawls, plum / onion / queen /
+  mortar / person get nothing, a shipwreck only sinks.

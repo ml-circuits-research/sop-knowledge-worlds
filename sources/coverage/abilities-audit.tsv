@@ -1,0 +1,139 @@
+# KR6 abilities: every value tools/attributes-abilities.mjs proposes, checked by hand (fifth worker, 2026-11-15).
+# thing<tab>verb<tab>verdict (right / wrong)<tab>why, for a wrong one. A wrong value is not published.
+aphid	fly	right
+aphid	fly away	right
+aphid	crawl	right
+apple	fall	right
+baby	cry	right
+baby	crawl	right
+battleship	sail	right
+battleship	sink	right
+battleship	leave	right
+battleship	float	right
+battleship	move	right
+branch	wave	right
+card	burn	right
+castle	stand	right
+chainsaw	work	right
+chick	hatch	right
+child	play	right
+child	grow	right
+child	hop	right
+computer	work	right
+convent	stand	right
+cottage	stand	right
+cow	chew	right
+cruiser	turn	right
+cruiser	stop	right
+cruiser	go	right
+cruiser	move	right
+destroyer	sail	right
+destroyer	sink	right
+destroyer	leave	right
+destroyer	float	right
+destroyer	move	right
+engine	work	right
+farmhouse	stand	right
+freezer	freeze	right
+freighter	sail	right
+freighter	sink	right
+freighter	leave	right
+freighter	float	right
+freighter	move	right
+gear	roll	wrong	a gear turns on its axle; it does not roll along
+gear	turn	right
+gear	spin	right
+guide	lead	right
+house	stand	right
+jukebox	work	right
+kitten	play	right
+knight	fight	right
+laptop	work	right
+leaf	wilt	right
+leaf	fall	right
+leaf	float	right
+louse	fly	wrong	lice are wingless
+louse	fly away	wrong	lice are wingless
+louse	crawl	right
+mainframe	work	right
+manor	stand	right
+mantis	fly	right
+mantis	fly away	right
+mantis	crawl	right
+monastery	stand	right
+mortar	shoot	wrong	the catalog's mortar is the bowl for grinding (sources/hand-core/sensitive-not.tsv); WordNet's first sense is the cannon
+motor	work	right
+mud	dirty	right
+palace	stand	right
+pants	cover	right
+poodle	bite	right
+poodle	chew	right
+poodle	sit	right
+poodle	yawn	right
+poodle	sneeze	right
+poodle	help	right
+poodle	wait	right
+poodle	fight	right
+poodle	catch	right
+poodle	shake	right
+poodle	dig	right
+poodle	tear	right
+poodle	dirty	right
+poodle	smell	right
+poodle	find	right
+poodle	search	right
+poodle	bark	right
+poodle	follow	right
+poodle	chase	right
+poodle	run	right
+poodle	swim	right
+praying mantis	fly	right
+praying mantis	fly away	right
+praying mantis	crawl	right
+puddle	shrink	right
+queen	fly	wrong	the catalog's queen is a person or a chess piece; WordNet's first sense is the queen insect
+queen	fly away	wrong	the catalog's queen is a person or a chess piece
+queen	crawl	wrong	the catalog's queen is a person or a chess piece
+rooster	sit	right
+rooster	feed	right
+rooster	hatch	wrong	a rooster does not hatch eggs; the hen does
+rooster	drop	wrong	inherited from an action of birds that drop things; not an ability of a rooster
+rooster	make	wrong	a bird makes a nest; not a rooster in particular
+rooster	build	wrong	a bird builds a nest; not a rooster
+rooster	sing	wrong	a rooster crows; it does not sing
+rooster	fly	right
+rooster	fly away	right
+rooster	hop	right
+scalpel	cut	right
+shipwreck	sail	wrong	a wreck no longer sails
+shipwreck	sink	right
+shipwreck	leave	wrong	a wreck no longer leaves port
+shipwreck	float	wrong	a wreck lies sunk
+shipwreck	move	wrong	a wreck does not move
+sky	rain	right
+sky	snow	right
+smoke	rise	right
+softball	break	right
+softball	roll	right
+softball	bounce	right
+stag	run	right
+stag	jump	right
+stag	swim	right
+stapler	work	right
+stone	roll	right
+stone	sink	right
+sweater	shrink	right
+sweatshirt	shrink	right
+tanker	sail	right
+tanker	sink	right
+tanker	leave	right
+tanker	float	right
+tanker	move	right
+teacher	teach	right
+termite	fly	right
+termite	fly away	right
+termite	crawl	right
+typewriter	work	right
+weevil	fly	right
+weevil	fly away	right
+weevil	crawl	right
