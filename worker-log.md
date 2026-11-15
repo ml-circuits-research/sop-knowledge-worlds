@@ -6636,3 +6636,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   zone, timezone. The answers of Q92-w4 written into WORLD.md (recurrence expansion is the library's; "first
   Monday" waits for a real row; holidays later as data). The value list of k.time.zone is not copied (no enum).
 - Tests: w.schemas (the calendar session sets Europe/Bucharest), k.kinds relations, joins report, catalog, validate.
+
+## 2026-11-15 — second worker: stopped (owner); strict joins left half-done
+
+- Done and on main: objects-hand data into hand-written shards; the pin at 0.144.0 (no test changes; no [LIB] case fixed yet).
+- Left: `strict=true` on the joined colour and direction slots (k.drawing, k.values, k.attributes, w.seating; imports of k.colours / k.values added; tools/validate.mjs loads the strict targets' shards first): validates (exit 0) but untested, not committed; the diff is in /tmp/w2-strict-joins.diff (scratch scripts in /tmp/w2scripts).
+- Not possible as asked: k.colours.colour.family (its target k.colours.basic is derived into the same world's last shard) and k.drawing.part.shape (k.shapes imports k.kinds: 2.6 MB more on every k.objects load); both keep their enum.
