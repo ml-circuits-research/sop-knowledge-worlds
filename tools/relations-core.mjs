@@ -43,6 +43,7 @@ export const ARGUMENTS = [
   { name: 'name', about: 'a name a person gives, as said', examples: ['Ann', 'lunch'] },
   { name: 'person', about: 'a person: a kind or a role of person, or a person of the live world', live: true, type: ['k.people.kind', 'k.people.role'], sense: ['person'], examples: ['the girl', 'a doctor'] },
   { name: 'group', about: 'a group: a named arrangement, or a group of the live world', live: true, type: ['k.layouts.layout'], examples: ['a row', 'a circle'] },
+  { name: 'arrangement', about: 'how things are laid out: a named arrangement, or the outline of a shape they are laid out in (block 09:50 item F)', type: ['k.layouts.layout', 'k.layouts.outline'], examples: ['in the shape of a house', 'in a circle'] },
   { name: 'topic', about: 'what is asked about: a thing, a kind, an attribute or an act', live: true, type: ['k.objects.object', 'k.kinds.kind', 'k.words.sense', 'k.attributes.attribute', 'k.actions.act'], examples: ['the weather', 'colours'] },
   { name: 'means', about: 'how a thing is sent or done: a channel or a tool', type: ['k.objects.object'], examples: ['by email', 'with a rope'] },
   { name: 'act', about: 'an action that a thing does or undergoes: an everyday action of k.actions, or an act', type: ['k.actions.action', 'k.actions.act'], examples: ['fly', 'swim'] },

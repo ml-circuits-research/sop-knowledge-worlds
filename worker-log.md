@@ -6047,3 +6047,14 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   the joins report and the catalog follow.
 - Tests: k.space, questions (all 473 of the run), narration, phrasing, catalog, counts, validate (1,176 files, 0
   errors): pass.
+
+
+## 2026-11-15 — first worker: the argument class `arrangement` (main was red after baacdad)
+
+- baacdad added the role `arrangement` (holds arrangement) to make, place and group in k.actions without an argument
+  class in k.kinds: tests/k.kinds.relations.test.mjs was red on main. Added the class `arrangement` to
+  tools/relations-core.mjs (`ARGUMENTS`: how things are laid out, a named arrangement or the outline of a shape; types
+  k.layouts.layout and k.layouts.outline); k.kinds/shards/arguments regenerated. k.kinds.relations, the k.actions and
+  k.layouts tests, catalog, validate, repo: 10 files, 52 pass, 1 skipped.
+- Lesson: a new role (or `holds` value) on k.actions touches k.kinds' argument classes, so k.kinds.relations is one of
+  the touched tests of such a commit; I had not run it.

@@ -1,4 +1,4 @@
-# k.kinds/shards/arguments: the 18 classes of arguments of the roles of k.actions and of the objects of the relations: the catalog types whose things fill each, and their senses.
+# k.kinds/shards/arguments: the 19 classes of arguments of the roles of k.actions and of the objects of the relations: the catalog types whose things fill each, and their senses.
 # sources: hand-core 1 (hand-written in this repository: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -14,6 +14,7 @@
 @k.kinds.argument.name k.kinds.argument name=name about="a name a person gives, as said" example="Ann" example="lunch" core.source="hand-core 1"
 @k.kinds.argument.person k.kinds.argument name=person about="a person: a kind or a role of person, or a person of the live world" live=true type=k.people.kind type=k.people.role sense=person example="the girl" example="a doctor" core.source="hand-core 1"
 @k.kinds.argument.group k.kinds.argument name=group about="a group: a named arrangement, or a group of the live world" live=true type=k.layouts.layout example="a row" example="a circle" core.source="hand-core 1"
+@k.kinds.argument.arrangement k.kinds.argument name=arrangement about="how things are laid out: a named arrangement, or the outline of a shape they are laid out in (block 09:50 item F)" type=k.layouts.layout type=k.layouts.outline example="in the shape of a house" example="in a circle" core.source="hand-core 1"
 @k.kinds.argument.topic k.kinds.argument name=topic about="what is asked about: a thing, a kind, an attribute or an act" live=true type=k.objects.object type=k.kinds.kind type=k.words.sense type=k.attributes.attribute type=k.actions.act example="the weather" example="colours" core.source="hand-core 1"
 @k.kinds.argument.means k.kinds.argument name=means about="how a thing is sent or done: a channel or a tool" type=k.objects.object example="by email" example="with a rope" core.source="hand-core 1"
 @k.kinds.argument.act k.kinds.argument name=act about="an action that a thing does or undergoes: an everyday action of k.actions, or an act" type=k.actions.action type=k.actions.act example="fly" example="swim" core.source="hand-core 1"
