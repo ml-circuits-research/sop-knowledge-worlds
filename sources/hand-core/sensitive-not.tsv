@@ -1,0 +1,15 @@
+# Words whose first noun sense in WordNet falls in a category of tools/sensitive-core.mjs, but whose everyday sense,
+# the one a drawing or a scene of this catalog means, does not (WordNet orders senses by their frequency in a corpus of
+# news and fiction, SemCor). Written by hand (hand-core 1); each with the everyday sense that wins. The test
+# tests/k.kinds.sensitive.test.mjs keeps the list short: every row must be a word the rule would otherwise mark.
+# word	everyday sense
+battery	an electric cell (WordNet's first sense: a group of guns)
+canister	a metal container (first sense: canister shot)
+hardware	metal goods, tools, computer parts (first sense: military weaponry)
+hatchet	a small axe for chopping wood (first sense: a tomahawk)
+knuckles	the joints of the fingers (first sense: knuckle-duster)
+round	a round of a game, a ring, a shape (first sense: a charge of ammunition)
+sedative	a medicine (first sense: a drug, also of abuse)
+shell	a seashell, an egg shell (first sense: an artillery shell)
+slug	a garden animal (first sense: a bullet)
+mortar	a mortar for grinding, the mortar between bricks (first sense: a short cannon)

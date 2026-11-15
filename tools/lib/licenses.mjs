@@ -11,8 +11,8 @@ export const ALLOWED = [
   ['CC0-1.0', /^CC0-1\.0$/], ['public domain', /^public-domain$/], ['MIT', /^MIT$/], ['BSD', /^BSD-[0-9]-Clause(-[A-Za-z]+)?$/],
   ['Apache', /^Apache-2\.0$/], ['MPL', /^MPL-2\.0$/], ['the WordNet licence', /^WordNet-3\.0$/],
   ['CC BY', /^CC-BY-[1-4]\.0$/], ['ODbL', /^ODbL-1\.0$/], ['CC BY-SA', /^CC-BY-SA-[1-4]\.0$/], ['CDLA', /^CDLA-(Permissive|Sharing)-[12]\.0$/],
-  // Q74: the Unicode licence (CLDR, Noto emoji) is permissive like MIT but not in the reviewer's list; allowed meanwhile
-  ['Unicode (Q74)', /^Unicode-3\.0$/],
+  // the Unicode licence (CLDR, Noto emoji), permissive like MIT (reviewer's answer to Q74)
+  ['Unicode', /^Unicode-3\.0$/],
 ];
 export const SHARE_ALIKE = /^(CC-BY-SA-|ODbL-|CDLA-Sharing-)/;
 export const ids = (expr) => String(expr ?? '').split(/\s+AND\s+/).map((x) => x.replace(/[()]/g, '').trim()).filter(Boolean);

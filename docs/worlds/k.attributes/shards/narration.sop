@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1081 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (275 of 1084 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -496,6 +496,9 @@
 @k.attributes.narration.k.kinds.kind.is_a k.attributes.narration type=k.kinds.kind key=is_a narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.kind.kind_of k.attributes.narration type=k.kinds.kind key=kind_of narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.kind.derived k.attributes.narration type=k.kinds.kind key=derived narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
+@k.attributes.narration.k.kinds.sensitivity.name k.attributes.narration type=k.kinds.sensitivity key=name narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
+@k.attributes.narration.k.kinds.sensitivity.sensitive k.attributes.narration type=k.kinds.sensitivity key=sensitive narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
+@k.attributes.narration.k.kinds.sensitivity.sense k.attributes.narration type=k.kinds.sensitivity key=sense narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.parent.name k.attributes.narration type=k.kinds.parent key=name narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.parent.is_a k.attributes.narration type=k.kinds.parent key=is_a narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"
 @k.attributes.narration.k.kinds.parent.dimension k.attributes.narration type=k.kinds.parent key=dimension narrate=no salience=0 why="machinery: the up edges of the catalog, generated" core.source="hand-core 1"

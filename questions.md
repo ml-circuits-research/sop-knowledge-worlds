@@ -1063,3 +1063,13 @@ enough?
 Context: tools/lib/licenses.mjs, tools/validate.mjs. A share-alike licence joined by AND with another in one file is
 refused; so is any NC, ND, research-only or unknown licence, and any licence outside the list.
 Blocking: no. Meanwhile: Unicode-3.0 allowed (marked "Q74" in the list); SA SOP shards stay in `shards/`, one licence per file.
+
+## Q76 [PSYS2] (block 13:15, PSys2 Q20, fifth worker, 2026-11-15): the sensitivity key and how to exclude by default
+Question: none to answer; a note for hosts. The facts are `k.kinds.sensitivity name=<lemma> sensitive=<value>
+sense=<k.words sense id>` (shard `k.kinds/shards/sensitive`, 86 words), values `weapon`, `drug`, `alcohol`, `tobacco`
+(GARM Brand Safety Floor categories). To exclude by default: before a suggestion chip or a random choice, look up the
+thing's name (and, for a multi-word name, only the whole name) in `k.kinds.sensitivity`; drop it unless the user named
+it in the turn or asked for that category. Gun, rifle, sword, bomb, beer, cigarette are marked; knife, axe, hammer, bow,
+shield, tank, water pistol are not.
+Context: a type of its own (not a key of k.kinds.kind), so it does not merge into the things of other worlds.
+Blocking: no.

@@ -11,7 +11,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 
 - declared joins: **202** in 31 worlds; distinct values 10075, meeting a target 10017 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **49**; left undeclared on purpose: 4; keys with an enum, never suggested: 64
+- undeclared keys whose values the value share joins to a type: **49**; left undeclared on purpose: 4; keys with an enum, never suggested: 65
 
 ## Declared joins
 
@@ -331,6 +331,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
 | k.kinds | `k.kinds.parent.sense` | 12 | 7 | 4 | `k.attributes.kind` |
+| k.kinds | `k.kinds.sensitivity.sensitive` | 4 | 4 | 3 | `k.kinds.sensitivity` |
 | k.motion | `k.motion.layer.key` | 4 | 4 | 1 | `k.body.part` |
 | k.motion | `k.motion.set.key` | 4 | 4 | 1 | `k.body.part` |
 | k.motion | `k.motion.step.key` | 4 | 1 | 1 | `k.body.part` |

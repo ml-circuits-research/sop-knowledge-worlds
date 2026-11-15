@@ -5726,3 +5726,24 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - (a) `sensitive=` on k.kinds from WordNet with a generator and a freshness test; (b) KR5 (k.objects loaded once for
   the four test files, one drawing-name check, freshness tests for objects-hand / lang-en-core / lang-en-discourse,
   generated counts in README and WORLD.md); (c) `npm run test:all` on main, with every file not run or over 30 s.
+
+## 2026-11-15 — fifth worker: the sensitivity key (block 13:15, PSys2 Q20; real: "Add a weapon.")
+
+- `k.kinds.sensitivity` (k.kinds version 6): `name`, `sensitive` (weapon, drug, alcohol, tobacco: the GARM Brand Safety
+  Floor's "Arms & Ammunition" and "Illegal Drugs / Tobacco / e-cigarettes / Vaping / Alcohol"), `sense` (the k.words
+  sense read). A type of its own: as a key of k.kinds.kind it merged into k.commonsense's beer and wine and moved their
+  derived facts into a WordNet-licensed shard.
+- tools/sensitive-core.mjs (in `npm run build`) reads the WordNet chains already in k.words (no raw file): shard
+  `sensitive`, 86 words (weapon 45, alcohol 34, drug 4, tobacco 3), WordNet-3.0. Rule: the first noun sense only (a
+  knife is first an edge tool, an axe and a hatchet tools); narrow roots (weapon, weaponry, armament, weapon system,
+  explosive device, ammunition, explosive, firearm; drug of abuse, hard / soft drug, narcotic), never instrument or
+  device (a tank, a shield, a slingshot stay out); alcohol only with beverage in the chain, tobacco not as a plant; is_a
+  followed where kind_of is missing; 10 words whose everyday sense differs from WordNet's first (battery, canister,
+  hardware, hatchet, knuckles, round, sedative, shell, slug, mortar) in sources/hand-core/sensitive-not.tsv, each with
+  that sense. In the catalog: 26 names marked (gun, rifle, pistol, sword, dagger, bomb, cannon, beer, wine, cigarette ...);
+  "water pistol" is not (a multi-word name counts only as itself).
+- Unicode-3.0 is on the licence allowlist without the "pending" mark (reviewer's answer to Q74).
+- Q76 [PSYS2]: the key and how to exclude by default.
+- Test (tests/k.kinds.sensitive.test.mjs, new, 3 tests, 1.7 s): the shard is fresh; weapons, drugs, drinks and tobacco
+  are marked and knife, axe, hammer, saw, scissors, fork, bow, arrow, shield, tank, slingshot, water pistol, battery,
+  shell, glycerol ... are not; every row of sensitive-not.tsv is a word the rule would otherwise mark.
