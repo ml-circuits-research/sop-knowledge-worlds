@@ -5789,3 +5789,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   `k.actions.action holds= money=` and the action's `core.word` forms.
 - main was red on `tests/coverage-report.test.mjs` again (COVERAGE.md and ASPECTS.md stale after the KR1 material /
   size commits); `npm run reports` regenerated them, carried in this commit.
+
+## 2026-11-15 — third worker: K7 clock and calendar words (block 09:20)
+
+- Real row r0586 "I should tell you, today is Friday": now change/set, thing today, attribute weekday, value friday.
+- k.time (version 6): type `k.time.clock_phrase` (name, minutes) and shard clock-words: 14 clock phrases (o'clock,
+  five past ... half past ... quarter to, five to), 7 spans in clock words as durations in minutes (half an hour,
+  a quarter of an hour, an hour and a half ...), 12 noon / 12 midnight; minutes measured in minute (measures-core).
+- w.lang.en shard time-frames (tools/lang-en-time-frames.mjs, in npm run build): 9 statements (today, date day-month and
+  month-day, month, season, clock, clock phrase, o'clock, named hour) and 4 questions (day, date, time, month); 6
+  derived lexicons; 114 wires, 24,794 bytes.
+- tests/w.lang.en.time-frames.test.mjs: 15 requests read back (r0586 among them), "it is red" is no time, the values
+  are k.time facts, quarter to = -15, half an hour = 30 minutes.

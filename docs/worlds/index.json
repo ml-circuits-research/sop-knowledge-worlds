@@ -1,5 +1,5 @@
 {
- "version": "3137673bcb4a",
+ "version": "c668a94843e3",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -4512,8 +4512,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1086,
-     "bytes": 209329,
+     "wires": 1088,
+     "bytes": 209733,
      "keys": [
       "a",
       "about",
@@ -4846,6 +4846,7 @@
       "k.story.obstacle",
       "k.story.source",
       "k.time.before",
+      "k.time.clock_phrase",
       "k.time.cycle",
       "k.time.duration",
       "k.time.during",
@@ -4917,6 +4918,7 @@
       "min",
       "minor",
       "minor_plural",
+      "minutes",
       "mirror",
       "mode",
       "money",
@@ -30503,8 +30505,8 @@
     {
      "id": "k.kinds/shards/relations-time",
      "path": "k.kinds/shards/relations-time.sop",
-     "wires": 60,
-     "bytes": 11516,
+     "wires": 61,
+     "bytes": 11692,
      "keys": [
       "about",
       "am_pm",
@@ -30520,6 +30522,7 @@
       "hour12",
       "is",
       "k.time.before",
+      "k.time.clock_phrase",
       "k.time.cycle",
       "k.time.duration",
       "k.time.during",
@@ -30537,6 +30540,7 @@
       "later",
       "leap_days",
       "length",
+      "minutes",
       "n",
       "name",
       "next",
@@ -57021,10 +57025,11 @@
   },
   {
    "id": "k.time",
-   "version": "5",
+   "version": "6",
    "schema": "k.time/schema.sop",
    "exports": [
     "k.time.before",
+    "k.time.clock_phrase",
     "k.time.cycle",
     "k.time.duration",
     "k.time.during",
@@ -57086,6 +57091,41 @@
       "weekend",
       "winter",
       "year"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.time/shards/clock-words",
+     "path": "k.time/shards/clock-words.sop",
+     "wires": 23,
+     "bytes": 3170,
+     "keys": [
+      "a quarter of an hour",
+      "a quarter past",
+      "a quarter to",
+      "an hour and a half",
+      "five past",
+      "five to",
+      "half an hour",
+      "half hour",
+      "half past",
+      "hour and a half",
+      "minute",
+      "o'clock",
+      "quarter hour",
+      "quarter of an hour",
+      "quarter past",
+      "quarter to",
+      "ten past",
+      "ten to",
+      "twenty past",
+      "twenty to",
+      "twenty-five past",
+      "twenty-five to"
      ],
      "sources": [
       "hand-core-1"
@@ -57656,8 +57696,8 @@
     {
      "id": "k.units/shards/measures",
      "path": "k.units/shards/measures.sop",
-     "wires": 253,
-     "bytes": 35853,
+     "wires": 254,
+     "bytes": 35995,
      "keys": [
       "after",
       "age_years_about",
@@ -57687,6 +57727,7 @@
       "choose_min",
       "city",
       "class",
+      "clock_phrase",
       "condition",
       "continent",
       "coord.param",
@@ -57793,6 +57834,7 @@
       "method",
       "min",
       "min_length",
+      "minutes",
       "month",
       "moons",
       "moons_about",
@@ -88568,10 +88610,22 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/time-frames",
+     "path": "w.lang.en/shards/time-frames.sop",
+     "wires": 114,
+     "bytes": 24794,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 53,
-     "bytes": 33879,
+     "bytes": 34207,
      "keys": [],
      "sources": [
       "hand-core-1"

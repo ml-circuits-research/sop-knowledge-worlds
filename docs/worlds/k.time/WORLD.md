@@ -75,3 +75,11 @@ starts spring in the south, what part of the day 3 pm is, how many hours a week 
 Shards named `psys2*`, written by `tools/import/psys2.mjs` (source `psys2-worlds <commit>`; the facts of one thing
 merge with the others). `psys2`: a weekend has two days.
 What was taken, what was left and where the two disagree: [FROM-PSYS2.md](../FROM-PSYS2.md).
+
+## Clock words (block 09:20 K7)
+
+Shard `clock-words` (hand-written, CC0): how the clock names a time by an hour, `k.time.clock_phrase name minutes`
+(o'clock 0, five past 5, quarter past 15, half past 30, twenty to -20, quarter to -15 ...: "quarter to 4" is 3:45, the
+minutes added to the hour named); the spans said in clock words as `k.time.duration` in minutes (half an hour 30, a
+quarter of an hour 15, an hour and a half 90); two more names of noon and midnight (12 noon, 12 midnight; midday and
+twelve noon were there). w.lang.en's time frames (shard time-frames) take their words from here.

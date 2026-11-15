@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (277 of 1086 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (278 of 1088 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -971,6 +971,8 @@
 @k.attributes.narration.k.time.hour.hour12 k.attributes.narration type=k.time.hour key=hour12 narrate=yes salience=0.6 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.hour.am_pm k.attributes.narration type=k.time.hour key=am_pm narrate=yes salience=0.6 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.hour.part k.attributes.narration type=k.time.hour key=part narrate=yes salience=0.8 form=relation basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.clock_phrase.name k.attributes.narration type=k.time.clock_phrase key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
+@k.attributes.narration.k.time.clock_phrase.minutes k.attributes.narration type=k.time.clock_phrase key=minutes narrate=yes salience=0.3 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.during.time k.attributes.narration type=k.time.during key=time narrate=no salience=0 why="machinery: spans for the time solver, derived" core.source="hand-core 1"
 @k.attributes.narration.k.time.during.span k.attributes.narration type=k.time.during key=span narrate=no salience=0 why="machinery: spans for the time solver, derived" core.source="hand-core 1"
 @k.attributes.narration.k.time.during.hemisphere k.attributes.narration type=k.time.during key=hemisphere narrate=no salience=0 why="machinery: spans for the time solver, derived" core.source="hand-core 1"
@@ -981,8 +983,8 @@
 @k.attributes.narration.k.time.span.starts_about k.attributes.narration type=k.time.span key=starts_about narrate=yes salience=0.12 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.span.ends_about k.attributes.narration type=k.time.span key=ends_about narrate=yes salience=0.12 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.duration.name k.attributes.narration type=k.time.duration key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
-@k.attributes.narration.k.time.duration.count k.attributes.narration type=k.time.duration key=count narrate=yes salience=0.94 form=measure basis=measured core.source="hand-core 1"
-@k.attributes.narration.k.time.duration.count_about k.attributes.narration type=k.time.duration key=count_about narrate=yes salience=0.55 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.duration.count k.attributes.narration type=k.time.duration key=count narrate=yes salience=0.95 form=measure basis=measured core.source="hand-core 1"
+@k.attributes.narration.k.time.duration.count_about k.attributes.narration type=k.time.duration key=count_about narrate=yes salience=0.54 form=measure basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.time.duration.unit k.attributes.narration type=k.time.duration key=unit narrate=yes salience=0.79 form=relation basis=measured core.source="hand-core 1"
 @k.attributes.narration.k.units.quantity.name k.attributes.narration type=k.units.quantity key=name narrate=no salience=0 why="the name of the thing: the subject, not an attribute" core.source="hand-core 1"
 @k.attributes.narration.k.units.quantity.base k.attributes.narration type=k.units.quantity key=base narrate=yes salience=0.5 form=relation basis=measured core.source="hand-core 1"

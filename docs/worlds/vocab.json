@@ -51,6 +51,12 @@
  "12 am": [
   "k.time/shards/clock"
  ],
+ "12 midnight": [
+  "k.time/shards/clock-words"
+ ],
+ "12 noon": [
+  "k.time/shards/clock-words"
+ ],
  "12 pm": [
   "k.time/shards/clock"
  ],
@@ -619,6 +625,15 @@
  ],
  "a quarter": [
   "k.values/shards/numbers"
+ ],
+ "a quarter of an hour": [
+  "k.time/shards/clock-words"
+ ],
+ "a quarter past": [
+  "k.time/shards/clock-words"
+ ],
+ "a quarter to": [
+  "k.time/shards/clock-words"
  ],
  "a report as a list": [
   "k.procedures/shards/tasks"
@@ -5085,6 +5100,9 @@
  ],
  "an extra": [
   "k.values/shards/sets"
+ ],
+ "an hour and a half": [
+  "k.time/shards/clock-words"
  ],
  "an nafud": [
   "k.geo/shards/asia"
@@ -28792,6 +28810,9 @@
   "k.kinds/shards/group-mulberry",
   "k.objects/shards/mulberry-electrical-general-01",
   "k.scenes/shards/things-c"
+ ],
+ "clock_phrase": [
+  "k.units/shards/measures"
  ],
  "clocks": [
   "k.words/shards/cl",
@@ -52741,6 +52762,12 @@
   "w.lang.en/shards/determiners",
   "w.lang.en/shards/numbers"
  ],
+ "five past": [
+  "k.time/shards/clock-words"
+ ],
+ "five to": [
+  "k.time/shards/clock-words"
+ ],
  "five-pointed star": [
   "k.shapes/shards/shapes"
  ],
@@ -63749,12 +63776,18 @@
  "half a dozen": [
   "k.values/shards/numbers"
  ],
+ "half an hour": [
+  "k.time/shards/clock-words"
+ ],
  "half ball": [
   "k.shapes/shards/shapes"
  ],
  "half circle": [
   "k.shapes/shards/shapes",
   "k.values/shards/shapes"
+ ],
+ "half hour": [
+  "k.time/shards/clock-words"
  ],
  "half moon": [
   "k.shapes/shards/shapes"
@@ -63771,6 +63804,10 @@
   "k.kinds/shards/head",
   "k.objects/shards/openmoji-food-drink-01",
   "k.scenes/shards/things-h"
+ ],
+ "half past": [
+  "k.time/schema.sop",
+  "k.time/shards/clock-words"
  ],
  "half sole": [
   "k.kinds/shards/part_of-wordnet-2"
@@ -68396,6 +68433,9 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-h",
   "k.words/shards/ho"
+ ],
+ "hour and a half": [
+  "k.time/shards/clock-words"
  ],
  "hour12": [
   "k.attributes/shards/aspects",
@@ -75247,6 +75287,10 @@
  ],
  "k.time.before": [
   "k.attributes/shards/aspects",
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-time"
+ ],
+ "k.time.clock_phrase": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-time"
  ],
@@ -90372,6 +90416,7 @@
  "minute": [
   "k.attributes/shards/same-m",
   "k.time/shards/calendar",
+  "k.time/shards/clock-words",
   "k.units/shards/core",
   "k.values/shards/scales",
   "k.words/shards/frequency-m",
@@ -90381,8 +90426,12 @@
   "k.objects/shards/noto-time-01"
  ],
  "minutes": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-time",
+  "k.time/schema.sop",
   "k.time/shards/calendar",
   "k.units/shards/core",
+  "k.units/shards/measures",
   "k.words/shards/frequency-m",
   "k.words/shards/mi"
  ],
@@ -97406,7 +97455,8 @@
   "k.words/shards/o"
  ],
  "o'clock": [
-  "k.time/schema.sop"
+  "k.time/schema.sop",
+  "k.time/shards/clock-words"
  ],
  "oaf": [
   "k.words/shards/oa"
@@ -110589,6 +110639,20 @@
   "k.words/shards/qu",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02"
+ ],
+ "quarter hour": [
+  "k.time/shards/clock-words"
+ ],
+ "quarter of an hour": [
+  "k.time/shards/clock-words"
+ ],
+ "quarter past": [
+  "k.time/schema.sop",
+  "k.time/shards/clock-words"
+ ],
+ "quarter to": [
+  "k.time/schema.sop",
+  "k.time/shards/clock-words"
  ],
  "quarterback": [
   "k.words/shards/frequency-q",
@@ -136662,6 +136726,12 @@
   "w.lang.en/shards/determiners",
   "w.lang.en/shards/numbers"
  ],
+ "ten past": [
+  "k.time/shards/clock-words"
+ ],
+ "ten to": [
+  "k.time/shards/clock-words"
+ ],
  "tenant": [
   "k.words/shards/frequency-t",
   "k.words/shards/te"
@@ -139495,6 +139565,9 @@
  ],
  "time of day": [
   "k.attributes/schema.sop",
+  "k.time/schema.sop"
+ ],
+ "time on the clock": [
   "k.time/schema.sop"
  ],
  "time-ball": [
@@ -143749,6 +143822,9 @@
  "twelve at night": [
   "k.time/shards/clock"
  ],
+ "twelve midnight": [
+  "k.time/shards/clock-words"
+ ],
  "twelve noon": [
   "k.time/shards/clock"
  ],
@@ -143763,6 +143839,12 @@
   "k.values/shards/numbers",
   "k.words/shards/frequency-t",
   "k.words/shards/tw"
+ ],
+ "twenty past": [
+  "k.time/shards/clock-words"
+ ],
+ "twenty to": [
+  "k.time/shards/clock-words"
  ],
  "twenty-eight": [
   "k.values/shards/numbers"
@@ -143779,6 +143861,12 @@
  "twenty-five": [
   "k.values/shards/numbers",
   "k.words/shards/tw"
+ ],
+ "twenty-five past": [
+  "k.time/shards/clock-words"
+ ],
+ "twenty-five to": [
+  "k.time/shards/clock-words"
  ],
  "twenty-four": [
   "k.values/shards/numbers",

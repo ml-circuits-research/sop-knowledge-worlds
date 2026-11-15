@@ -478,3 +478,17 @@ the lexicon taken from k.attributes and k.time (11 of 11).
   words first); "a cup of tea" (a measure of a substance).
 - The library's tokenizer drops commas, so the coordination separator "," is not read ("a sun, a cloud and a man"
   parses only as "a sun and a cloud and a man"); questions.md Q39.
+
+## Time frames (block 09:20 K7, PSys2 Q18; real row r0586)
+
+Shard `time-frames` (`tools/lang-en-time-frames.mjs`, in `npm run build`; 13 frames, 6 lexicons, 9 role maps, CC0):
+statements of the date and the time as the act change in the mode set of the set acts.state (as statements of facts
+are), the thing fixed (today, now) and the attribute fixed (weekday, date, month, season, time): "I should tell you,
+today is Friday" (r0586; the telling words are an optional part), "today is the 5th of May", "today is May 5", "we are
+in May", "it's spring", "the clock says half past 3", "it's quarter to four", "it is 5 o'clock", "it is noon"; and
+questions (ask, mode what, the topic fixed): "what day is it", "what's the date", "what time is it", "what month is
+it". The lexicons are derived from k.time (weekdays, months, seasons, the hours by number and name, the clock phrases of
+the new shard clock-words) and w.lang.en's numerals (one to twelve); the parts of a time or a date map to the value
+("half past 3"). "It is" reads a time only before a clock phrase, an hour with o'clock, am or pm, or noon and midnight
+("it is red" is not a time). Checked by `tests/w.lang.en.time-frames.test.mjs` (15 requests, the values joined to
+k.time). The frames carry no `mood` yet: the slot comes with w.person's schema change.

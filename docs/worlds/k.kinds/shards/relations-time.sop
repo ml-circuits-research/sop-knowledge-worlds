@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-time: the keys of the types of k.time read as relations: 60 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-time: the keys of the types of k.time read as relations: 61 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -7,6 +7,7 @@
 @k.kinds.relation.k.time.before.earlier k.kinds.relation type=k.time.before key=earlier subject=before object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.time.before.later k.kinds.relation type=k.time.before key=later subject=before object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.time.before.derived k.kinds.relation type=k.time.before key=derived subject=before object=boolean found=schema core.source="hand-core 1"
+@k.kinds.relation.k.time.clock_phrase.minutes k.kinds.relation type=k.time.clock_phrase key=minutes subject="clock phrase" object=amount found=schema core.source="hand-core 1"
 @k.kinds.relation.k.time.cycle.of k.kinds.relation type=k.time.cycle key=of subject=cycle object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.time.cycle.first k.kinds.relation type=k.time.cycle key=first subject=cycle object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.time.cycle.last k.kinds.relation type=k.time.cycle key=last subject=cycle object=word object_type=k.words.sense found=value core.source="hand-core 1"

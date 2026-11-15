@@ -4,7 +4,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.time core.module name=k.time version=5 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration exports=stage core.source="hand-core 1"
+@k.time core.module name=k.time version=6 exports=ordered exports=cycle exports=before exports=during exports=span exports=month exports=weekday exports=season exports=season_in exports=part_of_day exports=hour exports=duration exports=stage exports=clock_phrase core.source="hand-core 1"
 
 # Order in time. Every time that repeats in a cycle (a weekday in the week, a month in the year, a season, a part of
 # the day, an hour of the clock) is a `k.time.ordered`: `cycle` names its cycle, `n` is its position in it, `next`
@@ -125,6 +125,13 @@
 @k.time.hour.am_pm core.slot of=k.time.hour key=am_pm required=true enum=am enum=pm core.source="hand-core 1"
 @k.time.hour.part core.slot of=k.time.hour key=part required=true enum=morning enum=afternoon enum=evening enum=night core.source="hand-core 1"
 
+# How the clock names a time by an hour (block 09:20 K7, PSys2's real turn r0586 "today is Friday" and its clock turns):
+# "o'clock", "half past", "quarter to". `minutes` is what the phrase adds to the hour it names ("half past 3" is 3:30);
+# a phrase with "to" names the hour that comes next and takes minutes away ("quarter to 4" is 3:45: minutes -15).
+@k.time.clock_phrase core.type of=k.time.clock_phrase shared=true closed=true complete=true core.source="hand-core 1"
+@k.time.clock_phrase.name core.slot of=k.time.clock_phrase key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
+@k.time.clock_phrase.minutes core.slot of=k.time.clock_phrase key=minutes required=true kind=integer min=-59 max=59 core.source="hand-core 1"
+
 # Which time lies within which span (Round 12, the preposition "during"): an hour within its part of the day ("9 am
 # is during the morning"); a month within its season, in the `hemisphere` said ("January is during winter" in the
 # north, during summer in the south). Derived by three rules from the hours and the months, so it never disagrees with
@@ -193,6 +200,7 @@
 @k.time.word.cycle core.word text=cycle text=round means=k.time.cycle core.source="hand-core 1"
 @k.time.word.part_of_day core.word text="part of the day" text="time of day" means=k.time.part_of_day core.source="hand-core 1"
 @k.time.word.hour core.word text=hour text="o'clock" text=clock means=k.time.hour core.source="hand-core 1"
+@k.time.word.clock_phrase core.word text="half past" text="quarter past" text="quarter to" text="time on the clock" means=k.time.clock_phrase core.source="hand-core 1"
 @k.time.word.hemisphere core.word text=hemisphere text=hemispheres means=k.time.season_in.hemisphere core.source="hand-core 1"
 
 # Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
@@ -230,6 +238,7 @@
 @k.time.word.key.hour.hour12 core.word text=hour12 text="12-hour clock" means=k.time.hour.hour12 core.source="hand-core 1"
 @k.time.word.key.hour.am_pm core.word text="am pm" text=am text=pm means=k.time.hour.am_pm core.source="hand-core 1"
 @k.time.word.key.hour.part core.word text=part means=k.time.hour.part core.source="hand-core 1"
+@k.time.word.key.clock_phrase.minutes core.word text=minutes means=k.time.clock_phrase.minutes core.source="hand-core 1"
 @k.time.word.key.during.span core.word text=span means=k.time.during.span core.source="hand-core 1"
 @k.time.word.key.during.hemisphere core.word text=hemisphere means=k.time.during.hemisphere core.source="hand-core 1"
 @k.time.word.key.during.derived core.word text=derived means=k.time.during.derived core.source="hand-core 1"
