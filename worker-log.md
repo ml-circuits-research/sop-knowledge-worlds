@@ -6486,3 +6486,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   merge driver keeps main's generated files: rebuild them before the push.
 - Tests: k.actions.*, k.words.*, w.lang.en.*, import.wordnet, k.kinds relations and structures, k.time, w.person,
   w.lang.ro (k.attributes.glosses needs sources/wordnet/raw, not in this clone).
+
+## 2026-11-15 — second worker: question numbers
+
+- My Q82 and Q85 [LIB] (inflectBy's 37 catalog nouns; the planner's choose) collided with the fourth worker's Q82 and
+  Q85 (pushed meanwhile): mine are renumbered **Q87** and **Q88** in questions.md, tests/w.lang.en.library.test.mjs and
+  tests/k.compose.test.mjs. Q83 (readFrames) and Q84 (realise) keep their numbers.

@@ -4,7 +4,7 @@
 // kept alive).
 //  - articleFor: the library's (the local copy is deleted; its own cases are in tests/w.lang.en.templates.test.mjs);
 //  - inflectBy: the hand-over's plural table and every head noun of the catalog both ways; the local `inflect` stays
-//    for the generated plural shards (core-plurals, catalog-plurals) while the cases of Q82 are open;
+//    for the generated plural shards (core-plurals, catalog-plurals) while the cases of Q87 are open;
 //  - readFrames: every third frame example of w.lang.en, compared with the reference frame reader; it stays while Q83 is open
 //    (the library reads no `needs`, role maps, fixed values or host lexicons).
 import { test } from 'node:test';
@@ -20,8 +20,8 @@ const en = enWorld();
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 
-// Q82 [LIB]: inflectBy cases the w.lang.en rules and irregulars read and the library does not (pin 0.130).
-export const Q82 = {
+// Q87 [LIB]: inflectBy cases the w.lang.en rules and irregulars read and the library does not (pin 0.130).
+export const Q87 = {
   singular: ['bus', 'iris', 'lens', 'ibis', 'mantis', 'walrus', 'asparagus', 'rhinoceros', 'hippopotamus', 'octopus', 'lotus', 'cactus', 'tennis', 'platypus'],
   plural_back: ['house', 'lighthouse', 'suitcase', 'seahorse', 'tortoise', 'vase', 'blouse', 'case', 'cheese', 'mayonnaise', 'base', 'hose', 'horse', 'nose', 'purse', 'briefcase', 'sunrise', 'rose', 'porpoise', 'courthouse', 'greenhouse', 'warehouse', 'mongoose'],
 };
@@ -30,28 +30,28 @@ test('KR4: articleFor is the library\'s; a and an by w.lang.en.det before= and t
   for (const [w, a] of Object.entries({ house: 'a', apple: 'an', hour: 'an', unicorn: 'a', european: 'a', egg: 'an' })) assert.equal(articleFor(en, w), a, w);
 });
 
-test('KR4: inflectBy reads the hand-over\'s plural table, but for the cases of Q82', () => {
+test('KR4: inflectBy reads the hand-over\'s plural table, but for the cases of Q87', () => {
   const bad = [];
   for (const [pl, sg] of Object.entries({ tables: 'table', boxes: 'box', cherries: 'cherry', wolves: 'wolf', cacti: 'cactus', kiwis: 'kiwi', octopuses: 'octopus', buses: 'bus', glass: 'glass', iris: 'iris',
     mice: 'mouse', feet: 'foot', children: 'child', people: 'person', women: 'woman', sheep: 'sheep', antennae: 'antenna', vertebrae: 'vertebra', potatoes: 'potato', cola: 'cola' })) if (inflectBy(en, pl, 'singular') !== sg) bad.push(`${pl} -> ${inflectBy(en, pl, 'singular')}`);
   for (const [sg, pl] of Object.entries({ table: 'tables', box: 'boxes', cherry: 'cherries', day: 'days', cactus: 'cacti', child: 'children', mouse: 'mice', sheep: 'sheep', antenna: 'antennas', tomato: 'tomatoes' })) if (inflectBy(en, sg, 'plural') !== pl) bad.push(`${sg} -> ${inflectBy(en, sg, 'plural')}`);
-  assert.deepEqual(bad, ['iris -> iri'], 'Q82');
+  assert.deepEqual(bad, ['iris -> iri'], 'Q87');
 });
 
-test('KR4: inflectBy reads every head noun of the catalog both ways, but for the cases of Q82', () => {
+test('KR4: inflectBy reads every head noun of the catalog both ways, but for the cases of Q87', () => {
   const heads = catalogNouns();
   const irregular = new Set(en.ofType('w.lang.en.irregular').map((x) => tok(x.attrs.singular[0])));
   const sg = (w) => inflectBy(en, w, 'singular'), pl = (w) => inflectBy(en, w, 'plural');
   const singular = [], back = [];
   let checked = 0;
   for (const [h] of heads) {
-    if (!irregular.has(h) && sg(h) !== h && heads.nouns.has(sg(h)) && !Q82.singular.includes(h)) continue; // a plural itself (glasses)
+    if (!irregular.has(h) && sg(h) !== h && heads.nouns.has(sg(h)) && !Q87.singular.includes(h)) continue; // a plural itself (glasses)
     checked += 1;
     if (sg(h) !== h) singular.push(h); else if (sg(pl(h)) !== h) back.push(h);
   }
-  console.log(`# ${checked} head nouns; the library reads ${checked - singular.length - back.length} both ways; Q82: ${singular.length} read as plurals, ${back.length} whose plural does not read back`);
-  assert.deepEqual(singular.sort(), [...Q82.singular].sort(), 'singular (Q82)');
-  assert.deepEqual(back.sort(), [...Q82.plural_back].sort(), 'plural back (Q82)');
+  console.log(`# ${checked} head nouns; the library reads ${checked - singular.length - back.length} both ways; Q87: ${singular.length} read as plurals, ${back.length} whose plural does not read back`);
+  assert.deepEqual(singular.sort(), [...Q87.singular].sort(), 'singular (Q87)');
+  assert.deepEqual(back.sort(), [...Q87.plural_back].sort(), 'plural back (Q87)');
 });
 
 test('KR4: readFrames on every frame example, against the reference frame reader (Q83)', () => {

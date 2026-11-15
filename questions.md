@@ -1175,12 +1175,12 @@ Proposal, one schema both can use (w.seating version 3), nothing changed until t
    colour / color.
 4. `needs` stays many (a guest can be vegetarian and need a wheelchair); a host that keeps one value takes the first.
 Meanwhile: w.seating stays at version 2; PSys2 keeps schema.host.sop.
-## Q82 [LIB] (reviewer 15:00 item 2, KR4, second worker, 2026-11-15): inflectBy reads 37 head nouns of the catalog wrong that w.lang.en's rules read
+## Q87 [LIB] (was numbered Q82, a number the fourth worker had taken; reviewer 15:00 item 2, KR4, second worker, 2026-11-15): inflectBy reads 37 head nouns of the catalog wrong that w.lang.en's rules read
 Question: can `inflectBy(world, word, 'singular' | 'plural')` read the singular of these nouns as w.lang.en's facts
 say? At 0.130 the library reads 1,319 of the catalog's 1,356 head nouns both ways (the reference reading of
 tools/lib/lang-en.mjs reads all of them), and 8,589 of 8,886 k.words nouns back from their plural (the local reading
 8,299: the library is better there, so the tests move to it).
-Failing cases (tests/w.lang.en.library.test.mjs, `Q82`):
+Failing cases (tests/w.lang.en.library.test.mjs, `Q87`):
 1. A singular read as a plural (`unless_is_singular`, the -us/-is exceptions and the singular of an irregular pair,
    Q79 item 1, are not applied): bus -> bu, iris -> iri, lens -> len, ibis -> ibi, mantis -> manti, walrus -> walru,
    asparagus, rhinoceros, hippopotamus, octopus, lotus, cactus, tennis, platypus.
@@ -1216,7 +1216,7 @@ mouse." (wanted "Add 3 mice.": `num=pl` by w.lang.en's rules and irregulars, as 
 kind -> null (same). Meanwhile `realiseEn` fills the slots and takes the article from the library's articleFor.
 Blocking: no.
 
-## Q85 [LIB] (reviewer 15:00 item 2, KR4, second worker, 2026-11-15): the planner's choose: statements as values, fixed choices, the first solution
+## Q88 [LIB] (was numbered Q85, a number the fourth worker had taken; reviewer 15:00 item 2, KR4, second worker, 2026-11-15): the planner's choose: statements as values, fixed choices, the first solution
 Question: can `planner(store, { ... }).plan(goal, live)` (which solves `choose` bindings itself since Q57) give
 (1) the chosen statements and history entries by what they are, not "[object Object]" (a statement row
 `{ thing, type, key, value }` by its key, a history entry `{ act, thing }` by its act: "write a presentation about a
