@@ -6542,3 +6542,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   parts of the same object, points inside their part's box (3 pass).
 - The generated files that main had stale (catalog, JOINS, PARENTS, same-*, topics, .gitattributes's use-wordnet line)
   are rebuilt in this commit (`npm run build`, tools/generated.mjs).
+## 2026-11-15 — fourth worker: 20 more everyday procedures (reviewer 19:05 item 3)
+
+- k.procedures.howto, 23 in all (tools/procedures-core.mjs HOWTOS, shard everyday): six cited with each step's
+  `detail` the source's words (ADA MouthHealthy brushing; the Green Cross Code; FoodSafety.gov's four steps; USFA stop,
+  drop and roll; Ready.gov drop, cover, hold on; CDC coughing and sneezing, its last step marked as added here),
+  fourteen own (sandwich, boiled egg, toast, pasta, bed, laundry, dishes, table, school bag, pet, plant, dressing,
+  shoelaces, letter); 13 have a decision. The k.diagrams topics are rebuilt (tools/diagram-topics.mjs).
+- Tests: k.diagrams (names, cited/own, one first step, decisions with yes and no, flowchart fill), k.procedures,
+  catalog, validate.

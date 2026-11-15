@@ -44,6 +44,13 @@ the decision "Is the soil dry?"). They are knowledge of how a person does a task
 flowchart by `after` and `n`, pipeline by `n`) and answers; the planner never reads them (their steps are not acts of
 k.actions on a live world). Their words are gerunds, nouns and "how to" forms ("tea making", "how to wash your
 hands"), never "make a cup of tea", which may ask for a drawing.
+Twenty more (reviewer 19:05, 23 in all): six **cited**, each step's `detail` the words of the source: brushing teeth
+(American Dental Association, MouthHealthy), crossing the road (the Green Cross Code), keeping food safe (FoodSafety.gov,
+clean, separate, cook, chill), stop, drop and roll (U.S. Fire Administration), drop, cover and hold on (Ready.gov),
+covering a cough (CDC; its last step, washing hands, is marked as added here); and fourteen **own**: making a sandwich,
+boiling an egg, making toast, cooking pasta, making the bed, doing the laundry, washing the dishes, setting the table,
+packing a school bag, feeding a pet, watering a plant, getting dressed, tying shoelaces, sending a letter. Thirteen of
+the 23 have a decision (a diamond in a flowchart).
 
 **Alternatives** are the methods of one goal: the planner keeps those whose goal facts fit, whose `world` is the live
 world's schema (or none), and whose preconditions hold, then takes the lowest `rank`, then the first by name.

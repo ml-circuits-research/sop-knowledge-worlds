@@ -140,7 +140,11 @@ test('a timeline of the planets by distance (and by size): k.space.body order an
 test('a flowchart of making tea, washing hands, planting a seed: everyday procedures, each cited or marked own, apart from the planner\'s methods', () => {
   const howtos = factsOf('k.procedures', 'k.procedures.howto', worlds), steps = factsOf('k.procedures', 'k.procedures.howto_step', worlds);
   const methods = new Set(factsOf('k.procedures', 'k.procedures.method', worlds).map((m) => one(m, 'name')));
-  assert.deepEqual(howtos.map((h) => one(h, 'name')).sort(), ['making tea', 'planting a seed', 'washing hands']);
+  const names = howtos.map((h) => one(h, 'name'));
+  assert.equal(names.length, 23);
+  for (const n of ['making tea', 'planting a seed', 'washing hands', 'brushing teeth', 'crossing the road', 'doing the laundry']) assert.ok(names.includes(n), n);
+  // reviewer 19:05: 20 more; the cited ones keep the words of the source in `detail`
+  assert.deepEqual(howtos.filter((h) => one(h, 'basis') === 'cited').map((h) => one(h, 'name')).sort(), ['brushing teeth', 'covering a cough', 'crossing the road', 'drop, cover and hold on', 'keeping food safe', 'stop, drop and roll', 'washing hands']);
   for (const h of howtos) {
     assert.ok(!methods.has(one(h, 'name')), `${one(h, 'name')} is not a method of the planner`);
     assert.equal(Boolean(h.attrs.cite), one(h, 'basis') === 'cited', `${one(h, 'name')}: cited with a cite, own without`);
