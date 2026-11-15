@@ -5812,3 +5812,5 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   thank for; farewell, farewell + person; who are you; how are you), "what is your name" stays acts.ask.name; 5
   templates (hello, hello {person}, thank you, thank you for {topic}, goodbye).
 - tests/w.lang.en.talk-frames.test.mjs: 11 real rows and 9 paraphrases read back; the acts and family in k.actions.
+
+## 2026-11-15 — third worker takes block 14:25: class=dialogue, the two Romanian shapes, Romanian reply templates, KR3 (fn first)
