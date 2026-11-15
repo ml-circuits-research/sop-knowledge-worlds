@@ -1,5 +1,5 @@
 {
- "version": "c63a39a3a900",
+ "version": "d09d3a08fc06",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -89869,6 +89869,64 @@
       "unknown-word w.lang.en.word.k.kinds.key.cast.role: w.lang.en.word.k.kinds.key.cast.role: means=k.kinds.cast.role names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.kinds.key.cast.filler: w.lang.en.word.k.kinds.key.cast.filler: means=k.kinds.cast.filler names no action, type, key or value of the matrix",
       "unknown-word w.lang.en.word.k.kinds.key.cast.as: w.lang.en.word.k.kinds.key.cast.as: means=k.kinds.cast.as names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.layouts",
+     "path": "w.lang.en/shards/words-k.layouts.sop",
+     "wires": 45,
+     "bytes": 6030,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.layouts.outline: w.lang.en.word.k.layouts.outline: means=k.layouts.outline names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.layout: w.lang.en.word.k.layouts.layout: means=k.layouts.layout names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.usual_for: w.lang.en.word.k.layouts.usual_for: means=k.layouts.layout.usual_for names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.slot: w.lang.en.word.k.layouts.slot: means=k.layouts.slot names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.relation: w.lang.en.word.k.layouts.relation: means=k.layouts.relation names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.anchor: w.lang.en.word.k.layouts.anchor: means=k.layouts.anchor names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.holds: w.lang.en.word.k.layouts.holds: means=k.layouts.anchor.holds names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.joins: w.lang.en.word.k.layouts.joins: means=k.layouts.joins names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.layout.kind: w.lang.en.word.k.layouts.key.layout.kind: means=k.layouts.layout.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.layout.about: w.lang.en.word.k.layouts.key.layout.about: means=k.layouts.layout.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.layout.ordered: w.lang.en.word.k.layouts.key.layout.ordered: means=k.layouts.layout.ordered names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.layout.usual_for: w.lang.en.word.k.layouts.key.layout.usual_for: means=k.layouts.layout.usual_for names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.name: w.lang.en.word.k.layouts.key.slot.name: means=k.layouts.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.count: w.lang.en.word.k.layouts.key.slot.count: means=k.layouts.slot.count names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.pair: w.lang.en.word.k.layouts.key.slot.pair: means=k.layouts.slot.pair names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.optional: w.lang.en.word.k.layouts.key.slot.optional: means=k.layouts.slot.optional names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.holds: w.lang.en.word.k.layouts.key.slot.holds: means=k.layouts.slot.holds names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.arranged: w.lang.en.word.k.layouts.key.slot.arranged: means=k.layouts.slot.arranged names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.x: w.lang.en.word.k.layouts.key.slot.x: means=k.layouts.slot.x names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.y: w.lang.en.word.k.layouts.key.slot.y: means=k.layouts.slot.y names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.w: w.lang.en.word.k.layouts.key.slot.w: means=k.layouts.slot.w names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.slot.h: w.lang.en.word.k.layouts.key.slot.h: means=k.layouts.slot.h names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.relation.a: w.lang.en.word.k.layouts.key.relation.a: means=k.layouts.relation.a names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.relation.rel: w.lang.en.word.k.layouts.key.relation.rel: means=k.layouts.relation.rel names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.relation.b: w.lang.en.word.k.layouts.key.relation.b: means=k.layouts.relation.b names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.relation.among: w.lang.en.word.k.layouts.key.relation.among: means=k.layouts.relation.among names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.name: w.lang.en.word.k.layouts.key.anchor.name: means=k.layouts.anchor.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.kind: w.lang.en.word.k.layouts.key.anchor.kind: means=k.layouts.anchor.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.x: w.lang.en.word.k.layouts.key.anchor.x: means=k.layouts.anchor.x names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.y: w.lang.en.word.k.layouts.key.anchor.y: means=k.layouts.anchor.y names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.w: w.lang.en.word.k.layouts.key.anchor.w: means=k.layouts.anchor.w names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.h: w.lang.en.word.k.layouts.key.anchor.h: means=k.layouts.anchor.h names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.part: w.lang.en.word.k.layouts.key.anchor.part: means=k.layouts.anchor.part names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.anchor.on: w.lang.en.word.k.layouts.key.anchor.on: means=k.layouts.anchor.on names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.joins.rel: w.lang.en.word.k.layouts.key.joins.rel: means=k.layouts.joins.rel names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.joins.b: w.lang.en.word.k.layouts.key.joins.b: means=k.layouts.joins.b names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.joins.side: w.lang.en.word.k.layouts.key.joins.side: means=k.layouts.joins.side names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline.from: w.lang.en.word.k.layouts.key.outline.from: means=k.layouts.outline.from names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline.shape: w.lang.en.word.k.layouts.key.outline.shape: means=k.layouts.outline.shape names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline.drawing: w.lang.en.word.k.layouts.key.outline.drawing: means=k.layouts.outline.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline.points: w.lang.en.word.k.layouts.key.outline.points: means=k.layouts.outline.points names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline.tolerance: w.lang.en.word.k.layouts.key.outline.tolerance: means=k.layouts.outline.tolerance names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline_point.n: w.lang.en.word.k.layouts.key.outline_point.n: means=k.layouts.outline_point.n names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline_point.x: w.lang.en.word.k.layouts.key.outline_point.x: means=k.layouts.outline_point.x names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.layouts.key.outline_point.y: w.lang.en.word.k.layouts.key.outline_point.y: means=k.layouts.outline_point.y names no action, type, key or value of the matrix"
      ]
     },
     {
