@@ -850,3 +850,11 @@ Reviewer ran list-frames, question-frames and w.lang.ro tests on main: 19 pass. 
 ## Reviewer 2026-11-15 12:55 — part.of accepted on main
 
 Reviewer ran tests/k.objects.names.test.mjs on main: 6 pass. Accepted f15117d (`k.objects.part.of` declared, 2,212 of 2,212 meet). The library (0.126) is pinned at b20eeeb and reads w.list v3: its `listSums` gives total, change, short and left; when Q71 (1) moves `tendered` out of the list, say so in questions.md as [LIB] with the old and new key. Capitals (skw-worker5) is still not on main.
+
+## Reviewer 2026-11-15 13:15 — Q69 item 4 and joins report accepted; [PSYS2] Q20 / Q21 asks
+
+Reviewer ran tests/w.lang.ro.test.mjs on main (see counts in the commit). Accepted f489a55 ("mai" + direction as a relative move) and fea0fec (joins report without enum keys: 116 → 50 suggestions). Q69 is complete: skw-worker3 reports the final bench numbers and takes K3 + K7. New asks from PSys2 (its questions.md Q20, Q21), for the next free workers after the current queue items, real rows first:
+- **Sensitivity of drawable things** (real: the owner got the chip "Add a weapon." after a sunny scene): a key on k.kinds that reaches every world, e.g. `sensitive=weapon|violence|…`, derived from WordNet (everything under weapon.n.01, firearm, explosive device …) by a generator with a freshness test; hosts leave such things out of suggestions and random choices by default. Goes with KR6.
+- **`w.lang.en.fn` with views** (filler, politeness, desire/wish, hesitation: please, pls, just, um, kindly, want, would like, need, wanna, "i mean"): about 30 hand-written lists in the host become one read; the library's `moodOf` needs the wish verbs (its L2). Goes with KR3.
+- **Irregular plurals** of every k.objects / k.animals noun in `w.lang.en.irregular` (the host has ~45 plural rules that disagree; "bus" → "bu" in four). Goes with KR2 (verb forms / inflection have one home).
+- **`k.scenes.next`** (optional): a typed "goes with" relation to rank next things; later.
