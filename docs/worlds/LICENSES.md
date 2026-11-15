@@ -13,7 +13,7 @@ any licence outside its allowlist (`tools/lib/licenses.mjs`). The schemas are wr
 - License: Unicode-3.0 (Unicode License V3, permissive, with the copyright notice kept).
 - Attribution: Copyright © 1991-2025 Unicode, Inc. Unicode CLDR data, used under the Unicode License V3 (text: `docs/worlds/k.objects/LICENSE.cldr`).
 - Shard terms: Apache-2.0 AND Unicode-3.0, Unicode-3.0
-- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.layouts` (1 shards), `k.objects` (124 shards), `k.units` (1 shards)
+- Used by: `k.attributes` (1 shards), `k.diagrams` (1 shards), `k.kinds` (1 shards), `k.layouts` (1 shards), `k.objects` (124 shards), `k.units` (1 shards), `w.lang.en` (1 shards), `w.lang.ro` (1 shards)
 
 ## countries-5.1.0
 

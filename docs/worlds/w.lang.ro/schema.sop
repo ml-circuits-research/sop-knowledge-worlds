@@ -13,7 +13,7 @@
 # license: CC0-1.0
 # script: none (hand-written); the shards and the dictionary are written by tools/lang-ro-core.mjs
 
-@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax exports=request exports=reply exports=fill exports=fn core.source="hand-core 1"
+@w.lang.ro core.module name=w.lang.ro version=1 exports=class exports=ending exports=irregular exports=vowel exports=fold exports=split exports=template exports=det exports=pron exports=prep exports=numeral exports=particle exports=frame exports=part exports=phrase exports=lex exports=syntax exports=request exports=reply exports=fill exports=fn exports=count core.source="hand-core 1"
 
 # ---- morphology (std.morph) ----
 # A paradigm class: a class inherits every cell of its `parent` and overrides some. `drop`: what the lemma loses
@@ -96,6 +96,16 @@
 @w.lang.ro.fill.template core.slot of=w.lang.ro.fill key=template id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.ro.fill.role core.slot of=w.lang.ro.fill key=role id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.ro.fill.lemma core.slot of=w.lang.ro.fill key=lemma required=true kind=string core.source="hand-core 1"
+
+# A plural category of the language (Q79 of the library, reviewer 16:45): `class` one of CLDR's categories (one, few,
+# other ...), `rule` its condition in CLDR's plural rule syntax (operands n the number, i its integer digits, v the
+# count of its visible fraction digits; `%` modulo, `a..b` a range; the category with no rule is the rest), `samples`
+# CLDR's sample numbers. A host takes the category of a number by these rules (or Intl.PluralRules, which reads the same
+# data) and the template row of that `count`. Source: Unicode CLDR 48, supplemental/plurals.json.
+@w.lang.ro.count core.type of=w.lang.ro.count shared=true closed=true core.source="hand-core 1"
+@w.lang.ro.count.class core.slot of=w.lang.ro.count key=class id=true required=true enum=zero enum=one enum=two enum=few enum=many enum=other core.source="hand-core 1"
+@w.lang.ro.count.rule core.slot of=w.lang.ro.count key=rule kind=string core.source="hand-core 1"
+@w.lang.ro.count.samples core.slot of=w.lang.ro.count key=samples required=true kind=string core.source="hand-core 1"
 
 # A function word or phrase that carries no content of a request (reviewer 16:10, as w.lang.en.fn): `text`, its `view`
 # (many): filler (păi, deci, adică), politeness (te rog, vă rog), wish (vreau, aș vrea), hesitation (ăă, hm) and focus

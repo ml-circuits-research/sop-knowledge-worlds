@@ -50,6 +50,8 @@ test('w.lang.en: every wire has a source; no notation inside values', () => {
     // an alternation's from and to are in the library's pattern notation ({x} spans; Q54 there, reviewer 21:55), without
     // its [a|b] alternatives (each alternative a fact): only the spans are allowed
     const PATTERN = (k) => w.type === 'w.lang.en.alternation' && (k === 'from' || k === 'to');
+    // a plural rule and its samples are CLDR's notation, copied as published (the library's Q79)
+    if (w.type === 'w.lang.en.count') continue;
     for (const [k, vs] of Object.entries(w.attrs)) if (PATTERN(k)) { for (const x of vs.map(tok)) if (/[|[\]*+]/.test(x.replace(/\{[a-z_]+(:base)?\}/g, ''))) bad.push(`${w.id} ${k}=${x}`); }
     // a test sentence of an alternation is a sentence as typed ("could you open the door?")
     else if (!PROSE.has(k) && !(TEMPLATE && k === 'text') && !(w.type === 'w.lang.en.alternation_case' && (k === 'text' || k === 'canonical'))) for (const x of vs.map(tok)) {

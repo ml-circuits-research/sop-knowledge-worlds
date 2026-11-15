@@ -6211,3 +6211,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   without it too (the plurals work of KR2 item 4).
 - Lesson: a new role or arrangement reaches w.lang.en's phrases and templates as well as k.kinds' argument classes; all
   w.lang.en tests belong to such a commit's touched tests.
+## 2026-11-15 — third worker: plural rules as facts (reviewer 16:45, the library's Q79), first
+
+- w.lang.en.count and w.lang.ro.count (class, rule in CLDR syntax, samples), shards counts copied from CLDR 48
+  plurals.json (sha256 noted in sources/cldr/SOURCE.md; Unicode-3.0). The Romanian few rule is CLDR's "v != 0 or n = 0
+  or n != 1 and n % 100 = 1..19" (the note in Q79 had 2..19). tests/w.lang.counts.test.mjs: the rules agree with
+  Intl.PluralRules for 0..300 and decimals in both languages; 3 case, 20 de case, 101 case, 120 de case; template rows
+  name only these classes.

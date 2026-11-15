@@ -26,3 +26,8 @@
   then `node tools/import/currencies.mjs`. Kept: the currencies that are legal tender in some region today (153):
   code, English name and plural, the last word of each as the everyday unit, symbol and narrow symbol where they are
   not the code, digits, the regions as k.geo country names (shard `k.units/shards/currencies`, licence Unicode-3.0).
+- **Also kept (reviewer 16:45, the library's Q79), for `w.lang.en.count` and `w.lang.ro.count`:**
+  `cldr-json/cldr-core/supplemental/plurals.json` at tag `48.2.3` (sha256
+  `6c0a48e9bcfc25856f90202f703c2c7f89c105d6868f7712a943a6ed2dcbe8f4`): the cardinal plural rules of `en` and `ro`,
+  copied by hand into `w.lang.en/shards/counts.sop` and `w.lang.ro/shards/counts.sop` (rule and samples as given).
+

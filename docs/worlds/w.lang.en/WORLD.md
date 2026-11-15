@@ -556,3 +556,7 @@ them as the world's own words, so vocab.json does not change with the move (chec
 moved); tools/key-words.mjs writes the rule block at the end of the shard. A second language adds
 `w.lang.<xx>/shards/words-<world>.sop` of the same shape. Moved: k.feelings, k.wearables, k.food (the first three, to
 check the diff); the other worlds follow.
+
+## Plural categories (reviewer 16:45)
+
+Shard `counts` (Unicode CLDR 48, Unicode-3.0): `w.lang.en.count`: one (`i = 1 and v = 0`) and other.

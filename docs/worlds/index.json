@@ -1,5 +1,5 @@
 {
- "version": "61969d52915a",
+ "version": "36f0e2cf6a55",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -87555,6 +87555,7 @@
     "w.lang.en.copula",
     "w.lang.en.correction",
     "w.lang.en.correction.lead",
+    "w.lang.en.count",
     "w.lang.en.det",
     "w.lang.en.discourse",
     "w.lang.en.ellipsis.lead",
@@ -88309,6 +88310,18 @@
       "wordnet-3.1"
      ],
      "license": "WordNet-3.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/counts",
+     "path": "w.lang.en/shards/counts.sop",
+     "wires": 2,
+     "bytes": 774,
+     "keys": [],
+     "sources": [
+      "cldr-48"
+     ],
+     "license": "Unicode-3.0",
      "warnings": []
     },
     {
@@ -89371,6 +89384,7 @@
     }
    ],
    "sources": [
+    "cldr-48",
     "hand-core-1",
     "psys2-447a5f9a",
     "psys2-78f45863",
@@ -89378,6 +89392,7 @@
    ],
    "licenses": [
     "CC0-1.0",
+    "Unicode-3.0",
     "WordNet-3.0"
    ],
    "data": [
@@ -89402,6 +89417,7 @@
    "schema": "w.lang.ro/schema.sop",
    "exports": [
     "w.lang.ro.class",
+    "w.lang.ro.count",
     "w.lang.ro.det",
     "w.lang.ro.ending",
     "w.lang.ro.fill",
@@ -89435,6 +89451,18 @@
       "hand-core-1"
      ],
      "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/counts",
+     "path": "w.lang.ro/shards/counts.sop",
+     "wires": 3,
+     "bytes": 937,
+     "keys": [],
+     "sources": [
+      "cldr-48"
+     ],
+     "license": "Unicode-3.0",
      "warnings": []
     },
     {
@@ -89523,12 +89551,14 @@
     }
    ],
    "sources": [
+    "cldr-48",
     "hand-core-1",
     "unimorph-ron-2026-11-14"
    ],
    "licenses": [
     "CC-BY-SA-3.0",
-    "CC0-1.0"
+    "CC0-1.0",
+    "Unicode-3.0"
    ],
    "data": [
     {

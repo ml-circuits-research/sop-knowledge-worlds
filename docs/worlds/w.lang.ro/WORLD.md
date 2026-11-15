@@ -203,3 +203,10 @@ Shard `fn` (hand-written, CC0; `w.lang.ro.fn text view at`, as w.lang.en.fn): 44
 (păi, deci, adică, uite), politeness (te rog, vă rog, mersi, dacă poți), wish (vreau, aș vrea, doresc, dă-mi),
 hesitation (ăă, hm, îî) and focus (și, de asemenea, tot), and where each stands. the frames' phrase groups skip (politeness, hesitation and filler that stand anywhere), focus, wish and the leads follow it
 (a test checks them). Bench after: 105 / 83 / 65 of 161 ("pai muta casa pe pamint" now reads: păi is a lead filler).
+
+## Plural categories (reviewer 16:45, the library's Q79)
+
+Shard `counts` (Unicode CLDR 48, Unicode-3.0): `w.lang.ro.count class rule samples`: one (`i = 1 and v = 0`), few
+(`v != 0 or n = 0 or n != 1 and n % 100 = 1..19`: 0, 2 to 19, 101 to 119 ...), other (the rest: 20 de case). The
+templates' `count` names these classes; tests/w.lang.counts.test.mjs evaluates the rules against Intl.PluralRules.
+(The library's note quoted "n % 100 = 2..19"; CLDR's rule is the one copied here: n != 1 and n % 100 = 1..19.)
