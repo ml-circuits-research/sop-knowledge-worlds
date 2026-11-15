@@ -6157,3 +6157,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   phrase groups skip, focus, wish and the leads from it. Bench: 104 / 82 / 64 -> **105 / 83 / 65** ("pai muta casa pe
   pamint" reads place on the ground). tests/w.lang.ro.frames.test.mjs: views, the groups follow the shard, three real
   shapes (păi, ăă, te rog at the end).
+
+## 2026-11-15 — third worker: Romanian data out of the tools, step 1: the hand dictionary (reviewer 16:10 (b))
+
+- The 270-lemma table left tools/lang-ro-core.mjs: the TSV files of w.lang.ro/dictionary are the home; the tool reads
+  them (LEXICON, dictionaryRows) and writes them back sorted (byte-identical); dictionary-unimorph regenerates the same.

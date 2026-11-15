@@ -9,7 +9,7 @@
 // (source `hand-core 1`, CC0-1.0): no dictionary was imported.
 //   node tools/lang-ro-core.mjs     writes docs/worlds/w.lang.ro/shards/*.sop and docs/worlds/w.lang.ro/dictionary/*.tsv
 import { join } from 'node:path';
-import { mkdirSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { WORLDS_DIR } from './lib/worlds.mjs';
 import { wire, header, seg, writeShards } from './import/lib.mjs';
 
@@ -350,52 +350,15 @@ export const TEMPLATES = [
 ];
 
 // ---- the dictionary: lemma, class, gender (nouns), sense ----
-// The sense is a wire id of k.words (word.pos.n: `house` = k.words.house.noun.1 for a noun class) or of k.actions
-// (`@make.draw` = k.actions.verb.make.draw); `-` where k.words has no sense for it (the test reports
-// the gap; the 9 of the first draft were added to k.words in block "16:10": italic, bold, thicken, numbered...). Written by hand for the app's commands and its Romanian
-// examples.
-export const LEXICON = `
-copac m.cons m tree|cerc n.uri n circle|nor m.cons m cloud|soare m.e.oa m sun|casă f.ă f house|mașină f.ăi f car|barcă f.ăi.a f boat|stea f.ea f star
-floare f.e.alt f flower|pisică f.ăi f cat|câine m.e m dog|pătrat n.e n square|triunghi n.uri n triangle|linie f.ie f line|punct n.e n point|inimă f.ăi f heart
-pom m.cons m tree|munte m.e m mountain|lună f.ăi f moon|pește m.e m fish|pasăre f.e.alt f bird|cal m.cons m horse|vacă f.ăi f cow|om m.cons m person
-copil m.cons m child|fată f.ă.e f girl|băiat m.cons m boy|bărbat m.cons m man|femeie f.ie f woman|dragon m.cons m dragon|elefant m.cons m elephant|păianjen m.cons m spider
-țestoasă f.ă f turtle|ușă f.ăi f door|fereastră f.ăi f window|acoperiș n.uri n roof|perete m.e m wall|drum n.uri n road|râu n.uri n river|lac n.uri n lake
-cer n.uri n sky|pământ n.uri n ground|nisip n.uri n sand|apă f.ă f water|zăpadă f.ă f snow|frunză f.ă f leaf|munte m.e m mountain
-desen n.e n drawing|grafic n.e n chart|titlu n.u n title|paragraf n.e n paragraph|listă f.ă f list|document n.e n document|pagină f.ăi f page|text n.e n text
-hartă f.ăi.a f map|editor n.e.oa n editor|ecran n.e n screen|filă f.ă f tab|tablă f.ă f board|avatar n.uri n avatar|joc n.uri n game|șah n.uri n chess
-muzică f.ăi f music|cântec n.e n song|voce f.e f voice|limbă f.ăi f language|viteză f.ă f speed|culoare f.e.alt f colour|formă f.ă f shape|mărime f.e f size
-element n.e n element|lucru n.u n thing|bară f.ă f bar|bulină f.ă f dot|propoziție f.ie f sentence|frază f.ă f sentence|literă f.ă f letter
-număr n.e.ă n number|procent n.e n percent|total n.uri n total|medie f.ie f mean|legendă f.ă f legend|coloană f.ă f column|rând n.uri n row|selecție f.ie f selection
-colț n.uri n corner|margine f.e f edge|parte f.e.alt f part|bază f.ă f base|mijloc n.uri n middle|miez n.uri n core|jumătate f.e.alt f half
-dreaptă f.ă f right|stângă f.ăi f left|mod n.uri n mode|plan n.uri n plan|jurnal n.e n journal|excursie f.ie f trip|rețetă f.ă f recipe|notiță f.ă f note
-cumpărătură f.ăi f purchase|aliment n.e n food|lapte m.e n milk|ou n.uri n egg|pâine f.e f bread|măr n.e.ă n apple|pară f.ă.e f pear|prună f.ă f plum
-banană f.ă f banana|portocală f.ă f orange|zi f.ă f day|noapte f.e.alt f night|săptămână f.ăi f week|lume f.e f world|apus n.uri n sunset|sunet n.e n sound
-picior n.e.oa n leg|capitală f.ă f capital|grad n.e n degree|întrebare f.e.alt f question|spânzurătoare f.e.alt f gallows|ascultare f.e.alt f listening|vorbire f.e f speech|calculator n.e.oa n calculator
-roșu a.u - red|galben a.1 - yellow|verde a.e - green|albastru a.ru - blue|negru a.ru - black|alb a.1 - white|mov a.inv - purple|roz a.inv - pink
-maro a.inv - brown|portocaliu a.iu - orange|gri a.inv - grey|auriu a.iu - golden|mare a.e - big|mic a.1i - small|uriaș a.1 - huge|lung a.1i - long
-scurt a.1 - short|înalt a.1 - tall|gros a.1.oa - thick|frumos a.1.oa - beautiful|nou a.1 - new|curat a.1 - clean|rapid a.1 - fast
-circular a.1 - round|orizontal a.1 - horizontal|vertical a.1 - vertical|cursiv a.1 - italic|îngroșat a.1 - bold.adjective.2|numerotat a.1 - numbered|anterior a.1.oa - anterior.adjective.2|rotund a.1 - round
-închis a.1 - dark|deschis a.1 - light|englez a.1 - english|puțin a.1 - little|mult a.1 - much|întors a.1.oa - turned|rar a.1 - rare|gol a.1.oa - empty
-desena v.a.ez - @make.draw|adăuga v.a.ă - @make.add|pune v.e.s.n - @place.put|muta v.a - @place.move|elimina v.a - @remove.remove|face v.e - @make.make|arăta v.a.ă3 - @change.show|schimba v.a - @change.change
-colora v.a.ez - @change.colour|șterge v.e.s.g - @remove.delete|deschide v.e.s.d - @load.open|închide v.e.s.d - @change.close|anula v.a.ez - @undo.undo|reface v.e - @redo.redo|picta v.a.ez - @make.paint|scrie v.e.iu - @save.write
-salva v.a.ez - @save.save|copia v.a.iez - @copy.copy|dubla v.a.ez - @copy.duplicate|duplica v.a - @copy.duplicate|ascunde v.e.s.d - @change.hide|înlocui v.i.iesc - @change.replace|roti v.i.esc - @change.rotate|întoarce v.e.s.c - @change.turn
-mări v.i.esc - @change.enlarge|micșora v.a.ez - @change.shrink|citi v.i.esc - @load.read|insera v.a.ez - @place.insert|sorta v.a.ez - @group.sort|seta v.a.ez - @change.set|grupa v.a.ez - @group.group|selecta v.a.ez - @pick.select
-aranja v.a.ez - @group.arrange|alinia v.a.iez - @place.align|umple v.e.iu - @change.fill|explica v.a - @ask.explain|spune v.e.s.n - @ask.tell|da v.a - @send.give|lua v.a - @pick.take|uni v.i.esc - @connect.join
-trasa v.a.ez - draw.verb.1|transforma v.a - transform|redenumi v.i.esc - @change.rename|scoate v.e.s.t - remove.verb.1|începe v.e - begin|termina v.a - end.verb.1|opri v.i.esc - stop|porni v.i.esc - start
-vorbi v.i.esc - speak|juca v.a.u - play|cânta v.a - sing|asculta v.a - listen|dansa v.a.ez - dance|merge v.e.s.g - go|veni v.i.esc - come|duce v.e.s.c - take
-vrea v.ea - want|putea v.ea.u - can.verb.1|avea v.ea - have|fi v.i.esc - be|vedea v.ea - see|plăcea v.ea.ă - like|prefera v.a - prefer|dori v.i.esc - want
-amesteca v.a - mix|obține v.e.n - get|număra v.a - count|calcula v.a.ez - calculate|aduna v.a - add.verb.1|înmulți v.i.esc - multiply|împărți v.i.esc - divide|găti v.i.esc - cook
-spăla v.a.ă3 - wash|trece v.e - pass|întâlni v.i.esc - meet|îngroșa v.a.oa - thicken|înota v.a.oa - swim|numi v.i.esc - name|așeza v.a.ez - sit|scăpa v.a.ă - escape|ruga v.a.u - ask.verb.1
-crocodil m.cons m crocodile|minge f.e f ball|capră f.ă f goat|rață f.ă f duck|iarbă f.ă f grass|fetiță f.ă f girl|bunic m.cons m grandfather|vilă f.ă f villa.noun.2
-leagăn n.e n swing.noun.2|masă f.ă.e f table.noun.2|baltă f.ăi.a f pond|măgar m.cons m donkey.noun.2|maimuță f.ă f monkey|vițel m.cons m calf
-trage v.e.s.g - pull|schimb n.uri n exchange|sfârșit n.uri n end.noun.1|nisipiu a.iu - sandy|un det.art - -|radar n.e n radar|repeta v.a - repeat|alege v.e.s.g - choose|lipi v.i.esc - paste|construi v.i.iesc - build|purta v.a.u - wear|trimite v.e.s.t - send|construi v.i.iesc - build
-`.trim().split(/\n|\|/).map((r) => r.trim()).filter(Boolean).map((r) => r.split(' ')).filter((x, i, a) => a.findIndex((y) => y[0] === x[0]) === i);
-// The sense id of a row: `@act.verb` -> k.actions.verb.act.verb; `word` -> k.words.word.<pos>.1; `word.pos.n` as given.
-const POS = { n: 'noun', a: 'adjective', v: 'verb' };
-export const senseId = (cls, sense) => (sense === '-' ? '' : sense.startsWith('@') ? `k.actions.verb.${sense.slice(1)}` : /\.\d+$/.test(sense) ? `k.words.${sense}` : `k.words.${seg(sense)}.${POS[cls[0]] ?? 'noun'}.1`);
+// The hand dictionary is data of w.lang.ro (reviewer 16:10: Romanian out of the tools): the TSV files of
+// docs/worlds/w.lang.ro/dictionary/ are its home, one row per lemma (lemma, class, gender, sense: a wire id of k.words
+// or k.actions); this tool reads them, and writes them back sorted and split by the first folded letter.
+const readTsv = () => readdirSync(join(DIR, 'dictionary')).filter((f) => f.endsWith('.tsv')).sort()
+  .flatMap((f) => readFileSync(join(DIR, 'dictionary', f), 'utf8').split('\n').filter((l) => l && !l.startsWith('#')).map((l) => l.split('\t')));
+export const LEXICON = readTsv();
 // The rows of the dictionary, sorted by folded lemma then lemma, as TSV lines.
 export function dictionaryRows() {
-  return LEXICON.map(([lemma, cls, gender, sense]) => [lemma, cls, gender === '-' ? '' : gender, senseId(cls, sense)])
+  return LEXICON.map(([lemma, cls, gender, sense]) => [lemma, cls, gender ?? '', sense ?? ''])
     .sort((a, b) => (foldText(a[0]) < foldText(b[0]) ? -1 : foldText(a[0]) > foldText(b[0]) ? 1 : a[0] < b[0] ? -1 : a[0] > b[0] ? 1 : 0));
 }
 export function dictionaryFiles() {
