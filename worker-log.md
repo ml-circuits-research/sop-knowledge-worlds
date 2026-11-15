@@ -6588,3 +6588,18 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - At the push, main itself was red on three tests from f77c570 (KR6 ConceptNet, fifth worker), the same in a clean
   worktree of origin/main: k.attributes.abilities and k.attributes.uses (their shards stale against their tools) and
   k.kinds (material.sop: hand-core and conceptnet facts in one CC0 shard). Not this commit's; reported.
+
+## 2026-11-15 — fourth worker: w.calendar version 1 (reviewer 19:05 item 2) and Q92-w4
+
+- docs/worlds/w.calendar: calendar (name, week_starts Monday by ISO 8601), event after RFC 5545 (date, start, end,
+  last_date, place, sort, about; repeat, every, on, times, repeat_until), view (month, year, mode); three denies (end,
+  last day, repeat end not before the start); aspect on_day and show; words; Romanian kind words in
+  w.lang.ro/shards/words-w.calendar (calendar added to the hand dictionary: n.e, calendare, k.words.calendar.noun.3).
+- Q92-w4 asks: expanding recurrences ([LIB] or host), "first Monday" rules, time zones from IANA tzdata, PSys2 use,
+  holidays as data.
+- Fixed on the way: ee130ff put three key words (culoare, la masa) into words-w.seating, which holds kind words only
+  (w.lang.ro.words red since); they are removed (the frame ro.make.name.place carries "la masa" as its own words; the
+  Romanian kit glosses keys through the English pivot). calendar leaves dictionary-unimorph (the hand dictionary wins;
+  UniMorph gives the same class, n.e).
+- Tests: w.schemas (a calendar session), w.lang.ro.words, w.lang.ro, k.kinds relations, joins report, structures,
+  catalog, validate, w.lang.en.

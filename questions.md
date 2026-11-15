@@ -1286,3 +1286,31 @@ session in tests/w.schemas.test.mjs shows the events with their title and time.
    schema; a host that opens its timeline tab for "calendar" keeps that word as its own.
 5. The four denies (an event inside its timeline, its end after its start) stay the schema's; the host does not take
    them until its executor checks `core.deny` (as plan.seating's same-seat deny in Q85).
+
+## Q92-w4 [PSYS2] (reviewer 19:05 item 2, fourth worker, 2026-11-15): a general calendar world, w.calendar (proposal; version 1 built where nothing contradicts it)
+
+Read: k.time (months with their days, weekdays with the weekend, the week and the year as spans), PSys2's
+plan.timeline (a row of moments by one number; months and weekdays placed by their position in the cycle) and
+kids.time (227 test sentences: weekday and month arithmetic, "today is Friday", lengths, the 12-hour clock; none with a
+date, a recurring event or a grid). No real row of sources/psys2-eval names a calendar, a date or a recurring event, so
+nothing contradicts the standard terms.
+**Built, w.calendar 1** (docs/worlds/w.calendar, a session in tests/w.schemas.test.mjs):
+- calendar: name, `week_starts` (Monday by ISO 8601, or Sunday; joined to k.time.weekday);
+- event after RFC 5545 (iCalendar VEVENT): title, calendar, `date` (time.date, DTSTART), `start` / `end` (time.clock;
+  none = all-day), `last_date`, place, sort, about; recurrence (RRULE): `repeat` daily|weekly|monthly|yearly (FREQ),
+  `every` (INTERVAL), `on` many weekdays (BYDAY, joined to k.time.weekday), `times` (COUNT), `repeat_until` (UNTIL);
+- view: `month` (joined to k.time.month), `year`, `mode` month|week|day; aspect on_day; show on events;
+- three denies: end not before start, last_date not before date, repeat_until not before date.
+**Asked (not built):**
+1. Expanding a rule into its days ("which days is swimming in November?") is computation: the library's [LIB] (an
+   `occurrences(event, from, to)` over RFC 5545 rules) or the host; the schema keeps the rule only. Agree?
+2. BYMONTHDAY / BYSETPOS ("the first Monday of the month", "on the 15th") are left out of version 1; add `on_day`
+   (1..31) and `nth` (1..5, -1 for the last) when a real row asks?
+3. Time zones: a `time_zone` key on the calendar joined to k.time facts of the IANA time zone database (names and UTC
+   offsets) with the first worker; IANA tzdata is public domain. Proceed?
+4. PSys2: plan.timeline stays a row of moments; a host calendar tab would import w.calendar the way plan.timeline
+   imports w.timeline. kids.time would use only `week_starts` and k.time (it has no dates); its "today is Friday" is a
+   session fact, not a calendar event. A host that answers "what day is 2026-11-20?" uses the library's `weekday`
+   builtin over a time.date, not this world.
+5. Public holidays per country are data (Nager.Date is MIT, Wikidata CC0) for a k.* world later, not part of the
+   schema.

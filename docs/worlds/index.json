@@ -1,5 +1,5 @@
 {
- "version": "1791f2abb754",
+ "version": "8d0b8735e055",
  "sopworld": "ad4d456",
  "worlds": [
   {
@@ -31823,8 +31823,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 293,
-     "bytes": 53775,
+     "wires": 300,
+     "bytes": 55172,
      "keys": [
       "assigned",
       "assignment",
@@ -31942,6 +31942,13 @@
       "value",
       "value_of",
       "values by category",
+      "w.calendar",
+      "w.calendar.calendar",
+      "w.calendar.event",
+      "w.calendar.event.calendar",
+      "w.calendar.event.date",
+      "w.calendar.event.last_date",
+      "w.calendar.event.start",
       "w.chart",
       "w.chart.chart",
       "w.chart.chart.unit",
@@ -91240,6 +91247,23 @@
      "warnings": []
     },
     {
+     "id": "w.lang.ro/shards/words-w.calendar",
+     "path": "w.lang.ro/shards/words-w.calendar.sop",
+     "wires": 4,
+     "bytes": 934,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.w.calendar.world: w.lang.ro.word.w.calendar.world: means=w.calendar of=std.schema.world.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.calendar.calendar: w.lang.ro.word.w.calendar.calendar: means=w.calendar.calendar names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.calendar.event: w.lang.ro.word.w.calendar.event: means=w.calendar.event names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.w.calendar.view: w.lang.ro.word.w.calendar.view: means=w.calendar.view names no action, type, key or value of the matrix"
+     ]
+    },
+    {
      "id": "w.lang.ro/shards/words-w.chart",
      "path": "w.lang.ro/shards/words-w.chart.sop",
      "wires": 4,
@@ -91363,8 +91387,8 @@
     {
      "id": "w.lang.ro/shards/words-w.seating",
      "path": "w.lang.ro/shards/words-w.seating.sop",
-     "wires": 7,
-     "bytes": 1365,
+     "wires": 4,
+     "bytes": 910,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -91374,10 +91398,7 @@
       "unknown-word w.lang.ro.word.w.seating.world: w.lang.ro.word.w.seating.world: means=w.seating of=std.schema.world.name names no action, type, key or value of the matrix",
       "unknown-word w.lang.ro.word.w.seating.table: w.lang.ro.word.w.seating.table: means=w.seating.table names no action, type, key or value of the matrix",
       "unknown-word w.lang.ro.word.w.seating.seat: w.lang.ro.word.w.seating.seat: means=w.seating.seat names no action, type, key or value of the matrix",
-      "unknown-word w.lang.ro.word.w.seating.guest: w.lang.ro.word.w.seating.guest: means=w.seating.guest names no action, type, key or value of the matrix",
-      "unknown-word w.lang.ro.word.w.seating.table.colour: w.lang.ro.word.w.seating.table.colour: means=w.seating.table.colour names no action, type, key or value of the matrix",
-      "unknown-word w.lang.ro.word.w.seating.guest.colour: w.lang.ro.word.w.seating.guest.colour: means=w.seating.guest.colour names no action, type, key or value of the matrix",
-      "unknown-word w.lang.ro.word.w.seating.guest.table: w.lang.ro.word.w.seating.guest.table: means=w.seating.guest.table names no action, type, key or value of the matrix"
+      "unknown-word w.lang.ro.word.w.seating.guest: w.lang.ro.word.w.seating.guest: means=w.seating.guest names no action, type, key or value of the matrix"
      ]
     },
     {
@@ -91428,7 +91449,7 @@
      "path": "docs/worlds/w.lang.ro/dictionary",
      "format": "tsv",
      "files": 21,
-     "bytes": 16159,
+     "bytes": 16198,
      "sources": [
       "hand-core-1"
      ],
@@ -91439,7 +91460,7 @@
      "path": "docs/worlds/w.lang.ro/dictionary-unimorph",
      "format": "tsv",
      "files": 23,
-     "bytes": 67498,
+     "bytes": 67482,
      "sources": [
       "unimorph-ron-2026-11-14"
      ],
@@ -91450,6 +91471,103 @@
   }
  ],
  "schemas": [
+  {
+   "id": "w.calendar",
+   "version": "1",
+   "schema": "w.calendar/schema.sop",
+   "depends": [],
+   "about": "calendars: events on the days of a month",
+   "names": [
+    "calendar",
+    "calendars",
+    "diary",
+    "planner",
+    "agenda",
+    "wall calendar"
+   ],
+   "kinds": [
+    {
+     "type": "w.calendar.calendar",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "week_starts"
+     ],
+     "words": [
+      "calendar",
+      "calendars"
+     ]
+    },
+    {
+     "type": "w.calendar.event",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "pick",
+      "ask",
+      "copy",
+      "group",
+      "show"
+     ],
+     "attributes": [
+      "title",
+      "calendar",
+      "date",
+      "start",
+      "end",
+      "last_date",
+      "place",
+      "sort",
+      "about",
+      "repeat",
+      "every",
+      "on",
+      "times",
+      "repeat_until"
+     ],
+     "words": [
+      "event",
+      "events",
+      "appointment",
+      "appointments",
+      "meeting",
+      "meetings"
+     ]
+    },
+    {
+     "type": "w.calendar.view",
+     "acts": [
+      "make",
+      "change",
+      "ask"
+     ],
+     "attributes": [
+      "month",
+      "year",
+      "mode"
+     ],
+     "words": [
+      "month",
+      "view"
+     ]
+    }
+   ],
+   "wires": 64,
+   "bytes": 10467,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
   {
    "id": "w.chart",
    "version": "1",

@@ -40,7 +40,7 @@ export const CONSTRAINTS = [
   ['assignment', 'capacity', 'capacity', 'container', 'a container takes at most as many slots or items as its capacity', ['w.seating'], ['w.seating.room']],
   ['assignment', 'within', 'order', 'assigned', 'the slot an item is given lies inside the bounds of its container', ['w.timeline'], ['w.timeline.inside.before', 'w.timeline.inside.after', 'w.timeline.inside.lasts_after']],
   ['whole with parts', 'one_of_each_kind', 'distinct', 'part_kind', 'a whole has at most one part of each kind', ['w.face'], ['w.face.one']],
-  ['sequence', 'ends_after_start', 'order', 'end', 'an element does not end before its position', ['w.timeline'], ['w.timeline.order.ends']],
+  ['sequence', 'ends_after_start', 'order', 'end', 'an element does not end before its position', ['w.timeline', 'w.calendar'], ['w.timeline.order.ends', 'w.calendar.order.last_day']],
   ['sequence', 'distinct_positions', 'distinct', 'position', 'no two elements of one sequence share a position', ['k.genres', 'k.procedures', 'k.story'], []],
   ['graph', 'no_self_link', 'distinct', 'link', 'a link joins a node to another node, never to itself', ['k.geo'], []],
 ];
@@ -85,6 +85,9 @@ export const FORMS = [
   ['w.timeline', 'assignment', 'each event is given a time of its timeline; an event stays inside its timeline', [
     ['item', 'w.timeline.event', T], ['slot', 'w.timeline.event.at', K], ['assigned', 'w.timeline.event.at', K], ['container', 'w.timeline.timeline', T], ['constraint', 'w.timeline.timeline.from', K], ['constraint', 'w.timeline.timeline.to', K]]],
   ['w.timeline', 'graph', 'events are linked (leads to, causes)', [['node', 'w.timeline.event', T], ['link', 'connect', A]]],
+  ['w.calendar', 'sequence', 'events in order of their dates on a calendar (an event of several days ends on its last date)', [
+    ['element', 'w.calendar.event', T], ['position', 'w.calendar.event.date', K], ['position', 'w.calendar.event.start', K], ['sequence', 'w.calendar.calendar', T], ['element_of', 'w.calendar.event.calendar', K],
+    ['end', 'w.calendar.event.last_date', K]]],
   ['w.list', 'sequence', 'items in order on a list', [['element', 'w.list.item', T], ['position', 'w.list.item.n', K], ['sequence', 'w.list.list', T], ['element_of', 'w.list.item.list', K]]],
   ['w.tasks', 'sequence', 'tasks in order on a to-do list (a list of w.list)', [['element', 'w.tasks.task', T], ['position', 'w.tasks.task.n', K], ['element_of', 'w.tasks.task.list', K]]],
   ['w.person', 'graph', 'a person linked to their relatives (a relative of a relation) and to what they like or dislike', [['node', 'w.person.person', T], ['link', 'w.person.relative', T], ['from', 'w.person.relative.of', K], ['label', 'w.person.relative.relation', K], ['link', 'w.person.taste', T], ['from', 'w.person.taste.of', K], ['label', 'w.person.taste.stance', K]]],

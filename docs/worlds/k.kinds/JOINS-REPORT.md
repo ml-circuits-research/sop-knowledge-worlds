@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **239** in 36 worlds; distinct values 10830, meeting a target 10771 (99.5 %), open 59
+- declared joins: **242** in 37 worlds; distinct values 10830, meeting a target 10771 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **48**; left undeclared on purpose: 5; keys with an enum, never suggested: 38
 
@@ -230,6 +230,9 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.wearables | `k.wearables.wearable.drawing` | `k.objects.object` | name | 91 | 91 |  |
 | k.wearables | `k.wearables.wearable.face_slot` | `k.faces.slot` | name | 4 | 4 |  |
 | k.wearables | `k.wearables.wearable.worn_on` | `k.wearables.place` | name | 14 | 14 |  |
+| w.calendar | `w.calendar.calendar.week_starts` | `k.time.weekday` | name | 0 | 0 |  |
+| w.calendar | `w.calendar.event.on` | `k.time.weekday` | name | 0 | 0 |  |
+| w.calendar | `w.calendar.view.month` | `k.time.month` | name | 0 | 0 |  |
 | w.document | `w.document.document.genre` | `k.genres.genre` | name | 0 | 0 |  |
 | w.document | `w.document.document.register` | `k.genres.register` | name | 0 | 0 |  |
 | w.document | `w.document.sentence.move` | `k.genres.move` | name | 0 | 0 |  |

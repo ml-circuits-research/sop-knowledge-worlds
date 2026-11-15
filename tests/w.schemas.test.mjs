@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('ten world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.person', 'w.seating', 'w.tasks', 'w.timeline']);
+test('eleven world schemas; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.calendar', 'w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.person', 'w.seating', 'w.tasks', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
@@ -33,7 +33,7 @@ test('ten world schemas; each names no function, loads with std.acts, has words,
     assert.deepEqual(index.schemas.find((x) => x.id === s.id), d.entry, s.id);
     assert.match(s.schemaText, /^# license: CC0-1\.0$/m);
   }
-  // All nine together in one world: no name of one clashes with another.
+  // All of them together in one world: no name of one clashes with another.
   assert.deepEqual(actsWorld().warnings ?? [], []);
 });
 
@@ -184,6 +184,27 @@ test('a session with a timeline: events with their time, moved later and back, p
   const shown = act('show', { thing: 'w.timeline.event', set: 'each', view: 'w.timeline' }).result.things;
   assert.deepEqual(shown.map((t) => [tok(t.values.title), String(t.values.at)]), [['first person on the Moon', '1969'], ['first satellite', '1957']]);
   assert.equal(act('show', { thing: 'w.timeline.timeline', set: 'each', view: 'w.timeline' }).ok, false);
+});
+
+test('w.calendar (Q92-w4): a weekly event on two weekdays, a yearly birthday, the month grid; the ends of an event in order', () => {
+  const w = actsWorld(['w.calendar']), act = session(w);
+  assert.equal(act('make', { kind: 'w.calendar.calendar', name: 'family' }).ok, true);
+  assert.equal(act('ask', { thing: 'w.calendar.calendar', attr: 'week_starts' }).result.value, 'Monday');
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'swimming', date: '2026-11-16', start: '17:00', end: '18:00', repeat: 'weekly', on: ['Monday', 'Thursday'], calendar: '$w_calendar_calendar1' }).ok, true);
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'birthday', date: '2027-03-04', repeat: 'yearly' }).ok, true);
+  assert.equal(act('ask', { thing: 'w_calendar_event2', attr: 'every' }).result.value, '1');
+  // refused: an end before the start, a last day before the first, a repeat that stops before it begins, no such date
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'dentist', date: '2026-11-20', start: '10:30', end: '09:00' }).violations[0].why, 'An event does not end before it starts: 09:00 is before 10:30.');
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'holiday', date: '2026-12-22', last_date: '2026-12-20' }).ok, false);
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'club', date: '2026-12-01', repeat: 'monthly', repeat_until: '2026-11-01' }).ok, false);
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'party', date: '2026-02-30' }).ok, false);
+  assert.equal(act('make', { kind: 'w.calendar.event', title: 'party', date: '2026-11-21', on: 'Funday' }).ok, false);
+  // the grid of November 2026 shows the events; by week; the weekly ones picked
+  assert.equal(act('make', { kind: 'w.calendar.view', month: 'November', year: 2026 }).ok, true);
+  const shown = act('show', { thing: 'w.calendar.event', set: 'each', view: 'w.calendar' }).result.things;
+  assert.deepEqual(shown.map((t) => [tok(t.values.title), t.values.date, t.values.repeat]), [['swimming', '2026-11-16', 'weekly'], ['birthday', '2027-03-04', 'yearly']]);
+  assert.equal(act('change', { thing: 'w.calendar.view', attr: 'mode', value: 'week' }).ok, true);
+  assert.deepEqual(act('pick', { kind: 'w.calendar.event', repeat: 'weekly' }).result.things, ['w_calendar_event1']);
 });
 
 test('w.seating, the acts the case corpus needs: tables placed, linked and grouped; guests copied and placed', () => {

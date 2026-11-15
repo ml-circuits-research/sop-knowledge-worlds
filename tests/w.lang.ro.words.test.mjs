@@ -13,7 +13,7 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const dir = join(WORLDS_DIR, 'w.lang.ro', 'shards');
 const files = readdirSync(dir).filter((f) => /^words-w\./.test(f));
-const SCHEMAS = ['w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.person', 'w.seating', 'w.tasks', 'w.timeline'];
+const SCHEMAS = ['w.calendar', 'w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.person', 'w.seating', 'w.tasks', 'w.timeline'];
 
 test('every published world schema has a Romanian words shard; its kinds there have an English word in the schema', () => {
   assert.deepEqual(files.map((f) => f.slice(6, -4)).sort(), SCHEMAS);

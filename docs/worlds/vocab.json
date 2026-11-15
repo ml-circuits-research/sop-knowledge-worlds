@@ -2016,6 +2016,7 @@
   "k.wearables/schema.sop",
   "k.words/shards/ab",
   "k.words/shards/frequency-a",
+  "w.calendar/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
   "w.lang.en/shards/closed-classes",
@@ -3479,7 +3480,8 @@
  "agenda": [
   "k.genres/shards/presentation",
   "k.words/shards/ag",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "w.calendar/schema.sop"
  ],
  "agent": [
   "k.kinds/shards/wordnet-1",
@@ -6957,7 +6959,11 @@
  ],
  "appointment": [
   "k.words/shards/ap",
-  "k.words/shards/frequency-a"
+  "k.words/shards/frequency-a",
+  "w.calendar/schema.sop"
+ ],
+ "appointments": [
+  "w.calendar/schema.sop"
  ],
  "appraisal": [
   "k.attributes/shards/narration",
@@ -8706,6 +8712,7 @@
   "k.units/shards/measures",
   "k.words/shards/at",
   "k.words/shards/frequency-a",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/prepositions",
   "w.map/schema.sop",
@@ -21285,6 +21292,7 @@
   "k.procedures/schema.sop",
   "k.words/shards/by",
   "k.words/shards/frequency-b",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions",
@@ -23000,7 +23008,11 @@
   "k.scenes/shards/scenes-indoors",
   "k.scenes/shards/things-c",
   "k.words/shards/ca",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.calendar/schema.sop"
+ ],
+ "calendars": [
+  "w.calendar/schema.sop"
  ],
  "calf": [
   "k.attributes/shards/drawn-hand",
@@ -23044,6 +23056,7 @@
  ],
  "called": [
   "k.animals/schema.sop",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -33208,6 +33221,7 @@
   "k.units/shards/measures",
   "k.words/shards/co-2",
   "k.words/shards/frequency-c",
+  "w.calendar/schema.sop",
   "w.person/schema.sop"
  ],
  "count per part": [
@@ -37933,6 +37947,7 @@
   "k.kinds/shards/wordnet-1",
   "k.words/shards/da",
   "k.words/shards/frequency-d",
+  "w.calendar/schema.sop",
   "w.timeline/schema.sop",
   "k.objects/shards/noto-clothing-06",
   "k.objects/shards/noto-office-01",
@@ -38039,6 +38054,7 @@
   "k.units/shards/core",
   "k.words/shards/da",
   "k.words/shards/frequency-d",
+  "w.calendar/schema.sop",
   "k.objects/shards/noto-sky-weather-02"
  ],
  "day care": [
@@ -38078,7 +38094,8 @@
   "k.units/shards/core",
   "k.units/shards/measures",
   "k.words/shards/da",
-  "k.words/shards/frequency-d"
+  "k.words/shards/frequency-d",
+  "w.calendar/schema.sop"
  ],
  "daytime": [
   "k.words/shards/da",
@@ -39928,6 +39945,7 @@
  "diary": [
   "k.words/shards/di",
   "k.words/shards/frequency-d",
+  "w.calendar/schema.sop",
   "k.objects/shards/mulberry-food-dairy-01",
   "k.objects/shards/mulberry-food-dairy-02",
   "k.objects/shards/mulberry-food-eggs-01",
@@ -46898,6 +46916,7 @@
   "k.objects/shards/mulberry-work-and-school-stationery-01",
   "k.words/shards/en",
   "k.words/shards/frequency-e",
+  "w.calendar/schema.sop",
   "w.diagram/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -46950,7 +46969,11 @@
  ],
  "ends": [
   "k.time/schema.sop",
+  "w.calendar/schema.sop",
   "w.timeline/schema.sop"
+ ],
+ "ends on": [
+  "w.calendar/schema.sop"
  ],
  "ends_about": [
   "k.attributes/shards/aspects",
@@ -48136,10 +48159,12 @@
   "k.motion/schema.sop",
   "k.words/shards/ev",
   "k.words/shards/frequency-e",
+  "w.calendar/schema.sop",
   "w.timeline/schema.sop"
  ],
  "events": [
   "k.motion/schema.sop",
+  "w.calendar/schema.sop",
   "w.timeline/schema.sop"
  ],
  "eventually": [
@@ -48181,6 +48206,7 @@
   "k.values/shards/sets",
   "k.words/shards/ev",
   "k.words/shards/frequency-e",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/grammar"
  ],
@@ -52558,6 +52584,9 @@
   "k.scenes/shards/things-f",
   "k.shapes/shards/shapes"
  ],
+ "first day": [
+  "w.calendar/schema.sop"
+ ],
  "first gear": [
   "k.kinds/shards/part_of-wordnet-2"
  ],
@@ -55603,6 +55632,7 @@
   "k.layouts/schema.sop",
   "k.parts/schema.sop",
   "k.procedures/schema.sop",
+  "w.calendar/schema.sop",
   "w.diagram/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/prepositions",
@@ -69926,6 +69956,7 @@
   "k.space/schema.sop",
   "k.words/shards/frequency-i",
   "k.words/shards/in",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -71192,7 +71223,8 @@
   "k.music/schema.sop",
   "k.units/shards/measures",
   "k.words/shards/frequency-i",
-  "k.words/shards/in"
+  "k.words/shards/in",
+  "w.calendar/schema.sop"
  ],
  "intervals": [
   "k.music/schema.sop"
@@ -76816,6 +76848,7 @@
   "k.words/schema.sop",
   "k.words/shards/frequency-k",
   "k.words/shards/ki",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -79271,6 +79304,9 @@
   "w.lang.en/shards/numbers",
   "k.objects/shards/noto-sky-weather-01",
   "k.objects/shards/noto-sky-weather-02"
+ ],
+ "last day": [
+  "w.calendar/schema.sop"
  ],
  "last quarter moon": [
   "k.attributes/shards/drawn-noto",
@@ -87952,7 +87988,11 @@
  ],
  "meeting": [
   "k.words/shards/frequency-m",
-  "k.words/shards/me"
+  "k.words/shards/me",
+  "w.calendar/schema.sop"
+ ],
+ "meetings": [
+  "w.calendar/schema.sop"
  ],
  "meg": [
   "k.people/shards/given-names-m",
@@ -90336,7 +90376,8 @@
   "k.kinds/shards/relations-music",
   "k.music/schema.sop",
   "k.words/shards/frequency-m",
-  "k.words/shards/mo"
+  "k.words/shards/mo",
+  "w.calendar/schema.sop"
  ],
  "model": [
   "k.words/shards/frequency-m",
@@ -90956,6 +90997,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop"
  ],
  "monthly": [
@@ -91190,6 +91232,7 @@
   "k.values/shards/scales",
   "k.words/shards/frequency-m",
   "k.words/shards/mo",
+  "w.calendar/schema.sop",
   "w.document/schema.sop",
   "w.lang.en/shards/arithmetic",
   "w.timeline/schema.sop"
@@ -93611,6 +93654,7 @@
   "k.values/schema.sop",
   "k.words/shards/frequency-n",
   "k.words/shards/na",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.face/schema.sop",
@@ -97768,6 +97812,7 @@
   "k.wearables/schema.sop",
   "k.words/shards/frequency-o",
   "k.words/shards/on",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.lang.en/shards/closed-classes",
@@ -105021,6 +105066,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-p",
   "k.words/shards/pl",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -105186,7 +105232,8 @@
  ],
  "planner": [
   "k.words/shards/frequency-p",
-  "k.words/shards/pl"
+  "k.words/shards/pl",
+  "w.calendar/schema.sop"
  ],
  "planning": [
   "k.words/shards/frequency-p",
@@ -111631,6 +111678,9 @@
  "rectangular prism": [
   "k.shapes/shards/shapes"
  ],
+ "recurring": [
+  "w.calendar/schema.sop"
+ ],
  "recycle": [
   "k.words/shards/frequency-r",
   "k.words/shards/re"
@@ -112521,13 +112571,17 @@
  "repeat": [
   "k.actions/shards/verbs-copy",
   "k.words/shards/frequency-r",
-  "k.words/shards/re"
+  "k.words/shards/re",
+  "w.calendar/schema.sop"
  ],
  "repeat max": [
   "k.motion/schema.sop"
  ],
  "repeat min": [
   "k.motion/schema.sop"
+ ],
+ "repeat until": [
+  "w.calendar/schema.sop"
  ],
  "repeat_max": [
   "k.attributes/shards/narration",
@@ -112548,6 +112602,9 @@
  "repeating": [
   "k.words/shards/frequency-r",
   "k.words/shards/re"
+ ],
+ "repeats": [
+  "w.calendar/schema.sop"
  ],
  "repent": [
   "k.words/shards/frequency-r",
@@ -123522,7 +123579,8 @@
   "k.objects/shards/noto-place-map-01"
  ],
  "shown": [
-  "k.procedures/shards/from-knowledge"
+  "k.procedures/shards/from-knowledge",
+  "w.calendar/schema.sop"
  ],
  "shown in": [
   "k.attributes/schema.sop"
@@ -126780,6 +126838,7 @@
   "k.procedures/shards/from-knowledge",
   "k.words/shards/frequency-s",
   "k.words/shards/so",
+  "w.calendar/schema.sop",
   "w.list/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -129216,6 +129275,7 @@
   "k.objects/shards/things-2",
   "k.words/shards/frequency-s",
   "k.words/shards/st",
+  "w.calendar/schema.sop",
   "w.diagram/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -129248,6 +129308,7 @@
  ],
  "starts": [
   "k.time/schema.sop",
+  "w.calendar/schema.sop",
   "w.timeline/schema.sop"
  ],
  "starts_about": [
@@ -130199,6 +130260,9 @@
  "stops": [
   "k.words/shards/frequency-s",
   "k.words/shards/st"
+ ],
+ "stops on": [
+  "w.calendar/schema.sop"
  ],
  "stopwatch": [
   "k.attributes/shards/drawn-noto",
@@ -138085,6 +138149,7 @@
   "k.scenes/shards/things-t",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
+  "w.calendar/schema.sop",
   "w.timeline/schema.sop"
  ],
  "tilt": [
@@ -138214,6 +138279,7 @@
  "times": [
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/arithmetic"
  ],
  "times as many as": [
@@ -138566,6 +138632,7 @@
   "k.procedures/shards/tasks",
   "k.words/shards/frequency-t",
   "k.words/shards/ti",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -142535,6 +142602,7 @@
   "k.words/schema.sop",
   "k.words/shards/frequency-t",
   "k.words/shards/ty",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
   "w.document/schema.sop",
@@ -143467,6 +143535,7 @@
   "k.attributes/shards/typical",
   "k.kinds/shards/relations-motion",
   "k.motion/schema.sop",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-joins",
   "w.lang.en/shards/prepositions",
@@ -145336,6 +145405,7 @@
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-v",
   "k.words/shards/vi",
+  "w.calendar/schema.sop",
   "w.map/schema.sop",
   "k.objects/shards/noto-household-01"
  ],
@@ -146143,6 +146213,27 @@
  "w. branch susquehanna": [
   "k.geo/shards/north-america"
  ],
+ "w.calendar": [
+  "k.kinds/shards/structures"
+ ],
+ "w.calendar.calendar": [
+  "k.kinds/shards/structures"
+ ],
+ "w.calendar.event": [
+  "k.kinds/shards/structures"
+ ],
+ "w.calendar.event.calendar": [
+  "k.kinds/shards/structures"
+ ],
+ "w.calendar.event.date": [
+  "k.kinds/shards/structures"
+ ],
+ "w.calendar.event.last_date": [
+  "k.kinds/shards/structures"
+ ],
+ "w.calendar.event.start": [
+  "k.kinds/shards/structures"
+ ],
  "w.chart": [
   "k.kinds/shards/structures"
  ],
@@ -146750,6 +146841,9 @@
   "k.story/shards/goals-obstacles",
   "k.words/shards/frequency-w",
   "k.words/shards/wa"
+ ],
+ "wall calendar": [
+  "w.calendar/schema.sop"
  ],
  "wall panel": [
   "k.kinds/shards/part_of-wordnet-3"
@@ -147879,6 +147973,9 @@
   "k.words/shards/frequency-w",
   "k.words/shards/we"
  ],
+ "week starts": [
+  "w.calendar/schema.sop"
+ ],
  "weekday": [
   "k.attributes/shards/aspects",
   "k.time/schema.sop",
@@ -148281,6 +148378,7 @@
   "k.words/shards/wh"
  ],
  "what": [
+  "w.calendar/schema.sop",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
@@ -148526,6 +148624,7 @@
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-procedures",
   "k.procedures/schema.sop",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
@@ -148546,6 +148645,7 @@
   "k.scenes/schema.sop",
   "k.units/schema.sop",
   "k.wearables/schema.sop",
+  "w.calendar/schema.sop",
   "w.lang.en/shards/clauses",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/ellipsis",
@@ -151220,6 +151320,7 @@
   "k.units/shards/measures",
   "k.words/shards/frequency-y",
   "k.words/shards/ye",
+  "w.calendar/schema.sop",
   "w.chart/schema.sop",
   "w.timeline/schema.sop"
  ],
