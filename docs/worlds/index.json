@@ -1,5 +1,5 @@
 {
- "version": "8de5d9848449",
+ "version": "566df48de059",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -87881,6 +87881,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/question-frames",
+     "path": "w.lang.en/shards/question-frames.sop",
+     "wires": 47,
+     "bytes": 9353,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/role-frames",
      "path": "w.lang.en/shards/role-frames.sop",
      "wires": 294,
@@ -87935,7 +87947,7 @@
      "id": "w.lang.en/shards/variants",
      "path": "w.lang.en/shards/variants.sop",
      "wires": 53,
-     "bytes": 33532,
+     "bytes": 33879,
      "keys": [],
      "sources": [
       "hand-core-1"

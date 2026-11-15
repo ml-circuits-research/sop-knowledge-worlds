@@ -421,6 +421,18 @@ and kids.tasks worlds (`tests/w.lang.en.list-frames.test.mjs`). Not read: "Chang
 other worlds: "I should tell you something" (a conversation, PSys2 Q18 K3) reads as a task here, and "how much is 7 plus
 5" (arithmetic, K4) as a price; those frames must outrank these when they come (questions.md Q71).
 
+## Questions in other word orders (reviewer 09:20, PSys2 Q18 K10)
+
+Shard `question-frames` (`tools/lang-en-question-frames.mjs`; 7 frames, `needs=facts`, set acts.facts, the host lexicon
+`attribute` as the facts frames use it): the number asked last ("April has how many days?", count.tail), "how many days
+are in April?" (count.in, over the "how many people live in" frame), how far in a cycle ("Friday is how many days
+away?", "how many days until Saturday?": the unit counted is the topic, the end the thing; std.time counts it, PSys2
+Q18 L2), the members of a set ("which months are in summer?" as "name the months of spring": topic months, thing
+summer), "name all the seasons of the year", "what are the seasons?". PSys2's real row r0244 "how many legs has a cow"
+already reads with acts.facts.ask.count.does (ask count, topic legs, thing cow) once the host's attribute lexicon has
+"legs" (k.attributes); `tests/w.lang.en.question-frames.test.mjs` reads it and the 10 kids.time sentences of K10 with
+the lexicon taken from k.attributes and k.time (11 of 11).
+
 ## Joins
 
 - **k.values:** the numerals, ordinals and numeral determiners have the values of `k.values.number` (a test); the

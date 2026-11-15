@@ -5558,3 +5558,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   lemmas, stanga, pamant, linie as before; no new collision among the 3,728 lemmas of both dictionaries and the closed
   forms (săptămînă, UniMorph's old spelling of săptămână, is the one join, and it is the same word). Shorter stems
   refused: cit (câți = citi), pin (spin = spân). Round trips 3,028 / 3,028 exact and folded.
+
+## 2026-11-15 — fourth worker: question frames in other word orders (reviewer 09:20, PSys2 Q18 K10; real row r0244)
+
+- w.lang.en shard `question-frames` (tools/lang-en-question-frames.mjs, no input; 7 frames, 47 wires, 9,353 bytes,
+  CC0, own; needs=facts): count.tail ("April has how many days?"), count.in ("How many days are in April?", over
+  acts.facts.ask.live), count.away ("Friday is how many days away?"), count.until ("How many days until Saturday?"),
+  which.in ("Which months are in summer?"), name.all ("Name all the seasons of the year."), what.are ("What are the
+  seasons?").
+- **r0244** "how many legs has a cow" already reads in w.lang.en: acts.facts.ask.count.does (ask count, topic legs,
+  thing cow), with the host's attribute lexicon holding "legs" (a k.attributes attribute). Its failure in PSys2 is the
+  host's routing or lexicon, not a missing frame (told here for PSys2).
+- tests/w.lang.en.question-frames.test.mjs (2 tests, < 2 s): r0244 and the 10 kids.time sentences of K10 read with the
+  right act, mode and roles, 11 of 11, the lexicon from k.attributes and k.time. Frames test: 441 frames, 425 best,
+  11 tie, 5 known (all 7 new read best).
