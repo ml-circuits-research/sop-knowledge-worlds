@@ -4,7 +4,7 @@
 // every source, from sources/<id>/SOURCE.md). Deterministic: sorted, no dates; a rerun gives no diff.
 //   node tools/build-catalog.mjs [worlds-dir]      write the files
 //   node tools/build-catalog.mjs --check           exit 1 when the files on disk are not what a build gives
-import { worldOfWordsShard } from './lib/words-shards.mjs';
+import { worldOfWordsShard, isOwnWordsShard } from './lib/words-shards.mjs';
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { dataFolders } from './lib/licenses.mjs';
 import { join, relative } from 'node:path';
@@ -155,7 +155,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       const keys = [];
       for (const w of wires) {
         if (w.type === 'core.word') {
-          // the words of another world, in its language world's shard words-<world> (Q78): read below as that world's own
+          // a world's words shard (beside the world, or another language's words-<world>): read below as the world's own
           if (!worldOfWordsShard(shard.id)) for (const t of w.attrs.text ?? []) addWord(text(t), shard.id, kindOfWord(w));
           continue;
         }
@@ -186,9 +186,9 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
     // Words of the schema: a word for a value goes to the shards holding that value under that key; a word for a
     // type or a key of the world goes to the world's schema path (the host then knows the world is relevant and
     // picks its shards by the other words of the message).
-    // (and the words of the world in the shards words-<world> of the language worlds, Q78: read exactly as schema words)
-    // vocab.json is English: only w.lang.en's words shards count; another language's words shards are its own
-    const wordsShards = worlds.flatMap((x) => x.shards).filter((sh) => worldOfWordsShard(sh.id) === world.id && sh.id.startsWith('w.lang.en/'));
+    // (and the English words of the world in its own shard words, beside it (owner 08:10): read exactly as schema words)
+    // vocab.json is English: another language's words shards (w.lang.ro words-<world>) are not in it
+    const wordsShards = world.shards.filter((sh) => isOwnWordsShard(sh.id, world.id));
     for (const w of [...parse(world.schemaText), ...wordsShards.flatMap((sh) => parse(sh.text))]) {
       if (w.type !== 'core.word') continue;
       const means = text(w.attrs.means?.[0] ?? '');

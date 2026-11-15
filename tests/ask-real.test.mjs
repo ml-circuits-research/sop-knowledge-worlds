@@ -59,7 +59,7 @@ test('the real questions: at least 113 of the 132 Talk failures, 34 of the 40 kn
 test('a word for every key: each schema ends with the block of tools/key-words.mjs; every key of a named type has a word', () => {
   for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) { // a grammar world's keys (lhs, rhs) are not what people ask for
     const text = readFileSync(join(w.dir, 'schema.sop'), 'utf8');
-    if (hasWordsShard(w.id)) { // Q78: the words of the world live in w.lang.en's shard words-<world>, the block at its end
+    if (hasWordsShard(w.id)) { // the English words of the world live in its own shard words, the block at its end
       const words = readFileSync(wordsShardPath(w.id), 'utf8');
       assert.equal(words, withBlockIn(words, text), `${w.id}: run node tools/key-words.mjs`);
       assert.ok(words.includes(START), w.id);

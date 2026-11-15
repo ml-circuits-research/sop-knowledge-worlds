@@ -13,12 +13,14 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 
 1. **SOP Lang only for worlds.** Schemas and instances are `.sop` files. No JSON facts, no JS inside wires. Host functions
    are declared with `core.function` (sopworld 0.15.0) and are never needed to *read* a world.
-2. **English is the language of ids and keys; words of a language live in its language world** (KR3, reviewer
-   14:25). Type names, keys and enum values are English identifiers in every world. Wording meant to be said or read
-   (replies, explanations, word lists) belongs to the language world of its language (`w.lang.en`, `w.lang.ro`), in a
-   shard that world owns, joined to the neutral fact by name; a second language adds a shard there and changes no
-   other world. Proper names keep their own spelling (`Chișinău`). The `core.word` blocks of the k.* schemas are
-   English words still to move (KR3, world by world).
+2. **English is the language of ids and keys; a world's English words are stored beside the world** (owner's
+   decision 2026-11-15 08:10, reversing Q78 (1)). Type names, keys and enum values are English identifiers in every
+   world. The English words of a world (`core.word` facts for its types, keys and values) live in its own shard
+   `<world>/shards/words.sop` (ids `<world>.word.…`), or in its schema for a world without shards; no tool removes
+   that shard. `w.lang.en` holds what parsing and formalising need (grammar, morphology, frames, templates, function
+   words, number words, verb forms, catalog plurals, phrasings such as the feeling replies), not other worlds'
+   vocabulary. `w.lang.ro` may hold the whole Romanian vocabulary (`words-<world>` shards there): Romanian stays out
+   of the domain worlds. Proper names keep their own spelling (`Chișinău`).
 3. **One language, no notation inside values.** Use wires and repeated keys, never mini-grammars in strings
    (`a|b`, `x:y`, `?` as "optional"). `?x` is only a variable; `@` declares; `$` refers; `::` is a fact namespace;
    dots are part of names. If you need new syntax, stop and ask in `questions.md`.

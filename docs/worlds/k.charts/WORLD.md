@@ -23,8 +23,8 @@
 | `k.charts.rule` | `relationship`, `kind` | `rank` among the kinds for that relationship; conditions `categories_max`, `series` (one or several), `points_min`; `about` why; `source` |
 
 9 kinds (bar, grouped bar, stacked bar, line, area, pie, scatter, dot plot, histogram), 14 encodings in 4 rankings,
-7 relationships, 15 rules. Its English words (chart names, "share of a whole", "trend over time") are in w.lang.en
-(shard `words-k.charts`, KR3).
+7 relationships, 15 rules. Its English words (chart names, "share of a whole", "trend over time") are in its own
+shard `words` (beside the world).
 
 ## How a host uses it
 

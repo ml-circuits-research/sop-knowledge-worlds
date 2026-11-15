@@ -43,7 +43,7 @@ const val = (v) => (/^[^\s"\\$?@#][^\s"\\]*$/.test(v) ? v : JSON.stringify(v));
 export function keyWordBlock(schemaText, wordsText = '', idPrefix = null) {
   const wires = [...parse(schemaText), ...parse(withoutBlock(wordsText))];
   const world = wires.find((w) => w.type === 'core.module').attrs.name[0];
-  const prefix = idPrefix ?? `${world}.word.key`; // in a language world's words shard: w.lang.en.word.<world>.key
+  const prefix = idPrefix ?? `${world}.word.key`;
   const have = new Map(); // means -> Set(text)
   for (const w of wires) if (w.type === 'core.word') { const m = w.attrs.means?.[0]; if (!have.has(m)) have.set(m, new Set()); for (const t of w.attrs.text ?? []) have.get(m).add((t.startsWith('"') ? JSON.parse(t) : t).toLowerCase()); }
   const ids = new Map();
@@ -65,10 +65,10 @@ export function keyWordBlock(schemaText, wordsText = '', idPrefix = null) {
 
 export const withoutBlock = (text) => { const at = text.indexOf(`\n${START}`); return at < 0 ? text : `${text.slice(0, at).replace(/\n+$/, '')}\n`; };
 export const withBlock = (text) => { const base = withoutBlock(text); const block = keyWordBlock(base); return block ? `${base}\n${block}` : base; };
-// A world whose words live in its language world's shard words-<world> (Q78): the block goes at the end of that shard.
+// A world whose English words live in its own shard words (beside the world, owner 08:10): the block goes at the end of that shard.
 export const withBlockIn = (wordsText, schemaText) => {
   const base = withoutBlock(wordsText); const world = parse(schemaText).find((w) => w.type === 'core.module').attrs.name[0];
-  const block = keyWordBlock(schemaText, base, `w.lang.en.word.${world}.key`); return block ? `${base}\n${block}` : base; };
+  const block = keyWordBlock(schemaText, base, `${world}.word.key`); return block ? `${base}\n${block}` : base; };
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   let n = 0;

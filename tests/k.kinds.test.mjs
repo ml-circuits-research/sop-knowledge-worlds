@@ -16,7 +16,8 @@ const dir = join(WORLDS_DIR, 'k.kinds', 'shards');
 // the shards of tools/kinds-core.mjs (arguments, relations-* and structures are tools/relations-core.mjs' and
 // tools/structures-core.mjs', tested in tests/k.kinds.relations.test.mjs; sensitive is tools/sensitive-core.mjs',
 // tests/k.kinds.sensitive.test.mjs)
-const ownShard = (f) => f.endsWith('.sop') && !/^(arguments|relations-|structures|sensitive)/.test(f);
+// kinds-core.mjs owns every shard of k.kinds but those other tools write and the hand-written words shard (owner 08:10)
+const ownShard = (f) => f.endsWith('.sop') && !/^(arguments|relations-|structures|sensitive|words\.sop$)/.test(f);
 const up = new Map();
 for (const e of [...g.edges, ...g.told]) (up.get(e.name) ?? up.set(e.name, []).get(e.name)).push(e);
 const parents = (n) => (up.get(n) ?? []).map((e) => e.is_a).sort();
