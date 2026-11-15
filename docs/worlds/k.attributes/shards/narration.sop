@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (292 of 1131 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (292 of 1132 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -303,6 +303,7 @@
 @k.attributes.narration.k.faces.colour.natural k.attributes.narration type=k.faces.colour key=natural narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.name k.attributes.narration type=k.faces.preset key=name narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.style k.attributes.narration type=k.faces.preset key=style narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.preset.kind k.attributes.narration type=k.faces.preset key=kind narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.head k.attributes.narration type=k.faces.preset key=head narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.ears k.attributes.narration type=k.faces.preset key=ears narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.preset.neck k.attributes.narration type=k.faces.preset key=neck narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"

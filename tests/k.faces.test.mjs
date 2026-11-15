@@ -142,3 +142,15 @@ test('"what is the difference between the woman and the old woman": the keys whe
   assert.ok(!('head' in byKey) && !('style' in byKey), 'both have an oval head and the same style');
   assert.deepEqual(presetDifference(world, 'man', 'man'), []);
 });
+
+test('every preset has a kind of being, and the kind words (human, person, robot, alien) reach the presets (psys2 Q31)', () => {
+  const presets = world.ofType('k.faces.preset');
+  const kindOf = (p) => tok(p.attrs.kind?.[0] ?? '');
+  for (const p of presets) assert.ok(['human', 'robot', 'alien'].includes(kindOf(p)), tok(p.attrs.name[0]));
+  const words = world.ofType('core.word').filter((w) => (w.attrs.of || []).map(tok).includes('k.faces.preset.kind'));
+  const byWord = (text) => words.find((w) => w.attrs.text.map(tok).includes(text));
+  const named = (text) => presets.filter((p) => kindOf(p) === tok(byWord(text).attrs.means[0])).map((p) => tok(p.attrs.name[0]));
+  assert.ok(named('human').includes('queen') && named('person').includes('old woman'));
+  assert.deepEqual(named('robot'), ['robot']);
+  assert.deepEqual(named('alien'), ['alien']);
+});

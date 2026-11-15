@@ -11,7 +11,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 
 - declared joins: **243** in 37 worlds; distinct values 10834, meeting a target 10775 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 5; keys with an enum, never suggested: 38
+- undeclared keys whose values the value share joins to a type: **47**; left undeclared on purpose: 5; keys with an enum, never suggested: 39
 
 ## Declared joins
 
@@ -354,6 +354,7 @@ copied from another world (KR2: enums joined, not copied), which decides per enu
 | k.diagrams | `k.diagrams.kind.groups` | 2 | 2 | 2 | `k.values.reply` |
 | k.diagrams | `k.diagrams.shape.shape` | 11 | 11 | 6 | `k.shapes.shape` |
 | k.faces | `k.faces.colour.of` | 4 | 4 | 2 | `k.body.part` |
+| k.faces | `k.faces.preset.kind` | 3 | 3 | 2 | `k.faces.preset` |
 | k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.layouts.outline`, `k.shapes.shape` |
 | k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
 | k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` |

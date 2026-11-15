@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 78 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -42,6 +42,7 @@
 @k.kinds.relation.k.faces.point.x k.kinds.relation type=k.faces.point key=x subject=point object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.point.y k.kinds.relation type=k.faces.point key=y subject=point object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.style k.kinds.relation type=k.faces.preset key=style subject=preset object=thing object_type=k.faces.canon found=declared object_by=style core.source="hand-core 1"
+@k.kinds.relation.k.faces.preset.kind k.kinds.relation type=k.faces.preset key=kind subject=preset object=kind object_type=k.faces.preset found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.head k.kinds.relation type=k.faces.preset key=head subject=preset object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.ears k.kinds.relation type=k.faces.preset key=ears subject=preset object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.preset.neck k.kinds.relation type=k.faces.preset key=neck subject=preset object=word object_type=k.words.sense found=value core.source="hand-core 1"

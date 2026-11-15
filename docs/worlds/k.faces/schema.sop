@@ -68,6 +68,7 @@
 @k.faces.preset core.type of=k.faces.preset shared=true closed=true core.source="hand-core 1"
 @k.faces.preset.name core.slot of=k.faces.preset key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.faces.preset.style core.slot of=k.faces.preset key=style required=true kind=atom kind=string type=k.faces.canon by=style core.source="hand-core 1"
+@k.faces.preset.kind core.slot of=k.faces.preset key=kind required=true enum=human enum=robot enum=alien core.source="hand-core 1"
 @k.faces.preset.head core.slot of=k.faces.preset key=head required=true kind=atom kind=string core.source="hand-core 1"
 @k.faces.preset.ears core.slot of=k.faces.preset key=ears kind=atom kind=string core.source="hand-core 1"
 @k.faces.preset.neck core.slot of=k.faces.preset key=neck kind=atom kind=string core.source="hand-core 1"
@@ -119,6 +120,11 @@
 
 # Words for the types and keys of this world.
 @k.faces.word.face core.word text=face text=faces text=avatar text=avatars means=k.faces.preset core.source="hand-core 1"
+# the kinds of being a face shows (psys2 Q31): "a person", "a human", "a robot" pick presets by kind
+@k.faces.word.key.preset.kind core.word text=kind text="kind of being" means=k.faces.preset.kind core.source="hand-core 1"
+@k.faces.word.kind.human core.word text=human text=humans text="human being" text="human beings" text=person text=people means=human of=k.faces.preset.kind core.source="hand-core 1"
+@k.faces.word.kind.robot core.word text=robot text=robots text=machine text=android text=androids text=droid means=robot of=k.faces.preset.kind core.source="hand-core 1"
+@k.faces.word.kind.alien core.word text=alien text=aliens text=extraterrestrial text=martian means=alien of=k.faces.preset.kind core.source="hand-core 1"
 @k.faces.word.slot core.word text=slot text=slots means=k.faces.slot core.source="hand-core 1"
 @k.faces.word.variant core.word text=variant text=variants means=k.faces.variant core.source="hand-core 1"
 @k.faces.word.expression core.word text=expression text=expressions means=k.faces.expression core.source="hand-core 1"

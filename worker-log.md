@@ -6707,3 +6707,16 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   byte-identical. Full touched run (110 files): 0 red. The reviewer counted 22 moved worlds; there were 20.
 - Lesson: tools that need the raw files (coverage.mjs, stand-ins-kinds.mjs, attributes-abilities/uses) are not in
   `regenerate`, so their outputs go stale silently on clones without the raw files.
+## 2026-11-15 — DGX session: the kit's reply names (queue item 3), person.know.none (psys2 Q32), face kinds (psys2 Q31)
+
+- Queue item 3 (the library's Q82): w.lang.en.reply / w.lang.ro.reply now have every name of KIT_REPLIES (library
+  0.147 src/kit.mjs) that the catalog lacked: 40 names, the roles of the kit; refused.which and ask.count in every
+  count (en one/other, ro one/few/other), the rest count=one. `{art@…}` rows have their w.lang.ro.fill. Plus
+  `person.know.none` ("I do not know anything about you yet." / "încă nu știu nimic despre tine.") for psys2 Q32.
+- psys2 Q31 K1: `k.faces.preset kind=` (enum human / robot / alien; robot and alien presets, the 12 others human),
+  written by tools/faces-core.mjs (PRESET_KIND); value words `core.word … means=<kind> of=k.faces.preset.kind`:
+  human (human, humans, human being(s), person, people), robot (robot(s), machine, android(s), droid), alien (alien(s),
+  extraterrestrial, martian). K2 (sense= for queen) not done.
+- Found: "nume" is not in the w.lang.ro dictionary (no def form "numele"); the replies test uses "culoare" as its key.
+- Tests: k.faces (new test: kinds reach presets), w.lang.ro.replies (new fillers; 4 new checks); `npm run test:changed`
+  77 files, 0 red.
