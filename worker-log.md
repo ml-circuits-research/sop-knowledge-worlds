@@ -6016,3 +6016,9 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - AGENTS.md rule 2: English is the language of ids and keys; words of a language live in its language world.
 - Seen on main, not mine: tests/k.kinds.relations.test.mjs fails "make.arrangement holds arrangement" (a k.actions role
   whose holds value has no argument class yet).
+
+## 2026-11-15 — third worker: end of block 14:25 round
+
+- Pushed: class=dialogue; the two Romanian shapes (bench 104 / 82 / 64); Romanian reply and request templates (46
+  requests, 34 + 24 replies); w.lang.en.fn (61); k.feelings replies to w.lang.en; AGENTS.md rule 2.
+- Q78: where core.word should live for KR3 (vocab build) and [LIB] issue bindings for the deny `why` texts.

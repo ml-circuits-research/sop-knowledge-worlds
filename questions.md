@@ -1095,3 +1095,23 @@ read as change, attribute `money`, value "30 lei" (the person's money); "my budg
 `budget` (the list's planned limit, unchanged). So: change = the amount of the last payment event less the list's
 total; left = the person's money less the total; `budget` stays a key of the list (left of budget = budget - total).
 Meanwhile nothing else moved; the real rows r0598, r0599, r0622-r0627 read with the new key (9 of 9).
+
+## Q78 (reviewer 14:25 item 3, KR3, third worker, 2026-11-15): the rest of KR3 needs two decisions: where `core.word` lives, and [LIB] the bindings of an issue
+
+Context: done and on main: `w.lang.en.fn` (61 function words by view), the k.feelings replies moved to w.lang.en
+(`feeling_reply`), AGENTS.md rule 2 reworded. Two parts cannot be moved by this repository alone:
+
+1. **`core.word` blocks of the 40 worlds (and the word lists of k.values: yes / no, number words, set words).**
+   `tools/build-catalog.mjs` builds vocab.json from the `core.word` facts of each world, and hosts and tests find a
+   world's words in its own schema and shards (key-words.mjs writes them there). Moving them means: per world a shard
+   `w.lang.en/shards/words-<world>.sop` (core.word with `means=`/`of=` naming the other world's ids, as k.diagrams'
+   words do today), build-catalog reading words from w.lang.en for every world, and key-words.mjs writing there. Is
+   that the shape wanted (one shard per world, owned by w.lang.en, a Romanian `w.lang.ro/shards/words-<world>.sop`
+   later), and may vocab.json point a word at the w.lang.en shard that says it rather than at the world's schema?
+   Meanwhile: unchanged.
+2. **[LIB] the `why` of a deny rule** (17 rules in 8 worlds: "A ?thing cannot fly, so it is not usually in the sky")
+   is English, but the engine fills it with the rule's bindings when it reports an issue (`check().issues[i].why`);
+   an issue carries `rule` and `about` (the wire ids), not the bindings. If issues carried the bindings
+   (`{ thing: 'shark', ... }`), the wording could be a w.lang.en template per rule (`w.lang.en.why rule= text=` in the
+   library's template notation) and leave the rules. Meanwhile: the `why` texts stay in the rules.
+Blocking: no (the other KR3 items go on world by world once 1 is answered).
