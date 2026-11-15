@@ -1,10 +1,11 @@
-# k.kinds/shards/relations-actions: the keys of the types of k.actions read as relations: 43 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-actions: the keys of the types of k.actions read as relations: 44 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
 
 @k.kinds.relation.k.actions.act.about k.kinds.relation type=k.actions.act key=about subject=act object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.actions.act.opposite k.kinds.relation type=k.actions.act key=opposite subject=act object=act object_type=k.actions.act found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.actions.act.class k.kinds.relation type=k.actions.act key=class subject=act object=kind found=schema core.source="hand-core 1"
 @k.kinds.relation.k.actions.act.role k.kinds.relation type=k.actions.act key=role subject=act object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.group k.kinds.relation type=k.actions.action key=group subject=action object=value found=schema core.source="hand-core 1"
 @k.kinds.relation.k.actions.action.who k.kinds.relation type=k.actions.action key=who subject=action object=thing object_type=k.scenes.thing found=value core.source="hand-core 1"

@@ -45,6 +45,8 @@ test('the acts are k.actions acts of the family conversation, greet and farewell
   const acts = new Map(actions.filter((w) => w.type === 'k.actions.act').map((a) => [one(a, 'name'), a]));
   for (const a of ['greet', 'thank', 'farewell']) assert.ok(acts.has(a), a);
   assert.equal(one(acts.get('greet'), 'opposite'), 'farewell');
+  // dialogue acts (ISO 24617-2), told apart from the acts on the work (reviewer 14:25)
+  assert.deepEqual([...acts.values()].filter((a) => one(a, 'class') === 'dialogue').map((a) => one(a, 'name')).sort(), ['farewell', 'greet', 'thank']);
   const fam = shards('k.actions').filter((w) => w.type === 'k.actions.member' && one(w, 'family') === 'conversation').map((w) => one(w, 'act')).sort();
   assert.deepEqual(fam, ['farewell', 'greet', 'thank']);
 });

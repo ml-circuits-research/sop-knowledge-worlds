@@ -1,5 +1,5 @@
 {
- "version": "fcc62b55b0dd",
+ "version": "b7d404f264e3",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -722,7 +722,7 @@
      "id": "k.actions/shards/acts",
      "path": "k.actions/shards/acts.sop",
      "wires": 81,
-     "bytes": 15062,
+     "bytes": 15107,
      "keys": [
       "amount",
       "ask",
@@ -4575,8 +4575,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1088,
-     "bytes": 209733,
+     "wires": 1089,
+     "bytes": 209919,
      "keys": [
       "a",
       "about",
@@ -29454,14 +29454,15 @@
     {
      "id": "k.kinds/shards/relations-actions",
      "path": "k.kinds/shards/relations-actions.sop",
-     "wires": 43,
-     "bytes": 8081,
+     "wires": 44,
+     "bytes": 8228,
      "keys": [
       "about",
       "act",
       "action",
       "after_particle",
       "attribute",
+      "class",
       "complement",
       "dimension",
       "example",

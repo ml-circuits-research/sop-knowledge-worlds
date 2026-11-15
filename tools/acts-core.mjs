@@ -132,6 +132,9 @@ export const ACTS = [
   ]],
 ];
 
+// Dialogue acts (reviewer 14:25: DAMSL / ISO 24617-2): moves of the conversation, not acts on the work; `class=dialogue`.
+export const DIALOGUE = ['greet', 'thank', 'farewell'];
+
 // Act families (reviewer 21:55, owner 15:03: the up edges of acts, for the library's cousins): the 16 acts grouped by
 // what they do, in layers (an act -> its family -> a wider family -> act), each membership with its reason. A second
 // dimension, `takes`, groups the acts by the role they need (read off the roles above, not written by hand), so a
@@ -236,7 +239,7 @@ export function actShards() {
   const glosses = readGlosses();
   const acts = [], roles = [];
   for (const [name, about, opposite, rs] of ACTS) {
-    acts.push(wire(`k.actions.act.${seg(name)}`, 'k.actions.act', [['name', name], ['about', text(about)], ['opposite', opposite], ...rs.map((r) => ['role', r[0]])], HAND));
+    acts.push(wire(`k.actions.act.${seg(name)}`, 'k.actions.act', [['name', name], ['about', text(about)], ['opposite', opposite], ['class', DIALOGUE.includes(name) ? 'dialogue' : undefined], ...rs.map((r) => ['role', r[0]])], HAND));
     for (const [role, holds, needed, what, markers] of rs) {
       roles.push(wire(`k.actions.role.${seg(name)}.${seg(role)}`, 'k.actions.role', [['act', name], ['name', role], ['holds', holds], ['needed', needed ? 'true' : undefined],
         ['about', text(what)], ...markers.map((m) => ['marker', m])], HAND));
