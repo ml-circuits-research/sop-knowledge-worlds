@@ -5598,3 +5598,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - part.of is on main (f15117d). Next, in this order: the joins report stops suggesting keys whose slot has an enum
   (`k.people.given_name.context`); K5 typed possession effects `holds=` / `money=` on k.actions; K4 arithmetic words
   and frames in w.lang.en, in a frame shard of my own (`arithmetic`).
+
+## 2026-11-15 — second worker: the joins report suggests no enum keys (reviewer 08:00)
+
+- `tools/joins-report.mjs`: a key whose slot (own or inherited, `declaredJoins().slotOf`) has `enum=` is never a
+  join suggestion. Of the 116 suggestions, 66 were enum keys (`k.people.given_name.context`, the colour, shape,
+  direction, season and part-of-day enums, `k.procedures.*.act` ...); the table keeps **50**. The enum keys are listed
+  apart in a last section, "Keys with an enum (never suggested as joins)", with the enum's size and how many of its
+  values are names of the first candidate, for KR2 (enums joined, not copied), which decides per enum. Left undeclared
+  on purpose: 4 (k.time.season.next has an enum, so it is in the enum list now).
+- `tests/k.kinds.joins-report.test.mjs`: no suggested key has an enum; context is among the enum keys.

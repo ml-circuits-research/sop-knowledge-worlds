@@ -45,10 +45,12 @@ export function declaredJoins(worlds) {
   for (const [t, slots] of own) for (const s of slots) if (s.attrs.by && s.attrs.type) {
     joins.push({ world: s.world, type: t, key: s.key, target: s.attrs.type[0], by: s.attrs.by[0], match: (s.attrs.match ?? []).map((m) => String(m).split(':')) });
   }
+  // the slot of a key on a type, its own or the nearest inherited one
+  const slotOf = (t, key, seen = new Set()) => (seen.has(t) ? null : (seen.add(t), (own.get(t) ?? []).find((s) => s.key === key)?.attrs ?? (parents.get(t)?.extends ?? []).map((p) => slotOf(p, key, seen)).find(Boolean) ?? null));
   const slotKeys = (t, seen = new Set()) => (seen.has(t) ? [] : (seen.add(t), [...(own.get(t) ?? []).map((s) => s.key), ...(parents.get(t)?.extends ?? []).flatMap((p) => slotKeys(p, seen))]));
   // a join on a parent type holds for the facts of every type that extends it
   const children = (t) => [t, ...[...parents].filter(([, p]) => p.extends.includes(t)).flatMap(([c]) => children(c))];
-  return { joins: joins.sort((a, b) => byText(`${a.type} ${a.key}`, `${b.type} ${b.key}`)), declaredTypes: new Set(parents.keys()), slotKeys, children };
+  return { joins: joins.sort((a, b) => byText(`${a.type} ${a.key}`, `${b.type} ${b.key}`)), declaredTypes: new Set(parents.keys()), slotKeys, slotOf, children };
 }
 
 // The facts of every shard of every world, read once: per type, the facts (attrs only).
@@ -62,7 +64,7 @@ function readFacts(worlds) {
 }
 
 export function joinsReport(worlds = scanWorlds()) {
-  const { joins, declaredTypes, slotKeys, children } = declaredJoins(worlds);
+  const { joins, declaredTypes, slotKeys, slotOf, children } = declaredJoins(worlds);
   const facts = readFacts(worlds);
   const factsOf = (t) => children(t).flatMap((c) => facts.get(c) ?? []);
   const declared = [];
@@ -81,11 +83,11 @@ export function joinsReport(worlds = scanWorlds()) {
     declared.push({ ...j, values: values.size, meet: values.size - open.length, open, malformed, broken: Boolean(malformed) || (values.size > 0 && (values.size - open.length) * 2 < values.size) });
   }
   // the value share's suggestions for keys without a declared join (relations of knowledge types, found=value, a
-  // type that names things other than words)
+  // type that names things other than words, on a key without an enum)
   const types = readTypes(worlds);
   const isDeclared = new Set(joins.map((j) => `${j.type} ${j.key}`));
   const skipped = new Map(NOT_DECLARED.map(([t, k, target, why]) => [`${t} ${k}`, { target, why }]));
-  const undeclared = [], kept = [];
+  const undeclared = [], kept = [], enums = [];
   for (const r of relationRows(worlds)) {
     if (r.found !== 'value' || !r.object_type.length || r.object_type[0] === 'k.words.sense' || isDeclared.has(`${r.type} ${r.key}`)) continue;
     const target = r.object_type[0], by = types.get(target)?.naming;
@@ -93,17 +95,22 @@ export function joinsReport(worlds = scanWorlds()) {
     const names = new Set((facts.get(target) ?? []).flatMap((a) => a[by] ?? []));
     const vals = [...new Set(factsOf(r.type).flatMap((a) => (a[r.key] ?? []).filter((v) => !v.startsWith('$'))))];
     const row = { world: r.world, type: r.type, key: r.key, object: r.object, candidates: r.object_type, by, values: vals.length, meet: vals.filter((v) => names.has(v)).length };
+    // a key with an enum takes one of the values its slot lists (k.people.given_name.context=person), not a name of
+    // another type: it is never suggested as a join. Listed apart, with the enum's size: an enum that copies another
+    // world's names (the 11 basic colours) is KR2's to replace by a join, a decision per enum, not a suggestion here.
+    const en = slotOf(r.type, r.key)?.enum;
+    if (en) { enums.push({ ...row, enum: en.length }); continue; }
     // a key inherited from a parent is reported once, on the type that declares the slot
     const why = skipped.get(`${r.type} ${r.key}`) ?? [...skipped].find(([tk]) => tk.endsWith(` ${r.key}`) && children(tk.split(' ')[0]).includes(r.type))?.[1];
     (why ? kept : undeclared).push({ ...row, why: why?.why });
   }
-  return { declared, undeclared, kept };
+  return { declared, undeclared, kept, enums };
 }
 
 const cell = (s) => String(s).replace(/\|/g, '\\|');
 const list = (vs, n = 6) => vs.slice(0, n).map((v) => `\`${cell(v)}\``).join(', ') + (vs.length > n ? `, … (${vs.length})` : '');
 
-export function reportText({ declared, undeclared, kept }) {
+export function reportText({ declared, undeclared, kept, enums = [] }) {
   const broken = declared.filter((d) => d.broken);
   const vals = declared.reduce((n, d) => n + d.values, 0), meet = declared.reduce((n, d) => n + d.meet, 0);
   const worlds = new Set(declared.map((d) => d.world));
@@ -121,7 +128,7 @@ export function reportText({ declared, undeclared, kept }) {
     '',
     `- declared joins: **${declared.length}** in ${worlds.size} worlds; distinct values ${vals}, meeting a target ${meet} (${vals ? Math.round((meet / vals) * 1000) / 10 : 0} %), open ${vals - meet}`,
     `- broken (under half of the values meet a target, or the target is not declared): **${broken.length}**`,
-    `- undeclared keys whose values the value share joins to a type: **${undeclared.length}**; left undeclared on purpose: ${kept.length}`,
+    `- undeclared keys whose values the value share joins to a type: **${undeclared.length}**; left undeclared on purpose: ${kept.length}; keys with an enum, never suggested: ${enums.length}`,
     '',
     '## Declared joins',
     '',
@@ -140,7 +147,8 @@ export function reportText({ declared, undeclared, kept }) {
     '## Undeclared: keys whose values name things of a type (the value share)',
     '',
     'Each is a join to declare on the slot (`type=<first candidate> by=<by>`), or to leave with a reason. The share is',
-    'exact (token for token) against the first candidate; the value share itself also folds case and plurals.',
+    'exact (token for token) against the first candidate; the value share itself also folds case and plurals. A key',
+    'whose slot has an enum is never suggested here (see the last section).',
     '',
     '| world | type.key | class | candidates | by | values | meet |',
     '| --- | --- | --- | --- | --- | ---: | ---: |',
@@ -149,6 +157,16 @@ export function reportText({ declared, undeclared, kept }) {
     '## Left undeclared on purpose',
     '',
     ...kept.map((u) => `- \`${u.type}.${u.key}\` -> \`${u.candidates[0]}\` (${u.meet} of ${u.values} values meet): ${u.why}`),
+    '',
+    '## Keys with an enum (never suggested as joins)',
+    '',
+    'A key whose slot lists its values (`enum=`) takes one of them; that the values are also names of some type is no',
+    'join to declare (`k.people.given_name.context=person` is not the drawing "person"). Listed for the review of enums',
+    'copied from another world (KR2: enums joined, not copied), which decides per enum.',
+    '',
+    '| world | type.key | enum values | values used | names of the first candidate | candidates |',
+    '| --- | --- | ---: | ---: | ---: | --- |',
+    ...enums.map((u) => `| ${u.world} | \`${u.type}.${u.key}\` | ${u.enum} | ${u.values} | ${u.meet} | ${u.candidates.map((c) => `\`${c}\``).join(', ')} |`),
     '',
   ];
   return out.join('\n');

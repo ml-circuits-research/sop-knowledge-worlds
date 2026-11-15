@@ -44,6 +44,14 @@ test('k.kinds.relation reads the declared joins first (found=declared, the targe
   assert.ok(n >= 10);
 });
 
+test('a key whose slot has an enum is never suggested as a join (k.people.given_name.context)', () => {
+  const { slotOf } = declaredJoins(worlds);
+  assert.deepEqual(report.undeclared.filter((u) => slotOf(u.type, u.key)?.enum).map((u) => `${u.type}.${u.key}`), []);
+  assert.ok(report.enums.some((u) => `${u.type}.${u.key}` === 'k.people.given_name.context'));
+  assert.deepEqual(report.enums.filter((u) => !slotOf(u.type, u.key)?.enum).map((u) => `${u.type}.${u.key}`), []);
+  assert.equal(slotOf('k.people.given_name', 'context')?.enum?.[0], 'person');
+});
+
 test('WARNS on broken and undeclared joins and on a stale report (never fails on them)', (t) => {
   const broken = report.declared.filter((d) => d.broken && !d.malformed).map((d) => `broken join ${d.type}.${d.key} -> ${d.target} by ${d.by}: ${d.meet} of ${d.values} values meet`);
   const open = report.declared.filter((d) => d.open.length && !d.broken).map((d) => `open values of ${d.type}.${d.key}: ${d.open.length} of ${d.values} (${d.open.slice(0, 3).join(', ')})`);

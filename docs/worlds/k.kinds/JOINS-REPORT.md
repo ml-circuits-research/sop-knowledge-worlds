@@ -11,7 +11,7 @@ Values are compared token for token, as sopworld compares them (`"horse"` and `h
 
 - declared joins: **200** in 31 worlds; distinct values 10086, meeting a target 10028 (99.4 %), open 58
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **115**; left undeclared on purpose: 5
+- undeclared keys whose values the value share joins to a type: **50**; left undeclared on purpose: 4; keys with an enum, never suggested: 66
 
 ## Declared joins
 
@@ -229,83 +229,42 @@ None.
 ## Undeclared: keys whose values name things of a type (the value share)
 
 Each is a join to declare on the slot (`type=<first candidate> by=<by>`), or to leave with a reason. The share is
-exact (token for token) against the first candidate; the value share itself also folds case and plurals.
+exact (token for token) against the first candidate; the value share itself also folds case and plurals. A key
+whose slot has an enum is never suggested here (see the last section).
 
 | world | type.key | class | candidates | by | values | meet |
 | --- | --- | --- | --- | --- | ---: | ---: |
 | k.actions | `k.actions.action.who` | thing | `k.scenes.thing` | name | 101 | 74 |
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 268 | 152 |
-| k.animals | `k.animals.animal.class` | kind | `k.animals.class` | name | 13 | 13 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
-| k.attributes | `k.attributes.aspect.shown_in` | value | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 6 | 3 |
-| k.attributes | `k.attributes.attribute.holds` | value | `k.attributes.attribute` | name | 12 | 6 |
 | k.attributes | `k.attributes.attribute.default_key` | thing | `k.attributes.attribute` | name | 2 | 2 |
-| k.attributes | `k.attributes.drawn.drawn_colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.attributes | `k.attributes.narration.narrate` | value | `k.values.reply` | name | 2 | 2 |
-| k.attributes | `k.attributes.number.sense` | value | `k.attributes.kind` | name | 4 | 3 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
 | k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3506 | 2345 |
-| k.attributes | `k.attributes.same.sense` | value | `k.attributes.kind` | name | 12 | 6 |
-| k.attributes | `k.attributes.thing.colour` | value | `k.colours.colour`, `k.values.colour` | name | 12 | 11 |
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 26 | 13 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
-| k.attributes | `k.attributes.usage.sense` | value | `k.attributes.kind` | name | 4 | 2 |
-| k.attributes | `k.attributes.usage.season` | time | `k.time.season` | name | 4 | 4 |
-| k.attributes | `k.attributes.usage.time` | time | `k.time.part_of_day` | name | 4 | 3 |
-| k.attributes | `k.attributes.usage.age` | value | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` | name | 4 | 2 |
-| k.colours | `k.colours.colour.family` | kind | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.colours | `k.colours.colour.tone` | value | `k.values.shade` | name | 3 | 2 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.commonsense | `k.commonsense.thing.made_of` | thing | `k.attributes.thing`, `k.objects.object`, `k.scenes.thing` | name | 6 | 4 |
-| k.diagrams | `k.diagrams.kind.form` | value | `k.diagrams.kind` | name | 10 | 6 |
-| k.diagrams | `k.diagrams.kind.groups` | value | `k.values.reply` | name | 2 | 2 |
-| k.diagrams | `k.diagrams.shape.shape` | value | `k.values.shape` | name | 11 | 6 |
-| k.drawing | `k.drawing.part.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 8 | 8 |
-| k.drawing | `k.drawing.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.drawing | `k.drawing.part.pointing` | value | `k.values.direction` | name | 4 | 4 |
-| k.drawing | `k.drawing.part.opens` | value | `k.values.direction` | name | 4 | 4 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
-| k.faces | `k.faces.colour.of` | value | `k.body.part` | name | 4 | 2 |
 | k.faces | `k.faces.colour.name` | value | `k.values.colour`, `k.colours.colour` | name | 21 | 14 |
 | k.faces | `k.faces.expression.eyes` | thing | `k.feelings.feeling` | name | 4 | 2 |
-| k.faces | `k.faces.part.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 8 | 8 |
-| k.faces | `k.faces.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.faces | `k.faces.part.pointing` | value | `k.values.direction` | name | 4 | 4 |
-| k.faces | `k.faces.part.opens` | value | `k.values.direction` | name | 4 | 4 |
 | k.faces | `k.faces.preset.hat` | thing | `k.scenes.thing` | name | 5 | 5 |
 | k.faces | `k.faces.preset.shoulders` | thing | `k.wearables.wearable` | name | 8 | 4 |
 | k.faces | `k.faces.preset.skin` | value | `k.values.colour` | name | 9 | 5 |
 | k.faces | `k.faces.preset.hair_colour` | value | `k.colours.colour`, `k.values.colour` | name | 9 | 7 |
 | k.faces | `k.faces.preset.eye_colour` | value | `k.colours.colour`, `k.values.colour` | name | 7 | 6 |
 | k.faces | `k.faces.slot.name` | thing | `k.body.part` | name | 18 | 4 |
-| k.faces | `k.faces.variant.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 5 | 3 |
 | k.feelings | `k.feelings.feeling.eyebrows` | thing | `k.faces.expression` | name | 4 | 2 |
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
-| k.food | `k.food.food.kind` | kind | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 18 | 9 |
-| k.food | `k.food.food.grows_on` | value | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 5 | 4 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.food | `k.food.food.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
 | k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4513 | 2287 |
-| k.kinds | `k.kinds.parent.sense` | value | `k.attributes.kind` | name | 7 | 4 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |
 | k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 71 |
 | k.layouts | `k.layouts.slot.holds` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 83 | 47 |
-| k.motion | `k.motion.layer.key` | value | `k.body.part` | name | 4 | 1 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
-| k.motion | `k.motion.set.key` | value | `k.body.part` | name | 4 | 1 |
-| k.motion | `k.motion.step.key` | value | `k.body.part` | name | 1 | 1 |
-| k.motion | `k.motion.when.feature` | value | `k.attributes.attribute` | name | 1 | 0 |
-| k.music | `k.music.note.letter` | value | `k.music.chord`, `k.music.note` | name | 7 | 7 |
-| k.objects | `k.objects.part.shape` | value | `k.shapes.shape`, `k.values.shape` | name | 8 | 8 |
-| k.objects | `k.objects.part.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.objects | `k.objects.part.pointing` | value | `k.values.direction` | name | 4 | 4 |
-| k.objects | `k.objects.part.opens` | value | `k.values.direction` | name | 4 | 4 |
-| k.people | `k.people.given_name.context` | value | `k.attributes.drawn`, `k.attributes.kind`, `k.attributes.number` | name | 1 | 1 |
-| k.people | `k.people.kind.age` | value | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` | name | 4 | 2 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |
 | k.people | `k.people.kind.kind_of` | kind | `k.faces.preset` | name | 5 | 3 |
 | k.people | `k.people.role.moustache` | thing | `k.attributes.drawn`, `k.attributes.number`, `k.objects.object` | name | 4 | 2 |
@@ -316,37 +275,14 @@ exact (token for token) against the first candidate; the value share itself also
 | k.procedures | `k.procedures.condition.attribute` | thing | `k.body.part` | name | 10 | 1 |
 | k.procedures | `k.procedures.goal.value` | thing | `k.genres.genre` | name | 9 | 5 |
 | k.procedures | `k.procedures.goal.kind` | kind | `k.actions.act` | name | 1 | 1 |
-| k.procedures | `k.procedures.howto_step.branch` | value | `k.values.reply` | name | 2 | 2 |
 | k.procedures | `k.procedures.match.differs` | thing | `k.story.element` | name | 8 | 4 |
-| k.procedures | `k.procedures.method.act` | act | `k.actions.act` | name | 6 | 6 |
-| k.procedures | `k.procedures.step.act` | act | `k.actions.act` | name | 8 | 8 |
-| k.scenes | `k.scenes.has.side` | value | `k.values.position` | name | 3 | 3 |
 | k.scenes | `k.scenes.has.on` | thing | `k.scenes.thing` | name | 43 | 43 |
-| k.scenes | `k.scenes.scene.kind` | kind | `k.scenes.scene` | name | 4 | 2 |
 | k.scenes | `k.scenes.scene.ground` | thing | `k.scenes.thing` | name | 15 | 6 |
-| k.scenes | `k.scenes.scene.time` | time | `k.time.part_of_day` | name | 4 | 3 |
-| k.scenes | `k.scenes.scene.season` | time | `k.time.season` | name | 4 | 4 |
 | k.scenes | `k.scenes.thing.on` | thing | `k.attributes.drawn`, `k.objects.object`, `k.layouts.anchor` | name | 23 | 19 |
 | k.shapes | `k.shapes.shape.is_a` | kind | `k.values.shape` | name | 5 | 5 |
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.values.shape` | name | 5 | 5 |
-| k.space | `k.space.body.colour` | value | `k.colours.colour`, `k.values.colour` | name | 7 | 7 |
 | k.space | `k.space.kind.made_of` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
-| k.time | `k.time.during.hemisphere` | value | `k.values.direction` | name | 2 | 2 |
-| k.time | `k.time.hour.part` | time | `k.time.part_of_day` | name | 4 | 4 |
-| k.time | `k.time.month.season_north` | time | `k.time.season` | name | 4 | 4 |
-| k.time | `k.time.month.season_south` | time | `k.time.season` | name | 4 | 4 |
-| k.time | `k.time.season_in.season` | time | `k.time.season` | name | 4 | 4 |
-| k.time | `k.time.season_in.hemisphere` | value | `k.values.direction` | name | 2 | 2 |
-| k.values | `k.values.colour.basic` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.values | `k.values.coloured.colour` | value | `k.colours.colour`, `k.values.colour` | name | 11 | 11 |
-| k.values | `k.values.comparative.way` | value | `k.values.direction` | name | 2 | 2 |
-| k.values | `k.values.position.column` | value | `k.values.position` | name | 3 | 3 |
-| k.values | `k.values.position.row` | value | `k.values.position` | name | 3 | 2 |
-| k.values | `k.values.position.depth` | value | `k.values.position` | name | 2 | 2 |
-| k.values | `k.values.reply.opposite` | value | `k.values.reply` | name | 2 | 2 |
-| k.values | `k.values.set_word.picks` | value | `k.values.set_word` | name | 8 | 5 |
-| k.values | `k.values.set_word.manner` | value | `k.values.set_word` | name | 6 | 4 |
 | k.wearables | `k.wearables.wearable.face` | thing | `k.scenes.thing` | name | 36 | 18 |
 
 ## Left undeclared on purpose
@@ -354,5 +290,79 @@ exact (token for token) against the first candidate; the value share itself also
 - `k.time.hour.next` -> `k.time.hour` (24 of 24 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.month.next` -> `k.time.month` (12 of 12 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.part_of_day.next` -> `k.time.part_of_day` (4 of 4 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
-- `k.time.season.next` -> `k.time.season` (4 of 4 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
 - `k.time.weekday.next` -> `k.time.weekday` (7 of 7 values meet): the next of a month is a month, of an hour an hour: a join to the fact's own type cannot be declared once on the shared parent
+
+## Keys with an enum (never suggested as joins)
+
+A key whose slot lists its values (`enum=`) takes one of them; that the values are also names of some type is no
+join to declare (`k.people.given_name.context=person` is not the drawing "person"). Listed for the review of enums
+copied from another world (KR2: enums joined, not copied), which decides per enum.
+
+| world | type.key | enum values | values used | names of the first candidate | candidates |
+| --- | --- | ---: | ---: | ---: | --- |
+| k.animals | `k.animals.animal.class` | 13 | 13 | 13 | `k.animals.class` |
+| k.attributes | `k.attributes.aspect.shown_in` | 6 | 6 | 3 | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` |
+| k.attributes | `k.attributes.attribute.holds` | 12 | 12 | 6 | `k.attributes.attribute` |
+| k.attributes | `k.attributes.drawn.drawn_colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.attributes | `k.attributes.narration.narrate` | 2 | 2 | 2 | `k.values.reply` |
+| k.attributes | `k.attributes.number.sense` | 12 | 4 | 3 | `k.attributes.kind` |
+| k.attributes | `k.attributes.same.sense` | 12 | 12 | 6 | `k.attributes.kind` |
+| k.attributes | `k.attributes.thing.colour` | 12 | 12 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.attributes | `k.attributes.usage.sense` | 12 | 4 | 2 | `k.attributes.kind` |
+| k.attributes | `k.attributes.usage.season` | 4 | 4 | 4 | `k.time.season` |
+| k.attributes | `k.attributes.usage.time` | 4 | 4 | 3 | `k.time.part_of_day` |
+| k.attributes | `k.attributes.usage.age` | 4 | 4 | 2 | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` |
+| k.colours | `k.colours.colour.family` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.colours | `k.colours.colour.tone` | 3 | 3 | 2 | `k.values.shade` |
+| k.diagrams | `k.diagrams.kind.form` | 10 | 10 | 6 | `k.diagrams.kind` |
+| k.diagrams | `k.diagrams.kind.groups` | 2 | 2 | 2 | `k.values.reply` |
+| k.diagrams | `k.diagrams.shape.shape` | 11 | 11 | 6 | `k.values.shape` |
+| k.drawing | `k.drawing.part.shape` | 8 | 8 | 8 | `k.shapes.shape`, `k.values.shape` |
+| k.drawing | `k.drawing.part.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.drawing | `k.drawing.part.pointing` | 4 | 4 | 4 | `k.values.direction` |
+| k.drawing | `k.drawing.part.opens` | 4 | 4 | 4 | `k.values.direction` |
+| k.faces | `k.faces.colour.of` | 4 | 4 | 2 | `k.body.part` |
+| k.faces | `k.faces.part.shape` | 8 | 8 | 8 | `k.shapes.shape`, `k.values.shape` |
+| k.faces | `k.faces.part.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.faces | `k.faces.part.pointing` | 4 | 4 | 4 | `k.values.direction` |
+| k.faces | `k.faces.part.opens` | 4 | 4 | 4 | `k.values.direction` |
+| k.faces | `k.faces.variant.shape` | 5 | 5 | 3 | `k.shapes.shape`, `k.values.shape` |
+| k.food | `k.food.food.kind` | 18 | 18 | 9 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
+| k.food | `k.food.food.grows_on` | 5 | 5 | 4 | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
+| k.food | `k.food.food.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.kinds | `k.kinds.parent.sense` | 12 | 7 | 4 | `k.attributes.kind` |
+| k.motion | `k.motion.layer.key` | 4 | 4 | 1 | `k.body.part` |
+| k.motion | `k.motion.set.key` | 4 | 4 | 1 | `k.body.part` |
+| k.motion | `k.motion.step.key` | 4 | 1 | 1 | `k.body.part` |
+| k.motion | `k.motion.when.feature` | 6 | 1 | 0 | `k.attributes.attribute` |
+| k.music | `k.music.note.letter` | 7 | 7 | 7 | `k.music.chord`, `k.music.note` |
+| k.objects | `k.objects.part.shape` | 8 | 8 | 8 | `k.shapes.shape`, `k.values.shape` |
+| k.objects | `k.objects.part.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.objects | `k.objects.part.pointing` | 4 | 4 | 4 | `k.values.direction` |
+| k.objects | `k.objects.part.opens` | 4 | 4 | 4 | `k.values.direction` |
+| k.people | `k.people.given_name.context` | 1 | 1 | 1 | `k.attributes.drawn`, `k.attributes.kind`, `k.attributes.number` |
+| k.people | `k.people.kind.age` | 4 | 4 | 2 | `k.faces.preset`, `k.people.kind`, `k.scenes.thing` |
+| k.procedures | `k.procedures.howto_step.branch` | 2 | 2 | 2 | `k.values.reply` |
+| k.procedures | `k.procedures.method.act` | 16 | 6 | 6 | `k.actions.act` |
+| k.procedures | `k.procedures.step.act` | 16 | 8 | 8 | `k.actions.act` |
+| k.scenes | `k.scenes.has.side` | 3 | 3 | 3 | `k.values.position` |
+| k.scenes | `k.scenes.scene.kind` | 4 | 4 | 2 | `k.scenes.scene` |
+| k.scenes | `k.scenes.scene.time` | 4 | 4 | 3 | `k.time.part_of_day` |
+| k.scenes | `k.scenes.scene.season` | 4 | 4 | 4 | `k.time.season` |
+| k.space | `k.space.body.colour` | 11 | 7 | 7 | `k.colours.colour`, `k.values.colour` |
+| k.time | `k.time.during.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
+| k.time | `k.time.hour.part` | 4 | 4 | 4 | `k.time.part_of_day` |
+| k.time | `k.time.month.season_north` | 4 | 4 | 4 | `k.time.season` |
+| k.time | `k.time.month.season_south` | 4 | 4 | 4 | `k.time.season` |
+| k.time | `k.time.season.next` | 4 | 4 | 4 | `k.time.season` |
+| k.time | `k.time.season_in.season` | 4 | 4 | 4 | `k.time.season` |
+| k.time | `k.time.season_in.hemisphere` | 2 | 2 | 2 | `k.values.direction` |
+| k.values | `k.values.colour.basic` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.values | `k.values.coloured.colour` | 11 | 11 | 11 | `k.colours.colour`, `k.values.colour` |
+| k.values | `k.values.comparative.way` | 2 | 2 | 2 | `k.values.direction` |
+| k.values | `k.values.position.column` | 3 | 3 | 3 | `k.values.position` |
+| k.values | `k.values.position.row` | 3 | 3 | 2 | `k.values.position` |
+| k.values | `k.values.position.depth` | 2 | 2 | 2 | `k.values.position` |
+| k.values | `k.values.reply.opposite` | 2 | 2 | 2 | `k.values.reply` |
+| k.values | `k.values.set_word.picks` | 8 | 8 | 5 | `k.values.set_word` |
+| k.values | `k.values.set_word.manner` | 6 | 6 | 4 | `k.values.set_word` |
