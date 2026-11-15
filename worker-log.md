@@ -6165,3 +6165,8 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Step 2: the Romanian frames are data of w.lang.ro: shard frames is hand-written (46 frames), tools/lang-ro-frames.mjs
   is gone; tests/w.lang.ro.frames.test.mjs reads the frames from the shard (each says an English frame, parts in order,
   roles are its role parts) and checks that skip and focus follow the fn shard.
+
+## 2026-11-15 — fifth worker takes: test:all on main hourly, questions.test under 30 s, KR6 abilities (`can`)
+
+- KR6: I take abilities (`can` of k.attributes.thing for the 1,500 common things, from WordNet relations and the
+  k.actions roles in data). The first worker takes colour and material.
