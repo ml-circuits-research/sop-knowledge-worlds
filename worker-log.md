@@ -6371,3 +6371,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Tests: tests/k.charts.test.mjs (4: shard = tool; joins to w.chart forms, encodings, relationships; the rankings'
   order; the reviewer's cases through chartsFor and the axes' types of each best kind). The touched tests: 29 files,
   143 pass, 1 failing that was not this change's (w.lang.en.catalog-plurals); after the rebase on its fix: 23 files, 116 pass.
+
+## 2026-11-15 — second worker: KR4 step 2, compositions on the library's planner
+
+- The library's planner reads `choose` bindings itself (std.plan since Q57). tests/k.compose.test.mjs: the 100 seeded
+  stories and the 20 seeded reports are now solved by `planner(...).plan` (not tools/lib/choose.mjs); every story holds
+  every hard constraint of k.story and expands to the document and its five chapters; every report's next steps are
+  not yet done. 8 pass, 5.9 s.
+- What the planner does not give yet: statements and history entries as values ("[object Object]" in `chosen`), choices
+  fixed by the host, the first solution without a seed: **Q85 [LIB]**; choose.mjs stays for those tests only.

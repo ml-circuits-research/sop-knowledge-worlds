@@ -97,10 +97,13 @@ export const STORIES = 100;
 test(`write a story: ${STORIES} seeded stories, each holds every hard constraint of k.story (checked from the facts alone)`, () => {
   const seen = { goal: new Set(), obstacle: new Set(), protagonist: new Set(), helper: new Set() };
   let soft = 0;
+  // the library's planner solves the choose bindings itself (std.plan, KR4): its plan's `chosen` is checked
   for (let seed = 1; seed <= STORIES; seed += 1) {
-    const r = solveChoices(methodFacts(store, 'write a story'), { store, isA, rnd: seeded(seed) });
-    assert.ok(r, `seed ${seed}: no story`);
-    const c = names(r), p = asPlan(c);
+    const live = new PlanLive({ world: 'w.document', store, history: [], things: [] });
+    const r = makePlanner(store, { chain, about: TYPES, seed }).plan({ act: 'make', roles: { kind: 'story' } }, live);
+    assert.ok(r.chosen, `seed ${seed}: no story`);
+    assert.deepEqual(r.lines, STORY_ACTS(r.chosen.target[0]), `seed ${seed}: the document and its five chapters`);
+    const c = r.chosen, p = asPlan(c);
     const chk = checkPlan(kb, constraints, p);
     assert.deepEqual(chk.hard, [], `seed ${seed}: ${JSON.stringify(c)}`);
     soft += chk.soft.length;
@@ -159,9 +162,10 @@ test('write a report of what was done: the acts done, the things there, next ste
     'make kind=w.document.document title=report genre=report register=report',
     ...['Summary', 'Introduction', 'Work done', 'Results', 'Next steps'].map((h, i) => `make kind=w.document.chapter document=document1 n=${i + 1 + (i >= 4 ? 1 : 0)} part=${h.toLowerCase()} title=${h}`),
   ]);
-  for (let seed = 1; seed <= 20; seed += 1) {
-    const s = solveChoices(methodFacts(store, 'write a report of what was done'), { store, isA, history, live, rnd: seeded(seed) });
-    const next = s.chosen.get('next').map((x) => one(x, 'name'));
+  for (let seed = 1; seed <= 20; seed += 1) { // the library's planner (KR4)
+    const pl = makePlanner(store, { chain, about: TYPES, seed }).plan(goal, new PlanLive({ world: 'w.document', store, history, things: live }));
+    assert.ok(pl.chosen.results.every((x) => live.some((t) => t.id === x)), `seed ${seed}: results are things there`);
+    const next = pl.chosen.next;
     assert.ok(next.every((a) => !history.some((h) => h.act === a)), `seed ${seed}: a next step not yet done`);
   }
   assert.equal(solveChoices(methodFacts(store, 'write a report of what was done'), { store, isA, history: [], live }), null);

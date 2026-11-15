@@ -1215,3 +1215,16 @@ onsets, as `articleFor` does; the first letter upper case); 'add {number} {kind:
 mouse." (wanted "Add 3 mice.": `num=pl` by w.lang.en's rules and irregulars, as `inflectBy`); 'add a {kind}.' with no
 kind -> null (same). Meanwhile `realiseEn` fills the slots and takes the article from the library's articleFor.
 Blocking: no.
+
+## Q85 [LIB] (reviewer 15:00 item 2, KR4, second worker, 2026-11-15): the planner's choose: statements as values, fixed choices, the first solution
+Question: can `planner(store, { ... }).plan(goal, live)` (which solves `choose` bindings itself since Q57) give
+(1) the chosen statements and history entries by what they are, not "[object Object]" (a statement row
+`{ thing, type, key, value }` by its key, a history entry `{ act, thing }` by its act: "write a presentation about a
+topic" chooses points, "write a report of what was done" its work), (2) a plan with some choices fixed by the host
+(`fixed: { setting: 'castle', protagonist: 'girl', ... }`, refused when they break a match), (3) the first solution
+without a seeded draw (`seed: null`)?
+Context: tests/k.compose.test.mjs now checks the library's planner for 100 seeded stories (every hard constraint of
+k.story holds; the plan's lines are the document and its five chapters) and 20 seeded reports. The reference reader
+tools/lib/choose.mjs stays for the traced story (fixed choices), the presentation's first solution and the keys of the
+points, arguments, counterargument and results, until these three are in the planner.
+Blocking: no.
