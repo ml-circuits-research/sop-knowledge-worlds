@@ -31,7 +31,8 @@ const base = { num: 'sg', case: 'nomacc', def: 'no' };
 const THINGS = ['casă', 'copac', 'desen'];
 const N = { one: '1', few: '3', other: '20' };
 const fillersRo = (thing, count) => ({ kind: thing, thing, value: 'roșu', number: N[count ?? 'few'], place: 'lângă copac', source: 'casă', target: 'copac', attribute: 'culoare', amount: 'puțin',
-  direction: 'la stânga', topic: 'culoare', criterion: 'mărime', recipient: 'Ana', name: 'prânz', person: 'Ana', shape: 'inimă', arrangement: 'inimă', words: 'blorp', request: 'adaugă o casă' });
+  direction: 'la stânga', topic: 'culoare', criterion: 'mărime', recipient: 'Ana', name: 'prânz', person: 'Ana', shape: 'inimă', arrangement: 'inimă', words: 'blorp', request: 'adaugă o casă',
+  key: 'culoare', given: '1', values: 'rotund, pătrat', worlds: 'w.list, w.tasks', why: '-', tier: 'cunoaștere', rel: 'lângă', world: 'w.list', relation: 'lângă', aspect: 'culoare', view: 'hartă' });
 const OVERRIDE = { 'make.name': { value: 'Ana' }, 'make.name.place': { value: 'Ana' }, 'make.for': { value: '4' }, 'change.more': { amount: '2' }, 'change.less': { amount: '2' } };
 const ro = (t, thing, count) => realise(m, one(t, 'text'), { ...fillersRo(thing, count), ...(OVERRIDE[one(t, 'name')] ?? {}), ...Object.fromEntries(fills.filter((f) => one(f, 'template') === one(t, 'name')).map((f) => [one(f, 'role'), one(f, 'lemma')])) }, { dictionary: dict, base });
 
@@ -67,6 +68,10 @@ test('requests and replies realised with three things of different gender, in ev
   assert.equal(reply('done.change', 'few', 'casă'), 'cele 3 case sunt acum roșii.');
   assert.equal(reply('done.make.shape', 'one', 'casă'), 'am desenat o casă în formă de inimă.');
   assert.equal(reply('not_understood', 'one', 'casă'), 'nu am înțeles: blorp.');
+  assert.equal(reply('refused.cannot_be', 'one', 'casă'), 'casa nu poate fi roșie.');
+  assert.equal(reply('refused.no_such', 'one', 'copac'), 'aici nu există un copac.');
+  assert.equal(reply('refused.not_a_number', 'one', 'casă'), 'culoarea casei nu este un număr.');
+  assert.equal(reply('person.know.none', 'one', 'casă'), 'încă nu știu nimic despre tine.');
   const req = (name, count, thing) => ro(requests.find((w) => one(w, 'name') === name && (one(w, 'count') ?? null) === (count ?? null)), thing, count);
   assert.equal(req('ask.count', null, 'copac'), 'cât de mulți copaci sunt?');
   assert.equal(req('ask.count', null, 'casă'), 'cât de multe case sunt?');
@@ -84,7 +89,8 @@ test('replies: the same names and counts in English and Romanian (English one / 
   }
   const en = (name, count, f) => realiseEn(enAll, one(enReplies.find((w) => one(w, 'name') === name && one(w, 'count') === count), 'text'), f);
   for (const kind of ['house', 'apple', 'tree']) for (const t of enReplies.filter((w) => w.type === 'w.lang.en.reply')) {
-    const s = en(one(t, 'name'), one(t, 'count'), { kind, thing: kind, number: one(t, 'count') === 'one' ? '1' : '3', value: 'red', shape: 'heart', target: 'tree', words: 'blorp', request: 'add a house' });
+    const s = en(one(t, 'name'), one(t, 'count'), { kind, thing: kind, number: one(t, 'count') === 'one' ? '1' : '3', value: 'red', shape: 'heart', target: 'tree', words: 'blorp', request: 'add a house',
+      key: 'name', given: '1', values: 'round, square', worlds: 'w.list, w.tasks', why: '-', tier: 'knowledge', rel: 'at', place: 'table', name: 'party', world: 'w.list', relation: 'near', aspect: 'colour', view: 'map' });
     assert.ok(s && !/[{}]/.test(s), `${one(t, 'name')} ${kind}: ${s}`);
   }
   assert.equal(en('done.make', 'one', { kind: 'apple' }), 'I drew an apple.');
