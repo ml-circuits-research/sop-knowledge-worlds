@@ -6080,3 +6080,17 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Skipped (raw data absent or by design): coverage 4, import.wordnet 3, coverage-report 2, import.objects 2, and one
   each in import.dicebear, import.noto, import.psys2, k.actions.acts, k.animals, k.objects.drawables, k.parts,
   k.people.given-names, k.units.currencies.
+
+## 2026-11-15 — fifth worker: tools/sync.sh never chooses a side for a hand-written file (block 15:35, serious)
+
+- tools/sync.sh:27 took main's side (`checkout --ours` during a rebase) for every conflicted file that was not .md and
+  went on, and union-merged every .md; that dropped the w.person build step from package.json. Now: a file whose
+  merge attribute is `regenerate` (the generated files, next commit) keeps main's side and is rewritten by
+  `npm run regenerate` (new script: measures-core, the build, the reports where the raw files exist); every other
+  conflicted file stops the script with the list of files and exit code 1, the rebase left in progress, both sides in
+  the file. After the rebase the regenerated files go into the worker's last commit. A failed `git pull` (a dirty tree)
+  stops it too.
+- Test (tests/sync.test.mjs, new, on a toy repository with a bare origin and two clones): a README.md edited on both
+  sides stops sync.sh with "README.md" listed, the rebase in progress and both lines kept (the old script union-merged
+  it and went on); a conflict only in a generated file and the log goes through, the generated file is regenerated
+  from both sides' sources, the log keeps both entries, and the regenerated file is in the worker's commit.

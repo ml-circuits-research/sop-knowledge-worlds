@@ -1,50 +1,49 @@
 #!/bin/bash
-# Rebase the current branch on origin/main while other workers push to it.
-#   tools/sync.sh            git pull --rebase origin main; on a conflict: the logs and pages (*.md) keep both sides,
-#                            other files keep main's side (ours, during a rebase), the generated files are regenerated
-#                            (measures, key words, narration, then `npm run build`); then the rebase continues.
-# A conflict that the union leaves with markers stops the script (tests/repo.test.mjs also refuses markers).
-# Each build step waits for free memory (SKW_MIN_FREE_MB, default 3000) and is retried when killed.
+# Rebase the current branch on origin/main while other workers push to it (block "Reviewer 2026-11-15 15:35").
+#   tools/sync.sh            git pull --rebase origin main, then `npm run regenerate` on the rebased tip.
+# Merge rules (.gitattributes, written by tools/generated.mjs):
+#   - a generated file (merge=regenerate) never conflicts: the driver keeps main's side and the regeneration below
+#     rewrites it from the rebased sources;
+#   - the append-only logs (merge=union) keep both sides;
+#   - every other file is hand-written: on a conflict this script NEVER chooses a side. It stops with the list of the
+#     conflicted files and exit code 1, the rebase left in progress: resolve by hand (`git add`, `git rebase --continue`)
+#     or `git rebase --abort`, then run it again.
+# After the rebase the regenerated files go into the last commit if the branch has commits of its own (else they are
+# left in the working tree). Each step waits for free memory (SKW_MIN_FREE_MB, default 3000); the regeneration is
+# retried when killed.
+#   SKW_REMOTE (default origin), SKW_BRANCH (default main): what to rebase on (the tests use a toy remote).
 cd "$(dirname "$0")/.." || exit 1
 MIN=${SKW_MIN_FREE_MB:-3000}
+REMOTE=${SKW_REMOTE:-origin}
+BRANCH=${SKW_BRANCH:-main}
 LOG=$(mktemp -t skw-sync.XXXX)
-step() { # run one node tool, waiting for memory, retried up to 6 times
-  for i in 1 2 3 4 5 6; do
-    until [ "$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)" -gt "$MIN" ]; do sleep 5; done
-    node "tools/$1.mjs" >> "$LOG" 2>&1 && return 0
-    sleep 5
+git config merge.regenerate.name "a generated file: keep main's side; tools/sync.sh regenerates it"
+git config merge.regenerate.driver true
+in_rebase() { [ -d "$(git rev-parse --git-path rebase-merge)" ] || [ -d "$(git rev-parse --git-path rebase-apply)" ]; }
+is_generated() { [ "$(git check-attr merge -- "$1" | sed 's/.*: merge: //')" = regenerate ]; }
+stop_on_conflicts() { # every conflict left after the merge rules: generated ones take main's side, the rest stop us
+  local hand=()
+  for f in $(git diff --name-only --diff-filter=U); do
+    if is_generated "$f"; then git checkout --ours -- "$f" 2>/dev/null || git rm -q -- "$f"; git add -- "$f"; else hand+=("$f"); fi
   done
-  echo "step $1 failed, see $LOG"; return 1
+  if [ ${#hand[@]} -gt 0 ]; then
+    echo "sync.sh: conflict in hand-written files; no side was chosen. Resolve them by hand, then git rebase --continue:"
+    printf '  %s\n' "${hand[@]}"
+    exit 1
+  fi
 }
-git pull --rebase origin main >> "$LOG" 2>&1
-while [ -d .git/rebase-merge ] || [ -d .git/rebase-apply ]; do
-  python3 - <<'PY' || exit 1
-import subprocess, sys
-files = subprocess.run(['git', 'diff', '--name-only', '--diff-filter=U'], capture_output=True, text=True).stdout.split()
-left = []
-for p in files:
-    if not p.endswith('.md'):
-        subprocess.run(['git', 'checkout', '--ours', p]); continue
-    out, side, a, b = [], None, [], []
-    for line in open(p).read().split('\n'):
-        if line.startswith('<<<<<<< ') and side is None: side, a, b = 'a', [], []; continue
-        if line == '=======' and side == 'a': side = 'b'; continue
-        if line.startswith('>>>>>>> ') and side == 'b':
-            out += a + ([''] if a and a[-1] != '' else []) + b; side = None; continue
-        (a if side == 'a' else b if side == 'b' else out).append(line)
-    text = '\n'.join(out)
-    if side is not None or any(l.startswith(('<<<<<<< ', '>>>>>>> ')) for l in out): left.append(p)
-    open(p, 'w').write(text)
-if left: print('markers left in', left); sys.exit(1)
-PY
-  for s in measures-core key-words narration-core; do step "$s" || exit 1; done
-  for i in 1 2 3 4; do # the build as package.json says it, retried when killed
-    until [ "$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)" -gt "$MIN" ]; do sleep 5; done
-    npm run --silent build >> "$LOG" 2>&1 && break
-    [ "$i" = 4 ] && { echo "build failed, see $LOG"; exit 1; }
-  done
-  git add -A
-  GIT_EDITOR=true git rebase --continue >> "$LOG" 2>&1
+if ! git pull --rebase "$REMOTE" "$BRANCH" >> "$LOG" 2>&1; then in_rebase || { echo "sync.sh: git pull failed (a dirty tree?), see $LOG"; exit 1; }; fi
+while in_rebase; do
+  stop_on_conflicts
+  GIT_EDITOR=true git rebase --continue >> "$LOG" 2>&1 || { in_rebase || { echo "sync.sh: the rebase failed, see $LOG"; exit 1; }; }
 done
+for i in 1 2 3 4; do # the regeneration as package.json says it, retried when killed
+  until [ "$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)" -gt "$MIN" ]; do sleep 5; done
+  npm run --silent regenerate >> "$LOG" 2>&1 && break
+  [ "$i" = 4 ] && { echo "sync.sh: npm run regenerate failed, see $LOG"; exit 1; }
+done
+if [ -n "$(git status --porcelain)" ] && [ "$(git rev-list --count "$REMOTE/$BRANCH"..HEAD)" -gt 0 ]; then
+  git add -A && git commit -q --amend --no-edit
+fi
 git log --oneline -3
 git status --short | head -5
