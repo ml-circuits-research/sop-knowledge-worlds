@@ -71,7 +71,7 @@ No two objects have the same file (a test). The scenes of k.scenes use the same 
 | `things-3` | hive, intercom, dryer, harness, reel, typewriter, bandage, rook, canteen, napkin, boiler, cone, knob, sphere, scalpel, telegraph, heater, graffiti, windshield, antenna, gavel, helm, tile, ashtray, locket, aquarium, basin, portfolio, binoculars, cello, stocking, chime, blindfold, radiator, mortar, bugle, clockwork, bellows, barricade, chainsaw, slab, pendant, harmonica, vial, burr, machete, jukebox, doorknob, mainframe, scuba, mast, shawl, seatbelt, caddy |
 
 328 hand-written objects (30 of Round 1, 30 of Round 2, 60 of Round 4 and 100 of Round 5: the most frequent common
-things that had no drawing, see `MISSING.md`; 5 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0. 103 of Round 11 (shards `animals-2` to `things-3`, written from the table `tools/objects-hand-data.mjs` by `tools/objects-hand.mjs`): the animals whose name is drawn as another thing (`"crane bird"`, `"kiwi bird"`, `"tuna fish"`) and 100 more of the most frequent common things with no drawing.
+things that had no drawing, see `MISSING.md`; 5 of Round 7, for the scenes of `k.scenes`), words for every object and part kind. Source `hand-core 1`, CC0-1.0. 103 of Round 11 (shards `animals-2` to `things-3`, hand-written: the shards are the home of these drawings, reviewer 18:45; until 2026-11-15 written from a JS table): the animals whose name is drawn as another thing (`"crane bird"`, `"kiwi bird"`, `"tuna fish"`) and 100 more of the most frequent common things with no drawing.
 
 ## Imported objects (shards `noto-…`, `openmoji-…`, `mulberry-…`)
 

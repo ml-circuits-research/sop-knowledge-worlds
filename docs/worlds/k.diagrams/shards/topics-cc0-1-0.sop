@@ -1,4 +1,4 @@
-# k.diagrams/shards/topics-cc0-1-0: 1080 topics a diagram can be drawn about, read from the fills of k.diagrams over facts under CC0-1.0 (block 07:30 item 9): each with the kinds of diagram it fills, the types it comes from and the nodes of its largest diagram. Derived; rebuilt by the build.
+# k.diagrams/shards/topics-cc0-1-0: 1083 topics a diagram can be drawn about, read from the fills of k.diagrams over facts under CC0-1.0 (block 07:30 item 9): each with the kinds of diagram it fills, the types it comes from and the nodes of its largest diagram. Derived; rebuilt by the build.
 # sources: hand-core 1 (the facts the topics are read from)
 # sources: psys2-worlds 6b63b2ba (the facts the topics are read from)
 # license: CC0-1.0
@@ -107,6 +107,7 @@
 @k.diagrams.topic.cc0_1_0.broccoli k.diagrams.topic name=broccoli kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.bronco k.diagrams.topic name=bronco kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=7 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.brooch k.diagrams.topic name=brooch kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=2 core.source="hand-core 1"
+@k.diagrams.topic.cc0_1_0.brush k.diagrams.topic name=brush kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.bud k.diagrams.topic name=bud kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.buffalo k.diagrams.topic name=buffalo kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=7 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.bug k.diagrams.topic name=bug kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=5 core.source="hand-core 1"
@@ -184,6 +185,7 @@
 @k.diagrams.topic.cc0_1_0.cloak k.diagrams.topic name=cloak kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.clock k.diagrams.topic name=clock kind="Venn diagram" kind=cycle kind=timeline kind=tree from=k.kinds.parent from=k.time.ordered nodes=24 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.closet k.diagrams.topic name=closet kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=4 core.source="hand-core 1"
+@k.diagrams.topic.cc0_1_0.cloth k.diagrams.topic name=cloth kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.clothes k.diagrams.topic name=clothes kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.clothing k.diagrams.topic name=clothing kind="Venn diagram" kind=tree from=k.kinds.parent nodes=81 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.cloud k.diagrams.topic name=cloud kind="Venn diagram" kind=tree from=k.kinds.parent nodes=5 core.source="hand-core 1" core.source="psys2-worlds 6b63b2ba"
@@ -370,7 +372,7 @@
 @k.diagrams.topic.cc0_1_0.hockey k.diagrams.topic name=hockey kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.horn k.diagrams.topic name=horn kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.hornet k.diagrams.topic name=hornet kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=6 core.source="hand-core 1"
-@k.diagrams.topic.cc0_1_0.hose k.diagrams.topic name=hose kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=2 core.source="hand-core 1"
+@k.diagrams.topic.cc0_1_0.hose k.diagrams.topic name=hose kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.hotel k.diagrams.topic name=hotel kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.hound k.diagrams.topic name=hound kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=7 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.hourglass k.diagrams.topic name=hourglass kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=4 core.source="hand-core 1"
@@ -430,7 +432,7 @@
 @k.diagrams.topic.cc0_1_0.lemur k.diagrams.topic name=lemur kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=5 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.leopard k.diagrams.topic name=leopard kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.lifeboat k.diagrams.topic name=lifeboat kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=4 core.source="hand-core 1"
-@k.diagrams.topic.cc0_1_0.light k.diagrams.topic name=light kind="Venn diagram" kind=tree from=k.kinds.parent nodes=5 core.source="hand-core 1"
+@k.diagrams.topic.cc0_1_0.light k.diagrams.topic name=light kind="Venn diagram" kind=tree from=k.kinds.parent nodes=6 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.lighthouse k.diagrams.topic name=lighthouse kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=5 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.lily k.diagrams.topic name=lily kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=5 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.line k.diagrams.topic name=line kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
@@ -472,6 +474,7 @@
 @k.diagrams.topic.cc0_1_0.mattress k.diagrams.topic name=mattress kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.mausoleum k.diagrams.topic name=mausoleum kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=4 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.meadow_animal k.diagrams.topic name="meadow animal" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=4 core.source="hand-core 1"
+@k.diagrams.topic.cc0_1_0.measure k.diagrams.topic name=measure kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.meat k.diagrams.topic name=meat kind="Venn diagram" kind=tree from=k.kinds.parent nodes=11 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.medal k.diagrams.topic name=medal kind="Venn diagram" kind=tree from=k.kinds.parent nodes=6 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.megaphone k.diagrams.topic name=megaphone kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=4 core.source="hand-core 1"
@@ -766,7 +769,7 @@
 @k.diagrams.topic.cc0_1_0.terrier k.diagrams.topic name=terrier kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=7 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.thermometer k.diagrams.topic name=thermometer kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.thermos k.diagrams.topic name=thermos kind="Venn diagram" kind="mind map" kind=tree from=k.kinds.parent from=k.parts.usual nodes=3 core.source="hand-core 1"
-@k.diagrams.topic.cc0_1_0.thing k.diagrams.topic name=thing kind="Venn diagram" kind=tree from=k.kinds.parent nodes=240 core.source="hand-core 1"
+@k.diagrams.topic.cc0_1_0.thing k.diagrams.topic name=thing kind="Venn diagram" kind=tree from=k.kinds.parent nodes=258 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.thing_for_baking k.diagrams.topic name="thing for baking" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=3 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.thing_for_boiling_water k.diagrams.topic name="thing for boiling water" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"
 @k.diagrams.topic.cc0_1_0.thing_for_borrowing_books k.diagrams.topic name="thing for borrowing books" kind="Venn diagram" kind=tree from=k.kinds.parent nodes=2 core.source="hand-core 1"

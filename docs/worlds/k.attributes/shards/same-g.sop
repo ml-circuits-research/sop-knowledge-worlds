@@ -58,7 +58,7 @@
 @k.attributes.same.glove.clothing k.attributes.same name=glove sense=clothing only=true in=k.attributes.number in=k.attributes.thing by_word=k.parts.usual by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.gloves.clothing k.attributes.same name=gloves sense=clothing only=true in=k.attributes.drawn in=k.attributes.thing in=k.attributes.usage in=k.objects.object in=k.scenes.thing in=k.wearables.wearable core.source="hand-core 1"
 @k.attributes.same.glowing_star.thing k.attributes.same name="glowing star" sense=thing only=true in=k.attributes.drawn in=k.attributes.usage in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
-@k.attributes.same.glue.thing k.attributes.same name=glue sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
+@k.attributes.same.glue.thing k.attributes.same name=glue sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.glue_stick.thing k.attributes.same name="glue stick" sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.gnat.animal k.attributes.same name=gnat sense=animal only=true in=k.animals.animal in=k.attributes.drawn in=k.commonsense.thing in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.goal.thing k.attributes.same name=goal sense=thing only=true in=k.objects.object in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"

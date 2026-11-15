@@ -4,7 +4,7 @@
 # script: tools/joins.mjs
 
 @k.attributes.same.aardvark.animal k.attributes.same name=aardvark sense=animal only=true in=k.animals.animal in=k.commonsense.thing in=k.scenes.thing by_word=k.words.sense core.source="hand-core 1"
-@k.attributes.same.abacus.thing k.attributes.same name=abacus sense=thing only=true in=k.attributes.drawn in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
+@k.attributes.same.abacus.thing k.attributes.same name=abacus sense=thing only=true in=k.attributes.drawn in=k.attributes.thing in=k.objects.object in=k.scenes.thing core.source="hand-core 1"
 @k.attributes.same.abbey.thing k.attributes.same name=abbey sense=thing only=true in=k.attributes.number in=k.objects.stand_in by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.accordion.thing k.attributes.same name=accordion sense=thing only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.parts.inherited by_word=k.words.sense core.source="hand-core 1"
 @k.attributes.same.acorn.plant k.attributes.same name=acorn sense=plant only=true in=k.attributes.drawn in=k.attributes.number in=k.attributes.thing in=k.objects.object in=k.scenes.thing by_word=k.parts.whole by_word=k.words.sense core.source="hand-core 1"

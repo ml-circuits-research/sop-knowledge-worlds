@@ -1,7 +1,7 @@
 # k.objects/shards/animals-2: crane bird, kiwi bird, tuna fish, eel, jaguar, cougar, dingo, jackal, possum, alligator, newt, flea, grasshopper, mantis, leech, clam. Parts with a primitive shape, a box in the 0 to 100 frame of the object (x right, y down), a draw order z and typical colours; points for lines and polygons.
-# sources: hand-core 1 (hand-written in this repository: tools/objects-hand-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these drawings: edit it here, reviewer 18:45; written from tools/objects-hand-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/objects-hand.mjs
+# script: none (hand-written)
 
 # crane bird
 @k.objects.crane_bird k.objects.object name="crane bird" core.source="hand-core 1"

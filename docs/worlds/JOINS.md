@@ -15,8 +15,8 @@ and the meat).
 
 ## Numbers
 
-- names carried by facts of more than one world: 3517
-- one thing everywhere: 3446
+- names carried by facts of more than one world: 3518
+- one thing everywhere: 3447
 - clashes of sense: 71
 
 | sense of the one thing | names |
@@ -32,7 +32,7 @@ and the meat).
 | place | 300 |
 | time | 44 |
 | body in space | 35 |
-| thing | 1746 |
+| thing | 1747 |
 
 ## Clashes of sense
 
@@ -55,7 +55,7 @@ and the meat).
 | copper | **colour**: `k.colours.colour`; **place**: `k.geo.river` |
 | coral | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **colour**: `k.colours.colour` |
 | crab | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **food**: `k.food.food` |
-| crane | **animal**: `k.animals.animal`, `k.commonsense.thing`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` |
+| crane | **animal**: `k.animals.animal`, `k.commonsense.thing`; **thing**: `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing`; unsure: `k.attributes.thing` |
 | cream | **food**: `k.food.food`; **colour**: `k.colours.colour` |
 | eel | **animal**: `k.animals.animal`, `k.attributes.drawn`, `k.attributes.number`, `k.commonsense.thing`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river` |
 | feather | **animal**: `k.attributes.drawn`, `k.attributes.number`, `k.objects.object`, `k.scenes.thing`; **place**: `k.geo.river`; unsure: `k.attributes.thing` |
@@ -118,19 +118,19 @@ How many names that are one thing two worlds share (the 40 largest pairs).
 |---|---:|
 | `k.attributes` and `k.objects` | 2336 |
 | `k.objects` and `k.scenes` | 2196 |
-| `k.attributes` and `k.scenes` | 2153 |
+| `k.attributes` and `k.scenes` | 2154 |
 | `k.commonsense` and `k.scenes` | 318 |
 | `k.animals` and `k.commonsense` | 290 |
 | `k.animals` and `k.scenes` | 290 |
-| `k.attributes` and `k.commonsense` | 207 |
+| `k.attributes` and `k.commonsense` | 208 |
 | `k.commonsense` and `k.objects` | 192 |
 | `k.animals` and `k.attributes` | 179 |
 | `k.attributes` and `k.layouts` | 167 |
 | `k.layouts` and `k.objects` | 167 |
 | `k.layouts` and `k.scenes` | 167 |
 | `k.animals` and `k.objects` | 164 |
+| `k.attributes` and `k.food` | 144 |
 | `k.food` and `k.objects` | 143 |
-| `k.attributes` and `k.food` | 142 |
 | `k.food` and `k.scenes` | 131 |
 | `k.attributes` and `k.wearables` | 87 |
 | `k.objects` and `k.wearables` | 87 |

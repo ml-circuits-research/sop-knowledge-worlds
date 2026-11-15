@@ -6530,3 +6530,15 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   raw files).
 - Test (tests/sync.test.mjs, +1, toy repository): sync.sh sets core.hooksPath; a push with a stale generated file is
   refused with "generated files are stale"; after regenerating it goes through.
+
+## 2026-11-15 — second worker: tools/objects-hand-data.mjs into hand-written shards (reviewer 18:45 item 1)
+
+- The seven k.objects shards of Round 11 (animals-2, plants, land-3, places-3, food-3, vehicles-2, things-3; 2532 wires,
+  103 drawings) are the home of their drawings, byte for byte as written before, header `# script: none
+  (hand-written)`. tools/objects-hand-data.mjs (1,010 lines of a part notation in strings: "name shape x y w h | z
+  colours key=value") and tools/objects-hand.mjs are deleted; tests/generators.test.mjs drops their test.
+- tests/k.objects.hand.test.mjs checks on the facts what the tool checked: shapes, colours, the box in the frame, w = h
+  for circles and squares, whole z, pointing on triangles and opens on arcs only, unique part names, relations naming
+  parts of the same object, points inside their part's box (3 pass).
+- The generated files that main had stale (catalog, JOINS, PARENTS, same-*, topics, .gitattributes's use-wordnet line)
+  are rebuilt in this commit (`npm run build`, tools/generated.mjs).

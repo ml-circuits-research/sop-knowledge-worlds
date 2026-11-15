@@ -1,7 +1,7 @@
 # k.objects/shards/plants: fern, seaweed, stump. Parts with a primitive shape, a box in the 0 to 100 frame of the object (x right, y down), a draw order z and typical colours; points for lines and polygons.
-# sources: hand-core 1 (hand-written in this repository: tools/objects-hand-data.mjs)
+# sources: hand-core 1 (hand-written in this repository; this shard is the home of these drawings: edit it here, reviewer 18:45; written from tools/objects-hand-data.mjs until 2026-11-15)
 # license: CC0-1.0
-# script: tools/objects-hand.mjs
+# script: none (hand-written)
 
 # fern
 @k.objects.fern k.objects.object name=fern core.source="hand-core 1"

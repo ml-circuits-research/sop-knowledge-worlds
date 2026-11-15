@@ -276,7 +276,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.actions | `k.actions.action.object` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 272 | 154 |
 | k.animals | `k.animals.animal.eats` | thing | `k.scenes.thing`, `k.attributes.drawn`, `k.objects.object` | name | 89 | 22 |
 | k.attributes | `k.attributes.range.kind` | kind | `k.attributes.kind` | name | 24 | 14 |
-| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3517 | 2345 |
+| k.attributes | `k.attributes.same.name` | thing | `k.scenes.thing`, `k.objects.object`, `k.attributes.drawn` | name | 3518 | 2346 |
 | k.attributes | `k.attributes.thing.material` | thing | `k.attributes.thing` | name | 27 | 14 |
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
@@ -293,7 +293,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.feelings | `k.feelings.feeling.looks_like` | thing | `k.faces.expression` | name | 3 | 2 |
 | k.food | `k.food.food.comes_from` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 36 | 22 |
 | k.food | `k.food.food.made_of` | thing | `k.objects.object`, `k.scenes.thing`, `k.attributes.drawn` | name | 70 | 46 |
-| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4571 | 2289 |
+| k.kinds | `k.kinds.parent.name` | thing | `k.scenes.thing` | name | 4593 | 2291 |
 | k.layouts | `k.layouts.anchor.holds` | thing | `k.scenes.thing` | name | 173 | 129 |
 | k.layouts | `k.layouts.anchor.on` | thing | `k.scenes.thing` | name | 15 | 9 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 143 | 81 |

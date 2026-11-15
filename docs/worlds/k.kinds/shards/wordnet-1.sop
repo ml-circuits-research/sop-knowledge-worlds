@@ -1,4 +1,4 @@
-# k.kinds/shards/wordnet-1: 1178 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
+# k.kinds/shards/wordnet-1: 1180 up edges: what a thing is by WordNet 3.1 (k.words): the hypernyms of the sense of the name and the chain of first hypernyms above it.
 # sources: wordnet 3.1 (Princeton WordNet 3.1, read from k.words and k.parts as imported)
 # license: WordNet-3.0
 # script: tools/kinds-core.mjs
@@ -268,7 +268,7 @@
 @k.kinds.parent.brown_algae.alga k.kinds.parent name="brown algae" is_a=alga dimension=kind from=k.words.sense key=kind_of value="kelp noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.brown_bear.bear k.kinds.parent name="brown bear" is_a=bear dimension=kind from=k.words.sense key=kind_of value="grizzly bear noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.brownie.cookie k.kinds.parent name=brownie is_a=cookie dimension=kind from=k.words.sense key=is_a value="brownie noun 3" core.source="wordnet 3.1"
-@k.kinds.parent.brush.implement k.kinds.parent name=brush is_a=implement dimension=kind from=k.words.sense key=kind_of value="toothbrush noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.brush.vegetation k.kinds.parent name=brush is_a=vegetation dimension=kind from=k.words.sense key=is_a value="brush noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.bucket.vessel k.kinds.parent name=bucket is_a=vessel dimension=kind from=k.words.sense key=is_a value="bucket noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.bud.flower k.kinds.parent name=bud is_a=flower dimension=kind from=k.words.sense key=is_a value="bud noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.buffalo.bison k.kinds.parent name=buffalo is_a=bison dimension=kind from=k.words.sense key=is_a value="buffalo noun 1" core.source="wordnet 3.1"
@@ -440,6 +440,7 @@
 @k.kinds.parent.clock.timepiece k.kinds.parent name=clock is_a=timepiece dimension=kind from=k.words.sense key=is_a value="clock noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.clockwork.mechanism k.kinds.parent name=clockwork is_a=mechanism dimension=kind from=k.words.sense key=is_a value="clockwork noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.closet.storage_space k.kinds.parent name=closet is_a="storage space" dimension=kind from=k.words.sense key=is_a value="closet noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.cloth.artifact k.kinds.parent name=cloth is_a=artifact dimension=kind from=k.words.sense key=is_a value="cloth noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.cloth_covering.covering k.kinds.parent name="cloth covering" is_a=covering dimension=kind from=k.words.sense key=kind_of value="bandage noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.clothes.clothing k.kinds.parent name=clothes is_a=clothing dimension=kind from=k.words.sense key=is_a value="clothes noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.clothing.consumer_goods k.kinds.parent name=clothing is_a="consumer goods" dimension=kind from=k.words.sense key=is_a value="clothing noun 1" core.source="wordnet 3.1"
@@ -1091,6 +1092,7 @@
 @k.kinds.parent.mattress.pad k.kinds.parent name=mattress is_a=pad dimension=kind from=k.words.sense key=is_a value="mattress noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.mayonnaise.dressing k.kinds.parent name=mayonnaise is_a=dressing dimension=kind from=k.words.sense key=is_a value="mayonnaise noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.maze.system k.kinds.parent name=maze is_a=system dimension=kind from=k.words.sense key=is_a value="maze noun 1" core.source="wordnet 3.1"
+@k.kinds.parent.measure.maneuver k.kinds.parent name=measure is_a=maneuver dimension=kind from=k.words.sense key=is_a value="measure noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.measuring_instrument.instrument k.kinds.parent name="measuring instrument" is_a=instrument dimension=kind from=k.words.sense key=kind_of value="clock noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.meatus.passage k.kinds.parent name=meatus is_a=passage dimension=kind from=k.words.sense key=kind_of value="ear canal noun 1" core.source="wordnet 3.1"
 @k.kinds.parent.mechanic.craftsman k.kinds.parent name=mechanic is_a=craftsman dimension=kind from=k.words.sense key=is_a value="mechanic noun 1" core.source="wordnet 3.1"
