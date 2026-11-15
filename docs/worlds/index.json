@@ -1,5 +1,5 @@
 {
- "version": "d1adcdc40902",
+ "version": "8fbcf34add32",
  "sopworld": "05d2f93",
  "worlds": [
   {
@@ -88998,6 +88998,88 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/words-k.feelings",
+     "path": "w.lang.en/shards/words-k.feelings.sop",
+     "wires": 11,
+     "bytes": 2141,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.feelings.feeling: w.lang.en.word.k.feelings.feeling: means=k.feelings.feeling names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.caused_by: w.lang.en.word.k.feelings.caused_by: means=k.feelings.feeling.caused_by names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.opposite: w.lang.en.word.k.feelings.opposite: means=k.feelings.feeling.opposite names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.looks_like: w.lang.en.word.k.feelings.looks_like: means=k.feelings.feeling.looks_like names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.expression: w.lang.en.word.k.feelings.expression: means=k.feelings.feeling.expression names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.key.feeling.tone: w.lang.en.word.k.feelings.key.feeling.tone: means=k.feelings.feeling.tone names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.key.feeling.mouth: w.lang.en.word.k.feelings.key.feeling.mouth: means=k.feelings.feeling.mouth names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.key.feeling.eyebrows: w.lang.en.word.k.feelings.key.feeling.eyebrows: means=k.feelings.feeling.eyebrows names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.key.feeling.eyes: w.lang.en.word.k.feelings.key.feeling.eyes: means=k.feelings.feeling.eyes names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.key.feeling.cheeks: w.lang.en.word.k.feelings.key.feeling.cheeks: means=k.feelings.feeling.cheeks names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.feelings.key.feeling.caused_by: w.lang.en.word.k.feelings.key.feeling.caused_by: means=k.feelings.feeling.caused_by names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.food",
+     "path": "w.lang.en/shards/words-k.food.sop",
+     "wires": 13,
+     "bytes": 2175,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.food.food: w.lang.en.word.k.food.food: means=k.food.food names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.kind: w.lang.en.word.k.food.kind: means=k.food.food.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.colour: w.lang.en.word.k.food.colour: means=k.food.food.colour names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.grows_on: w.lang.en.word.k.food.grows_on: means=k.food.food.grows_on names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.comes_from: w.lang.en.word.k.food.comes_from: means=k.food.food.comes_from names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.eaten: w.lang.en.word.k.food.eaten: means=k.food.food.eaten names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.made_of: w.lang.en.word.k.food.made_of: means=k.food.food.made_of names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.key.food.kind: w.lang.en.word.k.food.key.food.kind: means=k.food.food.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.key.food.botanically: w.lang.en.word.k.food.key.food.botanically: means=k.food.food.botanically names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.key.food.grows_on: w.lang.en.word.k.food.key.food.grows_on: means=k.food.food.grows_on names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.key.food.comes_from: w.lang.en.word.k.food.key.food.comes_from: means=k.food.food.comes_from names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.key.food.drawing: w.lang.en.word.k.food.key.food.drawing: means=k.food.food.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.food.key.food.made_of: w.lang.en.word.k.food.key.food.made_of: means=k.food.food.made_of names no action, type, key or value of the matrix"
+     ]
+    },
+    {
+     "id": "w.lang.en/shards/words-k.wearables",
+     "path": "w.lang.en/shards/words-k.wearables.sop",
+     "wires": 19,
+     "bytes": 3064,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.en.word.k.wearables.wearable: w.lang.en.word.k.wearables.wearable: means=k.wearables.wearable names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.worn_on: w.lang.en.word.k.wearables.worn_on: means=k.wearables.wearable.worn_on names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.about: w.lang.en.word.k.wearables.key.place.about: means=k.wearables.place.about names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.face_slot: w.lang.en.word.k.wearables.key.place.face_slot: means=k.wearables.place.face_slot names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.body_part: w.lang.en.word.k.wearables.key.place.body_part: means=k.wearables.place.body_part names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.x: w.lang.en.word.k.wearables.key.place.x: means=k.wearables.place.x names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.y: w.lang.en.word.k.wearables.key.place.y: means=k.wearables.place.y names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.w: w.lang.en.word.k.wearables.key.place.w: means=k.wearables.place.w names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.h: w.lang.en.word.k.wearables.key.place.h: means=k.wearables.place.h names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.place.pair: w.lang.en.word.k.wearables.key.place.pair: means=k.wearables.place.pair names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.kind: w.lang.en.word.k.wearables.key.wearable.kind: means=k.wearables.wearable.kind names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.worn_on: w.lang.en.word.k.wearables.key.wearable.worn_on: means=k.wearables.wearable.worn_on names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.covers: w.lang.en.word.k.wearables.key.wearable.covers: means=k.wearables.wearable.covers names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.layer: w.lang.en.word.k.wearables.key.wearable.layer: means=k.wearables.wearable.layer names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.pair: w.lang.en.word.k.wearables.key.wearable.pair: means=k.wearables.wearable.pair names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.drawing: w.lang.en.word.k.wearables.key.wearable.drawing: means=k.wearables.wearable.drawing names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.face_slot: w.lang.en.word.k.wearables.key.wearable.face_slot: means=k.wearables.wearable.face_slot names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.face: w.lang.en.word.k.wearables.key.wearable.face: means=k.wearables.wearable.face names no action, type, key or value of the matrix",
+      "unknown-word w.lang.en.word.k.wearables.key.wearable.worn_for: w.lang.en.word.k.wearables.key.wearable.worn_for: means=k.wearables.wearable.worn_for names no action, type, key or value of the matrix"
+     ]
     }
    ],
    "sources": [

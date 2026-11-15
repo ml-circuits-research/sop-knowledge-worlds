@@ -547,3 +547,12 @@ request, each with its views (filler: just, like, I mean; politeness: please, pl
 wanna, would like, need, let me; hesitation: um, uh, hmm) and where it stands (lead, tail, any). One home for what a
 host or the library strips or reads for tone; the hand-over's phrase groups keep their lists for PSys2's readers, and
 `tests/w.lang.en.fn.test.mjs` checks that every fn word is said in one of them (all but kindly and umm).
+
+## The words of the other worlds (Q78, KR3)
+
+Shards `words-<world>` (one per world, owned by w.lang.en): the `core.word` facts that say a world's types, keys and
+values in English, which were in the world's schema; ids `w.lang.en.word.<world>.…`. tools/build-catalog.mjs reads
+them as the world's own words, so vocab.json does not change with the move (checked byte for byte for each world
+moved); tools/key-words.mjs writes the rule block at the end of the shard. A second language adds
+`w.lang.<xx>/shards/words-<world>.sop` of the same shape. Moved: k.feelings, k.wearables, k.food (the first three, to
+check the diff); the other worlds follow.

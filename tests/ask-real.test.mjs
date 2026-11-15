@@ -6,7 +6,8 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { scanWorlds } from '../tools/lib/worlds.mjs';
 import { loadCatalog, ask, run } from '../tools/ask-real.mjs';
-import { withBlock, START } from '../tools/key-words.mjs';
+import { withBlock, withBlockIn, START } from '../tools/key-words.mjs';
+import { hasWordsShard, wordsShardPath } from '../tools/lib/words-shards.mjs';
 
 const cat = loadCatalog();
 const a = (q) => ask(cat, q);
@@ -58,6 +59,13 @@ test('the real questions: at least 113 of the 132 Talk failures, 34 of the 40 kn
 test('a word for every key: each schema ends with the block of tools/key-words.mjs; every key of a named type has a word', () => {
   for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) { // a grammar world's keys (lhs, rhs) are not what people ask for
     const text = readFileSync(join(w.dir, 'schema.sop'), 'utf8');
+    if (hasWordsShard(w.id)) { // Q78: the words of the world live in w.lang.en's shard words-<world>, the block at its end
+      const words = readFileSync(wordsShardPath(w.id), 'utf8');
+      assert.equal(words, withBlockIn(words, text), `${w.id}: run node tools/key-words.mjs`);
+      assert.ok(words.includes(START), w.id);
+      assert.ok(!/^@\S+ core\.word /m.test(text), `${w.id}: a core.word left in the schema`);
+      continue;
+    }
     assert.equal(text, withBlock(text), `${w.id}: run node tools/key-words.mjs`);
     assert.ok(text.includes(START), w.id);
   }

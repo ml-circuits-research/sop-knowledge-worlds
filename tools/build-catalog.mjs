@@ -4,6 +4,7 @@
 // every source, from sources/<id>/SOURCE.md). Deterministic: sorted, no dates; a rerun gives no diff.
 //   node tools/build-catalog.mjs [worlds-dir]      write the files
 //   node tools/build-catalog.mjs --check           exit 1 when the files on disk are not what a build gives
+import { worldOfWordsShard } from './lib/words-shards.mjs';
 import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { dataFolders } from './lib/licenses.mjs';
 import { join, relative } from 'node:path';
@@ -154,7 +155,8 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       const keys = [];
       for (const w of wires) {
         if (w.type === 'core.word') {
-          for (const t of w.attrs.text ?? []) addWord(text(t), shard.id, kindOfWord(w));
+          // the words of another world, in its language world's shard words-<world> (Q78): read below as that world's own
+          if (!worldOfWordsShard(shard.id)) for (const t of w.attrs.text ?? []) addWord(text(t), shard.id, kindOfWord(w));
           continue;
         }
         if (SEARCH_KEYS.has(w.type)) for (const t of w.attrs[SEARCH_KEYS.get(w.type)] ?? []) addWord(text(t), shard.id, w.type, true);
@@ -182,7 +184,9 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
     // Words of the schema: a word for a value goes to the shards holding that value under that key; a word for a
     // type or a key of the world goes to the world's schema path (the host then knows the world is relevant and
     // picks its shards by the other words of the message).
-    for (const w of parse(world.schemaText)) {
+    // (and the words of the world in the shards words-<world> of the language worlds, Q78: read exactly as schema words)
+    const wordsShards = worlds.flatMap((x) => x.shards).filter((sh) => worldOfWordsShard(sh.id) === world.id);
+    for (const w of [...parse(world.schemaText), ...wordsShards.flatMap((sh) => parse(sh.text))]) {
       if (w.type !== 'core.word') continue;
       const means = text(w.attrs.means?.[0] ?? '');
       const of = w.attrs.of?.[0];

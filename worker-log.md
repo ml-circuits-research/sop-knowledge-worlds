@@ -6058,3 +6058,13 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
   k.layouts tests, catalog, validate, repo: 10 files, 52 pass, 1 skipped.
 - Lesson: a new role (or `holds` value) on k.actions touches k.kinds' argument classes, so k.kinds.relations is one of
   the touched tests of such a commit; I had not run it.
+
+## 2026-11-15 — third worker: words shards, the first three worlds (Q78 (1), reviewer 16:10)
+
+- k.feelings (11 word wires), k.wearables (19), k.food (13): their schema's core.word facts moved to
+  w.lang.en/shards/words-<world>.sop (ids w.lang.en.word.<world>.…); tools/lib/words-shards.mjs; build-catalog reads
+  a words shard as the world's schema words; key-words writes the block there; tests/ask-real checks the block and no
+  core.word left in the schema.
+- vocab.json and vocab-kinds.json: byte-identical before and after (no diff, not even ordering). index.json lists the
+  three new shards. COVERAGE.md was stale on main (k.colours 71 -> 73, k.values 20 -> 6, from another commit):
+  regenerated here.

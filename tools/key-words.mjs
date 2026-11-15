@@ -9,6 +9,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { scanWorlds } from './lib/worlds.mjs';
 import { parse } from './sopworld/sopworld.mjs';
+import { hasWordsShard, wordsShardPath } from './lib/words-shards.mjs';
 
 const SRC = 'hand-core 1';
 export const START = '# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).';
@@ -39,9 +40,10 @@ export const EXTRA = {
 const val = (v) => (/^[^\s"\\$?@#][^\s"\\]*$/.test(v) ? v : JSON.stringify(v));
 
 // The block for one schema text (without an earlier block).
-export function keyWordBlock(schemaText) {
-  const wires = parse(schemaText);
+export function keyWordBlock(schemaText, wordsText = '', idPrefix = null) {
+  const wires = [...parse(schemaText), ...parse(withoutBlock(wordsText))];
   const world = wires.find((w) => w.type === 'core.module').attrs.name[0];
+  const prefix = idPrefix ?? `${world}.word.key`; // in a language world's words shard: w.lang.en.word.<world>.key
   const have = new Map(); // means -> Set(text)
   for (const w of wires) if (w.type === 'core.word') { const m = w.attrs.means?.[0]; if (!have.has(m)) have.set(m, new Set()); for (const t of w.attrs.text ?? []) have.get(m).add((t.startsWith('"') ? JSON.parse(t) : t).toLowerCase()); }
   const ids = new Map();
@@ -49,7 +51,7 @@ export function keyWordBlock(schemaText) {
   const lines = [];
   const add = (means, texts) => {
     const fresh = [...new Set(texts)].filter((t) => !(have.get(means)?.has(t)));
-    if (fresh.length) lines.push(`@${world}.word.key.${means.slice(world.length + 1)} core.word ${fresh.map((t) => `text=${val(t)}`).join(' ')} means=${means} core.source="${SRC}"`);
+    if (fresh.length) lines.push(`@${prefix}.${means.slice(world.length + 1)} core.word ${fresh.map((t) => `text=${val(t)}`).join(' ')} means=${means} core.source="${SRC}"`);
   };
   for (const w of wires) {
     if (w.type === 'core.type' && EXTRA[w.attrs.of[0]]) add(w.attrs.of[0], EXTRA[w.attrs.of[0]]);
@@ -63,9 +65,17 @@ export function keyWordBlock(schemaText) {
 
 export const withoutBlock = (text) => { const at = text.indexOf(`\n${START}`); return at < 0 ? text : `${text.slice(0, at).replace(/\n+$/, '')}\n`; };
 export const withBlock = (text) => { const base = withoutBlock(text); const block = keyWordBlock(base); return block ? `${base}\n${block}` : base; };
+// A world whose words live in its language world's shard words-<world> (Q78): the block goes at the end of that shard.
+export const withBlockIn = (wordsText, schemaText) => {
+  const base = withoutBlock(wordsText); const world = parse(schemaText).find((w) => w.type === 'core.module').attrs.name[0];
+  const block = keyWordBlock(schemaText, base, `w.lang.en.word.${world}.key`); return block ? `${base}\n${block}` : base; };
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   let n = 0;
-  for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) { const path = join(w.dir, 'schema.sop'); const next = withBlock(readFileSync(path, 'utf8')); n += next.split('\n').filter((l) => l.includes('.word.key.')).length; writeFileSync(path, next); }
+  for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) {
+    const path = hasWordsShard(w.id) ? wordsShardPath(w.id) : join(w.dir, 'schema.sop');
+    const next = hasWordsShard(w.id) ? withBlockIn(readFileSync(path, 'utf8'), readFileSync(join(w.dir, 'schema.sop'), 'utf8')) : withBlock(readFileSync(path, 'utf8'));
+    n += next.split('\n').filter((l) => l.includes('.word.key.')).length; writeFileSync(path, next);
+  }
   console.log(`${n} word wires for keys`);
 }
