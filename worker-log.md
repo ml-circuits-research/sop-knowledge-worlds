@@ -5533,3 +5533,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - questions.md **Q71**: where the wallet lives (budget and tendered on a shopping list meanwhile, or a kind, or
   storyState); `n` or `position` across the w.* schemas (kept `n`); clause splitting as [LIB]; the conversation (K3)
   and arithmetic (K4) frames must outrank "I should …" and "how much is …" here.
+
+## 2026-11-15 — fourth worker: K6 on main (974cbd9); takes K10 (block 09:20) and KR2 (block 10:50)
+
+- K6 (frames for lists, tasks, a shop and a wallet) is on main as 974cbd9 after the restart (test:changed on the
+  rebased tip: 43 files, 309 tests, 303 pass, 0 fail, 6 skipped). Real rows read clause by clause with the right act
+  and roles: r0590, r0598, r0599, r0622, r0623, r0624, r0625, r0626, r0627 (9 of 9).
+- Taken now, in this order: **K10** (question frames in other word orders over existing facts; real row r0244 "how
+  many legs has a cow"), then **KR2** (one home per idea: colours, shapes, number words, verb forms; enums joined, not
+  copied; declare the undeclared joins that meet 100 %).
