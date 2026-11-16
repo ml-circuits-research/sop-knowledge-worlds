@@ -1001,3 +1001,11 @@ Rules of the transition:
 5. Report nothing special for this; it rides on other work. In a month I look at what is left and we decide the rest.
 
 The course `reviews/sop-worlds-curs.md` (version 5) already uses the new names and mentions the old ones once, in lesson 11.
+
+## Reviewer 2026-11-16 19:50 — audit of the published worlds for enumerations (owner's direction: conceptual spaces, not categories). Data work of the generalisation plan, phase 3: do not start before the design is approved
+
+The owner's direction and the reasoning are in soplang-words-lib worker-tasks, blocks 19:20 and 19:50, and in `reviews/plan-generalizare.md`. In short: a value is a point in a conceptual space (numeric axes, or a graph of relations and constraints); a word is a region of it with a typical centre; a closed list of words in a slot is not accepted at the general level.
+
+Count on pin c9d5d0a9: **336 `enum=` slots in 40 worlds** (w.lang.en 95, w.lang.ro 41, k.attributes 16, k.values 11, w.dialogue 10, k.genres 9, k.motion 8, k.layouts 8, k.faces 8, k.diagrams 8, the rest 6 or fewer). Classes to migrate, with one example each: degree words as values (`k.space.body.size`, `k.expect.make.extent`, `k.people.kind.age`); the eleven colour words repeated as an enum in four schemas while `k.colours.colour` has coordinates; shapes and looks as labels (`k.faces.variant.shape`, `…feel`); positions and directions as labels (`k.values.position.column`); the application's domains listed in `k.expect.make.made_in`; the request keys in `w.request.constraint.on`; the top categories of kinds duplicated as enums (`k.kinds.parent.sense`, `k.attributes.number.sense`). Grammatical categories in `w.lang.*` are the likely justified exceptions.
+
+**Now, report only:** for each world, a table of its enum slots with the class above and, for each, what the space would be (which axes with which unit, or which relation graph) and where the coordinates could come from (an existing licensed source, or hand values). No schema change yet.
