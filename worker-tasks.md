@@ -1031,3 +1031,10 @@ Correction to my 14:30 blocks: the owner says ONE session (the one on the DGX) w
 | Acceptance | Unchanged: the owner's sessions replayed turn by turn, wrong stays 0; failed turns go to the register with the missing general mechanism. |
 
 I review every landing in the three repositories against its book section and run the examples.
+
+## 2026-11-16 15:20 (Rome) — reviewer: review of 980a8ab0 (owner-concept migration ledger) and 47a77477 (expected-part vocabulary)
+
+| Landing | Verdict |
+|---|---|
+| Migration ledger with `tools/audit-owner-migration.mjs` | Good that it is reproducible. But `migration/owner-concepts-evidence.json` is 107,782 lines of generated evidence in the repository. Keep the generator and a short human-readable ledger (one row per owner concept: found where, what is missing by family of 11.1); generate the evidence file on demand or keep it out of git, as other generated indexes are. |
+| 13 `core.word` rows for `k.expect.amount` keys ("min factor", "max factor", "about"…) | Please do not add vocabulary to the old particular structures (`k.expect.*`) now: they are what the migration replaces with usual values as regions. Revert unless a current test needs it; if one does, say which. New knowledge work waits for the library's phase-0 version, except the ledger. |
