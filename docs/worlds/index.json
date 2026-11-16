@@ -1,5 +1,5 @@
 {
- "version": "f365a9dd9381",
+ "version": "9b7b3da4b11f",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -94912,6 +94912,39 @@
      "path": "w.reader.en.phrases/shards/phrases.sop",
      "wires": 318,
      "bytes": 46179,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
+   "warnings": []
+  },
+  {
+   "id": "w.reader.en.requests",
+   "version": "1",
+   "schema": "w.reader.en.requests/schema.sop",
+   "exports": [
+    "w.reader.en.requests.component",
+    "w.reader.en.requests.mapping",
+    "w.reader.en.requests.metadata",
+    "w.reader.en.requests.relation"
+   ],
+   "depends": [],
+   "shards": [
+    {
+     "id": "w.reader.en.requests/shards/requests",
+     "path": "w.reader.en.requests/shards/requests.sop",
+     "wires": 57,
+     "bytes": 13201,
      "keys": [],
      "sources": [
       "hand-core-1"
