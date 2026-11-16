@@ -18,6 +18,8 @@ const ms = { unit: 'millisecond' };
 const box = (frame) => ({ x: { frame }, y: { frame }, w: { frame }, h: { frame } });
 const BOX = { lat: deg, lon: deg, west: deg, south: deg, east: deg, north: deg };
 export const MEASURES = {
+  // Reader template paths and array positions are ordinals, never physical quantities.
+  'w.reader.en': { node: { index: ord }, step: { at: ord, index: ord } },
   'k.geo': {
     '*': { ...BOX, area_about: km2 },
     country: { population: { counts: 'person' }, area: km2 },
