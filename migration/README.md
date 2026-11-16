@@ -18,6 +18,8 @@ records catalog version, SHA-256 of every catalog-listed input, file/line, wire 
 attributes and file licence. It includes published world patterns as well as shards: the
 older inventory excluded pattern declarations and therefore missed chapter. It does not
 load worlds, follow arbitrary synonyms, merge repeated identities or infer inherited facts.
+The extractor parses one `@` declaration per physical line; continuation-line
+attributes are outside this lexical audit. It is not an exhaustive semantic inventory.
 Counts are declaration occurrences. Alias searches expose candidates; they do not establish
 same-sense identity (especially arrow, circle, water and letter). Provenance is copied rather
 than reconstructed; a file licence and `core.source` do not alone prove semantic correctness.

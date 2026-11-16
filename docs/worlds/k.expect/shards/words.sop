@@ -47,3 +47,18 @@
 @k.expect.word.part.where core.word text=where text=region means=k.expect.part.where core.source="hand-core 1"
 @k.expect.word.part.shape core.word text=shape text=shapes means=k.expect.part.shape core.source="hand-core 1"
 @k.expect.word.part.role core.word text=role means=k.expect.part.role core.source="hand-core 1"
+
+# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).
+@k.expect.word.key.amount.min core.word text=min means=k.expect.amount.min core.source="hand-core 1"
+@k.expect.word.key.amount.max core.word text=max means=k.expect.amount.max core.source="hand-core 1"
+@k.expect.word.key.amount.min_factor core.word text="min factor" means=k.expect.amount.min_factor core.source="hand-core 1"
+@k.expect.word.key.amount.max_factor core.word text="max factor" means=k.expect.amount.max_factor core.source="hand-core 1"
+@k.expect.word.key.amount.about core.word text=about means=k.expect.amount.about core.source="hand-core 1"
+@k.expect.word.key.scale.about core.word text=about means=k.expect.scale.about core.source="hand-core 1"
+@k.expect.word.key.make.min core.word text=min means=k.expect.make.min core.source="hand-core 1"
+@k.expect.word.key.make.max core.word text=max means=k.expect.make.max core.source="hand-core 1"
+@k.expect.word.key.make.kinds_min core.word text="kinds min" means=k.expect.make.kinds_min core.source="hand-core 1"
+@k.expect.word.key.make.kinds_max core.word text="kinds max" means=k.expect.make.kinds_max core.source="hand-core 1"
+@k.expect.word.key.part.min core.word text=min means=k.expect.part.min core.source="hand-core 1"
+@k.expect.word.key.part.max core.word text=max means=k.expect.part.max core.source="hand-core 1"
+@k.expect.word.key.part.slot core.word text=slot means=k.expect.part.slot core.source="hand-core 1"

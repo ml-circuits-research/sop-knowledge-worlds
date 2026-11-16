@@ -79700,6 +79700,12 @@
  "kinds": [
   "k.procedures/shards/tasks"
  ],
+ "kinds max": [
+  "k.expect/schema.sop"
+ ],
+ "kinds min": [
+  "k.expect/schema.sop"
+ ],
  "kinds of chart": [
   "k.charts/schema.sop"
  ],
@@ -90781,6 +90787,7 @@
  ],
  "max": [
   "k.attributes/shards/narration",
+  "k.expect/schema.sop",
   "k.genres/schema.sop",
   "k.kinds/shards/relations-expect",
   "k.kinds/shards/relations-genres",
@@ -90794,6 +90801,9 @@
   "k.words/shards/frequency-m",
   "k.words/shards/ma",
   "w.request/schema.sop"
+ ],
+ "max factor": [
+  "k.expect/schema.sop"
  ],
  "max_factor": [
   "k.attributes/shards/narration",
@@ -93080,6 +93090,7 @@
  "min": [
   "k.attributes/shards/narration",
   "k.attributes/shards/same-m",
+  "k.expect/schema.sop",
   "k.genres/schema.sop",
   "k.geo/shards/asia",
   "k.kinds/shards/relations-expect",
@@ -93093,6 +93104,9 @@
   "k.words/shards/frequency-m",
   "k.words/shards/mi",
   "w.request/schema.sop"
+ ],
+ "min factor": [
+  "k.expect/schema.sop"
  ],
  "min_factor": [
   "k.attributes/shards/narration",
@@ -130839,6 +130853,7 @@
  ],
  "slot": [
   "k.attributes/shards/narration",
+  "k.expect/schema.sop",
   "k.faces/schema.sop",
   "k.kinds/shards/relations-expect",
   "k.kinds/shards/relations-faces",
