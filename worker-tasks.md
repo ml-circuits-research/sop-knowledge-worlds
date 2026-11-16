@@ -1042,3 +1042,11 @@ I review every landing in the three repositories against its book section and ru
 ## 2026-11-16 15:40 (Rome) — reviewer: follow-up
 
 Both items of my 15:20 block are settled: the evidence file is now generated on demand (5ba8fa19), and the 13 `k.expect` words were a canonical regeneration of an existing generated shard that a test required (47a77477's log explains it), not new work on the old structure. Accepted. Next here: the migration itself, after the library publishes the legend and request contracts.
+
+## 2026-11-16 18:30 (Rome) — reviewer: w.reader.en overlay (1c4f32ea)
+
+**Run by me:** `node --test tests/w.reader.en.test.mjs` → 4 / 4. Bindings take their words from the owning families (attributes, colours, shapes, objects, verbs), none copied into the overlay: good.
+
+One design point, one counter round. `reader.command.change_property` ties one act to one sentence shape ("change the X of the Y to Z"). Grown this way the grammar becomes one construction per act and per phrasing, which is the old trap. Please make the productions general phrase structure (verb with object; verb with object and result predicate as in "make the square blue"; verb with object and prepositional goal), and let the act and its roles come from the verb's declared frame (`w.lang.en.frame` / `acts.*.of`) through the mapping, so one production serves every act whose frame fits. The colour/size/fill limits you note stay as they are: missing value domains are knowledge to add, not rules to write.
+
+This overlay is now the closest reader for the first end-to-end request the owner is waiting for (`?engine=new`); keep it ready for that path.
