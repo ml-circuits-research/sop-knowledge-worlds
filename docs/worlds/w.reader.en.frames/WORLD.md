@@ -1,4 +1,4 @@
-# English frame-licence declarations, version 1
+# English frame-licence declarations, version 2
 
 This separately selectable overlay records explicit licences between existing verb senses
 and existing argument frames, with role projections over normalized argument records.
@@ -55,3 +55,15 @@ These mapping judgments are hand-core 1 (CC0). The source verb senses remain in 
 including their WordNet provenance; frames, parts and role maps remain in w.lang.en with
 their own source metadata. No domain vocabulary or sentence fixtures are copied here.
 Preview consumers keep the exact old pin; this new module is additive and opt-in.
+
+## Object-role mode annotation
+
+Version 2 adds optional target_mode to object-valued roles. The create-kind mapping
+explicitly declares new; change/remove subjects and the current place subject/object
+arguments declare existing. Modes are grounded in the selected frame and k.actions role,
+not a verb-family label or a determiner. Marker, amount, attribute and result-value roles
+receive no invented mode. For non-object values such as coordinates this annotation does
+not force an object interpretation; argument-form/type checks remain required. An absent
+mode is unresolved, never a default. Neutral NP qualifiers are converted to selectors or
+new-object descriptions only after this role contract is selected, separately from any
+resultative predicate. Existing version-1 pins and the preview remain unchanged.

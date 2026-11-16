@@ -3,7 +3,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@w.reader.en.frames core.module name=w.reader.en.frames version=1 imports=w.reader.en exports=licence exports=role core.source="hand-core 1"
+@w.reader.en.frames core.module name=w.reader.en.frames version=2 imports=w.reader.en exports=licence exports=role core.source="hand-core 1"
 @w.reader.en.frames.licence core.type of=w.reader.en.frames.licence shared=true closed=true core.source="hand-core 1"
 @w.reader.en.frames.licence.name core.slot of=w.reader.en.frames.licence key=name id=true required=true kind=atom core.source="hand-core 1"
 @w.reader.en.frames.licence.verb_id core.slot of=w.reader.en.frames.licence key=verb_id required=true kind=atom core.source="hand-core 1"
@@ -18,3 +18,4 @@
 @w.reader.en.frames.role.part core.slot of=w.reader.en.frames.role key=part required=true kind=atom core.source="hand-core 1"
 @w.reader.en.frames.role.role_map core.slot of=w.reader.en.frames.role key=role_map kind=atom core.source="hand-core 1"
 @w.reader.en.frames.role.path_root core.slot of=w.reader.en.frames.role key=path_root required=true kind=atom type=w.reader.en.node by=name core.source="hand-core 1"
+@w.reader.en.frames.role.target_mode core.slot of=w.reader.en.frames.role key=target_mode kind=atom enum=new enum=existing core.source="hand-core 1"

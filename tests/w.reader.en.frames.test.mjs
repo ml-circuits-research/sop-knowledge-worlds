@@ -30,3 +30,9 @@ test('marker and argument projections remain distinct and resultative object kee
  const roles=of('role').filter(r=>pick(r,'licence')==='place'&&pick(r,'act_role')==='place');assert.equal(roles.length,2);assert.equal(roles.filter(r=>pick(maps.get(pick(r,'role_map')),'marker')==='yes').length,1);assert.notEqual(pick(roles[0],'path_root'),pick(roles[1],'path_root'));
  const resultRoles=of('role').filter(r=>pick(r,'licence')==='result.change');const paths=resultRoles.map(r=>records.filter(n=>n.type==='w.reader.en.step'&&pick(n,'of')===pick(r,'path_root')).sort((a,b)=>Number(pick(a,'at'))-Number(pick(b,'at'))).map(n=>pick(n,'key')));assert.deepEqual(paths,[['node','object'],['node','result']],'whole object including any selector stays apart from result predicate');
 });
+
+test('object role mode is explicit and never guessed for marker/value roles',()=>{
+ const roles=of('role');
+ for(const r of roles){const mode=pick(r,'target_mode');if(!mode)continue;const l=of('licence').find(l=>pick(l,'name')===pick(r,'licence')),f=frameOf(l),a=actRoles.find(a=>pick(a,'act')===pick(f,'act')&&pick(a,'name')===pick(r,'act_role'));assert.ok(['kind','thing','place'].includes(pick(a,'holds')));assert.notEqual(pick(maps.get(pick(r,'role_map')),'marker'),'yes');if(mode==='new'){assert.equal(pick(a,'holds'),'kind');assert.equal(pick(f,'act'),'make');}else assert.equal(mode,'existing');}
+ assert.equal(pick(roles.find(r=>pick(r,'name')==='create.thing'),'target_mode'),'new');assert.equal(pick(roles.find(r=>pick(r,'name')==='result.change.thing'),'target_mode'),'existing');assert.equal(pick(roles.find(r=>pick(r,'name')==='result.change.value'),'target_mode'),undefined);
+});
