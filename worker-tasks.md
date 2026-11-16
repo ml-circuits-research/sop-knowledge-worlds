@@ -1017,3 +1017,17 @@ The design: soplang-words-lib `books/sop-worlds-teorie.md` (chapter 4 legend wor
 **Now, before the library's phase-0 version:** the migration ledger, by family of 11.1, for the concepts the owner actually used (11.5 list: duck, bird, swing/seat, child, grandfather, girl, robot, man, boy, woman, frog, flower/petal, hair/beard, grass, lake/pond/water, sky, ground, cloud, sun, house, fish, water plant, levels, node, arrow, hexagon, circle, letter, story/chapter/narrator, colours, expressions): what exists, under which type, what is missing (support role, extent, visible difference from the ancestor, editable parts, usual values as regions).
 
 **After the library publishes phase 0:** migrate, starting with those concepts: enumerated values → regions in spaces (the 336 enumerated slots), the kind tree as a space with its relation types kept apart (is-a vs other parents), support/containment roles, extent (point / line / area), usual values as regions with context. Provenance on every fact; licences as in AGENTS.md. Report what you migrated and what you could not justify.
+
+
+## 2026-11-16 14:35 (Rome) — OWNER: one session for all three repositories; use agents; keep the book up to date
+
+Correction to my 14:30 blocks: the owner says ONE session (the one on the DGX) works all three repositories (soplang-words-lib, PSys2, sop-knowledge-worlds). The 14:30 blocks in the three `worker-tasks.md` files are one plan for that session.
+
+| Rule | What it means |
+|---|---|
+| Use agents and parallelise what can be parallel | Library phase 0 (the contracts as modules, published version) comes first and alone, since everything else builds on it. Meanwhile, in parallel and independent of it: the PSys2 cleanup (map, music, charts area out; avatar into drawing), the calendar tool and the observation adapters, the knowledge migration ledger. After phase 0: one agent per library mechanism group, one per domain declaration (drawing, diagram, document, calendar), one or more for the knowledge migration. |
+| Agents must not collide | Give each agent disjoint files; the contracts of phase 0 are changed only by you, never by an agent working on a mechanism or a domain. Each agent states what it touched; you integrate, run the tests, and push. |
+| The book stays current | `soplang-words-lib/books/sop-worlds-teorie.md` is the specification and the owner wants it up to date: every landing updates the section it implements (what is now real vs proposed, what implementation showed to be wrong or missing), in the same change. The owner reads it; keep the owner rules for the text (Romanian, English terms once, wire examples in English, general rule then one explained example, two-column tables, no bullet lists, no declared limits). |
+| Acceptance | Unchanged: the owner's sessions replayed turn by turn, wrong stays 0; failed turns go to the register with the missing general mechanism. |
+
+I review every landing in the three repositories against its book section and run the examples.
