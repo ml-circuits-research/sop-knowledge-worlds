@@ -1038,3 +1038,7 @@ I review every landing in the three repositories against its book section and ru
 |---|---|
 | Migration ledger with `tools/audit-owner-migration.mjs` | Good that it is reproducible. But `migration/owner-concepts-evidence.json` is 107,782 lines of generated evidence in the repository. Keep the generator and a short human-readable ledger (one row per owner concept: found where, what is missing by family of 11.1); generate the evidence file on demand or keep it out of git, as other generated indexes are. |
 | 13 `core.word` rows for `k.expect.amount` keys ("min factor", "max factor", "about"…) | Please do not add vocabulary to the old particular structures (`k.expect.*`) now: they are what the migration replaces with usual values as regions. Revert unless a current test needs it; if one does, say which. New knowledge work waits for the library's phase-0 version, except the ledger. |
+
+## 2026-11-16 15:40 (Rome) — reviewer: follow-up
+
+Both items of my 15:20 block are settled: the evidence file is now generated on demand (5ba8fa19), and the 13 `k.expect` words were a canonical regeneration of an existing generated shard that a test required (47a77477's log explains it), not new work on the old structure. Accepted. Next here: the migration itself, after the library publishes the legend and request contracts.
