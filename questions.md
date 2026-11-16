@@ -1350,3 +1350,44 @@ The exception “unless a current test needs it” applies to the 13 k.expect ke
 Agreed on general phrase structure and frame-owned act/role semantics. The current template already copies act from the lexical feature rather than hardcoding change, but the CHANGE category and production name expose the narrow initial licence. Preserve the published production interface while the first end-to-end consumer is integrated; the next compatible grammar revision should use verb/object/result-predicate categories and derive eligible frame roles from existing declarations, without enabling all same-act synonyms indiscriminately. A shared act label alone does not establish a compatible verb subcategorisation. This is a generic construction/frame mapping task, not a list of new sentences or one production per verb.
 
 The immediate data correction adds the complete existing shape family as target kinds (it was available only as values) and explicit requirement/positive constraint literals requested by the generic request bridge. No domain words are copied, no shape/colour example is singled out, and no old frame or engine pin changes. Generalising the production interface remains separate from this compatibility correction; it must not be reported as delivered by the added provider binding.
+
+## General frame overlay v1: bounded projection consumer contract (after first preview)
+
+The existing generality question is accepted; this is the concrete missing operation, not a second grammar-policy question. New opt-in `w.reader.en.frames` data keeps the preview module unchanged. It licenses existing verb senses to selected existing frames and reuses the current structured template/path types:
+
+```sop
+@w.reader.en.frames.licence.increment w.reader.en.frames.licence name=increment verb_id=k.actions.verb.make.add frame_name=acts.change.add verb_part=w.lang.en.part.acts.change.add.2 valency=oblique core.source="hand-core 1"
+@w.reader.en.frames.role.increment.thing w.reader.en.frames.role name=increment.thing licence=increment frame_role=thing act_role=thing part=w.lang.en.part.acts.change.add.7 path_root=frames.increment.thing core.source="hand-core 1"
+@w.reader.en.frames.path.increment.thing w.reader.en.node name=frames.increment.thing kind=copy core.source="hand-core 1"
+@w.reader.en.frames.step.increment.thing.0 w.reader.en.step of=frames.increment.thing at=0 key=node core.source="hand-core 1"
+@w.reader.en.frames.step.increment.thing.1 w.reader.en.step of=frames.increment.thing at=1 key=goal core.source="hand-core 1"
+@w.reader.en.frames.step.increment.thing.2 w.reader.en.step of=frames.increment.thing at=2 key=object core.source="hand-core 1"
+```
+
+Selected `acts.change.add.act` is change, while the licensed verb and the frame's verb part have act=make. Copying verb.act into request.act is therefore incorrect. Frame-role projection must preserve the selected frame and use its act. Marker roles and object arguments remain distinct even when they share a semantic role name.
+
+**Proposed operation to confirm:** expose the existing bounded structured-template projection semantics over a supplied ordinary JSON context (for example a public `projectTemplate(template, context, options)`), without requiring parse-tree fabrication. The adapter can resolve explicit licences, compile the existing copy/path facts, project roles from normalized object/result/goal records, and preserve separate candidates. Missing paths, invalid templates, unsafe property access and budget exhaustion must fail closed exactly as composeParses does. Alternatively, name an already published operation that accepts this semantic context; none is apparent in 0.193. Full phrase productions and the request bridge wait for this contract rather than embedding frame-specific conditionals or silently manufacturing syntax. The new data is declarative preparation, not a claim this runtime operation is implemented.
+
+**Concrete input/output for that same proposal (illustrative semantic JSON, not world facts):** selecting licence `result.change` means existing frame `acts.change.value`. The supplied context can be `{node:{object:{kind:"sample.item",selector:{concept:"sample.property",operator:"eq",value:"old"}},result:{concept:"sample.property",operator:"eq",value:"new"}},children:[]}`. The two declared copy roots compile to the already existing templates `{$get:["node","object"]}` and `{$get:["node","result"]}`. Their outputs must be the whole object record (including its old-property selector) and the separate result predicate, respectively. The frame binder's role list is then `[{role:"thing",marker:false,value:<object record>},{role:"value",marker:false,value:<result record>}]`, with act read as change from the selected frame. It must not conjoin the selector into result requirements. These JSON values illustrate the proposed API contract, not an additional expression language or a delivered intermediate-output guarantee.
+
+The same extraction should expose composeParses' existing internal `evaluate`/safe-copy/equality behavior unchanged: own properties only, no accessor/prototype execution, strict structural JSON equality and shared bounds. Optional equality guards use the same supplied context before projection. One licensed frame is one candidate; alternatives stay separate, missing roles reject only that candidate, and exhausted enumeration remains explicitly truncated rather than selecting the first successful frame. Existing template semantics appear sufficient; the missing piece is a public bounded entry point over an already composed argument context, not a new evaluator language.
+
+A fully concrete projection job for `result.change` (toy semantic identifiers; no sentence fixture):
+
+```json
+{"template":"result.change","context":{"node":{"object":{"kind":"sample.item","selector":{"concept":"sample.property","operator":"eq","value":"old"}},"result":{"concept":"sample.property","operator":"eq","value":"new"}},"children":[]}}
+```
+
+The adapter can construct this existing-template-language declaration from the selected frame and two role paths:
+
+```json
+{"frame":"acts.change.value","act":"change","roles":[{"frame_role":"thing","act_role":"thing","marker":false,"value":{"$get":["node","object"]}},{"frame_role":"value","act_role":"value","marker":false,"value":{"$get":["node","result"]}}]}
+```
+
+Expected projected value:
+
+```json
+{"frame":"acts.change.value","act":"change","roles":[{"frame_role":"thing","act_role":"thing","marker":false,"value":{"kind":"sample.item","selector":{"concept":"sample.property","operator":"eq","value":"old"}}},{"frame_role":"value","act_role":"value","marker":false,"value":{"concept":"sample.property","operator":"eq","value":"new"}}]}
+```
+
+The act literal above is obtained from the selected source frame, not written as a lexical rule. No implicit equality between selector and result properties is introduced: a target may be selected by a different property than the one being changed. Optional declared guard pairs evaluate in the same supplied context. A batch entry point with named templates, guards and indexed jobs is preferable to unbounded independent per-role calls, so alternative frames and total traversal cost remain explicit.

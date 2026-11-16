@@ -30,7 +30,7 @@ module and load only the instance shards that a conversation needs, when the wor
   knowledge lazily.
 - **Documentation:** `docs/index.html` (how to use the catalog from an application) and `docs/worlds/README.md`.
 
-Status: <!--n:worlds-->37<!--/n--> knowledge worlds and <!--n:schemas-->13<!--/n--> world schemas are published (the counts between `<!--n:…-->` markers are written by `tools/counts.mjs`; the rounds below say what each added). Round 7: `k.commonsense`, `k.objects` (<!--n:facts:k.objects.object-->2,212<!--/n--> drawable objects; browse them in
+Status: <!--n:worlds-->38<!--/n--> knowledge worlds and <!--n:schemas-->13<!--/n--> world schemas are published (the counts between `<!--n:…-->` markers are written by `tools/counts.mjs`; the rounds below say what each added). Round 7: `k.commonsense`, `k.objects` (<!--n:facts:k.objects.object-->2,212<!--/n--> drawable objects; browse them in
 `docs/gallery.html`), `k.words`, `k.geo`, `k.units`, `k.time`, and the hand-written cores `k.space`, `k.animals`,
 `k.body`, `k.food`, and `k.faces` (faces built from replaceable parts; previews in
 `docs/worlds/k.faces/preview/index.html`), `k.scenes` (the usual place and relative size of drawable things, and 61 typical scenes; previews in
