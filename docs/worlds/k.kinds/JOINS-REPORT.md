@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **249** in 39 worlds; distinct values 11118, meeting a target 11059 (99.5 %), open 59
+- declared joins: **249** in 39 worlds; distinct values 11122, meeting a target 11063 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **50**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
 
@@ -129,9 +129,9 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.layouts | `k.layouts.outline.drawing` | `k.objects.object` | name | 33 | 33 |  |
 | k.layouts | `k.layouts.outline.shape` | `k.shapes.shape` | name | 17 | 17 |  |
 | k.layouts | `k.layouts.outline_point.outline` | `k.layouts.outline` | name | 50 | 50 |  |
-| k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 18 | 18 |  |
+| k.layouts | `k.layouts.relation.layout` | `k.layouts.layout` | name | 19 | 19 |  |
 | k.layouts | `k.layouts.slot.arranged` | `k.layouts.layout` | name | 2 | 2 |  |
-| k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 18 | 18 |  |
+| k.layouts | `k.layouts.slot.layout` | `k.layouts.layout` | name | 19 | 19 |  |
 | k.motion | `k.motion.field.event` | `k.motion.event` | name | 2 | 2 |  |
 | k.motion | `k.motion.letters.splitter` | `k.motion.splitter` | name | 1 | 1 |  |
 | k.motion | `k.motion.rule.emits` | `k.motion.event` | name | 1 | 1 |  |
@@ -161,7 +161,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.objects | `k.objects.keyword.of` | `k.objects.object` | name | 1509 | 1509 |  |
 | k.objects | `k.objects.part.of` | `k.objects.object` | name | 2212 | 2212 |  |
 | k.objects | `k.objects.skeleton.of` | `k.objects.object` | name | 0 | 0 |  |
-| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 168 | 168 |  |
+| k.objects | `k.objects.stand_in.drawing` | `k.objects.object` | name | 169 | 169 |  |
 | k.people | `k.people.kind.drawing` | `k.objects.object` | name | 1 | 1 |  |
 | k.people | `k.people.kind.face` | `k.faces.preset` | name | 8 | 8 |  |
 | k.people | `k.people.role.drawing` | `k.objects.object` | name | 1 | 1 |  |
@@ -245,7 +245,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.face | `w.face.face.expression` | `k.faces.expression` | name | 0 | 0 |  |
 | w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |
 | w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
-| w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 14 | 14 |  |
+| w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 15 | 15 |  |
 | w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
 | w.lang.en | `w.lang.en.feeling_reply.feeling` | `k.feelings.feeling` | name | 30 | 30 |  |
 | w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 18 | 17 | `own` |
@@ -310,7 +310,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.layouts | `k.layouts.anchor.on` | thing | `k.attributes.thing`, `k.scenes.thing` | name | 15 | 9 |
 | k.layouts | `k.layouts.joins.a` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 143 | 81 |
 | k.layouts | `k.layouts.joins.b` | thing | `k.attributes.drawn`, `k.objects.object`, `k.scenes.thing` | name | 98 | 71 |
-| k.layouts | `k.layouts.slot.holds` | thing | `k.attributes.thing`, `k.scenes.thing`, `k.attributes.drawn` | name | 83 | 48 |
+| k.layouts | `k.layouts.slot.holds` | thing | `k.attributes.thing`, `k.scenes.thing`, `k.attributes.drawn` | name | 84 | 48 |
 | k.motion | `k.motion.rule.during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.motion | `k.motion.rule.not_during` | act | `k.actions.action`, `k.motion.layer` | name | 1 | 1 |
 | k.people | `k.people.kind.is_a` | kind | `k.faces.preset` | name | 4 | 3 |

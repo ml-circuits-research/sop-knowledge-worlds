@@ -34,7 +34,8 @@ test('every reaction has a revision; the cues of reactions name only these react
   assert.deepEqual([...revised].sort(), [...reactions].sort());
   const cues = read('w.lang.en', 'shards', 'hand-cues.sop').filter((w) => w.type === 'w.lang.en.cue');
   const cued = new Set(cues.filter((c) => one(c, 'on') === 'reaction').map((c) => one(c, 'value')));
-  for (const r of reactions) assert.ok(cued.has(r), `no cue for the reaction ${r}`);
+  // `continue` is read by structure (a fragment that names only a kind), not by a cue word: its revision row says what it does
+  for (const r of reactions.filter((x) => x !== 'continue')) assert.ok(cued.has(r), `no cue for the reaction ${r}`);
   for (const r of cued) assert.ok(reactions.includes(r), `cue of an unknown reaction ${r}`);
 });
 

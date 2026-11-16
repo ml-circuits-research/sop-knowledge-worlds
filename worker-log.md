@@ -6749,3 +6749,12 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - `w.lang.en.cue` type + shard `hand-cues` (81 cues: negation, counts/ranges/amounts, scale, place, manner, layout,
   attribute, with, about, length, reactions); replies sorry, assumed, not_honoured, unread, done.revise (en, ro).
 - Tests: new tests/request-worlds.test.mjs; `npm run test:changed` 75 files, 0 red.
+## 2026-11-16 — psys2 Q51 [KNOW]: Romanian words and senses, English cues, dialogue and replies, knowledge gaps
+
+- Source: psys2 questions.md Q51 (real failing turns: the real set and the owner session, analysed by hand), Q47, Q49, Q43. Rows are general facts, never a sentence's row; written by a language model from those turns (`hand-core 1`).
+- Found first: most of the knowledge gaps (E) are already in the catalog (kinds, drawings, stand-ins, Tenerife, azure, the unit degree, leg of a crocodile in k.parts.usual); vilă, baltă, leagăn, înlocui, ăla, "în fața" and the old-spelling folds (linga, pamint) were in w.lang.ro too: psys2 still pins an older catalog, or its own translator lexicon lacks them. Probed with the pinned sopworld before adding.
+- w.lang.ro: 15 dictionary lemmas (azuriu, lega, ordona, ordonat, peisaj, prost, prostie, reașeza, rearanja, val, zice, centru, fund, plantă; duce gets a second sense, go), irregular cells of lega, zice, așeza, reașeza (the class v.a.ez gave no "așează"), 4 particles (încă un = one_more, în plus = extra, oricum, logic), 1 preposition (pe la), 9 syntax facts and 1 phrase group (colour.of) for senses, 40 reply rows (done.whole, done.change.place/size, size up/down, can/can.say and per act, state.count, state.empty, nothing.same) and 1 fill.
+- w.lang.en: shard hand-cues-more (30 cues, 12 pronoun rows `refers=all`), 27 reply rows (with can.<act>), 2 arrangement phrases (layers); schema 5 (`pron.refers` gains `all`).
+- w.dialogue 2: reaction enum `continue`, revision does `inherit`, row continue.inherit.
+- k.layouts: layout `layers` (levels), tools/layouts-core.mjs; k.objects: stand-in `water plant` -> seaweed (hand-links.tsv + shard by hand: tools/coverage.mjs needs the raw files); w.document 2: `words` slot.
+- Not done: see questions.md (rotation default step, done.place.<relation> region words, reaction value keep).

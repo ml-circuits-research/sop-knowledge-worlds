@@ -32,7 +32,7 @@ const THINGS = ['casă', 'copac', 'desen'];
 const N = { one: '1', few: '3', other: '20' };
 const fillersRo = (thing, count) => ({ kind: thing, thing, value: 'roșu', number: N[count ?? 'few'], place: 'lângă copac', source: 'casă', target: 'copac', attribute: 'culoare', amount: 'puțin',
   direction: 'la stânga', topic: 'culoare', criterion: 'mărime', recipient: 'Ana', name: 'prânz', person: 'Ana', shape: 'inimă', arrangement: 'inimă', words: 'blorp', request: 'adaugă o casă',
-  key: 'culoare', given: '1', values: 'rotund, pătrat', worlds: 'w.list, w.tasks', why: '-', tier: 'cunoaștere', rel: 'lângă', world: 'w.list', relation: 'lângă', aspect: 'culoare', view: 'hartă' });
+  key: 'culoare', given: '1', values: 'rotund, pătrat', worlds: 'w.list, w.tasks', why: '-', tier: 'cunoaștere', rel: 'lângă', world: 'w.list', relation: 'lângă', aspect: 'culoare', view: 'hartă', whole: 'casă', parts: '3 case', kinds: 'case, copaci', keys: 'culoarea și mărimea', act: 'desena' });
 const OVERRIDE = { 'make.name': { value: 'Ana' }, 'make.name.place': { value: 'Ana' }, 'make.for': { value: '4' }, 'change.more': { amount: '2' }, 'change.less': { amount: '2' } };
 const ro = (t, thing, count) => realise(m, one(t, 'text'), { ...fillersRo(thing, count), ...(OVERRIDE[one(t, 'name')] ?? {}), ...Object.fromEntries(fills.filter((f) => one(f, 'template') === one(t, 'name')).map((f) => [one(f, 'role'), one(f, 'lemma')])) }, { dictionary: dict, base });
 
@@ -90,7 +90,7 @@ test('replies: the same names and counts in English and Romanian (English one / 
   const en = (name, count, f) => realiseEn(enAll, one(enReplies.find((w) => one(w, 'name') === name && one(w, 'count') === count), 'text'), f);
   for (const kind of ['house', 'apple', 'tree']) for (const t of enReplies.filter((w) => w.type === 'w.lang.en.reply')) {
     const s = en(one(t, 'name'), one(t, 'count'), { kind, thing: kind, number: one(t, 'count') === 'one' ? '1' : '3', value: 'red', shape: 'heart', target: 'tree', words: 'blorp', request: 'add a house',
-      key: 'name', given: '1', values: 'round, square', worlds: 'w.list, w.tasks', why: '-', tier: 'knowledge', rel: 'at', place: 'table', name: 'party', world: 'w.list', relation: 'near', aspect: 'colour', view: 'map' });
+      key: 'name', given: '1', values: 'round, square', worlds: 'w.list, w.tasks', why: '-', tier: 'knowledge', rel: 'at', place: 'table', name: 'party', world: 'w.list', relation: 'near', aspect: 'colour', view: 'map', whole: 'garden', parts: '3 flowers', kinds: 'houses, trees', keys: 'colour and size', act: 'draw' });
     assert.ok(s && !/[{}]/.test(s), `${one(t, 'name')} ${kind}: ${s}`);
   }
   assert.equal(en('done.make', 'one', { kind: 'apple' }), 'I drew an apple.');

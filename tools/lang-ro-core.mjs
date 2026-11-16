@@ -208,6 +208,12 @@ export const IRREGULAR = [
   vIrr('veni', 'veni', 'vino', 'veniți', ['vin', 'vii', 'vine', 'venim', 'veniți', 'vin'], ['vin', 'vii', 'vină', 'venim', 'veniți', 'vină'], 'venit'),
   vIrr('vedea', 'vedea', 'vezi', 'vedeți', ['văd', 'vezi', 'vede', 'vedem', 'vedeți', 'văd'], ['văd', 'vezi', 'vadă', 'vedem', 'vedeți', 'vadă'], 'văzut'),
   vIrr('împărți', 'împărți', 'împarte', 'împărțiți', ['împart', 'împarți', 'împarte', 'împărțim', 'împărțiți', 'împart'], ['împart', 'împarți', 'împartă', 'împărțim', 'împărțiți', 'împartă'], 'împărțit'),
+  // Q51 (psys2 real turns): leagă-le (e/ea alternation; the read "leagă" -> "leagăn" was wrong) and am zis (zice, zis)
+  vIrr('lega', 'lega', 'leagă', 'legați', ['leg', 'legi', 'leagă', 'legăm', 'legați', 'leagă'], ['leg', 'legi', 'lege', 'legăm', 'legați', 'lege'], 'legat'),
+  // așeza and reașeza: the stem ends in z, so the class v.a.ez (desena -> desenează) does not give așează (psys2 Q51, real turns "reașează elementele")
+  vIrr('așeza', 'așeza', 'așează', 'așezați', ['așez', 'așezi', 'așează', 'așezăm', 'așezați', 'așează'], ['așez', 'așezi', 'așeze', 'așezăm', 'așezați', 'așeze'], 'așezat'),
+  vIrr('reașeza', 'reașeza', 'reașează', 'reașezați', ['reașez', 'reașezi', 'reașează', 'reașezăm', 'reașezați', 'reașează'], ['reașez', 'reașezi', 'reașeze', 'reașezăm', 'reașezați', 'reașeze'], 'reașezat'),
+  vIrr('zice', 'zice', 'zi', 'ziceți', ['zic', 'zici', 'zice', 'zicem', 'ziceți', 'zic'], ['zic', 'zici', 'zică', 'zicem', 'ziceți', 'zică'], 'zis'),
   // the indefinite article (class det.art): un casă -> o casă in a template that agrees with its noun
   ['un', [['m', 'sg', 'nomacc', 'un'], ['n', 'sg', 'nomacc', 'un'], ['f', 'sg', 'nomacc', 'o'], ['m', 'pl', 'nomacc', 'niște'], ['n', 'pl', 'nomacc', 'niște'], ['f', 'pl', 'nomacc', 'niște'],
     ['m', 'sg', 'gendat', 'unui'], ['n', 'sg', 'gendat', 'unui'], ['f', 'sg', 'gendat', 'unei'], ['m', 'pl', 'gendat', 'unor'], ['n', 'pl', 'gendat', 'unor'], ['f', 'pl', 'gendat', 'unor']]
@@ -314,7 +320,7 @@ export const PREPOSITIONS = [
   ['pe', 'on', 'on', null, 'acc', 'static'], ['în', 'in', 'inside', null, 'acc', 'static'], ['într', 'in', 'inside', null, 'acc', 'static', 'în'], ['la', 'at', null, null, 'acc', 'static'],
   ['lângă', 'near', 'beside', null, 'acc', 'static'], ['sub', 'below', 'above', 'yes', 'acc', 'static'], ['peste', 'above', 'above', null, 'acc', 'static'],
   ['deasupra', 'above', 'above', null, 'gendat', 'static'], ['dedesubtul', 'below', 'above', 'yes', 'gendat', 'static'], ['între', 'between', null, null, 'acc', 'static'],
-  ['în fața', 'in_front_of', 'behind', 'yes', 'gendat', 'static'], ['în spatele', 'behind', 'behind', null, 'gendat', 'static'], ['în jurul', 'around', 'around', null, 'gendat', 'static'],
+  ['în fața', 'in_front_of', 'behind', 'yes', 'gendat', 'static'], ['în spatele', 'behind', 'behind', null, 'gendat', 'static'], ['în jurul', 'around', 'around', null, 'gendat', 'static'], ['pe la', 'around', 'around', null, 'gendat', 'static'],
   ['la stânga', 'left_of', 'left_of', null, 'gendat', 'static'], ['la dreapta', 'right_of', 'left_of', 'yes', 'gendat', 'static'],
   ['în afara', 'outside', null, null, 'gendat', 'static'], ['de-a lungul', 'along', null, null, 'gendat', 'path'], ['prin', 'across', null, null, 'acc', 'path'],
   ['cu', 'with', null, null, 'acc', null], ['de', 'of', null, null, 'acc', null], ['din', 'from', null, null, 'acc', 'source'], ['dintre', 'of', null, null, 'acc', null],
@@ -336,7 +342,7 @@ export const PARTICLES = [
   ['să', 'particle', 'subjunctive'], ['s', 'particle', 'subjunctive'], ['decât', 'conjunction', 'than'], ['nici', 'conjunction', 'neither'], ['deci', 'conjunction', 'so'],
   ['nu', 'particle', 'negation'], ['da', 'particle', 'yes'], ['mai', 'adverb', 'more'], ['foarte', 'adverb', 'very'], ['prea', 'adverb', 'too'],
   ['înapoi', 'adverb', 'back'], ['sus', 'adverb', 'up'], ['jos', 'adverb', 'down'], ['acolo', 'adverb', 'there'], ['aici', 'adverb', 'here'], ['acum', 'adverb', 'now'],
-  ['încă', 'adverb', 'again'], ['doar', 'adverb', 'only'], ['deja', 'adverb', 'already'], ['repede', 'adverb', 'fast'], ['încet', 'adverb', 'slowly'],
+  ['încă', 'adverb', 'again'], ['încă un', 'adverb', 'one_more'], ['în plus', 'adverb', 'extra'], ['oricum', 'adverb', 'anyway'], ['logic', 'adverb', 'logically'], ['doar', 'adverb', 'only'], ['deja', 'adverb', 'already'], ['repede', 'adverb', 'fast'], ['încet', 'adverb', 'slowly'],
   ['de asemenea', 'adverb', 'also'], ['asemenea', 'adverb', 'also'], ['la fel', 'adverb', 'same'], ['unde', 'adverb', 'where'], ['cum', 'adverb', 'how'], ['de ce', 'adverb', 'why'],
   ['plus', 'adverb', 'plus'], ['minus', 'adverb', 'minus'], ['hai', 'interjection', 'lets'], ['salut', 'interjection', 'hello'], ['mersi', 'interjection', 'thanks'],
   ['te rog', 'interjection', 'please'], ['vă rog', 'interjection', 'please'],

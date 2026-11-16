@@ -1314,3 +1314,12 @@ nothing contradicts the standard terms.
    builtin over a time.date, not this world.
 5. Public holidays per country are data (Nager.Date is MIT, Wikidata CC0) for a k.* world later, not part of the
    schema.
+
+## From psys2 Q51 [KNOW] (2026-11-16): note for the reviewer
+
+This round came from psys2's questions.md Q51 [KNOW] (with Q43, Q47, Q49): real failing turns of the real set and the owner's Romanian session, each traced to the layer that failed. The rows added are general (a word, a form, a sense, a layout, a cue), never a sentence's row. Done: w.lang.ro words, forms and senses; w.lang.en cues and replies; w.dialogue `continue` / `inherit`; layout `layers`; stand-in `water plant`; `w.document.document.words`. Please check:
+1. Most of E (swing, child, girl, boy, grandfather, goat, cow, donkey, villa, pond, leg, Tenerife, azure, degree) was already in the catalog; psys2's art.draw/geo.map probably do not read `k.people.kind drawing=`, `k.objects.stand_in` or `k.geo.island`. That is psys2's to fix when it re-pins.
+2. The cue value `keep` (`on=reaction value=keep`, "leave the X") is not in the w.dialogue reaction enum: a library decision whether it is a reaction or a constraint.
+3. Q93 (5): `done.place.<relation>` with the region noun in Romanian (a region word list: stânga, dreapta, sus, jos, centru, colț) is asked of the library; I added the nouns centru, fund; stânga and dreapta existed.
+4. A default rotation when no angle is said ("rotate it") is not in k.expect: no row asked for it; the cue `attribute.rotation` and k.units degree are there.
+5. The Romanian replies are for a native speaker to check.
