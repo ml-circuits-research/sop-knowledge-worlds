@@ -6773,3 +6773,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - w.lang.ro: new shard words-k.genres (94 wires: 10 genre words, 31 part words, 46 move words; greeting = salut / formulă de adresare, body = corp, closing = încheiere, signature = semnătură); chapter (capitol) and section (secțiune) already in words-w.document. Dictionary: `literă` now carries only k.words.letter.noun.2 (the alphabet character); `scrisoare` (hand row, left the UniMorph file) carries letter.noun.1; `ochi` is masculine (m.cons, plural from irregular-nouns). words-k.faces: 14 preset words (bătrână, bătrân, băiat, fată, robot ...).
 - Reply rows kept locally by psys2, en 24 / ro 25 in replies-text: done.parts, refused.no_other, nothing.same.value, refused.already, refused.no_default, the 11 `<reply>.plural` rows (done.change / .size / .place (ro new), done.add, done.add.value, done.remove, refused.no_such, nothing.same.value, refused.already, refused.no_default, state.count, state.count.value), not_honoured.not_declared / .no_kind, done.change.kind (+ fill), assumed.act.
 - Skipped: `short_of` with a `kind` role (same name and count as the existing short_of row: a conflict; needs a library decision on the name); the English plural-only irregular rows (Q96 note already explains). Model-made, for a native speaker to check. npm run test:changed: 221 pass, 0 fail.
+
+## 2026-11-16 — Worker commit/push access probe (done)
+
+- Owner request: make a minor documentation change and verify a real commit and push. Added `WORKER-HANDOFF.md`, linking the existing task, question and progress protocols.
+- Base commit: `3803c9b64a36`. Documentation only: 0 wires and 0 shards changed; data bytes and load time not applicable.
+- Checks: `npm run test:changed` — 3 files, 16 passed, 0 failed, 0 skipped; build 22 s, tests 3 s. `git diff --check` and `git push --dry-run origin main` passed.
+- This entry is committed with the documentation; identify its commit with `git log -- WORKER-HANDOFF.md`.
