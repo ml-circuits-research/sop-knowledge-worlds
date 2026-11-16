@@ -34,6 +34,8 @@ test('overlay loads on the pinned build without request or legend migration',()=
 test('providers retain broad source families and no copied domain words',()=>{
  assert.ok(lex.length>1000);
  for(const type of ['k.colours.colour','k.shapes.shape']){const b=of('binding').find(b=>one(b,'source_type')===type);assert.equal(lexical(b).length,sources(type).length);}
+ const shapeKinds=of('binding').find(b=>one(b,'source_type')==='k.shapes.shape'&&one(b,'cat')==='KIND');
+ assert.equal(lexical(shapeKinds).length,sources('k.shapes.shape').length,'every shape can be named as a target kind as well as a value');
  for(const category of ['PROPERTY','KIND','VALUE','CHANGE','OF','TO','DET'])assert.ok(lex.some(x=>x.cat===category),category);
  assert.ok(lex.every(x=>Object.values(x.feat).every(v=>v!==undefined)));
  assert.ok(!records.some(w=>w.type==='core.word'));
@@ -44,6 +46,7 @@ test('template references and paths are complete; property/value compatibility i
  const nodes=new Map(of('node').map(n=>[one(n,'name'),n]));const rules=new Set(of('rule').map(r=>one(r,'name')));
  for(const map of of('map')){assert.ok(nodes.has(one(map,'root')));if(map.attrs.rule)assert.ok(rules.has(one(map,'rule')));assert.notEqual(!!map.attrs.rule,!!map.attrs.cat);}
  for(const n of nodes.values()){if(n.attrs.parent)assert.ok(nodes.has(one(n,'parent')));const steps=of('step').filter(s=>one(s,'of')===one(n,'name')).sort((a,b)=>Number(one(a,'at'))-Number(one(b,'at')));if(one(n,'kind')==='copy')assert.deepEqual(steps.map(s=>Number(one(s,'at'))),steps.map((_,i)=>i));for(const s of steps)assert.notEqual(!!s.attrs.key,!!s.attrs.index);}
+ for(const [name,value]of [['command.constraint.character','requirement'],['command.constraint.polarity','positive']]){const n=nodes.get(name);assert.equal(one(n,'kind'),'literal');assert.equal(one(n,'value'),value);}
  for(const name of ['target.bare.mode','target.definite.mode']){const n=nodes.get(name);assert.equal(one(n,'kind'),'literal');assert.equal(one(n,'value'),'existing');}
  assert.equal(of('agreement').length,1);for(const a of of('agreement'))for(const key of ['left','right'])assert.equal(one(nodes.get(one(a,key)),'kind'),'copy');
 });

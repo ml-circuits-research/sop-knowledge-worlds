@@ -4,8 +4,9 @@ This additive fact module describes an English imperative construction and reusa
 lexical-provider families. It leaves the older `w.lang.en` frames unchanged. It is not
 an execution tool, a completed reader, or a migration of domain facts into `w.legend`.
 The declarations validate with this repository's pinned library; consuming original
-source ranges requires published library 0.185.0. Library 0.187.0 publishes the generic `composeParses` transducer. The SOP mapping
-adapter, per-production agreement guard and request bridge remain pending consumer
+source ranges requires published library 0.185.0. Library 0.187.0 publishes the generic `composeParses` transducer; 0.188.0 adds
+per-production equality guards. The SOP mapping adapter, agreement compilation and
+request bridge remain pending consumer
 capabilities, so the module does not yet claim a runnable semantic reader.
 
 ## Vocabulary ownership and source identities
@@ -22,7 +23,7 @@ source, rather than becoming the mapping's CC0 licence.
 | Family | Published source and feature paths |
 |---|---|
 | Property names | All `k.attributes.attribute.name` values supply `feat.concept`. Shape vocabulary comes from domain-owned `core.word` records whose means is `k.shapes.shape`. This is lexical classification, not proof that an attribute applies to every kind. |
-| Kind names | All object, animal, people-kind and genre identity names supply `feat.kind`. Duplicate names/senses remain alternatives; consumers must not silently choose the first source. These families are reusable coverage, not a replay-derived word list. |
+| Kind names | All object, animal, people-kind, genre and shape identity names supply `feat.kind`. Duplicate names/senses remain alternatives; consumers must not silently choose the first source. These families are reusable coverage, not a replay-derived word list. |
 | Colour and shape values | Every `k.colours.colour.name` and `k.shapes.shape.name` supplies `feat.value`, with explicit `feat.concept` and `feat.operator=eq`. The names are vocabulary candidates, not newly defined calculable regions or universal attribute defaults. |
 | Imperative verb | The existing `k.actions.verb.change.change` sense supplies `feat.act`; the published `acts.change.of` frame licenses this construction. Other change synonyms, degree/size expressions, fills and numerical/unit forms are not inferred from that act grouping. |
 | Grammatical terminals | Existing `w.lang.en` records provide OF, TO and definite DET. Mood belongs to the imperative production, never to a verb in every syntactic context. |
@@ -52,7 +53,8 @@ missing mappings and invalid attachments instead of omitting semantic content.
 
 The Command template preserves act, mood, target and a property constraint as an intermediate
 semantic record, with whole-command evidence and separate lexical-value evidence. These
-are not `std.request` wires. An adapter must retain disjoint original source ranges and
+are not `std.request` wires. This imperative construction explicitly declares the constraint
+character as requirement and polarity as positive; a bridge must not silently invent them. An adapter must retain disjoint original source ranges and
 must not replace them with a contiguous hull or normalized token offsets.
 
 `agreement` supplies two copy nodes evaluated in the same production context **before**
@@ -61,8 +63,9 @@ construction compares concept-name primitives: the property concept must equal t
 value's declared concept. A future adapter must not restrict the generic guard to primitive
 operands; structural equality of compound operands belongs to the generic mechanism. Absent or incompatible features
 fail closed; no type coercion, colour/shape guessing or dropping an unmatched adjective.
-The current template transducer alone does not execute this guard; claiming interpretation
-requires the consumer's guard adapter and structural request bridge to be released/tested.
+The SOP agreement declaration does not automatically execute a guard. An adapter must
+compile every agreement to the generic transducer's guards; claiming interpretation
+requires this adapter and the structural request bridge to be released/tested.
 
 The intermediate Target explicitly declares `mode=existing` in both target constructions
 and retains its kind and optional determiner. A bridge must not infer that mode from

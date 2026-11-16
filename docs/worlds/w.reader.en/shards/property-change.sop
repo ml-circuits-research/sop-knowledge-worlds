@@ -181,3 +181,7 @@
 @w.reader.en.step.command.constraint.evidence.2 w.reader.en.step of=command.constraint.evidence at=2 key=evidence core.source="hand-core 1"
 @w.reader.en.node.target.bare.mode w.reader.en.node name=target.bare.mode kind=literal parent=target.bare field=mode value=existing core.source="hand-core 1"
 @w.reader.en.node.target.definite.mode w.reader.en.node name=target.definite.mode kind=literal parent=target.definite field=mode value=existing core.source="hand-core 1"
+@w.reader.en.binding.kinds.shapes w.reader.en.binding name=kinds.shapes source_type=k.shapes.shape text_key=name cat=KIND core.source="hand-core 1"
+@w.reader.en.feature.kinds.shapes.kind w.reader.en.feature binding=kinds.shapes key=kind from_key=name core.source="hand-core 1"
+@w.reader.en.node.command.constraint.character w.reader.en.node name=command.constraint.character kind=literal parent=command.constraint field=character value=requirement core.source="hand-core 1"
+@w.reader.en.node.command.constraint.polarity w.reader.en.node name=command.constraint.polarity kind=literal parent=command.constraint field=polarity value=positive core.source="hand-core 1"

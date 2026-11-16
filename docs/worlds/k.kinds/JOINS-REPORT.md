@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **258** in 40 worlds; distinct values 11219, meeting a target 11160 (99.5 %), open 59
+- declared joins: **258** in 40 worlds; distinct values 11220, meeting a target 11161 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **51**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
 
@@ -266,7 +266,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.reader.en | `w.reader.en.agreement.left` | `w.reader.en.node` | name | 1 | 1 |  |
 | w.reader.en | `w.reader.en.agreement.right` | `w.reader.en.node` | name | 1 | 1 |  |
 | w.reader.en | `w.reader.en.agreement.rule` | `w.reader.en.rule` | name | 1 | 1 |  |
-| w.reader.en | `w.reader.en.feature.binding` | `w.reader.en.binding` | name | 10 | 10 |  |
+| w.reader.en | `w.reader.en.feature.binding` | `w.reader.en.binding` | name | 11 | 11 |  |
 | w.reader.en | `w.reader.en.filter.binding` | `w.reader.en.binding` | name | 4 | 4 |  |
 | w.reader.en | `w.reader.en.map.root` | `w.reader.en.node` | name | 14 | 14 |  |
 | w.reader.en | `w.reader.en.map.rule` | `w.reader.en.rule` | name | 7 | 7 |  |
