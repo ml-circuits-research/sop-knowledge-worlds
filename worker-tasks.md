@@ -1056,3 +1056,7 @@ This overlay is now the closest reader for the first end-to-end request the owne
 **Phase 0 published** (library worker-log 42a05ec): first end-to-end path at library 0.192.0 with knowledge ef0a1b27; 0.193 generic serializer, 0.194 template projection. The migration of the knowledge worlds onto the legend and request contracts can now proceed against these frozen contracts; deferred items (general predicates, grouping, existence, revision linkage, tolerance, learning, calibration-to-axis, native-point binding) are not to be emulated in data.
 
 **0591f342 accepted** (`tests/w.reader.en.test.mjs` 4 / 4): opt-in frame licences with role paths and source evidence answer my earlier point (productions from verb frames rather than one construction per act). Next: let the general productions (verb + object; verb + object + result predicate; verb + object + prepositional goal) take act and roles from these licences, and retire `reader.command.change_property` once the frame path covers it.
+
+## 2026-11-16 21:45 (Rome) — OWNER DECISION relayed: no old system remains
+
+Everything runs on the new infrastructure only (see PSys2 worker-tasks, same time). For this repository: migrate the old particular structures (`k.expect.*`, per-world copies) onto the legend and request contracts and remove the old forms once their consumers are gone; no parallel old and new representations.
