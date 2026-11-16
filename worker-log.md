@@ -6780,3 +6780,10 @@ me named them, so I took them and nothing else of Round 12 (`w.lang.en` is not s
 - Base commit: `3803c9b64a36`. Documentation only: 0 wires and 0 shards changed; data bytes and load time not applicable.
 - Checks: `npm run test:changed` — 3 files, 16 passed, 0 failed, 0 skipped; build 22 s, tests 3 s. `git diff --check` and `git push --dry-run origin main` passed.
 - This entry is committed with the documentation; identify its commit with `git log -- WORKER-HANDOFF.md`.
+
+## 2026-11-16 — Owner-concept migration ledger before phase zero
+
+- `migration/README.md`: all eight chapter-11.1 dependency families and all 38 owner-concept probes, with separate recognition, semantic and realisation checks. Owner examples set priorities/acceptance probes; reusable relation/property families determine migration/import coverage, never a replay-only filter. No world patterns, facts or dependency pins migrated.
+- `tools/audit-owner-migration.mjs` and `migration/owner-concepts-evidence.json`: reproducible catalog-scoped evidence, including published patterns (not only shards), file/line/type/attributes, source/licence and input SHA-256. 1,258 inputs; 2,722 selected declaration occurrences; 38 probes; 2,273,987 evidence bytes. Added the output to the build and generated-file merge protocol.
+- Semantic corrections to the earlier inventory's open questions: grandfather already has optional visible face/moustache cues; levels is vocabulary of the layers layout; chapter is a published document pattern type. These do not prove selectable/editable realisations. Swing-seat support, calculable extent/layer semantics and contextual usual-value regions remain explicit migration dependencies. No source thresholds or new facts invented.
+- Checks: `npm run test:changed` — build 24 s, 4 test files (sync/catalog/validate/repo), 20 passed, 0 failed, 0 skipped; tests 4 s. `node tools/audit-owner-migration.mjs --check` byte-identical; `git diff --check` clean. 0 wires and 0 shards changed; world-data bytes/load time/warnings unchanged. Full-round suite remains the integrating worker's check. Commit held for root review/push.
