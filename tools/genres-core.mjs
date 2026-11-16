@@ -100,6 +100,9 @@ export const MOVES = [
   ['report action', 'fact', 'Say what was done, and when.', ['niso2005']],
   ['report problem', 'fact', 'Say what went wrong or held the work up.', [], 'Progress reports name problems met; NISO Z39.18 has no part of its own for them.'],
   ['next step', 'question', 'Say what will be done next.', ['niso2005']],
+  ['greet', 'none', 'Greet the reader at the start of a letter, a note or an email.', [], 'A convention of personal writing, not taken from a source.'],
+  ['sign off', 'none', 'Close a letter, a note or an email with a good wish and the writer\'s name.', [], 'A convention of personal writing, not taken from a source.'],
+  ['invite reply', 'none', 'Ask the reader to answer.', [], 'A convention of personal writing, not taken from a source.'],
   ['set the scene', 'story', 'Say where and when the story happens (the setting of the story plan).', ['labovWaletzky1967', 'freytag1863', 'mandlerJohnson1977']],
   ['introduce character', 'story', 'Bring a character in: who it is and what it is like (the protagonist, later the helper).', ['labovWaletzky1967', 'steinGlenn1979']],
   ['state goal', 'story', 'Say what the protagonist wants or must do.', ['steinGlenn1979', 'mandlerJohnson1977']],
@@ -139,6 +142,11 @@ export const REGISTERS = [
     { contractions: false, hedging: false, citations: false, units: true, definitions: false, direct_speech: false, questions: false },
     ['niso2005', 'cutts2013', 'flesch1948'],
     'The sentence lengths (an average of about 15 after Cutts\' 15-20), sentences per paragraph and the vocabulary band.'],
+  ['personal', 'Direct and friendly: "I" to "you", the present tense, everyday words, short sentences, a greeting and a good wish at the ends.',
+    'first singular', ['second'], 'present', false, [4, 12, 22], [1, 5], 2, 'informal',
+    { contractions: true, hedging: false, citations: false, units: true, definitions: false, direct_speech: false, questions: true },
+    ['cutts2013', 'biberConrad2009'],
+    'The sentence lengths, sentences per paragraph and the vocabulary band (everyday words, readable by children); the present tense and "I" to "you" follow the cited plain-English advice for writing to a person.'],
 ];
 
 // Genres: name, about, register, unit, also_move, sources, own; parts: [name, min, max, { heading, layout, tense },
@@ -284,6 +292,92 @@ export const GENRES = [
         ['next step', 1, 3, {}, ['niso2005']],
       ]],
     ] },
+  { name: 'letter', register: 'personal', unit: 'paragraph', also: ['give example', 'raise a question'],
+    about: 'A personal letter: a greeting, an opening that says why you write, one to three paragraphs of what you want to say, a closing with a wish and an invitation to answer, and a signature.',
+    sources: [], own: 'The parts and the counts are the conventional form of a personal letter; no published work is cited for them (the register cites plain-English advice).',
+    parts: [
+      ['greeting', 1, 1, {}, 'Greet the reader.', [], 'The convention of a letter.', [
+        ['greet', 1, 1, {}, []],
+      ]],
+      ['opening', 1, 1, {}, 'Say why you write.', [], 'The convention of a letter.', [
+        ['state purpose', 1, 1, {}, []],
+        ['introduce topic', 0, 1, {}, []],
+      ]],
+      ['body', 1, 3, {}, 'What you want to say: a general point or an example, and perhaps a question.', [], 'The counts are this repository\'s choice.', [
+        [['generalise', 'give example'], 1, 2, {}, []],
+        ['raise a question', 0, 1, {}, []],
+      ]],
+      ['closing', 1, 1, {}, 'End on the point and ask for an answer.', [], 'The convention of a letter.', [
+        ['conclude', 1, 1, {}, []],
+        ['invite reply', 0, 1, {}, []],
+      ]],
+      ['signature', 1, 1, {}, 'A good wish and your name.', [], 'The convention of a letter.', [
+        ['sign off', 1, 1, {}, []],
+      ]],
+    ] },
+  { name: 'note', register: 'personal', unit: 'paragraph', also: ['give example'],
+    about: 'A short note: an optional greeting, one message paragraph that says what you want and perhaps asks for an answer, and an optional good wish.',
+    sources: [], own: 'The parts and the counts are the conventional form of a short note; no published work is cited for them.',
+    parts: [
+      ['greeting', 0, 1, {}, 'Greet the reader.', [], 'The convention of a note.', [
+        ['greet', 1, 1, {}, []],
+      ]],
+      ['message', 1, 1, {}, 'What you want to say, short.', [], 'The convention of a note.', [
+        ['state purpose', 1, 1, {}, []],
+        ['give example', 0, 1, {}, []],
+        ['invite reply', 0, 1, {}, []],
+      ]],
+      ['signature', 0, 1, {}, 'A good wish and your name.', [], 'The convention of a note.', [
+        ['sign off', 1, 1, {}, []],
+      ]],
+    ] },
+  { name: 'email', register: 'personal', unit: 'paragraph', also: ['give example', 'raise a question'],
+    about: 'An email: a greeting, an opening that says what it is about, one or two paragraphs, a closing that asks for an answer, and a signature.',
+    sources: [], own: 'The parts and the counts are the conventional form of an email; no published work is cited for them.',
+    parts: [
+      ['greeting', 1, 1, {}, 'Greet the reader.', [], 'The convention of an email.', [
+        ['greet', 1, 1, {}, []],
+      ]],
+      ['opening', 1, 1, {}, 'Say what the email is about.', [], 'The convention of an email.', [
+        ['state purpose', 1, 1, {}, []],
+      ]],
+      ['body', 1, 2, {}, 'The details.', [], 'The counts are this repository\'s choice.', [
+        [['generalise', 'give example'], 1, 2, {}, []],
+        ['raise a question', 0, 1, {}, []],
+      ]],
+      ['closing', 1, 1, {}, 'Ask for an answer.', [], 'The convention of an email.', [
+        ['invite reply', 1, 1, {}, []],
+      ]],
+      ['signature', 1, 1, {}, 'A good wish and your name.', [], 'The convention of an email.', [
+        ['sign off', 1, 1, {}, []],
+      ]],
+    ] },
+  { name: 'poem', register: 'narrative', unit: 'section', also: ['surprising fact'],
+    about: 'A short poem in stanzas (a section each, a line a sentence): an opening stanza that names the subject, one to three stanzas of images, and a last stanza that closes. Rhyme and metre are not modelled.',
+    sources: [], own: 'The stanzas and the counts are this repository\'s choice; the lines are written in the narrative register (told, short, concrete); rhyme and metre are not modelled.',
+    parts: [
+      ['opening stanza', 1, 1, {}, 'Name the subject.', [], 'This repository\'s choice.', [
+        ['introduce topic', 1, 2, {}, []],
+      ]],
+      ['image stanza', 1, 3, {}, 'An image or a surprise about the subject.', [], 'This repository\'s choice.', [
+        [['give example', 'surprising fact'], 1, 3, {}, []],
+        ['raise a question', 0, 1, {}, []],
+      ]],
+      ['last stanza', 1, 1, {}, 'Close the poem.', [], 'This repository\'s choice.', [
+        ['conclude', 1, 2, {}, []],
+      ]],
+    ] },
+  { name: 'list', register: 'report', unit: 'paragraph', also: [],
+    about: 'A list: a heading that names what is listed, then three to eight items, each one sentence.',
+    sources: [], own: 'The heading and the counts are this repository\'s choice; the items are examples of the topic, in the plain report register.',
+    parts: [
+      ['heading', 1, 1, {}, 'Name what is listed.', [], 'This repository\'s choice.', [
+        ['introduce topic', 1, 1, {}, []],
+      ]],
+      ['items', 1, 1, {}, 'The things listed, one sentence each.', [], 'This repository\'s choice.', [
+        ['give example', 3, 8, {}, []],
+      ]],
+    ] },
 ];
 
 // Other names of the genres (a host finds "a paper" or "a talk").
@@ -293,6 +387,11 @@ export const GENRE_WORDS = {
   essay: ['essays', 'composition', 'argumentative essay'],
   story: ['stories', 'tale', 'fairy tale', 'narrative'],
   report: ['reports', 'progress report', 'status report'],
+  letter: ['letters', 'epistle', 'message to a friend'],
+  note: ['notes', 'short note', 'memo', 'message'],
+  email: ['emails', 'e-mail', 'e-mails', 'mail'],
+  poem: ['poems', 'verse', 'rhyme', 'poetry'],
+  list: ['lists', 'checklist', 'bullet list', 'list of things'],
 };
 
 const shardOf = (genre) => seg(genre).replace(/_/g, '-');
@@ -310,7 +409,7 @@ export function genresShards() {
   const files = {
     'sources.sop': `${head('sources', `the ${SOURCES.length} published works the genres, moves and registers rest on: reference, year, DOI where sure, and what this world takes from each.`)}\n${sources.join('\n')}\n`,
     'moves.sop': `${head('moves', `${MOVES.length} rhetorical moves (what a sentence does for the reader), what a composer fills each with, and the works that name them.`)}\n${moves.join('\n')}\n`,
-    'registers.sop': `${head('registers', `${REGISTERS.length} registers (scientific, presentation, essay, narrative, report): person, tense, voice, sentence length, sentences per paragraph, vocabulary band, formality and what each allows.`)}\n${registers.join('\n')}\n`,
+    'registers.sop': `${head('registers', `${REGISTERS.length} registers (scientific, presentation, essay, narrative, report, personal): person, tense, voice, sentence length, sentences per paragraph, vocabulary band, formality and what each allows.`)}\n${registers.join('\n')}\n`,
   };
   for (const g of GENRES) {
     const gid = seg(g.name);

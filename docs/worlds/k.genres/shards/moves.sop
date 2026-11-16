@@ -1,4 +1,4 @@
-# k.genres/shards/moves: 43 rhetorical moves (what a sentence does for the reader), what a composer fills each with, and the works that name them.
+# k.genres/shards/moves: 46 rhetorical moves (what a sentence does for the reader), what a composer fills each with, and the works that name them.
 # sources: hand-core 1 (hand-written in this repository: tools/genres-core.mjs; the works cited are in WORLD.md)
 # license: CC0-1.0
 # script: tools/genres-core.mjs
@@ -37,6 +37,9 @@
 @k.genres.move.report_action k.genres.move name="report action" about="Say what was done, and when." takes=fact source=niso2005 core.source="hand-core 1"
 @k.genres.move.report_problem k.genres.move name="report problem" about="Say what went wrong or held the work up." takes=fact own="Progress reports name problems met; NISO Z39.18 has no part of its own for them." core.source="hand-core 1"
 @k.genres.move.next_step k.genres.move name="next step" about="Say what will be done next." takes=question source=niso2005 core.source="hand-core 1"
+@k.genres.move.greet k.genres.move name=greet about="Greet the reader at the start of a letter, a note or an email." takes=none own="A convention of personal writing, not taken from a source." core.source="hand-core 1"
+@k.genres.move.sign_off k.genres.move name="sign off" about="Close a letter, a note or an email with a good wish and the writer's name." takes=none own="A convention of personal writing, not taken from a source." core.source="hand-core 1"
+@k.genres.move.invite_reply k.genres.move name="invite reply" about="Ask the reader to answer." takes=none own="A convention of personal writing, not taken from a source." core.source="hand-core 1"
 @k.genres.move.set_the_scene k.genres.move name="set the scene" about="Say where and when the story happens (the setting of the story plan)." takes=story source=labovWaletzky1967 source=freytag1863 source=mandlerJohnson1977 core.source="hand-core 1"
 @k.genres.move.introduce_character k.genres.move name="introduce character" about="Bring a character in: who it is and what it is like (the protagonist, later the helper)." takes=story source=labovWaletzky1967 source=steinGlenn1979 core.source="hand-core 1"
 @k.genres.move.state_goal k.genres.move name="state goal" about="Say what the protagonist wants or must do." takes=story source=steinGlenn1979 source=mandlerJohnson1977 core.source="hand-core 1"

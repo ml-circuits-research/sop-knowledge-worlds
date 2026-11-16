@@ -17,12 +17,12 @@ const NUM = new Set(['n', 'min', 'max', 'year', 'sentence_min', 'sentence_typica
 const rows = (type) => world.ofType(type).map((w) => Object.fromEntries(Object.entries(w.attrs).filter(([k]) => k !== 'core.source')
   .map(([k, v]) => [k, MANY.has(k) ? v.map(tok) : NUM.has(k) ? Number(tok(v[0])) : tok(v[0])])));
 const facts = { source: rows('k.genres.source'), move: rows('k.genres.move'), register: rows('k.genres.register'), genre: rows('k.genres.genre'), part: rows('k.genres.part'), step: rows('k.genres.step') };
-const GENRES = ['scientific article', 'presentation', 'essay', 'story', 'report'];
+const GENRES = ['scientific article', 'presentation', 'essay', 'story', 'report', 'letter', 'note', 'email', 'poem', 'list'];
 
 // A seeded random function (mulberry32).
 export const seeded = (seed) => () => { seed = (seed + 0x6d2b79f5) | 0; let t = seed; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; };
 
-test('k.genres: the shards are what tools/genres-core.mjs gives; the five genres', () => {
+test('k.genres: the shards are what tools/genres-core.mjs gives; the ten genres', () => {
   for (const [name, t] of Object.entries(genresShards())) assert.equal(readFileSync(join(WORLDS_DIR, 'k.genres', 'shards', name), 'utf8'), t, name);
   assert.deepEqual(facts.genre.map((g) => g.name).sort(), [...GENRES].sort());
   assert.ok(facts.move.length >= 40 && facts.source.length >= 20, `${facts.move.length} moves, ${facts.source.length} sources`);
@@ -124,6 +124,11 @@ const SHORTEST = {
     ['counterargument', 'counterargument', 'rebut'], ['conclusion', 'restate thesis', 'conclude']],
   story: [['orientation', 'set the scene', 'introduce character', 'state goal'], ['complication', 'complicate', 'attempt'], ['climax', 'turning point'], ['resolution', 'resolve'], ['ending', 'end']],
   report: [['summary', 'summarize'], ['introduction', 'introduce topic', 'state purpose'], ['work done', 'report action'], ['results', 'report result'], ['next steps', 'next step']],
+  letter: [['greeting', 'greet'], ['opening', 'state purpose'], ['body', 'generalise'], ['closing', 'conclude'], ['signature', 'sign off']],
+  note: [['message', 'state purpose']],
+  email: [['greeting', 'greet'], ['opening', 'state purpose'], ['body', 'generalise'], ['closing', 'invite reply'], ['signature', 'sign off']],
+  poem: [['opening stanza', 'introduce topic'], ['image stanza', 'give example'], ['last stanza', 'conclude']],
+  list: [['heading', 'introduce topic'], ['items', 'give example', 'give example', 'give example']],
 };
 
 test('k.genres: the shortest outline of each genre is the hand-traced one', () => {
@@ -156,7 +161,7 @@ test(`k.genres: ${SAMPLES} seeded outlines per genre satisfy the structure; how 
       }
     }
     report[g] = seen.size;
-    assert.ok(seen.size > 50, `${g}: ${seen.size} distinct outlines of ${SAMPLES}`);
+    assert.ok(seen.size > (g === 'note' || g === 'list' ? 5 : 50), `${g}: ${seen.size} distinct outlines of ${SAMPLES}`);
   }
   console.log(`k.genres outlines: ${SAMPLES} per genre, distinct: ${JSON.stringify(report)}`);
 });

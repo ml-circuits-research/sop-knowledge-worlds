@@ -68,7 +68,7 @@
 # sky, node, link, text ...), `min`, `max`, `typical` how many, `needed=yes` when the thing is not that thing without
 # it (a pond without water), `where` the region of a scene it goes in (sky, background, ground, water, foreground,
 # ceiling, wall), `shape` (many) the shapes it is drawn with (a diagram's node: a k.diagrams shape), `role` the
-# k.diagrams role it has (start, process, decision).
+# k.diagrams role it has (start, process, decision), `slot` (many) the name of the k.faces slot (or slots) the part is drawn as: the part keeps its singular kind name (eye, hair) and the slot keeps the style data name (eyes, hair_front, hair_back); the other name is a word of the part.
 @k.expect.part core.type of=k.expect.part shared=true closed=true core.source="hand-core 1"
 @k.expect.part.of core.slot of=k.expect.part key=of id=true required=true kind=atom kind=string type=k.expect.make by=thing core.source="hand-core 1"
 @k.expect.part.part core.slot of=k.expect.part key=part id=true required=true kind=atom kind=string core.source="hand-core 1"
@@ -79,4 +79,5 @@
 @k.expect.part.needed core.slot of=k.expect.part key=needed enum=yes core.source="hand-core 1"
 @k.expect.part.where core.slot of=k.expect.part key=where enum=sky enum=ceiling enum=background enum=wall enum=ground enum=water enum=foreground core.source="hand-core 1"
 @k.expect.part.shape core.slot of=k.expect.part key=shape many=true kind=atom core.source="hand-core 1"
+@k.expect.part.slot core.slot of=k.expect.part key=slot many=true kind=atom core.source="hand-core 1"
 @k.expect.part.role core.slot of=k.expect.part key=role kind=atom core.source="hand-core 1"

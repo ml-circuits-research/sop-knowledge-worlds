@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **249** in 39 worlds; distinct values 11122, meeting a target 11063 (99.5 %), open 59
+- declared joins: **249** in 39 worlds; distinct values 11140, meeting a target 11081 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **50**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
+- undeclared keys whose values the value share joins to a type: **51**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
 
 ## Declared joins
 
@@ -95,15 +95,15 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.feelings | `k.feelings.feeling.expression` | `k.faces.expression` | name | 5 | 5 |  |
 | k.feelings | `k.feelings.feeling.opposite` | `k.feelings.feeling` | name | 11 | 11 |  |
 | k.food | `k.food.food.drawing` | `k.objects.object` | name | 155 | 155 |  |
-| k.genres | `k.genres.genre.also_move` | `k.genres.move` | name | 6 | 6 |  |
-| k.genres | `k.genres.genre.register` | `k.genres.register` | name | 5 | 5 |  |
+| k.genres | `k.genres.genre.also_move` | `k.genres.move` | name | 7 | 7 |  |
+| k.genres | `k.genres.genre.register` | `k.genres.register` | name | 6 | 6 |  |
 | k.genres | `k.genres.genre.source` | `k.genres.source` | name | 16 | 16 |  |
 | k.genres | `k.genres.move.source` | `k.genres.source` | name | 18 | 18 |  |
-| k.genres | `k.genres.part.genre` | `k.genres.genre` | name | 5 | 5 |  |
+| k.genres | `k.genres.part.genre` | `k.genres.genre` | name | 10 | 10 |  |
 | k.genres | `k.genres.part.source` | `k.genres.source` | name | 18 | 18 |  |
 | k.genres | `k.genres.register.source` | `k.genres.source` | name | 14 | 14 |  |
-| k.genres | `k.genres.step.genre` | `k.genres.genre` | name | 5 | 5 |  |
-| k.genres | `k.genres.step.move` | `k.genres.move` | name | 41 | 41 |  |
+| k.genres | `k.genres.step.genre` | `k.genres.genre` | name | 10 | 10 |  |
+| k.genres | `k.genres.step.move` | `k.genres.move` | name | 44 | 44 |  |
 | k.genres | `k.genres.step.source` | `k.genres.source` | name | 17 | 17 |  |
 | k.geo | `k.geo.city.capital_of` | `k.geo.country` | name | 245 | 245 |  |
 | k.geo | `k.geo.city.country` | `k.geo.country` | name | 248 | 248 |  |
@@ -246,7 +246,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.face | `w.face.face.preset` | `k.faces.preset` | name | 0 | 0 |  |
 | w.face | `w.face.face.style` | `k.faces.canon` | style | 0 | 0 |  |
 | w.lang.en | `w.lang.en.arrangement.layout` | `k.layouts.layout` | name | 15 | 15 |  |
-| w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 43 | 43 |  |
+| w.lang.en | `w.lang.en.discourse.move` | `k.genres.move` | name | 46 | 46 |  |
 | w.lang.en | `w.lang.en.feeling_reply.feeling` | `k.feelings.feeling` | name | 30 | 30 |  |
 | w.lang.en | `w.lang.en.frame.act` | `k.actions.act` | name | 18 | 17 | `own` |
 | w.lang.en | `w.lang.en.mode_map.act` | `k.actions.act` | name | 2 | 2 |  |
@@ -291,8 +291,9 @@ whose slot has an enum is never suggested here (see the last section).
 | k.attributes | `k.attributes.typical.of` | thing | `k.attributes.kind` | name | 36 | 18 |
 | k.commonsense | `k.commonsense.thing.at` | place | `k.commonsense.lives`, `k.attributes.thing` | in | 42 | 32 |
 | k.expect | `k.expect.make.layout` | group | `k.layouts.layout` | name | 10 | 7 |
-| k.expect | `k.expect.part.part` | thing | `k.scenes.thing` | name | 630 | 599 |
+| k.expect | `k.expect.part.part` | thing | `k.scenes.thing` | name | 632 | 599 |
 | k.expect | `k.expect.part.shape` | value | `k.shapes.shape` | name | 11 | 6 |
+| k.expect | `k.expect.part.slot` | thing | `k.body.part` | name | 8 | 3 |
 | k.faces | `k.faces.canon.name` | thing | `k.faces.canon` | style | 1 | 1 |
 | k.faces | `k.faces.colour.name` | value | `k.colours.colour` | name | 21 | 14 |
 | k.faces | `k.faces.expression.eyes` | thing | `k.feelings.feeling` | name | 4 | 2 |

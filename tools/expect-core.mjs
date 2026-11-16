@@ -41,7 +41,7 @@ export const SCALE = [
 ];
 
 // The hand-written makes: thing, made_in, unit, min, max, typical, kinds_min, kinds_max, layout, extent, scene,
-// diagram, length_unit, length, varies, about, parts [part, group, min, max, typical, needed, where, shapes, role].
+// diagram, length_unit, length, varies, about, parts [part, group, min, max, typical, needed, where, shapes, role, slots] (`slots`: the k.faces slots a part is drawn as, one name per part here and the slot names there).
 export const MAKES = [
   ['diagram', 'diagram', 'node', 5, 9, 7, 2, 3, 'top_down', 'default', null, null, null, null, ['count', 'kinds', 'layout', 'colour'],
     'a diagram with no kind said: 5 to 9 nodes (seven plus or minus two, what a reader takes in at once) of two or three shapes, joined by links, in a named layout',
@@ -82,7 +82,8 @@ export const MAKES = [
     'a short tune: 16 bars of four beats', [['bar', 'music', 8, 32, 16, 'yes', null, [], null]]],
   ['face', 'face', 'part', 5, 9, 7, 5, 9, null, 'default', null, null, null, null, ['colour', 'kinds'],
     'a face: head, eyes, nose, mouth, hair; ears and eyebrows often',
-    [['head', 'face', 1, 1, 1, 'yes', null, [], null], ['eye', 'face', 2, 2, 2, 'yes', null, [], null], ['mouth', 'face', 1, 1, 1, 'yes', null, [], null], ['nose', 'face', 0, 1, 1, null, null, [], null], ['hair', 'face', 0, 1, 1, null, null, [], null]]],
+    [['head', 'face', 1, 1, 1, 'yes', null, [], null, ['head']], ['eye', 'face', 2, 2, 2, 'yes', null, [], null, ['eyes']], ['mouth', 'face', 1, 1, 1, 'yes', null, [], null, ['mouth']], ['nose', 'face', 0, 1, 1, null, null, [], null, ['nose']], ['hair', 'face', 0, 1, 1, null, null, [], null, ['hair_front', 'hair_back']],
+      ['ear', 'face', 0, 2, 2, null, null, [], null, ['ears']], ['eyebrow', 'face', 0, 2, 2, null, null, [], null, ['eyebrows']]]],
 ];
 
 // How many nodes a role of a kind of diagram usually has (min, max, typical); a role not listed: 0 to 2, 1.
@@ -95,7 +96,7 @@ const makeWire = (id, m, src) => wire(id, 'k.expect.make', [
   ...(m.varies ?? []).map((v) => ['varies', v]), ['about', text(m.about)]], src);
 const partWire = (id, p, src) => wire(id, 'k.expect.part', [
   ['of', p.of], ['part', p.part], ['group', p.group], ['min', p.min], ['max', p.max], ['typical', p.typical], ['needed', p.needed], ['where', p.where],
-  ...(p.shapes ?? []).map((s) => ['shape', s]), ['role', p.role]], src);
+  ...(p.shapes ?? []).map((s) => ['shape', s]), ['role', p.role], ...(p.slots ?? []).map((s) => ['slot', s])], src);
 
 function hand() {
   const out = [];
@@ -106,7 +107,7 @@ function hand() {
   out.push('', '# The makes of common things, hand-checked.');
   for (const [thing, made_in, unit, min, max, typical, kinds_min, kinds_max, layout, extent, scene, diagram, length_unit, length, varies, about, parts] of MAKES) {
     out.push(makeWire(`k.expect.make.${seg(thing)}`, { thing, made_in, unit, min, max, typical, kinds_min, kinds_max, layout, extent, scene, diagram, length_unit, length, varies, about }, SRC));
-    for (const [part, group, pmin, pmax, ptyp, needed, where, shapes, role] of parts) out.push(partWire(`k.expect.part.${seg(thing)}.${seg(part)}`, { of: thing, part, group, min: pmin, max: pmax, typical: ptyp, needed, where, shapes, role }, SRC));
+    for (const [part, group, pmin, pmax, ptyp, needed, where, shapes, role, slots] of parts) out.push(partWire(`k.expect.part.${seg(thing)}.${seg(part)}`, { of: thing, part, group, min: pmin, max: pmax, typical: ptyp, needed, where, shapes, role, slots }, SRC));
   }
   return out;
 }

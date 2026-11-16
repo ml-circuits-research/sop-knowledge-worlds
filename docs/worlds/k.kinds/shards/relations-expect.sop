@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-expect: the keys of the types of k.expect read as relations: 36 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-expect: the keys of the types of k.expect read as relations: 37 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -33,6 +33,7 @@
 @k.kinds.relation.k.expect.part.needed k.kinds.relation type=k.expect.part key=needed subject=part object=value object_type=k.values.reply found=value core.source="hand-core 1"
 @k.kinds.relation.k.expect.part.where k.kinds.relation type=k.expect.part key=where subject=part object=place found=schema core.source="hand-core 1"
 @k.kinds.relation.k.expect.part.shape k.kinds.relation type=k.expect.part key=shape subject=part object=value object_type=k.shapes.shape object_sense=shape found=value core.source="hand-core 1"
+@k.kinds.relation.k.expect.part.slot k.kinds.relation type=k.expect.part key=slot subject=part object=thing object_type=k.body.part object_sense="body part" found=value core.source="hand-core 1"
 @k.kinds.relation.k.expect.part.role k.kinds.relation type=k.expect.part key=role subject=part object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.expect.scale.order k.kinds.relation type=k.expect.scale key=order subject=scale object=number found=schema core.source="hand-core 1"
 @k.kinds.relation.k.expect.scale.count_factor k.kinds.relation type=k.expect.scale key=count_factor subject=scale object=number found=schema core.source="hand-core 1"

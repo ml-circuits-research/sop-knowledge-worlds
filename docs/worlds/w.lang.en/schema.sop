@@ -451,7 +451,7 @@
 @w.lang.en.discourse core.type of=w.lang.en.discourse shared=true closed=true core.source="hand-core 1"
 @w.lang.en.discourse.name core.slot of=w.lang.en.discourse key=name id=true required=true kind=atom core.source="hand-core 1"
 @w.lang.en.discourse.move core.slot of=w.lang.en.discourse key=move required=true kind=atom kind=string type=k.genres.move by=name core.source="hand-core 1"
-@w.lang.en.discourse.register core.slot of=w.lang.en.discourse key=register required=true enum=scientific enum=presentation enum=essay enum=narrative enum=report core.source="hand-core 1"
+@w.lang.en.discourse.register core.slot of=w.lang.en.discourse key=register required=true enum=scientific enum=presentation enum=essay enum=narrative enum=report enum=personal core.source="hand-core 1"
 @w.lang.en.discourse.slot core.slot of=w.lang.en.discourse key=slot many=true kind=atom core.source="hand-core 1"
 @w.lang.en.discourse.text core.slot of=w.lang.en.discourse key=text required=true kind=string core.source="hand-core 1"
 # A slot of the discourse templates: `about` says what fills it (a noun phrase with its determiner, a clause without
@@ -660,7 +660,7 @@
 @w.lang.en.cue.attribute core.slot of=w.lang.en.cue key=attribute kind=atom core.source="hand-core 1"
 @w.lang.en.cue.bound core.slot of=w.lang.en.cue key=bound enum=exact enum=min enum=max enum=range enum=about core.source="hand-core 1"
 @w.lang.en.cue.amount core.slot of=w.lang.en.cue key=amount kind=atom core.source="hand-core 1"
-@w.lang.en.cue.step core.slot of=w.lang.en.cue key=step enum=up enum=down core.source="hand-core 1"
+@w.lang.en.cue.step core.slot of=w.lang.en.cue key=step enum=up enum=down enum=next enum=previous core.source="hand-core 1"
 @w.lang.en.cue.lead core.slot of=w.lang.en.cue key=lead many=true kind=string core.source="hand-core 1"
 @w.lang.en.cue.between core.slot of=w.lang.en.cue key=between many=true kind=string core.source="hand-core 1"
 @w.lang.en.cue.trail core.slot of=w.lang.en.cue key=trail many=true kind=string core.source="hand-core 1"

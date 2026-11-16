@@ -116,7 +116,7 @@ house" (a modifier before its noun, see the next section).
 "compare", "surprising fact", "give example", "raise a question", "conclude", "transition"; for stories "set the
 scene", "introduce character", "state goal", "complicate", "attempt", "turning point", "resolve", "evaluate", "end";
 and the moves of each genre: "indicate a gap", "state thesis", "rebut", "state takeaway", "report problem", "next
-step"...) in a register of k.genres (`register`: scientific, presentation, essay, narrative, report). Several
+step"...) in a register of k.genres (`register`: scientific, presentation, essay, narrative, report, personal). Several
 templates of one move and register are alternatives for a composer (std.compose) to choose among. `text` is in the
 library's notation; `slot` lists its slots, each a `w.lang.en.slot` that says what fills it: `fact` a clause without
 its stop, `question` an indirect question ("why an octopus has three hearts"), `value` and `usual` a value with its

@@ -11411,6 +11411,8 @@
   "k.scenes/shards/things-b"
  ],
  "back hair": [
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "w.face/schema.sop"
  ],
  "back max": [
@@ -12537,6 +12539,14 @@
   "k.wearables/shards/wearables"
  ],
  "bangs": [
+  "k.faces/shards/big-smile-slots",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "w.face/schema.sop"
  ],
  "bangui": [
@@ -17714,6 +17724,8 @@
   "k.body/schema.sop",
   "k.body/shards/core",
   "k.faces/shards/plain-shoulders",
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-1",
@@ -20471,7 +20483,11 @@
   "k.geo/shards/islands-north-america"
  ],
  "brow": [
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
   "k.faces/shards/plain-eyebrows",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "k.objects/shards/things-2",
   "k.words/shards/br",
   "k.words/shards/frequency-b"
@@ -20524,6 +20540,10 @@
   "k.colours/shards/colours"
  ],
  "brows": [
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "w.face/schema.sop"
  ],
  "browse": [
@@ -21235,6 +21255,9 @@
   "k.words/shards/frequency-b",
   "w.document/schema.sop",
   "k.objects/shards/noto-transport-ground-01"
+ ],
+ "bullet list": [
+  "k.genres/shards/list"
  ],
  "bullet train": [
   "k.attributes/shards/drawn-noto",
@@ -24664,7 +24687,9 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-c",
   "k.attributes/shards/things-worn",
+  "k.faces/shards/pixel-art-slots",
   "k.faces/shards/plain-hat",
+  "k.faces/shards/slots",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
@@ -27664,6 +27689,7 @@
   "k.words/shards/frequency-c"
  ],
  "checklist": [
+  "k.genres/shards/list",
   "w.list/schema.sop"
  ],
  "checkmate": [
@@ -27688,6 +27714,9 @@
  "cheek": [
   "k.attributes/shards/same-c",
   "k.body/shards/core",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/slots",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-1",
@@ -30377,6 +30406,8 @@
   "k.objects/shards/noto-household-01"
  ],
  "closing": [
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
   "k.genres/shards/presentation",
   "k.words/shards/cl",
   "k.words/shards/frequency-c"
@@ -32530,7 +32561,9 @@
  ],
  "conclude": [
   "k.genres/shards/essay",
+  "k.genres/shards/letter",
   "k.genres/shards/moves",
+  "k.genres/shards/poem",
   "k.genres/shards/presentation",
   "k.genres/shards/scientific-article",
   "k.words/shards/co-1",
@@ -46029,9 +46062,13 @@
   "k.actions/shards/verbs-send",
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-e",
+  "k.genres/shards/email",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-mail-01",
   "k.words/shards/e"
+ ],
+ "e-mails": [
+  "k.genres/shards/email"
  ],
  "e-sharp": [
   "k.music/shards/notes"
@@ -46117,7 +46154,10 @@
  "ear": [
   "k.attributes/shards/same-e",
   "k.body/shards/core",
+  "k.expect/shards/hand",
+  "k.faces/shards/micah-slots",
   "k.faces/shards/plain-ears",
+  "k.faces/shards/slots",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
@@ -46261,6 +46301,8 @@
   "k.attributes/shards/numbers-a-f",
   "k.attributes/shards/same-e",
   "k.attributes/shards/things-worn",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/slots",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/use",
@@ -48083,9 +48125,13 @@
  ],
  "email": [
   "k.actions/shards/verbs-send",
+  "k.genres/shards/email",
   "k.words/shards/em",
   "k.words/shards/frequency-e",
   "k.objects/shards/noto-mail-01"
+ ],
+ "emails": [
+  "k.genres/shards/email"
  ],
  "emaj7": [
   "k.music/shards/chords"
@@ -48876,6 +48922,9 @@
  "episode": [
   "k.words/shards/ep",
   "k.words/shards/frequency-e"
+ ],
+ "epistle": [
+  "k.genres/shards/letter"
  ],
  "eq. guinea": [
   "k.geo/shards/africa"
@@ -50381,6 +50430,14 @@
   "k.attributes/shards/same-e",
   "k.body/shards/core",
   "k.expect/shards/hand",
+  "k.faces/shards/big-smile-slots",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/wordnet-1",
@@ -50473,6 +50530,11 @@
  "eyebrow": [
   "k.attributes/shards/same-e",
   "k.body/shards/core",
+  "k.expect/shards/hand",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.words/shards/ey",
@@ -50506,6 +50568,10 @@
   "w.face/schema.sop"
  ],
  "eyeglasses": [
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/slots",
   "k.wearables/shards/wearables",
   "k.objects/shards/noto-clothing-01"
  ],
@@ -57240,7 +57306,15 @@
   "k.people/shards/given-names-f"
  ],
  "fringe": [
+  "k.faces/shards/big-smile-slots",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
   "k.faces/shards/plain-hair-front",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "k.kinds/shards/part_of",
   "k.words/shards/fr",
   "k.words/shards/frequency-f",
@@ -57433,6 +57507,16 @@
   "k.kinds/shards/group-mulberry",
   "k.objects/shards/mulberry-building-structure-01",
   "k.scenes/shards/things-f"
+ ],
+ "front hair": [
+  "k.faces/shards/big-smile-slots",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots"
  ],
  "front range": [
   "k.geo/shards/north-america"
@@ -60694,7 +60778,9 @@
   "k.geo/shards/asia"
  ],
  "generalise": [
+  "k.genres/shards/email",
   "k.genres/shards/essay",
+  "k.genres/shards/letter",
   "k.genres/shards/moves",
   "k.genres/shards/scientific-article"
  ],
@@ -61433,8 +61519,13 @@
   "k.genres/shards/presentation"
  ],
  "give example": [
+  "k.genres/shards/email",
   "k.genres/shards/essay",
+  "k.genres/shards/letter",
+  "k.genres/shards/list",
   "k.genres/shards/moves",
+  "k.genres/shards/note",
+  "k.genres/shards/poem",
   "k.genres/shards/presentation"
  ],
  "give food to": [
@@ -63503,10 +63594,17 @@
   "k.actions/shards/acts",
   "k.actions/shards/families",
   "k.actions/shards/verbs-greet",
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
+  "k.genres/shards/moves",
+  "k.genres/shards/note",
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
  "greeting": [
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
+  "k.genres/shards/note",
   "k.words/shards/frequency-g",
   "k.words/shards/gr"
  ],
@@ -65307,9 +65405,17 @@
   "k.attributes/shards/same-h",
   "k.body/shards/core",
   "k.expect/shards/hand",
+  "k.faces/shards/big-smile-slots",
   "k.faces/shards/colours",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
   "k.faces/shards/plain-hair-back",
   "k.faces/shards/plain-hair-front",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/relations-people",
@@ -66858,6 +66964,9 @@
   "k.words/shards/ha"
  ],
  "hats": [
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/plain-hat",
+  "k.faces/shards/slots",
   "k.objects/shards/more",
   "k.wearables/shards/wearables",
   "k.objects/shards/noto-clothing-05"
@@ -67208,6 +67317,7 @@
  "heading": [
   "k.attributes/shards/narration",
   "k.genres/schema.sop",
+  "k.genres/shards/list",
   "k.kinds/shards/relations-genres",
   "k.words/shards/frequency-h",
   "k.words/shards/he",
@@ -72001,6 +72111,9 @@
   "k.words/shards/frequency-i",
   "k.words/shards/im"
  ],
+ "image stanza": [
+  "k.genres/shards/poem"
+ ],
  "imagery": [
   "k.words/shards/frequency-i",
   "k.words/shards/im"
@@ -73604,7 +73717,10 @@
  ],
  "introduce topic": [
   "k.genres/shards/essay",
+  "k.genres/shards/letter",
+  "k.genres/shards/list",
   "k.genres/shards/moves",
+  "k.genres/shards/poem",
   "k.genres/shards/presentation",
   "k.genres/shards/report",
   "k.genres/shards/scientific-article"
@@ -73712,6 +73828,12 @@
  "invite questions": [
   "k.genres/shards/moves",
   "k.genres/shards/presentation"
+ ],
+ "invite reply": [
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
+  "k.genres/shards/moves",
+  "k.genres/shards/note"
  ],
  "invoice": [
   "k.words/shards/frequency-i",
@@ -74389,6 +74511,7 @@
   "w.list/schema.sop"
  ],
  "items": [
+  "k.genres/shards/list",
   "w.lang.en/shards/closed-classes",
   "w.lang.en/shards/hand-cues-more",
   "w.list/schema.sop"
@@ -82252,6 +82375,9 @@
  "last result": [
   "w.dialogue/schema.sop"
  ],
+ "last stanza": [
+  "k.genres/shards/poem"
+ ],
  "lasted": [
   "w.timeline/schema.sop"
  ],
@@ -84395,6 +84521,7 @@
   "k.attributes/shards/same-l",
   "k.attributes/shards/things-objects",
   "k.attributes/shards/usage",
+  "k.genres/shards/letter",
   "k.kinds/shards/group-mulberry",
   "k.kinds/shards/material",
   "k.kinds/shards/relations-motion",
@@ -84415,6 +84542,7 @@
   "k.objects/shards/structures"
  ],
  "letters": [
+  "k.genres/shards/letter",
   "k.units/shards/measures",
   "k.words/shards/frequency-l",
   "k.words/shards/le"
@@ -85648,7 +85776,15 @@
  ],
  "lips": [
   "k.body/shards/core",
+  "k.faces/shards/big-smile-slots",
+  "k.faces/shards/cutouts-slots",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
   "k.faces/shards/plain-mouth",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "w.face/schema.sop"
  ],
  "lipstick": [
@@ -85736,6 +85872,7 @@
  "list": [
   "k.actions/shards/verbs-ask",
   "k.expect/shards/hand",
+  "k.genres/shards/list",
   "k.layouts/shards/layouts",
   "k.procedures/shards/tasks",
   "k.words/shards/frequency-l",
@@ -85743,6 +85880,9 @@
   "w.list/schema.sop",
   "w.tasks/schema.sop",
   "k.objects/shards/noto-office-02"
+ ],
+ "list of things": [
+  "k.genres/shards/list"
  ],
  "list_without_point": [
   "k.interest/shards/features"
@@ -85772,6 +85912,7 @@
   "k.words/shards/li"
  ],
  "lists": [
+  "k.genres/shards/list",
   "w.list/schema.sop"
  ],
  "lit": [
@@ -88203,6 +88344,7 @@
  "mail": [
   "k.actions/shards/actions-body-social-nature",
   "k.actions/shards/verbs-send",
+  "k.genres/shards/email",
   "k.words/shards/frequency-m",
   "k.words/shards/ma",
   "k.objects/shards/noto-mail-01",
@@ -91523,6 +91665,7 @@
  "memo": [
   "k.attributes/shards/drawn-noto",
   "k.attributes/shards/same-m",
+  "k.genres/shards/note",
   "k.kinds/shards/group-noto",
   "k.kinds/shards/wordnet-1",
   "k.objects/shards/noto-writing-01",
@@ -91809,10 +91952,14 @@
  ],
  "message": [
   "k.actions/shards/verbs-send",
+  "k.genres/shards/note",
   "k.words/shards/frequency-m",
   "k.words/shards/me",
   "w.dialogue/schema.sop",
   "w.request/schema.sop"
+ ],
+ "message to a friend": [
+  "k.genres/shards/letter"
  ],
  "messenger": [
   "k.words/shards/frequency-m",
@@ -96751,6 +96898,9 @@
   "k.words/shards/mu"
  ],
  "mustache": [
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/plain-moustache",
+  "k.faces/shards/slots",
   "k.words/shards/frequency-m",
   "k.words/shards/mu",
   "w.face/schema.sop"
@@ -99705,6 +99855,7 @@
   "k.actions/shards/actions-make-change",
   "k.attributes/shards/narration",
   "k.attributes/shards/typical",
+  "k.genres/shards/note",
   "k.kinds/shards/relations-music",
   "k.kinds/shards/wordnet-1",
   "k.music/schema.sop",
@@ -99772,6 +99923,7 @@
   "k.objects/shards/noto-office-01"
  ],
  "notes": [
+  "k.genres/shards/note",
   "k.music/schema.sop",
   "w.document/schema.sop",
   "w.list/schema.sop",
@@ -102026,6 +102178,8 @@
  ],
  "opening": [
   "k.faces/shards/plain-shoulders",
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
   "k.layouts/shards/anchors",
@@ -102039,6 +102193,9 @@
   "k.words/shards/frequency-o",
   "k.words/shards/op",
   "k.objects/shards/noto-household-01"
+ ],
+ "opening stanza": [
+  "k.genres/shards/poem"
  ],
  "opens": [
   "k.attributes/shards/narration",
@@ -106875,6 +107032,7 @@
   "w.lang.en/shards/core-plurals"
  ],
  "personal": [
+  "k.genres/shards/registers",
   "k.interest/shards/features",
   "k.words/shards/frequency-p",
   "k.words/shards/pe",
@@ -110155,14 +110313,19 @@
  ],
  "poem": [
   "k.expect/shards/hand",
+  "k.genres/shards/poem",
   "k.words/shards/frequency-p",
   "k.words/shards/po"
+ ],
+ "poems": [
+  "k.genres/shards/poem"
  ],
  "poet": [
   "k.words/shards/frequency-p",
   "k.words/shards/po"
  ],
  "poetry": [
+  "k.genres/shards/poem",
   "k.words/shards/frequency-p",
   "k.words/shards/po"
  ],
@@ -114871,8 +115034,11 @@
   "w.face/schema.sop"
  ],
  "raise a question": [
+  "k.genres/shards/email",
   "k.genres/shards/essay",
+  "k.genres/shards/letter",
   "k.genres/shards/moves",
+  "k.genres/shards/poem",
   "k.genres/shards/scientific-article"
  ],
  "raised": [
@@ -118127,6 +118293,7 @@
   "k.words/shards/rh"
  ],
  "rhyme": [
+  "k.genres/shards/poem",
   "k.words/shards/frequency-r",
   "k.words/shards/rh"
  ],
@@ -128305,6 +128472,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sh"
  ],
+ "short note": [
+  "k.genres/shards/note"
+ ],
  "short trousers": [
   "k.wearables/shards/wearables"
  ],
@@ -128400,6 +128570,13 @@
  "shoulder": [
   "k.attributes/shards/same-s",
   "k.body/shards/core",
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/personas-slots",
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/plain-shoulders",
+  "k.faces/shards/slots",
+  "k.faces/shards/toon-head-slots",
   "k.kinds/shards/kind",
   "k.kinds/shards/part_of",
   "k.kinds/shards/part_of-wordnet-3",
@@ -129090,7 +129267,11 @@
   "k.objects/shards/openmoji-travel-places-01"
  ],
  "sign off": [
-  "k.actions/shards/verbs-farewell"
+  "k.actions/shards/verbs-farewell",
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
+  "k.genres/shards/moves",
+  "k.genres/shards/note"
  ],
  "sign_bar": [
   "k.objects/shards/places-2"
@@ -129124,6 +129305,9 @@
  ],
  "signature": [
   "k.attributes/shards/narration",
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
+  "k.genres/shards/note",
   "k.kinds/shards/relations-music",
   "k.music/schema.sop",
   "k.objects/shards/noto-money-02",
@@ -130656,6 +130840,7 @@
  "slot": [
   "k.attributes/shards/narration",
   "k.faces/schema.sop",
+  "k.kinds/shards/relations-expect",
   "k.kinds/shards/relations-faces",
   "k.kinds/shards/structures",
   "k.layouts/schema.sop",
@@ -132751,6 +132936,10 @@
   "k.words/shards/sp"
  ],
  "spectacles": [
+  "k.faces/shards/micah-slots",
+  "k.faces/shards/miniavs-slots",
+  "k.faces/shards/pixel-art-slots",
+  "k.faces/shards/slots",
   "k.kinds/shards/part_of-wordnet-3",
   "k.kinds/shards/wordnet-1",
   "k.kinds/shards/wordnet-2",
@@ -134608,7 +134797,10 @@
   "k.geo/shards/europe"
  ],
  "state purpose": [
+  "k.genres/shards/email",
+  "k.genres/shards/letter",
   "k.genres/shards/moves",
+  "k.genres/shards/note",
   "k.genres/shards/report",
   "k.genres/shards/scientific-article"
  ],
@@ -137392,6 +137584,7 @@
  "surprising fact": [
   "k.genres/shards/essay",
   "k.genres/shards/moves",
+  "k.genres/shards/poem",
   "k.genres/shards/presentation",
   "k.genres/shards/scientific-article"
  ],
@@ -151327,6 +151520,7 @@
   "k.words/shards/ve"
  ],
  "verse": [
+  "k.genres/shards/poem",
   "k.words/shards/frequency-v",
   "k.words/shards/ve"
  ],

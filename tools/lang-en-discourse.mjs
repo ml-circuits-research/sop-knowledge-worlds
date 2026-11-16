@@ -178,6 +178,24 @@ export const T = [
   ['narrative', 'evaluate', 'It had been a long day, and the {protagonist} was {feeling}.'],
   ['narrative', 'end', 'And so the {protagonist} was able to {goal}, and was {feeling} ever after.'],
   ['narrative', 'end', 'From that day on, the {protagonist} and the {helper} were friends.'],
+  // ---- personal (letter, note, email) ----
+  ['personal', 'greet', 'Dear friend,'],
+  ['personal', 'greet', 'Hello,'],
+  ['personal', 'sign off', 'With best wishes,'],
+  ['personal', 'sign off', 'Yours,'],
+  ['personal', 'invite reply', 'Please write back soon.'],
+  ['personal', 'invite reply', 'I would love to hear from you.'],
+  ['personal', 'state purpose', 'I am writing to tell you about {topic}.'],
+  ['personal', 'state purpose', "I'm writing because I want to talk with you about {topic}."],
+  ['personal', 'introduce topic', "I've been thinking a lot about {topic} lately."],
+  ['personal', 'introduce topic', 'I want to tell you about {topic}.'],
+  ['personal', 'generalise', 'As you know, {fact}.'],
+  ['personal', 'compare', 'Think about the {attribute}: {thing} has {value}, and {other} has {other_value}.'],
+  ['personal', 'surprising fact', 'You will not believe this: {fact}.'],
+  ['personal', 'give example', 'For example, take {example}.'],
+  ['personal', 'raise a question', 'Have you ever wondered {question}?'],
+  ['personal', 'conclude', 'So in the end, {fact}.'],
+  ['personal', 'transition', "Now I'll tell you about {part}."],
 ];
 
 const slug = (s) => s.replace(/[^a-z0-9]+/g, '_');
@@ -186,7 +204,7 @@ const q = (s) => JSON.stringify(s);
 export function shard() {
   const lines = [
     '# w.lang.en/shards/templates-discourse: rhetorical moves as templates (blocks 14:45 item 2, 15:00 item 4, 17:05): one or',
-    '# more sentences per move of k.genres and register of k.genres (scientific, presentation, essay, narrative, report), in the',
+    '# more sentences per move of k.genres and register of k.genres (scientific, presentation, essay, narrative, report, personal), in the',
     '# library\'s template notation, for std.compose; and the slots they name, with what fills each (a story slot is an element',
     '# of k.story).',
     '# sources: hand-core 1 (written in this repository; the moves and registers are those of k.genres, the story elements those',

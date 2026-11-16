@@ -1,5 +1,5 @@
 # w.lang.en/shards/templates-discourse: rhetorical moves as templates (blocks 14:45 item 2, 15:00 item 4, 17:05): one or
-# more sentences per move of k.genres and register of k.genres (scientific, presentation, essay, narrative, report), in the
+# more sentences per move of k.genres and register of k.genres (scientific, presentation, essay, narrative, report, personal), in the
 # library's template notation, for std.compose; and the slots they name, with what fills each (a story slot is an element
 # of k.story).
 # sources: hand-core 1 (written in this repository; the moves and registers are those of k.genres, the story elements those
@@ -267,3 +267,44 @@
 # ---- end ----
 @w.lang.en.discourse.narrative.end.1 w.lang.en.discourse name=narrative.end.1 move=end register=narrative slot=protagonist slot=goal slot=feeling text="And so the {protagonist} was able to {goal}, and was {feeling} ever after." core.source="hand-core 1"
 @w.lang.en.discourse.narrative.end.2 w.lang.en.discourse name=narrative.end.2 move=end register=narrative slot=protagonist slot=helper text="From that day on, the {protagonist} and the {helper} were friends." core.source="hand-core 1"
+
+# ---- greet ----
+@w.lang.en.discourse.personal.greet.1 w.lang.en.discourse name=personal.greet.1 move=greet register=personal text="Dear friend," core.source="hand-core 1"
+@w.lang.en.discourse.personal.greet.2 w.lang.en.discourse name=personal.greet.2 move=greet register=personal text="Hello," core.source="hand-core 1"
+
+# ---- sign off ----
+@w.lang.en.discourse.personal.sign_off.1 w.lang.en.discourse name=personal.sign_off.1 move="sign off" register=personal text="With best wishes," core.source="hand-core 1"
+@w.lang.en.discourse.personal.sign_off.2 w.lang.en.discourse name=personal.sign_off.2 move="sign off" register=personal text="Yours," core.source="hand-core 1"
+
+# ---- invite reply ----
+@w.lang.en.discourse.personal.invite_reply.1 w.lang.en.discourse name=personal.invite_reply.1 move="invite reply" register=personal text="Please write back soon." core.source="hand-core 1"
+@w.lang.en.discourse.personal.invite_reply.2 w.lang.en.discourse name=personal.invite_reply.2 move="invite reply" register=personal text="I would love to hear from you." core.source="hand-core 1"
+
+# ---- state purpose ----
+@w.lang.en.discourse.personal.state_purpose.1 w.lang.en.discourse name=personal.state_purpose.1 move="state purpose" register=personal slot=topic text="I am writing to tell you about {topic}." core.source="hand-core 1"
+@w.lang.en.discourse.personal.state_purpose.2 w.lang.en.discourse name=personal.state_purpose.2 move="state purpose" register=personal slot=topic text="I'm writing because I want to talk with you about {topic}." core.source="hand-core 1"
+
+# ---- introduce topic ----
+@w.lang.en.discourse.personal.introduce_topic.1 w.lang.en.discourse name=personal.introduce_topic.1 move="introduce topic" register=personal slot=topic text="I've been thinking a lot about {topic} lately." core.source="hand-core 1"
+@w.lang.en.discourse.personal.introduce_topic.2 w.lang.en.discourse name=personal.introduce_topic.2 move="introduce topic" register=personal slot=topic text="I want to tell you about {topic}." core.source="hand-core 1"
+
+# ---- generalise ----
+@w.lang.en.discourse.personal.generalise.1 w.lang.en.discourse name=personal.generalise.1 move=generalise register=personal slot=fact text="As you know, {fact}." core.source="hand-core 1"
+
+# ---- compare ----
+@w.lang.en.discourse.personal.compare.1 w.lang.en.discourse name=personal.compare.1 move=compare register=personal slot=attribute slot=thing slot=value slot=other slot=other_value text="Think about the {attribute}: {thing} has {value}, and {other} has {other_value}." core.source="hand-core 1"
+
+# ---- surprising fact ----
+@w.lang.en.discourse.personal.surprising_fact.1 w.lang.en.discourse name=personal.surprising_fact.1 move="surprising fact" register=personal slot=fact text="You will not believe this: {fact}." core.source="hand-core 1"
+
+# ---- give example ----
+@w.lang.en.discourse.personal.give_example.1 w.lang.en.discourse name=personal.give_example.1 move="give example" register=personal slot=example text="For example, take {example}." core.source="hand-core 1"
+
+# ---- raise a question ----
+@w.lang.en.discourse.personal.raise_a_question.1 w.lang.en.discourse name=personal.raise_a_question.1 move="raise a question" register=personal slot=question text="Have you ever wondered {question}?" core.source="hand-core 1"
+
+# ---- conclude ----
+@w.lang.en.discourse.personal.conclude.1 w.lang.en.discourse name=personal.conclude.1 move=conclude register=personal slot=fact text="So in the end, {fact}." core.source="hand-core 1"
+
+# ---- transition ----
+@w.lang.en.discourse.personal.transition.1 w.lang.en.discourse name=personal.transition.1 move=transition register=personal slot=part text="Now I'll tell you about {part}." core.source="hand-core 1"

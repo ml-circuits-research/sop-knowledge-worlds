@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (296 of 1187 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (296 of 1188 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -310,6 +310,7 @@
 @k.attributes.narration.k.expect.part.needed k.attributes.narration type=k.expect.part key=needed narrate=no salience=0 why="machinery: what a planner fills in when a request does not say it" core.source="hand-core 1"
 @k.attributes.narration.k.expect.part.where k.attributes.narration type=k.expect.part key=where narrate=no salience=0 why="machinery: what a planner fills in when a request does not say it" core.source="hand-core 1"
 @k.attributes.narration.k.expect.part.shape k.attributes.narration type=k.expect.part key=shape narrate=no salience=0 why="machinery: what a planner fills in when a request does not say it" core.source="hand-core 1"
+@k.attributes.narration.k.expect.part.slot k.attributes.narration type=k.expect.part key=slot narrate=no salience=0 why="machinery: what a planner fills in when a request does not say it" core.source="hand-core 1"
 @k.attributes.narration.k.expect.part.role k.attributes.narration type=k.expect.part key=role narrate=no salience=0 why="machinery: what a planner fills in when a request does not say it" core.source="hand-core 1"
 @k.attributes.narration.k.faces.slot.style k.attributes.narration type=k.faces.slot key=style narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.slot.name k.attributes.narration type=k.faces.slot key=name narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"

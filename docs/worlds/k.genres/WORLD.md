@@ -37,7 +37,7 @@ or raise a question, or counter-claim). The tense of a sentence is the step's, e
 reference reading is `outline(facts, genre, rnd)` in `tools/genres-core.mjs` (twenty lines): with a seeded random
 function it draws an outline; without one it gives the shortest.
 
-## The genres (5)
+## The genres (10)
 
 | Genre | Parts in order (times) | Register |
 | --- | --- | --- |
@@ -46,6 +46,11 @@ function it draws an outline; without one it gives the shortest.
 | essay | introduction (thesis), argument (2-4), counterargument, conclusion | essay: "I", present, 8-18-28 words, band 4, hedged, cited, questions |
 | story | orientation, complication, climax, resolution, ending | narrative: third person (or "I"), past, 4-11-20 words, band 2, direct speech |
 | report | summary, introduction, work done, results, problems (0-1), next steps | report: "we", past (results present, next steps future), 8-15-24 words, band 3, units |
+| letter | greeting, opening, body (1-3), closing, signature | personal: "I" to "you", present, 4-12-22 words, band 2, contractions, questions |
+| note | greeting (0-1), message, signature (0-1) | personal |
+| email | greeting, opening, body (1-2), closing, signature | personal |
+| poem | opening stanza, image stanza (1-3), last stanza | narrative (rhyme and metre not modelled) |
+| list | heading, items (3-8) | report |
 
 43 moves; 26 parts; 72 steps. The moves the language world's discourse templates are asked for (introduce topic,
 compare, surprising fact, give example, raise a question, conclude, transition) are among them.

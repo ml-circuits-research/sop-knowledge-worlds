@@ -1,5 +1,5 @@
 {
- "version": "79ea2f3f580e",
+ "version": "c128da83df5c",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -4576,8 +4576,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1187,
-     "bytes": 229743,
+     "wires": 1188,
+     "bytes": 229957,
      "keys": [
       "a",
       "about",
@@ -13680,8 +13680,8 @@
     {
      "id": "k.diagrams/shards/topics-cc0-1-0",
      "path": "k.diagrams/shards/topics-cc0-1-0.sop",
-     "wires": 1146,
-     "bytes": 196661,
+     "wires": 1151,
+     "bytes": 197292,
      "keys": [],
      "sources": [
       "hand-core-1",
@@ -13831,8 +13831,8 @@
     {
      "id": "k.expect/shards/hand",
      "path": "k.expect/shards/hand.sop",
-     "wires": 70,
-     "bytes": 12464,
+     "wires": 72,
+     "bytes": 12796,
      "keys": [
       "about",
       "bar",
@@ -13853,8 +13853,10 @@
       "door",
       "dozen",
       "duck",
+      "ear",
       "essay",
       "eye",
+      "eyebrow",
       "face",
       "fence",
       "few",
@@ -17044,6 +17046,32 @@
    "depends": [],
    "shards": [
     {
+     "id": "k.genres/shards/email",
+     "path": "k.genres/shards/email.sop",
+     "wires": 14,
+     "bytes": 2852,
+     "keys": [
+      "body",
+      "closing",
+      "email",
+      "generalise",
+      "give example",
+      "greet",
+      "greeting",
+      "invite reply",
+      "opening",
+      "raise a question",
+      "sign off",
+      "signature",
+      "state purpose"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.genres/shards/essay",
      "path": "k.genres/shards/essay.sop",
      "wires": 20,
@@ -17075,10 +17103,56 @@
      "warnings": []
     },
     {
+     "id": "k.genres/shards/letter",
+     "path": "k.genres/shards/letter.sop",
+     "wires": 16,
+     "bytes": 3348,
+     "keys": [
+      "body",
+      "closing",
+      "conclude",
+      "generalise",
+      "give example",
+      "greet",
+      "greeting",
+      "introduce topic",
+      "invite reply",
+      "letter",
+      "opening",
+      "raise a question",
+      "sign off",
+      "signature",
+      "state purpose"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/list",
+     "path": "k.genres/shards/list.sop",
+     "wires": 6,
+     "bytes": 1526,
+     "keys": [
+      "give example",
+      "heading",
+      "introduce topic",
+      "items",
+      "list"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.genres/shards/moves",
      "path": "k.genres/shards/moves.sop",
-     "wires": 43,
-     "bytes": 9085,
+     "wires": 46,
+     "bytes": 9741,
      "keys": [
       "announce findings",
       "attempt",
@@ -17095,11 +17169,13 @@
       "generalise",
       "give evidence",
       "give example",
+      "greet",
       "indicate a gap",
       "interpret result",
       "introduce character",
       "introduce topic",
       "invite questions",
+      "invite reply",
       "next step",
       "outline structure",
       "raise a question",
@@ -17112,6 +17188,7 @@
       "restate thesis",
       "review previous work",
       "set the scene",
+      "sign off",
       "state claim",
       "state goal",
       "state limitation",
@@ -17123,6 +17200,50 @@
       "thank audience",
       "transition",
       "turning point"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/note",
+     "path": "k.genres/shards/note.sop",
+     "wires": 10,
+     "bytes": 2169,
+     "keys": [
+      "give example",
+      "greet",
+      "greeting",
+      "invite reply",
+      "message",
+      "note",
+      "sign off",
+      "signature",
+      "state purpose"
+     ],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.genres/shards/poem",
+     "path": "k.genres/shards/poem.sop",
+     "wires": 10,
+     "bytes": 2417,
+     "keys": [
+      "conclude",
+      "give example",
+      "image stanza",
+      "introduce topic",
+      "last stanza",
+      "opening stanza",
+      "poem",
+      "raise a question",
+      "surprising fact"
      ],
      "sources": [
       "hand-core-1"
@@ -17164,11 +17285,12 @@
     {
      "id": "k.genres/shards/registers",
      "path": "k.genres/shards/registers.sop",
-     "wires": 5,
-     "bytes": 4078,
+     "wires": 6,
+     "bytes": 4874,
      "keys": [
       "essay",
       "narrative",
+      "personal",
       "presentation",
       "report",
       "scientific"
@@ -33681,8 +33803,8 @@
     {
      "id": "k.kinds/shards/relations-expect",
      "path": "k.kinds/shards/relations-expect.sop",
-     "wires": 36,
-     "bytes": 6393,
+     "wires": 37,
+     "bytes": 6588,
      "keys": [
       "about",
       "count_factor",
@@ -33711,6 +33833,7 @@
       "scene",
       "shape",
       "size_factor",
+      "slot",
       "typical",
       "unit",
       "varies",
@@ -93297,6 +93420,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/hand-cues-step",
+     "path": "w.lang.en/shards/hand-cues-step.sop",
+     "wires": 2,
+     "bytes": 1119,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/hand-cues",
      "path": "w.lang.en/shards/hand-cues.sop",
      "wires": 81,
@@ -93984,6 +94119,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.en/shards/replies-text",
+     "path": "w.lang.en/shards/replies-text.sop",
+     "wires": 14,
+     "bytes": 3488,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.en/shards/replies",
      "path": "w.lang.en/shards/replies.sop",
      "wires": 95,
@@ -94049,8 +94196,8 @@
     {
      "id": "w.lang.en/shards/templates-discourse",
      "path": "w.lang.en/shards/templates-discourse.sop",
-     "wires": 151,
-     "bytes": 33782,
+     "wires": 168,
+     "bytes": 37536,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -94202,6 +94349,18 @@
      "warnings": []
     },
     {
+     "id": "w.lang.ro/shards/irregular-nouns",
+     "path": "w.lang.ro/shards/irregular-nouns.sop",
+     "wires": 14,
+     "bytes": 2275,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "w.lang.ro/shards/irregular",
      "path": "w.lang.ro/shards/irregular.sop",
      "wires": 299,
@@ -94216,8 +94375,20 @@
     {
      "id": "w.lang.ro/shards/morphology",
      "path": "w.lang.ro/shards/morphology.sop",
-     "wires": 415,
-     "bytes": 61350,
+     "wires": 417,
+     "bytes": 61532,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/replies-text",
+     "path": "w.lang.ro/shards/replies-text.sop",
+     "wires": 20,
+     "bytes": 4568,
      "keys": [],
      "sources": [
       "hand-core-1"
@@ -94272,6 +94443,41 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "w.lang.ro/shards/words-k.faces",
+     "path": "w.lang.ro/shards/words-k.faces.sop",
+     "wires": 22,
+     "bytes": 4114,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": [
+      "unknown-word w.lang.ro.word.k.faces.slot.eyes: w.lang.ro.word.k.faces.slot.eyes: means=eyes of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.ears: w.lang.ro.word.k.faces.slot.ears: means=ears of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.eyebrows: w.lang.ro.word.k.faces.slot.eyebrows: means=eyebrows of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.hair_front: w.lang.ro.word.k.faces.slot.hair_front: means=hair_front of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.hair_back: w.lang.ro.word.k.faces.slot.hair_back: means=hair_back of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.cheeks: w.lang.ro.word.k.faces.slot.cheeks: means=cheeks of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.glasses: w.lang.ro.word.k.faces.slot.glasses: means=glasses of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.hat: w.lang.ro.word.k.faces.slot.hat: means=hat of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.earrings: w.lang.ro.word.k.faces.slot.earrings: means=earrings of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.mouth: w.lang.ro.word.k.faces.slot.mouth: means=mouth of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.nose: w.lang.ro.word.k.faces.slot.nose: means=nose of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.beard: w.lang.ro.word.k.faces.slot.beard: means=beard of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.moustache: w.lang.ro.word.k.faces.slot.moustache: means=moustache of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.shoulders: w.lang.ro.word.k.faces.slot.shoulders: means=shoulders of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.neck: w.lang.ro.word.k.faces.slot.neck: means=neck of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.slot.head: w.lang.ro.word.k.faces.slot.head: means=head of=k.faces.slot.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.expression.happy: w.lang.ro.word.k.faces.expression.happy: means=happy of=k.faces.expression.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.expression.sad: w.lang.ro.word.k.faces.expression.sad: means=sad of=k.faces.expression.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.expression.angry: w.lang.ro.word.k.faces.expression.angry: means=angry of=k.faces.expression.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.expression.surprised: w.lang.ro.word.k.faces.expression.surprised: means=surprised of=k.faces.expression.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.expression.sleepy: w.lang.ro.word.k.faces.expression.sleepy: means=sleepy of=k.faces.expression.name names no action, type, key or value of the matrix",
+      "unknown-word w.lang.ro.word.k.faces.expression.wink: w.lang.ro.word.k.faces.expression.wink: means=wink of=k.faces.expression.name names no action, type, key or value of the matrix"
+     ]
     },
     {
      "id": "w.lang.ro/shards/words-w.calendar",
@@ -94476,7 +94682,7 @@
      "path": "docs/worlds/w.lang.ro/dictionary",
      "format": "tsv",
      "files": 21,
-     "bytes": 16752,
+     "bytes": 17760,
      "sources": [
       "hand-core-1"
      ],
@@ -94487,7 +94693,7 @@
      "path": "docs/worlds/w.lang.ro/dictionary-unimorph",
      "format": "tsv",
      "files": 23,
-     "bytes": 67482,
+     "bytes": 67331,
      "sources": [
       "unimorph-ron-2026-11-14"
      ],

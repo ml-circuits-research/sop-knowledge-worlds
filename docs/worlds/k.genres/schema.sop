@@ -73,13 +73,13 @@
 @k.genres.register.own core.slot of=k.genres.register key=own required=true kind=string core.source="hand-core 1"
 
 # A genre (a document type). `register` names its register; `unit` the w.document kind its parts are written as
-# (chapter, or slide for a presentation); `also_move` (many) moves allowed anywhere in it beyond its steps (a
+# (chapter; slide for a presentation; section or paragraph for a poem, a letter, a note, an email, a list); `also_move` (many) moves allowed anywhere in it beyond its steps (a
 # transition, a definition, an example); `about`; `source` (many); `own`.
 @k.genres.genre core.type of=k.genres.genre shared=true closed=true core.source="hand-core 1"
 @k.genres.genre.name core.slot of=k.genres.genre key=name id=true required=true kind=atom kind=string core.source="hand-core 1"
 @k.genres.genre.about core.slot of=k.genres.genre key=about required=true kind=string core.source="hand-core 1"
 @k.genres.genre.register core.slot of=k.genres.genre key=register required=true kind=atom kind=string type=k.genres.register by=name core.source="hand-core 1"
-@k.genres.genre.unit core.slot of=k.genres.genre key=unit required=true enum=chapter enum=slide core.source="hand-core 1"
+@k.genres.genre.unit core.slot of=k.genres.genre key=unit required=true enum=chapter enum=slide enum=section enum=paragraph core.source="hand-core 1"
 @k.genres.genre.also_move core.slot of=k.genres.genre key=also_move many=true kind=atom kind=string type=k.genres.move by=name core.source="hand-core 1"
 @k.genres.genre.source core.slot of=k.genres.genre key=source many=true kind=atom type=k.genres.source by=name core.source="hand-core 1"
 @k.genres.genre.own core.slot of=k.genres.genre key=own kind=string core.source="hand-core 1"

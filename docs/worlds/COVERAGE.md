@@ -59,7 +59,7 @@ How many of the common things are a word of the vocabulary index that leads to a
 | `k.commonsense` | 189 (13%) |
 | `k.diagrams` | 3 (0%) |
 | `k.expect` | 291 (19%) |
-| `k.faces` | 48 (3%) |
+| `k.faces` | 49 (3%) |
 | `k.food` | 147 (10%) |
 | `k.genres` | 1 (0%) |
 | `k.geo` | 22 (1%) |
