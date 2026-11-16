@@ -9,14 +9,17 @@ the knowledge base, including concepts not spoken in the replay. The family tabl
 broader work; the concept table audits the selected probes only. No sentence-specific fact
 selection or thresholds are justified by these probes.
 
-No facts, world patterns or dependency pins migrate in this change. The phase-zero contract
+No facts, world patterns or dependency pins migrate in this ledger. The phase-zero contract
 publication is the prerequisite for choosing target identifiers and writing regions or roles.
 
-Run `node tools/audit-owner-migration.mjs` from this repository; verify byte-for-byte with
-`node tools/audit-owner-migration.mjs --check`. The [evidence](owner-concepts-evidence.json)
+Generate the ignored local evidence on demand with
+`node tools/audit-owner-migration.mjs` from this repository; verify byte-for-byte with
+`node tools/audit-owner-migration.mjs --check`. The optional local file `migration/owner-concepts-evidence.json`
 records catalog version, SHA-256 of every catalog-listed input, file/line, wire id, type,
-attributes and file licence. It includes published world patterns as well as shards: the
-older inventory excluded pattern declarations and therefore missed chapter. It does not
+attributes and file licence. The evidence is a local audit report, outside the published
+`docs/` knowledge base; it is excluded from Git and the build. This differs from the
+published catalog/vocabulary indexes, which remain tracked under AGENTS.md. The report
+includes published world patterns as well as shards: the older inventory excluded pattern declarations and therefore missed chapter. It does not
 load worlds, follow arbitrary synonyms, merge repeated identities or infer inherited facts.
 The extractor parses one `@` declaration per physical line; continuation-line
 attributes are outside this lexical audit. It is not an exhaustive semantic inventory.

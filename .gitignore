@@ -2,3 +2,6 @@ sources/*/raw/
 node_modules/
 .test-timings.json
 .validate-cache.json
+
+# Optional local migration audit; reproduce with tools/audit-owner-migration.mjs.
+migration/owner-concepts-evidence.json
