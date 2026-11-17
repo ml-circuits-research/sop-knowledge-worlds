@@ -20,6 +20,7 @@ const SRC = 'hand-core 1';
 // a thing, whether one thing of the role it refers to (else one world) holds several of it (a container holds many
 // slots, a slot many items up to the capacity). `required` = the structure needs it (the first two roles).
 export const ROLE_FACTS = {
+  capacity: { container: { many: true }, capacity: { of: 'container', many: false } },
   assignment: { item: { refers: 'slot', many: true }, slot: { refers: 'container', many: true }, assigned: { of: 'item', refers: 'slot', many: false },
     container: { many: true }, slot_of: { of: 'slot', refers: 'container', many: false }, capacity: { of: 'container', many: false }, order: { of: 'slot', many: false }, constraint: { many: true } },
   'whole with parts': { whole: { many: true }, part: { refers: 'whole', many: true }, part_of: { of: 'part', refers: 'whole', many: false }, part_kind: { of: 'part', many: false },
@@ -48,6 +49,7 @@ export const CONSTRAINTS = [
 // The structures: name, about, roles in order (the first two are needed: every world of the structure casts them),
 // and what each role is.
 export const STRUCTURES = [
+  { name: 'capacity', about: 'a thing with an explicitly stated capacity; no occupancy or assignment is implied', roles: [['container', 'the thing whose capacity is stated'], ['capacity', 'the stated count it can accommodate']] },
   { name: 'assignment', about: 'items in slots under constraints: each item is given one slot of a container; a slot holds a limited number of items', roles: [
     ['item', 'what is assigned'], ['slot', 'where an item goes'], ['assigned', 'the key of an item that names its slot'], ['container', 'what holds the slots'],
     ['slot_of', 'the key of a slot that names its container'], ['capacity', 'how many slots or items a container takes'], ['order', 'the place of a slot among those of its container'], ['constraint', 'a limit or a rule on the assignment']] },
@@ -74,6 +76,9 @@ export const STRUCTURES = [
 // a key written type.key (as key) or an act of k.actions (as act).
 const T = 'type', K = 'key', A = 'act';
 export const FORMS = [
+  ['w.picture', 'whole with parts', 'a depiction with explicitly declared parts', [['whole', 'w.picture.picture', T], ['part', 'w.picture.part', T], ['part_of', 'w.picture.part.picture', K], ['part_kind', 'w.picture.part.object', K]]],
+  ['w.text', 'sequence', 'anchored spans over one explicit retained source revision; overlaps are allowed', [['element', 'w.text.span', T], ['position', 'w.text.span.start', K], ['end', 'w.text.span.end', K], ['sequence', 'w.text.source', T], ['element_of', 'w.text.span.source', K]]],
+  ['w.room', 'capacity', 'a room with a stated seating capacity, not an occupancy assertion', [['container', 'w.room.room', T], ['capacity', 'w.room.room.seats', K]]],
   ['w.seating', 'assignment', 'guests are given seats; a table holds a number of seats', [
     ['item', 'w.seating.guest', T], ['slot', 'w.seating.seat', T], ['assigned', 'w.seating.guest.seat', K], ['container', 'w.seating.table', T], ['slot_of', 'w.seating.seat.table', K],
     ['capacity', 'w.seating.table.seats', K], ['order', 'w.seating.seat.n', K]]],

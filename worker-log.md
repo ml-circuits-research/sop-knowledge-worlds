@@ -6841,3 +6841,32 @@ Added `w.reader.en.requests` with four source-grounded graph mappings (create/re
 `node --test tests/w.reader.en.requests.test.mjs`: 3 passed, 0 failed. Direct `World.tell`/`World.check` measurement over schema+shard: 84 wires, 1 shard, 17,333 bytes, 10.2 ms, 0 errors, 0 warnings. Catalog shard entry: 57 facts, 13,201 bytes, 0 warnings. `npm run test:changed`: 45 passed, 0 failed before the final lexical-source admission tightening. `npm run test:all`: 115 files, 3,243 tests, 3,224 passed, 1 failed (stale generated catalog), 18 skipped. After `node tools/build-catalog.mjs` and `node tools/generated.mjs`, `node tools/test-run.mjs tests/catalog.test.mjs`: 9 passed, 0 failed, resolving the sole round failure. Final request-module test remained 3/3 in the full round.
 
 The library integration tests exercise all graphable families together; data validation alone is not an English coverage claim. Increment, questions, quantity syntax, coordination and dialogue-context bindings remain declared follow-up work. Source records marked as incomplete multiword fragments are not admitted solely because they share a canonical relation with a complete preposition.
+
+## 2026-11-17 — Reusable depiction, retained-text and room families
+
+Added w.picture, w.text and w.room world patterns together, source hand-core1
+(CC0-1.0), with owning legends/source record. Reuse published colour, scene,
+object and document joins; existing lists/tasks retain their own concepts.
+Depiction does not alias a physical leaf/page or a tab. Room seating capacity
+is a nonnegative count, independent of calendars/occupancy/relative quality.
+Text spans explicitly bind a retained source_id/revision/text and half-open
+Unicode-scalar coordinates, may cross structural boundaries, and carry separate
+formatting/link predicates. Source make/ask/copy is append-only at the generic
+act boundary; change/remove refuse with not_allowed, spans remain changeable.
+Missing required source/span provenance and empty source identifiers refuse.
+Upper bounds/unique immutable historical identity remain explicit host checks.
+Ambiguous mood, relative room qualities and presentation facets recorded in
+questions.md; no native conversion, trained-reader or execution claim.
+
+Three patterns:95wires,11209SOPbytes,0newshards; zero load errors/warnings,
+about20ms combined measured load.17additional structural facts (3108SOPbytes)
+reuse whole/parts and sequence, and declare capacity independently of assignment:
+112newwires/14317SOPbytes total. Source generator and generated catalog/vocab/
+coverage/structure reports regenerated. Existing16-pattern registry updated
+without weakening per-pattern/catalog/composition assertions. Library pin stays
+0.144.0/94cffa2; old request-mappings worktree untouched.
+
+Checks: tools/sync.sh; regenerate; targeted6/6; per-push test:changed33files,
+223tests/221pass/0fail/2skip; full serial test:all116files,3249tests,
+3231pass/0fail/18skip. Earlier stale coverage/registry failures and append-only
+review fix were resolved before these final gates. No model/data/GPU changes.

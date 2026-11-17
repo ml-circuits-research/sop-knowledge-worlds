@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **260** in 41 worlds; distinct values 11372, meeting a target 11313 (99.5 %), open 59
+- declared joins: **264** in 43 worlds; distinct values 11372, meeting a target 11313 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **51**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
 
@@ -263,6 +263,9 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.list | `w.list.item.unit` | `k.units.unit` | name | 0 | 0 |  |
 | w.list | `w.list.list.currency` | `k.units.currency` | code | 0 | 0 |  |
 | w.person | `w.person.person.occupation` | `k.people.role` | name | 0 | 0 |  |
+| w.picture | `w.picture.part.object` | `k.objects.object` | name | 0 | 0 |  |
+| w.picture | `w.picture.picture.background` | `k.colours.colour` | name | 0 | 0 |  |
+| w.picture | `w.picture.picture.scene` | `k.scenes.scene` | name | 0 | 0 |  |
 | w.reader.en | `w.reader.en.agreement.left` | `w.reader.en.node` | name | 1 | 1 |  |
 | w.reader.en | `w.reader.en.agreement.right` | `w.reader.en.node` | name | 1 | 1 |  |
 | w.reader.en | `w.reader.en.agreement.rule` | `w.reader.en.rule` | name | 1 | 1 |  |
@@ -277,6 +280,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | w.request | `w.request.request.act` | `k.actions.act` | name | 0 | 0 |  |
 | w.seating | `w.seating.guest.colour` | `k.colours.basic` | name | 0 | 0 |  |
 | w.seating | `w.seating.table.colour` | `k.colours.basic` | name | 0 | 0 |  |
+| w.text | `w.text.span.highlight_colour` | `k.colours.colour` | name | 0 | 0 |  |
 
 ## Measured cost of declared joins
 

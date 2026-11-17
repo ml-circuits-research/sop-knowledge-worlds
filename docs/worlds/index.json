@@ -1,5 +1,5 @@
 {
- "version": "9b7b3da4b11f",
+ "version": "13425ea54dc8",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -34965,8 +34965,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 316,
-     "bytes": 58247,
+     "wires": 333,
+     "bytes": 61355,
      "keys": [
       "assigned",
       "assignment",
@@ -35164,6 +35164,11 @@
       "w.person.taste",
       "w.person.taste.of",
       "w.person.taste.stance",
+      "w.picture",
+      "w.picture.part",
+      "w.picture.part.object",
+      "w.picture.part.picture",
+      "w.picture.picture",
       "w.request",
       "w.request.constraint",
       "w.request.constraint.on",
@@ -35171,6 +35176,9 @@
       "w.request.request",
       "w.request.unread",
       "w.request.unread.request",
+      "w.room",
+      "w.room.room",
+      "w.room.room.seats",
       "w.seating",
       "w.seating.guest",
       "w.seating.guest.seat",
@@ -35185,6 +35193,12 @@
       "w.tasks.task",
       "w.tasks.task.list",
       "w.tasks.task.n",
+      "w.text",
+      "w.text.source",
+      "w.text.span",
+      "w.text.span.end",
+      "w.text.span.source",
+      "w.text.span.start",
       "w.timeline",
       "w.timeline.event",
       "w.timeline.event.at",
@@ -96378,6 +96392,62 @@
    "warnings": []
   },
   {
+   "id": "w.picture",
+   "version": "1",
+   "schema": "w.picture/schema.sop",
+   "depends": [],
+   "about": "depictions with an explicit background, scene and depicted parts",
+   "names": [
+    "picture"
+   ],
+   "kinds": [
+    {
+     "type": "w.picture.picture",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "background",
+      "scene"
+     ],
+     "words": [
+      "picture",
+      "canvas"
+     ]
+    },
+    {
+     "type": "w.picture.part",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "picture",
+      "object",
+      "label"
+     ],
+     "words": [
+      "depicted part"
+     ]
+    }
+   ],
+   "wires": 22,
+   "bytes": 2855,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
    "id": "w.request",
    "version": "1",
    "schema": "w.request/schema.sop",
@@ -96473,6 +96543,43 @@
    ],
    "wires": 75,
    "bytes": 13891,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.room",
+   "version": "1",
+   "schema": "w.room/schema.sop",
+   "depends": [],
+   "about": "rooms with explicitly stated names and seating capacities",
+   "names": [
+    "room"
+   ],
+   "kinds": [
+    {
+     "type": "w.room.room",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "name",
+      "seats"
+     ],
+     "words": [
+      "room",
+      "rooms"
+     ]
+    }
+   ],
+   "wires": 11,
+   "bytes": 1400,
    "sources": [
     "hand-core-1"
    ],
@@ -96635,6 +96742,71 @@
    ],
    "wires": 23,
    "bytes": 4658,
+   "sources": [
+    "hand-core-1"
+   ],
+   "license": "CC0-1.0",
+   "warnings": []
+  },
+  {
+   "id": "w.text",
+   "version": "1",
+   "schema": "w.text/schema.sop",
+   "depends": [
+    "w.document"
+   ],
+   "about": "retained text sources and explicitly anchored formatting spans",
+   "names": [
+    "text source"
+   ],
+   "kinds": [
+    {
+     "type": "w.text.source",
+     "acts": [
+      "make",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "source_id",
+      "revision",
+      "text",
+      "document"
+     ],
+     "words": [
+      "text source"
+     ]
+    },
+    {
+     "type": "w.text.span",
+     "acts": [
+      "make",
+      "remove",
+      "change",
+      "ask",
+      "copy"
+     ],
+     "attributes": [
+      "source",
+      "unit",
+      "start",
+      "end",
+      "bold",
+      "italic",
+      "underline",
+      "strike",
+      "highlight",
+      "code",
+      "highlight_colour",
+      "link_target"
+     ],
+     "words": [
+      "formatting span"
+     ]
+    }
+   ],
+   "wires": 62,
+   "bytes": 6954,
    "sources": [
     "hand-core-1"
    ],

@@ -11510,7 +11510,8 @@
  "background": [
   "k.values/shards/directions",
   "k.words/shards/ba",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.picture/schema.sop"
  ],
  "backing": [
   "k.words/shards/ba",
@@ -18000,7 +18001,8 @@
   "k.attributes/shards/attributes",
   "k.values/shards/scales",
   "k.words/shards/bo",
-  "k.words/shards/frequency-b"
+  "k.words/shards/frequency-b",
+  "w.text/schema.sop"
  ],
  "bolder": [
   "k.values/shards/scales"
@@ -24653,7 +24655,8 @@
   "k.kinds/shards/wordnet-2",
   "k.objects/shards/things-2",
   "k.words/shards/ca",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.picture/schema.sop"
  ],
  "canvass": [
   "k.words/shards/ca",
@@ -31136,7 +31139,8 @@
   "k.geo/schema.sop",
   "k.kinds/shards/relations-geo",
   "k.words/shards/co-1",
-  "k.words/shards/frequency-c"
+  "k.words/shards/frequency-c",
+  "w.text/schema.sop"
  ],
  "code2": [
   "k.attributes/shards/narration",
@@ -33697,6 +33701,9 @@
  "coordinate": [
   "k.words/shards/co-2",
   "k.words/shards/frequency-c"
+ ],
+ "coordinate unit": [
+  "w.text/schema.sop"
  ],
  "coordination": [
   "k.words/shards/co-2",
@@ -40634,6 +40641,12 @@
   "k.words/shards/de",
   "k.words/shards/frequency-d"
  ],
+ "depicted object": [
+  "w.picture/schema.sop"
+ ],
+ "depicted part": [
+  "w.picture/schema.sop"
+ ],
  "deploy": [
   "k.words/shards/de",
   "k.words/shards/frequency-d"
@@ -42706,6 +42719,7 @@
   "k.words/shards/do",
   "k.words/shards/frequency-d",
   "w.document/schema.sop",
+  "w.text/schema.sop",
   "k.objects/shards/noto-book-paper-02",
   "k.objects/shards/noto-other-object-02"
  ],
@@ -56258,6 +56272,9 @@
   "k.words/shards/fo",
   "k.words/shards/frequency-f"
  ],
+ "formatting span": [
+  "w.text/schema.sop"
+ ],
  "former": [
   "k.words/shards/fo",
   "k.words/shards/frequency-f"
@@ -68624,7 +68641,11 @@
   "k.procedures/shards/from-knowledge",
   "k.words/shards/frequency-h",
   "k.words/shards/hi",
-  "w.map/schema.sop"
+  "w.map/schema.sop",
+  "w.text/schema.sop"
+ ],
+ "highlight colour": [
+  "w.text/schema.sop"
  ],
  "highlighted": [
   "k.attributes/shards/attributes",
@@ -74478,7 +74499,8 @@
  ],
  "italic": [
   "k.words/shards/frequency-i",
-  "k.words/shards/it"
+  "k.words/shards/it",
+  "w.text/schema.sop"
  ],
  "italy": [
   "k.attributes/shards/same-i",
@@ -81217,7 +81239,8 @@
   "k.words/shards/la",
   "w.chart/schema.sop",
   "w.diagram/schema.sop",
-  "w.map/schema.sop"
+  "w.map/schema.sop",
+  "w.picture/schema.sop"
  ],
  "label_band": [
   "k.objects/shards/food-2"
@@ -85646,6 +85669,9 @@
   "k.words/shards/li",
   "w.diagram/schema.sop",
   "k.objects/shards/noto-office-03"
+ ],
+ "link target": [
+  "w.text/schema.sop"
  ],
  "link up": [
   "k.actions/shards/verbs-connect"
@@ -97420,6 +97446,8 @@
   "w.list/schema.sop",
   "w.map/schema.sop",
   "w.person/schema.sop",
+  "w.picture/schema.sop",
+  "w.room/schema.sop",
   "w.seating/schema.sop",
   "w.timeline/schema.sop"
  ],
@@ -108033,6 +108061,7 @@
   "k.scenes/shards/things-p",
   "k.words/shards/frequency-p",
   "k.words/shards/pi",
+  "w.picture/schema.sop",
   "k.objects/shards/noto-arts-crafts-01"
  ],
  "picture frame": [
@@ -118124,7 +118153,8 @@
  ],
  "revision": [
   "w.dialogue/schema.sop",
-  "w.request/schema.sop"
+  "w.request/schema.sop",
+  "w.text/schema.sop"
  ],
  "revival": [
   "k.words/shards/frequency-r",
@@ -120687,7 +120717,8 @@
   "k.parts/shards/t",
   "k.scenes/shards/scenes-indoors",
   "k.words/shards/frequency-r",
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "w.room/schema.sop"
  ],
  "room light": [
   "k.kinds/shards/part_of-wordnet-3"
@@ -120699,7 +120730,8 @@
  "rooms": [
   "k.layouts/shards/layouts",
   "k.words/shards/frequency-r",
-  "k.words/shards/ro"
+  "k.words/shards/ro",
+  "w.room/schema.sop"
  ],
  "roosevelt": [
   "k.words/shards/frequency-r",
@@ -124915,7 +124947,8 @@
   "k.procedures/shards/from-knowledge",
   "k.scenes/schema.sop",
   "k.words/shards/frequency-s",
-  "k.words/shards/sc"
+  "k.words/shards/sc",
+  "w.picture/schema.sop"
  ],
  "scene thing": [
   "k.attributes/shards/aspects"
@@ -125968,6 +126001,9 @@
   "k.words/shards/frequency-s",
   "k.words/shards/se",
   "w.seating/schema.sop"
+ ],
+ "seating capacity": [
+  "w.room/schema.sop"
  ],
  "seating chart": [
   "w.seating/schema.sop"
@@ -132350,6 +132386,9 @@
   "k.words/shards/so",
   "w.document/schema.sop"
  ],
+ "source identifier": [
+  "w.text/schema.sop"
+ ],
  "source of illumination": [
   "k.kinds/shards/wordnet-2"
  ],
@@ -132726,8 +132765,17 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
  ],
+ "span end": [
+  "w.text/schema.sop"
+ ],
  "span of time": [
   "k.time/schema.sop"
+ ],
+ "span source": [
+  "w.text/schema.sop"
+ ],
+ "span start": [
+  "w.text/schema.sop"
  ],
  "spaniard": [
   "k.words/shards/frequency-s",
@@ -136202,6 +136250,7 @@
   "k.actions/shards/actions-hands",
   "k.words/shards/frequency-s",
   "k.words/shards/st",
+  "w.text/schema.sop",
   "k.objects/shards/noto-sport-02"
  ],
  "striker": [
@@ -141114,7 +141163,8 @@
   "w.document/schema.sop",
   "w.list/schema.sop",
   "w.request/schema.sop",
-  "w.tasks/schema.sop"
+  "w.tasks/schema.sop",
+  "w.text/schema.sop"
  ],
  "text phone": [
   "k.attributes/shards/drawn-mulberry",
@@ -141122,6 +141172,9 @@
   "k.kinds/shards/group-mulberry",
   "k.objects/shards/mulberry-electrical-phone-01",
   "k.scenes/shards/things-t"
+ ],
+ "text source": [
+  "w.text/schema.sop"
  ],
  "text_1": [
   "k.objects/shards/places-3",
@@ -149520,6 +149573,9 @@
   "k.objects/shards/mulberry-transport-rail-01",
   "k.scenes/shards/things-u"
  ],
+ "underline": [
+  "w.text/schema.sop"
+ ],
  "undermine": [
   "k.words/shards/frequency-u",
   "k.words/shards/un"
@@ -153035,6 +153091,21 @@
  "w.person.taste.stance": [
   "k.kinds/shards/structures"
  ],
+ "w.picture": [
+  "k.kinds/shards/structures"
+ ],
+ "w.picture.part": [
+  "k.kinds/shards/structures"
+ ],
+ "w.picture.part.object": [
+  "k.kinds/shards/structures"
+ ],
+ "w.picture.part.picture": [
+  "k.kinds/shards/structures"
+ ],
+ "w.picture.picture": [
+  "k.kinds/shards/structures"
+ ],
  "w.reader.en": [
   "k.units/shards/measures"
  ],
@@ -153057,6 +153128,15 @@
   "k.kinds/shards/structures"
  ],
  "w.request.unread.request": [
+  "k.kinds/shards/structures"
+ ],
+ "w.room": [
+  "k.kinds/shards/structures"
+ ],
+ "w.room.room": [
+  "k.kinds/shards/structures"
+ ],
+ "w.room.room.seats": [
   "k.kinds/shards/structures"
  ],
  "w.seating": [
@@ -153104,6 +153184,24 @@
   "k.kinds/shards/structures"
  ],
  "w.tasks.task.n": [
+  "k.kinds/shards/structures"
+ ],
+ "w.text": [
+  "k.kinds/shards/structures"
+ ],
+ "w.text.source": [
+  "k.kinds/shards/structures"
+ ],
+ "w.text.span": [
+  "k.kinds/shards/structures"
+ ],
+ "w.text.span.end": [
+  "k.kinds/shards/structures"
+ ],
+ "w.text.span.source": [
+  "k.kinds/shards/structures"
+ ],
+ "w.text.span.start": [
   "k.kinds/shards/structures"
  ],
  "w.timeline": [

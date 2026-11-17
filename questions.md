@@ -1401,3 +1401,26 @@ The next shared productions must not classify every noun premodifier as an exist
 Proposed generic production output is `{verb:<exact source ID>,valency:<construction family>,mood:"do",context:{node:{object:<neutral NP>,result?:<predicate>,goal?:{marker:<declared preposition>,object:<argument>}}},provenance:<original ranges>}`. Valency/mood belong to the construction; semantic act and role semantics belong to the selected frame. Existing bounded composition/projection can preserve these records without merging qualifiers into result requirements. Object existence, qualifier applicability, unit compatibility and conversion into selector/result std.request graphs remain explicit later checks. The v1 preview remains pinned and is not retired until parity is demonstrated.
 
 Root coordinator agreed to that neutral-qualifier/per-role-mode design for this opt-in increment. Concrete declaration example: `@w.reader.en.frames.role.create.thing w.reader.en.frames.role name=create.thing licence=create frame_role=thing act_role=kind part=w.lang.en.part.acts.make.4 role_map=w.lang.en.role_map.make.thing path_root=frames.create.thing target_mode=new core.source="hand-core 1"`. The change subject instead declares existing. Optional mode applies only when the projected role value is an object argument; it does not turn a coordinate/value/marker into an existing object. Missing mode stays unresolved. This is a source-grounded binding annotation, not a default guessed from the spelling of make/change or a/an/the.
+
+## 2026-11-17 — Depiction, inline presentation and room boundaries
+
+The new CC0 w.picture/w.text/w.room patterns implement explicit background/scene/
+part joins, anchored formatting predicates and stated seating capacity. Unresolved
+facets need separate reusable semantic evidence, not raw inventory aliases:
+
+- A depiction's happy/calm/gloomy/festive/spooky/natural labels do not identify one
+  axis or one experiencer. k.feelings describes feelings; natural may instead
+  describe content/style. Which explicit depiction-affect relation/region should
+  own this, without asserting that the picture itself feels an emotion?
+- A room with 12 seats can be big relative to one cohort and small to another;
+  quiet requires a measure/context, free a time/resource/occupancy context, and
+  any is a selection policy, not a room quality. Existing room lexical senses
+  k.words.room.noun.1/.2/.3 do not settle these. Keep them unknown until explicit
+  comparison population/measure/availability and policy evidence exists.
+- w.list.list/item and w.tasks.task already own lists/checked state. Bullet vs
+  numbered vs checklist presentation, paragraph alignment and table rows/columns
+  are not inline spans. Existing w.document.paragraph and k.layouts.relation do
+  not prove an alignment or table-shape conversion. Propose separate typed
+  presentation/structure declarations rather than mapping table_size to generic
+  quantity or treating a list/task/table as a span. Native realization remains
+  an application binding, not a knowledge claim.
