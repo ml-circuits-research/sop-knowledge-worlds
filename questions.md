@@ -1424,3 +1424,31 @@ facets need separate reusable semantic evidence, not raw inventory aliases:
   presentation/structure declarations rather than mapping table_size to generic
   quantity or treating a list/task/table as a span. Native realization remains
   an application binding, not a knowledge claim.
+
+### Mechanical property join: missing shared roles and ambiguous meanings (2026-11-17)
+
+A real export over all 1,282 published SOP files at 539dd413 produces 21 unique declaration proposals, one ambiguous property and 83 without a unique owning declaration/alias (all 105 inventory properties examined). These are not 83 proven missing facts: some require a broad owning role, some a genuine semantic alignment, others typed/contextual value interpretation. Please treat the groups below as knowledge-authoring tasks, not instructions to add arbitrary inventory spellings as synonyms. Full reproducible exporter and per-property results are in PSys2 `training/sop-bert/export-declaration-alignments.mjs` and `training/results/declaration-alignments.md`.
+
+| Integration family | Properties needing an applicable declaration or disambiguation |
+|---|---|
+| drawing / page | parts_named, mood |
+| drawing / drawn | kind, at, relation, anchor, direction, distance, size, colour, fill, rotation, flip, layer, count, name |
+| drawing / part | part, colour, size, count, variant |
+| drawing / face | feature, hair_style, colour, animation |
+| diagram / diagram | kind, layout, title, size, links |
+| diagram / node | label, shape, colour, size, position, anchor, at, value, group |
+| diagram / link | style, colour |
+| diagram / group | members, colour |
+| diagram / chart | series, labels, values, axis, legend, show_values, stacked, horizontal, sort, palette, source |
+| document / text | about, recipient, chapters |
+| document / section | role, order, order_anchor, length, words, content, level, count |
+| document / inline | format, list_kind, align, task, checked, table_size, link_target |
+| calendar / meeting | time, length, room, people, recurrence, shift, relation, relation_anchor, free, agenda |
+| calendar / room | quality |
+| calendar / person | role |
+
+Counterexample: `text.about` joins both the document topic slot (word “about”) and the distinct document about slot (literal key “about”). A blind exact-key preference would silently select the wrong meaning for the inventory topic descriptor. Likewise a graph-node slot cannot cover chart bars/slices, and a document span cannot cover lists/tasks/tables. Proposed work: publish reusable shared classes/roles or explicit applicability relations for these broad families, preserve narrower structure types, and add lexical aliases only where they are true owning meanings. Typed date/clock/duration slots already exist; relative dates, temporal regions, room availability and qualitative size need declared context/measure contracts rather than duplicate enums. Which shared-role/applicability representation should the knowledge declarations use with the published legend/request contracts? Existing unresolved questions above remain open.
+
+### Review28 actual whole-source export (2026-11-17)
+
+The mechanical exporter ran over all 1,282 published SOP files: all 105 properties represented, 21 unique identity proposals, 1 ambiguous, 83 without a unique owning declaration/alias. Missing broad-family/applicability and semantic-meaning work is grouped in the knowledge repository questions.md. This does not justify replacing 83 statuses with guessed properties or counting all 21 proposals as runtime-ready values: document length joins the words property but still needs a declared qualitative-to-quantity contract; text.about is genuinely ambiguous between topic and about. The deployed bindings remain unchanged until applicability and value interpretation are supported. Epoch7 is now served by Pages; admission remains closed pending CAL.

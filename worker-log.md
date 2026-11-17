@@ -6870,3 +6870,5 @@ Checks: tools/sync.sh; regenerate; targeted6/6; per-push test:changed33files,
 223tests/221pass/0fail/2skip; full serial test:all116files,3249tests,
 3231pass/0fail/18skip. Earlier stale coverage/registry failures and append-only
 review fix were resolved before these final gates. No model/data/GPU changes.
+2026-11-17 partial: PSys2 5997e85a ran the mechanical exporter against all 1,282 published SOP files; 105 properties, 21 unique identity proposals, 1 ambiguous and 83 without a unique applicable declaration/alias. Added grouped knowledge tasks and the topic/about counterexample to questions.md; no world declarations changed.
+Checks: npm run test:changed — build passed; catalog/validate/repo 16 tests passed, 0 failed. Existing unresolved questions retained; typed/contextual value interpretation is not claimed solved.
