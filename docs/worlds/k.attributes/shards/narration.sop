@@ -1,4 +1,4 @@
-# k.attributes/shards/narration: which keys of the catalog a composition may narrate (296 of 1188 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
+# k.attributes/shards/narration: which keys of the catalog a composition may narrate (296 of 1192 slots of the k.* types), how salient each is and in which form it is said (block 00:05 item 1).
 # sources: hand-core 1 (computed by rules from the catalog's own facts: k.attributes.typical and found, k.attributes.shows, k.units.measure, k.faces slots, tests/*.questions.jsonl)
 # license: CC0-1.0
 # script: tools/narration-core.mjs
@@ -371,6 +371,10 @@
 @k.attributes.narration.k.faces.expression.eyebrows k.attributes.narration type=k.faces.expression key=eyebrows narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.expression.eyes k.attributes.narration type=k.faces.expression key=eyes narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.expression.one_eye k.attributes.narration type=k.faces.expression key=one_eye narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.expression.goal.expression k.attributes.narration type=k.faces.expression.goal key=expression narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.expression.goal.slot k.attributes.narration type=k.faces.expression.goal key=slot narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.expression.goal.property k.attributes.narration type=k.faces.expression.goal key=property narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
+@k.attributes.narration.k.faces.expression.goal.value k.attributes.narration type=k.faces.expression.goal key=value narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.canon.style k.attributes.narration type=k.faces.canon key=style narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.canon.name k.attributes.narration type=k.faces.canon key=name narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"
 @k.attributes.narration.k.faces.canon.eye_line k.attributes.narration type=k.faces.canon key=eye_line narrate=no salience=0 why="machinery: the parts of a drawn face" core.source="hand-core 1"

@@ -6872,3 +6872,7 @@ Checks: tools/sync.sh; regenerate; targeted6/6; per-push test:changed33files,
 review fix were resolved before these final gates. No model/data/GPU changes.
 2026-11-17 partial: PSys2 5997e85a ran the mechanical exporter against all 1,282 published SOP files; 105 properties, 21 unique identity proposals, 1 ambiguous and 83 without a unique applicable declaration/alias. Added grouped knowledge tasks and the topic/about counterexample to questions.md; no world declarations changed.
 Checks: npm run test:changed — build passed; catalog/validate/repo 16 tests passed, 0 failed. Existing unresolved questions retained; typed/contextual value interpretation is not claimed solved.
+
+2026-11-17 done: published sparse constituent-feature goals for facial expressions; names map to property goals, not fixed variant identities, so compatible alternatives can be retained by any consumer. Includes generated key vocabulary, narration and relation metadata.
+Checks: node tools/faces-core.mjs; node tools/key-words.mjs; node tools/narration-core.mjs; node tools/relations-core.mjs; node tools/counts.mjs; node tools/build-catalog.mjs; npm test — 3251 tests,3233 passed,0 failed,18 optional skips.
+Integration: PSys2 native tests resolve real goals while preserving compatible constituent choices; unfamiliar-emotion and two-compatible-smile probes pass. Publishing these knowledge facts does not claim generic application reasoning is fully integrated.

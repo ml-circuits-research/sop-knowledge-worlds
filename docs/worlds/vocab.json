@@ -50310,11 +50310,15 @@
   "k.attributes/shards/typical",
   "k.faces/schema.sop",
   "k.feelings/schema.sop",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-feelings",
   "k.motion/shards/rules",
   "k.words/shards/ex",
   "k.words/shards/frequency-e",
   "w.face/schema.sop"
+ ],
+ "expression goal": [
+  "k.faces/schema.sop"
  ],
  "expressions": [
   "k.faces/schema.sop"
@@ -77037,6 +77041,10 @@
   "k.kinds/shards/relations-faces"
  ],
  "k.faces.expression": [
+  "k.attributes/shards/narration",
+  "k.kinds/shards/relations-faces"
+ ],
+ "k.faces.expression.goal": [
   "k.attributes/shards/narration",
   "k.kinds/shards/relations-faces"
  ],
@@ -112913,7 +112921,9 @@
  "property": [
   "k.attributes/schema.sop",
   "k.attributes/shards/narration",
+  "k.faces/schema.sop",
   "k.kinds/shards/relations-attributes",
+  "k.kinds/shards/relations-faces",
   "k.words/shards/frequency-p",
   "k.words/shards/pr",
   "w.request/schema.sop"
@@ -150753,9 +150763,11 @@
   "k.actions/schema.sop",
   "k.actions/shards/acts",
   "k.attributes/shards/narration",
+  "k.faces/schema.sop",
   "k.kinds/schema.sop",
   "k.kinds/shards/arguments",
   "k.kinds/shards/relations-actions",
+  "k.kinds/shards/relations-faces",
   "k.kinds/shards/relations-kinds",
   "k.kinds/shards/relations-motion",
   "k.kinds/shards/relations-procedures",

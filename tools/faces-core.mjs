@@ -363,6 +363,15 @@ export const EXPRESSIONS = [
   ['talking', { mouth: 'talking', mouth_alt: 'neutral' }],
 ];
 
+// Sparse authored cartoon-style constraints; other compatible properties remain free.
+export const EXPRESSION_GOALS = [
+ ['happy','mouth','feel','smiling'],['happy','eyebrows','feel','arched'],['happy','eyes','feel','smiling'],
+ ['sad','mouth','feel','sad'],['sad','eyebrows','feel','sad'],
+ ['angry','mouth','feel','sad'],['angry','eyebrows','kind','angry'],['angry','eyes','feel','narrow'],
+ ['surprised','mouth','feel','open'],['surprised','eyebrows','feel','surprised'],['surprised','eyes','feel','surprised'],
+ ['sleepy','eyes','kind','half closed'],
+];
+
 const SHAPE = { rect: 'rectangle', square: 'square', circle: 'circle', oval: 'oval', tri: 'triangle', arc: 'arc', line: 'line', poly: 'polygon' };
 function variantLines(slot, box, [name, f, parts]) {
   const id = `k.faces.${STYLE}.${slot}.${seg(name)}`;
@@ -474,7 +483,7 @@ export function coreShards({ slots: drawnSlots = SLOTS, variants: drawnVariants 
     COLOURS.map(([of, name, rgb, shade, natural]) => wire(`k.faces.colours.${of}.${seg(name)}`, 'k.faces.colour', [['of', of], ['name', name], ['rgb', { string: rgb }], ['shade', { string: shade }], ['natural', String(natural)]], SRC)).join('\n')}\n`;
   files['presets.sop'] = `${head('presets', `named faces of the style \`${STYLE}\` (one variant per slot, and the four colours) and the expressions (the variants of mouth, eyebrows and eyes a face switches to).`)}\n${
     PRESETS.map(([name, slots, [skinName, hairName, eyesName, clothesName]]) => wire(`k.faces.${STYLE}.preset.${seg(name)}`, 'k.faces.preset', [['name', name], ['style', STYLE], ['kind', PRESET_KIND[name] ?? 'human'], ...SLOTS.map(([s]) => [s, slots[s]]), ['skin', skinName], ['hair_colour', hairName], ['eye_colour', eyesName], ['clothes', clothesName]], SRC)).join('\n')}\n\n${
-    EXPRESSIONS.map(([name, keys]) => wire(`k.faces.${STYLE}.expression.${seg(name)}`, 'k.faces.expression', [['name', name], ['style', STYLE], ...Object.entries(keys)], SRC)).join('\n')}\n`;
+    EXPRESSIONS.map(([name, keys]) => wire(`k.faces.${STYLE}.expression.${seg(name)}`, 'k.faces.expression', [['name', name], ['style', STYLE], ...Object.entries(keys)], SRC)).join('\n')}\n${EXPRESSION_GOALS.map(([expression,slot,property,value],n)=>wire(`k.faces.${STYLE}.expression_goal.${n+1}`,'k.faces.expression.goal',[['expression',expression],['slot',slot],['property',property],['value',value]],SRC)).join('\n')}\n`;
   for (const [slot, box, , mirror] of slots) {
     files[`${STYLE}-${slot.replace(/_/g, '-')}.sop`] = `${head(`${STYLE}-${slot.replace(/_/g, '-')}`, `the variants of the slot \`${slot}\` in the style \`${STYLE}\`${mirror ? ' (the side on the viewer\'s left; the other side is its mirror image)' : ''}: features, and parts with a primitive shape, a box in the frame of the face, a draw order and colours; points for lines and polygons.`)}\n${
       variants[slot].map((v) => variantLines(slot, box, v)).join('\n\n')}\n`;

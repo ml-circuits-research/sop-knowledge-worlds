@@ -1,5 +1,5 @@
 {
- "version": "13425ea54dc8",
+ "version": "8a93db81a6d9",
  "sopworld": "94cffa2",
  "worlds": [
   {
@@ -4576,8 +4576,8 @@
     {
      "id": "k.attributes/shards/narration",
      "path": "k.attributes/shards/narration.sop",
-     "wires": 1188,
-     "bytes": 229957,
+     "wires": 1192,
+     "bytes": 230799,
      "keys": [
       "a",
       "about",
@@ -4837,6 +4837,7 @@
       "k.faces.canon",
       "k.faces.colour",
       "k.faces.expression",
+      "k.faces.expression.goal",
       "k.faces.part",
       "k.faces.point",
       "k.faces.preset",
@@ -14606,6 +14607,7 @@
     "k.faces.canon",
     "k.faces.colour",
     "k.faces.expression",
+    "k.faces.expression.goal",
     "k.faces.part",
     "k.faces.point",
     "k.faces.preset",
@@ -16358,8 +16360,8 @@
     {
      "id": "k.faces/shards/presets",
      "path": "k.faces/shards/presets.sop",
-     "wires": 21,
-     "bytes": 5703,
+     "wires": 33,
+     "bytes": 7382,
      "keys": [
       "alien",
       "angry",
@@ -33848,8 +33850,8 @@
     {
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
-     "wires": 79,
-     "bytes": 13880,
+     "wires": 83,
+     "bytes": 14708,
      "keys": [
       "about",
       "age",
@@ -33860,6 +33862,7 @@
       "colour",
       "earrings",
       "ears",
+      "expression",
       "eye_colour",
       "eye_gap",
       "eye_line",
@@ -33877,6 +33880,7 @@
       "k.faces.canon",
       "k.faces.colour",
       "k.faces.expression",
+      "k.faces.expression.goal",
       "k.faces.part",
       "k.faces.point",
       "k.faces.preset",
@@ -33902,6 +33906,7 @@
       "optional",
       "part",
       "pointing",
+      "property",
       "rgb",
       "shade",
       "shape",
@@ -33911,6 +33916,7 @@
       "slot",
       "style",
       "tint",
+      "value",
       "w",
       "x",
       "y",

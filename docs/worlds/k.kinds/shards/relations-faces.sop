@@ -1,4 +1,4 @@
-# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 79 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
+# k.kinds/shards/relations-faces: the keys of the types of k.faces read as relations: 83 relations, each with the kind of its subject and the class, types and senses of its object (from the joins declared on the slots, by rule from the schemas, and by value from the shards, as found says).
 # sources: hand-core 1 (computed in this repository from the schemas and shards of the knowledge worlds: tools/relations-core.mjs)
 # license: CC0-1.0
 # script: tools/relations-core.mjs
@@ -22,6 +22,10 @@
 @k.kinds.relation.k.faces.expression.eyebrows k.kinds.relation type=k.faces.expression key=eyebrows subject=expression object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.expression.eyes k.kinds.relation type=k.faces.expression key=eyes subject=expression object=thing object_type=k.feelings.feeling found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.expression.one_eye k.kinds.relation type=k.faces.expression key=one_eye subject=expression object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.expression.goal.expression k.kinds.relation type=k.faces.expression.goal key=expression subject=goal object=thing object_type=k.faces.expression found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.faces.expression.goal.slot k.kinds.relation type=k.faces.expression.goal key=slot subject=goal object=thing object_type=k.faces.slot found=declared object_by=name core.source="hand-core 1"
+@k.kinds.relation.k.faces.expression.goal.property k.kinds.relation type=k.faces.expression.goal key=property subject=goal object=word object_type=k.words.sense found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.expression.goal.value k.kinds.relation type=k.faces.expression.goal key=value subject=goal object=word object_type=k.words.sense found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.part.slot k.kinds.relation type=k.faces.part key=slot subject=part object=thing object_type=k.faces.slot found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.faces.part.of k.kinds.relation type=k.faces.part key=of subject=part object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.part.name k.kinds.relation type=k.faces.part key=name subject=part object=word found=value core.source="hand-core 1"

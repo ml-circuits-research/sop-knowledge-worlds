@@ -6,7 +6,7 @@
 # license: CC0-1.0
 # script: none (hand-written)
 
-@k.faces core.module name=k.faces version=3 imports=k.named imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression exports=canon core.source="hand-core 1"
+@k.faces core.module name=k.faces version=3 imports=k.named imports=k.drawing exports=slot exports=variant exports=part exports=point exports=colour exports=preset exports=expression exports=expression.goal exports=canon core.source="hand-core 1"
 
 # A place of a face in one style: its anchor box in the face frame and its draw order (lower first). The parts of a
 # variant lie inside the box of its slot. `mirror=true`: the slot is a pair (eyes, eyebrows, ears, cheeks, earrings);
@@ -101,6 +101,14 @@
 @k.faces.expression.eyebrows core.slot of=k.faces.expression key=eyebrows kind=atom kind=string core.source="hand-core 1"
 @k.faces.expression.eyes core.slot of=k.faces.expression key=eyes kind=atom kind=string core.source="hand-core 1"
 @k.faces.expression.one_eye core.slot of=k.faces.expression key=one_eye kind=atom kind=string core.source="hand-core 1"
+
+# Sparse cartoon expression goals select compatible constituent features, not one fixed whole face.
+@k.faces.expression.goal core.type of=k.faces.expression.goal shared=true closed=true core.source="hand-core 1"
+@k.faces.expression.goal.expression core.slot of=k.faces.expression.goal key=expression required=true kind=atom type=k.faces.expression by=name core.source="hand-core 1"
+@k.faces.expression.goal.slot core.slot of=k.faces.expression.goal key=slot required=true kind=atom type=k.faces.slot by=name core.source="hand-core 1"
+@k.faces.expression.goal.property core.slot of=k.faces.expression.goal key=property required=true kind=atom kind=string core.source="hand-core 1"
+@k.faces.expression.goal.value core.slot of=k.faces.expression.goal key=value required=true kind=atom kind=string core.source="hand-core 1"
+@k.faces.word.type.expression_goal core.word text="expression goal" means=k.faces.expression.goal core.source="hand-core 1"
 
 # The proportion canon of a style (Q47): where the eyes, brows, nose, mouth and ears of its faces go, as fractions of
 # the box of the style's slot `head` (0 at its top or left, 1 at its bottom or right). `eye_line`, `nose_line` (the
@@ -200,6 +208,10 @@
 @k.faces.word.key.expression.eyebrows core.word text=eyebrows means=k.faces.expression.eyebrows core.source="hand-core 1"
 @k.faces.word.key.expression.eyes core.word text=eyes means=k.faces.expression.eyes core.source="hand-core 1"
 @k.faces.word.key.expression.one_eye core.word text="one eye" means=k.faces.expression.one_eye core.source="hand-core 1"
+@k.faces.word.key.expression.goal.expression core.word text=expression means=k.faces.expression.goal.expression core.source="hand-core 1"
+@k.faces.word.key.expression.goal.slot core.word text=slot means=k.faces.expression.goal.slot core.source="hand-core 1"
+@k.faces.word.key.expression.goal.property core.word text=property means=k.faces.expression.goal.property core.source="hand-core 1"
+@k.faces.word.key.expression.goal.value core.word text=value means=k.faces.expression.goal.value core.source="hand-core 1"
 @k.faces.word.key.canon.name core.word text=name means=k.faces.canon.name core.source="hand-core 1"
 @k.faces.word.key.canon.eye_line core.word text="eye line" means=k.faces.canon.eye_line core.source="hand-core 1"
 @k.faces.word.key.canon.nose_line core.word text="nose line" means=k.faces.canon.nose_line core.source="hand-core 1"
