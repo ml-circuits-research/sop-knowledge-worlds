@@ -74,6 +74,7 @@ test('a fixture world gives keys, sources, license and vocabulary from words and
     assert.equal(w.version, '1');
     assert.deepEqual(w.exports, ['k.toy.item']);
     assert.deepEqual(w.shards[0].keys, ['cup']);
+    assert.deepEqual(w.indexedFields, {'k.toy.item':['name']});
     assert.deepEqual(w.shards[0].sources, ['test-1']);
     assert.equal(w.shards[0].license, 'CC-BY-4.0');
     assert.deepEqual(vocab, { cup: ['k.toy/shards/a'], item: ['k.toy/schema.sop'], items: ['k.toy/schema.sop'], mug: ['k.toy/shards/a'] });

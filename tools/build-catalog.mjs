@@ -147,6 +147,9 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       }
       return idKeys.get(type);
     };
+    // A profile may prune shards by a slot only if every recorded value of that
+    // slot occurs in its own shard's keys. The vocabulary excludes some IDs.
+    const indexedFields = new Map();
     const shardWires = new Map();
     const shards = world.shards.map((shard) => {
       const wires = parse(shard.text);
@@ -171,6 +174,14 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
         if (!world.id.startsWith('w.')) for (const k of THING_KEYS) if (!identityKeys(w.type).includes(k)) for (const t of w.attrs[k] ?? []) {
           const x = text(t);
           if (isWordy(x)) addWord(x, shard.id, `${w.type}.${k}`);
+        }
+      }
+      const shardKeys = new Set(keys);
+      for (const wire of wires) {
+        if (!indexedFields.has(wire.type)) indexedFields.set(wire.type, new Set(identityKeys(wire.type)));
+        const complete = indexedFields.get(wire.type);
+        for (const field of complete) {
+          if ((wire.attrs[field] ?? []).some(token => !shardKeys.has(lemma(str(token))))) complete.delete(field);
         }
       }
       const license = header.license?.[0] ?? null;
@@ -205,6 +216,8 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       ...(wordsShards.length ? { vocabulary: wordsShards[0].path } : {}),
       exports: uniqSorted(info.exports),
       depends: uniqSorted(info.imports),
+      indexedFields: Object.fromEntries([...indexedFields].filter(([type, fields]) => info.exports.includes(type) && fields.size)
+        .sort(([a], [b]) => byText(a, b)).map(([type, fields]) => [type, uniqSorted([...fields])])),
       shards,
       sources: uniqSorted([...shards, ...(dataOf.get(world.id) ?? [])].flatMap((s) => s.sources)),
       licenses: uniqSorted([...shards, ...(dataOf.get(world.id) ?? [])].map((s) => s.license).filter(Boolean)),

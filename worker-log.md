@@ -6890,3 +6890,6 @@ Measured: 39 schema wires, one 20-wire vocabulary shard (2,504 bytes), schema an
 
 2026-11-18: w.face now imports std.schema explicitly, including the inherited kind key read by its existing part deny. Standalone loading and the original duplicate-hat refusal are covered alongside distinct faces and the eyes pair.
 Measured with World.tell and parse: 79 schema wires, one 35-wire shard, 16,726 SOP bytes, 10.7 ms standalone schema load, zero warnings. npm run test:changed passed 99 tests across 14 files, zero failures.
+
+2026-11-18 — The catalog records which identity slots have complete shard-key coverage. Other slots require reading the owning world or a separate complete index. Verified k.scenes.thing.name prunes to one shard for boat; scanning place=water returned all 130 source rows, including the boat.
+Changed gate passed 557, skipped 7, failed 0 across 59 files.
