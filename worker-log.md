@@ -6896,3 +6896,5 @@ Changed gate passed 557, skipped 7, failed 0 across 59 files.
 
 2026-11-18 — Composition slots accept explicitly assigned structural roles. The unordered scatter region accepts generic graph nodes. A diamond without role evidence derives no such region. The editor declaration supplies the role.
 Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wires (12,610 bytes, 0.7 ms), and 186 arrangement-shard wires (33,280 bytes, 8.0 ms), zero warnings in the affected shard. Changed gate passed 375, skipped six, failed zero across 51 files.
+
+2026-11-18 — Generated the catalog word for the layout slot role key. The round gate found the stale generated key block. The focused key-word test passed four, and the changed gate passed 164 with three skips.
