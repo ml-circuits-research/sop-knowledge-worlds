@@ -15,6 +15,8 @@ const SRC = 'hand-core 1';
 const deg = { unit: 'degree' }, km2 = { unit: 'square kilometre' };
 const ord = { ordinal: true };
 const ms = { unit: 'millisecond' };
+const frameUnit = { counts: 'coordinate unit of the observed frame' };
+const unitless = { plain: true };
 const box = (frame) => ({ x: { frame }, y: { frame }, w: { frame }, h: { frame } });
 const BOX = { lat: deg, lon: deg, west: deg, south: deg, east: deg, north: deg };
 export const MEASURES = {
@@ -42,6 +44,15 @@ export const MEASURES = {
       eye_width: { counts: 'width of the head box' }, eye_gap: { counts: 'eye width' }, brow_above: { counts: 'eye width' } } },
   'k.drawing': { '*': { ...box('drawing'), z: ord, n: ord } }, // Q34 item 1: the frame of the drawing that extends it (an object, a face)
   'k.layouts': { slot: box('arrangement'), anchor: box('object'), outline: { points: { counts: 'point of the path' }, tolerance: { frame: 'outline' } }, outline_point: { n: ord, x: { frame: 'outline' }, y: { frame: 'outline' } } },
+  'k.spatial2d': {
+    '*': { revision: ord, clearance: frameUnit, weight: unitless },
+    box: { min_x: frameUnit, min_y: frameUnit, max_x: frameUnit, max_y: frameUnit },
+    point: { x: frameUnit, y: frameUnit },
+    pair_geometry: { separation: frameUnit, overlap: { counts: 'square coordinate unit of the observed frame' } },
+    direction: { anchor_x: unitless, anchor_y: unitless, subject_x: unitless, subject_y: unitless, gap_x: unitless, gap_y: unitless, rank: ord },
+    measurement: { value: { counts: 'coordinate unit or square coordinate unit of the observed frame, according to the metric' } },
+    correction: { before: frameUnit },
+  },
   'k.wearables': { place: box('person drawing') },
   'k.actions': { verb: { sense: ord } },
   'k.words': { sense: { n: ord }, frequency: { band: ord, zipf: { counts: 'log10 of the occurrences of the word per billion words of text' } } },

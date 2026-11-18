@@ -6879,3 +6879,8 @@ Integration: PSys2 native tests resolve real goals while preserving compatible c
 
 2026-11-18 delivered: 1,014 lexical wires moved unchanged into 32 owned vocabulary shards (129,974 bytes); schema imports contain no lexical facts, and explicit vocabulary composition follows declared dependency closure. Catalog worlds/schemas expose vocabulary paths; declared lexical IDs replace old double-qualified import IDs. Imported rules still derive from separate instance facts; no tool/runtime policy changed.
 Checks: `npm run test:changed` and `npm run test:all` each118files3258tests3240pass0fail18skip; `node --test tests/world-ownership.test.mjs`5pass; before/after `node --input-type=module` lexical comparison preserves all1,014source/runtime attributes. Explicit k.faces probe106words,72.83ms including discovery,0warnings; `git diff --check` clean.
+
+2026-11-18 delivered k.spatial2d: ranked box placement costs, evidence-gated containment and point contact, scoped preferences, and reversible learning from two comparable observed corrections.
+Catalog: 255 schema wires and 151 facts across 2 shards, 58,584 SOP bytes, 8.3 ms total schema and shard load, zero warnings. Pinned knowledge runtime is unchanged.
+Checks: focused 6/6, test:changed 51 files and 373 tests (368 pass, 5 skip, 0 fail). Verified current library module import and facts-only policy admission.
+Round gate: test:all 119 files and 3,264 tests (3,246 pass, 18 skip, 0 fail). The library and application own normal-route dispatch and live correction collection.

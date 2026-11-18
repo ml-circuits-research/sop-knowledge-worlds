@@ -11,7 +11,7 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 
 - declared joins: **266** in 43 worlds; distinct values 11380, meeting a target 11321 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **51**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
+- undeclared keys whose values the value share joins to a type: **52**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
 
 ## Declared joins
 
@@ -348,6 +348,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.shapes | `k.shapes.shape.kind_of` | kind | `k.shapes.shape` | name | 5 | 5 |
 | k.space | `k.space.kind.material` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 11 | 2 |
 | k.space | `k.space.kind.orbits` | thing | `k.attributes.drawn`, `k.attributes.thing`, `k.objects.object` | name | 2 | 2 |
+| k.spatial2d | `k.spatial2d.direction.name` | value | `k.values.direction`, `k.values.position` | name | 4 | 2 |
 | k.time | `k.time.stage.name` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.time | `k.time.stage.is` | thing | `k.attributes.thing` | name | 15 | 8 |
 | k.wearables | `k.wearables.wearable.face` | thing | `k.scenes.thing` | name | 36 | 18 |
