@@ -6887,3 +6887,6 @@ Round gate: test:all 119 files and 3,264 tests (3,246 pass, 18 skip, 0 fail). Th
 
 2026-11-18: k.composition2d derives normalized candidate regions by joining requested subjects, usual places and declared layout anchors. A boat/lake match retains both published fact identities; the same rules match a new airship to the sky and a thread to a loom.
 Measured: 39 schema wires, one 20-wire vocabulary shard (2,504 bytes), schema and vocabulary loaded in 10 ms with zero warnings. npm run test:changed passed 363, skipped five, failed zero.
+
+2026-11-18: w.face now imports std.schema explicitly, including the inherited kind key read by its existing part deny. Standalone loading and the original duplicate-hat refusal are covered alongside distinct faces and the eyes pair.
+Measured with World.tell and parse: 79 schema wires, one 35-wire shard, 16,726 SOP bytes, 10.7 ms standalone schema load, zero warnings. npm run test:changed passed 99 tests across 14 files, zero failures.

@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto';
 import { readdirSync } from 'node:fs';
 import { WORLDS_DIR, REPO } from '../tools/lib/worlds.mjs';
 import { scanSchemas, describeSchema, actsWorld } from '../tools/lib/schemas.mjs';
-import { parse } from '../tools/sopworld/sopworld.mjs';
+import { parse, World } from '../tools/sopworld/sopworld.mjs';
 
 const schemas = scanSchemas();
 const index = JSON.parse(readFileSync(join(WORLDS_DIR, 'index.json'), 'utf8'));
@@ -290,6 +290,22 @@ test('w.face: its kinds are the slots of k.faces; its colour keys are those of a
   for (const k of ['style', 'skin', 'hair_colour', 'eye_colour', 'clothes']) assert.ok(faceKeys.includes(k) && presetKeys.includes(k), k);
   // No value list of k.faces is written here again: variant, colours, expression and style are open names.
   for (const x of wires.filter((y) => y.type === 'core.slot')) if (['variant', 'colour', 'expression', 'style', 'skin', 'hair_colour', 'eye_colour', 'clothes', 'preset'].includes(x.attrs.key[0])) assert.equal(x.attrs.enum, undefined, x.id);
+});
+
+test('w.face: standalone schema imports the inherited part keys used by its rules', () => {
+  const w = new World();
+  w.load(schemas.find((x) => x.id === 'w.face').schemaText);
+  assert.ok(w.used.has('std.schema'));
+  assert.ok(w.schema('w.face.part').keys.kind);
+  w.load(`@one w.face.face
+    @two w.face.face
+    @eyes w.face.eyes kind=w.face.eyes face=$one
+    @hat1 w.face.hat kind=w.face.hat face=$one
+    @hat2 w.face.hat kind=w.face.hat face=$two`);
+  const result = w.tell('@hat3 w.face.hat kind=w.face.hat face=$one');
+  assert.equal(result.ok, false);
+  assert.equal(result.violations[0].why, 'A face has one part of each kind: this face has a w.face.hat already.');
+  assert.equal(w.ofType('w.face.part').length, 3);
 });
 
 test('w.face: a session: a k.faces preset becomes a face; parts resized, moved, recoloured; one part of each kind; an expression as a mode', () => {
