@@ -1,11 +1,12 @@
 {
- "version": "8a93db81a6d9",
+ "version": "08ffaf8ca78d",
  "sopworld": "94cffa2",
  "worlds": [
   {
    "id": "k.actions",
    "version": "4",
    "schema": "k.actions/schema.sop",
+   "vocabulary": "k.actions/shards/words.sop",
    "exports": [
     "k.actions.act",
     "k.actions.action",
@@ -1439,6 +1440,18 @@
      ],
      "license": "WordNet-3.0",
      "warnings": []
+    },
+    {
+     "id": "k.actions/shards/words",
+     "path": "k.actions/shards/words.sop",
+     "wires": 45,
+     "bytes": 5497,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -1455,6 +1468,7 @@
    "id": "k.animals",
    "version": "3",
    "schema": "k.animals/schema.sop",
+   "vocabulary": "k.animals/shards/words.sop",
    "exports": [
     "k.animals.animal",
     "k.animals.class"
@@ -1980,6 +1994,18 @@
      ],
      "license": "WordNet-3.0",
      "warnings": []
+    },
+    {
+     "id": "k.animals/shards/words",
+     "path": "k.animals/shards/words.sop",
+     "wires": 19,
+     "bytes": 2557,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -1997,6 +2023,7 @@
    "id": "k.attributes",
    "version": "6",
    "schema": "k.attributes/schema.sop",
+   "vocabulary": "k.attributes/shards/words.sop",
    "exports": [
     "k.attributes.aspect",
     "k.attributes.attribute",
@@ -12441,6 +12468,18 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.attributes/shards/words",
+     "path": "k.attributes/shards/words.sop",
+     "wires": 91,
+     "bytes": 11833,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -12471,6 +12510,7 @@
    "id": "k.body",
    "version": "2",
    "schema": "k.body/schema.sop",
+   "vocabulary": "k.body/shards/words.sop",
    "exports": [
     "k.body.part",
     "k.body.sense"
@@ -12613,6 +12653,7 @@
    "id": "k.charts",
    "version": "1",
    "schema": "k.charts/schema.sop",
+   "vocabulary": "k.charts/shards/words.sop",
    "exports": [
     "k.charts.encoding",
     "k.charts.kind",
@@ -12698,6 +12739,7 @@
    "id": "k.colours",
    "version": "2",
    "schema": "k.colours/schema.sop",
+   "vocabulary": "k.colours/shards/words.sop",
    "exports": [
     "k.colours.basic",
     "k.colours.colour",
@@ -13026,6 +13068,7 @@
    "id": "k.commonsense",
    "version": "5",
    "schema": "k.commonsense/schema.sop",
+   "vocabulary": "k.commonsense/shards/words.sop",
    "exports": [
     "k.commonsense.lives",
     "k.commonsense.placed",
@@ -13538,6 +13581,7 @@
    "id": "k.diagrams",
    "version": "3",
    "schema": "k.diagrams/schema.sop",
+   "vocabulary": "k.diagrams/shards/words.sop",
    "exports": [
     "k.diagrams.fill",
     "k.diagrams.kind",
@@ -13730,6 +13774,18 @@
      ],
      "license": "WordNet-3.0",
      "warnings": []
+    },
+    {
+     "id": "k.diagrams/shards/words",
+     "path": "k.diagrams/shards/words.sop",
+     "wires": 42,
+     "bytes": 5874,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -13764,20 +13820,39 @@
    "id": "k.drawing",
    "version": "1",
    "schema": "k.drawing/schema.sop",
+   "vocabulary": "k.drawing/shards/words.sop",
    "exports": [
     "k.drawing.part",
     "k.drawing.point"
    ],
    "depends": [],
-   "shards": [],
-   "sources": [],
-   "licenses": [],
+   "shards": [
+    {
+     "id": "k.drawing/shards/words",
+     "path": "k.drawing/shards/words.sop",
+     "wires": 14,
+     "bytes": 1787,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
    "warnings": []
   },
   {
    "id": "k.expect",
    "version": "1",
    "schema": "k.expect/schema.sop",
+   "vocabulary": "k.expect/shards/words.sop",
    "exports": [
     "k.expect.amount",
     "k.expect.make",
@@ -14603,6 +14678,7 @@
    "id": "k.faces",
    "version": "3",
    "schema": "k.faces/schema.sop",
+   "vocabulary": "k.faces/shards/words.sop",
    "exports": [
     "k.faces.canon",
     "k.faces.colour",
@@ -16602,6 +16678,18 @@
      ],
      "license": "CC-BY-4.0",
      "warnings": []
+    },
+    {
+     "id": "k.faces/shards/words",
+     "path": "k.faces/shards/words.sop",
+     "wires": 90,
+     "bytes": 10596,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -16624,6 +16712,7 @@
    "id": "k.feelings",
    "version": "2",
    "schema": "k.feelings/schema.sop",
+   "vocabulary": "k.feelings/shards/words.sop",
    "exports": [
     "k.feelings.feeling"
    ],
@@ -16697,6 +16786,7 @@
    "id": "k.food",
    "version": "3",
    "schema": "k.food/schema.sop",
+   "vocabulary": "k.food/shards/words.sop",
    "exports": [
     "k.food.food"
    ],
@@ -17037,6 +17127,7 @@
    "id": "k.genres",
    "version": "1",
    "schema": "k.genres/schema.sop",
+   "vocabulary": "k.genres/shards/words.sop",
    "exports": [
     "k.genres.genre",
     "k.genres.move",
@@ -17460,6 +17551,7 @@
    "id": "k.geo",
    "version": "8",
    "schema": "k.geo/schema.sop",
+   "vocabulary": "k.geo/shards/words.sop",
    "exports": [
     "k.geo.city",
     "k.geo.continent",
@@ -24415,6 +24507,18 @@
      ],
      "license": "public-domain",
      "warnings": []
+    },
+    {
+     "id": "k.geo/shards/words",
+     "path": "k.geo/shards/words.sop",
+     "wires": 102,
+     "bytes": 11196,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -24440,6 +24544,7 @@
    "id": "k.interest",
    "version": "1",
    "schema": "k.interest/schema.sop",
+   "vocabulary": "k.interest/shards/words.sop",
    "exports": [
     "k.interest.appraisal",
     "k.interest.feature",
@@ -24564,6 +24669,7 @@
    "id": "k.kinds",
    "version": "6",
    "schema": "k.kinds/schema.sop",
+   "vocabulary": "k.kinds/shards/words.sop",
    "exports": [
     "k.kinds.argument",
     "k.kinds.cast",
@@ -39623,6 +39729,7 @@
    "id": "k.layouts",
    "version": "3",
    "schema": "k.layouts/schema.sop",
+   "vocabulary": "k.layouts/shards/words.sop",
    "exports": [
     "k.layouts.anchor",
     "k.layouts.joins",
@@ -40365,6 +40472,7 @@
    "id": "k.motion",
    "version": "1",
    "schema": "k.motion/schema.sop",
+   "vocabulary": "k.motion/shards/words.sop",
    "exports": [
     "k.motion.event",
     "k.motion.field",
@@ -40453,6 +40561,18 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.motion/shards/words",
+     "path": "k.motion/shards/words.sop",
+     "wires": 57,
+     "bytes": 6543,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -40467,6 +40587,7 @@
    "id": "k.music",
    "version": "1",
    "schema": "k.music/schema.sop",
+   "vocabulary": "k.music/shards/words.sop",
    "exports": [
     "k.music.chord",
     "k.music.interval",
@@ -40920,19 +41041,38 @@
    "id": "k.named",
    "version": "1",
    "schema": "k.named/schema.sop",
+   "vocabulary": "k.named/shards/words.sop",
    "exports": [
     "k.named.labelled"
    ],
    "depends": [],
-   "shards": [],
-   "sources": [],
-   "licenses": [],
+   "shards": [
+    {
+     "id": "k.named/shards/words",
+     "path": "k.named/shards/words.sop",
+     "wires": 2,
+     "bytes": 619,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    }
+   ],
+   "sources": [
+    "hand-core-1"
+   ],
+   "licenses": [
+    "CC0-1.0"
+   ],
    "warnings": []
   },
   {
    "id": "k.objects",
    "version": "8",
    "schema": "k.objects/schema.sop",
+   "vocabulary": "k.objects/shards/words.sop",
    "exports": [
     "k.objects.keyword",
     "k.objects.object",
@@ -52518,6 +52658,18 @@
      ],
      "license": "WordNet-3.0",
      "warnings": []
+    },
+    {
+     "id": "k.objects/shards/words",
+     "path": "k.objects/shards/words.sop",
+     "wires": 27,
+     "bytes": 3342,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -52540,6 +52692,7 @@
    "id": "k.parts",
    "version": "1",
    "schema": "k.parts/schema.sop",
+   "vocabulary": "k.parts/shards/words.sop",
    "exports": [
     "k.parts.called",
     "k.parts.inherited",
@@ -54246,6 +54399,7 @@
    "id": "k.people",
    "version": "5",
    "schema": "k.people/schema.sop",
+   "vocabulary": "k.people/shards/words.sop",
    "exports": [
     "k.people.given_name",
     "k.people.kind",
@@ -57848,6 +58002,7 @@
    "id": "k.procedures",
    "version": "3",
    "schema": "k.procedures/schema.sop",
+   "vocabulary": "k.procedures/shards/words.sop",
    "exports": [
     "k.procedures.arg",
     "k.procedures.binding",
@@ -58146,6 +58301,7 @@
    "id": "k.scenes",
    "version": "3",
    "schema": "k.scenes/schema.sop",
+   "vocabulary": "k.scenes/shards/words.sop",
    "exports": [
     "k.scenes.has",
     "k.scenes.scene",
@@ -61765,6 +61921,18 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.scenes/shards/words",
+     "path": "k.scenes/shards/words.sop",
+     "wires": 21,
+     "bytes": 2562,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -61780,6 +61948,7 @@
    "id": "k.shapes",
    "version": "2",
    "schema": "k.shapes/schema.sop",
+   "vocabulary": "k.shapes/shards/words.sop",
    "exports": [
     "k.shapes.shape"
    ],
@@ -61909,6 +62078,7 @@
    "id": "k.space",
    "version": "3",
    "schema": "k.space/schema.sop",
+   "vocabulary": "k.space/shards/words.sop",
    "exports": [
     "k.space.body",
     "k.space.kind"
@@ -62021,6 +62191,7 @@
    "id": "k.story",
    "version": "1",
    "schema": "k.story/schema.sop",
+   "vocabulary": "k.story/shards/words.sop",
    "exports": [
     "k.story.constraint",
     "k.story.element",
@@ -62149,6 +62320,7 @@
    "id": "k.time",
    "version": "7",
    "schema": "k.time/schema.sop",
+   "vocabulary": "k.time/shards/words.sop",
    "exports": [
     "k.time.before",
     "k.time.clock_phrase",
@@ -62484,6 +62656,18 @@
      ],
      "sources": [
       "psys2-worlds-6b63b2ba"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
+     "id": "k.time/shards/words",
+     "path": "k.time/shards/words.sop",
+     "wires": 68,
+     "bytes": 7748,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
      ],
      "license": "CC0-1.0",
      "warnings": []
@@ -62856,6 +63040,7 @@
    "id": "k.units",
    "version": "2",
    "schema": "k.units/schema.sop",
+   "vocabulary": "k.units/shards/words.sop",
    "exports": [
     "k.units.currency",
     "k.units.measure",
@@ -63454,6 +63639,7 @@
    "id": "k.values",
    "version": "2",
    "schema": "k.values/schema.sop",
+   "vocabulary": "k.values/shards/words.sop",
    "exports": [
     "k.values.coloured",
     "k.values.comparative",
@@ -63734,6 +63920,18 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "k.values/shards/words",
+     "path": "k.values/shards/words.sop",
+     "wires": 26,
+     "bytes": 3243,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -63749,6 +63947,7 @@
    "id": "k.wearables",
    "version": "2",
    "schema": "k.wearables/schema.sop",
+   "vocabulary": "k.wearables/shards/words.sop",
    "exports": [
     "k.wearables.place",
     "k.wearables.wearable"
@@ -63928,6 +64127,7 @@
    "id": "k.words",
    "version": "4",
    "schema": "k.words/schema.sop",
+   "vocabulary": "k.words/shards/words.sop",
    "exports": [
     "k.words.frequency",
     "k.words.sense"
@@ -91761,6 +91961,18 @@
      "warnings": []
     },
     {
+     "id": "k.words/shards/words",
+     "path": "k.words/shards/words.sop",
+     "wires": 19,
+     "bytes": 2768,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
+    },
+    {
      "id": "k.words/shards/wr",
      "path": "k.words/shards/wr.sop",
      "wires": 76,
@@ -92172,6 +92384,7 @@
    "id": "w.lang.en",
    "version": "5",
    "schema": "w.lang.en/schema.sop",
+   "vocabulary": "w.lang.en/shards/words.sop",
    "exports": [
     "w.lang.en.alternation",
     "w.lang.en.alternation_case",
@@ -94263,6 +94476,19 @@
      ],
      "license": "CC0-1.0",
      "warnings": []
+    },
+    {
+     "id": "w.lang.en/shards/words",
+     "path": "w.lang.en/shards/words.sop",
+     "wires": 21,
+     "bytes": 3085,
+     "keys": [],
+     "sources": [
+      "hand-core-1",
+      "psys2-78f45863"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -94297,6 +94523,7 @@
    "id": "w.lang.ro",
    "version": "1",
    "schema": "w.lang.ro/schema.sop",
+   "vocabulary": "w.lang.ro/shards/words.sop",
    "exports": [
     "w.lang.ro.class",
     "w.lang.ro.count",
@@ -94801,6 +95028,18 @@
       "unknown-word w.lang.ro.word.w.timeline.timeline: w.lang.ro.word.w.timeline.timeline: means=w.timeline.timeline names no action, type, key or value of the matrix",
       "unknown-word w.lang.ro.word.w.timeline.event: w.lang.ro.word.w.timeline.event: means=w.timeline.event names no action, type, key or value of the matrix"
      ]
+    },
+    {
+     "id": "w.lang.ro/shards/words",
+     "path": "w.lang.ro/shards/words.sop",
+     "wires": 1,
+     "bytes": 414,
+     "keys": [],
+     "sources": [
+      "hand-core-1"
+     ],
+     "license": "CC0-1.0",
+     "warnings": []
     }
    ],
    "sources": [
@@ -94987,6 +95226,7 @@
    "id": "w.calendar",
    "version": "2",
    "schema": "w.calendar/schema.sop",
+   "vocabulary": "w.calendar/shards/words.sop",
    "depends": [],
    "about": "calendars: events on the days of a month",
    "names": [
@@ -95073,8 +95313,8 @@
      ]
     }
    ],
-   "wires": 66,
-   "bytes": 10970,
+   "wires": 42,
+   "bytes": 8034,
    "sources": [
     "hand-core-1"
    ],
@@ -95085,6 +95325,7 @@
    "id": "w.chart",
    "version": "1",
    "schema": "w.chart/schema.sop",
+   "vocabulary": "w.chart/shards/words.sop",
    "depends": [],
    "about": "charts of numbers: series of values by category",
    "names": [
@@ -95177,8 +95418,8 @@
      ]
     }
    ],
-   "wires": 41,
-   "bytes": 6227,
+   "wires": 24,
+   "bytes": 4003,
    "sources": [
     "hand-core-1"
    ],
@@ -95189,6 +95430,7 @@
    "id": "w.diagram",
    "version": "1",
    "schema": "w.diagram/schema.sop",
+   "vocabulary": "w.diagram/shards/words.sop",
    "depends": [],
    "about": "diagrams of nodes joined by edges, in groups, laid out by the diagram's kind",
    "names": [
@@ -95323,8 +95565,8 @@
      ]
     }
    ],
-   "wires": 65,
-   "bytes": 11160,
+   "wires": 37,
+   "bytes": 7370,
    "sources": [
     "hand-core-1"
    ],
@@ -95335,6 +95577,7 @@
    "id": "w.dialogue",
    "version": "2",
    "schema": "w.dialogue/schema.sop",
+   "vocabulary": "w.dialogue/shards/words.sop",
    "depends": [
     "w.request"
    ],
@@ -95468,8 +95711,8 @@
      ]
     }
    ],
-   "wires": 111,
-   "bytes": 19069,
+   "wires": 66,
+   "bytes": 13463,
    "sources": [
     "hand-core-1"
    ],
@@ -95480,6 +95723,7 @@
    "id": "w.document",
    "version": "2",
    "schema": "w.document/schema.sop",
+   "vocabulary": "w.document/shards/words.sop",
    "depends": [],
    "about": "written documents: chapters, sections, paragraphs, slides and sentences, each sentence with the facts it states",
    "names": [
@@ -95642,8 +95886,8 @@
      ]
     }
    ],
-   "wires": 97,
-   "bytes": 15824,
+   "wires": 57,
+   "bytes": 10593,
    "sources": [
     "hand-core-1"
    ],
@@ -95654,6 +95898,7 @@
    "id": "w.face",
    "version": "1",
    "schema": "w.face/schema.sop",
+   "vocabulary": "w.face/shards/words.sop",
    "depends": [],
    "about": "a drawn face: parts with their variant, colour, size and place, and an expression",
    "names": [
@@ -96120,8 +96365,8 @@
      ]
     }
    ],
-   "wires": 113,
-   "bytes": 16391,
+   "wires": 78,
+   "bytes": 12179,
    "sources": [
     "hand-core-1"
    ],
@@ -96132,6 +96377,7 @@
    "id": "w.list",
    "version": "4",
    "schema": "w.list/schema.sop",
+   "vocabulary": "w.list/shards/words.sop",
    "depends": [],
    "about": "lists of entries in order, which can be ticked off",
    "names": [
@@ -96205,8 +96451,8 @@
      ]
     }
    ],
-   "wires": 43,
-   "bytes": 7988,
+   "wires": 24,
+   "bytes": 5560,
    "sources": [
     "hand-core-1"
    ],
@@ -96217,6 +96463,7 @@
    "id": "w.map",
    "version": "1",
    "schema": "w.map/schema.sop",
+   "vocabulary": "w.map/shards/words.sop",
    "depends": [],
    "about": "a map of the world: places of k.geo shown, highlighted and pinned, and the view's zoom and layer",
    "names": [
@@ -96294,8 +96541,8 @@
      ]
     }
    ],
-   "wires": 39,
-   "bytes": 6830,
+   "wires": 24,
+   "bytes": 5027,
    "sources": [
     "hand-core-1"
    ],
@@ -96306,6 +96553,7 @@
    "id": "w.person",
    "version": "1",
    "schema": "w.person/schema.sop",
+   "vocabulary": "w.person/shards/words.sop",
    "depends": [],
    "about": "who a person is: name, age, occupation, languages, family, likes and dislikes",
    "names": [
@@ -96389,8 +96637,8 @@
      ]
     }
    ],
-   "wires": 62,
-   "bytes": 10830,
+   "wires": 27,
+   "bytes": 6224,
    "sources": [
     "hand-core-1"
    ],
@@ -96401,6 +96649,7 @@
    "id": "w.picture",
    "version": "1",
    "schema": "w.picture/schema.sop",
+   "vocabulary": "w.picture/shards/words.sop",
    "depends": [],
    "about": "depictions with an explicit background, scene and depicted parts",
    "names": [
@@ -96445,8 +96694,8 @@
      ]
     }
    ],
-   "wires": 22,
-   "bytes": 2855,
+   "wires": 12,
+   "bytes": 1853,
    "sources": [
     "hand-core-1"
    ],
@@ -96457,6 +96706,7 @@
    "id": "w.request",
    "version": "1",
    "schema": "w.request/schema.sop",
+   "vocabulary": "w.request/shards/words.sop",
    "depends": [],
    "about": "the meaning of one request: an act, a target and constraints",
    "names": [
@@ -96547,8 +96797,8 @@
      ]
     }
    ],
-   "wires": 75,
-   "bytes": 13891,
+   "wires": 41,
+   "bytes": 9557,
    "sources": [
     "hand-core-1"
    ],
@@ -96559,6 +96809,7 @@
    "id": "w.room",
    "version": "1",
    "schema": "w.room/schema.sop",
+   "vocabulary": "w.room/shards/words.sop",
    "depends": [],
    "about": "rooms with explicitly stated names and seating capacities",
    "names": [
@@ -96584,8 +96835,8 @@
      ]
     }
    ],
-   "wires": 11,
-   "bytes": 1400,
+   "wires": 6,
+   "bytes": 946,
    "sources": [
     "hand-core-1"
    ],
@@ -96596,6 +96847,7 @@
    "id": "w.seating",
    "version": "3",
    "schema": "w.seating/schema.sop",
+   "vocabulary": "w.seating/shards/words.sop",
    "depends": [],
    "about": "a seating plan: tables, seats and the guests on them",
    "names": [
@@ -96685,8 +96937,8 @@
      ]
     }
    ],
-   "wires": 50,
-   "bytes": 8762,
+   "wires": 31,
+   "bytes": 6394,
    "sources": [
     "hand-core-1"
    ],
@@ -96697,6 +96949,7 @@
    "id": "w.tasks",
    "version": "1",
    "schema": "w.tasks/schema.sop",
+   "vocabulary": "w.tasks/shards/words.sop",
    "depends": [
     "w.list"
    ],
@@ -96746,8 +96999,8 @@
      ]
     }
    ],
-   "wires": 23,
-   "bytes": 4658,
+   "wires": 13,
+   "bytes": 3276,
    "sources": [
     "hand-core-1"
    ],
@@ -96758,6 +97011,7 @@
    "id": "w.text",
    "version": "1",
    "schema": "w.text/schema.sop",
+   "vocabulary": "w.text/shards/words.sop",
    "depends": [
     "w.document"
    ],
@@ -96811,8 +97065,8 @@
      ]
     }
    ],
-   "wires": 62,
-   "bytes": 6954,
+   "wires": 43,
+   "bytes": 5134,
    "sources": [
     "hand-core-1"
    ],
@@ -96823,6 +97077,7 @@
    "id": "w.timeline",
    "version": "3",
    "schema": "w.timeline/schema.sop",
+   "vocabulary": "w.timeline/shards/words.sop",
    "depends": [],
    "about": "timelines: events in order of time",
    "names": [
@@ -96886,8 +97141,8 @@
      ]
     }
    ],
-   "wires": 48,
-   "bytes": 8241,
+   "wires": 34,
+   "bytes": 6444,
    "sources": [
     "hand-core-1"
    ],

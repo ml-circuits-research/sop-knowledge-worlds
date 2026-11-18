@@ -6,7 +6,7 @@
 // What the tool does with a question, and nothing more: it finds the words of the question in the catalog.
 //   - a THING: a word or phrase that names a fact (the naming key of a type: `name`, `word` or `text`), or a
 //     core.word of such a fact (plural forms, other names);
-//   - an ASKED KEY: a word that a schema gives to a slot or a type (`core.word text=legs means=k.animals.animal.legs`);
+//   - an ASKED KEY: a word that the owned vocabulary gives to a slot or a type (`core.word text=legs means=k.animals.animal.legs`);
 //   - a VALUE: a word that is a value of a key of the thing's type (fruit is a `kind` of k.food.food): it names
 //     that key ("is a cake a fruit" asks the kind of a cake);
 //   - a COMPARATIVE or a step of a scale (k.values: bigger, longest, big): it names the scale, and
@@ -46,7 +46,6 @@ export function loadCatalog(root = WORLDS_DIR) {
   for (const w of worlds) for (const s of parse(w.schemaText)) {
     if (s.type === 'core.type') types.set(s.attrs.of[0], { slots: new Map(), ids: [], extends: s.attrs.extends ?? [] });
     if (s.type === 'core.slot') { const t = types.get(s.attrs.of[0]); t.slots.set(s.attrs.key[0], { many: s.attrs.many?.[0] === 'true', enum: s.attrs.enum?.map(tok), from: s.attrs.of[0] }); if (s.attrs.id?.[0] === 'true') t.ids.push(s.attrs.key[0]); }
-    if (s.type === 'core.word') words.push(s);
   }
   // a type has the slots of the types it extends (its parent and its slot groups); with no identity key of its own,
   // it has its parent's (k.shapes.shape takes name from k.kinds.kind; 21 types take named from k.named.labelled)

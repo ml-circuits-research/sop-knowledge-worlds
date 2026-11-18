@@ -61,8 +61,9 @@ test('a fixture world gives keys, sources, license and vocabulary from words and
   const root = mkdtempSync(join(tmpdir(), 'skw-'));
   const put = (p, t) => { mkdirSync(join(root, p, '..'), { recursive: true }); writeFileSync(join(root, p), t); };
   put('k.toy/schema.sop', '@k.toy core.module name=k.toy version=1 exports=item\n'
-    + '@k.toy.item.name core.slot of=k.toy.item key=name id=true kind=atom\n'
-    + '@k.toy.word.item core.word text=item text=items means=k.toy.item\n');
+    + '@k.toy.item.name core.slot of=k.toy.item key=name id=true kind=atom\n');
+  put('k.toy/shards/words.sop', '# sources: test 1\n# license: CC-BY-4.0\n# script: none\n'
+    + '@k.toy.word.item core.word text=item text=items means=k.toy.item core.source="test 1"\n');
   put('k.toy/shards/a.sop', '# sources: test 1\n# license: CC-BY-4.0\n# script: none\n'
     + '@k.toy.cup k.toy.item name=Cup core.source="test 1"\n'
     + '@k.toy.word.cup core.word text=mug means=Cup of=k.toy.item.name core.source="test 1"\n');

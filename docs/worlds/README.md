@@ -4,20 +4,29 @@ This folder is served by GitHub Pages. Everything in it is generated or validate
 (`npm test` checks it); do not edit `index.json`, `vocab.json`, `vocab-kinds.json` or `LICENSES.md` by hand: run `node tools/build-catalog.mjs`.
 
 **Three kinds of worlds** (names used in every repository and in the library's docs): a **world schema** says what
-a kind of world is (its kinds of things, attributes, value types, acts, limits, rules and the words for them) and
+a kind of world is (its kinds of things, attributes, value types, acts, limits and rules) and
 holds no particular things: `w.seating` (a seating plan: tables, seats, guests). A **knowledge world** holds facts
-about the world at large, true for everyone, with no session state: `k.animals` (a rabbit is a mammal; its young is
+for reuse across applications, with their source and applicability, and no session state: `k.animals` (a rabbit is a mammal; its young is
 a kit), and `w.lang.en`, a knowledge world about English. A **live world** is one running instance of a world schema
 in a session (the tables a user made, their seats, the focus, the history and undo); a tab shows it through a view.
 This repository holds world schemas (`w.*`) and knowledge worlds (`k.*`, `w.lang.en`), never live worlds; the
 library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) are mechanisms, not worlds.
 
+## Explicit source ownership and composition
+
+A schema import loads definitions, not vocabulary or a live instance. Each catalog entry links `schema` to its structural source and, when present, `vocabulary` to the owned `shards/words.sop` lexical fact source. Ordinary fact shards remain separately listed. `core.word` facts retain their declared IDs, values and provenance in that source; they are not copied into application instance state.
+
+The tooling helper `schemaWorld` loads definitions only. `vocabularyOf` reads one module's owned lexical source. `vocabularyWorld` explicitly composes definitions with the vocabulary of the requested module and its declared import closure; it reads no other data shards. Reusable patterns use `actsWorld` for structure and `actsVocabularyWorld` when lexical knowledge is required. `fullWorld` is an explicit evaluation composition of schema dependencies and their fact shards, not a persisted instance owner.
+
+Lexical identities are the fully qualified IDs written in their owning sources. Older schema imports could produce double-qualified IDs such as `k.faces.k.faces.word.face`; moving vocabulary into fact sources corrects those imported identities to the declared `k.faces.word.face`. Text, meanings, joins and provenance remain unchanged. This correction concerns lexical declarations, not user-created object identities. Vocabulary composition does not silently alias lexical IDs to a caller's schema alias.
+
 ## Files
 
 - `k.<world>/schema.sop`: the world as a sopworld module (`core.module name=k.<world>`): types, slots, rules, soft
-  rules (`core.deny … soft=true`), and `core.word` facts for its vocabulary. Types and slots are all under
+  rules (`core.deny … soft=true`). Lexical `core.word` facts belong in the separate owned vocabulary shard. Types and slots are all under
   `k.<world>.`; matrix ids are written fully qualified (`@k.objects.part.name`) so that loading the module through
   `imports=` (ids unchanged) or `core.use` (ids prefixed) never clashes with the application's ids.
+- `<world>/shards/words.sop`: the owned vocabulary facts, also for reusable `w.*` schemas. The catalog links this source separately from `schema`; readers must request it explicitly.
 - `k.<world>/shards/<key>.sop`: facts only, at most about 2,000 wires and 300 kB each. Each starts with a header
   (`# sources:`, `# license:`, `# script:`) and every wire carries `core.source="<source id> <version>"`.
 - `k.<world>/shards/derived*.sop`: **generated** (`tools/derive.mjs`, in `npm run build`): what the rules of the
@@ -34,7 +43,7 @@ library's modules (`std.*`: acts, fill, focus, relations, turn, know, grammar) a
   told after some objects but before its own is refused (questions.md Q49). The stand-ins of k.objects name drawings
   of other shards of the same world and keep an undeclared join.
 - `w.<name>/schema.sop`: a **reusable world**: a schema in the library's `std.schema` format (kinds, attributes, the
-  acts that apply, words), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`
+  acts that apply), data only; `w.<name>/WORLD.md` says how to load it. Listed under `schemas` in `index.json`
   (`names`: the words that find it; `kinds` with their `acts`, `attributes` and `words`). They are validated with
   the same sopworld build as the knowledge worlds, the commit in `sopworld`.
 - `index.json`: the catalog.

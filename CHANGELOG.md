@@ -3,6 +3,10 @@
 Breaking schema changes, per world. The world's version is `version=` on the `core.module` wire of its `schema.sop`
 (sopworld 0.15.0; a `# version:` header line before) and the `version` of its catalog entry.
 
+## Explicit vocabulary sources
+
+Lexical `core.word` facts now live in each module's owned `shards/words.sop`, separately from schema definitions. The catalog exposes that path as `vocabulary` for knowledge modules and reusable schemas. A schema import alone no longer supplies vocabulary; readers compose the declared vocabulary sources explicitly. Source wire IDs, text, meanings, joins and provenance are unchanged. Runtime lexical IDs use those declared identities instead of the double qualification that schema `core.use` previously applied. This does not rename live application objects.
+
 ## k.commonsense 3 (2026-11-14, Round 11 item 4)
 
 - The module imports `k.animals` and `k.food` (its rules read their facts); new type `k.commonsense.lives`, new keys

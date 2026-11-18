@@ -183,13 +183,13 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       entry.warnings = r.warnings;
       return entry;
     });
-    // Words of the schema: a word for a value goes to the shards holding that value under that key; a word for a
+    // Owned vocabulary: a word for a value goes to the shards holding that value under that key; a word for a
     // type or a key of the world goes to the world's schema path (the host then knows the world is relevant and
     // picks its shards by the other words of the message).
-    // (and the English words of the world in its own shard words, beside it (owner 08:10): read exactly as schema words)
+    // The vocabulary source is separate from the schema; the catalog links both explicitly.
     // vocab.json is English: another language's words shards (w.lang.ro words-<world>) are not in it
     const wordsShards = world.shards.filter((sh) => isOwnWordsShard(sh.id, world.id));
-    for (const w of [...parse(world.schemaText), ...wordsShards.flatMap((sh) => parse(sh.text))]) {
+    for (const w of wordsShards.flatMap((sh) => parse(sh.text))) {
       if (w.type !== 'core.word') continue;
       const means = text(w.attrs.means?.[0] ?? '');
       const of = w.attrs.of?.[0];
@@ -202,6 +202,7 @@ export function buildCatalog(root = WORLDS_DIR, sourcesDir = join(REPO, 'sources
       id: world.id,
       version: info.version ?? null,
       schema: world.schemaPath,
+      ...(wordsShards.length ? { vocabulary: wordsShards[0].path } : {}),
       exports: uniqSorted(info.exports),
       depends: uniqSorted(info.imports),
       shards,

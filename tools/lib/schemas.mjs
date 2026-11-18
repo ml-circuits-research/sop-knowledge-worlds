@@ -4,7 +4,7 @@
 import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { World, parse } from '../sopworld/sopworld.mjs';
-import { WORLDS_DIR, REPO, isFactWorld } from './worlds.mjs';
+import { WORLDS_DIR, REPO, isFactWorld, vocabularyOf, loadVocabulary } from './worlds.mjs';
 
 const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
@@ -12,7 +12,8 @@ const byText = (a, b) => (a < b ? -1 : a > b ? 1 : 0);
 export function scanSchemas(root = WORLDS_DIR) {
   if (!existsSync(root)) return [];
   return readdirSync(root).filter((d) => d.startsWith('w.') && statSync(join(root, d)).isDirectory() && existsSync(join(root, d, 'schema.sop')) && !isFactWorld(root, d)).sort(byText)
-    .map((id) => ({ id, dir: join(root, id), schemaPath: `${id}/schema.sop`, schemaText: readFileSync(join(root, id, 'schema.sop'), 'utf8') }));
+    .map((id) => ({ id, dir: join(root, id), schemaPath: `${id}/schema.sop`, schemaText: readFileSync(join(root, id, 'schema.sop'), 'utf8'),
+      ...(existsSync(join(root, id, 'shards/words.sop')) ? { vocabularyPath: `${id}/shards/words.sop`, vocabularyText: readFileSync(join(root, id, 'shards/words.sop'), 'utf8') } : {}) }));
 }
 
 // A world with std.acts and the reusable worlds named (all by default). Throws on a refusal.
@@ -24,15 +25,22 @@ export function actsWorld(ids, schemas = scanSchemas()) {
   return w;
 }
 
+// An explicitly lexical context for readers; actsWorld remains schema-only.
+export function actsVocabularyWorld(ids, schemas = scanSchemas()) {
+  return loadVocabulary(actsWorld(ids, schemas), ids ?? schemas.map((s) => s.id), schemas);
+}
+
 // What the catalog says of a reusable world: its name, what it is, the words that find it, its kinds with their
 // acts and attributes, the schemas it imports (`depends`: w.tasks imports w.list, whose lists its tasks stand on), and
 // the errors and warnings of loading it alone (with the schemas it imports in the library, the way a host loads it).
 export function describeSchema(s, all = scanSchemas()) {
-  const wires = parse(s.schemaText);
+  const wires = parse(s.schemaText), lexical = vocabularyOf(s.id, [s, ...all.filter((x) => x.id !== s.id)]);
   const errors = [], warnings = [];
   const module = wires.find((w) => w.type === 'core.module');
   const depends = (module?.attrs.imports ?? []).map(tok).sort(byText);
   try { const w = actsWorld([s.id], [s, ...all.filter((x) => x.id !== s.id)]); warnings.push(...(w.warnings ?? []).map((x) => x.why ?? x.kind)); } catch (e) { errors.push(e.message); }
+  for (const word of lexical) { if (!word.id.startsWith(`${s.id}.`)) errors.push(`${word.id}: vocabulary id outside ${s.id}`); if (!word.attrs['core.source']) errors.push(`${word.id}: vocabulary has no core.source`); }
+  try { actsVocabularyWorld([s.id], [s, ...all.filter((x) => x.id !== s.id)]); } catch (e) { errors.push(e.message); }
   const world = wires.find((w) => w.type === 'std.schema.world');
   // A world schema may hold denies and rules (the library's kinds-of-worlds), never a function. The patterns and
   // checks a deny or rule names are parts of it and carry no source of their own (a source on a pattern would be
@@ -42,6 +50,7 @@ export function describeSchema(s, all = scanSchemas()) {
     for (const k of ['when', 'not', 'if', 'with', 'then', 'args', 'over']) for (const v of w.attrs[k] ?? []) if (v.startsWith('$')) parts.add(v.slice(1));
   }
   for (const w of wires) {
+    if (w.type === 'core.word' && !parts.has(w.id)) errors.push(`${w.id}: lexical knowledge belongs in the vocabulary source`);
     if (!w.id.startsWith(`${s.id}`)) errors.push(`${w.id}: an id outside ${s.id}`);
     if (!w.attrs['core.source'] && !parts.has(w.id)) errors.push(`${w.id}: no core.source`);
     if (parts.has(w.id) && w.attrs['core.source']) errors.push(`${w.id}: a pattern or check with core.source (it would be matched)`);
@@ -57,11 +66,11 @@ export function describeSchema(s, all = scanSchemas()) {
   const chain = (t, seen = new Set()) => (seen.has(t) || !(t in parents) ? [] : (seen.add(t), [t, ...parents[t].flatMap((p) => chain(p, seen))]));
   const attributesOf = (t) => chain(t).flatMap((x) => slots.filter((sl) => sl.attrs.of[0] === x).map((sl) => sl.attrs.key[0]));
   const kinds = wires.filter((w) => w.type === 'std.schema.kind').map((k) => ({ type: k.attrs.of[0], acts: k.attrs.acts ?? [], attributes: attributesOf(k.attrs.of[0]) }));
-  const words = (means) => [...new Set(wires.filter((w) => w.type === 'core.word' && tok(w.attrs.means?.[0]) === means).flatMap((w) => (w.attrs.text ?? []).map(tok)))];
+  const words = (means) => [...new Set(lexical.filter((w) => w.type === 'core.word' && tok(w.attrs.means?.[0]) === means).flatMap((w) => (w.attrs.text ?? []).map(tok)))];
   for (const k of kinds) { k.words = words(k.type); if (!k.words.length) errors.push(`${k.type}: no core.word`); }
   for (const x of slots) if (!words(`${x.attrs.of[0]}.${x.attrs.key[0]}`).length) errors.push(`${x.attrs.of[0]}.${x.attrs.key[0]}: no core.word`);
   const names = words(s.id);
   if (!names.length) errors.push(`${s.id}: no core.word for the world`);
-  const allWords = [...new Set(wires.filter((w) => w.type === 'core.word').flatMap((w) => (w.attrs.text ?? []).map(tok)))];
-  return { entry: { id: s.id, version: tok(module?.attrs.version?.[0]) ?? null, schema: s.schemaPath, depends, about: tok(world?.attrs.doc?.[0]) ?? null, names, kinds, wires: wires.length, bytes: Buffer.byteLength(s.schemaText), sources: ['hand-core-1'], license: 'CC0-1.0', warnings }, errors, allWords, names };
+  const allWords = [...new Set(lexical.filter((w) => w.type === 'core.word').flatMap((w) => (w.attrs.text ?? []).map(tok)))];
+  return { entry: { id: s.id, version: tok(module?.attrs.version?.[0]) ?? null, schema: s.schemaPath, ...(s.vocabularyPath ? { vocabulary: s.vocabularyPath } : {}), depends, about: tok(world?.attrs.doc?.[0]) ?? null, names, kinds, wires: wires.length, bytes: Buffer.byteLength(s.schemaText), sources: ['hand-core-1'], license: 'CC0-1.0', warnings }, errors, allWords, names };
 }

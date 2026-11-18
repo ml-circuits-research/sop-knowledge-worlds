@@ -17,8 +17,8 @@ function lexical(binding){
  const rows=sources(one(binding,'source_type')).filter(w=>(!one(binding,'source_id')||w.id===one(binding,'source_id'))&&filters.every(f=>(w.attrs[one(f,'key')]||[]).some(v=>scalar(v)===one(f,'value'))));
  return rows.flatMap(w=>(w.attrs[one(binding,'text_key')]||[]).filter(v=>filters.filter(f=>one(f,'key')===one(binding,'text_key')).every(f=>scalar(v)===one(f,'value'))).map(v=>({text:scalar(v),cat:one(binding,'cat'),source:w.id,feat:Object.fromEntries(features.map(f=>[one(f,'key'),f.attrs.from_key?scalar(w.attrs[one(f,'from_key')]?.[0]):one(f,'value')]))})));
 }
-// core.word declarations are in schemas for some families; source providers must read both.
-function sourceWords(){return worlds.flatMap(w=>[...parse(w.schemaText),...w.shards.flatMap(s=>s.text.split('\n').filter(l=>l.startsWith('@')&&l.includes(' core.word ')).flatMap(parse))]).filter(w=>w.type==='core.word');}
+// Lexical providers explicitly read fact shards; schema imports contain no vocabulary.
+function sourceWords(){return worlds.flatMap(w=>w.shards.flatMap(s=>s.text.split('\n').filter(l=>l.startsWith('@')&&l.includes(' core.word ')).flatMap(parse))).filter(w=>w.type==='core.word');}
 const words=sourceWords();
 // A core.word provider is shared across the loaded vocabulary, not a world named core.
 function allLex(){return of('binding').flatMap(b=>{

@@ -69,6 +69,50 @@ export function schemaWorld(worlds, id) {
   return { world: w, result: r };
 }
 
+// Owned lexical knowledge is a separate fact source, never an implicit schema import.
+export function vocabularyOf(id, worlds) {
+  const entry = worlds.find((w) => w.id === id);
+  if (!entry) throw new Error(`no world ${id}`);
+  const source = entry.vocabularyText ?? entry.shards?.find((s) => s.path === `${id}/shards/words.sop`)?.text;
+  if (source === undefined) {
+    if (entry.vocabularyPath || entry.vocabulary) throw new Error(`${id}: declared vocabulary source was not supplied`);
+    return [];
+  }
+  const wires = parse(source);
+  if (wires.some((wire) => wire.type !== 'core.word')) throw new Error(`${id}: vocabulary source must contain only core.word facts`);
+  return wires;
+}
+
+// Explicitly compose just the vocabulary of the requested modules and their declared
+// import closure. This does not read any other knowledge or instance shard.
+export function loadVocabulary(world, ids, worlds) {
+  const seen = new Set();
+  const add = (id) => {
+    if (seen.has(id)) return;
+    seen.add(id);
+    const entry = worlds.find((w) => w.id === id);
+    if (!entry) {
+      if (id.startsWith('std.')) return; // built-in schemas have no repository vocabulary source
+      throw new Error(`no vocabulary module ${id}`);
+    }
+    for (const dep of moduleInfo(entry.schemaText)?.imports ?? []) add(dep);
+    const words = vocabularyOf(id, worlds);
+    if (words.length) {
+      const result = world.tell(words);
+      if (!result.ok) throw new Error(`${id} vocabulary: ${JSON.stringify(result.violations)}`);
+    }
+  };
+  for (const id of [].concat(ids)) add(id);
+  return world;
+}
+
+export function vocabularyWorld(worlds, id) {
+  const loaded = schemaWorld(worlds, id);
+  if (!loaded.result.ok) return loaded;
+  loadVocabulary(loaded.world, id, worlds);
+  return loaded;
+}
+
 // The module wire of a schema: name, version, imports, exports.
 export function moduleInfo(schemaText) {
   const m = parse(schemaText).find((x) => x.type === 'core.module');

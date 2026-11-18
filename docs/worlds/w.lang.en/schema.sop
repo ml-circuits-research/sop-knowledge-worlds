@@ -100,8 +100,6 @@
 @w.lang.en.number.kind core.slot of=w.lang.en.number key=kind id=true required=true enum=cardinal enum=ordinal enum=times enum=multiple enum=group enum=fraction core.source="hand-core 1"
 @w.lang.en.number.value core.slot of=w.lang.en.number key=value kind=number core.source="hand-core 1"
 @w.lang.en.number.value_about core.slot of=w.lang.en.number key=value_about excludes=value kind=number core.source="hand-core 1"
-@w.lang.en.word.number core.word text=number text=numbers text="number word" means=w.lang.en.number core.source="hand-core 1"
-@w.lang.en.word.number.value core.word text=value means=w.lang.en.number.value core.source="hand-core 1"
 @w.lang.en.ordinal core.type of=w.lang.en.ordinal shared=true closed=true core.source="psys2 78f45863"
 @w.lang.en.ordinal.text core.slot of=w.lang.en.ordinal key=text id=true required=true kind=atom core.source="psys2 78f45863"
 @w.lang.en.ordinal.value core.slot of=w.lang.en.ordinal key=value required=true kind=integer core.source="psys2 78f45863"
@@ -392,7 +390,6 @@
 @w.lang.en.feeling_reply core.type of=w.lang.en.feeling_reply shared=true closed=true core.source="hand-core 1"
 @w.lang.en.feeling_reply.feeling core.slot of=w.lang.en.feeling_reply key=feeling id=true required=true kind=atom kind=string type=k.feelings.feeling by=name core.source="hand-core 1"
 @w.lang.en.feeling_reply.text core.slot of=w.lang.en.feeling_reply key=text required=true kind=string core.source="hand-core 1"
-@w.lang.en.word.feeling_reply core.word text=reply text=say text=answer text="what to say" means=w.lang.en.feeling_reply core.source="hand-core 1"
 # A function word or phrase that carries no content of a request (reviewer block 14:25 item 3, KR3: one home for the
 # little words hosts and the library strip or read for tone): `text`, and its `view` (many): filler (a discourse marker
 # that fills or repairs: just, like, I mean), politeness (please, kindly, if you can), wish (want, would like, need:
@@ -446,7 +443,6 @@
 @w.lang.en.phrasing.role core.slot of=w.lang.en.phrasing key=role many=true kind=atom core.source="hand-core 1"
 @w.lang.en.phrasing.frame core.slot of=w.lang.en.phrasing key=frame required=true kind=atom core.source="hand-core 1"
 @w.lang.en.phrasing.text core.slot of=w.lang.en.phrasing key=text required=true kind=string core.source="hand-core 1"
-@w.lang.en.word.phrasing core.word text=phrasing text="attribute phrasing" means=w.lang.en.phrasing core.source="hand-core 1"
 
 @w.lang.en.discourse core.type of=w.lang.en.discourse shared=true closed=true core.source="hand-core 1"
 @w.lang.en.discourse.name core.slot of=w.lang.en.discourse key=name id=true required=true kind=atom core.source="hand-core 1"
@@ -491,7 +487,6 @@
 @w.lang.en.alternation_case.canonical core.slot of=w.lang.en.alternation_case key=canonical required=true kind=string core.source="hand-core 1"
 @w.lang.en.alternation_case.applied core.slot of=w.lang.en.alternation_case key=applied many=true kind=atom core.source="hand-core 1"
 @w.lang.en.alternation_case.mode core.slot of=w.lang.en.alternation_case key=mode enum=request enum=question enum=ellipsis core.source="hand-core 1"
-@w.lang.en.word.alternation core.word text=alternation text=alternations text=variant text=paraphrase means=w.lang.en.alternation core.source="hand-core 1"
 
 # ---- clause structure ----
 # What joins two clauses: `cut` whether a splitter cuts there without other evidence, `card_cut` whether it cuts when
@@ -609,14 +604,6 @@
 @w.lang.en.choice.text core.slot of=w.lang.en.choice key=text id=true required=true kind=string core.source="hand-core 1"
 
 # ---- words: for the world (how a host finds it by name) and its kinds ----
-@w.lang.en.word.world core.word text=grammar text="english grammar" text="grammar rules" text="parts of speech" means=w.lang.en.construction core.source="hand-core 1"
-@w.lang.en.word.det core.word text=determiner text=determiners text=article text=articles text=quantifier text=quantifiers means=w.lang.en.det core.source="psys2 78f45863"
-@w.lang.en.word.pron core.word text=pronoun text=pronouns means=w.lang.en.pron core.source="psys2 78f45863"
-@w.lang.en.word.prep core.word text=preposition text=prepositions means=w.lang.en.prep core.source="psys2 78f45863"
-@w.lang.en.word.prep.time core.word text=preposition text=prepositions means=w.lang.en.prep.time core.source="hand-core 1"
-@w.lang.en.word.irregular core.word text=plural text=plurals text=irregular means=w.lang.en.irregular core.source="hand-core 1"
-@w.lang.en.word.contraction core.word text=contraction text=contractions means=w.lang.en.contraction core.source="hand-core 1"
-@w.lang.en.word.wh core.word text="question word" text="question words" means=w.lang.en.wh core.source="hand-core 1"
 # Frames that are variants a general alternation will cover (block "21:05" item 2; the library applies the
 # alternations to every canonical frame once): `frame`, `alternation` (a w.lang.en.alternation_family: request
 # wrapper, passive, dative shift, verb ellipsis), `canonical` (many) the frames of the same act and mode with none of
@@ -668,12 +655,3 @@
 @w.lang.en.cue.unit core.slot of=w.lang.en.cue key=unit kind=atom core.source="hand-core 1"
 @w.lang.en.cue.priority core.slot of=w.lang.en.cue key=priority kind=integer min=1 core.source="hand-core 1"
 @w.lang.en.cue.example core.slot of=w.lang.en.cue key=example many=true kind=string core.source="hand-core 1"
-@w.lang.en.word.cue core.word text=cue text=cues text="request cue" text="reaction cue" means=w.lang.en.cue core.source="hand-core 1"
-
-@w.lang.en.word.closed core.word text="word class" text="closed class" text="function word" text="function words" means=w.lang.en.closed core.source="hand-core 1"
-@w.lang.en.word.class core.word text="paradigm class" text="inflection class" text=inflection text=conjugation means=w.lang.en.class core.source="hand-core 1"
-@w.lang.en.word.arrangement core.word text=arrangement text=arrangements text=arranged text="laid out" means=w.lang.en.arrangement core.source="hand-core 1"
-@w.lang.en.word.aux core.word text=auxiliary text="auxiliary verb" means=w.lang.en.aux core.source="hand-core 1"
-@w.lang.en.word.frame core.word text="argument frame" text=frame text=frames means=w.lang.en.frame core.source="hand-core 1"
-@w.lang.en.word.rule core.word text="grammar rule" text=production means=w.lang.en.rule core.source="hand-core 1"
-@w.lang.en.word.construction core.word text=construction text=constructions means=w.lang.en.construction core.source="hand-core 1"

@@ -9,7 +9,7 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **264** in 43 worlds; distinct values 11372, meeting a target 11313 (99.5 %), open 59
+- declared joins: **266** in 43 worlds; distinct values 11380, meeting a target 11321 (99.5 %), open 59
 - broken (under half of the values meet a target, or the target is not declared): **0**
 - undeclared keys whose values the value share joins to a type: **51**; left undeclared on purpose: 5; keys with an enum, never suggested: 46
 
@@ -88,6 +88,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.expect | `k.expect.make.scene` | `k.scenes.scene` | name | 61 | 61 |  |
 | k.expect | `k.expect.part.of` | `k.expect.make` | thing | 84 | 84 |  |
 | k.faces | `k.faces.expression.style` | `k.faces.canon` | style | 1 | 1 |  |
+| k.faces | `k.faces.expression.goal.expression` | `k.faces.expression` | name | 5 | 5 |  |
+| k.faces | `k.faces.expression.goal.slot` | `k.faces.slot` | name | 3 | 3 |  |
 | k.faces | `k.faces.part.slot` | `k.faces.slot` | name | 18 | 18 |  |
 | k.faces | `k.faces.preset.clothes` | `k.colours.colour` | name | 10 | 10 |  |
 | k.faces | `k.faces.preset.style` | `k.faces.canon` | style | 1 | 1 |  |

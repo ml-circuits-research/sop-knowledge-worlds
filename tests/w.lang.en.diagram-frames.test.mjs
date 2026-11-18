@@ -19,8 +19,9 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const one = (w, k) => tok(w.attrs[k]?.[0]);
 const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
 const schema = (id) => parse(readFileSync(join(WORLDS_DIR, id, 'schema.sop'), 'utf8'));
+const vocabulary = (id) => parse(readFileSync(join(WORLDS_DIR, id, 'shards/words.sop'), 'utf8'));
 const kinds = shardsOf('k.diagrams').flatMap((t) => parse(t)).filter((w) => w.type === 'k.diagrams.kind');
-const kindWords = schema('k.diagrams').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.diagrams.kind.name');
+const kindWords = vocabulary('k.diagrams').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.diagrams.kind.name');
 const arrangements = all.filter((w) => w.type === 'w.lang.en.arrangement');
 const lex = (name) => vals(all.find((w) => w.type === 'w.lang.en.lex' && one(w, 'name') === name), 'item');
 
@@ -163,7 +164,7 @@ test('edge labels: "call the arrow yes", "label the arrow from A to B no" read a
   const edgeKeys = schema('w.diagram').filter((w) => w.type === 'core.slot' && one(w, 'of') === 'w.diagram.edge').map((w) => one(w, 'key'));
   assert.ok(edgeKeys.includes('label'));
   // the thing is an edge: its first word is a word of w.diagram.edge
-  const edge = new Set(schema('w.diagram').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.edge').flatMap((w) => vals(w, 'text')));
+  const edge = new Set(vocabulary('w.diagram').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.edge').flatMap((w) => vals(w, 'text')));
   for (const [, , , { thing }] of LABEL) assert.ok(edge.has(toks(thing)[0]), thing);
   // a name stays a name where the world has one ("Call yourself Robi": the avatar's frame)
   const avatar = frameReader(all, actions, { needs: (n) => [undefined, 'attrs', 'name', 'self'].includes(n) });
@@ -197,7 +198,7 @@ test('the criterion joins k.attributes: every word of order.criterion is an attr
   const attrs = shardsOf('k.attributes').flatMap((t) => parse(t));
   const attribute = new Map(attrs.filter((w) => w.type === 'k.attributes.attribute').map((w) => [one(w, 'name'), w]));
   const found = attrs.filter((w) => w.type === 'k.attributes.found');
-  const words = schema('k.attributes').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name');
+  const words = vocabulary('k.attributes').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name');
   const attributeOf = (c) => (attribute.has(c) ? c : one(words.find((w) => vals(w, 'text').includes(c)) ?? { attrs: {} }, 'means'));
   const L = lex('order.criterion');
   assert.deepEqual(L, lexicons()['order.criterion'].items);

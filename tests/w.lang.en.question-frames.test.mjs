@@ -14,7 +14,7 @@ const tok = (t) => (t?.startsWith('"') ? JSON.parse(t) : t);
 const shardsOf = (id) => readdirSync(join(WORLDS_DIR, id, 'shards')).filter((f) => f.endsWith('.sop')).sort().flatMap((f) => parse(readFileSync(join(WORLDS_DIR, id, 'shards', f), 'utf8')));
 const all = shardsOf('w.lang.en'), actions = shardsOf('k.actions');
 const attrs = shardsOf('k.attributes').filter((w) => w.type === 'k.attributes.attribute').map((w) => tok(w.attrs.name[0]));
-const timeWords = parse(readFileSync(join(WORLDS_DIR, 'k.time', 'schema.sop'), 'utf8')).filter((w) => w.type === 'core.word').flatMap((w) => (w.attrs.text ?? []).map(tok)).filter((x) => /^[a-z]+$/.test(x));
+const timeWords = parse(readFileSync(join(WORLDS_DIR, 'k.time', 'shards/words.sop'), 'utf8')).filter((w) => w.type === 'core.word').flatMap((w) => (w.attrs.text ?? []).map(tok)).filter((x) => /^[a-z]+$/.test(x));
 const read = frameReader(all, actions, { lexicons: { attribute: [...new Set([...attrs, ...timeWords])] }, needs: (n) => n === undefined || n === 'facts' });
 const said = (s) => { const [c] = read(s); return c ? `${c.act}/${c.mode} ${Object.entries(c.args).sort(([a], [b]) => (a < b ? -1 : 1)).map(([k, v]) => `${k}=${v}`).join(' ')}` : null; };
 

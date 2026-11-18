@@ -104,3 +104,16 @@ test('a world unchanged since it passed is taken from the cache; a changed shard
     assert.equal(JSON.parse(readFileSync(cacheFile, 'utf8'))['k.toy'], undefined, 'a failing world is not cached');
   } finally { rmSync(root, { recursive: true }); }
 });
+
+test('lexical knowledge in a schema source is rejected instead of silently imported',()=>{
+ const root=fixture({'k.toy/schema.sop':schema+'@k.toy.word core.word text=toy means=k.toy.item core.source="test 1"\n'});
+ try{assert.ok(validateWorlds(root).errors.some(error=>error.includes('lexical knowledge; use the owned vocabulary shard')));}
+ finally{rmSync(root,{recursive:true});}
+});
+
+test('a core.word pattern is a schema rule premise, not a lexical fact owned by that schema',()=>{
+ const rules='@k.toy.p core.word text=?name\n@k.toy.t k.toy.item name=?name\n@k.toy.r core.rule when=$k.toy.p then=$k.toy.t core.source="test 1"\n';
+ const root=fixture({'k.toy/schema.sop':schema+rules,'k.toy/shards/words.sop':head+'@k.toy.word core.word text=cup means=k.toy.item core.source="test 1"\n'});
+ try{assert.deepEqual(validateWorlds(root).errors,[]);}
+ finally{rmSync(root,{recursive:true});}
+});

@@ -54,6 +54,7 @@ export function validateWorlds(root = WORLDS_DIR, { cache = root === WORLDS_DIR 
       for (const v of base.result.violations) errors.push(`${world.schemaPath}: ${fmtViolation(v)}`);
       continue;
     }
+    for (const wire of parse(world.schemaText)) if (wire.type === 'core.word' && !base.world.matrix.has(`${world.id}.${wire.id}`)) errors.push(`${world.schemaPath}: @${wire.id} is lexical knowledge; use the owned vocabulary shard`);
     const schemaWarnings = base.world.warnings.map(warningText);
     results.push({ world: world.id, shard: null, path: world.schemaPath, wires: parse(world.schemaText).length,
       bytes: Buffer.byteLength(world.schemaText), ms: schemaMs, warnings: schemaWarnings });

@@ -1,15 +1,15 @@
 // Round 11 item 1: a word for every key. The demo's real questions (tools/ask-real.mjs) showed one cause behind
 // most "the asked word is not in the vocabulary": 241 of the 337 keys of the named types had no core.word, so a
 // host could not get from "continent", "can" or "inside" to the slot. This tool writes, at the end of each
-// schema.sop, one block of core.word wires: for every slot that is not the naming key, the name of the key as its
+// the owned words.sop shard, one block of core.word wires: for every slot that is not the naming key, the name of the key as its
 // word (`part_of` -> "part of"; the suffix `_about` left out), and the everyday words of EXTRA. A slot that
 // already has a hand-written word keeps it and gets the rule's word too, if it is new.
-//   node tools/key-words.mjs          rewrites the block of every docs/worlds/k.*/schema.sop
-import { readFileSync, writeFileSync } from 'node:fs';
+//   node tools/key-words.mjs          rewrites the block of every docs/worlds/k.*/shards/words.sop
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { scanWorlds } from './lib/worlds.mjs';
 import { parse } from './sopworld/sopworld.mjs';
-import { hasWordsShard, wordsShardPath } from './lib/words-shards.mjs';
+import { wordsShardPath } from './lib/words-shards.mjs';
 
 const SRC = 'hand-core 1';
 export const START = '# Words for the keys, by rule: the name of each key, and everyday words for some (tools/key-words.mjs).';
@@ -74,8 +74,9 @@ export const withBlockIn = (wordsText, schemaText) => {
 if (import.meta.url === `file://${process.argv[1]}`) {
   let n = 0;
   for (const w of scanWorlds().filter((x) => x.id.startsWith('k.'))) {
-    const path = hasWordsShard(w.id) ? wordsShardPath(w.id) : join(w.dir, 'schema.sop');
-    const next = hasWordsShard(w.id) ? withBlockIn(readFileSync(path, 'utf8'), readFileSync(join(w.dir, 'schema.sop'), 'utf8')) : withBlock(readFileSync(path, 'utf8'));
+    const path = wordsShardPath(w.id);
+    mkdirSync(join(w.dir, 'shards'), { recursive: true });
+    const next = withBlockIn(readFileSync(path, 'utf8'), readFileSync(join(w.dir, 'schema.sop'), 'utf8'));
     n += next.split('\n').filter((l) => l.includes('.word.key.')).length; writeFileSync(path, next);
   }
   console.log(`${n} word wires for keys`);

@@ -39,8 +39,8 @@ const read = (...p) => parse(readFileSync(join(WORLDS_DIR, ...p), 'utf8'));
 // The lexicons, from their homes.
 export function lexicons() {
   const kinds = read('k.diagrams', 'shards', 'diagrams.sop').filter((w) => w.type === 'k.diagrams.kind').map((w) => one(w, 'name'));
-  const kindWords = read('k.diagrams', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.diagrams.kind.name').flatMap((w) => vals(w, 'text'));
-  const edgeWords = read('w.diagram', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.edge').flatMap((w) => vals(w, 'text')).filter((t) => !t.endsWith('s'));
+  const kindWords = read('k.diagrams', 'shards', 'words.sop').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.diagrams.kind.name').flatMap((w) => vals(w, 'text'));
+  const edgeWords = read('w.diagram', 'shards', 'words.sop').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.edge').flatMap((w) => vals(w, 'text')).filter((t) => !t.endsWith('s'));
   const LINEAR = new Set(['left_to_right', 'right_to_left', 'top_to_bottom', 'bottom_to_top']);
   const directions = read('w.lang.en', 'shards', 'hand-arrangements.sop').filter((w) => w.type === 'w.lang.en.arrangement'
     && ['left_right', 'top_down'].includes(one(w, 'diagram_layout'))
@@ -49,12 +49,12 @@ export function lexicons() {
   // the attributes that can put things in order (block 07:45 item 1): those that hold a number, a size or a step of a
   // scale (k.attributes.attribute holds), by their names and their words (core.word of=k.attributes.attribute.name)
   const attrs = read('k.attributes', 'shards', 'attributes.sop').filter((w) => w.type === 'k.attributes.attribute' && ORDERABLE.includes(one(w, 'holds'))).map((w) => one(w, 'name'));
-  const attrWords = read('k.attributes', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name' && attrs.includes(one(w, 'means'))).flatMap((w) => vals(w, 'text'));
+  const attrWords = read('k.attributes', 'shards', 'words.sop').filter((w) => w.type === 'core.word' && one(w, 'of') === 'k.attributes.attribute.name' && attrs.includes(one(w, 'means'))).flatMap((w) => vals(w, 'text'));
   // the names of the drawings of k.objects (read by pattern: the shards are 36 MB), to tell "in a tree" the place
   const odir = join(WORLDS_DIR, 'k.objects', 'shards');
   const drawings = new Set(readdirSync(odir).filter((f) => f.endsWith('.sop')).flatMap((f) => [...readFileSync(join(odir, f), 'utf8').matchAll(/ k\.objects\.object name=("[^"]*"|\S+)/g)].map((m) => tok(m[1]).toLowerCase())));
   // the words for a node of a diagram ("box A", "node C"): w.diagram's words for w.diagram.node, singular
-  const nodeWords = read('w.diagram', 'schema.sop').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.node').flatMap((w) => vals(w, 'text')).filter((t) => !t.endsWith('s'));
+  const nodeWords = read('w.diagram', 'shards', 'words.sop').filter((w) => w.type === 'core.word' && one(w, 'means') === 'w.diagram.node').flatMap((w) => vals(w, 'text')).filter((t) => !t.endsWith('s'));
   const sorted = (xs) => [...new Set(xs.map((x) => x.toLowerCase()))].sort();
   return {
     'diagram.kind': { doc: 'Kinds of diagram: the names of k.diagrams.kind and their words (core.word of=k.diagrams.kind.name); derived by tools/lang-en-diagram-frames.mjs.', items: sorted([...kinds, ...kindWords]) },

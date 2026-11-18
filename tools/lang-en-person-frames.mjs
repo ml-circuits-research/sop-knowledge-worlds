@@ -24,7 +24,7 @@ const vals = (w, k) => (w.attrs[k] ?? []).map(tok);
 export function lexicons() {
   const schema = parse(readFileSync(join(WORLDS_DIR, 'w.person', 'schema.sop'), 'utf8'));
   const relSlot = schema.find((w) => w.id === 'w.person.relative.relation');
-  const relations = [...vals(relSlot, 'enum'), ...schema.filter((w) => w.type === 'core.word' && one(w, 'of') === 'w.person.relative.relation').flatMap((w) => vals(w, 'text'))];
+  const relations = [...vals(relSlot, 'enum'), ...parse(readFileSync(join(WORLDS_DIR, 'w.person', 'shards/words.sop'), 'utf8')).filter((w) => w.type === 'core.word' && one(w, 'of') === 'w.person.relative.relation').flatMap((w) => vals(w, 'text'))];
   const pdir = join(WORLDS_DIR, 'k.people', 'shards');
   const jobs = readdirSync(pdir).filter((f) => f.endsWith('.sop')).flatMap((f) => parse(readFileSync(join(pdir, f), 'utf8')))
     .filter((w) => w.type === 'k.people.role' && one(w, 'group') === 'job').map((w) => one(w, 'name'));

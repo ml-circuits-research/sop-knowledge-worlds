@@ -3,7 +3,7 @@
 // and a keyword only when none matched (tools/objects-lookup.mjs). "Add a ship" draws the ship, never the anchor.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { scanWorlds, factsOf, schemaWorld } from '../tools/lib/worlds.mjs';
+import { scanWorlds, factsOf, vocabularyWorld } from '../tools/lib/worlds.mjs';
 import { drawingIndex, drawingFor, LOOKUP_TYPES } from '../tools/objects-lookup.mjs';
 
 const worlds = scanWorlds();
@@ -44,7 +44,7 @@ test('no keyword resolves before a drawing\'s own name, a word of a drawing or a
 });
 
 test('the engine\'s word reading does not see a keyword (a keyword is not a core.word)', () => {
-  const { world, result } = schemaWorld(worlds, 'k.objects');
+  const { world, result } = vocabularyWorld(worlds, 'k.objects');
   assert.ok(result.ok);
   const shard = worlds.find((w) => w.id === 'k.objects').shards.find((s) => s.id === 'k.objects/shards/noto-animal-bird-01');
   const r = world.tell(shard.text);
@@ -52,6 +52,6 @@ test('the engine\'s word reading does not see a keyword (a keyword is not a core
   assert.ok(world.ofType('k.objects.keyword').some((w) => w.attrs.of?.includes('turkey') && w.attrs.text.includes('gobble')));
   const words = world.words();
   const has = (t) => (words instanceof Map ? words.has(t) : Object.hasOwn(words, t));
-  assert.ok(has('drawing') && has('keyword'), 'the schema words are read');
+  assert.ok(has('drawing') && has('keyword'), 'the explicitly composed owned vocabulary is read');
   assert.ok(!has('gobble') && !has('thanksgiving'), 'a keyword became a word');
 });

@@ -36,7 +36,8 @@ test('list-frames: the keys they set are keys of w.list or w.tasks, with values 
   const wires = [...schema('w.list'), ...schema('w.tasks')];
   const slots = wires.filter((w) => w.type === 'core.slot');
   const actionSlots = parse(readFileSync(join(WORLDS_DIR, 'k.actions', 'schema.sop'), 'utf8')).filter((w) => w.type === 'core.slot' && w.attrs.of[0] === 'k.actions.action');
-  const kindWords = new Set(wires.filter((w) => w.type === 'core.word' && wires.some((k) => k.type === 'std.schema.kind' && k.attrs.of[0] === tok(w.attrs.means?.[0]))).flatMap((w) => (w.attrs.text ?? []).map(tok)));
+  const vocabulary = ['w.list', 'w.tasks'].flatMap((id) => parse(readFileSync(join(WORLDS_DIR, id, 'shards/words.sop'), 'utf8')));
+  const kindWords = new Set(vocabulary.filter((w) => w.type === 'core.word' && wires.some((k) => k.type === 'std.schema.kind' && k.attrs.of[0] === tok(w.attrs.means?.[0]))).flatMap((w) => (w.attrs.text ?? []).map(tok)));
   const fixed = all.filter((w) => w.type === 'w.lang.en.fixed' && FRAMES.some((f) => f[0] === one(w, 'frame')));
   const byFrame = (name) => Object.fromEntries(fixed.filter((x) => one(x, 'frame') === name).map((x) => [one(x, 'role'), one(x, 'value')]));
   let n = 0;

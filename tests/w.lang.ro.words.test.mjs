@@ -15,12 +15,12 @@ const dir = join(WORLDS_DIR, 'w.lang.ro', 'shards');
 const files = readdirSync(dir).filter((f) => /^words-w\./.test(f));
 const SCHEMAS = ['w.calendar', 'w.chart', 'w.diagram', 'w.document', 'w.face', 'w.list', 'w.map', 'w.person', 'w.seating', 'w.tasks', 'w.timeline'];
 
-test('every published world schema has a Romanian words shard; its kinds there have an English word in the schema', () => {
+test('every published world schema has a Romanian words shard; its kinds there have an English word in the owned vocabulary', () => {
   assert.deepEqual(files.map((f) => f.slice(6, -4)).sort(), SCHEMAS);
   for (const s of SCHEMAS) {
     const schema = parse(readFileSync(join(WORLDS_DIR, s, 'schema.sop'), 'utf8'));
     const types = new Set(schema.filter((w) => w.type === 'core.type').map((w) => w.attrs.of[0]));
-    const enWords = new Set(schema.filter((w) => w.type === 'core.word').map((w) => one(w, 'means')));
+    const enWords = new Set(parse(readFileSync(join(WORLDS_DIR, s, 'shards/words.sop'), 'utf8')).filter((w) => w.type === 'core.word').map((w) => one(w, 'means')));
     const ro = parse(readFileSync(join(dir, `words-${s}.sop`), 'utf8')).filter((w) => w.type === 'core.word');
     assert.ok(ro.some((w) => one(w, 'means') === s && one(w, 'of') === 'std.schema.world.name'), `${s}: a word for the world`);
     for (const w of ro.filter((x) => one(x, 'means') !== s)) {
