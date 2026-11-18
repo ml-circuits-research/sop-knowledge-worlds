@@ -6893,3 +6893,6 @@ Measured with World.tell and parse: 79 schema wires, one 35-wire shard, 16,726 S
 
 2026-11-18 — The catalog records which identity slots have complete shard-key coverage. Other slots require reading the owning world or a separate complete index. Verified k.scenes.thing.name prunes to one shard for boat; scanning place=water returned all 130 source rows, including the boat.
 Changed gate passed 557, skipped 7, failed 0 across 59 files.
+
+2026-11-18 — Composition slots accept explicitly assigned structural roles. The unordered scatter region accepts generic graph nodes. A diamond without role evidence derives no such region. The editor declaration supplies the role.
+Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wires (12,610 bytes, 0.7 ms), and 186 arrangement-shard wires (33,280 bytes, 8.0 ms), zero warnings in the affected shard. Changed gate passed 375, skipped six, failed zero across 51 files.

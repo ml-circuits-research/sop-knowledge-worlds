@@ -29,3 +29,20 @@ test('common media and declared support regions yield traceable placement sugges
   assert.ok(anchors.some(({attrs:a})=>a.subject.includes('thread')&&a.of.includes('loom')));
   assert.ok(!anchors.some(({attrs:a})=>a.subject.includes('sun')&&a.of.includes('lake')));
 });
+
+test('an explicitly assigned structural role opens a region without inferring a role from shape', () => {
+  const {world,result} = schemaWorld(catalog,'k.composition2d');
+  assert.equal(result.ok,true);
+  assert.equal(world.tell([
+    '@want k.composition2d.subject name=diamond',
+    fact('k.layouts','k.layouts.layout.scatter'),
+    fact('k.layouts','k.layouts.slot.scatter.item'),
+  ].join('\n')).ok,true);
+  assert.deepEqual(world.ofType('k.composition2d.slot'),[]);
+  assert.equal(world.tell('@role k.composition2d.role name=node').ok,true);
+  const [region]=world.ofType('k.composition2d.slot');
+  assert.equal(region.attrs.basis[0],'role');
+  assert.equal(region.attrs.layout[0],'scatter');
+  assert.deepEqual(['x','y','w','h'].map(key=>Number(region.attrs[key][0])),[0,0,100,100]);
+  assert.deepEqual(region.attrs.evidence,['$k.layouts.slot.scatter.item']);
+});

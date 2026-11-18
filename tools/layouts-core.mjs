@@ -4,7 +4,7 @@
 //                                   hand-written k.objects objects) and joins.sop (from sources/hand-core/joins.tsv)
 // Deterministic: the same data, tables and k.objects shards give the same files.
 // A layout: [name, kind, about, { ordered, usual, words }, slots, relations].
-// A slot: [name, count, { pair, optional, holds, arranged, box: [x, y, w, h] }]; a relation: [a, rel, b, among].
+// A slot: [name, count, { pair, optional, holds, role, arranged, box: [x, y, w, h] }]; a relation: [a, rel, b, among].
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { REPO, WORLDS_DIR, scanWorlds } from './lib/worlds.mjs';
@@ -26,8 +26,8 @@ export const LAYOUTS = [
     [['row', 'many', { holds: ['row of things'], arranged: 'row' }]], [['row', 'above', 'row', 'neighbours'], ['row', 'aligned_column', 'row', 'all'], ['row', 'same_size', 'row', 'all'], ['row', 'evenly_spaced', 'row', 'neighbours']]],
   ['ring', R, 'Things in a circle, around a middle that may be empty.', { ordered: true, usual: ['people holding hands in a circle', 'the numbers of a clock', 'the petals of a flower', 'chairs round a table', 'the stones of a necklace'], words: ['rings', 'circle', 'in a circle', 'round', 'loop', 'wreath', 'around'] },
     [item(), ['centre', 'one', { optional: true, holds: ['thing they stand around'] }]], [['item', 'around', 'centre'], ['item', 'beside', 'item', 'neighbours'], ['item', 'evenly_spaced', 'item', 'neighbours']]],
-  ['scatter', R, 'Things spread over an area with no order, not touching.', { usual: ['stars in the sky', 'flowers in a meadow', 'sheep in a field', 'toys on the floor', 'fish in the sea', 'raisins in a cake'], words: ['scattered', 'here and there', 'random', 'spread out', 'sprinkled', 'all over'] },
-    [item()], [['item', 'apart', 'item', 'all']]],
+  ['scatter', R, 'Things spread over an area with no order, not touching.', { usual: ['stars in the sky', 'flowers in a meadow', 'sheep in a field', 'toys on the floor', 'fish in the sea', 'raisins in a cake', 'independent nodes of an unordered graph'], words: ['scattered', 'here and there', 'random', 'spread out', 'sprinkled', 'all over'] },
+    [['item', 'many', { holds: ['thing'], role: 'node', box: [0, 0, 100, 100] }]], [['item', 'apart', 'item', 'all']]],
   ['corners', F, 'Four things in the four corners, with or without a fifth in the middle.', { usual: ['four things of equal weight', 'the ornaments of a page', 'the players of a board game', 'the five of a die'], words: ['in the corners', 'four corners', 'corner'] },
     [['top_left', 'one', { box: [0, 0, 30, 30] }], ['top_right', 'one', { box: [70, 0, 30, 30] }], ['bottom_left', 'one', { box: [0, 70, 30, 30] }], ['bottom_right', 'one', { box: [70, 70, 30, 30] }], ['centre', 'one', { optional: true, box: [30, 30, 40, 40] }]],
     [['top_left', 'left_of', 'top_right'], ['bottom_left', 'left_of', 'bottom_right'], ['top_left', 'above', 'bottom_left'], ['top_right', 'above', 'bottom_right'], ['top_left', 'aligned_row', 'top_right'], ['bottom_left', 'aligned_row', 'bottom_right'], ['top_left', 'aligned_column', 'bottom_left'], ['top_right', 'aligned_column', 'bottom_right'], ['top_left', 'same_size', 'bottom_right']]],
@@ -90,7 +90,7 @@ export function layoutWires() {
     for (const [slot, count, s = {}] of slots) {
       if (s.arranged && !LAYOUTS.some((l) => l[0] === s.arranged)) throw new Error(`${name}.${slot}: no layout ${s.arranged}`);
       lines.push(wire(`k.layouts.slot.${seg(name)}.${slot}`, 'k.layouts.slot', [['layout', name], ['name', slot], ['count', count], ['pair', s.pair ? 'true' : undefined], ['optional', s.optional ? 'true' : undefined],
-        ...(s.holds ?? []).map((h) => ['holds', h]), ['arranged', s.arranged], ...(s.box ? ['x', 'y', 'w', 'h'].map((k, i) => [k, s.box[i]]) : [])], SRC));
+        ...(s.holds ?? []).map((h) => ['holds', h]), ['role', s.role], ['arranged', s.arranged], ...(s.box ? ['x', 'y', 'w', 'h'].map((k, i) => [k, s.box[i]]) : [])], SRC));
     }
     for (const [a, rel, b, among] of relations) {
       if (!names.has(a) || !names.has(b)) throw new Error(`${name}: relation ${a} ${rel} ${b}: no such slot`);
