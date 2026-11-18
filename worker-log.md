@@ -6884,3 +6884,6 @@ Checks: `npm run test:changed` and `npm run test:all` each118files3258tests3240p
 Catalog: 255 schema wires and 151 facts across 2 shards, 58,584 SOP bytes, 8.3 ms total schema and shard load, zero warnings. Pinned knowledge runtime is unchanged.
 Checks: focused 6/6, test:changed 51 files and 373 tests (368 pass, 5 skip, 0 fail). Verified current library module import and facts-only policy admission.
 Round gate: test:all 119 files and 3,264 tests (3,246 pass, 18 skip, 0 fail). The library and application own normal-route dispatch and live correction collection.
+
+2026-11-18: k.composition2d derives normalized candidate regions by joining requested subjects, usual places and declared layout anchors. A boat/lake match retains both published fact identities; the same rules match a new airship to the sky and a thread to a loom.
+Measured: 39 schema wires, one 20-wire vocabulary shard (2,504 bytes), schema and vocabulary loaded in 10 ms with zero warnings. npm run test:changed passed 363, skipped five, failed zero.
