@@ -6901,3 +6901,6 @@ Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wir
 
 2026-11-19 — w.face declares which k.faces slot each kind of part draws (18 `w.face.slot` facts plus words), so a projection rule joins a part to its variant geometry by a declared fact, not by the type name. Prototype: std.acts make/change/undo on w.face with a SOP rule projecting parts to drawing primitives.
 `npm run test:changed` 99 pass, 0 fail across 14 files.
+
+2026-11-19 — w.meetings: a std.schema world of meetings at exact times (start ms since the Unix epoch, duration ms) with people, rooms and calendars, each addressed by a unique `code` (one deny); words in its own shard. For the Calendar tab's SOP area in PSys2.
+`npm run test:changed` 44 pass; `tests/w.schemas.test.mjs` 20 pass (now seventeen schemas); act check: a second meeting with code "review" is refused.

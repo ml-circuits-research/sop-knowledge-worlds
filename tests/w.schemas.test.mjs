@@ -24,8 +24,8 @@ const needs = (v) => (atLeast(v) ? false : `needs sopworld ${v} or later (pinned
 // The facts of a knowledge world's shards (all, or those whose file name passes `pick`).
 const facts = (world, pick = () => true) => readdirSync(join(WORLDS_DIR, world, 'shards')).filter((f) => f.endsWith('.sop') && pick(f)).flatMap((f) => parse(readFileSync(join(WORLDS_DIR, world, 'shards', f), 'utf8')));
 
-test('sixteen world patterns; each names no function, loads with std.acts, has words, and is in the catalog', () => {
-  assert.deepEqual(schemas.map((s) => s.id), ['w.calendar', 'w.chart', 'w.diagram', 'w.dialogue', 'w.document', 'w.face', 'w.list', 'w.map', 'w.person', 'w.picture', 'w.request', 'w.room', 'w.seating', 'w.tasks', 'w.text', 'w.timeline']);
+test('seventeen world patterns; each names no function, loads with std.acts, has words, and is in the catalog', () => {
+  assert.deepEqual(schemas.map((s) => s.id), ['w.calendar', 'w.chart', 'w.diagram', 'w.dialogue', 'w.document', 'w.face', 'w.list', 'w.map', 'w.meetings', 'w.person', 'w.picture', 'w.request', 'w.room', 'w.seating', 'w.tasks', 'w.text', 'w.timeline']);
   for (const s of schemas) {
     const d = describeSchema(s);
     assert.deepEqual(d.errors, [], s.id);
