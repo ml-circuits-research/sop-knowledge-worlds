@@ -78,6 +78,8 @@ const T = 'type', K = 'key', A = 'act';
 export const FORMS = [
   ['w.picture', 'whole with parts', 'a depiction with explicitly declared parts', [['whole', 'w.picture.picture', T], ['part', 'w.picture.part', T], ['part_of', 'w.picture.part.picture', K], ['part_kind', 'w.picture.part.object', K]]],
   ['w.text', 'sequence', 'anchored spans over one explicit retained source revision; overlaps are allowed', [['element', 'w.text.span', T], ['position', 'w.text.span.start', K], ['end', 'w.text.span.end', K], ['sequence', 'w.text.source', T], ['element_of', 'w.text.span.source', K]]],
+  ['w.meetings', 'sequence', 'meetings in order of their start times, on calendars and in rooms', [
+    ['element', 'w.meetings.meeting', T], ['position', 'w.meetings.meeting.start', K], ['sequence', 'w.meetings.calendar', T], ['element_of', 'w.meetings.meeting.calendar', K]]],
   ['w.room', 'capacity', 'a room with a stated seating capacity, not an occupancy assertion', [['container', 'w.room.room', T], ['capacity', 'w.room.room.seats', K]]],
   ['w.seating', 'assignment', 'guests are given seats; a table holds a number of seats', [
     ['item', 'w.seating.guest', T], ['slot', 'w.seating.seat', T], ['assigned', 'w.seating.guest.seat', K], ['container', 'w.seating.table', T], ['slot_of', 'w.seating.seat.table', K],

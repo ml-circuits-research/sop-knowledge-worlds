@@ -6904,3 +6904,6 @@ Measured 45 composition schema wires (6,220 bytes, 8.2 ms), 54 layout schema wir
 
 2026-11-19 — w.meetings: a std.schema world of meetings at exact times (start ms since the Unix epoch, duration ms) with people, rooms and calendars, each addressed by a unique `code` (one deny); words in its own shard. For the Calendar tab's SOP area in PSys2.
 `npm run test:changed` 44 pass; `tests/w.schemas.test.mjs` 20 pass (now seventeen schemas); act check: a second meeting with code "review" is refused.
+
+2026-11-19 — Catalog validated with sopworld 0.225.1 (the release PSys2 runs) instead of 0.144.0: VERSION and the bundle updated; the version test checks a full commit beside the sha256; Q87 expectations emptied (0.225 reads every listed plural both ways); w.meetings got its structure (sequence by start) in k.kinds.
+`SKW_NO_CACHE=1 npm run test:all`: 3,267 tests, 3,249 pass, 0 fail, 18 skipped.

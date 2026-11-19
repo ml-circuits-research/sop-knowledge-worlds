@@ -51,7 +51,7 @@ needs set priorities, but **no PSys2 names, types or code go into the worlds**.
 
 ## Tests: per push and per round (owner, 16:35: do not lose the time in tests)
 
-Several workers share one machine (8 GB, 2 CPUs): run test files one at a time, never the whole suite in parallel.
+The test runner starts files as memory allows; run the whole suite through it, not with a bare parallel node --test.
 
 - **Per push:** `npm run test:changed`: the build, then only the test files the changed paths touch (against
   origin/main: committed, staged, unstaged and new files) and the catalog, validate and repository tests.
@@ -89,7 +89,7 @@ Several workers share one machine (8 GB, 2 CPUs): run test files one at a time, 
 
 ## sopworld version
 
-Validate with the sopworld build pinned in `tools/sopworld/VERSION` (0.144.0 at commit 94cffa2 as of 2026-11-15; the VERSION file is authoritative) of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
+Validate with the sopworld build pinned in `tools/sopworld/VERSION` (0.225.1 since 2026-11-19, the release the applications run; the VERSION file is authoritative) of `ml-circuits-research/soplang-words-lib` (`docs/sopworld.mjs`
 is the single-file build). Pin by commit in `tools/sopworld/VERSION`; no tags. **One build** for every world, `k.*` and
 `w.*`, and every tool and test (Q35: two builds side by side is a trap). Upgrade only when the reviewer says so.
 

@@ -22,8 +22,8 @@ const one = (w, k) => tok(w.attrs[k]?.[0]);
 
 // Q87 [LIB]: inflectBy cases the w.lang.en rules and irregulars read and the library does not (pin 0.130).
 export const Q87 = {
-  singular: ['bus', 'iris', 'lens', 'ibis', 'mantis', 'walrus', 'asparagus', 'rhinoceros', 'hippopotamus', 'octopus', 'lotus', 'cactus', 'tennis', 'platypus'],
-  plural_back: ['house', 'lighthouse', 'suitcase', 'seahorse', 'tortoise', 'vase', 'blouse', 'case', 'cheese', 'mayonnaise', 'base', 'hose', 'horse', 'nose', 'purse', 'briefcase', 'sunrise', 'rose', 'porpoise', 'courthouse', 'greenhouse', 'warehouse', 'mongoose'],
+  singular: [],   // all read since library 0.225
+  plural_back: [],   // all read back since library 0.225
 };
 
 test('KR4: articleFor is the library\'s; a and an by w.lang.en.det before= and the onsets', () => {
@@ -35,7 +35,7 @@ test('KR4: inflectBy reads the hand-over\'s plural table, but for the cases of Q
   for (const [pl, sg] of Object.entries({ tables: 'table', boxes: 'box', cherries: 'cherry', wolves: 'wolf', cacti: 'cactus', kiwis: 'kiwi', octopuses: 'octopus', buses: 'bus', glass: 'glass', iris: 'iris',
     mice: 'mouse', feet: 'foot', children: 'child', people: 'person', women: 'woman', sheep: 'sheep', antennae: 'antenna', vertebrae: 'vertebra', potatoes: 'potato', cola: 'cola' })) if (inflectBy(en, pl, 'singular') !== sg) bad.push(`${pl} -> ${inflectBy(en, pl, 'singular')}`);
   for (const [sg, pl] of Object.entries({ table: 'tables', box: 'boxes', cherry: 'cherries', day: 'days', cactus: 'cacti', child: 'children', mouse: 'mice', sheep: 'sheep', antenna: 'antennas', tomato: 'tomatoes' })) if (inflectBy(en, sg, 'plural') !== pl) bad.push(`${sg} -> ${inflectBy(en, sg, 'plural')}`);
-  assert.deepEqual(bad, ['iris -> iri'], 'Q87');
+  assert.deepEqual(bad, [], 'Q87');
 });
 
 test('KR4: inflectBy reads every head noun of the catalog both ways, but for the cases of Q87', () => {

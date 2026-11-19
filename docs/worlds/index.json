@@ -1,6 +1,6 @@
 {
- "version": "afbafbb7ed89",
- "sopworld": "94cffa2",
+ "version": "0fa59fced083",
+ "sopworld": "747b51e",
  "worlds": [
   {
    "id": "k.actions",
@@ -35585,8 +35585,8 @@
     {
      "id": "k.kinds/shards/structures",
      "path": "k.kinds/shards/structures.sop",
-     "wires": 333,
-     "bytes": 61355,
+     "wires": 338,
+     "bytes": 62310,
      "keys": [
       "assigned",
       "assignment",
@@ -35776,6 +35776,11 @@
       "w.map.place",
       "w.map.view",
       "w.map.view.layer",
+      "w.meetings",
+      "w.meetings.calendar",
+      "w.meetings.meeting",
+      "w.meetings.meeting.calendar",
+      "w.meetings.meeting.start",
       "w.person",
       "w.person.person",
       "w.person.relative",
