@@ -39,6 +39,26 @@
 @w.meetings.code.other core.check fn=neq args=$w.meetings.code.first args=$w.meetings.code.second
 @w.meetings.code.unique core.deny when=$w.meetings.code.first when=$w.meetings.code.second if=$w.meetings.code.other why="The code ?code is already used by another ?kind." core.source="hand-core 1"
 
+# Two meetings that share a room do not overlap (half-open intervals: one may start when the other ends).
+@w.meetings.overlap.room.a w.meetings.meeting room=?r start=?as duration=?ad
+@w.meetings.overlap.room.b w.meetings.meeting room=?r start=?bs duration=?bd
+@w.meetings.overlap.room.ae core.calc out=?ae fn=add args=?as args=?ad
+@w.meetings.overlap.room.be core.calc out=?be fn=add args=?bs args=?bd
+@w.meetings.overlap.room.distinct core.check fn=neq args=$w.meetings.overlap.room.a args=$w.meetings.overlap.room.b
+@w.meetings.overlap.room.first core.check fn=lt args=?as args=?be
+@w.meetings.overlap.room.second core.check fn=lt args=?bs args=?ae
+@w.meetings.overlap.room core.deny when=$w.meetings.overlap.room.a when=$w.meetings.overlap.room.b with=$w.meetings.overlap.room.ae with=$w.meetings.overlap.room.be if=$w.meetings.overlap.room.distinct if=$w.meetings.overlap.room.first if=$w.meetings.overlap.room.second why="Two meetings that share a room overlap." core.source="hand-core 1"
+
+# Two meetings that share a person do not overlap (half-open intervals: one may start when the other ends).
+@w.meetings.overlap.participant.a w.meetings.meeting participant=?r start=?as duration=?ad
+@w.meetings.overlap.participant.b w.meetings.meeting participant=?r start=?bs duration=?bd
+@w.meetings.overlap.participant.ae core.calc out=?ae fn=add args=?as args=?ad
+@w.meetings.overlap.participant.be core.calc out=?be fn=add args=?bs args=?bd
+@w.meetings.overlap.participant.distinct core.check fn=neq args=$w.meetings.overlap.participant.a args=$w.meetings.overlap.participant.b
+@w.meetings.overlap.participant.first core.check fn=lt args=?as args=?be
+@w.meetings.overlap.participant.second core.check fn=lt args=?bs args=?ae
+@w.meetings.overlap.participant core.deny when=$w.meetings.overlap.participant.a when=$w.meetings.overlap.participant.b with=$w.meetings.overlap.participant.ae with=$w.meetings.overlap.participant.be if=$w.meetings.overlap.participant.distinct if=$w.meetings.overlap.participant.first if=$w.meetings.overlap.participant.second why="Two meetings that share a person overlap." core.source="hand-core 1"
+
 @w.meetings.kind.calendar std.schema.kind of=w.meetings.calendar world=w.meetings acts=make acts=remove acts=change acts=pick acts=ask core.source="hand-core 1"
 @w.meetings.kind.person std.schema.kind of=w.meetings.person world=w.meetings acts=make acts=remove acts=change acts=pick acts=ask core.source="hand-core 1"
 @w.meetings.kind.room std.schema.kind of=w.meetings.room world=w.meetings acts=make acts=remove acts=change acts=pick acts=ask core.source="hand-core 1"
