@@ -9,9 +9,9 @@ truth for `k.kinds.relation` (`found=declared`, `object_by`); the share of value
 (`found=value`) is only a suggestion, listed below until the join is declared or the reason not to is written down.
 Values are compared as sopworld compares them (since 0.109): a quoted atom and the bare atom are one name (`"horse"` and `horse`); a string with spaces stays a string.
 
-- declared joins: **283** in 45 worlds; distinct values 11502, meeting a target 11442 (99.5 %), open 60
+- declared joins: **283** in 45 worlds; distinct values 11505, meeting a target 11445 (99.5 %), open 60
 - broken (under half of the values meet a target, or the target is not declared): **0**
-- undeclared keys whose values the value share joins to a type: **68**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
+- undeclared keys whose values the value share joins to a type: **69**; left undeclared on purpose: 5; keys with an enum, never suggested: 56
 
 ## Declared joins
 
@@ -99,8 +99,8 @@ Values are compared as sopworld compares them (since 0.109): a quoted atom and t
 | k.faces | `k.faces.preset.clothes` | `k.colours.colour` | name | 10 | 10 |  |
 | k.faces | `k.faces.preset.style` | `k.faces.canon` | style | 2 | 2 |  |
 | k.faces | `k.faces.trait.style` | `k.faces.canon` | style | 1 | 1 |  |
-| k.faces | `k.faces.trait.part.slot` | `k.faces.slot` | name | 5 | 5 |  |
-| k.faces | `k.faces.trait.part.trait` | `k.faces.trait` | name | 9 | 9 |  |
+| k.faces | `k.faces.trait.part.slot` | `k.faces.slot` | name | 6 | 6 |  |
+| k.faces | `k.faces.trait.part.trait` | `k.faces.trait` | name | 11 | 11 |  |
 | k.faces | `k.faces.turn.bone` | `k.faces.bone` | name | 8 | 8 |  |
 | k.faces | `k.faces.turn.pose` | `k.faces.pose` | name | 14 | 14 |  |
 | k.faces | `k.faces.variant.slot` | `k.faces.slot` | name | 26 | 26 |  |
@@ -345,6 +345,7 @@ whose slot has an enum is never suggested here (see the last section).
 | k.faces | `k.faces.preset.eye_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 7 | 6 |
 | k.faces | `k.faces.slot.name` | thing | `k.parts.name` | name | 26 | 14 |
 | k.faces | `k.faces.trait.hair_colour` | value | `k.colours.basic`, `k.colours.colour` | name | 5 | 4 |
+| k.faces | `k.faces.trait.skin` | value | `k.colours.colour` | name | 6 | 3 |
 | k.faces | `k.faces.trait.part.style` | thing | `k.faces.canon` | style | 1 | 1 |
 | k.faces | `k.faces.turn.style` | thing | `k.faces.canon` | style | 1 | 1 |
 | k.feelings | `k.feelings.feeling.eyebrows` | thing | `k.faces.expression` | name | 4 | 2 |

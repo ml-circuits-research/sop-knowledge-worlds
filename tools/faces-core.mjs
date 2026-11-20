@@ -400,7 +400,16 @@ export const TRAITS = [
   ['mohawk', 'a mohawk', {}, [['hair_front', 'mohawk']], 'a mohawk, mohican'],
   ['ponytail', 'hair in a ponytail', {}, [['hair_back', 'ponytail']], 'a ponytail, with a ponytail'],
   ['long-haired', 'long hair', {}, [['hair_back', 'long straight']], 'long hair, with long hair'],
+  ['short-haired', 'short hair', {}, [['hair_front', 'short'], ['hair_back', null]], 'short hair, with short hair, cropped hair'],
+  ['spectacled', 'glasses', {}, [['glasses', 'round']], 'glasses, with glasses, wearing glasses, bespectacled, specs'],
+  ['pale-skinned', 'pale skin', { skin: 'pale' }, [], 'pale skin, pale, fair skin, fair-skinned'],
+  ['light-skinned', 'light skin', { skin: 'light' }, [], 'light skin'],
+  ['tanned', 'tanned skin', { skin: 'tan' }, [], 'tan, tan skin, suntanned'],
+  ['olive-skinned', 'olive skin', { skin: 'olive' }, [], 'olive skin'],
+  ['brown-skinned', 'brown skin', { skin: 'brown' }, [], 'brown skin'],
+  ['dark-skinned', 'dark skin', { skin: 'dark brown' }, [], 'dark skin, dark brown skin, black skin'],
 ];
+// Age and sex are not traits here: they are the person's (k.people.kind age, sex) and choose its presets.
 
 // Sparse authored cartoon-style constraints; other compatible properties remain free.
 export const EXPRESSION_GOALS = [

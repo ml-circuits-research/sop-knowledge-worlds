@@ -1,5 +1,5 @@
 {
- "version": "dae21d0df06f",
+ "version": "41f61db54257",
  "sopworld": "747b51e",
  "worlds": [
   {
@@ -17451,8 +17451,8 @@
     {
      "id": "k.faces/shards/traits",
      "path": "k.faces/shards/traits.sop",
-     "wires": 52,
-     "bytes": 8882,
+     "wires": 71,
+     "bytes": 11730,
      "keys": [
       "bald",
       "beard",
@@ -17460,20 +17460,29 @@
       "bearded",
       "blond",
       "brown-haired",
+      "brown-skinned",
       "cheeks",
       "curly-haired",
       "dark-haired",
+      "dark-skinned",
       "freckled",
       "ginger",
+      "glasses",
       "grey-haired",
       "hair_back",
       "hair_front",
+      "light-skinned",
       "long-haired",
       "mohawk",
       "moustache",
       "moustached",
+      "olive-skinned",
+      "pale-skinned",
       "plain",
-      "ponytail"
+      "ponytail",
+      "short-haired",
+      "spectacled",
+      "tanned"
      ],
      "sources": [
       "hand-core-1"
@@ -34917,7 +34926,7 @@
      "id": "k.kinds/shards/relations-faces",
      "path": "k.kinds/shards/relations-faces.sop",
      "wires": 124,
-     "bytes": 21959,
+     "bytes": 22009,
      "keys": [
       "about",
       "age",

@@ -106,7 +106,7 @@
 @k.kinds.relation.k.faces.trait.style k.kinds.relation type=k.faces.trait key=style subject=trait object=thing object_type=k.faces.canon found=declared object_by=style core.source="hand-core 1"
 @k.kinds.relation.k.faces.trait.about k.kinds.relation type=k.faces.trait key=about subject=trait object=text found=schema core.source="hand-core 1"
 @k.kinds.relation.k.faces.trait.hair_colour k.kinds.relation type=k.faces.trait key=hair_colour subject=trait object=value object_type=k.colours.basic object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
-@k.kinds.relation.k.faces.trait.skin k.kinds.relation type=k.faces.trait key=skin subject=trait object=word found=value core.source="hand-core 1"
+@k.kinds.relation.k.faces.trait.skin k.kinds.relation type=k.faces.trait key=skin subject=trait object=value object_type=k.colours.colour object_sense=colour found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.trait.eye_colour k.kinds.relation type=k.faces.trait key=eye_colour subject=trait object=word found=value core.source="hand-core 1"
 @k.kinds.relation.k.faces.trait.part.trait k.kinds.relation type=k.faces.trait.part key=trait subject=part object=thing object_type=k.faces.trait found=declared object_by=name core.source="hand-core 1"
 @k.kinds.relation.k.faces.trait.part.style k.kinds.relation type=k.faces.trait.part key=style subject=part object=thing object_type=k.faces.canon found=value core.source="hand-core 1"

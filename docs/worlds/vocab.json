@@ -15819,6 +15819,9 @@
   "k.words/shards/be",
   "k.words/shards/frequency-b"
  ],
+ "bespectacled": [
+  "k.faces/shards/traits"
+ ],
  "best": [
   "k.words/shards/be",
   "k.words/shards/frequency-b"
@@ -16950,6 +16953,9 @@
  "black sea": [
   "k.geo/shards/numbers",
   "k.geo/shards/seas"
+ ],
+ "black skin": [
+  "k.faces/shards/traits"
  ],
  "black volta": [
   "k.geo/shards/africa"
@@ -20837,7 +20843,13 @@
   "k.objects/shards/noto-food-vegetable-03",
   "k.scenes/shards/things-b"
  ],
+ "brown skin": [
+  "k.faces/shards/traits"
+ ],
  "brown-haired": [
+  "k.faces/shards/traits"
+ ],
+ "brown-skinned": [
   "k.faces/shards/traits"
  ],
  "brownie": [
@@ -36200,6 +36212,9 @@
   "k.words/shards/cr",
   "k.words/shards/frequency-c"
  ],
+ "cropped hair": [
+  "k.faces/shards/traits"
+ ],
  "crops": [
   "k.objects/shards/noto-food-vegetable-01"
  ],
@@ -39536,6 +39551,9 @@
  "dark brown": [
   "k.faces/shards/colours"
  ],
+ "dark brown skin": [
+  "k.faces/shards/traits"
+ ],
  "dark cyan": [
   "k.colours/shards/colours-css"
  ],
@@ -39591,6 +39609,9 @@
  "dark sea green": [
   "k.colours/shards/colours-css"
  ],
+ "dark skin": [
+  "k.faces/shards/traits"
+ ],
  "dark slate blue": [
   "k.colours/shards/colours-css"
  ],
@@ -39610,6 +39631,9 @@
   "k.colours/shards/colours"
  ],
  "dark-haired": [
+  "k.faces/shards/traits"
+ ],
+ "dark-skinned": [
   "k.faces/shards/traits"
  ],
  "dark_half": [
@@ -52750,7 +52774,13 @@
  "fair hair": [
   "k.faces/shards/traits"
  ],
+ "fair skin": [
+  "k.faces/shards/traits"
+ ],
  "fair-haired": [
+  "k.faces/shards/traits"
+ ],
+ "fair-skinned": [
   "k.faces/shards/traits"
  ],
  "fairground": [
@@ -62567,6 +62597,7 @@
   "k.faces/shards/pixel-art-slots",
   "k.faces/shards/plain-glasses",
   "k.faces/shards/slots",
+  "k.faces/shards/traits",
   "k.kinds/shards/head",
   "k.kinds/shards/kind",
   "k.kinds/shards/material",
@@ -86562,6 +86593,9 @@
  "light sea green": [
   "k.colours/shards/colours-css"
  ],
+ "light skin": [
+  "k.faces/shards/traits"
+ ],
  "light sky blue": [
   "k.colours/shards/colours-css"
  ],
@@ -86587,6 +86621,9 @@
  ],
  "light-blue": [
   "k.colours/shards/psys2"
+ ],
+ "light-skinned": [
+  "k.faces/shards/traits"
  ],
  "light-year": [
   "k.units/shards/core"
@@ -103378,6 +103415,12 @@
   "k.scenes/shards/things-o",
   "k.words/shards/ol"
  ],
+ "olive skin": [
+  "k.faces/shards/traits"
+ ],
+ "olive-skinned": [
+  "k.faces/shards/traits"
+ ],
  "olive1": [
   "k.objects/shards/noto-food-fruit-03"
  ],
@@ -105967,6 +106010,7 @@
  "pale": [
   "k.colours/schema.sop",
   "k.faces/shards/colours",
+  "k.faces/shards/traits",
   "k.values/shards/psys2",
   "k.values/shards/scales",
   "k.words/shards/frequency-p",
@@ -105985,6 +106029,9 @@
  "pale grey": [
   "k.colours/shards/colours"
  ],
+ "pale skin": [
+  "k.faces/shards/traits"
+ ],
  "pale turquoise": [
   "k.colours/shards/colours-css"
  ],
@@ -105993,6 +106040,9 @@
  ],
  "pale yellow": [
   "k.colours/shards/colours"
+ ],
+ "pale-skinned": [
+  "k.faces/shards/traits"
  ],
  "palegoldenrod": [
   "k.colours/shards/colours-css"
@@ -130807,11 +130857,17 @@
   "k.words/shards/frequency-s",
   "k.words/shards/sh"
  ],
+ "short hair": [
+  "k.faces/shards/traits"
+ ],
  "short note": [
   "k.genres/shards/note"
  ],
  "short trousers": [
   "k.wearables/shards/wearables"
+ ],
+ "short-haired": [
+  "k.faces/shards/traits"
  ],
  "short-horned grasshopper": [
   "k.kinds/shards/wordnet-2"
@@ -135382,6 +135438,7 @@
   "k.words/shards/sp"
  ],
  "specs": [
+  "k.faces/shards/traits",
   "k.wearables/shards/wearables",
   "k.words/shards/frequency-s",
   "k.words/shards/sp",
@@ -135390,6 +135447,9 @@
  "spectacle": [
   "k.words/shards/frequency-s",
   "k.words/shards/sp"
+ ],
+ "spectacled": [
+  "k.faces/shards/traits"
  ],
  "spectacles": [
   "k.faces/shards/micah-slots",
@@ -139848,6 +139908,9 @@
   "k.words/shards/su",
   "k.objects/shards/noto-sky-weather-02"
  ],
+ "suntanned": [
+  "k.faces/shards/traits"
+ ],
  "suntar-khayata range": [
   "k.geo/shards/asia"
  ],
@@ -142057,8 +142120,12 @@
   "k.colours/shards/colours",
   "k.colours/shards/colours-css",
   "k.faces/shards/colours",
+  "k.faces/shards/traits",
   "k.words/shards/frequency-t",
   "k.words/shards/ta"
+ ],
+ "tan skin": [
+  "k.faces/shards/traits"
  ],
  "tana": [
   "k.geo/shards/africa"
@@ -142203,6 +142270,9 @@
  ],
  "tanna": [
   "k.geo/shards/islands-oceania"
+ ],
+ "tanned": [
+  "k.faces/shards/traits"
  ],
  "tanner": [
   "k.words/shards/frequency-t",
@@ -157360,6 +157430,9 @@
   "k.words/shards/frequency-w",
   "k.words/shards/we"
  ],
+ "wearing glasses": [
+  "k.faces/shards/traits"
+ ],
  "wears": [
   "k.attributes/shards/aspects",
   "k.attributes/shards/narration",
@@ -159680,7 +159753,13 @@
  "with freckles": [
   "k.faces/shards/traits"
  ],
+ "with glasses": [
+  "k.faces/shards/traits"
+ ],
  "with long hair": [
+  "k.faces/shards/traits"
+ ],
+ "with short hair": [
   "k.faces/shards/traits"
  ],
  "with stripes": [
